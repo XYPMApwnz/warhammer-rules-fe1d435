@@ -107,6 +107,8 @@ assert.match(app,/new URL\('\.\/mobile\/'\+route/);
 assert.match(fs.readFileSync(path.join(root,'index.html'),'utf8'),/death-guard\/scripts\/view-router\.js\?v=2/);
 assert.doesNotMatch(app,/WHArmyBook\.install/);
 assert.match(bookCss,/tyranids-cover-800\.webp/,'the supplied Tyranids artwork must be used by the desktop hero');
+assert.match(bookCss,/\.related-rules-dialog[^}]*background:var\(--panel\)/,'Related Rules must have an opaque book background');
+assert.doesNotMatch(bookCss,/\.related-rules-dialog[^}]*background:var\(--void\)/,'Related Rules must not use the undefined transparent --void token');
 assert.doesNotMatch(bookCss,/html\[data-view="mobile"\]/,'Phone Mode must use focused pages, not the desktop monolith');
 assert.ok(Object.keys(context.terms).length>=300);
 assert.equal(context.terms['tyranids-detachment-rule-mindhunger'].navigation.rule,'detachment-ambush-predators');

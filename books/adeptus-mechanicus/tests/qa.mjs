@@ -162,6 +162,7 @@ check('header exposes the shared Mega Glossary',markup.includes('href="../../glo
 check('mobile weapon labels stay dynamic',html.includes('data-label="Range"')&&/content:\s*attr\(data-label\)/.test(sharedDatasheetCss));
 check('desktop to Phone mode preserves the active route',read('scripts/app.js').includes("destination=new URL('./mobile/'+route")&&read('scripts/app.js').includes('destination.search=params.toString()'));
 check('nested Full Entry stays above Related Rules',read('styles/mechanicus.css').includes('.related-rules-open .full-entry-layer{z-index:170}'));
+check('Related Rules uses an opaque book background',/\.related-rules-dialog\{[^}]*background:var\(--panel\)/.test(read('styles/mechanicus.css'))&&!/\.related-rules-dialog\{[^}]*background:var\(--void\)/.test(read('styles/mechanicus.css')));
 check('conditional attached-unit Enhancements are never guessed',read('scripts/roster-enhancements.js').includes('The roster export does not prove that the bearer is leading a unit.')&&read('scripts/roster-enhancements.js').includes('does not identify its Bodyguard unit'));
 check('personal roster reports unmatched units and renders loadout',read('scripts/roster-filter.js').includes('Unmatched roster units:')&&read('scripts/roster-filter.js').includes('Roster loadout')&&read('scripts/roster-filter.js').includes('\\[legends\\]'));
 check('shared points validation recognises New Recruit Legends suffixes',fs.readFileSync(path.resolve(root,'..','..','roster-guides','points-validator.js'),'utf8').includes('\\[legends\\]'));

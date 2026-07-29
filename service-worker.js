@@ -75,7 +75,7 @@ const APP_SHELL = [
   "./books/death-guard/styles/tokens.css?v=10",
   "./books/death-guard/styles/layout.css?v=9",
   "./books/death-guard/styles/navigation.css?v=11",
-  "./books/death-guard/styles/content.css?v=29",
+  "./books/death-guard/styles/content.css?v=31",
   "./books/death-guard/styles/popups.css?v=17",
   "./books/death-guard/scripts/navigation-controller.js?v=15",
   "./books/death-guard/scripts/roster-filter.js?v=14",
@@ -125,7 +125,7 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/assets/mechanicus-logo.png",
   "./books/adeptus-mechanicus/assets/mechanicus-cover-800.webp",
   "./books/adeptus-mechanicus/styles/tokens.css?v=14",
-  "./books/adeptus-mechanicus/styles/mechanicus.css?v=17",
+  "./books/adeptus-mechanicus/styles/mechanicus.css?v=18",
   "./books/adeptus-mechanicus/scripts/data.js?v=1",
   "./books/adeptus-mechanicus/scripts/faction-ui.js?v=1",
   "./books/adeptus-mechanicus/scripts/related-rules.js?v=7",
@@ -137,7 +137,7 @@ const APP_SHELL = [
   ,TYRANIDS_FALLBACK
   ,"./books/tyranids/mobile/index.html"
   ,"./books/tyranids/styles/tokens.css?v=1"
-  ,"./books/tyranids/styles/book.css?v=2"
+  ,"./books/tyranids/styles/book.css?v=4"
   ,"./books/tyranids/scripts/app.js?v=3"
   ,"./books/tau-empire/"
   ,TAU_EMPIRE_FALLBACK

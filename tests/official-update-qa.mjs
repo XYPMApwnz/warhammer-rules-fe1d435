@@ -90,6 +90,7 @@ function weaponField(scope,profileKey){
 
 const dgSource=json('books/death-guard/content/death-guard-rules.en.json');
 const amRules=json('books/adeptus-mechanicus/content/adeptus-mechanicus-rules.en.json');
+const amSource=json('books/adeptus-mechanicus/content/adeptus-mechanicus-source.en.json');
 const amCodex=json('books/adeptus-mechanicus/content/adeptus-mechanicus-codex-datasheets.en.json');
 const amCodexDetachments=json('books/adeptus-mechanicus/content/adeptus-mechanicus-codex-detachments.en.json');
 const amParity=json('books/adeptus-mechanicus/content/adeptus-mechanicus-codex-parity.en.json');
@@ -97,6 +98,60 @@ const tyrPack=json('books/tyranids/content/tyranids-faction-pack.en.json');
 const tyrParity=json('books/tyranids/content/tyranids-codex-parity.en.json');
 const tyrCodex=json('books/tyranids/content/tyranids-codex-datasheets.en.json');
 const glossary=json('glossary/registry.en.json').terms;
+const glossaryContexts=Object.fromEntries(['death-guard','adeptus-mechanicus','tyranids'].map(bookId=>[
+  bookId,json(`glossary/contexts/${bookId}.json`).terms
+]));
+
+const dgOfficialMarkers=[
+  ['dg-fp-1.0-p7-contagion-range-cap','Gift - Contagion Range:'],
+  ['dg-fp-1.0-p7-skullsquirm-blight','Gift - Skullsquirm Blight:'],
+  ['dg-fp-1.0-p7-beckoning-blight','Tallyband Summoners - Beckoning Blight:'],
+  ['dg-fp-1.0-p7-frame-keywords','Add FRAME to Chaos Land Raider'],
+  ['dg-fp-1.0-p7-typhus-eater-plague','Typhus - Eater Plague:'],
+  ['dg-fp-1.0-p7-predator-autocannon-strength','Chaos Predator Destructor - Predator autocannon:'],
+  ['dg-fp-1.0-p7-death-approaches','Deathshroud Terminators - Death Approaches:'],
+  ['dg-fp-1.0-p7-spore-laced-shock-waves-faq','Spore-laced Shock Waves ability does not inflict']
+];
+
+const amOfficialMarkers=[
+  ['doctrina-protector-imperative',17,'Change Protector Imperative to:'],
+  ['doctrina-conqueror-imperative',17,'Change Conqueror Imperative to:'],
+  ['cohort-cybernetica-cyber-psalm-programming',17,'Cyber-psalm Programming Detachment Rule'],
+  ['rad-zone-corps-unit-taking-cover',17,'Rad-bombardment Detachment Rule, Battle Round 1 Section, Unit'],
+  ['skitarii-hunter-cohort-stealth-optimisation',17,'Stealth Optimisation Detachment Rule'],
+  ['skitarii-hunter-cohort-veiled-hunter',17,'Veiled Hunter Enhancement'],
+  ['datasheets-add-doctrina-imperatives',17,'Doctrina Imperatives Faction Abilities section'],
+  ['archaeopter-fusilave-stratoraptor-remove-hover',17,"Remove 'Hover'."],
+  ['archaeopter-fusilave-stratoraptor-profile',17,"Change M and OC to '-'."],
+  ['archaeopter-fusilave-bomb-rack',17,'Archaeopter Fusilave, Bomb Rack Ability'],
+  ['archaeopter-transvector-profile',17,'Profile: Change M to 14".'],
+  ['archaeopter-transvector-keywords',17,"Keywords: Remove 'AIRCRAFT'."],
+  ['archaeopter-transvector-aerial-deployment',17,'Archaeopter Transvector, Aerial Deployment Ability'],
+  ['belisarius-cawl-keywords',18,"Keywords section: Add 'MOBILE'."],
+  ['belisarius-cawl-move',18,'Move characteristic: change to 8".'],
+  ['belisarius-cawl-canticles-of-the-omnissiah',18,'Canticles of the Omnissiah Ability'],
+  ['belisarius-cawl-invocation-of-machine-vengeance',18,'Invocation of Machine Vengeance Ability'],
+  ['belisarius-cawl-mantra-of-discipline',18,'Mantra of Discipline Ability'],
+  ['belisarius-cawl-shroudpsalm',18,'Shroudpsalm (Aura) Ability'],
+  ['belisarius-cawl-solar-atomiser',18,'Solar atomiser weapon: Change A to'],
+  ['cybernetica-datasmith-core-abilities',18,'Cybernetica Datasmith, Core Abilities section'],
+  ['cybernetica-datasmith-data-severed',18,'Data-severed: If there are no KASTELAN ROBOT models'],
+  ['ironstrider-ballistarii-twin-cognis-autocannon',18,'Twin Cognis Autocannon'],
+  ['ironstrider-ballistarii-twin-cognis-lascannon',18,'Twin Cognis Lascannon'],
+  ['kastelan-robots-repulsor-grid',18,'Kastelan Robots, Repulsor Grid ability'],
+  ['onager-dunecrawler-weapon-profiles',18,'Onager Dunecrawler'],
+  ['onager-dunecrawler-scuttling-walker',18,'Scuttling Walker: Each time this model makes a Normal'],
+  ['serberys-raiders-tactica-obliqua',18,'Serberys Raiders, Tactica Obliqua Ability'],
+  ['sicarian-infiltrators-melee-weapons',18,'Sicarian Infiltrators, Melee Weapons'],
+  ['sicarian-ruststalkers-melee-weapons',19,'Sicarian Ruststalkers, Melee Weapons'],
+  ['skitarii-marshal-core-abilities',19,'Skitarii Marshal, Core Abilities section'],
+  ['skitarii-marshal-servo-skull-uplink',19,'Skitarii Marshal, Servo-skull Uplink Ability'],
+  ['skorpius-frame-keyword',19,'Skorpius Disintegrator, Skorpius Dunerider'],
+  ['skorpius-disintegrator-ferrumite-cannon',19,'Skorpius Disintegrator, Ferrumite Cannon'],
+  ['skorpius-dunerider-firing-deck',19,'Skorpius Dunerider, Core Abilities'],
+  ['technoarcheologist-core-abilities',19,'Technoarcheologist, Core Abilities section'],
+  ['faq-auto-divinatory-targeting-protector-imperative',19,'Ballistic Skill modifiers applied?']
+];
 
 const parityByTitle=new Map(amParity.detachments.map(item=>[item.title,item]));
 const amEffectiveCodexDetachments=amCodexDetachments.detachments.map(detachment=>{
@@ -267,14 +322,83 @@ function mobileFile(bookId,target){
   return `books/${bookId}/mobile/${detachment}.html`;
 }
 
+function sameSet(actual,expected,label){
+  assert.deepStrictEqual([...new Set(actual)].sort(),[...new Set(expected)].sort(),label);
+}
+
+function verifyOfficialInventory(bookId,ledger){
+  let inventory;
+  if(bookId==='tyranids')inventory=tyrPack.updates.map(item=>item.id);
+  else if(bookId==='death-guard'){
+    const blocks=exactlyOne(dgSource.sections.filter(section=>section.id==='rules-updates'),'DG official update section').blocks;
+    for(const block of blocks){
+      const matches=dgOfficialMarkers.filter(([,marker])=>block.text.includes(marker));
+      assert.equal(matches.length,1,`DG official block has ${matches.length} inventory markers: ${block.text}`);
+    }
+    for(const [id,marker] of dgOfficialMarkers)assert.equal(blocks.filter(block=>block.text.includes(marker)).length,1,`DG inventory marker ${id}`);
+    inventory=dgOfficialMarkers.map(([id])=>id);
+  }else{
+    for(const [id,page,marker] of amOfficialMarkers){
+      const transcript=amSource.pages[String(page)];
+      assert.ok(transcript,`Mechanicus inventory ${id}: missing page ${page}`);
+      assert.equal(transcript.split(marker).length-1,1,`Mechanicus inventory marker ${id}`);
+    }
+    inventory=amOfficialMarkers.map(([id])=>id);
+  }
+  sameSet(ledger.updates.map(item=>item.id),inventory,`${bookId}: official inventory and ledger differ`);
+}
+
+function targetConcept(target){
+  if(target.kind==='army-rule')return target.title;
+  if(['keyword','datasheet-keyword','keyword-addition'].includes(target.kind))return target.value||target.keyword;
+  if(['core-ability','datasheet-core-ability'].includes(target.kind))return target.abilityKey||target.title||target.effectiveAfter;
+  if(target.kind==='datasheet-ability')return target.abilityKey;
+  return null;
+}
+
+const ruleText=value=>clean(value).replace(/:\s*\u2022\s*/g,': ').replace(/\.\s*\u2022\s*/g,'; ').toLowerCase();
+
+function glossaryMappings(bookId,target){
+  const unitId=target.unitId;
+  const concept=targetConcept(target);
+  const exactDefinition=typeof target.effectiveAfter==='string'?clean(target.effectiveAfter):null;
+  const matches=[];
+  for(const [contextId,context] of Object.entries(glossaryContexts[bookId])){
+    const term=glossary[context.termId];
+    if(!term)continue;
+    const navigation=context.navigation||{};
+    const addressMatches=unitId&&(navigation.units?.includes(unitId)||navigation.datasheet===unitId||navigation.rule===unitId)
+      ||target.owner&&navigation.rule===target.owner;
+    if(!addressMatches)continue;
+    const title=slug(term.title?.en||'').replace(/-\d+$/,'');
+    const conceptMatches=concept&&title===slug(concept).replace(/-\d+$/,'');
+    const definitionMatches=exactDefinition&&clean(term.definition?.en||'')===exactDefinition;
+    if(conceptMatches||definitionMatches)matches.push({contextId,termId:context.termId});
+  }
+  if(target.kind==='army-rule'){
+    for(const [termId,term] of Object.entries(glossary))if(term.scope===bookId&&slug(term.title?.en||'')===slug(target.title)&&ruleText(term.definition?.en||'')===ruleText(exactDefinition))matches.push({contextId:null,termId});
+  }
+  return [...new Map(matches.map(item=>[item.termId,item])).values()];
+}
+
 function verifyGlossary(bookId,update,target){
   if(!target.glossaryTermId){
     assert.equal(target.glossary?.status,'not-applicable',`${bookId}/${update.id}: missing glossary contract`);
     assert.ok(target.glossary.reason,`${bookId}/${update.id}: glossary reason is required`);
+    assert.deepStrictEqual(glossaryMappings(bookId,target),[],`${bookId}/${update.id}: glossary not-applicable has an addressable mapping`);
     return;
   }
   const term=glossary[target.glossaryTermId];
   assert.ok(term,`${bookId}/${update.id}: missing glossary ${target.glossaryTermId}`);
+  if(target.kind==='army-rule'){
+    assert.equal(ruleText(term.definition?.en||''),ruleText(target.effectiveAfter),`${bookId}/${update.id}: glossary army rule differs`);
+    assert.ok(glossaryMappings(bookId,target).some(item=>item.termId===target.glossaryTermId),`${bookId}/${update.id}: glossary ${target.glossaryTermId} is not mapped to the exact target`);
+    return;
+  }
+  if(['army-rule','keyword','datasheet-keyword','keyword-addition','core-ability','datasheet-core-ability'].includes(target.kind)){
+    assert.ok(glossaryMappings(bookId,target).some(item=>item.termId===target.glossaryTermId),`${bookId}/${update.id}: glossary ${target.glossaryTermId} is not mapped to the exact target`);
+    return;
+  }
   const value=target.effectiveAfter;
   if(value&&typeof value==='object'&&!Array.isArray(value)){
     assert.equal(clean(term.title.en),clean(value.name).replace(/^➤\s*/,''),
@@ -309,6 +433,7 @@ for(const [bookId,config] of Object.entries(configs)){
   assert.equal(ledger.schema,1);
   assert.equal(ledger.bookId,bookId);
   assert.ok(ledger.updates.length,`${bookId}: ledger is empty`);
+  verifyOfficialInventory(bookId,ledger);
   for(const update of ledger.updates){
     updateCount++;
     assert.ok(!updateIds.has(update.id),`${bookId}: duplicate update ${update.id}`);

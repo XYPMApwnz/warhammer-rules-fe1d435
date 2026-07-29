@@ -575,10 +575,7 @@
           "effectiveAfter": "Support",
           "kind": "datasheet-core-ability",
           "unavailableReason": null,
-          "glossary": {
-            "status": "not-applicable",
-            "reason": "Unit core ability membership has no standalone glossary field mapping."
-          }
+          "glossaryTermId": "core-support"
         }
       ],
       "source": {
@@ -959,10 +956,7 @@
           "effectiveAfter": "Support",
           "kind": "datasheet-core-ability",
           "unavailableReason": null,
-          "glossary": {
-            "status": "not-applicable",
-            "reason": "Unit core ability membership has no standalone glossary field mapping."
-          }
+          "glossaryTermId": "core-support"
         }
       ],
       "source": {
@@ -1064,10 +1058,7 @@
           "effectiveAfter": "Firing Deck 2",
           "kind": "datasheet-core-ability",
           "unavailableReason": null,
-          "glossary": {
-            "status": "not-applicable",
-            "reason": "Unit core ability membership has no standalone glossary field mapping."
-          }
+          "glossaryTermId": "core-firing-deck"
         }
       ],
       "source": {
@@ -1099,10 +1090,7 @@
           "effectiveAfter": "Support",
           "kind": "datasheet-core-ability",
           "unavailableReason": null,
-          "glossary": {
-            "status": "not-applicable",
-            "reason": "Unit core ability membership has no standalone glossary field mapping."
-          }
+          "glossaryTermId": "core-support"
         }
       ],
       "source": {

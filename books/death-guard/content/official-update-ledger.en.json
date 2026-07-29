@@ -67,6 +67,7 @@
       "targets": [
         {
           "kind": "keyword-addition",
+          "keyword": "FRAME",
           "unitId": "unit-chaos-land-raider",
           "owner": "chaos-land-raider-keywords",
           "title": "Keywords",
@@ -90,6 +91,7 @@
         },
         {
           "kind": "keyword-addition",
+          "keyword": "FRAME",
           "unitId": "unit-chaos-predator-annihilator",
           "owner": "chaos-predator-annihilator-keywords",
           "title": "Keywords",
@@ -112,6 +114,7 @@
         },
         {
           "kind": "keyword-addition",
+          "keyword": "FRAME",
           "unitId": "unit-chaos-predator-destructor",
           "owner": "chaos-predator-destructor-keywords",
           "title": "Keywords",
@@ -134,6 +137,7 @@
         },
         {
           "kind": "keyword-addition",
+          "keyword": "FRAME",
           "unitId": "unit-chaos-rhino",
           "owner": "chaos-rhino-keywords",
           "title": "Keywords",
@@ -158,6 +162,7 @@
         },
         {
           "kind": "keyword-addition",
+          "keyword": "FRAME",
           "unitId": "unit-miasmic-malignifier",
           "owner": "miasmic-malignifier-keywords",
           "title": "Keywords",
@@ -179,6 +184,7 @@
         },
         {
           "kind": "keyword-addition",
+          "keyword": "FRAME",
           "unitId": "unit-plagueburst-crawler",
           "owner": "plagueburst-crawler-keywords",
           "title": "Keywords",

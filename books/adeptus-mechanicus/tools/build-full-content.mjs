@@ -21,6 +21,11 @@ const pointsCatalog=readJson('content/adeptus-mechanicus-points.en.json');
 const globalGlossary=readJson('../../glossary/registry.en.json').terms;
 const pointsByUnit=new Map(pointsCatalog.units.map(unit=>[unit.title.toLowerCase(),unit]));
 const titleKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const slugKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const abilityText=ability=>ability.text||[
+  ability.openingText,
+  ...(ability.options||[]).map(option=>`${option.title}: ${option.text}`)
+].filter(Boolean).join('\n\n');
 const enhancementsByTitle=new Map(pointsCatalog.enhancements.map(item=>[titleKey(item.title),item]));
 const factionDatasheets=new Map(factionRules.datasheets.map(unit=>[unit.id,unit]));
 const codexWargearByTitle=new Map(codexWargear.units.map(unit=>[titleKey(unit.title),unit]));
@@ -43,7 +48,7 @@ const unitTitleKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,
 const unitByTitle=new Map(rules.datasheets.map(unit=>[unitTitleKey(unit.title),unit]));
 const attachments=[];
 for(const leader of rules.datasheets){
-  const text=(leader.abilities||[]).filter(ability=>/^(leader|support)$/i.test(ability.title)).map(ability=>ability.text||'').join(' ');
+  const text=(leader.abilities||[]).filter(ability=>/^(leader|support)$/i.test(ability.title)).map(abilityText).join(' ');
   if(!text)continue;
   for(const bodyguard of rules.datasheets)if(bodyguard!==leader&&text.toLowerCase().includes(bodyguard.title.toLowerCase()))attachments.push([leader.id,bodyguard.id]);
 }
@@ -97,7 +102,7 @@ for(const unit of rules.datasheets){
     const key=ability.title.toLowerCase();
     let term=termKeys.get(key)||coreTermKeys.get(coreBaseKey(ability.title));
     if(!term){
-      const full=ability.text||`${ability.title} is listed on the ${unit.title} datasheet.`;
+    const full=abilityText(ability)||`${ability.title} is listed on the ${unit.title} datasheet.`;
       term={id:uniqueTermId(`datasheet-${slugify(ability.title)}`),title:ability.title,group:'Datasheet abilities',summary:full.split(/(?<=[.!?])\s/)[0],full,sectionId:unit.id,unitIds:[]};
       glossaryTerms.push(term);termKeys.set(key,term);
     }
@@ -212,7 +217,7 @@ const toc=navLeaf('start','Start',1)
 
 const updates=rules.updates.map(item=>tracked(item.id,item.title,`<article class="rule-card surface"><div class="eyebrow">Official update</div><p>${decorate(item.summary)}</p><div class="source">${sourceLink(item.sourcePages)}</div>${transcript(item.sourcePages)}</article>`)).join('');
 const options=rules.armyRule.options.map((option,index)=>`<button class="protocol${option.id===rules.armyRule.options.find(x=>x.id.endsWith(rules.armyRule.default))?.id||(!index?'':' active')}" data-protocol="${option.id.split('-')[0]}"><span>${esc(option.symbol)}</span><b>${esc(option.label)}</b><small>${esc(option.subtitle)}</small></button>`).join('');
-const optionPanels=rules.armyRule.options.map(option=>`<section id="${option.id}" data-track="${option.id}"${option.id.endsWith(rules.armyRule.default)?'':' hidden'}><b>${esc(option.label.toUpperCase())} IMPERATIVE</b><ul>${option.effects.map(x=>`<li>${decorate(x)}</li>`).join('')}</ul></section>`).join('');
+const optionPanels=rules.armyRule.options.map(option=>`<section id="${option.id}" data-track="${option.id}" data-source-field="effects"${option.id.endsWith(rules.armyRule.default)?'':' hidden'}><b>${esc(option.label.toUpperCase())} IMPERATIVE</b><ul>${option.effects.map(x=>`<li>${decorate(x)}</li>`).join('')}</ul></section>`).join('');
 const armyRule=tracked(rules.armyRule.id,rules.armyRule.title,`<article class="doctrina-console surface"><div class="doctrina-code"><span>DOCTRINA</span><strong>Ω-01</strong></div><div class="doctrina-body"><div class="eyebrow">Battle Protocol</div><p>Select the active imperative. The console shows the complete Faction Pack v${rules.source.version} replacement.</p><div class="protocol-switch" role="group" aria-label="Select Doctrina Imperative">${options}</div><div class="protocol-result">${optionPanels}</div><div class="source">${sourceLink(rules.armyRule.sourcePages)}</div></div></article>`);
 
 const detachments=allDetachments.map(det=>{
@@ -221,25 +226,25 @@ const detachments=allDetachments.map(det=>{
   const enhancements=det.enhancements.map(original=>{
     const current=isCodex?enhancementsByTitle.get(titleKey(original.title)):null;
     const item=current?{...original,title:current.title,text:current.text}:original;
-    return `<article class="enhancement surface" data-rule-id="${esc(item.id)}" data-eligibility="${esc(JSON.stringify(item.eligibility))}" data-enhancement-title="${esc(item.title)}"><div class="eyebrow">Enhancement</div><h4>${esc(item.title)}</h4><p>${decorate(item.text)}</p></article>`;
+    return `<article class="enhancement surface" data-rule-id="${esc(item.id)}" data-eligibility="${esc(JSON.stringify(item.eligibility))}" data-enhancement-title="${esc(item.title)}"><div class="eyebrow">Enhancement</div><h4>${esc(item.title)}</h4><p data-source-field="text">${decorate(item.text)}</p></article>`;
   }).join('');
   const stratagems=det.stratagems.map(item=>{
     const turn=/opponent|enemy/i.test(item.when)?'THEIR TURN':/your\b/i.test(item.when)?'YOUR TURN':'ANY TURN';
     const turnClass=turn==='THEIR TURN'?'turn-their':turn==='YOUR TURN'?'turn-yours':'turn-any';
-    return `<article class="stratagem surface ${turnClass}" data-rule-id="${esc(item.id)}" data-turn="${turn}" data-eligibility="${esc(JSON.stringify(item.eligibility))}" data-target="${esc(item.target||'')}"><div class="stratagem-head"><div><h3>${esc(item.title)}</h3><span class="stratagem-type">${esc(item.category)}</span></div><div class="cp">${esc(item.cp)}</div></div><p class="field"><b>When</b><br>${decorate(item.when)}</p>${item.target?`<p class="field"><b>Target</b><br>${decorate(item.target)}</p>`:''}<p class="field"><b>Effect</b><br>${decorate(item.effect)}</p>${item.restrictions?`<p class="field"><b>Restrictions</b><br>${decorate(item.restrictions)}</p>`:''}</article>`;
+    return `<article class="stratagem surface ${turnClass}" data-rule-id="${esc(item.id)}" data-turn="${turn}" data-eligibility="${esc(JSON.stringify(item.eligibility))}" data-target="${esc(item.target||'')}"><div class="stratagem-head"><div><h3>${esc(item.title)}</h3><span class="stratagem-type">${esc(item.category)}</span></div><div class="cp">${esc(item.cp)}</div></div><p class="field" data-source-field="when"><b>When</b><br>${decorate(item.when)}</p>${item.target?`<p class="field" data-source-field="target"><b>Target</b><br>${decorate(item.target)}</p>`:''}<p class="field" data-source-field="effect"><b>Effect</b><br>${decorate(item.effect)}</p>${item.restrictions?`<p class="field" data-source-field="restrictions"><b>Restrictions</b><br>${decorate(item.restrictions)}</p>`:''}</article>`;
   }).join('');
   const publication=`<div class="detachment-meta"><span>${isCodex?'CODEX + 11E UPDATE':'FACTION PACK'}</span>${det.disposition?`<span>${esc(det.disposition)}</span>`:''}${det.dp?`<strong>${esc(det.dp)}</strong>`:''}</div>`;
   const provenance=isCodex?`<div class="source"><a class="source-link" href="${codex.source.officialIndexUrl}">Official 11e detachment index</a> · <a class="source-link" href="${codex.source.referenceUrl}">Codex rules reference</a>${det.updatedSourcePages?.length?` · ${sourceLink(det.updatedSourcePages)}`:''}</div>${det.updatedSourcePages?.length?transcript(det.updatedSourcePages):''}`:`<div class="source">${sourceLink(det.sourcePages)}</div>${transcript(det.sourcePages)}`;
-  const body=`${publication}<p class="lead">${esc(det.tagline)}</p><div class="detachment-content">${tracked(det.rule.id,'Detachment Rule',`<article class="rule-card surface"><h3>${esc(det.rule.title)}</h3><p>${decorate(det.rule.text)}</p></article>`,'detachment-part')}${tracked(`${slug}-enhancements`,'Enhancements',`<div class="detachment-grid">${enhancements}</div>`,'detachment-part')}${tracked(`${slug}-stratagems`,'Stratagems',stratagems,'detachment-part')}</div>${provenance}`;
+  const body=`${publication}<p class="lead">${esc(det.tagline)}</p><div class="detachment-content">${tracked(det.rule.id,'Detachment Rule',`<article class="rule-card surface"><h3>${esc(det.rule.title)}</h3><p data-source-field="text">${decorate(det.rule.text)}</p></article>`,'detachment-part')}${tracked(`${slug}-enhancements`,'Enhancements',`<div class="detachment-grid">${enhancements}</div>`,'detachment-part')}${tracked(`${slug}-stratagems`,'Stratagems',stratagems,'detachment-part')}</div>${provenance}`;
   return `<section class="content-group detachment" id="${det.id}" data-track="${det.id}" data-detachment="${slug}"><h3 class="category-title">${esc(det.title)}</h3>${body}</section>`;
 }).join('');
 
-const stats=unit=>(unit.profiles?.length?unit.profiles:[{name:unit.title,stats:unit.stats}]).map(profile=>`<div class="model-profile">${unit.profiles?.length>1?`<h5>${esc(profile.name)}</h5>`:''}<div class="statline">${Object.entries(profile.stats).map(([key,value])=>`<div class="stat"><b>${key}</b><span>${esc(value)}</span></div>`).join('')}${unit.invulnerable?`<div class="stat invulnerable"><b>InSv</b><span>${esc(unit.invulnerable)}</span></div>`:''}</div></div>`).join('');
+const stats=unit=>(unit.profiles?.length?unit.profiles:[{name:unit.title,stats:unit.stats}]).map(profile=>`<div class="model-profile" data-profile="${esc(slugKey(profile.name))}">${unit.profiles?.length>1?`<h5>${esc(profile.name)}</h5>`:''}<div class="statline">${Object.entries(profile.stats).map(([key,value])=>`<div class="stat" data-source-field="stats.${esc(key)}"><b>${key}</b><span>${esc(value)}</span></div>`).join('')}${unit.invulnerable?`<div class="stat invulnerable" data-source-field="invulnerable"><b>InSv</b><span>${esc(unit.invulnerable)}</span></div>`:''}</div></div>`).join('');
 const weapons=unit=>['ranged','melee'].map(mode=>{
   const rows=unit.weapons.filter(x=>x.mode===mode);
   if(!rows.length)return '';
   const skillLabel=mode==='ranged'?'BS':'WS';
-  return `<div class="weapon-group"><h5>${mode==='ranged'?'Ranged':'Melee'} weapons</h5><div class="weapon-table" role="table" aria-label="${esc(unit.title)} ${mode} weapons"><div class="weapon-row weapon-head"><div>Weapon</div><div>Range</div><div>A</div><div>${skillLabel}</div><div>S</div><div>AP</div><div>D</div></div>${rows.map(w=>`<div class="weapon-row"><div><button class="weapon-button" data-term="${w.termId}">${esc(w.name)}</button>${w.abilities?`<small>${decorate(w.abilities,unit.id)}</small>`:''}</div><div data-label="Range">${esc(w.range)}</div><div data-label="A">${esc(w.a)}</div><div data-label="${skillLabel}">${esc(w.skill)}</div><div data-label="S">${esc(w.s)}</div><div data-label="AP">${esc(w.ap)}</div><div data-label="D">${esc(w.d)}</div></div>`).join('')}</div></div>`;
+  return `<div class="weapon-group"><h5>${mode==='ranged'?'Ranged':'Melee'} weapons</h5><div class="weapon-table" role="table" aria-label="${esc(unit.title)} ${mode} weapons"><div class="weapon-row weapon-head"><div>Weapon</div><div>Range</div><div>A</div><div>${skillLabel}</div><div>S</div><div>AP</div><div>D</div></div>${rows.map(w=>`<div class="weapon-row" data-source-field="weapons.${esc(slugKey(w.name))}" data-mode="${mode}"><div data-source-field="name"><button class="weapon-button" data-term="${w.termId}">${esc(w.name)}</button>${w.abilities?`<small>${decorate(w.abilities,unit.id)}</small>`:''}</div><div data-label="Range" data-source-field="range">${esc(w.range)}</div><div data-label="A" data-source-field="a">${esc(w.a)}</div><div data-label="${skillLabel}" data-source-field="skill">${esc(w.skill)}</div><div data-label="S" data-source-field="s">${esc(w.s)}</div><div data-label="AP" data-source-field="ap">${esc(w.ap)}</div><div data-label="D" data-source-field="d">${esc(w.d)}</div></div>`).join('')}</div></div>`;
 }).join('');
 const abilityKind=item=>{
   if(/^doctrina imperatives$/i.test(item.title))return 'faction';
@@ -249,8 +254,8 @@ const abilityKind=item=>{
   if(/^core$/i.test(item.title)||knownCoreTitles.has(coreBaseKey(item.title)))return 'core';
   return 'datasheet';
 };
-const abilityCard=(item,unit)=>`<article class="ability"><h5><button class="term-button" data-term="${item.termId}">${esc(item.title)}</button></h5>${item.text?`<p>${decorate(item.text,unit.id)}</p>`:''}</article>`;
-const compactAbilities=(title,items,unit)=>items.length?`<article class="ability"><h5>${title}</h5><p>${items.map(item=>/^core$/i.test(item.title)?decorate(item.text,unit.id):`<button class="term-button" data-term="${item.termId}">${esc(item.title)}</button>`).join(', ')}</p></article>`:'';
+const abilityCard=(item,unit)=>`<article class="ability" data-source-field="abilities.${esc(slugKey(item.title))}"><h5 data-source-field="title"><button class="term-button" data-term="${item.termId}">${esc(item.title)}</button></h5>${item.openingText?`<p data-source-field="openingText">${decorate(item.openingText,unit.id)}</p>`:''}${(item.options||[]).map(option=>`<div class="ability-option" data-source-field="options.${esc(option.id)}"><h6>${esc(option.title)}</h6><p data-source-field="text">${decorate(option.text,unit.id)}</p></div>`).join('')}${item.text?`<p data-source-field="text">${decorate(item.text,unit.id)}</p>`:''}</article>`;
+const compactAbilities=(title,items,unit)=>items.length?`<article class="ability"><h5>${title}</h5><p>${items.map(item=>/^core$/i.test(item.title)?decorate(abilityText(item),unit.id):`<button class="term-button" data-term="${item.termId}" data-source-field="abilities.${esc(slugKey(item.title))}">${esc(item.title)}</button>`).join(', ')}</p></article>`:'';
 const unitCard=unit=>{
   const slug=unit.id.replace('unit-','');
   const grouped={core:[],faction:[],datasheet:[],relation:[],damaged:[],transport:[]};
@@ -266,7 +271,7 @@ const unitCard=unit=>{
     ...grouped.damaged.map(item=>['Damaged',`${slug}-damaged`,`<div class="ability-list">${abilityCard(item,unit)}</div>`]),
     ...(wargear.length?[['Wargear Options',`${slug}-wargear-options`,`<ul>${wargear.map(x=>`<li>${decorate(x,unit.id)}</li>`).join('')}</ul>`]]:[]),
     ...(wargearAbilities.length?[['Wargear Abilities',`${slug}-wargear-abilities`,`<p class="unit-note">These abilities apply only while the corresponding wargear is equipped.</p><div class="ability-list">${wargearAbilities.map(item=>abilityCard(item,unit)).join('')}</div>`]]:[]),
-    ['Keywords',`${slug}-keywords`,`<div class="keyword-list">${unit.keywords.map(x=>`<span>${esc(x)}</span>`).join('')}</div>`]
+    ['Keywords',`${slug}-keywords`,`<div class="keyword-list">${unit.keywords.map(x=>`<span data-source-field="keywords.${esc(slugKey(x))}">${esc(x)}</span>`).join('')}</div>`]
   ];
   const tabs=parts.map(([label,id])=>`<button class="local-tab" data-journey-target="${id}" data-journey-type="datasheet">${label}</button>`).join('');
   const sections=parts.map(([label,id,body])=>`<section class="unit-part" id="${id}"><h4>${label}</h4>${body}</section>`).join('');

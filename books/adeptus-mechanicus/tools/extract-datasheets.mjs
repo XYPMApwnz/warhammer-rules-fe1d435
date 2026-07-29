@@ -47,7 +47,23 @@ const unique=(items,marker)=>{
   const seen=new Set();
   return items.filter(item=>{const id=marker(item);if(seen.has(id))return false;seen.add(id);return true;});
 };
-const publicAbility=item=>({title:item.title,text:item.text});
+const publicAbility=item=>{
+  if(item.title!=='Canticles of the Omnissiah')return {title:item.title,text:item.text};
+  const [openingText,...blocks]=item.text.split(/\n{2,}/);
+  return {
+    title:item.title,
+    openingText,
+    options:blocks.map(block=>{
+      const separator=block.indexOf(':');
+      const title=block.slice(0,separator);
+      return {
+        id:key(title).replace(/\s*\(aura\)\s*$/,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''),
+        title,
+        text:block.slice(separator+1).trim()
+      };
+    })
+  };
+};
 const characteristics=(profile,categoryIds=new Set())=>{
   const values=new Map((profile.characteristics||[]).map(item=>[item.typeId,{name:clean(item.name),value:clean(item.$text)}]));
   for(const modifier of profile.modifiers||[]){

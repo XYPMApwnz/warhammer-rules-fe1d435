@@ -47,6 +47,14 @@ const dgRuntime=loadWindow(path.join(root,'books','death-guard','scripts','data.
 const amRuntime=loadWindow(path.join(root,'books','adeptus-mechanicus','scripts','data.js')).DG_TERMS;
 const amFaction=readJson(path.join(root,'books','adeptus-mechanicus','content','adeptus-mechanicus-rules.en.json'));
 const amCodexDetachments=readJson(path.join(root,'books','adeptus-mechanicus','content','adeptus-mechanicus-codex-detachments.en.json'));
+const amCodexParity=readJson(path.join(root,'books','adeptus-mechanicus','content','adeptus-mechanicus-codex-parity.en.json'));
+const amParityByTitle=new Map(amCodexParity.detachments.map(item=>[item.title,item]));
+const amEffectiveCodexDetachments={...amCodexDetachments,detachments:amCodexDetachments.detachments.map(detachment=>{
+  const parity=amParityByTitle.get(detachment.title);
+  if(!parity)throw new Error(`Missing Adeptus Mechanicus Codex parity for ${detachment.title}`);
+  const enhancements=new Map(parity.enhancements.map(item=>[item.title,item.text]));
+  return {...detachment,rule:{...detachment.rule,text:parity.rule.text},enhancements:detachment.enhancements.map(item=>({...item,text:enhancements.get(item.title)||item.text}))};
+})};
 const amDatasheets=readJson(path.join(root,'books','adeptus-mechanicus','content','adeptus-mechanicus-codex-datasheets.en.json'));
 const genericArmyBooks=fs.readdirSync(path.join(root,'books'),{withFileTypes:true})
   .filter(entry=>entry.isDirectory())
@@ -305,7 +313,7 @@ function addMechanicusDetachments(source,revision){
 }
 
 addMechanicusDetachments(amFaction,amFaction.version||'Faction Pack v1.0');
-addMechanicusDetachments(amCodexDetachments,'Codex carry-forward for 11e');
+addMechanicusDetachments(amEffectiveCodexDetachments,'Codex carry-forward + Faction Pack v1.1');
 
 for(const datasheet of amDatasheets.datasheets||[]){
   const id=`adeptus-mechanicus-unit-${slug(datasheet.title)}`;

@@ -44,7 +44,8 @@
         },
         {
           "type": "p",
-          "text": "Contagion Range cannot be greater than 12\" after modifiers."
+          "text": "Contagion Range cannot be greater than 12\" after modifiers.",
+          "id": "contagion-range-cap"
         }
       ],
       "subsections": [
@@ -1312,7 +1313,8 @@
         },
         {
           "type": "p",
-          "text": "FAQ: Plagueburst Crawler’s Spore-laced Shock Waves ability does not inflict mortal wounds every turn to units affected by the ability."
+          "text": "FAQ: Plagueburst Crawler’s Spore-laced Shock Waves ability does not inflict mortal wounds every turn to units affected by the ability.",
+          "id": "faq-spore-laced-shock-waves"
         }
       ],
       "subsections": [],

@@ -398,7 +398,7 @@ window.DG_TERMS={
   "doctrina-imperatives": {
     "title": "Doctrina Imperatives",
     "summary": "The Adeptus Mechanicus Army Rule with Protector and Conqueror modes.",
-    "full": "Select and apply the active imperative according to the current publication.",
+    "full": "PROTECTOR IMPERATIVE\nRanged weapons equipped by models in this unit have the [HEAVY] ability.\nImprove the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\nEach time a melee attack targets this unit, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\nRanged weapons equipped by models in this unit have the [ASSAULT] ability.\nImprove the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\nEach time a model in this unit makes an attack, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, improve the Armour Penetration characteristic of that attack by 1.",
     "glossary": "glossary-doctrina-imperatives",
     "rule": "army-rule-doctrina",
     "units": [

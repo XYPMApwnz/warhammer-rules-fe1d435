@@ -1,0 +1,809 @@
+{
+  "schema": 1,
+  "bookId": "tyranids",
+  "updates": [
+    {
+      "id": "army-shadow-in-the-warp",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 19
+      },
+      "targets": [
+        {
+          "kind": "army-rule",
+          "title": "Shadow in the Warp",
+          "field": "text",
+          "effectiveAfter": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null
+        }
+      ]
+    },
+    {
+      "id": "army-synapse",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 19
+      },
+      "targets": [
+        {
+          "kind": "army-rule",
+          "title": "Synapse",
+          "field": "text",
+          "effectiveAfter": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army: each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6; each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null
+        }
+      ]
+    },
+    {
+      "id": "assimilation-feed-the-swarm",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 19
+      },
+      "targets": [
+        {
+          "kind": "detachment-rule",
+          "owner": "assimilation-swarm",
+          "title": "Feed the Swarm",
+          "field": "text",
+          "effectiveAfter": "In your Command phase, each HARVESTER unit from your army can Regenerate one friendly TYRANIDS unit that is within 6\" of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following:\n\nOne model in that unit regains up to D3+1 lost wounds.\n\nOne destroyed INFANTRY model (excluding CHARACTERS) is returned to that unit with its full wounds remaining. If that unit is an ENDLESS MULTITUDE unit, up to 3 destroyed models are returned instead.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-detachment-rule-feed-the-swarm",
+          "unavailableReason": null
+        }
+      ]
+    },
+    {
+      "id": "assimilation-instinctive-defence",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 19
+      },
+      "targets": [
+        {
+          "kind": "enhancement-text",
+          "owner": "assimilation-swarm",
+          "title": "Instinctive Defence",
+          "field": "text",
+          "effectiveAfter": "TYRANIDS model only. While the bearer is within 6\" of one or more friendly HARVESTER units, when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, while the bearer is within 6\" of one or more friendly HARVESTER units, models in the bearer’s unit have the Fights First ability.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-enhancement-instinctive-defence",
+          "unavailableReason": null,
+          "enhancementId": "enhancement-instinctive-defense"
+        }
+      ]
+    },
+    {
+      "id": "crusher-enraged-behemoths",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 19
+      },
+      "targets": [
+        {
+          "kind": "detachment-rule",
+          "owner": "crusher-stampede",
+          "title": "Enraged Behemoths",
+          "field": "text",
+          "effectiveAfter": "Each time a TYRANIDS MONSTER model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a TYRANIDS MONSTER unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-detachment-rule-enraged-behemoths",
+          "unavailableReason": null
+        }
+      ]
+    },
+    {
+      "id": "crusher-untrammelled-ferocity",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 19
+      },
+      "targets": [
+        {
+          "kind": "stratagem-field",
+          "owner": "crusher-stampede",
+          "title": "UNTRAMMELLED FEROCITY",
+          "field": "effect",
+          "effectiveAfter": "Until the end of the phase, each time a model in your unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and sections of terrain features that are 4\" or less in height. When doing so:\n\nIt can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.\nIt can also move through sections of terrain features that are more than 4\" in height, but if it does, after its unit has moved, roll one D6: on a 1, your unit is Battle-shocked.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-stratagem-untrammelled-ferocity",
+          "unavailableReason": null,
+          "stratagemId": "stratagem-untrammelled-ferocity"
+        }
+      ]
+    },
+    {
+      "id": "synaptic-reinforced-hive-node",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 19
+      },
+      "targets": [
+        {
+          "kind": "stratagem-field",
+          "owner": "synaptic-nexus",
+          "title": "REINFORCED HIVE NODE",
+          "field": "effect",
+          "effectiveAfter": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-stratagem-reinforced-hive-node",
+          "unavailableReason": null,
+          "stratagemId": "stratagem-reinforced-hive-node"
+        }
+      ]
+    },
+    {
+      "id": "unending-insurmountable-odds",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 19
+      },
+      "targets": [
+        {
+          "kind": "detachment-rule",
+          "owner": "unending-swarm",
+          "title": "Insurmountable Odds",
+          "field": "text",
+          "effectiveAfter": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model from a friendly ENDLESS MULTITUDE unit was destroyed as a result of those attacks, that friendly unit can make a surge move of up to D6\".",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-detachment-rule-insurmountable-odds",
+          "unavailableReason": null
+        }
+      ]
+    },
+    {
+      "id": "vanguard-hypersensory-scilia",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 19
+      },
+      "targets": [
+        {
+          "kind": "stratagem-field",
+          "owner": "vanguard-onslaught",
+          "title": "HYPERSENSORY SCILLIA",
+          "field": "target",
+          "effectiveAfter": "Up to two VANGUARD INVADER units from your army that are within 8\" of that enemy unit, or one other TYRANIDS INFANTRY unit from your army that is within 8\" of that enemy unit.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-stratagem-hypersensory-scillia",
+          "unavailableReason": null,
+          "stratagemId": "stratagem-hypersensory-scillia"
+        }
+      ]
+    },
+    {
+      "id": "vanguard-neuronode",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 19
+      },
+      "targets": [
+        {
+          "kind": "enhancement-text",
+          "owner": "vanguard-onslaught",
+          "title": "Neuronode",
+          "field": "text",
+          "effectiveAfter": "TYRANIDS model only. After both players have deployed their armies, you can select up to three VANGUARD INVADER units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-enhancement-neuronode",
+          "unavailableReason": null,
+          "enhancementId": "enhancement-neuronode"
+        }
+      ]
+    },
+    {
+      "id": "biovores-seed-spore-mine",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "ability",
+          "title": "Seed Spore Mines",
+          "field": "text",
+          "effectiveAfter": "Once per turn, in your Shooting Phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new SPORE MINES unit to your army and set it up anywhere on the battlefield that is wholly within 48\" of this unit and more than 8\" horizontally away from all enemy units. That SPORE MINES unit contains 1 model for each model in this unit.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-seed-spore-mines",
+          "unavailableReason": null,
+          "unitId": "unit-biovores"
+        }
+      ]
+    },
+    {
+      "id": "broodlord-parasite-faction-abilities-keywords",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "ability",
+          "title": "Shadow in the Warp",
+          "field": "text",
+          "effectiveAfter": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-shadow-in-the-warp",
+          "unavailableReason": null,
+          "unitId": "unit-broodlord"
+        },
+        {
+          "kind": "keyword",
+          "value": "Synapse",
+          "effectiveAfter": true,
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null,
+          "unitId": "unit-broodlord"
+        },
+        {
+          "kind": "ability",
+          "title": "Shadow in the Warp",
+          "field": "text",
+          "effectiveAfter": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-shadow-in-the-warp",
+          "unavailableReason": null,
+          "unitId": "unit-parasite-of-mortrex"
+        },
+        {
+          "kind": "keyword",
+          "value": "Synapse",
+          "effectiveAfter": true,
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null,
+          "unitId": "unit-parasite-of-mortrex"
+        }
+      ]
+    },
+    {
+      "id": "carnifexes-blistering-assault",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "ability",
+          "title": "Blistering Assault",
+          "field": "text",
+          "effectiveAfter": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\".",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-blistering-assault",
+          "unavailableReason": null,
+          "unitId": "unit-carnifexes"
+        }
+      ]
+    },
+    {
+      "id": "exocrine-bio-plasmic-cannon",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "weapon-stat",
+          "title": "Bio-plasmic cannon",
+          "field": "s",
+          "effectiveAfter": "9",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-weapon-bio-plasmic-cannon",
+          "unavailableReason": null,
+          "unitId": "unit-exocrine"
+        }
+      ]
+    },
+    {
+      "id": "hive-tyrant-onslaught",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "ability",
+          "title": "Onslaught (Aura, Psychic)",
+          "field": "text",
+          "effectiveAfter": "While a friendly TYRANIDS unit is within 6\" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-onslaught-aura-psychic",
+          "unavailableReason": null,
+          "unitId": "unit-hive-tyrant"
+        }
+      ]
+    },
+    {
+      "id": "harpy-spore-mine-cysts",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "ability",
+          "title": "Spore Mine Cysts",
+          "field": "text",
+          "effectiveAfter": "At the end of your opponent’s Fight phase, you can do one of the following:\n- Select one visible enemy unit (excluding Lone Operative units) within 24\" of this unit and roll six D6 for that unit: for each 3+, that unit suffers 1 mortal wound.\n- Add a new SPORE MINES unit containing D3 models to your army and set it up anywhere on the battlefield that is within 6\" of this model and more than 8\" horizontally away from all enemy units. You cannot select this option for more than one model per turn.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-spore-mine-cysts",
+          "unavailableReason": null,
+          "unitId": "unit-harpy"
+        }
+      ]
+    },
+    {
+      "id": "hive-tyrants-will-of-the-hive-mind",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "ability",
+          "title": "Will of the Hive Mind",
+          "field": "text",
+          "effectiveAfter": "Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-will-of-the-hive-mind",
+          "unavailableReason": null,
+          "unitId": "unit-hive-tyrant"
+        },
+        {
+          "kind": "ability",
+          "title": "Will of the Hive Mind",
+          "field": "text",
+          "effectiveAfter": "Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-will-of-the-hive-mind",
+          "unavailableReason": null,
+          "unitId": "unit-winged-hive-tyrant"
+        }
+      ]
+    },
+    {
+      "id": "mawloc-raveners-trygon-keywords",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "keyword",
+          "value": "Vanguard Invader",
+          "effectiveAfter": true,
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null,
+          "unitId": "unit-mawloc"
+        },
+        {
+          "kind": "keyword",
+          "value": "Vanguard Invader",
+          "effectiveAfter": true,
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null,
+          "unitId": "unit-raveners"
+        },
+        {
+          "kind": "keyword",
+          "value": "Vanguard Invader",
+          "effectiveAfter": true,
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null,
+          "unitId": "unit-trygon"
+        }
+      ]
+    },
+    {
+      "id": "neurolictor-keywords",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "keyword",
+          "value": "Synapse",
+          "effectiveAfter": true,
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null,
+          "unitId": "unit-neurolictor"
+        }
+      ]
+    },
+    {
+      "id": "norn-assimilator-keywords",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "keyword",
+          "value": "Harvester",
+          "effectiveAfter": true,
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null,
+          "unitId": "unit-norn-assimilator"
+        }
+      ]
+    },
+    {
+      "id": "psychophage-updates",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "stat",
+          "profile": "Psychophage",
+          "field": "M",
+          "effectiveAfter": "12\"",
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null,
+          "unitId": "unit-psychophage"
+        },
+        {
+          "kind": "ability",
+          "title": "Bio-stimulus",
+          "field": "text",
+          "effectiveAfter": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly TYRANIDS unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-bio-stimulus",
+          "unavailableReason": null,
+          "unitId": "unit-psychophage"
+        },
+        {
+          "kind": "keyword",
+          "value": "Smoke",
+          "effectiveAfter": true,
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null,
+          "unitId": "unit-psychophage"
+        },
+        {
+          "kind": "weapon-stat",
+          "title": "Talons and betentacled maw",
+          "field": "a",
+          "effectiveAfter": "6",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-weapon-talons-and-betentacled-maw",
+          "unavailableReason": null,
+          "unitId": "unit-psychophage"
+        },
+        {
+          "kind": "weapon-stat",
+          "title": "Talons and betentacled maw",
+          "field": "ap",
+          "effectiveAfter": "-2",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-weapon-talons-and-betentacled-maw",
+          "unavailableReason": null,
+          "unitId": "unit-psychophage"
+        }
+      ]
+    },
+    {
+      "id": "swarmlord-malign-presence",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "ability",
+          "title": "Malign Presence (Aura)",
+          "field": "text",
+          "effectiveAfter": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a Stratagem, you can use this ability. If you do, increase the CP cost of that use of that Stratagem by 1CP.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-malign-presence-aura",
+          "unavailableReason": null,
+          "unitId": "unit-the-swarmlord"
+        }
+      ]
+    },
+    {
+      "id": "tyrannofex-rupture-cannon",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "weapon-stat",
+          "title": "Rupture cannon",
+          "field": "d",
+          "effectiveAfter": "D6+6",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-weapon-rupture-cannon",
+          "unavailableReason": null,
+          "unitId": "unit-tyrannofex"
+        }
+      ]
+    },
+    {
+      "id": "trygon-subterranean-tunnels",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "ability",
+          "title": "Subterranean Tunnels",
+          "field": "text",
+          "effectiveAfter": "In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can use a subterranean tunnel. If it does, this model can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, but until the end of the turn, it is not eligible to declare a charge.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-subterranean-tunnels",
+          "unavailableReason": null,
+          "unitId": "unit-trygon"
+        }
+      ]
+    },
+    {
+      "id": "sporocyst-seed-mucolids",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "ability",
+          "title": "Seed Mucolids",
+          "field": "text",
+          "effectiveAfter": "Once per turn, in your Shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new MUCOLID SPORES unit containing 1 model to your army and set it up anywhere on the battlefield that is wholly within 18\" of this model and more than 8\" horizontally away from all enemy units.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-seed-mucolids",
+          "unavailableReason": null,
+          "unitId": "unit-sporocyst"
+        }
+      ]
+    },
+    {
+      "id": "termagants-skulking-horrors",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "ability",
+          "title": "Skulking Horrors",
+          "field": "text",
+          "effectiveAfter": "In your opponent's Movement phase, if an enemy unit ends a move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6\".",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-skulking-horrors",
+          "unavailableReason": null,
+          "unitId": "unit-termagants"
+        }
+      ]
+    },
+    {
+      "id": "von-ryans-leapers-pouncing-leap",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "ability",
+          "title": "Pouncing Leap",
+          "field": "text",
+          "effectiveAfter": "You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do:\n▪ That use is -1 CP.\n▪ That use does not prevent any uses of that stratagem on other units this phase.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-pouncing-leap",
+          "unavailableReason": null,
+          "unitId": "unit-von-ryans-leapers"
+        }
+      ]
+    },
+    {
+      "id": "harpy-hive-crone-aircraft",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "core-ability",
+          "title": "Hover",
+          "effectiveAfter": false,
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null,
+          "unitId": "unit-harpy"
+        },
+        {
+          "kind": "stat",
+          "profile": "Harpy",
+          "field": "M",
+          "effectiveAfter": "-",
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null,
+          "unitId": "unit-harpy"
+        },
+        {
+          "kind": "stat",
+          "profile": "Harpy",
+          "field": "OC",
+          "effectiveAfter": "-",
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null,
+          "unitId": "unit-harpy"
+        },
+        {
+          "kind": "core-ability",
+          "title": "Hover",
+          "effectiveAfter": false,
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null,
+          "unitId": "unit-hive-crone"
+        },
+        {
+          "kind": "stat",
+          "profile": "Hive Crone",
+          "field": "M",
+          "effectiveAfter": "-",
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null,
+          "unitId": "unit-hive-crone"
+        },
+        {
+          "kind": "stat",
+          "profile": "Hive Crone",
+          "field": "OC",
+          "effectiveAfter": "-",
+          "expectedBefore": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The changed field has no standalone glossary record."
+          },
+          "unavailableReason": null,
+          "unitId": "unit-hive-crone"
+        }
+      ]
+    },
+    {
+      "id": "vanguard-chameleonic",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 19
+      },
+      "targets": [
+        {
+          "kind": "enhancement-text",
+          "owner": "vanguard-onslaught",
+          "title": "Chameleonic",
+          "field": "text",
+          "effectiveAfter": "VANGUARD INVADER model only. This unit has Stealth.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-enhancement-chameleonic",
+          "unavailableReason": null,
+          "enhancementId": "enhancement-chameleonic"
+        }
+      ]
+    },
+    {
+      "id": "tyranid-warriors-melee-adaptive-instincts",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "ability",
+          "title": "Adaptive Instincts (Once per turn, per unit)",
+          "field": "text",
+          "effectiveAfter": "In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following:\n▪ This unit’s melee attacks have +1 S.\n▪ Or: This unit has +1 T.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-adaptive-instincts-once-per-turn-per-unit",
+          "unavailableReason": null,
+          "unitId": "unit-tyranid-warriors-with-melee-bio-weapons"
+        }
+      ]
+    },
+    {
+      "id": "tyrannocyte-aerial-seeding",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "ability",
+          "title": "Aerial Seeding",
+          "field": "text",
+          "effectiveAfter": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model must immediately disembark after it has been set up on the battlefield, and they must be set up more than 8\" away from all enemy models. After this model has been set up on the battlefield, no units can embark within it.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-aerial-seeding",
+          "unavailableReason": null,
+          "unitId": "unit-tyrannocyte"
+        }
+      ]
+    },
+    {
+      "id": "venomthropes-foul-spores",
+      "source": {
+        "documentId": "tyranids-faction-pack-v1.1",
+        "page": 20
+      },
+      "targets": [
+        {
+          "kind": "ability",
+          "title": "Foul Spores (Aura)",
+          "field": "text",
+          "effectiveAfter": "Friendly TYRANIDS units within 6\" of this unit have Stealth.",
+          "expectedBefore": null,
+          "glossaryTermId": "tyranids-ability-foul-spores-aura",
+          "unavailableReason": null,
+          "unitId": "unit-venomthropes"
+        }
+      ]
+    }
+  ]
+}

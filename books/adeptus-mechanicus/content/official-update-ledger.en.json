@@ -1,0 +1,1134 @@
+{
+  "schema": 1,
+  "updates": [
+    {
+      "id": "doctrina-protector-imperative",
+      "targets": [
+        {
+          "ruleId": "army-rule-doctrina",
+          "branchId": "protector-imperative",
+          "field": "effects",
+          "expectedBefore": null,
+          "effectiveAfter": [
+            "Ranged weapons equipped by models in this unit have the [HEAVY] ability.",
+            "Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.",
+            "Each time a melee attack targets this unit, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, subtract 1 from the Hit roll."
+          ],
+          "glossaryTermId": "adeptus-mechanicus-doctrina-imperatives",
+          "kind": "army-rule-branch",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 17
+      }
+    },
+    {
+      "id": "doctrina-conqueror-imperative",
+      "targets": [
+        {
+          "ruleId": "army-rule-doctrina",
+          "branchId": "conqueror-imperative",
+          "field": "effects",
+          "expectedBefore": null,
+          "effectiveAfter": [
+            "Ranged weapons equipped by models in this unit have the [ASSAULT] ability.",
+            "Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.",
+            "Each time a model in this unit makes an attack, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, improve the Armour Penetration characteristic of that attack by 1."
+          ],
+          "glossaryTermId": "adeptus-mechanicus-doctrina-imperatives",
+          "kind": "army-rule-branch",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 17
+      }
+    },
+    {
+      "id": "cohort-cybernetica-cyber-psalm-programming",
+      "targets": [
+        {
+          "detachmentId": "detachment-cohort-cybernetica",
+          "ruleId": "cohort-cybernetica-rule",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "Add 2\" to the Move characteristic of models in LEGIO CYBERNETICA units from your army. In addition, unless that unit is Battle-shocked, add 1 to the Objective Control characteristic of models in that unit.",
+          "glossaryTermId": "adeptus-mechanicus-detachment-rule-cyber-psalm-programming",
+          "kind": "detachment-rule",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 17
+      }
+    },
+    {
+      "id": "rad-zone-corps-unit-taking-cover",
+      "targets": [
+        {
+          "detachmentId": "detachment-rad-zone-corps",
+          "ruleId": "rad-zone-corps-rule",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "BATTLE ROUND1BOMBARDMENTAt the start of the first battle round, for each enemy unit within your opponent’s deployment zone, your opponent must decide whether that unit will take cover or stand firm. You then roll one D6 for each of those enemy units and apply the relevant result below:Unit Standing Firm: On a 3+, that unit suffers D3 mortal wounds.Unit Taking Cover: That unit is battle-shocked. On a 5+, that unit suffers D3 mortal woundsBATTLE ROUND2    ONWARDSFALLOUTAt the start of your Command phase during the second, third, fourth and fifth battle rounds, roll one D6 for each enemy unit within your opponent’s deployment zone. On a 3+, that unit suffers 1 mortal wound and must take a Battle-shock test.",
+          "glossaryTermId": "adeptus-mechanicus-detachment-rule-rad-bombardment",
+          "kind": "detachment-rule",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 17
+      }
+    },
+    {
+      "id": "skitarii-hunter-cohort-stealth-optimisation",
+      "targets": [
+        {
+          "detachmentId": "detachment-skitarii-hunter-cohort",
+          "ruleId": "skitarii-hunter-cohort-rule",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "Friendly SKITARII INFANTRY, SKITARII MOUNTED and IRONSTRIDER BALLISTARII units have Stealth.",
+          "glossaryTermId": "adeptus-mechanicus-detachment-rule-stealth-optimisation",
+          "kind": "detachment-rule",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 17
+      }
+    },
+    {
+      "id": "skitarii-hunter-cohort-veiled-hunter",
+      "targets": [
+        {
+          "detachmentId": "detachment-skitarii-hunter-cohort",
+          "enhancementId": "enhancement-veiled-hunter",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "SKITARII MARSHAL model only. After both players have deployed their armies, you can select up to three SKITARII INFANTRY units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+          "glossaryTermId": "adeptus-mechanicus-enhancement-veiled-hunter",
+          "kind": "enhancement",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 17
+      }
+    },
+    {
+      "id": "datasheets-add-doctrina-imperatives",
+      "targets": [
+        {
+          "unitId": "unit-belisarius-cawl",
+          "abilityKey": "doctrina-imperatives",
+          "field": "title",
+          "expectedBefore": null,
+          "effectiveAfter": "Doctrina Imperatives",
+          "glossaryTermId": "adeptus-mechanicus-doctrina-imperatives",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-corpuscarii-electro-priests",
+          "abilityKey": "doctrina-imperatives",
+          "field": "title",
+          "expectedBefore": null,
+          "effectiveAfter": "Doctrina Imperatives",
+          "glossaryTermId": "adeptus-mechanicus-doctrina-imperatives",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-cybernetica-datasmith",
+          "abilityKey": "doctrina-imperatives",
+          "field": "title",
+          "expectedBefore": null,
+          "effectiveAfter": "Doctrina Imperatives",
+          "glossaryTermId": "adeptus-mechanicus-doctrina-imperatives",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-fulgurite-electro-priests",
+          "abilityKey": "doctrina-imperatives",
+          "field": "title",
+          "expectedBefore": null,
+          "effectiveAfter": "Doctrina Imperatives",
+          "glossaryTermId": "adeptus-mechanicus-doctrina-imperatives",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-kastelan-robots",
+          "abilityKey": "doctrina-imperatives",
+          "field": "title",
+          "expectedBefore": null,
+          "effectiveAfter": "Doctrina Imperatives",
+          "glossaryTermId": "adeptus-mechanicus-doctrina-imperatives",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-tech-priest-dominus",
+          "abilityKey": "doctrina-imperatives",
+          "field": "title",
+          "expectedBefore": null,
+          "effectiveAfter": "Doctrina Imperatives",
+          "glossaryTermId": "adeptus-mechanicus-doctrina-imperatives",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-tech-priest-enginseer",
+          "abilityKey": "doctrina-imperatives",
+          "field": "title",
+          "expectedBefore": null,
+          "effectiveAfter": "Doctrina Imperatives",
+          "glossaryTermId": "adeptus-mechanicus-doctrina-imperatives",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-tech-priest-manipulus",
+          "abilityKey": "doctrina-imperatives",
+          "field": "title",
+          "expectedBefore": null,
+          "effectiveAfter": "Doctrina Imperatives",
+          "glossaryTermId": "adeptus-mechanicus-doctrina-imperatives",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-technoarcheologist",
+          "abilityKey": "doctrina-imperatives",
+          "field": "title",
+          "expectedBefore": null,
+          "effectiveAfter": "Doctrina Imperatives",
+          "glossaryTermId": "adeptus-mechanicus-doctrina-imperatives",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 17
+      }
+    },
+    {
+      "id": "archaeopter-fusilave-stratoraptor-remove-hover",
+      "targets": [
+        {
+          "unitId": "unit-archaeopter-fusilave",
+          "abilityKey": "hover",
+          "operation": "remove",
+          "expectedBefore": null,
+          "effectiveAfter": null,
+          "kind": "datasheet-core-ability",
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit core ability membership has no standalone glossary field mapping."
+          }
+        },
+        {
+          "unitId": "unit-archaeopter-stratoraptor",
+          "abilityKey": "hover",
+          "operation": "remove",
+          "expectedBefore": null,
+          "effectiveAfter": null,
+          "kind": "datasheet-core-ability",
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit core ability membership has no standalone glossary field mapping."
+          }
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 17
+      }
+    },
+    {
+      "id": "archaeopter-fusilave-stratoraptor-profile",
+      "targets": [
+        {
+          "unitId": "unit-archaeopter-fusilave",
+          "field": "M",
+          "expectedBefore": null,
+          "effectiveAfter": "-",
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Characteristic values do not have glossary articles."
+          },
+          "kind": "datasheet-stat",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-archaeopter-fusilave",
+          "field": "OC",
+          "expectedBefore": null,
+          "effectiveAfter": "-",
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Characteristic values do not have glossary articles."
+          },
+          "kind": "datasheet-stat",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-archaeopter-stratoraptor",
+          "field": "M",
+          "expectedBefore": null,
+          "effectiveAfter": "-",
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Characteristic values do not have glossary articles."
+          },
+          "kind": "datasheet-stat",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-archaeopter-stratoraptor",
+          "field": "OC",
+          "expectedBefore": null,
+          "effectiveAfter": "-",
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Characteristic values do not have glossary articles."
+          },
+          "kind": "datasheet-stat",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 17
+      }
+    },
+    {
+      "id": "archaeopter-fusilave-bomb-rack",
+      "targets": [
+        {
+          "unitId": "unit-archaeopter-fusilave",
+          "abilityKey": "bomb-rack",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "At the end of your opponent’s Fight phase, select one visible enemy unit (excluding Lone Operative units) within 24\" of this unit, and roll six D6 for that unit: for each 4+, that unit suffers 1 mortal wound.",
+          "glossaryTermId": "adeptus-mechanicus-datasheet-bomb-rack",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 17
+      }
+    },
+    {
+      "id": "archaeopter-transvector-profile",
+      "targets": [
+        {
+          "unitId": "unit-archaeopter-transvector",
+          "field": "M",
+          "expectedBefore": null,
+          "effectiveAfter": "14\"",
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Characteristic values do not have glossary articles."
+          },
+          "kind": "datasheet-stat",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 17
+      }
+    },
+    {
+      "id": "archaeopter-transvector-keywords",
+      "targets": [
+        {
+          "unitId": "unit-archaeopter-transvector",
+          "keyword": "AIRCRAFT",
+          "operation": "remove",
+          "expectedBefore": null,
+          "effectiveAfter": null,
+          "kind": "datasheet-keyword",
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit keyword membership has no standalone glossary field mapping."
+          }
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 17
+      }
+    },
+    {
+      "id": "archaeopter-transvector-aerial-deployment",
+      "targets": [
+        {
+          "unitId": "unit-archaeopter-transvector",
+          "abilityKey": "aerial-deployment",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "In your first Movement phase, this unit can make an ingress move.",
+          "glossaryTermId": "adeptus-mechanicus-datasheet-aerial-deployment",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 17
+      }
+    },
+    {
+      "id": "belisarius-cawl-keywords",
+      "targets": [
+        {
+          "unitId": "unit-belisarius-cawl",
+          "keyword": "Mobile",
+          "operation": "add",
+          "expectedBefore": null,
+          "effectiveAfter": "Mobile",
+          "kind": "datasheet-keyword",
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit keyword membership has no standalone glossary field mapping."
+          }
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 18
+      }
+    },
+    {
+      "id": "belisarius-cawl-move",
+      "targets": [
+        {
+          "unitId": "unit-belisarius-cawl",
+          "field": "M",
+          "expectedBefore": null,
+          "effectiveAfter": "8\"",
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Characteristic values do not have glossary articles."
+          },
+          "kind": "datasheet-stat",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 18
+      }
+    },
+    {
+      "id": "belisarius-cawl-canticles-of-the-omnissiah",
+      "targets": [
+        {
+          "unitId": "unit-belisarius-cawl",
+          "abilityKey": "canticles-of-the-omnissiah",
+          "field": "openingText",
+          "expectedBefore": null,
+          "effectiveAfter": "At the start of your Command phase, select one of the abilities in the Canticles of the Omnissiah section. Until the start of your next Command phase, this model has that ability.",
+          "glossaryTermId": "adeptus-mechanicus-datasheet-canticles-of-the-omnissiah",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 18
+      }
+    },
+    {
+      "id": "belisarius-cawl-invocation-of-machine-vengeance",
+      "targets": [
+        {
+          "unitId": "unit-belisarius-cawl",
+          "abilityKey": "invocation-of-machine-vengeance",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Machine Vengeance target. Each time a model in a friendly Adeptus Mechanicus unit makes an attack that targets your Machine Vengeance target, you can re-roll the Hit roll.",
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The current glossary has no independent entry for this nested Canticles ability."
+          },
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 18
+      }
+    },
+    {
+      "id": "belisarius-cawl-mantra-of-discipline",
+      "targets": [
+        {
+          "unitId": "unit-belisarius-cawl",
+          "abilityKey": "mantra-of-discipline",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "This model has the Battleline keyword and has the following ability:\nBinharic Courage (Aura): While a friendly Adeptus Mechanicus unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit and each time you take a Battle-shock or Leadership test for that unit, add 1 to that test.’",
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The current glossary has no independent entry for this nested Canticles ability."
+          },
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 18
+      }
+    },
+    {
+      "id": "belisarius-cawl-shroudpsalm",
+      "targets": [
+        {
+          "unitId": "unit-belisarius-cawl",
+          "abilityKey": "shroudpsalm",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "While a friendly Adeptus Mechanicus unit is within 6\" of this model, that unit has the Stealth ability.",
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "The current glossary has no independent entry for this nested Canticles ability."
+          },
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 18
+      }
+    },
+    {
+      "id": "belisarius-cawl-solar-atomiser",
+      "targets": [
+        {
+          "unitId": "unit-belisarius-cawl",
+          "profileKey": "solar-atomiser",
+          "expectedBefore": null,
+          "effectiveAfter": {
+            "name": "Solar atomiser",
+            "mode": "ranged",
+            "range": "18\"",
+            "a": "3",
+            "skill": "2+",
+            "s": "14",
+            "ap": "-4",
+            "d": "D6",
+            "abilities": "Melta 3"
+          },
+          "glossaryTermId": "adeptus-mechanicus-weapon-solar-atomiser",
+          "kind": "weapon-profile",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 18
+      }
+    },
+    {
+      "id": "cybernetica-datasmith-core-abilities",
+      "targets": [
+        {
+          "unitId": "unit-cybernetica-datasmith",
+          "abilityKey": "leader",
+          "operation": "remove",
+          "expectedBefore": null,
+          "effectiveAfter": null,
+          "kind": "datasheet-core-ability",
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit core ability membership has no standalone glossary field mapping."
+          }
+        },
+        {
+          "unitId": "unit-cybernetica-datasmith",
+          "abilityKey": "support",
+          "operation": "add",
+          "expectedBefore": null,
+          "effectiveAfter": "Support",
+          "kind": "datasheet-core-ability",
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit core ability membership has no standalone glossary field mapping."
+          }
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 18
+      }
+    },
+    {
+      "id": "cybernetica-datasmith-data-severed",
+      "targets": [
+        {
+          "unitId": "unit-cybernetica-datasmith",
+          "abilityKey": "data-severed",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "If there are no KASTELAN ROBOT models in this unit: \n- This unit loses VEHICLE. \n- This unit has INFANTRY.",
+          "glossaryTermId": "adeptus-mechanicus-datasheet-data-severed",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 18
+      }
+    },
+    {
+      "id": "ironstrider-ballistarii-twin-cognis-autocannon",
+      "targets": [
+        {
+          "unitId": "unit-ironstrider-ballistarii",
+          "profileKey": "twin-cognis-autocannon",
+          "expectedBefore": null,
+          "effectiveAfter": {
+            "name": "Twin cognis autocannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "4",
+            "skill": "4+",
+            "s": "9",
+            "ap": "-1",
+            "d": "3",
+            "abilities": "Sustained Hits 1, Twin-linked"
+          },
+          "glossaryTermId": "adeptus-mechanicus-weapon-twin-cognis-autocannon",
+          "kind": "weapon-profile",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 18
+      }
+    },
+    {
+      "id": "ironstrider-ballistarii-twin-cognis-lascannon",
+      "targets": [
+        {
+          "unitId": "unit-ironstrider-ballistarii",
+          "profileKey": "twin-cognis-lascannon",
+          "expectedBefore": null,
+          "effectiveAfter": {
+            "name": "Twin cognis lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "2",
+            "skill": "4+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "Sustained Hits 1, Twin-linked"
+          },
+          "glossaryTermId": "adeptus-mechanicus-weapon-twin-cognis-lascannon-2",
+          "kind": "weapon-profile",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 18
+      }
+    },
+    {
+      "id": "kastelan-robots-repulsor-grid",
+      "targets": [
+        {
+          "unitId": "unit-kastelan-robots",
+          "abilityKey": "repulsor-grid",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot, when this unit makes a save roll: \n- On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit has shot.",
+          "glossaryTermId": "adeptus-mechanicus-datasheet-repulsor-grid",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 18
+      }
+    },
+    {
+      "id": "onager-dunecrawler-weapon-profiles",
+      "targets": [
+        {
+          "unitId": "unit-onager-dunecrawler",
+          "profileKey": "daedalus-missile-launcher",
+          "expectedBefore": null,
+          "effectiveAfter": {
+            "name": "Daedalus missile launcher",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "2",
+            "skill": "4+",
+            "s": "10",
+            "ap": "-2",
+            "d": "D6+1",
+            "abilities": "Anti-Fly 2+"
+          },
+          "glossaryTermId": "adeptus-mechanicus-weapon-daedalus-missile-launcher",
+          "kind": "weapon-profile",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-onager-dunecrawler",
+          "profileKey": "eradication-beamer-dissipated",
+          "expectedBefore": null,
+          "effectiveAfter": {
+            "name": "➤ Eradication beamer - dissipated",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "3D3",
+            "skill": "4+",
+            "s": "9",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Blast, Sustained Hits 1"
+          },
+          "glossaryTermId": "adeptus-mechanicus-weapon-eradication-beamer-dissipated",
+          "kind": "weapon-profile",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-onager-dunecrawler",
+          "profileKey": "eradication-beamer-focused",
+          "expectedBefore": null,
+          "effectiveAfter": {
+            "name": "➤ Eradication beamer - focused",
+            "mode": "ranged",
+            "range": "18\"",
+            "a": "3D3",
+            "skill": "4+",
+            "s": "10",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "Blast, Sustained Hits 1"
+          },
+          "glossaryTermId": "adeptus-mechanicus-weapon-eradication-beamer-focused",
+          "kind": "weapon-profile",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-onager-dunecrawler",
+          "profileKey": "neutron-laser",
+          "expectedBefore": null,
+          "effectiveAfter": {
+            "name": "Neutron laser",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "3",
+            "skill": "4+",
+            "s": "16",
+            "ap": "-4",
+            "d": "D6+2",
+            "abilities": "Heavy"
+          },
+          "glossaryTermId": "adeptus-mechanicus-weapon-neutron-laser",
+          "kind": "weapon-profile",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-onager-dunecrawler",
+          "profileKey": "twin-onager-heavy-phosphor-blaster",
+          "expectedBefore": null,
+          "effectiveAfter": {
+            "name": "Twin Onager heavy phosphor blaster",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "12",
+            "skill": "4+",
+            "s": "6",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Ignores Cover, Twin-linked"
+          },
+          "glossaryTermId": "adeptus-mechanicus-weapon-twin-onager-heavy-phosphor-blaster",
+          "kind": "weapon-profile",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 18
+      }
+    },
+    {
+      "id": "onager-dunecrawler-scuttling-walker",
+      "targets": [
+        {
+          "unitId": "unit-onager-dunecrawler",
+          "abilityKey": "scuttling-walker",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "Each time this model makes a Normal, Advance or Fall Back move, it can move through friendly Monster and Vehicle models and sections of terrain features that are 4\" or less in height.",
+          "glossaryTermId": "adeptus-mechanicus-datasheet-scuttling-walker",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 18
+      }
+    },
+    {
+      "id": "serberys-raiders-tactica-obliqua",
+      "targets": [
+        {
+          "unitId": "unit-serberys-raiders",
+          "abilityKey": "tactica-obliqua",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, it can do one of the following:\n- Make a Normal move of up to D6\".\n- Make a Normal move of up to 6\", provided every model in this unit ends that move wholly within 6\" of one or more friendly Adeptus Mechanicus Battleline units.",
+          "glossaryTermId": "adeptus-mechanicus-datasheet-tactica-obliqua",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 18
+      }
+    },
+    {
+      "id": "sicarian-infiltrators-melee-weapons",
+      "targets": [
+        {
+          "unitId": "unit-sicarian-infiltrators",
+          "profileKey": "power-weapon",
+          "expectedBefore": null,
+          "effectiveAfter": {
+            "name": "Power weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "4+",
+            "s": "4",
+            "ap": "-2",
+            "d": "1",
+            "abilities": ""
+          },
+          "glossaryTermId": "adeptus-mechanicus-weapon-power-weapon-2",
+          "kind": "weapon-profile",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-sicarian-infiltrators",
+          "profileKey": "taser-goad",
+          "expectedBefore": null,
+          "effectiveAfter": {
+            "name": "Taser goad",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "4+",
+            "s": "6",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Sustained Hits 2"
+          },
+          "glossaryTermId": "adeptus-mechanicus-weapon-taser-goad-2",
+          "kind": "weapon-profile",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 18
+      }
+    },
+    {
+      "id": "sicarian-ruststalkers-melee-weapons",
+      "targets": [
+        {
+          "unitId": "unit-sicarian-ruststalkers",
+          "profileKey": "transonic-blades",
+          "expectedBefore": null,
+          "effectiveAfter": {
+            "name": "Transonic blades",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "4+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Devastating Wounds, Precision"
+          },
+          "glossaryTermId": "adeptus-mechanicus-weapon-transonic-blades",
+          "kind": "weapon-profile",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-sicarian-ruststalkers",
+          "profileKey": "transonic-blades-chordclaw",
+          "expectedBefore": null,
+          "effectiveAfter": {
+            "name": "Transonic blades & chordclaw",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "4+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Anti-Infantry 3+, Devastating Wounds, Precision"
+          },
+          "glossaryTermId": "adeptus-mechanicus-weapon-transonic-blades-chordclaw",
+          "kind": "weapon-profile",
+          "unavailableReason": null
+        },
+        {
+          "unitId": "unit-sicarian-ruststalkers",
+          "profileKey": "transonic-razor-chordclaw",
+          "expectedBefore": null,
+          "effectiveAfter": {
+            "name": "Transonic razor & chordclaw",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "4+",
+            "s": "5",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Anti-Infantry 3+, Precision"
+          },
+          "glossaryTermId": "adeptus-mechanicus-weapon-transonic-razor-chordclaw",
+          "kind": "weapon-profile",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 19
+      }
+    },
+    {
+      "id": "skitarii-marshal-core-abilities",
+      "targets": [
+        {
+          "unitId": "unit-skitarii-marshal",
+          "abilityKey": "leader",
+          "operation": "remove",
+          "expectedBefore": null,
+          "effectiveAfter": null,
+          "kind": "datasheet-core-ability",
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit core ability membership has no standalone glossary field mapping."
+          }
+        },
+        {
+          "unitId": "unit-skitarii-marshal",
+          "abilityKey": "support",
+          "operation": "add",
+          "expectedBefore": null,
+          "effectiveAfter": "Support",
+          "kind": "datasheet-core-ability",
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit core ability membership has no standalone glossary field mapping."
+          }
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 19
+      }
+    },
+    {
+      "id": "skitarii-marshal-servo-skull-uplink",
+      "targets": [
+        {
+          "unitId": "unit-skitarii-marshal",
+          "abilityKey": "servo-skull-uplink",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "Once per battle, at the start of any phase, you can select one friendly Skitarii unit that is Battle-shocked and within 6\" of this model. That unit is no longer Battle-shocked.",
+          "glossaryTermId": "adeptus-mechanicus-datasheet-servo-skull-uplink",
+          "kind": "datasheet-ability",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 19
+      }
+    },
+    {
+      "id": "skorpius-frame-keyword",
+      "targets": [
+        {
+          "unitId": "unit-skorpius-disintegrator",
+          "keyword": "Frame",
+          "operation": "add",
+          "expectedBefore": null,
+          "effectiveAfter": "Frame",
+          "kind": "datasheet-keyword",
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit keyword membership has no standalone glossary field mapping."
+          }
+        },
+        {
+          "unitId": "unit-skorpius-dunerider",
+          "keyword": "Frame",
+          "operation": "add",
+          "expectedBefore": null,
+          "effectiveAfter": "Frame",
+          "kind": "datasheet-keyword",
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit keyword membership has no standalone glossary field mapping."
+          }
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 19
+      }
+    },
+    {
+      "id": "skorpius-disintegrator-ferrumite-cannon",
+      "targets": [
+        {
+          "unitId": "unit-skorpius-disintegrator",
+          "profileKey": "ferrumite-cannon",
+          "expectedBefore": null,
+          "effectiveAfter": {
+            "name": "Ferrumite cannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "3",
+            "skill": "4+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": ""
+          },
+          "glossaryTermId": "adeptus-mechanicus-weapon-ferrumite-cannon",
+          "kind": "weapon-profile",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 19
+      }
+    },
+    {
+      "id": "skorpius-dunerider-firing-deck",
+      "targets": [
+        {
+          "unitId": "unit-skorpius-dunerider",
+          "abilityKey": "firing-deck-2",
+          "field": "title",
+          "operation": "add",
+          "expectedBefore": null,
+          "effectiveAfter": "Firing Deck 2",
+          "kind": "datasheet-core-ability",
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit core ability membership has no standalone glossary field mapping."
+          }
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 19
+      }
+    },
+    {
+      "id": "technoarcheologist-core-abilities",
+      "targets": [
+        {
+          "unitId": "unit-technoarcheologist",
+          "abilityKey": "leader",
+          "operation": "remove",
+          "expectedBefore": null,
+          "effectiveAfter": null,
+          "kind": "datasheet-core-ability",
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit core ability membership has no standalone glossary field mapping."
+          }
+        },
+        {
+          "unitId": "unit-technoarcheologist",
+          "abilityKey": "support",
+          "operation": "add",
+          "expectedBefore": null,
+          "effectiveAfter": "Support",
+          "kind": "datasheet-core-ability",
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit core ability membership has no standalone glossary field mapping."
+          }
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 19
+      }
+    },
+    {
+      "id": "faq-auto-divinatory-targeting-protector-imperative",
+      "targets": [
+        {
+          "detachmentId": "detachment-cohort-cybernetica",
+          "stratagemId": "stratagem-auto-divinatory-targeting",
+          "field": "effect",
+          "expectedBefore": null,
+          "effectiveAfter": "Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the [IGNORES COVER] ability, but they can only target units within range of the selected objective marker.",
+          "glossaryTermId": "adeptus-mechanicus-stratagem-auto-divinatory-targeting",
+          "kind": "stratagem",
+          "unavailableReason": null
+        }
+      ],
+      "source": {
+        "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+        "page": 19
+      }
+    }
+  ],
+  "bookId": "adeptus-mechanicus"
+}

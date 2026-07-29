@@ -1,0 +1,289 @@
+{
+  "schema": 1,
+  "updates": [
+    {
+      "id": "dg-fp-1.0-p7-contagion-range-cap",
+      "source": {
+        "documentId": "death-guard-faction-pack-v1.0",
+        "page": 7
+      },
+      "targets": [
+        {
+          "kind": "rule-addition",
+          "owner": "contagion-range-cap",
+          "title": "Contagion Range",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "Contagion Range cannot be greater than 12\" after modifiers.",
+          "unavailableReason": null,
+          "glossaryTermId": "death-guard-army-rules-contagion-range"
+        }
+      ]
+    },
+    {
+      "id": "dg-fp-1.0-p7-skullsquirm-blight",
+      "source": {
+        "documentId": "death-guard-faction-pack-v1.0",
+        "page": 7
+      },
+      "targets": [
+        {
+          "kind": "rule-replacement",
+          "owner": "skullsquirm-blight",
+          "title": "Skullsquirm Blight",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "Each time a model in this unit makes a melee attack, subtract 1 from the Hit roll.",
+          "unavailableReason": null,
+          "glossaryTermId": "death-guard-plagues-skullsquirm-blight"
+        }
+      ]
+    },
+    {
+      "id": "dg-fp-1.0-p7-beckoning-blight",
+      "source": {
+        "documentId": "death-guard-faction-pack-v1.0",
+        "page": 7
+      },
+      "targets": [
+        {
+          "kind": "enhancement-replacement",
+          "owner": "enhancement-beckoning-blight",
+          "title": "Beckoning Blight - 20 pts",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "DEATH GUARD model only. Each time a PLAGUE LEGIONS unit from your army is set up on the battlefield using the Deep Strike ability, if it is set up wholly within 12\" of the bearer, it can be set up anywhere that is more than 6\" horizontally away from all enemy models, instead of more than 8\".",
+          "unavailableReason": null,
+          "glossaryTermId": "death-guard-enhancement-beckoning-blight"
+        }
+      ]
+    },
+    {
+      "id": "dg-fp-1.0-p7-frame-keywords",
+      "source": {
+        "documentId": "death-guard-faction-pack-v1.0",
+        "page": 7
+      },
+      "targets": [
+        {
+          "kind": "keyword-addition",
+          "unitId": "unit-chaos-land-raider",
+          "owner": "chaos-land-raider-keywords",
+          "title": "Keywords",
+          "field": "keywords",
+          "expectedBefore": null,
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit keyword membership has no standalone glossary record."
+          },
+          "effectiveAfter": [
+            "VEHICLE",
+            "TRANSPORT",
+            "SMOKE",
+            "CHAOS",
+            "NURGLE",
+            "LAND RAIDER",
+            "FRAME",
+            "DEATH GUARD"
+          ]
+        },
+        {
+          "kind": "keyword-addition",
+          "unitId": "unit-chaos-predator-annihilator",
+          "owner": "chaos-predator-annihilator-keywords",
+          "title": "Keywords",
+          "field": "keywords",
+          "expectedBefore": null,
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit keyword membership has no standalone glossary record."
+          },
+          "effectiveAfter": [
+            "VEHICLE",
+            "SMOKE",
+            "CHAOS",
+            "NURGLE",
+            "PREDATOR ANNIHILATOR",
+            "FRAME",
+            "DEATH GUARD"
+          ]
+        },
+        {
+          "kind": "keyword-addition",
+          "unitId": "unit-chaos-predator-destructor",
+          "owner": "chaos-predator-destructor-keywords",
+          "title": "Keywords",
+          "field": "keywords",
+          "expectedBefore": null,
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit keyword membership has no standalone glossary record."
+          },
+          "effectiveAfter": [
+            "VEHICLE",
+            "SMOKE",
+            "CHAOS",
+            "NURGLE",
+            "PREDATOR DESTRUCTOR",
+            "FRAME",
+            "DEATH GUARD"
+          ]
+        },
+        {
+          "kind": "keyword-addition",
+          "unitId": "unit-chaos-rhino",
+          "owner": "chaos-rhino-keywords",
+          "title": "Keywords",
+          "field": "keywords",
+          "expectedBefore": null,
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit keyword membership has no standalone glossary record."
+          },
+          "effectiveAfter": [
+            "VEHICLE",
+            "SMOKE",
+            "CHAOS",
+            "NURGLE",
+            "TRANSPORT",
+            "DEDICATED TRANSPORT",
+            "RHINO",
+            "FRAME",
+            "DEATH GUARD"
+          ]
+        },
+        {
+          "kind": "keyword-addition",
+          "unitId": "unit-miasmic-malignifier",
+          "owner": "miasmic-malignifier-keywords",
+          "title": "Keywords",
+          "field": "keywords",
+          "expectedBefore": null,
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit keyword membership has no standalone glossary record."
+          },
+          "effectiveAfter": [
+            "FORTIFICATION",
+            "CHAOS",
+            "NURGLE",
+            "MIASMIC MALIGNIFIER",
+            "FRAME",
+            "DEATH GUARD"
+          ]
+        },
+        {
+          "kind": "keyword-addition",
+          "unitId": "unit-plagueburst-crawler",
+          "owner": "plagueburst-crawler-keywords",
+          "title": "Keywords",
+          "field": "keywords",
+          "expectedBefore": null,
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "Unit keyword membership has no standalone glossary record."
+          },
+          "effectiveAfter": [
+            "VEHICLE",
+            "CHAOS",
+            "NURGLE",
+            "DAEMON",
+            "PLAGUEBURST CRAWLER",
+            "FRAME",
+            "DEATH GUARD"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dg-fp-1.0-p7-typhus-eater-plague",
+      "source": {
+        "documentId": "death-guard-faction-pack-v1.0",
+        "page": 7
+      },
+      "targets": [
+        {
+          "kind": "ability-replacement",
+          "unitId": "unit-typhus",
+          "owner": "typhus-ability-eater-plague-psychic",
+          "title": "Eater Plague (Psychic)",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "In your Shooting phase, you can select one enemy unit within 18\" of and visible to this PSYKER (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12\" of this PSYKER) and roll one D6: on a 1, this PSYKER’s unit suffers D3 mortal wounds; on a 2-5, that enemy unit suffers D6 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
+          "unavailableReason": null,
+          "glossaryTermId": "death-guard-ability-eater-plague-psychic-typhus"
+        }
+      ]
+    },
+    {
+      "id": "dg-fp-1.0-p7-predator-autocannon-strength",
+      "source": {
+        "documentId": "death-guard-faction-pack-v1.0",
+        "page": 7
+      },
+      "targets": [
+        {
+          "kind": "weapon-profile-replacement",
+          "unitId": "unit-chaos-predator-destructor",
+          "owner": "chaos-predator-destructor-weapon-predator-autocannon",
+          "title": "Predator autocannon",
+          "field": "s",
+          "expectedBefore": null,
+          "effectiveAfter": "9",
+          "unavailableReason": null,
+          "glossaryTermId": "death-guard-weapon-predator-autocannon-chaos-predator-destructor"
+        }
+      ]
+    },
+    {
+      "id": "dg-fp-1.0-p7-death-approaches",
+      "source": {
+        "documentId": "death-guard-faction-pack-v1.0",
+        "page": 7
+      },
+      "targets": [
+        {
+          "kind": "ability-replacement",
+          "unitId": "unit-deathshroud-terminators",
+          "owner": "deathshroud-terminators-ability-death-approaches",
+          "title": "Death Approaches",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "Each time this unit is set up on the battlefield using the Deep Strike ability, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all Afflicted enemy units, and more than 8\" horizontally away from all other enemy units.",
+          "unavailableReason": null,
+          "glossaryTermId": "death-guard-ability-death-approaches-deathshroud-terminators"
+        }
+      ]
+    },
+    {
+      "id": "dg-fp-1.0-p7-spore-laced-shock-waves-faq",
+      "source": {
+        "documentId": "death-guard-faction-pack-v1.0",
+        "page": 7
+      },
+      "targets": [
+        {
+          "kind": "faq-clarification",
+          "unitId": "unit-plagueburst-crawler",
+          "owner": "faq-spore-laced-shock-waves",
+          "title": "Spore-laced Shock Waves",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "FAQ: Plagueburst Crawler’s Spore-laced Shock Waves ability does not inflict mortal wounds every turn to units affected by the ability.",
+          "unavailableReason": null,
+          "glossary": {
+            "status": "not-applicable",
+            "reason": "This FAQ clarification has no standalone glossary field mapping."
+          }
+        }
+      ]
+    }
+  ],
+  "bookId": "death-guard"
+}

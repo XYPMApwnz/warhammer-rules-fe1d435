@@ -2166,7 +2166,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-cohort-cybernetica"
       },
       "status": "verified",
@@ -2197,7 +2197,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-data-psalm-conclave"
       },
       "status": "verified",
@@ -2259,7 +2259,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-explorator-maniple"
       },
       "status": "verified",
@@ -2383,7 +2383,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-rad-zone-corps"
       },
       "status": "verified",
@@ -2403,10 +2403,10 @@
         "en": "Acquisition At Any Cost"
       },
       "summary": {
-        "en": "At the start of your Command phase, select one objective marker as your Acquisition objective marker until your next Command phase. Each time an ADEPTUS MECHANICUS model attacks, re-roll a Wound roll of 1 if its unit or the target is within range of that marker."
+        "en": "At the start of your Command phase, select one objective marker. Until the start of your next Command phase, that objective marker is your Acquisition objective marker.…"
       },
       "definition": {
-        "en": "At the start of your Command phase, select one objective marker as your Acquisition objective marker until your next Command phase. Each time an ADEPTUS MECHANICUS model attacks, re-roll a Wound roll of 1 if its unit or the target is within range of that marker."
+        "en": "At the start of your Command phase, select one objective marker. Until the start of your next Command phase, that objective marker is your Acquisition objective marker. Each time an ADEPTUS MECHANICUS model from your army makes an attack, if that model’s unit is within range of your Acquisition objective marker, or if the target of that attack is within range of your Acquisition objective marker, re-roll a Wound roll of 1."
       },
       "aliases": [
         "explorator-maniple-rule"
@@ -2416,7 +2416,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "explorator-maniple-rule"
       },
       "status": "verified",
@@ -2424,7 +2424,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "article"
     },
     "adeptus-mechanicus-detachment-rule-benedictions-of-the-omnissiah": {
       "id": "adeptus-mechanicus-detachment-rule-benedictions-of-the-omnissiah",
@@ -2436,10 +2436,10 @@
         "en": "Benedictions of the Omnissiah"
       },
       "summary": {
-        "en": "At the start of the first battle round, select one Benediction for CULT MECHANICUS units until the end of the battle. Panegyric Procession improves AP by 1 for ranged attacks within half range.…"
+        "en": "At the start of the first battle round, select one of the following Benedictions of the Omnissiah to be active for CULT MECHANICUS units from your army until the end of the battle:Panegyric ProcessionEach time a CULT MECHANICUS model from your army makes a ranged attack that…"
       },
       "definition": {
-        "en": "At the start of the first battle round, select one Benediction for CULT MECHANICUS units until the end of the battle. Panegyric Procession improves AP by 1 for ranged attacks within half range. Citation in Savagery adds 1 to Strength and Attacks of melee weapons when the unit fights after making a Charge move."
+        "en": "At the start of the first battle round, select one of the following Benedictions of the Omnissiah to be active for CULT MECHANICUS units from your army until the end of the battle:Panegyric ProcessionEach time a CULT MECHANICUS model from your army makes a ranged attack that targets a unit within half range, improve the Armour Penetration characteristic of that attack by 1.Citation in SavageryEach time a CULT MECHANICUS unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in that unit."
       },
       "aliases": [
         "data-psalm-conclave-rule"
@@ -2449,7 +2449,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "data-psalm-conclave-rule"
       },
       "status": "verified",
@@ -2482,7 +2482,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "cohort-cybernetica-rule"
       },
       "status": "verified",
@@ -2634,10 +2634,10 @@
         "en": "Rad-bombardment"
       },
       "summary": {
-        "en": "At the start of the first battle round, for each enemy unit within your opponent's deployment zone, your opponent chooses whether it takes cover or stands firm. Roll one D6 for each: a unit standing firm suffers D3 mortal wounds on a 3+;…"
+        "en": "BATTLE ROUND1BOMBARDMENTAt the start of the first battle round, for each enemy unit within your opponent’s deployment zone, your opponent must decide whether that unit will take cover or stand firm.…"
       },
       "definition": {
-        "en": "At the start of the first battle round, for each enemy unit within your opponent's deployment zone, your opponent chooses whether it takes cover or stands firm. Roll one D6 for each: a unit standing firm suffers D3 mortal wounds on a 3+; a unit taking cover is Battle-shocked and suffers D3 mortal wounds on a 5+. At the start of your Command phase in battle rounds 2-5, roll one D6 for each enemy unit within your opponent's deployment zone; on a 3+, it suffers 1 mortal wound and must take a Battle-shock test."
+        "en": "BATTLE ROUND1BOMBARDMENTAt the start of the first battle round, for each enemy unit within your opponent’s deployment zone, your opponent must decide whether that unit will take cover or stand firm. You then roll one D6 for each of those enemy units and apply the relevant result below:Unit Standing Firm: On a 3+, that unit suffers D3 mortal wounds.Unit Taking Cover: That unit is battle-shocked. On a 5+, that unit suffers D3 mortal woundsBATTLE ROUND2    ONWARDSFALLOUTAt the start of your Command phase during the second, third, fourth and fifth battle rounds, roll one D6 for each enemy unit within your opponent’s deployment zone. On a 3+, that unit suffers 1 mortal wound and must take a Battle-shock test."
       },
       "aliases": [
         "rad-zone-corps-rule"
@@ -2647,7 +2647,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "rad-zone-corps-rule"
       },
       "status": "verified",
@@ -2680,7 +2680,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "skitarii-hunter-cohort-rule"
       },
       "status": "verified",
@@ -2744,7 +2744,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-skitarii-hunter-cohort"
       },
       "status": "verified",
@@ -2767,7 +2767,7 @@
         "en": "The Adeptus Mechanicus Army Rule with Protector and Conqueror modes."
       },
       "definition": {
-        "en": "Select and apply the active imperative according to the current publication."
+        "en": "PROTECTOR IMPERATIVE Ranged weapons equipped by models in this unit have the [HEAVY] ability. Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. Each time a melee attack targets this unit, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, subtract 1 from the Hit roll. CONQUEROR IMPERATIVE Ranged weapons equipped by models in this unit have the [ASSAULT] ability. Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1. Each time a model in this unit makes an attack, if this unit has the BATTLELINE keyword and/or it is within 6\" of one or more friendly ADEPTUS MECHANICUS BATTLELINE units, improve the Armour Penetration characteristic of that attack by 1."
       },
       "structured": {},
       "presentation": "article",
@@ -2796,10 +2796,10 @@
         "en": "Arch-negator"
       },
       "summary": {
-        "en": "TECH-PRIEST model only. Ranged weapons equipped by the bearer have [ANTI-VEHICLE 4+]."
+        "en": "TECH-PRIEST model only. Ranged weapons equipped by the bearer have the [ANTI-VEHICLE 4+] ability."
       },
       "definition": {
-        "en": "TECH-PRIEST model only. Ranged weapons equipped by the bearer have [ANTI-VEHICLE 4+]."
+        "en": "TECH-PRIEST model only. Ranged weapons equipped by the bearer have the [ANTI-VEHICLE 4+] ability."
       },
       "aliases": [],
       "related": [
@@ -2807,7 +2807,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-cohort-cybernetica; Enhancements"
       },
       "status": "verified",
@@ -2827,10 +2827,10 @@
         "en": "Artisan"
       },
       "summary": {
-        "en": "TECH-PRIEST model only. While leading a unit within range of the Acquisition objective, once per phase change one Hit, Wound or saving throw result for that unit to an unmodified 6."
+        "en": "TECH-PRIEST model only. While the bearer is leading a unit that is within range of your Acquisition objective marker, once per phase, you can change the result of one Hit roll, one Wound roll or one saving throw made for that unit to an unmodified 6."
       },
       "definition": {
-        "en": "TECH-PRIEST model only. While leading a unit within range of the Acquisition objective, once per phase change one Hit, Wound or saving throw result for that unit to an unmodified 6."
+        "en": "TECH-PRIEST model only. While the bearer is leading a unit that is within range of your Acquisition objective marker, once per phase, you can change the result of one Hit roll, one Wound roll or one saving throw made for that unit to an unmodified 6."
       },
       "aliases": [],
       "related": [
@@ -2838,7 +2838,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-explorator-maniple; Enhancements"
       },
       "status": "verified",
@@ -2858,10 +2858,10 @@
         "en": "Autoclavic Denunciation"
       },
       "summary": {
-        "en": "ADEPTUS MECHANICUS model only. The bearer's ranged weapons have [ANTI-INFANTRY 2+] and [ANTI-MONSTER 4+]."
+        "en": "ADEPTUS MECHANICUS model only. Ranged weapons equipped by the bearer have the [ANTI-INFANTRY 2+] and [ANTI-MONSTER 4+] abilities."
       },
       "definition": {
-        "en": "ADEPTUS MECHANICUS model only. The bearer's ranged weapons have [ANTI-INFANTRY 2+] and [ANTI-MONSTER 4+]."
+        "en": "ADEPTUS MECHANICUS model only. Ranged weapons equipped by the bearer have the [ANTI-INFANTRY 2+] and [ANTI-MONSTER 4+] abilities."
       },
       "aliases": [],
       "related": [
@@ -2869,7 +2869,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-rad-zone-corps; Enhancements"
       },
       "status": "verified",
@@ -2889,10 +2889,10 @@
         "en": "Battle-sphere Uplink"
       },
       "summary": {
-        "en": "SKITARII model only. After the bearer's unit shoots, it can make the rule's reactive Normal move, subject to its restrictions."
+        "en": "SKITARII model only. In your Shooting phase, after the bearer’s unit has shot, if it is not within Engagement Range of one or more enemy units, that unit can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge."
       },
       "definition": {
-        "en": "SKITARII model only. After the bearer's unit shoots, it can make the rule's reactive Normal move, subject to its restrictions."
+        "en": "SKITARII model only. In your Shooting phase, after the bearer’s unit has shot, if it is not within Engagement Range of one or more enemy units, that unit can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge."
       },
       "aliases": [],
       "related": [
@@ -2900,7 +2900,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-skitarii-hunter-cohort; Enhancements"
       },
       "status": "verified",
@@ -2951,10 +2951,10 @@
         "en": "Cantic Thrallnet"
       },
       "summary": {
-        "en": "SKITARII MARSHAL model only. At the start of the battle round, select a friendly SKITARII unit within 12\"; both Imperatives are active for it until the next battle round."
+        "en": "SKITARII MARSHAL model only. At the start of the battle round, you can select one friendly SKITARII unit within 12\" of the bearer. Until the start of the next battle round, the Protector Imperative and the Conqueror Imperative are both active for that unit."
       },
       "definition": {
-        "en": "SKITARII MARSHAL model only. At the start of the battle round, select a friendly SKITARII unit within 12\"; both Imperatives are active for it until the next battle round."
+        "en": "SKITARII MARSHAL model only. At the start of the battle round, you can select one friendly SKITARII unit within 12\" of the bearer. Until the start of the next battle round, the Protector Imperative and the Conqueror Imperative are both active for that unit."
       },
       "aliases": [],
       "related": [
@@ -2962,7 +2962,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-skitarii-hunter-cohort; Enhancements"
       },
       "status": "verified",
@@ -2982,10 +2982,10 @@
         "en": "Clandestine Infiltrator"
       },
       "summary": {
-        "en": "SKITARII model only. The bearer and models in its led unit have Infiltrators and Scouts 6\"."
+        "en": "SKITARII model only. The bearer, and models in any unit they are leading, have the Infiltrators and Scouts 6\" abilities."
       },
       "definition": {
-        "en": "SKITARII model only. The bearer and models in its led unit have Infiltrators and Scouts 6\"."
+        "en": "SKITARII model only. The bearer, and models in any unit they are leading, have the Infiltrators and Scouts 6\" abilities."
       },
       "aliases": [],
       "related": [
@@ -2993,7 +2993,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-skitarii-hunter-cohort; Enhancements"
       },
       "status": "verified",
@@ -3044,10 +3044,10 @@
         "en": "Data-blessed Autosermon"
       },
       "summary": {
-        "en": "TECH-PRIEST model only. Once per battle, the bearer's unit can gain the other Benediction of the Omnissiah for the phase."
+        "en": "TECH-PRIEST model only. Once per battle, at the start of your Command phase, you can select the Benediction of the Omnissiah you did not select at the start of the first battle round.…"
       },
       "definition": {
-        "en": "TECH-PRIEST model only. Once per battle, the bearer's unit can gain the other Benediction of the Omnissiah for the phase."
+        "en": "TECH-PRIEST model only. Once per battle, at the start of your Command phase, you can select the Benediction of the Omnissiah you did not select at the start of the first battle round. Until the start of your next Command phase, that Benediction of the Omnissiah is active for the bearer’s unit in addition to the one that is currently active for your army."
       },
       "aliases": [],
       "related": [
@@ -3055,7 +3055,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-data-psalm-conclave; Enhancements"
       },
       "status": "verified",
@@ -3063,7 +3063,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "article"
     },
     "adeptus-mechanicus-enhancement-electromiasmic-brazier": {
       "id": "adeptus-mechanicus-enhancement-electromiasmic-brazier",
@@ -3106,10 +3106,10 @@
         "en": "Emotionless Clarity"
       },
       "summary": {
-        "en": "TECH-PRIEST model only. Once per turn, a nearby friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE with Deadly Demise automatically inflicts its Deadly Demise mortal wounds when destroyed."
+        "en": "TECH-PRIEST model only. Once per turn, when a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model with the Deadly Demise ability that is within 12\" of the bearer is destroyed, the bearer can use this Enhancement.…"
       },
       "definition": {
-        "en": "TECH-PRIEST model only. Once per turn, a nearby friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE with Deadly Demise automatically inflicts its Deadly Demise mortal wounds when destroyed."
+        "en": "TECH-PRIEST model only. Once per turn, when a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model with the Deadly Demise ability that is within 12\" of the bearer is destroyed, the bearer can use this Enhancement. If it does, do not roll to determine whether any mortal wounds are inflicted as a result of that model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted."
       },
       "aliases": [],
       "related": [
@@ -3117,7 +3117,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-cohort-cybernetica; Enhancements"
       },
       "status": "verified",
@@ -3125,7 +3125,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "article"
     },
     "adeptus-mechanicus-enhancement-explorator-dispensation": {
       "id": "adeptus-mechanicus-enhancement-explorator-dispensation",
@@ -3168,10 +3168,10 @@
         "en": "Genetor"
       },
       "summary": {
-        "en": "TECH-PRIEST model only. While leading a unit within range of the Acquisition objective, models in that unit have a 4+ invulnerable save."
+        "en": "TECH-PRIEST model only. While the bearer is leading a unit that is within range of your Acquisition objective marker, models in that unit have a 4+ invulnerable save."
       },
       "definition": {
-        "en": "TECH-PRIEST model only. While leading a unit within range of the Acquisition objective, models in that unit have a 4+ invulnerable save."
+        "en": "TECH-PRIEST model only. While the bearer is leading a unit that is within range of your Acquisition objective marker, models in that unit have a 4+ invulnerable save."
       },
       "aliases": [],
       "related": [
@@ -3179,7 +3179,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-explorator-maniple; Enhancements"
       },
       "status": "verified",
@@ -3230,10 +3230,10 @@
         "en": "Logis"
       },
       "summary": {
-        "en": "TECH-PRIEST model only. While leading a unit, add 1 to Hit rolls against units within range of the Acquisition objective."
+        "en": "TECH-PRIEST model only. While the bearer is leading a unit, each time a model in that unit makes an attack that targets a unit within range of your Acquisition objective marker, add 1 to the Hit roll."
       },
       "definition": {
-        "en": "TECH-PRIEST model only. While leading a unit, add 1 to Hit rolls against units within range of the Acquisition objective."
+        "en": "TECH-PRIEST model only. While the bearer is leading a unit, each time a model in that unit makes an attack that targets a unit within range of your Acquisition objective marker, add 1 to the Hit roll."
       },
       "aliases": [],
       "related": [
@@ -3241,7 +3241,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-explorator-maniple; Enhancements"
       },
       "status": "verified",
@@ -3261,10 +3261,10 @@
         "en": "Lord of Machines"
       },
       "summary": {
-        "en": "TECH-PRIEST model only. Disrupt a visible enemy VEHICLE within 12\" at the start of its Shooting phase, degrading or preventing its shooting according to its Leadership test."
+        "en": "TECH-PRIEST model only. Once per turn, at the start of your opponent’s Shooting phase, select one enemy VEHICLE unit within 12\" of and visible to the bearer. That unit must take a Leadership test:…"
       },
       "definition": {
-        "en": "TECH-PRIEST model only. Disrupt a visible enemy VEHICLE within 12\" at the start of its Shooting phase, degrading or preventing its shooting according to its Leadership test."
+        "en": "TECH-PRIEST model only. Once per turn, at the start of your opponent’s Shooting phase, select one enemy VEHICLE unit within 12\" of and visible to the bearer. That unit must take a Leadership test: if that test is passed, until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll; if that test is failed, that unit is not eligible to shoot this phase."
       },
       "aliases": [],
       "related": [
@@ -3272,7 +3272,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-cohort-cybernetica; Enhancements"
       },
       "status": "verified",
@@ -3280,7 +3280,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "article"
     },
     "adeptus-mechanicus-enhancement-magos": {
       "id": "adeptus-mechanicus-enhancement-magos",
@@ -3292,10 +3292,10 @@
         "en": "Magos"
       },
       "summary": {
-        "en": "TECH-PRIEST model only. At the end of your Command phase, if the bearer is within range of the Acquisition objective, gain 1CP on a 4+."
+        "en": "TECH-PRIEST model only. At the end of your Command phase, if the bearer is within range of your Acquisition objective marker, roll one D6: on a 4+, you gain 1CP."
       },
       "definition": {
-        "en": "TECH-PRIEST model only. At the end of your Command phase, if the bearer is within range of the Acquisition objective, gain 1CP on a 4+."
+        "en": "TECH-PRIEST model only. At the end of your Command phase, if the bearer is within range of your Acquisition objective marker, roll one D6: on a 4+, you gain 1CP."
       },
       "aliases": [],
       "related": [
@@ -3303,7 +3303,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-explorator-maniple; Enhancements"
       },
       "status": "verified",
@@ -3323,10 +3323,10 @@
         "en": "Malphonic Susurrus"
       },
       "summary": {
-        "en": "ADEPTUS MECHANICUS model only. While the bearer leads a unit, models in that unit have Stealth."
+        "en": "ADEPTUS MECHANICUS model only. While the bearer is leading a unit, models in that unit have the Stealth ability."
       },
       "definition": {
-        "en": "ADEPTUS MECHANICUS model only. While the bearer leads a unit, models in that unit have Stealth."
+        "en": "ADEPTUS MECHANICUS model only. While the bearer is leading a unit, models in that unit have the Stealth ability."
       },
       "aliases": [],
       "related": [
@@ -3334,7 +3334,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-rad-zone-corps; Enhancements"
       },
       "status": "verified",
@@ -3354,10 +3354,10 @@
         "en": "Mantle of the Gnosticarch"
       },
       "summary": {
-        "en": "TECH-PRIEST model only. Each time an attack is allocated to the bearer, change that attack's Damage characteristic to 1."
+        "en": "TECH-PRIEST model only. Each time an attack is allocated to the bearer, change the Damage characteristic of that attack to 1."
       },
       "definition": {
-        "en": "TECH-PRIEST model only. Each time an attack is allocated to the bearer, change that attack's Damage characteristic to 1."
+        "en": "TECH-PRIEST model only. Each time an attack is allocated to the bearer, change the Damage characteristic of that attack to 1."
       },
       "aliases": [],
       "related": [
@@ -3365,7 +3365,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-data-psalm-conclave; Enhancements"
       },
       "status": "verified",
@@ -3416,10 +3416,10 @@
         "en": "Mechanicus Locum"
       },
       "summary": {
-        "en": "TECH-PRIEST model only. The bearer has Leadership 6+ and can remove Battle-shock from one friendly CULT MECHANICUS unit within 12\" once per battle."
+        "en": "TECH-PRIEST model only. The bearer has a Leadership characteristic of 6+ and, once per battle, at the start of any phase, you can select one friendly CULT MECHANICUS unit that is Battle-shocked and within 12\" of the bearer. That unit is no longer Battle-shocked."
       },
       "definition": {
-        "en": "TECH-PRIEST model only. The bearer has Leadership 6+ and can remove Battle-shock from one friendly CULT MECHANICUS unit within 12\" once per battle."
+        "en": "TECH-PRIEST model only. The bearer has a Leadership characteristic of 6+ and, once per battle, at the start of any phase, you can select one friendly CULT MECHANICUS unit that is Battle-shocked and within 12\" of the bearer. That unit is no longer Battle-shocked."
       },
       "aliases": [],
       "related": [
@@ -3427,7 +3427,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-data-psalm-conclave; Enhancements"
       },
       "status": "verified",
@@ -3447,10 +3447,10 @@
         "en": "Necromechanic"
       },
       "summary": {
-        "en": "TECH-PRIEST model only. Once per battle round, when a saving throw for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12\" fails, change that attack's Damage characteristic to 0."
+        "en": "TECH-PRIEST model only. Once per battle round, when a saving throw made for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0."
       },
       "definition": {
-        "en": "TECH-PRIEST model only. Once per battle round, when a saving throw for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12\" fails, change that attack's Damage characteristic to 0."
+        "en": "TECH-PRIEST model only. Once per battle round, when a saving throw made for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0."
       },
       "aliases": [],
       "related": [
@@ -3458,7 +3458,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-cohort-cybernetica; Enhancements"
       },
       "status": "verified",
@@ -3540,10 +3540,10 @@
         "en": "Peerless Eradicator"
       },
       "summary": {
-        "en": "ADEPTUS MECHANICUS model only. While the bearer leads a unit, its ranged weapons have [SUSTAINED HITS 1]."
+        "en": "ADEPTUS MECHANICUS model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
       },
       "definition": {
-        "en": "ADEPTUS MECHANICUS model only. While the bearer leads a unit, its ranged weapons have [SUSTAINED HITS 1]."
+        "en": "ADEPTUS MECHANICUS model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
       },
       "aliases": [],
       "related": [
@@ -3551,7 +3551,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-rad-zone-corps; Enhancements"
       },
       "status": "verified",
@@ -3571,10 +3571,10 @@
         "en": "Radial Suffusion"
       },
       "summary": {
-        "en": "ADEPTUS MECHANICUS model only. Extends the reach of the Rad-bombardment fallout beyond the enemy deployment zone as described by the Enhancement."
+        "en": "ADEPTUS MECHANICUS model only. From the second battle round onwards, when resolving the Fallout effect of the Rad-bombardment Detachment rule, if the bearer is on the battlefield, roll one D6 for each enemy unit within 6\" of your opponent’s deployment zone, in addition to those…"
       },
       "definition": {
-        "en": "ADEPTUS MECHANICUS model only. Extends the reach of the Rad-bombardment fallout beyond the enemy deployment zone as described by the Enhancement."
+        "en": "ADEPTUS MECHANICUS model only. From the second battle round onwards, when resolving the Fallout effect of the Rad-bombardment Detachment rule, if the bearer is on the battlefield, roll one D6 for each enemy unit within 6\" of your opponent’s deployment zone, in addition to those that are within your opponent’s deployment zone."
       },
       "aliases": [],
       "related": [
@@ -3582,7 +3582,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-rad-zone-corps; Enhancements"
       },
       "status": "verified",
@@ -3590,7 +3590,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "article"
     },
     "adeptus-mechanicus-enhancement-sanctified-ordnance": {
       "id": "adeptus-mechanicus-enhancement-sanctified-ordnance",
@@ -3664,10 +3664,10 @@
         "en": "Temporcopia"
       },
       "summary": {
-        "en": "TECH-PRIEST model only. The bearer's unit has Fights First."
+        "en": "TECH-PRIEST model only. The bearer’s unit has the Fights First ability."
       },
       "definition": {
-        "en": "TECH-PRIEST model only. The bearer's unit has Fights First."
+        "en": "TECH-PRIEST model only. The bearer’s unit has the Fights First ability."
       },
       "aliases": [],
       "related": [
@@ -3675,7 +3675,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-data-psalm-conclave; Enhancements"
       },
       "status": "verified",
@@ -3757,10 +3757,10 @@
         "en": "Veiled Hunter"
       },
       "summary": {
-        "en": "SKITARII MARSHAL model only. After both players deploy, redeploy up to three SKITARII INFANTRY units; any can enter Strategic Reserves regardless of the normal limit. This is the Faction Pack v1.1 replacement."
+        "en": "SKITARII MARSHAL model only. After both players have deployed their armies, you can select up to three SKITARII INFANTRY units from your army and redeploy all of those units.…"
       },
       "definition": {
-        "en": "SKITARII MARSHAL model only. After both players deploy, redeploy up to three SKITARII INFANTRY units; any can enter Strategic Reserves regardless of the normal limit. This is the Faction Pack v1.1 replacement."
+        "en": "SKITARII MARSHAL model only. After both players have deployed their armies, you can select up to three SKITARII INFANTRY units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves."
       },
       "aliases": [],
       "related": [
@@ -3768,7 +3768,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-skitarii-hunter-cohort; Enhancements"
       },
       "status": "verified",
@@ -3776,7 +3776,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "article"
     },
     "adeptus-mechanicus-enhancement-vinghs-wafers-of-dynamism": {
       "id": "adeptus-mechanicus-enhancement-vinghs-wafers-of-dynamism",
@@ -3962,7 +3962,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-rad-zone-corps; Stratagems"
       },
       "status": "verified",
@@ -4064,7 +4064,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-cohort-cybernetica; Stratagems"
       },
       "status": "verified",
@@ -4098,7 +4098,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-explorator-maniple; Stratagems"
       },
       "status": "verified",
@@ -4132,7 +4132,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-rad-zone-corps; Stratagems"
       },
       "status": "verified",
@@ -4166,7 +4166,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-cohort-cybernetica; Stratagems"
       },
       "status": "verified",
@@ -4200,7 +4200,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-skitarii-hunter-cohort; Stratagems"
       },
       "status": "verified",
@@ -4234,7 +4234,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-skitarii-hunter-cohort; Stratagems"
       },
       "status": "verified",
@@ -4268,7 +4268,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-rad-zone-corps; Stratagems"
       },
       "status": "verified",
@@ -4302,7 +4302,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-explorator-maniple; Stratagems"
       },
       "status": "verified",
@@ -4370,7 +4370,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-data-psalm-conclave; Stratagems"
       },
       "status": "verified",
@@ -4540,7 +4540,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-skitarii-hunter-cohort; Stratagems"
       },
       "status": "verified",
@@ -4574,7 +4574,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-rad-zone-corps; Stratagems"
       },
       "status": "verified",
@@ -4676,7 +4676,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-data-psalm-conclave; Stratagems"
       },
       "status": "verified",
@@ -4710,7 +4710,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-explorator-maniple; Stratagems"
       },
       "status": "verified",
@@ -4744,7 +4744,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-explorator-maniple; Stratagems"
       },
       "status": "verified",
@@ -4778,7 +4778,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-skitarii-hunter-cohort; Stratagems"
       },
       "status": "verified",
@@ -4812,7 +4812,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-rad-zone-corps; Stratagems"
       },
       "status": "verified",
@@ -4846,7 +4846,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-data-psalm-conclave; Stratagems"
       },
       "status": "verified",
@@ -4880,7 +4880,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-data-psalm-conclave; Stratagems"
       },
       "status": "verified",
@@ -4914,7 +4914,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-cohort-cybernetica; Stratagems"
       },
       "status": "verified",
@@ -4948,7 +4948,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-cohort-cybernetica; Stratagems"
       },
       "status": "verified",
@@ -5016,7 +5016,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-cohort-cybernetica; Stratagems"
       },
       "status": "verified",
@@ -5118,7 +5118,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-rad-zone-corps; Stratagems"
       },
       "status": "verified",
@@ -5186,7 +5186,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-explorator-maniple; Stratagems"
       },
       "status": "verified",
@@ -5220,7 +5220,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-skitarii-hunter-cohort; Stratagems"
       },
       "status": "verified",
@@ -5254,7 +5254,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-explorator-maniple; Stratagems"
       },
       "status": "verified",
@@ -5390,7 +5390,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-skitarii-hunter-cohort; Stratagems"
       },
       "status": "verified",
@@ -5492,7 +5492,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-cohort-cybernetica; Stratagems"
       },
       "status": "verified",
@@ -5526,7 +5526,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-data-psalm-conclave; Stratagems"
       },
       "status": "verified",
@@ -5628,7 +5628,7 @@
       ],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward for 11e",
+        "revision": "Codex carry-forward + Faction Pack v1.1",
         "locator": "detachment-data-psalm-conclave; Stratagems"
       },
       "status": "verified",

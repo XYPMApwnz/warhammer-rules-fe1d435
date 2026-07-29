@@ -46,7 +46,7 @@ function hydrateTerms(html){
     const term=glossary[aliases[context?.termId]||context?.termId||aliases[id]||id];
     if(!term)throw new Error(`Missing glossary term ${id}`);
     const title=term.title?.en||id;
-    const summary=term.summary?.en||term.definition?.en||'';
+    const summary=term.kind==='stratagem'?term.definition?.en||term.summary?.en||'':term.summary?.en||term.definition?.en||'';
     const fullRulePath=context?.navigation?.fullRulePath||term.fullRulePath||'';
     const anchor=fullRulePath.includes('#')?fullRulePath.slice(fullRulePath.indexOf('#')+1):'';
     const mobileRulePath=mechanicusRulePath(fullRulePath)?mobileRulePaths.get(anchor)||'':'';
@@ -127,7 +127,7 @@ for(const context of Object.values(glossaryContext)){
 function page(route){
   const relatedSection=route.type==='unit'?`
   <section class="related-rules" id="relatedRules" aria-labelledby="relatedRulesTitle">
-    <header class="related-rules-head"><div><span>Datasheet tools</span><h2>${route.enhancementsAllowed?'Stratagems &amp; Enhancements':'Stratagems'}</h2></div></header>
+    <header class="related-rules-head"><div><span>Datasheet tools</span><h2>${route.enhancementsAllowed?'Compatible Stratagems &amp; Enhancements':'Compatible Stratagems'}</h2></div></header>
     <div class="related-controls">
       <label>Detachment<select id="relatedDetachment"><option value="all">All detachments</option>${detachments.map(item=>`<option value="${item.id.slice(11)}">${item.title}</option>`).join('')}</select></label>
       ${route.enhancementsAllowed?'<div class="related-tabs" role="group" aria-label="Rule type"><button type="button" data-related-tab="stratagems" aria-pressed="true">Stratagems</button><button type="button" data-related-tab="enhancements" aria-pressed="false">Enhancements</button></div>':''}
@@ -139,15 +139,15 @@ function page(route){
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101313">
   <title>${route.title} &mdash; Adeptus Mechanicus</title>
   <link rel="manifest" href="../../../manifest.webmanifest"><link rel="icon" href="../assets/mechanicus-logo.png" type="image/png">
-  <link rel="stylesheet" href="../styles/tokens.css?v=14"><link rel="stylesheet" href="../../death-guard/styles/layout.css?v=9"><link rel="stylesheet" href="../../death-guard/styles/navigation.css?v=11"><link rel="stylesheet" href="../../death-guard/styles/content.css?v=29"><link rel="stylesheet" href="../../death-guard/styles/popups.css?v=17"><link rel="stylesheet" href="../styles/mechanicus.css?v=17"><link rel="stylesheet" href="../../shared/datasheet-system.css?v=6"><link rel="stylesheet" href="./mobile.css?v=1">
+  <link rel="stylesheet" href="../styles/tokens.css?v=14"><link rel="stylesheet" href="../../death-guard/styles/layout.css?v=9"><link rel="stylesheet" href="../../death-guard/styles/navigation.css?v=11"><link rel="stylesheet" href="../../death-guard/styles/content.css?v=32"><link rel="stylesheet" href="../../death-guard/styles/popups.css?v=17"><link rel="stylesheet" href="../styles/mechanicus.css?v=17"><link rel="stylesheet" href="../../shared/datasheet-system.css?v=6"><link rel="stylesheet" href="./mobile.css?v=1">
 </head><body>
   <header class="app-header" id="appHeader"><button class="header-button nav-menu" id="navButton" aria-label="Open navigation" aria-controls="mobileNav" aria-expanded="false">&#9776;</button><div class="app-brand"><strong>Adeptus Mechanicus Rules</strong><small>11E &middot; Mobile reference</small></div><a class="library-link" href="../../../index.html" aria-label="Back to rulebook library"><span aria-hidden="true">&larr;</span><b>Library</b></a><div class="header-spacer"></div></header>
   <button class="toc-scrim" id="navScrim" aria-label="Close navigation" hidden></button>
   <nav class="toc-panel" id="mobileNav" aria-label="Adeptus Mechanicus navigation" aria-hidden="true"><h2 class="toc-heading">Contents</h2><div class="phone-shortcuts"><a class="phone-glossary" href="../../../roster-guides/index.html" data-roster-guides-link hidden>&larr; Roster Guides</a><a class="phone-glossary" href="../../../glossary/index.html">Mega Glossary &rarr;</a><a class="phone-glossary phone-mode-switch" href="../reader.html#${route.id}" data-view-switch>Desktop / iPad view &rarr;</a></div><div class="phone-tree">${navigation(route)}</div></nav>
   <main class="main mobile-main"><article class="document">${hydrateTerms(content(route))}${relatedSection}</article></main>
-  <script src="../../shared/datasheet-layout.js?v=2"></script><script src="../../shared/related-rules-matcher.js?v=1"></script><script src="../scripts/related-rules.js?v=7"></script>
+  <script src="../../shared/datasheet-layout.js?v=2"></script><script src="../../shared/related-rules-matcher.js?v=2"></script><script src="../scripts/related-rules.js?v=8"></script>
   <dialog class="mobile-dialog" id="termDialog" aria-labelledby="termTitle"><form method="dialog" class="mobile-dialog-head"><span>Mega Glossary</span><button aria-label="Close popup">&times;</button></form><h2 id="termTitle"></h2><p id="termSummary"></p><a id="termRule" hidden>Open full rule &rarr;</a><a id="termFull" href="../../../glossary/index.html">Glossary entry &rarr;</a></dialog>
-  <script src="../../../glossary-return.js?v=2"></script><script src="../../shared/roster-parser.js?v=2"></script><script src="../../shared/roster-entities.js?v=1"></script><script src="../../../roster-guides/points-data.js?v=5"></script><script src="../scripts/roster-enhancements.js?v=2"></script><script src="./mobile.js?v=1"></script>
+  <script src="../../../glossary-return.js?v=2"></script><script src="../../shared/roster-parser.js?v=2"></script><script src="../../shared/roster-entities.js?v=1"></script><script src="../../../roster-guides/points-data.js?v=5"></script><script src="../scripts/roster-enhancements.js?v=2"></script><script src="./mobile.js?v=2"></script>
 </body></html>`;
 }
 

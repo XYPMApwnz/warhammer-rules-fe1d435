@@ -27,7 +27,7 @@ function hydrateTerms(html) {
     const term = glossary[aliases[context?.termId] || context?.termId || aliases[id] || id];
     if (!term) throw new Error(`Missing glossary term ${id}`);
     const title = term.title?.en || id;
-    const summary = term.summary?.en || term.definition?.en || '';
+    const summary = term.kind === 'stratagem' ? term.definition?.en || term.summary?.en || '' : term.summary?.en || term.definition?.en || '';
     const fullRulePath = context?.navigation?.fullRulePath || term.fullRulePath || '';
     const mobileRulePath = fullRulePath.startsWith('books/death-guard/reader.html#') ? mobileRulePaths.get(fullRulePath.slice(fullRulePath.indexOf('#') + 1)) || '' : '';
     return `${start} data-term-title="${attribute(title)}" data-term-summary="${attribute(summary)}"${fullRulePath?` data-full-rule-path="${attribute(fullRulePath)}"`:''}${mobileRulePath?` data-mobile-rule-path="${attribute(mobileRulePath)}"`:''}${end}`;
@@ -122,7 +122,7 @@ for (const context of Object.values(glossaryContext)) {
 function page(route) {
   const relatedSection = route.type === 'unit' ? `
   <section class="related-rules" id="relatedRules" aria-labelledby="relatedRulesTitle">
-    <header class="related-rules-head"><div><span>Datasheet tools</span><h2>${route.enhancementsAllowed ? 'Stratagems &amp; Enhancements' : 'Stratagems'}</h2></div></header>
+    <header class="related-rules-head"><div><span>Datasheet tools</span><h2>${route.enhancementsAllowed ? 'Compatible Stratagems &amp; Enhancements' : 'Compatible Stratagems'}</h2></div></header>
     <div class="related-controls">
       <label>Detachment<select id="relatedDetachment"><option value="all">All detachments</option>${detachments.map(item => `<option value="${item.id.slice(11)}">${item.title}</option>`).join('')}</select></label>
       ${route.enhancementsAllowed ? '<div class="related-tabs" role="group" aria-label="Rule type"><button type="button" data-related-tab="stratagems" aria-pressed="true">Stratagems</button><button type="button" data-related-tab="enhancements" aria-pressed="false">Enhancements</button></div>' : ''}
@@ -141,7 +141,7 @@ function page(route) {
   <link rel="stylesheet" href="../styles/tokens.css?v=10">
   <link rel="stylesheet" href="../styles/layout.css?v=9">
   <link rel="stylesheet" href="../styles/navigation.css?v=11">
-  <link rel="stylesheet" href="../styles/content.css?v=29">
+  <link rel="stylesheet" href="../styles/content.css?v=32">
   <link rel="stylesheet" href="../styles/popups.css?v=17">
   <link rel="stylesheet" href="../../shared/datasheet-system.css?v=6">
   <link rel="stylesheet" href="./mobile.css?v=8">
@@ -165,8 +165,8 @@ function page(route) {
   </nav>
   <main class="main mobile-main"><article class="document">${hydrateTerms(content(route))}${relatedSection}</article></main>
   <script src="../../shared/datasheet-layout.js?v=2"></script>
-  <script src="../../shared/related-rules-matcher.js?v=1"></script>
-  <script src="../scripts/related-rules.js?v=7"></script>
+  <script src="../../shared/related-rules-matcher.js?v=2"></script>
+  <script src="../scripts/related-rules.js?v=8"></script>
   <dialog class="mobile-dialog" id="termDialog" aria-labelledby="termTitle">
     <form method="dialog" class="mobile-dialog-head"><span>Mega Glossary</span><button aria-label="Close popup">&times;</button></form>
     <h2 id="termTitle"></h2><p id="termSummary"></p>
@@ -177,7 +177,7 @@ function page(route) {
   <script src="../../shared/roster-parser.js?v=2"></script>
   <script src="../../../roster-guides/points-data.js?v=5"></script>
   <script src="../../shared/roster-enhancements.js?v=3"></script>
-  <script src="./mobile.js?v=13"></script>
+  <script src="./mobile.js?v=14"></script>
 </body>
 </html>`;
 }

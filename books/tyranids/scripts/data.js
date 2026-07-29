@@ -3729,8 +3729,8 @@ window.DG_TERMS={
   "tyranids-stratagem-predatory-imperative": {
     "id": "tyranids-stratagem-predatory-imperative",
     "title": "PREDATORY IMPERATIVE",
-    "summary": "Your Command phase. Up to two TYRANIDS units from your army that are within Synapse Range of your army, or one other TYRANIDS unit from your army. Select one Hyper-adaptation. Until the start of your next Command phase, that Hyper-adaptation is active for those selected units in addition to any other that may be active for your army.",
-    "full": "Your Command phase. Up to two TYRANIDS units from your army that are within Synapse Range of your army, or one other TYRANIDS unit from your army. Select one Hyper-adaptation. Until the start of your next Command phase, that Hyper-adaptation is active for those selected units in addition to any other that may be active for your army.",
+    "summary": "Your Command phase. Up to two TYRANIDS units from your army that are within Synapse Range of your army, or one other TYRANIDS unit from your army. Select one Hyper-adaptation. Until the start of your next Command phase, that Hyper-adaptation is active for those selected units in addition to any other that may be active for your army. You cannot select the same Hyper-adaptation you selected at the start of the first battle round.",
+    "full": "Your Command phase. Up to two TYRANIDS units from your army that are within Synapse Range of your army, or one other TYRANIDS unit from your army. Select one Hyper-adaptation. Until the start of your next Command phase, that Hyper-adaptation is active for those selected units in addition to any other that may be active for your army. You cannot select the same Hyper-adaptation you selected at the start of the first battle round.",
     "glossary": "glossary-tyranids-stratagem-predatory-imperative",
     "rule": "detachment-invasion-fleet"
   },
@@ -3913,8 +3913,8 @@ window.DG_TERMS={
   "tyranids-stratagem-unending-waves": {
     "id": "tyranids-stratagem-unending-waves",
     "title": "UNENDING WAVES",
-    "summary": "Any phase. One ENDLESS MULTITUDE unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength.",
-    "full": "Any phase. One ENDLESS MULTITUDE unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength.",
+    "summary": "Any phase. One ENDLESS MULTITUDE unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength. Any destroyed CHARACTER units that were attached to your unit are not returned. You can only use this Stratagem once per battle.",
+    "full": "Any phase. One ENDLESS MULTITUDE unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength. Any destroyed CHARACTER units that were attached to your unit are not returned. You can only use this Stratagem once per battle.",
     "glossary": "glossary-tyranids-stratagem-unending-waves",
     "rule": "detachment-unending-swarm"
   },
@@ -3969,16 +3969,16 @@ window.DG_TERMS={
   "tyranids-stratagem-hypersensory-scillia": {
     "id": "tyranids-stratagem-hypersensory-scillia",
     "title": "HYPERSENSORY SCILLIA",
-    "summary": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. Up to two VANGUARD INVADER units from your army that are within 8\" of that enemy unit, or one other TYRANIDS INFANTRY unit from your army that is within 8\" of that enemy unit. Those selected units can each make a Normal move of up to 6\".",
-    "full": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. Up to two VANGUARD INVADER units from your army that are within 8\" of that enemy unit, or one other TYRANIDS INFANTRY unit from your army that is within 8\" of that enemy unit. Those selected units can each make a Normal move of up to 6\".",
+    "summary": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. Up to two VANGUARD INVADER units from your army that are within 8\" of that enemy unit, or one other TYRANIDS INFANTRY unit from your army that is within 8\" of that enemy unit. Those selected units can each make a Normal move of up to 6\". You cannot target units that are within Engagement Range of one or more enemy units.",
+    "full": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. Up to two VANGUARD INVADER units from your army that are within 8\" of that enemy unit, or one other TYRANIDS INFANTRY unit from your army that is within 8\" of that enemy unit. Those selected units can each make a Normal move of up to 6\". You cannot target units that are within Engagement Range of one or more enemy units.",
     "glossary": "glossary-tyranids-stratagem-hypersensory-scillia",
     "rule": "detachment-vanguard-onslaught"
   },
   "tyranids-stratagem-invisible-hunter": {
     "id": "tyranids-stratagem-invisible-hunter",
     "title": "INVISIBLE HUNTER",
-    "summary": "End of your opponent’s Fight phase. Up to two VANGUARD INVADER units from your army, or one TYRANIDS INFANTRY unit from your army. Remove the targeted units from the battlefield and place them into Strategic Reserves.",
-    "full": "End of your opponent’s Fight phase. Up to two VANGUARD INVADER units from your army, or one TYRANIDS INFANTRY unit from your army. Remove the targeted units from the battlefield and place them into Strategic Reserves.",
+    "summary": "End of your opponent’s Fight phase. Up to two VANGUARD INVADER units from your army, or one TYRANIDS INFANTRY unit from your army. Remove the targeted units from the battlefield and place them into Strategic Reserves. The targeted units must be more than 3\" away from all enemy units.",
+    "full": "End of your opponent’s Fight phase. Up to two VANGUARD INVADER units from your army, or one TYRANIDS INFANTRY unit from your army. Remove the targeted units from the battlefield and place them into Strategic Reserves. The targeted units must be more than 3\" away from all enemy units.",
     "glossary": "glossary-tyranids-stratagem-invisible-hunter",
     "rule": "detachment-vanguard-onslaught"
   },

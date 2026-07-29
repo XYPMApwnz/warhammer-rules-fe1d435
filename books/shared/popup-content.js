@@ -97,7 +97,7 @@
     if(weapon)return{node:renderWeapon(weapon,terms),classes:['popup-profile','popup-weapon']};
     const unit=renderUnit(splitParts(term.summary));
     if(unit)return{node:unit,classes:['popup-profile','popup-statline']};
-    const paragraph=document.createElement('p');paragraph.textContent=term.summary;
+    const paragraph=document.createElement('p');paragraph.textContent=term.kind==='stratagem'?term.definition:term.summary;
     return{node:paragraph,classes:[]};
   }
 

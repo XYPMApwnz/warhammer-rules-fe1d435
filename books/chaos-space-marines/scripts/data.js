@@ -186,8 +186,8 @@ window.DG_TERMS={
   "chaos-space-marines-stratagem-empyric-dislocation": {
     "id": "chaos-space-marines-stratagem-empyric-dislocation",
     "title": "Empyric Dislocation",
-    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes unit from your army (excluding Damned units) that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
-    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes unit from your army (excluding Damned units) that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes unit from your army (excluding Damned units) that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1. You cannot target the same unit with the Empyric Dislocation and Armour of Corruption Stratagems in the same phase.",
+    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes unit from your army (excluding Damned units) that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1. You cannot target the same unit with the Empyric Dislocation and Armour of Corruption Stratagems in the same phase.",
     "glossary": "glossary-chaos-space-marines-stratagem-empyric-dislocation",
     "rule": "detachment-warpstrike-champions"
   },
@@ -202,8 +202,8 @@ window.DG_TERMS={
   "chaos-space-marines-stratagem-armour-of-corruption": {
     "id": "chaos-space-marines-stratagem-armour-of-corruption",
     "title": "Armour of Corruption",
-    "summary": "Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes Terminator, Obliterators or Mutilators unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the turn, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.",
-    "full": "Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes Terminator, Obliterators or Mutilators unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the turn, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.",
+    "summary": "Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes Terminator, Obliterators or Mutilators unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the turn, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack. You cannot target the same unit with the Armour of Corruption and Empyric Dislocation Stratagems in the same phase.",
+    "full": "Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes Terminator, Obliterators or Mutilators unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the turn, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack. You cannot target the same unit with the Armour of Corruption and Empyric Dislocation Stratagems in the same phase.",
     "glossary": "glossary-chaos-space-marines-stratagem-armour-of-corruption",
     "rule": "detachment-warpstrike-champions"
   },

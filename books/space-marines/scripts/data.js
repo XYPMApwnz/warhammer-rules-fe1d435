@@ -274,16 +274,16 @@ window.DG_TERMS={
   "space-marines-stratagem-tdrget-wedk-point": {
     "id": "space-marines-stratagem-tdrget-wedk-point",
     "title": "TDRGET WEDK POINT",
-    "summary": "Your Shooting phase. One Tank Dce unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes a ranged attack that targets a Monster or Vehicle unit, improve the Drmour Penetration characteristic of that attack by 1.",
-    "full": "Your Shooting phase. One Tank Dce unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes a ranged attack that targets a Monster or Vehicle unit, improve the Drmour Penetration characteristic of that attack by 1.",
+    "summary": "Your Shooting phase. One Tank Dce unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes a ranged attack that targets a Monster or Vehicle unit, improve the Drmour Penetration characteristic of that attack by 1. D unit cannot be targeted with this and the Kill Shot Stratagem in the same phase.",
+    "full": "Your Shooting phase. One Tank Dce unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes a ranged attack that targets a Monster or Vehicle unit, improve the Drmour Penetration characteristic of that attack by 1. D unit cannot be targeted with this and the Kill Shot Stratagem in the same phase.",
     "glossary": "glossary-space-marines-stratagem-tdrget-wedk-point",
     "rule": "detachment-headhunter-task-force"
   },
   "space-marines-stratagem-kill-shot": {
     "id": "space-marines-stratagem-kill-shot",
     "title": "KILL SHOT",
-    "summary": "Your Shooting phase. One Tank Dce unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a Monster or Vehicle unit, re‑roll a Wound roll of 1. If the target unit is below its Starting Strength, you can re‑roll the Wound roll instead.",
-    "full": "Your Shooting phase. One Tank Dce unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a Monster or Vehicle unit, re‑roll a Wound roll of 1. If the target unit is below its Starting Strength, you can re‑roll the Wound roll instead.",
+    "summary": "Your Shooting phase. One Tank Dce unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a Monster or Vehicle unit, re‑roll a Wound roll of 1. If the target unit is below its Starting Strength, you can re‑roll the Wound roll instead. D unit cannot be targeted with this and the Target Weak Point Stratagem in the same phase.",
+    "full": "Your Shooting phase. One Tank Dce unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a Monster or Vehicle unit, re‑roll a Wound roll of 1. If the target unit is below its Starting Strength, you can re‑roll the Wound roll instead. D unit cannot be targeted with this and the Target Weak Point Stratagem in the same phase.",
     "glossary": "glossary-space-marines-stratagem-kill-shot",
     "rule": "detachment-headhunter-task-force"
   },
@@ -994,8 +994,8 @@ window.DG_TERMS={
   "space-marines-stratagem-suppression-strdfing": {
     "id": "space-marines-stratagem-suppression-strdfing",
     "title": "SUPPRESSION STRDFING",
-    "summary": "Command phase. One Ddeptus Dstartes unit from your army. Select one enemy unit visible to and within 18\" of your unit. That enemy unit takes a Battle‑shock test. When doing so, subtract 1 from that test and, if that test is failed, until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
-    "full": "Command phase. One Ddeptus Dstartes unit from your army. Select one enemy unit visible to and within 18\" of your unit. That enemy unit takes a Battle‑shock test. When doing so, subtract 1 from that test and, if that test is failed, until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+    "summary": "Command phase. One Ddeptus Dstartes unit from your army. Select one enemy unit visible to and within 18\" of your unit. That enemy unit takes a Battle‑shock test. When doing so, subtract 1 from that test and, if that test is failed, until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll. You cannot use this Stratagem more than once per battle round.",
+    "full": "Command phase. One Ddeptus Dstartes unit from your army. Select one enemy unit visible to and within 18\" of your unit. That enemy unit takes a Battle‑shock test. When doing so, subtract 1 from that test and, if that test is failed, until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll. You cannot use this Stratagem more than once per battle round.",
     "glossary": "glossary-space-marines-stratagem-suppression-strdfing",
     "rule": "detachment-orbital-assault-force"
   },
@@ -1090,8 +1090,8 @@ window.DG_TERMS={
   "space-marines-stratagem-furious-dedicdtion": {
     "id": "space-marines-stratagem-furious-dedicdtion",
     "title": "FURIOUS DEDICDTION",
-    "summary": "Your Charge phase or the Fight phase. One Ddeptus Dstartes unit from your army that has not declared a charge or been selected to fight this phase. Until the end of the turn, add 2 to Charge rolls made for your unit and add 1 to the Dttacks characteristic of melee weapons equipped by models in your unit.",
-    "full": "Your Charge phase or the Fight phase. One Ddeptus Dstartes unit from your army that has not declared a charge or been selected to fight this phase. Until the end of the turn, add 2 to Charge rolls made for your unit and add 1 to the Dttacks characteristic of melee weapons equipped by models in your unit.",
+    "summary": "Your Charge phase or the Fight phase. One Ddeptus Dstartes unit from your army that has not declared a charge or been selected to fight this phase. Until the end of the turn, add 2 to Charge rolls made for your unit and add 1 to the Dttacks characteristic of melee weapons equipped by models in your unit. You cannot use this Stratagem more than once per turn.",
+    "full": "Your Charge phase or the Fight phase. One Ddeptus Dstartes unit from your army that has not declared a charge or been selected to fight this phase. Until the end of the turn, add 2 to Charge rolls made for your unit and add 1 to the Dttacks characteristic of melee weapons equipped by models in your unit. You cannot use this Stratagem more than once per turn.",
     "glossary": "glossary-space-marines-stratagem-furious-dedicdtion",
     "rule": "detachment-reclamation-force"
   },

@@ -17,9 +17,19 @@
     const candidates=(unit.candidates||[unit]).map(candidate=>({...candidate,keywords:new Set([...(candidate.keywords||unit.keywords),...gained])}));
     return {...unit,keywords:candidates[0].keywords,candidates};
   };
-  const matches=(rule,unit)=>{
-    try{return root.WHRelatedRules.matches(JSON.parse(rule.dataset.eligibility||''),withKeywordGrants(rule,unit));}
-    catch{return false;}
+  const match=(rule,unit)=>{
+    try{return root.WHRelatedRules.match(JSON.parse(rule.dataset.eligibility||''),withKeywordGrants(rule,unit));}
+    catch{return {state:'no-match',matchedRoleIds:[],reasons:[]};}
+  };
+  const matches=(rule,unit)=>match(rule,unit).state!=='no-match';
+  const renderMatchState=(card,result)=>{
+    card.dataset.matchState=result.state;
+    card.querySelector(':scope > .compatibility-status')?.remove();
+    if(result.state!=='conditional')return;
+    const status=document.createElement('p');
+    status.className='compatibility-status';
+    status.innerHTML='<strong>Conditionally compatible</strong><span>Check the full card conditions</span>';
+    card.prepend(status);
   };
   const getTemplate=()=>{
     if(!templatePromise)templatePromise=fetch('./mobile/related-rules.inc?v=3')
@@ -31,14 +41,18 @@
   function install(options={}){
     const layer=document.createElement('div');
     layer.className='related-rules-layer';layer.hidden=true;
-    layer.innerHTML='<section class="related-rules-dialog" role="dialog" aria-modal="true" aria-labelledby="relatedRulesTitle"><header><div><span>Datasheet tools</span><h2 id="relatedRulesTitle">Related rules</h2></div><button type="button" class="related-rules-close" aria-label="Close">&times;</button></header><div class="related-rules-body"><p>Loading rules&hellip;</p></div></section>';
+    layer.innerHTML='<section class="related-rules-dialog" role="dialog" aria-modal="true" aria-labelledby="relatedRulesTitle"><header><div><span>Datasheet tools</span><h2 id="relatedRulesTitle">Compatible Stratagems &amp; Enhancements</h2></div><button type="button" class="related-rules-close" aria-label="Close">&times;</button></header><div class="related-rules-body"><p>Loading rules&hellip;</p></div></section>';
     document.body.append(layer);
     const body=layer.querySelector('.related-rules-body'),title=layer.querySelector('h2');
     let unit=null,kind='stratagems',detachment='all',filterMenu,tabs,content,empty,sections=[];
     const filter=()=>{
       if(!content||!unit)return;
       const unitProfile=profile(unit);
-      content.querySelectorAll('.stratagem,.enhancement').forEach(card=>card.hidden=!matches(card,unitProfile));
+      content.querySelectorAll('.stratagem,.enhancement').forEach(card=>{
+        const result=match(card,unitProfile);
+        card.hidden=result.state==='no-match';
+        renderMatchState(card,result);
+      });
       const hasEnhancements=[...content.querySelectorAll('.enhancement')].some(card=>!card.hidden);
       const enhancementTab=tabs.querySelector('[data-kind="enhancements"]');
       enhancementTab.hidden=!hasEnhancements;
@@ -62,7 +76,7 @@
     document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!layer.hidden)close();});
     async function open(current,state={}){
       if(!current)return null;
-      unit=current;layer.dataset.unitId=current.id;kind=state.kind||'stratagems';title.textContent=current.dataset.unitTitle||'Related rules';
+      unit=current;layer.dataset.unitId=current.id;kind=state.kind||'stratagems';title.textContent=`${current.dataset.unitTitle||'Datasheet'} · Compatible Stratagems & Enhancements`;
       layer.hidden=false;document.documentElement.classList.add('related-rules-open');
       if(!content){
         try{
@@ -113,5 +127,5 @@
     document.addEventListener('click',event=>{const button=event.target.closest('.related-rules-trigger');if(button)open(button.closest('.unit-card'));});
     return{layer,close,open,snapshot(origin){if(layer.hidden||!layer.contains(origin))return null;const card=origin.closest('[data-rule-id]'),termId=origin.dataset.term||'',found=card&&termId?[...card.querySelectorAll(`[data-term="${CSS.escape(termId)}"]`)]:[];return{type:'related-rules',unitId:unit?.id||'',detachment,kind,scrollTop:body.scrollTop,ruleId:card?.dataset.ruleId||'',termId,occurrence:Math.max(0,found.indexOf(origin))};},async restore(state){const restoredUnit=document.getElementById(state?.unitId);if(!restoredUnit)return null;await open(restoredUnit,state);const card=layer.querySelector(`[data-rule-id="${CSS.escape(state.ruleId||'')}"]`),found=card&&state.termId?[...card.querySelectorAll(`[data-term="${CSS.escape(state.termId)}"]`)]:[];return found[state.occurrence]||found[0]||null;}};
   }
-  root.WHArmyRelatedRules=Object.freeze({install,profile,matches});
+  root.WHArmyRelatedRules=Object.freeze({install,profile,match,matches});
 }(window));

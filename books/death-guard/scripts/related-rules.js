@@ -83,20 +83,22 @@
     return restriction.includes('DEATH GUARD')&&unit.has('keyword-death-guard')&&unit.has('keyword-character');
   }
 
-  function stratagemMatches(card,unit){
+  function stratagemMatch(card,unit){
     const id=card.dataset.ruleId||card.id;
     const eligibility=eligibilityByRule[id];
-    return eligibility?window.WHRelatedRules.matches(eligibility,unit):false;
+    return eligibility?window.WHRelatedRules.match(eligibility,unit):{state:'no-match',matchedRoleIds:[],reasons:[]};
   }
 
-  function matches(card,unitRoot){
+  function match(card,unitRoot){
     const base=unitRoot.slug?unitRoot:profile(unitRoot);
     const detachment=card.closest('[data-detachment]')?.dataset.detachment||'';
     const grants=grantedKeywords(base.slug,[detachment]),granted=new Set(grants.map(grant=>grant.id)),labels=grants.map(grant=>normalized({textContent:grant.title}));
     const candidates=(base.candidates||[base]).map(candidate=>({...candidate,keywords:new Set([...(candidate.keywords||base.keywords),...labels])}));
     const unit={...base,keywords:candidates[0].keywords,candidates,has:id=>base.has(id)||granted.has(id),contagionEngine:granted.has('keyword-contagion-engine')};
-    return card.classList.contains('enhancement')?enhancementMatches(card,unit):stratagemMatches(card,unit);
+    if(card.classList.contains('enhancement'))return {state:enhancementMatches(card,unit)?'match':'no-match',matchedRoleIds:[],reasons:[]};
+    return stratagemMatch(card,unit);
   }
+  const matches=(card,unitRoot)=>match(card,unitRoot).state!=='no-match';
 
-  window.DGRelatedRules=Object.freeze({profile,matches,grantedKeywords,eligibilityByRule});
+  window.DGRelatedRules=Object.freeze({profile,match,matches,grantedKeywords,eligibilityByRule});
 }());

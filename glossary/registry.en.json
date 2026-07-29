@@ -3914,29 +3914,27 @@
         "en": "Aggressive Impulse"
       },
       "summary": {
-        "en": "Until the end of the turn, ADEPTUS MECHANICUS units that disembark after that model makes a Normal move remain eligible to declare a charge."
+        "en": "Haloscreed Battle Clade-Strategic Ploy Stratagem WHEN: Your Movement phase. TARGET: One SKORPIUS DUNERIDER model that has not been selected to move this phase. EFFECT:…"
       },
       "definition": {
         "en": "Haloscreed Battle Clade-Strategic Ploy Stratagem WHEN: Your Movement phase. TARGET: One SKORPIUS DUNERIDER model that has not been selected to move this phase. EFFECT: Until the end of the turn, ADEPTUS MECHANICUS units that disembark after that model makes a Normal move remain eligible to declare a charge."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-haloscreed-battle-clade"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-aggressive-impulse"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-haloscreed-battle-clade; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-aggressive-impulse"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-aggressor-imperative": {
       "id": "adeptus-mechanicus-stratagem-aggressor-imperative",
@@ -3948,29 +3946,27 @@
         "en": "Aggressor Imperative"
       },
       "summary": {
-        "en": "Until the end of the phase, each time one of those units Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit."
+        "en": "Rad-Zone Corps – Battle Tactic Stratagem WHEN: Your Movement phase. TARGET: One SKITARII unit from your army that has not been selected to move this phase. If that unit is BATTLELINE, you can also target one friendly SKITARII unit (excluding BATTLELINE units) within 6\" of it.…"
       },
       "definition": {
         "en": "Rad-Zone Corps – Battle Tactic Stratagem WHEN: Your Movement phase. TARGET: One SKITARII unit from your army that has not been selected to move this phase. If that unit is BATTLELINE, you can also target one friendly SKITARII unit (excluding BATTLELINE units) within 6\" of it. EFFECT: Until the end of the phase, each time one of those units Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in that unit."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-rad-zone-corps"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-aggressor-imperative"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-rad-zone-corps; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-aggressor-imperative"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-analytic-reprisals": {
       "id": "adeptus-mechanicus-stratagem-analytic-reprisals",
@@ -3982,29 +3978,27 @@
         "en": "Analytic Reprisals"
       },
       "summary": {
-        "en": "Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit and only if it is an eligible target."
+        "en": "Eradication Cohort-Strategic Ploy Stratagem WHEN: Your opponent's Shooting phase, just after an enemy unit has shot. TARGET: One SKITARII INFANTRY unit from your army that lost one or more models to those attacks. EFFECT:…"
       },
       "definition": {
         "en": "Eradication Cohort-Strategic Ploy Stratagem WHEN: Your opponent's Shooting phase, just after an enemy unit has shot. TARGET: One SKITARII INFANTRY unit from your army that lost one or more models to those attacks. EFFECT: Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit and only if it is an eligible target."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-eradication-cohort"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-analytic-reprisals"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-eradication-cohort; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-analytic-reprisals"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-analytical-divination": {
       "id": "adeptus-mechanicus-stratagem-analytical-divination",
@@ -4016,29 +4010,27 @@
         "en": "Analytical Divination"
       },
       "summary": {
-        "en": "Your unit can make a Normal move of up to D6\", or up to 6\" instead if it is a HALO OVERRIDE unit."
+        "en": "Haloscreed Battle Clade-Strategic Ploy Stratagem WHEN: Your opponent's Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. TARGET: One ADEPTUS MECHANICUS INFANTRY unit, excluding KATAPHRON, within 8\" and not within Engagement Range. EFFECT:…"
       },
       "definition": {
         "en": "Haloscreed Battle Clade-Strategic Ploy Stratagem WHEN: Your opponent's Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. TARGET: One ADEPTUS MECHANICUS INFANTRY unit, excluding KATAPHRON, within 8\" and not within Engagement Range. EFFECT: Your unit can make a Normal move of up to D6\", or up to 6\" instead if it is a HALO OVERRIDE unit."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-haloscreed-battle-clade"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-analytical-divination"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-haloscreed-battle-clade; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-analytical-divination"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-auto-divinatory-targeting": {
       "id": "adeptus-mechanicus-stratagem-auto-divinatory-targeting",
@@ -4050,29 +4042,27 @@
         "en": "Auto-divinatory Targeting"
       },
       "summary": {
-        "en": "Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the [IGNORES COVER] ability, but they can only target units within range of the selected objective marker."
+        "en": "Cohort Cybernetica – Battle Tactic Stratagem WHEN: Your Command phase. TARGET: One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army, and one objective marker. EFFECT:…"
       },
       "definition": {
         "en": "Cohort Cybernetica – Battle Tactic Stratagem WHEN: Your Command phase. TARGET: One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army, and one objective marker. EFFECT: Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the [IGNORES COVER] ability, but they can only target units within range of the selected objective marker."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-cohort-cybernetica"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-auto-divinatory-targeting"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-cohort-cybernetica; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-auto-divinatory-targeting"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-auto-oracular-retrieval": {
       "id": "adeptus-mechanicus-stratagem-auto-oracular-retrieval",
@@ -4084,29 +4074,27 @@
         "en": "Auto-oracular Retrieval"
       },
       "summary": {
-        "en": "Until the end of the phase, each time a model in your unit makes a ranged attack that targets an enemy unit within range of your Acquisition objective marker, add 1 to the Wound roll."
+        "en": "Explorator Maniple – Battle Tactic WHEN: Your Shooting phase. TARGET: One ADEPTUS MECHANICUS unit from your army that disembarked from a TRANSPORT this turn. EFFECT:…"
       },
       "definition": {
         "en": "Explorator Maniple – Battle Tactic WHEN: Your Shooting phase. TARGET: One ADEPTUS MECHANICUS unit from your army that disembarked from a TRANSPORT this turn. EFFECT: Until the end of the phase, each time a model in your unit makes a ranged attack that targets an enemy unit within range of your Acquisition objective marker, add 1 to the Wound roll."
       },
-      "structured": {
-        "cp": "2CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-explorator-maniple"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-auto-oracular-retrieval"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-explorator-maniple; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-auto-oracular-retrieval"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-baleful-halo": {
       "id": "adeptus-mechanicus-stratagem-baleful-halo",
@@ -4118,29 +4106,27 @@
         "en": "Baleful Halo"
       },
       "summary": {
-        "en": "Until the end of the turn, each time an attack is made that targets your unit, subtract 1 from the Wound roll."
+        "en": "Rad-Zone Corps – Battle Tactic Stratagem WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One ADEPTUS MECHANICUS unit from your army (excluding VEHICLE units) that was selected as the target of one or more of that enemy unit's attacks.…"
       },
       "definition": {
         "en": "Rad-Zone Corps – Battle Tactic Stratagem WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One ADEPTUS MECHANICUS unit from your army (excluding VEHICLE units) that was selected as the target of one or more of that enemy unit's attacks. If that unit is BATTLELINE, you can also target one friendly SKITARII unit (excluding BATTLELINE units) within 6\" of it. EFFECT: Until the end of the turn, each time an attack is made that targets your unit, subtract 1 from the Wound roll."
       },
-      "structured": {
-        "cp": "2CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-rad-zone-corps"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-baleful-halo"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-rad-zone-corps; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-baleful-halo"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-benevolence-of-the-omnissiah": {
       "id": "adeptus-mechanicus-stratagem-benevolence-of-the-omnissiah",
@@ -4152,29 +4138,27 @@
         "en": "Benevolence of the Omnissiah"
       },
       "summary": {
-        "en": "Until the start of your next Command phase, models in your unit have the Feel No Pain 6+ ability, which is improved to Feel No Pain 5+ against mortal wounds."
+        "en": "Cohort Cybernetica – Battle Tactic Stratagem WHEN: Your Command phase. TARGET: One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army. EFFECT:…"
       },
       "definition": {
         "en": "Cohort Cybernetica – Battle Tactic Stratagem WHEN: Your Command phase. TARGET: One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army. EFFECT: Until the start of your next Command phase, models in your unit have the Feel No Pain 6+ ability, which is improved to Feel No Pain 5+ against mortal wounds."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-cohort-cybernetica"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-benevolence-of-the-omnissiah"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-cohort-cybernetica; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-benevolence-of-the-omnissiah"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-binharic-offence": {
       "id": "adeptus-mechanicus-stratagem-binharic-offence",
@@ -4186,29 +4170,27 @@
         "en": "Binharic Offence"
       },
       "summary": {
-        "en": "Until the end of the phase, improve the Armour Penetration characteristic of weapons equipped by models in both of your units by 1."
+        "en": "Skitarii Hunter Cohort – Strategic Ploy Stratagem WHEN: The start of your Shooting phase or the start of the Fight phase. TARGET: Two SKITARII units from your army that have not been selected to shoot or fight this phase, and one enemy unit. EFFECT:…"
       },
       "definition": {
-        "en": "Skitarii Hunter Cohort – Strategic Ploy Stratagem WHEN: The start of your Shooting phase or the start of the Fight phase. TARGET: Two SKITARII units from your army that have not been selected to shoot or fight this phase, and one enemy unit. EFFECT: Until the end of the phase, improve the Armour Penetration characteristic of weapons equipped by models in both of your units by 1."
+        "en": "Skitarii Hunter Cohort – Strategic Ploy Stratagem WHEN: The start of your Shooting phase or the start of the Fight phase. TARGET: Two SKITARII units from your army that have not been selected to shoot or fight this phase, and one enemy unit. EFFECT: Until the end of the phase, improve the Armour Penetration characteristic of weapons equipped by models in both of your units by 1. RESTRICTIONS: Until the end of the phase, each time a model in either of your units makes an attack, it can only target that enemy unit (and only if it is an eligible target)."
       },
-      "structured": {
-        "cp": "2CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-skitarii-hunter-cohort"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-binharic-offence"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-skitarii-hunter-cohort; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-binharic-offence"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-bionic-endurance": {
       "id": "adeptus-mechanicus-stratagem-bionic-endurance",
@@ -4220,29 +4202,27 @@
         "en": "Bionic Endurance"
       },
       "summary": {
-        "en": "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability."
+        "en": "Skitarii Hunter Cohort – Strategic Ploy Stratagem WHEN: Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET:…"
       },
       "definition": {
         "en": "Skitarii Hunter Cohort – Strategic Ploy Stratagem WHEN: Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One SICARIAN, PTERAXII or SYDONIAN unit from your army that was selected as the target of one or more of the attacking unit's attacks. EFFECT: Until the end of the phase, models in your unit have the Feel No Pain 5+ ability."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-skitarii-hunter-cohort"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-bionic-endurance"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-skitarii-hunter-cohort; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-bionic-endurance"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-bulwark-imperative": {
       "id": "adeptus-mechanicus-stratagem-bulwark-imperative",
@@ -4254,29 +4234,27 @@
         "en": "Bulwark Imperative"
       },
       "summary": {
-        "en": "Until the end of the phase, models in those units from your army have a 4+ invulnerable save."
+        "en": "Rad-Zone Corps – Battle Tactic Stratagem WHEN: Your opponent's Shooting phase, just after an enemy unit has selected its targets. TARGET: One SKITARII unit from your army that was selected as the target of one or more of the attacking unit's attacks.…"
       },
       "definition": {
         "en": "Rad-Zone Corps – Battle Tactic Stratagem WHEN: Your opponent's Shooting phase, just after an enemy unit has selected its targets. TARGET: One SKITARII unit from your army that was selected as the target of one or more of the attacking unit's attacks. If that unit is BATTLELINE, you can also target one friendly SKITARII unit (excluding BATTLELINE units) within 6\" of it. EFFECT: Until the end of the phase, models in those units from your army have a 4+ invulnerable save."
       },
-      "structured": {
-        "cp": "2CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-rad-zone-corps"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-bulwark-imperative"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-rad-zone-corps; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-bulwark-imperative"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-cached-acquisition": {
       "id": "adeptus-mechanicus-stratagem-cached-acquisition",
@@ -4288,29 +4266,27 @@
         "en": "Cached Acquisition"
       },
       "summary": {
-        "en": "That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+        "en": "Explorator Maniple – Epic Deed Stratagem WHEN: Any phase. TARGET: One ADEPTUS MECHANICUS unit from your army that was just destroyed while it was within range of an objective marker you controlled. You can use this Stratagem on that unit even though it was just destroyed.…"
       },
       "definition": {
         "en": "Explorator Maniple – Epic Deed Stratagem WHEN: Any phase. TARGET: One ADEPTUS MECHANICUS unit from your army that was just destroyed while it was within range of an objective marker you controlled. You can use this Stratagem on that unit even though it was just destroyed. EFFECT: That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-explorator-maniple"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-cached-acquisition"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-explorator-maniple; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-cached-acquisition"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-chant-of-electrotraction": {
       "id": "adeptus-mechanicus-stratagem-chant-of-electrotraction",
@@ -4322,29 +4298,27 @@
         "en": "Chant of Electrotraction"
       },
       "summary": {
-        "en": "That move does not prevent your unit from being eligible to declare a charge."
+        "en": "Luminen Auto-choir Stratagem WHEN: Your Movement phase, when a friendly ELECTRO-PRIESTS BATTLECLADE unit is selected to make an Advance move. TARGET: That ELECTRO-PRIESTS unit. EFFECT: That move does not prevent your unit from being eligible to declare a charge."
       },
       "definition": {
         "en": "Luminen Auto-choir Stratagem WHEN: Your Movement phase, when a friendly ELECTRO-PRIESTS BATTLECLADE unit is selected to make an Advance move. TARGET: That ELECTRO-PRIESTS unit. EFFECT: That move does not prevent your unit from being eligible to declare a charge."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-luminen-auto-choir"
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [
+        "stratagem-chant-of-electrotraction"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-luminen-auto-choir; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-chant-of-electrotraction"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-chant-of-the-remorseless-fist": {
       "id": "adeptus-mechanicus-stratagem-chant-of-the-remorseless-fist",
@@ -4356,29 +4330,27 @@
         "en": "Chant of the Remorseless Fist"
       },
       "summary": {
-        "en": "Until the end of the phase, each time a CULT MECHANICUS model in your unit makes a melee attack, add 1 to the Wound roll."
+        "en": "Data-Psalm Conclave – Battle Tactic Stratagem WHEN: Fight phase. TARGET: One CULT MECHANICUS unit from your army that has not been selected to fight this phase. EFFECT:…"
       },
       "definition": {
         "en": "Data-Psalm Conclave – Battle Tactic Stratagem WHEN: Fight phase. TARGET: One CULT MECHANICUS unit from your army that has not been selected to fight this phase. EFFECT: Until the end of the phase, each time a CULT MECHANICUS model in your unit makes a melee attack, add 1 to the Wound roll."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-data-psalm-conclave"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-chant-of-the-remorseless-fist"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-data-psalm-conclave; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-chant-of-the-remorseless-fist"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-clandestine-reposition": {
       "id": "adeptus-mechanicus-stratagem-clandestine-reposition",
@@ -4390,29 +4362,27 @@
         "en": "Clandestine Reposition"
       },
       "summary": {
-        "en": "Place your unit in Strategic Reserves."
+        "en": "Cohort Acquisitus Stratagem WHEN: End of your opponent's Fight phase. TARGET: One friendly unengaged INFILTRATORS or PTERAXII unit. EFFECT: Place your unit in Strategic Reserves."
       },
       "definition": {
         "en": "Cohort Acquisitus Stratagem WHEN: End of your opponent's Fight phase. TARGET: One friendly unengaged INFILTRATORS or PTERAXII unit. EFFECT: Place your unit in Strategic Reserves."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-cohort-acquisitus"
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [
+        "stratagem-clandestine-reposition"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-cohort-acquisitus; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-clandestine-reposition"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-defect-scrutiny": {
       "id": "adeptus-mechanicus-stratagem-defect-scrutiny",
@@ -4424,29 +4394,27 @@
         "en": "Defect Scrutiny"
       },
       "summary": {
-        "en": "Select one visible enemy unit within 12\" of a friendly RECON AUGURY unit. Your unit's ranged attacks that target that enemy unit have [IGNORES COVER]."
+        "en": "Cohort Acquisitus Stratagem WHEN: Your Shooting phase, when a friendly ADEPTUS MECHANICUS unit is selected to shoot. TARGET: That ADEPTUS MECHANICUS unit. EFFECT: Select one visible enemy unit within 12\" of a friendly RECON AUGURY unit.…"
       },
       "definition": {
         "en": "Cohort Acquisitus Stratagem WHEN: Your Shooting phase, when a friendly ADEPTUS MECHANICUS unit is selected to shoot. TARGET: That ADEPTUS MECHANICUS unit. EFFECT: Select one visible enemy unit within 12\" of a friendly RECON AUGURY unit. Your unit's ranged attacks that target that enemy unit have [IGNORES COVER]."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-cohort-acquisitus"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-defect-scrutiny"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-cohort-acquisitus; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-defect-scrutiny"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-echoes-of-the-conduit-wars": {
       "id": "adeptus-mechanicus-stratagem-echoes-of-the-conduit-wars",
@@ -4458,29 +4426,27 @@
         "en": "Echoes of the Conduit Wars"
       },
       "summary": {
-        "en": "Your unit's attacks that target a unit within range of an objective can re-roll Hit rolls of 1 and re-roll Wound rolls of 1."
+        "en": "Luminen Auto-choir Stratagem WHEN: Your Shooting phase or the Fight phase, when a friendly ELECTRO-PRIESTS unit is selected to attack. TARGET: That ELECTRO-PRIESTS unit. EFFECT:…"
       },
       "definition": {
         "en": "Luminen Auto-choir Stratagem WHEN: Your Shooting phase or the Fight phase, when a friendly ELECTRO-PRIESTS unit is selected to attack. TARGET: That ELECTRO-PRIESTS unit. EFFECT: Your unit's attacks that target a unit within range of an objective can re-roll Hit rolls of 1 and re-roll Wound rolls of 1."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-luminen-auto-choir"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-echoes-of-the-conduit-wars"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-luminen-auto-choir; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-echoes-of-the-conduit-wars"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-eradication-protocols": {
       "id": "adeptus-mechanicus-stratagem-eradication-protocols",
@@ -4492,29 +4458,27 @@
         "en": "Eradication Protocols"
       },
       "summary": {
-        "en": "Until the end of the phase, re-roll Wound rolls of 1; if it is a HALO OVERRIDE unit, also re-roll Hit rolls of 1."
+        "en": "Haloscreed Battle Clade-Battle Tactic Stratagem WHEN: Your Shooting phase or the Fight phase. TARGET: One ADEPTUS MECHANICUS unit that has not been selected to shoot or fight this phase. EFFECT: Until the end of the phase, re-roll Wound rolls of 1;…"
       },
       "definition": {
         "en": "Haloscreed Battle Clade-Battle Tactic Stratagem WHEN: Your Shooting phase or the Fight phase. TARGET: One ADEPTUS MECHANICUS unit that has not been selected to shoot or fight this phase. EFFECT: Until the end of the phase, re-roll Wound rolls of 1; if it is a HALO OVERRIDE unit, also re-roll Hit rolls of 1."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-haloscreed-battle-clade"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-eradication-protocols"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-haloscreed-battle-clade; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-eradication-protocols"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-expedited-purge-protocol": {
       "id": "adeptus-mechanicus-stratagem-expedited-purge-protocol",
@@ -4526,29 +4490,27 @@
         "en": "Expedited Purge Protocol"
       },
       "summary": {
-        "en": "Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced."
+        "en": "Skitarii Hunter Cohort – Strategic Ploy Stratagem WHEN: Your Charge phase. TARGET: One SKITARII unit from your army. EFFECT: Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced."
       },
       "definition": {
         "en": "Skitarii Hunter Cohort – Strategic Ploy Stratagem WHEN: Your Charge phase. TARGET: One SKITARII unit from your army. EFFECT: Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-skitarii-hunter-cohort"
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [
+        "stratagem-expedited-purge-protocol"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-skitarii-hunter-cohort; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-expedited-purge-protocol"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-extinction-order": {
       "id": "adeptus-mechanicus-stratagem-extinction-order",
@@ -4560,29 +4522,27 @@
         "en": "Extinction Order"
       },
       "summary": {
-        "en": "Roll one D6 for each enemy unit within range of that objective marker. On a 4+, that unit suffers 1 mortal wound and it must take a Battle-shock test."
+        "en": "Rad-Zone Corps – Strategic Ploy Stratagem WHEN: Your Command phase. TARGET: One TECH-PRIEST model from your army and one objective marker within 24\" of that model. EFFECT: Roll one D6 for each enemy unit within range of that objective marker.…"
       },
       "definition": {
         "en": "Rad-Zone Corps – Strategic Ploy Stratagem WHEN: Your Command phase. TARGET: One TECH-PRIEST model from your army and one objective marker within 24\" of that model. EFFECT: Roll one D6 for each enemy unit within range of that objective marker. On a 4+, that unit suffers 1 mortal wound and it must take a Battle-shock test."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-rad-zone-corps"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-extinction-order"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-rad-zone-corps; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-extinction-order"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-guided-retreat": {
       "id": "adeptus-mechanicus-stratagem-guided-retreat",
@@ -4594,29 +4554,27 @@
         "en": "Guided Retreat"
       },
       "summary": {
-        "en": "Until the end of the turn, it is eligible to shoot and charge after Falling Back. If it is a HALO OVERRIDE unit, Desperate Escape tests for it can be re-rolled."
+        "en": "Haloscreed Battle Clade-Strategic Ploy Stratagem WHEN: Your Movement phase, just after an ADEPTUS MECHANICUS unit Falls Back. TARGET: That ADEPTUS MECHANICUS unit. EFFECT: Until the end of the turn, it is eligible to shoot and charge after Falling Back.…"
       },
       "definition": {
         "en": "Haloscreed Battle Clade-Strategic Ploy Stratagem WHEN: Your Movement phase, just after an ADEPTUS MECHANICUS unit Falls Back. TARGET: That ADEPTUS MECHANICUS unit. EFFECT: Until the end of the turn, it is eligible to shoot and charge after Falling Back. If it is a HALO OVERRIDE unit, Desperate Escape tests for it can be re-rolled."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-haloscreed-battle-clade"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-guided-retreat"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-haloscreed-battle-clade; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-guided-retreat"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-holy-avarice": {
       "id": "adeptus-mechanicus-stratagem-holy-avarice",
@@ -4628,29 +4586,27 @@
         "en": "Holy Avarice"
       },
       "summary": {
-        "en": "That Action does not prevent your unit from being eligible to shoot."
+        "en": "Lords of the Forge Stratagem WHEN: Your Shooting phase, when a friendly TECH-PRIEST unit starts an Action. TARGET: That TECH-PRIEST unit. EFFECT: That Action does not prevent your unit from being eligible to shoot."
       },
       "definition": {
         "en": "Lords of the Forge Stratagem WHEN: Your Shooting phase, when a friendly TECH-PRIEST unit starts an Action. TARGET: That TECH-PRIEST unit. EFFECT: That Action does not prevent your unit from being eligible to shoot."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-lords-of-the-forge"
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [
+        "stratagem-holy-avarice"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-lords-of-the-forge; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-holy-avarice"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-incantation-of-the-iron-soul": {
       "id": "adeptus-mechanicus-stratagem-incantation-of-the-iron-soul",
@@ -4662,29 +4618,27 @@
         "en": "Incantation of the Iron Soul"
       },
       "summary": {
-        "en": "Until the end of the phase, CULT MECHANICUS models in your unit have the Feel No Pain 4+ ability against mortal wounds."
+        "en": "Data-Psalm Conclave – Battle Tactic Stratagem WHEN: Any phase, just after you allocate a mortal wound to a CULT MECHANICUS model from your army. TARGET: That CULT MECHANICUS model's unit. EFFECT:…"
       },
       "definition": {
         "en": "Data-Psalm Conclave – Battle Tactic Stratagem WHEN: Any phase, just after you allocate a mortal wound to a CULT MECHANICUS model from your army. TARGET: That CULT MECHANICUS model's unit. EFFECT: Until the end of the phase, CULT MECHANICUS models in your unit have the Feel No Pain 4+ ability against mortal wounds."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-data-psalm-conclave"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-incantation-of-the-iron-soul"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-data-psalm-conclave; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-incantation-of-the-iron-soul"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-incense-exhausts": {
       "id": "adeptus-mechanicus-stratagem-incense-exhausts",
@@ -4696,29 +4650,27 @@
         "en": "Incense Exhausts"
       },
       "summary": {
-        "en": "Until the end of the phase, both of those units have the Stealth ability and the Benefit of Cover."
+        "en": "Explorator Maniple – Wargear WHEN: Your opponent's Shooting phase, just after an enemy unit has selected its targets. TARGET:…"
       },
       "definition": {
         "en": "Explorator Maniple – Wargear WHEN: Your opponent's Shooting phase, just after an enemy unit has selected its targets. TARGET: One ADEPTUS MECHANICUS INFANTRY unit from your army that was selected as the target of one or more of the attacking unit's attacks, and one friendly ADEPTUS MECHANICUS SMOKE unit within 6\" of it. EFFECT: Until the end of the phase, both of those units have the Stealth ability and the Benefit of Cover."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-explorator-maniple"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-incense-exhausts"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-explorator-maniple; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-incense-exhausts"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-infoslave-skull": {
       "id": "adeptus-mechanicus-stratagem-infoslave-skull",
@@ -4730,29 +4682,27 @@
         "en": "Infoslave Skull"
       },
       "summary": {
-        "en": "Until the start of your next Command phase, that objective marker is also considered to be one of your Acquisition objective markers for all rules purposes."
+        "en": "Explorator Maniple – Wargear Stratagem WHEN: Your Command phase. TARGET: One TECH-PRIEST model from your army and one objective marker within 24\" of that model (excluding your Acquisition objective marker). EFFECT:…"
       },
       "definition": {
         "en": "Explorator Maniple – Wargear Stratagem WHEN: Your Command phase. TARGET: One TECH-PRIEST model from your army and one objective marker within 24\" of that model (excluding your Acquisition objective marker). EFFECT: Until the start of your next Command phase, that objective marker is also considered to be one of your Acquisition objective markers for all rules purposes."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-explorator-maniple"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-infoslave-skull"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-explorator-maniple; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-infoslave-skull"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-isolate-and-destroy": {
       "id": "adeptus-mechanicus-stratagem-isolate-and-destroy",
@@ -4764,29 +4714,27 @@
         "en": "Isolate and Destroy"
       },
       "summary": {
-        "en": "Until the end of the phase, each time a model in your unit makes an attack, if there are no other enemy units within 6\" of the unit targeted by that attack, add 1 to the Wound roll."
+        "en": "Skitarii Hunter Cohort – Strategic Ploy WHEN: Your Shooting phase. TARGET: One SICARIAN, PTERAXII, SYDONIAN, IRONSTRIDER BALLISTARII or SKITARII MOUNTED unit from your army that has not been selected to shoot this phase. EFFECT:…"
       },
       "definition": {
         "en": "Skitarii Hunter Cohort – Strategic Ploy WHEN: Your Shooting phase. TARGET: One SICARIAN, PTERAXII, SYDONIAN, IRONSTRIDER BALLISTARII or SKITARII MOUNTED unit from your army that has not been selected to shoot this phase. EFFECT: Until the end of the phase, each time a model in your unit makes an attack, if there are no other enemy units within 6\" of the unit targeted by that attack, add 1 to the Wound roll."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-skitarii-hunter-cohort"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-isolate-and-destroy"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-skitarii-hunter-cohort; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-isolate-and-destroy"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-lethal-dosage": {
       "id": "adeptus-mechanicus-stratagem-lethal-dosage",
@@ -4798,29 +4746,27 @@
         "en": "Lethal Dosage"
       },
       "summary": {
-        "en": "Until the end of the phase, ranged weapons equipped by models in your unit have the [LETHAL HITS] ability."
+        "en": "Rad-Zone Corps – Wargear Stratagem WHEN: Your Shooting phase. TARGET: One ADEPTUS MECHANICUS unit from your army that has not been selected to shoot this phase. EFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the [LETHAL HITS] ability."
       },
       "definition": {
         "en": "Rad-Zone Corps – Wargear Stratagem WHEN: Your Shooting phase. TARGET: One ADEPTUS MECHANICUS unit from your army that has not been selected to shoot this phase. EFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the [LETHAL HITS] ability."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-rad-zone-corps"
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [
+        "stratagem-lethal-dosage"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-rad-zone-corps; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-lethal-dosage"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-litany-of-the-electromancer": {
       "id": "adeptus-mechanicus-stratagem-litany-of-the-electromancer",
@@ -4832,29 +4778,27 @@
         "en": "Litany of the Electromancer"
       },
       "summary": {
-        "en": "Roll one D6 for each enemy unit within 6\" of one or more CULT MECHANICUS models in your unit, adding 1 to the result if that model is an ELECTRO-PRIEST. On a 5+, that enemy unit suffers D3 mortal wounds."
+        "en": "Data-Psalm Conclave – Strategic Ploy Stratagem WHEN: Your Shooting phase. TARGET: One CULT MECHANICUS unit from your army. EFFECT:…"
       },
       "definition": {
         "en": "Data-Psalm Conclave – Strategic Ploy Stratagem WHEN: Your Shooting phase. TARGET: One CULT MECHANICUS unit from your army. EFFECT: Roll one D6 for each enemy unit within 6\" of one or more CULT MECHANICUS models in your unit, adding 1 to the result if that model is an ELECTRO-PRIEST. On a 5+, that enemy unit suffers D3 mortal wounds."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-data-psalm-conclave"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-litany-of-the-electromancer"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-data-psalm-conclave; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-litany-of-the-electromancer"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-luminescent-blessing": {
       "id": "adeptus-mechanicus-stratagem-luminescent-blessing",
@@ -4866,29 +4810,27 @@
         "en": "Luminescent Blessing"
       },
       "summary": {
-        "en": "Until the end of the phase, CULT MECHANICUS models in your unit have a 4+ invulnerable save."
+        "en": "Data-Psalm Conclave – Battle Tactic Stratagem WHEN: Your opponent's Shooting phase, just after an enemy unit has selected its targets. TARGET: One CULT MECHANICUS unit from your army that was selected as the target of one or more of the attacking unit's attacks. EFFECT:…"
       },
       "definition": {
         "en": "Data-Psalm Conclave – Battle Tactic Stratagem WHEN: Your opponent's Shooting phase, just after an enemy unit has selected its targets. TARGET: One CULT MECHANICUS unit from your army that was selected as the target of one or more of the attacking unit's attacks. EFFECT: Until the end of the phase, CULT MECHANICUS models in your unit have a 4+ invulnerable save."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-data-psalm-conclave"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-luminescent-blessing"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-data-psalm-conclave; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-luminescent-blessing"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-machine-spirit-resurgent": {
       "id": "adeptus-mechanicus-stratagem-machine-spirit-resurgent",
@@ -4900,29 +4842,27 @@
         "en": "Machine Spirit Resurgent"
       },
       "summary": {
-        "en": "Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well."
+        "en": "Cohort Cybernetica – Epic Deed Stratagem WHEN: Your Command phase. TARGET: One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army that is below its Starting Strength. EFFECT:…"
       },
       "definition": {
         "en": "Cohort Cybernetica – Epic Deed Stratagem WHEN: Your Command phase. TARGET: One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army that is below its Starting Strength. EFFECT: Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-cohort-cybernetica"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-machine-spirit-resurgent"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-cohort-cybernetica; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-machine-spirit-resurgent"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-machine-superiority": {
       "id": "adeptus-mechanicus-stratagem-machine-superiority",
@@ -4934,29 +4874,27 @@
         "en": "Machine Superiority"
       },
       "summary": {
-        "en": "Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back and you can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws)."
+        "en": "Cohort Cybernetica – Epic Deed Stratagem WHEN: Your Command phase. TARGET: One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army. EFFECT:…"
       },
       "definition": {
         "en": "Cohort Cybernetica – Epic Deed Stratagem WHEN: Your Command phase. TARGET: One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army. EFFECT: Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back and you can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws)."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-cohort-cybernetica"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-machine-superiority"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-cohort-cybernetica; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-machine-superiority"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-momentum-feedback": {
       "id": "adeptus-mechanicus-stratagem-momentum-feedback",
@@ -4968,29 +4906,27 @@
         "en": "Momentum Feedback"
       },
       "summary": {
-        "en": "Your unit can make a Surge move of up to D6\"."
+        "en": "Luminen Auto-choir Stratagem WHEN: Your opponent's Shooting phase, when an enemy unit that targeted a friendly unengaged ELECTRO-PRIESTS unit has shot. TARGET: That ELECTRO-PRIESTS unit. EFFECT: Your unit can make a Surge move of up to D6\"."
       },
       "definition": {
         "en": "Luminen Auto-choir Stratagem WHEN: Your opponent's Shooting phase, when an enemy unit that targeted a friendly unengaged ELECTRO-PRIESTS unit has shot. TARGET: That ELECTRO-PRIESTS unit. EFFECT: Your unit can make a Surge move of up to D6\"."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-luminen-auto-choir"
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [
+        "stratagem-momentum-feedback"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-luminen-auto-choir; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-momentum-feedback"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-motive-imperative": {
       "id": "adeptus-mechanicus-stratagem-motive-imperative",
@@ -5002,29 +4938,27 @@
         "en": "Motive Imperative"
       },
       "summary": {
-        "en": "Until the start of your next Command phase, add 3\" to the Move characteristic of models in your unit and add 1 to Advance and Charge rolls made for it."
+        "en": "Cohort Cybernetica – Battle Tactic Stratagem WHEN: Your Command phase. TARGET: One ADEPTUS MECHANICUS VEHICLE unit from your army. EFFECT:…"
       },
       "definition": {
         "en": "Cohort Cybernetica – Battle Tactic Stratagem WHEN: Your Command phase. TARGET: One ADEPTUS MECHANICUS VEHICLE unit from your army. EFFECT: Until the start of your next Command phase, add 3\" to the Move characteristic of models in your unit and add 1 to Advance and Charge rolls made for it."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-cohort-cybernetica"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-motive-imperative"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-cohort-cybernetica; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-motive-imperative"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-neural-overload": {
       "id": "adeptus-mechanicus-stratagem-neural-overload",
@@ -5036,29 +4970,27 @@
         "en": "Neural Overload"
       },
       "summary": {
-        "en": "If your unit is a HALO OVERRIDE unit, it suffers D3 mortal wounds. Select one Override ability; until the start of your next Command phase, that ability is active for your unit. Designer's Note:…"
+        "en": "Haloscreed Battle Clade-Strategic Ploy Stratagem WHEN: Your Movement phase. TARGET: One ADEPTUS MECHANICUS unit from your army. EFFECT: If your unit is a HALO OVERRIDE unit, it suffers D3 mortal wounds. Select one Override ability;…"
       },
       "definition": {
         "en": "Haloscreed Battle Clade-Strategic Ploy Stratagem WHEN: Your Movement phase. TARGET: One ADEPTUS MECHANICUS unit from your army. EFFECT: If your unit is a HALO OVERRIDE unit, it suffers D3 mortal wounds. Select one Override ability; until the start of your next Command phase, that ability is active for your unit. Designer's Note: a unit that already has HALO OVERRIDE can have several Override abilities active at once, but suffers the mortal wounds. A unit without HALO OVERRIDE gains only the selected Override ability and does not benefit from other active Override abilities."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-haloscreed-battle-clade"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-neural-overload"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-haloscreed-battle-clade; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-neural-overload"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-overloaded-safeguards": {
       "id": "adeptus-mechanicus-stratagem-overloaded-safeguards",
@@ -5070,29 +5002,27 @@
         "en": "Overloaded Safeguards"
       },
       "summary": {
-        "en": "That move does not prevent your unit from being eligible to shoot or declare a charge."
+        "en": "Lords of the Forge Stratagem WHEN: Your Movement phase, when a friendly TECH-PRIEST unit is selected to make a Fall Back move. TARGET: That TECH-PRIEST unit. EFFECT: That move does not prevent your unit from being eligible to shoot or declare a charge."
       },
       "definition": {
         "en": "Lords of the Forge Stratagem WHEN: Your Movement phase, when a friendly TECH-PRIEST unit is selected to make a Fall Back move. TARGET: That TECH-PRIEST unit. EFFECT: That move does not prevent your unit from being eligible to shoot or declare a charge."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-lords-of-the-forge"
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [
+        "stratagem-overloaded-safeguards"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-lords-of-the-forge; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-overloaded-safeguards"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-pre-calibrated-purge-solution": {
       "id": "adeptus-mechanicus-stratagem-pre-calibrated-purge-solution",
@@ -5104,29 +5034,27 @@
         "en": "Pre-calibrated Purge Solution"
       },
       "summary": {
-        "en": "Until the end of the phase, each time a model in one of those units makes a ranged attack, if the target of that attack is within your opponent's deployment zone, you can re-roll the Hit roll."
+        "en": "Rad-Zone Corps – Battle Tactic Stratagem WHEN: Your Shooting phase. TARGET: One ADEPTUS MECHANICUS unit from your army that has not been selected to shoot this phase.…"
       },
       "definition": {
         "en": "Rad-Zone Corps – Battle Tactic Stratagem WHEN: Your Shooting phase. TARGET: One ADEPTUS MECHANICUS unit from your army that has not been selected to shoot this phase. If that unit is BATTLELINE, you can also target one friendly SKITARII unit (excluding BATTLELINE units) within 6\" of it. EFFECT: Until the end of the phase, each time a model in one of those units makes a ranged attack, if the target of that attack is within your opponent's deployment zone, you can re-roll the Hit roll."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-rad-zone-corps"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-pre-calibrated-purge-solution"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-rad-zone-corps; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-pre-calibrated-purge-solution"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-precision-onslaught": {
       "id": "adeptus-mechanicus-stratagem-precision-onslaught",
@@ -5138,29 +5066,27 @@
         "en": "Precision Onslaught"
       },
       "summary": {
-        "en": "Until the end of the phase, after your unit ends a Charge move, select one enemy unit within Engagement Range and roll one D6 for each model in your unit within Engagement Range of it; each 4+ inflicts 1 mortal wound."
+        "en": "Eradication Cohort-Battle Tactic Stratagem WHEN: Your Charge phase, just after a SICARIAN unit from your army declares a charge. TARGET: That SICARIAN unit. EFFECT:…"
       },
       "definition": {
         "en": "Eradication Cohort-Battle Tactic Stratagem WHEN: Your Charge phase, just after a SICARIAN unit from your army declares a charge. TARGET: That SICARIAN unit. EFFECT: Until the end of the phase, after your unit ends a Charge move, select one enemy unit within Engagement Range and roll one D6 for each model in your unit within Engagement Range of it; each 4+ inflicts 1 mortal wound."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-eradication-cohort"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-precision-onslaught"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-eradication-cohort; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-precision-onslaught"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-priority-reclamation": {
       "id": "adeptus-mechanicus-stratagem-priority-reclamation",
@@ -5172,29 +5098,27 @@
         "en": "Priority Reclamation"
       },
       "summary": {
-        "en": "Until the end of the phase, each time a model in your unit makes a Consolidation move, it can move up to 6\" instead of up to 3\", provided your unit ends that Consolidation move within range of your Acquisition objective marker."
+        "en": "Explorator Maniple – Battle Tactic Stratagem WHEN: Fight phase, just before an ADEPTUS MECHANICUS unit from your army Consolidates. TARGET: That ADEPTUS MECHANICUS unit. EFFECT:…"
       },
       "definition": {
-        "en": "Explorator Maniple – Battle Tactic Stratagem WHEN: Fight phase, just before an ADEPTUS MECHANICUS unit from your army Consolidates. TARGET: That ADEPTUS MECHANICUS unit. EFFECT: Until the end of the phase, each time a model in your unit makes a Consolidation move, it can move up to 6\" instead of up to 3\", provided your unit ends that Consolidation move within range of your Acquisition objective marker."
+        "en": "Explorator Maniple – Battle Tactic Stratagem WHEN: Fight phase, just before an ADEPTUS MECHANICUS unit from your army Consolidates. TARGET: That ADEPTUS MECHANICUS unit. EFFECT: Until the end of the phase, each time a model in your unit makes a Consolidation move, it can move up to 6\" instead of up to 3\", provided your unit ends that Consolidation move within range of your Acquisition objective marker. RESTRICTIONS: You cannot target a unit with this Stratagem if it is within 3\" of one or more enemy units."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-explorator-maniple"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-priority-reclamation"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-explorator-maniple; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-priority-reclamation"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-programmed-withdrawal": {
       "id": "adeptus-mechanicus-stratagem-programmed-withdrawal",
@@ -5206,29 +5130,27 @@
         "en": "Programmed Withdrawal"
       },
       "summary": {
-        "en": "Remove those units from the battlefield and place them into Strategic Reserves."
+        "en": "Skitarii Hunter Cohort – Strategic Ploy Stratagem WHEN: End of your opponent's Fight phase. TARGET: Up to two SICARIAN units from your army, or one SKITARII INFANTRY or SKITARII MOUNTED unit from your army. EFFECT:…"
       },
       "definition": {
-        "en": "Skitarii Hunter Cohort – Strategic Ploy Stratagem WHEN: End of your opponent's Fight phase. TARGET: Up to two SICARIAN units from your army, or one SKITARII INFANTRY or SKITARII MOUNTED unit from your army. EFFECT: Remove those units from the battlefield and place them into Strategic Reserves."
+        "en": "Skitarii Hunter Cohort – Strategic Ploy Stratagem WHEN: End of your opponent's Fight phase. TARGET: Up to two SICARIAN units from your army, or one SKITARII INFANTRY or SKITARII MOUNTED unit from your army. EFFECT: Remove those units from the battlefield and place them into Strategic Reserves. RESTRICTIONS: Each unit targeted with this Stratagem must be more than 3\" away from all enemy units."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-skitarii-hunter-cohort"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-programmed-withdrawal"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-skitarii-hunter-cohort; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-programmed-withdrawal"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-reactive-safeguard": {
       "id": "adeptus-mechanicus-stratagem-reactive-safeguard",
@@ -5240,29 +5162,27 @@
         "en": "Reactive Safeguard"
       },
       "summary": {
-        "en": "Your unit can embark within that TRANSPORT."
+        "en": "Explorator Maniple – Strategic Ploy Stratagem WHEN: Your opponent's Charge phase, just after an enemy unit has declared a charge. TARGET:…"
       },
       "definition": {
-        "en": "Explorator Maniple – Strategic Ploy Stratagem WHEN: Your opponent's Charge phase, just after an enemy unit has declared a charge. TARGET: One ADEPTUS MECHANICUS INFANTRY unit from your army within range of your Acquisition objective marker that was selected as a target of that charge, and one friendly ADEPTUS MECHANICUS TRANSPORT. EFFECT: Your unit can embark within that TRANSPORT."
+        "en": "Explorator Maniple – Strategic Ploy Stratagem WHEN: Your opponent's Charge phase, just after an enemy unit has declared a charge. TARGET: One ADEPTUS MECHANICUS INFANTRY unit from your army within range of your Acquisition objective marker that was selected as a target of that charge, and one friendly ADEPTUS MECHANICUS TRANSPORT. EFFECT: Your unit can embark within that TRANSPORT. RESTRICTIONS: Every model in your unit must be within 3\" of that TRANSPORT and there must be sufficient transport capacity to embark the entire unit."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-explorator-maniple"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-reactive-safeguard"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-explorator-maniple; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-reactive-safeguard"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-repolarised-augurs": {
       "id": "adeptus-mechanicus-stratagem-repolarised-augurs",
@@ -5274,29 +5194,27 @@
         "en": "Repolarised Augurs"
       },
       "summary": {
-        "en": "Your unit has -3\" detection range until the end of the turn."
+        "en": "Cohort Acquisitus Stratagem WHEN: Start of your opponent's Movement phase. TARGET: One friendly unengaged RECON AUGURY unit. EFFECT: Your unit has -3\" detection range until the end of the turn."
       },
       "definition": {
         "en": "Cohort Acquisitus Stratagem WHEN: Start of your opponent's Movement phase. TARGET: One friendly unengaged RECON AUGURY unit. EFFECT: Your unit has -3\" detection range until the end of the turn."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-cohort-acquisitus"
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [
+        "stratagem-repolarised-augurs"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-cohort-acquisitus; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-repolarised-augurs"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-scriptural-prognosis": {
       "id": "adeptus-mechanicus-stratagem-scriptural-prognosis",
@@ -5308,29 +5226,27 @@
         "en": "Scriptural Prognosis"
       },
       "summary": {
-        "en": "Attacks that target your unit have -1 AP until that enemy unit has attacked."
+        "en": "Lords of the Forge Stratagem WHEN: Your opponent's Shooting phase or the Fight phase, when an enemy unit targets a friendly TECH-PRIEST unit that is within range of an objective. TARGET: That TECH-PRIEST unit. EFFECT:…"
       },
       "definition": {
         "en": "Lords of the Forge Stratagem WHEN: Your opponent's Shooting phase or the Fight phase, when an enemy unit targets a friendly TECH-PRIEST unit that is within range of an objective. TARGET: That TECH-PRIEST unit. EFFECT: Attacks that target your unit have -1 AP until that enemy unit has attacked."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-lords-of-the-forge"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-scriptural-prognosis"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-lords-of-the-forge; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-scriptural-prognosis"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-servo-driven-charge": {
       "id": "adeptus-mechanicus-stratagem-servo-driven-charge",
@@ -5342,29 +5258,27 @@
         "en": "Servo-driven Charge"
       },
       "summary": {
-        "en": "Until the end of the phase, melee weapons equipped by models in your unit have [LANCE]."
+        "en": "Eradication Cohort-Wargear Stratagem WHEN: Fight phase. TARGET: One ADEPTUS MECHANICUS unit from your army that has not been selected to fight this phase. EFFECT: Until the end of the phase, melee weapons equipped by models in your unit have [LANCE]."
       },
       "definition": {
         "en": "Eradication Cohort-Wargear Stratagem WHEN: Fight phase. TARGET: One ADEPTUS MECHANICUS unit from your army that has not been selected to fight this phase. EFFECT: Until the end of the phase, melee weapons equipped by models in your unit have [LANCE]."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-eradication-cohort"
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [
+        "stratagem-servo-driven-charge"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-eradication-cohort; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-servo-driven-charge"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-shroud-protocols": {
       "id": "adeptus-mechanicus-stratagem-shroud-protocols",
@@ -5376,29 +5290,27 @@
         "en": "Shroud Protocols"
       },
       "summary": {
-        "en": "Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
+        "en": "Skitarii Hunter Cohort – Strategic Ploy Stratagem WHEN: Your opponent's Shooting phase, just after an enemy unit has selected its targets. TARGET: One SKITARII INFANTRY unit from your army that was selected as the target of one or more of the attacking unit's attacks. EFFECT:…"
       },
       "definition": {
         "en": "Skitarii Hunter Cohort – Strategic Ploy Stratagem WHEN: Your opponent's Shooting phase, just after an enemy unit has selected its targets. TARGET: One SKITARII INFANTRY unit from your army that was selected as the target of one or more of the attacking unit's attacks. EFFECT: Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-skitarii-hunter-cohort"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-shroud-protocols"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-skitarii-hunter-cohort; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-shroud-protocols"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-targeting-override": {
       "id": "adeptus-mechanicus-stratagem-targeting-override",
@@ -5410,29 +5322,27 @@
         "en": "Targeting Override"
       },
       "summary": {
-        "en": "Until the end of the phase, an unmodified Hit roll of 5+ scores a Critical Hit."
+        "en": "Haloscreed Battle Clade-Battle Tactic Stratagem WHEN: Your Shooting phase or the Fight phase. TARGET: One ADEPTUS MECHANICUS unit that has not been selected to shoot or fight this phase. EFFECT: Until the end of the phase, an unmodified Hit roll of 5+ scores a Critical Hit."
       },
       "definition": {
         "en": "Haloscreed Battle Clade-Battle Tactic Stratagem WHEN: Your Shooting phase or the Fight phase. TARGET: One ADEPTUS MECHANICUS unit that has not been selected to shoot or fight this phase. EFFECT: Until the end of the phase, an unmodified Hit roll of 5+ scores a Critical Hit."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-haloscreed-battle-clade"
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [
+        "stratagem-targeting-override"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-haloscreed-battle-clade; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-targeting-override"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-threat-cogitation-targeters": {
       "id": "adeptus-mechanicus-stratagem-threat-cogitation-targeters",
@@ -5444,29 +5354,27 @@
         "en": "Threat-cogitation Targeters"
       },
       "summary": {
-        "en": "Until the end of the phase, each time a ranged attack made by a model in your unit is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll."
+        "en": "Eradication Cohort-Wargear Stratagem WHEN: Your Shooting phase. TARGET: One SKITARII VEHICLE unit from your army that has not been selected to shoot this phase. EFFECT:…"
       },
       "definition": {
         "en": "Eradication Cohort-Wargear Stratagem WHEN: Your Shooting phase. TARGET: One SKITARII VEHICLE unit from your army that has not been selected to shoot this phase. EFFECT: Until the end of the phase, each time a ranged attack made by a model in your unit is allocated to a MONSTER or VEHICLE model, you can re-roll the Damage roll."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-eradication-cohort"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-threat-cogitation-targeters"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-eradication-cohort; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-threat-cogitation-targeters"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-transcendent-cogitation": {
       "id": "adeptus-mechanicus-stratagem-transcendent-cogitation",
@@ -5478,29 +5386,27 @@
         "en": "Transcendent Cogitation"
       },
       "summary": {
-        "en": "Until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for your unit."
+        "en": "Cohort Cybernetica – Strategic Ploy Stratagem WHEN: Your Command phase. TARGET: One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army. EFFECT:…"
       },
       "definition": {
         "en": "Cohort Cybernetica – Strategic Ploy Stratagem WHEN: Your Command phase. TARGET: One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army. EFFECT: Until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for your unit."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-cohort-cybernetica"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-transcendent-cogitation"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-cohort-cybernetica; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-transcendent-cogitation"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-tribute-of-empathic-veneration": {
       "id": "adeptus-mechanicus-stratagem-tribute-of-empathic-veneration",
@@ -5512,29 +5418,27 @@
         "en": "Tribute of Empathic Veneration"
       },
       "summary": {
-        "en": "That enemy unit must take a Battle-shock test. If that test is failed, until the start of your next Command phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll."
+        "en": "Data-Psalm Conclave – Strategic Ploy Stratagem WHEN: Start of your Movement phase. TARGET: One CULT MECHANICUS unit from your army and one enemy unit within 18\" of it. EFFECT: That enemy unit must take a Battle-shock test.…"
       },
       "definition": {
         "en": "Data-Psalm Conclave – Strategic Ploy Stratagem WHEN: Start of your Movement phase. TARGET: One CULT MECHANICUS unit from your army and one enemy unit within 18\" of it. EFFECT: That enemy unit must take a Battle-shock test. If that test is failed, until the start of your next Command phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-data-psalm-conclave"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-tribute-of-empathic-veneration"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-data-psalm-conclave; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-tribute-of-empathic-veneration"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-unrelenting-aggression": {
       "id": "adeptus-mechanicus-stratagem-unrelenting-aggression",
@@ -5546,29 +5450,27 @@
         "en": "Unrelenting Aggression"
       },
       "summary": {
-        "en": "Until the end of the turn, your unit is eligible to shoot after Falling Back. If it has the SKITARII keyword, it is eligible to shoot and declare a charge instead."
+        "en": "Eradication Cohort-Strategic Ploy Stratagem WHEN: Your Movement phase, just after an ADEPTUS MECHANICUS unit from your army Falls Back. TARGET: That ADEPTUS MECHANICUS unit. EFFECT: Until the end of the turn, your unit is eligible to shoot after Falling Back.…"
       },
       "definition": {
         "en": "Eradication Cohort-Strategic Ploy Stratagem WHEN: Your Movement phase, just after an ADEPTUS MECHANICUS unit from your army Falls Back. TARGET: That ADEPTUS MECHANICUS unit. EFFECT: Until the end of the turn, your unit is eligible to shoot after Falling Back. If it has the SKITARII keyword, it is eligible to shoot and declare a charge instead."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-eradication-cohort"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-unrelenting-aggression"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-eradication-cohort; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-unrelenting-aggression"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-unshackled-wrath": {
       "id": "adeptus-mechanicus-stratagem-unshackled-wrath",
@@ -5580,29 +5482,27 @@
         "en": "Unshackled Wrath"
       },
       "summary": {
-        "en": "Select [SUSTAINED HITS 1] or [LETHAL HITS]. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. You can instead select [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS] to apply together."
+        "en": "Eradication Cohort-Wargear Stratagem WHEN: Your Shooting phase. TARGET: One SKITARII unit from your army that has not been selected to shoot this phase. EFFECT: Select [SUSTAINED HITS 1] or [LETHAL HITS].…"
       },
       "definition": {
         "en": "Eradication Cohort-Wargear Stratagem WHEN: Your Shooting phase. TARGET: One SKITARII unit from your army that has not been selected to shoot this phase. EFFECT: Select [SUSTAINED HITS 1] or [LETHAL HITS]. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. You can instead select [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS] to apply together."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-eradication-cohort"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-unshackled-wrath"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "adeptus-mechanicus-faction-pack-v1.1-full",
-        "locator": "detachment-eradication-cohort; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-unshackled-wrath"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-stratagem-verse-of-vengeance": {
       "id": "adeptus-mechanicus-stratagem-verse-of-vengeance",
@@ -5614,29 +5514,27 @@
         "en": "Verse of Vengeance"
       },
       "summary": {
-        "en": "Until the end of the phase, each time a CULT MECHANICUS model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play.…"
+        "en": "Data-psalm Conclave – Strategic Ploy WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One CULT MECHANICUS unit from your army that was selected as the target of one or more of the attacking unit's attacks. EFFECT:…"
       },
       "definition": {
         "en": "Data-psalm Conclave – Strategic Ploy WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One CULT MECHANICUS unit from your army that was selected as the target of one or more of the attacking unit's attacks. EFFECT: Until the end of the phase, each time a CULT MECHANICUS model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play."
       },
-      "structured": {
-        "cp": "1CP"
-      },
-      "aliases": [],
-      "related": [
-        "adeptus-mechanicus-detachment-data-psalm-conclave"
+      "structured": {},
+      "presentation": "article",
+      "aliases": [
+        "stratagem-verse-of-vengeance"
       ],
+      "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
-        "revision": "Codex carry-forward + Faction Pack v1.1",
-        "locator": "detachment-data-psalm-conclave; Stratagems"
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "stratagem-verse-of-vengeance"
       },
-      "status": "verified",
+      "status": "provisional",
       "sourceRefs": [
         "adeptus-mechanicus"
       ],
-      "mentions": [],
-      "presentation": "article"
+      "mentions": []
     },
     "adeptus-mechanicus-unit-archaeopter-fusilave": {
       "id": "adeptus-mechanicus-unit-archaeopter-fusilave",
@@ -44312,7 +44210,7 @@
         "en": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. Up to two VANGUARD INVADER units from your army that are within 8\" of that enemy unit, or one other TYRANIDS INFANTRY unit from your army that is within 8\" of that enemy unit.…"
       },
       "definition": {
-        "en": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. Up to two VANGUARD INVADER units from your army that are within 8\" of that enemy unit, or one other TYRANIDS INFANTRY unit from your army that is within 8\" of that enemy unit. Those selected units can each make a Normal move of up to 6\"."
+        "en": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. Up to two VANGUARD INVADER units from your army that are within 8\" of that enemy unit, or one other TYRANIDS INFANTRY unit from your army that is within 8\" of that enemy unit. Those selected units can each make a Normal move of up to 6\". You cannot target units that are within Engagement Range of one or more enemy units."
       },
       "structured": {},
       "presentation": "article",
@@ -44371,13 +44269,13 @@
         "en": "INVISIBLE HUNTER"
       },
       "summary": {
-        "en": "End of your opponent’s Fight phase. Up to two VANGUARD INVADER units from your army, or one TYRANIDS INFANTRY unit from your army. Remove the targeted units from the battlefield and place them into Strategic Reserves."
+        "en": "End of your opponent’s Fight phase. Up to two VANGUARD INVADER units from your army, or one TYRANIDS INFANTRY unit from your army. Remove the targeted units from the battlefield and place them into Strategic Reserves.…"
       },
       "definition": {
-        "en": "End of your opponent’s Fight phase. Up to two VANGUARD INVADER units from your army, or one TYRANIDS INFANTRY unit from your army. Remove the targeted units from the battlefield and place them into Strategic Reserves."
+        "en": "End of your opponent’s Fight phase. Up to two VANGUARD INVADER units from your army, or one TYRANIDS INFANTRY unit from your army. Remove the targeted units from the battlefield and place them into Strategic Reserves. The targeted units must be more than 3\" away from all enemy units."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "article",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -44591,7 +44489,7 @@
         "en": "Your Command phase. Up to two TYRANIDS units from your army that are within Synapse Range of your army, or one other TYRANIDS unit from your army. Select one Hyper-adaptation.…"
       },
       "definition": {
-        "en": "Your Command phase. Up to two TYRANIDS units from your army that are within Synapse Range of your army, or one other TYRANIDS unit from your army. Select one Hyper-adaptation. Until the start of your next Command phase, that Hyper-adaptation is active for those selected units in addition to any other that may be active for your army."
+        "en": "Your Command phase. Up to two TYRANIDS units from your army that are within Synapse Range of your army, or one other TYRANIDS unit from your army. Select one Hyper-adaptation. Until the start of your next Command phase, that Hyper-adaptation is active for those selected units in addition to any other that may be active for your army. You cannot select the same Hyper-adaptation you selected at the start of the first battle round."
       },
       "structured": {},
       "presentation": "article",
@@ -45363,13 +45261,13 @@
         "en": "UNENDING WAVES"
       },
       "summary": {
-        "en": "Any phase. One ENDLESS MULTITUDE unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength."
+        "en": "Any phase. One ENDLESS MULTITUDE unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength.…"
       },
       "definition": {
-        "en": "Any phase. One ENDLESS MULTITUDE unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength."
+        "en": "Any phase. One ENDLESS MULTITUDE unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength. Any destroyed CHARACTER units that were attached to your unit are not returned. You can only use this Stratagem once per battle."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "article",
       "aliases": [],
       "related": [],
       "canonicalSource": {

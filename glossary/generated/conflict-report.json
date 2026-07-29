@@ -2,7 +2,7 @@
   "schema": 2,
   "counts": {
     "terms": 1385,
-    "aliases": 641,
+    "aliases": 692,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,

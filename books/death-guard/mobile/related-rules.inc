@@ -7,7 +7,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="putrid-detonation" data-term-title="PUTRID DETONATION" data-term-summary="WHEN: Any phase. TARGET: One DEATH GUARD VEHICLE or DEATH GUARD MONSTER model from your army with the Deadly Demise ability that was just destroyed. You can use this Stratagem on that model even though it was just destroyed." data-full-rule-path="books/death-guard/reader.html#stratagem-putrid-detonation" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#stratagem-putrid-detonation">PUTRID DETONATION</button>
+<button class="term-button" data-term="putrid-detonation" data-term-title="PUTRID DETONATION" data-term-summary="WHEN: Any phase. TARGET: One DEATH GUARD VEHICLE or DEATH GUARD MONSTER model from your army with the Deadly Demise ability that was just destroyed. You can use this Stratagem on that model even though it was just destroyed. EFFECT: Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted. In addition, any enemy units that suffer mortal wounds as a result of this Stratagem are Afflicted until the start of your next turn." data-full-rule-path="books/death-guard/reader.html#stratagem-putrid-detonation" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#stratagem-putrid-detonation">PUTRID DETONATION</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="virulent-vectorium" data-term-title="Virulent Vectorium" data-term-summary="Take and Hold, 3DP." data-full-rule-path="books/death-guard/reader.html#virulent-vectorium-rule" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#virulent-vectorium-rule">Virulent Vectorium</button> – Strategic Ploy Stratagem</span>
@@ -28,7 +28,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="disgustingly-resilient" data-term-title="DISGUSTINGLY RESILIENT" data-term-summary="WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets." data-full-rule-path="books/death-guard/reader.html#stratagem-disgustingly-resilient" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#stratagem-disgustingly-resilient">DISGUSTINGLY RESILIENT</button>
+<button class="term-button" data-term="disgustingly-resilient" data-term-title="DISGUSTINGLY RESILIENT" data-term-summary="WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One DEATH GUARD unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack." data-full-rule-path="books/death-guard/reader.html#stratagem-disgustingly-resilient" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#stratagem-disgustingly-resilient">DISGUSTINGLY RESILIENT</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="virulent-vectorium" data-term-title="Virulent Vectorium" data-term-summary="Take and Hold, 3DP." data-full-rule-path="books/death-guard/reader.html#virulent-vectorium-rule" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#virulent-vectorium-rule">Virulent Vectorium</button> – Battle Tactic Stratagem</span>
@@ -70,7 +70,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="leechspore-eruption" data-term-title="LEECHSPORE ERUPTION" data-term-summary="WHEN: Your Command phase. TARGET: One DEATH GUARD model your army that has lost one or more wounds. EFFECT: Select one enemy unit within 3&quot; of your model." data-full-rule-path="books/death-guard/reader.html#stratagem-leechspore-eruption" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#stratagem-leechspore-eruption">LEECHSPORE ERUPTION</button>
+<button class="term-button" data-term="leechspore-eruption" data-term-title="LEECHSPORE ERUPTION" data-term-summary="WHEN: Your Command phase. TARGET: One DEATH GUARD model your army that has lost one or more wounds. EFFECT: Select one enemy unit within 3&quot; of your model. Roll a number of D6 equal to the number of wounds your model has lost: for each 5+, that enemy unit suffers one mortal wound (to a maximum of 6 mortal wounds) and your model regains 1 lost wound (to a maximum of 6 lost wounds)." data-full-rule-path="books/death-guard/reader.html#stratagem-leechspore-eruption" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#stratagem-leechspore-eruption">LEECHSPORE ERUPTION</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="virulent-vectorium" data-term-title="Virulent Vectorium" data-term-summary="Take and Hold, 3DP." data-full-rule-path="books/death-guard/reader.html#virulent-vectorium-rule" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#virulent-vectorium-rule">Virulent Vectorium</button> – Epic Deed Stratagem</span>
@@ -91,7 +91,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="overwhelming-generosity" data-term-title="OVERWHELMING GENEROSITY" data-term-summary="WHEN: Start of your Shooting phase. TARGET: One DEATH GUARD CHARACTER unit from your army. EFFECT: Select one enemy unit visible to your unit." data-full-rule-path="books/death-guard/reader.html#stratagem-overwhelming-generosity" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#stratagem-overwhelming-generosity">OVERWHELMING GENEROSITY</button>
+<button class="term-button" data-term="overwhelming-generosity" data-term-title="OVERWHELMING GENEROSITY" data-term-summary="WHEN: Start of your Shooting phase. TARGET: One DEATH GUARD CHARACTER unit from your army. EFFECT: Select one enemy unit visible to your unit. Until the end of the phase, each time a DEATH GUARD unit from your army selects that enemy unit as the target of any ranged attacks, you can re-roll the dice to determine how many attacks a weapon equipped by a model in that unit makes." data-full-rule-path="books/death-guard/reader.html#stratagem-overwhelming-generosity" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#stratagem-overwhelming-generosity">OVERWHELMING GENEROSITY</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="virulent-vectorium" data-term-title="Virulent Vectorium" data-term-summary="Take and Hold, 3DP." data-full-rule-path="books/death-guard/reader.html#virulent-vectorium-rule" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#virulent-vectorium-rule">Virulent Vectorium</button> – Wargear Stratagem</span>
@@ -112,7 +112,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="creeping-blight" data-term-title="CREEPING BLIGHT" data-term-summary="WHEN: Your Shooting phase. TARGET: One DEATH GUARD INFANTRY unit from your army that has not been selected to shoot this phase." data-full-rule-path="books/death-guard/reader.html#stratagem-creeping-blight" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#stratagem-creeping-blight">CREEPING BLIGHT</button>
+<button class="term-button" data-term="creeping-blight" data-term-title="CREEPING BLIGHT" data-term-summary="WHEN: Your Shooting phase. TARGET: One DEATH GUARD INFANTRY unit from your army that has not been selected to shoot this phase. EFFECT: Until the end of the phase, each time a model in your unit makes a ranged attack that targets an Afflicted unit, you can re-roll the Hit roll and you can re-roll the Wound roll." data-full-rule-path="books/death-guard/reader.html#stratagem-creeping-blight" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#stratagem-creeping-blight">CREEPING BLIGHT</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="virulent-vectorium" data-term-title="Virulent Vectorium" data-term-summary="Take and Hold, 3DP." data-full-rule-path="books/death-guard/reader.html#virulent-vectorium-rule" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#virulent-vectorium-rule">Virulent Vectorium</button> – Wargear Stratagem</span>
@@ -174,7 +174,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="blighted-land" data-term-title="BLIGHTED LAND" data-term-summary="WHEN: End of your Movement phase. TARGET: One DEATH GUARD VEHICLE unit from your army. EFFECT: Select one terrain feature within 24&quot; of and visible to your unit." data-full-rule-path="books/death-guard/reader.html#stratagem-blighted-land" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#stratagem-blighted-land">BLIGHTED LAND</button>
+<button class="term-button" data-term="blighted-land" data-term-title="BLIGHTED LAND" data-term-summary="WHEN: End of your Movement phase. TARGET: One DEATH GUARD VEHICLE unit from your army. EFFECT: Select one terrain feature within 24&quot; of and visible to your unit. Until the start of your next turn, enemy units are Afflicted while they are within 3&quot; of that terrain feature." data-full-rule-path="books/death-guard/reader.html#stratagem-blighted-land" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#stratagem-blighted-land">BLIGHTED LAND</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="mortarions-hammer" data-term-title="Mortarion’s Hammer" data-term-summary="Purge the Foe, 2DP." data-full-rule-path="books/death-guard/reader.html#mortarions-hammer-rule" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#mortarions-hammer-rule">Mortarion’s Hammer</button> – Strategic Ploy Stratagem</span>
@@ -195,7 +195,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="relentless-grind" data-term-title="RELENTLESS GRIND" data-term-summary="WHEN: Your Movement phase or your Charge phase. TARGET: One DEATH GUARD VEHICLE unit from your army that has not been selected to move or charge this phase." data-full-rule-path="books/death-guard/reader.html#stratagem-relentless-grind" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#stratagem-relentless-grind">RELENTLESS GRIND</button>
+<button class="term-button" data-term="relentless-grind" data-term-title="RELENTLESS GRIND" data-term-summary="WHEN: Your Movement phase or your Charge phase. TARGET: One DEATH GUARD VEHICLE unit from your army that has not been selected to move or charge this phase. EFFECT: Until the end of the phase, each time your unit makes a Normal, Advance or Charge move, it can move horizontally through terrain features." data-full-rule-path="books/death-guard/reader.html#stratagem-relentless-grind" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#stratagem-relentless-grind">RELENTLESS GRIND</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="mortarions-hammer" data-term-title="Mortarion’s Hammer" data-term-summary="Purge the Foe, 2DP." data-full-rule-path="books/death-guard/reader.html#mortarions-hammer-rule" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#mortarions-hammer-rule">Mortarion’s Hammer</button> – Strategic Ploy Stratagem</span>
@@ -216,7 +216,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="drawn-to-despair" data-term-title="DRAWN TO DESPAIR" data-term-summary="WHEN: Your Shooting phase. TARGET: One DEATH GUARD unit from your army that has not been selected to shoot this phase." data-full-rule-path="books/death-guard/reader.html#stratagem-drawn-to-despair" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#stratagem-drawn-to-despair">DRAWN TO DESPAIR</button>
+<button class="term-button" data-term="drawn-to-despair" data-term-title="DRAWN TO DESPAIR" data-term-summary="WHEN: Your Shooting phase. TARGET: One DEATH GUARD unit from your army that has not been selected to shoot this phase. EFFECT: Until the end of the phase, each time a model in your unit makes an attack that targets a visible enemy unit (excluding AIRCRAFT) within your opponent’s deployment zone, you can re-roll the Hit roll." data-full-rule-path="books/death-guard/reader.html#stratagem-drawn-to-despair" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#stratagem-drawn-to-despair">DRAWN TO DESPAIR</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="mortarions-hammer" data-term-title="Mortarion’s Hammer" data-term-summary="Purge the Foe, 2DP." data-full-rule-path="books/death-guard/reader.html#mortarions-hammer-rule" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#mortarions-hammer-rule">Mortarion’s Hammer</button> – Battle Tactic Stratagem</span>
@@ -237,7 +237,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="font-of-filth" data-term-title="FONT OF FILTH" data-term-summary="WHEN: Your Shooting phase. TARGET: One DEATH GUARD VEHICLE unit from your army that has not been selected to shoot this phase." data-full-rule-path="books/death-guard/reader.html#stratagem-font-of-filth" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#stratagem-font-of-filth">FONT OF FILTH</button>
+<button class="term-button" data-term="font-of-filth" data-term-title="FONT OF FILTH" data-term-summary="WHEN: Your Shooting phase. TARGET: One DEATH GUARD VEHICLE unit from your army that has not been selected to shoot this phase. EFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the [ASSAULT] ability." data-full-rule-path="books/death-guard/reader.html#stratagem-font-of-filth" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#stratagem-font-of-filth">FONT OF FILTH</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="mortarions-hammer" data-term-title="Mortarion’s Hammer" data-term-summary="Purge the Foe, 2DP." data-full-rule-path="books/death-guard/reader.html#mortarions-hammer-rule" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#mortarions-hammer-rule">Mortarion’s Hammer</button> – Strategic Ploy Stratagem</span>
@@ -258,7 +258,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="eyestinger-storm" data-term-title="EYESTINGER STORM" data-term-summary="WHEN: Your opponent’s Command phase. TARGET: One DEATH GUARD VEHICLE unit from your army. EFFECT: Select one objective marker visible to one or more models in your unit." data-full-rule-path="books/death-guard/reader.html#stratagem-eyestinger-storm" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#stratagem-eyestinger-storm">EYESTINGER STORM</button>
+<button class="term-button" data-term="eyestinger-storm" data-term-title="EYESTINGER STORM" data-term-summary="WHEN: Your opponent’s Command phase. TARGET: One DEATH GUARD VEHICLE unit from your army. EFFECT: Select one objective marker visible to one or more models in your unit. Each Afflicted enemy unit within range of that objective marker must take a Battle-shock test. Enemy units affected by this Stratagem do not need to take any other Battle-shock tests in the same phase." data-full-rule-path="books/death-guard/reader.html#stratagem-eyestinger-storm" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#stratagem-eyestinger-storm">EYESTINGER STORM</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="mortarions-hammer" data-term-title="Mortarion’s Hammer" data-term-summary="Purge the Foe, 2DP." data-full-rule-path="books/death-guard/reader.html#mortarions-hammer-rule" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#mortarions-hammer-rule">Mortarion’s Hammer</button> – Strategic Ploy Stratagem</span>
@@ -279,7 +279,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="stinking-mire" data-term-title="STINKING MIRE" data-term-summary="WHEN: Start of your opponent’s Charge phase. TARGET: One DEATH GUARD VEHICLE unit from your army." data-full-rule-path="books/death-guard/reader.html#stratagem-stinking-mire" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#stratagem-stinking-mire">STINKING MIRE</button>
+<button class="term-button" data-term="stinking-mire" data-term-title="STINKING MIRE" data-term-summary="WHEN: Start of your opponent’s Charge phase. TARGET: One DEATH GUARD VEHICLE unit from your army. EFFECT: Until the end of the phase, each time an enemy unit selects your unit as the target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll)." data-full-rule-path="books/death-guard/reader.html#stratagem-stinking-mire" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#stratagem-stinking-mire">STINKING MIRE</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="mortarions-hammer" data-term-title="Mortarion’s Hammer" data-term-summary="Purge the Foe, 2DP." data-full-rule-path="books/death-guard/reader.html#mortarions-hammer-rule" data-mobile-rule-path="books/death-guard/mobile/mortarions-hammer.html#mortarions-hammer-rule">Mortarion’s Hammer</button> – Strategic Ploy Stratagem</span>
@@ -341,7 +341,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="blessings-of-filth" data-term-title="BLESSINGS OF FILTH" data-term-summary="WHEN: Your Shooting phase or the Fight phase. TARGET: One DEATH GUARD Attached unit from your army that has not been selected to shoot or fight this phase." data-full-rule-path="books/death-guard/reader.html#stratagem-blessings-of-filth" data-mobile-rule-path="books/death-guard/mobile/champions-of-contagion.html#stratagem-blessings-of-filth">BLESSINGS OF FILTH</button>
+<button class="term-button" data-term="blessings-of-filth" data-term-title="BLESSINGS OF FILTH" data-term-summary="WHEN: Your Shooting phase or the Fight phase. TARGET: One DEATH GUARD Attached unit from your army that has not been selected to shoot or fight this phase. EFFECT: Until the end of the phase, each time a model in your unit makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit." data-full-rule-path="books/death-guard/reader.html#stratagem-blessings-of-filth" data-mobile-rule-path="books/death-guard/mobile/champions-of-contagion.html#stratagem-blessings-of-filth">BLESSINGS OF FILTH</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="champions-of-contagion" data-term-title="Champions of Contagion" data-term-summary="Take and Hold, 2DP." data-full-rule-path="books/death-guard/reader.html#champions-of-contagion-rule" data-mobile-rule-path="books/death-guard/mobile/champions-of-contagion.html#champions-of-contagion-rule">Champions of Contagion</button> – Battle Tactic Stratagem</span>
@@ -362,7 +362,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="malignance-magnified" data-term-title="MALIGNANCE MAGNIFIED" data-term-summary="WHEN: Your Shooting phase or the Fight phase. TARGET: One DEATH GUARD Attached unit from your army that has not been selected to shoot or fight this phase." data-full-rule-path="books/death-guard/reader.html#stratagem-malignance-magnified" data-mobile-rule-path="books/death-guard/mobile/champions-of-contagion.html#stratagem-malignance-magnified">MALIGNANCE MAGNIFIED</button>
+<button class="term-button" data-term="malignance-magnified" data-term-title="MALIGNANCE MAGNIFIED" data-term-summary="WHEN: Your Shooting phase or the Fight phase. TARGET: One DEATH GUARD Attached unit from your army that has not been selected to shoot or fight this phase. EFFECT: Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is below its Starting Strength, you can re-roll the Hit roll and you can re-roll the Wound roll." data-full-rule-path="books/death-guard/reader.html#stratagem-malignance-magnified" data-mobile-rule-path="books/death-guard/mobile/champions-of-contagion.html#stratagem-malignance-magnified">MALIGNANCE MAGNIFIED</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="champions-of-contagion" data-term-title="Champions of Contagion" data-term-summary="Take and Hold, 2DP." data-full-rule-path="books/death-guard/reader.html#champions-of-contagion-rule" data-mobile-rule-path="books/death-guard/mobile/champions-of-contagion.html#champions-of-contagion-rule">Champions of Contagion</button> – Battle Tactic Stratagem</span>
@@ -383,7 +383,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="grotesque-fortitude" data-term-title="GROTESQUE FORTITUDE" data-term-summary="WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets." data-full-rule-path="books/death-guard/reader.html#stratagem-grotesque-fortitude" data-mobile-rule-path="books/death-guard/mobile/champions-of-contagion.html#stratagem-grotesque-fortitude">GROTESQUE FORTITUDE</button>
+<button class="term-button" data-term="grotesque-fortitude" data-term-title="GROTESQUE FORTITUDE" data-term-summary="WHEN: Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. TARGET: One DEATH GUARD Attached unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, add 2 to the Toughness characteristic of models in your unit." data-full-rule-path="books/death-guard/reader.html#stratagem-grotesque-fortitude" data-mobile-rule-path="books/death-guard/mobile/champions-of-contagion.html#stratagem-grotesque-fortitude">GROTESQUE FORTITUDE</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="champions-of-contagion" data-term-title="Champions of Contagion" data-term-summary="Take and Hold, 2DP." data-full-rule-path="books/death-guard/reader.html#champions-of-contagion-rule" data-mobile-rule-path="books/death-guard/mobile/champions-of-contagion.html#champions-of-contagion-rule">Champions of Contagion</button> – Battle Tactic Stratagem</span>
@@ -425,7 +425,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="mobile-vector" data-term-title="MOBILE VECTOR" data-term-summary="WHEN: Your Movement phase, before the Reinforcements step. TARGET: One DEATH GUARD CHARACTER unit from your army that is not leading a unit." data-full-rule-path="books/death-guard/reader.html#stratagem-mobile-vector" data-mobile-rule-path="books/death-guard/mobile/champions-of-contagion.html#stratagem-mobile-vector">MOBILE VECTOR</button>
+<button class="term-button" data-term="mobile-vector" data-term-title="MOBILE VECTOR" data-term-summary="WHEN: Your Movement phase, before the Reinforcements step. TARGET: One DEATH GUARD CHARACTER unit from your army that is not leading a unit. EFFECT: Select one other friendly DEATH GUARD unit (excluding Battle-shocked units and Attached units that already have two Leader units or one of your CHARACTER units leading it) within 2&quot; horizontally and 5&quot; vertically of your unit that your unit can lead (as described in the Leader section of its datasheet). Your unit attaches to that unit as a Leader. Change that unit’s Starting Strength accordingly." data-full-rule-path="books/death-guard/reader.html#stratagem-mobile-vector" data-mobile-rule-path="books/death-guard/mobile/champions-of-contagion.html#stratagem-mobile-vector">MOBILE VECTOR</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="champions-of-contagion" data-term-title="Champions of Contagion" data-term-summary="Take and Hold, 2DP." data-full-rule-path="books/death-guard/reader.html#champions-of-contagion-rule" data-mobile-rule-path="books/death-guard/mobile/champions-of-contagion.html#champions-of-contagion-rule">Champions of Contagion</button> – Strategic Ploy Stratagem</span>
@@ -446,7 +446,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="deaths-heads" data-term-title="DEATH’S HEADS" data-term-summary="WHEN: Your Shooting phase. TARGET: One BIOLOGUS PUTRIFIER unit from your army that is not within Engagement Range of one or more enemy units and has not been selected to shoot this phase." data-full-rule-path="books/death-guard/reader.html#stratagem-deaths-heads" data-mobile-rule-path="books/death-guard/mobile/champions-of-contagion.html#stratagem-deaths-heads">DEATH’S HEADS</button>
+<button class="term-button" data-term="deaths-heads" data-term-title="DEATH’S HEADS" data-term-summary="WHEN: Your Shooting phase. TARGET: One BIOLOGUS PUTRIFIER unit from your army that is not within Engagement Range of one or more enemy units and has not been selected to shoot this phase. EFFECT: Select one enemy unit (excluding VEHICLES) that is within 8&quot; of and visible to your unit. Until the start of your next turn, that unit has the effect of all Plagues (see Nurgle’s Gift)." data-full-rule-path="books/death-guard/reader.html#stratagem-deaths-heads" data-mobile-rule-path="books/death-guard/mobile/champions-of-contagion.html#stratagem-deaths-heads">DEATH’S HEADS</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="champions-of-contagion" data-term-title="Champions of Contagion" data-term-summary="Take and Hold, 2DP." data-full-rule-path="books/death-guard/reader.html#champions-of-contagion-rule" data-mobile-rule-path="books/death-guard/mobile/champions-of-contagion.html#champions-of-contagion-rule">Champions of Contagion</button> – Wargear Stratagem</span>
@@ -508,7 +508,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="persistent-pests" data-term-title="PERSISTENT PESTS" data-term-summary="WHEN: Any phase. TARGET: One NURGLINGS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed." data-full-rule-path="books/death-guard/reader.html#stratagem-persistent-pests" data-mobile-rule-path="books/death-guard/mobile/tallyband-summoners.html#stratagem-persistent-pests">PERSISTENT PESTS</button>
+<button class="term-button" data-term="persistent-pests" data-term-title="PERSISTENT PESTS" data-term-summary="WHEN: Any phase. TARGET: One NURGLINGS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed. EFFECT: Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength and with its full wounds remaining. RESTRICTIONS: You can only use this Stratagem once per battle." data-full-rule-path="books/death-guard/reader.html#stratagem-persistent-pests" data-mobile-rule-path="books/death-guard/mobile/tallyband-summoners.html#stratagem-persistent-pests">PERSISTENT PESTS</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="tallyband-summoners" data-term-title="Tallyband Summoners" data-term-summary="Disruption, 2DP." data-full-rule-path="books/death-guard/reader.html#tallyband-summoners-rule" data-mobile-rule-path="books/death-guard/mobile/tallyband-summoners.html#tallyband-summoners-rule">Tallyband Summoners</button> – Strategic Ploy Stratagem</span>
@@ -524,7 +524,7 @@
 <p class="field">
 <b>EFFECT</b>
 <br>Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength and with its full wounds remaining.</p>
-<p class="field">
+<p class="field" data-source-field="restrictions">
 <b>RESTRICTIONS</b>
 <br>You can only use this Stratagem once per battle.</p>
 </article>
@@ -532,7 +532,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="clutching-corruption" data-term-title="CLUTCHING CORRUPTION" data-term-summary="WHEN: Fight phase. TARGET: One DEATH GUARD unit from your army that has not been selected to fight this phase." data-full-rule-path="books/death-guard/reader.html#stratagem-clutching-corruption" data-mobile-rule-path="books/death-guard/mobile/tallyband-summoners.html#stratagem-clutching-corruption">CLUTCHING CORRUPTION</button>
+<button class="term-button" data-term="clutching-corruption" data-term-title="CLUTCHING CORRUPTION" data-term-summary="WHEN: Fight phase. TARGET: One DEATH GUARD unit from your army that has not been selected to fight this phase. EFFECT: Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit that is within Engagement Range of one or more PLAGUE LEGIONS units from your army, you can re-roll the Hit roll." data-full-rule-path="books/death-guard/reader.html#stratagem-clutching-corruption" data-mobile-rule-path="books/death-guard/mobile/tallyband-summoners.html#stratagem-clutching-corruption">CLUTCHING CORRUPTION</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="tallyband-summoners" data-term-title="Tallyband Summoners" data-term-summary="Disruption, 2DP." data-full-rule-path="books/death-guard/reader.html#tallyband-summoners-rule" data-mobile-rule-path="books/death-guard/mobile/tallyband-summoners.html#tallyband-summoners-rule">Tallyband Summoners</button> – Battle Tactic Stratagem</span>
@@ -553,7 +553,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="all-is-rot" data-term-title="ALL IS ROT" data-term-summary="WHEN: Your Shooting phase. TARGET: One PLAGUE LEGIONS unit from your army that is within Engagement Range of one or more enemy units." data-full-rule-path="books/death-guard/reader.html#stratagem-all-is-rot" data-mobile-rule-path="books/death-guard/mobile/tallyband-summoners.html#stratagem-all-is-rot">ALL IS ROT</button>
+<button class="term-button" data-term="all-is-rot" data-term-title="ALL IS ROT" data-term-summary="WHEN: Your Shooting phase. TARGET: One PLAGUE LEGIONS unit from your army that is within Engagement Range of one or more enemy units. EFFECT: Until the end of the phase, enemy units are not considered to be within Engagement Range of your unit for the purposes of selecting targets of ranged weapons. Until the end of the phase, each time an enemy model loses a wound, while that model’s unit is within Engagement Range of your unit, roll one D6: on a 5+, your unit suffers 1 mortal wound after the attacking unit has finished making its attacks." data-full-rule-path="books/death-guard/reader.html#stratagem-all-is-rot" data-mobile-rule-path="books/death-guard/mobile/tallyband-summoners.html#stratagem-all-is-rot">ALL IS ROT</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="tallyband-summoners" data-term-title="Tallyband Summoners" data-term-summary="Disruption, 2DP." data-full-rule-path="books/death-guard/reader.html#tallyband-summoners-rule" data-mobile-rule-path="books/death-guard/mobile/tallyband-summoners.html#tallyband-summoners-rule">Tallyband Summoners</button> – Strategic Ploy Stratagem</span>
@@ -574,7 +574,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="fleshy-avalanche" data-term-title="FLESHY AVALANCHE" data-term-summary="WHEN: Your Movement phase or your Charge phase. TARGET: One PLAGUE LEGIONS MONSTER unit from your army that has not been selected to move or charge this phase." data-full-rule-path="books/death-guard/reader.html#stratagem-fleshy-avalanche" data-mobile-rule-path="books/death-guard/mobile/tallyband-summoners.html#stratagem-fleshy-avalanche">FLESHY AVALANCHE</button>
+<button class="term-button" data-term="fleshy-avalanche" data-term-title="FLESHY AVALANCHE" data-term-summary="WHEN: Your Movement phase or your Charge phase. TARGET: One PLAGUE LEGIONS MONSTER unit from your army that has not been selected to move or charge this phase. EFFECT: Until the end of the phase, each time your unit makes a Normal, Advance or Charge move, it can move horizontally through terrain features." data-full-rule-path="books/death-guard/reader.html#stratagem-fleshy-avalanche" data-mobile-rule-path="books/death-guard/mobile/tallyband-summoners.html#stratagem-fleshy-avalanche">FLESHY AVALANCHE</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="tallyband-summoners" data-term-title="Tallyband Summoners" data-term-summary="Disruption, 2DP." data-full-rule-path="books/death-guard/reader.html#tallyband-summoners-rule" data-mobile-rule-path="books/death-guard/mobile/tallyband-summoners.html#tallyband-summoners-rule">Tallyband Summoners</button> – Strategic Ploy Stratagem</span>
@@ -616,7 +616,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="mireslick" data-term-title="MIRESLICK" data-term-summary="WHEN: Your opponent’s Movement phase, when an enemy unit (excluding MONSTERS and VEHICLES) is selected to Fall Back. TARGET: One PLAGUE LEGIONS unit from your army that is within Engagement Range of that enemy unit." data-full-rule-path="books/death-guard/reader.html#stratagem-mireslick" data-mobile-rule-path="books/death-guard/mobile/tallyband-summoners.html#stratagem-mireslick">MIRESLICK</button>
+<button class="term-button" data-term="mireslick" data-term-title="MIRESLICK" data-term-summary="WHEN: Your opponent’s Movement phase, when an enemy unit (excluding MONSTERS and VEHICLES) is selected to Fall Back. TARGET: One PLAGUE LEGIONS unit from your army that is within Engagement Range of that enemy unit. EFFECT: Until the end of the phase, while an enemy unit is within Engagement Range of your unit, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead." data-full-rule-path="books/death-guard/reader.html#stratagem-mireslick" data-mobile-rule-path="books/death-guard/mobile/tallyband-summoners.html#stratagem-mireslick">MIRESLICK</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="tallyband-summoners" data-term-title="Tallyband Summoners" data-term-summary="Disruption, 2DP." data-full-rule-path="books/death-guard/reader.html#tallyband-summoners-rule" data-mobile-rule-path="books/death-guard/mobile/tallyband-summoners.html#tallyband-summoners-rule">Tallyband Summoners</button> – Strategic Ploy Stratagem</span>
@@ -678,7 +678,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="grip-of-the-walking-pox" data-term-title="GRIP OF THE WALKING POX" data-term-summary="WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One POXWALKERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks." data-full-rule-path="books/death-guard/reader.html#stratagem-grip-of-the-walking-pox" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#stratagem-grip-of-the-walking-pox">GRIP OF THE WALKING POX</button>
+<button class="term-button" data-term="grip-of-the-walking-pox" data-term-title="GRIP OF THE WALKING POX" data-term-summary="WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One POXWALKERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: After the attacking unit has fought, roll one D6 for each model from your unit that was destroyed as a result of those attacks: on a 6, the attacking unit suffers 1 mortal wound. If your unit is not destroyed after the attacking unit has fought, enemy models destroyed as a result of this Stratagem count as enemy models destroyed by an attack made by a model in your unit for the purposes of the Curse of the Walking Pox ability." data-full-rule-path="books/death-guard/reader.html#stratagem-grip-of-the-walking-pox" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#stratagem-grip-of-the-walking-pox">GRIP OF THE WALKING POX</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="shamblerot-vectorium" data-term-title="Shamblerot Vectorium" data-term-summary="Disruption, 2DP." data-full-rule-path="books/death-guard/reader.html#shamblerot-vectorium-rule" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#shamblerot-vectorium-rule">Shamblerot Vectorium</button> – Strategic Ploy Stratagem</span>
@@ -699,7 +699,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="smeared-with-filth" data-term-title="SMEARED WITH FILTH" data-term-summary="WHEN: Fight phase. TARGET: One POXWALKERS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed." data-full-rule-path="books/death-guard/reader.html#stratagem-smeared-with-filth" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#stratagem-smeared-with-filth">SMEARED WITH FILTH</button>
+<button class="term-button" data-term="smeared-with-filth" data-term-title="SMEARED WITH FILTH" data-term-summary="WHEN: Fight phase. TARGET: One POXWALKERS unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed. EFFECT: Select one enemy unit that made one or more attacks that targeted your unit this phase. Until the end of the battle, that enemy unit is Afflicted." data-full-rule-path="books/death-guard/reader.html#stratagem-smeared-with-filth" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#stratagem-smeared-with-filth">SMEARED WITH FILTH</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="shamblerot-vectorium" data-term-title="Shamblerot Vectorium" data-term-summary="Disruption, 2DP." data-full-rule-path="books/death-guard/reader.html#shamblerot-vectorium-rule" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#shamblerot-vectorium-rule">Shamblerot Vectorium</button> – Strategic Ploy Stratagem</span>
@@ -720,7 +720,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="gnawing-hunger" data-term-title="GNAWING HUNGER" data-term-summary="WHEN: Your Command phase. TARGET: One POXWALKERS unit from your army." data-full-rule-path="books/death-guard/reader.html#stratagem-gnawing-hunger" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#stratagem-gnawing-hunger">GNAWING HUNGER</button>
+<button class="term-button" data-term="gnawing-hunger" data-term-title="GNAWING HUNGER" data-term-summary="WHEN: Your Command phase. TARGET: One POXWALKERS unit from your army. EFFECT: Until the end of the turn, add 1 to the Move characteristic of models in your unit, and add 1 to the Attacks and Strength characteristics of melee weapons equipped by models in your unit." data-full-rule-path="books/death-guard/reader.html#stratagem-gnawing-hunger" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#stratagem-gnawing-hunger">GNAWING HUNGER</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="shamblerot-vectorium" data-term-title="Shamblerot Vectorium" data-term-summary="Disruption, 2DP." data-full-rule-path="books/death-guard/reader.html#shamblerot-vectorium-rule" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#shamblerot-vectorium-rule">Shamblerot Vectorium</button> – Battle Tactic Stratagem</span>
@@ -741,7 +741,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="hidden-amongst-the-dead" data-term-title="HIDDEN AMONGST THE DEAD" data-term-summary="WHEN: The Reinforcements step of your Movement phase. TARGET: One POXWALKERS unit from your army that is in Strategic Reserves and that is not an Attached unit." data-full-rule-path="books/death-guard/reader.html#stratagem-hidden-amongst-the-dead" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#stratagem-hidden-amongst-the-dead">HIDDEN AMONGST THE DEAD</button>
+<button class="term-button" data-term="hidden-amongst-the-dead" data-term-title="HIDDEN AMONGST THE DEAD" data-term-summary="WHEN: The Reinforcements step of your Movement phase. TARGET: One POXWALKERS unit from your army that is in Strategic Reserves and that is not an Attached unit. EFFECT: Until the end of the phase, models in that unit have the Deep Strike ability." data-full-rule-path="books/death-guard/reader.html#stratagem-hidden-amongst-the-dead" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#stratagem-hidden-amongst-the-dead">HIDDEN AMONGST THE DEAD</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="shamblerot-vectorium" data-term-title="Shamblerot Vectorium" data-term-summary="Disruption, 2DP." data-full-rule-path="books/death-guard/reader.html#shamblerot-vectorium-rule" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#shamblerot-vectorium-rule">Shamblerot Vectorium</button> – Strategic Ploy Stratagem</span>
@@ -762,7 +762,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="shock-and-horror" data-term-title="SHOCK AND HORROR" data-term-summary="WHEN: Your Charge phase, just after a DEATH GUARD unit from your army ends a Charge move. TARGET: That DEATH GUARD unit." data-full-rule-path="books/death-guard/reader.html#stratagem-shock-and-horror" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#stratagem-shock-and-horror">SHOCK AND HORROR</button>
+<button class="term-button" data-term="shock-and-horror" data-term-title="SHOCK AND HORROR" data-term-summary="WHEN: Your Charge phase, just after a DEATH GUARD unit from your army ends a Charge move. TARGET: That DEATH GUARD unit. EFFECT: Each enemy unit within Engagement Range of your unit must take a Battle-shock test, subtracting 1 from that test." data-full-rule-path="books/death-guard/reader.html#stratagem-shock-and-horror" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#stratagem-shock-and-horror">SHOCK AND HORROR</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="shamblerot-vectorium" data-term-title="Shamblerot Vectorium" data-term-summary="Disruption, 2DP." data-full-rule-path="books/death-guard/reader.html#shamblerot-vectorium-rule" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#shamblerot-vectorium-rule">Shamblerot Vectorium</button> – Strategic Ploy Stratagem</span>
@@ -783,7 +783,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="shambling-wall" data-term-title="SHAMBLING WALL" data-term-summary="WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets." data-full-rule-path="books/death-guard/reader.html#stratagem-shambling-wall" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#stratagem-shambling-wall">SHAMBLING WALL</button>
+<button class="term-button" data-term="shambling-wall" data-term-title="SHAMBLING WALL" data-term-summary="WHEN: Your opponent’s Shooting phase, just after an enemy unit has selected its targets. TARGET: One DEATH GUARD unit from your army that was selected as the target of one or more of the attacking unit’s attacks, and one friendly POXWALKERS unit within 3&quot; of your unit and visible to both your unit and the attacking unit. EFFECT: Until the end of the phase, each time you would allocate an attack to a model in your DEATH GUARD unit, if your POXWALKERS unit is visible to the attacking model and is an eligible target for that attack, no saving throw is made for that attack; instead a number of POXWALKERS from your POXWALKERS unit equal to the Damage characteristic of that attack are destroyed." data-full-rule-path="books/death-guard/reader.html#stratagem-shambling-wall" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#stratagem-shambling-wall">SHAMBLING WALL</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="shamblerot-vectorium" data-term-title="Shamblerot Vectorium" data-term-summary="Disruption, 2DP." data-full-rule-path="books/death-guard/reader.html#shamblerot-vectorium-rule" data-mobile-rule-path="books/death-guard/mobile/shamblerot-vectorium.html#shamblerot-vectorium-rule">Shamblerot Vectorium</button> – Strategic Ploy Stratagem</span>
@@ -866,7 +866,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="grim-reapers" data-term-title="GRIM REAPERS" data-term-summary="WHEN: Fight phase. TARGET: One TERMINATOR unit from your army that has not been selected to fight this phase." data-full-rule-path="books/death-guard/reader.html#stratagem-grim-reapers" data-mobile-rule-path="books/death-guard/mobile/death-lords-chosen.html#stratagem-grim-reapers">GRIM REAPERS</button>
+<button class="term-button" data-term="grim-reapers" data-term-title="GRIM REAPERS" data-term-summary="WHEN: Fight phase. TARGET: One TERMINATOR unit from your army that has not been selected to fight this phase. EFFECT: Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit (excluding MONSTERS and VEHICLES) you can re-roll the Hit roll." data-full-rule-path="books/death-guard/reader.html#stratagem-grim-reapers" data-mobile-rule-path="books/death-guard/mobile/death-lords-chosen.html#stratagem-grim-reapers">GRIM REAPERS</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="death-lords-chosen" data-term-title="Death Lord’s Chosen" data-term-summary="Priority Assets, 2DP." data-full-rule-path="books/death-guard/reader.html#death-lords-chosen-rule" data-mobile-rule-path="books/death-guard/mobile/death-lords-chosen.html#death-lords-chosen-rule">Death Lord’s Chosen</button> – Battle Tactic Stratagem</span>
@@ -887,7 +887,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="undying-spite" data-term-title="UNDYING SPITE" data-term-summary="WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One TERMINATOR unit from your army that was selected as the target of one or more of the attacking unit’s attacks." data-full-rule-path="books/death-guard/reader.html#stratagem-undying-spite" data-mobile-rule-path="books/death-guard/mobile/death-lords-chosen.html#stratagem-undying-spite">UNDYING SPITE</button>
+<button class="term-button" data-term="undying-spite" data-term-title="UNDYING SPITE" data-term-summary="WHEN: Fight phase, just after an enemy unit has selected its targets. TARGET: One TERMINATOR unit from your army that was selected as the target of one or more of the attacking unit’s attacks. EFFECT: Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6. On a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play." data-full-rule-path="books/death-guard/reader.html#stratagem-undying-spite" data-mobile-rule-path="books/death-guard/mobile/death-lords-chosen.html#stratagem-undying-spite">UNDYING SPITE</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="death-lords-chosen" data-term-title="Death Lord’s Chosen" data-term-summary="Priority Assets, 2DP." data-full-rule-path="books/death-guard/reader.html#death-lords-chosen-rule" data-mobile-rule-path="books/death-guard/mobile/death-lords-chosen.html#death-lords-chosen-rule">Death Lord’s Chosen</button> – Strategic Ploy Stratagem</span>
@@ -908,7 +908,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="signal-pox" data-term-title="SIGNAL POX" data-term-summary="WHEN: Your Command phase. TARGET: One LORD OF VIRULENCE model from your army. EFFECT: Select one objective marker within 30&quot; of and visible to your model." data-full-rule-path="books/death-guard/reader.html#stratagem-signal-pox" data-mobile-rule-path="books/death-guard/mobile/death-lords-chosen.html#stratagem-signal-pox">SIGNAL POX</button>
+<button class="term-button" data-term="signal-pox" data-term-title="SIGNAL POX" data-term-summary="WHEN: Your Command phase. TARGET: One LORD OF VIRULENCE model from your army. EFFECT: Select one objective marker within 30&quot; of and visible to your model. Until the start of your next turn, while an enemy unit is within range of that objective marker, that unit is Afflicted." data-full-rule-path="books/death-guard/reader.html#stratagem-signal-pox" data-mobile-rule-path="books/death-guard/mobile/death-lords-chosen.html#stratagem-signal-pox">SIGNAL POX</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="death-lords-chosen" data-term-title="Death Lord’s Chosen" data-term-summary="Priority Assets, 2DP." data-full-rule-path="books/death-guard/reader.html#death-lords-chosen-rule" data-mobile-rule-path="books/death-guard/mobile/death-lords-chosen.html#death-lords-chosen-rule">Death Lord’s Chosen</button> – Epic Deed Stratagem</span>
@@ -929,7 +929,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="mortarion-s-teachings" data-term-title="MORTARION'S TEACHINGS" data-term-summary="WHEN: Your Shooting phase. TARGET: One TERMINATOR unit from your army that has not been selected to shoot this phase." data-full-rule-path="books/death-guard/reader.html#stratagem-mortarion-s-teachings" data-mobile-rule-path="books/death-guard/mobile/death-lords-chosen.html#stratagem-mortarion-s-teachings">MORTARION&#39;S TEACHINGS</button>
+<button class="term-button" data-term="mortarion-s-teachings" data-term-title="MORTARION'S TEACHINGS" data-term-summary="WHEN: Your Shooting phase. TARGET: One TERMINATOR unit from your army that has not been selected to shoot this phase. EFFECT: Until the end of the phase, ranged weapons equipped by models in your unit have the [ASSAULT] and [HEAVY] abilities." data-full-rule-path="books/death-guard/reader.html#stratagem-mortarion-s-teachings" data-mobile-rule-path="books/death-guard/mobile/death-lords-chosen.html#stratagem-mortarion-s-teachings">MORTARION&#39;S TEACHINGS</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="death-lords-chosen" data-term-title="Death Lord’s Chosen" data-term-summary="Priority Assets, 2DP." data-full-rule-path="books/death-guard/reader.html#death-lords-chosen-rule" data-mobile-rule-path="books/death-guard/mobile/death-lords-chosen.html#death-lords-chosen-rule">Death Lord’s Chosen</button> – Strategic Ploy Stratagem</span>
@@ -950,7 +950,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="sickening-impact" data-term-title="SICKENING IMPACT" data-term-summary="WHEN: Your Charge phase, just after a TERMINATOR unit from your army ends a Charge move. TARGET: That TERMINATOR unit." data-full-rule-path="books/death-guard/reader.html#stratagem-sickening-impact" data-mobile-rule-path="books/death-guard/mobile/death-lords-chosen.html#stratagem-sickening-impact">SICKENING IMPACT</button>
+<button class="term-button" data-term="sickening-impact" data-term-title="SICKENING IMPACT" data-term-summary="WHEN: Your Charge phase, just after a TERMINATOR unit from your army ends a Charge move. TARGET: That TERMINATOR unit. EFFECT: Select one enemy unit within Engagement Range of your unit, then roll one D6 for each model in your unit that is within Engagement Range of that enemy unit: for each 2+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds)." data-full-rule-path="books/death-guard/reader.html#stratagem-sickening-impact" data-mobile-rule-path="books/death-guard/mobile/death-lords-chosen.html#stratagem-sickening-impact">SICKENING IMPACT</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="death-lords-chosen" data-term-title="Death Lord’s Chosen" data-term-summary="Priority Assets, 2DP." data-full-rule-path="books/death-guard/reader.html#death-lords-chosen-rule" data-mobile-rule-path="books/death-guard/mobile/death-lords-chosen.html#death-lords-chosen-rule">Death Lord’s Chosen</button> – Strategic Ploy Stratagem</span>
@@ -1054,7 +1054,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="soulrot-flux" data-term-title="Soulrot Flux" data-term-summary="WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a Fall Back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit. TARGET: That CONTAGION ENGINE unit." data-full-rule-path="books/death-guard/reader.html#stratagem-soulrot-flux" data-mobile-rule-path="books/death-guard/mobile/contagion-engines.html#stratagem-soulrot-flux">Soulrot Flux</button>
+<button class="term-button" data-term="soulrot-flux" data-term-title="Soulrot Flux" data-term-summary="WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a Fall Back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit. TARGET: That CONTAGION ENGINE unit. EFFECT: When an enemy unit engaged with your unit is selected to make a Fall Back move, roll one D6: on a 1, that enemy unit suffers 1 mortal wound; on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds." data-full-rule-path="books/death-guard/reader.html#stratagem-soulrot-flux" data-mobile-rule-path="books/death-guard/mobile/contagion-engines.html#stratagem-soulrot-flux">Soulrot Flux</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="contagion-engines" data-term-title="Contagion Engines" data-term-summary="Purge the Foe, 1DP." data-full-rule-path="books/death-guard/reader.html#contagion-engines-rule" data-mobile-rule-path="books/death-guard/mobile/contagion-engines.html#contagion-engines-rule">Contagion Engines</button> Stratagem</span>
@@ -1121,7 +1121,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="droning-horror" data-term-title="Droning Horror" data-term-summary="WHEN: Your Shooting phase, when a friendly PLAGUE MARINES unit is selected to shoot. TARGET: That PLAGUE MARINES unit. EFFECT: Your unit’s ranged attacks can re-roll hit rolls of 1." data-full-rule-path="books/death-guard/reader.html#stratagem-droning-horror" data-mobile-rule-path="books/death-guard/mobile/flyblown-host.html#stratagem-droning-horror">Droning Horror</button>
+<button class="term-button" data-term="droning-horror" data-term-title="Droning Horror" data-term-summary="WHEN: Your Shooting phase, when a friendly PLAGUE MARINES unit is selected to shoot. TARGET: That PLAGUE MARINES unit. EFFECT: Your unit’s ranged attacks can re-roll hit rolls of 1. Those attacks that target a unit within half range can re-roll wound rolls of 1." data-full-rule-path="books/death-guard/reader.html#stratagem-droning-horror" data-mobile-rule-path="books/death-guard/mobile/flyblown-host.html#stratagem-droning-horror">Droning Horror</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="flyblown-host" data-term-title="Flyblown Host" data-term-summary="Reconnaissance, 1DP." data-full-rule-path="books/death-guard/reader.html#flyblown-host-rule" data-mobile-rule-path="books/death-guard/mobile/flyblown-host.html#flyblown-host-rule">Flyblown Host</button> Stratagem</span>
@@ -1289,11 +1289,11 @@
 <p class="field"><b>EFFECT</b><br>Select one CHARACTER model in that unit. Until the end of the phase, its melee weapons have the PRECISION ability.</p>
 </article>
 <article class="stratagem surface" id="core-stratagem-insane-bravery">
-<div class="stratagem-head"><div><h3>INSANE BRAVERY</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
+<div class="stratagem-head"><div><h3><button class="term-button" data-term="core-rule-15-04-insane-bravery" data-term-title="INSANE BRAVERY" data-term-summary="1CP Core Stratagem Indifferent to their own survival, these warriors hold their ground against seemingly impossible odds. WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle." data-full-rule-path="books/core-rules/reader/stratagems.html#rule-15-04">INSANE BRAVERY</button></h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
 <p class="field"><b>WHEN</b><br>Battle-shock step of your Command phase, just before a unit from your army takes a Battle-shock test.</p>
 <p class="field"><b>TARGET</b><br>That unit.</p>
 <p class="field"><b>EFFECT</b><br>That test is automatically successful.</p>
-<p class="field"><b>RESTRICTION</b><br>Once per battle.</p>
+<p class="field" data-source-field="restrictions"><b>RESTRICTIONS</b><br>Once per battle.</p>
 </article>
 <article class="stratagem surface" id="core-stratagem-explosives">
 <div class="stratagem-head"><div><h3>EXPLOSIVES</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
@@ -1308,11 +1308,11 @@
 <p class="field"><b>EFFECT</b><br>Select one enemy unit within Engagement Range and one model in your unit within Engagement Range of it. Roll a number of D6 equal to that model’s Toughness: each 1 inflicts 1 mortal wound on your unit; each 5+ inflicts 1 mortal wound on the enemy unit, to a maximum of 6.</p>
 </article>
 <article class="stratagem surface" id="core-stratagem-rapid-ingress">
-<div class="stratagem-head"><div><h3>RAPID INGRESS</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
+<div class="stratagem-head"><div><h3><button class="term-button" data-term="core-rule-15-07-rapid-ingress" data-term-title="RAPID INGRESS" data-term-summary="1CP Core Stratagem Be it cunning strategy, potent technology or supernatural ritual, there are many means by which a commander may hasten their warriors’ onset. WHEN: End of your opponent’s Movement phase. TARGET: One friendly unit that is in strategic reserves (excluding AIRCRAFT). EFFECT: Your unit makes an ingress move. RESTRICTIONS: You cannot use this stratagem during the first battle round." data-full-rule-path="books/core-rules/reader/stratagems.html#rule-15-07">RAPID INGRESS</button></h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
 <p class="field"><b>WHEN</b><br>End of your opponent’s Movement phase.</p>
 <p class="field"><b>TARGET</b><br>One unit from your army in Strategic Reserves, excluding AIRCRAFT.</p>
 <p class="field"><b>EFFECT</b><br>That unit can make an ingress move.</p>
-<p class="field"><b>RESTRICTION</b><br>Cannot be used during the first battle round.</p>
+<p class="field" data-source-field="restrictions"><b>RESTRICTIONS</b><br>Cannot be used during the first battle round.</p>
 </article>
 <article class="stratagem surface" id="core-stratagem-fire-overwatch">
 <div class="stratagem-head"><div><h3>FIRE OVERWATCH</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>

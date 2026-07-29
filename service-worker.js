@@ -63,14 +63,14 @@ const APP_SHELL = [
   "./books/death-guard/scripts/view-router.js?v=2",
   "./books/death-guard/mobile/index.html",
   "./books/death-guard/mobile/mobile.css?v=8",
-  "./books/death-guard/mobile/mobile.js?v=13",
+  "./books/death-guard/mobile/mobile.js?v=14",
   "./books/shared/navigation-targets.js?v=1",
   "./books/shared/popup-rule-actions.js?v=1",
   "./books/shared/datasheet-layout.js?v=2",
   "./books/shared/datasheet-system.css?v=6",
-  "./books/shared/popup-content.js?v=2",
+  "./books/shared/popup-content.js?v=3",
   "./books/shared/glossary-autolink.js?v=8",
-  "./books/shared/related-rules-matcher.js?v=1",
+  "./books/shared/related-rules-matcher.js?v=2",
   "./books/shared/roster-entities.js?v=1",
   "./books/shared/roster-parser.js?v=2",
   "./books/shared/roster-enhancements.js?v=3",
@@ -78,7 +78,7 @@ const APP_SHELL = [
   "./books/death-guard/styles/tokens.css?v=10",
   "./books/death-guard/styles/layout.css?v=9",
   "./books/death-guard/styles/navigation.css?v=11",
-  "./books/death-guard/styles/content.css?v=31",
+  "./books/death-guard/styles/content.css?v=32",
   "./books/death-guard/styles/popups.css?v=17",
   "./books/death-guard/scripts/navigation-controller.js?v=15",
   "./books/death-guard/scripts/roster-filter.js?v=14",
@@ -86,8 +86,8 @@ const APP_SHELL = [
   "./books/death-guard/scripts/full-entry-controller.js?v=8",
   "./books/death-guard/scripts/journey-controller.js?v=12",
   "./books/death-guard/scripts/ui-controllers.js?v=11",
-  "./books/death-guard/scripts/related-rules.js?v=7",
-  "./books/death-guard/scripts/app.js?v=31",
+  "./books/death-guard/scripts/related-rules.js?v=8",
+  "./books/death-guard/scripts/app.js?v=32",
   "./books/core-rules/",
   CORE_RULES_FALLBACK,
   "./books/core-rules/reader/styles.css?v=14",
@@ -124,14 +124,14 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/reader.html",
   "./books/adeptus-mechanicus/mobile/index.html",
   "./books/adeptus-mechanicus/mobile/mobile.css?v=1",
-  "./books/adeptus-mechanicus/mobile/mobile.js?v=1",
+  "./books/adeptus-mechanicus/mobile/mobile.js?v=2",
   "./books/adeptus-mechanicus/assets/mechanicus-logo.png",
   "./books/adeptus-mechanicus/assets/mechanicus-cover-800.webp",
   "./books/adeptus-mechanicus/styles/tokens.css?v=14",
   "./books/adeptus-mechanicus/styles/mechanicus.css?v=18",
   "./books/adeptus-mechanicus/scripts/data.js?v=1",
   "./books/adeptus-mechanicus/scripts/faction-ui.js?v=1",
-  "./books/adeptus-mechanicus/scripts/related-rules.js?v=7",
+  "./books/adeptus-mechanicus/scripts/related-rules.js?v=8",
   "./books/adeptus-mechanicus/mobile/related-rules.inc?v=2",
   "./books/adeptus-mechanicus/scripts/roster-enhancements.js?v=2",
   "./books/adeptus-mechanicus/scripts/roster-filter.js?v=2",
@@ -146,7 +146,7 @@ const APP_SHELL = [
   ,"./books/tyranids/scripts/data.js?v=2"
   ,"./books/tyranids/scripts/app.js?v=4"
   ,"./books/tyranids/mobile/mobile.css?v=1"
-  ,"./books/tyranids/mobile/mobile.js?v=1"
+  ,"./books/tyranids/mobile/mobile.js?v=2"
   ,"./glossary/generated/glossary.en.js?v=tyranids-1"
   ,"./books/tau-empire/"
   ,TAU_EMPIRE_FALLBACK
@@ -184,7 +184,7 @@ const APP_SHELL = [
   ,"./books/dark-angels/styles/tokens.css?v=1"
   ,"./books/dark-angels/styles/book.css?v=2"
   ,"./books/dark-angels/scripts/app.js?v=2"
-  ,"./books/shared/army-related-rules.js?v=4"
+  ,"./books/shared/army-related-rules.js?v=5"
   ,"./books/shared/army-book-app.js?v=6"
 ];
 

@@ -1,6 +1,7 @@
 (function(root){
   'use strict';
 
+  const supportedSubjects=new Set(['unit','model','objective']);
   const normalize=value=>String(value||'').replace(/\s+/g,' ').trim().toUpperCase();
   const set=values=>new Set([...(values||[])].map(normalize).filter(Boolean));
   const selectorOf=target=>({
@@ -60,8 +61,10 @@
     const schema=canonical(eligibility),roles=schema.roles.filter(role=>role.side==='friendly'||role.side==='either');
     let conditional=false;
     for(const role of roles){
-      if(role.subject==='objective')continue;
-      const result=selectorResult(role.selector||{},context,role.subject||'unit');
+      const subject=role.subject||'unit';
+      if(!supportedSubjects.has(subject))return {state:'no-match',matchedRoleIds:[],reasons:[`Unsupported subject: ${subject}`]};
+      if(subject==='objective')continue;
+      const result=selectorResult(role.selector||{},context,subject);
       if(result==='match')return {state:schema.conditions?.length?'conditional':'match',matchedRoleIds:[role.id],reasons:schema.conditions||[]};
       if(result==='conditional')conditional=true;
     }

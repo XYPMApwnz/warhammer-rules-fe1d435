@@ -438,6 +438,312 @@
         ]
       }
     },
+    "stratagem-defect-scrutiny": {
+      "termId": "adeptus-mechanicus-stratagem-defect-scrutiny",
+      "navigation": {
+        "rule": "stratagem-defect-scrutiny"
+      }
+    },
+    "stratagem-repolarised-augurs": {
+      "termId": "adeptus-mechanicus-stratagem-repolarised-augurs",
+      "navigation": {
+        "rule": "stratagem-repolarised-augurs"
+      }
+    },
+    "stratagem-clandestine-reposition": {
+      "termId": "adeptus-mechanicus-stratagem-clandestine-reposition",
+      "navigation": {
+        "rule": "stratagem-clandestine-reposition"
+      }
+    },
+    "stratagem-scriptural-prognosis": {
+      "termId": "adeptus-mechanicus-stratagem-scriptural-prognosis",
+      "navigation": {
+        "rule": "stratagem-scriptural-prognosis"
+      }
+    },
+    "stratagem-overloaded-safeguards": {
+      "termId": "adeptus-mechanicus-stratagem-overloaded-safeguards",
+      "navigation": {
+        "rule": "stratagem-overloaded-safeguards"
+      }
+    },
+    "stratagem-holy-avarice": {
+      "termId": "adeptus-mechanicus-stratagem-holy-avarice",
+      "navigation": {
+        "rule": "stratagem-holy-avarice"
+      }
+    },
+    "stratagem-echoes-of-the-conduit-wars": {
+      "termId": "adeptus-mechanicus-stratagem-echoes-of-the-conduit-wars",
+      "navigation": {
+        "rule": "stratagem-echoes-of-the-conduit-wars"
+      }
+    },
+    "stratagem-chant-of-electrotraction": {
+      "termId": "adeptus-mechanicus-stratagem-chant-of-electrotraction",
+      "navigation": {
+        "rule": "stratagem-chant-of-electrotraction"
+      }
+    },
+    "stratagem-momentum-feedback": {
+      "termId": "adeptus-mechanicus-stratagem-momentum-feedback",
+      "navigation": {
+        "rule": "stratagem-momentum-feedback"
+      }
+    },
+    "stratagem-motive-imperative": {
+      "termId": "adeptus-mechanicus-stratagem-motive-imperative",
+      "navigation": {
+        "rule": "stratagem-motive-imperative"
+      }
+    },
+    "stratagem-auto-divinatory-targeting": {
+      "termId": "adeptus-mechanicus-stratagem-auto-divinatory-targeting",
+      "navigation": {
+        "rule": "stratagem-auto-divinatory-targeting"
+      }
+    },
+    "stratagem-benevolence-of-the-omnissiah": {
+      "termId": "adeptus-mechanicus-stratagem-benevolence-of-the-omnissiah",
+      "navigation": {
+        "rule": "stratagem-benevolence-of-the-omnissiah"
+      }
+    },
+    "stratagem-machine-spirit-resurgent": {
+      "termId": "adeptus-mechanicus-stratagem-machine-spirit-resurgent",
+      "navigation": {
+        "rule": "stratagem-machine-spirit-resurgent"
+      }
+    },
+    "stratagem-machine-superiority": {
+      "termId": "adeptus-mechanicus-stratagem-machine-superiority",
+      "navigation": {
+        "rule": "stratagem-machine-superiority"
+      }
+    },
+    "stratagem-transcendent-cogitation": {
+      "termId": "adeptus-mechanicus-stratagem-transcendent-cogitation",
+      "navigation": {
+        "rule": "stratagem-transcendent-cogitation"
+      }
+    },
+    "stratagem-incantation-of-the-iron-soul": {
+      "termId": "adeptus-mechanicus-stratagem-incantation-of-the-iron-soul",
+      "navigation": {
+        "rule": "stratagem-incantation-of-the-iron-soul"
+      }
+    },
+    "stratagem-tribute-of-empathic-veneration": {
+      "termId": "adeptus-mechanicus-stratagem-tribute-of-empathic-veneration",
+      "navigation": {
+        "rule": "stratagem-tribute-of-empathic-veneration"
+      }
+    },
+    "stratagem-litany-of-the-electromancer": {
+      "termId": "adeptus-mechanicus-stratagem-litany-of-the-electromancer",
+      "navigation": {
+        "rule": "stratagem-litany-of-the-electromancer"
+      }
+    },
+    "stratagem-luminescent-blessing": {
+      "termId": "adeptus-mechanicus-stratagem-luminescent-blessing",
+      "navigation": {
+        "rule": "stratagem-luminescent-blessing"
+      }
+    },
+    "stratagem-chant-of-the-remorseless-fist": {
+      "termId": "adeptus-mechanicus-stratagem-chant-of-the-remorseless-fist",
+      "navigation": {
+        "rule": "stratagem-chant-of-the-remorseless-fist"
+      }
+    },
+    "stratagem-verse-of-vengeance": {
+      "termId": "adeptus-mechanicus-stratagem-verse-of-vengeance",
+      "navigation": {
+        "rule": "stratagem-verse-of-vengeance"
+      }
+    },
+    "stratagem-servo-driven-charge": {
+      "termId": "adeptus-mechanicus-stratagem-servo-driven-charge",
+      "navigation": {
+        "rule": "stratagem-servo-driven-charge"
+      }
+    },
+    "stratagem-threat-cogitation-targeters": {
+      "termId": "adeptus-mechanicus-stratagem-threat-cogitation-targeters",
+      "navigation": {
+        "rule": "stratagem-threat-cogitation-targeters"
+      }
+    },
+    "stratagem-unrelenting-aggression": {
+      "termId": "adeptus-mechanicus-stratagem-unrelenting-aggression",
+      "navigation": {
+        "rule": "stratagem-unrelenting-aggression"
+      }
+    },
+    "stratagem-precision-onslaught": {
+      "termId": "adeptus-mechanicus-stratagem-precision-onslaught",
+      "navigation": {
+        "rule": "stratagem-precision-onslaught"
+      }
+    },
+    "stratagem-unshackled-wrath": {
+      "termId": "adeptus-mechanicus-stratagem-unshackled-wrath",
+      "navigation": {
+        "rule": "stratagem-unshackled-wrath"
+      }
+    },
+    "stratagem-analytic-reprisals": {
+      "termId": "adeptus-mechanicus-stratagem-analytic-reprisals",
+      "navigation": {
+        "rule": "stratagem-analytic-reprisals"
+      }
+    },
+    "stratagem-cached-acquisition": {
+      "termId": "adeptus-mechanicus-stratagem-cached-acquisition",
+      "navigation": {
+        "rule": "stratagem-cached-acquisition"
+      }
+    },
+    "stratagem-infoslave-skull": {
+      "termId": "adeptus-mechanicus-stratagem-infoslave-skull",
+      "navigation": {
+        "rule": "stratagem-infoslave-skull"
+      }
+    },
+    "stratagem-priority-reclamation": {
+      "termId": "adeptus-mechanicus-stratagem-priority-reclamation",
+      "navigation": {
+        "rule": "stratagem-priority-reclamation"
+      }
+    },
+    "stratagem-auto-oracular-retrieval": {
+      "termId": "adeptus-mechanicus-stratagem-auto-oracular-retrieval",
+      "navigation": {
+        "rule": "stratagem-auto-oracular-retrieval"
+      }
+    },
+    "stratagem-incense-exhausts": {
+      "termId": "adeptus-mechanicus-stratagem-incense-exhausts",
+      "navigation": {
+        "rule": "stratagem-incense-exhausts"
+      }
+    },
+    "stratagem-reactive-safeguard": {
+      "termId": "adeptus-mechanicus-stratagem-reactive-safeguard",
+      "navigation": {
+        "rule": "stratagem-reactive-safeguard"
+      }
+    },
+    "stratagem-eradication-protocols": {
+      "termId": "adeptus-mechanicus-stratagem-eradication-protocols",
+      "navigation": {
+        "rule": "stratagem-eradication-protocols"
+      }
+    },
+    "stratagem-aggressive-impulse": {
+      "termId": "adeptus-mechanicus-stratagem-aggressive-impulse",
+      "navigation": {
+        "rule": "stratagem-aggressive-impulse"
+      }
+    },
+    "stratagem-targeting-override": {
+      "termId": "adeptus-mechanicus-stratagem-targeting-override",
+      "navigation": {
+        "rule": "stratagem-targeting-override"
+      }
+    },
+    "stratagem-guided-retreat": {
+      "termId": "adeptus-mechanicus-stratagem-guided-retreat",
+      "navigation": {
+        "rule": "stratagem-guided-retreat"
+      }
+    },
+    "stratagem-neural-overload": {
+      "termId": "adeptus-mechanicus-stratagem-neural-overload",
+      "navigation": {
+        "rule": "stratagem-neural-overload"
+      }
+    },
+    "stratagem-analytical-divination": {
+      "termId": "adeptus-mechanicus-stratagem-analytical-divination",
+      "navigation": {
+        "rule": "stratagem-analytical-divination"
+      }
+    },
+    "stratagem-extinction-order": {
+      "termId": "adeptus-mechanicus-stratagem-extinction-order",
+      "navigation": {
+        "rule": "stratagem-extinction-order"
+      }
+    },
+    "stratagem-lethal-dosage": {
+      "termId": "adeptus-mechanicus-stratagem-lethal-dosage",
+      "navigation": {
+        "rule": "stratagem-lethal-dosage"
+      }
+    },
+    "stratagem-pre-calibrated-purge-solution": {
+      "termId": "adeptus-mechanicus-stratagem-pre-calibrated-purge-solution",
+      "navigation": {
+        "rule": "stratagem-pre-calibrated-purge-solution"
+      }
+    },
+    "stratagem-aggressor-imperative": {
+      "termId": "adeptus-mechanicus-stratagem-aggressor-imperative",
+      "navigation": {
+        "rule": "stratagem-aggressor-imperative"
+      }
+    },
+    "stratagem-bulwark-imperative": {
+      "termId": "adeptus-mechanicus-stratagem-bulwark-imperative",
+      "navigation": {
+        "rule": "stratagem-bulwark-imperative"
+      }
+    },
+    "stratagem-baleful-halo": {
+      "termId": "adeptus-mechanicus-stratagem-baleful-halo",
+      "navigation": {
+        "rule": "stratagem-baleful-halo"
+      }
+    },
+    "stratagem-binharic-offence": {
+      "termId": "adeptus-mechanicus-stratagem-binharic-offence",
+      "navigation": {
+        "rule": "stratagem-binharic-offence"
+      }
+    },
+    "stratagem-shroud-protocols": {
+      "termId": "adeptus-mechanicus-stratagem-shroud-protocols",
+      "navigation": {
+        "rule": "stratagem-shroud-protocols"
+      }
+    },
+    "stratagem-isolate-and-destroy": {
+      "termId": "adeptus-mechanicus-stratagem-isolate-and-destroy",
+      "navigation": {
+        "rule": "stratagem-isolate-and-destroy"
+      }
+    },
+    "stratagem-expedited-purge-protocol": {
+      "termId": "adeptus-mechanicus-stratagem-expedited-purge-protocol",
+      "navigation": {
+        "rule": "stratagem-expedited-purge-protocol"
+      }
+    },
+    "stratagem-programmed-withdrawal": {
+      "termId": "adeptus-mechanicus-stratagem-programmed-withdrawal",
+      "navigation": {
+        "rule": "stratagem-programmed-withdrawal"
+      }
+    },
+    "stratagem-bionic-endurance": {
+      "termId": "adeptus-mechanicus-stratagem-bionic-endurance",
+      "navigation": {
+        "rule": "stratagem-bionic-endurance"
+      }
+    },
     "datasheet-objective-scouted": {
       "termId": "adeptus-mechanicus-datasheet-objective-scouted",
       "navigation": {

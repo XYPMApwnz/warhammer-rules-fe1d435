@@ -88,7 +88,15 @@
     const selected = relatedDetachment.value;
     const unitProfile = window.DGRelatedRules.profile(unit);
     relatedContent.querySelectorAll('.stratagem,.enhancement').forEach(card => {
-      card.hidden = !window.DGRelatedRules.matches(card, unitProfile);
+      const result=window.DGRelatedRules.match(card,unitProfile);
+      card.hidden=result.state==='no-match';
+      card.dataset.matchState=result.state;
+      card.querySelector(':scope > .compatibility-status')?.remove();
+      if(result.state==='conditional'){
+        const status=document.createElement('p');status.className='compatibility-status';
+        status.innerHTML='<strong>Conditionally compatible</strong><span>Check the full card conditions</span>';
+        card.prepend(status);
+      }
     });
     const enhancementTab = relatedRules.querySelector('[data-related-tab="enhancements"]');
     const hasEnhancements = [...relatedContent.querySelectorAll('.enhancement')].some(card => !card.hidden);

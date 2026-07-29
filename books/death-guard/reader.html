@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./styles/tokens.css?v=10">
   <link rel="stylesheet" href="./styles/layout.css?v=9">
   <link rel="stylesheet" href="./styles/navigation.css?v=11">
-<link rel="stylesheet" href="./styles/content.css?v=31">
+<link rel="stylesheet" href="./styles/content.css?v=32">
 <link rel="stylesheet" href="./styles/popups.css?v=17">
   <link rel="stylesheet" href="../shared/datasheet-system.css?v=6">
 </head>
@@ -698,11 +698,11 @@
 <p class="field"><b>EFFECT</b><br>Select one CHARACTER model in that unit. Until the end of the phase, its melee weapons have the PRECISION ability.</p>
 </article>
 <article class="stratagem surface" id="core-stratagem-insane-bravery">
-<div class="stratagem-head"><div><h3>INSANE BRAVERY</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
+<div class="stratagem-head"><div><h3><button class="term-button" data-term="core-rule-15-04-insane-bravery">INSANE BRAVERY</button></h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
 <p class="field"><b>WHEN</b><br>Battle-shock step of your Command phase, just before a unit from your army takes a Battle-shock test.</p>
 <p class="field"><b>TARGET</b><br>That unit.</p>
 <p class="field"><b>EFFECT</b><br>That test is automatically successful.</p>
-<p class="field"><b>RESTRICTION</b><br>Once per battle.</p>
+<p class="field" data-source-field="restrictions"><b>RESTRICTIONS</b><br>Once per battle.</p>
 </article>
 <article class="stratagem surface" id="core-stratagem-explosives">
 <div class="stratagem-head"><div><h3>EXPLOSIVES</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
@@ -717,11 +717,11 @@
 <p class="field"><b>EFFECT</b><br>Select one enemy unit within Engagement Range and one model in your unit within Engagement Range of it. Roll a number of D6 equal to that model’s Toughness: each 1 inflicts 1 mortal wound on your unit; each 5+ inflicts 1 mortal wound on the enemy unit, to a maximum of 6.</p>
 </article>
 <article class="stratagem surface" id="core-stratagem-rapid-ingress">
-<div class="stratagem-head"><div><h3>RAPID INGRESS</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
+<div class="stratagem-head"><div><h3><button class="term-button" data-term="core-rule-15-07-rapid-ingress">RAPID INGRESS</button></h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
 <p class="field"><b>WHEN</b><br>End of your opponent’s Movement phase.</p>
 <p class="field"><b>TARGET</b><br>One unit from your army in Strategic Reserves, excluding AIRCRAFT.</p>
 <p class="field"><b>EFFECT</b><br>That unit can make an ingress move.</p>
-<p class="field"><b>RESTRICTION</b><br>Cannot be used during the first battle round.</p>
+<p class="field" data-source-field="restrictions"><b>RESTRICTIONS</b><br>Cannot be used during the first battle round.</p>
 </article>
 <article class="stratagem surface" id="core-stratagem-fire-overwatch">
 <div class="stratagem-head"><div><h3>FIRE OVERWATCH</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
@@ -1413,7 +1413,7 @@
 <p class="field">
 <b>EFFECT</b>
 <br>Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength and with its full wounds remaining.</p>
-<p class="field">
+<p class="field" data-source-field="restrictions">
 <b>RESTRICTIONS</b>
 <br>You can only use this Stratagem once per battle.</p>
 </article>
@@ -9833,14 +9833,14 @@
 <script src="../shared/navigation-targets.js?v=1"></script>
 <script src="../shared/popup-rule-actions.js?v=1"></script>
 <script src="../shared/datasheet-layout.js?v=2"></script>
-<script src="../shared/popup-content.js?v=2"></script>
+<script src="../shared/popup-content.js?v=3"></script>
 <script src="../shared/glossary-autolink.js?v=8"></script>
 <script src="../shared/roster-entities.js?v=1"></script>
 <script src="../shared/roster-parser.js?v=2"></script>
 <script src="../../roster-guides/points-data.js?v=5"></script>
 <script src="../shared/roster-enhancements.js?v=3"></script>
-<script src="../shared/related-rules-matcher.js?v=1"></script>
-<script src="./scripts/related-rules.js?v=7"></script>
+<script src="../shared/related-rules-matcher.js?v=2"></script>
+<script src="./scripts/related-rules.js?v=8"></script>
 <script src="./scripts/roster-filter.js?v=14"></script>
 <script src="./scripts/navigation-controller.js?v=15">
 </script>
@@ -9852,7 +9852,7 @@
 </script>
 <script src="./scripts/ui-controllers.js?v=11">
 </script>
-<script src="./scripts/app.js?v=31">
+<script src="./scripts/app.js?v=32">
 </script>
 </body>
 </html>

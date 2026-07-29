@@ -86,7 +86,7 @@ vm.runInNewContext(dataSource,termContext,{filename:'scripts/data.js'});
 const termKeys=Object.keys(termContext.window.DG_TERMS||{});
 const usedTerms=[...markup.matchAll(/data-term="([^"]+)"/g)].map(match=>match[1]);
 check('term registry has all 408 entries',termKeys.length===408,String(termKeys.length));
-check('all term triggers resolve',usedTerms.every(id=>termKeys.includes(id)),usedTerms.filter(id=>!termKeys.includes(id)).join(', '));
+check('all term triggers resolve',usedTerms.every(id=>termKeys.includes(id)||glossaryRegistry.terms[id]),usedTerms.filter(id=>!termKeys.includes(id)&&!glossaryRegistry.terms[id]).join(', '));
 check('canonical terms remain available to lazy full entries',read('scripts/full-entry-controller.js').includes('const term=this.api.get(id)'));
 const journeyTargets=[...markup.matchAll(/data-journey-target="([^"]+)"/g)].map(match=>match[1]);
 check('all journey targets exist',journeyTargets.every(id=>idSet.has(id)),journeyTargets.filter(id=>!idSet.has(id)).join(', '));
@@ -235,7 +235,7 @@ check('Back has rebuilt-action fallback',journey.includes('this.findRestoredActi
 check('click navigation highlights only after controlled scroll settles',navigation.includes("()=>{this.highlighter.show(targets.highlightTarget);settled?.();}"));
 
 const cssFiles=['styles/tokens.css','styles/layout.css','styles/navigation.css','styles/content.css','styles/popups.css'];
-check('all five style layers are linked',cssFiles.every(file=>html.includes('href="./'+file+(file==='styles/content.css'?'?v=31':file==='styles/popups.css'?'?v=17':file==='styles/navigation.css'?'?v=11':file==='styles/tokens.css'?'?v=10':'?v=9')+'"')));
+check('all five style layers are linked',cssFiles.every(file=>html.includes('href="./'+file+(file==='styles/content.css'?'?v=32':file==='styles/popups.css'?'?v=17':file==='styles/navigation.css'?'?v=11':file==='styles/tokens.css'?'?v=10':'?v=9')+'"')));
 const contentCss=read('styles/content.css');
 check('datasheet quick navigation overrides the shared desktop rail and is phone-only',contentCss.includes('body .unit-card > .local-nav { display: none; }')&&contentCss.includes('@media (max-width: 600px)')&&contentCss.includes('position: sticky;')&&contentCss.includes('overflow-x: auto;'));
 const navigationCss=read('styles/navigation.css');
@@ -277,7 +277,7 @@ check('Contagion Engines uses current MFM disposition',JSON.stringify(bookData).
 check('book uses the unified root manifest',html.includes('href="../../manifest.webmanifest"'));
 check('release service worker owns its cache family',readProject('service-worker.js').includes('key.startsWith(CACHE_PREFIX)')&&readProject('service-worker.js').includes('warhammer-rules-fe1d435-'));
 check('release PWA cache revision is content-derived',readProject('service-worker.js').includes('self.WH40K_CACHE_REVISION'));
-check('book scripts and styles use the current release token',[...cssFiles.filter(file=>!['styles/tokens.css','styles/content.css','styles/navigation.css','styles/popups.css'].includes(file)),...files.filter(file=>!['scripts/roster-filter.js','scripts/navigation-controller.js','scripts/popup-controller.js','scripts/full-entry-controller.js','scripts/journey-controller.js','scripts/ui-controllers.js','scripts/related-rules.js','scripts/app.js'].includes(file))].every(file=>html.includes('./'+file+'?v=9'))&&html.includes('./styles/tokens.css?v=10')&&html.includes('./styles/content.css?v=31')&&html.includes('./styles/navigation.css?v=11')&&html.includes('./styles/popups.css?v=17')&&html.includes('./scripts/roster-filter.js?v=14')&&html.includes('./scripts/navigation-controller.js?v=15')&&html.includes('./scripts/popup-controller.js?v=25')&&html.includes('./scripts/full-entry-controller.js?v=8')&&html.includes('./scripts/journey-controller.js?v=12')&&html.includes('./scripts/ui-controllers.js?v=11')&&html.includes('./scripts/related-rules.js?v=7')&&html.includes('./scripts/app.js?v=31'));
+check('book scripts and styles use the current release token',[...cssFiles.filter(file=>!['styles/tokens.css','styles/content.css','styles/navigation.css','styles/popups.css'].includes(file)),...files.filter(file=>!['scripts/roster-filter.js','scripts/navigation-controller.js','scripts/popup-controller.js','scripts/full-entry-controller.js','scripts/journey-controller.js','scripts/ui-controllers.js','scripts/related-rules.js','scripts/app.js'].includes(file))].every(file=>html.includes('./'+file+'?v=9'))&&html.includes('./styles/tokens.css?v=10')&&html.includes('./styles/content.css?v=32')&&html.includes('./styles/navigation.css?v=11')&&html.includes('./styles/popups.css?v=17')&&html.includes('./scripts/roster-filter.js?v=14')&&html.includes('./scripts/navigation-controller.js?v=15')&&html.includes('./scripts/popup-controller.js?v=25')&&html.includes('./scripts/full-entry-controller.js?v=8')&&html.includes('./scripts/journey-controller.js?v=12')&&html.includes('./scripts/ui-controllers.js?v=11')&&html.includes('./scripts/related-rules.js?v=8')&&html.includes('./scripts/app.js?v=32'));
 check('book loads the shared navigation target resolver',html.includes('src="../shared/navigation-targets.js?v=1"'));
 check('book loads the shared datasheet design',html.includes('href="../shared/datasheet-system.css?v=6"'));
 check('book loads the shared datasheet layout',html.includes('src="../shared/datasheet-layout.js?v=2"'));

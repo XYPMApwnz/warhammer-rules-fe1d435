@@ -25,6 +25,7 @@ function profilesFrom(reader){
 }
 
 const sorted=values=>[...values].sort();
+const supportedSubjects=new Set(['unit','model','objective']);
 const friendlyRoles=rule=>(rule.roles||rule.targets||[]).filter(role=>role.side==='friendly'||role.side==='either');
 const selectorOf=role=>role.selector||role;
 const restrictive=rule=>friendlyRoles(rule).some(role=>{
@@ -68,8 +69,15 @@ for(const entry of fs.readdirSync(booksRoot,{withFileTypes:true})){
     const ruleId=normalizeRuleId(stratagem.id),rule=eligibility[stratagem.id]||eligibility[ruleId];
     assert.ok(rule,`${config.id}/${stratagem.title}: missing explicit eligibility`);
     assert.ok(friendlyRoles(rule).length,`${config.id}/${stratagem.title}: no friendly target role`);
+    for(const role of rule.roles||rule.targets||[])assert.ok(supportedSubjects.has(role.subject||'unit'),`${config.id}/${stratagem.title}: unsupported subject ${role.subject}`);
     assert.ok(profiles.some(profile=>matcher.matches(rule,applyGrants(profile,ruleId))),`${config.id}/${stratagem.title}: no real datasheet, granted-keyword or Attached-unit candidate satisfies its target`);
     if(restrictive(rule)&&profiles.some(profile=>!matcher.matches(rule,applyGrants(profile,ruleId))))negatives++;
+    if(stratagem.restrictions){
+      const card=[...related.matchAll(new RegExp(`<article class="stratagem surface"[^>]*data-rule-id="${stratagem.id}"[\\s\\S]*?<\\/article>`,'g'))][0]?.[0]||'';
+      assert.equal((card.match(/data-source-field="restrictions"/g)||[]).length,1,`${config.id}/${stratagem.title}: RESTRICTIONS must be rendered exactly once`);
+      const renderedText=card.replace(/<[^>]+>/g,' ').replace(/&quot;/g,'"').replace(/&amp;/g,'&').replace(/&#39;|&apos;/g,"'").replace(/\s+/g,' ');
+      assert.ok(renderedText.includes(stratagem.restrictions.replace(/\s+/g,' ')),`${config.id}/${stratagem.title}: rendered RESTRICTIONS differ from source`);
+    }
   }
   const relatedEnhancementIds=[...related.matchAll(/<article class="enhancement surface"[^>]*data-rule-id="([^"]+)"/g)].map(match=>match[1]);
   assert.deepEqual(new Set(Object.keys(enhancementEligibility).map(normalizeEnhancementId)),new Set(relatedEnhancementIds.map(normalizeEnhancementId)),`${config.id}: explicit Enhancement eligibility does not match generated Related Rules inventory`);
@@ -88,6 +96,10 @@ for(const entry of fs.readdirSync(booksRoot,{withFileTypes:true})){
 const exactContext=(unitId,keywords)=>({unitId,keywords:keywordSet(keywords),intrinsicKeywords:keywordSet(keywords),abilities:new Set()});
 assert.equal(matcher.matches({v:1,roles:[{side:'friendly',subject:'unit',selector:{allKeywords:['MONSTER']}}]},exactContext('unit-test',['MONSTROUS'])),false,'keyword substrings must not satisfy exact keyword selectors');
 assert.equal(matcher.matches({v:1,roles:[{side:'friendly',subject:'unit',selector:{unitIds:['unit-ork-boy']}}]},exactContext('unit-ork-boyz',['INFANTRY'])),false,'unit-id substrings must not satisfy exact unit selectors');
+assert.equal(matcher.match({v:1,roles:[{side:'friendly',subject:'bearer',selector:{allKeywords:['CHARACTER']}}]},exactContext('unit-test',['CHARACTER'])).state,'no-match','unknown subjects must fail closed');
+const attachedModel=exactContext('unit-leader',['CHARACTER']);
+attachedModel.candidates=[{unitId:'unit-bodyguard',keywords:keywordSet(['CHARACTER','MONSTER']),attached:true}];
+assert.equal(matcher.matches({v:1,roles:[{side:'friendly',subject:'model',selector:{allKeywords:['MONSTER']}}]},attachedModel),false,'subject:model must not inherit Attached Unit union keywords');
 
 {
   const dgRoot=path.join(booksRoot,'death-guard'),dgReader=fs.readFileSync(path.join(dgRoot,'reader.html'),'utf8');
@@ -119,6 +131,7 @@ assert.equal(matcher.matches({v:1,roles:[{side:'friendly',subject:'unit',selecto
   let negativeCount=0;
   for(const id of cardIds){
     const rule=eligibility[id];
+    for(const role of rule.roles||rule.targets||[])assert.ok(supportedSubjects.has(role.subject||'unit'),`Death Guard/${id}: unsupported subject ${role.subject}`);
     assert.ok(expanded.some(profile=>matcher.matches(rule,withGrants(profile,id))),`Death Guard/${id}: no real datasheet or Attached-unit candidate satisfies its contract`);
     if(restrictive(rule)&&expanded.some(profile=>!matcher.matches(rule,withGrants(profile,id))))negativeCount++;
   }

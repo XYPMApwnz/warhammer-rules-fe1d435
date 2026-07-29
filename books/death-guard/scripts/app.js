@@ -13,14 +13,24 @@
   function initRelatedRules(){
     const layer=document.createElement('div');
     layer.className='related-rules-layer';layer.hidden=true;
-    layer.innerHTML='<section class="related-rules-dialog" role="dialog" aria-modal="true" aria-labelledby="relatedRulesTitle"><header><div><span>Datasheet tools</span><h2 id="relatedRulesTitle">Related rules</h2></div><button type="button" class="related-rules-close" aria-label="Close">&times;</button></header><div class="related-rules-body"><p>Loading rules&hellip;</p></div></section>';
+    layer.innerHTML='<section class="related-rules-dialog" role="dialog" aria-modal="true" aria-labelledby="relatedRulesTitle"><header><div><span>Datasheet tools</span><h2 id="relatedRulesTitle">Compatible Stratagems &amp; Enhancements</h2></div><button type="button" class="related-rules-close" aria-label="Close">&times;</button></header><div class="related-rules-body"><p>Loading rules&hellip;</p></div></section>';
     document.body.append(layer);
     const body=layer.querySelector('.related-rules-body'),title=layer.querySelector('h2');
     let unit=null,kind='stratagems',detachment='all',filterMenu,tabs,content,empty,sections;
     const filter=()=>{
       if(!content||!unit)return;
       const unitProfile=window.DGRelatedRules.profile(unit);
-      content.querySelectorAll('.stratagem,.enhancement').forEach(card=>card.hidden=!window.DGRelatedRules.matches(card,unitProfile));
+      content.querySelectorAll('.stratagem,.enhancement').forEach(card=>{
+        const result=window.DGRelatedRules.match(card,unitProfile);
+        card.hidden=result.state==='no-match';
+        card.dataset.matchState=result.state;
+        card.querySelector(':scope > .compatibility-status')?.remove();
+        if(result.state==='conditional'){
+          const status=document.createElement('p');status.className='compatibility-status';
+          status.innerHTML='<strong>Conditionally compatible</strong><span>Check the full card conditions</span>';
+          card.prepend(status);
+        }
+      });
       const hasEnhancements=[...content.querySelectorAll('.enhancement')].some(card=>!card.hidden);
       const enhancementTab=tabs.querySelector('[data-kind="enhancements"]');
       enhancementTab.hidden=!hasEnhancements;
@@ -43,7 +53,7 @@
     });
     document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!layer.hidden)close();});
     async function open(current,state={}){
-      unit=current;layer.dataset.unitId=current.id;kind=state.kind||'stratagems';title.textContent=current.querySelector('.unit-name')?.textContent.trim()||'Related rules';
+      unit=current;layer.dataset.unitId=current.id;kind=state.kind||'stratagems';title.textContent=`${current.querySelector('.unit-name')?.textContent.trim()||'Datasheet'} · Compatible Stratagems & Enhancements`;
       layer.hidden=false;document.documentElement.classList.add('related-rules-open');
       if(!content){
         try{

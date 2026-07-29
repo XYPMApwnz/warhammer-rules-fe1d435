@@ -20,6 +20,23 @@ const cleanRuleText=value=>String(value||'')
   .map(line=>line.replace(/[ \t]{2,}/g,' ').trim())
   .filter(Boolean)
   .join('\n');
+const semanticAnomalies=value=>{
+  const text=String(value||''),issues=[];
+  const known=[
+    ['joined keyword and unit',/\b(?:Monsteror|Vehicleunit)\b/i],
+    ['split word',/\b(?:warrior s|fight ing|target s|r eactions|unt il)\b/i],
+    ['broken numeric modifier',/\b(?:bearer|wearer) of 1\b/i],
+    ['page header or footer fragment',/(?:\bCORE ABILITIES\s*\+\+|\+\+[^+\n]{3,}\+\+\s*\d{1,3}\s*$)/i],
+    ['mojibake or replacement character',/\uFFFD|\u00C3|\u00C2|\u00E2\u20AC/],
+    ['duplicated word',/\b([A-Za-z]{3,})\s+\1\b/]
+  ];
+  for(const [issue,pattern] of known)if(pattern.test(text))issues.push(issue);
+  for(const match of text.matchAll(/\b([A-Z]{2,})\s+([a-z]{2,})\b/g))if(match[1].toLowerCase()===match[2])issues.push('duplicated keyword noun');
+  if(!text.trimEnd().endsWith('…'))for(const [open,close] of [['(',')'],['[',']'],['{','}']]){
+    if([...text].filter(char=>char===open).length!==[...text].filter(char=>char===close).length)issues.push(`unbalanced ${open}${close}`);
+  }
+  return issues;
+};
 const concise=(value,max=280)=>{
   const text=clean(value).replace(/\s+/g,' ').trim();
   if(text.length<=max)return text;
@@ -56,7 +73,7 @@ const amEffectiveCodexDetachments={...amCodexDetachments,detachments:amCodexDeta
   return {...detachment,rule:{...detachment.rule,text:parity.rule.text},enhancements:detachment.enhancements.map(item=>({...item,text:enhancements.get(item.title)||item.text}))};
 })};
 const amDatasheets=readJson(path.join(root,'books','adeptus-mechanicus','content','adeptus-mechanicus-codex-datasheets.en.json'));
-const genericArmyBooks=fs.readdirSync(path.join(root,'books'),{withFileTypes:true})
+const allGenericArmyBooks=fs.readdirSync(path.join(root,'books'),{withFileTypes:true})
   .filter(entry=>entry.isDirectory())
   .flatMap(entry=>{
     const bookRoot=path.join(root,'books',entry.name),configFile=path.join(bookRoot,'book.config.json'),runtimeFile=path.join(bookRoot,'scripts','data.js');
@@ -65,6 +82,7 @@ const genericArmyBooks=fs.readdirSync(path.join(root,'books'),{withFileTypes:tru
     if(!config.sources?.relatedRules||!fs.existsSync(packFile))return[];
     return [{id:config.id,title:config.title,root:bookRoot,config,runtime:loadWindow(runtimeFile).DG_TERMS,pack:readJson(packFile)}];
   });
+const genericArmyBooks=allGenericArmyBooks.filter(book=>book.id==='tyranids');
 const coreData=loadWindow(path.join(root,'books','core-rules','content','core-rules.en.js')).CORE_RULES;
 const coreCurated=coreData.terms;
 const coreSource=loadWindow(path.join(root,'books','core-rules','content','core-rules.source.en.js')).CORE_PDF_SOURCE;
@@ -85,12 +103,19 @@ const registry=new Map();
 const aliases={};
 const contexts=Object.fromEntries(contextIds.map(bookId=>[bookId,{}]));
 const variants=[];
+const summaryVariants=[];
 const titleIndex=new Map();
 
 function addTerm(term,sourceId,localId){
   const existing=registry.get(term.id);
   if(existing){
-    if(clean(existing.definition.en)!==clean(term.definition.en))variants.push({termId:term.id,selectedSource:existing.canonicalSource.documentId,rejectedSource:sourceId,selectedDefinition:existing.definition.en,rejectedDefinition:term.definition.en,status:'resolved-by-policy'});
+    if(clean(existing.definition.en)!==clean(term.definition.en))variants.push({
+      termId:term.id,
+      selectedSource:existing.canonicalSource.documentId,
+      selectedCandidateDefinition:existing.definition.en,
+      rejectedSource:sourceId,
+      rejectedCandidateDefinition:term.definition.en
+    });
     existing.sourceRefs=[...new Set([...(existing.sourceRefs||[]),sourceId])];
   }else{
     registry.set(term.id,{...term,sourceRefs:[sourceId]});
@@ -263,7 +288,13 @@ for(const [localId,entry] of Object.entries(amRuntime)){
   }
   else{
     if(localId!==id)aliases[localId]=id;
-    if(clean(registry.get(id).summary.en)!==clean(entry.summary))variants.push({termId:id,selectedSource:registry.get(id).canonicalSource.documentId,rejectedSource:'adeptus-mechanicus',selectedDefinition:registry.get(id).summary.en,rejectedDefinition:entry.summary,status:'resolved-by-policy'});
+    if(clean(registry.get(id).summary.en)!==clean(entry.summary))summaryVariants.push({
+      termId:id,
+      selectedSource:registry.get(id).canonicalSource.documentId,
+      selectedCandidateSummary:registry.get(id).summary.en,
+      rejectedSource:'adeptus-mechanicus',
+      rejectedCandidateSummary:entry.summary
+    });
   }
   addContext('adeptus-mechanicus',localId,id,entry,resolved?{parameters:resolved.parameters}:{});
 }
@@ -528,7 +559,9 @@ function humanizeCoreReferences(value){
       .replace(new RegExp(`(${labelPattern})\\s+${codePattern}(?=$|[^0-9])`,'gi'),'$1')
       .replace(new RegExp(`(^|[^0-9.])${codePattern}(?=$|[^0-9.])`,'g'),(_,prefix)=>`${prefix}${label}`);
   }
-  return text.replace(/\s*\((?:03|04|05|15|16|24)\)/g,'');
+  return text
+    .replace(/\s*\((?:03|04|05|15|16|24)\)/g,'')
+    .replace(/\bRevived Revived and Adding Models to a Unit\b/g,'Revived and Adding Models to a Unit');
 }
 for(const term of registry.values()){
   if(term.summary?.en)term.summary.en=concise(humanizeCoreReferences(term.summary.en));
@@ -548,10 +581,43 @@ for(const [bookId,records] of Object.entries(contexts))for(const record of Objec
 }
 for(const term of registry.values())if(term.fullRulePath&&!hasAnchor(term.fullRulePath))throw new Error(`Broken fullRulePath for ${term.id}: ${term.fullRulePath}`);
 const aliasCandidates=[...titleIndex.entries()].filter(([,ids])=>new Set(ids).size>1).map(([normalizedTitle,ids])=>({normalizedTitle,termIds:[...new Set(ids)],status:'review-required'}));
+const duplicateIndex=new Map();
+for(const term of registry.values()){
+  const marker=`${normalTitle(term.title.en)}\n${clean(term.definition.en).toLowerCase()}`;
+  if(!duplicateIndex.has(marker))duplicateIndex.set(marker,[]);
+  duplicateIndex.get(marker).push(term.id);
+}
+const duplicateCandidates=[...duplicateIndex.values()].filter(termIds=>termIds.length>1).map(termIds=>({termIds,status:'review-required'}));
 const registryDocument={schema:1,language:'en',terms:Object.fromEntries([...registry].sort(([a],[b])=>a.localeCompare(b)))};
 const contextDocuments={};
 for(const [bookId,records] of Object.entries(contexts))contextDocuments[bookId]={schema:1,bookId,terms:records};
-const report={schema:1,counts:{terms:registry.size,aliases:Object.keys(aliases).length,variants:variants.length,aliasCandidates:aliasCandidates.length,keywordCandidates:keywordCandidates.length},variants,aliasCandidates,keywordCandidates};
+const definitionCandidates=variants.flatMap(variant=>[
+  {termId:variant.termId,candidateSource:variant.selectedSource,candidateDefinition:variant.selectedCandidateDefinition},
+  {termId:variant.termId,candidateSource:variant.rejectedSource,candidateDefinition:variant.rejectedCandidateDefinition}
+]).filter((candidate,index,items)=>items.findIndex(other=>other.termId===candidate.termId&&other.candidateSource===candidate.candidateSource&&clean(other.candidateDefinition)===clean(candidate.candidateDefinition))===index)
+  .map(candidate=>{
+    const term=registry.get(candidate.termId),finalDefinition=term.definition.en;
+    const resolution=clean(candidate.candidateDefinition)===clean(finalDefinition)
+      ?'selected'
+      :candidate.candidateSource===term.canonicalSource.documentId?'normalized':'rejected';
+    return {...candidate,finalDefinition,resolution};
+  });
+const summaryCandidates=summaryVariants.flatMap(variant=>[
+  {termId:variant.termId,candidateSource:variant.selectedSource,candidateSummary:variant.selectedCandidateSummary},
+  {termId:variant.termId,candidateSource:variant.rejectedSource,candidateSummary:variant.rejectedCandidateSummary}
+]).filter((candidate,index,items)=>items.findIndex(other=>other.termId===candidate.termId&&other.candidateSource===candidate.candidateSource&&clean(other.candidateSummary)===clean(candidate.candidateSummary))===index)
+  .map(candidate=>{
+    const term=registry.get(candidate.termId),finalSummary=term.summary.en;
+    const resolution=clean(candidate.candidateSummary)===clean(finalSummary)
+      ?'selected'
+      :candidate.candidateSource===term.summarySource?.documentId||candidate.candidateSource===term.canonicalSource.documentId?'normalized':'rejected';
+    return {...candidate,finalSummary,resolution};
+  });
+const semanticWarnings=[
+  ...definitionCandidates.flatMap(candidate=>semanticAnomalies(candidate.candidateDefinition).map(issue=>({termId:candidate.termId,field:'definition',candidateSource:candidate.candidateSource,issue,fragment:concise(candidate.candidateDefinition,180)}))),
+  ...summaryCandidates.flatMap(candidate=>semanticAnomalies(candidate.candidateSummary).map(issue=>({termId:candidate.termId,field:'summary',candidateSource:candidate.candidateSource,issue,fragment:concise(candidate.candidateSummary,180)})))
+];
+const report={schema:2,counts:{terms:registry.size,aliases:Object.keys(aliases).length,definitionCandidates:definitionCandidates.length,summaryCandidates:summaryCandidates.length,semanticWarnings:semanticWarnings.length,aliasCandidates:aliasCandidates.length,duplicateCandidates:duplicateCandidates.length,keywordCandidates:keywordCandidates.length},definitionCandidates,summaryCandidates,semanticWarnings,aliasCandidates,duplicateCandidates,keywordCandidates};
 
 writeJson(path.join(glossaryRoot,'registry.en.json'),registryDocument);
 writeJson(path.join(glossaryRoot,'aliases.en.json'),{schema:1,language:'en',aliases});
@@ -566,7 +632,7 @@ fs.writeFileSync(path.join(glossaryRoot,'generated','glossary.en.js'),runtime+ru
 const coreReaderFiles=fs.readdirSync(path.join(root,'books','core-rules','reader'))
   .filter(file=>file.endsWith('.html')||file==='styles.css'||file==='app.js'||file==='search-index.json')
   .map(file=>`books/core-rules/reader/${file}`);
-const genericArmyCacheInputs=genericArmyBooks.flatMap(book=>[
+const genericArmyCacheInputs=allGenericArmyBooks.flatMap(book=>[
   `books/${book.id}/index.html`,`books/${book.id}/reader.html`,`books/${book.id}/styles/tokens.css`,`books/${book.id}/styles/book.css`,
   `books/${book.id}/scripts/data.js`,`books/${book.id}/scripts/app.js`,`books/${book.id}/mobile/index.html`,`books/${book.id}/mobile/related-rules.inc`
 ]);
@@ -584,4 +650,4 @@ const cacheInputs=[
 ].filter(file=>fs.existsSync(path.join(root,file)));
 const cacheRevision=hash(JSON.stringify({glossary:runtimePayload.contentHash,files:cacheInputs.map(file=>[file,hash(fs.readFileSync(path.join(root,file)))])})).slice(0,16);
 fs.writeFileSync(path.join(glossaryRoot,'generated','cache-revision.js'),`self.WH40K_CACHE_REVISION='${cacheRevision}';\n`);
-console.log(`Mega Glossary: ${registry.size} terms, ${Object.keys(aliases).length} aliases, ${variants.length} resolved variants, ${aliasCandidates.length} title collisions.`);
+console.log(`Mega Glossary: ${registry.size} terms, ${Object.keys(aliases).length} aliases, ${definitionCandidates.length} definition candidates, ${aliasCandidates.length} title collisions.`);

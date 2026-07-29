@@ -6,9 +6,29 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const repoRoot=path.resolve(root,'..');
 const registry=JSON.parse(fs.readFileSync(path.join(root,'registry.en.json'),'utf8'));
 const aliases=JSON.parse(fs.readFileSync(path.join(root,'aliases.en.json'),'utf8')).aliases;
+const report=JSON.parse(fs.readFileSync(path.join(root,'generated','conflict-report.json'),'utf8'));
 const errors=[];
 const ids=new Set(Object.keys(registry.terms));
 const presentations=new Set(['atomic','article','profile','reference','metadata']);
+const publicScopes=new Set(['global','death-guard','adeptus-mechanicus','tyranids']);
+const clean=value=>String(value||'').replace(/\s+/g,' ').trim();
+function semanticAnomalies(value){
+  const text=String(value||''),issues=[];
+  const known=[
+    ['joined keyword and unit',/\b(?:Monsteror|Vehicleunit)\b/i],
+    ['split word',/\b(?:warrior s|fight ing|target s|r eactions|unt il)\b/i],
+    ['broken numeric modifier',/\b(?:bearer|wearer) of 1\b/i],
+    ['page header or footer fragment',/(?:\bCORE ABILITIES\s*\+\+|\+\+[^+\n]{3,}\+\+\s*\d{1,3}\s*$)/i],
+    ['mojibake or replacement character',/\uFFFD|\u00C3|\u00C2|\u00E2\u20AC/],
+    ['duplicated word',/\b([A-Za-z]{3,})\s+\1\b/]
+  ];
+  for(const [issue,pattern] of known)if(pattern.test(text))issues.push(issue);
+  for(const match of text.matchAll(/\b([A-Z]{2,})\s+([a-z]{2,})\b/g))if(match[1].toLowerCase()===match[2])issues.push('duplicated keyword noun');
+  if(!text.trimEnd().endsWith('…'))for(const [open,close] of [['(',')'],['[',']'],['{','}']]){
+    if([...text].filter(char=>char===open).length!==[...text].filter(char=>char===close).length)issues.push(`unbalanced ${open}${close}`);
+  }
+  return issues;
+}
 function checkFullRulePath(owner,value){
   if(!value)return;
   if(value.startsWith('/')||/^[a-z]+:/i.test(value)||value.includes('..')){errors.push(`${owner}: unsafe fullRulePath ${value}`);return;}
@@ -17,11 +37,13 @@ function checkFullRulePath(owner,value){
   if(anchor&&!fs.readFileSync(target,'utf8').includes(`id="${anchor}"`))errors.push(`${owner}: missing fullRulePath anchor ${value}`);
 }
 for(const [id,term] of Object.entries(registry.terms)){
+  if(!publicScopes.has(term.scope))errors.push(`${id}: unpublished scope ${term.scope} leaked into the public registry`);
   for(const field of ['id','kind','scope','edition','language','title','summary','definition','canonicalSource','status'])if(term[field]==null)errors.push(`${id}: missing ${field}`);
   const summary=String(term.summary?.en||'').replace(/\s+/g,' ').trim();
   const definition=String(term.definition?.en||'').replace(/\s+/g,' ').trim();
   if(!summary)errors.push(`${id}: empty popup summary`);
   if(!definition)errors.push(`${id}: empty full definition`);
+  for(const [field,value] of [['summary',term.summary?.en],['definition',term.definition?.en]])for(const issue of semanticAnomalies(value))errors.push(`${id}.${field}: ${issue}`);
   if(/\be\.g\./i.test(`${summary} ${definition}`))errors.push(`${id}: use “for example” instead of “e.g.”`);
   if(summary.length>280)errors.push(`${id}: popup summary is longer than 280 characters`);
   if(definition.length>320&&summary===definition)errors.push(`${id}: long definition is duplicated as popup summary`);
@@ -48,13 +70,30 @@ for(const [alias,target] of Object.entries(aliases)){
   if(!ids.has(target))errors.push(`${alias}: unknown alias target ${target}`);
   if(aliases[target])errors.push(`${alias}: alias chain through ${target}`);
 }
-for(const bookId of ['core-rules','death-guard','adeptus-mechanicus']){
+for(const bookId of ['core-rules','death-guard','adeptus-mechanicus','tyranids']){
   const context=JSON.parse(fs.readFileSync(path.join(root,'contexts',`${bookId}.json`),'utf8'));
   for(const [localId,entry] of Object.entries(context.terms)){
     if(!ids.has(aliases[entry.termId]||entry.termId))errors.push(`${bookId}/${localId}: unknown term ${entry.termId}`);
     for(const field of ['title','summary','definition'])if(field in entry)errors.push(`${bookId}/${localId}: context contains canonical field ${field}`);
     checkFullRulePath(`${bookId}/${localId}`,entry.navigation?.fullRulePath);
   }
+}
+if(report.schema!==2)errors.push(`conflict report: expected schema 2, got ${report.schema}`);
+for(const candidate of report.definitionCandidates||[]){
+  const final=registry.terms[candidate.termId]?.definition?.en;
+  if(final==null)errors.push(`${candidate.termId}: conflict report points to a missing term`);
+  else if(clean(candidate.finalDefinition)!==clean(final))errors.push(`${candidate.termId}: conflict report finalDefinition differs from registry`);
+  if(!['selected','normalized','rejected'].includes(candidate.resolution))errors.push(`${candidate.termId}: invalid conflict resolution ${candidate.resolution}`);
+}
+for(const candidate of report.summaryCandidates||[]){
+  const final=registry.terms[candidate.termId]?.summary?.en;
+  if(final==null)errors.push(`${candidate.termId}: summary report points to a missing term`);
+  else if(clean(candidate.finalSummary)!==clean(final))errors.push(`${candidate.termId}: conflict report finalSummary differs from registry`);
+  if(!['selected','normalized','rejected'].includes(candidate.resolution))errors.push(`${candidate.termId}: invalid summary resolution ${candidate.resolution}`);
+}
+for(const duplicate of report.duplicateCandidates||[]){
+  if(duplicate.termIds.length<2)errors.push('conflict report: duplicate candidate has fewer than two terms');
+  for(const id of duplicate.termIds)if(!ids.has(id))errors.push(`conflict report: duplicate candidate points to missing ${id}`);
 }
 if(errors.length){console.error(errors.join('\n'));process.exit(1);}
 console.log(`Mega Glossary QA passed: ${ids.size} canonical terms, ${Object.keys(aliases).length} aliases.`);

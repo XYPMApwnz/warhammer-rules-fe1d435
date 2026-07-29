@@ -15,6 +15,7 @@ const card=(html,id)=>{
   assert.notEqual(end,-1,`${id}: card is not closed`);
   return html.slice(start,end+10);
 };
+const cardCount=(html,id)=>(html.match(new RegExp(`<article\\b[^>]*(?:data-rule-id|id)="${id}"`,'g'))||[]).length;
 
 const registry=Object.values(json('glossary/registry.en.json').terms);
 const sources=[
@@ -39,8 +40,55 @@ for(const [bookId,sourceFile,readerFile,relatedFile] of sources){
   }
 }
 
+const dgSource=json('books/death-guard/content/death-guard-rules.en.json');
 const dgReader=read('books/death-guard/reader.html'),dgRelated=read('books/death-guard/mobile/related-rules.inc');
-for(const id of ['core-stratagem-insane-bravery','core-stratagem-rapid-ingress','stratagem-persistent-pests']){
+const dgMobileFiles=fs.readdirSync(path.join(root,'books/death-guard/mobile')).filter(file=>file.endsWith('.html'));
+const dgMobilePages=dgMobileFiles.map(file=>[file,read(path.join('books/death-guard/mobile',file))]);
+const dgDetachments=dgSource.sections.filter(section=>section.id.startsWith('detachment-'));
+const dgStratagems=dgDetachments.flatMap(detachment=>
+  (detachment.subsections||[]).flatMap(subsection=>subsection.blocks||[])
+).filter(block=>block.id?.startsWith('stratagem-'));
+assert.equal(dgDetachments.length,9,'death-guard: published Detachment inventory changed');
+assert.equal(dgStratagems.length,45,'death-guard: published Stratagem inventory must contain 45 cards');
+assert.equal(new Set(dgStratagems.map(rule=>rule.id)).size,dgStratagems.length,'death-guard: duplicate Stratagem source IDs');
+assert.deepEqual(dgStratagems.filter(rule=>(rule.lines||[]).some(line=>/^RESTRICTIONS?:/i.test(line))).map(rule=>rule.id),[
+  'stratagem-persistent-pests'
+],'death-guard: restriction-bearing Stratagem inventory changed');
+
+for(const rule of dgStratagems){
+  const restrictionLine=(rule.lines||[]).find(line=>/^RESTRICTIONS?:/i.test(line));
+  const restriction=restrictionLine?.replace(/^RESTRICTIONS?:\s*/i,'')||'';
+  const expectedCount=restriction?1:0;
+  for(const [surface,html] of [['desktop',dgReader],['Related Rules',dgRelated]]){
+    assert.equal(cardCount(html,rule.id),1,`death-guard/${rule.id}: ${surface} must contain exactly one card`);
+    const rendered=card(html,rule.id);
+    assert.equal(count(rendered,'data-source-field="restrictions"'),expectedCount,`death-guard/${rule.id}: ${surface} RESTRICTIONS cardinality`);
+    if(restriction)assert.equal(count(clean(rendered),clean(restriction)),1,`death-guard/${rule.id}: ${surface} changed or duplicated RESTRICTIONS`);
+  }
+  const mobileMatches=dgMobilePages.filter(([,html])=>cardCount(html,rule.id));
+  assert.equal(mobileMatches.length,1,`death-guard/${rule.id}: Phone Mode must contain the card on exactly one page`);
+  assert.equal(cardCount(mobileMatches[0][1],rule.id),1,`death-guard/${rule.id}: Phone Mode duplicated the card`);
+  const mobileCard=card(mobileMatches[0][1],rule.id);
+  assert.equal(count(mobileCard,'data-source-field="restrictions"'),expectedCount,`death-guard/${rule.id}: Phone Mode RESTRICTIONS cardinality`);
+  if(restriction)assert.equal(count(clean(mobileCard),clean(restriction)),1,`death-guard/${rule.id}: Phone Mode changed or duplicated RESTRICTIONS`);
+
+  const sourceTerms=dgSource.glossary.filter(term=>term.sectionId===rule.id);
+  assert.equal(sourceTerms.length,1,`death-guard/${rule.id}: popup/Full Entry must have exactly one source term`);
+  const sourceTerm=sourceTerms[0];
+  assert.equal(sourceTerm.kind,'stratagem',`death-guard/${rule.id}: popup term kind`);
+  for(const rendered of [card(dgReader,rule.id),card(dgRelated,rule.id),mobileCard]){
+    assert.equal(count(rendered,`data-term="${sourceTerm.id}"`),1,`death-guard/${rule.id}: card must link its popup term exactly once`);
+  }
+  assert.equal((sourceTerm.full.match(/\bRESTRICTIONS?:/gi)||[]).length,expectedCount,`death-guard/${rule.id}: popup/Full Entry RESTRICTIONS cardinality`);
+  if(restriction)assert.equal(count(clean(sourceTerm.full),clean(restriction)),1,`death-guard/${rule.id}: popup/Full Entry changed or duplicated RESTRICTIONS`);
+  const registryTerms=registry.filter(term=>term.scope==='death-guard'&&term.kind==='stratagem'&&term.title?.en.toLowerCase()===sourceTerm.title.toLowerCase());
+  assert.equal(registryTerms.length,1,`death-guard/${rule.id}: Mega Glossary must have exactly one term`);
+  const registryTerm=registryTerms[0];
+  assert.equal((registryTerm.definition.en.match(/\bRESTRICTIONS?:/gi)||[]).length,expectedCount,`death-guard/${rule.id}: Mega Glossary RESTRICTIONS cardinality`);
+  if(restriction)assert.equal(count(clean(registryTerm.definition.en),clean(restriction)),1,`death-guard/${rule.id}: Mega Glossary changed or duplicated RESTRICTIONS`);
+}
+
+for(const id of ['core-stratagem-insane-bravery','core-stratagem-rapid-ingress']){
   assert.equal(count(card(dgReader,id),'data-source-field="restrictions"'),1,`death-guard/${id}: desktop restriction contract`);
   assert.equal(count(card(dgRelated,id),'data-source-field="restrictions"'),1,`death-guard/${id}: Related Rules restriction contract`);
 }

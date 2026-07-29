@@ -78,6 +78,14 @@ for(const bookId of ['core-rules','death-guard','adeptus-mechanicus','tyranids']
     checkFullRulePath(`${bookId}/${localId}`,entry.navigation?.fullRulePath);
   }
 }
+const tyranidsCoreAbilities=['deep-strike','fights-first','hover','infiltrators','lance','lone-operative','stealth'];
+const tyranidsContext=JSON.parse(fs.readFileSync(path.join(root,'contexts','tyranids.json'),'utf8')).terms;
+for(const slug of tyranidsCoreAbilities){
+  const localId=`tyranids-ability-${slug}`,coreId=`core-${slug}`;
+  if(ids.has(localId))errors.push(`${localId}: duplicated canonical Core ability`);
+  if(aliases[localId]!==coreId)errors.push(`${localId}: must alias ${coreId}`);
+  if(tyranidsContext[localId]?.termId!==coreId)errors.push(`${localId}: Tyranids context must use ${coreId}`);
+}
 if(report.schema!==2)errors.push(`conflict report: expected schema 2, got ${report.schema}`);
 for(const candidate of report.definitionCandidates||[]){
   const final=registry.terms[candidate.termId]?.definition?.en;

@@ -281,7 +281,7 @@
       }
     },
     "tyranids-ability-deep-strike": {
-      "termId": "tyranids-ability-deep-strike",
+      "termId": "core-deep-strike",
       "navigation": {
         "glossary": "glossary-tyranids-ability-deep-strike",
         "rule": "unit-gargoyles",
@@ -832,7 +832,7 @@
       }
     },
     "tyranids-ability-lone-operative": {
-      "termId": "tyranids-ability-lone-operative",
+      "termId": "core-lone-operative",
       "navigation": {
         "glossary": "glossary-tyranids-ability-lone-operative",
         "rule": "unit-parasite-of-mortrex",
@@ -847,7 +847,7 @@
       }
     },
     "tyranids-ability-stealth": {
-      "termId": "tyranids-ability-stealth",
+      "termId": "core-stealth",
       "navigation": {
         "glossary": "glossary-tyranids-ability-stealth",
         "rule": "unit-parasite-of-mortrex",
@@ -1222,7 +1222,7 @@
       }
     },
     "tyranids-ability-fights-first": {
-      "termId": "tyranids-ability-fights-first",
+      "termId": "core-fights-first",
       "navigation": {
         "glossary": "glossary-tyranids-ability-fights-first",
         "rule": "unit-deathleaper",
@@ -1236,7 +1236,7 @@
       }
     },
     "tyranids-ability-infiltrators": {
-      "termId": "tyranids-ability-infiltrators",
+      "termId": "core-infiltrators",
       "navigation": {
         "glossary": "glossary-tyranids-ability-infiltrators",
         "rule": "unit-deathleaper",
@@ -2897,7 +2897,7 @@
       }
     },
     "tyranids-ability-hover": {
-      "termId": "tyranids-ability-hover",
+      "termId": "core-hover",
       "navigation": {
         "glossary": "glossary-tyranids-ability-hover",
         "rule": "unit-harridan",
@@ -3115,7 +3115,7 @@
       }
     },
     "tyranids-ability-lance": {
-      "termId": "tyranids-ability-lance",
+      "termId": "core-lance",
       "navigation": {
         "glossary": "glossary-tyranids-ability-lance",
         "rule": "unit-malanthrope",

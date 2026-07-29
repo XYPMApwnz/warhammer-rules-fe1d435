@@ -1,12 +1,12 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 1385,
-    "aliases": 692,
+    "terms": 1378,
+    "aliases": 699,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 68,
+    "aliasCandidates": 61,
     "duplicateCandidates": 5,
     "keywordCandidates": 16
   },
@@ -936,46 +936,6 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "deep-strike",
-      "termIds": [
-        "core-deep-strike",
-        "tyranids-ability-deep-strike"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "fights-first",
-      "termIds": [
-        "core-fights-first",
-        "tyranids-ability-fights-first"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "hover",
-      "termIds": [
-        "core-hover",
-        "tyranids-ability-hover"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "infiltrators",
-      "termIds": [
-        "core-infiltrators",
-        "tyranids-ability-infiltrators"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "lance",
-      "termIds": [
-        "core-lance",
-        "tyranids-ability-lance"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "leader",
       "termIds": [
         "core-leader",
@@ -996,22 +956,6 @@
       "termIds": [
         "core-lethal-hits",
         "tyranids-ability-lethal-hits"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "lone-operative",
-      "termIds": [
-        "core-lone-operative",
-        "tyranids-ability-lone-operative"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "stealth",
-      "termIds": [
-        "core-stealth",
-        "tyranids-ability-stealth"
       ],
       "status": "review-required"
     },

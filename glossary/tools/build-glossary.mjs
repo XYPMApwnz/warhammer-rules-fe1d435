@@ -362,6 +362,19 @@ for(const datasheet of amDatasheets.datasheets||[]){
   addContext('adeptus-mechanicus',datasheet.id,id,{datasheet:datasheet.id,statline:`${datasheet.id.replace(/^unit-/,'')}-profile`});
 }
 
+const coreAbilitiesByTitle=new Map([...registry.values()]
+  .filter(term=>term.kind==='core-ability')
+  .map(term=>[normalTitle(term.title.en),term]));
+const coreAbilityTextById=new Map(coreDigital.records
+  .filter(rule=>rule.code.startsWith('24.'))
+  .map(rule=>[digitalCoreId(rule),recordText(rule)]));
+const isCoreAbilityCopy=(term,text)=>{
+  const candidate=clean(text).toLowerCase();
+  return [term.definition.en,coreAbilityTextById.get(term.id)]
+    .filter(Boolean)
+    .some(value=>{const canonical=clean(value).toLowerCase();return canonical===candidate||canonical.endsWith(candidate);});
+};
+
 for(const book of genericArmyBooks){
   const officialTitles=new Set(book.pack.detachments.flatMap(detachment=>[
     detachment.rule?.title,
@@ -372,9 +385,17 @@ for(const book of genericArmyBooks){
     const official=officialTitles.has(normalTitle(entry.title));
     const prefix=`${book.id}-`,isWeapon=localId.startsWith(`${prefix}weapon-`);
     const profile=isWeapon?weaponProfile(entry.summary):null;
+    const kind=isWeapon?'weapon':localId.startsWith(`${prefix}stratagem-`)?'stratagem':localId.startsWith(`${prefix}enhancement-`)?'enhancement':localId.startsWith(`${prefix}detachment-rule-`)?'detachment-rule':'datasheet-ability';
+    const coreAbility=kind==='datasheet-ability'?coreAbilitiesByTitle.get(normalTitle(entry.title)):null;
+    if(coreAbility&&isCoreAbilityCopy(coreAbility,entry.full||entry.summary)){
+      aliases[localId]=coreAbility.id;
+      coreAbility.sourceRefs=[...new Set([...(coreAbility.sourceRefs||[]),book.id])];
+      addContext(book.id,localId,coreAbility.id,entry);
+      continue;
+    }
     addTerm({
       id:localId,
-      kind:isWeapon?'weapon':localId.startsWith(`${prefix}stratagem-`)?'stratagem':localId.startsWith(`${prefix}enhancement-`)?'enhancement':localId.startsWith(`${prefix}detachment-rule-`)?'detachment-rule':'datasheet-ability',
+      kind,
       scope:book.id,edition:'11e',language:'en',title:{en:entry.title},summary:{en:concise(entry.summary)},definition:{en:clean(entry.full||entry.summary)},
       structured:profile?{weapon:profile}:{},presentation:profile?'profile':undefined,aliases:[],related:[],
       canonicalSource:{documentId:official?`${book.id}-faction-pack-v1.0`:`${book.id}-codex-transcription`,revision:official?'1.0':'pinned BSData',locator:entry.rule||entry.datasheet||localId},

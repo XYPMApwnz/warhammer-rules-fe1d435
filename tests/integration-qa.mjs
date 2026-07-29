@@ -25,6 +25,20 @@ for(const file of ['service-worker.js','glossary-return.js','books/shared/naviga
   catch(error){check(file+' syntax',false,error.message);}
 }
 
+try{
+  let installHandler,installPromise,inFlight=0,peakInFlight=0,cachedFiles=0;
+  const context={
+    importScripts(){},
+    caches:{open:async()=>({add:async()=>{inFlight+=1;peakInFlight=Math.max(peakInFlight,inFlight);await new Promise(resolve=>setImmediate(resolve));inFlight-=1;cachedFiles+=1;}})},
+    self:{WH40K_CACHE_REVISION:'qa',addEventListener(type,handler){if(type==='install')installHandler=handler;},skipWaiting(){}},
+    fetch(){},URL
+  };
+  vm.runInNewContext(sw,context);
+  installHandler({waitUntil(promise){installPromise=promise;}});
+  await installPromise;
+  check('service worker limits app-shell download concurrency',cachedFiles>100&&peakInFlight===4,`${cachedFiles} files, peak ${peakInFlight}`);
+}catch(error){check('service worker limits app-shell download concurrency',false,error.message);}
+
 for(const [slug,book] of Object.entries(books)){
   const html=read(`books/${slug}/${book.reader||'index.html'}`);
   const app=read(`books/${slug}/${book.app}`);
@@ -109,7 +123,7 @@ check('owned Enhancements are derived without mutating Army Book data',read('boo
 check('Enhancement UI reports only failed automatic effects',!read('books/shared/roster-enhancements.js').match(/Profile applied|Melee rule applied|Ability upgraded|Keyword applied/)&&read('books/shared/roster-enhancements.js').includes('Effect could not be applied automatically.')&&read('books/shared/roster-enhancements.js').includes('No matching melee weapon profiles were found.'));
 check('Core Rules source pages are cached only on demand',!sw.includes('Array.from({length:88}')&&sw.includes('cached || fetchAndCache(request, event)'));
 check('Core Rules routed chapters and search are available offline',coreReaderFiles.length===27&&coreReaderFiles.every(file=>sw.includes(`./books/core-rules/reader/${file}`))&&sw.includes('./books/core-rules/reader/search-index.json'));
-check('service worker installs the complete app shell atomically',sw.includes('Promise.all(APP_SHELL.map((url) => cache.add(url)))')&&!sw.includes('Promise.allSettled(APP_SHELL'));
+check('service worker installs the complete app shell atomically',sw.includes('event.waitUntil(cacheAppShell().then(() => self.skipWaiting()))')&&!sw.includes('Promise.allSettled(APP_SHELL'));
 const shellSource=sw.match(/const APP_SHELL = \[([\s\S]*?)\n\];/)?.[1]||'';
 const missingShellFiles=[...shellSource.matchAll(/"\.\/([^"?]*)(?:\?[^\"]*)?"/g)].map(match=>match[1]).map(file=>file.endsWith('/')?file+'index.html':file).filter(file=>!exists(file));
 check('every literal app-shell asset exists',missingShellFiles.length===0,missingShellFiles.join(', '));

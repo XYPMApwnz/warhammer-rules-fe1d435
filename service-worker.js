@@ -1,6 +1,7 @@
 importScripts("./glossary/generated/cache-revision.js");
 const CACHE_PREFIX = "warhammer-rules-fe1d435-";
 const CACHE_NAME = `${CACHE_PREFIX}${self.WH40K_CACHE_REVISION || "fallback"}`;
+const APP_SHELL_BATCH_SIZE = 4;
 const LIBRARY_FALLBACK = "./index.html";
 const ROSTER_GUIDES_FALLBACK = "./roster-guides/index.html";
 const DEATH_GUARD_FALLBACK = "./books/death-guard/index.html";
@@ -180,12 +181,15 @@ const APP_SHELL = [
   ,"./books/shared/army-book-app.js?v=7"
 ];
 
+async function cacheAppShell() {
+  const cache = await caches.open(CACHE_NAME);
+  for (let index = 0; index < APP_SHELL.length; index += APP_SHELL_BATCH_SIZE) {
+    await Promise.all(APP_SHELL.slice(index, index + APP_SHELL_BATCH_SIZE).map((url) => cache.add(url)));
+  }
+}
+
 self.addEventListener("install", (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => Promise.all(APP_SHELL.map((url) => cache.add(url))))
-      .then(() => self.skipWaiting())
-  );
+  event.waitUntil(cacheAppShell().then(() => self.skipWaiting()));
 });
 
 self.addEventListener("activate", (event) => {

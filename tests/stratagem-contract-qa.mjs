@@ -61,7 +61,7 @@ for(const file of [
 }
 
 const css=read('books/death-guard/styles/content.css');
-assert.match(css,/detachment-part\[id\$="-stratagems"\][\s\S]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/);
+assert.match(css,/\.stratagem-grid\s*\{[^}]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/);
 assert.match(css,/full-related-content[\s\S]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/);
 assert.match(css,/@media\s*\(max-width:\s*900px\)[^{]*\{[\s\S]*grid-template-columns:\s*1fr/);
 for(const bookId of ['death-guard','adeptus-mechanicus','tyranids']){

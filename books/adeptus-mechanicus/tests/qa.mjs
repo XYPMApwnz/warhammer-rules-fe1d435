@@ -154,7 +154,7 @@ check('glossary autolinking precedes navigation geometry',read('scripts/app.js')
 check('shared datasheet statlines keep every characteristic on one row',/\.unit-card \.statline\s*\{[^}]*display:\s*flex/.test(sharedDatasheetCss));
 check('mobile weapon characteristics use one six-column row',sharedDatasheetCss.includes('grid-template-columns: repeat(6, minmax(0, 1fr))')&&(html.match(/data-label="(?:Range|A|BS|WS|S|AP|D)"/g)||[]).length===rules.datasheets.reduce((sum,unit)=>sum+unit.weapons.length,0)*6);
 check('mobile layout avoids content-visibility geometry jumps',!deathGuardRead('styles/content.css').includes('content-visibility: auto'));
-check('desktop stratagem cards use the DG responsive grid',deathGuardRead('styles/content.css').includes('.detachment-part[id$="-stratagems"]'));
+check('desktop stratagem cards use the shared responsive grid',deathGuardRead('styles/content.css').includes('.stratagem-grid')&&html.includes('class="stratagem-grid"'));
 check('navigation cancellation remains wired',navSource.includes("root.style.scrollBehavior='auto'")&&navSource.includes("behavior:'auto'"));
 check('navigation is loaded from the Death Guard runtime contract',html.includes('../death-guard/scripts/navigation-controller.js'));
 check('entry router preserves the DG desktop/phone contract',entry.includes('../death-guard/scripts/view-router.js')&&entry.includes('./reader.html?view=full')&&entry.includes('./mobile/index.html?view=mobile'));

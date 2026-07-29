@@ -2,7 +2,7 @@
       <h2>Virulent Vectorium</h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="virulent-vectorium-stratagems" data-track="virulent-vectorium-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
-<div class="detachment-content">
+<div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-putrid-detonation">
 <div class="stratagem-head">
 <div>
@@ -169,7 +169,7 @@
       <h2>Mortarion’s Hammer</h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="mortarions-hammer-stratagems" data-track="mortarions-hammer-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
-<div class="detachment-content">
+<div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-blighted-land">
 <div class="stratagem-head">
 <div>
@@ -336,7 +336,7 @@
       <h2>Champions of Contagion</h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="champions-of-contagion-stratagems" data-track="champions-of-contagion-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
-<div class="detachment-content">
+<div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-blessings-of-filth">
 <div class="stratagem-head">
 <div>
@@ -503,7 +503,7 @@
       <h2>Tallyband Summoners</h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="tallyband-summoners-stratagems" data-track="tallyband-summoners-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
-<div class="detachment-content">
+<div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-persistent-pests">
 <div class="stratagem-head">
 <div>
@@ -673,7 +673,7 @@
       <h2>Shamblerot Vectorium</h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="shamblerot-vectorium-stratagems" data-track="shamblerot-vectorium-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
-<div class="detachment-content">
+<div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-grip-of-the-walking-pox">
 <div class="stratagem-head">
 <div>
@@ -840,7 +840,7 @@
       <h2>Death Lord’s Chosen</h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="death-lords-chosen-stratagems" data-track="death-lords-chosen-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
-<div class="detachment-content">
+<div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-blooming-pestilence">
 <div class="stratagem-head">
 <div>
@@ -1007,7 +1007,7 @@
       <h2>Contagion Engines</h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="contagion-engines-stratagems" data-track="contagion-engines-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
-<div class="detachment-content">
+<div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-fresh-vectors">
 <div class="stratagem-head">
 <div>
@@ -1095,7 +1095,7 @@
       <h2>Flyblown Host</h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="flyblown-host-stratagems" data-track="flyblown-host-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
-<div class="detachment-content">
+<div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-nauseating-paroxysms">
 <div class="stratagem-head">
 <div>
@@ -1185,7 +1185,7 @@
       <h2>Paragons of Putrescence</h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="paragons-of-putrescence-stratagems" data-track="paragons-of-putrescence-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
-<div class="detachment-content">
+<div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-territorial-infection">
 <div class="stratagem-head">
 <div>
@@ -1275,7 +1275,7 @@
       <div class="related-kind" data-related-kind="stratagems"><section class="content-group" id="core-stratagems" data-track="core-stratagems">
 <h3 class="category-title">Core Stratagems</h3>
 <p class="lead">Universal Stratagems available to every army. Datasheet tools only show the cards the selected unit can legally target.</p>
-<div class="detachment-content core-stratagem-grid">
+<div class="detachment-content stratagem-grid core-stratagem-grid">
 <article class="stratagem surface" id="core-stratagem-command-re-roll">
 <div class="stratagem-head"><div><h3>COMMAND RE-ROLL</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
 <p class="field"><b>WHEN</b><br>Any phase, just after you make an Advance, Charge, Damage, Hazard, Hit, Save or Wound roll for a unit from your army, or a roll to determine the number of attacks made with a weapon equipped by a model in that unit.</p>

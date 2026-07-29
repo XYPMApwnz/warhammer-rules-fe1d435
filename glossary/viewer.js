@@ -15,6 +15,11 @@
   const scopeLabel=term=>scopeLabels[term.scope]||humanize(term.scope);
   const displayTitle=term=>term.title.en.replace(/^\[(.+)\]$/,'$1');
   const normalize=value=>String(value||'').toLocaleLowerCase().replace(/\s+/g,' ').trim();
+  const titleCounts=new Map();
+  for(const term of terms){const title=normalize(displayTitle(term));titleCounts.set(title,(titleCounts.get(title)||0)+1);}
+  const technicalAlias=/(?:^|-)(unit|weapon|ability|stratagem|enhancement|detachment)-/;
+  const repeatsDefinition=(summary,definition)=>{const quick=normalize(summary),full=normalize(definition);return quick&&full.startsWith(quick);};
+  const duplicateQualifier=term=>{const same=terms.filter(other=>normalize(displayTitle(other))===normalize(displayTitle(term)));if(new Set(same.map(other=>other.scope)).size>1)return scopeLabel(term);return humanize(String(term.canonicalSource?.locator||kindLabel(term)).replace(/^unit-/,''));};
   if(returnRecord){libraryBack.href=returnRecord.path;libraryBack.textContent='← Return to popup';libraryBack.addEventListener('click',()=>window.WHGlossaryReturn?.setRestoreMode('automatic'));}
   document.getElementById('termCount').textContent=api.counts.terms;
   document.getElementById('aliasCount').textContent=api.counts.aliases;
@@ -24,21 +29,21 @@
   function renderFilters(){filters.replaceChildren(...categories.map(filterButton));}
   function score(term,query){
     if(!query)return 0;
-    const title=normalize(displayTitle(term)),aliases=(term.aliases||[]).map(normalize),words=query.split(' ').filter(Boolean),summary=normalize(term.summary?.en),definition=normalize(term.definition?.en);
+    const title=normalize(displayTitle(term)),aliases=(term.aliases||[]).map(normalize),searchAliases=aliases.filter(alias=>!technicalAlias.test(alias)||query.includes('-')),words=query.split(' ').filter(Boolean),summary=normalize(term.summary?.en),definition=normalize(term.definition?.en);
     if(title===query)return 0;
     if(title.startsWith(query))return 1;
     if(aliases.includes(query))return 2;
-    if(aliases.some(alias=>alias.startsWith(query)))return 3;
+    if(searchAliases.some(alias=>alias.startsWith(query)))return 3;
     if(words.every(word=>title.includes(word)))return 4;
     if(summary.includes(query))return 5;
     if(definition.includes(query))return 6;
     return Number.POSITIVE_INFINITY;
   }
-  function visibleTerms(){const query=normalize(search.value);return terms.map(term=>({term,score:score(term,query)})).filter(item=>(category==='all'||item.term.kind===category)&&Number.isFinite(item.score)).sort((a,b)=>a.score-b.score||displayTitle(a.term).localeCompare(displayTitle(b.term))).map(item=>item.term);}
+  function visibleTerms(){const query=normalize(search.value),ranked=terms.map(term=>({term,score:score(term,query)})).filter(item=>(category==='all'||item.term.kind===category)&&Number.isFinite(item.score));const titleMatches=ranked.filter(item=>item.score<5);return(query&&titleMatches.length?titleMatches:ranked).sort((a,b)=>a.score-b.score||displayTitle(a.term).localeCompare(displayTitle(b.term))).map(item=>item.term);}
   function renderList(){
     const visible=visibleTerms(),shown=visible.slice(0,visibleLimit);
     resultCount.textContent=`${shown.length} of ${visible.length} entries shown`;
-    const nodes=shown.map(term=>{const node=document.createElement('button');node.type='button';node.className='term-button';node.classList.toggle('active',term.id===selected);const title=document.createElement('strong');title.textContent=displayTitle(term);const meta=document.createElement('small');meta.textContent=`${kindLabel(term)} · ${scopeLabel(term)}`;node.append(title,meta);node.addEventListener('click',()=>select(term.id));return node;});
+    const nodes=shown.map(term=>{const node=document.createElement('button');node.type='button';node.className='term-button';node.classList.toggle('active',term.id===selected);const title=document.createElement('strong');title.textContent=displayTitle(term);if(titleCounts.get(normalize(displayTitle(term)))>1){const qualifier=document.createElement('span');qualifier.className='term-qualifier';qualifier.textContent=duplicateQualifier(term);title.append(qualifier);}const meta=document.createElement('small');meta.textContent=`${kindLabel(term)} · ${scopeLabel(term)}`;node.append(title,meta);node.addEventListener('click',()=>select(term.id));return node;});
     if(shown.length<visible.length){const more=document.createElement('button');more.type='button';more.className='term-button load-more';more.textContent=`Show ${Math.min(120,visible.length-shown.length)} more`;more.addEventListener('click',()=>{visibleLimit+=120;renderList();});nodes.push(more);}
     list.replaceChildren(...nodes);
   }
@@ -82,7 +87,7 @@
     const another=document.createElement('button');another.type='button';another.className='search-another';another.textContent='← Search another term';another.addEventListener('click',()=>showCatalogue(true,true));
     const categoryLine=document.createElement('p'),title=document.createElement('h2');categoryLine.className='kind';categoryLine.textContent=`${kindLabel(term)} · ${scopeLabel(term)}`;title.textContent=displayTitle(term);title.dataset.term=term.id;detail.append(another,categoryLine,title);
     const summaryText=term.summary?.en||'',definitionText=term.definition?.en||'';
-    if(summaryText&&!placeholder.test(summaryText)){const quick=renderDefinition(summaryText);quick.classList.add('summary');detail.append(sectionLabel('Quick rule'),quick);}
+    if(summaryText&&!placeholder.test(summaryText)&&!repeatsDefinition(summaryText,definitionText)){const quick=renderDefinition(summaryText);quick.classList.add('summary');detail.append(sectionLabel('Quick rule'),quick);}
     const profile=renderProfile(term.structured);if(profile)detail.append(sectionLabel('Profile'),profile);
     if(definitionText&&!placeholder.test(definitionText)&&term.presentation!=='profile'&&normalize(definitionText)!==normalize(summaryText))detail.append(sectionLabel('Full rule'),renderDefinition(definitionText));
     if(term.fullRulePath){const action=document.createElement('a');action.className='full-rule-action';action.href=new URL(`../${term.fullRulePath.replace(/^\/+/, '')}`,location.href).href;action.textContent='Open full rule →';action.addEventListener('click',()=>window.WHGlossaryReturn?.setRestoreMode('manual'));detail.append(action);}

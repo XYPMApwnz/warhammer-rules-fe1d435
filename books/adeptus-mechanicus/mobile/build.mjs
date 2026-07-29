@@ -73,8 +73,8 @@ if(detachments.length!==10||units.length!==38)throw new Error(`Expected 10 detac
 
 const staticRoutes=[
   {file:'index.html',id:'start',title:'Start',type:'start'},
-  {file:'updates.html',id:'updates',title:'Updates',type:'section'},
-  {file:'army-rules.html',id:'core-rules',title:'Army Rules',type:'section'}
+  {file:'army-rules.html',id:'core-rules',title:'Army Rules',type:'section'},
+  {file:'updates.html',id:'updates',title:'Updates',type:'section'}
 ];
 const routes=[...staticRoutes,...detachments,...units];
 
@@ -97,7 +97,7 @@ function relatedRules(){
 const link=(route,active)=>`<a href="./${route.file}"${route.id===active?' aria-current="page"':''}>${route.title}</a>`;
 function navigation(route){
   const unitCategory=categories.find(category=>category.id===route.category);
-  return `${staticRoutes.map(item=>link(item,route.id)).join('')}
+  return `${staticRoutes.slice(0,2).map(item=>link(item,route.id)).join('')}
     <details name="mobile-primary"${route.type==='detachment'?' open':''}>
       <summary>Detachments <span>${detachments.length}</span></summary>
       <div class="mobile-nav-branch">${detachments.map(item=>link(item,route.id)).join('')}</div>
@@ -108,7 +108,7 @@ function navigation(route){
         <summary>${category.title} <span>${category.units.length}</span></summary>
         <div class="mobile-nav-branch">${category.units.map(item=>link(item,route.id)).join('')}</div>
       </details>`).join('')}</div>
-    </details>`;
+    </details>${link(staticRoutes[2],route.id)}`;
 }
 
 function content(route){

@@ -57,8 +57,8 @@ if (detachments.length !== 9 || units.length !== 41) {
 
 const staticRoutes = [
   { file: 'index.html', id: 'start', title: 'Start', type: 'start' },
-  { file: 'updates.html', id: 'updates', title: 'Updates', type: 'section' },
-  { file: 'army-rules.html', id: 'core-rules', title: 'Army Rules', type: 'section' }
+  { file: 'army-rules.html', id: 'core-rules', title: 'Army Rules', type: 'section' },
+  { file: 'updates.html', id: 'updates', title: 'Updates', type: 'section' }
 ];
 const routes = [...staticRoutes, ...detachments, ...units];
 
@@ -83,7 +83,7 @@ function link(route, active) {
 
 function navigation(route) {
   const unitCategory = categories.find(category => category.id === route.category);
-  return `${link(staticRoutes[0], route.id)}${link(staticRoutes[1], route.id)}${link(staticRoutes[2], route.id)}
+  return `${link(staticRoutes[0], route.id)}${link(staticRoutes[1], route.id)}
     <details name="mobile-primary"${route.type === 'detachment' ? ' open' : ''}>
       <summary>Detachments <span>${detachments.length}</span></summary>
       <div class="mobile-nav-branch">${detachments.map(item => link(item, route.id)).join('')}</div>
@@ -94,7 +94,7 @@ function navigation(route) {
         <summary>${category.title} <span>${category.units.length}</span></summary>
         <div class="mobile-nav-branch">${category.units.map(item => link(item, route.id)).join('')}</div>
       </details>`).join('')}</div>
-    </details>`;
+    </details>${link(staticRoutes[2], route.id)}`;
 }
 
 function startPage() {

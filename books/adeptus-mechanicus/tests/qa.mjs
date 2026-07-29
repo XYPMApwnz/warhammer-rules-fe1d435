@@ -99,7 +99,7 @@ check('HTML IDs are unique',ids.length===idSet.size,`${ids.length}/${idSet.size}
 check('all navigation targets exist',navTargets.every(id=>idSet.has(id)),navTargets.filter(id=>!idSet.has(id)).join(', '));
 check('all navigation targets are tracked',navTargets.every(id=>trackTargets.includes(id)),navTargets.filter(id=>!trackTargets.includes(id)).join(', '));
 check('navigation depth stays at three',Math.max(...depths)===3);
-check('top-level navigation matches the DG contract',JSON.stringify(topLevelTargets)===JSON.stringify(['start','updates','core-rules','detachments','datasheets']),topLevelTargets.join(', '));
+check('top-level navigation matches the DG contract',JSON.stringify(topLevelTargets)===JSON.stringify(['start','core-rules','detachments','datasheets','updates']),topLevelTargets.join(', '));
 check('datasheets use category then unit hierarchy',['datasheets-epic-heroes','datasheets-characters','datasheets-battleline','datasheets-dedicated-transports','datasheets-other','datasheets-warhammer-legends'].every(id=>navTargets.includes(id))&&rules.datasheets.every(unit=>markup.includes(`data-nav-id="${unit.id}" data-nav-depth="3"`)));
 check('detachment navigation uses singular Enhancement label',(markup.match(/data-nav-depth="3"[^>]*>[\s\S]*?data-nav-target="[^"]+-enhancements">Enhancement<\/button>/g)||[]).length===allDetachments.length);
 check('all Journey targets resolve',journeyTargets.every(id=>idSet.has(id)));

@@ -57,8 +57,8 @@ const armyRulesContent=source.includes('id="army-rules"')?extract('section','arm
   `<section class="section" id="army-rules"><h2 class="section-title">Army Rules</h2><p class="lead">Current official replacements for the Tyranids army rules.</p>${extract('section','update-army-shadow-in-the-warp')}${extract('section','update-army-synapse')}</section>`;
 const staticRoutes=[
   {file:'index.html',id:'start',title:'Start',type:'start'},
-  {file:'updates.html',id:'updates',title:'Updates',type:'section'},
-  {file:'army-rules.html',id:'army-rules',title:'Army Rules',type:'army-rules'}
+  {file:'army-rules.html',id:'army-rules',title:'Army Rules',type:'army-rules'},
+  {file:'updates.html',id:'updates',title:'Updates',type:'section'}
 ];
 const routes=[...staticRoutes,...detachments,...units];
 
@@ -81,7 +81,7 @@ function relatedRules(){
 const link=(route,active)=>`<a href="./${route.file}"${route.id===active?' aria-current="page"':''}>${route.title}</a>`;
 function navigation(route){
   const unitCategory=categories.find(category=>category.id===route.category);
-  return `${staticRoutes.map(item=>link(item,route.id)).join('')}<details name="mobile-primary"${route.type==='detachment'?' open':''}><summary>Detachments <span>${detachments.length}</span></summary><div class="mobile-nav-branch">${detachments.map(item=>link(item,route.id)).join('')}</div></details><details name="mobile-primary"${route.type==='unit'?' open':''}><summary>Datasheets <span>${units.length}</span></summary><div class="mobile-nav-branch mobile-unit-groups">${categories.map(category=>`<details${category===unitCategory?' open':''}><summary>${category.title} <span>${category.units.length}</span></summary><div class="mobile-nav-branch">${category.units.map(item=>link(item,route.id)).join('')}</div></details>`).join('')}</div></details>`;
+  return `${staticRoutes.slice(0,2).map(item=>link(item,route.id)).join('')}<details name="mobile-primary"${route.type==='detachment'?' open':''}><summary>Detachments <span>${detachments.length}</span></summary><div class="mobile-nav-branch">${detachments.map(item=>link(item,route.id)).join('')}</div></details><details name="mobile-primary"${route.type==='unit'?' open':''}><summary>Datasheets <span>${units.length}</span></summary><div class="mobile-nav-branch mobile-unit-groups">${categories.map(category=>`<details${category===unitCategory?' open':''}><summary>${category.title} <span>${category.units.length}</span></summary><div class="mobile-nav-branch">${category.units.map(item=>link(item,route.id)).join('')}</div></details>`).join('')}</div></details>${link(staticRoutes[2],route.id)}`;
 }
 
 function page(route){

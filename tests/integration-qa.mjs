@@ -56,6 +56,16 @@ for(const slug of generatedArmyBooks){
   check(`${slug} has a generated glossary context`,Object.keys(context.terms||{}).length>0);
   check(`${slug} has a dedicated offline fallback`,sw.includes(`const ${fallbackName}`)&&sw.includes(`/books/${slug}/`));
 }
+for(const slug of new Set(['death-guard','adeptus-mechanicus',...generatedArmyBooks])){
+  const html=read(`books/${slug}/reader.html`);
+  const toc=html.slice(html.indexOf('id="tocTree"'),html.indexOf('</nav>'));
+  const document=html.slice(html.indexOf('<main'));
+  check(`${slug} keeps Updates below Datasheets`,toc.indexOf('data-nav-id="datasheets"')<toc.indexOf('data-nav-id="updates"')&&document.indexOf('id="datasheets" data-track="datasheets"')<document.indexOf('id="updates" data-track="updates"'));
+}
+for(const slug of ['death-guard','adeptus-mechanicus','tyranids']){
+  const mobile=read(`books/${slug}/mobile/index.html`);
+  check(`${slug} Phone view keeps Updates below Datasheets`,mobile.indexOf('<summary>Datasheets')<mobile.indexOf('href="./updates.html"'));
+}
 const generatedArmyRuntime=read('books/shared/army-book-app.js');
 const generatedArmyBuilder=read('books/shared/tools/build-army-book.mjs');
 check('generated books force Phone view independently of viewport width',generatedArmyRuntime.includes("params.get('view')==='mobile'")&&generatedArmyRuntime.includes('Number.MAX_SAFE_INTEGER')&&generatedArmyRuntime.includes("phoneMode?'Desktop / iPad view':'Phone view'"));

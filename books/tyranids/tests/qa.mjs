@@ -15,6 +15,8 @@ const relatedRules=readJson('content/tyranids-related-rules.en.json');
 const codexParity=readJson('content/tyranids-codex-parity.en.json');
 const codexWargear=readJson('content/tyranids-codex-wargear.en.json');
 const reader=fs.readFileSync(path.join(root,'reader.html'),'utf8');
+const app=fs.readFileSync(path.join(root,'scripts','app.js'),'utf8');
+const bookCss=fs.readFileSync(path.join(root,'styles','book.css'),'utf8');
 const related=fs.readFileSync(path.join(root,'mobile','related-rules.inc'),'utf8');
 const context=JSON.parse(fs.readFileSync(path.join(repo,'glossary','contexts','tyranids.json'),'utf8'));
 
@@ -92,7 +94,15 @@ for(const detachment of pack.detachments){
 assert.doesNotMatch(reader,/death-guard-cover|CODEX REGISTER \/\/ XIV|Technical placeholder/);
 assert.match(reader,/Reference in verification/);
 assert.match(reader,/army-related-rules\.js/);
-assert.match(reader,/army-book-app\.js/);
+assert.doesNotMatch(reader,/army-book-app\.js/,'Tyranids must not load the generic monolithic Army Book runtime');
+assert.doesNotMatch(reader,/unit-source-state/,'per-datasheet source telemetry must not clutter the playable reader');
+assert.match(app,/new window\.DGNavigation\(\)/);
+assert.match(app,/new window\.DGPopups\(terms,fullEntry\)/);
+assert.match(app,/WHArmyRelatedRules\?\.install/);
+assert.match(app,/new URL\('\.\/mobile\/'\+route/);
+assert.doesNotMatch(app,/WHArmyBook\.install/);
+assert.match(bookCss,/tyranids-cover-800\.webp/,'the supplied Tyranids artwork must be used by the desktop hero');
+assert.doesNotMatch(bookCss,/html\[data-view="mobile"\]/,'Phone Mode must use focused pages, not the desktop monolith');
 assert.ok(Object.keys(context.terms).length>=300);
 assert.equal(context.terms['tyranids-detachment-rule-mindhunger'].navigation.rule,'detachment-ambush-predators');
 

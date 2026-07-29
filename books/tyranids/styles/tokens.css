@@ -59,9 +59,8 @@ body {
   margin: 0;
   color: var(--ink);
   background:
-    radial-gradient(circle at 84% 7%, rgba(113, 65, 123, .24), transparent 31rem),
-    radial-gradient(circle at 8% 32%, rgba(22, 133, 140, .15), transparent 27rem),
-    repeating-radial-gradient(ellipse at 15% 20%, transparent 0 32px, rgba(130, 155, 84, .025) 33px 35px, transparent 36px 68px),
+    linear-gradient(135deg, rgba(113,65,123,.16), transparent 28rem),
+    linear-gradient(315deg, rgba(22,133,140,.09), transparent 36rem),
     var(--underhive);
   font: var(--body-size)/1.55 system-ui, -apple-system, "Segoe UI", sans-serif;
   text-rendering: optimizeLegibility;
@@ -72,8 +71,8 @@ body::before {
   z-index: -1;
   inset: 0;
   pointer-events: none;
-  opacity: .14;
-  background: repeating-linear-gradient(104deg, transparent 0 17px, rgba(255,255,255,.025) 18px, transparent 19px 37px);
+  opacity: .08;
+  background:linear-gradient(104deg,transparent 0 48%,rgba(255,255,255,.035) 50%,transparent 52%);
 }
 button, input { font: inherit; color: inherit; }
 button, a { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }

@@ -17,8 +17,13 @@ const codexWargear=readJson('content/tyranids-codex-wargear.en.json');
 const reader=fs.readFileSync(path.join(root,'reader.html'),'utf8');
 const app=fs.readFileSync(path.join(root,'scripts','app.js'),'utf8');
 const bookCss=fs.readFileSync(path.join(root,'styles','book.css'),'utf8');
+const sharedContentCss=fs.readFileSync(path.join(repo,'books','death-guard','styles','content.css'),'utf8');
 const related=fs.readFileSync(path.join(root,'mobile','related-rules.inc'),'utf8');
 const context=JSON.parse(fs.readFileSync(path.join(repo,'glossary','contexts','tyranids.json'),'utf8'));
+const allUnits=[...codex.datasheets,...codex.imperialArmour,...codex.legends];
+const decode=value=>value.replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&lt;','<').replaceAll('&gt;','>');
+const significantLines=value=>decode(value).split(/\r?\n/).map(line=>line.replace(/\s+/g,' ').trim()).filter(Boolean);
+const unitMarkup=(html,id)=>{const opener=new RegExp(`<article class="unit-card[^"]*" id="${id}"`).exec(html);assert.ok(opener,`${id}: rendered unit card missing`);const start=opener.index,next=html.indexOf('<article class="unit-card',start+1);return html.slice(start,next<0?html.length:next);};
 
 assert.equal(pack.meta.pageCount,31);
 assert.equal(pack.detachments.length,4);
@@ -84,6 +89,22 @@ assert.ok(points.enhancements.some(item=>item.title==='Instinctive Defence'));
 assert.ok(reader.includes('Composition & Wargear'));
 assert.ok(reader.includes('Wargear Options'));
 assert.doesNotMatch(reader,/Wargear options and replacement limits are not yet verified/);
+for(const record of codexWargear.units){
+  const datasheet=allUnits.find(item=>titleKey(item.title)===titleKey(record.title));
+  assert.ok(datasheet,`${record.title}: missing datasheet for Wargear parity`);
+  const expected=record.wargear.map(significantLines);
+  const desktop=[...unitMarkup(reader,datasheet.id).matchAll(/<li class="wargear-option">([\s\S]*?)<\/li>/g)].map(match=>significantLines(match[1]));
+  assert.deepEqual(desktop,expected,`${record.title}: desktop Wargear lines differ from source`);
+  const mobile=fs.readFileSync(path.join(root,'mobile',`${datasheet.id.replace(/^unit-/,'')}.html`),'utf8');
+  const phone=[...mobile.matchAll(/<li class="wargear-option">([\s\S]*?)<\/li>/g)].map(match=>significantLines(match[1]));
+  assert.deepEqual(phone,expected,`${record.title}: Phone Mode Wargear lines differ from source`);
+}
+for(const title of ['Carnifexes','Termagants','Tyrannofex']){
+  assert.ok(codexWargear.units.some(item=>item.title===title),`${title}: required Wargear fixture missing`);
+}
+assert.ok(codexWargear.units.some(item=>item.wargear.length===0),'empty Wargear fixture missing');
+assert.ok(codexWargear.units.some(item=>item.wargear.some(option=>option.trim()==='None')),'"None" Wargear fixture missing');
+assert.match(sharedContentCss,/\.wargear-option\s*\{[^}]*white-space:\s*pre-line[^}]*overflow-wrap:\s*anywhere/);
 for(const detachment of pack.detachments){
   assert.match(reader,new RegExp(`id="detachment-${detachment.id}"`));
   assert.match(reader,new RegExp(`data-nav-id="${detachment.id}-rule" data-nav-depth="3"`));

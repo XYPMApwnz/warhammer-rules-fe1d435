@@ -47,6 +47,10 @@ try{
   if(!await page.evaluate(()=>Boolean(navigator.serviceWorker.controller)))await page.reload();
   assert.equal(await page.evaluate(()=>Boolean(navigator.serviceWorker.controller)),true,'Library must be controlled before going offline');
 
+  await page.setViewportSize({width:390,height:844});
+  await page.goto(`${origin}/books/tyranids/mobile/carnifexes.html?wargear-layout=1`);
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth),true,'multiline Wargear must not overflow Phone Mode');
+  await page.setViewportSize({width:1280,height:900});
   await context.setOffline(true);
   await page.goto(`${origin}/books/tyranids/?build=cold-desktop&view=full`);
   assert.match(page.url(),/\/books\/tyranids\/reader\.html\?build=cold-desktop$/);

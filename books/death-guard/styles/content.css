@@ -146,6 +146,7 @@
   font: 800 clamp(22px, 3vw, 29px)/1.08 Georgia, "Times New Roman", serif;
 }
 .detachment-content { display: grid; grid-template-columns: 1fr; gap: 18px; }
+.wargear-option { white-space: pre-line; overflow-wrap: anywhere; }
 .detachment-part[id$="-stratagems"] { display: block; }
 .detachment-part[id$="-stratagems"] > .detachment-content,
 .detachment-part[id$="-stratagems"] > .detachment-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; }

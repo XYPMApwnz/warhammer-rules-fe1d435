@@ -86,6 +86,10 @@ assert.ok(reader.includes('Wargear Options'));
 assert.doesNotMatch(reader,/Wargear options and replacement limits are not yet verified/);
 for(const detachment of pack.detachments){
   assert.match(reader,new RegExp(`id="detachment-${detachment.id}"`));
+  assert.match(reader,new RegExp(`data-nav-id="${detachment.id}-rule" data-nav-depth="3"`));
+  assert.match(reader,new RegExp(`id="${detachment.id}-rule" data-track="${detachment.id}-rule"`));
+  assert.match(reader,new RegExp(`data-nav-id="${detachment.id}-enhancements" data-nav-depth="3"`));
+  assert.match(reader,new RegExp(`data-nav-id="${detachment.id}-stratagems" data-nav-depth="3"`));
   for(const stratagem of detachment.stratagems){
     assert.ok(stratagem.when&&stratagem.target&&stratagem.effect,`${stratagem.title}: incomplete card`);
     assert.match(related,new RegExp(`data-rule-id="${stratagem.id}"`));
@@ -100,6 +104,7 @@ assert.match(app,/new window\.DGNavigation\(\)/);
 assert.match(app,/new window\.DGPopups\(terms,fullEntry\)/);
 assert.match(app,/WHArmyRelatedRules\?\.install/);
 assert.match(app,/new URL\('\.\/mobile\/'\+route/);
+assert.match(fs.readFileSync(path.join(root,'index.html'),'utf8'),/death-guard\/scripts\/view-router\.js\?v=2/);
 assert.doesNotMatch(app,/WHArmyBook\.install/);
 assert.match(bookCss,/tyranids-cover-800\.webp/,'the supplied Tyranids artwork must be used by the desktop hero');
 assert.doesNotMatch(bookCss,/html\[data-view="mobile"\]/,'Phone Mode must use focused pages, not the desktop monolith');

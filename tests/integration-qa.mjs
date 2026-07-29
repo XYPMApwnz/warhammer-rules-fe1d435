@@ -44,10 +44,11 @@ for(const [slug,book] of Object.entries(books)){
   check(`${slug} shell is precached`,missing.length===0,missing.join(', '));
 }
 const generatedArmyBooks=fs.readdirSync(path.join(root,'books'),{withFileTypes:true}).filter(entry=>entry.isDirectory()).map(entry=>entry.name).filter(slug=>exists(`books/${slug}/book.config.json`)&&exists(`books/${slug}/reader.html`)&&exists(`books/${slug}/scripts/data.js`));
+const visibleGeneratedArmyBooks=new Set(['tyranids']);
 for(const slug of generatedArmyBooks){
   const html=read(`books/${slug}/reader.html`),app=read(`books/${slug}/scripts/app.js`),mobile=read(`books/${slug}/mobile/index.html`),bookCss=read(`books/${slug}/styles/book.css`),context=JSON.parse(read(`glossary/contexts/${slug}.json`)),config=JSON.parse(read(`books/${slug}/book.config.json`));
   const fallbackName=slug.replaceAll('-','_').toUpperCase()+'_FALLBACK';
-  check(`${slug} verification book is linked from Library`,library.includes(`href="books/${slug}/index.html"`));
+  check(`${slug} Library visibility matches the current release`,library.includes(`href="books/${slug}/index.html"`)===visibleGeneratedArmyBooks.has(slug));
   check(`${slug} uses the shared DG interaction architecture`,html.includes('../death-guard/scripts/navigation-controller.js')&&html.includes('../death-guard/scripts/popup-controller.js')&&html.includes('../death-guard/scripts/journey-controller.js')&&(config.dedicatedMobile?app.includes('new window.DGNavigation()')&&!html.includes('army-book-app.js'):app.includes('WHArmyBook.install')));
   const factionTokens=config.dedicatedMobile?'./styles/tokens.css?v=2':'./styles/tokens.css?v=1';
   check(`${slug} loads base tokens before faction overrides`,html.indexOf('../death-guard/styles/tokens.css?v=10')>=0&&html.indexOf('../death-guard/styles/tokens.css?v=10')<html.indexOf(factionTokens));
@@ -60,6 +61,14 @@ for(const slug of new Set(['death-guard','adeptus-mechanicus',...generatedArmyBo
   const html=read(`books/${slug}/reader.html`);
   const toc=html.slice(html.indexOf('id="tocTree"'),html.indexOf('</nav>'));
   const document=html.slice(html.indexOf('<main'));
+  const detachmentToc=toc.slice(toc.indexOf('data-nav-id="detachments"'),toc.indexOf('data-nav-id="datasheets"'));
+  const detachmentIds=[...detachmentToc.matchAll(/data-nav-id="detachment-([^"]+)" data-nav-depth="2"/g)].map(match=>match[1]);
+  check(`${slug} gives every Detachment a tracked third-level navigation contract`,detachmentIds.length>0&&detachmentIds.every(id=>{
+    const required=[`${id}-rule`,...(document.includes(`id="${id}-enhancements"`)?[`${id}-enhancements`]:[]),...(document.includes(`id="${id}-stratagems"`)?[`${id}-stratagems`]:[])];
+    return required.every(target=>detachmentToc.includes(`data-nav-id="${target}" data-nav-depth="3"`)&&document.includes(`id="${target}" data-track="${target}"`));
+  }));
+  const entry=read(`books/${slug}/index.html`);
+  check(`${slug} entry shares the automatic phone/full routing contract`,entry.includes('view-router.js?v=2')&&entry.includes('./reader.html?view=full')&&entry.includes('./mobile/index.html?view=mobile'));
   check(`${slug} keeps Updates below Datasheets`,toc.indexOf('data-nav-id="datasheets"')<toc.indexOf('data-nav-id="updates"')&&document.indexOf('id="datasheets" data-track="datasheets"')<document.indexOf('id="updates" data-track="updates"'));
 }
 for(const slug of ['death-guard','adeptus-mechanicus','tyranids']){
@@ -146,6 +155,21 @@ check('Death Guard entry routes phone and full readers',read('books/death-guard/
 check('Mechanicus entry uses the same phone and full reader contract',read('books/adeptus-mechanicus/index.html').includes('../death-guard/scripts/view-router.js?v=2')&&read('books/adeptus-mechanicus/index.html').includes('./reader.html?view=full')&&read('books/adeptus-mechanicus/index.html').includes('./mobile/index.html?view=mobile'));
 const viewRouter=read('books/death-guard/scripts/view-router.js');
 check('Death Guard view router preserves public query parameters and anchors',viewRouter.includes("params.delete('view')")&&viewRouter.includes('destination.search = params.toString()')&&viewRouter.includes('destination.hash = location.hash'));
+const runViewRouter=({href,userAgent='',mobile=false,width=1024,coarse=false})=>{
+  const current=new URL(href);let replaced='';
+  vm.runInNewContext(viewRouter,{URL,URLSearchParams,location:{href:current.href,search:current.search,hash:current.hash,replace:value=>{replaced=String(value);}},navigator:{userAgent,userAgentData:{mobile}},screen:{width,height:width},matchMedia:query=>({matches:query.includes('pointer')?coarse:width<=600})});
+  return new URL(replaced);
+};
+const iphoneRoute=runViewRouter({href:'https://example.test/books/tyranids/index.html?roster=alpha#unit-hive-tyrant',userAgent:'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X)',width:390,coarse:true});
+const ipadRoute=runViewRouter({href:'https://example.test/books/tyranids/index.html?roster=alpha#unit-hive-tyrant',userAgent:'Mozilla/5.0 (iPad; CPU OS 18_0 like Mac OS X)',width:834,coarse:true});
+const androidPhoneRoute=runViewRouter({href:'https://example.test/books/tyranids/index.html?roster=alpha#unit-hive-tyrant',userAgent:'Mozilla/5.0 (Linux; Android 15; Pixel 9 Pro) AppleWebKit/537.36 Chrome/131 Mobile Safari/537.36',width:412,coarse:true});
+const androidTabletRoute=runViewRouter({href:'https://example.test/books/tyranids/index.html?roster=alpha#unit-hive-tyrant',userAgent:'Mozilla/5.0 (Linux; Android 15; Pixel Tablet) AppleWebKit/537.36 Chrome/131 Safari/537.36',width:800,coarse:true});
+const forcedFullRoute=runViewRouter({href:'https://example.test/books/tyranids/index.html?view=full&roster=alpha#unit-hive-tyrant',userAgent:'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X)',width:390,coarse:true});
+check('shared entry router sends iPhone to Phone view with query and hash',iphoneRoute.pathname.endsWith('/mobile/index.html')&&iphoneRoute.search==='?roster=alpha'&&iphoneRoute.hash==='#unit-hive-tyrant');
+check('shared entry router keeps iPad in full reader',ipadRoute.pathname.endsWith('/reader.html')&&ipadRoute.search==='?roster=alpha'&&ipadRoute.hash==='#unit-hive-tyrant');
+check('shared entry router sends Android phones to Phone view with query and hash',androidPhoneRoute.pathname.endsWith('/mobile/index.html')&&androidPhoneRoute.search==='?roster=alpha'&&androidPhoneRoute.hash==='#unit-hive-tyrant');
+check('shared entry router keeps Android tablets in full reader',androidTabletRoute.pathname.endsWith('/reader.html')&&androidTabletRoute.search==='?roster=alpha'&&androidTabletRoute.hash==='#unit-hive-tyrant');
+check('explicit full view overrides phone detection',forcedFullRoute.pathname.endsWith('/reader.html')&&forcedFullRoute.search==='?roster=alpha'&&forcedFullRoute.hash==='#unit-hive-tyrant');
 check('Library exposes only Core Rules Reference',library.includes('href="books/core-rules/reader/index.html"')&&!library.includes('Learn Core Rules')&&!library.includes('href="books/core-rules/index.html"'));
 check('Death Guard preserves roster and rule context across views',read('books/death-guard/scripts/app.js').includes("destination.search=params.toString()")&&read('books/death-guard/scripts/app.js').includes("route=id.slice(5)+'.html'")&&read('books/death-guard/mobile/mobile.js').includes('destination.search = params.toString()')&&read('books/death-guard/mobile/index.html').includes('data-view-switch'));
 check('Personal Death Guard readers return to Roster Guides',read('books/death-guard/reader.html').includes('data-roster-guides-link hidden')&&read('books/death-guard/scripts/app.js').includes("rosterGuides.hidden=!params.get('roster')")&&read('books/death-guard/mobile/index.html').includes('data-roster-guides-link hidden'));

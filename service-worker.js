@@ -7,7 +7,9 @@ const ROSTER_GUIDES_FALLBACK = "./roster-guides/index.html";
 const DEATH_GUARD_FALLBACK = "./books/death-guard/index.html";
 const CORE_RULES_FALLBACK = "./books/core-rules/reader/index.html";
 const ADEPTUS_MECHANICUS_FALLBACK = "./books/adeptus-mechanicus/index.html";
-const TYRANIDS_FALLBACK = LIBRARY_FALLBACK;
+const TYRANIDS_ENTRY_FALLBACK = "./books/tyranids/index.html";
+const TYRANIDS_DESKTOP_FALLBACK = "./books/tyranids/reader.html";
+const TYRANIDS_MOBILE_FALLBACK = "./books/tyranids/mobile/index.html";
 const TAU_EMPIRE_FALLBACK = LIBRARY_FALLBACK;
 const CHAOS_SPACE_MARINES_FALLBACK = LIBRARY_FALLBACK;
 const ORKS_FALLBACK = LIBRARY_FALLBACK;
@@ -135,11 +137,17 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/scripts/roster-filter.js?v=2",
   "./books/adeptus-mechanicus/scripts/app.js?v=27"
   ,"./books/tyranids/"
-  ,TYRANIDS_FALLBACK
+  ,TYRANIDS_ENTRY_FALLBACK
+  ,TYRANIDS_DESKTOP_FALLBACK
+  ,TYRANIDS_MOBILE_FALLBACK
   ,"./books/tyranids/mobile/index.html"
-  ,"./books/tyranids/styles/tokens.css?v=1"
+  ,"./books/tyranids/styles/tokens.css?v=2"
   ,"./books/tyranids/styles/book.css?v=4"
-  ,"./books/tyranids/scripts/app.js?v=3"
+  ,"./books/tyranids/scripts/data.js?v=2"
+  ,"./books/tyranids/scripts/app.js?v=4"
+  ,"./books/tyranids/mobile/mobile.css?v=1"
+  ,"./books/tyranids/mobile/mobile.js?v=1"
+  ,"./glossary/generated/glossary.en.js?v=tyranids-1"
   ,"./books/tau-empire/"
   ,TAU_EMPIRE_FALLBACK
   ,"./books/tau-empire/mobile/index.html"
@@ -178,8 +186,25 @@ const APP_SHELL = [
   ,"./books/dark-angels/scripts/app.js?v=2"
   ,"./books/shared/army-related-rules.js?v=4"
   ,"./books/shared/army-book-app.js?v=6"
-  ,"./books/shared/army-book-app.js?v=7"
 ];
+
+function navigationFallback(url) {
+  const path = url.pathname;
+  if (path.includes("/roster-guides/")) return ROSTER_GUIDES_FALLBACK;
+  if (path.includes("/books/death-guard/")) return DEATH_GUARD_FALLBACK;
+  if (path.includes("/books/core-rules/")) return CORE_RULES_FALLBACK;
+  if (path.includes("/books/adeptus-mechanicus/")) return ADEPTUS_MECHANICUS_FALLBACK;
+  if (path.includes("/books/tyranids/mobile/")) return TYRANIDS_MOBILE_FALLBACK;
+  if (path.endsWith("/books/tyranids/reader.html")) return TYRANIDS_DESKTOP_FALLBACK;
+  if (path.endsWith("/books/tyranids/") || path.endsWith("/books/tyranids/index.html")) return TYRANIDS_ENTRY_FALLBACK;
+  if (path.includes("/books/tau-empire/")) return TAU_EMPIRE_FALLBACK;
+  if (path.includes("/books/chaos-space-marines/")) return CHAOS_SPACE_MARINES_FALLBACK;
+  if (path.includes("/books/orks/")) return ORKS_FALLBACK;
+  if (path.includes("/books/emperors-children/")) return EMPERORS_CHILDREN_FALLBACK;
+  if (path.includes("/books/space-marines/")) return SPACE_MARINES_FALLBACK;
+  if (path.includes("/books/dark-angels/")) return DARK_ANGELS_FALLBACK;
+  return LIBRARY_FALLBACK;
+}
 
 async function cacheAppShell() {
   const cache = await caches.open(CACHE_NAME);
@@ -218,21 +243,14 @@ self.addEventListener("fetch", (event) => {
   if (request.method !== "GET" || url.origin !== self.location.origin) return;
 
   if (request.mode === "navigate") {
-    let fallback = LIBRARY_FALLBACK;
-    if (url.pathname.includes("/roster-guides/")) fallback = ROSTER_GUIDES_FALLBACK;
-    else if (url.pathname.includes("/books/death-guard/")) fallback = DEATH_GUARD_FALLBACK;
-    else if (url.pathname.includes("/books/core-rules/")) fallback = CORE_RULES_FALLBACK;
-    else if (url.pathname.includes("/books/adeptus-mechanicus/")) fallback = ADEPTUS_MECHANICUS_FALLBACK;
-    else if (url.pathname.includes("/books/tyranids/")) fallback = TYRANIDS_FALLBACK;
-    else if (url.pathname.includes("/books/tau-empire/")) fallback = TAU_EMPIRE_FALLBACK;
-    else if (url.pathname.includes("/books/chaos-space-marines/")) fallback = CHAOS_SPACE_MARINES_FALLBACK;
-    else if (url.pathname.includes("/books/orks/")) fallback = ORKS_FALLBACK;
-    else if (url.pathname.includes("/books/emperors-children/")) fallback = EMPERORS_CHILDREN_FALLBACK;
-    else if (url.pathname.includes("/books/space-marines/")) fallback = SPACE_MARINES_FALLBACK;
-    else if (url.pathname.includes("/books/dark-angels/")) fallback = DARK_ANGELS_FALLBACK;
+    const fallback = navigationFallback(url);
     const networkUpdate = fetchAndCache(request, event);
     event.respondWith(
-      networkUpdate.catch(async () => (await caches.match(request)) || caches.match(fallback))
+      networkUpdate.catch(async () =>
+        (await caches.match(request)) ||
+        (await caches.match(request, {ignoreSearch: true})) ||
+        caches.match(fallback)
+      )
     );
     return;
   }

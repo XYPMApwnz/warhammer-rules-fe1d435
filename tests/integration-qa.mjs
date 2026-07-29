@@ -13,6 +13,7 @@ const library=read('index.html');
 const rosterGuides=read('roster-guides/index.html');
 const rosterGuidesApp=read('roster-guides/app.js');
 const sw=read('service-worker.js');
+let appShell=[],navigationFallback;
 const coreReaderFiles=fs.readdirSync(path.join(root,'books','core-rules','reader')).filter(name=>name.endsWith('.html'));
 const books={
   'death-guard':{version:'9',reader:'reader.html',versions:{'styles/tokens.css':'10','styles/navigation.css':'11','styles/content.css':'31','styles/popups.css':'17','scripts/roster-filter.js':'14','scripts/navigation-controller.js':'15','scripts/popup-controller.js':'25','scripts/full-entry-controller.js':'8','scripts/journey-controller.js':'12','scripts/ui-controllers.js':'11','scripts/related-rules.js':'7','scripts/app.js':'31'},app:'scripts/app.js',usesPopupGlossary:true,files:['assets/icon-v4.svg','styles/tokens.css','styles/layout.css','styles/navigation.css','styles/content.css','styles/popups.css','scripts/roster-filter.js','scripts/navigation-controller.js','scripts/popup-controller.js','scripts/full-entry-controller.js','scripts/journey-controller.js','scripts/ui-controllers.js','scripts/related-rules.js','scripts/app.js']},
@@ -38,6 +39,17 @@ try{
   await installPromise;
   check('service worker limits app-shell download concurrency',cachedFiles>100&&peakInFlight===4,`${cachedFiles} files, peak ${peakInFlight}`);
 }catch(error){check('service worker limits app-shell download concurrency',false,error.message);}
+
+try{
+  const context={importScripts(){},caches:{},self:{WH40K_CACHE_REVISION:'qa',addEventListener(){}},fetch(){},URL};
+  vm.runInNewContext(`${sw}\n;globalThis.__APP_SHELL=APP_SHELL;globalThis.__NAVIGATION_FALLBACK=navigationFallback;`,context);
+  appShell=[...context.__APP_SHELL];navigationFallback=context.__NAVIGATION_FALLBACK;
+  check('Tyranids offline routes preserve entry, desktop and Phone mode',
+    navigationFallback(new URL('https://example.test/books/tyranids/?build=qa')).endsWith('/books/tyranids/index.html')&&
+    navigationFallback(new URL('https://example.test/books/tyranids/reader.html?roster=qa')).endsWith('/books/tyranids/reader.html')&&
+    navigationFallback(new URL('https://example.test/books/tyranids/mobile/hive-tyrant.html?build=qa')).endsWith('/books/tyranids/mobile/index.html'));
+  check('navigation cache ignores technical query without weakening asset versions',sw.includes('caches.match(request, {ignoreSearch: true})')&&sw.indexOf('caches.match(request, {ignoreSearch: true})')<sw.indexOf('caches.match(fallback)')&&!/if \(request\.mode === "navigate"\)[\s\S]*?return;\s*}\s*event\.respondWith\(\s*caches\.match\(request, \{ignoreSearch: true}/.test(sw));
+}catch(error){check('Tyranids offline route contract is executable',false,error.message);}
 
 for(const [slug,book] of Object.entries(books)){
   const html=read(`books/${slug}/${book.reader||'index.html'}`);
@@ -69,7 +81,7 @@ for(const slug of generatedArmyBooks){
   check(`${slug} exposes Library, Glossary and Related Rules`,html.includes('href="../../index.html"')&&html.includes('href="../../glossary/index.html"')&&html.includes('../shared/army-related-rules.js?v=4'));
   check(`${slug} exposes the forced Phone view contract`,config.dedicatedMobile?app.includes("new URL('./mobile/'+route")&&mobile.includes('Desktop / iPad view')&&mobile.includes('data-view-switch')&&!bookCss.includes('html[data-view="mobile"]'):app.includes('readerPath')&&mobile.includes('searchParams.set("view","mobile")')&&bookCss.includes('html[data-view="mobile"] .nav-menu')&&bookCss.includes('html[data-view="mobile"] .unit-card.ds-layout .ds-main-grid'));
   check(`${slug} has a generated glossary context`,Object.keys(context.terms||{}).length>0);
-  check(`${slug} has a dedicated offline fallback`,sw.includes(`const ${fallbackName}`)&&sw.includes(`/books/${slug}/`));
+  check(`${slug} has a dedicated offline fallback`,slug==='tyranids'?['ENTRY','DESKTOP','MOBILE'].every(kind=>sw.includes(`const TYRANIDS_${kind}_FALLBACK`)):sw.includes(`const ${fallbackName}`)&&sw.includes(`/books/${slug}/`));
 }
 for(const slug of new Set(['death-guard','adeptus-mechanicus',...generatedArmyBooks])){
   const html=read(`books/${slug}/reader.html`);
@@ -127,6 +139,27 @@ check('service worker installs the complete app shell atomically',sw.includes('e
 const shellSource=sw.match(/const APP_SHELL = \[([\s\S]*?)\n\];/)?.[1]||'';
 const missingShellFiles=[...shellSource.matchAll(/"\.\/([^"?]*)(?:\?[^\"]*)?"/g)].map(match=>match[1]).map(file=>file.endsWith('/')?file+'index.html':file).filter(file=>!exists(file));
 check('every literal app-shell asset exists',missingShellFiles.length===0,missingShellFiles.join(', '));
+const shellVersions=new Map();
+for(const item of appShell){
+  const url=new URL(item,'https://example.test/');
+  if(!shellVersions.has(url.pathname))shellVersions.set(url.pathname,new Set());
+  shellVersions.get(url.pathname).add(url.search);
+}
+const duplicateVersions=[...shellVersions].filter(([,versions])=>versions.size>1).map(([pathname,versions])=>`${pathname}: ${[...versions].join(', ')}`);
+check('app shell never caches two versions of one asset',duplicateVersions.length===0,duplicateVersions.join('; '));
+const criticalRefs=file=>{
+  const html=read(file),refs=[];
+  for(const match of html.matchAll(/<(link|script|img)\b[^>]*(?:href|src)="([^"]+)"[^>]*>/gi)){
+    const [tag,kind,ref]=match;
+    if(kind.toLowerCase()==='link'&&!/rel="(?:stylesheet|manifest)"/i.test(tag))continue;
+    const url=new URL(ref,`https://example.test/${file}`);
+    if(url.origin==='https://example.test')refs.push(`.${url.pathname}${url.search}`);
+  }
+  return refs;
+};
+const tyranidsFallbackPages=['books/tyranids/index.html','books/tyranids/reader.html','books/tyranids/mobile/index.html'];
+const missingFallbackAssets=tyranidsFallbackPages.flatMap(file=>criticalRefs(file).filter(ref=>!appShell.includes(ref)).map(ref=>`${file} -> ${ref}`));
+check('Tyranids fallback pages have exact render-critical dependencies in the app shell',missingFallbackAssets.length===0,missingFallbackAssets.join('; '));
 check('Core Rules search shares loading and recovers from failure',read('books/core-rules/reader/app.js').includes('let searchIndexPromise')&&read('books/core-rules/reader/app.js').includes('if (!response.ok)')&&read('books/core-rules/reader/app.js').includes('searchIndexPromise = null')&&read('books/core-rules/reader/app.js').includes('Search unavailable. Close and try again.'));
 check('Every result search prioritises title matches',read('books/core-rules/reader/app.js').includes('normalizeSearch(a.title).includes(query)')&&read('glossary/viewer.js').includes('if(title===query)return 0'));
 check('Core Rules heavy source images remain cached on demand',!sw.includes('Array.from({length:88}')&&!sw.includes('./books/core-rules/assets/diagrams/BenefitOfCover.png'));

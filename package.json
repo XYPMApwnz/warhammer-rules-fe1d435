@@ -1,6 +1,9 @@
 {
   "name": "warhammer-rules-complete-preview",
   "private": true,
+  "devDependencies": {
+    "playwright": "1.61.1"
+  },
   "scripts": {
     "death-guard:build": "node books/death-guard/tools/build-legends.mjs && node roster-guides/build-points.mjs && node glossary/tools/build-glossary.mjs && node books/death-guard/mobile/build.mjs",
     "core:build": "node books/core-rules/reader/build.mjs",
@@ -15,6 +18,7 @@
     "points:build": "node roster-guides/build-points.mjs",
     "glossary:build": "node glossary/tools/build-glossary.mjs",
     "glossary:check": "node glossary/tools/check-glossary.mjs",
+    "test:cold-offline": "node tests/browser/cold-offline.mjs",
     "army-books:check": "node books/shared/tools/build-army-book.mjs books/tyranids/book.config.json --check && node books/shared/tools/build-army-book.mjs books/tau-empire/book.config.json --check && node books/shared/tools/build-army-book.mjs books/chaos-space-marines/book.config.json --check && node books/shared/tools/build-army-book.mjs books/orks/book.config.json --check && node books/shared/tools/build-army-book.mjs books/emperors-children/book.config.json --check && node books/shared/tools/build-army-book.mjs books/space-marines/book.config.json --check && node books/shared/tools/build-army-book.mjs books/dark-angels/book.config.json --check",
     "army-books:sources:check": "node books/shared/tools/extract-bsdata-11e.mjs books/tyranids/sources/bsdata-extract.config.json --check && node books/shared/tools/extract-bsdata-11e.mjs books/tau-empire/sources/bsdata-extract.config.json --check && node books/shared/tools/extract-bsdata-11e.mjs books/chaos-space-marines/sources/bsdata-extract.config.json --check && node books/shared/tools/extract-bsdata-11e.mjs books/orks/sources/bsdata-extract.config.json --check && node books/emperors-children/tools/build-bsdata-enhancement-index.mjs --check && node books/shared/tools/extract-bsdata-11e.mjs books/emperors-children/sources/bsdata-extract.config.json --check && python books/space-marines/tools/build-bsdata-layer.py --check",
     "test": "npm run army-books:check && node glossary/tools/check-glossary.mjs && node tests/army-book-source-qa.mjs && node tests/rendered-output-qa.mjs && node tests/roster-guide-qa.mjs && node tests/roster-points-qa.mjs && node tests/army-book-eligibility-qa.mjs && node tests/death-guard-qa.mjs && node books/core-rules/tests/qa.mjs && node books/adeptus-mechanicus/tests/qa.mjs && node books/tyranids/tests/codex-source-parity.cjs && node books/tyranids/tests/qa.mjs && node books/tyranids/mobile/qa.mjs && node tests/integration-qa.mjs"

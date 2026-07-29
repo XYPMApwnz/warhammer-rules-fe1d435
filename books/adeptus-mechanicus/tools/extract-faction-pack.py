@@ -10,7 +10,7 @@ import pdfplumber
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PDF = ROOT / "sources" / "adeptus-mechanicus-faction-pack-v1.0.pdf"
+PDF = ROOT / "sources" / "adeptus-mechanicus-faction-pack-v1.1.pdf"
 OUTPUT = ROOT / "content" / "adeptus-mechanicus-source.en.json"
 
 
@@ -33,11 +33,11 @@ def build_snapshot() -> dict:
         return {
             "meta": {
                 "title": "Adeptus Mechanicus Faction Pack",
-                "version": "1.0",
-                "legalFrom": "2026-06-20",
+                "version": "1.1",
+                "legalFrom": "2026-07-22",
                 "pageCount": len(document.pages),
                 "sha256": digest,
-                "file": "sources/adeptus-mechanicus-faction-pack-v1.0.pdf",
+                "file": "sources/adeptus-mechanicus-faction-pack-v1.1.pdf",
             },
             "pages": pages,
         }

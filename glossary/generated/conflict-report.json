@@ -1,10 +1,10 @@
 {
   "schema": 1,
   "counts": {
-    "terms": 4746,
-    "aliases": 650,
-    "variants": 57,
-    "aliasCandidates": 681,
+    "terms": 4762,
+    "aliases": 641,
+    "variants": 61,
+    "aliasCandidates": 683,
     "keywordCandidates": 16
   },
   "variants": [
@@ -249,11 +249,11 @@
       "status": "resolved-by-policy"
     },
     {
-      "termId": "core-heavy",
+      "termId": "core-anti",
       "selectedSource": "core-rules",
       "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "Heavy weapons are amongst the biggest guns on the battlefield, but require bracing to fire at full effect. In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit:…",
-      "rejectedDefinition": "Weapon ability used by Protector Imperative.",
+      "selectedDefinition": "[ANTI-X Y+]: against a target with keyword X, an unmodified wound roll of Y+ is a critical wound.",
+      "rejectedDefinition": "Certain weapons are the bane of particular foes. This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. Example:…",
       "status": "resolved-by-policy"
     },
     {
@@ -261,63 +261,7 @@
       "selectedSource": "core-rules",
       "rejectedSource": "adeptus-mechanicus",
       "selectedDefinition": "A unit containing an [ASSAULT] weapon can use assault shooting.",
-      "rejectedDefinition": "Weapon ability used by Conqueror Imperative.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-ignores-cover",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "The target cannot have the benefit of cover against this attack.",
-      "rejectedDefinition": "The target cannot receive the Benefit of Cover against this attack.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-feel-no-pain",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "Feel No Pain X+: each time the model would lose a wound, on X+ that wound is not lost.",
-      "rejectedDefinition": "A wound-prevention roll made after a model would lose a wound.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-lethal-hits",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "On a critical hit, you can choose for that attack to automatically wound.",
-      "rejectedDefinition": "A Critical Hit automatically wounds the target.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-stealth",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "If every model has Stealth, the unit has the benefit of cover against ranged attacks.",
-      "rejectedDefinition": "A defensive Core ability used by several Mechanicus rules.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-devastating-wounds",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "A critical wound ends the attack sequence and inflicts mortal wounds equal to D.",
-      "rejectedDefinition": "Critical Wounds use the Devastating Wounds sequence.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-sustained-hits",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "[SUSTAINED HITS X]: a critical hit produces X additional hits.",
-      "rejectedDefinition": "Critical Hits score the listed number of additional hits.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-anti",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "[ANTI-X Y+]: against a target with keyword X, an unmodified wound roll of Y+ is a critical wound.",
-      "rejectedDefinition": "Unmodified successful Wound rolls at the listed value score Critical Wounds against VEHICLE units.",
+      "rejectedDefinition": "An unengaged unit that Advanced this turn can shoot using only its [ASSAULT] weapons. After shooting, it cannot start an Action until the end of the phase.",
       "status": "resolved-by-policy"
     },
     {
@@ -325,95 +269,23 @@
       "selectedSource": "core-rules",
       "rejectedSource": "adeptus-mechanicus",
       "selectedDefinition": "Adds attack dice according to the number of models in the target unit.",
-      "rejectedDefinition": "Blast weapons gain attacks against larger target units and cannot be fired into Engagement Range.",
+      "rejectedDefinition": "When gathering attack dice, add 1 attack die for every full 5 models in the target unit. [BLAST X] adds X attack dice instead.",
       "status": "resolved-by-policy"
     },
     {
-      "termId": "core-lance",
+      "termId": "core-cleave",
       "selectedSource": "core-rules",
       "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "With the momentum of a warrior at full-tilt, lance weapons are deadly on the charge. Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.",
-      "rejectedDefinition": "A charging model receives the current Lance wound modifier.",
+      "selectedDefinition": "With sufficient might or skill, warriors may sweep blades or talons through their foes in long lethal arcs. This ability always takes the form [CLEAVE X].…",
+      "rejectedDefinition": "When gathering attack dice, if all of this weapon's attacks target one unit, add X attack dice for every full 5 models in that unit.",
       "status": "resolved-by-policy"
     },
     {
-      "termId": "core-hazardous",
+      "termId": "core-close-quarters",
       "selectedSource": "core-rules",
       "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "After the unit attacks, make hazard rolls for the selected [HAZARDOUS] weapons.",
-      "rejectedDefinition": "After attacking, take Hazardous tests for weapons with this ability.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-infiltrators",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "During deployment, set up more than 8\" horizontally from the enemy deployment zone and all enemy units.",
-      "rejectedDefinition": "Deployment ability granted by Explorator Dispensation.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-lone-operative",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "Unless Attached, the unit is only visible to enemies within its specified range.",
-      "rejectedDefinition": "Limits targeting of the unit outside the listed range.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-rapid-fire",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "[RAPID FIRE X]: add X attack dice if the target was within half range.",
-      "rejectedDefinition": "Adds the listed attacks while the target is within half range.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-torrent",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "The attack automatically hits the target.",
-      "rejectedDefinition": "Attacks with this weapon automatically hit.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-melta",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "[MELTA X]: within half range, add X to the weapon’s D characteristic.",
-      "rejectedDefinition": "Adds the listed Damage while the target is within half range.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-pistol",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.",
-      "rejectedDefinition": "Pistol weapons follow the current close-range shooting permissions.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-twin-linked",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "You can re-roll the wound roll.",
-      "rejectedDefinition": "Attacks made with this weapon can re-roll the Wound roll.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-scouts",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "Scouts form the vanguard of many armies. Unnoticed by the enemy, they range ahead of the main force. This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:…",
-      "rejectedDefinition": "Scouts 6\" is listed on the Skitarii Rangers datasheet.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-feel-no-pain",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "Feel No Pain X+: each time the model would lose a wound, on X+ that wound is not lost.",
-      "rejectedDefinition": "Feel No Pain 5+ is listed on the Cybernetica Datasmith datasheet.",
+      "selectedDefinition": "A unit containing a [CLOSE-QUARTERS] weapon can use close-quarters shooting.",
+      "rejectedDefinition": "Weapons designed for close-quarters fighting can be wielded effectively even in the press of melee combat. Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting.…",
       "status": "resolved-by-policy"
     },
     {
@@ -421,23 +293,7 @@
       "selectedSource": "core-rules",
       "rejectedSource": "adeptus-mechanicus",
       "selectedDefinition": "Deadly Demise X can inflict X mortal wounds on nearby units when the model is destroyed.",
-      "rejectedDefinition": "Deadly Demise D3 is listed on the Skorpius Dunerider datasheet.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-firing-deck",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "Firing Deck X lets a Transport use selected ranged weapons of up to X embarked models.",
-      "rejectedDefinition": "Firing Deck 2 is listed on the Skorpius Dunerider datasheet.",
-      "status": "resolved-by-policy"
-    },
-    {
-      "termId": "core-hover",
-      "selectedSource": "core-rules",
-      "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "Some airborne vehicles can use vectored thrusters or anti-gravity technology to hover and skim over the battlefield, the better to hunt their prey or deploy embarked troops. Each time this unit takes to the skies ( 21.03), do not subtract 2\" from the maximum distance.",
-      "rejectedDefinition": "Hover is listed on the Archaeopter Transvector datasheet.",
+      "rejectedDefinition": "From detonating ammo stores to corrosive innards or frenzied death throes, some targets are deadly even in defeat. This ability always takes the form Deadly Demise X.…",
       "status": "resolved-by-policy"
     },
     {
@@ -445,23 +301,199 @@
       "selectedSource": "core-rules",
       "rejectedSource": "adeptus-mechanicus",
       "selectedDefinition": "During an ingress move, set up more than 8\" horizontally from all enemy units.",
-      "rejectedDefinition": "Deep Strike is listed on the Archaeopter Transvector datasheet.",
+      "rejectedDefinition": "There are many ways by which to deploy troops to the field of battle including tunnels, teleportation devices and other esoteric means of transportation.…",
       "status": "resolved-by-policy"
     },
     {
-      "termId": "core-deadly-demise",
+      "termId": "core-devastating-wounds",
       "selectedSource": "core-rules",
       "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "Deadly Demise X can inflict X mortal wounds on nearby units when the model is destroyed.",
-      "rejectedDefinition": "Deadly Demise 1 is listed on the Ironstrider Ballistarii datasheet.",
+      "selectedDefinition": "A critical wound ends the attack sequence and inflicts mortal wounds equal to D.",
+      "rejectedDefinition": "When an attack with DEVASTATING WOUNDS scores a Critical Wound, the target suffers mortal wounds equal to the weapon's Damage characteristic. Excess mortal wounds are lost.",
       "status": "resolved-by-policy"
     },
     {
-      "termId": "core-scouts",
+      "termId": "core-extra-attacks",
       "selectedSource": "core-rules",
       "rejectedSource": "adeptus-mechanicus",
-      "selectedDefinition": "Scouts form the vanguard of many armies. Unnoticed by the enemy, they range ahead of the main force. This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:…",
-      "rejectedDefinition": "Scouts 9\" is listed on the Serberys Raiders datasheet.",
+      "selectedDefinition": "These weapons are selected in addition to the model’s other melee weapon.",
+      "rejectedDefinition": "Some warriors ride to battle atop trusty mounts that gore and trample nearby foes. Others wield combat weapons that deliver a frenzy of additional blows.…",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-feel-no-pain",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "Feel No Pain X+: each time the model would lose a wound, on X+ that wound is not lost.",
+      "rejectedDefinition": "The hardiest warriors refuse to be laid low, even by wounds that should by all rights prove lethal. This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-fights-first",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "If every model has this ability, the unit is a Fights First unit.",
+      "rejectedDefinition": "Those possessed of lightning-fast reactions may strike before the opponent can react. While every model in a unit has this ability, that unit is a Fights First unit. See the Resolve Fights First Combats step in the Fight phase Fight Step.",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-firing-deck",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "Firing Deck X lets a Transport use selected ranged weapons of up to X embarked models.",
+      "rejectedDefinition": "Some transports have dedicated platforms or firing ports from which embarked passengers can lay down a withering hail of munitions. This ability always takes the form Firing Deck X.…",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-hazardous",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "After the unit attacks, make hazard rolls for the selected [HAZARDOUS] weapons.",
+      "rejectedDefinition": "Weapons powered by unstable and dangerous energy sources pose a substantial risk to the wielder and those that stand beside them.…",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-hover",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "Some airborne vehicles can use vectored thrusters or anti-gravity technology to hover and skim over the battlefield, the better to hunt their prey or deploy embarked troops. Each time this unit takes to the skies ( 21.03), do not subtract 2\" from the maximum distance.",
+      "rejectedDefinition": "Some airborne vehicles can use vectored thrusters or anti-gravity technology to hover and skim over the battlefield, the better to hunt their prey or deploy embarked troops. Each time this unit takes to the skies Flying Models, do not subtract 2\" from the maximum distance.",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-ignores-cover",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "The target cannot have the benefit of cover against this attack.",
+      "rejectedDefinition": "Some weapons are designed to root enemy formations out of entrenched positions. Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack Benefit of Cover, including from rules that give a model or unit the…",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-indirect-fire",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "A unit containing an [INDIRECT FIRE] weapon can use indirect shooting.",
+      "rejectedDefinition": "Indirect fire weapons launch munitions over or around intervening obstacles – nowhere is safe from their fury. Units containing one or more models with an [INDIRECT FIRE] weapon can shoot using indirect shooting.",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-infiltrators",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "During deployment, set up more than 8\" horizontally from the enemy deployment zone and all enemy units.",
+      "rejectedDefinition": "Many armies employ reconnaissance units who can sit concealed, waiting for the right moment to strike. During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment…",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-leader",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "A Leader can join an eligible Bodyguard unit to form an Attached unit.",
+      "rejectedDefinition": "Mighty heroes fight at the forefront of battle. Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead.…",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-lethal-hits",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "On a critical hit, you can choose for that attack to automatically wound.",
+      "rejectedDefinition": "When an attack with LETHAL HITS scores a Critical Hit, it automatically wounds. No Wound roll is made, so that attack cannot score a Critical Wound.",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-lone-operative",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "Unless Attached, the unit is only visible to enemies within its specified range.",
+      "rejectedDefinition": "Assassins and other covert agents are difficult to pinpoint in the storm of battle. Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model…",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-melta",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "[MELTA X]: within half range, add X to the weapon’s D characteristic.",
+      "rejectedDefinition": "Melta weapons are powerful heat rays whose fury is magnified at close range. This ability always takes the form [MELTA X].…",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-pistol",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes.",
+      "rejectedDefinition": "Pistols can be wielded even at point-blank range. [PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. See [CLOSE-QUARTERS]. Designer’s Note:…",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-precision",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "Can direct allocation to a visible Character group in the target Attached unit.",
+      "rejectedDefinition": "Precision attacks can pick high-value targets out in a crowd. While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step Save Rolls, if the target unit contains one or more CHARACTER models visible to one or more of the attacking…",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-psychic",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "Can ignore modifiers to BS/WS and hit rolls for that attack.",
+      "rejectedDefinition": "Some weapons can channel the bearer’s psychic might to empower their blows. Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll.…",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-rapid-fire",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "[RAPID FIRE X]: add X attack dice if the target was within half range.",
+      "rejectedDefinition": "Rapid fire weapons are capable of long-ranged precision shots or controlled bursts at nearby targets. This ability always takes the form [RAPID FIRE X].…",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-scout-move",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "MAXIMUM DISTANCE: The X\" in Scouts X\". ELIGIBLE IF: It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone. EFFECT: Your unit moves as described in Moving ( 03 ). AFTER MOVING:…",
+      "rejectedDefinition": "MAXIMUM DISTANCE: The X\" in Scouts X\". ELIGIBLE IF: It is the Resolve Pre-battle Abilities step, and your unit is wholly within your deployment zone. EFFECT: Your unit moves as described in Moving. AFTER MOVING:…",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-stealth",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "If every model has Stealth, the unit has the benefit of cover against ranged attacks.",
+      "rejectedDefinition": "The stealthiest warriors can evade the attentions, and the bullets, of their foes. If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack Benefit of Cover.",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-support",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "A Support unit can join an eligible Bodyguard unit to form an Attached unit.",
+      "rejectedDefinition": "Mighty heroes fight at the forefront of battle. Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead.…",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-sustained-hits",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "[SUSTAINED HITS X]: a critical hit produces X additional hits.",
+      "rejectedDefinition": "Some weapons possess a punishing rate of fire, or can land devastating flurries of blows, tearing the foe apart with relentless ferocity. This ability always takes the form [SUSTAINED HITS X].…",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-torrent",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "The attack automatically hits the target.",
+      "rejectedDefinition": "Torrent weapons project clouds of fire, gas or other lethal substances that few foes can hope to evade. Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.",
+      "status": "resolved-by-policy"
+    },
+    {
+      "termId": "core-twin-linked",
+      "selectedSource": "core-rules",
+      "rejectedSource": "adeptus-mechanicus",
+      "selectedDefinition": "You can re-roll the wound roll.",
+      "rejectedDefinition": "Dual weapons are often grafted to the same targeting system for greater lethality. Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.",
       "status": "resolved-by-policy"
     }
   ],
@@ -483,8 +515,7 @@
         "emperors-children-ability-anti",
         "orks-ability-anti",
         "space-marines-ability-anti",
-        "tau-empire-ability-anti",
-        "tyranids-ability-anti"
+        "tau-empire-ability-anti"
       ],
       "status": "review-required"
     },
@@ -497,8 +528,7 @@
         "emperors-children-ability-assault",
         "orks-ability-assault",
         "space-marines-ability-assault",
-        "tau-empire-ability-assault",
-        "tyranids-ability-assault"
+        "tau-empire-ability-assault"
       ],
       "status": "review-required"
     },
@@ -511,8 +541,7 @@
         "emperors-children-ability-blast",
         "orks-ability-blast",
         "space-marines-ability-blast",
-        "tau-empire-ability-blast",
-        "tyranids-ability-blast"
+        "tau-empire-ability-blast"
       ],
       "status": "review-required"
     },
@@ -557,8 +586,7 @@
         "emperors-children-ability-devastating-wounds",
         "orks-ability-devastating-wounds",
         "space-marines-ability-devastating-wounds",
-        "tau-empire-ability-devastating-wounds",
-        "tyranids-ability-devastating-wounds"
+        "tau-empire-ability-devastating-wounds"
       ],
       "status": "review-required"
     },
@@ -571,8 +599,7 @@
         "emperors-children-ability-extra-attacks",
         "orks-ability-extra-attacks",
         "space-marines-ability-extra-attacks",
-        "tau-empire-ability-extra-attacks",
-        "tyranids-ability-extra-attacks"
+        "tau-empire-ability-extra-attacks"
       ],
       "status": "review-required"
     },
@@ -618,8 +645,7 @@
         "dark-angels-ability-heavy",
         "orks-ability-heavy",
         "space-marines-ability-heavy",
-        "tau-empire-ability-heavy",
-        "tyranids-ability-heavy"
+        "tau-empire-ability-heavy"
       ],
       "status": "review-required"
     },
@@ -645,8 +671,7 @@
         "emperors-children-ability-ignores-cover",
         "orks-ability-ignores-cover",
         "space-marines-ability-ignores-cover",
-        "tau-empire-ability-ignores-cover",
-        "tyranids-ability-ignores-cover"
+        "tau-empire-ability-ignores-cover"
       ],
       "status": "review-required"
     },
@@ -658,8 +683,7 @@
         "dark-angels-ability-indirect-fire",
         "orks-ability-indirect-fire",
         "space-marines-ability-indirect-fire",
-        "tau-empire-ability-indirect-fire",
-        "tyranids-ability-indirect-fire"
+        "tau-empire-ability-indirect-fire"
       ],
       "status": "review-required"
     },
@@ -695,7 +719,6 @@
       "normalizedTitle": "leader",
       "termIds": [
         "core-leader",
-        "adeptus-mechanicus-datasheet-leader",
         "chaos-space-marines-ability-leader",
         "chaos-space-marines-ability-leader-2",
         "chaos-space-marines-ability-leader-3",
@@ -842,8 +865,7 @@
         "emperors-children-ability-melta",
         "orks-ability-melta",
         "space-marines-ability-melta",
-        "tau-empire-ability-melta",
-        "tyranids-ability-melta"
+        "tau-empire-ability-melta"
       ],
       "status": "review-required"
     },
@@ -868,8 +890,7 @@
         "emperors-children-ability-pistol",
         "orks-ability-pistol",
         "space-marines-ability-pistol",
-        "tau-empire-ability-pistol",
-        "tyranids-ability-pistol"
+        "tau-empire-ability-pistol"
       ],
       "status": "review-required"
     },
@@ -882,8 +903,7 @@
         "emperors-children-ability-precision",
         "orks-ability-precision",
         "space-marines-ability-precision",
-        "tau-empire-ability-precision",
-        "tyranids-ability-precision"
+        "tau-empire-ability-precision"
       ],
       "status": "review-required"
     },
@@ -895,8 +915,7 @@
         "dark-angels-ability-psychic",
         "emperors-children-ability-psychic",
         "orks-ability-psychic",
-        "space-marines-ability-psychic",
-        "tyranids-ability-psychic"
+        "space-marines-ability-psychic"
       ],
       "status": "review-required"
     },
@@ -939,7 +958,6 @@
       "normalizedTitle": "support",
       "termIds": [
         "core-support",
-        "adeptus-mechanicus-datasheet-support",
         "chaos-space-marines-ability-support",
         "chaos-space-marines-ability-support-2",
         "chaos-space-marines-ability-support-3",
@@ -1010,8 +1028,7 @@
         "emperors-children-ability-torrent",
         "orks-ability-torrent",
         "space-marines-ability-torrent",
-        "tau-empire-ability-torrent",
-        "tyranids-ability-torrent"
+        "tau-empire-ability-torrent"
       ],
       "status": "review-required"
     },
@@ -1024,8 +1041,7 @@
         "emperors-children-ability-twin-linked",
         "orks-ability-twin-linked",
         "space-marines-ability-twin-linked",
-        "tau-empire-ability-twin-linked",
-        "tyranids-ability-twin-linked"
+        "tau-empire-ability-twin-linked"
       ],
       "status": "review-required"
     },
@@ -1254,7 +1270,6 @@
       "termIds": [
         "death-guard-weapon-heavy-bolter-chaos-predator-annihilator-chaos-predator-destructor",
         "adeptus-mechanicus-weapon-heavy-bolter",
-        "adeptus-mechanicus-weapon-heavy-bolter-2",
         "chaos-space-marines-weapon-heavy-bolter",
         "chaos-space-marines-weapon-heavy-bolter-2",
         "chaos-space-marines-weapon-heavy-bolter-3",
@@ -1530,7 +1545,6 @@
       "normalizedTitle": "multi-melta",
       "termIds": [
         "death-guard-weapon-multi-melta-helbrute-myphitic-blight-hauler",
-        "adeptus-mechanicus-weapon-multi-melta",
         "chaos-space-marines-weapon-multi-melta",
         "dark-angels-weapon-multi-melta",
         "dark-angels-weapon-multi-melta-2",
@@ -1940,6 +1954,14 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "mechanicus-pistol",
+      "termIds": [
+        "adeptus-mechanicus-weapon-mechanicus-pistol",
+        "adeptus-mechanicus-weapon-mechanicus-pistol-2"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "radium-jezzail",
       "termIds": [
         "adeptus-mechanicus-weapon-radium-jezzail",
@@ -2144,44 +2166,6 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "mindlock",
-      "termIds": [
-        "adeptus-mechanicus-datasheet-mindlock",
-        "dark-angels-ability-mindlock",
-        "space-marines-ability-mindlock"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "servitor-retinue",
-      "termIds": [
-        "adeptus-mechanicus-datasheet-servitor-retinue",
-        "dark-angels-ability-servitor-retinue",
-        "space-marines-ability-servitor-retinue"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "plasma-cannon-standard",
-      "termIds": [
-        "adeptus-mechanicus-weapon-plasma-cannon-standard",
-        "dark-angels-weapon-plasma-cannon-standard",
-        "dark-angels-weapon-plasma-cannon-standard-2",
-        "space-marines-weapon-plasma-cannon-standard"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "plasma-cannon-supercharge",
-      "termIds": [
-        "adeptus-mechanicus-weapon-plasma-cannon-supercharge",
-        "dark-angels-weapon-plasma-cannon-supercharge",
-        "dark-angels-weapon-plasma-cannon-supercharge-2",
-        "space-marines-weapon-plasma-cannon-supercharge"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "termite-assault",
       "termIds": [
         "adeptus-mechanicus-datasheet-termite-assault",
@@ -2233,6 +2217,15 @@
         "chaos-space-marines-weapon-termite-drill",
         "dark-angels-weapon-termite-drill",
         "space-marines-weapon-termite-drill"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "mindlock",
+      "termIds": [
+        "adeptus-mechanicus-datasheet-mindlock",
+        "dark-angels-ability-mindlock",
+        "space-marines-ability-mindlock"
       ],
       "status": "review-required"
     },
@@ -3758,6 +3751,24 @@
         "space-marines-weapon-grav-pistol",
         "space-marines-weapon-grav-pistol-2",
         "space-marines-weapon-grav-pistol-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "plasma-cannon-standard",
+      "termIds": [
+        "dark-angels-weapon-plasma-cannon-standard",
+        "dark-angels-weapon-plasma-cannon-standard-2",
+        "space-marines-weapon-plasma-cannon-standard"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "plasma-cannon-supercharge",
+      "termIds": [
+        "dark-angels-weapon-plasma-cannon-supercharge",
+        "dark-angels-weapon-plasma-cannon-supercharge-2",
+        "space-marines-weapon-plasma-cannon-supercharge"
       ],
       "status": "review-required"
     },
@@ -5630,6 +5641,14 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "servitor-retinue",
+      "termIds": [
+        "dark-angels-ability-servitor-retinue",
+        "space-marines-ability-servitor-retinue"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "servitor-servo-arm",
       "termIds": [
         "dark-angels-weapon-servitor-servo-arm",
@@ -6784,6 +6803,14 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "surprise-assault",
+      "termIds": [
+        "tyranids-detachment-rule-surprise-assault",
+        "tyranids-stratagem-surprise-assault"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "chitinous-claws-and-teeth",
       "termIds": [
         "tyranids-weapon-chitinous-claws-and-teeth",
@@ -6876,10 +6903,10 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "toxinjecter-harpoon",
+      "normalizedTitle": "toxinjector-harpoon",
       "termIds": [
-        "tyranids-weapon-toxinjecter-harpoon",
-        "tyranids-weapon-toxinjecter-harpoon-2"
+        "tyranids-weapon-toxinjector-harpoon",
+        "tyranids-weapon-toxinjector-harpoon-2"
       ],
       "status": "review-required"
     },

@@ -251,7 +251,7 @@ for(const [localId,entry] of Object.entries(amRuntime)){
   }else id=`adeptus-mechanicus-${localId}`;
   if(!registry.has(id)){
     const profile=localId.startsWith('weapon-')?weaponProfile(entry.summary):null;
-    addTerm({id,kind:localId.startsWith('weapon-')?'weapon':'faction-term',scope:localId.startsWith('core-')?'global':'adeptus-mechanicus',edition:'11e',language:'en',title:{en:entry.title},summary:{en:concise(entry.summary)},definition:{en:clean(entry.summary)},structured:profile?{weapon:profile}:{},presentation:profile?'profile':undefined,aliases:[localId],related:[],canonicalSource:{documentId:'adeptus-mechanicus',revision:'prototype',locator:entry.rule||entry.datasheet||localId},status:'provisional'},'adeptus-mechanicus',localId);
+    addTerm({id,kind:localId.startsWith('weapon-')?'weapon':'faction-term',scope:localId.startsWith('core-')?'global':'adeptus-mechanicus',edition:'11e',language:'en',title:{en:entry.title},summary:{en:concise(entry.summary)},definition:{en:clean(entry.full||entry.summary)},structured:profile?{weapon:profile}:{},presentation:profile?'profile':undefined,aliases:[localId],related:[],canonicalSource:{documentId:'adeptus-mechanicus',revision:'v1.1 + pinned 11e catalogue',locator:entry.rule||entry.datasheet||localId},status:'provisional'},'adeptus-mechanicus',localId);
   }
   else{
     if(localId!==id)aliases[localId]=id;
@@ -428,7 +428,7 @@ for(const [id,existing] of Object.entries(existingRegistry)){
   if(existing.curated===true&&!registry.has(id))registry.set(id,{...existing,sourceRefs:existing.sourceRefs||['curated-glossary']});
   const term=registry.get(id);
   if(!term)continue;
-  if(genericArmyBooks.some(book=>book.id===term.scope)&&existing.curated!==true)continue;
+  if((term.scope==='adeptus-mechanicus'||genericArmyBooks.some(book=>book.id===term.scope))&&existing.curated!==true)continue;
   for(const field of ['kind','scope','edition','language','title','summary','definition','structured','presentation','related','mentions','references','matchLabels','canonicalSource','summarySource','status','curation']){
     if(existing[field]==null)continue;
     if(field==='definition'&&/^(weapon|datasheet) profile\.?$/i.test(existing.definition?.en||''))continue;

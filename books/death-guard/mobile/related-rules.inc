@@ -1,74 +1,4 @@
-<section class="related-detachment related-core" data-detachment="core">
-      <h2>Core Stratagems</h2>
-      <div class="related-kind" data-related-kind="stratagems"><section class="content-group" id="core-stratagems" data-track="core-stratagems">
-<h3 class="category-title">Core Stratagems</h3>
-<p class="lead">Universal Stratagems available to every army. Datasheet tools only show the cards the selected unit can legally target.</p>
-<div class="detachment-content core-stratagem-grid">
-<article class="stratagem surface" id="core-stratagem-command-re-roll">
-<div class="stratagem-head"><div><h3>COMMAND RE-ROLL</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
-<p class="field"><b>WHEN</b><br>Any phase, just after you make an Advance, Charge, Damage, Hazard, Hit, Save or Wound roll for a unit from your army, or a roll to determine the number of attacks made with a weapon equipped by a model in that unit.</p>
-<p class="field"><b>TARGET</b><br>That unit or model from your army.</p>
-<p class="field"><b>EFFECT</b><br>Re-roll that roll. If several dice were rolled, select one of them to re-roll; Charge rolls are re-rolled in full.</p>
-</article>
-<article class="stratagem surface" id="core-stratagem-epic-challenge">
-<div class="stratagem-head"><div><h3>EPIC CHALLENGE</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
-<p class="field"><b>WHEN</b><br>Fight phase, just after a friendly CHARACTER unit is selected to fight.</p>
-<p class="field"><b>TARGET</b><br>That CHARACTER unit.</p>
-<p class="field"><b>EFFECT</b><br>Select one CHARACTER model in that unit. Until the end of the phase, its melee weapons have the PRECISION ability.</p>
-</article>
-<article class="stratagem surface" id="core-stratagem-insane-bravery">
-<div class="stratagem-head"><div><h3>INSANE BRAVERY</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
-<p class="field"><b>WHEN</b><br>Battle-shock step of your Command phase, just before a unit from your army takes a Battle-shock test.</p>
-<p class="field"><b>TARGET</b><br>That unit.</p>
-<p class="field"><b>EFFECT</b><br>That test is automatically successful.</p>
-<p class="field"><b>RESTRICTION</b><br>Once per battle.</p>
-</article>
-<article class="stratagem surface" id="core-stratagem-explosives">
-<div class="stratagem-head"><div><h3>EXPLOSIVES</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
-<p class="field"><b>WHEN</b><br>Your Shooting phase.</p>
-<p class="field"><b>TARGET</b><br>One EXPLOSIVES or GRENADES unit from your army that is eligible to shoot, did not Advance this turn and is not within Engagement Range of enemy units.</p>
-<p class="field"><b>EFFECT</b><br>Select one eligible model, then one visible enemy unit within 8&quot; and outside Engagement Range. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.</p>
-</article>
-<article class="stratagem surface" id="core-stratagem-crushing-impact">
-<div class="stratagem-head"><div><h3>CRUSHING IMPACT</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
-<p class="field"><b>WHEN</b><br>Your Charge phase, just after a MONSTER or VEHICLE unit from your army ends a Charge move.</p>
-<p class="field"><b>TARGET</b><br>That MONSTER or VEHICLE unit.</p>
-<p class="field"><b>EFFECT</b><br>Select one enemy unit within Engagement Range and one model in your unit within Engagement Range of it. Roll a number of D6 equal to that model’s Toughness: each 1 inflicts 1 mortal wound on your unit; each 5+ inflicts 1 mortal wound on the enemy unit, to a maximum of 6.</p>
-</article>
-<article class="stratagem surface" id="core-stratagem-rapid-ingress">
-<div class="stratagem-head"><div><h3>RAPID INGRESS</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
-<p class="field"><b>WHEN</b><br>End of your opponent’s Movement phase.</p>
-<p class="field"><b>TARGET</b><br>One unit from your army in Strategic Reserves, excluding AIRCRAFT.</p>
-<p class="field"><b>EFFECT</b><br>That unit can make an ingress move.</p>
-<p class="field"><b>RESTRICTION</b><br>Cannot be used during the first battle round.</p>
-</article>
-<article class="stratagem surface" id="core-stratagem-fire-overwatch">
-<div class="stratagem-head"><div><h3>FIRE OVERWATCH</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
-<p class="field"><b>WHEN</b><br>End of your opponent’s Movement phase.</p>
-<p class="field"><b>TARGET</b><br>One unit from your army, excluding TITANIC units, that is not within Engagement Range of enemy units.</p>
-<p class="field"><b>EFFECT</b><br>Your unit can shoot one visible enemy unit within 24&quot; using Snap Shooting: only unmodified Hit rolls of 6 score a hit and Hit rolls cannot be re-rolled. After it has shot, that unit is not eligible to perform an Action this turn.</p>
-</article>
-<article class="stratagem surface" id="core-stratagem-smokescreen">
-<div class="stratagem-head"><div><h3>SMOKESCREEN</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
-<p class="field"><b>WHEN</b><br>Start of your opponent’s Shooting phase.</p>
-<p class="field"><b>TARGET</b><br>One SMOKE unit from your army.</p>
-<p class="field"><b>EFFECT</b><br>Until the end of the phase, that unit has the Benefit of Cover. In addition, a friendly unit not fully visible to the attacking unit because it is obscured by the selected SMOKE unit also has the Benefit of Cover against that attack.</p>
-</article>
-<article class="stratagem surface" id="core-stratagem-heroic-intervention">
-<div class="stratagem-head"><div><h3>HEROIC INTERVENTION</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
-<p class="field"><b>WHEN</b><br>End of your opponent’s Charge phase.</p>
-<p class="field"><b>TARGET</b><br>One unit from your army within 12&quot; of one or more enemy units and not within Engagement Range. A VEHICLE can only be targeted if it is also a CHARACTER or WALKER.</p>
-<p class="field"><b>EFFECT</b><br>Resolve a Charge and select one mode before the Charge roll. <b>Leap to Defend:</b> charge targets must have made a Charge move this phase and be within the maximum distance. <b>Into the Fray (+1CP):</b> if the modified Charge roll is greater than 6, change it to 6; charge targets can be any enemy units within 6&quot; and within the maximum distance.</p>
-</article>
-<article class="stratagem surface" id="core-stratagem-counteroffensive">
-<div class="stratagem-head"><div><h3>COUNTEROFFENSIVE</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">2CP</div></div>
-<p class="field"><b>WHEN</b><br>Your opponent’s Fight step, just after an enemy unit has resolved its attacks.</p>
-<p class="field"><b>TARGET</b><br>One unit from your army that is eligible to fight.</p>
-<p class="field"><b>EFFECT</b><br>Your unit has Fights First and must be the next unit selected to fight.</p>
-</article>
-</div>
-</section></div>
-    </section><section class="related-detachment" data-detachment="virulent-vectorium">
+<section class="related-detachment" data-detachment="virulent-vectorium">
       <h2>Virulent Vectorium</h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="virulent-vectorium-stratagems" data-track="virulent-vectorium-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
@@ -228,7 +158,7 @@
 <article class="enhancement surface" id="enhancement-revolting-regeneration">
 <div class="eyebrow">Enhancement</div>
 <h4>
-<button class="term-button" data-term="revolting-regeneration" data-term-title="Revolting Regeneration" data-term-summary="DEATH GUARD model only. The bearer has the Feel No Pain 5+ ability." data-full-rule-path="books/death-guard/reader.html#enhancement-revolting-regeneration" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#enhancement-revolting-regeneration">Revolting Regeneration</button> - 20 pts</h4>
+<button class="term-button" data-term="revolting-regeneration" data-term-title="Revolting Regeneration" data-term-summary="DEATH GUARD model only. The bearer has the Feel No Pain 5+ ability." data-full-rule-path="books/death-guard/reader.html#enhancement-revolting-regeneration" data-mobile-rule-path="books/death-guard/mobile/virulent-vectorium.html#enhancement-revolting-regeneration">Revolting Regeneration</button> - 30 pts</h4>
 <p>
 <button class="term-button" data-term="keyword-death-guard" data-term-title="DEATH GUARD" data-term-summary="Rules that specify DEATH GUARD apply only to models or units with this keyword.">DEATH GUARD</button> model only. The bearer has the <button class="term-button" data-term="core-feel-no-pain" data-term-title="FEEL NO PAIN" data-term-summary="The hardiest warriors refuse to be laid low, even by wounds that should by all rights prove lethal. This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost." data-full-rule-path="books/core-rules/reader/core-abilities.html#rule-24-12">Feel No Pain</button> 5+ ability.</p>
 </article>
@@ -1155,7 +1085,7 @@
 <article class="enhancement surface" id="enhancement-lancet-of-the-worldsore">
 <div class="eyebrow">Enhancement</div>
 <h4>
-<button class="term-button" data-term="lancet-of-the-worldsore" data-term-title="Lancet of the Worldsore" data-term-summary="Friendly HELBRUTE/MYPHITIC BLIGHT-HAULER unit only. This unit has MOBILE." data-full-rule-path="books/death-guard/reader.html#enhancement-lancet-of-the-worldsore" data-mobile-rule-path="books/death-guard/mobile/contagion-engines.html#enhancement-lancet-of-the-worldsore">Lancet of the Worldsore</button> - 20 pts</h4>
+<button class="term-button" data-term="lancet-of-the-worldsore" data-term-title="Lancet of the Worldsore" data-term-summary="Friendly HELBRUTE/MYPHITIC BLIGHT-HAULER unit only. This unit has MOBILE." data-full-rule-path="books/death-guard/reader.html#enhancement-lancet-of-the-worldsore" data-mobile-rule-path="books/death-guard/mobile/contagion-engines.html#enhancement-lancet-of-the-worldsore">Lancet of the Worldsore</button> - 15 pts</h4>
 <p>Friendly <button class="term-button" data-term="term-helbrute" data-term-title="Helbrute" data-term-summary="M 7&quot; · T 9 · Sv 2+ · W 8 · Ld 6+ · OC 3" data-full-rule-path="books/death-guard/reader.html#unit-helbrute" data-mobile-rule-path="books/death-guard/mobile/helbrute.html#unit-helbrute">HELBRUTE</button>/<button class="term-button" data-term="term-myphitic-blight-hauler" data-term-title="Myphitic Blight-hauler" data-term-summary="M 10&quot; · T 9 · Sv 3+ · W 10 · Ld 6+ · OC 3 · Inv 5+" data-full-rule-path="books/death-guard/reader.html#unit-myphitic-blight-hauler" data-mobile-rule-path="books/death-guard/mobile/myphitic-blight-hauler.html#unit-myphitic-blight-hauler">MYPHITIC BLIGHT-HAULER</button> unit only. This unit has <button class="term-button" data-term="core-mobile" data-term-title="Mobile" data-term-summary="MOBILE models can move horizontally through dense terrain features.">MOBILE</button>.</p>
 </article>
 </div>
@@ -1237,14 +1167,14 @@
 <article class="enhancement surface" id="enhancement-insectile-murmuration">
 <div class="eyebrow">Enhancement</div>
 <h4>
-<button class="term-button" data-term="insectile-murmuration" data-term-title="Insectile Murmuration" data-term-summary="PLAGUE MARINES unit only. When this unit’s attacks target a unit within Contagion Range of a friendly unit, those attacks can re-roll wound rolls of 1." data-full-rule-path="books/death-guard/reader.html#enhancement-insectile-murmuration" data-mobile-rule-path="books/death-guard/mobile/flyblown-host.html#enhancement-insectile-murmuration">Insectile Murmuration</button> - 20 pts</h4>
+<button class="term-button" data-term="insectile-murmuration" data-term-title="Insectile Murmuration" data-term-summary="PLAGUE MARINES unit only. When this unit’s attacks target a unit within Contagion Range of a friendly unit, those attacks can re-roll wound rolls of 1." data-full-rule-path="books/death-guard/reader.html#enhancement-insectile-murmuration" data-mobile-rule-path="books/death-guard/mobile/flyblown-host.html#enhancement-insectile-murmuration">Insectile Murmuration</button> - 15 pts</h4>
 <p>
 <button class="term-button" data-term="term-plague-marines" data-term-title="Plague Marines" data-term-summary="M 5&quot; · T 6 · Sv 3+ · W 2 · Ld 6+ · OC 2" data-full-rule-path="books/death-guard/reader.html#unit-plague-marines" data-mobile-rule-path="books/death-guard/mobile/plague-marines.html#unit-plague-marines">PLAGUE MARINES</button> unit only. When this unit’s attacks target a unit within <button class="term-button" data-term="contagion-range" data-term-title="Contagion Range" data-term-summary="Contagion Range is 3&quot; in battle round 1, 6&quot; in round 2 and 9&quot; from round 3 onward; it cannot exceed 12&quot; after modifiers.">Contagion Range</button> of a friendly unit, those attacks can re-roll wound rolls of 1.</p>
 </article>
 <article class="enhancement surface" id="enhancement-plagueveil">
 <div class="eyebrow">Enhancement</div>
 <h4>
-<button class="term-button" data-term="plagueveil" data-term-title="Plagueveil" data-term-summary="PLAGUE MARINES unit only. This unit has -3&quot; detection range." data-full-rule-path="books/death-guard/reader.html#enhancement-plagueveil" data-mobile-rule-path="books/death-guard/mobile/flyblown-host.html#enhancement-plagueveil">Plagueveil</button> - 25 pts</h4>
+<button class="term-button" data-term="plagueveil" data-term-title="Plagueveil" data-term-summary="PLAGUE MARINES unit only. This unit has -3&quot; detection range." data-full-rule-path="books/death-guard/reader.html#enhancement-plagueveil" data-mobile-rule-path="books/death-guard/mobile/flyblown-host.html#enhancement-plagueveil">Plagueveil</button> - 15 pts</h4>
 <p>
 <button class="term-button" data-term="term-plague-marines" data-term-title="Plague Marines" data-term-summary="M 5&quot; · T 6 · Sv 3+ · W 2 · Ld 6+ · OC 2" data-full-rule-path="books/death-guard/reader.html#unit-plague-marines" data-mobile-rule-path="books/death-guard/mobile/plague-marines.html#unit-plague-marines">PLAGUE MARINES</button> unit only. This unit has -3&quot; <button class="term-button" data-term="core-detection-range" data-term-title="Detection Range" data-term-summary="Hidden models can only be visible to enemies within their Detection Range; normally 15&quot;.">detection range</button>.</p>
 </article>
@@ -1327,16 +1257,86 @@
 <article class="enhancement surface" id="enhancement-rejuvenating-swarm">
 <div class="eyebrow">Enhancement</div>
 <h4>
-<button class="term-button" data-term="rejuvenating-swarm" data-term-title="Rejuvenating Swarm" data-term-summary="DEATH GUARD INFANTRY model only (excluding TERMINATOR models). Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls." data-full-rule-path="books/death-guard/reader.html#enhancement-rejuvenating-swarm" data-mobile-rule-path="books/death-guard/mobile/paragons-of-putrescence.html#enhancement-rejuvenating-swarm">Rejuvenating Swarm</button> - 15 pts</h4>
+<button class="term-button" data-term="rejuvenating-swarm" data-term-title="Rejuvenating Swarm" data-term-summary="DEATH GUARD INFANTRY model only (excluding TERMINATOR models). Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls." data-full-rule-path="books/death-guard/reader.html#enhancement-rejuvenating-swarm" data-mobile-rule-path="books/death-guard/mobile/paragons-of-putrescence.html#enhancement-rejuvenating-swarm">Rejuvenating Swarm</button> - 20 pts</h4>
 <p>
 <button class="term-button" data-term="keyword-death-guard" data-term-title="DEATH GUARD" data-term-summary="Rules that specify DEATH GUARD apply only to models or units with this keyword.">DEATH GUARD</button> <button class="term-button" data-term="keyword-infantry" data-term-title="INFANTRY" data-term-summary="INFANTRY units use TERRAIN AND MOVEMENT, BENEFIT OF COVER and HIDDEN.">INFANTRY</button> model only (excluding <button class="term-button" data-term="keyword-terminator" data-term-title="TERMINATOR" data-term-summary="TERMINATOR identifies models whose transport capacity and other rules can be handled differently.">TERMINATOR</button> models). Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls.</p>
 </article>
 <article class="enhancement surface" id="enhancement-host-of-the-hybridised-pox">
 <div class="eyebrow">Enhancement</div>
 <h4>
-<button class="term-button" data-term="host-of-the-hybridised-pox" data-term-title="Host of the Hybridised Pox" data-term-summary="DEATH GUARD INFANTRY model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, select one of the Plagues listed in Nurgle’s Gift." data-full-rule-path="books/death-guard/reader.html#enhancement-host-of-the-hybridised-pox" data-mobile-rule-path="books/death-guard/mobile/paragons-of-putrescence.html#enhancement-host-of-the-hybridised-pox">Host of the Hybridised Pox</button> - 20 pts</h4>
+<button class="term-button" data-term="host-of-the-hybridised-pox" data-term-title="Host of the Hybridised Pox" data-term-summary="DEATH GUARD INFANTRY model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, select one of the Plagues listed in Nurgle’s Gift." data-full-rule-path="books/death-guard/reader.html#enhancement-host-of-the-hybridised-pox" data-mobile-rule-path="books/death-guard/mobile/paragons-of-putrescence.html#enhancement-host-of-the-hybridised-pox">Host of the Hybridised Pox</button> - 40 pts</h4>
 <p>
 <button class="term-button" data-term="keyword-death-guard" data-term-title="DEATH GUARD" data-term-summary="Rules that specify DEATH GUARD apply only to models or units with this keyword.">DEATH GUARD</button> <button class="term-button" data-term="keyword-infantry" data-term-title="INFANTRY" data-term-summary="INFANTRY units use TERRAIN AND MOVEMENT, BENEFIT OF COVER and HIDDEN.">INFANTRY</button> model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, select one of the Plagues listed in <button class="term-button" data-term="nurgles-gift" data-term-title="Nurgle’s Gift" data-term-summary="While an enemy unit is within Contagion Range of one or more DEATH GUARD models from your army, it is Afflicted.">Nurgle’s Gift</button>. Enemy units within <button class="term-button" data-term="contagion-range" data-term-title="Contagion Range" data-term-summary="Contagion Range is 3&quot; in battle round 1, 6&quot; in round 2 and 9&quot; from round 3 onward; it cannot exceed 12&quot; after modifiers.">Contagion Range</button> of this unit also have the effect of that Plague in addition to your army’s chosen Plague until the end of the battle.</p>
+</article>
+</div>
+</section></div>
+    </section><section class="related-detachment related-core" data-detachment="core">
+      <h2>Core Stratagems</h2>
+      <div class="related-kind" data-related-kind="stratagems"><section class="content-group" id="core-stratagems" data-track="core-stratagems">
+<h3 class="category-title">Core Stratagems</h3>
+<p class="lead">Universal Stratagems available to every army. Datasheet tools only show the cards the selected unit can legally target.</p>
+<div class="detachment-content core-stratagem-grid">
+<article class="stratagem surface" id="core-stratagem-command-re-roll">
+<div class="stratagem-head"><div><h3>COMMAND RE-ROLL</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
+<p class="field"><b>WHEN</b><br>Any phase, just after you make an Advance, Charge, Damage, Hazard, Hit, Save or Wound roll for a unit from your army, or a roll to determine the number of attacks made with a weapon equipped by a model in that unit.</p>
+<p class="field"><b>TARGET</b><br>That unit or model from your army.</p>
+<p class="field"><b>EFFECT</b><br>Re-roll that roll. If several dice were rolled, select one of them to re-roll; Charge rolls are re-rolled in full.</p>
+</article>
+<article class="stratagem surface" id="core-stratagem-epic-challenge">
+<div class="stratagem-head"><div><h3>EPIC CHALLENGE</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
+<p class="field"><b>WHEN</b><br>Fight phase, just after a friendly CHARACTER unit is selected to fight.</p>
+<p class="field"><b>TARGET</b><br>That CHARACTER unit.</p>
+<p class="field"><b>EFFECT</b><br>Select one CHARACTER model in that unit. Until the end of the phase, its melee weapons have the PRECISION ability.</p>
+</article>
+<article class="stratagem surface" id="core-stratagem-insane-bravery">
+<div class="stratagem-head"><div><h3>INSANE BRAVERY</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
+<p class="field"><b>WHEN</b><br>Battle-shock step of your Command phase, just before a unit from your army takes a Battle-shock test.</p>
+<p class="field"><b>TARGET</b><br>That unit.</p>
+<p class="field"><b>EFFECT</b><br>That test is automatically successful.</p>
+<p class="field"><b>RESTRICTION</b><br>Once per battle.</p>
+</article>
+<article class="stratagem surface" id="core-stratagem-explosives">
+<div class="stratagem-head"><div><h3>EXPLOSIVES</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
+<p class="field"><b>WHEN</b><br>Your Shooting phase.</p>
+<p class="field"><b>TARGET</b><br>One EXPLOSIVES or GRENADES unit from your army that is eligible to shoot, did not Advance this turn and is not within Engagement Range of enemy units.</p>
+<p class="field"><b>EFFECT</b><br>Select one eligible model, then one visible enemy unit within 8&quot; and outside Engagement Range. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.</p>
+</article>
+<article class="stratagem surface" id="core-stratagem-crushing-impact">
+<div class="stratagem-head"><div><h3>CRUSHING IMPACT</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
+<p class="field"><b>WHEN</b><br>Your Charge phase, just after a MONSTER or VEHICLE unit from your army ends a Charge move.</p>
+<p class="field"><b>TARGET</b><br>That MONSTER or VEHICLE unit.</p>
+<p class="field"><b>EFFECT</b><br>Select one enemy unit within Engagement Range and one model in your unit within Engagement Range of it. Roll a number of D6 equal to that model’s Toughness: each 1 inflicts 1 mortal wound on your unit; each 5+ inflicts 1 mortal wound on the enemy unit, to a maximum of 6.</p>
+</article>
+<article class="stratagem surface" id="core-stratagem-rapid-ingress">
+<div class="stratagem-head"><div><h3>RAPID INGRESS</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
+<p class="field"><b>WHEN</b><br>End of your opponent’s Movement phase.</p>
+<p class="field"><b>TARGET</b><br>One unit from your army in Strategic Reserves, excluding AIRCRAFT.</p>
+<p class="field"><b>EFFECT</b><br>That unit can make an ingress move.</p>
+<p class="field"><b>RESTRICTION</b><br>Cannot be used during the first battle round.</p>
+</article>
+<article class="stratagem surface" id="core-stratagem-fire-overwatch">
+<div class="stratagem-head"><div><h3>FIRE OVERWATCH</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
+<p class="field"><b>WHEN</b><br>End of your opponent’s Movement phase.</p>
+<p class="field"><b>TARGET</b><br>One unit from your army, excluding TITANIC units, that is not within Engagement Range of enemy units.</p>
+<p class="field"><b>EFFECT</b><br>Your unit can shoot one visible enemy unit within 24&quot; using Snap Shooting: only unmodified Hit rolls of 6 score a hit and Hit rolls cannot be re-rolled. After it has shot, that unit is not eligible to perform an Action this turn.</p>
+</article>
+<article class="stratagem surface" id="core-stratagem-smokescreen">
+<div class="stratagem-head"><div><h3>SMOKESCREEN</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
+<p class="field"><b>WHEN</b><br>Start of your opponent’s Shooting phase.</p>
+<p class="field"><b>TARGET</b><br>One SMOKE unit from your army.</p>
+<p class="field"><b>EFFECT</b><br>Until the end of the phase, that unit has the Benefit of Cover. In addition, a friendly unit not fully visible to the attacking unit because it is obscured by the selected SMOKE unit also has the Benefit of Cover against that attack.</p>
+</article>
+<article class="stratagem surface" id="core-stratagem-heroic-intervention">
+<div class="stratagem-head"><div><h3>HEROIC INTERVENTION</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
+<p class="field"><b>WHEN</b><br>End of your opponent’s Charge phase.</p>
+<p class="field"><b>TARGET</b><br>One unit from your army within 12&quot; of one or more enemy units and not within Engagement Range. A VEHICLE can only be targeted if it is also a CHARACTER or WALKER.</p>
+<p class="field"><b>EFFECT</b><br>Resolve a Charge and select one mode before the Charge roll. <b>Leap to Defend:</b> charge targets must have made a Charge move this phase and be within the maximum distance. <b>Into the Fray (+1CP):</b> if the modified Charge roll is greater than 6, change it to 6; charge targets can be any enemy units within 6&quot; and within the maximum distance.</p>
+</article>
+<article class="stratagem surface" id="core-stratagem-counteroffensive">
+<div class="stratagem-head"><div><h3>COUNTEROFFENSIVE</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">2CP</div></div>
+<p class="field"><b>WHEN</b><br>Your opponent’s Fight step, just after an enemy unit has resolved its attacks.</p>
+<p class="field"><b>TARGET</b><br>One unit from your army that is eligible to fight.</p>
+<p class="field"><b>EFFECT</b><br>Your unit has Fights First and must be the next unit selected to fight.</p>
 </article>
 </div>
 </section></div>

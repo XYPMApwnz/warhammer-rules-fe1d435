@@ -6,13 +6,13 @@ const ROSTER_GUIDES_FALLBACK = "./roster-guides/index.html";
 const DEATH_GUARD_FALLBACK = "./books/death-guard/index.html";
 const CORE_RULES_FALLBACK = "./books/core-rules/reader/index.html";
 const ADEPTUS_MECHANICUS_FALLBACK = "./books/adeptus-mechanicus/index.html";
-const TYRANIDS_FALLBACK = "./books/tyranids/index.html";
-const TAU_EMPIRE_FALLBACK = "./books/tau-empire/index.html";
-const CHAOS_SPACE_MARINES_FALLBACK = "./books/chaos-space-marines/index.html";
-const ORKS_FALLBACK = "./books/orks/index.html";
-const EMPERORS_CHILDREN_FALLBACK = "./books/emperors-children/index.html";
-const SPACE_MARINES_FALLBACK = "./books/space-marines/index.html";
-const DARK_ANGELS_FALLBACK = "./books/dark-angels/index.html";
+const TYRANIDS_FALLBACK = LIBRARY_FALLBACK;
+const TAU_EMPIRE_FALLBACK = LIBRARY_FALLBACK;
+const CHAOS_SPACE_MARINES_FALLBACK = LIBRARY_FALLBACK;
+const ORKS_FALLBACK = LIBRARY_FALLBACK;
+const EMPERORS_CHILDREN_FALLBACK = LIBRARY_FALLBACK;
+const SPACE_MARINES_FALLBACK = LIBRARY_FALLBACK;
+const DARK_ANGELS_FALLBACK = LIBRARY_FALLBACK;
 const APP_SHELL = [
   "./",
   LIBRARY_FALLBACK,
@@ -40,6 +40,10 @@ const APP_SHELL = [
   "./assets/adeptus-mechanicus-cover-800.webp",
   "./assets/adeptus-mechanicus-cover-fallback.jpg",
   "./assets/adeptus-mechanicus-cover-thumb.jpg",
+  "./assets/tyranids-cover-480.webp",
+  "./assets/tyranids-cover-800.webp",
+  "./assets/tyranids-cover-fallback.jpg",
+  "./assets/tyranids-cover-thumb.jpg",
   "./glossary/generated/cache-revision.js",
   "./glossary-return.js?v=2",
   "./glossary/",
@@ -131,69 +135,49 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/scripts/app.js?v=27"
   ,"./books/tyranids/"
   ,TYRANIDS_FALLBACK
-  ,"./books/tyranids/reader.html"
   ,"./books/tyranids/mobile/index.html"
-  ,"./books/tyranids/mobile/related-rules.inc?v=3"
   ,"./books/tyranids/styles/tokens.css?v=1"
   ,"./books/tyranids/styles/book.css?v=2"
-  ,"./books/tyranids/scripts/data.js?v=2"
-  ,"./books/tyranids/scripts/app.js?v=2"
+  ,"./books/tyranids/scripts/app.js?v=3"
   ,"./books/tau-empire/"
   ,TAU_EMPIRE_FALLBACK
-  ,"./books/tau-empire/reader.html"
   ,"./books/tau-empire/mobile/index.html"
-  ,"./books/tau-empire/mobile/related-rules.inc?v=3"
   ,"./books/tau-empire/styles/tokens.css?v=1"
   ,"./books/tau-empire/styles/book.css?v=2"
-  ,"./books/tau-empire/scripts/data.js?v=2"
   ,"./books/tau-empire/scripts/app.js?v=2"
   ,"./books/chaos-space-marines/"
   ,CHAOS_SPACE_MARINES_FALLBACK
-  ,"./books/chaos-space-marines/reader.html"
   ,"./books/chaos-space-marines/mobile/index.html"
-  ,"./books/chaos-space-marines/mobile/related-rules.inc?v=3"
   ,"./books/chaos-space-marines/styles/tokens.css?v=1"
   ,"./books/chaos-space-marines/styles/book.css?v=2"
-  ,"./books/chaos-space-marines/scripts/data.js?v=2"
   ,"./books/chaos-space-marines/scripts/app.js?v=2"
   ,"./books/orks/"
   ,ORKS_FALLBACK
-  ,"./books/orks/reader.html"
   ,"./books/orks/mobile/index.html"
-  ,"./books/orks/mobile/related-rules.inc?v=3"
   ,"./books/orks/styles/tokens.css?v=1"
   ,"./books/orks/styles/book.css?v=2"
-  ,"./books/orks/scripts/data.js?v=2"
   ,"./books/orks/scripts/app.js?v=2"
   ,"./books/emperors-children/"
   ,EMPERORS_CHILDREN_FALLBACK
-  ,"./books/emperors-children/reader.html"
   ,"./books/emperors-children/mobile/index.html"
-  ,"./books/emperors-children/mobile/related-rules.inc?v=3"
   ,"./books/emperors-children/styles/tokens.css?v=1"
   ,"./books/emperors-children/styles/book.css?v=2"
-  ,"./books/emperors-children/scripts/data.js?v=2"
   ,"./books/emperors-children/scripts/app.js?v=2"
   ,"./books/space-marines/"
   ,SPACE_MARINES_FALLBACK
-  ,"./books/space-marines/reader.html"
   ,"./books/space-marines/mobile/index.html"
-  ,"./books/space-marines/mobile/related-rules.inc?v=3"
   ,"./books/space-marines/styles/tokens.css?v=1"
   ,"./books/space-marines/styles/book.css?v=2"
-  ,"./books/space-marines/scripts/data.js?v=2"
   ,"./books/space-marines/scripts/app.js?v=2"
   ,"./books/dark-angels/"
   ,DARK_ANGELS_FALLBACK
-  ,"./books/dark-angels/reader.html"
   ,"./books/dark-angels/mobile/index.html"
-  ,"./books/dark-angels/mobile/related-rules.inc?v=3"
   ,"./books/dark-angels/styles/tokens.css?v=1"
   ,"./books/dark-angels/styles/book.css?v=2"
-  ,"./books/dark-angels/scripts/data.js?v=2"
   ,"./books/dark-angels/scripts/app.js?v=2"
-  ,"./books/shared/army-related-rules.js?v=3"
-  ,"./books/shared/army-book-app.js?v=5"
+  ,"./books/shared/army-related-rules.js?v=4"
+  ,"./books/shared/army-book-app.js?v=6"
+  ,"./books/shared/army-book-app.js?v=7"
 ];
 
 self.addEventListener("install", (event) => {

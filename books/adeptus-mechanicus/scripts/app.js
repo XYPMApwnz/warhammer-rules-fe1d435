@@ -18,9 +18,19 @@
   const viewSwitch=document.querySelector('[data-view-switch]');
   if(rosterGuides)rosterGuides.hidden=!params.get('roster');
   viewSwitch?.addEventListener('click',()=>{
-    const destination=new URL('./mobile/index.html',location.href);
+    const active=navigation.active;
+    let route='index.html',anchor='start';
+    for(let node=navigation.byId.get(active)?.node;node;node=node.parentElement?.closest('[data-nav-id]')){
+      const id=node.dataset.navId;
+      if(id==='start'){anchor=active;break;}
+      if(id==='updates'){route='updates.html';anchor=active;break;}
+      if(id==='core-rules'){route='army-rules.html';anchor=active;break;}
+      if(id.startsWith('detachment-')){route=id.slice(11)+'.html';anchor=active;break;}
+      if(id.startsWith('unit-')){route=id.slice(5)+'.html';anchor=active;break;}
+    }
+    const destination=new URL('./mobile/'+route,location.href);
     destination.search=params.toString();
-    destination.hash=navigation.active;
+    destination.hash=anchor;
     viewSwitch.href=destination.href;
   });
   window.DG_APP=Object.freeze({navigation,popups,fullEntry,journey});

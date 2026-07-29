@@ -14,11 +14,12 @@ const resolvePath=value=>path.resolve(configDir,value);
 const sha256=buffer=>crypto.createHash('sha256').update(buffer).digest('hex').toUpperCase();
 const json=value=>`${JSON.stringify(value,null,2)}\n`;
 const textCorrections=new Map(Object.entries(config.textCorrections||{}));
+const keywordCorrections=new Map(Object.entries(config.keywordCorrections||{}).map(([from,to])=>[from.toLowerCase(),to]));
 const clean=value=>{
   const normalized=String(value??'')
     .replaceAll('^^**',' ').replaceAll('**^^',' ').replaceAll('**',' ').replaceAll('^^',' ')
     .replaceAll('\u00a0',' ').replaceAll('\u2011','-').replaceAll('\ufffd','')
-    .replace(/[ \t]+/g,' ').trim();
+    .replace(/[ \t]+/g,' ').replace(/\s+([,.;:])/g,'$1').trim();
   return textCorrections.get(normalized)||normalized;
 };
 const key=value=>clean(value).toLowerCase().replace(/\s*\[legends]\s*$/i,'');
@@ -64,7 +65,9 @@ const imperialArmourNames=new Set((config.filters.imperialArmourNames||[]).map(k
 
 function graph(entry){
   const profiles=[];
+  const profileRecords=[];
   const rules=[];
+  const ruleRecords=[];
   const nodes=[];
   const visited=new Set();
   const walk=node=>{
@@ -72,26 +75,36 @@ function graph(entry){
     if(node!==entry&&blockedBranch.test(clean(node.name)))return;
     if(node.id)visited.add(node.id);
     nodes.push(node);
-    profiles.push(...(node.profiles||[]).filter(profile=>profile.hidden!==true));
+    for(const profile of (node.profiles||[]).filter(profile=>profile.hidden!==true)){
+      profiles.push(profile);
+      profileRecords.push({profile,ownerType:node.type||'group',ownerName:clean(node.name)});
+    }
     for(const child of [...(node.selectionEntries||[]),...(node.selectionEntryGroups||[])])walk(child);
     for(const link of [...(node.entryLinks||[]),...(node.infoLinks||[])]){
       if(link.hidden===true)continue;
       const target=byId.get(link.targetId);
       if(!target)continue;
-      if(link.type==='profile'||target.typeName)profiles.push(target);
+      if(link.type==='profile'||target.typeName){
+        profiles.push(target);
+        profileRecords.push({profile:target,ownerType:node.type||'group',ownerName:clean(node.name)});
+      }
       else if(link.type==='rule'){
         const suffix=(link.modifiers||[]).filter(mod=>mod.type==='append'&&mod.field==='name').map(mod=>clean(mod.value)).join(' ');
-        rules.push({
+        const rule={
           title:clean(`${link.name||target.name||''} ${suffix}`),
           text:clean(target.description||target.characteristics?.find(item=>item.name==='Description')?.$text)
-        });
+        };
+        rules.push(rule);
+        ruleRecords.push({...rule,ownerType:node.type||'group',ownerName:clean(node.name)});
       }else if(['selectionEntry','selectionEntryGroup'].includes(link.type))walk(target);
     }
   };
   walk(entry);
   return {
     profiles:unique(profiles,profile=>profile.id||`${profile.typeName}:${profile.name}:${JSON.stringify(profile.characteristics)}`),
+    profileRecords:unique(profileRecords,item=>item.profile.id||`${item.profile.typeName}:${item.profile.name}:${JSON.stringify(item.profile.characteristics)}`),
     rules:unique(rules.filter(rule=>rule.title),rule=>`${key(rule.title)}:${rule.text}`),
+    ruleRecords:unique(ruleRecords.filter(rule=>rule.title),rule=>`${key(rule.title)}:${rule.text}:${rule.ownerType}:${key(rule.ownerName)}`),
     nodes
   };
 }
@@ -265,14 +278,20 @@ function parseDatasheet(link){
     const ranged=profile.typeName==='Ranged Weapons';
     return{name:clean(profile.name),mode:ranged?'ranged':'melee',range:stats.Range||'-',a:stats.A||'-',skill:(ranged?stats.BS:stats.WS)||'-',s:stats.S||'-',ap:stats.AP||'-',d:stats.D||'-',abilities:clean(stats.Keywords)==='-'?'':clean(stats.Keywords)};
   });
-  const profileAbilities=resolved.profiles.filter(profile=>profile.typeName==='Abilities').map(profile=>{
-    const rawText=(profile.characteristics||[]).find(item=>item.name==='Description')?.$text||'';
-    return{title:clean(profile.name),text:clean(rawText),rawText};
+  const abilityRecords=resolved.profileRecords.filter(item=>item.profile.typeName==='Abilities').map(item=>{
+    const rawText=(item.profile.characteristics||[]).find(characteristic=>characteristic.name==='Description')?.$text||'';
+    return{title:clean(item.profile.name),text:clean(rawText),rawText,ownerType:item.ownerType,ownerName:item.ownerName};
   });
-  const ruleAbilities=resolved.rules.map(rule=>({...rule,rawText:rule.text}));
+  const separateWargear=config.faction?.separateWargearAbilities===true;
+  const ruleRecords=resolved.ruleRecords.map(rule=>({...rule,rawText:rule.text}));
+  const allRecords=[...abilityRecords,...ruleRecords];
+  const wargearAbilityKeys=new Set(separateWargear?allRecords.filter(item=>item.ownerType==='upgrade'&&key(item.ownerName)!==key(title)).map(item=>key(item.title)):[]);
+  const profileAbilities=abilityRecords.filter(item=>!wargearAbilityKeys.has(key(item.title)));
+  const ruleAbilities=ruleRecords.filter(item=>!wargearAbilityKeys.has(key(item.title)));
+  const wargearAbilities=allRecords.filter(item=>wargearAbilityKeys.has(key(item.title)));
   const allAbilities=unique([...profileAbilities,...ruleAbilities].filter(item=>item.title),item=>`${key(item.title)}:${item.text}`);
   const composition=compositionFor(entry,title);
-  const categories=categoriesFor(entry);
+  const categories=categoriesFor(entry).map(value=>keywordCorrections.get(value.toLowerCase())||value);
   const legends=/\[Legends]/i.test(rawTitle);
   const imperialArmour=imperialArmourNames.has(key(rawTitle));
   const sourceLayer=imperialArmour?'imperial-armour':legends?'legends':'codex';
@@ -285,7 +304,8 @@ function parseDatasheet(link){
     points:pointRows(entry,composition),
     profiles:unique(statProfiles,item=>`${item.name}:${JSON.stringify(item.stats)}`),
     weapons:unique(weapons,item=>JSON.stringify(item)),
-    abilities:allAbilities.map(({rawText,...ability})=>ability),
+    abilities:allAbilities.map(({rawText,ownerType,ownerName,...ability})=>ability),
+    ...(separateWargear?{wargearAbilities:unique(wargearAbilities.filter(item=>item.title),item=>`${key(item.title)}:${item.text}`).map(({rawText,ownerType,ownerName,...ability})=>ability)}:{}),
     keywords:categories,
     composition,
     paidWargear:paidWargear(resolved.nodes),
@@ -300,6 +320,29 @@ const rootLinks=(faction.entryLinks||[]).filter(link=>{
   return entry&&!excludedCategories.has(key(primaryCategory(entry)));
 });
 const parsed=rootLinks.map(parseDatasheet);
+for(const unit of parsed){
+  const correction=config.unitCorrections?.[unit.title];
+  if(!correction)continue;
+  if(correction.addKeywords)unit.keywords=unique([...unit.keywords,...correction.addKeywords],key);
+  if(correction.removeAbilities){
+    const removed=new Set(correction.removeAbilities.map(key));
+    unit.abilities=unit.abilities.filter(ability=>!removed.has(key(ability.title)));
+  }
+  for(const [title,replacement] of Object.entries(correction.abilities||{})){
+    const ability=unit.abilities.find(item=>key(item.title)===key(title));
+    if(!ability)throw new Error(`${unit.title}: ability correction target not found: ${title}`);
+    Object.assign(ability,replacement);
+  }
+  for(const ability of correction.addAbilities||[]){
+    if(!unit.abilities.some(item=>key(item.title)===key(ability.title)))unit.abilities.push(ability);
+  }
+  for(const weapon of unit.weapons){
+    const skill=correction.weaponSkills?.[weapon.name];
+    if(skill)weapon.skill=skill;
+    const name=correction.weaponNames?.[weapon.name];
+    if(name)weapon.name=name;
+  }
+}
 const duplicates=parsed.filter((item,index)=>parsed.findIndex(other=>other.id===item.id)!==index);
 if(duplicates.length)throw new Error(`Duplicate datasheet ids: ${duplicates.map(item=>item.id).join(', ')}`);
 const sortUnits=items=>items.sort((a,b)=>a.category.localeCompare(b.category)||a.title.localeCompare(b.title));
@@ -369,6 +412,33 @@ const points={
   enhancements,
   audit:{units:parsed.length,enhancements:enhancements.length}
 };
+if(config.outputs.officialPoints){
+  const official=JSON.parse(fs.readFileSync(resolvePath(config.outputs.officialPoints),'utf8'));
+  const unitOverrides=new Map((official.unitOverrides||[]).map(item=>[key(item.title),item]));
+  const verifiedUnits=new Set((official.verifiedUnits||[]).map(key));
+  for(const unit of points.units){
+    const override=unitOverrides.get(key(unit.title));
+    if(override){
+      unit.points=override.points;
+      if(override.paidWargear)unit.paidWargear=override.paidWargear;
+    }
+    if(verifiedUnits.has(key(unit.title)))unit.pointsSource={label:`Official MFM ${official.version}`,url:official.url,verifiedAt:official.verifiedAt};
+  }
+  const officialEnhancements=new Map((official.enhancements||[]).map(item=>[key(item.title),item]));
+  for(const enhancement of points.enhancements){
+    const current=officialEnhancements.get(key(enhancement.title))||officialEnhancements.get(key(enhancement.title.replace(/\s+\(Aura\)$/i,'')));
+    if(current){enhancement.title=current.title;enhancement.value=current.value;enhancement.pointsSource={label:`Official MFM ${official.version}`,url:official.url,verifiedAt:official.verifiedAt};officialEnhancements.delete(key(current.title));}
+  }
+  for(const item of officialEnhancements.values()){
+    const sourceItem=item.sourceTitle?points.enhancements.find(candidate=>key(candidate.title)===key(item.sourceTitle)):null;
+    if(sourceItem){Object.assign(sourceItem,{title:item.title,value:item.value,text:item.text||sourceItem.text,pointsSource:{label:`Official MFM ${official.version}`,url:official.url,verifiedAt:official.verifiedAt}});continue;}
+    points.enhancements.push({...(sourceItem||{}),id:item.id||sourceItem?.id||`enhancement-${slug(item.title)}`,title:item.title,detachment:item.detachment||sourceItem?.detachment||'',value:item.value,text:item.text||sourceItem?.text||'',profile:sourceItem?.profile||null,pointsSource:{label:`Official MFM ${official.version}`,url:official.url,verifiedAt:official.verifiedAt}});
+  }
+  points.enhancements.sort((a,b)=>a.detachment.localeCompare(b.detachment)||a.title.localeCompare(b.title));
+  points.detachments=official.detachments||[];
+  points.source={...sourceMeta,officialMfm:{version:official.version,url:official.url,verifiedAt:official.verifiedAt}};
+  points.audit.enhancements=points.enhancements.length;
+}
 
 const outputs=[
   [resolvePath(config.outputs.snapshot),json(snapshot)],

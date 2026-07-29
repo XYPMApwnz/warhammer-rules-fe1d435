@@ -1,7 +1,7 @@
 {
   "name": "Adeptus Mechanicus Rules",
   "short_name": "Mechanicus",
-  "description": "Complete offline Adeptus Mechanicus Faction Pack v1.0 reference",
+  "description": "Offline Adeptus Mechanicus Faction Pack v1.1 and Codex rules reference",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

@@ -62,7 +62,7 @@
     document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!layer.hidden)close();});
     async function open(current,state={}){
       if(!current)return null;
-      unit=current;kind=state.kind||'stratagems';title.textContent=current.dataset.unitTitle||'Related rules';
+      unit=current;layer.dataset.unitId=current.id;kind=state.kind||'stratagems';title.textContent=current.dataset.unitTitle||'Related rules';
       layer.hidden=false;document.documentElement.classList.add('related-rules-open');
       if(!content){
         try{
@@ -96,7 +96,12 @@
       }
       if(state.detachment&&sections.some(section=>section.dataset.detachment===state.detachment))detachment=state.detachment;
       filter();
-      layer.querySelector('.related-rules-dialog').scrollTop=state.scrollTop||0;
+      if(filterMenu){
+        const selected=filterMenu.querySelector(`[data-detachment="${CSS.escape(detachment)}"]`);
+        if(selected)filterMenu.querySelector('summary span').textContent=selected.textContent;
+        filterMenu.querySelectorAll('[data-detachment]').forEach(button=>button.setAttribute('aria-pressed',String(button===selected)));
+      }
+      body.scrollTop=state.scrollTop||0;
       layer.querySelector('.related-rules-close').focus();
       return layer;
     }
@@ -106,7 +111,7 @@
       const button=document.createElement('button');button.type='button';button.className='related-rules-trigger';button.textContent='Stratagems & Enhancements';keywords.after(button);
     }
     document.addEventListener('click',event=>{const button=event.target.closest('.related-rules-trigger');if(button)open(button.closest('.unit-card'));});
-    return{layer,close,open,snapshot(origin){if(layer.hidden||!layer.contains(origin))return null;const card=origin.closest('[data-rule-id]'),termId=origin.dataset.term||'',found=card&&termId?[...card.querySelectorAll(`[data-term="${CSS.escape(termId)}"]`)]:[];return{type:'related-rules',unitId:unit?.id||'',detachment,kind,scrollTop:layer.querySelector('.related-rules-dialog').scrollTop,ruleId:card?.dataset.ruleId||'',termId,occurrence:Math.max(0,found.indexOf(origin))};},async restore(state){const restoredUnit=document.getElementById(state?.unitId);if(!restoredUnit)return null;await open(restoredUnit,state);const card=layer.querySelector(`[data-rule-id="${CSS.escape(state.ruleId||'')}"]`),found=card&&state.termId?[...card.querySelectorAll(`[data-term="${CSS.escape(state.termId)}"]`)]:[];return found[state.occurrence]||found[0]||null;}};
+    return{layer,close,open,snapshot(origin){if(layer.hidden||!layer.contains(origin))return null;const card=origin.closest('[data-rule-id]'),termId=origin.dataset.term||'',found=card&&termId?[...card.querySelectorAll(`[data-term="${CSS.escape(termId)}"]`)]:[];return{type:'related-rules',unitId:unit?.id||'',detachment,kind,scrollTop:body.scrollTop,ruleId:card?.dataset.ruleId||'',termId,occurrence:Math.max(0,found.indexOf(origin))};},async restore(state){const restoredUnit=document.getElementById(state?.unitId);if(!restoredUnit)return null;await open(restoredUnit,state);const card=layer.querySelector(`[data-rule-id="${CSS.escape(state.ruleId||'')}"]`),found=card&&state.termId?[...card.querySelectorAll(`[data-term="${CSS.escape(state.termId)}"]`)]:[];return found[state.occurrence]||found[0]||null;}};
   }
   root.WHArmyRelatedRules=Object.freeze({install,profile,matches});
 }(window));

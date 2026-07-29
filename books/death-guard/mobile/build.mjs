@@ -67,14 +67,14 @@ function relatedRules() {
       <h2>Core Stratagems</h2>
       <div class="related-kind" data-related-kind="stratagems">${extract('section', 'core-stratagems')}</div>
     </section>`;
-  return hydrateTerms(core + detachments.map(detachment => {
+  return hydrateTerms(detachments.map(detachment => {
     const slug = detachment.id.slice(11);
     return `<section class="related-detachment" data-detachment="${slug}">
       <h2>${detachment.title}</h2>
       <div class="related-kind" data-related-kind="stratagems">${extract('section', `${slug}-stratagems`)}</div>
       <div class="related-kind" data-related-kind="enhancements" hidden>${extract('section', `${slug}-enhancements`)}</div>
     </section>`;
-  }).join('\n'));
+  }).join('\n') + core);
 }
 
 function link(route, active) {

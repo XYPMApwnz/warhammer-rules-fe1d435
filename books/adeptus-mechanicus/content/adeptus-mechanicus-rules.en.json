@@ -1,15 +1,15 @@
 {
   "schema": 2,
-  "version": "adeptus-mechanicus-faction-pack-v1.0-full",
+  "version": "adeptus-mechanicus-faction-pack-v1.1-full",
   "title": "Adeptus Mechanicus Rules",
-  "subtitle": "Complete local reference for Faction Pack v1.0, including Warhammer Legends",
+  "subtitle": "Complete local reference for Faction Pack v1.1, including Warhammer Legends",
   "source": {
     "title": "Adeptus Mechanicus Faction Pack",
-    "version": "1.0",
-    "legalFrom": "2026-06-20",
-    "pages": 26,
-    "sha256": "7F01DD2CE7E35C762B0AB625ADE779022275574CF2D01EE46EE16B2F5582341C",
-    "file": "sources/adeptus-mechanicus-faction-pack-v1.0.pdf"
+    "version": "1.1",
+    "legalFrom": "2026-07-22",
+    "pages": 27,
+    "sha256": "FC8D366B0615CDE750E01924277D4A42B680639B1BF96E3823E7FCCE11241345",
+    "file": "sources/adeptus-mechanicus-faction-pack-v1.1.pdf"
   },
   "armyRule": {
     "id": "army-rule-doctrina",
@@ -154,8 +154,8 @@
     }
   ],
   "updates": [
-    {"id":"rules-updates","title":"Faction Pack Rules Updates","sourcePages":[17],"summary":"Updated Doctrina Imperatives, Cohort Cybernetica, Skitarii Hunter Cohort, datasheet profiles, abilities and keywords."},
-    {"id":"faction-faq","title":"FAQ and Additional Datasheet Updates","sourcePages":[18],"summary":"FAQ for Protector Imperative interactions and changes to Skitarii Marshal, Skorpius Dunerider, Onager Dunecrawler, Ironstrider Ballistarii, Serberys and Sicarians."}
+    {"id":"rules-updates","title":"Faction Pack Rules Updates","sourcePages":[17,18],"summary":"Updated Doctrina Imperatives, Cohort Cybernetica, Rad-zone Corps, Skitarii Hunter Cohort, datasheet profiles, abilities and keywords."},
+    {"id":"faction-faq","title":"FAQ and Additional Datasheet Updates","sourcePages":[19],"summary":"Q: If Auto-divinatory Targeting changes a unit's Ballistic Skill to 3+ while Protector Imperative is active, in what order are the modifiers applied? A: First change Ballistic Skill to 3+, then improve it by 1 with Protector Imperative, for a final result of 2+ (assuming no other modifiers apply)."}
   ],
   "datasheets": [
     {
@@ -169,12 +169,11 @@
       "abilities":[
         {"title":"Rod of the War Forge","text":"In your Command phase, select one Icon of War ability. Until your next Command phase, this model has that ability."},
         {"title":"Mechanicus Bodyguard","text":"While this model is within 3\" of one or more other friendly ADEPTUS MECHANICUS units, it has Lone Operative."},
-        {"title":"Cybernetic Augmentation","text":"This model can move through terrain features, but cannot end a move within a wall, a floor, etc. It can be set up or end a move on any floor level of Ruins, but if that level is not the ground floor, it can only do so if its base does not overhang the floor at that level."},
         {"title":"Secutor of Olympus","text":"At the start of your Shooting phase, select one enemy VEHICLE within 12\" and roll one D6; on a 2+, it suffers D3+1 mortal wounds."},
         {"title":"Icon of War","text":"Fanatical Devotion lets a friendly SKITARII or THULIA GHULD unit within 6\" shoot and charge after Advancing. Adaptive Tactics lets it shoot and charge after Falling Back. The Fires of Mars makes both Imperatives active for it."}
       ],
       "composition":"1 Archmagos Terminus Thulia Ghuld - Epic Hero. Equipped with a Jericho-class conversion resonator and Rod of the War Forge. This model must be your Warlord.",
-      "keywords":["MONSTER","CHARACTER","EPIC HERO","IMPERIUM","CULT MECHANICUS","TECH-PRIEST","THULIA GHULD","ADEPTUS MECHANICUS"]
+      "keywords":["MONSTER","CHARACTER","MOBILE","EPIC HERO","IMPERIUM","CULT MECHANICUS","TECH-PRIEST","THULIA GHULD","ADEPTUS MECHANICUS"]
     },
     {
       "id":"unit-hastarii-exterminators","title":"Hastarii Exterminators","status":"Faction Pack","sourcePages":[11,12],"invulnerable":"5+","stats":{"M":"5\"","T":"4","SV":"3+","W":"2","LD":"7+","OC":"1"},
@@ -223,7 +222,7 @@
       "keywords":["INFANTRY","IMPERIUM","CULT MECHANICUS","SERVITOR BATTLECLADE","TECH-PRIEST","ADEPTUS MECHANICUS"]
     },
     {
-      "id":"unit-x-101","title":"X-101","status":"Warhammer Legends","sourcePages":[19,20],"stats":{"M":"6\"","T":"3","SV":"4+","W":"3","LD":"8+","OC":"0"},
+      "id":"unit-x-101","title":"X-101","status":"Warhammer Legends","sourcePages":[20,21],"stats":{"M":"6\"","T":"3","SV":"4+","W":"3","LD":"8+","OC":"0"},
       "weapons":[
         {"mode":"ranged","name":"Grav-gun","range":"18\"","a":"2","skill":"3+","s":"5","ap":"-1","d":"2","abilities":"Anti-Vehicle 4+"},
         {"mode":"melee","name":"Hydraulic claw","range":"Melee","a":"2","skill":"4+","s":"8","ap":"-2","d":"3","abilities":""}
@@ -237,7 +236,7 @@
       "keywords":["INFANTRY","IMPERIUM","CHARACTER","EPIC HERO","CULT MECHANICUS","X-101","ADEPTUS MECHANICUS"]
     },
     {
-      "id":"unit-secutarii-hoplites","title":"Secutarii Hoplites","status":"Warhammer Legends","sourcePages":[21,22],"invulnerable":"4+","stats":{"M":"6\"","T":"3","SV":"5+","W":"1","LD":"7+","OC":"1"},
+      "id":"unit-secutarii-hoplites","title":"Secutarii Hoplites","status":"Warhammer Legends","sourcePages":[22,23],"invulnerable":"4+","stats":{"M":"6\"","T":"3","SV":"5+","W":"1","LD":"7+","OC":"1"},
       "weapons":[
         {"mode":"ranged","name":"Arc lance","range":"12\"","a":"1","skill":"4+","s":"5","ap":"-1","d":"1","abilities":"Anti-Vehicle 4+, Devastating Wounds"},
         {"mode":"ranged","name":"Archeotech pistol","range":"12\"","a":"1","skill":"4+","s":"6","ap":"-1","d":"1","abilities":"Devastating Wounds, Pistol"},
@@ -254,7 +253,7 @@
       "keywords":["INFANTRY","IMPERIUM","SKITARII","SECUTARII HOPLITES","ADEPTUS MECHANICUS"]
     },
     {
-      "id":"unit-secutarii-peltasts","title":"Secutarii Peltasts","status":"Warhammer Legends","sourcePages":[23,24],"invulnerable":"6+","stats":{"M":"6\"","T":"3","SV":"5+","W":"1","LD":"7+","OC":"1"},
+      "id":"unit-secutarii-peltasts","title":"Secutarii Peltasts","status":"Warhammer Legends","sourcePages":[24,25],"invulnerable":"6+","stats":{"M":"6\"","T":"3","SV":"5+","W":"1","LD":"7+","OC":"1"},
       "weapons":[
         {"mode":"ranged","name":"Archeotech pistol","range":"12\"","a":"1","skill":"4+","s":"6","ap":"-1","d":"1","abilities":"Devastating Wounds, Pistol"},
         {"mode":"ranged","name":"Galvanic caster - flechette","range":"18\"","a":"5","skill":"4+","s":"4","ap":"0","d":"1","abilities":"Assault"},
@@ -272,7 +271,7 @@
       "keywords":["INFANTRY","IMPERIUM","SKITARII","SECUTARII PELTASTS","ADEPTUS MECHANICUS"]
     },
     {
-      "id":"unit-terrax-pattern-termite","title":"Terrax-pattern Termite","status":"Warhammer Legends","sourcePages":[25,26],"stats":{"M":"8\"","T":"10","SV":"3+","W":"14","LD":"6+","OC":"2"},
+      "id":"unit-terrax-pattern-termite","title":"Terrax-pattern Termite","status":"Warhammer Legends","sourcePages":[26,27],"stats":{"M":"8\"","T":"10","SV":"3+","W":"14","LD":"6+","OC":"2"},
       "weapons":[
         {"mode":"ranged","name":"Combi-bolter","range":"24\"","a":"2","skill":"4+","s":"4","ap":"0","d":"1","abilities":"Rapid Fire 2"},
         {"mode":"ranged","name":"Heavy flamer","range":"12\"","a":"D6","skill":"N/A","s":"5","ap":"-1","d":"1","abilities":"Ignores Cover, Torrent"},
@@ -288,7 +287,7 @@
       ],
       "wargear":"The model's two combi-bolters can be replaced with two heavy flamers or two twin volkite chargers.",
       "composition":"1 Terrax-pattern Termite, equipped with Terrax melta cutter, two combi-bolters and Termite drill.",
-      "keywords":["VEHICLE","IMPERIUM","TRANSPORT","DEDICATED TRANSPORT","TERRAX-PATTERN TERMITE","ADEPTUS MECHANICUS"]
+      "keywords":["VEHICLE","IMPERIUM","TRANSPORT","DEDICATED TRANSPORT","FRAME","TERRAX-PATTERN TERMITE","ADEPTUS MECHANICUS"]
     }
   ],
   "glossary": [

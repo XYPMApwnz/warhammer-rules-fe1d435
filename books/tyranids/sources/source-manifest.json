@@ -1,15 +1,16 @@
 {
   "schema": 1,
-  "verifiedAt": "2026-07-28",
+  "verifiedAt": "2026-07-29",
   "layers": [
     {
-      "id": "faction-pack-v1.0",
+      "id": "faction-pack-v1.1",
       "authority": "official",
       "role": "11e-overlay",
-      "title": "Tyranids Faction Pack v1.0",
-      "legalFrom": "2026-06-20",
-      "url": "https://assets.warhammer-community.com/eng_09-06_warhammer40000_faction_pack_tyranids-avhhzmcte8-j0kseag7td.pdf",
-      "localFile": "tyranids-faction-pack-v1.0.pdf"
+      "title": "Tyranids Faction Pack v1.1",
+      "legalFrom": "2026-07-22",
+      "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40000_faction_pack_tyranids-rz5ydhbpyi-a1yqdtcqcm.pdf",
+      "localFile": "tyranids-faction-pack-v1.1.pdf",
+      "sha256": "BBB2B1F9167C8421D13CFB87FC46DF778D59B7E9803D5D8F812060424FA9C79A"
     },
     {
       "id": "codex-transcription",
@@ -28,11 +29,11 @@
       "title": "Munitorum Field Manual",
       "updated": "2026-07-22",
       "url": "https://mfm.warhammer-community.com/en/tyranids",
-      "status": "snapshot-required"
+      "status": "verified-v1.1"
     }
   ],
   "gates": {
     "publishAsComplete": false,
-    "reason": "Faction Pack v1.0 supplements the Codex. Codex text and the current MFM snapshot must be verified before this book can be labelled complete."
+    "reason": "Faction Pack v1.1 and MFM v1.1 are verified. Codex text remains a current community transcription and is identified as such."
   }
 }

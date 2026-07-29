@@ -48,6 +48,15 @@ const mortarionAbility=bookData.glossary.find(entry=>entry.id==='ability-lord-of
 check('Mortarion lists all three Lord of the Death Guard choices',
   ['Diseased Influence','Boon of Death','Inflamed Reprisal'].every(title=>mortarionAbility.full.includes(title)&&html.includes(`<h6>${title}</h6>`))&&
   !mortarionAbility.full.includes('see left')&&!html.includes('Lord of the Death Guard abilities (see left)'));
+check('Mortarion uses the current Faction Pack wording',
+  mortarionAbility.full.includes('move within 8"')&&
+  mortarionAbility.full.includes('worsen the BS characteristic of that attack by 1')&&
+  !mortarionAbility.full.includes('move within 9"'));
+check('Miasmic Malignifier uses the canonical Deployment ability name',
+  html.includes('<h5>Deployment</h5>')&&!html.includes('<h5>Fortification Setup</h5>'));
+check('Pact of Decay datasheets identify their Tallyband Summoners context',
+  html.includes('Tallyband Summoners Detachment')&&
+  !html.includes('available through the current Pact of Decay army rule'));
 check('full gameplay block inventory is present',blockCount('enhancement')===30&&blockCount('rule')===45&&blockCount('statline')===41&&blockCount('weapon')===177,`enhancements ${blockCount('enhancement')}, rules ${blockCount('rule')}, statlines ${blockCount('statline')}, weapons ${blockCount('weapon')}`);
 check('all navigation targets exist',navTargets.every(id=>idSet.has(id)),navTargets.filter(id=>!idSet.has(id)).join(', '));
 check('all navigation targets have tracked ranges',navTargets.every(id=>trackTargets.includes(id)),navTargets.filter(id=>!trackTargets.includes(id)).join(', '));

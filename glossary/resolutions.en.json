@@ -14,7 +14,7 @@
     {
       "match": "adeptus-mechanicus-*",
       "prefer": "adeptus-mechanicus",
-      "reason": "Mechanicus-only prototype entities remain provisional until an official source is imported."
+      "reason": "Mechanicus-scoped entities are rebuilt from the current Faction Pack and pinned 11th-edition catalogue layers."
     }
   ],
   "aliases": {

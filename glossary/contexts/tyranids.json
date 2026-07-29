@@ -217,24 +217,6 @@
         ]
       }
     },
-    "tyranids-ability-assault": {
-      "termId": "tyranids-ability-assault",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-assault",
-        "rule": "unit-gargoyles",
-        "datasheet": "unit-gargoyles",
-        "statline": "gargoyles-profile",
-        "units": [
-          "unit-gargoyles",
-          "unit-termagants",
-          "unit-hyperadapted-raveners",
-          "unit-tyranid-warriors-with-ranged-bio-weapons",
-          "unit-carnifexes",
-          "unit-screamer-killer",
-          "unit-hierophant"
-        ]
-      }
-    },
     "tyranids-ability-synapse": {
       "termId": "tyranids-ability-synapse",
       "navigation": {
@@ -387,132 +369,10 @@
         ]
       }
     },
-    "tyranids-ability-pistol": {
-      "termId": "tyranids-ability-pistol",
+    "tyranids-weapon-termagant-spinefists": {
+      "termId": "tyranids-weapon-termagant-spinefists",
       "navigation": {
-        "glossary": "glossary-tyranids-ability-pistol",
-        "rule": "unit-termagants",
-        "datasheet": "unit-termagants",
-        "statline": "termagants-profile",
-        "units": [
-          "unit-termagants",
-          "unit-tyranid-warriors-with-ranged-bio-weapons",
-          "unit-ripper-swarms",
-          "unit-sky-slasher-swarms"
-        ]
-      }
-    },
-    "tyranids-ability-twin-linked": {
-      "termId": "tyranids-ability-twin-linked",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-twin-linked",
-        "rule": "unit-termagants",
-        "datasheet": "unit-termagants",
-        "statline": "termagants-profile",
-        "units": [
-          "unit-termagants",
-          "unit-broodlord",
-          "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
-          "unit-winged-hive-tyrant",
-          "unit-the-swarmlord",
-          "unit-pyrovores",
-          "unit-raveners",
-          "unit-tyranid-warriors-with-melee-bio-weapons",
-          "unit-tyranid-warriors-with-ranged-bio-weapons",
-          "unit-tyrant-guard",
-          "unit-harpy",
-          "unit-tyrannofex",
-          "unit-dimachaeron"
-        ]
-      }
-    },
-    "tyranids-ability-heavy": {
-      "termId": "tyranids-ability-heavy",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-heavy",
-        "rule": "unit-termagants",
-        "datasheet": "unit-termagants",
-        "statline": "termagants-profile",
-        "units": [
-          "unit-termagants",
-          "unit-barbgaunts",
-          "unit-biovores",
-          "unit-hive-guard",
-          "unit-exocrine",
-          "unit-tyrannofex"
-        ]
-      }
-    },
-    "tyranids-ability-blast": {
-      "termId": "tyranids-ability-blast",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-blast",
-        "rule": "unit-termagants",
-        "datasheet": "unit-termagants",
-        "statline": "termagants-profile",
-        "units": [
-          "unit-termagants",
-          "unit-hive-tyrant",
-          "unit-winged-hive-tyrant",
-          "unit-barbgaunts",
-          "unit-biovores",
-          "unit-tyranid-warriors-with-ranged-bio-weapons",
-          "unit-zoanthropes",
-          "unit-carnifexes",
-          "unit-exocrine",
-          "unit-harpy",
-          "unit-maleceptor",
-          "unit-norn-emissary",
-          "unit-screamer-killer",
-          "unit-harridan",
-          "unit-hierophant",
-          "unit-barbed-hierodule"
-        ]
-      }
-    },
-    "tyranids-ability-devastating-wounds": {
-      "termId": "tyranids-ability-devastating-wounds",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-devastating-wounds",
-        "rule": "unit-termagants",
-        "datasheet": "unit-termagants",
-        "statline": "termagants-profile",
-        "units": [
-          "unit-termagants",
-          "unit-broodlord",
-          "unit-the-red-terror",
-          "unit-biovores",
-          "unit-hive-crone",
-          "unit-mawloc",
-          "unit-psychophage"
-        ]
-      }
-    },
-    "tyranids-ability-torrent": {
-      "termId": "tyranids-ability-torrent",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-torrent",
-        "rule": "unit-termagants",
-        "datasheet": "unit-termagants",
-        "statline": "termagants-profile",
-        "units": [
-          "unit-termagants",
-          "unit-hyperadapted-raveners",
-          "unit-neurotyrant",
-          "unit-the-swarmlord",
-          "unit-pyrovores",
-          "unit-hive-crone",
-          "unit-tyrannofex",
-          "unit-hierophant",
-          "unit-scythed-hierodule"
-        ]
-      }
-    },
-    "tyranids-weapon-termagant-spinefist": {
-      "termId": "tyranids-weapon-termagant-spinefist",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-termagant-spinefist",
+        "glossary": "glossary-tyranids-weapon-termagant-spinefists",
         "rule": "unit-termagants",
         "datasheet": "unit-termagants",
         "statline": "termagants-profile",
@@ -729,29 +589,6 @@
         ]
       }
     },
-    "tyranids-ability-extra-attacks": {
-      "termId": "tyranids-ability-extra-attacks",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-extra-attacks",
-        "rule": "unit-hive-tyrant",
-        "datasheet": "unit-hive-tyrant",
-        "statline": "hive-tyrant-profile",
-        "units": [
-          "unit-hive-tyrant",
-          "unit-parasite-of-mortrex",
-          "unit-tyranid-prime-with-lash-whip",
-          "unit-winged-hive-tyrant",
-          "unit-the-red-terror",
-          "unit-carnifexes",
-          "unit-haruspex",
-          "unit-hive-crone",
-          "unit-mawloc",
-          "unit-norn-assimilator",
-          "unit-norn-emissary",
-          "unit-hierophant"
-        ]
-      }
-    },
     "tyranids-ability-deadly-demise-d3": {
       "termId": "tyranids-ability-deadly-demise-d3",
       "navigation": {
@@ -862,57 +699,6 @@
         ]
       }
     },
-    "tyranids-ability-anti": {
-      "termId": "tyranids-ability-anti",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-anti",
-        "rule": "unit-hyperadapted-raveners",
-        "datasheet": "unit-hyperadapted-raveners",
-        "statline": "hyperadapted-raveners-profile",
-        "units": [
-          "unit-hyperadapted-raveners",
-          "unit-parasite-of-mortrex",
-          "unit-hive-guard",
-          "unit-venomthropes",
-          "unit-hive-crone",
-          "unit-mawloc",
-          "unit-psychophage",
-          "unit-toxicrene"
-        ]
-      }
-    },
-    "tyranids-ability-ignores-cover": {
-      "termId": "tyranids-ability-ignores-cover",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-ignores-cover",
-        "rule": "unit-hyperadapted-raveners",
-        "datasheet": "unit-hyperadapted-raveners",
-        "statline": "hyperadapted-raveners-profile",
-        "units": [
-          "unit-hyperadapted-raveners",
-          "unit-neurotyrant",
-          "unit-pyrovores"
-        ]
-      }
-    },
-    "tyranids-ability-sustained-hits": {
-      "termId": "tyranids-ability-sustained-hits",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-sustained-hits",
-        "rule": "unit-hyperadapted-raveners",
-        "datasheet": "unit-hyperadapted-raveners",
-        "statline": "hyperadapted-raveners-profile",
-        "units": [
-          "unit-hyperadapted-raveners",
-          "unit-tyranid-prime-with-lash-whip",
-          "unit-trygon",
-          "unit-tyrannofex",
-          "unit-ripper-swarms",
-          "unit-malanthrope",
-          "unit-sky-slasher-swarms"
-        ]
-      }
-    },
     "tyranids-weapon-prime-claws-and-talons": {
       "termId": "tyranids-weapon-prime-claws-and-talons",
       "navigation": {
@@ -973,10 +759,10 @@
         ]
       }
     },
-    "tyranids-ability-synaptic-relays": {
-      "termId": "tyranids-ability-synaptic-relays",
+    "tyranids-ability-neuroloids": {
+      "termId": "tyranids-ability-neuroloids",
       "navigation": {
-        "glossary": "glossary-tyranids-ability-synaptic-relays",
+        "glossary": "glossary-tyranids-ability-neuroloids",
         "rule": "unit-neurotyrant",
         "datasheet": "unit-neurotyrant",
         "statline": "neurotyrant-profile",
@@ -994,21 +780,6 @@
         "statline": "neurotyrant-profile",
         "units": [
           "unit-neurotyrant"
-        ]
-      }
-    },
-    "tyranids-ability-psychic": {
-      "termId": "tyranids-ability-psychic",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-psychic",
-        "rule": "unit-neurotyrant",
-        "datasheet": "unit-neurotyrant",
-        "statline": "neurotyrant-profile",
-        "units": [
-          "unit-neurotyrant",
-          "unit-zoanthropes",
-          "unit-maleceptor",
-          "unit-norn-emissary"
         ]
       }
     },
@@ -1450,22 +1221,6 @@
         ]
       }
     },
-    "tyranids-ability-precision": {
-      "termId": "tyranids-ability-precision",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-precision",
-        "rule": "unit-deathleaper",
-        "datasheet": "unit-deathleaper",
-        "statline": "deathleaper-profile",
-        "units": [
-          "unit-deathleaper",
-          "unit-the-red-terror",
-          "unit-lictor",
-          "unit-neurolictor",
-          "unit-haruspex"
-        ]
-      }
-    },
     "tyranids-ability-fights-first": {
       "termId": "tyranids-ability-fights-first",
       "navigation": {
@@ -1737,19 +1492,6 @@
         ]
       }
     },
-    "tyranids-ability-indirect-fire": {
-      "termId": "tyranids-ability-indirect-fire",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-indirect-fire",
-        "rule": "unit-biovores",
-        "datasheet": "unit-biovores",
-        "statline": "biovores-profile",
-        "units": [
-          "unit-biovores",
-          "unit-hive-guard"
-        ]
-      }
-    },
     "tyranids-ability-deadly-demise-1": {
       "termId": "tyranids-ability-deadly-demise-1",
       "navigation": {
@@ -1803,10 +1545,10 @@
         ]
       }
     },
-    "tyranids-weapon-genestealers-claws-and-talons": {
-      "termId": "tyranids-weapon-genestealers-claws-and-talons",
+    "tyranids-weapon-genestealer-claws-and-talons": {
+      "termId": "tyranids-weapon-genestealer-claws-and-talons",
       "navigation": {
-        "glossary": "glossary-tyranids-weapon-genestealers-claws-and-talons",
+        "glossary": "glossary-tyranids-weapon-genestealer-claws-and-talons",
         "rule": "unit-genestealers",
         "datasheet": "unit-genestealers",
         "statline": "genestealers-profile",
@@ -2208,19 +1950,6 @@
         "statline": "zoanthropes-profile",
         "units": [
           "unit-zoanthropes"
-        ]
-      }
-    },
-    "tyranids-ability-lethal-hits": {
-      "termId": "tyranids-ability-lethal-hits",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-lethal-hits",
-        "rule": "unit-zoanthropes",
-        "datasheet": "unit-zoanthropes",
-        "statline": "zoanthropes-profile",
-        "units": [
-          "unit-zoanthropes",
-          "unit-malanthrope"
         ]
       }
     },
@@ -2646,10 +2375,10 @@
         ]
       }
     },
-    "tyranids-weapon-distendible-jaw": {
-      "termId": "tyranids-weapon-distendible-jaw",
+    "tyranids-weapon-distensible-jaw": {
+      "termId": "tyranids-weapon-distensible-jaw",
       "navigation": {
-        "glossary": "glossary-tyranids-weapon-distendible-jaw",
+        "glossary": "glossary-tyranids-weapon-distensible-jaw",
         "rule": "unit-mawloc",
         "datasheet": "unit-mawloc",
         "statline": "mawloc-profile",
@@ -2695,19 +2424,6 @@
         ]
       }
     },
-    "tyranids-ability-protean-purpose": {
-      "termId": "tyranids-ability-protean-purpose",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-protean-purpose",
-        "rule": "unit-norn-assimilator",
-        "datasheet": "unit-norn-assimilator",
-        "statline": "norn-assimilator-profile",
-        "units": [
-          "unit-norn-assimilator",
-          "unit-norn-emissary"
-        ]
-      }
-    },
     "tyranids-weapon-monstrous-scything-talons-2": {
       "termId": "tyranids-weapon-monstrous-scything-talons-2",
       "navigation": {
@@ -2721,10 +2437,10 @@
         ]
       }
     },
-    "tyranids-weapon-toxinjecter-harpoon": {
-      "termId": "tyranids-weapon-toxinjecter-harpoon",
+    "tyranids-weapon-toxinjector-harpoon": {
+      "termId": "tyranids-weapon-toxinjector-harpoon",
       "navigation": {
-        "glossary": "glossary-tyranids-weapon-toxinjecter-harpoon",
+        "glossary": "glossary-tyranids-weapon-toxinjector-harpoon",
         "rule": "unit-norn-assimilator",
         "datasheet": "unit-norn-assimilator",
         "statline": "norn-assimilator-profile",
@@ -2733,10 +2449,10 @@
         ]
       }
     },
-    "tyranids-weapon-toxinjecter-harpoon-2": {
-      "termId": "tyranids-weapon-toxinjecter-harpoon-2",
+    "tyranids-weapon-toxinjector-harpoon-2": {
+      "termId": "tyranids-weapon-toxinjector-harpoon-2",
       "navigation": {
-        "glossary": "glossary-tyranids-weapon-toxinjecter-harpoon-2",
+        "glossary": "glossary-tyranids-weapon-toxinjector-harpoon-2",
         "rule": "unit-norn-assimilator",
         "datasheet": "unit-norn-assimilator",
         "statline": "norn-assimilator-profile",
@@ -2745,10 +2461,10 @@
         ]
       }
     },
-    "tyranids-ability-melta": {
-      "termId": "tyranids-ability-melta",
+    "tyranids-ability-unnatural-resilience": {
+      "termId": "tyranids-ability-unnatural-resilience",
       "navigation": {
-        "glossary": "glossary-tyranids-ability-melta",
+        "glossary": "glossary-tyranids-ability-unnatural-resilience",
         "rule": "unit-norn-emissary",
         "datasheet": "unit-norn-emissary",
         "statline": "norn-emissary-profile",
@@ -2913,10 +2629,10 @@
         ]
       }
     },
-    "tyranids-weapon-sporocyst-bio-weapon": {
-      "termId": "tyranids-weapon-sporocyst-bio-weapon",
+    "tyranids-weapon-sporocyst-bio-weapons": {
+      "termId": "tyranids-weapon-sporocyst-bio-weapons",
       "navigation": {
-        "glossary": "glossary-tyranids-weapon-sporocyst-bio-weapon",
+        "glossary": "glossary-tyranids-weapon-sporocyst-bio-weapons",
         "rule": "unit-sporocyst",
         "datasheet": "unit-sporocyst",
         "statline": "sporocyst-profile",
@@ -3106,15 +2822,16 @@
         ]
       }
     },
-    "tyranids-weapon-spinemaw": {
-      "termId": "tyranids-weapon-spinemaw",
+    "tyranids-weapon-spinemaws": {
+      "termId": "tyranids-weapon-spinemaws",
       "navigation": {
-        "glossary": "glossary-tyranids-weapon-spinemaw",
+        "glossary": "glossary-tyranids-weapon-spinemaws",
         "rule": "unit-ripper-swarms",
         "datasheet": "unit-ripper-swarms",
         "statline": "ripper-swarms-profile",
         "units": [
-          "unit-ripper-swarms"
+          "unit-ripper-swarms",
+          "unit-sky-slasher-swarms"
         ]
       }
     },
@@ -3409,6 +3126,30 @@
         ]
       }
     },
+    "tyranids-ability-lethal-hits": {
+      "termId": "tyranids-ability-lethal-hits",
+      "navigation": {
+        "glossary": "glossary-tyranids-ability-lethal-hits",
+        "rule": "unit-malanthrope",
+        "datasheet": "unit-malanthrope",
+        "statline": "malanthrope-profile",
+        "units": [
+          "unit-malanthrope"
+        ]
+      }
+    },
+    "tyranids-ability-sustained-hits": {
+      "termId": "tyranids-ability-sustained-hits",
+      "navigation": {
+        "glossary": "glossary-tyranids-ability-sustained-hits",
+        "rule": "unit-malanthrope",
+        "datasheet": "unit-malanthrope",
+        "statline": "malanthrope-profile",
+        "units": [
+          "unit-malanthrope"
+        ]
+      }
+    },
     "tyranids-weapon-grasping-tail": {
       "termId": "tyranids-weapon-grasping-tail",
       "navigation": {
@@ -3481,18 +3222,6 @@
         ]
       }
     },
-    "tyranids-weapon-spinemaws": {
-      "termId": "tyranids-weapon-spinemaws",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-spinemaws",
-        "rule": "unit-sky-slasher-swarms",
-        "datasheet": "unit-sky-slasher-swarms",
-        "statline": "sky-slasher-swarms-profile",
-        "units": [
-          "unit-sky-slasher-swarms"
-        ]
-      }
-    },
     "tyranids-enhancement-biophagic-flow-aura": {
       "termId": "tyranids-enhancement-biophagic-flow-aura",
       "navigation": {
@@ -3500,10 +3229,10 @@
         "rule": "detachment-assimilation-swarm"
       }
     },
-    "tyranids-enhancement-instinctive-defense": {
-      "termId": "tyranids-enhancement-instinctive-defense",
+    "tyranids-enhancement-instinctive-defence": {
+      "termId": "tyranids-enhancement-instinctive-defence",
       "navigation": {
-        "glossary": "glossary-tyranids-enhancement-instinctive-defense",
+        "glossary": "glossary-tyranids-enhancement-instinctive-defence",
         "rule": "detachment-assimilation-swarm"
       }
     },
@@ -3518,6 +3247,55 @@
       "termId": "tyranids-enhancement-regenerating-monstrosity",
       "navigation": {
         "glossary": "glossary-tyranids-enhancement-regenerating-monstrosity",
+        "rule": "detachment-assimilation-swarm"
+      }
+    },
+    "tyranids-stratagem-ablative-carapace": {
+      "termId": "tyranids-stratagem-ablative-carapace",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-ablative-carapace",
+        "rule": "detachment-assimilation-swarm"
+      }
+    },
+    "tyranids-stratagem-broodguard-impulse": {
+      "termId": "tyranids-stratagem-broodguard-impulse",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-broodguard-impulse",
+        "rule": "detachment-assimilation-swarm"
+      }
+    },
+    "tyranids-stratagem-rapacious-hunger": {
+      "termId": "tyranids-stratagem-rapacious-hunger",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-rapacious-hunger",
+        "rule": "detachment-assimilation-swarm"
+      }
+    },
+    "tyranids-stratagem-reclaim-biomass": {
+      "termId": "tyranids-stratagem-reclaim-biomass",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-reclaim-biomass",
+        "rule": "detachment-assimilation-swarm"
+      }
+    },
+    "tyranids-stratagem-secure-biomass": {
+      "termId": "tyranids-stratagem-secure-biomass",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-secure-biomass",
+        "rule": "detachment-assimilation-swarm"
+      }
+    },
+    "tyranids-stratagem-tyrannoformed": {
+      "termId": "tyranids-stratagem-tyrannoformed",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-tyrannoformed",
+        "rule": "detachment-assimilation-swarm"
+      }
+    },
+    "tyranids-detachment-rule-feed-the-swarm": {
+      "termId": "tyranids-detachment-rule-feed-the-swarm",
+      "navigation": {
+        "glossary": "glossary-tyranids-detachment-rule-feed-the-swarm",
         "rule": "detachment-assimilation-swarm"
       }
     },
@@ -3549,6 +3327,55 @@
         "rule": "detachment-crusher-stampede"
       }
     },
+    "tyranids-stratagem-corrosive-viscera": {
+      "termId": "tyranids-stratagem-corrosive-viscera",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-corrosive-viscera",
+        "rule": "detachment-crusher-stampede"
+      }
+    },
+    "tyranids-stratagem-massive-impact": {
+      "termId": "tyranids-stratagem-massive-impact",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-massive-impact",
+        "rule": "detachment-crusher-stampede"
+      }
+    },
+    "tyranids-stratagem-rampaging-monstrosities": {
+      "termId": "tyranids-stratagem-rampaging-monstrosities",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-rampaging-monstrosities",
+        "rule": "detachment-crusher-stampede"
+      }
+    },
+    "tyranids-stratagem-savage-roar": {
+      "termId": "tyranids-stratagem-savage-roar",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-savage-roar",
+        "rule": "detachment-crusher-stampede"
+      }
+    },
+    "tyranids-stratagem-swarm-guided-salvoes": {
+      "termId": "tyranids-stratagem-swarm-guided-salvoes",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-swarm-guided-salvoes",
+        "rule": "detachment-crusher-stampede"
+      }
+    },
+    "tyranids-stratagem-untrammelled-ferocity": {
+      "termId": "tyranids-stratagem-untrammelled-ferocity",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-untrammelled-ferocity",
+        "rule": "detachment-crusher-stampede"
+      }
+    },
+    "tyranids-detachment-rule-enraged-behemoths": {
+      "termId": "tyranids-detachment-rule-enraged-behemoths",
+      "navigation": {
+        "glossary": "glossary-tyranids-detachment-rule-enraged-behemoths",
+        "rule": "detachment-crusher-stampede"
+      }
+    },
     "tyranids-enhancement-adaptive-biology": {
       "termId": "tyranids-enhancement-adaptive-biology",
       "navigation": {
@@ -3577,6 +3404,55 @@
         "rule": "detachment-invasion-fleet"
       }
     },
+    "tyranids-stratagem-adrenal-surge": {
+      "termId": "tyranids-stratagem-adrenal-surge",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-adrenal-surge",
+        "rule": "detachment-invasion-fleet"
+      }
+    },
+    "tyranids-stratagem-death-frenzy": {
+      "termId": "tyranids-stratagem-death-frenzy",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-death-frenzy",
+        "rule": "detachment-invasion-fleet"
+      }
+    },
+    "tyranids-stratagem-endless-swarm": {
+      "termId": "tyranids-stratagem-endless-swarm",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-endless-swarm",
+        "rule": "detachment-invasion-fleet"
+      }
+    },
+    "tyranids-stratagem-overrun": {
+      "termId": "tyranids-stratagem-overrun",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-overrun",
+        "rule": "detachment-invasion-fleet"
+      }
+    },
+    "tyranids-stratagem-predatory-imperative": {
+      "termId": "tyranids-stratagem-predatory-imperative",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-predatory-imperative",
+        "rule": "detachment-invasion-fleet"
+      }
+    },
+    "tyranids-stratagem-rapid-regeneration": {
+      "termId": "tyranids-stratagem-rapid-regeneration",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-rapid-regeneration",
+        "rule": "detachment-invasion-fleet"
+      }
+    },
+    "tyranids-detachment-rule-hyper-adaptations": {
+      "termId": "tyranids-detachment-rule-hyper-adaptations",
+      "navigation": {
+        "glossary": "glossary-tyranids-detachment-rule-hyper-adaptations",
+        "rule": "detachment-invasion-fleet"
+      }
+    },
     "tyranids-enhancement-power-of-the-hive-mind": {
       "termId": "tyranids-enhancement-power-of-the-hive-mind",
       "navigation": {
@@ -3584,10 +3460,10 @@
         "rule": "detachment-synaptic-nexus"
       }
     },
-    "tyranids-enhancement-psychostatic-disruption-aura": {
-      "termId": "tyranids-enhancement-psychostatic-disruption-aura",
+    "tyranids-enhancement-psychostatic-disruption": {
+      "termId": "tyranids-enhancement-psychostatic-disruption",
       "navigation": {
-        "glossary": "glossary-tyranids-enhancement-psychostatic-disruption-aura",
+        "glossary": "glossary-tyranids-enhancement-psychostatic-disruption",
         "rule": "detachment-synaptic-nexus"
       }
     },
@@ -3605,6 +3481,55 @@
         "rule": "detachment-synaptic-nexus"
       }
     },
+    "tyranids-stratagem-imperative-dominance": {
+      "termId": "tyranids-stratagem-imperative-dominance",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-imperative-dominance",
+        "rule": "detachment-synaptic-nexus"
+      }
+    },
+    "tyranids-stratagem-irresistible-will": {
+      "termId": "tyranids-stratagem-irresistible-will",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-irresistible-will",
+        "rule": "detachment-synaptic-nexus"
+      }
+    },
+    "tyranids-stratagem-override-instincts": {
+      "termId": "tyranids-stratagem-override-instincts",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-override-instincts",
+        "rule": "detachment-synaptic-nexus"
+      }
+    },
+    "tyranids-stratagem-reinforced-hive-node": {
+      "termId": "tyranids-stratagem-reinforced-hive-node",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-reinforced-hive-node",
+        "rule": "detachment-synaptic-nexus"
+      }
+    },
+    "tyranids-stratagem-synaptic-channelling": {
+      "termId": "tyranids-stratagem-synaptic-channelling",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-synaptic-channelling",
+        "rule": "detachment-synaptic-nexus"
+      }
+    },
+    "tyranids-stratagem-the-smothering-shadow": {
+      "termId": "tyranids-stratagem-the-smothering-shadow",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-the-smothering-shadow",
+        "rule": "detachment-synaptic-nexus"
+      }
+    },
+    "tyranids-detachment-rule-synaptic-imperatives": {
+      "termId": "tyranids-detachment-rule-synaptic-imperatives",
+      "navigation": {
+        "glossary": "glossary-tyranids-detachment-rule-synaptic-imperatives",
+        "rule": "detachment-synaptic-nexus"
+      }
+    },
     "tyranids-enhancement-adrenalised-onslaught": {
       "termId": "tyranids-enhancement-adrenalised-onslaught",
       "navigation": {
@@ -3612,10 +3537,10 @@
         "rule": "detachment-unending-swarm"
       }
     },
-    "tyranids-enhancement-naturalised-camoflage": {
-      "termId": "tyranids-enhancement-naturalised-camoflage",
+    "tyranids-enhancement-naturalised-camouflage": {
+      "termId": "tyranids-enhancement-naturalised-camouflage",
       "navigation": {
-        "glossary": "glossary-tyranids-enhancement-naturalised-camoflage",
+        "glossary": "glossary-tyranids-enhancement-naturalised-camouflage",
         "rule": "detachment-unending-swarm"
       }
     },
@@ -3630,6 +3555,55 @@
       "termId": "tyranids-enhancement-relentless-hunger",
       "navigation": {
         "glossary": "glossary-tyranids-enhancement-relentless-hunger",
+        "rule": "detachment-unending-swarm"
+      }
+    },
+    "tyranids-stratagem-bounding-advance": {
+      "termId": "tyranids-stratagem-bounding-advance",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-bounding-advance",
+        "rule": "detachment-unending-swarm"
+      }
+    },
+    "tyranids-stratagem-preservation-imperative": {
+      "termId": "tyranids-stratagem-preservation-imperative",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-preservation-imperative",
+        "rule": "detachment-unending-swarm"
+      }
+    },
+    "tyranids-stratagem-swarming-masses": {
+      "termId": "tyranids-stratagem-swarming-masses",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-swarming-masses",
+        "rule": "detachment-unending-swarm"
+      }
+    },
+    "tyranids-stratagem-synaptic-goading": {
+      "termId": "tyranids-stratagem-synaptic-goading",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-synaptic-goading",
+        "rule": "detachment-unending-swarm"
+      }
+    },
+    "tyranids-stratagem-teeming-masses": {
+      "termId": "tyranids-stratagem-teeming-masses",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-teeming-masses",
+        "rule": "detachment-unending-swarm"
+      }
+    },
+    "tyranids-stratagem-unending-waves": {
+      "termId": "tyranids-stratagem-unending-waves",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-unending-waves",
+        "rule": "detachment-unending-swarm"
+      }
+    },
+    "tyranids-detachment-rule-insurmountable-odds": {
+      "termId": "tyranids-detachment-rule-insurmountable-odds",
+      "navigation": {
+        "glossary": "glossary-tyranids-detachment-rule-insurmountable-odds",
         "rule": "detachment-unending-swarm"
       }
     },
@@ -3658,6 +3632,55 @@
       "termId": "tyranids-enhancement-stalker",
       "navigation": {
         "glossary": "glossary-tyranids-enhancement-stalker",
+        "rule": "detachment-vanguard-onslaught"
+      }
+    },
+    "tyranids-stratagem-assassin-beasts": {
+      "termId": "tyranids-stratagem-assassin-beasts",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-assassin-beasts",
+        "rule": "detachment-vanguard-onslaught"
+      }
+    },
+    "tyranids-stratagem-hypersensory-scillia": {
+      "termId": "tyranids-stratagem-hypersensory-scillia",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-hypersensory-scillia",
+        "rule": "detachment-vanguard-onslaught"
+      }
+    },
+    "tyranids-stratagem-invisible-hunter": {
+      "termId": "tyranids-stratagem-invisible-hunter",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-invisible-hunter",
+        "rule": "detachment-vanguard-onslaught"
+      }
+    },
+    "tyranids-stratagem-seeded-broods": {
+      "termId": "tyranids-stratagem-seeded-broods",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-seeded-broods",
+        "rule": "detachment-vanguard-onslaught"
+      }
+    },
+    "tyranids-stratagem-surprise-assault": {
+      "termId": "tyranids-stratagem-surprise-assault",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-surprise-assault",
+        "rule": "detachment-vanguard-onslaught"
+      }
+    },
+    "tyranids-stratagem-unseen-lurkers": {
+      "termId": "tyranids-stratagem-unseen-lurkers",
+      "navigation": {
+        "glossary": "glossary-tyranids-stratagem-unseen-lurkers",
+        "rule": "detachment-vanguard-onslaught"
+      }
+    },
+    "tyranids-detachment-rule-questing-tendrils": {
+      "termId": "tyranids-detachment-rule-questing-tendrils",
+      "navigation": {
+        "glossary": "glossary-tyranids-detachment-rule-questing-tendrils",
         "rule": "detachment-vanguard-onslaught"
       }
     }

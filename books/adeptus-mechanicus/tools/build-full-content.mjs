@@ -6,20 +6,37 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const readJson=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 const factionRules=readJson('content/adeptus-mechanicus-rules.en.json');
 const source=readJson('content/adeptus-mechanicus-source.en.json');
-const codex=readJson('content/adeptus-mechanicus-codex-detachments.en.json');
+const codexSource=readJson('content/adeptus-mechanicus-codex-detachments.en.json');
+const codexParity=readJson('content/adeptus-mechanicus-codex-parity.en.json');
+const parityByDetachment=new Map(codexParity.detachments.map(item=>[item.title,item]));
+const codex={...codexSource,detachments:codexSource.detachments.map(detachment=>{
+  const parity=parityByDetachment.get(detachment.title);
+  if(!parity)throw new Error(`Missing Codex parity layer for ${detachment.title}`);
+  const enhancements=new Map(parity.enhancements.map(item=>[item.title,item.text]));
+  return {...detachment,rule:{...detachment.rule,text:parity.rule.text},enhancements:detachment.enhancements.map(item=>({...item,text:enhancements.get(item.title)||item.text}))};
+})};
 const codexDatasheets=readJson('content/adeptus-mechanicus-codex-datasheets.en.json');
+const codexWargear=readJson('content/adeptus-mechanicus-codex-wargear.en.json');
 const pointsCatalog=readJson('content/adeptus-mechanicus-points.en.json');
+const globalGlossary=readJson('../../glossary/registry.en.json').terms;
 const pointsByUnit=new Map(pointsCatalog.units.map(unit=>[unit.title.toLowerCase(),unit]));
 const titleKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const enhancementsByTitle=new Map(pointsCatalog.enhancements.map(item=>[titleKey(item.title),item]));
 const factionDatasheets=new Map(factionRules.datasheets.map(unit=>[unit.id,unit]));
+const codexWargearByTitle=new Map(codexWargear.units.map(unit=>[titleKey(unit.title),unit]));
 const mergedDatasheets=codexDatasheets.datasheets.map(unit=>{
   const official=factionDatasheets.get(unit.id);
-  if(!official)return unit;
+  if(!official){
+    const exact=codexWargearByTitle.get(titleKey(unit.title));
+    return exact?{...unit,wargear:exact.wargear,composition:exact.composition,wargearSource:{label:'Current 11e reference \u00b7 Wahapedia',url:exact.url}}:unit;
+  }
   factionDatasheets.delete(unit.id);
-  const abilities=[...(official.abilities||[])];
+  const extractedWargear=new Map((unit.wargearAbilities||[]).map(item=>[titleKey(item.title),item]));
+  const officialWargear=(official.abilities||[]).filter(item=>extractedWargear.has(titleKey(item.title)));
+  const abilities=(official.abilities||[]).filter(item=>!extractedWargear.has(titleKey(item.title)));
   if(!abilities.some(item=>item.title==='Doctrina Imperatives'))abilities.unshift({title:'Doctrina Imperatives',text:'This unit has the Doctrina Imperatives Faction ability.'});
-  return {...unit,...official,abilities,category:unit.category,profiles:official.profiles||[{name:official.title,stats:official.stats}]};
+  const wargearAbilities=[...extractedWargear.values()].map(item=>officialWargear.find(candidate=>titleKey(candidate.title)===titleKey(item.title))||item);
+  return {...unit,...official,abilities,wargearAbilities,category:unit.category,profiles:official.profiles||[{name:official.title,stats:official.stats}]};
 }).concat([...factionDatasheets.values()]);
 const rules={...factionRules,datasheets:mergedDatasheets,audit:{...factionRules.audit,datasheets:mergedDatasheets.length,legendsDatasheets:mergedDatasheets.filter(unit=>unit.status==='Warhammer Legends').length}};
 const unitTitleKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
@@ -31,13 +48,14 @@ for(const leader of rules.datasheets){
   for(const bodyguard of rules.datasheets)if(bodyguard!==leader&&text.toLowerCase().includes(bodyguard.title.toLowerCase()))attachments.push([leader.id,bodyguard.id]);
 }
 for(const bodyguard of rules.datasheets){
-  const text=(bodyguard.abilities||[]).filter(ability=>/^attached unit$/i.test(ability.title)).map(ability=>ability.text||'').join(' ');
+  const text=[bodyguard.composition||'',...(bodyguard.abilities||[]).filter(ability=>/^attached unit$/i.test(ability.title)).map(ability=>ability.text||'')].join(' ');
   const proxy=[...unitByTitle.values()].find(unit=>text.toLowerCase().includes(unit.title.toLowerCase()));
   if(proxy)for(const [leaderId,bodyguardId] of [...attachments])if(bodyguardId===proxy.id)attachments.push([leaderId,bodyguard.id]);
 }
 const unitById=new Map(rules.datasheets.map(unit=>[unit.id,unit]));
 const relatedCandidatesByUnit=new Map(rules.datasheets.map(unit=>[unit.id,unit.id==='unit-cybernetica-datasmith'?[]:[{unitId:unit.id,keywords:unit.keywords,attached:false,attachmentKnown:true,characterCount:unit.keywords.includes('Character')?1:0,warlord:null}]]));
-for(const [leaderId,bodyguardId] of attachments){
+const uniqueAttachments=[...new Map(attachments.map(pair=>[pair.join('\0'),pair])).values()];
+for(const [leaderId,bodyguardId] of uniqueAttachments){
   const leader=unitById.get(leaderId),bodyguard=unitById.get(bodyguardId);if(!leader||!bodyguard)continue;
   const keywords=new Set([...leader.keywords,...bodyguard.keywords]);
   if(leaderId==='unit-cybernetica-datasmith'&&bodyguardId==='unit-kastelan-robots')keywords.delete('Infantry');
@@ -49,18 +67,38 @@ const allDetachments=[...rules.detachments,...codex.detachments].sort((a,b)=>off
 const esc=value=>String(value??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const cleanText=value=>String(value??'').replace(/[ \t]+\n/g,'\n').trim();
 const slugify=value=>String(value).toLowerCase().replaceAll('’','').replaceAll("'",'').replaceAll(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-const glossaryTerms=rules.glossary.map(term=>({...term,group:term.group==='Core abilities'?'Core abilities':'Faction & publication',unitIds:[...(term.unitIds||[])]}));
+const canonicalCoreTerms=Object.values(globalGlossary).filter(term=>term.kind==='core-ability').map(term=>({
+  id:term.id,
+  title:term.title.en.replace(/^\[|\]$/g,''),
+  group:'Core abilities',
+  summary:term.summary.en,
+  full:term.definition.en,
+  aliases:term.aliases||[],
+  fullRulePath:term.fullRulePath,
+  unitIds:[]
+}));
+const glossaryTerms=[
+  ...canonicalCoreTerms,
+  ...rules.glossary.filter(term=>term.group!=='Core abilities').map(term=>({...term,group:'Faction & publication',unitIds:[...(term.unitIds||[])]}))
+];
 const termKeys=new Map(glossaryTerms.map(term=>[term.title.toLowerCase(),term]));
+const coreTermKeys=new Map();
+for(const term of glossaryTerms.filter(term=>term.group==='Core abilities'))for(const label of [term.title,...(term.aliases||[])])coreTermKeys.set(titleKey(label.replace(/^core-|^datasheet-/i,'').replace(/^\[|\]$/g,'')),term);
+const coreBaseKey=value=>{
+  const normalized=titleKey(value).replace(/\s+(?:d\d+|\d+|\d+\+|\d+ inches)$/,'').trim();
+  return normalized.startsWith('anti ')?'anti':normalized;
+};
+const knownCoreTitles=new Set([...coreTermKeys.keys(),'deadly demise','deep strike','firing deck','hover','scouts']);
 const termIds=new Set(glossaryTerms.map(term=>term.id));
 const uniqueTermId=base=>{let id=base,index=2;while(termIds.has(id))id=`${base}-${index++}`;termIds.add(id);return id;};
 const attachUnit=(term,unitId)=>{if(!term.unitIds.includes(unitId))term.unitIds.push(unitId);};
 for(const unit of rules.datasheets){
-  for(const ability of unit.abilities){
+  for(const ability of [...unit.abilities,...(unit.wargearAbilities||[])]){
     const key=ability.title.toLowerCase();
-    let term=termKeys.get(key);
+    let term=termKeys.get(key)||coreTermKeys.get(coreBaseKey(ability.title));
     if(!term){
       const full=ability.text||`${ability.title} is listed on the ${unit.title} datasheet.`;
-      term={id:uniqueTermId(`datasheet-${slugify(ability.title)}`),title:ability.title,group:'Datasheet abilities',summary:full.split(/(?<=[.!?])\s/)[0].slice(0,220),full,sectionId:unit.id,unitIds:[]};
+      term={id:uniqueTermId(`datasheet-${slugify(ability.title)}`),title:ability.title,group:'Datasheet abilities',summary:full.split(/(?<=[.!?])\s/)[0],full,sectionId:unit.id,unitIds:[]};
       glossaryTerms.push(term);termKeys.set(key,term);
     }
     attachUnit(term,unit.id);ability.termId=term.id;
@@ -79,7 +117,7 @@ for(const unit of rules.datasheets){
 rules.glossary=glossaryTerms;
 rules.audit.glossaryTerms=glossaryTerms.length;
 const pagesLabel=pages=>pages.length===1?`p. ${pages[0]}`:`pp. ${pages[0]}–${pages.at(-1)}`;
-const sourceLink=pages=>`<a class="source-link" href="./sources/adeptus-mechanicus-faction-pack-v1.0.pdf#page=${pages[0]}">Faction Pack v1.0 · ${pagesLabel(pages)}</a>`;
+const sourceLink=pages=>`<a class="source-link" href="./${esc(rules.source.file)}#page=${pages[0]}">Faction Pack v${esc(rules.source.version)} · ${pagesLabel(pages)}</a>`;
 const transcript=pages=>`<details class="source-transcript"><summary>Official page transcript</summary>${pages.map(page=>`<h5>Page ${page}</h5><pre>${esc(source.pages[String(page)])}</pre>`).join('')}</details>`;
 const tracked=(id,title,body,classes='content-group')=>`<section class="${classes}" id="${id}" data-track="${id}"><h3 class="category-title">${esc(title)}</h3>${body}</section>`;
 const navLeaf=(id,label,depth)=>`<li data-nav-id="${id}" data-nav-depth="${depth}"><div class="toc-row no-toggle"><button class="toc-label" data-nav-target="${id}">${esc(label)}</button></div></li>`;
@@ -135,7 +173,7 @@ const decorate=(value,unitId='')=>{
 function validate(){
   const fail=message=>{throw new Error(message);};
   const navigationRuntime=fs.readFileSync(path.join(root,'../death-guard/scripts/navigation-controller.js'),'utf8');
-  if(source.meta.pageCount!==26)fail('Expected 26 source pages');
+  if(source.meta.pageCount!==rules.source.pages)fail(`Expected ${rules.source.pages} source pages`);
   if(source.meta.sha256!==rules.source.sha256)fail('Source hashes disagree');
   if(rules.detachments.length!==rules.audit.detachments)fail('Detachment audit mismatch');
   if(allDetachments.length!==10)fail('Expected ten total Adeptus Mechanicus detachments');
@@ -175,7 +213,7 @@ const toc=navLeaf('start','Start',1)
 const updates=rules.updates.map(item=>tracked(item.id,item.title,`<article class="rule-card surface"><div class="eyebrow">Official update</div><p>${decorate(item.summary)}</p><div class="source">${sourceLink(item.sourcePages)}</div>${transcript(item.sourcePages)}</article>`)).join('');
 const options=rules.armyRule.options.map((option,index)=>`<button class="protocol${option.id===rules.armyRule.options.find(x=>x.id.endsWith(rules.armyRule.default))?.id||(!index?'':' active')}" data-protocol="${option.id.split('-')[0]}"><span>${esc(option.symbol)}</span><b>${esc(option.label)}</b><small>${esc(option.subtitle)}</small></button>`).join('');
 const optionPanels=rules.armyRule.options.map(option=>`<section id="${option.id}" data-track="${option.id}"${option.id.endsWith(rules.armyRule.default)?'':' hidden'}><b>${esc(option.label.toUpperCase())} IMPERATIVE</b><ul>${option.effects.map(x=>`<li>${decorate(x)}</li>`).join('')}</ul></section>`).join('');
-const armyRule=tracked(rules.armyRule.id,rules.armyRule.title,`<article class="doctrina-console surface"><div class="doctrina-code"><span>DOCTRINA</span><strong>Ω-01</strong></div><div class="doctrina-body"><div class="eyebrow">Battle Protocol</div><p>Select the active imperative. The console shows the complete Faction Pack v1.0 replacement.</p><div class="protocol-switch" role="group" aria-label="Select Doctrina Imperative">${options}</div><div class="protocol-result">${optionPanels}</div><div class="source">${sourceLink(rules.armyRule.sourcePages)}</div></div></article>`);
+const armyRule=tracked(rules.armyRule.id,rules.armyRule.title,`<article class="doctrina-console surface"><div class="doctrina-code"><span>DOCTRINA</span><strong>Ω-01</strong></div><div class="doctrina-body"><div class="eyebrow">Battle Protocol</div><p>Select the active imperative. The console shows the complete Faction Pack v${rules.source.version} replacement.</p><div class="protocol-switch" role="group" aria-label="Select Doctrina Imperative">${options}</div><div class="protocol-result">${optionPanels}</div><div class="source">${sourceLink(rules.armyRule.sourcePages)}</div></div></article>`);
 
 const detachments=allDetachments.map(det=>{
   const slug=det.id.replace('detachment-','');
@@ -188,7 +226,7 @@ const detachments=allDetachments.map(det=>{
   const stratagems=det.stratagems.map(item=>{
     const turn=/opponent|enemy/i.test(item.when)?'THEIR TURN':/your\b/i.test(item.when)?'YOUR TURN':'ANY TURN';
     const turnClass=turn==='THEIR TURN'?'turn-their':turn==='YOUR TURN'?'turn-yours':'turn-any';
-    return `<article class="stratagem surface ${turnClass}" data-rule-id="${esc(item.id)}" data-turn="${turn}" data-eligibility="${esc(JSON.stringify(item.eligibility))}" data-target="${esc(item.target||'')}"><div class="stratagem-head"><div><h3>${esc(item.title)}</h3><span class="stratagem-type">${esc(item.category)}</span></div><div class="cp">${esc(item.cp)}</div></div><p class="field"><b>When</b><br>${decorate(item.when)}</p>${item.target?`<p class="field"><b>Target</b><br>${decorate(item.target)}</p>`:''}<p class="field"><b>Effect</b><br>${decorate(item.effect)}</p></article>`;
+    return `<article class="stratagem surface ${turnClass}" data-rule-id="${esc(item.id)}" data-turn="${turn}" data-eligibility="${esc(JSON.stringify(item.eligibility))}" data-target="${esc(item.target||'')}"><div class="stratagem-head"><div><h3>${esc(item.title)}</h3><span class="stratagem-type">${esc(item.category)}</span></div><div class="cp">${esc(item.cp)}</div></div><p class="field"><b>When</b><br>${decorate(item.when)}</p>${item.target?`<p class="field"><b>Target</b><br>${decorate(item.target)}</p>`:''}<p class="field"><b>Effect</b><br>${decorate(item.effect)}</p>${item.restrictions?`<p class="field"><b>Restrictions</b><br>${decorate(item.restrictions)}</p>`:''}</article>`;
   }).join('');
   const publication=`<div class="detachment-meta"><span>${isCodex?'CODEX + 11E UPDATE':'FACTION PACK'}</span>${det.disposition?`<span>${esc(det.disposition)}</span>`:''}${det.dp?`<strong>${esc(det.dp)}</strong>`:''}</div>`;
   const provenance=isCodex?`<div class="source"><a class="source-link" href="${codex.source.officialIndexUrl}">Official 11e detachment index</a> · <a class="source-link" href="${codex.source.referenceUrl}">Codex rules reference</a>${det.updatedSourcePages?.length?` · ${sourceLink(det.updatedSourcePages)}`:''}</div>${det.updatedSourcePages?.length?transcript(det.updatedSourcePages):''}`:`<div class="source">${sourceLink(det.sourcePages)}</div>${transcript(det.sourcePages)}`;
@@ -203,18 +241,42 @@ const weapons=unit=>['ranged','melee'].map(mode=>{
   const skillLabel=mode==='ranged'?'BS':'WS';
   return `<div class="weapon-group"><h5>${mode==='ranged'?'Ranged':'Melee'} weapons</h5><div class="weapon-table" role="table" aria-label="${esc(unit.title)} ${mode} weapons"><div class="weapon-row weapon-head"><div>Weapon</div><div>Range</div><div>A</div><div>${skillLabel}</div><div>S</div><div>AP</div><div>D</div></div>${rows.map(w=>`<div class="weapon-row"><div><button class="weapon-button" data-term="${w.termId}">${esc(w.name)}</button>${w.abilities?`<small>${decorate(w.abilities,unit.id)}</small>`:''}</div><div data-label="Range">${esc(w.range)}</div><div data-label="A">${esc(w.a)}</div><div data-label="${skillLabel}">${esc(w.skill)}</div><div data-label="S">${esc(w.s)}</div><div data-label="AP">${esc(w.ap)}</div><div data-label="D">${esc(w.d)}</div></div>`).join('')}</div></div>`;
 }).join('');
+const abilityKind=item=>{
+  if(/^doctrina imperatives$/i.test(item.title))return 'faction';
+  if(/^(leader|support|attached unit)$/i.test(item.title))return 'relation';
+  if(/^damaged:/i.test(item.title))return 'damaged';
+  if(/^transport$/i.test(item.title))return 'transport';
+  if(/^core$/i.test(item.title)||knownCoreTitles.has(coreBaseKey(item.title)))return 'core';
+  return 'datasheet';
+};
+const abilityCard=(item,unit)=>`<article class="ability"><h5><button class="term-button" data-term="${item.termId}">${esc(item.title)}</button></h5>${item.text?`<p>${decorate(item.text,unit.id)}</p>`:''}</article>`;
+const compactAbilities=(title,items,unit)=>items.length?`<article class="ability"><h5>${title}</h5><p>${items.map(item=>/^core$/i.test(item.title)?decorate(item.text,unit.id):`<button class="term-button" data-term="${item.termId}">${esc(item.title)}</button>`).join(', ')}</p></article>`:'';
 const unitCard=unit=>{
   const slug=unit.id.replace('unit-','');
-  const parts={profile:`${slug}-profile`,abilities:`${slug}-abilities`,composition:`${slug}-composition`,keywords:`${slug}-keywords`};
-  const tabs=Object.entries(parts).map(([label,id])=>`<button class="local-tab" data-journey-target="${id}" data-journey-type="datasheet">${label[0].toUpperCase()+label.slice(1)}</button>`).join('');
-  const abilities=unit.abilities.map(item=>`<article class="ability"><h5><button class="term-button" data-term="${item.termId}">${esc(item.title)}</button></h5>${item.text?`<p>${decorate(item.text,unit.id)}</p>`:''}</article>`).join('');
+  const grouped={core:[],faction:[],datasheet:[],relation:[],damaged:[],transport:[]};
+  for(const item of unit.abilities)(grouped[abilityKind(item)]||grouped.datasheet).push(item);
+  const wargearAbilities=unit.wargearAbilities||[];
   const wargear=Array.isArray(unit.wargear)?unit.wargear:(unit.wargear?[unit.wargear]:[]);
-  const gear=wargear.length?`<h5>Wargear Options</h5><ul>${wargear.map(x=>`<li>${decorate(x,unit.id)}</li>`).join('')}</ul>`:'';
-  const provenance=unit.sourcePages?`<div class="source">${sourceLink(unit.sourcePages)}</div>${transcript(unit.sourcePages)}`:'';
+  const parts=[
+    ['Profile & Weapons',`${slug}-profile`,`${stats(unit)}${weapons(unit)}`],
+    ['Abilities',`${slug}-abilities`,`<div class="ability-list">${compactAbilities('CORE',grouped.core,unit)}${compactAbilities('FACTION',grouped.faction,unit)}${grouped.datasheet.map(item=>abilityCard(item,unit)).join('')}</div>`],
+    ['Unit Composition',`${slug}-composition`,`<p>${decorate(unit.composition,unit.id)}</p>`],
+    ...grouped.relation.map(item=>[item.title,`${slug}-${slugify(item.title)}`,`<div class="ability-list">${abilityCard(item,unit)}</div>`]),
+    ...grouped.transport.map(item=>['Transport',`${slug}-transport`,`<div class="ability-list">${abilityCard(item,unit)}</div>`]),
+    ...grouped.damaged.map(item=>['Damaged',`${slug}-damaged`,`<div class="ability-list">${abilityCard(item,unit)}</div>`]),
+    ...(wargear.length?[['Wargear Options',`${slug}-wargear-options`,`<ul>${wargear.map(x=>`<li>${decorate(x,unit.id)}</li>`).join('')}</ul>`]]:[]),
+    ...(wargearAbilities.length?[['Wargear Abilities',`${slug}-wargear-abilities`,`<p class="unit-note">These abilities apply only while the corresponding wargear is equipped.</p><div class="ability-list">${wargearAbilities.map(item=>abilityCard(item,unit)).join('')}</div>`]]:[]),
+    ['Keywords',`${slug}-keywords`,`<div class="keyword-list">${unit.keywords.map(x=>`<span>${esc(x)}</span>`).join('')}</div>`]
+  ];
+  const tabs=parts.map(([label,id])=>`<button class="local-tab" data-journey-target="${id}" data-journey-type="datasheet">${label}</button>`).join('');
+  const sections=parts.map(([label,id,body])=>`<section class="unit-part" id="${id}"><h4>${label}</h4>${body}</section>`).join('');
+  const provenance=unit.sourcePages
+    ?`<div class="source">${sourceLink(unit.sourcePages)}</div>${transcript(unit.sourcePages)}`
+    :unit.source?.url?`<div class="source"><a class="source-link" href="${esc(unit.source.url)}">${esc(unit.source.label||'Pinned Codex transcription')}</a></div>`:'';
   const currentPoints=pointsByUnit.get(unit.title.toLowerCase());
   const pointValues=[...new Set((currentPoints?.points||[]).map(row=>Number(row.value)).filter(Number.isFinite))];
   const points=pointValues.length?pointValues.join(' / '):(unit.points?.length?unit.points.join(' / '):'');
-  return `<article class="unit-card surface${unit.status==='Warhammer Legends'?' legends-card':''}" id="${unit.id}" data-track="${unit.id}" data-unit-title="${esc(unit.title)}" data-keywords="${esc(unit.keywords.join('|'))}" data-related-candidates="${esc(JSON.stringify(relatedCandidatesByUnit.get(unit.id)))}"><div class="unit-header"><div><div class="eyebrow">${esc(unit.status)}</div><h3>${esc(unit.title)}</h3></div><div class="unit-status">${unit.status==='Warhammer Legends'?'LEGENDS':points?`${esc(points)} PTS`:'CODEX'}</div></div><div class="local-nav">${tabs}</div><section class="unit-part" id="${parts.profile}"><h4>Profile & Weapons</h4>${stats(unit)}${weapons(unit)}</section><section class="unit-part" id="${parts.abilities}"><h4>Abilities</h4><div class="ability-list">${abilities}</div></section><section class="unit-part" id="${parts.composition}"><h4>Composition & Wargear</h4><p>${decorate(unit.composition,unit.id)}</p>${gear}</section><section class="unit-part" id="${parts.keywords}"><h4>Keywords</h4><div class="keyword-list">${unit.keywords.map(x=>`<span>${esc(x)}</span>`).join('')}</div></section>${provenance}</article>`;
+  return `<article class="unit-card surface${unit.status==='Warhammer Legends'?' legends-card':''}" id="${unit.id}" data-track="${unit.id}" data-unit-title="${esc(unit.title)}" data-keywords="${esc(unit.keywords.join('|'))}" data-related-candidates="${esc(JSON.stringify(relatedCandidatesByUnit.get(unit.id)))}"><div class="unit-header"><div><div class="eyebrow">${esc(unit.status)}</div><h3>${esc(unit.title)}</h3></div><div class="unit-status">${unit.status==='Warhammer Legends'?'LEGENDS':points?`${esc(points)} PTS`:'CODEX'}</div></div><div class="local-nav">${tabs}</div>${sections}${provenance}</article>`;
 };
 const datasheetGroups=datasheetCategories.map(group=>tracked(group.id,group.title,`<p class="lead">${group.units.length} datasheet${group.units.length===1?'':'s'} in this category.</p>${group.units.map(unitCard).join('')}`)).join('');
 const glossaryGroup=(id,title,terms)=>tracked(id,title,`<div class="glossary-grid">${terms.map(term=>`<article class="glossary-card surface" id="glossary-${term.id}" data-glossary-title="${esc(term.title)}"><h4>${esc(term.title)}</h4><p>${esc(cleanText(term.summary))}</p><p class="glossary-full">${esc(cleanText(term.full))}</p>${term.sectionId?`<button class="popup-action" data-journey-target="${term.sectionId}" data-journey-type="rule">Open rule</button>`:''}</article>`).join('')}</div>`);
@@ -235,9 +297,11 @@ const html=`<!doctype html>
 <footer class="footer">Adeptus Mechanicus · Faction Pack v1.0 · data-driven local edition</footer></div></main><div class="popup-layer" id="popupLayer" aria-live="polite"></div><script src="../../glossary/generated/glossary.en.js"></script><script src="../shared/roster-parser.js?v=2"></script><script src="../shared/roster-entities.js?v=1"></script><script src="../../roster-guides/points-data.js?v=5"></script><script src="../../roster-guides/points-validator.js?v=2"></script><script src="../shared/navigation-targets.js?v=1"></script><script src="../shared/popup-rule-actions.js?v=1"></script><script src="../shared/datasheet-layout.js?v=2"></script><script src="../shared/popup-content.js?v=2"></script><script src="../shared/glossary-autolink.js?v=7"></script><script src="./scripts/data.js?v=1"></script><script src="../death-guard/scripts/navigation-controller.js?v=15"></script><script src="../death-guard/scripts/full-entry-controller.js?v=8"></script><script src="../death-guard/scripts/popup-controller.js?v=25"></script><script src="../death-guard/scripts/journey-controller.js?v=12"></script><script src="../death-guard/scripts/ui-controllers.js?v=11"></script><script src="./scripts/faction-ui.js?v=1"></script><script src="./scripts/related-rules.js?v=6"></script><script src="./scripts/roster-enhancements.js?v=2"></script><script src="./scripts/roster-filter.js?v=2"></script><script src="./scripts/app.js?v=27"></script></body></html>\n`;
 
 const terms={};
-for(const term of rules.glossary)terms[term.id]={title:term.title,summary:term.summary,full:term.full,glossary:`glossary-${term.id}`,...(term.sectionId?{rule:term.sectionId}:{}),...(term.unitIds?.length?{units:term.unitIds,datasheet:term.unitIds[0],statline:`${term.unitIds[0].replace('unit-','')}-profile`}:{})};
+for(const term of rules.glossary)terms[term.id]={title:term.title,summary:term.summary,full:term.full,glossary:`glossary-${term.id}`,...(term.sectionId?{rule:term.sectionId}:{}),...(term.fullRulePath?{fullRulePath:term.fullRulePath}:{}),...(term.unitIds?.length?{units:term.unitIds,datasheet:term.unitIds[0],statline:`${term.unitIds[0].replace('unit-','')}-profile`}:{})};
 const dataJs=`window.DG_TERMS=${JSON.stringify(terms,null,2)};\n`;
 const releaseHtml=html
+  .replaceAll('Faction Pack v1.0',`Faction Pack v${rules.source.version}`)
+  .replace(/26 pages([^S]+)SHA-256/,`${rules.source.pages} pages$1SHA-256`)
   .replace('../../glossary/generated/glossary.en.js"','../../glossary/generated/glossary.en.js?v=3"')
   .replace('<script src="../shared/navigation-targets.js', '<script src="../../glossary-return.js?v=2"></script><script src="../shared/navigation-targets.js')
   .replace('../shared/glossary-autolink.js?v=7','../shared/glossary-autolink.js?v=8')

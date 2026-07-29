@@ -167,7 +167,7 @@
             {
               "type": "enhancement",
               "id": "enhancement-revolting-regeneration",
-              "title": "Revolting Regeneration - 20 pts",
+              "title": "Revolting Regeneration - 30 pts",
               "text": "DEATH GUARD model only. The bearer has the Feel No Pain 5+ ability."
             }
           ],
@@ -1041,7 +1041,7 @@
             {
               "type": "enhancement",
               "id": "enhancement-lancet-of-the-worldsore",
-              "title": "Lancet of the Worldsore - 20 pts",
+              "title": "Lancet of the Worldsore - 15 pts",
               "text": "Friendly HELBRUTE/MYPHITIC BLIGHT-HAULER unit only. This unit has MOBILE."
             }
           ],
@@ -1125,13 +1125,13 @@
             {
               "type": "enhancement",
               "id": "enhancement-insectile-murmuration",
-              "title": "Insectile Murmuration - 20 pts",
+              "title": "Insectile Murmuration - 15 pts",
               "text": "PLAGUE MARINES unit only. When this unit’s attacks target a unit within Contagion Range of a friendly unit, those attacks can re-roll wound rolls of 1."
             },
             {
               "type": "enhancement",
               "id": "enhancement-plagueveil",
-              "title": "Plagueveil - 25 pts",
+              "title": "Plagueveil - 15 pts",
               "text": "PLAGUE MARINES unit only. This unit has -3\" detection range."
             }
           ],
@@ -1215,13 +1215,13 @@
             {
               "type": "enhancement",
               "id": "enhancement-rejuvenating-swarm",
-              "title": "Rejuvenating Swarm - 15 pts",
+              "title": "Rejuvenating Swarm - 20 pts",
               "text": "DEATH GUARD INFANTRY model only (excluding TERMINATOR models). Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls."
             },
             {
               "type": "enhancement",
               "id": "enhancement-host-of-the-hybridised-pox",
-              "title": "Host of the Hybridised Pox - 20 pts",
+              "title": "Host of the Hybridised Pox - 40 pts",
               "text": "DEATH GUARD INFANTRY model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, select one of the Plagues listed in Nurgle’s Gift. Enemy units within Contagion Range of this unit also have the effect of that Plague in addition to your army’s chosen Plague until the end of the battle."
             }
           ],
@@ -1452,7 +1452,7 @@
               "id": "mortarion-ability-lord-of-the-death-guard",
               "termId": "ability-lord-of-the-death-guard-90db1c4",
               "title": "Lord of the Death Guard",
-              "text": "Once per turn, this model can use one of the following abilities. Diseased Influence: Just after an enemy unit ends a Normal, Advance or Fall Back move within 9\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\". Boon of Death: In the Fight phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. Until the end of the phase, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6. On a 2+, do not remove it from play; it can fight after the attacking unit has finished its attacks, then it is removed from play. Inflamed Reprisal: In your opponent’s Shooting phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. After the attacking unit has finished its attacks, that DEATH GUARD unit can shoot as if it were your Shooting phase, but only at that enemy unit and only if it is an eligible target."
+              "text": "Once per turn, this model can use one of the following abilities. Diseased Influence: Just after an enemy unit ends a Normal, Advance or Fall Back move within 8\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\". Boon of Death: In the Fight phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. Until the end of the phase, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6. On a 2+, do not remove it from play; it can fight after the attacking unit has finished its attacks, then it is removed from play. Inflamed Reprisal: In your opponent’s Shooting phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. After the attacking unit has finished its attacks, that DEATH GUARD unit can shoot as if it were your Shooting phase, but only at that enemy unit and only if it is an eligible target; each time a model in that DEATH GUARD unit makes an attack during that shooting, worsen the BS characteristic of that attack by 1."
             },
             {
               "type": "ability",
@@ -6817,7 +6817,7 @@
               "type": "ability",
               "termId": null,
               "id": "miasmic-malignifier-ability-fortification-setup",
-              "title": "Fortification Setup",
+              "title": "Deployment",
               "text": "Both parts of this FORTIFICATION must be set up within 1\" of each other. Both parts are then treated as a single model for all rules purposes."
             }
           ],
@@ -7936,7 +7936,7 @@
       "blocks": [
         {
           "type": "p",
-          "text": "Current non-DEATH GUARD datasheets available through the Pact of Decay army rule. They are separated from native Death Guard datasheets."
+          "text": "PLAGUE LEGIONS datasheets available to a DEATH GUARD army through the Tallyband Summoners Detachment and its Pact of Decay rule. They are separated from native Death Guard datasheets."
         }
       ],
       "subsections": [],
@@ -7985,7 +7985,7 @@
         },
         {
           "type": "p",
-          "text": "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is included because it is available through the current Pact of Decay army rule."
+          "text": "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule."
         },
         {
           "type": "p",
@@ -8107,7 +8107,7 @@
         },
         {
           "type": "p",
-          "text": "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is included because it is available through the current Pact of Decay army rule."
+          "text": "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule."
         },
         {
           "type": "p",
@@ -8339,7 +8339,7 @@
         },
         {
           "type": "p",
-          "text": "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is included because it is available through the current Pact of Decay army rule."
+          "text": "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule."
         },
         {
           "type": "p",
@@ -8461,7 +8461,7 @@
         },
         {
           "type": "p",
-          "text": "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is included because it is available through the current Pact of Decay army rule."
+          "text": "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule."
         },
         {
           "type": "p",
@@ -8632,7 +8632,7 @@
         },
         {
           "type": "p",
-          "text": "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is included because it is available through the current Pact of Decay army rule."
+          "text": "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule."
         },
         {
           "type": "p",
@@ -8775,7 +8775,7 @@
         },
         {
           "type": "p",
-          "text": "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is included because it is available through the current Pact of Decay army rule."
+          "text": "Pact of Decay datasheet. This is not a native DEATH GUARD datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule."
         },
         {
           "type": "p",
@@ -12848,7 +12848,7 @@
       "kind": "ability",
       "showGlossary": false,
       "short": "Once per turn, choose one: a nearby unit can make a reactive 5\" Normal move; fight on death on a 2+; or shoot back after being attacked.",
-      "full": "Once per turn, this model can use one of the following abilities. Diseased Influence: Just after an enemy unit ends a Normal, Advance or Fall Back move within 9\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\". Boon of Death: In the Fight phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. Until the end of the phase, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6. On a 2+, do not remove it from play; it can fight after the attacking unit has finished its attacks, then it is removed from play. Inflamed Reprisal: In your opponent’s Shooting phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. After the attacking unit has finished its attacks, that DEATH GUARD unit can shoot as if it were your Shooting phase, but only at that enemy unit and only if it is an eligible target.",
+      "full": "Once per turn, this model can use one of the following abilities. Diseased Influence: Just after an enemy unit ends a Normal, Advance or Fall Back move within 8\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\". Boon of Death: In the Fight phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. Until the end of the phase, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6. On a 2+, do not remove it from play; it can fight after the attacking unit has finished its attacks, then it is removed from play. Inflamed Reprisal: In your opponent’s Shooting phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. After the attacking unit has finished its attacks, that DEATH GUARD unit can shoot as if it were your Shooting phase, but only at that enemy unit and only if it is an eligible target; each time a model in that DEATH GUARD unit makes an attack during that shooting, worsen the BS characteristic of that attack by 1.",
       "sectionId": "mortarion-ability-lord-of-the-death-guard",
       "unitIds": [
         "unit-mortarion"

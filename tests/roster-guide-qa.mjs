@@ -28,7 +28,7 @@ for(const bookId of supported){
     const reader=fs.readFileSync(readerPath,'utf8');
     const points=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','adeptus-mechanicus-points.en.json'),'utf8'));
     const codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','adeptus-mechanicus-codex-datasheets.en.json'),'utf8'));
-    assert(points.units.length===39,'adeptus-mechanicus: points catalog is incomplete');
+    assert(points.units.length===38,'adeptus-mechanicus: points catalog is incomplete');
     assert(points.enhancements.length===34,'adeptus-mechanicus: Enhancement catalog is incomplete');
     const unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
     const enhancementTitles=new Set([...reader.matchAll(/data-enhancement-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));

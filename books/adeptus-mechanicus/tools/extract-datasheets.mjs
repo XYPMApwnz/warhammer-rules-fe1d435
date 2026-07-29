@@ -16,10 +16,22 @@ const clean=value=>String(value??'')
   .replaceAll('^^**','').replaceAll('**^^','').replaceAll('**','')
   .replaceAll('\u00a0',' ').replaceAll('\u2011','-').replaceAll('\ufffd','')
   .replace(/\bmdel\b/gi,'model')
+  .replace(/\bhavealready\b/gi,'have already')
+  .replace(/\bConflagaration\b/g,'Conflagration')
   .replace(/[ \t]+/g,' ').trim();
+const datasheetText=(title,value)=>title==='Pteraxii Sterylizors'
+  ?clean(value).replaceAll('Pteraxii Skystalker Alpha','Pteraxii Sterylizor Alpha')
+  :clean(value);
+const abilityText=(unitTitle,title,value)=>{
+  if(!/^broad spectrum data-tether$/i.test(clean(title)))return clean(value);
+  if(unitTitle==='Onager Dunecrawler')return 'The bearer loses the SMOKE keyword, but each time you target the bearer with a Stratagem, roll one D6: on a 5+, you gain 1CP.';
+  return 'Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.';
+};
 const key=value=>clean(value).toLowerCase().replace(/\s*\[legends]\s*$/i,'');
 const enhancementNames=new Set(points.enhancements.map(item=>key(item.title)));
 const excludedBranches=/^(crusade|mighty champions|battle honours|weapon modifications|relic upgrades|enhancements)$/i;
+const nonDatasheetCategories=new Set(['recon augury']);
+const alwaysDatasheetAbilities=new Set(['achillan eye']);
 const index=new Map();
 const visit=value=>{
   if(!value||typeof value!=='object')return;
@@ -35,7 +47,16 @@ const unique=(items,marker)=>{
   const seen=new Set();
   return items.filter(item=>{const id=marker(item);if(seen.has(id))return false;seen.add(id);return true;});
 };
-const characteristics=profile=>Object.fromEntries((profile.characteristics||[]).map(item=>[clean(item.name),clean(item.$text)]));
+const publicAbility=item=>({title:item.title,text:item.text});
+const characteristics=(profile,categoryIds=new Set())=>{
+  const values=new Map((profile.characteristics||[]).map(item=>[item.typeId,{name:clean(item.name),value:clean(item.$text)}]));
+  for(const modifier of profile.modifiers||[]){
+    if(modifier.type!=='set'||!values.has(modifier.field))continue;
+    const conditions=modifier.conditions||[];
+    if(!conditions.length||conditions.every(condition=>condition.type==='instanceOf'&&categoryIds.has(condition.childId)))values.get(modifier.field).value=clean(modifier.value);
+  }
+  return Object.fromEntries([...values.values()].map(item=>[item.name,item.value]));
+};
 const profilesFor=entry=>{
   const output=[];
   const seen=new Set();
@@ -43,24 +64,24 @@ const profilesFor=entry=>{
     if(!node||seen.has(node.id))return;
     if(excludedBranches.test(clean(node.name))||enhancementNames.has(key(node.name)))return;
     if(node.id)seen.add(node.id);
-    output.push(...(node.profiles||[]).filter(profile=>profile.hidden!==true));
+    output.push(...(node.profiles||[]).filter(profile=>profile.hidden!==true).map(profile=>({profile,ownerType:node.type||'group',ownerName:clean(node.name)})));
     for(const name of ['selectionEntries','selectionEntryGroups'])for(const child of node[name]||[])walk(child);
     for(const link of [...(node.entryLinks||[]),...(node.infoLinks||[])]){
       if(link.hidden===true||link.modifiers?.length)continue;
       const target=index.get(link.targetId);
       if(!target)continue;
       if(target.modifiers?.length||excludedBranches.test(clean(target.name))||enhancementNames.has(key(target.name)))continue;
-      if(link.type==='profile'||target.typeName)output.push(target);
+      if(link.type==='profile'||target.typeName)output.push({profile:target,ownerType:node.type||'group',ownerName:clean(node.name)});
       else if(link.type==='selectionEntry'||link.type==='selectionEntryGroup')walk(target);
     }
   };
   walk(entry);
-  return unique(output,profile=>profile.id||`${profile.typeName}:${profile.name}:${JSON.stringify(profile.characteristics)}`);
+  return unique(output,item=>item.profile.id||`${item.profile.typeName}:${item.profile.name}:${JSON.stringify(item.profile.characteristics)}`);
 };
 const rulesFor=entry=>(entry.infoLinks||[]).filter(link=>link.type==='rule'&&link.hidden!==true).map(link=>{
   const target=index.get(link.targetId)||{};
   const suffix=(link.modifiers||[]).filter(mod=>mod.type==='append'&&mod.field==='name').map(mod=>clean(mod.value)).join(' ');
-  return {title:clean(`${link.name||target.name||''} ${suffix}`),text:clean(target.description||target.characteristics?.find(item=>item.name==='Description')?.$text)};
+  return {title:clean(`${link.name||target.name||''} ${suffix}`),text:clean(target.description||target.characteristics?.find(item=>item.name==='Description')?.$text),origin:'rule'};
 });
 const categoryFor=(title,categories)=>{
   if(/\[Legends]/i.test(title))return 'Warhammer Legends';
@@ -72,18 +93,81 @@ const categoryFor=(title,categories)=>{
   return 'Other';
 };
 const compositionFor=(entry,old,title)=>{
-  if(old&&!/^See the model selections/i.test(old))return old;
-  const groups=(entry.selectionEntryGroups||[]).map(group=>{
-    const selectionConstraints=(group.constraints||[]).filter(item=>item.field==='selections'&&item.scope==='parent');
-    const min=selectionConstraints.find(item=>item.type==='min')?.value;
-    const max=selectionConstraints.find(item=>item.type==='max')?.value;
-    if(!Number.isFinite(min)||!Number.isFinite(max))return '';
-    const count=min===max?String(min):`${min}-${max}`;
-    const label=clean(group.name).replace(/^\d+\s*-\s*\d+\s+/,'');
-    const options=(group.selectionEntries||[]).map(item=>clean(item.name));
-    return `${count} ${label}${options.length?`. Available builds: ${options.join('; ')}`:''}.`;
+  if(entry.type==='model')return `1 ${title}.`;
+  const rows=[...(entry.selectionEntryGroups||[]),...(entry.selectionEntries||[]).filter(item=>item.type==='model')].filter(item=>!excludedBranches.test(clean(item.name))&&!enhancementNames.has(key(item.name))).map(item=>{
+    const constraints=(item.constraints||[]).filter(rule=>rule.field==='selections'&&rule.scope==='parent');
+    const min=constraints.find(rule=>rule.type==='min')?.value;
+    const max=constraints.find(rule=>rule.type==='max')?.value;
+    if(!Number.isFinite(min)&&!Number.isFinite(max))return '';
+    const low=Number.isFinite(min)?min:0;
+    const high=Number.isFinite(max)?max:low;
+    if(!high)return '';
+    const count=low===high?String(low):`${low}-${high}`;
+    const label=clean(item.name).replace(/^\d+(?:\s*-\s*\d+)?\s+/, '');
+    return `${count} ${label}.`;
   }).filter(Boolean);
-  return groups.join(' ')||`1 ${title}.`;
+  return rows.join(' ')||old||`1 ${title}.`;
+};
+
+const selectionBounds=node=>{
+  const constraints=(node?.constraints||[]).filter(rule=>rule.field==='selections'&&rule.scope==='parent');
+  return {
+    min:constraints.find(rule=>rule.type==='min')?.value,
+    max:constraints.find(rule=>rule.type==='max')?.value
+  };
+};
+const countLabel=node=>{
+  const {min,max}=selectionBounds(node);
+  if(Number.isFinite(min)&&Number.isFinite(max)&&min===max)return `${min}`;
+  if(Number.isFinite(min)&&Number.isFinite(max))return `${min}-${max}`;
+  if(Number.isFinite(max))return `up to ${max}`;
+  if(Number.isFinite(min))return `at least ${min}`;
+  return '';
+};
+const linkedTarget=link=>index.get(link.targetId);
+const optionChildren=node=>[
+  ...(node.selectionEntries||[]),
+  ...(node.entryLinks||[]).filter(link=>link.type==='selectionEntry').map(link=>linkedTarget(link)||link)
+].filter(item=>!excludedBranches.test(clean(item.name))&&!enhancementNames.has(key(item.name)));
+const choiceGroups=node=>[
+  ...(node.selectionEntryGroups||[]),
+  ...(node.entryLinks||[]).filter(link=>link.type==='selectionEntryGroup').map(link=>linkedTarget(link)||link)
+].filter(item=>!excludedBranches.test(clean(item.name))&&!/weapon modifications/i.test(clean(item.name)));
+const nestedChoiceGroups=node=>{
+  const output=[],seen=new Set();
+  const visit=current=>{
+    for(const group of choiceGroups(current)){
+      if(group.id&&seen.has(group.id))continue;
+      if(group.id)seen.add(group.id);
+      if(optionChildren(group).length)output.push(group);
+      visit(group);
+    }
+  };
+  visit(node);return output;
+};
+const wargearFor=(entry,unitTitle)=>{
+  const output=[];
+  const top=[...(entry.selectionEntries||[]).filter(item=>item.type==='model'),...(entry.selectionEntryGroups||[])].filter(item=>!excludedBranches.test(clean(item.name)));
+  for(const node of top){
+    const subject=/^(?:wargear|weapons?|selections?)$/i.test(clean(node.name))?unitTitle:clean(node.name);
+    const nestedModels=[...(node.selectionEntries||[])].filter(item=>item.type==='model');
+    if(nestedModels.length){
+      const rows=nestedModels.map(model=>`${countLabel(model)||'select'} ${clean(model.name)}`);
+      if(rows.length)output.push(`${subject}: ${rows.join('; ')}.`);
+      continue;
+    }
+    const mandatory=optionChildren(node).filter(item=>selectionBounds(item).min>=1).map(item=>clean(item.name));
+    if(mandatory.length)output.push(`${subject} is equipped with: ${mandatory.join('; ')}.`);
+    const optional=optionChildren(node).filter(item=>!selectionBounds(item).min&&Number.isFinite(selectionBounds(item).max)).map(item=>clean(item.name));
+    if(optional.length)output.push(`${subject} can be equipped with: ${optional.join('; ')}.`);
+    for(const group of nestedChoiceGroups(node)){
+      const choices=optionChildren(group).map(item=>clean(item.name));
+      if(!choices.length)continue;
+      const bounds=selectionBounds(group),amount=Number.isFinite(bounds.min)&&bounds.min===bounds.max?bounds.min:`${bounds.min??0}-${bounds.max??choices.length}`;
+      output.push(`${subject}: select ${amount} from ${choices.join('; ')}.`);
+    }
+  }
+  return unique(output,item=>item.toLowerCase());
 };
 
 const rootLinks=new Map((source.entryLinks||[]).filter(link=>link.type==='selectionEntry').map(link=>[key(link.name),link]));
@@ -93,22 +177,32 @@ const datasheets=points.units.map(pointUnit=>{
   const entry=index.get(link.targetId);
   if(!entry)throw new Error(`Missing target ${link.targetId} for ${pointUnit.title}`);
   const old=previousByTitle.get(key(pointUnit.title))||{};
-  const profiles=profilesFor(entry);
+  const categoryLinks=entry.categoryLinks||[];
+  const categoryIds=new Set(categoryLinks.map(item=>item.targetId).filter(Boolean));
+  const profileRecords=profilesFor(entry);
+  const profiles=profileRecords.map(item=>item.profile);
   const statProfiles=profiles.filter(profile=>profile.typeName==='Unit').map(profile=>{
-    const stats=characteristics(profile);
-    return {name:clean(profile.name),stats:{M:stats.M,T:stats.T,Sv:stats.Sv||stats.SV,W:stats.W,Ld:stats.LD,OC:stats.OC}};
+    const stats=characteristics(profile,categoryIds);
+    return {name:datasheetText(pointUnit.title,profile.name),stats:{M:stats.M,T:stats.T,Sv:stats.Sv||stats.SV,W:stats.W,Ld:stats.LD,OC:stats.OC}};
   }).filter(profile=>Object.values(profile.stats).every(Boolean));
   if(!statProfiles.length)throw new Error(`No stat profile for ${pointUnit.title}`);
   const weapons=profiles.filter(profile=>['Ranged Weapons','Melee Weapons'].includes(profile.typeName)).map(profile=>{
-    const stats=characteristics(profile);
+    const stats=characteristics(profile,categoryIds);
     const ranged=profile.typeName==='Ranged Weapons';
     return {name:clean(profile.name),mode:ranged?'ranged':'melee',range:stats.Range||'-',a:stats.A||'-',skill:(ranged?stats.BS:stats.WS)||'-',s:stats.S||'-',ap:stats.AP||'-',d:stats.D||'-',abilities:clean(stats.Keywords)==='-'?'':clean(stats.Keywords)};
   });
-  const abilities=profiles.filter(profile=>profile.typeName==='Abilities').map(profile=>({title:clean(profile.name),text:characteristics(profile).Description||''})).concat(rulesFor(entry));
-  const categories=unique((entry.categoryLinks||[]).map(item=>clean(item.name).replace(/^Faction:\s*/i,'')),item=>item.toLowerCase());
-  const invulnerable=statProfiles.map(profile=>characteristics(profiles.find(item=>item.typeName==='Unit'&&clean(item.name)===profile.name)).InSv).find(Boolean)||old.invulnerable||'';
+  if(pointUnit.title==='Onager Dunecrawler'){
+    const dissipated=weapons.find(weapon=>/eradication beamer - dissipated/i.test(weapon.name));
+    if(dissipated)dissipated.s='9'; // Faction Pack v1.1, p. 18.
+  }
+  const abilityRecords=profileRecords.filter(item=>item.profile.typeName==='Abilities').map(item=>({title:clean(item.profile.name),text:abilityText(pointUnit.title,item.profile.name,characteristics(item.profile,categoryIds).Description||''),origin:item.ownerType==='upgrade'?'wargear':'datasheet',ownerName:item.ownerName}));
+  const conditionalTitles=new Set(abilityRecords.filter(item=>item.origin==='wargear'&&key(item.ownerName)!==key(pointUnit.title)&&!alwaysDatasheetAbilities.has(key(item.title))).map(item=>key(item.title)));
+  const abilities=abilityRecords.filter(item=>(item.origin!=='wargear'||alwaysDatasheetAbilities.has(key(item.title)))&&!conditionalTitles.has(key(item.title))).concat(rulesFor(entry));
+  const wargearAbilities=abilityRecords.filter(item=>item.origin==='wargear'&&conditionalTitles.has(key(item.title))&&!abilities.some(ability=>key(ability.title)===key(item.title)));
+  const categories=unique(categoryLinks.map(item=>clean(item.name).replace(/^Faction:\s*/i,'')).filter(item=>!nonDatasheetCategories.has(key(item))),item=>item.toLowerCase());
+  const invulnerable=profiles.filter(item=>item.typeName==='Unit').map(item=>characteristics(item,categoryIds).InSv).find(Boolean)||old.invulnerable||'';
   const status=/\[Legends]/i.test(link.name)?'Warhammer Legends':'Codex transcription';
-  return {
+  const result={
     ...old,
     id:old.id||`unit-${key(pointUnit.title).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}`,
     title:pointUnit.title,
@@ -119,13 +213,16 @@ const datasheets=points.units.map(pointUnit=>{
     profiles:unique(statProfiles,item=>`${item.name}:${JSON.stringify(item.stats)}`),
     invulnerable,
     weapons:unique(weapons,item=>JSON.stringify(item)),
-    abilities:unique(abilities.filter(item=>item.title),item=>item.title.toLowerCase()),
-    composition:compositionFor(entry,old.composition,pointUnit.title),
-    wargear:weapons.length?[`Available weapon profiles: ${[...new Set(weapons.map(item=>item.name))].join(', ')}.`]:[],
+    abilities:unique(abilities.filter(item=>item.title),item=>item.title.toLowerCase()).map(publicAbility),
+    wargearAbilities:unique(wargearAbilities.filter(item=>item.title),item=>item.title.toLowerCase()).map(publicAbility),
+    composition:datasheetText(pointUnit.title,compositionFor(entry,old.composition,pointUnit.title)),
+    wargear:wargearFor(entry,pointUnit.title),
+    availableProfiles:[...new Set(weapons.map(item=>item.name))],
     keywords:categories,
     source:{label:'Current 11e community catalogue · BSData',url:SOURCE_URL},
     referenceUrl:SOURCE_URL
   };
+  return result;
 }).sort((a,b)=>a.category.localeCompare(b.category)||a.title.localeCompare(b.title));
 
 const result={schema:1,source:{title:'BSData Warhammer 40,000 11th Edition · Adeptus Mechanicus',url:SOURCE_URL,revision:String(source.revision),commit:points.source.commit,sha256:crypto.createHash('sha256').update(fs.readFileSync(sourcePath)).digest('hex').toUpperCase()},datasheets,audit:{datasheets:datasheets.length,legendsDatasheets:datasheets.filter(unit=>unit.status==='Warhammer Legends').length}};

@@ -10,7 +10,7 @@ import pdfplumber
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PDF = ROOT / "sources" / "tyranids-faction-pack-v1.0.pdf"
+PDF = ROOT / "sources" / "tyranids-faction-pack-v1.1.pdf"
 OUTPUT = ROOT / "content" / "tyranids-faction-pack.en.json"
 
 
@@ -23,7 +23,7 @@ def clean_text(value: str) -> str:
 
 
 def comparable(value: str) -> str:
-    value = value.replace("‑", "-").replace("–", "-").replace("—", "-")
+    value = value.replace("‐", "-").replace("‑", "-").replace("‒", "-").replace("–", "-").replace("—", "-")
     value = value.replace("/", " / ")
     return re.sub(r"\s+", " ", value).strip().casefold()
 
@@ -53,11 +53,11 @@ def extract_source() -> tuple[dict, dict[str, dict]]:
             }
         meta = {
             "title": "Tyranids Faction Pack",
-            "version": "1.0",
-            "legalFrom": "2026-06-20",
+            "version": "1.1",
+            "legalFrom": "2026-07-22",
             "pageCount": len(document.pages),
             "sha256": digest,
-            "file": "sources/tyranids-faction-pack-v1.0.pdf",
+            "file": "sources/tyranids-faction-pack-v1.1.pdf",
         }
     return meta, pages
 
@@ -84,8 +84,8 @@ def validate(data: dict) -> list[str]:
     for group, count in expected.items():
         if len(data.get("datasheets", {}).get(group, [])) != count:
             errors.append(f"expected {count} {group} datasheets")
-    if len(data.get("faqs", [])) != 14:
-        errors.append("expected 14 FAQs")
+    if len(data.get("faqs", [])) != 12:
+        errors.append("expected 12 FAQs")
     for faq in data.get("faqs", []):
         page_text = source_text(data, faq.get("sourcePages", []))
         for field in ("question", "answer"):
@@ -106,7 +106,7 @@ def validate(data: dict) -> list[str]:
             if not pages or any(not isinstance(page, int) or page < 1 or page > page_count for page in pages):
                 errors.append(f"{item.get('id')}: invalid sourcePages")
             provenance = item.get("provenance", {})
-            if provenance.get("sourceId") != "tyranids-faction-pack-v1.0" or provenance.get("sourcePages") != pages:
+            if provenance.get("sourceId") != "tyranids-faction-pack-v1.1" or provenance.get("sourcePages") != pages:
                 errors.append(f"{item.get('id')}: invalid provenance")
     return errors
 
@@ -128,6 +128,57 @@ def main() -> int:
         return 0
     data["meta"] = meta
     data["pages"] = pages
+    data["provenance"] = {
+        "sourceId": "tyranids-faction-pack-v1.1",
+        "sourcePages": list(range(1, meta["pageCount"] + 1)),
+    }
+    removed_faqs = {"surge-move-choice", "blistering-assault-zero-move"}
+    data["faqs"] = [faq for faq in data.get("faqs", []) if faq.get("id") not in removed_faqs]
+    for faq in data["faqs"]:
+        faq["sourcePages"] = [21]
+        faq.setdefault("provenance", {})["sourcePages"] = [21]
+    additions = [
+        {
+            "id": "vanguard-chameleonic",
+            "section": "Vanguard Onslaught Detachment",
+            "subject": "Chameleonic Enhancement",
+            "change": "VANGUARD INVADER model only. This unit has Stealth.",
+            "sourcePages": [19],
+        },
+        {
+            "id": "tyranid-warriors-melee-adaptive-instincts",
+            "section": "Datasheets",
+            "subject": "Tyranid Warriors with Melee Bio-weapons, Adaptive Instincts Ability",
+            "change": "Adaptive Instincts (Once per turn, per unit): In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following: this unit's melee attacks have +1 S; or this unit has +1 T.",
+            "sourcePages": [20],
+        },
+        {
+            "id": "tyrannocyte-aerial-seeding",
+            "section": "Datasheets",
+            "subject": "Tyrannocyte, Aerial Seeding Ability",
+            "change": "Change 9\" to 8\".",
+            "sourcePages": [20],
+        },
+        {
+            "id": "venomthropes-foul-spores",
+            "section": "Datasheets",
+            "subject": "Venomthropes, Foul Spores Ability",
+            "change": "Friendly TYRANIDS units within 6\" of this unit have Stealth.",
+            "sourcePages": [20],
+        },
+    ]
+    by_id = {item.get("id"): item for item in data.get("updates", [])}
+    for item in additions:
+        by_id[item["id"]] = item
+    by_id["biovores-seed-spore-mine"]["sourcePages"] = [20]
+    data["updates"] = list(by_id.values())
+    collections = [data.get("detachments", []), data.get("updates", []), data.get("faqs", []), *data.get("datasheets", {}).values()]
+    for detachment in data.get("detachments", []):
+        collections.extend(([detachment.get("rule", {})], detachment.get("enhancements", []), detachment.get("stratagems", [])))
+    for collection in collections:
+        for item in collection:
+            item.setdefault("provenance", {})["sourceId"] = "tyranids-faction-pack-v1.1"
+            item["provenance"]["sourcePages"] = item.get("sourcePages", [])
     OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Refreshed {OUTPUT.name}")
     return 0

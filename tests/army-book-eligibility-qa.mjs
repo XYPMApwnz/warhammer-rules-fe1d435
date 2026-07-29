@@ -42,11 +42,16 @@ for(const entry of fs.readdirSync(booksRoot,{withFileTypes:true})){
   const config=JSON.parse(fs.readFileSync(configPath,'utf8'));
   if(!config.sources?.relatedRules)continue;
   const pack=JSON.parse(fs.readFileSync(path.join(bookRoot,config.sources.factionPack),'utf8'));
+  const codexParity=config.sources.codexParity?JSON.parse(fs.readFileSync(path.join(bookRoot,config.sources.codexParity),'utf8')):{detachments:[]};
   const relatedContract=JSON.parse(fs.readFileSync(path.join(bookRoot,config.sources.relatedRules),'utf8')),eligibility=relatedContract.stratagems||{},enhancementEligibility=relatedContract.enhancements||{};
   const reader=fs.readFileSync(readerPath,'utf8'),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8');
-  const profiles=profilesFrom(reader),stratagems=(pack.detachments||[]).flatMap(detachment=>detachment.stratagems||[]);
-  const officialIds=stratagems.map(rule=>rule.id),generatedIds=[...related.matchAll(/<article class="stratagem surface"[^>]*data-rule-id="([^"]+)"/g)].map(match=>match[1]);
-  const detachmentByRule=new Map((pack.detachments||[]).flatMap(detachment=>(detachment.stratagems||[]).map(rule=>[rule.id,detachment.id])));
+  if(config.includeCoreStratagems)assert.equal(related.indexOf('<section class="related-detachment related-core"'),related.lastIndexOf('<section class="related-detachment'),'Core Stratagems must follow faction Stratagems');
+  const normalizeRuleId=id=>String(id||'').replace(/^stratagem-/,'');
+  const normalizeEnhancementId=id=>String(id||'').replace(/^enhancement-/,'');
+  const allDetachments=[...(pack.detachments||[]),...(codexParity.detachments||[])];
+  const profiles=profilesFrom(reader),stratagems=allDetachments.flatMap(detachment=>detachment.stratagems||[]);
+  const officialIds=stratagems.map(rule=>normalizeRuleId(rule.id)),generatedIds=[...related.matchAll(/<article class="stratagem surface"[^>]*data-rule-id="([^"]+)"/g)].map(match=>normalizeRuleId(match[1])).filter(id=>!id.startsWith('core-stratagem-'));
+  const detachmentByRule=new Map(allDetachments.flatMap(detachment=>(detachment.stratagems||[]).map(rule=>[normalizeRuleId(rule.id),detachment.id])));
   const applyGrants=(profile,ruleId)=>{
     const grants=relatedContract.keywordGrants?.[detachmentByRule.get(ruleId)]||[];
     const gained=grants.filter(grant=>matcher.matches({v:1,roles:[{id:'grant',side:'friendly',subject:'unit',selector:grant.selector||{}}]},profile)).map(grant=>String(grant.keyword).toUpperCase());
@@ -56,18 +61,18 @@ for(const entry of fs.readdirSync(booksRoot,{withFileTypes:true})){
   };
   assert.ok(profiles.length,`${config.id}: no datasheet profiles in generated reader`);
   assert.equal(new Set(officialIds).size,officialIds.length,`${config.id}: duplicate official Stratagem id`);
-  assert.deepEqual(sorted(Object.keys(eligibility)),sorted(officialIds),`${config.id}: explicit eligibility IDs do not exactly match official Stratagem IDs`);
+  assert.deepEqual(sorted(Object.keys(eligibility).map(normalizeRuleId)),sorted(officialIds),`${config.id}: explicit eligibility IDs do not exactly match official Stratagem IDs`);
   assert.deepEqual(sorted(generatedIds),sorted(officialIds),`${config.id}: generated Related Rules cards do not exactly match official Stratagem IDs`);
   let negatives=0;
   for(const stratagem of stratagems){
-    const rule=eligibility[stratagem.id];
+    const ruleId=normalizeRuleId(stratagem.id),rule=eligibility[stratagem.id]||eligibility[ruleId];
     assert.ok(rule,`${config.id}/${stratagem.title}: missing explicit eligibility`);
     assert.ok(friendlyRoles(rule).length,`${config.id}/${stratagem.title}: no friendly target role`);
-    assert.ok(profiles.some(profile=>matcher.matches(rule,applyGrants(profile,stratagem.id))),`${config.id}/${stratagem.title}: no real datasheet, granted-keyword or Attached-unit candidate satisfies its target`);
-    if(restrictive(rule)&&profiles.some(profile=>!matcher.matches(rule,applyGrants(profile,stratagem.id))))negatives++;
+    assert.ok(profiles.some(profile=>matcher.matches(rule,applyGrants(profile,ruleId))),`${config.id}/${stratagem.title}: no real datasheet, granted-keyword or Attached-unit candidate satisfies its target`);
+    if(restrictive(rule)&&profiles.some(profile=>!matcher.matches(rule,applyGrants(profile,ruleId))))negatives++;
   }
   const relatedEnhancementIds=[...related.matchAll(/<article class="enhancement surface"[^>]*data-rule-id="([^"]+)"/g)].map(match=>match[1]);
-  assert.deepEqual(new Set(Object.keys(enhancementEligibility)),new Set(relatedEnhancementIds),`${config.id}: explicit Enhancement eligibility does not match generated Related Rules inventory`);
+  assert.deepEqual(new Set(Object.keys(enhancementEligibility).map(normalizeEnhancementId)),new Set(relatedEnhancementIds.map(normalizeEnhancementId)),`${config.id}: explicit Enhancement eligibility does not match generated Related Rules inventory`);
   for(const [id,rule] of Object.entries(enhancementEligibility)){
     const roles=rule.roles||rule.targets||[];
     assert.ok(roles.some(role=>role.side==='friendly'||role.side==='either'),`${config.id}/${id}: no friendly Enhancement owner role`);
@@ -96,6 +101,7 @@ assert.equal(matcher.matches({v:1,roles:[{side:'friendly',subject:'unit',selecto
   const factionIds=dgData.sections.flatMap(section=>(section.subsections||[]).flatMap(subsection=>(subsection.blocks||[]).filter(block=>block.type==='rule').map(block=>block.id)));
   const detachmentByRule=new Map(dgData.sections.flatMap(section=>(section.subsections||[]).flatMap(subsection=>(subsection.blocks||[]).filter(block=>block.type==='rule').map(block=>[block.id,section.id.replace(/^detachment-/,'')]))));
   assert.equal(coreIds.length,10,'Death Guard must expose all 10 Core Stratagem cards');
+  assert.equal(dgRelated.indexOf('<section class="related-detachment related-core"'),dgRelated.lastIndexOf('<section class="related-detachment'),'Death Guard Core Stratagems must follow faction Stratagems');
   assert.equal(factionIds.length,45,'Death Guard must expose all 45 faction Stratagems');
   assert.equal(new Set(cardIds).size,55,'Death Guard Stratagem card IDs must be unique');
   assert.deepEqual(sorted(Object.keys(eligibility)),sorted(cardIds),'Death Guard contracts must map every rendered Core and faction Stratagem exactly once');
@@ -131,6 +137,11 @@ assert.equal(matcher.matches({v:1,roles:[{side:'friendly',subject:'unit',selecto
   assert.equal(matcher.matches(eligibility['stratagem-rabid-infusion'],oneCharacter),false,'a single-Character Attached unit must not receive a two-Character Stratagem');
   assert.equal(matcher.matches(eligibility['stratagem-rabid-infusion'],twoCharacters),true,'a real two-Character Attached unit must receive its Stratagem');
   console.log(`PASS  Death Guard: 45 faction + 10 Core Stratagems × ${profiles.length} datasheets; ${negativeCount} restrictive contracts have real negatives`);
+}
+
+{
+  const mechanicusRelated=fs.readFileSync(path.join(booksRoot,'adeptus-mechanicus','mobile','related-rules.inc'),'utf8');
+  assert.equal(mechanicusRelated.indexOf('<section class="related-detachment related-core"'),mechanicusRelated.lastIndexOf('<section class="related-detachment'),'Adeptus Mechanicus Core Stratagems must follow faction Stratagems');
 }
 
 assert.ok(audited.length,'No generated army book exposes an explicit eligibility contract');

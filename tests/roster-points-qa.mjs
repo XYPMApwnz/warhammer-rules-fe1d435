@@ -8,7 +8,7 @@ for(const file of ['books/shared/roster-parser.js','roster-guides/points-data.js
 const {WHRosterParser,WH_POINTS_CATALOG,WHRosterPoints}=context.window;
 assert.equal(Object.keys(WH_POINTS_CATALOG['death guard'].units).length,41);
 assert.equal(Object.keys(WH_POINTS_CATALOG['death guard'].enhancements).length,30);
-assert.equal(Object.keys(WH_POINTS_CATALOG['adeptus mechanicus'].units).length,39);
+assert.equal(Object.keys(WH_POINTS_CATALOG['adeptus mechanicus'].units).length,38);
 assert.equal(new Set(Object.values(WH_POINTS_CATALOG['adeptus mechanicus'].enhancements).map(item=>item.title)).size,34);
 assert.equal(WH_POINTS_CATALOG['death guard'].units['death guard possessed'].points[0].value,155);
 assert.equal(WH_POINTS_CATALOG['death guard'].units['death guard chaos lord'].points[0].value,65);
@@ -45,7 +45,7 @@ Enhancement: Parasitic Woe-Reaper (+15 pts)
 1x Myphitic Blight-hauler (100 pts): Bile spurt, Gnashing maw, Missile launcher, Multi-melta`;
 
 for(const [declared,name,lordPoints,effect,currentTotal] of [
-  [1025,'Revolting Regeneration',150,'persistent',1015],
+  [1025,'Revolting Regeneration',150,'persistent',1025],
   [1020,'Furnace of Plagues',145,'furnace',1020],
   [1005,'Daemon Weapon of Nurgle',130,'critical-hit-5',1005]
 ]){
@@ -71,18 +71,53 @@ for(const [declared,name,lordPoints,effect,currentTotal] of [
 }
 
 assert.ok(Object.values(WH_POINTS_CATALOG['death guard'].enhancements).every(item=>item.effect),'every Death Guard Enhancement must declare a presentation mode');
-for(const [name,cost] of Object.entries({
-  'revolting regeneration':20,
-  'lancet of the worldsore':20,
-  'insectile murmuration':20,
-  plagueveil:25,
-  'rejuvenating swarm':15,
-  'host of the hybridised pox':20
-}))assert.equal(WH_POINTS_CATALOG['death guard'].enhancements[name].value,cost,`${name} current cost`);
+const deathGuardMfmEnhancements={
+  cornucophagus:35,
+  'final ingredient':20,
+  'needle of nurgle':25,
+  'visions of virulence':15,
+  'lancet of the worldsore':15,
+  'parasitic woe reaper':15,
+  'face of death':10,
+  'helm of the fly king':20,
+  'vile vigour':15,
+  'warprot talisman':30,
+  'insectile murmuration':15,
+  plagueveil:15,
+  'bilemaw blight':10,
+  'eye of affliction':20,
+  'shriekworm familiar':15,
+  'tendrilous emissions':30,
+  'host of the hybridised pox':40,
+  'rejuvenating swarm':20,
+  'lord of the walking pox':15,
+  sorrowsyphon:10,
+  'talisman of burgeoning':25,
+  'witherbone pipes':25,
+  'beckoning blight':20,
+  'entropic knell':15,
+  'fell harvester':10,
+  'tome of bounteous blessings':20,
+  'arch contaminator':25,
+  'daemon weapon of nurgle':10,
+  'furnace of plagues':25,
+  'revolting regeneration':30
+};
+assert.deepEqual(
+  Object.keys(WH_POINTS_CATALOG['death guard'].enhancements).sort(),
+  Object.keys(deathGuardMfmEnhancements).sort(),
+  'Death Guard Enhancement catalogue must exactly match MFM v1.1'
+);
+for(const [name,cost] of Object.entries(deathGuardMfmEnhancements)){
+  assert.equal(WH_POINTS_CATALOG['death guard'].enhancements[name].value,cost,`${name} MFM v1.1 cost`);
+}
 
 const mechanicus=WHRosterPoints.check({units:[{quantity:10,name:'Skitarii Rangers',models:[]}],declared:85,unitLineTotal:85,enhancements:[]},'adeptus mechanicus');
 assert.equal(mechanicus.total,85);
 assert.equal(mechanicus.difference,0);
+const mechanicusLegends=WHRosterPoints.check({units:[{quantity:5,name:'Secutarii Hoplites [Legends]',models:[]}],declared:65,unitLineTotal:65,enhancements:[]},'adeptus mechanicus');
+assert.equal(mechanicusLegends.total,65);
+assert.deepEqual([...mechanicusLegends.unresolved],[],'New Recruit Legends suffix must not break current point matching');
 
 const mechanicusRoster=WHRosterParser.parse(`FACTION KEYWORD: Imperium - Adeptus Mechanicus
 DETACHMENT: Haloscreed Battle Clade

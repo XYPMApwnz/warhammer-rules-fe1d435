@@ -134,14 +134,6 @@
           "text": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
         },
         {
-          "title": "Enhanced data-tether",
-          "text": "Each time you select the bearer’s unit\nas the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
-        },
-        {
-          "title": "Omnispex",
-          "text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability."
-        },
-        {
           "title": "Scouts 6\"",
           "text": ""
         },
@@ -154,9 +146,12 @@
           "text": ""
         }
       ],
-      "composition": "1 Skitarii Ranger Alpha.",
+      "composition": "9 Skitarii Rangers. 1 Skitarii Ranger Alpha.",
       "wargear": [
-        "Available weapon profiles: Alpha combat weapon, Galvanic rifle, Mechanicus pistol, Close combat weapon, Transuranic arquebus, Arc rifle, ➤ Plasma caliver - supercharge, ➤ Plasma caliver - standard."
+        "Skitarii Ranger Alpha is equipped with: Close combat weapon.",
+        "Skitarii Ranger Alpha can be equipped with: Alpha combat weapon.",
+        "Skitarii Ranger Alpha: select 1 from Galvanic rifle; Mechanicus pistol.",
+        "9 Skitarii Rangers: up to 1 Skitarii Ranger w/ transuranic arquebus; up to 1 Skitarii Ranger w/ arc rifle; up to 1 Skitarii Ranger w/ plasma caliver; 5-9 Skitarii Ranger w/ galvanic rifle; up to 1 Skitarii Ranger w/ data-tether; up to 1 Skitarii Ranger w/ omnispex."
       ],
       "keywords": [
         "Rangers",
@@ -164,14 +159,33 @@
         "Adeptus Mechanicus",
         "Infantry",
         "Skitarii",
-        "Battleline",
-        "Recon Augury"
+        "Battleline"
       ],
       "source": {
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [
+        {
+          "title": "Enhanced data-tether",
+          "text": "Each time you select the bearer’s unit\nas the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        },
+        {
+          "title": "Omnispex",
+          "text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability."
+        }
+      ],
+      "availableProfiles": [
+        "Alpha combat weapon",
+        "Galvanic rifle",
+        "Mechanicus pistol",
+        "Close combat weapon",
+        "Transuranic arquebus",
+        "Arc rifle",
+        "➤ Plasma caliver - supercharge",
+        "➤ Plasma caliver - standard"
+      ]
     },
     {
       "id": "unit-skitarii-vanguard",
@@ -299,14 +313,6 @@
           "text": "While an enemy unit (excluding Vehicle units) is within 3\" of this unit, subtract 1 from the Objective Control characteristic of models in that unit."
         },
         {
-          "title": "Enhanced data-tether",
-          "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
-        },
-        {
-          "title": "Omnispex",
-          "text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability."
-        },
-        {
           "title": "Doctrina Imperatives",
           "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
         },
@@ -315,9 +321,12 @@
           "text": ""
         }
       ],
-      "composition": "1 Skitarii Vanguard Alpha.",
+      "composition": "9 Skitarii Vanguard. 1 Skitarii Vanguard Alpha.",
       "wargear": [
-        "Available weapon profiles: Alpha combat weapon, Radium carbine, Mechanicus pistol, Close combat weapon, Transuranic arquebus, Arc rifle, ➤ Plasma caliver - supercharge, ➤ Plasma caliver - standard."
+        "Skitarii Vanguard Alpha is equipped with: Close combat weapon.",
+        "Skitarii Vanguard Alpha can be equipped with: Alpha combat weapon.",
+        "Skitarii Vanguard Alpha: select 1 from Radium carbine; Mechanicus pistol.",
+        "Skitarii Vanguard: up to 1 Skitarii Vanguard w/ transuranic arquebus; up to 1 Skitarii Vanguard w/ arc rifle; up to 1 Skitarii Vanguard w/ plasma caliver; up to 9 Skitarii Vanguard w/ radium carbine; up to 1 Skitarii Vanguard w/ data-tether; up to 1 Skitarii Vanguard w/ omnispex."
       ],
       "keywords": [
         "Vanguard",
@@ -331,7 +340,27 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [
+        {
+          "title": "Enhanced data-tether",
+          "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        },
+        {
+          "title": "Omnispex",
+          "text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability."
+        }
+      ],
+      "availableProfiles": [
+        "Alpha combat weapon",
+        "Radium carbine",
+        "Mechanicus pistol",
+        "Close combat weapon",
+        "Transuranic arquebus",
+        "Arc rifle",
+        "➤ Plasma caliver - supercharge",
+        "➤ Plasma caliver - standard"
+      ]
     },
     {
       "id": "unit-cybernetica-datasmith",
@@ -380,7 +409,7 @@
           "mode": "ranged",
           "range": "12\"",
           "a": "1",
-          "skill": "4+",
+          "skill": "3+",
           "s": "6",
           "ap": "-1",
           "d": "1",
@@ -390,7 +419,7 @@
       "abilities": [
         {
           "title": "Support",
-          "text": "This model must be attached to the following unit:\n■ Kastelan Robots\n\nYou must attach this model to a Kastelan Robots unit, even if one or more other Cybernetica Datasmith models havealready been attached to it. In such cases, if that bodyguard unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths. If you cannot attach this model to a Kastelan Robots unit, this model cannot be deployed and counts as having been destroyed during the first battle round. While attached to a Kastelan Robots unit, this model loses the INFANTRY keyword."
+          "text": "This model must be attached to the following unit:\n■ Kastelan Robots\n\nYou must attach this model to a Kastelan Robots unit, even if one or more other Cybernetica Datasmith models have already been attached to it. In such cases, if that bodyguard unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths. If you cannot attach this model to a Kastelan Robots unit, this model cannot be deployed and counts as having been destroyed during the first battle round. While attached to a Kastelan Robots unit, this model loses the INFANTRY keyword."
         },
         {
           "title": "Battle Protocols",
@@ -411,7 +440,8 @@
       ],
       "composition": "1 Cybernetica Datasmith.",
       "wargear": [
-        "Available weapon profiles: Power fist, Mechanicus pistol."
+        "Cybernetica Datasmith is equipped with: Power fist.",
+        "Cybernetica Datasmith can be equipped with: Mechanicus pistol."
       ],
       "keywords": [
         "Cybernetica Datasmith",
@@ -426,7 +456,12 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Power fist",
+        "Mechanicus pistol"
+      ]
     },
     {
       "id": "unit-skitarii-marshal",
@@ -475,7 +510,7 @@
           "mode": "ranged",
           "range": "12\"",
           "a": "1",
-          "skill": "4+",
+          "skill": "3+",
           "s": "6",
           "ap": "-1",
           "d": "1",
@@ -506,7 +541,8 @@
       ],
       "composition": "1 Skitarii Marshal.",
       "wargear": [
-        "Available weapon profiles: Control stave, Mechanicus pistol."
+        "Skitarii Marshal is equipped with: Control stave.",
+        "Skitarii Marshal can be equipped with: Mechanicus pistol."
       ],
       "keywords": [
         "Marshal",
@@ -520,7 +556,12 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Control stave",
+        "Mechanicus pistol"
+      ]
     },
     {
       "id": "unit-sydonian-skatros",
@@ -591,7 +632,7 @@
           "mode": "ranged",
           "range": "12\"",
           "a": "1",
-          "skill": "4+",
+          "skill": "3+",
           "s": "6",
           "ap": "-1",
           "d": "1",
@@ -626,7 +667,9 @@
       ],
       "composition": "1 Sydonian Skatros.",
       "wargear": [
-        "Available weapon profiles: Sydonian Feet, Radium Jezzail, Skatros transuranic arquebus, Mechanicus pistol."
+        "Sydonian Skatros is equipped with: Sydonian Feet.",
+        "Sydonian Skatros can be equipped with: Mechanicus pistol.",
+        "Sydonian Skatros: select 1 from Radium Jezzail; Skatros transuranic arquebus."
       ],
       "keywords": [
         "Infantry",
@@ -641,7 +684,14 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Sydonian Feet",
+        "Radium Jezzail",
+        "Skatros transuranic arquebus",
+        "Mechanicus pistol"
+      ]
     },
     {
       "id": "unit-tech-priest-dominus",
@@ -765,7 +815,9 @@
       ],
       "composition": "1 Tech-Priest Dominus.",
       "wargear": [
-        "Available weapon profiles: Omnissian axe, Macrostubber, Phosphor serpenta, ➤ Eradication ray - dissipated, ➤ Eradication ray - focused, Volkite blaster."
+        "Tech-Priest Dominus is equipped with: Omnissian axe.",
+        "Tech-Priest Dominus: select 1 from Macrostubber; Phosphor serpenta.",
+        "Tech-Priest Dominus: select 1 from Eradication ray; Volkite blaster."
       ],
       "keywords": [
         "Dominus",
@@ -780,7 +832,16 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Omnissian axe",
+        "Macrostubber",
+        "Phosphor serpenta",
+        "➤ Eradication ray - dissipated",
+        "➤ Eradication ray - focused",
+        "Volkite blaster"
+      ]
     },
     {
       "id": "unit-tech-priest-enginseer",
@@ -840,7 +901,7 @@
           "mode": "ranged",
           "range": "12\"",
           "a": "1",
-          "skill": "4+",
+          "skill": "3+",
           "s": "6",
           "ap": "-1",
           "d": "1",
@@ -875,7 +936,8 @@
       ],
       "composition": "1 Tech-Priest Enginseer.",
       "wargear": [
-        "Available weapon profiles: Servo arm, Omnissian axe, Mechanicus pistol."
+        "Tech-Priest Enginseer is equipped with: Servo arm; Omnissian axe.",
+        "Tech-Priest Enginseer can be equipped with: Mechanicus pistol."
       ],
       "keywords": [
         "Enginseer",
@@ -890,7 +952,13 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Servo arm",
+        "Omnissian axe",
+        "Mechanicus pistol"
+      ]
     },
     {
       "id": "unit-tech-priest-manipulus",
@@ -981,7 +1049,8 @@
       ],
       "composition": "1 Tech-Priest Manipulus.",
       "wargear": [
-        "Available weapon profiles: Omnissian staff, Magnarail lance, Transonic cannon."
+        "Tech-Priest Manipulus is equipped with: Omnissian staff.",
+        "Tech-Priest Manipulus: select 1 from Magnarail lance; Transonic cannon."
       ],
       "keywords": [
         "Manipulus",
@@ -996,7 +1065,13 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Omnissian staff",
+        "Magnarail lance",
+        "Transonic cannon"
+      ]
     },
     {
       "id": "unit-technoarcheologist",
@@ -1045,7 +1120,7 @@
           "mode": "ranged",
           "range": "12\"",
           "a": "1",
-          "skill": "4+",
+          "skill": "3+",
           "s": "6",
           "ap": "-1",
           "d": "1",
@@ -1076,7 +1151,8 @@
       ],
       "composition": "1 Technoarcheologist.",
       "wargear": [
-        "Available weapon profiles: Servo-arc claw, Mechanicus pistol."
+        "Technoarcheologist is equipped with: Servo-arc claw.",
+        "Technoarcheologist can be equipped with: Mechanicus pistol."
       ],
       "keywords": [
         "Technoarcheologist",
@@ -1091,7 +1167,12 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Servo-arc claw",
+        "Mechanicus pistol"
+      ]
     },
     {
       "id": "unit-skorpius-dunerider",
@@ -1151,7 +1232,7 @@
       "abilities": [
         {
           "title": "Broad spectrum data-tether",
-          "text": "Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+          "text": "Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
         },
         {
           "title": "Fire Support",
@@ -1172,7 +1253,7 @@
       ],
       "composition": "1 Skorpius Dunerider.",
       "wargear": [
-        "Available weapon profiles: Armoured hull, Cognis heavy stubber array."
+        "Skorpius Dunerider is equipped with: Armoured hull; Cognis heavy stubber array."
       ],
       "keywords": [
         "Skorpius Dunerider",
@@ -1189,7 +1270,12 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Armoured hull",
+        "Cognis heavy stubber array"
+      ]
     },
     {
       "id": "unit-belisarius-cawl",
@@ -1294,9 +1380,7 @@
         }
       ],
       "composition": "1 Belisarius Cawl.",
-      "wargear": [
-        "Available weapon profiles: Arc Scourge, Cawl's Omnissian axe, Mechadendrite hive, Solar atomiser."
-      ],
+      "wargear": [],
       "keywords": [
         "Belisarius Cawl",
         "Epic Hero",
@@ -1312,7 +1396,14 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Arc Scourge",
+        "Cawl's Omnissian axe",
+        "Mechadendrite hive",
+        "Solar atomiser"
+      ]
     },
     {
       "id": "unit-thulia-ghuld",
@@ -1421,9 +1512,7 @@
         }
       ],
       "composition": "1 Thulia Ghuld.",
-      "wargear": [
-        "Available weapon profiles: ➤ Rod of the War Forge - strike, ➤ Rod of the War Forge - sweep, ➤ Jericho-class conversion resonator - shockwave, ➤ Jericho-class conversion resonator - titanic impact."
-      ],
+      "wargear": [],
       "keywords": [
         "Epic Hero",
         "Monster",
@@ -1439,7 +1528,14 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "➤ Rod of the War Forge - strike",
+        "➤ Rod of the War Forge - sweep",
+        "➤ Jericho-class conversion resonator - shockwave",
+        "➤ Jericho-class conversion resonator - titanic impact"
+      ]
     },
     {
       "id": "unit-archaeopter-fusilave",
@@ -1501,14 +1597,6 @@
           "text": "At the end of your opponent’s Fight phase, select one visible enemy unit (excluding Lone Operative units) within 24\" of this unit, and roll six D6 for that unit: for each 4+, that unit suffers 1 mortal wound."
         },
         {
-          "title": "Chaff Launcher",
-          "text": "The bearer has the Smoke keyword."
-        },
-        {
-          "title": "Command Uplink",
-          "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
-        },
-        {
           "title": "Deadly Demise D3",
           "text": ""
         },
@@ -1519,7 +1607,8 @@
       ],
       "composition": "1 Archaeopter Fusilave.",
       "wargear": [
-        "Available weapon profiles: Armoured hull, Cognis heavy stubber array."
+        "Archaeopter Fusilave is equipped with: Armoured hull; Cognis heavy stubber array.",
+        "Archaeopter Fusilave: select 1 from Chaff Launcher; Command Uplink."
       ],
       "keywords": [
         "Archaeopter Fusilave",
@@ -1534,7 +1623,21 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [
+        {
+          "title": "Chaff Launcher",
+          "text": "The bearer has the Smoke keyword."
+        },
+        {
+          "title": "Command Uplink",
+          "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        }
+      ],
+      "availableProfiles": [
+        "Armoured hull",
+        "Cognis heavy stubber array"
+      ]
     },
     {
       "id": "unit-archaeopter-stratoraptor",
@@ -1618,14 +1721,6 @@
           "text": "Each time this model makes a ranged attack that targets an enemy unit (excluding units that can Fly), add 1 to the Hit roll."
         },
         {
-          "title": "Chaff Launcher",
-          "text": "The bearer has the Smoke keyword."
-        },
-        {
-          "title": "Command Uplink",
-          "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
-        },
-        {
           "title": "Deadly Demise D3",
           "text": ""
         },
@@ -1636,7 +1731,8 @@
       ],
       "composition": "1 Archaeopter Stratoraptor.",
       "wargear": [
-        "Available weapon profiles: Cognis heavy stubber, Heavy phosphor blaster, Twin cognis lascannon, Armoured hull."
+        "Archaeopter Stratoraptor is equipped with: Cognis heavy stubber; Heavy phosphor blaster; Twin cognis lascannon; Armoured hull.",
+        "Archaeopter Stratoraptor: select 1 from Chaff Launcher; Command Uplink."
       ],
       "keywords": [
         "Archaeopter Stratoraptor",
@@ -1651,7 +1747,23 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [
+        {
+          "title": "Chaff Launcher",
+          "text": "The bearer has the Smoke keyword."
+        },
+        {
+          "title": "Command Uplink",
+          "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        }
+      ],
+      "availableProfiles": [
+        "Cognis heavy stubber",
+        "Heavy phosphor blaster",
+        "Twin cognis lascannon",
+        "Armoured hull"
+      ]
     },
     {
       "id": "unit-archaeopter-transvector",
@@ -1713,14 +1825,6 @@
           "text": "In your first Movement phase, this unit can make an ingress move."
         },
         {
-          "title": "Chaff Launcher",
-          "text": "The bearer has the Smoke keyword."
-        },
-        {
-          "title": "Command Uplink",
-          "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
-        },
-        {
           "title": "Hover",
           "text": ""
         },
@@ -1739,7 +1843,8 @@
       ],
       "composition": "1 Archaeopter Transvector.",
       "wargear": [
-        "Available weapon profiles: Armoured hull, Cognis heavy stubber array."
+        "Archaeopter Transvector is equipped with: Armoured hull; Cognis heavy stubber array.",
+        "Archaeopter Transvector: select 1 from Chaff Launcher; Command Uplink."
       ],
       "keywords": [
         "Archaeopter Transvector",
@@ -1754,7 +1859,21 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [
+        {
+          "title": "Chaff Launcher",
+          "text": "The bearer has the Smoke keyword."
+        },
+        {
+          "title": "Command Uplink",
+          "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        }
+      ],
+      "availableProfiles": [
+        "Armoured hull",
+        "Cognis heavy stubber array"
+      ]
     },
     {
       "id": "unit-corpuscarii-electro-priests",
@@ -1827,7 +1946,7 @@
       ],
       "composition": "5-10 Corpuscarii Electro-Priests.",
       "wargear": [
-        "Available weapon profiles: Electrostatic gauntlets."
+        "Corpuscarii Electro-Priests is equipped with: Electrostatic gauntlets."
       ],
       "keywords": [
         "Electro-Priests",
@@ -1841,7 +1960,11 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Electrostatic gauntlets"
+      ]
     },
     {
       "id": "unit-fulgurite-electro-priests",
@@ -1903,7 +2026,7 @@
       ],
       "composition": "5-10 Fulgurite Electro-Priests.",
       "wargear": [
-        "Available weapon profiles: Electroleech stave."
+        "Fulgurite Electro-Priests is equipped with: Electroleech stave."
       ],
       "keywords": [
         "Electro-Priests",
@@ -1917,7 +2040,11 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Electroleech stave"
+      ]
     },
     {
       "id": "unit-hastarii-exterminators",
@@ -2036,9 +2163,9 @@
           "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
         }
       ],
-      "composition": "1 Hastarii Exterminator Alpha.",
+      "composition": "4 Hastarii Exterminators. 1 Hastarii Exterminator Alpha.",
       "wargear": [
-        "Available weapon profiles: Power weapon, Hastarii arc blaster, ➤ Eradication caster - focused, ➤ Eradication caster - dissipated, Close combat weapon."
+        "4 Hastarii Exterminators: 4 Hastarii Exterminator."
       ],
       "keywords": [
         "Imperium",
@@ -2052,7 +2179,15 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Power weapon",
+        "Hastarii arc blaster",
+        "➤ Eradication caster - focused",
+        "➤ Eradication caster - dissipated",
+        "Close combat weapon"
+      ]
     },
     {
       "id": "unit-hastarii-fusiliers",
@@ -2160,9 +2295,9 @@
           "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
         }
       ],
-      "composition": "1 Hastarii Fusilier Alpha.",
+      "composition": "4 Hastarii Fusiliers. 1 Hastarii Fusilier Alpha.",
       "wargear": [
-        "Available weapon profiles: Hastarii phosphor blaster, Neutron fusil, Power weapon, Close combat weapon."
+        "4 Hastarii Fusiliers: 4 Hastarii Fusilier."
       ],
       "keywords": [
         "Imperium",
@@ -2176,7 +2311,14 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Hastarii phosphor blaster",
+        "Neutron fusil",
+        "Power weapon",
+        "Close combat weapon"
+      ]
     },
     {
       "id": "unit-ironstrider-ballistarii",
@@ -2255,7 +2397,7 @@
         },
         {
           "title": "Broad Spectrum Data-tether",
-          "text": "Each time you select this unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+          "text": "Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
         },
         {
           "title": "Deadly Demise 1",
@@ -2270,9 +2412,9 @@
           "text": ""
         }
       ],
-      "composition": "1-3 Ironstrider Ballistarii. Available builds: Ironstrider Ballistarius (Twin cognis autocannon); Ironstrider Ballistarius (Twin cognis lascannon).",
+      "composition": "1-3 Ironstrider Ballistarii.",
       "wargear": [
-        "Available weapon profiles: Twin cognis autocannon, Ironstrider feet, Twin cognis lascannon."
+        "Ironstrider Ballistarii: up to 3 Ironstrider Ballistarius (Twin cognis autocannon); up to 3 Ironstrider Ballistarius (Twin cognis lascannon)."
       ],
       "keywords": [
         "Ironstrider Ballistarii",
@@ -2287,7 +2429,13 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Twin cognis autocannon",
+        "Ironstrider feet",
+        "Twin cognis lascannon"
+      ]
     },
     {
       "id": "unit-kastelan-robots",
@@ -2421,7 +2569,8 @@
       ],
       "composition": "2-4 Kastelan Robot.",
       "wargear": [
-        "Available weapon profiles: Close combat weapon, Twin Kastelan phosphor blaster, Twin Kastelan fist, Kastelan fist, Kastelan phosphor blaster, Incendine combustor, Heavy phosphor blaster."
+        "Kastelan Robot: select 1 from Twin Kastelan phosphor blaster and CCW; Twin Kastelan fist; Kastelan phosphor blaster & Kastelan fist.",
+        "Kastelan Robot: select 1 from Incendine combustor; Heavy phosphor blaster."
       ],
       "keywords": [
         "Kastelan Robots",
@@ -2435,7 +2584,17 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Close combat weapon",
+        "Twin Kastelan phosphor blaster",
+        "Twin Kastelan fist",
+        "Kastelan fist",
+        "Kastelan phosphor blaster",
+        "Incendine combustor",
+        "Heavy phosphor blaster"
+      ]
     },
     {
       "id": "unit-kataphron-breachers",
@@ -2524,9 +2683,9 @@
           "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
         }
       ],
-      "composition": "3-6 Kataphron Breachers. Available builds: Kataphron Breacher (Heavy arc rifle & arc claw); Kataphron Breacher (Heavy arc rifle & hydraulic claw); Kataphron Breacher (Torsion cannon & arc claw); Kataphron Breacher (Torsion cannon & hydraulic claw).",
+      "composition": "3-6 Kataphron Breachers.",
       "wargear": [
-        "Available weapon profiles: Arc claw, Heavy arc rifle, Hydraulic claw, Torsion cannon."
+        "Kataphron Breachers: up to 6 Kataphron Breacher (Heavy arc rifle & arc claw); up to 6 Kataphron Breacher (Heavy arc rifle & hydraulic claw); up to 6 Kataphron Breacher (Torsion cannon & arc claw); up to 6 Kataphron Breacher (Torsion cannon & hydraulic claw)."
       ],
       "keywords": [
         "Breachers",
@@ -2540,7 +2699,14 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Arc claw",
+        "Heavy arc rifle",
+        "Hydraulic claw",
+        "Torsion cannon"
+      ]
     },
     {
       "id": "unit-kataphron-destroyers",
@@ -2651,9 +2817,9 @@
           "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
         }
       ],
-      "composition": "3-6 Kataphron Destroyers. Available builds: Kataphron Destroyer (Heavy grav-cannon & Cognis flamer); Kataphron Destroyer (Heavy grav-cannon & phosphor blaster); Kataphron Destroyer (Kataphron plasma culverin & Phosphor blaster); Kataphron Destroyer (Kataphron plasma culverin & Cognis flamer).",
+      "composition": "3-6 Kataphron Destroyers.",
       "wargear": [
-        "Available weapon profiles: Heavy grav-cannon, Cognis flamer, Close combat weapon, Phosphor blaster, ➤ Kataphron plasma culverin - standard, ➤ Kataphron plasma culverin - supercharge."
+        "Kataphron Destroyers: select Kataphron Destroyer (Heavy grav-cannon & Cognis flamer); select Kataphron Destroyer (Heavy grav-cannon & phosphor blaster); select Kataphron Destroyer (Kataphron plasma culverin & Phosphor blaster); select Kataphron Destroyer (Kataphron plasma culverin & Cognis flamer)."
       ],
       "keywords": [
         "Destroyers",
@@ -2667,7 +2833,16 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Heavy grav-cannon",
+        "Cognis flamer",
+        "Close combat weapon",
+        "Phosphor blaster",
+        "➤ Kataphron plasma culverin - standard",
+        "➤ Kataphron plasma culverin - supercharge"
+      ]
     },
     {
       "id": "unit-onager-dunecrawler",
@@ -2728,7 +2903,7 @@
           "range": "36\"",
           "a": "3D3",
           "skill": "4+",
-          "s": "10",
+          "s": "9",
           "ap": "-2",
           "d": "2",
           "abilities": "Blast, Sustained Hits 1"
@@ -2803,10 +2978,6 @@
           "text": "Each time this model makes a Normal, Advance or Fall Back move, it can move through friendly Monster and Vehicle models and sections of terrain features that are 4\" or less in height."
         },
         {
-          "title": "Broad spectrum data-tether",
-          "text": "The bearer loses the SMOKE keyword, but each time you target the bearer with a Stratagem, roll one D6: on a 5+, you gain 1CP."
-        },
-        {
           "title": "Deadly Demise D3",
           "text": ""
         },
@@ -2817,7 +2988,9 @@
       ],
       "composition": "1 Onager Dunecrawler.",
       "wargear": [
-        "Available weapon profiles: Cognis heavy stubber, Dunecrawler legs, ➤ Eradication beamer - dissipated, ➤ Eradication beamer - focused, Daedalus missile launcher, Icarus array, Neutron laser, Twin Onager heavy phosphor blaster."
+        "Onager Dunecrawler is equipped with: Dunecrawler legs.",
+        "Onager Dunecrawler can be equipped with: Broad spectrum data-tether; Cognis heavy stubber.",
+        "Onager Dunecrawler: select 1 from Eradication beamer; Daedalus missile launcher & Icarus array; Neutron laser & Cognis heavy stubber; Twin Onager heavy phosphor blaster."
       ],
       "keywords": [
         "Onager Dunecrawler",
@@ -2832,7 +3005,23 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [
+        {
+          "title": "Broad spectrum data-tether",
+          "text": "The bearer loses the SMOKE keyword, but each time you target the bearer with a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        }
+      ],
+      "availableProfiles": [
+        "Cognis heavy stubber",
+        "Dunecrawler legs",
+        "➤ Eradication beamer - dissipated",
+        "➤ Eradication beamer - focused",
+        "Daedalus missile launcher",
+        "Icarus array",
+        "Neutron laser",
+        "Twin Onager heavy phosphor blaster"
+      ]
     },
     {
       "id": "unit-pteraxii-skystalkers",
@@ -2938,9 +3127,10 @@
           "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
         }
       ],
-      "composition": "1 Pteraxii Skystalker Alpha; 4-9 Pteraxii Skystalkers.",
+      "composition": "1 Pteraxii Skystalker Alpha. 4-9 Pteraxii Skystalkers.",
       "wargear": [
-        "Available weapon profiles: Flechette blaster, Taser goad, Close combat weapon, Flechette carbine."
+        "Pteraxii Skystalker Alpha is equipped with: Flechette blaster; Taser goad.",
+        "Pteraxii Skystalkers is equipped with: Close combat weapon; Flechette carbine."
       ],
       "keywords": [
         "Skystalkers",
@@ -2951,14 +3141,20 @@
         "Jump Pack",
         "Grenades",
         "Skitarii",
-        "Pteraxii",
-        "Recon Augury"
+        "Pteraxii"
       ],
       "source": {
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Flechette blaster",
+        "Taser goad",
+        "Close combat weapon",
+        "Flechette carbine"
+      ]
     },
     {
       "id": "unit-pteraxii-sterylizors",
@@ -2992,7 +3188,7 @@
           }
         },
         {
-          "name": "Pteraxii Skystalker Alpha",
+          "name": "Pteraxii Sterylizor Alpha",
           "stats": {
             "M": "12\"",
             "T": "4",
@@ -3052,7 +3248,7 @@
       ],
       "abilities": [
         {
-          "title": "Searing Conflagaration",
+          "title": "Searing Conflagration",
           "text": "Each time a model in this unit makes an attack with a phosphor torch that targets an enemy unit within range of an objective marker, re-roll a Wound roll of 1. If this unit is also within 6\" of one or more friendly Adeptus Mechanicus Battleline units, each time such an attack targets such a unit, you can re-roll the Wound roll instead."
         },
         {
@@ -3064,9 +3260,10 @@
           "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
         }
       ],
-      "composition": "1 Pteraxii Sterylizor Alpha; 4-9 Pteraxii Sterylizors.",
+      "composition": "1 Pteraxii Sterylizor Alpha. 4-9 Pteraxii Sterylizors.",
       "wargear": [
-        "Available weapon profiles: Flechette blaster, Taser goad, Pteraxii talons, Phosphor torch."
+        "Pteraxii Sterylizor Alpha is equipped with: Flechette blaster; Taser goad; Pteraxii talons.",
+        "Pteraxii Sterylizors is equipped with: Pteraxii talons; Phosphor torch."
       ],
       "keywords": [
         "Sterylizors",
@@ -3076,14 +3273,20 @@
         "Jump Pack",
         "Skitarii",
         "Adeptus Mechanicus",
-        "Pteraxii",
-        "Recon Augury"
+        "Pteraxii"
       ],
       "source": {
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Flechette blaster",
+        "Taser goad",
+        "Pteraxii talons",
+        "Phosphor torch"
+      ]
     },
     {
       "id": "unit-serberys-raiders",
@@ -3157,10 +3360,6 @@
           "text": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, it can do one of the following:\n- Make a Normal move of up to D6\".\n- Make a Normal move of up to 6\", provided every model in this unit ends that move wholly within 6\" of one or more friendly Adeptus Mechanicus Battleline units."
         },
         {
-          "title": "Enhanced data-tether",
-          "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
-        },
-        {
           "title": "Scouts 9\"",
           "text": ""
         },
@@ -3173,23 +3372,35 @@
           "text": ""
         }
       ],
-      "composition": "1 Serberys Raider Alpha.",
+      "composition": "2-5 Serberys Raiders. 1 Serberys Raider Alpha.",
       "wargear": [
-        "Available weapon profiles: Galvanic carbine, Cavalry sabre & clawed limbs, Mechanicus pistol."
+        "Serberys Raider Alpha is equipped with: Galvanic carbine; Cavalry sabre & clawed limbs.",
+        "Serberys Raider Alpha can be equipped with: Mechanicus pistol.",
+        "2-5 Serberys Raiders: 1-5 Serberys Raider; up to 1 Serberys Raider w/ data-tether."
       ],
       "keywords": [
         "Serberys Raiders",
         "Imperium",
         "Adeptus Mechanicus",
         "Skitarii",
-        "Mounted",
-        "Recon Augury"
+        "Mounted"
       ],
       "source": {
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [
+        {
+          "title": "Enhanced data-tether",
+          "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        }
+      ],
+      "availableProfiles": [
+        "Galvanic carbine",
+        "Cavalry sabre & clawed limbs",
+        "Mechanicus pistol"
+      ]
     },
     {
       "id": "unit-serberys-sulphurhounds",
@@ -3304,23 +3515,33 @@
           "text": ""
         }
       ],
-      "composition": "1 Serberys Sulphurhound Alpha.",
+      "composition": "2-5 Serberys Sulphurhounds. 1 Serberys Sulphurhound Alpha.",
       "wargear": [
-        "Available weapon profiles: Cavalry arc maul, Clawed limbs, Mechanicus pistol, Sulphur breath, Phosphor pistol, Phosphor blast carbine."
+        "Serberys Sulphurhound Alpha is equipped with: Cavalry arc maul; Clawed limbs; Sulphur breath.",
+        "Serberys Sulphurhound Alpha can be equipped with: Mechanicus pistol.",
+        "2-5 Serberys Sulphurhounds: select Serberys Sulphurhound (Twin phosphor pistols); up to 1 Serberys Sulphurhound (Phosphor blast carbine & Phosphor pistol)."
       ],
       "keywords": [
         "Serberys Sulphurhounds",
         "Imperium",
         "Adeptus Mechanicus",
         "Skitarii",
-        "Mounted",
-        "Recon Augury"
+        "Mounted"
       ],
       "source": {
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Cavalry arc maul",
+        "Clawed limbs",
+        "Mechanicus pistol",
+        "Sulphur breath",
+        "Phosphor pistol",
+        "Phosphor blast carbine"
+      ]
     },
     {
       "id": "unit-servitor-battleclade",
@@ -3467,9 +3688,12 @@
           "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
         }
       ],
-      "composition": "1 Servitor Underseer; 1 Gun Servitor w/ heavy arc rifle; 1 Gun Servitor w/ heavy bolter.",
+      "composition": "6 Combat Servitors. 1 Servitor Underseer. 1 Gun Servitor w/ heavy arc rifle. 1 Gun Servitor w/ heavy bolter.",
       "wargear": [
-        "Available weapon profiles: Mechanicus pistol, Dataspikes, Heavy arc rifle, Servo-claw, Heavy bolter, Incendine igniter, Meltagun, Phosphor blaster."
+        "Servitor Underseer is equipped with: Mechanicus pistol; Dataspikes.",
+        "Gun Servitor w/ heavy arc rifle is equipped with: Heavy arc rifle; Servo-claw.",
+        "Gun Servitor w/ heavy bolter is equipped with: Heavy bolter; Servo-claw.",
+        "Combat Servitors: up to 3 Combat Servitor w/ incendine igniter; up to 1 Combat Servitor w/ meltagun; 2-6 Combat Servitor w/ phophor blaster."
       ],
       "keywords": [
         "Adeptus Mechanicus",
@@ -3482,7 +3706,18 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Mechanicus pistol",
+        "Dataspikes",
+        "Heavy arc rifle",
+        "Servo-claw",
+        "Heavy bolter",
+        "Incendine igniter",
+        "Meltagun",
+        "Phosphor blaster"
+      ]
     },
     {
       "id": "unit-sicarian-infiltrators",
@@ -3581,9 +3816,10 @@
           "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
         }
       ],
-      "composition": "4-9 Sicarian Infiltrators. Available builds: Sicarian Infiltrator (Power weapon & stubcarbine); Sicarian Infiltrator (Taser goad & flechette blaster). 1 Sicarian Infiltrator Princeps. Available builds: Sicarian Infiltrator Princeps (Power weapon & stub carbine); Sicarian Infiltrator Princeps (Taser goad & flechette blaster).",
+      "composition": "4-9 Sicarian Infiltrators. 1 Sicarian Infiltrator Princeps.",
       "wargear": [
-        "Available weapon profiles: Power weapon, Stubcarbine, Flechette blaster, Taser goad."
+        "4-9 Sicarian Infiltrators: select Sicarian Infiltrator (Power weapon & stubcarbine); select Sicarian Infiltrator (Taser goad & flechette blaster).",
+        "Sicarian Infiltrator Princeps: select Sicarian Infiltrator Princeps (Power weapon & stub carbine); select Sicarian Infiltrator Princeps (Taser goad & flechette blaster)."
       ],
       "keywords": [
         "Imperium",
@@ -3591,14 +3827,20 @@
         "Skitarii",
         "Infantry",
         "Sicarian",
-        "Infiltrators",
-        "Recon Augury"
+        "Infiltrators"
       ],
       "source": {
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Power weapon",
+        "Stubcarbine",
+        "Flechette blaster",
+        "Taser goad"
+      ]
     },
     {
       "id": "unit-sicarian-ruststalkers",
@@ -3682,9 +3924,10 @@
           "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
         }
       ],
-      "composition": "4-9 Sicarian Ruststalkers. Available builds: Sicarian Ruststalker (Transonic razor & chordclaw); Sicarian Ruststalker (Transonic blades). 1 Sicarian Ruststalker Princeps. Available builds: Sicarian Ruststalker Princeps (Transonic blades & chordclaw); Sicarian Ruststalker Princeps (Transonic razor & chordclaw).",
+      "composition": "4-9 Sicarian Ruststalkers. 1 Sicarian Ruststalker Princeps.",
       "wargear": [
-        "Available weapon profiles: Transonic razor & chordclaw, Transonic blades, Transonic blades & chordclaw."
+        "4-9 Sicarian Ruststalkers: select Sicarian Ruststalker (Transonic razor & chordclaw); select Sicarian Ruststalker (Transonic blades).",
+        "Sicarian Ruststalker Princeps: select Sicarian Ruststalker Princeps (Transonic blades & chordclaw); select Sicarian Ruststalker Princeps (Transonic razor & chordclaw)."
       ],
       "keywords": [
         "Ruststalkers",
@@ -3698,7 +3941,13 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Transonic razor & chordclaw",
+        "Transonic blades",
+        "Transonic blades & chordclaw"
+      ]
     },
     {
       "id": "unit-skorpius-disintegrator",
@@ -3790,7 +4039,7 @@
       "abilities": [
         {
           "title": "Broad spectrum data-tether",
-          "text": "Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+          "text": "Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
         },
         {
           "title": "Blistering Salvoes",
@@ -3811,7 +4060,8 @@
       ],
       "composition": "1 Skorpius Disintegrator.",
       "wargear": [
-        "Available weapon profiles: Cognis heavy stubber, Disruptor missile launcher, Belleros energy cannon, Ferrumite cannon, Armoured hull."
+        "Skorpius Disintegrator is equipped with: Cognis heavy stubber; Disruptor missile launcher; Armoured hull.",
+        "Skorpius Disintegrator: select 1 from Belleros energy cannon; Ferrumite cannon."
       ],
       "keywords": [
         "Skorpius Disintegrator",
@@ -3826,7 +4076,15 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Cognis heavy stubber",
+        "Disruptor missile launcher",
+        "Belleros energy cannon",
+        "Ferrumite cannon",
+        "Armoured hull"
+      ]
     },
     {
       "id": "unit-sydonian-dragoons-with-radium-jezzails",
@@ -3902,7 +4160,7 @@
         },
         {
           "title": "Broad Spectrum Data-tether",
-          "text": "Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+          "text": "Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
         },
         {
           "title": "Deadly Demise 1",
@@ -3917,9 +4175,9 @@
           "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
         }
       ],
-      "composition": "1-3 Sydonian Dragoons. Available builds: Sydonian Dragoon with radium jezzail.",
+      "composition": "1-3 Sydonian Dragoons.",
       "wargear": [
-        "Available weapon profiles: Phosphor serpenta, Radium jezzail, Ironstrider feet."
+        "1 -3 Sydonian Dragoons: up to 3 Sydonian Dragoon with radium jezzail."
       ],
       "keywords": [
         "Imperium",
@@ -3935,7 +4193,13 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Phosphor serpenta",
+        "Radium jezzail",
+        "Ironstrider feet"
+      ]
     },
     {
       "id": "unit-sydonian-dragoons-with-taser-lances",
@@ -4000,7 +4264,7 @@
         },
         {
           "title": "Broad Spectrum Data-tether",
-          "text": "Each time you select the bearer as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+          "text": "Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
         },
         {
           "title": "Deadly Demise 1",
@@ -4015,9 +4279,9 @@
           "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
         }
       ],
-      "composition": "1-3 Sydonian Dragoons. Available builds: Sydonian Dragoon with taser lance.",
+      "composition": "1-3 Sydonian Dragoons.",
       "wargear": [
-        "Available weapon profiles: Phosphor serpenta, Taser lance."
+        "1 -3 Sydonian Dragoons: up to 3 Sydonian Dragoon with taser lance."
       ],
       "keywords": [
         "Imperium",
@@ -4033,7 +4297,12 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Phosphor serpenta",
+        "Taser lance"
+      ]
     },
     {
       "id": "unit-secutarii-hoplites",
@@ -4122,21 +4391,15 @@
           "text": "If a model from your army with the Leader ability can be attached to a Skitarii Vanguard unit, it can be attached to this unit instead."
         },
         {
-          "title": "Enhanced data-tether",
-          "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
-        },
-        {
-          "title": "Omnispex",
-          "text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability."
-        },
-        {
           "title": "Doctrina Imperatives",
           "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
         }
       ],
-      "composition": "1 Secutarii Hoplite Alpha.",
+      "composition": "4-9 Hoplites. 1 Secutarii Hoplite Alpha.",
       "wargear": [
-        "Available weapon profiles: Alpha close combat weapon, Arc lance, Archeotech pistol."
+        "Secutarii Hoplite Alpha can be equipped with: Alpha close combat weapon.",
+        "Secutarii Hoplite Alpha: select 1 from Arc lance; Archeotech pistol.",
+        "4-9 Hoplites: up to 9 Secutarii Hoplite; up to 1 Secutarii Hoplite w/ data-tether; up to 1 Secutarii Hoplite w/ omnispex."
       ],
       "keywords": [
         "Secutarii Hoplites",
@@ -4149,7 +4412,22 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [
+        {
+          "title": "Enhanced data-tether",
+          "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        },
+        {
+          "title": "Omnispex",
+          "text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability."
+        }
+      ],
+      "availableProfiles": [
+        "Alpha close combat weapon",
+        "Arc lance",
+        "Archeotech pistol"
+      ]
     },
     {
       "id": "unit-secutarii-peltasts",
@@ -4249,21 +4527,16 @@
           "text": "If a model from your army with the Leader ability can be attached to a Skitarii Vanguard unit, it can be attached to this unit instead."
         },
         {
-          "title": "Enhanced data-tether",
-          "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
-        },
-        {
-          "title": "Omnispex",
-          "text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability."
-        },
-        {
           "title": "Doctrina Imperatives",
           "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
         }
       ],
-      "composition": "1 Secutarii Peltast Alpha.",
+      "composition": "4-9 Peltasts. 1 Secutarii Peltast Alpha.",
       "wargear": [
-        "Available weapon profiles: Alpha close combat weapon, Close combat weapon, ➤ Galvanic caster - flechette, ➤ Galvanic caster - hammershot, Archeotech pistol."
+        "Secutarii Peltast Alpha is equipped with: Close combat weapon.",
+        "Secutarii Peltast Alpha can be equipped with: Alpha close combat weapon.",
+        "Secutarii Peltast Alpha: select 1 from Galvanic caster; Archeotech pistol.",
+        "4-9 Peltasts: up to 9 Secutarii Peltast; up to 1 Secutarii Peltast w/ data-tether; up to 1 Secutarii Peltast w/ omnispex."
       ],
       "keywords": [
         "Infantry",
@@ -4276,136 +4549,24 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
-    },
-    {
-      "id": "unit-servitors",
-      "title": "Servitors",
-      "status": "Warhammer Legends",
-      "category": "Warhammer Legends",
-      "points": [
-        "50"
-      ],
-      "stats": {
-        "M": "6\"",
-        "T": "3",
-        "Sv": "4+",
-        "W": "1",
-        "Ld": "8+",
-        "OC": "0"
-      },
-      "profiles": [
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [
         {
-          "name": "Servitors",
-          "stats": {
-            "M": "6\"",
-            "T": "3",
-            "Sv": "4+",
-            "W": "1",
-            "Ld": "8+",
-            "OC": "0"
-          }
+          "title": "Enhanced data-tether",
+          "text": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP."
+        },
+        {
+          "title": "Omnispex",
+          "text": "Ranged weapons equipped by models in the bearer’s unit have the IGNORES COVER ability."
         }
       ],
-      "invulnerable": "6+",
-      "weapons": [
-        {
-          "name": "Servitor's servo arm",
-          "mode": "melee",
-          "range": "Melee",
-          "a": "1",
-          "skill": "5+",
-          "s": "8",
-          "ap": "-2",
-          "d": "3",
-          "abilities": ""
-        },
-        {
-          "name": "Heavy bolter",
-          "mode": "ranged",
-          "range": "36\"",
-          "a": "3",
-          "skill": "6+",
-          "s": "5",
-          "ap": "-1",
-          "d": "2",
-          "abilities": "Heavy, Sustained Hits 1"
-        },
-        {
-          "name": "Servitor's tools",
-          "mode": "melee",
-          "range": "Melee",
-          "a": "1",
-          "skill": "5+",
-          "s": "3",
-          "ap": "0",
-          "d": "1",
-          "abilities": ""
-        },
-        {
-          "name": "Multi-melta",
-          "mode": "ranged",
-          "range": "18\"",
-          "a": "2",
-          "skill": "6+",
-          "s": "9",
-          "ap": "-4",
-          "d": "D6",
-          "abilities": "Heavy, Melta 2"
-        },
-        {
-          "name": "➤ Plasma cannon - Standard",
-          "mode": "ranged",
-          "range": "36\"",
-          "a": "D3",
-          "skill": "6+",
-          "s": "7",
-          "ap": "-2",
-          "d": "1",
-          "abilities": "Heavy, Blast"
-        },
-        {
-          "name": "➤ Plasma cannon - supercharge",
-          "mode": "ranged",
-          "range": "36\"",
-          "a": "D3",
-          "skill": "6+",
-          "s": "8",
-          "ap": "-3",
-          "d": "2",
-          "abilities": "Hazardous, Heavy, Blast"
-        }
-      ],
-      "abilities": [
-        {
-          "title": "Mindlock",
-          "text": "While a TECH-PRIEST model is leading this unit, improve the Ballistic Skill and Weapon Skill characteristics of ranged and melee weapons equipped by SERVITOR models in this unit by 1."
-        },
-        {
-          "title": "Servitor Retinue",
-          "text": "At the start of the Declare Battle Formations step, this unit can join one other unit from your army that is being led by a TECH-PRIEST ENGINSEER model (a unit cannot have more than one SERVITORS unit joined to it). If it does, until the end of the battle, every model in this unit counts as being part of that Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased accordingly."
-        },
-        {
-          "title": "Doctrina Imperatives",
-          "text": "At the start of the battle round, you can select one of the Doctrina Imperatives below. Until the end of the battle round, that Doctrina Imperative is active for your army, and all units from your army that have the Doctrina Imperatives ability gain the relevant abilities shown below.\n\nPROTECTOR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [HEAVY] ability.\n■ Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1.\n■ Each time a melee attack targets this unit, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, subtract 1 from the Hit roll.\n\nCONQUEROR IMPERATIVE\n■ Ranged weapons equipped by models in this unit have the [ASSAULT] ability.\n■ Improve the Weapon Skill characteristic of melee weapons equipped by models in this unit by 1.\n■ Each time a model in this unit makes an attack, if this unit has the Battleline keyword and/or it is within 6\" of one or more friendly Adeptus Mechanicus Battleline units, improve the Armour Penetration characteristic of that attack by 1."
-        }
-      ],
-      "composition": "4 Servitors. Available builds: Servitor with servo-arm.",
-      "wargear": [
-        "Available weapon profiles: Servitor's servo arm, Heavy bolter, Servitor's tools, Multi-melta, ➤ Plasma cannon - Standard, ➤ Plasma cannon - supercharge."
-      ],
-      "keywords": [
-        "Adeptus Mechanicus",
-        "Infantry",
-        "Imperium",
-        "Cult Mechanicus",
-        "Servitors"
-      ],
-      "source": {
-        "label": "Current 11e community catalogue · BSData",
-        "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
-      },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "availableProfiles": [
+        "Alpha close combat weapon",
+        "Close combat weapon",
+        "➤ Galvanic caster - flechette",
+        "➤ Galvanic caster - hammershot",
+        "Archeotech pistol"
+      ]
     },
     {
       "id": "unit-terrax-pattern-termite",
@@ -4522,7 +4683,8 @@
       ],
       "composition": "1 Terrax-Pattern Termite.",
       "wargear": [
-        "Available weapon profiles: Termite drill, Terrax melta cutter, Combi bolter, Heavy flamer, Twin volkite charger."
+        "Terrax-Pattern Termite is equipped with: Termite drill; Termite melta cutter.",
+        "Terrax-Pattern Termite: select 1 from Combi bolters; Heavy flamers; Twin volkite chargers."
       ],
       "keywords": [
         "Vehicle",
@@ -4535,7 +4697,15 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Termite drill",
+        "Terrax melta cutter",
+        "Combi bolter",
+        "Heavy flamer",
+        "Twin volkite charger"
+      ]
     },
     {
       "id": "unit-x-101",
@@ -4591,24 +4761,9 @@
           "abilities": ""
         }
       ],
-      "abilities": [
-        {
-          "title": "Mindlock",
-          "text": "While a Tech-Priest model is leading this model’s unit, improve the Ballistic Skill and Weapon Skill characteristics of this model’s weapons by 1."
-        },
-        {
-          "title": "Bound Creation",
-          "text": "While a Tech-Priest model is leading this model’s unit, that Tech-Priest model has the Feel No Pain 5+ ability."
-        },
-        {
-          "title": "Servitor Bodyguard",
-          "text": "At the start of the Declare Battle Formations step, this model can join one other unit from your army that is being led by a Tech-Priest Infantry model. If it does, until the end of the battle, this model counts as being part of that Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased accordingly."
-        }
-      ],
+      "abilities": [],
       "composition": "1 X-101.",
-      "wargear": [
-        "Available weapon profiles: Grav-gun, Hydraulic Claw."
-      ],
+      "wargear": [],
       "keywords": [
         "Infantry",
         "Imperium",
@@ -4621,11 +4776,16 @@
         "label": "Current 11e community catalogue · BSData",
         "url": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
       },
-      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json"
+      "referenceUrl": "https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json",
+      "wargearAbilities": [],
+      "availableProfiles": [
+        "Grav-gun",
+        "Hydraulic Claw"
+      ]
     }
   ],
   "audit": {
-    "datasheets": 39,
-    "legendsDatasheets": 5
+    "datasheets": 38,
+    "legendsDatasheets": 4
   }
 }

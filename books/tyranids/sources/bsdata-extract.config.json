@@ -2,7 +2,8 @@
   "schema": 1,
   "faction": {
     "id": "tyranids",
-    "title": "Tyranids"
+    "title": "Tyranids",
+    "separateWargearAbilities": true
   },
   "source": {
     "repository": "https://github.com/BSData/wh40k-11e",
@@ -12,7 +13,133 @@
   "textCorrections": {
     "Tyranids Monster only. Each time the bearer makes a melee attack that targets a Monsteror Vehicleunit, add 1 to the Wound roll.": "Tyranids Monster only. Each time the bearer makes a melee attack that targets a Monster or Vehicle unit, add 1 to the Wound roll.",
     "Tyranids model only (excluding Monsters models) The bearer's unit can be regenerated up to twice per phase, instead of once.": "Tyranids model only (excluding Monster models). The bearer's unit can be regenerated up to twice per phase, instead of once.",
-    "Tyranids Psyker model only. Improve the Strength and Armour Penetration characteristic of psychic weapons equipped by the wearer of 1.": "Tyranids Psyker model only. Improve the Strength and Armour Penetration characteristics of psychic weapons equipped by the bearer by 1."
+    "Tyranids Psyker model only. Improve the Strength and Armour Penetration characteristic of psychic weapons equipped by the wearer of 1.": "Tyranids Psyker model only. Improve the Strength and Armour Penetration characteristics of psychic weapons equipped by the bearer by 1.",
+    "While an enemy unit is with 12\" of this model, if that unit is Battle-shocked:\n\n- Each time a model in that unit makes an attack, subtract 1 from the Hit roll\n- Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll.": "While an enemy unit is within 12\" of this model, if that unit is Battle-shocked:\n\n- Each time a model in that unit makes an attack, subtract 1 from the Hit roll.\n- Each time a friendly TYRANIDS model makes an attack that targets that unit, add 1 to the Wound roll.",
+    "Once per turn, in your shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with it's ranged weapons. If it does, you can add one new MUCOLID SPORES containing 1 model to your army and set it up anywhere on the battlefield that is wholly within 18\" of this model and more than 8\" horizontally away from all enemy units.": "Once per turn, in your Shooting phase, when selected to shoot, one unit with this ability can use it instead of making any attacks with its ranged weapons. If it does, you can add one new MUCOLID SPORES unit containing 1 model to your army and set it up anywhere on the battlefield that is wholly within 18\" of this model and more than 8\" horizontally away from all enemy units.",
+    "Friendly TYRANIDS units within 6' of this unit have Stealth.": "Friendly TYRANIDS units within 6\" of this unit have Stealth.",
+    "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.": "Once per turn, when your opponent targets a unit from their army within 12\" of this model with a Stratagem, you can use this ability. If you do, increase the CP cost of that use of that Stratagem by 1CP.",
+    "In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following:\n▪ This unit’s melee attacks have +1 S.\n▪ <ins>Or</ins>: This unit has +1 T.": "In the Fight phase, when this unit is selected to fight or when an enemy unit targets this unit, you can select one of the following:\n▪ This unit’s melee attacks have +1 S.\n▪ Or: This unit has +1 T.",
+    "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth ).": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth)."
+  },
+  "keywordCorrections": {
+    "Burrowers": "Burrower"
+  },
+  "unitCorrections": {
+    "Hyperadapted Raveners": {
+      "addKeywords": ["Synapse"],
+      "removeAbilities": ["Sustained Hits"]
+    },
+    "Tyranid Prime with Lash Whip": {
+      "removeAbilities": ["Sustained Hits"]
+    },
+    "Neurotyrant": {
+      "abilities": {
+        "Psychic Terror (Psychic)": {
+          "text": "If one or more models from your army with this ability are on the battlefield when you unleash the Shadow in the Warp, subtract 1 from the Battle-shock test each enemy unit on the battlefield must take as a result."
+        },
+        "Synaptic Relays": {
+          "title": "Neuroloids",
+          "text": "In your Command phase, you can select up to two friendly TYRANIDS units within 18\" of this model’s unit. Until the start of your next Command phase, the selected units are always considered to be within Synapse Range of your army.\n\nDesigner’s Note: Place a Neuroloid token next to each selected unit to remind you."
+        }
+      }
+    },
+    "Norn Assimilator": {
+      "removeAbilities": ["Protean Purpose"],
+      "abilities": {
+        "Harpoon Barbs": {
+          "text": "Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds."
+        }
+      },
+      "weaponNames": {
+        "Toxinjecter Harpoon": "Toxinjector harpoon"
+      }
+    },
+    "Norn Emissary": {
+      "removeAbilities": ["Protean Purpose"],
+      "addAbilities": [
+        {
+          "title": "Unnatural Resilience",
+          "text": "This model has the Feel No Pain 4+ ability against mortal wounds."
+        }
+      ]
+    },
+    "Tyrannocyte": {
+      "addKeywords": ["Frame"]
+    },
+    "Toxicrene": {
+      "addKeywords": ["Frame"]
+    },
+    "Tyrannofex": {
+      "addKeywords": ["Frame"]
+    },
+    "Tervigon": {
+      "abilities": {
+        "Spawn Termagants": {
+          "text": "In your Command phase, you can select one friendly TERMAGANTS unit within 6\" of this model and return up to D3+3 destroyed models to that unit. A TERMAGANTS unit cannot be selected for this ability more than once per phase."
+        }
+      }
+    },
+    "Termagants": {
+      "weaponNames": {
+        "Termagant spinefist": "Termagant spinefists"
+      }
+    },
+    "Genestealers": {
+      "abilities": {
+        "Vanguard Predator": {
+          "text": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target is within range of one or more objective markers, re-roll a Wound roll of 1 as well."
+        }
+      },
+      "weaponNames": {
+        "Genestealers claws and talons": "Genestealer claws and talons"
+      }
+    },
+    "Hive Guard": {
+      "abilities": {
+        "Defensive Stance": {
+          "text": "Each time you target this unit with the Fire Overwatch Stratagem, while resolving that Stratagem, hits are scored on unmodified Hit rolls of 5+, or unmodified Hit rolls of 4+ instead if this unit is within range of an objective marker."
+        }
+      }
+    },
+    "Neurogaunts": {
+      "abilities": {
+        "Neurocytes": {
+          "text": "While this unit is within Synapse Range of a friendly TYRANIDS unit (excluding NEUROGAUNTS units), it has the SYNAPSE keyword."
+        }
+      }
+    },
+    "Mawloc": {
+      "abilities": {
+        "Terror from the Deep": {
+          "text": "Each time this model is set up on the battlefield using the Deep Strike ability, roll one D6 for each enemy unit within 12\" of this model: on a 2-4, that unit suffers D3 mortal wounds; on a 5+, that unit suffers 3 mortal wounds and must take a Battle-shock test."
+        }
+      },
+      "weaponNames": {
+        "Distendible jaw": "Distensible jaw"
+      }
+    },
+    "Mucolid Spores": {
+      "abilities": {
+        "Floating Death": {
+          "text": "Each time this unit or an enemy unit ends a move, for each model in this unit that is within 3\" of one or more enemy units, select one of those enemy units. That model in this unit is destroyed, then roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D6 mortal wounds."
+        }
+      }
+    },
+    "Sporocyst": {
+      "weaponNames": {
+        "Sporocyst bio-weapon": "Sporocyst bio-weapons"
+      }
+    },
+    "Ripper Swarms": {
+      "weaponNames": {
+        "Spinemaw": "Spinemaws"
+      }
+    },
+    "Malanthrope": {
+      "weaponSkills": {
+        "Grasping tail": "4+"
+      }
+    }
   },
   "inputs": [
     {
@@ -31,7 +158,8 @@
   "outputs": {
     "snapshot": "bsdata-tyranids-11e.json",
     "datasheets": "../content/tyranids-codex-datasheets.en.json",
-    "points": "../content/tyranids-points.en.json"
+    "points": "../content/tyranids-points.en.json",
+    "officialPoints": "official-mfm-v1.1.json"
   },
   "filters": {
     "excludeNames": [

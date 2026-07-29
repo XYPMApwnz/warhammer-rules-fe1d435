@@ -31,6 +31,15 @@
       if(label)label.textContent=phoneMode?'Desktop / iPad view':'Phone view';
       viewSwitch.setAttribute('aria-label',phoneMode?'Open desktop or iPad view':'Open phone view');
       const updateViewDestination=()=>{
+        const active=navigation.active||decodeURIComponent(location.hash.slice(1))||'start';
+        if(config.dedicatedMobile&&!phoneMode){
+          const file=active.startsWith('unit-')?active.slice(5):active.startsWith('detachment-')?active.slice(11):active.startsWith('update-')?'updates':active==='army-rules'?'army-rules':'index';
+          const destination=new URL(`./mobile/${file}.html`,location.href);
+          destination.search=location.search;
+          destination.hash=active;
+          viewSwitch.href=destination.href;
+          return;
+        }
         const destination=new URL(config.readerPath||'./reader.html',location.href);
         destination.search=location.search;
         destination.searchParams.set('view',phoneMode?'full':'mobile');
@@ -42,7 +51,9 @@
       viewSwitch.addEventListener('click',updateViewDestination);
     }
 
-    root.WH_ARMY_BOOK_APP=Object.freeze({navigation,popups,fullEntry,journey,relatedRules});
+    const app=Object.freeze({navigation,popups,fullEntry,journey,relatedRules});
+    root.WH_ARMY_BOOK_APP=app;
+    root.DG_APP=app;
     const record=root.WHGlossaryReturn?.read();
     if(root.WHGlossaryReturn?.shouldRestoreAutomatically(record)&&record.popupIds?.length){
       const scope=document.getElementById(record.unitId)||document;

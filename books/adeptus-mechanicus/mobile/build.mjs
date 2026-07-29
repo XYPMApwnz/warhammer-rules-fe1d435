@@ -4,7 +4,8 @@ const source=await readFile(new URL('../reader.html',import.meta.url),'utf8');
 const glossary=JSON.parse(await readFile(new URL('../../../glossary/registry.en.json',import.meta.url),'utf8')).terms;
 const aliases=JSON.parse(await readFile(new URL('../../../glossary/aliases.en.json',import.meta.url),'utf8')).aliases;
 const glossaryContext=JSON.parse(await readFile(new URL('../../../glossary/contexts/adeptus-mechanicus.json',import.meta.url),'utf8')).terms;
-const coreStratagems=await readFile(new URL('../../death-guard/mobile/related-rules.inc',import.meta.url),'utf8').then(html=>html.slice(0,html.indexOf('<section class="related-detachment"',1)));
+const coreStratagems=await readFile(new URL('../../death-guard/mobile/related-rules.inc',import.meta.url),'utf8').then(html=>html.slice(html.indexOf('<section class="related-detachment related-core"')));
+const relatedRulesConfig=JSON.parse(await readFile(new URL('../content/adeptus-mechanicus-related-rules.en.json',import.meta.url),'utf8'));
 const mobileRulePaths=new Map();
 
 const coreEligibility={
@@ -68,7 +69,7 @@ const categories=[...source.matchAll(/<section class="content-group" id="(datash
     return{id,title:clean(title),units};
   });
 const units=categories.flatMap(category=>category.units);
-if(detachments.length!==10||units.length!==39)throw new Error(`Expected 10 detachments and 39 datasheets, found ${detachments.length} and ${units.length}`);
+if(detachments.length!==10||units.length!==38)throw new Error(`Expected 10 detachments and 38 datasheets, found ${detachments.length} and ${units.length}`);
 
 const staticRoutes=[
   {file:'index.html',id:'start',title:'Start',type:'start'},
@@ -83,14 +84,14 @@ function relatedRules(){
     if(!targets)throw new Error(`Missing Core Stratagem eligibility for ${id}`);
     return `${match} data-eligibility="${attribute(JSON.stringify({targets}))}"`;
   });
-  return hydrateTerms(portable(core+detachments.map(detachment=>{
+  return hydrateTerms(portable(detachments.map(detachment=>{
     const slug=detachment.id.slice(11);
-    return `<section class="related-detachment" data-detachment="${slug}">
+    return `<section class="related-detachment" data-detachment="${slug}" data-keyword-grants="${attribute(JSON.stringify(relatedRulesConfig.keywordGrants?.[slug]||[]))}">
       <h2>${detachment.title}</h2>
       <div class="related-kind" data-related-kind="stratagems">${extract('section',`${slug}-stratagems`)}</div>
       <div class="related-kind" data-related-kind="enhancements" hidden>${extract('section',`${slug}-enhancements`)}</div>
     </section>`;
-  }).join('\n')));
+  }).join('\n')+core));
 }
 
 const link=(route,active)=>`<a href="./${route.file}"${route.id===active?' aria-current="page"':''}>${route.title}</a>`;

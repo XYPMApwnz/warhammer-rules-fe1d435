@@ -27,6 +27,8 @@
   const weaponRows=(card,mode)=>[...card.querySelectorAll('.weapon-group')].filter(group=>group.querySelector('h5')?.textContent.toLowerCase().startsWith(mode)).flatMap(group=>[...group.querySelectorAll('.weapon-row:not(.weapon-head)')]);
   function apply(card,item){
     const effect=item.effect||'',ranged=weaponRows(card,'ranged'),melee=weaponRows(card,'melee');
+    if(/while the bearer is leading a unit/i.test(item.text||''))return 'The roster export does not prove that the bearer is leading a unit.';
+    if(['ranged-range-6','ranged-range-6-strength-1','skitarii'].includes(effect))return 'This effect applies to the bearer’s whole unit, but the export does not identify its Bodyguard unit.';
     if(effect==='leadership-6'){
       const cell=[...card.querySelectorAll('.stat')].find(stat=>stat.querySelector('b')?.textContent==='Ld')?.querySelector('span');if(!cell)return 'Leadership profile not found.';cell.textContent='6+';cell.classList.add('roster-modified');return '';
     }

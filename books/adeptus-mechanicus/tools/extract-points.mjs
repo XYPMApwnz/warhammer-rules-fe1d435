@@ -6,11 +6,18 @@ import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const sourcePath=path.join(root,'sources','bsdata-adeptus-mechanicus-11e.json');
 const outputPath=path.join(root,'content','adeptus-mechanicus-points.en.json');
+const officialMfm=JSON.parse(fs.readFileSync(path.join(root,'sources','official-mfm-v1.1.json'),'utf8'));
 const source=JSON.parse(fs.readFileSync(sourcePath,'utf8')).catalogue;
 const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const clean=value=>String(value??'').replaceAll('^^**','').replaceAll('**^^','').replaceAll('**','').replaceAll('\u00a0',' ').replace(/\s+/g,' ').trim();
 const detachmentFiles=['content/adeptus-mechanicus-rules.en.json','content/adeptus-mechanicus-codex-detachments.en.json'];
-const detachmentByEnhancement=new Map(detachmentFiles.flatMap(file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8')).detachments||[]).flatMap(detachment=>detachment.enhancements.map(item=>[normalize(item.title),detachment.id.replace(/^detachment-/, '')])));
+const detachmentSources=detachmentFiles.flatMap(file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8')).detachments||[]);
+const detachmentByEnhancement=new Map(detachmentSources.flatMap(detachment=>detachment.enhancements.map(item=>[normalize(item.title),detachment.id.replace(/^detachment-/, '')])));
+const codexParity=JSON.parse(fs.readFileSync(path.join(root,'content','adeptus-mechanicus-codex-parity.en.json'),'utf8')).detachments;
+const exactEnhancementTextByTitle=new Map([
+  ...detachmentSources.filter(detachment=>!codexParity.some(item=>item.title===detachment.title)).flatMap(detachment=>detachment.enhancements),
+  ...codexParity.flatMap(detachment=>detachment.enhancements)
+].map(item=>[normalize(item.title),item.text]));
 const pointCost=entry=>Number((entry.costs||[]).find(cost=>cost.name==='pts')?.value||0);
 const byId=new Map();
 
@@ -153,6 +160,7 @@ for(const link of source.entryLinks||[]){
   const entry=byId.get(link.targetId);
   if(!entry)continue;
   const title=clean(link.name.replace(/\s*\[Legends\]\s*$/,''));
+  if(title==='Servitors')continue;
   units.push({title,points:unitPoints(entry),wargear:paidWargear(entry)});
 }
 const officialPointLabels={
@@ -202,8 +210,21 @@ const effects={
 };
 const enhancements=enhancementEntries().map(entry=>{
   const title=aliases[entry.title]||entry.title;
-  return{...entry,title,detachment:detachmentByEnhancement.get(normalize(title))||'',effect:effects[title]||''};
+  return{...entry,title,text:exactEnhancementTextByTitle.get(normalize(title))||entry.text,detachment:detachmentByEnhancement.get(normalize(title))||'',effect:effects[title]||''};
 });
+const rowKey=rows=>JSON.stringify((rows||[]).map(row=>Array.isArray(row)?row:[row.label,Number(row.value)]).sort((a,b)=>String(a[0]).localeCompare(String(b[0]))));
+const officialUnitNames=new Set(Object.keys(officialMfm.units));
+const legendNames=new Set(['Secutarii Hoplites','Secutarii Peltasts','Terrax-Pattern Termite','X-101']);
+for(const [title,expected] of Object.entries(officialMfm.units)){
+  const actual=units.find(unit=>unit.title===title);
+  if(!actual)throw new Error(`Official MFM unit missing from catalogue: ${title}`);
+  if(rowKey(actual.points)!==rowKey(expected.points))throw new Error(`Official MFM points mismatch: ${title}`);
+  if(rowKey(actual.wargear)!==rowKey(expected.wargear))throw new Error(`Official MFM wargear mismatch: ${title}`);
+}
+for(const unit of units)if(!officialUnitNames.has(unit.title)&&!legendNames.has(unit.title))throw new Error(`Current non-Legends unit is absent from official MFM snapshot: ${unit.title}`);
+const enhancementByName=new Map(enhancements.map(item=>[normalize(item.title),item]));
+for(const [title,value] of Object.entries(officialMfm.enhancements))if(enhancementByName.get(normalize(title))?.value!==value)throw new Error(`Official MFM Enhancement mismatch: ${title}`);
+if(enhancementByName.size!==Object.keys(officialMfm.enhancements).length)throw new Error('Official MFM Enhancement count mismatch');
 const result={
   schema:1,
   source:{
@@ -211,9 +232,9 @@ const result={
     url:'https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Imperium%20-%20Adeptus%20Mechanicus.json',
     commit:'fa30730fca11fbfe87be90684d481d50e0efaf66',
     revision:source.revision,
-    officialUrl:'https://mfm.warhammer-community.com/en/adeptus-mechanicus',
-    officialVersion:'v1.1',
-    verifiedAt:'2026-07-28',
+    officialUrl:officialMfm.source,
+    officialVersion:officialMfm.version,
+    verifiedAt:officialMfm.capturedAt,
     sha256:crypto.createHash('sha256').update(fs.readFileSync(sourcePath)).digest('hex').toUpperCase()
   },
   units,

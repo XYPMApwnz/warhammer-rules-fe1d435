@@ -2,18 +2,149 @@
   "schema": 1,
   "bookId": "adeptus-mechanicus",
   "terms": {
-    "core-heavy": {
-      "termId": "core-heavy",
+    "core-abilities": {
+      "termId": "core-abilities",
       "navigation": {
-        "glossary": "glossary-core-heavy",
-        "rule": "protector-imperative"
+        "glossary": "glossary-core-abilities"
+      }
+    },
+    "core-anti": {
+      "termId": "core-anti",
+      "navigation": {
+        "glossary": "glossary-core-anti"
       }
     },
     "core-assault": {
       "termId": "core-assault",
       "navigation": {
-        "glossary": "glossary-core-assault",
-        "rule": "conqueror-imperative"
+        "glossary": "glossary-core-assault"
+      }
+    },
+    "core-blast": {
+      "termId": "core-blast",
+      "navigation": {
+        "glossary": "glossary-core-blast"
+      }
+    },
+    "core-cleave": {
+      "termId": "core-cleave",
+      "navigation": {
+        "glossary": "glossary-core-cleave"
+      }
+    },
+    "core-close-quarters": {
+      "termId": "core-close-quarters",
+      "navigation": {
+        "glossary": "glossary-core-close-quarters"
+      }
+    },
+    "core-deadly-demise": {
+      "termId": "core-deadly-demise",
+      "navigation": {
+        "glossary": "glossary-core-deadly-demise",
+        "datasheet": "unit-skorpius-dunerider",
+        "statline": "skorpius-dunerider-profile",
+        "units": [
+          "unit-skorpius-dunerider",
+          "unit-archaeopter-fusilave",
+          "unit-archaeopter-stratoraptor",
+          "unit-archaeopter-transvector",
+          "unit-ironstrider-ballistarii",
+          "unit-kastelan-robots",
+          "unit-onager-dunecrawler",
+          "unit-skorpius-disintegrator",
+          "unit-sydonian-dragoons-with-radium-jezzails",
+          "unit-sydonian-dragoons-with-taser-lances"
+        ]
+      }
+    },
+    "core-deep-strike": {
+      "termId": "core-deep-strike",
+      "navigation": {
+        "glossary": "glossary-core-deep-strike",
+        "datasheet": "unit-archaeopter-transvector",
+        "statline": "archaeopter-transvector-profile",
+        "units": [
+          "unit-archaeopter-transvector",
+          "unit-pteraxii-skystalkers",
+          "unit-pteraxii-sterylizors"
+        ]
+      }
+    },
+    "core-devastating-wounds": {
+      "termId": "core-devastating-wounds",
+      "navigation": {
+        "glossary": "glossary-core-devastating-wounds"
+      }
+    },
+    "core-duplicated-abilities": {
+      "termId": "core-duplicated-abilities",
+      "navigation": {
+        "glossary": "glossary-core-duplicated-abilities"
+      }
+    },
+    "core-extra-attacks": {
+      "termId": "core-extra-attacks",
+      "navigation": {
+        "glossary": "glossary-core-extra-attacks"
+      }
+    },
+    "core-feel-no-pain": {
+      "termId": "core-feel-no-pain",
+      "navigation": {
+        "glossary": "glossary-core-feel-no-pain",
+        "datasheet": "unit-cybernetica-datasmith",
+        "statline": "cybernetica-datasmith-profile",
+        "units": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist",
+          "unit-belisarius-cawl",
+          "unit-corpuscarii-electro-priests",
+          "unit-fulgurite-electro-priests"
+        ]
+      }
+    },
+    "core-fights-first": {
+      "termId": "core-fights-first",
+      "navigation": {
+        "glossary": "glossary-core-fights-first"
+      }
+    },
+    "core-firing-deck": {
+      "termId": "core-firing-deck",
+      "navigation": {
+        "glossary": "glossary-core-firing-deck",
+        "datasheet": "unit-skorpius-dunerider",
+        "statline": "skorpius-dunerider-profile",
+        "units": [
+          "unit-skorpius-dunerider"
+        ]
+      }
+    },
+    "core-hazardous": {
+      "termId": "core-hazardous",
+      "navigation": {
+        "glossary": "glossary-core-hazardous"
+      }
+    },
+    "core-heavy": {
+      "termId": "core-heavy",
+      "navigation": {
+        "glossary": "glossary-core-heavy"
+      }
+    },
+    "core-hover": {
+      "termId": "core-hover",
+      "navigation": {
+        "glossary": "glossary-core-hover",
+        "datasheet": "unit-archaeopter-transvector",
+        "statline": "archaeopter-transvector-profile",
+        "units": [
+          "unit-archaeopter-transvector"
+        ]
       }
     },
     "core-ignores-cover": {
@@ -22,16 +153,147 @@
         "glossary": "glossary-core-ignores-cover"
       }
     },
-    "core-feel-no-pain": {
-      "termId": "core-feel-no-pain",
+    "core-indirect-fire": {
+      "termId": "core-indirect-fire",
       "navigation": {
-        "glossary": "glossary-core-feel-no-pain"
+        "glossary": "glossary-core-indirect-fire"
+      }
+    },
+    "core-infiltrators": {
+      "termId": "core-infiltrators",
+      "navigation": {
+        "glossary": "glossary-core-infiltrators",
+        "datasheet": "unit-sicarian-infiltrators",
+        "statline": "sicarian-infiltrators-profile",
+        "units": [
+          "unit-sicarian-infiltrators"
+        ]
+      }
+    },
+    "core-lance": {
+      "termId": "core-lance",
+      "navigation": {
+        "glossary": "glossary-core-lance"
+      }
+    },
+    "core-leader": {
+      "termId": "core-leader",
+      "navigation": {
+        "glossary": "glossary-core-leader",
+        "datasheet": "unit-tech-priest-dominus",
+        "statline": "tech-priest-dominus-profile",
+        "units": [
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus"
+        ]
       }
     },
     "core-lethal-hits": {
       "termId": "core-lethal-hits",
       "navigation": {
         "glossary": "glossary-core-lethal-hits"
+      }
+    },
+    "core-lone-operative": {
+      "termId": "core-lone-operative",
+      "navigation": {
+        "glossary": "glossary-core-lone-operative",
+        "datasheet": "unit-sydonian-skatros",
+        "statline": "sydonian-skatros-profile",
+        "units": [
+          "unit-sydonian-skatros"
+        ]
+      }
+    },
+    "core-melta": {
+      "termId": "core-melta",
+      "navigation": {
+        "glossary": "glossary-core-melta"
+      }
+    },
+    "core-one-shot": {
+      "termId": "core-one-shot",
+      "navigation": {
+        "glossary": "glossary-core-one-shot"
+      }
+    },
+    "core-pistol": {
+      "termId": "core-pistol",
+      "navigation": {
+        "glossary": "glossary-core-pistol"
+      }
+    },
+    "core-precision": {
+      "termId": "core-precision",
+      "navigation": {
+        "glossary": "glossary-core-precision"
+      }
+    },
+    "core-psychic": {
+      "termId": "core-psychic",
+      "navigation": {
+        "glossary": "glossary-core-psychic"
+      }
+    },
+    "core-rapid-fire": {
+      "termId": "core-rapid-fire",
+      "navigation": {
+        "glossary": "glossary-core-rapid-fire"
+      }
+    },
+    "core-rule-24-01-01-with-the-x-ability": {
+      "termId": "core-rule-24-01-01-with-the-x-ability",
+      "navigation": {
+        "glossary": "glossary-core-rule-24-01-01-with-the-x-ability"
+      }
+    },
+    "core-rule-24-11-01-only-extra-attacks-weapons": {
+      "termId": "core-rule-24-11-01-only-extra-attacks-weapons",
+      "navigation": {
+        "glossary": "glossary-core-rule-24-11-01-only-extra-attacks-weapons"
+      }
+    },
+    "core-rule-24-24-01-attached-units-and-lone-operative": {
+      "termId": "core-rule-24-24-01-attached-units-and-lone-operative",
+      "navigation": {
+        "glossary": "glossary-core-rule-24-24-01-attached-units-and-lone-operative"
+      }
+    },
+    "core-rule-24-26-01-multiple-one-shot-weapons": {
+      "termId": "core-rule-24-26-01-multiple-one-shot-weapons",
+      "navigation": {
+        "glossary": "glossary-core-rule-24-26-01-multiple-one-shot-weapons"
+      }
+    },
+    "core-rule-24-28-01-precision-and-devastating-wounds": {
+      "termId": "core-rule-24-28-01-precision-and-devastating-wounds",
+      "navigation": {
+        "glossary": "glossary-core-rule-24-28-01-precision-and-devastating-wounds"
+      }
+    },
+    "core-rule-24-37-01-torrent-restrictions": {
+      "termId": "core-rule-24-37-01-torrent-restrictions",
+      "navigation": {
+        "glossary": "glossary-core-rule-24-37-01-torrent-restrictions"
+      }
+    },
+    "core-scout-move": {
+      "termId": "core-scout-move",
+      "navigation": {
+        "glossary": "glossary-core-scout-move"
+      }
+    },
+    "core-scouts": {
+      "termId": "core-scouts",
+      "navigation": {
+        "glossary": "glossary-core-scouts",
+        "datasheet": "unit-skitarii-rangers",
+        "statline": "skitarii-rangers-profile",
+        "units": [
+          "unit-skitarii-rangers",
+          "unit-serberys-raiders"
+        ]
       }
     },
     "core-stealth": {
@@ -55,18 +317,22 @@
         ]
       }
     },
-    "core-devastating-wounds": {
-      "termId": "core-devastating-wounds",
+    "core-super-heavy-walker": {
+      "termId": "core-super-heavy-walker",
       "navigation": {
-        "glossary": "glossary-core-devastating-wounds",
-        "datasheet": "unit-thulia-ghuld",
-        "statline": "thulia-ghuld-profile",
+        "glossary": "glossary-core-super-heavy-walker"
+      }
+    },
+    "core-support": {
+      "termId": "core-support",
+      "navigation": {
+        "glossary": "glossary-core-support",
+        "datasheet": "unit-cybernetica-datasmith",
+        "statline": "cybernetica-datasmith-profile",
         "units": [
-          "unit-thulia-ghuld",
-          "unit-hastarii-exterminators",
-          "unit-secutarii-hoplites",
-          "unit-secutarii-peltasts",
-          "unit-terrax-pattern-termite"
+          "unit-cybernetica-datasmith",
+          "unit-skitarii-marshal",
+          "unit-technoarcheologist"
         ]
       }
     },
@@ -76,107 +342,10 @@
         "glossary": "glossary-core-sustained-hits"
       }
     },
-    "core-anti-vehicle": {
-      "termId": "core-anti",
-      "navigation": {
-        "glossary": "glossary-core-anti-vehicle",
-        "datasheet": "unit-hastarii-exterminators",
-        "statline": "hastarii-exterminators-profile",
-        "units": [
-          "unit-hastarii-exterminators",
-          "unit-secutarii-hoplites",
-          "unit-terrax-pattern-termite"
-        ]
-      },
-      "parameters": {
-        "targetKeyword": "VEHICLE",
-        "threshold": "4+"
-      }
-    },
-    "core-anti-infantry": {
-      "termId": "core-anti-infantry",
-      "navigation": {
-        "glossary": "glossary-core-anti-infantry",
-        "datasheet": "unit-hastarii-exterminators",
-        "statline": "hastarii-exterminators-profile",
-        "units": [
-          "unit-hastarii-exterminators"
-        ]
-      }
-    },
-    "core-blast": {
-      "termId": "core-blast",
-      "navigation": {
-        "glossary": "glossary-core-blast",
-        "datasheet": "unit-thulia-ghuld",
-        "statline": "thulia-ghuld-profile",
-        "units": [
-          "unit-thulia-ghuld"
-        ]
-      }
-    },
-    "core-lance": {
-      "termId": "core-lance",
-      "navigation": {
-        "glossary": "glossary-core-lance",
-        "datasheet": "unit-secutarii-hoplites",
-        "statline": "secutarii-hoplites-profile",
-        "units": [
-          "unit-secutarii-hoplites"
-        ]
-      }
-    },
-    "core-hazardous": {
-      "termId": "core-hazardous",
-      "navigation": {
-        "glossary": "glossary-core-hazardous"
-      }
-    },
-    "core-infiltrators": {
-      "termId": "core-infiltrators",
-      "navigation": {
-        "glossary": "glossary-core-infiltrators",
-        "rule": "cohort-acquisitus-enhancements",
-        "datasheet": "unit-sicarian-infiltrators",
-        "statline": "sicarian-infiltrators-profile",
-        "units": [
-          "unit-sicarian-infiltrators"
-        ]
-      }
-    },
-    "core-lone-operative": {
-      "termId": "core-lone-operative",
-      "navigation": {
-        "glossary": "glossary-core-lone-operative",
-        "datasheet": "unit-sydonian-skatros",
-        "statline": "sydonian-skatros-profile",
-        "units": [
-          "unit-sydonian-skatros"
-        ]
-      }
-    },
-    "core-rapid-fire": {
-      "termId": "core-rapid-fire",
-      "navigation": {
-        "glossary": "glossary-core-rapid-fire"
-      }
-    },
     "core-torrent": {
       "termId": "core-torrent",
       "navigation": {
         "glossary": "glossary-core-torrent"
-      }
-    },
-    "core-melta": {
-      "termId": "core-melta",
-      "navigation": {
-        "glossary": "glossary-core-melta"
-      }
-    },
-    "core-pistol": {
-      "termId": "core-pistol",
-      "navigation": {
-        "glossary": "glossary-core-pistol"
       }
     },
     "core-twin-linked": {
@@ -229,7 +398,6 @@
           "unit-sydonian-dragoons-with-taser-lances",
           "unit-secutarii-hoplites",
           "unit-secutarii-peltasts",
-          "unit-servitors",
           "unit-terrax-pattern-termite",
           "unit-x-101"
         ]
@@ -313,21 +481,6 @@
         ]
       }
     },
-    "datasheet-scouts-6": {
-      "termId": "core-scouts",
-      "navigation": {
-        "glossary": "glossary-datasheet-scouts-6",
-        "rule": "unit-skitarii-rangers",
-        "datasheet": "unit-skitarii-rangers",
-        "statline": "skitarii-rangers-profile",
-        "units": [
-          "unit-skitarii-rangers"
-        ]
-      },
-      "parameters": {
-        "distance": "6\""
-      }
-    },
     "weapon-alpha-combat-weapon": {
       "termId": "adeptus-mechanicus-weapon-alpha-combat-weapon",
       "navigation": {
@@ -363,11 +516,6 @@
         "units": [
           "unit-skitarii-rangers",
           "unit-skitarii-vanguard",
-          "unit-cybernetica-datasmith",
-          "unit-skitarii-marshal",
-          "unit-sydonian-skatros",
-          "unit-tech-priest-enginseer",
-          "unit-technoarcheologist",
           "unit-serberys-raiders",
           "unit-serberys-sulphurhounds",
           "unit-servitor-battleclade"
@@ -464,20 +612,6 @@
         ]
       }
     },
-    "datasheet-support": {
-      "termId": "adeptus-mechanicus-datasheet-support",
-      "navigation": {
-        "glossary": "glossary-datasheet-support",
-        "rule": "unit-cybernetica-datasmith",
-        "datasheet": "unit-cybernetica-datasmith",
-        "statline": "cybernetica-datasmith-profile",
-        "units": [
-          "unit-cybernetica-datasmith",
-          "unit-skitarii-marshal",
-          "unit-technoarcheologist"
-        ]
-      }
-    },
     "datasheet-battle-protocols": {
       "termId": "adeptus-mechanicus-datasheet-battle-protocols",
       "navigation": {
@@ -502,28 +636,6 @@
         ]
       }
     },
-    "datasheet-feel-no-pain-5": {
-      "termId": "core-feel-no-pain",
-      "navigation": {
-        "glossary": "glossary-datasheet-feel-no-pain-5",
-        "rule": "unit-cybernetica-datasmith",
-        "datasheet": "unit-cybernetica-datasmith",
-        "statline": "cybernetica-datasmith-profile",
-        "units": [
-          "unit-cybernetica-datasmith",
-          "unit-tech-priest-dominus",
-          "unit-tech-priest-enginseer",
-          "unit-tech-priest-manipulus",
-          "unit-technoarcheologist",
-          "unit-belisarius-cawl",
-          "unit-corpuscarii-electro-priests",
-          "unit-fulgurite-electro-priests"
-        ]
-      },
-      "parameters": {
-        "threshold": "5+"
-      }
-    },
     "weapon-power-fist": {
       "termId": "adeptus-mechanicus-weapon-power-fist",
       "navigation": {
@@ -533,6 +645,22 @@
         "statline": "cybernetica-datasmith-profile",
         "units": [
           "unit-cybernetica-datasmith"
+        ]
+      }
+    },
+    "weapon-mechanicus-pistol-2": {
+      "termId": "adeptus-mechanicus-weapon-mechanicus-pistol-2",
+      "navigation": {
+        "glossary": "glossary-weapon-mechanicus-pistol-2",
+        "rule": "unit-cybernetica-datasmith",
+        "datasheet": "unit-cybernetica-datasmith",
+        "statline": "cybernetica-datasmith-profile",
+        "units": [
+          "unit-cybernetica-datasmith",
+          "unit-skitarii-marshal",
+          "unit-sydonian-skatros",
+          "unit-tech-priest-enginseer",
+          "unit-technoarcheologist"
         ]
       }
     },
@@ -641,20 +769,6 @@
         "statline": "sydonian-skatros-profile",
         "units": [
           "unit-sydonian-skatros"
-        ]
-      }
-    },
-    "datasheet-leader": {
-      "termId": "adeptus-mechanicus-datasheet-leader",
-      "navigation": {
-        "glossary": "glossary-datasheet-leader",
-        "rule": "unit-tech-priest-dominus",
-        "datasheet": "unit-tech-priest-dominus",
-        "statline": "tech-priest-dominus-profile",
-        "units": [
-          "unit-tech-priest-dominus",
-          "unit-tech-priest-enginseer",
-          "unit-tech-priest-manipulus"
         ]
       }
     },
@@ -939,41 +1053,6 @@
         ]
       }
     },
-    "datasheet-deadly-demise-d3": {
-      "termId": "core-deadly-demise",
-      "navigation": {
-        "glossary": "glossary-datasheet-deadly-demise-d3",
-        "rule": "unit-skorpius-dunerider",
-        "datasheet": "unit-skorpius-dunerider",
-        "statline": "skorpius-dunerider-profile",
-        "units": [
-          "unit-skorpius-dunerider",
-          "unit-archaeopter-fusilave",
-          "unit-archaeopter-stratoraptor",
-          "unit-archaeopter-transvector",
-          "unit-onager-dunecrawler",
-          "unit-skorpius-disintegrator"
-        ]
-      },
-      "parameters": {
-        "value": "D3"
-      }
-    },
-    "datasheet-firing-deck-2": {
-      "termId": "core-firing-deck",
-      "navigation": {
-        "glossary": "glossary-datasheet-firing-deck-2",
-        "rule": "unit-skorpius-dunerider",
-        "datasheet": "unit-skorpius-dunerider",
-        "statline": "skorpius-dunerider-profile",
-        "units": [
-          "unit-skorpius-dunerider"
-        ]
-      },
-      "parameters": {
-        "value": "2"
-      }
-    },
     "weapon-armoured-hull": {
       "termId": "adeptus-mechanicus-weapon-armoured-hull",
       "navigation": {
@@ -1105,18 +1184,6 @@
       "termId": "adeptus-mechanicus-datasheet-rod-of-the-war-forge",
       "navigation": {
         "glossary": "glossary-datasheet-rod-of-the-war-forge",
-        "rule": "unit-thulia-ghuld",
-        "datasheet": "unit-thulia-ghuld",
-        "statline": "thulia-ghuld-profile",
-        "units": [
-          "unit-thulia-ghuld"
-        ]
-      }
-    },
-    "datasheet-cybernetic-augmentation": {
-      "termId": "adeptus-mechanicus-datasheet-cybernetic-augmentation",
-      "navigation": {
-        "glossary": "glossary-datasheet-cybernetic-augmentation",
         "rule": "unit-thulia-ghuld",
         "datasheet": "unit-thulia-ghuld",
         "statline": "thulia-ghuld-profile",
@@ -1300,32 +1367,6 @@
         ]
       }
     },
-    "datasheet-hover": {
-      "termId": "core-hover",
-      "navigation": {
-        "glossary": "glossary-datasheet-hover",
-        "rule": "unit-archaeopter-transvector",
-        "datasheet": "unit-archaeopter-transvector",
-        "statline": "archaeopter-transvector-profile",
-        "units": [
-          "unit-archaeopter-transvector"
-        ]
-      }
-    },
-    "datasheet-deep-strike": {
-      "termId": "core-deep-strike",
-      "navigation": {
-        "glossary": "glossary-datasheet-deep-strike",
-        "rule": "unit-archaeopter-transvector",
-        "datasheet": "unit-archaeopter-transvector",
-        "statline": "archaeopter-transvector-profile",
-        "units": [
-          "unit-archaeopter-transvector",
-          "unit-pteraxii-skystalkers",
-          "unit-pteraxii-sterylizors"
-        ]
-      }
-    },
     "datasheet-electro-shock": {
       "termId": "adeptus-mechanicus-datasheet-electro-shock",
       "navigation": {
@@ -1506,24 +1547,6 @@
         "units": [
           "unit-ironstrider-ballistarii"
         ]
-      }
-    },
-    "datasheet-deadly-demise-1": {
-      "termId": "core-deadly-demise",
-      "navigation": {
-        "glossary": "glossary-datasheet-deadly-demise-1",
-        "rule": "unit-ironstrider-ballistarii",
-        "datasheet": "unit-ironstrider-ballistarii",
-        "statline": "ironstrider-ballistarii-profile",
-        "units": [
-          "unit-ironstrider-ballistarii",
-          "unit-kastelan-robots",
-          "unit-sydonian-dragoons-with-radium-jezzails",
-          "unit-sydonian-dragoons-with-taser-lances"
-        ]
-      },
-      "parameters": {
-        "value": "1"
       }
     },
     "weapon-twin-cognis-autocannon": {
@@ -1988,10 +2011,10 @@
         ]
       }
     },
-    "datasheet-searing-conflagaration": {
-      "termId": "adeptus-mechanicus-datasheet-searing-conflagaration",
+    "datasheet-searing-conflagration": {
+      "termId": "adeptus-mechanicus-datasheet-searing-conflagration",
       "navigation": {
-        "glossary": "glossary-datasheet-searing-conflagaration",
+        "glossary": "glossary-datasheet-searing-conflagration",
         "rule": "unit-pteraxii-sterylizors",
         "datasheet": "unit-pteraxii-sterylizors",
         "statline": "pteraxii-sterylizors-profile",
@@ -2034,21 +2057,6 @@
         "units": [
           "unit-serberys-raiders"
         ]
-      }
-    },
-    "datasheet-scouts-9": {
-      "termId": "core-scouts",
-      "navigation": {
-        "glossary": "glossary-datasheet-scouts-9",
-        "rule": "unit-serberys-raiders",
-        "datasheet": "unit-serberys-raiders",
-        "statline": "serberys-raiders-profile",
-        "units": [
-          "unit-serberys-raiders"
-        ]
-      },
-      "parameters": {
-        "distance": "9\""
       }
     },
     "weapon-galvanic-carbine": {
@@ -2557,103 +2565,6 @@
         ]
       }
     },
-    "datasheet-mindlock": {
-      "termId": "adeptus-mechanicus-datasheet-mindlock",
-      "navigation": {
-        "glossary": "glossary-datasheet-mindlock",
-        "rule": "unit-servitors",
-        "datasheet": "unit-servitors",
-        "statline": "servitors-profile",
-        "units": [
-          "unit-servitors",
-          "unit-x-101"
-        ]
-      }
-    },
-    "datasheet-servitor-retinue": {
-      "termId": "adeptus-mechanicus-datasheet-servitor-retinue",
-      "navigation": {
-        "glossary": "glossary-datasheet-servitor-retinue",
-        "rule": "unit-servitors",
-        "datasheet": "unit-servitors",
-        "statline": "servitors-profile",
-        "units": [
-          "unit-servitors"
-        ]
-      }
-    },
-    "weapon-servitors-servo-arm": {
-      "termId": "adeptus-mechanicus-weapon-servitors-servo-arm",
-      "navigation": {
-        "glossary": "glossary-weapon-servitors-servo-arm",
-        "rule": "unit-servitors",
-        "datasheet": "unit-servitors",
-        "statline": "servitors-profile",
-        "units": [
-          "unit-servitors"
-        ]
-      }
-    },
-    "weapon-heavy-bolter-2": {
-      "termId": "adeptus-mechanicus-weapon-heavy-bolter-2",
-      "navigation": {
-        "glossary": "glossary-weapon-heavy-bolter-2",
-        "rule": "unit-servitors",
-        "datasheet": "unit-servitors",
-        "statline": "servitors-profile",
-        "units": [
-          "unit-servitors"
-        ]
-      }
-    },
-    "weapon-servitors-tools": {
-      "termId": "adeptus-mechanicus-weapon-servitors-tools",
-      "navigation": {
-        "glossary": "glossary-weapon-servitors-tools",
-        "rule": "unit-servitors",
-        "datasheet": "unit-servitors",
-        "statline": "servitors-profile",
-        "units": [
-          "unit-servitors"
-        ]
-      }
-    },
-    "weapon-multi-melta": {
-      "termId": "adeptus-mechanicus-weapon-multi-melta",
-      "navigation": {
-        "glossary": "glossary-weapon-multi-melta",
-        "rule": "unit-servitors",
-        "datasheet": "unit-servitors",
-        "statline": "servitors-profile",
-        "units": [
-          "unit-servitors"
-        ]
-      }
-    },
-    "weapon-plasma-cannon-standard": {
-      "termId": "adeptus-mechanicus-weapon-plasma-cannon-standard",
-      "navigation": {
-        "glossary": "glossary-weapon-plasma-cannon-standard",
-        "rule": "unit-servitors",
-        "datasheet": "unit-servitors",
-        "statline": "servitors-profile",
-        "units": [
-          "unit-servitors"
-        ]
-      }
-    },
-    "weapon-plasma-cannon-supercharge": {
-      "termId": "adeptus-mechanicus-weapon-plasma-cannon-supercharge",
-      "navigation": {
-        "glossary": "glossary-weapon-plasma-cannon-supercharge",
-        "rule": "unit-servitors",
-        "datasheet": "unit-servitors",
-        "statline": "servitors-profile",
-        "units": [
-          "unit-servitors"
-        ]
-      }
-    },
     "datasheet-core": {
       "termId": "adeptus-mechanicus-datasheet-core",
       "navigation": {
@@ -2759,6 +2670,18 @@
         "statline": "terrax-pattern-termite-profile",
         "units": [
           "unit-terrax-pattern-termite"
+        ]
+      }
+    },
+    "datasheet-mindlock": {
+      "termId": "adeptus-mechanicus-datasheet-mindlock",
+      "navigation": {
+        "glossary": "glossary-datasheet-mindlock",
+        "rule": "unit-x-101",
+        "datasheet": "unit-x-101",
+        "statline": "x-101-profile",
+        "units": [
+          "unit-x-101"
         ]
       }
     },
@@ -3168,13 +3091,6 @@
       "navigation": {
         "datasheet": "unit-secutarii-peltasts",
         "statline": "secutarii-peltasts-profile"
-      }
-    },
-    "unit-servitors": {
-      "termId": "adeptus-mechanicus-unit-servitors",
-      "navigation": {
-        "datasheet": "unit-servitors",
-        "statline": "servitors-profile"
       }
     },
     "unit-terrax-pattern-termite": {

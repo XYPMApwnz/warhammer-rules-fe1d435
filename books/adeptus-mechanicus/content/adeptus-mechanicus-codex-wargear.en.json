@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "source": {
+    "title": "Wahapedia Warhammer 40,000 11th Edition · Adeptus Mechanicus",
+    "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/",
+    "checkedAt": "2026-07-29"
+  },
+  "units": [
+    {
+      "title": "Archaeopter Fusilave",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Archaeopter-Fusilave",
+      "wargear": [
+        "This model’s command uplink can be replaced with 1 chaff launcher."
+      ],
+      "composition": "1 Archaeopter Fusilave\nThis model is equipped with: cognis heavy stubber array; armoured hull; command uplink."
+    },
+    {
+      "title": "Archaeopter Stratoraptor",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Archaeopter-Stratoraptor",
+      "wargear": [
+        "This model’s command uplink can be replaced with 1 chaff launcher."
+      ],
+      "composition": "1 Archaeopter Stratoraptor\nThis model is equipped with: 2 cognis heavy stubbers; 2 heavy phosphor blasters; twin cognis lascannon; armoured hull; command uplink."
+    },
+    {
+      "title": "Archaeopter Transvector",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Archaeopter-Transvector",
+      "wargear": [
+        "This model’s command uplink can be replaced with 1 chaff launcher."
+      ],
+      "composition": "1 Archaeopter Transvector\nThis model is equipped with: cognis heavy stubber array; armoured hull; command uplink."
+    },
+    {
+      "title": "Belisarius Cawl",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Belisarius-Cawl",
+      "wargear": [],
+      "composition": "1 Belisarius Cawl – EPIC HERO\nThis model is equipped with: solar atomiser; arc scourge; Cawl’s Omnissian axe; mechadendrite hive."
+    },
+    {
+      "title": "Corpuscarii Electro-Priests",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Corpuscarii-Electro-priests",
+      "wargear": [],
+      "composition": "5-10 Corpuscarii Electro-Priests\nEvery model is equipped with: electrostatic gauntlets."
+    },
+    {
+      "title": "Cybernetica Datasmith",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Cybernetica-Datasmith",
+      "wargear": [],
+      "composition": "1 Cybernetica Datasmith\nThis model is equipped with: Mechanicus pistol; power fist."
+    },
+    {
+      "title": "Fulgurite Electro-Priests",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Fulgurite-Electro-priests",
+      "wargear": [],
+      "composition": "5-10 Fulgurite Electro-Priests\nEvery model is equipped with: electroleech stave."
+    },
+    {
+      "title": "Ironstrider Ballistarii",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Ironstrider-Ballistarii",
+      "wargear": [
+        "Any number of models can each have their twin cognis autocannon replaced with 1 twin cognis lascannon."
+      ],
+      "composition": "1-3 Ironstrider Ballistarii\nEvery model is equipped with: twin cognis autocannon; Ironstrider feet."
+    },
+    {
+      "title": "Kastelan Robots",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Kastelan-Robots",
+      "wargear": [
+        "Any number of models can each have their twin Kastelan fist replaced with one of the following:\n1 Kastelan phosphor blaster and 1 Kastelan fist\n1 twin Kastelan phosphor blaster and 1 close combat weapon",
+        "Any number of models can each have their incendine combustor replaced with 1 heavy phosphor blaster."
+      ],
+      "composition": "2-4 Kastelan Robots\nEvery model is equipped with: incendine combustor; twin Kastelan fist."
+    },
+    {
+      "title": "Kataphron Breachers",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Kataphron-Breachers",
+      "wargear": [
+        "Any number of models can each have their heavy arc rifle replaced with 1 torsion cannon.",
+        "Any number of models can each have their arc claw replaced with 1 hydraulic claw."
+      ],
+      "composition": "3-6 Kataphron Breachers\nEvery model is equipped with: heavy arc rifle; arc claw."
+    },
+    {
+      "title": "Kataphron Destroyers",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Kataphron-Destroyers",
+      "wargear": [
+        "Any number of models can each have their heavy grav-cannon replaced with 1 Kataphron plasma culverin.",
+        "Any number of models can each have their phosphor blaster replaced with 1 cognis flamer."
+      ],
+      "composition": "3-6 Kataphron Destroyers\nEvery model is equipped with: heavy grav-cannon; phosphor blaster; close combat weapon."
+    },
+    {
+      "title": "Onager Dunecrawler",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Onager-Dunecrawler",
+      "wargear": [
+        "This model’s eradication beamer can be replaced with one of the following:\n1 daedalus missile launcher and 1 Icarus array\n1 neutron laser and 1 cognis heavy stubber\n1 twin Onager heavy phosphor blaster",
+        "This model can be equipped with 1 additional cognis heavy stubber.",
+        "This model can be equipped with 1 broad spectrum data-tether."
+      ],
+      "composition": "1 Onager Dunecrawler\nThis model is equipped with: eradication beamer; Dunecrawler legs."
+    },
+    {
+      "title": "Pteraxii Skystalkers",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Pteraxii-Skystalkers",
+      "wargear": [],
+      "composition": "1 Pteraxii Skystalker Alpha\n4-9 Pteraxii Skystalkers\nThe Pteraxii Skystalker Alpha model is equipped with: flechette blaster; taser goad.\n\nEvery Pteraxii Skystalker model is equipped with: flechette carbine; close combat weapon."
+    },
+    {
+      "title": "Pteraxii Sterylizors",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Pteraxii-Sterylizors",
+      "wargear": [],
+      "composition": "1 Pteraxii Sterylizor Alpha\n4-9 Pteraxii Sterylizors\nThe Pteraxii Sterylizor Alpha model is equipped with: flechette blaster; Pteraxii talons; taser goad.\n\nEvery Pteraxii Sterylizor model is equipped with: phosphor torch; Pteraxii talons."
+    },
+    {
+      "title": "Serberys Raiders",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Serberys-Raiders",
+      "wargear": [
+        "1 Serberys Raider can be equipped with 1 enhanced data-tether."
+      ],
+      "composition": "1 Serberys Raider Alpha\n2-5 Serberys Raiders\nThe Serberys Raider Alpha model is equipped with: Mechanicus pistol; galvanic carbine; cavalry sabre and clawed limbs.\n\nEvery Serberys Raider model is equipped with: galvanic carbine; cavalry sabre and clawed limbs."
+    },
+    {
+      "title": "Serberys Sulphurhounds",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Serberys-Sulphurhounds",
+      "wargear": [
+        "For every 3 models in this unit, 1 Serberys Sulphurhound’s 2 phosphor pistols can be replaced with 1 phosphor blast carbine and 1 phosphor pistol."
+      ],
+      "composition": "1 Serberys Sulphurhound Alpha\n2-5 Serberys Sulphurhounds\nThe Serberys Sulphurhound Alpha model is equipped with: Mechanicus pistol; sulphur breath; cavalry arc maul; clawed limbs.\n\nEvery Serberys Sulphurhound model is equipped with: 2 phosphor pistols; sulphur breath; clawed limbs."
+    },
+    {
+      "title": "Sicarian Infiltrators",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Sicarian-Infiltrators",
+      "wargear": [
+        "Any number of models can each have their stubcarbine and power weapon replaced with 1 flechette blaster and 1 taser goad."
+      ],
+      "composition": "1 Sicarian Infiltrator Princeps\n4-9 Sicarian Infiltrators\nEvery model is equipped with: stubcarbine; power weapon."
+    },
+    {
+      "title": "Sicarian Ruststalkers",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Sicarian-Ruststalkers",
+      "wargear": [
+        "Any number of Sicarian Ruststalkers can each have their transonic razor and chordclaw replaced with 1 transonic blades.",
+        "The Sicarian Ruststalker Princeps’ transonic razor and chordclaw can be replaced with 1 transonic blades and chordclaw."
+      ],
+      "composition": "1 Sicarian Ruststalker Princeps\n4-9 Sicarian Ruststalkers\nEvery model is equipped with: transonic razor and chordclaw."
+    },
+    {
+      "title": "Skitarii Marshal",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Skitarii-Marshal",
+      "wargear": [],
+      "composition": "1 Skitarii Marshal\nThis model is equipped with: Mechanicus pistol; control stave."
+    },
+    {
+      "title": "Skitarii Rangers",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Skitarii-Rangers",
+      "wargear": [
+        "The Skitarii Ranger Alpha can be equipped with 1 Alpha combat weapon.",
+        "The Skitarii Ranger Alpha’s galvanic rifle can be replaced with 1 Mechanicus pistol.",
+        "1 Skitarii Ranger’s galvanic rifle can be replaced with 1 arc rifle.",
+        "1 Skitarii Ranger’s galvanic rifle can be replaced with 1 plasma caliver.",
+        "1 Skitarii Ranger’s galvanic rifle can be replaced with 1 transuranic arquebus.",
+        "1 Skitarii Ranger equipped with a galvanic rifle can be equipped with one of the following:\n1 enhanced data-tether*\n1 omnispex*",
+        "* That model’s galvanic rifle cannot be replaced."
+      ],
+      "composition": "1 Skitarii Ranger Alpha\n9 Skitarii Rangers\nEvery model is equipped with: galvanic rifle; close combat weapon."
+    },
+    {
+      "title": "Skitarii Vanguard",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Skitarii-Vanguard",
+      "wargear": [
+        "The Skitarii Vanguard Alpha can be equipped with 1 Alpha combat weapon.",
+        "The Skitarii Vanguard Alpha’s radium carbine can be replaced with 1 Mechanicus pistol.",
+        "1 Skitarii Vanguard’s radium carbine can be replaced with 1 arc rifle.",
+        "1 Skitarii Vanguard’s radium carbine can be replaced with 1 plasma caliver.",
+        "1 Skitarii Vanguard’s radium carbine can be replaced with 1 transuranic arquebus.",
+        "1 Skitarii Vanguard equipped with a radium carbine can be equipped with one of the following:\n1 enhanced data-tether*\n1 omnispex*",
+        "* That model’s radium carbine cannot be replaced."
+      ],
+      "composition": "1 Skitarii Vanguard Alpha\n9 Skitarii Vanguard\nEvery model is equipped with: radium carbine; close combat weapon."
+    },
+    {
+      "title": "Skorpius Disintegrator",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Skorpius-Disintegrator",
+      "wargear": [
+        "This model’s belleros energy cannon can be replaced with 1 ferrumite cannon."
+      ],
+      "composition": "1 Skorpius Disintegrator\nThis model is equipped with: belleros energy cannon; 3 cognis heavy stubbers; disruptor missile launcher; armoured hull."
+    },
+    {
+      "title": "Skorpius Dunerider",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Skorpius-Dunerider",
+      "wargear": [],
+      "composition": "1 Skorpius Dunerider\nThis model is equipped with: cognis heavy stubber array; armoured hull."
+    },
+    {
+      "title": "Sydonian Dragoons with radium jezzails",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Sydonian-Dragoons-With-Radium-Jezzails",
+      "wargear": [],
+      "composition": "1-3 Sydonian Dragoons\nEvery model is equipped with: phosphor serpenta; radium jezzail; Ironstrider feet."
+    },
+    {
+      "title": "Sydonian Dragoons with taser lances",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Sydonian-Dragoons-With-Taser-Lances",
+      "wargear": [],
+      "composition": "1-3 Sydonian Dragoons\nEvery model is equipped with: phosphor serpenta; taser lance."
+    },
+    {
+      "title": "Sydonian Skatros",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Sydonian-Skatros",
+      "wargear": [
+        "This model’s radium jezzail can be replaced with 1 Skatros transuranic arquebus."
+      ],
+      "composition": "1 Sydonian Skatros\nThis model is equipped with: Mechanicus pistol; radium jezzail; Sydonian feet."
+    },
+    {
+      "title": "Tech-Priest Dominus",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Tech-priest-Dominus",
+      "wargear": [
+        "This model’s macrostubber can be replaced with 1 phosphor serpenta.",
+        "This model’s volkite blaster can be replaced with 1 eradication ray."
+      ],
+      "composition": "1 Tech-Priest Dominus\nThis model is equipped with: macrostubber; volkite blaster; Omnissian axe."
+    },
+    {
+      "title": "Tech-Priest Enginseer",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Tech-priest-Enginseer",
+      "wargear": [],
+      "composition": "1 Tech-Priest Enginseer\nThis model is equipped with: Mechanicus pistol; Omnissian axe; servo-arm."
+    },
+    {
+      "title": "Tech-Priest Manipulus",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Tech-priest-Manipulus",
+      "wargear": [
+        "This model’s magnarail lance can be replaced with 1 transonic cannon."
+      ],
+      "composition": "1 Tech-Priest Manipulus\nThis model is equipped with: magnarail lance; Omnissian staff."
+    },
+    {
+      "title": "Technoarcheologist",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/Technoarcheologist",
+      "wargear": [],
+      "composition": "1 Technoarcheologist\nThis model is equipped with: Mechanicus pistol; servo-arc claw."
+    }
+  ]
+}

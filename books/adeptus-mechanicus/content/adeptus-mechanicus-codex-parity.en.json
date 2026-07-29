@@ -1,0 +1,135 @@
+{
+  "schema": 1,
+  "source": {
+    "title": "Wahapedia Warhammer 40,000 11th Edition · Adeptus Mechanicus",
+    "url": "https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/",
+    "checkedAt": "2026-07-29"
+  },
+  "detachments": [
+    {
+      "title": "Cohort Cybernetica",
+      "rule": {
+        "title": "Cyber-psalm Programming",
+        "text": "Add 2\" to the Move characteristic of models in LEGIO CYBERNETICA units from your army. In addition, unless that unit is Battle-shocked, add 1 to the Objective Control characteristic of models in that unit."
+      },
+      "enhancements": [
+        {
+          "title": "Necromechanic",
+          "text": "TECH-PRIEST model only. Once per battle round, when a saving throw made for a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model within 12\" of the bearer is failed, the bearer can use this Enhancement. If they do, change the Damage characteristic of that attack to 0."
+        },
+        {
+          "title": "Lord of Machines",
+          "text": "TECH-PRIEST model only. Once per turn, at the start of your opponent’s Shooting phase, select one enemy VEHICLE unit within 12\" of and visible to the bearer. That unit must take a Leadership test: if that test is passed, until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll; if that test is failed, that unit is not eligible to shoot this phase."
+        },
+        {
+          "title": "Emotionless Clarity",
+          "text": "TECH-PRIEST model only. Once per turn, when a friendly LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE model with the Deadly Demise ability that is within 12\" of the bearer is destroyed, the bearer can use this Enhancement. If it does, do not roll to determine whether any mortal wounds are inflicted as a result of that model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted."
+        },
+        {
+          "title": "Arch-negator",
+          "text": "TECH-PRIEST model only. Ranged weapons equipped by the bearer have the [ANTI-VEHICLE 4+] ability."
+        }
+      ]
+    },
+    {
+      "title": "Data-psalm Conclave",
+      "rule": {
+        "title": "Benedictions of the Omnissiah",
+        "text": "At the start of the first battle round, select one of the following Benedictions of the Omnissiah to be active for CULT MECHANICUS units from your army until the end of the battle:Panegyric ProcessionEach time a CULT MECHANICUS model from your army makes a ranged attack that targets a unit within half range, improve the Armour Penetration characteristic of that attack by 1.Citation in SavageryEach time a CULT MECHANICUS unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in that unit."
+      },
+      "enhancements": [
+        {
+          "title": "Mechanicus Locum",
+          "text": "TECH-PRIEST model only. The bearer has a Leadership characteristic of 6+ and, once per battle, at the start of any phase, you can select one friendly CULT MECHANICUS unit that is Battle-shocked and within 12\" of the bearer. That unit is no longer Battle-shocked."
+        },
+        {
+          "title": "Mantle of the Gnosticarch",
+          "text": "TECH-PRIEST model only. Each time an attack is allocated to the bearer, change the Damage characteristic of that attack to 1."
+        },
+        {
+          "title": "Data-blessed Autosermon",
+          "text": "TECH-PRIEST model only. Once per battle, at the start of your Command phase, you can select the Benediction of the Omnissiah you did not select at the start of the first battle round. Until the start of your next Command phase, that Benediction of the Omnissiah is active for the bearer’s unit in addition to the one that is currently active for your army."
+        },
+        {
+          "title": "Temporcopia",
+          "text": "TECH-PRIEST model only. The bearer’s unit has the Fights First ability."
+        }
+      ]
+    },
+    {
+      "title": "Explorator Maniple",
+      "rule": {
+        "title": "Acquisition At Any Cost",
+        "text": "At the start of your Command phase, select one objective marker. Until the start of your next Command phase, that objective marker is your Acquisition objective marker. Each time an ADEPTUS MECHANICUS model from your army makes an attack, if that model’s unit is within range of your Acquisition objective marker, or if the target of that attack is within range of your Acquisition objective marker, re-roll a Wound roll of 1."
+      },
+      "enhancements": [
+        {
+          "title": "Artisan",
+          "text": "TECH-PRIEST model only. While the bearer is leading a unit that is within range of your Acquisition objective marker, once per phase, you can change the result of one Hit roll, one Wound roll or one saving throw made for that unit to an unmodified 6."
+        },
+        {
+          "title": "Magos",
+          "text": "TECH-PRIEST model only. At the end of your Command phase, if the bearer is within range of your Acquisition objective marker, roll one D6: on a 4+, you gain 1CP."
+        },
+        {
+          "title": "Logis",
+          "text": "TECH-PRIEST model only. While the bearer is leading a unit, each time a model in that unit makes an attack that targets a unit within range of your Acquisition objective marker, add 1 to the Hit roll."
+        },
+        {
+          "title": "Genetor",
+          "text": "TECH-PRIEST model only. While the bearer is leading a unit that is within range of your Acquisition objective marker, models in that unit have a 4+ invulnerable save."
+        }
+      ]
+    },
+    {
+      "title": "Rad-zone Corps",
+      "rule": {
+        "title": "Rad-bombardment",
+        "text": "BATTLE ROUND1BOMBARDMENTAt the start of the first battle round, for each enemy unit within your opponent’s deployment zone, your opponent must decide whether that unit will take cover or stand firm. You then roll one D6 for each of those enemy units and apply the relevant result below:Unit Standing Firm: On a 3+, that unit suffers D3 mortal wounds.Unit Taking Cover: That unit is battle-shocked. On a 5+, that unit suffers D3 mortal woundsBATTLE ROUND2    ONWARDSFALLOUTAt the start of your Command phase during the second, third, fourth and fifth battle rounds, roll one D6 for each enemy unit within your opponent’s deployment zone. On a 3+, that unit suffers 1 mortal wound and must take a Battle-shock test."
+      },
+      "enhancements": [
+        {
+          "title": "Autoclavic Denunciation",
+          "text": "ADEPTUS MECHANICUS model only. Ranged weapons equipped by the bearer have the [ANTI-INFANTRY 2+] and [ANTI-MONSTER 4+] abilities."
+        },
+        {
+          "title": "Malphonic Susurrus",
+          "text": "ADEPTUS MECHANICUS model only. While the bearer is leading a unit, models in that unit have the Stealth ability."
+        },
+        {
+          "title": "Peerless Eradicator",
+          "text": "ADEPTUS MECHANICUS model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability."
+        },
+        {
+          "title": "Radial Suffusion",
+          "text": "ADEPTUS MECHANICUS model only. From the second battle round onwards, when resolving the Fallout effect of the Rad-bombardment Detachment rule, if the bearer is on the battlefield, roll one D6 for each enemy unit within 6\" of your opponent’s deployment zone, in addition to those that are within your opponent’s deployment zone."
+        }
+      ]
+    },
+    {
+      "title": "Skitarii Hunter Cohort",
+      "rule": {
+        "title": "Stealth Optimisation",
+        "text": "Friendly SKITARII INFANTRY, SKITARII MOUNTED and IRONSTRIDER BALLISTARII units have Stealth."
+      },
+      "enhancements": [
+        {
+          "title": "Veiled Hunter",
+          "text": "SKITARII MARSHAL model only. After both players have deployed their armies, you can select up to three SKITARII INFANTRY units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves."
+        },
+        {
+          "title": "Clandestine Infiltrator",
+          "text": "SKITARII model only. The bearer, and models in any unit they are leading, have the Infiltrators and Scouts 6\" abilities."
+        },
+        {
+          "title": "Cantic Thrallnet",
+          "text": "SKITARII MARSHAL model only. At the start of the battle round, you can select one friendly SKITARII unit within 12\" of the bearer. Until the start of the next battle round, the Protector Imperative and the Conqueror Imperative are both active for that unit."
+        },
+        {
+          "title": "Battle-sphere Uplink",
+          "text": "SKITARII model only. In your Shooting phase, after the bearer’s unit has shot, if it is not within Engagement Range of one or more enemy units, that unit can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge."
+        }
+      ]
+    }
+  ]
+}

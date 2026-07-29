@@ -6,6 +6,9 @@
   "mark": "TYR",
   "edition": "11E",
   "factionKeyword": "TYRANIDS",
+  "compactSharedAbilities": ["Synapse", "Shadow in the Warp", "Anti", "Assault", "Blast", "Deadly Demise", "Deep Strike", "Devastating Wounds", "Extra Attacks", "Feel No Pain", "Firing Deck", "Hazardous", "Heavy", "Ignores Cover", "Indirect Fire", "Lance", "Leader", "Lethal Hits", "Lone Operative", "Melta", "Pistol", "Precision", "Psychic", "Rapid Fire", "Scouts", "Stealth", "Sustained Hits", "Torrent", "Twin-linked"],
+  "includeCoreStratagems": true,
+  "dedicatedMobile": true,
   "expected": {
     "matchedDetachments": 10,
     "factionPackDetachments": 4,
@@ -14,6 +17,9 @@
   "sources": {
     "factionPack": "content/tyranids-faction-pack.en.json",
     "codexDatasheets": "content/tyranids-codex-datasheets.en.json",
+    "codexWargear": "content/tyranids-codex-wargear.en.json",
+    "codexParity": "content/tyranids-codex-parity.en.json",
+    "points": "content/tyranids-points.en.json",
     "relatedRules": "content/tyranids-related-rules.en.json",
     "manifest": "sources/source-manifest.json"
   }

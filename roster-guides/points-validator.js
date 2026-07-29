@@ -1,6 +1,6 @@
 (function(root){
   'use strict';
-  const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+  const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim();
   const copyMatches=(label,index)=>{
     const text=String(label||'').toLowerCase();
     if(!text.includes('unit'))return true;

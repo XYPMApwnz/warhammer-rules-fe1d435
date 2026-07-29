@@ -14,11 +14,10 @@
       "kind": "official-faction-transcription"
     },
     "adeptus-mechanicus": {
-      "title": "Adeptus Mechanicus prototype",
+      "title": "Adeptus Mechanicus rules reference",
       "edition": "11e",
       "language": "en",
-      "kind": "local-prototype"
+      "kind": "faction-reference"
     }
   }
 }
-

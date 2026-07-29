@@ -17,11 +17,15 @@ const sharedDatasheetCss=fs.readFileSync(path.resolve(root,'..','shared','datash
 const sharedPopupContent=fs.readFileSync(path.resolve(root,'..','shared','popup-content.js'),'utf8');
 const sharedGlossaryAutolink=fs.readFileSync(path.resolve(root,'..','shared','glossary-autolink.js'),'utf8');
 const glossaryRegistryText=fs.readFileSync(path.resolve(root,'..','..','glossary','registry.en.json'),'utf8');
+const glossaryRegistry=JSON.parse(glossaryRegistryText);
 const factionRules=json('content/adeptus-mechanicus-rules.en.json');
 const source=json('content/adeptus-mechanicus-source.en.json');
 const codex=json('content/adeptus-mechanicus-codex-detachments.en.json');
+const codexParity=json('content/adeptus-mechanicus-codex-parity.en.json');
 const codexDatasheets=json('content/adeptus-mechanicus-codex-datasheets.en.json');
+const codexWargear=json('content/adeptus-mechanicus-codex-wargear.en.json');
 const currentPoints=json('content/adeptus-mechanicus-points.en.json');
+const relatedRulesConfig=json('content/adeptus-mechanicus-related-rules.en.json');
 const factionDatasheets=new Map(factionRules.datasheets.map(unit=>[unit.id,unit]));
 const mergedDatasheets=codexDatasheets.datasheets.map(unit=>factionDatasheets.has(unit.id)?{...unit,...factionDatasheets.get(unit.id),category:unit.category}:unit);
 const rules={...factionRules,datasheets:mergedDatasheets};
@@ -48,26 +52,48 @@ const depths=[...markup.matchAll(/data-nav-depth="(\d+)"/g)].map(x=>Number(x[1])
 const topLevelTargets=[...markup.matchAll(/<li data-nav-id="[^"]+" data-nav-depth="1">[\s\S]*?<button class="toc-label" data-nav-target="([^"]+)"/g)].map(x=>x[1]);
 const required=['appHeader','navMenu','navCollapse','backButton','themeButton','tocScrim','tocPanel','tocTree','main','popupLayer'];
 
-check('source snapshot has all 26 pages',source.meta.pageCount===26&&Object.keys(source.pages).length===26);
-check('source hash is locked',source.meta.sha256==='7F01DD2CE7E35C762B0AB625ADE779022275574CF2D01EE46EE16B2F5582341C'&&source.meta.sha256===rules.source.sha256);
+check('source snapshot has all 27 pages',source.meta.pageCount===27&&Object.keys(source.pages).length===27);
+check('source hash is locked',source.meta.sha256==='FC8D366B0615CDE750E01924277D4A42B680639B1BF96E3823E7FCCE11241345'&&source.meta.sha256===rules.source.sha256);
+check('Faction Pack v1.1 metadata is current',rules.source.version==='1.1'&&rules.source.pages===27&&rules.source.legalFrom==='2026-07-22'&&rules.source.file==='sources/adeptus-mechanicus-faction-pack-v1.1.pdf');
 check('canonical content has five detachments',rules.detachments.length===5);
 check('army has ten total detachments',allDetachments.length===10);
 check('five Codex detachments are restored',codex.detachments.length===5);
+check('Codex parity layer contains full Detachment rules and Enhancements',codexParity.detachments.length===5&&codexParity.detachments.every(detachment=>detachment.rule.text.length>80&&detachment.enhancements.length===4&&detachment.enhancements.every(item=>item.text.length>60)));
 check('every Codex detachment has four enhancements and six stratagems',codex.detachments.every(x=>x.enhancements.length===4&&x.stratagems.length===6));
 check('detachment card counts are complete',JSON.stringify(rules.detachments.map(x=>[x.enhancements.length,x.stratagems.length]))===JSON.stringify([[2,3],[2,3],[2,3],[4,6],[4,6]]));
-check('codex layer has 39 datasheets',rules.datasheets.length===39&&rules.datasheets.length===codexDatasheets.audit.datasheets);
-check('five datasheets are Legends',rules.datasheets.filter(x=>x.status==='Warhammer Legends').length===5);
+check('codex layer has 38 current 11e datasheets',rules.datasheets.length===38&&rules.datasheets.length===codexDatasheets.audit.datasheets);
+check('four datasheets are current 11e Legends',rules.datasheets.filter(x=>x.status==='Warhammer Legends').length===4);
+check('obsolete 10e Servitors datasheet is absent',!rules.datasheets.some(unit=>unit.title==='Servitors'));
 check('every datasheet has stats, weapons, abilities and provenance',rules.datasheets.every(x=>Object.keys(x.stats).length>=6&&x.weapons.length&&x.abilities.length&&(x.sourcePages?.length||x.source?.url)));
 check('official multi-profile datasheet is preserved',factionRules.datasheets.find(unit=>unit.title==='Servitor Battleclade')?.profiles?.length===2);
 check('official Legends and Faction Pack clarifications are complete',[
-  'cannot end a move within a wall',
+  'for a final result of 2+',
   "Starting Strength is increased accordingly",
   'neither it nor any units embarked within it count towards limits',
   'Enhanced data-tether',
   'Designer\'s Note: a unit that already has HALO OVERRIDE'
 ].every(text=>JSON.stringify(factionRules).includes(text)));
 check('placeholder compositions are gone',codexDatasheets.datasheets.every(unit=>!/^See the model selections/i.test(unit.composition||'')));
-check('all source pages are represented in the UI',Array.from({length:26},(_,i)=>i+1).every(page=>html.includes(`#page=${page}`)||html.includes(`Page ${page}`)));
+const ranger=codexDatasheets.datasheets.find(unit=>unit.title==='Skitarii Rangers');
+check('unit composition preserves complete model groups',ranger?.composition==='9 Skitarii Rangers. 1 Skitarii Ranger Alpha.');
+check('optional wargear abilities stay out of unit abilities',
+  ['Enhanced data-tether','Omnispex'].every(title=>ranger?.wargearAbilities?.some(item=>item.title===title))
+  &&['Enhanced data-tether','Omnispex'].every(title=>!ranger?.abilities?.some(item=>item.title===title)));
+const skatros=codexDatasheets.datasheets.find(unit=>unit.title==='Sydonian Skatros');
+check('Sydonian Skatros keeps Achillan Eye as a permanent datasheet ability',skatros?.abilities.some(ability=>ability.title==='Achillan Eye')&&!skatros?.wargearAbilities?.some(ability=>ability.title==='Achillan Eye'));
+check('Codex selection tree produces wargear contracts',codexDatasheets.datasheets.filter(unit=>unit.wargear?.length).length===35&&ranger.wargear.some(text=>text.includes('up to 1 Skitarii Ranger w/ transuranic arquebus'))&&codexDatasheets.datasheets.find(unit=>unit.title==='Kastelan Robots')?.wargear.some(text=>text.includes('Twin Kastelan fist')));
+const thulia=factionRules.datasheets.find(unit=>unit.title==='Thulia Ghuld');
+const onager=codexDatasheets.datasheets.find(unit=>unit.title==='Onager Dunecrawler');
+check('July v1.1 Thulia replacement is exact',thulia?.keywords.includes('MOBILE')&&!thulia?.abilities.some(item=>item.title==='Cybernetic Augmentation'));
+check('July v1.1 Onager dissipated profile is S9',onager?.weapons.find(item=>/eradication beamer - dissipated/i.test(item.name))?.s==='9');
+check('July v1.1 Hunter rule has no obsolete cover clause',codex.detachments.find(item=>item.title==='Skitarii Hunter Cohort')?.rule.text==='Friendly SKITARII INFANTRY, SKITARII MOUNTED and IRONSTRIDER BALLISTARII units have Stealth.');
+check('July v1.1 FAQ explains the final BS2 result',factionRules.updates.find(item=>item.id==='faction-faq')?.summary.includes('for a final result of 2+'));
+check('Legends page ranges follow the 27-page pack',JSON.stringify(factionRules.datasheets.filter(unit=>unit.status==='Warhammer Legends').map(unit=>unit.sourcePages))===JSON.stringify([[20,21],[22,23],[24,25],[26,27]]));
+check('known catalogue text corruption is removed',!JSON.stringify(codexDatasheets).match(/havealready|Conflagaration|Pteraxii Sterylizors[\s\S]{0,1200}Pteraxii Skystalker Alpha/));
+check('detachment-only categories never become permanent datasheet keywords',codexDatasheets.datasheets.every(unit=>!unit.keywords.includes('Recon Augury')));
+check('current FRAME keywords are present',['Skorpius Disintegrator','Skorpius Dunerider','Terrax-pattern Termite'].every(title=>rules.datasheets.find(unit=>unit.title===title)?.keywords.some(keyword=>keyword.toUpperCase()==='FRAME')));
+check('conditional shared weapon modifiers are resolved for their bearer',codexDatasheets.datasheets.find(unit=>unit.title==='Skitarii Marshal')?.weapons.find(weapon=>weapon.name==='Mechanicus pistol')?.skill==='3+'&&codexDatasheets.datasheets.find(unit=>unit.title==='Skitarii Rangers')?.weapons.find(weapon=>weapon.name==='Mechanicus pistol')?.skill==='4+');
+check('all source pages are represented in the UI',Array.from({length:27},(_,i)=>i+1).every(page=>html.includes(`#page=${page}`)||html.includes(`Page ${page}`)));
 check('required interaction IDs are present',required.every(id=>idSet.has(id)),required.filter(id=>!idSet.has(id)).join(', '));
 check('HTML IDs are unique',ids.length===idSet.size,`${ids.length}/${idSet.size}`);
 check('all navigation targets exist',navTargets.every(id=>idSet.has(id)),navTargets.filter(id=>!idSet.has(id)).join(', '));
@@ -77,17 +103,30 @@ check('top-level navigation matches the DG contract',JSON.stringify(topLevelTarg
 check('datasheets use category then unit hierarchy',['datasheets-epic-heroes','datasheets-characters','datasheets-battleline','datasheets-dedicated-transports','datasheets-other','datasheets-warhammer-legends'].every(id=>navTargets.includes(id))&&rules.datasheets.every(unit=>markup.includes(`data-nav-id="${unit.id}" data-nav-depth="3"`)));
 check('detachment navigation uses singular Enhancement label',(markup.match(/data-nav-depth="3"[^>]*>[\s\S]*?data-nav-target="[^"]+-enhancements">Enhancement<\/button>/g)||[]).length===allDetachments.length);
 check('all Journey targets resolve',journeyTargets.every(id=>idSet.has(id)));
-check('local datasheet tabs are not global navigation',localTargets.length===rules.datasheets.length*4&&localTargets.every(id=>!navTargets.includes(id)));
+check('local datasheet tabs are not global navigation',localTargets.length>=rules.datasheets.length*4&&localTargets.every(id=>!navTargets.includes(id)));
 check('all ten detachments render all tracked parts',(markup.match(/class="detachment-part"/g)||[]).length===30);
-check('all 39 unit cards render',(markup.match(/class="unit-card surface/g)||[]).length===rules.datasheets.length);
-check('Legends is a datasheet category, not a global section',!topLevelTargets.includes('legends')&&navTargets.includes('datasheets-warhammer-legends')&&legendsCount(markup)===5);
+check('all 38 unit cards render',(markup.match(/class="unit-card surface/g)||[]).length===rules.datasheets.length);
+check('datasheets use typed DG sections',
+  markup.includes('id="skitarii-rangers-wargear-abilities"')
+  &&markup.includes('id="tech-priest-dominus-leader"')
+  &&markup.includes('id="onager-dunecrawler-damaged"')
+  &&markup.includes('id="terrax-pattern-termite-transport"'));
+check('conditional wargear is labelled honestly',markup.includes('These abilities apply only while the corresponding wargear is equipped.'));
+check('Legends is a datasheet category, not a global section',!topLevelTargets.includes('legends')&&navTargets.includes('datasheets-warhammer-legends')&&legendsCount(markup)===4);
 check('favorite Doctrina console is preserved',markup.includes('class="doctrina-console surface"')&&markup.includes('data-protocol="protector"')&&markup.includes('data-protocol="conqueror"'));
 check('local official transcripts are embedded',(markup.match(/class="source-transcript"/g)||[]).length===rules.updates.length+rules.detachments.length+factionRules.datasheets.length+2);
-check('Codex transcription status is explicit',markup.includes('Codex transcription layer')&&markup.includes('39 indexed datasheets'));
+check('Codex transcription status is explicit',markup.includes('Codex transcription layer')&&markup.includes('38 indexed datasheets'));
 check('official MFM verification is visible',markup.includes('Munitorum Field Manual v1.1')&&markup.includes('All 34 current Enhancement costs'));
+check('generated reader identifies the current 27-page Faction Pack',markup.includes('Faction Pack v1.1')&&markup.includes('27 pages')&&!markup.includes('Faction Pack v1.0'));
+check('Stratagem restrictions render as a separate field',markup.includes('<b>Restrictions</b>')&&markup.includes('Programmed Withdrawal'));
+check('datasheet wargear text uses the unit name, not extractor UI labels',!markup.includes('Wargear is equipped with:')&&!markup.includes('Wargear can be equipped with:'));
+check('all carried-forward Codex datasheets have exact wargear and composition snapshots',codexWargear.units.length===30&&codexWargear.units.every(unit=>unit.title&&Array.isArray(unit.wargear)&&unit.composition));
+const rangerWargear=codexWargear.units.find(unit=>unit.title==='Skitarii Rangers')?.wargear||[];
+check('conditional Skitarii wargear limits remain visible',rangerWargear.includes('* That model’s galvanic rifle cannot be replaced.')&&rangerWargear.some(row=>row.startsWith('1 Skitarii Ranger equipped with a galvanic rifle'))&&markup.includes('That model’s')&&markup.includes('cannot be replaced.'));
 check('removed army points section stays removed',!markup.includes('My Army · 995')&&!markup.includes('army-roster-995'));
 check('no replacement characters in generated/runtime files',!['index.html','reader.html',...scripts,'styles/mechanicus.css'].map(read).join('').includes('\uFFFD'));
 check('known BSData spelling errors stay normalised',!html.includes(' mdel ')&&!glossaryRegistryText.includes(' mdel '));
+check('Mechanicus glossary definitions preserve full rules text',glossaryRegistry.terms?.['adeptus-mechanicus-datasheet-data-spike']?.definition?.en?.length>300);
 check('no inline script or style',!/<style|<script(?![^>]*src=)/i.test(html));
 check('all stylesheet and script assets resolve',[...markup.matchAll(/(?:href|src)="([^"?#]+)"/g)].map(x=>x[1]).filter(file=>!file.endsWith('.pdf')&&!/^(?:https?:|data:)/.test(file)).every(file=>fs.existsSync(path.resolve(root,file))));
 
@@ -96,6 +135,8 @@ const terms=context.window.DG_TERMS||{};
 check('term registry expands the canonical glossary',Object.keys(terms).length>=rules.glossary.length+150,`${Object.keys(terms).length} terms`);
 check('term rule and unit destinations resolve',Object.values(terms).every(term=>(!term.rule||idSet.has(term.rule))&&(!term.units||term.units.every(id=>idSet.has(id)))));
 check('datasheet abilities and weapons are interactive',(markup.match(/class="ability"/g)||[]).length>100&&(markup.match(/class="weapon-button" data-term=/g)||[]).length>150);
+check('Core abilities use canonical destinations',!markup.includes('data-term="datasheet-deep-strike"')&&!markup.includes('data-term="datasheet-deadly-demise')&&markup.includes('data-term="core-deep-strike"')&&markup.includes('data-term="core-deadly-demise"')&&terms['core-deep-strike']?.fullRulePath==='books/core-rules/reader/core-abilities.html#rule-24-09');
+check('official and Codex datasheets show provenance',(markup.match(/class="unit-card surface/g)||[]).length===(markup.match(/<div class="source"><a class="source-link"/g)||[]).length-rules.updates.length-allDetachments.length-1);
 
 const navSource=deathGuardRead('scripts/navigation-controller.js');
 const popupSource=deathGuardRead('scripts/popup-controller.js');
@@ -119,6 +160,11 @@ check('navigation is loaded from the Death Guard runtime contract',html.includes
 check('entry router preserves the DG desktop/phone contract',entry.includes('../death-guard/scripts/view-router.js')&&entry.includes('./reader.html?view=full')&&entry.includes('./mobile/index.html?view=mobile'));
 check('header exposes the shared Mega Glossary',markup.includes('href="../../glossary/index.html"')&&markup.includes('Mega Glossary'));
 check('mobile weapon labels stay dynamic',html.includes('data-label="Range"')&&/content:\s*attr\(data-label\)/.test(sharedDatasheetCss));
+check('desktop to Phone mode preserves the active route',read('scripts/app.js').includes("destination=new URL('./mobile/'+route")&&read('scripts/app.js').includes('destination.search=params.toString()'));
+check('nested Full Entry stays above Related Rules',read('styles/mechanicus.css').includes('.related-rules-open .full-entry-layer{z-index:170}'));
+check('conditional attached-unit Enhancements are never guessed',read('scripts/roster-enhancements.js').includes('The roster export does not prove that the bearer is leading a unit.')&&read('scripts/roster-enhancements.js').includes('does not identify its Bodyguard unit'));
+check('personal roster reports unmatched units and renders loadout',read('scripts/roster-filter.js').includes('Unmatched roster units:')&&read('scripts/roster-filter.js').includes('Roster loadout')&&read('scripts/roster-filter.js').includes('\\[legends\\]'));
+check('shared points validation recognises New Recruit Legends suffixes',fs.readFileSync(path.resolve(root,'..','..','roster-guides','points-validator.js'),'utf8').includes('\\[legends\\]'));
 
 const relatedContext={window:{}};
 vm.createContext(relatedContext);
@@ -130,11 +176,13 @@ const allEnhancements=allDetachments.flatMap(detachment=>detachment.enhancements
 const allEligibleItems=[...allStratagems,...allEnhancements];
 const unitIds=new Set(rules.datasheets.map(unit=>unit.id));
 const knownKeywords=new Set(rules.datasheets.flatMap(unit=>unit.keywords).map(keyword=>keyword.toUpperCase()));
+for(const grants of Object.values(relatedRulesConfig.keywordGrants||{}))for(const grant of grants)knownKeywords.add(grant.keyword.toUpperCase());
 const eligibilityTargets=allEligibleItems.flatMap(item=>item.eligibility?.targets||[]);
 check('all 51 Stratagems and 34 Enhancements have explicit eligibility',allStratagems.length===51&&allEnhancements.length===34&&allEligibleItems.every(item=>item.id&&item.eligibility?.targets?.some(target=>target.side==='friendly')));
 check('eligibility IDs are stable and unique',new Set(allEligibleItems.map(item=>item.id)).size===allEligibleItems.length&&allStratagems.every(item=>item.id.startsWith('stratagem-'))&&allEnhancements.every(item=>item.id.startsWith('enhancement-')));
 check('eligibility references known datasheets and keywords',eligibilityTargets.every(target=>(target.units||[]).every(id=>unitIds.has(id))&&[...(target.all||[]),...(target.any||[]),...(target.none||[])].every(keyword=>knownKeywords.has(keyword.toUpperCase()))));
 check('Related Rules uses structured eligibility only',read('scripts/related-rules.js').includes("JSON.parse(card.dataset.eligibility||'')")&&!read('scripts/related-rules.js').includes("text.includes("));
+check('detachment-granted keywords are applied only inside their Related Rules section',read('scripts/related-rules.js').includes('withKeywordGrants(card,unit)')&&read('mobile/related-rules.inc').includes('data-keyword-grants=')&&read('mobile/related-rules.inc').includes('RECON AUGURY'));
 check('Related Rules preserves stable rule IDs when cloning',read('scripts/related-rules.js').includes('if(!node.dataset.ruleId)node.dataset.ruleId=node.id'));
 
 const itemByTitle=title=>allEligibleItems.find(item=>item.title===title);
@@ -153,6 +201,9 @@ check('named Enhancement eligibility remains exact',eligible('Stealth-screened C
 check('Tech-Priest Enhancements reject Epic Heroes and non-Characters',eligible('Necromechanic','unit-tech-priest-dominus')&&!eligible('Necromechanic','unit-belisarius-cawl')&&!eligible('Necromechanic','unit-skitarii-vanguard'));
 check('generic Adeptus Mechanicus Enhancements require a non-Epic Character',eligible('Autoclavic Denunciation','unit-tech-priest-dominus')&&!eligible('Autoclavic Denunciation','unit-belisarius-cawl')&&!eligible('Autoclavic Denunciation','unit-skitarii-vanguard'));
 check('Skitarii Enhancements require a non-Epic Character',eligible('Clandestine Infiltrator','unit-skitarii-marshal')&&!eligible('Clandestine Infiltrator','unit-skitarii-vanguard')&&!eligible('Clandestine Infiltrator','unit-onager-dunecrawler'));
+const reconRule=itemByTitle('Repolarised Augurs'),reconGrants=relatedRulesConfig.keywordGrants['cohort-acquisitus'];
+const reconCard={dataset:{eligibility:JSON.stringify(reconRule.eligibility)},closest:()=>({dataset:{keywordGrants:JSON.stringify(reconGrants)}})};
+check('Cohort Acquisitus grants RECON AUGURY only to its named datasheets',relatedMatcher.matches(reconCard,profileById('unit-skitarii-rangers'))&&!relatedMatcher.matches(reconCard,profileById('unit-onager-dunecrawler')));
 
 const extractor=spawnSync('C:\\Users\\denis\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe',[path.join(root,'tools','extract-faction-pack.py'),'--check'],{encoding:'utf8'});
 check('PDF extraction snapshot is current',extractor.status===0,(extractor.stderr||extractor.stdout).trim());

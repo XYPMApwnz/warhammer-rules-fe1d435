@@ -6,7 +6,12 @@
     "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
     "revision": "1",
     "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Tyranids.json",
-    "snapshotSha256": "41CB0268C69B36B81D4F8D5956F04A2E946866E7CF7DA65F2B5B1ABD4E43CD34"
+    "snapshotSha256": "41CB0268C69B36B81D4F8D5956F04A2E946866E7CF7DA65F2B5B1ABD4E43CD34",
+    "officialMfm": {
+      "version": "v1.1",
+      "url": "https://mfm.warhammer-community.com/en/tyranids",
+      "verifiedAt": "2026-07-29"
+    }
   },
   "units": [
     {
@@ -37,13 +42,18 @@
           "maxModels": 5
         },
         {
-          "label": "6-10 models",
+          "label": "10 models",
           "value": 110,
-          "minModels": 6,
+          "minModels": 10,
           "maxModels": 10
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-biovores",
@@ -52,9 +62,15 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1-2 models",
+          "label": "1 model",
           "value": 60,
           "minModels": 1,
+          "maxModels": 1
+        },
+        {
+          "label": "2 models",
+          "value": 100,
+          "minModels": 2,
           "maxModels": 2
         },
         {
@@ -64,7 +80,12 @@
           "maxModels": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-broodlord",
@@ -79,7 +100,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-carnifexes",
@@ -96,7 +122,12 @@
           "value": 180
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-deathleaper",
@@ -111,7 +142,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-dimachaeron",
@@ -135,17 +171,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st–2nd unit · 1 model",
           "value": 140,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 150
+          "label": "3rd+ unit · 1 model",
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-gargoyles",
@@ -160,13 +205,18 @@
           "maxModels": 10
         },
         {
-          "label": "11-20 models",
+          "label": "20 models",
           "value": 155,
-          "minModels": 11,
+          "minModels": 20,
           "maxModels": 20
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-genestealers",
@@ -175,27 +225,40 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
+          "label": "1st–2nd unit · 5 models",
           "value": 75,
           "minModels": 5,
-          "maxModels": 5
+          "maxModels": 5,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 5 models",
-          "value": 85
-        },
-        {
-          "label": "6 models",
+          "label": "1st–2nd unit · 10 models",
           "value": 140,
-          "minModels": 6,
-          "maxModels": 6
+          "minModels": 10,
+          "maxModels": 10,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 6 models",
-          "value": 150
+          "label": "3rd+ unit · 5 models",
+          "value": 85,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd+ unit · 10 models",
+          "value": 150,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-harpy",
@@ -210,7 +273,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-harridan",
@@ -229,7 +297,12 @@
           "value": 660
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-haruspex",
@@ -238,17 +311,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st–2nd unit · 1 model",
           "value": 125,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 135
+          "label": "3rd+ unit · 1 model",
+          "value": 135,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-hierophant",
@@ -267,7 +349,12 @@
           "value": 910
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-hive-crone",
@@ -282,7 +369,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-hive-guard",
@@ -291,27 +383,40 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3 models",
+          "label": "1st–2nd unit · 3 models",
           "value": 80,
           "minModels": 3,
-          "maxModels": 3
+          "maxModels": 3,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 3 models",
-          "value": 90
-        },
-        {
-          "label": "4 models",
+          "label": "1st–2nd unit · 6 models",
           "value": 160,
-          "minModels": 4,
-          "maxModels": 4
+          "minModels": 6,
+          "maxModels": 6,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 4 models",
-          "value": 170
+          "label": "3rd+ unit · 3 models",
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd+ unit · 6 models",
+          "value": 170,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-hive-tyrant",
@@ -326,7 +431,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-hormagaunts",
@@ -347,7 +457,12 @@
           "maxModels": 20
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-hyperadapted-raveners",
@@ -356,17 +471,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
+          "label": "1st–2nd unit · 5 models",
           "value": 165,
           "minModels": 5,
-          "maxModels": 5
+          "maxModels": 5,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 5 models",
-          "value": 175
+          "label": "3rd+ unit · 5 models",
+          "value": 175,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-lictor",
@@ -381,7 +505,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-malanthrope",
@@ -405,17 +534,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st–2nd unit · 1 model",
           "value": 190,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 200
+          "label": "3rd+ unit · 1 model",
+          "value": 200,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-mawloc",
@@ -430,7 +568,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-mucolid-spores",
@@ -447,7 +590,12 @@
           "value": 60
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-neurogaunts",
@@ -462,13 +610,18 @@
           "maxModels": 11
         },
         {
-          "label": "12-21 models",
+          "label": "22 models",
           "value": 90,
-          "minModels": 12,
-          "maxModels": 21
+          "minModels": 22,
+          "maxModels": 22
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-neurolictor",
@@ -477,17 +630,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st–2nd unit · 1 model",
           "value": 80,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 90
+          "label": "3rd+ unit · 1 model",
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-neurotyrant",
@@ -502,7 +664,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-norn-assimilator",
@@ -521,7 +688,12 @@
           "value": 270
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-norn-emissary",
@@ -540,7 +712,12 @@
           "value": 270
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-old-one-eye",
@@ -555,7 +732,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-parasite-of-mortrex",
@@ -570,7 +752,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-psychophage",
@@ -585,7 +772,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-pyrovores",
@@ -594,27 +786,54 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "2 models",
+          "label": "1st–2nd unit · 1 model",
           "value": 45,
+          "minModels": 1,
+          "maxModels": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st–2nd unit · 2 models",
+          "value": 65,
           "minModels": 2,
-          "maxModels": 2
+          "maxModels": 2,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 2 models",
-          "value": 55
-        },
-        {
-          "label": "3 models",
+          "label": "1st–2nd unit · 3 models",
           "value": 95,
           "minModels": 3,
-          "maxModels": 3
+          "maxModels": 3,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 3 models",
-          "value": 105
+          "label": "3rd+ unit · 1 model",
+          "value": 55,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd+ unit · 2 models",
+          "value": 75,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd+ unit · 3 models",
+          "value": 105,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-raveners",
@@ -623,17 +842,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
+          "label": "1st–2nd unit · 5 models",
           "value": 125,
           "minModels": 5,
-          "maxModels": 5
+          "maxModels": 5,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 5 models",
-          "value": 135
+          "label": "3rd+ unit · 5 models",
+          "value": 135,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-ripper-swarms",
@@ -642,9 +870,15 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1-2 models",
+          "label": "1 model",
           "value": 30,
           "minModels": 1,
+          "maxModels": 1
+        },
+        {
+          "label": "2 models",
+          "value": 40,
+          "minModels": 2,
           "maxModels": 2
         },
         {
@@ -654,7 +888,12 @@
           "maxModels": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-screamer-killer",
@@ -663,17 +902,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st–2nd unit · 1 model",
           "value": 125,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 135
+          "label": "3rd+ unit · 1 model",
+          "value": 135,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-scythed-hierodule",
@@ -718,13 +966,18 @@
           "maxModels": 3
         },
         {
-          "label": "4-6 models",
+          "label": "6 models",
           "value": 110,
-          "minModels": 4,
+          "minModels": 6,
           "maxModels": 6
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-sporocyst",
@@ -739,7 +992,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-termagants",
@@ -760,7 +1018,12 @@
           "maxModels": 20
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-tervigon",
@@ -775,7 +1038,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-the-red-terror",
@@ -790,7 +1058,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-the-swarmlord",
@@ -805,7 +1078,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-toxicrene",
@@ -820,7 +1098,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-trygon",
@@ -835,7 +1118,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-tyranid-prime-with-lash-whip",
@@ -850,7 +1138,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-tyranid-warriors-with-melee-bio-weapons",
@@ -865,13 +1158,18 @@
           "maxModels": 3
         },
         {
-          "label": "4-6 models",
+          "label": "6 models",
           "value": 150,
-          "minModels": 4,
+          "minModels": 6,
           "maxModels": 6
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-tyranid-warriors-with-ranged-bio-weapons",
@@ -886,13 +1184,18 @@
           "maxModels": 3
         },
         {
-          "label": "4-6 models",
+          "label": "6 models",
           "value": 120,
-          "minModels": 4,
+          "minModels": 6,
           "maxModels": 6
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-tyrannocyte",
@@ -911,7 +1214,12 @@
           "value": 90
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-tyrannofex",
@@ -920,23 +1228,37 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st–2nd unit · 1 model",
           "value": 180,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 190
+          "label": "3rd+ unit · 1 model",
+          "value": 190,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
       "paidWargear": [
+        {
+          "name": "Acid spray",
+          "value": 10,
+          "modifiers": []
+        },
         {
           "name": "Rupture cannon",
           "value": 20,
           "modifiers": []
         }
-      ]
+      ],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-tyrant-guard",
@@ -951,13 +1273,18 @@
           "maxModels": 3
         },
         {
-          "label": "4-6 models",
+          "label": "6 models",
           "value": 160,
-          "minModels": 4,
+          "minModels": 6,
           "maxModels": 6
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-venomthropes",
@@ -972,13 +1299,18 @@
           "maxModels": 3
         },
         {
-          "label": "4-6 models",
+          "label": "6 models",
           "value": 110,
-          "minModels": 4,
+          "minModels": 6,
           "maxModels": 6
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-von-ryans-leapers",
@@ -993,13 +1325,18 @@
           "maxModels": 3
         },
         {
-          "label": "4-6 models",
+          "label": "6 models",
           "value": 105,
-          "minModels": 4,
+          "minModels": 6,
           "maxModels": 6
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-winged-hive-tyrant",
@@ -1014,7 +1351,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-winged-tyranid-prime",
@@ -1029,7 +1371,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "unit-zoanthropes",
@@ -1044,13 +1391,18 @@
           "maxModels": 3
         },
         {
-          "label": "4-6 models",
+          "label": "6 models",
           "value": 200,
-          "minModels": 4,
+          "minModels": 6,
           "maxModels": 6
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     }
   ],
   "enhancements": [
@@ -1059,7 +1411,7 @@
       "title": "Cryptophotaic Camouflage",
       "detachment": "Ambush Predators",
       "value": 15,
-      "text": "VON RYAN’S LEAPERS unit only. This unit has -3\" detection range .",
+      "text": "VON RYAN’S LEAPERS unit only. This unit has -3\" detection range.",
       "profile": null
     },
     {
@@ -1072,19 +1424,29 @@
     },
     {
       "id": "enhancement-biophagic-flow-aura",
-      "title": "Biophagic Flow (Aura)",
+      "title": "Biophagic Flow",
       "detachment": "Assimilation Swarm",
       "value": 10,
       "text": "Tyranids model only. While a friendly Harvester model is within 12\" of the bearer, when using the Feed the Swarm ability, that Harvester model can Regenerate one friendly Tyranids unit that is within 9\" instead of one within 6\".",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "enhancement-instinctive-defense",
-      "title": "Instinctive Defense",
+      "title": "Instinctive Defence",
       "detachment": "Assimilation Swarm",
       "value": 15,
-      "text": "TYRANIDS model only. While the bearer is within 6\" of one or more friendly HARVESTER units, when you target this unit with the Heroic Intervention stratagem , that use is -1 CP. In addition, while the bearer is within 6\" of one or more friendly HARVESTER units, models in the bearer's unit have the Fights First ability.",
-      "profile": null
+      "text": "TYRANIDS model only. While the bearer is within 6\" of one or more friendly HARVESTER units, when you target this unit with the Heroic Intervention stratagem, that use is -1 CP. In addition, while the bearer is within 6\" of one or more friendly HARVESTER units, models in the bearer's unit have the Fights First ability.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "enhancement-parasitic-biomorphology",
@@ -1168,11 +1530,16 @@
     },
     {
       "id": "enhancement-synaptic-synergy",
-      "title": "Synaptic Synergy",
+      "title": "Synaptic Strategy",
       "detachment": "Subterranean Assault",
       "value": 15,
-      "text": "Tyranids model only. Once per battle, you can target the bearer’s unit with the Rapid Ingress stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
-      "profile": null
+      "text": "Tyranids model only. Once per battle, you can target the bearer's unit with the Rapid Ingress Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "enhancement-tremor-senses",
@@ -1224,18 +1591,23 @@
     },
     {
       "id": "enhancement-the-dirgeheart-of-kharis-aura",
-      "title": "The Dirgeheart of Kharis (Aura)",
+      "title": "The Dirgeheart of Kharis",
       "detachment": "Synaptic Nexus",
       "value": 15,
       "text": "Tyranids Synapse model only. While an enemy unit is within 9\" of the bearer, worsen that unit's Leadership characteristic by 1.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "enhancement-destabilising-predation",
       "title": "Destabilising Predation",
       "detachment": "Talons of the Norn Queen",
       "value": 20,
-      "text": "NORN EMISSARY unit only. This unit’s ranged attacks have [ANTI-CHARACTER 2+] .",
+      "text": "NORN EMISSARY unit only. This unit’s ranged attacks have [ANTI-CHARACTER 2+].",
       "profile": null
     },
     {
@@ -1243,7 +1615,7 @@
       "title": "Synaptoprescience",
       "detachment": "Talons of the Norn Queen",
       "value": 25,
-      "text": "NORN ASSIMILATOR unit only. This unit has 4+ InSv .",
+      "text": "NORN ASSIMILATOR unit only. This unit has 4+ InSv.",
       "profile": null
     },
     {
@@ -1256,11 +1628,16 @@
     },
     {
       "id": "enhancement-naturalised-camoflage",
-      "title": "Naturalised Camoflage",
+      "title": "Naturalised Camouflage",
       "detachment": "Unending Swarm",
       "value": 30,
       "text": "Tyranids model only. At the start of the first battle round, select up to three friendly Endless Multitude units within 9\" of the bearer. Until the end of the battle round, each time a ranged attack targets one of those units, models in that unit have the Benefit of Cover against that attack.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tyranids",
+        "verifiedAt": "2026-07-29"
+      }
     },
     {
       "id": "enhancement-piercing-talons",
@@ -1283,7 +1660,7 @@
       "title": "Chameleonic",
       "detachment": "Vanguard Onslaught",
       "value": 15,
-      "text": "VANGUARD INVADER model only. This unit has Stealth .",
+      "text": "VANGUARD INVADER model only. This unit has Stealth.",
       "profile": null
     },
     {
@@ -1315,7 +1692,7 @@
       "title": "Elevated Might",
       "detachment": "Warrior Bioform Onslaught",
       "value": 30,
-      "text": "WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP model only. This model’s melee attacks:\n- Can re-roll wound rolls .\n- Have +1 AP .",
+      "text": "WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP model only. This model’s melee attacks:\n- Can re-roll wound rolls.\n- Have +1 AP.",
       "profile": null
     },
     {
@@ -1323,12 +1700,64 @@
       "title": "Ocular Adaptation",
       "detachment": "Warrior Bioform Onslaught",
       "value": 20,
-      "text": "WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP model only. This unit’s melee attacks have +1 to hit rolls .",
+      "text": "WINGED TYRANID PRIME/TYRANID PRIME WITH LASH WHIP model only. This unit’s melee attacks have +1 to hit rolls.",
       "profile": null
     }
   ],
   "audit": {
     "units": 57,
     "enhancements": 34
-  }
+  },
+  "detachments": [
+    {
+      "title": "Ambush Predators",
+      "forceDisposition": "Disruption",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "Assimilation Swarm",
+      "forceDisposition": "Priority Assets",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Crusher Stampede",
+      "forceDisposition": "Purge the Foe",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Invasion Fleet",
+      "forceDisposition": "Take and Hold",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "Subterranean Assault",
+      "forceDisposition": "Disruption",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "Synaptic Nexus",
+      "forceDisposition": "Disruption",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Talons of the Norn Queen",
+      "forceDisposition": "Take and Hold",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "Unending Swarm",
+      "forceDisposition": "Take and Hold",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Vanguard Onslaught",
+      "forceDisposition": "Reconnaissance",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Warrior Bioform Onslaught",
+      "forceDisposition": "Take and Hold",
+      "detachmentPoints": 1
+    }
+  ]
 }

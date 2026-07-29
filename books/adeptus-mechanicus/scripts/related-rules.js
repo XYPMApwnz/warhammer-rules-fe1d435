@@ -8,10 +8,19 @@
     try{candidates=JSON.parse(card.dataset.relatedCandidates||'').map(candidate=>({...candidate,keywords:new Set(candidate.keywords.map(normalize))}));}catch{}
     return {unitId:card.id,id:card.id,slug:card.id.replace(/^unit-/,''),keywords,intrinsicKeywords:keywords,candidates:candidates.length?candidates:undefined,epic:keywords.has('EPIC HERO')};
   };
+  const withKeywordGrants=(rule,unit)=>{
+    let grants=[];
+    try{grants=JSON.parse(rule.closest?.('[data-keyword-grants]')?.dataset.keywordGrants||'[]');}catch{}
+    if(!grants.length)return unit;
+    const gained=grants.filter(grant=>root.WHRelatedRules.matches({v:1,roles:[{id:'grant',side:'friendly',subject:'unit',selector:grant.selector||{}}]},unit)).map(grant=>normalize(grant.keyword));
+    if(!gained.length)return unit;
+    const candidates=(unit.candidates||[unit]).map(candidate=>({...candidate,keywords:new Set([...(candidate.keywords||unit.keywords),...gained])}));
+    return {...unit,keywords:candidates[0].keywords,candidates};
+  };
   function targetMatches(target,unit){return root.WHRelatedRules.matches({targets:[target]},unit);}
   function matches(card,unitCard){
     const unit=unitCard.slug?{...unitCard,unitId:unitCard.unitId||unitCard.id||`unit-${unitCard.slug}`,intrinsicKeywords:unitCard.intrinsicKeywords||unitCard.keywords}:profile(unitCard);
-    try{return root.WHRelatedRules.matches(JSON.parse(card.dataset.eligibility||''),unit);}
+    try{return root.WHRelatedRules.matches(JSON.parse(card.dataset.eligibility||''),withKeywordGrants(card,unit));}
     catch{return false;}
   }
   function getTemplate(){

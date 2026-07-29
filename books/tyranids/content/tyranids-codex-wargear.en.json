@@ -1,0 +1,409 @@
+{
+  "schema": 1,
+  "source": {
+    "title": "Wahapedia Warhammer 40,000 11th Edition · Tyranids",
+    "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/",
+    "checkedAt": "2026-07-29"
+  },
+  "units": [
+    {
+      "title": "Barbed Hierodule",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Barbed-Hierodule",
+      "wargear": [
+        "None"
+      ],
+      "composition": "1 Barbed Hierodule\nThis model is equipped with: 2 bio-cannons; Hierodule scything talons."
+    },
+    {
+      "title": "Barbgaunts",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Barbgaunts",
+      "wargear": [],
+      "composition": "5-10 Barbgaunts\nEvery model is equipped with: barblauncher; chitinous claws and teeth."
+    },
+    {
+      "title": "Biovores",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Biovores",
+      "wargear": [],
+      "composition": "1-3 Biovores\nEvery model is equipped with: Spore Mine launcher; chitin-barbed limbs."
+    },
+    {
+      "title": "Broodlord",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Broodlord",
+      "wargear": [],
+      "composition": "1 Broodlord\nThis model is equipped with: Broodlord claws and talons."
+    },
+    {
+      "title": "Carnifexes",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Carnifexes",
+      "wargear": [
+        "Any number of models can each have their Carnifex extra scything talons replaced with one of the following:\n1 deathspitters with slimer maggots\n1 devourers with brainleech worms\n1 heavy venom cannon\n1 stranglethorn cannon\n1 Carnifex crushing claws",
+        "Any number of models can each have their Carnifex scything talons replaced with one of the following:\n1 deathspitters with slimer maggots\n1 devourers with brainleech worms\n1 Carnifex crushing claws",
+        "Any number of models can each be equipped with 1 bio-plasma.",
+        "Any number of models can each be equipped with 1 spine banks."
+      ],
+      "composition": "1-2 Carnifexes\nEvery model is equipped with: Carnifex scything talons; Carnifex extra scything talons; chitinous claws and teeth."
+    },
+    {
+      "title": "Deathleaper",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Deathleaper",
+      "wargear": [],
+      "composition": "1 Deathleaper – EPIC HERO\nThis model is equipped with: Lictor claws and talons."
+    },
+    {
+      "title": "Dimachaeron",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Dimachaeron",
+      "wargear": [
+        "None"
+      ],
+      "composition": "1 Dimachaeron\nThis model is equipped with: massive scything sickle-talons."
+    },
+    {
+      "title": "Exocrine",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Exocrine",
+      "wargear": [],
+      "composition": "1 Exocrine\nThis model is equipped with: bio-plasmic cannon; powerful limbs."
+    },
+    {
+      "title": "Gargoyles",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Gargoyles",
+      "wargear": [],
+      "composition": "10-20 Gargoyles\nEvery model is equipped with: fleshborer; blinding venom."
+    },
+    {
+      "title": "Genestealers",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Genestealers",
+      "wargear": [],
+      "composition": "5-10 Genestealers\nEvery model is equipped with: Genestealer claws and talons."
+    },
+    {
+      "title": "Harpy",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Harpy",
+      "wargear": [
+        "This model’s twin stranglethorn cannon can be replaced with 1 twin heavy venom cannon."
+      ],
+      "composition": "1 Harpy\nThis model is equipped with: stinger salvoes; twin stranglethorn cannon; scything wings."
+    },
+    {
+      "title": "Harridan",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Harridan",
+      "wargear": [
+        "None"
+      ],
+      "composition": "1 Harridan\nThis model is equipped with: 2 dire bio-cannons; gargantuan scything talons."
+    },
+    {
+      "title": "Haruspex",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Haruspex",
+      "wargear": [],
+      "composition": "1 Haruspex\nThis model is equipped with: grasping tongue; ravenous maw; shovelling claws."
+    },
+    {
+      "title": "Hierophant",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Hierophant",
+      "wargear": [
+        "None"
+      ],
+      "composition": "1 Hierophant\nThis model is equipped with: bio-plasma torrent; 2 dire bio-cannons; lashwhip pods; titanic scything talons."
+    },
+    {
+      "title": "Hive Crone",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Hive-Crone",
+      "wargear": [],
+      "composition": "1 Hive Crone\nThis model is equipped with: drool cannon; stinger salvoes; tentaclids; scything wings; thorax spur."
+    },
+    {
+      "title": "Hive Guard",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Hive-Guard",
+      "wargear": [
+        "Any number of models can each have their shockcannon replaced with 1 impaler cannon."
+      ],
+      "composition": "3-6 Hive Guard\nEvery model is equipped with: shockcannon; chitinous claws and teeth."
+    },
+    {
+      "title": "Hive Tyrant",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Hive-Tyrant",
+      "wargear": [
+        "This model’s monstrous bonesword and lash whip can be replaced with one of the following:\n1 heavy venom cannon\n1 stranglethorn cannon\n1 monstrous scything talons",
+        "This model’s monstrous scything talons can be replaced with one of the following:\n1 heavy venom cannon*\n1 stranglethorn cannon*",
+        "*This model cannot be equipped with both a stranglethorn cannon and a heavy venom cannon. This model cannot be equipped with more than 1 heavy venom cannon, and it cannot be equipped with more than 1 stranglethorn cannon."
+      ],
+      "composition": "1 Hive Tyrant\nThis model is equipped with: monstrous bonesword and lash whip; monstrous scything talons."
+    },
+    {
+      "title": "Hormagaunts",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Hormagaunts",
+      "wargear": [],
+      "composition": "10-20 Hormagaunts\nEvery model is equipped with: Hormagaunt talons."
+    },
+    {
+      "title": "Hyperadapted Raveners",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Hyperadapted-Raveners",
+      "wargear": [],
+      "composition": "1 Ravener Prime\n4 Raveners\nThe Ravener Prime is equipped with: Prime claws and talons.\n\n3 Raveners are equipped with: Ravener heavy claws and talons.\n\n1 Ravener is equipped with: venom bolt; Ravener heavy claws and talons."
+    },
+    {
+      "title": "Lictor",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Lictor",
+      "wargear": [],
+      "composition": "1 Lictor\nThis model is equipped with: Lictor claws and talons."
+    },
+    {
+      "title": "Malanthrope",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Malanthrope",
+      "wargear": [
+        "None"
+      ],
+      "composition": "1 Malanthrope\nThis model is equipped with: grasping tail."
+    },
+    {
+      "title": "Maleceptor",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Maleceptor",
+      "wargear": [],
+      "composition": "1 Maleceptor\nThis model is equipped with: psychic overload; massive scything talons."
+    },
+    {
+      "title": "Mawloc",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Mawloc",
+      "wargear": [],
+      "composition": "1 Mawloc\nThis model is equipped with: distensible jaw; Mawloc scything talons."
+    },
+    {
+      "title": "Mucolid Spores",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Mucolid-Spores",
+      "wargear": [],
+      "composition": "1-2 Mucolid Spores\nEvery model is equipped with: nothing."
+    },
+    {
+      "title": "Neurogaunts",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Neurogaunts",
+      "wargear": [],
+      "composition": "1-2 Neurogaunt Nodebeasts*\n10-20 Neurogaunts\nEvery model is equipped with: chitinous claws and teeth.\n\n*This unit can only contain 2 Neurogaunt Nodebeasts if it contains 20 Neurogaunts."
+    },
+    {
+      "title": "Neurolictor",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Neurolictor",
+      "wargear": [],
+      "composition": "1 Neurolictor\nThis model is equipped with: piercing claws and talons."
+    },
+    {
+      "title": "Neurotyrant",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Neurotyrant",
+      "wargear": [
+        "None"
+      ],
+      "composition": "1 Neurotyrant\nThis model is equipped with: Psychic Scream; Neurotyrant claws and lashes."
+    },
+    {
+      "title": "Norn Assimilator",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Norn-Assimilator",
+      "wargear": [],
+      "composition": "1 Norn Assimilator\nThis model is equipped with: toxinjector harpoon; monstrous scything talons."
+    },
+    {
+      "title": "Norn Emissary",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Norn-Emissary",
+      "wargear": [],
+      "composition": "1 Norn Emissary\nThis model is equipped with: Psychic Tendril; monstrous scything talons; monstrous rending claws."
+    },
+    {
+      "title": "Old One Eye",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Old-One-Eye",
+      "wargear": [],
+      "composition": "1 Old One Eye – EPIC HERO\nThis model is equipped with: Old One Eye’s claws and talons."
+    },
+    {
+      "title": "Parasite of Mortrex",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Parasite-Of-Mortrex",
+      "wargear": [],
+      "composition": "1 Parasite of Mortrex\nThis model is equipped with: barbed ovipositor; clawed limbs."
+    },
+    {
+      "title": "Psychophage",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Psychophage",
+      "wargear": [],
+      "composition": "1 Psychophage\nThis model is equipped with: psychoclastic torrent; talons and betentacled maw."
+    },
+    {
+      "title": "Pyrovores",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Pyrovores",
+      "wargear": [],
+      "composition": "1-3 Pyrovores\nEvery model is equipped with: flamespurt; chitin-barbed limbs."
+    },
+    {
+      "title": "Raveners",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Raveners",
+      "wargear": [
+        "None"
+      ],
+      "composition": "5 Raveners\nEvery model is equipped with: Ravener claws and talons."
+    },
+    {
+      "title": "Ripper Swarms",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Ripper-Swarms",
+      "wargear": [
+        "All models in this unit can each be equipped with 1 spinemaws."
+      ],
+      "composition": "1-3 Ripper Swarms\nEvery model is equipped with: chitinous claws and teeth."
+    },
+    {
+      "title": "Screamer-killer",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Screamer-killer",
+      "wargear": [],
+      "composition": "1 Screamer-Killer\nThis model is equipped with: bio-plasmic scream; Screamer-Killer talons."
+    },
+    {
+      "title": "Scythed Hierodule",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Scythed-Hierodule",
+      "wargear": [
+        "None"
+      ],
+      "composition": "1 Scythed Hierodule\nThis model is equipped with: bio-acid spray; Hierodule scything talons."
+    },
+    {
+      "title": "Sky-slasher Swarms",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Sky-slasher-Swarms",
+      "wargear": [
+        "Any number of models can each be equipped with 1 spinemaws."
+      ],
+      "composition": "3 Sky-slasher Swarms\nEvery model is equipped with: claws and teeth."
+    },
+    {
+      "title": "Spore Mines",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Spore-Mines",
+      "wargear": [],
+      "composition": "3-6 Spore Mines\nEvery model is equipped with: nothing."
+    },
+    {
+      "title": "Sporocyst",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Sporocyst",
+      "wargear": [],
+      "composition": "1 Sporocyst\nThis model is equipped with: Sporocyst bio-weapons; flensing whips."
+    },
+    {
+      "title": "Termagants",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Termagants",
+      "wargear": [
+        "All models in this unit can each have their fleshborer replaced with 1 Termagant devourer.",
+        "All models in this unit can each have their fleshborer replaced with 1 Termagant spinefists.",
+        "For every 10 models in this unit, 1 model’s ranged weapon can be replaced with 1 shardlauncher",
+        "For every 10 models in this unit, 1 model’s ranged weapon can be replaced with 1 spike rifle.",
+        "For every 10 models in this unit, 1 model’s ranged weapon can be replaced with 1 strangleweb"
+      ],
+      "composition": "10-20 Termagants\nEvery model is equipped with: fleshborer; chitinous claws and teeth."
+    },
+    {
+      "title": "Tervigon",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Tervigon",
+      "wargear": [
+        "This model’s massive scything talons can be replaced with 1 massive crushing claws."
+      ],
+      "composition": "1 Tervigon\nThis model is equipped with: stinger salvoes; massive scything talons."
+    },
+    {
+      "title": "The Red Terror",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/The-Red-Terror",
+      "wargear": [
+        "None."
+      ],
+      "composition": "1 The Red Terror – EPIC HERO\nThis model is equipped with: scything talons, gaping maw."
+    },
+    {
+      "title": "The Swarmlord",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/The-Swarmlord",
+      "wargear": [],
+      "composition": "1 Swarmlord – EPIC HERO\nThis model is equipped with: Synaptic pulse; bone sabres."
+    },
+    {
+      "title": "Toxicrene",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Toxicrene",
+      "wargear": [],
+      "composition": "1 Toxicrene\nThis model is equipped with: massive toxic lashes."
+    },
+    {
+      "title": "Trygon",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Trygon",
+      "wargear": [],
+      "composition": "1 Trygon\nThis model is equipped with: bio-electric pulse; Trygon scything talons."
+    },
+    {
+      "title": "Tyranid Prime with Lash Whip",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Tyranid-Prime-with-Lash-Whip",
+      "wargear": [
+        "None."
+      ],
+      "composition": "1 Tyranid Prime with Lash Whip\nThis model is equipped with: 1 rending claw; 1 lash whip; 1 scything talons."
+    },
+    {
+      "title": "Tyranid Warriors with Melee Bio-Weapons",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Tyranid-Warriors-With-Melee-Bio-weapons",
+      "wargear": [],
+      "composition": "1 Tyranid Prime\n2-5 Tyranid Warriors\nEvery model is equipped with: Tyranid Warrior claws and talons."
+    },
+    {
+      "title": "Tyranid Warriors with Ranged Bio-Weapons",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Tyranid-Warriors-With-Ranged-Bio-weapons",
+      "wargear": [
+        "Any number of models can each have their devourer replaced with one of the following:\n1 deathspitter\n1 spinefists",
+        "For every 3 models in this unit, 1 model’s devourer can be replaced with 1 barbed strangler.",
+        "For every 3 models in this unit, 1 model’s devourer can be replaced with 1 venom cannon."
+      ],
+      "composition": "1 Tyranid Prime\n2-5 Tyranid Warriors\nEvery model is equipped with: devourer; Tyranid Warrior claws and talons."
+    },
+    {
+      "title": "Tyrannocyte",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Tyrannocyte",
+      "wargear": [],
+      "composition": "1 Tyrannocyte\nThis model is equipped with: Tyrannocyte bio-weapons; flensing whips."
+    },
+    {
+      "title": "Tyrannofex",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Tyrannofex",
+      "wargear": [
+        "This model’s fleshborer hive can be replaced with one of the following:\n1 acid spray\n1 rupture cannon"
+      ],
+      "composition": "1 Tyrannofex\nThis model is equipped with: fleshborer hive; stinger salvoes; powerful limbs."
+    },
+    {
+      "title": "Tyrant Guard",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Tyrant-Guard",
+      "wargear": [
+        "Any number of models can each have their scything talons and rending claws replaced with one of the following:\n1 bone cleaver, lash whip and rending claws\n1 crushing claws and rending claws"
+      ],
+      "composition": "3-6 Tyrant Guard\nEvery model is equipped with: scything talons and rending claws."
+    },
+    {
+      "title": "Venomthropes",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Venomthropes",
+      "wargear": [],
+      "composition": "3-6 Venomthropes\nEvery model is equipped with: toxic lashes."
+    },
+    {
+      "title": "Von Ryan's Leapers",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Von-Ryan-s-Leapers",
+      "wargear": [],
+      "composition": "3-6 Von Ryan’s Leapers\nEvery model is equipped with: Leaper’s talons."
+    },
+    {
+      "title": "Winged Hive Tyrant",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Winged-Hive-Tyrant",
+      "wargear": [
+        "This model’s monstrous bonesword and lash whip can be replaced with one of the following:\n1 heavy venom cannon\n1 stranglethorn cannon\n1 monstrous scything talons"
+      ],
+      "composition": "1 Winged Hive Tyrant\nThis model is equipped with: monstrous bonesword and lash whip; Tyrant talons."
+    },
+    {
+      "title": "Winged Tyranid Prime",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Winged-Tyranid-Prime",
+      "wargear": [
+        "None"
+      ],
+      "composition": "1 Winged Tyranid Prime\nThis model is equipped with: Prime talons."
+    },
+    {
+      "title": "Zoanthropes",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Zoanthropes",
+      "wargear": [],
+      "composition": "1 Neurothrope\n2-5 Zoanthropes\nEvery model is equipped with: Warp Blast; chitinous claws and teeth."
+    }
+  ]
+}

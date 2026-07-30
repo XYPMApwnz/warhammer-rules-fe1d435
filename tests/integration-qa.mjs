@@ -74,7 +74,7 @@ for(const [slug,book] of Object.entries(books)){
   check(`${slug} shell is precached`,missing.length===0,missing.join(', '));
 }
 const generatedArmyBooks=fs.readdirSync(path.join(root,'books'),{withFileTypes:true}).filter(entry=>entry.isDirectory()).map(entry=>entry.name).filter(slug=>exists(`books/${slug}/book.config.json`)&&exists(`books/${slug}/reader.html`)&&exists(`books/${slug}/scripts/data.js`));
-const visibleGeneratedArmyBooks=new Set(['tyranids']);
+const visibleGeneratedArmyBooks=new Set(['tyranids','tau-empire']);
 for(const slug of generatedArmyBooks){
   const html=read(`books/${slug}/reader.html`),app=read(`books/${slug}/scripts/app.js`),mobile=read(`books/${slug}/mobile/index.html`),bookCss=read(`books/${slug}/styles/book.css`),context=JSON.parse(read(`glossary/contexts/${slug}.json`)),config=JSON.parse(read(`books/${slug}/book.config.json`));
   const fallbackName=slug.replaceAll('-','_').toUpperCase()+'_FALLBACK';

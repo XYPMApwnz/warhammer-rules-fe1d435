@@ -1220,28 +1220,7 @@
             "unit-hive-tyrant",
             "unit-neurotyrant",
             "unit-tervigon",
-            "unit-winged-hive-tyrant",
-            "unit-tyrannocyte",
-            "unit-carnifexes",
-            "unit-exocrine",
-            "unit-harpy",
-            "unit-haruspex",
-            "unit-hive-crone",
-            "unit-maleceptor",
-            "unit-mawloc",
-            "unit-norn-assimilator",
-            "unit-norn-emissary",
-            "unit-psychophage",
-            "unit-screamer-killer",
-            "unit-sporocyst",
-            "unit-toxicrene",
-            "unit-trygon",
-            "unit-tyrannofex",
-            "unit-harridan",
-            "unit-hierophant",
-            "unit-barbed-hierodule",
-            "unit-dimachaeron",
-            "unit-scythed-hierodule"
+            "unit-winged-hive-tyrant"
           ],
           "noneKeywords": [
             "EPIC HERO"
@@ -1264,28 +1243,7 @@
             "unit-hive-tyrant",
             "unit-neurotyrant",
             "unit-tervigon",
-            "unit-winged-hive-tyrant",
-            "unit-tyrannocyte",
-            "unit-carnifexes",
-            "unit-exocrine",
-            "unit-harpy",
-            "unit-haruspex",
-            "unit-hive-crone",
-            "unit-maleceptor",
-            "unit-mawloc",
-            "unit-norn-assimilator",
-            "unit-norn-emissary",
-            "unit-psychophage",
-            "unit-screamer-killer",
-            "unit-sporocyst",
-            "unit-toxicrene",
-            "unit-trygon",
-            "unit-tyrannofex",
-            "unit-harridan",
-            "unit-hierophant",
-            "unit-barbed-hierodule",
-            "unit-dimachaeron",
-            "unit-scythed-hierodule"
+            "unit-winged-hive-tyrant"
           ],
           "noneKeywords": [
             "EPIC HERO"
@@ -1308,28 +1266,7 @@
             "unit-hive-tyrant",
             "unit-neurotyrant",
             "unit-tervigon",
-            "unit-winged-hive-tyrant",
-            "unit-tyrannocyte",
-            "unit-carnifexes",
-            "unit-exocrine",
-            "unit-harpy",
-            "unit-haruspex",
-            "unit-hive-crone",
-            "unit-maleceptor",
-            "unit-mawloc",
-            "unit-norn-assimilator",
-            "unit-norn-emissary",
-            "unit-psychophage",
-            "unit-screamer-killer",
-            "unit-sporocyst",
-            "unit-toxicrene",
-            "unit-trygon",
-            "unit-tyrannofex",
-            "unit-harridan",
-            "unit-hierophant",
-            "unit-barbed-hierodule",
-            "unit-dimachaeron",
-            "unit-scythed-hierodule"
+            "unit-winged-hive-tyrant"
           ],
           "noneKeywords": [
             "EPIC HERO"
@@ -1352,28 +1289,7 @@
             "unit-hive-tyrant",
             "unit-neurotyrant",
             "unit-tervigon",
-            "unit-winged-hive-tyrant",
-            "unit-tyrannocyte",
-            "unit-carnifexes",
-            "unit-exocrine",
-            "unit-harpy",
-            "unit-haruspex",
-            "unit-hive-crone",
-            "unit-maleceptor",
-            "unit-mawloc",
-            "unit-norn-assimilator",
-            "unit-norn-emissary",
-            "unit-psychophage",
-            "unit-screamer-killer",
-            "unit-sporocyst",
-            "unit-toxicrene",
-            "unit-trygon",
-            "unit-tyrannofex",
-            "unit-harridan",
-            "unit-hierophant",
-            "unit-barbed-hierodule",
-            "unit-dimachaeron",
-            "unit-scythed-hierodule"
+            "unit-winged-hive-tyrant"
           ],
           "noneKeywords": [
             "EPIC HERO"
@@ -1518,10 +1434,14 @@
             "unit-tyranid-prime-with-lash-whip",
             "unit-winged-hive-tyrant",
             "unit-winged-tyranid-prime",
-            "unit-malanthrope"
+            "unit-malanthrope",
+            "unit-trygon"
           ],
           "noneKeywords": [
             "EPIC HERO"
+          ],
+          "allKeywords": [
+            "CHARACTER"
           ]
         }
       },
@@ -1547,10 +1467,14 @@
             "unit-tyranid-prime-with-lash-whip",
             "unit-winged-hive-tyrant",
             "unit-winged-tyranid-prime",
-            "unit-malanthrope"
+            "unit-malanthrope",
+            "unit-trygon"
           ],
           "noneKeywords": [
             "EPIC HERO"
+          ],
+          "allKeywords": [
+            "CHARACTER"
           ]
         }
       },
@@ -1570,10 +1494,14 @@
             "unit-hyperadapted-raveners",
             "unit-parasite-of-mortrex",
             "unit-winged-hive-tyrant",
-            "unit-winged-tyranid-prime"
+            "unit-winged-tyranid-prime",
+            "unit-trygon"
           ],
           "noneKeywords": [
             "EPIC HERO"
+          ],
+          "allKeywords": [
+            "CHARACTER"
           ]
         }
       },
@@ -1594,6 +1522,9 @@
           ],
           "noneKeywords": [
             "EPIC HERO"
+          ],
+          "allKeywords": [
+            "CHARACTER"
           ]
         }
       },
@@ -1614,10 +1545,7 @@
             "unit-hive-tyrant",
             "unit-neurotyrant",
             "unit-tervigon",
-            "unit-winged-hive-tyrant",
-            "unit-maleceptor",
-            "unit-norn-emissary",
-            "unit-zoanthropes"
+            "unit-winged-hive-tyrant"
           ],
           "noneKeywords": [
             "EPIC HERO"
@@ -1645,13 +1573,6 @@
             "unit-tyranid-prime-with-lash-whip",
             "unit-winged-hive-tyrant",
             "unit-winged-tyranid-prime",
-            "unit-maleceptor",
-            "unit-norn-assimilator",
-            "unit-norn-emissary",
-            "unit-neurolictor",
-            "unit-tyranid-warriors-with-melee-bio-weapons",
-            "unit-tyranid-warriors-with-ranged-bio-weapons",
-            "unit-zoanthropes",
             "unit-malanthrope"
           ],
           "noneKeywords": [
@@ -1680,13 +1601,6 @@
             "unit-tyranid-prime-with-lash-whip",
             "unit-winged-hive-tyrant",
             "unit-winged-tyranid-prime",
-            "unit-maleceptor",
-            "unit-norn-assimilator",
-            "unit-norn-emissary",
-            "unit-neurolictor",
-            "unit-tyranid-warriors-with-melee-bio-weapons",
-            "unit-tyranid-warriors-with-ranged-bio-weapons",
-            "unit-zoanthropes",
             "unit-malanthrope"
           ],
           "noneKeywords": [
@@ -1715,13 +1629,6 @@
             "unit-tyranid-prime-with-lash-whip",
             "unit-winged-hive-tyrant",
             "unit-winged-tyranid-prime",
-            "unit-maleceptor",
-            "unit-norn-assimilator",
-            "unit-norn-emissary",
-            "unit-neurolictor",
-            "unit-tyranid-warriors-with-melee-bio-weapons",
-            "unit-tyranid-warriors-with-ranged-bio-weapons",
-            "unit-zoanthropes",
             "unit-malanthrope"
           ],
           "noneKeywords": [
@@ -1906,18 +1813,7 @@
             "unit-hyperadapted-raveners",
             "unit-parasite-of-mortrex",
             "unit-winged-hive-tyrant",
-            "unit-winged-tyranid-prime",
-            "unit-gargoyles",
-            "unit-tyrannocyte",
-            "unit-harpy",
-            "unit-hive-crone",
-            "unit-mawloc",
-            "unit-trygon",
-            "unit-genestealers",
-            "unit-lictor",
-            "unit-neurolictor",
-            "unit-raveners",
-            "unit-von-ryans-leapers"
+            "unit-winged-tyranid-prime"
           ],
           "noneKeywords": [
             "EPIC HERO"
@@ -1999,18 +1895,7 @@
             "unit-hyperadapted-raveners",
             "unit-parasite-of-mortrex",
             "unit-winged-hive-tyrant",
-            "unit-winged-tyranid-prime",
-            "unit-gargoyles",
-            "unit-tyrannocyte",
-            "unit-harpy",
-            "unit-hive-crone",
-            "unit-mawloc",
-            "unit-trygon",
-            "unit-genestealers",
-            "unit-lictor",
-            "unit-neurolictor",
-            "unit-raveners",
-            "unit-von-ryans-leapers"
+            "unit-winged-tyranid-prime"
           ],
           "noneKeywords": [
             "EPIC HERO"
@@ -2065,5 +1950,21 @@
         "payPointsPerOwner": true
       }
     }
+  },
+  "keywordGrants": {
+    "subterranean-assault": [
+      {
+        "sourceRuleId": "subterranean-assault",
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-trygon"
+          ]
+        },
+        "keyword": "CHARACTER",
+        "selectionRequired": true,
+        "maxSelected": 2
+      }
+    ]
   }
 }

@@ -192,7 +192,7 @@ const unitIds=new Set(rules.datasheets.map(unit=>unit.id));
 const knownKeywords=new Set(rules.datasheets.flatMap(unit=>unit.keywords).map(keyword=>keyword.toUpperCase()));
 for(const grants of Object.values(relatedRulesConfig.keywordGrants||{}))for(const grant of grants)knownKeywords.add(grant.keyword.toUpperCase());
 const eligibilityTargets=allEligibleItems.flatMap(item=>item.eligibility?.targets||[]);
-check('all 51 Stratagems and 34 Enhancements have explicit eligibility',allStratagems.length===51&&allEnhancements.length===34&&allEligibleItems.every(item=>item.id&&item.eligibility?.targets?.some(target=>target.side==='friendly')));
+check('all 51 Stratagems and 34 Enhancements have explicit eligibility',allStratagems.length===51&&allEnhancements.length===34&&allEligibleItems.every(item=>item.id&&(item.eligibility?.owner||item.eligibility?.targets?.some(target=>target.side==='friendly'))));
 check('eligibility IDs are stable and unique',new Set(allEligibleItems.map(item=>item.id)).size===allEligibleItems.length&&allStratagems.every(item=>item.id.startsWith('stratagem-'))&&allEnhancements.every(item=>item.id.startsWith('enhancement-')));
 check('eligibility references known datasheets and keywords',eligibilityTargets.every(target=>(target.units||[]).every(id=>unitIds.has(id))&&[...(target.all||[]),...(target.any||[]),...(target.none||[])].every(keyword=>knownKeywords.has(keyword.toUpperCase()))));
 check('Related Rules uses structured eligibility only',read('scripts/related-rules.js').includes("JSON.parse(card.dataset.eligibility||'')")&&!read('scripts/related-rules.js').includes("text.includes("));

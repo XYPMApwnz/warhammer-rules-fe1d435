@@ -53,12 +53,15 @@ for(const entry of fs.readdirSync(booksRoot,{withFileTypes:true})){
   const profiles=profilesFrom(reader),stratagems=allDetachments.flatMap(detachment=>detachment.stratagems||[]);
   const officialIds=stratagems.map(rule=>normalizeRuleId(rule.id)),generatedIds=[...related.matchAll(/<article class="stratagem surface"[^>]*data-rule-id="([^"]+)"/g)].map(match=>normalizeRuleId(match[1])).filter(id=>!id.startsWith('core-stratagem-'));
   const detachmentByRule=new Map(allDetachments.flatMap(detachment=>(detachment.stratagems||[]).map(rule=>[normalizeRuleId(rule.id),detachment.id])));
-  const applyGrants=(profile,ruleId)=>{
-    const grants=relatedContract.keywordGrants?.[detachmentByRule.get(ruleId)]||[];
-    const gained=grants.filter(grant=>matcher.matches({v:1,roles:[{id:'grant',side:'friendly',subject:'unit',selector:grant.selector||{}}]},profile)).map(grant=>String(grant.keyword).toUpperCase());
-    if(!gained.length)return profile;
+  const detachmentByEnhancement=new Map(allDetachments.flatMap(detachment=>(detachment.enhancements||[]).map(rule=>[normalizeEnhancementId(rule.id),detachment.id])));
+  const applyGrants=(profile,ruleId,detachmentMap=detachmentByRule)=>{
+    const grants=relatedContract.keywordGrants?.[String(detachmentMap.get(ruleId)||'').replace(/^detachment-/,'')]||[];
+    const applicable=grants.filter(grant=>matcher.matches({v:1,roles:[{id:'grant',side:'friendly',subject:grant.subject||'unit',selector:grant.selector||{}}]},profile));
+    const gained=applicable.filter(grant=>!grant.selectionRequired).map(grant=>String(grant.keyword).toUpperCase());
+    const conditionalKeywords=new Set(applicable.filter(grant=>grant.selectionRequired).map(grant=>String(grant.keyword).toUpperCase()));
+    if(!gained.length&&!conditionalKeywords.size)return profile;
     const candidates=(profile.candidates||[profile]).map(candidate=>({...candidate,keywords:new Set([...(candidate.keywords||profile.keywords),...gained])}));
-    return {...profile,keywords:candidates[0].keywords,candidates};
+    return {...profile,keywords:candidates[0].keywords,candidates,conditionalKeywords};
   };
   assert.ok(profiles.length,`${config.id}: no datasheet profiles in generated reader`);
   assert.equal(new Set(officialIds).size,officialIds.length,`${config.id}: duplicate official Stratagem id`);
@@ -91,8 +94,9 @@ for(const entry of fs.readdirSync(booksRoot,{withFileTypes:true})){
       if(!isUpgrade)assert.ok(selectors.every(selector=>(selector.noneKeywords||[]).includes('EPIC HERO')),`${config.id}/${id}: standard Enhancement does not explicitly exclude Epic Heroes`);
     }
     assert.ok(selectors.flatMap(selector=>selector.unitIds||[]).every(unitId=>profiles.some(profile=>profile.unitId===unitId)),`${config.id}/${id}: Enhancement references an unknown datasheet`);
-    assert.ok(profiles.some(profile=>matcher.matches(rule,profile)),`${config.id}/${id}: no real datasheet satisfies its Enhancement owner contract`);
-    if(isOwnerContract&&!isUpgrade)assert.ok(profiles.filter(profile=>profile.keywords.has('EPIC HERO')).every(profile=>!matcher.matches(rule,profile)),`${config.id}/${id}: standard Enhancement is offered to an Epic Hero`);
+    const enhancementId=normalizeEnhancementId(id);
+    assert.ok(profiles.some(profile=>matcher.matches(rule,applyGrants(profile,enhancementId,detachmentByEnhancement))),`${config.id}/${id}: no real datasheet satisfies its Enhancement owner contract`);
+    if(isOwnerContract&&!isUpgrade)assert.ok(profiles.filter(profile=>profile.keywords.has('EPIC HERO')).every(profile=>!matcher.matches(rule,applyGrants(profile,enhancementId,detachmentByEnhancement))),`${config.id}/${id}: standard Enhancement is offered to an Epic Hero`);
   }
   audited.push(`${config.title}: ${stratagems.length} Stratagems × ${profiles.length} datasheets; ${negatives} restrictive contracts have real negatives`);
 }

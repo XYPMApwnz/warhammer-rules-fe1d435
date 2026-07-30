@@ -12,10 +12,12 @@
     let grants=[];
     try{grants=JSON.parse(rule.closest('[data-keyword-grants]')?.dataset.keywordGrants||'[]');}catch{}
     if(!grants.length)return unit;
-    const gained=grants.filter(grant=>root.WHRelatedRules.matches({v:1,roles:[{id:'grant',side:'friendly',subject:'unit',selector:grant.selector||{}}]},unit)).map(grant=>normalize(grant.keyword));
-    if(!gained.length)return unit;
+    const applicable=grants.filter(grant=>root.WHRelatedRules.matches({v:1,roles:[{id:'grant',side:'friendly',subject:grant.subject||'unit',selector:grant.selector||{}}]},unit));
+    const gained=applicable.filter(grant=>!grant.selectionRequired).map(grant=>normalize(grant.keyword));
+    const conditional=new Set(applicable.filter(grant=>grant.selectionRequired).map(grant=>normalize(grant.keyword)));
+    if(!gained.length&&!conditional.size)return unit;
     const candidates=(unit.candidates||[unit]).map(candidate=>({...candidate,keywords:new Set([...(candidate.keywords||unit.keywords),...gained])}));
-    return {...unit,keywords:candidates[0].keywords,candidates};
+    return {...unit,keywords:candidates[0].keywords,candidates,conditionalKeywords:conditional};
   };
   const match=(rule,unit)=>{
     try{return root.WHRelatedRules.match(JSON.parse(rule.dataset.eligibility||''),withKeywordGrants(rule,unit));}

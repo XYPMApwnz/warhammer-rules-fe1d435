@@ -1,0 +1,1310 @@
+{
+  "schema": 1,
+  "books": {
+    "death-guard": {
+      "enhancement-daemon-weapon-of-nurgle": {
+        "match": [
+          "unit-biologus-putrifier",
+          "unit-daemon-prince-of-nurgle",
+          "unit-daemon-prince-of-nurgle-with-wings",
+          "unit-death-guard-chaos-lord",
+          "unit-death-guard-chaos-lord-in-terminator-armour",
+          "unit-death-guard-sorcerer-in-terminator-armour",
+          "unit-foul-blightspawn",
+          "unit-icon-bearer",
+          "unit-lord-of-contagion",
+          "unit-lord-of-poxes",
+          "unit-lord-of-virulence",
+          "unit-malignant-plaguecaster",
+          "unit-noxious-blightbringer",
+          "unit-plague-surgeon",
+          "unit-tallyman"
+        ],
+        "conditional": []
+      },
+      "enhancement-furnace-of-plagues": {
+        "match": [
+          "unit-biologus-putrifier",
+          "unit-daemon-prince-of-nurgle",
+          "unit-daemon-prince-of-nurgle-with-wings",
+          "unit-death-guard-chaos-lord",
+          "unit-death-guard-chaos-lord-in-terminator-armour",
+          "unit-death-guard-sorcerer-in-terminator-armour",
+          "unit-foul-blightspawn",
+          "unit-icon-bearer",
+          "unit-lord-of-contagion",
+          "unit-lord-of-poxes",
+          "unit-lord-of-virulence",
+          "unit-malignant-plaguecaster",
+          "unit-noxious-blightbringer",
+          "unit-plague-surgeon",
+          "unit-tallyman"
+        ],
+        "conditional": []
+      },
+      "enhancement-arch-contaminator": {
+        "match": [
+          "unit-biologus-putrifier",
+          "unit-daemon-prince-of-nurgle",
+          "unit-daemon-prince-of-nurgle-with-wings",
+          "unit-death-guard-chaos-lord",
+          "unit-death-guard-chaos-lord-in-terminator-armour",
+          "unit-death-guard-sorcerer-in-terminator-armour",
+          "unit-foul-blightspawn",
+          "unit-icon-bearer",
+          "unit-lord-of-contagion",
+          "unit-lord-of-poxes",
+          "unit-lord-of-virulence",
+          "unit-malignant-plaguecaster",
+          "unit-noxious-blightbringer",
+          "unit-plague-surgeon",
+          "unit-tallyman"
+        ],
+        "conditional": []
+      },
+      "enhancement-revolting-regeneration": {
+        "match": [
+          "unit-biologus-putrifier",
+          "unit-daemon-prince-of-nurgle",
+          "unit-daemon-prince-of-nurgle-with-wings",
+          "unit-death-guard-chaos-lord",
+          "unit-death-guard-chaos-lord-in-terminator-armour",
+          "unit-death-guard-sorcerer-in-terminator-armour",
+          "unit-foul-blightspawn",
+          "unit-icon-bearer",
+          "unit-lord-of-contagion",
+          "unit-lord-of-poxes",
+          "unit-lord-of-virulence",
+          "unit-malignant-plaguecaster",
+          "unit-noxious-blightbringer",
+          "unit-plague-surgeon",
+          "unit-tallyman"
+        ],
+        "conditional": []
+      },
+      "enhancement-eye-of-affliction": {
+        "match": [
+          "unit-biologus-putrifier",
+          "unit-daemon-prince-of-nurgle",
+          "unit-daemon-prince-of-nurgle-with-wings",
+          "unit-death-guard-chaos-lord",
+          "unit-death-guard-chaos-lord-in-terminator-armour",
+          "unit-death-guard-sorcerer-in-terminator-armour",
+          "unit-foul-blightspawn",
+          "unit-icon-bearer",
+          "unit-lord-of-contagion",
+          "unit-lord-of-poxes",
+          "unit-lord-of-virulence",
+          "unit-malignant-plaguecaster",
+          "unit-noxious-blightbringer",
+          "unit-plague-surgeon",
+          "unit-tallyman"
+        ],
+        "conditional": []
+      },
+      "enhancement-bilemaw-blight": {
+        "match": [
+          "unit-malignant-plaguecaster"
+        ],
+        "conditional": []
+      },
+      "enhancement-shriekworm-familiar": {
+        "match": [
+          "unit-biologus-putrifier",
+          "unit-daemon-prince-of-nurgle",
+          "unit-daemon-prince-of-nurgle-with-wings",
+          "unit-death-guard-chaos-lord",
+          "unit-death-guard-chaos-lord-in-terminator-armour",
+          "unit-death-guard-sorcerer-in-terminator-armour",
+          "unit-foul-blightspawn",
+          "unit-icon-bearer",
+          "unit-lord-of-contagion",
+          "unit-lord-of-poxes",
+          "unit-lord-of-virulence",
+          "unit-malignant-plaguecaster",
+          "unit-noxious-blightbringer",
+          "unit-plague-surgeon",
+          "unit-tallyman"
+        ],
+        "conditional": []
+      },
+      "enhancement-tendrilous-emissions": {
+        "match": [
+          "unit-lord-of-virulence"
+        ],
+        "conditional": []
+      },
+      "enhancement-final-ingredient": {
+        "match": [
+          "unit-biologus-putrifier"
+        ],
+        "conditional": []
+      },
+      "enhancement-visions-of-virulence": {
+        "match": [
+          "unit-malignant-plaguecaster"
+        ],
+        "conditional": []
+      },
+      "enhancement-needle-of-nurgle": {
+        "match": [
+          "unit-plague-surgeon"
+        ],
+        "conditional": []
+      },
+      "enhancement-cornucophagus": {
+        "match": [
+          "unit-lord-of-poxes"
+        ],
+        "conditional": []
+      },
+      "enhancement-beckoning-blight": {
+        "match": [
+          "unit-biologus-putrifier",
+          "unit-daemon-prince-of-nurgle",
+          "unit-daemon-prince-of-nurgle-with-wings",
+          "unit-death-guard-chaos-lord",
+          "unit-death-guard-chaos-lord-in-terminator-armour",
+          "unit-death-guard-sorcerer-in-terminator-armour",
+          "unit-foul-blightspawn",
+          "unit-icon-bearer",
+          "unit-lord-of-contagion",
+          "unit-lord-of-poxes",
+          "unit-lord-of-virulence",
+          "unit-malignant-plaguecaster",
+          "unit-noxious-blightbringer",
+          "unit-plague-surgeon",
+          "unit-tallyman"
+        ],
+        "conditional": []
+      },
+      "enhancement-fell-harvester": {
+        "match": [
+          "unit-biologus-putrifier",
+          "unit-daemon-prince-of-nurgle",
+          "unit-daemon-prince-of-nurgle-with-wings",
+          "unit-death-guard-chaos-lord",
+          "unit-death-guard-chaos-lord-in-terminator-armour",
+          "unit-death-guard-sorcerer-in-terminator-armour",
+          "unit-foul-blightspawn",
+          "unit-icon-bearer",
+          "unit-lord-of-contagion",
+          "unit-lord-of-poxes",
+          "unit-lord-of-virulence",
+          "unit-malignant-plaguecaster",
+          "unit-noxious-blightbringer",
+          "unit-plague-surgeon",
+          "unit-tallyman"
+        ],
+        "conditional": []
+      },
+      "enhancement-entropic-knell": {
+        "match": [
+          "unit-great-unclean-one"
+        ],
+        "conditional": []
+      },
+      "enhancement-tome-of-bounteous-blessings": {
+        "match": [
+          "unit-malignant-plaguecaster"
+        ],
+        "conditional": []
+      },
+      "enhancement-witherbone-pipes": {
+        "match": [
+          "unit-noxious-blightbringer"
+        ],
+        "conditional": []
+      },
+      "enhancement-lord-of-the-walking-pox": {
+        "match": [
+          "unit-biologus-putrifier",
+          "unit-daemon-prince-of-nurgle",
+          "unit-daemon-prince-of-nurgle-with-wings",
+          "unit-death-guard-chaos-lord",
+          "unit-death-guard-chaos-lord-in-terminator-armour",
+          "unit-death-guard-sorcerer-in-terminator-armour",
+          "unit-foul-blightspawn",
+          "unit-icon-bearer",
+          "unit-lord-of-contagion",
+          "unit-lord-of-poxes",
+          "unit-lord-of-virulence",
+          "unit-malignant-plaguecaster",
+          "unit-noxious-blightbringer",
+          "unit-plague-surgeon",
+          "unit-tallyman"
+        ],
+        "conditional": []
+      },
+      "enhancement-sorrowsyphon": {
+        "match": [
+          "unit-malignant-plaguecaster"
+        ],
+        "conditional": []
+      },
+      "enhancement-talisman-of-burgeoning": {
+        "match": [
+          "unit-biologus-putrifier",
+          "unit-daemon-prince-of-nurgle",
+          "unit-daemon-prince-of-nurgle-with-wings",
+          "unit-death-guard-chaos-lord",
+          "unit-death-guard-chaos-lord-in-terminator-armour",
+          "unit-death-guard-sorcerer-in-terminator-armour",
+          "unit-foul-blightspawn",
+          "unit-icon-bearer",
+          "unit-lord-of-contagion",
+          "unit-lord-of-poxes",
+          "unit-lord-of-virulence",
+          "unit-malignant-plaguecaster",
+          "unit-noxious-blightbringer",
+          "unit-plague-surgeon",
+          "unit-tallyman"
+        ],
+        "conditional": []
+      },
+      "enhancement-face-of-death": {
+        "match": [
+          "unit-death-guard-chaos-lord-in-terminator-armour",
+          "unit-death-guard-sorcerer-in-terminator-armour",
+          "unit-lord-of-contagion",
+          "unit-lord-of-virulence"
+        ],
+        "conditional": []
+      },
+      "enhancement-vile-vigour": {
+        "match": [
+          "unit-death-guard-chaos-lord-in-terminator-armour",
+          "unit-death-guard-sorcerer-in-terminator-armour",
+          "unit-lord-of-contagion",
+          "unit-lord-of-virulence"
+        ],
+        "conditional": []
+      },
+      "enhancement-warprot-talisman": {
+        "match": [
+          "unit-death-guard-chaos-lord-in-terminator-armour",
+          "unit-death-guard-sorcerer-in-terminator-armour",
+          "unit-lord-of-contagion",
+          "unit-lord-of-virulence"
+        ],
+        "conditional": []
+      },
+      "enhancement-helm-of-the-fly-king": {
+        "match": [
+          "unit-death-guard-chaos-lord-in-terminator-armour",
+          "unit-death-guard-sorcerer-in-terminator-armour",
+          "unit-lord-of-contagion",
+          "unit-lord-of-virulence"
+        ],
+        "conditional": []
+      },
+      "enhancement-parasitic-woe-reaper": {
+        "match": [
+          "unit-foetid-bloat-drone",
+          "unit-foetid-bloat-drone-with-heavy-blight-launcher",
+          "unit-helbrute",
+          "unit-myphitic-blight-hauler"
+        ],
+        "conditional": []
+      },
+      "enhancement-lancet-of-the-worldsore": {
+        "match": [
+          "unit-helbrute",
+          "unit-myphitic-blight-hauler"
+        ],
+        "conditional": []
+      },
+      "enhancement-insectile-murmuration": {
+        "match": [
+          "unit-plague-marines"
+        ],
+        "conditional": []
+      },
+      "enhancement-plagueveil": {
+        "match": [
+          "unit-plague-marines"
+        ],
+        "conditional": []
+      },
+      "enhancement-rejuvenating-swarm": {
+        "match": [
+          "unit-biologus-putrifier",
+          "unit-death-guard-chaos-lord",
+          "unit-foul-blightspawn",
+          "unit-icon-bearer",
+          "unit-lord-of-poxes",
+          "unit-malignant-plaguecaster",
+          "unit-noxious-blightbringer",
+          "unit-plague-surgeon",
+          "unit-tallyman"
+        ],
+        "conditional": []
+      },
+      "enhancement-host-of-the-hybridised-pox": {
+        "match": [
+          "unit-biologus-putrifier",
+          "unit-death-guard-chaos-lord",
+          "unit-death-guard-chaos-lord-in-terminator-armour",
+          "unit-death-guard-sorcerer-in-terminator-armour",
+          "unit-foul-blightspawn",
+          "unit-icon-bearer",
+          "unit-lord-of-contagion",
+          "unit-lord-of-poxes",
+          "unit-lord-of-virulence",
+          "unit-malignant-plaguecaster",
+          "unit-noxious-blightbringer",
+          "unit-plague-surgeon",
+          "unit-tallyman"
+        ],
+        "conditional": []
+      }
+    },
+    "adeptus-mechanicus": {
+      "enhancement-explorator-dispensation": {
+        "match": [
+          "unit-skitarii-marshal"
+        ],
+        "conditional": []
+      },
+      "enhancement-stealth-screened-cybercanids-upgrade": {
+        "match": [
+          "unit-serberys-raiders"
+        ],
+        "conditional": []
+      },
+      "enhancement-vinghs-wafers-of-dynamism": {
+        "match": [
+          "unit-cybernetica-datasmith"
+        ],
+        "conditional": []
+      },
+      "enhancement-tl-4-9": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-voltagheist-reliquary": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-electromiasmic-brazier": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-omnicogitator": {
+        "match": [
+          "unit-skitarii-marshal"
+        ],
+        "conditional": []
+      },
+      "enhancement-martial-signatum-amplificator": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-belicosa-class-capacitor-vanes": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-skitarii-marshal",
+          "unit-sydonian-skatros",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-omnissiahs-fury": {
+        "match": [
+          "unit-skitarii-marshal"
+        ],
+        "conditional": []
+      },
+      "enhancement-transoracular-dyad-wafers": {
+        "match": [
+          "unit-cybernetica-datasmith"
+        ],
+        "conditional": []
+      },
+      "enhancement-cognitive-reinforcement": {
+        "match": [
+          "unit-skitarii-marshal",
+          "unit-sydonian-skatros",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-sanctified-ordnance": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-skitarii-marshal",
+          "unit-sydonian-skatros",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-inloaded-lethality": {
+        "match": [
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-manipulus"
+        ],
+        "conditional": []
+      },
+      "enhancement-necromechanic": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-lord-of-machines": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-emotionless-clarity": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-arch-negator": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-mechanicus-locum": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-mantle-of-the-gnosticarch": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-data-blessed-autosermon": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-temporcopia": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-artisan": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-magos": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-logis": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-genetor": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-autoclavic-denunciation": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-skitarii-marshal",
+          "unit-sydonian-skatros",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-malphonic-susurrus": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-skitarii-marshal",
+          "unit-sydonian-skatros",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-peerless-eradicator": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-skitarii-marshal",
+          "unit-sydonian-skatros",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-radial-suffusion": {
+        "match": [
+          "unit-cybernetica-datasmith",
+          "unit-skitarii-marshal",
+          "unit-sydonian-skatros",
+          "unit-tech-priest-dominus",
+          "unit-tech-priest-enginseer",
+          "unit-tech-priest-manipulus",
+          "unit-technoarcheologist"
+        ],
+        "conditional": []
+      },
+      "enhancement-veiled-hunter": {
+        "match": [
+          "unit-skitarii-marshal"
+        ],
+        "conditional": []
+      },
+      "enhancement-clandestine-infiltrator": {
+        "match": [
+          "unit-skitarii-marshal",
+          "unit-sydonian-skatros"
+        ],
+        "conditional": []
+      },
+      "enhancement-cantic-thrallnet": {
+        "match": [
+          "unit-skitarii-marshal"
+        ],
+        "conditional": []
+      },
+      "enhancement-battle-sphere-uplink": {
+        "match": [
+          "unit-skitarii-marshal",
+          "unit-sydonian-skatros"
+        ],
+        "conditional": []
+      }
+    },
+    "tyranids": {
+      "encircling-horrors": {
+        "match": [
+          "unit-lictor",
+          "unit-neurolictor",
+          "unit-von-ryans-leapers"
+        ],
+        "conditional": []
+      },
+      "cryptophotaic-camouflage": {
+        "match": [
+          "unit-von-ryans-leapers"
+        ],
+        "conditional": []
+      },
+      "enhancement-biophagic-flow-aura": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-hyperadapted-raveners",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "enhancement-instinctive-defense": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-hyperadapted-raveners",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "enhancement-parasitic-biomorphology": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-hyperadapted-raveners",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "enhancement-regenerating-monstrosity": {
+        "match": [
+          "unit-broodlord",
+          "unit-hyperadapted-raveners",
+          "unit-malanthrope",
+          "unit-parasite-of-mortrex",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "enhancement-enraged-reserves": {
+        "match": [
+          "unit-hive-tyrant",
+          "unit-neurotyrant",
+          "unit-tervigon",
+          "unit-winged-hive-tyrant"
+        ],
+        "conditional": []
+      },
+      "enhancement-monstrous-nemesis": {
+        "match": [
+          "unit-hive-tyrant",
+          "unit-neurotyrant",
+          "unit-tervigon",
+          "unit-winged-hive-tyrant"
+        ],
+        "conditional": []
+      },
+      "enhancement-null-nodules": {
+        "match": [
+          "unit-hive-tyrant",
+          "unit-neurotyrant",
+          "unit-tervigon",
+          "unit-winged-hive-tyrant"
+        ],
+        "conditional": []
+      },
+      "enhancement-ominous-presence": {
+        "match": [
+          "unit-hive-tyrant",
+          "unit-neurotyrant",
+          "unit-tervigon",
+          "unit-winged-hive-tyrant"
+        ],
+        "conditional": []
+      },
+      "enhancement-adaptive-biology": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-hyperadapted-raveners",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "enhancement-alien-cunning": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-hyperadapted-raveners",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "enhancement-perfectly-adapted": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-hyperadapted-raveners",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "enhancement-synaptic-linchpin": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-hyperadapted-raveners",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "synaptic-strategy": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-hyperadapted-raveners",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": [
+          "unit-trygon"
+        ]
+      },
+      "tremor-senses": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-hyperadapted-raveners",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": [
+          "unit-trygon"
+        ]
+      },
+      "vanguard-intellect": {
+        "match": [
+          "unit-hyperadapted-raveners",
+          "unit-parasite-of-mortrex",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": [
+          "unit-trygon"
+        ]
+      },
+      "trygon-prime": {
+        "match": [],
+        "conditional": [
+          "unit-trygon"
+        ]
+      },
+      "enhancement-power-of-the-hive-mind": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-neurotyrant",
+          "unit-tervigon",
+          "unit-winged-hive-tyrant"
+        ],
+        "conditional": []
+      },
+      "enhancement-psychostatic-disruption-aura": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "enhancement-synaptic-control": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "enhancement-the-dirgeheart-of-kharis-aura": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "destabilising-predation": {
+        "match": [
+          "unit-norn-emissary"
+        ],
+        "conditional": []
+      },
+      "synaptoprescience": {
+        "match": [
+          "unit-norn-assimilator"
+        ],
+        "conditional": []
+      },
+      "enhancement-adrenalised-onslaught": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-hyperadapted-raveners",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "enhancement-naturalised-camoflage": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-hyperadapted-raveners",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "enhancement-piercing-talons": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-hyperadapted-raveners",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "enhancement-relentless-hunger": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-hyperadapted-raveners",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "enhancement-chameleonic": {
+        "match": [
+          "unit-broodlord",
+          "unit-hyperadapted-raveners",
+          "unit-parasite-of-mortrex",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "enhancement-hunting-grounds": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-hyperadapted-raveners",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "enhancement-neuronode": {
+        "match": [
+          "unit-broodlord",
+          "unit-hive-tyrant",
+          "unit-hyperadapted-raveners",
+          "unit-malanthrope",
+          "unit-neurotyrant",
+          "unit-parasite-of-mortrex",
+          "unit-tervigon",
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "enhancement-stalker": {
+        "match": [
+          "unit-broodlord",
+          "unit-hyperadapted-raveners",
+          "unit-parasite-of-mortrex",
+          "unit-winged-hive-tyrant",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "elevated-might": {
+        "match": [
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      },
+      "ocular-adaptation": {
+        "match": [
+          "unit-tyranid-prime-with-lash-whip",
+          "unit-winged-tyranid-prime"
+        ],
+        "conditional": []
+      }
+    },
+    "tau-empire": {
+      "negation-emitters-upgrade": {
+        "match": [
+          "unit-stealth-battlesuits"
+        ],
+        "conditional": []
+      },
+      "unmasking-suite-upgrade": {
+        "match": [
+          "unit-ghostkeel-battlesuit",
+          "unit-pathfinder-team",
+          "unit-stealth-battlesuits"
+        ],
+        "conditional": []
+      },
+      "student-of-kauyon": {
+        "match": [
+          "unit-kroot-flesh-shaper",
+          "unit-kroot-trail-shaper",
+          "unit-kroot-war-shaper"
+        ],
+        "conditional": []
+      },
+      "admired-leader": {
+        "match": [
+          "unit-cadre-fireblade",
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-crisis-battlesuit",
+          "unit-commander-in-enforcer-battlesuit",
+          "unit-ethereal",
+          "unit-firesight-team"
+        ],
+        "conditional": []
+      },
+      "thermoneutronic-projector": {
+        "match": [
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-crisis-battlesuit",
+          "unit-commander-in-enforcer-battlesuit"
+        ],
+        "conditional": []
+      },
+      "plasma-accelerator-rifle": {
+        "match": [
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-crisis-battlesuit",
+          "unit-commander-in-enforcer-battlesuit"
+        ],
+        "conditional": []
+      },
+      "supernova-launcher": {
+        "match": [
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-crisis-battlesuit",
+          "unit-commander-in-enforcer-battlesuit"
+        ],
+        "conditional": []
+      },
+      "enhancement-exemplar-of-the-kauyon": {
+        "match": [
+          "unit-cadre-fireblade",
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-crisis-battlesuit",
+          "unit-commander-in-enforcer-battlesuit",
+          "unit-ethereal",
+          "unit-firesight-team",
+          "unit-kroot-lone-spear"
+        ],
+        "conditional": []
+      },
+      "enhancement-precision-of-the-patient-hunter": {
+        "match": [
+          "unit-cadre-fireblade",
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-crisis-battlesuit",
+          "unit-commander-in-enforcer-battlesuit",
+          "unit-ethereal",
+          "unit-firesight-team",
+          "unit-kroot-flesh-shaper",
+          "unit-kroot-lone-spear",
+          "unit-kroot-trail-shaper",
+          "unit-kroot-war-shaper"
+        ],
+        "conditional": []
+      },
+      "enhancement-solid-image-projection-unit": {
+        "match": [
+          "unit-cadre-fireblade",
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-crisis-battlesuit",
+          "unit-commander-in-enforcer-battlesuit",
+          "unit-ethereal",
+          "unit-firesight-team",
+          "unit-kroot-flesh-shaper",
+          "unit-kroot-lone-spear",
+          "unit-kroot-trail-shaper",
+          "unit-kroot-war-shaper"
+        ],
+        "conditional": []
+      },
+      "enhancement-through-unity-devastation": {
+        "match": [
+          "unit-cadre-fireblade",
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-crisis-battlesuit",
+          "unit-commander-in-enforcer-battlesuit",
+          "unit-ethereal",
+          "unit-firesight-team",
+          "unit-kroot-lone-spear"
+        ],
+        "conditional": []
+      },
+      "enhancement-borthrod-gland": {
+        "match": [
+          "unit-kroot-flesh-shaper"
+        ],
+        "conditional": []
+      },
+      "enhancement-kroothawk-flock": {
+        "match": [
+          "unit-kroot-flesh-shaper",
+          "unit-kroot-lone-spear",
+          "unit-kroot-trail-shaper",
+          "unit-kroot-war-shaper"
+        ],
+        "conditional": []
+      },
+      "enhancement-nomadic-hunter": {
+        "match": [
+          "unit-kroot-trail-shaper"
+        ],
+        "conditional": []
+      },
+      "enhancement-root-carved-weapons": {
+        "match": [
+          "unit-kroot-war-shaper"
+        ],
+        "conditional": []
+      },
+      "enhancement-coordinated-exploitation": {
+        "match": [
+          "unit-cadre-fireblade",
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-crisis-battlesuit",
+          "unit-commander-in-enforcer-battlesuit",
+          "unit-ethereal",
+          "unit-firesight-team",
+          "unit-kroot-lone-spear"
+        ],
+        "conditional": []
+      },
+      "enhancement-exemplar-of-the-montka": {
+        "match": [
+          "unit-cadre-fireblade",
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-crisis-battlesuit",
+          "unit-commander-in-enforcer-battlesuit",
+          "unit-ethereal",
+          "unit-firesight-team",
+          "unit-kroot-lone-spear"
+        ],
+        "conditional": []
+      },
+      "enhancement-strategic-conqueror": {
+        "match": [
+          "unit-cadre-fireblade",
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-crisis-battlesuit",
+          "unit-commander-in-enforcer-battlesuit",
+          "unit-ethereal",
+          "unit-firesight-team",
+          "unit-kroot-flesh-shaper",
+          "unit-kroot-lone-spear",
+          "unit-kroot-trail-shaper",
+          "unit-kroot-war-shaper"
+        ],
+        "conditional": []
+      },
+      "enhancement-strike-swiftly": {
+        "match": [
+          "unit-cadre-fireblade",
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-crisis-battlesuit",
+          "unit-commander-in-enforcer-battlesuit",
+          "unit-ethereal",
+          "unit-firesight-team",
+          "unit-kroot-flesh-shaper",
+          "unit-kroot-lone-spear",
+          "unit-kroot-trail-shaper",
+          "unit-kroot-war-shaper"
+        ],
+        "conditional": []
+      },
+      "enhancement-internal-grenade-racks": {
+        "match": [
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-crisis-battlesuit",
+          "unit-commander-in-enforcer-battlesuit"
+        ],
+        "conditional": []
+      },
+      "enhancement-prototype-weapon-system": {
+        "match": [
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-crisis-battlesuit",
+          "unit-commander-in-enforcer-battlesuit"
+        ],
+        "conditional": []
+      },
+      "enhancement-puretide-engram-neurochip": {
+        "match": [
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-crisis-battlesuit",
+          "unit-commander-in-enforcer-battlesuit"
+        ],
+        "conditional": []
+      },
+      "enhancement-starflare-ignition-system": {
+        "match": [
+          "unit-commander-in-coldstar-battlesuit",
+          "unit-commander-in-crisis-battlesuit",
+          "unit-commander-in-enforcer-battlesuit"
+        ],
+        "conditional": []
+      }
+    }
+  }
+}

@@ -116,18 +116,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-commander-in-coldstar-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
-          "unit-stealth-battlesuits",
-          "unit-broadside-battlesuits",
-          "unit-crisis-fireknife-battlesuits",
-          "unit-crisis-starscythe-battlesuits",
-          "unit-crisis-sunforge-battlesuits",
-          "unit-ghostkeel-battlesuit",
-          "unit-riptide-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
-          "unit-crisis-battlesuits",
-          "unit-rvarna-battlesuit",
-          "unit-xv9-hazard-battlesuits",
-          "unit-yvahra-battlesuit"
+          "unit-commander-in-crisis-battlesuit"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -152,18 +141,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-commander-in-coldstar-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
-          "unit-stealth-battlesuits",
-          "unit-broadside-battlesuits",
-          "unit-crisis-fireknife-battlesuits",
-          "unit-crisis-starscythe-battlesuits",
-          "unit-crisis-sunforge-battlesuits",
-          "unit-ghostkeel-battlesuit",
-          "unit-riptide-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
-          "unit-crisis-battlesuits",
-          "unit-rvarna-battlesuit",
-          "unit-xv9-hazard-battlesuits",
-          "unit-yvahra-battlesuit"
+          "unit-commander-in-crisis-battlesuit"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -188,18 +166,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-commander-in-coldstar-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
-          "unit-stealth-battlesuits",
-          "unit-broadside-battlesuits",
-          "unit-crisis-fireknife-battlesuits",
-          "unit-crisis-starscythe-battlesuits",
-          "unit-crisis-sunforge-battlesuits",
-          "unit-ghostkeel-battlesuit",
-          "unit-riptide-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
-          "unit-crisis-battlesuits",
-          "unit-rvarna-battlesuit",
-          "unit-xv9-hazard-battlesuits",
-          "unit-yvahra-battlesuit"
+          "unit-commander-in-crisis-battlesuit"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -370,14 +337,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-kroot-flesh-shaper",
           "unit-kroot-lone-spear",
           "unit-kroot-trail-shaper",
-          "unit-kroot-war-shaper",
-          "unit-kroot-carnivores",
-          "unit-kroot-farstalkers",
-          "unit-kroot-hounds",
-          "unit-krootox-rampagers",
-          "unit-krootox-riders",
-          "unit-great-knarloc",
-          "unit-knarloc-riders"
+          "unit-kroot-war-shaper"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -570,18 +530,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-commander-in-coldstar-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
-          "unit-stealth-battlesuits",
-          "unit-broadside-battlesuits",
-          "unit-crisis-fireknife-battlesuits",
-          "unit-crisis-starscythe-battlesuits",
-          "unit-crisis-sunforge-battlesuits",
-          "unit-ghostkeel-battlesuit",
-          "unit-riptide-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
-          "unit-crisis-battlesuits",
-          "unit-rvarna-battlesuit",
-          "unit-xv9-hazard-battlesuits",
-          "unit-yvahra-battlesuit"
+          "unit-commander-in-crisis-battlesuit"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -606,18 +555,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-commander-in-coldstar-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
-          "unit-stealth-battlesuits",
-          "unit-broadside-battlesuits",
-          "unit-crisis-fireknife-battlesuits",
-          "unit-crisis-starscythe-battlesuits",
-          "unit-crisis-sunforge-battlesuits",
-          "unit-ghostkeel-battlesuit",
-          "unit-riptide-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
-          "unit-crisis-battlesuits",
-          "unit-rvarna-battlesuit",
-          "unit-xv9-hazard-battlesuits",
-          "unit-yvahra-battlesuit"
+          "unit-commander-in-crisis-battlesuit"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -642,18 +580,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-commander-in-coldstar-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
-          "unit-stealth-battlesuits",
-          "unit-broadside-battlesuits",
-          "unit-crisis-fireknife-battlesuits",
-          "unit-crisis-starscythe-battlesuits",
-          "unit-crisis-sunforge-battlesuits",
-          "unit-ghostkeel-battlesuit",
-          "unit-riptide-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
-          "unit-crisis-battlesuits",
-          "unit-rvarna-battlesuit",
-          "unit-xv9-hazard-battlesuits",
-          "unit-yvahra-battlesuit"
+          "unit-commander-in-crisis-battlesuit"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -678,18 +605,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-commander-in-coldstar-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
-          "unit-stealth-battlesuits",
-          "unit-broadside-battlesuits",
-          "unit-crisis-fireknife-battlesuits",
-          "unit-crisis-starscythe-battlesuits",
-          "unit-crisis-sunforge-battlesuits",
-          "unit-ghostkeel-battlesuit",
-          "unit-riptide-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
-          "unit-crisis-battlesuits",
-          "unit-rvarna-battlesuit",
-          "unit-xv9-hazard-battlesuits",
-          "unit-yvahra-battlesuit"
+          "unit-commander-in-crisis-battlesuit"
         ],
         "noneKeywords": [
           "EPIC HERO"

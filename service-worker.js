@@ -72,7 +72,7 @@ const APP_SHELL = [
   "./books/shared/datasheet-system.css?v=6",
   "./books/shared/popup-content.js?v=3",
   "./books/shared/glossary-autolink.js?v=8",
-  "./books/shared/related-rules-matcher.js?v=2",
+  "./books/shared/related-rules-matcher.js?v=3",
   "./books/shared/roster-entities.js?v=1",
   "./books/shared/roster-parser.js?v=2",
   "./books/shared/roster-enhancements.js?v=3",
@@ -192,7 +192,7 @@ const APP_SHELL = [
   ,"./books/dark-angels/styles/tokens.css?v=1"
   ,"./books/dark-angels/styles/book.css?v=2"
   ,"./books/dark-angels/scripts/app.js?v=2"
-  ,"./books/shared/army-related-rules.js?v=5"
+  ,"./books/shared/army-related-rules.js?v=6"
   ,"./books/shared/army-book-app.js?v=6"
 ];
 

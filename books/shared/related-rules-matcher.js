@@ -26,11 +26,22 @@
     })),conditions:value?.conditions||[]};
   }
   function keywordResult(selector,keywords,context){
+    const conditionalKeywords=context.conditionalKeywords||set();
     const ids=selector.unitIds||[];
     if(ids.length&&!ids.includes(context.unitId))return 'no-match';
     if((selector.noneKeywords||[]).some(value=>keywords.has(normalize(value))))return 'no-match';
-    if((selector.allKeywords||[]).some(value=>!keywords.has(normalize(value))))return 'no-match';
-    if((selector.anyKeywords||[]).length&&!(selector.anyKeywords||[]).some(value=>keywords.has(normalize(value))))return 'no-match';
+    let conditional=false;
+    for(const value of selector.allKeywords||[]){
+      const keyword=normalize(value);
+      if(!keywords.has(keyword)){
+        if(conditionalKeywords.has(keyword))conditional=true;
+        else return 'no-match';
+      }
+    }
+    if((selector.anyKeywords||[]).length&&!(selector.anyKeywords||[]).some(value=>keywords.has(normalize(value)))){
+      if((selector.anyKeywords||[]).some(value=>conditionalKeywords.has(normalize(value))))conditional=true;
+      else return 'no-match';
+    }
     if((selector.allAbilities||[]).some(value=>!context.abilities?.has(normalize(value))))return 'no-match';
     if(selector.attached!=null){
       if(context.attachmentKnown===false)return 'conditional';
@@ -44,7 +55,7 @@
       if(context.warlord==null)return 'conditional';
       if(Boolean(context.warlord)!==selector.warlord)return 'no-match';
     }
-    return 'match';
+    return conditional?'conditional':'match';
   }
   function selectorResult(selector,context,subject){
     const choices=selector.alternatives?.length?selector.alternatives:[selector];

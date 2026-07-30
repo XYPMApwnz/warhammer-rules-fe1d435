@@ -69,20 +69,6 @@
     return detachmentKeywordGrants.filter(grant=>detachments.includes(grant.detachment)&&grant.units.includes(unitSlug));
   }
 
-  function enhancementMatches(card,unit){
-    if(unit.has('keyword-epic-hero'))return false;
-    const restriction=normalized(card.querySelector('p')).split('.')[0];
-    if(restriction.includes('HELBRUTE')&&restriction.includes('MYPHITIC BLIGHT-HAULER'))return unit.slug==='helbrute'||unit.slug==='myphitic-blight-hauler';
-    for(const [name,slug] of Object.entries(namedUnits))if(restriction.includes(name))return unit.slug===slug;
-    if(restriction.includes('CONTAGION ENGINE'))return unit.contagionEngine;
-    if(restriction.includes('TERMINATOR')){
-      if(restriction.includes('EXCLUDING'))return unit.has('keyword-infantry')&&!unit.has('keyword-terminator');
-      return unit.has('keyword-terminator');
-    }
-    if(restriction.includes('INFANTRY'))return unit.has('keyword-death-guard')&&unit.has('keyword-infantry');
-    return restriction.includes('DEATH GUARD')&&unit.has('keyword-death-guard')&&unit.has('keyword-character');
-  }
-
   function stratagemMatch(card,unit){
     const id=card.dataset.ruleId||card.id;
     const eligibility=eligibilityByRule[id];
@@ -95,7 +81,10 @@
     const grants=grantedKeywords(base.slug,[detachment]),granted=new Set(grants.map(grant=>grant.id)),labels=grants.map(grant=>normalized({textContent:grant.title}));
     const candidates=(base.candidates||[base]).map(candidate=>({...candidate,keywords:new Set([...(candidate.keywords||base.keywords),...labels])}));
     const unit={...base,keywords:candidates[0].keywords,candidates,has:id=>base.has(id)||granted.has(id),contagionEngine:granted.has('keyword-contagion-engine')};
-    if(card.classList.contains('enhancement'))return {state:enhancementMatches(card,unit)?'match':'no-match',matchedRoleIds:[],reasons:[]};
+    if(card.classList.contains('enhancement')){
+      try{return window.WHRelatedRules.match(JSON.parse(card.dataset.eligibility||''),unit);}
+      catch{return {state:'no-match',matchedRoleIds:[],reasons:[]};}
+    }
     return stratagemMatch(card,unit);
   }
   const matches=(card,unitRoot)=>match(card,unitRoot).state!=='no-match';

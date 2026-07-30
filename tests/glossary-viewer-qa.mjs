@@ -33,8 +33,8 @@ assert.match(css,/\.filters\{[^}]*flex-wrap:wrap[^}]*overflow:visible/,'filter c
 assert.match(css,/@media\(min-width:761px\) and \(max-width:1366px\)/,'iPad layout must have an explicit contract');
 assert.match(css,/grid-template-columns:minmax\(320px,36%\) minmax\(0,1fr\)/,'iPad catalogue must remain readable');
 assert.match(index,/viewer-progressive\.css\?v=3/);
-assert.match(index,/viewer\.js\?v=11/);
-assert.ok(sw.includes('"./glossary/viewer-progressive.css?v=3"')&&sw.includes('"./glossary/viewer.js?v=11"'),'service worker must precache current Glossary UI');
+assert.match(index,/viewer\.js\?v=12/);
+assert.ok(sw.includes('"./glossary/viewer-progressive.css?v=3"')&&sw.includes('"./glossary/viewer.js?v=12"'),'service worker must precache current Glossary UI');
 
 assert.match(content,/\.stratagem-grid \{ display:grid; grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/,'desktop and landscape tablet Stratagem sections must use two columns');
 assert.match(content,/@media \(max-width: 900px\) \{[\s\S]*?\.stratagem-grid \{ grid-template-columns:1fr; \}/,'phone and narrow layouts must use one Stratagem column');

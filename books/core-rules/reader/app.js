@@ -149,6 +149,8 @@
     requestAnimationFrame(()=>{if(trigger)showTerm(trigger);popupReturn.hidden=true;window.WHGlossaryReturn.clear();});
   });}
 
+  window.WHPageState?.installTermDialog({dialog,triggers:()=>[...document.querySelectorAll('[data-term]')],opener:()=>termOpener,open:showTerm});
+
   const returnRecord=window.WHGlossaryReturn?.read();
   if(returnRecord){
     popupReturn.href=returnRecord.path;
@@ -160,7 +162,7 @@
     if(!record)return;
     if(!window.WHGlossaryReturn?.isSameDocument(record)){window.WHGlossaryReturn?.setRestoreMode('automatic');return;}
     event.preventDefault();
-    history.pushState(null,'',record.path);
+    history.replaceState(history.state,'',record.path);
     restorePopup(record);
   });
 

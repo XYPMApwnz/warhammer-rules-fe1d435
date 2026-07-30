@@ -85,7 +85,7 @@
     const term=api.get(id);if(!term){showCatalogue(false);return;}
     selected=term.id;document.body.classList.add('article-open');renderList();detail.replaceChildren();
     const another=document.createElement('button');another.type='button';another.className='search-another';another.textContent='← Search another term';another.addEventListener('click',()=>showCatalogue(true,true));
-    const categoryLine=document.createElement('p'),title=document.createElement('h2');categoryLine.className='kind';categoryLine.textContent=`${kindLabel(term)} · ${scopeLabel(term)}`;title.textContent=displayTitle(term);title.dataset.term=term.id;detail.append(another,categoryLine,title);
+    const categoryLine=document.createElement('p'),title=document.createElement('h2');categoryLine.className='kind';categoryLine.textContent=`${kindLabel(term)} · ${scopeLabel(term)}`;title.textContent=displayTitle(term);title.dataset.term=term.id;title.tabIndex=-1;detail.append(another,categoryLine,title);
     const summaryText=term.summary?.en||'',definitionText=term.definition?.en||'';
     if(summaryText&&!placeholder.test(summaryText)&&!repeatsDefinition(summaryText,definitionText)){const quick=renderDefinition(summaryText);quick.classList.add('summary');detail.append(sectionLabel('Quick rule'),quick);}
     const profile=renderProfile(term.structured);if(profile)detail.append(sectionLabel('Profile'),profile);
@@ -101,7 +101,7 @@
     for(const [label,value] of [['Internal ID',term.id],['Kind',term.kind],['Scope',term.scope],['Presentation',term.presentation],['Status',term.status],['Canonical source',source.documentId||'unknown'],['Aliases',(term.aliases||[]).join(', ')||'None'],['Edition',term.edition]]){const cell=document.createElement('div'),key=document.createElement('small'),data=document.createElement('b');key.textContent=label;data.textContent=value||'—';cell.append(key,data);meta.append(cell);}registry.content.append(meta);detail.append(registry.node);
     window.WHGlossaryAutolink?.apply(detail,term.scope==='global'?'core-rules':term.scope);
     for(const trigger of detail.querySelectorAll(`[data-autolink][data-term="${CSS.escape(term.id)}"]`))trigger.replaceWith(document.createTextNode(trigger.textContent));
-    if(scrollToArticle)detail.scrollIntoView({block:'start'});
+    if(scrollToArticle){detail.scrollIntoView({block:'start'});title.focus({preventScroll:true});}
   }
 
   function select(id){const term=api.get(id);if(!term)return;const url=new URL(location.href);url.hash=term.id;if(location.hash.slice(1)!==encodeURIComponent(term.id))history.pushState(null,'',url);renderTerm(term.id,{scrollToArticle:true});}
@@ -112,6 +112,7 @@
   document.getElementById('termPopupClose').addEventListener('click',()=>popup.close());
   popup.addEventListener('click',event=>{if(event.target===popup)popup.close();});
   popupFull.addEventListener('click',()=>{const id=popup.dataset.term;popup.close();if(id)select(id);});
+  window.WHPageState?.install({beforeRestore:()=>{if(popup.open)popup.close();},snapshot:()=>popup.open?{termId:popup.dataset.term}:null,restore:state=>{if(state?.termId)openPopup(state.termId);}});
   search.addEventListener('input',()=>{window.clearTimeout(searchTimer);searchTimer=window.setTimeout(()=>{visibleLimit=120;renderList();},100);});
   window.addEventListener('popstate',syncFromUrl);
   renderFilters();renderList();syncFromUrl();

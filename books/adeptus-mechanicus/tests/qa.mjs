@@ -164,7 +164,7 @@ check('manual scroll keeps the last crossed descendant active',navSource.include
 check('navigation uses the shared explicit target resolver',navSource.includes('WHNavigationTargets.resolve')&&!navSource.includes("querySelector(':scope > .stratagem')")&&!navSource.includes("querySelector('.stratagem')"));
 check('outside click closes the complete popup chain',popupSource.includes("this.ids.length&&!event.target.closest('.term-popup,.full-entry-layer')")&&popupSource.includes('this.closeFrom(0)'));
 check('datasheet actions appear only inside Related Rules',!popupSource.includes('Datasheet & Wargear')&&!popupSource.includes("label:'Statline'")&&popupSource.includes("label:'Open datasheet'")&&popupSource.includes("closest?.('.related-rules-layer')"));
-check('Mega Glossary transitions use the shared return helper',html.includes('../../glossary-return.js?v=2')&&popupSource.includes('WHGlossaryReturn')&&read('scripts/app.js').includes('WHGlossaryReturn'));
+check('Mega Glossary transitions use the shared return helper',html.includes('../../glossary-return.js?v=3')&&popupSource.includes('WHGlossaryReturn')&&read('scripts/app.js').includes('WHGlossaryReturn'));
 check('book loads the shared navigation target resolver',html.includes('src="../shared/navigation-targets.js?v=1"'));
 check('book loads the shared datasheet design',html.includes('href="../shared/datasheet-system.css?v=6"'));
 check('book loads the shared datasheet layout',html.includes('src="../shared/datasheet-layout.js?v=2"'));

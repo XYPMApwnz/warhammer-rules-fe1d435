@@ -50,12 +50,14 @@
   }
 
   function syncDrawerMode() {
+    const returnFocus = nav.contains(document.activeElement);
     if (drawerMedia.matches) drawer(false);
     else {
       document.body.classList.remove('nav-drawer-open');
       nav.setAttribute('aria-hidden', 'false');
       scrim.hidden = true;
     }
+    if (returnFocus && nav.getAttribute('aria-hidden') === 'true') navButton.focus({ preventScroll: true });
   }
 
   function showTerm(trigger, byTouch) {
@@ -207,6 +209,7 @@
   });
   drawerMedia.addEventListener?.('change', syncDrawerMode);
   syncDrawerMode();
+  window.WHPageState?.installTermDialog({ dialog, triggers: () => [...document.querySelectorAll('[data-term]')], opener: () => opener, open: trigger => showTerm(trigger, false) });
 
   const returnRecord=window.WHGlossaryReturn?.read();
   if(window.WHGlossaryReturn?.shouldRestoreAutomatically(returnRecord))requestAnimationFrame(()=>{

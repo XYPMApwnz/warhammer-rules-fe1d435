@@ -8,12 +8,14 @@
       this.overlay=overlay;
       this.history=[];
       this.sequence=0;
+      this.restoring=false;
       this.backButton=document.getElementById('backButton');
       document.addEventListener('click',event=>{
         const trigger=event.target.closest('[data-journey-target]');
         if(trigger){event.preventDefault();this.start(trigger,trigger.dataset.journeyTarget,trigger.dataset.journeyType||'link');}
       });
       this.backButton.addEventListener('click',()=>this.back());
+      window.addEventListener('popstate',event=>this.onPopState(event));
     }
 
     ensureId(element,prefix){if(!element.id)element.id=prefix+'-'+(++this.sequence);return element.id;}
@@ -23,7 +25,9 @@
       const root=this.popups.rootElement();if(root)this.ensureId(root,'journey-popup-root');
       const overlay=this.overlay?.snapshot?.(root)||null;
       const popupCard=trigger.closest('.term-popup');
+      const token='journey-'+(++this.sequence);
       this.history.push({
+        token,
         triggerId,
         scrollY:window.scrollY,
         navId:this.navigation.active,
@@ -38,6 +42,7 @@
         }:null,
         type
       });
+      history.pushState({...history.state,whJourney:token},'',location.href);
       this.backButton.hidden=false;
       if(overlay)this.overlay.close();
       this.popups.restore([],{focus:false});
@@ -57,8 +62,19 @@
       element.classList.remove('return-highlight');void element.offsetWidth;element.classList.add('return-highlight');
       window.setTimeout(()=>element.classList.remove('return-highlight'),2300);
     }
-    async back(){
+    onPopState(event){
+      const record=this.history[this.history.length-1];
+      if(record&&event.state?.whJourney!==record.token)this.restoreLast();
+    }
+    back(){
+      const record=this.history[this.history.length-1];if(!record)return;
+      if(history.state?.whJourney===record.token){history.back();return;}
+      this.restoreLast();
+    }
+    async restoreLast(){
+      if(this.restoring)return;
       const record=this.history.pop();if(!record)return;
+      this.restoring=true;
       this.backButton.hidden=this.history.length===0;
       await new Promise(resolve=>this.navigation.restore(record.navId,record.scrollY,resolve));
         const popupRoot=record.overlay?await this.overlay?.restore?.(record.overlay):document.getElementById(record.popupRootId||record.triggerId);
@@ -68,6 +84,7 @@
         const restoredPopup=trigger?.closest?.('.term-popup');
         this.highlight(restoredPopup||trigger);
         if(trigger)trigger.focus({preventScroll:true});else if(record.popupIds.length)this.popups.focusTop();
+        this.restoring=false;
     }
   }
 

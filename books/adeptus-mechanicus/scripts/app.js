@@ -32,7 +32,8 @@
     destination.hash=anchor;
     viewSwitch.href=destination.href;
   });
-  window.DG_APP=Object.freeze({navigation,popups,fullEntry,journey});
+  window.DG_APP=Object.freeze({navigation,popups,fullEntry,journey,relatedRules});
+  window.WHPageState?.installArmyBook(window.DG_APP);
   const returnRecord=window.WHGlossaryReturn?.read();
   if(window.WHGlossaryReturn?.shouldRestoreAutomatically(returnRecord)&&returnRecord.popupIds?.length){
     const scope=document.getElementById(returnRecord.unitId)||document;

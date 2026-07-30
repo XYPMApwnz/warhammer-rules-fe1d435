@@ -95,13 +95,57 @@ try{
     await journeyAction.waitFor();
     const actionKey=await journeyAction.getAttribute('data-action-key');
     await journeyAction.click();
-    await page.locator('#backButton').click();
+    await page.goBack();
     await page.waitForFunction(key=>document.activeElement?.dataset.actionKey===key,actionKey);
     assert.equal(await page.locator('.related-rules-layer').isVisible(),true,'Journey Back must restore Related Rules');
     assert.equal(await page.evaluate(()=>document.querySelector('.related-rules-layer').contains(document.activeElement)||document.querySelector('#popupLayer').contains(document.activeElement)),true,'Journey Back must restore focus inside the Related Rules journey');
     assert.deepEqual(errors,[]);
     console.log('PASS Related Rules modal focus, trap, inert, close restore and Journey Back');
   }finally{await modalContext.close();}
+
+  const historyContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1194,height:834}});
+  try{
+    const {page,errors}=await observedPage(historyContext);
+    await page.goto(`${origin}/books/death-guard/reader.html#unit-chaos-spawn`);
+    const spawnAnchor=page.locator('#chaos-spawn-ability-lethal-ichor');
+    await spawnAnchor.scrollIntoViewIfNeeded();
+    const popupTrigger=page.locator('#unit-chaos-spawn [data-term]').first();
+    await popupTrigger.click();
+    const popupTerm=await page.locator('#popupLayer .term-popup').last().getAttribute('data-popup-term');
+    await page.getByRole('link',{name:'Glossary entry'}).last().click();
+    await page.waitForURL(/\/glossary\/index\.html/);
+    await page.goBack();
+    await page.waitForSelector(`#popupLayer .term-popup[data-popup-term="${popupTerm}"]`);
+    await page.waitForTimeout(150);
+    const restored=await page.evaluate(()=>{const record=history.state?.wh40kPageState,anchor=record?.anchor?.id?document.getElementById(record.anchor.id):document.querySelector(`[data-track="${CSS.escape(record?.anchor?.track||'')}"]`);return{record,anchorTop:anchor?.getBoundingClientRect().top,url:location.href,scrollY,scrollHeight:document.documentElement.scrollHeight,overflow:getComputedStyle(document.documentElement).overflow,popups:document.querySelectorAll('#popupLayer .term-popup').length};});
+    assert.ok(restored.record?.anchor&&Math.abs(restored.anchorTop-restored.record.anchor.top)<=2,`Browser Back must restore the exact Spawn reading anchor (${restored.record?.anchor?.top} -> ${restored.anchorTop}; ${restored.url}; y=${restored.scrollY}; h=${restored.scrollHeight}; overflow=${restored.overflow}; popups=${restored.popups})`);
+    assert.equal(await page.evaluate(()=>document.querySelector('#popupLayer .term-popup:last-child')===document.activeElement),true,'Browser Back must restore focus to the open popup');
+    assert.deepEqual(errors,[]);
+    console.log('PASS Browser Back restores exact Army Book scroll, popup and focus');
+  }finally{await historyContext.close();}
+
+  const orientationContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1194,height:834}});
+  try{
+    const {page,errors}=await observedPage(orientationContext);
+    await page.goto(`${origin}/books/death-guard/reader.html#unit-chaos-spawn`);
+    const anchor=page.locator('#chaos-spawn-ability-lethal-ichor');
+    await anchor.scrollIntoViewIfNeeded();
+    const before=await page.evaluate(()=>{WHPageState.capture();return history.state.wh40kPageState.anchor;});
+    await page.setViewportSize({width:834,height:1194});
+    await page.waitForTimeout(250);
+    const after=await page.evaluate(anchor=>{const node=anchor.id?document.getElementById(anchor.id):document.querySelector(`[data-track="${CSS.escape(anchor.track)}"]`);return node?.getBoundingClientRect().top;},before);
+    assert.ok(Math.abs(after-before.top)<=2,`orientation change must preserve the exact visible reading anchor (${before.top} -> ${after})`);
+    assert.equal(await page.locator('[data-nav-target="unit-chaos-spawn"]').getAttribute('aria-current'),'location','orientation change must preserve the active Spawn datasheet');
+
+    await page.setViewportSize({width:844,height:390});
+    await page.goto(`${origin}/books/death-guard/mobile/chaos-spawn.html`);
+    const navLink=page.locator('#mobileNav a').first();await navLink.focus();
+    await page.setViewportSize({width:390,height:844});
+    await page.waitForTimeout(100);
+    assert.equal(await page.locator('#navButton').evaluate(node=>node===document.activeElement),true,'Phone rotation must move focus out of the hidden navigation to its menu button');
+    assert.deepEqual(errors,[]);
+    console.log('PASS orientation preserves reading position, active datasheet and valid focus');
+  }finally{await orientationContext.close();}
 
   const relatedLayoutContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1280,height:880}});
   try{

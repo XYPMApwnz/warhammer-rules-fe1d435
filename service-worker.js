@@ -50,14 +50,14 @@ const APP_SHELL = [
   "./assets/tyranids-cover-fallback.jpg",
   "./assets/tyranids-cover-thumb.jpg",
   "./glossary/generated/cache-revision.js",
-  "./glossary-return.js?v=2",
+  "./glossary-return.js?v=3",
   "./glossary/",
   "./glossary/index.html",
   "./glossary/viewer.css?v=2",
   "./glossary/viewer-profiles.css?v=2",
   "./glossary/viewer-progressive.css?v=3",
   "./glossary/viewer-popup.css?v=1",
-  "./glossary/viewer.js?v=11",
+  "./glossary/viewer.js?v=12",
   "./books/death-guard/",
   DEATH_GUARD_FALLBACK,
   "./books/death-guard/reader.html",
@@ -65,7 +65,7 @@ const APP_SHELL = [
   "./books/death-guard/scripts/view-router.js?v=2",
   "./books/death-guard/mobile/index.html",
   "./books/death-guard/mobile/mobile.css?v=8",
-  "./books/death-guard/mobile/mobile.js?v=14",
+  "./books/death-guard/mobile/mobile.js?v=15",
   "./books/shared/navigation-targets.js?v=1",
   "./books/shared/popup-rule-actions.js?v=1",
   "./books/shared/datasheet-layout.js?v=2",
@@ -78,15 +78,15 @@ const APP_SHELL = [
   "./books/shared/roster-enhancements.js?v=3",
   "./books/death-guard/assets/icon-v4.svg",
   "./books/death-guard/styles/tokens.css?v=11",
-  "./books/death-guard/styles/layout.css?v=10",
+  "./books/death-guard/styles/layout.css?v=11",
   "./books/death-guard/styles/navigation.css?v=12",
   "./books/death-guard/styles/content.css?v=37",
   "./books/death-guard/styles/popups.css?v=17",
-  "./books/death-guard/scripts/navigation-controller.js?v=15",
+  "./books/death-guard/scripts/navigation-controller.js?v=16",
   "./books/death-guard/scripts/roster-filter.js?v=14",
   "./books/death-guard/scripts/popup-controller.js?v=25",
-  "./books/death-guard/scripts/full-entry-controller.js?v=8",
-  "./books/death-guard/scripts/journey-controller.js?v=12",
+  "./books/death-guard/scripts/full-entry-controller.js?v=9",
+  "./books/death-guard/scripts/journey-controller.js?v=13",
   "./books/death-guard/scripts/ui-controllers.js?v=12",
   "./books/death-guard/scripts/related-rules.js?v=9",
   "./books/death-guard/scripts/app.js?v=34",
@@ -126,7 +126,7 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/reader.html",
   "./books/adeptus-mechanicus/mobile/index.html",
   "./books/adeptus-mechanicus/mobile/mobile.css?v=1",
-  "./books/adeptus-mechanicus/mobile/mobile.js?v=2",
+  "./books/adeptus-mechanicus/mobile/mobile.js?v=3",
   "./books/adeptus-mechanicus/assets/mechanicus-logo.png",
   "./books/adeptus-mechanicus/assets/mechanicus-cover-800.webp",
   "./books/adeptus-mechanicus/styles/tokens.css?v=15",
@@ -148,7 +148,7 @@ const APP_SHELL = [
   ,"./books/tyranids/scripts/data.js?v=2"
   ,"./books/tyranids/scripts/app.js?v=4"
   ,"./books/tyranids/mobile/mobile.css?v=1"
-  ,"./books/tyranids/mobile/mobile.js?v=2"
+  ,"./books/tyranids/mobile/mobile.js?v=3"
   ,"./glossary/generated/glossary.en.js?v=tyranids-1"
   ,"./books/tau-empire/"
   ,TAU_EMPIRE_ENTRY_FALLBACK
@@ -161,7 +161,7 @@ const APP_SHELL = [
   ,"./books/tau-empire/scripts/app.js?v=6"
   ,"./books/tau-empire/scripts/roster-data.js?v=1"
   ,"./books/tau-empire/mobile/mobile.css?v=1"
-  ,"./books/tau-empire/mobile/mobile.js?v=2"
+  ,"./books/tau-empire/mobile/mobile.js?v=3"
   ,"./books/shared/book-roster-enhancements.js?v=1"
   ,"./books/chaos-space-marines/"
   ,CHAOS_SPACE_MARINES_FALLBACK
@@ -195,7 +195,7 @@ const APP_SHELL = [
   ,"./books/dark-angels/scripts/app.js?v=2"
   ,"./books/shared/modal-focus.js?v=1"
   ,"./books/shared/army-related-rules.js?v=7"
-  ,"./books/shared/army-book-app.js?v=8"
+  ,"./books/shared/army-book-app.js?v=9"
 ];
 
 function navigationFallback(url) {

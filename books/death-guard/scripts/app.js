@@ -148,9 +148,10 @@
   const fullEntry=new window.DGFullEntry(window.WH40K_GLOSSARY);
   const popups=new window.DGPopups(terms,fullEntry);
   const relatedRules=initRelatedRules();
-  new window.DGJourney(navigation,popups,null,relatedRules);
+  const journey=new window.DGJourney(navigation,popups,null,relatedRules);
   new window.DGTableAccessibility();
-  window.DG_APP=Object.freeze({navigation,popups,fullEntry});
+  window.DG_APP=Object.freeze({navigation,popups,fullEntry,journey,relatedRules});
+  window.WHPageState?.installArmyBook(window.DG_APP);
   const returnRecord=window.WHGlossaryReturn?.read();
   if(window.WHGlossaryReturn?.shouldRestoreAutomatically(returnRecord)){
     const scope=document.getElementById(returnRecord.unitId)||document;

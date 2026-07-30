@@ -10,7 +10,7 @@
 
   if(viewSwitch){const destination=new URL(viewSwitch.href);destination.search=params.toString();if(location.hash)destination.hash=location.hash;viewSwitch.href=destination.href;}
   function drawer(open){document.body.classList.toggle('nav-drawer-open',open);navButton.setAttribute('aria-expanded',String(open));nav.setAttribute('aria-hidden',String(!open));scrim.hidden=!open;}
-  function syncDrawerMode(){if(drawerMedia.matches)drawer(false);else{document.body.classList.remove('nav-drawer-open');nav.setAttribute('aria-hidden','false');scrim.hidden=true;}}
+  function syncDrawerMode(){const returnFocus=nav.contains(document.activeElement);if(drawerMedia.matches)drawer(false);else{document.body.classList.remove('nav-drawer-open');nav.setAttribute('aria-hidden','false');scrim.hidden=true;}if(returnFocus&&nav.getAttribute('aria-hidden')==='true')navButton.focus({preventScroll:true});}
   const triggers=()=>[...document.querySelectorAll('[data-term]')];
   function showTerm(trigger,byTouch=false){
     const id=trigger?.dataset.term,termSummary=trigger?.dataset.termSummary;
@@ -26,9 +26,9 @@
     window.WHGlossaryReturn.save({termId:opener.dataset.term,triggerIndex:triggers().indexOf(opener)});
     window.WHGlossaryReturn.setRestoreMode(mode);
   }
-  function restorePopup(record,{push=false}={}){
+  function restorePopup(record){
     const all=triggers(),indexed=all[record.triggerIndex],trigger=indexed?.dataset.term===record.termId?indexed:all.find(node=>node.dataset.term===record.termId);
-    history[push?'pushState':'replaceState'](history.state,'',record.path);window.scrollTo(record.scrollX||0,record.scrollY||0);
+    history.replaceState(history.state,'',record.path);window.scrollTo(record.scrollX||0,record.scrollY||0);
     requestAnimationFrame(()=>{if(trigger)showTerm(trigger);window.WHGlossaryReturn.clear();returnPopup.hidden=true;});
   }
   function syncReturn(){
@@ -41,7 +41,7 @@
   rule.addEventListener('click',()=>{savePopupReturn('manual');dialog.close();setTimeout(syncReturn,0);});
   returnPopup.addEventListener('click',event=>{
     const record=window.WHGlossaryReturn.read();if(!record)return;
-    if(window.WHGlossaryReturn.isSameDocument(record)){event.preventDefault();restorePopup(record,{push:true});return;}
+    if(window.WHGlossaryReturn.isSameDocument(record)){event.preventDefault();restorePopup(record);return;}
     window.WHGlossaryReturn.setRestoreMode('automatic');
   });
 
@@ -97,6 +97,7 @@
   if(relatedDetachment){try{const saved=localStorage.getItem('tyranids-detachment-filter');if(saved&&relatedDetachment.querySelector(`option[value="${CSS.escape(saved)}"]`))relatedDetachment.value=saved;}catch{}relatedDetachment.addEventListener('change',()=>{try{localStorage.setItem('tyranids-detachment-filter',relatedDetachment.value);}catch{}filterRelated();});}
   relatedRules?.addEventListener('click',event=>{const tab=event.target.closest('[data-related-tab]');if(tab){relatedKind=tab.dataset.relatedTab;filterRelated();}});
   drawerMedia.addEventListener?.('change',syncDrawerMode);syncDrawerMode();
+  window.WHPageState?.installTermDialog({dialog,triggers,opener:()=>opener,open:trigger=>showTerm(trigger,false)});
   const returnRecord=window.WHGlossaryReturn.read();
   if(window.WHGlossaryReturn.shouldRestoreAutomatically(returnRecord))requestAnimationFrame(()=>restorePopup(returnRecord));else syncReturn();
 }());

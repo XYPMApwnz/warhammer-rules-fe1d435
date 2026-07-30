@@ -86,6 +86,16 @@
       return populatedObject(term.structured)||definition>=summary+120||referenceCount(term)>=2;
     }
 
+    snapshot(){return this.layer.hidden?null:{id:this.current,stack:this.stack.slice(),scrollTop:this.content.scrollTop};}
+    restore(state){
+      const term=this.api.get(state?.id);if(!term)return;
+      this.returnFocus=document.activeElement;
+      this.layer.hidden=false;document.documentElement.classList.add('full-entry-open');document.body.classList.add('full-entry-open');
+      this.stack=(state.stack||[term.id]).filter(id=>this.api.get(id));if(!this.stack.length)this.stack=[term.id];
+      this.current=term.id;this.render(term);this.content.scrollTop=state.scrollTop||0;
+      this.layer.querySelector('[data-full-entry-close]')?.focus({preventScroll:true});
+    }
+
     isCompact(term){
       return !populatedObject(term.structured)&&textLength(term.definition?.en)<500&&referenceCount(term)<5;
     }

@@ -53,6 +53,7 @@
     const app=Object.freeze({navigation,popups,fullEntry,journey,relatedRules});
     root.WH_ARMY_BOOK_APP=app;
     root.DG_APP=app;
+    root.WHPageState?.installArmyBook(app);
     const record=root.WHGlossaryReturn?.read();
     if(root.WHGlossaryReturn?.shouldRestoreAutomatically(record)&&record.popupIds?.length){
       const scope=document.getElementById(record.unitId)||document;
@@ -66,7 +67,7 @@
       });
     }else{
       const initialTarget=decodeURIComponent(location.hash.slice(1));
-      if(initialTarget&&navigation.byId?.has(initialTarget))requestAnimationFrame(()=>navigation.go(initialTarget));
+      if(initialTarget&&navigation.byId?.has(initialTarget)&&!root.WHPageState?.hasCurrent())requestAnimationFrame(()=>navigation.go(initialTarget));
     }
     if((location.protocol==='http:'||location.protocol==='https:')&&'serviceWorker'in navigator){
       root.addEventListener('load',()=>navigator.serviceWorker.register('../../service-worker.js'));

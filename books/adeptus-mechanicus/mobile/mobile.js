@@ -35,7 +35,7 @@
   if(viewSwitch){const destination=new URL(viewSwitch.href);destination.search=params.toString();if(location.hash)destination.hash=location.hash;viewSwitch.href=destination.href;}
 
   function drawer(open){document.body.classList.toggle('nav-drawer-open',open);navButton.setAttribute('aria-expanded',String(open));nav.setAttribute('aria-hidden',String(!open));scrim.hidden=!open;}
-  function syncDrawerMode(){if(drawerMedia.matches)drawer(false);else{document.body.classList.remove('nav-drawer-open');nav.setAttribute('aria-hidden','false');scrim.hidden=true;}}
+  function syncDrawerMode(){const returnFocus=nav.contains(document.activeElement);if(drawerMedia.matches)drawer(false);else{document.body.classList.remove('nav-drawer-open');nav.setAttribute('aria-hidden','false');scrim.hidden=true;}if(returnFocus&&nav.getAttribute('aria-hidden')==='true')navButton.focus({preventScroll:true});}
   function showTerm(trigger,byTouch){
     const id=trigger.dataset.term,termTitle=trigger.dataset.termTitle||trigger.textContent.trim(),termSummary=trigger.dataset.termSummary;
     if(!id||!termSummary)return;
@@ -101,6 +101,7 @@
   if(relatedDetachment){try{const saved=localStorage.getItem('adeptus-mechanicus-detachment-filter');if(saved&&relatedDetachment.querySelector(`option[value="${CSS.escape(saved)}"]`))relatedDetachment.value=saved;}catch{}relatedDetachment.addEventListener('change',()=>{try{localStorage.setItem('adeptus-mechanicus-detachment-filter',relatedDetachment.value);}catch{}filterRelated();});filterRelated();}
   relatedRules?.addEventListener('click',event=>{const tab=event.target.closest('[data-related-tab]');if(tab){relatedKind=tab.dataset.relatedTab;filterRelated();}});
   drawerMedia.addEventListener?.('change',syncDrawerMode);syncDrawerMode();
+  window.WHPageState?.installTermDialog({dialog,triggers:()=>[...document.querySelectorAll('[data-term]')],opener:()=>opener,open:trigger=>showTerm(trigger,false)});
 
   const returnRecord=window.WHGlossaryReturn?.read();
   if(window.WHGlossaryReturn?.shouldRestoreAutomatically(returnRecord))requestAnimationFrame(()=>{const triggers=[...document.querySelectorAll('[data-term]')],indexed=triggers[returnRecord.triggerIndex],trigger=indexed?.dataset.term===returnRecord.termId?indexed:triggers.find(node=>node.dataset.term===returnRecord.termId);window.scrollTo(returnRecord.scrollX||0,returnRecord.scrollY||0);requestAnimationFrame(()=>{if(trigger)showTerm(trigger,false);window.WHGlossaryReturn.clear();});});

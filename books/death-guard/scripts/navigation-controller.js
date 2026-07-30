@@ -16,6 +16,7 @@
       this.scrim=document.getElementById('tocScrim');
 
       this.mobile=window.innerWidth<=this.breakpoint;
+      this.viewportWidth=window.innerWidth;
       this.state={owner:'reader',active:'',drawer:false,collapsed:false,transition:0};
       this.frames={reader:0,geometry:0};
       this.geometry={headerBottom:0,ranges:[]};
@@ -43,6 +44,7 @@
       if('ResizeObserver'in window){
         this.layoutObserver=new ResizeObserver(()=>this.scheduleGeometry());
         this.layoutObserver.observe(this.header);
+        this.layoutObserver.observe(this.main);
       }
     }
 
@@ -161,11 +163,16 @@
       else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
     }
     handleResize(){
+      const widthChanged=Math.abs(window.innerWidth-this.viewportWidth)>1;
+      this.viewportWidth=window.innerWidth;
+      if(widthChanged&&this.state.owner==='controller')this.cancelTransition();
+      const focusWasInPanel=this.panel.contains(document.activeElement);
       const mobile=window.innerWidth<=this.breakpoint;
       if(mobile!==this.mobile){
         this.mobile=mobile;this.state.drawer=false;if(mobile)this.state.collapsed=false;this.applyViewportState();
       }
-      this.scheduleGeometry();
+      if(focusWasInPanel&&this.panel.getAttribute('aria-hidden')==='true')this.menuButton.focus({preventScroll:true});
+      requestAnimationFrame(()=>this.scheduleGeometry());
     }
 
     buttonSet(item){

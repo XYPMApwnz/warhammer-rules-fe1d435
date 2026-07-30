@@ -68,6 +68,18 @@ const namedGroups=[
   ['TRYGON',units.filter(unit=>titleKey(unit.title)==='trygon').map(unit=>unit.id)]
 ];
 const enhancementEligibility=item=>relatedRules.enhancements?.[item.id]||relatedRules.enhancements?.[String(item.id||'').replace(/^enhancement-/,'')]||null;
+const publishedEnhancementContracts=new Set(['tyranids','tau-empire']);
+const enhancementContract=item=>{
+  const contract=enhancementEligibility(item);
+  if(!contract||!publishedEnhancementContracts.has(config.id))return contract;
+  const tags=contract.tags||[],owner=contract.owner,assignment=contract.assignment;
+  if(!Array.isArray(tags)||tags.some(tag=>tag!=='UPGRADE'))throw new Error(`${config.id}: invalid Enhancement tags for ${item.id}`);
+  if(!owner||!['model','unit'].includes(owner.subject)||!owner.selector)throw new Error(`${config.id}: invalid Enhancement owner for ${item.id}`);
+  const isUpgrade=tags.includes('UPGRADE');
+  if(isUpgrade!== (owner.subject==='unit'))throw new Error(`${config.id}: ${item.id} must use ${isUpgrade?'unit':'model'} owner subject`);
+  if(!assignment||assignment.maxOwners!==(isUpgrade?3:1)||assignment.enhancementChoices!==1||assignment.payPointsPerOwner!==true)throw new Error(`${config.id}: invalid Enhancement assignment for ${item.id}`);
+  return contract;
+};
 const supportedSubjects=new Set(['unit','model','objective']);
 const stratagemEligibility=item=>{
   const explicit=relatedRules.stratagems?.[item.id]||relatedRules.stratagems?.[String(item.id||'').replace(/^stratagem-/,'')];
@@ -134,9 +146,10 @@ const toc=navLeaf('start','Start',1)
   +navBranch('updates','Updates',1,[...pack.updates.filter(item=>!armyRules.some(rule=>rule.title===item.subject)),...pack.faqs].map(item=>navLeaf(`update-${item.id}`,item.title||item.subject||item.question,2)).join(''));
 
 const enhancementCard=(item,det,{related=false}={})=>{
-  const explicit=enhancementEligibility(item);
+  const explicit=enhancementContract(item),tags=explicit?.tags||item.tags||[],isUpgrade=tags.includes('UPGRADE');
   if(related&&!explicit)return'';
-  return`<article class="enhancement surface" data-rule-id="${esc(item.id||`enhancement-${slug(item.title)}`)}"${explicit?` data-eligibility="${esc(JSON.stringify(explicit))}"`:''}><div class="eyebrow">Enhancement${item.value?` · ${item.value} pts`:''}</div><h4><button class="term-button" data-term="${addTerm(item.title,item.text,`detachment-${det.id}`,'enhancement')}">${esc(item.title)}</button></h4><p data-source-field="text">${esc(item.text)}</p></article>`;
+  const termText=isUpgrade?`UPGRADE. ${item.text}`:item.text;
+  return`<article class="enhancement surface" data-rule-id="${esc(item.id||`enhancement-${slug(item.title)}`)}" data-enhancement-tags="${esc(tags.join('|'))}" data-owner-subject="${esc(explicit?.owner?.subject||'')}"${explicit?` data-eligibility="${esc(JSON.stringify(explicit))}"`:''}><div class="eyebrow">Enhancement${isUpgrade?' · UPGRADE':''}${item.value?` · ${item.value} pts`:''}</div><h4><button class="term-button" data-term="${addTerm(item.title,termText,`detachment-${det.id}`,'enhancement')}">${esc(item.title)}</button></h4><p data-source-field="text">${esc(item.text)}</p></article>`;
 };
 const stratagemCard=(item,det)=>`<article class="stratagem surface" data-rule-id="${esc(item.id)}" data-eligibility="${esc(JSON.stringify(stratagemEligibility(item)))}"><div class="stratagem-head"><div><h3><button class="term-button" data-term="${addTerm(item.title,[item.when,item.target,item.effect,item.restrictions].filter(Boolean).join(' '),`detachment-${det.id}`,'stratagem')}">${esc(item.title)}</button></h3></div><div class="cp">${esc(item.cp)}CP</div></div><p class="field" data-source-field="when"><b>When</b><br>${esc(item.when)}</p><p class="field" data-source-field="target"><b>Target</b><br>${esc(item.target)}</p><p class="field" data-source-field="effect"><b>Effect</b><br>${esc(item.effect)}</p>${item.restrictions?`<p class="field" data-source-field="restrictions"><b>Restrictions</b><br>${esc(item.restrictions)}</p>`:''}</article>`;
 const detachmentHtml=detachments.map(det=>{
@@ -183,7 +196,7 @@ const normalizedHtml=html
   .replace('../shared/datasheet-layout.js"','../shared/datasheet-layout.js?v=2"')
   .replace('../shared/popup-content.js"','../shared/popup-content.js?v=3"')
   .replace('../shared/glossary-autolink.js"','../shared/glossary-autolink.js?v=8"')
-  .replace('../shared/related-rules-matcher.js"','../shared/related-rules-matcher.js?v=2"')
+  .replace('../shared/related-rules-matcher.js"',`../shared/related-rules-matcher.js?v=${publishedEnhancementContracts.has(config.id)?3:2}"`)
   .replace('<script src="./scripts/data.js">',`${config.rosterSupport?'<script src="../shared/roster-parser.js?v=2"></script><script src="../shared/roster-entities.js?v=1"></script>':''}<script src="./scripts/data.js">`)
   .replace('</script><script src="../death-guard/scripts/navigation-controller.js">',`</script>${config.rosterSupport?'<script src="./scripts/roster-data.js?v=1"></script><script src="../shared/book-roster-enhancements.js?v=1"></script>':''}<script src="../death-guard/scripts/navigation-controller.js">`)
   .replace('../death-guard/scripts/navigation-controller.js"','../death-guard/scripts/navigation-controller.js?v=15"')
@@ -202,7 +215,7 @@ const finalHtml=config.dedicatedMobile?normalizedHtml
   .replace('./scripts/app.js?v=3',`./scripts/app.js?v=${config.assetVersions?.app||4}`)
   .replace(/<script src="\.\.\/shared\/army-book-app\.js\?v=7"><\/script>/,''):normalizedHtml;
 const dataJs=`window.DG_TERMS=${JSON.stringify(Object.fromEntries([...terms].map(([id,item])=>[id,{id,title:item.title,summary:item.summary,full:item.full,glossary:item.glossary,...(item.rule?{rule:item.rule}:{}),...(item.units.length?{units:item.units,datasheet:item.units[0],statline:item.units[0].replace(/^unit-/,'')+'-profile'}:{})}])),null,2)};\n`;
-const rosterEnhancements=Object.fromEntries(detachments.flatMap(det=>(det.enhancements||[]).map(item=>[titleKey(item.title),{title:item.title,text:item.text,value:item.value,detachment:det.title}])));
+const rosterEnhancements=Object.fromEntries(detachments.flatMap(det=>(det.enhancements||[]).map(item=>{const contract=enhancementContract(item);return[titleKey(item.title),{title:item.title,text:item.text,value:item.value,detachment:det.title,tags:contract?.tags||item.tags||[],owner:contract?.owner||null,assignment:contract?.assignment||null}]})));
 const rosterDataJs=`window.WH_BOOK_ROSTER_ENHANCEMENTS=${JSON.stringify(rosterEnhancements,null,2)};\n`;
 const appJs=`try{window.WHArmyBook.install(${JSON.stringify({bookId:config.id,readerPath:'./reader.html',...(config.dedicatedMobile?{dedicatedMobile:true}:{})})});}catch(error){document.documentElement.dataset.bookError=String(error&&error.stack||error);console.error(error);}\n`;
 const bookCss=`.app-brand::before{content:"${esc(bookMark)}"}.toc-heading::before{content:"FACTION REGISTER // ${esc(bookMark)}"}.faction-hero{overflow:hidden;background:radial-gradient(circle at 78% 28%,color-mix(in srgb,var(--faction-primary-bright,var(--green)) 22%,transparent),transparent 26rem),radial-gradient(ellipse at 64% 78%,color-mix(in srgb,var(--faction-secondary,var(--pink)) 15%,transparent),transparent 31rem),linear-gradient(115deg,var(--underhive),var(--panel-2))}.faction-hero::after{content:"${esc(bookMark)}"}.faction-hero .hero-mark{display:grid;place-items:center;min-width:15rem;aspect-ratio:1;border:1px solid var(--line);border-radius:50%;background:repeating-radial-gradient(circle,transparent 0 18px,var(--soft-line) 19px 20px),radial-gradient(circle,var(--panel-2),transparent 68%);color:var(--green);font:800 clamp(1.1rem,2vw,1.8rem)/1 ui-monospace,monospace;letter-spacing:.16em;text-align:center}.source-warning{border-left:3px solid var(--bronze-bright)}.subheading{margin:2rem 0 1rem;color:var(--bronze-bright);text-transform:uppercase;letter-spacing:.12em}.unit-status{max-width:20rem;text-align:right}.unit-source-state{display:flex;flex-wrap:wrap;gap:6px 16px;padding:0 24px 18px;color:var(--muted);font:700 10px/1.5 var(--ds-data,ui-monospace,monospace);letter-spacing:.06em;text-transform:uppercase}.unit-source-state span+span{border-left:1px solid var(--line);padding-left:16px}.wargear-option{white-space:pre-line;overflow-wrap:anywhere}.wargear-verification{margin:.25rem 0 1rem;padding:.7rem .85rem;border-left:3px solid var(--bronze-bright);background:color-mix(in srgb,var(--bronze-bright) 7%,transparent);color:var(--muted)}.related-rules-layer{z-index:140}.related-rules-open .popup-layer{z-index:160}@media(max-width:800px){.faction-hero .hero-mark{display:none}.unit-status{max-width:none;text-align:left}.unit-source-state{padding-inline:20px}.unit-source-state span{width:100%}.unit-source-state span+span{border-left:0;padding-left:0}}\n`;

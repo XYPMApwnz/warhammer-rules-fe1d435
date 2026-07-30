@@ -656,633 +656,637 @@
   "enhancements": {
     "negation-emitters-upgrade": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-stealth-battlesuits"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
+      "tags": [
+        "UPGRADE"
       ],
-      "conditions": []
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-stealth-battlesuits"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "unmasking-suite-upgrade": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-pathfinder-team",
-              "unit-stealth-battlesuits",
-              "unit-ghostkeel-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
+      "tags": [
+        "UPGRADE"
       ],
-      "conditions": []
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-pathfinder-team",
+            "unit-stealth-battlesuits",
+            "unit-ghostkeel-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "student-of-kauyon": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-kroot-flesh-shaper",
-              "unit-kroot-trail-shaper",
-              "unit-kroot-war-shaper"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-kroot-flesh-shaper",
+            "unit-kroot-trail-shaper",
+            "unit-kroot-war-shaper"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "admired-leader": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-cadre-fireblade",
-              "unit-commander-in-coldstar-battlesuit",
-              "unit-commander-in-enforcer-battlesuit",
-              "unit-ethereal",
-              "unit-firesight-team",
-              "unit-commander-in-crisis-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "thermoneutronic-projector": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-commander-in-coldstar-battlesuit",
-              "unit-commander-in-enforcer-battlesuit",
-              "unit-stealth-battlesuits",
-              "unit-broadside-battlesuits",
-              "unit-crisis-fireknife-battlesuits",
-              "unit-crisis-starscythe-battlesuits",
-              "unit-crisis-sunforge-battlesuits",
-              "unit-ghostkeel-battlesuit",
-              "unit-riptide-battlesuit",
-              "unit-commander-in-crisis-battlesuit",
-              "unit-crisis-battlesuits",
-              "unit-rvarna-battlesuit",
-              "unit-xv9-hazard-battlesuits",
-              "unit-yvahra-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-stealth-battlesuits",
+            "unit-broadside-battlesuits",
+            "unit-crisis-fireknife-battlesuits",
+            "unit-crisis-starscythe-battlesuits",
+            "unit-crisis-sunforge-battlesuits",
+            "unit-ghostkeel-battlesuit",
+            "unit-riptide-battlesuit",
+            "unit-commander-in-crisis-battlesuit",
+            "unit-crisis-battlesuits",
+            "unit-rvarna-battlesuit",
+            "unit-xv9-hazard-battlesuits",
+            "unit-yvahra-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "plasma-accelerator-rifle": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-commander-in-coldstar-battlesuit",
-              "unit-commander-in-enforcer-battlesuit",
-              "unit-stealth-battlesuits",
-              "unit-broadside-battlesuits",
-              "unit-crisis-fireknife-battlesuits",
-              "unit-crisis-starscythe-battlesuits",
-              "unit-crisis-sunforge-battlesuits",
-              "unit-ghostkeel-battlesuit",
-              "unit-riptide-battlesuit",
-              "unit-commander-in-crisis-battlesuit",
-              "unit-crisis-battlesuits",
-              "unit-rvarna-battlesuit",
-              "unit-xv9-hazard-battlesuits",
-              "unit-yvahra-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-stealth-battlesuits",
+            "unit-broadside-battlesuits",
+            "unit-crisis-fireknife-battlesuits",
+            "unit-crisis-starscythe-battlesuits",
+            "unit-crisis-sunforge-battlesuits",
+            "unit-ghostkeel-battlesuit",
+            "unit-riptide-battlesuit",
+            "unit-commander-in-crisis-battlesuit",
+            "unit-crisis-battlesuits",
+            "unit-rvarna-battlesuit",
+            "unit-xv9-hazard-battlesuits",
+            "unit-yvahra-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "supernova-launcher": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-commander-in-coldstar-battlesuit",
-              "unit-commander-in-enforcer-battlesuit",
-              "unit-stealth-battlesuits",
-              "unit-broadside-battlesuits",
-              "unit-crisis-fireknife-battlesuits",
-              "unit-crisis-starscythe-battlesuits",
-              "unit-crisis-sunforge-battlesuits",
-              "unit-ghostkeel-battlesuit",
-              "unit-riptide-battlesuit",
-              "unit-commander-in-crisis-battlesuit",
-              "unit-crisis-battlesuits",
-              "unit-rvarna-battlesuit",
-              "unit-xv9-hazard-battlesuits",
-              "unit-yvahra-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-stealth-battlesuits",
+            "unit-broadside-battlesuits",
+            "unit-crisis-fireknife-battlesuits",
+            "unit-crisis-starscythe-battlesuits",
+            "unit-crisis-sunforge-battlesuits",
+            "unit-ghostkeel-battlesuit",
+            "unit-riptide-battlesuit",
+            "unit-commander-in-crisis-battlesuit",
+            "unit-crisis-battlesuits",
+            "unit-rvarna-battlesuit",
+            "unit-xv9-hazard-battlesuits",
+            "unit-yvahra-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-exemplar-of-the-kauyon": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-cadre-fireblade",
-              "unit-commander-in-coldstar-battlesuit",
-              "unit-commander-in-enforcer-battlesuit",
-              "unit-ethereal",
-              "unit-firesight-team",
-              "unit-kroot-lone-spear",
-              "unit-commander-in-crisis-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-lone-spear",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-precision-of-the-patient-hunter": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-cadre-fireblade",
-              "unit-commander-in-coldstar-battlesuit",
-              "unit-commander-in-enforcer-battlesuit",
-              "unit-ethereal",
-              "unit-firesight-team",
-              "unit-kroot-flesh-shaper",
-              "unit-kroot-lone-spear",
-              "unit-kroot-trail-shaper",
-              "unit-kroot-war-shaper",
-              "unit-commander-in-crisis-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-flesh-shaper",
+            "unit-kroot-lone-spear",
+            "unit-kroot-trail-shaper",
+            "unit-kroot-war-shaper",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-solid-image-projection-unit": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-cadre-fireblade",
-              "unit-commander-in-coldstar-battlesuit",
-              "unit-commander-in-enforcer-battlesuit",
-              "unit-ethereal",
-              "unit-firesight-team",
-              "unit-kroot-flesh-shaper",
-              "unit-kroot-lone-spear",
-              "unit-kroot-trail-shaper",
-              "unit-kroot-war-shaper",
-              "unit-commander-in-crisis-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-flesh-shaper",
+            "unit-kroot-lone-spear",
+            "unit-kroot-trail-shaper",
+            "unit-kroot-war-shaper",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-through-unity-devastation": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-cadre-fireblade",
-              "unit-commander-in-coldstar-battlesuit",
-              "unit-commander-in-enforcer-battlesuit",
-              "unit-ethereal",
-              "unit-firesight-team",
-              "unit-kroot-lone-spear",
-              "unit-commander-in-crisis-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-lone-spear",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-borthrod-gland": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-kroot-flesh-shaper"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-kroot-flesh-shaper"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-kroothawk-flock": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-kroot-flesh-shaper",
-              "unit-kroot-lone-spear",
-              "unit-kroot-trail-shaper",
-              "unit-kroot-war-shaper",
-              "unit-kroot-carnivores",
-              "unit-kroot-farstalkers",
-              "unit-kroot-hounds",
-              "unit-krootox-rampagers",
-              "unit-krootox-riders",
-              "unit-great-knarloc",
-              "unit-knarloc-riders"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-kroot-flesh-shaper",
+            "unit-kroot-lone-spear",
+            "unit-kroot-trail-shaper",
+            "unit-kroot-war-shaper",
+            "unit-kroot-carnivores",
+            "unit-kroot-farstalkers",
+            "unit-kroot-hounds",
+            "unit-krootox-rampagers",
+            "unit-krootox-riders",
+            "unit-great-knarloc",
+            "unit-knarloc-riders"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-nomadic-hunter": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-kroot-trail-shaper"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-kroot-trail-shaper"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-root-carved-weapons": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-kroot-war-shaper"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-kroot-war-shaper"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-coordinated-exploitation": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-cadre-fireblade",
-              "unit-commander-in-coldstar-battlesuit",
-              "unit-commander-in-enforcer-battlesuit",
-              "unit-ethereal",
-              "unit-firesight-team",
-              "unit-kroot-lone-spear",
-              "unit-commander-in-crisis-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-lone-spear",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-exemplar-of-the-montka": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-cadre-fireblade",
-              "unit-commander-in-coldstar-battlesuit",
-              "unit-commander-in-enforcer-battlesuit",
-              "unit-ethereal",
-              "unit-firesight-team",
-              "unit-kroot-lone-spear",
-              "unit-commander-in-crisis-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-lone-spear",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-strategic-conqueror": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-cadre-fireblade",
-              "unit-commander-in-coldstar-battlesuit",
-              "unit-commander-in-enforcer-battlesuit",
-              "unit-ethereal",
-              "unit-firesight-team",
-              "unit-kroot-flesh-shaper",
-              "unit-kroot-lone-spear",
-              "unit-kroot-trail-shaper",
-              "unit-kroot-war-shaper",
-              "unit-commander-in-crisis-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-flesh-shaper",
+            "unit-kroot-lone-spear",
+            "unit-kroot-trail-shaper",
+            "unit-kroot-war-shaper",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-strike-swiftly": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-cadre-fireblade",
-              "unit-commander-in-coldstar-battlesuit",
-              "unit-commander-in-enforcer-battlesuit",
-              "unit-ethereal",
-              "unit-firesight-team",
-              "unit-kroot-flesh-shaper",
-              "unit-kroot-lone-spear",
-              "unit-kroot-trail-shaper",
-              "unit-kroot-war-shaper",
-              "unit-commander-in-crisis-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-cadre-fireblade",
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-ethereal",
+            "unit-firesight-team",
+            "unit-kroot-flesh-shaper",
+            "unit-kroot-lone-spear",
+            "unit-kroot-trail-shaper",
+            "unit-kroot-war-shaper",
+            "unit-commander-in-crisis-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-internal-grenade-racks": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-commander-in-coldstar-battlesuit",
-              "unit-commander-in-enforcer-battlesuit",
-              "unit-stealth-battlesuits",
-              "unit-broadside-battlesuits",
-              "unit-crisis-fireknife-battlesuits",
-              "unit-crisis-starscythe-battlesuits",
-              "unit-crisis-sunforge-battlesuits",
-              "unit-ghostkeel-battlesuit",
-              "unit-riptide-battlesuit",
-              "unit-commander-in-crisis-battlesuit",
-              "unit-crisis-battlesuits",
-              "unit-rvarna-battlesuit",
-              "unit-xv9-hazard-battlesuits",
-              "unit-yvahra-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-stealth-battlesuits",
+            "unit-broadside-battlesuits",
+            "unit-crisis-fireknife-battlesuits",
+            "unit-crisis-starscythe-battlesuits",
+            "unit-crisis-sunforge-battlesuits",
+            "unit-ghostkeel-battlesuit",
+            "unit-riptide-battlesuit",
+            "unit-commander-in-crisis-battlesuit",
+            "unit-crisis-battlesuits",
+            "unit-rvarna-battlesuit",
+            "unit-xv9-hazard-battlesuits",
+            "unit-yvahra-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-prototype-weapon-system": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-commander-in-coldstar-battlesuit",
-              "unit-commander-in-enforcer-battlesuit",
-              "unit-stealth-battlesuits",
-              "unit-broadside-battlesuits",
-              "unit-crisis-fireknife-battlesuits",
-              "unit-crisis-starscythe-battlesuits",
-              "unit-crisis-sunforge-battlesuits",
-              "unit-ghostkeel-battlesuit",
-              "unit-riptide-battlesuit",
-              "unit-commander-in-crisis-battlesuit",
-              "unit-crisis-battlesuits",
-              "unit-rvarna-battlesuit",
-              "unit-xv9-hazard-battlesuits",
-              "unit-yvahra-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-stealth-battlesuits",
+            "unit-broadside-battlesuits",
+            "unit-crisis-fireknife-battlesuits",
+            "unit-crisis-starscythe-battlesuits",
+            "unit-crisis-sunforge-battlesuits",
+            "unit-ghostkeel-battlesuit",
+            "unit-riptide-battlesuit",
+            "unit-commander-in-crisis-battlesuit",
+            "unit-crisis-battlesuits",
+            "unit-rvarna-battlesuit",
+            "unit-xv9-hazard-battlesuits",
+            "unit-yvahra-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-puretide-engram-neurochip": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-commander-in-coldstar-battlesuit",
-              "unit-commander-in-enforcer-battlesuit",
-              "unit-stealth-battlesuits",
-              "unit-broadside-battlesuits",
-              "unit-crisis-fireknife-battlesuits",
-              "unit-crisis-starscythe-battlesuits",
-              "unit-crisis-sunforge-battlesuits",
-              "unit-ghostkeel-battlesuit",
-              "unit-riptide-battlesuit",
-              "unit-commander-in-crisis-battlesuit",
-              "unit-crisis-battlesuits",
-              "unit-rvarna-battlesuit",
-              "unit-xv9-hazard-battlesuits",
-              "unit-yvahra-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-stealth-battlesuits",
+            "unit-broadside-battlesuits",
+            "unit-crisis-fireknife-battlesuits",
+            "unit-crisis-starscythe-battlesuits",
+            "unit-crisis-sunforge-battlesuits",
+            "unit-ghostkeel-battlesuit",
+            "unit-riptide-battlesuit",
+            "unit-commander-in-crisis-battlesuit",
+            "unit-crisis-battlesuits",
+            "unit-rvarna-battlesuit",
+            "unit-xv9-hazard-battlesuits",
+            "unit-yvahra-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-starflare-ignition-system": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-commander-in-coldstar-battlesuit",
-              "unit-commander-in-enforcer-battlesuit",
-              "unit-stealth-battlesuits",
-              "unit-broadside-battlesuits",
-              "unit-crisis-fireknife-battlesuits",
-              "unit-crisis-starscythe-battlesuits",
-              "unit-crisis-sunforge-battlesuits",
-              "unit-ghostkeel-battlesuit",
-              "unit-riptide-battlesuit",
-              "unit-commander-in-crisis-battlesuit",
-              "unit-crisis-battlesuits",
-              "unit-rvarna-battlesuit",
-              "unit-xv9-hazard-battlesuits",
-              "unit-yvahra-battlesuit"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-commander-in-coldstar-battlesuit",
+            "unit-commander-in-enforcer-battlesuit",
+            "unit-stealth-battlesuits",
+            "unit-broadside-battlesuits",
+            "unit-crisis-fireknife-battlesuits",
+            "unit-crisis-starscythe-battlesuits",
+            "unit-crisis-sunforge-battlesuits",
+            "unit-ghostkeel-battlesuit",
+            "unit-riptide-battlesuit",
+            "unit-commander-in-crisis-battlesuit",
+            "unit-crisis-battlesuits",
+            "unit-rvarna-battlesuit",
+            "unit-xv9-hazard-battlesuits",
+            "unit-yvahra-battlesuit"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     }
   }
 }

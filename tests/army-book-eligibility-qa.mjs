@@ -82,13 +82,17 @@ for(const entry of fs.readdirSync(booksRoot,{withFileTypes:true})){
   const relatedEnhancementIds=[...related.matchAll(/<article class="enhancement surface"[^>]*data-rule-id="([^"]+)"/g)].map(match=>match[1]);
   assert.deepEqual(new Set(Object.keys(enhancementEligibility).map(normalizeEnhancementId)),new Set(relatedEnhancementIds.map(normalizeEnhancementId)),`${config.id}: explicit Enhancement eligibility does not match generated Related Rules inventory`);
   for(const [id,rule] of Object.entries(enhancementEligibility)){
-    const roles=rule.roles||rule.targets||[];
-    assert.ok(roles.some(role=>role.side==='friendly'||role.side==='either'),`${config.id}/${id}: no friendly Enhancement owner role`);
+    const isOwnerContract=Boolean(rule.owner),isUpgrade=(rule.tags||[]).includes('UPGRADE');
+    const roles=isOwnerContract?[{...rule.owner,side:'friendly'}]:(rule.roles||rule.targets||[]);
+    assert.ok(roles.some(role=>(role.side==='friendly'||role.side==='either')&&supportedSubjects.has(role.subject||'unit')),`${config.id}/${id}: no supported Enhancement owner contract`);
     const selectors=roles.map(role=>role.selector||role);
-    assert.ok(selectors.every(selector=>(selector.noneKeywords||[]).includes('EPIC HERO')),`${config.id}/${id}: Enhancement does not explicitly exclude Epic Heroes`);
+    if(isOwnerContract){
+      assert.equal(rule.owner.subject,isUpgrade?'unit':'model',`${config.id}/${id}: incorrect owner subject`);
+      if(!isUpgrade)assert.ok(selectors.every(selector=>(selector.noneKeywords||[]).includes('EPIC HERO')),`${config.id}/${id}: standard Enhancement does not explicitly exclude Epic Heroes`);
+    }
     assert.ok(selectors.flatMap(selector=>selector.unitIds||[]).every(unitId=>profiles.some(profile=>profile.unitId===unitId)),`${config.id}/${id}: Enhancement references an unknown datasheet`);
     assert.ok(profiles.some(profile=>matcher.matches(rule,profile)),`${config.id}/${id}: no real datasheet satisfies its Enhancement owner contract`);
-    assert.ok(profiles.filter(profile=>profile.keywords.has('EPIC HERO')).every(profile=>!matcher.matches(rule,profile)),`${config.id}/${id}: Enhancement is offered to an Epic Hero`);
+    if(isOwnerContract&&!isUpgrade)assert.ok(profiles.filter(profile=>profile.keywords.has('EPIC HERO')).every(profile=>!matcher.matches(rule,profile)),`${config.id}/${id}: standard Enhancement is offered to an Epic Hero`);
   }
   audited.push(`${config.title}: ${stratagems.length} Stratagems × ${profiles.length} datasheets; ${negatives} restrictive contracts have real negatives`);
 }

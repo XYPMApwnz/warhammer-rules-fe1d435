@@ -50,7 +50,9 @@ for(const section of deathGuard.sections){
         'rejuvenating swarm':'conditional',
         'host of the hybridised pox':'once'
       };
-      dgEnhancements[normalize(match[1])]={title:match[1],value:Number(match[2]),text:enhancement.text,effect:effects[normalize(match[1])]||''};
+      const aliases=(enhancement.tags||[]).includes('UPGRADE')?[`${match[1]} Upgrade`,`${match[1]} (Upgrade)`]:[];
+      const record={id:enhancement.id,title:match[1],value:Number(match[2]),text:enhancement.text,effect:effects[normalize(match[1])]||'',tags:enhancement.tags||[],owner:enhancement.owner||null,assignment:enhancement.assignment||null,aliases};
+      for(const name of [match[1],...aliases])dgEnhancements[normalize(name)]=record;
     }
   }
 }
@@ -58,15 +60,25 @@ for(const section of deathGuard.sections){
 const mechanicus=read('books/adeptus-mechanicus/content/adeptus-mechanicus-points.en.json');
 const mechanicusUnits=Object.fromEntries(mechanicus.units.map(unit=>[normalize(unit.title),unit]));
 const mechanicusEnhancements=Object.fromEntries(mechanicus.enhancements.flatMap(enhancement=>{
-  const entries=[[normalize(enhancement.title),enhancement]];
+  const entries=[[normalize(enhancement.title),enhancement]],upgrade=(enhancement.tags||[]).includes('UPGRADE');
   if(enhancement.title==='Autoclavic Denunciation')entries.push([normalize('Autoclavic Denounciation'),enhancement]);
   if(enhancement.title==='TL-4Ø9')entries.push([normalize('TL-409'),enhancement]);
   if(enhancement.title==='Stealth-screened Cybercanids Upgrade')entries.push([normalize('Stealth-screened Cybercanids'),enhancement]);
+  if(upgrade)entries.push([normalize(`${enhancement.title.replace(/\s+Upgrade$/i,'')} (Upgrade)`),enhancement]);
   return entries;
 }));
 const tau=read('books/tau-empire/content/tau-empire-points.en.json');
+const tauContracts=read('books/tau-empire/content/tau-empire-related-rules.en.json').enhancements;
 const tauUnits=Object.fromEntries(tau.units.map(unit=>[normalize(unit.title),unit]));
-const tauEnhancements=Object.fromEntries(tau.enhancements.map(enhancement=>[normalize(enhancement.title),enhancement]));
+const tauContractFor=enhancement=>tauContracts[enhancement.id?.replace(/^enhancement-/,'')]||({
+  'enhancement-negation-emitters':tauContracts['negation-emitters-upgrade'],
+  'enhancement-unmasking-suite':tauContracts['unmasking-suite-upgrade']
+}[enhancement.id]);
+const tauEnhancements=Object.fromEntries(tau.enhancements.flatMap(enhancement=>{
+  const contract=tauContractFor(enhancement),record={...enhancement,tags:contract?.tags||[],owner:contract?.owner||null,assignment:contract?.assignment||null};
+  const base=enhancement.title.replace(/\s*\(Upgrade\)\s*$/i,'').replace(/\s+Upgrade$/i,'');
+  return [...new Set([enhancement.title,base,`${base} Upgrade`,`${base} (Upgrade)`])].map(name=>[normalize(name),record]);
+}));
 
 const catalog={
   'death guard':{units:dgUnits,enhancements:dgEnhancements},

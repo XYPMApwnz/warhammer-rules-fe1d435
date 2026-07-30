@@ -13,6 +13,7 @@ const clean=value=>String(value??'').replaceAll('^^**','').replaceAll('**^^','')
 const detachmentFiles=['content/adeptus-mechanicus-rules.en.json','content/adeptus-mechanicus-codex-detachments.en.json'];
 const detachmentSources=detachmentFiles.flatMap(file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8')).detachments||[]);
 const detachmentByEnhancement=new Map(detachmentSources.flatMap(detachment=>detachment.enhancements.map(item=>[normalize(item.title),detachment.id.replace(/^detachment-/, '')])));
+const contractByEnhancement=new Map(detachmentSources.flatMap(detachment=>detachment.enhancements.map(item=>[normalize(item.title),{tags:item.tags||[],owner:item.eligibility?.owner||null,assignment:item.assignment||item.eligibility?.assignment||null}])));
 const codexParity=JSON.parse(fs.readFileSync(path.join(root,'content','adeptus-mechanicus-codex-parity.en.json'),'utf8')).detachments;
 const exactEnhancementTextByTitle=new Map([
   ...detachmentSources.filter(detachment=>!codexParity.some(item=>item.title===detachment.title)).flatMap(detachment=>detachment.enhancements),
@@ -210,7 +211,7 @@ const effects={
 };
 const enhancements=enhancementEntries().map(entry=>{
   const title=aliases[entry.title]||entry.title;
-  return{...entry,title,text:exactEnhancementTextByTitle.get(normalize(title))||entry.text,detachment:detachmentByEnhancement.get(normalize(title))||'',effect:effects[title]||''};
+  return{...entry,title,text:exactEnhancementTextByTitle.get(normalize(title))||entry.text,detachment:detachmentByEnhancement.get(normalize(title))||'',effect:effects[title]||'',...contractByEnhancement.get(normalize(title))};
 });
 const rowKey=rows=>JSON.stringify((rows||[]).map(row=>Array.isArray(row)?row:[row.label,Number(row.value)]).sort((a,b)=>String(a[0]).localeCompare(String(b[0]))));
 const officialUnitNames=new Set(Object.keys(officialMfm.units));

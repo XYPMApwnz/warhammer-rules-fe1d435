@@ -3483,6 +3483,22 @@ window.DG_TERMS={
     "datasheet": "unit-sky-slasher-swarms",
     "statline": "sky-slasher-swarms-profile"
   },
+  "tyranids-enhancement-encircling-horrors-2": {
+    "id": "tyranids-enhancement-encircling-horrors-2",
+    "title": "Encircling Horrors",
+    "summary": "UPGRADE. NEUROLICTOR/LICTOR/VON RYAN’S LEAPERS unit only. In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, this unit can make a normal move of up to D3+3\".",
+    "full": "UPGRADE. NEUROLICTOR/LICTOR/VON RYAN’S LEAPERS unit only. In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, this unit can make a normal move of up to D3+3\".",
+    "glossary": "glossary-tyranids-enhancement-encircling-horrors-2",
+    "rule": "detachment-ambush-predators"
+  },
+  "tyranids-enhancement-cryptophotaic-camouflage-2": {
+    "id": "tyranids-enhancement-cryptophotaic-camouflage-2",
+    "title": "Cryptophotaic Camouflage",
+    "summary": "UPGRADE. VON RYAN’S LEAPERS unit only. This unit has -3\" detection range.",
+    "full": "UPGRADE. VON RYAN’S LEAPERS unit only. This unit has -3\" detection range.",
+    "glossary": "glossary-tyranids-enhancement-cryptophotaic-camouflage-2",
+    "rule": "detachment-ambush-predators"
+  },
   "tyranids-enhancement-biophagic-flow-aura": {
     "id": "tyranids-enhancement-biophagic-flow-aura",
     "title": "Biophagic Flow (Aura)",
@@ -3834,6 +3850,22 @@ window.DG_TERMS={
     "full": "At the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army and while a TYRANIDS unit from your army is within Synapse Range of your army, it will benefit from it. Each Synaptic Imperative can only be selected once per battle. Synaptic Augmentation: While this unit is within Synapse Range of your army, models in this unit have a 5+ invulnerable save. Surging Vitality: While this unit is within Synapse Range of your army, add 1 to Advance and Charge rolls made for this unit. Goaded to Slaughter: While this unit is within Synapse Range of your army, each time a model in this unit makes a melee attack, add 1 to the Hit roll.",
     "glossary": "glossary-tyranids-detachment-rule-synaptic-imperatives",
     "rule": "detachment-synaptic-nexus"
+  },
+  "tyranids-enhancement-destabilising-predation-2": {
+    "id": "tyranids-enhancement-destabilising-predation-2",
+    "title": "Destabilising Predation",
+    "summary": "UPGRADE. NORN EMISSARY unit only. This unit’s ranged attacks have [ANTI-CHARACTER 2+].",
+    "full": "UPGRADE. NORN EMISSARY unit only. This unit’s ranged attacks have [ANTI-CHARACTER 2+].",
+    "glossary": "glossary-tyranids-enhancement-destabilising-predation-2",
+    "rule": "detachment-talons-of-the-norn-queen"
+  },
+  "tyranids-enhancement-synaptoprescience-2": {
+    "id": "tyranids-enhancement-synaptoprescience-2",
+    "title": "Synaptoprescience",
+    "summary": "UPGRADE. NORN ASSIMILATOR unit only. This unit has 4+ InSv.",
+    "full": "UPGRADE. NORN ASSIMILATOR unit only. This unit has 4+ InSv.",
+    "glossary": "glossary-tyranids-enhancement-synaptoprescience-2",
+    "rule": "detachment-talons-of-the-norn-queen"
   },
   "tyranids-enhancement-adrenalised-onslaught": {
     "id": "tyranids-enhancement-adrenalised-onslaught",

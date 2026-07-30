@@ -303,1190 +303,1767 @@
     },
     "stratagem-rapid-regeneration": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["TYRANIDS"] } }],
-      "conditions": ["targeted-by-enemy-attack"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "TYRANIDS"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "targeted-by-enemy-attack"
+      ]
     },
     "stratagem-adrenal-surge": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 2, "selector": { "allKeywords": ["TYRANIDS"] } }],
-      "conditions": ["eligible-to-fight", "up-to-two-targets-if-within-synapse-range"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 2,
+          "selector": {
+            "allKeywords": [
+              "TYRANIDS"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "eligible-to-fight",
+        "up-to-two-targets-if-within-synapse-range"
+      ]
     },
     "stratagem-death-frenzy": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["TYRANIDS"] } }],
-      "conditions": ["targeted-by-enemy-attack", "fight-phase"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "TYRANIDS"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "targeted-by-enemy-attack",
+        "fight-phase"
+      ]
     },
     "stratagem-overrun": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["TYRANIDS"] } }],
-      "conditions": ["about-to-consolidate"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "TYRANIDS"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "about-to-consolidate"
+      ]
     },
     "stratagem-predatory-imperative": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 2, "selector": { "allKeywords": ["TYRANIDS"] } }],
-      "conditions": ["up-to-two-targets-if-within-synapse-range"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 2,
+          "selector": {
+            "allKeywords": [
+              "TYRANIDS"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "up-to-two-targets-if-within-synapse-range"
+      ]
     },
     "stratagem-endless-swarm": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 2, "selector": { "allKeywords": ["ENDLESS MULTITUDE"] } }],
-      "conditions": ["up-to-two-targets-if-within-synapse-range"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 2,
+          "selector": {
+            "allKeywords": [
+              "ENDLESS MULTITUDE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "up-to-two-targets-if-within-synapse-range"
+      ]
     },
     "stratagem-corrosive-viscera": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "model", "count": 1, "selector": { "unitIds": ["unit-hive-tyrant", "unit-tervigon", "unit-the-swarmlord", "unit-carnifexes", "unit-exocrine", "unit-haruspex", "unit-maleceptor", "unit-norn-assimilator", "unit-norn-emissary", "unit-psychophage", "unit-screamer-killer", "unit-sporocyst", "unit-toxicrene", "unit-tyrannofex", "unit-hierophant", "unit-barbed-hierodule", "unit-dimachaeron", "unit-scythed-hierodule"], "allKeywords": ["TYRANIDS", "MONSTER"], "noneKeywords": ["FLY"] } }],
-      "conditions": ["model-has-deadly-demise", "model-cannot-fly", "model-just-destroyed"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "model",
+          "count": 1,
+          "selector": {
+            "unitIds": [
+              "unit-hive-tyrant",
+              "unit-tervigon",
+              "unit-the-swarmlord",
+              "unit-carnifexes",
+              "unit-exocrine",
+              "unit-haruspex",
+              "unit-maleceptor",
+              "unit-norn-assimilator",
+              "unit-norn-emissary",
+              "unit-psychophage",
+              "unit-screamer-killer",
+              "unit-sporocyst",
+              "unit-toxicrene",
+              "unit-tyrannofex",
+              "unit-hierophant",
+              "unit-barbed-hierodule",
+              "unit-dimachaeron",
+              "unit-scythed-hierodule"
+            ],
+            "allKeywords": [
+              "TYRANIDS",
+              "MONSTER"
+            ],
+            "noneKeywords": [
+              "FLY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "model-has-deadly-demise",
+        "model-cannot-fly",
+        "model-just-destroyed"
+      ]
     },
     "stratagem-rampaging-monstrosities": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["TYRANIDS", "MONSTER"] } }],
-      "conditions": ["not-selected-to-fight"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "TYRANIDS",
+              "MONSTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "not-selected-to-fight"
+      ]
     },
     "stratagem-savage-roar": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["TYRANIDS", "MONSTER"] } }],
-      "conditions": ["targeted-by-enemy-attack", "fight-phase"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "TYRANIDS",
+              "MONSTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "targeted-by-enemy-attack",
+        "fight-phase"
+      ]
     },
     "stratagem-untrammelled-ferocity": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["TYRANIDS", "MONSTER"] } }],
-      "conditions": ["not-selected-to-move"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "TYRANIDS",
+              "MONSTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "not-selected-to-move"
+      ]
     },
     "stratagem-swarm-guided-salvoes": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["TYRANIDS", "MONSTER"] } }],
-      "conditions": ["not-selected-to-shoot"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "TYRANIDS",
+              "MONSTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "not-selected-to-shoot"
+      ]
     },
     "stratagem-massive-impact": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "model", "count": 1, "selector": { "allKeywords": ["TYRANIDS", "MONSTER"] } }],
-      "conditions": ["just-ended-charge-move"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "model",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "TYRANIDS",
+              "MONSTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "just-ended-charge-move"
+      ]
     },
     "stratagem-broodguard-impulse": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["HARVESTER"] } }],
-      "conditions": ["unit-just-destroyed"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HARVESTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "unit-just-destroyed"
+      ]
     },
     "stratagem-reclaim-biomass": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["HARVESTER"] } }],
-      "conditions": ["friendly-tyranids-unit-just-destroyed-within-6"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HARVESTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "friendly-tyranids-unit-just-destroyed-within-6"
+      ]
     },
     "stratagem-tyrannoformed": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["HARVESTER"] } }],
-      "conditions": ["within-range-of-controlled-objective"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HARVESTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "within-range-of-controlled-objective"
+      ]
     },
     "stratagem-ablative-carapace": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["HARVESTER"] } }],
-      "conditions": ["targeted-by-enemy-attack"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HARVESTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "targeted-by-enemy-attack"
+      ]
     },
     "stratagem-secure-biomass": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["TYRANIDS"] } }],
-      "conditions": ["not-selected-to-fight"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "TYRANIDS"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "not-selected-to-fight"
+      ]
     },
     "stratagem-rapacious-hunger": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["TYRANIDS"] } }],
-      "conditions": ["unit-just-destroyed-enemy-unit", "your-fight-phase"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "TYRANIDS"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "unit-just-destroyed-enemy-unit",
+        "your-fight-phase"
+      ]
     },
     "stratagem-synaptic-goading": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["ENDLESS MULTITUDE"] } }],
-      "conditions": ["within-synapse-range", "about-to-make-surge-move"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ENDLESS MULTITUDE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "within-synapse-range",
+        "about-to-make-surge-move"
+      ]
     },
     "stratagem-unending-waves": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["ENDLESS MULTITUDE"] } }],
-      "conditions": ["unit-just-destroyed", "once-per-battle", "attached-characters-not-returned"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ENDLESS MULTITUDE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "unit-just-destroyed",
+        "once-per-battle",
+        "attached-characters-not-returned"
+      ]
     },
     "stratagem-teeming-masses": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["ENDLESS MULTITUDE"] } }],
-      "conditions": ["targeted-by-enemy-attack"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ENDLESS MULTITUDE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "targeted-by-enemy-attack"
+      ]
     },
     "stratagem-swarming-masses": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["ENDLESS MULTITUDE"] } }],
-      "conditions": ["not-selected-to-shoot-or-fight"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ENDLESS MULTITUDE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "not-selected-to-shoot-or-fight"
+      ]
     },
     "stratagem-bounding-advance": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["ENDLESS MULTITUDE"] } }],
-      "conditions": ["movement-phase"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ENDLESS MULTITUDE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "movement-phase"
+      ]
     },
     "stratagem-preservation-imperative": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["ENDLESS MULTITUDE"] } }],
-      "conditions": ["targeted-by-enemy-ranged-attack"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ENDLESS MULTITUDE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "targeted-by-enemy-ranged-attack"
+      ]
     },
     "stratagem-the-smothering-shadow": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["SYNAPSE"] } }],
-      "conditions": ["within-12-of-enemy-unit-that-just-failed-battle-shock"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "SYNAPSE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "within-12-of-enemy-unit-that-just-failed-battle-shock"
+      ]
     },
     "stratagem-synaptic-channelling": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["SYNAPSE"] } }],
-      "conditions": ["command-phase"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "SYNAPSE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "command-phase"
+      ]
     },
     "stratagem-irresistible-will": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["SYNAPSE"] } }],
-      "conditions": ["not-selected-to-shoot-or-fight", "enemy-unit-visible-within-24"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "SYNAPSE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "not-selected-to-shoot-or-fight",
+        "enemy-unit-visible-within-24"
+      ]
     },
     "stratagem-reinforced-hive-node": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["SYNAPSE"] } }],
-      "conditions": ["targeted-by-enemy-attack"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "SYNAPSE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "targeted-by-enemy-attack"
+      ]
     },
     "stratagem-imperative-dominance": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["TYRANIDS"] } }],
-      "conditions": ["within-synapse-range"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "TYRANIDS"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "within-synapse-range"
+      ]
     },
     "stratagem-override-instincts": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["TYRANIDS"] } }],
-      "conditions": ["within-synapse-range", "made-fall-back-move-this-phase"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "TYRANIDS"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "within-synapse-range",
+        "made-fall-back-move-this-phase"
+      ]
     },
     "stratagem-surprise-assault": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["VANGUARD INVADER"] } }],
-      "conditions": ["unit-just-selected-targets"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "VANGUARD INVADER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "unit-just-selected-targets"
+      ]
     },
     "stratagem-assassin-beasts": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["VANGUARD INVADER", "INFANTRY"] } }],
-      "conditions": ["not-selected-to-fight"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "VANGUARD INVADER",
+              "INFANTRY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "not-selected-to-fight"
+      ]
     },
     "stratagem-seeded-broods": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 2, "selector": { "allKeywords": ["TYRANIDS"] } }],
-      "conditions": ["unit-in-reserves", "up-to-two-targets-only-if-vanguard-invader"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 2,
+          "selector": {
+            "allKeywords": [
+              "TYRANIDS"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "unit-in-reserves",
+        "up-to-two-targets-only-if-vanguard-invader"
+      ]
     },
     "stratagem-hypersensory-scillia": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 2, "selector": { "alternatives": [{ "allKeywords": ["VANGUARD INVADER"] }, { "allKeywords": ["TYRANIDS", "INFANTRY"] }] } }],
-      "conditions": ["within-8-of-enemy-unit-that-just-ended-move", "not-within-engagement-range", "up-to-two-targets-only-if-vanguard-invader"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 2,
+          "selector": {
+            "alternatives": [
+              {
+                "allKeywords": [
+                  "VANGUARD INVADER"
+                ]
+              },
+              {
+                "allKeywords": [
+                  "TYRANIDS",
+                  "INFANTRY"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "within-8-of-enemy-unit-that-just-ended-move",
+        "not-within-engagement-range",
+        "up-to-two-targets-only-if-vanguard-invader"
+      ]
     },
     "stratagem-unseen-lurkers": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 1, "selector": { "allKeywords": ["VANGUARD INVADER"] } }],
-      "conditions": ["targeted-by-enemy-ranged-attack"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "VANGUARD INVADER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "targeted-by-enemy-ranged-attack"
+      ]
     },
     "stratagem-invisible-hunter": {
       "v": 1,
-      "roles": [{ "id": "friendly-target", "side": "friendly", "subject": "unit", "count": 2, "selector": { "alternatives": [{ "allKeywords": ["VANGUARD INVADER"] }, { "allKeywords": ["TYRANIDS", "INFANTRY"] }] } }],
-      "conditions": ["more-than-3-from-all-enemy-units", "up-to-two-targets-only-if-vanguard-invader"]
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 2,
+          "selector": {
+            "alternatives": [
+              {
+                "allKeywords": [
+                  "VANGUARD INVADER"
+                ]
+              },
+              {
+                "allKeywords": [
+                  "TYRANIDS",
+                  "INFANTRY"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "more-than-3-from-all-enemy-units",
+        "up-to-two-targets-only-if-vanguard-invader"
+      ]
     }
   },
   "enhancements": {
     "encircling-horrors": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-lictor",
-              "unit-neurolictor",
-              "unit-von-ryans-leapers"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
+      "tags": [
+        "UPGRADE"
       ],
-      "conditions": []
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-lictor",
+            "unit-neurolictor",
+            "unit-von-ryans-leapers"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "cryptophotaic-camouflage": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-von-ryans-leapers"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
+      "tags": [
+        "UPGRADE"
       ],
-      "conditions": []
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-von-ryans-leapers"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-biophagic-flow-aura": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-hyperadapted-raveners",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-hyperadapted-raveners",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-instinctive-defense": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-hyperadapted-raveners",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-hyperadapted-raveners",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-parasitic-biomorphology": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-hyperadapted-raveners",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-hyperadapted-raveners",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-regenerating-monstrosity": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hyperadapted-raveners",
-              "unit-parasite-of-mortrex",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-tyranid-prime",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hyperadapted-raveners",
+            "unit-parasite-of-mortrex",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-tyranid-prime",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-enraged-reserves": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-hive-tyrant",
-              "unit-neurotyrant",
-              "unit-tervigon",
-              "unit-winged-hive-tyrant",
-              "unit-tyrannocyte",
-              "unit-carnifexes",
-              "unit-exocrine",
-              "unit-harpy",
-              "unit-haruspex",
-              "unit-hive-crone",
-              "unit-maleceptor",
-              "unit-mawloc",
-              "unit-norn-assimilator",
-              "unit-norn-emissary",
-              "unit-psychophage",
-              "unit-screamer-killer",
-              "unit-sporocyst",
-              "unit-toxicrene",
-              "unit-trygon",
-              "unit-tyrannofex",
-              "unit-harridan",
-              "unit-hierophant",
-              "unit-barbed-hierodule",
-              "unit-dimachaeron",
-              "unit-scythed-hierodule"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-tervigon",
+            "unit-winged-hive-tyrant",
+            "unit-tyrannocyte",
+            "unit-carnifexes",
+            "unit-exocrine",
+            "unit-harpy",
+            "unit-haruspex",
+            "unit-hive-crone",
+            "unit-maleceptor",
+            "unit-mawloc",
+            "unit-norn-assimilator",
+            "unit-norn-emissary",
+            "unit-psychophage",
+            "unit-screamer-killer",
+            "unit-sporocyst",
+            "unit-toxicrene",
+            "unit-trygon",
+            "unit-tyrannofex",
+            "unit-harridan",
+            "unit-hierophant",
+            "unit-barbed-hierodule",
+            "unit-dimachaeron",
+            "unit-scythed-hierodule"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-monstrous-nemesis": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-hive-tyrant",
-              "unit-neurotyrant",
-              "unit-tervigon",
-              "unit-winged-hive-tyrant",
-              "unit-tyrannocyte",
-              "unit-carnifexes",
-              "unit-exocrine",
-              "unit-harpy",
-              "unit-haruspex",
-              "unit-hive-crone",
-              "unit-maleceptor",
-              "unit-mawloc",
-              "unit-norn-assimilator",
-              "unit-norn-emissary",
-              "unit-psychophage",
-              "unit-screamer-killer",
-              "unit-sporocyst",
-              "unit-toxicrene",
-              "unit-trygon",
-              "unit-tyrannofex",
-              "unit-harridan",
-              "unit-hierophant",
-              "unit-barbed-hierodule",
-              "unit-dimachaeron",
-              "unit-scythed-hierodule"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-tervigon",
+            "unit-winged-hive-tyrant",
+            "unit-tyrannocyte",
+            "unit-carnifexes",
+            "unit-exocrine",
+            "unit-harpy",
+            "unit-haruspex",
+            "unit-hive-crone",
+            "unit-maleceptor",
+            "unit-mawloc",
+            "unit-norn-assimilator",
+            "unit-norn-emissary",
+            "unit-psychophage",
+            "unit-screamer-killer",
+            "unit-sporocyst",
+            "unit-toxicrene",
+            "unit-trygon",
+            "unit-tyrannofex",
+            "unit-harridan",
+            "unit-hierophant",
+            "unit-barbed-hierodule",
+            "unit-dimachaeron",
+            "unit-scythed-hierodule"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-null-nodules": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-hive-tyrant",
-              "unit-neurotyrant",
-              "unit-tervigon",
-              "unit-winged-hive-tyrant",
-              "unit-tyrannocyte",
-              "unit-carnifexes",
-              "unit-exocrine",
-              "unit-harpy",
-              "unit-haruspex",
-              "unit-hive-crone",
-              "unit-maleceptor",
-              "unit-mawloc",
-              "unit-norn-assimilator",
-              "unit-norn-emissary",
-              "unit-psychophage",
-              "unit-screamer-killer",
-              "unit-sporocyst",
-              "unit-toxicrene",
-              "unit-trygon",
-              "unit-tyrannofex",
-              "unit-harridan",
-              "unit-hierophant",
-              "unit-barbed-hierodule",
-              "unit-dimachaeron",
-              "unit-scythed-hierodule"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-tervigon",
+            "unit-winged-hive-tyrant",
+            "unit-tyrannocyte",
+            "unit-carnifexes",
+            "unit-exocrine",
+            "unit-harpy",
+            "unit-haruspex",
+            "unit-hive-crone",
+            "unit-maleceptor",
+            "unit-mawloc",
+            "unit-norn-assimilator",
+            "unit-norn-emissary",
+            "unit-psychophage",
+            "unit-screamer-killer",
+            "unit-sporocyst",
+            "unit-toxicrene",
+            "unit-trygon",
+            "unit-tyrannofex",
+            "unit-harridan",
+            "unit-hierophant",
+            "unit-barbed-hierodule",
+            "unit-dimachaeron",
+            "unit-scythed-hierodule"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-ominous-presence": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-hive-tyrant",
-              "unit-neurotyrant",
-              "unit-tervigon",
-              "unit-winged-hive-tyrant",
-              "unit-tyrannocyte",
-              "unit-carnifexes",
-              "unit-exocrine",
-              "unit-harpy",
-              "unit-haruspex",
-              "unit-hive-crone",
-              "unit-maleceptor",
-              "unit-mawloc",
-              "unit-norn-assimilator",
-              "unit-norn-emissary",
-              "unit-psychophage",
-              "unit-screamer-killer",
-              "unit-sporocyst",
-              "unit-toxicrene",
-              "unit-trygon",
-              "unit-tyrannofex",
-              "unit-harridan",
-              "unit-hierophant",
-              "unit-barbed-hierodule",
-              "unit-dimachaeron",
-              "unit-scythed-hierodule"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-tervigon",
+            "unit-winged-hive-tyrant",
+            "unit-tyrannocyte",
+            "unit-carnifexes",
+            "unit-exocrine",
+            "unit-harpy",
+            "unit-haruspex",
+            "unit-hive-crone",
+            "unit-maleceptor",
+            "unit-mawloc",
+            "unit-norn-assimilator",
+            "unit-norn-emissary",
+            "unit-psychophage",
+            "unit-screamer-killer",
+            "unit-sporocyst",
+            "unit-toxicrene",
+            "unit-trygon",
+            "unit-tyrannofex",
+            "unit-harridan",
+            "unit-hierophant",
+            "unit-barbed-hierodule",
+            "unit-dimachaeron",
+            "unit-scythed-hierodule"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-adaptive-biology": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-hyperadapted-raveners",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-hyperadapted-raveners",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-alien-cunning": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-hyperadapted-raveners",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-hyperadapted-raveners",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-perfectly-adapted": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-hyperadapted-raveners",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-hyperadapted-raveners",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-synaptic-linchpin": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-hyperadapted-raveners",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-hyperadapted-raveners",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "synaptic-strategy": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-hyperadapted-raveners",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-hyperadapted-raveners",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "tremor-senses": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-hyperadapted-raveners",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-hyperadapted-raveners",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "vanguard-intellect": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-hyperadapted-raveners",
-              "unit-parasite-of-mortrex",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-hyperadapted-raveners",
+            "unit-parasite-of-mortrex",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "trygon-prime": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-trygon"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-trygon"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-power-of-the-hive-mind": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-neurotyrant",
-              "unit-tervigon",
-              "unit-winged-hive-tyrant",
-              "unit-maleceptor",
-              "unit-norn-emissary",
-              "unit-zoanthropes"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-tervigon",
+            "unit-winged-hive-tyrant",
+            "unit-maleceptor",
+            "unit-norn-emissary",
+            "unit-zoanthropes"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-psychostatic-disruption-aura": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-maleceptor",
-              "unit-norn-assimilator",
-              "unit-norn-emissary",
-              "unit-neurolictor",
-              "unit-tyranid-warriors-with-melee-bio-weapons",
-              "unit-tyranid-warriors-with-ranged-bio-weapons",
-              "unit-zoanthropes",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-maleceptor",
+            "unit-norn-assimilator",
+            "unit-norn-emissary",
+            "unit-neurolictor",
+            "unit-tyranid-warriors-with-melee-bio-weapons",
+            "unit-tyranid-warriors-with-ranged-bio-weapons",
+            "unit-zoanthropes",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-synaptic-control": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-maleceptor",
-              "unit-norn-assimilator",
-              "unit-norn-emissary",
-              "unit-neurolictor",
-              "unit-tyranid-warriors-with-melee-bio-weapons",
-              "unit-tyranid-warriors-with-ranged-bio-weapons",
-              "unit-zoanthropes",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-maleceptor",
+            "unit-norn-assimilator",
+            "unit-norn-emissary",
+            "unit-neurolictor",
+            "unit-tyranid-warriors-with-melee-bio-weapons",
+            "unit-tyranid-warriors-with-ranged-bio-weapons",
+            "unit-zoanthropes",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-the-dirgeheart-of-kharis-aura": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-maleceptor",
-              "unit-norn-assimilator",
-              "unit-norn-emissary",
-              "unit-neurolictor",
-              "unit-tyranid-warriors-with-melee-bio-weapons",
-              "unit-tyranid-warriors-with-ranged-bio-weapons",
-              "unit-zoanthropes",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-maleceptor",
+            "unit-norn-assimilator",
+            "unit-norn-emissary",
+            "unit-neurolictor",
+            "unit-tyranid-warriors-with-melee-bio-weapons",
+            "unit-tyranid-warriors-with-ranged-bio-weapons",
+            "unit-zoanthropes",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "destabilising-predation": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-norn-emissary"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
+      "tags": [
+        "UPGRADE"
       ],
-      "conditions": []
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-norn-emissary"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "synaptoprescience": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-norn-assimilator"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
+      "tags": [
+        "UPGRADE"
       ],
-      "conditions": []
+      "owner": {
+        "subject": "unit",
+        "selector": {
+          "unitIds": [
+            "unit-norn-assimilator"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 3,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-adrenalised-onslaught": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-hyperadapted-raveners",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-hyperadapted-raveners",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-naturalised-camoflage": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-hyperadapted-raveners",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-hyperadapted-raveners",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-piercing-talons": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-hyperadapted-raveners",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-hyperadapted-raveners",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-relentless-hunger": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-hyperadapted-raveners",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-hyperadapted-raveners",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-chameleonic": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hyperadapted-raveners",
-              "unit-parasite-of-mortrex",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-gargoyles",
-              "unit-tyrannocyte",
-              "unit-harpy",
-              "unit-hive-crone",
-              "unit-mawloc",
-              "unit-trygon",
-              "unit-genestealers",
-              "unit-lictor",
-              "unit-neurolictor",
-              "unit-raveners",
-              "unit-von-ryans-leapers"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hyperadapted-raveners",
+            "unit-parasite-of-mortrex",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-gargoyles",
+            "unit-tyrannocyte",
+            "unit-harpy",
+            "unit-hive-crone",
+            "unit-mawloc",
+            "unit-trygon",
+            "unit-genestealers",
+            "unit-lictor",
+            "unit-neurolictor",
+            "unit-raveners",
+            "unit-von-ryans-leapers"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-hunting-grounds": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-hyperadapted-raveners",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-hyperadapted-raveners",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-neuronode": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hive-tyrant",
-              "unit-hyperadapted-raveners",
-              "unit-neurotyrant",
-              "unit-parasite-of-mortrex",
-              "unit-tervigon",
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-malanthrope"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hive-tyrant",
+            "unit-hyperadapted-raveners",
+            "unit-neurotyrant",
+            "unit-parasite-of-mortrex",
+            "unit-tervigon",
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-malanthrope"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "enhancement-stalker": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-broodlord",
-              "unit-hyperadapted-raveners",
-              "unit-parasite-of-mortrex",
-              "unit-winged-hive-tyrant",
-              "unit-winged-tyranid-prime",
-              "unit-gargoyles",
-              "unit-tyrannocyte",
-              "unit-harpy",
-              "unit-hive-crone",
-              "unit-mawloc",
-              "unit-trygon",
-              "unit-genestealers",
-              "unit-lictor",
-              "unit-neurolictor",
-              "unit-raveners",
-              "unit-von-ryans-leapers"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-broodlord",
+            "unit-hyperadapted-raveners",
+            "unit-parasite-of-mortrex",
+            "unit-winged-hive-tyrant",
+            "unit-winged-tyranid-prime",
+            "unit-gargoyles",
+            "unit-tyrannocyte",
+            "unit-harpy",
+            "unit-hive-crone",
+            "unit-mawloc",
+            "unit-trygon",
+            "unit-genestealers",
+            "unit-lictor",
+            "unit-neurolictor",
+            "unit-raveners",
+            "unit-von-ryans-leapers"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "elevated-might": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-tyranid-prime"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     },
     "ocular-adaptation": {
       "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-tyranid-prime-with-lash-whip",
-              "unit-winged-tyranid-prime"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-tyranid-prime-with-lash-whip",
+            "unit-winged-tyranid-prime"
+          ],
+          "noneKeywords": [
+            "EPIC HERO"
+          ]
         }
-      ],
-      "conditions": []
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      }
     }
   }
 }

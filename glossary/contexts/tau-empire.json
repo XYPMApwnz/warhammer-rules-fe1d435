@@ -4822,6 +4822,20 @@
         ]
       }
     },
+    "tau-empire-enhancement-negation-emitters-upgrade-2": {
+      "termId": "tau-empire-enhancement-negation-emitters-upgrade-2",
+      "navigation": {
+        "glossary": "glossary-tau-empire-enhancement-negation-emitters-upgrade-2",
+        "rule": "detachment-advanced-acquisition-cadre"
+      }
+    },
+    "tau-empire-enhancement-unmasking-suite-upgrade-2": {
+      "termId": "tau-empire-enhancement-unmasking-suite-upgrade-2",
+      "navigation": {
+        "glossary": "glossary-tau-empire-enhancement-unmasking-suite-upgrade-2",
+        "rule": "detachment-advanced-acquisition-cadre"
+      }
+    },
     "tau-empire-enhancement-exemplar-of-the-kauyon": {
       "termId": "tau-empire-enhancement-exemplar-of-the-kauyon",
       "navigation": {

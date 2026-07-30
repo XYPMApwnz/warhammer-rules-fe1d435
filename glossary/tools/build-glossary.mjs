@@ -61,6 +61,7 @@ function weaponProfile(summary){
 
 const dgSource=readJson(path.join(root,'books','death-guard','content','death-guard-rules.en.json'));
 const dgUnitsById=new Map(dgSource.sections.filter(section=>section.kind==='unit').map(section=>[section.id,section]));
+const dgEnhancementById=new Map(dgSource.sections.flatMap(section=>(section.subsections||[]).flatMap(subsection=>(subsection.blocks||[]).filter(item=>item.type==='enhancement').map(item=>[item.id,item]))));
 const dgRuntime=loadWindow(path.join(root,'books','death-guard','scripts','data.js')).DG_TERMS;
 const amRuntime=loadWindow(path.join(root,'books','adeptus-mechanicus','scripts','data.js')).DG_TERMS;
 const amFaction=readJson(path.join(root,'books','adeptus-mechanicus','content','adeptus-mechanicus-rules.en.json'));
@@ -242,6 +243,7 @@ function dgStableId(entry){
 }
 
 for(const entry of dgSource.glossary){
+  const enhancement=dgEnhancementById.get(entry.sectionId),upgrade=enhancement?.tags?.includes('UPGRADE');
   let id=dgStableId(entry);
   if(entry.id.startsWith('core-')){
     const match=coreByTitle.get(normalTitle(entry.title));
@@ -260,9 +262,9 @@ for(const entry of dgSource.glossary){
     edition:'11e',
     language:'en',
     title:{en:entry.title},
-    summary:{en:concise((entry.weapon||entry.statline)?runtime.summary:(entry.short||runtime.summary||entry.full))},
-    definition:{en:clean(entry.weapon?`${entry.title} profile: ${Object.entries(entry.weapon).map(([key,value])=>`${key} ${value}`).join('; ')}.`:(entry.full||entry.short||runtime.summary))},
-    structured:{...(entry.weapon?{weapon:entry.weapon}:{}),...(entry.statline?{statline:entry.statline}:{}),...(effectivePoints?{points:effectivePoints}:{})},
+    summary:{en:concise(`${upgrade?'UPGRADE. ':''}${(entry.weapon||entry.statline)?runtime.summary:(entry.short||runtime.summary||entry.full)}`)},
+    definition:{en:clean(`${upgrade?'UPGRADE. ':''}${entry.weapon?`${entry.title} profile: ${Object.entries(entry.weapon).map(([key,value])=>`${key} ${value}`).join('; ')}.`:(entry.full||entry.short||runtime.summary)}`)},
+    structured:{...(entry.weapon?{weapon:entry.weapon}:{}),...(entry.statline?{statline:entry.statline}:{}),...(effectivePoints?{points:effectivePoints}:{}),...(upgrade?{tags:['UPGRADE']}:{})},
     aliases:[entry.id],
     related:[],
     mentions:related,
@@ -274,6 +276,13 @@ for(const entry of dgSource.glossary){
     registry.get(id).summarySource={documentId:'death-guard',kind:'curated-reference'};
   }
   addContext('death-guard',entry.id,id,runtime,{owners:entry.unitIds||[],visible:entry.showGlossary!==false});
+}
+for(const entry of dgSource.glossary){
+  if(!dgEnhancementById.get(entry.sectionId)?.tags?.includes('UPGRADE'))continue;
+  const term=registry.get(dgStableId(entry));if(!term)throw new Error(`Missing Death Guard Upgrade term: ${entry.id}`);
+  term.structured={...(term.structured||{}),tags:['UPGRADE']};
+  if(!/^UPGRADE\./i.test(term.summary.en))term.summary.en=`UPGRADE. ${term.summary.en}`;
+  if(!/^UPGRADE\./i.test(term.definition.en))term.definition.en=`UPGRADE. ${term.definition.en}`;
 }
 
 for(const [localId,entry] of Object.entries(amRuntime)){
@@ -327,9 +336,10 @@ function addMechanicusDetachments(source,revision){
 
     for(const enhancement of detachment.enhancements||[]){
       const id=`adeptus-mechanicus-enhancement-${slug(enhancement.title)}`;
+      const upgrade=(enhancement.tags||[]).includes('UPGRADE'),text=upgrade?`UPGRADE. ${enhancement.text}`:enhancement.text;
       addTerm({
         id,kind:'enhancement',scope:'adeptus-mechanicus',edition:'11e',language:'en',title:{en:enhancement.title},
-        summary:{en:concise(enhancement.text)},definition:{en:clean(enhancement.text)},aliases:[],related:[detachmentId],
+        summary:{en:concise(text)},definition:{en:clean(text)},structured:upgrade?{tags:['UPGRADE']}:{},aliases:[],related:[detachmentId],
         canonicalSource:{documentId:'adeptus-mechanicus',revision,locator:`${detachment.id}; Enhancements`},status:'verified'
       },'adeptus-mechanicus');
     }
@@ -388,6 +398,7 @@ for(const book of genericArmyBooks){
     const prefix=`${book.id}-`,isWeapon=localId.startsWith(`${prefix}weapon-`);
     const profile=isWeapon?weaponProfile(entry.summary):null;
     const kind=isWeapon?'weapon':localId.startsWith(`${prefix}stratagem-`)?'stratagem':localId.startsWith(`${prefix}enhancement-`)?'enhancement':localId.startsWith(`${prefix}detachment-rule-`)?'detachment-rule':'datasheet-ability';
+    const upgrade=kind==='enhancement'&&/^UPGRADE\./i.test(entry.full||entry.summary||'');
     const coreAbility=kind==='datasheet-ability'?coreAbilitiesByTitle.get(normalTitle(entry.title)):null;
     if(coreAbility&&isCoreAbilityCopy(coreAbility,entry.full||entry.summary)){
       aliases[localId]=coreAbility.id;
@@ -399,7 +410,7 @@ for(const book of genericArmyBooks){
       id:localId,
       kind,
       scope:book.id,edition:'11e',language:'en',title:{en:entry.title},summary:{en:concise(entry.summary)},definition:{en:clean(entry.full||entry.summary)},
-      structured:profile?{weapon:profile}:{},presentation:profile?'profile':undefined,aliases:[],related:[],
+      structured:profile?{weapon:profile}:upgrade?{tags:['UPGRADE']}:{},presentation:profile?'profile':undefined,aliases:[],related:[],
       canonicalSource:{documentId:official?(book.pack.meta?.sourceId||`${book.id}-faction-pack`):`${book.id}-codex-transcription`,revision:official?(book.pack.meta?.version||'current'):'pinned BSData',locator:entry.rule||entry.datasheet||localId},
       fullRulePath:entry.rule?`books/${book.id}/reader.html#${entry.rule}`:undefined,
       status:official?'verified':'provisional'
@@ -495,6 +506,7 @@ for(const [id,existing] of Object.entries(existingRegistry)){
   if((term.scope==='adeptus-mechanicus'||genericArmyBooks.some(book=>book.id===term.scope))&&existing.curated!==true)continue;
   for(const field of ['kind','scope','edition','language','title','summary','definition','structured','presentation','related','mentions','references','matchLabels','canonicalSource','summarySource','status','curation']){
     if(existing[field]==null)continue;
+    if(term.structured?.tags?.includes('UPGRADE')&&['summary','definition','structured'].includes(field))continue;
     if(field==='definition'&&/^(weapon|datasheet) profile\.?$/i.test(existing.definition?.en||''))continue;
     if(field==='structured'&&term.kind==='unit')continue;
     if(field==='structured'&&existing.kind==='weapon'&&!Object.keys(existing.structured||{}).length)continue;

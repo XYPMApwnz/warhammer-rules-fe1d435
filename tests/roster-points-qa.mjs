@@ -7,7 +7,7 @@ vm.createContext(context);
 for(const file of ['books/shared/roster-parser.js','roster-guides/points-data.js','roster-guides/points-validator.js'])vm.runInContext(fs.readFileSync(file,'utf8'),context,{filename:file});
 const {WHRosterParser,WH_POINTS_CATALOG,WHRosterPoints}=context.window;
 assert.equal(Object.keys(WH_POINTS_CATALOG['death guard'].units).length,41);
-assert.equal(Object.keys(WH_POINTS_CATALOG['death guard'].enhancements).length,30);
+assert.equal(new Set(Object.values(WH_POINTS_CATALOG['death guard'].enhancements).map(item=>item.id)).size,30);
 assert.equal(Object.keys(WH_POINTS_CATALOG['adeptus mechanicus'].units).length,38);
 assert.equal(new Set(Object.values(WH_POINTS_CATALOG['adeptus mechanicus'].enhancements).map(item=>item.title)).size,34);
 assert.equal(Object.keys(WH_POINTS_CATALOG['t au empire'].units).length,63);
@@ -106,7 +106,7 @@ const deathGuardMfmEnhancements={
   'revolting regeneration':30
 };
 assert.deepEqual(
-  Object.keys(WH_POINTS_CATALOG['death guard'].enhancements).sort(),
+  [...new Set(Object.values(WH_POINTS_CATALOG['death guard'].enhancements).map(item=>item.title.toLowerCase().replace(/-/g,' ')))].sort(),
   Object.keys(deathGuardMfmEnhancements).sort(),
   'Death Guard Enhancement catalogue must exactly match MFM v1.1'
 );

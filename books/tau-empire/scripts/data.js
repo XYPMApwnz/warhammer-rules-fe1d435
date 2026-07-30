@@ -5179,6 +5179,22 @@ window.DG_TERMS={
     "datasheet": "unit-yvahra-battlesuit",
     "statline": "yvahra-battlesuit-profile"
   },
+  "tau-empire-enhancement-negation-emitters-upgrade-2": {
+    "id": "tau-empire-enhancement-negation-emitters-upgrade-2",
+    "title": "Negation Emitters Upgrade",
+    "summary": "UPGRADE. STEALTH BATTLESUITS unit only. This unit has -3\" detection range.",
+    "full": "UPGRADE. STEALTH BATTLESUITS unit only. This unit has -3\" detection range.",
+    "glossary": "glossary-tau-empire-enhancement-negation-emitters-upgrade-2",
+    "rule": "detachment-advanced-acquisition-cadre"
+  },
+  "tau-empire-enhancement-unmasking-suite-upgrade-2": {
+    "id": "tau-empire-enhancement-unmasking-suite-upgrade-2",
+    "title": "Unmasking Suite Upgrade",
+    "summary": "UPGRADE. GHOSTKEEL BATTLESUIT/PATHFINDER TEAM/STEALTH BATTLESUITS unit only. When this unit is selected to shoot, you can select one enemy unit within 24\" of this unit. That enemy unit has +9\" detection range until this unit has shot.",
+    "full": "UPGRADE. GHOSTKEEL BATTLESUIT/PATHFINDER TEAM/STEALTH BATTLESUITS unit only. When this unit is selected to shoot, you can select one enemy unit within 24\" of this unit. That enemy unit has +9\" detection range until this unit has shot.",
+    "glossary": "glossary-tau-empire-enhancement-unmasking-suite-upgrade-2",
+    "rule": "detachment-advanced-acquisition-cadre"
+  },
   "tau-empire-enhancement-exemplar-of-the-kauyon": {
     "id": "tau-empire-enhancement-exemplar-of-the-kauyon",
     "title": "Exemplar of the Kauyon",

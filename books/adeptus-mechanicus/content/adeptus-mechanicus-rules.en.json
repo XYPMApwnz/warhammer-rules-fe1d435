@@ -62,15 +62,31 @@
           "text": "SKITARII MARSHAL model only. This unit has Infiltrators.",
           "id": "enhancement-explorator-dispensation",
           "eligibility": {
-            "targets": [
-              {
-                "side": "friendly",
-                "count": 1,
-                "units": [
+            "v": 1,
+            "tags": [],
+            "owner": {
+              "subject": "model",
+              "selector": {
+                "unitIds": [
                   "unit-skitarii-marshal"
-                ]
+                ],
+                "allKeywords": [],
+                "anyKeywords": [],
+                "noneKeywords": [],
+                "alternatives": []
               }
-            ]
+            },
+            "assignment": {
+              "maxOwners": 1,
+              "enhancementChoices": 1,
+              "payPointsPerOwner": true
+            }
+          },
+          "tags": [],
+          "assignment": {
+            "maxOwners": 1,
+            "enhancementChoices": 1,
+            "payPointsPerOwner": true
           }
         },
         {
@@ -78,15 +94,35 @@
           "text": "SERBERYS RAIDERS unit only. This unit has Lone Operative 15\".",
           "id": "enhancement-stealth-screened-cybercanids-upgrade",
           "eligibility": {
-            "targets": [
-              {
-                "side": "friendly",
-                "count": 1,
-                "units": [
+            "v": 1,
+            "tags": [
+              "UPGRADE"
+            ],
+            "owner": {
+              "subject": "unit",
+              "selector": {
+                "unitIds": [
                   "unit-serberys-raiders"
-                ]
+                ],
+                "allKeywords": [],
+                "anyKeywords": [],
+                "noneKeywords": [],
+                "alternatives": []
               }
-            ]
+            },
+            "assignment": {
+              "maxOwners": 3,
+              "enhancementChoices": 1,
+              "payPointsPerOwner": true
+            }
+          },
+          "tags": [
+            "UPGRADE"
+          ],
+          "assignment": {
+            "maxOwners": 3,
+            "enhancementChoices": 1,
+            "payPointsPerOwner": true
           }
         }
       ],
@@ -178,15 +214,31 @@
           "text": "CYBERNETICA DATASMITH model only. At the start of the first battle round, if this unit is an Attached unit, this unit has MOBILE until the end of the battle.",
           "id": "enhancement-vinghs-wafers-of-dynamism",
           "eligibility": {
-            "targets": [
-              {
-                "side": "friendly",
-                "count": 1,
-                "units": [
+            "v": 1,
+            "tags": [],
+            "owner": {
+              "subject": "model",
+              "selector": {
+                "unitIds": [
                   "unit-cybernetica-datasmith"
-                ]
+                ],
+                "allKeywords": [],
+                "anyKeywords": [],
+                "noneKeywords": [],
+                "alternatives": []
               }
-            ]
+            },
+            "assignment": {
+              "maxOwners": 1,
+              "enhancementChoices": 1,
+              "payPointsPerOwner": true
+            }
+          },
+          "tags": [],
+          "assignment": {
+            "maxOwners": 1,
+            "enhancementChoices": 1,
+            "payPointsPerOwner": true
           }
         },
         {
@@ -194,19 +246,34 @@
           "text": "TECH-PRIEST model only. The bearer gains TL-4Ø9: Range 24\", A 3, BS 2+, S 11, AP -2, D D3+2, [DEVASTATING WOUNDS, HAZARDOUS].",
           "id": "enhancement-tl-4-9",
           "eligibility": {
-            "targets": [
-              {
-                "side": "friendly",
-                "count": 1,
-                "all": [
+            "v": 1,
+            "tags": [],
+            "owner": {
+              "subject": "model",
+              "selector": {
+                "unitIds": [],
+                "allKeywords": [
                   "CHARACTER",
                   "TECH-PRIEST"
                 ],
-                "none": [
+                "anyKeywords": [],
+                "noneKeywords": [
                   "EPIC HERO"
-                ]
+                ],
+                "alternatives": []
               }
-            ]
+            },
+            "assignment": {
+              "maxOwners": 1,
+              "enhancementChoices": 1,
+              "payPointsPerOwner": true
+            }
+          },
+          "tags": [],
+          "assignment": {
+            "maxOwners": 1,
+            "enhancementChoices": 1,
+            "payPointsPerOwner": true
           }
         }
       ],
@@ -291,19 +358,34 @@
           "text": "TECH-PRIEST model only. Enemy units cannot target this unit with Snap Shooting attacks.",
           "id": "enhancement-voltagheist-reliquary",
           "eligibility": {
-            "targets": [
-              {
-                "side": "friendly",
-                "count": 1,
-                "all": [
+            "v": 1,
+            "tags": [],
+            "owner": {
+              "subject": "model",
+              "selector": {
+                "unitIds": [],
+                "allKeywords": [
                   "CHARACTER",
                   "TECH-PRIEST"
                 ],
-                "none": [
+                "anyKeywords": [],
+                "noneKeywords": [
                   "EPIC HERO"
-                ]
+                ],
+                "alternatives": []
               }
-            ]
+            },
+            "assignment": {
+              "maxOwners": 1,
+              "enhancementChoices": 1,
+              "payPointsPerOwner": true
+            }
+          },
+          "tags": [],
+          "assignment": {
+            "maxOwners": 1,
+            "enhancementChoices": 1,
+            "payPointsPerOwner": true
           }
         },
         {
@@ -311,19 +393,34 @@
           "text": "TECH-PRIEST model only. This unit has Stealth.",
           "id": "enhancement-electromiasmic-brazier",
           "eligibility": {
-            "targets": [
-              {
-                "side": "friendly",
-                "count": 1,
-                "all": [
+            "v": 1,
+            "tags": [],
+            "owner": {
+              "subject": "model",
+              "selector": {
+                "unitIds": [],
+                "allKeywords": [
                   "CHARACTER",
                   "TECH-PRIEST"
                 ],
-                "none": [
+                "anyKeywords": [],
+                "noneKeywords": [
                   "EPIC HERO"
-                ]
+                ],
+                "alternatives": []
               }
-            ]
+            },
+            "assignment": {
+              "maxOwners": 1,
+              "enhancementChoices": 1,
+              "payPointsPerOwner": true
+            }
+          },
+          "tags": [],
+          "assignment": {
+            "maxOwners": 1,
+            "enhancementChoices": 1,
+            "payPointsPerOwner": true
           }
         }
       ],
@@ -416,15 +513,31 @@
           "text": "SKITARII MARSHAL model only. The Conqueror Imperative and Protector Imperative are both active for the bearer's unit.",
           "id": "enhancement-omnicogitator",
           "eligibility": {
-            "targets": [
-              {
-                "side": "friendly",
-                "count": 1,
-                "units": [
+            "v": 1,
+            "tags": [],
+            "owner": {
+              "subject": "model",
+              "selector": {
+                "unitIds": [
                   "unit-skitarii-marshal"
-                ]
+                ],
+                "allKeywords": [],
+                "anyKeywords": [],
+                "noneKeywords": [],
+                "alternatives": []
               }
-            ]
+            },
+            "assignment": {
+              "maxOwners": 1,
+              "enhancementChoices": 1,
+              "payPointsPerOwner": true
+            }
+          },
+          "tags": [],
+          "assignment": {
+            "maxOwners": 1,
+            "enhancementChoices": 1,
+            "payPointsPerOwner": true
           }
         },
         {
@@ -432,19 +545,34 @@
           "text": "TECH-PRIEST model only. Models in the bearer's unit have the SKITARII keyword.",
           "id": "enhancement-martial-signatum-amplificator",
           "eligibility": {
-            "targets": [
-              {
-                "side": "friendly",
-                "count": 1,
-                "all": [
+            "v": 1,
+            "tags": [],
+            "owner": {
+              "subject": "model",
+              "selector": {
+                "unitIds": [],
+                "allKeywords": [
                   "CHARACTER",
                   "TECH-PRIEST"
                 ],
-                "none": [
+                "anyKeywords": [],
+                "noneKeywords": [
                   "EPIC HERO"
-                ]
+                ],
+                "alternatives": []
               }
-            ]
+            },
+            "assignment": {
+              "maxOwners": 1,
+              "enhancementChoices": 1,
+              "payPointsPerOwner": true
+            }
+          },
+          "tags": [],
+          "assignment": {
+            "maxOwners": 1,
+            "enhancementChoices": 1,
+            "payPointsPerOwner": true
           }
         },
         {
@@ -452,19 +580,34 @@
           "text": "ADEPTUS MECHANICUS model only. Add 6\" to the Range characteristic and 1 to the Strength characteristic of ranged weapons equipped by models in the bearer's unit.",
           "id": "enhancement-belicosa-class-capacitor-vanes",
           "eligibility": {
-            "targets": [
-              {
-                "side": "friendly",
-                "count": 1,
-                "all": [
+            "v": 1,
+            "tags": [],
+            "owner": {
+              "subject": "model",
+              "selector": {
+                "unitIds": [],
+                "allKeywords": [
                   "CHARACTER",
                   "ADEPTUS MECHANICUS"
                 ],
-                "none": [
+                "anyKeywords": [],
+                "noneKeywords": [
                   "EPIC HERO"
-                ]
+                ],
+                "alternatives": []
               }
-            ]
+            },
+            "assignment": {
+              "maxOwners": 1,
+              "enhancementChoices": 1,
+              "payPointsPerOwner": true
+            }
+          },
+          "tags": [],
+          "assignment": {
+            "maxOwners": 1,
+            "enhancementChoices": 1,
+            "payPointsPerOwner": true
           }
         },
         {
@@ -472,15 +615,31 @@
           "text": "SKITARII MARSHAL model only. Add 2 to the Attacks characteristic of the bearer's melee weapons, and improve the Armour Penetration and Damage characteristics of those weapons by 1.",
           "id": "enhancement-omnissiahs-fury",
           "eligibility": {
-            "targets": [
-              {
-                "side": "friendly",
-                "count": 1,
-                "units": [
+            "v": 1,
+            "tags": [],
+            "owner": {
+              "subject": "model",
+              "selector": {
+                "unitIds": [
                   "unit-skitarii-marshal"
-                ]
+                ],
+                "allKeywords": [],
+                "anyKeywords": [],
+                "noneKeywords": [],
+                "alternatives": []
               }
-            ]
+            },
+            "assignment": {
+              "maxOwners": 1,
+              "enhancementChoices": 1,
+              "payPointsPerOwner": true
+            }
+          },
+          "tags": [],
+          "assignment": {
+            "maxOwners": 1,
+            "enhancementChoices": 1,
+            "payPointsPerOwner": true
           }
         }
       ],
@@ -631,15 +790,31 @@
           "text": "CYBERNETICA DATASMITH model only. When attached to KASTELAN ROBOTS, models in that unit gain HALO OVERRIDE until the end of the battle. That unit cannot be selected for Noospheric Transference.",
           "id": "enhancement-transoracular-dyad-wafers",
           "eligibility": {
-            "targets": [
-              {
-                "side": "friendly",
-                "count": 1,
-                "units": [
+            "v": 1,
+            "tags": [],
+            "owner": {
+              "subject": "model",
+              "selector": {
+                "unitIds": [
                   "unit-cybernetica-datasmith"
-                ]
+                ],
+                "allKeywords": [],
+                "anyKeywords": [],
+                "noneKeywords": [],
+                "alternatives": []
               }
-            ]
+            },
+            "assignment": {
+              "maxOwners": 1,
+              "enhancementChoices": 1,
+              "payPointsPerOwner": true
+            }
+          },
+          "tags": [],
+          "assignment": {
+            "maxOwners": 1,
+            "enhancementChoices": 1,
+            "payPointsPerOwner": true
           }
         },
         {
@@ -647,20 +822,35 @@
           "text": "ADEPTUS MECHANICUS model only, excluding CYBERNETICA DATASMITH. The Conqueror and Protector Imperatives are both active for the bearer's unit.",
           "id": "enhancement-cognitive-reinforcement",
           "eligibility": {
-            "targets": [
-              {
-                "side": "friendly",
-                "count": 1,
-                "all": [
+            "v": 1,
+            "tags": [],
+            "owner": {
+              "subject": "model",
+              "selector": {
+                "unitIds": [],
+                "allKeywords": [
                   "CHARACTER",
                   "ADEPTUS MECHANICUS"
                 ],
-                "none": [
+                "anyKeywords": [],
+                "noneKeywords": [
                   "EPIC HERO",
                   "CYBERNETICA DATASMITH"
-                ]
+                ],
+                "alternatives": []
               }
-            ]
+            },
+            "assignment": {
+              "maxOwners": 1,
+              "enhancementChoices": 1,
+              "payPointsPerOwner": true
+            }
+          },
+          "tags": [],
+          "assignment": {
+            "maxOwners": 1,
+            "enhancementChoices": 1,
+            "payPointsPerOwner": true
           }
         },
         {
@@ -668,19 +858,34 @@
           "text": "ADEPTUS MECHANICUS model only. Add 6\" to the Range of ranged weapons equipped by models in the bearer's unit; Hazardous tests for that unit can be re-rolled.",
           "id": "enhancement-sanctified-ordnance",
           "eligibility": {
-            "targets": [
-              {
-                "side": "friendly",
-                "count": 1,
-                "all": [
+            "v": 1,
+            "tags": [],
+            "owner": {
+              "subject": "model",
+              "selector": {
+                "unitIds": [],
+                "allKeywords": [
                   "CHARACTER",
                   "ADEPTUS MECHANICUS"
                 ],
-                "none": [
+                "anyKeywords": [],
+                "noneKeywords": [
                   "EPIC HERO"
-                ]
+                ],
+                "alternatives": []
               }
-            ]
+            },
+            "assignment": {
+              "maxOwners": 1,
+              "enhancementChoices": 1,
+              "payPointsPerOwner": true
+            }
+          },
+          "tags": [],
+          "assignment": {
+            "maxOwners": 1,
+            "enhancementChoices": 1,
+            "payPointsPerOwner": true
           }
         },
         {
@@ -688,22 +893,36 @@
           "text": "TECH-PRIEST DOMINUS or TECH-PRIEST MANIPULUS model only. Add 3 to the Attacks and 1 to the Damage characteristics of the bearer's melee weapons.",
           "id": "enhancement-inloaded-lethality",
           "eligibility": {
-            "targets": [
-              {
-                "side": "friendly",
-                "count": 1,
-                "all": [
-                  "CHARACTER"
-                ],
-                "none": [
-                  "EPIC HERO"
-                ],
-                "units": [
+            "v": 1,
+            "tags": [],
+            "owner": {
+              "subject": "model",
+              "selector": {
+                "unitIds": [
                   "unit-tech-priest-dominus",
                   "unit-tech-priest-manipulus"
-                ]
+                ],
+                "allKeywords": [
+                  "CHARACTER"
+                ],
+                "anyKeywords": [],
+                "noneKeywords": [
+                  "EPIC HERO"
+                ],
+                "alternatives": []
               }
-            ]
+            },
+            "assignment": {
+              "maxOwners": 1,
+              "enhancementChoices": 1,
+              "payPointsPerOwner": true
+            }
+          },
+          "tags": [],
+          "assignment": {
+            "maxOwners": 1,
+            "enhancementChoices": 1,
+            "payPointsPerOwner": true
           }
         }
       ],

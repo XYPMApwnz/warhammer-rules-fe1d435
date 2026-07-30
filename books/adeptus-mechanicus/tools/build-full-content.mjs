@@ -226,7 +226,8 @@ const armyRule=tracked(rules.armyRule.id,rules.armyRule.title,`<article class="d
 
 const supportedSubjects=new Set(['unit','model','objective']);
 const validateEligibility=item=>{
-  for(const role of item.eligibility?.roles||item.eligibility?.targets||[]){
+  const roles=item.eligibility?.owner?[{...item.eligibility.owner,side:'friendly'}]:(item.eligibility?.roles||item.eligibility?.targets||[]);
+  for(const role of roles){
     const subject=role.subject||'unit';
     if(!supportedSubjects.has(subject))throw new Error(`Adeptus Mechanicus: ${item.id} uses unsupported eligibility subject ${subject}`);
   }
@@ -236,8 +237,9 @@ const detachments=allDetachments.map(det=>{
   const isCodex=!det.sourcePages;
   const enhancements=det.enhancements.map(original=>{
     const current=isCodex?enhancementsByTitle.get(titleKey(original.title)):null;
-    const item=current?{...original,title:current.title,text:current.text}:original;
-    return `<article class="enhancement surface" data-rule-id="${esc(item.id)}" data-eligibility="${esc(JSON.stringify(item.eligibility))}" data-enhancement-title="${esc(item.title)}"><div class="eyebrow">Enhancement</div><h4>${esc(item.title)}</h4><p data-source-field="text">${decorate(item.text)}</p></article>`;
+    const item=current?{...original,title:current.title,text:current.text}:original,isUpgrade=(item.tags||[]).includes('UPGRADE');
+    validateEligibility(item);
+    return `<article class="enhancement surface" data-rule-id="${esc(item.id)}" data-eligibility="${esc(JSON.stringify(item.eligibility))}" data-enhancement-tags="${esc((item.tags||[]).join('|'))}" data-owner-subject="${esc(item.eligibility?.owner?.subject||'')}" data-enhancement-title="${esc(item.title)}"><div class="eyebrow">Enhancement${isUpgrade?' · UPGRADE':''}</div><h4>${esc(item.title)}</h4><p data-source-field="text">${decorate(item.text)}</p></article>`;
   }).join('');
   const stratagems=det.stratagems.map(item=>{
     validateEligibility(item);
@@ -322,7 +324,7 @@ const releaseHtml=html
   .replace('../../glossary/generated/glossary.en.js"','../../glossary/generated/glossary.en.js?v=3"')
   .replace('<script src="../shared/navigation-targets.js', '<script src="../../glossary-return.js?v=2"></script><script src="../shared/navigation-targets.js')
   .replace('../shared/glossary-autolink.js?v=7','../shared/glossary-autolink.js?v=8')
-  .replace('<script src="./scripts/related-rules.js?v=6">','<script src="../shared/related-rules-matcher.js?v=2"></script><script src="./scripts/related-rules.js?v=8">')
+  .replace('<script src="./scripts/related-rules.js?v=6">','<script src="../shared/related-rules-matcher.js?v=3"></script><script src="./scripts/related-rules.js?v=8">')
   .replace('popup-controller.js?v=18','popup-controller.js?v=21')
   .replace('ui-controllers.js?v=13','ui-controllers.js?v=14')
   .replace('app.js?v=20','app.js?v=22');

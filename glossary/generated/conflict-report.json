@@ -1,12 +1,12 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 1768,
+    "terms": 1774,
     "aliases": 713,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 106,
+    "aliasCandidates": 112,
     "duplicateCandidates": 15,
     "keywordCandidates": 16
   },
@@ -1439,6 +1439,22 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "negation-emitters-upgrade",
+      "termIds": [
+        "tau-empire-enhancement-negation-emitters-upgrade",
+        "tau-empire-enhancement-negation-emitters-upgrade-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "unmasking-suite-upgrade",
+      "termIds": [
+        "tau-empire-enhancement-unmasking-suite-upgrade",
+        "tau-empire-enhancement-unmasking-suite-upgrade-2"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "pulse-pistol",
       "termIds": [
         "tau-empire-weapon-pulse-pistol",
@@ -1699,6 +1715,38 @@
       "termIds": [
         "tau-empire-weapon-long-barrelled-burst-cannon",
         "tau-empire-weapon-long-barrelled-burst-cannon-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "encircling-horrors",
+      "termIds": [
+        "tyranids-enhancement-encircling-horrors",
+        "tyranids-enhancement-encircling-horrors-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "cryptophotaic-camouflage",
+      "termIds": [
+        "tyranids-enhancement-cryptophotaic-camouflage",
+        "tyranids-enhancement-cryptophotaic-camouflage-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "destabilising-predation",
+      "termIds": [
+        "tyranids-enhancement-destabilising-predation",
+        "tyranids-enhancement-destabilising-predation-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "synaptoprescience",
+      "termIds": [
+        "tyranids-enhancement-synaptoprescience",
+        "tyranids-enhancement-synaptoprescience-2"
       ],
       "status": "review-required"
     },

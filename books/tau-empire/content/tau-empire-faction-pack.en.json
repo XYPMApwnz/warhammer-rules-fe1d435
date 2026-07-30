@@ -291,7 +291,6 @@
         {
           "id": "negation-emitters-upgrade",
           "title": "Negation Emitters Upgrade",
-          "kind": "upgrade",
           "text": "STEALTH BATTLESUITS unit only. This unit has -3\" detection range.",
           "sourcePages": [
             2
@@ -301,12 +300,14 @@
             "sourcePages": [
               2
             ]
-          }
+          },
+          "tags": [
+            "UPGRADE"
+          ]
         },
         {
           "id": "unmasking-suite-upgrade",
           "title": "Unmasking Suite Upgrade",
-          "kind": "upgrade",
           "text": "GHOSTKEEL BATTLESUIT/PATHFINDER TEAM/STEALTH BATTLESUITS unit only. When this unit is selected to shoot, you can select one enemy unit within 24\" of this unit. That enemy unit has +9\" detection range until this unit has shot.",
           "sourcePages": [
             2
@@ -316,7 +317,10 @@
             "sourcePages": [
               2
             ]
-          }
+          },
+          "tags": [
+            "UPGRADE"
+          ]
         }
       ],
       "stratagems": [
@@ -414,7 +418,8 @@
             "sourcePages": [
               3
             ]
-          }
+          },
+          "tags": []
         },
         {
           "id": "admired-leader",
@@ -428,7 +433,8 @@
             "sourcePages": [
               3
             ]
-          }
+          },
+          "tags": []
         }
       ],
       "stratagems": [
@@ -526,7 +532,8 @@
             "sourcePages": [
               4
             ]
-          }
+          },
+          "tags": []
         },
         {
           "id": "plasma-accelerator-rifle",
@@ -540,7 +547,8 @@
             "sourcePages": [
               4
             ]
-          }
+          },
+          "tags": []
         },
         {
           "id": "supernova-launcher",
@@ -554,7 +562,8 @@
             "sourcePages": [
               4
             ]
-          }
+          },
+          "tags": []
         }
       ],
       "stratagems": [

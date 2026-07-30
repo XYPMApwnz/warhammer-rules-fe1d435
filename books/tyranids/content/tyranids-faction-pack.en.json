@@ -199,7 +199,6 @@
         {
           "id": "encircling-horrors",
           "title": "Encircling Horrors",
-          "kind": "upgrade",
           "text": "NEUROLICTOR/LICTOR/VON RYAN’S LEAPERS unit only. In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, this unit can make a normal move of up to D3+3\".",
           "sourcePages": [
             2
@@ -209,12 +208,14 @@
             "sourcePages": [
               2
             ]
-          }
+          },
+          "tags": [
+            "UPGRADE"
+          ]
         },
         {
           "id": "cryptophotaic-camouflage",
           "title": "Cryptophotaic Camouflage",
-          "kind": "upgrade",
           "text": "VON RYAN’S LEAPERS unit only. This unit has -3\" detection range.",
           "sourcePages": [
             2
@@ -224,7 +225,10 @@
             "sourcePages": [
               2
             ]
-          }
+          },
+          "tags": [
+            "UPGRADE"
+          ]
         }
       ],
       "stratagems": [
@@ -310,7 +314,6 @@
         {
           "id": "destabilising-predation",
           "title": "Destabilising Predation",
-          "kind": "upgrade",
           "text": "NORN EMISSARY unit only. This unit’s ranged attacks have [ANTI-CHARACTER 2+].",
           "sourcePages": [
             3
@@ -320,12 +323,14 @@
             "sourcePages": [
               3
             ]
-          }
+          },
+          "tags": [
+            "UPGRADE"
+          ]
         },
         {
           "id": "synaptoprescience",
           "title": "Synaptoprescience",
-          "kind": "upgrade",
           "text": "NORN ASSIMILATOR unit only. This unit has 4+ InSv.",
           "sourcePages": [
             3
@@ -335,7 +340,10 @@
             "sourcePages": [
               3
             ]
-          }
+          },
+          "tags": [
+            "UPGRADE"
+          ]
         }
       ],
       "stratagems": [
@@ -430,7 +438,8 @@
             "sourcePages": [
               4
             ]
-          }
+          },
+          "tags": []
         },
         {
           "id": "ocular-adaptation",
@@ -444,7 +453,8 @@
             "sourcePages": [
               4
             ]
-          }
+          },
+          "tags": []
         }
       ],
       "stratagems": [
@@ -543,7 +553,8 @@
             "sourcePages": [
               5
             ]
-          }
+          },
+          "tags": []
         },
         {
           "id": "tremor-senses",
@@ -557,7 +568,8 @@
             "sourcePages": [
               5
             ]
-          }
+          },
+          "tags": []
         },
         {
           "id": "vanguard-intellect",
@@ -571,7 +583,8 @@
             "sourcePages": [
               5
             ]
-          }
+          },
+          "tags": []
         },
         {
           "id": "trygon-prime",
@@ -585,7 +598,8 @@
             "sourcePages": [
               5
             ]
-          }
+          },
+          "tags": []
         }
       ],
       "stratagems": [

@@ -3219,6 +3219,20 @@
         ]
       }
     },
+    "tyranids-enhancement-encircling-horrors-2": {
+      "termId": "tyranids-enhancement-encircling-horrors-2",
+      "navigation": {
+        "glossary": "glossary-tyranids-enhancement-encircling-horrors-2",
+        "rule": "detachment-ambush-predators"
+      }
+    },
+    "tyranids-enhancement-cryptophotaic-camouflage-2": {
+      "termId": "tyranids-enhancement-cryptophotaic-camouflage-2",
+      "navigation": {
+        "glossary": "glossary-tyranids-enhancement-cryptophotaic-camouflage-2",
+        "rule": "detachment-ambush-predators"
+      }
+    },
     "tyranids-enhancement-biophagic-flow-aura": {
       "termId": "tyranids-enhancement-biophagic-flow-aura",
       "navigation": {
@@ -3525,6 +3539,20 @@
       "navigation": {
         "glossary": "glossary-tyranids-detachment-rule-synaptic-imperatives",
         "rule": "detachment-synaptic-nexus"
+      }
+    },
+    "tyranids-enhancement-destabilising-predation-2": {
+      "termId": "tyranids-enhancement-destabilising-predation-2",
+      "navigation": {
+        "glossary": "glossary-tyranids-enhancement-destabilising-predation-2",
+        "rule": "detachment-talons-of-the-norn-queen"
+      }
+    },
+    "tyranids-enhancement-synaptoprescience-2": {
+      "termId": "tyranids-enhancement-synaptoprescience-2",
+      "navigation": {
+        "glossary": "glossary-tyranids-enhancement-synaptoprescience-2",
+        "rule": "detachment-talons-of-the-norn-queen"
       }
     },
     "tyranids-enhancement-adrenalised-onslaught": {

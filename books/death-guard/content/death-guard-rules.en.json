@@ -151,25 +151,97 @@
               "type": "enhancement",
               "id": "enhancement-daemon-weapon-of-nurgle",
               "title": "Daemon Weapon of Nurgle - 10 pts",
-              "text": "DEATH GUARD model only. Each time the bearer makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit."
+              "text": "DEATH GUARD model only. Each time the bearer makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "allKeywords": [
+                    "CHARACTER",
+                    "DEATH GUARD"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-furnace-of-plagues",
               "title": "Furnace of Plagues - 25 pts",
-              "text": "DEATH GUARD model only. Add 1 to the Strength and Attacks characteristics of the bearers melee weapons, and the bearer’s melee weapons have the [DEVASTATING WOUNDS] ability."
+              "text": "DEATH GUARD model only. Add 1 to the Strength and Attacks characteristics of the bearers melee weapons, and the bearer’s melee weapons have the [DEVASTATING WOUNDS] ability.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "allKeywords": [
+                    "CHARACTER",
+                    "DEATH GUARD"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-arch-contaminator",
               "title": "Arch Contaminator - 25 pts",
-              "text": "DEATH GUARD model only. While the bearer’s unit is within range of an objective marker you control, each time a model in the bearer’s unit makes an attack, you can re-roll the Wound roll."
+              "text": "DEATH GUARD model only. While the bearer’s unit is within range of an objective marker you control, each time a model in the bearer’s unit makes an attack, you can re-roll the Wound roll.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "allKeywords": [
+                    "CHARACTER",
+                    "DEATH GUARD"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-revolting-regeneration",
               "title": "Revolting Regeneration - 30 pts",
-              "text": "DEATH GUARD model only. The bearer has the Feel No Pain 5+ ability."
+              "text": "DEATH GUARD model only. The bearer has the Feel No Pain 5+ ability.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "allKeywords": [
+                    "CHARACTER",
+                    "DEATH GUARD"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             }
           ],
           "number": "2.1.2"
@@ -307,25 +379,95 @@
               "type": "enhancement",
               "id": "enhancement-eye-of-affliction",
               "title": "Eye of Affliction - 20 pts",
-              "text": "DEATH GUARD model only. Ranged weapons equipped by models in the bearer’s unit have the [ignores cover] ability while targeting an Afflicted enemy unit."
+              "text": "DEATH GUARD model only. Ranged weapons equipped by models in the bearer’s unit have the [ignores cover] ability while targeting an Afflicted enemy unit.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "allKeywords": [
+                    "CHARACTER",
+                    "DEATH GUARD"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-bilemaw-blight",
               "title": "Bilemaw Blight - 10 pts",
-              "text": "MALIGNANT PLAGUECASTER only. At the start of your Shooting phase, until the end of the phase, add 12\" to the Range characteristics of the bearer’s Plague Wind weapon."
+              "text": "MALIGNANT PLAGUECASTER only. At the start of your Shooting phase, until the end of the phase, add 12\" to the Range characteristics of the bearer’s Plague Wind weapon.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "unitIds": [
+                    "unit-malignant-plaguecaster"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-shriekworm-familiar",
               "title": "Shriekworm Familiar - 15 pts",
-              "text": "DEATH GUARD model only. Once per battle round, you can target the bearer’s unit with the Fire Overwatch Stratagem for 0CP."
+              "text": "DEATH GUARD model only. Once per battle round, you can target the bearer’s unit with the Fire Overwatch Stratagem for 0CP.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "allKeywords": [
+                    "CHARACTER",
+                    "DEATH GUARD"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-tendrilous-emissions",
               "title": "Tendrilous Emissions - 30 pts",
-              "text": "LORD OF VIRULENCE only. While the bearer is within 3\" of one or more friendly DEATH GUARD VEHICLE units, the bearer has the Lone Operative ability, and each time one of those VEHICLE units makes a ranged attack that targets an enemy unit visible to the bearer, re-roll a Wound roll of 1."
+              "text": "LORD OF VIRULENCE only. While the bearer is within 3\" of one or more friendly DEATH GUARD VEHICLE units, the bearer has the Lone Operative ability, and each time one of those VEHICLE units makes a ranged attack that targets an enemy unit visible to the bearer, re-roll a Wound roll of 1.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "unitIds": [
+                    "unit-lord-of-virulence"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             }
           ],
           "number": "2.2.2"
@@ -442,25 +584,93 @@
               "type": "enhancement",
               "id": "enhancement-final-ingredient",
               "title": "Final Ingredient - 20 pts",
-              "text": "BIOLOGUS PUTRIFIER only. Once per battle, after the bearers unit has fought, if one or more CHARACTER models were destroyed as a result of those attacks, select one Plague. Until the end of the battle, while an enemy unit is Afflicted, that unit has the effect of the selected Plague in addition to any other."
+              "text": "BIOLOGUS PUTRIFIER only. Once per battle, after the bearers unit has fought, if one or more CHARACTER models were destroyed as a result of those attacks, select one Plague. Until the end of the battle, while an enemy unit is Afflicted, that unit has the effect of the selected Plague in addition to any other.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "unitIds": [
+                    "unit-biologus-putrifier"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-visions-of-virulence",
               "title": "Visions of Virulence - 15 pts",
-              "text": "MALIGNANT PLAGUECASTER only. While an enemy unit is enfeebled by the bearer’s Pestilent Fallout ability, that unit is also Afflicted."
+              "text": "MALIGNANT PLAGUECASTER only. While an enemy unit is enfeebled by the bearer’s Pestilent Fallout ability, that unit is also Afflicted.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "unitIds": [
+                    "unit-malignant-plaguecaster"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-needle-of-nurgle",
               "title": "Needle of Nurgle - 25 pts",
-              "text": "PLAGUE SURGEON only. Each time the bearer uses its Tainted Narthecium ability, you can return up to D3 destroyed models to the bearer’s unit (instead of 1)."
+              "text": "PLAGUE SURGEON only. Each time the bearer uses its Tainted Narthecium ability, you can return up to D3 destroyed models to the bearer’s unit (instead of 1).",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "unitIds": [
+                    "unit-plague-surgeon"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-cornucophagus",
               "title": "Cornucophagus - 35 pts",
-              "text": "LORD OF POXES only. In the Declare Battle Formations step select one Plague. Until the end of the battle, while an enemy unit is within Contagion Range of the bearer, that enemy unit has the effect of that Plague in addition to any other."
+              "text": "LORD OF POXES only. In the Declare Battle Formations step select one Plague. Until the end of the battle, while an enemy unit is within Contagion Range of the bearer, that enemy unit has the effect of that Plague in addition to any other.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "unitIds": [
+                    "unit-lord-of-poxes"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             }
           ],
           "number": "2.3.2"
@@ -606,25 +816,95 @@
               "type": "enhancement",
               "id": "enhancement-beckoning-blight",
               "title": "Beckoning Blight - 20 pts",
-              "text": "DEATH GUARD model only. Each time a PLAGUE LEGIONS unit from your army is set up on the battlefield using the Deep Strike ability, if it is set up wholly within 12\" of the bearer, it can be set up anywhere that is more than 6\" horizontally away from all enemy models, instead of more than 8\"."
+              "text": "DEATH GUARD model only. Each time a PLAGUE LEGIONS unit from your army is set up on the battlefield using the Deep Strike ability, if it is set up wholly within 12\" of the bearer, it can be set up anywhere that is more than 6\" horizontally away from all enemy models, instead of more than 8\".",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "allKeywords": [
+                    "CHARACTER",
+                    "DEATH GUARD"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-fell-harvester",
               "title": "Fell Harvester - 10 pts",
-              "text": "DEATH GUARD model only. Add 2 to the Attacks characteristic of the bearer’s melee weapons."
+              "text": "DEATH GUARD model only. Add 2 to the Attacks characteristic of the bearer’s melee weapons.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "allKeywords": [
+                    "CHARACTER",
+                    "DEATH GUARD"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-entropic-knell",
               "title": "Entropic Knell - 15 pts",
-              "text": "GREAT UNCLEAN ONE only. In the Battle-shock step of your opponent’s Command phase, each enemy unit within 6\" of the bearer that is below its Starting Strength must take a Battle-shock test, subtracting 1 from that test."
+              "text": "GREAT UNCLEAN ONE only. In the Battle-shock step of your opponent’s Command phase, each enemy unit within 6\" of the bearer that is below its Starting Strength must take a Battle-shock test, subtracting 1 from that test.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "unitIds": [
+                    "unit-great-unclean-one"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-tome-of-bounteous-blessings",
               "title": "Tome of Bounteous Blessings - 20 pts",
-              "text": "MALIGNANT PLAGUECASTER only. Each time a PLAGUE LEGIONS unit within 12\" of the bearer takes a Battle-shock test, add 1 to that test and, if that test is passed, one model in that unit regains up to D3 lost wounds (if that unit is a BATTLELINE unit and that test is passed, up to D3 destroyed models can be returned to that unit instead)."
+              "text": "MALIGNANT PLAGUECASTER only. Each time a PLAGUE LEGIONS unit within 12\" of the bearer takes a Battle-shock test, add 1 to that test and, if that test is passed, one model in that unit regains up to D3 lost wounds (if that unit is a BATTLELINE unit and that test is passed, up to D3 destroyed models can be returned to that unit instead).",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "unitIds": [
+                    "unit-malignant-plaguecaster"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             }
           ],
           "number": "2.4.2"
@@ -767,25 +1047,95 @@
               "type": "enhancement",
               "id": "enhancement-witherbone-pipes",
               "title": "Witherbone Pipes - 25 pts",
-              "text": "NOXIOUS BLIGHTBRINGER only. While the bearer is leading a POXWALKERS unit, add 1 to the Objective Control characteristic of models in that unit, and each time that unit takes a Battle-shock or Leadership test, add 1 to that test."
+              "text": "NOXIOUS BLIGHTBRINGER only. While the bearer is leading a POXWALKERS unit, add 1 to the Objective Control characteristic of models in that unit, and each time that unit takes a Battle-shock or Leadership test, add 1 to that test.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "unitIds": [
+                    "unit-noxious-blightbringer"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-lord-of-the-walking-pox",
               "title": "Lord of the Walking Pox - 15 pts",
-              "text": "DEATH GUARD model only. If the bearer is leading a POXWALKER unit, and is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round as the third battle round."
+              "text": "DEATH GUARD model only. If the bearer is leading a POXWALKER unit, and is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round as the third battle round.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "allKeywords": [
+                    "CHARACTER",
+                    "DEATH GUARD"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-sorrowsyphon",
               "title": "Sorrowsyphon - 10 pts",
-              "text": "MALIGNANT PLAGUECASTER only. While the bearer is leading a POXWALKERS unit, add 1 to the Damage characteristic of the bearer’s Plague Wind weapon. Each time the bearer makes one or more attacks with a Plague Wind weapon, after the bearer’s unit has resolved its attacks, D3 Bodyguard models from the bearer’s unit are destroyed."
+              "text": "MALIGNANT PLAGUECASTER only. While the bearer is leading a POXWALKERS unit, add 1 to the Damage characteristic of the bearer’s Plague Wind weapon. Each time the bearer makes one or more attacks with a Plague Wind weapon, after the bearer’s unit has resolved its attacks, D3 Bodyguard models from the bearer’s unit are destroyed.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "unitIds": [
+                    "unit-malignant-plaguecaster"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-talisman-of-burgeoning",
               "title": "Talisman of Burgeoning - 25 pts",
-              "text": "DEATH GUARD model only. While the bearer is leading a unit, add 1 to the Toughness characteristic of POXWALKERS models in that unit."
+              "text": "DEATH GUARD model only. While the bearer is leading a unit, add 1 to the Toughness characteristic of POXWALKERS models in that unit.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "allKeywords": [
+                    "CHARACTER",
+                    "DEATH GUARD"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             }
           ],
           "number": "2.5.2"
@@ -902,25 +1252,97 @@
               "type": "enhancement",
               "id": "enhancement-face-of-death",
               "title": "Face of Death - 10 pts",
-              "text": "TERMINATOR model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer’s unit must take a Battle-shock test."
+              "text": "TERMINATOR model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer’s unit must take a Battle-shock test.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "allKeywords": [
+                    "CHARACTER",
+                    "TERMINATOR"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-vile-vigour",
               "title": "Vile Vigour - 15 pts",
-              "text": "TERMINATOR model only. While the bearer is leading a unit, add 1\" to the Movement characteristic of models in that unit and you can re-roll Advance rolls made for that unit."
+              "text": "TERMINATOR model only. While the bearer is leading a unit, add 1\" to the Movement characteristic of models in that unit and you can re-roll Advance rolls made for that unit.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "allKeywords": [
+                    "CHARACTER",
+                    "TERMINATOR"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-warprot-talisman",
               "title": "Warprot Talisman - 30 pts",
-              "text": "TERMINATOR model only. Once per battle, at the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves."
+              "text": "TERMINATOR model only. Once per battle, at the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "allKeywords": [
+                    "CHARACTER",
+                    "TERMINATOR"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-helm-of-the-fly-king",
               "title": "Helm of the Fly King - 20 pts",
-              "text": "TERMINATOR model only. While the bearer is leading a unit, models in that unit cannot be targeted by ranged attacks unless the attacking model is within 18\"."
+              "text": "TERMINATOR model only. While the bearer is leading a unit, models in that unit cannot be targeted by ranged attacks unless the attacking model is within 18\".",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "allKeywords": [
+                    "CHARACTER",
+                    "TERMINATOR"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             }
           ],
           "number": "2.6.2"
@@ -1037,13 +1459,46 @@
               "type": "enhancement",
               "id": "enhancement-parasitic-woe-reaper",
               "title": "Parasitic Woe-Reaper - 15 pts",
-              "text": "CONTAGION ENGINE unit only. When this unit has fought, one model in this unit heals D3 wounds."
+              "text": "CONTAGION ENGINE unit only. When this unit has fought, one model in this unit heals D3 wounds.",
+              "tags": [
+                "UPGRADE"
+              ],
+              "assignment": {
+                "maxOwners": 3,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "unit",
+                "selector": {
+                  "allKeywords": [
+                    "CONTAGION ENGINE"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-lancet-of-the-worldsore",
               "title": "Lancet of the Worldsore - 15 pts",
-              "text": "Friendly HELBRUTE/MYPHITIC BLIGHT-HAULER unit only. This unit has MOBILE."
+              "text": "Friendly HELBRUTE/MYPHITIC BLIGHT-HAULER unit only. This unit has MOBILE.",
+              "tags": [
+                "UPGRADE"
+              ],
+              "assignment": {
+                "maxOwners": 3,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "unit",
+                "selector": {
+                  "unitIds": [
+                    "unit-helbrute",
+                    "unit-myphitic-blight-hauler"
+                  ]
+                }
+              }
             }
           ],
           "number": "2.7.2"
@@ -1127,13 +1582,45 @@
               "type": "enhancement",
               "id": "enhancement-insectile-murmuration",
               "title": "Insectile Murmuration - 15 pts",
-              "text": "PLAGUE MARINES unit only. When this unit’s attacks target a unit within Contagion Range of a friendly unit, those attacks can re-roll wound rolls of 1."
+              "text": "PLAGUE MARINES unit only. When this unit’s attacks target a unit within Contagion Range of a friendly unit, those attacks can re-roll wound rolls of 1.",
+              "tags": [
+                "UPGRADE"
+              ],
+              "assignment": {
+                "maxOwners": 3,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "unit",
+                "selector": {
+                  "unitIds": [
+                    "unit-plague-marines"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-plagueveil",
               "title": "Plagueveil - 15 pts",
-              "text": "PLAGUE MARINES unit only. This unit has -3\" detection range."
+              "text": "PLAGUE MARINES unit only. This unit has -3\" detection range.",
+              "tags": [
+                "UPGRADE"
+              ],
+              "assignment": {
+                "maxOwners": 3,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "unit",
+                "selector": {
+                  "unitIds": [
+                    "unit-plague-marines"
+                  ]
+                }
+              }
             }
           ],
           "number": "2.8.2"
@@ -1217,13 +1704,52 @@
               "type": "enhancement",
               "id": "enhancement-rejuvenating-swarm",
               "title": "Rejuvenating Swarm - 20 pts",
-              "text": "DEATH GUARD INFANTRY model only (excluding TERMINATOR models). Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls."
+              "text": "DEATH GUARD INFANTRY model only (excluding TERMINATOR models). Attacks that target this unit with a S greater than this unit’s T have -1 to wound rolls.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "allKeywords": [
+                    "CHARACTER",
+                    "DEATH GUARD",
+                    "INFANTRY"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO",
+                    "TERMINATOR"
+                  ]
+                }
+              }
             },
             {
               "type": "enhancement",
               "id": "enhancement-host-of-the-hybridised-pox",
               "title": "Host of the Hybridised Pox - 40 pts",
-              "text": "DEATH GUARD INFANTRY model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, select one of the Plagues listed in Nurgle’s Gift. Enemy units within Contagion Range of this unit also have the effect of that Plague in addition to your army’s chosen Plague until the end of the battle."
+              "text": "DEATH GUARD INFANTRY model only. (Once per battle, per army) In your Command phase, you can use this ability. If you do, select one of the Plagues listed in Nurgle’s Gift. Enemy units within Contagion Range of this unit also have the effect of that Plague in addition to your army’s chosen Plague until the end of the battle.",
+              "tags": [],
+              "assignment": {
+                "maxOwners": 1,
+                "enhancementChoices": 1,
+                "payPointsPerOwner": true
+              },
+              "owner": {
+                "subject": "model",
+                "selector": {
+                  "allKeywords": [
+                    "CHARACTER",
+                    "DEATH GUARD",
+                    "INFANTRY"
+                  ],
+                  "noneKeywords": [
+                    "EPIC HERO"
+                  ]
+                }
+              }
             }
           ],
           "number": "2.9.2"

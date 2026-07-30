@@ -17,6 +17,9 @@
   });
   function canonical(value){
     if(value?.roles)return value;
+    if(value?.owner)return {...value,roles:[{
+      id:'owner',side:'friendly',subject:value.owner.subject,count:1,selector:value.owner.selector||{}
+    }]};
     return {v:1,roles:(value?.targets||[]).map((target,index)=>({
       id:`target-${index+1}`,side:target.side||'friendly',subject:target.subject||'unit',count:target.count||1,
       selector:selectorOf(target)

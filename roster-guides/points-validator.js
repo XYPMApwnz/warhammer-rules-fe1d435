@@ -1,5 +1,9 @@
 (function(root){
   'use strict';
+  const keyword=value=>{
+    if(!root.WHRuleFacts)throw new Error('WHRuleFacts is required by roster validation');
+    return root.WHRuleFacts.normalizeKeyword(value);
+  };
   const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim();
   const copyMatches=(label,index)=>{
     const text=String(label||'').toLowerCase();
@@ -18,16 +22,16 @@
   };
   const gearCount=(unit,name)=>loadouts(unit).reduce((total,row)=>total+(normalize(row.text).includes(normalize(name))?row.quantity:0),0);
   const enhancementName=value=>typeof value==='object'?value.name:String(value||'').replace(/\s*\([^)]*\)\s*$/,'').replace(/\s+[-–—]\s+\d+\s*pts?\s*$/i,'').trim();
-  const keywords=unit=>new Set((unit?.keywords||[]).map(value=>String(value).toUpperCase()));
+  const keywords=unit=>new Set((unit?.keywords||[]).map(keyword));
   const grantedKeywords=(faction,detachment,unit)=>faction==='death guard'&&normalize(detachment)==='contagion engines'&&['unit-foetid-bloat-drone','unit-foetid-bloat-drone-with-heavy-blight-launcher','unit-helbrute','unit-myphitic-blight-hauler'].includes(unit?.unitId)?['CONTAGION ENGINE']:[];
   const ownerMatches=(enhancement,unit,faction)=>{
     if(!enhancement.owner||!unit)return false;
     const selector=enhancement.owner.selector||{},unitKeywords=keywords(unit);
     grantedKeywords(faction,enhancement.detachment,unit).forEach(keyword=>unitKeywords.add(keyword));
     if((selector.unitIds||[]).length&&!(selector.unitIds||[]).includes(unit.unitId))return false;
-    if((selector.allKeywords||[]).some(keyword=>!unitKeywords.has(String(keyword).toUpperCase())))return false;
-    if((selector.anyKeywords||[]).length&&!(selector.anyKeywords||[]).some(keyword=>unitKeywords.has(String(keyword).toUpperCase())))return false;
-    if((selector.noneKeywords||[]).some(keyword=>unitKeywords.has(String(keyword).toUpperCase())))return false;
+    if((selector.allKeywords||[]).some(value=>!unitKeywords.has(keyword(value))))return false;
+    if((selector.anyKeywords||[]).length&&!(selector.anyKeywords||[]).some(value=>unitKeywords.has(keyword(value))))return false;
+    if((selector.noneKeywords||[]).some(value=>unitKeywords.has(keyword(value))))return false;
     return true;
   };
 

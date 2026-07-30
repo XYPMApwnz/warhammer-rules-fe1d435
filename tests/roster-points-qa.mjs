@@ -4,7 +4,7 @@ import vm from 'node:vm';
 
 const context={window:{}};
 vm.createContext(context);
-for(const file of ['books/shared/roster-parser.js','roster-guides/points-data.js','roster-guides/points-validator.js'])vm.runInContext(fs.readFileSync(file,'utf8'),context,{filename:file});
+for(const file of ['books/shared/roster-parser.js','books/shared/rule-facts.js','roster-guides/points-data.js','roster-guides/points-validator.js'])vm.runInContext(fs.readFileSync(file,'utf8'),context,{filename:file});
 const {WHRosterParser,WH_POINTS_CATALOG,WHRosterPoints}=context.window;
 assert.equal(Object.keys(WH_POINTS_CATALOG['death guard'].units).length,41);
 assert.equal(new Set(Object.values(WH_POINTS_CATALOG['death guard'].enhancements).map(item=>item.id)).size,30);

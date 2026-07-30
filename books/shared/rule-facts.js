@@ -35,15 +35,16 @@
     if(!candidate||typeof candidate!=='object'||Array.isArray(candidate))throw new TypeError(`candidates[${index}] must be a plain object`);
     const keywords=normalizedSet(candidate.keywords||[],`candidates[${index}].keywords`);
     const intrinsicKeywords=normalizedSet(candidate.intrinsicKeywords||candidate.keywords||[],`candidates[${index}].intrinsicKeywords`);
-    return {
+    const profile={
       ...candidate,
       unitId:candidate.unitId||candidate.id||'',
       slug:candidate.slug||String(candidate.unitId||candidate.id||'').replace(/^unit-/,''),
       keywords,
-      intrinsicKeywords,
-      abilities:normalizedSet(candidate.abilities||[],`candidates[${index}].abilities`),
-      termIds:stringSet(candidate.termIds||candidate.ids||[],`candidates[${index}].termIds`)
+      intrinsicKeywords
     };
+    if(candidate.abilities!=null)profile.abilities=normalizedSet(candidate.abilities,`candidates[${index}].abilities`);
+    if(candidate.termIds!=null||candidate.ids!=null)profile.termIds=stringSet(candidate.termIds||candidate.ids,`candidates[${index}].termIds`);
+    return profile;
   }
 
   function profileFromRecord(record){
@@ -93,11 +94,13 @@
 
   function recordFromDataset(dataset={},identity={}){
     const unitId=identity.unitId||identity.id||dataset.unitId||'unknown';
-    const compiled=parseDatasetJson(dataset,'ruleFacts',{defaultValue:null,unitId});
-    if(compiled!=null){
-      if(!compiled||typeof compiled!=='object'||Array.isArray(compiled))throw new TypeError(`${unitId}: data-rule-facts must contain an object`);
-      return {...compiled,...identity,unitId:identity.unitId||identity.id||compiled.unitId||unitId};
-    }
+    const compiled=parseDatasetJson(dataset,'ruleFacts',{required:true,unitId});
+    if(!compiled||typeof compiled!=='object'||Array.isArray(compiled))throw new TypeError(`${unitId}: data-rule-facts must contain an object`);
+    return {...compiled,...identity,unitId:identity.unitId||identity.id||compiled.unitId||unitId};
+  }
+
+  function recordFromLegacyDataset(dataset={},identity={}){
+    const unitId=identity.unitId||identity.id||dataset.unitId||'unknown';
     if(dataset.keywords==null||dataset.keywords==='')throw new Error(`${unitId}: missing data-keywords`);
     if(typeof dataset.keywords!=='string')throw new TypeError(`${unitId}: data-keywords must be a string`);
     if(!dataset.keywords.trim())throw new Error(`${unitId}: empty data-keywords`);
@@ -107,6 +110,7 @@
   }
 
   const profileFromDataset=(dataset,identity={},extra={})=>profileFromRecord({...recordFromDataset(dataset,identity),...extra});
+  const profileFromLegacyDataset=(dataset,identity={},extra={})=>profileFromRecord({...recordFromLegacyDataset(dataset,identity),...extra});
   const sorted=value=>[...(value||[])].sort();
   const serializeCandidate=candidate=>({
     unitId:candidate.unitId||'',slug:candidate.slug||'',keywords:sorted(candidate.keywords),intrinsicKeywords:sorted(candidate.intrinsicKeywords),
@@ -122,7 +126,7 @@
     };
   }
 
-  const api=Object.freeze({normalizeKeyword,textFromDomLike,parseDatasetJson,profileFromRecord,recordFromDataset,profileFromDataset,serializeRuleProfile});
+  const api=Object.freeze({normalizeKeyword,textFromDomLike,parseDatasetJson,profileFromRecord,recordFromDataset,recordFromLegacyDataset,profileFromDataset,profileFromLegacyDataset,serializeRuleProfile});
   root.WHRuleFacts=api;
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
 }(typeof window==='undefined'?globalThis:window));

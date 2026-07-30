@@ -83,8 +83,8 @@ try{
       assert.ok(await page.locator('.stratagem').count(),`${name} Phone Mode Detachment Stratagems must remain available`);
     }
     assert.equal(profileCount,199,'Browser parity must cover all published datasheets');
-    const malformed=await page.evaluate(()=>{try{WHRuleFacts.profileFromDataset({keywords:'T\'AU EMPIRE',relatedCandidates:'{bad'},{id:'unit-browser-bad'});return'';}catch(error){return error.message;}});
-    assert.match(malformed,/unit-browser-bad: malformed data-related-candidates/);
+    const malformed=await page.evaluate(()=>{try{WHRuleFacts.profileFromDataset({ruleFacts:'{bad'},{id:'unit-browser-bad'});return'';}catch(error){return error.message;}});
+    assert.match(malformed,/unit-browser-bad: malformed data-rule-facts/);
     assert.deepEqual(errors,[]);
     console.log('PASS Compatible Rules safety flag hides all four embedded desktop and Phone Mode interfaces');
   }finally{await modalContext.close();}

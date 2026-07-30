@@ -190,18 +190,21 @@ for(const bodyguard of unitSections){
   }
 }
 let reader=fs.readFileSync(readerFile,'utf8');
-reader=reader.replace('rule-facts.js?v=1','rule-facts.js?v=2');
+reader=reader.replace(/rule-facts\.js\?v=\d+/,'rule-facts.js?v=3');
+reader=reader.replace(/points-validator\.js\?v=\d+/,'points-validator.js?v=4');
 reader=replaceOrInsert(reader,'li',legends.group.id,'pact-of-decay-datasheets',nav);
 reader=replaceOrInsert(reader,'section',legends.group.id,'pact-of-decay-datasheets',content);
 reader=reader.replace(/<p class="lead">\d+ current Death Guard and Pact of Decay datasheets\.<\/p>/,`<p class="lead">${book.audit.datasheets} current Death Guard, Legends and Pact of Decay datasheets.</p>`);
 reader=reader.replace(/9 detachments [^<]* \d+ datasheets [^<]* \d+ glossary entries/,`9 detachments · ${book.audit.datasheets} datasheets · ${book.glossary.length} glossary entries`);
 for(const unit of unitSections){
   const opener=new RegExp(`(<article\\b[^>]*\\bclass="[^"]*\\bunit-card\\b[^"]*"[^>]*\\bid="${unit.id}"[^>]*)(>)`,'i');
-  const abilityText=(unit.subsections||[]).filter(section=>section.title==='Abilities').flatMap(section=>(section.blocks||[]).flatMap(block=>[block.title||'',block.text||''])).join(' ');
+  const abilityBlocks=(unit.subsections||[]).filter(section=>section.title==='Abilities').flatMap(section=>section.blocks||[]);
+  const abilityText=abilityBlocks.flatMap(block=>[block.title||'',block.text||'']).join(' ');
   const deadlyDemise=/\bDeadly Demise\b/i.test(abilityText);
   const ruleFacts={
     id:unit.id,unitId:unit.id,slug:unit.id.replace(/^unit-/,''),keywords:unitKeywords.get(unit.id),intrinsicKeywords:unitKeywords.get(unit.id),
-    abilities:deadlyDemise?['DEADLY DEMISE']:[],termIds:unitKeywords.get(unit.id).filter(keyword=>!plainKeywordNames.has(keyword)).map(keywordId),
+    abilities:[...new Set(abilityBlocks.flatMap(block=>/^(?:core|faction)$/i.test(block.title||'')?String(block.text||'').split(',').map(value=>value.trim().replace(/\.$/,'')).filter(Boolean).map(value=>/^deadly demise\b/i.test(value)?'DEADLY DEMISE':value):[block.title].filter(Boolean)))],
+    termIds:[...new Set([...unitKeywords.get(unit.id).filter(keyword=>!plainKeywordNames.has(keyword)).map(keywordId),...abilityBlocks.map(block=>block.termId).filter(Boolean),...(unit.blocks||[]).map(block=>block.termId).filter(Boolean)])],
     epic:unitKeywords.get(unit.id).some(keyword=>keyword.toUpperCase()==='EPIC HERO'),deadlyDemise,attached:null,twoCharacters:null,warlord:null,
     candidates:relatedCandidates.get(unit.id)
   };

@@ -10,6 +10,8 @@ assert.equal(Object.keys(WH_POINTS_CATALOG['death guard'].units).length,41);
 assert.equal(Object.keys(WH_POINTS_CATALOG['death guard'].enhancements).length,30);
 assert.equal(Object.keys(WH_POINTS_CATALOG['adeptus mechanicus'].units).length,38);
 assert.equal(new Set(Object.values(WH_POINTS_CATALOG['adeptus mechanicus'].enhancements).map(item=>item.title)).size,34);
+assert.equal(Object.keys(WH_POINTS_CATALOG['t au empire'].units).length,63);
+assert.equal(new Set(Object.values(WH_POINTS_CATALOG['t au empire'].enhancements).map(item=>item.title)).size,23);
 assert.equal(WH_POINTS_CATALOG['death guard'].units['death guard possessed'].points[0].value,155);
 assert.equal(WH_POINTS_CATALOG['death guard'].units['death guard chaos lord'].points[0].value,65);
 assert.equal(WH_POINTS_CATALOG['death guard'].units['death guard chaos lord in terminator armour'].points[0].value,85);

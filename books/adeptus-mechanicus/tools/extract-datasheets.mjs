@@ -11,6 +11,13 @@ const source=JSON.parse(fs.readFileSync(sourcePath,'utf8')).catalogue;
 const previous=JSON.parse(fs.readFileSync(outputPath,'utf8'));
 const previousByTitle=new Map(previous.datasheets.map(unit=>[unit.title.toLowerCase(),unit]));
 const SOURCE_URL='https://github.com/BSData/wh40k-11e/blob/main/Imperium%20-%20Adeptus%20Mechanicus.json';
+const attachmentTargets={
+  'Skitarii Marshal':['Hastarii Exterminators','Hastarii Fusiliers','Skitarii Rangers','Skitarii Vanguard'],
+  'Technoarcheologist':['Corpuscarii Electro-Priests','Fulgurite Electro-Priests','Hastarii Exterminators','Hastarii Fusiliers','Kataphron Breachers','Kataphron Destroyers','Servitor Battleclade','Skitarii Rangers','Skitarii Vanguard'],
+  'Tech-Priest Dominus':['Corpuscarii Electro-Priests','Fulgurite Electro-Priests','Hastarii Exterminators','Hastarii Fusiliers','Kataphron Breachers','Kataphron Destroyers','Servitor Battleclade','Skitarii Rangers','Skitarii Vanguard'],
+  'Tech-Priest Manipulus':['Corpuscarii Electro-Priests','Fulgurite Electro-Priests','Hastarii Exterminators','Hastarii Fusiliers','Kataphron Breachers','Kataphron Destroyers','Servitor Battleclade','Skitarii Rangers','Skitarii Vanguard'],
+  'Tech-Priest Enginseer':['Corpuscarii Electro-Priests','Fulgurite Electro-Priests','Kataphron Breachers','Kataphron Destroyers','Skitarii Rangers','Skitarii Vanguard']
+};
 
 const clean=value=>String(value??'')
   .replaceAll('^^**','').replaceAll('**^^','').replaceAll('**','')
@@ -23,6 +30,7 @@ const datasheetText=(title,value)=>title==='Pteraxii Sterylizors'
   ?clean(value).replaceAll('Pteraxii Skystalker Alpha','Pteraxii Sterylizor Alpha')
   :clean(value);
 const abilityText=(unitTitle,title,value)=>{
+  if(/^(?:leader|support)$/i.test(clean(title))&&attachmentTargets[unitTitle])return `This model can be attached to the following units:\n${attachmentTargets[unitTitle].map(target=>`■ ${target}`).join('\n')}`;
   if(!/^broad spectrum data-tether$/i.test(clean(title)))return clean(value);
   if(unitTitle==='Onager Dunecrawler')return 'The bearer loses the SMOKE keyword, but each time you target the bearer with a Stratagem, roll one D6: on a 5+, you gain 1CP.';
   return 'Each time you target this unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.';

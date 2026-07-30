@@ -1,13 +1,13 @@
 const STORAGE_KEY='wh40k-rosters-v1';
 const CORRUPT_BACKUP_KEY='wh40k-rosters-v1-corrupt-backup';
-const KNOWN_FACTIONS=new Set(['death guard','adeptus mechanicus']);
-const FACTION_LABELS=Object.freeze({'death guard':'Death Guard','adeptus mechanicus':'Adeptus Mechanicus'});
-const FACTION_READERS=Object.freeze({'death guard':'../books/death-guard/reader.html','adeptus mechanicus':'../books/adeptus-mechanicus/index.html'});
+const KNOWN_FACTIONS=new Set(['death guard','adeptus mechanicus','t au empire']);
+const FACTION_LABELS=Object.freeze({'death guard':'Death Guard','adeptus mechanicus':'Adeptus Mechanicus','t au empire':"T'au Empire"});
+const FACTION_READERS=Object.freeze({'death guard':'../books/death-guard/reader.html','adeptus mechanicus':'../books/adeptus-mechanicus/index.html','t au empire':'../books/tau-empire/index.html'});
 const savedHost=document.querySelector('#saved-roster-list');
 
-function normalizeFaction(value){return String(value||'').replace(/^(?:Chaos|Imperium)\s*[-–—]\s*/i,'').replace(/\s+/g,' ').trim().toLowerCase();}
+function normalizeFaction(value){return String(value||'').replace(/^(?:Chaos|Imperium|Xenos)\s*[-–—]\s*/i,'').replace(/[^a-z0-9]+/gi,' ').trim().toLowerCase();}
 function knownFaction(value){const key=normalizeFaction(value);return KNOWN_FACTIONS.has(key)?key:'';}
-function pointsLabel(value){return knownFaction(value)==='adeptus mechanicus'?'Official MFM total':'Army Book total';}
+function pointsLabel(value){return ['adeptus mechanicus','t au empire'].includes(knownFaction(value))?'Official MFM total':'Army Book total';}
 function getSavedRosters(){
   try{const records=JSON.parse(localStorage.getItem(STORAGE_KEY));return Array.isArray(records)?records:[];}
   catch{return [];}

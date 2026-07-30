@@ -64,10 +64,14 @@ const mechanicusEnhancements=Object.fromEntries(mechanicus.enhancements.flatMap(
   if(enhancement.title==='Stealth-screened Cybercanids Upgrade')entries.push([normalize('Stealth-screened Cybercanids'),enhancement]);
   return entries;
 }));
+const tau=read('books/tau-empire/content/tau-empire-points.en.json');
+const tauUnits=Object.fromEntries(tau.units.map(unit=>[normalize(unit.title),unit]));
+const tauEnhancements=Object.fromEntries(tau.enhancements.map(enhancement=>[normalize(enhancement.title),enhancement]));
 
 const catalog={
   'death guard':{units:dgUnits,enhancements:dgEnhancements},
-  'adeptus mechanicus':{units:mechanicusUnits,enhancements:mechanicusEnhancements}
+  'adeptus mechanicus':{units:mechanicusUnits,enhancements:mechanicusEnhancements},
+  't au empire':{units:tauUnits,enhancements:tauEnhancements}
 };
 fs.writeFileSync(path.join(root,'roster-guides','points-data.js'),`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`);
-console.log(`Points catalog: ${Object.keys(dgUnits).length} Death Guard units, ${Object.keys(dgEnhancements).length} Death Guard Enhancements, ${Object.keys(mechanicusUnits).length} Adeptus Mechanicus units, ${mechanicus.enhancements.length} Adeptus Mechanicus Enhancements.`);
+console.log(`Points catalog: ${Object.keys(dgUnits).length} Death Guard, ${Object.keys(mechanicusUnits).length} Adeptus Mechanicus and ${Object.keys(tauUnits).length} T'au Empire units.`);

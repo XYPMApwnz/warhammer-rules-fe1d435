@@ -247,7 +247,7 @@
       }
     },
     "tau-empire-ability-assault": {
-      "termId": "tau-empire-ability-assault",
+      "termId": "core-assault",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-assault",
         "rule": "unit-breacher-team",
@@ -286,7 +286,7 @@
       }
     },
     "tau-empire-ability-indirect-fire": {
-      "termId": "tau-empire-ability-indirect-fire",
+      "termId": "core-indirect-fire",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-indirect-fire",
         "rule": "unit-breacher-team",
@@ -311,7 +311,7 @@
       }
     },
     "tau-empire-ability-twin-linked": {
-      "termId": "tau-empire-ability-twin-linked",
+      "termId": "core-twin-linked",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-twin-linked",
         "rule": "unit-breacher-team",
@@ -775,7 +775,7 @@
       }
     },
     "tau-empire-ability-hazardous": {
-      "termId": "tau-empire-ability-hazardous",
+      "termId": "core-hazardous",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-hazardous",
         "rule": "unit-commander-in-coldstar-battlesuit",
@@ -804,7 +804,7 @@
       }
     },
     "tau-empire-ability-torrent": {
-      "termId": "tau-empire-ability-torrent",
+      "termId": "core-torrent",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-torrent",
         "rule": "unit-commander-in-coldstar-battlesuit",
@@ -874,7 +874,7 @@
       }
     },
     "tau-empire-ability-deep-strike": {
-      "termId": "tau-empire-ability-deep-strike",
+      "termId": "core-deep-strike",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-deep-strike",
         "rule": "unit-commander-in-coldstar-battlesuit",
@@ -1089,7 +1089,7 @@
       }
     },
     "tau-empire-ability-feel-no-pain": {
-      "termId": "tau-empire-ability-feel-no-pain",
+      "termId": "core-feel-no-pain",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-feel-no-pain",
         "rule": "unit-ethereal",
@@ -1149,7 +1149,7 @@
       }
     },
     "tau-empire-ability-precision": {
-      "termId": "tau-empire-ability-precision",
+      "termId": "core-precision",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-precision",
         "rule": "unit-firesight-team",
@@ -1163,7 +1163,7 @@
       }
     },
     "tau-empire-ability-infiltrators": {
-      "termId": "tau-empire-ability-infiltrators",
+      "termId": "core-infiltrators",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-infiltrators",
         "rule": "unit-firesight-team",
@@ -1186,7 +1186,7 @@
       }
     },
     "tau-empire-ability-lone-operative": {
-      "termId": "tau-empire-ability-lone-operative",
+      "termId": "core-lone-operative",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-lone-operative",
         "rule": "unit-firesight-team",
@@ -1202,7 +1202,7 @@
       }
     },
     "tau-empire-ability-stealth": {
-      "termId": "tau-empire-ability-stealth",
+      "termId": "core-stealth",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-stealth",
         "rule": "unit-firesight-team",
@@ -1410,7 +1410,7 @@
       }
     },
     "tau-empire-ability-lance": {
-      "termId": "tau-empire-ability-lance",
+      "termId": "core-lance",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-lance",
         "rule": "unit-kroot-lone-spear",
@@ -1654,7 +1654,7 @@
       }
     },
     "tau-empire-ability-one-shot": {
-      "termId": "tau-empire-ability-one-shot",
+      "termId": "core-one-shot",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-one-shot",
         "rule": "unit-devilfish",
@@ -3296,10 +3296,10 @@
         ]
       }
     },
-    "tau-empire-weapon-ion-accelerator-overcharge": {
-      "termId": "tau-empire-weapon-ion-accelerator-overcharge",
+    "tau-empire-weapon-ion-accelerator-supercharge": {
+      "termId": "tau-empire-weapon-ion-accelerator-supercharge",
       "navigation": {
-        "glossary": "glossary-tau-empire-weapon-ion-accelerator-overcharge",
+        "glossary": "glossary-tau-empire-weapon-ion-accelerator-supercharge",
         "rule": "unit-riptide-battlesuit",
         "datasheet": "unit-riptide-battlesuit",
         "statline": "riptide-battlesuit-profile",
@@ -3782,7 +3782,7 @@
       }
     },
     "tau-empire-ability-hover": {
-      "termId": "tau-empire-ability-hover",
+      "termId": "core-hover",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-hover",
         "rule": "unit-manta",
@@ -4850,6 +4850,55 @@
         "rule": "detachment-kauyon"
       }
     },
+    "tau-empire-stratagem-a-tempting-trap": {
+      "termId": "tau-empire-stratagem-a-tempting-trap",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-a-tempting-trap",
+        "rule": "detachment-kauyon"
+      }
+    },
+    "tau-empire-stratagem-combat-embarkation": {
+      "termId": "tau-empire-stratagem-combat-embarkation",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-combat-embarkation",
+        "rule": "detachment-kauyon"
+      }
+    },
+    "tau-empire-stratagem-coordinate-to-engage": {
+      "termId": "tau-empire-stratagem-coordinate-to-engage",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-coordinate-to-engage",
+        "rule": "detachment-kauyon"
+      }
+    },
+    "tau-empire-stratagem-photon-grenades": {
+      "termId": "tau-empire-stratagem-photon-grenades",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-photon-grenades",
+        "rule": "detachment-kauyon"
+      }
+    },
+    "tau-empire-stratagem-point-blank-ambush": {
+      "termId": "tau-empire-stratagem-point-blank-ambush",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-point-blank-ambush",
+        "rule": "detachment-kauyon"
+      }
+    },
+    "tau-empire-stratagem-wall-of-mirrors": {
+      "termId": "tau-empire-stratagem-wall-of-mirrors",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-wall-of-mirrors",
+        "rule": "detachment-kauyon"
+      }
+    },
+    "tau-empire-detachment-rule-patient-hunter": {
+      "termId": "tau-empire-detachment-rule-patient-hunter",
+      "navigation": {
+        "glossary": "glossary-tau-empire-detachment-rule-patient-hunter",
+        "rule": "detachment-kauyon"
+      }
+    },
     "tau-empire-enhancement-borthrod-gland": {
       "termId": "tau-empire-enhancement-borthrod-gland",
       "navigation": {
@@ -4875,6 +4924,55 @@
       "termId": "tau-empire-enhancement-root-carved-weapons",
       "navigation": {
         "glossary": "glossary-tau-empire-enhancement-root-carved-weapons",
+        "rule": "detachment-kroot-hunting-pack"
+      }
+    },
+    "tau-empire-stratagem-a-trap-well-laid": {
+      "termId": "tau-empire-stratagem-a-trap-well-laid",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-a-trap-well-laid",
+        "rule": "detachment-kroot-hunting-pack"
+      }
+    },
+    "tau-empire-stratagem-emp-grenades": {
+      "termId": "tau-empire-stratagem-emp-grenades",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-emp-grenades",
+        "rule": "detachment-kroot-hunting-pack"
+      }
+    },
+    "tau-empire-stratagem-guerrilla-warriors": {
+      "termId": "tau-empire-stratagem-guerrilla-warriors",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-guerrilla-warriors",
+        "rule": "detachment-kroot-hunting-pack"
+      }
+    },
+    "tau-empire-stratagem-hidden-hunters": {
+      "termId": "tau-empire-stratagem-hidden-hunters",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-hidden-hunters",
+        "rule": "detachment-kroot-hunting-pack"
+      }
+    },
+    "tau-empire-stratagem-join-the-hunt": {
+      "termId": "tau-empire-stratagem-join-the-hunt",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-join-the-hunt",
+        "rule": "detachment-kroot-hunting-pack"
+      }
+    },
+    "tau-empire-stratagem-the-grisly-feast": {
+      "termId": "tau-empire-stratagem-the-grisly-feast",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-the-grisly-feast",
+        "rule": "detachment-kroot-hunting-pack"
+      }
+    },
+    "tau-empire-detachment-rule-hunters-instincts-skirmish-fighters": {
+      "termId": "tau-empire-detachment-rule-hunters-instincts-skirmish-fighters",
+      "navigation": {
+        "glossary": "glossary-tau-empire-detachment-rule-hunters-instincts-skirmish-fighters",
         "rule": "detachment-kroot-hunting-pack"
       }
     },
@@ -4906,6 +5004,55 @@
         "rule": "detachment-montka"
       }
     },
+    "tau-empire-stratagem-aggressive-mobility": {
+      "termId": "tau-empire-stratagem-aggressive-mobility",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-aggressive-mobility",
+        "rule": "detachment-montka"
+      }
+    },
+    "tau-empire-stratagem-combat-debarkation": {
+      "termId": "tau-empire-stratagem-combat-debarkation",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-combat-debarkation",
+        "rule": "detachment-montka"
+      }
+    },
+    "tau-empire-stratagem-counterfire-defence-systems": {
+      "termId": "tau-empire-stratagem-counterfire-defence-systems",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-counterfire-defence-systems",
+        "rule": "detachment-montka"
+      }
+    },
+    "tau-empire-stratagem-focused-fire": {
+      "termId": "tau-empire-stratagem-focused-fire",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-focused-fire",
+        "rule": "detachment-montka"
+      }
+    },
+    "tau-empire-stratagem-pinpoint-counter-offensive": {
+      "termId": "tau-empire-stratagem-pinpoint-counter-offensive",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-pinpoint-counter-offensive",
+        "rule": "detachment-montka"
+      }
+    },
+    "tau-empire-stratagem-pulse-onslaught": {
+      "termId": "tau-empire-stratagem-pulse-onslaught",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-pulse-onslaught",
+        "rule": "detachment-montka"
+      }
+    },
+    "tau-empire-detachment-rule-killing-blow": {
+      "termId": "tau-empire-detachment-rule-killing-blow",
+      "navigation": {
+        "glossary": "glossary-tau-empire-detachment-rule-killing-blow",
+        "rule": "detachment-montka"
+      }
+    },
     "tau-empire-enhancement-internal-grenade-racks": {
       "termId": "tau-empire-enhancement-internal-grenade-racks",
       "navigation": {
@@ -4931,6 +5078,55 @@
       "termId": "tau-empire-enhancement-starflare-ignition-system",
       "navigation": {
         "glossary": "glossary-tau-empire-enhancement-starflare-ignition-system",
+        "rule": "detachment-retaliation-cadre"
+      }
+    },
+    "tau-empire-stratagem-fail-safe-detonator": {
+      "termId": "tau-empire-stratagem-fail-safe-detonator",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-fail-safe-detonator",
+        "rule": "detachment-retaliation-cadre"
+      }
+    },
+    "tau-empire-stratagem-grav-inhibitor-field": {
+      "termId": "tau-empire-stratagem-grav-inhibitor-field",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-grav-inhibitor-field",
+        "rule": "detachment-retaliation-cadre"
+      }
+    },
+    "tau-empire-stratagem-stimm-injectors": {
+      "termId": "tau-empire-stratagem-stimm-injectors",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-stimm-injectors",
+        "rule": "detachment-retaliation-cadre"
+      }
+    },
+    "tau-empire-stratagem-the-arrokon-protocol": {
+      "termId": "tau-empire-stratagem-the-arrokon-protocol",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-the-arrokon-protocol",
+        "rule": "detachment-retaliation-cadre"
+      }
+    },
+    "tau-empire-stratagem-the-shortened-blade": {
+      "termId": "tau-empire-stratagem-the-shortened-blade",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-the-shortened-blade",
+        "rule": "detachment-retaliation-cadre"
+      }
+    },
+    "tau-empire-stratagem-the-torchstar-gambit": {
+      "termId": "tau-empire-stratagem-the-torchstar-gambit",
+      "navigation": {
+        "glossary": "glossary-tau-empire-stratagem-the-torchstar-gambit",
+        "rule": "detachment-retaliation-cadre"
+      }
+    },
+    "tau-empire-detachment-rule-bonded-heroes": {
+      "termId": "tau-empire-detachment-rule-bonded-heroes",
+      "navigation": {
+        "glossary": "glossary-tau-empire-detachment-rule-bonded-heroes",
         "rule": "detachment-retaliation-cadre"
       }
     }

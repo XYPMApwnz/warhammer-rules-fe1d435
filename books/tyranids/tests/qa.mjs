@@ -70,6 +70,16 @@ assert.ok(!unit('Norn Emissary').abilities.some(item=>item.title==='Protean Purp
 assert.equal(unit('Norn Emissary').abilities.find(item=>item.title==='Unnatural Resilience').text,'This model has the Feel No Pain 4+ ability against mortal wounds.');
 for(const title of ['Tyrannocyte','Toxicrene','Tyrannofex'])assert.ok(unit(title).keywords.includes('Frame'),`${title}: FRAME keyword missing`);
 for(const title of ['Hyperadapted Raveners','Tyranid Prime with Lash Whip'])assert.ok(!unit(title).abilities.some(item=>item.title==='Sustained Hits'),`${title}: referenced weapon definition leaked into Abilities`);
+assert.ok(unit('Maleceptor').keywords.includes('Maleceptor')&&!unit('Maleceptor').keywords.includes('Malceptor'),'Maleceptor keyword spelling regressed');
+for(const title of ['Broodlord','Hive Tyrant','Hyperadapted Raveners','Neurotyrant','Tyranid Prime with Lash Whip','Winged Tyranid Prime','Old One Eye','The Swarmlord']){
+  assert.ok(!unit(title).keywords.includes('Leader'),`${title}: Core Leader ability leaked into Keywords`);
+  assert.ok(unit(title).abilities.some(item=>item.title==='Leader'),`${title}: Core Leader ability is missing`);
+}
+for(const title of ['Deathleaper','Lictor','Neurolictor'])assert.ok(!unit(title).abilities.some(item=>item.title==='Deep Strike'),`${title}: Ambush Predators Deep Strike leaked into the base datasheet`);
+assert.match(pack.detachments.find(item=>item.title==='Ambush Predators')?.rule.text||'',/DEATHLEAPER\/LICTOR\/NEUROLICTOR units have Deep Strike/,'Ambush Predators must remain the owner of the conditional Deep Strike grant');
+const sporocyst=unit('Sporocyst');
+assert.equal(sporocyst.weapons.find(weapon=>weapon.name==='Sporocyst bio-weapons')?.abilities,'','Sporocyst Hive Defences leaked into its weapon profile');
+assert.equal(sporocyst.abilities.filter(ability=>ability.title==='Hive Defences').length,1,'Sporocyst must retain exactly one Hive Defences unit ability');
 for(const title of ['Termagant spinefists','Genestealer claws and talons','Distensible jaw','Toxinjector harpoon','Sporocyst bio-weapons','Spinemaws'])assert.ok(currentUnits.some(item=>item.weapons.some(weapon=>weapon.name===title)),`${title}: canonical weapon name missing`);
 assert.doesNotMatch(JSON.stringify({codex,codexParity}),/<ins>|Wound roll 1 as well|excluding MONSTERS models|that units Leadership|, and If your unit|Stealth \)\./);
 for(const id of ['vanguard-chameleonic','tyranid-warriors-melee-adaptive-instincts','tyrannocyte-aerial-seeding','venomthropes-foul-spores'])assert.ok(pack.updates.some(item=>item.id===id),`${id}: v1.1 update missing`);

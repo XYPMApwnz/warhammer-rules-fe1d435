@@ -141,7 +141,7 @@ function page(route) {
   <link rel="stylesheet" href="../styles/tokens.css?v=10">
   <link rel="stylesheet" href="../styles/layout.css?v=9">
   <link rel="stylesheet" href="../styles/navigation.css?v=11">
-  <link rel="stylesheet" href="../styles/content.css?v=34">
+  <link rel="stylesheet" href="../styles/content.css?v=35">
   <link rel="stylesheet" href="../styles/popups.css?v=17">
   <link rel="stylesheet" href="../../shared/datasheet-system.css?v=6">
   <link rel="stylesheet" href="./mobile.css?v=8">

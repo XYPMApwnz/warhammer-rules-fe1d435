@@ -274,6 +274,7 @@ html.related-rules-open{overflow:hidden}
 .full-related-content .related-detachment>[data-related-kind="stratagems"]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .full-related-content .stratagem{max-width:none;margin:0}
 .compatibility-status{grid-column:1/-1;display:grid;gap:3px;margin:0;padding:10px 14px;border-bottom:1px solid color-mix(in srgb,var(--strat-color) 45%,var(--line));background:color-mix(in srgb,var(--strat-color) 12%,var(--panel));color:var(--ink)}
+.stratagem>.compatibility-status{grid-column:2}
 .compatibility-status strong{color:var(--strat-color);font:900 10px/1.2 ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}
 .compatibility-status span{color:var(--muted);font-size:12px}
 .full-related-empty{margin:28px 0 0;padding:18px;border:1px solid var(--line);border-left:3px solid var(--green);color:var(--muted);background:var(--glass)}

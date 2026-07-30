@@ -3,8 +3,19 @@
   "id": "tau-empire",
   "title": "T'au Empire",
   "shortTitle": "T'au Empire Rules",
+  "mark": "TAU",
   "edition": "11E",
   "factionKeyword": "T'AU EMPIRE",
+  "armyRules": ["For the Greater Good"],
+  "compactSharedAbilities": ["Anti", "Assault", "Blast", "Deadly Demise", "Deep Strike", "Devastating Wounds", "Extra Attacks", "Feel No Pain", "Firing Deck", "Hazardous", "Heavy", "Ignores Cover", "Indirect Fire", "Infiltrators", "Lethal Hits", "Lone Operative", "Melta", "Pistol", "Precision", "Rapid Fire", "Scouts", "Stealth", "Sustained Hits", "Torrent", "Twin-linked"],
+  "includeCoreStratagems": true,
+  "dedicatedMobile": true,
+  "rosterSupport": true,
+  "assetVersions": {
+    "app": 5,
+    "mobile": 2,
+    "rosterData": 1
+  },
   "expected": {
     "matchedDetachments": 7,
     "factionPackDetachments": 3,
@@ -13,6 +24,9 @@
   "sources": {
     "factionPack": "content/tau-empire-faction-pack.en.json",
     "codexDatasheets": "content/tau-empire-codex-datasheets.en.json",
+    "codexWargear": "content/tau-empire-codex-wargear.en.json",
+    "codexParity": "content/tau-empire-codex-parity.en.json",
+    "points": "content/tau-empire-points.en.json",
     "relatedRules": "content/tau-empire-related-rules.en.json",
     "manifest": "sources/source-manifest.json"
   }

@@ -3,7 +3,7 @@
       <div class="related-kind" data-related-kind="stratagems"><section class="content-group" id="core-stratagems" data-track="core-stratagems">
 <h3 class="category-title">Core Stratagems</h3>
 <p class="lead">Universal Stratagems available to every army. Datasheet tools only show the cards the selected unit can legally target.</p>
-<div class="detachment-content core-stratagem-grid">
+<div class="detachment-content stratagem-grid core-stratagem-grid">
 <article class="stratagem surface" id="core-stratagem-command-re-roll" data-eligibility="{&quot;targets&quot;:[{&quot;side&quot;:&quot;friendly&quot;}]}">
 <div class="stratagem-head"><div><h3>COMMAND RE-ROLL</h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div>
 <p class="field"><b>WHEN</b><br>Any phase, just after you make an Advance, Charge, Damage, Hazard, Hit, Save or Wound roll for a unit from your army, or a roll to determine the number of attacks made with a weapon equipped by a model in that unit.</p>

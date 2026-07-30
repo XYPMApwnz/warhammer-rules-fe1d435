@@ -520,7 +520,7 @@
       "abilities": [
         {
           "title": "Support",
-          "text": "This model can be attached to the following units:\n- Skitarii Rangers\n- Skitarii Vanguard"
+          "text": "This model can be attached to the following units:\n■ Hastarii Exterminators\n■ Hastarii Fusiliers\n■ Skitarii Rangers\n■ Skitarii Vanguard"
         },
         {
           "title": "Control Edict",
@@ -794,7 +794,7 @@
       "abilities": [
         {
           "title": "Leader",
-          "text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Skitarii Rangers\n■ Skitarii Vanguard"
+          "text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Hastarii Exterminators\n■ Hastarii Fusiliers\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Servitor Battleclade\n■ Skitarii Rangers\n■ Skitarii Vanguard"
         },
         {
           "title": "Lord of the Machine Cult",
@@ -923,7 +923,7 @@
         },
         {
           "title": "Leader",
-          "text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Servitors\n■ Skitarii Rangers\n■ Skitarii Vanguard"
+          "text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Skitarii Rangers\n■ Skitarii Vanguard"
         },
         {
           "title": "Doctrina Imperatives",
@@ -1028,7 +1028,7 @@
       "abilities": [
         {
           "title": "Leader",
-          "text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Skitarii Rangers\n■ Skitarii Vanguard"
+          "text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Hastarii Exterminators\n■ Hastarii Fusiliers\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Servitor Battleclade\n■ Skitarii Rangers\n■ Skitarii Vanguard"
         },
         {
           "title": "Galvanic Field",
@@ -1138,7 +1138,7 @@
         },
         {
           "title": "Support",
-          "text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Skitarii Rangers\n■ Skitarii Vanguard"
+          "text": "This model can be attached to the following units:\n■ Corpuscarii Electro-Priests\n■ Fulgurite Electro-Priests\n■ Hastarii Exterminators\n■ Hastarii Fusiliers\n■ Kataphron Breachers\n■ Kataphron Destroyers\n■ Servitor Battleclade\n■ Skitarii Rangers\n■ Skitarii Vanguard"
         },
         {
           "title": "Doctrina Imperatives",

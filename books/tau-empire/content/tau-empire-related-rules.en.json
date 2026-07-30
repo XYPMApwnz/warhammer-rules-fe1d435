@@ -145,6 +145,512 @@
       "conditions": [
         "selected-to-shoot"
       ]
+    },
+    "stratagem-a-tempting-trap": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "not-selected-to-shoot",
+        "trap-objective",
+        "battle-round-3-plus"
+      ]
+    },
+    "stratagem-combat-embarkation": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE",
+              "INFANTRY"
+            ]
+          }
+        },
+        {
+          "id": "friendly-transport",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "TRANSPORT"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "charge-target",
+        "within-3-of-transport",
+        "transport-capacity"
+      ]
+    },
+    "stratagem-coordinate-to-engage": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "selected-as-observer"
+      ]
+    },
+    "stratagem-photon-grenades": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE",
+              "GRENADES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "charge-target"
+      ]
+    },
+    "stratagem-point-blank-ambush": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "not-selected-to-shoot",
+        "battle-round-3-plus"
+      ]
+    },
+    "stratagem-wall-of-mirrors": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "unitIds": [
+              "unit-stealth-battlesuits",
+              "unit-ghostkeel-battlesuit",
+              "unit-commander-shadowsun"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "not-engaged"
+      ]
+    },
+    "stratagem-aggressive-mobility": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "not-selected-to-move"
+      ]
+    },
+    "stratagem-combat-debarkation": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE",
+              "INFANTRY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "disembarked-this-turn"
+      ]
+    },
+    "stratagem-counterfire-defence-systems": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "targeted-by-enemy-attack"
+      ]
+    },
+    "stratagem-focused-fire": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-targets",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 2,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "not-selected-to-shoot",
+        "battle-round-1-to-3"
+      ]
+    },
+    "stratagem-pinpoint-counter-offensive": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE"
+            ],
+            "noneKeywords": [
+              "KROOT"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "unit-destroyed"
+      ]
+    },
+    "stratagem-pulse-onslaught": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE",
+              "INFANTRY"
+            ],
+            "noneKeywords": [
+              "KROOT"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "unit-shot",
+        "enemy-hit"
+      ]
+    },
+    "stratagem-fail-safe-detonator": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE",
+              "BATTLESUIT"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battlesuit-model-destroyed"
+      ]
+    },
+    "stratagem-grav-inhibitor-field": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE",
+              "BATTLESUIT"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "charge-target"
+      ]
+    },
+    "stratagem-stimm-injectors": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE",
+              "BATTLESUIT"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "targeted-by-enemy-attack"
+      ]
+    },
+    "stratagem-the-arrokon-protocol": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE",
+              "BATTLESUIT"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "not-selected-to-shoot"
+      ]
+    },
+    "stratagem-the-shortened-blade": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE",
+              "BATTLESUIT"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "arriving-by-deep-strike",
+        "cannot-charge"
+      ]
+    },
+    "stratagem-the-torchstar-gambit": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "T'AU EMPIRE",
+              "BATTLESUIT",
+              "FLY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "attacks-resolved"
+      ]
+    },
+    "stratagem-a-trap-well-laid": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "KROOT"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "not-selected-to-shoot-or-fight"
+      ]
+    },
+    "stratagem-emp-grenades": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "KROOT",
+              "GRENADES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "within-8-of-enemy-vehicle"
+      ]
+    },
+    "stratagem-guerrilla-warriors": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "KROOT"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "fell-back"
+      ]
+    },
+    "stratagem-hidden-hunters": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "KROOT"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "targeted-by-enemy-attack"
+      ]
+    },
+    "stratagem-join-the-hunt": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "alternatives": [
+              {
+                "allKeywords": [
+                  "KROOT",
+                  "INFANTRY"
+                ]
+              },
+              {
+                "unitIds": [
+                  "unit-kroot-hounds"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "unit-destroyed",
+        "once-per-battle"
+      ]
+    },
+    "stratagem-the-grisly-feast": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "KROOT"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "destroyed-enemy-this-phase"
+      ]
     }
   },
   "enhancements": {

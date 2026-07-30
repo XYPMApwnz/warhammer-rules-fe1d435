@@ -64,6 +64,19 @@ check('detachment card counts are complete',JSON.stringify(rules.detachments.map
 check('codex layer has 38 current 11e datasheets',rules.datasheets.length===38&&rules.datasheets.length===codexDatasheets.audit.datasheets);
 check('four datasheets are current 11e Legends',rules.datasheets.filter(x=>x.status==='Warhammer Legends').length===4);
 check('obsolete 10e Servitors datasheet is absent',!rules.datasheets.some(unit=>unit.title==='Servitors'));
+const attachmentTargets={
+  'Skitarii Marshal':['Hastarii Exterminators','Hastarii Fusiliers','Skitarii Rangers','Skitarii Vanguard'],
+  'Technoarcheologist':['Corpuscarii Electro-Priests','Fulgurite Electro-Priests','Hastarii Exterminators','Hastarii Fusiliers','Kataphron Breachers','Kataphron Destroyers','Servitor Battleclade','Skitarii Rangers','Skitarii Vanguard'],
+  'Tech-Priest Dominus':['Corpuscarii Electro-Priests','Fulgurite Electro-Priests','Hastarii Exterminators','Hastarii Fusiliers','Kataphron Breachers','Kataphron Destroyers','Servitor Battleclade','Skitarii Rangers','Skitarii Vanguard'],
+  'Tech-Priest Manipulus':['Corpuscarii Electro-Priests','Fulgurite Electro-Priests','Hastarii Exterminators','Hastarii Fusiliers','Kataphron Breachers','Kataphron Destroyers','Servitor Battleclade','Skitarii Rangers','Skitarii Vanguard'],
+  'Tech-Priest Enginseer':['Corpuscarii Electro-Priests','Fulgurite Electro-Priests','Kataphron Breachers','Kataphron Destroyers','Skitarii Rangers','Skitarii Vanguard']
+};
+for(const [title,expected] of Object.entries(attachmentTargets)){
+  const unit=codexDatasheets.datasheets.find(unit=>unit.title===title);
+  const relation=unit?.abilities.find(ability=>/^(?:Leader|Support)$/.test(ability.title));
+  const actual=(relation?.text.match(/^■ (.+)$/gm)||[]).map(line=>line.slice(2));
+  check(`${title} has the current official attachment targets`,JSON.stringify(actual)===JSON.stringify(expected),actual.join(', '));
+}
 check('every datasheet has stats, weapons, abilities and provenance',rules.datasheets.every(x=>Object.keys(x.stats).length>=6&&x.weapons.length&&x.abilities.length&&(x.sourcePages?.length||x.source?.url)));
 check('official multi-profile datasheet is preserved',factionRules.datasheets.find(unit=>unit.title==='Servitor Battleclade')?.profiles?.length===2);
 check('official Legends and Faction Pack clarifications are complete',[

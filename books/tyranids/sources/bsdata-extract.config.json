@@ -22,17 +22,33 @@
     "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth ).": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth)."
   },
   "keywordCorrections": {
-    "Burrowers": "Burrower"
+    "Burrowers": "Burrower",
+    "Malceptor": "Maleceptor"
   },
   "unitCorrections": {
+    "Broodlord": {
+      "removeKeywords": ["Leader"]
+    },
+    "Deathleaper": {
+      "removeAbilities": ["Deep Strike"]
+    },
+    "Hive Tyrant": {
+      "removeKeywords": ["Leader"]
+    },
     "Hyperadapted Raveners": {
       "addKeywords": ["Synapse"],
+      "removeKeywords": ["Leader"],
       "removeAbilities": ["Sustained Hits"]
     },
+    "Lictor": {
+      "removeAbilities": ["Deep Strike"]
+    },
     "Tyranid Prime with Lash Whip": {
+      "removeKeywords": ["Leader"],
       "removeAbilities": ["Sustained Hits"]
     },
     "Neurotyrant": {
+      "removeKeywords": ["Leader"],
       "abilities": {
         "Psychic Terror (Psychic)": {
           "text": "If one or more models from your army with this ability are on the battlefield when you unleash the Shadow in the Warp, subtract 1 from the Battle-shock test each enemy unit on the battlefield must take as a result."
@@ -42,6 +58,12 @@
           "text": "In your Command phase, you can select up to two friendly TYRANIDS units within 18\" of this model’s unit. Until the start of your next Command phase, the selected units are always considered to be within Synapse Range of your army.\n\nDesigner’s Note: Place a Neuroloid token next to each selected unit to remind you."
         }
       }
+    },
+    "Neurolictor": {
+      "removeAbilities": ["Deep Strike"]
+    },
+    "Old One Eye": {
+      "removeKeywords": ["Leader"]
     },
     "Norn Assimilator": {
       "removeAbilities": ["Protean Purpose"],
@@ -126,9 +148,18 @@
       }
     },
     "Sporocyst": {
+      "weaponAbilities": {
+        "Sporocyst bio-weapon": ""
+      },
       "weaponNames": {
         "Sporocyst bio-weapon": "Sporocyst bio-weapons"
       }
+    },
+    "The Swarmlord": {
+      "removeKeywords": ["Leader"]
+    },
+    "Winged Tyranid Prime": {
+      "removeKeywords": ["Leader"]
     },
     "Ripper Swarms": {
       "weaponNames": {

@@ -7,10 +7,11 @@ const repoRoot=path.resolve(root,'..');
 const registry=JSON.parse(fs.readFileSync(path.join(root,'registry.en.json'),'utf8'));
 const aliases=JSON.parse(fs.readFileSync(path.join(root,'aliases.en.json'),'utf8')).aliases;
 const report=JSON.parse(fs.readFileSync(path.join(root,'generated','conflict-report.json'),'utf8'));
+const deathGuardSource=JSON.parse(fs.readFileSync(path.join(repoRoot,'books','death-guard','content','death-guard-rules.en.json'),'utf8'));
 const errors=[];
 const ids=new Set(Object.keys(registry.terms));
 const presentations=new Set(['atomic','article','profile','reference','metadata']);
-const publicScopes=new Set(['global','death-guard','adeptus-mechanicus','tyranids']);
+const publicScopes=new Set(['global','death-guard','adeptus-mechanicus','tyranids','tau-empire']);
 const clean=value=>String(value||'').replace(/\s+/g,' ').trim();
 function semanticAnomalies(value){
   const text=String(value||''),issues=[];
@@ -70,7 +71,13 @@ for(const [alias,target] of Object.entries(aliases)){
   if(!ids.has(target))errors.push(`${alias}: unknown alias target ${target}`);
   if(aliases[target])errors.push(`${alias}: alias chain through ${target}`);
 }
-for(const bookId of ['core-rules','death-guard','adeptus-mechanicus','tyranids']){
+const deathGuardUnits=new Map(deathGuardSource.sections.filter(section=>section.kind==='unit').map(section=>[section.id,section]));
+for(const entry of deathGuardSource.glossary.filter(entry=>entry.kind==='unit'&&entry.sectionId)){
+  const target=aliases[entry.id],unit=deathGuardUnits.get(entry.sectionId);
+  if(!target||!unit)errors.push(`${entry.id}: missing Death Guard unit mapping`);
+  else if(JSON.stringify(registry.terms[target]?.structured?.points||[])!==JSON.stringify(unit.points||[]))errors.push(`${entry.id}: glossary points differ from the effective datasheet`);
+}
+for(const bookId of ['core-rules','death-guard','adeptus-mechanicus','tyranids','tau-empire']){
   const context=JSON.parse(fs.readFileSync(path.join(root,'contexts',`${bookId}.json`),'utf8'));
   for(const [localId,entry] of Object.entries(context.terms)){
     if(!ids.has(aliases[entry.termId]||entry.termId))errors.push(`${bookId}/${localId}: unknown term ${entry.termId}`);

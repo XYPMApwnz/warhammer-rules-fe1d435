@@ -16,7 +16,7 @@ const sw=read('service-worker.js');
 let appShell=[],navigationFallback;
 const coreReaderFiles=fs.readdirSync(path.join(root,'books','core-rules','reader')).filter(name=>name.endsWith('.html'));
 const books={
-  'death-guard':{version:'9',reader:'reader.html',versions:{'styles/tokens.css':'10','styles/navigation.css':'11','styles/content.css':'34','styles/popups.css':'17','scripts/roster-filter.js':'14','scripts/navigation-controller.js':'15','scripts/popup-controller.js':'25','scripts/full-entry-controller.js':'8','scripts/journey-controller.js':'12','scripts/ui-controllers.js':'11','scripts/related-rules.js':'8','scripts/app.js':'32'},app:'scripts/app.js',usesPopupGlossary:true,files:['assets/icon-v4.svg','styles/tokens.css','styles/layout.css','styles/navigation.css','styles/content.css','styles/popups.css','scripts/roster-filter.js','scripts/navigation-controller.js','scripts/popup-controller.js','scripts/full-entry-controller.js','scripts/journey-controller.js','scripts/ui-controllers.js','scripts/related-rules.js','scripts/app.js']},
+  'death-guard':{version:'9',reader:'reader.html',versions:{'styles/tokens.css':'10','styles/navigation.css':'11','styles/content.css':'35','styles/popups.css':'17','scripts/roster-filter.js':'14','scripts/navigation-controller.js':'15','scripts/popup-controller.js':'25','scripts/full-entry-controller.js':'8','scripts/journey-controller.js':'12','scripts/ui-controllers.js':'11','scripts/related-rules.js':'8','scripts/app.js':'32'},app:'scripts/app.js',usesPopupGlossary:true,files:['assets/icon-v4.svg','styles/tokens.css','styles/layout.css','styles/navigation.css','styles/content.css','styles/popups.css','scripts/roster-filter.js','scripts/navigation-controller.js','scripts/popup-controller.js','scripts/full-entry-controller.js','scripts/journey-controller.js','scripts/ui-controllers.js','scripts/related-rules.js','scripts/app.js']},
   'core-rules':{version:null,reader:'reader/index.html',rootPrefix:'../../../',libraryEntry:'reader/index.html',versions:{'reader/styles.css':'14','reader/app.js':'14'},app:'reader/app.js',usesPopupGlossary:false,files:['reader/index.html','reader/search-index.json','reader/styles.css','reader/app.js']},
   'adeptus-mechanicus':{version:null,reader:'reader.html',versions:{'styles/tokens.css':'14','styles/mechanicus.css':'18','scripts/data.js':'1','scripts/faction-ui.js':'1','scripts/related-rules.js':'8','scripts/roster-enhancements.js':'2','scripts/roster-filter.js':'2','scripts/app.js':'27','mobile/mobile.css':'1','mobile/mobile.js':'2'},app:'scripts/app.js',usesPopupGlossary:true,files:['reader.html','mobile/index.html','mobile/mobile.css','mobile/mobile.js','assets/mechanicus-logo.png','assets/mechanicus-cover-800.webp','styles/tokens.css','styles/mechanicus.css','scripts/data.js','scripts/faction-ui.js','scripts/related-rules.js','scripts/roster-enhancements.js','scripts/roster-filter.js','scripts/app.js']}
 };
@@ -48,6 +48,10 @@ try{
     navigationFallback(new URL('https://example.test/books/tyranids/?build=qa')).endsWith('/books/tyranids/index.html')&&
     navigationFallback(new URL('https://example.test/books/tyranids/reader.html?roster=qa')).endsWith('/books/tyranids/reader.html')&&
     navigationFallback(new URL('https://example.test/books/tyranids/mobile/hive-tyrant.html?build=qa')).endsWith('/books/tyranids/mobile/index.html'));
+  check("T'au Empire offline routes preserve entry, desktop and Phone mode",
+    navigationFallback(new URL('https://example.test/books/tau-empire/?build=qa')).endsWith('/books/tau-empire/index.html')&&
+    navigationFallback(new URL('https://example.test/books/tau-empire/reader.html?roster=qa')).endsWith('/books/tau-empire/reader.html')&&
+    navigationFallback(new URL('https://example.test/books/tau-empire/mobile/commander-farsight.html?build=qa')).endsWith('/books/tau-empire/mobile/index.html'));
   check('navigation cache ignores technical query without weakening asset versions',sw.includes('caches.match(request, {ignoreSearch: true})')&&sw.indexOf('caches.match(request, {ignoreSearch: true})')<sw.indexOf('caches.match(fallback)')&&!/if \(request\.mode === "navigate"\)[\s\S]*?return;\s*}\s*event\.respondWith\(\s*caches\.match\(request, \{ignoreSearch: true}/.test(sw));
 }catch(error){check('Tyranids offline route contract is executable',false,error.message);}
 
@@ -81,7 +85,7 @@ for(const slug of generatedArmyBooks){
   check(`${slug} exposes Library, Glossary and Related Rules`,html.includes('href="../../index.html"')&&html.includes('href="../../glossary/index.html"')&&html.includes('../shared/army-related-rules.js?v=5'));
   check(`${slug} exposes the forced Phone view contract`,config.dedicatedMobile?app.includes("new URL('./mobile/'+route")&&mobile.includes('Desktop / iPad view')&&mobile.includes('data-view-switch')&&!bookCss.includes('html[data-view="mobile"]'):app.includes('readerPath')&&mobile.includes('searchParams.set("view","mobile")')&&bookCss.includes('html[data-view="mobile"] .nav-menu')&&bookCss.includes('html[data-view="mobile"] .unit-card.ds-layout .ds-main-grid'));
   check(`${slug} has a generated glossary context`,Object.keys(context.terms||{}).length>0);
-  check(`${slug} has a dedicated offline fallback`,slug==='tyranids'?['ENTRY','DESKTOP','MOBILE'].every(kind=>sw.includes(`const TYRANIDS_${kind}_FALLBACK`)):sw.includes(`const ${fallbackName}`)&&sw.includes(`/books/${slug}/`));
+  check(`${slug} has a dedicated offline fallback`,config.dedicatedMobile?['ENTRY','DESKTOP','MOBILE'].every(kind=>sw.includes(`const ${slug.replaceAll('-','_').toUpperCase()}_${kind}_FALLBACK`)):sw.includes(`const ${fallbackName}`)&&sw.includes(`/books/${slug}/`));
 }
 for(const slug of new Set(['death-guard','adeptus-mechanicus',...generatedArmyBooks])){
   const html=read(`books/${slug}/reader.html`);
@@ -97,7 +101,7 @@ for(const slug of new Set(['death-guard','adeptus-mechanicus',...generatedArmyBo
   check(`${slug} entry shares the automatic phone/full routing contract`,entry.includes('view-router.js?v=2')&&entry.includes('./reader.html?view=full')&&entry.includes('./mobile/index.html?view=mobile'));
   check(`${slug} keeps Updates below Datasheets`,toc.indexOf('data-nav-id="datasheets"')<toc.indexOf('data-nav-id="updates"')&&document.indexOf('id="datasheets" data-track="datasheets"')<document.indexOf('id="updates" data-track="updates"'));
 }
-for(const slug of ['death-guard','adeptus-mechanicus','tyranids']){
+for(const slug of ['death-guard','adeptus-mechanicus','tyranids','tau-empire']){
   const mobile=read(`books/${slug}/mobile/index.html`);
   check(`${slug} Phone view keeps Updates below Datasheets`,mobile.indexOf('<summary>Datasheets')<mobile.indexOf('href="./updates.html"'));
 }
@@ -122,12 +126,13 @@ check('Library describes multi-faction Roster Guides honestly',library.includes(
 check('Library no longer owns roster storage or import controls',!library.includes('localStorage')&&!library.includes('id="roster-input"'));
 check('legacy root roster links keep query and hash',library.includes("new URLSearchParams(location.search).get('roster')")&&library.includes("new URL('roster-guides/index.html',location.href)")&&library.includes('target.search=location.search')&&library.includes('target.hash=location.hash'));
 check('empty legacy roster query stays in Library',library.includes("if(new URLSearchParams(location.search).get('roster'))"));
-check('Roster Guides recognise two factions and expose only real readers',rosterGuidesApp.includes("new Set(['death guard','adeptus mechanicus'])")&&rosterGuidesApp.includes("'death guard':'../books/death-guard/reader.html'")&&rosterGuidesApp.includes("'adeptus mechanicus':'../books/adeptus-mechanicus/index.html'"));
+check('Roster Guides recognise the three supported factions and expose only real readers',rosterGuidesApp.includes("new Set(['death guard','adeptus mechanicus','t au empire'])")&&rosterGuidesApp.includes("'death guard':'../books/death-guard/reader.html'")&&rosterGuidesApp.includes("'adeptus mechanicus':'../books/adeptus-mechanicus/index.html'")&&rosterGuidesApp.includes("'t au empire':'../books/tau-empire/index.html'"));
 check('Roster Guides use one dash-tolerant faction normaliser',rosterGuidesApp.includes('function normalizeFaction(value)')&&rosterGuidesApp.includes('[-–—]')&&rosterGuidesApp.includes('knownFaction(record.roster.faction)'));
 check('unknown roster factions are blocked before save',rosterGuidesApp.indexOf("if(!faction){document.querySelector('#roster-result')")<rosterGuidesApp.indexOf('const record=saveRoster(roster,input.value)'));
 check('missing roster and faction states are explicit',rosterGuidesApp.includes("alert('Saved roster not found.')")&&rosterGuidesApp.includes('<h2>Faction not found</h2>')&&read('books/shared/roster-parser.js').includes("value('FACTION KEYWORD')"));
 check('backup import validates the v1 record and known faction',rosterGuidesApp.includes('function isImportableRecord(record)')&&rosterGuidesApp.includes('knownFaction(record?.roster?.faction)')&&rosterGuidesApp.includes('if(!isImportableRecord(record))throw new Error()'));
-check('Mechanicus records open the real responsive reader',rosterGuides.includes('Death Guard and Adeptus Mechanicus exports are recognised')&&rosterGuidesApp.includes("'adeptus mechanicus':'../books/adeptus-mechanicus/index.html'")&&read('books/adeptus-mechanicus/reader.html').includes('scripts/roster-filter.js?v=2'));
+check('Mechanicus records open the real responsive reader',rosterGuidesApp.includes("'adeptus mechanicus':'../books/adeptus-mechanicus/index.html'")&&read('books/adeptus-mechanicus/reader.html').includes('scripts/roster-filter.js?v=2'));
+check("T'au records open the dedicated responsive reader",rosterGuidesApp.includes("'t au empire':'../books/tau-empire/index.html'")&&read('books/tau-empire/reader.html').includes('roster-parser.js?v=2')&&read('books/tau-empire/scripts/app.js').includes("localStorage.getItem('wh40k-rosters-v1')"));
 check('roster storage key remains compatible',rosterGuidesApp.includes("const STORAGE_KEY='wh40k-rosters-v1'"));
 check('Roster Guides compare current Army Book points without blocking save',rosterGuides.includes('points-data.js?v=5')&&rosterGuides.includes('points-validator.js?v=2')&&rosterGuidesApp.includes('window.WHRosterPoints.check')&&rosterGuidesApp.includes('Points warning:')&&rosterGuidesApp.includes('The roster was still saved.')&&!rosterGuidesApp.includes('Roster is ready to build.'));
 check('Roster Guides and Death Guard share one source parser',rosterGuides.includes('roster-parser.js?v=2')&&read('books/death-guard/reader.html').includes('roster-parser.js?v=2')&&read('books/death-guard/scripts/roster-filter.js').includes('WHRosterParser.parse'));
@@ -160,6 +165,9 @@ const criticalRefs=file=>{
 const tyranidsFallbackPages=['books/tyranids/index.html','books/tyranids/reader.html','books/tyranids/mobile/index.html'];
 const missingFallbackAssets=tyranidsFallbackPages.flatMap(file=>criticalRefs(file).filter(ref=>!appShell.includes(ref)).map(ref=>`${file} -> ${ref}`));
 check('Tyranids fallback pages have exact render-critical dependencies in the app shell',missingFallbackAssets.length===0,missingFallbackAssets.join('; '));
+const tauFallbackPages=['books/tau-empire/index.html','books/tau-empire/reader.html','books/tau-empire/mobile/index.html'];
+const missingTauFallbackAssets=tauFallbackPages.flatMap(file=>criticalRefs(file).filter(ref=>!appShell.includes(ref)).map(ref=>`${file} -> ${ref}`));
+check("T'au Empire fallback pages have exact render-critical dependencies in the app shell",missingTauFallbackAssets.length===0,missingTauFallbackAssets.join('; '));
 check('Core Rules search shares loading and recovers from failure',read('books/core-rules/reader/app.js').includes('let searchIndexPromise')&&read('books/core-rules/reader/app.js').includes('if (!response.ok)')&&read('books/core-rules/reader/app.js').includes('searchIndexPromise = null')&&read('books/core-rules/reader/app.js').includes('Search unavailable. Close and try again.'));
 check('Every result search prioritises title matches',read('books/core-rules/reader/app.js').includes('normalizeSearch(a.title).includes(query)')&&read('glossary/viewer.js').includes('if(title===query)return 0'));
 check('Core Rules heavy source images remain cached on demand',!sw.includes('Array.from({length:88}')&&!sw.includes('./books/core-rules/assets/diagrams/BenefitOfCover.png'));

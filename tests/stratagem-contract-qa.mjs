@@ -20,7 +20,8 @@ const cardCount=(html,id)=>(html.match(new RegExp(`<article\\b[^>]*(?:data-rule-
 const registry=Object.values(json('glossary/registry.en.json').terms);
 const sources=[
   ['adeptus-mechanicus','books/adeptus-mechanicus/content/adeptus-mechanicus-codex-detachments.en.json','books/adeptus-mechanicus/reader.html','books/adeptus-mechanicus/mobile/related-rules.inc'],
-  ['tyranids','books/tyranids/content/tyranids-codex-parity.en.json','books/tyranids/reader.html','books/tyranids/mobile/related-rules.inc']
+  ['tyranids','books/tyranids/content/tyranids-codex-parity.en.json','books/tyranids/reader.html','books/tyranids/mobile/related-rules.inc'],
+  ['tau-empire','books/tau-empire/content/tau-empire-codex-parity.en.json','books/tau-empire/reader.html','books/tau-empire/mobile/related-rules.inc']
 ];
 for(const [bookId,sourceFile,readerFile,relatedFile] of sources){
   const source=json(sourceFile),reader=read(readerFile),related=read(relatedFile);
@@ -99,7 +100,8 @@ for(const file of [
   'books/death-guard/mobile/mobile.js',
   'books/adeptus-mechanicus/scripts/related-rules.js',
   'books/adeptus-mechanicus/mobile/mobile.js',
-  'books/tyranids/mobile/mobile.js'
+  'books/tyranids/mobile/mobile.js',
+  'books/tau-empire/mobile/mobile.js'
 ]){
   const source=read(file);
   assert.match(source,/Conditionally compatible/);
@@ -109,10 +111,11 @@ for(const file of [
 }
 
 const css=read('books/death-guard/styles/content.css');
+assert.match(css,/\.stratagem>\.compatibility-status\{grid-column:2\}/,'conditional compatibility status must clear the Stratagem CP rail');
 assert.match(css,/\.stratagem-grid\s*\{[^}]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/);
 assert.match(css,/full-related-content[\s\S]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/);
 assert.match(css,/@media\s*\(max-width:\s*900px\)[^{]*\{[\s\S]*grid-template-columns:\s*1fr/);
-for(const bookId of ['death-guard','adeptus-mechanicus','tyranids']){
+for(const bookId of ['death-guard','adeptus-mechanicus','tyranids','tau-empire']){
   const mobileCss=read(`books/${bookId}/mobile/mobile.css`);
   assert.match(mobileCss,/grid-template-columns:\s*1fr/,`${bookId}: Phone Mode must use one Stratagem column`);
   assert.match(mobileCss,/@media\s*\(min-width:\s*1000px\)\s*and\s*\(orientation:\s*landscape\)[\s\S]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/,`${bookId}: landscape tablet must use two Stratagem columns`);
@@ -123,7 +126,8 @@ assert.match(read('glossary/tools/build-glossary.mjs'),/kind:term\.kind/);
 for(const buildFile of [
   'books/death-guard/mobile/build.mjs',
   'books/adeptus-mechanicus/mobile/build.mjs',
-  'books/tyranids/mobile/build.mjs'
+  'books/tyranids/mobile/build.mjs',
+  'books/tau-empire/mobile/build.mjs'
 ])assert.match(read(buildFile),/term\.kind\s*===?\s*'stratagem'[\s\S]{0,100}term\.definition/);
 assert.match(dgReader,/data-term="core-rule-15-04-insane-bravery"/);
 assert.match(read('books/adeptus-mechanicus/reader.html'),/data-term="stratagem-priority-reclamation"/);

@@ -18,7 +18,13 @@ const walk=(value,visit)=>{
 };
 
 const supported=fs.readdirSync(path.join(root,'books'),{withFileTypes:true})
-  .filter(entry=>entry.isDirectory()&&fs.existsSync(path.join(root,'books',entry.name,'scripts','roster-filter.js')))
+  .filter(entry=>{
+    if(!entry.isDirectory())return false;
+    const bookRoot=path.join(root,'books',entry.name);
+    if(fs.existsSync(path.join(bookRoot,'scripts','roster-filter.js')))return true;
+    const configPath=path.join(bookRoot,'book.config.json');
+    return fs.existsSync(configPath)&&JSON.parse(fs.readFileSync(configPath,'utf8')).rosterSupport===true;
+  })
   .map(entry=>entry.name);
 
 for(const bookId of supported){
@@ -37,6 +43,38 @@ for(const bookId of supported){
     assert(reader.includes('./scripts/related-rules.js?v=8'),'adeptus-mechanicus: Related Rules controller is absent');
     assert(fs.existsSync(path.join(bookRoot,'mobile','related-rules.inc')),'adeptus-mechanicus: Phone Mode related rules are absent');
     console.log(`PASS  adeptus-mechanicus: ${points.units.length} units, ${points.enhancements.length} Enhancements, desktop/iPad + Phone Mode`);
+    continue;
+  }
+  if(bookId==='tau-empire'){
+    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8');
+    const related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8');
+    const points=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','tau-empire-points.en.json'),'utf8'));
+    const codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','tau-empire-codex-datasheets.en.json'),'utf8'));
+    const factionPack=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','tau-empire-faction-pack.en.json'),'utf8'));
+    const parity=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','tau-empire-codex-parity.en.json'),'utf8'));
+    const enhancementRules=[...factionPack.detachments,...parity.detachments].flatMap(detachment=>detachment.enhancements||[]);
+    const rosterDataContext={window:{}};rosterDataContext.window=rosterDataContext;
+    vm.runInNewContext(fs.readFileSync(path.join(bookRoot,'scripts','roster-data.js'),'utf8'),rosterDataContext,{filename:'tau-roster-data.js'});
+    const rosterCatalog=rosterDataContext.WH_BOOK_ROSTER_ENHANCEMENTS;
+    const units=[...codex.datasheets,...codex.imperialArmour,...codex.legends];
+    const unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
+    assert(points.units.length===63,'tau-empire: points catalog is incomplete');
+    assert(points.enhancements.length===23,'tau-empire: Enhancement catalog is incomplete');
+    units.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`tau-empire: unit ${unit.title} is absent from Roster Guide`));
+    points.enhancements.forEach(item=>{
+      const rule=enhancementRules.find(rule=>entities.normalize(rule.title)===entities.normalize(item.title));
+      assert(rule&&related.includes(`data-rule-id="${rule.id}"`),`tau-empire: Enhancement ${item.title} is absent from related rules`);
+      const rosterRule=rosterCatalog[entities.normalize(item.title)];
+      assert(rosterRule?.text===rule?.text&&rosterRule?.value===item.value,`tau-empire: roster Enhancement ${item.title} does not preserve its full rule and current cost`);
+    });
+    assert(reader.includes('../shared/roster-parser.js?v=2'),'tau-empire: shared roster parser is absent');
+    assert(reader.includes('../shared/book-roster-enhancements.js?v=1')&&reader.includes('./scripts/roster-data.js?v=1'),'tau-empire: desktop Enhancement owner runtime is absent');
+    const tauApp=fs.readFileSync(path.join(bookRoot,'scripts','app.js'),'utf8');
+    assert(tauApp.includes("params.get('roster')")&&tauApp.includes('WHBookRosterEnhancements?.decorate')&&tauApp.includes('WHRosterEntities.loadoutIncludesProfile')&&tauApp.includes(".content-group.detachment"),'tau-empire: desktop roster filtering, loadout or owned Enhancement decoration is incomplete');
+    const tauMobile=fs.readFileSync(path.join(bookRoot,'mobile','mobile.js'),'utf8');
+    assert(tauMobile.includes('WHRosterParser.parse')&&tauMobile.includes('WHBookRosterEnhancements?.decorate'),'tau-empire: Phone Mode does not parse current roster source and decorate the Enhancement owner');
+    assert(fs.existsSync(path.join(bookRoot,'mobile','related-rules.inc')),'tau-empire: Phone Mode related rules are absent');
+    console.log(`PASS  tau-empire: ${points.units.length} units, ${points.enhancements.length} Enhancements, desktop/iPad + Phone Mode`);
     continue;
   }
   const dataPath=path.join(bookRoot,'content',`${bookId}-rules.en.json`);

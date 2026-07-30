@@ -322,10 +322,7 @@ window.DG_TERMS={
       "unit-winged-hive-tyrant",
       "unit-winged-tyranid-prime",
       "unit-tyrannocyte",
-      "unit-deathleaper",
       "unit-the-red-terror",
-      "unit-lictor",
-      "unit-neurolictor",
       "unit-raveners",
       "unit-mawloc",
       "unit-trygon",
@@ -2847,8 +2844,8 @@ window.DG_TERMS={
   "tyranids-weapon-sporocyst-bio-weapons": {
     "id": "tyranids-weapon-sporocyst-bio-weapons",
     "title": "Sporocyst bio-weapons",
-    "summary": "Ranged · 24\" · A 10 · BS 4+ · S 5 · AP -1 · D 2 · Hive Defences",
-    "full": "Ranged · 24\" · A 10 · BS 4+ · S 5 · AP -1 · D 2 · Hive Defences",
+    "summary": "Ranged · 24\" · A 10 · BS 4+ · S 5 · AP -1 · D 2",
+    "full": "Ranged · 24\" · A 10 · BS 4+ · S 5 · AP -1 · D 2",
     "glossary": "glossary-tyranids-weapon-sporocyst-bio-weapons",
     "rule": "unit-sporocyst",
     "units": [

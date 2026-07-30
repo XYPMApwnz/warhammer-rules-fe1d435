@@ -1011,7 +1011,7 @@
         },
         {
           "type": "p",
-          "text": "Source: Death Guard Faction Pack v1.0, p.2."
+          "text": "Rules source: Death Guard Faction Pack v1.0, p.2. Force Disposition and Detachment Points: Munitorum Field Manual v1.1, 22 July 2026."
         }
       ],
       "subsections": [
@@ -10767,7 +10767,11 @@
       },
       "points": [
         {
-          "label": "1 model",
+          "label": "1st–3rd unit: 1 model",
+          "value": 75
+        },
+        {
+          "label": "4th+ unit: 1 model",
           "value": 85
         }
       ]
@@ -11069,7 +11073,7 @@
         },
         {
           "label": "1st–2nd unit: 6 models",
-          "value": 320
+          "value": 305
         },
         {
           "label": "3rd+ unit: 3 models",
@@ -11077,7 +11081,7 @@
         },
         {
           "label": "3rd+ unit: 6 models",
-          "value": 330
+          "value": 315
         }
       ]
     },
@@ -11191,11 +11195,11 @@
       "points": [
         {
           "label": "1st unit: 1 model",
-          "value": 290
+          "value": 300
         },
         {
           "label": "2nd+ unit: 1 model",
-          "value": 320
+          "value": 340
         }
       ]
     },
@@ -12839,7 +12843,7 @@
       "points": [
         {
           "label": "1 model",
-          "value": 400
+          "value": 390
         }
       ]
     },
@@ -13349,7 +13353,7 @@
         },
         {
           "label": "10 models",
-          "value": 190
+          "value": 180
         }
       ]
     },

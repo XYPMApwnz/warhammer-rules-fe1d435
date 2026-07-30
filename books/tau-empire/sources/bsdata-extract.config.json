@@ -9,6 +9,37 @@
     "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
     "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/T%27au%20Empire.json"
   },
+  "textCorrections": {
+    "T’au Empire Battlesuit model only. Each time the bearer is select to shoot, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the select ability.": "T’au Empire Battlesuit model only. Each time the bearer is selected to shoot, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the selected ability."
+  },
+  "unitCorrections": {
+    "Cadre Fireblade": {"removeKeywords":["Leader"]},
+    "Commander in Coldstar Battlesuit": {"removeKeywords":["Leader"]},
+    "Commander in Enforcer Battlesuit": {"removeKeywords":["Leader"]},
+    "Ethereal": {"removeKeywords":["Leader"]},
+    "Kroot Flesh Shaper": {"removeKeywords":["Leader"]},
+    "Kroot Trail Shaper": {"removeKeywords":["Leader"]},
+    "Kroot War Shaper": {"removeKeywords":["Leader"]},
+    "Commander Farsight": {"removeKeywords":["Leader"]},
+    "Darkstrider": {"removeKeywords":["Leader"]},
+    "Aun'shi": {"removeKeywords":["Leader"]},
+    "Commander in Crisis Battlesuit": {"removeKeywords":["Leader"]},
+    "Shas'o R'alai": {"removeKeywords":["Leader"]},
+    "Devilfish": {"addKeywords":["Frame"]},
+    "Hammerhead Gunship": {"addKeywords":["Frame"]},
+    "Piranhas": {"addKeywords":["Frame"]},
+    "Sky Ray Gunship": {"addKeywords":["Frame"]},
+    "Tidewall Droneport": {"addKeywords":["Frame"]},
+    "Tidewall Gunrig": {"addKeywords":["Frame"]},
+    "Tidewall Shieldline": {"addKeywords":["Frame"]},
+    "Razorshark Strike Fighter": {"addKeywords":["Frame"]},
+    "Sun Shark Bomber": {"addKeywords":["Frame"]},
+    "Riptide Battlesuit": {
+      "weaponNames": {
+        "➤ Ion accelerator - overcharge": "➤ Ion accelerator - supercharge"
+      }
+    }
+  },
   "inputs": [
     {
       "role": "faction",
@@ -22,7 +53,8 @@
   "outputs": {
     "snapshot": "bsdata-tau-empire-11e.json",
     "datasheets": "../content/tau-empire-codex-datasheets.en.json",
-    "points": "../content/tau-empire-points.en.json"
+    "points": "../content/tau-empire-points.en.json",
+    "officialPoints": "official-mfm-v1.1.json"
   },
   "filters": {
     "excludeNames": [

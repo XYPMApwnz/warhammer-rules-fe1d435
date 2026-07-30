@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 1378,
-    "aliases": 699,
+    "terms": 1768,
+    "aliases": 713,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 61,
-    "duplicateCandidates": 5,
+    "aliasCandidates": 106,
+    "duplicateCandidates": 15,
     "keywordCandidates": 16
   },
   "definitionCandidates": [
@@ -936,9 +936,64 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "anti",
+      "termIds": [
+        "core-anti",
+        "tau-empire-ability-anti"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "blast",
+      "termIds": [
+        "core-blast",
+        "tau-empire-ability-blast"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "devastating-wounds",
+      "termIds": [
+        "core-devastating-wounds",
+        "tau-empire-ability-devastating-wounds"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "extra-attacks",
+      "termIds": [
+        "core-extra-attacks",
+        "tau-empire-ability-extra-attacks"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "heavy",
+      "termIds": [
+        "core-heavy",
+        "tau-empire-ability-heavy"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "ignores-cover",
+      "termIds": [
+        "core-ignores-cover",
+        "tau-empire-ability-ignores-cover"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "leader",
       "termIds": [
         "core-leader",
+        "tau-empire-ability-leader",
+        "tau-empire-ability-leader-2",
+        "tau-empire-ability-leader-3",
+        "tau-empire-ability-leader-4",
+        "tau-empire-ability-leader-5",
+        "tau-empire-ability-leader-6",
+        "tau-empire-ability-leader-7",
         "tyranids-ability-leader",
         "tyranids-ability-leader-2",
         "tyranids-ability-leader-3",
@@ -955,7 +1010,40 @@
       "normalizedTitle": "lethal-hits",
       "termIds": [
         "core-lethal-hits",
+        "tau-empire-ability-lethal-hits",
         "tyranids-ability-lethal-hits"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "melta",
+      "termIds": [
+        "core-melta",
+        "tau-empire-ability-melta"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "pistol",
+      "termIds": [
+        "core-pistol",
+        "tau-empire-ability-pistol"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "rapid-fire",
+      "termIds": [
+        "core-rapid-fire",
+        "tau-empire-ability-rapid-fire"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "super-heavy-walker",
+      "termIds": [
+        "core-super-heavy-walker",
+        "tau-empire-ability-super-heavy-walker"
       ],
       "status": "review-required"
     },
@@ -963,6 +1051,7 @@
       "normalizedTitle": "sustained-hits",
       "termIds": [
         "core-sustained-hits",
+        "tau-empire-ability-sustained-hits",
         "tyranids-ability-sustained-hits"
       ],
       "status": "review-required"
@@ -1020,7 +1109,14 @@
         "adeptus-mechanicus-weapon-close-combat-weapon-2",
         "adeptus-mechanicus-weapon-close-combat-weapon-3",
         "adeptus-mechanicus-weapon-close-combat-weapon-4",
-        "adeptus-mechanicus-weapon-close-combat-weapon-5"
+        "adeptus-mechanicus-weapon-close-combat-weapon-5",
+        "tau-empire-weapon-close-combat-weapon",
+        "tau-empire-weapon-close-combat-weapon-2",
+        "tau-empire-weapon-close-combat-weapon-3",
+        "tau-empire-weapon-close-combat-weapon-4",
+        "tau-empire-weapon-close-combat-weapon-5",
+        "tau-empire-weapon-close-combat-weapon-6",
+        "tau-empire-weapon-close-combat-weapon-7"
       ],
       "status": "review-required"
     },
@@ -1125,6 +1221,14 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "fortification",
+      "termIds": [
+        "death-guard-ability-fortification-miasmic-malignifier",
+        "tau-empire-ability-fortification"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "meltagun",
       "termIds": [
         "death-guard-weapon-meltagun-plague-marines",
@@ -1217,6 +1321,33 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "armoured-hull",
+      "termIds": [
+        "adeptus-mechanicus-weapon-armoured-hull",
+        "tau-empire-weapon-armoured-hull",
+        "tau-empire-weapon-armoured-hull-2",
+        "tau-empire-weapon-armoured-hull-3",
+        "tau-empire-weapon-armoured-hull-4"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "supreme-commander",
+      "termIds": [
+        "adeptus-mechanicus-datasheet-supreme-commander",
+        "tau-empire-ability-supreme-commander"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "strafing-run",
+      "termIds": [
+        "adeptus-mechanicus-datasheet-strafing-run",
+        "tau-empire-ability-strafing-run"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "twin-cognis-lascannon",
       "termIds": [
         "adeptus-mechanicus-weapon-twin-cognis-lascannon",
@@ -1260,6 +1391,7 @@
       "normalizedTitle": "damaged-1-4-wounds-remaining",
       "termIds": [
         "adeptus-mechanicus-datasheet-damaged-1-4-wounds-remaining",
+        "tau-empire-ability-damaged-1-4-wounds-remaining",
         "tyranids-ability-damaged-1-4-wounds-remaining"
       ],
       "status": "review-required"
@@ -1300,7 +1432,273 @@
       "normalizedTitle": "damaged-1-5-wounds-remaining",
       "termIds": [
         "adeptus-mechanicus-datasheet-damaged-1-5-wounds-remaining",
+        "tau-empire-ability-damaged-1-5-wounds-remaining",
+        "tau-empire-ability-damaged-1-5-wounds-remaining-2",
         "tyranids-ability-damaged-1-5-wounds-remaining"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "pulse-pistol",
+      "termIds": [
+        "tau-empire-weapon-pulse-pistol",
+        "tau-empire-weapon-pulse-pistol-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "twin-pulse-carbine",
+      "termIds": [
+        "tau-empire-weapon-twin-pulse-carbine",
+        "tau-empire-weapon-twin-pulse-carbine-2",
+        "tau-empire-weapon-twin-pulse-carbine-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "missile-pod",
+      "termIds": [
+        "tau-empire-weapon-missile-pod",
+        "tau-empire-weapon-missile-pod-2",
+        "tau-empire-weapon-missile-pod-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "battlesuit-support-system",
+      "termIds": [
+        "tau-empire-ability-battlesuit-support-system",
+        "tau-empire-ability-battlesuit-support-system-2",
+        "tau-empire-ability-battlesuit-support-system-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "weapon-support-system",
+      "termIds": [
+        "tau-empire-ability-weapon-support-system",
+        "tau-empire-ability-weapon-support-system-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "burst-cannon",
+      "termIds": [
+        "tau-empire-weapon-burst-cannon",
+        "tau-empire-weapon-burst-cannon-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "airbursting-fragmentation-projector",
+      "termIds": [
+        "tau-empire-weapon-airbursting-fragmentation-projector",
+        "tau-empire-weapon-airbursting-fragmentation-projector-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "cyclic-ion-blaster-standard",
+      "termIds": [
+        "tau-empire-weapon-cyclic-ion-blaster-standard",
+        "tau-empire-weapon-cyclic-ion-blaster-standard-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "cyclic-ion-blaster-overcharge",
+      "termIds": [
+        "tau-empire-weapon-cyclic-ion-blaster-overcharge",
+        "tau-empire-weapon-cyclic-ion-blaster-overcharge-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "fusion-blaster",
+      "termIds": [
+        "tau-empire-weapon-fusion-blaster",
+        "tau-empire-weapon-fusion-blaster-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "plasma-rifle",
+      "termIds": [
+        "tau-empire-weapon-plasma-rifle",
+        "tau-empire-weapon-plasma-rifle-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "battlesuit-fists",
+      "termIds": [
+        "tau-empire-weapon-battlesuit-fists",
+        "tau-empire-weapon-battlesuit-fists-2",
+        "tau-empire-weapon-battlesuit-fists-3",
+        "tau-empire-weapon-battlesuit-fists-4"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "close-combat-weapons",
+      "termIds": [
+        "tau-empire-weapon-close-combat-weapons",
+        "tau-empire-weapon-close-combat-weapons-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "deadly-demise-d3",
+      "termIds": [
+        "tau-empire-ability-deadly-demise-d3",
+        "tyranids-ability-deadly-demise-d3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "scouts-8",
+      "termIds": [
+        "tau-empire-ability-scouts-8",
+        "tyranids-ability-scouts-8"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "fusion-eliminator",
+      "termIds": [
+        "tau-empire-weapon-fusion-eliminator",
+        "tau-empire-weapon-fusion-eliminator-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "xv-pulse-pistol",
+      "termIds": [
+        "tau-empire-weapon-xv-pulse-pistol",
+        "tau-empire-weapon-xv-pulse-pistol-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "bodyguard",
+      "termIds": [
+        "tau-empire-ability-bodyguard",
+        "core-bodyguard"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "rail-rifle",
+      "termIds": [
+        "tau-empire-weapon-rail-rifle",
+        "tau-empire-weapon-rail-rifle-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "twin-plasma-rifle",
+      "termIds": [
+        "tau-empire-weapon-twin-plasma-rifle",
+        "tau-empire-weapon-twin-plasma-rifle-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "twin-smart-missile-system",
+      "termIds": [
+        "tau-empire-weapon-twin-smart-missile-system",
+        "tau-empire-weapon-twin-smart-missile-system-2",
+        "tau-empire-weapon-twin-smart-missile-system-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "twin-burst-cannon",
+      "termIds": [
+        "tau-empire-weapon-twin-burst-cannon",
+        "tau-empire-weapon-twin-burst-cannon-2",
+        "tau-empire-weapon-twin-burst-cannon-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "twin-fusion-blaster",
+      "termIds": [
+        "tau-empire-weapon-twin-fusion-blaster",
+        "tau-empire-weapon-twin-fusion-blaster-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "railgun",
+      "termIds": [
+        "tau-empire-weapon-railgun",
+        "tau-empire-weapon-railgun-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "ion-cannon-standard",
+      "termIds": [
+        "tau-empire-weapon-ion-cannon-standard",
+        "tau-empire-weapon-ion-cannon-standard-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "ion-cannon-overcharge",
+      "termIds": [
+        "tau-empire-weapon-ion-cannon-overcharge",
+        "tau-empire-weapon-ion-cannon-overcharge-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "deadly-demise-1",
+      "termIds": [
+        "tau-empire-ability-deadly-demise-1",
+        "tyranids-ability-deadly-demise-1"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "deadly-demise-d6",
+      "termIds": [
+        "tau-empire-ability-deadly-demise-d6",
+        "tyranids-ability-deadly-demise-d6"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "twin-missile-pod",
+      "termIds": [
+        "tau-empire-weapon-twin-missile-pod",
+        "tau-empire-weapon-twin-missile-pod-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "damaged-1-6-wounds-remaining",
+      "termIds": [
+        "tau-empire-ability-damaged-1-6-wounds-remaining",
+        "tyranids-ability-damaged-1-6-wounds-remaining"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "damaged-1-10-wounds-remaining",
+      "termIds": [
+        "tau-empire-ability-damaged-1-10-wounds-remaining",
+        "tyranids-ability-damaged-1-10-wounds-remaining",
+        "tyranids-ability-damaged-1-10-wounds-remaining-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "long-barrelled-burst-cannon",
+      "termIds": [
+        "tau-empire-weapon-long-barrelled-burst-cannon",
+        "tau-empire-weapon-long-barrelled-burst-cannon-2"
       ],
       "status": "review-required"
     },
@@ -1429,14 +1827,6 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "damaged-1-10-wounds-remaining",
-      "termIds": [
-        "tyranids-ability-damaged-1-10-wounds-remaining",
-        "tyranids-ability-damaged-1-10-wounds-remaining-2"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "hierodule-scything-talons",
       "termIds": [
         "tyranids-weapon-hierodule-scything-talons",
@@ -1476,8 +1866,79 @@
     },
     {
       "termIds": [
+        "adeptus-mechanicus-datasheet-supreme-commander",
+        "tau-empire-ability-supreme-commander"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
         "adeptus-mechanicus-datasheet-damaged-1-4-wounds-remaining",
+        "tau-empire-ability-damaged-1-4-wounds-remaining",
         "tyranids-ability-damaged-1-4-wounds-remaining"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "tau-empire-ability-leader-2",
+        "tyranids-ability-leader-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "tau-empire-ability-sustained-hits",
+        "tyranids-ability-sustained-hits"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "tau-empire-ability-lethal-hits",
+        "tyranids-ability-lethal-hits"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "tau-empire-ability-deadly-demise-d3",
+        "tyranids-ability-deadly-demise-d3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "tau-empire-ability-scouts-8",
+        "tyranids-ability-scouts-8"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "tau-empire-ability-damaged-1-5-wounds-remaining",
+        "tyranids-ability-damaged-1-5-wounds-remaining"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "tau-empire-ability-deadly-demise-1",
+        "tyranids-ability-deadly-demise-1"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "tau-empire-ability-deadly-demise-d6",
+        "tyranids-ability-deadly-demise-d6"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "tau-empire-ability-damaged-1-6-wounds-remaining",
+        "tyranids-ability-damaged-1-6-wounds-remaining"
       ],
       "status": "review-required"
     }

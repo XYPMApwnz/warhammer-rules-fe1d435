@@ -10,7 +10,9 @@ const ADEPTUS_MECHANICUS_FALLBACK = "./books/adeptus-mechanicus/index.html";
 const TYRANIDS_ENTRY_FALLBACK = "./books/tyranids/index.html";
 const TYRANIDS_DESKTOP_FALLBACK = "./books/tyranids/reader.html";
 const TYRANIDS_MOBILE_FALLBACK = "./books/tyranids/mobile/index.html";
-const TAU_EMPIRE_FALLBACK = LIBRARY_FALLBACK;
+const TAU_EMPIRE_ENTRY_FALLBACK = "./books/tau-empire/index.html";
+const TAU_EMPIRE_DESKTOP_FALLBACK = "./books/tau-empire/reader.html";
+const TAU_EMPIRE_MOBILE_FALLBACK = "./books/tau-empire/mobile/index.html";
 const CHAOS_SPACE_MARINES_FALLBACK = LIBRARY_FALLBACK;
 const ORKS_FALLBACK = LIBRARY_FALLBACK;
 const EMPERORS_CHILDREN_FALLBACK = LIBRARY_FALLBACK;
@@ -78,7 +80,7 @@ const APP_SHELL = [
   "./books/death-guard/styles/tokens.css?v=10",
   "./books/death-guard/styles/layout.css?v=9",
   "./books/death-guard/styles/navigation.css?v=11",
-  "./books/death-guard/styles/content.css?v=34",
+  "./books/death-guard/styles/content.css?v=35",
   "./books/death-guard/styles/popups.css?v=17",
   "./books/death-guard/scripts/navigation-controller.js?v=15",
   "./books/death-guard/scripts/roster-filter.js?v=14",
@@ -149,11 +151,17 @@ const APP_SHELL = [
   ,"./books/tyranids/mobile/mobile.js?v=2"
   ,"./glossary/generated/glossary.en.js?v=tyranids-1"
   ,"./books/tau-empire/"
-  ,TAU_EMPIRE_FALLBACK
-  ,"./books/tau-empire/mobile/index.html"
-  ,"./books/tau-empire/styles/tokens.css?v=1"
-  ,"./books/tau-empire/styles/book.css?v=2"
-  ,"./books/tau-empire/scripts/app.js?v=2"
+  ,TAU_EMPIRE_ENTRY_FALLBACK
+  ,TAU_EMPIRE_DESKTOP_FALLBACK
+  ,TAU_EMPIRE_MOBILE_FALLBACK
+  ,"./books/tau-empire/styles/tokens.css?v=2"
+  ,"./books/tau-empire/styles/book.css?v=4"
+  ,"./books/tau-empire/scripts/data.js?v=2"
+  ,"./books/tau-empire/scripts/app.js?v=5"
+  ,"./books/tau-empire/scripts/roster-data.js?v=1"
+  ,"./books/tau-empire/mobile/mobile.css?v=1"
+  ,"./books/tau-empire/mobile/mobile.js?v=2"
+  ,"./books/shared/book-roster-enhancements.js?v=1"
   ,"./books/chaos-space-marines/"
   ,CHAOS_SPACE_MARINES_FALLBACK
   ,"./books/chaos-space-marines/mobile/index.html"
@@ -197,7 +205,9 @@ function navigationFallback(url) {
   if (path.includes("/books/tyranids/mobile/")) return TYRANIDS_MOBILE_FALLBACK;
   if (path.endsWith("/books/tyranids/reader.html")) return TYRANIDS_DESKTOP_FALLBACK;
   if (path.endsWith("/books/tyranids/") || path.endsWith("/books/tyranids/index.html")) return TYRANIDS_ENTRY_FALLBACK;
-  if (path.includes("/books/tau-empire/")) return TAU_EMPIRE_FALLBACK;
+  if (path.includes("/books/tau-empire/mobile/")) return TAU_EMPIRE_MOBILE_FALLBACK;
+  if (path.endsWith("/books/tau-empire/reader.html")) return TAU_EMPIRE_DESKTOP_FALLBACK;
+  if (path.endsWith("/books/tau-empire/") || path.endsWith("/books/tau-empire/index.html")) return TAU_EMPIRE_ENTRY_FALLBACK;
   if (path.includes("/books/chaos-space-marines/")) return CHAOS_SPACE_MARINES_FALLBACK;
   if (path.includes("/books/orks/")) return ORKS_FALLBACK;
   if (path.includes("/books/emperors-children/")) return EMPERORS_CHILDREN_FALLBACK;

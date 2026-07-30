@@ -60,6 +60,7 @@ function weaponProfile(summary){
 }
 
 const dgSource=readJson(path.join(root,'books','death-guard','content','death-guard-rules.en.json'));
+const dgUnitsById=new Map(dgSource.sections.filter(section=>section.kind==='unit').map(section=>[section.id,section]));
 const dgRuntime=loadWindow(path.join(root,'books','death-guard','scripts','data.js')).DG_TERMS;
 const amRuntime=loadWindow(path.join(root,'books','adeptus-mechanicus','scripts','data.js')).DG_TERMS;
 const amFaction=readJson(path.join(root,'books','adeptus-mechanicus','content','adeptus-mechanicus-rules.en.json'));
@@ -82,7 +83,7 @@ const allGenericArmyBooks=fs.readdirSync(path.join(root,'books'),{withFileTypes:
     if(!config.sources?.relatedRules||!fs.existsSync(packFile))return[];
     return [{id:config.id,title:config.title,root:bookRoot,config,runtime:loadWindow(runtimeFile).DG_TERMS,pack:readJson(packFile)}];
   });
-const genericArmyBooks=allGenericArmyBooks.filter(book=>book.id==='tyranids');
+const genericArmyBooks=allGenericArmyBooks.filter(book=>['tyranids','tau-empire'].includes(book.id));
 const coreData=loadWindow(path.join(root,'books','core-rules','content','core-rules.en.js')).CORE_RULES;
 const coreCurated=coreData.terms;
 const coreSource=loadWindow(path.join(root,'books','core-rules','content','core-rules.source.en.js')).CORE_PDF_SOURCE;
@@ -250,6 +251,7 @@ for(const entry of dgSource.glossary){
   const initial=id;
   while(registry.has(id)&&normalTitle(registry.get(id).title.en)!==normalTitle(entry.title))id=`${initial}-${suffix++}`;
   const runtime=dgRuntime[entry.id]||{};
+  const effectivePoints=entry.kind==='unit'&&entry.sectionId?dgUnitsById.get(entry.sectionId)?.points:entry.points;
   const related=(runtime.related||[]).map(value=>aliases[value]||value);
   addTerm({
     id,
@@ -260,7 +262,7 @@ for(const entry of dgSource.glossary){
     title:{en:entry.title},
     summary:{en:concise((entry.weapon||entry.statline)?runtime.summary:(entry.short||runtime.summary||entry.full))},
     definition:{en:clean(entry.weapon?`${entry.title} profile: ${Object.entries(entry.weapon).map(([key,value])=>`${key} ${value}`).join('; ')}.`:(entry.full||entry.short||runtime.summary))},
-    structured:{...(entry.weapon?{weapon:entry.weapon}:{}),...(entry.statline?{statline:entry.statline}:{}),...(entry.points?{points:entry.points}:{})},
+    structured:{...(entry.weapon?{weapon:entry.weapon}:{}),...(entry.statline?{statline:entry.statline}:{}),...(effectivePoints?{points:effectivePoints}:{})},
     aliases:[entry.id],
     related:[],
     mentions:related,
@@ -398,7 +400,7 @@ for(const book of genericArmyBooks){
       kind,
       scope:book.id,edition:'11e',language:'en',title:{en:entry.title},summary:{en:concise(entry.summary)},definition:{en:clean(entry.full||entry.summary)},
       structured:profile?{weapon:profile}:{},presentation:profile?'profile':undefined,aliases:[],related:[],
-      canonicalSource:{documentId:official?`${book.id}-faction-pack-v1.0`:`${book.id}-codex-transcription`,revision:official?'1.0':'pinned BSData',locator:entry.rule||entry.datasheet||localId},
+      canonicalSource:{documentId:official?(book.pack.meta?.sourceId||`${book.id}-faction-pack`):`${book.id}-codex-transcription`,revision:official?(book.pack.meta?.version||'current'):'pinned BSData',locator:entry.rule||entry.datasheet||localId},
       fullRulePath:entry.rule?`books/${book.id}/reader.html#${entry.rule}`:undefined,
       status:official?'verified':'provisional'
     },book.id,localId);
@@ -494,6 +496,7 @@ for(const [id,existing] of Object.entries(existingRegistry)){
   for(const field of ['kind','scope','edition','language','title','summary','definition','structured','presentation','related','mentions','references','matchLabels','canonicalSource','summarySource','status','curation']){
     if(existing[field]==null)continue;
     if(field==='definition'&&/^(weapon|datasheet) profile\.?$/i.test(existing.definition?.en||''))continue;
+    if(field==='structured'&&term.kind==='unit')continue;
     if(field==='structured'&&existing.kind==='weapon'&&!Object.keys(existing.structured||{}).length)continue;
     term[field]=existing[field];
   }

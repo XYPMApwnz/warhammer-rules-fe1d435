@@ -324,6 +324,10 @@ for(const unit of parsed){
   const correction=config.unitCorrections?.[unit.title];
   if(!correction)continue;
   if(correction.addKeywords)unit.keywords=unique([...unit.keywords,...correction.addKeywords],key);
+  if(correction.removeKeywords){
+    const removed=new Set(correction.removeKeywords.map(key));
+    unit.keywords=unit.keywords.filter(keyword=>!removed.has(key(keyword)));
+  }
   if(correction.removeAbilities){
     const removed=new Set(correction.removeAbilities.map(key));
     unit.abilities=unit.abilities.filter(ability=>!removed.has(key(ability.title)));
@@ -339,6 +343,8 @@ for(const unit of parsed){
   for(const weapon of unit.weapons){
     const skill=correction.weaponSkills?.[weapon.name];
     if(skill)weapon.skill=skill;
+    const abilities=correction.weaponAbilities?.[weapon.name];
+    if(abilities!==undefined)weapon.abilities=abilities;
     const name=correction.weaponNames?.[weapon.name];
     if(name)weapon.name=name;
   }
@@ -421,6 +427,12 @@ if(config.outputs.officialPoints){
     if(override){
       unit.points=override.points;
       if(override.paidWargear)unit.paidWargear=override.paidWargear;
+      if(override.leader?.length){
+        const datasheet=parsed.find(item=>item.id===unit.id),text=`This model can be attached to the following units: ${override.leader.join(', ')}.`;
+        const ability=datasheet?.abilities.find(item=>key(item.title)==='leader');
+        if(ability)ability.text=text;
+        else datasheet?.abilities.push({title:'Leader',text});
+      }
     }
     if(verifiedUnits.has(key(unit.title)))unit.pointsSource={label:`Official MFM ${official.version}`,url:official.url,verifiedAt:official.verifiedAt};
   }

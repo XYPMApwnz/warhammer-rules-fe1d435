@@ -470,8 +470,7 @@
         "Tyranids",
         "Great Devourer",
         "Vanguard Invader",
-        "Synapse",
-        "Leader"
+        "Synapse"
       ],
       "composition": [
         {
@@ -618,8 +617,7 @@
         "Hive Tyrant",
         "Tyranids",
         "Great Devourer",
-        "Synapse",
-        "Leader"
+        "Synapse"
       ],
       "composition": [
         {
@@ -780,7 +778,6 @@
         "Hyperadapted Raveners",
         "Tyranids",
         "Character",
-        "Leader",
         "Synapse"
       ],
       "composition": [
@@ -916,8 +913,7 @@
         "Great Devourer",
         "Neurotyrant",
         "Tyranids",
-        "Synapse",
-        "Leader"
+        "Synapse"
       ],
       "composition": [
         {
@@ -1290,8 +1286,7 @@
         "Tyranids",
         "Great Devourer",
         "Synapse",
-        "Tyranid Prime with Lash Whip",
-        "Leader"
+        "Tyranid Prime with Lash Whip"
       ],
       "composition": [
         {
@@ -1551,8 +1546,7 @@
         "Great Devourer",
         "Tyranids",
         "Synapse",
-        "Vanguard Invader",
-        "Leader"
+        "Vanguard Invader"
       ],
       "composition": [
         {
@@ -1755,10 +1749,6 @@
         {
           "title": "Synapse",
           "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
-        },
-        {
-          "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
         }
       ],
       "wargearAbilities": [
@@ -1879,8 +1869,7 @@
         "Character",
         "Great Devourer",
         "Old One Eye",
-        "Tyranids",
-        "Leader"
+        "Tyranids"
       ],
       "composition": [
         {
@@ -2120,8 +2109,7 @@
         "Great Devourer",
         "Synapse",
         "Psyker",
-        "Hive Tyrant",
-        "Leader"
+        "Hive Tyrant"
       ],
       "composition": [
         {
@@ -2649,10 +2637,6 @@
         {
           "title": "Synapse",
           "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
-        },
-        {
-          "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
         }
       ],
       "wargearAbilities": [
@@ -2866,10 +2850,6 @@
         {
           "title": "Synapse",
           "text": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army:\n▪ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n▪ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack."
-        },
-        {
-          "title": "Deep Strike",
-          "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
         }
       ],
       "wargearAbilities": [
@@ -4640,7 +4620,7 @@
         "Monster",
         "Psyker",
         "Great Devourer",
-        "Malceptor",
+        "Maleceptor",
         "Tyranids",
         "Synapse"
       ],
@@ -5318,7 +5298,7 @@
           "s": "5",
           "ap": "-1",
           "d": "2",
-          "abilities": "Hive Defences"
+          "abilities": ""
         }
       ],
       "abilities": [

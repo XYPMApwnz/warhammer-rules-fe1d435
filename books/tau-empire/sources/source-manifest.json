@@ -1,15 +1,16 @@
 {
   "schema": 1,
-  "verifiedAt": "2026-07-28",
+  "verifiedAt": "2026-07-30",
   "layers": [
     {
-      "id": "faction-pack-v1.0",
+      "id": "faction-pack-v1.1",
       "authority": "official",
       "role": "11e-overlay",
-      "title": "T'au Empire Faction Pack v1.0",
-      "legalFrom": "2026-06-20",
-      "url": "https://assets.warhammer-community.com/eng_09-06_warhammer40000_faction_pack_tau_empire-avmkx2gg8i-jezqgeb55k.pdf",
-      "localFile": "tau-empire-faction-pack-v1.0.pdf"
+      "title": "T'au Empire Faction Pack v1.1",
+      "legalFrom": "2026-07-22",
+      "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40%2C000_faction_pack_tau_empire-hdrq4u64wm-xopcvjvqfu.pdf",
+      "localFile": "tau-empire-faction-pack-v1.1.pdf",
+      "sha256": "32B985646BAA02A3B505FF3404E91D374A5F53C1D3B8000D7166CA94D1B52675"
     },
     {
       "id": "codex-transcription",
@@ -22,17 +23,29 @@
       "status": "requires-codex-verification"
     },
     {
+      "id": "codex-parity",
+      "authority": "community",
+      "role": "codex-text-verification",
+      "title": "Wahapedia Warhammer 40,000 11th Edition · T’au Empire",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/",
+      "checkedAt": "2026-07-30",
+      "status": "secondary-source"
+    },
+    {
       "id": "mfm",
       "authority": "official",
       "role": "points-and-roster-contract",
       "title": "Munitorum Field Manual",
       "updated": "2026-07-22",
       "url": "https://mfm.warhammer-community.com/en/tau-empire",
-      "status": "snapshot-required"
+      "version": "v1.1",
+      "verifiedAt": "2026-07-30",
+      "localFile": "official-mfm-v1.1.json",
+      "status": "verified-live-snapshot"
     }
   ],
   "gates": {
     "publishAsComplete": false,
-    "reason": "Faction Pack v1.0 supplements the Codex. Codex text and the current MFM snapshot must be verified before this book can be labelled complete."
+    "reason": "Faction Pack v1.1 and MFM v1.1 are official. Codex text is still a pinned community transcription checked against Wahapedia, so the book remains a verification build."
   }
 }

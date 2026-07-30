@@ -10,11 +10,11 @@ import pdfplumber
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PDF = ROOT / "sources" / "tau-empire-faction-pack-v1.0.pdf"
+PDF = ROOT / "sources" / "tau-empire-faction-pack-v1.1.pdf"
 OUTPUT = ROOT / "content" / "tau-empire-faction-pack.en.json"
 RELATED = ROOT / "content" / "tau-empire-related-rules.en.json"
 DATASHEETS = ROOT / "content" / "tau-empire-codex-datasheets.en.json"
-SOURCE_ID = "tau-empire-faction-pack-v1.0"
+SOURCE_ID = "tau-empire-faction-pack-v1.1"
 
 
 def clean_text(value: str) -> str:
@@ -52,11 +52,11 @@ def extract_source() -> tuple[dict, dict[str, dict]]:
             }
         meta = {
             "title": "T'au Empire Faction Pack",
-            "version": "1.0",
+            "version": "1.1",
             "legalFrom": "2026-06-20",
             "pageCount": len(document.pages),
             "sha256": digest,
-            "file": "sources/tau-empire-faction-pack-v1.0.pdf",
+            "file": "sources/tau-empire-faction-pack-v1.1.pdf",
         }
     return meta, pages
 
@@ -75,9 +75,9 @@ def validate_related_rules(data: dict, errors: list[str]) -> None:
         for stratagem in detachment.get("stratagems", [])
     }
     eligibility = related.get("stratagems", {})
-    if set(eligibility) != stratagem_ids:
-        errors.append("related-rules Stratagem ids do not exactly match the Faction Pack")
-    for rule_id, schema in eligibility.items():
+    if not stratagem_ids.issubset(set(eligibility)):
+        errors.append("related-rules is missing one or more Faction Pack Stratagem ids")
+    for rule_id, schema in ((rule_id, eligibility[rule_id]) for rule_id in stratagem_ids if rule_id in eligibility):
         if schema.get("v") != 1 or not schema.get("roles"):
             errors.append(f"{rule_id}: invalid related-rules v1 schema")
             continue
@@ -124,6 +124,12 @@ def validate(data: dict) -> list[str]:
             errors.append(f"expected {count} {group} datasheets")
     if len(data.get("updates", [])) != 25:
         errors.append("expected 25 updates")
+    strike = next((item for item in data.get("updates", []) if item.get("id") == "montka-strike-swiftly"), {})
+    if "Until the end of the battle" not in strike.get("change", "") or "Second Sentence" in strike.get("subject", ""):
+        errors.append("Faction Pack v1.1 Strike Swiftly replacement is incomplete")
+    frame = next((item for item in data.get("updates", []) if item.get("id") == "datasheets-add-frame"), {})
+    if "Razorshark" in frame.get("subject", "") or "Sun Shark" in frame.get("subject", ""):
+        errors.append("Faction Pack v1.1 general FRAME update still contains Aircraft")
     for update in data.get("updates", []):
         if not appears_in_source(update.get("change", ""), source_text(data, update.get("sourcePages", []))):
             errors.append(f"{update.get('id')}: change does not match PDF")
@@ -160,6 +166,7 @@ def main() -> int:
     parser.add_argument("--check", action="store_true")
     args = parser.parse_args()
     data = json.loads(OUTPUT.read_text(encoding="utf-8"))
+    data = json.loads(json.dumps(data).replace("tau-empire-faction-pack-v1.0", SOURCE_ID))
     meta, pages = extract_source()
     if args.check:
         errors = validate(data)

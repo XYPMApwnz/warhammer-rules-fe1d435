@@ -6,7 +6,12 @@
     "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
     "revision": "2",
     "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/T%27au%20Empire.json",
-    "snapshotSha256": "62B7E7256C013BD3707768246708A8CA5372FE4A4AF0B0731A4F35582FE7120A"
+    "snapshotSha256": "62B7E7256C013BD3707768246708A8CA5372FE4A4AF0B0731A4F35582FE7120A",
+    "officialMfm": {
+      "version": "v1.1",
+      "url": "https://mfm.warhammer-community.com/en/tau-empire",
+      "verifiedAt": "2026-07-30"
+    }
   },
   "units": [
     {
@@ -17,7 +22,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 50
+          "value": 50,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -30,7 +37,9 @@
       "points": [
         {
           "label": "3 models",
-          "value": 65
+          "value": 65,
+          "minModels": 3,
+          "maxModels": 3
         }
       ],
       "paidWargear": []
@@ -42,15 +51,27 @@
       "sourceLayer": "imperial-armour",
       "points": [
         {
-          "label": "1 model",
-          "value": 315
+          "label": "1st unit · 1 model",
+          "value": 315,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
         },
         {
-          "label": "2+ unit: 1 models",
-          "value": 375
+          "label": "2nd + unit · 1 model",
+          "value": 375,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-barracuda",
@@ -60,7 +81,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 220
+          "value": 220,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -73,10 +96,17 @@
       "points": [
         {
           "label": "10 models",
-          "value": 90
+          "value": 90,
+          "minModels": 10,
+          "maxModels": 10
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-broadside-battlesuits",
@@ -85,23 +115,63 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "2 models",
-          "value": 75
+          "label": "1st to 2nd unit cost · 1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 2 models",
-          "value": 95
+          "label": "1st to 2nd unit cost · 2 models",
+          "value": 150,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3 models",
-          "value": 255
+          "label": "1st to 2nd unit cost · 3 models",
+          "value": 255,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 3 models",
-          "value": 275
+          "label": "3rd + unit · 1 model",
+          "value": 95,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 2 models",
+          "value": 170,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 275,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [
+        {
+          "name": "High-yield missile pods",
+          "value": 5,
+          "modifiers": []
+        }
+      ],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-cadre-fireblade",
@@ -111,10 +181,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 50
+          "value": 50,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-commander-farsight",
@@ -124,10 +201,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 70
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-commander-in-coldstar-battlesuit",
@@ -137,10 +221,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 95
+          "value": 95,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-commander-in-crisis-battlesuit",
@@ -150,7 +241,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 80
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -163,10 +256,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 80
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-commander-shadowsun",
@@ -176,10 +276,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 100
+          "value": 100,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-crisis-battlesuits",
@@ -189,11 +296,15 @@
       "points": [
         {
           "label": "3 models",
-          "value": 200
+          "value": 200,
+          "minModels": 3,
+          "maxModels": 3
         },
         {
-          "label": "6 models",
-          "value": 400
+          "label": "4-6 models",
+          "value": 400,
+          "minModels": 4,
+          "maxModels": 6
         }
       ],
       "paidWargear": []
@@ -205,15 +316,33 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3 models",
-          "value": 100
+          "label": "1st to 2nd unit cost · 3 models",
+          "value": 100,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 3 models",
-          "value": 110
+          "label": "3rd + unit · 3 models",
+          "value": 110,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [
+        {
+          "name": "Missile pod",
+          "value": 5,
+          "modifiers": []
+        }
+      ],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-crisis-starscythe-battlesuits",
@@ -222,15 +351,33 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3 models",
-          "value": 90
+          "label": "1st to 2nd unit cost · 3 models",
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 3 models",
-          "value": 100
+          "label": "3rd + unit · 3 models",
+          "value": 100,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [
+        {
+          "name": "T'au flamer",
+          "value": 5,
+          "modifiers": []
+        }
+      ],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-crisis-sunforge-battlesuits",
@@ -239,15 +386,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3 models",
-          "value": 125
+          "label": "1st to 2nd unit cost · 3 models",
+          "value": 125,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 3 models",
-          "value": 135
+          "label": "3rd + unit · 3 models",
+          "value": 135,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-darkstrider",
@@ -257,10 +416,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 60
+          "value": 60,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-devilfish",
@@ -269,15 +435,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
-          "value": 75
+          "label": "1st to 3rd unit cost · 1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 3
         },
         {
-          "label": "4+ unit: 1 models",
-          "value": 85
+          "label": "4th + unit · 1 model",
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 4
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-drone-sentry-turret",
@@ -287,7 +465,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 50
+          "value": 50,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -300,10 +480,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 50
+          "value": 50,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-firesight-team",
@@ -313,10 +500,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 55
+          "value": 55,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-ghostkeel-battlesuit",
@@ -325,21 +519,33 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
-          "value": 150
+          "label": "1st to 2nd unit cost · 1 model",
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 165
+          "label": "3rd + unit · 1 model",
+          "value": 165,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
       "paidWargear": [
         {
-          "name": "Cyclic ion raker",
+          "name": "Cyclic Ion Raker",
           "value": 15,
           "modifiers": []
         }
-      ]
+      ],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-great-knarloc",
@@ -349,7 +555,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 100
+          "value": 100,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -361,15 +569,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
-          "value": 150
+          "label": "1st to 2nd unit cost · 1 model",
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 160
+          "label": "3rd + unit · 1 model",
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-heavy-gun-drones",
@@ -379,7 +599,9 @@
       "points": [
         {
           "label": "2 models",
-          "value": 45
+          "value": 45,
+          "minModels": 2,
+          "maxModels": 2
         }
       ],
       "paidWargear": []
@@ -392,7 +614,9 @@
       "points": [
         {
           "label": "3 models",
-          "value": 110
+          "value": 110,
+          "minModels": 3,
+          "maxModels": 3
         }
       ],
       "paidWargear": []
@@ -405,14 +629,23 @@
       "points": [
         {
           "label": "10 models",
-          "value": 65
+          "value": 65,
+          "minModels": 10,
+          "maxModels": 10
         },
         {
           "label": "20 models",
-          "value": 130
+          "value": 130,
+          "minModels": 20,
+          "maxModels": 20
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-kroot-farstalkers",
@@ -421,15 +654,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "12 models",
-          "value": 75
+          "label": "1st to 2nd unit cost · 12 models",
+          "value": 75,
+          "minModels": 12,
+          "maxModels": 12,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 12 models",
-          "value": 85
+          "label": "3rd + unit · 12 models",
+          "value": 85,
+          "minModels": 12,
+          "maxModels": 12,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-kroot-flesh-shaper",
@@ -439,10 +684,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 45
+          "value": 45,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-kroot-hounds",
@@ -452,14 +704,23 @@
       "points": [
         {
           "label": "5 models",
-          "value": 45
+          "value": 45,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
           "label": "10 models",
-          "value": 65
+          "value": 65,
+          "minModels": 10,
+          "maxModels": 10
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-kroot-lone-spear",
@@ -469,10 +730,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 80
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-kroot-trail-shaper",
@@ -482,10 +750,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 50
+          "value": 50,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-kroot-war-shaper",
@@ -495,10 +770,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 60
+          "value": 60,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-krootox-rampagers",
@@ -507,23 +789,42 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3 models",
-          "value": 85
+          "label": "1st to 2nd unit cost · 3 models",
+          "value": 85,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 3 models",
-          "value": 95
+          "label": "1st to 2nd unit cost · 6 models",
+          "value": 170,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "4 models",
-          "value": 170
+          "label": "3rd + unit · 3 models",
+          "value": 95,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
         },
         {
-          "label": "3+ unit: 4 models",
-          "value": 180
+          "label": "3rd + unit · 6 models",
+          "value": 180,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-krootox-riders",
@@ -532,15 +833,30 @@
       "sourceLayer": "codex",
       "points": [
         {
+          "label": "1 model",
+          "value": 45,
+          "minModels": 1,
+          "maxModels": 1
+        },
+        {
           "label": "2 models",
-          "value": 45
+          "value": 60,
+          "minModels": 2,
+          "maxModels": 2
         },
         {
           "label": "3 models",
-          "value": 90
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-longstrike",
@@ -550,7 +866,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 140
+          "value": 140,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -563,10 +881,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 2100
+          "value": 2100,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-orca-dropship",
@@ -576,7 +901,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 275
+          "value": 275,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -588,15 +915,33 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "10 models",
-          "value": 85
+          "label": "1st to 2nd unit cost · 10 models",
+          "value": 85,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 10 models",
-          "value": 100
+          "label": "3rd + unit · 10 models",
+          "value": 100,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [
+        {
+          "name": "Ion rifle",
+          "value": 5,
+          "modifiers": []
+        }
+      ],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-piranhas",
@@ -605,23 +950,57 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "2 models",
-          "value": 65
+          "label": "1st to 2nd unit cost · 1 model",
+          "value": 65,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 2 models",
-          "value": 75
+          "label": "1st to 2nd unit cost · 2 models",
+          "value": 110,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3 models",
-          "value": 165
+          "label": "1st to 2nd unit cost · 3 models",
+          "value": 165,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 3 models",
-          "value": 175
+          "label": "3rd + unit · 1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 2 models",
+          "value": 120,
+          "minModels": 2,
+          "maxModels": 2,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 175,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-rvarna-battlesuit",
@@ -631,7 +1010,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 200
+          "value": 200,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -644,10 +1025,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 160
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-remora-stealth-drones",
@@ -657,7 +1045,9 @@
       "points": [
         {
           "label": "2 models",
-          "value": 160
+          "value": 160,
+          "minModels": 2,
+          "maxModels": 2
         }
       ],
       "paidWargear": []
@@ -670,7 +1060,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 50
+          "value": 50,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -682,12 +1074,19 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
-          "value": 190
+          "label": "1st to 2nd unit cost · 1 model",
+          "value": 190,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 220
+          "label": "3rd + unit · 1 model",
+          "value": 220,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
       "paidWargear": [
@@ -696,7 +1095,12 @@
           "value": 25,
           "modifiers": []
         }
-      ]
+      ],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-shaso-ralai",
@@ -706,7 +1110,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 80
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -719,10 +1125,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 140
+          "value": 140,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-stealth-battlesuits",
@@ -731,15 +1144,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
-          "value": 100
+          "label": "1st to 2nd unit cost · 5 models",
+          "value": 100,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 5 models",
-          "value": 110
+          "label": "3rd + unit · 5 models",
+          "value": 110,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-stormsurge",
@@ -748,15 +1173,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
-          "value": 375
+          "label": "1st unit · 1 model",
+          "value": 375,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
         },
         {
-          "label": "2+ unit: 1 models",
-          "value": 400
+          "label": "2nd + unit · 1 model",
+          "value": 400,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-strike-team",
@@ -766,10 +1203,17 @@
       "points": [
         {
           "label": "10 models",
-          "value": 70
+          "value": 70,
+          "minModels": 10,
+          "maxModels": 10
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-sun-shark-bomber",
@@ -779,10 +1223,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 150
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-taunar-supremacy-armour",
@@ -791,15 +1242,27 @@
       "sourceLayer": "imperial-armour",
       "points": [
         {
-          "label": "1 model",
-          "value": 790
+          "label": "1st unit · 1 model",
+          "value": 790,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
         },
         {
-          "label": "2+ unit: 1 models",
-          "value": 890
+          "label": "2nd + unit · 1 model",
+          "value": 890,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-tactical-drones",
@@ -809,15 +1272,21 @@
       "points": [
         {
           "label": "4 models",
-          "value": 70
+          "value": 70,
+          "minModels": 4,
+          "maxModels": 4
         },
         {
-          "label": "8 models",
-          "value": 140
+          "label": "5-8 models",
+          "value": 140,
+          "minModels": 5,
+          "maxModels": 8
         },
         {
-          "label": "16 models",
-          "value": 210
+          "label": "9-12 models",
+          "value": 210,
+          "minModels": 9,
+          "maxModels": 12
         }
       ],
       "paidWargear": []
@@ -830,11 +1299,15 @@
       "points": [
         {
           "label": "2 models",
-          "value": 80
+          "value": 80,
+          "minModels": 2,
+          "maxModels": 2
         },
         {
-          "label": "4 models",
-          "value": 160
+          "label": "3-4 models",
+          "value": 160,
+          "minModels": 3,
+          "maxModels": 4
         }
       ],
       "paidWargear": []
@@ -847,10 +1320,17 @@
       "points": [
         {
           "label": "2 models",
-          "value": 220
+          "value": 220,
+          "minModels": 2,
+          "maxModels": 2
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-tidewall-droneport",
@@ -860,10 +1340,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 85
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-tidewall-gunrig",
@@ -873,10 +1360,17 @@
       "points": [
         {
           "label": "1 model",
-          "value": 90
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-tidewall-shieldline",
@@ -886,7 +1380,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 85
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": [
@@ -895,7 +1391,12 @@
           "value": 20,
           "modifiers": []
         }
-      ]
+      ],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-tiger-shark",
@@ -904,15 +1405,27 @@
       "sourceLayer": "imperial-armour",
       "points": [
         {
-          "label": "1 model",
-          "value": 375
+          "label": "1st unit · 1 model",
+          "value": 375,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
         },
         {
-          "label": "2+ unit: 1 models",
-          "value": 425
+          "label": "2nd + unit · 1 model",
+          "value": 425,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-tx42-piranha",
@@ -922,7 +1435,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 60
+          "value": 60,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -935,14 +1450,23 @@
       "points": [
         {
           "label": "5 models",
-          "value": 70
+          "value": 70,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
-          "label": "6 models",
-          "value": 115
+          "label": "10 models",
+          "value": 115,
+          "minModels": 10,
+          "maxModels": 10
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "unit-xv9-hazard-battlesuits",
@@ -960,7 +1484,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 210
+          "value": 210,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -969,19 +1495,29 @@
   "enhancements": [
     {
       "id": "enhancement-negation-emitters",
-      "title": "Negation Emitters",
+      "title": "Negation Emitters (Upgrade)",
       "detachment": "Advanced Acquisition Cadre",
       "value": 15,
       "text": "STEALTH BATTLESUITS unit only. This unit has -3\" detection range.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-unmasking-suite",
-      "title": "Unmasking Suite",
+      "title": "Unmasking Suite (Upgrade)",
       "detachment": "Advanced Acquisition Cadre",
       "value": 15,
       "text": "GHOSTKEEL BATTLESUIT/PATHFINDER TEAM/STEALTH BATTLESUITS unit only. When this unit is selected to shoot, you can select one enemy unit within 24\" of this unit. That enemy unit has +9\" detection range until this unit has shot.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-admired-leader",
@@ -989,7 +1525,12 @@
       "detachment": "Auxiliary Cadre",
       "value": 20,
       "text": "T’AU EMPIRE model only (excluding KROOT models). In your Command phase, you can select one KROOT/VESPID STINGWINGS unit within 12\" of this model. If you do, that unit has +1 Ld and OC until the start of your next Command phase.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-student-of-kauyon",
@@ -997,31 +1538,51 @@
       "detachment": "Auxiliary Cadre",
       "value": 20,
       "text": "KROOT SHAPER model only. In the Declare Battle Formations step, you can select up to three friendly KROOT CARNIVORES/FARSTALKERS units. Those units have Deep Strike.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-plasma-accelerator-rifle",
       "title": "Plasma Accelerator Rifle",
       "detachment": "Experimental Prototype Cadre",
       "value": 20,
-      "text": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Plasma Rifle weapons. That weapon’s attacks have:\n- +2 S\n- +1 A, AP and D.",
-      "profile": null
+      "text": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Plasma Rifle weapons. That weapon’s attacks have:\n- +2 S \n- +1 A, AP and D.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-supernova-launcher",
       "title": "Supernova Launcher",
       "detachment": "Experimental Prototype Cadre",
       "value": 15,
-      "text": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Airbursting Fragmentation Projector weapons. That weapon’s attacks have:\n- +3 S\n- +1 AP and D.",
-      "profile": null
+      "text": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s Airbursting Fragmentation Projector weapons. That weapon’s attacks have:\n- +3 S \n- +1 AP and D.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-thermoneutronic-projector",
       "title": "Thermoneutronic Projector",
       "detachment": "Experimental Prototype Cadre",
       "value": 15,
-      "text": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s T’au Flamer weapons. That weapon’s attacks have:\n- +2 S\n- +1 AP and D.",
-      "profile": null
+      "text": "BATTLESUIT model only. In the Declare Battle Formations step, select one of this model’s T’au Flamer weapons. That weapon’s attacks have:\n- +2 S \n- +1 AP and D.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-exemplar-of-the-kauyon",
@@ -1029,7 +1590,12 @@
       "detachment": "Kauyon",
       "value": 20,
       "text": "T’au Empire model only (excluding Kroot Shaper models). While the bearer is leading a unit, the Patient Hunter Detachment rule applies to that unit from the second battle round onwards instead of the third.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-precision-of-the-patient-hunter",
@@ -1037,7 +1603,12 @@
       "detachment": "Kauyon",
       "value": 15,
       "text": "T’au Empire model only. Each time the bearer makes a ranged attack, add 1 to the Hit roll. From the third battle round onwards, add 1 to the Wound roll as well.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-solid-image-projection-unit",
@@ -1045,7 +1616,12 @@
       "detachment": "Kauyon",
       "value": 20,
       "text": "T’au Empire model only. After both players have deployed their armies, select up to three T’au Empire units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-through-unity-devastation",
@@ -1053,7 +1629,12 @@
       "detachment": "Kauyon",
       "value": 30,
       "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the [LETHAL HITS] ability while targeting their Spotted unit.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-borthrod-gland",
@@ -1061,7 +1642,12 @@
       "detachment": "Kroot Hunting Pack",
       "value": 15,
       "text": "Kroot Flesh Shaper only. While the bearer is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-kroothawk-flock",
@@ -1069,7 +1655,12 @@
       "detachment": "Kroot Hunting Pack",
       "value": 10,
       "text": "Kroot model only. Ranged weapons equipped by models in the bearer's unit have the [IGNORES COVER] ability, and enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of the bearer.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-nomadic-hunter",
@@ -1077,7 +1668,12 @@
       "detachment": "Kroot Hunting Pack",
       "value": 20,
       "text": "Kroot Trail Shaper model only. While the bearer is leading a unit, add 3\" to the Move characteristic of models in that unit and ranged weapons equipped by the models in that unit have the [ASSAULT] ability.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-root-carved-weapons",
@@ -1085,7 +1681,12 @@
       "detachment": "Kroot Hunting Pack",
       "value": 10,
       "text": "Kroot War Shaper model only. All weapons equipped by the bearer have the [PRECISION] and [DEVASTATING WOUNDS] abilities.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-coordinated-exploitation",
@@ -1093,15 +1694,25 @@
       "detachment": "Mont'ka",
       "value": 30,
       "text": "T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the [SUSTAINED HITS 1] ability while targeting their Spotted unit.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-exemplar-of-the-montka",
-      "title": "Exemplar of the Mont'ka",
+      "title": "Exemplar of the Mont’ka",
       "detachment": "Mont'ka",
       "value": 10,
       "text": "T’au Empire model only (excluding Kroot Shaper models). While the bearer is leading a unit, the Killing Blow Detachment rule applies to that unit during the fourth battle round as well.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-strategic-conqueror",
@@ -1109,7 +1720,12 @@
       "detachment": "Mont'ka",
       "value": 15,
       "text": "T’au Empire model only. At the start of the first battle round, before the first turn begins, select one objective marker on the battlefield. While a friendly T’au Empire model is within range of that objective marker and the bearer is on the battlefield, add 1 to that friendly model's Objective Control characteristic.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-strike-swiftly",
@@ -1117,7 +1733,12 @@
       "detachment": "Mont'ka",
       "value": 35,
       "text": "In the Resolve Pre-battle Abilities step, you can select up to two friendly T’AU EMPIRE units within 6\" of this model that do not have the Scouts ability. Until the end of the battle, all models in the selected units have the Scouts 6\" ability.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-internal-grenade-racks",
@@ -1125,15 +1746,25 @@
       "detachment": "Retaliation Cadre",
       "value": 20,
       "text": "T’au Empire Battlesuit model only. The bearer has the Grenades keyword, and each time the bearer ends a Normal move, you can select one enemy unit that it moved over during that move. If you do, roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-prototype-weapon-system",
       "title": "Prototype Weapon System",
       "detachment": "Retaliation Cadre",
       "value": 15,
-      "text": "T’au Empire Battlesuit model only. Each time the bearer is select to shoot, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the select ability.",
-      "profile": null
+      "text": "T’au Empire Battlesuit model only. Each time the bearer is selected to shoot, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the selected ability.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-puretide-engram-neurochip",
@@ -1141,7 +1772,12 @@
       "detachment": "Retaliation Cadre",
       "value": 15,
       "text": "T’AU EMPIRE BATTLESUIT model only. Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 4+, you gain 1CP.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     },
     {
       "id": "enhancement-starflare-ignition-system",
@@ -1149,11 +1785,53 @@
       "detachment": "Retaliation Cadre",
       "value": 20,
       "text": "T’au Empire Battlesuit model only. At the end of your opponent's turn, if the bearer's unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.1",
+        "url": "https://mfm.warhammer-community.com/en/tau-empire",
+        "verifiedAt": "2026-07-30"
+      }
     }
   ],
   "audit": {
     "units": 63,
     "enhancements": 23
-  }
+  },
+  "detachments": [
+    {
+      "title": "ADVANCED ACQUISITION CADRE",
+      "forceDisposition": "RECONNAISSANCE",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "AUXILIARY CADRE",
+      "forceDisposition": "DISRUPTION",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "EXPERIMENTAL PROTOTYPE CADRE",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "KAUYON",
+      "forceDisposition": "RECONNAISSANCE",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "KROOT HUNTING PACK",
+      "forceDisposition": "TAKE AND HOLD",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "MONT'KA",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "RETALIATION CADRE",
+      "forceDisposition": "PURGE THE FOE",
+      "detachmentPoints": 3
+    }
+  ]
 }

@@ -61,9 +61,31 @@ try{
     await page.setViewportSize({width:390,height:844});
     await page.goto(`${origin}/books/tyranids/mobile/carnifexes.html?wargear-layout=1`);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth),true,'multiline Wargear must not overflow Phone Mode');
+    await page.goto(`${origin}/books/tau-empire/mobile/crisis-fireknife-battlesuits.html?wargear-layout=1`);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth),true,"T'au multiline Wargear must not overflow Phone Mode");
     assert.deepEqual(errors,[]);
     console.log('PASS Tyranids Phone Mode Wargear overflow');
   }finally{await wargearContext.close();}
+
+  const rosterContext=await browser.newContext({serviceWorkers:'block'});
+  try{
+    const {page,errors}=await observedPage(rosterContext);
+    await page.goto(`${origin}/index.html?roster-setup=1`);
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'tau-enhancement-qa',name:'Test Kauyon roster',roster:{faction:"T'au Empire",detachment:'KAUYON',declared:80,units:[{id:'tau-owner-1',name:'Cadre Fireblade',quantity:1,points:50,wargear:'Fireblade pulse rifle, close combat weapon'}],enhancements:[{name:'Through Unity, Devastation',exportedCost:30,ownerUnitId:'tau-owner-1',ownerStatus:'resolved'}]}}])));
+    const expected='T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the [LETHAL HITS] ability while targeting their Spotted unit.';
+    await page.goto(`${origin}/books/tau-empire/reader.html?roster=tau-enhancement-qa#unit-cadre-fireblade`);
+    assert.equal(await page.locator('#unit-cadre-fireblade [data-roster-enhancement="through unity devastation"] p').textContent(),expected);
+    assert.equal(await page.locator('.content-group.detachment').count(),1);
+    assert.equal(await page.locator('#unit-cadre-fireblade .unit-status').textContent(),'50 pts');
+    assert.match(await page.locator('#unit-cadre-fireblade .roster-composition').textContent(),/Fireblade pulse rifle/);
+    assert.equal(await page.locator('#unit-cadre-fireblade [data-source-field="weapons.twin-pulse-carbine"]').count(),0);
+    await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?roster=tau-enhancement-qa`);
+    assert.equal(await page.locator('#unit-cadre-fireblade [data-roster-enhancement="through unity devastation"] p').textContent(),expected);
+    assert.match(await page.locator('#unit-cadre-fireblade .roster-composition').textContent(),/Fireblade pulse rifle/);
+    assert.equal(await page.locator('#unit-cadre-fireblade [data-source-field="weapons.twin-pulse-carbine"]').count(),0);
+    assert.deepEqual(errors,[]);
+    console.log("PASS T'au roster Enhancement owner and full effect in desktop/iPad + Phone Mode");
+  }finally{await rosterContext.close();}
 
   const coldContext=await browser.newContext({serviceWorkers:'allow'});
   try{
@@ -89,6 +111,20 @@ try{
     assert.equal(await page.getByRole('button',{name:'Open navigation'}).getAttribute('aria-expanded'),'true');
     assert.deepEqual(errors,[]);
     console.log('PASS Tyranids true cold desktop, Phone Mode and unvisited datasheet fallback');
+
+    await page.setViewportSize({width:1280,height:900});
+    await page.goto(`${origin}/books/tau-empire/?build=cold-desktop&view=full`);
+    assert.match(page.url(),/\/books\/tau-empire\/reader\.html\?build=cold-desktop$/);
+    assert.match(await page.title(),/T'au Empire Rules/);
+    await page.setViewportSize({width:390,height:844});
+    await page.goto(`${origin}/books/tau-empire/?build=cold-phone`);
+    assert.match(page.url(),/\/books\/tau-empire\/mobile\/index\.html\?build=cold-phone$/);
+    assert.match(await page.title(),/T.au Empire/);
+    await page.goto(`${origin}/books/tau-empire/mobile/commander-farsight.html?build=unvisited`);
+    assert.match(await page.title(),/Start.*T.au Empire/);
+    assert.match(page.url(),/\/books\/tau-empire\/mobile\/commander-farsight\.html\?build=unvisited$/);
+    assert.deepEqual(errors,[]);
+    console.log("PASS T'au Empire true cold desktop, Phone Mode and unvisited datasheet fallback");
   }finally{await coldContext.close();}
 
   workerRevision='browser-upgrade-a';

@@ -24,8 +24,8 @@ assert.ok(dg.includes('id="core-stratagems"'),'Death Guard Core Stratagems sourc
 assert.ok(text('books/death-guard/mobile/related-rules.inc').includes('id="core-stratagems"'),'Death Guard datasheet Related Rules lost Core Stratagems');
 
 const library=text('index.html');
-assert.ok(library.includes('.faction-group .cover{height:auto}'),'Library army covers must preserve their natural portrait height');
-assert.ok(library.includes('.faction-group .cover img{height:auto;object-fit:contain}'),'Library army cover art must never be cropped');
+assert.ok(library.includes('.faction-group .cover{height:auto;aspect-ratio:4/5}'),'Library army covers must use one portrait frame');
+assert.ok(library.includes('.faction-group .cover img{object-fit:contain}'),'Library army cover art must fit the shared frame without cropping');
 
 for(const [book,count] of [['death-guard',9],['adeptus-mechanicus',10],['tyranids',10],['tau-empire',7]]){
   const desktop=text(`books/${book}/reader.html`);

@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
+import ruleFacts from '../books/shared/rule-facts.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const shared=fs.readFileSync(path.join(root,'books/shared/roster-entities.js'),'utf8');
@@ -123,7 +124,7 @@ assert(entities.loadoutIncludesProfile(['Plasma gun'],'Plasma gun – supercharg
 const plasmaProfiles=entities.weaponGroups(glossaryContext.WH40K_GLOSSARY.forBook('death-guard'),'unit-plague-marines').get('plasma gun')||[];
 assert(plasmaProfiles.length===2,'Plasma gun does not expose both standard and supercharge profiles');
 
-const relatedContext={window:{}};
+const relatedContext={window:{WHRuleFacts:ruleFacts}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'books/shared/related-rules-matcher.js'),'utf8'),relatedContext,{filename:'related-rules-matcher.js'});
 vm.runInNewContext(fs.readFileSync(path.join(root,'books/death-guard/scripts/related-rules.js'),'utf8'),relatedContext,{filename:'related-rules.js'});
 const granted=relatedContext.window.DGRelatedRules.grantedKeywords;
@@ -145,7 +146,7 @@ assert(!dgMatches('stratagem-overwhelming-generosity',dgContext(['PLAGUE LEGIONS
 assert(dgMatches('stratagem-blessings-of-filth',dgContext(['DEATH GUARD','INFANTRY'],{candidates:[{unitId:'unit-plague-marines',keywords:new Set(['DEATH GUARD','INFANTRY','CHARACTER']),attached:true,attachmentKnown:true,characterCount:1}]})),'Attached Death Guard unit misses Blessings of Filth');
 assert(dgMatches('stratagem-rabid-infusion',dgContext(['DEATH GUARD','INFANTRY'],{candidates:[{unitId:'unit-plague-marines',keywords:new Set(['DEATH GUARD','INFANTRY','CHARACTER']),attached:true,attachmentKnown:true,characterCount:2}]})),'Two-Character Attached Unit misses Rabid Infusion');
 
-const mechanicusRelatedContext={window:{}};
+const mechanicusRelatedContext={window:{WHRuleFacts:ruleFacts}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'books/shared/related-rules-matcher.js'),'utf8'),mechanicusRelatedContext,{filename:'related-rules-matcher.js'});
 vm.runInNewContext(fs.readFileSync(path.join(root,'books/adeptus-mechanicus/scripts/related-rules.js'),'utf8'),mechanicusRelatedContext,{filename:'mechanicus-related-rules.js'});
 const amMatches=mechanicusRelatedContext.window.AMRelatedRules.matches;

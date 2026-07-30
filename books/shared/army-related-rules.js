@@ -1,13 +1,8 @@
 (function(root){
   'use strict';
   let templatePromise;
-  const normalize=value=>String(value||'').replace(/\s+/g,' ').trim().toUpperCase();
-  const profile=card=>{
-    const keywords=new Set((card.dataset.keywords||'').split('|').map(normalize).filter(Boolean));
-    let candidates=[];
-    try{candidates=JSON.parse(card.dataset.relatedCandidates||'').map(candidate=>({...candidate,keywords:new Set(candidate.keywords.map(normalize))}));}catch{}
-    return {unitId:card.id,id:card.id,slug:card.id.replace(/^unit-/,''),keywords,intrinsicKeywords:keywords,candidates:candidates.length?candidates:undefined,epic:keywords.has('EPIC HERO')};
-  };
+  const normalize=root.WHRuleFacts.normalize;
+  const profile=card=>root.WHRuleFacts.profileFromDataset(card.dataset,{id:card.id});
   const withKeywordGrants=(rule,unit)=>{
     let grants=[];
     try{grants=JSON.parse(rule.closest('[data-keyword-grants]')?.dataset.keywordGrants||'[]');}catch{}

@@ -187,6 +187,7 @@ check('shared points validation recognises New Recruit Legends suffixes',fs.read
 
 const relatedContext={window:{}};
 vm.createContext(relatedContext);
+new vm.Script(read('../shared/rule-facts.js'),{filename:'../shared/rule-facts.js'}).runInContext(relatedContext);
 new vm.Script(read('../shared/related-rules-matcher.js'),{filename:'../shared/related-rules-matcher.js'}).runInContext(relatedContext);
 new vm.Script(read('scripts/related-rules.js'),{filename:'scripts/related-rules.js'}).runInContext(relatedContext);
 const relatedMatcher=relatedContext.window.AMRelatedRules;

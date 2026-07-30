@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
+import ruleFacts from '../books/shared/rule-facts.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const booksRoot=path.join(root,'books');
@@ -11,16 +12,16 @@ vm.runInNewContext(fs.readFileSync(path.join(booksRoot,'shared','related-rules-m
 const matcher=sandbox.window.WHRelatedRules;
 const decode=value=>value.replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&#39;',"'");
 const attr=(tag,name)=>new RegExp(`\\s${name}="([^"]*)"`).exec(tag)?.[1]||'';
-const keywordSet=values=>new Set(values.map(value=>String(value).replace(/\s+/g,' ').trim().toUpperCase()).filter(Boolean));
+const keywordSet=values=>new Set(values.map(value=>ruleFacts.normalize(value)).filter(Boolean));
 
 function profilesFrom(reader){
   const starts=[...reader.matchAll(/<article class="unit-card\b[^>]*>/g)];
   return starts.map((match,index)=>{
     const tag=match[0],body=reader.slice(match.index,starts[index+1]?.index||reader.length);
-    const intrinsic=keywordSet(attr(tag,'data-keywords').split('|'));
-    let candidates=[];
-    try{candidates=JSON.parse(decode(attr(tag,'data-related-candidates'))).map(candidate=>({...candidate,keywords:keywordSet(candidate.keywords||[])}));}catch{}
-    return {unitId:attr(tag,'id'),keywords:intrinsic,intrinsicKeywords:intrinsic,candidates:candidates.length?candidates:undefined,abilities:keywordSet(body.includes('data-term="core-deadly-demise"')?['DEADLY DEMISE']:[])};
+    return ruleFacts.profileFromDataset({
+      keywords:decode(attr(tag,'data-keywords')),
+      relatedCandidates:decode(attr(tag,'data-related-candidates'))
+    },{id:attr(tag,'id')},{abilities:body.includes('data-term="core-deadly-demise"')?['DEADLY DEMISE']:[]});
   });
 }
 
@@ -113,7 +114,7 @@ assert.equal(matcher.matches({v:1,roles:[{side:'friendly',subject:'model',select
   const dgRoot=path.join(booksRoot,'death-guard'),dgReader=fs.readFileSync(path.join(dgRoot,'reader.html'),'utf8');
   const dgRelated=fs.readFileSync(path.join(dgRoot,'mobile','related-rules.inc'),'utf8');
   const dgData=JSON.parse(fs.readFileSync(path.join(dgRoot,'content','death-guard-rules.en.json'),'utf8'));
-  const dgSandbox={window:{WHRelatedRules:matcher}};
+  const dgSandbox={window:{WHRelatedRules:matcher,WHRuleFacts:ruleFacts}};
   vm.runInNewContext(fs.readFileSync(path.join(dgRoot,'scripts','related-rules.js'),'utf8'),dgSandbox);
   const api=dgSandbox.window.DGRelatedRules,eligibility=api.eligibilityByRule,profiles=profilesFrom(dgReader);
   const cardIds=[...dgRelated.matchAll(/<article class="stratagem[^>]*" id="([^"]+)"/g)].map(match=>match[1]);

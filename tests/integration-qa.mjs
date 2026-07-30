@@ -21,7 +21,7 @@ const books={
   'adeptus-mechanicus':{version:null,reader:'reader.html',versions:{'styles/tokens.css':'15','styles/mechanicus.css':'19','scripts/data.js':'1','scripts/faction-ui.js':'1','scripts/related-rules.js':'9','scripts/roster-enhancements.js':'2','scripts/roster-filter.js':'2','scripts/app.js':'28','mobile/mobile.css':'1','mobile/mobile.js':'3'},app:'scripts/app.js',usesPopupGlossary:true,files:['reader.html','mobile/index.html','mobile/mobile.css','mobile/mobile.js','assets/mechanicus-logo.png','assets/mechanicus-cover-800.webp','styles/tokens.css','styles/mechanicus.css','scripts/data.js','scripts/faction-ui.js','scripts/related-rules.js','scripts/roster-enhancements.js','scripts/roster-filter.js','scripts/app.js']}
 };
 
-for(const file of ['service-worker.js','glossary-return.js','books/shared/navigation-targets.js','books/shared/popup-rule-actions.js','books/shared/datasheet-layout.js','books/shared/popup-content.js','books/shared/related-rules-matcher.js','books/shared/roster-entities.js','books/shared/roster-parser.js','books/shared/roster-enhancements.js',...Object.entries(books).map(([slug,book])=>`books/${slug}/${book.app}`)]){
+for(const file of ['service-worker.js','glossary-return.js','books/shared/navigation-targets.js','books/shared/popup-rule-actions.js','books/shared/datasheet-layout.js','books/shared/popup-content.js','books/shared/rule-facts.js','books/shared/related-rules-matcher.js','books/shared/roster-entities.js','books/shared/roster-parser.js','books/shared/roster-enhancements.js',...Object.entries(books).map(([slug,book])=>`books/${slug}/${book.app}`)]){
   try{new vm.Script(read(file),{filename:file});check(file+' syntax',true);}
   catch(error){check(file+' syntax',false,error.message);}
 }

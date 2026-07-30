@@ -72,6 +72,7 @@ const APP_SHELL = [
   "./books/shared/datasheet-system.css?v=6",
   "./books/shared/popup-content.js?v=3",
   "./books/shared/glossary-autolink.js?v=8",
+  "./books/shared/rule-facts.js?v=1",
   "./books/shared/related-rules-matcher.js?v=3",
   "./books/shared/roster-entities.js?v=1",
   "./books/shared/roster-parser.js?v=2",

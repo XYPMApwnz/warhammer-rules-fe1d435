@@ -65,6 +65,12 @@ try{
     ];
     for(const [name,url,unitSelector] of books){
       await page.goto(origin+url);
+      assert.equal(await page.evaluate(selector=>{
+        const unit=document.querySelector(selector),api=window.AMRelatedRules||window.WHArmyRelatedRules;
+        const actual=api.profile(unit),expected=window.WHRuleFacts.profileFromDataset(unit.dataset,{id:unit.id});
+        const values=set=>[...(set||[])].sort().join('|'),candidateValues=profile=>(profile.candidates||[]).map(item=>values(item.keywords)).join('||');
+        return values(actual.keywords)===values(expected.keywords)&&candidateValues(actual)===candidateValues(expected);
+      },unitSelector),true,`${name} production profile must use the shared facts adapter`);
       const trigger=page.locator(`${unitSelector} .related-rules-trigger`);
       await trigger.scrollIntoViewIfNeeded();
       await trigger.click();
@@ -157,13 +163,10 @@ try{
       template.innerHTML=html;
       template.content.querySelectorAll('[id]').forEach(node=>{node.dataset.ruleId=node.id;node.removeAttribute('id');});
       const cards=[...template.content.querySelectorAll('.stratagem,.enhancement')],byId=new Map(cards.map(card=>[card.dataset.ruleId,card]));
-      const normalize=value=>String(value||'').replace(/\s+/g,' ').trim().toUpperCase();
       const profiles=vehicleIds.map(id=>{
         const node=document.getElementById(id),actual=window.DGRelatedRules.profile(node);
-        const expectedKeywords=new Set((node.dataset.keywords||'').split('|').map(normalize).filter(Boolean));
-        let expectedCandidates=[];
-        try{expectedCandidates=JSON.parse(node.dataset.relatedCandidates||'[]').map(candidate=>({...candidate,keywords:new Set((candidate.keywords||[]).map(normalize).filter(Boolean))}));}catch{}
-        return{id,actual,expected:{...actual,keywords:expectedKeywords,intrinsicKeywords:expectedKeywords,candidates:expectedCandidates.length?expectedCandidates:undefined}};
+        const expected=window.WHRuleFacts.profileFromDataset(node.dataset,{id:node.id},{abilities:node.querySelector('[data-term="core-deadly-demise"]')?['DEADLY DEMISE']:[]});
+        return{id,actual,expected};
       });
       const differences=[];
       for(const profile of profiles)for(const card of cards){

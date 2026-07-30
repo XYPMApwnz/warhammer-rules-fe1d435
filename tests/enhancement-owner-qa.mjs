@@ -3,19 +3,18 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
+import ruleFacts from '../books/shared/rule-facts.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 const sandbox={window:{}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'books/shared/related-rules-matcher.js'),'utf8'),sandbox);
 const matcher=sandbox.window.WHRelatedRules;
-const normalize=value=>String(value||'').replace(/\s+/g,' ').trim().toUpperCase();
-const set=values=>new Set((values||[]).map(normalize));
+const normalize=ruleFacts.normalize;
 const profiles=book=>{
   const html=fs.readFileSync(path.join(root,`books/${book}/reader.html`),'utf8');
   return [...html.matchAll(/<article class="unit-card\b[^>]*id="([^"]+)"[^>]*data-keywords="([^"]*)"[^>]*(?:data-related-candidates="([^"]*)")?/g)].map(match=>{
-    const keywords=set(match[2].split('|'));
-    return {unitId:match[1],keywords,intrinsicKeywords:keywords,abilities:new Set()};
+    return ruleFacts.profileFromRecord({unitId:match[1],keywords:match[2].split('|')});
   });
 };
 const genericContracts=book=>{

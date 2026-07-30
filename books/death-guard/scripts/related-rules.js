@@ -12,23 +12,19 @@
     'LORD OF VIRULENCE':'lord-of-virulence','PLAGUE MARINES':'plague-marines'
   };
 
-  const normalized=value=>String(value?.textContent??value??'').replace(/\s+/g,' ').trim().toUpperCase();
+  const normalized=window.WHRuleFacts.normalize;
   function profile(unit){
     const keywords=[...unit.querySelectorAll('.unit-part')].find(part=>part.id.endsWith('-keywords'))||unit;
     const ids=new Set([...keywords.querySelectorAll('[data-term]')].map(node=>node.dataset.term));
-    const slug=(unit.id||'').replace(/^unit-/,'');
-    let candidates=[];
-    try{candidates=JSON.parse(unit.dataset.relatedCandidates||'').map(candidate=>({...candidate,keywords:new Set(candidate.keywords.map(normalized).filter(Boolean))}));}catch{}
-    const labels=new Set((unit.dataset.keywords||'').split('|').map(normalized).filter(Boolean));
+    const deadlyDemise=Boolean(unit.querySelector('[data-term="core-deadly-demise"]'));
+    const base=window.WHRuleFacts.profileFromDataset(unit.dataset,{id:unit.id},{abilities:deadlyDemise?['DEADLY DEMISE']:[]});
     return {
-      slug,ids,
-      unitId:unit.id,keywords:labels,intrinsicKeywords:labels,candidates:candidates.length?candidates:undefined,
-      abilities:new Set(unit.querySelector('[data-term="core-deadly-demise"]')?['DEADLY DEMISE']:[]),
+      ...base,ids,
       has:id=>ids.has(id),
       attached:unit.hasAttribute('data-roster-attached')?unit.dataset.rosterAttached==='true':null,
       twoCharacters:unit.hasAttribute('data-roster-character-count')?unit.dataset.rosterCharacterCount==='2':null,
       warlord:unit.hasAttribute('data-roster-warlord')?unit.dataset.rosterWarlord==='true':null,
-      deadlyDemise:Boolean(unit.querySelector('[data-term="core-deadly-demise"]'))
+      deadlyDemise
     };
   }
 

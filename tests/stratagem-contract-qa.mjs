@@ -114,6 +114,7 @@ const css=read('books/death-guard/styles/content.css');
 assert.match(css,/\.stratagem>\.compatibility-status\{grid-column:2\}/,'conditional compatibility status must clear the Stratagem CP rail');
 assert.match(css,/\.stratagem-grid\s*\{[^}]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/);
 assert.match(css,/full-related-content[\s\S]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/);
+assert.match(css,/\[data-related-kind="stratagems"\]>section\s*\{[^}]*grid-column:\s*1\/-1/,'nested Related Rules sections must span the outer grid instead of shrinking cards to one quarter');
 assert.match(css,/@media\s*\(max-width:\s*900px\)[^{]*\{[\s\S]*grid-template-columns:\s*1fr/);
 for(const bookId of ['death-guard','adeptus-mechanicus','tyranids','tau-empire']){
   const mobileCss=read(`books/${bookId}/mobile/mobile.css`);

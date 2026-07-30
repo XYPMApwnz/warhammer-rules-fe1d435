@@ -38,7 +38,7 @@ assert.ok(sw.includes('"./glossary/viewer-progressive.css?v=3"')&&sw.includes('"
 
 assert.match(content,/\.stratagem-grid \{ display:grid; grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/,'desktop and landscape tablet Stratagem sections must use two columns');
 assert.match(content,/@media \(max-width: 900px\) \{[\s\S]*?\.stratagem-grid \{ grid-template-columns:1fr; \}/,'phone and narrow layouts must use one Stratagem column');
-for(const book of publicBooks)assert.ok(read(`books/${book}/reader.html`).includes('content.css?v=36'),`${book} must use the shared Stratagem layout release`);
+for(const book of publicBooks)assert.ok(read(`books/${book}/reader.html`).includes('content.css?v=37'),`${book} must use the shared Stratagem layout release`);
 assert.ok(read('books/death-guard/reader.html').includes('class="detachment-content stratagem-grid"'),'Death Guard must use the shared Stratagem grid contract');
 assert.ok(read('books/adeptus-mechanicus/reader.html').includes('class="stratagem-grid"'),'Mechanicus must use the shared Stratagem grid contract');
 assert.ok(read('books/tyranids/reader.html').includes('class="detachment-grid stratagem-grid"'),'Tyranids must use the shared Stratagem grid contract');

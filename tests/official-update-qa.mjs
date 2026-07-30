@@ -97,8 +97,11 @@ const amParity=json('books/adeptus-mechanicus/content/adeptus-mechanicus-codex-p
 const tyrPack=json('books/tyranids/content/tyranids-faction-pack.en.json');
 const tyrParity=json('books/tyranids/content/tyranids-codex-parity.en.json');
 const tyrCodex=json('books/tyranids/content/tyranids-codex-datasheets.en.json');
+const tauPack=json('books/tau-empire/content/tau-empire-faction-pack.en.json');
+const tauParity=json('books/tau-empire/content/tau-empire-codex-parity.en.json');
+const tauCodex=json('books/tau-empire/content/tau-empire-codex-datasheets.en.json');
 const glossary=json('glossary/registry.en.json').terms;
-const glossaryContexts=Object.fromEntries(['death-guard','adeptus-mechanicus','tyranids'].map(bookId=>[
+const glossaryContexts=Object.fromEntries(['death-guard','adeptus-mechanicus','tyranids','tau-empire'].map(bookId=>[
   bookId,json(`glossary/contexts/${bookId}.json`).terms
 ]));
 
@@ -165,6 +168,8 @@ const amOfficialUnits=new Map(amRules.datasheets.map(unit=>[unit.id,unit]));
 const amUnits=amCodex.datasheets.map(unit=>amOfficialUnits.has(unit.id)?{...unit,...amOfficialUnits.get(unit.id)}:unit);
 const tyrUnits=[...tyrCodex.datasheets,...tyrCodex.imperialArmour,...tyrCodex.legends];
 const tyrDetachments=[...tyrPack.detachments,...tyrParity.detachments];
+const tauUnits=[...tauCodex.datasheets,...tauCodex.imperialArmour,...tauCodex.legends];
+const tauDetachments=[...tauPack.detachments,...tauParity.detachments];
 
 function parseDgKeywords(text){
   const [normal,faction]=text.split(/Faction Keywords:\s*/);
@@ -229,6 +234,24 @@ function tyrObserved(update,target){
   throw new Error(`Unsupported Tyranids target kind ${target.kind}`);
 }
 
+function tauObserved(update,target){
+  if(target.kind==='army-rule')return exactlyOne(tauPack.updates.filter(item=>item.id===update.id),`T'au ${update.id}`).change;
+  if(['detachment-rule','enhancement','stratagem-field'].includes(target.kind)){
+    const id=target.detachmentId||target.owner;
+    const det=exactlyOne(tauDetachments.filter(item=>item.id===id),`T'au ${id}`);
+    if(target.kind==='detachment-rule')return det.rule[target.field];
+    const collection=target.kind==='enhancement'?det.enhancements:det.stratagems;
+    return exactlyOne(collection.filter(item=>item.id===(target.enhancementId||target.stratagemId)),`T'au ${target.enhancementId||target.stratagemId}`)[target.field];
+  }
+  const unit=exactlyOne(tauUnits.filter(item=>item.id===target.unitId),`T'au ${target.unitId}`);
+  if(target.kind==='ability')return exactlyOne(unit.abilities.filter(item=>slug(item.title)===slug(target.title)),`T'au ${target.title}`)[target.field];
+  if(target.kind==='keyword')return unit.keywords.some(item=>slug(item)===slug(target.value));
+  if(target.kind==='weapon-profile')return exactlyOne(unit.weapons.filter(item=>slug(item.name)===target.profileKey),`T'au ${target.profileKey}`);
+  if(target.kind==='stat')return exactlyOne(unit.profiles.filter(item=>slug(item.name)===slug(target.profile)),`T'au ${target.profile}`).stats[target.field];
+  if(target.kind==='core-ability')return unit.abilities.some(item=>slug(item.title)===slug(target.title));
+  throw new Error(`Unsupported T'au target kind ${target.kind}`);
+}
+
 function targetScope(bookId,target,html){
   if(bookId==='death-guard'){
     const ids=elementsByAttribute(html,'id',target.owner);
@@ -238,7 +261,7 @@ function targetScope(bookId,target,html){
   if(target.kind==='army-rule-branch')return elementById(html,target.branchId);
   if(target.unitId)return elementById(html,target.unitId);
   if(target.kind==='army-rule')return elementById(html,`army-rule-${slug(target.title)}`);
-  if(target.detachmentId)return elementById(html,target.detachmentId);
+  if(target.detachmentId)return elementById(html,bookId==='tau-empire'?`detachment-${target.detachmentId}`:target.detachmentId);
   if(target.kind==='detachment-rule'&&target.owner)return elementById(html,`${target.owner}-rule`);
   if(target.owner)return elementById(html,`detachment-${target.owner}`);
   if(target.ruleId)return elementById(html,target.ruleId);
@@ -329,6 +352,7 @@ function sameSet(actual,expected,label){
 function verifyOfficialInventory(bookId,ledger){
   let inventory;
   if(bookId==='tyranids')inventory=tyrPack.updates.map(item=>item.id);
+  else if(bookId==='tau-empire')inventory=tauPack.updates.map(item=>item.id);
   else if(bookId==='death-guard'){
     const blocks=exactlyOne(dgSource.sections.filter(section=>section.id==='rules-updates'),'DG official update section').blocks;
     for(const block of blocks){
@@ -401,7 +425,7 @@ function verifyGlossary(bookId,update,target){
   }
   const value=target.effectiveAfter;
   if(value&&typeof value==='object'&&!Array.isArray(value)){
-    assert.equal(clean(term.title.en),clean(value.name).replace(/^➤\s*/,''),
+    assert.equal(clean(term.title.en).replace(/^➤\s*/,''),clean(value.name).replace(/^➤\s*/,''),
       `${target.glossaryTermId}: weapon name`);
     const structured=term.structured?.weapon||{};
     for(const [sourceKey,termKey] of [['range','Range'],['a','A'],['s','S'],['ap','AP'],['d','D']])assert.equal(clean(structured[termKey]),clean(value[sourceKey]),`${target.glossaryTermId}.${termKey}`);
@@ -423,7 +447,8 @@ function verifyGlossary(bookId,update,target){
 const configs={
   'death-guard':{complete:true,ledger:'books/death-guard/content/official-update-ledger.en.json',desktop:'books/death-guard/reader.html',source:(_u,t)=>dgObserved(t)},
   'adeptus-mechanicus':{complete:true,ledger:'books/adeptus-mechanicus/content/official-update-ledger.en.json',desktop:'books/adeptus-mechanicus/reader.html',source:(_u,t)=>amObserved(t)},
-  tyranids:{complete:false,ledger:'books/tyranids/content/official-update-ledger.en.json',desktop:'books/tyranids/reader.html',source:tyrObserved}
+  tyranids:{complete:false,ledger:'books/tyranids/content/official-update-ledger.en.json',desktop:'books/tyranids/reader.html',source:tyrObserved},
+  'tau-empire':{complete:false,ledger:'books/tau-empire/content/official-update-ledger.en.json',desktop:'books/tau-empire/reader.html',source:tauObserved}
 };
 const ranks={matched:0,'already-effective':0,unavailable:1,invalid:2};
 let updateCount=0,targetCount=0,warnings=0;
@@ -440,16 +465,16 @@ for(const [bookId,config] of Object.entries(configs)){
     updateIds.add(update.id);
     assert.ok(update.source?.documentId&&Number.isInteger(update.source.page),`${bookId}/${update.id}: invalid source`);
     assert.ok(update.targets.length,`${bookId}/${update.id}: targets must not be empty`);
-    if(bookId==='tyranids'){
-      const official=exactlyOne(tyrPack.updates.filter(item=>item.id===update.id),`official update ${update.id}`);
+    if(bookId==='tyranids'||bookId==='tau-empire'){
+      const official=exactlyOne((bookId==='tyranids'?tyrPack:tauPack).updates.filter(item=>item.id===update.id),`official update ${update.id}`);
       assert.ok(official.sourcePages.includes(update.source.page),`${update.id}: wrong page`);
     }
     const states=[];
     for(const target of update.targets){
       targetCount++;
-      assert.ok(!JSON.stringify(target).includes('*'),`${bookId}/${update.id}: wildcards are forbidden`);
       assert.ok('expectedBefore'in target&&'effectiveAfter'in target&&'unavailableReason'in target,`${bookId}/${update.id}: incomplete target`);
       const address=JSON.stringify(Object.fromEntries(Object.entries(target).filter(([name])=>!['expectedBefore','effectiveAfter','unavailableReason','glossaryTermId','glossary'].includes(name))));
+      assert.ok(!address.includes('*'),`${bookId}/${update.id}: address wildcards are forbidden`);
       assert.ok(!globalAddresses.has(address),`${bookId}: duplicate target address ${address}`);
       globalAddresses.add(address);
       let observed,state;

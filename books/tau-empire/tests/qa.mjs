@@ -139,5 +139,10 @@ for(const stratagem of [...pack.detachments,...parity.detachments].flatMap(detac
   assert.ok(profiles.some(profile=>sandbox.window.WHRelatedRules.matches(contract,profile)),`${stratagem.title}: no current datasheet satisfies eligibility`);
   assert.match(related,new RegExp(`data-rule-id="${stratagem.id}"`));
 }
+const coordinate=relatedRules.stratagems['stratagem-coordinate-to-engage'];
+assert.equal(sandbox.window.WHRelatedRules.match(coordinate,profiles.find(item=>item.unitId==='unit-breacher-team')).state,'conditional');
+for(const id of ['unit-tidewall-droneport','unit-tidewall-gunrig','unit-tidewall-shieldline']){
+  assert.equal(sandbox.window.WHRelatedRules.match(coordinate,profiles.find(item=>item.unitId===id)).state,'no-match',`${id}: Fortification cannot be an Observer`);
+}
 assert.equal(new Set([...related.matchAll(/data-rule-id="([^"]+)"/g)].map(match=>match[1])).size,54,'Related Rules inventory differs from 31 Stratagems + 23 Enhancements');
 console.log("T'au Empire QA passed: official v1.1 pack/MFM, 43 current datasheets, 7 detachments, exact Wargear, Glossary and Related Rules contracts.");

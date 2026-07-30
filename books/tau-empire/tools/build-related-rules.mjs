@@ -12,7 +12,7 @@ const tau={allKeywords:["T'AU EMPIRE"]},infantry={allKeywords:["T'AU EMPIRE",'IN
 const codex={
   'stratagem-a-tempting-trap':rule([role(tau)],['not-selected-to-shoot','trap-objective','battle-round-3-plus']),
   'stratagem-combat-embarkation':rule([role(infantry),role({allKeywords:['TRANSPORT']},'friendly-transport')],['charge-target','within-3-of-transport','transport-capacity']),
-  'stratagem-coordinate-to-engage':rule([role(tau)],['selected-as-observer']),
+  'stratagem-coordinate-to-engage':rule([role({allKeywords:["T'AU EMPIRE"],noneKeywords:['FORTIFICATION']})],['selected-as-observer']),
   'stratagem-photon-grenades':rule([role({allKeywords:["T'AU EMPIRE",'GRENADES']})],['charge-target']),
   'stratagem-point-blank-ambush':rule([role(tau)],['not-selected-to-shoot','battle-round-3-plus']),
   'stratagem-wall-of-mirrors':rule([role({unitIds:['unit-stealth-battlesuits','unit-ghostkeel-battlesuit','unit-commander-shadowsun']})],['not-engaged']),

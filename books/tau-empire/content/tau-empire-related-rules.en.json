@@ -211,6 +211,9 @@
           "selector": {
             "allKeywords": [
               "T'AU EMPIRE"
+            ],
+            "noneKeywords": [
+              "FORTIFICATION"
             ]
           }
         }

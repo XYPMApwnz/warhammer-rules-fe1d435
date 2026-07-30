@@ -43,8 +43,11 @@ assert.equal(new Set([...pack.detachments,...parity.detachments].map(item=>key(i
 assert.equal(new Set(points.enhancements.map(item=>key(item.title))).size,23);
 assert.equal(config.coverImage,'assets/tau-empire-cover-800.webp');
 assert.ok(fs.existsSync(path.join(root,config.coverImage)));
-assert.ok(reader.includes(`src="./${config.coverImage}"`));
-assert.ok(mobileStart.includes(`src="../${config.coverImage}"`));
+assert.ok(reader.includes('class="hero section surface faction-hero faction-hero-cover"'));
+assert.ok(!reader.includes(`src="./${config.coverImage}"`));
+const bookCss=fs.readFileSync(path.join(root,'styles','book.css'),'utf8');
+assert.ok(bookCss.includes(`url("../${config.coverImage}") center 23% / cover no-repeat`));
+assert.ok(mobileStart.includes('class="hero section surface faction-hero faction-hero-cover"'));
 assert.ok(fs.readFileSync(path.join(repo,'index.html'),'utf8').includes(`src="books/tau-empire/${config.coverImage}"`));
 assert.ok(fs.readFileSync(path.join(repo,'service-worker.js'),'utf8').includes(`./books/tau-empire/${config.coverImage}`));
 

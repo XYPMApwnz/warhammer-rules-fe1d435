@@ -13,7 +13,7 @@
   "dedicatedMobile": true,
   "rosterSupport": true,
   "assetVersions": {
-    "app": 5,
+    "app": 6,
     "book": 5,
     "mobile": 2,
     "rosterData": 1

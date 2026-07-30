@@ -1,5 +1,5 @@
 <section class="related-detachment" data-detachment="virulent-vectorium">
-      <h2>Virulent Vectorium</h2>
+      <h2>Virulent Vectorium <span class="detachment-dp">3DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="virulent-vectorium-stratagems" data-track="virulent-vectorium-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
@@ -166,7 +166,7 @@
 </section></div>
     </section>
 <section class="related-detachment" data-detachment="mortarions-hammer">
-      <h2>Mortarion’s Hammer</h2>
+      <h2>Mortarion’s Hammer <span class="detachment-dp">2DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="mortarions-hammer-stratagems" data-track="mortarions-hammer-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
@@ -333,7 +333,7 @@
 </section></div>
     </section>
 <section class="related-detachment" data-detachment="champions-of-contagion">
-      <h2>Champions of Contagion</h2>
+      <h2>Champions of Contagion <span class="detachment-dp">2DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="champions-of-contagion-stratagems" data-track="champions-of-contagion-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
@@ -500,7 +500,7 @@
 </section></div>
     </section>
 <section class="related-detachment" data-detachment="tallyband-summoners">
-      <h2>Tallyband Summoners</h2>
+      <h2>Tallyband Summoners <span class="detachment-dp">2DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="tallyband-summoners-stratagems" data-track="tallyband-summoners-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
@@ -670,7 +670,7 @@
 </section></div>
     </section>
 <section class="related-detachment" data-detachment="shamblerot-vectorium">
-      <h2>Shamblerot Vectorium</h2>
+      <h2>Shamblerot Vectorium <span class="detachment-dp">2DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="shamblerot-vectorium-stratagems" data-track="shamblerot-vectorium-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
@@ -837,7 +837,7 @@
 </section></div>
     </section>
 <section class="related-detachment" data-detachment="death-lords-chosen">
-      <h2>Death Lord’s Chosen</h2>
+      <h2>Death Lord’s Chosen <span class="detachment-dp">2DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="death-lords-chosen-stratagems" data-track="death-lords-chosen-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
@@ -1004,7 +1004,7 @@
 </section></div>
     </section>
 <section class="related-detachment" data-detachment="contagion-engines">
-      <h2>Contagion Engines</h2>
+      <h2>Contagion Engines <span class="detachment-dp">1DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="contagion-engines-stratagems" data-track="contagion-engines-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
@@ -1092,7 +1092,7 @@
 </section></div>
     </section>
 <section class="related-detachment" data-detachment="flyblown-host">
-      <h2>Flyblown Host</h2>
+      <h2>Flyblown Host <span class="detachment-dp">1DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="flyblown-host-stratagems" data-track="flyblown-host-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
@@ -1182,7 +1182,7 @@
 </section></div>
     </section>
 <section class="related-detachment" data-detachment="paragons-of-putrescence">
-      <h2>Paragons of Putrescence</h2>
+      <h2>Paragons of Putrescence <span class="detachment-dp">1DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="paragons-of-putrescence-stratagems" data-track="paragons-of-putrescence-stratagems">
 <h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">

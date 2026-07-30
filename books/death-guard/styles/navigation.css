@@ -43,7 +43,6 @@
   box-shadow: 0 0 16px rgba(213,72,142,.25);
   pointer-events: none;
 }
-html[data-theme="light"] .toc-panel { background: rgba(231,223,202,.97); }
 .toc-panel[aria-hidden="true"] { visibility: hidden; }
 .toc-heading {
   margin: 0 8px 20px;

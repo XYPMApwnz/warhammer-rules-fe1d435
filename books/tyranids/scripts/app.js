@@ -12,7 +12,6 @@
   const popups=new window.DGPopups(terms,fullEntry);
   const relatedRules=window.WHArmyRelatedRules?.install({storageKey:'tyranids-detachment-filter'});
   const journey=new window.DGJourney(navigation,popups,null,relatedRules);
-  new window.DGTheme();
   new window.DGTableAccessibility();
 
   const params=new URLSearchParams(location.search);

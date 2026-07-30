@@ -46,6 +46,19 @@
   box-shadow: 0 0 14px rgba(125,146,87,.18), 18px 0 22px rgba(213,72,142,.1);
 }
 .lead { max-width: 760px; margin: 0 0 28px; color: var(--muted); }
+.detachment-title { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; }
+.detachment-dp {
+  display: inline-flex;
+  align-items: center;
+  min-height: 25px;
+  padding: 4px 8px;
+  border: 1px solid var(--pink);
+  color: var(--pink);
+  font: 800 10px/1 ui-monospace, monospace;
+  letter-spacing: .08em;
+  white-space: nowrap;
+}
+.mobile-nav-branch .detachment-dp { min-height: 0; margin-left: 5px; padding: 2px 5px; font-size: 8px; }
 .hero {
   min-height: min(66vh, 680px);
   padding: clamp(34px, 6vw, 68px);

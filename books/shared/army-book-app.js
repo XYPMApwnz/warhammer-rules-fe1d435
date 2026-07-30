@@ -20,7 +20,6 @@
       rosterGuide:root.WH_ARMY_ROSTER_GUIDE
     });
     const journey=new root.DGJourney(navigation,popups,null,relatedRules);
-    new root.DGTheme();
     new root.DGTableAccessibility();
 
     const rosterGuides=document.querySelector('[data-roster-guides]');

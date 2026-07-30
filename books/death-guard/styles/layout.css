@@ -24,7 +24,6 @@
   height: 2px;
   background: var(--faction-gradient);
 }
-html[data-theme="light"] .app-header { background: rgba(231, 223, 202, .95); }
 .header-button, .back-button, .library-link {
   min-width: 42px;
   min-height: 42px;

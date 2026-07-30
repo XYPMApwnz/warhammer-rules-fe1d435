@@ -6,7 +6,7 @@
 
   const clock=()=>performance.now();
   const round=value=>value==null?'—':Math.max(0,Math.round(value));
-  const actionableSelector='[data-term],[data-full-entry],[data-full-entry-close],[data-nav-target],[data-nav-toggle],[data-popup-close],[data-journey-target],.popup-action,#navMenu,#navCollapse,#themeButton,#backButton,a,button,input';
+  const actionableSelector='[data-term],[data-full-entry],[data-full-entry-close],[data-nav-target],[data-nav-toggle],[data-popup-close],[data-journey-target],.popup-action,#navMenu,#navCollapse,#backButton,a,button,input';
   const entries=[];
   let pointer=null;
   let active=null;
@@ -49,7 +49,6 @@
     if(element.matches('[data-nav-target]'))return'nav-target';
     if(element.id==='navMenu')return'nav-menu';
     if(element.id==='navCollapse')return'nav-collapse';
-    if(element.id==='themeButton')return'theme';
     if(element.id==='backButton')return'journey-back';
     if(element.matches('a'))return'link';
     return element.tagName.toLowerCase();

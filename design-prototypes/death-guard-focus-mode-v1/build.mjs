@@ -29,7 +29,7 @@ function page({ id, name, peerHref, peerName, file }) {
   <meta name="theme-color" content="#11170e">
   <title>${name} — Death Guard Focus Mode</title>
   <link rel="icon" href="../../books/death-guard/assets/icon-v4.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../../books/death-guard/styles/tokens.css?v=10">
+  <link rel="stylesheet" href="../../books/death-guard/styles/tokens.css?v=11">
   <link rel="stylesheet" href="../../books/death-guard/styles/content.css?v=18">
   <link rel="stylesheet" href="../../books/shared/datasheet-system.css?v=4">
   <link rel="stylesheet" href="./focus.css?v=1">

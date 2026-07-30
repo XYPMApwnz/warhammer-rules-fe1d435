@@ -54,8 +54,8 @@ function hydrateTerms(html){
   });
 }
 
-const detachments=[...source.matchAll(/<section class="content-group detachment" id="(detachment-[^"]+)"[^>]*>\s*<h3 class="category-title">([^<]+)<\/h3>/g)]
-  .map(([,id,title])=>({id,title:clean(title),file:`${id.slice(11)}.html`,type:'detachment'}));
+const detachments=[...source.matchAll(/<section class="content-group detachment" id="(detachment-[^"]+)"[^>]*>\s*<h3 class="category-title detachment-title">([^<]+)\s*<span class="detachment-dp">([^<]+)<\/span><\/h3>/g)]
+  .map(([,id,title,dp])=>({id,title:clean(title),dp:clean(dp),file:`${id.slice(11)}.html`,type:'detachment'}));
 const categories=[...source.matchAll(/<section class="content-group" id="(datasheets-[^"]+)"[^>]*>\s*<h3 class="category-title">([^<]+)<\/h3>/g)]
   .map(([,id,title])=>{
     const section=extract('section',id);
@@ -87,14 +87,14 @@ function relatedRules(){
   return hydrateTerms(portable(detachments.map(detachment=>{
     const slug=detachment.id.slice(11);
     return `<section class="related-detachment" data-detachment="${slug}" data-keyword-grants="${attribute(JSON.stringify(relatedRulesConfig.keywordGrants?.[slug]||[]))}">
-      <h2>${detachment.title}</h2>
+      <h2>${detachment.title} <span class="detachment-dp">${detachment.dp}</span></h2>
       <div class="related-kind" data-related-kind="stratagems">${extract('section',`${slug}-stratagems`)}</div>
       <div class="related-kind" data-related-kind="enhancements" hidden>${extract('section',`${slug}-enhancements`)}</div>
     </section>`;
   }).join('\n')+core));
 }
 
-const link=(route,active)=>`<a href="./${route.file}"${route.id===active?' aria-current="page"':''}>${route.title}</a>`;
+const link=(route,active)=>`<a href="./${route.file}"${route.id===active?' aria-current="page"':''}>${route.title}${route.dp?` <span class="detachment-dp">${route.dp}</span>`:''}</a>`;
 function navigation(route){
   const unitCategory=categories.find(category=>category.id===route.category);
   return `${staticRoutes.slice(0,2).map(item=>link(item,route.id)).join('')}
@@ -139,7 +139,7 @@ function page(route){
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101313">
   <title>${route.title} &mdash; Adeptus Mechanicus</title>
   <link rel="manifest" href="../../../manifest.webmanifest"><link rel="icon" href="../assets/mechanicus-logo.png" type="image/png">
-  <link rel="stylesheet" href="../styles/tokens.css?v=14"><link rel="stylesheet" href="../../death-guard/styles/layout.css?v=9"><link rel="stylesheet" href="../../death-guard/styles/navigation.css?v=11"><link rel="stylesheet" href="../../death-guard/styles/content.css?v=35"><link rel="stylesheet" href="../../death-guard/styles/popups.css?v=17"><link rel="stylesheet" href="../styles/mechanicus.css?v=17"><link rel="stylesheet" href="../../shared/datasheet-system.css?v=6"><link rel="stylesheet" href="./mobile.css?v=1">
+  <link rel="stylesheet" href="../styles/tokens.css?v=15"><link rel="stylesheet" href="../../death-guard/styles/layout.css?v=10"><link rel="stylesheet" href="../../death-guard/styles/navigation.css?v=12"><link rel="stylesheet" href="../../death-guard/styles/content.css?v=36"><link rel="stylesheet" href="../../death-guard/styles/popups.css?v=17"><link rel="stylesheet" href="../styles/mechanicus.css?v=19"><link rel="stylesheet" href="../../shared/datasheet-system.css?v=6"><link rel="stylesheet" href="./mobile.css?v=1">
 </head><body>
   <header class="app-header" id="appHeader"><button class="header-button nav-menu" id="navButton" aria-label="Open navigation" aria-controls="mobileNav" aria-expanded="false">&#9776;</button><div class="app-brand"><strong>Adeptus Mechanicus Rules</strong><small>11E &middot; Mobile reference</small></div><a class="library-link" href="../../../index.html" aria-label="Back to rulebook library"><span aria-hidden="true">&larr;</span><b>Library</b></a><div class="header-spacer"></div></header>
   <button class="toc-scrim" id="navScrim" aria-label="Close navigation" hidden></button>

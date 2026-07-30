@@ -10,7 +10,6 @@
   const popups=new window.DGPopups(terms,fullEntry);
   const relatedRules=window.AMRelatedRules?.install();
   const journey=new window.DGJourney(navigation,popups,null,relatedRules);
-  new window.DGTheme();
   new window.DGTableAccessibility();
   new window.AMDoctrina();
   const params=new URLSearchParams(location.search);

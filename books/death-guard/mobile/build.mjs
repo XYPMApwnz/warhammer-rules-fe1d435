@@ -33,8 +33,8 @@ function hydrateTerms(html) {
     return `${start} data-term-title="${attribute(title)}" data-term-summary="${attribute(summary)}"${fullRulePath?` data-full-rule-path="${attribute(fullRulePath)}"`:''}${mobileRulePath?` data-mobile-rule-path="${attribute(mobileRulePath)}"`:''}${end}`;
   });
 }
-const detachments = [...source.matchAll(/<section class="content-group detachment" id="(detachment-[^"]+)"[^>]*>\s*<h3 class="category-title">([^<]+)<\/h3>/g)]
-  .map(([, id, title]) => ({ id, title: clean(title), file: `${id.slice(11)}.html`, type: 'detachment' }));
+const detachments = [...source.matchAll(/<section class="content-group detachment" id="(detachment-[^"]+)"[^>]*>\s*<h3 class="category-title detachment-title">([^<]+)\s*<span class="detachment-dp">([^<]+)<\/span><\/h3>/g)]
+  .map(([, id, title, dp]) => ({ id, title: clean(title), dp: clean(dp), file: `${id.slice(11)}.html`, type: 'detachment' }));
 
 const categories = [...source.matchAll(/<section class="content-group" id="(datasheets-[^"]+|pact-of-decay-datasheets)"[^>]*>\s*<h3 class="category-title">([^<]+)<\/h3>/g)]
   .map(([, id, title]) => {
@@ -70,7 +70,7 @@ function relatedRules() {
   return hydrateTerms(detachments.map(detachment => {
     const slug = detachment.id.slice(11);
     return `<section class="related-detachment" data-detachment="${slug}">
-      <h2>${detachment.title}</h2>
+      <h2>${detachment.title} <span class="detachment-dp">${detachment.dp}</span></h2>
       <div class="related-kind" data-related-kind="stratagems">${extract('section', `${slug}-stratagems`)}</div>
       <div class="related-kind" data-related-kind="enhancements" hidden>${extract('section', `${slug}-enhancements`)}</div>
     </section>`;
@@ -78,7 +78,7 @@ function relatedRules() {
 }
 
 function link(route, active) {
-  return `<a href="./${route.file}"${route.id === active ? ' aria-current="page"' : ''}>${route.title}</a>`;
+  return `<a href="./${route.file}"${route.id === active ? ' aria-current="page"' : ''}>${route.title}${route.dp?` <span class="detachment-dp">${route.dp}</span>`:''}</a>`;
 }
 
 function navigation(route) {
@@ -138,10 +138,10 @@ function page(route) {
   <title>${route.title} &mdash; Death Guard</title>
   <link rel="manifest" href="../../../manifest.webmanifest">
   <link rel="icon" href="../assets/icon-v4.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles/tokens.css?v=10">
-  <link rel="stylesheet" href="../styles/layout.css?v=9">
-  <link rel="stylesheet" href="../styles/navigation.css?v=11">
-  <link rel="stylesheet" href="../styles/content.css?v=35">
+  <link rel="stylesheet" href="../styles/tokens.css?v=11">
+  <link rel="stylesheet" href="../styles/layout.css?v=10">
+  <link rel="stylesheet" href="../styles/navigation.css?v=12">
+  <link rel="stylesheet" href="../styles/content.css?v=36">
   <link rel="stylesheet" href="../styles/popups.css?v=17">
   <link rel="stylesheet" href="../../shared/datasheet-system.css?v=6">
   <link rel="stylesheet" href="./mobile.css?v=8">

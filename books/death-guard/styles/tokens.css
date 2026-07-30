@@ -26,26 +26,6 @@
   --data-size: 14px;
 }
 
-html[data-theme="light"] {
-  color-scheme: light;
-  --bg: #d7d0bc;
-  --underhive: #e7dfca;
-  --panel: #eee6d1;
-  --panel-2: #d8cfb7;
-  --ink: #252820;
-  --muted: #626458;
-  --green: #53663b;
-  --green-deep: #66764b;
-  --bronze: #806947;
-  --bronze-bright: #725836;
-  --pink: #9d2f66;
-  --pink-deep: #711e46;
-  --line: rgba(42, 45, 37, .2);
-  --soft-line: rgba(42, 45, 37, .1);
-  --glass: rgba(238, 230, 209, .96);
-  --shadow: 0 20px 45px rgba(55, 46, 28, .2);
-}
-
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; background: var(--bg); }
 body {

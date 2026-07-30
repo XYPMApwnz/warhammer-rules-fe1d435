@@ -55,7 +55,8 @@ assert.deepEqual(points.detachments.map(item=>[item.title,item.forceDisposition,
   ['Ambush Predators','Disruption',1],['Assimilation Swarm','Priority Assets',2],['Crusher Stampede','Purge the Foe',2],['Invasion Fleet','Take and Hold',3],['Subterranean Assault','Disruption',3],['Synaptic Nexus','Disruption',2],['Talons of the Norn Queen','Take and Hold',1],['Unending Swarm','Take and Hold',2],['Vanguard Onslaught','Reconnaissance',2],['Warrior Bioform Onslaught','Take and Hold',1]
 ]);
 for(const detachment of points.detachments){
-  assert.match(reader,new RegExp(`<span>${detachment.forceDisposition}</span><span>${detachment.detachmentPoints}DP</span>`),`${detachment.title}: MFM metadata is not rendered`);
+  assert.match(reader,new RegExp(`<h3 class="category-title detachment-title">${detachment.title}<span class="detachment-dp">${detachment.detachmentPoints}DP</span></h3>`),`${detachment.title}: DP is not rendered beside the title`);
+  assert.match(reader,new RegExp(`<span>${detachment.forceDisposition}</span>`),`${detachment.title}: Force Disposition is not rendered`);
 }
 const renderedEnhancements=[...pack.detachments,...codexParity.detachments].flatMap(item=>item.enhancements||[]);
 for(const enhancement of points.enhancements){

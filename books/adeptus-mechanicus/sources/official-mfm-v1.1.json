@@ -38,6 +38,18 @@
     "Technoarcheologist": {"points":[["1 model",45]]},
     "Thulia Ghuld": {"points":[["1 model",180]]}
   },
+  "detachments": {
+    "Cohort Acquisitus": {"dp":1,"disposition":"Reconnaissance"},
+    "Cohort Cybernetica": {"dp":2,"disposition":"Take and Hold"},
+    "Data-psalm Conclave": {"dp":2,"disposition":"Disruption"},
+    "Eradication Cohort": {"dp":3,"disposition":"Purge the Foe"},
+    "Explorator Maniple": {"dp":2,"disposition":"Priority Assets"},
+    "Haloscreed Battle Clade": {"dp":3,"disposition":"Priority Assets"},
+    "Lords of the Forge": {"dp":1,"disposition":"Priority Assets"},
+    "Luminen Auto-choir": {"dp":1,"disposition":"Disruption"},
+    "Rad-zone Corps": {"dp":2,"disposition":"Take and Hold"},
+    "Skitarii Hunter Cohort": {"dp":2,"disposition":"Reconnaissance"}
+  },
   "enhancements": {
     "Explorator Dispensation": 20,
     "Stealth-screened Cybercanids Upgrade": 15,

@@ -25,6 +25,7 @@ const codexParity=json('content/adeptus-mechanicus-codex-parity.en.json');
 const codexDatasheets=json('content/adeptus-mechanicus-codex-datasheets.en.json');
 const codexWargear=json('content/adeptus-mechanicus-codex-wargear.en.json');
 const currentPoints=json('content/adeptus-mechanicus-points.en.json');
+const officialMfm=json('sources/official-mfm-v1.1.json');
 const relatedRulesConfig=json('content/adeptus-mechanicus-related-rules.en.json');
 const factionDatasheets=new Map(factionRules.datasheets.map(unit=>[unit.id,unit]));
 const mergedDatasheets=codexDatasheets.datasheets.map(unit=>factionDatasheets.has(unit.id)?{...unit,...factionDatasheets.get(unit.id),category:unit.category}:unit);
@@ -50,13 +51,17 @@ const journeyTargets=[...markup.matchAll(/data-journey-target="([^"]+)"/g)].map(
 const localTargets=[...markup.matchAll(/class="local-tab" data-journey-target="([^"]+)"/g)].map(x=>x[1]);
 const depths=[...markup.matchAll(/data-nav-depth="(\d+)"/g)].map(x=>Number(x[1]));
 const topLevelTargets=[...markup.matchAll(/<li data-nav-id="[^"]+" data-nav-depth="1">[\s\S]*?<button class="toc-label" data-nav-target="([^"]+)"/g)].map(x=>x[1]);
-const required=['appHeader','navMenu','navCollapse','backButton','themeButton','tocScrim','tocPanel','tocTree','main','popupLayer'];
+const required=['appHeader','navMenu','navCollapse','backButton','tocScrim','tocPanel','tocTree','main','popupLayer'];
 
 check('source snapshot has all 27 pages',source.meta.pageCount===27&&Object.keys(source.pages).length===27);
 check('source hash is locked',source.meta.sha256==='FC8D366B0615CDE750E01924277D4A42B680639B1BF96E3823E7FCCE11241345'&&source.meta.sha256===rules.source.sha256);
 check('Faction Pack v1.1 metadata is current',rules.source.version==='1.1'&&rules.source.pages===27&&rules.source.legalFrom==='2026-07-22'&&rules.source.file==='sources/adeptus-mechanicus-faction-pack-v1.1.pdf');
 check('canonical content has five detachments',rules.detachments.length===5);
 check('army has ten total detachments',allDetachments.length===10);
+check('official MFM has DP and disposition for every detachment',Object.keys(officialMfm.detachments||{}).length===10&&allDetachments.every(detachment=>{
+  const record=officialMfm.detachments[detachment.title];
+  return Number.isInteger(record?.dp)&&record.dp>0&&Boolean(record.disposition);
+}));
 check('five Codex detachments are restored',codex.detachments.length===5);
 check('Codex parity layer contains full Detachment rules and Enhancements',codexParity.detachments.length===5&&codexParity.detachments.every(detachment=>detachment.rule.text.length>80&&detachment.enhancements.length===4&&detachment.enhancements.every(item=>item.text.length>60)));
 check('every Codex detachment has four enhancements and six stratagems',codex.detachments.every(x=>x.enhancements.length===4&&x.stratagems.length===6));

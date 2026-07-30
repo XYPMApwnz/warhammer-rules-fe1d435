@@ -8,7 +8,6 @@
   const menuButton=document.getElementById('navMenu');
   const collapseButton=document.getElementById('navCollapse');
   const scrim=document.getElementById('tocScrim');
-  const themeButton=document.getElementById('themeButton');
   const dialog=document.getElementById('termDialog');
   const termTitle=document.getElementById('termTitle');
   const termSummary=document.getElementById('termSummary');
@@ -95,11 +94,6 @@
   });
 
   dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
-  themeButton.addEventListener('click',()=>{
-    const light=document.documentElement.dataset.theme!=='light';
-    document.documentElement.dataset.theme=light?'light':'dark';
-    themeButton.textContent=light?'☾':'☼';
-  });
   addEventListener('scroll',()=>{if(!scrollFrame)scrollFrame=requestAnimationFrame(followScroll);},{passive:true});
   addEventListener('resize',()=>{setDrawer(false);measure();},{passive:true});
   panel.setAttribute('aria-hidden',String(mobile()));

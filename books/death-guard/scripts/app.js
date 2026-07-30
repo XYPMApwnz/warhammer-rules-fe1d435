@@ -149,7 +149,6 @@
   const popups=new window.DGPopups(terms,fullEntry);
   const relatedRules=initRelatedRules();
   new window.DGJourney(navigation,popups,null,relatedRules);
-  new window.DGTheme();
   new window.DGTableAccessibility();
   window.DG_APP=Object.freeze({navigation,popups,fullEntry});
   const returnRecord=window.WHGlossaryReturn?.read();

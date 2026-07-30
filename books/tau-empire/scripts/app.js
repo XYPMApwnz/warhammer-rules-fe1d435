@@ -8,7 +8,7 @@
     const records=JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[];record=records.find(item=>item?.id===rosterId);
     roster=record?.sourceText&&window.WHRosterParser?window.WHRosterParser.parse(record.sourceText):record?.roster;
     const labels=(roster?.detachments?.length?roster.detachments.map(item=>item.label):[roster?.detachment]).flatMap(value=>String(value||'').split(/\s*,\s*(?![^()]*\))/)).map(value=>normalize(value.replace(/\s*\([^)]*\)\s*$/,''))).filter(Boolean);
-    const ids=[...document.querySelectorAll('.content-group.detachment')].filter(section=>labels.includes(normalize(section.querySelector('.category-title')?.textContent))).map(section=>section.id.replace(/^detachment-/,''));
+    const ids=[...document.querySelectorAll('.content-group.detachment')].filter(section=>labels.includes(normalize(section.id.replace(/^detachment-/,'')))).map(section=>section.id.replace(/^detachment-/,''));
     rosterGuide=ids.length?{detachmentIds:ids}:null;
   }catch(error){console.warn('T’au roster unavailable',error);}
 
@@ -16,7 +16,7 @@
   window.WHGlossaryAutolink?.apply(documentRoot,'tau-empire');window.WHGlossaryAutolink?.validate(documentRoot,terms);
   const navigation=new window.DGNavigation(),fullEntry=new window.DGFullEntry(window.WH40K_GLOSSARY),popups=new window.DGPopups(terms,fullEntry);
   const relatedRules=window.WHArmyRelatedRules?.install({storageKey:'tau-empire-detachment-filter',rosterGuide});
-  const journey=new window.DGJourney(navigation,popups,null,relatedRules);new window.DGTheme();new window.DGTableAccessibility();
+  const journey=new window.DGJourney(navigation,popups,null,relatedRules);new window.DGTableAccessibility();
   const rosterGuides=document.querySelector('[data-roster-guides]'),viewSwitch=document.querySelector('[data-view-switch]');if(rosterGuides)rosterGuides.hidden=!rosterId;
 
   if(rosterId&&roster?.units?.length){

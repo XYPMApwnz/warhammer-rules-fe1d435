@@ -77,19 +77,19 @@ const APP_SHELL = [
   "./books/shared/roster-parser.js?v=2",
   "./books/shared/roster-enhancements.js?v=3",
   "./books/death-guard/assets/icon-v4.svg",
-  "./books/death-guard/styles/tokens.css?v=10",
-  "./books/death-guard/styles/layout.css?v=9",
-  "./books/death-guard/styles/navigation.css?v=11",
-  "./books/death-guard/styles/content.css?v=35",
+  "./books/death-guard/styles/tokens.css?v=11",
+  "./books/death-guard/styles/layout.css?v=10",
+  "./books/death-guard/styles/navigation.css?v=12",
+  "./books/death-guard/styles/content.css?v=36",
   "./books/death-guard/styles/popups.css?v=17",
   "./books/death-guard/scripts/navigation-controller.js?v=15",
   "./books/death-guard/scripts/roster-filter.js?v=14",
   "./books/death-guard/scripts/popup-controller.js?v=25",
   "./books/death-guard/scripts/full-entry-controller.js?v=8",
   "./books/death-guard/scripts/journey-controller.js?v=12",
-  "./books/death-guard/scripts/ui-controllers.js?v=11",
+  "./books/death-guard/scripts/ui-controllers.js?v=12",
   "./books/death-guard/scripts/related-rules.js?v=9",
-  "./books/death-guard/scripts/app.js?v=33",
+  "./books/death-guard/scripts/app.js?v=34",
   "./books/core-rules/",
   CORE_RULES_FALLBACK,
   "./books/core-rules/reader/styles.css?v=14",
@@ -129,21 +129,21 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/mobile/mobile.js?v=2",
   "./books/adeptus-mechanicus/assets/mechanicus-logo.png",
   "./books/adeptus-mechanicus/assets/mechanicus-cover-800.webp",
-  "./books/adeptus-mechanicus/styles/tokens.css?v=14",
-  "./books/adeptus-mechanicus/styles/mechanicus.css?v=18",
+  "./books/adeptus-mechanicus/styles/tokens.css?v=15",
+  "./books/adeptus-mechanicus/styles/mechanicus.css?v=19",
   "./books/adeptus-mechanicus/scripts/data.js?v=1",
   "./books/adeptus-mechanicus/scripts/faction-ui.js?v=1",
   "./books/adeptus-mechanicus/scripts/related-rules.js?v=9",
   "./books/adeptus-mechanicus/mobile/related-rules.inc?v=2",
   "./books/adeptus-mechanicus/scripts/roster-enhancements.js?v=2",
   "./books/adeptus-mechanicus/scripts/roster-filter.js?v=2",
-  "./books/adeptus-mechanicus/scripts/app.js?v=27"
+  "./books/adeptus-mechanicus/scripts/app.js?v=28"
   ,"./books/tyranids/"
   ,TYRANIDS_ENTRY_FALLBACK
   ,TYRANIDS_DESKTOP_FALLBACK
   ,TYRANIDS_MOBILE_FALLBACK
   ,"./books/tyranids/mobile/index.html"
-  ,"./books/tyranids/styles/tokens.css?v=2"
+  ,"./books/tyranids/styles/tokens.css?v=3"
   ,"./books/tyranids/styles/book.css?v=4"
   ,"./books/tyranids/scripts/data.js?v=2"
   ,"./books/tyranids/scripts/app.js?v=4"
@@ -154,11 +154,11 @@ const APP_SHELL = [
   ,TAU_EMPIRE_ENTRY_FALLBACK
   ,TAU_EMPIRE_DESKTOP_FALLBACK
   ,TAU_EMPIRE_MOBILE_FALLBACK
-  ,"./books/tau-empire/styles/tokens.css?v=2"
+  ,"./books/tau-empire/styles/tokens.css?v=3"
   ,"./books/tau-empire/styles/book.css?v=5"
   ,"./books/tau-empire/assets/tau-empire-cover-800.webp"
   ,"./books/tau-empire/scripts/data.js?v=2"
-  ,"./books/tau-empire/scripts/app.js?v=5"
+  ,"./books/tau-empire/scripts/app.js?v=6"
   ,"./books/tau-empire/scripts/roster-data.js?v=1"
   ,"./books/tau-empire/mobile/mobile.css?v=1"
   ,"./books/tau-empire/mobile/mobile.js?v=2"
@@ -166,36 +166,36 @@ const APP_SHELL = [
   ,"./books/chaos-space-marines/"
   ,CHAOS_SPACE_MARINES_FALLBACK
   ,"./books/chaos-space-marines/mobile/index.html"
-  ,"./books/chaos-space-marines/styles/tokens.css?v=1"
+  ,"./books/chaos-space-marines/styles/tokens.css?v=2"
   ,"./books/chaos-space-marines/styles/book.css?v=2"
   ,"./books/chaos-space-marines/scripts/app.js?v=2"
   ,"./books/orks/"
   ,ORKS_FALLBACK
   ,"./books/orks/mobile/index.html"
-  ,"./books/orks/styles/tokens.css?v=1"
+  ,"./books/orks/styles/tokens.css?v=2"
   ,"./books/orks/styles/book.css?v=2"
   ,"./books/orks/scripts/app.js?v=2"
   ,"./books/emperors-children/"
   ,EMPERORS_CHILDREN_FALLBACK
   ,"./books/emperors-children/mobile/index.html"
-  ,"./books/emperors-children/styles/tokens.css?v=1"
+  ,"./books/emperors-children/styles/tokens.css?v=2"
   ,"./books/emperors-children/styles/book.css?v=2"
   ,"./books/emperors-children/scripts/app.js?v=2"
   ,"./books/space-marines/"
   ,SPACE_MARINES_FALLBACK
   ,"./books/space-marines/mobile/index.html"
-  ,"./books/space-marines/styles/tokens.css?v=1"
+  ,"./books/space-marines/styles/tokens.css?v=2"
   ,"./books/space-marines/styles/book.css?v=2"
   ,"./books/space-marines/scripts/app.js?v=2"
   ,"./books/dark-angels/"
   ,DARK_ANGELS_FALLBACK
   ,"./books/dark-angels/mobile/index.html"
-  ,"./books/dark-angels/styles/tokens.css?v=1"
+  ,"./books/dark-angels/styles/tokens.css?v=2"
   ,"./books/dark-angels/styles/book.css?v=2"
   ,"./books/dark-angels/scripts/app.js?v=2"
   ,"./books/shared/modal-focus.js?v=1"
   ,"./books/shared/army-related-rules.js?v=7"
-  ,"./books/shared/army-book-app.js?v=6"
+  ,"./books/shared/army-book-app.js?v=8"
 ];
 
 function navigationFallback(url) {

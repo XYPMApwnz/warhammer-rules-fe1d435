@@ -84,5 +84,5 @@
     }
     return {state:conditional?'conditional':'no-match',matchedRoleIds:[],reasons:[]};
   }
-  root.WHRelatedRules=Object.freeze({normalize,canonical,match,matches:(eligibility,context)=>match(eligibility,context).state!=='no-match'});
+  root.WHRelatedRules=Object.freeze({enabled:false,normalize,canonical,match,matches:(eligibility,context)=>match(eligibility,context).state!=='no-match'});
 }(typeof window==='undefined'?globalThis:window));

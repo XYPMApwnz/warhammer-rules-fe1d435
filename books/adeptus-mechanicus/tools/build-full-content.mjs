@@ -331,7 +331,7 @@ const releaseHtml=html
   .replace('../../glossary/generated/glossary.en.js"','../../glossary/generated/glossary.en.js?v=3"')
   .replace('<script src="../shared/navigation-targets.js', '<script src="../../glossary-return.js?v=3"></script><script src="../shared/navigation-targets.js')
   .replace('../shared/glossary-autolink.js?v=7','../shared/glossary-autolink.js?v=8')
-  .replace('<script src="./scripts/related-rules.js?v=6">','<script src="../shared/rule-facts.js?v=1"></script><script src="../shared/related-rules-matcher.js?v=3"></script><script src="../shared/modal-focus.js?v=1"></script><script src="./scripts/related-rules.js?v=9">')
+  .replace('<script src="./scripts/related-rules.js?v=6">','<script src="../shared/rule-facts.js?v=1"></script><script src="../shared/related-rules-matcher.js?v=4"></script><script src="../shared/modal-focus.js?v=1"></script><script src="./scripts/related-rules.js?v=10">')
   .replace('popup-controller.js?v=18','popup-controller.js?v=21')
   .replace('ui-controllers.js?v=13','ui-controllers.js?v=14')
   .replace('app.js?v=20','app.js?v=22');

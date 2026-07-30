@@ -16,8 +16,10 @@
   const drawerMedia=window.matchMedia('(max-width: 800px)');
   const unit=document.querySelector('.unit-card');
   const params=new URLSearchParams(location.search);
+  const relatedRulesEnabled=window.WHRelatedRules?.enabled===true;
   let gesture=null,suppressed=null,opener=null,openedByTouch=false,relatedLoaded=false,relatedKind='stratagems';
   let rosterDetachments=[];
+  if(!relatedRulesEnabled)relatedRules?.remove();
 
   if(params.get('roster')&&unit&&window.WHRosterParser&&window.AMRosterEnhancements){
     try{
@@ -47,7 +49,7 @@
   full.addEventListener('click',()=>{const triggers=[...document.querySelectorAll('[data-term]')];window.WHGlossaryReturn?.save({termId:opener?.dataset.term||'',triggerIndex:opener?triggers.indexOf(opener):-1});});
 
   function filterRelated(){
-    if(!relatedContent||!unit)return;
+    if(!relatedRulesEnabled||!relatedContent||!unit)return;
     const selected=relatedDetachment.value,unitProfile=window.AMRelatedRules.profile(unit);
     relatedContent.querySelectorAll('.stratagem,.enhancement').forEach(card=>{
       const result=window.AMRelatedRules.match(card,unitProfile);
@@ -73,7 +75,7 @@
     if(empty){empty.hidden=hasVisible;empty.textContent=`No matching ${relatedKind} for this datasheet.`;}
   }
   async function loadRelated(){
-    if(relatedLoaded)return;
+    if(!relatedRulesEnabled||relatedLoaded)return;
     try{
       const response=await fetch('./related-rules.inc?v=2');if(!response.ok)throw new Error(`HTTP ${response.status}`);
       relatedContent.innerHTML=await response.text();relatedLoaded=true;
@@ -97,9 +99,9 @@
   });
   navButton.addEventListener('click',()=>drawer(!document.body.classList.contains('nav-drawer-open')));scrim.addEventListener('click',()=>drawer(false));
   dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});dialog.addEventListener('close',()=>{if(openedByTouch)requestAnimationFrame(()=>opener?.blur());openedByTouch=false;});
-  if(relatedRules){if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{if(!entries.some(entry=>entry.isIntersecting))return;observer.disconnect();loadRelated();},{rootMargin:'600px 0px'});observer.observe(relatedRules);}else loadRelated();}
-  if(relatedDetachment){try{const saved=localStorage.getItem('adeptus-mechanicus-detachment-filter');if(saved&&relatedDetachment.querySelector(`option[value="${CSS.escape(saved)}"]`))relatedDetachment.value=saved;}catch{}relatedDetachment.addEventListener('change',()=>{try{localStorage.setItem('adeptus-mechanicus-detachment-filter',relatedDetachment.value);}catch{}filterRelated();});filterRelated();}
-  relatedRules?.addEventListener('click',event=>{const tab=event.target.closest('[data-related-tab]');if(tab){relatedKind=tab.dataset.relatedTab;filterRelated();}});
+  if(relatedRulesEnabled&&relatedRules){if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{if(!entries.some(entry=>entry.isIntersecting))return;observer.disconnect();loadRelated();},{rootMargin:'600px 0px'});observer.observe(relatedRules);}else loadRelated();}
+  if(relatedRulesEnabled&&relatedDetachment){try{const saved=localStorage.getItem('adeptus-mechanicus-detachment-filter');if(saved&&relatedDetachment.querySelector(`option[value="${CSS.escape(saved)}"]`))relatedDetachment.value=saved;}catch{}relatedDetachment.addEventListener('change',()=>{try{localStorage.setItem('adeptus-mechanicus-detachment-filter',relatedDetachment.value);}catch{}filterRelated();});filterRelated();}
+  if(relatedRulesEnabled)relatedRules?.addEventListener('click',event=>{const tab=event.target.closest('[data-related-tab]');if(tab){relatedKind=tab.dataset.relatedTab;filterRelated();}});
   drawerMedia.addEventListener?.('change',syncDrawerMode);syncDrawerMode();
   window.WHPageState?.installTermDialog({dialog,triggers:()=>[...document.querySelectorAll('[data-term]')],opener:()=>opener,open:trigger=>showTerm(trigger,false)});
 

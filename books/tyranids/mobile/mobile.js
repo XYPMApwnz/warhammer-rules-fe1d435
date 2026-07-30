@@ -6,7 +6,9 @@
   const viewSwitch=document.querySelector('[data-view-switch]'),relatedRules=document.getElementById('relatedRules');
   const relatedContent=document.getElementById('relatedRulesContent'),relatedDetachment=document.getElementById('relatedDetachment');
   const drawerMedia=matchMedia('(max-width: 800px)'),unit=document.querySelector('.unit-card'),params=new URLSearchParams(location.search);
+  const relatedRulesEnabled=window.WHRelatedRules?.enabled===true;
   let gesture=null,suppressed=null,opener=null,openedByTouch=false,relatedLoaded=false,relatedKind='stratagems';
+  if(!relatedRulesEnabled)relatedRules?.remove();
 
   if(viewSwitch){const destination=new URL(viewSwitch.href);destination.search=params.toString();if(location.hash)destination.hash=location.hash;viewSwitch.href=destination.href;}
   function drawer(open){document.body.classList.toggle('nav-drawer-open',open);navButton.setAttribute('aria-expanded',String(open));nav.setAttribute('aria-hidden',String(!open));scrim.hidden=!open;}
@@ -46,7 +48,7 @@
   });
 
   function filterRelated(){
-    if(!relatedContent||!unit||!relatedLoaded)return;
+    if(!relatedRulesEnabled||!relatedContent||!unit||!relatedLoaded)return;
     const selected=relatedDetachment.value,profile=window.WHArmyRelatedRules.profile(unit);
     relatedContent.querySelectorAll('.stratagem,.enhancement').forEach(card=>{
       const result=window.WHArmyRelatedRules.match(card,profile);
@@ -72,7 +74,7 @@
     if(empty){empty.hidden=hasVisible;empty.textContent=`No matching ${relatedKind} for this datasheet.`;}
   }
   async function loadRelated(){
-    if(relatedLoaded)return;
+    if(!relatedRulesEnabled||relatedLoaded)return;
     try{
       const response=await fetch('./related-rules.inc?v=3');if(!response.ok)throw new Error(`HTTP ${response.status}`);
       relatedContent.innerHTML=await response.text();relatedLoaded=true;filterRelated();
@@ -93,9 +95,9 @@
   });
   navButton.addEventListener('click',()=>drawer(!document.body.classList.contains('nav-drawer-open')));scrim.addEventListener('click',()=>drawer(false));
   dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});dialog.addEventListener('close',()=>{if(openedByTouch)requestAnimationFrame(()=>opener?.blur());openedByTouch=false;});
-  if(relatedRules){if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)){observer.disconnect();loadRelated();}},{rootMargin:'600px 0px'});observer.observe(relatedRules);}else loadRelated();}
-  if(relatedDetachment){try{const saved=localStorage.getItem('tyranids-detachment-filter');if(saved&&relatedDetachment.querySelector(`option[value="${CSS.escape(saved)}"]`))relatedDetachment.value=saved;}catch{}relatedDetachment.addEventListener('change',()=>{try{localStorage.setItem('tyranids-detachment-filter',relatedDetachment.value);}catch{}filterRelated();});}
-  relatedRules?.addEventListener('click',event=>{const tab=event.target.closest('[data-related-tab]');if(tab){relatedKind=tab.dataset.relatedTab;filterRelated();}});
+  if(relatedRulesEnabled&&relatedRules){if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)){observer.disconnect();loadRelated();}},{rootMargin:'600px 0px'});observer.observe(relatedRules);}else loadRelated();}
+  if(relatedRulesEnabled&&relatedDetachment){try{const saved=localStorage.getItem('tyranids-detachment-filter');if(saved&&relatedDetachment.querySelector(`option[value="${CSS.escape(saved)}"]`))relatedDetachment.value=saved;}catch{}relatedDetachment.addEventListener('change',()=>{try{localStorage.setItem('tyranids-detachment-filter',relatedDetachment.value);}catch{}filterRelated();});}
+  if(relatedRulesEnabled)relatedRules?.addEventListener('click',event=>{const tab=event.target.closest('[data-related-tab]');if(tab){relatedKind=tab.dataset.relatedTab;filterRelated();}});
   drawerMedia.addEventListener?.('change',syncDrawerMode);syncDrawerMode();
   window.WHPageState?.installTermDialog({dialog,triggers,opener:()=>opener,open:trigger=>showTerm(trigger,false)});
   const returnRecord=window.WHGlossaryReturn.read();

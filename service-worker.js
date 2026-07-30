@@ -73,7 +73,7 @@ const APP_SHELL = [
   "./books/shared/popup-content.js?v=3",
   "./books/shared/glossary-autolink.js?v=8",
   "./books/shared/rule-facts.js?v=1",
-  "./books/shared/related-rules-matcher.js?v=3",
+  "./books/shared/related-rules-matcher.js?v=4",
   "./books/shared/roster-entities.js?v=1",
   "./books/shared/roster-parser.js?v=2",
   "./books/shared/roster-enhancements.js?v=3",
@@ -89,7 +89,7 @@ const APP_SHELL = [
   "./books/death-guard/scripts/full-entry-controller.js?v=9",
   "./books/death-guard/scripts/journey-controller.js?v=13",
   "./books/death-guard/scripts/ui-controllers.js?v=12",
-  "./books/death-guard/scripts/related-rules.js?v=9",
+  "./books/death-guard/scripts/related-rules.js?v=10",
   "./books/death-guard/scripts/app.js?v=34",
   "./books/core-rules/",
   CORE_RULES_FALLBACK,
@@ -127,14 +127,14 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/reader.html",
   "./books/adeptus-mechanicus/mobile/index.html",
   "./books/adeptus-mechanicus/mobile/mobile.css?v=1",
-  "./books/adeptus-mechanicus/mobile/mobile.js?v=3",
+  "./books/adeptus-mechanicus/mobile/mobile.js?v=4",
   "./books/adeptus-mechanicus/assets/mechanicus-logo.png",
   "./books/adeptus-mechanicus/assets/mechanicus-cover-800.webp",
   "./books/adeptus-mechanicus/styles/tokens.css?v=15",
   "./books/adeptus-mechanicus/styles/mechanicus.css?v=19",
   "./books/adeptus-mechanicus/scripts/data.js?v=1",
   "./books/adeptus-mechanicus/scripts/faction-ui.js?v=1",
-  "./books/adeptus-mechanicus/scripts/related-rules.js?v=9",
+  "./books/adeptus-mechanicus/scripts/related-rules.js?v=10",
   "./books/adeptus-mechanicus/mobile/related-rules.inc?v=2",
   "./books/adeptus-mechanicus/scripts/roster-enhancements.js?v=2",
   "./books/adeptus-mechanicus/scripts/roster-filter.js?v=2",
@@ -149,7 +149,7 @@ const APP_SHELL = [
   ,"./books/tyranids/scripts/data.js?v=2"
   ,"./books/tyranids/scripts/app.js?v=4"
   ,"./books/tyranids/mobile/mobile.css?v=1"
-  ,"./books/tyranids/mobile/mobile.js?v=3"
+  ,"./books/tyranids/mobile/mobile.js?v=4"
   ,"./glossary/generated/glossary.en.js?v=tyranids-1"
   ,"./books/tau-empire/"
   ,TAU_EMPIRE_ENTRY_FALLBACK
@@ -162,7 +162,7 @@ const APP_SHELL = [
   ,"./books/tau-empire/scripts/app.js?v=6"
   ,"./books/tau-empire/scripts/roster-data.js?v=1"
   ,"./books/tau-empire/mobile/mobile.css?v=1"
-  ,"./books/tau-empire/mobile/mobile.js?v=3"
+  ,"./books/tau-empire/mobile/mobile.js?v=4"
   ,"./books/shared/book-roster-enhancements.js?v=1"
   ,"./books/chaos-space-marines/"
   ,CHAOS_SPACE_MARINES_FALLBACK
@@ -195,7 +195,7 @@ const APP_SHELL = [
   ,"./books/dark-angels/styles/book.css?v=2"
   ,"./books/dark-angels/scripts/app.js?v=2"
   ,"./books/shared/modal-focus.js?v=1"
-  ,"./books/shared/army-related-rules.js?v=7"
+  ,"./books/shared/army-related-rules.js?v=8"
   ,"./books/shared/army-book-app.js?v=9"
 ];
 

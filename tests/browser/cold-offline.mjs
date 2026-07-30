@@ -59,53 +59,23 @@ try{
   try{
     const {page,errors}=await observedPage(modalContext);
     const books=[
-      ['Adeptus Mechanicus','/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers','#unit-skitarii-rangers'],
-      ['Tyranids','/books/tyranids/reader.html#unit-hive-tyrant','#unit-hive-tyrant'],
-      ["T'au Empire",'/books/tau-empire/reader.html#unit-breacher-team','#unit-breacher-team']
+      ['Death Guard','/books/death-guard/reader.html#unit-chaos-land-raider','/books/death-guard/mobile/chaos-land-raider.html','/books/death-guard/mobile/virulent-vectorium.html'],
+      ['Adeptus Mechanicus','/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers','/books/adeptus-mechanicus/mobile/skitarii-rangers.html','/books/adeptus-mechanicus/mobile/cohort-acquisitus.html'],
+      ['Tyranids','/books/tyranids/reader.html#unit-hive-tyrant','/books/tyranids/mobile/hive-tyrant.html','/books/tyranids/mobile/invasion-fleet.html'],
+      ["T'au Empire",'/books/tau-empire/reader.html#unit-breacher-team','/books/tau-empire/mobile/breacher-team.html','/books/tau-empire/mobile/kauyon.html']
     ];
-    for(const [name,url,unitSelector] of books){
-      await page.goto(origin+url);
-      assert.equal(await page.evaluate(selector=>{
-        const unit=document.querySelector(selector),api=window.AMRelatedRules||window.WHArmyRelatedRules;
-        const actual=api.profile(unit),expected=window.WHRuleFacts.profileFromDataset(unit.dataset,{id:unit.id});
-        const values=set=>[...(set||[])].sort().join('|'),candidateValues=profile=>(profile.candidates||[]).map(item=>values(item.keywords)).join('||');
-        return values(actual.keywords)===values(expected.keywords)&&candidateValues(actual)===candidateValues(expected);
-      },unitSelector),true,`${name} production profile must use the shared facts adapter`);
-      const trigger=page.locator(`${unitSelector} .related-rules-trigger`);
-      await trigger.scrollIntoViewIfNeeded();
-      await trigger.click();
-      await page.waitForFunction(()=>document.activeElement?.classList.contains('related-rules-close'));
-      assert.equal(await page.evaluate(()=>[...document.body.children].filter(node=>!node.matches('.related-rules-layer,.popup-layer,.full-entry-layer')).every(node=>node.inert)),true,`${name} background must be inert`);
-      for(let index=0;index<20;index+=1)await page.keyboard.press('Tab');
-      assert.equal(await page.evaluate(()=>document.querySelector('.related-rules-layer').contains(document.activeElement)),true,`${name} Tab focus must remain in dialog`);
-      await page.keyboard.press('Shift+Tab');
-      assert.equal(await page.evaluate(()=>document.querySelector('.related-rules-layer').contains(document.activeElement)),true,`${name} Shift+Tab focus must remain in dialog`);
-      await page.keyboard.press('Escape');
-      assert.equal(await trigger.evaluate(node=>node===document.activeElement),true,`${name} Escape must restore the trigger`);
-
-      await trigger.click();
-      await page.locator('.related-rules-close').click();
-      assert.equal(await trigger.evaluate(node=>node===document.activeElement),true,`${name} close button must restore the trigger`);
-
-      await trigger.click();
-      await page.locator('.related-rules-layer').evaluate(node=>node.click());
-      assert.equal(await trigger.evaluate(node=>node===document.activeElement),true,`${name} backdrop must restore the trigger`);
-      assert.equal(await page.evaluate(()=>[...document.body.children].some(node=>node.inert)),false,`${name} close must clear inert`);
+    for(const [name,desktop,mobile,detachment] of books){
+      await page.goto(origin+desktop);
+      assert.equal(await page.evaluate(()=>window.WHRelatedRules?.enabled),false,`${name} shared safety flag must be disabled`);
+      assert.equal(await page.locator('.related-rules-trigger,.related-rules-layer').count(),0,`${name} desktop Compatible Rules must not be installed`);
+      assert.ok(await page.locator('[id$="-stratagems"] .stratagem').count(),`${name} full Detachment Stratagems must remain available`);
+      await page.goto(origin+mobile);
+      assert.equal(await page.locator('#relatedRules').count(),0,`${name} Phone Mode Compatible Rules must be removed`);
+      await page.goto(origin+detachment);
+      assert.ok(await page.locator('.stratagem').count(),`${name} Phone Mode Detachment Stratagems must remain available`);
     }
-    await page.goto(`${origin}/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers`);
-    const journeyTrigger=page.locator('#unit-skitarii-rangers .related-rules-trigger');
-    await journeyTrigger.click();
-    await page.locator('.related-rules-layer [data-term]:visible').first().click();
-    const journeyAction=page.locator('#popupLayer [data-journey-target]').first();
-    await journeyAction.waitFor();
-    const actionKey=await journeyAction.getAttribute('data-action-key');
-    await journeyAction.click();
-    await page.goBack();
-    await page.waitForFunction(key=>document.activeElement?.dataset.actionKey===key,actionKey);
-    assert.equal(await page.locator('.related-rules-layer').isVisible(),true,'Journey Back must restore Related Rules');
-    assert.equal(await page.evaluate(()=>document.querySelector('.related-rules-layer').contains(document.activeElement)||document.querySelector('#popupLayer').contains(document.activeElement)),true,'Journey Back must restore focus inside the Related Rules journey');
     assert.deepEqual(errors,[]);
-    console.log('PASS Related Rules modal focus, trap, inert, close restore and Journey Back');
+    console.log('PASS Compatible Rules safety flag hides all four embedded desktop and Phone Mode interfaces');
   }finally{await modalContext.close();}
 
   const historyContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1194,height:834}});

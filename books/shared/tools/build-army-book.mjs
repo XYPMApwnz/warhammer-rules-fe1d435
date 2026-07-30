@@ -200,7 +200,7 @@ const normalizedHtml=html
   .replace('../shared/popup-content.js"','../shared/popup-content.js?v=3"')
   .replace('../shared/glossary-autolink.js"','../shared/glossary-autolink.js?v=8"')
   .replace('<script src="../shared/related-rules-matcher.js">','<script src="../shared/rule-facts.js?v=1"></script><script src="../shared/related-rules-matcher.js">')
-  .replace('../shared/related-rules-matcher.js"',`../shared/related-rules-matcher.js?v=${publishedEnhancementContracts.has(config.id)?3:2}"`)
+  .replace('../shared/related-rules-matcher.js"',`../shared/related-rules-matcher.js?v=${publishedEnhancementContracts.has(config.id)?4:2}"`)
   .replace('<script src="./scripts/data.js">',`${config.rosterSupport?'<script src="../shared/roster-parser.js?v=2"></script><script src="../shared/roster-entities.js?v=1"></script>':''}<script src="./scripts/data.js">`)
   .replace('</script><script src="../death-guard/scripts/navigation-controller.js">',`</script>${config.rosterSupport?'<script src="./scripts/roster-data.js?v=1"></script><script src="../shared/book-roster-enhancements.js?v=1"></script>':''}<script src="../death-guard/scripts/navigation-controller.js">`)
   .replace('../death-guard/scripts/navigation-controller.js"','../death-guard/scripts/navigation-controller.js?v=16"')
@@ -211,7 +211,7 @@ const normalizedHtml=html
   .replace('../../glossary/generated/glossary.en.js','../../glossary/generated/glossary.en.js?v=tyranids-1')
   .replace('./scripts/data.js','./scripts/data.js?v=2')
   .replace('<script src="../shared/army-related-rules.js"></script>','<script src="../shared/modal-focus.js?v=1"></script><script src="../shared/army-related-rules.js"></script>')
-  .replace('../shared/army-related-rules.js',`../shared/army-related-rules.js?v=${publishedEnhancementContracts.has(config.id)?7:5}`)
+  .replace('../shared/army-related-rules.js',`../shared/army-related-rules.js?v=${publishedEnhancementContracts.has(config.id)?8:5}`)
   .replace('../shared/army-book-app.js','../shared/army-book-app.js?v=9')
   .replace('./scripts/app.js',`./scripts/app.js?v=${config.dedicatedMobile?'3':'2'}`);
 const coveredHtml=config.coverImage?normalizedHtml.replace('class="hero section surface faction-hero"','class="hero section surface faction-hero faction-hero-cover"'):normalizedHtml;

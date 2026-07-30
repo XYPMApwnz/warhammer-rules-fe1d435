@@ -84,5 +84,5 @@
   }
   const matches=(card,unitRoot)=>match(card,unitRoot).state!=='no-match';
 
-  window.DGRelatedRules=Object.freeze({enabled:false,profile,match,matches,grantedKeywords,eligibilityByRule});
+  window.DGRelatedRules=Object.freeze({enabled:window.WHRelatedRules?.enabled===true,profile,match,matches,grantedKeywords,eligibilityByRule});
 }());

@@ -9,7 +9,7 @@ for(const file of files){
   assert.match(html,/\.\/mobile\.js\?v=2/);
   assert.match(html,/\.\/mobile\.css\?v=1/);
   assert.match(html,/related-rules-matcher\.js\?v=3/);
-  assert.match(html,/army-related-rules\.js\?v=6/);
+  assert.match(html,/army-related-rules\.js\?v=7/);
   assert.match(html,/glossary-return\.js\?v=2/);
   assert.match(html,/roster-parser\.js\?v=2/);
   assert.match(html,/roster-data\.js\?v=1/);

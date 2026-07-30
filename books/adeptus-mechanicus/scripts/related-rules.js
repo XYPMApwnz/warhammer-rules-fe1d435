@@ -38,6 +38,7 @@
     document.body.append(layer);
     const body=layer.querySelector('.related-rules-body'),title=layer.querySelector('h2');
     let unit=null,kind='stratagems',detachment='all',filterMenu,tabs,content,empty,sections=[];
+    let modal;
     const filter=()=>{
       if(!content||!unit)return;
       const unitProfile=profile(unit);
@@ -68,16 +69,16 @@
       empty.hidden=hasVisible;
       empty.textContent=`No matching ${kind} for this datasheet in the selected Detachments.`;
     };
-    const close=()=>{layer.hidden=true;document.documentElement.classList.remove('related-rules-open');};
+    const close=()=>{if(layer.hidden)return;layer.hidden=true;document.documentElement.classList.remove('related-rules-open');modal.deactivate();};
+    modal=root.WHModalFocus.create(layer,close);
     layer.addEventListener('click',event=>{
       if(event.target===layer||event.target.closest('.related-rules-close'))close();
       const tab=event.target.closest('[data-kind]');if(tab){kind=tab.dataset.kind;filter();}
     });
-    document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!layer.hidden)close();});
     async function open(current,state={}){
       if(!current)return null;
       unit=current;layer.dataset.unitId=current.id;kind=state.kind||'stratagems';title.textContent=`${current.dataset.unitTitle||current.querySelector('.unit-name,h3')?.textContent.trim()||'Datasheet'} · Compatible Stratagems & Enhancements`;
-      layer.hidden=false;document.documentElement.classList.add('related-rules-open');
+      layer.hidden=false;document.documentElement.classList.add('related-rules-open');modal.activate(current.querySelector('.related-rules-trigger'));
       if(!content){
         try{
           const template=await getTemplate(),fragment=template.content.cloneNode(true);
@@ -116,7 +117,7 @@
       filter();
       if(filterMenu)filterMenu.querySelector('summary span').textContent=filterMenu.querySelector('[data-detachment="'+CSS.escape(detachment)+'"]')?.textContent||filterMenu.querySelector('summary span').textContent;
       layer.querySelector('.related-rules-dialog').scrollTop=state.scrollTop||0;
-      layer.querySelector('.related-rules-close').focus();
+      modal.focusFirst();
       return layer;
     }
     for(const current of document.querySelectorAll('.unit-card')){

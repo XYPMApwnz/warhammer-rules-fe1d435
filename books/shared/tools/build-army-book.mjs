@@ -207,7 +207,8 @@ const normalizedHtml=html
   .replace('../death-guard/scripts/ui-controllers.js"','../death-guard/scripts/ui-controllers.js?v=11"')
   .replace('../../glossary/generated/glossary.en.js','../../glossary/generated/glossary.en.js?v=tyranids-1')
   .replace('./scripts/data.js','./scripts/data.js?v=2')
-  .replace('../shared/army-related-rules.js',`../shared/army-related-rules.js?v=${publishedEnhancementContracts.has(config.id)?6:5}`)
+  .replace('<script src="../shared/army-related-rules.js"></script>','<script src="../shared/modal-focus.js?v=1"></script><script src="../shared/army-related-rules.js"></script>')
+  .replace('../shared/army-related-rules.js',`../shared/army-related-rules.js?v=${publishedEnhancementContracts.has(config.id)?7:5}`)
   .replace('../shared/army-book-app.js',`../shared/army-book-app.js?v=${config.dedicatedMobile?'7':'6'}`)
   .replace('./scripts/app.js',`./scripts/app.js?v=${config.dedicatedMobile?'3':'2'}`);
 const finalHtml=config.dedicatedMobile?normalizedHtml

@@ -17,6 +17,7 @@
     document.body.append(layer);
     const body=layer.querySelector('.related-rules-body'),title=layer.querySelector('h2');
     let unit=null,kind='stratagems',detachment='all',filterMenu,tabs,content,empty,sections;
+    let modal;
     const filter=()=>{
       if(!content||!unit)return;
       const unitProfile=window.DGRelatedRules.profile(unit);
@@ -46,15 +47,15 @@
       const hasVisibleRules=sections.some(section=>!section.hidden);
       empty.hidden=hasVisibleRules;empty.textContent='No matching '+kind+' for this datasheet in the selected roster Detachments.';
     };
-    const close=()=>{layer.hidden=true;document.documentElement.classList.remove('related-rules-open');};
+    const close=()=>{if(layer.hidden)return;layer.hidden=true;document.documentElement.classList.remove('related-rules-open');modal.deactivate();};
+    modal=window.WHModalFocus.create(layer,close);
     layer.addEventListener('click',event=>{
       if(event.target===layer||event.target.closest('.related-rules-close'))close();
       const button=event.target.closest('[data-kind]');if(button){kind=button.dataset.kind;filter();}
     });
-    document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!layer.hidden)close();});
     async function open(current,state={}){
       unit=current;layer.dataset.unitId=current.id;kind=state.kind||'stratagems';title.textContent=`${current.querySelector('.unit-name')?.textContent.trim()||'Datasheet'} · Compatible Stratagems & Enhancements`;
-      layer.hidden=false;document.documentElement.classList.add('related-rules-open');
+      layer.hidden=false;document.documentElement.classList.add('related-rules-open');modal.activate(current.querySelector('.related-rules-trigger'));
       if(!content){
         try{
           const template=await getRelatedRulesTemplate(),fragment=template.content.cloneNode(true);
@@ -87,6 +88,7 @@
       filter();
       if(filterMenu)filterMenu.querySelector('summary span').textContent=filterMenu.querySelector('[data-detachment="'+CSS.escape(detachment)+'"]')?.textContent||filterMenu.querySelector('summary span').textContent;
       layer.querySelector('.related-rules-dialog').scrollTop=state.scrollTop||0;
+      modal.focusFirst();
     }
     for(const current of document.querySelectorAll('.unit-card')){
       const keywords=[...current.querySelectorAll('.unit-part')].find(part=>part.id.endsWith('-keywords'));

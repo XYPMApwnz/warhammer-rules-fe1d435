@@ -88,8 +88,8 @@ const APP_SHELL = [
   "./books/death-guard/scripts/full-entry-controller.js?v=8",
   "./books/death-guard/scripts/journey-controller.js?v=12",
   "./books/death-guard/scripts/ui-controllers.js?v=11",
-  "./books/death-guard/scripts/related-rules.js?v=8",
-  "./books/death-guard/scripts/app.js?v=32",
+  "./books/death-guard/scripts/related-rules.js?v=9",
+  "./books/death-guard/scripts/app.js?v=33",
   "./books/core-rules/",
   CORE_RULES_FALLBACK,
   "./books/core-rules/reader/styles.css?v=14",
@@ -133,7 +133,7 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/styles/mechanicus.css?v=18",
   "./books/adeptus-mechanicus/scripts/data.js?v=1",
   "./books/adeptus-mechanicus/scripts/faction-ui.js?v=1",
-  "./books/adeptus-mechanicus/scripts/related-rules.js?v=8",
+  "./books/adeptus-mechanicus/scripts/related-rules.js?v=9",
   "./books/adeptus-mechanicus/mobile/related-rules.inc?v=2",
   "./books/adeptus-mechanicus/scripts/roster-enhancements.js?v=2",
   "./books/adeptus-mechanicus/scripts/roster-filter.js?v=2",
@@ -192,7 +192,8 @@ const APP_SHELL = [
   ,"./books/dark-angels/styles/tokens.css?v=1"
   ,"./books/dark-angels/styles/book.css?v=2"
   ,"./books/dark-angels/scripts/app.js?v=2"
-  ,"./books/shared/army-related-rules.js?v=6"
+  ,"./books/shared/modal-focus.js?v=1"
+  ,"./books/shared/army-related-rules.js?v=7"
   ,"./books/shared/army-book-app.js?v=6"
 ];
 

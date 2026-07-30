@@ -55,6 +55,54 @@ const control=async page=>{
 };
 
 try{
+  const modalContext=await browser.newContext({serviceWorkers:'block'});
+  try{
+    const {page,errors}=await observedPage(modalContext);
+    const books=[
+      ['Death Guard','/books/death-guard/reader.html#unit-plague-marines','#unit-plague-marines'],
+      ['Adeptus Mechanicus','/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers','#unit-skitarii-rangers'],
+      ['Tyranids','/books/tyranids/reader.html#unit-hive-tyrant','#unit-hive-tyrant'],
+      ["T'au Empire",'/books/tau-empire/reader.html#unit-breacher-team','#unit-breacher-team']
+    ];
+    for(const [name,url,unitSelector] of books){
+      await page.goto(origin+url);
+      const trigger=page.locator(`${unitSelector} .related-rules-trigger`);
+      await trigger.scrollIntoViewIfNeeded();
+      await trigger.click();
+      await page.waitForFunction(()=>document.activeElement?.classList.contains('related-rules-close'));
+      assert.equal(await page.evaluate(()=>[...document.body.children].filter(node=>!node.matches('.related-rules-layer,.popup-layer,.full-entry-layer')).every(node=>node.inert)),true,`${name} background must be inert`);
+      for(let index=0;index<20;index+=1)await page.keyboard.press('Tab');
+      assert.equal(await page.evaluate(()=>document.querySelector('.related-rules-layer').contains(document.activeElement)),true,`${name} Tab focus must remain in dialog`);
+      await page.keyboard.press('Shift+Tab');
+      assert.equal(await page.evaluate(()=>document.querySelector('.related-rules-layer').contains(document.activeElement)),true,`${name} Shift+Tab focus must remain in dialog`);
+      await page.keyboard.press('Escape');
+      assert.equal(await trigger.evaluate(node=>node===document.activeElement),true,`${name} Escape must restore the trigger`);
+
+      await trigger.click();
+      await page.locator('.related-rules-close').click();
+      assert.equal(await trigger.evaluate(node=>node===document.activeElement),true,`${name} close button must restore the trigger`);
+
+      await trigger.click();
+      await page.locator('.related-rules-layer').evaluate(node=>node.click());
+      assert.equal(await trigger.evaluate(node=>node===document.activeElement),true,`${name} backdrop must restore the trigger`);
+      assert.equal(await page.evaluate(()=>[...document.body.children].some(node=>node.inert)),false,`${name} close must clear inert`);
+    }
+    await page.goto(`${origin}/books/death-guard/reader.html#unit-plague-marines`);
+    const journeyTrigger=page.locator('#unit-plague-marines .related-rules-trigger');
+    await journeyTrigger.click();
+    await page.locator('.related-rules-layer [data-term]:visible').first().click();
+    const journeyAction=page.locator('#popupLayer [data-journey-target]').first();
+    await journeyAction.waitFor();
+    const actionKey=await journeyAction.getAttribute('data-action-key');
+    await journeyAction.click();
+    await page.locator('#backButton').click();
+    await page.waitForFunction(key=>document.activeElement?.dataset.actionKey===key,actionKey);
+    assert.equal(await page.locator('.related-rules-layer').isVisible(),true,'Journey Back must restore Related Rules');
+    assert.equal(await page.evaluate(()=>document.querySelector('.related-rules-layer').contains(document.activeElement)||document.querySelector('#popupLayer').contains(document.activeElement)),true,'Journey Back must restore focus inside the Related Rules journey');
+    assert.deepEqual(errors,[]);
+    console.log('PASS Related Rules modal focus, trap, inert, close restore and Journey Back');
+  }finally{await modalContext.close();}
+
   const wargearContext=await browser.newContext({serviceWorkers:'block'});
   try{
     const {page,errors}=await observedPage(wargearContext);

@@ -23,6 +23,10 @@ assert.ok(!dg.includes('data-nav-target="core-stratagems"'),'Death Guard Content
 assert.ok(dg.includes('id="core-stratagems"'),'Death Guard Core Stratagems source was removed');
 assert.ok(text('books/death-guard/mobile/related-rules.inc').includes('id="core-stratagems"'),'Death Guard datasheet Related Rules lost Core Stratagems');
 
+const library=text('index.html');
+assert.ok(library.includes('.faction-group .cover{height:auto}'),'Library army covers must preserve their natural portrait height');
+assert.ok(library.includes('.faction-group .cover img{height:auto;object-fit:contain}'),'Library army cover art must never be cropped');
+
 for(const [book,count] of [['death-guard',9],['adeptus-mechanicus',10],['tyranids',10],['tau-empire',7]]){
   const desktop=text(`books/${book}/reader.html`);
   const headings=[...desktop.matchAll(/<section class="content-group detachment"[^>]*>[\s\S]*?<h3 class="category-title detachment-title">[\s\S]*?<span class="detachment-dp">([1-9]\d*)DP<\/span><\/h3>/g)];

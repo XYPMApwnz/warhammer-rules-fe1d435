@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {buildRelationGraphs} from '../../shared/tools/build-relation-graph.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const readJson=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
@@ -49,25 +50,19 @@ const unitTitleKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,
 const unitByTitle=new Map(rules.datasheets.map(unit=>[unitTitleKey(unit.title),unit]));
 const attachments=[];
 for(const leader of rules.datasheets){
-  const text=(leader.abilities||[]).filter(ability=>/^(leader|support)$/i.test(ability.title)).map(abilityText).join(' ');
-  if(!text)continue;
-  for(const bodyguard of rules.datasheets)if(bodyguard!==leader&&text.toLowerCase().includes(bodyguard.title.toLowerCase()))attachments.push([leader.id,bodyguard.id]);
+  for(const ability of (leader.abilities||[]).filter(ability=>/^(leader|support)$/i.test(ability.title))){
+    const text=abilityText(ability);if(!text)continue;
+    for(const bodyguard of rules.datasheets)if(bodyguard!==leader&&text.toLowerCase().includes(bodyguard.title.toLowerCase()))attachments.push({role:ability.title.toLowerCase(),sourceId:leader.id,targetId:bodyguard.id});
+  }
 }
 for(const bodyguard of rules.datasheets){
   const text=[bodyguard.composition||'',...(bodyguard.abilities||[]).filter(ability=>/^attached unit$/i.test(ability.title)).map(ability=>ability.text||'')].join(' ');
   const proxy=[...unitByTitle.values()].find(unit=>text.toLowerCase().includes(unit.title.toLowerCase()));
-  if(proxy)for(const [leaderId,bodyguardId] of [...attachments])if(bodyguardId===proxy.id)attachments.push([leaderId,bodyguard.id]);
+  if(proxy)for(const edge of [...attachments])if(edge.targetId===proxy.id)attachments.push({...edge,targetId:bodyguard.id});
 }
 const unitById=new Map(rules.datasheets.map(unit=>[unit.id,unit]));
-const relatedCandidatesByUnit=new Map(rules.datasheets.map(unit=>[unit.id,unit.id==='unit-cybernetica-datasmith'?[]:[{unitId:unit.id,keywords:unit.keywords,attached:false,attachmentKnown:true,characterCount:unit.keywords.includes('Character')?1:0,warlord:null}]]));
-const uniqueAttachments=[...new Map(attachments.map(pair=>[pair.join('\0'),pair])).values()];
-for(const [leaderId,bodyguardId] of uniqueAttachments){
-  const leader=unitById.get(leaderId),bodyguard=unitById.get(bodyguardId);if(!leader||!bodyguard)continue;
-  const keywords=new Set([...leader.keywords,...bodyguard.keywords]);
-  if(leaderId==='unit-cybernetica-datasmith'&&bodyguardId==='unit-kastelan-robots')keywords.delete('Infantry');
-  const candidate={unitId:bodyguardId,keywords:[...keywords],attached:true,attachmentKnown:true,characterCount:[leader,bodyguard].filter(unit=>unit.keywords.includes('Character')).length,warlord:null};
-  relatedCandidatesByUnit.get(leaderId).push(candidate);relatedCandidatesByUnit.get(bodyguardId).push(candidate);
-}
+for(const edge of attachments)if(edge.sourceId==='unit-cybernetica-datasmith'&&edge.targetId==='unit-kastelan-robots')Object.assign(edge,{mandatory:true,removeKeywords:['INFANTRY']});
+const relationGraphs=buildRelationGraphs(rules.datasheets,attachments);
 const officialOrder=['detachment-cohort-acquisitus','detachment-lords-of-the-forge','detachment-luminen-auto-choir','detachment-cohort-cybernetica','detachment-data-psalm-conclave','detachment-eradication-cohort','detachment-explorator-maniple','detachment-haloscreed-battle-clade','detachment-rad-zone-corps','detachment-skitarii-hunter-cohort'];
 const mfmDetachments=new Map(Object.entries(officialMfm.detachments||{}).map(([title,value])=>[titleKey(title),value]));
 const allDetachments=[...rules.detachments,...codex.detachments].map(detachment=>{
@@ -309,8 +304,9 @@ const unitCard=unit=>{
     return [/^deadly demise\b/i.test(item.title)?'DEADLY DEMISE':item.title];
   });
   const renderedTermIds=[...sections.matchAll(/data-term="([^"]+)"/g)].map(match=>match[1]);
-  const ruleFacts={id:unit.id,unitId:unit.id,slug,keywords:unit.keywords,intrinsicKeywords:unit.keywords,abilities:[...new Set(abilityNames)],termIds:[...new Set(renderedTermIds)],epic:unit.keywords.includes('Epic Hero'),deadlyDemise,attached:null,twoCharacters:null,warlord:null,candidates:relatedCandidatesByUnit.get(unit.id)};
-  return `<article class="unit-card surface${unit.status==='Warhammer Legends'?' legends-card':''}" id="${unit.id}" data-track="${unit.id}" data-unit-title="${esc(unit.title)}" data-keywords="${esc(unit.keywords.join('|'))}" data-related-candidates="${esc(JSON.stringify(relatedCandidatesByUnit.get(unit.id)))}" data-rule-facts="${esc(JSON.stringify(ruleFacts))}"><div class="unit-header"><div><div class="eyebrow">${esc(unit.status)}</div><h3>${esc(unit.title)}</h3></div><div class="unit-status">${unit.status==='Warhammer Legends'?'LEGENDS':points?`${esc(points)} PTS`:'CODEX'}</div></div><div class="local-nav">${tabs}</div>${sections}${provenance}</article>`;
+  const relations=relationGraphs.get(unit.id),mandatory=Object.values(relations).flat().some(relation=>relation.mandatory),canAttach=Object.values(relations).some(items=>items.length);
+  const ruleFacts={id:unit.id,unitId:unit.id,slug,keywords:unit.keywords,intrinsicKeywords:unit.keywords,abilities:[...new Set(abilityNames)],termIds:[...new Set(renderedTermIds)],epic:unit.keywords.includes('Epic Hero'),deadlyDemise,attached:mandatory?true:canAttach?null:false,attachmentKnown:mandatory||!canAttach,formationRequired:mandatory,characterCount:unit.keywords.includes('Character')?1:0,twoCharacters:null,warlord:null,relations};
+  return `<article class="unit-card surface${unit.status==='Warhammer Legends'?' legends-card':''}" id="${unit.id}" data-track="${unit.id}" data-unit-title="${esc(unit.title)}" data-keywords="${esc(unit.keywords.join('|'))}" data-rule-facts="${esc(JSON.stringify(ruleFacts))}"><div class="unit-header"><div><div class="eyebrow">${esc(unit.status)}</div><h3>${esc(unit.title)}</h3></div><div class="unit-status">${unit.status==='Warhammer Legends'?'LEGENDS':points?`${esc(points)} PTS`:'CODEX'}</div></div><div class="local-nav">${tabs}</div>${sections}${provenance}</article>`;
 };
 const datasheetGroups=datasheetCategories.map(group=>tracked(group.id,group.title,`<p class="lead">${group.units.length} datasheet${group.units.length===1?'':'s'} in this category.</p>${group.units.map(unitCard).join('')}`)).join('');
 const glossaryGroup=(id,title,terms)=>tracked(id,title,`<div class="glossary-grid">${terms.map(term=>`<article class="glossary-card surface" id="glossary-${term.id}" data-glossary-title="${esc(term.title)}"><h4>${esc(term.title)}</h4><p>${esc(cleanText(term.summary))}</p><p class="glossary-full">${esc(cleanText(term.full))}</p>${term.sectionId?`<button class="popup-action" data-journey-target="${term.sectionId}" data-journey-type="rule">Open rule</button>`:''}</article>`).join('')}</div>`);
@@ -340,7 +336,7 @@ const releaseHtml=html
   .replace('<script src="../shared/navigation-targets.js', '<script src="../../glossary-return.js?v=3"></script><script src="../shared/navigation-targets.js')
   .replace('../shared/glossary-autolink.js?v=7','../shared/glossary-autolink.js?v=8')
   .replace('points-validator.js?v=3','points-validator.js?v=4')
-  .replace('<script src="./scripts/related-rules.js?v=6">','<script src="../shared/rule-facts.js?v=3"></script><script src="../shared/related-rules-matcher.js?v=4"></script><script src="../shared/modal-focus.js?v=1"></script><script src="./scripts/related-rules.js?v=10">')
+  .replace('<script src="./scripts/related-rules.js?v=6">','<script src="../shared/rule-facts.js?v=4"></script><script src="../shared/related-rules-matcher.js?v=5"></script><script src="../shared/modal-focus.js?v=1"></script><script src="./scripts/related-rules.js?v=11">')
   .replace('popup-controller.js?v=18','popup-controller.js?v=21')
   .replace('ui-controllers.js?v=13','ui-controllers.js?v=14')
   .replace('app.js?v=20','app.js?v=22');

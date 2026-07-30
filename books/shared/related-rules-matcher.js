@@ -2,6 +2,7 @@
   'use strict';
 
   const supportedSubjects=new Set(['unit','model','objective']);
+  const relationKeys=['canLead','canSupport','canBeLedBy','canBeSupportedBy'];
   const normalize=value=>String(value||'').replace(/\s+/g,' ').trim().toUpperCase();
   const set=values=>new Set([...(values||[])].map(normalize).filter(Boolean));
   const selectorOf=target=>({
@@ -28,9 +29,11 @@
   function keywordResult(selector,keywords,context){
     const conditionalKeywords=context.conditionalKeywords||set();
     const ids=selector.unitIds||[];
-    if(ids.length&&!ids.includes(context.unitId))return 'no-match';
-    if((selector.noneKeywords||[]).some(value=>keywords.has(normalize(value))))return 'no-match';
-    let conditional=false;
+    const contextIds=context.unitIds||new Set([context.unitId].filter(Boolean));
+    if(ids.length&&!ids.some(id=>contextIds.has(id)))return 'no-match';
+    const possibleKeywords=context.possibleKeywords||keywords;
+    if((selector.noneKeywords||[]).some(value=>possibleKeywords.has(normalize(value))))return 'no-match';
+    let conditional=context.formationUnknown===true;
     for(const value of selector.allKeywords||[]){
       const keyword=normalize(value);
       if(!keywords.has(keyword)){
@@ -44,12 +47,18 @@
     }
     if((selector.allAbilities||[]).some(value=>!context.abilities?.has(normalize(value))))return 'no-match';
     if(selector.attached!=null){
-      if(context.attachmentKnown===false)return 'conditional';
+      if(context.attachmentKnown===false){
+        if(context.attached!=null&&Boolean(context.attached)!==selector.attached)return 'no-match';
+        return 'conditional';
+      }
       if(Boolean(context.attached)!==selector.attached)return 'no-match';
     }
     if(selector.minCharacters!=null){
       if(context.characterCount==null)return 'conditional';
-      if(context.characterCount<selector.minCharacters)return 'no-match';
+      if(context.characterCount<selector.minCharacters){
+        if((context.possibleCharacterCount||0)>=selector.minCharacters)return 'conditional';
+        return 'no-match';
+      }
     }
     if(selector.warlord!=null){
       if(context.warlord==null)return 'conditional';
@@ -57,11 +66,22 @@
     }
     return conditional?'conditional':'match';
   }
+  function relationContexts(context){
+    const relations=relationKeys.flatMap(key=>context.relations?.[key]||[]);
+    const contexts=context.formationRequired?[]:[context];
+    for(const relation of relations){
+      const removed=relation.removeKeywords||set(),base=new Set([...(context.keywords||set())].filter(keyword=>!removed.has(keyword)));
+      const combined=new Set([...base,...(relation.keywords||set())]);
+      const mandatory=relation.mandatory===true;
+      contexts.push({...context,unitIds:new Set([context.unitId,relation.unitId].filter(Boolean)),keywords:mandatory?combined:base,conditionalKeywords:mandatory?(context.conditionalKeywords||set()):new Set([...(context.conditionalKeywords||set()),...(relation.keywords||set())]),possibleKeywords:combined,attached:true,attachmentKnown:mandatory,formationUnknown:!mandatory,characterCount:mandatory?(context.characterCount||0)+(relation.characterCount||0):context.characterCount,possibleCharacterCount:relation.maxCharacters??null});
+    }
+    return contexts;
+  }
   function selectorResult(selector,context,subject){
     const choices=selector.alternatives?.length?selector.alternatives:[selector];
     const candidates=subject==='model'
       ?(context.members||[{keywords:context.intrinsicKeywords||context.keywords}]).map(member=>({...context,...member,unitId:member.unitId||context.unitId,keywords:member.keywords||context.intrinsicKeywords}))
-      :(context.candidates||[context]);
+      :(context.candidates||relationContexts(context));
     let conditional=false;
     for(const choice of choices)for(const raw of candidates){
       const candidate={...context,...raw};

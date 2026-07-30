@@ -11,8 +11,7 @@
     const gained=applicable.filter(grant=>!grant.selectionRequired).map(grant=>normalize(grant.keyword));
     const conditional=new Set(applicable.filter(grant=>grant.selectionRequired).map(grant=>normalize(grant.keyword)));
     if(!gained.length&&!conditional.size)return unit;
-    const candidates=(unit.candidates||[unit]).map(candidate=>({...candidate,keywords:new Set([...(candidate.keywords||unit.keywords),...gained])}));
-    return {...unit,keywords:candidates[0].keywords,candidates,conditionalKeywords:conditional};
+    return {...unit,keywords:new Set([...unit.keywords,...gained]),conditionalKeywords:conditional};
   };
   const match=(rule,unit)=>{
     try{return root.WHRelatedRules.match(JSON.parse(rule.dataset.eligibility||''),withKeywordGrants(rule,unit));}

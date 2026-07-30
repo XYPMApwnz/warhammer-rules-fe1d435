@@ -165,9 +165,9 @@ function page(route) {
   </nav>
   <main class="main mobile-main"><article class="document">${hydrateTerms(content(route))}${relatedSection}</article></main>
   <script src="../../shared/datasheet-layout.js?v=2"></script>
-  <script src="../../shared/rule-facts.js?v=3"></script>
-  <script src="../../shared/related-rules-matcher.js?v=4"></script>
-  <script src="../scripts/related-rules.js?v=10"></script>
+  <script src="../../shared/rule-facts.js?v=4"></script>
+  <script src="../../shared/related-rules-matcher.js?v=5"></script>
+  <script src="../scripts/related-rules.js?v=11"></script>
   <dialog class="mobile-dialog" id="termDialog" aria-labelledby="termTitle">
     <form method="dialog" class="mobile-dialog-head"><span>Mega Glossary</span><button aria-label="Close popup">&times;</button></form>
     <h2 id="termTitle"></h2><p id="termSummary"></p>

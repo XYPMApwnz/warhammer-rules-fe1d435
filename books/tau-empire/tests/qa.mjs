@@ -119,7 +119,8 @@ for(const title of ['Commander Farsight','Commander in Coldstar Battlesuit','Com
     assert.ok(desktop.includes(target),`${title}: desktop relation missing ${target}`);
     assert.ok(phone.includes(target),`${title}: Phone relation missing ${target}`);
   }
-  assert.equal(JSON.parse(decode(desktop.match(/data-related-candidates="([^"]+)"/)?.[1]||'[]')).filter(item=>item.attached).length,4,`${title}: attached candidates differ`);
+  const facts=JSON.parse(decode(desktop.match(/data-rule-facts="([^"]+)"/)?.[1]||'{}'));
+  assert.deepEqual(facts.relations.canLead.map(item=>item.unitId),crisisRelations.map(target=>allUnits.find(unit=>unit.title===target)?.id).sort(),`${title}: compiled Leader graph differs`);
 }
 for(const [local,entry] of Object.entries(context).filter(([id])=>id.includes('ability-leader'))){
   assert.equal(entry.termId,'core-leader',`${local}: Leader must resolve to the canonical Core term`);

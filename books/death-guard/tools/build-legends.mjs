@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
+import {buildRelationGraphs} from '../../shared/tools/build-relation-graph.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..','..','..');
 const bookRoot=path.join(root,'books','death-guard');
@@ -173,24 +174,15 @@ for(const leader of unitSections){
   if(/even if one other Leader/i.test(text))doubleLeaders.add(leader.id);
   for(const bodyguard of unitSections)if(bodyguard!==leader&&text.toLowerCase().includes(bodyguard.title.toLowerCase()))attachments.push([leader.id,bodyguard.id]);
 }
-const relatedCandidates=new Map(unitSections.map(unit=>[unit.id,[{unitId:unit.id,keywords:unitKeywords.get(unit.id),attached:false,attachmentKnown:true,characterCount:unitKeywords.get(unit.id).some(value=>value.toUpperCase()==='CHARACTER')?1:0,warlord:null}]]));
-for(const [leaderId,bodyguardId] of attachments){
-  const keywords=[...new Set([...unitKeywords.get(leaderId),...unitKeywords.get(bodyguardId)])];
-  const candidate={unitId:bodyguardId,keywords,attached:true,attachmentKnown:true,characterCount:1,warlord:null};
-  relatedCandidates.get(leaderId).push(candidate);relatedCandidates.get(bodyguardId).push(candidate);
-}
-for(const bodyguard of unitSections){
-  const leaders=attachments.filter(([leaderId,bodyguardId])=>bodyguardId===bodyguard.id&&doubleLeaders.has(leaderId)).map(([leaderId])=>leaderId);
-  if(leaders.length>1){
-    for(let index=0;index<leaders.length;index+=1){
-      const other=leaders[(index+1)%leaders.length],keywords=[...new Set([...unitKeywords.get(bodyguard.id),...unitKeywords.get(leaders[index]),...unitKeywords.get(other)])];
-      const candidate={unitId:bodyguard.id,keywords,attached:true,attachmentKnown:true,characterCount:2,warlord:null};
-      relatedCandidates.get(bodyguard.id).push(candidate);relatedCandidates.get(leaders[index]).push(candidate);
-    }
-  }
-}
+const relationEdges=attachments.flatMap(([sourceId,targetId])=>[
+  {role:'leader',sourceId,targetId},
+  ...(doubleLeaders.has(sourceId)?[{role:'support',sourceId,targetId}]:[])
+]);
+const relationGraphs=buildRelationGraphs(unitSections.map(unit=>({...unit,keywords:unitKeywords.get(unit.id)})),relationEdges);
 let reader=fs.readFileSync(readerFile,'utf8');
-reader=reader.replace(/rule-facts\.js\?v=\d+/,'rule-facts.js?v=3');
+reader=reader.replace(/rule-facts\.js\?v=\d+/,'rule-facts.js?v=4');
+reader=reader.replace(/related-rules-matcher\.js\?v=\d+/,'related-rules-matcher.js?v=5');
+reader=reader.replace(/scripts\/related-rules\.js\?v=\d+/,'scripts/related-rules.js?v=11');
 reader=reader.replace(/points-validator\.js\?v=\d+/,'points-validator.js?v=4');
 reader=replaceOrInsert(reader,'li',legends.group.id,'pact-of-decay-datasheets',nav);
 reader=replaceOrInsert(reader,'section',legends.group.id,'pact-of-decay-datasheets',content);
@@ -205,10 +197,13 @@ for(const unit of unitSections){
     id:unit.id,unitId:unit.id,slug:unit.id.replace(/^unit-/,''),keywords:unitKeywords.get(unit.id),intrinsicKeywords:unitKeywords.get(unit.id),
     abilities:[...new Set(abilityBlocks.flatMap(block=>/^(?:core|faction)$/i.test(block.title||'')?String(block.text||'').split(',').map(value=>value.trim().replace(/\.$/,'')).filter(Boolean).map(value=>/^deadly demise\b/i.test(value)?'DEADLY DEMISE':value):[block.title].filter(Boolean)))],
     termIds:[...new Set([...unitKeywords.get(unit.id).filter(keyword=>!plainKeywordNames.has(keyword)).map(keywordId),...abilityBlocks.map(block=>block.termId).filter(Boolean),...(unit.blocks||[]).map(block=>block.termId).filter(Boolean)])],
-    epic:unitKeywords.get(unit.id).some(keyword=>keyword.toUpperCase()==='EPIC HERO'),deadlyDemise,attached:null,twoCharacters:null,warlord:null,
-    candidates:relatedCandidates.get(unit.id)
+    epic:unitKeywords.get(unit.id).some(keyword=>keyword.toUpperCase()==='EPIC HERO'),deadlyDemise,
+    attached:Object.values(relationGraphs.get(unit.id)).some(items=>items.length)?null:false,
+    attachmentKnown:!Object.values(relationGraphs.get(unit.id)).some(items=>items.length),
+    characterCount:unitKeywords.get(unit.id).some(keyword=>keyword.toUpperCase()==='CHARACTER')?1:0,twoCharacters:null,warlord:null,
+    relations:relationGraphs.get(unit.id)
   };
-  reader=reader.replace(opener,(match,start,end)=>`${start.replace(/\sdata-(?:keywords|related-candidates|rule-facts)="[^"]*"/g,'')} data-keywords="${escapeHtml(unitKeywords.get(unit.id).join('|'))}" data-related-candidates="${escapeHtml(JSON.stringify(relatedCandidates.get(unit.id)))}" data-rule-facts="${escapeHtml(JSON.stringify(ruleFacts))}"${end}`);
+  reader=reader.replace(opener,(match,start,end)=>`${start.replace(/\sdata-(?:keywords|related-candidates|rule-facts)="[^"]*"/g,'')} data-keywords="${escapeHtml(unitKeywords.get(unit.id).join('|'))}" data-rule-facts="${escapeHtml(JSON.stringify(ruleFacts))}"${end}`);
 }
 fs.writeFileSync(readerFile,reader);
 

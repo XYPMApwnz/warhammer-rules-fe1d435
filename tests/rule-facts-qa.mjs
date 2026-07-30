@@ -27,7 +27,7 @@ function genericSource(book){
   return new Map([...units].map(([id,unit])=>{
     const abilities=[...(unit.abilities||[]),...(unit.wargearAbilities||[])];
     const names=abilities.map(item=>deadly(item.title)?'DEADLY DEMISE':item.title);
-    return [id,{id,slug:id.replace(/^unit-/,''),keywords:unit.keywords||[],abilities:names,epic:(unit.keywords||[]).some(value=>titleKey(value)==='epic hero'),deadlyDemise:abilities.some(item=>deadly(item.title)||deadly(item.text))}];
+    return [id,{id,slug:id.replace(/^unit-/,''),title:unit.title,keywords:unit.keywords||[],abilities:names,relations:unit.relations||{},epic:(unit.keywords||[]).some(value=>titleKey(value)==='epic hero'),deadlyDemise:abilities.some(item=>deadly(item.title)||deadly(item.text))}];
   }));
 }
 
@@ -87,7 +87,7 @@ assert.throws(()=>ruleFacts.textFromDomLike({value:'Death Guard'}),TypeError);
 const desktopProfiles=new Map();let profiles=0,mobileProfiles=0;
 for(const book of Object.keys(sources)){
   const html=fs.readFileSync(path.join(root,'books',book,'reader.html'),'utf8');
-  assert.match(html,/shared\/rule-facts\.js\?v=3/,`${book}: shared facts runtime is absent`);
+  assert.match(html,/shared\/rule-facts\.js\?v=4/,`${book}: shared facts runtime is absent`);
   const expected=sources[book],seen=new Set();
   for(const tag of html.match(/<article class="unit-card\b[^>]*>/g)||[]){
     const unitId=attr(tag,'id'),compiled=JSON.parse(decode(attr(tag,'data-rule-facts'))),source=expected.get(unitId);
@@ -101,7 +101,8 @@ for(const book of Object.keys(sources)){
     assert.deepEqual(serialized.abilities,normalized(source.abilities),`${book}/${unitId}: source ability parity`);
     assert.equal(serialized.epic,source.epic,`${book}/${unitId}: source Epic Hero parity`);
     assert.equal(serialized.deadlyDemise,source.deadlyDemise,`${book}/${unitId}: source Deadly Demise parity`);
-    assert.deepEqual(compiled.candidates,JSON.parse(decode(attr(tag,'data-related-candidates'))),`${book}/${unitId}: current candidate serialization parity`);
+    assert.equal(compiled.candidates,undefined,`${book}/${unitId}: compiled candidates must be absent`);
+    assert.equal(attr(tag,'data-related-candidates'),'',`${book}/${unitId}: legacy candidate attribute must be absent`);
     if(serialized.abilities.length)assert.ok(serialized.termIds.length,`${book}/${unitId}: source abilities require rendered term IDs`);
     desktopProfiles.set(`${book}/${unitId}`,serialized);seen.add(unitId);profiles+=1;
   }
@@ -118,10 +119,30 @@ for(const book of Object.keys(sources)){
   }
 }
 
-const fixtureRecord={unitId:'unit-fixture',keywords:['  Death   Guard ','vehicle'],abilities:['Deadly Demise'],termIds:['keyword-death-guard'],candidates:[{unitId:'unit-attached',keywords:['Death Guard','Character'],abilities:['Leader'],termIds:['core-leader']}]};
+const inverseRelation={canLead:'canBeLedBy',canSupport:'canBeSupportedBy',canBeLedBy:'canLead',canBeSupportedBy:'canSupport'};
+for(const [address,profile] of desktopProfiles)for(const [key,relations] of Object.entries(profile.relations))for(const relation of relations){
+  const book=address.split('/')[0],target=desktopProfiles.get(`${book}/${relation.unitId}`);
+  assert.ok(target,`${address}: ${key} target ${relation.unitId} is absent`);
+  assert.deepEqual(relation.keywords,target.intrinsicKeywords,`${address}: ${key} target facts differ`);
+  assert.ok(target.relations[inverseRelation[key]].some(item=>item.unitId===profile.unitId),`${address}: ${key} is not reciprocal`);
+}
+for(const book of ['tyranids','tau-empire']){
+  const byTitle=new Map([...sources[book].values()].map(unit=>[titleKey(unit.title),unit.id]));
+  for(const sourceUnit of sources[book].values())for(const [sourceKey,compiledKey] of [['leader','canLead'],['support','canSupport']]){
+    const expected=(sourceUnit.relations?.[sourceKey]||[]).map(title=>byTitle.get(titleKey(title))).filter(Boolean).sort();
+    const actual=desktopProfiles.get(`${book}/${sourceUnit.id}`).relations[compiledKey].map(item=>item.unitId).sort();
+    assert.deepEqual(actual,expected,`${book}/${sourceUnit.id}: source ${sourceKey} relation parity`);
+  }
+}
+assert.deepEqual(desktopProfiles.get('tau-empire/unit-commander-in-coldstar-battlesuit').relations.canLead.map(item=>item.unitId),['unit-crisis-battlesuits','unit-crisis-fireknife-battlesuits','unit-crisis-starscythe-battlesuits','unit-crisis-sunforge-battlesuits']);
+assert.ok(desktopProfiles.get('death-guard/unit-biologus-putrifier').relations.canSupport.some(item=>item.unitId==='unit-plague-marines'));
+const datasmithRelation=desktopProfiles.get('adeptus-mechanicus/unit-cybernetica-datasmith').relations.canSupport.find(item=>item.unitId==='unit-kastelan-robots');
+assert.equal(datasmithRelation?.mandatory,true);assert.deepEqual(datasmithRelation?.removeKeywords,['INFANTRY']);
+
+const fixtureRecord={unitId:'unit-fixture',keywords:['  Death   Guard ','vehicle'],abilities:['Deadly Demise'],termIds:['keyword-death-guard'],relations:{canLead:[{unitId:'unit-attached',keywords:['Death Guard','Character'],characterCount:1,maxCharacters:1}],canSupport:[],canBeLedBy:[],canBeSupportedBy:[]}};
 const source=structuredClone(fixtureRecord),profileA=ruleFacts.profileFromRecord(fixtureRecord),profileB=ruleFacts.profileFromRecord(fixtureRecord);
-profileA.keywords.add('MUTATED');profileA.candidates[0].keywords.add('MUTATED');profileA.termIds.add('mutated');
-assert.equal(profileB.keywords.has('MUTATED'),false);assert.equal(profileB.candidates[0].keywords.has('MUTATED'),false);assert.equal(profileB.termIds.has('mutated'),false);assert.deepEqual(fixtureRecord,source);
+profileA.keywords.add('MUTATED');profileA.relations.canLead[0].keywords.add('MUTATED');profileA.termIds.add('mutated');
+assert.equal(profileB.keywords.has('MUTATED'),false);assert.equal(profileB.relations.canLead[0].keywords.has('MUTATED'),false);assert.equal(profileB.termIds.has('mutated'),false);assert.deepEqual(fixtureRecord,source);
 
 assert.throws(()=>ruleFacts.profileFromDataset({keywords:'DEATH GUARD',relatedCandidates:'[]'},{id:'unit-legacy'}),/missing data-rule-facts/);
 assert.deepEqual([...ruleFacts.profileFromLegacyDataset({keywords:'DEATH GUARD',relatedCandidates:'[]'},{id:'unit-legacy'}).keywords],['DEATH GUARD']);
@@ -143,4 +164,18 @@ const grantLabels=(slug,detachment)=>Array.from(dgSandbox.window.DGRelatedRules.
 assert.deepEqual(grantLabels('poxwalkers','shamblerot-vectorium'),['BATTLELINE']);
 for(const slug of ['foetid-bloat-drone','helbrute'])assert.deepEqual(grantLabels(slug,'contagion-engines'),['CONTAGION ENGINE']);
 assert.deepEqual(grantLabels('foetid-bloat-drone','virulent-vectorium'),[]);
+
+const matcherSource=fs.readFileSync(path.join(root,'books','shared','related-rules-matcher.js'),'utf8'),matcherSandbox={window:{}};
+vm.runInNewContext(matcherSource,matcherSandbox,{filename:'related-rules-matcher.js'});
+const matcher=matcherSandbox.window.WHRelatedRules,unitRole=selector=>({v:1,roles:[{id:'unit',side:'friendly',subject:'unit',selector}]});
+const possible=ruleFacts.profileFromRecord({...fixtureRecord,attached:null,attachmentKnown:false,characterCount:0});
+assert.equal(matcher.match(unitRole({allKeywords:['CHARACTER']}),possible).state,'conditional');
+assert.equal(matcher.match(unitRole({allKeywords:['CHARACTER'],attached:true}),possible).state,'conditional');
+assert.equal(matcher.match(unitRole({attached:false}),possible).state,'conditional');
+assert.equal(matcher.match({v:1,roles:[{id:'model',side:'friendly',subject:'model',selector:{allKeywords:['CHARACTER']}}]},possible).state,'no-match');
+const confirmed=ruleFacts.profileFromRecord({unitId:'unit-fixture',keywords:['DEATH GUARD'],candidates:[{unitId:'unit-attached',keywords:['DEATH GUARD','CHARACTER'],attached:true,attachmentKnown:true,characterCount:1}]});
+assert.equal(matcher.match(unitRole({allKeywords:['CHARACTER'],attached:true}),confirmed).state,'match');
+const mandatory=ruleFacts.profileFromRecord({unitId:'unit-datasmith',keywords:['ADEPTUS MECHANICUS','INFANTRY','CHARACTER'],attached:true,attachmentKnown:true,formationRequired:true,characterCount:1,relations:{canSupport:[{unitId:'unit-kastelan',keywords:['ADEPTUS MECHANICUS','VEHICLE'],removeKeywords:['INFANTRY'],mandatory:true,characterCount:0,maxCharacters:1}]}});
+assert.equal(matcher.match(unitRole({allKeywords:['ADEPTUS MECHANICUS','VEHICLE']}),mandatory).state,'match');
+assert.equal(matcher.match(unitRole({allKeywords:['ADEPTUS MECHANICUS','INFANTRY']}),mandatory).state,'no-match');
 console.log(`PASS source facts parity: ${profiles} desktop + ${mobileProfiles} Phone Mode datasheets`);

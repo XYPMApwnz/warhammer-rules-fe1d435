@@ -15,10 +15,13 @@
   const normalized=window.WHRuleFacts.normalizeKeyword;
   function profile(unit){
     const base=window.WHRuleFacts.profileFromDataset(unit.dataset,{id:unit.id});
+    const hasAttached=unit.hasAttribute('data-roster-attached'),hasCount=unit.hasAttribute('data-roster-character-count');
     return {
       ...base,
-      attached:unit.hasAttribute('data-roster-attached')?unit.dataset.rosterAttached==='true':null,
-      twoCharacters:unit.hasAttribute('data-roster-character-count')?unit.dataset.rosterCharacterCount==='2':null,
+      attached:hasAttached?unit.dataset.rosterAttached==='true':base.attached,
+      attachmentKnown:hasAttached?true:base.attachmentKnown,
+      characterCount:hasCount?Number(unit.dataset.rosterCharacterCount):base.characterCount,
+      twoCharacters:hasCount?unit.dataset.rosterCharacterCount==='2':null,
       warlord:unit.hasAttribute('data-roster-warlord')?unit.dataset.rosterWarlord==='true':null,
       deadlyDemise:base.deadlyDemise
     };
@@ -70,8 +73,7 @@
     const base=unitRoot.slug?unitRoot:profile(unitRoot);
     const detachment=card.closest('[data-detachment]')?.dataset.detachment||'';
     const grants=grantedKeywords(base.slug,[detachment]),granted=new Set(grants.map(grant=>grant.id)),labels=grants.map(grant=>normalized(grant.title));
-    const candidates=(base.candidates||[base]).map(candidate=>({...candidate,keywords:new Set([...(candidate.keywords||base.keywords),...labels])}));
-    const unit={...base,keywords:candidates[0].keywords,candidates,has:id=>base.has(id)||granted.has(id),contagionEngine:granted.has('keyword-contagion-engine')};
+    const unit={...base,keywords:new Set([...base.keywords,...labels]),has:id=>base.has(id)||granted.has(id),contagionEngine:granted.has('keyword-contagion-engine')};
     if(card.classList.contains('enhancement')){
       try{return window.WHRelatedRules.match(JSON.parse(card.dataset.eligibility||''),unit);}
       catch{return {state:'no-match',matchedRoleIds:[],reasons:[]};}

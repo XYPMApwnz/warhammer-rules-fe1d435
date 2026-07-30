@@ -4,6 +4,7 @@
   const apostrophes=/[\u2018\u2019\u02bc\uff07]/g;
   const dashes=/[\u2010\u2011\u2012\u2013\u2014\u2212\ufe58\ufe63\uff0d]/g;
   const list=value=>value instanceof Set?[...value]:Array.isArray(value)?[...value]:null;
+  const relationKeys=['canLead','canSupport','canBeLedBy','canBeSupportedBy'];
 
   function normalizeKeyword(value){
     if(typeof value!=='string')throw new TypeError(`Keyword must be a string, received ${value===null?'null':typeof value}`);
@@ -47,6 +48,21 @@
     return profile;
   }
 
+  function relationProfile(relation,key,index){
+    if(!relation||typeof relation!=='object'||Array.isArray(relation))throw new TypeError(`relations.${key}[${index}] must be a plain object`);
+    if(typeof relation.unitId!=='string'||!relation.unitId)throw new TypeError(`relations.${key}[${index}] requires a string unitId`);
+    return {...relation,keywords:normalizedSet(relation.keywords||[],`relations.${key}[${index}].keywords`),removeKeywords:normalizedSet(relation.removeKeywords||[],`relations.${key}[${index}].removeKeywords`)};
+  }
+
+  function relationGraph(value={}){
+    if(!value||typeof value!=='object'||Array.isArray(value))throw new TypeError('relations must be a plain object');
+    for(const key of Object.keys(value))if(!relationKeys.includes(key))throw new TypeError(`Unsupported relation key: ${key}`);
+    return Object.fromEntries(relationKeys.map(key=>{
+      const entries=list(value[key]||[]);if(!entries)throw new TypeError(`relations.${key} must be an array or Set`);
+      return [key,entries.map((relation,index)=>relationProfile(relation,key,index))];
+    }));
+  }
+
   function profileFromRecord(record){
     if(!record||typeof record!=='object'||Array.isArray(record))throw new TypeError('Rule facts record must be a plain object');
     const unitId=record.unitId||record.id||'';
@@ -68,9 +84,13 @@
       termIds,
       ids:new Set(termIds),
       candidates:normalizedCandidates.length?normalizedCandidates:undefined,
+      relations:relationGraph(record.relations||{}),
       epic:record.epic==null?intrinsicKeywords.has('EPIC HERO'):Boolean(record.epic),
       deadlyDemise:record.deadlyDemise==null?false:Boolean(record.deadlyDemise),
       attached:record.attached??null,
+      attachmentKnown:record.attachmentKnown==null?null:Boolean(record.attachmentKnown),
+      formationRequired:Boolean(record.formationRequired),
+      characterCount:record.characterCount==null?(intrinsicKeywords.has('CHARACTER')?1:0):Number(record.characterCount),
       twoCharacters:record.twoCharacters??null,
       warlord:record.warlord??null
     };
@@ -117,11 +137,13 @@
     abilities:sorted(candidate.abilities),termIds:sorted(candidate.termIds),attached:candidate.attached??null,
     attachmentKnown:candidate.attachmentKnown??null,characterCount:candidate.characterCount??null,warlord:candidate.warlord??null
   });
+  const serializeRelation=relation=>({unitId:relation.unitId,keywords:sorted(relation.keywords),removeKeywords:sorted(relation.removeKeywords),characterCount:relation.characterCount??null,maxCharacters:relation.maxCharacters??null,mandatory:Boolean(relation.mandatory)});
   function serializeRuleProfile(profile){
     return {
       id:profile.id||'',unitId:profile.unitId||'',slug:profile.slug||'',keywords:sorted(profile.keywords),intrinsicKeywords:sorted(profile.intrinsicKeywords),
       abilities:sorted(profile.abilities),termIds:sorted(profile.termIds||profile.ids),epic:Boolean(profile.epic),deadlyDemise:Boolean(profile.deadlyDemise),
-      attached:profile.attached??null,twoCharacters:profile.twoCharacters??null,warlord:profile.warlord??null,
+      attached:profile.attached??null,attachmentKnown:profile.attachmentKnown??null,formationRequired:Boolean(profile.formationRequired),characterCount:profile.characterCount??null,twoCharacters:profile.twoCharacters??null,warlord:profile.warlord??null,
+      relations:Object.fromEntries(relationKeys.map(key=>[key,[...(profile.relations?.[key]||[])].map(serializeRelation).sort((a,b)=>a.unitId.localeCompare(b.unitId))])),
       candidates:[...(profile.candidates||[])].map(serializeCandidate).sort((a,b)=>JSON.stringify(a).localeCompare(JSON.stringify(b)))
     };
   }

@@ -62,8 +62,7 @@ for(const entry of fs.readdirSync(booksRoot,{withFileTypes:true})){
     const gained=applicable.filter(grant=>!grant.selectionRequired).map(grant=>String(grant.keyword).toUpperCase());
     const conditionalKeywords=new Set(applicable.filter(grant=>grant.selectionRequired).map(grant=>String(grant.keyword).toUpperCase()));
     if(!gained.length&&!conditionalKeywords.size)return profile;
-    const candidates=(profile.candidates||[profile]).map(candidate=>({...candidate,keywords:new Set([...(candidate.keywords||profile.keywords),...gained])}));
-    return {...profile,keywords:candidates[0].keywords,candidates,conditionalKeywords};
+    return {...profile,keywords:new Set([...profile.keywords,...gained]),conditionalKeywords};
   };
   assert.ok(profiles.length,`${config.id}: no datasheet profiles in generated reader`);
   assert.equal(new Set(officialIds).size,officialIds.length,`${config.id}: duplicate official Stratagem id`);
@@ -128,15 +127,11 @@ assert.equal(matcher.matches({v:1,roles:[{side:'friendly',subject:'model',select
   assert.equal(new Set(cardIds).size,55,'Death Guard Stratagem card IDs must be unique');
   assert.deepEqual(sorted(Object.keys(eligibility)),sorted(cardIds),'Death Guard contracts must map every rendered Core and faction Stratagem exactly once');
   assert.deepEqual(sorted(cardIds.filter(id=>!id.startsWith('core-stratagem-'))),sorted(factionIds),'Death Guard rendered faction Stratagem IDs must match the structured book source');
-  const expanded=profiles.map(profile=>{
-    const candidates=(profile.candidates||[profile]).flatMap(candidate=>candidate.keywords?.has('CHARACTER')?[candidate,{...candidate,warlord:true}]:[candidate]);
-    return {...profile,candidates};
-  });
+  const expanded=profiles;
   const withGrants=(profile,ruleId)=>{
     const grants=api.grantedKeywords(profile.unitId.replace(/^unit-/,''),[detachmentByRule.get(ruleId)]),gained=grants.map(grant=>grant.title.toUpperCase());
     if(!gained.length)return profile;
-    const candidates=(profile.candidates||[profile]).map(candidate=>({...candidate,keywords:new Set([...(candidate.keywords||profile.keywords),...gained])}));
-    return {...profile,keywords:candidates[0].keywords,candidates};
+    return {...profile,keywords:new Set([...profile.keywords,...gained])};
   };
   let negativeCount=0;
   for(const id of cardIds){
@@ -145,16 +140,17 @@ assert.equal(matcher.matches({v:1,roles:[{side:'friendly',subject:'model',select
     assert.ok(expanded.some(profile=>matcher.matches(rule,withGrants(profile,id))),`Death Guard/${id}: no real datasheet or Attached-unit candidate satisfies its contract`);
     if(restrictive(rule)&&expanded.some(profile=>!matcher.matches(rule,withGrants(profile,id))))negativeCount++;
   }
-  const profile=id=>expanded.find(item=>item.unitId===id),single=(item,predicate)=>({...item,...(item.candidates||[item]).find(predicate),candidates:undefined});
+  const profile=id=>expanded.find(item=>item.unitId===id);
   assert.equal(matcher.matches(eligibility['core-stratagem-crushing-impact'],profile('unit-biologus-putrifier')),false,'Biologus Putrifier must not receive a Monster/Vehicle Stratagem');
   assert.equal(matcher.matches(eligibility['stratagem-putrid-detonation'],profile('unit-biologus-putrifier')),false,'Biologus Putrifier must not receive Putrid Detonation');
   assert.equal(matcher.matches(eligibility['core-stratagem-crushing-impact'],profile('unit-mortarion')),true,'Mortarion must receive Monster/Vehicle Stratagems');
   assert.equal(matcher.matches(eligibility['core-stratagem-heroic-intervention'],profile('unit-chaos-rhino')),false,'a non-Walker Vehicle must not receive Heroic Intervention');
   assert.equal(matcher.matches(eligibility['core-stratagem-heroic-intervention'],profile('unit-helbrute')),true,'a Walker Vehicle must receive Heroic Intervention');
-  const biologus=profile('unit-biologus-putrifier');
-  const unattached=single(biologus,candidate=>candidate.attached===false&&candidate.warlord!==true);
-  const oneCharacter=single(biologus,candidate=>candidate.attached===true&&candidate.characterCount===1&&candidate.warlord!==true);
-  const twoCharacters=single(biologus,candidate=>candidate.attached===true&&candidate.characterCount===2&&candidate.warlord!==true);
+  const biologus=profile('unit-biologus-putrifier'),plagueMarines=profile('unit-plague-marines');
+  const combinedKeywords=new Set([...biologus.keywords,...plagueMarines.keywords]);
+  const unattached={...biologus,relations:{canLead:[],canSupport:[],canBeLedBy:[],canBeSupportedBy:[]},attached:false,attachmentKnown:true};
+  const oneCharacter={...unattached,keywords:combinedKeywords,attached:true,characterCount:1};
+  const twoCharacters={...oneCharacter,characterCount:2};
   assert.equal(matcher.matches(eligibility['stratagem-blessings-of-filth'],unattached),false,'an unattached Character must not receive an Attached-unit Stratagem');
   assert.equal(matcher.matches(eligibility['stratagem-blessings-of-filth'],oneCharacter),true,'an Attached unit must receive an Attached-unit Stratagem');
   assert.equal(matcher.matches(eligibility['stratagem-rabid-infusion'],oneCharacter),false,'a single-Character Attached unit must not receive a two-Character Stratagem');

@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
+import ruleFacts from '../../shared/rule-facts.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const repo=path.resolve(root,'../..');
@@ -151,10 +152,8 @@ const keywords=values=>new Set(values.map(value=>value.toUpperCase()));
 const decodeAttribute=value=>value.replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&#39;',"'");
 const attribute=(tag,name)=>new RegExp(`\\s${name}="([^"]*)"`).exec(tag)?.[1]||'';
 const profiles=[...(reader.match(/<article class="unit-card\b[^>]*>/g)||[])].map(tag=>{
-  const intrinsic=keywords(attribute(tag,'data-keywords').split('|').filter(Boolean));
-  let candidates=[];
-  try{candidates=JSON.parse(decodeAttribute(attribute(tag,'data-related-candidates'))).map(candidate=>({...candidate,keywords:keywords(candidate.keywords||[])}));}catch{}
-  return {unitId:attribute(tag,'id'),keywords:intrinsic,intrinsicKeywords:intrinsic,candidates:candidates.length?candidates:undefined,abilities:new Set()};
+  const unitId=attribute(tag,'id');
+  return ruleFacts.profileFromDataset({ruleFacts:decodeAttribute(attribute(tag,'data-rule-facts'))},{id:unitId});
 });
 const allStratagems=[...pack.detachments,...codexParity.detachments].flatMap(detachment=>detachment.stratagems);
 for(const stratagem of allStratagems){
@@ -175,7 +174,11 @@ assert.equal(sandbox.window.WHRelatedRules.matches(relatedRules.stratagems['swar
 assert.equal(sandbox.window.WHRelatedRules.matches(relatedRules.stratagems['swarming-assault'],monster),true,'Tyranids Monster misses Swarming Assault');
 const prime=profiles.find(profile=>profile.unitId==='unit-tyranid-prime-with-lash-whip');
 assert.ok(prime,'Tyranid Prime fixture is absent');
-assert.equal(sandbox.window.WHRelatedRules.matches(relatedRules.stratagems['alien-physiology'],{...prime,candidates:undefined}),false,'Unattached Tyranid Prime receives a Warriors-only Stratagem');
-assert.equal(sandbox.window.WHRelatedRules.matches(relatedRules.stratagems['alien-physiology'],prime),true,'Tyranid Prime attached to Warriors loses their relevant Stratagem');
+const alien=relatedRules.stratagems['alien-physiology'];
+assert.equal(sandbox.window.WHRelatedRules.match(alien,prime).state,'conditional','Possible Tyranid Prime attachment must remain conditional');
+const unattached=ruleFacts.profileFromRecord({unitId:prime.unitId,keywords:[...prime.keywords],attached:false,attachmentKnown:true});
+assert.equal(sandbox.window.WHRelatedRules.match(alien,unattached).state,'no-match','Confirmed unattached Tyranid Prime receives a Warriors-only Stratagem');
+const confirmed=ruleFacts.profileFromRecord({unitId:prime.unitId,keywords:[...prime.keywords],candidates:[{unitId:'unit-tyranid-warriors-with-ranged-bio-weapons',keywords:[...prime.keywords,'TYRANID WARRIORS'],attached:true,attachmentKnown:true,characterCount:1}]});
+assert.equal(sandbox.window.WHRelatedRules.match(alien,confirmed).state,'conditional','Confirmed Tyranid Prime attachment must still wait for its battle trigger');
 
 console.log('Tyranids QA passed: 57 datasheets, 10 detachments, 51 Stratagems, exact wargear, glossary and Related Rules contracts.');

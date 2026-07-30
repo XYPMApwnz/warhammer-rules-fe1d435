@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {buildRelationGraphs} from './build-relation-graph.mjs';
 
 const args=process.argv.slice(2),check=args.includes('--check'),configArg=args.find(arg=>!arg.startsWith('--'));
 if(!configArg)throw new Error('Usage: node build-army-book.mjs <book.config.json> [--check]');
@@ -70,6 +71,7 @@ const namedGroups=[
 ];
 const enhancementEligibility=item=>relatedRules.enhancements?.[item.id]||relatedRules.enhancements?.[String(item.id||'').replace(/^enhancement-/,'')]||null;
 const publishedEnhancementContracts=new Set(['tyranids','tau-empire']);
+const publishedRelationContracts=new Set(['tyranids','tau-empire']);
 const enhancementContract=item=>{
   const contract=enhancementEligibility(item);
   if(!contract||!publishedEnhancementContracts.has(config.id))return contract;
@@ -99,15 +101,18 @@ const stratagemEligibility=item=>{
   return explicit;
 };
 
-const candidates=new Map(units.map(unit=>[unit.id,[{unitId:unit.id,keywords:unit.keywords||[],attached:false,attachmentKnown:true,characterCount:(unit.keywords||[]).some(k=>titleKey(k)==='character')?1:0,warlord:null}]]));
+const relationEdges=[];
 for(const leader of units){
-  for(const targetName of [...(leader.relations?.leader||[]),...(leader.relations?.support||[])]){
-    const body=unitByTitle.get(titleKey(targetName));if(!body)continue;
-    const combined=[...new Set([...(leader.keywords||[]),...(body.keywords||[])])];
-    const item={unitId:body.id,keywords:combined,attached:true,attachmentKnown:true,characterCount:[leader,body].filter(unit=>(unit.keywords||[]).some(k=>titleKey(k)==='character')).length,warlord:null};
-    candidates.get(leader.id).push(item);candidates.get(body.id).push(item);
+  for(const [role,targets] of [['leader',leader.relations?.leader||[]],['support',leader.relations?.support||[]]])for(const targetName of targets){
+    const names=unitByTitle.has(titleKey(targetName))?[targetName]:String(targetName).split(/[;,]/).map(value=>value.trim()).filter(Boolean);
+    for(const name of names){
+      const body=unitByTitle.get(titleKey(name));
+      if(!body){if(publishedRelationContracts.has(config.id))throw new Error(`${config.id}: ${leader.id} references unknown ${role} target ${name}`);continue;}
+      relationEdges.push({role,sourceId:leader.id,targetId:body.id});
+    }
   }
 }
+const relationGraphs=buildRelationGraphs(units,relationEdges);
 
 const terms=new Map();
 function addTerm(title,summary,sectionId,kind='faction-term',unitId=''){
@@ -180,8 +185,9 @@ const unitCard=unit=>{
   const sourceAbilities=[...(unit.abilities||[]),...(unit.wargearAbilities||[])];
   const deadlyDemise=sourceAbilities.some(item=>/^deadly demise\b/i.test(item.title)||/\bdeadly demise\b/i.test(item.text||''));
   const abilityNames=sourceAbilities.map(item=>/^deadly demise\b/i.test(item.title)?'DEADLY DEMISE':item.title);
-  const ruleFacts={id:unit.id,unitId:unit.id,slug:base,keywords:unit.keywords||[],intrinsicKeywords:unit.keywords||[],abilities:[...new Set(abilityNames)],termIds:[...new Set([...sourceAbilities,...(unit.weapons||[])].map(item=>item.termId).filter(Boolean))],epic:(unit.keywords||[]).some(item=>titleKey(item)==='epic hero'),deadlyDemise,attached:null,twoCharacters:null,warlord:null,candidates:candidates.get(unit.id)||[]};
-  return`<article class="unit-card surface${unit.status==='Warhammer Legends'?' legends-card':''}" id="${unit.id}" data-track="${unit.id}" data-unit-title="${esc(unit.title)}" data-keywords="${esc((unit.keywords||[]).join('|'))}" data-related-candidates="${esc(JSON.stringify(candidates.get(unit.id)||[]))}" data-rule-facts="${esc(JSON.stringify(ruleFacts))}"><div class="unit-header"><div><div class="eyebrow">${esc(unit.status)} · ${esc(unit.sourceLayer)}</div><h3>${esc(unit.title)}</h3></div><div class="unit-status">${esc(pointsText||'POINTS PENDING')}</div></div>${unitSourceState(unit)}<div class="local-nav">${tabs}</div><section class="unit-part" id="${parts.profile}"><h4>Profile & Weapons</h4>${statline(unit)}${weaponTables(unit)}</section><section class="unit-part" id="${parts.abilities}"><h4>Abilities</h4>${shared.length?`<div class="keyword-list shared-abilities">${shared.map(item=>`<button class="term-button" data-term="${item.termId}" data-source-field="abilities.${esc(slug(item.title))}" data-source-value="${esc(item.text)}">${esc(item.title)}</button>`).join('')}</div>`:''}<div class="ability-list">${specific.map(item=>`<article class="ability" data-source-field="abilities.${esc(slug(item.title))}"><h5><button class="term-button" data-term="${item.termId}">${esc(item.title)}</button></h5>${item.text?`<p data-source-field="text">${esc(item.text)}</p>`:''}</article>`).join('')}</div></section><section class="unit-part" id="${parts.composition}"><h4>Composition & Wargear</h4>${composition}${wargear}${unit.paidWargear?.length?`<h5>Paid wargear</h5><ul>${unit.paidWargear.map(item=>`<li>${esc(item.name)} · +${item.value} pts</li>`).join('')}</ul>`:''}</section>${leader}<section class="unit-part" id="${parts.keywords}"><h4>Keywords</h4><div class="keyword-list">${(unit.keywords||[]).map(item=>`<span data-source-field="keywords.${esc(slug(item))}">${esc(item)}</span>`).join('')}</div></section>${unit.sourcePages?`<p class="source">${sourceLink(unit.sourcePages)}</p>`:''}</article>`;
+  const relations=relationGraphs.get(unit.id),canAttach=Object.values(relations).some(items=>items.length);
+  const ruleFacts={id:unit.id,unitId:unit.id,slug:base,keywords:unit.keywords||[],intrinsicKeywords:unit.keywords||[],abilities:[...new Set(abilityNames)],termIds:[...new Set([...sourceAbilities,...(unit.weapons||[])].map(item=>item.termId).filter(Boolean))],epic:(unit.keywords||[]).some(item=>titleKey(item)==='epic hero'),deadlyDemise,attached:canAttach?null:false,attachmentKnown:!canAttach,characterCount:(unit.keywords||[]).some(item=>titleKey(item)==='character')?1:0,twoCharacters:null,warlord:null,relations};
+  return`<article class="unit-card surface${unit.status==='Warhammer Legends'?' legends-card':''}" id="${unit.id}" data-track="${unit.id}" data-unit-title="${esc(unit.title)}" data-keywords="${esc((unit.keywords||[]).join('|'))}" data-rule-facts="${esc(JSON.stringify(ruleFacts))}"><div class="unit-header"><div><div class="eyebrow">${esc(unit.status)} · ${esc(unit.sourceLayer)}</div><h3>${esc(unit.title)}</h3></div><div class="unit-status">${esc(pointsText||'POINTS PENDING')}</div></div>${unitSourceState(unit)}<div class="local-nav">${tabs}</div><section class="unit-part" id="${parts.profile}"><h4>Profile & Weapons</h4>${statline(unit)}${weaponTables(unit)}</section><section class="unit-part" id="${parts.abilities}"><h4>Abilities</h4>${shared.length?`<div class="keyword-list shared-abilities">${shared.map(item=>`<button class="term-button" data-term="${item.termId}" data-source-field="abilities.${esc(slug(item.title))}" data-source-value="${esc(item.text)}">${esc(item.title)}</button>`).join('')}</div>`:''}<div class="ability-list">${specific.map(item=>`<article class="ability" data-source-field="abilities.${esc(slug(item.title))}"><h5><button class="term-button" data-term="${item.termId}">${esc(item.title)}</button></h5>${item.text?`<p data-source-field="text">${esc(item.text)}</p>`:''}</article>`).join('')}</div></section><section class="unit-part" id="${parts.composition}"><h4>Composition & Wargear</h4>${composition}${wargear}${unit.paidWargear?.length?`<h5>Paid wargear</h5><ul>${unit.paidWargear.map(item=>`<li>${esc(item.name)} · +${item.value} pts</li>`).join('')}</ul>`:''}</section>${leader}<section class="unit-part" id="${parts.keywords}"><h4>Keywords</h4><div class="keyword-list">${(unit.keywords||[]).map(item=>`<span data-source-field="keywords.${esc(slug(item))}">${esc(item)}</span>`).join('')}</div></section>${unit.sourcePages?`<p class="source">${sourceLink(unit.sourcePages)}</p>`:''}</article>`;
 };
 const datasheetHtml=categories.map(group=>tracked(group.id,group.title,group.units.map(unitCard).join(''))).join('');
 const armyRulesHtml=armyRules.map(item=>tracked(item.id,item.title,`<article class="rule-card surface"><div class="eyebrow">Army rule</div><p data-source-field="text">${esc(item.text)}</p><p class="source">${sourceLink(item.sourcePages)}</p></article>`)).join('');
@@ -203,8 +209,8 @@ const normalizedHtml=html
   .replace('../shared/datasheet-layout.js"','../shared/datasheet-layout.js?v=2"')
   .replace('../shared/popup-content.js"','../shared/popup-content.js?v=3"')
   .replace('../shared/glossary-autolink.js"','../shared/glossary-autolink.js?v=8"')
-  .replace('<script src="../shared/related-rules-matcher.js">','<script src="../shared/rule-facts.js?v=3"></script><script src="../shared/related-rules-matcher.js">')
-  .replace('../shared/related-rules-matcher.js"',`../shared/related-rules-matcher.js?v=${publishedEnhancementContracts.has(config.id)?4:2}"`)
+  .replace('<script src="../shared/related-rules-matcher.js">','<script src="../shared/rule-facts.js?v=4"></script><script src="../shared/related-rules-matcher.js">')
+  .replace('../shared/related-rules-matcher.js"','../shared/related-rules-matcher.js?v=5"')
   .replace('<script src="./scripts/data.js">',`${config.rosterSupport?'<script src="../shared/roster-parser.js?v=2"></script><script src="../shared/roster-entities.js?v=1"></script>':''}<script src="./scripts/data.js">`)
   .replace('</script><script src="../death-guard/scripts/navigation-controller.js">',`</script>${config.rosterSupport?'<script src="./scripts/roster-data.js?v=1"></script><script src="../shared/book-roster-enhancements.js?v=1"></script>':''}<script src="../death-guard/scripts/navigation-controller.js">`)
   .replace('../death-guard/scripts/navigation-controller.js"','../death-guard/scripts/navigation-controller.js?v=16"')
@@ -215,7 +221,7 @@ const normalizedHtml=html
   .replace('../../glossary/generated/glossary.en.js','../../glossary/generated/glossary.en.js?v=tyranids-1')
   .replace('./scripts/data.js','./scripts/data.js?v=2')
   .replace('<script src="../shared/army-related-rules.js"></script>','<script src="../shared/modal-focus.js?v=1"></script><script src="../shared/army-related-rules.js"></script>')
-  .replace('../shared/army-related-rules.js',`../shared/army-related-rules.js?v=${publishedEnhancementContracts.has(config.id)?8:5}`)
+  .replace('../shared/army-related-rules.js','../shared/army-related-rules.js?v=9')
   .replace('../shared/army-book-app.js','../shared/army-book-app.js?v=9')
   .replace('./scripts/app.js',`./scripts/app.js?v=${config.dedicatedMobile?'3':'2'}`);
 const coveredHtml=config.coverImage?normalizedHtml.replace('class="hero section surface faction-hero"','class="hero section surface faction-hero faction-hero-cover"'):normalizedHtml;

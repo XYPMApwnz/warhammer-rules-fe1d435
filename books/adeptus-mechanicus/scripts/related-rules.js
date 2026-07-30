@@ -9,8 +9,7 @@
     if(!grants.length)return unit;
     const gained=grants.filter(grant=>root.WHRelatedRules.matches({v:1,roles:[{id:'grant',side:'friendly',subject:'unit',selector:grant.selector||{}}]},unit)).map(grant=>normalize(grant.keyword));
     if(!gained.length)return unit;
-    const candidates=(unit.candidates||[unit]).map(candidate=>({...candidate,keywords:new Set([...(candidate.keywords||unit.keywords),...gained])}));
-    return {...unit,keywords:candidates[0].keywords,candidates};
+    return {...unit,keywords:new Set([...unit.keywords,...gained])};
   };
   function targetMatches(target,unit){return root.WHRelatedRules.matches({targets:[target]},unit);}
   function match(card,unitCard){

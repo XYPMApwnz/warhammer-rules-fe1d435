@@ -235,7 +235,7 @@ check('official MFM unit sizes are locked',[
 ].every(([title,label])=>currentPoints.units.find(unit=>unit.title===title)?.points.some(row=>row.label===label)));
 check('official MFM provenance is locked',currentPoints.source.officialVersion==='v1.1'&&currentPoints.source.officialUrl==='https://mfm.warhammer-community.com/en/adeptus-mechanicus');
 check('carried-forward rules no longer use placeholder wording',!JSON.stringify(codex).match(/rule's listed roll|following the rule's unit restrictions|under the listed Acquisition conditions|according to the Stratagem's conditions/));
-check('personal roster integration is loaded',html.includes('../shared/roster-parser.js?v=2')&&html.includes('../../roster-guides/points-validator.js?v=2')&&html.includes('./scripts/roster-filter.js?v=2')&&html.includes('data-roster-guides'));
+check('personal roster integration is loaded',html.includes('../shared/roster-parser.js?v=2')&&html.includes('../../roster-guides/points-validator.js?v=3')&&html.includes('./scripts/roster-filter.js?v=2')&&html.includes('data-roster-guides'));
 check('every Enhancement has a detachment and current cost',json('content/adeptus-mechanicus-points.en.json').enhancements.length===34&&json('content/adeptus-mechanicus-points.en.json').enhancements.every(item=>item.detachment&&item.value>0));
 const build=spawnSync(node,[path.join(root,'tools','build-full-content.mjs'),'--check'],{encoding:'utf8'});
 check('generated project artifacts are current',build.status===0,(build.stderr||build.stdout).trim());

@@ -121,6 +121,53 @@ const mechanicusLegends=WHRosterPoints.check({units:[{quantity:5,name:'Secutarii
 assert.equal(mechanicusLegends.total,65);
 assert.deepEqual([...mechanicusLegends.unresolved],[],'New Recruit Legends suffix must not break current point matching');
 
+const rosterUnit=(id,name,quantity=1)=>({id,name,quantity,models:[]});
+const ownedEnhancement=(name,ownerUnitId)=>({name,ownerUnitId,ownerStatus:'resolved'});
+const upgradeRoster=count=>{
+  const owners=[
+    rosterUnit('drone-a','Foetid Bloat-drone'),
+    rosterUnit('drone-b','Foetid Bloat-drone'),
+    rosterUnit('drone-c','Foetid Bloat-drone'),
+    rosterUnit('helbrute','Helbrute')
+  ].slice(0,count);
+  return {units:owners,detachments:[{name:'Contagion Engines'}],enhancements:owners.map(owner=>ownedEnhancement('Parasitic Woe-Reaper',owner.id)),declared:0,unitLineTotal:0};
+};
+const threeUpgrades=WHRosterPoints.check(upgradeRoster(3),'death guard');
+assert.equal(threeUpgrades.enhancementAssignments,3,'one Upgrade can have three owners');
+assert.equal(threeUpgrades.enhancementChoices,1,'three Upgrade owners consume one Enhancement choice');
+assert.equal(threeUpgrades.enhancements.filter(item=>item.ownerEligibility==='valid').length,3);
+assert.equal(threeUpgrades.enhancements.reduce((sum,item)=>sum+item.currentCost,0),45,'Upgrade points are paid once per owner');
+const parsedTripleUpgrade=WHRosterParser.parse(`FACTION KEYWORD: Chaos - Death Guard
+DETACHMENT: Contagion Engines
+TOTAL ARMY POINTS: 345pts
+1x Foetid Bloat-drone (100 pts)
+Enhancement: Parasitic Woe-Reaper (+15 pts)
+1x Foetid Bloat-drone (100 pts)
+Enhancement: Parasitic Woe-Reaper (+15 pts)
+1x Foetid Bloat-drone (100 pts)
+Enhancement: Parasitic Woe-Reaper (+15 pts)`);
+assert.equal(parsedTripleUpgrade.enhancements.length,3,'parser must preserve three legal owners of one Upgrade');
+assert.equal(new Set(parsedTripleUpgrade.enhancements.map(item=>item.ownerUnitId)).size,3,'Upgrade assignments must not collapse by name');
+assert.equal(WHRosterPoints.check(parsedTripleUpgrade,'death guard').enhancementChoices,1);
+const fourUpgrades=WHRosterPoints.check(upgradeRoster(4),'death guard');
+assert.equal(fourUpgrades.enhancementAssignments,4);
+assert.equal(fourUpgrades.enhancementChoices,1);
+assert.match(fourUpgrades.enhancements[3].ownerMessage,/limit exceeded/i,'the fourth Upgrade owner must be invalid');
+assert.ok(fourUpgrades.enhancementWarnings.some(message=>/4\/3/.test(message)));
+
+const epicRoster={units:[rosterUnit('mortarion','Mortarion')],detachments:[{name:'Virulent Vectorium'}],enhancements:[ownedEnhancement('Daemon Weapon of Nurgle','mortarion')],declared:0,unitLineTotal:0};
+assert.match(WHRosterPoints.check(epicRoster,'death guard').enhancements[0].ownerMessage,/Epic Hero/);
+const raiderUpgrade={units:[rosterUnit('raiders','Serberys Raiders',3)],detachments:[{name:'Cohort Acquisitus'}],enhancements:[ownedEnhancement('Stealth-screened Cybercanids Upgrade','raiders')],declared:0,unitLineTotal:0};
+assert.equal(WHRosterPoints.check(raiderUpgrade,'adeptus mechanicus').enhancements[0].ownerEligibility,'valid');
+const rangersInvalid={units:[rosterUnit('rangers','Skitarii Rangers',10)],detachments:[{name:'Rad-zone Corps'}],enhancements:[ownedEnhancement('Malphonic Susurrus','rangers')],declared:0,unitLineTotal:0};
+assert.match(WHRosterPoints.check(rangersInvalid,'adeptus mechanicus').enhancements[0].ownerMessage,/Invalid Enhancement owner/);
+const tauUpgrade={units:[rosterUnit('ghostkeel','Ghostkeel Battlesuit')],detachments:[{name:'Advanced Acquisition Cadre'}],enhancements:[ownedEnhancement('Unmasking Suite Upgrade','ghostkeel')],declared:0,unitLineTotal:0};
+assert.equal(WHRosterPoints.check(tauUpgrade,'t au empire').enhancements[0].ownerEligibility,'valid');
+const tauStandard={units:[rosterUnit('ghostkeel','Ghostkeel Battlesuit')],detachments:[{name:'Experimental Prototype Cadre'}],enhancements:[ownedEnhancement('Thermoneutronic Projector','ghostkeel')],declared:0,unitLineTotal:0};
+assert.match(WHRosterPoints.check(tauStandard,'t au empire').enhancements[0].ownerMessage,/Invalid Enhancement owner/);
+const fourChoices={units:[rosterUnit('lord','Death Guard Chaos Lord')],detachments:[{name:'Virulent Vectorium'}],enhancements:['Daemon Weapon of Nurgle','Furnace of Plagues','Arch Contaminator','Revolting Regeneration'].map(name=>ownedEnhancement(name,'lord')),declared:0,unitLineTotal:0};
+assert.match(WHRosterPoints.check(fourChoices,'death guard').enhancementWarnings.at(-1),/choice limit exceeded/i);
+
 const mechanicusRoster=WHRosterParser.parse(`FACTION KEYWORD: Imperium - Adeptus Mechanicus
 DETACHMENT: Haloscreed Battle Clade
 TOTAL ARMY POINTS: 840pts

@@ -5,12 +5,23 @@ import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const readerProfiles=book=>{
+  const result={};
+  for(const [tag] of fs.readFileSync(path.join(root,`books/${book}/reader.html`),'utf8').matchAll(/<article class="unit-card\b[^>]*>/g)){
+    const attr=name=>new RegExp(`\\s${name}="([^"]*)"`).exec(tag)?.[1]||'';
+    const unitId=attr('id'),title=attr('data-unit-title'),profile={unitId,keywords:attr('data-keywords').split('|').map(value=>value.trim()).filter(Boolean)};
+    if(unitId)result[unitId]=profile;
+    if(title)result[normalize(title)]=profile;
+  }
+  return result;
+};
+const dgProfiles=readerProfiles('death-guard'),mechanicusProfiles=readerProfiles('adeptus-mechanicus'),tauProfiles=readerProfiles('tau-empire');
 
 const deathGuard=read('books/death-guard/content/death-guard-rules.en.json');
 const dgUnits={};
 for(const unit of deathGuard.sections.filter(section=>section.kind==='unit')){
   const pointsBlock=unit.blocks.find(block=>block.type==='points');
-  dgUnits[normalize(unit.title)]={title:unit.title,points:unit.points,wargear:pointsBlock?.wargear||[]};
+  dgUnits[normalize(unit.title)]={title:unit.title,points:unit.points,wargear:pointsBlock?.wargear||[],...dgProfiles[unit.id]};
 }
 const dgEnhancements={};
 for(const section of deathGuard.sections){
@@ -51,14 +62,14 @@ for(const section of deathGuard.sections){
         'host of the hybridised pox':'once'
       };
       const aliases=(enhancement.tags||[]).includes('UPGRADE')?[`${match[1]} Upgrade`,`${match[1]} (Upgrade)`]:[];
-      const record={id:enhancement.id,title:match[1],value:Number(match[2]),text:enhancement.text,effect:effects[normalize(match[1])]||'',tags:enhancement.tags||[],owner:enhancement.owner||null,assignment:enhancement.assignment||null,aliases};
+      const record={id:enhancement.id,title:match[1],value:Number(match[2]),text:enhancement.text,effect:effects[normalize(match[1])]||'',detachment:String(section.id).replace(/^detachment-/,''),tags:enhancement.tags||[],owner:enhancement.owner||null,assignment:enhancement.assignment||null,aliases};
       for(const name of [match[1],...aliases])dgEnhancements[normalize(name)]=record;
     }
   }
 }
 
 const mechanicus=read('books/adeptus-mechanicus/content/adeptus-mechanicus-points.en.json');
-const mechanicusUnits=Object.fromEntries(mechanicus.units.map(unit=>[normalize(unit.title),unit]));
+const mechanicusUnits=Object.fromEntries(mechanicus.units.map(unit=>[normalize(unit.title),{...unit,...mechanicusProfiles[normalize(unit.title)]}]));
 const mechanicusEnhancements=Object.fromEntries(mechanicus.enhancements.flatMap(enhancement=>{
   const entries=[[normalize(enhancement.title),enhancement]],upgrade=(enhancement.tags||[]).includes('UPGRADE');
   if(enhancement.title==='Autoclavic Denunciation')entries.push([normalize('Autoclavic Denounciation'),enhancement]);
@@ -69,8 +80,8 @@ const mechanicusEnhancements=Object.fromEntries(mechanicus.enhancements.flatMap(
 }));
 const tau=read('books/tau-empire/content/tau-empire-points.en.json');
 const tauContracts=read('books/tau-empire/content/tau-empire-related-rules.en.json').enhancements;
-const tauUnits=Object.fromEntries(tau.units.map(unit=>[normalize(unit.title),unit]));
-const tauContractFor=enhancement=>tauContracts[enhancement.id?.replace(/^enhancement-/,'')]||({
+const tauUnits=Object.fromEntries(tau.units.map(unit=>[normalize(unit.title),{...unit,...tauProfiles[normalize(unit.title)]}]));
+const tauContractFor=enhancement=>tauContracts[enhancement.id]||tauContracts[enhancement.id?.replace(/^enhancement-/,'')]||({
   'enhancement-negation-emitters':tauContracts['negation-emitters-upgrade'],
   'enhancement-unmasking-suite':tauContracts['unmasking-suite-upgrade']
 }[enhancement.id]);

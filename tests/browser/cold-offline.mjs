@@ -103,6 +103,24 @@ try{
     console.log('PASS Related Rules modal focus, trap, inert, close restore and Journey Back');
   }finally{await modalContext.close();}
 
+  const relatedLayoutContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1280,height:880}});
+  try{
+    const {page,errors}=await observedPage(relatedLayoutContext);
+    await page.goto(`${origin}/books/death-guard/reader.html#unit-chaos-land-raider`);
+    await page.locator('#unit-chaos-land-raider .related-rules-trigger').click();
+    await page.locator('.full-related-filter summary').click();
+    await page.locator('.full-related-filter [data-detachment="virulent-vectorium"]').click();
+    const geometry=await page.locator('.related-rules-layer [data-rule-id="stratagem-putrid-detonation"]').evaluate(card=>{
+      const body=card.closest('.related-rules-body');
+      const section=card.closest('.detachment-part');
+      return{body:body.getBoundingClientRect().width,section:section.getBoundingClientRect().width,card:card.getBoundingClientRect().width};
+    });
+    assert.ok(geometry.section>=geometry.body*.9,`Death Guard nested Stratagem section must span the dialog (${geometry.section}/${geometry.body})`);
+    assert.ok(geometry.card>=geometry.body*.44&&geometry.card<=geometry.body*.55,`Putrid Detonation must occupy one of two dialog columns (${geometry.card}/${geometry.body})`);
+    assert.deepEqual(errors,[]);
+    console.log('PASS Death Guard Related Rules two-column geometry');
+  }finally{await relatedLayoutContext.close();}
+
   const wargearContext=await browser.newContext({serviceWorkers:'block'});
   try{
     const {page,errors}=await observedPage(wargearContext);

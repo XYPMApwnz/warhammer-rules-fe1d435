@@ -481,10 +481,6 @@
           "text": "Each time this model makes a ranged attack, on a Critical Wound, that attack has an Armour Penetration characteristic of -3."
         },
         {
-          "title": "Leader",
-          "text": "This model can be attached to the following units:\n- Breacher Team \n- Strike Team"
-        },
-        {
           "title": "Marker Drone",
           "text": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn."
         },
@@ -710,10 +706,6 @@
       ],
       "abilities": [
         {
-          "title": "Leader",
-          "text": "This model can be attached to the following units:\n- CRISIS BATTLESUITS \n- CRISIS FIREKNIFE BATTLESUITS \n- CRISIS STARSCYTHE BATTLESUITS \n- CRISIS SUNFORGE BATTLESUITS"
-        },
-        {
           "title": "Coldstar Commander",
           "text": "While this model is leading a unit, models in that unit have a Move characteristic of 12\" and ranged weapons equipped by models in that unit have the [ASSAULT] ability."
         },
@@ -808,7 +800,12 @@
       ],
       "paidWargear": [],
       "relations": {
-        "leader": [],
+        "leader": [
+          "Crisis Battlesuits",
+          "Crisis Fireknife Battlesuits",
+          "Crisis Starscythe Battlesuits",
+          "Crisis Sunforge Battlesuits"
+        ],
         "support": [],
         "attachedUnit": [],
         "transport": []
@@ -971,10 +968,6 @@
           "text": "While this model is leading a unit, each time a ranged attack targets that unit, worsen the Armour Penetration characteristic of that attack by 1."
         },
         {
-          "title": "Leader",
-          "text": "This model can be attached to the following units:\n- CRISIS BATTLESUITS \n- CRISIS FIREKNIFE BATTLESUITS \n- CRISIS STARSCYTHE BATTLESUITS \n- CRISIS SUNFORGE BATTLESUITS"
-        },
-        {
           "title": "Battlesuit Support System",
           "text": "The bearer’s unit is eligible to shoot in a turn in which it Fell Back, but when doing so only models equipped with this wargear can make ranged attacks."
         },
@@ -1065,7 +1058,12 @@
       ],
       "paidWargear": [],
       "relations": {
-        "leader": [],
+        "leader": [
+          "Crisis Battlesuits",
+          "Crisis Fireknife Battlesuits",
+          "Crisis Starscythe Battlesuits",
+          "Crisis Sunforge Battlesuits"
+        ],
         "support": [],
         "attachedUnit": [],
         "transport": []
@@ -1138,10 +1136,6 @@
         {
           "title": "Coordinated Leadership",
           "text": "In your Command phase, roll one D6: on a 4+, you gain 1CP."
-        },
-        {
-          "title": "Leader",
-          "text": "This model can be attached to the following units:\n- Breacher Team \n- Strike Team"
         },
         {
           "title": "Failure Is Not an Option",
@@ -1388,10 +1382,6 @@
         }
       ],
       "abilities": [
-        {
-          "title": "Leader",
-          "text": "This model can be attached to the following unit:\n- Kroot Carnivores \n- Kroot Farstalkers"
-        },
         {
           "title": "Rites of Feasting",
           "text": "While this model is leading a unit, models in that unit have the Feel Not Pain 6+ ability. If that unit destroys one or more enemy units in the Fight phase, until the end of the battle, models in that unit have the Feel No Pain 5+ ability instead."
@@ -1688,10 +1678,6 @@
           "text": "In your opponent’s Movement phase, if an enemy unit ends a move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to D6\"."
         },
         {
-          "title": "Leader",
-          "text": "This model can be attached to the following unit:\n- Kroot Carnivores \n- Kroot Farstalkers"
-        },
-        {
           "title": "Harnessed Alien Instincts",
           "text": "In your Shooting phase, this unit can select one visible enemy unit within 12\". That enemy unit is prey-marked:\n- While a unit is prey-marked, that unit has +3\" detection range."
         },
@@ -1823,10 +1809,6 @@
         {
           "title": "Root of Honour",
           "text": "Once per battle, at the start of any phase, you can select one friendly KROOT unit that is Battle-shocked and within 12\" of this model. That unit is no longer Battle-shocked."
-        },
-        {
-          "title": "Leader",
-          "text": "This model can be attached to the following unit:\n- Kroot Carnivores \n- Kroot Farstalkers"
         },
         {
           "title": "War Leader",
@@ -2124,10 +2106,6 @@
           "text": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
         },
         {
-          "title": "Leader",
-          "text": "This model can be attached to the following units:\n- CRISIS BATTLESUITS \n- CRISIS FIREKNIFE BATTLESUITS \n- CRISIS STARSCYTHE BATTLESUITS \n- CRISIS SUNFORGE BATTLESUITS"
-        },
-        {
           "title": "Deep Strike",
           "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
         },
@@ -2163,7 +2141,12 @@
       ],
       "paidWargear": [],
       "relations": {
-        "leader": [],
+        "leader": [
+          "Crisis Battlesuits",
+          "Crisis Fireknife Battlesuits",
+          "Crisis Starscythe Battlesuits",
+          "Crisis Sunforge Battlesuits"
+        ],
         "support": [],
         "attachedUnit": [],
         "transport": []
@@ -2388,10 +2371,6 @@
         {
           "title": "Jammer Array",
           "text": "Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of this model."
-        },
-        {
-          "title": "Leader",
-          "text": "This model can be attached to the following unit:\n- Pathfinder Team"
         },
         {
           "title": "Assault",
@@ -9434,10 +9413,6 @@
         {
           "title": "Assassin",
           "text": "Each time this model makes an attack that targets a Character unit, you can re-roll the Hit roll."
-        },
-        {
-          "title": "Leader",
-          "text": "This model can be attached to the following unit:\n- XV9 Hazard Battlesuits"
         },
         {
           "title": "Blacklight Marker Drones",

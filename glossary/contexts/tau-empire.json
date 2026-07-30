@@ -603,22 +603,9 @@
       }
     },
     "tau-empire-ability-leader": {
-      "termId": "tau-empire-ability-leader",
+      "termId": "core-leader",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-leader",
-        "rule": "unit-cadre-fireblade",
-        "datasheet": "unit-cadre-fireblade",
-        "statline": "cadre-fireblade-profile",
-        "units": [
-          "unit-cadre-fireblade",
-          "unit-ethereal"
-        ]
-      }
-    },
-    "tau-empire-ability-leader-2": {
-      "termId": "tau-empire-ability-leader-2",
-      "navigation": {
-        "glossary": "glossary-tau-empire-ability-leader-2",
         "rule": "unit-cadre-fireblade",
         "datasheet": "unit-cadre-fireblade",
         "statline": "cadre-fireblade-profile",
@@ -660,21 +647,6 @@
         "units": [
           "unit-cadre-fireblade",
           "unit-darkstrider"
-        ]
-      }
-    },
-    "tau-empire-ability-leader-3": {
-      "termId": "tau-empire-ability-leader-3",
-      "navigation": {
-        "glossary": "glossary-tau-empire-ability-leader-3",
-        "rule": "unit-commander-in-coldstar-battlesuit",
-        "datasheet": "unit-commander-in-coldstar-battlesuit",
-        "statline": "commander-in-coldstar-battlesuit-profile",
-        "units": [
-          "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-enforcer-battlesuit",
-          "unit-commander-farsight",
-          "unit-commander-in-crisis-battlesuit"
         ]
       }
     },
@@ -1259,20 +1231,6 @@
         "units": [
           "unit-firesight-team",
           "unit-commander-shadowsun"
-        ]
-      }
-    },
-    "tau-empire-ability-leader-4": {
-      "termId": "tau-empire-ability-leader-4",
-      "navigation": {
-        "glossary": "glossary-tau-empire-ability-leader-4",
-        "rule": "unit-kroot-flesh-shaper",
-        "datasheet": "unit-kroot-flesh-shaper",
-        "statline": "kroot-flesh-shaper-profile",
-        "units": [
-          "unit-kroot-flesh-shaper",
-          "unit-kroot-trail-shaper",
-          "unit-kroot-war-shaper"
         ]
       }
     },
@@ -1959,18 +1917,6 @@
       "termId": "tau-empire-ability-jammer-array",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-jammer-array",
-        "rule": "unit-darkstrider",
-        "datasheet": "unit-darkstrider",
-        "statline": "darkstrider-profile",
-        "units": [
-          "unit-darkstrider"
-        ]
-      }
-    },
-    "tau-empire-ability-leader-5": {
-      "termId": "tau-empire-ability-leader-5",
-      "navigation": {
-        "glossary": "glossary-tau-empire-ability-leader-5",
         "rule": "unit-darkstrider",
         "datasheet": "unit-darkstrider",
         "statline": "darkstrider-profile",
@@ -4048,10 +3994,10 @@
         ]
       }
     },
-    "tau-empire-ability-leader-6": {
-      "termId": "tau-empire-ability-leader-6",
+    "tau-empire-ability-leader-2": {
+      "termId": "core-leader",
       "navigation": {
-        "glossary": "glossary-tau-empire-ability-leader-6",
+        "glossary": "glossary-tau-empire-ability-leader-2",
         "rule": "unit-aunshi",
         "datasheet": "unit-aunshi",
         "statline": "aunshi-profile",
@@ -4172,6 +4118,18 @@
       "termId": "tau-empire-ability-crisis-commander",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-crisis-commander",
+        "rule": "unit-commander-in-crisis-battlesuit",
+        "datasheet": "unit-commander-in-crisis-battlesuit",
+        "statline": "commander-in-crisis-battlesuit-profile",
+        "units": [
+          "unit-commander-in-crisis-battlesuit"
+        ]
+      }
+    },
+    "tau-empire-ability-leader-3": {
+      "termId": "core-leader",
+      "navigation": {
+        "glossary": "glossary-tau-empire-ability-leader-3",
         "rule": "unit-commander-in-crisis-battlesuit",
         "datasheet": "unit-commander-in-crisis-battlesuit",
         "statline": "commander-in-crisis-battlesuit-profile",
@@ -4610,18 +4568,6 @@
       "termId": "tau-empire-ability-assassin",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-assassin",
-        "rule": "unit-shaso-ralai",
-        "datasheet": "unit-shaso-ralai",
-        "statline": "shaso-ralai-profile",
-        "units": [
-          "unit-shaso-ralai"
-        ]
-      }
-    },
-    "tau-empire-ability-leader-7": {
-      "termId": "tau-empire-ability-leader-7",
-      "navigation": {
-        "glossary": "glossary-tau-empire-ability-leader-7",
         "rule": "unit-shaso-ralai",
         "datasheet": "unit-shaso-ralai",
         "statline": "shaso-ralai-profile",

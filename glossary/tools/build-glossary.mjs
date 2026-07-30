@@ -400,7 +400,7 @@ for(const book of genericArmyBooks){
     const kind=isWeapon?'weapon':localId.startsWith(`${prefix}stratagem-`)?'stratagem':localId.startsWith(`${prefix}enhancement-`)?'enhancement':localId.startsWith(`${prefix}detachment-rule-`)?'detachment-rule':'datasheet-ability';
     const upgrade=kind==='enhancement'&&/^UPGRADE\./i.test(entry.full||entry.summary||'');
     const coreAbility=kind==='datasheet-ability'?coreAbilitiesByTitle.get(normalTitle(entry.title)):null;
-    if(coreAbility&&isCoreAbilityCopy(coreAbility,entry.full||entry.summary)){
+    if(coreAbility&&(isCoreAbilityCopy(coreAbility,entry.full||entry.summary)||(book.id==='tau-empire'&&normalTitle(entry.title)==='leader'))){
       aliases[localId]=coreAbility.id;
       coreAbility.sourceRefs=[...new Set([...(coreAbility.sourceRefs||[]),book.id])];
       addContext(book.id,localId,coreAbility.id,entry);

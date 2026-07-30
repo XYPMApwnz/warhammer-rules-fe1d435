@@ -2,7 +2,8 @@
   "schema": 1,
   "faction": {
     "id": "tau-empire",
-    "title": "T'au Empire"
+    "title": "T'au Empire",
+    "separateLeaderRelations": true
   },
   "source": {
     "repository": "https://github.com/BSData/wh40k-11e",
@@ -14,13 +15,22 @@
   },
   "unitCorrections": {
     "Cadre Fireblade": {"removeKeywords":["Leader"]},
-    "Commander in Coldstar Battlesuit": {"removeKeywords":["Leader"]},
-    "Commander in Enforcer Battlesuit": {"removeKeywords":["Leader"]},
+    "Commander in Coldstar Battlesuit": {
+      "removeKeywords":["Leader"],
+      "leaderRelations":["Crisis Battlesuits","Crisis Fireknife Battlesuits","Crisis Starscythe Battlesuits","Crisis Sunforge Battlesuits"]
+    },
+    "Commander in Enforcer Battlesuit": {
+      "removeKeywords":["Leader"],
+      "leaderRelations":["Crisis Battlesuits","Crisis Fireknife Battlesuits","Crisis Starscythe Battlesuits","Crisis Sunforge Battlesuits"]
+    },
     "Ethereal": {"removeKeywords":["Leader"]},
     "Kroot Flesh Shaper": {"removeKeywords":["Leader"]},
     "Kroot Trail Shaper": {"removeKeywords":["Leader"]},
     "Kroot War Shaper": {"removeKeywords":["Leader"]},
-    "Commander Farsight": {"removeKeywords":["Leader"]},
+    "Commander Farsight": {
+      "removeKeywords":["Leader"],
+      "leaderRelations":["Crisis Battlesuits","Crisis Fireknife Battlesuits","Crisis Starscythe Battlesuits","Crisis Sunforge Battlesuits"]
+    },
     "Darkstrider": {"removeKeywords":["Leader"]},
     "Aun'shi": {"removeKeywords":["Leader"]},
     "Commander in Crisis Battlesuit": {"removeKeywords":["Leader"]},

@@ -289,7 +289,11 @@ function parseDatasheet(link){
   const profileAbilities=abilityRecords.filter(item=>!wargearAbilityKeys.has(key(item.title)));
   const ruleAbilities=ruleRecords.filter(item=>!wargearAbilityKeys.has(key(item.title)));
   const wargearAbilities=allRecords.filter(item=>wargearAbilityKeys.has(key(item.title)));
-  const allAbilities=unique([...profileAbilities,...ruleAbilities].filter(item=>item.title),item=>`${key(item.title)}:${item.text}`);
+  let allAbilities=unique([...profileAbilities,...ruleAbilities].filter(item=>item.title),item=>`${key(item.title)}:${item.text}`);
+  const relations=relationsFor(allAbilities,resolved.profiles);
+  if(config.faction?.separateLeaderRelations===true){
+    allAbilities=allAbilities.filter(item=>key(item.title)!=='leader'||relationTargets(item.rawText).length===0);
+  }
   const composition=compositionFor(entry,title);
   const categories=categoriesFor(entry).map(value=>keywordCorrections.get(value.toLowerCase())||value);
   const legends=/\[Legends]/i.test(rawTitle);
@@ -309,7 +313,7 @@ function parseDatasheet(link){
     keywords:categories,
     composition,
     paidWargear:paidWargear(resolved.nodes),
-    relations:relationsFor(allAbilities,resolved.profiles)
+    relations
   };
 }
 
@@ -331,6 +335,10 @@ for(const unit of parsed){
   if(correction.removeAbilities){
     const removed=new Set(correction.removeAbilities.map(key));
     unit.abilities=unit.abilities.filter(ability=>!removed.has(key(ability.title)));
+  }
+  if(correction.leaderRelations){
+    unit.relations.leader=unique(correction.leaderRelations.map(clean).filter(Boolean),key);
+    unit.abilities=unit.abilities.filter(ability=>key(ability.title)!=='leader'||!/^this (?:model|unit) can be attached to/i.test(ability.text));
   }
   for(const [title,replacement] of Object.entries(correction.abilities||{})){
     const ability=unit.abilities.find(item=>key(item.title)===key(title));

@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 1774,
-    "aliases": 713,
+    "terms": 1767,
+    "aliases": 716,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
     "aliasCandidates": 112,
-    "duplicateCandidates": 15,
+    "duplicateCandidates": 14,
     "keywordCandidates": 16
   },
   "definitionCandidates": [
@@ -987,13 +987,6 @@
       "normalizedTitle": "leader",
       "termIds": [
         "core-leader",
-        "tau-empire-ability-leader",
-        "tau-empire-ability-leader-2",
-        "tau-empire-ability-leader-3",
-        "tau-empire-ability-leader-4",
-        "tau-empire-ability-leader-5",
-        "tau-empire-ability-leader-6",
-        "tau-empire-ability-leader-7",
         "tyranids-ability-leader",
         "tyranids-ability-leader-2",
         "tyranids-ability-leader-3",
@@ -1924,13 +1917,6 @@
         "adeptus-mechanicus-datasheet-damaged-1-4-wounds-remaining",
         "tau-empire-ability-damaged-1-4-wounds-remaining",
         "tyranids-ability-damaged-1-4-wounds-remaining"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "tau-empire-ability-leader-2",
-        "tyranids-ability-leader-2"
       ],
       "status": "review-required"
     },

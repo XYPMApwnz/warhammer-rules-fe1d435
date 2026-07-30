@@ -14159,7 +14159,11 @@
       "definition": {
         "en": "Mighty heroes fight at the forefront of battle. Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it."
       },
-      "aliases": [],
+      "aliases": [
+        "tau-empire-ability-leader",
+        "tau-empire-ability-leader-2",
+        "tau-empire-ability-leader-3"
+      ],
       "related": [],
       "canonicalSource": {
         "documentId": "core-rules",
@@ -14169,7 +14173,8 @@
       "status": "verified",
       "sourceRefs": [
         "core-rules",
-        "death-guard"
+        "death-guard",
+        "tau-empire"
       ],
       "summarySource": {
         "documentId": "death-guard",
@@ -41389,223 +41394,6 @@
         "locator": "unit-krootox-riders"
       },
       "fullRulePath": "books/tau-empire/reader.html#unit-krootox-riders",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-leader": {
-      "id": "tau-empire-ability-leader",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This model can be attached to the following units: - Breacher Team-Strike Team"
-      },
-      "definition": {
-        "en": "This model can be attached to the following units: - Breacher Team-Strike Team"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-cadre-fireblade"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-cadre-fireblade",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-leader-2": {
-      "id": "tau-empire-ability-leader-2",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes.…"
-      },
-      "definition": {
-        "en": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit. Each time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-cadre-fireblade"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-cadre-fireblade",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-leader-3": {
-      "id": "tau-empire-ability-leader-3",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This model can be attached to the following units: - CRISIS BATTLESUITS-CRISIS FIREKNIFE BATTLESUITS-CRISIS STARSCYTHE BATTLESUITS-CRISIS SUNFORGE BATTLESUITS"
-      },
-      "definition": {
-        "en": "This model can be attached to the following units: - CRISIS BATTLESUITS-CRISIS FIREKNIFE BATTLESUITS-CRISIS STARSCYTHE BATTLESUITS-CRISIS SUNFORGE BATTLESUITS"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-commander-in-coldstar-battlesuit"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-commander-in-coldstar-battlesuit",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-leader-4": {
-      "id": "tau-empire-ability-leader-4",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This model can be attached to the following unit: - Kroot Carnivores-Kroot Farstalkers"
-      },
-      "definition": {
-        "en": "This model can be attached to the following unit: - Kroot Carnivores-Kroot Farstalkers"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-kroot-flesh-shaper"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-kroot-flesh-shaper",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-leader-5": {
-      "id": "tau-empire-ability-leader-5",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This model can be attached to the following unit: - Pathfinder Team"
-      },
-      "definition": {
-        "en": "This model can be attached to the following unit: - Pathfinder Team"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-darkstrider"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-darkstrider",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-leader-6": {
-      "id": "tau-empire-ability-leader-6",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This model can be attached to the following units: - BREACHER TEAM-KROOT CARNIVORES-KROOT FARSTALKERS-STRIKE TEAM"
-      },
-      "definition": {
-        "en": "This model can be attached to the following units: - BREACHER TEAM-KROOT CARNIVORES-KROOT FARSTALKERS-STRIKE TEAM"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-aunshi"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-aunshi",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-leader-7": {
-      "id": "tau-empire-ability-leader-7",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This model can be attached to the following unit: - XV9 Hazard Battlesuits"
-      },
-      "definition": {
-        "en": "This model can be attached to the following unit: - XV9 Hazard Battlesuits"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-shaso-ralai"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-shaso-ralai",
       "status": "provisional",
       "sourceRefs": [
         "tau-empire"

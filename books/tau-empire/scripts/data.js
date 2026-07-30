@@ -641,23 +641,9 @@ window.DG_TERMS={
   "tau-empire-ability-leader": {
     "id": "tau-empire-ability-leader",
     "title": "Leader",
-    "summary": "This model can be attached to the following units: - Breacher Team - Strike Team",
-    "full": "This model can be attached to the following units: - Breacher Team - Strike Team",
-    "glossary": "glossary-tau-empire-ability-leader",
-    "rule": "unit-cadre-fireblade",
-    "units": [
-      "unit-cadre-fireblade",
-      "unit-ethereal"
-    ],
-    "datasheet": "unit-cadre-fireblade",
-    "statline": "cadre-fireblade-profile"
-  },
-  "tau-empire-ability-leader-2": {
-    "id": "tau-empire-ability-leader-2",
-    "title": "Leader",
     "summary": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit. Each time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
     "full": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit. Each time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-    "glossary": "glossary-tau-empire-ability-leader-2",
+    "glossary": "glossary-tau-empire-ability-leader",
     "rule": "unit-cadre-fireblade",
     "units": [
       "unit-cadre-fireblade",
@@ -702,22 +688,6 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-cadre-fireblade",
     "statline": "cadre-fireblade-profile"
-  },
-  "tau-empire-ability-leader-3": {
-    "id": "tau-empire-ability-leader-3",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: - CRISIS BATTLESUITS - CRISIS FIREKNIFE BATTLESUITS - CRISIS STARSCYTHE BATTLESUITS - CRISIS SUNFORGE BATTLESUITS",
-    "full": "This model can be attached to the following units: - CRISIS BATTLESUITS - CRISIS FIREKNIFE BATTLESUITS - CRISIS STARSCYTHE BATTLESUITS - CRISIS SUNFORGE BATTLESUITS",
-    "glossary": "glossary-tau-empire-ability-leader-3",
-    "rule": "unit-commander-in-coldstar-battlesuit",
-    "units": [
-      "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-commander-farsight",
-      "unit-commander-in-crisis-battlesuit"
-    ],
-    "datasheet": "unit-commander-in-coldstar-battlesuit",
-    "statline": "commander-in-coldstar-battlesuit-profile"
   },
   "tau-empire-ability-coldstar-commander": {
     "id": "tau-empire-ability-coldstar-commander",
@@ -1337,21 +1307,6 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-firesight-team",
     "statline": "firesight-team-profile"
-  },
-  "tau-empire-ability-leader-4": {
-    "id": "tau-empire-ability-leader-4",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - Kroot Carnivores - Kroot Farstalkers",
-    "full": "This model can be attached to the following unit: - Kroot Carnivores - Kroot Farstalkers",
-    "glossary": "glossary-tau-empire-ability-leader-4",
-    "rule": "unit-kroot-flesh-shaper",
-    "units": [
-      "unit-kroot-flesh-shaper",
-      "unit-kroot-trail-shaper",
-      "unit-kroot-war-shaper"
-    ],
-    "datasheet": "unit-kroot-flesh-shaper",
-    "statline": "kroot-flesh-shaper-profile"
   },
   "tau-empire-ability-rites-of-feasting": {
     "id": "tau-empire-ability-rites-of-feasting",
@@ -2087,19 +2042,6 @@ window.DG_TERMS={
     "summary": "Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of this model.",
     "full": "Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of this model.",
     "glossary": "glossary-tau-empire-ability-jammer-array",
-    "rule": "unit-darkstrider",
-    "units": [
-      "unit-darkstrider"
-    ],
-    "datasheet": "unit-darkstrider",
-    "statline": "darkstrider-profile"
-  },
-  "tau-empire-ability-leader-5": {
-    "id": "tau-empire-ability-leader-5",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - Pathfinder Team",
-    "full": "This model can be attached to the following unit: - Pathfinder Team",
-    "glossary": "glossary-tau-empire-ability-leader-5",
     "rule": "unit-darkstrider",
     "units": [
       "unit-darkstrider"
@@ -4341,12 +4283,12 @@ window.DG_TERMS={
     "datasheet": "unit-aunshi",
     "statline": "aunshi-profile"
   },
-  "tau-empire-ability-leader-6": {
-    "id": "tau-empire-ability-leader-6",
+  "tau-empire-ability-leader-2": {
+    "id": "tau-empire-ability-leader-2",
     "title": "Leader",
     "summary": "This model can be attached to the following units: - BREACHER TEAM - KROOT CARNIVORES - KROOT FARSTALKERS - STRIKE TEAM",
     "full": "This model can be attached to the following units: - BREACHER TEAM - KROOT CARNIVORES - KROOT FARSTALKERS - STRIKE TEAM",
-    "glossary": "glossary-tau-empire-ability-leader-6",
+    "glossary": "glossary-tau-empire-ability-leader-2",
     "rule": "unit-aunshi",
     "units": [
       "unit-aunshi"
@@ -4477,6 +4419,19 @@ window.DG_TERMS={
     "summary": "While this model is leading a unit, each time a model in that unit makes a ranged attack, re-roll a Hit roll of 1.",
     "full": "While this model is leading a unit, each time a model in that unit makes a ranged attack, re-roll a Hit roll of 1.",
     "glossary": "glossary-tau-empire-ability-crisis-commander",
+    "rule": "unit-commander-in-crisis-battlesuit",
+    "units": [
+      "unit-commander-in-crisis-battlesuit"
+    ],
+    "datasheet": "unit-commander-in-crisis-battlesuit",
+    "statline": "commander-in-crisis-battlesuit-profile"
+  },
+  "tau-empire-ability-leader-3": {
+    "id": "tau-empire-ability-leader-3",
+    "title": "Leader",
+    "summary": "This model can be attached to the following units: - CRISIS BATTLESUITS - CRISIS FIREKNIFE BATTLESUITS - CRISIS STARSCYTHE BATTLESUITS - CRISIS SUNFORGE BATTLESUITS",
+    "full": "This model can be attached to the following units: - CRISIS BATTLESUITS - CRISIS FIREKNIFE BATTLESUITS - CRISIS STARSCYTHE BATTLESUITS - CRISIS SUNFORGE BATTLESUITS",
+    "glossary": "glossary-tau-empire-ability-leader-3",
     "rule": "unit-commander-in-crisis-battlesuit",
     "units": [
       "unit-commander-in-crisis-battlesuit"
@@ -4951,19 +4906,6 @@ window.DG_TERMS={
     "summary": "Each time this model makes an attack that targets a Character unit, you can re-roll the Hit roll.",
     "full": "Each time this model makes an attack that targets a Character unit, you can re-roll the Hit roll.",
     "glossary": "glossary-tau-empire-ability-assassin",
-    "rule": "unit-shaso-ralai",
-    "units": [
-      "unit-shaso-ralai"
-    ],
-    "datasheet": "unit-shaso-ralai",
-    "statline": "shaso-ralai-profile"
-  },
-  "tau-empire-ability-leader-7": {
-    "id": "tau-empire-ability-leader-7",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - XV9 Hazard Battlesuits",
-    "full": "This model can be attached to the following unit: - XV9 Hazard Battlesuits",
-    "glossary": "glossary-tau-empire-ability-leader-7",
     "rule": "unit-shaso-ralai",
     "units": [
       "unit-shaso-ralai"

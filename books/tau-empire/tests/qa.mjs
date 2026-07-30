@@ -14,6 +14,7 @@ const wargear=json('content/tau-empire-codex-wargear.en.json');
 const points=json('content/tau-empire-points.en.json');
 const mfm=json('sources/official-mfm-v1.1.json');
 const relatedRules=json('content/tau-empire-related-rules.en.json');
+const manifest=json('sources/source-manifest.json');
 const context=JSON.parse(fs.readFileSync(path.join(repo,'glossary','contexts','tau-empire.json'),'utf8')).terms;
 const reader=fs.readFileSync(path.join(root,'reader.html'),'utf8');
 const related=fs.readFileSync(path.join(root,'mobile','related-rules.inc'),'utf8');
@@ -25,6 +26,8 @@ const lines=value=>decode(value).split(/\r?\n/).map(line=>line.replace(/\s+/g,' 
 const unitMarkup=(html,id)=>{const opener=new RegExp(`<article class="unit-card[^"]*" id="${id}"`).exec(html);assert.ok(opener,`${id}: card missing`);const start=opener.index,next=html.indexOf('<article class="unit-card',start+1);return html.slice(start,next<0?html.length:next);};
 
 assert.deepEqual([pack.meta.version,pack.meta.pageCount,pack.meta.sha256],['1.1',61,'32B985646BAA02A3B505FF3404E91D374A5F53C1D3B8000D7166CA94D1B52675']);
+assert.equal(pack.meta.legalFrom,'2026-07-22');
+assert.equal(manifest.layers.find(layer=>layer.id==='faction-pack-v1.1')?.legalFrom,pack.meta.legalFrom);
 assert.deepEqual([pack.detachments.length,pack.detachments.flatMap(item=>item.stratagems).length,pack.updates.length,pack.faqs.length],[3,7,25,2]);
 assert.deepEqual([codex.datasheets.length,codex.imperialArmour.length,codex.legends.length],[39,4,20]);
 assert.deepEqual([parity.detachments.length,parity.detachments.flatMap(item=>item.stratagems).length],[4,24]);
@@ -93,6 +96,22 @@ for(const title of ['Cadre Fireblade','Commander in Coldstar Battlesuit','Comman
   const unit=byTitle(title);assert.ok(unit,`${title}: leader missing`);
   assert.ok(!unit.keywords.includes('Leader'),`${title}: Leader leaked into keywords`);
   assert.ok(unit.abilities.some(ability=>ability.title==='Leader'),`${title}: Leader ability missing`);
+}
+const crisisRelations=['Crisis Battlesuits','Crisis Fireknife Battlesuits','Crisis Starscythe Battlesuits','Crisis Sunforge Battlesuits'];
+for(const title of ['Commander Farsight','Commander in Coldstar Battlesuit','Commander in Enforcer Battlesuit']){
+  const unit=byTitle(title);
+  assert.deepEqual(unit.relations.leader,crisisRelations,`${title}: Crisis Leader graph differs`);
+  assert.equal(unit.abilities.filter(item=>item.title==='Leader').length,1,`${title}: individual Leader list leaked into abilities`);
+  const desktop=unitMarkup(reader,unit.id);
+  const phone=fs.readFileSync(path.join(root,'mobile',`${unit.id.slice(5)}.html`),'utf8');
+  for(const target of crisisRelations){
+    assert.ok(desktop.includes(target),`${title}: desktop relation missing ${target}`);
+    assert.ok(phone.includes(target),`${title}: Phone relation missing ${target}`);
+  }
+  assert.equal(JSON.parse(decode(desktop.match(/data-related-candidates="([^"]+)"/)?.[1]||'[]')).filter(item=>item.attached).length,4,`${title}: attached candidates differ`);
+}
+for(const [local,entry] of Object.entries(context).filter(([id])=>id.includes('ability-leader'))){
+  assert.equal(entry.termId,'core-leader',`${local}: Leader must resolve to the canonical Core term`);
 }
 const frameTitles=['Devilfish','Hammerhead Gunship','Manta','Piranhas','Sky Ray Gunship',"Ta'unar Supremacy Armour",'Tidewall Droneport','Tidewall Gunrig','Tidewall Shieldline','Razorshark Strike Fighter','Sun Shark Bomber'];
 assert.deepEqual(currentUnits.filter(unit=>unit.keywords.includes('Frame')).map(unit=>unit.title).sort(),frameTitles.sort());

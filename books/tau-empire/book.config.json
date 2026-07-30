@@ -4,6 +4,7 @@
   "title": "T'au Empire",
   "shortTitle": "T'au Empire Rules",
   "mark": "TAU",
+  "coverImage": "assets/tau-empire-cover-800.webp",
   "edition": "11E",
   "factionKeyword": "T'AU EMPIRE",
   "armyRules": ["For the Greater Good"],
@@ -13,6 +14,7 @@
   "rosterSupport": true,
   "assetVersions": {
     "app": 5,
+    "book": 5,
     "mobile": 2,
     "rosterData": 1
   },

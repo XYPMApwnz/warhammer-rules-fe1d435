@@ -15,8 +15,10 @@ const points=json('content/tau-empire-points.en.json');
 const mfm=json('sources/official-mfm-v1.1.json');
 const relatedRules=json('content/tau-empire-related-rules.en.json');
 const manifest=json('sources/source-manifest.json');
+const config=json('book.config.json');
 const context=JSON.parse(fs.readFileSync(path.join(repo,'glossary','contexts','tau-empire.json'),'utf8')).terms;
 const reader=fs.readFileSync(path.join(root,'reader.html'),'utf8');
+const mobileStart=fs.readFileSync(path.join(root,'mobile','index.html'),'utf8');
 const related=fs.readFileSync(path.join(root,'mobile','related-rules.inc'),'utf8');
 const allUnits=[...codex.datasheets,...codex.imperialArmour,...codex.legends];
 const currentUnits=[...codex.datasheets,...codex.imperialArmour].filter(unit=>unit.status==='Current');
@@ -39,6 +41,12 @@ assert.equal(Object.keys(relatedRules.stratagems).length,31);
 assert.equal(Object.keys(relatedRules.enhancements).length,23);
 assert.equal(new Set([...pack.detachments,...parity.detachments].map(item=>key(item.title))).size,7);
 assert.equal(new Set(points.enhancements.map(item=>key(item.title))).size,23);
+assert.equal(config.coverImage,'assets/tau-empire-cover-800.webp');
+assert.ok(fs.existsSync(path.join(root,config.coverImage)));
+assert.ok(reader.includes(`src="./${config.coverImage}"`));
+assert.ok(mobileStart.includes(`src="../${config.coverImage}"`));
+assert.ok(fs.readFileSync(path.join(repo,'index.html'),'utf8').includes(`src="books/tau-empire/${config.coverImage}"`));
+assert.ok(fs.readFileSync(path.join(repo,'service-worker.js'),'utf8').includes(`./books/tau-empire/${config.coverImage}`));
 
 for(const unit of allUnits){
   assert.ok(unit.profiles.length,`${unit.title}: missing profile`);

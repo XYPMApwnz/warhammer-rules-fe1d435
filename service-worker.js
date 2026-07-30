@@ -155,7 +155,8 @@ const APP_SHELL = [
   ,TAU_EMPIRE_DESKTOP_FALLBACK
   ,TAU_EMPIRE_MOBILE_FALLBACK
   ,"./books/tau-empire/styles/tokens.css?v=2"
-  ,"./books/tau-empire/styles/book.css?v=4"
+  ,"./books/tau-empire/styles/book.css?v=5"
+  ,"./books/tau-empire/assets/tau-empire-cover-800.webp"
   ,"./books/tau-empire/scripts/data.js?v=2"
   ,"./books/tau-empire/scripts/app.js?v=5"
   ,"./books/tau-empire/scripts/roster-data.js?v=1"

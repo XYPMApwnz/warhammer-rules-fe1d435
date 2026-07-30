@@ -12,19 +12,15 @@
     'LORD OF VIRULENCE':'lord-of-virulence','PLAGUE MARINES':'plague-marines'
   };
 
-  const normalized=window.WHRuleFacts.normalize;
+  const normalized=window.WHRuleFacts.normalizeKeyword;
   function profile(unit){
-    const keywords=[...unit.querySelectorAll('.unit-part')].find(part=>part.id.endsWith('-keywords'))||unit;
-    const ids=new Set([...keywords.querySelectorAll('[data-term]')].map(node=>node.dataset.term));
-    const deadlyDemise=Boolean(unit.querySelector('[data-term="core-deadly-demise"]'));
-    const base=window.WHRuleFacts.profileFromDataset(unit.dataset,{id:unit.id},{abilities:deadlyDemise?['DEADLY DEMISE']:[]});
+    const base=window.WHRuleFacts.profileFromDataset(unit.dataset,{id:unit.id});
     return {
-      ...base,ids,
-      has:id=>ids.has(id),
+      ...base,
       attached:unit.hasAttribute('data-roster-attached')?unit.dataset.rosterAttached==='true':null,
       twoCharacters:unit.hasAttribute('data-roster-character-count')?unit.dataset.rosterCharacterCount==='2':null,
       warlord:unit.hasAttribute('data-roster-warlord')?unit.dataset.rosterWarlord==='true':null,
-      deadlyDemise
+      deadlyDemise:base.deadlyDemise
     };
   }
 
@@ -73,7 +69,7 @@
   function match(card,unitRoot){
     const base=unitRoot.slug?unitRoot:profile(unitRoot);
     const detachment=card.closest('[data-detachment]')?.dataset.detachment||'';
-    const grants=grantedKeywords(base.slug,[detachment]),granted=new Set(grants.map(grant=>grant.id)),labels=grants.map(grant=>normalized({textContent:grant.title}));
+    const grants=grantedKeywords(base.slug,[detachment]),granted=new Set(grants.map(grant=>grant.id)),labels=grants.map(grant=>normalized(grant.title));
     const candidates=(base.candidates||[base]).map(candidate=>({...candidate,keywords:new Set([...(candidate.keywords||base.keywords),...labels])}));
     const unit={...base,keywords:candidates[0].keywords,candidates,has:id=>base.has(id)||granted.has(id),contagionEngine:granted.has('keyword-contagion-engine')};
     if(card.classList.contains('enhancement')){

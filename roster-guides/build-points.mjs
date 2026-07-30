@@ -1,15 +1,20 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import ruleFacts from '../books/shared/rule-facts.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+const decode=value=>String(value||'').replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&#39;',"'");
 const readerProfiles=book=>{
   const result={};
   for(const [tag] of fs.readFileSync(path.join(root,`books/${book}/reader.html`),'utf8').matchAll(/<article class="unit-card\b[^>]*>/g)){
     const attr=name=>new RegExp(`\\s${name}="([^"]*)"`).exec(tag)?.[1]||'';
-    const unitId=attr('id'),title=attr('data-unit-title'),profile={unitId,keywords:attr('data-keywords').split('|').map(value=>value.trim()).filter(Boolean)};
+    const unitId=attr('id'),title=attr('data-unit-title');
+    const profile=ruleFacts.serializeRuleProfile(ruleFacts.profileFromDataset({
+      ruleFacts:decode(attr('data-rule-facts')),keywords:decode(attr('data-keywords')),relatedCandidates:decode(attr('data-related-candidates'))
+    },{id:unitId}));
     if(unitId)result[unitId]=profile;
     if(title)result[normalize(title)]=profile;
   }

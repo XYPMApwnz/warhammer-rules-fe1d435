@@ -1,7 +1,7 @@
 (function(root){
   'use strict';
   let templatePromise;
-  const normalize=root.WHRuleFacts.normalize;
+  const normalize=root.WHRuleFacts.normalizeKeyword;
   const profile=card=>root.WHRuleFacts.profileFromDataset(card.dataset,{id:card.id});
   const withKeywordGrants=(rule,unit)=>{
     let grants=[];

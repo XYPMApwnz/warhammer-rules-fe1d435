@@ -302,7 +302,8 @@ const unitCard=unit=>{
   const currentPoints=pointsByUnit.get(unit.title.toLowerCase());
   const pointValues=[...new Set((currentPoints?.points||[]).map(row=>Number(row.value)).filter(Number.isFinite))];
   const points=pointValues.length?pointValues.join(' / '):(unit.points?.length?unit.points.join(' / '):'');
-  return `<article class="unit-card surface${unit.status==='Warhammer Legends'?' legends-card':''}" id="${unit.id}" data-track="${unit.id}" data-unit-title="${esc(unit.title)}" data-keywords="${esc(unit.keywords.join('|'))}" data-related-candidates="${esc(JSON.stringify(relatedCandidatesByUnit.get(unit.id)))}"><div class="unit-header"><div><div class="eyebrow">${esc(unit.status)}</div><h3>${esc(unit.title)}</h3></div><div class="unit-status">${unit.status==='Warhammer Legends'?'LEGENDS':points?`${esc(points)} PTS`:'CODEX'}</div></div><div class="local-nav">${tabs}</div>${sections}${provenance}</article>`;
+  const ruleFacts={id:unit.id,unitId:unit.id,slug,keywords:unit.keywords,intrinsicKeywords:unit.keywords,abilities:[],termIds:[],epic:unit.keywords.includes('Epic Hero'),deadlyDemise:false,attached:null,twoCharacters:null,warlord:null,candidates:relatedCandidatesByUnit.get(unit.id)};
+  return `<article class="unit-card surface${unit.status==='Warhammer Legends'?' legends-card':''}" id="${unit.id}" data-track="${unit.id}" data-unit-title="${esc(unit.title)}" data-keywords="${esc(unit.keywords.join('|'))}" data-related-candidates="${esc(JSON.stringify(relatedCandidatesByUnit.get(unit.id)))}" data-rule-facts="${esc(JSON.stringify(ruleFacts))}"><div class="unit-header"><div><div class="eyebrow">${esc(unit.status)}</div><h3>${esc(unit.title)}</h3></div><div class="unit-status">${unit.status==='Warhammer Legends'?'LEGENDS':points?`${esc(points)} PTS`:'CODEX'}</div></div><div class="local-nav">${tabs}</div>${sections}${provenance}</article>`;
 };
 const datasheetGroups=datasheetCategories.map(group=>tracked(group.id,group.title,`<p class="lead">${group.units.length} datasheet${group.units.length===1?'':'s'} in this category.</p>${group.units.map(unitCard).join('')}`)).join('');
 const glossaryGroup=(id,title,terms)=>tracked(id,title,`<div class="glossary-grid">${terms.map(term=>`<article class="glossary-card surface" id="glossary-${term.id}" data-glossary-title="${esc(term.title)}"><h4>${esc(term.title)}</h4><p>${esc(cleanText(term.summary))}</p><p class="glossary-full">${esc(cleanText(term.full))}</p>${term.sectionId?`<button class="popup-action" data-journey-target="${term.sectionId}" data-journey-type="rule">Open rule</button>`:''}</article>`).join('')}</div>`);
@@ -331,7 +332,7 @@ const releaseHtml=html
   .replace('../../glossary/generated/glossary.en.js"','../../glossary/generated/glossary.en.js?v=3"')
   .replace('<script src="../shared/navigation-targets.js', '<script src="../../glossary-return.js?v=3"></script><script src="../shared/navigation-targets.js')
   .replace('../shared/glossary-autolink.js?v=7','../shared/glossary-autolink.js?v=8')
-  .replace('<script src="./scripts/related-rules.js?v=6">','<script src="../shared/rule-facts.js?v=1"></script><script src="../shared/related-rules-matcher.js?v=4"></script><script src="../shared/modal-focus.js?v=1"></script><script src="./scripts/related-rules.js?v=10">')
+  .replace('<script src="./scripts/related-rules.js?v=6">','<script src="../shared/rule-facts.js?v=2"></script><script src="../shared/related-rules-matcher.js?v=4"></script><script src="../shared/modal-focus.js?v=1"></script><script src="./scripts/related-rules.js?v=10">')
   .replace('popup-controller.js?v=18','popup-controller.js?v=21')
   .replace('ui-controllers.js?v=13','ui-controllers.js?v=14')
   .replace('app.js?v=20','app.js?v=22');

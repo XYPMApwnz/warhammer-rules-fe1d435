@@ -64,16 +64,27 @@ try{
       ['Tyranids','/books/tyranids/reader.html#unit-hive-tyrant','/books/tyranids/mobile/hive-tyrant.html','/books/tyranids/mobile/invasion-fleet.html'],
       ["T'au Empire",'/books/tau-empire/reader.html#unit-breacher-team','/books/tau-empire/mobile/breacher-team.html','/books/tau-empire/mobile/kauyon.html']
     ];
+    let profileCount=0;
     for(const [name,desktop,mobile,detachment] of books){
       await page.goto(origin+desktop);
       assert.equal(await page.evaluate(()=>window.WHRelatedRules?.enabled),false,`${name} shared safety flag must be disabled`);
       assert.equal(await page.locator('.related-rules-trigger,.related-rules-layer').count(),0,`${name} desktop Compatible Rules must not be installed`);
       assert.ok(await page.locator('[id$="-stratagems"] .stratagem').count(),`${name} full Detachment Stratagems must remain available`);
+      const parity=await page.evaluate(()=>[...document.querySelectorAll('.unit-card')].map(node=>{
+        const fromDataset=WHRuleFacts.serializeRuleProfile(WHRuleFacts.profileFromDataset(node.dataset,{id:node.id}));
+        const fromRecord=WHRuleFacts.serializeRuleProfile(WHRuleFacts.profileFromRecord(JSON.parse(node.dataset.ruleFacts)));
+        return{id:node.id,equal:JSON.stringify(fromDataset)===JSON.stringify(fromRecord)};
+      }));
+      assert.ok(parity.length&&parity.every(item=>item.equal),`${name} browser dataset must equal its compiled plain record`);
+      profileCount+=parity.length;
       await page.goto(origin+mobile);
       assert.equal(await page.locator('#relatedRules').count(),0,`${name} Phone Mode Compatible Rules must be removed`);
       await page.goto(origin+detachment);
       assert.ok(await page.locator('.stratagem').count(),`${name} Phone Mode Detachment Stratagems must remain available`);
     }
+    assert.equal(profileCount,199,'Browser parity must cover all published datasheets');
+    const malformed=await page.evaluate(()=>{try{WHRuleFacts.profileFromDataset({keywords:'T\'AU EMPIRE',relatedCandidates:'{bad'},{id:'unit-browser-bad'});return'';}catch(error){return error.message;}});
+    assert.match(malformed,/unit-browser-bad: malformed data-related-candidates/);
     assert.deepEqual(errors,[]);
     console.log('PASS Compatible Rules safety flag hides all four embedded desktop and Phone Mode interfaces');
   }finally{await modalContext.close();}
@@ -135,10 +146,11 @@ try{
       const cards=[...template.content.querySelectorAll('.stratagem,.enhancement')],byId=new Map(cards.map(card=>[card.dataset.ruleId,card]));
       const profiles=vehicleIds.map(id=>{
         const node=document.getElementById(id),actual=window.DGRelatedRules.profile(node);
-        const expected=window.WHRuleFacts.profileFromDataset(node.dataset,{id:node.id},{abilities:node.querySelector('[data-term="core-deadly-demise"]')?['DEADLY DEMISE']:[]});
-        return{id,actual,expected};
+        const expected=window.WHRuleFacts.profileFromRecord(JSON.parse(node.dataset.ruleFacts));
+        return{id,actual,expected,actualSerialized:window.WHRuleFacts.serializeRuleProfile(actual),expectedSerialized:window.WHRuleFacts.serializeRuleProfile(expected)};
       });
       const differences=[];
+      for(const profile of profiles)if(JSON.stringify(profile.actualSerialized)!==JSON.stringify(profile.expectedSerialized))differences.push([profile.id,'profile','browser','record']);
       for(const profile of profiles)for(const card of cards){
         const actual=window.DGRelatedRules.match(card,profile.actual).state;
         const expected=window.DGRelatedRules.match(card,profile.expected).state;

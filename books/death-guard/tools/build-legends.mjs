@@ -190,13 +190,22 @@ for(const bodyguard of unitSections){
   }
 }
 let reader=fs.readFileSync(readerFile,'utf8');
+reader=reader.replace('rule-facts.js?v=1','rule-facts.js?v=2');
 reader=replaceOrInsert(reader,'li',legends.group.id,'pact-of-decay-datasheets',nav);
 reader=replaceOrInsert(reader,'section',legends.group.id,'pact-of-decay-datasheets',content);
 reader=reader.replace(/<p class="lead">\d+ current Death Guard and Pact of Decay datasheets\.<\/p>/,`<p class="lead">${book.audit.datasheets} current Death Guard, Legends and Pact of Decay datasheets.</p>`);
 reader=reader.replace(/9 detachments [^<]* \d+ datasheets [^<]* \d+ glossary entries/,`9 detachments · ${book.audit.datasheets} datasheets · ${book.glossary.length} glossary entries`);
 for(const unit of unitSections){
   const opener=new RegExp(`(<article\\b[^>]*\\bclass="[^"]*\\bunit-card\\b[^"]*"[^>]*\\bid="${unit.id}"[^>]*)(>)`,'i');
-  reader=reader.replace(opener,(match,start,end)=>`${start.replace(/\sdata-(?:keywords|related-candidates)="[^"]*"/g,'')} data-keywords="${escapeHtml(unitKeywords.get(unit.id).join('|'))}" data-related-candidates="${escapeHtml(JSON.stringify(relatedCandidates.get(unit.id)))}"${end}`);
+  const abilityText=(unit.subsections||[]).filter(section=>section.title==='Abilities').flatMap(section=>(section.blocks||[]).flatMap(block=>[block.title||'',block.text||''])).join(' ');
+  const deadlyDemise=/\bDeadly Demise\b/i.test(abilityText);
+  const ruleFacts={
+    id:unit.id,unitId:unit.id,slug:unit.id.replace(/^unit-/,''),keywords:unitKeywords.get(unit.id),intrinsicKeywords:unitKeywords.get(unit.id),
+    abilities:deadlyDemise?['DEADLY DEMISE']:[],termIds:unitKeywords.get(unit.id).filter(keyword=>!plainKeywordNames.has(keyword)).map(keywordId),
+    epic:unitKeywords.get(unit.id).some(keyword=>keyword.toUpperCase()==='EPIC HERO'),deadlyDemise,attached:null,twoCharacters:null,warlord:null,
+    candidates:relatedCandidates.get(unit.id)
+  };
+  reader=reader.replace(opener,(match,start,end)=>`${start.replace(/\sdata-(?:keywords|related-candidates|rule-facts)="[^"]*"/g,'')} data-keywords="${escapeHtml(unitKeywords.get(unit.id).join('|'))}" data-related-candidates="${escapeHtml(JSON.stringify(relatedCandidates.get(unit.id)))}" data-rule-facts="${escapeHtml(JSON.stringify(ruleFacts))}"${end}`);
 }
 fs.writeFileSync(readerFile,reader);
 

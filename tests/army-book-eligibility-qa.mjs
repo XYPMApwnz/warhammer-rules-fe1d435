@@ -12,16 +12,17 @@ vm.runInNewContext(fs.readFileSync(path.join(booksRoot,'shared','related-rules-m
 const matcher=sandbox.window.WHRelatedRules;
 const decode=value=>value.replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&#39;',"'");
 const attr=(tag,name)=>new RegExp(`\\s${name}="([^"]*)"`).exec(tag)?.[1]||'';
-const keywordSet=values=>new Set(values.map(value=>ruleFacts.normalize(value)).filter(Boolean));
+const keywordSet=values=>new Set(values.map(value=>ruleFacts.normalizeKeyword(value)).filter(Boolean));
 
 function profilesFrom(reader){
   const starts=[...reader.matchAll(/<article class="unit-card\b[^>]*>/g)];
   return starts.map((match,index)=>{
-    const tag=match[0],body=reader.slice(match.index,starts[index+1]?.index||reader.length);
+    const tag=match[0];
     return ruleFacts.profileFromDataset({
+      ruleFacts:decode(attr(tag,'data-rule-facts')),
       keywords:decode(attr(tag,'data-keywords')),
       relatedCandidates:decode(attr(tag,'data-related-candidates'))
-    },{id:attr(tag,'id')},{abilities:body.includes('data-term="core-deadly-demise"')?['DEADLY DEMISE']:[]});
+    },{id:attr(tag,'id')});
   });
 }
 

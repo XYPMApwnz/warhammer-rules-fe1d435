@@ -10,7 +10,7 @@ const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 const sandbox={window:{}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'books/shared/related-rules-matcher.js'),'utf8'),sandbox);
 const matcher=sandbox.window.WHRelatedRules;
-const normalize=ruleFacts.normalize;
+const normalize=ruleFacts.normalizeKeyword;
 const profiles=book=>{
   const html=fs.readFileSync(path.join(root,`books/${book}/reader.html`),'utf8');
   return [...html.matchAll(/<article class="unit-card\b[^>]*id="([^"]+)"[^>]*data-keywords="([^"]*)"[^>]*(?:data-related-candidates="([^"]*)")?/g)].map(match=>{

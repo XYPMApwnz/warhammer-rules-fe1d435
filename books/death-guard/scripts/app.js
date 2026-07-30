@@ -11,6 +11,7 @@
   }
 
   function initRelatedRules(){
+    if(!window.DGRelatedRules.enabled)return null;
     const layer=document.createElement('div');
     layer.className='related-rules-layer';layer.hidden=true;
     layer.innerHTML='<section class="related-rules-dialog" role="dialog" aria-modal="true" aria-labelledby="relatedRulesTitle"><header><div><span>Datasheet tools</span><h2 id="relatedRulesTitle">Compatible Stratagems &amp; Enhancements</h2></div><button type="button" class="related-rules-close" aria-label="Close">&times;</button></header><div class="related-rules-body"><p>Loading rules&hellip;</p></div></section>';

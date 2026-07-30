@@ -12,15 +12,14 @@
     'LORD OF VIRULENCE':'lord-of-virulence','PLAGUE MARINES':'plague-marines'
   };
 
-  const normalized=node=>(node?.textContent||'').replace(/\s+/g,' ').trim().toUpperCase();
+  const normalized=value=>String(value?.textContent??value??'').replace(/\s+/g,' ').trim().toUpperCase();
   function profile(unit){
     const keywords=[...unit.querySelectorAll('.unit-part')].find(part=>part.id.endsWith('-keywords'))||unit;
-    const keywordLine=keywords.querySelector('.content-block p')||keywords;
-    const ids=new Set([...keywordLine.querySelectorAll('[data-term]')].map(node=>node.dataset.term));
+    const ids=new Set([...keywords.querySelectorAll('[data-term]')].map(node=>node.dataset.term));
     const slug=(unit.id||'').replace(/^unit-/,'');
     let candidates=[];
-    try{candidates=JSON.parse(unit.dataset.relatedCandidates||'').map(candidate=>({...candidate,keywords:new Set(candidate.keywords.map(normalized))}));}catch{}
-    const labels=new Set([...keywordLine.querySelectorAll('[data-term]')].map(node=>normalized(node)));
+    try{candidates=JSON.parse(unit.dataset.relatedCandidates||'').map(candidate=>({...candidate,keywords:new Set(candidate.keywords.map(normalized).filter(Boolean))}));}catch{}
+    const labels=new Set((unit.dataset.keywords||'').split('|').map(normalized).filter(Boolean));
     return {
       slug,ids,
       unitId:unit.id,keywords:labels,intrinsicKeywords:labels,candidates:candidates.length?candidates:undefined,
@@ -89,5 +88,5 @@
   }
   const matches=(card,unitRoot)=>match(card,unitRoot).state!=='no-match';
 
-  window.DGRelatedRules=Object.freeze({profile,match,matches,grantedKeywords,eligibilityByRule});
+  window.DGRelatedRules=Object.freeze({enabled:false,profile,match,matches,grantedKeywords,eligibilityByRule});
 }());

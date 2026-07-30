@@ -59,7 +59,6 @@ try{
   try{
     const {page,errors}=await observedPage(modalContext);
     const books=[
-      ['Death Guard','/books/death-guard/reader.html#unit-plague-marines','#unit-plague-marines'],
       ['Adeptus Mechanicus','/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers','#unit-skitarii-rangers'],
       ['Tyranids','/books/tyranids/reader.html#unit-hive-tyrant','#unit-hive-tyrant'],
       ["T'au Empire",'/books/tau-empire/reader.html#unit-breacher-team','#unit-breacher-team']
@@ -87,8 +86,8 @@ try{
       assert.equal(await trigger.evaluate(node=>node===document.activeElement),true,`${name} backdrop must restore the trigger`);
       assert.equal(await page.evaluate(()=>[...document.body.children].some(node=>node.inert)),false,`${name} close must clear inert`);
     }
-    await page.goto(`${origin}/books/death-guard/reader.html#unit-plague-marines`);
-    const journeyTrigger=page.locator('#unit-plague-marines .related-rules-trigger');
+    await page.goto(`${origin}/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers`);
+    const journeyTrigger=page.locator('#unit-skitarii-rangers .related-rules-trigger');
     await journeyTrigger.click();
     await page.locator('.related-rules-layer [data-term]:visible').first().click();
     const journeyAction=page.locator('#popupLayer [data-journey-target]').first();
@@ -151,18 +150,53 @@ try{
   try{
     const {page,errors}=await observedPage(relatedLayoutContext);
     await page.goto(`${origin}/books/death-guard/reader.html#unit-chaos-land-raider`);
-    await page.locator('#unit-chaos-land-raider .related-rules-trigger').click();
-    await page.locator('.full-related-filter summary').click();
-    await page.locator('.full-related-filter [data-detachment="virulent-vectorium"]').click();
-    const geometry=await page.locator('.related-rules-layer [data-rule-id="stratagem-putrid-detonation"]').evaluate(card=>{
-      const body=card.closest('.related-rules-body');
-      const section=card.closest('.detachment-part');
-      return{body:body.getBoundingClientRect().width,section:section.getBoundingClientRect().width,card:card.getBoundingClientRect().width};
+    assert.equal(await page.locator('.related-rules-trigger').count(),0,'Death Guard Related Rules UI must remain behind the safety flag');
+    const matrix=await page.evaluate(async()=>{
+      const vehicleIds=['unit-chaos-land-raider','unit-chaos-predator-annihilator','unit-chaos-predator-destructor','unit-defiler','unit-foetid-bloat-drone','unit-foetid-bloat-drone-with-heavy-blight-launcher','unit-helbrute','unit-myphitic-blight-hauler','unit-plagueburst-crawler','unit-chaos-rhino'];
+      const html=await fetch('./mobile/related-rules.inc?v=2').then(response=>response.text()),template=document.createElement('template');
+      template.innerHTML=html;
+      template.content.querySelectorAll('[id]').forEach(node=>{node.dataset.ruleId=node.id;node.removeAttribute('id');});
+      const cards=[...template.content.querySelectorAll('.stratagem,.enhancement')],byId=new Map(cards.map(card=>[card.dataset.ruleId,card]));
+      const normalize=value=>String(value||'').replace(/\s+/g,' ').trim().toUpperCase();
+      const profiles=vehicleIds.map(id=>{
+        const node=document.getElementById(id),actual=window.DGRelatedRules.profile(node);
+        const expectedKeywords=new Set((node.dataset.keywords||'').split('|').map(normalize).filter(Boolean));
+        let expectedCandidates=[];
+        try{expectedCandidates=JSON.parse(node.dataset.relatedCandidates||'[]').map(candidate=>({...candidate,keywords:new Set((candidate.keywords||[]).map(normalize).filter(Boolean))}));}catch{}
+        return{id,actual,expected:{...actual,keywords:expectedKeywords,intrinsicKeywords:expectedKeywords,candidates:expectedCandidates.length?expectedCandidates:undefined}};
+      });
+      const differences=[];
+      for(const profile of profiles)for(const card of cards){
+        const actual=window.DGRelatedRules.match(card,profile.actual).state;
+        const expected=window.DGRelatedRules.match(card,profile.expected).state;
+        if(actual!==expected)differences.push([profile.id,card.dataset.ruleId,actual,expected]);
+      }
+      const state=(unitId,ruleId)=>window.DGRelatedRules.match(byId.get(ruleId),profiles.find(profile=>profile.id===unitId).actual).state;
+      return{
+        differences,
+        facts:profiles.map(profile=>({id:profile.id,keywords:[...profile.actual.keywords],candidateKeywords:(profile.actual.candidates||[]).map(candidate=>[...candidate.keywords])})),
+        fixtures:{
+          landRaiderHeroic:state('unit-chaos-land-raider','core-stratagem-heroic-intervention'),
+          helbruteHeroic:state('unit-helbrute','core-stratagem-heroic-intervention'),
+          landRaiderCrushing:state('unit-chaos-land-raider','core-stratagem-crushing-impact'),
+          landRaiderSmoke:state('unit-chaos-land-raider','core-stratagem-smokescreen'),
+          defilerSmoke:state('unit-defiler','core-stratagem-smokescreen'),
+          landRaiderPlaguesurge:state('unit-chaos-land-raider','stratagem-plaguesurge')
+        }
+      };
     });
-    assert.ok(geometry.section>=geometry.body*.9,`Death Guard nested Stratagem section must span the dialog (${geometry.section}/${geometry.body})`);
-    assert.ok(geometry.card>=geometry.body*.44&&geometry.card<=geometry.body*.55,`Putrid Detonation must occupy one of two dialog columns (${geometry.card}/${geometry.body})`);
+    assert.deepEqual(matrix.differences,[],'production DG profiles must preserve the generated keyword facts for all 10 current Vehicles');
+    assert.ok(matrix.facts.every(profile=>profile.keywords.length&&profile.candidateKeywords.every(keywords=>keywords.length)),'DG profile must not erase intrinsic or candidate keywords');
+    assert.equal(matrix.fixtures.landRaiderHeroic,'no-match');
+    assert.notEqual(matrix.fixtures.helbruteHeroic,'no-match');
+    assert.notEqual(matrix.fixtures.landRaiderCrushing,'no-match');
+    assert.notEqual(matrix.fixtures.landRaiderSmoke,'no-match');
+    assert.equal(matrix.fixtures.defilerSmoke,'no-match');
+    assert.equal(matrix.fixtures.landRaiderPlaguesurge,'no-match');
+    await page.goto(`${origin}/books/death-guard/mobile/chaos-land-raider.html?view=mobile`);
+    assert.equal(await page.locator('#relatedRules').count(),0,'Death Guard Phone Mode Related Rules must remain behind the safety flag');
     assert.deepEqual(errors,[]);
-    console.log('PASS Death Guard Related Rules two-column geometry');
+    console.log('PASS Death Guard production profile preserves all 10 Vehicle keyword contracts; Related Rules safety flag is active');
   }finally{await relatedLayoutContext.close();}
 
   const wargearContext=await browser.newContext({serviceWorkers:'block'});

@@ -23,6 +23,8 @@
   let relatedKind = 'stratagems';
   const unit = document.querySelector('.unit-card');
   const params = new URLSearchParams(location.search);
+  const relatedRulesEnabled = window.DGRelatedRules?.enabled === true;
+  if (!relatedRulesEnabled) relatedRules?.remove();
 
   if (params.get('roster') && unit && window.WHRosterParser && window.WHRosterEnhancements) {
     try {
@@ -179,7 +181,7 @@
     if (openedByTouch) requestAnimationFrame(() => opener?.blur());
     openedByTouch = false;
   });
-  if (relatedRules) {
+  if (relatedRulesEnabled && relatedRules) {
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver(entries => {
         if (!entries.some(entry => entry.isIntersecting)) return;
@@ -189,7 +191,7 @@
       observer.observe(relatedRules);
     } else loadRelated();
   }
-  if (relatedDetachment) {
+  if (relatedRulesEnabled && relatedDetachment) {
     try {
       const saved = localStorage.getItem('death-guard-detachment-filter');
       if (saved && relatedDetachment.querySelector(`option[value="${CSS.escape(saved)}"]`)) relatedDetachment.value = saved;
@@ -200,7 +202,7 @@
     });
     filterRelated();
   }
-  relatedRules?.addEventListener('click', event => {
+  if (relatedRulesEnabled) relatedRules?.addEventListener('click', event => {
     const tab = event.target.closest('[data-related-tab]');
     if (tab) {
       relatedKind = tab.dataset.relatedTab;

@@ -1054,7 +1054,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="soulrot-flux" data-term-title="Soulrot Flux" data-term-summary="WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a Fall Back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit. TARGET: That CONTAGION ENGINE unit. EFFECT: When an enemy unit engaged with your unit is selected to make a Fall Back move, roll one D6: on a 1, that enemy unit suffers 1 mortal wound; on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds." data-full-rule-path="books/death-guard/reader.html#stratagem-soulrot-flux" data-mobile-rule-path="books/death-guard/mobile/contagion-engines.html#stratagem-soulrot-flux">Soulrot Flux</button>
+<button class="term-button" data-term="soulrot-flux" data-term-title="Soulrot Flux" data-term-summary="WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a fall-back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit. TARGET: That CONTAGION ENGINE unit. EFFECT: When an enemy unit engaged with your unit is selected to make a fall-back move, roll one D6: • On a 1, that enemy unit suffers 1 mortal wound. • On a 2-5, that enemy unit suffers D3 mortal wounds. • On a 6, that enemy unit suffers 3 mortal wounds." data-full-rule-path="books/death-guard/reader.html#stratagem-soulrot-flux" data-mobile-rule-path="books/death-guard/mobile/contagion-engines.html#stratagem-soulrot-flux">Soulrot Flux</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="contagion-engines" data-term-title="Contagion Engines" data-term-summary="Purge the Foe, 1DP." data-full-rule-path="books/death-guard/reader.html#contagion-engines-rule" data-mobile-rule-path="books/death-guard/mobile/contagion-engines.html#contagion-engines-rule">Contagion Engines</button> Stratagem</span>
@@ -1063,13 +1063,16 @@
 </div>
 <p class="field">
 <b>WHEN</b>
-<br>Your opponent’s Movement phase, when an enemy unit is selected to make a Fall Back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit.</p>
+<br>Your opponent’s Movement phase, when an enemy unit is selected to make a fall-back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit.</p>
 <p class="field">
 <b>TARGET</b>
 <br>That CONTAGION ENGINE unit.</p>
 <p class="field">
 <b>EFFECT</b>
-<br>When an enemy unit engaged with your unit is selected to make a Fall Back move, roll one D6: on a 1, that enemy unit suffers 1 mortal wound; on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds.</p>
+<br>When an enemy unit engaged with your unit is selected to make a fall-back move, roll one D6:
+<br>• On a 1, that enemy unit suffers 1 mortal wound.
+<br>• On a 2-5, that enemy unit suffers D3 mortal wounds.
+<br>• On a 6, that enemy unit suffers 3 mortal wounds.</p>
 </article>
 </div>
 </section></div>
@@ -1100,7 +1103,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="nauseating-paroxysms" data-term-title="Nauseating Paroxysms" data-term-summary="WHEN: Start of the Fight phase. TARGET: One friendly engaged PLAGUE MARINES unit. EFFECT: Select one enemy unit engaged with your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll." data-full-rule-path="books/death-guard/reader.html#stratagem-nauseating-paroxysms" data-mobile-rule-path="books/death-guard/mobile/flyblown-host.html#stratagem-nauseating-paroxysms">Nauseating Paroxysms</button>
+<button class="term-button" data-term="nauseating-paroxysms" data-term-title="Nauseating Paroxysms" data-term-summary="WHEN: Start of the Fight phase TARGET: One friendly engaged PLAGUE MARINES unit. EFFECT: Select one enemy unit engaged with your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll." data-full-rule-path="books/death-guard/reader.html#stratagem-nauseating-paroxysms" data-mobile-rule-path="books/death-guard/mobile/flyblown-host.html#stratagem-nauseating-paroxysms">Nauseating Paroxysms</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="flyblown-host" data-term-title="Flyblown Host" data-term-summary="Reconnaissance, 1DP." data-full-rule-path="books/death-guard/reader.html#flyblown-host-rule" data-mobile-rule-path="books/death-guard/mobile/flyblown-host.html#flyblown-host-rule">Flyblown Host</button> Stratagem</span>
@@ -1109,7 +1112,7 @@
 </div>
 <p class="field">
 <b>WHEN</b>
-<br>Start of the Fight phase.</p>
+<br>Start of the Fight phase</p>
 <p class="field">
 <b>TARGET</b>
 <br>One friendly engaged <button class="term-button" data-term="term-plague-marines" data-term-title="Plague Marines" data-term-summary="M 5&quot; · T 6 · Sv 3+ · W 2 · Ld 6+ · OC 2" data-full-rule-path="books/death-guard/reader.html#unit-plague-marines" data-mobile-rule-path="books/death-guard/mobile/plague-marines.html#unit-plague-marines">PLAGUE MARINES</button> unit.</p>
@@ -1121,7 +1124,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="droning-horror" data-term-title="Droning Horror" data-term-summary="WHEN: Your Shooting phase, when a friendly PLAGUE MARINES unit is selected to shoot. TARGET: That PLAGUE MARINES unit. EFFECT: Your unit’s ranged attacks can re-roll hit rolls of 1. Those attacks that target a unit within half range can re-roll wound rolls of 1." data-full-rule-path="books/death-guard/reader.html#stratagem-droning-horror" data-mobile-rule-path="books/death-guard/mobile/flyblown-host.html#stratagem-droning-horror">Droning Horror</button>
+<button class="term-button" data-term="droning-horror" data-term-title="Droning Horror" data-term-summary="WHEN: Your Shooting phase, when a friendly PLAGUE MARINES unit is selected to shoot. TARGET: That PLAGUE MARINES unit. EFFECT: Your unit’s ranged attacks: • Can re-roll hit rolls of 1. • That target a unit within half range, can re-roll wound rolls of 1." data-full-rule-path="books/death-guard/reader.html#stratagem-droning-horror" data-mobile-rule-path="books/death-guard/mobile/flyblown-host.html#stratagem-droning-horror">Droning Horror</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="flyblown-host" data-term-title="Flyblown Host" data-term-summary="Reconnaissance, 1DP." data-full-rule-path="books/death-guard/reader.html#flyblown-host-rule" data-mobile-rule-path="books/death-guard/mobile/flyblown-host.html#flyblown-host-rule">Flyblown Host</button> Stratagem</span>
@@ -1136,7 +1139,9 @@
 <br>That <button class="term-button" data-term="term-plague-marines" data-term-title="Plague Marines" data-term-summary="M 5&quot; · T 6 · Sv 3+ · W 2 · Ld 6+ · OC 2" data-full-rule-path="books/death-guard/reader.html#unit-plague-marines" data-mobile-rule-path="books/death-guard/mobile/plague-marines.html#unit-plague-marines">PLAGUE MARINES</button> unit.</p>
 <p class="field">
 <b>EFFECT</b>
-<br>Your unit’s ranged attacks can re-roll hit rolls of 1. Those attacks that target a unit within half range can re-roll wound rolls of 1.</p>
+<br>Your unit’s ranged attacks:
+<br>• Can re-roll hit rolls of 1.
+<br>• That target a unit within half range, can re-roll wound rolls of 1.</p>
 </article>
 <article class="stratagem surface" id="stratagem-eye-of-the-swarm">
 <div class="stratagem-head">
@@ -1211,7 +1216,7 @@
 <div class="stratagem-head">
 <div>
 <h3>
-<button class="term-button" data-term="aggravus-spasms" data-term-title="Aggravus Spasms" data-term-summary="WHEN: Start of your Shooting phase. TARGET: One friendly DEATH GUARD CHARACTER unit. EFFECT: Select one visible enemy unit within Contagion Range of your unit. That enemy unit has +6&quot; detection range." data-full-rule-path="books/death-guard/reader.html#stratagem-aggravus-spasms" data-mobile-rule-path="books/death-guard/mobile/paragons-of-putrescence.html#stratagem-aggravus-spasms">Aggravus Spasms</button>
+<button class="term-button" data-term="aggravus-spasms" data-term-title="Aggravus Spasms" data-term-summary="WHEN: Start of your Shooting Phase. TARGET: One friendly DEATH GUARD CHARACTER unit. EFFECT: Select one visible enemy unit within Contagion Range of your unit. That enemy unit has +6&quot; detection range." data-full-rule-path="books/death-guard/reader.html#stratagem-aggravus-spasms" data-mobile-rule-path="books/death-guard/mobile/paragons-of-putrescence.html#stratagem-aggravus-spasms">Aggravus Spasms</button>
 </h3>
 <span class="stratagem-type">
 <button class="term-button" data-term="paragons-of-putrescence" data-term-title="Paragons of Putrescence" data-term-summary="Priority Assets, 1DP." data-full-rule-path="books/death-guard/reader.html#paragons-of-putrescence-rule" data-mobile-rule-path="books/death-guard/mobile/paragons-of-putrescence.html#paragons-of-putrescence-rule">Paragons of Putrescence</button> Stratagem</span>
@@ -1220,7 +1225,7 @@
 </div>
 <p class="field">
 <b>WHEN</b>
-<br>Start of your Shooting phase.</p>
+<br>Start of your Shooting Phase.</p>
 <p class="field">
 <b>TARGET</b>
 <br>One friendly <button class="term-button" data-term="keyword-death-guard" data-term-title="DEATH GUARD" data-term-summary="Rules that specify DEATH GUARD apply only to models or units with this keyword.">DEATH GUARD</button> <button class="term-button" data-term="keyword-character" data-term-title="CHARACTER" data-term-summary="CHARACTER units use SAVE ROLLS, MORTAL WOUNDS and PRECISION.">CHARACTER</button> unit.</p>

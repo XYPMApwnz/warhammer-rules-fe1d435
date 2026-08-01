@@ -27039,10 +27039,10 @@
         "en": "Aggravus Spasms"
       },
       "summary": {
-        "en": "WHEN: Start of your Shooting phase. TARGET: One friendly DEATH GUARD CHARACTER unit. EFFECT: Select one visible enemy unit within Contagion Range of your unit. That enemy unit has +6\" detection range."
+        "en": "WHEN: Start of your Shooting Phase. TARGET: One friendly DEATH GUARD CHARACTER unit. EFFECT: Select one visible enemy unit within Contagion Range of your unit. That enemy unit has +6\" detection range."
       },
       "definition": {
-        "en": "WHEN: Start of your Shooting phase. TARGET: One friendly DEATH GUARD CHARACTER unit. EFFECT: Select one visible enemy unit within Contagion Range of your unit. That enemy unit has +6\" detection range."
+        "en": "WHEN: Start of your Shooting Phase. TARGET: One friendly DEATH GUARD CHARACTER unit. EFFECT: Select one visible enemy unit within Contagion Range of your unit. That enemy unit has +6\" detection range."
       },
       "structured": {},
       "aliases": [
@@ -27459,10 +27459,10 @@
         "en": "Droning Horror"
       },
       "summary": {
-        "en": "WHEN: Your Shooting phase, when a friendly PLAGUE MARINES unit is selected to shoot. TARGET: That PLAGUE MARINES unit. EFFECT: Your unit’s ranged attacks can re-roll hit rolls of 1."
+        "en": "WHEN: Your Shooting phase, when a friendly PLAGUE MARINES unit is selected to shoot. TARGET: That PLAGUE MARINES unit. EFFECT: Your unit’s ranged attacks: Can re-roll hit rolls of 1."
       },
       "definition": {
-        "en": "WHEN: Your Shooting phase, when a friendly PLAGUE MARINES unit is selected to shoot. TARGET: That PLAGUE MARINES unit. EFFECT: Your unit’s ranged attacks can re-roll hit rolls of 1. Those attacks that target a unit within half range can re-roll wound rolls of 1."
+        "en": "WHEN: Your Shooting phase, when a friendly PLAGUE MARINES unit is selected to shoot. TARGET: That PLAGUE MARINES unit. EFFECT: Your unit’s ranged attacks: • Can re-roll hit rolls of 1. • That target a unit within half range, can re-roll wound rolls of 1."
       },
       "structured": {},
       "aliases": [
@@ -28015,10 +28015,10 @@
         "en": "Nauseating Paroxysms"
       },
       "summary": {
-        "en": "WHEN: Start of the Fight phase. TARGET: One friendly engaged PLAGUE MARINES unit. EFFECT: Select one enemy unit engaged with your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll."
+        "en": "WHEN: Start of the Fight phase TARGET: One friendly engaged PLAGUE MARINES unit. EFFECT: Select one enemy unit engaged with your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll."
       },
       "definition": {
-        "en": "WHEN: Start of the Fight phase. TARGET: One friendly engaged PLAGUE MARINES unit. EFFECT: Select one enemy unit engaged with your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll."
+        "en": "WHEN: Start of the Fight phase TARGET: One friendly engaged PLAGUE MARINES unit. EFFECT: Select one enemy unit engaged with your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll."
       },
       "structured": {},
       "aliases": [
@@ -28469,10 +28469,10 @@
         "en": "Soulrot Flux"
       },
       "summary": {
-        "en": "WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a Fall Back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit. TARGET: That CONTAGION ENGINE unit."
+        "en": "WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a fall-back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit. TARGET: That CONTAGION ENGINE unit."
       },
       "definition": {
-        "en": "WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a Fall Back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit. TARGET: That CONTAGION ENGINE unit. EFFECT: When an enemy unit engaged with your unit is selected to make a Fall Back move, roll one D6: on a 1, that enemy unit suffers 1 mortal wound; on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds."
+        "en": "WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a fall-back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit. TARGET: That CONTAGION ENGINE unit. EFFECT: When an enemy unit engaged with your unit is selected to make a fall-back move, roll one D6: • On a 1, that enemy unit suffers 1 mortal wound. • On a 2-5, that enemy unit suffers D3 mortal wounds. • On a 6, that enemy unit suffers 3 mortal wounds."
       },
       "structured": {},
       "aliases": [

@@ -1535,9 +1535,9 @@
               "title": "Soulrot Flux - 1CP",
               "category": "Contagion Engines Stratagem",
               "lines": [
-                "WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a Fall Back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit.",
+                "WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a fall-back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit.",
                 "TARGET: That CONTAGION ENGINE unit.",
-                "EFFECT: When an enemy unit engaged with your unit is selected to make a Fall Back move, roll one D6: on a 1, that enemy unit suffers 1 mortal wound; on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds."
+                "EFFECT: When an enemy unit engaged with your unit is selected to make a fall-back move, roll one D6:\n• On a 1, that enemy unit suffers 1 mortal wound.\n• On a 2-5, that enemy unit suffers D3 mortal wounds.\n• On a 6, that enemy unit suffers 3 mortal wounds."
               ]
             }
           ],
@@ -1635,7 +1635,7 @@
               "title": "Nauseating Paroxysms - 1CP",
               "category": "Flyblown Host Stratagem",
               "lines": [
-                "WHEN: Start of the Fight phase.",
+                "WHEN: Start of the Fight phase",
                 "TARGET: One friendly engaged PLAGUE MARINES unit.",
                 "EFFECT: Select one enemy unit engaged with your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll."
               ]
@@ -1648,7 +1648,7 @@
               "lines": [
                 "WHEN: Your Shooting phase, when a friendly PLAGUE MARINES unit is selected to shoot.",
                 "TARGET: That PLAGUE MARINES unit.",
-                "EFFECT: Your unit’s ranged attacks can re-roll hit rolls of 1. Those attacks that target a unit within half range can re-roll wound rolls of 1."
+                "EFFECT: Your unit’s ranged attacks:\n• Can re-roll hit rolls of 1.\n• That target a unit within half range, can re-roll wound rolls of 1."
               ]
             },
             {
@@ -1775,7 +1775,7 @@
               "title": "Aggravus Spasms - 1CP",
               "category": "Paragons of Putrescence Stratagem",
               "lines": [
-                "WHEN: Start of your Shooting phase.",
+                "WHEN: Start of your Shooting Phase.",
                 "TARGET: One friendly DEATH GUARD CHARACTER unit.",
                 "EFFECT: Select one visible enemy unit within Contagion Range of your unit. That enemy unit has +6\" detection range."
               ]
@@ -10422,8 +10422,8 @@
       "title": "Soulrot Flux",
       "group": "Stratagems",
       "kind": "stratagem",
-      "short": "WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a Fall Back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit. TARGET: That CONTAGION ENGINE unit.",
-      "full": "WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a Fall Back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit. TARGET: That CONTAGION ENGINE unit. EFFECT: When an enemy unit engaged with your unit is selected to make a Fall Back move, roll one D6: on a 1, that enemy unit suffers 1 mortal wound; on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds.",
+      "short": "WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a fall-back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit. TARGET: That CONTAGION ENGINE unit.",
+      "full": "WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a fall-back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit. TARGET: That CONTAGION ENGINE unit. EFFECT: When an enemy unit engaged with your unit is selected to make a fall-back move, roll one D6:\n• On a 1, that enemy unit suffers 1 mortal wound.\n• On a 2-5, that enemy unit suffers D3 mortal wounds.\n• On a 6, that enemy unit suffers 3 mortal wounds.",
       "sectionId": "stratagem-soulrot-flux"
     },
     {
@@ -10467,8 +10467,8 @@
       "title": "Nauseating Paroxysms",
       "group": "Stratagems",
       "kind": "stratagem",
-      "short": "WHEN: Start of the Fight phase. TARGET: One friendly engaged PLAGUE MARINES unit. EFFECT: Select one enemy unit engaged with your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
-      "full": "WHEN: Start of the Fight phase. TARGET: One friendly engaged PLAGUE MARINES unit. EFFECT: Select one enemy unit engaged with your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
+      "short": "WHEN: Start of the Fight phase\nTARGET: One friendly engaged PLAGUE MARINES unit. EFFECT: Select one enemy unit engaged with your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
+      "full": "WHEN: Start of the Fight phase\nTARGET: One friendly engaged PLAGUE MARINES unit. EFFECT: Select one enemy unit engaged with your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
       "sectionId": "stratagem-nauseating-paroxysms"
     },
     {
@@ -10476,8 +10476,8 @@
       "title": "Droning Horror",
       "group": "Stratagems",
       "kind": "stratagem",
-      "short": "WHEN: Your Shooting phase, when a friendly PLAGUE MARINES unit is selected to shoot. TARGET: That PLAGUE MARINES unit. EFFECT: Your unit’s ranged attacks can re-roll hit rolls of 1.",
-      "full": "WHEN: Your Shooting phase, when a friendly PLAGUE MARINES unit is selected to shoot. TARGET: That PLAGUE MARINES unit. EFFECT: Your unit’s ranged attacks can re-roll hit rolls of 1. Those attacks that target a unit within half range can re-roll wound rolls of 1.",
+      "short": "WHEN: Your Shooting phase, when a friendly PLAGUE MARINES unit is selected to shoot. TARGET: That PLAGUE MARINES unit. EFFECT: Your unit’s ranged attacks: Can re-roll hit rolls of 1.",
+      "full": "WHEN: Your Shooting phase, when a friendly PLAGUE MARINES unit is selected to shoot. TARGET: That PLAGUE MARINES unit. EFFECT: Your unit’s ranged attacks:\n• Can re-roll hit rolls of 1.\n• That target a unit within half range, can re-roll wound rolls of 1.",
       "sectionId": "stratagem-droning-horror"
     },
     {
@@ -10539,8 +10539,8 @@
       "title": "Aggravus Spasms",
       "group": "Stratagems",
       "kind": "stratagem",
-      "short": "WHEN: Start of your Shooting phase. TARGET: One friendly DEATH GUARD CHARACTER unit. EFFECT: Select one visible enemy unit within Contagion Range of your unit. That enemy unit has +6\" detection range.",
-      "full": "WHEN: Start of your Shooting phase. TARGET: One friendly DEATH GUARD CHARACTER unit. EFFECT: Select one visible enemy unit within Contagion Range of your unit. That enemy unit has +6\" detection range.",
+      "short": "WHEN: Start of your Shooting Phase. TARGET: One friendly DEATH GUARD CHARACTER unit. EFFECT: Select one visible enemy unit within Contagion Range of your unit. That enemy unit has +6\" detection range.",
+      "full": "WHEN: Start of your Shooting Phase. TARGET: One friendly DEATH GUARD CHARACTER unit. EFFECT: Select one visible enemy unit within Contagion Range of your unit. That enemy unit has +6\" detection range.",
       "sectionId": "stratagem-aggravus-spasms"
     },
     {

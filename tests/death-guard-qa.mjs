@@ -36,6 +36,20 @@ const navTargets=[...markup.matchAll(/data-nav-target="([^"]+)"/g)].map(match=>m
 const trackTargets=[...markup.matchAll(/data-track="([^"]+)"/g)].map(match=>match[1]);
 const walkBlocks=bookData.sections.flatMap(section=>[...(section.blocks||[]),...(section.subsections||[]).flatMap(sub=>sub.blocks||[])]);
 const blockCount=type=>walkBlocks.filter(block=>block.type===type).length;
+const ruleById=id=>walkBlocks.find(block=>block.type==='rule'&&block.id===id);
+check('audited Faction Pack Stratagem wording stays official',
+  JSON.stringify(ruleById('stratagem-soulrot-flux')?.lines)===JSON.stringify([
+    'WHEN: Your opponent’s Movement phase, when an enemy unit is selected to make a fall-back move, if that enemy unit is engaged with a friendly CONTAGION ENGINE unit.',
+    'TARGET: That CONTAGION ENGINE unit.',
+    'EFFECT: When an enemy unit engaged with your unit is selected to make a fall-back move, roll one D6:\n• On a 1, that enemy unit suffers 1 mortal wound.\n• On a 2-5, that enemy unit suffers D3 mortal wounds.\n• On a 6, that enemy unit suffers 3 mortal wounds.'
+  ])&&
+  JSON.stringify(ruleById('stratagem-droning-horror')?.lines)===JSON.stringify([
+    'WHEN: Your Shooting phase, when a friendly PLAGUE MARINES unit is selected to shoot.',
+    'TARGET: That PLAGUE MARINES unit.',
+    'EFFECT: Your unit’s ranged attacks:\n• Can re-roll hit rolls of 1.\n• That target a unit within half range, can re-roll wound rolls of 1.'
+  ])&&
+  ruleById('stratagem-nauseating-paroxysms')?.lines?.[0]==='WHEN: Start of the Fight phase'&&
+  ruleById('stratagem-aggravus-spasms')?.lines?.[0]==='WHEN: Start of your Shooting Phase.');
 check('canonical content audit is 9 detachments, 41 datasheets and 408 terms',bookData.audit.detachments===9&&bookData.audit.datasheets===41&&bookData.glossary.length===408);
 const plagueEntry=glossaryRegistry.terms['death-guard-plague'];
 check('Plague means the chosen Nurgle’s Gift effect',plagueEntry.summary.en.includes('selected during Declare Battle Formations')&&plagueEntry.definition.en.includes('Skullsquirm Blight, Rattlejoint Ague or Scabrous Soulrot')&&plagueEntry.related.length===5);
@@ -85,6 +99,14 @@ const dataSource=read('scripts/data.js');
 const termContext={window:{},Object};
 vm.runInNewContext(dataSource,termContext,{filename:'scripts/data.js'});
 const termKeys=Object.keys(termContext.window.DG_TERMS||{});
+check('official Stratagem wording reaches desktop, Phone Mode, popup and Mega Glossary',
+  html.includes('roll one D6:\n<br>• On a 1')&&
+  read('mobile/contagion-engines.html').includes('roll one D6:\n<br>• On a 1')&&
+  read('mobile/flyblown-host.html').includes('Your unit’s ranged attacks:\n<br>• Can re-roll hit rolls of 1.')&&
+  termContext.window.DG_TERMS['soulrot-flux'].summary.includes('make a fall-back move')&&
+  termContext.window.DG_TERMS['droning-horror'].summary.includes('ranged attacks: Can re-roll')&&
+  glossaryRegistry.terms['death-guard-stratagem-soulrot-flux'].definition.en.includes('• On a 6, that enemy unit suffers 3 mortal wounds.')&&
+  glossaryRegistry.terms['death-guard-stratagem-droning-horror'].definition.en.includes('• That target a unit within half range, can re-roll wound rolls of 1.'));
 const usedTerms=[...markup.matchAll(/data-term="([^"]+)"/g)].map(match=>match[1]);
 check('term registry has all 408 entries',termKeys.length===408,String(termKeys.length));
 check('all term triggers resolve',usedTerms.every(id=>termKeys.includes(id)||glossaryRegistry.terms[id]),usedTerms.filter(id=>!termKeys.includes(id)&&!glossaryRegistry.terms[id]).join(', '));

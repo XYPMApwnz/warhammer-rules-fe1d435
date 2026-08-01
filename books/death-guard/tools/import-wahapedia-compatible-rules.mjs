@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import {fileURLToPath, pathToFileURL} from 'node:url';
+import {fileURLToPath,pathToFileURL} from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..','..','..');
 const bookRoot=path.join(root,'books','death-guard');
@@ -8,24 +8,9 @@ const sourceFile=path.join(bookRoot,'content','death-guard-rules.en.json');
 const snapshotFile=path.join(bookRoot,'sources','wahapedia-compatible-rules.snapshot.json');
 const reportFile=path.join(bookRoot,'reports','compatible-rules-import-report.json');
 const factionUrl='https://wahapedia.ru/wh40k11ed/factions/death-guard/';
-const scope={stratagems:'faction-only',included:45,excludedCore:10};
-const stratagemCategories=new Set(['Battle Tactic Stratagem','Epic Deed Stratagem','Strategic Ploy Stratagem','Wargear Stratagem']);
-const forceDispositionTypes=new Set(['Contagion Engines Stratagem','Flyblown Host Stratagem','Paragons of Putrescence Stratagem']);
-const factionKeywordContracts={
-  'unit-beasts-of-nurgle':{sourceClass:'plague-legions',requiredFactionKeywords:['PLAGUE LEGIONS'],forbiddenAssumptions:['DEATH GUARD'],evidence:{source:'Death Guard Faction Pack 11e',section:'Pact of Decay'}},
-  'unit-great-unclean-one':{sourceClass:'plague-legions',requiredFactionKeywords:['PLAGUE LEGIONS'],forbiddenAssumptions:['DEATH GUARD'],evidence:{source:'Death Guard Faction Pack 11e',section:'Pact of Decay'}},
-  'unit-nurglings':{sourceClass:'plague-legions',requiredFactionKeywords:['PLAGUE LEGIONS'],forbiddenAssumptions:['DEATH GUARD'],evidence:{source:'Death Guard Faction Pack 11e',section:'Pact of Decay'}},
-  'unit-plague-drones':{sourceClass:'plague-legions',requiredFactionKeywords:['PLAGUE LEGIONS'],forbiddenAssumptions:['DEATH GUARD'],evidence:{source:'Death Guard Faction Pack 11e',section:'Pact of Decay'}},
-  'unit-plaguebearers':{sourceClass:'plague-legions',requiredFactionKeywords:['PLAGUE LEGIONS'],forbiddenAssumptions:['DEATH GUARD'],evidence:{source:'Death Guard Faction Pack 11e',section:'Pact of Decay'}},
-  'unit-rotigus':{sourceClass:'plague-legions',requiredFactionKeywords:['PLAGUE LEGIONS'],forbiddenAssumptions:['DEATH GUARD'],evidence:{source:'Death Guard Faction Pack 11e',section:'Pact of Decay'}}
-  ,'unit-death-guard-chaos-lord':{sourceClass:'legends',requiredFactionKeywords:[],forbiddenAssumptions:['DEATH GUARD'],evidence:{book:'Faction Pack. Death Guard (Warhammer Legends)',edition:'11',version:'1.1'}}
-  ,'unit-death-guard-chaos-lord-in-terminator-armour':{sourceClass:'legends',requiredFactionKeywords:[],forbiddenAssumptions:['DEATH GUARD'],evidence:{book:'Faction Pack. Death Guard (Warhammer Legends)',edition:'11',version:'1.1'}}
-  ,'unit-death-guard-cultists':{sourceClass:'legends',requiredFactionKeywords:[],forbiddenAssumptions:['DEATH GUARD'],evidence:{book:'Faction Pack. Death Guard (Warhammer Legends)',edition:'11',version:'1.1'}}
-  ,'unit-death-guard-sorcerer-in-terminator-armour':{sourceClass:'legends',requiredFactionKeywords:[],forbiddenAssumptions:['DEATH GUARD'],evidence:{book:'Faction Pack. Death Guard (Warhammer Legends)',edition:'11',version:'1.1'}}
-};
 
 const readJson=file=>JSON.parse(fs.readFileSync(file,'utf8'));
-const text=value=>String(value??'').replace(/&nbsp;/gi,' ').replace(/&amp;/gi,'&').replace(/&#39;|&apos;/gi,"'").replace(/&quot;/gi,'"').replace(/<br\s*\/?>/gi,'\n').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
+const text=value=>String(value??'').replace(/&nbsp;/gi,' ').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
 const normalized=value=>text(value).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,' ').trim();
 const sortStrings=values=>[...new Set(values)].sort((left,right)=>left.localeCompare(right,'en'));
 const sortValue=value=>Array.isArray(value)?value.map(sortValue).sort((left,right)=>JSON.stringify(left).localeCompare(JSON.stringify(right))):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(key=>[key,sortValue(value[key])])):value;
@@ -34,67 +19,18 @@ const writeJson=(file,value)=>{fs.mkdirSync(path.dirname(file),{recursive:true})
 const replaceSnapshot=(file,value)=>{const temporary=`${file}.tmp`;fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(temporary,stableStringify(value));fs.renameSync(temporary,file);};
 
 function matchingDivEnd(html,start){
-  const tag=/<\/?div\b[^>]*>/gi;
-  tag.lastIndex=start;
-  let depth=0;
-  for(let match;(match=tag.exec(html));){
-    depth+=match[0][1]==='/'?-1:1;
-    if(depth===0)return tag.lastIndex;
-  }
+  const tag=/<\/?div\b[^>]*>/gi;tag.lastIndex=start;let depth=0;
+  for(let match;(match=tag.exec(html));){depth+=match[0][1]==='/'?-1:1;if(depth===0)return tag.lastIndex;}
   return -1;
-}
-
-function divAfter(html,marker){
-  const index=html.indexOf(marker);
-  if(index<0)return null;
-  const start=html.lastIndexOf('<div',index);
-  const end=matchingDivEnd(html,start);
-  return end<0?null:html.slice(start,end);
-}
-
-function linksFrom(html){
-  return [...html.matchAll(/href="\/wh40k11ed\/factions\/death-guard\/([^"#?]+)"/gi)].map(match=>decodeURIComponent(match[1]));
 }
 
 export function buildCanonicalIndexes(book){
   const units=book.sections.filter(section=>section.kind==='unit').map(section=>({unitId:section.id,name:section.title,urlSlug:section.title.replace(/\s+/g,'-')}));
   const rules=[];
-  const walk=value=>{
-    if(Array.isArray(value))value.forEach(walk);
-    else if(value&&typeof value==='object'){
-      if(value.type==='rule'&&String(value.id).startsWith('stratagem-'))rules.push({ruleId:value.id,name:value.title.replace(/\s+-\s+\d+CP$/i,'')});
-      Object.values(value).forEach(walk);
-    }
-  };
+  const walk=value=>{if(Array.isArray(value))value.forEach(walk);else if(value&&typeof value==='object'){if(value.type==='rule'&&String(value.id).startsWith('stratagem-'))rules.push({ruleId:value.id,name:value.title.replace(/\s+-\s+\d+CP$/i,'')});Object.values(value).forEach(walk);}};
   walk(book.sections);
   const indexByName=entries=>entries.reduce((index,entry)=>{const key=normalized(entry.name);index.set(key,[...(index.get(key)||[]),entry]);return index;},new Map());
   return {units:units.sort((left,right)=>left.unitId.localeCompare(right.unitId)),rules:rules.sort((left,right)=>left.ruleId.localeCompare(right.ruleId)),unitByName:indexByName(units),ruleByName:indexByName(rules)};
-}
-
-export function parseDatasheetHtml(html){
-  const title=text(html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]);
-  const keywordBlock=html.match(/KEYWORDS:\s*([\s\S]*?)<\/div>\s*<div class="dsRight[^>]*>\s*FACTION KEYWORDS:\s*([\s\S]*?)<\/div>/i);
-  const keywords=keywordBlock?sortStrings(text(keywordBlock[1]).split(';').map(value=>value.trim()).filter(Boolean)):null;
-  const factionKeywords=keywordBlock?sortStrings(text(keywordBlock[2]).split(';').map(value=>value.trim()).filter(Boolean)):null;
-  const abilities=[];
-  const attachmentRules=[];
-  const abilitiesStart=html.indexOf('<div class="dsHeader dsColorBgDG">ABILITIES</div>');
-  const abilitiesEnd=abilitiesStart<0?-1:html.indexOf('<div class="dsHeader dsColorBgDG">',abilitiesStart+10);
-  const abilitiesHtml=abilitiesStart<0?'':html.slice(abilitiesStart,abilitiesEnd<0?html.length:abilitiesEnd);
-  for(const match of abilitiesHtml.matchAll(/<div class="dsAbility(?:_noLine)?">([\s\S]*?)<\/div>/gi)){
-    const value=text(match[1]);
-    if(!value||/^FACTION:/i.test(value)||/^This unit can be led by/i.test(value))continue;
-    if(/^This model can be attached to/i.test(value)){attachmentRules.push(value);continue;}
-    const name=value.match(/^([^:]{1,100}):\s+(.+)$/);
-    if(name)abilities.push({name:name[1],text:name[2]});
-  }
-  const ledByMarker='<div class="dsHeader dsColorBgDG">LED BY</div>';
-  const ledByIndex=html.indexOf(ledByMarker);
-  const ledByStart=ledByIndex<0?-1:html.indexOf('<div',ledByIndex+ledByMarker.length);
-  const ledByEnd=ledByStart<0?-1:matchingDivEnd(html,ledByStart);
-  const ledByBlock=ledByEnd<0?null:html.slice(ledByStart,ledByEnd);
-  const ledBy=ledByBlock===null?{status:'not-reported'}:{status:'reported',sourceNames:sortStrings(linksFrom(ledByBlock).map(value=>value.replaceAll('-',' ')))};
-  return {title,keywords,factionKeywords,abilities:abilities.sort((left,right)=>left.name.localeCompare(right.name,'en')),attachmentRules:sortStrings(attachmentRules),relations:{ledBy,support:{status:'unavailable',reason:'Wahapedia does not expose a discrete Support relation block.'}}};
 }
 
 export function parseDatasheetStratagems(html){
@@ -102,118 +38,51 @@ export function parseDatasheetStratagems(html){
   const leftColumn=start<0?-1:html.lastIndexOf('<div class="dsLeft',start);
   const end=leftColumn<0?-1:matchingDivEnd(html,leftColumn);
   if(start<0||end<0)return null;
-  const panel=html.slice(start,end);
-  const cards=[];
-  const cardStart=/<div class="([^"]*\bs10Wrap\b[^"]*)">/gi;
-  for(let match;(match=cardStart.exec(panel));){
-    const cardEnd=matchingDivEnd(panel,match.index);
-    if(cardEnd<0)break;
-    const card=panel.slice(match.index,cardEnd);
-    const name=text(card.match(/<div class="s10Name">([\s\S]*?)<\/div>/i)?.[1]);
-    const type=text(card.match(/<div class="s10Type">([\s\S]*?)<\/div>/i)?.[1]);
-    if(name)cards.push({name,type,classes:match[1]});
-    cardStart.lastIndex=cardEnd;
-  }
-  return cards;
+  return [...html.slice(start,end).matchAll(/<div class="s10Name">([\s\S]*?)<\/div>/gi)].map(match=>text(match[1]));
 }
 
-function classifyCard(card,currentDetachments){
-  if(card.type==='Core')return {classification:'core',reason:'shared-core-stratagem',sourceSection:'Core Stratagems',evidence:'s10Type=Core'};
-  if(/Boarding Actions/i.test(card.type)||/sShowBoardingActions/.test(card.classes))return {classification:'boarding-actions',reason:'boarding-actions-stratagem',sourceSection:'Boarding Actions',evidence:`s10Type=${card.type}`};
-  const detachment=card.type.replace(/\s+–\s+(?:Battle Tactic|Epic Deed|Strategic Ploy|Wargear)$/i,'').trim();
-  if(detachment&&currentDetachments.has(normalized(detachment)))return {classification:'current-faction',sourceSection:detachment,evidence:`s10Type=${card.type}`};
-  if(detachment)return {classification:'historical',reason:'non-current-detachment-source',sourceSection:detachment,evidence:`s10Type=${card.type}`};
-  return null;
-}
-
-export function parseFactionStratagems(html){
-  const start=html.indexOf('<a name="Stratagems-1"');
-  const end=html.indexOf('<a name="Crusade-Rules"');
-  const visibleHtml=start>=0&&end>start?html.slice(start,end):html;
-  const matches=[...visibleHtml.matchAll(/<div class="str11HeadBlock str11Name">([\s\S]*?)<\/div>/gi)];
-  return matches.map((match,index)=>{
-    const block=visibleHtml.slice(match.index,matches[index+1]?.index??visibleHtml.length);
-    const type=text(block.match(/<div class="str11Type[^\"]*">([\s\S]*?)<\/div>/i)?.[1]);
-    const target=text(block.match(/<b>TARGET:<\/b>([\s\S]*?)(?:<br\s*\/?>\s*<br\s*\/?>)?<b>EFFECT:<\/b>/i)?.[1]);
-    if(!type||/\bCore\b/i.test(type))return null;
-    const [detachment,category]=type.split(/\s+–\s+/);
-    const rawType=type;
-    const detachmentName=(detachment||'').replace(/\s+Stratagem$/i,'').trim();
-    return {name:text(match[1]),rawType,detachment:detachmentName,category:category?.trim()||(forceDispositionTypes.has(rawType)?'detachment-stratagem':''),target:target||null};
-  }).filter(Boolean).sort((left,right)=>left.name.localeCompare(right.name,'en'));
-}
-
-function mapNames(names,index,kind,unresolved){
-  const mapped=[];
-  for(const name of names){
-    const entries=index.get(normalized(name))||[];
-    if(entries.length===0)unresolved.unknown.push({kind,name});
-    else if(entries.length>1)unresolved.ambiguous.push({kind,name,candidates:entries.map(entry=>entry.unitId).sort()});
-    else mapped.push(entries[0].unitId);
-  }
-  return sortStrings(mapped);
-}
-
-export function buildImport({book,factionHtml,datasheetHtmlByUnit,sourceUrlByUnit=new Map(),retrievedAt}){
+export function buildImport({book,datasheetHtmlByUnit,retrievedAt}){
   const indexes=buildCanonicalIndexes(book);
   const unresolved={ambiguous:[],duplicates:[],parse:[],renamed:[],unknown:[]};
   for(const [name,entries] of indexes.unitByName)if(entries.length>1)unresolved.duplicates.push({kind:'canonical-datasheet',name,candidates:entries.map(entry=>entry.unitId).sort()});
   for(const [name,entries] of indexes.ruleByName)if(entries.length>1)unresolved.duplicates.push({kind:'canonical-stratagem',name,candidates:entries.map(entry=>entry.ruleId).sort()});
-  const extraByName=new Map();
-  const units={};
-  const seenRuleIds=new Set();
+  const extraByName=new Map(),units={},seenRuleIds=new Set();
   for(const unit of indexes.units){
     const cards=parseDatasheetStratagems(datasheetHtmlByUnit.get(unit.unitId)||'');
     if(cards===null)unresolved.parse.push({kind:'datasheet',unitId:unit.unitId,reason:'missing Stratagems block'});
-    const wahapediaRules=[];
-    for(const card of cards||[]){
-      const entries=indexes.ruleByName.get(normalized(card.name))||[];
-      if(entries.length===1)wahapediaRules.push(entries[0].ruleId);
-      else if(entries.length>1)unresolved.ambiguous.push({kind:'datasheet-stratagem',unitId:unit.unitId,name:card.name,candidates:entries.map(entry=>entry.ruleId).sort()});
-      else extraByName.set(card.name,new Set([...(extraByName.get(card.name)||[]),unit.unitId]));
+    const ruleIds=[];
+    for(const name of cards||[]){
+      const entries=indexes.ruleByName.get(normalized(name))||[];
+      if(entries.length===1)ruleIds.push(entries[0].ruleId);
+      else if(entries.length>1)unresolved.ambiguous.push({kind:'datasheet-stratagem',unitId:unit.unitId,name,candidates:entries.map(entry=>entry.ruleId).sort()});
+      else extraByName.set(name,new Set([...(extraByName.get(name)||[]),unit.unitId]));
     }
-    if(new Set(wahapediaRules).size!==wahapediaRules.length)unresolved.duplicates.push({kind:'datasheet-stratagem',unitId:unit.unitId,reason:'same canonical rule repeated on one datasheet page'});
-    units[unit.unitId]=sortStrings(wahapediaRules); for(const ruleId of wahapediaRules)seenRuleIds.add(ruleId);
+    if(new Set(ruleIds).size!==ruleIds.length)unresolved.duplicates.push({kind:'datasheet-stratagem',unitId:unit.unitId,reason:'same canonical rule repeated on one datasheet page'});
+    units[unit.unitId]=sortStrings(ruleIds);ruleIds.forEach(ruleId=>seenRuleIds.add(ruleId));
   }
   for(const rule of indexes.rules)if(!seenRuleIds.has(rule.ruleId))unresolved.unknown.push({kind:'stratagem',ruleId:rule.ruleId,reason:'not observed on any datasheet page'});
-  const unresolvedEntries=Object.values(unresolved).flat();
-  const snapshot={schema:'wahapedia-compatible-rules-snapshot/v2',retrievedAt,source:{edition:'11',faction:'Death Guard',kind:'Wahapedia',url:factionUrl},units};
+  const source={edition:'11',faction:'Death Guard',kind:'Wahapedia',url:factionUrl};
+  const snapshot={schema:'wahapedia-compatible-rules-snapshot/v2',retrievedAt,source,units};
   const extraWahapediaNames=[...extraByName].map(([name,unitIds])=>({name,unitIds:[...unitIds].sort()})).sort((left,right)=>left.name.localeCompare(right.name));
-  const report={schema:'compatible-rules-import-report/v2',retrievedAt,source:snapshot.source,summary:{datasheets:{canonical:indexes.units.length,imported:Object.keys(units).length},stratagems:{canonical:indexes.rules.length,observed:seenRuleIds.size},associations:Object.values(units).reduce((total,rules)=>total+rules.length,0),extraWahapediaNames:extraWahapediaNames.length,unresolved:unresolvedEntries.length},extraWahapediaNames,unresolved};
+  const unresolvedEntries=Object.values(unresolved).flat();
+  const report={schema:'compatible-rules-import-report/v2',retrievedAt,source,summary:{datasheets:{canonical:indexes.units.length,imported:Object.keys(units).length},stratagems:{canonical:indexes.rules.length,observed:seenRuleIds.size},associations:Object.values(units).reduce((total,rules)=>total+rules.length,0),extraWahapediaNames:extraWahapediaNames.length,unresolved:unresolvedEntries.length},extraWahapediaNames,unresolved};
   return {snapshot,report,ok:unresolvedEntries.length===0&&Object.keys(units).length===41&&seenRuleIds.size===45};
 }
 
-export function applyImportResult({result,snapshotPath=snapshotFile,reportPath=reportFile}){
-  writeJson(reportPath,result.report);
-  if(!result.ok)return false;
-  replaceSnapshot(snapshotPath,result.snapshot);
-  return true;
-}
+export function applyImportResult({result,snapshotPath=snapshotFile,reportPath=reportFile}){writeJson(reportPath,result.report);if(!result.ok)return false;replaceSnapshot(snapshotPath,result.snapshot);return true;}
 
-async function fetchText(url){
-  const response=await fetch(url,{headers:{'user-agent':'warhammer-rules-compatible-rules-importer/1.0'}});
-  if(!response.ok)throw new Error(`${url}: HTTP ${response.status}`);
-  return response.text();
-}
+async function fetchText(url){const response=await fetch(url,{headers:{'user-agent':'warhammer-rules-compatible-rules-importer/2.0'}});if(!response.ok)throw new Error(`${url}: HTTP ${response.status}`);return response.text();}
 
 async function main(){
-  const args=process.argv.slice(2);
-  const dateIndex=args.indexOf('--retrieved-at');
-  const retrievedAt=dateIndex<0?'':args[dateIndex+1];
+  const dateIndex=process.argv.indexOf('--retrieved-at'),retrievedAt=dateIndex<0?'':process.argv[dateIndex+1];
   if(!/^\d{4}-\d{2}-\d{2}$/.test(retrievedAt))throw new Error('Pass an explicit --retrieved-at YYYY-MM-DD for deterministic output.');
-  const book=readJson(sourceFile);
-  const indexes=buildCanonicalIndexes(book);
+  const book=readJson(sourceFile),indexes=buildCanonicalIndexes(book);
   if(indexes.units.length!==41||indexes.rules.length!==45)throw new Error(`Canonical scope changed: ${indexes.units.length} datasheets, ${indexes.rules.length} faction Stratagems.`);
-  const factionHtml=await fetchText(factionUrl);
-  const sourceUrlByUnit=new Map();
-  for(const slug of linksFrom(factionHtml)){
-    const units=indexes.unitByName.get(normalized(slug.replaceAll('-',' ')))||[];
-    if(units.length===1&&!sourceUrlByUnit.has(units[0].unitId))sourceUrlByUnit.set(units[0].unitId,`${factionUrl}${slug}`);
-  }
-  const missingUrls=indexes.units.filter(unit=>!sourceUrlByUnit.has(unit.unitId));
-  if(missingUrls.length)throw new Error(`Missing Wahapedia datasheet URLs: ${missingUrls.map(unit=>unit.unitId).join(', ')}`);
+  const factionHtml=await fetchText(factionUrl),sourceUrlByUnit=new Map();
+  for(const match of factionHtml.matchAll(/href="\/wh40k11ed\/factions\/death-guard\/([^"#?]+)"/gi)){const units=indexes.unitByName.get(normalized(decodeURIComponent(match[1]).replaceAll('-',' ')))||[];if(units.length===1&&!sourceUrlByUnit.has(units[0].unitId))sourceUrlByUnit.set(units[0].unitId,`${factionUrl}${match[1]}`);}
+  const missing=indexes.units.filter(unit=>!sourceUrlByUnit.has(unit.unitId));if(missing.length)throw new Error(`Missing Wahapedia datasheet URLs: ${missing.map(unit=>unit.unitId).join(', ')}`);
   const pages=await Promise.all(indexes.units.map(async unit=>[unit.unitId,await fetchText(sourceUrlByUnit.get(unit.unitId))]));
-  const result=buildImport({book,factionHtml,datasheetHtmlByUnit:new Map(pages),sourceUrlByUnit,retrievedAt});
+  const result=buildImport({book,datasheetHtmlByUnit:new Map(pages),retrievedAt});
   if(!applyImportResult({result}))throw new Error(`Import has ${result.report.summary.unresolved} unresolved entries; snapshot was not written.`);
   process.stdout.write(`Imported ${Object.keys(result.snapshot.units).length} datasheets and ${result.report.summary.stratagems.observed} faction Stratagems.\n`);
 }

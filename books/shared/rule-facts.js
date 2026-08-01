@@ -119,18 +119,7 @@
     return {...compiled,...identity,unitId:identity.unitId||identity.id||compiled.unitId||unitId};
   }
 
-  function recordFromLegacyDataset(dataset={},identity={}){
-    const unitId=identity.unitId||identity.id||dataset.unitId||'unknown';
-    if(dataset.keywords==null||dataset.keywords==='')throw new Error(`${unitId}: missing data-keywords`);
-    if(typeof dataset.keywords!=='string')throw new TypeError(`${unitId}: data-keywords must be a string`);
-    if(!dataset.keywords.trim())throw new Error(`${unitId}: empty data-keywords`);
-    const related=parseDatasetJson(dataset,'relatedCandidates',{defaultValue:[],unitId});
-    if(!Array.isArray(related))throw new TypeError(`${unitId}: data-related-candidates must contain an array`);
-    return {...identity,unitId:identity.unitId||identity.id||dataset.unitId||'',keywords:dataset.keywords.split('|'),candidates:related};
-  }
-
   const profileFromDataset=(dataset,identity={},extra={})=>profileFromRecord({...recordFromDataset(dataset,identity),...extra});
-  const profileFromLegacyDataset=(dataset,identity={},extra={})=>profileFromRecord({...recordFromLegacyDataset(dataset,identity),...extra});
   const sorted=value=>[...(value||[])].sort();
   const serializeCandidate=candidate=>({
     unitId:candidate.unitId||'',slug:candidate.slug||'',keywords:sorted(candidate.keywords),intrinsicKeywords:sorted(candidate.intrinsicKeywords),
@@ -148,7 +137,7 @@
     };
   }
 
-  const api=Object.freeze({normalizeKeyword,textFromDomLike,parseDatasetJson,profileFromRecord,recordFromDataset,recordFromLegacyDataset,profileFromDataset,profileFromLegacyDataset,serializeRuleProfile});
+  const api=Object.freeze({normalizeKeyword,textFromDomLike,parseDatasetJson,profileFromRecord,recordFromDataset,profileFromDataset,serializeRuleProfile});
   root.WHRuleFacts=api;
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
 }(typeof window==='undefined'?globalThis:window));

@@ -154,7 +154,6 @@ profileA.keywords.add('MUTATED');profileA.relations.canLead[0].keywords.add('MUT
 assert.equal(profileB.keywords.has('MUTATED'),false);assert.equal(profileB.relations.canLead[0].keywords.has('MUTATED'),false);assert.equal(profileB.termIds.has('mutated'),false);assert.deepEqual(fixtureRecord,source);
 
 assert.throws(()=>ruleFacts.profileFromDataset({keywords:'DEATH GUARD',relatedCandidates:'[]'},{id:'unit-legacy'}),/missing data-rule-facts/);
-assert.deepEqual([...ruleFacts.profileFromLegacyDataset({keywords:'DEATH GUARD',relatedCandidates:'[]'},{id:'unit-legacy'}).keywords],['DEATH GUARD']);
 assert.throws(()=>ruleFacts.profileFromDataset({ruleFacts:'{bad'},{id:'unit-bad'}),/unit-bad: malformed data-rule-facts/);
 assert.throws(()=>ruleFacts.profileFromDataset({ruleFacts:'[]'},{id:'unit-array'}),/data-rule-facts must contain an object/);
 

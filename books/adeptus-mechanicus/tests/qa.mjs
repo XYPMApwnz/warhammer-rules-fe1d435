@@ -3,6 +3,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
+import {normalizedTextSha256} from '../tools/source-hash.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=file=>fs.readFileSync(path.join(root,file),'utf8');
@@ -34,6 +35,9 @@ const allDetachments=[...rules.detachments,...codex.detachments];
 const node=process.execPath;
 const results=[];
 const check=(name,ok,detail='')=>results.push({name,ok,detail});
+
+check('BSData source hash ignores LF/CRLF differences',
+  normalizedTextSha256('{\n  "revision": 1\n}\n')===normalizedTextSha256('{\r\n  "revision": 1\r\n}\r\n'));
 
 const scripts=['scripts/data.js','scripts/faction-ui.js','scripts/related-rules.js','scripts/roster-enhancements.js','scripts/roster-filter.js','scripts/app.js'];
 for(const file of scripts){try{new vm.Script(read(file),{filename:file});check(`${file} syntax`,true);}catch(error){check(`${file} syntax`,false,error.message);}}

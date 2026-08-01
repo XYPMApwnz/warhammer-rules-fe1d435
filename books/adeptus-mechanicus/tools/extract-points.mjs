@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
+import {normalizedFileSha256} from './source-hash.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const sourcePath=path.join(root,'sources','bsdata-adeptus-mechanicus-11e.json');
@@ -236,7 +236,7 @@ const result={
     officialUrl:officialMfm.source,
     officialVersion:officialMfm.version,
     verifiedAt:officialMfm.capturedAt,
-    sha256:crypto.createHash('sha256').update(fs.readFileSync(sourcePath)).digest('hex').toUpperCase()
+    sha256:normalizedFileSha256(sourcePath)
   },
   units,
   enhancements,

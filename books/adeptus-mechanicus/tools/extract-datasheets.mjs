@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
+import {normalizedFileSha256} from './source-hash.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const sourcePath=path.join(root,'sources','bsdata-adeptus-mechanicus-11e.json');
@@ -249,7 +249,7 @@ const datasheets=points.units.map(pointUnit=>{
   return result;
 }).sort((a,b)=>a.category.localeCompare(b.category)||a.title.localeCompare(b.title));
 
-const result={schema:1,source:{title:'BSData Warhammer 40,000 11th Edition · Adeptus Mechanicus',url:SOURCE_URL,revision:String(source.revision),commit:points.source.commit,sha256:crypto.createHash('sha256').update(fs.readFileSync(sourcePath)).digest('hex').toUpperCase()},datasheets,audit:{datasheets:datasheets.length,legendsDatasheets:datasheets.filter(unit=>unit.status==='Warhammer Legends').length}};
+const result={schema:1,source:{title:'BSData Warhammer 40,000 11th Edition · Adeptus Mechanicus',url:SOURCE_URL,revision:String(source.revision),commit:points.source.commit,sha256:normalizedFileSha256(sourcePath)},datasheets,audit:{datasheets:datasheets.length,legendsDatasheets:datasheets.filter(unit=>unit.status==='Warhammer Legends').length}};
 const output=`${JSON.stringify(result,null,2)}\n`;
 if(process.argv.includes('--check')){
   if(!fs.existsSync(outputPath)||fs.readFileSync(outputPath,'utf8')!==output)throw new Error('Codex datasheet snapshot is stale; run extract-datasheets.mjs');

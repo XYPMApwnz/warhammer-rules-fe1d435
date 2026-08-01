@@ -8,6 +8,14 @@ const sourceFile=path.join(bookRoot,'content','death-guard-rules.en.json');
 const snapshotFile=path.join(bookRoot,'sources','wahapedia-compatible-rules.snapshot.json');
 const reportFile=path.join(bookRoot,'reports','compatible-rules-import-report.json');
 const factionUrl='https://wahapedia.ru/wh40k11ed/factions/death-guard/';
+const coreRuleByName=new Map(Object.entries({
+  'COMMAND RE-ROLL':'core-stratagem-command-re-roll','EPIC CHALLENGE':'core-stratagem-epic-challenge',
+  'INSANE BRAVERY':'core-stratagem-insane-bravery','EXPLOSIVES':'core-stratagem-explosives',
+  'CRUSHING IMPACT':'core-stratagem-crushing-impact','RAPID INGRESS':'core-stratagem-rapid-ingress',
+  'FIRE OVERWATCH':'core-stratagem-fire-overwatch','SMOKESCREEN':'core-stratagem-smokescreen',
+  'HEROIC INTERVENTION':'core-stratagem-heroic-intervention','COUNTEROFFENSIVE':'core-stratagem-counteroffensive',
+  'COUNTER-OFFENSIVE':'core-stratagem-counteroffensive'
+}).map(([name,id])=>[name.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(),id]));
 
 const readJson=file=>JSON.parse(fs.readFileSync(file,'utf8'));
 const text=value=>String(value??'').replace(/&nbsp;/gi,' ').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
@@ -46,27 +54,29 @@ export function buildImport({book,datasheetHtmlByUnit,retrievedAt}){
   const unresolved={ambiguous:[],duplicates:[],parse:[],renamed:[],unknown:[]};
   for(const [name,entries] of indexes.unitByName)if(entries.length>1)unresolved.duplicates.push({kind:'canonical-datasheet',name,candidates:entries.map(entry=>entry.unitId).sort()});
   for(const [name,entries] of indexes.ruleByName)if(entries.length>1)unresolved.duplicates.push({kind:'canonical-stratagem',name,candidates:entries.map(entry=>entry.ruleId).sort()});
-  const extraByName=new Map(),units={},seenRuleIds=new Set();
+  const extraByName=new Map(),units={},coreUnits={},seenRuleIds=new Set(),seenCoreRuleIds=new Set();
   for(const unit of indexes.units){
     const cards=parseDatasheetStratagems(datasheetHtmlByUnit.get(unit.unitId)||'');
     if(cards===null)unresolved.parse.push({kind:'datasheet',unitId:unit.unitId,reason:'missing Stratagems block'});
-    const ruleIds=[];
+    const ruleIds=[],coreRuleIds=[];
     for(const name of cards||[]){
       const entries=indexes.ruleByName.get(normalized(name))||[];
       if(entries.length===1)ruleIds.push(entries[0].ruleId);
       else if(entries.length>1)unresolved.ambiguous.push({kind:'datasheet-stratagem',unitId:unit.unitId,name,candidates:entries.map(entry=>entry.ruleId).sort()});
+      else if(coreRuleByName.has(normalized(name)))coreRuleIds.push(coreRuleByName.get(normalized(name)));
       else extraByName.set(name,new Set([...(extraByName.get(name)||[]),unit.unitId]));
     }
     if(new Set(ruleIds).size!==ruleIds.length)unresolved.duplicates.push({kind:'datasheet-stratagem',unitId:unit.unitId,reason:'same canonical rule repeated on one datasheet page'});
-    units[unit.unitId]=sortStrings(ruleIds);ruleIds.forEach(ruleId=>seenRuleIds.add(ruleId));
+    units[unit.unitId]=sortStrings(ruleIds);coreUnits[unit.unitId]=sortStrings(coreRuleIds);
+    ruleIds.forEach(ruleId=>seenRuleIds.add(ruleId));coreRuleIds.forEach(ruleId=>seenCoreRuleIds.add(ruleId));
   }
   for(const rule of indexes.rules)if(!seenRuleIds.has(rule.ruleId))unresolved.unknown.push({kind:'stratagem',ruleId:rule.ruleId,reason:'not observed on any datasheet page'});
   const source={edition:'11',faction:'Death Guard',kind:'Wahapedia',url:factionUrl};
-  const snapshot={schema:'wahapedia-compatible-rules-snapshot/v2',retrievedAt,source,units};
+  const snapshot={schema:'wahapedia-compatible-rules-snapshot/v3',retrievedAt,source,units,coreUnits};
   const extraWahapediaNames=[...extraByName].map(([name,unitIds])=>({name,unitIds:[...unitIds].sort()})).sort((left,right)=>left.name.localeCompare(right.name));
   const unresolvedEntries=Object.values(unresolved).flat();
-  const report={schema:'compatible-rules-import-report/v2',retrievedAt,source,summary:{datasheets:{canonical:indexes.units.length,imported:Object.keys(units).length},stratagems:{canonical:indexes.rules.length,observed:seenRuleIds.size},associations:Object.values(units).reduce((total,rules)=>total+rules.length,0),extraWahapediaNames:extraWahapediaNames.length,unresolved:unresolvedEntries.length},extraWahapediaNames,unresolved};
-  return {snapshot,report,ok:unresolvedEntries.length===0&&Object.keys(units).length===41&&seenRuleIds.size===45};
+  const report={schema:'compatible-rules-import-report/v3',retrievedAt,source,summary:{datasheets:{canonical:indexes.units.length,imported:Object.keys(units).length},stratagems:{canonical:indexes.rules.length,observed:seenRuleIds.size},coreStratagems:{canonical:10,observed:seenCoreRuleIds.size},associations:{faction:Object.values(units).reduce((total,rules)=>total+rules.length,0),core:Object.values(coreUnits).reduce((total,rules)=>total+rules.length,0)},extraWahapediaNames:extraWahapediaNames.length,unresolved:unresolvedEntries.length},extraWahapediaNames,unresolved};
+  return {snapshot,report,ok:unresolvedEntries.length===0&&Object.keys(units).length===41&&seenRuleIds.size===45&&seenCoreRuleIds.size===10};
 }
 
 export function applyImportResult({result,snapshotPath=snapshotFile,reportPath=reportFile}){writeJson(reportPath,result.report);if(!result.ok)return false;replaceSnapshot(snapshotPath,result.snapshot);return true;}
@@ -84,7 +94,7 @@ async function main(){
   const pages=await Promise.all(indexes.units.map(async unit=>[unit.unitId,await fetchText(sourceUrlByUnit.get(unit.unitId))]));
   const result=buildImport({book,datasheetHtmlByUnit:new Map(pages),retrievedAt});
   if(!applyImportResult({result}))throw new Error(`Import has ${result.report.summary.unresolved} unresolved entries; snapshot was not written.`);
-  process.stdout.write(`Imported ${Object.keys(result.snapshot.units).length} datasheets and ${result.report.summary.stratagems.observed} faction Stratagems.\n`);
+  process.stdout.write(`Imported ${Object.keys(result.snapshot.units).length} datasheets, ${result.report.summary.stratagems.observed} faction and ${result.report.summary.coreStratagems.observed} Core Stratagems.\n`);
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href)main().catch(error=>{process.stderr.write(`${error.message}\n`);process.exitCode=1;});

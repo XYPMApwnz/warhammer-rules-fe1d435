@@ -192,7 +192,8 @@ try{
     assert.equal(matrix.fixtures.defilerSmoke,'no-match');
     assert.equal(matrix.fixtures.landRaiderPlaguesurge,'no-match');
     await page.locator('#unit-chaos-land-raider .related-rules-trigger').click();
-    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),1,'desktop must show one selected Detachment');
+    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),2,'desktop must show Core plus one selected Detachment');
+    assert.equal(await page.locator('.related-rules-layer [data-detachment="core"] [data-rule-id="core-stratagem-command-re-roll"]:not([hidden])').count(),1,'desktop must show matrix-approved Core Stratagems');
     assert.equal(await page.locator('.related-rules-layer [data-rule-id="stratagem-disgustingly-resilient"]:not([hidden])').count(),1,'desktop must show the matrix-approved Stratagem');
     assert.equal(await page.locator('.related-rules-layer .enhancement:visible').count(),0,'review integration must not revive legacy Enhancement matching');
     assert.equal(await page.locator('.related-rules-layer [data-rule-id="stratagem-plaguesurge"] .compatibility-status span').textContent(),'Requires Warlord selection');
@@ -200,7 +201,8 @@ try{
     await page.locator('#relatedDetachment').selectOption('virulent-vectorium');
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();
     await page.locator('#relatedRulesContent [data-detachment="virulent-vectorium"] .stratagem').first().waitFor();
-    assert.equal(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count(),1,'Phone Mode must show one selected Detachment');
+    assert.equal(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count(),2,'Phone Mode must show Core plus one selected Detachment');
+    assert.equal(await page.locator('#relatedRulesContent [data-detachment="core"] #core-stratagem-command-re-roll:not([hidden])').count(),1,'Phone Mode must show matrix-approved Core Stratagems');
     assert.equal(await page.locator('#stratagem-disgustingly-resilient:not([hidden])').count(),1,'Phone Mode must show the matrix-approved Stratagem');
     assert.equal(await page.locator('#stratagem-plaguesurge .compatibility-status span').textContent(),'Requires Warlord selection');
     assert.deepEqual(errors,[]);
@@ -263,7 +265,7 @@ try{
     assert.equal(coldDgState.hasApp&&coldDgState.triggerCount>0,true,`DG cold review runtime unavailable: ${JSON.stringify({coldDgState,errors})}`);
     await page.locator('#unit-chaos-land-raider .related-rules-trigger').click();
     await page.locator('.related-rules-layer [data-rule-id="stratagem-disgustingly-resilient"]:not([hidden])').waitFor();
-    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),1,'DG cold desktop must open one matrix-backed Detachment');
+    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),2,'DG cold desktop must open Core plus one matrix-backed Detachment');
     assert.deepEqual(errors,[]);
     console.log('PASS Death Guard true cold desktop Compatible Stratagems');
 
@@ -330,7 +332,7 @@ try{
     assert.equal(warmDgState.relatedRules,1,`DG warm Phone runtime unavailable: ${JSON.stringify({warmBefore,warmDgState,errors})}`);
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();
     await page.locator('#relatedRulesContent [data-detachment] .stratagem:not([hidden])').first().waitFor();
-    assert.equal(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count(),1,'visited DG Phone page must reopen one matrix-backed Detachment offline');
+    assert.equal(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count(),2,'visited DG Phone page must reopen Core plus one matrix-backed Detachment offline');
     assert.deepEqual(errors,[]);
     console.log('PASS Death Guard visited Phone Mode Compatible Stratagems offline');
   }finally{await warmDeathGuardContext.close();}

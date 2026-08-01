@@ -16,12 +16,17 @@ assert.deepEqual(matrix,generated,'generated matrix is stale');
 assert.equal(stableStringify(matrix),stableStringify(buildCompatibleRules({book,snapshot,ledger})),'matrix must be deterministic');
 const rows=Object.values(matrix.units).flat(),conditional=rows.filter(rule=>rule.state==='conditional');
 assert.equal(Object.keys(matrix.units).length,41);
-assert.equal(rows.length,583);
-assert.equal(rows.filter(rule=>rule.state==='match').length,486);
-assert.equal(conditional.length,97);
-assert.deepEqual(Object.fromEntries([...conditions].map(condition=>[condition,conditional.filter(rule=>rule.condition===condition).length])),{'attachment-unknown':18,'second-character-unknown':10,'warlord-unknown':17,'detachment-not-selected':52});
+assert.equal(rows.length,878);
+assert.equal(rows.filter(rule=>rule.state==='match').length,771);
+assert.equal(conditional.length,107);
+assert.deepEqual(Object.fromEntries([...conditions].map(condition=>[condition,conditional.filter(rule=>rule.condition===condition).length])),{'attachment-unknown':28,'second-character-unknown':10,'warlord-unknown':17,'detachment-not-selected':52});
+const core=rows.filter(rule=>rule.scope==='core');
+assert.equal(core.length,295);
+assert.equal(core.filter(rule=>rule.state==='match').length,285);
+assert.equal(core.filter(rule=>rule.condition==='attachment-unknown').length,10);
 for(const [unitId,rules] of Object.entries(matrix.units))for(const rule of rules){
-  assert.equal(rule.detachmentId,detachmentIds.get(rule.ruleId),`missing detachment: ${rule.ruleId}`);
+  if(rule.scope==='core')assert.equal(rule.detachmentId,undefined,`Core rule has a Detachment: ${rule.ruleId}`);
+  else assert.equal(rule.detachmentId,detachmentIds.get(rule.ruleId),`missing detachment: ${rule.ruleId}`);
   assert.notEqual(ledgerByPair.get(`${unitId}|${rule.ruleId}`)?.decision,'reject',`reject leaked: ${unitId}/${rule.ruleId}`);
   assert(rule.state==='match'||conditions.has(rule.condition),`invalid condition: ${rule.ruleId}`);
 }
@@ -34,5 +39,5 @@ assert.equal(getCompatibleStratagems(matrix,warlord[0],{detachmentId:warlord[1].
 const detachment=Object.entries(matrix.units).flatMap(([unitId,rules])=>rules.filter(rule=>rule.condition==='detachment-not-selected').map(rule=>[unitId,rule]))[0];
 assert.equal(getCompatibleStratagems(matrix,detachment[0],{detachmentId:detachment[1].detachmentId}).find(rule=>rule.ruleId===detachment[1].ruleId).state,'match');
 assert.equal(getCompatibleStratagems(matrix,detachment[0],{detachmentId:detachment[1].detachmentId.replace(/^detachment-/,'')}).find(rule=>rule.ruleId===detachment[1].ruleId).state,'match');
-assert.equal(getCompatibleStratagems(matrix,warlord[0],{detachmentId:'other'}).length,0);
+assert(getCompatibleStratagems(matrix,warlord[0],{detachmentId:'other'}).every(rule=>rule.scope==='core'));
 console.log('Death Guard compatible rules matrix QA passed.');

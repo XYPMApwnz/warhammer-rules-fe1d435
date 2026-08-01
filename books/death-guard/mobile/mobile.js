@@ -112,7 +112,7 @@
       group.hidden = group.dataset.relatedKind !== 'stratagems' || ![...group.querySelectorAll('.stratagem')].some(card => !card.hidden);
     });
     relatedContent.querySelectorAll('.related-detachment').forEach(section => {
-      const chosen = section.dataset.detachment === selected;
+      const chosen = section.dataset.detachment === 'core' || section.dataset.detachment === selected;
       section.hidden = !chosen || ![...section.querySelectorAll('[data-related-kind]')].some(group => !group.hidden);
     });
     relatedRules.querySelectorAll('[data-related-tab]').forEach(button => {

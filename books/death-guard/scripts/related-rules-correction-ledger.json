@@ -2,16 +2,30 @@
   "schemaVersion": 1,
   "edition": 11,
   "faction": "death-guard",
-  "scope": "faction-stratagems-only",
+  "scope": "faction-and-core-stratagems",
   "defaultSharedDecision": "accept",
   "sharedPairCount": 479,
   "correctionPairCount": 170,
+  "coreSharedPairCount": 285,
+  "coreCorrectionPairCount": 10,
   "legendsPolicy": "included-if-local",
   "sources": {
     "snapshot": "books/death-guard/sources/wahapedia-compatible-rules.snapshot.json",
     "manual": "books/death-guard/scripts/related-rules.js"
   },
-  "runtimeUsage": "Not used by runtime or matcher.",
+  "runtimeUsage": "Compiled into the review matrix; not read directly at runtime.",
+  "coreEntries": [
+    {"unitId":"unit-blightlord-terminators","ruleId":"core-stratagem-epic-challenge","decision":"conditional","conditionKind":"attachment","reason":"A possible attached Character can satisfy TARGET, but no attachment is confirmed."},
+    {"unitId":"unit-deathshroud-terminators","ruleId":"core-stratagem-epic-challenge","decision":"conditional","conditionKind":"attachment","reason":"A possible attached Character can satisfy TARGET, but no attachment is confirmed."},
+    {"unitId":"unit-plague-marines","ruleId":"core-stratagem-epic-challenge","decision":"conditional","conditionKind":"attachment","reason":"A possible attached Character can satisfy TARGET, but no attachment is confirmed."},
+    {"unitId":"unit-poxwalkers","ruleId":"core-stratagem-epic-challenge","decision":"conditional","conditionKind":"attachment","reason":"A possible attached Character can satisfy TARGET, but no attachment is confirmed."},
+    {"unitId":"unit-blightlord-terminators","ruleId":"core-stratagem-explosives","decision":"conditional","conditionKind":"attachment","reason":"A possible attached model can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."},
+    {"unitId":"unit-deathshroud-terminators","ruleId":"core-stratagem-explosives","decision":"conditional","conditionKind":"attachment","reason":"A possible attached model can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."},
+    {"unitId":"unit-malignant-plaguecaster","ruleId":"core-stratagem-explosives","decision":"conditional","conditionKind":"attachment","reason":"A possible bodyguard unit can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."},
+    {"unitId":"unit-noxious-blightbringer","ruleId":"core-stratagem-explosives","decision":"conditional","conditionKind":"attachment","reason":"A possible bodyguard unit can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."},
+    {"unitId":"unit-plague-surgeon","ruleId":"core-stratagem-explosives","decision":"conditional","conditionKind":"attachment","reason":"A possible bodyguard unit can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."},
+    {"unitId":"unit-tallyman","ruleId":"core-stratagem-explosives","decision":"conditional","conditionKind":"attachment","reason":"A possible bodyguard unit can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."}
+  ],
   "entries": [
     {
       "unitId": "unit-blightlord-terminators",

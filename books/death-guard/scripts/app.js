@@ -41,7 +41,7 @@
         group.hidden=group.dataset.relatedKind!=='stratagems'||![...group.querySelectorAll('.stratagem')].some(card=>!card.hidden);
       });
       sections.forEach(section=>{
-        const selected=section.dataset.detachment===detachment;
+        const selected=section.dataset.detachment==='core'||section.dataset.detachment===detachment;
         section.hidden=!selected||![...section.querySelectorAll('[data-related-kind]')].some(group=>!group.hidden);
       });
       tabs.querySelectorAll('button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.kind===kind)));

@@ -13,4 +13,6 @@ check('IDs are local faction IDs',entries.every(entry=>units.has(entry.unitId)&&
 check('every entry is decided',entries.every(entry=>['accept','conditional','reject','unresolved'].includes(entry.decision)&&entry.reason));
 check('conditional entries specify a condition',entries.filter(entry=>entry.decision==='conditional').every(entry=>entry.conditionKind));
 check('Legends policy is explicit',ledger.legendsPolicy==='included-if-local');
+check('10 Core attachment corrections',ledger.coreSharedPairCount===285&&ledger.coreCorrectionPairCount===10&&ledger.coreEntries.length===10&&new Set(ledger.coreEntries.map(entry=>`${entry.unitId}|${entry.ruleId}`)).size===10);
+check('Core corrections are attachment-only',ledger.coreEntries.every(entry=>units.has(entry.unitId)&&entry.ruleId.startsWith('core-stratagem-')&&entry.decision==='conditional'&&entry.conditionKind==='attachment'));
 if(failures.length){console.error(failures.join('\n'));process.exitCode=1;}else console.log('Death Guard correction ledger QA passed.');

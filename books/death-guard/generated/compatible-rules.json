@@ -3,6 +3,36 @@
   "units": {
     "unit-beasts-of-nurgle": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-tallyband-summoners",
         "ruleId": "stratagem-all-is-rot",
         "state": "match"
@@ -19,6 +49,46 @@
       }
     ],
     "unit-biologus-putrifier": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-explosives",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
@@ -126,6 +196,48 @@
       }
     ],
     "unit-blightlord-terminators": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "condition": "attachment-unknown",
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "conditional"
+      },
+      {
+        "condition": "attachment-unknown",
+        "ruleId": "core-stratagem-explosives",
+        "scope": "core",
+        "state": "conditional"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-champions-of-contagion",
         "ruleId": "stratagem-blessings-of-filth",
@@ -239,6 +351,41 @@
     ],
     "unit-chaos-land-raider": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-smokescreen",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-mortarions-hammer",
         "ruleId": "stratagem-blighted-land",
         "state": "match"
@@ -306,6 +453,41 @@
       }
     ],
     "unit-chaos-predator-annihilator": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-smokescreen",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-mortarions-hammer",
         "ruleId": "stratagem-blighted-land",
@@ -375,6 +557,41 @@
     ],
     "unit-chaos-predator-destructor": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-smokescreen",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-mortarions-hammer",
         "ruleId": "stratagem-blighted-land",
         "state": "match"
@@ -442,6 +659,41 @@
       }
     ],
     "unit-chaos-rhino": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-smokescreen",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-mortarions-hammer",
         "ruleId": "stratagem-blighted-land",
@@ -511,6 +763,36 @@
     ],
     "unit-chaos-spawn": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "condition": "attachment-unknown",
         "detachmentId": "detachment-champions-of-contagion",
         "ruleId": "stratagem-blessings-of-filth",
@@ -572,6 +854,46 @@
       }
     ],
     "unit-daemon-prince-of-nurgle": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
@@ -664,6 +986,46 @@
     ],
     "unit-daemon-prince-of-nurgle-with-wings": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
         "state": "match"
@@ -753,8 +1115,84 @@
         "state": "match"
       }
     ],
-    "unit-death-guard-chaos-lord": [],
+    "unit-death-guard-chaos-lord": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-explosives",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      }
+    ],
     "unit-death-guard-chaos-lord-in-terminator-armour": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "condition": "detachment-not-selected",
         "detachmentId": "detachment-death-lords-chosen",
@@ -792,8 +1230,69 @@
         "state": "conditional"
       }
     ],
-    "unit-death-guard-cultists": [],
+    "unit-death-guard-cultists": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      }
+    ],
     "unit-death-guard-possessed": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "condition": "attachment-unknown",
         "detachmentId": "detachment-champions-of-contagion",
@@ -880,6 +1379,41 @@
     ],
     "unit-death-guard-sorcerer-in-terminator-armour": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "condition": "detachment-not-selected",
         "detachmentId": "detachment-death-lords-chosen",
         "ruleId": "stratagem-blooming-pestilence",
@@ -917,6 +1451,48 @@
       }
     ],
     "unit-deathshroud-terminators": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "condition": "attachment-unknown",
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "conditional"
+      },
+      {
+        "condition": "attachment-unknown",
+        "ruleId": "core-stratagem-explosives",
+        "scope": "core",
+        "state": "conditional"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-champions-of-contagion",
         "ruleId": "stratagem-blessings-of-filth",
@@ -1030,6 +1606,41 @@
     ],
     "unit-defiler": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-mortarions-hammer",
         "ruleId": "stratagem-blighted-land",
         "state": "match"
@@ -1097,6 +1708,36 @@
       }
     ],
     "unit-foetid-bloat-drone": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-mortarions-hammer",
         "ruleId": "stratagem-blighted-land",
@@ -1184,6 +1825,36 @@
     ],
     "unit-foetid-bloat-drone-with-heavy-blight-launcher": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-mortarions-hammer",
         "ruleId": "stratagem-blighted-land",
         "state": "match"
@@ -1269,6 +1940,46 @@
       }
     ],
     "unit-foul-blightspawn": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-explosives",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
@@ -1372,6 +2083,46 @@
     ],
     "unit-great-unclean-one": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-tallyband-summoners",
         "ruleId": "stratagem-all-is-rot",
         "state": "match"
@@ -1393,6 +2144,41 @@
       }
     ],
     "unit-helbrute": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-mortarions-hammer",
         "ruleId": "stratagem-blighted-land",
@@ -1479,6 +2265,46 @@
       }
     ],
     "unit-icon-bearer": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-explosives",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
@@ -1581,6 +2407,46 @@
       }
     ],
     "unit-lord-of-contagion": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-explosives",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
@@ -1719,6 +2585,46 @@
     ],
     "unit-lord-of-poxes": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-explosives",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
         "state": "match"
@@ -1820,6 +2726,41 @@
       }
     ],
     "unit-lord-of-virulence": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
@@ -1957,6 +2898,47 @@
     ],
     "unit-malignant-plaguecaster": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "condition": "attachment-unknown",
+        "ruleId": "core-stratagem-explosives",
+        "scope": "core",
+        "state": "conditional"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
         "state": "match"
@@ -2059,6 +3041,36 @@
     ],
     "unit-miasmic-malignifier": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "condition": "attachment-unknown",
         "detachmentId": "detachment-champions-of-contagion",
         "ruleId": "stratagem-blessings-of-filth",
@@ -2120,6 +3132,51 @@
       }
     ],
     "unit-mortarion": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-explosives",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
@@ -2212,6 +3269,41 @@
     ],
     "unit-myphitic-blight-hauler": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-smokescreen",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-mortarions-hammer",
         "ruleId": "stratagem-blighted-land",
         "state": "match"
@@ -2297,6 +3389,47 @@
       }
     ],
     "unit-noxious-blightbringer": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "condition": "attachment-unknown",
+        "ruleId": "core-stratagem-explosives",
+        "scope": "core",
+        "state": "conditional"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
@@ -2400,6 +3533,36 @@
     ],
     "unit-nurglings": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-tallyband-summoners",
         "ruleId": "stratagem-all-is-rot",
         "state": "match"
@@ -2422,6 +3585,36 @@
     ],
     "unit-plague-drones": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-tallyband-summoners",
         "ruleId": "stratagem-all-is-rot",
         "state": "match"
@@ -2438,6 +3631,47 @@
       }
     ],
     "unit-plague-marines": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "condition": "attachment-unknown",
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "conditional"
+      },
+      {
+        "ruleId": "core-stratagem-explosives",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-champions-of-contagion",
         "ruleId": "stratagem-blessings-of-filth",
@@ -2516,6 +3750,47 @@
       }
     ],
     "unit-plague-surgeon": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "condition": "attachment-unknown",
+        "ruleId": "core-stratagem-explosives",
+        "scope": "core",
+        "state": "conditional"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
@@ -2619,6 +3894,36 @@
     ],
     "unit-plaguebearers": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-tallyband-summoners",
         "ruleId": "stratagem-all-is-rot",
         "state": "match"
@@ -2635,6 +3940,36 @@
       }
     ],
     "unit-plagueburst-crawler": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-mortarions-hammer",
         "ruleId": "stratagem-blighted-land",
@@ -2703,6 +4038,42 @@
       }
     ],
     "unit-poxwalkers": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "condition": "attachment-unknown",
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "conditional"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-champions-of-contagion",
         "ruleId": "stratagem-blessings-of-filth",
@@ -2835,6 +4206,46 @@
     ],
     "unit-rotigus": [
       {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-tallyband-summoners",
         "ruleId": "stratagem-all-is-rot",
         "state": "match"
@@ -2856,6 +4267,47 @@
       }
     ],
     "unit-tallyman": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "condition": "attachment-unknown",
+        "ruleId": "core-stratagem-explosives",
+        "scope": "core",
+        "state": "conditional"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
@@ -2958,6 +4410,41 @@
       }
     ],
     "unit-typhus": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
       {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",

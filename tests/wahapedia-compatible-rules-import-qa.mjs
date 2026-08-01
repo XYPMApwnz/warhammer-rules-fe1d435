@@ -13,8 +13,8 @@ const fixture='<div class="dsLeft"><div class="dsHeader dsColorBgDG">STRATAGEMS<
 check('parser preserves duplicate card names',JSON.stringify(parseDatasheetStratagems(fixture))===JSON.stringify(['CREEPING BLIGHT','CREEPING BLIGHT']));
 const indexes=buildCanonicalIndexes(book);
 check('canonical indexes are 41 units and 45 faction rules',indexes.units.length===41&&indexes.rules.length===45);
-check('snapshot is compact deterministic v2',snapshot.schema==='wahapedia-compatible-rules-snapshot/v2'&&Object.keys(snapshot.units).length===41&&stableStringify(snapshot)===fs.readFileSync(path.join(root,'books/death-guard/sources/wahapedia-compatible-rules.snapshot.json'),'utf8'));
-check('report proves complete association coverage',report.summary.datasheets.imported===41&&report.summary.stratagems.observed===45&&report.summary.associations===618&&report.summary.extraWahapediaNames===25&&report.summary.unresolved===0);
+check('snapshot is compact deterministic v3',snapshot.schema==='wahapedia-compatible-rules-snapshot/v3'&&Object.keys(snapshot.units).length===41&&Object.keys(snapshot.coreUnits).length===41&&stableStringify(snapshot)===fs.readFileSync(path.join(root,'books/death-guard/sources/wahapedia-compatible-rules.snapshot.json'),'utf8'));
+check('report proves complete faction and Core coverage',report.summary.datasheets.imported===41&&report.summary.stratagems.observed===45&&report.summary.coreStratagems.observed===10&&report.summary.associations.faction===618&&report.summary.associations.core===285&&report.summary.extraWahapediaNames===14&&report.summary.unresolved===0);
 check('different units keep different rule lists',snapshot.units['unit-plague-marines'].includes('stratagem-creeping-blight')&&!snapshot.units['unit-mortarion'].includes('stratagem-creeping-blight'));
 const broken=buildImport({book,datasheetHtmlByUnit:new Map(),retrievedAt:'2026-08-01'});
 check('malformed input fail-closes',broken.ok===false&&broken.report.summary.unresolved>0);

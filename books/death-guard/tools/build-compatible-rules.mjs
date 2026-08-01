@@ -26,8 +26,9 @@ const conditionByKind=Object.freeze({attachment:'attachment-unknown','second-cha
 const keyOf=({unitId,ruleId})=>`${unitId}|${ruleId}`;
 
 export function buildCompatibleRules({book,snapshot,ledger}){
-  const detachmentIds=detachmentByRuleId(book),entries=new Map(),snapshotPairs=new Set();
+  const detachmentIds=detachmentByRuleId(book),entries=new Map(),snapshotPairs=new Set(),corePairs=new Set();
   for(const [unitId,ruleIds] of Object.entries(snapshot.units||{}))for(const ruleId of ruleIds)snapshotPairs.add(`${unitId}|${ruleId}`);
+  for(const [unitId,ruleIds] of Object.entries(snapshot.coreUnits||{}))for(const ruleId of ruleIds)corePairs.add(`${unitId}|${ruleId}`);
   if(ledger.correctionPairCount!==ledger.entries?.length)throw new Error('Ledger correction count does not match entries.');
   for(const entry of ledger.entries||[]){
     const key=keyOf(entry);
@@ -53,6 +54,16 @@ export function buildCompatibleRules({book,snapshot,ledger}){
   };
   for(const key of snapshotPairs){const [unitId,ruleId]=key.split('|');add(unitId,ruleId,entries.get(key));}
   for(const entry of entries.values())if(entry.side==='manual-only')add(entry.unitId,entry.ruleId,entry);
+  if(corePairs.size!==ledger.coreSharedPairCount)throw new Error('Core snapshot count does not match the ledger.');
+  if(ledger.coreCorrectionPairCount!==ledger.coreEntries?.length)throw new Error('Core correction count does not match entries.');
+  for(const key of corePairs){const [unitId,ruleId]=key.split('|');rows.get(unitId)?.set(ruleId,{ruleId,scope:'core',state:'match'});}
+  const seenCoreCorrections=new Set();
+  for(const entry of ledger.coreEntries||[]){
+    const key=keyOf(entry);
+    if(seenCoreCorrections.has(key)||corePairs.has(key)||!rows.has(entry.unitId))throw new Error(`Invalid Core correction: ${key}`);
+    if(entry.decision!=='conditional'||conditionByKind[entry.conditionKind]!=='attachment-unknown')throw new Error(`Invalid Core conditional: ${key}`);
+    seenCoreCorrections.add(key);rows.get(entry.unitId).set(entry.ruleId,{ruleId:entry.ruleId,scope:'core',state:'conditional',condition:'attachment-unknown'});
+  }
   const units=Object.fromEntries([...rows].sort(([a],[b])=>a.localeCompare(b,'en')).map(([unitId,ruleMap])=>[unitId,[...ruleMap.values()].sort((a,b)=>a.ruleId.localeCompare(b.ruleId,'en'))]));
   return {schema:'death-guard-compatible-rules/v1',units};
 }

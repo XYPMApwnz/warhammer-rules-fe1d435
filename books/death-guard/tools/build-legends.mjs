@@ -11,6 +11,8 @@ const writeJson=(file,value)=>fs.writeFileSync(file,`${JSON.stringify(value,null
 const escapeHtml=value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const slug=value=>String(value).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const legends=readJson(path.join(bookRoot,'content','death-guard-legends.en.json'));
+const coreStratagems=readJson(path.join(root,'books','core-rules','content','core-rules.digital-11e.json')).records.filter(record=>/^15\.(?:0[2-8]|1[0-2])$/.test(record.code)&&record.code!=='15.09');
+const coreTermIdByCode=Object.freeze({'15.02':'core-rule-15-02-command-re-roll','15.03':'core-rule-15-03-epic-challenge','15.04':'core-rule-15-04-insane-bravery','15.05':'core-rule-15-05-explosives','15.06':'core-rule-15-06-crushing-impact','15.07':'core-rule-15-07-rapid-ingress','15.08':'core-stratagem-fire-overwatch','15.10':'core-rule-15-10-smokescreen','15.11':'core-rule-15-11-heroic-intervention','15.12':'core-rule-15-12-counteroffensive'});
 const bookFile=path.join(bookRoot,'content','death-guard-rules.en.json');
 const readerFile=path.join(bookRoot,'reader.html');
 const runtimeFile=path.join(bookRoot,'scripts','data.js');
@@ -136,6 +138,19 @@ function renderTextSection(unit,title,text){
   const id=`${unit.id.slice(5)}-${slug(title)}`;
   return `<section class="unit-part" id="${id}"><h4>${escapeHtml(title)}</h4><div class="ability-list"><div class="content-block"><p>${escapeHtml(text)}</p></div></div></section>`;
 }
+function renderCoreStratagem(record){
+  const lines=record.text.split('\n'),cp=lines.shift(),type=lines.shift();
+  while(lines.length&&!/^(?:WHEN|TARGET|EFFECT|RESTRICTIONS):/.test(lines[0]))lines.shift();
+  const fields=[];
+  for(const line of lines){
+    const label=/^(WHEN|TARGET|EFFECT|RESTRICTIONS):\s*(.*)$/.exec(line);
+    if(label)fields.push({label:label[1],lines:[label[2]]});else fields.at(-1)?.lines.push(line);
+  }
+  return `<article class="stratagem surface" id="core-stratagem-${slug(record.title)}"><div class="stratagem-head"><div><h3>${termButton(coreTermIdByCode[record.code],record.title)}</h3><span class="stratagem-type">${escapeHtml(type)}</span></div><div class="cp">${escapeHtml(cp)}</div></div>${fields.map(field=>`<p class="field" data-source-field="${field.label.toLowerCase()}"><b>${field.label}</b><br>${field.lines.map(escapeHtml).join('<br>')}</p>`).join('')}</article>`;
+}
+function renderCoreStratagemSection(){
+  return `<section class="content-group" id="core-stratagems" data-track="core-stratagems"><h3 class="category-title">Core Stratagems</h3><p class="lead">Universal Stratagems available to every army. Datasheet tools only show the cards the selected unit can legally target.</p><div class="detachment-content stratagem-grid core-stratagem-grid">${coreStratagems.map(renderCoreStratagem).join('\n')}</div></section>`;
+}
 const plainKeywords=new Set(['CHAOS LORD','CULTISTS','POSSESSED','SORCERER']);
 function renderUnit(unit){
   const parts=['Profile & Weapons','Abilities'];
@@ -184,8 +199,10 @@ reader=reader.replace(/rule-facts\.js\?v=\d+/,'rule-facts.js?v=4');
 reader=reader.replace(/related-rules-matcher\.js\?v=\d+/,'related-rules-matcher.js?v=6');
 reader=reader.replace(/scripts\/related-rules\.js\?v=\d+/,'scripts/related-rules.js?v=11');
 reader=reader.replace(/points-validator\.js\?v=\d+/,'points-validator.js?v=4');
+reader=reader.replace(/scripts\/app\.js\?v=\d+/,'scripts/app.js?v=37');
 reader=replaceOrInsert(reader,'li',legends.group.id,'pact-of-decay-datasheets',nav);
 reader=replaceOrInsert(reader,'section',legends.group.id,'pact-of-decay-datasheets',content);
+reader=replaceOrInsert(reader,'section','core-stratagems','detachments',renderCoreStratagemSection());
 reader=reader.replace(/<p class="lead">\d+ current Death Guard and Pact of Decay datasheets\.<\/p>/,`<p class="lead">${book.audit.datasheets} current Death Guard, Legends and Pact of Decay datasheets.</p>`);
 reader=reader.replace(/9 detachments [^<]* \d+ datasheets [^<]* \d+ glossary entries/,`9 detachments · ${book.audit.datasheets} datasheets · ${book.glossary.length} glossary entries`);
 for(const unit of unitSections){

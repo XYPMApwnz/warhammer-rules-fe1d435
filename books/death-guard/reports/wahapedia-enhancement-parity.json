@@ -1,0 +1,48 @@
+{
+  "schema": "wahapedia-enhancement-parity/v1",
+  "retrievedAt": "2026-08-01",
+  "source": "https://wahapedia.ru/wh40k11ed/factions/death-guard/",
+  "standardEnhancements": 26,
+  "officialOwnerAssociations": 198,
+  "wahapediaAssociations": 168,
+  "wahapediaOnly": [],
+  "officialOnly": {
+    "unit-death-guard-chaos-lord": [
+      "enhancement-arch-contaminator",
+      "enhancement-beckoning-blight",
+      "enhancement-daemon-weapon-of-nurgle",
+      "enhancement-eye-of-affliction",
+      "enhancement-fell-harvester",
+      "enhancement-furnace-of-plagues",
+      "enhancement-lord-of-the-walking-pox",
+      "enhancement-revolting-regeneration",
+      "enhancement-shriekworm-familiar",
+      "enhancement-talisman-of-burgeoning"
+    ],
+    "unit-death-guard-chaos-lord-in-terminator-armour": [
+      "enhancement-arch-contaminator",
+      "enhancement-beckoning-blight",
+      "enhancement-daemon-weapon-of-nurgle",
+      "enhancement-eye-of-affliction",
+      "enhancement-fell-harvester",
+      "enhancement-furnace-of-plagues",
+      "enhancement-lord-of-the-walking-pox",
+      "enhancement-revolting-regeneration",
+      "enhancement-shriekworm-familiar",
+      "enhancement-talisman-of-burgeoning"
+    ],
+    "unit-death-guard-sorcerer-in-terminator-armour": [
+      "enhancement-arch-contaminator",
+      "enhancement-beckoning-blight",
+      "enhancement-daemon-weapon-of-nurgle",
+      "enhancement-eye-of-affliction",
+      "enhancement-fell-harvester",
+      "enhancement-furnace-of-plagues",
+      "enhancement-lord-of-the-walking-pox",
+      "enhancement-revolting-regeneration",
+      "enhancement-shriekworm-familiar",
+      "enhancement-talisman-of-burgeoning"
+    ]
+  },
+  "decision": "Use the official owner contract. Wahapedia omits ten Codex Enhancements from each of three Legends CHARACTER datasheets."
+}

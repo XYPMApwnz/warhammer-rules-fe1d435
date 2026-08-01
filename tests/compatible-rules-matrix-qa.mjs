@@ -7,23 +7,32 @@ import {compatibleStratagemsReviewEnabled,getCompatibleStratagems} from '../book
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const json=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
-const book=json('books/death-guard/content/death-guard-rules.en.json'),snapshot=json('books/death-guard/sources/wahapedia-compatible-rules.snapshot.json'),ledger=json('books/death-guard/scripts/related-rules-correction-ledger.json'),generated=json('books/death-guard/generated/compatible-rules.json');
-const matrix=buildCompatibleRules({book,snapshot,ledger}),pairs=new Set(Object.entries(snapshot.units).flatMap(([unitId,ruleIds])=>ruleIds.map(ruleId=>`${unitId}|${ruleId}`))),ledgerByPair=new Map(ledger.entries.map(entry=>[`${entry.unitId}|${entry.ruleId}`,entry])),detachmentIds=detachmentByRuleId(book),conditions=new Set(['attachment-unknown','second-character-unknown','warlord-unknown','detachment-not-selected']);
+const book=json('books/death-guard/content/death-guard-rules.en.json'),snapshot=json('books/death-guard/sources/wahapedia-compatible-rules.snapshot.json'),ledger=json('books/death-guard/scripts/related-rules-correction-ledger.json'),enhancementMatrix=json('tests/fixtures/enhancement-owner-matrix.json').books['death-guard'],generated=json('books/death-guard/generated/compatible-rules.json');
+const matrix=buildCompatibleRules({book,snapshot,ledger,enhancementMatrix}),pairs=new Set(Object.entries(snapshot.units).flatMap(([unitId,ruleIds])=>ruleIds.map(ruleId=>`${unitId}|${ruleId}`))),ledgerByPair=new Map(ledger.entries.map(entry=>[`${entry.unitId}|${entry.ruleId}`,entry])),detachmentIds=detachmentByRuleId(book),conditions=new Set(['attachment-unknown','second-character-unknown','warlord-unknown','detachment-not-selected']);
 assert.equal([...pairs].filter(pair=>!ledgerByPair.has(pair)).length,ledger.sharedPairCount,'snapshot pairs without ledger must be shared');
 for(const entry of ledger.entries)assert.equal(pairs.has(`${entry.unitId}|${entry.ruleId}`),entry.side==='wahapedia-only',`ledger side mismatch: ${entry.unitId}/${entry.ruleId}`);
 assert.equal(ledger.entries.filter(entry=>entry.decision==='unresolved').length,0);
 assert.deepEqual(matrix,generated,'generated matrix is stale');
-assert.equal(stableStringify(matrix),stableStringify(buildCompatibleRules({book,snapshot,ledger})),'matrix must be deterministic');
+assert.equal(stableStringify(matrix),stableStringify(buildCompatibleRules({book,snapshot,ledger,enhancementMatrix})),'matrix must be deterministic');
 const rows=Object.values(matrix.units).flat(),conditional=rows.filter(rule=>rule.state==='conditional');
 assert.equal(Object.keys(matrix.units).length,41);
-assert.equal(rows.length,878);
-assert.equal(rows.filter(rule=>rule.state==='match').length,771);
+assert.equal(rows.length,1076);
+assert.equal(rows.filter(rule=>rule.state==='match').length,969);
 assert.equal(conditional.length,107);
 assert.deepEqual(Object.fromEntries([...conditions].map(condition=>[condition,conditional.filter(rule=>rule.condition===condition).length])),{'attachment-unknown':28,'second-character-unknown':10,'warlord-unknown':17,'detachment-not-selected':52});
 const core=rows.filter(rule=>rule.scope==='core');
 assert.equal(core.length,295);
 assert.equal(core.filter(rule=>rule.state==='match').length,285);
 assert.equal(core.filter(rule=>rule.condition==='attachment-unknown').length,10);
+const enhancements=rows.filter(rule=>rule.kind==='enhancement'),enhancementIds=new Set(enhancements.map(rule=>rule.ruleId));
+assert.equal(enhancements.length,198);
+assert.equal(enhancementIds.size,26);
+assert([...enhancementIds].every(id=>!['enhancement-parasitic-woe-reaper','enhancement-lancet-of-the-worldsore','enhancement-insectile-murmuration','enhancement-plagueveil'].includes(id)),'UPGRADE must remain deferred');
+const parity=json('books/death-guard/reports/wahapedia-enhancement-parity.json');
+assert.equal(parity.officialOwnerAssociations,enhancements.length);
+assert.equal(parity.wahapediaAssociations,168);
+assert.equal(Object.values(parity.officialOnly).flat().length,30);
+assert.deepEqual(Object.keys(parity.officialOnly).sort(),['unit-death-guard-chaos-lord','unit-death-guard-chaos-lord-in-terminator-armour','unit-death-guard-sorcerer-in-terminator-armour']);
 for(const [unitId,rules] of Object.entries(matrix.units))for(const rule of rules){
   if(rule.scope==='core')assert.equal(rule.detachmentId,undefined,`Core rule has a Detachment: ${rule.ruleId}`);
   else assert.equal(rule.detachmentId,detachmentIds.get(rule.ruleId),`missing detachment: ${rule.ruleId}`);

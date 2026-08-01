@@ -2,7 +2,7 @@
   'use strict';
 
   const scriptUrl=document.currentScript.src;
-  const compatibleRuntime=await import(new URL('../scripts/compatible-stratagems-runtime.mjs?v=1',scriptUrl))
+  const compatibleRuntime=await import(new URL('../scripts/compatible-stratagems-runtime.mjs?v=2',scriptUrl))
     .catch(error=>{console.warn('Compatible Stratagems unavailable.',error);return null;});
 
   const navButton = document.getElementById('navButton');
@@ -96,7 +96,11 @@
     if (!relatedContent || !unit || !compatibleRulesMatrix) return;
     const selected = relatedDetachment.value;
     const rules=compatibleRuntime.getCompatibleStratagems(compatibleRulesMatrix,unit.id,{detachmentId:selected,warlord:unit.dataset.rosterWarlord==='true'}),byId=new Map(rules.map(rule=>[rule.ruleId,rule]));
-    relatedContent.querySelectorAll('.stratagem').forEach(card => {
+    const hasEnhancements=rules.some(rule=>rule.kind==='enhancement');
+    if(relatedKind==='enhancements'&&!hasEnhancements)relatedKind='stratagems';
+    relatedRules.querySelector('[data-related-tab="enhancements"]').hidden=!hasEnhancements;
+    relatedRules.querySelector('h2').textContent=hasEnhancements?'Compatible Stratagems & Enhancements':'Compatible Stratagems';
+    relatedContent.querySelectorAll('.stratagem,.enhancement').forEach(card => {
       const result=byId.get(card.id);
       card.hidden=!result;
       card.dataset.matchState=result?.state||'no-match';
@@ -109,7 +113,7 @@
       }
     });
     relatedContent.querySelectorAll('[data-related-kind]').forEach(group => {
-      group.hidden = group.dataset.relatedKind !== 'stratagems' || ![...group.querySelectorAll('.stratagem')].some(card => !card.hidden);
+      group.hidden = group.dataset.relatedKind !== relatedKind || ![...group.querySelectorAll('.stratagem,.enhancement')].some(card => !card.hidden);
     });
     relatedContent.querySelectorAll('.related-detachment').forEach(section => {
       const chosen = section.dataset.detachment === 'core' || section.dataset.detachment === selected;
@@ -130,6 +134,8 @@
       const [response,matrix] = await Promise.all([fetch('./related-rules.inc?v=3'),compatibleRuntime.loadCompatibleStratagems(new URL('../generated/compatible-rules.json',scriptUrl))]);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       relatedContent.innerHTML = await response.text();compatibleRulesMatrix=matrix;
+      const tabs=document.createElement('div');tabs.className='full-related-tabs';tabs.innerHTML='<button type="button" data-related-tab="stratagems" aria-pressed="true">Stratagems</button><button type="button" data-related-tab="enhancements" aria-pressed="false">Enhancements</button>';
+      relatedRules.querySelector('.related-controls')?.append(tabs);
       relatedLoaded = true;
       filterRelated();
     } catch {

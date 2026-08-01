@@ -199,7 +199,7 @@ reader=reader.replace(/rule-facts\.js\?v=\d+/,'rule-facts.js?v=4');
 reader=reader.replace(/related-rules-matcher\.js\?v=\d+/,'related-rules-matcher.js?v=6');
 reader=reader.replace(/scripts\/related-rules\.js\?v=\d+/,'scripts/related-rules.js?v=11');
 reader=reader.replace(/points-validator\.js\?v=\d+/,'points-validator.js?v=4');
-reader=reader.replace(/scripts\/app\.js\?v=\d+/,'scripts/app.js?v=37');
+reader=reader.replace(/scripts\/app\.js\?v=\d+/,'scripts/app.js?v=38');
 reader=replaceOrInsert(reader,'li',legends.group.id,'pact-of-decay-datasheets',nav);
 reader=replaceOrInsert(reader,'section',legends.group.id,'pact-of-decay-datasheets',content);
 reader=replaceOrInsert(reader,'section','core-stratagems','detachments',renderCoreStratagemSection());

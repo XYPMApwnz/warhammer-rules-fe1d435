@@ -1,7 +1,7 @@
 (async function(){
   'use strict';
   const scriptUrl=document.currentScript.src;
-  const compatibleRuntime=await import(new URL('./compatible-stratagems-runtime.mjs?v=1',scriptUrl))
+  const compatibleRuntime=await import(new URL('./compatible-stratagems-runtime.mjs?v=2',scriptUrl))
     .catch(error=>{console.warn('Compatible Stratagems unavailable.',error);return null;});
   let relatedRulesTemplate,compatibleRulesMatrix;
 
@@ -25,7 +25,13 @@
     const filter=()=>{
       if(!content||!unit)return;
       const rules=compatibleRuntime.getCompatibleStratagems(compatibleRulesMatrix,unit.id,{detachmentId:detachment,warlord:unit.dataset.rosterWarlord==='true'}),byId=new Map(rules.map(rule=>[rule.ruleId,rule]));
-      content.querySelectorAll('.stratagem').forEach(card=>{
+      const hasEnhancements=rules.some(rule=>rule.kind==='enhancement');
+      if(kind==='enhancements'&&!hasEnhancements)kind='stratagems';
+      tabs.querySelector('[data-kind="enhancements"]').hidden=!hasEnhancements;
+      const label=hasEnhancements?'Compatible Stratagems & Enhancements':'Compatible Stratagems';
+      title.textContent=`${unit.querySelector('.unit-name')?.textContent.trim()||'Datasheet'} · ${label}`;
+      unit.querySelector('.related-rules-trigger').textContent=label;
+      content.querySelectorAll('.stratagem,.enhancement').forEach(card=>{
         const result=byId.get(card.dataset.ruleId);
         card.hidden=!result;
         card.dataset.matchState=result?.state||'no-match';
@@ -38,7 +44,7 @@
         }
       });
       content.querySelectorAll('[data-related-kind]').forEach(group=>{
-        group.hidden=group.dataset.relatedKind!=='stratagems'||![...group.querySelectorAll('.stratagem')].some(card=>!card.hidden);
+        group.hidden=group.dataset.relatedKind!==kind||![...group.querySelectorAll('.stratagem,.enhancement')].some(card=>!card.hidden);
       });
       sections.forEach(section=>{
         const selected=section.dataset.detachment==='core'||section.dataset.detachment===detachment;
@@ -46,7 +52,7 @@
       });
       tabs.querySelectorAll('button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.kind===kind)));
       const hasVisibleRules=sections.some(section=>!section.hidden);
-      empty.hidden=hasVisibleRules;empty.textContent='No compatible Stratagems for this datasheet in the selected Detachment.';
+      empty.hidden=hasVisibleRules;empty.textContent=`No compatible ${kind==='enhancements'?'Enhancements':'Stratagems'} for this datasheet in the selected Detachment.`;
     };
     const close=()=>{if(layer.hidden)return;layer.hidden=true;document.documentElement.classList.remove('related-rules-open');modal.deactivate();};
     modal=window.WHModalFocus.create(layer,close);
@@ -73,7 +79,7 @@
           filterMenu=document.createElement('details');filterMenu.className='full-related-filter';
           filterMenu.classList.toggle('is-static',choices.length===1);
           filterMenu.innerHTML='<summary><span>'+choices.find(([value])=>value===detachment)[1]+'</span></summary><div>'+choices.map(([value,label])=>'<button type="button" data-detachment="'+value+'" aria-pressed="'+(value===detachment)+'">'+label+'</button>').join('')+'</div>';
-          tabs=document.createElement('div');tabs.className='full-related-tabs';tabs.innerHTML='<button type="button" data-kind="stratagems" aria-pressed="true">Stratagems</button>';
+          tabs=document.createElement('div');tabs.className='full-related-tabs';tabs.innerHTML='<button type="button" data-kind="stratagems" aria-pressed="true">Stratagems</button><button type="button" data-kind="enhancements" aria-pressed="false">Enhancements</button>';
           const controls=document.createElement('div');controls.className='full-related-controls';controls.append(filterMenu,tabs);
           content=document.createElement('div');content.className='full-related-content';content.append(fragment);
           empty=document.createElement('p');empty.className='full-related-empty';

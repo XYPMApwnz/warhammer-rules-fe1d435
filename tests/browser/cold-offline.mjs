@@ -153,7 +153,7 @@ try{
     await page.locator('#unit-chaos-land-raider .related-rules-trigger').waitFor();
     const matrix=await page.evaluate(async()=>{
       const vehicleIds=['unit-chaos-land-raider','unit-chaos-predator-annihilator','unit-chaos-predator-destructor','unit-defiler','unit-foetid-bloat-drone','unit-foetid-bloat-drone-with-heavy-blight-launcher','unit-helbrute','unit-myphitic-blight-hauler','unit-plagueburst-crawler','unit-chaos-rhino'];
-      const html=await fetch('./mobile/related-rules.inc?v=2').then(response=>response.text()),template=document.createElement('template');
+      const html=await fetch('./mobile/related-rules.inc?v=3').then(response=>response.text()),template=document.createElement('template');
       template.innerHTML=html;
       template.content.querySelectorAll('[id]').forEach(node=>{node.dataset.ruleId=node.id;node.removeAttribute('id');});
       const cards=[...template.content.querySelectorAll('.stratagem,.enhancement')],byId=new Map(cards.map(card=>[card.dataset.ruleId,card]));
@@ -200,11 +200,22 @@ try{
     await page.goto(`${origin}/books/death-guard/mobile/chaos-land-raider.html?view=mobile`);
     await page.locator('#relatedDetachment').selectOption('virulent-vectorium');
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();
-    await page.locator('#relatedRulesContent [data-detachment="virulent-vectorium"] .stratagem').first().waitFor();
+    await page.locator('#relatedRulesContent [data-detachment="virulent-vectorium"] .stratagem:not([hidden])').first().waitFor();
     assert.equal(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count(),2,'Phone Mode must show Core plus one selected Detachment');
     assert.equal(await page.locator('#relatedRulesContent [data-detachment="core"] #core-stratagem-command-re-roll:not([hidden])').count(),1,'Phone Mode must show matrix-approved Core Stratagems');
     assert.equal(await page.locator('#stratagem-disgustingly-resilient:not([hidden])').count(),1,'Phone Mode must show the matrix-approved Stratagem');
     assert.equal(await page.locator('#stratagem-plaguesurge .compatibility-status span').textContent(),'Requires Warlord selection');
+    await page.goto(`${origin}/books/death-guard/reader.html#unit-biologus-putrifier`);
+    await page.locator('#unit-biologus-putrifier .related-rules-trigger').click();
+    await page.locator('.related-rules-layer [data-kind="enhancements"]').click();
+    assert.equal(await page.locator('.related-rules-layer [data-detachment="virulent-vectorium"] .enhancement:not([hidden])').count(),4,'desktop must show the four standard Virulent Vectorium Enhancements');
+    assert.equal(await page.locator('.related-rules-layer [data-enhancement-tags="UPGRADE"]:visible').count(),0,'desktop must keep UPGRADE deferred');
+    await page.goto(`${origin}/books/death-guard/mobile/biologus-putrifier.html?view=mobile`);
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('#relatedRulesContent [data-detachment="virulent-vectorium"] .stratagem:not([hidden])').first().waitFor();
+    await page.locator('[data-related-tab="enhancements"]').click();
+    assert.equal(await page.locator('#relatedRulesContent [data-detachment="virulent-vectorium"] .enhancement:not([hidden])').count(),4,'Phone Mode must show the four standard Virulent Vectorium Enhancements');
+    assert.equal(await page.locator('#relatedRulesContent [data-enhancement-tags="UPGRADE"]:visible').count(),0,'Phone Mode must keep UPGRADE deferred');
     assert.deepEqual(errors,[]);
     console.log('PASS Death Guard review matrix uses the existing desktop and Phone Mode interfaces');
   }finally{await relatedLayoutContext.close();}
@@ -258,7 +269,7 @@ try{
       triggerCount:document.querySelectorAll('.related-rules-trigger').length,
       relatedRules:Boolean(window.DG_APP?.relatedRules),
       cachedApp:Boolean(await caches.match('./books/death-guard/scripts/app.js?v=35')),
-      cachedModule:Boolean(await caches.match('./books/death-guard/scripts/compatible-stratagems-runtime.mjs?v=1')),
+      cachedModule:Boolean(await caches.match('./books/death-guard/scripts/compatible-stratagems-runtime.mjs?v=2')),
       cachedMatrix:Boolean(await caches.match('./books/death-guard/generated/compatible-rules.json')),
       cachedTemplate:Boolean(await caches.match('./books/death-guard/mobile/related-rules.inc?v=3'))
     }));
@@ -327,7 +338,7 @@ try{
       relatedRules:document.querySelectorAll('#relatedRules').length,
       cachedPage:Boolean(await caches.match(location.href)),
       cachedMobile:Boolean(await caches.match(new URL('./mobile.js?v=17',location.href).href)),
-      cachedModule:Boolean(await caches.match(new URL('../scripts/compatible-stratagems-runtime.mjs?v=1',location.href).href))
+      cachedModule:Boolean(await caches.match(new URL('../scripts/compatible-stratagems-runtime.mjs?v=2',location.href).href))
     }));
     assert.equal(warmDgState.relatedRules,1,`DG warm Phone runtime unavailable: ${JSON.stringify({warmBefore,warmDgState,errors})}`);
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();

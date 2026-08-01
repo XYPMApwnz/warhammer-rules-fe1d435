@@ -90,6 +90,84 @@
         "state": "match"
       },
       {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-arch-contaminator",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-beckoning-blight",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-daemon-weapon-of-nurgle",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-eye-of-affliction",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-fell-harvester",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-champions-of-contagion",
+        "kind": "enhancement",
+        "ruleId": "enhancement-final-ingredient",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-furnace-of-plagues",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-host-of-the-hybridised-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lord-of-the-walking-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-rejuvenating-swarm",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-revolting-regeneration",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-shriekworm-familiar",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-talisman-of-burgeoning",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
         "state": "match"
@@ -895,6 +973,66 @@
         "state": "match"
       },
       {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-arch-contaminator",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-beckoning-blight",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-daemon-weapon-of-nurgle",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-eye-of-affliction",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-fell-harvester",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-furnace-of-plagues",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lord-of-the-walking-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-revolting-regeneration",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-shriekworm-familiar",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-talisman-of-burgeoning",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
         "state": "match"
@@ -1023,6 +1161,66 @@
       {
         "ruleId": "core-stratagem-rapid-ingress",
         "scope": "core",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-arch-contaminator",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-beckoning-blight",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-daemon-weapon-of-nurgle",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-eye-of-affliction",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-fell-harvester",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-furnace-of-plagues",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lord-of-the-walking-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-revolting-regeneration",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-shriekworm-familiar",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-talisman-of-burgeoning",
         "state": "match"
       },
       {
@@ -1155,6 +1353,78 @@
         "ruleId": "core-stratagem-rapid-ingress",
         "scope": "core",
         "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-arch-contaminator",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-beckoning-blight",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-daemon-weapon-of-nurgle",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-eye-of-affliction",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-fell-harvester",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-furnace-of-plagues",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-host-of-the-hybridised-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lord-of-the-walking-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-rejuvenating-swarm",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-revolting-regeneration",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-shriekworm-familiar",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-talisman-of-burgeoning",
+        "state": "match"
       }
     ],
     "unit-death-guard-chaos-lord-in-terminator-armour": [
@@ -1191,6 +1461,96 @@
       {
         "ruleId": "core-stratagem-rapid-ingress",
         "scope": "core",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-arch-contaminator",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-beckoning-blight",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-daemon-weapon-of-nurgle",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-eye-of-affliction",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-death-lords-chosen",
+        "kind": "enhancement",
+        "ruleId": "enhancement-face-of-death",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-fell-harvester",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-furnace-of-plagues",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-death-lords-chosen",
+        "kind": "enhancement",
+        "ruleId": "enhancement-helm-of-the-fly-king",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-host-of-the-hybridised-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lord-of-the-walking-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-revolting-regeneration",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-shriekworm-familiar",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-talisman-of-burgeoning",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-death-lords-chosen",
+        "kind": "enhancement",
+        "ruleId": "enhancement-vile-vigour",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-death-lords-chosen",
+        "kind": "enhancement",
+        "ruleId": "enhancement-warprot-talisman",
         "state": "match"
       },
       {
@@ -1411,6 +1771,96 @@
       {
         "ruleId": "core-stratagem-rapid-ingress",
         "scope": "core",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-arch-contaminator",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-beckoning-blight",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-daemon-weapon-of-nurgle",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-eye-of-affliction",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-death-lords-chosen",
+        "kind": "enhancement",
+        "ruleId": "enhancement-face-of-death",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-fell-harvester",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-furnace-of-plagues",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-death-lords-chosen",
+        "kind": "enhancement",
+        "ruleId": "enhancement-helm-of-the-fly-king",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-host-of-the-hybridised-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lord-of-the-walking-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-revolting-regeneration",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-shriekworm-familiar",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-talisman-of-burgeoning",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-death-lords-chosen",
+        "kind": "enhancement",
+        "ruleId": "enhancement-vile-vigour",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-death-lords-chosen",
+        "kind": "enhancement",
+        "ruleId": "enhancement-warprot-talisman",
         "state": "match"
       },
       {
@@ -1981,6 +2431,78 @@
         "state": "match"
       },
       {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-arch-contaminator",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-beckoning-blight",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-daemon-weapon-of-nurgle",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-eye-of-affliction",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-fell-harvester",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-furnace-of-plagues",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-host-of-the-hybridised-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lord-of-the-walking-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-rejuvenating-swarm",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-revolting-regeneration",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-shriekworm-familiar",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-talisman-of-burgeoning",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
         "state": "match"
@@ -2120,6 +2642,12 @@
       {
         "ruleId": "core-stratagem-rapid-ingress",
         "scope": "core",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-entropic-knell",
         "state": "match"
       },
       {
@@ -2306,6 +2834,78 @@
         "state": "match"
       },
       {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-arch-contaminator",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-beckoning-blight",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-daemon-weapon-of-nurgle",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-eye-of-affliction",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-fell-harvester",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-furnace-of-plagues",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-host-of-the-hybridised-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lord-of-the-walking-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-rejuvenating-swarm",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-revolting-regeneration",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-shriekworm-familiar",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-talisman-of-burgeoning",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
         "state": "match"
@@ -2445,6 +3045,96 @@
       {
         "ruleId": "core-stratagem-rapid-ingress",
         "scope": "core",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-arch-contaminator",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-beckoning-blight",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-daemon-weapon-of-nurgle",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-eye-of-affliction",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-death-lords-chosen",
+        "kind": "enhancement",
+        "ruleId": "enhancement-face-of-death",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-fell-harvester",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-furnace-of-plagues",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-death-lords-chosen",
+        "kind": "enhancement",
+        "ruleId": "enhancement-helm-of-the-fly-king",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-host-of-the-hybridised-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lord-of-the-walking-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-revolting-regeneration",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-shriekworm-familiar",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-talisman-of-burgeoning",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-death-lords-chosen",
+        "kind": "enhancement",
+        "ruleId": "enhancement-vile-vigour",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-death-lords-chosen",
+        "kind": "enhancement",
+        "ruleId": "enhancement-warprot-talisman",
         "state": "match"
       },
       {
@@ -2625,6 +3315,84 @@
         "state": "match"
       },
       {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-arch-contaminator",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-beckoning-blight",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-champions-of-contagion",
+        "kind": "enhancement",
+        "ruleId": "enhancement-cornucophagus",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-daemon-weapon-of-nurgle",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-eye-of-affliction",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-fell-harvester",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-furnace-of-plagues",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-host-of-the-hybridised-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lord-of-the-walking-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-rejuvenating-swarm",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-revolting-regeneration",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-shriekworm-familiar",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-talisman-of-burgeoning",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
         "state": "match"
@@ -2759,6 +3527,102 @@
       {
         "ruleId": "core-stratagem-rapid-ingress",
         "scope": "core",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-arch-contaminator",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-beckoning-blight",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-daemon-weapon-of-nurgle",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-eye-of-affliction",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-death-lords-chosen",
+        "kind": "enhancement",
+        "ruleId": "enhancement-face-of-death",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-fell-harvester",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-furnace-of-plagues",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-death-lords-chosen",
+        "kind": "enhancement",
+        "ruleId": "enhancement-helm-of-the-fly-king",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-host-of-the-hybridised-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lord-of-the-walking-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-revolting-regeneration",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-shriekworm-familiar",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-talisman-of-burgeoning",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-tendrilous-emissions",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-death-lords-chosen",
+        "kind": "enhancement",
+        "ruleId": "enhancement-vile-vigour",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-death-lords-chosen",
+        "kind": "enhancement",
+        "ruleId": "enhancement-warprot-talisman",
         "state": "match"
       },
       {
@@ -2936,6 +3800,102 @@
       {
         "ruleId": "core-stratagem-rapid-ingress",
         "scope": "core",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-arch-contaminator",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-beckoning-blight",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-bilemaw-blight",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-daemon-weapon-of-nurgle",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-eye-of-affliction",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-fell-harvester",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-furnace-of-plagues",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-host-of-the-hybridised-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lord-of-the-walking-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-rejuvenating-swarm",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-revolting-regeneration",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-shriekworm-familiar",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-sorrowsyphon",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-talisman-of-burgeoning",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-tome-of-bounteous-blessings",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-champions-of-contagion",
+        "kind": "enhancement",
+        "ruleId": "enhancement-visions-of-virulence",
         "state": "match"
       },
       {
@@ -3431,6 +4391,84 @@
         "state": "match"
       },
       {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-arch-contaminator",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-beckoning-blight",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-daemon-weapon-of-nurgle",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-eye-of-affliction",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-fell-harvester",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-furnace-of-plagues",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-host-of-the-hybridised-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lord-of-the-walking-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-rejuvenating-swarm",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-revolting-regeneration",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-shriekworm-familiar",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-talisman-of-burgeoning",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-witherbone-pipes",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-paragons-of-putrescence",
         "ruleId": "stratagem-aggravus-spasms",
         "state": "match"
@@ -3789,6 +4827,84 @@
       {
         "ruleId": "core-stratagem-rapid-ingress",
         "scope": "core",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-arch-contaminator",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-beckoning-blight",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-daemon-weapon-of-nurgle",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-eye-of-affliction",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-fell-harvester",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-furnace-of-plagues",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-host-of-the-hybridised-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lord-of-the-walking-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-champions-of-contagion",
+        "kind": "enhancement",
+        "ruleId": "enhancement-needle-of-nurgle",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-rejuvenating-swarm",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-revolting-regeneration",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-shriekworm-familiar",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-talisman-of-burgeoning",
         "state": "match"
       },
       {
@@ -4306,6 +5422,78 @@
       {
         "ruleId": "core-stratagem-rapid-ingress",
         "scope": "core",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-arch-contaminator",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-beckoning-blight",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-daemon-weapon-of-nurgle",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-eye-of-affliction",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-tallyband-summoners",
+        "kind": "enhancement",
+        "ruleId": "enhancement-fell-harvester",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-furnace-of-plagues",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-host-of-the-hybridised-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lord-of-the-walking-pox",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-paragons-of-putrescence",
+        "kind": "enhancement",
+        "ruleId": "enhancement-rejuvenating-swarm",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-virulent-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-revolting-regeneration",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-mortarions-hammer",
+        "kind": "enhancement",
+        "ruleId": "enhancement-shriekworm-familiar",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-shamblerot-vectorium",
+        "kind": "enhancement",
+        "ruleId": "enhancement-talisman-of-burgeoning",
         "state": "match"
       },
       {

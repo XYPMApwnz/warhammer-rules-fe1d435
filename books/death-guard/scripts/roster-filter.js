@@ -22,6 +22,11 @@
 
   const slug = (value) => String(value || "").toLowerCase().replace(/[’']/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   const normalize = (value) => String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const detachmentKeywordGrants = [
+    {detachment:'shamblerot-vectorium',units:['poxwalkers'],id:'keyword-battleline',title:'BATTLELINE'},
+    {detachment:'contagion-engines',units:['foetid-bloat-drone','foetid-bloat-drone-with-heavy-blight-launcher','helbrute','myphitic-blight-hauler'],id:'keyword-contagion-engine',title:'CONTAGION ENGINE'}
+  ];
+  const grantedKeywords = (unitSlug, detachments = []) => detachmentKeywordGrants.filter((grant) => detachments.includes(grant.detachment) && grant.units.includes(unitSlug));
   const restoreLegacyLoadouts = () => {
     let unitIndex = -1, modelIndex = -1;
     sourceText.replace(/\u00a0/g, " ").split(/\r?\n/).map((line) => line.trim()).filter(Boolean).forEach((line) => {
@@ -75,7 +80,7 @@
     block.append(list);root.replaceChildren(block);
   };
   const renderDetachmentKeywords = (card) => {
-    const grants=window.DGRelatedRules.grantedKeywords(card.id.replace(/^unit-/,''),window.DG_ROSTER_GUIDE.detachmentIds);
+    const grants=grantedKeywords(card.id.replace(/^unit-/,''),window.DG_ROSTER_GUIDE.detachmentIds);
     if(!grants.length)return;
     const root=card.querySelector('[id$="-keywords"] .ability-list');
     if(!root)return;

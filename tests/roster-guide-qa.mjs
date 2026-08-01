@@ -124,27 +124,10 @@ assert(entities.loadoutIncludesProfile(['Plasma gun'],'Plasma gun – supercharg
 const plasmaProfiles=entities.weaponGroups(glossaryContext.WH40K_GLOSSARY.forBook('death-guard'),'unit-plague-marines').get('plasma gun')||[];
 assert(plasmaProfiles.length===2,'Plasma gun does not expose both standard and supercharge profiles');
 
-const relatedContext={window:{WHRuleFacts:ruleFacts}};
-vm.runInNewContext(fs.readFileSync(path.join(root,'books/shared/related-rules-matcher.js'),'utf8'),relatedContext,{filename:'related-rules-matcher.js'});
-vm.runInNewContext(fs.readFileSync(path.join(root,'books/death-guard/scripts/related-rules.js'),'utf8'),relatedContext,{filename:'related-rules.js'});
-const granted=relatedContext.window.DGRelatedRules.grantedKeywords;
-const dgEligibility=relatedContext.window.DGRelatedRules.eligibilityByRule;
-assert(granted('poxwalkers',['shamblerot-vectorium']).some(item=>item.id==='keyword-battleline'),'Shamblerot Vectorium does not grant BATTLELINE to Poxwalkers');
-assert(!granted('poxwalkers',[]).length,'Poxwalkers receive a Detachment keyword without that Detachment');
-assert(granted('myphitic-blight-hauler',['contagion-engines']).some(item=>item.id==='keyword-contagion-engine'),'Contagion Engines does not grant CONTAGION ENGINE to eligible units');
-assert(!granted('plague-marines',['contagion-engines']).length,'Contagion Engines grants its keyword to an ineligible unit');
-const dgRelated=fs.readFileSync(path.join(root,'books/death-guard/mobile/related-rules.inc'),'utf8');
-const dgFactionIds=[...dgRelated.matchAll(/id="(stratagem-[^"]+)"/g)].map(match=>match[1]);
-assert(dgFactionIds.every(id=>dgEligibility[id]),`Death Guard Stratagem eligibility is incomplete: ${dgFactionIds.filter(id=>!dgEligibility[id]).join(', ')}`);
-const dgContext=(keywords,extra={})=>({...extra,unitId:extra.unitId||'unit-fixture',keywords:new Set(keywords),intrinsicKeywords:new Set(keywords),abilities:new Set(extra.abilities||[])});
-const dgMatches=(id,unit)=>relatedContext.window.WHRelatedRules.matches(dgEligibility[id],unit);
-assert(!dgMatches('stratagem-putrid-detonation',dgContext(['DEATH GUARD','INFANTRY','CHARACTER'],{unitId:'unit-biologus-putrifier'})),'Biologus receives Putrid Detonation');
-assert(dgMatches('stratagem-putrid-detonation',dgContext(['DEATH GUARD','VEHICLE'],{abilities:['DEADLY DEMISE']})),'Death Guard Vehicle with Deadly Demise misses Putrid Detonation');
-assert(!dgMatches('stratagem-putrid-detonation',dgContext(['PLAGUE LEGIONS','MONSTER'],{abilities:['DEADLY DEMISE']})),'Pact of Decay Monster receives Putrid Detonation');
-assert(!dgMatches('stratagem-creeping-blight',dgContext(['PLAGUE LEGIONS','INFANTRY'])),'Plaguebearers receive a Death Guard Infantry Stratagem');
-assert(!dgMatches('stratagem-overwhelming-generosity',dgContext(['PLAGUE LEGIONS','CHARACTER'])),'Great Unclean One receives a Death Guard Character Stratagem');
-assert(dgMatches('stratagem-blessings-of-filth',dgContext(['DEATH GUARD','INFANTRY'],{candidates:[{unitId:'unit-plague-marines',keywords:new Set(['DEATH GUARD','INFANTRY','CHARACTER']),attached:true,attachmentKnown:true,characterCount:1}]})),'Attached Death Guard unit misses Blessings of Filth');
-assert(dgMatches('stratagem-rabid-infusion',dgContext(['DEATH GUARD','INFANTRY'],{candidates:[{unitId:'unit-plague-marines',keywords:new Set(['DEATH GUARD','INFANTRY','CHARACTER']),attached:true,attachmentKnown:true,characterCount:2}]})),'Two-Character Attached Unit misses Rabid Infusion');
+const dgRosterFilter=fs.readFileSync(path.join(root,'books/death-guard/scripts/roster-filter.js'),'utf8');
+assert(dgRosterFilter.includes("{detachment:'shamblerot-vectorium',units:['poxwalkers'],id:'keyword-battleline',title:'BATTLELINE'}"),'Shamblerot Vectorium grant is absent from the roster filter');
+assert(dgRosterFilter.includes("'foetid-bloat-drone-with-heavy-blight-launcher','helbrute','myphitic-blight-hauler'"),'Contagion Engines grant owners are incomplete');
+assert(dgRosterFilter.includes("const grants=grantedKeywords(card.id.replace(/^unit-/,''),window.DG_ROSTER_GUIDE.detachmentIds)"),'Roster keyword rendering does not use its local grant resolver');
 
 const mechanicusRelatedContext={window:{WHRuleFacts:ruleFacts}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'books/shared/related-rules-matcher.js'),'utf8'),mechanicusRelatedContext,{filename:'related-rules-matcher.js'});

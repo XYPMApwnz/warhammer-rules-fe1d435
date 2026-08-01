@@ -10,8 +10,7 @@
   "coreCorrectionPairCount": 10,
   "legendsPolicy": "included-if-local",
   "sources": {
-    "snapshot": "books/death-guard/sources/wahapedia-compatible-rules.snapshot.json",
-    "manual": "books/death-guard/scripts/related-rules.js"
+    "snapshot": "books/death-guard/sources/wahapedia-compatible-rules.snapshot.json"
   },
   "runtimeUsage": "Compiled into the review matrix; not read directly at runtime.",
   "coreEntries": [

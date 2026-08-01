@@ -79,7 +79,8 @@ try{
     let profileCount=0;
     for(const [name,desktop,mobile,detachment,reviewEnabled] of books){
       await page.goto(origin+desktop);
-      assert.equal(await page.evaluate(()=>window.WHRelatedRules?.enabled),false,`${name} shared safety flag must be disabled`);
+      if(name==='Death Guard')assert.deepEqual(await page.evaluate(()=>({matcher:typeof window.WHRelatedRules,legacy:typeof window.DGRelatedRules})),{matcher:'undefined',legacy:'undefined'},'Death Guard must not load the legacy matcher path');
+      else assert.equal(await page.evaluate(()=>window.WHRelatedRules?.enabled),false,`${name} shared safety flag must be disabled`);
       if(reviewEnabled)await page.locator('.related-rules-trigger').first().waitFor();
       assert.equal(await page.locator('.related-rules-trigger').count()>0,reviewEnabled,`${name} desktop review integration state is wrong`);
       assert.ok(await page.locator('[id$="-stratagems"] .stratagem').count(),`${name} full Detachment Stratagems must remain available`);
@@ -151,46 +152,6 @@ try{
     const {page,errors}=await observedPage(relatedLayoutContext);
     await page.goto(`${origin}/books/death-guard/reader.html#unit-chaos-land-raider`);
     await page.locator('#unit-chaos-land-raider .related-rules-trigger').waitFor();
-    const matrix=await page.evaluate(async()=>{
-      const vehicleIds=['unit-chaos-land-raider','unit-chaos-predator-annihilator','unit-chaos-predator-destructor','unit-defiler','unit-foetid-bloat-drone','unit-foetid-bloat-drone-with-heavy-blight-launcher','unit-helbrute','unit-myphitic-blight-hauler','unit-plagueburst-crawler','unit-chaos-rhino'];
-      const html=await fetch('./mobile/related-rules.inc?v=3').then(response=>response.text()),template=document.createElement('template');
-      template.innerHTML=html;
-      template.content.querySelectorAll('[id]').forEach(node=>{node.dataset.ruleId=node.id;node.removeAttribute('id');});
-      const cards=[...template.content.querySelectorAll('.stratagem,.enhancement')],byId=new Map(cards.map(card=>[card.dataset.ruleId,card]));
-      const profiles=vehicleIds.map(id=>{
-        const node=document.getElementById(id),actual=window.DGRelatedRules.profile(node);
-        const expected=window.WHRuleFacts.profileFromRecord(JSON.parse(node.dataset.ruleFacts));
-        return{id,actual,expected,actualSerialized:window.WHRuleFacts.serializeRuleProfile(actual),expectedSerialized:window.WHRuleFacts.serializeRuleProfile(expected)};
-      });
-      const differences=[];
-      for(const profile of profiles)if(JSON.stringify(profile.actualSerialized)!==JSON.stringify(profile.expectedSerialized))differences.push([profile.id,'profile','browser','record']);
-      for(const profile of profiles)for(const card of cards){
-        const actual=window.DGRelatedRules.match(card,profile.actual).state;
-        const expected=window.DGRelatedRules.match(card,profile.expected).state;
-        if(actual!==expected)differences.push([profile.id,card.dataset.ruleId,actual,expected]);
-      }
-      const state=(unitId,ruleId)=>window.DGRelatedRules.match(byId.get(ruleId),profiles.find(profile=>profile.id===unitId).actual).state;
-      return{
-        differences,
-        facts:profiles.map(profile=>({id:profile.id,keywords:[...profile.actual.keywords],candidateKeywords:(profile.actual.candidates||[]).map(candidate=>[...candidate.keywords])})),
-        fixtures:{
-          landRaiderHeroic:state('unit-chaos-land-raider','core-stratagem-heroic-intervention'),
-          helbruteHeroic:state('unit-helbrute','core-stratagem-heroic-intervention'),
-          landRaiderCrushing:state('unit-chaos-land-raider','core-stratagem-crushing-impact'),
-          landRaiderSmoke:state('unit-chaos-land-raider','core-stratagem-smokescreen'),
-          defilerSmoke:state('unit-defiler','core-stratagem-smokescreen'),
-          landRaiderPlaguesurge:state('unit-chaos-land-raider','stratagem-plaguesurge')
-        }
-      };
-    });
-    assert.deepEqual(matrix.differences,[],'production DG profiles must preserve the generated keyword facts for all 10 current Vehicles');
-    assert.ok(matrix.facts.every(profile=>profile.keywords.length&&profile.candidateKeywords.every(keywords=>keywords.length)),'DG profile must not erase intrinsic or candidate keywords');
-    assert.equal(matrix.fixtures.landRaiderHeroic,'no-match');
-    assert.notEqual(matrix.fixtures.helbruteHeroic,'no-match');
-    assert.notEqual(matrix.fixtures.landRaiderCrushing,'no-match');
-    assert.notEqual(matrix.fixtures.landRaiderSmoke,'no-match');
-    assert.equal(matrix.fixtures.defilerSmoke,'no-match');
-    assert.equal(matrix.fixtures.landRaiderPlaguesurge,'no-match');
     await page.locator('#unit-chaos-land-raider .related-rules-trigger').click();
     assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),2,'desktop must show Core plus one selected Detachment');
     assert.equal(await page.locator('.related-rules-layer [data-detachment="core"] [data-rule-id="core-stratagem-command-re-roll"]:not([hidden])').count(),1,'desktop must show matrix-approved Core Stratagems');

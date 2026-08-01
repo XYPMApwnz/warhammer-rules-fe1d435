@@ -110,54 +110,6 @@ attachedModel.candidates=[{unitId:'unit-bodyguard',keywords:keywordSet(['CHARACT
 assert.equal(matcher.matches({v:1,roles:[{side:'friendly',subject:'model',selector:{allKeywords:['MONSTER']}}]},attachedModel),false,'subject:model must not inherit Attached Unit union keywords');
 
 {
-  const dgRoot=path.join(booksRoot,'death-guard'),dgReader=fs.readFileSync(path.join(dgRoot,'reader.html'),'utf8');
-  const dgRelated=fs.readFileSync(path.join(dgRoot,'mobile','related-rules.inc'),'utf8');
-  const dgData=JSON.parse(fs.readFileSync(path.join(dgRoot,'content','death-guard-rules.en.json'),'utf8'));
-  const dgSandbox={window:{WHRelatedRules:matcher,WHRuleFacts:ruleFacts}};
-  vm.runInNewContext(fs.readFileSync(path.join(dgRoot,'scripts','related-rules.js'),'utf8'),dgSandbox);
-  const api=dgSandbox.window.DGRelatedRules,eligibility=api.eligibilityByRule,profiles=profilesFrom(dgReader);
-  const cardIds=[...dgRelated.matchAll(/<article class="stratagem[^>]*" id="([^"]+)"/g)].map(match=>match[1]);
-  const coreIds=cardIds.filter(id=>id.startsWith('core-stratagem-'));
-  const factionIds=dgData.sections.flatMap(section=>(section.subsections||[]).flatMap(subsection=>(subsection.blocks||[]).filter(block=>block.type==='rule').map(block=>block.id)));
-  const detachmentByRule=new Map(dgData.sections.flatMap(section=>(section.subsections||[]).flatMap(subsection=>(subsection.blocks||[]).filter(block=>block.type==='rule').map(block=>[block.id,section.id.replace(/^detachment-/,'')]))));
-  assert.equal(coreIds.length,10,'Death Guard must expose all 10 Core Stratagem cards');
-  assert.equal(dgRelated.indexOf('<section class="related-detachment related-core"'),dgRelated.lastIndexOf('<section class="related-detachment'),'Death Guard Core Stratagems must follow faction Stratagems');
-  assert.equal(factionIds.length,45,'Death Guard must expose all 45 faction Stratagems');
-  assert.equal(new Set(cardIds).size,55,'Death Guard Stratagem card IDs must be unique');
-  assert.deepEqual(sorted(Object.keys(eligibility)),sorted(cardIds),'Death Guard contracts must map every rendered Core and faction Stratagem exactly once');
-  assert.deepEqual(sorted(cardIds.filter(id=>!id.startsWith('core-stratagem-'))),sorted(factionIds),'Death Guard rendered faction Stratagem IDs must match the structured book source');
-  const expanded=profiles;
-  const withGrants=(profile,ruleId)=>{
-    const grants=api.grantedKeywords(profile.unitId.replace(/^unit-/,''),[detachmentByRule.get(ruleId)]),gained=grants.map(grant=>grant.title.toUpperCase());
-    if(!gained.length)return profile;
-    return {...profile,keywords:new Set([...profile.keywords,...gained])};
-  };
-  let negativeCount=0;
-  for(const id of cardIds){
-    const rule=eligibility[id];
-    for(const role of rule.roles||rule.targets||[])assert.ok(supportedSubjects.has(role.subject||'unit'),`Death Guard/${id}: unsupported subject ${role.subject}`);
-    assert.ok(expanded.some(profile=>matcher.matches(rule,withGrants(profile,id))),`Death Guard/${id}: no real datasheet or Attached-unit candidate satisfies its contract`);
-    if(restrictive(rule)&&expanded.some(profile=>!matcher.matches(rule,withGrants(profile,id))))negativeCount++;
-  }
-  const profile=id=>expanded.find(item=>item.unitId===id);
-  assert.equal(matcher.matches(eligibility['core-stratagem-crushing-impact'],profile('unit-biologus-putrifier')),false,'Biologus Putrifier must not receive a Monster/Vehicle Stratagem');
-  assert.equal(matcher.matches(eligibility['stratagem-putrid-detonation'],profile('unit-biologus-putrifier')),false,'Biologus Putrifier must not receive Putrid Detonation');
-  assert.equal(matcher.matches(eligibility['core-stratagem-crushing-impact'],profile('unit-mortarion')),true,'Mortarion must receive Monster/Vehicle Stratagems');
-  assert.equal(matcher.matches(eligibility['core-stratagem-heroic-intervention'],profile('unit-chaos-rhino')),false,'a non-Walker Vehicle must not receive Heroic Intervention');
-  assert.equal(matcher.matches(eligibility['core-stratagem-heroic-intervention'],profile('unit-helbrute')),true,'a Walker Vehicle must receive Heroic Intervention');
-  const biologus=profile('unit-biologus-putrifier'),plagueMarines=profile('unit-plague-marines');
-  const combinedKeywords=new Set([...biologus.keywords,...plagueMarines.keywords]);
-  const unattached={...biologus,relations:{canLead:[],canSupport:[],canBeLedBy:[],canBeSupportedBy:[]},attached:false,attachmentKnown:true};
-  const oneCharacter={...unattached,keywords:combinedKeywords,attached:true,characterCount:1};
-  const twoCharacters={...oneCharacter,characterCount:2};
-  assert.equal(matcher.matches(eligibility['stratagem-blessings-of-filth'],unattached),false,'an unattached Character must not receive an Attached-unit Stratagem');
-  assert.equal(matcher.matches(eligibility['stratagem-blessings-of-filth'],oneCharacter),true,'an Attached unit must receive an Attached-unit Stratagem');
-  assert.equal(matcher.matches(eligibility['stratagem-rabid-infusion'],oneCharacter),false,'a single-Character Attached unit must not receive a two-Character Stratagem');
-  assert.equal(matcher.matches(eligibility['stratagem-rabid-infusion'],twoCharacters),true,'a real two-Character Attached unit must receive its Stratagem');
-  console.log(`PASS  Death Guard: 45 faction + 10 Core Stratagems × ${profiles.length} datasheets; ${negativeCount} restrictive contracts have real negatives`);
-}
-
-{
   const mechanicusRelated=fs.readFileSync(path.join(booksRoot,'adeptus-mechanicus','mobile','related-rules.inc'),'utf8');
   assert.equal(mechanicusRelated.indexOf('<section class="related-detachment related-core"'),mechanicusRelated.lastIndexOf('<section class="related-detachment'),'Adeptus Mechanicus Core Stratagems must follow faction Stratagems');
 }

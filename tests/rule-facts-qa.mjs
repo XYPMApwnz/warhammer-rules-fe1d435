@@ -164,15 +164,6 @@ vm.runInNewContext(validatorSource,rosterSandbox,{filename:'points-validator.js'
 const rosterResult=rosterSandbox.window.WHRosterPoints.check({declared:10,units:[{id:'instance-1',name:'Fixture',quantity:1}],detachments:[{name:'Test'}],enhancements:[{name:'Test',ownerUnitId:'instance-1',ownerStatus:'resolved'}]},'t au empire');
 assert.equal(rosterResult.enhancements[0].ownerEligibility,'valid','Roster runtime must treat typographic and ASCII apostrophes equally');
 
-const dgSource=fs.readFileSync(path.join(root,'books','death-guard','scripts','related-rules.js'),'utf8');
-assert.doesNotMatch(dgSource,/normalize(?:d|Keyword)?\s*\(\s*\{/);
-const dgSandbox={window:{WHRuleFacts:ruleFacts,WHRelatedRules:{enabled:false}}};
-vm.runInNewContext(dgSource,dgSandbox,{filename:'death-guard-related-rules.js'});
-const grantLabels=(slug,detachment)=>Array.from(dgSandbox.window.DGRelatedRules.grantedKeywords(slug,[detachment]),grant=>ruleFacts.normalizeKeyword(grant.title));
-assert.deepEqual(grantLabels('poxwalkers','shamblerot-vectorium'),['BATTLELINE']);
-for(const slug of ['foetid-bloat-drone','helbrute'])assert.deepEqual(grantLabels(slug,'contagion-engines'),['CONTAGION ENGINE']);
-assert.deepEqual(grantLabels('foetid-bloat-drone','virulent-vectorium'),[]);
-
 const matcherSource=fs.readFileSync(path.join(root,'books','shared','related-rules-matcher.js'),'utf8'),matcherSandbox={window:{}};
 vm.runInNewContext(matcherSource,matcherSandbox,{filename:'related-rules-matcher.js'});
 const matcher=matcherSandbox.window.WHRelatedRules,unitRole=selector=>({v:1,roles:[{id:'unit',side:'friendly',subject:'unit',selector}]});

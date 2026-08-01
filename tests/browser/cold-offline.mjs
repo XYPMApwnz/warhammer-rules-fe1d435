@@ -209,13 +209,25 @@ try{
     await page.locator('#unit-biologus-putrifier .related-rules-trigger').click();
     await page.locator('.related-rules-layer [data-kind="enhancements"]').click();
     assert.equal(await page.locator('.related-rules-layer [data-detachment="virulent-vectorium"] .enhancement:not([hidden])').count(),4,'desktop must show the four standard Virulent Vectorium Enhancements');
-    assert.equal(await page.locator('.related-rules-layer [data-enhancement-tags="UPGRADE"]:visible').count(),0,'desktop must keep UPGRADE deferred');
+    assert.equal(await page.locator('.related-rules-layer [data-enhancement-tags="UPGRADE"]:visible').count(),0,'desktop must not leak UPGRADE from another Detachment');
     await page.goto(`${origin}/books/death-guard/mobile/biologus-putrifier.html?view=mobile`);
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();
     await page.locator('#relatedRulesContent [data-detachment="virulent-vectorium"] .stratagem:not([hidden])').first().waitFor();
     await page.locator('[data-related-tab="enhancements"]').click();
     assert.equal(await page.locator('#relatedRulesContent [data-detachment="virulent-vectorium"] .enhancement:not([hidden])').count(),4,'Phone Mode must show the four standard Virulent Vectorium Enhancements');
-    assert.equal(await page.locator('#relatedRulesContent [data-enhancement-tags="UPGRADE"]:visible').count(),0,'Phone Mode must keep UPGRADE deferred');
+    assert.equal(await page.locator('#relatedRulesContent [data-enhancement-tags="UPGRADE"]:visible').count(),0,'Phone Mode must not leak UPGRADE from another Detachment');
+    await page.goto(`${origin}/books/death-guard/reader.html#unit-helbrute`);
+    await page.locator('#unit-helbrute .related-rules-trigger').click();
+    await page.locator('.related-rules-layer .full-related-filter summary').click();
+    await page.locator('.related-rules-layer .full-related-filter [data-detachment="contagion-engines"]').click();
+    await page.locator('.related-rules-layer [data-kind="enhancements"]').click();
+    assert.equal(await page.locator('.related-rules-layer [data-detachment="contagion-engines"] [data-enhancement-tags="UPGRADE"]:visible').count(),2,'desktop Helbrute must show both Contagion Engines UPGRADE cards');
+    await page.goto(`${origin}/books/death-guard/mobile/plague-marines.html?view=mobile`);
+    await page.locator('#relatedDetachment').selectOption('flyblown-host');
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('#relatedRulesContent [data-detachment="flyblown-host"] .stratagem:not([hidden])').first().waitFor();
+    await page.locator('[data-related-tab="enhancements"]').click();
+    assert.equal(await page.locator('#relatedRulesContent [data-detachment="flyblown-host"] [data-enhancement-tags="UPGRADE"]:visible').count(),2,'Phone Mode Plague Marines must show both Flyblown Host UPGRADE cards');
     assert.deepEqual(errors,[]);
     console.log('PASS Death Guard review matrix uses the existing desktop and Phone Mode interfaces');
   }finally{await relatedLayoutContext.close();}

@@ -2189,6 +2189,12 @@
         "state": "match"
       },
       {
+        "detachmentId": "detachment-contagion-engines",
+        "kind": "enhancement",
+        "ruleId": "enhancement-parasitic-woe-reaper",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-mortarions-hammer",
         "ruleId": "stratagem-blighted-land",
         "state": "match"
@@ -2302,6 +2308,12 @@
       {
         "ruleId": "core-stratagem-rapid-ingress",
         "scope": "core",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-contagion-engines",
+        "kind": "enhancement",
+        "ruleId": "enhancement-parasitic-woe-reaper",
         "state": "match"
       },
       {
@@ -2705,6 +2717,18 @@
       {
         "ruleId": "core-stratagem-rapid-ingress",
         "scope": "core",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-contagion-engines",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lancet-of-the-worldsore",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-contagion-engines",
+        "kind": "enhancement",
+        "ruleId": "enhancement-parasitic-woe-reaper",
         "state": "match"
       },
       {
@@ -4264,6 +4288,18 @@
         "state": "match"
       },
       {
+        "detachmentId": "detachment-contagion-engines",
+        "kind": "enhancement",
+        "ruleId": "enhancement-lancet-of-the-worldsore",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-contagion-engines",
+        "kind": "enhancement",
+        "ruleId": "enhancement-parasitic-woe-reaper",
+        "state": "match"
+      },
+      {
         "detachmentId": "detachment-mortarions-hammer",
         "ruleId": "stratagem-blighted-land",
         "state": "match"
@@ -4708,6 +4744,18 @@
       {
         "ruleId": "core-stratagem-rapid-ingress",
         "scope": "core",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-flyblown-host",
+        "kind": "enhancement",
+        "ruleId": "enhancement-insectile-murmuration",
+        "state": "match"
+      },
+      {
+        "detachmentId": "detachment-flyblown-host",
+        "kind": "enhancement",
+        "ruleId": "enhancement-plagueveil",
         "state": "match"
       },
       {

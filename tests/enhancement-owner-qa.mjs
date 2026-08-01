@@ -59,8 +59,8 @@ for(const [book,entries] of Object.entries(inventories)){
 }
 
 const fixturePath=path.join(root,'tests/fixtures/enhancement-owner-matrix.json');
-if(process.argv.includes('--write'))fs.writeFileSync(fixturePath,JSON.stringify({schema:1,books:matrix},null,2)+'\n');
-const expected=read('tests/fixtures/enhancement-owner-matrix.json').books;
+if(process.argv.includes('--write'))fs.writeFileSync(fixturePath,JSON.stringify({schema:1,books:Object.fromEntries(Object.entries(matrix).filter(([book])=>book!=='death-guard'))},null,2)+'\n');
+const expected={...read('tests/fixtures/enhancement-owner-matrix.json').books,'death-guard':read('books/death-guard/sources/enhancement-owner-matrix.json').enhancements};
 assert.deepEqual(matrix,expected,'Enhancement owner matrix changed; review every changed match before updating the locked fixture');
 
 assert.deepEqual(matrix['death-guard']['enhancement-parasitic-woe-reaper'].match.sort(),['unit-foetid-bloat-drone','unit-foetid-bloat-drone-with-heavy-blight-launcher','unit-helbrute','unit-myphitic-blight-hauler'].sort());

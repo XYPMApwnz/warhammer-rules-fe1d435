@@ -64,11 +64,12 @@ export function buildCompatibleRules({book,snapshot,ledger,enhancementMatrix={}}
     if(entry.decision!=='conditional'||conditionByKind[entry.conditionKind]!=='attachment-unknown')throw new Error(`Invalid Core conditional: ${key}`);
     seenCoreCorrections.add(key);rows.get(entry.unitId).set(entry.ruleId,{ruleId:entry.ruleId,scope:'core',state:'conditional',condition:'attachment-unknown'});
   }
-  const standardEnhancements=new Set();
-  const collect=value=>{if(Array.isArray(value))value.forEach(collect);else if(value&&typeof value==='object'){if(value.type==='enhancement'&&!(value.tags||[]).includes('UPGRADE'))standardEnhancements.add(value.id);Object.values(value).forEach(collect);}};
+  const enhancements=new Set();
+  const collect=value=>{if(Array.isArray(value))value.forEach(collect);else if(value&&typeof value==='object'){if(value.type==='enhancement')enhancements.add(value.id);Object.values(value).forEach(collect);}};
   collect(book.sections);
-  for(const [ruleId,state] of Object.entries(enhancementMatrix))if(standardEnhancements.has(ruleId)){
-    if(!detachmentIds.has(ruleId)||state.conditional?.length)throw new Error(`Invalid standard Enhancement matrix: ${ruleId}`);
+  if([...enhancements].some(ruleId=>!enhancementMatrix[ruleId])||Object.keys(enhancementMatrix).some(ruleId=>!enhancements.has(ruleId)))throw new Error('Enhancement owner matrix does not match the published inventory.');
+  for(const [ruleId,state] of Object.entries(enhancementMatrix)){
+    if(!detachmentIds.has(ruleId)||state.conditional?.length)throw new Error(`Invalid Enhancement matrix: ${ruleId}`);
     for(const unitId of state.match||[])rows.get(unitId)?.set(ruleId,{ruleId,kind:'enhancement',detachmentId:detachmentIds.get(ruleId),state:'match'});
   }
   const units=Object.fromEntries([...rows].sort(([a],[b])=>a.localeCompare(b,'en')).map(([unitId,ruleMap])=>[unitId,[...ruleMap.values()].sort((a,b)=>a.ruleId.localeCompare(b.ruleId,'en'))]));
@@ -79,7 +80,7 @@ function main(){
   const book=readJson(path.join(bookRoot,'content','death-guard-rules.en.json'));
   const snapshot=readJson(path.join(bookRoot,'sources','wahapedia-compatible-rules.snapshot.json'));
   const ledger=readJson(path.join(bookRoot,'scripts','related-rules-correction-ledger.json'));
-  const enhancementMatrix=readJson(path.join(bookRoot,'..','..','tests','fixtures','enhancement-owner-matrix.json')).books['death-guard'];
+  const enhancementMatrix=readJson(path.join(bookRoot,'sources','enhancement-owner-matrix.json')).enhancements;
   const output=buildCompatibleRules({book,snapshot,ledger,enhancementMatrix});
   const outputFile=path.join(bookRoot,'generated','compatible-rules.json');
   fs.mkdirSync(path.dirname(outputFile),{recursive:true});fs.writeFileSync(outputFile,stableStringify(output));

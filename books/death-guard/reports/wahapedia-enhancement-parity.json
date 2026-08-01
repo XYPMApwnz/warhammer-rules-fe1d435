@@ -44,5 +44,12 @@
       "enhancement-talisman-of-burgeoning"
     ]
   },
+  "upgrades": {
+    "records": 4,
+    "officialOwnerAssociations": 8,
+    "wahapediaAssociations": 8,
+    "wahapediaOnly": [],
+    "officialOnly": []
+  },
   "decision": "Use the official owner contract. Wahapedia omits ten Codex Enhancements from each of three Legends CHARACTER datasheets."
 }

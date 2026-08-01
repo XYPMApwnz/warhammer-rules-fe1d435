@@ -155,7 +155,7 @@ const duplicateVersions=[...shellVersions].filter(([,versions])=>versions.size>1
 check('app shell never caches two versions of one asset',duplicateVersions.length===0,duplicateVersions.join('; '));
 check('Death Guard Compatible Stratagems offline chain is versioned and precached',[
   './books/death-guard/scripts/app.js?v=39',
-  './books/death-guard/mobile/mobile.js?v=20',
+  './books/death-guard/mobile/mobile.js?v=21',
   './books/death-guard/scripts/compatible-stratagems-runtime.mjs?v=2',
   './books/death-guard/generated/compatible-rules.json',
   './books/death-guard/mobile/related-rules.inc?v=3',

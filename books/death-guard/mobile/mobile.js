@@ -27,22 +27,36 @@
   let relatedKind = 'stratagems';
   const unit = document.querySelector('.unit-card');
   const params = new URLSearchParams(location.search);
-  const relatedRulesEnabled = Boolean(compatibleRuntime?.compatibleStratagemsReviewEnabled);
+  const rosterMode = params.has('roster');
+  const slug = value => String(value || '').toLowerCase().replace(/['\u2019]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  let relatedRulesEnabled = Boolean(compatibleRuntime?.compatibleStratagemsReviewEnabled);
   let compatibleRulesMatrix = null;
-  let assignedEnhancementIds = null;
+  let assignedEnhancementIds = rosterMode ? new Set() : null;
   if (!relatedRulesEnabled) relatedRules?.remove();
 
-  if (params.get('roster') && unit && window.WHRosterParser && window.WHRosterEnhancements) {
+  if (rosterMode) {
     try {
+      if (!unit || !relatedDetachment || !window.WHRosterParser || !window.WHRosterEnhancements) throw new Error('Roster runtime unavailable');
       const records = JSON.parse(localStorage.getItem('wh40k-rosters-v1')) || [];
       const record = records.find(item => item?.id === params.get('roster'));
+      if (!record) throw new Error('Roster not found');
       const parsed = record?.sourceText ? window.WHRosterParser.parse(record.sourceText) : record?.roster;
+      if (!parsed || !Array.isArray(parsed.units)) throw new Error('Roster data unavailable');
+      const detachmentIds = new Set((parsed.detachments?.length ? parsed.detachments.map(item => item.name || item.label) : [parsed.detachment]).map(slug).filter(Boolean));
+      const allowedOptions = [...relatedDetachment.options].filter(option => detachmentIds.has(option.value));
+      if (!allowedOptions.length) throw new Error('Roster Detachment unavailable');
+      [...relatedDetachment.options].forEach(option => { if (!detachmentIds.has(option.value)) option.remove(); });
+      relatedDetachment.value = relatedDetachment.options[0].value;
+      relatedDetachment.disabled = relatedDetachment.options.length === 1;
       const unitSlug = unit.id.replace(/^unit-/, '');
-      const matching = (parsed?.units || []).filter(item => String(item.name || '').toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') === unitSlug);
+      const matching = parsed.units.filter(item => slug(item.name) === unitSlug);
       const ownerIds=new Set(matching.map(item=>item.id));
-      assignedEnhancementIds=new Set((parsed?.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&ownerIds.has(item.ownerUnitId)).map(item=>`enhancement-${String(item.name||'').toLowerCase().replace(/['\u2019]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}`));
+      assignedEnhancementIds=new Set((parsed.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&ownerIds.has(item.ownerUnitId)).map(item=>`enhancement-${slug(item.name)}`));
       if (matching.length) window.WHRosterEnhancements.decorate(unit, parsed, matching);
-    } catch {}
+    } catch {
+      relatedRulesEnabled = false;
+      relatedRules?.remove();
+    }
   }
 
   if (rosterGuides) rosterGuides.hidden = !params.get('roster');

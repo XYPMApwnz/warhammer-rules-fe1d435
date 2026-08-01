@@ -66,7 +66,7 @@ const APP_SHELL = [
   "./books/death-guard/scripts/view-router.js?v=2",
   "./books/death-guard/mobile/index.html",
   "./books/death-guard/mobile/mobile.css?v=8",
-  "./books/death-guard/mobile/mobile.js?v=20",
+  "./books/death-guard/mobile/mobile.js?v=21",
   "./books/death-guard/mobile/related-rules.inc?v=3",
   "./books/shared/navigation-targets.js?v=1",
   "./books/shared/popup-rule-actions.js?v=1",

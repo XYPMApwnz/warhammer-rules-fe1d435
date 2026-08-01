@@ -198,15 +198,23 @@ try{
     await page.locator('#unit-myphitic-blight-hauler .related-rules-trigger').click();
     assert.equal(await page.locator('.related-rules-layer [data-kind="enhancements"]:visible').count(),0,'desktop roster unit without an assignment must not show Enhancement choices');
     await page.goto(`${origin}/books/death-guard/mobile/helbrute.html?view=mobile&roster=dg-owner-filter`);
-    await page.locator('#relatedDetachment').selectOption('contagion-engines');
+    assert.deepEqual(await page.locator('#relatedDetachment option').evaluateAll(options=>options.map(option=>option.value)),['contagion-engines'],'Phone Mode roster must expose only its actual Detachment');
+    assert.equal(await page.locator('#relatedDetachment').isDisabled(),true,'a single roster Detachment must be fixed');
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();
     await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
+    assert.equal(await page.locator('#relatedRulesContent [data-detachment="virulent-vectorium"] .stratagem:visible').count(),0,'Contagion Engines roster must not expose Virulent Vectorium');
     await page.locator('[data-related-tab="enhancements"]').click();
     assert.deepEqual(await page.locator('#relatedRulesContent .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.id)),['enhancement-parasitic-woe-reaper'],'Phone Mode roster must show only the UPGRADE assigned to this ownerUnitId');
     await page.goto(`${origin}/books/death-guard/mobile/myphitic-blight-hauler.html?view=mobile&roster=dg-owner-filter`);
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();
     await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
     assert.equal(await page.locator('[data-related-tab="enhancements"]:visible').count(),0,'Phone Mode roster unit without an assignment must not show Enhancement choices');
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1','{broken'));
+    await page.goto(`${origin}/books/death-guard/mobile/helbrute.html?view=mobile&roster=broken`);
+    assert.equal(await page.locator('#relatedRules').count(),0,'damaged roster storage must hide Compatible Rules instead of revealing Enhancements');
+    await page.goto(`${origin}/books/death-guard/mobile/helbrute.html?view=mobile`);
+    assert.equal(await page.locator('#relatedDetachment option').count(),9,'ordinary Phone Mode must keep every Detachment');
+    assert.equal(await page.locator('#relatedDetachment').isDisabled(),false,'ordinary Phone Mode Detachment selector must remain unrestricted');
     assert.deepEqual(errors,[]);
     console.log('PASS Death Guard review matrix uses the existing desktop and Phone Mode interfaces');
   }finally{await relatedLayoutContext.close();}

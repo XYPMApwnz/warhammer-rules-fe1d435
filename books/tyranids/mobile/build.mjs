@@ -4,7 +4,10 @@ const source=await readFile(new URL('../reader.html',import.meta.url),'utf8');
 const glossary=JSON.parse(await readFile(new URL('../../../glossary/registry.en.json',import.meta.url),'utf8')).terms;
 const aliases=JSON.parse(await readFile(new URL('../../../glossary/aliases.en.json',import.meta.url),'utf8')).aliases;
 const glossaryContext=JSON.parse(await readFile(new URL('../../../glossary/contexts/tyranids.json',import.meta.url),'utf8')).terms;
-const existingRelated=await readFile(new URL('related-rules.source.inc',import.meta.url),'utf8');
+const pointEnhancements=JSON.parse(await readFile(new URL('../content/tyranids-points.en.json',import.meta.url),'utf8')).enhancements;
+const titleKey=value=>value.replace(/\s*\(Aura\)$/i,'').replace(/\s+/g,' ').trim().toLowerCase();
+const enhancementTitles=new Map(pointEnhancements.map(item=>[titleKey(item.title),item.title]));
+const coreStratagems=await readFile(new URL('../../death-guard/mobile/related-rules.inc',import.meta.url),'utf8').then(html=>html.slice(html.indexOf('<section class="related-detachment related-core"')));
 const mobileRulePaths=new Map();
 
 function extract(tag,id,html=source){
@@ -33,6 +36,14 @@ function hydrateTerms(html){
     const anchor=fullRulePath.includes('#')?fullRulePath.slice(fullRulePath.indexOf('#')+1):'';
     const mobileRulePath=tyranidsRulePath(fullRulePath)?mobileRulePaths.get(anchor)||'':'';
     return `${start} data-term-title="${attribute(title)}" data-term-summary="${attribute(summary)}"${fullRulePath?` data-full-rule-path="${attribute(fullRulePath)}"`:''}${mobileRulePath?` data-mobile-rule-path="${attribute(mobileRulePath)}"`:''}${end}`;
+  });
+}
+
+function annotateEnhancementTitles(html){
+  return html.replace(/<article class="enhancement surface"([^>]*)>([\s\S]*?)<\/article>/g,(card,attributes,body)=>{
+    const ruleId=/\bdata-rule-id="([^"]+)"/.exec(attributes)?.[1],cardTitle=/\bdata-term-title="([^"]+)"/.exec(body)?.[1],title=enhancementTitles.get(titleKey(cardTitle||''));
+    if(!title)throw new Error(`Missing roster title for Enhancement ${ruleId||'(unknown)'}`);
+    return `<article class="enhancement surface"${attributes.replace(/\sdata-enhancement-title="[^"]*"/g,'')} data-enhancement-title="${attribute(title)}">${body}</article>`;
   });
 }
 
@@ -75,7 +86,8 @@ for(const context of Object.values(glossaryContext)){
 }
 
 function relatedRules(){
-  return hydrateTerms(portable(existingRelated.replace(/\sdata-(?:term-title|term-summary|full-rule-path|mobile-rule-path)="[^"]*"/g,'')));
+  const html=hydrateTerms(portable(detachments.map(detachment=>{const slug=detachment.id.slice(11);return `<section class="related-detachment" data-detachment="${slug}"><h2>${detachment.title} <span class="detachment-dp">${detachment.dp}</span></h2><div data-related-kind="stratagems">${extract('section',`${slug}-stratagems`)}</div><div data-related-kind="enhancements" hidden>${extract('section',`${slug}-enhancements`)}</div></section>`;}).join('\n')+coreStratagems).replace(/\sdata-(?:eligibility|term-title|term-summary|full-rule-path|mobile-rule-path)="[^"]*"/g,''));
+  return annotateEnhancementTitles(html);
 }
 
 const link=(route,active)=>`<a href="./${route.file}"${route.id===active?' aria-current="page"':''}>${route.title}${route.dp?` <span class="detachment-dp">${route.dp}</span>`:''}</a>`;
@@ -90,7 +102,11 @@ function page(route){
   return `<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0a0b0d"><title>${route.title} &mdash; Tyranids</title><link rel="manifest" href="../../../manifest.webmanifest"><link rel="stylesheet" href="../../death-guard/styles/tokens.css?v=11"><link rel="stylesheet" href="../styles/tokens.css?v=3"><link rel="stylesheet" href="../../death-guard/styles/layout.css?v=11"><link rel="stylesheet" href="../../death-guard/styles/navigation.css?v=12"><link rel="stylesheet" href="../../death-guard/styles/content.css?v=38"><link rel="stylesheet" href="../../death-guard/styles/popups.css?v=17"><link rel="stylesheet" href="../../shared/datasheet-system.css?v=6"><link rel="stylesheet" href="../styles/book.css?v=4"><link rel="stylesheet" href="./mobile.css?v=1"></head><body><header class="app-header" id="appHeader"><button class="header-button nav-menu" id="navButton" aria-label="Open navigation" aria-controls="mobileNav" aria-expanded="false">&#9776;</button><div class="app-brand"><strong>Tyranids Rules</strong><small>11E &middot; Mobile reference</small></div><a class="library-link" href="../../../index.html" aria-label="Back to rulebook library"><span aria-hidden="true">&larr;</span><b>Library</b></a><div class="header-spacer"></div></header><button class="toc-scrim" id="navScrim" aria-label="Close navigation" hidden></button><nav class="toc-panel" id="mobileNav" aria-label="Tyranids navigation" aria-hidden="true"><h2 class="toc-heading">Contents</h2><div class="phone-shortcuts"><a class="phone-glossary" href="../../../glossary/index.html">Mega Glossary &rarr;</a><a class="phone-glossary phone-mode-switch" href="../reader.html#${desktopId}" data-view-switch>Desktop / iPad view &rarr;</a></div><div class="phone-tree">${navigation(route)}</div></nav><main class="main mobile-main"><article class="document">${hydrateTerms(content(route))}${relatedSection}</article><a class="return-popup" id="returnPopup" hidden>Return to popup</a></main><script src="../../shared/datasheet-layout.js?v=2"></script><script src="../../shared/rule-facts.js?v=1"></script><script src="../../shared/related-rules-matcher.js?v=4"></script><script src="../../shared/army-related-rules.js?v=6"></script><dialog class="mobile-dialog" id="termDialog" aria-labelledby="termTitle"><form method="dialog" class="mobile-dialog-head"><span>Mega Glossary</span><button aria-label="Close popup">&times;</button></form><h2 id="termTitle"></h2><p id="termSummary"></p><a id="termRule" hidden>Open full rule &rarr;</a><a id="termFull" href="../../../glossary/index.html">Glossary entry &rarr;</a></dialog><script src="../../../glossary-return.js?v=3"></script><script src="./mobile.js?v=4"></script></body></html>`;
 }
 
-for(const route of routes)await writeFile(new URL(route.file,import.meta.url),page(route).replace('army-related-rules.js?v=6','army-related-rules.js?v=9').replace('related-rules-matcher.js?v=4','related-rules-matcher.js?v=6').replace('rule-facts.js?v=1','rule-facts.js?v=4'));
+for(const route of routes)await writeFile(new URL(route.file,import.meta.url),page(route)
+  .replace('<a class="phone-glossary" href="../../../glossary/index.html">','<a class="phone-glossary" href="../../../roster-guides/index.html" data-roster-guides-link hidden>&larr; Roster Guides</a><a class="phone-glossary" href="../../../glossary/index.html">')
+  .replace('<script src="../../shared/related-rules-matcher.js?v=4"></script><script src="../../shared/army-related-rules.js?v=6"></script>','')
+  .replace('<script src="../../../glossary-return.js?v=3"></script><script src="./mobile.js?v=4"></script>','<script src="../../../glossary-return.js?v=3"></script><script src="../../shared/roster-parser.js?v=2"></script><script src="../../shared/roster-entities.js?v=1"></script><script src="../../../roster-guides/points-data.js?v=6"></script><script src="./mobile.js?v=5"></script>')
+  .replace('rule-facts.js?v=1','rule-facts.js?v=4'));
 await writeFile(new URL('related-rules.inc',import.meta.url),relatedRules());
 for(const route of routes.filter(route=>route.type!=='start')){
   const html=await readFile(new URL(route.file,import.meta.url),'utf8');

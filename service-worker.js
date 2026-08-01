@@ -25,7 +25,7 @@ const APP_SHELL = [
   ROSTER_GUIDES_FALLBACK,
   "./roster-guides/points-data.js?v=6",
   "./roster-guides/points-validator.js?v=4",
-  "./roster-guides/app.js?v=8",
+  "./roster-guides/app.js?v=9",
   "./manifest.webmanifest",
   "./assets/apple-touch-icon.png",
   "./assets/icon-192.png",
@@ -151,9 +151,14 @@ const APP_SHELL = [
   ,"./books/tyranids/styles/tokens.css?v=3"
   ,"./books/tyranids/styles/book.css?v=4"
   ,"./books/tyranids/scripts/data.js?v=2"
-  ,"./books/tyranids/scripts/app.js?v=4"
+  ,"./books/tyranids/scripts/roster-data.js?v=1"
+  ,"./books/tyranids/scripts/roster-filter.js?v=1"
+  ,"./books/tyranids/scripts/compatible-rules-runtime.mjs?v=1"
+  ,"./books/tyranids/generated/compatible-rules.json"
+  ,"./books/tyranids/scripts/app.js?v=5"
   ,"./books/tyranids/mobile/mobile.css?v=1"
-  ,"./books/tyranids/mobile/mobile.js?v=4"
+  ,"./books/tyranids/mobile/mobile.js?v=5"
+  ,"./books/tyranids/mobile/related-rules.inc?v=4"
   ,"./glossary/generated/glossary.en.js?v=tyranids-1"
   ,"./books/tau-empire/"
   ,TAU_EMPIRE_ENTRY_FALLBACK

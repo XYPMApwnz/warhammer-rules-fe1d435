@@ -73,7 +73,7 @@ try{
     const books=[
       ['Death Guard','/books/death-guard/reader.html#unit-chaos-land-raider','/books/death-guard/mobile/chaos-land-raider.html','/books/death-guard/mobile/virulent-vectorium.html',true],
       ['Adeptus Mechanicus','/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers','/books/adeptus-mechanicus/mobile/skitarii-rangers.html','/books/adeptus-mechanicus/mobile/cohort-acquisitus.html',true],
-      ['Tyranids','/books/tyranids/reader.html#unit-hive-tyrant','/books/tyranids/mobile/hive-tyrant.html','/books/tyranids/mobile/invasion-fleet.html',false],
+      ['Tyranids','/books/tyranids/reader.html#unit-hive-tyrant','/books/tyranids/mobile/hive-tyrant.html','/books/tyranids/mobile/invasion-fleet.html',true],
       ["T'au Empire",'/books/tau-empire/reader.html#unit-breacher-team','/books/tau-empire/mobile/breacher-team.html','/books/tau-empire/mobile/kauyon.html',false]
     ];
     let profileCount=0;
@@ -81,6 +81,7 @@ try{
       await page.goto(origin+desktop);
       if(name==='Death Guard')assert.deepEqual(await page.evaluate(()=>({matcher:typeof window.WHRelatedRules,legacy:typeof window.DGRelatedRules})),{matcher:'undefined',legacy:'undefined'},'Death Guard must not load the legacy matcher path');
       else if(name==='Adeptus Mechanicus')assert.deepEqual(await page.evaluate(()=>({matcher:typeof window.WHRelatedRules,legacy:typeof window.AMRelatedRules})),{matcher:'undefined',legacy:'undefined'},'Adeptus Mechanicus must not load the legacy matcher path');
+      else if(name==='Tyranids')assert.deepEqual(await page.evaluate(()=>({matcher:typeof window.WHRelatedRules,legacy:typeof window.TYRRelatedRules})),{matcher:'undefined',legacy:'undefined'},'Tyranids must not load the legacy matcher path');
       else assert.equal(await page.evaluate(()=>window.WHRelatedRules?.enabled),false,`${name} shared safety flag must be disabled`);
       if(reviewEnabled)await page.locator('.related-rules-trigger').first().waitFor();
       assert.equal(await page.locator('.related-rules-trigger').count()>0,reviewEnabled,`${name} desktop review integration state is wrong`);
@@ -101,7 +102,7 @@ try{
     const malformed=await page.evaluate(()=>{try{WHRuleFacts.profileFromDataset({ruleFacts:'{bad'},{id:'unit-browser-bad'});return'';}catch(error){return error.message;}});
     assert.match(malformed,/unit-browser-bad: malformed data-rule-facts/);
     assert.deepEqual(errors,[]);
-    console.log('PASS shared safety remains active while Death Guard and Mechanicus review matrices are integrated');
+    console.log('PASS shared safety remains active while Death Guard, Mechanicus and Tyranids review matrices are integrated');
   }finally{await modalContext.close();}
 
   const mechanicusContext=await browser.newContext({serviceWorkers:'block'});
@@ -138,6 +139,44 @@ try{
     assert.deepEqual(errors,[]);
     console.log('PASS Mechanicus matrix UI conditions and roster owner filtering');
   }finally{await mechanicusContext.close();}
+
+  const tyranidsContext=await browser.newContext({serviceWorkers:'block'});
+  try{
+    const {page,errors}=await observedPage(tyranidsContext);
+    await page.goto(`${origin}/books/tyranids/reader.html#unit-trygon`);
+    await page.locator('#unit-trygon .related-rules-trigger').click();
+    await page.locator('.related-rules-layer .full-related-filter summary').click();
+    await page.locator('.related-rules-layer .full-related-filter [data-detachment="subterranean-assault"]').click();
+    await page.locator('.related-rules-layer [data-kind="enhancements"]:not([hidden])').click();
+    await page.locator('.related-rules-layer [data-rule-id="trygon-prime"]:not([hidden])').waitFor();
+    assert.equal(await page.locator('.related-rules-layer [data-rule-id="trygon-prime"] .compatibility-status').count(),0,'selected Subterranean Assault must resolve the Trygon Detachment-selection condition');
+
+    await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html`);
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
+    assert.equal(await page.locator('#relatedDetachment').inputValue(),'all','ordinary Tyranids Phone Mode must start with All detachments');
+    assert.ok(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count()>2,'All detachments must include faction rules, not only Core');
+    await page.locator('[data-related-tab="enhancements"]:not([hidden])').click();
+    assert.ok(await page.locator('#relatedRulesContent .enhancement:visible').count()>0,'All detachments must include compatible Tyranids Enhancements');
+    await page.locator('#relatedDetachment').selectOption('invasion-fleet');
+    await page.locator('[data-related-tab="stratagems"]').click();
+    assert.equal(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count(),2,'selected Tyranids Phone Detachment must show Core plus that Detachment');
+
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'tyr-owner-filter',roster:{faction:'Tyranids',detachment:'Invasion Fleet',detachments:[{label:'Invasion Fleet'}],declared:235,units:[{id:'tyr-owner-1',name:'Hive Tyrant',quantity:1,points:205}],enhancements:[{name:'Adaptive Biology',ownerUnitId:'tyr-owner-1',ownerStatus:'resolved'}]}}])));
+    await page.goto(`${origin}/books/tyranids/reader.html?roster=tyr-owner-filter#unit-hive-tyrant`);
+    await page.locator('#unit-hive-tyrant .related-rules-trigger').click();
+    await page.locator('.related-rules-layer [data-kind="enhancements"]:not([hidden])').click();
+    assert.deepEqual(await page.locator('.related-rules-layer .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId)),['enhancement-adaptive-biology'],'Tyranids desktop roster must show only the Enhancement assigned to this ownerUnitId');
+    await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html?roster=tyr-owner-filter`);
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('[data-related-tab="enhancements"]:not([hidden])').waitFor();
+    await page.locator('[data-related-tab="enhancements"]').click();
+    assert.deepEqual(await page.locator('#relatedRulesContent .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId)),['enhancement-adaptive-biology'],'Tyranids Phone roster must show only the Enhancement assigned to this ownerUnitId');
+    await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html?roster=missing-roster`);
+    assert.equal(await page.locator('#relatedRules').count(),0,'missing Tyranids Phone roster must fail closed');
+    assert.deepEqual(errors,[]);
+    console.log('PASS Tyranids matrix UI, Detachment resolution and roster owner filtering');
+  }finally{await tyranidsContext.close();}
 
   const historyContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1194,height:834}});
   try{
@@ -326,6 +365,13 @@ try{
     await page.goto(`${origin}/books/tyranids/?build=cold-desktop&view=full`);
     assert.match(page.url(),/\/books\/tyranids\/reader\.html\?build=cold-desktop$/);
     assert.equal(await page.title(),'Tyranids Rules — WH40K Library');
+    await page.goto(`${origin}/books/tyranids/reader.html?build=tyr-cold#unit-hive-tyrant`);
+    await page.locator('#unit-hive-tyrant .related-rules-trigger').click();
+    await page.locator('.related-rules-layer [data-rule-id="core-stratagem-command-re-roll"]:not([hidden])').waitFor();
+    await page.locator('.related-rules-layer .full-related-filter summary').click();
+    await page.locator('.related-rules-layer .full-related-filter [data-detachment="invasion-fleet"]').click();
+    await page.locator('.related-rules-layer [data-detachment="invasion-fleet"] .stratagem:not([hidden])').first().waitFor();
+    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),2,'Tyranids cold desktop must open Core plus one matrix-backed Detachment');
 
     await page.setViewportSize({width:390,height:844});
     await page.goto(`${origin}/books/tyranids/?build=cold-phone`);
@@ -389,6 +435,26 @@ try{
     assert.deepEqual(errors,[]);
     console.log('PASS Death Guard visited Phone Mode Compatible Stratagems offline');
   }finally{await warmDeathGuardContext.close();}
+
+  const warmTyranidsContext=await browser.newContext({serviceWorkers:'allow'});
+  try{
+    const {page,errors}=await observedPage(warmTyranidsContext);
+    await page.goto(`${origin}/index.html?tyr-warm=1`);
+    await control(page);
+    await page.setViewportSize({width:390,height:844});
+    await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html?view=mobile`);
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
+    await page.waitForFunction(async()=>Boolean(await caches.match(location.href)));
+    const visitedPhoneUrl=page.url();
+    await warmTyranidsContext.setOffline(true);
+    await page.goto(visitedPhoneUrl);
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
+    assert.ok(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count()>2,'visited Tyranids Phone page must reopen matrix-backed All Detachments offline');
+    assert.deepEqual(errors,[]);
+    console.log('PASS Tyranids visited Phone Mode Compatible Rules offline');
+  }finally{await warmTyranidsContext.close();}
 
   workerRevision='browser-upgrade-a';
   const upgradeContext=await browser.newContext({serviceWorkers:'allow'});

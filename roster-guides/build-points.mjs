@@ -20,7 +20,7 @@ const readerProfiles=book=>{
   }
   return result;
 };
-const dgProfiles=readerProfiles('death-guard'),mechanicusProfiles=readerProfiles('adeptus-mechanicus'),tauProfiles=readerProfiles('tau-empire');
+const dgProfiles=readerProfiles('death-guard'),mechanicusProfiles=readerProfiles('adeptus-mechanicus'),tyranidsProfiles=readerProfiles('tyranids'),tauProfiles=readerProfiles('tau-empire');
 
 const deathGuard=read('books/death-guard/content/death-guard-rules.en.json');
 const dgUnits={};
@@ -83,6 +83,14 @@ const mechanicusEnhancements=Object.fromEntries(mechanicus.enhancements.flatMap(
   if(upgrade)entries.push([normalize(`${enhancement.title.replace(/\s+Upgrade$/i,'')} (Upgrade)`),enhancement]);
   return entries;
 }));
+const tyranids=read('books/tyranids/content/tyranids-points.en.json');
+const tyranidsContracts=read('books/tyranids/content/tyranids-related-rules.en.json').enhancements;
+const tyranidsUnits=Object.fromEntries(tyranids.units.map(unit=>[normalize(unit.title),{...unit,...tyranidsProfiles[normalize(unit.title)]}]));
+const tyranidsEnhancements=Object.fromEntries(tyranids.enhancements.flatMap(enhancement=>{
+  const contract=tyranidsContracts[enhancement.id]||tyranidsContracts[enhancement.id?.replace(/^enhancement-/,'')],record={...enhancement,tags:contract?.tags||[],owner:contract?.owner||null,assignment:contract?.assignment||null};
+  const base=enhancement.title.replace(/\s*\(Upgrade\)\s*$/i,'').replace(/\s+Upgrade$/i,'');
+  return[...new Set([enhancement.title,base,`${base} Upgrade`,`${base} (Upgrade)`])].map(name=>[normalize(name),record]);
+}));
 const tau=read('books/tau-empire/content/tau-empire-points.en.json');
 const tauContracts=read('books/tau-empire/content/tau-empire-related-rules.en.json').enhancements;
 const tauUnits=Object.fromEntries(tau.units.map(unit=>[normalize(unit.title),{...unit,...tauProfiles[normalize(unit.title)]}]));
@@ -99,7 +107,8 @@ const tauEnhancements=Object.fromEntries(tau.enhancements.flatMap(enhancement=>{
 const catalog={
   'death guard':{units:dgUnits,enhancements:dgEnhancements},
   'adeptus mechanicus':{units:mechanicusUnits,enhancements:mechanicusEnhancements},
+  'tyranids':{units:tyranidsUnits,enhancements:tyranidsEnhancements},
   't au empire':{units:tauUnits,enhancements:tauEnhancements}
 };
 fs.writeFileSync(path.join(root,'roster-guides','points-data.js'),`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`);
-console.log(`Points catalog: ${Object.keys(dgUnits).length} Death Guard, ${Object.keys(mechanicusUnits).length} Adeptus Mechanicus and ${Object.keys(tauUnits).length} T'au Empire units.`);
+console.log(`Points catalog: ${Object.keys(dgUnits).length} Death Guard, ${Object.keys(mechanicusUnits).length} Adeptus Mechanicus, ${Object.keys(tyranidsUnits).length} Tyranids and ${Object.keys(tauUnits).length} T'au Empire units.`);

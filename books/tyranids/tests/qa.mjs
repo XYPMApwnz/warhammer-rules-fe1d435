@@ -1,9 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
-import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
-import ruleFacts from '../../shared/rule-facts.js';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const repo=path.resolve(root,'../..');
@@ -130,12 +128,15 @@ for(const detachment of pack.detachments){
 }
 assert.doesNotMatch(reader,/death-guard-cover|CODEX REGISTER \/\/ XIV|Technical placeholder/);
 assert.match(reader,/Reference in verification/);
-assert.match(reader,/army-related-rules\.js/);
+assert.doesNotMatch(reader,/army-related-rules\.js|related-rules-matcher\.js/);
+assert.match(reader,/roster-filter\.js\?v=1/);
 assert.doesNotMatch(reader,/army-book-app\.js/,'Tyranids must not load the generic monolithic Army Book runtime');
 assert.doesNotMatch(reader,/unit-source-state/,'per-datasheet source telemetry must not clutter the playable reader');
 assert.match(app,/new window\.DGNavigation\(\)/);
 assert.match(app,/new window\.DGPopups\(terms,fullEntry\)/);
-assert.match(app,/WHArmyRelatedRules\?\.install/);
+assert.match(app,/compatible-rules-runtime\.mjs\?v=1/);
+assert.match(app,/function initRelatedRules\(\)/);
+assert.doesNotMatch(app,/WHArmyRelatedRules|WHRelatedRules/);
 assert.match(app,/new URL\('\.\/mobile\/'\+route/);
 assert.match(fs.readFileSync(path.join(root,'index.html'),'utf8'),/death-guard\/scripts\/view-router\.js\?v=2/);
 assert.doesNotMatch(app,/WHArmyBook\.install/);
@@ -146,39 +147,11 @@ assert.doesNotMatch(bookCss,/html\[data-view="mobile"\]/,'Phone Mode must use fo
 assert.ok(Object.keys(context.terms).length>=300);
 assert.equal(context.terms['tyranids-detachment-rule-mindhunger'].navigation.rule,'detachment-ambush-predators');
 
-const sandbox={window:{}};
-vm.runInNewContext(fs.readFileSync(path.join(repo,'books','shared','related-rules-matcher.js'),'utf8'),sandbox);
-const keywords=values=>new Set(values.map(value=>value.toUpperCase()));
-const decodeAttribute=value=>value.replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&#39;',"'");
-const attribute=(tag,name)=>new RegExp(`\\s${name}="([^"]*)"`).exec(tag)?.[1]||'';
-const profiles=[...(reader.match(/<article class="unit-card\b[^>]*>/g)||[])].map(tag=>{
-  const unitId=attribute(tag,'id');
-  return ruleFacts.profileFromDataset({ruleFacts:decodeAttribute(attribute(tag,'data-rule-facts'))},{id:unitId});
-});
 const allStratagems=[...pack.detachments,...codexParity.detachments].flatMap(detachment=>detachment.stratagems);
 for(const stratagem of allStratagems){
   const rule=relatedRules.stratagems[stratagem.id];
   assert.ok(rule,`${stratagem.title}: missing explicit eligibility`);
-  assert.ok(profiles.some(profile=>sandbox.window.WHRelatedRules.matches(rule,profile)),`${stratagem.title}: no real Tyranids datasheet can satisfy its target`);
-  const card=new RegExp(`<article class="stratagem surface" data-rule-id="${stratagem.id}" data-eligibility="([^"]+)"`).exec(related);
-  assert.ok(card,`${stratagem.title}: generated card does not use audited eligibility`);
-  assert.deepEqual(JSON.parse(decodeAttribute(card[1])),rule,`${stratagem.title}: generated eligibility differs from audited contract`);
+  assert.match(related,new RegExp(`data-rule-id="${stratagem.id}"`),`${stratagem.title}: generated card missing`);
 }
-const lictor={unitId:'unit-lictor',keywords:keywords(['Tyranids','Infantry','Lictor'])};
-const monster={unitId:'unit-norn-emissary',keywords:keywords(['Tyranids','Monster','Norn Emissary'])};
-assert.equal(sandbox.window.WHRelatedRules.matches({v:1,roles:[{side:'friendly',subject:'unit',selector:{unitIds:['unit-lictor']}}]},lictor),true);
-assert.equal(sandbox.window.WHRelatedRules.matches({v:1,roles:[{side:'friendly',subject:'unit',selector:{allKeywords:['TYRANIDS','MONSTER']}}]},lictor),false);
-assert.equal(sandbox.window.WHRelatedRules.matches({v:1,roles:[{side:'friendly',subject:'unit',selector:{allKeywords:['TYRANIDS','MONSTER']}}]},monster),true);
-assert.equal(sandbox.window.WHRelatedRules.matches(relatedRules.stratagems['retreat-below'],lictor),true,'Retreat Below must remain available to a non-Burrower Tyranids unit');
-assert.equal(sandbox.window.WHRelatedRules.matches(relatedRules.stratagems['swarming-assault'],lictor),false,'Infantry must not receive the Monster-only Swarming Assault');
-assert.equal(sandbox.window.WHRelatedRules.matches(relatedRules.stratagems['swarming-assault'],monster),true,'Tyranids Monster misses Swarming Assault');
-const prime=profiles.find(profile=>profile.unitId==='unit-tyranid-prime-with-lash-whip');
-assert.ok(prime,'Tyranid Prime fixture is absent');
-const alien=relatedRules.stratagems['alien-physiology'];
-assert.equal(sandbox.window.WHRelatedRules.match(alien,prime).state,'conditional','Possible Tyranid Prime attachment must remain conditional');
-const unattached=ruleFacts.profileFromRecord({unitId:prime.unitId,keywords:[...prime.keywords],attached:false,attachmentKnown:true});
-assert.equal(sandbox.window.WHRelatedRules.match(alien,unattached).state,'no-match','Confirmed unattached Tyranid Prime receives a Warriors-only Stratagem');
-const confirmed=ruleFacts.profileFromRecord({unitId:prime.unitId,keywords:[...prime.keywords],candidates:[{unitId:'unit-tyranid-warriors-with-ranged-bio-weapons',keywords:[...prime.keywords,'TYRANID WARRIORS'],attached:true,attachmentKnown:true,characterCount:1}]});
-assert.equal(sandbox.window.WHRelatedRules.match(alien,confirmed).state,'conditional','Confirmed Tyranid Prime attachment must still wait for its battle trigger');
 
 console.log('Tyranids QA passed: 57 datasheets, 10 detachments, 51 Stratagems, exact wargear, glossary and Related Rules contracts.');

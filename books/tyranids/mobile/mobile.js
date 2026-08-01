@@ -1,13 +1,18 @@
-(function(){
+(async function(){
   'use strict';
+  const scriptUrl=document.currentScript.src;
+  const compatibleRuntime=await import(new URL('../scripts/compatible-rules-runtime.mjs?v=1',scriptUrl)).catch(error=>{console.warn('Compatible rules unavailable.',error);return null;});
   const navButton=document.getElementById('navButton'),scrim=document.getElementById('navScrim'),nav=document.getElementById('mobileNav');
   const dialog=document.getElementById('termDialog'),title=document.getElementById('termTitle'),summary=document.getElementById('termSummary');
   const full=document.getElementById('termFull'),rule=document.getElementById('termRule'),returnPopup=document.getElementById('returnPopup');
   const viewSwitch=document.querySelector('[data-view-switch]'),relatedRules=document.getElementById('relatedRules');
   const relatedContent=document.getElementById('relatedRulesContent'),relatedDetachment=document.getElementById('relatedDetachment');
-  const drawerMedia=matchMedia('(max-width: 800px)'),unit=document.querySelector('.unit-card'),params=new URLSearchParams(location.search);
-  const relatedRulesEnabled=window.WHRelatedRules?.enabled===true;
+  const drawerMedia=matchMedia('(max-width: 800px)'),unit=document.querySelector('.unit-card'),params=new URLSearchParams(location.search),rosterMode=params.has('roster');
+  const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/\s*\(aura\)\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim(),slug=value=>normalize(value).replace(/\s+/g,'-');
+  function rosterContext(){if(!rosterMode)return null;let record;try{record=(JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[]).find(item=>item?.id===params.get('roster'));}catch{}if(!record)return null;let roster=record.roster;if(record.sourceText&&window.WHRosterParser){const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)roster=parsed;}if(normalize(roster?.faction)!=='tyranids')return null;const owners=new Set((roster.units||[]).filter(item=>normalize(item.name)===normalize(unit?.dataset.unitTitle)).map(item=>item.id)),enhancements=new Set((roster.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&owners.has(item.ownerUnitId)).map(item=>normalize(item.name))),detachments=[...new Set((roster.detachments?.length?roster.detachments.map(item=>item.label):[roster.detachment]).filter(Boolean).map(slug))];return detachments.length?{detachments,enhancements}:null;}
+  const roster=rosterContext(),relatedRulesEnabled=compatibleRuntime?.compatibleRulesEnabled===true&&(!rosterMode||!!roster);
   let gesture=null,suppressed=null,opener=null,openedByTouch=false,relatedLoaded=false,relatedKind='stratagems';
+  let compatibleMatrix,assignedEnhancementRuleIds=new Set();
   if(!relatedRulesEnabled)relatedRules?.remove();
 
   if(viewSwitch){const destination=new URL(viewSwitch.href);destination.search=params.toString();if(location.hash)destination.hash=location.hash;viewSwitch.href=destination.href;}
@@ -49,15 +54,13 @@
 
   function filterRelated(){
     if(!relatedRulesEnabled||!relatedContent||!unit||!relatedLoaded)return;
-    const selected=relatedDetachment.value,profile=window.WHArmyRelatedRules.profile(unit);
+    const selected=relatedDetachment.value,allowed=new Map(compatibleRuntime.getCompatibleRules(compatibleMatrix,unit.id,{detachmentId:selected}).filter(item=>!rosterMode||item.kind!=='enhancement'||assignedEnhancementRuleIds.has(item.ruleId)).map(item=>[item.ruleId,item]));
     relatedContent.querySelectorAll('.stratagem,.enhancement').forEach(card=>{
-      const result=window.WHArmyRelatedRules.match(card,profile);
-      card.hidden=result.state==='no-match';
-      card.dataset.matchState=result.state;
+      const result=allowed.get(card.dataset.ruleId||card.id);card.hidden=!result;card.dataset.matchState=result?.state||'no-match';
       card.querySelector(':scope > .compatibility-status')?.remove();
-      if(result.state==='conditional'){
+      if(result?.state==='conditional'){
         const status=document.createElement('p');status.className='compatibility-status';
-        status.innerHTML='<strong>Conditionally compatible</strong><span>Check the full card conditions</span>';
+        const heading=document.createElement('strong');heading.textContent='Conditionally compatible';status.append(heading);for(const condition of compatibleRuntime.conditionsFor(result)){const line=document.createElement('span');line.textContent=compatibleRuntime.conditionLabels[condition]||'Check the full card conditions';status.append(line);}
         card.prepend(status);
       }
     });
@@ -76,8 +79,10 @@
   async function loadRelated(){
     if(!relatedRulesEnabled||relatedLoaded)return;
     try{
-      const response=await fetch('./related-rules.inc?v=3');if(!response.ok)throw new Error(`HTTP ${response.status}`);
-      relatedContent.innerHTML=await response.text();relatedLoaded=true;filterRelated();
+      const [response,matrix]=await Promise.all([fetch('./related-rules.inc?v=4'),compatibleRuntime.loadCompatibleRules(new URL('../generated/compatible-rules.json',scriptUrl))]);if(!response.ok)throw new Error(`HTTP ${response.status}`);
+      relatedContent.innerHTML=await response.text();compatibleMatrix=matrix;relatedLoaded=true;
+      if(rosterMode){assignedEnhancementRuleIds=new Set([...relatedContent.querySelectorAll('.enhancement[data-enhancement-title]')].filter(card=>roster.enhancements.has(normalize(card.dataset.enhancementTitle))).map(card=>card.dataset.ruleId||card.id));[...relatedDetachment.options].forEach(option=>{if(option.value==='all'||!roster.detachments.includes(option.value))option.remove();});if(!relatedDetachment.options.length)throw new Error('Roster data unavailable');relatedDetachment.value=relatedDetachment.options[0].value;relatedDetachment.disabled=relatedDetachment.options.length===1;document.querySelector('[data-roster-guides-link]')?.removeAttribute('hidden');}
+      filterRelated();
     }catch{
       const message=document.createElement('p');message.className='related-status';message.textContent='Could not load related rules. Check the connection and try again.';
       const retry=document.createElement('button');retry.type='button';retry.className='related-retry';retry.textContent='Try again';retry.addEventListener('click',loadRelated);relatedContent.replaceChildren(message,retry);

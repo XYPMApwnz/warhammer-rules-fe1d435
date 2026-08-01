@@ -156,7 +156,7 @@ const enhancementCard=(item,det,{related=false}={})=>{
   const explicit=enhancementContract(item),tags=explicit?.tags||item.tags||[],isUpgrade=tags.includes('UPGRADE');
   if(related&&!explicit)return'';
   const termText=isUpgrade?`UPGRADE. ${item.text}`:item.text;
-  return`<article class="enhancement surface" data-rule-id="${esc(item.id||`enhancement-${slug(item.title)}`)}" data-enhancement-tags="${esc(tags.join('|'))}" data-owner-subject="${esc(explicit?.owner?.subject||'')}"${explicit?` data-eligibility="${esc(JSON.stringify(explicit))}"`:''}><div class="eyebrow">Enhancement${isUpgrade?' · UPGRADE':''}${item.value?` · ${item.value} pts`:''}</div><h4><button class="term-button" data-term="${addTerm(item.title,termText,`detachment-${det.id}`,'enhancement')}">${esc(item.title)}</button></h4><p data-source-field="text">${esc(item.text)}</p></article>`;
+  return`<article class="enhancement surface" data-rule-id="${esc(item.id||`enhancement-${slug(item.title)}`)}" data-enhancement-tags="${esc(tags.join('|'))}" data-owner-subject="${esc(explicit?.owner?.subject||'')}"${config.compatibleRulesMatrix?` data-enhancement-title="${esc(item.title.replace(/\s*\(Aura\)$/i,''))}"`:''}${explicit?` data-eligibility="${esc(JSON.stringify(explicit))}"`:''}><div class="eyebrow">Enhancement${isUpgrade?' · UPGRADE':''}${item.value?` · ${item.value} pts`:''}</div><h4><button class="term-button" data-term="${addTerm(item.title,termText,`detachment-${det.id}`,'enhancement')}">${esc(item.title)}</button></h4><p data-source-field="text">${esc(item.text)}</p></article>`;
 };
 const stratagemCard=(item,det)=>`<article class="stratagem surface" data-rule-id="${esc(item.id)}" data-eligibility="${esc(JSON.stringify(stratagemEligibility(item)))}"><div class="stratagem-head"><div><h3><button class="term-button" data-term="${addTerm(item.title,[item.when,item.target,item.effect,item.restrictions].filter(Boolean).join(' '),`detachment-${det.id}`,'stratagem')}">${esc(item.title)}</button></h3></div><div class="cp">${esc(item.cp)}CP</div></div><p class="field" data-source-field="when"><b>When</b><br>${esc(item.when)}</p><p class="field" data-source-field="target"><b>Target</b><br>${esc(item.target)}</p><p class="field" data-source-field="effect"><b>Effect</b><br>${esc(item.effect)}</p>${item.restrictions?`<p class="field" data-source-field="restrictions"><b>Restrictions</b><br>${esc(item.restrictions)}</p>`:''}</article>`;
 const detachmentHtml=detachments.map(det=>{
@@ -226,11 +226,15 @@ const normalizedHtml=html
   .replace('../shared/army-book-app.js','../shared/army-book-app.js?v=9')
   .replace('./scripts/app.js',`./scripts/app.js?v=${config.dedicatedMobile?'3':'2'}`);
 const coveredHtml=config.coverImage?normalizedHtml.replace('class="hero section surface faction-hero"','class="hero section surface faction-hero faction-hero-cover"'):normalizedHtml;
-const finalHtml=config.dedicatedMobile?coveredHtml
+let finalHtml=config.dedicatedMobile?coveredHtml
   .replace('./styles/tokens.css?v=2','./styles/tokens.css?v=3')
   .replace('./styles/book.css?v=2',`./styles/book.css?v=${config.assetVersions?.book||4}`)
   .replace('./scripts/app.js?v=3',`./scripts/app.js?v=${config.assetVersions?.app||4}`)
   .replace(/<script src="\.\.\/shared\/army-book-app\.js\?v=9"><\/script>/,''):coveredHtml;
+if(config.compatibleRulesMatrix)finalHtml=finalHtml
+  .replace(/<script src="\.\.\/shared\/related-rules-matcher\.js\?v=6"><\/script>/,'')
+  .replace(/<script src="\.\.\/shared\/army-related-rules\.js\?v=9"><\/script>/,'')
+  .replace('<script src="./scripts/app.js',`<script src="./scripts/roster-filter.js?v=1"></script><script src="./scripts/app.js`);
 const dataJs=`window.DG_TERMS=${JSON.stringify(Object.fromEntries([...terms].map(([id,item])=>[id,{id,title:item.title,summary:item.summary,full:item.full,glossary:item.glossary,...(item.rule?{rule:item.rule}:{}),...(item.units.length?{units:item.units,datasheet:item.units[0],statline:item.units[0].replace(/^unit-/,'')+'-profile'}:{})}])),null,2)};\n`;
 const rosterEnhancements=Object.fromEntries(detachments.flatMap(det=>(det.enhancements||[]).map(item=>{const contract=enhancementContract(item);return[titleKey(item.title),{title:item.title,text:item.text,value:item.value,detachment:det.title,tags:contract?.tags||item.tags||[],owner:contract?.owner||null,assignment:contract?.assignment||null}]})));
 const rosterDataJs=`window.WH_BOOK_ROSTER_ENHANCEMENTS=${JSON.stringify(rosterEnhancements,null,2)};\n`;

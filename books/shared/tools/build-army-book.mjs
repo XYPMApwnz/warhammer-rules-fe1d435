@@ -18,6 +18,7 @@ const relatedRules=config.sources.relatedRules?readJson(config.sources.relatedRu
 const esc=value=>String(value??'').replace(/\s+/g,' ').trim().replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const heroMark=config.coverImage?'':`<div class="hero-mark" aria-hidden="true"><span>${esc(config.factionKeyword)}</span></div>`;
 const escLines=value=>String(value??'').replace(/\r\n?/g,'\n').split('\n').map(esc).join('\n');
+const normalizedEol=value=>String(value).replace(/\r\n?/g,'\n');
 const clean=value=>String(value??'').replaceAll('\u00a0',' ').replace(/\s+/g,' ').trim();
 const slug=value=>clean(value).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const unique=(items,keyOf)=>{const seen=new Set();return items.filter(item=>{const key=keyOf(item);if(seen.has(key))return false;seen.add(key);return true;});};
@@ -282,7 +283,7 @@ const generatedBookCss=config.dedicatedMobile?(config.coverImage?(bookCss+coverC
 const indexHtml='<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0a0b0d"><title>'+esc(config.title)+' Rules</title><link rel="manifest" href="../../manifest.webmanifest"><link rel="stylesheet" href="../death-guard/styles/tokens.css?v=11"><link rel="stylesheet" href="./styles/tokens.css?v='+(config.dedicatedMobile?'3':'2')+'"><link rel="stylesheet" href="../death-guard/styles/entry.css?v=2"><script src="../death-guard/scripts/view-router.js?v=2"><\/script></head><body><main class="entry-card"><div class="entry-mark">'+esc(bookMark)+'</div><p>'+esc(config.title)+' rules</p><h1>Opening the reader&hellip;</h1><div class="entry-actions"><a href="./reader.html?view=full">Desktop / iPad view</a><a href="./mobile/index.html?view=mobile">Phone view</a></div><noscript>Automatic selection needs JavaScript. Choose a reader above.</noscript></main></body></html>\n';
 const mobileIndex='<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+esc(config.title)+' Phone View</title></head><body><script>const u=new URL("../reader.html",location.href);u.search=location.search;u.searchParams.set("view","mobile");u.hash=location.hash;location.replace(u.href)<\/script><a href="../reader.html?view=mobile">Open phone view</a></body></html>\n';
 const outputs=new Map([
-  ['reader.html',finalHtml],['index.html',indexHtml],['scripts/data.js',dataJs],...(config.dedicatedMobile&&!config.coverImage?[]:[['styles/book.css',generatedBookCss]]),...(config.rosterSupport?[['scripts/roster-data.js',rosterDataJs]]:[]),...(config.dedicatedMobile?[]:[['scripts/app.js',appJs]]),...(config.dedicatedMobile?[['mobile/related-rules.source.inc',relatedInc+'\n']]:[['mobile/index.html',mobileIndex],['mobile/related-rules.inc',relatedInc+'\n']])
+  ['reader.html',finalHtml],['index.html',indexHtml],['scripts/data.js',dataJs],...(config.dedicatedMobile&&!config.coverImage?[]:[['styles/book.css',generatedBookCss]]),...(config.rosterSupport?[['scripts/roster-data.js',rosterDataJs]]:[]),...(config.dedicatedMobile?[]:[['scripts/app.js',appJs]]),...(config.dedicatedMobile?[]:[['mobile/index.html',mobileIndex],['mobile/related-rules.inc',relatedInc+'\n']])
 ]);
 const errors=[];
 if(detachments.length!==config.expected.matchedDetachments)errors.push(`expected ${config.expected.matchedDetachments} detachments, got ${detachments.length}`);
@@ -291,5 +292,5 @@ if(ownUnits.filter(unit=>unit.status==='Warhammer Legends').length!==config.expe
 if(new Set(units.map(unit=>unit.id)).size!==units.length)errors.push('duplicate unit IDs');
 if([...outputs.values()].some(value=>/\uFFFD|вЂ|вњ|в†|В·/.test(value)))errors.push('mojibake in generated output');
 if(errors.length)throw new Error(errors.join('\n'));
-for(const [relative,content] of outputs){const file=path.join(root,relative);if(check){if(!fs.existsSync(file)||fs.readFileSync(file,'utf8')!==content)throw new Error(`${relative} is stale`);}else{fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,content);}}
+for(const [relative,content] of outputs){const file=path.join(root,relative);if(check){if(!fs.existsSync(file)||normalizedEol(fs.readFileSync(file,'utf8'))!==normalizedEol(content))throw new Error(`${relative} is stale`);}else{fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,content);}}
 console.log(`${check?'Checked':'Built'} ${config.title}: ${units.length} datasheets, ${detachments.length} detachments, ${terms.size} local terms`);

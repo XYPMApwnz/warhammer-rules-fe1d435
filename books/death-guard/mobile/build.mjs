@@ -122,10 +122,9 @@ for (const context of Object.values(glossaryContext)) {
 function page(route) {
   const relatedSection = route.type === 'unit' ? `
   <section class="related-rules" id="relatedRules" aria-labelledby="relatedRulesTitle">
-    <header class="related-rules-head"><div><span>Datasheet tools</span><h2>${route.enhancementsAllowed ? 'Compatible Stratagems &amp; Enhancements' : 'Compatible Stratagems'}</h2></div></header>
+    <header class="related-rules-head"><div><span>Datasheet tools</span><h2>Compatible Stratagems</h2></div></header>
     <div class="related-controls">
-      <label>Detachment<select id="relatedDetachment"><option value="all">All detachments</option>${detachments.map(item => `<option value="${item.id.slice(11)}">${item.title}</option>`).join('')}</select></label>
-      ${route.enhancementsAllowed ? '<div class="related-tabs" role="group" aria-label="Rule type"><button type="button" data-related-tab="stratagems" aria-pressed="true">Stratagems</button><button type="button" data-related-tab="enhancements" aria-pressed="false">Enhancements</button></div>' : ''}
+      <label>Detachment<select id="relatedDetachment">${detachments.map(item => `<option value="${item.id.slice(11)}">${item.title}</option>`).join('')}</select></label>
     </div>
     <div class="related-content" id="relatedRulesContent"><p class="related-status">Loading rules&hellip;</p></div>
   </section>` : '';
@@ -178,7 +177,7 @@ function page(route) {
   <script src="../../shared/roster-parser.js?v=2"></script>
   <script src="../../../roster-guides/points-data.js?v=6"></script>
   <script src="../../shared/roster-enhancements.js?v=3"></script>
-  <script src="./mobile.js?v=15"></script>
+  <script src="./mobile.js?v=16"></script>
 </body>
 </html>`;
 }

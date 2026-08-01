@@ -1,5 +1,8 @@
-(function () {
+(async function () {
   'use strict';
+
+  const scriptUrl=document.currentScript.src;
+  const compatibleRuntime=await import(new URL('../scripts/compatible-stratagems-runtime.mjs?v=1',scriptUrl));
 
   const navButton = document.getElementById('navButton');
   const scrim = document.getElementById('navScrim');
@@ -23,7 +26,8 @@
   let relatedKind = 'stratagems';
   const unit = document.querySelector('.unit-card');
   const params = new URLSearchParams(location.search);
-  const relatedRulesEnabled = window.DGRelatedRules?.enabled === true;
+  const relatedRulesEnabled = compatibleRuntime.compatibleStratagemsReviewEnabled;
+  let compatibleRulesMatrix = null;
   if (!relatedRulesEnabled) relatedRules?.remove();
 
   if (params.get('roster') && unit && window.WHRosterParser && window.WHRosterEnhancements) {
@@ -88,29 +92,26 @@
   });
 
   function filterRelated() {
-    if (!relatedContent || !unit) return;
+    if (!relatedContent || !unit || !compatibleRulesMatrix) return;
     const selected = relatedDetachment.value;
-    const unitProfile = window.DGRelatedRules.profile(unit);
-    relatedContent.querySelectorAll('.stratagem,.enhancement').forEach(card => {
-      const result=window.DGRelatedRules.match(card,unitProfile);
-      card.hidden=result.state==='no-match';
-      card.dataset.matchState=result.state;
+    const rules=compatibleRuntime.getCompatibleStratagems(compatibleRulesMatrix,unit.id,{detachmentId:selected,warlord:unit.dataset.rosterWarlord==='true'}),byId=new Map(rules.map(rule=>[rule.ruleId,rule]));
+    relatedContent.querySelectorAll('.stratagem').forEach(card => {
+      const result=byId.get(card.id);
+      card.hidden=!result;
+      card.dataset.matchState=result?.state||'no-match';
       card.querySelector(':scope > .compatibility-status')?.remove();
-      if(result.state==='conditional'){
+      if(result?.state==='conditional'){
         const status=document.createElement('p');status.className='compatibility-status';
-        status.innerHTML='<strong>Conditionally compatible</strong><span>Check the full card conditions</span>';
+        status.innerHTML='<strong>Conditionally compatible</strong><span></span>';
+        status.querySelector('span').textContent=compatibleRuntime.conditionLabels[result.condition];
         card.prepend(status);
       }
     });
-    const enhancementTab = relatedRules.querySelector('[data-related-tab="enhancements"]');
-    const hasEnhancements = [...relatedContent.querySelectorAll('.enhancement')].some(card => !card.hidden);
-    if (enhancementTab) enhancementTab.hidden = !hasEnhancements;
-    if (relatedKind === 'enhancements' && !hasEnhancements) relatedKind = 'stratagems';
     relatedContent.querySelectorAll('[data-related-kind]').forEach(group => {
-      group.hidden = group.dataset.relatedKind !== relatedKind || ![...group.querySelectorAll('.stratagem,.enhancement')].some(card => !card.hidden);
+      group.hidden = group.dataset.relatedKind !== 'stratagems' || ![...group.querySelectorAll('.stratagem')].some(card => !card.hidden);
     });
     relatedContent.querySelectorAll('.related-detachment').forEach(section => {
-      const chosen = section.dataset.detachment === 'core' || selected === 'all' || section.dataset.detachment === selected;
+      const chosen = section.dataset.detachment === selected;
       section.hidden = !chosen || ![...section.querySelectorAll('[data-related-kind]')].some(group => !group.hidden);
     });
     relatedRules.querySelectorAll('[data-related-tab]').forEach(button => {
@@ -125,9 +126,9 @@
   async function loadRelated() {
     if (relatedLoaded) return;
     try {
-      const response = await fetch('./related-rules.inc?v=2');
+      const [response,matrix] = await Promise.all([fetch('./related-rules.inc?v=3'),compatibleRuntime.loadCompatibleStratagems(new URL('../generated/compatible-rules.json',scriptUrl))]);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      relatedContent.innerHTML = await response.text();
+      relatedContent.innerHTML = await response.text();compatibleRulesMatrix=matrix;
       relatedLoaded = true;
       filterRelated();
     } catch {

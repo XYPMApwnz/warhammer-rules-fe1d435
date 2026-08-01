@@ -254,7 +254,7 @@ check('detachment Stratagems use the shared explicit grid',!contentCss.includes(
 check('full entry becomes a full-screen mobile dialog',/@media\s*\(max-width:\s*800px\)[\s\S]*?\.full-entry-dialog\s*\{[^}]*height:\s*100%/.test(read('styles/popups.css')));
 check('each detachment has a visible Stratagems destination',(markup.match(/class="detachment-part"[^>]*data-track="[^"]+">\s*<h4 class="detachment-part-title">Stratagems<\/h4>/g)||[]).length===bookData.audit.detachments);
 check('no inline style or inline script',!/<style|<script(?![^>]*src=)/i.test(html));
-check('only related rules are fetched at runtime',files.every(file=>file==='scripts/app.js'?((read(file).match(/\bfetch\s*\(/g)||[]).length===1&&read(file).includes("fetch('./mobile/related-rules.inc?v=2')")):!/\bfetch\s*\(/.test(read(file))));
+check('only related rules are fetched at runtime',files.every(file=>file==='scripts/app.js'?((read(file).match(/\bfetch\s*\(/g)||[]).length===1&&read(file).includes("fetch('./mobile/related-rules.inc?v=3')")):!/\bfetch\s*\(/.test(read(file))));
 check('Roster Guide passes its detachments to the shared related-rules view',read('scripts/roster-filter.js').includes('window.DG_ROSTER_GUIDE')&&read('scripts/app.js').includes('window.DG_ROSTER_GUIDE?.detachmentIds')&&read('scripts/app.js').includes('rosterDetachments.has(section.dataset.detachment)'));
 check('service worker registration is protocol gated',read('scripts/app.js').includes("location.protocol==='http:'||location.protocol==='https:'"));
 check('weapon rows receive explicit table semantics',read('scripts/ui-controllers.js').includes("row.setAttribute('role','row')"));

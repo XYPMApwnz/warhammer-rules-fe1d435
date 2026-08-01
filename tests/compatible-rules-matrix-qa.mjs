@@ -25,7 +25,7 @@ for(const [unitId,rules] of Object.entries(matrix.units))for(const rule of rules
   assert.notEqual(ledgerByPair.get(`${unitId}|${rule.ruleId}`)?.decision,'reject',`reject leaked: ${unitId}/${rule.ruleId}`);
   assert(rule.state==='match'||conditions.has(rule.condition),`invalid condition: ${rule.ruleId}`);
 }
-assert.equal(compatibleStratagemsReviewEnabled,false,'new path must remain review-gated');
+assert.equal(compatibleStratagemsReviewEnabled,true,'new path must be enabled on the review branch');
 const builder=fs.readFileSync(path.join(root,'books/death-guard/tools/build-compatible-rules.mjs'),'utf8');
 assert(!/related-rules-matcher|TARGET|keywords/i.test(builder),'builder must not infer eligibility');
 const warlord=Object.entries(matrix.units).flatMap(([unitId,rules])=>rules.filter(rule=>rule.condition==='warlord-unknown').map(rule=>[unitId,rule]))[0];
@@ -33,5 +33,6 @@ assert(warlord,'matrix must contain a Warlord condition');
 assert.equal(getCompatibleStratagems(matrix,warlord[0],{detachmentId:warlord[1].detachmentId,warlord:true}).find(rule=>rule.ruleId===warlord[1].ruleId).state,'match');
 const detachment=Object.entries(matrix.units).flatMap(([unitId,rules])=>rules.filter(rule=>rule.condition==='detachment-not-selected').map(rule=>[unitId,rule]))[0];
 assert.equal(getCompatibleStratagems(matrix,detachment[0],{detachmentId:detachment[1].detachmentId}).find(rule=>rule.ruleId===detachment[1].ruleId).state,'match');
+assert.equal(getCompatibleStratagems(matrix,detachment[0],{detachmentId:detachment[1].detachmentId.replace(/^detachment-/,'')}).find(rule=>rule.ruleId===detachment[1].ruleId).state,'match');
 assert.equal(getCompatibleStratagems(matrix,warlord[0],{detachmentId:'other'}).length,0);
 console.log('Death Guard compatible rules matrix QA passed.');

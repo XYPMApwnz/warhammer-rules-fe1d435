@@ -6,7 +6,7 @@ import {fileURLToPath} from 'node:url';
 import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
-const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
+const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
 let workerRevision='';
 const server=createServer(async(request,response)=>{
   try{
@@ -59,16 +59,17 @@ try{
   try{
     const {page,errors}=await observedPage(modalContext);
     const books=[
-      ['Death Guard','/books/death-guard/reader.html#unit-chaos-land-raider','/books/death-guard/mobile/chaos-land-raider.html','/books/death-guard/mobile/virulent-vectorium.html'],
-      ['Adeptus Mechanicus','/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers','/books/adeptus-mechanicus/mobile/skitarii-rangers.html','/books/adeptus-mechanicus/mobile/cohort-acquisitus.html'],
-      ['Tyranids','/books/tyranids/reader.html#unit-hive-tyrant','/books/tyranids/mobile/hive-tyrant.html','/books/tyranids/mobile/invasion-fleet.html'],
-      ["T'au Empire",'/books/tau-empire/reader.html#unit-breacher-team','/books/tau-empire/mobile/breacher-team.html','/books/tau-empire/mobile/kauyon.html']
+      ['Death Guard','/books/death-guard/reader.html#unit-chaos-land-raider','/books/death-guard/mobile/chaos-land-raider.html','/books/death-guard/mobile/virulent-vectorium.html',true],
+      ['Adeptus Mechanicus','/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers','/books/adeptus-mechanicus/mobile/skitarii-rangers.html','/books/adeptus-mechanicus/mobile/cohort-acquisitus.html',false],
+      ['Tyranids','/books/tyranids/reader.html#unit-hive-tyrant','/books/tyranids/mobile/hive-tyrant.html','/books/tyranids/mobile/invasion-fleet.html',false],
+      ["T'au Empire",'/books/tau-empire/reader.html#unit-breacher-team','/books/tau-empire/mobile/breacher-team.html','/books/tau-empire/mobile/kauyon.html',false]
     ];
     let profileCount=0;
-    for(const [name,desktop,mobile,detachment] of books){
+    for(const [name,desktop,mobile,detachment,reviewEnabled] of books){
       await page.goto(origin+desktop);
       assert.equal(await page.evaluate(()=>window.WHRelatedRules?.enabled),false,`${name} shared safety flag must be disabled`);
-      assert.equal(await page.locator('.related-rules-trigger,.related-rules-layer').count(),0,`${name} desktop Compatible Rules must not be installed`);
+      if(reviewEnabled)await page.locator('.related-rules-trigger').first().waitFor();
+      assert.equal(await page.locator('.related-rules-trigger').count()>0,reviewEnabled,`${name} desktop review integration state is wrong`);
       assert.ok(await page.locator('[id$="-stratagems"] .stratagem').count(),`${name} full Detachment Stratagems must remain available`);
       const parity=await page.evaluate(()=>[...document.querySelectorAll('.unit-card')].map(node=>{
         const fromDataset=WHRuleFacts.serializeRuleProfile(WHRuleFacts.profileFromDataset(node.dataset,{id:node.id}));
@@ -78,7 +79,7 @@ try{
       assert.ok(parity.length&&parity.every(item=>item.equal),`${name} browser dataset must equal its compiled plain record`);
       profileCount+=parity.length;
       await page.goto(origin+mobile);
-      assert.equal(await page.locator('#relatedRules').count(),0,`${name} Phone Mode Compatible Rules must be removed`);
+      assert.equal(await page.locator('#relatedRules').count()>0,reviewEnabled,`${name} Phone Mode review integration state is wrong`);
       await page.goto(origin+detachment);
       assert.ok(await page.locator('.stratagem').count(),`${name} Phone Mode Detachment Stratagems must remain available`);
     }
@@ -86,7 +87,7 @@ try{
     const malformed=await page.evaluate(()=>{try{WHRuleFacts.profileFromDataset({ruleFacts:'{bad'},{id:'unit-browser-bad'});return'';}catch(error){return error.message;}});
     assert.match(malformed,/unit-browser-bad: malformed data-rule-facts/);
     assert.deepEqual(errors,[]);
-    console.log('PASS Compatible Rules safety flag hides all four embedded desktop and Phone Mode interfaces');
+    console.log('PASS shared safety remains active while only the Death Guard review matrix is integrated');
   }finally{await modalContext.close();}
 
   const historyContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1194,height:834}});
@@ -137,7 +138,7 @@ try{
   try{
     const {page,errors}=await observedPage(relatedLayoutContext);
     await page.goto(`${origin}/books/death-guard/reader.html#unit-chaos-land-raider`);
-    assert.equal(await page.locator('.related-rules-trigger').count(),0,'Death Guard Related Rules UI must remain behind the safety flag');
+    await page.locator('#unit-chaos-land-raider .related-rules-trigger').waitFor();
     const matrix=await page.evaluate(async()=>{
       const vehicleIds=['unit-chaos-land-raider','unit-chaos-predator-annihilator','unit-chaos-predator-destructor','unit-defiler','unit-foetid-bloat-drone','unit-foetid-bloat-drone-with-heavy-blight-launcher','unit-helbrute','unit-myphitic-blight-hauler','unit-plagueburst-crawler','unit-chaos-rhino'];
       const html=await fetch('./mobile/related-rules.inc?v=2').then(response=>response.text()),template=document.createElement('template');
@@ -178,10 +179,20 @@ try{
     assert.notEqual(matrix.fixtures.landRaiderSmoke,'no-match');
     assert.equal(matrix.fixtures.defilerSmoke,'no-match');
     assert.equal(matrix.fixtures.landRaiderPlaguesurge,'no-match');
+    await page.locator('#unit-chaos-land-raider .related-rules-trigger').click();
+    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),1,'desktop must show one selected Detachment');
+    assert.equal(await page.locator('.related-rules-layer [data-rule-id="stratagem-disgustingly-resilient"]:not([hidden])').count(),1,'desktop must show the matrix-approved Stratagem');
+    assert.equal(await page.locator('.related-rules-layer .enhancement:visible').count(),0,'review integration must not revive legacy Enhancement matching');
+    assert.equal(await page.locator('.related-rules-layer [data-rule-id="stratagem-plaguesurge"] .compatibility-status span').textContent(),'Requires Warlord selection');
     await page.goto(`${origin}/books/death-guard/mobile/chaos-land-raider.html?view=mobile`);
-    assert.equal(await page.locator('#relatedRules').count(),0,'Death Guard Phone Mode Related Rules must remain behind the safety flag');
+    await page.locator('#relatedDetachment').selectOption('virulent-vectorium');
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('#relatedRulesContent [data-detachment="virulent-vectorium"] .stratagem').first().waitFor();
+    assert.equal(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count(),1,'Phone Mode must show one selected Detachment');
+    assert.equal(await page.locator('#stratagem-disgustingly-resilient:not([hidden])').count(),1,'Phone Mode must show the matrix-approved Stratagem');
+    assert.equal(await page.locator('#stratagem-plaguesurge .compatibility-status span').textContent(),'Requires Warlord selection');
     assert.deepEqual(errors,[]);
-    console.log('PASS Death Guard production profile preserves all 10 Vehicle keyword contracts; Related Rules safety flag is active');
+    console.log('PASS Death Guard review matrix uses the existing desktop and Phone Mode interfaces');
   }finally{await relatedLayoutContext.close();}
 
   const wargearContext=await browser.newContext({serviceWorkers:'block'});

@@ -5,7 +5,7 @@
     "playwright": "1.61.1"
   },
   "scripts": {
-    "death-guard:build": "node books/death-guard/tools/build-legends.mjs && node roster-guides/build-points.mjs && node glossary/tools/build-glossary.mjs && node books/death-guard/mobile/build.mjs",
+    "death-guard:build": "node books/death-guard/tools/build-legends.mjs && node books/death-guard/tools/build-compatible-rules.mjs && node roster-guides/build-points.mjs && node glossary/tools/build-glossary.mjs && node books/death-guard/mobile/build.mjs",
     "core:build": "node books/core-rules/reader/build.mjs",
     "mechanicus:build": "node books/adeptus-mechanicus/tools/extract-points.mjs && node books/adeptus-mechanicus/tools/extract-datasheets.mjs && node roster-guides/build-points.mjs && node books/adeptus-mechanicus/tools/build-full-content.mjs && node glossary/tools/build-glossary.mjs && node books/adeptus-mechanicus/tools/build-full-content.mjs && node books/adeptus-mechanicus/mobile/build.mjs",
     "tyranids:build": "python books/tyranids/tools/extract-faction-pack.py && node books/shared/tools/extract-bsdata-11e.mjs books/tyranids/sources/bsdata-extract.config.json && node books/shared/tools/build-army-book.mjs books/tyranids/book.config.json && node glossary/tools/build-glossary.mjs && node books/shared/tools/build-army-book.mjs books/tyranids/book.config.json && node books/tyranids/mobile/build.mjs",

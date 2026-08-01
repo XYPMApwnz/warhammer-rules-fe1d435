@@ -96,8 +96,6 @@ for(const id of ['core-stratagem-insane-bravery','core-stratagem-rapid-ingress']
 
 for(const file of [
   'books/shared/army-related-rules.js',
-  'books/death-guard/scripts/app.js',
-  'books/death-guard/mobile/mobile.js',
   'books/adeptus-mechanicus/scripts/related-rules.js',
   'books/adeptus-mechanicus/mobile/mobile.js',
   'books/tyranids/mobile/mobile.js',
@@ -109,6 +107,14 @@ for(const file of [
   assert.doesNotMatch(source,/Check WHEN and TARGET/);
   assert.doesNotMatch(source,/result\.reasons/);
 }
+for(const file of ['books/death-guard/scripts/app.js','books/death-guard/mobile/mobile.js']){
+  const source=read(file);
+  assert.match(source,/Conditionally compatible/);
+  assert.match(source,/compatibleRuntime\.conditionLabels/);
+  assert.doesNotMatch(source,/result\.reasons/);
+}
+const dgReviewRuntime=read('books/death-guard/scripts/compatible-stratagems-runtime.mjs');
+for(const label of ['Requires an Attached Unit','Requires a second Character','Requires Warlord selection','Requires Detachment selection'])assert.ok(dgReviewRuntime.includes(label));
 
 const css=read('books/death-guard/styles/content.css');
 assert.match(css,/\.stratagem>\.compatibility-status\{grid-column:2\}/,'conditional compatibility status must clear the Stratagem CP rail');

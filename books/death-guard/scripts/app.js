@@ -15,6 +15,7 @@
 
   function initRelatedRules(){
     if(!compatibleRuntime?.compatibleStratagemsReviewEnabled)return null;
+    const rosterGuide=window.DG_ROSTER_GUIDE,rosterMode=Boolean(rosterGuide);
     const layer=document.createElement('div');
     layer.className='related-rules-layer';layer.hidden=true;
     layer.innerHTML='<section class="related-rules-dialog" role="dialog" aria-modal="true" aria-labelledby="relatedRulesTitle"><header><div><span>Datasheet tools</span><h2 id="relatedRulesTitle">Compatible Stratagems</h2></div><button type="button" class="related-rules-close" aria-label="Close">&times;</button></header><div class="related-rules-body"><p>Loading rules&hellip;</p></div></section>';
@@ -24,7 +25,7 @@
     let modal;
     const filter=()=>{
       if(!content||!unit)return;
-      const rules=compatibleRuntime.getCompatibleStratagems(compatibleRulesMatrix,unit.id,{detachmentId:detachment,warlord:unit.dataset.rosterWarlord==='true'}),byId=new Map(rules.map(rule=>[rule.ruleId,rule]));
+      const compatible=compatibleRuntime.getCompatibleStratagems(compatibleRulesMatrix,unit.id,{detachmentId:detachment,warlord:unit.dataset.rosterWarlord==='true'}),assigned=new Set(rosterGuide?.enhancementRuleIdsByUnitId?.[unit.id]||[]),rules=rosterMode?compatible.filter(rule=>rule.kind!=='enhancement'||assigned.has(rule.ruleId)):compatible,byId=new Map(rules.map(rule=>[rule.ruleId,rule]));
       const hasEnhancements=rules.some(rule=>rule.kind==='enhancement');
       if(kind==='enhancements'&&!hasEnhancements)kind='stratagems';
       tabs.querySelector('[data-kind="enhancements"]').hidden=!hasEnhancements;
@@ -70,7 +71,7 @@
           const fragment=template.content.cloneNode(true);
           fragment.querySelectorAll('[id]').forEach(node=>{node.dataset.ruleId=node.id;node.removeAttribute('id');});
           sections=[...fragment.querySelectorAll('.related-detachment')];
-          const rosterDetachments=new Set(window.DG_ROSTER_GUIDE?.detachmentIds||[]),rosterMode=rosterDetachments.size>0;
+          const rosterDetachments=new Set(rosterGuide?.detachmentIds||[]);
           if(rosterMode){sections.forEach(section=>{if(section.dataset.detachment!=='core'&&!rosterDetachments.has(section.dataset.detachment))section.remove();});sections=sections.filter(section=>section.dataset.detachment==='core'||rosterDetachments.has(section.dataset.detachment));}
           const detachmentSections=sections.filter(section=>section.dataset.detachment!=='core');
           const choices=detachmentSections.map(section=>[section.dataset.detachment,section.querySelector('h2').textContent]);

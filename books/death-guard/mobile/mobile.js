@@ -29,6 +29,7 @@
   const params = new URLSearchParams(location.search);
   const relatedRulesEnabled = Boolean(compatibleRuntime?.compatibleStratagemsReviewEnabled);
   let compatibleRulesMatrix = null;
+  let assignedEnhancementIds = null;
   if (!relatedRulesEnabled) relatedRules?.remove();
 
   if (params.get('roster') && unit && window.WHRosterParser && window.WHRosterEnhancements) {
@@ -38,6 +39,8 @@
       const parsed = record?.sourceText ? window.WHRosterParser.parse(record.sourceText) : record?.roster;
       const unitSlug = unit.id.replace(/^unit-/, '');
       const matching = (parsed?.units || []).filter(item => String(item.name || '').toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') === unitSlug);
+      const ownerIds=new Set(matching.map(item=>item.id));
+      assignedEnhancementIds=new Set((parsed?.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&ownerIds.has(item.ownerUnitId)).map(item=>`enhancement-${String(item.name||'').toLowerCase().replace(/['\u2019]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}`));
       if (matching.length) window.WHRosterEnhancements.decorate(unit, parsed, matching);
     } catch {}
   }
@@ -95,7 +98,7 @@
   function filterRelated() {
     if (!relatedContent || !unit || !compatibleRulesMatrix) return;
     const selected = relatedDetachment.value;
-    const rules=compatibleRuntime.getCompatibleStratagems(compatibleRulesMatrix,unit.id,{detachmentId:selected,warlord:unit.dataset.rosterWarlord==='true'}),byId=new Map(rules.map(rule=>[rule.ruleId,rule]));
+    const compatible=compatibleRuntime.getCompatibleStratagems(compatibleRulesMatrix,unit.id,{detachmentId:selected,warlord:unit.dataset.rosterWarlord==='true'}),rules=assignedEnhancementIds?compatible.filter(rule=>rule.kind!=='enhancement'||assignedEnhancementIds.has(rule.ruleId)):compatible,byId=new Map(rules.map(rule=>[rule.ruleId,rule]));
     const hasEnhancements=rules.some(rule=>rule.kind==='enhancement');
     if(relatedKind==='enhancements'&&!hasEnhancements)relatedKind='stratagems';
     relatedRules.querySelector('[data-related-tab="enhancements"]').hidden=!hasEnhancements;

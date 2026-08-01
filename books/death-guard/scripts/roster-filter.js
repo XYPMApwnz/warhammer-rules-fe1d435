@@ -106,7 +106,6 @@
   const storedDetachments = roster.detachments?.length ? roster.detachments : [{ label:roster.detachment, disposition:roster.disposition }];
   const detachments = storedDetachments.flatMap((item) => splitLabels(item.label).map((label) => ({ ...item, label, name:label.replace(/\s*\([^)]*\)\s*$/, "") })));
   const detachmentIds = new Set(detachments.map((item) => `detachment-${slug(item.name || item.label.split("(")[0])}`));
-  window.DG_ROSTER_GUIDE = Object.freeze({ detachmentIds:[...detachmentIds].map((id) => id.replace(/^detachment-/, "")) });
   const detachmentLabel = detachments.map((item) => item.label).join(" + ");
   const selected = new Map();
 
@@ -119,6 +118,14 @@
     entry.loadout.push(...[unit.wargear, ...(unit.models || []).flatMap((model) => [model.wargear, ...(model.loadouts || []).map((loadout) => loadout.wargear)])].filter(Boolean));
     selected.set(id, entry);
   }
+  const enhancementRuleIdsByUnitId={};
+  for(const enhancement of roster.enhancements||[]){
+    if(enhancement?.ownerStatus!=='resolved'||!enhancement.ownerUnitId)continue;
+    const owner=roster.units.find(unit=>unit.id===enhancement.ownerUnitId);
+    if(!owner)continue;
+    (enhancementRuleIdsByUnitId[`unit-${slug(owner.name)}`]||=[]).push(`enhancement-${slug(enhancement.name)}`);
+  }
+  window.DG_ROSTER_GUIDE=Object.freeze({detachmentIds:[...detachmentIds].map(id=>id.replace(/^detachment-/,'')),enhancementRuleIdsByUnitId});
 
   document.title = `${roster.faction} Roster Guide`;
   document.querySelector(".app-brand strong").textContent = `${roster.faction} Roster Guide`;

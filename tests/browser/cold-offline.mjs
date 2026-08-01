@@ -228,6 +228,24 @@ try{
     await page.locator('#relatedRulesContent [data-detachment="flyblown-host"] .stratagem:not([hidden])').first().waitFor();
     await page.locator('[data-related-tab="enhancements"]').click();
     assert.equal(await page.locator('#relatedRulesContent [data-detachment="flyblown-host"] [data-enhancement-tags="UPGRADE"]:visible').count(),2,'Phone Mode Plague Marines must show both Flyblown Host UPGRADE cards');
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'dg-owner-filter',roster:{faction:'Death Guard',detachment:'Contagion Engines',detachments:[{label:'Contagion Engines'}],declared:210,units:[{id:'dg-owner-1',name:'Helbrute',quantity:1,points:110},{id:'dg-owner-2',name:'Myphitic Blight-hauler',quantity:1,points:100}],enhancements:[{name:'Parasitic Woe-Reaper',ownerUnitId:'dg-owner-1',ownerStatus:'resolved'}]}}])));
+    await page.goto(`${origin}/books/death-guard/reader.html?roster=dg-owner-filter#unit-helbrute`);
+    await page.locator('#unit-helbrute .related-rules-trigger').click();
+    await page.locator('.related-rules-layer [data-kind="enhancements"]').click();
+    assert.deepEqual(await page.locator('.related-rules-layer .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId)),['enhancement-parasitic-woe-reaper'],'desktop roster mode must show only the UPGRADE assigned to this ownerUnitId');
+    await page.locator('.related-rules-layer .related-rules-close').click();
+    await page.locator('#unit-myphitic-blight-hauler .related-rules-trigger').click();
+    assert.equal(await page.locator('.related-rules-layer [data-kind="enhancements"]:visible').count(),0,'desktop roster unit without an assignment must not show Enhancement choices');
+    await page.goto(`${origin}/books/death-guard/mobile/helbrute.html?view=mobile&roster=dg-owner-filter`);
+    await page.locator('#relatedDetachment').selectOption('contagion-engines');
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
+    await page.locator('[data-related-tab="enhancements"]').click();
+    assert.deepEqual(await page.locator('#relatedRulesContent .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.id)),['enhancement-parasitic-woe-reaper'],'Phone Mode roster must show only the UPGRADE assigned to this ownerUnitId');
+    await page.goto(`${origin}/books/death-guard/mobile/myphitic-blight-hauler.html?view=mobile&roster=dg-owner-filter`);
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
+    assert.equal(await page.locator('[data-related-tab="enhancements"]:visible').count(),0,'Phone Mode roster unit without an assignment must not show Enhancement choices');
     assert.deepEqual(errors,[]);
     console.log('PASS Death Guard review matrix uses the existing desktop and Phone Mode interfaces');
   }finally{await relatedLayoutContext.close();}

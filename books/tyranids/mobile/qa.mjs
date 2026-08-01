@@ -9,7 +9,7 @@ for(const file of files){
   assert.match(html,/\.\/mobile\.js\?v=4/);
   assert.match(html,/\.\/mobile\.css\?v=1/);
   assert.match(html,/rule-facts\.js\?v=4/);
-  assert.match(html,/related-rules-matcher\.js\?v=5/);
+  assert.match(html,/related-rules-matcher\.js\?v=6/);
   assert.match(html,/army-related-rules\.js\?v=9/);
   assert.match(html,/glossary-return\.js\?v=3/);
   assert.ok((await stat(new URL(file,root))).size<100_000,`${file} must stay a focused Phone Mode page`);

@@ -210,7 +210,7 @@ const normalizedHtml=html
   .replace('../shared/popup-content.js"','../shared/popup-content.js?v=3"')
   .replace('../shared/glossary-autolink.js"','../shared/glossary-autolink.js?v=8"')
   .replace('<script src="../shared/related-rules-matcher.js">','<script src="../shared/rule-facts.js?v=4"></script><script src="../shared/related-rules-matcher.js">')
-  .replace('../shared/related-rules-matcher.js"','../shared/related-rules-matcher.js?v=5"')
+  .replace('../shared/related-rules-matcher.js"','../shared/related-rules-matcher.js?v=6"')
   .replace('<script src="./scripts/data.js">',`${config.rosterSupport?'<script src="../shared/roster-parser.js?v=2"></script><script src="../shared/roster-entities.js?v=1"></script>':''}<script src="./scripts/data.js">`)
   .replace('</script><script src="../death-guard/scripts/navigation-controller.js">',`</script>${config.rosterSupport?'<script src="./scripts/roster-data.js?v=1"></script><script src="../shared/book-roster-enhancements.js?v=1"></script>':''}<script src="../death-guard/scripts/navigation-controller.js">`)
   .replace('../death-guard/scripts/navigation-controller.js"','../death-guard/scripts/navigation-controller.js?v=16"')

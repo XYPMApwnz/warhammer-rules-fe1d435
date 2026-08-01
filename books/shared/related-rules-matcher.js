@@ -19,7 +19,7 @@
   function canonical(value){
     if(value?.roles)return value;
     if(value?.owner)return {...value,roles:[{
-      id:'owner',side:'friendly',subject:value.owner.subject,count:1,selector:value.owner.selector||{}
+      id:'owner',side:'friendly',subject:value.owner.subject,count:1,relationMode:'direct',selector:value.owner.selector||{}
     }]};
     return {v:1,roles:(value?.targets||[]).map((target,index)=>({
       id:`target-${index+1}`,side:target.side||'friendly',subject:target.subject||'unit',count:target.count||1,
@@ -33,7 +33,7 @@
     if(ids.length&&!ids.some(id=>contextIds.has(id)))return 'no-match';
     const possibleKeywords=context.possibleKeywords||keywords;
     if((selector.noneKeywords||[]).some(value=>possibleKeywords.has(normalize(value))))return 'no-match';
-    let conditional=context.formationUnknown===true;
+    let conditional=false;
     for(const value of selector.allKeywords||[]){
       const keyword=normalize(value);
       if(!keywords.has(keyword)){
@@ -67,29 +67,37 @@
     return conditional?'conditional':'match';
   }
   function relationContexts(context){
+    if(context.attachmentKnown===true&&!context.formationRequired)return [context];
     const relations=relationKeys.flatMap(key=>context.relations?.[key]||[]);
-    const contexts=context.formationRequired?[]:[context];
+    const contexts=context.formationRequired?[]:[{...context,attached:false,attachmentKnown:true}];
     for(const relation of relations){
-      const removed=relation.removeKeywords||set(),base=new Set([...(context.keywords||set())].filter(keyword=>!removed.has(keyword)));
-      const combined=new Set([...base,...(relation.keywords||set())]);
+      const removed=relation.removeKeywords||set(),combined=new Set([...(context.keywords||set()),...(relation.keywords||set())]);
+      for(const keyword of removed)combined.delete(keyword);
+      const conditionalKeywords=new Set(context.conditionalKeywords||set());
+      for(const keyword of removed)conditionalKeywords.delete(keyword);
       const mandatory=relation.mandatory===true;
-      contexts.push({...context,unitIds:new Set([context.unitId,relation.unitId].filter(Boolean)),keywords:mandatory?combined:base,conditionalKeywords:mandatory?(context.conditionalKeywords||set()):new Set([...(context.conditionalKeywords||set()),...(relation.keywords||set())]),possibleKeywords:combined,attached:true,attachmentKnown:mandatory,formationUnknown:!mandatory,characterCount:mandatory?(context.characterCount||0)+(relation.characterCount||0):context.characterCount,possibleCharacterCount:relation.maxCharacters??null});
+      contexts.push({...context,unitIds:new Set([context.unitId,relation.unitId].filter(Boolean)),keywords:combined,conditionalKeywords,possibleKeywords:combined,attached:true,attachmentKnown:true,characterCount:(context.characterCount||0)+(relation.characterCount||0),possibleCharacterCount:relation.maxCharacters??null});
     }
     return contexts;
   }
-  function selectorResult(selector,context,subject){
+  function selectorResult(selector,context,subject,relationMode){
     const choices=selector.alternatives?.length?selector.alternatives:[selector];
     const candidates=subject==='model'
       ?(context.members||[{keywords:context.intrinsicKeywords||context.keywords}]).map(member=>({...context,...member,unitId:member.unitId||context.unitId,keywords:member.keywords||context.intrinsicKeywords}))
-      :(context.candidates||relationContexts(context));
-    let conditional=false;
-    for(const choice of choices)for(const raw of candidates){
+      :(relationMode==='direct'?[context]:(context.candidates||relationContexts(context)));
+    const results=candidates.map(raw=>{
       const candidate={...context,...raw};
-      const result=keywordResult(choice,candidate.keywords||candidate.effectiveKeywords||set(),candidate);
-      if(result==='match')return 'match';
-      if(result==='conditional')conditional=true;
-    }
-    return conditional?'conditional':'no-match';
+      let conditional=false;
+      for(const choice of choices){
+        const result=keywordResult(choice,candidate.keywords||candidate.effectiveKeywords||set(),candidate);
+        if(result==='match')return 'match';
+        if(result==='conditional')conditional=true;
+      }
+      return conditional?'conditional':'no-match';
+    });
+    if(results.every(result=>result==='match'))return 'match';
+    if(results.every(result=>result==='no-match'))return 'no-match';
+    return 'conditional';
   }
   function match(eligibility,context){
     const schema=canonical(eligibility),roles=schema.roles.filter(role=>role.side==='friendly'||role.side==='either');
@@ -98,7 +106,7 @@
       const subject=role.subject||'unit';
       if(!supportedSubjects.has(subject))return {state:'no-match',matchedRoleIds:[],reasons:[`Unsupported subject: ${subject}`]};
       if(subject==='objective')continue;
-      const result=selectorResult(role.selector||{},context,subject);
+      const result=selectorResult(role.selector||{},context,subject,role.relationMode);
       if(result==='match')return {state:schema.conditions?.length?'conditional':'match',matchedRoleIds:[role.id],reasons:schema.conditions||[]};
       if(result==='conditional')conditional=true;
     }

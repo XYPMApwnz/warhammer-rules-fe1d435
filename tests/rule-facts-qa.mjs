@@ -134,6 +134,15 @@ for(const book of ['tyranids','tau-empire']){
     assert.deepEqual(actual,expected,`${book}/${sourceUnit.id}: source ${sourceKey} relation parity`);
   }
 }
+const lockedRelations=read('tests/fixtures/relation-inventory.json');
+for(const book of ['death-guard','adeptus-mechanicus']){
+  const actual={};
+  for(const [address,profile] of desktopProfiles)if(address.startsWith(`${book}/`)&&(profile.relations.canLead.length||profile.relations.canSupport.length))actual[profile.unitId]={
+    leader:profile.relations.canLead.map(item=>item.unitId),
+    support:profile.relations.canSupport.map(item=>item.unitId)
+  };
+  assert.deepEqual(actual,lockedRelations[book],`${book}: complete outgoing relation inventory`);
+}
 assert.deepEqual(desktopProfiles.get('tau-empire/unit-commander-in-coldstar-battlesuit').relations.canLead.map(item=>item.unitId),['unit-crisis-battlesuits','unit-crisis-fireknife-battlesuits','unit-crisis-starscythe-battlesuits','unit-crisis-sunforge-battlesuits']);
 assert.ok(desktopProfiles.get('death-guard/unit-biologus-putrifier').relations.canSupport.some(item=>item.unitId==='unit-plague-marines'));
 const datasmithRelation=desktopProfiles.get('adeptus-mechanicus/unit-cybernetica-datasmith').relations.canSupport.find(item=>item.unitId==='unit-kastelan-robots');
@@ -172,10 +181,19 @@ const possible=ruleFacts.profileFromRecord({...fixtureRecord,attached:null,attac
 assert.equal(matcher.match(unitRole({allKeywords:['CHARACTER']}),possible).state,'conditional');
 assert.equal(matcher.match(unitRole({allKeywords:['CHARACTER'],attached:true}),possible).state,'conditional');
 assert.equal(matcher.match(unitRole({attached:false}),possible).state,'conditional');
+assert.equal(matcher.match(unitRole({noneKeywords:['CHARACTER']}),possible).state,'conditional','A possible Leader must make a negative keyword selector conditional');
+const removable=ruleFacts.profileFromRecord({unitId:'unit-infantry',keywords:['INFANTRY'],relations:{canLead:[{unitId:'unit-partner',keywords:['CHARACTER'],removeKeywords:['INFANTRY']} ]}});
+assert.equal(matcher.match(unitRole({allKeywords:['INFANTRY']}),removable).state,'conditional','A possible formation that removes a required keyword must remain conditional');
 assert.equal(matcher.match({v:1,roles:[{id:'model',side:'friendly',subject:'model',selector:{allKeywords:['CHARACTER']}}]},possible).state,'no-match');
+const upgrade={v:1,tags:['UPGRADE'],owner:{subject:'unit',selector:{unitIds:['unit-attached']}}};
+assert.equal(matcher.match(upgrade,possible).state,'no-match','Enhancement owners must ignore relation expansion');
+assert.equal(matcher.match(unitRole({unitIds:['unit-attached']}),possible).state,'conditional','Stratagem unit targets may use a possible Attached Unit');
 const confirmed=ruleFacts.profileFromRecord({unitId:'unit-fixture',keywords:['DEATH GUARD'],candidates:[{unitId:'unit-attached',keywords:['DEATH GUARD','CHARACTER'],attached:true,attachmentKnown:true,characterCount:1}]});
 assert.equal(matcher.match(unitRole({allKeywords:['CHARACTER'],attached:true}),confirmed).state,'match');
 const mandatory=ruleFacts.profileFromRecord({unitId:'unit-datasmith',keywords:['ADEPTUS MECHANICUS','INFANTRY','CHARACTER'],attached:true,attachmentKnown:true,formationRequired:true,characterCount:1,relations:{canSupport:[{unitId:'unit-kastelan',keywords:['ADEPTUS MECHANICUS','VEHICLE'],removeKeywords:['INFANTRY'],mandatory:true,characterCount:0,maxCharacters:1}]}});
 assert.equal(matcher.match(unitRole({allKeywords:['ADEPTUS MECHANICUS','VEHICLE']}),mandatory).state,'match');
 assert.equal(matcher.match(unitRole({allKeywords:['ADEPTUS MECHANICUS','INFANTRY']}),mandatory).state,'no-match');
+const mandatoryReverse=ruleFacts.profileFromRecord({unitId:'unit-kastelan',keywords:['ADEPTUS MECHANICUS','VEHICLE','WALKER'],formationRequired:true,relations:{canBeSupportedBy:[{unitId:'unit-datasmith',keywords:['ADEPTUS MECHANICUS','INFANTRY','CHARACTER','TECH-PRIEST'],removeKeywords:['INFANTRY'],mandatory:true,characterCount:1,maxCharacters:1}]}});
+for(const keyword of ['VEHICLE','WALKER','TECH-PRIEST'])assert.equal(matcher.match(unitRole({allKeywords:[keyword]}),mandatoryReverse).state,'match',`Kastelan perspective loses ${keyword}`);
+assert.equal(matcher.match(unitRole({allKeywords:['INFANTRY']}),mandatoryReverse).state,'no-match','Kastelan perspective restores removed INFANTRY');
 console.log(`PASS source facts parity: ${profiles} desktop + ${mobileProfiles} Phone Mode datasheets`);

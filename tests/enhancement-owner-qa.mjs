@@ -11,11 +11,10 @@ const sandbox={window:{}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'books/shared/related-rules-matcher.js'),'utf8'),sandbox);
 const matcher=sandbox.window.WHRelatedRules;
 const normalize=ruleFacts.normalizeKeyword;
+const decode=value=>String(value||'').replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&#39;',"'");
 const profiles=book=>{
   const html=fs.readFileSync(path.join(root,`books/${book}/reader.html`),'utf8');
-  return [...html.matchAll(/<article class="unit-card\b[^>]*id="([^"]+)"[^>]*data-keywords="([^"]*)"[^>]*(?:data-related-candidates="([^"]*)")?/g)].map(match=>{
-    return ruleFacts.profileFromRecord({unitId:match[1],keywords:match[2].split('|')});
-  });
+  return [...html.matchAll(/<article class="unit-card\b[^>]*id="([^"]+)"[^>]*data-rule-facts="([^"]+)"/g)].map(match=>ruleFacts.profileFromDataset({ruleFacts:decode(match[2])},{id:match[1]}));
 };
 const genericContracts=book=>{
   const data=read(`books/${book}/content/${book}-related-rules.en.json`);

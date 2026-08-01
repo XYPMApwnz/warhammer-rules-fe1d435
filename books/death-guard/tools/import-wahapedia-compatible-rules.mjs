@@ -9,6 +9,20 @@ const snapshotFile=path.join(bookRoot,'sources','wahapedia-compatible-rules.snap
 const reportFile=path.join(bookRoot,'reports','compatible-rules-import-report.json');
 const factionUrl='https://wahapedia.ru/wh40k11ed/factions/death-guard/';
 const scope={stratagems:'faction-only',included:45,excludedCore:10};
+const stratagemCategories=new Set(['Battle Tactic Stratagem','Epic Deed Stratagem','Strategic Ploy Stratagem','Wargear Stratagem']);
+const forceDispositionTypes=new Set(['Contagion Engines Stratagem','Flyblown Host Stratagem','Paragons of Putrescence Stratagem']);
+const factionKeywordContracts={
+  'unit-beasts-of-nurgle':{sourceClass:'plague-legions',requiredFactionKeywords:['PLAGUE LEGIONS'],forbiddenAssumptions:['DEATH GUARD'],evidence:{source:'Death Guard Faction Pack 11e',section:'Pact of Decay'}},
+  'unit-great-unclean-one':{sourceClass:'plague-legions',requiredFactionKeywords:['PLAGUE LEGIONS'],forbiddenAssumptions:['DEATH GUARD'],evidence:{source:'Death Guard Faction Pack 11e',section:'Pact of Decay'}},
+  'unit-nurglings':{sourceClass:'plague-legions',requiredFactionKeywords:['PLAGUE LEGIONS'],forbiddenAssumptions:['DEATH GUARD'],evidence:{source:'Death Guard Faction Pack 11e',section:'Pact of Decay'}},
+  'unit-plague-drones':{sourceClass:'plague-legions',requiredFactionKeywords:['PLAGUE LEGIONS'],forbiddenAssumptions:['DEATH GUARD'],evidence:{source:'Death Guard Faction Pack 11e',section:'Pact of Decay'}},
+  'unit-plaguebearers':{sourceClass:'plague-legions',requiredFactionKeywords:['PLAGUE LEGIONS'],forbiddenAssumptions:['DEATH GUARD'],evidence:{source:'Death Guard Faction Pack 11e',section:'Pact of Decay'}},
+  'unit-rotigus':{sourceClass:'plague-legions',requiredFactionKeywords:['PLAGUE LEGIONS'],forbiddenAssumptions:['DEATH GUARD'],evidence:{source:'Death Guard Faction Pack 11e',section:'Pact of Decay'}}
+  ,'unit-death-guard-chaos-lord':{sourceClass:'legends',requiredFactionKeywords:[],forbiddenAssumptions:['DEATH GUARD'],evidence:{book:'Faction Pack. Death Guard (Warhammer Legends)',edition:'11',version:'1.1'}}
+  ,'unit-death-guard-chaos-lord-in-terminator-armour':{sourceClass:'legends',requiredFactionKeywords:[],forbiddenAssumptions:['DEATH GUARD'],evidence:{book:'Faction Pack. Death Guard (Warhammer Legends)',edition:'11',version:'1.1'}}
+  ,'unit-death-guard-cultists':{sourceClass:'legends',requiredFactionKeywords:[],forbiddenAssumptions:['DEATH GUARD'],evidence:{book:'Faction Pack. Death Guard (Warhammer Legends)',edition:'11',version:'1.1'}}
+  ,'unit-death-guard-sorcerer-in-terminator-armour':{sourceClass:'legends',requiredFactionKeywords:[],forbiddenAssumptions:['DEATH GUARD'],evidence:{book:'Faction Pack. Death Guard (Warhammer Legends)',edition:'11',version:'1.1'}}
+};
 
 const readJson=file=>JSON.parse(fs.readFileSync(file,'utf8'));
 const text=value=>String(value??'').replace(/&nbsp;/gi,' ').replace(/&amp;/gi,'&').replace(/&#39;|&apos;/gi,"'").replace(/&quot;/gi,'"').replace(/<br\s*\/?>/gi,'\n').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
@@ -59,9 +73,9 @@ export function buildCanonicalIndexes(book){
 
 export function parseDatasheetHtml(html){
   const title=text(html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]);
-  const keywordBlock=divAfter(html,'KEYWORDS:');
-  const keywords=keywordBlock?sortStrings((text(keywordBlock.match(/KEYWORDS:([\s\S]*?)(?:FACTION KEYWORDS:|$)/i)?.[1])||'').split(';').map(value=>value.trim()).filter(Boolean)):null;
-  const factionKeywords=keywordBlock?sortStrings((text(keywordBlock.match(/FACTION KEYWORDS:\s*([\s\S]*?)$/i)?.[1])||'').split(';').map(value=>value.trim()).filter(Boolean)):null;
+  const keywordBlock=html.match(/KEYWORDS:\s*([\s\S]*?)<\/div>\s*<div class="dsRight[^>]*>\s*FACTION KEYWORDS:\s*([\s\S]*?)<\/div>/i);
+  const keywords=keywordBlock?sortStrings(text(keywordBlock[1]).split(';').map(value=>value.trim()).filter(Boolean)):null;
+  const factionKeywords=keywordBlock?sortStrings(text(keywordBlock[2]).split(';').map(value=>value.trim()).filter(Boolean)):null;
   const abilities=[];
   const attachmentRules=[];
   const abilitiesStart=html.indexOf('<div class="dsHeader dsColorBgDG">ABILITIES</div>');
@@ -88,7 +102,28 @@ export function parseDatasheetStratagems(html){
   const leftColumn=start<0?-1:html.lastIndexOf('<div class="dsLeft',start);
   const end=leftColumn<0?-1:matchingDivEnd(html,leftColumn);
   if(start<0||end<0)return null;
-  return sortStrings([...html.slice(start,end).matchAll(/<div class="s10Name">([\s\S]*?)<\/div>/gi)].map(match=>text(match[1])));
+  const panel=html.slice(start,end);
+  const cards=[];
+  const cardStart=/<div class="([^"]*\bs10Wrap\b[^"]*)">/gi;
+  for(let match;(match=cardStart.exec(panel));){
+    const cardEnd=matchingDivEnd(panel,match.index);
+    if(cardEnd<0)break;
+    const card=panel.slice(match.index,cardEnd);
+    const name=text(card.match(/<div class="s10Name">([\s\S]*?)<\/div>/i)?.[1]);
+    const type=text(card.match(/<div class="s10Type">([\s\S]*?)<\/div>/i)?.[1]);
+    if(name)cards.push({name,type,classes:match[1]});
+    cardStart.lastIndex=cardEnd;
+  }
+  return cards;
+}
+
+function classifyCard(card,currentDetachments){
+  if(card.type==='Core')return {classification:'core',reason:'shared-core-stratagem',sourceSection:'Core Stratagems',evidence:'s10Type=Core'};
+  if(/Boarding Actions/i.test(card.type)||/sShowBoardingActions/.test(card.classes))return {classification:'boarding-actions',reason:'boarding-actions-stratagem',sourceSection:'Boarding Actions',evidence:`s10Type=${card.type}`};
+  const detachment=card.type.replace(/\s+–\s+(?:Battle Tactic|Epic Deed|Strategic Ploy|Wargear)$/i,'').trim();
+  if(detachment&&currentDetachments.has(normalized(detachment)))return {classification:'current-faction',sourceSection:detachment,evidence:`s10Type=${card.type}`};
+  if(detachment)return {classification:'historical',reason:'non-current-detachment-source',sourceSection:detachment,evidence:`s10Type=${card.type}`};
+  return null;
 }
 
 export function parseFactionStratagems(html){
@@ -102,8 +137,9 @@ export function parseFactionStratagems(html){
     const target=text(block.match(/<b>TARGET:<\/b>([\s\S]*?)(?:<br\s*\/?>\s*<br\s*\/?>)?<b>EFFECT:<\/b>/i)?.[1]);
     if(!type||/\bCore\b/i.test(type))return null;
     const [detachment,category]=type.split(/\s+–\s+/);
-    const fallback=/\s+Stratagem$/i.test(detachment||'')?'Stratagem':'';
-    return {name:text(match[1]),detachment:(detachment||'').replace(/\s+Stratagem$/i,'').trim(),category:category?.trim()||fallback,target:target||null};
+    const rawType=type;
+    const detachmentName=(detachment||'').replace(/\s+Stratagem$/i,'').trim();
+    return {name:text(match[1]),rawType,detachment:detachmentName,category:category?.trim()||(forceDispositionTypes.has(rawType)?'detachment-stratagem':''),target:target||null};
   }).filter(Boolean).sort((left,right)=>left.name.localeCompare(right.name,'en'));
 }
 
@@ -123,52 +159,35 @@ export function buildImport({book,factionHtml,datasheetHtmlByUnit,sourceUrlByUni
   const unresolved={ambiguous:[],duplicates:[],parse:[],renamed:[],unknown:[]};
   for(const [name,entries] of indexes.unitByName)if(entries.length>1)unresolved.duplicates.push({kind:'canonical-datasheet',name,candidates:entries.map(entry=>entry.unitId).sort()});
   for(const [name,entries] of indexes.ruleByName)if(entries.length>1)unresolved.duplicates.push({kind:'canonical-stratagem',name,candidates:entries.map(entry=>entry.ruleId).sort()});
-  const excludedCards=[];
-  const datasheets=[];
+  const extraByName=new Map();
+  const units={};
+  const seenRuleIds=new Set();
   for(const unit of indexes.units){
-    const parsed=parseDatasheetHtml(datasheetHtmlByUnit.get(unit.unitId)||'');
-    if(!parsed.title)unresolved.parse.push({kind:'datasheet',unitId:unit.unitId,reason:'missing title'});
-    if(!parsed.keywords||!parsed.factionKeywords)unresolved.parse.push({kind:'datasheet',unitId:unit.unitId,reason:'missing keyword block'});
-    if(parsed.title&&normalized(parsed.title)!==normalized(unit.name))unresolved.renamed.push({kind:'datasheet',unitId:unit.unitId,canonicalName:unit.name,wahapediaName:parsed.title});
-    const ledBy=parsed.relations.ledBy;
-    if(ledBy.status==='reported'){
-      if(ledBy.sourceNames.length===0)unresolved.parse.push({kind:'datasheet',unitId:unit.unitId,reason:'Led By header without unit links'});
-      ledBy.unitIds=mapNames(ledBy.sourceNames,indexes.unitByName,'ledBy',unresolved);
-    }
-    delete ledBy.sourceNames;
-    const cardNames=parseDatasheetStratagems(datasheetHtmlByUnit.get(unit.unitId)||'');
-    if(cardNames===null)unresolved.parse.push({kind:'datasheet',unitId:unit.unitId,reason:'missing Stratagems block'});
+    const cards=parseDatasheetStratagems(datasheetHtmlByUnit.get(unit.unitId)||'');
+    if(cards===null)unresolved.parse.push({kind:'datasheet',unitId:unit.unitId,reason:'missing Stratagems block'});
     const wahapediaRules=[];
-    for(const name of cardNames||[]){
-      const entries=indexes.ruleByName.get(normalized(name))||[];
+    for(const card of cards||[]){
+      const entries=indexes.ruleByName.get(normalized(card.name))||[];
       if(entries.length===1)wahapediaRules.push(entries[0].ruleId);
-      else if(entries.length>1)unresolved.ambiguous.push({kind:'datasheet-stratagem',unitId:unit.unitId,name,candidates:entries.map(entry=>entry.ruleId).sort()});
-      else excludedCards.push({unitId:unit.unitId,name,reason:'not-in-current-faction-stratagem-catalog'});
+      else if(entries.length>1)unresolved.ambiguous.push({kind:'datasheet-stratagem',unitId:unit.unitId,name:card.name,candidates:entries.map(entry=>entry.ruleId).sort()});
+      else extraByName.set(card.name,new Set([...(extraByName.get(card.name)||[]),unit.unitId]));
     }
     if(new Set(wahapediaRules).size!==wahapediaRules.length)unresolved.duplicates.push({kind:'datasheet-stratagem',unitId:unit.unitId,reason:'same canonical rule repeated on one datasheet page'});
-    datasheets.push({unitId:unit.unitId,name:unit.name,source:{url:sourceUrlByUnit.get(unit.unitId)||`${factionUrl}${unit.urlSlug}`},keywords:parsed.keywords||[],factionKeywords:parsed.factionKeywords||[],abilities:parsed.abilities,attachmentRules:parsed.attachmentRules, wahapediaRules:sortStrings(wahapediaRules),relations:parsed.relations});
+    units[unit.unitId]=sortStrings(wahapediaRules); for(const ruleId of wahapediaRules)seenRuleIds.add(ruleId);
   }
-  const detachmentNames=new Set(book.sections.filter(section=>section.id.startsWith('detachment-')).map(section=>normalized(section.title)));
-  const parsedRules=parseFactionStratagems(factionHtml).filter(rule=>detachmentNames.has(normalized(rule.detachment)));
-  const byRuleName=new Map();
-  for(const rule of parsedRules){
-    const key=normalized(rule.name);
-    if(byRuleName.has(key))unresolved.duplicates.push({kind:'stratagem',name:rule.name});
-    else byRuleName.set(key,rule);
-  }
-  const stratagems=[];
-  for(const rule of indexes.rules){
-    const wahapedia=byRuleName.get(normalized(rule.name));
-    if(!wahapedia){unresolved.unknown.push({kind:'stratagem',name:rule.name,ruleId:rule.ruleId});continue;}
-    if(!wahapedia.category)unresolved.parse.push({kind:'stratagem',ruleId:rule.ruleId,reason:'missing category'});
-    if(!wahapedia.target)unresolved.parse.push({kind:'stratagem',ruleId:rule.ruleId,reason:'missing TARGET'});
-    stratagems.push({ruleId:rule.ruleId,name:rule.name,source:{url:factionUrl},detachment:wahapedia.detachment,category:wahapedia.category,target:wahapedia.target});
-  }
-  for(const rule of parsedRules)if(!(indexes.ruleByName.get(normalized(rule.name))||[]).length)unresolved.unknown.push({kind:'stratagem',name:rule.name});
+  for(const rule of indexes.rules)if(!seenRuleIds.has(rule.ruleId))unresolved.unknown.push({kind:'stratagem',ruleId:rule.ruleId,reason:'not observed on any datasheet page'});
   const unresolvedEntries=Object.values(unresolved).flat();
-  const snapshot={schema:'wahapedia-compatible-rules-snapshot/v1',scope,retrievedAt,source:{edition:'11',faction:'Death Guard',kind:'Wahapedia',url:factionUrl},datasheets:datasheets.sort((left,right)=>left.unitId.localeCompare(right.unitId)),stratagems:stratagems.sort((left,right)=>left.ruleId.localeCompare(right.ruleId))};
-  const report={schema:'compatible-rules-import-report/v1',scope,retrievedAt,source:snapshot.source,summary:{datasheets:{canonical:indexes.units.length,imported:datasheets.length},stratagems:{canonical:indexes.rules.length,imported:stratagems.length},excludedCards:excludedCards.length,unresolved:unresolvedEntries.length},excludedCards:excludedCards.sort((left,right)=>`${left.unitId}:${left.name}`.localeCompare(`${right.unitId}:${right.name}`)),unresolved};
-  return {snapshot,report,ok:unresolvedEntries.length===0&&datasheets.length===41&&stratagems.length===45};
+  const snapshot={schema:'wahapedia-compatible-rules-snapshot/v2',retrievedAt,source:{edition:'11',faction:'Death Guard',kind:'Wahapedia',url:factionUrl},units};
+  const extraWahapediaNames=[...extraByName].map(([name,unitIds])=>({name,unitIds:[...unitIds].sort()})).sort((left,right)=>left.name.localeCompare(right.name));
+  const report={schema:'compatible-rules-import-report/v2',retrievedAt,source:snapshot.source,summary:{datasheets:{canonical:indexes.units.length,imported:Object.keys(units).length},stratagems:{canonical:indexes.rules.length,observed:seenRuleIds.size},associations:Object.values(units).reduce((total,rules)=>total+rules.length,0),extraWahapediaNames:extraWahapediaNames.length,unresolved:unresolvedEntries.length},extraWahapediaNames,unresolved};
+  return {snapshot,report,ok:unresolvedEntries.length===0&&Object.keys(units).length===41&&seenRuleIds.size===45};
+}
+
+export function applyImportResult({result,snapshotPath=snapshotFile,reportPath=reportFile}){
+  writeJson(reportPath,result.report);
+  if(!result.ok)return false;
+  replaceSnapshot(snapshotPath,result.snapshot);
+  return true;
 }
 
 async function fetchText(url){
@@ -195,10 +214,8 @@ async function main(){
   if(missingUrls.length)throw new Error(`Missing Wahapedia datasheet URLs: ${missingUrls.map(unit=>unit.unitId).join(', ')}`);
   const pages=await Promise.all(indexes.units.map(async unit=>[unit.unitId,await fetchText(sourceUrlByUnit.get(unit.unitId))]));
   const result=buildImport({book,factionHtml,datasheetHtmlByUnit:new Map(pages),sourceUrlByUnit,retrievedAt});
-  writeJson(reportFile,result.report);
-  if(!result.ok)throw new Error(`Import has ${result.report.summary.unresolved} unresolved entries; snapshot was not written.`);
-  replaceSnapshot(snapshotFile,result.snapshot);
-  process.stdout.write(`Imported ${result.snapshot.datasheets.length} datasheets and ${result.snapshot.stratagems.length} faction Stratagems.\n`);
+  if(!applyImportResult({result}))throw new Error(`Import has ${result.report.summary.unresolved} unresolved entries; snapshot was not written.`);
+  process.stdout.write(`Imported ${Object.keys(result.snapshot.units).length} datasheets and ${result.report.summary.stratagems.observed} faction Stratagems.\n`);
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href)main().catch(error=>{process.stderr.write(`${error.message}\n`);process.exitCode=1;});

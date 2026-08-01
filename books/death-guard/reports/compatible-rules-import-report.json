@@ -1,2398 +1,610 @@
 {
-  "excludedCards": [
+  "extraWahapediaNames": [
     {
       "name": "ALLIES OF ENTROPY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-blightlord-terminators"
-    },
-    {
-      "name": "ALLIES OF ENTROPY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-spawn"
-    },
-    {
-      "name": "ALLIES OF ENTROPY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
-    },
-    {
-      "name": "ALLIES OF ENTROPY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-deathshroud-terminators"
-    },
-    {
-      "name": "ALLIES OF ENTROPY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "ALLIES OF ENTROPY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "ALLIES OF ENTROPY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-blightlord-terminators",
+        "unit-chaos-spawn",
+        "unit-death-guard-sorcerer-in-terminator-armour",
+        "unit-deathshroud-terminators",
+        "unit-lord-of-contagion",
+        "unit-lord-of-virulence",
+        "unit-typhus"
+      ]
     },
     {
       "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-biologus-putrifier"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle-with-wings"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foul-blightspawn"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-great-unclean-one"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-icon-bearer"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-poxes"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-malignant-plaguecaster"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-mortarion"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-noxious-blightbringer"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-surgeon"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-rotigus"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-tallyman"
-    },
-    {
-      "name": "BATTLEFIELD COMMAND",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-biologus-putrifier",
+        "unit-daemon-prince-of-nurgle-with-wings",
+        "unit-daemon-prince-of-nurgle",
+        "unit-death-guard-chaos-lord-in-terminator-armour",
+        "unit-death-guard-chaos-lord",
+        "unit-death-guard-sorcerer-in-terminator-armour",
+        "unit-foul-blightspawn",
+        "unit-great-unclean-one",
+        "unit-icon-bearer",
+        "unit-lord-of-contagion",
+        "unit-lord-of-poxes",
+        "unit-lord-of-virulence",
+        "unit-malignant-plaguecaster",
+        "unit-mortarion",
+        "unit-noxious-blightbringer",
+        "unit-plague-surgeon",
+        "unit-rotigus",
+        "unit-tallyman",
+        "unit-typhus"
+      ]
     },
     {
       "name": "CHINKS IN THE ARMOUR",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-biologus-putrifier"
-    },
-    {
-      "name": "CHINKS IN THE ARMOUR",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-blightlord-terminators"
-    },
-    {
-      "name": "CHINKS IN THE ARMOUR",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-spawn"
-    },
-    {
-      "name": "CHINKS IN THE ARMOUR",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
-    },
-    {
-      "name": "CHINKS IN THE ARMOUR",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-deathshroud-terminators"
-    },
-    {
-      "name": "CHINKS IN THE ARMOUR",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foul-blightspawn"
-    },
-    {
-      "name": "CHINKS IN THE ARMOUR",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-icon-bearer"
-    },
-    {
-      "name": "CHINKS IN THE ARMOUR",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "CHINKS IN THE ARMOUR",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "CHINKS IN THE ARMOUR",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-malignant-plaguecaster"
-    },
-    {
-      "name": "CHINKS IN THE ARMOUR",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-noxious-blightbringer"
-    },
-    {
-      "name": "CHINKS IN THE ARMOUR",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-marines"
-    },
-    {
-      "name": "CHINKS IN THE ARMOUR",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-surgeon"
-    },
-    {
-      "name": "CHINKS IN THE ARMOUR",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-poxwalkers"
-    },
-    {
-      "name": "CHINKS IN THE ARMOUR",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-tallyman"
-    },
-    {
-      "name": "CHINKS IN THE ARMOUR",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-biologus-putrifier",
+        "unit-blightlord-terminators",
+        "unit-chaos-spawn",
+        "unit-death-guard-sorcerer-in-terminator-armour",
+        "unit-deathshroud-terminators",
+        "unit-foul-blightspawn",
+        "unit-icon-bearer",
+        "unit-lord-of-contagion",
+        "unit-lord-of-virulence",
+        "unit-malignant-plaguecaster",
+        "unit-noxious-blightbringer",
+        "unit-plague-marines",
+        "unit-plague-surgeon",
+        "unit-poxwalkers",
+        "unit-tallyman",
+        "unit-typhus"
+      ]
     },
     {
       "name": "CLOUD OF FLIES",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-blightlord-terminators"
-    },
-    {
-      "name": "CLOUD OF FLIES",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-spawn"
-    },
-    {
-      "name": "CLOUD OF FLIES",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
-    },
-    {
-      "name": "CLOUD OF FLIES",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-deathshroud-terminators"
-    },
-    {
-      "name": "CLOUD OF FLIES",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "CLOUD OF FLIES",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "CLOUD OF FLIES",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-blightlord-terminators",
+        "unit-chaos-spawn",
+        "unit-death-guard-sorcerer-in-terminator-armour",
+        "unit-deathshroud-terminators",
+        "unit-lord-of-contagion",
+        "unit-lord-of-virulence",
+        "unit-typhus"
+      ]
     },
     {
       "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-beasts-of-nurgle"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-biologus-putrifier"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-blightlord-terminators"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-land-raider"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-annihilator"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-destructor"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-rhino"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-spawn"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle-with-wings"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-cultists"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-possessed"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-deathshroud-terminators"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-defiler"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foetid-bloat-drone-with-heavy-blight-launcher"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foetid-bloat-drone"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foul-blightspawn"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-great-unclean-one"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-helbrute"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-icon-bearer"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-poxes"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-malignant-plaguecaster"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-miasmic-malignifier"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-mortarion"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-myphitic-blight-hauler"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-noxious-blightbringer"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-nurglings"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-drones"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-marines"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-surgeon"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plaguebearers"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plagueburst-crawler"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-poxwalkers"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-rotigus"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-tallyman"
-    },
-    {
-      "name": "COMMAND RE-ROLL",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-beasts-of-nurgle",
+        "unit-biologus-putrifier",
+        "unit-blightlord-terminators",
+        "unit-chaos-land-raider",
+        "unit-chaos-predator-annihilator",
+        "unit-chaos-predator-destructor",
+        "unit-chaos-rhino",
+        "unit-chaos-spawn",
+        "unit-daemon-prince-of-nurgle-with-wings",
+        "unit-daemon-prince-of-nurgle",
+        "unit-death-guard-chaos-lord-in-terminator-armour",
+        "unit-death-guard-chaos-lord",
+        "unit-death-guard-cultists",
+        "unit-death-guard-possessed",
+        "unit-death-guard-sorcerer-in-terminator-armour",
+        "unit-deathshroud-terminators",
+        "unit-defiler",
+        "unit-foetid-bloat-drone-with-heavy-blight-launcher",
+        "unit-foetid-bloat-drone",
+        "unit-foul-blightspawn",
+        "unit-great-unclean-one",
+        "unit-helbrute",
+        "unit-icon-bearer",
+        "unit-lord-of-contagion",
+        "unit-lord-of-poxes",
+        "unit-lord-of-virulence",
+        "unit-malignant-plaguecaster",
+        "unit-miasmic-malignifier",
+        "unit-mortarion",
+        "unit-myphitic-blight-hauler",
+        "unit-noxious-blightbringer",
+        "unit-nurglings",
+        "unit-plague-drones",
+        "unit-plague-marines",
+        "unit-plague-surgeon",
+        "unit-plaguebearers",
+        "unit-plagueburst-crawler",
+        "unit-poxwalkers",
+        "unit-rotigus",
+        "unit-tallyman",
+        "unit-typhus"
+      ]
     },
     {
       "name": "CORROSIVE CURSE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-blightlord-terminators"
-    },
-    {
-      "name": "CORROSIVE CURSE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-deathshroud-terminators"
-    },
-    {
-      "name": "CORROSIVE CURSE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "CORROSIVE CURSE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "CORROSIVE CURSE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-blightlord-terminators",
+        "unit-deathshroud-terminators",
+        "unit-lord-of-contagion",
+        "unit-lord-of-virulence",
+        "unit-typhus"
+      ]
     },
     {
       "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-beasts-of-nurgle"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-biologus-putrifier"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-blightlord-terminators"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-land-raider"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-annihilator"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-destructor"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-rhino"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-spawn"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle-with-wings"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-cultists"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-possessed"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-deathshroud-terminators"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-defiler"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foetid-bloat-drone-with-heavy-blight-launcher"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foetid-bloat-drone"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foul-blightspawn"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-great-unclean-one"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-helbrute"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-icon-bearer"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-poxes"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-malignant-plaguecaster"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-miasmic-malignifier"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-mortarion"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-myphitic-blight-hauler"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-noxious-blightbringer"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-nurglings"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-drones"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-marines"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-surgeon"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plaguebearers"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plagueburst-crawler"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-poxwalkers"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-rotigus"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-tallyman"
-    },
-    {
-      "name": "COUNTER-OFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-beasts-of-nurgle",
+        "unit-biologus-putrifier",
+        "unit-blightlord-terminators",
+        "unit-chaos-land-raider",
+        "unit-chaos-predator-annihilator",
+        "unit-chaos-predator-destructor",
+        "unit-chaos-rhino",
+        "unit-chaos-spawn",
+        "unit-daemon-prince-of-nurgle-with-wings",
+        "unit-daemon-prince-of-nurgle",
+        "unit-death-guard-chaos-lord-in-terminator-armour",
+        "unit-death-guard-chaos-lord",
+        "unit-death-guard-cultists",
+        "unit-death-guard-possessed",
+        "unit-death-guard-sorcerer-in-terminator-armour",
+        "unit-deathshroud-terminators",
+        "unit-defiler",
+        "unit-foetid-bloat-drone-with-heavy-blight-launcher",
+        "unit-foetid-bloat-drone",
+        "unit-foul-blightspawn",
+        "unit-great-unclean-one",
+        "unit-helbrute",
+        "unit-icon-bearer",
+        "unit-lord-of-contagion",
+        "unit-lord-of-poxes",
+        "unit-lord-of-virulence",
+        "unit-malignant-plaguecaster",
+        "unit-miasmic-malignifier",
+        "unit-mortarion",
+        "unit-myphitic-blight-hauler",
+        "unit-noxious-blightbringer",
+        "unit-nurglings",
+        "unit-plague-drones",
+        "unit-plague-marines",
+        "unit-plague-surgeon",
+        "unit-plaguebearers",
+        "unit-plagueburst-crawler",
+        "unit-poxwalkers",
+        "unit-rotigus",
+        "unit-tallyman",
+        "unit-typhus"
+      ]
     },
     {
       "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-beasts-of-nurgle"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-biologus-putrifier"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-blightlord-terminators"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-land-raider"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-annihilator"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-destructor"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-rhino"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-spawn"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle-with-wings"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-cultists"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-possessed"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-deathshroud-terminators"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-defiler"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foetid-bloat-drone-with-heavy-blight-launcher"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foetid-bloat-drone"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foul-blightspawn"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-great-unclean-one"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-helbrute"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-icon-bearer"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-poxes"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-malignant-plaguecaster"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-miasmic-malignifier"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-mortarion"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-myphitic-blight-hauler"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-noxious-blightbringer"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-nurglings"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-drones"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-marines"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-surgeon"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plaguebearers"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plagueburst-crawler"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-poxwalkers"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-rotigus"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-tallyman"
-    },
-    {
-      "name": "COUNTEROFFENSIVE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-beasts-of-nurgle",
+        "unit-biologus-putrifier",
+        "unit-blightlord-terminators",
+        "unit-chaos-land-raider",
+        "unit-chaos-predator-annihilator",
+        "unit-chaos-predator-destructor",
+        "unit-chaos-rhino",
+        "unit-chaos-spawn",
+        "unit-daemon-prince-of-nurgle-with-wings",
+        "unit-daemon-prince-of-nurgle",
+        "unit-death-guard-chaos-lord-in-terminator-armour",
+        "unit-death-guard-chaos-lord",
+        "unit-death-guard-cultists",
+        "unit-death-guard-possessed",
+        "unit-death-guard-sorcerer-in-terminator-armour",
+        "unit-deathshroud-terminators",
+        "unit-defiler",
+        "unit-foetid-bloat-drone-with-heavy-blight-launcher",
+        "unit-foetid-bloat-drone",
+        "unit-foul-blightspawn",
+        "unit-great-unclean-one",
+        "unit-helbrute",
+        "unit-icon-bearer",
+        "unit-lord-of-contagion",
+        "unit-lord-of-poxes",
+        "unit-lord-of-virulence",
+        "unit-malignant-plaguecaster",
+        "unit-miasmic-malignifier",
+        "unit-mortarion",
+        "unit-myphitic-blight-hauler",
+        "unit-noxious-blightbringer",
+        "unit-nurglings",
+        "unit-plague-drones",
+        "unit-plague-marines",
+        "unit-plague-surgeon",
+        "unit-plaguebearers",
+        "unit-plagueburst-crawler",
+        "unit-poxwalkers",
+        "unit-rotigus",
+        "unit-tallyman",
+        "unit-typhus"
+      ]
     },
     {
       "name": "CRUSHING IMPACT",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-land-raider"
-    },
-    {
-      "name": "CRUSHING IMPACT",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-annihilator"
-    },
-    {
-      "name": "CRUSHING IMPACT",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-destructor"
-    },
-    {
-      "name": "CRUSHING IMPACT",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-rhino"
-    },
-    {
-      "name": "CRUSHING IMPACT",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle-with-wings"
-    },
-    {
-      "name": "CRUSHING IMPACT",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle"
-    },
-    {
-      "name": "CRUSHING IMPACT",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-defiler"
-    },
-    {
-      "name": "CRUSHING IMPACT",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foetid-bloat-drone-with-heavy-blight-launcher"
-    },
-    {
-      "name": "CRUSHING IMPACT",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foetid-bloat-drone"
-    },
-    {
-      "name": "CRUSHING IMPACT",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-great-unclean-one"
-    },
-    {
-      "name": "CRUSHING IMPACT",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-helbrute"
-    },
-    {
-      "name": "CRUSHING IMPACT",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-mortarion"
-    },
-    {
-      "name": "CRUSHING IMPACT",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-myphitic-blight-hauler"
-    },
-    {
-      "name": "CRUSHING IMPACT",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plagueburst-crawler"
-    },
-    {
-      "name": "CRUSHING IMPACT",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-rotigus"
+      "unitIds": [
+        "unit-chaos-land-raider",
+        "unit-chaos-predator-annihilator",
+        "unit-chaos-predator-destructor",
+        "unit-chaos-rhino",
+        "unit-daemon-prince-of-nurgle-with-wings",
+        "unit-daemon-prince-of-nurgle",
+        "unit-defiler",
+        "unit-foetid-bloat-drone-with-heavy-blight-launcher",
+        "unit-foetid-bloat-drone",
+        "unit-great-unclean-one",
+        "unit-helbrute",
+        "unit-mortarion",
+        "unit-myphitic-blight-hauler",
+        "unit-plagueburst-crawler",
+        "unit-rotigus"
+      ]
     },
     {
       "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-biologus-putrifier"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle-with-wings"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foul-blightspawn"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-great-unclean-one"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-icon-bearer"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-poxes"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-malignant-plaguecaster"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-mortarion"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-noxious-blightbringer"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-surgeon"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-rotigus"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-tallyman"
-    },
-    {
-      "name": "EPIC CHALLENGE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-biologus-putrifier",
+        "unit-daemon-prince-of-nurgle-with-wings",
+        "unit-daemon-prince-of-nurgle",
+        "unit-death-guard-chaos-lord-in-terminator-armour",
+        "unit-death-guard-chaos-lord",
+        "unit-death-guard-sorcerer-in-terminator-armour",
+        "unit-foul-blightspawn",
+        "unit-great-unclean-one",
+        "unit-icon-bearer",
+        "unit-lord-of-contagion",
+        "unit-lord-of-poxes",
+        "unit-lord-of-virulence",
+        "unit-malignant-plaguecaster",
+        "unit-mortarion",
+        "unit-noxious-blightbringer",
+        "unit-plague-surgeon",
+        "unit-rotigus",
+        "unit-tallyman",
+        "unit-typhus"
+      ]
     },
     {
       "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-beasts-of-nurgle"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-biologus-putrifier"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-blightlord-terminators"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-land-raider"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-annihilator"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-destructor"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-rhino"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-spawn"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle-with-wings"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-cultists"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-possessed"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-deathshroud-terminators"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-defiler"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foetid-bloat-drone-with-heavy-blight-launcher"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foetid-bloat-drone"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foul-blightspawn"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-great-unclean-one"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-helbrute"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-icon-bearer"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-poxes"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-malignant-plaguecaster"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-miasmic-malignifier"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-mortarion"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-myphitic-blight-hauler"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-noxious-blightbringer"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-nurglings"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-drones"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-marines"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-surgeon"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plaguebearers"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plagueburst-crawler"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-poxwalkers"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-rotigus"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-tallyman"
-    },
-    {
-      "name": "EXPLOSIVE CLEARANCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-beasts-of-nurgle",
+        "unit-biologus-putrifier",
+        "unit-blightlord-terminators",
+        "unit-chaos-land-raider",
+        "unit-chaos-predator-annihilator",
+        "unit-chaos-predator-destructor",
+        "unit-chaos-rhino",
+        "unit-chaos-spawn",
+        "unit-daemon-prince-of-nurgle-with-wings",
+        "unit-daemon-prince-of-nurgle",
+        "unit-death-guard-chaos-lord-in-terminator-armour",
+        "unit-death-guard-chaos-lord",
+        "unit-death-guard-cultists",
+        "unit-death-guard-possessed",
+        "unit-death-guard-sorcerer-in-terminator-armour",
+        "unit-deathshroud-terminators",
+        "unit-defiler",
+        "unit-foetid-bloat-drone-with-heavy-blight-launcher",
+        "unit-foetid-bloat-drone",
+        "unit-foul-blightspawn",
+        "unit-great-unclean-one",
+        "unit-helbrute",
+        "unit-icon-bearer",
+        "unit-lord-of-contagion",
+        "unit-lord-of-poxes",
+        "unit-lord-of-virulence",
+        "unit-malignant-plaguecaster",
+        "unit-miasmic-malignifier",
+        "unit-mortarion",
+        "unit-myphitic-blight-hauler",
+        "unit-noxious-blightbringer",
+        "unit-nurglings",
+        "unit-plague-drones",
+        "unit-plague-marines",
+        "unit-plague-surgeon",
+        "unit-plaguebearers",
+        "unit-plagueburst-crawler",
+        "unit-poxwalkers",
+        "unit-rotigus",
+        "unit-tallyman",
+        "unit-typhus"
+      ]
     },
     {
       "name": "EXPLOSIVES",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-biologus-putrifier"
-    },
-    {
-      "name": "EXPLOSIVES",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord"
-    },
-    {
-      "name": "EXPLOSIVES",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foul-blightspawn"
-    },
-    {
-      "name": "EXPLOSIVES",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-icon-bearer"
-    },
-    {
-      "name": "EXPLOSIVES",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "EXPLOSIVES",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-poxes"
-    },
-    {
-      "name": "EXPLOSIVES",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-mortarion"
-    },
-    {
-      "name": "EXPLOSIVES",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-marines"
+      "unitIds": [
+        "unit-biologus-putrifier",
+        "unit-death-guard-chaos-lord",
+        "unit-foul-blightspawn",
+        "unit-icon-bearer",
+        "unit-lord-of-contagion",
+        "unit-lord-of-poxes",
+        "unit-mortarion",
+        "unit-plague-marines"
+      ]
     },
     {
       "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-beasts-of-nurgle"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-biologus-putrifier"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-blightlord-terminators"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-land-raider"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-annihilator"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-destructor"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-rhino"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-spawn"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle-with-wings"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-cultists"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-possessed"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-deathshroud-terminators"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-defiler"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foetid-bloat-drone-with-heavy-blight-launcher"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foetid-bloat-drone"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foul-blightspawn"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-great-unclean-one"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-helbrute"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-icon-bearer"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-poxes"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-malignant-plaguecaster"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-miasmic-malignifier"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-mortarion"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-myphitic-blight-hauler"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-noxious-blightbringer"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-nurglings"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-drones"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-marines"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-surgeon"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plaguebearers"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plagueburst-crawler"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-poxwalkers"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-rotigus"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-tallyman"
-    },
-    {
-      "name": "FIRE OVERWATCH",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-beasts-of-nurgle",
+        "unit-biologus-putrifier",
+        "unit-blightlord-terminators",
+        "unit-chaos-land-raider",
+        "unit-chaos-predator-annihilator",
+        "unit-chaos-predator-destructor",
+        "unit-chaos-rhino",
+        "unit-chaos-spawn",
+        "unit-daemon-prince-of-nurgle-with-wings",
+        "unit-daemon-prince-of-nurgle",
+        "unit-death-guard-chaos-lord-in-terminator-armour",
+        "unit-death-guard-chaos-lord",
+        "unit-death-guard-cultists",
+        "unit-death-guard-possessed",
+        "unit-death-guard-sorcerer-in-terminator-armour",
+        "unit-deathshroud-terminators",
+        "unit-defiler",
+        "unit-foetid-bloat-drone-with-heavy-blight-launcher",
+        "unit-foetid-bloat-drone",
+        "unit-foul-blightspawn",
+        "unit-great-unclean-one",
+        "unit-helbrute",
+        "unit-icon-bearer",
+        "unit-lord-of-contagion",
+        "unit-lord-of-poxes",
+        "unit-lord-of-virulence",
+        "unit-malignant-plaguecaster",
+        "unit-miasmic-malignifier",
+        "unit-mortarion",
+        "unit-myphitic-blight-hauler",
+        "unit-noxious-blightbringer",
+        "unit-nurglings",
+        "unit-plague-drones",
+        "unit-plague-marines",
+        "unit-plague-surgeon",
+        "unit-plaguebearers",
+        "unit-plagueburst-crawler",
+        "unit-poxwalkers",
+        "unit-rotigus",
+        "unit-tallyman",
+        "unit-typhus"
+      ]
     },
     {
       "name": "GROTESQUE DEMISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-biologus-putrifier"
-    },
-    {
-      "name": "GROTESQUE DEMISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-blightlord-terminators"
-    },
-    {
-      "name": "GROTESQUE DEMISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-spawn"
-    },
-    {
-      "name": "GROTESQUE DEMISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
-    },
-    {
-      "name": "GROTESQUE DEMISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-deathshroud-terminators"
-    },
-    {
-      "name": "GROTESQUE DEMISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foul-blightspawn"
-    },
-    {
-      "name": "GROTESQUE DEMISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-icon-bearer"
-    },
-    {
-      "name": "GROTESQUE DEMISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "GROTESQUE DEMISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "GROTESQUE DEMISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-malignant-plaguecaster"
-    },
-    {
-      "name": "GROTESQUE DEMISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-noxious-blightbringer"
-    },
-    {
-      "name": "GROTESQUE DEMISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-marines"
-    },
-    {
-      "name": "GROTESQUE DEMISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-surgeon"
-    },
-    {
-      "name": "GROTESQUE DEMISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-poxwalkers"
-    },
-    {
-      "name": "GROTESQUE DEMISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-tallyman"
-    },
-    {
-      "name": "GROTESQUE DEMISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-biologus-putrifier",
+        "unit-blightlord-terminators",
+        "unit-chaos-spawn",
+        "unit-death-guard-sorcerer-in-terminator-armour",
+        "unit-deathshroud-terminators",
+        "unit-foul-blightspawn",
+        "unit-icon-bearer",
+        "unit-lord-of-contagion",
+        "unit-lord-of-virulence",
+        "unit-malignant-plaguecaster",
+        "unit-noxious-blightbringer",
+        "unit-plague-marines",
+        "unit-plague-surgeon",
+        "unit-poxwalkers",
+        "unit-tallyman",
+        "unit-typhus"
+      ]
     },
     {
       "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-beasts-of-nurgle"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-biologus-putrifier"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-blightlord-terminators"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-spawn"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle-with-wings"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-cultists"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-possessed"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-deathshroud-terminators"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-defiler"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foul-blightspawn"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-great-unclean-one"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-helbrute"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-icon-bearer"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-poxes"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-malignant-plaguecaster"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-miasmic-malignifier"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-mortarion"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-noxious-blightbringer"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-nurglings"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-drones"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-marines"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-surgeon"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plaguebearers"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-poxwalkers"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-rotigus"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-tallyman"
-    },
-    {
-      "name": "HEROIC INTERVENTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-beasts-of-nurgle",
+        "unit-biologus-putrifier",
+        "unit-blightlord-terminators",
+        "unit-chaos-spawn",
+        "unit-daemon-prince-of-nurgle-with-wings",
+        "unit-daemon-prince-of-nurgle",
+        "unit-death-guard-chaos-lord-in-terminator-armour",
+        "unit-death-guard-chaos-lord",
+        "unit-death-guard-cultists",
+        "unit-death-guard-possessed",
+        "unit-death-guard-sorcerer-in-terminator-armour",
+        "unit-deathshroud-terminators",
+        "unit-defiler",
+        "unit-foul-blightspawn",
+        "unit-great-unclean-one",
+        "unit-helbrute",
+        "unit-icon-bearer",
+        "unit-lord-of-contagion",
+        "unit-lord-of-poxes",
+        "unit-lord-of-virulence",
+        "unit-malignant-plaguecaster",
+        "unit-miasmic-malignifier",
+        "unit-mortarion",
+        "unit-noxious-blightbringer",
+        "unit-nurglings",
+        "unit-plague-drones",
+        "unit-plague-marines",
+        "unit-plague-surgeon",
+        "unit-plaguebearers",
+        "unit-poxwalkers",
+        "unit-rotigus",
+        "unit-tallyman",
+        "unit-typhus"
+      ]
     },
     {
       "name": "INFESTATION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-biologus-putrifier"
-    },
-    {
-      "name": "INFESTATION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-blightlord-terminators"
-    },
-    {
-      "name": "INFESTATION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-spawn"
-    },
-    {
-      "name": "INFESTATION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
-    },
-    {
-      "name": "INFESTATION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-deathshroud-terminators"
-    },
-    {
-      "name": "INFESTATION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foul-blightspawn"
-    },
-    {
-      "name": "INFESTATION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-icon-bearer"
-    },
-    {
-      "name": "INFESTATION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "INFESTATION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "INFESTATION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-malignant-plaguecaster"
-    },
-    {
-      "name": "INFESTATION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-noxious-blightbringer"
-    },
-    {
-      "name": "INFESTATION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-marines"
-    },
-    {
-      "name": "INFESTATION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-surgeon"
-    },
-    {
-      "name": "INFESTATION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-tallyman"
-    },
-    {
-      "name": "INFESTATION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-biologus-putrifier",
+        "unit-blightlord-terminators",
+        "unit-chaos-spawn",
+        "unit-death-guard-sorcerer-in-terminator-armour",
+        "unit-deathshroud-terminators",
+        "unit-foul-blightspawn",
+        "unit-icon-bearer",
+        "unit-lord-of-contagion",
+        "unit-lord-of-virulence",
+        "unit-malignant-plaguecaster",
+        "unit-noxious-blightbringer",
+        "unit-plague-marines",
+        "unit-plague-surgeon",
+        "unit-tallyman",
+        "unit-typhus"
+      ]
     },
     {
       "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-beasts-of-nurgle"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-biologus-putrifier"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-blightlord-terminators"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-land-raider"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-annihilator"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-destructor"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-rhino"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-spawn"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle-with-wings"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-cultists"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-possessed"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-deathshroud-terminators"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-defiler"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foetid-bloat-drone-with-heavy-blight-launcher"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foetid-bloat-drone"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foul-blightspawn"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-great-unclean-one"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-helbrute"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-icon-bearer"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-poxes"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-malignant-plaguecaster"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-miasmic-malignifier"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-mortarion"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-myphitic-blight-hauler"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-noxious-blightbringer"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-nurglings"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-drones"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-marines"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-surgeon"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plaguebearers"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plagueburst-crawler"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-poxwalkers"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-rotigus"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-tallyman"
-    },
-    {
-      "name": "INSANE BRAVERY",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-beasts-of-nurgle",
+        "unit-biologus-putrifier",
+        "unit-blightlord-terminators",
+        "unit-chaos-land-raider",
+        "unit-chaos-predator-annihilator",
+        "unit-chaos-predator-destructor",
+        "unit-chaos-rhino",
+        "unit-chaos-spawn",
+        "unit-daemon-prince-of-nurgle-with-wings",
+        "unit-daemon-prince-of-nurgle",
+        "unit-death-guard-chaos-lord-in-terminator-armour",
+        "unit-death-guard-chaos-lord",
+        "unit-death-guard-cultists",
+        "unit-death-guard-possessed",
+        "unit-death-guard-sorcerer-in-terminator-armour",
+        "unit-deathshroud-terminators",
+        "unit-defiler",
+        "unit-foetid-bloat-drone-with-heavy-blight-launcher",
+        "unit-foetid-bloat-drone",
+        "unit-foul-blightspawn",
+        "unit-great-unclean-one",
+        "unit-helbrute",
+        "unit-icon-bearer",
+        "unit-lord-of-contagion",
+        "unit-lord-of-poxes",
+        "unit-lord-of-virulence",
+        "unit-malignant-plaguecaster",
+        "unit-miasmic-malignifier",
+        "unit-mortarion",
+        "unit-myphitic-blight-hauler",
+        "unit-noxious-blightbringer",
+        "unit-nurglings",
+        "unit-plague-drones",
+        "unit-plague-marines",
+        "unit-plague-surgeon",
+        "unit-plaguebearers",
+        "unit-plagueburst-crawler",
+        "unit-poxwalkers",
+        "unit-rotigus",
+        "unit-tallyman",
+        "unit-typhus"
+      ]
     },
     {
       "name": "PATH OF PESTILENCE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-cultists"
+      "unitIds": [
+        "unit-death-guard-cultists"
+      ]
     },
     {
       "name": "POX FLARE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-poxwalkers"
+      "unitIds": [
+        "unit-poxwalkers"
+      ]
     },
     {
       "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-beasts-of-nurgle"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-biologus-putrifier"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-blightlord-terminators"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-land-raider"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-annihilator"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-destructor"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-rhino"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-spawn"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle-with-wings"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-daemon-prince-of-nurgle"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-chaos-lord"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-cultists"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-possessed"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-deathshroud-terminators"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-defiler"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foetid-bloat-drone-with-heavy-blight-launcher"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foetid-bloat-drone"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foul-blightspawn"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-great-unclean-one"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-helbrute"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-icon-bearer"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-poxes"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-malignant-plaguecaster"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-miasmic-malignifier"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-mortarion"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-myphitic-blight-hauler"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-noxious-blightbringer"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-nurglings"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-drones"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-marines"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-surgeon"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plaguebearers"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plagueburst-crawler"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-poxwalkers"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-rotigus"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-tallyman"
-    },
-    {
-      "name": "RAPID INGRESS",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-beasts-of-nurgle",
+        "unit-biologus-putrifier",
+        "unit-blightlord-terminators",
+        "unit-chaos-land-raider",
+        "unit-chaos-predator-annihilator",
+        "unit-chaos-predator-destructor",
+        "unit-chaos-rhino",
+        "unit-chaos-spawn",
+        "unit-daemon-prince-of-nurgle-with-wings",
+        "unit-daemon-prince-of-nurgle",
+        "unit-death-guard-chaos-lord-in-terminator-armour",
+        "unit-death-guard-chaos-lord",
+        "unit-death-guard-cultists",
+        "unit-death-guard-possessed",
+        "unit-death-guard-sorcerer-in-terminator-armour",
+        "unit-deathshroud-terminators",
+        "unit-defiler",
+        "unit-foetid-bloat-drone-with-heavy-blight-launcher",
+        "unit-foetid-bloat-drone",
+        "unit-foul-blightspawn",
+        "unit-great-unclean-one",
+        "unit-helbrute",
+        "unit-icon-bearer",
+        "unit-lord-of-contagion",
+        "unit-lord-of-poxes",
+        "unit-lord-of-virulence",
+        "unit-malignant-plaguecaster",
+        "unit-miasmic-malignifier",
+        "unit-mortarion",
+        "unit-myphitic-blight-hauler",
+        "unit-noxious-blightbringer",
+        "unit-nurglings",
+        "unit-plague-drones",
+        "unit-plague-marines",
+        "unit-plague-surgeon",
+        "unit-plaguebearers",
+        "unit-plagueburst-crawler",
+        "unit-poxwalkers",
+        "unit-rotigus",
+        "unit-tallyman",
+        "unit-typhus"
+      ]
     },
     {
       "name": "SEED OF CORRUPTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-blightlord-terminators"
-    },
-    {
-      "name": "SEED OF CORRUPTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-deathshroud-terminators"
-    },
-    {
-      "name": "SEED OF CORRUPTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "SEED OF CORRUPTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "SEED OF CORRUPTION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-blightlord-terminators",
+        "unit-deathshroud-terminators",
+        "unit-lord-of-contagion",
+        "unit-lord-of-virulence",
+        "unit-typhus"
+      ]
     },
     {
       "name": "SEEPING CORROSION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-biologus-putrifier"
-    },
-    {
-      "name": "SEEPING CORROSION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-blightlord-terminators"
-    },
-    {
-      "name": "SEEPING CORROSION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-spawn"
-    },
-    {
-      "name": "SEEPING CORROSION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
-    },
-    {
-      "name": "SEEPING CORROSION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-deathshroud-terminators"
-    },
-    {
-      "name": "SEEPING CORROSION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-foul-blightspawn"
-    },
-    {
-      "name": "SEEPING CORROSION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-icon-bearer"
-    },
-    {
-      "name": "SEEPING CORROSION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "name": "SEEPING CORROSION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "name": "SEEPING CORROSION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-malignant-plaguecaster"
-    },
-    {
-      "name": "SEEPING CORROSION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-noxious-blightbringer"
-    },
-    {
-      "name": "SEEPING CORROSION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-marines"
-    },
-    {
-      "name": "SEEPING CORROSION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-plague-surgeon"
-    },
-    {
-      "name": "SEEPING CORROSION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-poxwalkers"
-    },
-    {
-      "name": "SEEPING CORROSION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-tallyman"
-    },
-    {
-      "name": "SEEPING CORROSION",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-typhus"
+      "unitIds": [
+        "unit-biologus-putrifier",
+        "unit-blightlord-terminators",
+        "unit-chaos-spawn",
+        "unit-death-guard-sorcerer-in-terminator-armour",
+        "unit-deathshroud-terminators",
+        "unit-foul-blightspawn",
+        "unit-icon-bearer",
+        "unit-lord-of-contagion",
+        "unit-lord-of-virulence",
+        "unit-malignant-plaguecaster",
+        "unit-noxious-blightbringer",
+        "unit-plague-marines",
+        "unit-plague-surgeon",
+        "unit-poxwalkers",
+        "unit-tallyman",
+        "unit-typhus"
+      ]
     },
     {
       "name": "SHAMBLING ONSLAUGHT",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-poxwalkers"
+      "unitIds": [
+        "unit-poxwalkers"
+      ]
     },
     {
       "name": "SMOKESCREEN",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-land-raider"
-    },
-    {
-      "name": "SMOKESCREEN",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-annihilator"
-    },
-    {
-      "name": "SMOKESCREEN",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-predator-destructor"
-    },
-    {
-      "name": "SMOKESCREEN",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-chaos-rhino"
-    },
-    {
-      "name": "SMOKESCREEN",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-myphitic-blight-hauler"
+      "unitIds": [
+        "unit-chaos-land-raider",
+        "unit-chaos-predator-annihilator",
+        "unit-chaos-predator-destructor",
+        "unit-chaos-rhino",
+        "unit-myphitic-blight-hauler"
+      ]
     },
     {
       "name": "THE DEAD RISE",
-      "reason": "not-in-current-faction-stratagem-catalog",
-      "unitId": "unit-poxwalkers"
+      "unitIds": [
+        "unit-poxwalkers"
+      ]
     }
   ],
   "retrievedAt": "2026-08-01",
-  "schema": "compatible-rules-import-report/v1",
-  "scope": {
-    "excludedCore": 10,
-    "included": 45,
-    "stratagems": "faction-only"
-  },
+  "schema": "compatible-rules-import-report/v2",
   "source": {
     "edition": "11",
     "faction": "Death Guard",
@@ -2400,14 +612,15 @@
     "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
   },
   "summary": {
+    "associations": 618,
     "datasheets": {
       "canonical": 41,
       "imported": 41
     },
-    "excludedCards": 477,
+    "extraWahapediaNames": 25,
     "stratagems": {
       "canonical": 45,
-      "imported": 45
+      "observed": 45
     },
     "unresolved": 0
   },

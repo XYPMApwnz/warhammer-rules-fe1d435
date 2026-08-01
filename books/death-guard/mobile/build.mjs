@@ -140,7 +140,7 @@ function page(route) {
   <link rel="stylesheet" href="../styles/tokens.css?v=11">
   <link rel="stylesheet" href="../styles/layout.css?v=11">
   <link rel="stylesheet" href="../styles/navigation.css?v=12">
-  <link rel="stylesheet" href="../styles/content.css?v=37">
+  <link rel="stylesheet" href="../styles/content.css?v=38">
   <link rel="stylesheet" href="../styles/popups.css?v=17">
   <link rel="stylesheet" href="../../shared/datasheet-system.css?v=6">
   <link rel="stylesheet" href="./mobile.css?v=8">

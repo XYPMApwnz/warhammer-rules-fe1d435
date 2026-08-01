@@ -55,6 +55,7 @@
       const button=event.target.closest('[data-kind]');if(button){kind=button.dataset.kind;filter();}
     });
     async function open(current,state={}){
+      if(filterMenu)filterMenu.open=false;
       unit=current;layer.dataset.unitId=current.id;kind='stratagems';title.textContent=`${current.querySelector('.unit-name')?.textContent.trim()||'Datasheet'} · Compatible Stratagems`;
       layer.hidden=false;document.documentElement.classList.add('related-rules-open');modal.activate(current.querySelector('.related-rules-trigger'));
       if(!content){

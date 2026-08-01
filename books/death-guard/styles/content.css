@@ -263,7 +263,7 @@ html.related-rules-open{overflow:hidden}
 .related-rules-dialog>header h2{margin:7px 0 0;font:700 clamp(28px,4vw,46px)/1 Georgia,"Times New Roman",serif}
 .related-rules-close{width:42px;height:42px;flex:0 0 auto;border:1px solid var(--line);background:var(--panel-2);color:var(--ink);font-size:24px;cursor:pointer}
 .related-rules-body{min-height:0;overflow:auto;padding:22px 24px;overscroll-behavior:contain}
-.full-related-controls{display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:12px;margin-bottom:18px}
+.full-related-controls{position:relative;z-index:4;display:grid;grid-template-columns:minmax(220px,1fr) auto;gap:12px;margin-bottom:18px}
 .full-related-filter{position:relative;min-width:0;color:var(--ink);background:var(--void);font-weight:800}
 .full-related-filter summary,.full-related-filter button,.full-related-tabs button{min-height:42px;border:1px solid var(--line);color:var(--ink);background:var(--void);font-weight:800}
 .full-related-filter summary{display:flex;align-items:center;justify-content:space-between;padding:0 14px;cursor:pointer;list-style:none}

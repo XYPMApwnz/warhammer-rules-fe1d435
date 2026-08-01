@@ -20,7 +20,6 @@ function profilesFrom(reader){
     const tag=match[0];
     return ruleFacts.profileFromDataset({
       ruleFacts:decode(attr(tag,'data-rule-facts')),
-      keywords:decode(attr(tag,'data-keywords')),
       relatedCandidates:decode(attr(tag,'data-related-candidates'))
     },{id:attr(tag,'id')});
   });

@@ -45,8 +45,8 @@ const categories=[...source.matchAll(/<section class="content-group" id="(datash
       const article=extract('article',unitId,section);
       const unitTitle=/<h3(?: class="unit-name")?>([\s\S]*?)<\/h3>/.exec(article)?.[1];
       if(!unitTitle)throw new Error(`Missing title for ${unitId}`);
-      const keywords=/\bdata-keywords="([^"]*)"/.exec(article)?.[1]||'';
-      return{id:unitId,title:clean(unitTitle),file:`${unitId.slice(5)}.html`,type:'unit',category:id,enhancementsAllowed:!keywords.includes('EPIC HERO')};
+      const ruleFacts=JSON.parse((/\bdata-rule-facts="([^"]*)"/.exec(article)?.[1]||'{}').replaceAll('&quot;','"').replaceAll('&amp;','&'));
+      return{id:unitId,title:clean(unitTitle),file:`${unitId.slice(5)}.html`,type:'unit',category:id,enhancementsAllowed:!ruleFacts.epic};
     });
     return{id,title:clean(title),units};
   });

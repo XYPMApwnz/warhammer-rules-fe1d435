@@ -1,1 +1,1 @@
-self.WH40K_CACHE_REVISION='eb11532eccd1b71d';
+self.WH40K_CACHE_REVISION='6c1ae3cbbda035eb';

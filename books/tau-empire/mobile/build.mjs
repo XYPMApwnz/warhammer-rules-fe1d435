@@ -26,7 +26,7 @@ const detachments=[...source.matchAll(/<section class="content-group detachment"
 const categories=[...source.matchAll(/<section class="content-group" id="(datasheets-[^"]+)"[^>]*>\s*<h3 class="category-title">([^<]+)<\/h3>/g)].map(([,id,title])=>{
   const section=extract('section',id),units=[...section.matchAll(/<article\b[^>]*\bclass="[^"]*\bunit-card\b[^"]*"[^>]*\bid="(unit-[^"]+)"[^>]*>/g)].map(([,unitId])=>{
     const article=extract('article',unitId,section),unitTitle=/<h3(?: class="unit-name")?>([\s\S]*?)<\/h3>/.exec(article)?.[1];if(!unitTitle)throw new Error(`Missing title for ${unitId}`);
-    const keywords=/\bdata-keywords="([^"]*)"/.exec(article)?.[1]||'';return{id:unitId,title:clean(unitTitle),file:`${unitId.slice(5)}.html`,type:'unit',category:id,enhancementsAllowed:!keywords.includes('EPIC HERO')};
+    const ruleFacts=JSON.parse((/\bdata-rule-facts="([^"]*)"/.exec(article)?.[1]||'{}').replaceAll('&quot;','"').replaceAll('&amp;','&'));return{id:unitId,title:clean(unitTitle),file:`${unitId.slice(5)}.html`,type:'unit',category:id,enhancementsAllowed:!ruleFacts.epic};
   });return{id,title:clean(title),units};
 });
 const units=categories.flatMap(category=>category.units);if(detachments.length!==7||units.length!==63)throw new Error(`Expected 7 detachments and 63 datasheets, found ${detachments.length} and ${units.length}`);

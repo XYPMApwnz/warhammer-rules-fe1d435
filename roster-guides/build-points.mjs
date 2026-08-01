@@ -13,7 +13,7 @@ const readerProfiles=book=>{
     const attr=name=>new RegExp(`\\s${name}="([^"]*)"`).exec(tag)?.[1]||'';
     const unitId=attr('id'),title=attr('data-unit-title');
     const profile=ruleFacts.serializeRuleProfile(ruleFacts.profileFromDataset({
-      ruleFacts:decode(attr('data-rule-facts')),keywords:decode(attr('data-keywords')),relatedCandidates:decode(attr('data-related-candidates'))
+      ruleFacts:decode(attr('data-rule-facts')),relatedCandidates:decode(attr('data-related-candidates'))
     },{id:unitId}));
     if(unitId)result[unitId]=profile;
     if(title)result[normalize(title)]=profile;

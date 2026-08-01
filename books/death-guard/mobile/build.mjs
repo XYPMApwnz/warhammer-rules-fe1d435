@@ -104,7 +104,7 @@ function startPage() {
 function content(route) {
   if (route.type === 'start') return startPage();
   if (route.type === 'section' || route.type === 'detachment') return extract('section', route.id);
-  return extract('article', route.id);
+  return extract('article', route.id).replace(/\sdata-(?:keywords)="[^"]*"/g, '');
 }
 
 for (const route of routes) {

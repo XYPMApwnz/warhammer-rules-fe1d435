@@ -63,8 +63,8 @@ const categories=[...source.matchAll(/<section class="content-group" id="(datash
       const article=extract('article',unitId,section);
       const unitTitle=/<h3(?: class="unit-name")?>([\s\S]*?)<\/h3>/.exec(article)?.[1];
       if(!unitTitle)throw new Error(`Missing title for ${unitId}`);
-      const keywords=/\bdata-keywords="([^"]*)"/.exec(article)?.[1]||'';
-      return{id:unitId,title:clean(unitTitle),file:`${unitId.slice(5)}.html`,type:'unit',category:id,enhancementsAllowed:!keywords.includes('EPIC HERO')};
+      const ruleFacts=JSON.parse((/\bdata-rule-facts="([^"]*)"/.exec(article)?.[1]||'{}').replaceAll('&quot;','"').replaceAll('&amp;','&'));
+      return{id:unitId,title:clean(unitTitle),file:`${unitId.slice(5)}.html`,type:'unit',category:id,enhancementsAllowed:!ruleFacts.epic};
     });
     return{id,title:clean(title),units};
   });
@@ -129,8 +129,7 @@ function page(route){
   <section class="related-rules" id="relatedRules" aria-labelledby="relatedRulesTitle">
     <header class="related-rules-head"><div><span>Datasheet tools</span><h2>${route.enhancementsAllowed?'Compatible Stratagems &amp; Enhancements':'Compatible Stratagems'}</h2></div></header>
     <div class="related-controls">
-      <label>Detachment<select id="relatedDetachment"><option value="all">All detachments</option>${detachments.map(item=>`<option value="${item.id.slice(11)}">${item.title}</option>`).join('')}</select></label>
-      ${route.enhancementsAllowed?'<div class="related-tabs" role="group" aria-label="Rule type"><button type="button" data-related-tab="stratagems" aria-pressed="true">Stratagems</button><button type="button" data-related-tab="enhancements" aria-pressed="false">Enhancements</button></div>':''}
+      <label>Detachment<select id="relatedDetachment"><option value="all">All detachments</option>${detachments.map(item=>`<option value="${item.id.slice(11)}">${item.title}</option>`).join('')}</select></label>${route.enhancementsAllowed?'\n      <div class="related-tabs" role="group" aria-label="Rule type"><button type="button" data-related-tab="stratagems" aria-pressed="true">Stratagems</button><button type="button" data-related-tab="enhancements" aria-pressed="false">Enhancements</button></div>':''}
     </div>
     <div class="related-content" id="relatedRulesContent"><p class="related-status">Loading rules&hellip;</p></div>
   </section>`:'';

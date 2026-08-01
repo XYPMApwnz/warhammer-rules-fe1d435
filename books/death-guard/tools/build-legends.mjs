@@ -203,7 +203,7 @@ for(const unit of unitSections){
     characterCount:unitKeywords.get(unit.id).some(keyword=>keyword.toUpperCase()==='CHARACTER')?1:0,twoCharacters:null,warlord:null,
     relations:relationGraphs.get(unit.id)
   };
-  reader=reader.replace(opener,(match,start,end)=>`${start.replace(/\sdata-(?:keywords|related-candidates|rule-facts)="[^"]*"/g,'')} data-keywords="${escapeHtml(unitKeywords.get(unit.id).join('|'))}" data-rule-facts="${escapeHtml(JSON.stringify(ruleFacts))}"${end}`);
+  reader=reader.replace(opener,(match,start,end)=>`${start.replace(/\sdata-(?:keywords|related-candidates|rule-facts)="[^"]*"/g,'')} data-rule-facts="${escapeHtml(JSON.stringify(ruleFacts))}"${end}`);
 }
 fs.writeFileSync(readerFile,reader);
 

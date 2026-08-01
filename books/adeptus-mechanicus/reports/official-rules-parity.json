@@ -1,0 +1,260 @@
+{
+  "schema": "adeptus-mechanicus-official-rules-parity/v1",
+  "verifiedAt": "2026-08-02",
+  "sources": {
+    "factionPack": {
+      "documentId": "adeptus-mechanicus-faction-pack-v1.1",
+      "file": "../sources/adeptus-mechanicus-faction-pack-v1.1.pdf",
+      "pages": 27,
+      "legalFrom": "2026-07-22",
+      "authority": "primary"
+    },
+    "coreRules": {
+      "documentId": "warhammer-40000-core-rules-11e",
+      "url": "https://assets.warhammer-community.com/eng_01-06_warhammer40k_new40k_core_rules-was6fbu1ix-hfewhmxyiy.pdf",
+      "page": 57,
+      "authority": "primary"
+    },
+    "codexCarryForward": {
+      "documentId": "adeptus-mechanicus-codex-carry-forward",
+      "authority": "primary-unavailable",
+      "secondarySources": [
+        "../content/adeptus-mechanicus-codex-detachments.en.json",
+        "../sources/wahapedia-compatible-rules.snapshot.json"
+      ]
+    }
+  },
+  "summary": {
+    "stratagems": {
+      "faction": 51,
+      "core": 10,
+      "primaryVerifiedFactionPack": 21,
+      "primaryUnresolvedCodexCarryForward": 30
+    },
+    "enhancements": {
+      "total": 34,
+      "primaryVerifiedFactionPack": 14,
+      "primaryUnresolvedCodexCarryForward": 20,
+      "upgrade": 1
+    },
+    "ownerAssociations": {
+      "total": 142,
+      "factionPack": 48,
+      "codexCarryForward": 94
+    },
+    "unresolvedIssues": 4
+  },
+  "fieldContract": [
+    "title",
+    "cp",
+    "type",
+    "when",
+    "target",
+    "effect",
+    "restrictions"
+  ],
+  "stratagemEvidence": [
+    {
+      "id": "faction-pack-v1.1-stratagems",
+      "authority": "primary",
+      "status": "verified-normalized-equivalent",
+      "count": 21,
+      "ruleIds": [
+        "stratagem-defect-scrutiny",
+        "stratagem-repolarised-augurs",
+        "stratagem-clandestine-reposition",
+        "stratagem-scriptural-prognosis",
+        "stratagem-overloaded-safeguards",
+        "stratagem-holy-avarice",
+        "stratagem-echoes-of-the-conduit-wars",
+        "stratagem-chant-of-electrotraction",
+        "stratagem-momentum-feedback",
+        "stratagem-servo-driven-charge",
+        "stratagem-threat-cogitation-targeters",
+        "stratagem-unrelenting-aggression",
+        "stratagem-precision-onslaught",
+        "stratagem-unshackled-wrath",
+        "stratagem-analytic-reprisals",
+        "stratagem-eradication-protocols",
+        "stratagem-aggressive-impulse",
+        "stratagem-targeting-override",
+        "stratagem-guided-retreat",
+        "stratagem-neural-overload",
+        "stratagem-analytical-divination"
+      ],
+      "fields": {
+        "title": "verified",
+        "cp": "verified-all-1CP",
+        "type": "verified-from-card-heading",
+        "when": "verified-normalized-equivalent",
+        "target": "verified-normalized-equivalent",
+        "effect": "verified-normalized-equivalent",
+        "restrictions": "verified-absent"
+      },
+      "pageGroups": [
+        {"pages": [2], "detachment": "Cohort Acquisitus", "stratagems": 3},
+        {"pages": [3], "detachment": "Lords of the Forge", "stratagems": 3},
+        {"pages": [4], "detachment": "Luminen Auto-choir", "stratagems": 3},
+        {"pages": [5, 6], "detachment": "Eradication Cohort", "stratagems": 6},
+        {"pages": [7, 8], "detachment": "Haloscreed Battle Clade", "stratagems": 6}
+      ],
+      "note": "The local records preserve the official meaning but some extraction whitespace, punctuation and presentation text are normalized rather than byte-for-byte transcribed."
+    },
+    {
+      "id": "codex-carry-forward-stratagems",
+      "authority": "primary-unavailable",
+      "status": "unresolved-primary-parity",
+      "count": 30,
+      "ruleIds": [
+        "stratagem-motive-imperative",
+        "stratagem-auto-divinatory-targeting",
+        "stratagem-benevolence-of-the-omnissiah",
+        "stratagem-machine-spirit-resurgent",
+        "stratagem-machine-superiority",
+        "stratagem-transcendent-cogitation",
+        "stratagem-incantation-of-the-iron-soul",
+        "stratagem-tribute-of-empathic-veneration",
+        "stratagem-litany-of-the-electromancer",
+        "stratagem-luminescent-blessing",
+        "stratagem-chant-of-the-remorseless-fist",
+        "stratagem-verse-of-vengeance",
+        "stratagem-cached-acquisition",
+        "stratagem-infoslave-skull",
+        "stratagem-priority-reclamation",
+        "stratagem-auto-oracular-retrieval",
+        "stratagem-incense-exhausts",
+        "stratagem-reactive-safeguard",
+        "stratagem-extinction-order",
+        "stratagem-lethal-dosage",
+        "stratagem-pre-calibrated-purge-solution",
+        "stratagem-aggressor-imperative",
+        "stratagem-bulwark-imperative",
+        "stratagem-baleful-halo",
+        "stratagem-binharic-offence",
+        "stratagem-shroud-protocols",
+        "stratagem-isolate-and-destroy",
+        "stratagem-expedited-purge-protocol",
+        "stratagem-programmed-withdrawal",
+        "stratagem-bionic-endurance"
+      ],
+      "fields": {
+        "title": "secondary-parity-only",
+        "cp": "secondary-parity-only",
+        "type": "derived-from-detachment",
+        "when": "secondary-parity-only",
+        "target": "secondary-parity-only",
+        "effect": "secondary-parity-only",
+        "restrictions": "secondary-parity-only"
+      }
+    },
+    {
+      "id": "core-stratagems",
+      "authority": "primary",
+      "status": "verified",
+      "count": 10,
+      "ruleIds": [
+        "core-stratagem-command-re-roll",
+        "core-stratagem-counteroffensive",
+        "core-stratagem-crushing-impact",
+        "core-stratagem-epic-challenge",
+        "core-stratagem-explosives",
+        "core-stratagem-fire-overwatch",
+        "core-stratagem-heroic-intervention",
+        "core-stratagem-insane-bravery",
+        "core-stratagem-rapid-ingress",
+        "core-stratagem-smokescreen"
+      ],
+      "fields": {
+        "title": "verified",
+        "cp": "verified",
+        "type": "verified-core",
+        "when": "verified",
+        "target": "verified",
+        "effect": "verified",
+        "restrictions": "verified-when-present"
+      }
+    }
+  ],
+  "enhancementEvidence": [
+    {
+      "id": "faction-pack-v1.1-enhancements",
+      "authority": "primary",
+      "status": "verified-normalized-equivalent",
+      "count": 14,
+      "ownerAssociations": 48,
+      "ruleIds": [
+        "enhancement-explorator-dispensation",
+        "enhancement-stealth-screened-cybercanids-upgrade",
+        "enhancement-vinghs-wafers-of-dynamism",
+        "enhancement-tl-4-9",
+        "enhancement-voltagheist-reliquary",
+        "enhancement-electromiasmic-brazier",
+        "enhancement-omnicogitator",
+        "enhancement-martial-signatum-amplificator",
+        "enhancement-belicosa-class-capacitor-vanes",
+        "enhancement-omnissiahs-fury",
+        "enhancement-transoracular-dyad-wafers",
+        "enhancement-cognitive-reinforcement",
+        "enhancement-sanctified-ordnance",
+        "enhancement-inloaded-lethality"
+      ],
+      "verifiedFields": ["title", "effect", "owner-restriction", "detachment"],
+      "note": "Stealth-screened Cybercanids is printed with a separate UPGRADE badge; the local display title appends Upgrade while retaining the explicit tag."
+    },
+    {
+      "id": "codex-carry-forward-enhancements",
+      "authority": "primary-unavailable",
+      "status": "unresolved-primary-parity",
+      "count": 20,
+      "ownerAssociations": 94,
+      "ruleIds": [
+        "enhancement-necromechanic",
+        "enhancement-lord-of-machines",
+        "enhancement-emotionless-clarity",
+        "enhancement-arch-negator",
+        "enhancement-mechanicus-locum",
+        "enhancement-mantle-of-the-gnosticarch",
+        "enhancement-data-blessed-autosermon",
+        "enhancement-temporcopia",
+        "enhancement-artisan",
+        "enhancement-magos",
+        "enhancement-logis",
+        "enhancement-genetor",
+        "enhancement-autoclavic-denunciation",
+        "enhancement-malphonic-susurrus",
+        "enhancement-peerless-eradicator",
+        "enhancement-radial-suffusion",
+        "enhancement-veiled-hunter",
+        "enhancement-clandestine-infiltrator",
+        "enhancement-cantic-thrallnet",
+        "enhancement-battle-sphere-uplink"
+      ],
+      "verifiedFields": []
+    }
+  ],
+  "upgrade": {
+    "count": 1,
+    "ruleId": "enhancement-stealth-screened-cybercanids-upgrade",
+    "officialTitle": "Stealth-screened Cybercanids",
+    "tag": "UPGRADE",
+    "ownerSubject": "unit",
+    "ownerUnitIds": ["unit-serberys-raiders"],
+    "ownerAssociations": 1,
+    "assignment": {
+      "maxOwners": 3,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "source": {"documentId": "adeptus-mechanicus-faction-pack-v1.1", "page": 2},
+    "status": "verified-primary"
+  },
+  "titleFindings": [
+    {
+      "ruleId": "stratagem-tribute-of-empathic-veneration",
+      "local": "Tribute of Empathic Veneration",
+      "wahapedia": "Tribute of Emphatic Veneration",
+      "official": null,
+      "status": "unresolved-primary-source-required"
+    }
+  ]
+}

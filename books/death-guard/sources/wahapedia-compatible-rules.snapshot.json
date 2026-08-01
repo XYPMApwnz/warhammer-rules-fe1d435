@@ -3,47 +3,119 @@
     {
       "abilities": [
         {
-          "name": "1 Biologus Putrifier This model is equipped with",
-          "text": "hyper blight grenades; injector pistol; plague knives."
+          "name": "Assault Ramp",
+          "text": "Each time a unit disembarks from this model after it has made a Normal move , that unit is still eligible to declare a charge this turn."
         },
         {
           "name": "CORE",
-          "text": "Deadly Demise 1 , Leader"
-        },
-        {
-          "name": "Foul Infusion",
-          "text": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability. In addition, each time a model in that unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+, instead of only a 6."
-        },
-        {
-          "name": "This model can be attached to the following unit",
-          "text": "PLAGUE MARINES You can attach this model to a PLAGUE MARINES unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths ."
+          "text": "Deadly Demise D6"
         }
       ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
-        "BIOLOGUS PUTRIFIER",
         "CHAOS",
-        "CHARACTER",
-        "GRENADES",
-        "INFANTRY",
-        "NURGLE"
+        "FRAME",
+        "LAND RAIDER",
+        "NURGLE",
+        "SMOKE",
+        "TRANSPORT",
+        "VEHICLE"
       ],
-      "name": "Biologus Putrifier",
+      "name": "Chaos Land Raider",
       "relations": {
         "ledBy": {
           "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Biologus-Putrifier"
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Chaos-Land-Raider"
       },
-      "unitId": "unit-biologus-putrifier"
+      "unitId": "unit-chaos-land-raider",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-blighted-land",
+        "stratagem-clutching-corruption",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-eyestinger-storm",
+        "stratagem-font-of-filth",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-plaguesurge",
+        "stratagem-putrid-detonation",
+        "stratagem-rabid-infusion",
+        "stratagem-relentless-grind",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-stinking-mire"
+      ]
     },
     {
       "abilities": [
         {
-          "name": "1 Blightlord Champion 2-9 Blightlord Terminators Every model is equipped with",
-          "text": "combi-bolter; bubotic blade."
+          "name": "Blinding Spray",
+          "text": "In the Fight phase , you can select one model from your army with this ability to use this ability. If you do, until the end of the phase, that model’s unit has the Fights First ability. Each model can only be selected for this ability once per battle."
         },
+        {
+          "name": "CORE",
+          "text": "Leader"
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "CHARACTER",
+        "FOUL BLIGHTSPAWN",
+        "GRENADES",
+        "INFANTRY",
+        "NURGLE"
+      ],
+      "name": "Foul Blightspawn",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Foul-Blightspawn"
+      },
+      "unitId": "unit-foul-blightspawn",
+      "wahapediaRules": [
+        "stratagem-aggravus-spasms",
+        "stratagem-blessings-of-filth",
+        "stratagem-clutching-corruption",
+        "stratagem-creeping-blight",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-droning-horror",
+        "stratagem-eye-of-the-swarm",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-mobile-vector",
+        "stratagem-nauseating-paroxysms",
+        "stratagem-overwhelming-generosity",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-simultaneous-contamination",
+        "stratagem-territorial-infection"
+      ]
+    },
+    {
+      "abilities": [
         {
           "name": "Blistering Fusillade",
           "text": "If this unit has a Starting Strength of 5 or more, or if a CHARACTER is leading this unit, then each time a model in this unit makes a ranged attack that targets an Afflicted unit, improve the Strength and Armour Penetration characteristics of that attack by 1."
@@ -53,6 +125,8 @@
           "text": "Deep Strike"
         }
       ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
         "BLIGHTLORD TERMINATORS",
         "CHAOS",
@@ -71,122 +145,383 @@
             "unit-lord-of-virulence",
             "unit-typhus"
           ]
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
         "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Blightlord-Terminators"
       },
-      "unitId": "unit-blightlord-terminators"
+      "unitId": "unit-blightlord-terminators",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-blooming-pestilence",
+        "stratagem-clutching-corruption",
+        "stratagem-creeping-blight",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-droning-horror",
+        "stratagem-eye-of-the-swarm",
+        "stratagem-grim-reapers",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-mortarion-s-teachings",
+        "stratagem-nauseating-paroxysms",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-sickening-impact",
+        "stratagem-signal-pox",
+        "stratagem-undying-spite"
+      ]
     },
     {
       "abilities": [
         {
-          "name": "1 Chaos Land Raider This model is equipped with",
-          "text": "2 soulshatter lascannons; twin heavy bolter; armoured tracks."
-        },
-        {
-          "name": "Assault Ramp",
-          "text": "Each time a unit disembarks from this model after it has made a Normal move , that unit is still eligible to declare a charge this turn."
+          "name": "Chaos Lord",
+          "text": "While this model is leading a unit, each time a model in that unit makes an attack, re-roll a Hit roll of 1."
         },
         {
           "name": "CORE",
-          "text": "Deadly Demise D6"
+          "text": "Deep Strike , Leader"
         }
       ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
+        "CHAOS LORD",
         "CHAOS",
-        "FRAME",
-        "LAND RAIDER",
+        "CHARACTER",
+        "INFANTRY",
         "NURGLE",
-        "SMOKE",
-        "TRANSPORT",
-        "VEHICLE"
+        "TERMINATOR"
       ],
-      "name": "Chaos Land Raider",
+      "name": "Death Guard Chaos Lord in Terminator Armour",
       "relations": {
         "ledBy": {
           "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Chaos-Land-Raider"
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Death-Guard-Chaos-Lord-In-Terminator-Armour"
       },
-      "unitId": "unit-chaos-land-raider"
+      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour",
+      "wahapediaRules": [
+        "stratagem-blooming-pestilence",
+        "stratagem-grim-reapers",
+        "stratagem-mortarion-s-teachings",
+        "stratagem-sickening-impact",
+        "stratagem-signal-pox",
+        "stratagem-undying-spite"
+      ]
     },
     {
       "abilities": [
         {
-          "name": "1 Chaos Predator Annihilator This model is equipped with",
-          "text": "Predator twin lascannon; armoured tracks."
+          "name": "Chaos Lord",
+          "text": "While this model is leading a unit, each time a model in that unit makes an attack, re-roll a Hit roll of 1."
         },
         {
           "name": "CORE",
-          "text": "Deadly Demise D3"
-        },
-        {
-          "name": "Metalophagic Infection",
-          "text": "In your Shooting phase , after this model has shot, select one enemy MONSTER or VEHICLE unit hit by one or more of those attacks. Roll one D6, adding 1 to the result if that unit is Afflicted ; on a 5+, that unit suffers D3 mortal wounds ."
+          "text": "Leader"
         }
       ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
+        "CHAOS LORD",
         "CHAOS",
-        "FRAME",
-        "NURGLE",
-        "PREDATOR ANNIHILATOR",
-        "SMOKE",
-        "VEHICLE"
+        "CHARACTER",
+        "GRENADES",
+        "INFANTRY",
+        "NURGLE"
       ],
-      "name": "Chaos Predator Annihilator",
+      "name": "Death Guard Chaos Lord",
       "relations": {
         "ledBy": {
           "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Chaos-Predator-Annihilator"
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Death-Guard-Chaos-Lord"
       },
-      "unitId": "unit-chaos-predator-annihilator"
+      "unitId": "unit-death-guard-chaos-lord",
+      "wahapediaRules": []
     },
     {
       "abilities": [
-        {
-          "name": "1 Chaos Predator Destructor This model is equipped with",
-          "text": "predator autocannon; armoured tracks."
-        },
         {
           "name": "CORE",
-          "text": "Deadly Demise D3"
+          "text": "Deadly Demise 1 , Deep Strike , Scouts 6\""
         },
         {
-          "name": "Hail of Corrosive Disease",
-          "text": "In your Shooting phase , after this model has shot, select one enemy unit (excluding MONSTERS and VEHICLES ) hit by one or more of those attacks. Until the end of the phase, each time a friendly DEATH GUARD unit makes a ranged attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per phase."
+          "name": "Grotesque Regeneration",
+          "text": "At the end of each phase, if a Beasts of Nurgle model in this unit has lost any wounds but is not destroyed, that model regains all of its lost wounds."
         }
       ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
+        "BEAST",
+        "BEASTS OF NURGLE",
         "CHAOS",
-        "FRAME",
+        "DAEMON",
         "NURGLE",
-        "PREDATOR DESTRUCTOR",
-        "SMOKE",
-        "VEHICLE"
+        "SUMMONED"
       ],
-      "name": "Chaos Predator Destructor",
+      "name": "Beasts of Nurgle",
       "relations": {
         "ledBy": {
           "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Chaos-Predator-Destructor"
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Beasts-of-Nurgle"
       },
-      "unitId": "unit-chaos-predator-destructor"
+      "unitId": "unit-beasts-of-nurgle",
+      "wahapediaRules": [
+        "stratagem-all-is-rot",
+        "stratagem-avatars-of-decay",
+        "stratagem-mireslick"
+      ]
     },
     {
       "abilities": [
         {
-          "name": "1 Chaos Rhino This model is equipped with",
-          "text": "combi-bolter; armoured tracks."
+          "name": "CORE",
+          "text": "Deadly Demise 1 , Feel No Pain 5+ , Scouts 6\""
         },
+        {
+          "name": "Lethal Ichor",
+          "text": "Each time a melee attack is allocated to a model in this unit, after the attacking unit has finished making its attacks, roll one D6 (to a maximum of six D6 per attacking unit): for each 4+, the attacking unit suffers 1 mortal wound ."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "BEAST",
+        "CHAOS SPAWN",
+        "CHAOS",
+        "NURGLE"
+      ],
+      "name": "Chaos Spawn",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Chaos-Spawn"
+      },
+      "unitId": "unit-chaos-spawn",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-clutching-corruption",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Deadly Demise 1 , Leader"
+        },
+        {
+          "name": "Foul Infusion",
+          "text": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability. In addition, each time a model in that unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+, instead of only a 6."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "BIOLOGUS PUTRIFIER",
+        "CHAOS",
+        "CHARACTER",
+        "GRENADES",
+        "INFANTRY",
+        "NURGLE"
+      ],
+      "name": "Biologus Putrifier",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Biologus-Putrifier"
+      },
+      "unitId": "unit-biologus-putrifier",
+      "wahapediaRules": [
+        "stratagem-aggravus-spasms",
+        "stratagem-blessings-of-filth",
+        "stratagem-clutching-corruption",
+        "stratagem-creeping-blight",
+        "stratagem-deaths-heads",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-droning-horror",
+        "stratagem-eye-of-the-swarm",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-mobile-vector",
+        "stratagem-nauseating-paroxysms",
+        "stratagem-overwhelming-generosity",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-simultaneous-contamination",
+        "stratagem-territorial-infection"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Deadly Demise 1"
+        },
+        {
+          "name": "Diseased Malice",
+          "text": "Each time this model makes an attack that targets an Afflicted unit, add 1 to the Wound roll ."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "HELBRUTE",
+        "NURGLE",
+        "VEHICLE",
+        "WALKER"
+      ],
+      "name": "Helbrute",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Helbrute"
+      },
+      "unitId": "unit-helbrute",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-blighted-land",
+        "stratagem-bloodrust-deluge",
+        "stratagem-clutching-corruption",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-eyestinger-storm",
+        "stratagem-font-of-filth",
+        "stratagem-fresh-vectors",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-plaguesurge",
+        "stratagem-putrid-detonation",
+        "stratagem-rabid-infusion",
+        "stratagem-relentless-grind",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-soulrot-flux",
+        "stratagem-stinking-mire"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Deadly Demise D3 , Deep Strike"
+        },
+        {
+          "name": "Horrifying Visage",
+          "text": "Each time this model ends a Charge move , select one enemy unit within Engagement Range of it. That unit must take a Battle-shock test , subtracting 1 from that test."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "CHARACTER",
+        "DAEMON PRINCE WITH WINGS",
+        "DAEMON",
+        "FLY",
+        "MONSTER",
+        "NURGLE"
+      ],
+      "name": "Daemon Prince of Nurgle with Wings",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Daemon-Prince-of-Nurgle-with-Wings"
+      },
+      "unitId": "unit-daemon-prince-of-nurgle-with-wings",
+      "wahapediaRules": [
+        "stratagem-aggravus-spasms",
+        "stratagem-blessings-of-filth",
+        "stratagem-clutching-corruption",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-mobile-vector",
+        "stratagem-overwhelming-generosity",
+        "stratagem-plaguesurge",
+        "stratagem-putrid-detonation",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-simultaneous-contamination",
+        "stratagem-territorial-infection"
+      ]
+    },
+    {
+      "abilities": [
         {
           "name": "CORE",
           "text": "Deadly Demise D3 , Firing Deck 2"
@@ -196,6 +531,8 @@
           "text": "In your Shooting phase , after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly model that disembarked from this TRANSPORT this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll ."
         }
       ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
         "CHAOS",
         "DEDICATED TRANSPORT",
@@ -210,19 +547,38 @@
       "relations": {
         "ledBy": {
           "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
         "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Chaos-Rhino"
       },
-      "unitId": "unit-chaos-rhino"
+      "unitId": "unit-chaos-rhino",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-blighted-land",
+        "stratagem-clutching-corruption",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-eyestinger-storm",
+        "stratagem-font-of-filth",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-plaguesurge",
+        "stratagem-putrid-detonation",
+        "stratagem-rabid-infusion",
+        "stratagem-relentless-grind",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-stinking-mire"
+      ]
     },
     {
       "abilities": [
-        {
-          "name": "1 Daemon Prince of Nurgle This model is equipped with",
-          "text": "infernal cannon; hellforged weapons."
-        },
         {
           "name": "CORE",
           "text": "Deadly Demise D3"
@@ -232,6 +588,8 @@
           "text": "While this model is within 3\" of one or more friendly DEATH GUARD INFANTRY units, this model has the Lone Operative ability."
         }
       ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
         "CHAOS",
         "CHARACTER",
@@ -244,158 +602,671 @@
       "relations": {
         "ledBy": {
           "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
         "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Daemon-Prince-of-Nurgle"
       },
-      "unitId": "unit-daemon-prince-of-nurgle"
+      "unitId": "unit-daemon-prince-of-nurgle",
+      "wahapediaRules": [
+        "stratagem-aggravus-spasms",
+        "stratagem-blessings-of-filth",
+        "stratagem-clutching-corruption",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-mobile-vector",
+        "stratagem-overwhelming-generosity",
+        "stratagem-plaguesurge",
+        "stratagem-putrid-detonation",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-simultaneous-contamination",
+        "stratagem-territorial-infection"
+      ]
     },
     {
       "abilities": [
         {
-          "name": "1 Daemon Prince of Nurgle with Wings This model is equipped with",
-          "text": "infernal cannon; hellforged weapons."
-        },
-        {
           "name": "CORE",
-          "text": "Deadly Demise D3 , Deep Strike"
+          "text": "Deadly Demise D3"
         },
         {
-          "name": "Horrifying Visage",
-          "text": "Each time this model ends a Charge move , select one enemy unit within Engagement Range of it. That unit must take a Battle-shock test , subtracting 1 from that test."
+          "name": "Explosive Blight",
+          "text": "In your Shooting phase , each time this model makes an attack that destroys an enemy unit, before removing the last model in that unit from play, roll a D6, adding 1 to the result if that unit is Afflicted : on a 5+, each enemy unit within 6\" of that model is Afflicted until the start of your next turn."
         }
       ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
         "CHAOS",
-        "CHARACTER",
-        "DAEMON PRINCE WITH WINGS",
         "DAEMON",
         "FLY",
-        "MONSTER",
-        "NURGLE"
-      ],
-      "name": "Daemon Prince of Nurgle with Wings",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Daemon-Prince-of-Nurgle-with-Wings"
-      },
-      "unitId": "unit-daemon-prince-of-nurgle-with-wings"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Death Guard Chaos Lord in Terminator Armour This model is equipped with",
-          "text": "plague combi-bolter; plague-encrusted exalted weapon."
-        },
-        {
-          "name": "Chaos Lord",
-          "text": "While this model is leading a unit, each time a model in that unit makes an attack, re-roll a Hit roll of 1."
-        },
-        {
-          "name": "CORE",
-          "text": "Deep Strike , Leader"
-        },
-        {
-          "name": "This model can be attached to the following units",
-          "text": "BLIGHTLORD TERMINATORS DEATHSHROUD TERMINATORS"
-        }
-      ],
-      "keywords": [
-        "CHAOS LORD",
-        "CHAOS",
-        "CHARACTER",
-        "INFANTRY",
+        "FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER",
         "NURGLE",
-        "TERMINATOR"
+        "VEHICLE"
       ],
-      "name": "Death Guard Chaos Lord in Terminator Armour",
+      "name": "Foetid Bloat-drone with Heavy Blight Launcher",
       "relations": {
         "ledBy": {
           "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Death-Guard-Chaos-Lord-In-Terminator-Armour"
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Foetid-Bloat-drone-with-Heavy-Blight-Launcher"
       },
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour"
+      "unitId": "unit-foetid-bloat-drone-with-heavy-blight-launcher",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-blighted-land",
+        "stratagem-bloodrust-deluge",
+        "stratagem-clutching-corruption",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-eyestinger-storm",
+        "stratagem-font-of-filth",
+        "stratagem-fresh-vectors",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-plaguesurge",
+        "stratagem-putrid-detonation",
+        "stratagem-rabid-infusion",
+        "stratagem-relentless-grind",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-soulrot-flux",
+        "stratagem-stinking-mire"
+      ]
     },
     {
       "abilities": [
         {
-          "name": "1 Death Guard Chaos Lord This model is equipped with",
-          "text": "plague bolt pistol; Astartes chainsword."
-        },
-        {
-          "name": "Chaos Lord",
-          "text": "While this model is leading a unit, each time a model in that unit makes an attack, re-roll a Hit roll of 1."
-        },
-        {
           "name": "CORE",
-          "text": "Leader"
+          "text": "Deadly Demise D3"
         },
         {
-          "name": "This model can be attached to the following unit",
-          "text": "PLAGUE MARINES"
+          "name": "Hail of Corrosive Disease",
+          "text": "In your Shooting phase , after this model has shot, select one enemy unit (excluding MONSTERS and VEHICLES ) hit by one or more of those attacks. Until the end of the phase, each time a friendly DEATH GUARD unit makes a ranged attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per phase."
         }
       ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
-        "CHAOS LORD",
+        "CHAOS",
+        "FRAME",
+        "NURGLE",
+        "PREDATOR DESTRUCTOR",
+        "SMOKE",
+        "VEHICLE"
+      ],
+      "name": "Chaos Predator Destructor",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Chaos-Predator-Destructor"
+      },
+      "unitId": "unit-chaos-predator-destructor",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-blighted-land",
+        "stratagem-clutching-corruption",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-eyestinger-storm",
+        "stratagem-font-of-filth",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-plaguesurge",
+        "stratagem-putrid-detonation",
+        "stratagem-rabid-infusion",
+        "stratagem-relentless-grind",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-stinking-mire"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Deadly Demise D3"
+        },
+        {
+          "name": "Hovering Death",
+          "text": "This model is eligible to shoot and declare a charge in a turn in which it Fell Back ."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "DAEMON",
+        "FLY",
+        "FOETID BLOAT-DRONE",
+        "NURGLE",
+        "VEHICLE"
+      ],
+      "name": "Foetid Bloat-drone",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Foetid-Bloat-drone"
+      },
+      "unitId": "unit-foetid-bloat-drone",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-blighted-land",
+        "stratagem-bloodrust-deluge",
+        "stratagem-clutching-corruption",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-eyestinger-storm",
+        "stratagem-font-of-filth",
+        "stratagem-fresh-vectors",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-plaguesurge",
+        "stratagem-putrid-detonation",
+        "stratagem-rabid-infusion",
+        "stratagem-relentless-grind",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-soulrot-flux",
+        "stratagem-stinking-mire"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Deadly Demise D3"
+        },
+        {
+          "name": "Metalophagic Infection",
+          "text": "In your Shooting phase , after this model has shot, select one enemy MONSTER or VEHICLE unit hit by one or more of those attacks. Roll one D6, adding 1 to the result if that unit is Afflicted ; on a 5+, that unit suffers D3 mortal wounds ."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "FRAME",
+        "NURGLE",
+        "PREDATOR ANNIHILATOR",
+        "SMOKE",
+        "VEHICLE"
+      ],
+      "name": "Chaos Predator Annihilator",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Chaos-Predator-Annihilator"
+      },
+      "unitId": "unit-chaos-predator-annihilator",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-blighted-land",
+        "stratagem-clutching-corruption",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-eyestinger-storm",
+        "stratagem-font-of-filth",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-plaguesurge",
+        "stratagem-putrid-detonation",
+        "stratagem-rabid-infusion",
+        "stratagem-relentless-grind",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-stinking-mire"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Deadly Demise D3"
+        },
+        {
+          "name": "Putrescent Fog (Aura)",
+          "text": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of this model."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "FORTIFICATION",
+        "FRAME",
+        "MIASMIC MALIGNIFIER",
+        "NURGLE"
+      ],
+      "name": "Miasmic Malignifier",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Miasmic-Malignifier"
+      },
+      "unitId": "unit-miasmic-malignifier",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-clutching-corruption",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Deadly Demise D3"
+        },
+        {
+          "name": "Spore-laced Shock Waves",
+          "text": "In your Shooting phase , each time you select a target for this model’s Plagueburst mortar, roll one D6 for the target unit and every other enemy unit within 3\" of the target unit, adding 1 to that roll if the unit being rolled for is Afflicted . On a 6+, the unit being rolled for is struck by spores; after resolving all of this model’s attacks against the target unit, each unit struck by spores suffers D3 mortal wounds ."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "DAEMON",
+        "FRAME",
+        "NURGLE",
+        "PLAGUEBURST CRAWLER",
+        "VEHICLE"
+      ],
+      "name": "Plagueburst Crawler",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Plagueburst-Crawler"
+      },
+      "unitId": "unit-plagueburst-crawler",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-blighted-land",
+        "stratagem-clutching-corruption",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-eyestinger-storm",
+        "stratagem-font-of-filth",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-plaguesurge",
+        "stratagem-putrid-detonation",
+        "stratagem-rabid-infusion",
+        "stratagem-relentless-grind",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-stinking-mire"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Deadly Demise D3"
+        },
+        {
+          "name": "Tank Hunters",
+          "text": "In your Shooting phase , each time a model in this unit makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll and add 1 to the Wound roll ."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "DAEMON",
+        "MYPHITIC BLIGHT-HAULER",
+        "NURGLE",
+        "SMOKE",
+        "VEHICLE"
+      ],
+      "name": "Myphitic Blight-hauler",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Myphitic-Blight-hauler"
+      },
+      "unitId": "unit-myphitic-blight-hauler",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-blighted-land",
+        "stratagem-bloodrust-deluge",
+        "stratagem-clutching-corruption",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-eyestinger-storm",
+        "stratagem-font-of-filth",
+        "stratagem-fresh-vectors",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-plaguesurge",
+        "stratagem-putrid-detonation",
+        "stratagem-rabid-infusion",
+        "stratagem-relentless-grind",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-soulrot-flux",
+        "stratagem-stinking-mire"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Deadly Demise D6 , Deep Strike , Feel No Pain 5+"
+        },
+        {
+          "name": "Lord of the Death Guard",
+          "text": "Once per turn, this model can use one of the Lord of the Death Guard abilities (see left)."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
         "CHAOS",
         "CHARACTER",
+        "DAEMON",
+        "EPIC HERO",
+        "FLY",
         "GRENADES",
-        "INFANTRY",
-        "NURGLE"
+        "MONSTER",
+        "MORTARION",
+        "NURGLE",
+        "PRIMARCH",
+        "PSYKER"
       ],
-      "name": "Death Guard Chaos Lord",
+      "name": "Mortarion",
       "relations": {
         "ledBy": {
           "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Death-Guard-Chaos-Lord"
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Mortarion"
       },
-      "unitId": "unit-death-guard-chaos-lord"
+      "unitId": "unit-mortarion",
+      "wahapediaRules": [
+        "stratagem-aggravus-spasms",
+        "stratagem-blessings-of-filth",
+        "stratagem-clutching-corruption",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-mobile-vector",
+        "stratagem-overwhelming-generosity",
+        "stratagem-plaguesurge",
+        "stratagem-putrid-detonation",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-simultaneous-contamination",
+        "stratagem-territorial-infection"
+      ]
     },
     {
       "abilities": [
-        {
-          "name": "1 Death Guard Cultist Champion 9-19 Death Guard Cultists Every model is equipped with",
-          "text": "Cultist firearm; brutal assault weapon."
-        },
         {
           "name": "CORE",
-          "text": "Scouts 6\""
+          "text": "Deadly Demise D6 , Deep Strike , Feel No Pain 6+"
+        },
+        {
+          "name": "Daemon Lord of Nurgle (Aura)",
+          "text": "While a friendly PLAGUE LEGIONS unit is within 6\" of this model, add 1 to the Toughness characteristic of models in that unit."
         }
       ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
         "CHAOS",
-        "CULTISTS",
-        "INFANTRY",
-        "NURGLE"
+        "CHARACTER",
+        "DAEMON",
+        "GREAT UNCLEAN ONE",
+        "MONSTER",
+        "NURGLE",
+        "PSYKER",
+        "SUMMONED"
       ],
-      "name": "Death Guard Cultists",
+      "name": "Great Unclean One",
       "relations": {
         "ledBy": {
           "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Death-Guard-Cultists"
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Great-Unclean-One"
       },
-      "unitId": "unit-death-guard-cultists"
+      "unitId": "unit-great-unclean-one",
+      "wahapediaRules": [
+        "stratagem-all-is-rot",
+        "stratagem-avatars-of-decay",
+        "stratagem-fleshy-avalanche",
+        "stratagem-mireslick"
+      ]
     },
     {
       "abilities": [
         {
-          "name": "1 Death Guard Sorcerer in Terminator Armour This model is equipped with",
-          "text": "Curse of the Leper; plague combi-bolter; force weapon."
+          "name": "CORE",
+          "text": "Deadly Demise D6 , Deep Strike , Feel No Pain 6+"
         },
+        {
+          "name": "Virulent Blessing (Psychic)",
+          "text": "At the start of the Fight phase , you can select one enemy unit within 24\" and visible to this model. Until the end of the phase, each time an attack made by a PLAGUE LEGIONS model is allocated to a model in that unit, add 1 to the Damage characteristic of that attack."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "CHARACTER",
+        "DAEMON",
+        "EPIC HERO",
+        "MONSTER",
+        "NURGLE",
+        "PSYKER",
+        "ROTIGUS",
+        "SUMMONED"
+      ],
+      "name": "Rotigus",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Rotigus"
+      },
+      "unitId": "unit-rotigus",
+      "wahapediaRules": [
+        "stratagem-all-is-rot",
+        "stratagem-avatars-of-decay",
+        "stratagem-fleshy-avalanche",
+        "stratagem-mireslick"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Deadly Demise D6"
+        },
+        {
+          "name": "Scuttling Walker",
+          "text": "Each time this unit makes a Normal , Advance or Fall Back move , it can move through models (excluding TITANIC models) and terrain features . When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "DAEMON",
+        "DEFILER",
+        "NURGLE",
+        "VEHICLE",
+        "WALKER"
+      ],
+      "name": "Defiler",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Defiler"
+      },
+      "unitId": "unit-defiler",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-blighted-land",
+        "stratagem-clutching-corruption",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-eyestinger-storm",
+        "stratagem-font-of-filth",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-plaguesurge",
+        "stratagem-putrid-detonation",
+        "stratagem-rabid-infusion",
+        "stratagem-relentless-grind",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-stinking-mire"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Deep Strike , Infiltrators"
+        },
+        {
+          "name": "Mischief Makers",
+          "text": "Each time an enemy unit (excluding TITAN units) within Engagement Range of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll ."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "DAEMON",
+        "NURGLE",
+        "NURGLINGS",
+        "SUMMONED",
+        "SWARM"
+      ],
+      "name": "Nurglings",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Nurglings"
+      },
+      "unitId": "unit-nurglings",
+      "wahapediaRules": [
+        "stratagem-all-is-rot",
+        "stratagem-avatars-of-decay",
+        "stratagem-mireslick",
+        "stratagem-persistent-pests"
+      ]
+    },
+    {
+      "abilities": [
         {
           "name": "CORE",
           "text": "Deep Strike , Leader"
@@ -403,12 +1274,10 @@
         {
           "name": "Putrescent Vitality (Psychic)",
           "text": "At the start of the Fight phase , you can roll one D6: on a 1, this PSYKER ’s unit suffers D3 mortal wounds ; on a 2+, until the end of the phase, each time an attack is allocated to a model in this PSYKER ’s unit, subtract 1 from the Damage characteristic of that attack."
-        },
-        {
-          "name": "This model can be attached to the following units",
-          "text": "BLIGHTLORD TERMINATORS DEATHSHROUD TERMINATORS"
         }
       ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
         "CHAOS",
         "CHARACTER",
@@ -422,32 +1291,317 @@
       "relations": {
         "ledBy": {
           "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
         "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Death-Guard-Sorcerer-In-Terminator-Armour"
       },
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour"
+      "unitId": "unit-death-guard-sorcerer-in-terminator-armour",
+      "wahapediaRules": [
+        "stratagem-blooming-pestilence",
+        "stratagem-grim-reapers",
+        "stratagem-mortarion-s-teachings",
+        "stratagem-sickening-impact",
+        "stratagem-signal-pox",
+        "stratagem-undying-spite"
+      ]
     },
     {
       "abilities": [
         {
-          "name": "1 Deathshroud Champion 2-5 Deathshroud Terminators Every model is equipped with",
-          "text": "plaguespurt gauntlet; manreaper."
+          "name": "CORE",
+          "text": "Deep Strike , Leader"
         },
+        {
+          "name": "The Destroyer Hive",
+          "text": "While this model is leading a unit, each time a melee attack targets that unit, subtract 1 from the Hit roll ."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "CHARACTER",
+        "EPIC HERO",
+        "INFANTRY",
+        "NURGLE",
+        "PSYKER",
+        "TERMINATOR",
+        "TYPHUS"
+      ],
+      "name": "Typhus",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Typhus"
+      },
+      "unitId": "unit-typhus",
+      "wahapediaRules": [
+        "stratagem-aggravus-spasms",
+        "stratagem-blessings-of-filth",
+        "stratagem-blooming-pestilence",
+        "stratagem-clutching-corruption",
+        "stratagem-creeping-blight",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-droning-horror",
+        "stratagem-eye-of-the-swarm",
+        "stratagem-grim-reapers",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-mobile-vector",
+        "stratagem-mortarion-s-teachings",
+        "stratagem-nauseating-paroxysms",
+        "stratagem-overwhelming-generosity",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-sickening-impact",
+        "stratagem-signal-pox",
+        "stratagem-simultaneous-contamination",
+        "stratagem-territorial-infection",
+        "stratagem-undying-spite"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Deep Strike , Leader"
+        },
+        {
+          "name": "Vector of Disease",
+          "text": "While this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] and [LANCE] abilities."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "CHARACTER",
+        "GRENADES",
+        "INFANTRY",
+        "LORD OF CONTAGION",
+        "NURGLE",
+        "TERMINATOR"
+      ],
+      "name": "Lord of Contagion",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Lord-of-Contagion"
+      },
+      "unitId": "unit-lord-of-contagion",
+      "wahapediaRules": [
+        "stratagem-aggravus-spasms",
+        "stratagem-blessings-of-filth",
+        "stratagem-blooming-pestilence",
+        "stratagem-clutching-corruption",
+        "stratagem-creeping-blight",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-droning-horror",
+        "stratagem-eye-of-the-swarm",
+        "stratagem-grim-reapers",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-mobile-vector",
+        "stratagem-mortarion-s-teachings",
+        "stratagem-nauseating-paroxysms",
+        "stratagem-overwhelming-generosity",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-sickening-impact",
+        "stratagem-signal-pox",
+        "stratagem-simultaneous-contamination",
+        "stratagem-territorial-infection",
+        "stratagem-undying-spite"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Deep Strike , Leader"
+        },
+        {
+          "name": "Virulent Aura",
+          "text": "While this model is leading a unit, each time a model in that unit makes a ranged attack, you can re-roll the Wound roll ."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "CHARACTER",
+        "INFANTRY",
+        "LORD OF VIRULENCE",
+        "NURGLE",
+        "TERMINATOR"
+      ],
+      "name": "Lord of Virulence",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Lord-of-Virulence"
+      },
+      "unitId": "unit-lord-of-virulence",
+      "wahapediaRules": [
+        "stratagem-aggravus-spasms",
+        "stratagem-blessings-of-filth",
+        "stratagem-blooming-pestilence",
+        "stratagem-clutching-corruption",
+        "stratagem-creeping-blight",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-droning-horror",
+        "stratagem-eye-of-the-swarm",
+        "stratagem-grim-reapers",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-mobile-vector",
+        "stratagem-mortarion-s-teachings",
+        "stratagem-nauseating-paroxysms",
+        "stratagem-overwhelming-generosity",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-sickening-impact",
+        "stratagem-signal-pox",
+        "stratagem-simultaneous-contamination",
+        "stratagem-territorial-infection",
+        "stratagem-undying-spite"
+      ]
+    },
+    {
+      "abilities": [
         {
           "name": "CORE",
           "text": "Deep Strike"
         },
         {
-          "name": "Icon of Despair (Aura)",
-          "text": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1."
+          "name": "Death’s Heads",
+          "text": "In your Shooting phase , after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly PLAGUE LEGIONS unit makes an attack that targets that unit, you can re-roll the Wound roll ."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "DAEMON",
+        "FLY",
+        "MOUNTED",
+        "NURGLE",
+        "PLAGUE DRONES",
+        "SUMMONED"
+      ],
+      "name": "Plague Drones",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Plague-Drones"
+      },
+      "unitId": "unit-plague-drones",
+      "wahapediaRules": [
+        "stratagem-all-is-rot",
+        "stratagem-avatars-of-decay",
+        "stratagem-mireslick"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Deep Strike"
+        },
+        {
+          "name": "Infected Outbreak",
+          "text": "At the end of your Command phase , if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "BATTLELINE",
+        "CHAOS",
+        "DAEMON",
+        "INFANTRY",
+        "NURGLE",
+        "PLAGUEBEARERS",
+        "SUMMONED"
+      ],
+      "name": "Plaguebearers",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Plaguebearers"
+      },
+      "unitId": "unit-plaguebearers",
+      "wahapediaRules": [
+        "stratagem-all-is-rot",
+        "stratagem-avatars-of-decay",
+        "stratagem-mireslick"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Deep Strike"
         },
         {
           "name": "Silent Bodyguard",
           "text": "While a CHARACTER model is leading this unit, that CHARACTER model has the Feel No Pain 4+ ability."
         }
       ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
         "CHAOS",
         "DEATHSHROUD TERMINATORS",
@@ -466,385 +1620,102 @@
             "unit-lord-of-virulence",
             "unit-typhus"
           ]
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
         "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Deathshroud-Terminators"
       },
-      "unitId": "unit-deathshroud-terminators"
+      "unitId": "unit-deathshroud-terminators",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-blooming-pestilence",
+        "stratagem-clutching-corruption",
+        "stratagem-creeping-blight",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-droning-horror",
+        "stratagem-eye-of-the-swarm",
+        "stratagem-grim-reapers",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-mortarion-s-teachings",
+        "stratagem-nauseating-paroxysms",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-sickening-impact",
+        "stratagem-signal-pox",
+        "stratagem-undying-spite"
+      ]
     },
     {
       "abilities": [
         {
-          "name": "1 Defiler This model is equipped with",
-          "text": "1 Hades battle cannon; 2 excruciator cannons; 1 heavy missile launcher; 1 heavy baleflamer; 1 shearing claws"
-        },
-        {
           "name": "CORE",
-          "text": "Deadly Demise D6"
+          "text": "Infiltrators , Feel No Pain 5+"
         },
         {
-          "name": "Scuttling Walker",
-          "text": "Each time this unit makes a Normal , Advance or Fall Back move , it can move through models (excluding TITANIC models) and terrain features . When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed."
+          "name": "Curse of the Walking Pox",
+          "text": "Each time a POXWALKER model in this unit makes an attack that destroys an enemy model (excluding MONSTER and VEHICLE models), after this unit has resolved its attacks, you can return one destroyed POXWALKER model to this unit. While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUS ’ Eater Plague ability count as enemy models destroyed by an attack made by a POXWALKER model in this unit for the purposes of this ability."
         }
       ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
         "CHAOS",
-        "DAEMON",
-        "DEFILER",
-        "NURGLE",
-        "VEHICLE",
-        "WALKER"
-      ],
-      "name": "Defiler",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Defiler"
-      },
-      "unitId": "unit-defiler"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Foetid Bloat-drone This model is equipped with",
-          "text": "fleshmower; plague probe."
-        },
-        {
-          "name": "CORE",
-          "text": "Deadly Demise D3"
-        },
-        {
-          "name": "Hovering Death",
-          "text": "This model is eligible to shoot and declare a charge in a turn in which it Fell Back ."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "DAEMON",
-        "FLY",
-        "FOETID BLOAT-DRONE",
-        "NURGLE",
-        "VEHICLE"
-      ],
-      "name": "Foetid Bloat-drone",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Foetid-Bloat-drone"
-      },
-      "unitId": "unit-foetid-bloat-drone"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Foetid Bloat-drone This model is equipped with",
-          "text": "heavy blight launcher; plague probe."
-        },
-        {
-          "name": "CORE",
-          "text": "Deadly Demise D3"
-        },
-        {
-          "name": "Explosive Blight",
-          "text": "In your Shooting phase , each time this model makes an attack that destroys an enemy unit, before removing the last model in that unit from play, roll a D6, adding 1 to the result if that unit is Afflicted : on a 5+, each enemy unit within 6\" of that model is Afflicted until the start of your next turn."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "DAEMON",
-        "FLY",
-        "FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER",
-        "NURGLE",
-        "VEHICLE"
-      ],
-      "name": "Foetid Bloat-drone with Heavy Blight Launcher",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Foetid-Bloat-drone-with-Heavy-Blight-Launcher"
-      },
-      "unitId": "unit-foetid-bloat-drone-with-heavy-blight-launcher"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Foul Blightspawn This model is equipped with",
-          "text": "plague sprayer; close combat weapon."
-        },
-        {
-          "name": "Blinding Spray",
-          "text": "In the Fight phase , you can select one model from your army with this ability to use this ability. If you do, until the end of the phase, that model’s unit has the Fights First ability. Each model can only be selected for this ability once per battle."
-        },
-        {
-          "name": "CORE",
-          "text": "Leader"
-        },
-        {
-          "name": "This model can be attached to the following unit",
-          "text": "PLAGUE MARINES You can attach this model to a PLAGUE MARINES unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths ."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "CHARACTER",
-        "FOUL BLIGHTSPAWN",
-        "GRENADES",
         "INFANTRY",
-        "NURGLE"
-      ],
-      "name": "Foul Blightspawn",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Foul-Blightspawn"
-      },
-      "unitId": "unit-foul-blightspawn"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Great Unclean One This model is equipped with",
-          "text": "plague flail; putrid vomit; bilesword."
-        },
-        {
-          "name": "CORE",
-          "text": "Deadly Demise D6 , Deep Strike , Feel No Pain 6+"
-        },
-        {
-          "name": "Daemon Lord of Nurgle (Aura)",
-          "text": "While a friendly PLAGUE LEGIONS unit is within 6\" of this model, add 1 to the Toughness characteristic of models in that unit."
-        },
-        {
-          "name": "Reverberating Summons",
-          "text": "Each time a model is destroyed by this weapon, you can select one friendly PLAGUEBEARERS unit within 12\" of the bearer and return 1 destroyed Plaguebearer model to that unit."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "CHARACTER",
-        "DAEMON",
-        "GREAT UNCLEAN ONE",
-        "MONSTER",
         "NURGLE",
-        "PSYKER",
-        "SUMMONED"
+        "POXWALKERS"
       ],
-      "name": "Great Unclean One",
+      "name": "Poxwalkers",
       "relations": {
         "ledBy": {
-          "status": "not-reported"
+          "status": "reported",
+          "unitIds": [
+            "unit-malignant-plaguecaster",
+            "unit-noxious-blightbringer",
+            "unit-typhus"
+          ]
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Great-Unclean-One"
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Poxwalkers"
       },
-      "unitId": "unit-great-unclean-one"
+      "unitId": "unit-poxwalkers",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-clutching-corruption",
+        "stratagem-creeping-blight",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-droning-horror",
+        "stratagem-eye-of-the-swarm",
+        "stratagem-gnawing-hunger",
+        "stratagem-grip-of-the-walking-pox",
+        "stratagem-grotesque-fortitude",
+        "stratagem-hidden-amongst-the-dead",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-nauseating-paroxysms",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-smeared-with-filth"
+      ]
     },
     {
       "abilities": [
-        {
-          "name": "1 Helbrute This model is equipped with",
-          "text": "multi-melta; Helbrute fist; close combat weapon."
-        },
-        {
-          "name": "CORE",
-          "text": "Deadly Demise 1"
-        },
-        {
-          "name": "Diseased Malice",
-          "text": "Each time this model makes an attack that targets an Afflicted unit, add 1 to the Wound roll ."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "HELBRUTE",
-        "NURGLE",
-        "VEHICLE",
-        "WALKER"
-      ],
-      "name": "Helbrute",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Helbrute"
-      },
-      "unitId": "unit-helbrute"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Icon Bearer This model is equipped with",
-          "text": "boltgun; plague knife."
-        },
-        {
-          "name": "CORE",
-          "text": "Leader"
-        },
-        {
-          "name": "This model can be attached to the following unit",
-          "text": "PLAGUE MARINES You can attach this model to a PLAGUE MARINES unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same Leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths ."
-        },
-        {
-          "name": "Unclean Icon",
-          "text": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "CHARACTER",
-        "GRENADES",
-        "ICON BEARER",
-        "INFANTRY",
-        "NURGLE"
-      ],
-      "name": "Icon Bearer",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Icon-Bearer"
-      },
-      "unitId": "unit-icon-bearer"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Lord of Contagion This model is equipped with",
-          "text": "manreaper."
-        },
-        {
-          "name": "CORE",
-          "text": "Deep Strike , Leader"
-        },
-        {
-          "name": "This model can be attached to the following units",
-          "text": "BLIGHTLORD TERMINATORS DEATHSHROUD TERMINATORS"
-        },
-        {
-          "name": "Vector of Disease",
-          "text": "While this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] and [LANCE] abilities."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "CHARACTER",
-        "GRENADES",
-        "INFANTRY",
-        "LORD OF CONTAGION",
-        "NURGLE",
-        "TERMINATOR"
-      ],
-      "name": "Lord of Contagion",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Lord-of-Contagion"
-      },
-      "unitId": "unit-lord-of-contagion"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Lord of Poxes This model is equipped with",
-          "text": "plasma pistol; great plague blade."
-        },
-        {
-          "name": "CORE",
-          "text": "Leader"
-        },
-        {
-          "name": "Gift of Poxes",
-          "text": "Add 3\" to the range of this model’s Contagion Range ."
-        },
-        {
-          "name": "This model can be attached to the following unit",
-          "text": "PLAGUE MARINES"
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "CHARACTER",
-        "GRENADES",
-        "INFANTRY",
-        "LORD OF POXES",
-        "NURGLE"
-      ],
-      "name": "Lord of Poxes",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Lord-of-Poxes"
-      },
-      "unitId": "unit-lord-of-poxes"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Lord of Virulence This model is equipped with",
-          "text": "twin plague spewer; power fist."
-        },
-        {
-          "name": "CORE",
-          "text": "Deep Strike , Leader"
-        },
-        {
-          "name": "This model can be attached to the following units",
-          "text": "BLIGHTLORD TERMINATORS DEATHSHROUD TERMINATORS"
-        },
-        {
-          "name": "Virulent Aura",
-          "text": "While this model is leading a unit, each time a model in that unit makes a ranged attack, you can re-roll the Wound roll ."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "CHARACTER",
-        "INFANTRY",
-        "LORD OF VIRULENCE",
-        "NURGLE",
-        "TERMINATOR"
-      ],
-      "name": "Lord of Virulence",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Lord-of-Virulence"
-      },
-      "unitId": "unit-lord-of-virulence"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Malignant Plaguecaster This model is equipped with",
-          "text": "bolt pistol; Plague Wind; corrupted staff."
-        },
         {
           "name": "CORE",
           "text": "Leader"
@@ -852,12 +1723,10 @@
         {
           "name": "Gift of Contagion (Psychic)",
           "text": "While this model is leading a unit, each time a model in that unit makes an attack that targets a unit that is Afflicted , that attack has the [SUSTAINED HITS 1] ability."
-        },
-        {
-          "name": "This model can be attached to the following units",
-          "text": "PLAGUE MARINES POXWALKERS"
         }
       ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
         "CHAOS",
         "CHARACTER",
@@ -870,103 +1739,156 @@
       "relations": {
         "ledBy": {
           "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
         "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Malignant-Plaguecaster"
       },
-      "unitId": "unit-malignant-plaguecaster"
+      "unitId": "unit-malignant-plaguecaster",
+      "wahapediaRules": [
+        "stratagem-aggravus-spasms",
+        "stratagem-blessings-of-filth",
+        "stratagem-clutching-corruption",
+        "stratagem-creeping-blight",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-droning-horror",
+        "stratagem-eye-of-the-swarm",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-mobile-vector",
+        "stratagem-nauseating-paroxysms",
+        "stratagem-overwhelming-generosity",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-simultaneous-contamination",
+        "stratagem-territorial-infection"
+      ]
     },
     {
       "abilities": [
         {
-          "name": "1 Miasmic Malignifier This model is equipped with",
-          "text": "miasmic gouts."
-        },
-        {
           "name": "CORE",
-          "text": "Deadly Demise D3"
+          "text": "Leader"
         },
         {
-          "name": "Putrescent Fog (Aura)",
-          "text": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of this model."
+          "name": "Gift of Poxes",
+          "text": "Add 3\" to the range of this model’s Contagion Range ."
         }
       ],
-      "keywords": [
-        "CHAOS",
-        "FORTIFICATION",
-        "FRAME",
-        "MIASMIC MALIGNIFIER",
-        "NURGLE"
-      ],
-      "name": "Miasmic Malignifier",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Miasmic-Malignifier"
-      },
-      "unitId": "unit-miasmic-malignifier"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Mortarion – EPIC HERO This model is equipped with",
-          "text": "Lantern; Rotwind; Silence."
-        },
-        {
-          "name": "Boon of Death",
-          "text": "In the Fight phase , when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. If it does, until the end of the phase, each time a model in that DEATH GUARD unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 2+, do not remove it from play; that destroyed model can fight after the attacking unit has finished making its attacks, and it is then removed from play."
-        },
-        {
-          "name": "CORE",
-          "text": "Deadly Demise D6 , Deep Strike , Feel No Pain 5+"
-        },
-        {
-          "name": "Diseased Influence",
-          "text": "Just after an enemy unit ends a Normal , Advance or Fall Back move within 8\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\"."
-        },
-        {
-          "name": "Inflamed Reprisal",
-          "text": "In your opponent’s Shooting phase , when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. If it does, after the attacking unit has finished making its attacks, that Death Guard unit can shoot as if it were your Shooting phase, but when resolving those attacks, worsen the BS characteristic of that attack by 1 and it can only target that enemy unit (and only if it is an eligible target)."
-        },
-        {
-          "name": "Lord of the Death Guard",
-          "text": "Once per turn, this model can use one of the Lord of the Death Guard abilities (see left)."
-        }
-      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
         "CHAOS",
         "CHARACTER",
-        "DAEMON",
-        "EPIC HERO",
-        "FLY",
         "GRENADES",
-        "MONSTER",
-        "MORTARION",
-        "NURGLE",
-        "PRIMARCH",
-        "PSYKER"
+        "INFANTRY",
+        "LORD OF POXES",
+        "NURGLE"
       ],
-      "name": "Mortarion",
+      "name": "Lord of Poxes",
       "relations": {
         "ledBy": {
           "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Mortarion"
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Lord-of-Poxes"
       },
-      "unitId": "unit-mortarion"
+      "unitId": "unit-lord-of-poxes",
+      "wahapediaRules": [
+        "stratagem-aggravus-spasms",
+        "stratagem-blessings-of-filth",
+        "stratagem-clutching-corruption",
+        "stratagem-creeping-blight",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-droning-horror",
+        "stratagem-eye-of-the-swarm",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-mobile-vector",
+        "stratagem-nauseating-paroxysms",
+        "stratagem-overwhelming-generosity",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-simultaneous-contamination",
+        "stratagem-territorial-infection"
+      ]
     },
     {
       "abilities": [
         {
-          "name": "1 Noxious Blightbringer This model is equipped with",
-          "text": "plasma pistol; cursed plague bell."
+          "name": "CORE",
+          "text": "Leader"
         },
+        {
+          "name": "Malicious Calculations",
+          "text": "While this model is leading a unit, each time a model in that unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristics and/or any or all modifiers to the Hit roll ."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "CHARACTER",
+        "INFANTRY",
+        "NURGLE",
+        "TALLYMAN"
+      ],
+      "name": "Tallyman",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Tallyman"
+      },
+      "unitId": "unit-tallyman",
+      "wahapediaRules": [
+        "stratagem-aggravus-spasms",
+        "stratagem-blessings-of-filth",
+        "stratagem-clutching-corruption",
+        "stratagem-creeping-blight",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-droning-horror",
+        "stratagem-eye-of-the-swarm",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-mobile-vector",
+        "stratagem-nauseating-paroxysms",
+        "stratagem-overwhelming-generosity",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-simultaneous-contamination",
+        "stratagem-territorial-infection"
+      ]
+    },
+    {
+      "abilities": [
         {
           "name": "CORE",
           "text": "Leader"
@@ -974,12 +1896,10 @@
         {
           "name": "Sickening Vitality",
           "text": "While this model is leading a unit, add 1\" to the Move characteristic of models in that unit and you can re-roll Advance and Charge rolls made for that unit."
-        },
-        {
-          "name": "This model can be attached to the following units",
-          "text": "PLAGUE MARINES POXWALKERS You can attach this model to a PLAGUE MARINES or POXWALKERS unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same Leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths ."
         }
       ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
         "CHAOS",
         "CHARACTER",
@@ -991,28 +1911,241 @@
       "relations": {
         "ledBy": {
           "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
         "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Noxious-Blightbringer"
       },
-      "unitId": "unit-noxious-blightbringer"
+      "unitId": "unit-noxious-blightbringer",
+      "wahapediaRules": [
+        "stratagem-aggravus-spasms",
+        "stratagem-blessings-of-filth",
+        "stratagem-clutching-corruption",
+        "stratagem-creeping-blight",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-droning-horror",
+        "stratagem-eye-of-the-swarm",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-mobile-vector",
+        "stratagem-nauseating-paroxysms",
+        "stratagem-overwhelming-generosity",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-simultaneous-contamination",
+        "stratagem-territorial-infection"
+      ]
     },
     {
       "abilities": [
         {
-          "name": "1 Plague Champion 4-9 Plague Marines Every model is equipped with",
-          "text": "boltgun; plague knives."
+          "name": "CORE",
+          "text": "Leader"
         },
         {
-          "name": "Icon of Despair (Aura)",
-          "text": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1."
+          "name": "Tainted Narthecium",
+          "text": "While this model is leading a unit, in your Command phase , you can return 1 destroyed Bodyguard model to that unit."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "CHARACTER",
+        "INFANTRY",
+        "NURGLE",
+        "PLAGUE SURGEON"
+      ],
+      "name": "Plague Surgeon",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
         },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Plague-Surgeon"
+      },
+      "unitId": "unit-plague-surgeon",
+      "wahapediaRules": [
+        "stratagem-aggravus-spasms",
+        "stratagem-blessings-of-filth",
+        "stratagem-clutching-corruption",
+        "stratagem-creeping-blight",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-droning-horror",
+        "stratagem-eye-of-the-swarm",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-mobile-vector",
+        "stratagem-nauseating-paroxysms",
+        "stratagem-overwhelming-generosity",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-simultaneous-contamination",
+        "stratagem-territorial-infection"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Leader"
+        },
+        {
+          "name": "Unclean Icon",
+          "text": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "CHARACTER",
+        "GRENADES",
+        "ICON BEARER",
+        "INFANTRY",
+        "NURGLE"
+      ],
+      "name": "Icon Bearer",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Icon-Bearer"
+      },
+      "unitId": "unit-icon-bearer",
+      "wahapediaRules": [
+        "stratagem-aggravus-spasms",
+        "stratagem-blessings-of-filth",
+        "stratagem-clutching-corruption",
+        "stratagem-creeping-blight",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-droning-horror",
+        "stratagem-eye-of-the-swarm",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-mobile-vector",
+        "stratagem-nauseating-paroxysms",
+        "stratagem-overwhelming-generosity",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror",
+        "stratagem-simultaneous-contamination",
+        "stratagem-territorial-infection"
+      ]
+    },
+    {
+      "abilities": [
+        {
+          "name": "CORE",
+          "text": "Scouts 6\""
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "CULTISTS",
+        "INFANTRY",
+        "NURGLE"
+      ],
+      "name": "Death Guard Cultists",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Death-Guard-Cultists"
+      },
+      "unitId": "unit-death-guard-cultists",
+      "wahapediaRules": []
+    },
+    {
+      "abilities": [
+        {
+          "name": "Infectious Bloodshed",
+          "text": "Each time this unit makes a Charge move , until the end of the turn, weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability."
+        }
+      ],
+      "attachmentRules": [],
+      "factionKeywords": [],
+      "keywords": [
+        "CHAOS",
+        "DAEMON",
+        "INFANTRY",
+        "POSSESSED"
+      ],
+      "name": "Death Guard Possessed",
+      "relations": {
+        "ledBy": {
+          "status": "not-reported"
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
+        }
+      },
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Death-Guard-Possessed"
+      },
+      "unitId": "unit-death-guard-possessed",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-clutching-corruption",
+        "stratagem-creeping-blight",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-droning-horror",
+        "stratagem-eye-of-the-swarm",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-nauseating-paroxysms",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror"
+      ]
+    },
+    {
+      "abilities": [
         {
           "name": "Infused with the Blessings of Nurgle",
           "text": "In your Shooting phase , each time this unit is selected to shoot, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that enemy unit is Afflicted ."
         }
       ],
+      "attachmentRules": [],
+      "factionKeywords": [],
       "keywords": [
         "BATTLELINE",
         "CHAOS",
@@ -1036,486 +2169,33 @@
             "unit-plague-surgeon",
             "unit-tallyman"
           ]
+        },
+        "support": {
+          "reason": "Wahapedia does not expose a discrete Support relation block.",
+          "status": "unavailable"
         }
       },
       "source": {
         "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Plague-Marines"
       },
-      "unitId": "unit-plague-marines"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Plague Surgeon This model is equipped with",
-          "text": "bolt pistol; balesword."
-        },
-        {
-          "name": "CORE",
-          "text": "Leader"
-        },
-        {
-          "name": "Tainted Narthecium",
-          "text": "While this model is leading a unit, in your Command phase , you can return 1 destroyed Bodyguard model to that unit."
-        },
-        {
-          "name": "This model can be attached to the following unit",
-          "text": "PLAGUE MARINES You can attach this model to a PLAGUE MARINES unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same Leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths ."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "CHARACTER",
-        "INFANTRY",
-        "NURGLE",
-        "PLAGUE SURGEON"
-      ],
-      "name": "Plague Surgeon",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Plague-Surgeon"
-      },
-      "unitId": "unit-plague-surgeon"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Plaguebringer 2-5 Plague Drones Every model is equipped with",
-          "text": "death’s heads; foul mouthparts; plaguesword."
-        },
-        {
-          "name": "CORE",
-          "text": "Deep Strike"
-        },
-        {
-          "name": "Daemonic Icon",
-          "text": "Models in the bearer’s unit have a Leadership characteristic of 6+."
-        },
-        {
-          "name": "Death’s Heads",
-          "text": "In your Shooting phase , after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly PLAGUE LEGIONS unit makes an attack that targets that unit, you can re-roll the Wound roll ."
-        },
-        {
-          "name": "Instrument of Chaos",
-          "text": "Add 1 to Charge rolls made for the bearer’s unit."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "DAEMON",
-        "FLY",
-        "MOUNTED",
-        "NURGLE",
-        "PLAGUE DRONES",
-        "SUMMONED"
-      ],
-      "name": "Plague Drones",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Plague-Drones"
-      },
-      "unitId": "unit-plague-drones"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Plagueburst Crawler This model is equipped with",
-          "text": "2 entropy cannons; heavy slugger; Plagueburst mortar; armoured tracks."
-        },
-        {
-          "name": "CORE",
-          "text": "Deadly Demise D3"
-        },
-        {
-          "name": "Spore-laced Shock Waves",
-          "text": "In your Shooting phase , each time you select a target for this model’s Plagueburst mortar, roll one D6 for the target unit and every other enemy unit within 3\" of the target unit, adding 1 to that roll if the unit being rolled for is Afflicted . On a 6+, the unit being rolled for is struck by spores; after resolving all of this model’s attacks against the target unit, each unit struck by spores suffers D3 mortal wounds ."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "DAEMON",
-        "FRAME",
-        "NURGLE",
-        "PLAGUEBURST CRAWLER",
-        "VEHICLE"
-      ],
-      "name": "Plagueburst Crawler",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Plagueburst-Crawler"
-      },
-      "unitId": "unit-plagueburst-crawler"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Plagueridden 9 Plaguebearers Every model is equipped with",
-          "text": "plaguesword."
-        },
-        {
-          "name": "CORE",
-          "text": "Deep Strike"
-        },
-        {
-          "name": "Daemonic Icon",
-          "text": "Models in the bearer’s unit have a Leadership characteristic of 6+."
-        },
-        {
-          "name": "Infected Outbreak",
-          "text": "At the end of your Command phase , if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
-        },
-        {
-          "name": "Instrument of Chaos",
-          "text": "Add 1 to Charge rolls made for the bearer’s unit."
-        }
-      ],
-      "keywords": [
-        "BATTLELINE",
-        "CHAOS",
-        "DAEMON",
-        "INFANTRY",
-        "NURGLE",
-        "PLAGUEBEARERS",
-        "SUMMONED"
-      ],
-      "name": "Plaguebearers",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Plaguebearers"
-      },
-      "unitId": "unit-plaguebearers"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Possessed Champion 4-9 Possessed Each model is equipped with",
-          "text": "hideous mutations."
-        },
-        {
-          "name": "Diseased Icon",
-          "text": "Melee weapons in the bearer’s unit have the [LETHAL HITS] ability."
-        },
-        {
-          "name": "Infectious Bloodshed",
-          "text": "Each time this unit makes a Charge move , until the end of the turn, weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "DAEMON",
-        "INFANTRY",
-        "POSSESSED"
-      ],
-      "name": "Death Guard Possessed",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Death-Guard-Possessed"
-      },
-      "unitId": "unit-death-guard-possessed"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Rotigus – EPIC HERO This model is equipped with",
-          "text": "streams of brackish filth; gnarlrod."
-        },
-        {
-          "name": "CORE",
-          "text": "Deadly Demise D6 , Deep Strike , Feel No Pain 6+"
-        },
-        {
-          "name": "Virulent Blessing (Psychic)",
-          "text": "At the start of the Fight phase , you can select one enemy unit within 24\" and visible to this model. Until the end of the phase, each time an attack made by a PLAGUE LEGIONS model is allocated to a model in that unit, add 1 to the Damage characteristic of that attack."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "CHARACTER",
-        "DAEMON",
-        "EPIC HERO",
-        "MONSTER",
-        "NURGLE",
-        "PSYKER",
-        "ROTIGUS",
-        "SUMMONED"
-      ],
-      "name": "Rotigus",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Rotigus"
-      },
-      "unitId": "unit-rotigus"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Tallyman This model is equipped with",
-          "text": "plasma pistol; close combat weapon."
-        },
-        {
-          "name": "CORE",
-          "text": "Leader"
-        },
-        {
-          "name": "Malicious Calculations",
-          "text": "While this model is leading a unit, each time a model in that unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristics and/or any or all modifiers to the Hit roll ."
-        },
-        {
-          "name": "This model can be attached to the following unit",
-          "text": "PLAGUE MARINES You can attach this model to a PLAGUE MARINES unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths ."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "CHARACTER",
-        "INFANTRY",
-        "NURGLE",
-        "TALLYMAN"
-      ],
-      "name": "Tallyman",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Tallyman"
-      },
-      "unitId": "unit-tallyman"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1 Typhus – EPIC HERO This model is equipped with",
-          "text": "Lakrimae."
-        },
-        {
-          "name": "CORE",
-          "text": "Deep Strike , Leader"
-        },
-        {
-          "name": "The Destroyer Hive",
-          "text": "While this model is leading a unit, each time a melee attack targets that unit, subtract 1 from the Hit roll ."
-        },
-        {
-          "name": "This model can be attached to the following units",
-          "text": "BLIGHTLORD TERMINATORS DEATHSHROUD TERMINATORS POXWALKERS"
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "CHARACTER",
-        "EPIC HERO",
-        "INFANTRY",
-        "NURGLE",
-        "PSYKER",
-        "TERMINATOR",
-        "TYPHUS"
-      ],
-      "name": "Typhus",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Typhus"
-      },
-      "unitId": "unit-typhus"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1-2 Beasts of Nurgle Every model is equipped with",
-          "text": "putrid appendages."
-        },
-        {
-          "name": "CORE",
-          "text": "Deadly Demise 1 , Deep Strike , Scouts 6\""
-        },
-        {
-          "name": "Grotesque Regeneration",
-          "text": "At the end of each phase, if a Beasts of Nurgle model in this unit has lost any wounds but is not destroyed, that model regains all of its lost wounds."
-        }
-      ],
-      "keywords": [
-        "BEAST",
-        "BEASTS OF NURGLE",
-        "CHAOS",
-        "DAEMON",
-        "NURGLE",
-        "SUMMONED"
-      ],
-      "name": "Beasts of Nurgle",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Beasts-of-Nurgle"
-      },
-      "unitId": "unit-beasts-of-nurgle"
-    },
-    {
-      "abilities": [
-        {
-          "name": "1-2 Myphitic Blight-hulers Every model is equipped with",
-          "text": "bile spurt; missile launcher; multi-melta; gnashing maw."
-        },
-        {
-          "name": "CORE",
-          "text": "Deadly Demise D3"
-        },
-        {
-          "name": "Tank Hunters",
-          "text": "In your Shooting phase , each time a model in this unit makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Hit roll and add 1 to the Wound roll ."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "DAEMON",
-        "MYPHITIC BLIGHT-HAULER",
-        "NURGLE",
-        "SMOKE",
-        "VEHICLE"
-      ],
-      "name": "Myphitic Blight-hauler",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Myphitic-Blight-hauler"
-      },
-      "unitId": "unit-myphitic-blight-hauler"
-    },
-    {
-      "abilities": [
-        {
-          "name": "10-20 Poxwalkers Every model is equipped with",
-          "text": "improvised weapon."
-        },
-        {
-          "name": "CORE",
-          "text": "Infiltrators , Feel No Pain 5+"
-        },
-        {
-          "name": "Curse of the Walking Pox",
-          "text": "Each time a POXWALKER model in this unit makes an attack that destroys an enemy model (excluding MONSTER and VEHICLE models), after this unit has resolved its attacks, you can return one destroyed POXWALKER model to this unit. While TYPHUS is leading this unit, enemy models destroyed as a result of TYPHUS ’ Eater Plague ability count as enemy models destroyed by an attack made by a POXWALKER model in this unit for the purposes of this ability."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "INFANTRY",
-        "NURGLE",
-        "POXWALKERS"
-      ],
-      "name": "Poxwalkers",
-      "relations": {
-        "ledBy": {
-          "status": "reported",
-          "unitIds": [
-            "unit-malignant-plaguecaster",
-            "unit-noxious-blightbringer",
-            "unit-typhus"
-          ]
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Poxwalkers"
-      },
-      "unitId": "unit-poxwalkers"
-    },
-    {
-      "abilities": [
-        {
-          "name": "2 Chaos Spawn Every model is equipped with",
-          "text": "hideous mutations."
-        },
-        {
-          "name": "CORE",
-          "text": "Deadly Demise 1 , Feel No Pain 5+ , Scouts 6\""
-        },
-        {
-          "name": "Lethal Ichor",
-          "text": "Each time a melee attack is allocated to a model in this unit, after the attacking unit has finished making its attacks, roll one D6 (to a maximum of six D6 per attacking unit): for each 4+, the attacking unit suffers 1 mortal wound ."
-        }
-      ],
-      "keywords": [
-        "BEAST",
-        "CHAOS SPAWN",
-        "CHAOS",
-        "NURGLE"
-      ],
-      "name": "Chaos Spawn",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Chaos-Spawn"
-      },
-      "unitId": "unit-chaos-spawn"
-    },
-    {
-      "abilities": [
-        {
-          "name": "3-6 Nurgling Swarms Every model is equipped with",
-          "text": "diseased claws and teeth."
-        },
-        {
-          "name": "CORE",
-          "text": "Deep Strike , Infiltrators"
-        },
-        {
-          "name": "Mischief Makers",
-          "text": "Each time an enemy unit (excluding TITAN units) within Engagement Range of one or more units with this ability is selected to fight, until the end of the phase, each time a model in that enemy unit makes a melee attack, subtract 1 from the Hit roll ."
-        }
-      ],
-      "keywords": [
-        "CHAOS",
-        "DAEMON",
-        "NURGLE",
-        "NURGLINGS",
-        "SUMMONED",
-        "SWARM"
-      ],
-      "name": "Nurglings",
-      "relations": {
-        "ledBy": {
-          "status": "not-reported"
-        }
-      },
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/Nurglings"
-      },
-      "unitId": "unit-nurglings"
+      "unitId": "unit-plague-marines",
+      "wahapediaRules": [
+        "stratagem-blessings-of-filth",
+        "stratagem-clutching-corruption",
+        "stratagem-creeping-blight",
+        "stratagem-disgustingly-resilient",
+        "stratagem-drawn-to-despair",
+        "stratagem-droning-horror",
+        "stratagem-eye-of-the-swarm",
+        "stratagem-grotesque-fortitude",
+        "stratagem-leechspore-eruption",
+        "stratagem-malignance-magnified",
+        "stratagem-nauseating-paroxysms",
+        "stratagem-plaguesurge",
+        "stratagem-rabid-infusion",
+        "stratagem-shambling-wall",
+        "stratagem-shock-and-horror"
+      ]
     }
   ],
   "retrievedAt": "2026-08-01",
@@ -1532,96 +2212,6 @@
     "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
   },
   "stratagems": [
-    {
-      "category": "",
-      "detachment": "Contagion Engines",
-      "name": "Bloodrust Deluge",
-      "ruleId": "stratagem-bloodrust-deluge",
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
-      },
-      "target": "That CONTAGION ENGINE unit."
-    },
-    {
-      "category": "",
-      "detachment": "Contagion Engines",
-      "name": "Fresh Vectors",
-      "ruleId": "stratagem-fresh-vectors",
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
-      },
-      "target": "That CONTAGION ENGINE unit."
-    },
-    {
-      "category": "",
-      "detachment": "Contagion Engines",
-      "name": "Soulrot Flux",
-      "ruleId": "stratagem-soulrot-flux",
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
-      },
-      "target": "That CONTAGION ENGINE unit."
-    },
-    {
-      "category": "",
-      "detachment": "Flyblown Host",
-      "name": "Droning Horror",
-      "ruleId": "stratagem-droning-horror",
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
-      },
-      "target": "That PLAGUE MARINES unit."
-    },
-    {
-      "category": "",
-      "detachment": "Flyblown Host",
-      "name": "Eye of the Swarm",
-      "ruleId": "stratagem-eye-of-the-swarm",
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
-      },
-      "target": "That PLAGUE MARINES unit."
-    },
-    {
-      "category": "",
-      "detachment": "Flyblown Host",
-      "name": "Nauseating Paroxysms",
-      "ruleId": "stratagem-nauseating-paroxysms",
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
-      },
-      "target": "One friendly engaged PLAGUE MARINES unit."
-    },
-    {
-      "category": "",
-      "detachment": "Paragons of Putrescence",
-      "name": "Aggravus Spasms",
-      "ruleId": "stratagem-aggravus-spasms",
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
-      },
-      "target": "One friendly DEATH GUARD CHARACTER unit."
-    },
-    {
-      "category": "",
-      "detachment": "Paragons of Putrescence",
-      "name": "Simultaneous Contamination",
-      "ruleId": "stratagem-simultaneous-contamination",
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
-      },
-      "target": "That DEATH GUARD CHARACTER unit."
-    },
-    {
-      "category": "",
-      "detachment": "Paragons of Putrescence",
-      "name": "Territorial Infection",
-      "ruleId": "stratagem-territorial-infection",
-      "source": {
-        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
-      },
-      "target": "One friendly DEATH GUARD CHARACTER unit."
-    },
     {
       "category": "Battle Tactic Stratagem",
       "detachment": "Champions of Contagion",
@@ -1741,6 +2331,96 @@
         "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
       },
       "target": "Your DEATH GUARD WARLORD that is on the battlefield."
+    },
+    {
+      "category": "Stratagem",
+      "detachment": "Contagion Engines",
+      "name": "Bloodrust Deluge",
+      "ruleId": "stratagem-bloodrust-deluge",
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
+      },
+      "target": "That CONTAGION ENGINE unit."
+    },
+    {
+      "category": "Stratagem",
+      "detachment": "Contagion Engines",
+      "name": "Fresh Vectors",
+      "ruleId": "stratagem-fresh-vectors",
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
+      },
+      "target": "That CONTAGION ENGINE unit."
+    },
+    {
+      "category": "Stratagem",
+      "detachment": "Contagion Engines",
+      "name": "Soulrot Flux",
+      "ruleId": "stratagem-soulrot-flux",
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
+      },
+      "target": "That CONTAGION ENGINE unit."
+    },
+    {
+      "category": "Stratagem",
+      "detachment": "Flyblown Host",
+      "name": "Droning Horror",
+      "ruleId": "stratagem-droning-horror",
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
+      },
+      "target": "That PLAGUE MARINES unit."
+    },
+    {
+      "category": "Stratagem",
+      "detachment": "Flyblown Host",
+      "name": "Eye of the Swarm",
+      "ruleId": "stratagem-eye-of-the-swarm",
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
+      },
+      "target": "That PLAGUE MARINES unit."
+    },
+    {
+      "category": "Stratagem",
+      "detachment": "Flyblown Host",
+      "name": "Nauseating Paroxysms",
+      "ruleId": "stratagem-nauseating-paroxysms",
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
+      },
+      "target": "One friendly engaged PLAGUE MARINES unit."
+    },
+    {
+      "category": "Stratagem",
+      "detachment": "Paragons of Putrescence",
+      "name": "Aggravus Spasms",
+      "ruleId": "stratagem-aggravus-spasms",
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
+      },
+      "target": "One friendly DEATH GUARD CHARACTER unit."
+    },
+    {
+      "category": "Stratagem",
+      "detachment": "Paragons of Putrescence",
+      "name": "Simultaneous Contamination",
+      "ruleId": "stratagem-simultaneous-contamination",
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
+      },
+      "target": "That DEATH GUARD CHARACTER unit."
+    },
+    {
+      "category": "Stratagem",
+      "detachment": "Paragons of Putrescence",
+      "name": "Territorial Infection",
+      "ruleId": "stratagem-territorial-infection",
+      "source": {
+        "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
+      },
+      "target": "One friendly DEATH GUARD CHARACTER unit."
     },
     {
       "category": "Strategic Ploy Stratagem",

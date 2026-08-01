@@ -239,6 +239,8 @@ const compatibleRulesSnapshot=spawnSync(node,[path.join(root,'tests','compatible
 check('Wahapedia compatible-rules snapshot is current',compatibleRulesSnapshot.status===0,(compatibleRulesSnapshot.stderr||compatibleRulesSnapshot.stdout).trim());
 const m2DataAudit=spawnSync(node,[path.join(root,'tests','m2-data-audit-qa.mjs')],{encoding:'utf8'});
 check('M2 official parity and correction ledger are complete',m2DataAudit.status===0,(m2DataAudit.stderr||m2DataAudit.stdout).trim());
+const compatibleRulesMatrix=spawnSync(node,[path.join(root,'tests','compatible-rules-matrix-qa.mjs')],{encoding:'utf8'});
+check('Mechanicus compatible-rules matrix is current',compatibleRulesMatrix.status===0,(compatibleRulesMatrix.stderr||compatibleRulesMatrix.stdout).trim());
 check('official MFM unit sizes are locked',[
   ['Ironstrider Ballistarii','3rd+ unit: 3 models'],
   ['Sydonian Dragoons with radium jezzails','3 models'],

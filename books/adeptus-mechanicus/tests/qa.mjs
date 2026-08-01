@@ -235,6 +235,8 @@ const codexExtractor=spawnSync(node,[path.join(root,'tools','extract-datasheets.
 check('Codex datasheet snapshot is current',codexExtractor.status===0,(codexExtractor.stderr||codexExtractor.stdout).trim());
 const pointsExtractor=spawnSync(node,[path.join(root,'tools','extract-points.mjs'),'--check'],{encoding:'utf8'});
 check('current points and Enhancements snapshot is current',pointsExtractor.status===0,(pointsExtractor.stderr||pointsExtractor.stdout).trim());
+const compatibleRulesSnapshot=spawnSync(node,[path.join(root,'tests','compatible-rules-import-qa.mjs')],{encoding:'utf8'});
+check('Wahapedia compatible-rules snapshot is current',compatibleRulesSnapshot.status===0,(compatibleRulesSnapshot.stderr||compatibleRulesSnapshot.stdout).trim());
 check('official MFM unit sizes are locked',[
   ['Ironstrider Ballistarii','3rd+ unit: 3 models'],
   ['Sydonian Dragoons with radium jezzails','3 models'],

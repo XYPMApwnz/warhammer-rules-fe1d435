@@ -16,14 +16,14 @@ may supply initial datasheet-to-rule associations, Leader and Support
 relations, keywords, abilities and source identifiers. Raw Wahapedia HTML is
 never committed or rendered by the application.
 
-When sources disagree, use this precedence order:
+When sources disagree, a newer and more specific official update overrides an
+older base source. Use this precedence order:
 
-1. Official Faction Pack.
-2. Official FAQ and Errata.
-3. Official Munitorum Field Manual.
-4. Official Core Rules.
-5. Official datasheet updates.
-6. Wahapedia discovery snapshot.
+1. Latest official FAQ, Errata and datasheet updates.
+2. Current official Faction Pack or other base rules source.
+3. Official Core Rules for shared game definitions.
+4. Official Munitorum Field Manual only for points, DP and related costs.
+5. Wahapedia discovery snapshot.
 
 Every departure from the Wahapedia snapshot must be recorded in the correction
 ledger; there are no implicit code-level exceptions.
@@ -142,6 +142,17 @@ of:
 The UI may be enabled only for Death Guard on the review branch after these
 gates, automated QA and manual review pass. `main`, Pages and roster-aware
 formation resolution remain out of scope.
+
+## New Recruit roster contract
+
+New Recruit may provide Warlord state, an Enhancement owner and assigned
+UPGRADEs. It does not provide Leader assignments, Support assignments, an
+actual Attached Unit or the number of Character models in a particular
+Attached Unit.
+
+Compatible units appearing in the same roster are never evidence that they
+are attached. Until a source explicitly supplies that formation, the pipeline
+must retain the result as conditional.
 
 ## Non-goals
 

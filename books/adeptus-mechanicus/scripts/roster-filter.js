@@ -23,7 +23,13 @@
   }
   const detachments=(roster.detachments?.length?roster.detachments.map(item=>item.label):[roster.detachment]).flatMap(split).map(label=>label.replace(/\s*\([^)]*\)\s*$/,'')).filter(Boolean);
   const detachmentIds=new Set(detachments.map(label=>slug(label)));
-  window.AM_ROSTER_GUIDE=Object.freeze({detachmentIds:[...detachmentIds]});
+  const enhancementIds=new Map([...document.querySelectorAll('.enhancement[data-enhancement-title][data-rule-id]')].map(card=>[normalize(card.dataset.enhancementTitle),card.dataset.ruleId]));
+  const enhancementRuleIdsByUnitId={};
+  for(const [cardId,entry] of selected){
+    const ownerIds=new Set(entry.units.map(unit=>unit.id));
+    enhancementRuleIdsByUnitId[cardId]=[...new Set((roster.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&ownerIds.has(item.ownerUnitId)).map(item=>enhancementIds.get(normalize(item.name))).filter(Boolean))];
+  }
+  window.AM_ROSTER_GUIDE=Object.freeze({detachmentIds:[...detachmentIds],enhancementRuleIdsByUnitId:Object.freeze(enhancementRuleIdsByUnitId)});
   document.title='Adeptus Mechanicus Roster Guide';
   document.querySelector('.app-brand strong').textContent='Adeptus Mechanicus Roster Guide';
   document.querySelector('.app-brand small').textContent=`${detachments.join(' + ')} · ${roster.declared||roster.calculated||0} pts`;

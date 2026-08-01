@@ -1,5 +1,7 @@
-(function(){
+(async function(){
   'use strict';
+  const scriptUrl=document.currentScript.src;
+  const compatibleRuntime=await import(new URL('../scripts/compatible-rules-runtime.mjs?v=1',scriptUrl)).catch(error=>{console.warn('Compatible rules unavailable.',error);return null;});
   const navButton=document.getElementById('navButton');
   const scrim=document.getElementById('navScrim');
   const dialog=document.getElementById('termDialog');
@@ -16,23 +18,29 @@
   const drawerMedia=window.matchMedia('(max-width: 800px)');
   const unit=document.querySelector('.unit-card');
   const params=new URLSearchParams(location.search);
-  const relatedRulesEnabled=window.WHRelatedRules?.enabled===true;
+  const rosterMode=params.has('roster');
+  let relatedRulesEnabled=compatibleRuntime?.compatibleRulesEnabled===true;
   let gesture=null,suppressed=null,opener=null,openedByTouch=false,relatedLoaded=false,relatedKind='stratagems';
-  let rosterDetachments=[];
-  if(!relatedRulesEnabled)relatedRules?.remove();
+  let rosterDetachments=[],assignedEnhancementNames=new Set(),assignedEnhancementRuleIds=new Set(),compatibleRulesMatrix;
 
-  if(params.get('roster')&&unit&&window.WHRosterParser&&window.AMRosterEnhancements){
+  if(rosterMode&&unit&&window.WHRosterParser&&window.AMRosterEnhancements){
     try{
       const records=JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[];
       const record=records.find(item=>item?.id===params.get('roster'));
+      if(!record)throw new Error('Roster not found');
       const parsed=record?.sourceText?window.WHRosterParser.parse(record.sourceText):record?.roster;
       const slug=value=>String(value||'').toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
       const matching=(parsed?.units||[]).filter(item=>slug(item.name)===unit.id.replace(/^unit-/,''));
       rosterDetachments=(parsed?.detachments?.length?parsed.detachments.map(item=>item.label):[parsed?.detachment]).map(value=>slug(String(value||'').replace(/\s*\([^)]*\)\s*$/,''))).filter(Boolean);
+      if(!matching.length||!rosterDetachments.length)throw new Error('Roster data unavailable');
+      const ownerIds=new Set(matching.map(item=>item.id));
+      assignedEnhancementNames=new Set((parsed.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&ownerIds.has(item.ownerUnitId)).map(item=>slug(item.name)));
       window.AM_ROSTER_GUIDE=Object.freeze({detachmentIds:rosterDetachments});
       if(matching.length)window.AMRosterEnhancements.decorate(unit,parsed,matching);
-    }catch{}
+    }catch(error){console.warn('Roster data unavailable.',error);relatedRulesEnabled=false;}
   }
+  if(rosterMode&&(!window.WHRosterParser||!window.AMRosterEnhancements))relatedRulesEnabled=false;
+  if(!relatedRulesEnabled)relatedRules?.remove();
   if(rosterGuides)rosterGuides.hidden=!params.get('roster');
   if(viewSwitch){const destination=new URL(viewSwitch.href);destination.search=params.toString();if(location.hash)destination.hash=location.hash;viewSwitch.href=destination.href;}
 
@@ -49,16 +57,19 @@
   full.addEventListener('click',()=>{const triggers=[...document.querySelectorAll('[data-term]')];window.WHGlossaryReturn?.save({termId:opener?.dataset.term||'',triggerIndex:opener?triggers.indexOf(opener):-1});});
 
   function filterRelated(){
-    if(!relatedRulesEnabled||!relatedContent||!unit)return;
-    const selected=relatedDetachment.value,unitProfile=window.AMRelatedRules.profile(unit);
+    if(!relatedRulesEnabled||!relatedContent||!unit||!compatibleRulesMatrix)return;
+    const selected=relatedDetachment.value;
+    const compatible=compatibleRuntime.getCompatibleRules(compatibleRulesMatrix,unit.id,{detachmentId:selected});
+    const allowed=new Map((rosterMode?compatible.filter(item=>item.kind!=='enhancement'||assignedEnhancementRuleIds.has(item.ruleId)):compatible).map(item=>[item.ruleId,item]));
     relatedContent.querySelectorAll('.stratagem,.enhancement').forEach(card=>{
-      const result=window.AMRelatedRules.match(card,unitProfile);
-      card.hidden=result.state==='no-match';
-      card.dataset.matchState=result.state;
+      const result=allowed.get(card.dataset.ruleId||card.id);
+      card.hidden=!result;
+      card.dataset.matchState=result?.state||'no-match';
       card.querySelector(':scope > .compatibility-status')?.remove();
-      if(result.state==='conditional'){
+      if(result?.state==='conditional'){
         const status=document.createElement('p');status.className='compatibility-status';
-        status.innerHTML='<strong>Conditionally compatible</strong><span>Check the full card conditions</span>';
+        const heading=document.createElement('strong');heading.textContent='Conditionally compatible';status.append(heading);
+        for(const condition of compatibleRuntime.conditionsFor(result)){const line=document.createElement('span');line.textContent=compatibleRuntime.conditionLabels[condition]||'Check the full card conditions';status.append(line);}
         card.prepend(status);
       }
     });
@@ -77,9 +88,10 @@
   async function loadRelated(){
     if(!relatedRulesEnabled||relatedLoaded)return;
     try{
-      const response=await fetch('./related-rules.inc?v=2');if(!response.ok)throw new Error(`HTTP ${response.status}`);
-      relatedContent.innerHTML=await response.text();relatedLoaded=true;
-      if(rosterDetachments.length===1&&relatedDetachment.querySelector(`option[value="${CSS.escape(rosterDetachments[0])}"]`))relatedDetachment.value=rosterDetachments[0];
+      const [response,matrix]=await Promise.all([fetch('./related-rules.inc?v=3'),compatibleRuntime.loadCompatibleRules(new URL('../generated/compatible-rules.json',scriptUrl))]);if(!response.ok)throw new Error(`HTTP ${response.status}`);
+      relatedContent.innerHTML=await response.text();compatibleRulesMatrix=matrix;relatedLoaded=true;
+      if(rosterMode){const normalizeTitle=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');assignedEnhancementRuleIds=new Set([...relatedContent.querySelectorAll('.enhancement[data-enhancement-title]')].filter(card=>assignedEnhancementNames.has(normalizeTitle(card.dataset.enhancementTitle))).map(card=>card.dataset.ruleId||card.id));}
+      if(rosterMode){[...relatedDetachment.options].forEach(option=>{if(option.value==='all'||!rosterDetachments.includes(option.value))option.remove();});if(!relatedDetachment.options.length)throw new Error('Roster data unavailable');relatedDetachment.value=relatedDetachment.options[0].value;relatedDetachment.disabled=relatedDetachment.options.length===1;}
       filterRelated();
     }catch{
       relatedLoaded=false;

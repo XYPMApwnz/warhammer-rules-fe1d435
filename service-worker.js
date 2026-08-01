@@ -130,18 +130,19 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/reader.html",
   "./books/adeptus-mechanicus/mobile/index.html",
   "./books/adeptus-mechanicus/mobile/mobile.css?v=1",
-  "./books/adeptus-mechanicus/mobile/mobile.js?v=4",
+  "./books/adeptus-mechanicus/mobile/mobile.js?v=5",
   "./books/adeptus-mechanicus/assets/mechanicus-logo.png",
   "./books/adeptus-mechanicus/assets/mechanicus-cover-800.webp",
   "./books/adeptus-mechanicus/styles/tokens.css?v=15",
   "./books/adeptus-mechanicus/styles/mechanicus.css?v=19",
   "./books/adeptus-mechanicus/scripts/data.js?v=1",
   "./books/adeptus-mechanicus/scripts/faction-ui.js?v=1",
-  "./books/adeptus-mechanicus/scripts/related-rules.js?v=10",
-  "./books/adeptus-mechanicus/mobile/related-rules.inc?v=2",
+  "./books/adeptus-mechanicus/mobile/related-rules.inc?v=3",
   "./books/adeptus-mechanicus/scripts/roster-enhancements.js?v=2",
-  "./books/adeptus-mechanicus/scripts/roster-filter.js?v=2",
-  "./books/adeptus-mechanicus/scripts/app.js?v=28"
+  "./books/adeptus-mechanicus/scripts/roster-filter.js?v=3",
+  "./books/adeptus-mechanicus/scripts/compatible-rules-runtime.mjs?v=1",
+  "./books/adeptus-mechanicus/generated/compatible-rules.json",
+  "./books/adeptus-mechanicus/scripts/app.js?v=29"
   ,"./books/tyranids/"
   ,TYRANIDS_ENTRY_FALLBACK
   ,TYRANIDS_DESKTOP_FALLBACK

@@ -72,7 +72,7 @@ try{
     const {page,errors}=await observedPage(modalContext);
     const books=[
       ['Death Guard','/books/death-guard/reader.html#unit-chaos-land-raider','/books/death-guard/mobile/chaos-land-raider.html','/books/death-guard/mobile/virulent-vectorium.html',true],
-      ['Adeptus Mechanicus','/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers','/books/adeptus-mechanicus/mobile/skitarii-rangers.html','/books/adeptus-mechanicus/mobile/cohort-acquisitus.html',false],
+      ['Adeptus Mechanicus','/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers','/books/adeptus-mechanicus/mobile/skitarii-rangers.html','/books/adeptus-mechanicus/mobile/cohort-acquisitus.html',true],
       ['Tyranids','/books/tyranids/reader.html#unit-hive-tyrant','/books/tyranids/mobile/hive-tyrant.html','/books/tyranids/mobile/invasion-fleet.html',false],
       ["T'au Empire",'/books/tau-empire/reader.html#unit-breacher-team','/books/tau-empire/mobile/breacher-team.html','/books/tau-empire/mobile/kauyon.html',false]
     ];
@@ -100,8 +100,28 @@ try{
     const malformed=await page.evaluate(()=>{try{WHRuleFacts.profileFromDataset({ruleFacts:'{bad'},{id:'unit-browser-bad'});return'';}catch(error){return error.message;}});
     assert.match(malformed,/unit-browser-bad: malformed data-rule-facts/);
     assert.deepEqual(errors,[]);
-    console.log('PASS shared safety remains active while only the Death Guard review matrix is integrated');
+    console.log('PASS shared safety remains active while Death Guard and Mechanicus review matrices are integrated');
   }finally{await modalContext.close();}
+
+  const mechanicusContext=await browser.newContext({serviceWorkers:'block'});
+  try{
+    const {page,errors}=await observedPage(mechanicusContext);
+    await page.goto(`${origin}/books/adeptus-mechanicus/reader.html#unit-cybernetica-datasmith`);
+    await page.locator('#unit-cybernetica-datasmith .related-rules-trigger').click();
+    const conditionLines=await page.locator('.related-rules-layer [data-rule-id="core-stratagem-crushing-impact"] .compatibility-status span').allTextContents();
+    assert.deepEqual(conditionLines,['Requires an Attached Unit','Check the full card conditions'],'Mechanicus desktop must render every matrix condition');
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'am-owner-filter',roster:{faction:'Adeptus Mechanicus',detachment:'Cohort Cybernetica',detachments:[{label:'Cohort Cybernetica'}],declared:95,units:[{id:'am-owner-1',name:'Tech-Priest Enginseer',quantity:1,points:75}],enhancements:[{name:'Necromechanic',ownerUnitId:'am-owner-1',ownerStatus:'resolved'}]}}])));
+    await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?roster=am-owner-filter#unit-tech-priest-enginseer`);
+    await page.locator('#unit-tech-priest-enginseer .related-rules-trigger').click();
+    await page.locator('.related-rules-layer [data-kind="enhancements"]').click();
+    assert.deepEqual(await page.locator('.related-rules-layer .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId)),['enhancement-necromechanic'],'Mechanicus desktop roster must show only the Enhancement assigned to this ownerUnitId');
+    await page.goto(`${origin}/books/adeptus-mechanicus/mobile/tech-priest-enginseer.html?roster=missing-roster`);
+    assert.equal(await page.locator('#relatedRules').count(),0,'missing Mechanicus Phone roster must fail closed');
+    await page.goto(`${origin}/books/adeptus-mechanicus/mobile/tech-priest-enginseer.html`);
+    assert.equal(await page.locator('#relatedRules').count(),1,'ordinary Mechanicus Phone Mode must keep all Detachment choices available');
+    assert.deepEqual(errors,[]);
+    console.log('PASS Mechanicus matrix UI conditions and roster owner filtering');
+  }finally{await mechanicusContext.close();}
 
   const historyContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1194,height:834}});
   try{
@@ -278,6 +298,13 @@ try{
     assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),2,'DG cold desktop must open Core plus one matrix-backed Detachment');
     assert.deepEqual(errors,[]);
     console.log('PASS Death Guard true cold desktop Compatible Stratagems');
+
+    await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?build=am-cold#unit-skitarii-rangers`);
+    await page.locator('#unit-skitarii-rangers .related-rules-trigger').click();
+    await page.locator('.related-rules-layer [data-rule-id="core-stratagem-command-re-roll"]:not([hidden])').waitFor();
+    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),2,'Mechanicus cold desktop must open Core plus one matrix-backed Detachment');
+    assert.deepEqual(errors,[]);
+    console.log('PASS Adeptus Mechanicus true cold desktop Compatible Rules');
 
     await page.setViewportSize({width:1280,height:900});
     await page.goto(`${origin}/books/tyranids/?build=cold-desktop&view=full`);

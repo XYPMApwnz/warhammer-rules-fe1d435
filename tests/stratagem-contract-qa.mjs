@@ -96,7 +96,7 @@ for(const id of ['core-stratagem-insane-bravery','core-stratagem-rapid-ingress']
 
 for(const file of [
   'books/shared/army-related-rules.js',
-  'books/adeptus-mechanicus/scripts/related-rules.js',
+  'books/adeptus-mechanicus/scripts/app.js',
   'books/adeptus-mechanicus/mobile/mobile.js',
   'books/tyranids/mobile/mobile.js',
   'books/tau-empire/mobile/mobile.js'

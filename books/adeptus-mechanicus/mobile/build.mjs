@@ -5,24 +5,7 @@ const glossary=JSON.parse(await readFile(new URL('../../../glossary/registry.en.
 const aliases=JSON.parse(await readFile(new URL('../../../glossary/aliases.en.json',import.meta.url),'utf8')).aliases;
 const glossaryContext=JSON.parse(await readFile(new URL('../../../glossary/contexts/adeptus-mechanicus.json',import.meta.url),'utf8')).terms;
 const coreStratagems=await readFile(new URL('../../death-guard/mobile/related-rules.inc',import.meta.url),'utf8').then(html=>html.slice(html.indexOf('<section class="related-detachment related-core"')));
-const relatedRulesConfig=JSON.parse(await readFile(new URL('../content/adeptus-mechanicus-related-rules.en.json',import.meta.url),'utf8'));
 const mobileRulePaths=new Map();
-
-const coreEligibility={
-  'core-stratagem-command-re-roll':[{side:'friendly'}],
-  'core-stratagem-epic-challenge':[{side:'friendly',all:['CHARACTER']}],
-  'core-stratagem-insane-bravery':[{side:'friendly'}],
-  'core-stratagem-explosives':[{side:'friendly',any:['EXPLOSIVES','GRENADES']}],
-  'core-stratagem-crushing-impact':[{side:'friendly',any:['MONSTER','VEHICLE']}],
-  'core-stratagem-rapid-ingress':[{side:'friendly',none:['AIRCRAFT']}],
-  'core-stratagem-fire-overwatch':[{side:'friendly',none:['TITANIC']}],
-  'core-stratagem-smokescreen':[{side:'friendly',all:['SMOKE']}],
-  'core-stratagem-heroic-intervention':[
-    {side:'friendly',none:['VEHICLE']},
-    {side:'friendly',all:['VEHICLE'],any:['CHARACTER','WALKER']}
-  ],
-  'core-stratagem-counteroffensive':[{side:'friendly'}]
-};
 
 function extract(tag,id,html=source){
   const opener=new RegExp(`<${tag}\\b[^>]*\\bid="${id}"[^>]*>`,'i').exec(html);
@@ -79,19 +62,14 @@ const staticRoutes=[
 const routes=[...staticRoutes,...detachments,...units];
 
 function relatedRules(){
-  const core=coreStratagems.replace(/<article class="stratagem surface" id="([^"]+)"/g,(match,id)=>{
-    const targets=coreEligibility[id];
-    if(!targets)throw new Error(`Missing Core Stratagem eligibility for ${id}`);
-    return `${match} data-eligibility="${attribute(JSON.stringify({targets}))}"`;
-  });
   return hydrateTerms(portable(detachments.map(detachment=>{
     const slug=detachment.id.slice(11);
-    return `<section class="related-detachment" data-detachment="${slug}" data-keyword-grants="${attribute(JSON.stringify(relatedRulesConfig.keywordGrants?.[slug]||[]))}">
+    return `<section class="related-detachment" data-detachment="${slug}">
       <h2>${detachment.title} <span class="detachment-dp">${detachment.dp}</span></h2>
       <div class="related-kind" data-related-kind="stratagems">${extract('section',`${slug}-stratagems`)}</div>
       <div class="related-kind" data-related-kind="enhancements" hidden>${extract('section',`${slug}-enhancements`)}</div>
     </section>`;
-  }).join('\n')+core));
+  }).join('\n')+coreStratagems).replace(/\sdata-eligibility="[^"]*"/g,''));
 }
 
 const link=(route,active)=>`<a href="./${route.file}"${route.id===active?' aria-current="page"':''}>${route.title}${route.dp?` <span class="detachment-dp">${route.dp}</span>`:''}</a>`;
@@ -144,7 +122,7 @@ function page(route){
   <button class="toc-scrim" id="navScrim" aria-label="Close navigation" hidden></button>
   <nav class="toc-panel" id="mobileNav" aria-label="Adeptus Mechanicus navigation" aria-hidden="true"><h2 class="toc-heading">Contents</h2><div class="phone-shortcuts"><a class="phone-glossary" href="../../../roster-guides/index.html" data-roster-guides-link hidden>&larr; Roster Guides</a><a class="phone-glossary" href="../../../glossary/index.html">Mega Glossary &rarr;</a><a class="phone-glossary phone-mode-switch" href="../reader.html#${route.id}" data-view-switch>Desktop / iPad view &rarr;</a></div><div class="phone-tree">${navigation(route)}</div></nav>
   <main class="main mobile-main"><article class="document">${hydrateTerms(content(route))}${relatedSection}</article></main>
-  <script src="../../shared/datasheet-layout.js?v=2"></script><script src="../../shared/rule-facts.js?v=4"></script><script src="../../shared/related-rules-matcher.js?v=6"></script>
+  <script src="../../shared/datasheet-layout.js?v=2"></script><script src="../../shared/rule-facts.js?v=4"></script>
   <dialog class="mobile-dialog" id="termDialog" aria-labelledby="termTitle"><form method="dialog" class="mobile-dialog-head"><span>Mega Glossary</span><button aria-label="Close popup">&times;</button></form><h2 id="termTitle"></h2><p id="termSummary"></p><a id="termRule" hidden>Open full rule &rarr;</a><a id="termFull" href="../../../glossary/index.html">Glossary entry &rarr;</a></dialog>
   <script src="../../../glossary-return.js?v=3"></script><script src="../../shared/roster-parser.js?v=2"></script><script src="../../shared/roster-entities.js?v=1"></script><script src="../../../roster-guides/points-data.js?v=6"></script><script src="../scripts/roster-enhancements.js?v=2"></script><script src="./mobile.js?v=6"></script>
 </body></html>`;

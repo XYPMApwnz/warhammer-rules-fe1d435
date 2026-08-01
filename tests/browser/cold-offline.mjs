@@ -80,6 +80,7 @@ try{
     for(const [name,desktop,mobile,detachment,reviewEnabled] of books){
       await page.goto(origin+desktop);
       if(name==='Death Guard')assert.deepEqual(await page.evaluate(()=>({matcher:typeof window.WHRelatedRules,legacy:typeof window.DGRelatedRules})),{matcher:'undefined',legacy:'undefined'},'Death Guard must not load the legacy matcher path');
+      else if(name==='Adeptus Mechanicus')assert.deepEqual(await page.evaluate(()=>({matcher:typeof window.WHRelatedRules,legacy:typeof window.AMRelatedRules})),{matcher:'undefined',legacy:'undefined'},'Adeptus Mechanicus must not load the legacy matcher path');
       else assert.equal(await page.evaluate(()=>window.WHRelatedRules?.enabled),false,`${name} shared safety flag must be disabled`);
       if(reviewEnabled)await page.locator('.related-rules-trigger').first().waitFor();
       assert.equal(await page.locator('.related-rules-trigger').count()>0,reviewEnabled,`${name} desktop review integration state is wrong`);
@@ -132,6 +133,7 @@ try{
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();
     await page.locator('[data-related-tab="enhancements"]:not([hidden])').waitFor();
     await page.locator('[data-related-tab="enhancements"]').click();
+    await page.locator('#relatedRulesContent [data-rule-id="enhancement-necromechanic"]:visible').waitFor();
     assert.deepEqual(await page.locator('#relatedRulesContent .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId||card.id)),['enhancement-necromechanic'],'Mechanicus Phone roster must show only the Enhancement assigned to this ownerUnitId');
     assert.deepEqual(errors,[]);
     console.log('PASS Mechanicus matrix UI conditions and roster owner filtering');

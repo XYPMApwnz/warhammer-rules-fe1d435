@@ -39,7 +39,7 @@ const check=(name,ok,detail='')=>results.push({name,ok,detail});
 check('BSData source hash ignores LF/CRLF differences',
   normalizedTextSha256('{\n  "revision": 1\n}\n')===normalizedTextSha256('{\r\n  "revision": 1\r\n}\r\n'));
 
-const scripts=['scripts/data.js','scripts/faction-ui.js','scripts/related-rules.js','scripts/roster-enhancements.js','scripts/roster-filter.js','scripts/app.js'];
+const scripts=['scripts/data.js','scripts/faction-ui.js','scripts/roster-enhancements.js','scripts/roster-filter.js','scripts/app.js'];
 for(const file of scripts){try{new vm.Script(read(file),{filename:file});check(`${file} syntax`,true);}catch(error){check(`${file} syntax`,false,error.message);}}
 try{new vm.Script(sharedTargets,{filename:'../shared/navigation-targets.js'});check('shared navigation targets syntax',true);}catch(error){check('shared navigation targets syntax',false,error.message);}
 try{new vm.Script(sharedDatasheetLayout,{filename:'../shared/datasheet-layout.js'});check('shared datasheet layout syntax',true);}catch(error){check('shared datasheet layout syntax',false,error.message);}
@@ -189,12 +189,6 @@ check('conditional attached-unit Enhancements are never guessed',read('scripts/r
 check('personal roster reports unmatched units and renders loadout',read('scripts/roster-filter.js').includes('Unmatched roster units:')&&read('scripts/roster-filter.js').includes('Roster loadout')&&read('scripts/roster-filter.js').includes('\\[legends\\]'));
 check('shared points validation recognises New Recruit Legends suffixes',fs.readFileSync(path.resolve(root,'..','..','roster-guides','points-validator.js'),'utf8').includes('\\[legends\\]'));
 
-const relatedContext={window:{}};
-vm.createContext(relatedContext);
-new vm.Script(read('../shared/rule-facts.js'),{filename:'../shared/rule-facts.js'}).runInContext(relatedContext);
-new vm.Script(read('../shared/related-rules-matcher.js'),{filename:'../shared/related-rules-matcher.js'}).runInContext(relatedContext);
-new vm.Script(read('scripts/related-rules.js'),{filename:'scripts/related-rules.js'}).runInContext(relatedContext);
-const relatedMatcher=relatedContext.window.AMRelatedRules;
 const allStratagems=allDetachments.flatMap(detachment=>detachment.stratagems);
 const allEnhancements=allDetachments.flatMap(detachment=>detachment.enhancements);
 const allEligibleItems=[...allStratagems,...allEnhancements];
@@ -205,29 +199,7 @@ const eligibilityTargets=allEligibleItems.flatMap(item=>item.eligibility?.target
 check('all 51 Stratagems and 34 Enhancements have explicit eligibility',allStratagems.length===51&&allEnhancements.length===34&&allEligibleItems.every(item=>item.id&&(item.eligibility?.owner||item.eligibility?.targets?.some(target=>target.side==='friendly'))));
 check('eligibility IDs are stable and unique',new Set(allEligibleItems.map(item=>item.id)).size===allEligibleItems.length&&allStratagems.every(item=>item.id.startsWith('stratagem-'))&&allEnhancements.every(item=>item.id.startsWith('enhancement-')));
 check('eligibility references known datasheets and keywords',eligibilityTargets.every(target=>(target.units||[]).every(id=>unitIds.has(id))&&[...(target.all||[]),...(target.any||[]),...(target.none||[])].every(keyword=>knownKeywords.has(keyword.toUpperCase()))));
-check('Related Rules uses structured eligibility only',read('scripts/related-rules.js').includes("JSON.parse(card.dataset.eligibility||'')")&&!read('scripts/related-rules.js').includes("text.includes("));
-check('detachment-granted keywords are applied only inside their Related Rules section',read('scripts/related-rules.js').includes('withKeywordGrants(card,unit)')&&read('mobile/related-rules.inc').includes('data-keyword-grants=')&&read('mobile/related-rules.inc').includes('RECON AUGURY'));
-check('Related Rules preserves stable rule IDs when cloning',read('scripts/related-rules.js').includes('if(!node.dataset.ruleId)node.dataset.ruleId=node.id'));
-
-const itemByTitle=title=>allEligibleItems.find(item=>item.title===title);
-const profileById=id=>{
-  const unit=rules.datasheets.find(item=>item.id===id);
-  return{id:unit.id,slug:unit.id.replace(/^unit-/,''),keywords:new Set(unit.keywords.map(keyword=>keyword.toUpperCase())),epic:unit.keywords.some(keyword=>keyword.toUpperCase()==='EPIC HERO')};
-};
-const eligible=(title,unitId)=>relatedMatcher.matches({dataset:{eligibility:JSON.stringify(itemByTitle(title).eligibility)}},profileById(unitId));
-check('exact-unit eligibility distinguishes Dunerider from other Vehicles',eligible('Aggressive Impulse','unit-skorpius-dunerider')&&!eligible('Aggressive Impulse','unit-onager-dunecrawler'));
-check('AND eligibility requires both Skitarii and Vehicle',eligible('Threat-cogitation Targeters','unit-onager-dunecrawler')&&!eligible('Threat-cogitation Targeters','unit-skitarii-vanguard')&&!eligible('Threat-cogitation Targeters','unit-kastelan-robots'));
-check('OR eligibility accepts Legio Cybernetica or Vehicle',eligible('Auto-divinatory Targeting','unit-kastelan-robots')&&eligible('Auto-divinatory Targeting','unit-onager-dunecrawler')&&!eligible('Auto-divinatory Targeting','unit-skitarii-vanguard'));
-check('exclusion eligibility rejects Kataphron Infantry',eligible('Analytical Divination','unit-skitarii-vanguard')&&!eligible('Analytical Divination','unit-kataphron-breachers'));
-check('friendly plus enemy multi-target rules keep the friendly unit eligible',eligible('Tribute of Empathic Veneration','unit-corpuscarii-electro-priests')&&!eligible('Tribute of Empathic Veneration','unit-skitarii-vanguard')&&eligible('Binharic Offence','unit-skitarii-vanguard')&&!eligible('Binharic Offence','unit-corpuscarii-electro-priests'));
-check('different friendly target roles are matched independently',eligible('Incense Exhausts','unit-skitarii-vanguard')&&eligible('Incense Exhausts','unit-skorpius-dunerider')&&!eligible('Incense Exhausts','unit-kastelan-robots'));
-check('named Enhancement eligibility remains exact',eligible('Stealth-screened Cybercanids Upgrade','unit-serberys-raiders')&&!eligible('Stealth-screened Cybercanids Upgrade','unit-serberys-sulphurhounds'));
-check('Tech-Priest Enhancements reject Epic Heroes and non-Characters',eligible('Necromechanic','unit-tech-priest-dominus')&&!eligible('Necromechanic','unit-belisarius-cawl')&&!eligible('Necromechanic','unit-skitarii-vanguard'));
-check('generic Adeptus Mechanicus Enhancements require a non-Epic Character',eligible('Autoclavic Denunciation','unit-tech-priest-dominus')&&!eligible('Autoclavic Denunciation','unit-belisarius-cawl')&&!eligible('Autoclavic Denunciation','unit-skitarii-vanguard'));
-check('Skitarii Enhancements require a non-Epic Character',eligible('Clandestine Infiltrator','unit-skitarii-marshal')&&!eligible('Clandestine Infiltrator','unit-skitarii-vanguard')&&!eligible('Clandestine Infiltrator','unit-onager-dunecrawler'));
-const reconRule=itemByTitle('Repolarised Augurs'),reconGrants=relatedRulesConfig.keywordGrants['cohort-acquisitus'];
-const reconCard={dataset:{eligibility:JSON.stringify(reconRule.eligibility)},closest:()=>({dataset:{keywordGrants:JSON.stringify(reconGrants)}})};
-check('Cohort Acquisitus grants RECON AUGURY only to its named datasheets',relatedMatcher.matches(reconCard,profileById('unit-skitarii-rangers'))&&!relatedMatcher.matches(reconCard,profileById('unit-onager-dunecrawler')));
+check('legacy Mechanicus matcher path is absent',!fs.existsSync(path.join(root,'scripts','related-rules.js'))&&!html.includes('related-rules-matcher.js')&&!read('mobile/related-rules.inc').includes('data-eligibility=')&&!read('mobile/related-rules.inc').includes('data-keyword-grants='));
 
 const extractor=spawnSync('C:\\Users\\denis\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe',[path.join(root,'tools','extract-faction-pack.py'),'--check'],{encoding:'utf8'});
 check('PDF extraction snapshot is current',extractor.status===0,(extractor.stderr||extractor.stdout).trim());

@@ -17,7 +17,7 @@ for(const file of [
 
 for(const file of [
   'books/death-guard/scripts/app.js',
-  'books/adeptus-mechanicus/scripts/related-rules.js',
+  'books/adeptus-mechanicus/scripts/app.js',
   'books/shared/army-related-rules.js'
 ]){
   const source=read(file);

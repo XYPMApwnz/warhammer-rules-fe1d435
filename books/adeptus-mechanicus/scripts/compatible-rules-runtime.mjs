@@ -18,8 +18,12 @@ export async function loadCompatibleRules(url){
 }
 
 export function getCompatibleRules(matrix,unitId,{detachmentId}={}){
-  const selected=detachmentId&&!detachmentId.startsWith('detachment-')?`detachment-${detachmentId}`:detachmentId;
-  return (matrix.units?.[unitId]||[]).filter(rule=>rule.scope==='core'||!selected||rule.detachmentId===selected);
+  const selected=detachmentId&&detachmentId!=='all'?(detachmentId.startsWith('detachment-')?detachmentId:`detachment-${detachmentId}`):'';
+  return (matrix.units?.[unitId]||[]).filter(rule=>rule.scope==='core'||!selected||rule.detachmentId===selected).map(rule=>{
+    const conditions=conditionsFor(rule).filter(condition=>condition!=='detachment-not-selected'||!selected);
+    const {condition:ignored,conditions:ignoredList,...base}=rule;
+    return conditions.length?{...base,state:'conditional',condition:conditions[0],conditions}:{...base,state:rule.state==='conditional'?'match':rule.state};
+  });
 }
 
 export function conditionsFor(rule){

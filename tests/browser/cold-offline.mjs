@@ -119,6 +119,20 @@ try{
     assert.equal(await page.locator('#relatedRules').count(),0,'missing Mechanicus Phone roster must fail closed');
     await page.goto(`${origin}/books/adeptus-mechanicus/mobile/tech-priest-enginseer.html`);
     assert.equal(await page.locator('#relatedRules').count(),1,'ordinary Mechanicus Phone Mode must keep all Detachment choices available');
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('#relatedRulesContent [data-rule-id="stratagem-repolarised-augurs"]:not([hidden])').waitFor();
+    assert.equal(await page.locator('#relatedDetachment').inputValue(),'all','ordinary Phone Mode must start with All detachments');
+    await page.locator('[data-related-tab="enhancements"]').click();
+    assert.ok(await page.locator('#relatedRulesContent .enhancement:visible').count()>0,'All detachments must include compatible Enhancements');
+    await page.locator('#relatedDetachment').selectOption('cohort-acquisitus');
+    await page.locator('[data-related-tab="stratagems"]').click();
+    assert.equal(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count(),2,'selected Phone Detachment must show Core plus that Detachment');
+    assert.equal(await page.locator('#relatedRulesContent [data-rule-id="stratagem-repolarised-augurs"] .compatibility-status').filter({hasText:'Requires Detachment selection'}).count(),0,'selected Cohort Acquisitus must resolve the Detachment-selection condition');
+    await page.goto(`${origin}/books/adeptus-mechanicus/mobile/tech-priest-enginseer.html?roster=am-owner-filter`);
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('[data-related-tab="enhancements"]:not([hidden])').waitFor();
+    await page.locator('[data-related-tab="enhancements"]').click();
+    assert.deepEqual(await page.locator('#relatedRulesContent .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId||card.id)),['enhancement-necromechanic'],'Mechanicus Phone roster must show only the Enhancement assigned to this ownerUnitId');
     assert.deepEqual(errors,[]);
     console.log('PASS Mechanicus matrix UI conditions and roster owner filtering');
   }finally{await mechanicusContext.close();}

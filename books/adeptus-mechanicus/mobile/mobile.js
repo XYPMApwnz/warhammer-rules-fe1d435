@@ -1,7 +1,7 @@
 (async function(){
   'use strict';
   const scriptUrl=document.currentScript.src;
-  const compatibleRuntime=await import(new URL('../scripts/compatible-rules-runtime.mjs?v=1',scriptUrl)).catch(error=>{console.warn('Compatible rules unavailable.',error);return null;});
+  const compatibleRuntime=await import(new URL('../scripts/compatible-rules-runtime.mjs?v=2',scriptUrl)).catch(error=>{console.warn('Compatible rules unavailable.',error);return null;});
   const navButton=document.getElementById('navButton');
   const scrim=document.getElementById('navScrim');
   const dialog=document.getElementById('termDialog');

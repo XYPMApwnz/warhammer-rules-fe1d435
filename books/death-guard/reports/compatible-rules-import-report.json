@@ -1,0 +1,33 @@
+{
+  "retrievedAt": "2026-08-01",
+  "schema": "compatible-rules-import-report/v1",
+  "scope": {
+    "excludedCore": 10,
+    "included": 45,
+    "stratagems": "faction-only"
+  },
+  "source": {
+    "edition": "11",
+    "faction": "Death Guard",
+    "kind": "Wahapedia",
+    "url": "https://wahapedia.ru/wh40k11ed/factions/death-guard/"
+  },
+  "summary": {
+    "datasheets": {
+      "canonical": 41,
+      "imported": 41
+    },
+    "stratagems": {
+      "canonical": 45,
+      "imported": 45
+    },
+    "unresolved": 0
+  },
+  "unresolved": {
+    "ambiguous": [],
+    "duplicates": [],
+    "parse": [],
+    "renamed": [],
+    "unknown": []
+  }
+}

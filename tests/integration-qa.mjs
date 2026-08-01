@@ -16,7 +16,7 @@ const sw=read('service-worker.js');
 let appShell=[],navigationFallback;
 const coreReaderFiles=fs.readdirSync(path.join(root,'books','core-rules','reader')).filter(name=>name.endsWith('.html'));
 const books={
-  'death-guard':{version:'9',reader:'reader.html',versions:{'styles/tokens.css':'11','styles/layout.css':'11','styles/navigation.css':'12','styles/content.css':'37','styles/popups.css':'17','scripts/roster-filter.js':'14','scripts/navigation-controller.js':'16','scripts/popup-controller.js':'25','scripts/full-entry-controller.js':'9','scripts/journey-controller.js':'13','scripts/ui-controllers.js':'12','scripts/related-rules.js':'10','scripts/app.js':'34'},app:'scripts/app.js',usesPopupGlossary:true,files:['assets/icon-v4.svg','styles/tokens.css','styles/layout.css','styles/navigation.css','styles/content.css','styles/popups.css','scripts/roster-filter.js','scripts/navigation-controller.js','scripts/popup-controller.js','scripts/full-entry-controller.js','scripts/journey-controller.js','scripts/ui-controllers.js','scripts/related-rules.js','scripts/app.js']},
+  'death-guard':{version:'9',reader:'reader.html',versions:{'styles/tokens.css':'11','styles/layout.css':'11','styles/navigation.css':'12','styles/content.css':'37','styles/popups.css':'17','scripts/roster-filter.js':'14','scripts/navigation-controller.js':'16','scripts/popup-controller.js':'25','scripts/full-entry-controller.js':'9','scripts/journey-controller.js':'13','scripts/ui-controllers.js':'12','scripts/related-rules.js':'11','scripts/app.js':'35'},app:'scripts/app.js',usesPopupGlossary:true,files:['assets/icon-v4.svg','styles/tokens.css','styles/layout.css','styles/navigation.css','styles/content.css','styles/popups.css','scripts/roster-filter.js','scripts/navigation-controller.js','scripts/popup-controller.js','scripts/full-entry-controller.js','scripts/journey-controller.js','scripts/ui-controllers.js','scripts/related-rules.js','scripts/app.js']},
   'core-rules':{version:null,reader:'reader/index.html',rootPrefix:'../../../',libraryEntry:'reader/index.html',versions:{'reader/styles.css':'14','reader/app.js':'14'},app:'reader/app.js',usesPopupGlossary:false,files:['reader/index.html','reader/search-index.json','reader/styles.css','reader/app.js']},
   'adeptus-mechanicus':{version:null,reader:'reader.html',versions:{'styles/tokens.css':'15','styles/mechanicus.css':'19','scripts/data.js':'1','scripts/faction-ui.js':'1','scripts/related-rules.js':'10','scripts/roster-enhancements.js':'2','scripts/roster-filter.js':'2','scripts/app.js':'28','mobile/mobile.css':'1','mobile/mobile.js':'4'},app:'scripts/app.js',usesPopupGlossary:true,files:['reader.html','mobile/index.html','mobile/mobile.css','mobile/mobile.js','assets/mechanicus-logo.png','assets/mechanicus-cover-800.webp','styles/tokens.css','styles/mechanicus.css','scripts/data.js','scripts/faction-ui.js','scripts/related-rules.js','scripts/roster-enhancements.js','scripts/roster-filter.js','scripts/app.js']}
 };
@@ -139,7 +139,7 @@ check('Roster Guides compare current Army Book points without blocking save',ros
 check('Roster Guides and Death Guard share one source parser',rosterGuides.includes('roster-parser.js?v=2')&&read('books/death-guard/reader.html').includes('roster-parser.js?v=2')&&read('books/death-guard/scripts/roster-filter.js').includes('WHRosterParser.parse'));
 check('owned Enhancements are derived without mutating Army Book data',read('books/death-guard/reader.html').includes('roster-enhancements.js?v=3')&&['furnace','critical-hit-5','melee-a-2','plague-wind-range-12','narthecium-d3','mobile'].every(effect=>read('books/shared/roster-enhancements.js').includes(`item.effect === '${effect}'`)));
 check('Enhancement UI reports only failed automatic effects',!read('books/shared/roster-enhancements.js').match(/Profile applied|Melee rule applied|Ability upgraded|Keyword applied/)&&read('books/shared/roster-enhancements.js').includes('Effect could not be applied automatically.')&&read('books/shared/roster-enhancements.js').includes('No matching melee weapon profiles were found.'));
-check('Core Rules source pages are cached only on demand',!sw.includes('Array.from({length:88}')&&sw.includes('cached || fetchAndCache(request, event)'));
+check('Core Rules source pages are cached only on demand',!sw.includes('Array.from({length:88}')&&sw.includes('cached || fetchAndCache(request)'));
 check('Core Rules routed chapters and search are available offline',coreReaderFiles.length===27&&coreReaderFiles.every(file=>sw.includes(`./books/core-rules/reader/${file}`))&&sw.includes('./books/core-rules/reader/search-index.json'));
 check('service worker installs the complete app shell atomically',sw.includes('event.waitUntil(cacheAppShell().then(() => self.skipWaiting()))')&&!sw.includes('Promise.allSettled(APP_SHELL'));
 const shellSource=sw.match(/const APP_SHELL = \[([\s\S]*?)\n\];/)?.[1]||'';
@@ -153,6 +153,16 @@ for(const item of appShell){
 }
 const duplicateVersions=[...shellVersions].filter(([,versions])=>versions.size>1).map(([pathname,versions])=>`${pathname}: ${[...versions].join(', ')}`);
 check('app shell never caches two versions of one asset',duplicateVersions.length===0,duplicateVersions.join('; '));
+check('Death Guard Compatible Stratagems offline chain is versioned and precached',[
+  './books/death-guard/scripts/app.js?v=35',
+  './books/death-guard/mobile/mobile.js?v=17',
+  './books/death-guard/scripts/compatible-stratagems-runtime.mjs?v=1',
+  './books/death-guard/generated/compatible-rules.json',
+  './books/death-guard/mobile/related-rules.inc?v=3',
+  './books/death-guard/scripts/related-rules.js?v=11',
+  './glossary/generated/glossary.en.js?v=tyranids-1',
+  './assets/death-guard-cover.jpg'
+].every(item=>appShell.includes(item)));
 const criticalRefs=file=>{
   const html=read(file),refs=[];
   for(const match of html.matchAll(/<(link|script|img)\b[^>]*(?:href|src)="([^"]+)"[^>]*>/gi)){
@@ -163,6 +173,9 @@ const criticalRefs=file=>{
   }
   return refs;
 };
+const deathGuardFallbackPages=['books/death-guard/reader.html','books/death-guard/mobile/index.html'];
+const missingDeathGuardFallbackAssets=deathGuardFallbackPages.flatMap(file=>criticalRefs(file).filter(ref=>!appShell.includes(ref)).map(ref=>`${file} -> ${ref}`));
+check('Death Guard fallback pages have exact render-critical dependencies in the app shell',missingDeathGuardFallbackAssets.length===0,missingDeathGuardFallbackAssets.join('; '));
 const tyranidsFallbackPages=['books/tyranids/index.html','books/tyranids/reader.html','books/tyranids/mobile/index.html'];
 const missingFallbackAssets=tyranidsFallbackPages.flatMap(file=>criticalRefs(file).filter(ref=>!appShell.includes(ref)).map(ref=>`${file} -> ${ref}`));
 check('Tyranids fallback pages have exact render-critical dependencies in the app shell',missingFallbackAssets.length===0,missingFallbackAssets.join('; '));
@@ -174,7 +187,7 @@ check('Every result search prioritises title matches',read('books/core-rules/rea
 check('Core Rules heavy source images remain cached on demand',!sw.includes('Array.from({length:88}')&&!sw.includes('./books/core-rules/assets/diagrams/BenefitOfCover.png'));
 check('legacy Core Rules URL redirects to Reference',read('books/core-rules/index.html').includes("location.replace(new URL('reader/index.html',location.href))"));
 check('Core Rules promotes official GW source and labels Wahapedia secondary',read('books/core-rules/reader/index.html').includes('Official GW PDF ↗')&&!read('books/core-rules/reader/index.html').includes('Wahapedia 11E ↗')&&read('books/core-rules/reader/movement-phase.html').includes('Secondary reference: Wahapedia 11E ↗'));
-check('global glossary runtime exists but is cached on demand',exists('glossary/generated/glossary.en.js')&&!sw.includes('"./glossary/generated/glossary.en.js?v=3"'));
+check('global glossary runtime exists and DG precaches its exact version',exists('glossary/generated/glossary.en.js')&&appShell.includes('./glossary/generated/glossary.en.js?v=tyranids-1'));
 check('Mega Glossary return UI is shared, versioned and precached',read('glossary/index.html').includes('id="libraryBack"')&&read('glossary/index.html').includes('../glossary-return.js?v=3')&&read('glossary/index.html').includes('viewer.js?v=12')&&sw.includes('"./glossary-return.js?v=3"')&&sw.includes('"./glossary/viewer.js?v=12"')&&sw.includes('"./glossary/viewer-progressive.css?v=3"'));
 check('Mega Glossary uses one article-first progressive view',read('glossary/viewer.js').includes("history.pushState(null,'',url)")&&!read('glossary/viewer.js').includes('history.replaceState')&&read('glossary/viewer.js').includes("detailsBlock('Registry details'")&&read('glossary/viewer.js').includes('Explore connections ·')&&read('glossary/viewer.js').includes('Search another term'));
 check('Every reader can restore its originating term popup',read('glossary-return.js').includes('isExactReturnTarget')&&read('glossary-return.js').includes("'automatic'")&&read('books/core-rules/reader/core-concepts.html').includes('../../../glossary-return.js?v=3')&&read('books/core-rules/reader/app.js').includes('triggerIndex')&&read('books/death-guard/mobile/mortarion.html').includes('../../../glossary-return.js?v=3')&&read('books/death-guard/mobile/mobile.js').includes('triggerIndex'));
@@ -206,13 +219,13 @@ for(const id of ['core-characteristic-toughness','core-stratagem-fire-overwatch'
 for(const [slug,book] of Object.entries(books)){
   const html=read(`books/${slug}/${book.reader||'index.html'}`);
   const app=read(`books/${slug}/${book.app}`);
-  check(`${slug} glossary loading matches its runtime`,book.usesPopupGlossary===html.includes('../../glossary/generated/glossary.en.js?v=3'));
+  check(`${slug} glossary loading matches its runtime`,book.usesPopupGlossary===/\.\.\/\.\.\/glossary\/generated\/glossary\.en\.js\?v=[^"']+/.test(html));
   if(book.usesPopupGlossary)check(`${slug} popup uses the global glossary`,
     app.includes("WH40K_GLOSSARY?.forBook('"+slug+"')")||
     app.includes("WH40K_GLOSSARY.forBook('"+slug+"')")
   );
 }
-check('navigation responses keep their own cache URL',sw.includes('fetchAndCache(request, event);')&&!sw.includes('fetchAndCache(request, event, LIBRARY_FALLBACK)'));
+check('navigation responses keep their own cache URL',sw.includes('fetchAndCache(request);')&&!sw.includes('fetchAndCache(request, LIBRARY_FALLBACK)'));
 check('Death Guard entry routes phone and full readers',read('books/death-guard/index.html').includes('scripts/view-router.js?v=2')&&read('books/death-guard/scripts/view-router.js').includes('phoneUserAgent')&&read('books/death-guard/scripts/view-router.js').includes('smallTouchScreen'));
 check('Mechanicus entry uses the same phone and full reader contract',read('books/adeptus-mechanicus/index.html').includes('../death-guard/scripts/view-router.js?v=2')&&read('books/adeptus-mechanicus/index.html').includes('./reader.html?view=full')&&read('books/adeptus-mechanicus/index.html').includes('./mobile/index.html?view=mobile'));
 const viewRouter=read('books/death-guard/scripts/view-router.js');

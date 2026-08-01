@@ -41,6 +41,7 @@ const APP_SHELL = [
   "./assets/death-guard-cover-800.webp",
   "./assets/death-guard-cover-fallback.jpg",
   "./assets/death-guard-cover-thumb.jpg",
+  "./assets/death-guard-cover.jpg",
   "./assets/adeptus-mechanicus-cover-480.webp",
   "./assets/adeptus-mechanicus-cover-800.webp",
   "./assets/adeptus-mechanicus-cover-fallback.jpg",
@@ -65,7 +66,8 @@ const APP_SHELL = [
   "./books/death-guard/scripts/view-router.js?v=2",
   "./books/death-guard/mobile/index.html",
   "./books/death-guard/mobile/mobile.css?v=8",
-  "./books/death-guard/mobile/mobile.js?v=15",
+  "./books/death-guard/mobile/mobile.js?v=17",
+  "./books/death-guard/mobile/related-rules.inc?v=3",
   "./books/shared/navigation-targets.js?v=1",
   "./books/shared/popup-rule-actions.js?v=1",
   "./books/shared/datasheet-layout.js?v=2",
@@ -89,8 +91,10 @@ const APP_SHELL = [
   "./books/death-guard/scripts/full-entry-controller.js?v=9",
   "./books/death-guard/scripts/journey-controller.js?v=13",
   "./books/death-guard/scripts/ui-controllers.js?v=12",
-  "./books/death-guard/scripts/related-rules.js?v=10",
-  "./books/death-guard/scripts/app.js?v=34",
+  "./books/death-guard/scripts/related-rules.js?v=11",
+  "./books/death-guard/scripts/app.js?v=35",
+  "./books/death-guard/scripts/compatible-stratagems-runtime.mjs?v=1",
+  "./books/death-guard/generated/compatible-rules.json",
   "./books/core-rules/",
   CORE_RULES_FALLBACK,
   "./books/core-rules/reader/styles.css?v=14",
@@ -242,10 +246,11 @@ self.addEventListener("activate", (event) => {
   );
 });
 
-async function fetchAndCache(request, event, cacheKey = request) {
+async function fetchAndCache(request, cacheKey = request) {
   const response = await fetch(request);
   if (response.ok) {
-    event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.put(cacheKey, response.clone())));
+    const cache = await caches.open(CACHE_NAME);
+    await cache.put(cacheKey, response.clone());
   }
   return response;
 }
@@ -257,7 +262,7 @@ self.addEventListener("fetch", (event) => {
 
   if (request.mode === "navigate") {
     const fallback = navigationFallback(url);
-    const networkUpdate = fetchAndCache(request, event);
+    const networkUpdate = fetchAndCache(request);
     event.respondWith(
       networkUpdate.catch(async () =>
         (await caches.match(request)) ||
@@ -269,6 +274,6 @@ self.addEventListener("fetch", (event) => {
   }
 
   event.respondWith(
-    caches.match(request).then((cached) => cached || fetchAndCache(request, event))
+    caches.match(request).then((cached) => cached || fetchAndCache(request))
   );
 });

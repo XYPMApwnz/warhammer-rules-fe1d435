@@ -55,6 +55,18 @@ const control=async page=>{
 };
 
 try{
+  const failSoftContext=await browser.newContext({serviceWorkers:'block'});
+  try{
+    const {page,errors}=await observedPage(failSoftContext);
+    await page.route('**/compatible-stratagems-runtime.mjs*',route=>route.abort());
+    await page.goto(`${origin}/books/death-guard/reader.html#unit-chaos-land-raider`);
+    await page.waitForFunction(()=>Boolean(window.DG_APP?.navigation));
+    assert.equal(await page.locator('.related-rules-trigger').count(),0,'missing review module must disable only Compatible Stratagems');
+    assert.equal(errors.length,1);
+    assert.match(errors[0],/Failed to load resource: net::ERR_FAILED.*compatible-stratagems-runtime\.mjs/);
+    console.log('PASS Death Guard feature module fails soft without blocking the reader');
+  }finally{await failSoftContext.close();}
+
   const modalContext=await browser.newContext({serviceWorkers:'block'});
   try{
     const {page,errors}=await observedPage(modalContext);
@@ -234,6 +246,28 @@ try{
     await control(page);
     await coldContext.setOffline(true);
     await page.setViewportSize({width:1280,height:900});
+    await page.goto(`${origin}/books/death-guard/reader.html?build=dg-cold#unit-chaos-land-raider`);
+    await page.waitForTimeout(500);
+    const coldDgState=await page.evaluate(async()=>({
+      url:location.href,
+      title:document.title,
+      hasApp:Boolean(window.DG_APP),
+      scripts:[...document.scripts].map(script=>script.src).filter(Boolean).slice(-5),
+      triggerCount:document.querySelectorAll('.related-rules-trigger').length,
+      relatedRules:Boolean(window.DG_APP?.relatedRules),
+      cachedApp:Boolean(await caches.match('./books/death-guard/scripts/app.js?v=35')),
+      cachedModule:Boolean(await caches.match('./books/death-guard/scripts/compatible-stratagems-runtime.mjs?v=1')),
+      cachedMatrix:Boolean(await caches.match('./books/death-guard/generated/compatible-rules.json')),
+      cachedTemplate:Boolean(await caches.match('./books/death-guard/mobile/related-rules.inc?v=3'))
+    }));
+    assert.equal(coldDgState.hasApp&&coldDgState.triggerCount>0,true,`DG cold review runtime unavailable: ${JSON.stringify({coldDgState,errors})}`);
+    await page.locator('#unit-chaos-land-raider .related-rules-trigger').click();
+    await page.locator('.related-rules-layer [data-rule-id="stratagem-disgustingly-resilient"]:not([hidden])').waitFor();
+    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),1,'DG cold desktop must open one matrix-backed Detachment');
+    assert.deepEqual(errors,[]);
+    console.log('PASS Death Guard true cold desktop Compatible Stratagems');
+
+    await page.setViewportSize({width:1280,height:900});
     await page.goto(`${origin}/books/tyranids/?build=cold-desktop&view=full`);
     assert.match(page.url(),/\/books\/tyranids\/reader\.html\?build=cold-desktop$/);
     assert.equal(await page.title(),'Tyranids Rules — WH40K Library');
@@ -266,6 +300,40 @@ try{
     assert.deepEqual(errors,[]);
     console.log("PASS T'au Empire true cold desktop, Phone Mode and unvisited datasheet fallback");
   }finally{await coldContext.close();}
+
+  const warmDeathGuardContext=await browser.newContext({serviceWorkers:'allow'});
+  try{
+    const {page,errors}=await observedPage(warmDeathGuardContext);
+    await page.goto(`${origin}/index.html?dg-warm=1`);
+    await control(page);
+    await page.setViewportSize({width:390,height:844});
+    await page.goto(`${origin}/books/death-guard/mobile/chaos-land-raider.html?view=mobile`);
+    await page.waitForFunction(async()=>Boolean(await caches.match(location.href)));
+    const warmBefore=await page.evaluate(async()=>({
+      title:document.title,
+      relatedRules:document.querySelectorAll('#relatedRules').length,
+      cacheKeys:(await Promise.all((await caches.keys()).map(async name=>(await caches.open(name)).keys()))).flat().map(request=>request.url).filter(url=>url.includes('chaos-land-raider'))
+    }));
+    assert.equal(warmBefore.relatedRules,1,`DG visited Phone page did not initialize online: ${JSON.stringify(warmBefore)}`);
+    const visitedPhoneUrl=page.url();
+    await warmDeathGuardContext.setOffline(true);
+    await page.goto(visitedPhoneUrl);
+    await page.waitForTimeout(500);
+    const warmDgState=await page.evaluate(async()=>({
+      url:location.href,
+      title:document.title,
+      relatedRules:document.querySelectorAll('#relatedRules').length,
+      cachedPage:Boolean(await caches.match(location.href)),
+      cachedMobile:Boolean(await caches.match(new URL('./mobile.js?v=17',location.href).href)),
+      cachedModule:Boolean(await caches.match(new URL('../scripts/compatible-stratagems-runtime.mjs?v=1',location.href).href))
+    }));
+    assert.equal(warmDgState.relatedRules,1,`DG warm Phone runtime unavailable: ${JSON.stringify({warmBefore,warmDgState,errors})}`);
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('#relatedRulesContent [data-detachment] .stratagem:not([hidden])').first().waitFor();
+    assert.equal(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count(),1,'visited DG Phone page must reopen one matrix-backed Detachment offline');
+    assert.deepEqual(errors,[]);
+    console.log('PASS Death Guard visited Phone Mode Compatible Stratagems offline');
+  }finally{await warmDeathGuardContext.close();}
 
   workerRevision='browser-upgrade-a';
   const upgradeContext=await browser.newContext({serviceWorkers:'allow'});

@@ -2,7 +2,8 @@
   'use strict';
 
   const scriptUrl=document.currentScript.src;
-  const compatibleRuntime=await import(new URL('../scripts/compatible-stratagems-runtime.mjs?v=1',scriptUrl));
+  const compatibleRuntime=await import(new URL('../scripts/compatible-stratagems-runtime.mjs?v=1',scriptUrl))
+    .catch(error=>{console.warn('Compatible Stratagems unavailable.',error);return null;});
 
   const navButton = document.getElementById('navButton');
   const scrim = document.getElementById('navScrim');
@@ -26,7 +27,7 @@
   let relatedKind = 'stratagems';
   const unit = document.querySelector('.unit-card');
   const params = new URLSearchParams(location.search);
-  const relatedRulesEnabled = compatibleRuntime.compatibleStratagemsReviewEnabled;
+  const relatedRulesEnabled = Boolean(compatibleRuntime?.compatibleStratagemsReviewEnabled);
   let compatibleRulesMatrix = null;
   if (!relatedRulesEnabled) relatedRules?.remove();
 

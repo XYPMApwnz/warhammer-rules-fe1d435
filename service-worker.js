@@ -15,7 +15,7 @@ const TAU_EMPIRE_DESKTOP_FALLBACK = "./books/tau-empire/reader.html";
 const TAU_EMPIRE_MOBILE_FALLBACK = "./books/tau-empire/mobile/index.html";
 const CHAOS_SPACE_MARINES_FALLBACK = LIBRARY_FALLBACK;
 const ORKS_FALLBACK = LIBRARY_FALLBACK;
-const EMPERORS_CHILDREN_FALLBACK = LIBRARY_FALLBACK;
+const EMPERORS_CHILDREN_FALLBACK = "./books/emperors-children/index.html";
 const SPACE_MARINES_FALLBACK = LIBRARY_FALLBACK;
 const DARK_ANGELS_FALLBACK = LIBRARY_FALLBACK;
 const APP_SHELL = [
@@ -25,7 +25,7 @@ const APP_SHELL = [
   ROSTER_GUIDES_FALLBACK,
   "./roster-guides/points-data.js?v=6",
   "./roster-guides/points-validator.js?v=4",
-  "./roster-guides/app.js?v=10",
+  "./roster-guides/app.js?v=11",
   "./manifest.webmanifest",
   "./assets/apple-touch-icon.png",
   "./assets/icon-192.png",
@@ -191,10 +191,17 @@ const APP_SHELL = [
   ,"./books/orks/scripts/app.js?v=2"
   ,"./books/emperors-children/"
   ,EMPERORS_CHILDREN_FALLBACK
+  ,"./books/emperors-children/reader.html"
   ,"./books/emperors-children/mobile/index.html"
   ,"./books/emperors-children/styles/tokens.css?v=2"
   ,"./books/emperors-children/styles/book.css?v=2"
-  ,"./books/emperors-children/scripts/app.js?v=2"
+  ,"./books/emperors-children/scripts/data.js?v=2"
+  ,"./books/emperors-children/scripts/roster-data.js?v=1"
+  ,"./books/emperors-children/scripts/roster-filter.js?v=1"
+  ,"./books/emperors-children/scripts/compatible-rules-runtime.mjs?v=1"
+  ,"./books/emperors-children/generated/compatible-rules.json"
+  ,"./books/emperors-children/mobile/related-rules.inc?v=1"
+  ,"./books/emperors-children/scripts/app.js?v=3"
   ,"./books/space-marines/"
   ,SPACE_MARINES_FALLBACK
   ,"./books/space-marines/mobile/index.html"

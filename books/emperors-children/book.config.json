@@ -5,6 +5,15 @@
   "shortTitle": "Emperor's Children Rules",
   "edition": "11E",
   "factionKeyword": "EMPEROR'S CHILDREN",
+  "includeCoreStratagems": true,
+  "rosterSupport": true,
+  "compatibleRulesMatrix": true,
+  "customApp": true,
+  "assetVersions": {
+    "app": 3,
+    "rosterFilter": 1,
+    "rosterData": 1
+  },
   "expected": {
     "matchedDetachments": 10,
     "factionPackDetachments": 4,
@@ -14,6 +23,7 @@
     "factionPack": "content/emperors-children-faction-pack.en.json",
     "codexDatasheets": "content/emperors-children-codex-datasheets.en.json",
     "relatedRules": "content/emperors-children-related-rules.en.json",
+    "enhancementOwners": "sources/enhancement-owner-matrix.json",
     "manifest": "sources/source-manifest.json"
   }
 }

@@ -2460,6 +2460,14 @@ window.DG_TERMS={
     "glossary": "glossary-emperors-children-enhancement-pledge-of-unholy-fortune",
     "rule": "detachment-coterie-of-the-conceited"
   },
+  "emperors-children-enhancement-frenzied-ferocity-2": {
+    "id": "emperors-children-enhancement-frenzied-ferocity-2",
+    "title": "Frenzied Ferocity",
+    "summary": "UPGRADE. EMPEROR’S CHILDREN TERMINATOR SQUAD unit only. This unit’s attacks have [SUSTAINED HITS 1].",
+    "full": "UPGRADE. EMPEROR’S CHILDREN TERMINATOR SQUAD unit only. This unit’s attacks have [SUSTAINED HITS 1].",
+    "glossary": "glossary-emperors-children-enhancement-frenzied-ferocity-2",
+    "rule": "detachment-elegant-brutes"
+  },
   "emperors-children-enhancement-intoxicating-musk": {
     "id": "emperors-children-enhancement-intoxicating-musk",
     "title": "Intoxicating Musk",
@@ -2506,14 +2514,6 @@ window.DG_TERMS={
     "summary": "Add 1 to the Attacks and Damage characteristics of melee weapons equipped by the bearer.",
     "full": "Add 1 to the Attacks and Damage characteristics of melee weapons equipped by the bearer.",
     "glossary": "glossary-emperors-children-enhancement-distortion",
-    "rule": "detachment-peerless-bladesmen"
-  },
-  "emperors-children-enhancement-faultless-opportunist": {
-    "id": "emperors-children-enhancement-faultless-opportunist",
-    "title": "Faultless Opportunist",
-    "summary": "You can target this unit with the Heroic Intervention stratagem , regardless of any other uses of that stratagem this phase. If you do: - That use is -1 CP. - That use does not prevent any uses of that stratagem on other units this phase.'",
-    "full": "You can target this unit with the Heroic Intervention stratagem , regardless of any other uses of that stratagem this phase. If you do: - That use is -1 CP. - That use does not prevent any uses of that stratagem on other units this phase.'",
-    "glossary": "glossary-emperors-children-enhancement-faultless-opportunist",
     "rule": "detachment-peerless-bladesmen"
   },
   "emperors-children-enhancement-rise-to-the-challenge": {
@@ -2587,5 +2587,21 @@ window.DG_TERMS={
     "full": "The bearer's melee weapons have the [ Precision ] ability, and each time the bearer makes a melee attack that targets a Character unit, improve the Strength and Armour Penetration characteristics of that attack by 1.",
     "glossary": "glossary-emperors-children-enhancement-slayer-of-champions",
     "rule": "detachment-slaaneshs-chosen"
+  },
+  "emperors-children-enhancement-eager-patrons-2": {
+    "id": "emperors-children-enhancement-eager-patrons-2",
+    "title": "Eager Patrons",
+    "summary": "UPGRADE. FLAWLESS BLADES unit only. This unit has +2\" M.",
+    "full": "UPGRADE. FLAWLESS BLADES unit only. This unit has +2\" M.",
+    "glossary": "glossary-emperors-children-enhancement-eager-patrons-2",
+    "rule": "detachment-spectacle-of-slaughter"
+  },
+  "emperors-children-enhancement-beguiling-grotesquerie-2": {
+    "id": "emperors-children-enhancement-beguiling-grotesquerie-2",
+    "title": "Beguiling Grotesquerie",
+    "summary": "UPGRADE. FLAWLESS BLADES unit only. Enemy units cannot target this unit with snap shooting attacks.",
+    "full": "UPGRADE. FLAWLESS BLADES unit only. Enemy units cannot target this unit with snap shooting attacks.",
+    "glossary": "glossary-emperors-children-enhancement-beguiling-grotesquerie-2",
+    "rule": "detachment-spectacle-of-slaughter"
   }
 };

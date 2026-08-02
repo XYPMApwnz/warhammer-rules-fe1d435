@@ -12,7 +12,7 @@
       if(!item||list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(item.title))}"]`))continue;
       const article=document.createElement('article');article.className='ability roster-enhancement';article.dataset.rosterEnhancement=normalize(item.title);
       const title=document.createElement('h5');title.textContent=item.title;
-      const cost=document.createElement('small');cost.className='roster-enhancement-cost';
+      const cost=document.createElement('small');cost.className='roster-enhancement-cost';cost.hidden=item.value==null;
       cost.textContent=Number(entry.exportedCost)&&Number(entry.exportedCost)!==Number(item.value)?`${entry.exportedCost} pts in export · ${item.value} pts current`:`${item.value} pts included`;
       const text=document.createElement('p');text.textContent=item.text;
       article.append(title,cost,text);list.prepend(article);

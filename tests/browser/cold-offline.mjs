@@ -504,6 +504,46 @@ try{
     console.log("PASS T'au roster Enhancement owner and full effect in desktop/iPad + Phone Mode");
   }finally{await rosterContext.close();}
 
+  const emperorsChildrenContext=await browser.newContext({serviceWorkers:'block'});
+  try{
+    const {page,errors}=await observedPage(emperorsChildrenContext);
+    await page.goto(`${origin}/books/emperors-children/reader.html#unit-lord-exultant`);
+    await page.locator('#unit-lord-exultant .related-rules-trigger').click();
+    assert.equal(await page.locator('.related-rules-layer .full-related-filter summary').textContent(),'All Detachments',"Emperor's Children desktop must start with All Detachments");
+    await page.locator('.related-rules-layer [data-kind="enhancements"]').click();
+    assert.ok(await page.locator('.related-rules-layer .enhancement:visible').count()>4,"Emperor's Children All Detachments must show compatible Enhancements from several Detachments");
+    assert.equal(await page.locator('.related-rules-layer [data-rule-id="enhancement-faultless-opportunist"]').count(),0,'Faultless Opportunist must remain excluded');
+    await page.locator('.related-rules-layer .full-related-filter summary').click();
+    await page.locator('.related-rules-layer button[data-detachment="court-of-the-phoenician"]').click();
+    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden]):not([data-detachment="core"]):not([data-detachment="court-of-the-phoenician"])').count(),0,'specific Detachment must hide other Emperor\'s Children rules');
+    await page.goto(`${origin}/books/emperors-children/reader.html?view=mobile#unit-chaos-terminators`);
+    await page.locator('#unit-chaos-terminators .related-rules-trigger').click();
+    assert.equal(await page.locator('.related-rules-layer .full-related-filter summary').textContent(),'All Detachments',"Emperor's Children Phone Mode must start with All Detachments");
+    await page.locator('.related-rules-layer [data-kind="enhancements"]').click();
+    const upgrade=page.locator('.related-rules-layer [data-rule-id="enhancement-frenzied-ferocity"]:visible');
+    await upgrade.waitFor();
+    assert.match(await upgrade.locator(':scope > .eyebrow').textContent(),/UPGRADE/);
+    assert.doesNotMatch(await upgrade.locator(':scope > .eyebrow').textContent(),/\d+\s*pts/i,'UPGRADE with unconfirmed points must not invent a cost');
+    await page.goto(`${origin}/index.html`);
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([
+      {id:'ec-owner',roster:{faction:"Emperor's Children",detachment:'Court of the Phoenician',detachments:[{label:'Court of the Phoenician'}],units:[{id:'ec-owner-1',name:'Lord Exultant',quantity:1,points:80}],enhancements:[{name:'Exalted Patron',ownerUnitId:'ec-owner-1',ownerStatus:'resolved'}]}},
+      {id:'ec-wrong',roster:{faction:'Tyranids',detachment:'Court of the Phoenician',detachments:[{label:'Court of the Phoenician'}],units:[{id:'ec-wrong-1',name:'Lord Exultant',quantity:1,points:80}]}}
+    ])));
+    await page.goto(`${origin}/books/emperors-children/reader.html?roster=ec-owner#unit-lord-exultant`);
+    await page.locator('#unit-lord-exultant .related-rules-trigger').click();
+    assert.equal(await page.locator('.related-rules-layer [data-detachment="all"]').count(),0,"Emperor's Children roster must not expose All Detachments");
+    await page.locator('.related-rules-layer [data-kind="enhancements"]').click();
+    assert.deepEqual(await page.locator('.related-rules-layer .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId)),['enhancement-exalted-patron'],'roster must show only the Enhancement assigned to the exact ownerUnitId');
+    await page.goto(`${origin}/books/emperors-children/reader.html?view=mobile&roster=ec-owner#unit-lord-exultant`);
+    await page.locator('#unit-lord-exultant .related-rules-trigger').click();await page.locator('.related-rules-layer [data-kind="enhancements"]').click();
+    assert.deepEqual(await page.locator('.related-rules-layer .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId)),['enhancement-exalted-patron'],'Phone roster must preserve the exact ownerUnitId');
+    for(const id of ['ec-wrong','ec-missing']){await page.goto(`${origin}/books/emperors-children/reader.html?roster=${id}#unit-lord-exultant`);await page.waitForURL('**/roster-guides/index.html*');assert.equal(await page.locator('.related-rules-trigger').count(),0,`${id} must fail closed`);}
+    await page.goto(`${origin}/books/emperors-children/reader.html?view=mobile&roster=ec-wrong#unit-lord-exultant`);await page.waitForURL('**/roster-guides/index.html*');assert.equal(await page.locator('.related-rules-trigger').count(),0,'wrong-faction Phone roster must fail closed');
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1','{broken'));await page.goto(`${origin}/books/emperors-children/reader.html?view=mobile&roster=ec-corrupt#unit-lord-exultant`);await page.waitForURL('**/roster-guides/index.html*');assert.equal(await page.locator('.related-rules-trigger').count(),0,'corrupt Phone roster must fail closed');
+    assert.deepEqual(errors,[]);
+    console.log("PASS Emperor's Children desktop, Phone and exact roster owner matrix integration");
+  }finally{await emperorsChildrenContext.close();}
+
   const coldContext=await browser.newContext({serviceWorkers:'allow'});
   try{
     const {page,errors}=await observedPage(coldContext);
@@ -580,6 +620,20 @@ try{
     assert.match(page.url(),/\/books\/tau-empire\/mobile\/commander-farsight\.html\?build=unvisited$/);
     assert.deepEqual(errors,[]);
     console.log("PASS T'au Empire true cold desktop, Phone Mode and unvisited datasheet fallback");
+
+    await page.setViewportSize({width:1280,height:900});
+    await page.goto(`${origin}/books/emperors-children/reader.html?build=ec-cold#unit-lord-exultant`);
+    await page.locator('#unit-lord-exultant .related-rules-trigger').click();
+    await page.locator('.related-rules-layer [data-rule-id="core-stratagem-command-re-roll"]:not([hidden])').waitFor();
+    assert.ok(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count()>2,"Emperor's Children cold desktop must reopen matrix-backed All Detachments");
+    await page.setViewportSize({width:390,height:844});
+    await page.goto(`${origin}/books/emperors-children/reader.html?view=mobile&build=ec-phone#unit-chaos-terminators`);
+    await page.locator('#unit-chaos-terminators .related-rules-trigger').click();
+    await page.locator('.related-rules-layer [data-kind="enhancements"]').click();
+    await page.locator('.related-rules-layer [data-rule-id="enhancement-frenzied-ferocity"]:not([hidden])').waitFor();
+    assert.equal(await page.locator('.related-rules-layer .full-related-filter summary').textContent(),'All Detachments',"Emperor's Children cold Phone Mode must retain All Detachments");
+    assert.deepEqual(errors,[]);
+    console.log("PASS Emperor's Children cold desktop and Phone Mode Compatible Rules");
   }finally{await coldContext.close();}
 
   const warmDeathGuardContext=await browser.newContext({serviceWorkers:'allow'});

@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {buildCompatibleRules,inputs} from '../tools/build-compatible-rules.mjs';
+import {getCompatibleRules} from '../scripts/compatible-rules-runtime.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
@@ -47,4 +48,25 @@ for(const epic of source.datasheets.filter(unit=>unit.keywords.includes('Epic He
 assert.equal(all.filter(row=>row.state==='conditional').every(row=>row.condition==='attachment-unknown'&&row.conditions.length===1),true);
 assert.equal(all.some(row=>gaps.codexCarryForwardStratagems.includes(row.ruleId)),false);
 
-console.log("PASS Emperor's Children compatible rules data: 23 datasheets, 408 rows, 36 Codex Stratagem gaps, 1 unresolved owner");
+const allDetachments=getCompatibleRules(matrix,'unit-lord-exultant',{detachmentId:'all'}),court=getCompatibleRules(matrix,'unit-lord-exultant',{detachmentId:'court-of-the-phoenician'});
+assert(allDetachments.some(row=>row.scope==='core'));
+assert(new Set(allDetachments.filter(row=>row.kind==='enhancement').map(row=>row.detachmentId)).size>1);
+assert(court.every(row=>row.scope==='core'||row.detachmentId==='court-of-the-phoenician'));
+assert(!allDetachments.some(row=>row.ruleId==='enhancement-faultless-opportunist'));
+
+const reader=fs.readFileSync(path.join(root,'reader.html'),'utf8'),template=fs.readFileSync(path.join(root,'mobile/related-rules.inc'),'utf8'),app=fs.readFileSync(path.join(root,'scripts/app.js'),'utf8'),rosterData=fs.readFileSync(path.join(root,'scripts/roster-data.js'),'utf8');
+assert(reader.includes('./scripts/compatible-rules-runtime.mjs')===false,'runtime is imported by the book app');
+assert(reader.includes('./scripts/roster-filter.js?v=1'));
+assert(reader.includes('./scripts/app.js?v=3'));
+assert(!reader.includes('related-rules-matcher.js'));
+assert(!reader.includes('army-related-rules.js'));
+assert(!reader.includes('army-book-app.js'));
+assert(app.includes("import(new URL('./compatible-rules-runtime.mjs?v=1'"));
+assert(!app.includes('data-eligibility'));
+assert(!app.includes('allKeywords'));
+assert(!template.includes('Faultless Opportunist'));
+for(const title of ['Frenzied Ferocity','Eager Patrons','Beguiling Grotesquerie']){const start=template.indexOf(title);assert(start>=0,title);const card=template.slice(template.lastIndexOf('<article',start),template.indexOf('</article>',start));assert(card.includes('Enhancement · UPGRADE'));assert(!/\d+ pts/.test(card),`${title} must not invent points`);}
+assert(!rosterData.includes('Faultless Opportunist'));
+assert(rosterData.includes('"value": null'));
+
+console.log("PASS Emperor's Children matrix runtime: 23 datasheets, 408 rows, roster/UI lookup only");

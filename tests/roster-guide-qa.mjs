@@ -85,6 +85,18 @@ for(const bookId of supported){
     console.log(`PASS  tau-empire: ${points.units.length} units, ${points.enhancements.length} Enhancements, desktop/iPad + Phone Mode`);
     continue;
   }
+  if(bookId==='emperors-children'){
+    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8'),codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','emperors-children-codex-datasheets.en.json'),'utf8')),owners=JSON.parse(fs.readFileSync(path.join(bookRoot,'sources','enhancement-owner-matrix.json'),'utf8'));
+    const units=[...(codex.datasheets||[])],unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),publishedOwners=Object.values(owners.enhancements).filter(item=>item.ownerGroup),enhancementIds=new Set([...related.matchAll(/data-rule-id="([^"]+)"/g)].map(match=>match[1]));
+    assert(units.length===23,"emperors-children: datasheet catalog is incomplete");
+    units.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`emperors-children: unit ${unit.title} is absent from Roster Guide`));
+    publishedOwners.forEach(item=>assert(enhancementIds.has(Object.entries(owners.enhancements).find(([,value])=>value===item)[0]),`emperors-children: Enhancement ${item.title} is absent from related rules`));
+    assert(!related.includes('Faultless Opportunist'),"emperors-children: unresolved Faultless Opportunist must remain hidden");
+    assert(reader.includes('./scripts/roster-filter.js?v=1')&&reader.includes('./scripts/app.js?v=3'),"emperors-children: roster or matrix controller is absent");
+    assert(fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs'))&&fs.existsSync(path.join(bookRoot,'scripts','roster-data.js')),"emperors-children: matrix or roster data is absent");
+    console.log(`PASS  emperors-children: ${units.length} units, ${publishedOwners.length} resolved Enhancements/UPGRADE, desktop/iPad + Phone Mode`);
+    continue;
+  }
   const dataPath=path.join(bookRoot,'content',`${bookId}-rules.en.json`);
   const readerPath=path.join(bookRoot,'reader.html');
   const relatedPath=path.join(bookRoot,'mobile','related-rules.inc');

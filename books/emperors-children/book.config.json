@@ -9,6 +9,7 @@
   "rosterSupport": true,
   "compatibleRulesMatrix": true,
   "customApp": true,
+  "legacyRelatedRuleAttributes": false,
   "assetVersions": {
     "app": 3,
     "rosterFilter": 1,

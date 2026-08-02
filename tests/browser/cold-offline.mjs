@@ -407,6 +407,66 @@ try{
     assert.deepEqual(errors,[]);console.log("PASS T'au matrix-backed desktop and Phone Compatible Rules");
   }finally{await tauRulesContext.close();}
 
+  const rosterGuidesContext=await browser.newContext({serviceWorkers:'block'});
+  try{
+    const {page,errors}=await observedPage(rosterGuidesContext);
+    await page.goto(`${origin}/roster-guides/index.html`);
+    const source=(faction,detachment='Kauyon',units='Char1: 1x Cadre Fireblade (50 pts)')=>`+ FACTION KEYWORD: ${faction}\n+ DETACHMENT: ${detachment}\n+ TOTAL ARMY POINTS: 50pts\n\n${units}`;
+    const create=async(faction,{accepted=true,detachment,units}={})=>{
+      const before=await page.evaluate(()=>{try{return JSON.parse(localStorage.getItem('wh40k-rosters-v1')||'[]').length;}catch{return 0;}});
+      await page.locator('#roster-input').fill(source(faction,detachment,units));
+      await page.locator('#roster-form button[type="submit"]').click();
+      if(!accepted){
+        assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')||'[]').length),before,`${faction} must not be saved`);
+        assert.equal(await page.locator('#roster-result .eyebrow').textContent(),'Unknown faction');
+        return null;
+      }
+      await page.waitForFunction(expected=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')||'[]').length===expected,before+1);
+      const record=await page.evaluate(()=>JSON.parse(localStorage.getItem('wh40k-rosters-v1'))[0]);
+      assert.equal(record.roster.faction,faction.toLowerCase().includes('death guard')?'Death Guard':faction.toLowerCase().includes('adeptus mechanicus')?'Adeptus Mechanicus':faction.toLowerCase().includes('tyranids')?'Tyranids':"T'au Empire");
+      return record;
+    };
+
+    const ownerRecord=await create("Xenos - T'au Empire",{units:'Char1: 1x Cadre Fireblade (50 pts): Fireblade pulse rifle, close combat weapon\nEnhancement: Through Unity, Devastation (+30 pts)\nChar2: 1x Commander in Coldstar Battlesuit (130 pts)'});
+    await page.locator('#open-guide').click();
+    await page.waitForURL('**/books/tau-empire/reader.html**');
+    await page.locator('#unit-cadre-fireblade .related-rules-trigger').click();
+    await page.locator('.related-rules-layer [data-kind="enhancements"]').click();
+    assert.deepEqual(await page.locator('.related-rules-layer .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId)),['enhancement-through-unity-devastation'],'Roster Guides must preserve exact T\'au ownerUnitId on desktop open');
+    await page.locator('.related-rules-close').click();
+    await page.locator('#unit-commander-in-coldstar-battlesuit .related-rules-trigger').click();
+    assert.equal(await page.locator('.related-rules-layer [data-kind="enhancements"]:visible').count(),0,'another eligible T\'au owner must not receive the assigned Enhancement');
+    await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?roster=${ownerRecord.id}`);
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
+    await page.locator('[data-related-tab="enhancements"]').click();
+    assert.deepEqual(await page.locator('#relatedRulesContent .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId||card.id)),['enhancement-through-unity-devastation'],'Roster Guides must preserve exact T\'au ownerUnitId on Phone open');
+
+    await page.goto(`${origin}/roster-guides/index.html`);
+    for(const faction of ["Xenos – Tau Empire","Xenos — T'au Empire","T'au Empire","Tau Empire"])await create(faction);
+    await create('Chaos - Death Guard',{detachment:'Contagion Engines',units:'Char1: 1x Helbrute (110 pts)'});
+    await create('Imperium - Adeptus Mechanicus',{detachment:'Cohort Cybernetica',units:'Char1: 1x Tech-Priest Enginseer (75 pts)'});
+    await create('Xenos - Tyranids',{detachment:'Invasion Fleet',units:'Char1: 1x Neurotyrant (80 pts)'});
+    for(const faction of ["Imperium - T'au Empire","Chaos - T'au Empire",'Chaos - Tyranids','Xenos - Death Guard','Aeldari'])await create(faction,{accepted:false});
+
+    const backup={id:'tau-ascii-backup',name:'ASCII T\'au backup',sourceText:source('Tau Empire'),roster:{faction:'Tau Empire',detachment:'Kauyon',detachments:[{label:'Kauyon'}],units:[{id:'parsed-unit-1',name:'Cadre Fireblade',quantity:1,points:50}]}};
+    const beforeImport=await page.evaluate(()=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')).length);
+    await page.locator('#import-roster-file').setInputFiles({name:'tau-ascii-backup.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(backup))});
+    await page.waitForFunction(expected=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')).length===expected,beforeImport+1);
+    assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')).find(record=>record.id==='tau-ascii-backup').roster.faction),"T'au Empire",'backup import must canonicalise Tau Empire');
+
+    await page.evaluate(()=>localStorage.removeItem('wh40k-rosters-v1'));
+    await page.reload();
+    assert.match(await page.locator('#saved-roster-list').textContent(),/No saved rosters/,'missing roster storage must stay empty');
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1','{broken'));
+    await page.reload();
+    assert.match(await page.locator('#saved-roster-list').textContent(),/No saved rosters/,'corrupt roster storage must fail closed');
+    await create('Tau Empire');
+    assert.equal(await page.evaluate(()=>localStorage.getItem('wh40k-rosters-v1-corrupt-backup')),'{broken','corrupt roster storage must remain recoverable');
+    assert.deepEqual(errors,[]);
+    console.log('PASS Roster Guides faction aliases, parent gates, owner IDs and backup import');
+  }finally{await rosterGuidesContext.close();}
+
   const rosterContext=await browser.newContext({serviceWorkers:'block'});
   try{
     const {page,errors}=await observedPage(rosterContext);

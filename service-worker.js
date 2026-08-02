@@ -25,7 +25,7 @@ const APP_SHELL = [
   ROSTER_GUIDES_FALLBACK,
   "./roster-guides/points-data.js?v=6",
   "./roster-guides/points-validator.js?v=4",
-  "./roster-guides/app.js?v=9",
+  "./roster-guides/app.js?v=10",
   "./manifest.webmanifest",
   "./assets/apple-touch-icon.png",
   "./assets/icon-192.png",

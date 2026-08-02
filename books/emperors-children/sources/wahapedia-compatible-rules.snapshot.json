@@ -1,0 +1,365 @@
+{
+  "coreUnits": {
+    "unit-chaos-land-raider": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-crushing-impact",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress",
+      "core-stratagem-smokescreen"
+    ],
+    "unit-chaos-rhino": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-crushing-impact",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress",
+      "core-stratagem-smokescreen"
+    ],
+    "unit-chaos-spawn": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-chaos-terminators": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-daemon-prince-of-slaanesh": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-crushing-impact",
+      "core-stratagem-epic-challenge",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-daemon-prince-of-slaanesh-with-wings": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-crushing-impact",
+      "core-stratagem-epic-challenge",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-daemonettes": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-defiler": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-crushing-impact",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-fiends": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-flawless-blades": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-explosives",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-fulgrim": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-crushing-impact",
+      "core-stratagem-epic-challenge",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-heldrake": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-crushing-impact",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-infractors": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-explosives",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-keeper-of-secrets": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-crushing-impact",
+      "core-stratagem-epic-challenge",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-lord-exultant": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-epic-challenge",
+      "core-stratagem-explosives",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-lord-kakophonist": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-epic-challenge",
+      "core-stratagem-explosives",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-lucius-the-eternal": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-epic-challenge",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-maulerfiend": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-crushing-impact",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-noise-marines": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-seekers": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-shalaxi-helbane": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-crushing-impact",
+      "core-stratagem-epic-challenge",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-sorcerer": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-epic-challenge",
+      "core-stratagem-explosives",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-tormentors": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-explosives",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ]
+  },
+  "retrievedAt": "2026-08-02",
+  "schema": "emperors-children-wahapedia-compatible-rules-snapshot/v1",
+  "scope": {
+    "datasheets": "23 current Codex datasheets",
+    "excluded": "Codex carry-forward Stratagem names without a fixed local full-text source",
+    "factionRules": "15 official Faction Pack v1.0 Stratagems only"
+  },
+  "source": {
+    "authority": "secondary",
+    "edition": "11",
+    "faction": "Emperor's Children",
+    "kind": "Wahapedia candidate associations",
+    "url": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/"
+  },
+  "units": {
+    "unit-chaos-land-raider": [
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "prideful-superiority"
+    ],
+    "unit-chaos-rhino": [
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "prideful-superiority"
+    ],
+    "unit-chaos-spawn": [
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "prideful-superiority"
+    ],
+    "unit-chaos-terminators": [
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "delight-in-agony",
+      "prideful-superiority",
+      "psychedelic-soulflame",
+      "warp-plunge"
+    ],
+    "unit-daemon-prince-of-slaanesh": [
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "euphoric-inspiration",
+      "prideful-superiority",
+      "sinuous-breach"
+    ],
+    "unit-daemon-prince-of-slaanesh-with-wings": [
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "euphoric-inspiration",
+      "prideful-superiority",
+      "sinuous-breach"
+    ],
+    "unit-daemonettes": [],
+    "unit-defiler": [
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "euphoric-inspiration",
+      "prideful-superiority",
+      "sinuous-breach"
+    ],
+    "unit-fiends": [],
+    "unit-flawless-blades": [
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "honour-is-for-fools",
+      "intoxicated-by-triumph",
+      "prideful-superiority",
+      "single-minded-strike"
+    ],
+    "unit-fulgrim": [
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "euphoric-inspiration",
+      "prideful-superiority",
+      "sinuous-breach"
+    ],
+    "unit-heldrake": [
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "euphoric-inspiration",
+      "prideful-superiority",
+      "sinuous-breach"
+    ],
+    "unit-infractors": [
+      "absolute-sensory-overload",
+      "agonised-cacophony",
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "possessive-mania",
+      "prideful-superiority"
+    ],
+    "unit-keeper-of-secrets": [],
+    "unit-lord-exultant": [
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "prideful-superiority"
+    ],
+    "unit-lord-kakophonist": [
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "prideful-superiority"
+    ],
+    "unit-lucius-the-eternal": [
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "prideful-superiority"
+    ],
+    "unit-maulerfiend": [
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "euphoric-inspiration",
+      "prideful-superiority",
+      "sinuous-breach"
+    ],
+    "unit-noise-marines": [
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "prideful-superiority"
+    ],
+    "unit-seekers": [],
+    "unit-shalaxi-helbane": [],
+    "unit-sorcerer": [
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "prideful-superiority"
+    ],
+    "unit-tormentors": [
+      "absolute-sensory-overload",
+      "agonised-cacophony",
+      "catalytic-stimulus",
+      "close-quarters-excruciation",
+      "contemptuous-disregard",
+      "possessive-mania",
+      "prideful-superiority"
+    ]
+  }
+}

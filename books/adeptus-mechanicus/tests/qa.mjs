@@ -46,6 +46,29 @@ try{new vm.Script(sharedDatasheetLayout,{filename:'../shared/datasheet-layout.js
 try{new vm.Script(sharedPopupContent,{filename:'../shared/popup-content.js'});check('shared popup content syntax',true);}catch(error){check('shared popup content syntax',false,error.message);}
 try{new vm.Script(sharedGlossaryAutolink,{filename:'../shared/glossary-autolink.js'});check('shared glossary autolink syntax',true);}catch(error){check('shared glossary autolink syntax',false,error.message);}
 
+const rosterLogicContext={window:{}};vm.runInNewContext(read('scripts/roster-enhancements.js'),rosterLogicContext);
+const rosterLogic=rosterLogicContext.window.AMRosterEnhancements;
+const detachmentSlug=value=>String(value||'').toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const detachmentInventory=allDetachments.map(item=>detachmentSlug(item.title));
+const knownDetachment=allDetachments[0].title,knownDetachmentId=detachmentSlug(knownDetachment);
+check('one known roster Detachment resolves',rosterLogic.resolveDetachment([knownDetachment],detachmentInventory)===knownDetachmentId);
+check('zero roster Detachments fail closed',rosterLogic.resolveDetachment([],detachmentInventory)==='');
+check('unknown roster Detachment fails closed',rosterLogic.resolveDetachment(['Unknown Forge'],detachmentInventory)==='');
+check('two different roster Detachments fail closed',rosterLogic.resolveDetachment([allDetachments[0].title,allDetachments[1].title],detachmentInventory)==='');
+check('duplicate normalized Detachment remains unambiguous',rosterLogic.resolveDetachment([knownDetachment,knownDetachment.toUpperCase()],detachmentInventory)===knownDetachmentId);
+const rosterUnits=[{id:'roster-unit-1',name:'Skitarii Rangers',points:85},{id:'roster-unit-2',name:'Skitarii Rangers',points:85}];
+const rosterFixture={enhancements:[{name:'Exact Owner Enhancement',ownerStatus:'resolved',ownerUnitId:'roster-unit-1'}]};
+const firstOwnership=rosterLogic.resolveOwnership(rosterFixture,[rosterUnits[0]]),secondOwnership=rosterLogic.resolveOwnership(rosterFixture,[rosterUnits[1]]),aggregatedOwnership=rosterLogic.resolveOwnership(rosterFixture,rosterUnits);
+check('single datasheet instance receives only its exact Enhancement',firstOwnership.cardEnhancements.length===1&&firstOwnership.cardEnhancements[0].ownerUnitId==='roster-unit-1');
+check('second datasheet instance does not inherit Enhancement',secondOwnership.cardEnhancements.length===0);
+check('aggregated card applies no owner-specific Enhancement effect',aggregatedOwnership.cardEnhancements.length===0);
+check('Roster instances preserve exact assignment and points',aggregatedOwnership.instances[0].label==='Skitarii Rangers #1'&&aggregatedOwnership.instances[0].points===85&&aggregatedOwnership.instances[0].enhancements.length===1&&aggregatedOwnership.instances[1].label==='Skitarii Rangers #2'&&aggregatedOwnership.instances[1].enhancements.length===0);
+const compatibleFixture=[{ruleId:'core',kind:'stratagem',scope:'core',state:'match'},{ruleId:'faction',kind:'stratagem',detachmentId:knownDetachmentId,state:'conditional'},{ruleId:'owned',kind:'enhancement',state:'match'},{ruleId:'other-owner',kind:'enhancement',state:'match'}];
+const rosterRules=rosterLogic.filterCompatibleRules(compatibleFixture,true,new Set(['owned']));
+check('aggregated Related Rules hide owner Enhancements',rosterLogic.filterCompatibleRules(compatibleFixture,true,new Set()).every(rule=>rule.kind!=='enhancement'));
+check('roster Related Rules preserve Core, faction and conditional Stratagems',rosterRules.some(rule=>rule.ruleId==='core')&&rosterRules.some(rule=>rule.ruleId==='faction'&&rule.state==='conditional'));
+check('no-roster All Detachments leaves all compatible rows available',rosterLogic.filterCompatibleRules(compatibleFixture,false,new Set()).length===compatibleFixture.length);
+
 const markup=html.replace(/<script[\s\S]*?<\/script>/gi,'');
 const ids=[...markup.matchAll(/\sid="([^"]+)"/g)].map(x=>x[1]);
 const idSet=new Set(ids);
@@ -226,7 +249,7 @@ check('carried-forward rules no longer use placeholder wording',!JSON.stringify(
 check('personal roster integration is loaded',html.includes('../shared/roster-parser.js?v=2')&&html.includes('../../roster-guides/points-validator.js?v=4')&&html.includes('./scripts/roster-filter.js?v=3')&&html.includes('data-roster-guides'));
 check('Compatible Rules runtime uses only the generated matrix',read('scripts/app.js').includes('generated/compatible-rules.json')&&read('mobile/mobile.js').includes('generated/compatible-rules.json')&&!read('scripts/app.js').includes('AMRelatedRules')&&!read('mobile/mobile.js').includes('AMRelatedRules'));
 check('Compatible Rules renders every matrix condition',read('scripts/app.js').includes('conditionsFor(result)')&&read('mobile/mobile.js').includes('conditionsFor(result)')&&read('scripts/compatible-rules-runtime.mjs').includes("'second-unit-unknown'")&&read('scripts/compatible-rules-runtime.mjs').includes("'battle-state-unknown'"));
-check('roster Compatible Rules fail closed and filter assigned owners',read('scripts/app.js').includes("rosterMode&&!rosterGuide")&&read('scripts/roster-filter.js').includes("ownerStatus==='resolved'")&&read('mobile/mobile.js').includes("relatedRulesEnabled=false")&&read('mobile/mobile.js').includes('assignedEnhancementRuleIds'));
+check('roster Compatible Rules fail closed and filter assigned owners',rosterLogic.resolveDetachment([],detachmentInventory)===''&&firstOwnership.cardEnhancements.length===1&&aggregatedOwnership.cardEnhancements.length===0&&rosterRules.some(rule=>rule.ruleId==='owned')&&!rosterRules.some(rule=>rule.ruleId==='other-owner'));
 check('every Enhancement has a detachment and current cost',json('content/adeptus-mechanicus-points.en.json').enhancements.length===34&&json('content/adeptus-mechanicus-points.en.json').enhancements.every(item=>item.detachment&&item.value>0));
 const build=spawnSync(node,[path.join(root,'tools','build-full-content.mjs'),'--check'],{encoding:'utf8'});
 check('generated project artifacts are current',build.status===0,(build.stderr||build.stdout).trim());

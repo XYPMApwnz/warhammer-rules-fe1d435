@@ -22,20 +22,23 @@
     entry.loadout.push(...[unit.wargear,...(unit.models||[]).flatMap(model=>[model.wargear,...(model.loadouts||[]).map(item=>item.wargear)])].filter(Boolean));selected.set(card.id,entry);
   }
   const detachments=(roster.detachments?.length?roster.detachments.map(item=>item.label):[roster.detachment]).flatMap(split).map(label=>label.replace(/\s*\([^)]*\)\s*$/,'')).filter(Boolean);
-  const detachmentIds=new Set(detachments.map(label=>slug(label)));
+  const canonicalDetachmentIds=[...document.querySelectorAll('.content-group.detachment[data-detachment]')].map(section=>section.dataset.detachment);
+  const detachmentId=window.AMRosterEnhancements?.resolveDetachment(detachments,canonicalDetachmentIds);
+  if(!detachmentId){location.replace('../../roster-guides/index.html');return;}
+  const detachmentIds=new Set([detachmentId]),detachmentLabel=detachments.find(label=>slug(label)===detachmentId)||detachmentId;
   const enhancementIds=new Map([...document.querySelectorAll('.enhancement[data-enhancement-title][data-rule-id]')].map(card=>[normalize(card.dataset.enhancementTitle),card.dataset.ruleId]));
   const enhancementRuleIdsByUnitId={};
   for(const [cardId,entry] of selected){
-    const ownerIds=new Set(entry.units.map(unit=>unit.id));
-    enhancementRuleIdsByUnitId[cardId]=[...new Set((roster.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&ownerIds.has(item.ownerUnitId)).map(item=>enhancementIds.get(normalize(item.name))).filter(Boolean))];
+    const ownership=window.AMRosterEnhancements.resolveOwnership(roster,entry.units);
+    enhancementRuleIdsByUnitId[cardId]=[...new Set(ownership.cardEnhancements.map(item=>enhancementIds.get(normalize(item.name))).filter(Boolean))];
   }
   window.AM_ROSTER_GUIDE=Object.freeze({detachmentIds:[...detachmentIds],enhancementRuleIdsByUnitId:Object.freeze(enhancementRuleIdsByUnitId)});
   document.title='Adeptus Mechanicus Roster Guide';
   document.querySelector('.app-brand strong').textContent='Adeptus Mechanicus Roster Guide';
-  document.querySelector('.app-brand small').textContent=`${detachments.join(' + ')} · ${roster.declared||roster.calculated||0} pts`;
+  document.querySelector('.app-brand small').textContent=`${detachmentLabel} · ${roster.declared||roster.calculated||0} pts`;
   document.querySelector('[data-roster-guides]')?.removeAttribute('hidden');
   const hero=document.querySelector('#start');
-  hero.querySelector('.eyebrow').textContent='Personal roster guide';hero.querySelector('h1').textContent=record.name||'Adeptus Mechanicus';hero.querySelector('h1 + p').textContent=detachments.join(' + ');
+  hero.querySelector('.eyebrow').textContent='Personal roster guide';hero.querySelector('h1').textContent=record.name||'Adeptus Mechanicus';hero.querySelector('h1 + p').textContent=detachmentLabel;
   const declared=roster.declared||roster.calculated||0,current=pointsCheck?.total;
   const pointSummary=Number.isFinite(current)&&!pointsCheck.unresolved.length?`New Recruit ${declared} pts · Official MFM v1.1 ${current} pts${pointsCheck.difference?` · ${pointsCheck.difference>0?'+':''}${pointsCheck.difference} warning`:' · match'}`:`New Recruit ${declared} pts · MFM validation incomplete`;
   hero.querySelector('.source').textContent=`${roster.units.length} units · ${pointSummary}`;

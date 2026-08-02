@@ -29,7 +29,7 @@
       if(!content||!unit)return;
       const compatible=compatibleRuntime.getCompatibleRules(compatibleRulesMatrix,unit.id,{detachmentId:detachment});
       const assigned=new Set(rosterGuide?.enhancementRuleIdsByUnitId?.[unit.id]||[]);
-      const rules=rosterMode?compatible.filter(rule=>rule.kind!=='enhancement'||assigned.has(rule.ruleId)):compatible;
+      const rules=window.AMRosterEnhancements.filterCompatibleRules(compatible,rosterMode,assigned);
       const byId=new Map(rules.map(rule=>[rule.ruleId,rule])),hasEnhancements=rules.some(rule=>rule.kind==='enhancement');
       if(kind==='enhancements'&&!hasEnhancements)kind='stratagems';
       tabs.querySelector('[data-kind="enhancements"]').hidden=!hasEnhancements;

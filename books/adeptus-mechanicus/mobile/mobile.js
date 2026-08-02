@@ -33,10 +33,13 @@
       if(faction!=='adeptus mechanicus')throw new Error('Roster faction unavailable');
       const slug=value=>String(value||'').toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
       const matching=(parsed?.units||[]).filter(item=>slug(item.name)===unit.id.replace(/^unit-/,''));
-      rosterDetachments=(parsed?.detachments?.length?parsed.detachments.map(item=>item.label):[parsed?.detachment]).map(value=>slug(String(value||'').replace(/\s*\([^)]*\)\s*$/,''))).filter(Boolean);
-      if(!matching.length||!rosterDetachments.length)throw new Error('Roster data unavailable');
-      const ownerIds=new Set(matching.map(item=>item.id));
-      assignedEnhancementNames=new Set((parsed.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&ownerIds.has(item.ownerUnitId)).map(item=>slug(item.name)));
+      const detachmentLabels=parsed?.detachments?.length?parsed.detachments.map(item=>item.label):[parsed?.detachment];
+      const canonicalDetachmentIds=[...relatedDetachment.options].filter(option=>option.value!=='all').map(option=>option.value);
+      const detachmentId=window.AMRosterEnhancements.resolveDetachment(detachmentLabels,canonicalDetachmentIds);
+      if(!matching.length||!detachmentId)throw new Error('Roster data unavailable');
+      rosterDetachments=[detachmentId];
+      const ownership=window.AMRosterEnhancements.resolveOwnership(parsed,matching);
+      assignedEnhancementNames=new Set(ownership.cardEnhancements.map(item=>slug(item.name)));
       window.AM_ROSTER_GUIDE=Object.freeze({detachmentIds:rosterDetachments});
       if(matching.length)window.AMRosterEnhancements.decorate(unit,parsed,matching);
     }catch(error){console.warn('Roster data unavailable.',error);relatedRulesEnabled=false;}
@@ -62,7 +65,7 @@
     if(!relatedRulesEnabled||!relatedContent||!unit||!compatibleRulesMatrix)return;
     const selected=relatedDetachment.value;
     const compatible=compatibleRuntime.getCompatibleRules(compatibleRulesMatrix,unit.id,{detachmentId:selected});
-    const allowed=new Map((rosterMode?compatible.filter(item=>item.kind!=='enhancement'||assignedEnhancementRuleIds.has(item.ruleId)):compatible).map(item=>[item.ruleId,item]));
+    const allowed=new Map(window.AMRosterEnhancements.filterCompatibleRules(compatible,rosterMode,assignedEnhancementRuleIds).map(item=>[item.ruleId,item]));
     relatedContent.querySelectorAll('.stratagem,.enhancement').forEach(card=>{
       const result=allowed.get(card.dataset.ruleId||card.id);
       card.hidden=!result;
@@ -93,9 +96,10 @@
       const [response,matrix]=await Promise.all([fetch('./related-rules.inc?v=3'),compatibleRuntime.loadCompatibleRules(new URL('../generated/compatible-rules.json',scriptUrl))]);if(!response.ok)throw new Error(`HTTP ${response.status}`);
       relatedContent.innerHTML=await response.text();compatibleRulesMatrix=matrix;relatedLoaded=true;
       if(rosterMode){const normalizeTitle=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');assignedEnhancementRuleIds=new Set([...relatedContent.querySelectorAll('.enhancement[data-enhancement-title]')].filter(card=>assignedEnhancementNames.has(normalizeTitle(card.dataset.enhancementTitle))).map(card=>card.dataset.ruleId||card.id));}
-      if(rosterMode){[...relatedDetachment.options].forEach(option=>{if(option.value==='all'||!rosterDetachments.includes(option.value))option.remove();});if(!relatedDetachment.options.length)throw new Error('Roster data unavailable');relatedDetachment.value=relatedDetachment.options[0].value;relatedDetachment.disabled=relatedDetachment.options.length===1;}
+      if(rosterMode){[...relatedDetachment.options].forEach(option=>{if(option.value==='all'||option.value!==rosterDetachments[0])option.remove();});if(relatedDetachment.options.length!==1||relatedDetachment.options[0].value!==rosterDetachments[0])throw new Error('Roster data unavailable');relatedDetachment.value=rosterDetachments[0];relatedDetachment.disabled=true;}
       filterRelated();
-    }catch{
+    }catch(error){
+      if(rosterMode&&error?.message==='Roster data unavailable'){relatedRulesEnabled=false;relatedRules?.remove();return;}
       relatedLoaded=false;
       const retry=document.createElement('button');retry.type='button';retry.className='related-retry';retry.textContent='Try again';retry.addEventListener('click',loadRelated);
       const message=document.createElement('p');message.className='related-status';message.textContent='Could not load related rules. Check the connection and try again.';relatedContent.replaceChildren(message,retry);

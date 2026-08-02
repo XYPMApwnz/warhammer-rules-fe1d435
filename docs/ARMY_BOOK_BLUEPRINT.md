@@ -283,6 +283,14 @@
 - Required evidence: evidence ledger or report path with commit SHA linkage.
 - Book-specific extensions: optional enrichment fields.
 
+## AB-BUILD-006 — Stale generated output verification
+- Level: MUST
+- Normative requirement: Every Army Book pipeline with tracked generated outputs MUST provide a read-only check, or an equivalent deterministic verification, that fails when tracked generated output differs from output derived from the frozen inputs and approved correction decisions.
+- Owner: generated content/build layer
+- Applicability: Army Books with tracked generated outputs
+- Required evidence: exact read-only command or verification procedure; `generated-artifact-validation` or `executable-unit-test`; confirmation that the check leaves the working tree unchanged.
+- Book-specific extensions: command name and implementation MAY be book-local; no shared generator, framework, or global build rewrite is required.
+
 ## AB-COMPAT-001 — Parity/correction schema
 - Level: MUST
 - Normative requirement: Build/audit parity-correction schema MUST support the states match, no-match, conditional, rejected candidate, source difference, correction decision, gap, unresolved, and exclusion.
@@ -293,11 +301,11 @@
 
 ## AB-COMPAT-002 — Runtime matrix shape
 - Level: MUST
-- Normative requirement: Runtime-facing Compatible Rules matrix MUST contain only published lookup rows and minimal runtime fields: unitId/ruleId/state with optional scope, detachmentId, explicit condition, and owner assignment metadata only when required at runtime.
-- Owner: shared Army Book capability
+- Normative requirement: Runtime-facing Compatible Rules matrix MUST contain only published lookup rows and minimal runtime fields: unitId/ruleId/state with optional scope, detachmentId, explicit condition, and owner assignment metadata only when required at runtime; it MAY contain a minimal, pre-generated, stable `kind` or equivalent type discriminator when required for deterministic distinction, grouping, filtering, or display of rule types such as Stratagem, Enhancement, or UPGRADE; the discriminator MUST be produced by the build layer, MUST NOT be derived through runtime text parsing, and MUST NOT contain raw source evidence, correction prose, eligibility inference, or instructions for runtime evaluation; any other runtime field MUST have demonstrated necessity for the canonical contract.
+- Owner: shared Army Book capability; generated content/build layer
 - Applicability: all Army Books
-- Required evidence: generated matrix schema and consumption path.
-- Book-specific extensions: local runtime fields are not allowed unless non-normative.
+- Required evidence: `schema-data-qa`; `static-source-inspection` of the runtime lookup path; `generated-artifact-validation` when available.
+- Book-specific extensions: the discriminator name and representation MAY be book-local; no new framework or shared schema is required.
 
 ## AB-COMPAT-003 — Runtime lookup only
 - Level: MUST

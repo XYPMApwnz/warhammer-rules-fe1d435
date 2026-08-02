@@ -9,9 +9,10 @@
   "compactSharedAbilities": ["Synapse", "Shadow in the Warp", "Anti", "Assault", "Blast", "Deadly Demise", "Deep Strike", "Devastating Wounds", "Extra Attacks", "Feel No Pain", "Firing Deck", "Hazardous", "Heavy", "Ignores Cover", "Indirect Fire", "Lance", "Leader", "Lethal Hits", "Lone Operative", "Melta", "Pistol", "Precision", "Psychic", "Rapid Fire", "Scouts", "Stealth", "Sustained Hits", "Torrent", "Twin-linked"],
   "includeCoreStratagems": true,
   "dedicatedMobile": true,
+  "mobileRelatedRulesSource": false,
   "rosterSupport": true,
   "compatibleRulesMatrix": true,
-  "assetVersions": {"app": 5},
+  "assetVersions": {"app": 6},
   "expected": {
     "matchedDetachments": 10,
     "factionPackDetachments": 4,

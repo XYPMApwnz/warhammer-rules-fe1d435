@@ -110,15 +110,26 @@ try{
     const {page,errors}=await observedPage(mechanicusContext);
     await page.goto(`${origin}/books/adeptus-mechanicus/reader.html#unit-cybernetica-datasmith`);
     await page.locator('#unit-cybernetica-datasmith .related-rules-trigger').click();
+    assert.equal(await page.locator('.related-rules-layer .full-related-filter summary').textContent(),'All Detachments','Mechanicus desktop must start with All Detachments');
+    assert.ok(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count()>2,'Mechanicus desktop All Detachments must show faction rules from multiple Detachments');
     const conditionLines=await page.locator('.related-rules-layer [data-rule-id="core-stratagem-crushing-impact"] .compatibility-status span').allTextContents();
     assert.deepEqual(conditionLines,['Requires an Attached Unit','Check the full card conditions'],'Mechanicus desktop must render every matrix condition');
+    await page.locator('.related-rules-layer [data-kind="enhancements"]:not([hidden])').click();
+    assert.ok(await page.locator('.related-rules-layer .enhancement:visible').count()>1,'Mechanicus desktop All Detachments must show Enhancements from multiple Detachments');
+    assert.ok(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count()>1,'Mechanicus desktop Enhancement results must span multiple Detachments');
+    await page.locator('.related-rules-layer [data-kind="stratagems"]').click();
+    await page.locator('.related-rules-layer .full-related-filter summary').click();
+    await page.locator('.related-rules-layer .full-related-filter [data-detachment="cohort-cybernetica"]').click();
+    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),2,'Mechanicus desktop Detachment choice must narrow to Core plus one Detachment');
     await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'am-owner-filter',roster:{faction:'Adeptus Mechanicus',detachment:'Cohort Cybernetica',detachments:[{label:'Cohort Cybernetica'}],declared:95,units:[{id:'am-owner-1',name:'Tech-Priest Enginseer',quantity:1,points:75}],enhancements:[{name:'Necromechanic',ownerUnitId:'am-owner-1',ownerStatus:'resolved'}]}}])));
     await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?roster=am-owner-filter#unit-tech-priest-enginseer`);
     await page.locator('#unit-tech-priest-enginseer .related-rules-trigger').click();
+    assert.equal(await page.locator('.related-rules-layer [data-detachment="all"]').count(),0,'Mechanicus desktop roster must not expose All Detachments');
     await page.locator('.related-rules-layer [data-kind="enhancements"]').click();
     assert.deepEqual(await page.locator('.related-rules-layer .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId)),['enhancement-necromechanic'],'Mechanicus desktop roster must show only the Enhancement assigned to this ownerUnitId');
     await page.goto(`${origin}/books/adeptus-mechanicus/mobile/tech-priest-enginseer.html?roster=missing-roster`);
     assert.equal(await page.locator('#relatedRules').count(),0,'missing Mechanicus Phone roster must fail closed');
+    await page.evaluate(()=>localStorage.removeItem('adeptus-mechanicus-detachment-filter'));
     await page.goto(`${origin}/books/adeptus-mechanicus/mobile/tech-priest-enginseer.html`);
     assert.equal(await page.locator('#relatedRules').count(),1,'ordinary Mechanicus Phone Mode must keep all Detachment choices available');
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();
@@ -136,6 +147,16 @@ try{
     await page.locator('[data-related-tab="enhancements"]').click();
     await page.locator('#relatedRulesContent [data-rule-id="enhancement-necromechanic"]:visible').waitFor();
     assert.deepEqual(await page.locator('#relatedRulesContent .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId||card.id)),['enhancement-necromechanic'],'Mechanicus Phone roster must show only the Enhancement assigned to this ownerUnitId');
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1','{broken'));
+    await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?roster=broken#unit-tech-priest-enginseer`);
+    assert.equal(await page.locator('#unit-tech-priest-enginseer .related-rules-trigger').count(),0,'corrupt Mechanicus desktop roster must fail closed');
+    await page.goto(`${origin}/books/adeptus-mechanicus/reader.html#unit-belisarius-cawl`);
+    await page.locator('#unit-belisarius-cawl .related-rules-trigger').click();
+    assert.equal(await page.locator('.related-rules-layer [data-kind="enhancements"]:visible').count(),0,'Belisarius Cawl must not receive Enhancements');
+    await page.goto(`${origin}/books/adeptus-mechanicus/mobile/belisarius-cawl.html`);
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
+    assert.equal(await page.locator('[data-related-tab="enhancements"]:visible').count(),0,'Belisarius Cawl must not receive Phone Mode Enhancements');
     assert.deepEqual(errors,[]);
     console.log('PASS Mechanicus matrix UI conditions and roster owner filtering');
   }finally{await mechanicusContext.close();}
@@ -145,8 +166,14 @@ try{
     const {page,errors}=await observedPage(tyranidsContext);
     await page.goto(`${origin}/books/tyranids/reader.html#unit-trygon`);
     await page.locator('#unit-trygon .related-rules-trigger').click();
+    assert.equal(await page.locator('.related-rules-layer .full-related-filter summary').textContent(),'All Detachments','Tyranids desktop must start with All Detachments');
+    assert.ok(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count()>2,'Tyranids desktop All Detachments must show faction rules from multiple Detachments');
+    await page.locator('.related-rules-layer [data-kind="enhancements"]:not([hidden])').click();
+    assert.ok(await page.locator('.related-rules-layer .enhancement:visible').count()>1,'Tyranids desktop All Detachments must show Enhancements from multiple Detachments');
+    await page.locator('.related-rules-layer [data-kind="stratagems"]').click();
     await page.locator('.related-rules-layer .full-related-filter summary').click();
     await page.locator('.related-rules-layer .full-related-filter [data-detachment="subterranean-assault"]').click();
+    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),2,'Tyranids desktop Detachment choice must narrow to Core plus one Detachment');
     await page.locator('.related-rules-layer [data-kind="enhancements"]:not([hidden])').click();
     await page.locator('.related-rules-layer [data-rule-id="trygon-prime"]:not([hidden])').waitFor();
     assert.equal(await page.locator('.related-rules-layer [data-rule-id="trygon-prime"] .compatibility-status').count(),0,'selected Subterranean Assault must resolve the Trygon Detachment-selection condition');
@@ -165,15 +192,27 @@ try{
     await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'tyr-owner-filter',roster:{faction:'Tyranids',detachment:'Invasion Fleet',detachments:[{label:'Invasion Fleet'}],declared:235,units:[{id:'tyr-owner-1',name:'Hive Tyrant',quantity:1,points:205}],enhancements:[{name:'Adaptive Biology',ownerUnitId:'tyr-owner-1',ownerStatus:'resolved'}]}}])));
     await page.goto(`${origin}/books/tyranids/reader.html?roster=tyr-owner-filter#unit-hive-tyrant`);
     await page.locator('#unit-hive-tyrant .related-rules-trigger').click();
+    assert.equal(await page.locator('.related-rules-layer [data-detachment="all"]').count(),0,'Tyranids desktop roster must not expose All Detachments');
     await page.locator('.related-rules-layer [data-kind="enhancements"]:not([hidden])').click();
     assert.deepEqual(await page.locator('.related-rules-layer .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId)),['enhancement-adaptive-biology'],'Tyranids desktop roster must show only the Enhancement assigned to this ownerUnitId');
     await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html?roster=tyr-owner-filter`);
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();
     await page.locator('[data-related-tab="enhancements"]:not([hidden])').waitFor();
     await page.locator('[data-related-tab="enhancements"]').click();
+    await page.locator('#relatedRulesContent [data-rule-id="enhancement-adaptive-biology"]:visible').waitFor();
     assert.deepEqual(await page.locator('#relatedRulesContent .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId)),['enhancement-adaptive-biology'],'Tyranids Phone roster must show only the Enhancement assigned to this ownerUnitId');
     await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html?roster=missing-roster`);
     assert.equal(await page.locator('#relatedRules').count(),0,'missing Tyranids Phone roster must fail closed');
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1','{broken'));
+    await page.goto(`${origin}/books/tyranids/reader.html?roster=broken#unit-hive-tyrant`);
+    assert.equal(await page.locator('#unit-hive-tyrant .related-rules-trigger').count(),0,'corrupt Tyranids desktop roster must fail closed');
+    await page.goto(`${origin}/books/tyranids/reader.html#unit-the-swarmlord`);
+    await page.locator('#unit-the-swarmlord .related-rules-trigger').click();
+    assert.equal(await page.locator('.related-rules-layer [data-kind="enhancements"]:visible').count(),0,'The Swarmlord must not receive Enhancements');
+    await page.goto(`${origin}/books/tyranids/mobile/the-swarmlord.html`);
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
+    assert.equal(await page.locator('[data-related-tab="enhancements"]:visible').count(),0,'The Swarmlord must not receive Phone Mode Enhancements');
     assert.deepEqual(errors,[]);
     console.log('PASS Tyranids matrix UI, Detachment resolution and roster owner filtering');
   }finally{await tyranidsContext.close();}
@@ -228,28 +267,44 @@ try{
     await page.goto(`${origin}/books/death-guard/reader.html#unit-chaos-land-raider`);
     await page.locator('#unit-chaos-land-raider .related-rules-trigger').waitFor();
     await page.locator('#unit-chaos-land-raider .related-rules-trigger').click();
-    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),2,'desktop must show Core plus one selected Detachment');
+    assert.equal(await page.locator('.related-rules-layer .full-related-filter summary').textContent(),'All Detachments','Death Guard desktop must start with All Detachments');
+    assert.ok(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count()>2,'Death Guard desktop All Detachments must show faction rules from multiple Detachments');
     assert.equal(await page.locator('.related-rules-layer [data-detachment="core"] [data-rule-id="core-stratagem-command-re-roll"]:not([hidden])').count(),1,'desktop must show matrix-approved Core Stratagems');
     assert.equal(await page.locator('.related-rules-layer [data-rule-id="stratagem-disgustingly-resilient"]:not([hidden])').count(),1,'desktop must show the matrix-approved Stratagem');
     assert.equal(await page.locator('.related-rules-layer .enhancement:visible').count(),0,'review integration must not revive legacy Enhancement matching');
     assert.equal(await page.locator('.related-rules-layer [data-rule-id="stratagem-plaguesurge"] .compatibility-status span').textContent(),'Requires Warlord selection');
+    await page.locator('.related-rules-layer .full-related-filter summary').click();
+    await page.locator('.related-rules-layer .full-related-filter [data-detachment="virulent-vectorium"]').click();
+    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),2,'Death Guard desktop Detachment choice must narrow to Core plus one Detachment');
+    await page.evaluate(()=>localStorage.removeItem('death-guard-detachment-filter'));
     await page.goto(`${origin}/books/death-guard/mobile/chaos-land-raider.html?view=mobile`);
-    await page.locator('#relatedDetachment').selectOption('virulent-vectorium');
+    assert.equal(await page.locator('#relatedDetachment').inputValue(),'all','Death Guard Phone Mode must start with All Detachments');
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
+    assert.ok(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count()>2,'Death Guard Phone All Detachments must show faction rules from multiple Detachments');
+    await page.locator('#relatedDetachment').selectOption('virulent-vectorium');
     await page.locator('#relatedRulesContent [data-detachment="virulent-vectorium"] .stratagem:not([hidden])').first().waitFor();
     assert.equal(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count(),2,'Phone Mode must show Core plus one selected Detachment');
     assert.equal(await page.locator('#relatedRulesContent [data-detachment="core"] #core-stratagem-command-re-roll:not([hidden])').count(),1,'Phone Mode must show matrix-approved Core Stratagems');
     assert.equal(await page.locator('#stratagem-disgustingly-resilient:not([hidden])').count(),1,'Phone Mode must show the matrix-approved Stratagem');
     assert.equal(await page.locator('#stratagem-plaguesurge .compatibility-status span').textContent(),'Requires Warlord selection');
+    await page.evaluate(()=>localStorage.removeItem('death-guard-detachment-filter'));
     await page.goto(`${origin}/books/death-guard/reader.html#unit-biologus-putrifier`);
     await page.locator('#unit-biologus-putrifier .related-rules-trigger').click();
     await page.locator('.related-rules-layer [data-kind="enhancements"]').click();
+    assert.ok(await page.locator('.related-rules-layer .enhancement:visible').count()>4,'Death Guard desktop All Detachments must show Enhancements from multiple Detachments');
+    assert.ok(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count()>1,'Death Guard desktop Enhancement results must span multiple Detachments');
+    await page.locator('.related-rules-layer .full-related-filter summary').click();
+    await page.locator('.related-rules-layer .full-related-filter [data-detachment="virulent-vectorium"]').click();
     assert.equal(await page.locator('.related-rules-layer [data-detachment="virulent-vectorium"] .enhancement:not([hidden])').count(),4,'desktop must show the four standard Virulent Vectorium Enhancements');
     assert.equal(await page.locator('.related-rules-layer [data-enhancement-tags="UPGRADE"]:visible').count(),0,'desktop must not leak UPGRADE from another Detachment');
+    await page.evaluate(()=>localStorage.removeItem('death-guard-detachment-filter'));
     await page.goto(`${origin}/books/death-guard/mobile/biologus-putrifier.html?view=mobile`);
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();
-    await page.locator('#relatedRulesContent [data-detachment="virulent-vectorium"] .stratagem:not([hidden])').first().waitFor();
+    await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
     await page.locator('[data-related-tab="enhancements"]').click();
+    assert.ok(await page.locator('#relatedRulesContent .enhancement:visible').count()>4,'Death Guard Phone All Detachments must show Enhancements from multiple Detachments');
+    await page.locator('#relatedDetachment').selectOption('virulent-vectorium');
     assert.equal(await page.locator('#relatedRulesContent [data-detachment="virulent-vectorium"] .enhancement:not([hidden])').count(),4,'Phone Mode must show the four standard Virulent Vectorium Enhancements');
     assert.equal(await page.locator('#relatedRulesContent [data-enhancement-tags="UPGRADE"]:visible').count(),0,'Phone Mode must not leak UPGRADE from another Detachment');
     await page.goto(`${origin}/books/death-guard/reader.html#unit-helbrute`);
@@ -267,6 +322,7 @@ try{
     await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'dg-owner-filter',roster:{faction:'Death Guard',detachment:'Contagion Engines',detachments:[{label:'Contagion Engines'}],declared:210,units:[{id:'dg-owner-1',name:'Helbrute',quantity:1,points:110},{id:'dg-owner-2',name:'Myphitic Blight-hauler',quantity:1,points:100}],enhancements:[{name:'Parasitic Woe-Reaper',ownerUnitId:'dg-owner-1',ownerStatus:'resolved'}]}}])));
     await page.goto(`${origin}/books/death-guard/reader.html?roster=dg-owner-filter#unit-helbrute`);
     await page.locator('#unit-helbrute .related-rules-trigger').click();
+    assert.equal(await page.locator('.related-rules-layer [data-detachment="all"]').count(),0,'Death Guard desktop roster must not expose All Detachments');
     await page.locator('.related-rules-layer [data-kind="enhancements"]').click();
     assert.deepEqual(await page.locator('.related-rules-layer .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId)),['enhancement-parasitic-woe-reaper'],'desktop roster mode must show only the UPGRADE assigned to this ownerUnitId');
     await page.locator('.related-rules-layer .related-rules-close').click();
@@ -285,11 +341,22 @@ try{
     await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
     assert.equal(await page.locator('[data-related-tab="enhancements"]:visible').count(),0,'Phone Mode roster unit without an assignment must not show Enhancement choices');
     await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1','{broken'));
+    await page.goto(`${origin}/books/death-guard/reader.html?roster=broken#unit-helbrute`);
+    assert.equal(await page.locator('#unit-helbrute .related-rules-trigger').count(),0,'damaged desktop roster storage must fail closed');
     await page.goto(`${origin}/books/death-guard/mobile/helbrute.html?view=mobile&roster=broken`);
     assert.equal(await page.locator('#relatedRules').count(),0,'damaged roster storage must hide Compatible Rules instead of revealing Enhancements');
+    await page.evaluate(()=>localStorage.removeItem('death-guard-detachment-filter'));
     await page.goto(`${origin}/books/death-guard/mobile/helbrute.html?view=mobile`);
-    assert.equal(await page.locator('#relatedDetachment option').count(),9,'ordinary Phone Mode must keep every Detachment');
+    assert.equal(await page.locator('#relatedDetachment option').count(),10,'ordinary Phone Mode must keep All plus every Detachment');
+    assert.equal(await page.locator('#relatedDetachment').inputValue(),'all','ordinary Death Guard Phone Mode must default to All Detachments');
     assert.equal(await page.locator('#relatedDetachment').isDisabled(),false,'ordinary Phone Mode Detachment selector must remain unrestricted');
+    await page.goto(`${origin}/books/death-guard/reader.html#unit-mortarion`);
+    await page.locator('#unit-mortarion .related-rules-trigger').click();
+    assert.equal(await page.locator('.related-rules-layer [data-kind="enhancements"]:visible').count(),0,'Mortarion must not receive Enhancements');
+    await page.goto(`${origin}/books/death-guard/mobile/mortarion.html?view=mobile`);
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
+    assert.equal(await page.locator('[data-related-tab="enhancements"]:visible').count(),0,'Mortarion must not receive Phone Mode Enhancements');
     assert.deepEqual(errors,[]);
     console.log('PASS Death Guard review matrix uses the existing desktop and Phone Mode interfaces');
   }finally{await relatedLayoutContext.close();}
@@ -343,21 +410,21 @@ try{
       triggerCount:document.querySelectorAll('.related-rules-trigger').length,
       relatedRules:Boolean(window.DG_APP?.relatedRules),
       cachedApp:Boolean(await caches.match('./books/death-guard/scripts/app.js?v=35')),
-      cachedModule:Boolean(await caches.match('./books/death-guard/scripts/compatible-stratagems-runtime.mjs?v=2')),
+      cachedModule:Boolean(await caches.match('./books/death-guard/scripts/compatible-stratagems-runtime.mjs?v=3')),
       cachedMatrix:Boolean(await caches.match('./books/death-guard/generated/compatible-rules.json')),
       cachedTemplate:Boolean(await caches.match('./books/death-guard/mobile/related-rules.inc?v=3'))
     }));
     assert.equal(coldDgState.hasApp&&coldDgState.triggerCount>0,true,`DG cold review runtime unavailable: ${JSON.stringify({coldDgState,errors})}`);
     await page.locator('#unit-chaos-land-raider .related-rules-trigger').click();
     await page.locator('.related-rules-layer [data-rule-id="stratagem-disgustingly-resilient"]:not([hidden])').waitFor();
-    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),2,'DG cold desktop must open Core plus one matrix-backed Detachment');
+    assert.ok(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count()>2,'DG cold desktop must reopen matrix-backed All Detachments');
     assert.deepEqual(errors,[]);
     console.log('PASS Death Guard true cold desktop Compatible Stratagems');
 
     await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?build=am-cold#unit-skitarii-rangers`);
     await page.locator('#unit-skitarii-rangers .related-rules-trigger').click();
     await page.locator('.related-rules-layer [data-rule-id="core-stratagem-command-re-roll"]:not([hidden])').waitFor();
-    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),2,'Mechanicus cold desktop must open Core plus one matrix-backed Detachment');
+    assert.ok(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count()>2,'Mechanicus cold desktop must reopen matrix-backed All Detachments');
     assert.deepEqual(errors,[]);
     console.log('PASS Adeptus Mechanicus true cold desktop Compatible Rules');
 
@@ -368,10 +435,11 @@ try{
     await page.goto(`${origin}/books/tyranids/reader.html?build=tyr-cold#unit-hive-tyrant`);
     await page.locator('#unit-hive-tyrant .related-rules-trigger').click();
     await page.locator('.related-rules-layer [data-rule-id="core-stratagem-command-re-roll"]:not([hidden])').waitFor();
+    assert.ok(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count()>2,'Tyranids cold desktop must reopen matrix-backed All Detachments');
     await page.locator('.related-rules-layer .full-related-filter summary').click();
     await page.locator('.related-rules-layer .full-related-filter [data-detachment="invasion-fleet"]').click();
     await page.locator('.related-rules-layer [data-detachment="invasion-fleet"] .stratagem:not([hidden])').first().waitFor();
-    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),2,'Tyranids cold desktop must open Core plus one matrix-backed Detachment');
+    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),2,'Tyranids cold desktop Detachment choice must narrow to Core plus one Detachment');
 
     await page.setViewportSize({width:390,height:844});
     await page.goto(`${origin}/books/tyranids/?build=cold-phone`);
@@ -426,12 +494,12 @@ try{
       relatedRules:document.querySelectorAll('#relatedRules').length,
       cachedPage:Boolean(await caches.match(location.href)),
       cachedMobile:Boolean(await caches.match(new URL('./mobile.js?v=17',location.href).href)),
-      cachedModule:Boolean(await caches.match(new URL('../scripts/compatible-stratagems-runtime.mjs?v=2',location.href).href))
+      cachedModule:Boolean(await caches.match(new URL('../scripts/compatible-stratagems-runtime.mjs?v=3',location.href).href))
     }));
     assert.equal(warmDgState.relatedRules,1,`DG warm Phone runtime unavailable: ${JSON.stringify({warmBefore,warmDgState,errors})}`);
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();
     await page.locator('#relatedRulesContent [data-detachment] .stratagem:not([hidden])').first().waitFor();
-    assert.equal(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count(),2,'visited DG Phone page must reopen Core plus one matrix-backed Detachment offline');
+    assert.ok(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count()>2,'visited DG Phone page must reopen matrix-backed All Detachments offline');
     assert.deepEqual(errors,[]);
     console.log('PASS Death Guard visited Phone Mode Compatible Stratagems offline');
   }finally{await warmDeathGuardContext.close();}

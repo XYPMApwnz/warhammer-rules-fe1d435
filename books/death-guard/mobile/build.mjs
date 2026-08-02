@@ -124,7 +124,7 @@ function page(route) {
   <section class="related-rules" id="relatedRules" aria-labelledby="relatedRulesTitle">
     <header class="related-rules-head"><div><span>Datasheet tools</span><h2>Compatible Stratagems</h2></div></header>
     <div class="related-controls">
-      <label>Detachment<select id="relatedDetachment">${detachments.map(item => `<option value="${item.id.slice(11)}">${item.title}</option>`).join('')}</select></label>
+      <label>Detachment<select id="relatedDetachment"><option value="all">All detachments</option>${detachments.map(item => `<option value="${item.id.slice(11)}">${item.title}</option>`).join('')}</select></label>
     </div>
     <div class="related-content" id="relatedRulesContent"><p class="related-status">Loading rules&hellip;</p></div>
   </section>` : '';
@@ -175,7 +175,7 @@ function page(route) {
   <script src="../../shared/roster-parser.js?v=2"></script>
   <script src="../../../roster-guides/points-data.js?v=6"></script>
   <script src="../../shared/roster-enhancements.js?v=3"></script>
-  <script src="./mobile.js?v=21"></script>
+  <script src="./mobile.js?v=22"></script>
 </body>
 </html>`;
 }

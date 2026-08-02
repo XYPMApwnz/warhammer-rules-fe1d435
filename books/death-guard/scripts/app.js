@@ -1,7 +1,7 @@
 (async function(){
   'use strict';
   const scriptUrl=document.currentScript.src;
-  const compatibleRuntime=await import(new URL('./compatible-stratagems-runtime.mjs?v=2',scriptUrl))
+  const compatibleRuntime=await import(new URL('./compatible-stratagems-runtime.mjs?v=3',scriptUrl))
     .catch(error=>{console.warn('Compatible Stratagems unavailable.',error);return null;});
   let relatedRulesTemplate,compatibleRulesMatrix;
 
@@ -48,7 +48,7 @@
         group.hidden=group.dataset.relatedKind!==kind||![...group.querySelectorAll('.stratagem,.enhancement')].some(card=>!card.hidden);
       });
       sections.forEach(section=>{
-        const selected=section.dataset.detachment==='core'||section.dataset.detachment===detachment;
+        const selected=section.dataset.detachment==='core'||detachment==='all'||section.dataset.detachment===detachment;
         section.hidden=!selected||![...section.querySelectorAll('[data-related-kind]')].some(group=>!group.hidden);
       });
       tabs.querySelectorAll('button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.kind===kind)));
@@ -74,7 +74,7 @@
           const rosterDetachments=new Set(rosterGuide?.detachmentIds||[]);
           if(rosterMode){sections.forEach(section=>{if(section.dataset.detachment!=='core'&&!rosterDetachments.has(section.dataset.detachment))section.remove();});sections=sections.filter(section=>section.dataset.detachment==='core'||rosterDetachments.has(section.dataset.detachment));}
           const detachmentSections=sections.filter(section=>section.dataset.detachment!=='core');
-          const choices=detachmentSections.map(section=>[section.dataset.detachment,section.querySelector('h2').textContent]);
+          const choices=[...(!rosterMode?[['all','All Detachments']]:[]),...detachmentSections.map(section=>[section.dataset.detachment,section.querySelector('h2').textContent])];
           detachment=choices[0]?.[0]||'';
           if(!rosterMode)try{const saved=localStorage.getItem('death-guard-detachment-filter');if(choices.some(([value])=>value===saved))detachment=saved;}catch{}
           filterMenu=document.createElement('details');filterMenu.className='full-related-filter';

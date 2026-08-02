@@ -2,7 +2,7 @@
   'use strict';
 
   const scriptUrl=document.currentScript.src;
-  const compatibleRuntime=await import(new URL('../scripts/compatible-stratagems-runtime.mjs?v=2',scriptUrl))
+  const compatibleRuntime=await import(new URL('../scripts/compatible-stratagems-runtime.mjs?v=3',scriptUrl))
     .catch(error=>{console.warn('Compatible Stratagems unavailable.',error);return null;});
 
   const navButton = document.getElementById('navButton');
@@ -133,7 +133,7 @@
       group.hidden = group.dataset.relatedKind !== relatedKind || ![...group.querySelectorAll('.stratagem,.enhancement')].some(card => !card.hidden);
     });
     relatedContent.querySelectorAll('.related-detachment').forEach(section => {
-      const chosen = section.dataset.detachment === 'core' || section.dataset.detachment === selected;
+      const chosen = section.dataset.detachment === 'core' || selected === 'all' || section.dataset.detachment === selected;
       section.hidden = !chosen || ![...section.querySelectorAll('[data-related-kind]')].some(group => !group.hidden);
     });
     relatedRules.querySelectorAll('[data-related-tab]').forEach(button => {

@@ -16,10 +16,10 @@ export async function loadCompatibleStratagems(url){
 }
 
 export function getCompatibleStratagems(matrix,unitId,{detachmentId,warlord}={}){
-  const selected=detachmentId&&!detachmentId.startsWith('detachment-')?`detachment-${detachmentId}`:detachmentId;
+  const selected=detachmentId&&detachmentId!=='all'?(detachmentId.startsWith('detachment-')?detachmentId:`detachment-${detachmentId}`):'';
   return (matrix.units?.[unitId]||[]).filter(rule=>rule.scope==='core'||!selected||rule.detachmentId===selected).map(rule=>{
     if(rule.condition==='warlord-unknown'&&warlord===true)return {...rule,state:'match',condition:undefined};
-    if(rule.condition==='detachment-not-selected'&&detachmentId)return {...rule,state:'match',condition:undefined};
+    if(rule.condition==='detachment-not-selected'&&selected)return {...rule,state:'match',condition:undefined};
     return {...rule};
   });
 }

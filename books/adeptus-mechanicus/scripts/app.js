@@ -1,7 +1,7 @@
 (async function(){
   'use strict';
   const scriptUrl=document.currentScript.src;
-  const compatibleRuntime=await import(new URL('./compatible-rules-runtime.mjs?v=2',scriptUrl)).catch(error=>{console.warn('Compatible rules unavailable.',error);return null;});
+  const compatibleRuntime=await import(new URL('./compatible-rules-runtime.mjs?v=3',scriptUrl)).catch(error=>{console.warn('Compatible rules unavailable.',error);return null;});
   let relatedRulesTemplate,compatibleRulesMatrix;
   const params=new URLSearchParams(location.search),rosterMode=params.has('roster');
 
@@ -37,7 +37,7 @@
       title.textContent=`${unit.querySelector('.unit-name')?.textContent.trim()||'Datasheet'} · ${label}`;unit.querySelector('.related-rules-trigger').textContent=label;
       content.querySelectorAll('.stratagem,.enhancement').forEach(card=>{const result=byId.get(card.dataset.ruleId);card.hidden=!result;card.dataset.matchState=result?.state||'no-match';addConditionStatus(card,result);});
       content.querySelectorAll('[data-related-kind]').forEach(group=>{group.hidden=group.dataset.relatedKind!==kind||![...group.querySelectorAll('.stratagem,.enhancement')].some(card=>!card.hidden);});
-      sections.forEach(section=>{const selected=section.dataset.detachment==='core'||section.dataset.detachment===detachment;section.hidden=!selected||![...section.querySelectorAll('[data-related-kind]')].some(group=>!group.hidden);});
+      sections.forEach(section=>{const selected=section.dataset.detachment==='core'||detachment==='all'||section.dataset.detachment===detachment;section.hidden=!selected||![...section.querySelectorAll('[data-related-kind]')].some(group=>!group.hidden);});
       tabs.querySelectorAll('button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.kind===kind)));
       const visible=sections.some(section=>!section.hidden);empty.hidden=visible;empty.textContent=`No compatible ${kind==='enhancements'?'Enhancements':'Stratagems'} for this datasheet in the selected Detachment.`;
     };
@@ -50,7 +50,7 @@
         const [template,matrix]=await Promise.all([getRelatedRulesTemplate(),compatibleRuntime.loadCompatibleRules(new URL('../generated/compatible-rules.json',scriptUrl))]);compatibleRulesMatrix=matrix;
         const fragment=template.content.cloneNode(true);fragment.querySelectorAll('[id]').forEach(node=>{node.dataset.ruleId=node.id;node.removeAttribute('id');});sections=[...fragment.querySelectorAll('.related-detachment')];
         const rosterDetachments=new Set(rosterGuide?.detachmentIds||[]);if(rosterMode){sections.forEach(section=>{if(section.dataset.detachment!=='core'&&!rosterDetachments.has(section.dataset.detachment))section.remove();});sections=sections.filter(section=>section.dataset.detachment==='core'||rosterDetachments.has(section.dataset.detachment));}
-        const detachmentSections=sections.filter(section=>section.dataset.detachment!=='core'),choices=detachmentSections.map(section=>[section.dataset.detachment,section.querySelector('h2').textContent]);detachment=choices[0]?.[0]||'';
+        const detachmentSections=sections.filter(section=>section.dataset.detachment!=='core'),choices=[...(!rosterMode?[['all','All Detachments']]:[]),...detachmentSections.map(section=>[section.dataset.detachment,section.querySelector('h2').textContent])];detachment=choices[0]?.[0]||'';
         if(!rosterMode)try{const saved=localStorage.getItem('adeptus-mechanicus-detachment-filter');if(choices.some(([value])=>value===saved))detachment=saved;}catch{}
         filterMenu=document.createElement('details');filterMenu.className='full-related-filter';filterMenu.classList.toggle('is-static',choices.length===1);filterMenu.innerHTML='<summary><span>'+(choices.find(([value])=>value===detachment)?.[1]||'No Detachment')+'</span></summary><div>'+choices.map(([value,label])=>`<button type="button" data-detachment="${value}" aria-pressed="${value===detachment}">${label}</button>`).join('')+'</div>';
         tabs=document.createElement('div');tabs.className='full-related-tabs';tabs.innerHTML='<button type="button" data-kind="stratagems" aria-pressed="true">Stratagems</button><button type="button" data-kind="enhancements" aria-pressed="false">Enhancements</button>';

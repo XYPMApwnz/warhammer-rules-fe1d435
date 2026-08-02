@@ -134,7 +134,7 @@ assert.doesNotMatch(reader,/army-book-app\.js/,'Tyranids must not load the gener
 assert.doesNotMatch(reader,/unit-source-state/,'per-datasheet source telemetry must not clutter the playable reader');
 assert.match(app,/new window\.DGNavigation\(\)/);
 assert.match(app,/new window\.DGPopups\(terms,fullEntry\)/);
-assert.match(app,/compatible-rules-runtime\.mjs\?v=1/);
+assert.match(app,/compatible-rules-runtime\.mjs\?v=2/);
 assert.match(app,/function initRelatedRules\(\)/);
 assert.doesNotMatch(app,/WHArmyRelatedRules|WHRelatedRules/);
 assert.match(app,/new URL\('\.\/mobile\/'\+route/);

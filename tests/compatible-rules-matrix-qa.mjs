@@ -54,5 +54,6 @@ assert.equal(getCompatibleStratagems(matrix,warlord[0],{detachmentId:warlord[1].
 const detachment=Object.entries(matrix.units).flatMap(([unitId,rules])=>rules.filter(rule=>rule.condition==='detachment-not-selected').map(rule=>[unitId,rule]))[0];
 assert.equal(getCompatibleStratagems(matrix,detachment[0],{detachmentId:detachment[1].detachmentId}).find(rule=>rule.ruleId===detachment[1].ruleId).state,'match');
 assert.equal(getCompatibleStratagems(matrix,detachment[0],{detachmentId:detachment[1].detachmentId.replace(/^detachment-/,'')}).find(rule=>rule.ruleId===detachment[1].ruleId).state,'match');
+assert.deepEqual(getCompatibleStratagems(matrix,detachment[0],{detachmentId:'all'}),matrix.units[detachment[0]],'All Detachments must preserve every compatible matrix row');
 assert(getCompatibleStratagems(matrix,warlord[0],{detachmentId:'other'}).every(rule=>rule.scope==='core'));
 console.log('Death Guard compatible rules matrix QA passed.');

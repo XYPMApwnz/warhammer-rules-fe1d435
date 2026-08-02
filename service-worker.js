@@ -66,7 +66,7 @@ const APP_SHELL = [
   "./books/death-guard/scripts/view-router.js?v=2",
   "./books/death-guard/mobile/index.html",
   "./books/death-guard/mobile/mobile.css?v=8",
-  "./books/death-guard/mobile/mobile.js?v=21",
+  "./books/death-guard/mobile/mobile.js?v=22",
   "./books/death-guard/mobile/related-rules.inc?v=3",
   "./books/shared/navigation-targets.js?v=1",
   "./books/shared/popup-rule-actions.js?v=1",
@@ -91,8 +91,8 @@ const APP_SHELL = [
   "./books/death-guard/scripts/full-entry-controller.js?v=9",
   "./books/death-guard/scripts/journey-controller.js?v=13",
   "./books/death-guard/scripts/ui-controllers.js?v=12",
-  "./books/death-guard/scripts/app.js?v=39",
-  "./books/death-guard/scripts/compatible-stratagems-runtime.mjs?v=2",
+  "./books/death-guard/scripts/app.js?v=40",
+  "./books/death-guard/scripts/compatible-stratagems-runtime.mjs?v=3",
   "./books/death-guard/generated/compatible-rules.json",
   "./books/core-rules/",
   CORE_RULES_FALLBACK,
@@ -130,7 +130,7 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/reader.html",
   "./books/adeptus-mechanicus/mobile/index.html",
   "./books/adeptus-mechanicus/mobile/mobile.css?v=1",
-  "./books/adeptus-mechanicus/mobile/mobile.js?v=6",
+  "./books/adeptus-mechanicus/mobile/mobile.js?v=7",
   "./books/adeptus-mechanicus/assets/mechanicus-logo.png",
   "./books/adeptus-mechanicus/assets/mechanicus-cover-800.webp",
   "./books/adeptus-mechanicus/styles/tokens.css?v=15",
@@ -140,9 +140,9 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/mobile/related-rules.inc?v=3",
   "./books/adeptus-mechanicus/scripts/roster-enhancements.js?v=2",
   "./books/adeptus-mechanicus/scripts/roster-filter.js?v=3",
-  "./books/adeptus-mechanicus/scripts/compatible-rules-runtime.mjs?v=2",
+  "./books/adeptus-mechanicus/scripts/compatible-rules-runtime.mjs?v=3",
   "./books/adeptus-mechanicus/generated/compatible-rules.json",
-  "./books/adeptus-mechanicus/scripts/app.js?v=30"
+  "./books/adeptus-mechanicus/scripts/app.js?v=31"
   ,"./books/tyranids/"
   ,TYRANIDS_ENTRY_FALLBACK
   ,TYRANIDS_DESKTOP_FALLBACK
@@ -153,11 +153,11 @@ const APP_SHELL = [
   ,"./books/tyranids/scripts/data.js?v=2"
   ,"./books/tyranids/scripts/roster-data.js?v=1"
   ,"./books/tyranids/scripts/roster-filter.js?v=1"
-  ,"./books/tyranids/scripts/compatible-rules-runtime.mjs?v=1"
+  ,"./books/tyranids/scripts/compatible-rules-runtime.mjs?v=2"
   ,"./books/tyranids/generated/compatible-rules.json"
-  ,"./books/tyranids/scripts/app.js?v=5"
+  ,"./books/tyranids/scripts/app.js?v=6"
   ,"./books/tyranids/mobile/mobile.css?v=1"
-  ,"./books/tyranids/mobile/mobile.js?v=5"
+  ,"./books/tyranids/mobile/mobile.js?v=6"
   ,"./books/tyranids/mobile/related-rules.inc?v=4"
   ,"./glossary/generated/glossary.en.js?v=tyranids-1"
   ,"./books/tau-empire/"

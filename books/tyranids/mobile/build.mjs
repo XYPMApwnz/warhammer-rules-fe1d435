@@ -105,7 +105,7 @@ function page(route){
 for(const route of routes)await writeFile(new URL(route.file,import.meta.url),page(route)
   .replace('<a class="phone-glossary" href="../../../glossary/index.html">','<a class="phone-glossary" href="../../../roster-guides/index.html" data-roster-guides-link hidden>&larr; Roster Guides</a><a class="phone-glossary" href="../../../glossary/index.html">')
   .replace('<script src="../../shared/related-rules-matcher.js?v=4"></script><script src="../../shared/army-related-rules.js?v=6"></script>','')
-  .replace('<script src="../../../glossary-return.js?v=3"></script><script src="./mobile.js?v=4"></script>','<script src="../../../glossary-return.js?v=3"></script><script src="../../shared/roster-parser.js?v=2"></script><script src="../../shared/roster-entities.js?v=1"></script><script src="../../../roster-guides/points-data.js?v=6"></script><script src="./mobile.js?v=5"></script>')
+  .replace('<script src="../../../glossary-return.js?v=3"></script><script src="./mobile.js?v=4"></script>','<script src="../../../glossary-return.js?v=3"></script><script src="../../shared/roster-parser.js?v=2"></script><script src="../../shared/roster-entities.js?v=1"></script><script src="../../../roster-guides/points-data.js?v=6"></script><script src="./mobile.js?v=6"></script>')
   .replace('rule-facts.js?v=1','rule-facts.js?v=4'));
 await writeFile(new URL('related-rules.inc',import.meta.url),relatedRules());
 for(const route of routes.filter(route=>route.type!=='start')){

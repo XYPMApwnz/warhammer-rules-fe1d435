@@ -96,8 +96,9 @@ not duplicate rule text already held in the Army Book.
 
 ## Verified compatibility matrix schema
 
-The matrix records which existing rule cards belong to a datasheet. It does
-not replace `data-rule-facts`, the relation graph or matcher evaluation.
+The matrix records which existing rule cards belong to a datasheet. It is the
+published runtime input and does not contain raw source evidence or correction
+prose.
 
 ```json
 {
@@ -115,9 +116,13 @@ not replace `data-rule-facts`, the relation graph or matcher evaluation.
 }
 ```
 
-Matrix states are `match`, `no-match` and `conditional`. `conditional` means
-the result depends on formation or game state; it is not permission to guess a
-formation. The matcher remains responsible for evaluating the current context.
+The generated runtime matrix contains published `match` and `conditional` rows.
+Runtime performs only a small lookup and filtering over explicitly prepared
+fields. It does not parse TARGET or prose, run a selector evaluator, infer an
+attachment or use a legacy matcher as fallback. Explicit supported context,
+such as the selected Detachment or a known Warlord flag, may resolve only a
+matrix condition prepared for that context. Unknown formation remains
+`conditional`; runtime does not guess it.
 
 ## Required report categories
 

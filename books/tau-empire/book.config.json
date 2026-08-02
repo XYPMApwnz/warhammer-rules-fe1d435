@@ -18,6 +18,7 @@
     "app": 7,
     "book": 5,
     "mobile": 2,
+    "rosterFilter": 2,
     "rosterData": 1
   },
   "expected": {

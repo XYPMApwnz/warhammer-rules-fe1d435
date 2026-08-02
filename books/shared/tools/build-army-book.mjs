@@ -234,7 +234,7 @@ let finalHtml=config.dedicatedMobile?coveredHtml
 if(config.compatibleRulesMatrix)finalHtml=finalHtml
   .replace(/<script src="\.\.\/shared\/related-rules-matcher\.js\?v=6"><\/script>/,'')
   .replace(/<script src="\.\.\/shared\/army-related-rules\.js\?v=9"><\/script>/,'')
-  .replace('<script src="./scripts/app.js',`<script src="./scripts/roster-filter.js?v=1"></script><script src="./scripts/app.js`);
+  .replace('<script src="./scripts/app.js',`<script src="./scripts/roster-filter.js?v=${config.assetVersions?.rosterFilter||1}"></script><script src="./scripts/app.js`);
 const dataJs=`window.DG_TERMS=${JSON.stringify(Object.fromEntries([...terms].map(([id,item])=>[id,{id,title:item.title,summary:item.summary,full:item.full,glossary:item.glossary,...(item.rule?{rule:item.rule}:{}),...(item.units.length?{units:item.units,datasheet:item.units[0],statline:item.units[0].replace(/^unit-/,'')+'-profile'}:{})}])),null,2)};\n`;
 const rosterEnhancements=Object.fromEntries(detachments.flatMap(det=>(det.enhancements||[]).map(item=>{const contract=enhancementContract(item);return[titleKey(item.title),{title:item.title,text:item.text,value:item.value,detachment:det.title,tags:contract?.tags||item.tags||[],owner:contract?.owner||null,assignment:contract?.assignment||null}]})));
 const rosterDataJs=`window.WH_BOOK_ROSTER_ENHANCEMENTS=${JSON.stringify(rosterEnhancements,null,2)};\n`;

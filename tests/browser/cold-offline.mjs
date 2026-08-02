@@ -74,7 +74,7 @@ try{
       ['Death Guard','/books/death-guard/reader.html#unit-chaos-land-raider','/books/death-guard/mobile/chaos-land-raider.html','/books/death-guard/mobile/virulent-vectorium.html',true],
       ['Adeptus Mechanicus','/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers','/books/adeptus-mechanicus/mobile/skitarii-rangers.html','/books/adeptus-mechanicus/mobile/cohort-acquisitus.html',true],
       ['Tyranids','/books/tyranids/reader.html#unit-hive-tyrant','/books/tyranids/mobile/hive-tyrant.html','/books/tyranids/mobile/invasion-fleet.html',true],
-      ["T'au Empire",'/books/tau-empire/reader.html#unit-breacher-team','/books/tau-empire/mobile/breacher-team.html','/books/tau-empire/mobile/kauyon.html',false]
+      ["T'au Empire",'/books/tau-empire/reader.html#unit-breacher-team','/books/tau-empire/mobile/breacher-team.html','/books/tau-empire/mobile/kauyon.html',true]
     ];
     let profileCount=0;
     for(const [name,desktop,mobile,detachment,reviewEnabled] of books){
@@ -82,7 +82,7 @@ try{
       if(name==='Death Guard')assert.deepEqual(await page.evaluate(()=>({matcher:typeof window.WHRelatedRules,legacy:typeof window.DGRelatedRules})),{matcher:'undefined',legacy:'undefined'},'Death Guard must not load the legacy matcher path');
       else if(name==='Adeptus Mechanicus')assert.deepEqual(await page.evaluate(()=>({matcher:typeof window.WHRelatedRules,legacy:typeof window.AMRelatedRules})),{matcher:'undefined',legacy:'undefined'},'Adeptus Mechanicus must not load the legacy matcher path');
       else if(name==='Tyranids')assert.deepEqual(await page.evaluate(()=>({matcher:typeof window.WHRelatedRules,legacy:typeof window.TYRRelatedRules})),{matcher:'undefined',legacy:'undefined'},'Tyranids must not load the legacy matcher path');
-      else assert.equal(await page.evaluate(()=>window.WHRelatedRules?.enabled),false,`${name} shared safety flag must be disabled`);
+      else assert.deepEqual(await page.evaluate(()=>({matcher:typeof window.WHRelatedRules,legacy:typeof window.TAURelatedRules})),{matcher:'undefined',legacy:'undefined'},"T'au Empire must not load the legacy matcher path");
       if(reviewEnabled)await page.locator('.related-rules-trigger').first().waitFor();
       assert.equal(await page.locator('.related-rules-trigger').count()>0,reviewEnabled,`${name} desktop review integration state is wrong`);
       assert.ok(await page.locator('[id$="-stratagems"] .stratagem').count(),`${name} full Detachment Stratagems must remain available`);
@@ -373,11 +373,27 @@ try{
     console.log('PASS Tyranids Phone Mode Wargear overflow');
   }finally{await wargearContext.close();}
 
+  const tauRulesContext=await browser.newContext({serviceWorkers:'block'});
+  try{
+    const {page,errors}=await observedPage(tauRulesContext);
+    await page.goto(`${origin}/books/tau-empire/reader.html#unit-cadre-fireblade`);
+    await page.locator('#unit-cadre-fireblade .related-rules-trigger').click();
+    assert.equal(await page.locator('.related-rules-layer .full-related-filter summary').textContent(),'All Detachments',"T'au desktop must start with All Detachments");
+    assert.ok(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count()>2,"T'au desktop All Detachments must show several faction Detachments");
+    await page.locator('.related-rules-layer [data-kind="enhancements"]').click();
+    assert.ok(await page.locator('.related-rules-layer .enhancement:visible').count()>1,"T'au desktop must show matrix-approved Enhancements from several Detachments");
+    await page.locator('.related-rules-layer [data-kind="stratagems"]').click();await page.locator('.related-rules-layer .full-related-filter summary').click();await page.locator('.related-rules-layer button[data-detachment="kauyon"]').click();
+    assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),2,"T'au Detachment filter must retain Core plus the selected Detachment");await page.locator('.related-rules-close').click();
+    await page.goto(`${origin}/books/tau-empire/reader.html#unit-commander-farsight`);await page.locator('#unit-commander-farsight .related-rules-trigger').click();assert.equal(await page.locator('.related-rules-layer [data-kind="enhancements"]:visible').count(),0,"T'au Epic Heroes must not receive Enhancements");
+    await page.goto(`${origin}/books/tau-empire/mobile/stealth-battlesuits.html?view=mobile`);await page.locator('#relatedRules').scrollIntoViewIfNeeded();await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();assert.equal(await page.locator('#relatedDetachment').inputValue(),'all',"T'au Phone Mode must start with All Detachments");await page.locator('[data-related-tab="enhancements"]').click();assert.ok(await page.locator('#relatedRulesContent .enhancement:visible').count()>1,"T'au Phone Mode must show compatible Enhancements and UPGRADE options");await page.locator('#relatedDetachment').selectOption('advanced-acquisition-cadre');assert.deepEqual(await page.locator('#relatedRulesContent .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId||card.id).sort()),['negation-emitters-upgrade','unmasking-suite-upgrade']);
+    assert.deepEqual(errors,[]);console.log("PASS T'au matrix-backed desktop and Phone Compatible Rules");
+  }finally{await tauRulesContext.close();}
+
   const rosterContext=await browser.newContext({serviceWorkers:'block'});
   try{
     const {page,errors}=await observedPage(rosterContext);
     await page.goto(`${origin}/index.html?roster-setup=1`);
-    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'tau-enhancement-qa',name:'Test Kauyon roster',roster:{faction:"T'au Empire",detachment:'KAUYON',declared:80,units:[{id:'tau-owner-1',name:'Cadre Fireblade',quantity:1,points:50,wargear:'Fireblade pulse rifle, close combat weapon'}],enhancements:[{name:'Through Unity, Devastation',exportedCost:30,ownerUnitId:'tau-owner-1',ownerStatus:'resolved'}]}}])));
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'tau-enhancement-qa',name:'Test Kauyon roster',roster:{faction:"T'au Empire",detachment:'KAUYON',detachments:[{label:'Kauyon'}],declared:180,units:[{id:'tau-owner-1',name:'Cadre Fireblade',quantity:1,points:50,wargear:'Fireblade pulse rifle, close combat weapon'},{id:'tau-other-1',name:'Commander in Coldstar Battlesuit',quantity:1,points:130}],enhancements:[{name:'Through Unity, Devastation',exportedCost:30,ownerUnitId:'tau-owner-1',ownerStatus:'resolved'}]}}])));
     const expected='T’AU EMPIRE model only (excluding KROOT SHAPER models). While the bearer is leading a unit, each time that unit is an Observer unit, until the end of the phase, ranged weapons equipped by models in a Guided unit have the [LETHAL HITS] ability while targeting their Spotted unit.';
     await page.goto(`${origin}/books/tau-empire/reader.html?roster=tau-enhancement-qa#unit-cadre-fireblade`);
     assert.equal(await page.locator('#unit-cadre-fireblade [data-roster-enhancement="through unity devastation"] p').textContent(),expected);
@@ -385,10 +401,14 @@ try{
     assert.equal(await page.locator('#unit-cadre-fireblade .unit-status').textContent(),'50 pts');
     assert.match(await page.locator('#unit-cadre-fireblade .roster-composition').textContent(),/Fireblade pulse rifle/);
     assert.equal(await page.locator('#unit-cadre-fireblade [data-source-field="weapons.twin-pulse-carbine"]').count(),0);
+    await page.locator('#unit-cadre-fireblade .related-rules-trigger').click();assert.equal(await page.locator('.related-rules-layer [data-detachment="all"]').count(),0,"T'au roster must not expose All Detachments");await page.locator('.related-rules-layer [data-kind="enhancements"]').click();assert.deepEqual(await page.locator('.related-rules-layer .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId)),['enhancement-through-unity-devastation']);await page.locator('.related-rules-close').click();
+    await page.locator('#unit-commander-in-coldstar-battlesuit .related-rules-trigger').click();assert.equal(await page.locator('.related-rules-layer [data-kind="enhancements"]:visible').count(),0,'another eligible roster unit must not see an Enhancement assigned to a different ownerUnitId');
     await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?roster=tau-enhancement-qa`);
     assert.equal(await page.locator('#unit-cadre-fireblade [data-roster-enhancement="through unity devastation"] p').textContent(),expected);
     assert.match(await page.locator('#unit-cadre-fireblade .roster-composition').textContent(),/Fireblade pulse rifle/);
     assert.equal(await page.locator('#unit-cadre-fireblade [data-source-field="weapons.twin-pulse-carbine"]').count(),0);
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();assert.equal(await page.locator('#relatedDetachment option[value="all"]').count(),0);await page.locator('[data-related-tab="enhancements"]').click();assert.deepEqual(await page.locator('#relatedRulesContent .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId||card.id)),['enhancement-through-unity-devastation']);
+    await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?roster=missing-tau`);assert.equal(await page.locator('#relatedRules').count(),0,'missing T\'au roster must fail closed');await page.goto(`${origin}/index.html`);await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1','{broken'));await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?roster=broken-tau`);assert.equal(await page.locator('#relatedRules').count(),0,'corrupt T\'au roster must fail closed');
     assert.deepEqual(errors,[]);
     console.log("PASS T'au roster Enhancement owner and full effect in desktop/iPad + Phone Mode");
   }finally{await rosterContext.close();}
@@ -459,6 +479,7 @@ try{
     await page.goto(`${origin}/books/tau-empire/?build=cold-desktop&view=full`);
     assert.match(page.url(),/\/books\/tau-empire\/reader\.html\?build=cold-desktop$/);
     assert.match(await page.title(),/T'au Empire Rules/);
+    await page.goto(`${origin}/books/tau-empire/reader.html?build=tau-cold#unit-cadre-fireblade`);await page.locator('#unit-cadre-fireblade .related-rules-trigger').click();await page.locator('.related-rules-layer [data-rule-id="core-stratagem-command-re-roll"]:not([hidden])').waitFor();assert.ok(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count()>2,"T'au cold desktop must reopen matrix-backed All Detachments");
     await page.setViewportSize({width:390,height:844});
     await page.goto(`${origin}/books/tau-empire/?build=cold-phone`);
     assert.match(page.url(),/\/books\/tau-empire\/mobile\/index\.html\?build=cold-phone$/);
@@ -523,6 +544,11 @@ try{
     assert.deepEqual(errors,[]);
     console.log('PASS Tyranids visited Phone Mode Compatible Rules offline');
   }finally{await warmTyranidsContext.close();}
+
+  const warmTauContext=await browser.newContext({serviceWorkers:'allow'});
+  try{
+    const {page,errors}=await observedPage(warmTauContext);await page.goto(`${origin}/index.html?tau-warm=1`);await control(page);await page.setViewportSize({width:390,height:844});await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?view=mobile`);await page.locator('#relatedRules').scrollIntoViewIfNeeded();await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();await page.waitForFunction(async()=>Boolean(await caches.match(location.href)));const visited=page.url();await warmTauContext.setOffline(true);await page.goto(visited);await page.locator('#relatedRules').scrollIntoViewIfNeeded();await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();assert.ok(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count()>2,"visited T'au Phone page must reopen matrix-backed All Detachments offline");assert.deepEqual(errors,[]);console.log("PASS T'au visited Phone Mode Compatible Rules offline");
+  }finally{await warmTauContext.close();}
 
   workerRevision='browser-upgrade-a';
   const upgradeContext=await browser.newContext({serviceWorkers:'allow'});

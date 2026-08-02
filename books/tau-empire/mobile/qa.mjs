@@ -6,11 +6,10 @@ const files=(await readdir(root)).filter(name=>name.endsWith('.html'));
 assert.equal(files.length,73,'Phone Mode must contain start, updates, army rules, 7 detachments and 63 datasheets');
 for(const file of files){
   const html=await readFile(new URL(file,root),'utf8');
-  assert.match(html,/\.\/mobile\.js\?v=4/);
+  assert.match(html,/\.\/mobile\.js\?v=5/);
   assert.match(html,/\.\/mobile\.css\?v=1/);
   assert.match(html,/rule-facts\.js\?v=4/);
-  assert.match(html,/related-rules-matcher\.js\?v=6/);
-  assert.match(html,/army-related-rules\.js\?v=9/);
+  assert.doesNotMatch(html,/related-rules-matcher|army-related-rules/);
   assert.match(html,/glossary-return\.js\?v=3/);
   assert.match(html,/roster-parser\.js\?v=2/);
   assert.match(html,/roster-data\.js\?v=1/);
@@ -20,6 +19,9 @@ for(const file of files){
 }
 const related=await readFile(new URL('related-rules.inc',root),'utf8');
 assert.equal([...related.matchAll(/<section class="related-detachment(?: [^"]*)?" data-detachment=/g)].length,8,'Related Rules must contain Core plus 7 T’au detachments');
-assert.match(related,/data-eligibility=/);
+assert.doesNotMatch(related,/data-eligibility|data-keyword-grants/);
+assert.match(await readFile(new URL('commander-in-coldstar-battlesuit.html',root),'utf8'),/id="relatedRules"/,'Codex datasheets expose matrix-backed Compatible Rules');
+assert.doesNotMatch(await readFile(new URL('rvarna-battlesuit.html',root),'utf8'),/id="relatedRules"/,'Legends datasheets stay outside the Compatible Rules matrix');
+assert.doesNotMatch(await readFile(new URL('manta.html',root),'utf8'),/id="relatedRules"/,'Imperial Armour datasheets stay outside the Compatible Rules matrix');
 assert.doesNotMatch(related,/data-term-title="[^"]*"[^>]*data-term-title=/,'Related Rules hydration must be idempotent');
 console.log(`T'au Empire Phone Mode QA passed: ${files.length} focused pages and 8 Related Rules sections.`);

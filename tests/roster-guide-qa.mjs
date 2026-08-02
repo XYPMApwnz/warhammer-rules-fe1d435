@@ -77,8 +77,8 @@ for(const bookId of supported){
     });
     assert(reader.includes('../shared/roster-parser.js?v=2'),'tau-empire: shared roster parser is absent');
     assert(reader.includes('../shared/book-roster-enhancements.js?v=1')&&reader.includes('./scripts/roster-data.js?v=1'),'tau-empire: desktop Enhancement owner runtime is absent');
-    const tauApp=fs.readFileSync(path.join(bookRoot,'scripts','app.js'),'utf8');
-    assert(tauApp.includes("params.get('roster')")&&tauApp.includes('WHBookRosterEnhancements?.decorate')&&tauApp.includes('WHRosterEntities.loadoutIncludesProfile')&&tauApp.includes(".content-group.detachment"),'tau-empire: desktop roster filtering, loadout or owned Enhancement decoration is incomplete');
+    const tauApp=fs.readFileSync(path.join(bookRoot,'scripts','app.js'),'utf8')+fs.readFileSync(path.join(bookRoot,'scripts','roster-filter.js'),'utf8');
+    assert(tauApp.includes("params.has('roster')")&&tauApp.includes('WHBookRosterEnhancements?.decorate')&&tauApp.includes('WHRosterEntities.loadoutIncludesProfile')&&tauApp.includes(".content-group.detachment"),'tau-empire: desktop roster filtering, loadout or owned Enhancement decoration is incomplete');
     const tauMobile=fs.readFileSync(path.join(bookRoot,'mobile','mobile.js'),'utf8');
     assert(tauMobile.includes('WHRosterParser.parse')&&tauMobile.includes('WHBookRosterEnhancements?.decorate'),'tau-empire: Phone Mode does not parse current roster source and decorate the Enhancement owner');
     assert(fs.existsSync(path.join(bookRoot,'mobile','related-rules.inc')),'tau-empire: Phone Mode related rules are absent');

@@ -11,9 +11,11 @@
   "compactSharedAbilities": ["Anti", "Assault", "Blast", "Deadly Demise", "Deep Strike", "Devastating Wounds", "Extra Attacks", "Feel No Pain", "Firing Deck", "Hazardous", "Heavy", "Ignores Cover", "Indirect Fire", "Infiltrators", "Lethal Hits", "Lone Operative", "Melta", "Pistol", "Precision", "Rapid Fire", "Scouts", "Stealth", "Sustained Hits", "Torrent", "Twin-linked"],
   "includeCoreStratagems": true,
   "dedicatedMobile": true,
+  "mobileRelatedRulesSource": false,
   "rosterSupport": true,
+  "compatibleRulesMatrix": true,
   "assetVersions": {
-    "app": 6,
+    "app": 7,
     "book": 5,
     "mobile": 2,
     "rosterData": 1

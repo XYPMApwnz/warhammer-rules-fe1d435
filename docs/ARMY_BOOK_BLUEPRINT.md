@@ -131,14 +131,13 @@
 - Required evidence: keyword manifest/lookup evidence and deterministic validation.
 - Book-specific extensions: additional tags for local filters only if non-normative.
 
-## AB-CONTENT-006 — Leader/bodyguard and transport links
+## AB-CONTENT-006 — Canonical formation and transport relations
 - Level: MUST
-- Normative requirement: Canonical Leader/Bodyguard and Transport relations MUST be represented in content and surfaced in compatible output artifacts; runtime MUST use those precomputed relations only.
-- Owner: shared Army Book capability
+- Normative requirement: Canonical content MUST preserve every source-defined formation and Transport relation, including applicable Leader, Bodyguard, Support, mandatory-join, and conditional-join relations, together with directly source-defined keyword additions, keyword removals, deployment restrictions, and other explicitly structured formation effects; relation eligibility MUST NOT be treated as proof of actual formation, actual formation MUST remain unknown until confirmed by an authoritative structured formation source, and runtime MUST use only pre-generated relation artifacts without introducing a formation graph engine.
+- Owner: shared Army Book capability; generated content/build layer; book-local implementation
 - Applicability: all Army Books
-- Required evidence: deterministic relation artifacts and runtime data access proof.
-- Book-specific extensions: none.
-
+- Required evidence: deterministic structured relation artifact; source/update linkage; `schema-data-qa`; roster fixtures for unconfirmed and confirmed formation.
+- Book-specific extensions: relation representation MAY be book-local; no formation graph engine, generic matcher, evaluator, or shared runtime rewrite is required.
 ## AB-CONTENT-007 — Points and provenance
 - Level: MUST
 - Normative requirement: Official points and cost values MUST be declared with current provenance evidence and resolved against MFM as applicable.
@@ -301,12 +300,11 @@
 
 ## AB-COMPAT-002 — Runtime matrix shape
 - Level: MUST
-- Normative requirement: Runtime-facing Compatible Rules matrix MUST contain only published lookup rows and minimal runtime fields: unitId/ruleId/state with optional scope, detachmentId, explicit condition, and owner assignment metadata only when required at runtime; it MAY contain a minimal, pre-generated, stable `kind` or equivalent type discriminator when required for deterministic distinction, grouping, filtering, or display of rule types such as Stratagem, Enhancement, or UPGRADE; the discriminator MUST be produced by the build layer, MUST NOT be derived through runtime text parsing, and MUST NOT contain raw source evidence, correction prose, eligibility inference, or instructions for runtime evaluation; any other runtime field MUST have demonstrated necessity for the canonical contract.
+- Normative requirement: Runtime-facing Compatible Rules matrix MUST contain only published lookup rows and minimal runtime fields: unitId/ruleId/state with optional scope, detachmentId, one explicit pre-generated condition or a finite ordered set of explicit pre-generated conditions, and owner assignment metadata only when required at runtime; every condition MUST be produced by the build layer, runtime MUST only check explicitly supported structured context fields, runtime MUST NOT parse rule text or TARGET, run a selector evaluator, or infer attachment or game state, and the result MUST remain `conditional` whenever at least one required condition remains unknown; the runtime representation MAY use `condition`, `conditions`, or a book-local equivalent; the matrix MAY contain a minimal, pre-generated, stable `kind` or equivalent type discriminator when required for deterministic distinction, grouping, filtering, or display of rule types such as Stratagem, Enhancement, or UPGRADE; the discriminator MUST be produced by the build layer, MUST NOT be derived through runtime text parsing, and MUST NOT contain raw source evidence, correction prose, eligibility inference, or instructions for runtime evaluation; any other runtime field MUST have demonstrated necessity for the canonical contract.
 - Owner: shared Army Book capability; generated content/build layer
 - Applicability: all Army Books
-- Required evidence: `schema-data-qa`; `static-source-inspection` of the runtime lookup path; `generated-artifact-validation` when available.
-- Book-specific extensions: the discriminator name and representation MAY be book-local; no new framework or shared schema is required.
-
+- Required evidence: `schema-data-qa`; `generated-artifact-validation`; `static-source-inspection` of the runtime lookup path; `executable-unit-test` proving preservation of multiple conditions.
+- Book-specific extensions: condition and discriminator names and representations MAY be book-local; no new framework or shared schema is required.
 ## AB-COMPAT-003 — Runtime lookup only
 - Level: MUST
 - Normative requirement: Army Book runtime MUST resolve Compatible Rules only through small lookup over generated matrix rows.

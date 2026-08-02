@@ -7,7 +7,7 @@
 - Normative requirement: A single canonical `docs/ARMY_BOOK_BLUEPRINT.md` file MUST exist as the normative requirements artifact for all Army Books.
 - Owner: shared product shell
 - Applicability: all Army Books
-- Required evidence: file path `C:\Users\denis\Documents\warhammer 40000\warhammer-rules-complete-preview\docs\ARMY_BOOK_BLUEPRINT.md`; references to this file from applicable architecture documents or release audit; usage of requirement IDs in conformance audit.
+- Required evidence: repo-relative file path `docs/ARMY_BOOK_BLUEPRINT.md`; references to this file from applicable architecture documents or release audit; usage of requirement IDs in conformance audit.
 - Book-specific extensions: book-local docs may add IDs only as extensions and must reference canonical IDs.
 
 ## AB-SCOPE-002 — Universal conformance execution
@@ -18,9 +18,26 @@
 - Required evidence: release/review artifact named with concrete evidence path listing each checked ID; evidence of not-applicable handling per ID.
 - Book-specific extensions: books may add book-local requirements and constraints as long as they do not weaken canonical requirements.
 
+## AB-SCOPE-003 — Architecture non-goals
+- Level: MUST NOT
+- Normative requirement: A published Army Book and work on this blueprint MUST NOT introduce solely for unification a new generic matcher, selector evaluator, rules engine, battlefield simulator, framework, universal reader engine, global shared rewrite, or global abstraction layer over book-local runtimes.
+- Owner: shared product shell; shared Army Book capability
+- Applicability: all Army Books and blueprint evolution
+- Required evidence: architecture or release diff audit showing that each added shared mechanism is required by a canonical contract rather than unification alone.
+- Book-specific extensions: existing or independently justified shared capabilities may remain when evidence demonstrates a required canonical contract.
+
+## AB-SCOPE-004 — Implementation diversity
+- Level: MAY
+- Normative requirement: Different Army Books MAY use different internal implementations when each implementation satisfies the same applicable canonical contract.
+- Owner: shared Army Book capability; book-local implementation
+- Applicability: all Army Books
+- Required evidence: conformance evidence proving equivalent required behavior without requiring identical internal architecture.
+- Book-specific extensions: book-local runtime structures and implementation strategies are permitted when they do not weaken the baseline.
+
 ## AB-SCOPE-005 — Conformance status contract
 - Level: MUST
-- Normative requirement: Conformance records MUST include current status, evidence, blocker status, and rationale when status is partial, missing, not-verified, or book-specific-exception.
+- Normative requirement: Conformance records MUST use exactly one canonical status (`pass`, `partial`, `missing`, `not-verified`, `book-specific-exception`, or `not-applicable`), MUST include evidence and blocker status, and MUST include rationale for `partial`, `missing`, `not-verified`, or `book-specific-exception`; `conditional` and `unresolved` MUST NOT be used as conformance statuses.
+- Status definitions: `pass` means the full requirement is proven by sufficient evidence; `partial` means only part of the requirement is proven; `missing` means a mandatory artifact or process is absent; `not-verified` means implementation may exist but available evidence is insufficient; `book-specific-exception` means a documented permissible extension or deviation that does not weaken the baseline; `not-applicable` means the requirement objectively does not apply to the book or mode.
 - Owner: generated content/build layer
 - Applicability: all Army Books
 - Required evidence: concrete matrix or audit artifact with per-ID fields (`status`, `evidence`, `blocker`, `rationale`) and evidence mapping to immutable commit context when available.
@@ -65,6 +82,14 @@
 - Applicability: all Army Books
 - Required evidence: versioned update ledger artifact and manifest linkage to frozen records.
 - Book-specific extensions: book-local change logs may add affected-record details.
+
+## AB-SRC-005 — No invented rule-bearing content
+- Level: MUST NOT
+- Normative requirement: Canonical rule-bearing content MUST NOT be reconstructed from memory or title alone, invent missing wording, assemble a complete base rule from an update fragment, or automatically treat a local value, Wahapedia, or BSData as truth; when sufficient evidence is absent, the record MUST remain a gap or unresolved, or be explicitly excluded by policy.
+- Owner: generated content/build layer
+- Applicability: all canonical rule-bearing content
+- Required evidence: source and correction/gap records showing the evidence, authority, decision, and unresolved or exclusion status for incomplete content.
+- Book-specific extensions: none.
 
 ## AB-CONTENT-001 — Army rules coverage
 - Level: MUST
@@ -188,10 +213,10 @@
 
 ## AB-WAHA-006 — Factual investigation and unresolved blocking
 - Level: MUST
-- Normative requirement: Factual investigation MUST include official GW base document, official FAQ/Errata/updates/replacements, official MFM for points/costs, other frozen official materials, full frozen secondary sources, Wahapedia, and BSData/community as auxiliary evidence; unresolved items MUST block finished, frozen, reference, and publication-ready.
+- Normative requirement: Factual investigation MUST apply the source hierarchy in AB-SRC-002 in authority order using only sources applicable to the disputed field, including MFM for points, Detachment Points, and costs and FAQ/Errata for affected rules or datasheets; irrelevant sources MUST NOT be reviewed solely to satisfy a checklist; investigation MUST continue until authoritative resolution, proven `not-comparable`, explicit `excluded-by-policy`, or `unresolved`, and only critical unresolved items MUST block finished, frozen, reference, and publication-ready.
 - Owner: shared Army Book capability
 - Applicability: all Army Books
-- Required evidence: evidence inventory with authority, decision, and unresolved rationale.
+- Required evidence: investigation record identifying applicable sources, authority order, terminal status, unresolved criticality, and blocker decision.
 - Book-specific extensions: exclusions allowed only via explicit gap entries with fail-safe behavior.
 
 ## AB-WAHA-007 — Investigator precedence for disputes
@@ -211,11 +236,11 @@
 - Book-specific extensions: none.
 
 ## AB-WAHA-009 — Candidate corrections
-- Level: MAY
+- Level: MUST
 - Normative requirement: If parity emits candidate corrections, each candidate-correction MUST include stable entity ID, compared field/relation, local value, Wahapedia value, decision, evidence, authority, and resolution or unresolved status; otherwise requirement is not-applicable.
 - Owner: generated content/build layer
-- Applicability: all Army Books
-- Required evidence: parity/correction artifact entries.
+- Applicability: Army Books whose parity produces at least one candidate-correction; otherwise conformance status is `not-applicable`.
+- Required evidence: parity/correction artifact entries for every candidate-correction, or parity evidence proving that no candidate-corrections exist.
 - Book-specific extensions: none.
 
 ## AB-BUILD-001 — Content-resolution pipeline
@@ -228,7 +253,7 @@
 
 ## AB-BUILD-002 — Deterministic production build
 - Level: MUST
-- Normative requirement: Deterministic production build MUST be based on frozen inputs, correction decisions, generated artifacts, generated Compatible Rules matrix, and deterministic QA, and MUST NOT depend on live network.
+- Normative requirement: Deterministic production build MUST take resolved canonical content, frozen source inputs, approved correction decisions, and the Enhancement owner matrix as inputs; MUST output generated Army Book artifacts, the generated Compatible Rules runtime matrix, desktop, Phone, roster, and offline outputs, and deterministic QA reports; and MUST NOT depend on a live network.
 - Owner: generated content/build layer
 - Applicability: all Army Books
 - Required evidence: build logs with frozen inputs and stable hashes.
@@ -314,6 +339,14 @@
 - Required evidence: runtime dependency/trace check and QA evidence of absence.
 - Book-specific extensions: book-local lookup implementations are allowed.
 
+## AB-COMPAT-008 — Conditional and unresolved separation
+- Level: MUST
+- Normative requirement: Compatibility artifacts MUST distinguish `conditional`, a valid compatibility result dependent on unknown formation or game-state information, from `unresolved`, an unresolved source or content discrepancy; `conditional` MUST NOT automatically be treated as a content gap or publication blocker, `unresolved` MUST NOT automatically be converted to `conditional`, and only critical unresolved discrepancies MUST block finished, frozen, reference, or publication-ready status.
+- Owner: shared Army Book capability; generated content/build layer
+- Applicability: all Army Books with compatibility results
+- Required evidence: parity/correction artifacts, generated runtime matrix rows, and publication blocker mapping demonstrating the distinction.
+- Book-specific extensions: explicit book-local conditions may be represented when they preserve this distinction.
+
 ## AB-ROSTER-001 — No-roster baseline
 - Level: MUST
 - Normative requirement: Without roster context, all detachments MUST be available by default; Core and faction Stratagems MUST be available; Enhancements and UPGRADE MUST be available; detachment choice MUST only narrow results; EPIC HERO MUST NOT receive standard Enhancements.
@@ -348,10 +381,10 @@
 
 ## AB-ROSTER-005 — Attachment dependency behavior
 - Level: MUST
-- Normative requirement: New Recruit does not imply actual Leader/Bodyguard attachment; attachment-dependent outputs remain conditional when formation is not explicitly allowed elsewhere.
+- Normative requirement: Leader and Bodyguard compatibility and their presence in the same New Recruit roster MUST NOT be treated as confirmation of actual attachment; an ordinary Leader relation describes attachment eligibility, not attachment fact in a specific game, and attachment-dependent outputs MUST remain conditional unless the actual formation is explicitly confirmed by an authoritative structured formation source.
 - Owner: book-local implementation
 - Applicability: all Army Books
-- Required evidence: deterministic roster relation handling artifacts.
+- Required evidence: deterministic roster relation artifacts covering compatible-but-unconfirmed units and any authoritative structured formation source used to confirm actual attachment.
 - Book-specific extensions: none.
 
 ## AB-ROSTER-006 — Single resolved roster detachment
@@ -362,21 +395,21 @@
 - Required evidence: roster detachment resolver traces and deterministic result snapshots.
 - Book-specific extensions: none.
 
-## AB-POPUP-001 — Popup stack and close contract
+## AB-POPUP-001 — Root and nested popup opening
 - Level: MUST
-- Normative requirement: Popup behavior MUST support hierarchical popup chains with deterministic closing order and safe focus return from closed popups.
+- Normative requirement: Opening a new external or root term MUST replace the entire previous root chain; opening a nested term MUST preserve every parent card and add exactly one deeper level; parent cards MUST NOT be removed or recreated without necessity.
 - Owner: shared product shell
 - Applicability: all Army Books
-- Required evidence: behavior specs and runtime implementation traces.
-- Book-specific extensions: book-specific popup templates are allowed.
+- Required evidence: popup state-machine evidence and real-browser evidence covering root replacement, one-level nested append, and parent preservation.
+- Book-specific extensions: book-specific popup templates and rendering strategies are allowed when chain semantics are preserved.
 
 ## AB-POPUP-002 — Popup scroll and geometry determinism
 - Level: MUST
-- Normative requirement: Popup opening/closing SHALL use controlled scroll/geometry semantics with deterministic geometry state and no unbounded rapid-state corruption.
+- Normative requirement: On opening, a popup MUST remain within the accessible viewport area and MUST NOT create horizontal overflow; on Phone it MUST NOT cover a required fixed header or safe area; desktop and Phone MAY use different positioning strategies; every open popup, modal, or drawer MUST apply a documented background scroll policy, and when that policy locks background scrolling, the lock MUST be deterministic and MUST be released on close; rapid opening and closing MUST NOT corrupt the popup chain.
 - Owner: shared Army Book capability
 - Applicability: all Army Books
-- Required evidence: behavior scripts or immutable run artifacts and geometry trace where available.
-- Book-specific extensions: animation styling may vary within A11Y constraints.
+- Required evidence: real-browser automated integration or manual browser acceptance covering desktop and Phone viewport containment, horizontal overflow, fixed-header/safe-area clearance, background scroll policy, lock release, and rapid open/close sequences.
+- Book-specific extensions: positioning algorithm, offsets, card count, timing, animation styling, and visual geometry may remain book-local within accessibility constraints.
 
 ## AB-POPUP-003 — Popup closure interactions
 - Level: MUST
@@ -580,7 +613,7 @@
 
 ## AB-PUBLISH-001 — Publication readiness gate
 - Level: MUST
-- Normative requirement: Publication-ready status requires completed critical blockers for: source manifest, canonical inventory, completed Wahapedia parity for all comparable rule-bearing layers, factual resolution, update/FAQ/Errata parity, current official points provenance, resolved or explicitly excluded gaps, deterministic build, Compatible Rules, roster fail-closed, desktop, Phone, Browser/full-entry history, Journey Back, popup behavior, Glossary return, accessibility, offline/PWA, executed QA, manual browser acceptance, clean tree, and final read-only diff audit.
+- Normative requirement: Publication-ready status MUST require all applicable critical blockers to be resolved and genuinely inapplicable requirements to be recorded as `not-applicable`, including blockers for source manifest, canonical inventory, completed Wahapedia parity for all comparable rule-bearing layers, factual resolution, update/FAQ/Errata parity, current official points provenance, resolved or explicitly excluded gaps, deterministic build, Compatible Rules, roster fail-closed, desktop, Phone, Browser/full-entry history, Journey Back, popup behavior, Glossary return, accessibility, offline/PWA, executed QA, manual browser acceptance, clean tree, and final read-only diff audit.
 - Owner: shared product shell
 - Applicability: all Army Books
 - Required evidence: publication gate artifact with all blockers and pass/fail rationale.

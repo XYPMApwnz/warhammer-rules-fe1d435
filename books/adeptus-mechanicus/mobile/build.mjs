@@ -90,9 +90,12 @@ function navigation(route){
 }
 
 function content(route){
-  if(route.type==='start')return portable(extract('section','start'));
-  if(route.type==='section'||route.type==='detachment')return portable(extract('section',route.id));
-  return portable(extract('article',route.id));
+  let html=route.type==='start'?portable(extract('section','start')):route.type==='section'||route.type==='detachment'?portable(extract('section',route.id)):portable(extract('article',route.id));
+  if(route.id==='core-rules')html=html
+    .replace(/<div class="protocol-switch"[\s\S]*?<\/div>/,'')
+    .replace(/(<section id="(?:protector|conqueror)-imperative"[^>]*) hidden>/g,'$1>')
+    .replace('Select the active imperative.','Both imperatives are shown for reference.');
+  return html;
 }
 for(const route of routes){
   for(const[,id]of content(route).matchAll(/\sid="([^"]+)"/g))mobileRulePaths.set(id,`books/adeptus-mechanicus/mobile/${route.file}#${id}`);
@@ -128,10 +131,22 @@ function page(route){
 </body></html>`;
 }
 
-for(const route of routes)await writeFile(new URL(route.file,import.meta.url),page(route));
-await writeFile(new URL('related-rules.inc',import.meta.url),relatedRules());
+const outputs=new Map(routes.map(route=>[route.file,page(route)]));
+outputs.set('related-rules.inc',relatedRules());
 for(const route of routes.filter(route=>route.type!=='start')){
-  const html=await readFile(new URL(route.file,import.meta.url),'utf8');
+  const html=outputs.get(route.file);
   if(!html.includes(`id="${route.id}"`))throw new Error(`Incomplete route ${route.file}`);
 }
-console.log(`Mechanicus mobile reference built: ${routes.length} pages, ${detachments.length} detachments, ${units.length} datasheets.`);
+if(process.argv.includes('--check')){
+  const stale=[];
+  for(const[file,expected]of outputs){
+    let actual;
+    try{actual=await readFile(new URL(file,import.meta.url),'utf8');}catch(error){if(error.code==='ENOENT'){stale.push(`${file} (missing)`);continue;}throw error;}
+    if(actual!==expected)stale.push(`${file} (stale)`);
+  }
+  if(stale.length){console.error(`Mechanicus mobile outputs are stale or missing:\n- ${stale.join('\n- ')}`);process.exit(1);}
+  console.log(`Mechanicus mobile outputs are current: ${routes.length} pages and related-rules.inc.`);
+}else{
+  for(const[file,content]of outputs)await writeFile(new URL(file,import.meta.url),content);
+  console.log(`Mechanicus mobile reference built: ${routes.length} pages, ${detachments.length} detachments, ${units.length} datasheets.`);
+}

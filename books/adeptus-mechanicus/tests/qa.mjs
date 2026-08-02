@@ -10,6 +10,7 @@ const read=file=>fs.readFileSync(path.join(root,file),'utf8');
 const json=file=>JSON.parse(read(file));
 const entry=read('index.html');
 const html=read('reader.html');
+const mobileArmyRules=read('mobile/army-rules.html');
 const deathGuardRoot=path.resolve(root,'..','death-guard');
 const deathGuardRead=file=>fs.readFileSync(path.join(deathGuardRoot,file),'utf8');
 const sharedTargets=fs.readFileSync(path.resolve(root,'..','shared','navigation-targets.js'),'utf8');
@@ -159,10 +160,15 @@ check('datasheets use typed DG sections',
 check('conditional wargear is labelled honestly',markup.includes('These abilities apply only while the corresponding wargear is equipped.'));
 check('Legends is a datasheet category, not a global section',!topLevelTargets.includes('legends')&&navTargets.includes('datasheets-warhammer-legends')&&legendsCount(markup)===4);
 check('favorite Doctrina console is preserved',markup.includes('class="doctrina-console surface"')&&markup.includes('data-protocol="protector"')&&markup.includes('data-protocol="conqueror"'));
+check('desktop Doctrina selector remains interactive',markup.includes('class="protocol-switch"')&&markup.includes('data-protocol="protector"')&&markup.includes('data-protocol="conqueror"'));
+check('Phone Doctrina shows both canonical branches',mobileArmyRules.includes('id="protector-imperative"')&&mobileArmyRules.includes('id="conqueror-imperative"')&&!/<section id="(?:protector|conqueror)-imperative"[^>]*\shidden\b/.test(mobileArmyRules));
+check('Phone Doctrina has no dead selector controls',!mobileArmyRules.includes('class="protocol-switch"')&&!mobileArmyRules.includes('data-protocol="protector"')&&!mobileArmyRules.includes('data-protocol="conqueror"'));
+check('Phone Doctrina preserves glossary rule links',mobileArmyRules.includes('id="protector-imperative" data-track="protector-imperative"')&&mobileArmyRules.includes('id="conqueror-imperative" data-track="conqueror-imperative"')&&mobileArmyRules.includes('data-full-rule-path="books/core-rules/reader/core-abilities.html#rule-24-16"'));
 check('local official transcripts are embedded',(markup.match(/class="source-transcript"/g)||[]).length===rules.updates.length+rules.detachments.length+factionRules.datasheets.length+2);
 check('Codex transcription status is explicit',markup.includes('Codex transcription layer')&&markup.includes('38 indexed datasheets'));
 check('official MFM verification is visible',markup.includes('Munitorum Field Manual v1.1')&&markup.includes('All 34 current Enhancement costs'));
 check('generated reader identifies the current 27-page Faction Pack',markup.includes('Faction Pack v1.1')&&markup.includes('27 pages')&&!markup.includes('Faction Pack v1.0'));
+check('generated hero contains no technical placeholders',!read('tools/build-full-content.mjs').includes('Technical placeholder')&&!html.includes('Technical placeholder')&&markup.includes('11th Edition Army Book')&&markup.includes('Adeptus Mechanicus emblem'));
 check('Stratagem restrictions render as a separate field',markup.includes('<b>Restrictions</b>')&&markup.includes('Programmed Withdrawal'));
 check('datasheet wargear text uses the unit name, not extractor UI labels',!markup.includes('Wargear is equipped with:')&&!markup.includes('Wargear can be equipped with:'));
 check('all carried-forward Codex datasheets have exact wargear and composition snapshots',codexWargear.units.length===30&&codexWargear.units.every(unit=>unit.title&&Array.isArray(unit.wargear)&&unit.composition));
@@ -253,6 +259,8 @@ check('roster Compatible Rules fail closed and filter assigned owners',rosterLog
 check('every Enhancement has a detachment and current cost',json('content/adeptus-mechanicus-points.en.json').enhancements.length===34&&json('content/adeptus-mechanicus-points.en.json').enhancements.every(item=>item.detachment&&item.value>0));
 const build=spawnSync(node,[path.join(root,'tools','build-full-content.mjs'),'--check'],{encoding:'utf8'});
 check('generated project artifacts are current',build.status===0,(build.stderr||build.stdout).trim());
+const mobileBuild=spawnSync(node,[path.join(root,'mobile','build.mjs'),'--check'],{encoding:'utf8'});
+check('generated Phone outputs are current',mobileBuild.status===0,(mobileBuild.stderr||mobileBuild.stdout).trim());
 
 function legendsCount(markup){return (markup.match(/class="unit-card surface legends-card"/g)||[]).length;}
 for(const result of results)console.log(`${result.ok?'PASS':'FAIL'}  ${result.name}${result.detail?' — '+result.detail:''}`);

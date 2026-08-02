@@ -147,6 +147,12 @@ try{
     await page.locator('[data-related-tab="enhancements"]').click();
     await page.locator('#relatedRulesContent [data-rule-id="enhancement-necromechanic"]:visible').waitFor();
     assert.deepEqual(await page.locator('#relatedRulesContent .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId||card.id)),['enhancement-necromechanic'],'Mechanicus Phone roster must show only the Enhancement assigned to this ownerUnitId');
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'am-wrong-faction',roster:{faction:'Death Guard',detachment:'Cohort Cybernetica',detachments:[{label:'Cohort Cybernetica'}],units:[{id:'am-wrong-owner',name:'Tech-Priest Enginseer',quantity:1,points:75}]}}])));
+    await page.goto(`${origin}/books/adeptus-mechanicus/mobile/tech-priest-enginseer.html?roster=am-wrong-faction`);
+    assert.equal(await page.locator('#relatedRules').count(),0,'wrong-faction Mechanicus Phone roster must fail closed');
+    await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?roster=am-wrong-faction#unit-tech-priest-enginseer`);
+    await page.waitForURL('**/roster-guides/index.html');
+    assert.equal(await page.locator('.related-rules-trigger').count(),0,'Mechanicus desktop wrong-faction gate must remain fail closed');
     await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1','{broken'));
     await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?roster=broken#unit-tech-priest-enginseer`);
     assert.equal(await page.locator('#unit-tech-priest-enginseer .related-rules-trigger').count(),0,'corrupt Mechanicus desktop roster must fail closed');
@@ -201,6 +207,12 @@ try{
     await page.locator('[data-related-tab="enhancements"]').click();
     await page.locator('#relatedRulesContent [data-rule-id="enhancement-adaptive-biology"]:visible').waitFor();
     assert.deepEqual(await page.locator('#relatedRulesContent .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId)),['enhancement-adaptive-biology'],'Tyranids Phone roster must show only the Enhancement assigned to this ownerUnitId');
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'tyr-wrong-faction',roster:{faction:"T'au Empire",detachment:'Invasion Fleet',detachments:[{label:'Invasion Fleet'}],units:[{id:'tyr-wrong-owner',name:'Hive Tyrant',quantity:1,points:205}]}}])));
+    await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html?roster=tyr-wrong-faction`);
+    assert.equal(await page.locator('#relatedRules').count(),0,'wrong-faction Tyranids Phone roster must remain fail closed');
+    await page.goto(`${origin}/books/tyranids/reader.html?roster=tyr-wrong-faction#unit-hive-tyrant`);
+    await page.waitForURL('**/roster-guides/index.html');
+    assert.equal(await page.locator('.related-rules-trigger').count(),0,'wrong-faction Tyranids desktop roster must remain fail closed');
     await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html?roster=missing-roster`);
     assert.equal(await page.locator('#relatedRules').count(),0,'missing Tyranids Phone roster must fail closed');
     await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1','{broken'));
@@ -340,6 +352,12 @@ try{
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();
     await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
     assert.equal(await page.locator('[data-related-tab="enhancements"]:visible').count(),0,'Phone Mode roster unit without an assignment must not show Enhancement choices');
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'dg-wrong-faction',roster:{faction:'Adeptus Mechanicus',detachment:'Contagion Engines',detachments:[{label:'Contagion Engines'}],units:[{id:'dg-wrong-owner',name:'Helbrute',quantity:1,points:110}]}}])));
+    await page.goto(`${origin}/books/death-guard/mobile/helbrute.html?view=mobile&roster=dg-wrong-faction`);
+    assert.equal(await page.locator('#relatedRules').count(),0,'wrong-faction Death Guard Phone roster must fail closed');
+    await page.goto(`${origin}/books/death-guard/reader.html?roster=dg-wrong-faction#unit-helbrute`);
+    await page.waitForURL('**/roster-guides/index.html');
+    assert.equal(await page.locator('.related-rules-trigger').count(),0,'wrong-faction Death Guard desktop roster must fail closed');
     await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1','{broken'));
     await page.goto(`${origin}/books/death-guard/reader.html?roster=broken#unit-helbrute`);
     assert.equal(await page.locator('#unit-helbrute .related-rules-trigger').count(),0,'damaged desktop roster storage must fail closed');
@@ -408,6 +426,7 @@ try{
     assert.match(await page.locator('#unit-cadre-fireblade .roster-composition').textContent(),/Fireblade pulse rifle/);
     assert.equal(await page.locator('#unit-cadre-fireblade [data-source-field="weapons.twin-pulse-carbine"]').count(),0);
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();assert.equal(await page.locator('#relatedDetachment option[value="all"]').count(),0);await page.locator('[data-related-tab="enhancements"]').click();assert.deepEqual(await page.locator('#relatedRulesContent .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId||card.id)),['enhancement-through-unity-devastation']);
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'tau-wrong-faction',roster:{faction:'Tyranids',detachment:'Kauyon',detachments:[{label:'Kauyon'}],units:[{id:'tau-wrong-owner',name:'Cadre Fireblade',quantity:1,points:50}]}}])));await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?roster=tau-wrong-faction`);assert.equal(await page.locator('#relatedRules').count(),0,"wrong-faction T'au Phone roster must remain fail closed");await page.goto(`${origin}/books/tau-empire/reader.html?roster=tau-wrong-faction#unit-cadre-fireblade`);await page.waitForURL('**/roster-guides/index.html');assert.equal(await page.locator('.related-rules-trigger').count(),0,"wrong-faction T'au desktop roster must remain fail closed");
     await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?roster=missing-tau`);assert.equal(await page.locator('#relatedRules').count(),0,'missing T\'au roster must fail closed');await page.goto(`${origin}/index.html`);await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1','{broken'));await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?roster=broken-tau`);assert.equal(await page.locator('#relatedRules').count(),0,'corrupt T\'au roster must fail closed');
     assert.deepEqual(errors,[]);
     console.log("PASS T'au roster Enhancement owner and full effect in desktop/iPad + Phone Mode");

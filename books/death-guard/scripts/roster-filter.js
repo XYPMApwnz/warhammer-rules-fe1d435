@@ -14,9 +14,9 @@
     const parsed = window.WHRosterParser.parse(sourceText);
     if (parsed.units.length) roster = parsed;
   }
-  if (roster?.faction) roster.faction = roster.faction.replace(/^(?:Chaos|Imperium)\s*[-–—]\s*/i, '').trim();
-  if (!roster?.units?.length) {
-    location.replace("../../index.html");
+  if (roster?.faction) roster.faction = roster.faction.replace(/^Chaos\s*[-–—]\s*/i, '').trim();
+  if (roster?.faction?.toLowerCase() !== "death guard" || !roster?.units?.length) {
+    location.replace("../../roster-guides/index.html");
     return;
   }
 

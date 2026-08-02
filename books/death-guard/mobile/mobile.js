@@ -42,6 +42,8 @@
       if (!record) throw new Error('Roster not found');
       const parsed = record?.sourceText ? window.WHRosterParser.parse(record.sourceText) : record?.roster;
       if (!parsed || !Array.isArray(parsed.units)) throw new Error('Roster data unavailable');
+      const faction=String(parsed.faction||'').replace(/^Chaos\s*[-–—]\s*/i,'').trim().toLowerCase();
+      if(faction!=='death guard')throw new Error('Roster faction unavailable');
       const detachmentIds = new Set((parsed.detachments?.length ? parsed.detachments.map(item => item.name || item.label) : [parsed.detachment]).map(slug).filter(Boolean));
       const allowedOptions = [...relatedDetachment.options].filter(option => detachmentIds.has(option.value));
       if (!allowedOptions.length) throw new Error('Roster Detachment unavailable');

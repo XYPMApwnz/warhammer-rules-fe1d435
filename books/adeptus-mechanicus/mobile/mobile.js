@@ -29,6 +29,8 @@
       const record=records.find(item=>item?.id===params.get('roster'));
       if(!record)throw new Error('Roster not found');
       const parsed=record?.sourceText?window.WHRosterParser.parse(record.sourceText):record?.roster;
+      const faction=String(parsed?.faction||'').replace(/^(?:Chaos|Imperium)\s*[-–—]\s*/i,'').trim().toLowerCase();
+      if(faction!=='adeptus mechanicus')throw new Error('Roster faction unavailable');
       const slug=value=>String(value||'').toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
       const matching=(parsed?.units||[]).filter(item=>slug(item.name)===unit.id.replace(/^unit-/,''));
       rosterDetachments=(parsed?.detachments?.length?parsed.detachments.map(item=>item.label):[parsed?.detachment]).map(value=>slug(String(value||'').replace(/\s*\([^)]*\)\s*$/,''))).filter(Boolean);

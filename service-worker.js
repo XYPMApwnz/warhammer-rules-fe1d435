@@ -174,7 +174,7 @@ const APP_SHELL = [
   ,"./books/tau-empire/scripts/data.js?v=2"
   ,"./books/tau-empire/scripts/app.js?v=8"
   ,"./books/tau-empire/scripts/stratagem-types.mjs?v=1"
-  ,"./books/tau-empire/scripts/roster-filter.js?v=2"
+  ,"./books/tau-empire/scripts/roster-filter.js?v=3"
   ,"./books/tau-empire/scripts/compatible-rules-runtime.mjs?v=1"
   ,"./books/tau-empire/generated/compatible-rules.json"
   ,"./books/tau-empire/scripts/roster-data.js?v=1"

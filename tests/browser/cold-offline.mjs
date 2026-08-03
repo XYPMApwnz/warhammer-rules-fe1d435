@@ -546,6 +546,76 @@ try{
     console.log('PASS Death Guard Phone nested popup, focus, touch, geometry and Glossary return');
   }finally{await phonePopupContext.close();}
 
+  const weaponTokenContext=await browser.newContext({serviceWorkers:'block',hasTouch:true,viewport:{width:1440,height:900}});
+  try{
+    const {page,errors}=await observedPage(weaponTokenContext);
+    const arcSelector='[data-source-field="weapons.arc-rifle"] .weapon-tags';
+    const expectedArc=[
+      {label:'ANTI-VEHICLE 4+',term:'core-anti'},
+      {label:'DEVASTATING WOUNDS',term:'core-devastating-wounds'},
+      {label:'RAPID FIRE 1',term:'core-rapid-fire'}
+    ];
+    const inspectTokens=selector=>page.locator(selector).evaluate(root=>[...root.querySelectorAll(':scope > .tag')].map(token=>{
+      const range=document.createRange();range.selectNodeContents(token);
+      const box=token.getBoundingClientRect();
+      return {label:token.textContent.trim(),term:token.dataset.term||'',tag:token.tagName,lines:new Set([...range.getClientRects()].map(rect=>Math.round(rect.top))).size,left:box.left,right:box.right,top:box.top,bottom:box.bottom,width:box.width};
+    }));
+    const assertAtomic=async(selector,expected,label)=>{
+      const tokens=await inspectTokens(selector);
+      assert.deepEqual(tokens.map(({label,term})=>({label,term})),expected,`${label} token text/order/terms must match canonical weapon data`);
+      assert.equal(tokens.every(token=>token.tag==='BUTTON'&&token.lines===1&&token.width>0),true,`${label} labels must remain atomic interactive tokens`);
+      assert.equal(await page.locator(`${selector} .tag .term-button,${selector} .tag .tag`).count(),0,`${label} tokens must not contain partial nested glossary controls`);
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth),true,`${label} must not create horizontal document overflow`);
+      return tokens;
+    };
+
+    await page.goto(`${origin}/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers`);
+    await assertAtomic(`#unit-skitarii-rangers ${arcSelector}`,expectedArc,'Mechanicus desktop Arc rifle');
+    const anti=page.locator(`#unit-skitarii-rangers ${arcSelector} [data-term="core-anti"]`);
+    await anti.scrollIntoViewIfNeeded();
+    const antiBox=await anti.boundingBox();assert.ok(antiBox,'Mechanicus desktop ANTI token must have geometry');
+    for(const x of [antiBox.x+2,antiBox.x+antiBox.width/2,antiBox.x+antiBox.width-2]){
+      await page.mouse.click(x,antiBox.y+antiBox.height/2);
+      const popup=page.locator('#popupLayer .term-popup').last();await popup.waitFor();
+      assert.equal(await popup.getAttribute('data-popup-term'),'core-anti','every horizontal part of the ANTI token must open the canonical core rule');
+      await page.keyboard.press('Escape');await popup.waitFor({state:'detached'});
+      assert.equal(await anti.evaluate(node=>node===document.activeElement),true,'desktop weapon token close must restore focus to the complete token');
+    }
+    for(const viewport of [{width:1194,height:834},{width:834,height:1194}]){
+      await page.setViewportSize(viewport);await page.goto(`${origin}/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers`);
+      await assertAtomic(`#unit-skitarii-rangers ${arcSelector}`,expectedArc,`Mechanicus desktop ${viewport.width}x${viewport.height}`);
+    }
+
+    await page.setViewportSize({width:390,height:844});
+    await page.goto(`${origin}/books/adeptus-mechanicus/mobile/skitarii-rangers.html`);
+    await assertAtomic(arcSelector,expectedArc,'Mechanicus Phone Arc rifle');
+    const phoneAnti=page.locator(`${arcSelector} [data-term="core-anti"]`);await phoneAnti.scrollIntoViewIfNeeded();
+    const phoneAntiBox=await phoneAnti.boundingBox();assert.ok(phoneAntiBox,'Mechanicus Phone ANTI token must have geometry');
+    await page.touchscreen.tap(phoneAntiBox.x+phoneAntiBox.width/2,phoneAntiBox.y+phoneAntiBox.height/2);
+    const phoneCard=page.locator('#termPopupStack .mobile-popup-card').last();await phoneCard.waitFor();
+    assert.equal(await phoneCard.getAttribute('data-popup-term'),'core-anti','Phone token tap must open the same canonical core rule');
+    await page.locator('[data-popup-close="0"]').click();
+    assert.equal(await phoneAnti.evaluate(node=>node===document.activeElement),true,'Phone weapon token close must restore focus to the complete token');
+
+    await page.setViewportSize({width:320,height:844});
+    await page.goto(`${origin}/books/adeptus-mechanicus/mobile/sydonian-skatros.html`);
+    const longSelector='[data-source-field="weapons.skatros-transuranic-arquebus"] .weapon-tags';
+    const longExpected=[
+      {label:'HEAVY',term:'core-heavy'},
+      {label:'PRECISION',term:'core-precision'},
+      {label:'ANTI-MONSTER 4+',term:'core-anti'},
+      {label:'ANTI-VEHICLE 4+',term:'core-anti'}
+    ];
+    const wrapped=await assertAtomic(longSelector,longExpected,'Mechanicus Phone wrapped weapon abilities');
+    assert.ok(new Set(wrapped.map(token=>Math.round(token.top))).size>1,'long Phone weapon ability lists must wrap between complete tokens');
+
+    await page.goto(`${origin}/books/death-guard/reader.html`);
+    const dgReference=page.locator('.weapon-tags .tag').first();
+    assert.equal(await dgReference.count(),1,'Death Guard read-only reference must expose the canonical weapon-tags/tag contract');
+    assert.deepEqual(errors,[]);
+    console.log('PASS Mechanicus atomic weapon ability tokens desktop, tablet and Phone');
+  }finally{await weaponTokenContext.close();}
+
   const orientationContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1194,height:834}});
   try{
     const {page,errors}=await observedPage(orientationContext);

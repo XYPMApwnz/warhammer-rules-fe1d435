@@ -670,6 +670,10 @@ fs.writeFileSync(path.join(glossaryRoot,'generated','glossary.en.js'),runtime+ru
 const coreReaderFiles=fs.readdirSync(path.join(root,'books','core-rules','reader'))
   .filter(file=>file.endsWith('.html')||file==='styles.css'||file==='app.js'||file==='search-index.json')
   .map(file=>`books/core-rules/reader/${file}`);
+const mechanicusGeneratedCacheInputs=[
+  'books/adeptus-mechanicus/reader.html',
+  ...fs.readdirSync(path.join(root,'books','adeptus-mechanicus','mobile')).filter(file=>file.endsWith('.html')).map(file=>`books/adeptus-mechanicus/mobile/${file}`)
+];
 const genericArmyCacheInputs=allGenericArmyBooks.flatMap(book=>[
   `books/${book.id}/index.html`,`books/${book.id}/reader.html`,`books/${book.id}/styles/tokens.css`,`books/${book.id}/styles/book.css`,
   `books/${book.id}/scripts/data.js`,`books/${book.id}/scripts/app.js`,`books/${book.id}/mobile/index.html`,`books/${book.id}/mobile/related-rules.inc`
@@ -683,7 +687,7 @@ const cacheInputs=[
   ...['related-rules.js','roster-enhancements.js','roster-filter.js'].map(file=>`books/adeptus-mechanicus/scripts/${file}`),
   ...['death-guard','adeptus-mechanicus'].flatMap(book=>['mobile.css','mobile.js','phone-popup-controller.js','related-rules.inc'].map(file=>`books/${book}/mobile/${file}`)),
   'books/death-guard/scripts/view-router.js','books/death-guard/scripts/roster-filter.js','books/death-guard/scripts/related-rules.js','books/death-guard/scripts/full-entry-controller.js','books/death-guard/scripts/compatible-stratagems-runtime.mjs','books/death-guard/generated/compatible-rules.json',
-  ...coreReaderFiles,
+  ...coreReaderFiles,...mechanicusGeneratedCacheInputs,
   'glossary/viewer.css','glossary/viewer-profiles.css','glossary/viewer-progressive.css','glossary/viewer.js'
 ].filter(file=>fs.existsSync(path.join(root,file)));
 const cacheRevision=hash(JSON.stringify({glossary:runtimePayload.contentHash,files:cacheInputs.map(file=>[file,hash(fs.readFileSync(path.join(root,file)))])})).slice(0,16);

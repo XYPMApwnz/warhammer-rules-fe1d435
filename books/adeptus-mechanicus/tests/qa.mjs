@@ -25,6 +25,7 @@ const sharedPopupContent=fs.readFileSync(path.resolve(root,'..','shared','popup-
 const sharedGlossaryAutolink=fs.readFileSync(path.resolve(root,'..','shared','glossary-autolink.js'),'utf8');
 const glossaryRegistryText=fs.readFileSync(path.resolve(root,'..','..','glossary','registry.en.json'),'utf8');
 const glossaryRegistry=JSON.parse(glossaryRegistryText);
+const glossaryBuildSource=fs.readFileSync(path.resolve(root,'..','..','glossary','tools','build-glossary.mjs'),'utf8');
 const factionRules=json('content/adeptus-mechanicus-rules.en.json');
 const source=json('content/adeptus-mechanicus-source.en.json');
 const codex=json('content/adeptus-mechanicus-codex-detachments.en.json');
@@ -37,6 +38,7 @@ const relatedRulesConfig=json('content/adeptus-mechanicus-related-rules.en.json'
 const factionDatasheets=new Map(factionRules.datasheets.map(unit=>[unit.id,unit]));
 const mergedDatasheets=codexDatasheets.datasheets.map(unit=>factionDatasheets.has(unit.id)?{...unit,...factionDatasheets.get(unit.id),category:unit.category}:unit);
 const rules={...factionRules,datasheets:mergedDatasheets};
+const mobileDatasheetMarkup=rules.datasheets.map(unit=>read(`mobile/${unit.id.replace(/^unit-/,'')}.html`)).join('\n');
 const allDetachments=[...rules.detachments,...codex.detachments];
 const node=process.execPath;
 const results=[];
@@ -246,6 +248,31 @@ check('term rule and unit destinations resolve',Object.values(terms).every(term=
 check('datasheet abilities and weapons are interactive',(markup.match(/class="ability"/g)||[]).length>100&&(markup.match(/class="weapon-button" data-term=/g)||[]).length>150);
 check('Core abilities use canonical destinations',!markup.includes('data-term="datasheet-deep-strike"')&&!markup.includes('data-term="datasheet-deadly-demise')&&markup.includes('data-term="core-deep-strike"')&&markup.includes('data-term="core-deadly-demise"')&&terms['core-deep-strike']?.fullRulePath==='books/core-rules/reader/core-abilities.html#rule-24-09');
 check('official and Codex datasheets show provenance',(markup.match(/class="unit-card surface/g)||[]).length===(markup.match(/<div class="source"><a class="source-link"/g)||[]).length-rules.updates.length-allDetachments.length-1);
+
+const weaponAbilityTermIds=new Map([
+  ['ANTI','core-anti'],['ASSAULT','core-assault'],['BLAST','core-blast'],['DEVASTATING WOUNDS','core-devastating-wounds'],
+  ['EXTRA ATTACKS','core-extra-attacks'],['HAZARDOUS','core-hazardous'],['HEAVY','core-heavy'],['IGNORES COVER','core-ignores-cover'],
+  ['INDIRECT FIRE','core-indirect-fire'],['LANCE','core-lance'],['MELTA','core-melta'],['PISTOL','core-pistol'],
+  ['PRECISION','core-precision'],['RAPID FIRE','core-rapid-fire'],['SUSTAINED HITS','core-sustained-hits'],
+  ['TORRENT','core-torrent'],['TWIN-LINKED','core-twin-linked']
+]);
+const splitWeaponAbilities=value=>String(value||'').split(',').map(label=>label.trim().toUpperCase()).filter(Boolean);
+const weaponAbilityBase=label=>{const base=label.replace(/\s+(?:D\d+|\d+\+|\d+)$/i,'').trim();return base.startsWith('ANTI-')?'ANTI':base;};
+const canonicalWeaponAbilityRows=rules.datasheets.flatMap(unit=>unit.weapons.filter(weapon=>weapon.abilities).map(weapon=>splitWeaponAbilities(weapon.abilities)));
+const extractWeaponAbilityRows=sourceMarkup=>[...sourceMarkup.matchAll(/<div class="weapon-tags">([\s\S]*?)<\/div>/g)].map(([,body])=>[...body.matchAll(/<(button|span)\b([^>]*)>([^<]+)<\/\1>/g)].filter(([, ,attrs])=>/\bclass="[^"]*\btag\b/.test(attrs)).map(([,element,attrs,label])=>({element,label:label.trim(),term:attrs.match(/\bdata-term="([^"]+)"/)?.[1]||''})));
+const desktopWeaponAbilityRows=extractWeaponAbilityRows(html);
+const phoneWeaponAbilityRows=extractWeaponAbilityRows(mobileDatasheetMarkup);
+const canonicalLabels=canonicalWeaponAbilityRows.flat();
+const desktopTokens=desktopWeaponAbilityRows.flat();
+const phoneTokens=phoneWeaponAbilityRows.flat();
+const rowInventory=rows=>rows.map(row=>JSON.stringify(row.map(item=>typeof item==='string'?item:item.label))).sort();
+check('all 38 Mechanicus datasheets share one deterministic weapon ability inventory',rules.datasheets.length===38&&canonicalWeaponAbilityRows.length===105&&canonicalLabels.length===185,`${rules.datasheets.length} datasheets; ${canonicalWeaponAbilityRows.length} weapons; ${canonicalLabels.length} labels`);
+check('desktop weapon abilities render one atomic token per canonical label',JSON.stringify(rowInventory(desktopWeaponAbilityRows))===JSON.stringify(rowInventory(canonicalWeaponAbilityRows))&&desktopTokens.length===canonicalLabels.length,`${desktopTokens.length}/${canonicalLabels.length} tokens`);
+check('Phone weapon abilities preserve desktop token text and order',JSON.stringify(rowInventory(phoneWeaponAbilityRows))===JSON.stringify(rowInventory(canonicalWeaponAbilityRows))&&JSON.stringify(rowInventory(phoneWeaponAbilityRows))===JSON.stringify(rowInventory(desktopWeaponAbilityRows)),`${phoneTokens.length} Phone tokens`);
+check('known weapon ability tokens resolve canonical base glossary rules',desktopTokens.every(token=>token.element==='button'&&token.term===weaponAbilityTermIds.get(weaponAbilityBase(token.label)))&&phoneTokens.every(token=>token.element==='button'&&token.term===weaponAbilityTermIds.get(weaponAbilityBase(token.label)))&&canonicalLabels.every(label=>weaponAbilityTermIds.has(weaponAbilityBase(label))),`${desktopTokens.filter(token=>token.term).length} interactive; ${canonicalLabels.filter(label=>!weaponAbilityTermIds.has(weaponAbilityBase(label))).length} unknown`);
+check('weapon ability markup has no raw comma list or partial nested glossary links',!/<button class="weapon-button"[^>]*>[^<]*<\/button><small>/i.test(html+mobileDatasheetMarkup)&&!/<(?:button|span)[^>]*class="[^"]*\btag\b[^"]*"[^>]*>[^<]*<button/i.test(html+mobileDatasheetMarkup)&&!/>ANTI<\/button>-[^<]+/i.test(html+mobileDatasheetMarkup));
+check('Mechanicus weapon ability tokens reuse the Death Guard production DOM contract',deathGuardRead('reader.html').includes('<div class="weapon-tags">')&&deathGuardRead('reader.html').includes('<button class="tag" data-term=')&&html.includes('<div class="weapon-tags"><button class="tag" data-term='));
+check('cache revision tracks generated Mechanicus desktop and Phone route content',glossaryBuildSource.includes("'books/adeptus-mechanicus/reader.html'")&&glossaryBuildSource.includes("path.join(root,'books','adeptus-mechanicus','mobile')")&&glossaryBuildSource.includes("file.endsWith('.html')"));
 
 const navSource=deathGuardRead('scripts/navigation-controller.js');
 const popupSource=deathGuardRead('scripts/popup-controller.js');

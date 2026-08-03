@@ -125,7 +125,7 @@
 
 ## AB-CONTENT-004 — Wargear and upgrade implementation
 - Level: MUST
-- Normative requirement: Wargear options, weapons, upgrade options, and UPGRADE entities MUST be represented with rule-bearing fields preserved and traceable.
+- Normative requirement: Wargear options, weapons, upgrade options, and UPGRADE entities MUST be represented with rule-bearing fields preserved and traceable. Weapon abilities MUST be rendered as discrete atomic interactive tokens. The complete canonical ability label and any associated parameter, including labels such as ANTI-INFANTRY 2+, ANTI-VEHICLE 4+, and RAPID FIRE 3, MUST remain inside one token. Glossary interaction MUST cover the complete token, glossary autolinking MUST NOT split compound weapon abilities into partial links, and responsive wrapping MUST occur only between tokens, not inside a canonical ability label. Desktop and Phone outputs MUST preserve the same token text, order, and interaction semantics.
 - Owner: book-local implementation
 - Applicability: all Army Books
 - Required evidence: deterministic wargear/upgrade structured data artifacts.

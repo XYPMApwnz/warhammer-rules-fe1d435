@@ -9,6 +9,20 @@
     if(!relatedRulesTemplate)relatedRulesTemplate=fetch('./mobile/related-rules.inc?v=4').then(response=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.text();}).then(html=>{const template=document.createElement('template');template.innerHTML=html;return template;}).catch(error=>{relatedRulesTemplate=null;throw error;});
     return relatedRulesTemplate;
   }
+  function decorateStratagemTypes(root){
+    root.querySelectorAll('.stratagem').forEach(card=>{
+      if(/^(battle-tactic|strategic-ploy|wargear|epic-deed|core|unknown)$/.test(card.dataset.stratagemType||''))return;
+      const match=card.querySelector('.stratagem-type')?.textContent.trim().match(/(Battle Tactic|Strategic Ploy|Wargear|Epic Deed|Core) Stratagem\s*$/i);
+      card.dataset.stratagemType=match?match[1].toLowerCase().replace(/\s+/g,'-'):'unknown';
+    });
+  }
+  function decorateStratagemTurns(root){
+    root.querySelectorAll('.stratagem').forEach(card=>{
+      const when=[...card.querySelectorAll('.field')].find(field=>field.querySelector('b')?.textContent.trim().toLowerCase()==='when')?.textContent||'';
+      const turn=/opponent|enemy/i.test(when)?'THEIR TURN':/your\b/i.test(when)?'YOUR TURN':'ANY TURN';
+      card.dataset.turn=turn;card.classList.remove('turn-any','turn-yours','turn-their');card.classList.add(turn==='THEIR TURN'?'turn-their':turn==='YOUR TURN'?'turn-yours':'turn-any');
+    });
+  }
   function addConditionStatus(card,result){
     card.querySelector(':scope > .compatibility-status')?.remove();
     if(result?.state!=='conditional')return;
@@ -54,7 +68,7 @@
         if(!rosterMode)try{const saved=localStorage.getItem('adeptus-mechanicus-detachment-filter');if(choices.some(([value])=>value===saved))detachment=saved;}catch{}
         filterMenu=document.createElement('details');filterMenu.className='full-related-filter';filterMenu.classList.toggle('is-static',choices.length===1);filterMenu.innerHTML='<summary><span>'+(choices.find(([value])=>value===detachment)?.[1]||'No Detachment')+'</span></summary><div>'+choices.map(([value,label])=>`<button type="button" data-detachment="${value}" aria-pressed="${value===detachment}">${label}</button>`).join('')+'</div>';
         tabs=document.createElement('div');tabs.className='full-related-tabs';tabs.innerHTML='<button type="button" data-kind="stratagems" aria-pressed="true">Stratagems</button><button type="button" data-kind="enhancements" aria-pressed="false">Enhancements</button>';
-        const controls=document.createElement('div');controls.className='full-related-controls';controls.append(filterMenu,tabs);content=document.createElement('div');content.className='full-related-content';content.append(fragment);empty=document.createElement('p');empty.className='full-related-empty';body.replaceChildren(controls,content,empty);
+        const controls=document.createElement('div');controls.className='full-related-controls';controls.append(filterMenu,tabs);content=document.createElement('div');content.className='full-related-content';content.append(fragment);decorateStratagemTurns(content);decorateStratagemTypes(content);empty=document.createElement('p');empty.className='full-related-empty';body.replaceChildren(controls,content,empty);
         filterMenu.addEventListener('click',event=>{if(choices.length===1){event.preventDefault();return;}const button=event.target.closest('[data-detachment]');if(!button)return;detachment=button.dataset.detachment;filterMenu.querySelector('summary span').textContent=button.textContent;filterMenu.querySelectorAll('button').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));filterMenu.open=false;if(!rosterMode)try{localStorage.setItem('adeptus-mechanicus-detachment-filter',detachment);}catch{}filter();});
       }catch(error){console.error('Compatible rules unavailable.',error);body.textContent='Could not load related rules.';return;}
       if(state.detachment&&sections.some(section=>section.dataset.detachment===state.detachment))detachment=state.detachment;filter();layer.querySelector('.related-rules-dialog').scrollTop=state.scrollTop||0;modal.focusFirst();
@@ -64,6 +78,7 @@
   }
   for(const button of document.querySelectorAll('button:not([type])'))button.type='button';
   const terms=window.WH40K_GLOSSARY?.forBook('adeptus-mechanicus')||window.DG_TERMS,documentRoot=document.querySelector('.document');window.WHGlossaryAutolink?.apply(documentRoot,'adeptus-mechanicus');window.WHGlossaryAutolink?.validate(documentRoot,terms);
+  decorateStratagemTurns(document);decorateStratagemTypes(document);
   const navigation=new window.DGNavigation(),fullEntry=new window.DGFullEntry(window.WH40K_GLOSSARY),popups=new window.DGPopups(terms,fullEntry),relatedRules=initRelatedRules(),journey=new window.DGJourney(navigation,popups,null,relatedRules);new window.DGTableAccessibility();new window.AMDoctrina();
   const rosterGuides=document.querySelector('[data-roster-guides]'),viewSwitch=document.querySelector('[data-view-switch]');if(rosterGuides)rosterGuides.hidden=!params.get('roster');
   viewSwitch?.addEventListener('click',()=>{const active=navigation.active;let route='index.html',anchor='start';for(let node=navigation.byId.get(active)?.node;node;node=node.parentElement?.closest('[data-nav-id]')){const id=node.dataset.navId;if(id==='start'){anchor=active;break;}if(id==='updates'){route='updates.html';anchor=active;break;}if(id==='core-rules'){route='army-rules.html';anchor=active;break;}if(id.startsWith('detachment-')){route=id.slice(11)+'.html';anchor=active;break;}if(id.startsWith('unit-')){route=id.slice(5)+'.html';anchor=active;break;}}const destination=new URL('./mobile/'+route,location.href);destination.search=params.toString();destination.hash=anchor;viewSwitch.href=destination.href;});

@@ -8,10 +8,13 @@
   letter-spacing: -.04em;
 }
 /* Datasheet-style Stratagem cards */
-.stratagem{--strat-color:#507f72;--strat-soft:rgba(80,127,114,.16);position:relative;display:grid;grid-template-columns:72px minmax(0,1fr);align-content:start;max-width:680px;margin:24px auto;overflow:hidden;border:1px solid var(--line);border-left:0;background:radial-gradient(circle at 74% 58%,transparent 0 48px,color-mix(in srgb,var(--strat-color) 10%,transparent) 49px 50px,transparent 51px),linear-gradient(120deg,var(--strat-soft),transparent 46%),var(--glass)}
+.stratagem{--strat-color:#756f61;--strat-soft:color-mix(in srgb,var(--strat-color) 16%,transparent);position:relative;display:grid;grid-template-columns:72px minmax(0,1fr);align-content:start;max-width:680px;margin:24px auto;overflow:hidden;border:1px solid var(--line);border-left:0;background:radial-gradient(circle at 74% 58%,transparent 0 48px,color-mix(in srgb,var(--strat-color) 10%,transparent) 49px 50px,transparent 51px),linear-gradient(120deg,var(--strat-soft),transparent 46%),var(--glass)}
 .related-rules-layer [hidden],#relatedRulesContent [hidden]{display:none!important}
-.stratagem.turn-yours{--strat-color:#247090;--strat-soft:rgba(36,112,144,.16)}
-.stratagem.turn-their{--strat-color:#a83338;--strat-soft:rgba(168,51,56,.17)}
+.stratagem[data-stratagem-type="battle-tactic"]{--strat-color:#247090}
+.stratagem[data-stratagem-type="strategic-ploy"]{--strat-color:#507f72}
+.stratagem[data-stratagem-type="wargear"]{--strat-color:#a77b32}
+.stratagem[data-stratagem-type="epic-deed"]{--strat-color:#a83338}
+.stratagem[data-stratagem-type="core"],.stratagem[data-stratagem-type="unknown"]{--strat-color:#756f61}
 .stratagem::before{content:"";display:block;position:absolute;inset:0 auto 0 0;width:72px;background:linear-gradient(180deg,color-mix(in srgb,var(--strat-color) 72%,#101313),var(--strat-color));border-right:1px solid color-mix(in srgb,var(--strat-color) 70%,white)}
 .stratagem::after{content:attr(data-turn);position:absolute;z-index:2;left:8px;bottom:18px;width:56px;padding:8px 3px;border:2px solid var(--strat-color);background:#e8e5d7;color:var(--strat-color);font:900 11px/1.05 ui-monospace,monospace;text-align:center;white-space:pre-line}
 .stratagem .stratagem-head{grid-column:2;position:relative;display:flex;gap:14px;min-height:76px;padding:15px 18px;background:linear-gradient(90deg,color-mix(in srgb,var(--strat-color) 28%,#151916),rgba(17,21,18,.96));border-bottom:2px solid var(--strat-color);color:var(--ink)}

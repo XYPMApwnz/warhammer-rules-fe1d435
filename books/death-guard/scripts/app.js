@@ -12,6 +12,13 @@
       .catch(error=>{relatedRulesTemplate=null;throw error;});
     return relatedRulesTemplate;
   }
+  function decorateStratagemTypes(root){
+    root.querySelectorAll('.stratagem').forEach(card=>{
+      if(/^(battle-tactic|strategic-ploy|wargear|epic-deed|core|unknown)$/.test(card.dataset.stratagemType||''))return;
+      const match=card.querySelector('.stratagem-type')?.textContent.trim().match(/(Battle Tactic|Strategic Ploy|Wargear|Epic Deed|Core) Stratagem\s*$/i);
+      card.dataset.stratagemType=match?match[1].toLowerCase().replace(/\s+/g,'-'):'unknown';
+    });
+  }
 
   function initRelatedRules(){
     if(!compatibleRuntime?.compatibleStratagemsReviewEnabled)return null;
@@ -87,6 +94,7 @@
           body.replaceChildren(controls,content,empty);
           filterMenu.addEventListener('click',event=>{if(choices.length===1){event.preventDefault();return;}const button=event.target.closest('[data-detachment]');if(!button)return;detachment=button.dataset.detachment;filterMenu.querySelector('summary span').textContent=button.textContent;filterMenu.querySelectorAll('button').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));filterMenu.open=false;if(!rosterMode)try{localStorage.setItem('death-guard-detachment-filter',detachment);}catch{}filter();});
           content.querySelectorAll('.stratagem').forEach(card=>{const when=[...card.querySelectorAll('.field')].find(field=>field.querySelector('b')?.textContent.trim().toLowerCase()==='when')?.textContent||'';const turn=/opponent|enemy/i.test(when)?'THEIR TURN':/your\b/i.test(when)?'YOUR TURN':'ANY TURN';card.dataset.turn=turn;card.classList.add(turn==='THEIR TURN'?'turn-their':turn==='YOUR TURN'?'turn-yours':'turn-any');});
+          decorateStratagemTypes(content);
         }catch{
           const retry=document.createElement('button');retry.type='button';retry.className='related-rules-retry';retry.textContent='Try again';
           retry.addEventListener('click',()=>open(current));
@@ -130,6 +138,7 @@
     card.dataset.turn=turn;
     card.classList.add(turn==='THEIR TURN'?'turn-their':turn==='YOUR TURN'?'turn-yours':'turn-any');
   }
+  decorateStratagemTypes(document);
   const terms=Object.freeze({...window.WH40K_GLOSSARY.forBook('death-guard'),...(window.DG_ROSTER_TERMS||{})});
   const documentRoot=document.querySelector('.document');
   window.WHGlossaryAutolink?.apply(documentRoot,'death-guard');

@@ -99,7 +99,14 @@
       card.classList.add(turn === 'THEIR TURN' ? 'turn-their' : turn === 'YOUR TURN' ? 'turn-yours' : 'turn-any');
     });
   }
-  decorateStratagemTurns(document);
+  function decorateStratagemTypes(root) {
+    root.querySelectorAll('.stratagem').forEach(card => {
+      if (/^(battle-tactic|strategic-ploy|wargear|epic-deed|core|unknown)$/.test(card.dataset.stratagemType || '')) return;
+      const match = card.querySelector('.stratagem-type')?.textContent.trim().match(/(Battle Tactic|Strategic Ploy|Wargear|Epic Deed|Core) Stratagem\s*$/i);
+      card.dataset.stratagemType = match ? match[1].toLowerCase().replace(/\s+/g, '-') : 'unknown';
+    });
+  }
+  decorateStratagemTurns(document);decorateStratagemTypes(document);
 
   function filterRelated() {
     if (!relatedContent || !unit || !compatibleRulesMatrix) return;
@@ -142,7 +149,7 @@
     try {
       const [response,matrix] = await Promise.all([fetch('./related-rules.inc?v=4'),compatibleRuntime.loadCompatibleStratagems(new URL('../generated/compatible-rules.json',scriptUrl))]);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      relatedContent.innerHTML = await response.text();decorateStratagemTurns(relatedContent);compatibleRulesMatrix=matrix;
+      relatedContent.innerHTML = await response.text();decorateStratagemTurns(relatedContent);decorateStratagemTypes(relatedContent);compatibleRulesMatrix=matrix;
       const tabs=document.createElement('div');tabs.className='full-related-tabs';tabs.innerHTML='<button type="button" data-related-tab="stratagems" aria-pressed="true">Stratagems</button><button type="button" data-related-tab="enhancements" aria-pressed="false">Enhancements</button>';
       relatedRules.querySelector('.related-controls')?.append(tabs);
       relatedLoaded = true;

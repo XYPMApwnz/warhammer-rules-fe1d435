@@ -109,7 +109,7 @@
 
 ## AB-CONTENT-002 — Stratagem and enhancement coverage
 - Level: MUST
-- Normative requirement: Core Stratagems, faction Stratagems, Enhancements, and assignment restrictions MUST be implemented using deterministic data and verified against source and parity artifacts. Stratagem card grids MUST preserve a readable minimum card width. When available content width cannot support the canonical multi-column presentation, including tablet portrait layouts, the grid MUST collapse to one column and MUST NOT create horizontal overflow.
+- Normative requirement: Core Stratagems, faction Stratagems, Enhancements, and assignment restrictions MUST be implemented using deterministic data and verified against source and parity artifacts. Stratagem card grids MUST preserve a readable minimum card width. When available content width cannot support the canonical multi-column presentation, including tablet portrait layouts, the grid MUST collapse to one column and MUST NOT create horizontal overflow. Stratagem card color semantics MUST be based on the canonical Stratagem type rather than turn ownership or timing. Battle Tactic, Strategic Ploy, Wargear, Epic Deed, and Core Stratagems MUST have stable and visually distinct type categories shared by all Army Books. Turn timing MUST remain separate semantic metadata and a visible text label and MUST NOT determine the card's primary color category.
 - Owner: book-local implementation
 - Applicability: all Army Books
 - Required evidence: canonical stratagem/enhancement artifacts and resolved unit assignment evidence.
@@ -419,7 +419,7 @@
 
 ## AB-POPUP-002 — Popup scroll and geometry determinism
 - Level: MUST
-- Normative requirement: On opening, a popup MUST remain within the accessible viewport area and MUST NOT create horizontal overflow; on Phone it MUST NOT cover a required fixed header or safe area; desktop and Phone MAY use different positioning strategies; every open popup, modal, or drawer MUST apply a documented background scroll policy, and when that policy locks background scrolling, the lock MUST be deterministic and MUST be released on close; rapid opening and closing MUST NOT corrupt the popup chain. Phone and tablet Phone-view term popups MUST size to their content up to the accessible viewport limit. Short content MUST NOT produce a forced full-height empty panel; long content MUST use bounded internal scrolling while preserving header and safe-area clearance.
+- Normative requirement: On opening, a popup MUST remain within the accessible viewport area and MUST NOT create horizontal overflow; on Phone it MUST NOT cover a required fixed header or safe area; desktop and Phone MAY use different positioning strategies; every open popup, modal, or drawer MUST apply a documented background scroll policy, and when that policy locks background scrolling, the lock MUST be deterministic and MUST be released on close; rapid opening and closing MUST NOT corrupt the popup chain. Phone and tablet Phone-view term popups MUST size to their content up to the accessible viewport limit. Short content MUST NOT produce a forced full-height empty panel; long content MUST use bounded internal scrolling while preserving header and safe-area clearance. Popup action groups MUST use responsive, readable controls across desktop, tablet, and Phone views. Actions MUST fill their available grid cells, MUST preserve a minimum accessible target height, and MUST collapse from equal-width columns to a single full-width column when the available popup width cannot support readable labels. On telephone-width Phone views, popup actions MUST use a single full-width column. Action labels, icons, and arrows MUST NOT clip or create horizontal overflow.
 - Owner: shared Army Book capability
 - Applicability: all Army Books
 - Required evidence: real-browser automated integration or manual browser acceptance covering desktop and Phone viewport containment, horizontal overflow, fixed-header/safe-area clearance, background scroll policy, lock release, and rapid open/close sequences.
@@ -571,7 +571,7 @@
 
 ## AB-PHONE-001 — Desktop/Phone parity
 - Level: MUST
-- Normative requirement: Mobile/Phone behavior MUST be functionally equivalent to desktop for canonical contracts (rules, roster behavior, compatibility lookup, glossary, navigation, and Back behavior), with permitted UX-appropriate responsive differences. Phone Stratagem cards MUST preserve the same turn-state classification and visual distinction as desktop: ANY TURN, YOUR TURN, and THEIR TURN MUST remain semantically and visually distinguishable, including dynamically loaded Compatible Stratagems.
+- Normative requirement: Mobile/Phone behavior MUST be functionally equivalent to desktop for canonical contracts (rules, roster behavior, compatibility lookup, glossary, navigation, and Back behavior), with permitted UX-appropriate responsive differences. Phone Stratagem cards MUST preserve the same canonical type-based color mapping as desktop, including dynamically loaded Compatible Stratagems. ANY TURN, YOUR TURN, and THEIR TURN MUST remain available as semantic metadata and visible labels, but MUST NOT determine the card's primary color category.
 - Owner: shared product shell
 - Applicability: all Army Books
 - Required evidence: parity checks between desktop and Phone outputs.

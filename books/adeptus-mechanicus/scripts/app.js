@@ -6,7 +6,7 @@
   const params=new URLSearchParams(location.search),rosterMode=params.has('roster');
 
   async function getRelatedRulesTemplate(){
-    if(!relatedRulesTemplate)relatedRulesTemplate=fetch('./mobile/related-rules.inc?v=3').then(response=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.text();}).then(html=>{const template=document.createElement('template');template.innerHTML=html;return template;}).catch(error=>{relatedRulesTemplate=null;throw error;});
+    if(!relatedRulesTemplate)relatedRulesTemplate=fetch('./mobile/related-rules.inc?v=4').then(response=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.text();}).then(html=>{const template=document.createElement('template');template.innerHTML=html;return template;}).catch(error=>{relatedRulesTemplate=null;throw error;});
     return relatedRulesTemplate;
   }
   function addConditionStatus(card,result){

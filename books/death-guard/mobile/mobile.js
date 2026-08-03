@@ -129,7 +129,7 @@
   async function loadRelated() {
     if (relatedLoaded) return;
     try {
-      const [response,matrix] = await Promise.all([fetch('./related-rules.inc?v=3'),compatibleRuntime.loadCompatibleStratagems(new URL('../generated/compatible-rules.json',scriptUrl))]);
+      const [response,matrix] = await Promise.all([fetch('./related-rules.inc?v=4'),compatibleRuntime.loadCompatibleStratagems(new URL('../generated/compatible-rules.json',scriptUrl))]);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       relatedContent.innerHTML = await response.text();compatibleRulesMatrix=matrix;
       const tabs=document.createElement('div');tabs.className='full-related-tabs';tabs.innerHTML='<button type="button" data-related-tab="stratagems" aria-pressed="true">Stratagems</button><button type="button" data-related-tab="enhancements" aria-pressed="false">Enhancements</button>';

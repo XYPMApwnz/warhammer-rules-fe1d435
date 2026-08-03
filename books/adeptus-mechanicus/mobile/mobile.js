@@ -127,7 +127,7 @@ if(typeof document!=='undefined')(async function(){
   async function loadRelated(){
     if(!relatedRulesEnabled||relatedLoaded)return;
     try{
-      const [response,matrix]=await Promise.all([fetch('./related-rules.inc?v=3'),compatibleRuntime.loadCompatibleRules(new URL('../generated/compatible-rules.json',scriptUrl))]);if(!response.ok)throw new Error(`HTTP ${response.status}`);
+      const [response,matrix]=await Promise.all([fetch('./related-rules.inc?v=4'),compatibleRuntime.loadCompatibleRules(new URL('../generated/compatible-rules.json',scriptUrl))]);if(!response.ok)throw new Error(`HTTP ${response.status}`);
       relatedContent.innerHTML=await response.text();compatibleRulesMatrix=matrix;relatedLoaded=true;
       if(rosterMode){const normalizeTitle=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');assignedEnhancementRuleIds=new Set([...relatedContent.querySelectorAll('.enhancement[data-enhancement-title]')].filter(card=>assignedEnhancementNames.has(normalizeTitle(card.dataset.enhancementTitle))).map(card=>card.dataset.ruleId||card.id));}
       if(rosterMode){[...relatedDetachment.options].forEach(option=>{if(option.value==='all'||option.value!==rosterDetachments[0])option.remove();});if(relatedDetachment.options.length!==1||relatedDetachment.options[0].value!==rosterDetachments[0])throw new Error('Roster data unavailable');relatedDetachment.value=rosterDetachments[0];relatedDetachment.disabled=true;}

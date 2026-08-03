@@ -66,9 +66,9 @@ const APP_SHELL = [
   "./books/death-guard/scripts/view-router.js?v=2",
   "./books/death-guard/mobile/index.html",
   "./books/death-guard/mobile/mobile.css?v=9",
-  "./books/death-guard/mobile/mobile.js?v=25",
+  "./books/death-guard/mobile/mobile.js?v=26",
   "./books/death-guard/mobile/phone-popup-controller.js?v=1",
-  "./books/death-guard/mobile/related-rules.inc?v=3",
+  "./books/death-guard/mobile/related-rules.inc?v=4",
   "./books/shared/navigation-targets.js?v=1",
   "./books/shared/popup-rule-actions.js?v=1",
   "./books/shared/datasheet-layout.js?v=3",
@@ -92,7 +92,7 @@ const APP_SHELL = [
   "./books/death-guard/scripts/full-entry-controller.js?v=9",
   "./books/death-guard/scripts/journey-controller.js?v=13",
   "./books/death-guard/scripts/ui-controllers.js?v=12",
-  "./books/death-guard/scripts/app.js?v=40",
+  "./books/death-guard/scripts/app.js?v=41",
   "./books/death-guard/scripts/compatible-stratagems-runtime.mjs?v=3",
   "./books/death-guard/generated/compatible-rules.json",
   "./books/core-rules/",
@@ -131,7 +131,7 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/reader.html",
   "./books/adeptus-mechanicus/mobile/index.html",
   "./books/adeptus-mechanicus/mobile/mobile.css?v=2",
-  "./books/adeptus-mechanicus/mobile/mobile.js?v=10",
+  "./books/adeptus-mechanicus/mobile/mobile.js?v=11",
   "./books/adeptus-mechanicus/mobile/phone-popup-controller.js?v=1",
   "./books/adeptus-mechanicus/assets/mechanicus-logo.png",
   "./books/adeptus-mechanicus/assets/mechanicus-cover-800.webp",
@@ -139,12 +139,12 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/styles/mechanicus.css?v=19",
   "./books/adeptus-mechanicus/scripts/data.js?v=1",
   "./books/adeptus-mechanicus/scripts/faction-ui.js?v=1",
-  "./books/adeptus-mechanicus/mobile/related-rules.inc?v=3",
+  "./books/adeptus-mechanicus/mobile/related-rules.inc?v=4",
   "./books/adeptus-mechanicus/scripts/roster-enhancements.js?v=2",
   "./books/adeptus-mechanicus/scripts/roster-filter.js?v=3",
   "./books/adeptus-mechanicus/scripts/compatible-rules-runtime.mjs?v=3",
   "./books/adeptus-mechanicus/generated/compatible-rules.json",
-  "./books/adeptus-mechanicus/scripts/app.js?v=31"
+  "./books/adeptus-mechanicus/scripts/app.js?v=32"
   ,"./books/tyranids/"
   ,TYRANIDS_ENTRY_FALLBACK
   ,TYRANIDS_DESKTOP_FALLBACK

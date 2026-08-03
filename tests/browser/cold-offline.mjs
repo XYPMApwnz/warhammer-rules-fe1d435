@@ -801,7 +801,7 @@ try{
     const {page,errors}=await observedPage(coldContext);
     await page.goto(`${origin}/index.html?cold=1`);
     await control(page);
-    const currentPhoneShell=await page.evaluate(async()=>{const urls=['./books/death-guard/mobile/mobile.css?v=9','./books/death-guard/mobile/mobile.js?v=25','./books/death-guard/mobile/phone-popup-controller.js?v=1','./books/adeptus-mechanicus/mobile/mobile.css?v=2','./books/adeptus-mechanicus/mobile/mobile.js?v=10','./books/adeptus-mechanicus/mobile/phone-popup-controller.js?v=1'];return Object.fromEntries(await Promise.all(urls.map(async url=>[url,Boolean(await caches.match(url))])));});
+    const currentPhoneShell=await page.evaluate(async()=>{const urls=['./books/death-guard/mobile/mobile.css?v=9','./books/death-guard/mobile/mobile.js?v=26','./books/death-guard/mobile/phone-popup-controller.js?v=1','./books/adeptus-mechanicus/mobile/mobile.css?v=2','./books/adeptus-mechanicus/mobile/mobile.js?v=11','./books/adeptus-mechanicus/mobile/phone-popup-controller.js?v=1'];return Object.fromEntries(await Promise.all(urls.map(async url=>[url,Boolean(await caches.match(url))])));});
     assert.equal(Object.values(currentPhoneShell).every(Boolean),true,`current canonical Phone shell assets must be precached: ${JSON.stringify(currentPhoneShell)}`);
     await coldContext.setOffline(true);
     await page.setViewportSize({width:1280,height:900});
@@ -814,10 +814,10 @@ try{
       scripts:[...document.scripts].map(script=>script.src).filter(Boolean).slice(-5),
       triggerCount:document.querySelectorAll('.related-rules-trigger').length,
       relatedRules:Boolean(window.DG_APP?.relatedRules),
-      cachedApp:Boolean(await caches.match('./books/death-guard/scripts/app.js?v=35')),
+      cachedApp:Boolean(await caches.match('./books/death-guard/scripts/app.js?v=41')),
       cachedModule:Boolean(await caches.match('./books/death-guard/scripts/compatible-stratagems-runtime.mjs?v=3')),
       cachedMatrix:Boolean(await caches.match('./books/death-guard/generated/compatible-rules.json')),
-      cachedTemplate:Boolean(await caches.match('./books/death-guard/mobile/related-rules.inc?v=3'))
+      cachedTemplate:Boolean(await caches.match('./books/death-guard/mobile/related-rules.inc?v=4'))
     }));
     assert.equal(coldDgState.hasApp&&coldDgState.triggerCount>0,true,`DG cold review runtime unavailable: ${JSON.stringify({coldDgState,errors})}`);
     await page.locator('#unit-chaos-land-raider .related-rules-trigger').click();
@@ -915,7 +915,7 @@ try{
       relatedRules:document.querySelectorAll('#relatedRules').length,
       cachedPage:Boolean(await caches.match(location.href)),
       cachedCss:Boolean(await caches.match(new URL('./mobile.css?v=9',location.href).href)),
-      cachedMobile:Boolean(await caches.match(new URL('./mobile.js?v=25',location.href).href)),
+      cachedMobile:Boolean(await caches.match(new URL('./mobile.js?v=26',location.href).href)),
       cachedPopupController:Boolean(await caches.match(new URL('./phone-popup-controller.js?v=1',location.href).href)),
       cachedModule:Boolean(await caches.match(new URL('../scripts/compatible-stratagems-runtime.mjs?v=3',location.href).href))
     }));
@@ -930,7 +930,7 @@ try{
 
   const warmMechanicusContext=await browser.newContext({serviceWorkers:'allow'});
   try{
-    const {page,errors}=await observedPage(warmMechanicusContext);await page.goto(`${origin}/index.html?am-warm=1`);await control(page);await page.setViewportSize({width:390,height:844});const visited=`${origin}/books/adeptus-mechanicus/mobile/skitarii-marshal.html?view=mobile`;await page.goto(visited);await page.waitForFunction(async()=>Boolean(await caches.match(location.href)));await warmMechanicusContext.setOffline(true);await page.goto(visited);const state=await page.evaluate(async()=>({controller:typeof window.AMPhonePopups==='function',css:Boolean(await caches.match(new URL('./mobile.css?v=2',location.href).href)),mobile:Boolean(await caches.match(new URL('./mobile.js?v=10',location.href).href)),popup:Boolean(await caches.match(new URL('./phone-popup-controller.js?v=1',location.href).href))}));assert.equal(Object.values(state).every(Boolean),true,`Mechanicus warm Phone shell unavailable offline: ${JSON.stringify({state,errors})}`);const root=page.locator('main [data-term="core-support"]').first();await root.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1,'Mechanicus offline root popup must open');const nested=page.locator('#termPopupStack .mobile-popup-card').first().locator('[data-term="core-leader"]').first();assert.equal(await nested.count(),1,'Mechanicus offline popup fixture must expose a nested term');await nested.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),2,'Mechanicus offline nested popup must open');await page.locator('[data-popup-close="0"]').click();assert.deepEqual(errors,[]);console.log('PASS Adeptus Mechanicus visited Phone popup stack offline');
+    const {page,errors}=await observedPage(warmMechanicusContext);await page.goto(`${origin}/index.html?am-warm=1`);await control(page);await page.setViewportSize({width:390,height:844});const visited=`${origin}/books/adeptus-mechanicus/mobile/skitarii-marshal.html?view=mobile`;await page.goto(visited);await page.waitForFunction(async()=>Boolean(await caches.match(location.href)));await warmMechanicusContext.setOffline(true);await page.goto(visited);const state=await page.evaluate(async()=>({controller:typeof window.AMPhonePopups==='function',css:Boolean(await caches.match(new URL('./mobile.css?v=2',location.href).href)),mobile:Boolean(await caches.match(new URL('./mobile.js?v=11',location.href).href)),popup:Boolean(await caches.match(new URL('./phone-popup-controller.js?v=1',location.href).href))}));assert.equal(Object.values(state).every(Boolean),true,`Mechanicus warm Phone shell unavailable offline: ${JSON.stringify({state,errors})}`);const root=page.locator('main [data-term="core-support"]').first();await root.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1,'Mechanicus offline root popup must open');const nested=page.locator('#termPopupStack .mobile-popup-card').first().locator('[data-term="core-leader"]').first();assert.equal(await nested.count(),1,'Mechanicus offline popup fixture must expose a nested term');await nested.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),2,'Mechanicus offline nested popup must open');await page.locator('[data-popup-close="0"]').click();assert.deepEqual(errors,[]);console.log('PASS Adeptus Mechanicus visited Phone popup stack offline');
   }finally{await warmMechanicusContext.close();}
 
   const warmTyranidsContext=await browser.newContext({serviceWorkers:'allow'});

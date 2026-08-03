@@ -579,7 +579,7 @@
 
 ## AB-PWA-001 — Offline and caching contract
 - Level: MUST
-- Normative requirement: Lightweight render-critical shell and canonical data MUST be available offline; previously saved routes MUST open after update; on-demand cache for heavy assets is allowed; heavy diagrams/source pages/scans must not be auto-downloaded without need; cache revision must update with changed route/content/runtime assets.
+- Normative requirement: Lightweight render-critical shell and canonical data MUST be available offline; previously saved routes MUST open after update; on-demand cache for heavy assets is allowed; heavy diagrams/source pages/scans must not be auto-downloaded without need; cache revision must update with changed route/content/runtime assets. When the contents of a fetch-loaded or app-shell asset change, every desktop and Phone consumer and the service-worker inventory MUST use a new matching versioned URL, and superseded URLs MUST NOT remain in the current app shell.
 - Owner: generated content/build layer
 - Applicability: all Army Books
 - Required evidence: service worker/cache manifest and offline verification results.

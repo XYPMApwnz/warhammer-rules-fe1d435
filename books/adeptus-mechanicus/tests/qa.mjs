@@ -13,6 +13,7 @@ const html=read('reader.html');
 const mobileArmyRules=read('mobile/army-rules.html');
 const mobileUnitPage=read('mobile/skitarii-rangers.html');
 const mobileRuntime=read('mobile/mobile.js');
+const mobileCss=read('mobile/mobile.css');
 const mobilePopupRuntime=read('mobile/phone-popup-controller.js');
 const mobileBuildSource=read('mobile/build.mjs');
 const deathGuardRoot=path.resolve(root,'..','death-guard');
@@ -73,6 +74,8 @@ check('Phone popup uses canonical Mechanicus glossary and shared renderers',mobi
 check('Phone popup generated markup uses one stacked modal',mobileUnitPage.includes('id="termPopupStack"')&&!mobileUnitPage.includes('id="termTitle"')&&!mobileUnitPage.includes('id="termSummary"'));
 check('Phone popup full-rule actions preserve local query and hash',mobilePopupRuntime.includes('origin?.dataset?.mobileRulePath||origin?.dataset?.fullRulePath')&&mobilePopupRuntime.includes('destination.search=location.search')&&mobileBuildSource.includes('data-mobile-rule-path='));
 check('Phone popup serializes the complete Glossary chain',mobilePopupRuntime.includes('popupIds:this.snapshot()')&&mobileRuntime.includes('returnRecord.popupIds?.length')&&mobileRuntime.includes('popups.restore(popupIds'));
+check('Phone Stratagems use the desktop turn classifier before and after Compatible Rules load',mobileRuntime.includes('function decorateStratagemTurns(root)')&&mobileRuntime.includes("/opponent|enemy/i.test(when)?'THEIR TURN':/your\\b/i.test(when)?'YOUR TURN':'ANY TURN'")&&mobileRuntime.includes('decorateStratagemTurns(document)')&&mobileRuntime.includes('decorateStratagemTurns(relatedContent)'));
+check('Phone popup shrink-wraps short content and bounds long content internally',/\.mobile-dialog\s*\{[^}]*height:\s*auto;[^}]*max-height:\s*var\(--mobile-dialog-max-height\)/s.test(mobileCss)&&/\.mobile-popup-stack\s*\{[^}]*height:\s*auto;[^}]*max-height:\s*calc\(var\(--mobile-dialog-max-height\) - 24px\)[^}]*overflow:\s*auto/s.test(mobileCss)&&!mobileCss.includes('.mobile-popup-stack { display: grid; gap: 12px; width: 100%; height: 100%'));
 check('Phone popup ordinary actions do not use Browser History',!mobilePopupRuntime.includes('pushState')&&!mobilePopupRuntime.includes('history.back'));
 const detachmentSlug=value=>String(value||'').toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const detachmentInventory=allDetachments.map(item=>detachmentSlug(item.title));
@@ -310,7 +313,7 @@ check('official MFM provenance is locked',currentPoints.source.officialVersion==
 check('carried-forward rules no longer use placeholder wording',!JSON.stringify(codex).match(/rule's listed roll|following the rule's unit restrictions|under the listed Acquisition conditions|according to the Stratagem's conditions/));
 check('personal roster integration is loaded',html.includes('../shared/roster-parser.js?v=2')&&html.includes('../../roster-guides/points-validator.js?v=4')&&html.includes('./scripts/roster-filter.js?v=3')&&html.includes('data-roster-guides'));
 check('Compatible Rules runtime uses only the generated matrix',read('scripts/app.js').includes('generated/compatible-rules.json')&&read('mobile/mobile.js').includes('generated/compatible-rules.json')&&!read('scripts/app.js').includes('AMRelatedRules')&&!read('mobile/mobile.js').includes('AMRelatedRules'));
-check('Compatible Rules fetch asset and consumers use the current cache version',read('scripts/app.js').includes("fetch('./mobile/related-rules.inc?v=4')")&&read('mobile/mobile.js').includes("fetch('./related-rules.inc?v=4')")&&html.includes('./scripts/app.js?v=32')&&read('mobile/index.html').includes('./mobile.js?v=11'));
+check('Compatible Rules fetch asset and consumers use the current cache version',read('scripts/app.js').includes("fetch('./mobile/related-rules.inc?v=4')")&&read('mobile/mobile.js').includes("fetch('./related-rules.inc?v=4')")&&html.includes('./scripts/app.js?v=32')&&read('mobile/index.html').includes('./mobile.js?v=12'));
 check('Compatible Rules renders every matrix condition',read('scripts/app.js').includes('conditionsFor(result)')&&read('mobile/mobile.js').includes('conditionsFor(result)')&&read('scripts/compatible-rules-runtime.mjs').includes("'second-unit-unknown'")&&read('scripts/compatible-rules-runtime.mjs').includes("'battle-state-unknown'"));
 check('roster Compatible Rules fail closed and filter assigned owners',rosterLogic.resolveDetachment([],detachmentInventory)===''&&firstOwnership.cardEnhancements.length===1&&aggregatedOwnership.cardEnhancements.length===0&&rosterRules.some(rule=>rule.ruleId==='owned')&&!rosterRules.some(rule=>rule.ruleId==='other-owner'));
 const relatedRulesMarkup=read('mobile/related-rules.inc');

@@ -90,6 +90,17 @@
 
   const showTerm=trigger=>popups.open(trigger.dataset.term,trigger);
 
+  function decorateStratagemTurns(root) {
+    root.querySelectorAll('.stratagem').forEach(card => {
+      const when = [...card.querySelectorAll('.field')].find(field => field.querySelector('b')?.textContent.trim().toLowerCase() === 'when')?.textContent || '';
+      const turn = /opponent|enemy/i.test(when) ? 'THEIR TURN' : /your\b/i.test(when) ? 'YOUR TURN' : 'ANY TURN';
+      card.dataset.turn = turn;
+      card.classList.remove('turn-any', 'turn-yours', 'turn-their');
+      card.classList.add(turn === 'THEIR TURN' ? 'turn-their' : turn === 'YOUR TURN' ? 'turn-yours' : 'turn-any');
+    });
+  }
+  decorateStratagemTurns(document);
+
   function filterRelated() {
     if (!relatedContent || !unit || !compatibleRulesMatrix) return;
     const selected = relatedDetachment.value;
@@ -131,7 +142,7 @@
     try {
       const [response,matrix] = await Promise.all([fetch('./related-rules.inc?v=4'),compatibleRuntime.loadCompatibleStratagems(new URL('../generated/compatible-rules.json',scriptUrl))]);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      relatedContent.innerHTML = await response.text();compatibleRulesMatrix=matrix;
+      relatedContent.innerHTML = await response.text();decorateStratagemTurns(relatedContent);compatibleRulesMatrix=matrix;
       const tabs=document.createElement('div');tabs.className='full-related-tabs';tabs.innerHTML='<button type="button" data-related-tab="stratagems" aria-pressed="true">Stratagems</button><button type="button" data-related-tab="enhancements" aria-pressed="false">Enhancements</button>';
       relatedRules.querySelector('.related-controls')?.append(tabs);
       relatedLoaded = true;

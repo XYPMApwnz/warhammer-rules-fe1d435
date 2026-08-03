@@ -95,6 +95,17 @@ if(typeof document!=='undefined')(async function(){
   function syncDrawerMode(){const returnFocus=nav.contains(document.activeElement);if(drawerMedia.matches)drawer(false);else{document.body.classList.remove('nav-drawer-open');nav.setAttribute('aria-hidden','false');scrim.hidden=true;}if(returnFocus&&nav.getAttribute('aria-hidden')==='true')navButton.focus({preventScroll:true});}
   const showTerm=trigger=>popups.open(trigger.dataset.term,trigger);
 
+  function decorateStratagemTurns(root){
+    root.querySelectorAll('.stratagem').forEach(card=>{
+      const when=[...card.querySelectorAll('.field')].find(field=>field.querySelector('b')?.textContent.trim().toLowerCase()==='when')?.textContent||'';
+      const turn=/opponent|enemy/i.test(when)?'THEIR TURN':/your\b/i.test(when)?'YOUR TURN':'ANY TURN';
+      card.dataset.turn=turn;
+      card.classList.remove('turn-any','turn-yours','turn-their');
+      card.classList.add(turn==='THEIR TURN'?'turn-their':turn==='YOUR TURN'?'turn-yours':'turn-any');
+    });
+  }
+  decorateStratagemTurns(document);
+
   function filterRelated(){
     if(!relatedRulesEnabled||!relatedContent||!unit||!compatibleRulesMatrix)return;
     const selected=relatedDetachment.value;
@@ -128,7 +139,7 @@ if(typeof document!=='undefined')(async function(){
     if(!relatedRulesEnabled||relatedLoaded)return;
     try{
       const [response,matrix]=await Promise.all([fetch('./related-rules.inc?v=4'),compatibleRuntime.loadCompatibleRules(new URL('../generated/compatible-rules.json',scriptUrl))]);if(!response.ok)throw new Error(`HTTP ${response.status}`);
-      relatedContent.innerHTML=await response.text();compatibleRulesMatrix=matrix;relatedLoaded=true;
+      relatedContent.innerHTML=await response.text();decorateStratagemTurns(relatedContent);compatibleRulesMatrix=matrix;relatedLoaded=true;
       if(rosterMode){const normalizeTitle=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');assignedEnhancementRuleIds=new Set([...relatedContent.querySelectorAll('.enhancement[data-enhancement-title]')].filter(card=>assignedEnhancementNames.has(normalizeTitle(card.dataset.enhancementTitle))).map(card=>card.dataset.ruleId||card.id));}
       if(rosterMode){[...relatedDetachment.options].forEach(option=>{if(option.value==='all'||option.value!==rosterDetachments[0])option.remove();});if(relatedDetachment.options.length!==1||relatedDetachment.options[0].value!==rosterDetachments[0])throw new Error('Roster data unavailable');relatedDetachment.value=rosterDetachments[0];relatedDetachment.disabled=true;}
       filterRelated();

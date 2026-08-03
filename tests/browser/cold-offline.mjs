@@ -62,6 +62,43 @@ const touchGesture=async(locator,pointerId,{move=false,cancel=false}={})=>{
 };
 
 try{
+  if(process.env.TAU_ONLY==='1'){
+    const context=await browser.newContext({serviceWorkers:'block',hasTouch:true,viewport:{width:1440,height:900}});
+    try{
+      const {page,errors}=await observedPage(context);
+      await page.goto(`${origin}/books/tau-empire/reader.html#detachment-kauyon`);
+      const staticCards=page.locator('#detachment-kauyon .stratagem');assert.ok(await staticCards.count()>0);
+      assert.equal(await staticCards.evaluateAll(cards=>cards.every(card=>card.dataset.stratagemType&&card.dataset.turn)),true,"T'au desktop Stratagem metadata missing");
+      const palette=await staticCards.evaluateAll(cards=>Object.fromEntries(cards.map(card=>[card.dataset.stratagemType,getComputedStyle(card).getPropertyValue('--strat-color').trim()])));
+      assert.ok(Object.values(palette).every(Boolean),"T'au desktop type colors missing");
+      await page.goto(`${origin}/books/tau-empire/reader.html#unit-cadre-fireblade`);await page.locator('#unit-cadre-fireblade .related-rules-trigger').click();await page.locator('.related-rules-layer .stratagem:not([hidden])').first().waitFor();
+      assert.equal(await page.locator('.related-rules-layer .stratagem:not([hidden])').evaluateAll(cards=>cards.every(card=>card.dataset.stratagemType&&card.dataset.turn)),true,"T'au dynamic desktop metadata missing");await page.locator('.related-rules-close').click();
+      for(const viewport of [{width:390,height:844},{width:834,height:1194},{width:1194,height:834}]){
+        await page.setViewportSize(viewport);await page.goto(`${origin}/books/tau-empire/mobile/taunar-supremacy-armour.html?audit=1#unit-taunar-supremacy-armour`);
+        const root=page.locator('main [data-term="tau-empire-ability-for-the-greater-good"]').first();await root.scrollIntoViewIfNeeded();await root.click();const cards=page.locator('#termPopupStack .mobile-popup-card');assert.equal(await cards.count(),1,`T'au root popup ${viewport.width}`);
+        const box=await page.locator('#termDialog').boundingBox();assert.ok(box&&box.x>=0&&box.y>=0&&box.x+box.width<=viewport.width&&box.y+box.height<=viewport.height,`T'au popup bounds ${viewport.width}`);
+        const nested=cards.first().locator('[data-term]').first();assert.ok(await nested.count(),"T'au nested popup fixture missing");await nested.click();assert.equal(await cards.count(),2,`T'au nested popup ${viewport.width}`);await page.keyboard.press('Escape');assert.equal(await cards.count(),1);await page.locator('[data-popup-close="0"]').click();assert.equal(await root.evaluate(node=>node===document.activeElement),true);
+        assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth),true,`T'au overflow ${viewport.width}`);
+      }
+      await page.setViewportSize({width:390,height:844});await page.goto(`${origin}/books/tau-empire/mobile/taunar-supremacy-armour.html`);
+      const touchRoot=page.locator('main [data-term="tau-empire-ability-for-the-greater-good"]').first();await touchRoot.scrollIntoViewIfNeeded();await touchGesture(touchRoot,71,{move:true});assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),0);const touchBox=await touchRoot.boundingBox();await page.touchscreen.tap(touchBox.x+touchBox.width/2,touchBox.y+touchBox.height/2);assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1);await page.locator('[data-popup-close="0"]').click();await touchGesture(touchRoot,72,{cancel:true});const cancelBox=await touchRoot.boundingBox();await page.touchscreen.tap(cancelBox.x+cancelBox.width/2,cancelBox.y+cancelBox.height/2);assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1);await page.locator('[data-popup-close="0"]').click();
+      assert.deepEqual(errors,[]);
+    }finally{await context.close();}
+
+    const rosterContext=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});
+    try{
+      const {page,errors}=await observedPage(rosterContext);await page.goto(`${origin}/roster-guides/index.html`);
+      await page.locator('#roster-input').fill("+ FACTION KEYWORD: T'au Empire\n+ DETACHMENT: Kauyon\n+ TOTAL ARMY POINTS: 50pts\n\nChar1: 1x Cadre Fireblade (50 pts)");
+      await page.locator('#roster-form button[type="submit"]').click();await page.waitForFunction(()=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')||'[]').length>0);const rosterId=await page.evaluate(()=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')).at(-1).id);
+      await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?roster=${encodeURIComponent(rosterId)}#unit-cadre-fireblade`);await page.waitForFunction(()=>document.documentElement.dataset.rosterActive==='true');assert.match(page.url(),/cadre-fireblade\.html/);const navState=await page.evaluate(()=>({active:document.documentElement.dataset.rosterActive||'',links:[...document.querySelectorAll('.mobile-unit-groups a')].map(link=>({text:link.textContent.trim(),hidden:link.hidden,groupHidden:Boolean(link.closest('details')?.hidden)})),record:JSON.parse(localStorage.getItem('wh40k-rosters-v1')||'[]')[0]}));assert.equal(navState.links.filter(link=>!link.hidden&&!link.groupHidden).length,1,`T'au roster Phone navigation must stay filtered: ${JSON.stringify(navState)}`);const root=page.locator('main [data-term]').first();await root.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1);await page.locator('[data-popup-close="0"]').click();assert.deepEqual(errors,[]);
+    }finally{await rosterContext.close();}
+
+    const offlineContext=await browser.newContext({serviceWorkers:'allow',viewport:{width:390,height:844}});
+    try{
+      const {page,errors}=await observedPage(offlineContext);await page.goto(`${origin}/index.html?tau-only=1`);await control(page);await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html`);await page.waitForFunction(async()=>Boolean(await caches.match(location.href)));const visited=page.url();await offlineContext.setOffline(true);await page.goto(visited);const shell=await page.evaluate(async()=>({controller:typeof window.TAUPhonePopups==='function',css:Boolean(await caches.match(new URL('./mobile.css?v=2',location.href).href)),mobile:Boolean(await caches.match(new URL('./mobile.js?v=7',location.href).href)),popup:Boolean(await caches.match(new URL('./phone-popup-controller.js?v=1',location.href).href)),types:Boolean(await caches.match(new URL('../scripts/stratagem-types.mjs?v=1',location.href).href))}));assert.equal(Object.values(shell).every(Boolean),true,JSON.stringify(shell));const root=page.locator('main [data-term="tau-empire-ability-for-the-greater-good"]').first();await root.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1);const nested=page.locator('#termPopupStack .mobile-popup-card').first().locator('[data-term]').first();assert.ok(await nested.count());await nested.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),2);assert.deepEqual(errors,[]);
+    }finally{await offlineContext.close();}
+    console.log("PASS T'au scoped desktop, Phone, roster, popup, touch, geometry and cold-offline matrix");
+  }else{
   const failSoftContext=await browser.newContext({serviceWorkers:'block'});
   try{
     const {page,errors}=await observedPage(failSoftContext);
@@ -685,7 +722,7 @@ try{
     const tauDesktopToken=page.locator(`#unit-taunar-supremacy-armour ${tauMeltaSelector}`).getByRole('button',{name:'MELTA 3',exact:true});assert.equal(await tauDesktopToken.count(),1);await tauDesktopToken.scrollIntoViewIfNeeded();await tauDesktopToken.click();const tauDesktopPopup=page.locator('#popupLayer .term-popup[data-popup-term="core-melta"]');await tauDesktopPopup.waitFor();await page.keyboard.press('Escape');assert.equal(await tauDesktopToken.evaluate(node=>node===document.activeElement),true,"T'au desktop token must regain focus");
 
     await page.setViewportSize({width:390,height:844});await page.goto(`${origin}/books/tau-empire/mobile/taunar-supremacy-armour.html`);await assertAssets("T'au Phone");await assertAtomic(tauMeltaSelector,tauMeltaExpected,"T'au Phone MELTA");await assertAtomic(tauAntiSelector,tauAntiExpected,"T'au Phone ANTI");
-    const tauPhoneToken=page.locator(tauMeltaSelector).getByRole('button',{name:'MELTA 3',exact:true});assert.equal(await tauPhoneToken.count(),1);await tauPhoneToken.scrollIntoViewIfNeeded();const tauPhoneBox=await tauPhoneToken.boundingBox();assert.ok(tauPhoneBox);await page.touchscreen.tap(tauPhoneBox.x+tauPhoneBox.width/2,tauPhoneBox.y+tauPhoneBox.height/2);const tauDialog=page.locator('#termDialog');await tauDialog.waitFor({state:'visible'});assert.match(await page.locator('#termTitle').textContent(),/MELTA/i);const tauClose=page.locator('#termDialog .mobile-dialog-head button');assert.equal(await tauClose.count(),1);await tauClose.click();await tauDialog.waitFor({state:'hidden'});
+    const tauPhoneToken=page.locator(tauMeltaSelector).getByRole('button',{name:'MELTA 3',exact:true});assert.equal(await tauPhoneToken.count(),1);await tauPhoneToken.scrollIntoViewIfNeeded();const tauPhoneBox=await tauPhoneToken.boundingBox();assert.ok(tauPhoneBox);await page.touchscreen.tap(tauPhoneBox.x+tauPhoneBox.width/2,tauPhoneBox.y+tauPhoneBox.height/2);const tauDialog=page.locator('#termDialog');await tauDialog.waitFor({state:'visible'});assert.match(await page.locator('#termPopupStack .mobile-popup-card').first().textContent(),/MELTA/i);const tauClose=page.locator('[data-popup-close="0"]');assert.equal(await tauClose.count(),1);await tauClose.click();await tauDialog.waitFor({state:'hidden'});
     const tauFocusToken=page.locator(tauAntiSelector).getByRole('button',{name:'ANTI-INFANTRY 2+',exact:true});await tauFocusToken.click();await tauDialog.waitFor({state:'visible'});await tauClose.click();assert.equal(await tauFocusToken.evaluate(node=>node===document.activeElement),true,"T'au Phone token must regain focus after pointer activation");
     await page.setViewportSize({width:320,height:844});await page.goto(`${origin}/books/tau-empire/mobile/stormsurge.html`);const tauWrapped=await assertAtomic('[data-source-field="weapons.twin-airbursting-fragmentation-projector"] .weapon-tags',[
       {label:'BLAST',term:'core-blast',tag:'BUTTON'},{label:'HEAVY',term:'core-heavy',tag:'BUTTON'},{label:'INDIRECT FIRE',term:'core-indirect-fire',tag:'BUTTON'},{label:'TWIN-LINKED',term:'core-twin-linked',tag:'BUTTON'}
@@ -851,6 +888,25 @@ try{
     assert.deepEqual(errors,[]);console.log("PASS T'au matrix-backed desktop and Phone Compatible Rules");
   }finally{await tauRulesContext.close();}
 
+  const tauConformanceContext=await browser.newContext({serviceWorkers:'block',hasTouch:true,viewport:{width:390,height:844}});
+  try{
+    const {page,errors}=await observedPage(tauConformanceContext);
+    await page.goto(`${origin}/books/tau-empire/reader.html#detachment-kauyon`);
+    const desktopCards=page.locator('#detachment-kauyon .stratagem');
+    assert.ok(await desktopCards.count()>0,"T'au desktop must render Detachment Stratagems");
+    assert.equal(await desktopCards.evaluateAll(cards=>cards.every(card=>card.dataset.stratagemType&&card.dataset.turn)),true,"T'au desktop Stratagems require type and turn metadata");
+    await page.goto(`${origin}/books/tau-empire/mobile/taunar-supremacy-armour.html`);
+    const root=page.locator('main [data-term="tau-empire-ability-for-the-greater-good"]').first();await root.scrollIntoViewIfNeeded();await root.click();
+    const cards=page.locator('#termPopupStack .mobile-popup-card');assert.equal(await cards.count(),1,"T'au Phone root popup must open");
+    const nested=cards.first().locator('[data-term]').first();if(await nested.count()){await nested.click();assert.equal(await cards.count(),2,"T'au Phone nested popup must append");assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),2,"T'au parent popup DOM must survive nested append");await page.keyboard.press('Escape');assert.equal(await cards.count(),1,"Escape must close only the T'au top popup");}
+    const box=await page.locator('#termDialog').boundingBox();assert.ok(box&&box.x>=0&&box.y>=0&&box.x+box.width<=390&&box.y+box.height<=844,"T'au Phone popup must remain viewport bounded");
+    await page.locator('[data-popup-close="0"]').click();assert.equal(await root.evaluate(node=>node===document.activeElement),true,"T'au root close must restore focus");
+    await root.dispatchEvent('pointerdown',{pointerType:'touch',pointerId:31,isPrimary:true,clientX:20,clientY:20});await root.dispatchEvent('pointermove',{pointerType:'touch',pointerId:31,isPrimary:true,clientX:50,clientY:50});await root.dispatchEvent('pointerup',{pointerType:'touch',pointerId:31,isPrimary:true,clientX:50,clientY:50});assert.equal(await cards.count(),0,"T'au scroll gesture must not open popup");
+    const tapBox=await root.boundingBox();assert.ok(tapBox);await page.touchscreen.tap(tapBox.x+tapBox.width/2,tapBox.y+tapBox.height/2);assert.equal(await cards.count(),1,"T'au genuine tap after scroll must open exactly one popup");await page.locator('[data-popup-close="0"]').click();
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth),true,"T'au Phone must not overflow horizontally");
+    assert.deepEqual(errors,[]);
+    console.log("PASS T'au canonical Stratagem metadata, popup stack, focus, touch and geometry");
+  }finally{await tauConformanceContext.close();}
   const rosterGuidesContext=await browser.newContext({serviceWorkers:'block'});
   try{
     const {page,errors}=await observedPage(rosterGuidesContext);
@@ -1150,7 +1206,7 @@ try{
 
   const warmTauContext=await browser.newContext({serviceWorkers:'allow'});
   try{
-    const {page,errors}=await observedPage(warmTauContext);await page.goto(`${origin}/index.html?tau-warm=1`);await control(page);await page.setViewportSize({width:390,height:844});await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?view=mobile`);await page.locator('#relatedRules').scrollIntoViewIfNeeded();await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();await page.waitForFunction(async()=>Boolean(await caches.match(location.href)));const visited=page.url();await warmTauContext.setOffline(true);await page.goto(visited);await page.locator('#relatedRules').scrollIntoViewIfNeeded();await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();assert.ok(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count()>2,"visited T'au Phone page must reopen matrix-backed All Detachments offline");assert.deepEqual(errors,[]);console.log("PASS T'au visited Phone Mode Compatible Rules offline");
+    const {page,errors}=await observedPage(warmTauContext);await page.goto(`${origin}/index.html?tau-warm=1`);await control(page);await page.setViewportSize({width:390,height:844});await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?view=mobile`);await page.locator('#relatedRules').scrollIntoViewIfNeeded();await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();await page.waitForFunction(async()=>Boolean(await caches.match(location.href)));const visited=page.url();await warmTauContext.setOffline(true);await page.goto(visited);await page.locator('#relatedRules').scrollIntoViewIfNeeded();await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();assert.ok(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count()>2,"visited T'au Phone page must reopen matrix-backed All Detachments offline");const shell=await page.evaluate(async()=>({controller:typeof window.TAUPhonePopups==='function',css:Boolean(await caches.match(new URL('./mobile.css?v=2',location.href).href)),mobile:Boolean(await caches.match(new URL('./mobile.js?v=7',location.href).href)),popup:Boolean(await caches.match(new URL('./phone-popup-controller.js?v=1',location.href).href)),types:Boolean(await caches.match(new URL('../scripts/stratagem-types.mjs?v=1',location.href).href))}));assert.equal(Object.values(shell).every(Boolean),true,`T'au current Phone shell unavailable offline: ${JSON.stringify(shell)}`);const root=page.locator('main [data-term]').first();await root.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1,"T'au offline root popup must open");const nested=page.locator('#termPopupStack .mobile-popup-card').first().locator('[data-term]').first();if(await nested.count()){await nested.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),2,"T'au offline nested popup must open");}await page.locator('[data-popup-close="0"]').click();assert.deepEqual(errors,[]);console.log("PASS T'au visited Phone Mode Compatible Rules and popup stack offline");
   }finally{await warmTauContext.close();}
 
   workerRevision='browser-upgrade-a';
@@ -1181,6 +1237,7 @@ try{
     assert.deepEqual(errors,[]);
     console.log('PASS service worker atomic upgrade and old-cache cleanup');
   }finally{await upgradeContext.close();}
+  }
 }finally{
   await browser.close();
   server.close();

@@ -1,51 +1,147 @@
 {
-  "schema": 1,
-  "verifiedAt": "2026-07-30",
-  "layers": [
-    {
-      "id": "faction-pack-v1.1",
-      "authority": "official",
-      "role": "11e-overlay",
-      "title": "T'au Empire Faction Pack v1.1",
-      "legalFrom": "2026-07-22",
-      "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40%2C000_faction_pack_tau_empire-hdrq4u64wm-xopcvjvqfu.pdf",
-      "localFile": "tau-empire-faction-pack-v1.1.pdf",
-      "sha256": "32B985646BAA02A3B505FF3404E91D374A5F53C1D3B8000D7166CA94D1B52675"
-    },
-    {
-      "id": "codex-transcription",
-      "authority": "community",
-      "role": "codex-structure",
-      "title": "BSData Warhammer 40,000 11th Edition - T'au Empire",
-      "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
-      "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/T%27au%20Empire.json",
-      "localFile": "bsdata-tau-empire-11e.json",
-      "status": "requires-codex-verification"
-    },
-    {
-      "id": "codex-parity",
-      "authority": "community",
-      "role": "codex-text-verification",
-      "title": "Wahapedia Warhammer 40,000 11th Edition · T’au Empire",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/",
-      "checkedAt": "2026-07-30",
-      "status": "secondary-source"
-    },
-    {
-      "id": "mfm",
-      "authority": "official",
-      "role": "points-and-roster-contract",
-      "title": "Munitorum Field Manual",
-      "updated": "2026-07-22",
-      "url": "https://mfm.warhammer-community.com/en/tau-empire",
-      "version": "v1.1",
-      "verifiedAt": "2026-07-30",
-      "localFile": "official-mfm-v1.1.json",
-      "status": "verified-live-snapshot"
-    }
-  ],
-  "gates": {
-    "publishAsComplete": false,
-    "reason": "Faction Pack v1.1 and MFM v1.1 are official. Codex text is still a pinned community transcription checked against Wahapedia, so the book remains a verification build."
-  }
+    "schema":  1,
+    "verifiedAt":  "2026-07-30",
+    "layers":  [
+                   {
+                       "id":  "faction-pack-v1.1",
+                       "authority":  "official",
+                       "role":  "11e-overlay",
+                       "title":  "T\u0027au Empire Faction Pack v1.1",
+                       "legalFrom":  "2026-07-22",
+                       "url":  "https://assets.warhammer-community.com/eng_22-07_warhammer_40%2C000_faction_pack_tau_empire-hdrq4u64wm-xopcvjvqfu.pdf",
+                       "localFile":  "tau-empire-faction-pack-v1.1.pdf",
+                       "sha256":  "32B985646BAA02A3B505FF3404E91D374A5F53C1D3B8000D7166CA94D1B52675",
+                       "retrievedAt":  "2026-07-30",
+                       "frozenAt":  "2026-07-30",
+                       "scope":  [
+                                     "Army Rule",
+                                     "3 Detachments",
+                                     "7 Stratagems",
+                                     "7 Enhancements",
+                                     "25 updates",
+                                     "2 FAQs"
+                                 ],
+                       "coverage":  "Official Faction Pack v1.1 overlay",
+                       "knownGaps":  [
+                                         "Does not contain the complete Codex base text."
+                                     ],
+                       "affectedRecords":  [
+                                               "For the Greater Good",
+                                               "official Faction Pack detachments and updates"
+                                           ],
+                       "affectedOutputs":  [
+                                               "reader.html",
+                                               "mobile routes"
+                                           ]
+                   },
+                   {
+                       "id":  "codex-transcription",
+                       "authority":  "community",
+                       "role":  "codex-structure",
+                       "title":  "BSData Warhammer 40,000 11th Edition - T\u0027au Empire",
+                       "commit":  "fa30730fca11fbfe87be90684d481d50e0efaf66",
+                       "url":  "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/T%27au%20Empire.json",
+                       "localFile":  "bsdata-tau-empire-11e.json",
+                       "status":  "requires-codex-verification",
+                       "retrievedAt":  "2026-07-30",
+                       "frozenAt":  "2026-07-30",
+                       "scope":  [
+                                     "39 Codex datasheets",
+                                     "4 Imperial Armour datasheets",
+                                     "20 Legends datasheets",
+                                     "Codex Detachments, Stratagems and Enhancements"
+                                 ],
+                       "coverage":  "Pinned community Codex structure and transcription",
+                       "knownGaps":  [
+                                         "Community transcription is not an authoritative official Codex source."
+                                     ],
+                       "affectedRecords":  [
+                                               "Codex, Imperial Armour and Legends rule-bearing records"
+                                           ],
+                       "affectedOutputs":  [
+                                               "reader.html",
+                                               "mobile routes",
+                                               "generated Compatible Rules"
+                                           ]
+                   },
+                   {
+                       "id":  "codex-parity",
+                       "authority":  "community",
+                       "role":  "codex-text-verification",
+                       "title":  "Wahapedia Warhammer 40,000 11th Edition В· TвЂ™au Empire",
+                       "url":  "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/",
+                       "checkedAt":  "2026-07-30",
+                       "status":  "secondary-source",
+                       "retrievedAt":  "2026-07-30",
+                       "frozenAt":  "2026-07-30",
+                       "scope":  [
+                                     "4 Codex Detachments",
+                                     "24 Stratagems",
+                                     "16 Enhancements"
+                                 ],
+                       "coverage":  "Secondary Codex parity evidence",
+                       "knownGaps":  [
+                                         "Does not provide all-content authoritative parity."
+                                     ],
+                       "affectedRecords":  [
+                                               "Codex parity records"
+                                           ],
+                       "affectedOutputs":  [
+                                               "reader.html",
+                                               "mobile related rules"
+                                           ]
+                   },
+                   {
+                       "id":  "mfm",
+                       "authority":  "official",
+                       "role":  "points-and-roster-contract",
+                       "title":  "Munitorum Field Manual",
+                       "updated":  "2026-07-22",
+                       "url":  "https://mfm.warhammer-community.com/en/tau-empire",
+                       "version":  "v1.1",
+                       "verifiedAt":  "2026-07-30",
+                       "localFile":  "official-mfm-v1.1.json",
+                       "status":  "verified-live-snapshot",
+                       "retrievedAt":  "2026-07-30",
+                       "frozenAt":  "2026-07-30",
+                       "scope":  [
+                                     "43 current units",
+                                     "23 Enhancements",
+                                     "7 Detachments"
+                                 ],
+                       "coverage":  "Official MFM v1.1 points and Detachment Points",
+                       "knownGaps":  [
+                                         "Legends points remain outside the official MFM layer."
+                                     ],
+                       "affectedRecords":  [
+                                               "unit points",
+                                               "Enhancement points",
+                                               "Detachment Points"
+                                           ],
+                       "affectedOutputs":  [
+                                               "points data",
+                                               "roster views"
+                                           ],
+                       "sha256":  "CC1A1820070B72170D29DB936F6C93E41572EFCD5216E161C4AD0E5EB2406841"
+                   }
+               ],
+    "gates":  {
+                  "publishAsComplete":  false,
+                  "reason":  "Faction Pack v1.1 and MFM v1.1 are official. Codex text is still a pinned community transcription checked against Wahapedia, so the book remains a verification build."
+              },
+    "bookId":  "tau-empire",
+    "edition":  "11th Edition",
+    "language":  "en",
+    "publishAsComplete":  false,
+    "precedence":  [
+                       "official-faction-pack-v1.1",
+                       "official-mfm-v1.1",
+                       "community-codex-transcription",
+                       "wahapedia-secondary-parity"
+                   ],
+    "knownGaps":  [
+                      "A complete authoritative official Codex source is not frozen in the repository.",
+                      "All-content Wahapedia parity is not complete; the frozen snapshot covers Compatible Rules associations.",
+                      "SHA-bound manual/public publication acceptance is not yet recorded."
+                  ]
 }

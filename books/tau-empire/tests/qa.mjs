@@ -163,7 +163,7 @@ assert.ok(related.lastIndexOf('data-detachment="core"')>related.indexOf('data-de
 assert.doesNotMatch(reader,/army-book-app\.js/,'T’au must use the same focused runtime architecture as mature books');
 assert.doesNotMatch(reader,/related-rules-matcher|army-related-rules/,'T\'au must not load the legacy Compatible Rules matcher');
 assert.match(reader,/scripts\/roster-filter\.js\?v=2/);
-assert.match(reader,/scripts\/app\.js\?v=7/);
+assert.match(reader,/scripts\/app\.js\?v=8/);
 assert.doesNotMatch(related,/data-eligibility|data-keyword-grants/,'matrix template must not retain legacy matcher inputs');
 assert.match(reader,/Reference in verification/);
 assert.ok(Object.keys(context).length>=350,'T’au Glossary context is incomplete');
@@ -184,4 +184,9 @@ for(const id of ['unit-tidewall-droneport','unit-tidewall-gunrig','unit-tidewall
 }
 assert.equal(new Set([...related.matchAll(/data-rule-id="([^"]+)"/g)].map(match=>match[1])).size,54,'Related Rules inventory differs from 31 Stratagems + 23 Enhancements');
 console.log(`T'au weapon tokens: ${canonicalWeaponLabels.length} labels, ${desktopWeaponTokens.length} desktop, ${phoneWeaponTokens.length} Phone, ${desktopWeaponTokens.filter(token=>token.term).length} interactive, ${desktopWeaponTokens.filter(token=>!token.term).length} unknown (${unknownWeaponLabels.join(', ')}).`);
+const {stratagemTypes}=await import(new URL('../scripts/stratagem-types.mjs',import.meta.url));
+assert.equal(stratagemTypes.size,31,'T’au Stratagem map must cover all rendered faction Stratagems');
+assert.equal([...stratagemTypes.values()].filter(type=>type==='unknown').length,7,'T’au must preserve seven source-untyped Stratagems as unknown');
+assert.equal([...stratagemTypes.values()].filter(type=>type!=='unknown').length,24,'T’au must preserve 24 source-typed Stratagems');
+assert.match(fs.readFileSync(new URL('../scripts/app.js',import.meta.url),'utf8'),/decorateStratagemTypes\(document\)/);
 console.log("T'au Empire QA passed: official v1.1 pack/MFM, 43 current datasheets, 7 detachments, exact Wargear, Glossary and Related Rules contracts.");

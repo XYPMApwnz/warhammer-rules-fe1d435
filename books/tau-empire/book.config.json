@@ -15,7 +15,7 @@
   "rosterSupport": true,
   "compatibleRulesMatrix": true,
   "assetVersions": {
-    "app": 7,
+    "app": 8,
     "book": 5,
     "mobile": 2,
     "rosterFilter": 2,

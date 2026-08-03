@@ -11,9 +11,9 @@ const clean=value=>String(value??'').replaceAll('\u00a0',' ').replace(/\r\n?/g,'
 const slug=value=>clean(value).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const decode=html=>clean(html.replace(/<[^>]+>/g,' ').replaceAll('&quot;','"').replaceAll('&#39;',"'").replaceAll('&amp;','&').replaceAll('&lt;','<').replaceAll('&gt;','>'))
   .replace(/\s+([,.;:!?%)’'])/g,'$1').replace(/([’'])\s+/g,'$1');
-const normalizedSurface=value=>Array.isArray(value)?value.map(normalizedSurface):value&&typeof value==='object'
-  ?Object.fromEntries(Object.entries(value).map(([name,item])=>[name,normalizedSurface(item)]))
-  :typeof value==='string'?clean(value).replace(/\s+/g,' '):value;
+const normalizedSurface=(value,fieldName='')=>Array.isArray(value)?value.map(item=>normalizedSurface(item,fieldName)):value&&typeof value==='object'
+  ?Object.fromEntries(Object.entries(value).map(([name,item])=>[name,normalizedSurface(item,name)]))
+  :typeof value==='string'?(fieldName==='abilities'?clean(value).toLowerCase():clean(value)).replace(/\s+/g,' '):value;
 const escapeRegExp=value=>value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
 
 function exactlyOne(items,label){
@@ -75,8 +75,15 @@ function listField(scope,name,child='li'){
 function weaponField(scope,profileKey){
   const row=exactlyOne(field(scope,`weapons.${profileKey}`),`weapon ${profileKey}`);
   const value=name=>textField(row,name);
+  const nameField=exactlyOne(field(row,'name'),`weapon ${profileKey} name`);
+  const weaponName=/<button\b(?=[^>]*\bclass="[^"]*\bweapon-button\b[^"]*")[^>]*>([\s\S]*?)<\/button>/i.exec(nameField);
+  const abilityTokens=[...nameField.matchAll(/<(button|span)\b(?=[^>]*\bclass="[^"]*\btag\b[^"]*")[^>]*>([\s\S]*?)<\/\1>/gi)];
+  if(profileKey==='solar-atomiser'){
+    const melta=exactlyOne(abilityTokens.filter(match=>attr(match[0],'data-term')==='core-melta'),'Solar atomiser MELTA token');
+    assert.equal(decode(melta[2]),'MELTA 3','Solar atomiser must expose the complete atomic MELTA 3 token');
+  }
   return {
-    name:value('name').replace(/\s+(?:Anti|Assault|Blast|Devastating|Hazardous|Heavy|Ignores|Indirect|Lance|Lethal|Melta|Pistol|Precision|Psychic|Rapid|Sustained|Torrent|Twin-linked).*$/,''),
+    name:weaponName?decode(weaponName[1]):value('name'),
     mode:attr(row,'data-mode'),
     range:value('range'),
     a:value('a'),
@@ -84,7 +91,7 @@ function weaponField(scope,profileKey){
     s:value('s'),
     ap:value('ap'),
     d:value('d'),
-    abilities:((/<small>([\s\S]*?)<\/small>/i.exec(row)?.[1]&&decode(RegExp.$1))||'').replace(/\s*-\s*/g,'-')
+    abilities:(abilityTokens.length?abilityTokens.map(match=>decode(match[2])).join(', '):((/<small>([\s\S]*?)<\/small>/i.exec(row)?.[1]&&decode(RegExp.$1))||'')).replace(/\s*-\s*/g,'-')
   };
 }
 

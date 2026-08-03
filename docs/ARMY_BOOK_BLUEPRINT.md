@@ -371,7 +371,7 @@
 
 ## AB-ROSTER-002 — Roster baseline selection
 - Level: MUST
-- Normative requirement: With a roster, All Detachments MUST be absent and only the roster-selected context MUST be used.
+- Normative requirement: With a roster, All Detachments MUST be absent and only the roster-selected context MUST be used. In roster-scoped Compatible Rules views, group hierarchy labels MUST NOT be duplicated: `Core Stratagems` MUST be shown once, a Detachment title MUST NOT be followed by an additional visible heading containing only `Stratagems`, and cards MUST follow the visible group title directly.
 - Owner: book-local implementation
 - Applicability: all Army Books
 - Required evidence: roster-aware outputs and detachment resolution evidence.

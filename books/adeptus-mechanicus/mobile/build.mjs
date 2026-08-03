@@ -19,6 +19,12 @@ function extract(tag,id,html=source){
   throw new Error(`Unclosed ${tag}#${id}`);
 }
 
+function relatedStratagems(id){
+  return extract('section',id)
+    .replace(' class="content-group"','')
+    .replace(/<h[34] class="(?:category-title|detachment-part-title)">(?:Core )?Stratagems<\/h[34]>\s*/,'');
+}
+
 const clean=value=>value.replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').trim();
 const attribute=value=>value.replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;');
 const mechanicusRulePath=path=>/^books\/adeptus-mechanicus\/(?:index|reader)\.html#/.test(path);
@@ -66,7 +72,7 @@ function relatedRules(){
     const slug=detachment.id.slice(11);
     return `<section class="related-detachment" data-detachment="${slug}">
       <h2>${detachment.title} <span class="detachment-dp">${detachment.dp}</span></h2>
-      <div class="related-kind" data-related-kind="stratagems">${extract('section',`${slug}-stratagems`)}</div>
+      <div class="related-kind" data-related-kind="stratagems">${relatedStratagems(`${slug}-stratagems`)}</div>
       <div class="related-kind" data-related-kind="enhancements" hidden>${extract('section',`${slug}-enhancements`)}</div>
     </section>`;
   }).join('\n')+coreStratagems).replace(/\sdata-eligibility="[^"]*"/g,''),{localRulePaths:false});

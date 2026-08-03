@@ -1,7 +1,6 @@
 <section class="related-detachment" data-detachment="virulent-vectorium">
       <h2>Virulent Vectorium <span class="detachment-dp">3DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="virulent-vectorium-stratagems" data-track="virulent-vectorium-stratagems">
-<h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-putrid-detonation">
 <div class="stratagem-head">
@@ -168,7 +167,6 @@
 <section class="related-detachment" data-detachment="mortarions-hammer">
       <h2>Mortarion’s Hammer <span class="detachment-dp">2DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="mortarions-hammer-stratagems" data-track="mortarions-hammer-stratagems">
-<h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-blighted-land">
 <div class="stratagem-head">
@@ -335,7 +333,6 @@
 <section class="related-detachment" data-detachment="champions-of-contagion">
       <h2>Champions of Contagion <span class="detachment-dp">2DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="champions-of-contagion-stratagems" data-track="champions-of-contagion-stratagems">
-<h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-blessings-of-filth">
 <div class="stratagem-head">
@@ -502,7 +499,6 @@
 <section class="related-detachment" data-detachment="tallyband-summoners">
       <h2>Tallyband Summoners <span class="detachment-dp">2DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="tallyband-summoners-stratagems" data-track="tallyband-summoners-stratagems">
-<h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-persistent-pests">
 <div class="stratagem-head">
@@ -672,7 +668,6 @@
 <section class="related-detachment" data-detachment="shamblerot-vectorium">
       <h2>Shamblerot Vectorium <span class="detachment-dp">2DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="shamblerot-vectorium-stratagems" data-track="shamblerot-vectorium-stratagems">
-<h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-grip-of-the-walking-pox">
 <div class="stratagem-head">
@@ -839,7 +834,6 @@
 <section class="related-detachment" data-detachment="death-lords-chosen">
       <h2>Death Lord’s Chosen <span class="detachment-dp">2DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="death-lords-chosen-stratagems" data-track="death-lords-chosen-stratagems">
-<h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-blooming-pestilence">
 <div class="stratagem-head">
@@ -1006,7 +1000,6 @@
 <section class="related-detachment" data-detachment="contagion-engines">
       <h2>Contagion Engines <span class="detachment-dp">1DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="contagion-engines-stratagems" data-track="contagion-engines-stratagems">
-<h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-fresh-vectors">
 <div class="stratagem-head">
@@ -1097,7 +1090,6 @@
 <section class="related-detachment" data-detachment="flyblown-host">
       <h2>Flyblown Host <span class="detachment-dp">1DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="flyblown-host-stratagems" data-track="flyblown-host-stratagems">
-<h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-nauseating-paroxysms">
 <div class="stratagem-head">
@@ -1189,7 +1181,6 @@
 <section class="related-detachment" data-detachment="paragons-of-putrescence">
       <h2>Paragons of Putrescence <span class="detachment-dp">1DP</span></h2>
       <div class="related-kind" data-related-kind="stratagems"><section class="detachment-part" id="paragons-of-putrescence-stratagems" data-track="paragons-of-putrescence-stratagems">
-<h4 class="detachment-part-title">Stratagems</h4>
 <div class="detachment-content stratagem-grid">
 <article class="stratagem surface" id="stratagem-territorial-infection">
 <div class="stratagem-head">
@@ -1277,7 +1268,7 @@
 </section></div>
     </section><section class="related-detachment related-core" data-detachment="core">
       <h2>Core Stratagems</h2>
-      <div class="related-kind" data-related-kind="stratagems"><section class="content-group" id="core-stratagems" data-track="core-stratagems"><h3 class="category-title">Core Stratagems</h3><p class="lead">Universal Stratagems available to every army. Datasheet tools only show the cards the selected unit can legally target.</p><div class="detachment-content stratagem-grid core-stratagem-grid"><article class="stratagem surface" id="core-stratagem-command-re-roll"><div class="stratagem-head"><div><h3><button class="term-button" data-term="core-rule-15-02-command-re-roll" data-term-title="COMMAND RE-ROLL" data-term-summary="1CP Core Stratagem A great commander can bend even the vagaries of fate and fortune to their will, the better to ensure victory. WHEN: Any phase, just after you make one of the following rolls for a friendly unit or model: • Advance roll • Charge roll • Damage roll • Hazard roll • Hit roll • Save roll • Wound roll • A roll to determine the number of attacks generated with a weapon. TARGET: That unit or model. EFFECT: You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full)." data-full-rule-path="books/core-rules/reader/stratagems.html#rule-15-02">COMMAND RE-ROLL</button></h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div><p class="field" data-source-field="when"><b>WHEN</b><br>Any phase, just after you make one of the following rolls for a friendly unit or model:<br>• Advance roll<br>• Charge roll<br>• Damage roll<br>• Hazard roll<br>• Hit roll<br>• Save roll<br>• Wound roll<br>• A roll to determine the number of attacks generated with a weapon.</p><p class="field" data-source-field="target"><b>TARGET</b><br>That unit or model.</p><p class="field" data-source-field="effect"><b>EFFECT</b><br>You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).</p></article>
+      <div class="related-kind" data-related-kind="stratagems"><section id="core-stratagems" data-track="core-stratagems"><p class="lead">Universal Stratagems available to every army. Datasheet tools only show the cards the selected unit can legally target.</p><div class="detachment-content stratagem-grid core-stratagem-grid"><article class="stratagem surface" id="core-stratagem-command-re-roll"><div class="stratagem-head"><div><h3><button class="term-button" data-term="core-rule-15-02-command-re-roll" data-term-title="COMMAND RE-ROLL" data-term-summary="1CP Core Stratagem A great commander can bend even the vagaries of fate and fortune to their will, the better to ensure victory. WHEN: Any phase, just after you make one of the following rolls for a friendly unit or model: • Advance roll • Charge roll • Damage roll • Hazard roll • Hit roll • Save roll • Wound roll • A roll to determine the number of attacks generated with a weapon. TARGET: That unit or model. EFFECT: You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full)." data-full-rule-path="books/core-rules/reader/stratagems.html#rule-15-02">COMMAND RE-ROLL</button></h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div><p class="field" data-source-field="when"><b>WHEN</b><br>Any phase, just after you make one of the following rolls for a friendly unit or model:<br>• Advance roll<br>• Charge roll<br>• Damage roll<br>• Hazard roll<br>• Hit roll<br>• Save roll<br>• Wound roll<br>• A roll to determine the number of attacks generated with a weapon.</p><p class="field" data-source-field="target"><b>TARGET</b><br>That unit or model.</p><p class="field" data-source-field="effect"><b>EFFECT</b><br>You re-roll that roll. If you are rolling more than one dice together, select one of those dice to re-roll (excluding charge rolls, which you must re-roll in full).</p></article>
 <article class="stratagem surface" id="core-stratagem-epic-challenge"><div class="stratagem-head"><div><h3><button class="term-button" data-term="core-rule-15-03-epic-challenge" data-term-title="EPIC CHALLENGE" data-term-summary="1CP Core Stratagem The legends of the 41st millennium are replete with deadly duels between mighty champions. WHEN: Fight phase, just after a friendly CHARACTER unit is selected to fight. TARGET: That CHARACTER unit. EFFECT: Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability." data-full-rule-path="books/core-rules/reader/stratagems.html#rule-15-03">EPIC CHALLENGE</button></h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div><p class="field" data-source-field="when"><b>WHEN</b><br>Fight phase, just after a friendly CHARACTER unit is selected to fight.</p><p class="field" data-source-field="target"><b>TARGET</b><br>That CHARACTER unit.</p><p class="field" data-source-field="effect"><b>EFFECT</b><br>Select one CHARACTER model in your unit. Until the end of the phase, that model’s melee weapons have the [PRECISION] ability.</p></article>
 <article class="stratagem surface" id="core-stratagem-insane-bravery"><div class="stratagem-head"><div><h3><button class="term-button" data-term="core-rule-15-04-insane-bravery" data-term-title="INSANE BRAVERY" data-term-summary="1CP Core Stratagem Indifferent to their own survival, these warriors hold their ground against seemingly impossible odds. WHEN: Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit. TARGET: That unit. EFFECT: That battle-shock roll is automatically successful. RESTRICTIONS: You cannot use this stratagem more than once per battle." data-full-rule-path="books/core-rules/reader/stratagems.html#rule-15-04">INSANE BRAVERY</button></h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div><p class="field" data-source-field="when"><b>WHEN</b><br>Battle-shock step of your Command phase, just before you make a battle-shock roll for a friendly unit.</p><p class="field" data-source-field="target"><b>TARGET</b><br>That unit.</p><p class="field" data-source-field="effect"><b>EFFECT</b><br>That battle-shock roll is automatically successful.</p><p class="field" data-source-field="restrictions"><b>RESTRICTIONS</b><br>You cannot use this stratagem more than once per battle.</p></article>
 <article class="stratagem surface" id="core-stratagem-explosives"><div class="stratagem-head"><div><h3><button class="term-button" data-term="core-rule-15-05-explosives" data-term-title="EXPLOSIVES" data-term-summary="1CP Core Stratagem Priming grenades or other explosives, these warriors draw back and hurl death into the enemy’s midst. WHEN: Your Shooting phase. TARGET: One friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn. EFFECT: Resolve the following sequence: • Select one EXPLOSIVES/GRENADES model in your unit. • Select one unengaged enemy unit within 8&quot; of and visible to that model. • Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound Mortal Wounds." data-full-rule-path="books/core-rules/reader/stratagems.html#rule-15-05">EXPLOSIVES</button></h3><span class="stratagem-type">Core Stratagem</span></div><div class="cp">1CP</div></div><p class="field" data-source-field="when"><b>WHEN</b><br>Your Shooting phase.</p><p class="field" data-source-field="target"><b>TARGET</b><br>One friendly unengaged EXPLOSIVES/GRENADES unit that is eligible to shoot and did not make an advance move this turn.</p><p class="field" data-source-field="effect"><b>EFFECT</b><br>Resolve the following sequence:<br>• Select one EXPLOSIVES/GRENADES model in your unit.<br>• Select one unengaged enemy unit within 8&quot; of and visible to that model.<br>• Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound (06.02).</p></article>

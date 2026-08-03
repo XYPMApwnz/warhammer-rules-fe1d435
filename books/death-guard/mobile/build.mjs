@@ -21,6 +21,12 @@ function extract(tag, id, html = source) {
   throw new Error(`Unclosed ${tag}#${id}`);
 }
 
+function relatedStratagems(id) {
+  return extract('section', id)
+    .replace(' class="content-group"', '')
+    .replace(/<h[34] class="(?:category-title|detachment-part-title)">(?:Core )?Stratagems<\/h[34]>\s*/, '');
+}
+
 const clean = value => value.replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').trim();
 const attribute = value => value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
 function hydrateTerms(html) {
@@ -67,13 +73,13 @@ const routes = [...staticRoutes, ...detachments, ...units];
 function relatedRules() {
   const core = `<section class="related-detachment related-core" data-detachment="core">
       <h2>Core Stratagems</h2>
-      <div class="related-kind" data-related-kind="stratagems">${extract('section', 'core-stratagems')}</div>
+      <div class="related-kind" data-related-kind="stratagems">${relatedStratagems('core-stratagems')}</div>
     </section>`;
   return hydrateTerms(detachments.map(detachment => {
     const slug = detachment.id.slice(11);
     return `<section class="related-detachment" data-detachment="${slug}">
       <h2>${detachment.title} <span class="detachment-dp">${detachment.dp}</span></h2>
-      <div class="related-kind" data-related-kind="stratagems">${extract('section', `${slug}-stratagems`)}</div>
+      <div class="related-kind" data-related-kind="stratagems">${relatedStratagems(`${slug}-stratagems`)}</div>
       <div class="related-kind" data-related-kind="enhancements" hidden>${extract('section', `${slug}-enhancements`)}</div>
     </section>`;
   }).join('\n') + core);

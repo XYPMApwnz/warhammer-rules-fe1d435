@@ -20,6 +20,6 @@ assert.ok(getCompatibleRules(generated,'unit-hive-tyrant',{detachmentId:'all'}).
 const selectedTrygon=getCompatibleRules(generated,'unit-trygon',{detachmentId:'subterranean-assault'});assert.equal(selectedTrygon.find(row=>row.ruleId==='trygon-prime')?.state,'match');assert.ok(selectedTrygon.every(row=>row.scope==='core'||row.detachmentId==='subterranean-assault'));
 const reader=fs.readFileSync(path.join(root,'reader.html'),'utf8'),phone=fs.readFileSync(path.join(root,'mobile','trygon.html'),'utf8');
 for(const html of [reader,phone])assert.doesNotMatch(html,/related-rules-matcher|army-related-rules/);
-assert.match(reader,/scripts\/app\.js\?v=6/);assert.match(phone,/mobile\.js\?v=6/);
+assert.match(reader,/scripts\/app\.js\?v=7/);assert.match(phone,/mobile\.js\?v=7/);
 assert.doesNotMatch(fs.readFileSync(path.join(root,'mobile','related-rules.inc'),'utf8'),/data-eligibility|data-keyword-grants/);
 console.log('Tyranids Compatible Rules QA passed: 1947 matrix rows, 90 conditional, legacy matcher absent.');

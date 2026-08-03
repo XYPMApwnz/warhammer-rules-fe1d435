@@ -9,6 +9,7 @@
   const cards=new Map([...document.querySelectorAll('.unit-card[data-unit-title]')].map(card=>[normalize(card.dataset.unitTitle),card])),selected=new Map();
   for(const unit of roster.units){const card=cards.get(normalize(unit.name));if(!card)continue;const entry=selected.get(card.id)||{card,units:[],points:0};entry.units.push(unit);entry.points+=Number(unit.points)||0;selected.set(card.id,entry);}
   const detachments=(roster.detachments?.length?roster.detachments.map(item=>item.label):[roster.detachment]).filter(Boolean),detachmentIds=[...new Set(detachments.map(slug))];
+  if(detachmentIds.length!==1){location.replace('../../roster-guides/index.html');return;}
   const enhancementIds=new Map([...document.querySelectorAll('.enhancement[data-enhancement-title][data-rule-id]')].map(card=>[normalize(card.dataset.enhancementTitle),card.dataset.ruleId])),enhancementRuleIdsByUnitId={};
   for(const [cardId,entry] of selected){const owners=new Set(entry.units.map(unit=>unit.id));enhancementRuleIdsByUnitId[cardId]=[...new Set((roster.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&owners.has(item.ownerUnitId)).map(item=>enhancementIds.get(normalize(item.name))).filter(Boolean))];}
   window.TYRANIDS_ROSTER_GUIDE=Object.freeze({detachmentIds,enhancementRuleIdsByUnitId:Object.freeze(enhancementRuleIdsByUnitId)});

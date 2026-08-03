@@ -178,6 +178,8 @@ try{
   try{
     const {page,errors}=await observedPage(tyranidsContext);
     await page.goto(`${origin}/books/tyranids/reader.html#unit-trygon`);
+    const canonicalTypes=await page.locator('.document .stratagem').evaluateAll(cards=>cards.map(card=>card.dataset.stratagemType));
+    assert.ok(canonicalTypes.some(type=>/^(battle-tactic|strategic-ploy|wargear|epic-deed)$/.test(type)),'Tyranids canonical Codex Stratagems must expose source-backed type metadata');
     await page.locator('#unit-trygon .related-rules-trigger').click();
     assert.equal(await page.locator('.related-rules-layer .full-related-filter summary').textContent(),'All Detachments','Tyranids desktop must start with All Detachments');
     assert.ok(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count()>2,'Tyranids desktop All Detachments must show faction rules from multiple Detachments');
@@ -190,6 +192,8 @@ try{
     await page.locator('.related-rules-layer [data-kind="enhancements"]:not([hidden])').click();
     await page.locator('.related-rules-layer [data-rule-id="trygon-prime"]:not([hidden])').waitFor();
     assert.equal(await page.locator('.related-rules-layer [data-rule-id="trygon-prime"] .compatibility-status').count(),0,'selected Subterranean Assault must resolve the Trygon Detachment-selection condition');
+    const desktopStratagems=await page.locator('.related-rules-layer .stratagem:not([hidden])').evaluateAll(cards=>cards.map(card=>({type:card.dataset.stratagemType,turn:card.dataset.turn,color:getComputedStyle(card).getPropertyValue('--strat-color').trim()})));
+    assert.ok(desktopStratagems.length>2&&desktopStratagems.every(card=>/^(battle-tactic|strategic-ploy|wargear|epic-deed|core|unknown)$/.test(card.type)&&/^(ANY|YOUR|THEIR) TURN$/.test(card.turn)&&card.color),'Tyranids desktop Stratagem metadata must use canonical source types or the neutral unknown fallback');
 
     await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html`);
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();
@@ -201,6 +205,28 @@ try{
     await page.locator('#relatedDetachment').selectOption('invasion-fleet');
     await page.locator('[data-related-tab="stratagems"]').click();
     assert.equal(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count(),2,'selected Tyranids Phone Detachment must show Core plus that Detachment');
+    const phoneStratagems=await page.locator('#relatedRulesContent .stratagem:not([hidden])').evaluateAll(cards=>cards.map(card=>({type:card.dataset.stratagemType,turn:card.dataset.turn,color:getComputedStyle(card).getPropertyValue('--strat-color').trim()})));
+    assert.ok(phoneStratagems.length>2&&phoneStratagems.every(card=>/^(battle-tactic|strategic-ploy|wargear|epic-deed|core|unknown)$/.test(card.type)&&/^(ANY|YOUR|THEIR) TURN$/.test(card.turn)&&card.color),'Tyranids Phone Compatible Stratagems must preserve source type, neutral fallback, and turn metadata');
+
+    const rootTrigger=page.locator('main [data-term="core-twin-linked"]').first();
+    assert.equal(await rootTrigger.count(),1,'Tyranids popup fixture must expose the Twin-linked term');
+    await rootTrigger.scrollIntoViewIfNeeded();await rootTrigger.click();
+    const popupCards=page.locator('#termPopupStack .mobile-popup-card');
+    assert.equal(await popupCards.count(),1,'Tyranids Phone root popup must open one level');
+    assert.equal(await popupCards.first().evaluate(card=>document.activeElement===card),true,'Tyranids Phone root popup must receive focus');
+    const parentHandle=await popupCards.first().elementHandle();
+    const nestedTrigger=popupCards.first().locator('[data-term]').first();
+    assert.equal(await nestedTrigger.count(),1,'Tyranids Leader popup must expose a nested canonical term');
+    await nestedTrigger.click();
+    assert.equal(await popupCards.count(),2,'Tyranids nested popup must append one level');
+    assert.equal(await popupCards.first().evaluate((card,parent)=>card===parent,parentHandle),true,'Tyranids nested popup must preserve parent DOM');
+    const geometry=await page.evaluate(()=>{const dialog=document.getElementById('termDialog'),stack=document.getElementById('termPopupStack'),card=stack.lastElementChild,close=card.querySelector('[data-popup-close]'),box=node=>{const r=node.getBoundingClientRect();return{x:r.x,y:r.y,right:r.right,bottom:r.bottom,width:r.width,height:r.height};};return{viewport:{width:innerWidth,height:innerHeight},dialog:box(dialog),stack:box(stack),card:box(card),close:box(close),overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth,stackOverflow:getComputedStyle(stack).overflowY};});
+    for(const box of [geometry.dialog,geometry.stack,geometry.card,geometry.close]){assert.ok(box.x>=0&&box.y>=0&&box.right<=geometry.viewport.width+1&&box.bottom<=geometry.viewport.height+1,`Tyranids popup geometry outside viewport: ${JSON.stringify({geometry,box})}`);}
+    assert.equal(geometry.overflow,0,'Tyranids Phone popup must not create horizontal overflow');
+    assert.match(geometry.stackOverflow,/auto|scroll/,'Tyranids popup stack must own internal scrolling');
+    await page.keyboard.press('Escape');assert.equal(await popupCards.count(),1,'Escape must close only the Tyranids top popup level');
+    await page.locator('[data-popup-close="0"]').click();assert.equal(await popupCards.count(),0,'Tyranids root close must close the chain');assert.equal(await rootTrigger.evaluate(node=>document.activeElement===node),true,'Tyranids root close must restore document focus');
+    await rootTrigger.click();await page.locator('#termDialog').click({position:{x:2,y:2}});assert.equal(await popupCards.count(),0,'Tyranids dialog backdrop must close the root chain');
 
     await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'tyr-owner-filter',roster:{faction:'Tyranids',detachment:'Invasion Fleet',detachments:[{label:'Invasion Fleet'}],declared:235,units:[{id:'tyr-owner-1',name:'Hive Tyrant',quantity:1,points:205}],enhancements:[{name:'Adaptive Biology',ownerUnitId:'tyr-owner-1',ownerStatus:'resolved'}]}}])));
     await page.goto(`${origin}/books/tyranids/reader.html?roster=tyr-owner-filter#unit-hive-tyrant`);
@@ -220,6 +246,9 @@ try{
     await page.goto(`${origin}/books/tyranids/reader.html?roster=tyr-wrong-faction#unit-hive-tyrant`);
     await page.waitForURL('**/roster-guides/index.html');
     assert.equal(await page.locator('.related-rules-trigger').count(),0,'wrong-faction Tyranids desktop roster must remain fail closed');
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'tyr-multiple-detachments',roster:{faction:'Tyranids',detachments:[{label:'Invasion Fleet'},{label:'Synaptic Nexus'}],units:[{id:'tyr-multi-1',name:'Hive Tyrant',quantity:1,points:205}]}}])));
+    await page.goto(`${origin}/books/tyranids/reader.html?roster=tyr-multiple-detachments#unit-hive-tyrant`);await page.waitForURL('**/roster-guides/index.html');assert.equal(await page.locator('.related-rules-trigger').count(),0,'multiple-Detachment Tyranids desktop roster must fail closed');
+    await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html?roster=tyr-multiple-detachments`);assert.equal(await page.locator('#relatedRules').count(),0,'multiple-Detachment Tyranids Phone roster must fail closed');
     await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html?roster=missing-roster`);
     assert.equal(await page.locator('#relatedRules').count(),0,'missing Tyranids Phone roster must fail closed');
     await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1','{broken'));
@@ -1112,8 +1141,11 @@ try{
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();
     await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
     assert.ok(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count()>2,'visited Tyranids Phone page must reopen matrix-backed All Detachments offline');
+    const shell=await page.evaluate(async()=>({controller:typeof window.TYRPhonePopups==='function',css:Boolean(await caches.match(new URL('./mobile.css?v=2',location.href).href)),mobile:Boolean(await caches.match(new URL('./mobile.js?v=7',location.href).href)),popup:Boolean(await caches.match(new URL('./phone-popup-controller.js?v=1',location.href).href))}));
+    assert.equal(Object.values(shell).every(Boolean),true,`Tyranids current Phone shell unavailable offline: ${JSON.stringify(shell)}`);
+    const root=page.locator('main [data-term="core-twin-linked"]').first();await root.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1,'Tyranids offline root popup must open');const nested=page.locator('#termPopupStack .mobile-popup-card').first().locator('[data-term]').first();await nested.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),2,'Tyranids offline nested popup must open');await page.locator('[data-popup-close="0"]').click();
     assert.deepEqual(errors,[]);
-    console.log('PASS Tyranids visited Phone Mode Compatible Rules offline');
+    console.log('PASS Tyranids visited Phone Mode Compatible Rules and popup stack offline');
   }finally{await warmTyranidsContext.close();}
 
   const warmTauContext=await browser.newContext({serviceWorkers:'allow'});

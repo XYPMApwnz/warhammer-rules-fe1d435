@@ -28,11 +28,11 @@
 
 ## AB-SCOPE-004 — Implementation diversity
 - Level: MAY
-- Normative requirement: Different Army Books MAY use different internal implementations when each implementation satisfies the same applicable canonical contract.
+- Normative requirement: An Army Book MAY use an internal implementation different from Death Guard only when Death Guard has no technically compatible capability, when a documented technically necessary book-local difference conforms to `AB-SCOPE-007`, or when a separate canonical requirement explicitly requires a different implementation. Equivalent end behavior alone MUST NOT justify an alternative implementation when a technically compatible Death Guard production pattern exists, and every deviation MUST conform to `AB-SCOPE-007`.
 - Owner: shared Army Book capability; book-local implementation
 - Applicability: all Army Books
-- Required evidence: conformance evidence proving equivalent required behavior without requiring identical internal architecture.
-- Book-specific extensions: book-local runtime structures and implementation strategies are permitted when they do not weaken the baseline.
+- Required evidence: `static-source-inspection` of the applicable Death Guard production path or evidence that the capability is absent; documented technical necessity or the canonical requirement requiring a different implementation; conformance evidence and applicable tests proving the deviation preserves the canonical contract and satisfies `AB-SCOPE-007`.
+- Book-specific extensions: book-local implementation diversity MAY remain for genuinely different mechanics, content schemas, generated DOM structures, route formats, ownership/cardinality models, and capabilities absent from Death Guard, subject to `AB-SCOPE-007`.
 
 ## AB-SCOPE-005 — Conformance status contract
 - Level: MUST

@@ -11,6 +11,7 @@ const json=file=>JSON.parse(read(file));
 const entry=read('index.html');
 const html=read('reader.html');
 const mobileArmyRules=read('mobile/army-rules.html');
+const mobileUnitPage=read('mobile/skitarii-rangers.html');
 const deathGuardRoot=path.resolve(root,'..','death-guard');
 const deathGuardRead=file=>fs.readFileSync(path.join(deathGuardRoot,file),'utf8');
 const sharedTargets=fs.readFileSync(path.resolve(root,'..','shared','navigation-targets.js'),'utf8');
@@ -49,6 +50,8 @@ try{new vm.Script(sharedGlossaryAutolink,{filename:'../shared/glossary-autolink.
 
 const rosterLogicContext={window:{}};vm.runInNewContext(read('scripts/roster-enhancements.js'),rosterLogicContext);
 const rosterLogic=rosterLogicContext.window.AMRosterEnhancements;
+const phoneLogicContext={window:{},URL};vm.runInNewContext(read('mobile/mobile.js'),phoneLogicContext);
+const phoneLogic=phoneLogicContext.window.AMPhoneRoster;
 const detachmentSlug=value=>String(value||'').toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const detachmentInventory=allDetachments.map(item=>detachmentSlug(item.title));
 const knownDetachment=allDetachments[0].title,knownDetachmentId=detachmentSlug(knownDetachment);
@@ -69,6 +72,26 @@ const rosterRules=rosterLogic.filterCompatibleRules(compatibleFixture,true,new S
 check('aggregated Related Rules hide owner Enhancements',rosterLogic.filterCompatibleRules(compatibleFixture,true,new Set()).every(rule=>rule.kind!=='enhancement'));
 check('roster Related Rules preserve Core, faction and conditional Stratagems',rosterRules.some(rule=>rule.ruleId==='core')&&rosterRules.some(rule=>rule.ruleId==='faction'&&rule.state==='conditional'));
 check('no-roster All Detachments leaves all compatible rows available',rosterLogic.filterCompatibleRules(compatibleFixture,false,new Set()).length===compatibleFixture.length);
+const phoneUnits=['unit-skitarii-rangers','unit-skitarii-vanguard','unit-onager-dunecrawler'];
+const phoneParsed={faction:'Adeptus Mechanicus',detachments:[{label:knownDetachment}],units:[{id:'phone-unit-1',name:'Skitarii Rangers',points:85},{id:'phone-unit-2',name:'Skitarii Rangers',points:85}],enhancements:[{name:'Exact Owner Enhancement',ownerStatus:'resolved',ownerUnitId:'phone-unit-1'}]};
+const phoneContext=phoneLogic.resolveContext(phoneParsed,detachmentInventory,phoneUnits,rosterLogic.resolveDetachment),rejectsPhone=parsed=>{try{phoneLogic.resolveContext(parsed,detachmentInventory,phoneUnits,rosterLogic.resolveDetachment);return false;}catch{return true;}};
+check('Phone resolves one known Detachment',phoneContext.detachmentId===knownDetachmentId);
+check('Phone zero Detachment fails closed',rejectsPhone({...phoneParsed,detachments:[],detachment:''}));
+check('Phone unknown Detachment fails closed',rejectsPhone({...phoneParsed,detachments:[{label:'Unknown Forge'}]}));
+check('Phone ambiguous Detachments fail closed',rejectsPhone({...phoneParsed,detachments:[{label:allDetachments[0].title},{label:allDetachments[1].title}]}));
+check('Phone duplicate normalized Detachment remains valid',phoneLogic.resolveContext({...phoneParsed,detachments:[{label:knownDetachment},{label:knownDetachment.toUpperCase()}]},detachmentInventory,phoneUnits,rosterLogic.resolveDetachment).detachmentId===knownDetachmentId);
+const phoneNavigation={detachmentIds:[knownDetachmentId,detachmentSlug(allDetachments[1].title)],categories:[{id:'battleline',unitIds:['unit-skitarii-rangers','unit-skitarii-vanguard']},{id:'other',unitIds:['unit-onager-dunecrawler']}]},filteredPhoneNavigation=phoneLogic.filterNavigation(phoneNavigation,phoneContext),unfilteredPhoneNavigation=phoneLogic.filterNavigation(phoneNavigation,null);
+check('Phone navigation keeps only resolved Detachment',JSON.stringify(filteredPhoneNavigation.detachmentIds)===JSON.stringify([knownDetachmentId]));
+check('Phone navigation keeps one link for duplicate datasheet instances',JSON.stringify(filteredPhoneNavigation.categories)===JSON.stringify([{id:'battleline',unitIds:['unit-skitarii-rangers']}]));
+check('Phone navigation removes empty categories and keeps non-empty groups',filteredPhoneNavigation.categories.length===1&&filteredPhoneNavigation.categories[0].id==='battleline');
+check('Phone current datasheet outside roster fails closed',!phoneLogic.routeAllowed('unit','unit-skitarii-vanguard',phoneContext)&&phoneLogic.routeAllowed('unit','unit-skitarii-rangers',phoneContext)&&!phoneLogic.routeAllowed('detachment',detachmentSlug(allDetachments[1].title),phoneContext));
+const phoneCard=phoneLogic.cardContext(phoneContext,'unit-skitarii-rangers'),phoneOwnership=rosterLogic.resolveOwnership(phoneParsed,phoneCard.instances);
+check('Phone duplicate instances retain exact owners without card-level Enhancement',phoneCard.instances.length===2&&phoneCard.points===170&&phoneOwnership.instances[0].enhancements.length===1&&phoneOwnership.instances[1].enhancements.length===0&&phoneOwnership.cardEnhancements.length===0);
+const phoneRosterUrl=phoneLogic.withRosterQuery('https://example.test/books/adeptus-mechanicus/mobile/skitarii-rangers.html?old=1#profile','roster-1','#profile');
+const phoneSwitchUrl=phoneLogic.viewSwitchHref('https://example.test/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers','roster=roster-1','#unit-skitarii-rangers');
+check('Phone route query keeps one roster ID and hash',new URL(phoneRosterUrl).searchParams.getAll('roster').length===1&&new URL(phoneRosterUrl).hash==='#profile');
+check('Phone desktop switch preserves roster query and hash',new URL(phoneSwitchUrl).searchParams.get('roster')==='roster-1'&&new URL(phoneSwitchUrl).hash==='#unit-skitarii-rangers');
+check('Phone no-roster navigation remains complete',unfilteredPhoneNavigation.detachmentIds.length===2&&unfilteredPhoneNavigation.categories.flatMap(category=>category.unitIds).length===3);
 
 const markup=html.replace(/<script[\s\S]*?<\/script>/gi,'');
 const ids=[...markup.matchAll(/\sid="([^"]+)"/g)].map(x=>x[1]);
@@ -164,6 +187,14 @@ check('desktop Doctrina selector remains interactive',markup.includes('class="pr
 check('Phone Doctrina shows both canonical branches',mobileArmyRules.includes('id="protector-imperative"')&&mobileArmyRules.includes('id="conqueror-imperative"')&&!/<section id="(?:protector|conqueror)-imperative"[^>]*\shidden\b/.test(mobileArmyRules));
 check('Phone Doctrina has no dead selector controls',!mobileArmyRules.includes('class="protocol-switch"')&&!mobileArmyRules.includes('data-protocol="protector"')&&!mobileArmyRules.includes('data-protocol="conqueror"'));
 check('Phone Doctrina preserves glossary rule links',mobileArmyRules.includes('id="protector-imperative" data-track="protector-imperative"')&&mobileArmyRules.includes('id="conqueror-imperative" data-track="conqueror-imperative"')&&mobileArmyRules.includes('data-full-rule-path="books/core-rules/reader/core-abilities.html#rule-24-16"'));
+check('Phone navigation has stable roster route metadata',(mobileUnitPage.match(/data-route-type="detachment"/g)||[]).length===10&&(mobileUnitPage.match(/data-route-type="unit"/g)||[]).length===38&&(mobileUnitPage.match(/data-unit-category=/g)||[]).length===6);
+check('Phone no-roster keeps Start',mobileUnitPage.includes('href="./index.html" data-route-type="start"'));
+check('Phone no-roster keeps Army Rules',mobileUnitPage.includes('href="./army-rules.html" data-route-type="section"'));
+check('Phone no-roster keeps Updates',mobileUnitPage.includes('href="./updates.html" data-route-type="section"'));
+check('Phone no-roster keeps Mega Glossary',mobileUnitPage.includes('Mega Glossary'));
+check('Phone no-roster keeps Roster Guides',mobileUnitPage.includes('data-roster-guides-link'));
+check('Phone no-roster keeps desktop switch',mobileUnitPage.includes('data-view-switch'));
+check('Phone no-roster keeps All Detachments',mobileUnitPage.includes('<option value="all">All detachments</option>'));
 check('local official transcripts are embedded',(markup.match(/class="source-transcript"/g)||[]).length===rules.updates.length+rules.detachments.length+factionRules.datasheets.length+2);
 check('Codex transcription status is explicit',markup.includes('Codex transcription layer')&&markup.includes('38 indexed datasheets'));
 check('official MFM verification is visible',markup.includes('Munitorum Field Manual v1.1')&&markup.includes('All 34 current Enhancement costs'));

@@ -1,4 +1,31 @@
-(async function(){
+(function(root){
+  'use strict';
+  const slug=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  const resolveContext=(parsed,detachmentIds,unitIds,resolveDetachment)=>{
+    const faction=String(parsed?.faction||'').replace(/^(?:Chaos|Imperium)\s*[-–—]\s*/i,'').trim().toLowerCase();
+    if(faction!=='adeptus mechanicus'||!parsed?.units?.length)throw new Error('Roster faction or units unavailable');
+    const labels=parsed.detachments?.length?parsed.detachments.map(item=>item.label):[parsed.detachment];
+    const detachmentId=resolveDetachment(labels,detachmentIds);
+    if(!detachmentId)throw new Error('Roster Detachment unavailable');
+    const knownUnits=new Set(unitIds),instancesByUnitId={};
+    for(const instance of parsed.units){const unitId=`unit-${slug(instance.name)}`;if(knownUnits.has(unitId))(instancesByUnitId[unitId]||=[]).push(instance);}
+    const resolvedUnitIds=Object.keys(instancesByUnitId);
+    if(!resolvedUnitIds.length)throw new Error('Roster units unavailable');
+    return{parsed,detachmentId,unitIds:resolvedUnitIds,instancesByUnitId};
+  };
+  const filterNavigation=(navigation,context)=>{
+    if(!context)return{detachmentIds:[...navigation.detachmentIds],categories:navigation.categories.map(category=>({...category,unitIds:[...category.unitIds]}))};
+    const units=new Set(context.unitIds);
+    return{detachmentIds:navigation.detachmentIds.filter(id=>id===context.detachmentId),categories:navigation.categories.map(category=>({...category,unitIds:category.unitIds.filter(id=>units.has(id))})).filter(category=>category.unitIds.length)};
+  };
+  const routeAllowed=(type,id,context)=>!context||type==='unit'?context?.unitIds.includes(id)!==false:type==='detachment'?id===context.detachmentId:true;
+  const cardContext=(context,unitId)=>{const instances=context?.instancesByUnitId?.[unitId]||[];return{instances,points:instances.reduce((sum,item)=>sum+(Number(item.points)||0),0),loadout:instances.flatMap(item=>[item.wargear,...(item.models||[]).flatMap(model=>[model.wargear,...(model.loadouts||[]).map(loadout=>loadout.wargear)])].filter(Boolean))};};
+  const withRosterQuery=(href,rosterId,hash='')=>{const destination=new URL(href);destination.search='';destination.searchParams.set('roster',rosterId);if(hash)destination.hash=hash;return destination.href;};
+  const viewSwitchHref=(href,search,hash='')=>{const destination=new URL(href);destination.search=search;if(hash)destination.hash=hash;return destination.href;};
+  root.AMPhoneRoster=Object.freeze({slug,resolveContext,filterNavigation,routeAllowed,cardContext,withRosterQuery,viewSwitchHref});
+}(window));
+
+if(typeof document!=='undefined')(async function(){
   'use strict';
   const scriptUrl=document.currentScript.src;
   const compatibleRuntime=await import(new URL('../scripts/compatible-rules-runtime.mjs?v=3',scriptUrl)).catch(error=>{console.warn('Compatible rules unavailable.',error);return null;});
@@ -21,33 +48,48 @@
   const rosterMode=params.has('roster');
   let relatedRulesEnabled=compatibleRuntime?.compatibleRulesEnabled===true;
   let gesture=null,suppressed=null,opener=null,openedByTouch=false,relatedLoaded=false,relatedKind='stratagems';
-  let rosterDetachments=[],assignedEnhancementNames=new Set(),assignedEnhancementRuleIds=new Set(),compatibleRulesMatrix;
+  let rosterDetachments=[],assignedEnhancementNames=new Set(),assignedEnhancementRuleIds=new Set(),compatibleRulesMatrix,rosterContext;
 
-  if(rosterMode&&unit&&window.WHRosterParser&&window.AMRosterEnhancements){
+  if(rosterMode){
+    const rosterId=params.get('roster'),rosterGuideHref=()=>window.AMPhoneRoster.withRosterQuery(new URL('../../../roster-guides/index.html',location.href).href,rosterId);
+    if(!window.WHRosterParser||!window.AMRosterEnhancements){location.replace(rosterGuideHref());return;}
     try{
       const records=JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[];
       const record=records.find(item=>item?.id===params.get('roster'));
       if(!record)throw new Error('Roster not found');
       const parsed=record?.sourceText?window.WHRosterParser.parse(record.sourceText):record?.roster;
-      const faction=String(parsed?.faction||'').replace(/^(?:Chaos|Imperium)\s*[-–—]\s*/i,'').trim().toLowerCase();
-      if(faction!=='adeptus mechanicus')throw new Error('Roster faction unavailable');
-      const slug=value=>String(value||'').toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-      const matching=(parsed?.units||[]).filter(item=>slug(item.name)===unit.id.replace(/^unit-/,''));
-      const detachmentLabels=parsed?.detachments?.length?parsed.detachments.map(item=>item.label):[parsed?.detachment];
-      const canonicalDetachmentIds=[...relatedDetachment.options].filter(option=>option.value!=='all').map(option=>option.value);
-      const detachmentId=window.AMRosterEnhancements.resolveDetachment(detachmentLabels,canonicalDetachmentIds);
-      if(!matching.length||!detachmentId)throw new Error('Roster data unavailable');
-      rosterDetachments=[detachmentId];
-      const ownership=window.AMRosterEnhancements.resolveOwnership(parsed,matching);
-      assignedEnhancementNames=new Set(ownership.cardEnhancements.map(item=>slug(item.name)));
+      const detachmentLinks=[...nav.querySelectorAll('[data-route-type="detachment"][data-detachment-id]')];
+      const categoryGroups=[...nav.querySelectorAll('[data-unit-category]')];
+      const unitLinks=[...nav.querySelectorAll('[data-route-type="unit"][data-unit-id]')];
+      const navigation={detachmentIds:detachmentLinks.map(link=>link.dataset.detachmentId),categories:categoryGroups.map(group=>({id:group.dataset.unitCategory,unitIds:[...group.querySelectorAll('[data-unit-id]')].map(link=>link.dataset.unitId)}))};
+      rosterContext=window.AMPhoneRoster.resolveContext(parsed,navigation.detachmentIds,unitLinks.map(link=>link.dataset.unitId),window.AMRosterEnhancements.resolveDetachment);
+      const current=nav.querySelector('[data-route-type][aria-current="page"]');
+      if(current&&!window.AMPhoneRoster.routeAllowed(current.dataset.routeType,current.dataset.unitId||current.dataset.detachmentId||'',rosterContext))throw new Error('Current route is outside roster');
+      const filtered=window.AMPhoneRoster.filterNavigation(navigation,rosterContext),allowedDetachments=new Set(filtered.detachmentIds),allowedUnits=new Set(filtered.categories.flatMap(category=>category.unitIds)),allowedCategories=new Set(filtered.categories.map(category=>category.id));
+      detachmentLinks.forEach(link=>{if(!allowedDetachments.has(link.dataset.detachmentId))link.remove();});
+      unitLinks.forEach(link=>{if(!allowedUnits.has(link.dataset.unitId))link.remove();});
+      categoryGroups.forEach(group=>{if(!allowedCategories.has(group.dataset.unitCategory))group.remove();});
+      nav.querySelectorAll('[data-route-type]').forEach(link=>{link.href=window.AMPhoneRoster.withRosterQuery(link.href,rosterId,link.hash);});
+      if(rosterGuides)rosterGuides.href=window.AMPhoneRoster.withRosterQuery(rosterGuides.href,rosterId,rosterGuides.hash);
+      rosterDetachments=[rosterContext.detachmentId];
       window.AM_ROSTER_GUIDE=Object.freeze({detachmentIds:rosterDetachments});
-      if(matching.length)window.AMRosterEnhancements.decorate(unit,parsed,matching);
-    }catch(error){console.warn('Roster data unavailable.',error);relatedRulesEnabled=false;}
+      if(unit){
+        const currentCard=window.AMPhoneRoster.cardContext(rosterContext,unit.id);
+        if(!currentCard.instances.length)throw new Error('Current datasheet is outside roster');
+        const ownership=window.AMRosterEnhancements.resolveOwnership(parsed,currentCard.instances);
+        assignedEnhancementNames=new Set(ownership.cardEnhancements.map(item=>window.AMPhoneRoster.slug(item.name)));
+        const status=unit.querySelector('.unit-status');if(status)status.textContent=`${currentCard.instances.length>1?`${currentCard.instances.length} UNITS · `:''}${currentCard.points} PTS`;
+        const composition=unit.querySelector('[id$="-composition"]');
+        if(composition){const rows=new Map(),add=(quantity,name,wargear)=>{const id=`${name}\0${wargear||''}`,current=rows.get(id);rows.set(id,{quantity:(current?.quantity||0)+(Number(quantity)||1),name,wargear});};currentCard.instances.forEach(item=>item.models?.length?item.models.forEach(model=>model.loadouts?.length?model.loadouts.forEach(loadout=>add(loadout.quantity,model.name,loadout.wargear)):add(model.quantity,model.name,model.wargear)):add(item.quantity,item.name,item.wargear));const block=document.createElement('div');block.className='content-block roster-composition';block.innerHTML='<strong>Roster loadout</strong>';const list=document.createElement('ul');for(const row of rows.values()){const item=document.createElement('li');item.textContent=`${row.quantity}× ${row.name}${row.wargear?` — ${row.wargear}`:''}`;list.append(item);}block.append(list);composition.replaceChildren(composition.querySelector('h4'),block);}
+        window.AMRosterEnhancements.decorate(unit,parsed,currentCard.instances);
+        if(currentCard.loadout.length&&window.WHRosterEntities)unit.querySelectorAll('.weapon-row:not(.weapon-head)').forEach(row=>{const label=row.querySelector('.weapon-button')?.textContent||row.firstElementChild?.textContent;if(label&&!window.WHRosterEntities.loadoutIncludesProfile(currentCard.loadout,label))row.remove();});
+        unit.querySelectorAll('.weapon-group').forEach(group=>{if(!group.querySelector('.weapon-row:not(.weapon-head)'))group.remove();});
+      }
+    }catch(error){console.warn('Roster data unavailable.',error);relatedRulesEnabled=false;location.replace(rosterGuideHref());return;}
   }
-  if(rosterMode&&(!window.WHRosterParser||!window.AMRosterEnhancements))relatedRulesEnabled=false;
   if(!relatedRulesEnabled)relatedRules?.remove();
   if(rosterGuides)rosterGuides.hidden=!params.get('roster');
-  if(viewSwitch){const destination=new URL(viewSwitch.href);destination.search=params.toString();if(location.hash)destination.hash=location.hash;viewSwitch.href=destination.href;}
+  if(viewSwitch)viewSwitch.href=window.AMPhoneRoster.viewSwitchHref(viewSwitch.href,params.toString(),location.hash);
 
   function drawer(open){document.body.classList.toggle('nav-drawer-open',open);navButton.setAttribute('aria-expanded',String(open));nav.setAttribute('aria-hidden',String(!open));scrim.hidden=!open;}
   function syncDrawerMode(){const returnFocus=nav.contains(document.activeElement);if(drawerMedia.matches)drawer(false);else{document.body.classList.remove('nav-drawer-open');nav.setAttribute('aria-hidden','false');scrim.hidden=true;}if(returnFocus&&nav.getAttribute('aria-hidden')==='true')navButton.focus({preventScroll:true});}

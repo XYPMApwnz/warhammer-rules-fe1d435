@@ -72,17 +72,17 @@ function relatedRules(){
   }).join('\n')+coreStratagems).replace(/\sdata-eligibility="[^"]*"/g,''));
 }
 
-const link=(route,active)=>`<a href="./${route.file}"${route.id===active?' aria-current="page"':''}>${route.title}${route.dp?` <span class="detachment-dp">${route.dp}</span>`:''}</a>`;
+const link=(route,active)=>`<a href="./${route.file}" data-route-type="${route.type}"${route.type==='detachment'?` data-detachment-id="${route.id.slice(11)}"`:route.type==='unit'?` data-unit-id="${route.id}"`:''}${route.id===active?' aria-current="page"':''}>${route.title}${route.dp?` <span class="detachment-dp">${route.dp}</span>`:''}</a>`;
 function navigation(route){
   const unitCategory=categories.find(category=>category.id===route.category);
   return `${staticRoutes.slice(0,2).map(item=>link(item,route.id)).join('')}
-    <details name="mobile-primary"${route.type==='detachment'?' open':''}>
+    <details name="mobile-primary" data-route-group="detachments"${route.type==='detachment'?' open':''}>
       <summary>Detachments <span>${detachments.length}</span></summary>
       <div class="mobile-nav-branch">${detachments.map(item=>link(item,route.id)).join('')}</div>
     </details>
-    <details name="mobile-primary"${route.type==='unit'?' open':''}>
+    <details name="mobile-primary" data-route-group="units"${route.type==='unit'?' open':''}>
       <summary>Datasheets <span>${units.length}</span></summary>
-      <div class="mobile-nav-branch mobile-unit-groups">${categories.map(category=>`<details${category===unitCategory?' open':''}>
+      <div class="mobile-nav-branch mobile-unit-groups">${categories.map(category=>`<details data-unit-category="${category.id}"${category===unitCategory?' open':''}>
         <summary>${category.title} <span>${category.units.length}</span></summary>
         <div class="mobile-nav-branch">${category.units.map(item=>link(item,route.id)).join('')}</div>
       </details>`).join('')}</div>

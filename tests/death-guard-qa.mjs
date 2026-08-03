@@ -347,8 +347,11 @@ check('book scripts and styles use the current release token',[...cssFiles.filte
 check('Detachment picker stays above Stratagem card badges',contentCss.includes('.full-related-controls{position:relative;z-index:4;'));
 check('Detachment picker closes before another datasheet dialog opens',read('scripts/app.js').includes('if(filterMenu)filterMenu.open=false'));
 check('book loads the shared navigation target resolver',html.includes('src="../shared/navigation-targets.js?v=1"'));
-check('book loads the shared datasheet design',html.includes('href="../shared/datasheet-system.css?v=6"'));
-check('book loads the shared datasheet layout',html.includes('src="../shared/datasheet-layout.js?v=2"'));
+check('book loads the shared datasheet design',html.includes('href="../shared/datasheet-system.css?v=7"'));
+check('book loads the shared datasheet layout',html.includes('src="../shared/datasheet-layout.js?v=3"'));
+check('long datasheet abilities use an original-node continuation',datasheetLayout.includes("layout.continuation.className='ability-list ds-abilities-continuation'")&&datasheetLayout.includes('layout.cards.slice(split).forEach(node=>layout.continuation.append(node))'));
+check('long datasheet continuation recalculates from available card width',datasheetLayout.includes("'ResizeObserver' in window")&&datasheetLayout.includes('entry.contentRect.width')&&datasheetLayout.includes('restoreAbilities(layout)'));
+check('long datasheet continuation spans the datasheet width',datasheetCss.includes('.unit-card.ds-layout .ds-abilities-continuation')&&datasheetCss.includes('grid-template-columns: 1fr'));
 check('glossary autolinking precedes navigation geometry',read('scripts/app.js').indexOf('WHGlossaryAutolink?.apply')<read('scripts/app.js').indexOf('new window.DGNavigation'));
 check('v4 icon is used without legacy v3 PNG references',html.includes('assets/icon-v4.svg')&&!html.includes('icon-180.png'));
 check('navigation and popup specifications are present',['docs/SPEC_NAVIGATION.md','docs/SPEC_POPUPS.md'].every(file=>fs.existsSync(path.join(root,file))));

@@ -252,8 +252,11 @@ check('outside click closes the complete popup chain',popupSource.includes("this
 check('datasheet actions appear only inside Related Rules',!popupSource.includes('Datasheet & Wargear')&&!popupSource.includes("label:'Statline'")&&popupSource.includes("label:'Open datasheet'")&&popupSource.includes("closest?.('.related-rules-layer')"));
 check('Mega Glossary transitions use the shared return helper',html.includes('../../glossary-return.js?v=3')&&popupSource.includes('WHGlossaryReturn')&&read('scripts/app.js').includes('WHGlossaryReturn'));
 check('book loads the shared navigation target resolver',html.includes('src="../shared/navigation-targets.js?v=1"'));
-check('book loads the shared datasheet design',html.includes('href="../shared/datasheet-system.css?v=6"'));
-check('book loads the shared datasheet layout',html.includes('src="../shared/datasheet-layout.js?v=2"'));
+check('book loads the shared datasheet design',html.includes('href="../shared/datasheet-system.css?v=7"'));
+check('book loads the shared datasheet layout',html.includes('src="../shared/datasheet-layout.js?v=3"'));
+check('long datasheet abilities use an original-node continuation',sharedDatasheetLayout.includes("layout.continuation.className='ability-list ds-abilities-continuation'")&&sharedDatasheetLayout.includes('layout.cards.slice(split).forEach(node=>layout.continuation.append(node))'));
+check('long datasheet continuation recalculates from available card width',sharedDatasheetLayout.includes("'ResizeObserver' in window")&&sharedDatasheetLayout.includes('entry.contentRect.width')&&sharedDatasheetLayout.includes('restoreAbilities(layout)'));
+check('long datasheet continuation spans the datasheet width',sharedDatasheetCss.includes('.unit-card.ds-layout .ds-abilities-continuation')&&sharedDatasheetCss.includes('grid-template-columns: 1fr'));
 check('glossary autolinking precedes navigation geometry',read('scripts/app.js').indexOf('WHGlossaryAutolink?.apply')<read('scripts/app.js').indexOf('new window.DGNavigation'));
 check('shared datasheet statlines keep every characteristic on one row',/\.unit-card \.statline\s*\{[^}]*display:\s*flex/.test(sharedDatasheetCss));
 check('mobile weapon characteristics use one six-column row',sharedDatasheetCss.includes('grid-template-columns: repeat(6, minmax(0, 1fr))')&&(html.match(/data-label="(?:Range|A|BS|WS|S|AP|D)"/g)||[]).length===rules.datasheets.reduce((sum,unit)=>sum+unit.weapons.length,0)*6);

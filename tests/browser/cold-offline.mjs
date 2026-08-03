@@ -257,6 +257,82 @@ try{
     console.log('PASS Browser Back restores exact Army Book scroll, popup and focus');
   }finally{await historyContext.close();}
 
+  const datasheetLayoutContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1440,height:900}});
+  try{
+    const {page,errors}=await observedPage(datasheetLayoutContext);
+    const settle=()=>page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+    const inspect=selector=>page.locator(selector).evaluate(card=>{
+      const rect=node=>node?(()=>{const value=node.getBoundingClientRect();return{left:value.left,top:value.top,right:value.right,bottom:value.bottom,width:value.width,height:value.height};})():null;
+      const side=[...card.querySelectorAll('.ds-support .ability-list > .ability')];
+      const continuation=[...card.querySelectorAll(':scope > .ds-abilities-continuation > .ability')];
+      const all=[...side,...continuation];
+      const grid=card.querySelector('.ds-main-grid'),arsenal=card.querySelector('.ds-arsenal'),support=card.querySelector('.ds-support');
+      const continuationBox=rect(card.querySelector(':scope > .ds-abilities-continuation'));
+      const damaged=card.querySelector(':scope > [id$="-damaged"]');
+      return{sideCount:side.length,continuationCount:continuation.length,total:all.length,order:all.map(node=>node.textContent.replace(/\s+/g,' ').trim()),headingCount:[...card.querySelectorAll('h4')].filter(node=>node.textContent.trim()==='Abilities').length,grid:rect(grid),arsenal:rect(arsenal),support:rect(support),sideFirst:rect(side[0]),sideLast:rect(side.at(-1)),continuation:continuationBox,continuationFirst:rect(continuation[0]),damaged:rect(damaged),damagedDirect:damaged?.parentElement===card,horizontalOverflow:document.documentElement.scrollWidth>document.documentElement.clientWidth};
+    });
+    const fixtures=[
+      {label:'Death Guard',reader:'death-guard',longId:'unit-mortarion',shortId:'unit-chaos-land-raider',phone:'mortarion.html',damaged:true},
+      {label:'Adeptus Mechanicus',reader:'adeptus-mechanicus',longId:'unit-belisarius-cawl',shortId:'unit-skitarii-rangers',phone:'belisarius-cawl.html',damaged:false}
+    ];
+    for(const fixture of fixtures){
+      const longSelector=`#${fixture.longId}`;
+      await page.setViewportSize({width:1440,height:900});
+      await page.goto(`${origin}/books/${fixture.reader}/reader.html?view=full#${fixture.longId}`);
+      await page.locator(`${longSelector}.ds-layout`).waitFor();
+      await page.waitForFunction(selector=>document.querySelector(`${selector} > .ds-abilities-continuation`),longSelector);
+      await settle();
+      const desktop=await inspect(longSelector);
+      assert.ok(desktop.sideCount>0&&desktop.continuationCount>0,`${fixture.label} long datasheet must keep an initial ability prefix beside Weapons`);
+      assert.ok(Math.abs(desktop.arsenal.top-desktop.support.top)<=1,`${fixture.label} Weapons and Abilities must begin in parallel`);
+      assert.ok(desktop.sideLast.bottom<=desktop.arsenal.bottom+2,`${fixture.label} side ability cards must be whole and end with Weapons`);
+      assert.ok(desktop.continuation.top>=desktop.arsenal.bottom-2,`${fixture.label} continuation must begin below the parallel region`);
+      assert.ok(desktop.continuationFirst.width>desktop.sideFirst.width*1.5,`${fixture.label} continuation cards must span materially more width`);
+      assert.equal(desktop.headingCount,1,`${fixture.label} must retain one Abilities heading`);
+      assert.equal(desktop.horizontalOverflow,false,`${fixture.label} desktop layout must not overflow horizontally`);
+      if(fixture.damaged){assert.equal(desktop.damagedDirect,true,'Mortarion Damaged section must remain a direct full-width section');assert.ok(desktop.damaged.top>=desktop.continuation.bottom-1&&desktop.damaged.width>desktop.sideFirst.width*1.5,'Mortarion Damaged section must follow the continuation at full width');}
+      const originalOrder=desktop.order;
+      await page.evaluate(selector=>{const card=document.querySelector(selector);window.__datasheetAbilityNodes=[...card.querySelectorAll('.ds-support .ability-list > .ability'),...card.querySelectorAll(':scope > .ds-abilities-continuation > .ability')];},longSelector);
+      const movedTerm=page.locator(`${longSelector} > .ds-abilities-continuation .term-button[data-term]`).first();
+      assert.ok(await movedTerm.count(),`${fixture.label} continuation fixture must retain a popup term link`);
+      await movedTerm.click();
+      await page.locator('#popupLayer .term-popup').first().waitFor();
+      await page.keyboard.press('Escape');
+      await page.setViewportSize({width:1194,height:834});
+      await settle();
+      const tablet=await inspect(longSelector);
+      assert.ok(tablet.continuationCount>0&&tablet.continuationFirst.width>tablet.sideFirst.width*1.5,`${fixture.label} iPad layout must retain a full-width continuation`);
+      assert.deepEqual(tablet.order,originalOrder,`${fixture.label} iPad resize must preserve ability order`);
+      assert.equal(tablet.total,originalOrder.length,`${fixture.label} iPad resize must preserve ability count`);
+      assert.equal(await page.evaluate(selector=>{const card=document.querySelector(selector),current=[...card.querySelectorAll('.ds-support .ability-list > .ability'),...card.querySelectorAll(':scope > .ds-abilities-continuation > .ability')];return current.length===window.__datasheetAbilityNodes.length&&current.every((node,index)=>node===window.__datasheetAbilityNodes[index]);},longSelector),true,`${fixture.label} resize must retain the original ability nodes`);
+      assert.equal(tablet.horizontalOverflow,false,`${fixture.label} iPad layout must not overflow horizontally`);
+      await page.setViewportSize({width:1440,height:900});
+      await settle();
+      const resized=await inspect(longSelector);
+      assert.deepEqual(resized.order,originalOrder,`${fixture.label} round-trip resize must preserve ability order`);
+      assert.equal(resized.total,originalOrder.length,`${fixture.label} round-trip resize must not duplicate abilities`);
+
+      await page.goto(`${origin}/books/${fixture.reader}/reader.html?view=full#${fixture.shortId}`);
+      await page.locator(`#${fixture.shortId}.ds-layout`).waitFor();
+      await settle();
+      const short=await inspect(`#${fixture.shortId}`);
+      assert.equal(short.continuationCount,0,`${fixture.label} balanced datasheet must not create a continuation`);
+      assert.equal(short.headingCount,1,`${fixture.label} balanced datasheet must retain one Abilities heading`);
+
+      await page.setViewportSize({width:390,height:844});
+      await page.goto(`${origin}/books/${fixture.reader}/mobile/${fixture.phone}`);
+      await page.locator(`${longSelector}.ds-layout`).waitFor();
+      await settle();
+      const phone=await inspect(longSelector);
+      assert.equal(phone.continuationCount,0,`${fixture.label} Phone datasheet must remain a single sequence`);
+      assert.ok(phone.support.top>=phone.arsenal.bottom-1,`${fixture.label} Phone Abilities must follow Weapons`);
+      assert.equal(phone.headingCount,1,`${fixture.label} Phone datasheet must retain one Abilities heading`);
+      assert.equal(phone.horizontalOverflow,false,`${fixture.label} Phone datasheet must not overflow horizontally`);
+    }
+    assert.deepEqual(errors,[]);
+    console.log('PASS shared long datasheet continuation, resize, popup links and Phone flow');
+  }finally{await datasheetLayoutContext.close();}
+
   const mechanicusPhonePopupContext=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844},hasTouch:true,isMobile:true});
   try{
     const {page,errors}=await observedPage(mechanicusPhonePopupContext);

@@ -3,6 +3,9 @@
 
   const direct=(root,selector)=>Array.from(root.children).find(node=>node.matches?.(selector))||null;
   const directParts=card=>Array.from(card.children).filter(node=>node.matches?.('.unit-part'));
+  const layouts=[];
+  const layoutByCard=new WeakMap();
+  let layoutFrame=0;
 
   function buildIdentity(head,keywordPart){
     const primary=head?.firstElementChild;
@@ -69,7 +72,7 @@
     card.insertBefore(strip,localNav);
   }
 
-  function buildColumns(card,profile,abilities,damaged){
+  function buildColumns(card,profile,abilities){
     if(!profile||!abilities)return;
     const grid=document.createElement('div');
     grid.className='ds-main-grid';
@@ -81,9 +84,54 @@
     grid.append(arsenal,support);
     arsenal.append(profile);
     support.append(abilities);
-    if(damaged)support.append(damaged);
     const profileHeading=direct(profile,'h4');
     if(profileHeading)profileHeading.textContent='Weapons';
+
+    const list=direct(abilities,'.ability-list');
+    if(list){
+      const layout={card,grid,arsenal,support,list,cards:Array.from(list.children).filter(node=>node.matches?.('.ability')),continuation:null,lastWidth:0};
+      layouts.push(layout);
+      layoutByCard.set(card,layout);
+    }
+  }
+
+  function restoreAbilities(layout){
+    layout.cards.forEach(node=>layout.list.append(node));
+    layout.continuation?.remove();
+  }
+
+  function balanceAbilities(layout){
+    restoreAbilities(layout);
+    if(layout.cards.length<2)return;
+
+    const arsenalBox=layout.arsenal.getBoundingClientRect();
+    const supportBox=layout.support.getBoundingClientRect();
+    const parallel=Math.abs(arsenalBox.top-supportBox.top)<=1&&supportBox.left>arsenalBox.left+1;
+    if(!parallel||!arsenalBox.width)return;
+
+    let split=layout.cards.length;
+    for(let index=0;index<layout.cards.length;index+=1){
+      if(layout.cards[index].getBoundingClientRect().bottom>arsenalBox.bottom+1){
+        split=Math.max(1,index);
+        break;
+      }
+    }
+    if(split>=layout.cards.length)return;
+
+    if(!layout.continuation){
+      layout.continuation=document.createElement('div');
+      layout.continuation.className='ability-list ds-abilities-continuation';
+    }
+    layout.grid.after(layout.continuation);
+    layout.cards.slice(split).forEach(node=>layout.continuation.append(node));
+  }
+
+  function scheduleLayout(){
+    if(layoutFrame)return;
+    layoutFrame=requestAnimationFrame(()=>{
+      layoutFrame=0;
+      layouts.forEach(balanceAbilities);
+    });
   }
 
   function enhance(card){
@@ -99,9 +147,29 @@
     buildIdentity(head,keywords);
     buildCost(head,pointsPanel);
     moveProfiles(card,profile,localNav);
-    buildColumns(card,profile,abilities,damaged);
+    buildColumns(card,profile,abilities);
     card.classList.add('ds-layout');
   }
 
   document.querySelectorAll('.unit-card').forEach(enhance);
+
+  if('ResizeObserver' in window){
+    const observer=new ResizeObserver(entries=>{
+      let changed=false;
+      entries.forEach(entry=>{
+        const layout=layoutByCard.get(entry.target);
+        if(!layout)return;
+        const width=entry.contentRect.width;
+        if(Math.abs(width-layout.lastWidth)>.5){
+          layout.lastWidth=width;
+          changed=true;
+        }
+      });
+      if(changed)scheduleLayout();
+    });
+    layouts.forEach(layout=>observer.observe(layout.card));
+  }
+  window.addEventListener('resize',scheduleLayout,{passive:true});
+  document.fonts?.ready.then(scheduleLayout);
+  scheduleLayout();
 }());

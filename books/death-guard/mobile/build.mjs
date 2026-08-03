@@ -150,7 +150,7 @@ function page(route) {
   <link rel="stylesheet" href="../styles/navigation.css?v=12">
   <link rel="stylesheet" href="../styles/content.css?v=38">
   <link rel="stylesheet" href="../styles/popups.css?v=17">
-  <link rel="stylesheet" href="../../shared/datasheet-system.css?v=6">
+  <link rel="stylesheet" href="../../shared/datasheet-system.css?v=7">
   <link rel="stylesheet" href="./mobile.css?v=9">
 </head>
 <body>
@@ -171,7 +171,7 @@ function page(route) {
     <div class="phone-tree">${navigation(route)}</div>
   </nav>
   <main class="main mobile-main"><article class="document">${hydrateTerms(content(route))}${relatedSection}</article></main>
-  <script src="../../shared/datasheet-layout.js?v=2"></script>
+  <script src="../../shared/datasheet-layout.js?v=3"></script>
   <script src="../../shared/rule-facts.js?v=4"></script>
   <dialog class="mobile-dialog" id="termDialog" aria-label="Term reference"><div class="mobile-popup-stack" id="termPopupStack"></div></dialog>
   <script src="../../../glossary/generated/glossary.en.js?v=tyranids-1"></script>

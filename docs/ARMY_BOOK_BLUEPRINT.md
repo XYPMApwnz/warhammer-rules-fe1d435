@@ -117,7 +117,7 @@
 
 ## AB-CONTENT-003 — Datasheet implementation coverage
 - Level: MUST
-- Normative requirement: All canonical datasheets, unit abilities, characteristics, weapons, profiles, profiles of damaged states, and composition options MUST have deterministic output representations.
+- Normative requirement: All canonical datasheets, unit abilities, characteristics, weapons, profiles, profiles of damaged states, and composition options MUST have deterministic output representations. On wide and tablet datasheets, Weapons and Abilities MAY begin as parallel columns, but a longer Abilities stream MUST NOT remain constrained to the side column after Weapons ends. Remaining whole ability cards and subsequent support sections MUST continue below the parallel region across the full datasheet width. Rule order, content, and headings MUST remain unchanged, and large dead space beside an active content column MUST NOT be present.
 - Owner: book-local implementation
 - Applicability: all Army Books
 - Required evidence: canonical datasheet artifacts and generated snapshots for desktop/Phone and roster modes.

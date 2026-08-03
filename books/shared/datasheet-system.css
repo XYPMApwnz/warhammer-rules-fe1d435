@@ -418,6 +418,13 @@
 }
 .unit-card.ds-layout .ds-main-grid .weapon-group:last-child { margin-bottom: 0; }
 .unit-card.ds-layout .ds-support .ability-list { display: grid; grid-template-columns: 1fr; }
+.unit-card.ds-layout .ds-abilities-continuation {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 11px;
+  padding: 27px 28px 31px;
+  border-top: 1px solid var(--line);
+}
 .unit-card.ds-layout > .unit-part { border-top: 1px solid var(--line); }
 
 /* Secondary information should read as a compact reference block, not another hero section. */

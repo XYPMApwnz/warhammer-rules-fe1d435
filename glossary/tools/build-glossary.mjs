@@ -676,7 +676,8 @@ const mechanicusGeneratedCacheInputs=[
 ];
 const genericArmyCacheInputs=allGenericArmyBooks.flatMap(book=>[
   `books/${book.id}/index.html`,`books/${book.id}/reader.html`,`books/${book.id}/styles/tokens.css`,`books/${book.id}/styles/book.css`,
-  `books/${book.id}/scripts/data.js`,`books/${book.id}/scripts/app.js`,`books/${book.id}/mobile/index.html`,`books/${book.id}/mobile/related-rules.inc`
+  `books/${book.id}/scripts/data.js`,`books/${book.id}/scripts/app.js`,`books/${book.id}/mobile/index.html`,`books/${book.id}/mobile/related-rules.inc`,
+  ...fs.readdirSync(path.join(root,'books',book.id,'mobile')).filter(file=>file.endsWith('.html')).map(file=>`books/${book.id}/mobile/${file}`)
 ]);
 const cacheInputs=[
   'index.html','manifest.webmanifest','service-worker.js','glossary-return.js','roster-guides/index.html','roster-guides/app.js','roster-guides/points-data.js','roster-guides/points-validator.js',

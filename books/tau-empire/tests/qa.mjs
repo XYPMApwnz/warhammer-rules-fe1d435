@@ -17,15 +17,37 @@ const relatedRules=json('content/tau-empire-related-rules.en.json');
 const manifest=json('sources/source-manifest.json');
 const config=json('book.config.json');
 const context=JSON.parse(fs.readFileSync(path.join(repo,'glossary','contexts','tau-empire.json'),'utf8')).terms;
+const glossary=JSON.parse(fs.readFileSync(path.join(repo,'glossary','registry.en.json'),'utf8')).terms;
 const reader=fs.readFileSync(path.join(root,'reader.html'),'utf8');
 const mobileStart=fs.readFileSync(path.join(root,'mobile','index.html'),'utf8');
 const related=fs.readFileSync(path.join(root,'mobile','related-rules.inc'),'utf8');
 const allUnits=[...codex.datasheets,...codex.imperialArmour,...codex.legends];
+const mobileDatasheetMarkup=allUnits.map(unit=>fs.readFileSync(path.join(root,'mobile',`${unit.id.replace(/^unit-/,'')}.html`),'utf8')).join('\n');
 const currentUnits=[...codex.datasheets,...codex.imperialArmour].filter(unit=>unit.status==='Current');
 const key=value=>String(value).replace(/\s*\([^)]*\)\s*$/,'').trim().toLowerCase();
 const decode=value=>value.replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&lt;','<').replaceAll('&gt;','>');
 const lines=value=>decode(value).split(/\r?\n/).map(line=>line.replace(/\s+/g,' ').trim()).filter(Boolean);
 const unitMarkup=(html,id)=>{const opener=new RegExp(`<article class="unit-card[^"]*" id="${id}"`).exec(html);assert.ok(opener,`${id}: card missing`);const start=opener.index,next=html.indexOf('<article class="unit-card',start+1);return html.slice(start,next<0?html.length:next);};
+const weaponBase=value=>{const normalized=String(value).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim().replace(/\s+(?:d\d+|\d+)$/,'').trim();return normalized.startsWith('anti ')?'anti':normalized;};
+const coreWeaponTerms=new Map(Object.entries(glossary).filter(([id])=>id.startsWith('core-')).map(([id,term])=>[weaponBase(String(term.title?.en||'').replace(/^\[|\]$/g,'')),id]));
+const localWeaponTerms=new Map(Object.entries(context).map(([id,entry])=>[weaponBase(glossary[entry.termId]?.title?.en||''),id]).filter(([base])=>base));
+const expectedWeaponTerm=label=>coreWeaponTerms.get(weaponBase(label))||localWeaponTerms.get(weaponBase(label))||'';
+const splitWeaponAbilities=value=>String(value||'').split(',').map(label=>label.trim().toUpperCase()).filter(Boolean);
+const canonicalWeaponRows=allUnits.flatMap(unit=>unit.weapons.filter(weapon=>weapon.abilities).map(weapon=>splitWeaponAbilities(weapon.abilities)));
+const extractWeaponRows=markup=>[...markup.matchAll(/<div class="weapon-tags">([\s\S]*?)<\/div>/g)].map(([,body])=>[...body.matchAll(/<(button|span)\b([^>]*)>([^<]+)<\/\1>/g)].filter(([, ,attrs])=>/\bclass="[^"]*\btag\b/.test(attrs)).map(([,element,attrs,label])=>({element,label:label.trim(),term:attrs.match(/\bdata-term="([^"]+)"/)?.[1]||''})));
+const rowInventory=rows=>rows.map(row=>JSON.stringify(row.map(item=>typeof item==='string'?item:item.label))).sort();
+const desktopWeaponRows=extractWeaponRows(reader),phoneWeaponRows=extractWeaponRows(mobileDatasheetMarkup),desktopWeaponTokens=desktopWeaponRows.flat(),phoneWeaponTokens=phoneWeaponRows.flat(),canonicalWeaponLabels=canonicalWeaponRows.flat();
+const unknownWeaponLabels=[...new Set(canonicalWeaponLabels.filter(label=>!expectedWeaponTerm(label)))].sort();
+
+assert.deepEqual([allUnits.length,canonicalWeaponRows.length,canonicalWeaponLabels.length],[63,192,277]);
+assert.deepEqual(rowInventory(desktopWeaponRows),rowInventory(canonicalWeaponRows),'desktop weapon token inventory/order differs');
+assert.deepEqual(rowInventory(phoneWeaponRows),rowInventory(canonicalWeaponRows),'Phone weapon token inventory/order differs');
+for(const tokens of [desktopWeaponTokens,phoneWeaponTokens])for(const token of tokens){const expected=expectedWeaponTerm(token.label);assert.equal(token.element,expected?'button':'span',`${token.label}: wrong token kind`);assert.equal(token.term,expected,`${token.label}: wrong glossary target`);}
+assert.deepEqual(unknownWeaponLabels,['HOOKED']);
+assert.doesNotMatch(reader+mobileDatasheetMarkup,/<button class="weapon-button"[^>]*>[^<]*<\/button><small>/i);
+assert.doesNotMatch(reader+mobileDatasheetMarkup,/<(?:button|span)[^>]*class="[^"]*\btag\b[^"]*"[^>]*>[^<]*<button/i);
+assert.equal(fs.readdirSync(path.join(root,'mobile')).filter(file=>file.endsWith('.html')).length,73);
+for(const output of [reader,mobileDatasheetMarkup]){assert.match(output,/death-guard\/styles\/content\.css\?v=40/);assert.match(output,/death-guard\/styles\/popups\.css\?v=18/);assert.match(output,/shared\/datasheet-system\.css\?v=7/);assert.doesNotMatch(output,/(?:content\.css\?v=38|popups\.css\?v=17|datasheet-system\.css\?v=6)/);}
 
 assert.deepEqual([pack.meta.version,pack.meta.pageCount,pack.meta.sha256],['1.1',61,'32B985646BAA02A3B505FF3404E91D374A5F53C1D3B8000D7166CA94D1B52675']);
 assert.equal(pack.meta.legalFrom,'2026-07-22');
@@ -161,4 +183,5 @@ for(const id of ['unit-tidewall-droneport','unit-tidewall-gunrig','unit-tidewall
   assert.equal(sandbox.window.WHRelatedRules.match(coordinate,profiles.find(item=>item.unitId===id)).state,'no-match',`${id}: Fortification cannot be an Observer`);
 }
 assert.equal(new Set([...related.matchAll(/data-rule-id="([^"]+)"/g)].map(match=>match[1])).size,54,'Related Rules inventory differs from 31 Stratagems + 23 Enhancements');
+console.log(`T'au weapon tokens: ${canonicalWeaponLabels.length} labels, ${desktopWeaponTokens.length} desktop, ${phoneWeaponTokens.length} Phone, ${desktopWeaponTokens.filter(token=>token.term).length} interactive, ${desktopWeaponTokens.filter(token=>!token.term).length} unknown (${unknownWeaponLabels.join(', ')}).`);
 console.log("T'au Empire QA passed: official v1.1 pack/MFM, 43 current datasheets, 7 detachments, exact Wargear, Glossary and Related Rules contracts.");

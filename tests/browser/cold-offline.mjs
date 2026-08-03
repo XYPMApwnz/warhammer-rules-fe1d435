@@ -616,6 +616,55 @@ try{
     console.log('PASS Mechanicus atomic weapon ability tokens desktop, tablet and Phone');
   }finally{await weaponTokenContext.close();}
 
+  const foundationTokenContext=await browser.newContext({serviceWorkers:'block',hasTouch:true,viewport:{width:1440,height:900}});
+  try{
+    const {page,errors}=await observedPage(foundationTokenContext);
+    const inspectTokens=selector=>page.locator(selector).evaluate(root=>[...root.querySelectorAll(':scope > .tag')].map(token=>{
+      const range=document.createRange();range.selectNodeContents(token);const box=token.getBoundingClientRect();
+      return {label:token.textContent.trim(),term:token.dataset.term||'',tag:token.tagName,lines:new Set([...range.getClientRects()].map(rect=>Math.round(rect.top))).size,top:Math.round(box.top),width:box.width,nested:token.querySelectorAll('.term-button,.tag').length};
+    }));
+    const assertAtomic=async(selector,expected,label)=>{
+      const tokens=await inspectTokens(selector);
+      assert.deepEqual(tokens.map(({label,term,tag})=>({label,term,tag})),expected,`${label} token inventory differs`);
+      assert.equal(tokens.every(token=>token.lines===1&&token.width>0&&token.nested===0),true,`${label} must keep every canonical label atomic`);
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth),true,`${label} must not create horizontal overflow`);
+      return tokens;
+    };
+    const assertAssets=async label=>{const assets=await page.evaluate(()=>[...document.querySelectorAll('link[rel="stylesheet"]')].map(link=>link.href));for(const current of ['content.css?v=40','popups.css?v=18','datasheet-system.css?v=7'])assert.ok(assets.some(url=>url.endsWith(current)),`${label} missing ${current}`);for(const stale of ['content.css?v=38','popups.css?v=17','datasheet-system.css?v=6'])assert.equal(assets.some(url=>url.endsWith(stale)),false,`${label} retained ${stale}`);};
+
+    const tyrSelector='[data-source-field="weapons.prime-claws-and-talons"] .weapon-tags',tyrExpected=[
+      {label:'ANTI-MONSTER 5+',term:'core-anti',tag:'BUTTON'},
+      {label:'ANTI-VEHICLE 5+',term:'core-anti',tag:'BUTTON'},
+      {label:'TWIN-LINKED',term:'core-twin-linked',tag:'BUTTON'}
+    ];
+    await page.goto(`${origin}/books/tyranids/reader.html#unit-hyperadapted-raveners`);await assertAssets('Tyranids desktop');
+    for(const viewport of [{width:1440,height:900},{width:1194,height:834},{width:834,height:1194}]){await page.setViewportSize(viewport);await assertAtomic(`#unit-hyperadapted-raveners ${tyrSelector}`,tyrExpected,`Tyranids desktop ${viewport.width}x${viewport.height}`);}
+    const tyrDesktopToken=page.locator(`#unit-hyperadapted-raveners ${tyrSelector}`).getByRole('button',{name:'ANTI-MONSTER 5+',exact:true});assert.equal(await tyrDesktopToken.count(),1);await tyrDesktopToken.scrollIntoViewIfNeeded();await tyrDesktopToken.click();
+    const tyrDesktopPopup=page.locator('#popupLayer .term-popup[data-popup-term="core-anti"]');await tyrDesktopPopup.waitFor();await page.keyboard.press('Escape');assert.equal(await tyrDesktopToken.evaluate(node=>node===document.activeElement),true,'Tyranids desktop token must regain focus');
+
+    await page.setViewportSize({width:390,height:844});await page.goto(`${origin}/books/tyranids/mobile/hyperadapted-raveners.html`);await assertAssets('Tyranids Phone');await assertAtomic(tyrSelector,tyrExpected,'Tyranids Phone');
+    const tyrPhoneToken=page.locator(tyrSelector).getByRole('button',{name:'ANTI-MONSTER 5+',exact:true});assert.equal(await tyrPhoneToken.count(),1);await tyrPhoneToken.scrollIntoViewIfNeeded();const tyrPhoneBox=await tyrPhoneToken.boundingBox();assert.ok(tyrPhoneBox);await page.touchscreen.tap(tyrPhoneBox.x+tyrPhoneBox.width/2,tyrPhoneBox.y+tyrPhoneBox.height/2);
+    const tyrDialog=page.locator('#termDialog');await tyrDialog.waitFor({state:'visible'});assert.match(await page.locator('#termTitle').textContent(),/ANTI/i);const tyrClose=page.locator('#termDialog .mobile-dialog-head button');assert.equal(await tyrClose.count(),1);await tyrClose.click();await tyrDialog.waitFor({state:'hidden'});
+    const tyrFocusToken=page.locator(tyrSelector).getByRole('button',{name:'ANTI-VEHICLE 5+',exact:true});await tyrFocusToken.click();await tyrDialog.waitFor({state:'visible'});await tyrClose.click();assert.equal(await tyrFocusToken.evaluate(node=>node===document.activeElement),true,'Tyranids Phone token must regain focus after pointer activation');
+    await page.setViewportSize({width:320,height:844});await page.goto(`${origin}/books/tyranids/mobile/biovores.html`);const tyrWrapped=await assertAtomic('[data-source-field="weapons.spore-mine-launcher"] .weapon-tags',[
+      {label:'BLAST',term:'core-blast',tag:'BUTTON'},{label:'DEVASTATING WOUNDS',term:'core-devastating-wounds',tag:'BUTTON'},{label:'HEAVY',term:'core-heavy',tag:'BUTTON'},{label:'INDIRECT FIRE',term:'core-indirect-fire',tag:'BUTTON'}
+    ],'Tyranids wrapped Phone tokens');assert.ok(new Set(tyrWrapped.map(token=>token.top)).size>1,'Tyranids long token list must wrap between tokens');
+
+    const tauMeltaSelector='[data-source-field="weapons.fusion-eradicator"] .weapon-tags',tauMeltaExpected=[{label:'MELTA 3',term:'core-melta',tag:'BUTTON'}],tauAntiSelector='[data-source-field="weapons.pulse-ordnance-driver"] .weapon-tags',tauAntiExpected=[{label:'ANTI-INFANTRY 2+',term:'core-anti',tag:'BUTTON'}];
+    await page.setViewportSize({width:1440,height:900});await page.goto(`${origin}/books/tau-empire/reader.html#unit-taunar-supremacy-armour`);await assertAssets("T'au desktop");
+    for(const viewport of [{width:1440,height:900},{width:1194,height:834},{width:834,height:1194}]){await page.setViewportSize(viewport);await assertAtomic(`#unit-taunar-supremacy-armour ${tauMeltaSelector}`,tauMeltaExpected,`T'au desktop ${viewport.width}x${viewport.height}`);await assertAtomic(`#unit-taunar-supremacy-armour ${tauAntiSelector}`,tauAntiExpected,`T'au ANTI desktop ${viewport.width}x${viewport.height}`);}
+    const tauDesktopToken=page.locator(`#unit-taunar-supremacy-armour ${tauMeltaSelector}`).getByRole('button',{name:'MELTA 3',exact:true});assert.equal(await tauDesktopToken.count(),1);await tauDesktopToken.scrollIntoViewIfNeeded();await tauDesktopToken.click();const tauDesktopPopup=page.locator('#popupLayer .term-popup[data-popup-term="core-melta"]');await tauDesktopPopup.waitFor();await page.keyboard.press('Escape');assert.equal(await tauDesktopToken.evaluate(node=>node===document.activeElement),true,"T'au desktop token must regain focus");
+
+    await page.setViewportSize({width:390,height:844});await page.goto(`${origin}/books/tau-empire/mobile/taunar-supremacy-armour.html`);await assertAssets("T'au Phone");await assertAtomic(tauMeltaSelector,tauMeltaExpected,"T'au Phone MELTA");await assertAtomic(tauAntiSelector,tauAntiExpected,"T'au Phone ANTI");
+    const tauPhoneToken=page.locator(tauMeltaSelector).getByRole('button',{name:'MELTA 3',exact:true});assert.equal(await tauPhoneToken.count(),1);await tauPhoneToken.scrollIntoViewIfNeeded();const tauPhoneBox=await tauPhoneToken.boundingBox();assert.ok(tauPhoneBox);await page.touchscreen.tap(tauPhoneBox.x+tauPhoneBox.width/2,tauPhoneBox.y+tauPhoneBox.height/2);const tauDialog=page.locator('#termDialog');await tauDialog.waitFor({state:'visible'});assert.match(await page.locator('#termTitle').textContent(),/MELTA/i);const tauClose=page.locator('#termDialog .mobile-dialog-head button');assert.equal(await tauClose.count(),1);await tauClose.click();await tauDialog.waitFor({state:'hidden'});
+    const tauFocusToken=page.locator(tauAntiSelector).getByRole('button',{name:'ANTI-INFANTRY 2+',exact:true});await tauFocusToken.click();await tauDialog.waitFor({state:'visible'});await tauClose.click();assert.equal(await tauFocusToken.evaluate(node=>node===document.activeElement),true,"T'au Phone token must regain focus after pointer activation");
+    await page.setViewportSize({width:320,height:844});await page.goto(`${origin}/books/tau-empire/mobile/stormsurge.html`);const tauWrapped=await assertAtomic('[data-source-field="weapons.twin-airbursting-fragmentation-projector"] .weapon-tags',[
+      {label:'BLAST',term:'core-blast',tag:'BUTTON'},{label:'HEAVY',term:'core-heavy',tag:'BUTTON'},{label:'INDIRECT FIRE',term:'core-indirect-fire',tag:'BUTTON'},{label:'TWIN-LINKED',term:'core-twin-linked',tag:'BUTTON'}
+    ],"T'au wrapped Phone tokens");assert.ok(new Set(tauWrapped.map(token=>token.top)).size>1,"T'au long token list must wrap between tokens");
+    assert.deepEqual(errors,[]);
+    console.log("PASS Tyranids and T'au atomic weapon tokens, current assets, popup focus and responsive wrapping");
+  }finally{await foundationTokenContext.close();}
+
   const orientationContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1194,height:834}});
   try{
     const {page,errors}=await observedPage(orientationContext);

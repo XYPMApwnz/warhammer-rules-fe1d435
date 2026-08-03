@@ -12,6 +12,9 @@ const entry=read('index.html');
 const html=read('reader.html');
 const mobileArmyRules=read('mobile/army-rules.html');
 const mobileUnitPage=read('mobile/skitarii-rangers.html');
+const mobileRuntime=read('mobile/mobile.js');
+const mobilePopupRuntime=read('mobile/phone-popup-controller.js');
+const mobileBuildSource=read('mobile/build.mjs');
 const deathGuardRoot=path.resolve(root,'..','death-guard');
 const deathGuardRead=file=>fs.readFileSync(path.join(deathGuardRoot,file),'utf8');
 const sharedTargets=fs.readFileSync(path.resolve(root,'..','shared','navigation-targets.js'),'utf8');
@@ -52,6 +55,25 @@ const rosterLogicContext={window:{}};vm.runInNewContext(read('scripts/roster-enh
 const rosterLogic=rosterLogicContext.window.AMRosterEnhancements;
 const phoneLogicContext={window:{},URL};vm.runInNewContext(read('mobile/mobile.js'),phoneLogicContext);
 const phoneLogic=phoneLogicContext.window.AMPhoneRoster;
+try{new vm.Script(mobilePopupRuntime,{filename:'mobile/phone-popup-controller.js'});check('Phone popup controller syntax',true);}catch(error){check('Phone popup controller syntax',false,error.message);}
+try{
+  const popupContext={window:{},Object};vm.runInNewContext(mobilePopupRuntime,popupContext,{filename:'mobile/phone-popup-controller.js'});
+  const State=popupContext.window.AMPhonePopupState,valid=new Set(['root','other','child','deep']),state=new State(id=>valid.has(id));
+  state.open('root',false);check('Phone popup root opening creates one level',state.snapshot().join(',')==='root');
+  check('Phone popup root duplicate is rejected',state.open('root',false)===false&&state.snapshot().join(',')==='root');
+  state.open('child',true);check('Phone popup nested opening preserves ordered prefix',state.snapshot().join(',')==='root,child');
+  check('Phone popup nested duplicate is rejected',state.open('child',true)===false&&state.snapshot().join(',')==='root,child');
+  state.open('deep',true);state.open('root',true);check('Phone popup ancestor reopening collapses the cycle',state.snapshot().join(',')==='root');
+  state.open('child',true);state.open('deep',true);state.closeFrom(1);check('Phone popup level close removes level N and deeper',state.snapshot().join(',')==='root');
+  state.open('other',false);check('Phone popup external root replaces the chain',state.snapshot().join(',')==='other');
+  check('Phone popup snapshot preserves order',state.restore(['root','child','deep']).join(',')==='root,child,deep');
+  check('Phone popup invalid restored suffix truncates to valid prefix',state.restore(['root','missing','deep']).join(',')==='root');
+}catch(error){check('Phone popup behavioral state machine',false,error.message);}
+check('Phone popup uses canonical Mechanicus glossary and shared renderers',mobileUnitPage.includes('../../../glossary/generated/glossary.en.js')&&mobileRuntime.includes("WH40K_GLOSSARY.forBook('adeptus-mechanicus')")&&mobilePopupRuntime.includes('WHPopupContent?.render')&&mobilePopupRuntime.includes('WHGlossaryAutolink?.apply'));
+check('Phone popup generated markup uses one stacked modal',mobileUnitPage.includes('id="termPopupStack"')&&!mobileUnitPage.includes('id="termTitle"')&&!mobileUnitPage.includes('id="termSummary"'));
+check('Phone popup full-rule actions preserve local query and hash',mobilePopupRuntime.includes('origin?.dataset?.mobileRulePath||origin?.dataset?.fullRulePath')&&mobilePopupRuntime.includes('destination.search=location.search')&&mobileBuildSource.includes('data-mobile-rule-path='));
+check('Phone popup serializes the complete Glossary chain',mobilePopupRuntime.includes('popupIds:this.snapshot()')&&mobileRuntime.includes('returnRecord.popupIds?.length')&&mobileRuntime.includes('popups.restore(popupIds'));
+check('Phone popup ordinary actions do not use Browser History',!mobilePopupRuntime.includes('pushState')&&!mobilePopupRuntime.includes('history.back'));
 const detachmentSlug=value=>String(value||'').toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const detachmentInventory=allDetachments.map(item=>detachmentSlug(item.title));
 const knownDetachment=allDetachments[0].title,knownDetachmentId=detachmentSlug(knownDetachment);

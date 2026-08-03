@@ -32,10 +32,7 @@ if(typeof document!=='undefined')(async function(){
   const navButton=document.getElementById('navButton');
   const scrim=document.getElementById('navScrim');
   const dialog=document.getElementById('termDialog');
-  const title=document.getElementById('termTitle');
-  const summary=document.getElementById('termSummary');
-  const full=document.getElementById('termFull');
-  const rule=document.getElementById('termRule');
+  const popupLayer=document.getElementById('termPopupStack');
   const nav=document.getElementById('mobileNav');
   const viewSwitch=document.querySelector('[data-view-switch]');
   const rosterGuides=document.querySelector('[data-roster-guides-link]');
@@ -46,8 +43,11 @@ if(typeof document!=='undefined')(async function(){
   const unit=document.querySelector('.unit-card');
   const params=new URLSearchParams(location.search);
   const rosterMode=params.has('roster');
+  const terms=Object.freeze({...window.WH40K_GLOSSARY.forBook('adeptus-mechanicus')});
+  window.WHGlossaryAutolink?.configure('adeptus-mechanicus');
+  const popups=new window.AMPhonePopups({dialog,layer:popupLayer,terms,safeFallback:()=>navButton});
   let relatedRulesEnabled=compatibleRuntime?.compatibleRulesEnabled===true;
-  let gesture=null,suppressed=null,opener=null,openedByTouch=false,relatedLoaded=false,relatedKind='stratagems';
+  let gesture=null,suppressed=null,relatedLoaded=false,relatedKind='stratagems';
   let rosterDetachments=[],assignedEnhancementNames=new Set(),assignedEnhancementRuleIds=new Set(),compatibleRulesMatrix,rosterContext;
 
   if(rosterMode){
@@ -93,15 +93,7 @@ if(typeof document!=='undefined')(async function(){
 
   function drawer(open){document.body.classList.toggle('nav-drawer-open',open);navButton.setAttribute('aria-expanded',String(open));nav.setAttribute('aria-hidden',String(!open));scrim.hidden=!open;}
   function syncDrawerMode(){const returnFocus=nav.contains(document.activeElement);if(drawerMedia.matches)drawer(false);else{document.body.classList.remove('nav-drawer-open');nav.setAttribute('aria-hidden','false');scrim.hidden=true;}if(returnFocus&&nav.getAttribute('aria-hidden')==='true')navButton.focus({preventScroll:true});}
-  function showTerm(trigger,byTouch){
-    const id=trigger.dataset.term,termTitle=trigger.dataset.termTitle||trigger.textContent.trim(),termSummary=trigger.dataset.termSummary;
-    if(!id||!termSummary)return;
-    opener=trigger;openedByTouch=byTouch;title.textContent=termTitle;summary.textContent=termSummary;full.href=`../../../glossary/index.html#${id}`;
-    const rulePath=trigger.dataset.mobileRulePath||trigger.dataset.fullRulePath;rule.hidden=!rulePath;
-    if(rulePath){const destination=new URL(window.WHGlossaryReturn.href(rulePath));if(trigger.dataset.mobileRulePath)destination.search=location.search;rule.href=destination.href;}
-    dialog.showModal();
-  }
-  full.addEventListener('click',()=>{const triggers=[...document.querySelectorAll('[data-term]')];window.WHGlossaryReturn?.save({termId:opener?.dataset.term||'',triggerIndex:opener?triggers.indexOf(opener):-1});});
+  const showTerm=trigger=>popups.open(trigger.dataset.term,trigger);
 
   function filterRelated(){
     if(!relatedRulesEnabled||!relatedContent||!unit||!compatibleRulesMatrix)return;
@@ -150,21 +142,31 @@ if(typeof document!=='undefined')(async function(){
 
   document.addEventListener('pointerdown',event=>{if(event.pointerType==='mouse'||!event.isPrimary)return;const trigger=event.target.closest('[data-term]');gesture=trigger?{trigger,id:event.pointerId,x:event.clientX,y:event.clientY,moved:false}:null;},{capture:true,passive:true});
   document.addEventListener('pointermove',event=>{if(gesture&&gesture.id===event.pointerId&&Math.hypot(event.clientX-gesture.x,event.clientY-gesture.y)>10)gesture.moved=true;},{capture:true,passive:true});
-  document.addEventListener('pointerup',event=>{if(!gesture||gesture.id!==event.pointerId)return;suppressed={trigger:gesture.trigger,until:performance.now()+700};if(!gesture.moved)showTerm(gesture.trigger,true);gesture=null;},{capture:true,passive:true});
+  document.addEventListener('pointerup',event=>{if(!gesture||gesture.id!==event.pointerId)return;suppressed={trigger:gesture.trigger,until:performance.now()+700};if(!gesture.moved)showTerm(gesture.trigger);gesture=null;},{capture:true,passive:true});
   document.addEventListener('pointercancel',()=>{gesture=null;},{capture:true,passive:true});
   document.addEventListener('click',event=>{
     const local=event.target.closest('[data-journey-target]');if(local){document.getElementById(local.dataset.journeyTarget)?.scrollIntoView({block:'start'});return;}
     const trigger=event.target.closest('[data-term]');if(!trigger)return;
-    if(suppressed?.trigger===trigger&&performance.now()<suppressed.until){event.preventDefault();return;}showTerm(trigger,false);
+    if(suppressed?.trigger===trigger&&performance.now()<suppressed.until){event.preventDefault();return;}showTerm(trigger);
   });
   navButton.addEventListener('click',()=>drawer(!document.body.classList.contains('nav-drawer-open')));scrim.addEventListener('click',()=>drawer(false));
-  dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});dialog.addEventListener('close',()=>{if(openedByTouch)requestAnimationFrame(()=>opener?.blur());openedByTouch=false;});
   if(relatedRulesEnabled&&relatedRules){if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{if(!entries.some(entry=>entry.isIntersecting))return;observer.disconnect();loadRelated();},{rootMargin:'600px 0px'});observer.observe(relatedRules);}else loadRelated();}
   if(relatedRulesEnabled&&relatedDetachment){try{const saved=localStorage.getItem('adeptus-mechanicus-detachment-filter');if(saved&&relatedDetachment.querySelector(`option[value="${CSS.escape(saved)}"]`))relatedDetachment.value=saved;}catch{}relatedDetachment.addEventListener('change',()=>{try{localStorage.setItem('adeptus-mechanicus-detachment-filter',relatedDetachment.value);}catch{}filterRelated();});filterRelated();}
   if(relatedRulesEnabled)relatedRules?.addEventListener('click',event=>{const tab=event.target.closest('[data-related-tab]');if(tab){relatedKind=tab.dataset.relatedTab;filterRelated();}});
   drawerMedia.addEventListener?.('change',syncDrawerMode);syncDrawerMode();
-  window.WHPageState?.installTermDialog({dialog,triggers:()=>[...document.querySelectorAll('[data-term]')],opener:()=>opener,open:trigger=>showTerm(trigger,false)});
+  const documentTriggers=()=>[...document.querySelectorAll('main [data-term],#relatedRules [data-term]')];
+  const findRoot=(state,all=documentTriggers())=>all[state?.triggerIndex]?.dataset.term===state?.rootTerm?all[state.triggerIndex]:all.find(node=>node.dataset.term===state?.rootTerm)||null;
+  window.WHPageState?.install({
+    beforeRestore(){popups.closeAll({focus:false});},
+    snapshot(){const popupIds=popups.snapshot(),root=popups.rootElement(),all=documentTriggers();return popupIds.length?{popupIds,rootTerm:popupIds[0],triggerIndex:root?all.indexOf(root):-1}:null;},
+    restore(state){if(state?.popupIds?.length)popups.restore(state.popupIds,{root:findRoot(state),focus:true});}
+  });
 
   const returnRecord=window.WHGlossaryReturn?.read();
-  if(window.WHGlossaryReturn?.shouldRestoreAutomatically(returnRecord))requestAnimationFrame(()=>{const triggers=[...document.querySelectorAll('[data-term]')],indexed=triggers[returnRecord.triggerIndex],trigger=indexed?.dataset.term===returnRecord.termId?indexed:triggers.find(node=>node.dataset.term===returnRecord.termId);window.scrollTo(returnRecord.scrollX||0,returnRecord.scrollY||0);requestAnimationFrame(()=>{if(trigger)showTerm(trigger,false);window.WHGlossaryReturn.clear();});});
+  if(window.WHGlossaryReturn?.shouldRestoreAutomatically(returnRecord))requestAnimationFrame(()=>{
+    const popupIds=returnRecord.popupIds?.length?returnRecord.popupIds:[returnRecord.rootTerm||returnRecord.termId].filter(Boolean);
+    const trigger=findRoot({rootTerm:returnRecord.rootTerm||returnRecord.termId,triggerIndex:returnRecord.triggerIndex});
+    window.scrollTo(returnRecord.scrollX||0,returnRecord.scrollY||0);
+    requestAnimationFrame(()=>{if(trigger&&popupIds.length)popups.restore(popupIds,{root:trigger,focus:false});window.WHGlossaryReturn.clear();});
+  });
 }());

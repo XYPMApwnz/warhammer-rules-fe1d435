@@ -23,14 +23,14 @@ const clean=value=>value.replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').trim();
 const attribute=value=>value.replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;');
 const mechanicusRulePath=path=>/^books\/adeptus-mechanicus\/(?:index|reader)\.html#/.test(path);
 const portable=html=>html.replaceAll('href="./sources/','href="../sources/').replaceAll('src="./assets/','src="../assets/');
-function hydrateTerms(html){
+function hydrateTerms(html,{localRulePaths=true}={}){
   return html.replace(/(<(?:button|a)\b[^>]*\bdata-term="([^"]+)"[^>]*)(>)/g,(match,start,id,end)=>{
     const context=glossaryContext[id]||glossaryContext[aliases[id]||id];
     const term=glossary[aliases[context?.termId]||context?.termId||aliases[id]||id];
     if(!term)throw new Error(`Missing glossary term ${id}`);
     const title=term.title?.en||id;
     const summary=term.kind==='stratagem'?term.definition?.en||term.summary?.en||'':term.summary?.en||term.definition?.en||'';
-    const fullRulePath=context?.navigation?.fullRulePath||term.fullRulePath||'';
+    const fullRulePath=context?.navigation?.fullRulePath||term.fullRulePath||(localRulePaths&&context?.navigation?.rule?`books/adeptus-mechanicus/reader.html#${context.navigation.rule}`:'');
     const anchor=fullRulePath.includes('#')?fullRulePath.slice(fullRulePath.indexOf('#')+1):'';
     const mobileRulePath=mechanicusRulePath(fullRulePath)?mobileRulePaths.get(anchor)||'':'';
     return `${start} data-term-title="${attribute(title)}" data-term-summary="${attribute(summary)}"${fullRulePath?` data-full-rule-path="${attribute(fullRulePath)}"`:''}${mobileRulePath?` data-mobile-rule-path="${attribute(mobileRulePath)}"`:''}${end}`;
@@ -69,7 +69,7 @@ function relatedRules(){
       <div class="related-kind" data-related-kind="stratagems">${extract('section',`${slug}-stratagems`)}</div>
       <div class="related-kind" data-related-kind="enhancements" hidden>${extract('section',`${slug}-enhancements`)}</div>
     </section>`;
-  }).join('\n')+coreStratagems).replace(/\sdata-eligibility="[^"]*"/g,''));
+  }).join('\n')+coreStratagems).replace(/\sdata-eligibility="[^"]*"/g,''),{localRulePaths:false});
 }
 
 const link=(route,active)=>`<a href="./${route.file}" data-route-type="${route.type}"${route.type==='detachment'?` data-detachment-id="${route.id.slice(11)}"`:route.type==='unit'?` data-unit-id="${route.id}"`:''}${route.id===active?' aria-current="page"':''}>${route.title}${route.dp?` <span class="detachment-dp">${route.dp}</span>`:''}</a>`;
@@ -119,15 +119,15 @@ function page(route){
   <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#101313">
   <title>${route.title} &mdash; Adeptus Mechanicus</title>
   <link rel="manifest" href="../../../manifest.webmanifest"><link rel="icon" href="../assets/mechanicus-logo.png" type="image/png">
-  <link rel="stylesheet" href="../styles/tokens.css?v=15"><link rel="stylesheet" href="../../death-guard/styles/layout.css?v=11"><link rel="stylesheet" href="../../death-guard/styles/navigation.css?v=12"><link rel="stylesheet" href="../../death-guard/styles/content.css?v=38"><link rel="stylesheet" href="../../death-guard/styles/popups.css?v=17"><link rel="stylesheet" href="../styles/mechanicus.css?v=19"><link rel="stylesheet" href="../../shared/datasheet-system.css?v=6"><link rel="stylesheet" href="./mobile.css?v=1">
+  <link rel="stylesheet" href="../styles/tokens.css?v=15"><link rel="stylesheet" href="../../death-guard/styles/layout.css?v=11"><link rel="stylesheet" href="../../death-guard/styles/navigation.css?v=12"><link rel="stylesheet" href="../../death-guard/styles/content.css?v=38"><link rel="stylesheet" href="../../death-guard/styles/popups.css?v=17"><link rel="stylesheet" href="../styles/mechanicus.css?v=19"><link rel="stylesheet" href="../../shared/datasheet-system.css?v=6"><link rel="stylesheet" href="./mobile.css?v=2">
 </head><body>
   <header class="app-header" id="appHeader"><button class="header-button nav-menu" id="navButton" aria-label="Open navigation" aria-controls="mobileNav" aria-expanded="false">&#9776;</button><div class="app-brand"><strong>Adeptus Mechanicus Rules</strong><small>11E &middot; Mobile reference</small></div><a class="library-link" href="../../../index.html" aria-label="Back to rulebook library"><span aria-hidden="true">&larr;</span><b>Library</b></a><div class="header-spacer"></div></header>
   <button class="toc-scrim" id="navScrim" aria-label="Close navigation" hidden></button>
   <nav class="toc-panel" id="mobileNav" aria-label="Adeptus Mechanicus navigation" aria-hidden="true"><h2 class="toc-heading">Contents</h2><div class="phone-shortcuts"><a class="phone-glossary" href="../../../roster-guides/index.html" data-roster-guides-link hidden>&larr; Roster Guides</a><a class="phone-glossary" href="../../../glossary/index.html">Mega Glossary &rarr;</a><a class="phone-glossary phone-mode-switch" href="../reader.html#${route.id}" data-view-switch>Desktop / iPad view &rarr;</a></div><div class="phone-tree">${navigation(route)}</div></nav>
   <main class="main mobile-main"><article class="document">${hydrateTerms(content(route))}${relatedSection}</article></main>
   <script src="../../shared/datasheet-layout.js?v=2"></script><script src="../../shared/rule-facts.js?v=4"></script>
-  <dialog class="mobile-dialog" id="termDialog" aria-labelledby="termTitle"><form method="dialog" class="mobile-dialog-head"><span>Mega Glossary</span><button aria-label="Close popup">&times;</button></form><h2 id="termTitle"></h2><p id="termSummary"></p><a id="termRule" hidden>Open full rule &rarr;</a><a id="termFull" href="../../../glossary/index.html">Glossary entry &rarr;</a></dialog>
-  <script src="../../../glossary-return.js?v=3"></script><script src="../../shared/roster-parser.js?v=2"></script><script src="../../shared/roster-entities.js?v=1"></script><script src="../../../roster-guides/points-data.js?v=6"></script><script src="../scripts/roster-enhancements.js?v=2"></script><script src="./mobile.js?v=8"></script>
+  <dialog class="mobile-dialog" id="termDialog" aria-label="Term reference"><div class="mobile-popup-stack" id="termPopupStack"></div></dialog>
+  <script src="../../../glossary/generated/glossary.en.js?v=tyranids-1"></script><script src="../../../glossary-return.js?v=3"></script><script src="../../shared/popup-rule-actions.js?v=1"></script><script src="../../shared/popup-content.js?v=3"></script><script src="../../shared/glossary-autolink.js?v=8"></script><script src="../../shared/roster-parser.js?v=2"></script><script src="../../shared/roster-entities.js?v=1"></script><script src="../../../roster-guides/points-data.js?v=6"></script><script src="../scripts/roster-enhancements.js?v=2"></script><script src="./phone-popup-controller.js?v=1"></script><script src="./mobile.js?v=9"></script>
 </body></html>`;
 }
 

@@ -131,7 +131,7 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/reader.html",
   "./books/adeptus-mechanicus/mobile/index.html",
   "./books/adeptus-mechanicus/mobile/mobile.css?v=4",
-  "./books/adeptus-mechanicus/mobile/mobile.js?v=13",
+  "./books/adeptus-mechanicus/mobile/mobile.js?v=14",
   "./books/adeptus-mechanicus/mobile/phone-popup-controller.js?v=1",
   "./books/adeptus-mechanicus/assets/mechanicus-logo.png",
   "./books/adeptus-mechanicus/assets/mechanicus-cover-800.webp",
@@ -144,7 +144,7 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/scripts/roster-filter.js?v=3",
   "./books/adeptus-mechanicus/scripts/compatible-rules-runtime.mjs?v=3",
   "./books/adeptus-mechanicus/generated/compatible-rules.json",
-  "./books/adeptus-mechanicus/scripts/app.js?v=33"
+  "./books/adeptus-mechanicus/scripts/app.js?v=34"
   ,"./books/tyranids/"
   ,TYRANIDS_ENTRY_FALLBACK
   ,TYRANIDS_DESKTOP_FALLBACK

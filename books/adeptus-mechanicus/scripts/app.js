@@ -11,9 +11,14 @@
   }
   function decorateStratagemTypes(root){
     root.querySelectorAll('.stratagem').forEach(card=>{
-      if(/^(battle-tactic|strategic-ploy|wargear|epic-deed|core|unknown)$/.test(card.dataset.stratagemType||''))return;
-      const match=card.querySelector('.stratagem-type')?.textContent.trim().match(/(Battle Tactic|Strategic Ploy|Wargear|Epic Deed|Core) Stratagem\s*$/i);
-      card.dataset.stratagemType=match?match[1].toLowerCase().replace(/\s+/g,'-'):'unknown';
+      const labels=[...card.querySelectorAll('.stratagem-type')],current=labels[0]?.textContent.trim()||'';
+      const match=current.match(/(Battle Tactic|Strategic Ploy|Wargear|Epic Deed|Core) Stratagem\s*$/i);
+      const names={'battle-tactic':'Battle Tactic Stratagem','strategic-ploy':'Strategic Ploy Stratagem',wargear:'Wargear Stratagem','epic-deed':'Epic Deed Stratagem',core:'Core Stratagem',unknown:'Type unverified'};
+      const type=names[card.dataset.stratagemType]?card.dataset.stratagemType:(match?match[1].toLowerCase().replace(/\s+/g,'-'):'unknown');
+      card.dataset.stratagemType=type;
+      const label=labels.shift()||document.createElement('span'),host=card.querySelector('.stratagem-head > div:first-child'),expected=names[type];
+      label.className='stratagem-type';labels.forEach(item=>item.remove());if(host&&label.parentElement!==host)host.append(label);
+      if(type==='unknown'||!label.textContent.trim().toLowerCase().endsWith(expected.toLowerCase()))label.textContent=expected;
     });
   }
   function decorateStratagemTurns(root){

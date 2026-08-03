@@ -83,21 +83,38 @@ button, a, [data-term] { touch-action: manipulation; -webkit-tap-highlight-color
 .related-content .detachment-content { grid-template-columns: 1fr; }
 
 .mobile-dialog {
+  position: fixed;
+  inset: calc(var(--header) + env(safe-area-inset-top) + 10px) 10px auto;
   width: min(620px, calc(100% - 20px));
-  max-height: calc(100dvh - 20px);
-  padding: 0 20px 20px;
-  overflow: auto;
+  height: calc(100dvh - var(--header) - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 20px);
+  max-width: none;
+  max-height: calc(100dvh - var(--header) - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 20px);
+  margin: 0 auto;
+  padding: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
   border: 2px solid transparent;
   color: var(--ink);
   background: linear-gradient(var(--panel), var(--panel)) padding-box,
               linear-gradient(90deg, var(--green), var(--bronze) 72%, var(--pink)) border-box;
   box-shadow: 0 18px 48px rgba(0, 0, 0, .7);
 }
-@media (min-width: 1000px) and (orientation: landscape) {
-  .related-content .detachment-content { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+html.phone-popup-open { overflow: hidden; }
+.mobile-popup-stack { display: grid; gap: 12px; width: 100%; height: 100%; min-width: 0; overflow: auto; overscroll-behavior: contain; }
+.mobile-popup-card {
+  position: relative;
+  min-width: 0;
+  padding: 0 14px 14px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: var(--panel);
+  overflow-wrap: anywhere;
 }
-.mobile-dialog::backdrop { background: rgba(3, 5, 3, .76); backdrop-filter: blur(3px); }
-.mobile-dialog-head {
+.mobile-popup-card:focus { outline: 2px solid var(--green); outline-offset: -2px; }
+.mobile-popup-card-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -106,8 +123,9 @@ button, a, [data-term] { touch-action: manipulation; -webkit-tap-highlight-color
   font: 800 9px ui-monospace, monospace;
   letter-spacing: .14em;
   text-transform: uppercase;
+  background: var(--panel);
 }
-.mobile-dialog-head button {
+.mobile-popup-card-head button {
   width: 46px;
   height: 46px;
   border: 1px solid var(--line);
@@ -115,9 +133,15 @@ button, a, [data-term] { touch-action: manipulation; -webkit-tap-highlight-color
   background: var(--panel-2);
   font-size: 24px;
 }
-.mobile-dialog h2 { margin: 0 0 12px; font: 700 30px/1 Georgia, serif; }
-.mobile-dialog p { color: var(--muted); font-size: 17px; line-height: 1.55; }
-.mobile-dialog > a { display: inline-block; padding: 12px 0; color: var(--green); font-weight: 800; }
+.mobile-popup-card h2 { margin: 0 0 12px; font: 700 30px/1 Georgia, serif; }
+.mobile-popup-card p { color: var(--muted); font-size: 17px; line-height: 1.55; }
+.mobile-popup-related { padding-top: 10px; border-top: 1px solid var(--soft-line); }
+.mobile-popup-actions { display: flex; flex-wrap: wrap; gap: 8px 14px; }
+.mobile-popup-actions .popup-action { padding: 10px 0; color: var(--green); font-weight: 800; }
+@media (min-width: 1000px) and (orientation: landscape) {
+  .related-content .detachment-content { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+.mobile-dialog::backdrop { background: rgba(3, 5, 3, .76); backdrop-filter: blur(3px); }
 .term-button:focus:not(:focus-visible), .weapon-button:focus:not(:focus-visible) { outline: 0; box-shadow: none; }
 .term-button:focus-visible, .weapon-button:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
 

@@ -1,5 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
+const checkOnly=process.argv.includes('--check');
+
 const source = await readFile(new URL('../reader.html', import.meta.url), 'utf8');
 const glossary = JSON.parse(await readFile(new URL('../../../glossary/registry.en.json', import.meta.url), 'utf8')).terms;
 const aliases = JSON.parse(await readFile(new URL('../../../glossary/aliases.en.json', import.meta.url), 'utf8')).aliases;
@@ -143,7 +145,7 @@ function page(route) {
   <link rel="stylesheet" href="../styles/content.css?v=38">
   <link rel="stylesheet" href="../styles/popups.css?v=17">
   <link rel="stylesheet" href="../../shared/datasheet-system.css?v=6">
-  <link rel="stylesheet" href="./mobile.css?v=8">
+  <link rel="stylesheet" href="./mobile.css?v=9">
 </head>
 <body>
   <header class="app-header" id="appHeader">
@@ -165,26 +167,37 @@ function page(route) {
   <main class="main mobile-main"><article class="document">${hydrateTerms(content(route))}${relatedSection}</article></main>
   <script src="../../shared/datasheet-layout.js?v=2"></script>
   <script src="../../shared/rule-facts.js?v=4"></script>
-  <dialog class="mobile-dialog" id="termDialog" aria-labelledby="termTitle">
-    <form method="dialog" class="mobile-dialog-head"><span>Mega Glossary</span><button aria-label="Close popup">&times;</button></form>
-    <h2 id="termTitle"></h2><p id="termSummary"></p>
-    <a id="termRule" hidden>Open full rule &rarr;</a>
-    <a id="termFull" href="../../../glossary/index.html">Glossary entry &rarr;</a>
-  </dialog>
+  <dialog class="mobile-dialog" id="termDialog" aria-label="Term reference"><div class="mobile-popup-stack" id="termPopupStack"></div></dialog>
+  <script src="../../../glossary/generated/glossary.en.js?v=tyranids-1"></script>
   <script src="../../../glossary-return.js?v=3"></script>
+  <script src="../../shared/popup-rule-actions.js?v=1"></script>
+  <script src="../../shared/popup-content.js?v=3"></script>
+  <script src="../../shared/glossary-autolink.js?v=8"></script>
   <script src="../../shared/roster-parser.js?v=2"></script>
   <script src="../../../roster-guides/points-data.js?v=6"></script>
   <script src="../../shared/roster-enhancements.js?v=3"></script>
-  <script src="./mobile.js?v=23"></script>
+  <script src="./phone-popup-controller.js?v=1"></script>
+  <script src="./mobile.js?v=24"></script>
 </body>
 </html>`;
 }
 
-for (const route of routes) await writeFile(new URL(route.file, import.meta.url), page(route));
-await writeFile(new URL('related-rules.inc', import.meta.url), relatedRules());
+const outputs=new Map(routes.map(route=>[route.file,page(route)]));
+outputs.set('related-rules.inc',relatedRules());
 for (const route of routes.filter(route => route.type !== 'start')) {
-  const html = await readFile(new URL(route.file, import.meta.url), 'utf8');
+  const html=outputs.get(route.file);
   if (!html.includes(`id="${route.id}"`)) throw new Error(`Incomplete route ${route.file}`);
 }
 
-console.log(`Mobile reference built: ${routes.length} pages, ${detachments.length} detachments, ${units.length} datasheets.`);
+if(checkOnly){
+  const stale=[];
+  for(const [file,expected] of outputs){
+    try{if(await readFile(new URL(file,import.meta.url),'utf8')!==expected)stale.push(`stale ${file}`);}
+    catch(error){if(error.code==='ENOENT')stale.push(`missing ${file}`);else throw error;}
+  }
+  if(stale.length){console.error(stale.join('\n'));process.exitCode=1;}
+  else console.log(`Death Guard mobile outputs are current: ${routes.length} pages and related-rules.inc.`);
+}else{
+  for(const [file,expected] of outputs)await writeFile(new URL(file,import.meta.url),expected);
+  console.log(`Mobile reference built: ${routes.length} pages, ${detachments.length} detachments, ${units.length} datasheets.`);
+}

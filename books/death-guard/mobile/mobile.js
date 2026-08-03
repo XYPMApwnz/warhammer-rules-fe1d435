@@ -8,10 +8,7 @@
   const navButton = document.getElementById('navButton');
   const scrim = document.getElementById('navScrim');
   const dialog = document.getElementById('termDialog');
-  const title = document.getElementById('termTitle');
-  const summary = document.getElementById('termSummary');
-  const full = document.getElementById('termFull');
-  const rule = document.getElementById('termRule');
+  const popupLayer = document.getElementById('termPopupStack');
   const nav = document.getElementById('mobileNav');
   const viewSwitch = document.querySelector('[data-view-switch]');
   const rosterGuides = document.querySelector('[data-roster-guides-link]');
@@ -21,13 +18,14 @@
   const drawerMedia = window.matchMedia('(max-width: 800px)');
   let gesture = null;
   let suppressed = null;
-  let opener = null;
-  let openedByTouch = false;
   let relatedLoaded = false;
   let relatedKind = 'stratagems';
   const unit = document.querySelector('.unit-card');
   const params = new URLSearchParams(location.search);
   const rosterMode = params.has('roster');
+  const terms=Object.freeze({...window.WH40K_GLOSSARY.forBook('death-guard')});
+  window.WHGlossaryAutolink?.configure('death-guard');
+  const popups=new window.DGPhonePopups({dialog,layer:popupLayer,terms,safeFallback:()=>navButton});
   const slug = value => String(value || '').toLowerCase().replace(/['\u2019]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
   const resolveRosterDetachmentId=(normalizedIds,availableIds)=>{const ids=new Set(normalizedIds.filter(Boolean));if(ids.size!==1)return null;const[id]=ids;return availableIds.filter(candidate=>candidate===id).length===1?id:null;};
   let relatedRulesEnabled = Boolean(compatibleRuntime?.compatibleStratagemsReviewEnabled);
@@ -90,30 +88,7 @@
     if (returnFocus && nav.getAttribute('aria-hidden') === 'true') navButton.focus({ preventScroll: true });
   }
 
-  function showTerm(trigger, byTouch) {
-    const id = trigger.dataset.term;
-    const termTitle = trigger.dataset.termTitle || trigger.textContent.trim();
-    const termSummary = trigger.dataset.termSummary;
-    if (!id || !termSummary) return;
-    opener = trigger;
-    openedByTouch = byTouch;
-    title.textContent = termTitle;
-    summary.textContent = termSummary;
-    full.href = `../../../glossary/index.html#${id}`;
-    const rulePath = trigger.dataset.mobileRulePath || trigger.dataset.fullRulePath;
-    rule.hidden = !rulePath;
-    if (rulePath) {
-      const destination = new URL(window.WHGlossaryReturn.href(rulePath));
-      if (trigger.dataset.mobileRulePath) destination.search = location.search;
-      rule.href = destination.href;
-    }
-    dialog.showModal();
-  }
-
-  full.addEventListener('click', () => {
-    const triggers=[...document.querySelectorAll('[data-term]')];
-    window.WHGlossaryReturn?.save({termId:opener?.dataset.term||'',triggerIndex:opener?triggers.indexOf(opener):-1});
-  });
+  const showTerm=trigger=>popups.open(trigger.dataset.term,trigger);
 
   function filterRelated() {
     if (!relatedContent || !unit || !compatibleRulesMatrix) return;
@@ -183,7 +158,7 @@
   document.addEventListener('pointerup', event => {
     if (!gesture || gesture.id !== event.pointerId) return;
     suppressed = { trigger: gesture.trigger, until: performance.now() + 700 };
-    if (!gesture.moved) showTerm(gesture.trigger, true);
+    if (!gesture.moved) showTerm(gesture.trigger);
     gesture = null;
   }, { capture: true, passive: true });
 
@@ -202,16 +177,11 @@
       event.preventDefault();
       return;
     }
-    showTerm(trigger, false);
+    showTerm(trigger);
   });
 
   navButton.addEventListener('click', () => drawer(!document.body.classList.contains('nav-drawer-open')));
   scrim.addEventListener('click', () => drawer(false));
-  dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
-  dialog.addEventListener('close', () => {
-    if (openedByTouch) requestAnimationFrame(() => opener?.blur());
-    openedByTouch = false;
-  });
   if (relatedRulesEnabled && relatedRules) {
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver(entries => {
@@ -242,14 +212,19 @@
   });
   drawerMedia.addEventListener?.('change', syncDrawerMode);
   syncDrawerMode();
-  window.WHPageState?.installTermDialog({ dialog, triggers: () => [...document.querySelectorAll('[data-term]')], opener: () => opener, open: trigger => showTerm(trigger, false) });
+  const documentTriggers=()=>[...document.querySelectorAll('main [data-term],#relatedRules [data-term]')];
+  const findRoot=(state,all=documentTriggers())=>all[state?.triggerIndex]?.dataset.term===state?.rootTerm?all[state.triggerIndex]:all.find(node=>node.dataset.term===state?.rootTerm)||null;
+  window.WHPageState?.install({
+    beforeRestore(){popups.closeAll({focus:false});},
+    snapshot(){const popupIds=popups.snapshot(),root=popups.rootElement(),all=documentTriggers();return popupIds.length?{popupIds,rootTerm:popupIds[0],triggerIndex:root?all.indexOf(root):-1}:null;},
+    restore(state){if(state?.popupIds?.length)popups.restore(state.popupIds,{root:findRoot(state),focus:true});}
+  });
 
   const returnRecord=window.WHGlossaryReturn?.read();
   if(window.WHGlossaryReturn?.shouldRestoreAutomatically(returnRecord))requestAnimationFrame(()=>{
-    const triggers=[...document.querySelectorAll('[data-term]')];
-    const indexed=triggers[returnRecord.triggerIndex];
-    const trigger=indexed?.dataset.term===returnRecord.termId?indexed:triggers.find(node=>node.dataset.term===returnRecord.termId);
+    const popupIds=returnRecord.popupIds?.length?returnRecord.popupIds:[returnRecord.rootTerm||returnRecord.termId].filter(Boolean);
+    const trigger=findRoot({rootTerm:returnRecord.rootTerm||returnRecord.termId,triggerIndex:returnRecord.triggerIndex});
     window.scrollTo(returnRecord.scrollX||0,returnRecord.scrollY||0);
-    requestAnimationFrame(()=>{if(trigger)showTerm(trigger,false);window.WHGlossaryReturn.clear();});
+    requestAnimationFrame(()=>{if(trigger&&popupIds.length)popups.restore(popupIds,{root:trigger,focus:false});window.WHGlossaryReturn.clear();});
   });
 }());

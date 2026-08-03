@@ -250,6 +250,150 @@ try{
     console.log('PASS Browser Back restores exact Army Book scroll, popup and focus');
   }finally{await historyContext.close();}
 
+  const phonePopupContext=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844},hasTouch:true,isMobile:true});
+  try{
+    const {page,errors}=await observedPage(phonePopupContext);
+    await page.goto(`${origin}/books/death-guard/mobile/army-rules.html?popup=stack#core-rules`);
+    const popupGeometry=()=>page.evaluate(()=>{const box=node=>{const rect=node.getBoundingClientRect();return{left:rect.left,top:rect.top,right:rect.right,bottom:rect.bottom,width:rect.width,height:rect.height,scrollLeft:node.scrollLeft,scrollTop:node.scrollTop,scrollWidth:node.scrollWidth,scrollHeight:node.scrollHeight,clientWidth:node.clientWidth,clientHeight:node.clientHeight};},dialog=document.getElementById('termDialog'),stack=document.getElementById('termPopupStack'),cards=[...stack.querySelectorAll('.mobile-popup-card')],close=cards.at(-1)?.querySelector('[data-popup-close]'),header=document.getElementById('appHeader');return{viewport:{width:innerWidth,height:innerHeight},document:{scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth},header:box(header),dialog:box(dialog),stack:box(stack),active:box(cards.at(-1)),close:box(close)};});
+    const assertPopupGeometry=(geometry,label)=>{
+      assert.ok(geometry.dialog.left>=0&&geometry.dialog.right<=geometry.viewport.width&&geometry.dialog.top>=geometry.header.bottom&&geometry.dialog.bottom<=geometry.viewport.height,`${label} dialog outside viewport: ${JSON.stringify(geometry)}`);
+      assert.ok(geometry.stack.left>=geometry.dialog.left&&geometry.stack.right<=geometry.dialog.right&&geometry.stack.top>=geometry.dialog.top&&geometry.stack.bottom<=geometry.dialog.bottom,`${label} stack outside dialog: ${JSON.stringify(geometry)}`);
+      assert.ok(geometry.active.top>=geometry.stack.top-1&&geometry.close.top>=Math.max(geometry.header.bottom,geometry.stack.top)-1&&geometry.close.right<=geometry.viewport.width&&geometry.close.bottom<=Math.min(geometry.viewport.height,geometry.stack.bottom)+1,`${label} active close outside visible area: ${JSON.stringify(geometry)}`);
+      assert.ok(geometry.document.scrollWidth<=geometry.document.clientWidth&&geometry.stack.scrollWidth<=geometry.stack.clientWidth+1,`${label} horizontal overflow: ${JSON.stringify(geometry)}`);
+    };
+    const initialHistoryLength=await page.evaluate(()=>history.length);
+    const rootTrigger=page.locator('main [data-term="keyword-death-guard"]').first();
+    await rootTrigger.click();
+    assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1,'Phone root term must create one popup level');
+    assert.equal(await page.locator('#termPopupStack .mobile-popup-card').last().evaluate(node=>node===document.activeElement),true,'Phone root card must receive focus');
+    await rootTrigger.dispatchEvent('click');
+    assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1,'Phone current root must not duplicate');
+    const otherRootTrigger=page.locator('main [data-term]:not([data-term="keyword-death-guard"])').first(),otherRootTerm=await otherRootTrigger.getAttribute('data-term');
+    assert.ok(otherRootTerm,'Phone root replacement fixture must expose a second document term');
+    await otherRootTrigger.dispatchEvent('click');
+    assert.deepEqual(await page.locator('#termPopupStack .mobile-popup-card').evaluateAll(cards=>cards.map(card=>card.dataset.popupTerm)),[otherRootTerm],'Phone external root opening must replace the previous chain');
+    await rootTrigger.dispatchEvent('click');
+    assert.deepEqual(await page.locator('#termPopupStack .mobile-popup-card').evaluateAll(cards=>cards.map(card=>card.dataset.popupTerm)),['keyword-death-guard'],'Phone root fixture must replace the alternate chain');
+    await page.evaluate(()=>{window.__phoneRootCard=document.querySelector('#termPopupStack .mobile-popup-card');});
+    const nestedTrigger=page.locator('#termPopupStack [data-popup-related]').first();
+    await nestedTrigger.click();
+    assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),2,'Phone nested term must append one popup level');
+    assert.equal(await page.evaluate(()=>window.__phoneRootCard===document.querySelector('#termPopupStack .mobile-popup-card')),true,'Phone nested opening must preserve the parent card DOM');
+    assert.equal(await page.locator('#termPopupStack .mobile-popup-card').last().evaluate(node=>node===document.activeElement),true,'Phone nested card must receive focus');
+    const nestedGeometry=await popupGeometry();assertPopupGeometry(nestedGeometry,'390x844');assert.ok(nestedGeometry.stack.scrollTop>0,'Phone stack must scroll the active nested level into view');
+    await nestedTrigger.dispatchEvent('click');
+    assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),2,'Phone current nested term must not duplicate');
+    const ancestorTrigger=page.locator('#termPopupStack .mobile-popup-card').last().locator('[data-term="keyword-death-guard"]').first();
+    assert.equal(await ancestorTrigger.count(),1,'Phone cycle fixture must expose the root term from the nested card');
+    await ancestorTrigger.click();
+    assert.deepEqual(await page.locator('#termPopupStack .mobile-popup-card').evaluateAll(cards=>cards.map(card=>card.dataset.popupTerm)),['keyword-death-guard'],'Phone ancestor opening must remove the nested cycle');
+    assert.equal(await page.evaluate(()=>window.__phoneRootCard===document.querySelector('#termPopupStack .mobile-popup-card')),true,'Phone cycle collapse must preserve the root card DOM');
+    await nestedTrigger.click();
+    const siblingNestedTrigger=page.locator('#termPopupStack .mobile-popup-card').first().locator('[data-popup-related]').nth(1);
+    assert.equal(await siblingNestedTrigger.count(),1,'Phone level-close fixture must expose a second nested term');
+    await siblingNestedTrigger.dispatchEvent('click');
+    assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),3,'Phone second nested opening must append a deeper level');
+    await page.locator('[data-popup-close="1"]').click();
+    assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1,'Phone level-N close must remove that level and all deeper levels');
+    await nestedTrigger.click();
+    await page.locator('#termPopupStack .mobile-popup-card').last().locator('h2').click();
+    assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),2,'Phone internal click must not close the popup chain');
+    await page.locator('[data-popup-close="1"]').click();
+    await page.waitForTimeout(20);
+    assert.equal(await nestedTrigger.evaluate(node=>node===document.activeElement),true,'Phone nested close must return focus to its parent opener');
+    await nestedTrigger.click();await page.keyboard.press('Escape');await page.waitForTimeout(20);
+    assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1,'Phone Escape must close only the top level');
+    await page.locator('[data-popup-close="0"]').click();await page.waitForTimeout(20);
+    assert.equal(await rootTrigger.evaluate(node=>node===document.activeElement),true,'Phone root close must return document focus');
+    assert.equal(await page.evaluate(()=>history.length),initialHistoryLength,'ordinary Phone popup operations must not create Browser History entries');
+
+    await page.setViewportSize({width:320,height:568});
+    await rootTrigger.click();await page.locator('#termPopupStack [data-popup-related]').first().click();
+    const compactGeometry=await popupGeometry();assertPopupGeometry(compactGeometry,'320x568');assert.ok(compactGeometry.stack.scrollTop>0,'compact Phone stack must scroll the active nested level into view');
+    await page.locator('[data-popup-close="0"]').click();await page.setViewportSize({width:390,height:844});
+
+    await rootTrigger.click();
+    await page.locator('#termDialog').click({position:{x:2,y:2}});
+    assert.equal(await page.locator('#termDialog').evaluate(node=>node.open),false,'Phone backdrop must close the complete root chain');
+
+    const box=await rootTrigger.boundingBox();assert.ok(box);
+    await rootTrigger.dispatchEvent('pointerdown',{pointerType:'touch',pointerId:41,isPrimary:true,clientX:box.x+5,clientY:box.y+5});
+    await rootTrigger.dispatchEvent('pointermove',{pointerType:'touch',pointerId:41,isPrimary:true,clientX:box.x+25,clientY:box.y+25});
+    await rootTrigger.dispatchEvent('pointerup',{pointerType:'touch',pointerId:41,isPrimary:true,clientX:box.x+25,clientY:box.y+25});
+    assert.equal(await page.locator('#termDialog').evaluate(node=>node.open),false,'Phone touch scroll must not open a popup');
+    await page.touchscreen.tap(box.x+5,box.y+5);
+    assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1,'Phone tap plus synthetic click must open exactly one level');
+    const geometry=await page.evaluate(()=>{const dialog=document.getElementById('termDialog'),rect=dialog.getBoundingClientRect(),header=document.getElementById('appHeader').getBoundingClientRect();return{left:rect.left,right:rect.right,top:rect.top,bottom:rect.bottom,width:innerWidth,height:innerHeight,headerBottom:header.bottom,overflow:dialog.scrollWidth-dialog.clientWidth};});
+    assert.ok(geometry.left>=0&&geometry.right<=geometry.width&&geometry.top>=geometry.headerBottom&&geometry.bottom<=geometry.height&&geometry.overflow<=1,`Phone popup must remain inside the safe viewport: ${JSON.stringify(geometry)}`);
+    await page.locator('[data-popup-close="0"]').click();
+
+    const fullRuleFixture={route:'/books/death-guard/mobile/typhus.html',selector:'main [data-term="ability-the-destroyer-hive-70f0cc1"]',destination:'/books/death-guard/mobile/typhus.html#typhus-ability-the-destroyer-hive'};
+    const fullRuleQuery='?popup=stack&case=full-rule';
+    await page.goto(`${origin}${fullRuleFixture.route}${fullRuleQuery}#typhus`);
+    const routedTrigger=page.locator(fullRuleFixture.selector);
+    assert.equal(await routedTrigger.count(),1,`Missing Phone full-rule fixture: route=${fullRuleFixture.route} selector=${fullRuleFixture.selector} destination=${fullRuleFixture.destination}`);
+    assert.equal(await routedTrigger.getAttribute('data-mobile-rule-path'),fullRuleFixture.destination.slice(1),`Unexpected Phone full-rule fixture destination on ${fullRuleFixture.route}`);
+    assert.equal(await routedTrigger.evaluate(node=>Boolean(node.closest('main'))),true,`Phone full-rule fixture trigger must remain inside <main>: ${fullRuleFixture.selector}`);
+    await routedTrigger.click();
+    const fullRuleAction=page.locator('#termPopupStack .popup-action',{hasText:'Open full rule'}).first();
+    const fullRuleHref=await fullRuleAction.getAttribute('href');
+    assert.ok(fullRuleHref,'Phone popup full-rule action must have a destination');
+    const fullRuleUrl=new URL(fullRuleHref,page.url()),expectedFullRuleUrl=new URL(`${origin}${fullRuleFixture.destination}`);
+    assert.equal(fullRuleUrl.pathname,expectedFullRuleUrl.pathname,'Phone popup full-rule action must use the generated local route');
+    assert.equal(fullRuleUrl.hash,expectedFullRuleUrl.hash,'Phone popup full-rule action must preserve the generated destination hash');
+    assert.equal(fullRuleUrl.search,fullRuleQuery,'Phone popup full-rule action must preserve the current query');
+    assert.equal(fullRuleUrl.searchParams.getAll('popup').length,1,'Phone popup full-rule action must not duplicate popup query');
+    assert.equal(fullRuleUrl.searchParams.getAll('case').length,1,'Phone popup full-rule action must not duplicate fixture query');
+    await fullRuleAction.click();
+    await page.waitForURL(url=>url.pathname===expectedFullRuleUrl.pathname&&url.hash===expectedFullRuleUrl.hash);
+    const navigatedFullRuleUrl=new URL(page.url());
+    assert.equal(navigatedFullRuleUrl.pathname,expectedFullRuleUrl.pathname,'Phone full-rule click must reach the generated local route');
+    assert.equal(navigatedFullRuleUrl.hash,expectedFullRuleUrl.hash,'Phone full-rule click must reach the generated destination hash');
+    assert.equal(navigatedFullRuleUrl.search,fullRuleQuery,'Phone full-rule click must preserve query exactly once');
+
+    await page.goto(`${origin}/books/death-guard/mobile/army-rules.html?popup=stack#core-rules`);
+
+    await rootTrigger.click();await page.locator('#termPopupStack [data-popup-related]').first().click();
+    const glossaryOrigin=await page.evaluate(()=>({url:location.href,scrollX,scrollY,activeTerm:document.activeElement?.dataset.popupTerm||'',historyLength:history.length}));
+    const restoredIds=await page.locator('#termPopupStack .mobile-popup-card').evaluateAll(cards=>cards.map(card=>card.dataset.popupTerm));
+    await page.locator('#termPopupStack .mobile-popup-card').last().locator('[data-mega-glossary]').click();
+    await page.waitForURL(/\/glossary\/index\.html/);
+    const glossaryReturnRecord=await page.evaluate(()=>JSON.parse(sessionStorage.getItem('wh40k-mega-glossary-return')||'null'));
+    assert.ok(glossaryReturnRecord,'Phone Glossary transition must save a return record');
+    assert.deepEqual(glossaryReturnRecord.popupIds,restoredIds,'Phone Glossary return record must preserve the complete popup chain');
+    assert.equal(glossaryReturnRecord.path,new URL(glossaryOrigin.url).pathname+new URL(glossaryOrigin.url).search+new URL(glossaryOrigin.url).hash,'Phone Glossary return record must preserve route, query and hash');
+    assert.equal(glossaryReturnRecord.scrollX,glossaryOrigin.scrollX,'Phone Glossary return record must preserve horizontal scroll');
+    assert.equal(glossaryReturnRecord.scrollY,glossaryOrigin.scrollY,'Phone Glossary return record must preserve vertical scroll');
+    await page.goBack();
+    await page.waitForFunction(ids=>JSON.stringify([...document.querySelectorAll('#termPopupStack .mobile-popup-card')].map(card=>card.dataset.popupTerm))===JSON.stringify(ids),restoredIds);
+    assert.deepEqual(await page.locator('#termPopupStack .mobile-popup-card').evaluateAll(cards=>cards.map(card=>card.dataset.popupTerm)),restoredIds,'Phone Glossary return must restore the popup chain');
+    assert.equal(page.url(),glossaryOrigin.url,'Phone Glossary return must restore route, query and hash');
+    assert.ok(Math.abs((await page.evaluate(()=>scrollY))-glossaryOrigin.scrollY)<=1,'Phone Glossary return must restore document scroll');
+    assert.equal(await page.locator('#termPopupStack .mobile-popup-card').last().evaluate(node=>node===document.activeElement),true,'Phone Glossary return must focus the restored active level');
+    await page.locator('[data-popup-close="0"]').click();
+    await page.evaluate(()=>{history.replaceState(null,'',location.href);const triggers=[...document.querySelectorAll('main [data-term],#relatedRules [data-term]')],root=triggers.find(node=>node.dataset.term==='keyword-death-guard');sessionStorage.setItem('wh40k-mega-glossary-return',JSON.stringify({v:1,createdAt:Date.now(),path:location.pathname+location.search+location.hash,scrollX,scrollY,restoreMode:'automatic',popupIds:['keyword-death-guard','missing-phone-term','death-guard-army-rules-nurgles-gift'],rootTerm:'keyword-death-guard',triggerIndex:triggers.indexOf(root)}));});
+    await page.reload();await page.waitForFunction(()=>document.querySelectorAll('#termPopupStack .mobile-popup-card').length===1);
+    assert.deepEqual(await page.locator('#termPopupStack .mobile-popup-card').evaluateAll(cards=>cards.map(card=>card.dataset.popupTerm)),['keyword-death-guard'],'invalid saved nested term must restore only the valid popup prefix');
+    assert.equal(await page.evaluate(()=>sessionStorage.getItem('wh40k-mega-glossary-return')),null,'Phone invalid saved popup suffix must be consumed after fail-safe restoration');
+    await page.waitForFunction(()=>document.getElementById('termDialog')?.contains(document.activeElement));
+    assert.equal(await page.locator('#termDialog').evaluate(node=>node.contains(document.activeElement)),true,'Phone valid restored popup prefix must retain focus inside the open modal');
+    const missingOpener=page.locator('main [data-term="keyword-death-guard"]').first();await page.locator('[data-popup-close="0"]').click();await missingOpener.click();await missingOpener.evaluate(node=>node.remove());await page.locator('[data-popup-close="0"]').click();await page.waitForTimeout(20);
+    assert.equal(await page.locator('#navButton').evaluate(node=>node===document.activeElement),true,'missing Phone popup opener must use the safe focus fallback');
+    await page.reload();
+    const rapidTrigger=page.locator('main [data-term="keyword-death-guard"]').first();
+    await rapidTrigger.click();await page.locator('#termPopupStack [data-popup-related]').first().click();await page.locator('[data-popup-close="1"]').click();await page.locator('[data-popup-close="0"]').click();
+    const rapidOtherRoot=page.locator('main [data-term]:not([data-term="keyword-death-guard"])').first();await rapidOtherRoot.click();assert.notEqual(await page.locator('#termPopupStack .mobile-popup-card').first().getAttribute('data-popup-term'),'keyword-death-guard','rapid Phone sequence must open a different root');await page.locator('[data-popup-close="0"]').click();await rapidTrigger.click();await page.locator('#termPopupStack [data-popup-related]').first().click();await page.mouse.click(1,1);
+    for(let attempt=0;attempt<2;attempt++){await rapidTrigger.click();await page.locator('[data-popup-close="0"]').click();}
+    assert.equal(await page.locator('#termDialog').evaluate(node=>node.open),false,'rapid Phone popup opening and closing must leave a valid closed state');
+    assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),0,'rapid Phone popup opening and closing must leave no stale levels');
+    assert.equal(await page.locator('#termPopupStack :is(a,button,[tabindex])').count(),0,'rapid Phone popup opening and closing must leave no hidden focusable popup controls');
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=document.documentElement.clientWidth),true,'rapid Phone popup opening and closing must leave no horizontal document overflow');
+    assert.equal(await page.evaluate(()=>getComputedStyle(document.body).overflow!=='hidden'&&getComputedStyle(document.documentElement).overflow!=='hidden'),true,'rapid Phone popup opening and closing must restore page scroll policy');
+    await rapidTrigger.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1,'Phone popup must open normally after the rapid sequence');await page.locator('[data-popup-close="0"]').click();
+    assert.deepEqual(errors,[]);
+    console.log('PASS Death Guard Phone nested popup, focus, touch, geometry and Glossary return');
+  }finally{await phonePopupContext.close();}
+
   const orientationContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1194,height:834}});
   try{
     const {page,errors}=await observedPage(orientationContext);
@@ -659,7 +803,7 @@ try{
       title:document.title,
       relatedRules:document.querySelectorAll('#relatedRules').length,
       cachedPage:Boolean(await caches.match(location.href)),
-      cachedMobile:Boolean(await caches.match(new URL('./mobile.js?v=17',location.href).href)),
+      cachedMobile:Boolean(await caches.match(new URL('./mobile.js?v=24',location.href).href)),
       cachedModule:Boolean(await caches.match(new URL('../scripts/compatible-stratagems-runtime.mjs?v=3',location.href).href))
     }));
     assert.equal(warmDgState.relatedRules,1,`DG warm Phone runtime unavailable: ${JSON.stringify({warmBefore,warmDgState,errors})}`);

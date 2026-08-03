@@ -290,6 +290,7 @@ check('mobile popups disable expensive backdrop blur',/@media\s*\(max-width:\s*8
 const mobileCss=read('mobile/mobile.css');
 const mobileBuild=read('mobile/build.mjs');
 const mobileRuntime=read('mobile/mobile.js');
+const phonePopupRuntime=read('mobile/phone-popup-controller.js');
 const mobileTyphus=read('mobile/typhus.html');
 const rosterFilterRuntime=read('scripts/roster-filter.js');
 const extractDetachmentResolver=(source)=>{const expression=source.match(/const resolveRosterDetachmentId=(.+);/)?.[1];return expression?Function(`"use strict";return (${expression});`)():null;};
@@ -306,7 +307,28 @@ check('single-Detachment roster paths retain only the resolved Detachment',roste
 check('exact Enhancement ownerUnitId filtering is unchanged',rosterFilterRuntime.includes('unit.id===enhancement.ownerUnitId')&&mobileRuntime.includes("item.ownerStatus==='resolved'&&ownerIds.has(item.ownerUnitId)"));
 check('no-roster All Detachments behavior is unchanged',rosterFilterRuntime.includes('if (!rosterId) return;')&&mobileTyphus.includes('<option value="all">All detachments</option>')&&appSource.includes("[['all','All Detachments']]")&&mobileRuntime.indexOf('if (rosterMode)')<mobileRuntime.indexOf('option !== matchingOption'));
 check('mobile generator maps every Death Guard full-rule anchor onto an explicit phone route',mobileBuild.includes("glossary/contexts/death-guard.json")&&mobileBuild.includes('data-mobile-rule-path=')&&mobileBuild.includes('Missing mobile rule route'));
-check('mobile full-rule actions prefer phone routes and preserve the complete current query',mobileRuntime.includes('trigger.dataset.mobileRulePath || trigger.dataset.fullRulePath')&&mobileRuntime.includes('destination.search = location.search'));
+check('mobile full-rule actions prefer phone routes and preserve the complete current query',phonePopupRuntime.includes('origin?.dataset?.mobileRulePath||origin?.dataset?.fullRulePath')&&phonePopupRuntime.includes('destination.search=location.search'));
+try{new vm.Script(phonePopupRuntime,{filename:'mobile/phone-popup-controller.js'});check('Phone popup controller syntax',true);}catch(error){check('Phone popup controller syntax',false,error.message);}
+const phonePopupContext={window:{},Object};
+try{
+  vm.runInNewContext(phonePopupRuntime,phonePopupContext,{filename:'mobile/phone-popup-controller.js'});
+  const State=phonePopupContext.window.DGPhonePopupState,valid=new Set(['root','other','child','deep']),state=new State(id=>valid.has(id));
+  state.open('root',false);check('behavior: Phone root opening creates one level',state.snapshot().join(',')==='root');
+  check('behavior: Phone current root does not duplicate',state.open('root',false)===false&&state.snapshot().join(',')==='root');
+  state.open('child',true);const parentSnapshot=state.snapshot();check('behavior: Phone nested opening appends exactly one level',parentSnapshot.join(',')==='root,child');
+  check('behavior: Phone current top does not duplicate',state.open('child',true)===false&&state.snapshot().join(',')==='root,child');
+  state.open('deep',true);state.open('root',true);check('behavior: Phone ancestor reopening removes the cycle',state.snapshot().join(',')==='root');
+  state.open('child',true);state.open('deep',true);state.closeFrom(1);check('behavior: Phone level close removes that level and deeper',state.snapshot().join(',')==='root');
+  state.open('child',true);state.closeFrom(state.ids.length-1);check('behavior: Phone Escape-equivalent top close preserves parent',state.snapshot().join(',')==='root');
+  state.open('other',false);check('behavior: Phone external root replaces the chain',state.snapshot().join(',')==='other');
+  check('behavior: Phone invalid restored nested term fails safe',state.restore(['root','missing','deep']).join(',')==='root');
+  check('behavior: Phone missing restored root closes the chain',state.restore(['missing','child']).length===0);
+}catch(error){check('Phone popup behavioral state machine',false,error.message);}
+check('Phone popup uses canonical glossary records and shared renderers',mobileTyphus.includes('../../../glossary/generated/glossary.en.js')&&mobileTyphus.includes('../../shared/popup-content.js')&&mobileTyphus.includes('../../shared/glossary-autolink.js')&&mobileRuntime.includes("WH40K_GLOSSARY.forBook('death-guard')")&&phonePopupRuntime.includes('WHPopupContent?.render'));
+check('Phone popup preserves parent DOM by syncing only the changed suffix',phonePopupRuntime.includes('while(prefix<cards.length')&&phonePopupRuntime.includes('for(let index=prefix;index<this.state.ids.length'));
+check('Phone popup keeps ordinary closure out of Browser History',!phonePopupRuntime.includes('pushState')&&!phonePopupRuntime.includes('history.back'));
+check('Phone glossary return stores and restores the complete popup chain',phonePopupRuntime.includes('popupIds:this.snapshot()')&&mobileRuntime.includes('returnRecord.popupIds?.length')&&mobileRuntime.includes('popups.restore(popupIds'));
+check('Phone generated outputs have a read-only freshness mode',mobileBuild.includes("process.argv.includes('--check')")&&mobileBuild.includes('stale ${file}')&&mobileBuild.includes('missing ${file}'));
 check('generated phone terms keep Core rules external while routing Death Guard abilities locally',mobileTyphus.includes('data-full-rule-path="books/death-guard/reader.html#typhus-ability-eater-plague-psychic" data-mobile-rule-path="books/death-guard/mobile/typhus.html#typhus-ability-eater-plague-psychic"')&&mobileTyphus.includes('data-full-rule-path="books/core-rules/')&&!mobileTyphus.includes('data-mobile-rule-path="books/core-rules/'));
 check('mobile section jumps clear the fixed header and safe area',mobileCss.includes('scroll-margin-top: calc(var(--header) + env(safe-area-inset-top) + 10px)')&&!mobileCss.includes('var(--header-height)'));
 check('mobile controls have no delayed decorative motion',/@media\s*\(max-width:\s*800px\)[\s\S]*?\.toc-panel\s*\{[^}]*transition:\s*none/.test(read('styles/navigation.css'))&&/@media\s*\(max-width:\s*800px\)[\s\S]*?\.term-popup\s*\{[^}]*animation:\s*none/.test(read('styles/popups.css')));

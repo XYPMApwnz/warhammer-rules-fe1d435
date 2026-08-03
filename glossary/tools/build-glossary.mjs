@@ -681,7 +681,7 @@ const cacheInputs=[
   'books/shared/navigation-targets.js','books/shared/datasheet-layout.js','books/shared/datasheet-system.css','books/shared/popup-content.js','books/shared/glossary-autolink.js','books/shared/rule-facts.js','books/shared/roster-parser.js','books/shared/roster-enhancements.js',
   ...['death-guard','adeptus-mechanicus'].flatMap(book=>['data.js','navigation-controller.js','popup-controller.js','journey-controller.js','ui-controllers.js','app.js'].map(file=>`books/${book}/scripts/${file}`)),
   ...['related-rules.js','roster-enhancements.js','roster-filter.js'].map(file=>`books/adeptus-mechanicus/scripts/${file}`),
-  'books/death-guard/mobile/mobile.css','books/death-guard/mobile/mobile.js','books/death-guard/mobile/related-rules.inc',
+  ...['death-guard','adeptus-mechanicus'].flatMap(book=>['mobile.css','mobile.js','phone-popup-controller.js','related-rules.inc'].map(file=>`books/${book}/mobile/${file}`)),
   'books/death-guard/scripts/view-router.js','books/death-guard/scripts/roster-filter.js','books/death-guard/scripts/related-rules.js','books/death-guard/scripts/full-entry-controller.js','books/death-guard/scripts/compatible-stratagems-runtime.mjs','books/death-guard/generated/compatible-rules.json',
   ...coreReaderFiles,
   'glossary/viewer.css','glossary/viewer-profiles.css','glossary/viewer-progressive.css','glossary/viewer.js'

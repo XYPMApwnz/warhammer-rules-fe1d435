@@ -177,13 +177,19 @@ function page(route) {
   <script src="../../../roster-guides/points-data.js?v=6"></script>
   <script src="../../shared/roster-enhancements.js?v=3"></script>
   <script src="./phone-popup-controller.js?v=1"></script>
-  <script src="./mobile.js?v=24"></script>
+  <script src="./mobile.js?v=25"></script>
 </body>
 </html>`;
 }
 
 const outputs=new Map(routes.map(route=>[route.file,page(route)]));
 outputs.set('related-rules.inc',relatedRules());
+const linkedPwaAssets=[...outputs.get('index.html').matchAll(/(?:href|src)="\.\/(mobile\.(?:css|js)|phone-popup-controller\.js)(\?v=[^"]+)"/g)]
+  .map(match=>`./books/death-guard/mobile/${match[1]}${match[2]}`).sort();
+const serviceWorker=await readFile(new URL('../../../service-worker.js',import.meta.url),'utf8');
+const cachedPwaAssets=[...serviceWorker.matchAll(/"(\.\/books\/death-guard\/mobile\/(?:mobile\.(?:css|js)|phone-popup-controller\.js)(?:\?v=[^"]+)?)"/g)]
+  .map(match=>match[1]).sort();
+if(linkedPwaAssets.length!==3||JSON.stringify(linkedPwaAssets)!==JSON.stringify(cachedPwaAssets))throw new Error(`Death Guard Phone PWA assets differ from generated index.html: expected ${linkedPwaAssets.join(', ')}, cached ${cachedPwaAssets.join(', ')}`);
 for (const route of routes.filter(route => route.type !== 'start')) {
   const html=outputs.get(route.file);
   if (!html.includes(`id="${route.id}"`)) throw new Error(`Incomplete route ${route.file}`);

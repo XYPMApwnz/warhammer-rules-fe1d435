@@ -145,7 +145,9 @@
   }
 
   document.addEventListener('pointerdown', event => {
-    if (event.pointerType === 'mouse' || !event.isPrimary) return;
+    if (event.pointerType === 'mouse') { suppressed = null; return; }
+    if (!event.isPrimary) return;
+    suppressed = null;
     const trigger = event.target.closest('[data-term]');
     gesture = trigger ? { trigger, id: event.pointerId, x: event.clientX, y: event.clientY, moved: false } : null;
   }, { capture: true, passive: true });
@@ -157,12 +159,21 @@
 
   document.addEventListener('pointerup', event => {
     if (!gesture || gesture.id !== event.pointerId) return;
-    suppressed = { trigger: gesture.trigger, until: performance.now() + 700 };
-    if (!gesture.moved) showTerm(gesture.trigger);
+    const completed = gesture;
     gesture = null;
+    if (completed.moved) return;
+    suppressed = { trigger: completed.trigger, until: performance.now() + 700 };
+    showTerm(completed.trigger);
   }, { capture: true, passive: true });
 
-  document.addEventListener('pointercancel', () => { gesture = null; }, { capture: true, passive: true });
+  document.addEventListener('pointercancel', () => { gesture = null; suppressed = null; }, { capture: true, passive: true });
+
+  document.addEventListener('click', event => {
+    if (!suppressed) return;
+    const active = performance.now() < suppressed.until;
+    suppressed = null;
+    if (active) { event.preventDefault(); event.stopImmediatePropagation(); }
+  }, { capture: true });
 
   document.addEventListener('click', event => {
     const local = event.target.closest('[data-journey-target]');
@@ -173,10 +184,6 @@
 
     const trigger = event.target.closest('[data-term]');
     if (!trigger) return;
-    if (suppressed?.trigger === trigger && performance.now() < suppressed.until) {
-      event.preventDefault();
-      return;
-    }
     showTerm(trigger);
   });
 

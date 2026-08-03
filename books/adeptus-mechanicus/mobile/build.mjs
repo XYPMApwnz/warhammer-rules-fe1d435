@@ -127,12 +127,18 @@ function page(route){
   <main class="main mobile-main"><article class="document">${hydrateTerms(content(route))}${relatedSection}</article></main>
   <script src="../../shared/datasheet-layout.js?v=2"></script><script src="../../shared/rule-facts.js?v=4"></script>
   <dialog class="mobile-dialog" id="termDialog" aria-label="Term reference"><div class="mobile-popup-stack" id="termPopupStack"></div></dialog>
-  <script src="../../../glossary/generated/glossary.en.js?v=tyranids-1"></script><script src="../../../glossary-return.js?v=3"></script><script src="../../shared/popup-rule-actions.js?v=1"></script><script src="../../shared/popup-content.js?v=3"></script><script src="../../shared/glossary-autolink.js?v=8"></script><script src="../../shared/roster-parser.js?v=2"></script><script src="../../shared/roster-entities.js?v=1"></script><script src="../../../roster-guides/points-data.js?v=6"></script><script src="../scripts/roster-enhancements.js?v=2"></script><script src="./phone-popup-controller.js?v=1"></script><script src="./mobile.js?v=9"></script>
+  <script src="../../../glossary/generated/glossary.en.js?v=tyranids-1"></script><script src="../../../glossary-return.js?v=3"></script><script src="../../shared/popup-rule-actions.js?v=1"></script><script src="../../shared/popup-content.js?v=3"></script><script src="../../shared/glossary-autolink.js?v=8"></script><script src="../../shared/roster-parser.js?v=2"></script><script src="../../shared/roster-entities.js?v=1"></script><script src="../../../roster-guides/points-data.js?v=6"></script><script src="../scripts/roster-enhancements.js?v=2"></script><script src="./phone-popup-controller.js?v=1"></script><script src="./mobile.js?v=10"></script>
 </body></html>`;
 }
 
 const outputs=new Map(routes.map(route=>[route.file,page(route)]));
 outputs.set('related-rules.inc',relatedRules());
+const linkedPwaAssets=[...outputs.get('index.html').matchAll(/(?:href|src)="\.\/(mobile\.(?:css|js)|phone-popup-controller\.js)(\?v=[^"]+)"/g)]
+  .map(match=>`./books/adeptus-mechanicus/mobile/${match[1]}${match[2]}`).sort();
+const serviceWorker=await readFile(new URL('../../../service-worker.js',import.meta.url),'utf8');
+const cachedPwaAssets=[...serviceWorker.matchAll(/"(\.\/books\/adeptus-mechanicus\/mobile\/(?:mobile\.(?:css|js)|phone-popup-controller\.js)(?:\?v=[^"]+)?)"/g)]
+  .map(match=>match[1]).sort();
+if(linkedPwaAssets.length!==3||JSON.stringify(linkedPwaAssets)!==JSON.stringify(cachedPwaAssets))throw new Error(`Mechanicus Phone PWA assets differ from generated index.html: expected ${linkedPwaAssets.join(', ')}, cached ${cachedPwaAssets.join(', ')}`);
 for(const route of routes.filter(route=>route.type!=='start')){
   const html=outputs.get(route.file);
   if(!html.includes(`id="${route.id}"`))throw new Error(`Incomplete route ${route.file}`);

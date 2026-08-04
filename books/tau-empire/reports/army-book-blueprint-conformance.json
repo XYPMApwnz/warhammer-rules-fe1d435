@@ -687,7 +687,7 @@
         {
           "type": "real-browser-automated-integration",
           "path": "tests/browser/cold-offline.mjs",
-          "detail": "Missing, corrupt, wrong-faction, and multiple-Detachment rosters fail closed."
+          "detail": "Desktop and Phone resolve faction, canonical units, one canonical Detachment, and the current Phone route before replacement navigation terminates invalid roster initialization."
         }
       ],
       "blocker": false,

@@ -21,11 +21,11 @@ const glossary=JSON.parse(fs.readFileSync(path.join(repo,'glossary','registry.en
 const reader=fs.readFileSync(path.join(root,'reader.html'),'utf8');
 const serviceWorker=fs.readFileSync(path.join(repo,'service-worker.js'),'utf8');
 const codexParitySource=manifest.layers.find(layer=>layer.id==='codex-parity');
-assert.equal(config.assetVersions.rosterFilter,3);
-assert.ok(reader.includes('./scripts/roster-filter.js?v=3'));
-assert.equal(reader.includes('./scripts/roster-filter.js?v=2'),false);
-assert.ok(serviceWorker.includes('./books/tau-empire/scripts/roster-filter.js?v=3'));
-assert.equal(serviceWorker.includes('./books/tau-empire/scripts/roster-filter.js?v=2'),false);
+assert.equal(config.assetVersions.rosterFilter,4);
+assert.ok(reader.includes('./scripts/roster-filter.js?v=4'));
+assert.equal(reader.includes('./scripts/roster-filter.js?v=3'),false);
+assert.ok(serviceWorker.includes('./books/tau-empire/scripts/roster-filter.js?v=4'));
+assert.equal(serviceWorker.includes('./books/tau-empire/scripts/roster-filter.js?v=3'),false);
 assert.equal(codexParitySource?.title,'Wahapedia Warhammer 40,000 11th Edition · T’au Empire');
 const mobileStart=fs.readFileSync(path.join(root,'mobile','index.html'),'utf8');
 const related=fs.readFileSync(path.join(root,'mobile','related-rules.inc'),'utf8');
@@ -170,7 +170,7 @@ for(const detachment of [...pack.detachments,...parity.detachments]){
 assert.ok(related.lastIndexOf('data-detachment="core"')>related.indexOf('data-detachment="advanced-acquisition-cadre"'),'Core Stratagems must follow faction Stratagems');
 assert.doesNotMatch(reader,/army-book-app\.js/,'T’au must use the same focused runtime architecture as mature books');
 assert.doesNotMatch(reader,/related-rules-matcher|army-related-rules/,'T\'au must not load the legacy Compatible Rules matcher');
-assert.match(reader,/scripts\/roster-filter\.js\?v=3/);
+assert.match(reader,/scripts\/roster-filter\.js\?v=4/);
 assert.match(reader,/scripts\/app\.js\?v=8/);
 assert.doesNotMatch(related,/data-eligibility|data-keyword-grants/,'matrix template must not retain legacy matcher inputs');
 assert.match(reader,/Reference in verification/);

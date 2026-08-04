@@ -151,7 +151,7 @@ for(const detachment of pack.detachments){
 assert.doesNotMatch(reader,/death-guard-cover|CODEX REGISTER \/\/ XIV|Technical placeholder/);
 assert.match(reader,/Reference in verification/);
 assert.doesNotMatch(reader,/army-related-rules\.js|related-rules-matcher\.js/);
-assert.match(reader,/roster-filter\.js\?v=1/);
+assert.match(reader,/roster-filter\.js\?v=2/);
 assert.doesNotMatch(reader,/army-book-app\.js/,'Tyranids must not load the generic monolithic Army Book runtime');
 assert.doesNotMatch(reader,/unit-source-state/,'per-datasheet source telemetry must not clutter the playable reader');
 assert.match(app,/new window\.DGNavigation\(\)/);

@@ -1,12 +1,13 @@
 (function(){
   'use strict';
-  const rosterId=new URLSearchParams(location.search).get('roster');
-  if(!rosterId)return;
+  const params=new URLSearchParams(location.search),rosterMode=params.has('roster'),rosterId=params.get('roster');
+  if(!rosterMode)return;
+  if(!rosterId){location.replace('../../roster-guides/index.html');return;}
   let record;
   try{record=(JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[]).find(item=>item?.id===rosterId);}catch{}
   if(!record){location.replace('../../roster-guides/index.html?missing='+encodeURIComponent(rosterId));return;}
   let roster=record.roster;
-  if(record.sourceText&&window.WHRosterParser){const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)roster=parsed;}
+  if(record.sourceText&&window.WHRosterParser){try{const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed?.units?.length)roster=parsed;}catch{}}
   const faction=String(roster?.faction||'').replace(/^(?:Chaos|Imperium)\s*[-–—]\s*/i,'').trim().toLowerCase();
   if(faction!=='adeptus mechanicus'||!roster?.units?.length){location.replace('../../roster-guides/index.html');return;}
   const pointsCheck=window.WHRosterPoints?.check(roster,'adeptus mechanicus');
@@ -21,6 +22,7 @@
     const entry=selected.get(card.id)||{card,units:[],points:0,loadout:[]};entry.units.push(unit);entry.points+=Number(unit.points)||0;
     entry.loadout.push(...[unit.wargear,...(unit.models||[]).flatMap(model=>[model.wargear,...(model.loadouts||[]).map(item=>item.wargear)])].filter(Boolean));selected.set(card.id,entry);
   }
+  if(!selected.size){location.replace('../../roster-guides/index.html');return;}
   const detachments=(roster.detachments?.length?roster.detachments.map(item=>item.label):[roster.detachment]).flatMap(split).map(label=>label.replace(/\s*\([^)]*\)\s*$/,'')).filter(Boolean);
   const canonicalDetachmentIds=[...document.querySelectorAll('.content-group.detachment[data-detachment]')].map(section=>section.dataset.detachment);
   const detachmentId=window.AMRosterEnhancements?.resolveDetachment(detachments,canonicalDetachmentIds);

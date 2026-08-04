@@ -12,6 +12,14 @@ const glossaryContext={};glossaryContext.window=glossaryContext;
 vm.runInNewContext(fs.readFileSync(path.join(root,'glossary/generated/glossary.en.js'),'utf8'),glossaryContext,{filename:'glossary.en.js'});
 const failures=[];
 const assert=(ok,message)=>{if(!ok)failures.push(message);};
+const blueprint=fs.readFileSync(path.join(root,'docs/ARMY_BOOK_BLUEPRINT.md'),'utf8');
+const blueprintIds=[...blueprint.matchAll(/^## (AB-[A-Z0-9]+-[0-9]{3}) /gm)].map(match=>match[1]);
+const rosterStart=blueprint.indexOf('## AB-ROSTER-004 '),rosterEnd=blueprint.indexOf('\n## AB-',rosterStart+1),rosterRequirement=blueprint.slice(rosterStart,rosterEnd<0?blueprint.length:rosterEnd);
+assert(blueprintIds.length===83&&new Set(blueprintIds).size===83,'Blueprint requirement inventory is not 83 total / 83 unique');
+assert(/accepted T.au Empire Phone production control flow/.test(rosterRequirement)&&rosterRequirement.includes('For AB-ROSTER-004 only'),'AB-ROSTER-004 does not identify the scoped T’au Phone canonical reference');
+assert(rosterRequirement.includes('location.replace(...)')&&rosterRequirement.includes('followed immediately by return'),'AB-ROSTER-004 does not require replacement navigation and immediate termination');
+assert(rosterRequirement.includes('Silently removing only roster-sensitive controls')&&rosterRequirement.includes('supersedes the legacy Death Guard soft-failure path'),'AB-ROSTER-004 still permits the legacy soft fallback');
+assert(rosterRequirement.includes('at least one roster unit that resolves to a canonical datasheet')&&rosterRequirement.includes('current route'),'AB-ROSTER-004 omits canonical-unit or route-unit validation');
 const walk=(value,visit)=>{
   if(Array.isArray(value))return value.forEach(item=>walk(item,visit));
   if(!value||typeof value!=='object')return;
@@ -63,7 +71,7 @@ for(const bookId of supported){
     const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8'),points=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','tyranids-points.en.json'),'utf8')),codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','tyranids-codex-datasheets.en.json'),'utf8'));
     const units=[...codex.datasheets,...codex.imperialArmour,...codex.legends],unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),enhancementTitles=new Set([...related.matchAll(/data-enhancement-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
     assert(points.units.length===57,'tyranids: points catalog is incomplete');assert(points.enhancements.length===34,'tyranids: Enhancement catalog is incomplete');units.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`tyranids: unit ${unit.title} is absent from Roster Guide`));points.enhancements.forEach(item=>assert(enhancementTitles.has(entities.normalize(item.title)),`tyranids: Enhancement ${item.title} is absent from related rules`));
-    assert(reader.includes('./scripts/roster-filter.js?v=1')&&reader.includes('./scripts/app.js?v=7'),'tyranids: roster or matrix controller is absent');assert(fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs')),'tyranids: matrix runtime is absent');
+    assert(reader.includes('./scripts/roster-filter.js?v=2')&&reader.includes('./scripts/app.js?v=7'),'tyranids: roster or matrix controller is absent');assert(fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs')),'tyranids: matrix runtime is absent');
     console.log(`PASS  tyranids: ${points.units.length} units, ${points.enhancements.length} Enhancements, desktop/iPad + Phone Mode`);continue;
   }
   if(bookId==='tau-empire'){
@@ -148,6 +156,22 @@ for(const bookId of supported){
   assert(inventory.coreStratagems.length>0,`${bookId}: Core Stratagems are absent from related rules`);
   console.log(`PASS  ${bookId}: ${inventory.units.length} units, ${inventory.weapons.length} weapon profiles, ${inventory.abilities.length} abilities, ${inventory.detachments.length} detachments, ${inventory.enhancements.length} enhancements, ${inventory.stratagems.length} faction + ${inventory.coreStratagems.length} core stratagems`);
 }
+
+for(const item of [
+  ['death-guard',18,29],
+  ['adeptus-mechanicus',4,15],
+  ['tyranids',2,8],
+  ['tau-empire',4,8]
+]){
+  const bookId=item[0],desktopVersion=item[1],phoneVersion=item[2],bookRoot=path.join(root,'books',bookId);
+  const desktop=fs.readFileSync(path.join(bookRoot,'scripts','roster-filter.js'),'utf8'),phone=fs.readFileSync(path.join(bookRoot,'mobile','mobile.js'),'utf8'),reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),phoneIndex=fs.readFileSync(path.join(bookRoot,'mobile','index.html'),'utf8');
+  assert(desktop.includes("params.has('roster')")||desktop.includes('params.has("roster")'),bookId+': desktop does not distinguish an absent roster query from an empty roster ID');
+  assert(desktop.includes('selected.size')&&/location\.replace[\s\S]{0,180}return;/.test(desktop),bookId+': desktop lacks canonical-unit replacement termination');
+  assert(/location\.replace[\s\S]{0,180}return;/.test(phone),bookId+': Phone lacks replacement navigation followed by return');
+  assert(reader.includes('./scripts/roster-filter.js?v='+desktopVersion),bookId+': reader roster-filter version is stale');
+  assert(phoneIndex.includes('./mobile.js?v='+phoneVersion),bookId+': Phone runtime version is stale');
+}
+assert(!/catch\s*\{[\s\S]{0,160}relatedRulesEnabled\s*=\s*false[\s\S]{0,160}relatedRules\?\.remove/.test(fs.readFileSync(path.join(root,'books/death-guard/mobile/mobile.js'),'utf8')),'death-guard: legacy Phone soft fallback remains active');
 
 assert(supported.length>0,'No books declare Roster Guide support');
 assert(entities.weaponFamily('Plasma gun – supercharge')==='plasma gun','Plasma gun profile family is not canonical');

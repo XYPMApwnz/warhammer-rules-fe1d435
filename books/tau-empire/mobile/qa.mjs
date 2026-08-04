@@ -3,10 +3,16 @@ import {readdir,readFile,stat} from 'node:fs/promises';
 
 const root=new URL('./',import.meta.url);
 const files=(await readdir(root)).filter(name=>name.endsWith('.html'));
+const runtime=await readFile(new URL('mobile.js',root),'utf8');
 assert.equal(files.length,73,'Phone Mode must contain start, updates, army rules, 7 detachments and 63 datasheets');
+assert.match(runtime,/routeDetachmentId=link=>\{const pathname=new URL\(link\.href,location\.href\)\.pathname/,'Detachment IDs must come from route pathname');
+assert.match(runtime,/canonicalDetachments=new Set\([^;]+\.map\(routeDetachmentId\)\)/,'only Detachment navigation routes may establish canonical membership');
+assert.doesNotMatch(runtime,/canonicalDetachments=new Set\([^;]+textContent/,'visible DP badges must not enter canonical Detachment IDs');
+const detachmentRoute=new URL('./kauyon.html?roster=fixture#detachment',new URL('cadre-fireblade.html',root));
+assert.equal((detachmentRoute.pathname.split('/').pop()||'').replace(/\.html$/i,''),'kauyon','KAUYON 2DP route must resolve to kauyon despite query and hash');
 for(const file of files){
   const html=await readFile(new URL(file,root),'utf8');
-  assert.match(html,/\.\/mobile\.js\?v=7/);
+  assert.match(html,/\.\/mobile\.js\?v=8/);
   assert.match(html,/\.\/mobile\.css\?v=2/);
   assert.match(html,/rule-facts\.js\?v=4/);
   assert.doesNotMatch(html,/related-rules-matcher|army-related-rules/);

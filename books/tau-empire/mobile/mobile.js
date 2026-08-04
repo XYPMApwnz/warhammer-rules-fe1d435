@@ -9,23 +9,27 @@
   const relatedContent=document.getElementById('relatedRulesContent'),relatedDetachment=document.getElementById('relatedDetachment');
   const drawerMedia=matchMedia('(max-width: 800px)'),unit=document.querySelector('.unit-card'),params=new URLSearchParams(location.search),rosterMode=params.has('roster');
   const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/\s*\(aura\)\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim(),slug=value=>normalize(value).replace(/\s+/g,'-'),normalizeTauFaction=value=>normalize(String(value||'').replace(/^Xenos\s*[-–—]\s{0,}/i,''));
+  const routeDetachmentId=link=>{const pathname=new URL(link.href,location.href).pathname,filename=pathname.split('/').pop()||'';return filename.replace(/\.html$/i,'');};
   function rosterContext(){
     if(!rosterMode)return null;
     let record;try{record=(JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[]).find(item=>item?.id===params.get('roster'));}catch{}
     if(!record)return null;
     let roster=record.roster;
-    if(record.sourceText&&window.WHRosterParser){const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)roster=parsed;}
-    if(!['t au empire','tau empire'].includes(normalizeTauFaction(roster?.faction))||!roster?.units?.length)return null;
+    if(record.sourceText&&window.WHRosterParser){try{const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed?.units?.length)roster=parsed;}catch{}}
+    if(!['t au empire','tau empire'].includes(normalizeTauFaction(roster?.faction))||!Array.isArray(roster?.units)||!roster.units.length)return null;
     const selected=new Map();
     for(const item of roster.units){const key=normalize(item.name),entry=selected.get(key)||{units:[],loadout:[]};entry.units.push(item);entry.loadout.push(...[item.wargear,...(item.models||[]).flatMap(model=>[model.wargear,...(model.loadouts||[]).map(loadout=>loadout.wargear)])].filter(Boolean));selected.set(key,entry);}
+    const canonicalUnits=new Set([...nav.querySelectorAll('.mobile-unit-groups a')].map(link=>normalize(link.textContent))),canonicalDetachments=new Set([...nav.querySelectorAll('.phone-tree > details:first-of-type .mobile-nav-branch > a')].map(routeDetachmentId));
+    if(![...selected.keys()].some(key=>canonicalUnits.has(key)))return null;
     const detachments=[...new Set((roster.detachments?.length?roster.detachments.map(item=>item.label):[roster.detachment]).flatMap(value=>String(value||'').split(/\s*,\s*(?![^()]*\))/)).map(value=>slug(value.replace(/\s*\([^)]*\)\s*$/,''))).filter(Boolean))];
-    if(detachments.length!==1)return null;
+    if(detachments.length!==1||!canonicalDetachments.has(detachments[0]))return null;
     const entry=unit?selected.get(normalize(unit.dataset.unitTitle)):null;if(unit&&!entry)return null;
     const owners=new Set((entry?.units||[]).map(item=>item.id)),enhancements=new Set((roster.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&owners.has(item.ownerUnitId)).map(item=>normalize(item.name)));
     return{record,roster,selected,entry,detachments,enhancements};
   }
+  if(rosterMode&&(!window.WHRosterParser||!window.WHBookRosterEnhancements)){location.replace('../../../roster-guides/index.html');return;}
   const roster=rosterContext();if(rosterMode&&!roster){location.replace('../../../roster-guides/index.html');return;}
-  const relatedRulesEnabled=Boolean(compatibleRuntime&&relatedRules)&&(!rosterMode||!!roster);
+  const relatedRulesEnabled=Boolean(compatibleRuntime&&relatedRules);
   const terms=Object.freeze({...window.WH40K_GLOSSARY.forBook('tau-empire')});
   window.WHGlossaryAutolink?.configure('tau-empire');
   const popups=new window.TAUPhonePopups({dialog,layer:popupLayer,terms,safeFallback:()=>navButton});

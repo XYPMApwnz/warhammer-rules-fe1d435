@@ -12,7 +12,7 @@
   "mobileRelatedRulesSource": false,
   "rosterSupport": true,
   "compatibleRulesMatrix": true,
-  "assetVersions": {"app": 7},
+  "assetVersions": {"app": 7, "rosterFilter": 2},
   "expected": {
     "matchedDetachments": 10,
     "factionPackDetachments": 4,

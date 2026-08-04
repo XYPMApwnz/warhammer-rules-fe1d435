@@ -1,6 +1,7 @@
 (function () {
-  const rosterId = new URLSearchParams(location.search).get("roster");
-  if (!rosterId) return;
+  const params = new URLSearchParams(location.search), rosterMode = params.has("roster"), rosterId = params.get("roster");
+  if (!rosterMode) return;
+  if (!rosterId) { location.replace("../../roster-guides/index.html"); return; }
 
   let roster, sourceText = "", record;
   try {
@@ -11,8 +12,7 @@
     if (!roster && rosterId === "1") roster = JSON.parse(sessionStorage.getItem("wh40k-roster-guide"));
   } catch {}
   if (sourceText && window.WHRosterParser) {
-    const parsed = window.WHRosterParser.parse(sourceText);
-    if (parsed.units.length) roster = parsed;
+    try { const parsed = window.WHRosterParser.parse(sourceText); if (parsed?.units?.length) roster = parsed; } catch {}
   }
   if (roster?.faction) roster.faction = roster.faction.replace(/^Chaos\s*[-–—]\s*/i, '').trim();
   if (roster?.faction?.toLowerCase() !== "death guard" || !roster?.units?.length) {
@@ -120,10 +120,12 @@
   }
   const detachmentIds = new Set([resolvedDetachmentId]);
   const detachmentLabel = detachments.find((item) => `detachment-${slug(item.name || item.label.split("(")[0])}` === resolvedDetachmentId).label;
+  const canonicalUnitIds = new Set([...document.querySelectorAll('.unit-card[id^="unit-"]')].map(card => card.id));
   const selected = new Map();
 
   for (const unit of roster.units) {
     const id = `unit-${slug(unit.name)}`;
+    if (!canonicalUnitIds.has(id)) continue;
     const entry = selected.get(id) || { copies:0, points:0, loadout:[], units:[] };
     entry.copies += 1;
     entry.points += unit.points;
@@ -131,6 +133,7 @@
     entry.loadout.push(...[unit.wargear, ...(unit.models || []).flatMap((model) => [model.wargear, ...(model.loadouts || []).map((loadout) => loadout.wargear)])].filter(Boolean));
     selected.set(id, entry);
   }
+  if (!selected.size) { location.replace("../../roster-guides/index.html"); return; }
   const enhancementRuleIdsByUnitId={};
   for(const enhancement of roster.enhancements||[]){
     if(enhancement?.ownerStatus!=='resolved'||!enhancement.ownerUnitId)continue;

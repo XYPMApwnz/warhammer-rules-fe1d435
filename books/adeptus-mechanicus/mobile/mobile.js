@@ -51,13 +51,13 @@ if(typeof document!=='undefined')(async function(){
   let rosterDetachments=[],assignedEnhancementNames=new Set(),assignedEnhancementRuleIds=new Set(),compatibleRulesMatrix,rosterContext;
 
   if(rosterMode){
-    const rosterId=params.get('roster'),rosterGuideHref=()=>window.AMPhoneRoster.withRosterQuery(new URL('../../../roster-guides/index.html',location.href).href,rosterId);
+    const rosterId=params.get('roster'),rosterGuideHref=()=>new URL('../../../roster-guides/index.html',location.href).href;
     if(!window.WHRosterParser||!window.AMRosterEnhancements){location.replace(rosterGuideHref());return;}
     try{
       const records=JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[];
       const record=records.find(item=>item?.id===params.get('roster'));
       if(!record)throw new Error('Roster not found');
-      const parsed=record?.sourceText?window.WHRosterParser.parse(record.sourceText):record?.roster;
+      let parsed=record.roster;if(record.sourceText){try{const candidate=window.WHRosterParser.parse(record.sourceText);if(candidate?.units?.length)parsed=candidate;}catch{}}
       const detachmentLinks=[...nav.querySelectorAll('[data-route-type="detachment"][data-detachment-id]')];
       const categoryGroups=[...nav.querySelectorAll('[data-unit-category]')];
       const unitLinks=[...nav.querySelectorAll('[data-route-type="unit"][data-unit-id]')];

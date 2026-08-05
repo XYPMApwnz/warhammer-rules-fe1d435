@@ -11,7 +11,7 @@ assert.equal(routes.length,51,'Mechanicus Phone route count changed');
 const staticCards=routes.flatMap(name=>cards(fs.readFileSync(path.join(root,name),'utf8')));
 const relatedCards=cards(fs.readFileSync(path.join(root,'related-rules.inc'),'utf8'));
 for(const [label,inventory] of [['routes',staticCards],['Related Rules',relatedCards]])for(const id of ids){const card=inventory.find(item=>item.id===id);assert.ok(card,`${label} missing ${id}`);assert.equal(card.type,'unknown',`${label} reclassified ${id}`);assert.deepEqual(card.labels,['Type unverified'],`${label} misleading or duplicate label for ${id}`);}
-assert.ok(routes.every(name=>fs.readFileSync(path.join(root,name),'utf8').includes('./mobile.js?v=15')),'Phone routes do not use mobile.js?v=15');
+assert.ok(routes.every(name=>fs.readFileSync(path.join(root,name),'utf8').includes('./mobile.js?v=16')),'Phone routes do not use mobile.js?v=16');
 const runtime=fs.readFileSync(path.join(root,'mobile.js'),'utf8');
 assert.ok(runtime.includes("rosterGuideHref=()=>new URL('../../../roster-guides/index.html',location.href).href"),'Invalid roster handoff must use the neutral Roster Guides URL');
 assert.ok(!runtime.includes("rosterGuideHref=()=>window.AMPhoneRoster.withRosterQuery"),'Invalid roster handoff must not carry the rejected roster auto-open query');

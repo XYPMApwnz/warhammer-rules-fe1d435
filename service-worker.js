@@ -131,7 +131,7 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/reader.html",
   "./books/adeptus-mechanicus/mobile/index.html",
   "./books/adeptus-mechanicus/mobile/mobile.css?v=4",
-  "./books/adeptus-mechanicus/mobile/mobile.js?v=15",
+  "./books/adeptus-mechanicus/mobile/mobile.js?v=16",
   "./books/adeptus-mechanicus/mobile/phone-popup-controller.js?v=1",
   "./books/adeptus-mechanicus/assets/mechanicus-logo.png",
   "./books/adeptus-mechanicus/assets/mechanicus-cover-800.webp",
@@ -141,7 +141,7 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/scripts/faction-ui.js?v=1",
   "./books/adeptus-mechanicus/mobile/related-rules.inc?v=4",
   "./books/adeptus-mechanicus/scripts/roster-enhancements.js?v=2",
-  "./books/adeptus-mechanicus/scripts/roster-filter.js?v=3",
+  "./books/adeptus-mechanicus/scripts/roster-filter.js?v=4",
   "./books/adeptus-mechanicus/scripts/compatible-rules-runtime.mjs?v=3",
   "./books/adeptus-mechanicus/generated/compatible-rules.json",
   "./books/adeptus-mechanicus/scripts/app.js?v=34"

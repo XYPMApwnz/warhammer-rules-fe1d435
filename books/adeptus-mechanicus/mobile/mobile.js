@@ -1,9 +1,9 @@
 (function(root){
   'use strict';
   const slug=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+  const adeptusMechanicusFaction=value=>{const match=String(value||'').trim().match(/^(?:(Chaos|Imperium|Xenos)\s*[-\u2013\u2014]\s*)?(.*)$/i);return match?.[2].trim().replace(/\s+/g,' ').toLowerCase()==='adeptus mechanicus'&&(!match[1]||match[1].toLowerCase()==='imperium');};
   const resolveContext=(parsed,detachmentIds,unitIds,resolveDetachment)=>{
-    const faction=String(parsed?.faction||'').replace(/^(?:Chaos|Imperium)\s*[-–—]\s*/i,'').trim().toLowerCase();
-    if(faction!=='adeptus mechanicus'||!parsed?.units?.length)throw new Error('Roster faction or units unavailable');
+    if(!adeptusMechanicusFaction(parsed?.faction)||!parsed?.units?.length)throw new Error('Roster faction or units unavailable');
     const labels=parsed.detachments?.length?parsed.detachments.map(item=>item.label):[parsed.detachment];
     const detachmentId=resolveDetachment(labels,detachmentIds);
     if(!detachmentId)throw new Error('Roster Detachment unavailable');

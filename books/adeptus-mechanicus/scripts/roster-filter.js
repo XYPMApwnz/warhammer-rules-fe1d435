@@ -7,8 +7,8 @@
   if(!record){location.replace('../../roster-guides/index.html?missing='+encodeURIComponent(rosterId));return;}
   let roster=record.roster;
   if(record.sourceText&&window.WHRosterParser){const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)roster=parsed;}
-  const faction=String(roster?.faction||'').replace(/^(?:Chaos|Imperium)\s*[-–—]\s*/i,'').trim().toLowerCase();
-  if(faction!=='adeptus mechanicus'||!roster?.units?.length){location.replace('../../roster-guides/index.html');return;}
+  const adeptusMechanicusFaction=value=>{const match=String(value||'').trim().match(/^(?:(Chaos|Imperium|Xenos)\s*[-\u2013\u2014]\s*)?(.*)$/i);return match?.[2].trim().replace(/\s+/g,' ').toLowerCase()==='adeptus mechanicus'&&(!match[1]||match[1].toLowerCase()==='imperium');};
+  if(!adeptusMechanicusFaction(roster?.faction)||!roster?.units?.length){location.replace('../../roster-guides/index.html');return;}
   const pointsCheck=window.WHRosterPoints?.check(roster,'adeptus mechanicus');
   if(pointsCheck)roster.pointsCheck=pointsCheck;
   const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim();

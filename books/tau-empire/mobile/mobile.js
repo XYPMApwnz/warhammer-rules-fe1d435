@@ -52,11 +52,11 @@
       card.dataset.turn=turn;card.classList.remove('turn-any','turn-yours','turn-their');card.classList.add(turn==='THEIR TURN'?'turn-their':turn==='YOUR TURN'?'turn-yours':'turn-any');
     });
   }
+  const stratagemTypeLabels={'battle-tactic':'Battle Tactic Stratagem','strategic-ploy':'Strategic Ploy Stratagem',wargear:'Wargear Stratagem','epic-deed':'Epic Deed Stratagem',core:'Core Stratagem',unknown:'Type unverified'};
   function decorateStratagemTypes(root){
     root.querySelectorAll('.stratagem').forEach(card=>{
-      if(/^(battle-tactic|strategic-ploy|wargear|epic-deed|core|unknown)$/.test(card.dataset.stratagemType||''))return;
-      const id=card.dataset.ruleId||card.id,mapped=stratagemTypes.get(id)||stratagemTypes.get(id.replace(/^stratagem-/,'')),match=card.querySelector('.stratagem-type')?.textContent.trim().match(/(Battle Tactic|Strategic Ploy|Wargear|Epic Deed|Core) Stratagem\s*$/i);
-      card.dataset.stratagemType=mapped||(match?match[1].toLowerCase().replace(/\s+/g,'-'):'unknown');
+      const labels=[...card.querySelectorAll('.stratagem-type')],current=/^(battle-tactic|strategic-ploy|wargear|epic-deed|core|unknown)$/.test(card.dataset.stratagemType||'')?card.dataset.stratagemType:'',id=card.dataset.ruleId||card.id||'',mapped=stratagemTypes.get(id)||stratagemTypes.get(id.replace(/^stratagem-/,'')),match=labels[0]?.textContent.trim().match(/(Battle Tactic|Strategic Ploy|Wargear|Epic Deed|Core) Stratagem\s*$/i),resolvedType=mapped||current||(match?match[1].toLowerCase().replace(/\s+/g,'-'):'unknown'),expected=stratagemTypeLabels[resolvedType];
+      card.dataset.stratagemType=resolvedType;const label=labels.shift()||document.createElement('span');labels.forEach(node=>node.remove());label.classList.add('stratagem-type');if(resolvedType==='unknown'||!label.textContent.trim().toLowerCase().endsWith(expected.toLowerCase()))label.textContent=expected;const head=card.querySelector('.stratagem-head'),host=head?.querySelector(':scope > div:not(.cp)')||head;host?.append(label);
     });
   }
   decorateStratagemTurns(document);decorateStratagemTypes(document);

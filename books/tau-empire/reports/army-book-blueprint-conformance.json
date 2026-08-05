@@ -195,14 +195,14 @@
       "status": "partial",
       "evidence": [
         {
-          "type": "schema-data-qa",
-          "path": "books/tau-empire/tests/codex-source-parity.cjs",
-          "detail": "The inventory covers 31 Stratagems and 23 Enhancement point records deterministically."
+          "type": "real-browser-automated-integration",
+          "path": "tests/browser/cold-offline.mjs",
+          "detail": "All 31 faction and 10 Core Stratagems preserve exactly one visible canonical type label across desktop, Phone, roster, and dynamic Related Rules; type metadata, computed color, and separate turn timing share one deterministic contract."
         }
       ],
       "blocker": true,
       "blockerKind": "source-authority",
-      "rationale": "Four Codex Detachments rely on frozen community or secondary transcription evidence."
+      "rationale": "Seven faction Stratagem types remain explicitly unverified because complete official Codex authority is absent."
     },
     {
       "id": "AB-CONTENT-003",

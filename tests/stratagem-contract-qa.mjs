@@ -116,6 +116,20 @@ for(const file of ['books/death-guard/scripts/app.js','books/death-guard/mobile/
 const dgReviewRuntime=read('books/death-guard/scripts/compatible-stratagems-runtime.mjs');
 for(const label of ['Requires an Attached Unit','Requires a second Character','Requires Warlord selection','Requires Detachment selection'])assert.ok(dgReviewRuntime.includes(label));
 
+for(const file of [
+  'books/tyranids/scripts/app.js',
+  'books/tyranids/mobile/mobile.js',
+  'books/tau-empire/scripts/app.js',
+  'books/tau-empire/mobile/mobile.js'
+]){
+  const source=read(file);
+  for(const label of ['Battle Tactic Stratagem','Strategic Ploy Stratagem','Wargear Stratagem','Epic Deed Stratagem','Core Stratagem','Type unverified'])assert.ok(source.includes(label),`${file}: canonical visible type label ${label} is absent`);
+  assert.match(source,/labels=\[\.\.\.card\.querySelectorAll\('\.stratagem-type'\)\]/,`${file}: decorator must inventory existing labels`);
+  assert.match(source,/labels\.forEach\(node=>node\.remove\(\)\)/,`${file}: decorator must remove duplicate labels`);
+  assert.match(source,/host\?\.append\(label\)/,`${file}: decorator must place the label in the card header`);
+  assert.doesNotMatch(source,/dataset\.stratagemType\|\|''\)\)return/,`${file}: valid metadata must not skip visible-label decoration`);
+}
+
 const css=read('books/death-guard/styles/content.css');
 assert.match(css,/\.stratagem>\.compatibility-status\{grid-column:2\}/,'conditional compatibility status must clear the Stratagem CP rail');
 const readableStratagemGrid=/grid-template-columns:\s*repeat\(auto-fit,\s*minmax\(min\(100%,\s*360px\),\s*1fr\)\)/;

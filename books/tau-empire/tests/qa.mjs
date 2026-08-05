@@ -171,7 +171,7 @@ assert.ok(related.lastIndexOf('data-detachment="core"')>related.indexOf('data-de
 assert.doesNotMatch(reader,/army-book-app\.js/,'T’au must use the same focused runtime architecture as mature books');
 assert.doesNotMatch(reader,/related-rules-matcher|army-related-rules/,'T\'au must not load the legacy Compatible Rules matcher');
 assert.match(reader,/scripts\/roster-filter\.js\?v=3/);
-assert.match(reader,/scripts\/app\.js\?v=8/);
+assert.match(reader,/scripts\/app\.js\?v=9/);
 assert.doesNotMatch(related,/data-eligibility|data-keyword-grants/,'matrix template must not retain legacy matcher inputs');
 assert.match(reader,/Reference in verification/);
 assert.ok(Object.keys(context).length>=350,'T’au Glossary context is incomplete');

@@ -10,7 +10,9 @@
   const drawerMedia=matchMedia('(max-width: 800px)'),unit=document.querySelector('.unit-card'),params=new URLSearchParams(location.search),rosterMode=params.has('roster');
   const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/\s*\(aura\)\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim(),slug=value=>normalize(value).replace(/\s+/g,'-');
   function rosterContext(){if(!rosterMode)return null;let record;try{record=(JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[]).find(item=>item?.id===params.get('roster'));}catch{}if(!record)return null;let roster=record.roster;if(record.sourceText&&window.WHRosterParser){const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)roster=parsed;}if(normalize(roster?.faction)!=='tyranids')return null;const owners=new Set((roster.units||[]).filter(item=>normalize(item.name)===normalize(unit?.dataset.unitTitle)).map(item=>item.id)),enhancements=new Set((roster.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&owners.has(item.ownerUnitId)).map(item=>normalize(item.name))),detachments=[...new Set((roster.detachments?.length?roster.detachments.map(item=>item.label):[roster.detachment]).filter(Boolean).map(slug))];return detachments.length===1?{detachments,enhancements}:null;}
-  const roster=rosterContext(),relatedRulesEnabled=compatibleRuntime?.compatibleRulesEnabled===true&&(!rosterMode||!!roster);
+const roster=rosterContext();
+if(rosterMode&&!roster){location.replace('../../../roster-guides/index.html');return;}
+const relatedRulesEnabled=compatibleRuntime?.compatibleRulesEnabled===true;
   const terms=Object.freeze({...window.WH40K_GLOSSARY.forBook('tyranids')});
   window.WHGlossaryAutolink?.configure('tyranids');
   const popups=new window.TYRPhonePopups({dialog,layer:popupLayer,terms,safeFallback:()=>navButton});

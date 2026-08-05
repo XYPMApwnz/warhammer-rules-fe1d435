@@ -1,4 +1,4 @@
-importScripts("./glossary/generated/cache-revision.js");
+﻿importScripts("./glossary/generated/cache-revision.js");
 const CACHE_PREFIX = "warhammer-rules-fe1d435-";
 const CACHE_NAME = `${CACHE_PREFIX}${self.WH40K_CACHE_REVISION || "fallback"}`;
 const APP_SHELL_BATCH_SIZE = 4;
@@ -66,7 +66,7 @@ const APP_SHELL = [
   "./books/death-guard/scripts/view-router.js?v=2",
   "./books/death-guard/mobile/index.html",
   "./books/death-guard/mobile/mobile.css?v=11",
-  "./books/death-guard/mobile/mobile.js?v=28",
+  "./books/death-guard/mobile/mobile.js?v=29",
   "./books/death-guard/mobile/phone-popup-controller.js?v=1",
   "./books/death-guard/mobile/related-rules.inc?v=4",
   "./books/shared/navigation-targets.js?v=1",
@@ -160,7 +160,7 @@ const APP_SHELL = [
   ,"./books/tyranids/generated/compatible-rules.json"
   ,"./books/tyranids/scripts/app.js?v=7"
   ,"./books/tyranids/mobile/mobile.css?v=2"
-  ,"./books/tyranids/mobile/mobile.js?v=7"
+  ,"./books/tyranids/mobile/mobile.js?v=8"
   ,"./books/tyranids/mobile/phone-popup-controller.js?v=1"
   ,"./books/tyranids/mobile/related-rules.inc?v=4"
   ,"./glossary/generated/glossary.en.js?v=tyranids-1"

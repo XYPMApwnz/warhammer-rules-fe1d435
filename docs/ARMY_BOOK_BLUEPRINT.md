@@ -387,12 +387,11 @@
 
 ## AB-ROSTER-004 — Roster failure modes
 - Level: MUST
-- Normative requirement: Missing, wrong, corrupt, or ambiguous roster data MUST fail-closed and refuse to expose non-deterministic results.
+- Normative requirement: Missing, wrong, corrupt, or ambiguous roster data MUST fail-closed and refuse to expose non-deterministic results. On a Phone route carrying a roster query, an invalid roster context MUST trigger replacement navigation to the canonical Roster Guides route by using location.replace(...) and MUST immediately terminate Army Book initialization for that route. Silently disabling only roster-scoped controls MUST NOT satisfy this requirement. For this Phone invalid-context response only, the accepted T’au Empire Phone production control flow — resolve the roster context, then perform location.replace(...) followed immediately by return when roster mode is active and the context is invalid — is the canonical technical reference. This response contract does not expand or redefine the book's accepted roster validation criteria.
 - Owner: shared Army Book capability
 - Applicability: all Army Books
-- Required evidence: failure-path evidence and fail-closed behavior artifact.
-- Book-specific extensions: localized user messaging allowed.
-
+- Required evidence: Static-source inspection of the accepted T’au Empire Phone replacement-and-return control flow; per-book Phone evidence for replacement navigation and immediate initialization termination; executable missing, corrupt, wrong-faction, and ambiguous roster fixtures where already rejected by the book's accepted validator; real-browser evidence proving navigation to the canonical Roster Guides route, replacement-history semantics, absence of roster-scoped initialization, and valid-roster behavior.
+- Book-specific extensions: A book MAY append a deterministic failure reason or missing-roster identifier to the canonical Roster Guides destination, but MUST preserve replacement navigation and immediate initialization termination.
 ## AB-ROSTER-005 — Attachment dependency behavior
 - Level: MUST
 - Normative requirement: Leader and Bodyguard compatibility and their presence in the same New Recruit roster MUST NOT be treated as confirmation of actual attachment; an ordinary Leader relation describes attachment eligibility, not attachment fact in a specific game, and attachment-dependent outputs MUST remain conditional unless the actual formation is explicitly confirmed by an authoritative structured formation source.

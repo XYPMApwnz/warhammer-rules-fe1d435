@@ -687,7 +687,7 @@
         {
           "type": "real-browser-automated-integration",
           "path": "tests/browser/cold-offline.mjs",
-          "detail": "Missing, corrupt, wrong-faction, and multiple-Detachment rosters fail closed."
+          "detail": "Accepted Phone validation uses replacement navigation with immediate termination; browser fixtures cover rejected contexts and valid owner filtering."
         }
       ],
       "blocker": false,

@@ -57,11 +57,11 @@
       const ownerIds=new Set(matching.map(item=>item.id));
       assignedEnhancementIds=new Set((parsed.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&ownerIds.has(item.ownerUnitId)).map(item=>`enhancement-${slug(item.name)}`));
       if (matching.length) window.WHRosterEnhancements.decorate(unit, parsed, matching);
-    } catch {
-      relatedRulesEnabled = false;
-      relatedRules?.remove();
-    }
+  } catch {
+    location.replace('../../../roster-guides/index.html');
+    return;
   }
+}
 
   if (rosterGuides) rosterGuides.hidden = !params.get('roster');
   if (viewSwitch) {

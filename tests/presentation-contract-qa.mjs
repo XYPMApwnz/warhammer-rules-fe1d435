@@ -5,6 +5,17 @@ import {fileURLToPath} from 'node:url';
 
 const repo=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const text=file=>fs.readFileSync(path.join(repo,file),'utf8');
+const blueprint=text('docs/ARMY_BOOK_BLUEPRINT.md');
+const blueprintIds=[...blueprint.matchAll(/^## (AB-[A-Z0-9]+-[0-9]{3})\b/gm)].map(match=>match[1]);
+const rosterRequirement=blueprint.slice(blueprint.indexOf('## AB-ROSTER-004 '),blueprint.indexOf('## AB-ROSTER-005 '));
+const scopeReference=blueprint.slice(blueprint.indexOf('## AB-SCOPE-007 '),blueprint.indexOf('## AB-SRC-001 '));
+assert.equal(blueprintIds.length,83,'Blueprint must retain 83 requirement records');
+assert.equal(new Set(blueprintIds).size,83,'Blueprint must retain 83 unique requirement IDs');
+assert.match(rosterRequirement,/replacement navigation/i,'AB-ROSTER-004 must require replacement navigation');
+assert.match(rosterRequirement,/immediately terminate/i,'AB-ROSTER-004 must require immediate Phone initialization termination');
+assert.match(rosterRequirement,/Silently disabling only roster-scoped controls MUST NOT satisfy this requirement/i,'AB-ROSTER-004 must reject the legacy soft fallback');
+assert.match(rosterRequirement,/does not expand or redefine the book's accepted roster validation criteria/i,'AB-ROSTER-004 must preserve existing validation criteria');
+assert.doesNotMatch(scopeReference,/Phone roster|replacement navigation/i,'AB-SCOPE-007 must remain unchanged by the Phone roster migration');
 const walk=directory=>fs.readdirSync(directory,{withFileTypes:true}).flatMap(entry=>{
   if(entry.name==='tmp'||entry.name==='node_modules'||entry.name==='.git')return[];
   const target=path.join(directory,entry.name);

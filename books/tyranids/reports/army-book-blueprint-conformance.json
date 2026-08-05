@@ -687,7 +687,7 @@
         {
           "type": "real-browser-automated-integration",
           "path": "tests/browser/cold-offline.mjs",
-          "detail": "Missing, corrupt, wrong-faction, and multiple-Detachment rosters fail closed."
+          "detail": "Rejected Phone roster contexts use replacement navigation with immediate termination; browser evidence covers absent Army Book UI, replacement history, and valid owner filtering."
         }
       ],
       "blocker": false,

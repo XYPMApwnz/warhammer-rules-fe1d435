@@ -95,7 +95,7 @@ try{
 
     const offlineContext=await browser.newContext({serviceWorkers:'allow',viewport:{width:390,height:844}});
     try{
-      const {page,errors}=await observedPage(offlineContext);await page.goto(`${origin}/index.html?tau-only=1`);await control(page);await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html`);await page.waitForFunction(async()=>Boolean(await caches.match(location.href)));const visited=page.url();await offlineContext.setOffline(true);await page.goto(visited);const shell=await page.evaluate(async()=>({controller:typeof window.TAUPhonePopups==='function',css:Boolean(await caches.match(new URL('./mobile.css?v=2',location.href).href)),mobile:Boolean(await caches.match(new URL('./mobile.js?v=7',location.href).href)),popup:Boolean(await caches.match(new URL('./phone-popup-controller.js?v=1',location.href).href)),types:Boolean(await caches.match(new URL('../scripts/stratagem-types.mjs?v=1',location.href).href))}));assert.equal(Object.values(shell).every(Boolean),true,JSON.stringify(shell));const root=page.locator('main [data-term="tau-empire-ability-for-the-greater-good"]').first();await root.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1);const nested=page.locator('#termPopupStack .mobile-popup-card').first().locator('[data-term]').first();assert.ok(await nested.count());await nested.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),2);assert.deepEqual(errors,[]);
+      const {page,errors}=await observedPage(offlineContext);await page.goto(`${origin}/index.html?tau-only=1`);await control(page);await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html`);await page.waitForFunction(async()=>Boolean(await caches.match(location.href)));const visited=page.url();await offlineContext.setOffline(true);await page.goto(visited);const shell=await page.evaluate(async()=>({controller:typeof window.TAUPhonePopups==='function',css:Boolean(await caches.match(new URL('./mobile.css?v=2',location.href).href)),mobile:Boolean(await caches.match(new URL('./mobile.js?v=8',location.href).href)),popup:Boolean(await caches.match(new URL('./phone-popup-controller.js?v=1',location.href).href)),types:Boolean(await caches.match(new URL('../scripts/stratagem-types.mjs?v=1',location.href).href))}));assert.equal(Object.values(shell).every(Boolean),true,JSON.stringify(shell));const root=page.locator('main [data-term="tau-empire-ability-for-the-greater-good"]').first();await root.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1);const nested=page.locator('#termPopupStack .mobile-popup-card').first().locator('[data-term]').first();assert.ok(await nested.count());await nested.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),2);assert.deepEqual(errors,[]);
     }finally{await offlineContext.close();}
     console.log("PASS T'au scoped desktop, Phone, roster, popup, touch, geometry and cold-offline matrix");
   }else{
@@ -286,18 +286,30 @@ try{
     assert.deepEqual(await page.locator('#relatedRulesContent .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId)),['enhancement-adaptive-biology'],'Tyranids Phone roster must show only the Enhancement assigned to this ownerUnitId');
     await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'tyr-wrong-faction',roster:{faction:"T'au Empire",detachment:'Invasion Fleet',detachments:[{label:'Invasion Fleet'}],units:[{id:'tyr-wrong-owner',name:'Hive Tyrant',quantity:1,points:205}]}}])));
     await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html?roster=tyr-wrong-faction`);
-    assert.equal(await page.locator('#relatedRules').count(),0,'wrong-faction Tyranids Phone roster must remain fail closed');
+    const expectTyranidsPhoneRosterRejected=async label=>{
+      await page.waitForURL('**/roster-guides/index.html*');
+      assert.equal(new URL(page.url()).pathname,'/roster-guides/index.html',`${label}: canonical Roster Guides destination`);
+      for(const selector of ['#relatedRules','#relatedRulesContent','.unit-card','.related-rules-trigger','[data-roster-active]'])assert.equal(await page.locator(selector).count(),0,`${label}: ${selector} must be absent after replacement`);
+    };
+    await expectTyranidsPhoneRosterRejected('wrong-faction Tyranids Phone roster');
+    await page.goto(`${origin}/index.html?tyr-phone-roster-control=1`);
+    await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html?roster=missing-tyr-history`);
+    await expectTyranidsPhoneRosterRejected('Tyranids Phone replacement-history fixture');
+    await page.goBack();
+    await page.waitForURL(url=>url.pathname.endsWith('/index.html')&&url.search==='?tyr-phone-roster-control=1');
     await page.goto(`${origin}/books/tyranids/reader.html?roster=tyr-wrong-faction#unit-hive-tyrant`);
     await page.waitForURL('**/roster-guides/index.html');
     assert.equal(await page.locator('.related-rules-trigger').count(),0,'wrong-faction Tyranids desktop roster must remain fail closed');
     await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'tyr-multiple-detachments',roster:{faction:'Tyranids',detachments:[{label:'Invasion Fleet'},{label:'Synaptic Nexus'}],units:[{id:'tyr-multi-1',name:'Hive Tyrant',quantity:1,points:205}]}}])));
     await page.goto(`${origin}/books/tyranids/reader.html?roster=tyr-multiple-detachments#unit-hive-tyrant`);await page.waitForURL('**/roster-guides/index.html');assert.equal(await page.locator('.related-rules-trigger').count(),0,'multiple-Detachment Tyranids desktop roster must fail closed');
-    await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html?roster=tyr-multiple-detachments`);assert.equal(await page.locator('#relatedRules').count(),0,'multiple-Detachment Tyranids Phone roster must fail closed');
+    await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html?roster=tyr-multiple-detachments`);await expectTyranidsPhoneRosterRejected('multiple-Detachment Tyranids Phone roster');
     await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html?roster=missing-roster`);
-    assert.equal(await page.locator('#relatedRules').count(),0,'missing Tyranids Phone roster must fail closed');
+    await expectTyranidsPhoneRosterRejected('missing Tyranids Phone roster');
     await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1','{broken'));
     await page.goto(`${origin}/books/tyranids/reader.html?roster=broken#unit-hive-tyrant`);
     assert.equal(await page.locator('#unit-hive-tyrant .related-rules-trigger').count(),0,'corrupt Tyranids desktop roster must fail closed');
+    await page.goto(`${origin}/books/tyranids/mobile/hive-tyrant.html?roster=broken`);
+    await expectTyranidsPhoneRosterRejected('corrupt Tyranids Phone roster');
     await page.goto(`${origin}/books/tyranids/reader.html#unit-the-swarmlord`);
     await page.locator('#unit-the-swarmlord .related-rules-trigger').click();
     assert.equal(await page.locator('.related-rules-layer [data-kind="enhancements"]:visible').count(),0,'The Swarmlord must not receive Enhancements');
@@ -842,15 +854,30 @@ try{
     assert.equal(await page.locator('[data-related-tab="enhancements"]:visible').count(),0,'Phone Mode roster unit without an assignment must not show Enhancement choices');
     await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'dg-wrong-faction',roster:{faction:'Adeptus Mechanicus',detachment:'Contagion Engines',detachments:[{label:'Contagion Engines'}],units:[{id:'dg-wrong-owner',name:'Helbrute',quantity:1,points:110}]}}])));
     await page.goto(`${origin}/books/death-guard/mobile/helbrute.html?view=mobile&roster=dg-wrong-faction`);
-    assert.equal(await page.locator('#relatedRules').count(),0,'wrong-faction Death Guard Phone roster must fail closed');
+    const expectDeathGuardPhoneRosterRejected=async label=>{
+      await page.waitForURL('**/roster-guides/index.html*');
+      assert.equal(new URL(page.url()).pathname,'/roster-guides/index.html',`${label}: canonical Roster Guides destination`);
+      for(const selector of ['#relatedRules','#relatedRulesContent','.unit-card','.related-rules-trigger','[data-roster-active]'])assert.equal(await page.locator(selector).count(),0,`${label}: ${selector} must be absent after replacement`);
+    };
+    await expectDeathGuardPhoneRosterRejected('wrong-faction Death Guard Phone roster');
+    await page.goto(`${origin}/index.html?dg-phone-roster-control=1`);
+    await page.goto(`${origin}/books/death-guard/mobile/helbrute.html?view=mobile&roster=missing-dg-history`);
+    await expectDeathGuardPhoneRosterRejected('Death Guard Phone replacement-history fixture');
+    await page.goBack();
+    await page.waitForURL(url=>url.pathname.endsWith('/index.html')&&url.search==='?dg-phone-roster-control=1');
     await page.goto(`${origin}/books/death-guard/reader.html?roster=dg-wrong-faction#unit-helbrute`);
     await page.waitForURL('**/roster-guides/index.html');
     assert.equal(await page.locator('.related-rules-trigger').count(),0,'wrong-faction Death Guard desktop roster must fail closed');
+    await page.goto(`${origin}/books/death-guard/mobile/helbrute.html?view=mobile&roster=missing-roster`);
+    await expectDeathGuardPhoneRosterRejected('missing Death Guard Phone roster');
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'dg-multiple-detachments',roster:{faction:'Death Guard',detachments:[{label:'Contagion Engines'},{label:'Virulent Vectorium'}],units:[{id:'dg-multi-owner',name:'Helbrute',quantity:1,points:110}]}}])));
+    await page.goto(`${origin}/books/death-guard/mobile/helbrute.html?view=mobile&roster=dg-multiple-detachments`);
+    await expectDeathGuardPhoneRosterRejected('multiple-Detachment Death Guard Phone roster');
     await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1','{broken'));
     await page.goto(`${origin}/books/death-guard/reader.html?roster=broken#unit-helbrute`);
     assert.equal(await page.locator('#unit-helbrute .related-rules-trigger').count(),0,'damaged desktop roster storage must fail closed');
     await page.goto(`${origin}/books/death-guard/mobile/helbrute.html?view=mobile&roster=broken`);
-    assert.equal(await page.locator('#relatedRules').count(),0,'damaged roster storage must hide Compatible Rules instead of revealing Enhancements');
+    await expectDeathGuardPhoneRosterRejected('corrupt Death Guard Phone roster');
     await page.evaluate(()=>localStorage.removeItem('death-guard-detachment-filter'));
     await page.goto(`${origin}/books/death-guard/mobile/helbrute.html?view=mobile`);
     assert.equal(await page.locator('#relatedDetachment option').count(),10,'ordinary Phone Mode must keep All plus every Detachment');
@@ -1057,7 +1084,7 @@ try{
     const {page,errors}=await observedPage(coldContext);
     await page.goto(`${origin}/index.html?cold=1`);
     await control(page);
-    const currentPhoneShell=await page.evaluate(async()=>{const urls=['./books/death-guard/mobile/mobile.css?v=11','./books/death-guard/mobile/mobile.js?v=28','./books/death-guard/mobile/phone-popup-controller.js?v=1','./books/adeptus-mechanicus/mobile/mobile.css?v=4','./books/adeptus-mechanicus/mobile/mobile.js?v=14','./books/adeptus-mechanicus/mobile/phone-popup-controller.js?v=1'];return Object.fromEntries(await Promise.all(urls.map(async url=>[url,Boolean(await caches.match(url))])));});
+    const currentPhoneShell=await page.evaluate(async()=>{const urls=['./books/death-guard/mobile/mobile.css?v=11','./books/death-guard/mobile/mobile.js?v=29','./books/death-guard/mobile/phone-popup-controller.js?v=1','./books/adeptus-mechanicus/mobile/mobile.css?v=4','./books/adeptus-mechanicus/mobile/mobile.js?v=14','./books/adeptus-mechanicus/mobile/phone-popup-controller.js?v=1'];return Object.fromEntries(await Promise.all(urls.map(async url=>[url,Boolean(await caches.match(url))])));});
     assert.equal(Object.values(currentPhoneShell).every(Boolean),true,`current canonical Phone shell assets must be precached: ${JSON.stringify(currentPhoneShell)}`);
     await coldContext.setOffline(true);
     await page.setViewportSize({width:1280,height:900});
@@ -1171,7 +1198,7 @@ try{
       relatedRules:document.querySelectorAll('#relatedRules').length,
       cachedPage:Boolean(await caches.match(location.href)),
       cachedCss:Boolean(await caches.match(new URL('./mobile.css?v=11',location.href).href)),
-      cachedMobile:Boolean(await caches.match(new URL('./mobile.js?v=28',location.href).href)),
+      cachedMobile:Boolean(await caches.match(new URL('./mobile.js?v=29',location.href).href)),
       cachedPopupController:Boolean(await caches.match(new URL('./phone-popup-controller.js?v=1',location.href).href)),
       cachedModule:Boolean(await caches.match(new URL('../scripts/compatible-stratagems-runtime.mjs?v=3',location.href).href))
     }));
@@ -1205,7 +1232,7 @@ try{
     await page.locator('#relatedRules').scrollIntoViewIfNeeded();
     await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();
     assert.ok(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count()>2,'visited Tyranids Phone page must reopen matrix-backed All Detachments offline');
-    const shell=await page.evaluate(async()=>({controller:typeof window.TYRPhonePopups==='function',css:Boolean(await caches.match(new URL('./mobile.css?v=2',location.href).href)),mobile:Boolean(await caches.match(new URL('./mobile.js?v=7',location.href).href)),popup:Boolean(await caches.match(new URL('./phone-popup-controller.js?v=1',location.href).href))}));
+    const shell=await page.evaluate(async()=>({controller:typeof window.TYRPhonePopups==='function',css:Boolean(await caches.match(new URL('./mobile.css?v=2',location.href).href)),mobile:Boolean(await caches.match(new URL('./mobile.js?v=8',location.href).href)),popup:Boolean(await caches.match(new URL('./phone-popup-controller.js?v=1',location.href).href))}));
     assert.equal(Object.values(shell).every(Boolean),true,`Tyranids current Phone shell unavailable offline: ${JSON.stringify(shell)}`);
     const root=page.locator('main [data-term="core-twin-linked"]').first();await root.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1,'Tyranids offline root popup must open');const nested=page.locator('#termPopupStack .mobile-popup-card').first().locator('[data-term]').first();await nested.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),2,'Tyranids offline nested popup must open');await page.locator('[data-popup-close="0"]').click();
     assert.deepEqual(errors,[]);
@@ -1214,7 +1241,7 @@ try{
 
   const warmTauContext=await browser.newContext({serviceWorkers:'allow'});
   try{
-    const {page,errors}=await observedPage(warmTauContext);await page.goto(`${origin}/index.html?tau-warm=1`);await control(page);await page.setViewportSize({width:390,height:844});await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?view=mobile`);await page.locator('#relatedRules').scrollIntoViewIfNeeded();await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();await page.waitForFunction(async()=>Boolean(await caches.match(location.href)));const visited=page.url();await warmTauContext.setOffline(true);await page.goto(visited);await page.locator('#relatedRules').scrollIntoViewIfNeeded();await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();assert.ok(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count()>2,"visited T'au Phone page must reopen matrix-backed All Detachments offline");const shell=await page.evaluate(async()=>({controller:typeof window.TAUPhonePopups==='function',css:Boolean(await caches.match(new URL('./mobile.css?v=2',location.href).href)),mobile:Boolean(await caches.match(new URL('./mobile.js?v=7',location.href).href)),popup:Boolean(await caches.match(new URL('./phone-popup-controller.js?v=1',location.href).href)),types:Boolean(await caches.match(new URL('../scripts/stratagem-types.mjs?v=1',location.href).href))}));assert.equal(Object.values(shell).every(Boolean),true,`T'au current Phone shell unavailable offline: ${JSON.stringify(shell)}`);const root=page.locator('main [data-term]').first();await root.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1,"T'au offline root popup must open");const nested=page.locator('#termPopupStack .mobile-popup-card').first().locator('[data-term]').first();if(await nested.count()){await nested.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),2,"T'au offline nested popup must open");}await page.locator('[data-popup-close="0"]').click();assert.deepEqual(errors,[]);console.log("PASS T'au visited Phone Mode Compatible Rules and popup stack offline");
+    const {page,errors}=await observedPage(warmTauContext);await page.goto(`${origin}/index.html?tau-warm=1`);await control(page);await page.setViewportSize({width:390,height:844});await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?view=mobile`);await page.locator('#relatedRules').scrollIntoViewIfNeeded();await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();await page.waitForFunction(async()=>Boolean(await caches.match(location.href)));const visited=page.url();await warmTauContext.setOffline(true);await page.goto(visited);await page.locator('#relatedRules').scrollIntoViewIfNeeded();await page.locator('#relatedRulesContent .stratagem:not([hidden])').first().waitFor();assert.ok(await page.locator('#relatedRulesContent .related-detachment:not([hidden])').count()>2,"visited T'au Phone page must reopen matrix-backed All Detachments offline");const shell=await page.evaluate(async()=>({controller:typeof window.TAUPhonePopups==='function',css:Boolean(await caches.match(new URL('./mobile.css?v=2',location.href).href)),mobile:Boolean(await caches.match(new URL('./mobile.js?v=8',location.href).href)),popup:Boolean(await caches.match(new URL('./phone-popup-controller.js?v=1',location.href).href)),types:Boolean(await caches.match(new URL('../scripts/stratagem-types.mjs?v=1',location.href).href))}));assert.equal(Object.values(shell).every(Boolean),true,`T'au current Phone shell unavailable offline: ${JSON.stringify(shell)}`);const root=page.locator('main [data-term]').first();await root.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),1,"T'au offline root popup must open");const nested=page.locator('#termPopupStack .mobile-popup-card').first().locator('[data-term]').first();if(await nested.count()){await nested.click();assert.equal(await page.locator('#termPopupStack .mobile-popup-card').count(),2,"T'au offline nested popup must open");}await page.locator('[data-popup-close="0"]').click();assert.deepEqual(errors,[]);console.log("PASS T'au visited Phone Mode Compatible Rules and popup stack offline");
   }finally{await warmTauContext.close();}
 
   workerRevision='browser-upgrade-a';

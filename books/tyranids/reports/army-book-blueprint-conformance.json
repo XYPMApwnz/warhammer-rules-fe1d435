@@ -657,9 +657,9 @@
       "status": "pass",
       "evidence": [
         {
-          "type": "executable-unit-test",
-          "path": "tests/roster-guide-qa.mjs",
-          "detail": "New Recruit parsing, faction validation, stable unit identity, and selection use the shared parser."
+          "type": "real-browser-automated-integration",
+          "path": "tests/browser/cold-offline.mjs",
+          "detail": "Plain and correctly Xenos-prefixed New Recruit Tyranids exports survive canonical Roster Guides persistence and sourceText re-parsing in desktop and Phone, while wrong parents are rejected."
         }
       ],
       "blocker": false,
@@ -687,7 +687,7 @@
         {
           "type": "real-browser-automated-integration",
           "path": "tests/browser/cold-offline.mjs",
-          "detail": "Rejected Phone roster contexts use replacement navigation with immediate termination; browser evidence covers absent Army Book UI, replacement history, and valid owner filtering."
+          "detail": "Bounded Mechanicus Phone and desktop traces prove invalid contexts replace to a neutral non-auto-open Roster Guides URL, remain terminal, preserve replacement history, and leave explicit valid Open behavior intact."
         }
       ],
       "blocker": false,

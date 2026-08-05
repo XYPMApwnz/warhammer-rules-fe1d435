@@ -63,7 +63,9 @@ for(const bookId of supported){
     const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8'),points=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','tyranids-points.en.json'),'utf8')),codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','tyranids-codex-datasheets.en.json'),'utf8'));
     const units=[...codex.datasheets,...codex.imperialArmour,...codex.legends],unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),enhancementTitles=new Set([...related.matchAll(/data-enhancement-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
     assert(points.units.length===57,'tyranids: points catalog is incomplete');assert(points.enhancements.length===34,'tyranids: Enhancement catalog is incomplete');units.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`tyranids: unit ${unit.title} is absent from Roster Guide`));points.enhancements.forEach(item=>assert(enhancementTitles.has(entities.normalize(item.title)),`tyranids: Enhancement ${item.title} is absent from related rules`));
-    assert(reader.includes('./scripts/roster-filter.js?v=1')&&reader.includes('./scripts/app.js?v=7'),'tyranids: roster or matrix controller is absent');assert(fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs')),'tyranids: matrix runtime is absent');
+    const desktopRoster=fs.readFileSync(path.join(bookRoot,'scripts','roster-filter.js'),'utf8'),phoneRoster=fs.readFileSync(path.join(bookRoot,'mobile','mobile.js'),'utf8');
+    assert(reader.includes('./scripts/roster-filter.js?v=2')&&reader.includes('./scripts/app.js?v=8'),'tyranids: roster or matrix controller is absent');assert(fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs')),'tyranids: matrix runtime is absent');
+    assert(desktopRoster.includes("match[1].toLowerCase()==='xenos'")&&phoneRoster.includes("match[1].toLowerCase()==='xenos'"),'tyranids: desktop and Phone faction normalization do not share the correct Xenos parent contract');
     console.log(`PASS  tyranids: ${points.units.length} units, ${points.enhancements.length} Enhancements, desktop/iPad + Phone Mode`);continue;
   }
   if(bookId==='tau-empire'){
@@ -160,6 +162,12 @@ const dgRosterFilter=fs.readFileSync(path.join(root,'books/death-guard/scripts/r
 assert(dgRosterFilter.includes("{detachment:'shamblerot-vectorium',units:['poxwalkers'],id:'keyword-battleline',title:'BATTLELINE'}"),'Shamblerot Vectorium grant is absent from the roster filter');
 assert(dgRosterFilter.includes("'foetid-bloat-drone-with-heavy-blight-launcher','helbrute','myphitic-blight-hauler'"),'Contagion Engines grant owners are incomplete');
 assert(dgRosterFilter.includes("const grants=grantedKeywords(card.id.replace(/^unit-/,''),window.DG_ROSTER_GUIDE.detachmentIds)"),'Roster keyword rendering does not use its local grant resolver');
+
+const amPhone=fs.readFileSync(path.join(root,'books/adeptus-mechanicus/mobile/mobile.js'),'utf8');
+assert(amPhone.includes("rosterGuideHref=()=>new URL('../../../roster-guides/index.html',location.href).href")&&!amPhone.includes("rosterGuideHref=()=>window.AMPhoneRoster.withRosterQuery"),'Mechanicus invalid roster handoff still carries an auto-open roster parameter');
+const blueprint=fs.readFileSync(path.join(root,'docs/ARMY_BOOK_BLUEPRINT.md'),'utf8'),blueprintIds=[...blueprint.matchAll(/^## (AB-[A-Z0-9]+-[0-9]{3})\s/gm)].map(match=>match[1]);
+assert(blueprintIds.length===83&&new Set(blueprintIds).size===83,'Blueprint requirement inventory is not 83/83');
+assert(blueprint.includes('A roster accepted and persisted by the canonical Roster Guides flow MUST remain consumable')&&blueprint.includes('Failure navigation MUST be terminal and non-reentrant.'),'Blueprint roster roundtrip or terminal handoff contract is absent');
 
 const sharedMatcherContext={window:{WHRuleFacts:ruleFacts}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'books/shared/related-rules-matcher.js'),'utf8'),sharedMatcherContext,{filename:'related-rules-matcher.js'});

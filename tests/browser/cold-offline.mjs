@@ -165,7 +165,7 @@ try{
     await page.locator('.related-rules-layer .full-related-filter summary').click();
     await page.locator('.related-rules-layer .full-related-filter [data-detachment="cohort-cybernetica"]').click();
     assert.equal(await page.locator('.related-rules-layer .related-detachment:not([hidden])').count(),2,'Mechanicus desktop Detachment choice must narrow to Core plus one Detachment');
-    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'am-owner-filter',roster:{faction:'Adeptus Mechanicus',detachment:'Cohort Cybernetica',detachments:[{label:'Cohort Cybernetica'}],declared:95,units:[{id:'am-owner-1',name:'Tech-Priest Enginseer',quantity:1,points:75}],enhancements:[{name:'Necromechanic',ownerUnitId:'am-owner-1',ownerStatus:'resolved'}]}},{id:'am-unverified-label',roster:{faction:'Adeptus Mechanicus',detachment:'Cohort Acquisitus',detachments:[{label:'Cohort Acquisitus'}],declared:75,units:[{id:'am-unverified-owner',name:'Tech-Priest Enginseer',quantity:1,points:75}],enhancements:[]}}])));
+    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'am-owner-filter',name:'Adeptus Mechanicus test roster',roster:{faction:'Adeptus Mechanicus',detachment:'Cohort Cybernetica',detachments:[{label:'Cohort Cybernetica'}],declared:95,units:[{id:'am-owner-1',name:'Tech-Priest Enginseer',quantity:1,points:75}],enhancements:[{name:'Necromechanic',ownerUnitId:'am-owner-1',ownerStatus:'resolved'}]}},{id:'am-unverified-label',roster:{faction:'Adeptus Mechanicus',detachment:'Cohort Acquisitus',detachments:[{label:'Cohort Acquisitus'}],declared:75,units:[{id:'am-unverified-owner',name:'Tech-Priest Enginseer',quantity:1,points:75}],enhancements:[]}}])));
     await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?roster=am-owner-filter#unit-tech-priest-enginseer`);
     await page.locator('#unit-tech-priest-enginseer .related-rules-trigger').click();
     assert.equal(await page.locator('.related-rules-layer [data-detachment="all"]').count(),0,'Mechanicus desktop roster must not expose All Detachments');
@@ -176,8 +176,6 @@ try{
     const desktopUnverified=page.locator('.related-rules-layer [data-rule-id="stratagem-repolarised-augurs"]:visible');await desktopUnverified.waitFor();
     assert.equal(await desktopUnverified.getAttribute('data-stratagem-type'),'unknown','Mechanicus desktop roster must preserve unverified type metadata');
     assert.deepEqual(await desktopUnverified.locator('.stratagem-type').allTextContents(),['Type unverified'],'Mechanicus desktop roster must show one honest unverified label');
-    await page.goto(`${origin}/books/adeptus-mechanicus/mobile/tech-priest-enginseer.html?roster=missing-roster`);
-    assert.equal(await page.locator('#relatedRules').count(),0,'missing Mechanicus Phone roster must fail closed');
     await page.evaluate(()=>localStorage.removeItem('adeptus-mechanicus-detachment-filter'));
     await page.goto(`${origin}/books/adeptus-mechanicus/mobile/tech-priest-enginseer.html`);
     assert.equal(await page.locator('#relatedRules').count(),1,'ordinary Mechanicus Phone Mode must keep all Detachment choices available');
@@ -198,12 +196,29 @@ try{
     await page.locator('#relatedRulesContent [data-rule-id="enhancement-necromechanic"]:visible').waitFor();
     assert.deepEqual(await page.locator('#relatedRulesContent .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId||card.id)),['enhancement-necromechanic'],'Mechanicus Phone roster must show only the Enhancement assigned to this ownerUnitId');
     await page.goto(`${origin}/books/adeptus-mechanicus/mobile/tech-priest-enginseer.html?roster=am-unverified-label`);await page.locator('#relatedRules').scrollIntoViewIfNeeded();const phoneUnverified=page.locator('#relatedRulesContent [data-rule-id="stratagem-repolarised-augurs"]:visible');await phoneUnverified.waitFor();assert.equal(await phoneUnverified.getAttribute('data-stratagem-type'),'unknown','Mechanicus Phone roster must preserve unverified type metadata');assert.deepEqual(await phoneUnverified.locator('.stratagem-type').allTextContents(),['Type unverified'],'Mechanicus Phone roster must show one honest unverified label');
-    await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([{id:'am-wrong-faction',roster:{faction:'Death Guard',detachment:'Cohort Cybernetica',detachments:[{label:'Cohort Cybernetica'}],units:[{id:'am-wrong-owner',name:'Tech-Priest Enginseer',quantity:1,points:75}]}}])));
-    await page.goto(`${origin}/books/adeptus-mechanicus/mobile/tech-priest-enginseer.html?roster=am-wrong-faction`);
-    assert.equal(await page.locator('#relatedRules').count(),0,'wrong-faction Mechanicus Phone roster must fail closed');
-    await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?roster=am-wrong-faction#unit-tech-priest-enginseer`);
-    await page.waitForURL('**/roster-guides/index.html');
-    assert.equal(await page.locator('.related-rules-trigger').count(),0,'Mechanicus desktop wrong-faction gate must remain fail closed');
+    await page.evaluate(()=>{const records=JSON.parse(localStorage.getItem('wh40k-rosters-v1'));records.push(
+      {id:'am-wrong-faction',roster:{faction:'Death Guard',detachment:'Cohort Cybernetica',detachments:[{label:'Cohort Cybernetica'}],units:[{id:'am-wrong-owner',name:'Tech-Priest Enginseer',quantity:1,points:75}]}},
+      {id:'am-missing-detachment',roster:{faction:'Adeptus Mechanicus',units:[{id:'am-missing-detachment-owner',name:'Tech-Priest Enginseer',quantity:1,points:75}]}},
+      {id:'am-unknown-detachment',roster:{faction:'Adeptus Mechanicus',detachment:'Unknown Cohort',detachments:[{label:'Unknown Cohort'}],units:[{id:'am-unknown-detachment-owner',name:'Tech-Priest Enginseer',quantity:1,points:75}]}},
+      {id:'am-multiple-detachments',roster:{faction:'Adeptus Mechanicus',detachments:[{label:'Cohort Cybernetica'},{label:'Rad-Zone Corps'}],units:[{id:'am-multiple-detachment-owner',name:'Tech-Priest Enginseer',quantity:1,points:75}]}}
+    );localStorage.setItem('wh40k-rosters-v1',JSON.stringify(records));});
+    const expectMechanicusRosterRejected=async(id,route,label)=>{
+      const phone=route.startsWith('/books/adeptus-mechanicus/mobile/'),control=origin+'/index.html?am-roster-control='+encodeURIComponent(id)+'-'+(phone?'phone':'desktop');
+      await page.goto(control);
+      const trace=[];let rejectLimit;const navigationLimit=new Promise((_,reject)=>{rejectLimit=reject;});
+      const onNavigation=frame=>{if(frame===page.mainFrame()){trace.push(frame.url());if(trace.length>4)rejectLimit(new Error(label+': navigation limit exceeded: '+trace.join(' -> ')));}};
+      page.on('framenavigated',onNavigation);
+      try{await Promise.race([(async()=>{const target=new URL(route,origin);target.searchParams.set('roster',id);await page.goto(target.href);await page.waitForURL(url=>url.pathname==='/roster-guides/index.html'&&!url.searchParams.has('roster'));await page.locator('#roster-form').waitFor();})(),navigationLimit]);}finally{page.off('framenavigated',onNavigation);}
+      assert.equal(new URL(page.url()).pathname,'/roster-guides/index.html',label+': neutral Roster Guides destination');
+      assert.equal(new URL(page.url()).searchParams.has('roster'),false,label+': rejected roster must not become an auto-open parameter');
+      assert.equal(trace.slice(trace.findIndex(url=>new URL(url).pathname==='/roster-guides/index.html')+1).some(url=>new URL(url).pathname.startsWith('/books/adeptus-mechanicus/')),false,label+': Army Book must not reopen after failure handoff');
+      for(const selector of ['#relatedRules','.unit-card','.related-rules-trigger','[data-roster-active]'])assert.equal(await page.locator(selector).count(),0,label+': '+selector+' absent at terminal destination');
+      await page.goBack();await page.waitForURL(control);
+      return trace;
+    };
+    const invalidMechanicus=[['missing-roster','missing record'],['am-missing-detachment','missing Detachment'],['am-unknown-detachment','unknown Detachment'],['am-multiple-detachments','multiple Detachments'],['am-wrong-faction','wrong faction']];
+    for(const [id,label] of invalidMechanicus){await expectMechanicusRosterRejected(id,'/books/adeptus-mechanicus/mobile/tech-priest-enginseer.html','Mechanicus Phone '+label);await expectMechanicusRosterRejected(id,'/books/adeptus-mechanicus/reader.html#unit-tech-priest-enginseer','Mechanicus desktop '+label);}
+    await page.goto(origin+'/roster-guides/index.html');await page.locator('[data-open-roster="am-owner-filter"]').click();await page.waitForURL('**/books/adeptus-mechanicus/reader.html**');assert.equal(await page.locator('#unit-tech-priest-enginseer .related-rules-trigger').count(),1,'explicit valid Mechanicus Open must preserve roster UI');
     await page.evaluate(()=>localStorage.setItem('wh40k-rosters-v1','{broken'));
     await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?roster=broken#unit-tech-priest-enginseer`);
     assert.equal(await page.locator('#unit-tech-priest-enginseer .related-rules-trigger').count(),0,'corrupt Mechanicus desktop roster must fail closed');
@@ -988,6 +1003,14 @@ try{
       assert.equal(record.roster.faction,faction.toLowerCase().includes('death guard')?'Death Guard':faction.toLowerCase().includes('adeptus mechanicus')?'Adeptus Mechanicus':faction.toLowerCase().includes('tyranids')?'Tyranids':"T'au Empire");
       return record;
     };
+    const expectTyranidsRoundtrip=async faction=>{
+      await page.goto(origin+'/roster-guides/index.html');
+      const record=await create(faction,{detachment:'Invasion Fleet',units:'Char1: 1x Hive Tyrant (205 pts)'});
+      assert.equal(record.roster.faction,'Tyranids',faction+': Roster Guides canonical faction');assert.ok(record.sourceText.includes('FACTION KEYWORD: '+faction),faction+': raw sourceText preserved');
+      await page.locator('#open-guide').click();await page.waitForURL('**/books/tyranids/reader.html**');assert.equal(new URL(page.url()).searchParams.get('roster'),record.id,faction+': desktop roster query');assert.deepEqual(await page.evaluate(()=>window.TYRANIDS_ROSTER_GUIDE?.detachmentIds),['invasion-fleet'],faction+': desktop Detachment');assert.equal(await page.locator('#unit-hive-tyrant .related-rules-trigger').count(),1,faction+': desktop Compatible Rules');
+      await page.goto(origin+'/books/tyranids/mobile/hive-tyrant.html?roster='+record.id);assert.equal(new URL(page.url()).pathname,'/books/tyranids/mobile/hive-tyrant.html',faction+': Phone must remain active');assert.equal(await page.locator('#relatedRules').count(),1,faction+': Phone Compatible Rules');assert.equal(new URL(await page.locator('[data-view-switch]').getAttribute('href'),origin).searchParams.get('roster'),record.id,faction+': Phone switch preserves roster');
+      return record;
+    };
 
     const ownerRecord=await create("Xenos - T'au Empire",{units:'Char1: 1x Cadre Fireblade (50 pts): Fireblade pulse rifle, close combat weapon\nEnhancement: Through Unity, Devastation (+30 pts)\nChar2: 1x Commander in Coldstar Battlesuit (130 pts)'});
     await page.locator('#open-guide').click();
@@ -1005,11 +1028,16 @@ try{
     assert.deepEqual(await page.locator('#relatedRulesContent .enhancement:visible').evaluateAll(cards=>cards.map(card=>card.dataset.ruleId||card.id)),['enhancement-through-unity-devastation'],'Roster Guides must preserve exact T\'au ownerUnitId on Phone open');
 
     await page.goto(`${origin}/roster-guides/index.html`);
+    for(const faction of ['Tyranids','Xenos - Tyranids','Xenos – Tyranids','Xenos — Tyranids'])await expectTyranidsRoundtrip(faction);
+    await page.goto(`${origin}/roster-guides/index.html`);
     for(const faction of ["Xenos – Tau Empire","Xenos — T'au Empire","T'au Empire","Tau Empire"])await create(faction);
     await create('Chaos - Death Guard',{detachment:'Contagion Engines',units:'Char1: 1x Helbrute (110 pts)'});
     await create('Imperium - Adeptus Mechanicus',{detachment:'Cohort Cybernetica',units:'Char1: 1x Tech-Priest Enginseer (75 pts)'});
     await create('Xenos - Tyranids',{detachment:'Invasion Fleet',units:'Char1: 1x Neurotyrant (80 pts)'});
-    for(const faction of ["Imperium - T'au Empire","Chaos - T'au Empire",'Chaos - Tyranids','Xenos - Death Guard','Aeldari'])await create(faction,{accepted:false});
+    for(const faction of ["Imperium - T'au Empire","Chaos - T'au Empire",'Imperium - Tyranids','Chaos - Tyranids','Xenos - Death Guard','Aeldari'])await create(faction,{accepted:false});
+    const wrongParentRecords=['Imperium - Tyranids','Chaos - Tyranids'].map((faction,index)=>({id:'tyr-wrong-parent-'+index,sourceText:source(faction,'Invasion Fleet','Char1: 1x Hive Tyrant (205 pts)'),roster:{faction:'Tyranids',detachment:'Invasion Fleet',detachments:[{label:'Invasion Fleet'}],units:[{id:'tyr-wrong-parent-owner-'+index,name:'Hive Tyrant',quantity:1,points:205}]}}));
+    await page.evaluate(records=>{const saved=JSON.parse(localStorage.getItem('wh40k-rosters-v1'));localStorage.setItem('wh40k-rosters-v1',JSON.stringify([...records,...saved]));},wrongParentRecords);
+    for(const record of wrongParentRecords){await page.goto(origin+'/books/tyranids/reader.html?roster='+record.id+'#unit-hive-tyrant');await page.waitForURL(url=>url.pathname==='/roster-guides/index.html'&&!url.searchParams.has('roster'));await page.goto(origin+'/books/tyranids/mobile/hive-tyrant.html?roster='+record.id);await page.waitForURL(url=>url.pathname==='/roster-guides/index.html'&&!url.searchParams.has('roster'));}
 
     const backup={id:'tau-ascii-backup',name:'ASCII T\'au backup',sourceText:source('Tau Empire'),roster:{faction:'Tau Empire',detachment:'Kauyon',detachments:[{label:'Kauyon'}],units:[{id:'parsed-unit-1',name:'Cadre Fireblade',quantity:1,points:50}]}};
     const beforeImport=await page.evaluate(()=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')).length);
@@ -1112,7 +1140,7 @@ try{
     const {page,errors}=await observedPage(coldContext);
     await page.goto(`${origin}/index.html?cold=1`);
     await control(page);
-    const currentPhoneShell=await page.evaluate(async()=>{const urls=['./books/death-guard/mobile/mobile.css?v=11','./books/death-guard/mobile/mobile.js?v=29','./books/death-guard/mobile/phone-popup-controller.js?v=1','./books/adeptus-mechanicus/mobile/mobile.css?v=4','./books/adeptus-mechanicus/mobile/mobile.js?v=14','./books/adeptus-mechanicus/mobile/phone-popup-controller.js?v=1'];return Object.fromEntries(await Promise.all(urls.map(async url=>[url,Boolean(await caches.match(url))])));});
+    const currentPhoneShell=await page.evaluate(async()=>{const urls=['./books/death-guard/mobile/mobile.css?v=11','./books/death-guard/mobile/mobile.js?v=29','./books/death-guard/mobile/phone-popup-controller.js?v=1','./books/adeptus-mechanicus/mobile/mobile.css?v=4','./books/adeptus-mechanicus/mobile/mobile.js?v=15','./books/adeptus-mechanicus/mobile/phone-popup-controller.js?v=1'];return Object.fromEntries(await Promise.all(urls.map(async url=>[url,Boolean(await caches.match(url))])));});
     assert.equal(Object.values(currentPhoneShell).every(Boolean),true,`current canonical Phone shell assets must be precached: ${JSON.stringify(currentPhoneShell)}`);
     await coldContext.setOffline(true);
     await page.setViewportSize({width:1280,height:900});

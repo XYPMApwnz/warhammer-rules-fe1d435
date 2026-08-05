@@ -131,7 +131,7 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/reader.html",
   "./books/adeptus-mechanicus/mobile/index.html",
   "./books/adeptus-mechanicus/mobile/mobile.css?v=4",
-  "./books/adeptus-mechanicus/mobile/mobile.js?v=14",
+  "./books/adeptus-mechanicus/mobile/mobile.js?v=15",
   "./books/adeptus-mechanicus/mobile/phone-popup-controller.js?v=1",
   "./books/adeptus-mechanicus/assets/mechanicus-logo.png",
   "./books/adeptus-mechanicus/assets/mechanicus-cover-800.webp",
@@ -154,13 +154,13 @@ const APP_SHELL = [
   ,"./books/tyranids/styles/book.css?v=4"
   ,"./books/tyranids/scripts/data.js?v=2"
   ,"./books/tyranids/scripts/roster-data.js?v=1"
-  ,"./books/tyranids/scripts/roster-filter.js?v=1"
+  ,"./books/tyranids/scripts/roster-filter.js?v=2"
   ,"./books/tyranids/scripts/compatible-rules-runtime.mjs?v=2"
   ,"./books/tyranids/scripts/stratagem-types.mjs?v=1"
   ,"./books/tyranids/generated/compatible-rules.json"
   ,"./books/tyranids/scripts/app.js?v=8"
   ,"./books/tyranids/mobile/mobile.css?v=2"
-  ,"./books/tyranids/mobile/mobile.js?v=9"
+  ,"./books/tyranids/mobile/mobile.js?v=10"
   ,"./books/tyranids/mobile/phone-popup-controller.js?v=1"
   ,"./books/tyranids/mobile/related-rules.inc?v=4"
   ,"./glossary/generated/glossary.en.js?v=tyranids-1"

@@ -51,7 +51,7 @@ if(typeof document!=='undefined')(async function(){
   let rosterDetachments=[],assignedEnhancementNames=new Set(),assignedEnhancementRuleIds=new Set(),compatibleRulesMatrix,rosterContext;
 
   if(rosterMode){
-    const rosterId=params.get('roster'),rosterGuideHref=()=>window.AMPhoneRoster.withRosterQuery(new URL('../../../roster-guides/index.html',location.href).href,rosterId);
+    const rosterId=params.get('roster'),rosterGuideHref=()=>new URL('../../../roster-guides/index.html',location.href).href;
     if(!window.WHRosterParser||!window.AMRosterEnhancements){location.replace(rosterGuideHref());return;}
     try{
       const records=JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[];

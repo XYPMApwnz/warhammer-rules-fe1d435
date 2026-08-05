@@ -5,7 +5,8 @@
   if(!record){location.replace('../../roster-guides/index.html?missing='+encodeURIComponent(rosterId));return;}
   let roster=record.roster;if(record.sourceText&&window.WHRosterParser){const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)roster=parsed;}
   const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/\s*\(aura\)\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim(),slug=value=>normalize(value).replace(/\s+/g,'-');
-  if(normalize(roster?.faction)!=='tyranids'||!roster?.units?.length){location.replace('../../roster-guides/index.html');return;}
+  const tyranidsFaction=value=>{const match=String(value||'').trim().match(/^(?:(Chaos|Imperium|Xenos)\s*[-–—]\s*)?(.*)$/i);return normalize(match?.[2])==='tyranids'&&(!match?.[1]||match[1].toLowerCase()==='xenos');};
+  if(!tyranidsFaction(roster?.faction)||!roster?.units?.length){location.replace('../../roster-guides/index.html');return;}
   const cards=new Map([...document.querySelectorAll('.unit-card[data-unit-title]')].map(card=>[normalize(card.dataset.unitTitle),card])),selected=new Map();
   for(const unit of roster.units){const card=cards.get(normalize(unit.name));if(!card)continue;const entry=selected.get(card.id)||{card,units:[],points:0};entry.units.push(unit);entry.points+=Number(unit.points)||0;selected.set(card.id,entry);}
   const detachments=(roster.detachments?.length?roster.detachments.map(item=>item.label):[roster.detachment]).filter(Boolean),detachmentIds=[...new Set(detachments.map(slug))];

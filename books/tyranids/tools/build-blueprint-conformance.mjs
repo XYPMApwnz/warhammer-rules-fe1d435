@@ -53,9 +53,9 @@ AB-COMPAT-006|pass|schema-data-qa|books/tyranids/generated/compatible-rules.json
 AB-COMPAT-007|pass|executable-unit-test|books/tyranids/tests/compatible-rules-qa.mjs|Legacy matcher globals and production dependencies are asserted absent.||
 AB-COMPAT-008|pass|schema-data-qa|books/tyranids/reports/compatible-rules-import-report.json|Conditional and unresolved are separate; unresolved count is zero.||
 AB-ROSTER-001|pass|real-browser-automated-integration|tests/browser/cold-offline.mjs|No-roster desktop and Phone expose full navigation and Compatible Rules choices.||
-AB-ROSTER-002|pass|executable-unit-test|tests/roster-guide-qa.mjs|New Recruit parsing, faction validation, stable unit identity, and selection use the shared parser.||
+AB-ROSTER-002|pass|real-browser-automated-integration|tests/browser/cold-offline.mjs|Plain and correctly Xenos-prefixed New Recruit Tyranids exports survive canonical Roster Guides persistence and sourceText re-parsing in desktop and Phone, while wrong parents are rejected.||
 AB-ROSTER-003|pass|real-browser-automated-integration|tests/browser/cold-offline.mjs|Adaptive Biology is displayed only for its exact resolved ownerUnitId.||
-AB-ROSTER-004|pass|real-browser-automated-integration|tests/browser/cold-offline.mjs|Rejected Phone roster contexts use replacement navigation with immediate termination; browser evidence covers absent Army Book UI, replacement history, and valid owner filtering.||
+AB-ROSTER-004|pass|real-browser-automated-integration|tests/browser/cold-offline.mjs|Bounded Mechanicus Phone and desktop traces prove invalid contexts replace to a neutral non-auto-open Roster Guides URL, remain terminal, preserve replacement history, and leave explicit valid Open behavior intact.||
 AB-ROSTER-005|pass|state-machine-test|books/tyranids/tests/compatible-rules-qa.mjs|Attachment-dependent rules remain conditional when actual formation is unknown.||
 AB-ROSTER-006|pass|real-browser-automated-integration|tests/browser/cold-offline.mjs|Desktop and Phone accept exactly one normalized Detachment and reject ambiguity.||
 AB-POPUP-001|pass|state-machine-test|books/tyranids/tests/blueprint-conformance-qa.mjs|Phone root replacement, nested append, duplicate prevention, and cycle collapse execute production state logic.||

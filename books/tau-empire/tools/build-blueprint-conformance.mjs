@@ -53,9 +53,9 @@ AB-COMPAT-006|pass|schema-data-qa|books/tau-empire/generated/compatible-rules.js
 AB-COMPAT-007|pass|executable-unit-test|books/tau-empire/tests/compatible-rules-qa.mjs|Legacy matcher globals and production dependencies are asserted absent.||
 AB-COMPAT-008|pass|schema-data-qa|books/tau-empire/reports/compatible-rules-import-report.json|Conditional and unresolved are separate; unresolved count is zero.||
 AB-ROSTER-001|pass|real-browser-automated-integration|tests/browser/cold-offline.mjs|No-roster desktop and Phone expose full navigation and Compatible Rules choices.||
-AB-ROSTER-002|pass|executable-unit-test|tests/roster-guide-qa.mjs|New Recruit parsing, faction validation, stable unit identity, and selection use the shared parser.||
+AB-ROSTER-002|pass|real-browser-automated-integration|tests/browser/cold-offline.mjs|Roster Guides and Army Book roundtrips preserve plain and correctly parent-prefixed faction identity through canonical persistence and sourceText re-parsing; wrong parents remain rejected.||
 AB-ROSTER-003|pass|real-browser-automated-integration|tests/browser/cold-offline.mjs|Adaptive Biology is displayed only for its exact resolved ownerUnitId.||
-AB-ROSTER-004|pass|real-browser-automated-integration|tests/browser/cold-offline.mjs|Accepted Phone validation uses replacement navigation with immediate termination; browser fixtures cover rejected contexts and valid owner filtering.||
+AB-ROSTER-004|pass|real-browser-automated-integration|tests/browser/cold-offline.mjs|Bounded browser traces require invalid roster replacement to a terminal neutral Roster Guides destination without an auto-open roster parameter, while explicit valid Open and owner filtering remain operational.||
 AB-ROSTER-005|pass|state-machine-test|books/tau-empire/tests/compatible-rules-qa.mjs|Attachment-dependent rules remain conditional when actual formation is unknown.||
 AB-ROSTER-006|pass|real-browser-automated-integration|tests/browser/cold-offline.mjs|Desktop and Phone accept exactly one normalized Detachment and reject ambiguity.||
 AB-POPUP-001|pass|state-machine-test|books/tau-empire/tests/blueprint-conformance-qa.mjs|Phone root replacement, nested append, duplicate prevention, and cycle collapse execute production state logic.||

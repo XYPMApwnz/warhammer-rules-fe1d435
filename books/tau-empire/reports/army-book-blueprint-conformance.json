@@ -657,9 +657,9 @@
       "status": "pass",
       "evidence": [
         {
-          "type": "executable-unit-test",
-          "path": "tests/roster-guide-qa.mjs",
-          "detail": "New Recruit parsing, faction validation, stable unit identity, and selection use the shared parser."
+          "type": "real-browser-automated-integration",
+          "path": "tests/browser/cold-offline.mjs",
+          "detail": "Roster Guides and Army Book roundtrips preserve plain and correctly parent-prefixed faction identity through canonical persistence and sourceText re-parsing; wrong parents remain rejected."
         }
       ],
       "blocker": false,
@@ -687,7 +687,7 @@
         {
           "type": "real-browser-automated-integration",
           "path": "tests/browser/cold-offline.mjs",
-          "detail": "Accepted Phone validation uses replacement navigation with immediate termination; browser fixtures cover rejected contexts and valid owner filtering."
+          "detail": "Bounded browser traces require invalid roster replacement to a terminal neutral Roster Guides destination without an auto-open roster parameter, while explicit valid Open and owner filtering remain operational."
         }
       ],
       "blocker": false,

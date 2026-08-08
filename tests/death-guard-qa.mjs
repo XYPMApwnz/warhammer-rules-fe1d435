@@ -51,7 +51,7 @@ check('audited Faction Pack Stratagem wording stays official',
   ])&&
   ruleById('stratagem-nauseating-paroxysms')?.lines?.[0]==='WHEN: Start of the Fight phase'&&
   ruleById('stratagem-aggravus-spasms')?.lines?.[0]==='WHEN: Start of your Shooting Phase.');
-check('canonical content audit is 9 detachments, 41 datasheets and 408 terms',bookData.audit.detachments===9&&bookData.audit.datasheets===41&&bookData.glossary.length===408);
+check('canonical content audit is 9 detachments, 36 datasheets and 366 terms',bookData.audit.detachments===9&&bookData.audit.datasheets===36&&bookData.glossary.length===366);
 const plagueEntry=glossaryRegistry.terms['death-guard-plague'];
 check('Plague means the chosen Nurgle’s Gift effect',plagueEntry.summary.en.includes('selected during Declare Battle Formations')&&plagueEntry.definition.en.includes('Skullsquirm Blight, Rattlejoint Ague or Scabrous Soulrot')&&plagueEntry.related.length===5);
 const plagueCards=['skullsquirm-blight','rattlejoint-ague','scabrous-soulrot'].map(id=>{
@@ -72,17 +72,17 @@ check('Miasmic Malignifier uses the canonical Deployment ability name',
 check('Pact of Decay datasheets identify their Tallyband Summoners context',
   html.includes('Tallyband Summoners Detachment')&&
   !html.includes('available through the current Pact of Decay army rule'));
-check('full gameplay block inventory is present',blockCount('enhancement')===30&&blockCount('rule')===45&&blockCount('statline')===41&&blockCount('weapon')===177,`enhancements ${blockCount('enhancement')}, rules ${blockCount('rule')}, statlines ${blockCount('statline')}, weapons ${blockCount('weapon')}`);
+check('full gameplay block inventory is present',blockCount('enhancement')===30&&blockCount('rule')===45&&blockCount('statline')===36&&blockCount('weapon')===146,`enhancements ${blockCount('enhancement')}, rules ${blockCount('rule')}, statlines ${blockCount('statline')}, weapons ${blockCount('weapon')}`);
 check('all navigation targets exist',navTargets.every(id=>idSet.has(id)),navTargets.filter(id=>!idSet.has(id)).join(', '));
 check('all navigation targets have tracked ranges',navTargets.every(id=>trackTargets.includes(id)),navTargets.filter(id=>!trackTargets.includes(id)).join(', '));
-check('navigation covers the gameplay tree without inline glossary branches',navTargets.length===99&&!navTargets.some(id=>id==='glossary'||id==='core-stratagems'||id.startsWith('glossary-')),String(navTargets.length));
+check('navigation covers the gameplay tree without inline glossary branches',navTargets.length===93&&!navTargets.some(id=>id==='glossary'||id==='core-stratagems'||id.startsWith('glossary-')),String(navTargets.length));
 const depths=[...markup.matchAll(/data-nav-depth="(\d+)"/g)].map(match=>Number(match[1]));
 check('navigation depth is at most three',Math.max(...depths)===3);
 const unitIds=bookData.sections.filter(section=>section.kind==='unit').map(section=>section.id);
-check('all 41 datasheets are global navigation destinations',unitIds.length===41&&unitIds.every(id=>navTargets.includes(id)));
+check('all 36 datasheets are global navigation destinations',unitIds.length===36&&unitIds.every(id=>navTargets.includes(id)));
 const unitById=id=>bookData.sections.find(section=>section.id===id);
 const legendIds=['unit-death-guard-possessed','unit-death-guard-chaos-lord','unit-death-guard-chaos-lord-in-terminator-armour','unit-death-guard-cultists','unit-death-guard-sorcerer-in-terminator-armour'];
-check('all official Death Guard Legends datasheets are complete and labelled',legendIds.every(id=>unitById(id)?.legends&&html.includes(`class="unit-card surface legends-card" id="${id}"`)&&unitById(id).subsections.some(part=>part.title==='Keywords')));
+check('Death Guard Legends datasheets are absent from the published book',legendIds.every(id=>!unitById(id)&&!html.includes(`id="${id}"`)));
 const requiredWargear=['unit-plague-marines','unit-blightlord-terminators','unit-deathshroud-terminators','unit-chaos-land-raider','unit-chaos-predator-annihilator','unit-chaos-predator-destructor','unit-foetid-bloat-drone','unit-helbrute','unit-plagueburst-crawler','unit-chaos-rhino','unit-great-unclean-one','unit-plague-drones','unit-plaguebearers'];
 check('audited datasheets retain every missing Wargear Options block',requiredWargear.every(id=>unitById(id)?.subsections.some(part=>part.title==='Wargear Options')));
 const auditedAbilities=['mortarion-ability-supreme-commander','plague-marines-ability-icon-of-despair-aura','deathshroud-terminators-ability-icon-of-despair-aura','great-unclean-one-ability-reverberating-summons','plague-drones-ability-daemonic-icon','plague-drones-ability-instrument-of-chaos','plaguebearers-ability-daemonic-icon','plaguebearers-ability-instrument-of-chaos','miasmic-malignifier-ability-fortification-setup'];
@@ -109,7 +109,7 @@ check('official Stratagem wording reaches desktop, Phone Mode, popup and Mega Gl
   glossaryRegistry.terms['death-guard-stratagem-soulrot-flux'].definition.en.includes('• On a 6, that enemy unit suffers 3 mortal wounds.')&&
   glossaryRegistry.terms['death-guard-stratagem-droning-horror'].definition.en.includes('• That target a unit within half range, can re-roll wound rolls of 1.'));
 const usedTerms=[...markup.matchAll(/data-term="([^"]+)"/g)].map(match=>match[1]);
-check('term registry has all 408 entries',termKeys.length===408,String(termKeys.length));
+check('term registry has all 366 entries',termKeys.length===366,String(termKeys.length));
 check('all term triggers resolve',usedTerms.every(id=>termKeys.includes(id)||glossaryRegistry.terms[id]),usedTerms.filter(id=>!termKeys.includes(id)&&!glossaryRegistry.terms[id]).join(', '));
 check('canonical terms remain available to lazy full entries',read('scripts/full-entry-controller.js').includes('const term=this.api.get(id)'));
 const journeyTargets=[...markup.matchAll(/data-journey-target="([^"]+)"/g)].map(match=>match[1]);
@@ -265,7 +265,7 @@ check('datasheet quick navigation overrides the shared desktop rail and is phone
 const navigationCss=read('styles/navigation.css');
 check('navigation hides horizontal overflow and styles its scrollbar',/\.toc-panel\s*\{[^}]*overflow-x:\s*hidden/.test(navigationCss)&&navigationCss.includes('.toc-panel::-webkit-scrollbar-thumb')&&navigationCss.includes('scrollbar-color:'));
 check('shared datasheet statlines keep every characteristic on one row',/\.unit-card \.statline\s*\{[^}]*display:\s*flex/.test(datasheetCss));
-check('mobile weapon characteristics use one six-column row',datasheetCss.includes('grid-template-columns: repeat(6, minmax(0, 1fr))')&&(markup.match(/data-label="(?:Range|A|BS|WS|S|AP|D)"/g)||[]).length===177*6);
+check('mobile weapon characteristics use one six-column row',datasheetCss.includes('grid-template-columns: repeat(6, minmax(0, 1fr))')&&(markup.match(/data-label="(?:Range|A|BS|WS|S|AP|D)"/g)||[]).length===146*6);
 check('heading destination highlight uses text glow without outline',/\.destination-highlight:is\(h1,h2,h3,h4,h5,h6\)\s*\{[^}]*animation-name:\s*destination-heading-highlight/.test(contentCss)&&contentCss.includes('@keyframes destination-heading-highlight')&&!contentCss.match(/@keyframes destination-heading-highlight[^}]*outline/));
 check('detachment navigation targets render in separate rows',/\.detachment-content\s*\{[^}]*grid-template-columns:\s*1fr/.test(contentCss));
 check('Stratagem grids preserve intrinsic readable card width',/\.stratagem-grid\s*\{[^}]*grid-template-columns:repeat\(auto-fit,minmax\(min\(100%,360px\),1fr\)\)/.test(contentCss)&&/\.full-related-content \.detachment-content\s*\{[^}]*grid-template-columns:repeat\(auto-fit,minmax\(min\(100%,360px\),1fr\)\)/.test(contentCss)&&/\.full-related-content \.related-detachment>\[data-related-kind="stratagems"\]\s*\{[^}]*grid-template-columns:repeat\(auto-fit,minmax\(min\(100%,360px\),1fr\)\)/.test(contentCss));

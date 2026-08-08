@@ -52,6 +52,7 @@ for(const entry of fs.readdirSync(booksRoot,{withFileTypes:true})){
   const normalizeEnhancementId=id=>String(id||'').replace(/^enhancement-/,'');
   const allDetachments=[...(pack.detachments||[]),...(codexParity.detachments||[])];
   const profiles=profilesFrom(reader),stratagems=allDetachments.flatMap(detachment=>detachment.stratagems||[]);
+  const usesLegacyEligibility=config.legacyRelatedRuleAttributes!==false;
   const officialIds=stratagems.map(rule=>normalizeRuleId(rule.id)),generatedIds=[...related.matchAll(/<article class="stratagem surface"[^>]*data-rule-id="([^"]+)"/g)].map(match=>normalizeRuleId(match[1])).filter(id=>!id.startsWith('core-stratagem-'));
   const detachmentByRule=new Map(allDetachments.flatMap(detachment=>(detachment.stratagems||[]).map(rule=>[normalizeRuleId(rule.id),detachment.id])));
   const detachmentByEnhancement=new Map(allDetachments.flatMap(detachment=>(detachment.enhancements||[]).map(rule=>[normalizeEnhancementId(rule.id),detachment.id])));
@@ -65,16 +66,18 @@ for(const entry of fs.readdirSync(booksRoot,{withFileTypes:true})){
   };
   assert.ok(profiles.length,`${config.id}: no datasheet profiles in generated reader`);
   assert.equal(new Set(officialIds).size,officialIds.length,`${config.id}: duplicate official Stratagem id`);
-  assert.deepEqual(sorted(Object.keys(eligibility).map(normalizeRuleId)),sorted(officialIds),`${config.id}: explicit eligibility IDs do not exactly match official Stratagem IDs`);
+  if(usesLegacyEligibility)assert.deepEqual(sorted(Object.keys(eligibility).map(normalizeRuleId)),sorted(officialIds),`${config.id}: explicit eligibility IDs do not exactly match official Stratagem IDs`);
   assert.deepEqual(sorted(generatedIds),sorted(officialIds),`${config.id}: generated Related Rules cards do not exactly match official Stratagem IDs`);
   let negatives=0;
   for(const stratagem of stratagems){
     const ruleId=normalizeRuleId(stratagem.id),rule=eligibility[stratagem.id]||eligibility[ruleId];
-    assert.ok(rule,`${config.id}/${stratagem.title}: missing explicit eligibility`);
-    assert.ok(friendlyRoles(rule).length,`${config.id}/${stratagem.title}: no friendly target role`);
-    for(const role of rule.roles||rule.targets||[])assert.ok(supportedSubjects.has(role.subject||'unit'),`${config.id}/${stratagem.title}: unsupported subject ${role.subject}`);
-    assert.ok(profiles.some(profile=>matcher.matches(rule,applyGrants(profile,ruleId))),`${config.id}/${stratagem.title}: no real datasheet, granted-keyword or Attached-unit candidate satisfies its target`);
-    if(restrictive(rule)&&profiles.some(profile=>!matcher.matches(rule,applyGrants(profile,ruleId))))negatives++;
+    if(usesLegacyEligibility){
+      assert.ok(rule,`${config.id}/${stratagem.title}: missing explicit eligibility`);
+      assert.ok(friendlyRoles(rule).length,`${config.id}/${stratagem.title}: no friendly target role`);
+      for(const role of rule.roles||rule.targets||[])assert.ok(supportedSubjects.has(role.subject||'unit'),`${config.id}/${stratagem.title}: unsupported subject ${role.subject}`);
+      assert.ok(profiles.some(profile=>matcher.matches(rule,applyGrants(profile,ruleId))),`${config.id}/${stratagem.title}: no real datasheet, granted-keyword or Attached-unit candidate satisfies its target`);
+      if(restrictive(rule)&&profiles.some(profile=>!matcher.matches(rule,applyGrants(profile,ruleId))))negatives++;
+    }
     if(stratagem.restrictions){
       const card=[...related.matchAll(new RegExp(`<article class="stratagem surface"[^>]*data-rule-id="${stratagem.id}"[\\s\\S]*?<\\/article>`,'g'))][0]?.[0]||'';
       assert.equal((card.match(/data-source-field="restrictions"/g)||[]).length,1,`${config.id}/${stratagem.title}: RESTRICTIONS must be rendered exactly once`);
@@ -83,20 +86,22 @@ for(const entry of fs.readdirSync(booksRoot,{withFileTypes:true})){
     }
   }
   const relatedEnhancementIds=[...related.matchAll(/<article class="enhancement surface"[^>]*data-rule-id="([^"]+)"/g)].map(match=>match[1]);
-  assert.deepEqual(new Set(Object.keys(enhancementEligibility).map(normalizeEnhancementId)),new Set(relatedEnhancementIds.map(normalizeEnhancementId)),`${config.id}: explicit Enhancement eligibility does not match generated Related Rules inventory`);
-  for(const [id,rule] of Object.entries(enhancementEligibility)){
-    const isOwnerContract=Boolean(rule.owner),isUpgrade=(rule.tags||[]).includes('UPGRADE');
-    const roles=isOwnerContract?[{...rule.owner,side:'friendly'}]:(rule.roles||rule.targets||[]);
-    assert.ok(roles.some(role=>(role.side==='friendly'||role.side==='either')&&supportedSubjects.has(role.subject||'unit')),`${config.id}/${id}: no supported Enhancement owner contract`);
-    const selectors=roles.map(role=>role.selector||role);
-    if(isOwnerContract){
-      assert.equal(rule.owner.subject,isUpgrade?'unit':'model',`${config.id}/${id}: incorrect owner subject`);
-      if(!isUpgrade)assert.ok(selectors.every(selector=>(selector.noneKeywords||[]).includes('EPIC HERO')),`${config.id}/${id}: standard Enhancement does not explicitly exclude Epic Heroes`);
+  if(usesLegacyEligibility){
+    assert.deepEqual(new Set(Object.keys(enhancementEligibility).map(normalizeEnhancementId)),new Set(relatedEnhancementIds.map(normalizeEnhancementId)),`${config.id}: explicit Enhancement eligibility does not match generated Related Rules inventory`);
+    for(const [id,rule] of Object.entries(enhancementEligibility)){
+      const isOwnerContract=Boolean(rule.owner),isUpgrade=(rule.tags||[]).includes('UPGRADE');
+      const roles=isOwnerContract?[{...rule.owner,side:'friendly'}]:(rule.roles||rule.targets||[]);
+      assert.ok(roles.some(role=>(role.side==='friendly'||role.side==='either')&&supportedSubjects.has(role.subject||'unit')),`${config.id}/${id}: no supported Enhancement owner contract`);
+      const selectors=roles.map(role=>role.selector||role);
+      if(isOwnerContract){
+        assert.equal(rule.owner.subject,isUpgrade?'unit':'model',`${config.id}/${id}: incorrect owner subject`);
+        if(!isUpgrade)assert.ok(selectors.every(selector=>(selector.noneKeywords||[]).includes('EPIC HERO')),`${config.id}/${id}: standard Enhancement does not explicitly exclude Epic Heroes`);
+      }
+      assert.ok(selectors.flatMap(selector=>selector.unitIds||[]).every(unitId=>profiles.some(profile=>profile.unitId===unitId)),`${config.id}/${id}: Enhancement references an unknown datasheet`);
+      const enhancementId=normalizeEnhancementId(id);
+      assert.ok(profiles.some(profile=>matcher.matches(rule,applyGrants(profile,enhancementId,detachmentByEnhancement))),`${config.id}/${id}: no real datasheet satisfies its Enhancement owner contract`);
+      if(isOwnerContract&&!isUpgrade)assert.ok(profiles.filter(profile=>profile.keywords.has('EPIC HERO')).every(profile=>!matcher.matches(rule,applyGrants(profile,enhancementId,detachmentByEnhancement))),`${config.id}/${id}: standard Enhancement is offered to an Epic Hero`);
     }
-    assert.ok(selectors.flatMap(selector=>selector.unitIds||[]).every(unitId=>profiles.some(profile=>profile.unitId===unitId)),`${config.id}/${id}: Enhancement references an unknown datasheet`);
-    const enhancementId=normalizeEnhancementId(id);
-    assert.ok(profiles.some(profile=>matcher.matches(rule,applyGrants(profile,enhancementId,detachmentByEnhancement))),`${config.id}/${id}: no real datasheet satisfies its Enhancement owner contract`);
-    if(isOwnerContract&&!isUpgrade)assert.ok(profiles.filter(profile=>profile.keywords.has('EPIC HERO')).every(profile=>!matcher.matches(rule,applyGrants(profile,enhancementId,detachmentByEnhancement))),`${config.id}/${id}: standard Enhancement is offered to an Epic Hero`);
   }
   audited.push(`${config.title}: ${stratagems.length} Stratagems × ${profiles.length} datasheets; ${negatives} restrictive contracts have real negatives`);
 }

@@ -205,111 +205,6 @@
         "rule": "detachment-court-of-the-phoenician"
       }
     },
-    "emperors-children-ability-horrifying-beauty": {
-      "termId": "emperors-children-ability-horrifying-beauty",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-horrifying-beauty",
-        "rule": "unit-daemonettes",
-        "datasheet": "unit-daemonettes",
-        "statline": "daemonettes-profile",
-        "units": [
-          "unit-daemonettes"
-        ]
-      }
-    },
-    "emperors-children-ability-daemonic-icon": {
-      "termId": "emperors-children-ability-daemonic-icon",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-daemonic-icon",
-        "rule": "unit-daemonettes",
-        "datasheet": "unit-daemonettes",
-        "statline": "daemonettes-profile",
-        "units": [
-          "unit-daemonettes",
-          "unit-seekers"
-        ]
-      }
-    },
-    "emperors-children-ability-instrument-of-chaos": {
-      "termId": "emperors-children-ability-instrument-of-chaos",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-instrument-of-chaos",
-        "rule": "unit-daemonettes",
-        "datasheet": "unit-daemonettes",
-        "statline": "daemonettes-profile",
-        "units": [
-          "unit-daemonettes",
-          "unit-seekers"
-        ]
-      }
-    },
-    "emperors-children-ability-devastating-wounds": {
-      "termId": "emperors-children-ability-devastating-wounds",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-devastating-wounds",
-        "rule": "unit-daemonettes",
-        "datasheet": "unit-daemonettes",
-        "statline": "daemonettes-profile",
-        "units": [
-          "unit-daemonettes",
-          "unit-keeper-of-secrets",
-          "unit-sorcerer",
-          "unit-chaos-rhino",
-          "unit-shalaxi-helbane",
-          "unit-chaos-terminators",
-          "unit-chaos-land-raider",
-          "unit-defiler",
-          "unit-fiends",
-          "unit-heldrake",
-          "unit-seekers"
-        ]
-      }
-    },
-    "emperors-children-ability-deep-strike": {
-      "termId": "core-deep-strike",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-deep-strike",
-        "rule": "unit-daemonettes",
-        "datasheet": "unit-daemonettes",
-        "statline": "daemonettes-profile",
-        "units": [
-          "unit-daemonettes",
-          "unit-daemon-prince-of-slaanesh-with-wings",
-          "unit-keeper-of-secrets",
-          "unit-fulgrim",
-          "unit-shalaxi-helbane",
-          "unit-chaos-terminators",
-          "unit-fiends",
-          "unit-seekers"
-        ]
-      }
-    },
-    "emperors-children-ability-fights-first": {
-      "termId": "core-fights-first",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-fights-first",
-        "rule": "unit-daemonettes",
-        "datasheet": "unit-daemonettes",
-        "statline": "daemonettes-profile",
-        "units": [
-          "unit-daemonettes",
-          "unit-flawless-blades"
-        ]
-      }
-    },
-    "emperors-children-weapon-slashing-claws": {
-      "termId": "emperors-children-weapon-slashing-claws",
-      "navigation": {
-        "glossary": "glossary-emperors-children-weapon-slashing-claws",
-        "rule": "unit-daemonettes",
-        "datasheet": "unit-daemonettes",
-        "statline": "daemonettes-profile",
-        "units": [
-          "unit-daemonettes",
-          "unit-seekers"
-        ]
-      }
-    },
     "emperors-children-ability-excessive-assault": {
       "termId": "emperors-children-ability-excessive-assault",
       "navigation": {
@@ -366,7 +261,6 @@
           "unit-lord-exultant",
           "unit-sorcerer",
           "unit-lucius-the-eternal",
-          "unit-shalaxi-helbane",
           "unit-flawless-blades",
           "unit-defiler"
         ]
@@ -382,10 +276,8 @@
         "units": [
           "unit-infractors",
           "unit-tormentors",
-          "unit-keeper-of-secrets",
           "unit-lord-exultant",
-          "unit-sorcerer",
-          "unit-shalaxi-helbane"
+          "unit-sorcerer"
         ]
       }
     },
@@ -741,185 +633,17 @@
         ]
       }
     },
-    "emperors-children-ability-daemon-lord-of-slaanesh-aura": {
-      "termId": "emperors-children-ability-daemon-lord-of-slaanesh-aura",
+    "emperors-children-ability-deep-strike": {
+      "termId": "core-deep-strike",
       "navigation": {
-        "glossary": "glossary-emperors-children-ability-daemon-lord-of-slaanesh-aura",
-        "rule": "unit-keeper-of-secrets",
-        "datasheet": "unit-keeper-of-secrets",
-        "statline": "keeper-of-secrets-profile",
+        "glossary": "glossary-emperors-children-ability-deep-strike",
+        "rule": "unit-daemon-prince-of-slaanesh-with-wings",
+        "datasheet": "unit-daemon-prince-of-slaanesh-with-wings",
+        "statline": "daemon-prince-of-slaanesh-with-wings-profile",
         "units": [
-          "unit-keeper-of-secrets"
-        ]
-      }
-    },
-    "emperors-children-ability-mesmerising-form": {
-      "termId": "emperors-children-ability-mesmerising-form",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-mesmerising-form",
-        "rule": "unit-keeper-of-secrets",
-        "datasheet": "unit-keeper-of-secrets",
-        "statline": "keeper-of-secrets-profile",
-        "units": [
-          "unit-keeper-of-secrets"
-        ]
-      }
-    },
-    "emperors-children-ability-shining-aegis": {
-      "termId": "emperors-children-ability-shining-aegis",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-shining-aegis",
-        "rule": "unit-keeper-of-secrets",
-        "datasheet": "unit-keeper-of-secrets",
-        "statline": "keeper-of-secrets-profile",
-        "units": [
-          "unit-keeper-of-secrets"
-        ]
-      }
-    },
-    "emperors-children-ability-damaged-1-6-wounds-remaining": {
-      "termId": "emperors-children-ability-damaged-1-6-wounds-remaining",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-damaged-1-6-wounds-remaining",
-        "rule": "unit-keeper-of-secrets",
-        "datasheet": "unit-keeper-of-secrets",
-        "statline": "keeper-of-secrets-profile",
-        "units": [
-          "unit-keeper-of-secrets",
-          "unit-fulgrim"
-        ]
-      }
-    },
-    "emperors-children-ability-psychic": {
-      "termId": "core-psychic",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-psychic",
-        "rule": "unit-keeper-of-secrets",
-        "datasheet": "unit-keeper-of-secrets",
-        "statline": "keeper-of-secrets-profile",
-        "units": [
-          "unit-keeper-of-secrets",
-          "unit-sorcerer",
-          "unit-shalaxi-helbane"
-        ]
-      }
-    },
-    "emperors-children-ability-extra-attacks": {
-      "termId": "emperors-children-ability-extra-attacks",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-extra-attacks",
-        "rule": "unit-keeper-of-secrets",
-        "datasheet": "unit-keeper-of-secrets",
-        "statline": "keeper-of-secrets-profile",
-        "units": [
-          "unit-keeper-of-secrets",
-          "unit-lord-exultant",
+          "unit-daemon-prince-of-slaanesh-with-wings",
           "unit-fulgrim",
-          "unit-shalaxi-helbane",
-          "unit-defiler",
-          "unit-seekers"
-        ]
-      }
-    },
-    "emperors-children-ability-assault": {
-      "termId": "core-assault",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-assault",
-        "rule": "unit-keeper-of-secrets",
-        "datasheet": "unit-keeper-of-secrets",
-        "statline": "keeper-of-secrets-profile",
-        "units": [
-          "unit-keeper-of-secrets",
-          "unit-shalaxi-helbane"
-        ]
-      }
-    },
-    "emperors-children-ability-deadly-demise-d6": {
-      "termId": "emperors-children-ability-deadly-demise-d6",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-deadly-demise-d6",
-        "rule": "unit-keeper-of-secrets",
-        "datasheet": "unit-keeper-of-secrets",
-        "statline": "keeper-of-secrets-profile",
-        "units": [
-          "unit-keeper-of-secrets",
-          "unit-fulgrim",
-          "unit-shalaxi-helbane",
-          "unit-chaos-land-raider",
-          "unit-defiler"
-        ]
-      }
-    },
-    "emperors-children-weapon-phantasmagoria-witchfire": {
-      "termId": "emperors-children-weapon-phantasmagoria-witchfire",
-      "navigation": {
-        "glossary": "glossary-emperors-children-weapon-phantasmagoria-witchfire",
-        "rule": "unit-keeper-of-secrets",
-        "datasheet": "unit-keeper-of-secrets",
-        "statline": "keeper-of-secrets-profile",
-        "units": [
-          "unit-keeper-of-secrets"
-        ]
-      }
-    },
-    "emperors-children-weapon-phantasmagoria-focused-witchfire": {
-      "termId": "emperors-children-weapon-phantasmagoria-focused-witchfire",
-      "navigation": {
-        "glossary": "glossary-emperors-children-weapon-phantasmagoria-focused-witchfire",
-        "rule": "unit-keeper-of-secrets",
-        "datasheet": "unit-keeper-of-secrets",
-        "statline": "keeper-of-secrets-profile",
-        "units": [
-          "unit-keeper-of-secrets"
-        ]
-      }
-    },
-    "emperors-children-weapon-snapping-claws": {
-      "termId": "emperors-children-weapon-snapping-claws",
-      "navigation": {
-        "glossary": "glossary-emperors-children-weapon-snapping-claws",
-        "rule": "unit-keeper-of-secrets",
-        "datasheet": "unit-keeper-of-secrets",
-        "statline": "keeper-of-secrets-profile",
-        "units": [
-          "unit-keeper-of-secrets",
-          "unit-shalaxi-helbane"
-        ]
-      }
-    },
-    "emperors-children-weapon-witstealer-sword": {
-      "termId": "emperors-children-weapon-witstealer-sword",
-      "navigation": {
-        "glossary": "glossary-emperors-children-weapon-witstealer-sword",
-        "rule": "unit-keeper-of-secrets",
-        "datasheet": "unit-keeper-of-secrets",
-        "statline": "keeper-of-secrets-profile",
-        "units": [
-          "unit-keeper-of-secrets"
-        ]
-      }
-    },
-    "emperors-children-weapon-living-whip": {
-      "termId": "emperors-children-weapon-living-whip",
-      "navigation": {
-        "glossary": "glossary-emperors-children-weapon-living-whip",
-        "rule": "unit-keeper-of-secrets",
-        "datasheet": "unit-keeper-of-secrets",
-        "statline": "keeper-of-secrets-profile",
-        "units": [
-          "unit-keeper-of-secrets"
-        ]
-      }
-    },
-    "emperors-children-weapon-ritual-knife": {
-      "termId": "emperors-children-weapon-ritual-knife",
-      "navigation": {
-        "glossary": "glossary-emperors-children-weapon-ritual-knife",
-        "rule": "unit-keeper-of-secrets",
-        "datasheet": "unit-keeper-of-secrets",
-        "statline": "keeper-of-secrets-profile",
-        "units": [
-          "unit-keeper-of-secrets"
+          "unit-chaos-terminators"
         ]
       }
     },
@@ -968,6 +692,20 @@
         "statline": "lord-exultant-profile",
         "units": [
           "unit-lord-exultant"
+        ]
+      }
+    },
+    "emperors-children-ability-extra-attacks": {
+      "termId": "emperors-children-ability-extra-attacks",
+      "navigation": {
+        "glossary": "glossary-emperors-children-ability-extra-attacks",
+        "rule": "unit-lord-exultant",
+        "datasheet": "unit-lord-exultant",
+        "statline": "lord-exultant-profile",
+        "units": [
+          "unit-lord-exultant",
+          "unit-fulgrim",
+          "unit-defiler"
         ]
       }
     },
@@ -1174,6 +912,35 @@
         ]
       }
     },
+    "emperors-children-ability-psychic": {
+      "termId": "core-psychic",
+      "navigation": {
+        "glossary": "glossary-emperors-children-ability-psychic",
+        "rule": "unit-sorcerer",
+        "datasheet": "unit-sorcerer",
+        "statline": "sorcerer-profile",
+        "units": [
+          "unit-sorcerer"
+        ]
+      }
+    },
+    "emperors-children-ability-devastating-wounds": {
+      "termId": "emperors-children-ability-devastating-wounds",
+      "navigation": {
+        "glossary": "glossary-emperors-children-ability-devastating-wounds",
+        "rule": "unit-sorcerer",
+        "datasheet": "unit-sorcerer",
+        "statline": "sorcerer-profile",
+        "units": [
+          "unit-sorcerer",
+          "unit-chaos-rhino",
+          "unit-chaos-terminators",
+          "unit-chaos-land-raider",
+          "unit-defiler",
+          "unit-heldrake"
+        ]
+      }
+    },
     "emperors-children-weapon-agonising-energies-witchfire": {
       "termId": "emperors-children-weapon-agonising-energies-witchfire",
       "navigation": {
@@ -1340,6 +1107,18 @@
         ]
       }
     },
+    "emperors-children-ability-damaged-1-6-wounds-remaining": {
+      "termId": "emperors-children-ability-damaged-1-6-wounds-remaining",
+      "navigation": {
+        "glossary": "glossary-emperors-children-ability-damaged-1-6-wounds-remaining",
+        "rule": "unit-fulgrim",
+        "datasheet": "unit-fulgrim",
+        "statline": "fulgrim-profile",
+        "units": [
+          "unit-fulgrim"
+        ]
+      }
+    },
     "emperors-children-ability-supreme-commander": {
       "termId": "emperors-children-ability-supreme-commander",
       "navigation": {
@@ -1374,8 +1153,21 @@
         "units": [
           "unit-fulgrim",
           "unit-lucius-the-eternal",
-          "unit-shalaxi-helbane",
           "unit-chaos-terminators",
+          "unit-chaos-land-raider",
+          "unit-defiler"
+        ]
+      }
+    },
+    "emperors-children-ability-deadly-demise-d6": {
+      "termId": "emperors-children-ability-deadly-demise-d6",
+      "navigation": {
+        "glossary": "glossary-emperors-children-ability-deadly-demise-d6",
+        "rule": "unit-fulgrim",
+        "datasheet": "unit-fulgrim",
+        "statline": "fulgrim-profile",
+        "units": [
+          "unit-fulgrim",
           "unit-chaos-land-raider",
           "unit-defiler"
         ]
@@ -1514,90 +1306,6 @@
         ]
       }
     },
-    "emperors-children-ability-no-prey-can-evade": {
-      "termId": "emperors-children-ability-no-prey-can-evade",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-no-prey-can-evade",
-        "rule": "unit-shalaxi-helbane",
-        "datasheet": "unit-shalaxi-helbane",
-        "statline": "shalaxi-helbane-profile",
-        "units": [
-          "unit-shalaxi-helbane"
-        ]
-      }
-    },
-    "emperors-children-ability-monarch-of-the-hunt": {
-      "termId": "emperors-children-ability-monarch-of-the-hunt",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-monarch-of-the-hunt",
-        "rule": "unit-shalaxi-helbane",
-        "datasheet": "unit-shalaxi-helbane",
-        "statline": "shalaxi-helbane-profile",
-        "units": [
-          "unit-shalaxi-helbane"
-        ]
-      }
-    },
-    "emperors-children-ability-damaged-1-7-wounds-remaining": {
-      "termId": "emperors-children-ability-damaged-1-7-wounds-remaining",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-damaged-1-7-wounds-remaining",
-        "rule": "unit-shalaxi-helbane",
-        "datasheet": "unit-shalaxi-helbane",
-        "statline": "shalaxi-helbane-profile",
-        "units": [
-          "unit-shalaxi-helbane"
-        ]
-      }
-    },
-    "emperors-children-weapon-lash-of-slaanesh": {
-      "termId": "emperors-children-weapon-lash-of-slaanesh",
-      "navigation": {
-        "glossary": "glossary-emperors-children-weapon-lash-of-slaanesh",
-        "rule": "unit-shalaxi-helbane",
-        "datasheet": "unit-shalaxi-helbane",
-        "statline": "shalaxi-helbane-profile",
-        "units": [
-          "unit-shalaxi-helbane"
-        ]
-      }
-    },
-    "emperors-children-weapon-pavane-of-slaanesh-witchfire": {
-      "termId": "emperors-children-weapon-pavane-of-slaanesh-witchfire",
-      "navigation": {
-        "glossary": "glossary-emperors-children-weapon-pavane-of-slaanesh-witchfire",
-        "rule": "unit-shalaxi-helbane",
-        "datasheet": "unit-shalaxi-helbane",
-        "statline": "shalaxi-helbane-profile",
-        "units": [
-          "unit-shalaxi-helbane"
-        ]
-      }
-    },
-    "emperors-children-weapon-pavane-of-slaanesh-focused-witchfire": {
-      "termId": "emperors-children-weapon-pavane-of-slaanesh-focused-witchfire",
-      "navigation": {
-        "glossary": "glossary-emperors-children-weapon-pavane-of-slaanesh-focused-witchfire",
-        "rule": "unit-shalaxi-helbane",
-        "datasheet": "unit-shalaxi-helbane",
-        "statline": "shalaxi-helbane-profile",
-        "units": [
-          "unit-shalaxi-helbane"
-        ]
-      }
-    },
-    "emperors-children-weapon-soulpiercer": {
-      "termId": "emperors-children-weapon-soulpiercer",
-      "navigation": {
-        "glossary": "glossary-emperors-children-weapon-soulpiercer",
-        "rule": "unit-shalaxi-helbane",
-        "datasheet": "unit-shalaxi-helbane",
-        "statline": "shalaxi-helbane-profile",
-        "units": [
-          "unit-shalaxi-helbane"
-        ]
-      }
-    },
     "emperors-children-ability-lethal-obsession": {
       "termId": "emperors-children-ability-lethal-obsession",
       "navigation": {
@@ -1701,6 +1409,18 @@
       "termId": "emperors-children-ability-daemonic-patrons",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-daemonic-patrons",
+        "rule": "unit-flawless-blades",
+        "datasheet": "unit-flawless-blades",
+        "statline": "flawless-blades-profile",
+        "units": [
+          "unit-flawless-blades"
+        ]
+      }
+    },
+    "emperors-children-ability-fights-first": {
+      "termId": "core-fights-first",
+      "navigation": {
+        "glossary": "glossary-emperors-children-ability-fights-first",
         "rule": "unit-flawless-blades",
         "datasheet": "unit-flawless-blades",
         "statline": "flawless-blades-profile",
@@ -2033,30 +1753,6 @@
         ]
       }
     },
-    "emperors-children-ability-soporific-musk": {
-      "termId": "emperors-children-ability-soporific-musk",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-soporific-musk",
-        "rule": "unit-fiends",
-        "datasheet": "unit-fiends",
-        "statline": "fiends-profile",
-        "units": [
-          "unit-fiends"
-        ]
-      }
-    },
-    "emperors-children-weapon-barbed-tail-and-dissecting-claws": {
-      "termId": "emperors-children-weapon-barbed-tail-and-dissecting-claws",
-      "navigation": {
-        "glossary": "glossary-emperors-children-weapon-barbed-tail-and-dissecting-claws",
-        "rule": "unit-fiends",
-        "datasheet": "unit-fiends",
-        "statline": "fiends-profile",
-        "units": [
-          "unit-fiends"
-        ]
-      }
-    },
     "emperors-children-ability-airborne-predator": {
       "termId": "emperors-children-ability-airborne-predator",
       "navigation": {
@@ -2162,54 +1858,6 @@
         "statline": "maulerfiend-profile",
         "units": [
           "unit-maulerfiend"
-        ]
-      }
-    },
-    "emperors-children-ability-unholy-speed": {
-      "termId": "emperors-children-ability-unholy-speed",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-unholy-speed",
-        "rule": "unit-seekers",
-        "datasheet": "unit-seekers",
-        "statline": "seekers-profile",
-        "units": [
-          "unit-seekers"
-        ]
-      }
-    },
-    "emperors-children-ability-lethal-hits": {
-      "termId": "emperors-children-ability-lethal-hits",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-lethal-hits",
-        "rule": "unit-seekers",
-        "datasheet": "unit-seekers",
-        "statline": "seekers-profile",
-        "units": [
-          "unit-seekers"
-        ]
-      }
-    },
-    "emperors-children-ability-scouts-9": {
-      "termId": "emperors-children-ability-scouts-9",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-scouts-9",
-        "rule": "unit-seekers",
-        "datasheet": "unit-seekers",
-        "statline": "seekers-profile",
-        "units": [
-          "unit-seekers"
-        ]
-      }
-    },
-    "emperors-children-weapon-lashing-tongues": {
-      "termId": "emperors-children-weapon-lashing-tongues",
-      "navigation": {
-        "glossary": "glossary-emperors-children-weapon-lashing-tongues",
-        "rule": "unit-seekers",
-        "datasheet": "unit-seekers",
-        "statline": "seekers-profile",
-        "units": [
-          "unit-seekers"
         ]
       }
     },

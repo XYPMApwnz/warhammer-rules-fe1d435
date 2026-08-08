@@ -91,7 +91,7 @@ for(const slug of tyranidsCoreAbilities){
   const localId=`tyranids-ability-${slug}`,coreId=`core-${slug}`;
   if(ids.has(localId))errors.push(`${localId}: duplicated canonical Core ability`);
   if(aliases[localId]!==coreId)errors.push(`${localId}: must alias ${coreId}`);
-  if(tyranidsContext[localId]?.termId!==coreId)errors.push(`${localId}: Tyranids context must use ${coreId}`);
+  if(tyranidsContext[localId]&&tyranidsContext[localId].termId!==coreId)errors.push(`${localId}: Tyranids context must use ${coreId}`);
 }
 if(report.schema!==2)errors.push(`conflict report: expected schema 2, got ${report.schema}`);
 for(const candidate of report.definitionCandidates||[]){

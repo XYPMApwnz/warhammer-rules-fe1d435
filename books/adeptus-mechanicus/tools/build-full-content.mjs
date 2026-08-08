@@ -29,7 +29,7 @@ const abilityText=ability=>ability.text||[
   ...(ability.options||[]).map(option=>`${option.title}: ${option.text}`)
 ].filter(Boolean).join('\n\n');
 const enhancementsByTitle=new Map(pointsCatalog.enhancements.map(item=>[titleKey(item.title),item]));
-const factionDatasheets=new Map(factionRules.datasheets.map(unit=>[unit.id,unit]));
+const factionDatasheets=new Map(factionRules.datasheets.filter(unit=>unit.status!=='Warhammer Legends').map(unit=>[unit.id,unit]));
 const codexWargearByTitle=new Map(codexWargear.units.map(unit=>[titleKey(unit.title),unit]));
 const mergedDatasheets=codexDatasheets.datasheets.map(unit=>{
   const official=factionDatasheets.get(unit.id);
@@ -45,7 +45,9 @@ const mergedDatasheets=codexDatasheets.datasheets.map(unit=>{
   const wargearAbilities=[...extractedWargear.values()].map(item=>officialWargear.find(candidate=>titleKey(candidate.title)===titleKey(item.title))||item);
   return {...unit,...official,abilities,wargearAbilities,category:unit.category,profiles:official.profiles||[{name:official.title,stats:official.stats}]};
 }).concat([...factionDatasheets.values()]);
-const rules={...factionRules,datasheets:mergedDatasheets,audit:{...factionRules.audit,datasheets:mergedDatasheets.length,legendsDatasheets:mergedDatasheets.filter(unit=>unit.status==='Warhammer Legends').length}};
+const publishedUnitIds=new Set(mergedDatasheets.map(unit=>unit.id));
+const publishedGlossary=factionRules.glossary.filter(term=>term.id!=='warhammer-legends').map(term=>({...term,unitIds:(term.unitIds||[]).filter(unitId=>publishedUnitIds.has(unitId))}));
+const rules={...factionRules,datasheets:mergedDatasheets,glossary:publishedGlossary,audit:{...factionRules.audit,datasheets:mergedDatasheets.length,legendsDatasheets:0,glossaryTerms:publishedGlossary.length}};
 const unitTitleKey=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const unitByTitle=new Map(rules.datasheets.map(unit=>[unitTitleKey(unit.title),unit]));
 const attachments=[];
@@ -325,7 +327,7 @@ const html=`<!doctype html>
 <section class="hero section surface am-hero" id="start" data-track="start"><div class="hero-content"><div class="eyebrow">11th Edition Army Book</div><h1>Adeptus Mechanicus</h1><p>Current Faction Pack rules combined with the applicable carried-forward Codex Detachments and datasheets.</p><div class="source">Faction Pack v${esc(rules.source.version)} · Munitorum Field Manual ${esc(pointsCatalog.source.officialVersion)}</div></div><div class="hero-mark"><img src="./assets/mechanicus-logo.png" width="512" height="512" alt="Adeptus Mechanicus emblem"><span>Faction reference</span></div></section>
 <section class="section" id="core-rules" data-track="core-rules"><h2 class="section-title">Core Rules</h2><p class="lead">Faction rules replaced by Faction Pack v1.0.</p>${armyRule}</section>
 <section class="section" id="detachments" data-track="detachments"><h2 class="section-title">Detachments</h2><p class="lead">All ten Adeptus Mechanicus Detachments currently listed for 11th edition: five carried forward from Codex and five printed in Faction Pack v1.0.</p><div class="detachment-overview surface"><strong>10 TOTAL</strong><span>5 Codex</span><span>5 Faction Pack</span></div>${detachments}</section>
-<section class="section" id="datasheets" data-track="datasheets"><h2 class="section-title">Datasheets</h2><p class="lead">${rules.datasheets.length} Codex, Faction Pack and Warhammer Legends datasheets, grouped by battlefield role.</p>${datasheetGroups}</section>
+<section class="section" id="datasheets" data-track="datasheets"><h2 class="section-title">Datasheets</h2><p class="lead">${rules.datasheets.length} Codex and Faction Pack datasheets, grouped by battlefield role.</p>${datasheetGroups}</section>
 <section class="section" id="updates" data-track="updates"><h2 class="section-title">Updates</h2><p class="lead">Official replacement text and FAQ, with page transcripts for verification.</p>${updates}<div class="source-library"><h3 class="category-title">Sources & Build Status</h3>${sourceStatus}</div></section>
 <footer class="footer">Adeptus Mechanicus · Faction Pack v1.0 · data-driven local edition</footer></div></main><div class="popup-layer" id="popupLayer" aria-live="polite"></div><script src="../../glossary/generated/glossary.en.js"></script><script src="../shared/roster-parser.js?v=2"></script><script src="../shared/roster-entities.js?v=1"></script><script src="../../roster-guides/points-data.js?v=6"></script><script src="../../roster-guides/points-validator.js?v=3"></script><script src="../shared/navigation-targets.js?v=1"></script><script src="../shared/popup-rule-actions.js?v=1"></script><script src="../shared/datasheet-layout.js?v=3"></script><script src="../shared/popup-content.js?v=3"></script><script src="../shared/glossary-autolink.js?v=7"></script><script src="./scripts/data.js?v=1"></script><script src="../death-guard/scripts/navigation-controller.js?v=16"></script><script src="../death-guard/scripts/full-entry-controller.js?v=9"></script><script src="../death-guard/scripts/popup-controller.js?v=25"></script><script src="../death-guard/scripts/journey-controller.js?v=13"></script><script src="../death-guard/scripts/ui-controllers.js?v=12"></script><script src="./scripts/faction-ui.js?v=1"></script><script src="./scripts/roster-enhancements.js?v=2"></script><script src="./scripts/roster-filter.js?v=4"></script><script src="./scripts/app.js?v=34"></script></body></html>\n`;
 

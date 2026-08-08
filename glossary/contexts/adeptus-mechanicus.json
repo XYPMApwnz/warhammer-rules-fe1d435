@@ -395,11 +395,7 @@
           "unit-sicarian-ruststalkers",
           "unit-skorpius-disintegrator",
           "unit-sydonian-dragoons-with-radium-jezzails",
-          "unit-sydonian-dragoons-with-taser-lances",
-          "unit-secutarii-hoplites",
-          "unit-secutarii-peltasts",
-          "unit-terrax-pattern-termite",
-          "unit-x-101"
+          "unit-sydonian-dragoons-with-taser-lances"
         ]
       }
     },
@@ -422,20 +418,6 @@
       "navigation": {
         "glossary": "glossary-data-psalm",
         "rule": "luminen-auto-choir-rule"
-      }
-    },
-    "warhammer-legends": {
-      "termId": "adeptus-mechanicus-warhammer-legends",
-      "navigation": {
-        "glossary": "glossary-warhammer-legends",
-        "datasheet": "unit-x-101",
-        "statline": "x-101-profile",
-        "units": [
-          "unit-x-101",
-          "unit-secutarii-hoplites",
-          "unit-secutarii-peltasts",
-          "unit-terrax-pattern-termite"
-        ]
       }
     },
     "stratagem-defect-scrutiny": {
@@ -766,9 +748,7 @@
         "units": [
           "unit-skitarii-rangers",
           "unit-skitarii-vanguard",
-          "unit-serberys-raiders",
-          "unit-secutarii-hoplites",
-          "unit-secutarii-peltasts"
+          "unit-serberys-raiders"
         ]
       }
     },
@@ -781,9 +761,7 @@
         "statline": "skitarii-rangers-profile",
         "units": [
           "unit-skitarii-rangers",
-          "unit-skitarii-vanguard",
-          "unit-secutarii-hoplites",
-          "unit-secutarii-peltasts"
+          "unit-skitarii-vanguard"
         ]
       }
     },
@@ -837,8 +815,7 @@
         "statline": "skitarii-rangers-profile",
         "units": [
           "unit-skitarii-rangers",
-          "unit-skitarii-vanguard",
-          "unit-secutarii-peltasts"
+          "unit-skitarii-vanguard"
         ]
       }
     },
@@ -2032,8 +2009,7 @@
         "datasheet": "unit-kataphron-breachers",
         "statline": "kataphron-breachers-profile",
         "units": [
-          "unit-kataphron-breachers",
-          "unit-x-101"
+          "unit-kataphron-breachers"
         ]
       }
     },
@@ -2762,271 +2738,6 @@
         ]
       }
     },
-    "datasheet-titan-guard": {
-      "termId": "adeptus-mechanicus-datasheet-titan-guard",
-      "navigation": {
-        "glossary": "glossary-datasheet-titan-guard",
-        "rule": "unit-secutarii-hoplites",
-        "datasheet": "unit-secutarii-hoplites",
-        "statline": "secutarii-hoplites-profile",
-        "units": [
-          "unit-secutarii-hoplites"
-        ]
-      }
-    },
-    "weapon-arc-lance": {
-      "termId": "adeptus-mechanicus-weapon-arc-lance",
-      "navigation": {
-        "glossary": "glossary-weapon-arc-lance",
-        "rule": "unit-secutarii-hoplites",
-        "datasheet": "unit-secutarii-hoplites",
-        "statline": "secutarii-hoplites-profile",
-        "units": [
-          "unit-secutarii-hoplites"
-        ]
-      }
-    },
-    "weapon-archeotech-pistol": {
-      "termId": "adeptus-mechanicus-weapon-archeotech-pistol",
-      "navigation": {
-        "glossary": "glossary-weapon-archeotech-pistol",
-        "rule": "unit-secutarii-hoplites",
-        "datasheet": "unit-secutarii-hoplites",
-        "statline": "secutarii-hoplites-profile",
-        "units": [
-          "unit-secutarii-hoplites",
-          "unit-secutarii-peltasts"
-        ]
-      }
-    },
-    "weapon-alpha-close-combat-weapon": {
-      "termId": "adeptus-mechanicus-weapon-alpha-close-combat-weapon",
-      "navigation": {
-        "glossary": "glossary-weapon-alpha-close-combat-weapon",
-        "rule": "unit-secutarii-hoplites",
-        "datasheet": "unit-secutarii-hoplites",
-        "statline": "secutarii-hoplites-profile",
-        "units": [
-          "unit-secutarii-hoplites"
-        ]
-      }
-    },
-    "weapon-arc-lance-2": {
-      "termId": "adeptus-mechanicus-weapon-arc-lance-2",
-      "navigation": {
-        "glossary": "glossary-weapon-arc-lance-2",
-        "rule": "unit-secutarii-hoplites",
-        "datasheet": "unit-secutarii-hoplites",
-        "statline": "secutarii-hoplites-profile",
-        "units": [
-          "unit-secutarii-hoplites"
-        ]
-      }
-    },
-    "datasheet-blind-barrage": {
-      "termId": "adeptus-mechanicus-datasheet-blind-barrage",
-      "navigation": {
-        "glossary": "glossary-datasheet-blind-barrage",
-        "rule": "unit-secutarii-peltasts",
-        "datasheet": "unit-secutarii-peltasts",
-        "statline": "secutarii-peltasts-profile",
-        "units": [
-          "unit-secutarii-peltasts"
-        ]
-      }
-    },
-    "weapon-galvanic-caster-flechette": {
-      "termId": "adeptus-mechanicus-weapon-galvanic-caster-flechette",
-      "navigation": {
-        "glossary": "glossary-weapon-galvanic-caster-flechette",
-        "rule": "unit-secutarii-peltasts",
-        "datasheet": "unit-secutarii-peltasts",
-        "statline": "secutarii-peltasts-profile",
-        "units": [
-          "unit-secutarii-peltasts"
-        ]
-      }
-    },
-    "weapon-galvanic-caster-hammershot": {
-      "termId": "adeptus-mechanicus-weapon-galvanic-caster-hammershot",
-      "navigation": {
-        "glossary": "glossary-weapon-galvanic-caster-hammershot",
-        "rule": "unit-secutarii-peltasts",
-        "datasheet": "unit-secutarii-peltasts",
-        "statline": "secutarii-peltasts-profile",
-        "units": [
-          "unit-secutarii-peltasts"
-        ]
-      }
-    },
-    "weapon-alpha-close-combat-weapon-2": {
-      "termId": "adeptus-mechanicus-weapon-alpha-close-combat-weapon-2",
-      "navigation": {
-        "glossary": "glossary-weapon-alpha-close-combat-weapon-2",
-        "rule": "unit-secutarii-peltasts",
-        "datasheet": "unit-secutarii-peltasts",
-        "statline": "secutarii-peltasts-profile",
-        "units": [
-          "unit-secutarii-peltasts"
-        ]
-      }
-    },
-    "datasheet-core": {
-      "termId": "adeptus-mechanicus-datasheet-core",
-      "navigation": {
-        "glossary": "glossary-datasheet-core",
-        "rule": "unit-terrax-pattern-termite",
-        "datasheet": "unit-terrax-pattern-termite",
-        "statline": "terrax-pattern-termite-profile",
-        "units": [
-          "unit-terrax-pattern-termite"
-        ]
-      }
-    },
-    "datasheet-termite-assault": {
-      "termId": "adeptus-mechanicus-datasheet-termite-assault",
-      "navigation": {
-        "glossary": "glossary-datasheet-termite-assault",
-        "rule": "unit-terrax-pattern-termite",
-        "datasheet": "unit-terrax-pattern-termite",
-        "statline": "terrax-pattern-termite-profile",
-        "units": [
-          "unit-terrax-pattern-termite"
-        ]
-      }
-    },
-    "datasheet-damaged-1-5-wounds-remaining": {
-      "termId": "adeptus-mechanicus-datasheet-damaged-1-5-wounds-remaining",
-      "navigation": {
-        "glossary": "glossary-datasheet-damaged-1-5-wounds-remaining",
-        "rule": "unit-terrax-pattern-termite",
-        "datasheet": "unit-terrax-pattern-termite",
-        "statline": "terrax-pattern-termite-profile",
-        "units": [
-          "unit-terrax-pattern-termite"
-        ]
-      }
-    },
-    "datasheet-transport": {
-      "termId": "adeptus-mechanicus-datasheet-transport",
-      "navigation": {
-        "glossary": "glossary-datasheet-transport",
-        "rule": "unit-terrax-pattern-termite",
-        "datasheet": "unit-terrax-pattern-termite",
-        "statline": "terrax-pattern-termite-profile",
-        "units": [
-          "unit-terrax-pattern-termite"
-        ]
-      }
-    },
-    "weapon-combi-bolter": {
-      "termId": "adeptus-mechanicus-weapon-combi-bolter",
-      "navigation": {
-        "glossary": "glossary-weapon-combi-bolter",
-        "rule": "unit-terrax-pattern-termite",
-        "datasheet": "unit-terrax-pattern-termite",
-        "statline": "terrax-pattern-termite-profile",
-        "units": [
-          "unit-terrax-pattern-termite"
-        ]
-      }
-    },
-    "weapon-heavy-flamer": {
-      "termId": "adeptus-mechanicus-weapon-heavy-flamer",
-      "navigation": {
-        "glossary": "glossary-weapon-heavy-flamer",
-        "rule": "unit-terrax-pattern-termite",
-        "datasheet": "unit-terrax-pattern-termite",
-        "statline": "terrax-pattern-termite-profile",
-        "units": [
-          "unit-terrax-pattern-termite"
-        ]
-      }
-    },
-    "weapon-terrax-melta-cutter": {
-      "termId": "adeptus-mechanicus-weapon-terrax-melta-cutter",
-      "navigation": {
-        "glossary": "glossary-weapon-terrax-melta-cutter",
-        "rule": "unit-terrax-pattern-termite",
-        "datasheet": "unit-terrax-pattern-termite",
-        "statline": "terrax-pattern-termite-profile",
-        "units": [
-          "unit-terrax-pattern-termite"
-        ]
-      }
-    },
-    "weapon-twin-volkite-charger": {
-      "termId": "adeptus-mechanicus-weapon-twin-volkite-charger",
-      "navigation": {
-        "glossary": "glossary-weapon-twin-volkite-charger",
-        "rule": "unit-terrax-pattern-termite",
-        "datasheet": "unit-terrax-pattern-termite",
-        "statline": "terrax-pattern-termite-profile",
-        "units": [
-          "unit-terrax-pattern-termite"
-        ]
-      }
-    },
-    "weapon-termite-drill": {
-      "termId": "adeptus-mechanicus-weapon-termite-drill",
-      "navigation": {
-        "glossary": "glossary-weapon-termite-drill",
-        "rule": "unit-terrax-pattern-termite",
-        "datasheet": "unit-terrax-pattern-termite",
-        "statline": "terrax-pattern-termite-profile",
-        "units": [
-          "unit-terrax-pattern-termite"
-        ]
-      }
-    },
-    "datasheet-mindlock": {
-      "termId": "adeptus-mechanicus-datasheet-mindlock",
-      "navigation": {
-        "glossary": "glossary-datasheet-mindlock",
-        "rule": "unit-x-101",
-        "datasheet": "unit-x-101",
-        "statline": "x-101-profile",
-        "units": [
-          "unit-x-101"
-        ]
-      }
-    },
-    "datasheet-bound-creation": {
-      "termId": "adeptus-mechanicus-datasheet-bound-creation",
-      "navigation": {
-        "glossary": "glossary-datasheet-bound-creation",
-        "rule": "unit-x-101",
-        "datasheet": "unit-x-101",
-        "statline": "x-101-profile",
-        "units": [
-          "unit-x-101"
-        ]
-      }
-    },
-    "datasheet-servitor-bodyguard": {
-      "termId": "adeptus-mechanicus-datasheet-servitor-bodyguard",
-      "navigation": {
-        "glossary": "glossary-datasheet-servitor-bodyguard",
-        "rule": "unit-x-101",
-        "datasheet": "unit-x-101",
-        "statline": "x-101-profile",
-        "units": [
-          "unit-x-101"
-        ]
-      }
-    },
-    "weapon-grav-gun": {
-      "termId": "adeptus-mechanicus-weapon-grav-gun",
-      "navigation": {
-        "glossary": "glossary-weapon-grav-gun",
-        "rule": "unit-x-101",
-        "datasheet": "unit-x-101",
-        "statline": "x-101-profile",
-        "units": [
-          "unit-x-101"
-        ]
-      }
-    },
     "detachment-cohort-acquisitus": {
       "termId": "adeptus-mechanicus-detachment-cohort-acquisitus",
       "navigation": {
@@ -3383,34 +3094,6 @@
       "navigation": {
         "datasheet": "unit-sydonian-dragoons-with-taser-lances",
         "statline": "sydonian-dragoons-with-taser-lances-profile"
-      }
-    },
-    "unit-secutarii-hoplites": {
-      "termId": "adeptus-mechanicus-unit-secutarii-hoplites",
-      "navigation": {
-        "datasheet": "unit-secutarii-hoplites",
-        "statline": "secutarii-hoplites-profile"
-      }
-    },
-    "unit-secutarii-peltasts": {
-      "termId": "adeptus-mechanicus-unit-secutarii-peltasts",
-      "navigation": {
-        "datasheet": "unit-secutarii-peltasts",
-        "statline": "secutarii-peltasts-profile"
-      }
-    },
-    "unit-terrax-pattern-termite": {
-      "termId": "adeptus-mechanicus-unit-terrax-pattern-termite",
-      "navigation": {
-        "datasheet": "unit-terrax-pattern-termite",
-        "statline": "terrax-pattern-termite-profile"
-      }
-    },
-    "unit-x-101": {
-      "termId": "adeptus-mechanicus-unit-x-101",
-      "navigation": {
-        "datasheet": "unit-x-101",
-        "statline": "x-101-profile"
       }
     }
   }

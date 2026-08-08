@@ -7,13 +7,42 @@
   "coverImage": "assets/tau-empire-cover-800.webp",
   "edition": "11E",
   "factionKeyword": "T'AU EMPIRE",
-  "armyRules": ["For the Greater Good"],
-  "compactSharedAbilities": ["Anti", "Assault", "Blast", "Deadly Demise", "Deep Strike", "Devastating Wounds", "Extra Attacks", "Feel No Pain", "Firing Deck", "Hazardous", "Heavy", "Ignores Cover", "Indirect Fire", "Infiltrators", "Lethal Hits", "Lone Operative", "Melta", "Pistol", "Precision", "Rapid Fire", "Scouts", "Stealth", "Sustained Hits", "Torrent", "Twin-linked"],
+  "armyRules": [
+    "For the Greater Good"
+  ],
+  "compactSharedAbilities": [
+    "Anti",
+    "Assault",
+    "Blast",
+    "Deadly Demise",
+    "Deep Strike",
+    "Devastating Wounds",
+    "Extra Attacks",
+    "Feel No Pain",
+    "Firing Deck",
+    "Hazardous",
+    "Heavy",
+    "Ignores Cover",
+    "Indirect Fire",
+    "Infiltrators",
+    "Lethal Hits",
+    "Lone Operative",
+    "Melta",
+    "Pistol",
+    "Precision",
+    "Rapid Fire",
+    "Scouts",
+    "Stealth",
+    "Sustained Hits",
+    "Torrent",
+    "Twin-linked"
+  ],
   "includeCoreStratagems": true,
   "dedicatedMobile": true,
   "mobileRelatedRulesSource": false,
   "rosterSupport": true,
   "compatibleRulesMatrix": true,
+  "legacyRelatedRuleAttributes": false,
   "assetVersions": {
     "app": 9,
     "book": 5,
@@ -24,7 +53,7 @@
   "expected": {
     "matchedDetachments": 7,
     "factionPackDetachments": 3,
-    "legendsDatasheets": 20
+    "legendsDatasheets": 0
   },
   "sources": {
     "factionPack": "content/tau-empire-faction-pack.en.json",

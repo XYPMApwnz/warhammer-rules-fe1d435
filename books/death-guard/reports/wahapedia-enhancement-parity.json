@@ -6,44 +6,7 @@
   "officialOwnerAssociations": 198,
   "wahapediaAssociations": 168,
   "wahapediaOnly": [],
-  "officialOnly": {
-    "unit-death-guard-chaos-lord": [
-      "enhancement-arch-contaminator",
-      "enhancement-beckoning-blight",
-      "enhancement-daemon-weapon-of-nurgle",
-      "enhancement-eye-of-affliction",
-      "enhancement-fell-harvester",
-      "enhancement-furnace-of-plagues",
-      "enhancement-lord-of-the-walking-pox",
-      "enhancement-revolting-regeneration",
-      "enhancement-shriekworm-familiar",
-      "enhancement-talisman-of-burgeoning"
-    ],
-    "unit-death-guard-chaos-lord-in-terminator-armour": [
-      "enhancement-arch-contaminator",
-      "enhancement-beckoning-blight",
-      "enhancement-daemon-weapon-of-nurgle",
-      "enhancement-eye-of-affliction",
-      "enhancement-fell-harvester",
-      "enhancement-furnace-of-plagues",
-      "enhancement-lord-of-the-walking-pox",
-      "enhancement-revolting-regeneration",
-      "enhancement-shriekworm-familiar",
-      "enhancement-talisman-of-burgeoning"
-    ],
-    "unit-death-guard-sorcerer-in-terminator-armour": [
-      "enhancement-arch-contaminator",
-      "enhancement-beckoning-blight",
-      "enhancement-daemon-weapon-of-nurgle",
-      "enhancement-eye-of-affliction",
-      "enhancement-fell-harvester",
-      "enhancement-furnace-of-plagues",
-      "enhancement-lord-of-the-walking-pox",
-      "enhancement-revolting-regeneration",
-      "enhancement-shriekworm-familiar",
-      "enhancement-talisman-of-burgeoning"
-    ]
-  },
+  "officialOnly": {},
   "upgrades": {
     "records": 4,
     "officialOwnerAssociations": 8,

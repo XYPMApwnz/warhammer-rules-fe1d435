@@ -148,8 +148,8 @@ check('five Codex detachments are restored',codex.detachments.length===5);
 check('Codex parity layer contains full Detachment rules and Enhancements',codexParity.detachments.length===5&&codexParity.detachments.every(detachment=>detachment.rule.text.length>80&&detachment.enhancements.length===4&&detachment.enhancements.every(item=>item.text.length>60)));
 check('every Codex detachment has four enhancements and six stratagems',codex.detachments.every(x=>x.enhancements.length===4&&x.stratagems.length===6));
 check('detachment card counts are complete',JSON.stringify(rules.detachments.map(x=>[x.enhancements.length,x.stratagems.length]))===JSON.stringify([[2,3],[2,3],[2,3],[4,6],[4,6]]));
-check('codex layer has 38 current 11e datasheets',rules.datasheets.length===38&&rules.datasheets.length===codexDatasheets.audit.datasheets);
-check('four datasheets are current 11e Legends',rules.datasheets.filter(x=>x.status==='Warhammer Legends').length===4);
+check('codex layer has 34 current 11e datasheets',rules.datasheets.length===34&&rules.datasheets.length===codexDatasheets.audit.datasheets);
+check('Legends datasheets are absent from the published book',rules.datasheets.every(x=>x.status!=='Warhammer Legends'));
 check('obsolete 10e Servitors datasheet is absent',!rules.datasheets.some(unit=>unit.title==='Servitors'));
 const attachmentTargets={
   'Skitarii Marshal':['Hastarii Exterminators','Hastarii Fusiliers','Skitarii Rangers','Skitarii Vanguard'],
@@ -181,7 +181,7 @@ check('optional wargear abilities stay out of unit abilities',
   &&['Enhanced data-tether','Omnispex'].every(title=>!ranger?.abilities?.some(item=>item.title===title)));
 const skatros=codexDatasheets.datasheets.find(unit=>unit.title==='Sydonian Skatros');
 check('Sydonian Skatros keeps Achillan Eye as a permanent datasheet ability',skatros?.abilities.some(ability=>ability.title==='Achillan Eye')&&!skatros?.wargearAbilities?.some(ability=>ability.title==='Achillan Eye'));
-check('Codex selection tree produces wargear contracts',codexDatasheets.datasheets.filter(unit=>unit.wargear?.length).length===35&&ranger.wargear.some(text=>text.includes('up to 1 Skitarii Ranger w/ transuranic arquebus'))&&codexDatasheets.datasheets.find(unit=>unit.title==='Kastelan Robots')?.wargear.some(text=>text.includes('Twin Kastelan fist')));
+check('Codex selection tree produces wargear contracts',codexDatasheets.datasheets.filter(unit=>unit.wargear?.length).length===32&&ranger.wargear.some(text=>text.includes('up to 1 Skitarii Ranger w/ transuranic arquebus'))&&codexDatasheets.datasheets.find(unit=>unit.title==='Kastelan Robots')?.wargear.some(text=>text.includes('Twin Kastelan fist')));
 const thulia=factionRules.datasheets.find(unit=>unit.title==='Thulia Ghuld');
 const onager=codexDatasheets.datasheets.find(unit=>unit.title==='Onager Dunecrawler');
 check('July v1.1 Thulia replacement is exact',thulia?.keywords.includes('MOBILE')&&!thulia?.abilities.some(item=>item.title==='Cybernetic Augmentation'));
@@ -191,34 +191,33 @@ check('July v1.1 FAQ explains the final BS2 result',factionRules.updates.find(it
 check('Legends page ranges follow the 27-page pack',JSON.stringify(factionRules.datasheets.filter(unit=>unit.status==='Warhammer Legends').map(unit=>unit.sourcePages))===JSON.stringify([[20,21],[22,23],[24,25],[26,27]]));
 check('known catalogue text corruption is removed',!JSON.stringify(codexDatasheets).match(/havealready|Conflagaration|Pteraxii Sterylizors[\s\S]{0,1200}Pteraxii Skystalker Alpha/));
 check('detachment-only categories never become permanent datasheet keywords',codexDatasheets.datasheets.every(unit=>!unit.keywords.includes('Recon Augury')));
-check('current FRAME keywords are present',['Skorpius Disintegrator','Skorpius Dunerider','Terrax-pattern Termite'].every(title=>rules.datasheets.find(unit=>unit.title===title)?.keywords.some(keyword=>keyword.toUpperCase()==='FRAME')));
+check('current FRAME keywords are present',['Skorpius Disintegrator','Skorpius Dunerider'].every(title=>rules.datasheets.find(unit=>unit.title===title)?.keywords.some(keyword=>keyword.toUpperCase()==='FRAME')));
 check('conditional shared weapon modifiers are resolved for their bearer',codexDatasheets.datasheets.find(unit=>unit.title==='Skitarii Marshal')?.weapons.find(weapon=>weapon.name==='Mechanicus pistol')?.skill==='3+'&&codexDatasheets.datasheets.find(unit=>unit.title==='Skitarii Rangers')?.weapons.find(weapon=>weapon.name==='Mechanicus pistol')?.skill==='4+');
-check('all source pages are represented in the UI',Array.from({length:27},(_,i)=>i+1).every(page=>html.includes(`#page=${page}`)||html.includes(`Page ${page}`)));
+check('all published source pages are represented in the UI',Array.from({length:19},(_,i)=>i+1).every(page=>html.includes(`#page=${page}`)||html.includes(`Page ${page}`)));
 check('required interaction IDs are present',required.every(id=>idSet.has(id)),required.filter(id=>!idSet.has(id)).join(', '));
 check('HTML IDs are unique',ids.length===idSet.size,`${ids.length}/${idSet.size}`);
 check('all navigation targets exist',navTargets.every(id=>idSet.has(id)),navTargets.filter(id=>!idSet.has(id)).join(', '));
 check('all navigation targets are tracked',navTargets.every(id=>trackTargets.includes(id)),navTargets.filter(id=>!trackTargets.includes(id)).join(', '));
 check('navigation depth stays at three',Math.max(...depths)===3);
 check('top-level navigation matches the DG contract',JSON.stringify(topLevelTargets)===JSON.stringify(['start','core-rules','detachments','datasheets','updates']),topLevelTargets.join(', '));
-check('datasheets use category then unit hierarchy',['datasheets-epic-heroes','datasheets-characters','datasheets-battleline','datasheets-dedicated-transports','datasheets-other','datasheets-warhammer-legends'].every(id=>navTargets.includes(id))&&rules.datasheets.every(unit=>markup.includes(`data-nav-id="${unit.id}" data-nav-depth="3"`)));
+check('datasheets use category then unit hierarchy',['datasheets-epic-heroes','datasheets-characters','datasheets-battleline','datasheets-dedicated-transports','datasheets-other'].every(id=>navTargets.includes(id))&&rules.datasheets.every(unit=>markup.includes(`data-nav-id="${unit.id}" data-nav-depth="3"`)));
 check('detachment navigation uses singular Enhancement label',(markup.match(/data-nav-depth="3"[^>]*>[\s\S]*?data-nav-target="[^"]+-enhancements">Enhancement<\/button>/g)||[]).length===allDetachments.length);
 check('all Journey targets resolve',journeyTargets.every(id=>idSet.has(id)));
 check('local datasheet tabs are not global navigation',localTargets.length>=rules.datasheets.length*4&&localTargets.every(id=>!navTargets.includes(id)));
 check('all ten detachments render all tracked parts',(markup.match(/class="detachment-part"/g)||[]).length===30);
-check('all 38 unit cards render',(markup.match(/class="unit-card surface/g)||[]).length===rules.datasheets.length);
+check('all 34 unit cards render',(markup.match(/class="unit-card surface/g)||[]).length===rules.datasheets.length);
 check('datasheets use typed DG sections',
   markup.includes('id="skitarii-rangers-wargear-abilities"')
   &&markup.includes('id="tech-priest-dominus-leader"')
-  &&markup.includes('id="onager-dunecrawler-damaged"')
-  &&markup.includes('id="terrax-pattern-termite-transport"'));
+  &&markup.includes('id="onager-dunecrawler-damaged"'));
 check('conditional wargear is labelled honestly',markup.includes('These abilities apply only while the corresponding wargear is equipped.'));
-check('Legends is a datasheet category, not a global section',!topLevelTargets.includes('legends')&&navTargets.includes('datasheets-warhammer-legends')&&legendsCount(markup)===4);
+check('Legends category and cards are absent from the published book',!topLevelTargets.includes('legends')&&!navTargets.includes('datasheets-warhammer-legends')&&legendsCount(markup)===0);
 check('favorite Doctrina console is preserved',markup.includes('class="doctrina-console surface"')&&markup.includes('data-protocol="protector"')&&markup.includes('data-protocol="conqueror"'));
 check('desktop Doctrina selector remains interactive',markup.includes('class="protocol-switch"')&&markup.includes('data-protocol="protector"')&&markup.includes('data-protocol="conqueror"'));
 check('Phone Doctrina shows both canonical branches',mobileArmyRules.includes('id="protector-imperative"')&&mobileArmyRules.includes('id="conqueror-imperative"')&&!/<section id="(?:protector|conqueror)-imperative"[^>]*\shidden\b/.test(mobileArmyRules));
 check('Phone Doctrina has no dead selector controls',!mobileArmyRules.includes('class="protocol-switch"')&&!mobileArmyRules.includes('data-protocol="protector"')&&!mobileArmyRules.includes('data-protocol="conqueror"'));
 check('Phone Doctrina preserves glossary rule links',mobileArmyRules.includes('id="protector-imperative" data-track="protector-imperative"')&&mobileArmyRules.includes('id="conqueror-imperative" data-track="conqueror-imperative"')&&mobileArmyRules.includes('data-full-rule-path="books/core-rules/reader/core-abilities.html#rule-24-16"'));
-check('Phone navigation has stable roster route metadata',(mobileUnitPage.match(/data-route-type="detachment"/g)||[]).length===10&&(mobileUnitPage.match(/data-route-type="unit"/g)||[]).length===38&&(mobileUnitPage.match(/data-unit-category=/g)||[]).length===6);
+check('Phone navigation has stable roster route metadata',(mobileUnitPage.match(/data-route-type="detachment"/g)||[]).length===10&&(mobileUnitPage.match(/data-route-type="unit"/g)||[]).length===34&&(mobileUnitPage.match(/data-unit-category=/g)||[]).length===5);
 check('Phone no-roster keeps Start',mobileUnitPage.includes('href="./index.html" data-route-type="start"'));
 check('Phone no-roster keeps Army Rules',mobileUnitPage.includes('href="./army-rules.html" data-route-type="section"'));
 check('Phone no-roster keeps Updates',mobileUnitPage.includes('href="./updates.html" data-route-type="section"'));
@@ -226,8 +225,8 @@ check('Phone no-roster keeps Mega Glossary',mobileUnitPage.includes('Mega Glossa
 check('Phone no-roster keeps Roster Guides',mobileUnitPage.includes('data-roster-guides-link'));
 check('Phone no-roster keeps desktop switch',mobileUnitPage.includes('data-view-switch'));
 check('Phone no-roster keeps All Detachments',mobileUnitPage.includes('<option value="all">All detachments</option>'));
-check('local official transcripts are embedded',(markup.match(/class="source-transcript"/g)||[]).length===rules.updates.length+rules.detachments.length+factionRules.datasheets.length+2);
-check('Codex transcription status is explicit',markup.includes('Codex transcription layer')&&markup.includes('38 indexed datasheets'));
+check('local official transcripts are embedded',(markup.match(/class="source-transcript"/g)||[]).length===rules.updates.length+rules.detachments.length+factionRules.datasheets.filter(unit=>unit.status!=='Warhammer Legends').length+2);
+check('Codex transcription status is explicit',markup.includes('Codex transcription layer')&&markup.includes('34 indexed datasheets'));
 check('official MFM verification is visible',markup.includes('Munitorum Field Manual v1.1')&&markup.includes('All 34 current Enhancement costs'));
 check('generated reader identifies the current 27-page Faction Pack',markup.includes('Faction Pack v1.1')&&markup.includes('27 pages')&&!markup.includes('Faction Pack v1.0'));
 check('generated hero contains no technical placeholders',!read('tools/build-full-content.mjs').includes('Technical placeholder')&&!html.includes('Technical placeholder')&&markup.includes('11th Edition Army Book')&&markup.includes('Adeptus Mechanicus emblem'));
@@ -247,7 +246,7 @@ const context={window:{},Object};vm.runInNewContext(read('scripts/data.js'),cont
 const terms=context.window.DG_TERMS||{};
 check('term registry expands the canonical glossary',Object.keys(terms).length>=rules.glossary.length+150,`${Object.keys(terms).length} terms`);
 check('term rule and unit destinations resolve',Object.values(terms).every(term=>(!term.rule||idSet.has(term.rule))&&(!term.units||term.units.every(id=>idSet.has(id)))));
-check('datasheet abilities and weapons are interactive',(markup.match(/class="ability"/g)||[]).length>100&&(markup.match(/class="weapon-button" data-term=/g)||[]).length>150);
+check('datasheet abilities and weapons are interactive',(markup.match(/class="ability"/g)||[]).length>100&&(markup.match(/class="weapon-button" data-term=/g)||[]).length===rules.datasheets.reduce((sum,unit)=>sum+unit.weapons.length,0));
 check('Core abilities use canonical destinations',!markup.includes('data-term="datasheet-deep-strike"')&&!markup.includes('data-term="datasheet-deadly-demise')&&markup.includes('data-term="core-deep-strike"')&&markup.includes('data-term="core-deadly-demise"')&&terms['core-deep-strike']?.fullRulePath==='books/core-rules/reader/core-abilities.html#rule-24-09');
 check('official and Codex datasheets show provenance',(markup.match(/class="unit-card surface/g)||[]).length===(markup.match(/<div class="source"><a class="source-link"/g)||[]).length-rules.updates.length-allDetachments.length-1);
 
@@ -268,7 +267,7 @@ const canonicalLabels=canonicalWeaponAbilityRows.flat();
 const desktopTokens=desktopWeaponAbilityRows.flat();
 const phoneTokens=phoneWeaponAbilityRows.flat();
 const rowInventory=rows=>rows.map(row=>JSON.stringify(row.map(item=>typeof item==='string'?item:item.label))).sort();
-check('all 38 Mechanicus datasheets share one deterministic weapon ability inventory',rules.datasheets.length===38&&canonicalWeaponAbilityRows.length===105&&canonicalLabels.length===185,`${rules.datasheets.length} datasheets; ${canonicalWeaponAbilityRows.length} weapons; ${canonicalLabels.length} labels`);
+check('all 34 Mechanicus datasheets share one deterministic weapon ability inventory',rules.datasheets.length===34&&canonicalWeaponAbilityRows.length===93&&canonicalLabels.length===166,`${rules.datasheets.length} datasheets; ${canonicalWeaponAbilityRows.length} weapons; ${canonicalLabels.length} labels`);
 check('desktop weapon abilities render one atomic token per canonical label',JSON.stringify(rowInventory(desktopWeaponAbilityRows))===JSON.stringify(rowInventory(canonicalWeaponAbilityRows))&&desktopTokens.length===canonicalLabels.length,`${desktopTokens.length}/${canonicalLabels.length} tokens`);
 check('Phone weapon abilities preserve desktop token text and order',JSON.stringify(rowInventory(phoneWeaponAbilityRows))===JSON.stringify(rowInventory(canonicalWeaponAbilityRows))&&JSON.stringify(rowInventory(phoneWeaponAbilityRows))===JSON.stringify(rowInventory(desktopWeaponAbilityRows)),`${phoneTokens.length} Phone tokens`);
 check('known weapon ability tokens resolve canonical base glossary rules',desktopTokens.every(token=>token.element==='button'&&token.term===weaponAbilityTermIds.get(weaponAbilityBase(token.label)))&&phoneTokens.every(token=>token.element==='button'&&token.term===weaponAbilityTermIds.get(weaponAbilityBase(token.label)))&&canonicalLabels.every(label=>weaponAbilityTermIds.has(weaponAbilityBase(label))),`${desktopTokens.filter(token=>token.term).length} interactive; ${canonicalLabels.filter(label=>!weaponAbilityTermIds.has(weaponAbilityBase(label))).length} unknown`);

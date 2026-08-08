@@ -394,6 +394,10 @@ const findEnhancements=value=>{
 };
 roots.forEach(findEnhancements);
 const enhancements=unique(enhancementItems,item=>`${key(item.detachment)}:${key(item.title)}`).sort((a,b)=>a.detachment.localeCompare(b.detachment)||a.title.localeCompare(b.title));
+const publishedTitles=new Set(parsed.map(item=>key(item.title)));
+for(const unit of parsed)for(const role of ['leader','support'])unit.relations[role]=(unit.relations[role]||[])
+  .flatMap(target=>String(target).split(/[;,]/).map(value=>value.trim()).filter(Boolean))
+  .filter(target=>publishedTitles.has(key(target)));
 
 const sourceMeta={
   title:`BSData Warhammer 40,000 11th Edition · ${config.faction.title}`,

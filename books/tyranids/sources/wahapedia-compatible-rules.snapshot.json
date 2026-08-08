@@ -1,14 +1,5 @@
 {
   "coreUnits": {
-    "unit-barbed-hierodule": [
-      "core-stratagem-command-re-roll",
-      "core-stratagem-counteroffensive",
-      "core-stratagem-crushing-impact",
-      "core-stratagem-fire-overwatch",
-      "core-stratagem-heroic-intervention",
-      "core-stratagem-insane-bravery",
-      "core-stratagem-rapid-ingress"
-    ],
     "unit-barbgaunts": [
       "core-stratagem-command-re-roll",
       "core-stratagem-counteroffensive",
@@ -52,15 +43,6 @@
       "core-stratagem-insane-bravery",
       "core-stratagem-rapid-ingress"
     ],
-    "unit-dimachaeron": [
-      "core-stratagem-command-re-roll",
-      "core-stratagem-counteroffensive",
-      "core-stratagem-crushing-impact",
-      "core-stratagem-fire-overwatch",
-      "core-stratagem-heroic-intervention",
-      "core-stratagem-insane-bravery",
-      "core-stratagem-rapid-ingress"
-    ],
     "unit-exocrine": [
       "core-stratagem-command-re-roll",
       "core-stratagem-counteroffensive",
@@ -94,27 +76,11 @@
       "core-stratagem-heroic-intervention",
       "core-stratagem-insane-bravery"
     ],
-    "unit-harridan": [
-      "core-stratagem-command-re-roll",
-      "core-stratagem-counteroffensive",
-      "core-stratagem-crushing-impact",
-      "core-stratagem-heroic-intervention",
-      "core-stratagem-insane-bravery",
-      "core-stratagem-rapid-ingress"
-    ],
     "unit-haruspex": [
       "core-stratagem-command-re-roll",
       "core-stratagem-counteroffensive",
       "core-stratagem-crushing-impact",
       "core-stratagem-fire-overwatch",
-      "core-stratagem-heroic-intervention",
-      "core-stratagem-insane-bravery",
-      "core-stratagem-rapid-ingress"
-    ],
-    "unit-hierophant": [
-      "core-stratagem-command-re-roll",
-      "core-stratagem-counteroffensive",
-      "core-stratagem-crushing-impact",
       "core-stratagem-heroic-intervention",
       "core-stratagem-insane-bravery",
       "core-stratagem-rapid-ingress"
@@ -165,15 +131,6 @@
     "unit-lictor": [
       "core-stratagem-command-re-roll",
       "core-stratagem-counteroffensive",
-      "core-stratagem-fire-overwatch",
-      "core-stratagem-heroic-intervention",
-      "core-stratagem-insane-bravery",
-      "core-stratagem-rapid-ingress"
-    ],
-    "unit-malanthrope": [
-      "core-stratagem-command-re-roll",
-      "core-stratagem-counteroffensive",
-      "core-stratagem-epic-challenge",
       "core-stratagem-fire-overwatch",
       "core-stratagem-heroic-intervention",
       "core-stratagem-insane-bravery",
@@ -306,23 +263,6 @@
       "core-stratagem-command-re-roll",
       "core-stratagem-counteroffensive",
       "core-stratagem-crushing-impact",
-      "core-stratagem-fire-overwatch",
-      "core-stratagem-heroic-intervention",
-      "core-stratagem-insane-bravery",
-      "core-stratagem-rapid-ingress"
-    ],
-    "unit-scythed-hierodule": [
-      "core-stratagem-command-re-roll",
-      "core-stratagem-counteroffensive",
-      "core-stratagem-crushing-impact",
-      "core-stratagem-fire-overwatch",
-      "core-stratagem-heroic-intervention",
-      "core-stratagem-insane-bravery",
-      "core-stratagem-rapid-ingress"
-    ],
-    "unit-sky-slasher-swarms": [
-      "core-stratagem-command-re-roll",
-      "core-stratagem-counteroffensive",
       "core-stratagem-fire-overwatch",
       "core-stratagem-heroic-intervention",
       "core-stratagem-insane-bravery",
@@ -505,29 +445,6 @@
     "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/"
   },
   "units": {
-    "unit-barbed-hierodule": [
-      "enfilading-emergence",
-      "replenishing-swarms",
-      "retreat-below",
-      "stratagem-adrenal-surge",
-      "stratagem-corrosive-viscera",
-      "stratagem-death-frenzy",
-      "stratagem-imperative-dominance",
-      "stratagem-massive-impact",
-      "stratagem-override-instincts",
-      "stratagem-overrun",
-      "stratagem-predatory-imperative",
-      "stratagem-rampaging-monstrosities",
-      "stratagem-rapacious-hunger",
-      "stratagem-rapid-regeneration",
-      "stratagem-savage-roar",
-      "stratagem-secure-biomass",
-      "stratagem-seeded-broods",
-      "stratagem-swarm-guided-salvoes",
-      "stratagem-untrammelled-ferocity",
-      "swarming-assault",
-      "tunnel-network"
-    ],
     "unit-barbgaunts": [
       "enfilading-emergence",
       "replenishing-swarms",
@@ -636,29 +553,6 @@
       "stratagem-unseen-lurkers",
       "tunnel-network"
     ],
-    "unit-dimachaeron": [
-      "enfilading-emergence",
-      "replenishing-swarms",
-      "retreat-below",
-      "stratagem-adrenal-surge",
-      "stratagem-corrosive-viscera",
-      "stratagem-death-frenzy",
-      "stratagem-imperative-dominance",
-      "stratagem-massive-impact",
-      "stratagem-override-instincts",
-      "stratagem-overrun",
-      "stratagem-predatory-imperative",
-      "stratagem-rampaging-monstrosities",
-      "stratagem-rapacious-hunger",
-      "stratagem-rapid-regeneration",
-      "stratagem-savage-roar",
-      "stratagem-secure-biomass",
-      "stratagem-seeded-broods",
-      "stratagem-swarm-guided-salvoes",
-      "stratagem-untrammelled-ferocity",
-      "swarming-assault",
-      "tunnel-network"
-    ],
     "unit-exocrine": [
       "enfilading-emergence",
       "replenishing-swarms",
@@ -758,29 +652,6 @@
       "swarming-assault",
       "tunnel-network"
     ],
-    "unit-harridan": [
-      "enfilading-emergence",
-      "replenishing-swarms",
-      "retreat-below",
-      "stratagem-adrenal-surge",
-      "stratagem-corrosive-viscera",
-      "stratagem-death-frenzy",
-      "stratagem-imperative-dominance",
-      "stratagem-massive-impact",
-      "stratagem-override-instincts",
-      "stratagem-overrun",
-      "stratagem-predatory-imperative",
-      "stratagem-rampaging-monstrosities",
-      "stratagem-rapacious-hunger",
-      "stratagem-rapid-regeneration",
-      "stratagem-savage-roar",
-      "stratagem-secure-biomass",
-      "stratagem-seeded-broods",
-      "stratagem-swarm-guided-salvoes",
-      "stratagem-untrammelled-ferocity",
-      "swarming-assault",
-      "tunnel-network"
-    ],
     "unit-haruspex": [
       "enfilading-emergence",
       "replenishing-swarms",
@@ -804,29 +675,6 @@
       "stratagem-seeded-broods",
       "stratagem-swarm-guided-salvoes",
       "stratagem-tyrannoformed",
-      "stratagem-untrammelled-ferocity",
-      "swarming-assault",
-      "tunnel-network"
-    ],
-    "unit-hierophant": [
-      "enfilading-emergence",
-      "replenishing-swarms",
-      "retreat-below",
-      "stratagem-adrenal-surge",
-      "stratagem-corrosive-viscera",
-      "stratagem-death-frenzy",
-      "stratagem-imperative-dominance",
-      "stratagem-massive-impact",
-      "stratagem-override-instincts",
-      "stratagem-overrun",
-      "stratagem-predatory-imperative",
-      "stratagem-rampaging-monstrosities",
-      "stratagem-rapacious-hunger",
-      "stratagem-rapid-regeneration",
-      "stratagem-savage-roar",
-      "stratagem-secure-biomass",
-      "stratagem-seeded-broods",
-      "stratagem-swarm-guided-salvoes",
       "stratagem-untrammelled-ferocity",
       "swarming-assault",
       "tunnel-network"
@@ -975,28 +823,6 @@
       "stratagem-seeded-broods",
       "stratagem-surprise-assault",
       "stratagem-unseen-lurkers",
-      "tunnel-network"
-    ],
-    "unit-malanthrope": [
-      "enfilading-emergence",
-      "replenishing-swarms",
-      "retreat-below",
-      "stratagem-adrenal-surge",
-      "stratagem-death-frenzy",
-      "stratagem-hypersensory-scillia",
-      "stratagem-imperative-dominance",
-      "stratagem-invisible-hunter",
-      "stratagem-irresistible-will",
-      "stratagem-override-instincts",
-      "stratagem-overrun",
-      "stratagem-predatory-imperative",
-      "stratagem-rapacious-hunger",
-      "stratagem-rapid-regeneration",
-      "stratagem-reinforced-hive-node",
-      "stratagem-secure-biomass",
-      "stratagem-seeded-broods",
-      "stratagem-synaptic-channelling",
-      "stratagem-the-smothering-shadow",
       "tunnel-network"
     ],
     "unit-maleceptor": [
@@ -1371,45 +1197,6 @@
       "stratagem-swarm-guided-salvoes",
       "stratagem-untrammelled-ferocity",
       "swarming-assault",
-      "tunnel-network"
-    ],
-    "unit-scythed-hierodule": [
-      "enfilading-emergence",
-      "replenishing-swarms",
-      "retreat-below",
-      "stratagem-adrenal-surge",
-      "stratagem-corrosive-viscera",
-      "stratagem-death-frenzy",
-      "stratagem-imperative-dominance",
-      "stratagem-massive-impact",
-      "stratagem-override-instincts",
-      "stratagem-overrun",
-      "stratagem-predatory-imperative",
-      "stratagem-rampaging-monstrosities",
-      "stratagem-rapacious-hunger",
-      "stratagem-rapid-regeneration",
-      "stratagem-savage-roar",
-      "stratagem-secure-biomass",
-      "stratagem-seeded-broods",
-      "stratagem-swarm-guided-salvoes",
-      "stratagem-untrammelled-ferocity",
-      "swarming-assault",
-      "tunnel-network"
-    ],
-    "unit-sky-slasher-swarms": [
-      "enfilading-emergence",
-      "replenishing-swarms",
-      "retreat-below",
-      "stratagem-adrenal-surge",
-      "stratagem-death-frenzy",
-      "stratagem-imperative-dominance",
-      "stratagem-override-instincts",
-      "stratagem-overrun",
-      "stratagem-predatory-imperative",
-      "stratagem-rapacious-hunger",
-      "stratagem-rapid-regeneration",
-      "stratagem-secure-biomass",
-      "stratagem-seeded-broods",
       "tunnel-network"
     ],
     "unit-spore-mines": [

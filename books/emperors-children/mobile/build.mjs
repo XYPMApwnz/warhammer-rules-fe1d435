@@ -30,7 +30,7 @@ const categories=[...source.matchAll(/<section class="content-group" id="(datash
     const ruleFacts=JSON.parse((/\bdata-rule-facts="([^"]*)"/.exec(article)?.[1]||'{}').replaceAll('&quot;','"').replaceAll('&amp;','&'));return{id:unitId,title:clean(unitTitle),file:`${unitId.slice(5)}.html`,type:'unit',category:id,enhancementsAllowed:!ruleFacts.epic};
   });return{id,title:clean(title),units};
 });
-const units=categories.flatMap(category=>category.units);if(detachments.length!==10||units.length!==23)throw new Error(`Expected 10 detachments and 23 datasheets, found ${detachments.length} and ${units.length}`);
+const units=categories.flatMap(category=>category.units);if(detachments.length!==10||units.length!==18)throw new Error(`Expected 10 detachments and 18 datasheets, found ${detachments.length} and ${units.length}`);
 const staticRoutes=[{file:'index.html',id:'start',title:'Start',type:'start'},{file:'army-rules.html',id:'army-rules',title:'Army Rules',type:'army-rules'},{file:'updates.html',id:'updates',title:'Updates',type:'section'}],routes=[...staticRoutes,...detachments,...units];
 const content=route=>portable(route.type==='start'?extract('section','start'):route.type==='army-rules'?extract('section','army-rules'):route.type==='section'||route.type==='detachment'?extract('section',route.id):extract('article',route.id));
 function navigation(route){

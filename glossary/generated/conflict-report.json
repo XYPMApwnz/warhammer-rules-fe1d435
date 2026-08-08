@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 2012,
-    "aliases": 728,
+    "terms": 1800,
+    "aliases": 659,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 146,
-    "duplicateCandidates": 29,
+    "aliasCandidates": 122,
+    "duplicateCandidates": 23,
     "keywordCandidates": 16
   },
   "definitionCandidates": [
@@ -1004,8 +1004,7 @@
         "tyranids-ability-leader-5",
         "tyranids-ability-leader-6",
         "tyranids-ability-leader-7",
-        "tyranids-ability-leader-8",
-        "tyranids-ability-leader-9"
+        "tyranids-ability-leader-8"
       ],
       "status": "review-required"
     },
@@ -1013,9 +1012,7 @@
       "normalizedTitle": "lethal-hits",
       "termIds": [
         "core-lethal-hits",
-        "emperors-children-ability-lethal-hits",
-        "tau-empire-ability-lethal-hits",
-        "tyranids-ability-lethal-hits"
+        "tau-empire-ability-lethal-hits"
       ],
       "status": "review-required"
     },
@@ -1047,20 +1044,11 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "super-heavy-walker",
-      "termIds": [
-        "core-super-heavy-walker",
-        "tau-empire-ability-super-heavy-walker"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "sustained-hits",
       "termIds": [
         "core-sustained-hits",
         "emperors-children-ability-sustained-hits",
-        "tau-empire-ability-sustained-hits",
-        "tyranids-ability-sustained-hits"
+        "tau-empire-ability-sustained-hits"
       ],
       "status": "review-required"
     },
@@ -1093,7 +1081,6 @@
       "normalizedTitle": "combi-bolter",
       "termIds": [
         "death-guard-weapon-combi-bolter-blightlord-terminators-chaos-land-raider-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino-helbrute",
-        "adeptus-mechanicus-weapon-combi-bolter",
         "emperors-children-weapon-combi-bolter"
       ],
       "status": "review-required"
@@ -1102,9 +1089,6 @@
       "normalizedTitle": "combi-weapon",
       "termIds": [
         "death-guard-weapon-combi-weapon-blightlord-terminators-chaos-land-raider-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino",
-        "death-guard-weapon-combi-weapon-death-guard-chaos-lord",
-        "death-guard-weapon-combi-weapon-death-guard-chaos-lord-in-terminator-armour",
-        "death-guard-weapon-combi-weapon-death-guard-sorcerer-in-terminator-armour",
         "emperors-children-weapon-combi-weapon"
       ],
       "status": "review-required"
@@ -1133,10 +1117,7 @@
         "tau-empire-weapon-close-combat-weapon",
         "tau-empire-weapon-close-combat-weapon-2",
         "tau-empire-weapon-close-combat-weapon-3",
-        "tau-empire-weapon-close-combat-weapon-4",
-        "tau-empire-weapon-close-combat-weapon-5",
-        "tau-empire-weapon-close-combat-weapon-6",
-        "tau-empire-weapon-close-combat-weapon-7"
+        "tau-empire-weapon-close-combat-weapon-4"
       ],
       "status": "review-required"
     },
@@ -1202,7 +1183,6 @@
       "normalizedTitle": "hideous-mutations",
       "termIds": [
         "death-guard-weapon-hideous-mutations-chaos-spawn",
-        "death-guard-weapon-hideous-mutations-death-guard-possessed",
         "emperors-children-weapon-hideous-mutations"
       ],
       "status": "review-required"
@@ -1349,7 +1329,6 @@
       "normalizedTitle": "heavy-flamer",
       "termIds": [
         "death-guard-weapon-heavy-flamer-helbrute",
-        "adeptus-mechanicus-weapon-heavy-flamer",
         "emperors-children-weapon-heavy-flamer"
       ],
       "status": "review-required"
@@ -1367,7 +1346,6 @@
       "termIds": [
         "death-guard-weapon-plasma-pistol-standard-lord-of-poxes",
         "death-guard-weapon-plasma-pistol-standard-noxious-blightbringer-plague-marines-tallyman",
-        "death-guard-weapon-plasma-pistol-standard-death-guard-chaos-lord",
         "emperors-children-weapon-plasma-pistol-standard"
       ],
       "status": "review-required"
@@ -1378,7 +1356,6 @@
         "death-guard-weapon-plasma-pistol-supercharge-lord-of-poxes",
         "death-guard-weapon-plasma-pistol-supercharge-noxious-blightbringer",
         "death-guard-weapon-plasma-pistol-supercharge-plague-marines-tallyman",
-        "death-guard-weapon-plasma-pistol-supercharge-death-guard-chaos-lord",
         "emperors-children-weapon-plasma-pistol-supercharge"
       ],
       "status": "review-required"
@@ -1435,67 +1412,6 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "transport",
-      "termIds": [
-        "keyword-transport",
-        "adeptus-mechanicus-datasheet-transport"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "plague-combi-bolter",
-      "termIds": [
-        "death-guard-weapon-plague-combi-bolter-death-guard-chaos-lord",
-        "death-guard-weapon-plague-combi-bolter-death-guard-chaos-lord-in-terminator-armour",
-        "death-guard-weapon-plague-combi-bolter-death-guard-sorcerer-in-terminator-armour"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "plague-fist",
-      "termIds": [
-        "death-guard-weapon-plague-fist-death-guard-chaos-lord",
-        "death-guard-weapon-plague-fist-death-guard-chaos-lord-in-terminator-armour",
-        "death-guard-weapon-plague-fist-death-guard-sorcerer-in-terminator-armour"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "plague-encrusted-exalted-weapon",
-      "termIds": [
-        "death-guard-weapon-plague-encrusted-exalted-weapon-death-guard-chaos-lord",
-        "death-guard-weapon-plague-encrusted-exalted-weapon-death-guard-chaos-lord-in-terminator-armour",
-        "death-guard-weapon-plague-encrusted-exalted-weapon-death-guard-sorcerer-in-terminator-armour"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "twin-lightning-claws",
-      "termIds": [
-        "death-guard-weapon-twin-lightning-claws-death-guard-chaos-lord",
-        "death-guard-weapon-twin-lightning-claws-death-guard-chaos-lord-in-terminator-armour",
-        "death-guard-weapon-twin-lightning-claws-death-guard-sorcerer-in-terminator-armour"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "chainfist",
-      "termIds": [
-        "death-guard-weapon-chainfist-death-guard-chaos-lord-in-terminator-armour",
-        "death-guard-weapon-chainfist-death-guard-sorcerer-in-terminator-armour",
-        "emperors-children-weapon-chainfist"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "force-weapon",
-      "termIds": [
-        "death-guard-weapon-force-weapon-death-guard-sorcerer-in-terminator-armour",
-        "emperors-children-weapon-force-weapon"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "mechanicus-pistol",
       "termIds": [
         "adeptus-mechanicus-weapon-mechanicus-pistol",
@@ -1532,9 +1448,7 @@
       "termIds": [
         "adeptus-mechanicus-weapon-armoured-hull",
         "tau-empire-weapon-armoured-hull",
-        "tau-empire-weapon-armoured-hull-2",
-        "tau-empire-weapon-armoured-hull-3",
-        "tau-empire-weapon-armoured-hull-4"
+        "tau-empire-weapon-armoured-hull-2"
       ],
       "status": "review-required"
     },
@@ -1544,14 +1458,6 @@
         "adeptus-mechanicus-datasheet-supreme-commander",
         "emperors-children-ability-supreme-commander",
         "tau-empire-ability-supreme-commander"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "strafing-run",
-      "termIds": [
-        "adeptus-mechanicus-datasheet-strafing-run",
-        "tau-empire-ability-strafing-run"
       ],
       "status": "review-required"
     },
@@ -1621,33 +1527,6 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "arc-lance",
-      "termIds": [
-        "adeptus-mechanicus-weapon-arc-lance",
-        "adeptus-mechanicus-weapon-arc-lance-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "alpha-close-combat-weapon",
-      "termIds": [
-        "adeptus-mechanicus-weapon-alpha-close-combat-weapon",
-        "adeptus-mechanicus-weapon-alpha-close-combat-weapon-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "damaged-1-5-wounds-remaining",
-      "termIds": [
-        "adeptus-mechanicus-datasheet-damaged-1-5-wounds-remaining",
-        "emperors-children-ability-damaged-1-5-wounds-remaining",
-        "tau-empire-ability-damaged-1-5-wounds-remaining",
-        "tau-empire-ability-damaged-1-5-wounds-remaining-2",
-        "tyranids-ability-damaged-1-5-wounds-remaining"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "frenzied-ferocity",
       "termIds": [
         "emperors-children-enhancement-frenzied-ferocity",
@@ -1705,11 +1584,10 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "damaged-1-6-wounds-remaining",
+      "normalizedTitle": "screamer-pistol",
       "termIds": [
-        "emperors-children-ability-damaged-1-6-wounds-remaining",
-        "tau-empire-ability-damaged-1-6-wounds-remaining",
-        "tyranids-ability-damaged-1-6-wounds-remaining"
+        "emperors-children-weapon-screamer-pistol",
+        "emperors-children-weapon-screamer-pistol-2"
       ],
       "status": "review-required"
     },
@@ -1723,18 +1601,20 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "screamer-pistol",
-      "termIds": [
-        "emperors-children-weapon-screamer-pistol",
-        "emperors-children-weapon-screamer-pistol-2"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "feel-no-pain-5",
       "termIds": [
         "emperors-children-ability-feel-no-pain-5",
         "tyranids-ability-feel-no-pain-5"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "damaged-1-5-wounds-remaining",
+      "termIds": [
+        "emperors-children-ability-damaged-1-5-wounds-remaining",
+        "tau-empire-ability-damaged-1-5-wounds-remaining",
+        "tau-empire-ability-damaged-1-5-wounds-remaining-2",
+        "tyranids-ability-damaged-1-5-wounds-remaining"
       ],
       "status": "review-required"
     },
@@ -1755,14 +1635,6 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "scouts-9",
-      "termIds": [
-        "emperors-children-ability-scouts-9",
-        "tau-empire-ability-scouts-9"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "negation-emitters-upgrade",
       "termIds": [
         "tau-empire-enhancement-negation-emitters-upgrade",
@@ -1775,6 +1647,14 @@
       "termIds": [
         "tau-empire-enhancement-unmasking-suite-upgrade",
         "tau-empire-enhancement-unmasking-suite-upgrade-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "for-the-greater-good",
+      "termIds": [
+        "tau-empire-ability-for-the-greater-good",
+        "tau-empire-army-rule-for-the-greater-good"
       ],
       "status": "review-required"
     },
@@ -1830,30 +1710,6 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "airbursting-fragmentation-projector",
-      "termIds": [
-        "tau-empire-weapon-airbursting-fragmentation-projector",
-        "tau-empire-weapon-airbursting-fragmentation-projector-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "cyclic-ion-blaster-standard",
-      "termIds": [
-        "tau-empire-weapon-cyclic-ion-blaster-standard",
-        "tau-empire-weapon-cyclic-ion-blaster-standard-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "cyclic-ion-blaster-overcharge",
-      "termIds": [
-        "tau-empire-weapon-cyclic-ion-blaster-overcharge",
-        "tau-empire-weapon-cyclic-ion-blaster-overcharge-2"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "fusion-blaster",
       "termIds": [
         "tau-empire-weapon-fusion-blaster",
@@ -1874,16 +1730,7 @@
       "termIds": [
         "tau-empire-weapon-battlesuit-fists",
         "tau-empire-weapon-battlesuit-fists-2",
-        "tau-empire-weapon-battlesuit-fists-3",
-        "tau-empire-weapon-battlesuit-fists-4"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "close-combat-weapons",
-      "termIds": [
-        "tau-empire-weapon-close-combat-weapons",
-        "tau-empire-weapon-close-combat-weapons-2"
+        "tau-empire-weapon-battlesuit-fists-3"
       ],
       "status": "review-required"
     },
@@ -1920,22 +1767,6 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "rail-rifle",
-      "termIds": [
-        "tau-empire-weapon-rail-rifle",
-        "tau-empire-weapon-rail-rifle-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "twin-plasma-rifle",
-      "termIds": [
-        "tau-empire-weapon-twin-plasma-rifle",
-        "tau-empire-weapon-twin-plasma-rifle-2"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "twin-smart-missile-system",
       "termIds": [
         "tau-empire-weapon-twin-smart-missile-system",
@@ -1948,40 +1779,7 @@
       "normalizedTitle": "twin-burst-cannon",
       "termIds": [
         "tau-empire-weapon-twin-burst-cannon",
-        "tau-empire-weapon-twin-burst-cannon-2",
-        "tau-empire-weapon-twin-burst-cannon-3"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "twin-fusion-blaster",
-      "termIds": [
-        "tau-empire-weapon-twin-fusion-blaster",
-        "tau-empire-weapon-twin-fusion-blaster-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "railgun",
-      "termIds": [
-        "tau-empire-weapon-railgun",
-        "tau-empire-weapon-railgun-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "ion-cannon-standard",
-      "termIds": [
-        "tau-empire-weapon-ion-cannon-standard",
-        "tau-empire-weapon-ion-cannon-standard-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "ion-cannon-overcharge",
-      "termIds": [
-        "tau-empire-weapon-ion-cannon-overcharge",
-        "tau-empire-weapon-ion-cannon-overcharge-2"
+        "tau-empire-weapon-twin-burst-cannon-2"
       ],
       "status": "review-required"
     },
@@ -1990,31 +1788,6 @@
       "termIds": [
         "tau-empire-ability-deadly-demise-1",
         "tyranids-ability-deadly-demise-1"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "twin-missile-pod",
-      "termIds": [
-        "tau-empire-weapon-twin-missile-pod",
-        "tau-empire-weapon-twin-missile-pod-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "damaged-1-10-wounds-remaining",
-      "termIds": [
-        "tau-empire-ability-damaged-1-10-wounds-remaining",
-        "tyranids-ability-damaged-1-10-wounds-remaining",
-        "tyranids-ability-damaged-1-10-wounds-remaining-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "long-barrelled-burst-cannon",
-      "termIds": [
-        "tau-empire-weapon-long-barrelled-burst-cannon",
-        "tau-empire-weapon-long-barrelled-burst-cannon-2"
       ],
       "status": "review-required"
     },
@@ -2059,6 +1832,14 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "synapse",
+      "termIds": [
+        "tyranids-ability-synapse",
+        "tyranids-army-rule-synapse"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "chitinous-claws-and-teeth",
       "termIds": [
         "tyranids-weapon-chitinous-claws-and-teeth",
@@ -2067,6 +1848,14 @@
         "tyranids-weapon-chitinous-claws-and-teeth-4",
         "tyranids-weapon-chitinous-claws-and-teeth-5",
         "tyranids-weapon-chitinous-claws-and-teeth-6"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "shadow-in-the-warp",
+      "termIds": [
+        "tyranids-ability-shadow-in-the-warp",
+        "tyranids-army-rule-shadow-in-the-warp"
       ],
       "status": "review-required"
     },
@@ -2173,24 +1962,9 @@
         "tyranids-ability-floating-death-2"
       ],
       "status": "review-required"
-    },
-    {
-      "normalizedTitle": "hierodule-scything-talons",
-      "termIds": [
-        "tyranids-weapon-hierodule-scything-talons",
-        "tyranids-weapon-hierodule-scything-talons-2"
-      ],
-      "status": "review-required"
     }
   ],
   "duplicateCandidates": [
-    {
-      "termIds": [
-        "death-guard-weapon-combi-weapon-blightlord-terminators-chaos-land-raider-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino",
-        "death-guard-weapon-combi-weapon-death-guard-sorcerer-in-terminator-armour"
-      ],
-      "status": "review-required"
-    },
     {
       "termIds": [
         "death-guard-ability-assault-ramp-chaos-land-raider",
@@ -2207,27 +1981,6 @@
     },
     {
       "termIds": [
-        "death-guard-weapon-plague-combi-bolter-death-guard-chaos-lord",
-        "death-guard-weapon-plague-combi-bolter-death-guard-chaos-lord-in-terminator-armour"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "death-guard-weapon-plague-encrusted-exalted-weapon-death-guard-chaos-lord",
-        "death-guard-weapon-plague-encrusted-exalted-weapon-death-guard-chaos-lord-in-terminator-armour"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "death-guard-weapon-twin-lightning-claws-death-guard-chaos-lord",
-        "death-guard-weapon-twin-lightning-claws-death-guard-chaos-lord-in-terminator-armour"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
         "adeptus-mechanicus-datasheet-supreme-commander",
         "emperors-children-ability-supreme-commander",
         "tau-empire-ability-supreme-commander"
@@ -2239,20 +1992,6 @@
         "adeptus-mechanicus-datasheet-damaged-1-4-wounds-remaining",
         "tau-empire-ability-damaged-1-4-wounds-remaining",
         "tyranids-ability-damaged-1-4-wounds-remaining"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "adeptus-mechanicus-weapon-heavy-flamer",
-        "emperors-children-weapon-heavy-flamer"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "emperors-children-ability-devastating-wounds",
-        "tau-empire-ability-devastating-wounds"
       ],
       "status": "review-required"
     },
@@ -2294,24 +2033,8 @@
     },
     {
       "termIds": [
-        "emperors-children-ability-damaged-1-6-wounds-remaining",
-        "tau-empire-ability-damaged-1-6-wounds-remaining",
-        "tyranids-ability-damaged-1-6-wounds-remaining"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
         "emperors-children-ability-extra-attacks",
         "tau-empire-ability-extra-attacks"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "emperors-children-ability-deadly-demise-d6",
-        "tau-empire-ability-deadly-demise-d6",
-        "tyranids-ability-deadly-demise-d6"
       ],
       "status": "review-required"
     },
@@ -2326,6 +2049,13 @@
       "termIds": [
         "emperors-children-ability-leader-2",
         "tyranids-ability-leader-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-devastating-wounds",
+        "tau-empire-ability-devastating-wounds"
       ],
       "status": "review-required"
     },
@@ -2346,8 +2076,15 @@
     {
       "termIds": [
         "emperors-children-ability-sustained-hits",
-        "tau-empire-ability-sustained-hits",
-        "tyranids-ability-sustained-hits"
+        "tau-empire-ability-sustained-hits"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-deadly-demise-d6",
+        "tau-empire-ability-deadly-demise-d6",
+        "tyranids-ability-deadly-demise-d6"
       ],
       "status": "review-required"
     },
@@ -2368,16 +2105,8 @@
     },
     {
       "termIds": [
-        "emperors-children-ability-lethal-hits",
-        "tau-empire-ability-lethal-hits",
-        "tyranids-ability-lethal-hits"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "emperors-children-ability-scouts-9",
-        "tau-empire-ability-scouts-9"
+        "tau-empire-ability-for-the-greater-good",
+        "tau-empire-army-rule-for-the-greater-good"
       ],
       "status": "review-required"
     },
@@ -2392,6 +2121,13 @@
       "termIds": [
         "tau-empire-ability-deadly-demise-1",
         "tyranids-ability-deadly-demise-1"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "tyranids-ability-shadow-in-the-warp",
+        "tyranids-army-rule-shadow-in-the-warp"
       ],
       "status": "review-required"
     }

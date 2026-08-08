@@ -418,44 +418,6 @@
       "wargear": []
     },
     {
-      "title": "Secutarii Hoplites",
-      "points": [
-        {
-          "label": "5 models",
-          "value": 65
-        },
-        {
-          "label": "10 models",
-          "value": 130
-        }
-      ],
-      "wargear": []
-    },
-    {
-      "title": "Secutarii Peltasts",
-      "points": [
-        {
-          "label": "5 models",
-          "value": 50
-        },
-        {
-          "label": "10 models",
-          "value": 100
-        }
-      ],
-      "wargear": []
-    },
-    {
-      "title": "Terrax-Pattern Termite",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 200
-        }
-      ],
-      "wargear": []
-    },
-    {
       "title": "Sydonian Dragoons with radium jezzails",
       "points": [
         {
@@ -479,16 +441,6 @@
         {
           "label": "1 model",
           "value": 50
-        }
-      ],
-      "wargear": []
-    },
-    {
-      "title": "X-101",
-      "points": [
-        {
-          "label": "",
-          "value": 40
         }
       ],
       "wargear": []
@@ -1521,7 +1473,7 @@
     }
   ],
   "audit": {
-    "units": 38,
+    "units": 34,
     "enhancements": 34
   }
 }

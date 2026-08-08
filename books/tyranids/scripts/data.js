@@ -301,9 +301,7 @@ window.DG_TERMS={
       "unit-tyrannofex",
       "unit-mucolid-spores",
       "unit-ripper-swarms",
-      "unit-spore-mines",
-      "unit-harridan",
-      "unit-hierophant"
+      "unit-spore-mines"
     ],
     "datasheet": "unit-gargoyles",
     "statline": "gargoyles-profile"
@@ -328,8 +326,7 @@ window.DG_TERMS={
       "unit-trygon",
       "unit-mucolid-spores",
       "unit-ripper-swarms",
-      "unit-spore-mines",
-      "unit-sky-slasher-swarms"
+      "unit-spore-mines"
     ],
     "datasheet": "unit-gargoyles",
     "statline": "gargoyles-profile"
@@ -576,8 +573,7 @@ window.DG_TERMS={
       "unit-tyranid-prime-with-lash-whip",
       "unit-winged-tyranid-prime",
       "unit-old-one-eye",
-      "unit-the-swarmlord",
-      "unit-malanthrope"
+      "unit-the-swarmlord"
     ],
     "datasheet": "unit-broodlord",
     "statline": "broodlord-profile"
@@ -926,8 +922,7 @@ window.DG_TERMS={
       "unit-lictor",
       "unit-neurolictor",
       "unit-venomthropes",
-      "unit-von-ryans-leapers",
-      "unit-malanthrope"
+      "unit-von-ryans-leapers"
     ],
     "datasheet": "unit-parasite-of-mortrex",
     "statline": "parasite-of-mortrex-profile"
@@ -1001,8 +996,7 @@ window.DG_TERMS={
       "unit-norn-emissary",
       "unit-toxicrene",
       "unit-trygon",
-      "unit-tyrannofex",
-      "unit-dimachaeron"
+      "unit-tyrannofex"
     ],
     "datasheet": "unit-tervigon",
     "statline": "tervigon-profile"
@@ -1018,10 +1012,7 @@ window.DG_TERMS={
       "unit-tervigon",
       "unit-norn-assimilator",
       "unit-norn-emissary",
-      "unit-tyrannofex",
-      "unit-barbed-hierodule",
-      "unit-dimachaeron",
-      "unit-scythed-hierodule"
+      "unit-tyrannofex"
     ],
     "datasheet": "unit-tervigon",
     "statline": "tervigon-profile"
@@ -3058,8 +3049,7 @@ window.DG_TERMS={
     "glossary": "glossary-tyranids-weapon-spinemaws",
     "rule": "unit-ripper-swarms",
     "units": [
-      "unit-ripper-swarms",
-      "unit-sky-slasher-swarms"
+      "unit-ripper-swarms"
     ],
     "datasheet": "unit-ripper-swarms",
     "statline": "ripper-swarms-profile"
@@ -3089,399 +3079,6 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-spore-mines",
     "statline": "spore-mines-profile"
-  },
-  "tyranids-ability-damaged-1-10-wounds-remaining": {
-    "id": "tyranids-ability-damaged-1-10-wounds-remaining",
-    "title": "Damaged: 1-10 wounds remaining",
-    "summary": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-tyranids-ability-damaged-1-10-wounds-remaining",
-    "rule": "unit-harridan",
-    "units": [
-      "unit-harridan"
-    ],
-    "datasheet": "unit-harridan",
-    "statline": "harridan-profile"
-  },
-  "tyranids-ability-frenzied-metabolism": {
-    "id": "tyranids-ability-frenzied-metabolism",
-    "title": "Frenzied Metabolism",
-    "summary": "Each time this model is selected to shoot, you can use this ability. If you do, until the end of the phase, each time this model makes an attack, add 1 to the Wound roll. After resolving those attacks, roll one D6: on a 2+, this model suffers D3 mortal wounds.",
-    "full": "Each time this model is selected to shoot, you can use this ability. If you do, until the end of the phase, each time this model makes an attack, add 1 to the Wound roll. After resolving those attacks, roll one D6: on a 2+, this model suffers D3 mortal wounds.",
-    "glossary": "glossary-tyranids-ability-frenzied-metabolism",
-    "rule": "unit-harridan",
-    "units": [
-      "unit-harridan"
-    ],
-    "datasheet": "unit-harridan",
-    "statline": "harridan-profile"
-  },
-  "tyranids-ability-deadly-demise-2d6": {
-    "id": "tyranids-ability-deadly-demise-2d6",
-    "title": "Deadly Demise 2D6",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-tyranids-ability-deadly-demise-2d6",
-    "rule": "unit-harridan",
-    "units": [
-      "unit-harridan",
-      "unit-hierophant"
-    ],
-    "datasheet": "unit-harridan",
-    "statline": "harridan-profile"
-  },
-  "tyranids-ability-hover": {
-    "id": "tyranids-ability-hover",
-    "title": "Hover",
-    "summary": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance.",
-    "full": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance.",
-    "glossary": "glossary-tyranids-ability-hover",
-    "rule": "unit-harridan",
-    "units": [
-      "unit-harridan"
-    ],
-    "datasheet": "unit-harridan",
-    "statline": "harridan-profile"
-  },
-  "tyranids-weapon-dire-bio-cannon": {
-    "id": "tyranids-weapon-dire-bio-cannon",
-    "title": "Dire bio-cannon",
-    "summary": "Ranged · 48\" · A D6+6 · BS 3+ · S 10 · AP -3 · D 3 · Blast",
-    "full": "Ranged · 48\" · A D6+6 · BS 3+ · S 10 · AP -3 · D 3 · Blast",
-    "glossary": "glossary-tyranids-weapon-dire-bio-cannon",
-    "rule": "unit-harridan",
-    "units": [
-      "unit-harridan",
-      "unit-hierophant"
-    ],
-    "datasheet": "unit-harridan",
-    "statline": "harridan-profile"
-  },
-  "tyranids-weapon-gargantuan-scything-talons": {
-    "id": "tyranids-weapon-gargantuan-scything-talons",
-    "title": "Gargantuan scything talons",
-    "summary": "Melee · Melee · A 6 · WS 3+ · S 14 · AP -2 · D D6",
-    "full": "Melee · Melee · A 6 · WS 3+ · S 14 · AP -2 · D D6",
-    "glossary": "glossary-tyranids-weapon-gargantuan-scything-talons",
-    "rule": "unit-harridan",
-    "units": [
-      "unit-harridan"
-    ],
-    "datasheet": "unit-harridan",
-    "statline": "harridan-profile"
-  },
-  "tyranids-ability-damaged-1-10-wounds-remaining-2": {
-    "id": "tyranids-ability-damaged-1-10-wounds-remaining-2",
-    "title": "Damaged: 1-10 wounds remaining",
-    "summary": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-tyranids-ability-damaged-1-10-wounds-remaining-2",
-    "rule": "unit-hierophant",
-    "units": [
-      "unit-hierophant"
-    ],
-    "datasheet": "unit-hierophant",
-    "statline": "hierophant-profile"
-  },
-  "tyranids-ability-apex-beast": {
-    "id": "tyranids-ability-apex-beast",
-    "title": "Apex-beast",
-    "summary": "Each time this model makes an attack that targets a unit that is Battle-shocked, add 1 to the Hit roll.",
-    "full": "Each time this model makes an attack that targets a unit that is Battle-shocked, add 1 to the Hit roll.",
-    "glossary": "glossary-tyranids-ability-apex-beast",
-    "rule": "unit-hierophant",
-    "units": [
-      "unit-hierophant"
-    ],
-    "datasheet": "unit-hierophant",
-    "statline": "hierophant-profile"
-  },
-  "tyranids-ability-stalking-forward": {
-    "id": "tyranids-ability-stalking-forward",
-    "title": "Stalking Forward",
-    "summary": "Each time this model makes a Normal, Advance or Fall Back move, it can move over models (excluding TITANIC models) and terrain features that are 4\" or less in height as if they were not there.",
-    "full": "Each time this model makes a Normal, Advance or Fall Back move, it can move over models (excluding TITANIC models) and terrain features that are 4\" or less in height as if they were not there.",
-    "glossary": "glossary-tyranids-ability-stalking-forward",
-    "rule": "unit-hierophant",
-    "units": [
-      "unit-hierophant"
-    ],
-    "datasheet": "unit-hierophant",
-    "statline": "hierophant-profile"
-  },
-  "tyranids-weapon-bio-plasma-torrent": {
-    "id": "tyranids-weapon-bio-plasma-torrent",
-    "title": "Bio-plasma torrent",
-    "summary": "Ranged · 12\" · A 3D6 · BS N/A · S 7 · AP -2 · D 1 · Assault, Torrent",
-    "full": "Ranged · 12\" · A 3D6 · BS N/A · S 7 · AP -2 · D 1 · Assault, Torrent",
-    "glossary": "glossary-tyranids-weapon-bio-plasma-torrent",
-    "rule": "unit-hierophant",
-    "units": [
-      "unit-hierophant"
-    ],
-    "datasheet": "unit-hierophant",
-    "statline": "hierophant-profile"
-  },
-  "tyranids-weapon-lashwhip-pods": {
-    "id": "tyranids-weapon-lashwhip-pods",
-    "title": "Lashwhip pods",
-    "summary": "Melee · Melee · A 10 · WS 3+ · S 5 · AP -1 · D 1 · Extra Attacks",
-    "full": "Melee · Melee · A 10 · WS 3+ · S 5 · AP -1 · D 1 · Extra Attacks",
-    "glossary": "glossary-tyranids-weapon-lashwhip-pods",
-    "rule": "unit-hierophant",
-    "units": [
-      "unit-hierophant"
-    ],
-    "datasheet": "unit-hierophant",
-    "statline": "hierophant-profile"
-  },
-  "tyranids-weapon-titanic-scything-talons": {
-    "id": "tyranids-weapon-titanic-scything-talons",
-    "title": "Titanic scything talons",
-    "summary": "Melee · Melee · A 8 · WS 3+ · S 20 · AP -2 · D D6+1",
-    "full": "Melee · Melee · A 8 · WS 3+ · S 20 · AP -2 · D D6+1",
-    "glossary": "glossary-tyranids-weapon-titanic-scything-talons",
-    "rule": "unit-hierophant",
-    "units": [
-      "unit-hierophant"
-    ],
-    "datasheet": "unit-hierophant",
-    "statline": "hierophant-profile"
-  },
-  "tyranids-ability-overgrown-barbs": {
-    "id": "tyranids-ability-overgrown-barbs",
-    "title": "Overgrown Barbs",
-    "summary": "In your Shooting phase, after this model has shot, select one enemy unit (excluding Titanic units) that was hit by one or more of those attacks. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
-    "full": "In your Shooting phase, after this model has shot, select one enemy unit (excluding Titanic units) that was hit by one or more of those attacks. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-tyranids-ability-overgrown-barbs",
-    "rule": "unit-barbed-hierodule",
-    "units": [
-      "unit-barbed-hierodule"
-    ],
-    "datasheet": "unit-barbed-hierodule",
-    "statline": "barbed-hierodule-profile"
-  },
-  "tyranids-ability-damaged-1-6-wounds-remaining": {
-    "id": "tyranids-ability-damaged-1-6-wounds-remaining",
-    "title": "Damaged: 1-6 Wounds Remaining",
-    "summary": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-tyranids-ability-damaged-1-6-wounds-remaining",
-    "rule": "unit-barbed-hierodule",
-    "units": [
-      "unit-barbed-hierodule",
-      "unit-scythed-hierodule"
-    ],
-    "datasheet": "unit-barbed-hierodule",
-    "statline": "barbed-hierodule-profile"
-  },
-  "tyranids-weapon-bio-cannon": {
-    "id": "tyranids-weapon-bio-cannon",
-    "title": "Bio-cannon",
-    "summary": "Ranged · 48\" · A D6+3 · BS 3+ · S 9 · AP -2 · D 2 · Blast",
-    "full": "Ranged · 48\" · A D6+3 · BS 3+ · S 9 · AP -2 · D 2 · Blast",
-    "glossary": "glossary-tyranids-weapon-bio-cannon",
-    "rule": "unit-barbed-hierodule",
-    "units": [
-      "unit-barbed-hierodule"
-    ],
-    "datasheet": "unit-barbed-hierodule",
-    "statline": "barbed-hierodule-profile"
-  },
-  "tyranids-weapon-hierodule-scything-talons": {
-    "id": "tyranids-weapon-hierodule-scything-talons",
-    "title": "Hierodule scything talons",
-    "summary": "Melee · Melee · A 8 · WS 3+ · S 14 · AP -2 · D D3+3",
-    "full": "Melee · Melee · A 8 · WS 3+ · S 14 · AP -2 · D D3+3",
-    "glossary": "glossary-tyranids-weapon-hierodule-scything-talons",
-    "rule": "unit-barbed-hierodule",
-    "units": [
-      "unit-barbed-hierodule"
-    ],
-    "datasheet": "unit-barbed-hierodule",
-    "statline": "barbed-hierodule-profile"
-  },
-  "tyranids-ability-digestion-spine": {
-    "id": "tyranids-ability-digestion-spine",
-    "title": "Digestion Spine",
-    "summary": "Each time this model fights, after it has resolved its attacks, if one or more enemy models (excluding Vehicle models) were destroyed as the result of those attacks, this model regains up to D3 mortal wounds.",
-    "full": "Each time this model fights, after it has resolved its attacks, if one or more enemy models (excluding Vehicle models) were destroyed as the result of those attacks, this model regains up to D3 mortal wounds.",
-    "glossary": "glossary-tyranids-ability-digestion-spine",
-    "rule": "unit-dimachaeron",
-    "units": [
-      "unit-dimachaeron"
-    ],
-    "datasheet": "unit-dimachaeron",
-    "statline": "dimachaeron-profile"
-  },
-  "tyranids-weapon-massive-scything-talons": {
-    "id": "tyranids-weapon-massive-scything-talons",
-    "title": "Massive scything talons",
-    "summary": "Melee · Melee · A 10 · WS 3+ · S 9 · AP -2 · D 3 · Twin-linked",
-    "full": "Melee · Melee · A 10 · WS 3+ · S 9 · AP -2 · D 3 · Twin-linked",
-    "glossary": "glossary-tyranids-weapon-massive-scything-talons",
-    "rule": "unit-dimachaeron",
-    "units": [
-      "unit-dimachaeron"
-    ],
-    "datasheet": "unit-dimachaeron",
-    "statline": "dimachaeron-profile"
-  },
-  "tyranids-ability-enhanced-toxic-miasma": {
-    "id": "tyranids-ability-enhanced-toxic-miasma",
-    "title": "Enhanced Toxic Miasma",
-    "summary": "While this model is leading a unit, the range of that unit's Foul Spores Aura ability is increased to 9\".",
-    "full": "While this model is leading a unit, the range of that unit's Foul Spores Aura ability is increased to 9\".",
-    "glossary": "glossary-tyranids-ability-enhanced-toxic-miasma",
-    "rule": "unit-malanthrope",
-    "units": [
-      "unit-malanthrope"
-    ],
-    "datasheet": "unit-malanthrope",
-    "statline": "malanthrope-profile"
-  },
-  "tyranids-ability-prey-adaptation": {
-    "id": "tyranids-ability-prey-adaptation",
-    "title": "Prey Adaptation",
-    "summary": "Each time this model's unit is selected to fight, select one of the following abilities to apply to all melee weapons equipped by models in that unit until the end of the phase: - [SUSTAINED HITS 1] - [LANCE] - [LETHAL HITS]",
-    "full": "Each time this model's unit is selected to fight, select one of the following abilities to apply to all melee weapons equipped by models in that unit until the end of the phase: - [SUSTAINED HITS 1] - [LANCE] - [LETHAL HITS]",
-    "glossary": "glossary-tyranids-ability-prey-adaptation",
-    "rule": "unit-malanthrope",
-    "units": [
-      "unit-malanthrope"
-    ],
-    "datasheet": "unit-malanthrope",
-    "statline": "malanthrope-profile"
-  },
-  "tyranids-ability-leader-9": {
-    "id": "tyranids-ability-leader-9",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - Venomthropes",
-    "full": "This model can be attached to the following unit: - Venomthropes",
-    "glossary": "glossary-tyranids-ability-leader-9",
-    "rule": "unit-malanthrope",
-    "units": [
-      "unit-malanthrope"
-    ],
-    "datasheet": "unit-malanthrope",
-    "statline": "malanthrope-profile"
-  },
-  "tyranids-ability-lance": {
-    "id": "tyranids-ability-lance",
-    "title": "Lance",
-    "summary": "Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.",
-    "full": "Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.",
-    "glossary": "glossary-tyranids-ability-lance",
-    "rule": "unit-malanthrope",
-    "units": [
-      "unit-malanthrope"
-    ],
-    "datasheet": "unit-malanthrope",
-    "statline": "malanthrope-profile"
-  },
-  "tyranids-ability-lethal-hits": {
-    "id": "tyranids-ability-lethal-hits",
-    "title": "Lethal Hits",
-    "summary": "Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target. *Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].*",
-    "full": "Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target. *Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].*",
-    "glossary": "glossary-tyranids-ability-lethal-hits",
-    "rule": "unit-malanthrope",
-    "units": [
-      "unit-malanthrope"
-    ],
-    "datasheet": "unit-malanthrope",
-    "statline": "malanthrope-profile"
-  },
-  "tyranids-ability-sustained-hits": {
-    "id": "tyranids-ability-sustained-hits",
-    "title": "Sustained Hits",
-    "summary": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X. *Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).",
-    "full": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X. *Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).",
-    "glossary": "glossary-tyranids-ability-sustained-hits",
-    "rule": "unit-malanthrope",
-    "units": [
-      "unit-malanthrope"
-    ],
-    "datasheet": "unit-malanthrope",
-    "statline": "malanthrope-profile"
-  },
-  "tyranids-weapon-grasping-tail": {
-    "id": "tyranids-weapon-grasping-tail",
-    "title": "Grasping tail",
-    "summary": "Melee · Melee · A 4 · WS 4+ · S 5 · AP 0 · D 2",
-    "full": "Melee · Melee · A 4 · WS 4+ · S 5 · AP 0 · D 2",
-    "glossary": "glossary-tyranids-weapon-grasping-tail",
-    "rule": "unit-malanthrope",
-    "units": [
-      "unit-malanthrope"
-    ],
-    "datasheet": "unit-malanthrope",
-    "statline": "malanthrope-profile"
-  },
-  "tyranids-ability-irresistible-force": {
-    "id": "tyranids-ability-irresistible-force",
-    "title": "Irresistible Force",
-    "summary": "This model is eligible to declare a charge in a turn in which it Fell Back.",
-    "full": "This model is eligible to declare a charge in a turn in which it Fell Back.",
-    "glossary": "glossary-tyranids-ability-irresistible-force",
-    "rule": "unit-scythed-hierodule",
-    "units": [
-      "unit-scythed-hierodule"
-    ],
-    "datasheet": "unit-scythed-hierodule",
-    "statline": "scythed-hierodule-profile"
-  },
-  "tyranids-weapon-bio-acid-spray": {
-    "id": "tyranids-weapon-bio-acid-spray",
-    "title": "Bio-acid spray",
-    "summary": "Ranged · 18\" · A 3D6 · BS N/A · S 6 · AP -2 · D 1 · Torrent",
-    "full": "Ranged · 18\" · A 3D6 · BS N/A · S 6 · AP -2 · D 1 · Torrent",
-    "glossary": "glossary-tyranids-weapon-bio-acid-spray",
-    "rule": "unit-scythed-hierodule",
-    "units": [
-      "unit-scythed-hierodule"
-    ],
-    "datasheet": "unit-scythed-hierodule",
-    "statline": "scythed-hierodule-profile"
-  },
-  "tyranids-weapon-hierodule-scything-talons-2": {
-    "id": "tyranids-weapon-hierodule-scything-talons-2",
-    "title": "Hierodule scything talons",
-    "summary": "Melee · Melee · A 10 · WS 3+ · S 14 · AP -2 · D D3+3",
-    "full": "Melee · Melee · A 10 · WS 3+ · S 14 · AP -2 · D D3+3",
-    "glossary": "glossary-tyranids-weapon-hierodule-scything-talons-2",
-    "rule": "unit-scythed-hierodule",
-    "units": [
-      "unit-scythed-hierodule"
-    ],
-    "datasheet": "unit-scythed-hierodule",
-    "statline": "scythed-hierodule-profile"
-  },
-  "tyranids-ability-chitinous-horrors": {
-    "id": "tyranids-ability-chitinous-horrors",
-    "title": "Chitinous Horrors",
-    "summary": "While an enemy unit is within Engagement Range of one or more units with this ability, halve the Objective Control characteristic of models in that enemy unit.",
-    "full": "While an enemy unit is within Engagement Range of one or more units with this ability, halve the Objective Control characteristic of models in that enemy unit.",
-    "glossary": "glossary-tyranids-ability-chitinous-horrors",
-    "rule": "unit-sky-slasher-swarms",
-    "units": [
-      "unit-sky-slasher-swarms"
-    ],
-    "datasheet": "unit-sky-slasher-swarms",
-    "statline": "sky-slasher-swarms-profile"
-  },
-  "tyranids-weapon-claws-and-teeth": {
-    "id": "tyranids-weapon-claws-and-teeth",
-    "title": "Claws and teeth",
-    "summary": "Melee · Melee · A 6 · WS 5+ · S 2 · AP 0 · D 1 · Sustained Hits 1",
-    "full": "Melee · Melee · A 6 · WS 5+ · S 2 · AP 0 · D 1 · Sustained Hits 1",
-    "glossary": "glossary-tyranids-weapon-claws-and-teeth",
-    "rule": "unit-sky-slasher-swarms",
-    "units": [
-      "unit-sky-slasher-swarms"
-    ],
-    "datasheet": "unit-sky-slasher-swarms",
-    "statline": "sky-slasher-swarms-profile"
   },
   "tyranids-enhancement-encircling-horrors-2": {
     "id": "tyranids-enhancement-encircling-horrors-2",
@@ -4042,5 +3639,21 @@ window.DG_TERMS={
     "full": "TYRANIDS units with this ability are eligible to charge in a turn in which they Fell Back. VANGUARD INVADER units with this ability are eligible to charge in a turn in which they Advanced.",
     "glossary": "glossary-tyranids-detachment-rule-questing-tendrils",
     "rule": "detachment-vanguard-onslaught"
+  },
+  "tyranids-army-rule-shadow-in-the-warp": {
+    "id": "tyranids-army-rule-shadow-in-the-warp",
+    "title": "Shadow in the Warp",
+    "summary": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+    "full": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test.",
+    "glossary": "glossary-tyranids-army-rule-shadow-in-the-warp",
+    "rule": "army-rule-shadow-in-the-warp"
+  },
+  "tyranids-army-rule-synapse": {
+    "id": "tyranids-army-rule-synapse",
+    "title": "Synapse",
+    "summary": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army: each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6; each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+    "full": "If your Army Faction is TYRANIDS, while a TYRANIDS unit from your army is within 6\" of one or more friendly SYNAPSE models, that TYRANIDS unit is said to be within Synapse Range of that model and of your army. While a TYRANIDS unit from your army is within Synapse Range of your army: each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6; each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+    "glossary": "glossary-tyranids-army-rule-synapse",
+    "rule": "army-rule-synapse"
   }
 };

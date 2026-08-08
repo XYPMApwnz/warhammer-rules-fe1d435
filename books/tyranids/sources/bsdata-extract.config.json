@@ -27,28 +27,48 @@
   },
   "unitCorrections": {
     "Broodlord": {
-      "removeKeywords": ["Leader"]
+      "removeKeywords": [
+        "Leader"
+      ]
     },
     "Deathleaper": {
-      "removeAbilities": ["Deep Strike"]
+      "removeAbilities": [
+        "Deep Strike"
+      ]
     },
     "Hive Tyrant": {
-      "removeKeywords": ["Leader"]
+      "removeKeywords": [
+        "Leader"
+      ]
     },
     "Hyperadapted Raveners": {
-      "addKeywords": ["Synapse"],
-      "removeKeywords": ["Leader"],
-      "removeAbilities": ["Sustained Hits"]
+      "addKeywords": [
+        "Synapse"
+      ],
+      "removeKeywords": [
+        "Leader"
+      ],
+      "removeAbilities": [
+        "Sustained Hits"
+      ]
     },
     "Lictor": {
-      "removeAbilities": ["Deep Strike"]
+      "removeAbilities": [
+        "Deep Strike"
+      ]
     },
     "Tyranid Prime with Lash Whip": {
-      "removeKeywords": ["Leader"],
-      "removeAbilities": ["Sustained Hits"]
+      "removeKeywords": [
+        "Leader"
+      ],
+      "removeAbilities": [
+        "Sustained Hits"
+      ]
     },
     "Neurotyrant": {
-      "removeKeywords": ["Leader"],
+      "removeKeywords": [
+        "Leader"
+      ],
       "abilities": {
         "Psychic Terror (Psychic)": {
           "text": "If one or more models from your army with this ability are on the battlefield when you unleash the Shadow in the Warp, subtract 1 from the Battle-shock test each enemy unit on the battlefield must take as a result."
@@ -60,13 +80,19 @@
       }
     },
     "Neurolictor": {
-      "removeAbilities": ["Deep Strike"]
+      "removeAbilities": [
+        "Deep Strike"
+      ]
     },
     "Old One Eye": {
-      "removeKeywords": ["Leader"]
+      "removeKeywords": [
+        "Leader"
+      ]
     },
     "Norn Assimilator": {
-      "removeAbilities": ["Protean Purpose"],
+      "removeAbilities": [
+        "Protean Purpose"
+      ],
       "abilities": {
         "Harpoon Barbs": {
           "text": "Once per turn, when an enemy unit within Engagement Range of this model is selected to Fall Back, roll one D6: on a 2+, that unit suffers D6 mortal wounds."
@@ -77,7 +103,9 @@
       }
     },
     "Norn Emissary": {
-      "removeAbilities": ["Protean Purpose"],
+      "removeAbilities": [
+        "Protean Purpose"
+      ],
       "addAbilities": [
         {
           "title": "Unnatural Resilience",
@@ -86,13 +114,19 @@
       ]
     },
     "Tyrannocyte": {
-      "addKeywords": ["Frame"]
+      "addKeywords": [
+        "Frame"
+      ]
     },
     "Toxicrene": {
-      "addKeywords": ["Frame"]
+      "addKeywords": [
+        "Frame"
+      ]
     },
     "Tyrannofex": {
-      "addKeywords": ["Frame"]
+      "addKeywords": [
+        "Frame"
+      ]
     },
     "Tervigon": {
       "abilities": {
@@ -156,10 +190,14 @@
       }
     },
     "The Swarmlord": {
-      "removeKeywords": ["Leader"]
+      "removeKeywords": [
+        "Leader"
+      ]
     },
     "Winged Tyranid Prime": {
-      "removeKeywords": ["Leader"]
+      "removeKeywords": [
+        "Leader"
+      ]
     },
     "Ripper Swarms": {
       "weaponNames": {
@@ -196,10 +234,18 @@
     "excludeNames": [
       "Detachment",
       "Show/Hide Options",
-      "Order of Battle"
+      "Order of Battle",
+      "Barbed Hierodule",
+      "Dimachaeron",
+      "Harridan",
+      "Hierophant",
+      "Malanthrope",
+      "Scythed Hierodule",
+      "Sky-slasher Swarms"
     ],
     "excludeNamePatterns": [
-      "\\[Crucible\\]$"
+      "\\[Crucible\\]$",
+      "\\[Legends\\]$"
     ],
     "excludePrimaryCategories": [
       "Configuration",

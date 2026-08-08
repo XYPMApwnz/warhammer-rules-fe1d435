@@ -5,8 +5,8 @@
   "scope": "faction-and-core-stratagems",
   "defaultSharedDecision": "accept",
   "sharedPairCount": 479,
-  "correctionPairCount": 170,
-  "coreSharedPairCount": 285,
+  "correctionPairCount": 143,
+  "coreSharedPairCount": 251,
   "coreCorrectionPairCount": 10,
   "legendsPolicy": "included-if-local",
   "sources": {
@@ -14,16 +14,76 @@
   },
   "runtimeUsage": "Compiled into the review matrix; not read directly at runtime.",
   "coreEntries": [
-    {"unitId":"unit-blightlord-terminators","ruleId":"core-stratagem-epic-challenge","decision":"conditional","conditionKind":"attachment","reason":"A possible attached Character can satisfy TARGET, but no attachment is confirmed."},
-    {"unitId":"unit-deathshroud-terminators","ruleId":"core-stratagem-epic-challenge","decision":"conditional","conditionKind":"attachment","reason":"A possible attached Character can satisfy TARGET, but no attachment is confirmed."},
-    {"unitId":"unit-plague-marines","ruleId":"core-stratagem-epic-challenge","decision":"conditional","conditionKind":"attachment","reason":"A possible attached Character can satisfy TARGET, but no attachment is confirmed."},
-    {"unitId":"unit-poxwalkers","ruleId":"core-stratagem-epic-challenge","decision":"conditional","conditionKind":"attachment","reason":"A possible attached Character can satisfy TARGET, but no attachment is confirmed."},
-    {"unitId":"unit-blightlord-terminators","ruleId":"core-stratagem-explosives","decision":"conditional","conditionKind":"attachment","reason":"A possible attached model can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."},
-    {"unitId":"unit-deathshroud-terminators","ruleId":"core-stratagem-explosives","decision":"conditional","conditionKind":"attachment","reason":"A possible attached model can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."},
-    {"unitId":"unit-malignant-plaguecaster","ruleId":"core-stratagem-explosives","decision":"conditional","conditionKind":"attachment","reason":"A possible bodyguard unit can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."},
-    {"unitId":"unit-noxious-blightbringer","ruleId":"core-stratagem-explosives","decision":"conditional","conditionKind":"attachment","reason":"A possible bodyguard unit can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."},
-    {"unitId":"unit-plague-surgeon","ruleId":"core-stratagem-explosives","decision":"conditional","conditionKind":"attachment","reason":"A possible bodyguard unit can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."},
-    {"unitId":"unit-tallyman","ruleId":"core-stratagem-explosives","decision":"conditional","conditionKind":"attachment","reason":"A possible bodyguard unit can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."}
+    {
+      "unitId": "unit-blightlord-terminators",
+      "ruleId": "core-stratagem-epic-challenge",
+      "decision": "conditional",
+      "conditionKind": "attachment",
+      "reason": "A possible attached Character can satisfy TARGET, but no attachment is confirmed."
+    },
+    {
+      "unitId": "unit-deathshroud-terminators",
+      "ruleId": "core-stratagem-epic-challenge",
+      "decision": "conditional",
+      "conditionKind": "attachment",
+      "reason": "A possible attached Character can satisfy TARGET, but no attachment is confirmed."
+    },
+    {
+      "unitId": "unit-plague-marines",
+      "ruleId": "core-stratagem-epic-challenge",
+      "decision": "conditional",
+      "conditionKind": "attachment",
+      "reason": "A possible attached Character can satisfy TARGET, but no attachment is confirmed."
+    },
+    {
+      "unitId": "unit-poxwalkers",
+      "ruleId": "core-stratagem-epic-challenge",
+      "decision": "conditional",
+      "conditionKind": "attachment",
+      "reason": "A possible attached Character can satisfy TARGET, but no attachment is confirmed."
+    },
+    {
+      "unitId": "unit-blightlord-terminators",
+      "ruleId": "core-stratagem-explosives",
+      "decision": "conditional",
+      "conditionKind": "attachment",
+      "reason": "A possible attached model can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."
+    },
+    {
+      "unitId": "unit-deathshroud-terminators",
+      "ruleId": "core-stratagem-explosives",
+      "decision": "conditional",
+      "conditionKind": "attachment",
+      "reason": "A possible attached model can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."
+    },
+    {
+      "unitId": "unit-malignant-plaguecaster",
+      "ruleId": "core-stratagem-explosives",
+      "decision": "conditional",
+      "conditionKind": "attachment",
+      "reason": "A possible bodyguard unit can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."
+    },
+    {
+      "unitId": "unit-noxious-blightbringer",
+      "ruleId": "core-stratagem-explosives",
+      "decision": "conditional",
+      "conditionKind": "attachment",
+      "reason": "A possible bodyguard unit can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."
+    },
+    {
+      "unitId": "unit-plague-surgeon",
+      "ruleId": "core-stratagem-explosives",
+      "decision": "conditional",
+      "conditionKind": "attachment",
+      "reason": "A possible bodyguard unit can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."
+    },
+    {
+      "unitId": "unit-tallyman",
+      "ruleId": "core-stratagem-explosives",
+      "decision": "conditional",
+      "conditionKind": "attachment",
+      "reason": "A possible bodyguard unit can supply EXPLOSIVES/GRENADES, but no attachment is confirmed."
+    }
   ],
   "entries": [
     {
@@ -341,215 +401,6 @@
       "decision": "conditional",
       "conditionKind": "second-character",
       "reason": "TARGET requires two Characters in the actual Attached Unit."
-    },
-    {
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour",
-      "ruleId": "stratagem-blooming-pestilence",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "detachment",
-      "reason": "Selected detachment is not known."
-    },
-    {
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour",
-      "ruleId": "stratagem-grim-reapers",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "detachment",
-      "reason": "Selected detachment is not known."
-    },
-    {
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour",
-      "ruleId": "stratagem-mortarion-s-teachings",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "detachment",
-      "reason": "Selected detachment is not known."
-    },
-    {
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour",
-      "ruleId": "stratagem-sickening-impact",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "detachment",
-      "reason": "Selected detachment is not known."
-    },
-    {
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour",
-      "ruleId": "stratagem-signal-pox",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "detachment",
-      "reason": "Selected detachment is not known."
-    },
-    {
-      "unitId": "unit-death-guard-chaos-lord-in-terminator-armour",
-      "ruleId": "stratagem-undying-spite",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "detachment",
-      "reason": "Selected detachment is not known."
-    },
-    {
-      "unitId": "unit-death-guard-possessed",
-      "ruleId": "stratagem-blessings-of-filth",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "attachment",
-      "reason": "TARGET depends on actual Attached Unit."
-    },
-    {
-      "unitId": "unit-death-guard-possessed",
-      "ruleId": "stratagem-clutching-corruption",
-      "side": "wahapedia-only",
-      "decision": "accept",
-      "reason": "Direct Wahapedia association for a local datasheet."
-    },
-    {
-      "unitId": "unit-death-guard-possessed",
-      "ruleId": "stratagem-creeping-blight",
-      "side": "wahapedia-only",
-      "decision": "accept",
-      "reason": "Direct Wahapedia association for a local datasheet."
-    },
-    {
-      "unitId": "unit-death-guard-possessed",
-      "ruleId": "stratagem-disgustingly-resilient",
-      "side": "wahapedia-only",
-      "decision": "accept",
-      "reason": "Direct Wahapedia association for a local datasheet."
-    },
-    {
-      "unitId": "unit-death-guard-possessed",
-      "ruleId": "stratagem-drawn-to-despair",
-      "side": "wahapedia-only",
-      "decision": "accept",
-      "reason": "Direct Wahapedia association for a local datasheet."
-    },
-    {
-      "unitId": "unit-death-guard-possessed",
-      "ruleId": "stratagem-droning-horror",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "detachment",
-      "reason": "Selected detachment is not known."
-    },
-    {
-      "unitId": "unit-death-guard-possessed",
-      "ruleId": "stratagem-eye-of-the-swarm",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "detachment",
-      "reason": "Selected detachment is not known."
-    },
-    {
-      "unitId": "unit-death-guard-possessed",
-      "ruleId": "stratagem-grotesque-fortitude",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "attachment",
-      "reason": "TARGET depends on actual Attached Unit."
-    },
-    {
-      "unitId": "unit-death-guard-possessed",
-      "ruleId": "stratagem-leechspore-eruption",
-      "side": "wahapedia-only",
-      "decision": "accept",
-      "reason": "Direct Wahapedia association for a local datasheet."
-    },
-    {
-      "unitId": "unit-death-guard-possessed",
-      "ruleId": "stratagem-malignance-magnified",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "attachment",
-      "reason": "TARGET depends on actual Attached Unit."
-    },
-    {
-      "unitId": "unit-death-guard-possessed",
-      "ruleId": "stratagem-nauseating-paroxysms",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "detachment",
-      "reason": "Selected detachment is not known."
-    },
-    {
-      "unitId": "unit-death-guard-possessed",
-      "ruleId": "stratagem-plaguesurge",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "warlord",
-      "reason": "TARGET requires the Warlord."
-    },
-    {
-      "unitId": "unit-death-guard-possessed",
-      "ruleId": "stratagem-rabid-infusion",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "second-character",
-      "reason": "TARGET requires two Characters in the actual Attached Unit."
-    },
-    {
-      "unitId": "unit-death-guard-possessed",
-      "ruleId": "stratagem-shambling-wall",
-      "side": "wahapedia-only",
-      "decision": "accept",
-      "reason": "Direct Wahapedia association for a local datasheet."
-    },
-    {
-      "unitId": "unit-death-guard-possessed",
-      "ruleId": "stratagem-shock-and-horror",
-      "side": "wahapedia-only",
-      "decision": "accept",
-      "reason": "Direct Wahapedia association for a local datasheet."
-    },
-    {
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour",
-      "ruleId": "stratagem-blooming-pestilence",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "detachment",
-      "reason": "Selected detachment is not known."
-    },
-    {
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour",
-      "ruleId": "stratagem-grim-reapers",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "detachment",
-      "reason": "Selected detachment is not known."
-    },
-    {
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour",
-      "ruleId": "stratagem-mortarion-s-teachings",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "detachment",
-      "reason": "Selected detachment is not known."
-    },
-    {
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour",
-      "ruleId": "stratagem-sickening-impact",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "detachment",
-      "reason": "Selected detachment is not known."
-    },
-    {
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour",
-      "ruleId": "stratagem-signal-pox",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "detachment",
-      "reason": "Selected detachment is not known."
-    },
-    {
-      "unitId": "unit-death-guard-sorcerer-in-terminator-armour",
-      "ruleId": "stratagem-undying-spite",
-      "side": "wahapedia-only",
-      "decision": "conditional",
-      "conditionKind": "detachment",
-      "reason": "Selected detachment is not known."
     },
     {
       "unitId": "unit-deathshroud-terminators",

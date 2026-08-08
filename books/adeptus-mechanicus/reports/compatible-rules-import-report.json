@@ -34,8 +34,8 @@
   },
   "summary": {
     "associations": {
-      "core": 250,
-      "faction": 902
+      "faction": 816,
+      "core": 225
     },
     "boardingActionNamesIgnored": 17,
     "coreStratagems": {
@@ -43,8 +43,8 @@
       "observed": 10
     },
     "datasheets": {
-      "canonical": 38,
-      "imported": 38
+      "canonical": 34,
+      "imported": 34
     },
     "factionStratagems": {
       "canonical": 51,

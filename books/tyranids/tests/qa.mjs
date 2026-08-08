@@ -36,14 +36,14 @@ const rowInventory=rows=>rows.map(row=>JSON.stringify(row.map(item=>typeof item=
 const desktopWeaponRows=extractWeaponRows(reader),phoneWeaponRows=extractWeaponRows(mobileDatasheetMarkup),desktopWeaponTokens=desktopWeaponRows.flat(),phoneWeaponTokens=phoneWeaponRows.flat(),canonicalWeaponLabels=canonicalWeaponRows.flat();
 const unknownWeaponLabels=[...new Set(canonicalWeaponLabels.filter(label=>!expectedWeaponTerm(label)))].sort();
 
-assert.deepEqual([allUnits.length,canonicalWeaponRows.length,canonicalWeaponLabels.length],[57,82,129]);
+assert.deepEqual([allUnits.length,canonicalWeaponRows.length,canonicalWeaponLabels.length],[50,73,119]);
 assert.deepEqual(rowInventory(desktopWeaponRows),rowInventory(canonicalWeaponRows),'desktop weapon token inventory/order differs');
 assert.deepEqual(rowInventory(phoneWeaponRows),rowInventory(canonicalWeaponRows),'Phone weapon token inventory/order differs');
 for(const tokens of [desktopWeaponTokens,phoneWeaponTokens])for(const token of tokens){const expected=expectedWeaponTerm(token.label);assert.equal(token.element,expected?'button':'span',`${token.label}: wrong token kind`);assert.equal(token.term,expected,`${token.label}: wrong glossary target`);}
 assert.deepEqual(unknownWeaponLabels,['HARPOONED']);
 assert.doesNotMatch(reader+mobileDatasheetMarkup,/<button class="weapon-button"[^>]*>[^<]*<\/button><small>/i);
 assert.doesNotMatch(reader+mobileDatasheetMarkup,/<(?:button|span)[^>]*class="[^"]*\btag\b[^"]*"[^>]*>[^<]*<button/i);
-assert.equal(fs.readdirSync(path.join(root,'mobile')).filter(file=>file.endsWith('.html')).length,70);
+assert.equal(fs.readdirSync(path.join(root,'mobile')).filter(file=>file.endsWith('.html')).length,63);
 for(const output of [reader,mobileDatasheetMarkup]){assert.match(output,/death-guard\/styles\/content\.css\?v=\d+/);assert.match(output,/death-guard\/styles\/popups\.css\?v=\d+/);assert.match(output,/shared\/datasheet-system\.css\?v=\d+/);}
 
 assert.equal(pack.meta.pageCount,31);
@@ -54,14 +54,14 @@ assert.equal(pack.meta.version,'1.1');
 assert.equal(pack.meta.sha256,'BBB2B1F9167C8421D13CFB87FC46DF778D59B7E9803D5D8F812060424FA9C79A');
 assert.equal(pack.faqs.length,12);
 assert.equal(codex.audit.datasheets,50);
-assert.equal(codex.audit.imperialArmour,7);
+assert.equal(codex.audit.imperialArmour,0);
 assert.equal(points.audit.enhancements,34);
-assert.equal(points.units.length,57);
+assert.equal(points.units.length,50);
 assert.equal(codexParity.detachments.length,6);
 assert.equal(codexParity.detachments.flatMap(item=>item.stratagems).length,36);
-assert.equal(codexWargear.units.length,57);
+assert.equal(codexWargear.units.length,50);
 assert.equal(Object.keys(relatedRules.stratagems).length,51);
-assert.equal(new Set(points.units.map(item=>item.id)).size,57);
+assert.equal(new Set(points.units.map(item=>item.id)).size,50);
 for(const unit of [...codex.datasheets,...codex.imperialArmour,...codex.legends]){
   assert.ok(unit.profiles.length,`${unit.title}: missing profile`);
   assert.ok(unit.keywords.includes('Tyranids'),`${unit.title}: missing faction keyword`);
@@ -109,7 +109,7 @@ assert.equal(pack.updates.find(item=>item.id==='biovores-seed-spore-mine').sourc
 assert.match(pack.updates.find(item=>item.id==='venomthropes-foul-spores').change,/within 6"/);
 for(const title of ['The Red Terror','Raveners','Hyperadapted Raveners'])assert.ok([...codex.datasheets,...codex.imperialArmour].find(unit=>unit.title===title).keywords.includes('Burrower'),`${title}: official BURROWER keyword missing`);
 assert.ok(codex.datasheets.find(unit=>unit.title==='Hyperadapted Raveners').keywords.includes('Synapse'));
-assert.equal(codex.imperialArmour.find(unit=>unit.title==='Malanthrope').weapons.find(weapon=>weapon.name==='Grasping tail').skill,'4+');
+assert.deepEqual([codex.imperialArmour.length,codex.legends.length],[0,0]);
 assert.match(codex.datasheets.find(unit=>unit.title==='Neurolictor').abilities.find(item=>item.title==='Psychological Saboteur (Aura)').text,/within 12"/);
 assert.match(codex.datasheets.find(unit=>unit.title==='The Swarmlord').abilities.find(item=>item.title==='Malign Presence (Aura)').text,/If you do, increase/);
 assert.doesNotMatch(JSON.stringify(codex),/with 12"|it's ranged weapons|"Burrowers"/);
@@ -178,4 +178,4 @@ for(const stratagem of allStratagems){
 }
 
 console.log(`Tyranids weapon tokens: ${canonicalWeaponLabels.length} labels, ${desktopWeaponTokens.length} desktop, ${phoneWeaponTokens.length} Phone, ${desktopWeaponTokens.filter(token=>token.term).length} interactive, ${desktopWeaponTokens.filter(token=>!token.term).length} unknown (${unknownWeaponLabels.join(', ')}).`);
-console.log('Tyranids QA passed: 57 datasheets, 10 detachments, 51 Stratagems, exact wargear, glossary and Related Rules contracts.');
+console.log('Tyranids QA passed: 50 datasheets, 10 detachments, 51 Stratagems, exact wargear, glossary and Related Rules contracts.');

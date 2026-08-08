@@ -97,10 +97,10 @@ function sectionUnit(unit){
 
 const book=readJson(bookFile);
 const legendGlossary=buildGlossary();
-book.sections=book.sections.filter(section=>section.id!==legends.group.id&&!legendUnitIds.has(section.id));
+book.sections=book.sections.filter(section=>section.id!==legends.group.id&&!section.legends&&!legendUnitIds.has(section.id));
 const pactIndex=book.sections.findIndex(section=>section.id==='pact-of-decay-datasheets');
 if(pactIndex<0)throw new Error('Missing Pact of Decay group');
-book.sections.splice(pactIndex,0,{...legends.group,kind:'unit-group',blocks:[{type:'p',text:legends.group.description}],subsections:[]},...legends.units.map(sectionUnit));
+if(legends.units.length)book.sections.splice(pactIndex,0,{...legends.group,kind:'unit-group',blocks:[{type:'p',text:legends.group.description}],subsections:[]},...legends.units.map(sectionUnit));
 const pactUnits=book.sections.filter(section=>section.id==='pact-of-decay-datasheets'||['unit-beasts-of-nurgle','unit-great-unclean-one','unit-nurglings','unit-plague-drones','unit-plaguebearers','unit-rotigus'].includes(section.id));
 pactUnits.forEach((section,index)=>{section.number=index?`4.10.${index}`:'4.10';});
 book.glossary=book.glossary.filter(term=>!term.legends);
@@ -171,8 +171,8 @@ function replaceOrInsert(html,tag,id,beforeId,replacement){
   const before=elementRange(html,tag,beforeId);if(!before)throw new Error(`Missing insertion target ${beforeId}`);
   return html.slice(0,before[0])+replacement+'\n'+html.slice(before[0]);
 }
-const nav=`<li data-nav-id="${legends.group.id}" data-nav-depth="2"><div class="toc-row"><button class="toc-label" data-nav-target="${legends.group.id}">${legends.group.title}</button><button class="toc-toggle" data-nav-toggle aria-label="Toggle ${legends.group.title}" aria-expanded="false"></button></div><ul class="toc-branch" hidden>${legends.units.map(unit=>`<li data-nav-id="${unit.id}" data-nav-depth="3"><div class="toc-row no-toggle"><button class="toc-label" data-nav-target="${unit.id}">${escapeHtml(unit.title)}</button></div></li>`).join('')}</ul></li>`;
-const content=`<section class="content-group" id="${legends.group.id}" data-track="${legends.group.id}"><h3 class="category-title">${legends.group.title}</h3><div class="content-block"><p>${escapeHtml(legends.group.description)}</p></div>${legends.units.map(renderUnit).join('\n')}</section>`;
+const nav=legends.units.length?`<li data-nav-id="${legends.group.id}" data-nav-depth="2"><div class="toc-row"><button class="toc-label" data-nav-target="${legends.group.id}">${legends.group.title}</button><button class="toc-toggle" data-nav-toggle aria-label="Toggle ${legends.group.title}" aria-expanded="false"></button></div><ul class="toc-branch" hidden>${legends.units.map(unit=>`<li data-nav-id="${unit.id}" data-nav-depth="3"><div class="toc-row no-toggle"><button class="toc-label" data-nav-target="${unit.id}">${escapeHtml(unit.title)}</button></div></li>`).join('')}</ul></li>`:'';
+const content=legends.units.length?`<section class="content-group" id="${legends.group.id}" data-track="${legends.group.id}"><h3 class="category-title">${legends.group.title}</h3><div class="content-block"><p>${escapeHtml(legends.group.description)}</p></div>${legends.units.map(renderUnit).join('\n')}</section>`:'';
 const unitSections=book.sections.filter(section=>section.kind==='unit');
 const keywordsOf=unit=>{
   const text=(unit.subsections||[]).find(section=>section.title==='Keywords')?.blocks?.map(block=>block.text||'').join(' ')||'';

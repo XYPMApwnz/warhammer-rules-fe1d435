@@ -335,7 +335,6 @@
           "unit-broodlord",
           "unit-hive-tyrant",
           "unit-hyperadapted-raveners",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -350,7 +349,6 @@
           "unit-broodlord",
           "unit-hive-tyrant",
           "unit-hyperadapted-raveners",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -365,7 +363,6 @@
           "unit-broodlord",
           "unit-hive-tyrant",
           "unit-hyperadapted-raveners",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -379,7 +376,6 @@
         "match": [
           "unit-broodlord",
           "unit-hyperadapted-raveners",
-          "unit-malanthrope",
           "unit-parasite-of-mortrex",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-tyranid-prime"
@@ -427,7 +423,6 @@
           "unit-broodlord",
           "unit-hive-tyrant",
           "unit-hyperadapted-raveners",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -442,7 +437,6 @@
           "unit-broodlord",
           "unit-hive-tyrant",
           "unit-hyperadapted-raveners",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -457,7 +451,6 @@
           "unit-broodlord",
           "unit-hive-tyrant",
           "unit-hyperadapted-raveners",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -472,7 +465,6 @@
           "unit-broodlord",
           "unit-hive-tyrant",
           "unit-hyperadapted-raveners",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -487,7 +479,6 @@
           "unit-broodlord",
           "unit-hive-tyrant",
           "unit-hyperadapted-raveners",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -504,7 +495,6 @@
           "unit-broodlord",
           "unit-hive-tyrant",
           "unit-hyperadapted-raveners",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -547,7 +537,6 @@
         "match": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -561,7 +550,6 @@
         "match": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -575,7 +563,6 @@
         "match": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -602,7 +589,6 @@
           "unit-broodlord",
           "unit-hive-tyrant",
           "unit-hyperadapted-raveners",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -617,7 +603,6 @@
           "unit-broodlord",
           "unit-hive-tyrant",
           "unit-hyperadapted-raveners",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -632,7 +617,6 @@
           "unit-broodlord",
           "unit-hive-tyrant",
           "unit-hyperadapted-raveners",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -647,7 +631,6 @@
           "unit-broodlord",
           "unit-hive-tyrant",
           "unit-hyperadapted-raveners",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -672,7 +655,6 @@
           "unit-broodlord",
           "unit-hive-tyrant",
           "unit-hyperadapted-raveners",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -687,7 +669,6 @@
           "unit-broodlord",
           "unit-hive-tyrant",
           "unit-hyperadapted-raveners",
-          "unit-malanthrope",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -749,7 +730,6 @@
         "match": [
           "unit-cadre-fireblade",
           "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
           "unit-ethereal",
           "unit-firesight-team"
@@ -759,7 +739,6 @@
       "thermoneutronic-projector": {
         "match": [
           "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
           "unit-commander-in-enforcer-battlesuit"
         ],
         "conditional": []
@@ -767,7 +746,6 @@
       "plasma-accelerator-rifle": {
         "match": [
           "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
           "unit-commander-in-enforcer-battlesuit"
         ],
         "conditional": []
@@ -775,7 +753,6 @@
       "supernova-launcher": {
         "match": [
           "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
           "unit-commander-in-enforcer-battlesuit"
         ],
         "conditional": []
@@ -784,7 +761,6 @@
         "match": [
           "unit-cadre-fireblade",
           "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
           "unit-ethereal",
           "unit-firesight-team",
@@ -796,7 +772,6 @@
         "match": [
           "unit-cadre-fireblade",
           "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
           "unit-ethereal",
           "unit-firesight-team",
@@ -811,7 +786,6 @@
         "match": [
           "unit-cadre-fireblade",
           "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
           "unit-ethereal",
           "unit-firesight-team",
@@ -826,7 +800,6 @@
         "match": [
           "unit-cadre-fireblade",
           "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
           "unit-ethereal",
           "unit-firesight-team",
@@ -865,7 +838,6 @@
         "match": [
           "unit-cadre-fireblade",
           "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
           "unit-ethereal",
           "unit-firesight-team",
@@ -877,7 +849,6 @@
         "match": [
           "unit-cadre-fireblade",
           "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
           "unit-ethereal",
           "unit-firesight-team",
@@ -889,7 +860,6 @@
         "match": [
           "unit-cadre-fireblade",
           "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
           "unit-ethereal",
           "unit-firesight-team",
@@ -904,7 +874,6 @@
         "match": [
           "unit-cadre-fireblade",
           "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
           "unit-commander-in-enforcer-battlesuit",
           "unit-ethereal",
           "unit-firesight-team",
@@ -918,7 +887,6 @@
       "enhancement-internal-grenade-racks": {
         "match": [
           "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
           "unit-commander-in-enforcer-battlesuit"
         ],
         "conditional": []
@@ -926,7 +894,6 @@
       "enhancement-prototype-weapon-system": {
         "match": [
           "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
           "unit-commander-in-enforcer-battlesuit"
         ],
         "conditional": []
@@ -934,7 +901,6 @@
       "enhancement-puretide-engram-neurochip": {
         "match": [
           "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
           "unit-commander-in-enforcer-battlesuit"
         ],
         "conditional": []
@@ -942,7 +908,6 @@
       "enhancement-starflare-ignition-system": {
         "match": [
           "unit-commander-in-coldstar-battlesuit",
-          "unit-commander-in-crisis-battlesuit",
           "unit-commander-in-enforcer-battlesuit"
         ],
         "conditional": []

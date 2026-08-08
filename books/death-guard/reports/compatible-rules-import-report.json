@@ -5,7 +5,6 @@
       "unitIds": [
         "unit-blightlord-terminators",
         "unit-chaos-spawn",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-deathshroud-terminators",
         "unit-lord-of-contagion",
         "unit-lord-of-virulence",
@@ -18,9 +17,6 @@
         "unit-biologus-putrifier",
         "unit-daemon-prince-of-nurgle-with-wings",
         "unit-daemon-prince-of-nurgle",
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-chaos-lord",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-foul-blightspawn",
         "unit-great-unclean-one",
         "unit-icon-bearer",
@@ -42,7 +38,6 @@
         "unit-biologus-putrifier",
         "unit-blightlord-terminators",
         "unit-chaos-spawn",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-deathshroud-terminators",
         "unit-foul-blightspawn",
         "unit-icon-bearer",
@@ -62,7 +57,6 @@
       "unitIds": [
         "unit-blightlord-terminators",
         "unit-chaos-spawn",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-deathshroud-terminators",
         "unit-lord-of-contagion",
         "unit-lord-of-virulence",
@@ -92,11 +86,6 @@
         "unit-chaos-spawn",
         "unit-daemon-prince-of-nurgle-with-wings",
         "unit-daemon-prince-of-nurgle",
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-chaos-lord",
-        "unit-death-guard-cultists",
-        "unit-death-guard-possessed",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-deathshroud-terminators",
         "unit-defiler",
         "unit-foetid-bloat-drone-with-heavy-blight-launcher",
@@ -131,7 +120,6 @@
         "unit-biologus-putrifier",
         "unit-blightlord-terminators",
         "unit-chaos-spawn",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-deathshroud-terminators",
         "unit-foul-blightspawn",
         "unit-icon-bearer",
@@ -152,7 +140,6 @@
         "unit-biologus-putrifier",
         "unit-blightlord-terminators",
         "unit-chaos-spawn",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-deathshroud-terminators",
         "unit-foul-blightspawn",
         "unit-icon-bearer",
@@ -168,9 +155,7 @@
     },
     {
       "name": "PATH OF PESTILENCE",
-      "unitIds": [
-        "unit-death-guard-cultists"
-      ]
+      "unitIds": []
     },
     {
       "name": "POX FLARE",
@@ -194,7 +179,6 @@
         "unit-biologus-putrifier",
         "unit-blightlord-terminators",
         "unit-chaos-spawn",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-deathshroud-terminators",
         "unit-foul-blightspawn",
         "unit-icon-bearer",
@@ -232,16 +216,16 @@
   },
   "summary": {
     "associations": {
-      "core": 285,
-      "faction": 618
+      "faction": 591,
+      "core": 251
     },
     "coreStratagems": {
       "canonical": 10,
       "observed": 10
     },
     "datasheets": {
-      "canonical": 41,
-      "imported": 41
+      "canonical": 36,
+      "imported": 36
     },
     "extraWahapediaNames": 14,
     "stratagems": {

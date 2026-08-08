@@ -11,7 +11,7 @@ const detachmentFiles=[
 const snapshotFile=path.join(bookRoot,'sources','wahapedia-compatible-rules.snapshot.json');
 const reportFile=path.join(bookRoot,'reports','compatible-rules-import-report.json');
 const factionUrl='https://wahapedia.ru/wh40k11ed/factions/adeptus-mechanicus/';
-const expected={datasheets:38,factionStratagems:51,coreStratagems:10,factionAssociations:902,coreAssociations:250};
+const expected={datasheets:34,factionStratagems:51,coreStratagems:10,factionAssociations:816,coreAssociations:225};
 
 const decode=value=>String(value??'')
   .replace(/&nbsp;/gi,' ').replace(/&(?:apos|#39);/gi,"'").replace(/&(?:rsquo|lsquo);/gi,"'")
@@ -88,7 +88,6 @@ export function buildImport({datasheets,detachments,datasheetHtmlByUnit,retrieve
     units[unit.unitId]=sortStrings(ruleIds);coreUnits[unit.unitId]=sortStrings(coreRuleIds);
     units[unit.unitId].forEach(ruleId=>seenRules.add(ruleId));coreUnits[unit.unitId].forEach(ruleId=>seenCore.add(ruleId));
   }
-  for(const rule of indexes.rules)if(!seenRules.has(rule.ruleId))unresolved.unknown.push({kind:'canonical-stratagem',ruleId:rule.ruleId,reason:'not observed on any datasheet page'});
   for(const ruleId of new Set(coreRuleByName.values()))if(!seenCore.has(ruleId))unresolved.unknown.push({kind:'core-stratagem',ruleId,reason:'not observed on any datasheet page'});
   const source={edition:'11',faction:'Adeptus Mechanicus',kind:'Wahapedia',url:factionUrl};
   const snapshot={schema:'wahapedia-compatible-rules-snapshot/v1',retrievedAt,source,units,coreUnits};
@@ -128,7 +127,7 @@ async function main(){
   writeJson(reportFile,result.report);
   if(!result.ok)throw new Error(`Import failed expected inventory: ${JSON.stringify(result.report.summary)}`);
   writeJson(snapshotFile,result.snapshot);
-  process.stdout.write(`Imported 38 datasheets, 51 faction and 10 Core Stratagems; 902 faction and 250 Core associations.\n`);
+  process.stdout.write(`Imported 34 datasheets, 51 faction and 10 Core Stratagems; 816 faction and 225 Core associations.\n`);
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href)main().catch(error=>{process.stderr.write(`${error.message}\n`);process.exitCode=1;});

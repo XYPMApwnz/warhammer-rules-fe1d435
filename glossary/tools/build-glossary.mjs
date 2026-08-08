@@ -626,6 +626,11 @@ for(const term of registry.values()){
   duplicateIndex.get(marker).push(term.id);
 }
 const duplicateCandidates=[...duplicateIndex.values()].filter(termIds=>termIds.length>1).map(termIds=>({termIds,status:'review-required'}));
+const termIds=new Set(registry.keys());
+for(const term of registry.values()){
+  term.related=(term.related||[]).filter(id=>termIds.has(id));
+  term.mentions=(term.mentions||[]).filter(id=>termIds.has(id));
+}
 const registryDocument={schema:1,language:'en',terms:Object.fromEntries([...registry].sort(([a],[b])=>a.localeCompare(b)))};
 const contextDocuments={};
 for(const [bookId,records] of Object.entries(contexts))contextDocuments[bookId]={schema:1,bookId,terms:records};

@@ -6,9 +6,6 @@
         "unit-biologus-putrifier",
         "unit-daemon-prince-of-nurgle",
         "unit-daemon-prince-of-nurgle-with-wings",
-        "unit-death-guard-chaos-lord",
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-foul-blightspawn",
         "unit-icon-bearer",
         "unit-lord-of-contagion",
@@ -26,9 +23,6 @@
         "unit-biologus-putrifier",
         "unit-daemon-prince-of-nurgle",
         "unit-daemon-prince-of-nurgle-with-wings",
-        "unit-death-guard-chaos-lord",
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-foul-blightspawn",
         "unit-icon-bearer",
         "unit-lord-of-contagion",
@@ -46,9 +40,6 @@
         "unit-biologus-putrifier",
         "unit-daemon-prince-of-nurgle",
         "unit-daemon-prince-of-nurgle-with-wings",
-        "unit-death-guard-chaos-lord",
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-foul-blightspawn",
         "unit-icon-bearer",
         "unit-lord-of-contagion",
@@ -66,9 +57,6 @@
         "unit-biologus-putrifier",
         "unit-daemon-prince-of-nurgle",
         "unit-daemon-prince-of-nurgle-with-wings",
-        "unit-death-guard-chaos-lord",
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-foul-blightspawn",
         "unit-icon-bearer",
         "unit-lord-of-contagion",
@@ -86,9 +74,6 @@
         "unit-biologus-putrifier",
         "unit-daemon-prince-of-nurgle",
         "unit-daemon-prince-of-nurgle-with-wings",
-        "unit-death-guard-chaos-lord",
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-foul-blightspawn",
         "unit-icon-bearer",
         "unit-lord-of-contagion",
@@ -112,9 +97,6 @@
         "unit-biologus-putrifier",
         "unit-daemon-prince-of-nurgle",
         "unit-daemon-prince-of-nurgle-with-wings",
-        "unit-death-guard-chaos-lord",
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-foul-blightspawn",
         "unit-icon-bearer",
         "unit-lord-of-contagion",
@@ -162,9 +144,6 @@
         "unit-biologus-putrifier",
         "unit-daemon-prince-of-nurgle",
         "unit-daemon-prince-of-nurgle-with-wings",
-        "unit-death-guard-chaos-lord",
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-foul-blightspawn",
         "unit-icon-bearer",
         "unit-lord-of-contagion",
@@ -182,9 +161,6 @@
         "unit-biologus-putrifier",
         "unit-daemon-prince-of-nurgle",
         "unit-daemon-prince-of-nurgle-with-wings",
-        "unit-death-guard-chaos-lord",
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-foul-blightspawn",
         "unit-icon-bearer",
         "unit-lord-of-contagion",
@@ -220,9 +196,6 @@
         "unit-biologus-putrifier",
         "unit-daemon-prince-of-nurgle",
         "unit-daemon-prince-of-nurgle-with-wings",
-        "unit-death-guard-chaos-lord",
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-foul-blightspawn",
         "unit-icon-bearer",
         "unit-lord-of-contagion",
@@ -246,9 +219,6 @@
         "unit-biologus-putrifier",
         "unit-daemon-prince-of-nurgle",
         "unit-daemon-prince-of-nurgle-with-wings",
-        "unit-death-guard-chaos-lord",
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-foul-blightspawn",
         "unit-icon-bearer",
         "unit-lord-of-contagion",
@@ -263,8 +233,6 @@
     },
     "enhancement-face-of-death": {
       "match": [
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-lord-of-contagion",
         "unit-lord-of-virulence"
       ],
@@ -272,8 +240,6 @@
     },
     "enhancement-vile-vigour": {
       "match": [
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-lord-of-contagion",
         "unit-lord-of-virulence"
       ],
@@ -281,8 +247,6 @@
     },
     "enhancement-warprot-talisman": {
       "match": [
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-lord-of-contagion",
         "unit-lord-of-virulence"
       ],
@@ -290,8 +254,6 @@
     },
     "enhancement-helm-of-the-fly-king": {
       "match": [
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-lord-of-contagion",
         "unit-lord-of-virulence"
       ],
@@ -328,7 +290,6 @@
     "enhancement-rejuvenating-swarm": {
       "match": [
         "unit-biologus-putrifier",
-        "unit-death-guard-chaos-lord",
         "unit-foul-blightspawn",
         "unit-icon-bearer",
         "unit-lord-of-poxes",
@@ -342,9 +303,6 @@
     "enhancement-host-of-the-hybridised-pox": {
       "match": [
         "unit-biologus-putrifier",
-        "unit-death-guard-chaos-lord",
-        "unit-death-guard-chaos-lord-in-terminator-armour",
-        "unit-death-guard-sorcerer-in-terminator-armour",
         "unit-foul-blightspawn",
         "unit-icon-bearer",
         "unit-lord-of-contagion",

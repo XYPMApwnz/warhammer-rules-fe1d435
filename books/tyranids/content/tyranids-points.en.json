@@ -15,21 +15,6 @@
   },
   "units": [
     {
-      "id": "unit-barbed-hierodule",
-      "title": "Barbed Hierodule",
-      "status": "Warhammer Legends",
-      "sourceLayer": "imperial-armour",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 340,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": []
-    },
-    {
       "id": "unit-barbgaunts",
       "title": "Barbgaunts",
       "status": "Current",
@@ -150,21 +135,6 @@
       }
     },
     {
-      "id": "unit-dimachaeron",
-      "title": "Dimachaeron",
-      "status": "Warhammer Legends",
-      "sourceLayer": "imperial-armour",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 200,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": []
-    },
-    {
       "id": "unit-exocrine",
       "title": "Exocrine",
       "status": "Current",
@@ -281,30 +251,6 @@
       }
     },
     {
-      "id": "unit-harridan",
-      "title": "Harridan",
-      "status": "Current",
-      "sourceLayer": "imperial-armour",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 610,
-          "minModels": 1,
-          "maxModels": 1
-        },
-        {
-          "label": "2+ unit: 1 models",
-          "value": 660
-        }
-      ],
-      "paidWargear": [],
-      "pointsSource": {
-        "label": "Official MFM v1.1",
-        "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-07-29"
-      }
-    },
-    {
       "id": "unit-haruspex",
       "title": "Haruspex",
       "status": "Current",
@@ -323,30 +269,6 @@
           "minModels": 1,
           "maxModels": 1,
           "minCopies": 3
-        }
-      ],
-      "paidWargear": [],
-      "pointsSource": {
-        "label": "Official MFM v1.1",
-        "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-07-29"
-      }
-    },
-    {
-      "id": "unit-hierophant",
-      "title": "Hierophant",
-      "status": "Current",
-      "sourceLayer": "imperial-armour",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 810,
-          "minModels": 1,
-          "maxModels": 1
-        },
-        {
-          "label": "2+ unit: 1 models",
-          "value": 910
         }
       ],
       "paidWargear": [],
@@ -511,21 +433,6 @@
         "url": "https://mfm.warhammer-community.com/en/tyranids",
         "verifiedAt": "2026-07-29"
       }
-    },
-    {
-      "id": "unit-malanthrope",
-      "title": "Malanthrope",
-      "status": "Warhammer Legends",
-      "sourceLayer": "imperial-armour",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 75,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": []
     },
     {
       "id": "unit-maleceptor",
@@ -922,36 +829,6 @@
         "url": "https://mfm.warhammer-community.com/en/tyranids",
         "verifiedAt": "2026-07-29"
       }
-    },
-    {
-      "id": "unit-scythed-hierodule",
-      "title": "Scythed Hierodule",
-      "status": "Warhammer Legends",
-      "sourceLayer": "imperial-armour",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 330,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-sky-slasher-swarms",
-      "title": "Sky-slasher Swarms",
-      "status": "Warhammer Legends",
-      "sourceLayer": "imperial-armour",
-      "points": [
-        {
-          "label": "3 models",
-          "value": 60,
-          "minModels": 3,
-          "maxModels": 3
-        }
-      ],
-      "paidWargear": []
     },
     {
       "id": "unit-spore-mines",
@@ -1705,7 +1582,7 @@
     }
   ],
   "audit": {
-    "units": 57,
+    "units": 50,
     "enhancements": 34
   },
   "detachments": [

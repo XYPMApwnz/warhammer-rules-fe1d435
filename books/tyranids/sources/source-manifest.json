@@ -4,7 +4,12 @@
   "edition": "11th Edition",
   "language": "en",
   "verifiedAt": "2026-07-29",
-  "precedence": ["official-current-update", "official-base-publication", "frozen-community-transcription", "secondary-comparison"],
+  "precedence": [
+    "official-current-update",
+    "official-base-publication",
+    "frozen-community-transcription",
+    "secondary-comparison"
+  ],
   "layers": [
     {
       "id": "faction-pack-v1.1",
@@ -20,13 +25,38 @@
       "sha256": "BBB2B1F9167C8421D13CFB87FC46DF778D59B7E9803D5D8F812060424FA9C79A",
       "authority": "official",
       "role": "11e-overlay",
-      "scope": ["army-rules", "detachments", "stratagems", "enhancements", "updates", "faq"],
-      "coverage": {"pages": 31, "detachments": 4, "updates": 32, "faq": 12},
-      "knownGaps": ["Does not contain the complete Codex datasheet and wargear corpus."],
-      "supersedes": [{"localPath": "books/tyranids/sources/tyranids-faction-pack-v1.0.pdf", "sha256": "DE2105F9FB9D0A1A86B9FD970450128F49BDD79083F50C73062A165D7412A3BF"}],
+      "scope": [
+        "army-rules",
+        "detachments",
+        "stratagems",
+        "enhancements",
+        "updates",
+        "faq"
+      ],
+      "coverage": {
+        "pages": 31,
+        "detachments": 4,
+        "updates": 32,
+        "faq": 12
+      },
+      "knownGaps": [
+        "Does not contain the complete Codex datasheet and wargear corpus."
+      ],
+      "supersedes": [
+        {
+          "localPath": "books/tyranids/sources/tyranids-faction-pack-v1.0.pdf",
+          "sha256": "DE2105F9FB9D0A1A86B9FD970450128F49BDD79083F50C73062A165D7412A3BF"
+        }
+      ],
       "language": "en",
-      "affectedRecords": ["faction-pack.json", "official-updates.json"],
-      "affectedOutputs": ["reader.html", "mobile/*.html"]
+      "affectedRecords": [
+        "faction-pack.json",
+        "official-updates.json"
+      ],
+      "affectedOutputs": [
+        "reader.html",
+        "mobile/*.html"
+      ]
     },
     {
       "id": "codex-transcription",
@@ -42,13 +72,34 @@
       "sha256": "41CB0268E17427B12C97C5F4CE2BFAD73BEEBA7CB91804CE41F28BAA14D8421C",
       "authority": "community",
       "role": "codex-structure",
-      "scope": ["datasheets", "profiles", "weapons", "abilities", "composition", "keywords", "points-structure"],
-      "coverage": {"datasheets": 57, "mainDatasheets": 52, "legendsDatasheets": 5},
-      "knownGaps": ["The repository does not contain the authoritative official Codex source needed to verify every rule-bearing field."],
+      "scope": [
+        "datasheets",
+        "profiles",
+        "weapons",
+        "abilities",
+        "composition",
+        "keywords",
+        "points-structure"
+      ],
+      "coverage": {
+        "datasheets": 50,
+        "mainDatasheets": 50,
+        "legendsDatasheets": 0
+      },
+      "knownGaps": [
+        "The repository does not contain the authoritative official Codex source needed to verify every rule-bearing field."
+      ],
       "supersedes": [],
       "language": "en",
-      "affectedRecords": ["codex-datasheets.json", "codex-wargear.json", "codex-parity.json"],
-      "affectedOutputs": ["reader.html", "mobile/*.html"],
+      "affectedRecords": [
+        "codex-datasheets.json",
+        "codex-wargear.json",
+        "codex-parity.json"
+      ],
+      "affectedOutputs": [
+        "reader.html",
+        "mobile/*.html"
+      ],
       "status": "requires-codex-verification"
     },
     {
@@ -65,13 +116,29 @@
       "sha256": "C25AEEBFE8ED46CC47A0EA10BC791FEB9802048BC362C7CE2FB013BC76CA446E",
       "authority": "official",
       "role": "points-and-roster-contract",
-      "scope": ["unit-points", "enhancement-points", "detachment-points"],
-      "coverage": {"units": 57, "enhancements": 34, "detachments": 10},
-      "knownGaps": ["Rule text and unit structure are outside the MFM scope."],
+      "scope": [
+        "unit-points",
+        "enhancement-points",
+        "detachment-points"
+      ],
+      "coverage": {
+        "units": 57,
+        "enhancements": 34,
+        "detachments": 10
+      },
+      "knownGaps": [
+        "Rule text and unit structure are outside the MFM scope."
+      ],
       "supersedes": [],
       "language": "en",
-      "affectedRecords": ["points.json"],
-      "affectedOutputs": ["reader.html", "mobile/*.html", "roster-guides/points-data.js"]
+      "affectedRecords": [
+        "points.json"
+      ],
+      "affectedOutputs": [
+        "reader.html",
+        "mobile/*.html",
+        "roster-guides/points-data.js"
+      ]
     },
     {
       "id": "wahapedia-compatible-rules",
@@ -87,13 +154,28 @@
       "sha256": "C4D145163ED8F311DB04BED57F65003D1940EC4B53AE5BD6C25A9A97B17D516A",
       "authority": "secondary",
       "role": "compatible-rules-comparison",
-      "scope": ["rule-to-unit-associations", "compatible-rules-candidates"],
-      "coverage": {"matrixRows": 1947, "conditionalRows": 90, "unresolvedRows": 0},
-      "knownGaps": ["This snapshot does not provide all-content Wahapedia parity for every rule-bearing layer."],
+      "scope": [
+        "rule-to-unit-associations",
+        "compatible-rules-candidates"
+      ],
+      "coverage": {
+        "matrixRows": 1947,
+        "conditionalRows": 90,
+        "unresolvedRows": 0
+      },
+      "knownGaps": [
+        "This snapshot does not provide all-content Wahapedia parity for every rule-bearing layer."
+      ],
       "supersedes": [],
       "language": "en",
-      "affectedRecords": ["compatible-rules-correction-ledger.json", "generated/compatible-rules.json"],
-      "affectedOutputs": ["mobile/related-rules.inc", "reader.html"]
+      "affectedRecords": [
+        "compatible-rules-correction-ledger.json",
+        "generated/compatible-rules.json"
+      ],
+      "affectedOutputs": [
+        "mobile/related-rules.inc",
+        "reader.html"
+      ]
     }
   ],
   "knownGaps": [

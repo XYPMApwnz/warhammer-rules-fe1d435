@@ -249,12 +249,13 @@ const datasheets=points.units.map(pointUnit=>{
   return result;
 }).sort((a,b)=>a.category.localeCompare(b.category)||a.title.localeCompare(b.title));
 
-const result={schema:1,source:{title:'BSData Warhammer 40,000 11th Edition · Adeptus Mechanicus',url:SOURCE_URL,revision:String(source.revision),commit:points.source.commit,sha256:normalizedFileSha256(sourcePath)},datasheets,audit:{datasheets:datasheets.length,legendsDatasheets:datasheets.filter(unit=>unit.status==='Warhammer Legends').length}};
+const publishedDatasheets=datasheets.filter(unit=>unit.status!=='Warhammer Legends');
+const result={schema:1,source:{title:'BSData Warhammer 40,000 11th Edition ? Adeptus Mechanicus',url:SOURCE_URL,revision:String(source.revision),commit:points.source.commit,sha256:normalizedFileSha256(sourcePath)},datasheets:publishedDatasheets,audit:{datasheets:publishedDatasheets.length,legendsDatasheets:0}};
 const output=`${JSON.stringify(result,null,2)}\n`;
 if(process.argv.includes('--check')){
   if(!fs.existsSync(outputPath)||fs.readFileSync(outputPath,'utf8')!==output)throw new Error('Codex datasheet snapshot is stale; run extract-datasheets.mjs');
-  console.log(`Codex datasheets current: ${datasheets.length}`);
+  console.log(`Codex datasheets current: ${publishedDatasheets.length}`);
 }else{
   fs.writeFileSync(outputPath,output,'utf8');
-  console.log(`Extracted ${datasheets.length} current datasheets`);
+  console.log(`Extracted ${publishedDatasheets.length} current datasheets`);
 }

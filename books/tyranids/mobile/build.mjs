@@ -67,7 +67,7 @@ const categories=[...source.matchAll(/<section class="content-group" id="(datash
     return{id,title:clean(title),units};
   });
 const units=categories.flatMap(category=>category.units);
-if(detachments.length!==10||units.length!==57)throw new Error(`Expected 10 detachments and 57 datasheets, found ${detachments.length} and ${units.length}`);
+if(detachments.length!==10||units.length!==50)throw new Error(`Expected 10 detachments and 50 datasheets, found ${detachments.length} and ${units.length}`);
 
 const armyRulesContent=source.includes('id="army-rules"')?extract('section','army-rules'):
   `<section class="section" id="army-rules"><h2 class="section-title">Army Rules</h2><p class="lead">Current official replacements for the Tyranids army rules.</p>${extract('section','update-army-shadow-in-the-warp')}${extract('section','update-army-synapse')}</section>`;

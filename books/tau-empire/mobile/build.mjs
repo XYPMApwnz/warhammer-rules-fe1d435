@@ -40,7 +40,7 @@ const categories=[...source.matchAll(/<section class="content-group" id="(datash
     const ruleFacts=JSON.parse((/\bdata-rule-facts="([^"]*)"/.exec(article)?.[1]||'{}').replaceAll('&quot;','"').replaceAll('&amp;','&'));return{id:unitId,title:clean(unitTitle),file:`${unitId.slice(5)}.html`,type:'unit',category:id,enhancementsAllowed:!ruleFacts.epic};
   });return{id,title:clean(title),units};
 });
-const units=categories.flatMap(category=>category.units);if(detachments.length!==7||units.length!==63)throw new Error(`Expected 7 detachments and 63 datasheets, found ${detachments.length} and ${units.length}`);
+const units=categories.flatMap(category=>category.units);if(detachments.length!==7||units.length!==39)throw new Error(`Expected 7 detachments and 39 datasheets, found ${detachments.length} and ${units.length}`);
 const staticRoutes=[{file:'index.html',id:'start',title:'Start',type:'start'},{file:'army-rules.html',id:'army-rules',title:'Army Rules',type:'army-rules'},{file:'updates.html',id:'updates',title:'Updates',type:'section'}],routes=[...staticRoutes,...detachments,...units];
 const content=route=>portable(route.type==='start'?extract('section','start'):route.type==='army-rules'?extract('section','army-rules'):route.type==='section'||route.type==='detachment'?extract('section',route.id):extract('article',route.id));
 for(const route of routes)for(const[,id]of content(route).matchAll(/\sid="([^"]+)"/g))mobileRulePaths.set(id,`books/tau-empire/mobile/${route.file}#${id}`);

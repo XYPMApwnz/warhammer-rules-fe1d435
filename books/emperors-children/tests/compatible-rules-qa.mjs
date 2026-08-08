@@ -10,10 +10,10 @@ const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 const snapshot=read('sources/wahapedia-compatible-rules.snapshot.json'),report=read('reports/compatible-rules-import-report.json'),gaps=read('reports/compatible-rules-gap-report.json'),ledger=read('sources/compatible-rules-correction-ledger.json'),owners=read('sources/enhancement-owner-matrix.json'),matrix=read('generated/compatible-rules.json'),source=inputs(),built=buildCompatibleRules(source);
 
 assert.deepEqual(matrix,built,'generated matrix must be reproducible from frozen inputs');
-assert.equal(Object.keys(snapshot.units).length,23);
-assert.equal(Object.keys(snapshot.coreUnits).length,23);
-assert.deepEqual(report.summary.datasheets,{canonical:23,imported:23});
-assert.deepEqual(report.summary.factionStratagems,{canonical:51,observed:51});
+assert.equal(Object.keys(snapshot.units).length,18);
+assert.equal(Object.keys(snapshot.coreUnits).length,18);
+assert.deepEqual(report.summary.datasheets,{canonical:18,imported:18});
+assert.deepEqual(report.summary.factionStratagems,{canonical:51,observed:49});
 assert.equal(report.summary.unexplainedUnknowns,0);
 assert.equal(report.summary.unresolved,0);
 assert.deepEqual(gaps.unexplainedUnknowns,[]);
@@ -31,9 +31,9 @@ for(const entry of ledger.entries){
 assert.equal(ledgerPairs.size,17);
 
 const all=Object.entries(matrix.units).flatMap(([unitId,rules])=>rules.map(rule=>({unitId,...rule})));
-assert.equal(Object.keys(matrix.units).length,23);
+assert.equal(Object.keys(matrix.units).length,18);
 assert.equal(all.filter(row=>row.state==='conditional').length,17);
-assert.equal(new Set(all.filter(row=>!row.scope&&!row.kind).map(row=>row.ruleId)).size,51);
+assert.equal(new Set(all.filter(row=>!row.scope&&!row.kind).map(row=>row.ruleId)).size,49);
 assert.equal(new Set(all.filter(row=>row.scope==='core').map(row=>row.ruleId)).size,10);
 assert.equal(new Set(all.filter(row=>row.kind==='enhancement').map(row=>row.ruleId)).size,34);
 assert(all.some(row=>row.ruleId==='enhancement-faultless-opportunist'));
@@ -66,4 +66,4 @@ for(const title of ['Frenzied Ferocity','Eager Patrons','Beguiling Grotesquerie'
 assert(rosterData.includes('Faultless Opportunist'));
 assert(rosterData.includes('"value": null'));
 
-console.log(`PASS Emperor's Children matrix runtime: 23 datasheets, ${all.length} rows, 51 faction Stratagems, no unexplained unknowns`);
+console.log(`PASS Emperor's Children matrix runtime: 18 datasheets, ${all.length} rows, 49 observed of 51 faction Stratagems, no unexplained unknowns`);

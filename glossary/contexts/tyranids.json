@@ -274,9 +274,7 @@
           "unit-tyrannofex",
           "unit-mucolid-spores",
           "unit-ripper-swarms",
-          "unit-spore-mines",
-          "unit-harridan",
-          "unit-hierophant"
+          "unit-spore-mines"
         ]
       }
     },
@@ -300,8 +298,7 @@
           "unit-trygon",
           "unit-mucolid-spores",
           "unit-ripper-swarms",
-          "unit-spore-mines",
-          "unit-sky-slasher-swarms"
+          "unit-spore-mines"
         ]
       }
     },
@@ -531,8 +528,7 @@
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-tyranid-prime",
           "unit-old-one-eye",
-          "unit-the-swarmlord",
-          "unit-malanthrope"
+          "unit-the-swarmlord"
         ]
       }
     },
@@ -856,8 +852,7 @@
           "unit-lictor",
           "unit-neurolictor",
           "unit-venomthropes",
-          "unit-von-ryans-leapers",
-          "unit-malanthrope"
+          "unit-von-ryans-leapers"
         ]
       }
     },
@@ -926,8 +921,7 @@
           "unit-norn-emissary",
           "unit-toxicrene",
           "unit-trygon",
-          "unit-tyrannofex",
-          "unit-dimachaeron"
+          "unit-tyrannofex"
         ]
       }
     },
@@ -942,10 +936,7 @@
           "unit-tervigon",
           "unit-norn-assimilator",
           "unit-norn-emissary",
-          "unit-tyrannofex",
-          "unit-barbed-hierodule",
-          "unit-dimachaeron",
-          "unit-scythed-hierodule"
+          "unit-tyrannofex"
         ]
       }
     },
@@ -2827,8 +2818,7 @@
         "datasheet": "unit-ripper-swarms",
         "statline": "ripper-swarms-profile",
         "units": [
-          "unit-ripper-swarms",
-          "unit-sky-slasher-swarms"
+          "unit-ripper-swarms"
         ]
       }
     },
@@ -2853,369 +2843,6 @@
         "statline": "spore-mines-profile",
         "units": [
           "unit-spore-mines"
-        ]
-      }
-    },
-    "tyranids-ability-damaged-1-10-wounds-remaining": {
-      "termId": "tyranids-ability-damaged-1-10-wounds-remaining",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-damaged-1-10-wounds-remaining",
-        "rule": "unit-harridan",
-        "datasheet": "unit-harridan",
-        "statline": "harridan-profile",
-        "units": [
-          "unit-harridan"
-        ]
-      }
-    },
-    "tyranids-ability-frenzied-metabolism": {
-      "termId": "tyranids-ability-frenzied-metabolism",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-frenzied-metabolism",
-        "rule": "unit-harridan",
-        "datasheet": "unit-harridan",
-        "statline": "harridan-profile",
-        "units": [
-          "unit-harridan"
-        ]
-      }
-    },
-    "tyranids-ability-deadly-demise-2d6": {
-      "termId": "tyranids-ability-deadly-demise-2d6",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-deadly-demise-2d6",
-        "rule": "unit-harridan",
-        "datasheet": "unit-harridan",
-        "statline": "harridan-profile",
-        "units": [
-          "unit-harridan",
-          "unit-hierophant"
-        ]
-      }
-    },
-    "tyranids-ability-hover": {
-      "termId": "core-hover",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-hover",
-        "rule": "unit-harridan",
-        "datasheet": "unit-harridan",
-        "statline": "harridan-profile",
-        "units": [
-          "unit-harridan"
-        ]
-      }
-    },
-    "tyranids-weapon-dire-bio-cannon": {
-      "termId": "tyranids-weapon-dire-bio-cannon",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-dire-bio-cannon",
-        "rule": "unit-harridan",
-        "datasheet": "unit-harridan",
-        "statline": "harridan-profile",
-        "units": [
-          "unit-harridan",
-          "unit-hierophant"
-        ]
-      }
-    },
-    "tyranids-weapon-gargantuan-scything-talons": {
-      "termId": "tyranids-weapon-gargantuan-scything-talons",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-gargantuan-scything-talons",
-        "rule": "unit-harridan",
-        "datasheet": "unit-harridan",
-        "statline": "harridan-profile",
-        "units": [
-          "unit-harridan"
-        ]
-      }
-    },
-    "tyranids-ability-damaged-1-10-wounds-remaining-2": {
-      "termId": "tyranids-ability-damaged-1-10-wounds-remaining-2",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-damaged-1-10-wounds-remaining-2",
-        "rule": "unit-hierophant",
-        "datasheet": "unit-hierophant",
-        "statline": "hierophant-profile",
-        "units": [
-          "unit-hierophant"
-        ]
-      }
-    },
-    "tyranids-ability-apex-beast": {
-      "termId": "tyranids-ability-apex-beast",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-apex-beast",
-        "rule": "unit-hierophant",
-        "datasheet": "unit-hierophant",
-        "statline": "hierophant-profile",
-        "units": [
-          "unit-hierophant"
-        ]
-      }
-    },
-    "tyranids-ability-stalking-forward": {
-      "termId": "tyranids-ability-stalking-forward",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-stalking-forward",
-        "rule": "unit-hierophant",
-        "datasheet": "unit-hierophant",
-        "statline": "hierophant-profile",
-        "units": [
-          "unit-hierophant"
-        ]
-      }
-    },
-    "tyranids-weapon-bio-plasma-torrent": {
-      "termId": "tyranids-weapon-bio-plasma-torrent",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-bio-plasma-torrent",
-        "rule": "unit-hierophant",
-        "datasheet": "unit-hierophant",
-        "statline": "hierophant-profile",
-        "units": [
-          "unit-hierophant"
-        ]
-      }
-    },
-    "tyranids-weapon-lashwhip-pods": {
-      "termId": "tyranids-weapon-lashwhip-pods",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-lashwhip-pods",
-        "rule": "unit-hierophant",
-        "datasheet": "unit-hierophant",
-        "statline": "hierophant-profile",
-        "units": [
-          "unit-hierophant"
-        ]
-      }
-    },
-    "tyranids-weapon-titanic-scything-talons": {
-      "termId": "tyranids-weapon-titanic-scything-talons",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-titanic-scything-talons",
-        "rule": "unit-hierophant",
-        "datasheet": "unit-hierophant",
-        "statline": "hierophant-profile",
-        "units": [
-          "unit-hierophant"
-        ]
-      }
-    },
-    "tyranids-ability-overgrown-barbs": {
-      "termId": "tyranids-ability-overgrown-barbs",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-overgrown-barbs",
-        "rule": "unit-barbed-hierodule",
-        "datasheet": "unit-barbed-hierodule",
-        "statline": "barbed-hierodule-profile",
-        "units": [
-          "unit-barbed-hierodule"
-        ]
-      }
-    },
-    "tyranids-ability-damaged-1-6-wounds-remaining": {
-      "termId": "tyranids-ability-damaged-1-6-wounds-remaining",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-damaged-1-6-wounds-remaining",
-        "rule": "unit-barbed-hierodule",
-        "datasheet": "unit-barbed-hierodule",
-        "statline": "barbed-hierodule-profile",
-        "units": [
-          "unit-barbed-hierodule",
-          "unit-scythed-hierodule"
-        ]
-      }
-    },
-    "tyranids-weapon-bio-cannon": {
-      "termId": "tyranids-weapon-bio-cannon",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-bio-cannon",
-        "rule": "unit-barbed-hierodule",
-        "datasheet": "unit-barbed-hierodule",
-        "statline": "barbed-hierodule-profile",
-        "units": [
-          "unit-barbed-hierodule"
-        ]
-      }
-    },
-    "tyranids-weapon-hierodule-scything-talons": {
-      "termId": "tyranids-weapon-hierodule-scything-talons",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-hierodule-scything-talons",
-        "rule": "unit-barbed-hierodule",
-        "datasheet": "unit-barbed-hierodule",
-        "statline": "barbed-hierodule-profile",
-        "units": [
-          "unit-barbed-hierodule"
-        ]
-      }
-    },
-    "tyranids-ability-digestion-spine": {
-      "termId": "tyranids-ability-digestion-spine",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-digestion-spine",
-        "rule": "unit-dimachaeron",
-        "datasheet": "unit-dimachaeron",
-        "statline": "dimachaeron-profile",
-        "units": [
-          "unit-dimachaeron"
-        ]
-      }
-    },
-    "tyranids-weapon-massive-scything-talons": {
-      "termId": "tyranids-weapon-massive-scything-talons",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-massive-scything-talons",
-        "rule": "unit-dimachaeron",
-        "datasheet": "unit-dimachaeron",
-        "statline": "dimachaeron-profile",
-        "units": [
-          "unit-dimachaeron"
-        ]
-      }
-    },
-    "tyranids-ability-enhanced-toxic-miasma": {
-      "termId": "tyranids-ability-enhanced-toxic-miasma",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-enhanced-toxic-miasma",
-        "rule": "unit-malanthrope",
-        "datasheet": "unit-malanthrope",
-        "statline": "malanthrope-profile",
-        "units": [
-          "unit-malanthrope"
-        ]
-      }
-    },
-    "tyranids-ability-prey-adaptation": {
-      "termId": "tyranids-ability-prey-adaptation",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-prey-adaptation",
-        "rule": "unit-malanthrope",
-        "datasheet": "unit-malanthrope",
-        "statline": "malanthrope-profile",
-        "units": [
-          "unit-malanthrope"
-        ]
-      }
-    },
-    "tyranids-ability-leader-9": {
-      "termId": "tyranids-ability-leader-9",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-leader-9",
-        "rule": "unit-malanthrope",
-        "datasheet": "unit-malanthrope",
-        "statline": "malanthrope-profile",
-        "units": [
-          "unit-malanthrope"
-        ]
-      }
-    },
-    "tyranids-ability-lance": {
-      "termId": "core-lance",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-lance",
-        "rule": "unit-malanthrope",
-        "datasheet": "unit-malanthrope",
-        "statline": "malanthrope-profile",
-        "units": [
-          "unit-malanthrope"
-        ]
-      }
-    },
-    "tyranids-ability-lethal-hits": {
-      "termId": "tyranids-ability-lethal-hits",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-lethal-hits",
-        "rule": "unit-malanthrope",
-        "datasheet": "unit-malanthrope",
-        "statline": "malanthrope-profile",
-        "units": [
-          "unit-malanthrope"
-        ]
-      }
-    },
-    "tyranids-ability-sustained-hits": {
-      "termId": "tyranids-ability-sustained-hits",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-sustained-hits",
-        "rule": "unit-malanthrope",
-        "datasheet": "unit-malanthrope",
-        "statline": "malanthrope-profile",
-        "units": [
-          "unit-malanthrope"
-        ]
-      }
-    },
-    "tyranids-weapon-grasping-tail": {
-      "termId": "tyranids-weapon-grasping-tail",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-grasping-tail",
-        "rule": "unit-malanthrope",
-        "datasheet": "unit-malanthrope",
-        "statline": "malanthrope-profile",
-        "units": [
-          "unit-malanthrope"
-        ]
-      }
-    },
-    "tyranids-ability-irresistible-force": {
-      "termId": "tyranids-ability-irresistible-force",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-irresistible-force",
-        "rule": "unit-scythed-hierodule",
-        "datasheet": "unit-scythed-hierodule",
-        "statline": "scythed-hierodule-profile",
-        "units": [
-          "unit-scythed-hierodule"
-        ]
-      }
-    },
-    "tyranids-weapon-bio-acid-spray": {
-      "termId": "tyranids-weapon-bio-acid-spray",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-bio-acid-spray",
-        "rule": "unit-scythed-hierodule",
-        "datasheet": "unit-scythed-hierodule",
-        "statline": "scythed-hierodule-profile",
-        "units": [
-          "unit-scythed-hierodule"
-        ]
-      }
-    },
-    "tyranids-weapon-hierodule-scything-talons-2": {
-      "termId": "tyranids-weapon-hierodule-scything-talons-2",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-hierodule-scything-talons-2",
-        "rule": "unit-scythed-hierodule",
-        "datasheet": "unit-scythed-hierodule",
-        "statline": "scythed-hierodule-profile",
-        "units": [
-          "unit-scythed-hierodule"
-        ]
-      }
-    },
-    "tyranids-ability-chitinous-horrors": {
-      "termId": "tyranids-ability-chitinous-horrors",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-chitinous-horrors",
-        "rule": "unit-sky-slasher-swarms",
-        "datasheet": "unit-sky-slasher-swarms",
-        "statline": "sky-slasher-swarms-profile",
-        "units": [
-          "unit-sky-slasher-swarms"
-        ]
-      }
-    },
-    "tyranids-weapon-claws-and-teeth": {
-      "termId": "tyranids-weapon-claws-and-teeth",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-claws-and-teeth",
-        "rule": "unit-sky-slasher-swarms",
-        "datasheet": "unit-sky-slasher-swarms",
-        "statline": "sky-slasher-swarms-profile",
-        "units": [
-          "unit-sky-slasher-swarms"
         ]
       }
     },
@@ -3707,6 +3334,20 @@
       "navigation": {
         "glossary": "glossary-tyranids-detachment-rule-questing-tendrils",
         "rule": "detachment-vanguard-onslaught"
+      }
+    },
+    "tyranids-army-rule-shadow-in-the-warp": {
+      "termId": "tyranids-army-rule-shadow-in-the-warp",
+      "navigation": {
+        "glossary": "glossary-tyranids-army-rule-shadow-in-the-warp",
+        "rule": "army-rule-shadow-in-the-warp"
+      }
+    },
+    "tyranids-army-rule-synapse": {
+      "termId": "tyranids-army-rule-synapse",
+      "navigation": {
+        "glossary": "glossary-tyranids-army-rule-synapse",
+        "rule": "army-rule-synapse"
       }
     }
   }

@@ -37,6 +37,7 @@ export function buildCompatibleRules({pack,codex,datasheets,snapshot,ledger}){
   const rows=new Map([...unitById].map(([unitId])=>[unitId,new Map()]));
   const corrections=new Map();
   for(const entry of ledger.entries)for(const unitId of entry.unitIds)for(const ruleId of entry.ruleIds){
+    if(!unitById.has(unitId))continue;
     const key=pairKey(unitId,ruleId);
     if(corrections.has(key))throw new Error(`Duplicate correction: ${key}`);
     corrections.set(key,entry);

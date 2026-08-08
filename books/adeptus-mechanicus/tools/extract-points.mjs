@@ -226,6 +226,7 @@ for(const unit of units)if(!officialUnitNames.has(unit.title)&&!legendNames.has(
 const enhancementByName=new Map(enhancements.map(item=>[normalize(item.title),item]));
 for(const [title,value] of Object.entries(officialMfm.enhancements))if(enhancementByName.get(normalize(title))?.value!==value)throw new Error(`Official MFM Enhancement mismatch: ${title}`);
 if(enhancementByName.size!==Object.keys(officialMfm.enhancements).length)throw new Error('Official MFM Enhancement count mismatch');
+const publishedUnits=units.filter(unit=>!legendNames.has(unit.title));
 const result={
   schema:1,
   source:{
@@ -238,15 +239,15 @@ const result={
     verifiedAt:officialMfm.capturedAt,
     sha256:normalizedFileSha256(sourcePath)
   },
-  units,
+  units:publishedUnits,
   enhancements,
-  audit:{units:units.length,enhancements:enhancements.length}
+  audit:{units:publishedUnits.length,enhancements:enhancements.length}
 };
 const output=`${JSON.stringify(result,null,2)}\n`;
 if(process.argv.includes('--check')){
   if(!fs.existsSync(outputPath)||fs.readFileSync(outputPath,'utf8')!==output)throw new Error('Mechanicus points snapshot is stale; run tools/extract-points.mjs');
-  console.log(`Mechanicus points snapshot is current: ${units.length} units, ${enhancements.length} Enhancements`);
+  console.log(`Mechanicus points snapshot is current: ${publishedUnits.length} units, ${enhancements.length} Enhancements`);
 }else{
   fs.writeFileSync(outputPath,output);
-  console.log(`Extracted ${units.length} units and ${enhancements.length} Enhancements`);
+  console.log(`Extracted ${publishedUnits.length} units and ${enhancements.length} Enhancements`);
 }

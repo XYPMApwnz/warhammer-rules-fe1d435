@@ -59,8 +59,8 @@ const categories = [...source.matchAll(/<section class="content-group" id="(data
   });
 
 const units = categories.flatMap(category => category.units);
-if (detachments.length !== 9 || units.length !== 41) {
-  throw new Error(`Expected 9 detachments and 41 datasheets, found ${detachments.length} and ${units.length}: ${categories.map(item => `${item.id}=${item.units.length}`).join(', ')}`);
+if (detachments.length !== 9 || units.length !== 36) {
+  throw new Error(`Expected 9 detachments and 36 datasheets, found ${detachments.length} and ${units.length}: ${categories.map(item => `${item.id}=${item.units.length}`).join(', ')}`);
 }
 
 const staticRoutes = [

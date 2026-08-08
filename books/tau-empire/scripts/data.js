@@ -181,10 +181,7 @@ window.DG_TERMS={
       "unit-broadside-battlesuits",
       "unit-crisis-fireknife-battlesuits",
       "unit-crisis-starscythe-battlesuits",
-      "unit-crisis-sunforge-battlesuits",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-xv9-hazard-battlesuits"
+      "unit-crisis-sunforge-battlesuits"
     ],
     "datasheet": "unit-breacher-team",
     "statline": "breacher-team-profile"
@@ -208,10 +205,7 @@ window.DG_TERMS={
       "unit-broadside-battlesuits",
       "unit-crisis-fireknife-battlesuits",
       "unit-crisis-starscythe-battlesuits",
-      "unit-crisis-sunforge-battlesuits",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-xv9-hazard-battlesuits"
+      "unit-crisis-sunforge-battlesuits"
     ],
     "datasheet": "unit-breacher-team",
     "statline": "breacher-team-profile"
@@ -235,10 +229,7 @@ window.DG_TERMS={
       "unit-broadside-battlesuits",
       "unit-crisis-fireknife-battlesuits",
       "unit-crisis-starscythe-battlesuits",
-      "unit-crisis-sunforge-battlesuits",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-xv9-hazard-battlesuits"
+      "unit-crisis-sunforge-battlesuits"
     ],
     "datasheet": "unit-breacher-team",
     "statline": "breacher-team-profile"
@@ -296,12 +287,7 @@ window.DG_TERMS={
       "unit-krootox-rampagers",
       "unit-piranhas",
       "unit-sky-ray-gunship",
-      "unit-tidewall-droneport",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-longstrike",
-      "unit-tactical-drones",
-      "unit-xv9-hazard-battlesuits"
+      "unit-tidewall-droneport"
     ],
     "datasheet": "unit-breacher-team",
     "statline": "breacher-team-profile"
@@ -323,11 +309,7 @@ window.DG_TERMS={
       "unit-hammerhead-gunship",
       "unit-riptide-battlesuit",
       "unit-sky-ray-gunship",
-      "unit-stormsurge",
-      "unit-taunar-supremacy-armour",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-longstrike"
+      "unit-stormsurge"
     ],
     "datasheet": "unit-breacher-team",
     "statline": "breacher-team-profile"
@@ -364,17 +346,7 @@ window.DG_TERMS={
       "unit-stormsurge",
       "unit-sun-shark-bomber",
       "unit-tidewall-droneport",
-      "unit-tidewall-gunrig",
-      "unit-ax-1-0-tiger-shark",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-drone-sentry-turret",
-      "unit-great-knarloc",
-      "unit-heavy-gun-drones",
-      "unit-longstrike",
-      "unit-remora-stealth-drones",
-      "unit-tactical-drones",
-      "unit-xv9-hazard-battlesuits"
+      "unit-tidewall-gunrig"
     ],
     "datasheet": "unit-breacher-team",
     "statline": "breacher-team-profile"
@@ -412,23 +384,7 @@ window.DG_TERMS={
       "unit-riptide-battlesuit",
       "unit-sky-ray-gunship",
       "unit-stormsurge",
-      "unit-sun-shark-bomber",
-      "unit-ax-1-0-tiger-shark",
-      "unit-manta",
-      "unit-taunar-supremacy-armour",
-      "unit-tiger-shark",
-      "unit-barracuda",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-longstrike",
-      "unit-orca-dropship",
-      "unit-rvarna-battlesuit",
-      "unit-remora-stealth-drones",
-      "unit-shaso-ralai",
-      "unit-tetras",
-      "unit-tx42-piranha",
-      "unit-xv9-hazard-battlesuits",
-      "unit-yvahra-battlesuit"
+      "unit-sun-shark-bomber"
     ],
     "datasheet": "unit-breacher-team",
     "statline": "breacher-team-profile"
@@ -510,11 +466,7 @@ window.DG_TERMS={
       "unit-broadside-battlesuits",
       "unit-crisis-fireknife-battlesuits",
       "unit-crisis-starscythe-battlesuits",
-      "unit-crisis-sunforge-battlesuits",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-tactical-drones",
-      "unit-xv9-hazard-battlesuits"
+      "unit-crisis-sunforge-battlesuits"
     ],
     "datasheet": "unit-breacher-team",
     "statline": "breacher-team-profile"
@@ -539,12 +491,7 @@ window.DG_TERMS={
       "unit-crisis-fireknife-battlesuits",
       "unit-crisis-starscythe-battlesuits",
       "unit-crisis-sunforge-battlesuits",
-      "unit-riptide-battlesuit",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-rvarna-battlesuit",
-      "unit-xv9-hazard-battlesuits",
-      "unit-yvahra-battlesuit"
+      "unit-riptide-battlesuit"
     ],
     "datasheet": "unit-breacher-team",
     "statline": "breacher-team-profile"
@@ -576,10 +523,7 @@ window.DG_TERMS={
       "unit-the-twin-lance",
       "unit-kroot-carnivores",
       "unit-kroot-farstalkers",
-      "unit-krootox-riders",
-      "unit-great-knarloc",
-      "unit-knarloc-riders",
-      "unit-tetras"
+      "unit-krootox-riders"
     ],
     "datasheet": "unit-strike-team",
     "statline": "strike-team-profile"
@@ -606,8 +550,7 @@ window.DG_TERMS={
     "glossary": "glossary-tau-empire-weapon-pulse-rifle",
     "rule": "unit-strike-team",
     "units": [
-      "unit-strike-team",
-      "unit-tetras"
+      "unit-strike-team"
     ],
     "datasheet": "unit-strike-team",
     "statline": "strike-team-profile"
@@ -654,10 +597,7 @@ window.DG_TERMS={
       "unit-kroot-trail-shaper",
       "unit-kroot-war-shaper",
       "unit-commander-farsight",
-      "unit-darkstrider",
-      "unit-aunshi",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-shaso-ralai"
+      "unit-darkstrider"
     ],
     "datasheet": "unit-cadre-fireblade",
     "statline": "cadre-fireblade-profile"
@@ -712,12 +652,7 @@ window.DG_TERMS={
     "units": [
       "unit-commander-in-coldstar-battlesuit",
       "unit-commander-in-enforcer-battlesuit",
-      "unit-riptide-battlesuit",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-rvarna-battlesuit",
-      "unit-xv9-hazard-battlesuits",
-      "unit-yvahra-battlesuit"
+      "unit-riptide-battlesuit"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -731,10 +666,7 @@ window.DG_TERMS={
     "rule": "unit-commander-in-coldstar-battlesuit",
     "units": [
       "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-xv9-hazard-battlesuits"
+      "unit-commander-in-enforcer-battlesuit"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -750,12 +682,7 @@ window.DG_TERMS={
       "unit-commander-in-coldstar-battlesuit",
       "unit-commander-in-enforcer-battlesuit",
       "unit-broadside-battlesuits",
-      "unit-riptide-battlesuit",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-rvarna-battlesuit",
-      "unit-xv9-hazard-battlesuits",
-      "unit-yvahra-battlesuit"
+      "unit-riptide-battlesuit"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -775,17 +702,7 @@ window.DG_TERMS={
       "unit-vespid-stingwings",
       "unit-hammerhead-gunship",
       "unit-krootox-riders",
-      "unit-stormsurge",
-      "unit-manta",
-      "unit-taunar-supremacy-armour",
-      "unit-tiger-shark",
-      "unit-barracuda",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-longstrike",
-      "unit-rvarna-battlesuit",
-      "unit-shaso-ralai",
-      "unit-yvahra-battlesuit"
+      "unit-stormsurge"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -806,16 +723,7 @@ window.DG_TERMS={
       "unit-hammerhead-gunship",
       "unit-razorshark-strike-fighter",
       "unit-riptide-battlesuit",
-      "unit-sun-shark-bomber",
-      "unit-ax-1-0-tiger-shark",
-      "unit-manta",
-      "unit-taunar-supremacy-armour",
-      "unit-tiger-shark",
-      "unit-barracuda",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-longstrike",
-      "unit-yvahra-battlesuit"
+      "unit-sun-shark-bomber"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -834,10 +742,7 @@ window.DG_TERMS={
       "unit-vespid-stingwings",
       "unit-crisis-starscythe-battlesuits",
       "unit-ghostkeel-battlesuit",
-      "unit-stormsurge",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-yvahra-battlesuit"
+      "unit-stormsurge"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -858,10 +763,7 @@ window.DG_TERMS={
       "unit-vespid-stingwings",
       "unit-crisis-starscythe-battlesuits",
       "unit-ghostkeel-battlesuit",
-      "unit-stormsurge",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-yvahra-battlesuit"
+      "unit-stormsurge"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -882,13 +784,7 @@ window.DG_TERMS={
       "unit-crisis-sunforge-battlesuits",
       "unit-ghostkeel-battlesuit",
       "unit-piranhas",
-      "unit-riptide-battlesuit",
-      "unit-taunar-supremacy-armour",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-drone-sentry-turret",
-      "unit-tx42-piranha",
-      "unit-xv9-hazard-battlesuits"
+      "unit-riptide-battlesuit"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -908,12 +804,7 @@ window.DG_TERMS={
       "unit-vespid-stingwings",
       "unit-crisis-fireknife-battlesuits",
       "unit-crisis-starscythe-battlesuits",
-      "unit-crisis-sunforge-battlesuits",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits",
-      "unit-shaso-ralai",
-      "unit-tactical-drones",
-      "unit-xv9-hazard-battlesuits"
+      "unit-crisis-sunforge-battlesuits"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -940,8 +831,7 @@ window.DG_TERMS={
     "rule": "unit-commander-in-coldstar-battlesuit",
     "units": [
       "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-commander-in-crisis-battlesuit"
+      "unit-commander-in-enforcer-battlesuit"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -955,8 +845,7 @@ window.DG_TERMS={
     "rule": "unit-commander-in-coldstar-battlesuit",
     "units": [
       "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-commander-in-crisis-battlesuit"
+      "unit-commander-in-enforcer-battlesuit"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -970,8 +859,7 @@ window.DG_TERMS={
     "rule": "unit-commander-in-coldstar-battlesuit",
     "units": [
       "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-commander-in-crisis-battlesuit"
+      "unit-commander-in-enforcer-battlesuit"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -985,8 +873,7 @@ window.DG_TERMS={
     "rule": "unit-commander-in-coldstar-battlesuit",
     "units": [
       "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-commander-in-crisis-battlesuit"
+      "unit-commander-in-enforcer-battlesuit"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -1000,8 +887,7 @@ window.DG_TERMS={
     "rule": "unit-commander-in-coldstar-battlesuit",
     "units": [
       "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-commander-in-crisis-battlesuit"
+      "unit-commander-in-enforcer-battlesuit"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -1017,9 +903,7 @@ window.DG_TERMS={
       "unit-commander-in-coldstar-battlesuit",
       "unit-commander-in-enforcer-battlesuit",
       "unit-vespid-stingwings",
-      "unit-crisis-starscythe-battlesuits",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-crisis-battlesuits"
+      "unit-crisis-starscythe-battlesuits"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -1033,8 +917,7 @@ window.DG_TERMS={
     "rule": "unit-commander-in-coldstar-battlesuit",
     "units": [
       "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-commander-in-crisis-battlesuit"
+      "unit-commander-in-enforcer-battlesuit"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -1048,8 +931,7 @@ window.DG_TERMS={
     "rule": "unit-commander-in-coldstar-battlesuit",
     "units": [
       "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-commander-in-crisis-battlesuit"
+      "unit-commander-in-enforcer-battlesuit"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -1064,9 +946,7 @@ window.DG_TERMS={
     "units": [
       "unit-commander-in-coldstar-battlesuit",
       "unit-commander-in-enforcer-battlesuit",
-      "unit-commander-shadowsun",
-      "unit-commander-in-crisis-battlesuit",
-      "unit-shaso-ralai"
+      "unit-commander-shadowsun"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -1180,9 +1060,7 @@ window.DG_TERMS={
       "unit-broadside-battlesuits",
       "unit-hammerhead-gunship",
       "unit-krootox-riders",
-      "unit-stormsurge",
-      "unit-taunar-supremacy-armour",
-      "unit-longstrike"
+      "unit-stormsurge"
     ],
     "datasheet": "unit-firesight-team",
     "statline": "firesight-team-profile"
@@ -1196,8 +1074,7 @@ window.DG_TERMS={
     "rule": "unit-firesight-team",
     "units": [
       "unit-firesight-team",
-      "unit-kroot-lone-spear",
-      "unit-aunshi"
+      "unit-kroot-lone-spear"
     ],
     "datasheet": "unit-firesight-team",
     "statline": "firesight-team-profile"
@@ -1219,9 +1096,7 @@ window.DG_TERMS={
       "unit-kroot-farstalkers",
       "unit-pathfinder-team",
       "unit-stealth-battlesuits",
-      "unit-ghostkeel-battlesuit",
-      "unit-remora-stealth-drones",
-      "unit-tetras"
+      "unit-ghostkeel-battlesuit"
     ],
     "datasheet": "unit-firesight-team",
     "statline": "firesight-team-profile"
@@ -1237,8 +1112,7 @@ window.DG_TERMS={
       "unit-firesight-team",
       "unit-kroot-lone-spear",
       "unit-commander-shadowsun",
-      "unit-ghostkeel-battlesuit",
-      "unit-aunva"
+      "unit-ghostkeel-battlesuit"
     ],
     "datasheet": "unit-firesight-team",
     "statline": "firesight-team-profile"
@@ -1261,9 +1135,7 @@ window.DG_TERMS={
       "unit-kroot-farstalkers",
       "unit-stealth-battlesuits",
       "unit-ghostkeel-battlesuit",
-      "unit-kroot-hounds",
-      "unit-knarloc-riders",
-      "unit-remora-stealth-drones"
+      "unit-kroot-hounds"
     ],
     "datasheet": "unit-firesight-team",
     "statline": "firesight-team-profile"
@@ -1350,9 +1222,7 @@ window.DG_TERMS={
       "unit-kroot-farstalkers",
       "unit-kroot-hounds",
       "unit-krootox-rampagers",
-      "unit-krootox-riders",
-      "unit-great-knarloc",
-      "unit-knarloc-riders"
+      "unit-krootox-riders"
     ],
     "datasheet": "unit-kroot-flesh-shaper",
     "statline": "kroot-flesh-shaper-profile"
@@ -1374,9 +1244,7 @@ window.DG_TERMS={
       "unit-pathfinder-team",
       "unit-kroot-hounds",
       "unit-krootox-rampagers",
-      "unit-krootox-riders",
-      "unit-great-knarloc",
-      "unit-knarloc-riders"
+      "unit-krootox-riders"
     ],
     "datasheet": "unit-kroot-flesh-shaper",
     "statline": "kroot-flesh-shaper-profile"
@@ -1391,9 +1259,7 @@ window.DG_TERMS={
     "units": [
       "unit-kroot-flesh-shaper",
       "unit-the-twin-lance",
-      "unit-krootox-rampagers",
-      "unit-aunshi",
-      "unit-great-knarloc"
+      "unit-krootox-rampagers"
     ],
     "datasheet": "unit-kroot-flesh-shaper",
     "statline": "kroot-flesh-shaper-profile"
@@ -1475,8 +1341,7 @@ window.DG_TERMS={
       "unit-kroot-lone-spear",
       "unit-the-twin-lance",
       "unit-krootox-rampagers",
-      "unit-krootox-riders",
-      "unit-knarloc-riders"
+      "unit-krootox-riders"
     ],
     "datasheet": "unit-kroot-lone-spear",
     "statline": "kroot-lone-spear-profile"
@@ -1650,11 +1515,7 @@ window.DG_TERMS={
       "unit-kroot-war-shaper",
       "unit-kroot-farstalkers",
       "unit-pathfinder-team",
-      "unit-vespid-stingwings",
-      "unit-ax-1-0-tiger-shark",
-      "unit-taunar-supremacy-armour",
-      "unit-tiger-shark",
-      "unit-shaso-ralai"
+      "unit-vespid-stingwings"
     ],
     "datasheet": "unit-kroot-war-shaper",
     "statline": "kroot-war-shaper-profile"
@@ -1726,13 +1587,7 @@ window.DG_TERMS={
       "unit-hammerhead-gunship",
       "unit-piranhas",
       "unit-razorshark-strike-fighter",
-      "unit-sun-shark-bomber",
-      "unit-ax-1-0-tiger-shark",
-      "unit-manta",
-      "unit-tiger-shark",
-      "unit-barracuda",
-      "unit-longstrike",
-      "unit-remora-stealth-drones"
+      "unit-sun-shark-bomber"
     ],
     "datasheet": "unit-devilfish",
     "statline": "devilfish-profile"
@@ -1753,9 +1608,7 @@ window.DG_TERMS={
       "unit-sun-shark-bomber",
       "unit-tidewall-droneport",
       "unit-tidewall-gunrig",
-      "unit-tidewall-shieldline",
-      "unit-barracuda",
-      "unit-longstrike"
+      "unit-tidewall-shieldline"
     ],
     "datasheet": "unit-devilfish",
     "statline": "devilfish-profile"
@@ -1770,8 +1623,7 @@ window.DG_TERMS={
     "units": [
       "unit-devilfish",
       "unit-piranhas",
-      "unit-sky-ray-gunship",
-      "unit-longstrike"
+      "unit-sky-ray-gunship"
     ],
     "datasheet": "unit-devilfish",
     "statline": "devilfish-profile"
@@ -1786,9 +1638,7 @@ window.DG_TERMS={
     "units": [
       "unit-devilfish",
       "unit-hammerhead-gunship",
-      "unit-sky-ray-gunship",
-      "unit-taunar-supremacy-armour",
-      "unit-longstrike"
+      "unit-sky-ray-gunship"
     ],
     "datasheet": "unit-devilfish",
     "statline": "devilfish-profile"
@@ -1806,12 +1656,7 @@ window.DG_TERMS={
       "unit-hammerhead-gunship",
       "unit-piranhas",
       "unit-razorshark-strike-fighter",
-      "unit-sun-shark-bomber",
-      "unit-ax-1-0-tiger-shark",
-      "unit-manta",
-      "unit-tiger-shark",
-      "unit-barracuda",
-      "unit-longstrike"
+      "unit-sun-shark-bomber"
     ],
     "datasheet": "unit-devilfish",
     "statline": "devilfish-profile"
@@ -1827,8 +1672,7 @@ window.DG_TERMS={
       "unit-devilfish",
       "unit-hammerhead-gunship",
       "unit-razorshark-strike-fighter",
-      "unit-sky-ray-gunship",
-      "unit-longstrike"
+      "unit-sky-ray-gunship"
     ],
     "datasheet": "unit-devilfish",
     "statline": "devilfish-profile"
@@ -1845,11 +1689,7 @@ window.DG_TERMS={
       "unit-hammerhead-gunship",
       "unit-razorshark-strike-fighter",
       "unit-sky-ray-gunship",
-      "unit-sun-shark-bomber",
-      "unit-ax-1-0-tiger-shark",
-      "unit-tiger-shark",
-      "unit-barracuda",
-      "unit-longstrike"
+      "unit-sun-shark-bomber"
     ],
     "datasheet": "unit-devilfish",
     "statline": "devilfish-profile"
@@ -2325,16 +2165,7 @@ window.DG_TERMS={
       "unit-broadside-battlesuits",
       "unit-hammerhead-gunship",
       "unit-riptide-battlesuit",
-      "unit-tidewall-gunrig",
-      "unit-ax-1-0-tiger-shark",
-      "unit-manta",
-      "unit-taunar-supremacy-armour",
-      "unit-tiger-shark",
-      "unit-aunshi",
-      "unit-barracuda",
-      "unit-longstrike",
-      "unit-shaso-ralai",
-      "unit-tx42-piranha"
+      "unit-tidewall-gunrig"
     ],
     "datasheet": "unit-kroot-farstalkers",
     "statline": "kroot-farstalkers-profile"
@@ -2610,12 +2441,7 @@ window.DG_TERMS={
     "rule": "unit-stealth-battlesuits",
     "units": [
       "unit-stealth-battlesuits",
-      "unit-crisis-starscythe-battlesuits",
-      "unit-ax-1-0-tiger-shark",
-      "unit-taunar-supremacy-armour",
-      "unit-tiger-shark",
-      "unit-crisis-battlesuits",
-      "unit-heavy-gun-drones"
+      "unit-crisis-starscythe-battlesuits"
     ],
     "datasheet": "unit-stealth-battlesuits",
     "statline": "stealth-battlesuits-profile"
@@ -2629,9 +2455,7 @@ window.DG_TERMS={
     "rule": "unit-stealth-battlesuits",
     "units": [
       "unit-stealth-battlesuits",
-      "unit-crisis-sunforge-battlesuits",
-      "unit-crisis-battlesuits",
-      "unit-tx42-piranha"
+      "unit-crisis-sunforge-battlesuits"
     ],
     "datasheet": "unit-stealth-battlesuits",
     "statline": "stealth-battlesuits-profile"
@@ -2827,9 +2651,7 @@ window.DG_TERMS={
     "glossary": "glossary-tau-empire-weapon-plasma-rifle-2",
     "rule": "unit-crisis-fireknife-battlesuits",
     "units": [
-      "unit-crisis-fireknife-battlesuits",
-      "unit-crisis-battlesuits",
-      "unit-tx42-piranha"
+      "unit-crisis-fireknife-battlesuits"
     ],
     "datasheet": "unit-crisis-fireknife-battlesuits",
     "statline": "crisis-fireknife-battlesuits-profile"
@@ -2844,14 +2666,7 @@ window.DG_TERMS={
     "units": [
       "unit-crisis-fireknife-battlesuits",
       "unit-razorshark-strike-fighter",
-      "unit-sun-shark-bomber",
-      "unit-ax-1-0-tiger-shark",
-      "unit-manta",
-      "unit-tiger-shark",
-      "unit-barracuda",
-      "unit-crisis-battlesuits",
-      "unit-orca-dropship",
-      "unit-tx42-piranha"
+      "unit-sun-shark-bomber"
     ],
     "datasheet": "unit-crisis-fireknife-battlesuits",
     "statline": "crisis-fireknife-battlesuits-profile"
@@ -2866,9 +2681,7 @@ window.DG_TERMS={
     "units": [
       "unit-crisis-fireknife-battlesuits",
       "unit-crisis-starscythe-battlesuits",
-      "unit-crisis-sunforge-battlesuits",
-      "unit-crisis-battlesuits",
-      "unit-xv9-hazard-battlesuits"
+      "unit-crisis-sunforge-battlesuits"
     ],
     "datasheet": "unit-crisis-fireknife-battlesuits",
     "statline": "crisis-fireknife-battlesuits-profile"
@@ -3055,8 +2868,7 @@ window.DG_TERMS={
     "glossary": "glossary-tau-empire-ability-armour-hunter",
     "rule": "unit-hammerhead-gunship",
     "units": [
-      "unit-hammerhead-gunship",
-      "unit-longstrike"
+      "unit-hammerhead-gunship"
     ],
     "datasheet": "unit-hammerhead-gunship",
     "statline": "hammerhead-gunship-profile"
@@ -3070,11 +2882,7 @@ window.DG_TERMS={
     "rule": "unit-hammerhead-gunship",
     "units": [
       "unit-hammerhead-gunship",
-      "unit-sky-ray-gunship",
-      "unit-barracuda",
-      "unit-longstrike",
-      "unit-rvarna-battlesuit",
-      "unit-yvahra-battlesuit"
+      "unit-sky-ray-gunship"
     ],
     "datasheet": "unit-hammerhead-gunship",
     "statline": "hammerhead-gunship-profile"
@@ -3088,8 +2896,7 @@ window.DG_TERMS={
     "rule": "unit-hammerhead-gunship",
     "units": [
       "unit-hammerhead-gunship",
-      "unit-sky-ray-gunship",
-      "unit-longstrike"
+      "unit-sky-ray-gunship"
     ],
     "datasheet": "unit-hammerhead-gunship",
     "statline": "hammerhead-gunship-profile"
@@ -3115,10 +2922,7 @@ window.DG_TERMS={
     "glossary": "glossary-tau-empire-weapon-ion-cannon-standard",
     "rule": "unit-hammerhead-gunship",
     "units": [
-      "unit-hammerhead-gunship",
-      "unit-manta",
-      "unit-tiger-shark",
-      "unit-barracuda"
+      "unit-hammerhead-gunship"
     ],
     "datasheet": "unit-hammerhead-gunship",
     "statline": "hammerhead-gunship-profile"
@@ -3131,10 +2935,7 @@ window.DG_TERMS={
     "glossary": "glossary-tau-empire-weapon-ion-cannon-overcharge",
     "rule": "unit-hammerhead-gunship",
     "units": [
-      "unit-hammerhead-gunship",
-      "unit-manta",
-      "unit-tiger-shark",
-      "unit-barracuda"
+      "unit-hammerhead-gunship"
     ],
     "datasheet": "unit-hammerhead-gunship",
     "statline": "hammerhead-gunship-profile"
@@ -3303,9 +3104,7 @@ window.DG_TERMS={
     "glossary": "glossary-tau-empire-ability-deadly-demise-1",
     "rule": "unit-piranhas",
     "units": [
-      "unit-piranhas",
-      "unit-tetras",
-      "unit-tx42-piranha"
+      "unit-piranhas"
     ],
     "datasheet": "unit-piranhas",
     "statline": "piranhas-profile"
@@ -3318,8 +3117,7 @@ window.DG_TERMS={
     "glossary": "glossary-tau-empire-ability-scouts-9",
     "rule": "unit-piranhas",
     "units": [
-      "unit-piranhas",
-      "unit-tx42-piranha"
+      "unit-piranhas"
     ],
     "datasheet": "unit-piranhas",
     "statline": "piranhas-profile"
@@ -3358,8 +3156,7 @@ window.DG_TERMS={
     "glossary": "glossary-tau-empire-weapon-armoured-hull-2",
     "rule": "unit-piranhas",
     "units": [
-      "unit-piranhas",
-      "unit-tx42-piranha"
+      "unit-piranhas"
     ],
     "datasheet": "unit-piranhas",
     "statline": "piranhas-profile"
@@ -3424,9 +3221,7 @@ window.DG_TERMS={
     "glossary": "glossary-tau-empire-ability-deadly-demise-d6",
     "rule": "unit-riptide-battlesuit",
     "units": [
-      "unit-riptide-battlesuit",
-      "unit-rvarna-battlesuit",
-      "unit-yvahra-battlesuit"
+      "unit-riptide-battlesuit"
     ],
     "datasheet": "unit-riptide-battlesuit",
     "statline": "riptide-battlesuit-profile"
@@ -3582,10 +3377,7 @@ window.DG_TERMS={
     "glossary": "glossary-tau-empire-ability-deadly-demise-d6-2",
     "rule": "unit-stormsurge",
     "units": [
-      "unit-stormsurge",
-      "unit-ax-1-0-tiger-shark",
-      "unit-tiger-shark",
-      "unit-orca-dropship"
+      "unit-stormsurge"
     ],
     "datasheet": "unit-stormsurge",
     "statline": "stormsurge-profile"
@@ -3782,9 +3574,7 @@ window.DG_TERMS={
     "units": [
       "unit-tidewall-droneport",
       "unit-tidewall-gunrig",
-      "unit-tidewall-shieldline",
-      "unit-drone-sentry-turret",
-      "unit-remote-sensor-tower"
+      "unit-tidewall-shieldline"
     ],
     "datasheet": "unit-tidewall-droneport",
     "statline": "tidewall-droneport-profile"
@@ -3869,1257 +3659,6 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-tidewall-shieldline",
     "statline": "tidewall-shieldline-profile"
-  },
-  "tau-empire-ability-titan-hunter": {
-    "id": "tau-empire-ability-titan-hunter",
-    "title": "Titan Hunter",
-    "summary": "This model’s twin heavy rail cannon and seeker missiles have the [ANTI-TITANIC 3+] ability while targeting a unit within half range.",
-    "full": "This model’s twin heavy rail cannon and seeker missiles have the [ANTI-TITANIC 3+] ability while targeting a unit within half range.",
-    "glossary": "glossary-tau-empire-ability-titan-hunter",
-    "rule": "unit-ax-1-0-tiger-shark",
-    "units": [
-      "unit-ax-1-0-tiger-shark"
-    ],
-    "datasheet": "unit-ax-1-0-tiger-shark",
-    "statline": "ax-1-0-tiger-shark-profile"
-  },
-  "tau-empire-ability-damaged-1-6-wounds-remaining": {
-    "id": "tau-empire-ability-damaged-1-6-wounds-remaining",
-    "title": "Damaged: 1-6 Wounds Remaining",
-    "summary": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-tau-empire-ability-damaged-1-6-wounds-remaining",
-    "rule": "unit-ax-1-0-tiger-shark",
-    "units": [
-      "unit-ax-1-0-tiger-shark",
-      "unit-tiger-shark"
-    ],
-    "datasheet": "unit-ax-1-0-tiger-shark",
-    "statline": "ax-1-0-tiger-shark-profile"
-  },
-  "tau-empire-weapon-twin-heavy-rail-cannon": {
-    "id": "tau-empire-weapon-twin-heavy-rail-cannon",
-    "title": "Twin heavy rail cannon",
-    "summary": "Ranged · 120\" · A 1 · BS 4+ · S 26 · AP -5 · D 12 · Devastating Wounds, Twin-linked",
-    "full": "Ranged · 120\" · A 1 · BS 4+ · S 26 · AP -5 · D 12 · Devastating Wounds, Twin-linked",
-    "glossary": "glossary-tau-empire-weapon-twin-heavy-rail-cannon",
-    "rule": "unit-ax-1-0-tiger-shark",
-    "units": [
-      "unit-ax-1-0-tiger-shark"
-    ],
-    "datasheet": "unit-ax-1-0-tiger-shark",
-    "statline": "ax-1-0-tiger-shark-profile"
-  },
-  "tau-empire-weapon-cyclic-ion-blaster-standard-2": {
-    "id": "tau-empire-weapon-cyclic-ion-blaster-standard-2",
-    "title": "➤ Cyclic ion blaster - standard",
-    "summary": "Ranged · 18\" · A 3 · BS 4+ · S 7 · AP -1 · D 1",
-    "full": "Ranged · 18\" · A 3 · BS 4+ · S 7 · AP -1 · D 1",
-    "glossary": "glossary-tau-empire-weapon-cyclic-ion-blaster-standard-2",
-    "rule": "unit-ax-1-0-tiger-shark",
-    "units": [
-      "unit-ax-1-0-tiger-shark",
-      "unit-tiger-shark",
-      "unit-barracuda",
-      "unit-crisis-battlesuits"
-    ],
-    "datasheet": "unit-ax-1-0-tiger-shark",
-    "statline": "ax-1-0-tiger-shark-profile"
-  },
-  "tau-empire-weapon-cyclic-ion-blaster-overcharge-2": {
-    "id": "tau-empire-weapon-cyclic-ion-blaster-overcharge-2",
-    "title": "➤ Cyclic ion blaster - overcharge",
-    "summary": "Ranged · 18\" · A 3 · BS 4+ · S 8 · AP -2 · D 2 · Hazardous",
-    "full": "Ranged · 18\" · A 3 · BS 4+ · S 8 · AP -2 · D 2 · Hazardous",
-    "glossary": "glossary-tau-empire-weapon-cyclic-ion-blaster-overcharge-2",
-    "rule": "unit-ax-1-0-tiger-shark",
-    "units": [
-      "unit-ax-1-0-tiger-shark",
-      "unit-tiger-shark",
-      "unit-barracuda",
-      "unit-crisis-battlesuits"
-    ],
-    "datasheet": "unit-ax-1-0-tiger-shark",
-    "statline": "ax-1-0-tiger-shark-profile"
-  },
-  "tau-empire-ability-aggressive-deployment": {
-    "id": "tau-empire-ability-aggressive-deployment",
-    "title": "Aggressive Deployment",
-    "summary": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly model that disembarked from this TRANSPORT this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll.",
-    "full": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly model that disembarked from this TRANSPORT this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll.",
-    "glossary": "glossary-tau-empire-ability-aggressive-deployment",
-    "rule": "unit-manta",
-    "units": [
-      "unit-manta"
-    ],
-    "datasheet": "unit-manta",
-    "statline": "manta-profile"
-  },
-  "tau-empire-ability-air-caste-colossus": {
-    "id": "tau-empire-ability-air-caste-colossus",
-    "title": "Air Caste Colossus",
-    "summary": "Each time you target this model with a Stratagem, you must spend three times that Stratagem’s stated CP cost to do so.",
-    "full": "Each time you target this model with a Stratagem, you must spend three times that Stratagem’s stated CP cost to do so.",
-    "glossary": "glossary-tau-empire-ability-air-caste-colossus",
-    "rule": "unit-manta",
-    "units": [
-      "unit-manta"
-    ],
-    "datasheet": "unit-manta",
-    "statline": "manta-profile"
-  },
-  "tau-empire-ability-damaged-1-20-wounds-remaining": {
-    "id": "tau-empire-ability-damaged-1-20-wounds-remaining",
-    "title": "Damaged: 1-20 Wounds Remaining",
-    "summary": "While this model has 1-20 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-20 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-tau-empire-ability-damaged-1-20-wounds-remaining",
-    "rule": "unit-manta",
-    "units": [
-      "unit-manta"
-    ],
-    "datasheet": "unit-manta",
-    "statline": "manta-profile"
-  },
-  "tau-empire-ability-deadly-demise-3d6": {
-    "id": "tau-empire-ability-deadly-demise-3d6",
-    "title": "Deadly Demise 3D6",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-tau-empire-ability-deadly-demise-3d6",
-    "rule": "unit-manta",
-    "units": [
-      "unit-manta"
-    ],
-    "datasheet": "unit-manta",
-    "statline": "manta-profile"
-  },
-  "tau-empire-ability-hover": {
-    "id": "tau-empire-ability-hover",
-    "title": "Hover",
-    "summary": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance.",
-    "full": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance.",
-    "glossary": "glossary-tau-empire-ability-hover",
-    "rule": "unit-manta",
-    "units": [
-      "unit-manta",
-      "unit-orca-dropship"
-    ],
-    "datasheet": "unit-manta",
-    "statline": "manta-profile"
-  },
-  "tau-empire-weapon-armoured-hull-3": {
-    "id": "tau-empire-weapon-armoured-hull-3",
-    "title": "Armoured hull",
-    "summary": "Melee · Melee · A 8 · WS 5+ · S 6 · AP 0 · D 1",
-    "full": "Melee · Melee · A 8 · WS 5+ · S 6 · AP 0 · D 1",
-    "glossary": "glossary-tau-empire-weapon-armoured-hull-3",
-    "rule": "unit-manta",
-    "units": [
-      "unit-manta"
-    ],
-    "datasheet": "unit-manta",
-    "statline": "manta-profile"
-  },
-  "tau-empire-weapon-heavy-rail-cannon": {
-    "id": "tau-empire-weapon-heavy-rail-cannon",
-    "title": "Heavy rail cannon",
-    "summary": "Ranged · 120\" · A 1 · BS 4+ · S 26 · AP -5 · D 12 · Devastating Wounds",
-    "full": "Ranged · 120\" · A 1 · BS 4+ · S 26 · AP -5 · D 12 · Devastating Wounds",
-    "glossary": "glossary-tau-empire-weapon-heavy-rail-cannon",
-    "rule": "unit-manta",
-    "units": [
-      "unit-manta"
-    ],
-    "datasheet": "unit-manta",
-    "statline": "manta-profile"
-  },
-  "tau-empire-weapon-long-barrelled-burst-cannon-array": {
-    "id": "tau-empire-weapon-long-barrelled-burst-cannon-array",
-    "title": "Long-barrelled burst cannon array",
-    "summary": "Ranged · 24\" · A 32 · BS 4+ · S 6 · AP -1 · D 1",
-    "full": "Ranged · 24\" · A 32 · BS 4+ · S 6 · AP -1 · D 1",
-    "glossary": "glossary-tau-empire-weapon-long-barrelled-burst-cannon-array",
-    "rule": "unit-manta",
-    "units": [
-      "unit-manta"
-    ],
-    "datasheet": "unit-manta",
-    "statline": "manta-profile"
-  },
-  "tau-empire-ability-coordinated-strike": {
-    "id": "tau-empire-ability-coordinated-strike",
-    "title": "Coordinated Strike",
-    "summary": "While this model is a Guided unit, each time it makes an attack that targets its Spotted unit, re-roll a Hit roll of 1.",
-    "full": "While this model is a Guided unit, each time it makes an attack that targets its Spotted unit, re-roll a Hit roll of 1.",
-    "glossary": "glossary-tau-empire-ability-coordinated-strike",
-    "rule": "unit-taunar-supremacy-armour",
-    "units": [
-      "unit-taunar-supremacy-armour"
-    ],
-    "datasheet": "unit-taunar-supremacy-armour",
-    "statline": "taunar-supremacy-armour-profile"
-  },
-  "tau-empire-ability-damaged-1-10-wounds-remaining": {
-    "id": "tau-empire-ability-damaged-1-10-wounds-remaining",
-    "title": "Damaged: 1-10 Wounds Remaining",
-    "summary": "While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-10 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-tau-empire-ability-damaged-1-10-wounds-remaining",
-    "rule": "unit-taunar-supremacy-armour",
-    "units": [
-      "unit-taunar-supremacy-armour"
-    ],
-    "datasheet": "unit-taunar-supremacy-armour",
-    "statline": "taunar-supremacy-armour-profile"
-  },
-  "tau-empire-ability-deadly-demise-d6-3": {
-    "id": "tau-empire-ability-deadly-demise-d6-3",
-    "title": "Deadly Demise D6+3",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-tau-empire-ability-deadly-demise-d6-3",
-    "rule": "unit-taunar-supremacy-armour",
-    "units": [
-      "unit-taunar-supremacy-armour"
-    ],
-    "datasheet": "unit-taunar-supremacy-armour",
-    "statline": "taunar-supremacy-armour-profile"
-  },
-  "tau-empire-ability-super-heavy-walker": {
-    "id": "tau-empire-ability-super-heavy-walker",
-    "title": "Super-Heavy Walker",
-    "summary": "Each time a unit with this ability makes a normal, advance or fall-back move: - Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height. - Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked. *Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).*",
-    "full": "Each time a unit with this ability makes a normal, advance or fall-back move: - Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height. - Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked. *Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).*",
-    "glossary": "glossary-tau-empire-ability-super-heavy-walker",
-    "rule": "unit-taunar-supremacy-armour",
-    "units": [
-      "unit-taunar-supremacy-armour"
-    ],
-    "datasheet": "unit-taunar-supremacy-armour",
-    "statline": "taunar-supremacy-armour-profile"
-  },
-  "tau-empire-weapon-crushing-feet": {
-    "id": "tau-empire-weapon-crushing-feet",
-    "title": "Crushing feet",
-    "summary": "Melee · Melee · A 6 · WS 5+ · S 8 · AP -1 · D 2",
-    "full": "Melee · Melee · A 6 · WS 5+ · S 8 · AP -1 · D 2",
-    "glossary": "glossary-tau-empire-weapon-crushing-feet",
-    "rule": "unit-taunar-supremacy-armour",
-    "units": [
-      "unit-taunar-supremacy-armour"
-    ],
-    "datasheet": "unit-taunar-supremacy-armour",
-    "statline": "taunar-supremacy-armour-profile"
-  },
-  "tau-empire-weapon-tri-axis-ion-cannon-standard": {
-    "id": "tau-empire-weapon-tri-axis-ion-cannon-standard",
-    "title": "➤ Tri-axis ion cannon - standard",
-    "summary": "Ranged · 36\" · A D6+3 · BS 4+ · S 8 · AP -2 · D 2 · Blast",
-    "full": "Ranged · 36\" · A D6+3 · BS 4+ · S 8 · AP -2 · D 2 · Blast",
-    "glossary": "glossary-tau-empire-weapon-tri-axis-ion-cannon-standard",
-    "rule": "unit-taunar-supremacy-armour",
-    "units": [
-      "unit-taunar-supremacy-armour"
-    ],
-    "datasheet": "unit-taunar-supremacy-armour",
-    "statline": "taunar-supremacy-armour-profile"
-  },
-  "tau-empire-weapon-tri-axis-ion-cannon-supercharge": {
-    "id": "tau-empire-weapon-tri-axis-ion-cannon-supercharge",
-    "title": "➤ Tri-axis ion cannon - supercharge",
-    "summary": "Ranged · 36\" · A D6+3 · BS 4+ · S 9 · AP -3 · D 3 · Blast, Hazardous",
-    "full": "Ranged · 36\" · A D6+3 · BS 4+ · S 9 · AP -3 · D 3 · Blast, Hazardous",
-    "glossary": "glossary-tau-empire-weapon-tri-axis-ion-cannon-supercharge",
-    "rule": "unit-taunar-supremacy-armour",
-    "units": [
-      "unit-taunar-supremacy-armour"
-    ],
-    "datasheet": "unit-taunar-supremacy-armour",
-    "statline": "taunar-supremacy-armour-profile"
-  },
-  "tau-empire-weapon-fusion-eradicator": {
-    "id": "tau-empire-weapon-fusion-eradicator",
-    "title": "Fusion eradicator",
-    "summary": "Ranged · 24\" · A 5 · BS 4+ · S 10 · AP -4 · D D6 · Melta 3",
-    "full": "Ranged · 24\" · A 5 · BS 4+ · S 10 · AP -4 · D D6 · Melta 3",
-    "glossary": "glossary-tau-empire-weapon-fusion-eradicator",
-    "rule": "unit-taunar-supremacy-armour",
-    "units": [
-      "unit-taunar-supremacy-armour"
-    ],
-    "datasheet": "unit-taunar-supremacy-armour",
-    "statline": "taunar-supremacy-armour-profile"
-  },
-  "tau-empire-weapon-pulse-ordnance-driver": {
-    "id": "tau-empire-weapon-pulse-ordnance-driver",
-    "title": "Pulse ordnance driver",
-    "summary": "Ranged · 60\" · A 8 · BS 4+ · S 5 · AP -1 · D 3 · Anti-Infantry 2+",
-    "full": "Ranged · 60\" · A 8 · BS 4+ · S 5 · AP -1 · D 3 · Anti-Infantry 2+",
-    "glossary": "glossary-tau-empire-weapon-pulse-ordnance-driver",
-    "rule": "unit-taunar-supremacy-armour",
-    "units": [
-      "unit-taunar-supremacy-armour"
-    ],
-    "datasheet": "unit-taunar-supremacy-armour",
-    "statline": "taunar-supremacy-armour-profile"
-  },
-  "tau-empire-weapon-nexus-missile-launcher": {
-    "id": "tau-empire-weapon-nexus-missile-launcher",
-    "title": "Nexus missile launcher",
-    "summary": "Ranged · 36\" · A 8 · BS 4+ · S 8 · AP -3 · D 2",
-    "full": "Ranged · 36\" · A 8 · BS 4+ · S 8 · AP -3 · D 2",
-    "glossary": "glossary-tau-empire-weapon-nexus-missile-launcher",
-    "rule": "unit-taunar-supremacy-armour",
-    "units": [
-      "unit-taunar-supremacy-armour"
-    ],
-    "datasheet": "unit-taunar-supremacy-armour",
-    "statline": "taunar-supremacy-armour-profile"
-  },
-  "tau-empire-weapon-heavy-rail-cannon-array": {
-    "id": "tau-empire-weapon-heavy-rail-cannon-array",
-    "title": "Heavy rail cannon array",
-    "summary": "Ranged · 120\" · A 2 · BS 4+ · S 26 · AP -5 · D 16 · Devastating Wounds, Heavy",
-    "full": "Ranged · 120\" · A 2 · BS 4+ · S 26 · AP -5 · D 16 · Devastating Wounds, Heavy",
-    "glossary": "glossary-tau-empire-weapon-heavy-rail-cannon-array",
-    "rule": "unit-taunar-supremacy-armour",
-    "units": [
-      "unit-taunar-supremacy-armour"
-    ],
-    "datasheet": "unit-taunar-supremacy-armour",
-    "statline": "taunar-supremacy-armour-profile"
-  },
-  "tau-empire-weapon-fragmentation-cluster-shell-launcher": {
-    "id": "tau-empire-weapon-fragmentation-cluster-shell-launcher",
-    "title": "Fragmentation cluster shell launcher",
-    "summary": "Ranged · 24\" · A 2D6+6 · BS 4+ · S 6 · AP -1 · D 1 · Blast",
-    "full": "Ranged · 24\" · A 2D6+6 · BS 4+ · S 6 · AP -1 · D 1 · Blast",
-    "glossary": "glossary-tau-empire-weapon-fragmentation-cluster-shell-launcher",
-    "rule": "unit-taunar-supremacy-armour",
-    "units": [
-      "unit-taunar-supremacy-armour"
-    ],
-    "datasheet": "unit-taunar-supremacy-armour",
-    "statline": "taunar-supremacy-armour-profile"
-  },
-  "tau-empire-ability-strafing-run": {
-    "id": "tau-empire-ability-strafing-run",
-    "title": "Strafing Run",
-    "summary": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks that cannot FLY. That enemy unit must take a Battle-shock test.",
-    "full": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks that cannot FLY. That enemy unit must take a Battle-shock test.",
-    "glossary": "glossary-tau-empire-ability-strafing-run",
-    "rule": "unit-tiger-shark",
-    "units": [
-      "unit-tiger-shark"
-    ],
-    "datasheet": "unit-tiger-shark",
-    "statline": "tiger-shark-profile"
-  },
-  "tau-empire-ability-transport-bay": {
-    "id": "tau-empire-ability-transport-bay",
-    "title": "Transport bay",
-    "summary": "The bearer has the TRANSPORT keyword and has a transport capacity of 12 TACTICAL DRONES models.",
-    "full": "The bearer has the TRANSPORT keyword and has a transport capacity of 12 TACTICAL DRONES models.",
-    "glossary": "glossary-tau-empire-ability-transport-bay",
-    "rule": "unit-tiger-shark",
-    "units": [
-      "unit-tiger-shark"
-    ],
-    "datasheet": "unit-tiger-shark",
-    "statline": "tiger-shark-profile"
-  },
-  "tau-empire-weapon-swiftstrike-burst-cannon": {
-    "id": "tau-empire-weapon-swiftstrike-burst-cannon",
-    "title": "Swiftstrike burst cannon",
-    "summary": "Ranged · 36\" · A 16 · BS 4+ · S 6 · AP -1 · D 1",
-    "full": "Ranged · 36\" · A 16 · BS 4+ · S 6 · AP -1 · D 1",
-    "glossary": "glossary-tau-empire-weapon-swiftstrike-burst-cannon",
-    "rule": "unit-tiger-shark",
-    "units": [
-      "unit-tiger-shark",
-      "unit-barracuda"
-    ],
-    "datasheet": "unit-tiger-shark",
-    "statline": "tiger-shark-profile"
-  },
-  "tau-empire-weapon-swiftstrike-railgun": {
-    "id": "tau-empire-weapon-swiftstrike-railgun",
-    "title": "Swiftstrike railgun",
-    "summary": "Ranged · 72\" · A 1 · BS 4+ · S 20 · AP -5 · D D6+6 · Devastating Wounds",
-    "full": "Ranged · 72\" · A 1 · BS 4+ · S 20 · AP -5 · D D6+6 · Devastating Wounds",
-    "glossary": "glossary-tau-empire-weapon-swiftstrike-railgun",
-    "rule": "unit-tiger-shark",
-    "units": [
-      "unit-tiger-shark",
-      "unit-barracuda"
-    ],
-    "datasheet": "unit-tiger-shark",
-    "statline": "tiger-shark-profile"
-  },
-  "tau-empire-weapon-skyspear-missile-rack": {
-    "id": "tau-empire-weapon-skyspear-missile-rack",
-    "title": "Skyspear missile rack",
-    "summary": "Ranged · 72\" · A D6+1 · BS 4+ · S 6 · AP -1 · D 1 · Anti-Fly 3+, Blast",
-    "full": "Ranged · 72\" · A D6+1 · BS 4+ · S 6 · AP -1 · D 1 · Anti-Fly 3+, Blast",
-    "glossary": "glossary-tau-empire-weapon-skyspear-missile-rack",
-    "rule": "unit-tiger-shark",
-    "units": [
-      "unit-tiger-shark"
-    ],
-    "datasheet": "unit-tiger-shark",
-    "statline": "tiger-shark-profile"
-  },
-  "tau-empire-ability-inspirational-defiance": {
-    "id": "tau-empire-ability-inspirational-defiance",
-    "title": "Inspirational Defiance",
-    "summary": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit.",
-    "full": "While this model is leading a unit, add 1 to the Objective Control characteristic of models in that unit.",
-    "glossary": "glossary-tau-empire-ability-inspirational-defiance",
-    "rule": "unit-aunshi",
-    "units": [
-      "unit-aunshi"
-    ],
-    "datasheet": "unit-aunshi",
-    "statline": "aunshi-profile"
-  },
-  "tau-empire-ability-leader-2": {
-    "id": "tau-empire-ability-leader-2",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: - BREACHER TEAM - KROOT CARNIVORES - KROOT FARSTALKERS - STRIKE TEAM",
-    "full": "This model can be attached to the following units: - BREACHER TEAM - KROOT CARNIVORES - KROOT FARSTALKERS - STRIKE TEAM",
-    "glossary": "glossary-tau-empire-ability-leader-2",
-    "rule": "unit-aunshi",
-    "units": [
-      "unit-aunshi"
-    ],
-    "datasheet": "unit-aunshi",
-    "statline": "aunshi-profile"
-  },
-  "tau-empire-ability-martial-warrior": {
-    "id": "tau-empire-ability-martial-warrior",
-    "title": "Martial Warrior",
-    "summary": "Each time this model is selected to fight, select one of the following abilities to be active while resolving those attacks: - Direct Grace: Fidelity has the [PRECISION] ability. - Forceful Strike: Fidelity has the [DEVASTATING WOUNDS] ability. - Whirling Stance: Fidelity has the [SUSTAINED HITS 2] ability instead of [SUSTAINED HITS 1].",
-    "full": "Each time this model is selected to fight, select one of the following abilities to be active while resolving those attacks: - Direct Grace: Fidelity has the [PRECISION] ability. - Forceful Strike: Fidelity has the [DEVASTATING WOUNDS] ability. - Whirling Stance: Fidelity has the [SUSTAINED HITS 2] ability instead of [SUSTAINED HITS 1].",
-    "glossary": "glossary-tau-empire-ability-martial-warrior",
-    "rule": "unit-aunshi",
-    "units": [
-      "unit-aunshi"
-    ],
-    "datasheet": "unit-aunshi",
-    "statline": "aunshi-profile"
-  },
-  "tau-empire-weapon-fidelity": {
-    "id": "tau-empire-weapon-fidelity",
-    "title": "Fidelity",
-    "summary": "Melee · Melee · A 6 · WS 3+ · S 5 · AP -1 · D 2 · Sustained Hits 1",
-    "full": "Melee · Melee · A 6 · WS 3+ · S 5 · AP -1 · D 2 · Sustained Hits 1",
-    "glossary": "glossary-tau-empire-weapon-fidelity",
-    "rule": "unit-aunshi",
-    "units": [
-      "unit-aunshi"
-    ],
-    "datasheet": "unit-aunshi",
-    "statline": "aunshi-profile"
-  },
-  "tau-empire-ability-duality-shield": {
-    "id": "tau-empire-ability-duality-shield",
-    "title": "Duality Shield",
-    "summary": "Once per battle, each time an attack targets this unit, it can use this ability. If it does, until the end of the phase, models in this unit have a 2+ invulnerable save.",
-    "full": "Once per battle, each time an attack targets this unit, it can use this ability. If it does, until the end of the phase, models in this unit have a 2+ invulnerable save.",
-    "glossary": "glossary-tau-empire-ability-duality-shield",
-    "rule": "unit-aunva",
-    "units": [
-      "unit-aunva"
-    ],
-    "datasheet": "unit-aunva",
-    "statline": "aunva-profile"
-  },
-  "tau-empire-ability-paradox-of-duality": {
-    "id": "tau-empire-ability-paradox-of-duality",
-    "title": "Paradox of Duality",
-    "summary": "Each time an attack targets this unit, subtract 1 from the Hit roll and subtract 1 from the Wound roll.",
-    "full": "Each time an attack targets this unit, subtract 1 from the Hit roll and subtract 1 from the Wound roll.",
-    "glossary": "glossary-tau-empire-ability-paradox-of-duality",
-    "rule": "unit-aunva",
-    "units": [
-      "unit-aunva"
-    ],
-    "datasheet": "unit-aunva",
-    "statline": "aunva-profile"
-  },
-  "tau-empire-ability-supreme-loyalty-aura": {
-    "id": "tau-empire-ability-supreme-loyalty-aura",
-    "title": "Supreme Loyalty (Aura)",
-    "summary": "While a friendly T’AU EMPIRE unit is within 6\" of this unit, each time that unit takes a Battle-shock or Leadership test, add 1 to that test.",
-    "full": "While a friendly T’AU EMPIRE unit is within 6\" of this unit, each time that unit takes a Battle-shock or Leadership test, add 1 to that test.",
-    "glossary": "glossary-tau-empire-ability-supreme-loyalty-aura",
-    "rule": "unit-aunva",
-    "units": [
-      "unit-aunva"
-    ],
-    "datasheet": "unit-aunva",
-    "statline": "aunva-profile"
-  },
-  "tau-empire-weapon-close-combat-weapon-5": {
-    "id": "tau-empire-weapon-close-combat-weapon-5",
-    "title": "Close combat weapon",
-    "summary": "Melee · Melee · A 1 · WS 6+ · S 2 · AP 0 · D 1",
-    "full": "Melee · Melee · A 1 · WS 6+ · S 2 · AP 0 · D 1",
-    "glossary": "glossary-tau-empire-weapon-close-combat-weapon-5",
-    "rule": "unit-aunva",
-    "units": [
-      "unit-aunva"
-    ],
-    "datasheet": "unit-aunva",
-    "statline": "aunva-profile"
-  },
-  "tau-empire-weapon-supreme-honour-blade": {
-    "id": "tau-empire-weapon-supreme-honour-blade",
-    "title": "Supreme honour blade",
-    "summary": "Melee · Melee · A 3 · WS 3+ · S 5 · AP 0 · D 1",
-    "full": "Melee · Melee · A 3 · WS 3+ · S 5 · AP 0 · D 1",
-    "glossary": "glossary-tau-empire-weapon-supreme-honour-blade",
-    "rule": "unit-aunva",
-    "units": [
-      "unit-aunva"
-    ],
-    "datasheet": "unit-aunva",
-    "statline": "aunva-profile"
-  },
-  "tau-empire-ability-agile-dogfighter": {
-    "id": "tau-empire-ability-agile-dogfighter",
-    "title": "Agile Dogfighter",
-    "summary": "Each time an attack targets this model, subtract 1 from the Hit roll.",
-    "full": "Each time an attack targets this model, subtract 1 from the Hit roll.",
-    "glossary": "glossary-tau-empire-ability-agile-dogfighter",
-    "rule": "unit-barracuda",
-    "units": [
-      "unit-barracuda"
-    ],
-    "datasheet": "unit-barracuda",
-    "statline": "barracuda-profile"
-  },
-  "tau-empire-weapon-long-barrelled-burst-cannon": {
-    "id": "tau-empire-weapon-long-barrelled-burst-cannon",
-    "title": "Long-barrelled burst cannon",
-    "summary": "Ranged · 24\" · A 8 · BS 4+ · S 6 · AP 0 · D 1",
-    "full": "Ranged · 24\" · A 8 · BS 4+ · S 6 · AP 0 · D 1",
-    "glossary": "glossary-tau-empire-weapon-long-barrelled-burst-cannon",
-    "rule": "unit-barracuda",
-    "units": [
-      "unit-barracuda"
-    ],
-    "datasheet": "unit-barracuda",
-    "statline": "barracuda-profile"
-  },
-  "tau-empire-ability-crisis-commander": {
-    "id": "tau-empire-ability-crisis-commander",
-    "title": "Crisis Commander",
-    "summary": "While this model is leading a unit, each time a model in that unit makes a ranged attack, re-roll a Hit roll of 1.",
-    "full": "While this model is leading a unit, each time a model in that unit makes a ranged attack, re-roll a Hit roll of 1.",
-    "glossary": "glossary-tau-empire-ability-crisis-commander",
-    "rule": "unit-commander-in-crisis-battlesuit",
-    "units": [
-      "unit-commander-in-crisis-battlesuit"
-    ],
-    "datasheet": "unit-commander-in-crisis-battlesuit",
-    "statline": "commander-in-crisis-battlesuit-profile"
-  },
-  "tau-empire-ability-leader-3": {
-    "id": "tau-empire-ability-leader-3",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: - CRISIS BATTLESUITS - CRISIS FIREKNIFE BATTLESUITS - CRISIS STARSCYTHE BATTLESUITS - CRISIS SUNFORGE BATTLESUITS",
-    "full": "This model can be attached to the following units: - CRISIS BATTLESUITS - CRISIS FIREKNIFE BATTLESUITS - CRISIS STARSCYTHE BATTLESUITS - CRISIS SUNFORGE BATTLESUITS",
-    "glossary": "glossary-tau-empire-ability-leader-3",
-    "rule": "unit-commander-in-crisis-battlesuit",
-    "units": [
-      "unit-commander-in-crisis-battlesuit"
-    ],
-    "datasheet": "unit-commander-in-crisis-battlesuit",
-    "statline": "commander-in-crisis-battlesuit-profile"
-  },
-  "tau-empire-ability-turbo-jets": {
-    "id": "tau-empire-ability-turbo-jets",
-    "title": "Turbo-jets",
-    "summary": "Each time this unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in this unit.",
-    "full": "Each time this unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in this unit.",
-    "glossary": "glossary-tau-empire-ability-turbo-jets",
-    "rule": "unit-crisis-battlesuits",
-    "units": [
-      "unit-crisis-battlesuits"
-    ],
-    "datasheet": "unit-crisis-battlesuits",
-    "statline": "crisis-battlesuits-profile"
-  },
-  "tau-empire-ability-crisis-bodyguard": {
-    "id": "tau-empire-ability-crisis-bodyguard",
-    "title": "Crisis Bodyguard",
-    "summary": "If a Character unit from your army with the Leader ability can be attached to a Crisis Fireknife Battlesuit unit, it can be attached to this unit instead.",
-    "full": "If a Character unit from your army with the Leader ability can be attached to a Crisis Fireknife Battlesuit unit, it can be attached to this unit instead.",
-    "glossary": "glossary-tau-empire-ability-crisis-bodyguard",
-    "rule": "unit-crisis-battlesuits",
-    "units": [
-      "unit-crisis-battlesuits"
-    ],
-    "datasheet": "unit-crisis-battlesuits",
-    "statline": "crisis-battlesuits-profile"
-  },
-  "tau-empire-weapon-airbursting-fragmentation-projector-2": {
-    "id": "tau-empire-weapon-airbursting-fragmentation-projector-2",
-    "title": "Airbursting fragmentation projector",
-    "summary": "Ranged · 24\" · A D6 · BS 4+ · S 3 · AP 0 · D 1 · Blast, Indirect Fire",
-    "full": "Ranged · 24\" · A D6 · BS 4+ · S 3 · AP 0 · D 1 · Blast, Indirect Fire",
-    "glossary": "glossary-tau-empire-weapon-airbursting-fragmentation-projector-2",
-    "rule": "unit-crisis-battlesuits",
-    "units": [
-      "unit-crisis-battlesuits"
-    ],
-    "datasheet": "unit-crisis-battlesuits",
-    "statline": "crisis-battlesuits-profile"
-  },
-  "tau-empire-ability-reinforced-cover": {
-    "id": "tau-empire-ability-reinforced-cover",
-    "title": "Reinforced Cover",
-    "summary": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this FORTIFICATION, that model has the Benefit of Cover against that attack.",
-    "full": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this FORTIFICATION, that model has the Benefit of Cover against that attack.",
-    "glossary": "glossary-tau-empire-ability-reinforced-cover",
-    "rule": "unit-drone-sentry-turret",
-    "units": [
-      "unit-drone-sentry-turret",
-      "unit-remote-sensor-tower"
-    ],
-    "datasheet": "unit-drone-sentry-turret",
-    "statline": "drone-sentry-turret-profile"
-  },
-  "tau-empire-ability-sentinel-protocols": {
-    "id": "tau-empire-ability-sentinel-protocols",
-    "title": "Sentinel Protocols",
-    "summary": "Each time you select this FORTIFICATION for the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 5+ when resolving that Stratagem.",
-    "full": "Each time you select this FORTIFICATION for the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 5+ when resolving that Stratagem.",
-    "glossary": "glossary-tau-empire-ability-sentinel-protocols",
-    "rule": "unit-drone-sentry-turret",
-    "units": [
-      "unit-drone-sentry-turret"
-    ],
-    "datasheet": "unit-drone-sentry-turret",
-    "statline": "drone-sentry-turret-profile"
-  },
-  "tau-empire-weapon-twin-plasma-rifle-2": {
-    "id": "tau-empire-weapon-twin-plasma-rifle-2",
-    "title": "Twin plasma rifle",
-    "summary": "Ranged · 24\" · A 1 · BS 5+ · S 8 · AP -3 · D 3 · Twin-linked",
-    "full": "Ranged · 24\" · A 1 · BS 5+ · S 8 · AP -3 · D 3 · Twin-linked",
-    "glossary": "glossary-tau-empire-weapon-twin-plasma-rifle-2",
-    "rule": "unit-drone-sentry-turret",
-    "units": [
-      "unit-drone-sentry-turret"
-    ],
-    "datasheet": "unit-drone-sentry-turret",
-    "statline": "drone-sentry-turret-profile"
-  },
-  "tau-empire-weapon-twin-fusion-blaster-2": {
-    "id": "tau-empire-weapon-twin-fusion-blaster-2",
-    "title": "Twin fusion blaster",
-    "summary": "Ranged · 12\" · A 1 · BS 5+ · S 9 · AP -4 · D D6 · Melta 2, Twin-linked",
-    "full": "Ranged · 12\" · A 1 · BS 5+ · S 9 · AP -4 · D D6 · Melta 2, Twin-linked",
-    "glossary": "glossary-tau-empire-weapon-twin-fusion-blaster-2",
-    "rule": "unit-drone-sentry-turret",
-    "units": [
-      "unit-drone-sentry-turret"
-    ],
-    "datasheet": "unit-drone-sentry-turret",
-    "statline": "drone-sentry-turret-profile"
-  },
-  "tau-empire-weapon-twin-missile-pod-2": {
-    "id": "tau-empire-weapon-twin-missile-pod-2",
-    "title": "Twin missile pod",
-    "summary": "Ranged · 30\" · A 2 · BS 5+ · S 7 · AP -1 · D 2 · Twin-linked",
-    "full": "Ranged · 30\" · A 2 · BS 5+ · S 7 · AP -1 · D 2 · Twin-linked",
-    "glossary": "glossary-tau-empire-weapon-twin-missile-pod-2",
-    "rule": "unit-drone-sentry-turret",
-    "units": [
-      "unit-drone-sentry-turret"
-    ],
-    "datasheet": "unit-drone-sentry-turret",
-    "statline": "drone-sentry-turret-profile"
-  },
-  "tau-empire-weapon-twin-burst-cannon-3": {
-    "id": "tau-empire-weapon-twin-burst-cannon-3",
-    "title": "Twin burst cannon",
-    "summary": "Ranged · 18\" · A 4 · BS 5+ · S 5 · AP 0 · D 1 · Twin-linked",
-    "full": "Ranged · 18\" · A 4 · BS 5+ · S 5 · AP 0 · D 1 · Twin-linked",
-    "glossary": "glossary-tau-empire-weapon-twin-burst-cannon-3",
-    "rule": "unit-drone-sentry-turret",
-    "units": [
-      "unit-drone-sentry-turret",
-      "unit-heavy-gun-drones"
-    ],
-    "datasheet": "unit-drone-sentry-turret",
-    "statline": "drone-sentry-turret-profile"
-  },
-  "tau-empire-ability-loping-stride": {
-    "id": "tau-empire-ability-loping-stride",
-    "title": "Loping Stride",
-    "summary": "Each time this model Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of this model.",
-    "full": "Each time this model Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of this model.",
-    "glossary": "glossary-tau-empire-ability-loping-stride",
-    "rule": "unit-great-knarloc",
-    "units": [
-      "unit-great-knarloc"
-    ],
-    "datasheet": "unit-great-knarloc",
-    "statline": "great-knarloc-profile"
-  },
-  "tau-empire-ability-baggage-harness-aura": {
-    "id": "tau-empire-ability-baggage-harness-aura",
-    "title": "Baggage Harness (Aura)",
-    "summary": "While a friendly KROOT unit is within 3\" of the bearer, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
-    "full": "While a friendly KROOT unit is within 3\" of the bearer, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
-    "glossary": "glossary-tau-empire-ability-baggage-harness-aura",
-    "rule": "unit-great-knarloc",
-    "units": [
-      "unit-great-knarloc"
-    ],
-    "datasheet": "unit-great-knarloc",
-    "statline": "great-knarloc-profile"
-  },
-  "tau-empire-weapon-great-knarloc-beak-and-talons": {
-    "id": "tau-empire-weapon-great-knarloc-beak-and-talons",
-    "title": "Great Knarloc beak and talons",
-    "summary": "Melee · Melee · A 4 · WS 3+ · S 7 · AP -1 · D 3 · Extra Attacks",
-    "full": "Melee · Melee · A 4 · WS 3+ · S 7 · AP -1 · D 3 · Extra Attacks",
-    "glossary": "glossary-tau-empire-weapon-great-knarloc-beak-and-talons",
-    "rule": "unit-great-knarloc",
-    "units": [
-      "unit-great-knarloc"
-    ],
-    "datasheet": "unit-great-knarloc",
-    "statline": "great-knarloc-profile"
-  },
-  "tau-empire-weapon-kroot-bolt-thrower": {
-    "id": "tau-empire-weapon-kroot-bolt-thrower",
-    "title": "Kroot bolt thrower",
-    "summary": "Ranged · 12\" · A 1 · BS 4+ · S 12 · AP -2 · D 3 · Hooked",
-    "full": "Ranged · 12\" · A 1 · BS 4+ · S 12 · AP -2 · D 3 · Hooked",
-    "glossary": "glossary-tau-empire-weapon-kroot-bolt-thrower",
-    "rule": "unit-great-knarloc",
-    "units": [
-      "unit-great-knarloc"
-    ],
-    "datasheet": "unit-great-knarloc",
-    "statline": "great-knarloc-profile"
-  },
-  "tau-empire-weapon-kroot-rifle-ranged": {
-    "id": "tau-empire-weapon-kroot-rifle-ranged",
-    "title": "Kroot rifle (Ranged)",
-    "summary": "Ranged · 24\" · A 1 · BS 4+ · S 4 · AP 0 · D 1 · Rapid Fire 1",
-    "full": "Ranged · 24\" · A 1 · BS 4+ · S 4 · AP 0 · D 1 · Rapid Fire 1",
-    "glossary": "glossary-tau-empire-weapon-kroot-rifle-ranged",
-    "rule": "unit-great-knarloc",
-    "units": [
-      "unit-great-knarloc",
-      "unit-knarloc-riders"
-    ],
-    "datasheet": "unit-great-knarloc",
-    "statline": "great-knarloc-profile"
-  },
-  "tau-empire-weapon-kroot-rifle-melee": {
-    "id": "tau-empire-weapon-kroot-rifle-melee",
-    "title": "Kroot rifle (Melee)",
-    "summary": "Melee · Melee · A 2 · WS 3+ · S 4 · AP 0 · D 1",
-    "full": "Melee · Melee · A 2 · WS 3+ · S 4 · AP 0 · D 1",
-    "glossary": "glossary-tau-empire-weapon-kroot-rifle-melee",
-    "rule": "unit-great-knarloc",
-    "units": [
-      "unit-great-knarloc",
-      "unit-knarloc-riders"
-    ],
-    "datasheet": "unit-great-knarloc",
-    "statline": "great-knarloc-profile"
-  },
-  "tau-empire-weapon-twin-kroot-gun": {
-    "id": "tau-empire-weapon-twin-kroot-gun",
-    "title": "Twin Kroot gun",
-    "summary": "Ranged · 36\" · A 2 · BS 4+ · S 7 · AP 0 · D 2 · Twin-linked",
-    "full": "Ranged · 36\" · A 2 · BS 4+ · S 7 · AP 0 · D 2 · Twin-linked",
-    "glossary": "glossary-tau-empire-weapon-twin-kroot-gun",
-    "rule": "unit-great-knarloc",
-    "units": [
-      "unit-great-knarloc"
-    ],
-    "datasheet": "unit-great-knarloc",
-    "statline": "great-knarloc-profile"
-  },
-  "tau-empire-ability-drone-escort": {
-    "id": "tau-empire-ability-drone-escort",
-    "title": "Drone Escort",
-    "summary": "Once per turn, in your opponent’s Shooting phase, when a friendly T'AU EMPIRE unit within 6\" of this unit is selected as the target of an attack, one unit from your army with this ability can use it. If it does, after that enemy unit has finished making its attacks, the unit using this ability can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit (and only if it is an eligible target).",
-    "full": "Once per turn, in your opponent’s Shooting phase, when a friendly T'AU EMPIRE unit within 6\" of this unit is selected as the target of an attack, one unit from your army with this ability can use it. If it does, after that enemy unit has finished making its attacks, the unit using this ability can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit (and only if it is an eligible target).",
-    "glossary": "glossary-tau-empire-ability-drone-escort",
-    "rule": "unit-heavy-gun-drones",
-    "units": [
-      "unit-heavy-gun-drones"
-    ],
-    "datasheet": "unit-heavy-gun-drones",
-    "statline": "heavy-gun-drones-profile"
-  },
-  "tau-empire-weapon-close-combat-weapon-6": {
-    "id": "tau-empire-weapon-close-combat-weapon-6",
-    "title": "Close combat weapon",
-    "summary": "Melee · Melee · A 1 · WS 6+ · S 3 · AP 0 · D 1",
-    "full": "Melee · Melee · A 1 · WS 6+ · S 3 · AP 0 · D 1",
-    "glossary": "glossary-tau-empire-weapon-close-combat-weapon-6",
-    "rule": "unit-heavy-gun-drones",
-    "units": [
-      "unit-heavy-gun-drones",
-      "unit-tactical-drones"
-    ],
-    "datasheet": "unit-heavy-gun-drones",
-    "statline": "heavy-gun-drones-profile"
-  },
-  "tau-empire-weapon-knarloc-beak-and-talons": {
-    "id": "tau-empire-weapon-knarloc-beak-and-talons",
-    "title": "Knarloc beak and talons",
-    "summary": "Melee · Melee · A 4 · WS 3+ · S 6 · AP -1 · D 1 · Extra Attacks",
-    "full": "Melee · Melee · A 4 · WS 3+ · S 6 · AP -1 · D 1 · Extra Attacks",
-    "glossary": "glossary-tau-empire-weapon-knarloc-beak-and-talons",
-    "rule": "unit-knarloc-riders",
-    "units": [
-      "unit-knarloc-riders"
-    ],
-    "datasheet": "unit-knarloc-riders",
-    "statline": "knarloc-riders-profile"
-  },
-  "tau-empire-weapon-railgun-2": {
-    "id": "tau-empire-weapon-railgun-2",
-    "title": "Railgun",
-    "summary": "Ranged · 72\" · A 1 · BS 3+ · S 20 · AP -5 · D D6+6 · Devastating Wounds, Heavy",
-    "full": "Ranged · 72\" · A 1 · BS 3+ · S 20 · AP -5 · D D6+6 · Devastating Wounds, Heavy",
-    "glossary": "glossary-tau-empire-weapon-railgun-2",
-    "rule": "unit-longstrike",
-    "units": [
-      "unit-longstrike"
-    ],
-    "datasheet": "unit-longstrike",
-    "statline": "longstrike-profile"
-  },
-  "tau-empire-weapon-ion-cannon-standard-2": {
-    "id": "tau-empire-weapon-ion-cannon-standard-2",
-    "title": "➤ Ion cannon - standard",
-    "summary": "Ranged · 60\" · A D6+3 · BS 3+ · S 7 · AP -1 · D 2 · Blast",
-    "full": "Ranged · 60\" · A D6+3 · BS 3+ · S 7 · AP -1 · D 2 · Blast",
-    "glossary": "glossary-tau-empire-weapon-ion-cannon-standard-2",
-    "rule": "unit-longstrike",
-    "units": [
-      "unit-longstrike"
-    ],
-    "datasheet": "unit-longstrike",
-    "statline": "longstrike-profile"
-  },
-  "tau-empire-weapon-ion-cannon-overcharge-2": {
-    "id": "tau-empire-weapon-ion-cannon-overcharge-2",
-    "title": "➤ Ion cannon - overcharge",
-    "summary": "Ranged · 60\" · A D6+3 · BS 3+ · S 8 · AP -2 · D 3 · Blast, Hazardous",
-    "full": "Ranged · 60\" · A D6+3 · BS 3+ · S 8 · AP -2 · D 3 · Blast, Hazardous",
-    "glossary": "glossary-tau-empire-weapon-ion-cannon-overcharge-2",
-    "rule": "unit-longstrike",
-    "units": [
-      "unit-longstrike"
-    ],
-    "datasheet": "unit-longstrike",
-    "statline": "longstrike-profile"
-  },
-  "tau-empire-ability-jet-pack-insertion": {
-    "id": "tau-empire-ability-jet-pack-insertion",
-    "title": "Jet Pack Insertion",
-    "summary": "At the end of your opponent’s Movement phase, one or more units embarked within this TRANSPORT can disembark from it, provided every model in each of those disembarking units has the Deep Strike ability.",
-    "full": "At the end of your opponent’s Movement phase, one or more units embarked within this TRANSPORT can disembark from it, provided every model in each of those disembarking units has the Deep Strike ability.",
-    "glossary": "glossary-tau-empire-ability-jet-pack-insertion",
-    "rule": "unit-orca-dropship",
-    "units": [
-      "unit-orca-dropship"
-    ],
-    "datasheet": "unit-orca-dropship",
-    "statline": "orca-dropship-profile"
-  },
-  "tau-empire-ability-damaged-1-9-wounds-remaining": {
-    "id": "tau-empire-ability-damaged-1-9-wounds-remaining",
-    "title": "Damaged: 1-9 Wounds Remaining",
-    "summary": "While this model has 1-9 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-9 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-tau-empire-ability-damaged-1-9-wounds-remaining",
-    "rule": "unit-orca-dropship",
-    "units": [
-      "unit-orca-dropship"
-    ],
-    "datasheet": "unit-orca-dropship",
-    "statline": "orca-dropship-profile"
-  },
-  "tau-empire-weapon-armoured-hull-4": {
-    "id": "tau-empire-weapon-armoured-hull-4",
-    "title": "Armoured hull",
-    "summary": "Melee · Melee · A 3 · WS 5+ · S 8 · AP 0 · D 1",
-    "full": "Melee · Melee · A 3 · WS 5+ · S 8 · AP 0 · D 1",
-    "glossary": "glossary-tau-empire-weapon-armoured-hull-4",
-    "rule": "unit-orca-dropship",
-    "units": [
-      "unit-orca-dropship"
-    ],
-    "datasheet": "unit-orca-dropship",
-    "statline": "orca-dropship-profile"
-  },
-  "tau-empire-weapon-long-barrelled-burst-cannon-2": {
-    "id": "tau-empire-weapon-long-barrelled-burst-cannon-2",
-    "title": "Long-barrelled burst cannon",
-    "summary": "Ranged · 36\" · A 4 · BS 4+ · S 5 · AP 0 · D 1",
-    "full": "Ranged · 36\" · A 4 · BS 4+ · S 5 · AP 0 · D 1",
-    "glossary": "glossary-tau-empire-weapon-long-barrelled-burst-cannon-2",
-    "rule": "unit-orca-dropship",
-    "units": [
-      "unit-orca-dropship"
-    ],
-    "datasheet": "unit-orca-dropship",
-    "statline": "orca-dropship-profile"
-  },
-  "tau-empire-ability-nova-shielding": {
-    "id": "tau-empire-ability-nova-shielding",
-    "title": "Nova Shielding",
-    "summary": "Once per battle, when this model is selected as the target of a ranged attack, it can use this ability. If it does, until the end of the phase, each time an attack targets this model, if the Strength characteristic of that attack is greater than the Toughness characteristic of this model, subtract 1 from the Wound roll.",
-    "full": "Once per battle, when this model is selected as the target of a ranged attack, it can use this ability. If it does, until the end of the phase, each time an attack targets this model, if the Strength characteristic of that attack is greater than the Toughness characteristic of this model, subtract 1 from the Wound roll.",
-    "glossary": "glossary-tau-empire-ability-nova-shielding",
-    "rule": "unit-rvarna-battlesuit",
-    "units": [
-      "unit-rvarna-battlesuit"
-    ],
-    "datasheet": "unit-rvarna-battlesuit",
-    "statline": "rvarna-battlesuit-profile"
-  },
-  "tau-empire-weapon-pulse-submunitions-cannon": {
-    "id": "tau-empire-weapon-pulse-submunitions-cannon",
-    "title": "Pulse submunitions cannon",
-    "summary": "Ranged · 60\" · A D6+2 · BS 4+ · S 8 · AP -1 · D 2 · Blast",
-    "full": "Ranged · 60\" · A D6+2 · BS 4+ · S 8 · AP -1 · D 2 · Blast",
-    "glossary": "glossary-tau-empire-weapon-pulse-submunitions-cannon",
-    "rule": "unit-rvarna-battlesuit",
-    "units": [
-      "unit-rvarna-battlesuit"
-    ],
-    "datasheet": "unit-rvarna-battlesuit",
-    "statline": "rvarna-battlesuit-profile"
-  },
-  "tau-empire-weapon-battlesuit-fists-4": {
-    "id": "tau-empire-weapon-battlesuit-fists-4",
-    "title": "Battlesuit fists",
-    "summary": "Melee · Melee · A 6 · WS 5+ · S 6 · AP 0 · D 2",
-    "full": "Melee · Melee · A 6 · WS 5+ · S 6 · AP 0 · D 2",
-    "glossary": "glossary-tau-empire-weapon-battlesuit-fists-4",
-    "rule": "unit-rvarna-battlesuit",
-    "units": [
-      "unit-rvarna-battlesuit",
-      "unit-yvahra-battlesuit"
-    ],
-    "datasheet": "unit-rvarna-battlesuit",
-    "statline": "rvarna-battlesuit-profile"
-  },
-  "tau-empire-ability-aerial-disengagement": {
-    "id": "tau-empire-ability-aerial-disengagement",
-    "title": "Aerial Disengagement",
-    "summary": "In your opponent's Movement phase, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\".",
-    "full": "In your opponent's Movement phase, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\".",
-    "glossary": "glossary-tau-empire-ability-aerial-disengagement",
-    "rule": "unit-remora-stealth-drones",
-    "units": [
-      "unit-remora-stealth-drones"
-    ],
-    "datasheet": "unit-remora-stealth-drones",
-    "statline": "remora-stealth-drones-profile"
-  },
-  "tau-empire-weapon-close-combat-weapon-7": {
-    "id": "tau-empire-weapon-close-combat-weapon-7",
-    "title": "Close combat weapon",
-    "summary": "Melee · Melee · A 1 · WS 5+ · S 4 · AP 0 · D 1",
-    "full": "Melee · Melee · A 1 · WS 5+ · S 4 · AP 0 · D 1",
-    "glossary": "glossary-tau-empire-weapon-close-combat-weapon-7",
-    "rule": "unit-remora-stealth-drones",
-    "units": [
-      "unit-remora-stealth-drones"
-    ],
-    "datasheet": "unit-remora-stealth-drones",
-    "statline": "remora-stealth-drones-profile"
-  },
-  "tau-empire-weapon-remora-seeker-missile": {
-    "id": "tau-empire-weapon-remora-seeker-missile",
-    "title": "Remora seeker missile",
-    "summary": "Ranged · 48\" · A 1 · BS 4+ · S 14 · AP -3 · D D6+1 · One Shot",
-    "full": "Ranged · 48\" · A 1 · BS 4+ · S 14 · AP -3 · D D6+1 · One Shot",
-    "glossary": "glossary-tau-empire-weapon-remora-seeker-missile",
-    "rule": "unit-remora-stealth-drones",
-    "units": [
-      "unit-remora-stealth-drones"
-    ],
-    "datasheet": "unit-remora-stealth-drones",
-    "statline": "remora-stealth-drones-profile"
-  },
-  "tau-empire-weapon-twin-long-barrelled-burst-cannon": {
-    "id": "tau-empire-weapon-twin-long-barrelled-burst-cannon",
-    "title": "Twin long-barrelled burst cannon",
-    "summary": "Ranged · 24\" · A 4 · BS 4+ · S 6 · AP -1 · D 1 · Twin-linked",
-    "full": "Ranged · 24\" · A 4 · BS 4+ · S 6 · AP -1 · D 1 · Twin-linked",
-    "glossary": "glossary-tau-empire-weapon-twin-long-barrelled-burst-cannon",
-    "rule": "unit-remora-stealth-drones",
-    "units": [
-      "unit-remora-stealth-drones"
-    ],
-    "datasheet": "unit-remora-stealth-drones",
-    "statline": "remora-stealth-drones-profile"
-  },
-  "tau-empire-ability-orbital-comms-array-aura": {
-    "id": "tau-empire-ability-orbital-comms-array-aura",
-    "title": "Orbital Comms Array (Aura)",
-    "summary": "While a friendly T'AU EMPIRE unit is within 6\" of this FORTIFICATION, each time you target that unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
-    "full": "While a friendly T'AU EMPIRE unit is within 6\" of this FORTIFICATION, each time you target that unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
-    "glossary": "glossary-tau-empire-ability-orbital-comms-array-aura",
-    "rule": "unit-remote-sensor-tower",
-    "units": [
-      "unit-remote-sensor-tower"
-    ],
-    "datasheet": "unit-remote-sensor-tower",
-    "statline": "remote-sensor-tower-profile"
-  },
-  "tau-empire-ability-eclipse-field-generator": {
-    "id": "tau-empire-ability-eclipse-field-generator",
-    "title": "Eclipse Field Generator",
-    "summary": "While this model is leading a unit, models in that unit have a 5+ invulnerable save.",
-    "full": "While this model is leading a unit, models in that unit have a 5+ invulnerable save.",
-    "glossary": "glossary-tau-empire-ability-eclipse-field-generator",
-    "rule": "unit-shaso-ralai",
-    "units": [
-      "unit-shaso-ralai"
-    ],
-    "datasheet": "unit-shaso-ralai",
-    "statline": "shaso-ralai-profile"
-  },
-  "tau-empire-ability-assassin": {
-    "id": "tau-empire-ability-assassin",
-    "title": "Assassin",
-    "summary": "Each time this model makes an attack that targets a Character unit, you can re-roll the Hit roll.",
-    "full": "Each time this model makes an attack that targets a Character unit, you can re-roll the Hit roll.",
-    "glossary": "glossary-tau-empire-ability-assassin",
-    "rule": "unit-shaso-ralai",
-    "units": [
-      "unit-shaso-ralai"
-    ],
-    "datasheet": "unit-shaso-ralai",
-    "statline": "shaso-ralai-profile"
-  },
-  "tau-empire-ability-blacklight-marker-drones": {
-    "id": "tau-empire-ability-blacklight-marker-drones",
-    "title": "Blacklight Marker Drones",
-    "summary": "Twice per battle, when this unit is an Observer unit, until the end of the phase, each time a ranged attack is made by a model in their Guided unit that targets their Spotted unit, re-roll a Wound roll of 1. Designer’s Note: *Place two Blacklight Marker Drone tokens next to this model, removing one each time this ability has been used.*",
-    "full": "Twice per battle, when this unit is an Observer unit, until the end of the phase, each time a ranged attack is made by a model in their Guided unit that targets their Spotted unit, re-roll a Wound roll of 1. Designer’s Note: *Place two Blacklight Marker Drone tokens next to this model, removing one each time this ability has been used.*",
-    "glossary": "glossary-tau-empire-ability-blacklight-marker-drones",
-    "rule": "unit-shaso-ralai",
-    "units": [
-      "unit-shaso-ralai"
-    ],
-    "datasheet": "unit-shaso-ralai",
-    "statline": "shaso-ralai-profile"
-  },
-  "tau-empire-weapon-experimental-pulse-submunitions-rifle-emp": {
-    "id": "tau-empire-weapon-experimental-pulse-submunitions-rifle-emp",
-    "title": "➤ Experimental pulse submunitions rifle - EMP",
-    "summary": "Ranged · 24\" · A 1 · BS 3+ · S 1 · AP 0 · D 3 · Anti-Vehicle 3+, Devastating Wounds",
-    "full": "Ranged · 24\" · A 1 · BS 3+ · S 1 · AP 0 · D 3 · Anti-Vehicle 3+, Devastating Wounds",
-    "glossary": "glossary-tau-empire-weapon-experimental-pulse-submunitions-rifle-emp",
-    "rule": "unit-shaso-ralai",
-    "units": [
-      "unit-shaso-ralai"
-    ],
-    "datasheet": "unit-shaso-ralai",
-    "statline": "shaso-ralai-profile"
-  },
-  "tau-empire-weapon-experimental-pulse-submunitions-rifle-ionic-cluster-beam-shell": {
-    "id": "tau-empire-weapon-experimental-pulse-submunitions-rifle-ionic-cluster-beam-shell",
-    "title": "➤ Experimental pulse submunitions rifle - ionic cluster-beam shell",
-    "summary": "Ranged · 24\" · A D6 · BS 3+ · S 6 · AP -1 · D 1 · Blast",
-    "full": "Ranged · 24\" · A D6 · BS 3+ · S 6 · AP -1 · D 1 · Blast",
-    "glossary": "glossary-tau-empire-weapon-experimental-pulse-submunitions-rifle-ionic-cluster-beam-shell",
-    "rule": "unit-shaso-ralai",
-    "units": [
-      "unit-shaso-ralai"
-    ],
-    "datasheet": "unit-shaso-ralai",
-    "statline": "shaso-ralai-profile"
-  },
-  "tau-empire-ability-high-intensity-markerlights": {
-    "id": "tau-empire-ability-high-intensity-markerlights",
-    "title": "High-intensity Markerlights",
-    "summary": "Each time this unit is an Observer unit, until the end of the phase, each time a model in its Guided unit makes an attack that targets their Spotted unit, you can re-roll the Hit roll.",
-    "full": "Each time this unit is an Observer unit, until the end of the phase, each time a model in its Guided unit makes an attack that targets their Spotted unit, you can re-roll the Hit roll.",
-    "glossary": "glossary-tau-empire-ability-high-intensity-markerlights",
-    "rule": "unit-tetras",
-    "units": [
-      "unit-tetras"
-    ],
-    "datasheet": "unit-tetras",
-    "statline": "tetras-profile"
-  },
-  "tau-empire-weapon-close-combat-weapons-2": {
-    "id": "tau-empire-weapon-close-combat-weapons-2",
-    "title": "Close combat weapons",
-    "summary": "Melee · Melee · A 2 · WS 5+ · S 3 · AP 0 · D 1",
-    "full": "Melee · Melee · A 2 · WS 5+ · S 3 · AP 0 · D 1",
-    "glossary": "glossary-tau-empire-weapon-close-combat-weapons-2",
-    "rule": "unit-tetras",
-    "units": [
-      "unit-tetras"
-    ],
-    "datasheet": "unit-tetras",
-    "statline": "tetras-profile"
-  },
-  "tau-empire-ability-outflank": {
-    "id": "tau-empire-ability-outflank",
-    "title": "Outflank",
-    "summary": "When this unit arrives from Strategic Reserves, it can be set up within your opponent’s deployment zone (all other restrictions still apply).",
-    "full": "When this unit arrives from Strategic Reserves, it can be set up within your opponent’s deployment zone (all other restrictions still apply).",
-    "glossary": "glossary-tau-empire-ability-outflank",
-    "rule": "unit-tx42-piranha",
-    "units": [
-      "unit-tx42-piranha"
-    ],
-    "datasheet": "unit-tx42-piranha",
-    "statline": "tx42-piranha-profile"
-  },
-  "tau-empire-weapon-rail-rifle-2": {
-    "id": "tau-empire-weapon-rail-rifle-2",
-    "title": "Rail rifle",
-    "summary": "Ranged · 30\" · A 1 · BS 4+ · S 10 · AP -4 · D 3 · Devastating Wounds",
-    "full": "Ranged · 30\" · A 1 · BS 4+ · S 10 · AP -4 · D 3 · Devastating Wounds",
-    "glossary": "glossary-tau-empire-weapon-rail-rifle-2",
-    "rule": "unit-tx42-piranha",
-    "units": [
-      "unit-tx42-piranha"
-    ],
-    "datasheet": "unit-tx42-piranha",
-    "statline": "tx42-piranha-profile"
-  },
-  "tau-empire-ability-photon-casters": {
-    "id": "tau-empire-ability-photon-casters",
-    "title": "Photon Casters",
-    "summary": "In your Shooting phase, after this unit has shot, if an enemy Infantry unit was hit by one or more of those attacks, until the end of your opponent’s next turn, that enemy unit is stunned. While a unit is stunned, subtract 2 from that unit’s Move characteristic, and subtract 2 from Advance and Charge rolls made for that unit.",
-    "full": "In your Shooting phase, after this unit has shot, if an enemy Infantry unit was hit by one or more of those attacks, until the end of your opponent’s next turn, that enemy unit is stunned. While a unit is stunned, subtract 2 from that unit’s Move characteristic, and subtract 2 from Advance and Charge rolls made for that unit.",
-    "glossary": "glossary-tau-empire-ability-photon-casters",
-    "rule": "unit-xv9-hazard-battlesuits",
-    "units": [
-      "unit-xv9-hazard-battlesuits"
-    ],
-    "datasheet": "unit-xv9-hazard-battlesuits",
-    "statline": "xv9-hazard-battlesuits-profile"
-  },
-  "tau-empire-weapon-fusion-cascade": {
-    "id": "tau-empire-weapon-fusion-cascade",
-    "title": "Fusion cascade",
-    "summary": "Ranged · 12\" · A 1 · BS 4+ · S 9 · AP -4 · D D6 · Melta 4",
-    "full": "Ranged · 12\" · A 1 · BS 4+ · S 9 · AP -4 · D D6 · Melta 4",
-    "glossary": "glossary-tau-empire-weapon-fusion-cascade",
-    "rule": "unit-xv9-hazard-battlesuits",
-    "units": [
-      "unit-xv9-hazard-battlesuits"
-    ],
-    "datasheet": "unit-xv9-hazard-battlesuits",
-    "statline": "xv9-hazard-battlesuits-profile"
-  },
-  "tau-empire-weapon-phased-ion-gun": {
-    "id": "tau-empire-weapon-phased-ion-gun",
-    "title": "Phased ion gun",
-    "summary": "Ranged · 30\" · A 4 · BS 4+ · S 6 · AP -1 · D 1",
-    "full": "Ranged · 30\" · A 4 · BS 4+ · S 6 · AP -1 · D 1",
-    "glossary": "glossary-tau-empire-weapon-phased-ion-gun",
-    "rule": "unit-xv9-hazard-battlesuits",
-    "units": [
-      "unit-xv9-hazard-battlesuits"
-    ],
-    "datasheet": "unit-xv9-hazard-battlesuits",
-    "statline": "xv9-hazard-battlesuits-profile"
-  },
-  "tau-empire-weapon-twin-hazard-burst-cannon": {
-    "id": "tau-empire-weapon-twin-hazard-burst-cannon",
-    "title": "Twin hazard burst cannon",
-    "summary": "Ranged · 24\" · A 4 · BS 4+ · S 5 · AP 0 · D 1 · Twin-linked",
-    "full": "Ranged · 24\" · A 4 · BS 4+ · S 5 · AP 0 · D 1 · Twin-linked",
-    "glossary": "glossary-tau-empire-weapon-twin-hazard-burst-cannon",
-    "rule": "unit-xv9-hazard-battlesuits",
-    "units": [
-      "unit-xv9-hazard-battlesuits"
-    ],
-    "datasheet": "unit-xv9-hazard-battlesuits",
-    "statline": "xv9-hazard-battlesuits-profile"
-  },
-  "tau-empire-ability-nova-burst": {
-    "id": "tau-empire-ability-nova-burst",
-    "title": "Nova Burst",
-    "summary": "Once per battle, before this model makes a Normal, Advance or Fall Back move, it can use this ability. If it does, until the end of the phase, it has a Move characteristic of 18\".",
-    "full": "Once per battle, before this model makes a Normal, Advance or Fall Back move, it can use this ability. If it does, until the end of the phase, it has a Move characteristic of 18\".",
-    "glossary": "glossary-tau-empire-ability-nova-burst",
-    "rule": "unit-yvahra-battlesuit",
-    "units": [
-      "unit-yvahra-battlesuit"
-    ],
-    "datasheet": "unit-yvahra-battlesuit",
-    "statline": "yvahra-battlesuit-profile"
-  },
-  "tau-empire-weapon-flechette-pod": {
-    "id": "tau-empire-weapon-flechette-pod",
-    "title": "Flechette pod",
-    "summary": "Ranged · 12\" · A 5 · BS 4+ · S 3 · AP 0 · D 1",
-    "full": "Ranged · 12\" · A 5 · BS 4+ · S 3 · AP 0 · D 1",
-    "glossary": "glossary-tau-empire-weapon-flechette-pod",
-    "rule": "unit-yvahra-battlesuit",
-    "units": [
-      "unit-yvahra-battlesuit"
-    ],
-    "datasheet": "unit-yvahra-battlesuit",
-    "statline": "yvahra-battlesuit-profile"
-  },
-  "tau-empire-weapon-ionic-discharge-cannon-standard": {
-    "id": "tau-empire-weapon-ionic-discharge-cannon-standard",
-    "title": "➤ Ionic discharge cannon - standard",
-    "summary": "Ranged · 18\" · A D6+1 · BS 4+ · S 7 · AP -1 · D 2 · Blast",
-    "full": "Ranged · 18\" · A D6+1 · BS 4+ · S 7 · AP -1 · D 2 · Blast",
-    "glossary": "glossary-tau-empire-weapon-ionic-discharge-cannon-standard",
-    "rule": "unit-yvahra-battlesuit",
-    "units": [
-      "unit-yvahra-battlesuit"
-    ],
-    "datasheet": "unit-yvahra-battlesuit",
-    "statline": "yvahra-battlesuit-profile"
-  },
-  "tau-empire-weapon-ionic-discharge-cannon-overcharge": {
-    "id": "tau-empire-weapon-ionic-discharge-cannon-overcharge",
-    "title": "➤ Ionic discharge cannon - overcharge",
-    "summary": "Ranged · 18\" · A D6+1 · BS 4+ · S 8 · AP -2 · D 3 · Blast, Hazardous",
-    "full": "Ranged · 18\" · A D6+1 · BS 4+ · S 8 · AP -2 · D 3 · Blast, Hazardous",
-    "glossary": "glossary-tau-empire-weapon-ionic-discharge-cannon-overcharge",
-    "rule": "unit-yvahra-battlesuit",
-    "units": [
-      "unit-yvahra-battlesuit"
-    ],
-    "datasheet": "unit-yvahra-battlesuit",
-    "statline": "yvahra-battlesuit-profile"
-  },
-  "tau-empire-weapon-phased-plasma-flamer": {
-    "id": "tau-empire-weapon-phased-plasma-flamer",
-    "title": "Phased plasma-flamer",
-    "summary": "Ranged · 12\" · A 10 · BS N/A · S 6 · AP -1 · D 1 · Ignores Cover, Torrent",
-    "full": "Ranged · 12\" · A 10 · BS N/A · S 6 · AP -1 · D 1 · Ignores Cover, Torrent",
-    "glossary": "glossary-tau-empire-weapon-phased-plasma-flamer",
-    "rule": "unit-yvahra-battlesuit",
-    "units": [
-      "unit-yvahra-battlesuit"
-    ],
-    "datasheet": "unit-yvahra-battlesuit",
-    "statline": "yvahra-battlesuit-profile"
   },
   "tau-empire-enhancement-negation-emitters-upgrade-2": {
     "id": "tau-empire-enhancement-negation-emitters-upgrade-2",
@@ -5488,5 +4027,13 @@ window.DG_TERMS={
     "full": "Each time a T’AU EMPIRE BATTLESUIT model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 8\", improve the Armour Penetration characteristic of that attack by 1 as well.",
     "glossary": "glossary-tau-empire-detachment-rule-bonded-heroes",
     "rule": "detachment-retaliation-cadre"
+  },
+  "tau-empire-army-rule-for-the-greater-good": {
+    "id": "tau-empire-army-rule-for-the-greater-good",
+    "title": "For the Greater Good",
+    "summary": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units. During your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase. Units from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units. Until the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+    "full": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units. During your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase. Units from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units. Until the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+    "glossary": "glossary-tau-empire-army-rule-for-the-greater-good",
+    "rule": "army-rule-for-the-greater-good"
   }
 };

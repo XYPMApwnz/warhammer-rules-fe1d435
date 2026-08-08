@@ -435,11 +435,7 @@ window.DG_TERMS={
       "unit-sicarian-ruststalkers",
       "unit-skorpius-disintegrator",
       "unit-sydonian-dragoons-with-radium-jezzails",
-      "unit-sydonian-dragoons-with-taser-lances",
-      "unit-secutarii-hoplites",
-      "unit-secutarii-peltasts",
-      "unit-terrax-pattern-termite",
-      "unit-x-101"
+      "unit-sydonian-dragoons-with-taser-lances"
     ],
     "datasheet": "unit-skitarii-rangers",
     "statline": "skitarii-rangers-profile"
@@ -464,20 +460,6 @@ window.DG_TERMS={
     "full": "A DATA-PSALM Detachment cannot be taken with another DATA-PSALM Detachment.",
     "glossary": "glossary-data-psalm",
     "rule": "luminen-auto-choir-rule"
-  },
-  "warhammer-legends": {
-    "title": "Warhammer Legends",
-    "summary": "Datasheets intended for the Warhammer Legends rules environment.",
-    "full": "Check the current event pack and organiser guidance before using Legends datasheets in matched play.",
-    "glossary": "glossary-warhammer-legends",
-    "units": [
-      "unit-x-101",
-      "unit-secutarii-hoplites",
-      "unit-secutarii-peltasts",
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-x-101",
-    "statline": "x-101-profile"
   },
   "stratagem-defect-scrutiny": {
     "title": "Defect Scrutiny",
@@ -806,9 +788,7 @@ window.DG_TERMS={
     "units": [
       "unit-skitarii-rangers",
       "unit-skitarii-vanguard",
-      "unit-serberys-raiders",
-      "unit-secutarii-hoplites",
-      "unit-secutarii-peltasts"
+      "unit-serberys-raiders"
     ],
     "datasheet": "unit-skitarii-rangers",
     "statline": "skitarii-rangers-profile"
@@ -821,9 +801,7 @@ window.DG_TERMS={
     "rule": "unit-skitarii-rangers",
     "units": [
       "unit-skitarii-rangers",
-      "unit-skitarii-vanguard",
-      "unit-secutarii-hoplites",
-      "unit-secutarii-peltasts"
+      "unit-skitarii-vanguard"
     ],
     "datasheet": "unit-skitarii-rangers",
     "statline": "skitarii-rangers-profile"
@@ -877,8 +855,7 @@ window.DG_TERMS={
     "rule": "unit-skitarii-rangers",
     "units": [
       "unit-skitarii-rangers",
-      "unit-skitarii-vanguard",
-      "unit-secutarii-peltasts"
+      "unit-skitarii-vanguard"
     ],
     "datasheet": "unit-skitarii-rangers",
     "statline": "skitarii-rangers-profile"
@@ -2072,8 +2049,7 @@ window.DG_TERMS={
     "glossary": "glossary-weapon-hydraulic-claw",
     "rule": "unit-kataphron-breachers",
     "units": [
-      "unit-kataphron-breachers",
-      "unit-x-101"
+      "unit-kataphron-breachers"
     ],
     "datasheet": "unit-kataphron-breachers",
     "statline": "kataphron-breachers-profile"
@@ -2802,270 +2778,5 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-sydonian-dragoons-with-taser-lances",
     "statline": "sydonian-dragoons-with-taser-lances-profile"
-  },
-  "datasheet-titan-guard": {
-    "title": "Titan Guard",
-    "summary": "You can target this unit with Heroic Intervention for 0CP even if another unit was targeted.",
-    "full": "You can target this unit with Heroic Intervention for 0CP even if another unit was targeted. If a friendly ADEPTUS TITANICUS unit is on the battlefield, you can re-roll the charge roll.",
-    "glossary": "glossary-datasheet-titan-guard",
-    "rule": "unit-secutarii-hoplites",
-    "units": [
-      "unit-secutarii-hoplites"
-    ],
-    "datasheet": "unit-secutarii-hoplites",
-    "statline": "secutarii-hoplites-profile"
-  },
-  "weapon-arc-lance": {
-    "title": "Arc lance",
-    "summary": "Ranged · 12\" · A 1 · BS 4+ · S 5 · AP -1 · D 1 · Anti-Vehicle 4+, Devastating Wounds",
-    "full": "Ranged · 12\" · A 1 · BS 4+ · S 5 · AP -1 · D 1 · Anti-Vehicle 4+, Devastating Wounds",
-    "glossary": "glossary-weapon-arc-lance",
-    "rule": "unit-secutarii-hoplites",
-    "units": [
-      "unit-secutarii-hoplites"
-    ],
-    "datasheet": "unit-secutarii-hoplites",
-    "statline": "secutarii-hoplites-profile"
-  },
-  "weapon-archeotech-pistol": {
-    "title": "Archeotech pistol",
-    "summary": "Ranged · 12\" · A 1 · BS 4+ · S 6 · AP -1 · D 1 · Devastating Wounds, Pistol",
-    "full": "Ranged · 12\" · A 1 · BS 4+ · S 6 · AP -1 · D 1 · Devastating Wounds, Pistol",
-    "glossary": "glossary-weapon-archeotech-pistol",
-    "rule": "unit-secutarii-hoplites",
-    "units": [
-      "unit-secutarii-hoplites",
-      "unit-secutarii-peltasts"
-    ],
-    "datasheet": "unit-secutarii-hoplites",
-    "statline": "secutarii-hoplites-profile"
-  },
-  "weapon-alpha-close-combat-weapon": {
-    "title": "Alpha close combat weapon",
-    "summary": "Melee · Melee · A 3 · WS 4+ · S 5 · AP -1 · D 1",
-    "full": "Melee · Melee · A 3 · WS 4+ · S 5 · AP -1 · D 1",
-    "glossary": "glossary-weapon-alpha-close-combat-weapon",
-    "rule": "unit-secutarii-hoplites",
-    "units": [
-      "unit-secutarii-hoplites"
-    ],
-    "datasheet": "unit-secutarii-hoplites",
-    "statline": "secutarii-hoplites-profile"
-  },
-  "weapon-arc-lance-2": {
-    "title": "Arc lance",
-    "summary": "Melee · Melee · A 2 · WS 4+ · S 5 · AP -1 · D 1 · Anti-Vehicle 4+, Devastating Wounds, Lance",
-    "full": "Melee · Melee · A 2 · WS 4+ · S 5 · AP -1 · D 1 · Anti-Vehicle 4+, Devastating Wounds, Lance",
-    "glossary": "glossary-weapon-arc-lance-2",
-    "rule": "unit-secutarii-hoplites",
-    "units": [
-      "unit-secutarii-hoplites"
-    ],
-    "datasheet": "unit-secutarii-hoplites",
-    "statline": "secutarii-hoplites-profile"
-  },
-  "datasheet-blind-barrage": {
-    "title": "Blind Barrage",
-    "summary": "After this unit has shot, select one enemy INFANTRY unit hit by those attacks.",
-    "full": "After this unit has shot, select one enemy INFANTRY unit hit by those attacks. Until your next turn, it is blinded; while this unit remains on the battlefield, subtract 1 from Hit rolls for attacks made by models in that enemy unit.",
-    "glossary": "glossary-datasheet-blind-barrage",
-    "rule": "unit-secutarii-peltasts",
-    "units": [
-      "unit-secutarii-peltasts"
-    ],
-    "datasheet": "unit-secutarii-peltasts",
-    "statline": "secutarii-peltasts-profile"
-  },
-  "weapon-galvanic-caster-flechette": {
-    "title": "Galvanic caster - flechette",
-    "summary": "Ranged · 18\" · A 5 · BS 4+ · S 4 · AP 0 · D 1 · Assault",
-    "full": "Ranged · 18\" · A 5 · BS 4+ · S 4 · AP 0 · D 1 · Assault",
-    "glossary": "glossary-weapon-galvanic-caster-flechette",
-    "rule": "unit-secutarii-peltasts",
-    "units": [
-      "unit-secutarii-peltasts"
-    ],
-    "datasheet": "unit-secutarii-peltasts",
-    "statline": "secutarii-peltasts-profile"
-  },
-  "weapon-galvanic-caster-hammershot": {
-    "title": "Galvanic caster - hammershot",
-    "summary": "Ranged · 24\" · A 2 · BS 4+ · S 5 · AP -1 · D 1 · Heavy",
-    "full": "Ranged · 24\" · A 2 · BS 4+ · S 5 · AP -1 · D 1 · Heavy",
-    "glossary": "glossary-weapon-galvanic-caster-hammershot",
-    "rule": "unit-secutarii-peltasts",
-    "units": [
-      "unit-secutarii-peltasts"
-    ],
-    "datasheet": "unit-secutarii-peltasts",
-    "statline": "secutarii-peltasts-profile"
-  },
-  "weapon-alpha-close-combat-weapon-2": {
-    "title": "Alpha close combat weapon",
-    "summary": "Melee · Melee · A 2 · WS 4+ · S 5 · AP -1 · D 1",
-    "full": "Melee · Melee · A 2 · WS 4+ · S 5 · AP -1 · D 1",
-    "glossary": "glossary-weapon-alpha-close-combat-weapon-2",
-    "rule": "unit-secutarii-peltasts",
-    "units": [
-      "unit-secutarii-peltasts"
-    ],
-    "datasheet": "unit-secutarii-peltasts",
-    "statline": "secutarii-peltasts-profile"
-  },
-  "datasheet-core": {
-    "title": "Core",
-    "summary": "Deadly Demise D3, Deep Strike.",
-    "full": "Deadly Demise D3, Deep Strike.",
-    "glossary": "glossary-datasheet-core",
-    "rule": "unit-terrax-pattern-termite",
-    "units": [
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-terrax-pattern-termite",
-    "statline": "terrax-pattern-termite-profile"
-  },
-  "datasheet-termite-assault": {
-    "title": "Termite Assault",
-    "summary": "This model must start the battle in Reserves, but neither it nor any units embarked within it count towards limits on the maximum number of Reserves units.",
-    "full": "This model must start the battle in Reserves, but neither it nor any units embarked within it count towards limits on the maximum number of Reserves units. It can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of mission rules. Embarked units can disembark after it is set up and must be more than 9\" from all enemy models.",
-    "glossary": "glossary-datasheet-termite-assault",
-    "rule": "unit-terrax-pattern-termite",
-    "units": [
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-terrax-pattern-termite",
-    "statline": "terrax-pattern-termite-profile"
-  },
-  "datasheet-damaged-1-5-wounds-remaining": {
-    "title": "Damaged: 1-5 wounds remaining",
-    "summary": "Each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "Each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-datasheet-damaged-1-5-wounds-remaining",
-    "rule": "unit-terrax-pattern-termite",
-    "units": [
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-terrax-pattern-termite",
-    "statline": "terrax-pattern-termite-profile"
-  },
-  "datasheet-transport": {
-    "title": "Transport",
-    "summary": "Transport capacity 12 ADEPTUS MECHANICUS INFANTRY models.",
-    "full": "Transport capacity 12 ADEPTUS MECHANICUS INFANTRY models. It cannot transport JUMP PACK or KATAPHRON models.",
-    "glossary": "glossary-datasheet-transport",
-    "rule": "unit-terrax-pattern-termite",
-    "units": [
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-terrax-pattern-termite",
-    "statline": "terrax-pattern-termite-profile"
-  },
-  "weapon-combi-bolter": {
-    "title": "Combi-bolter",
-    "summary": "Ranged · 24\" · A 2 · BS 4+ · S 4 · AP 0 · D 1 · Rapid Fire 2",
-    "full": "Ranged · 24\" · A 2 · BS 4+ · S 4 · AP 0 · D 1 · Rapid Fire 2",
-    "glossary": "glossary-weapon-combi-bolter",
-    "rule": "unit-terrax-pattern-termite",
-    "units": [
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-terrax-pattern-termite",
-    "statline": "terrax-pattern-termite-profile"
-  },
-  "weapon-heavy-flamer": {
-    "title": "Heavy flamer",
-    "summary": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP -1 · D 1 · Ignores Cover, Torrent",
-    "full": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP -1 · D 1 · Ignores Cover, Torrent",
-    "glossary": "glossary-weapon-heavy-flamer",
-    "rule": "unit-terrax-pattern-termite",
-    "units": [
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-terrax-pattern-termite",
-    "statline": "terrax-pattern-termite-profile"
-  },
-  "weapon-terrax-melta-cutter": {
-    "title": "Terrax melta cutter",
-    "summary": "Ranged · 12\" · A 5 · BS 4+ · S 9 · AP -4 · D D6 · Melta 2",
-    "full": "Ranged · 12\" · A 5 · BS 4+ · S 9 · AP -4 · D D6 · Melta 2",
-    "glossary": "glossary-weapon-terrax-melta-cutter",
-    "rule": "unit-terrax-pattern-termite",
-    "units": [
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-terrax-pattern-termite",
-    "statline": "terrax-pattern-termite-profile"
-  },
-  "weapon-twin-volkite-charger": {
-    "title": "Twin volkite charger",
-    "summary": "Ranged · 18\" · A 2 · BS 4+ · S 5 · AP 0 · D 2 · Devastating Wounds, Twin-linked",
-    "full": "Ranged · 18\" · A 2 · BS 4+ · S 5 · AP 0 · D 2 · Devastating Wounds, Twin-linked",
-    "glossary": "glossary-weapon-twin-volkite-charger",
-    "rule": "unit-terrax-pattern-termite",
-    "units": [
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-terrax-pattern-termite",
-    "statline": "terrax-pattern-termite-profile"
-  },
-  "weapon-termite-drill": {
-    "title": "Termite drill",
-    "summary": "Melee · Melee · A 6 · WS 4+ · S 14 · AP -2 · D D3+3 · Anti-Vehicle 3+",
-    "full": "Melee · Melee · A 6 · WS 4+ · S 14 · AP -2 · D D3+3 · Anti-Vehicle 3+",
-    "glossary": "glossary-weapon-termite-drill",
-    "rule": "unit-terrax-pattern-termite",
-    "units": [
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-terrax-pattern-termite",
-    "statline": "terrax-pattern-termite-profile"
-  },
-  "datasheet-mindlock": {
-    "title": "Mindlock",
-    "summary": "While a TECH-PRIEST model is leading this model's unit, improve the Ballistic Skill and Weapon Skill of this model's weapons by 1.",
-    "full": "While a TECH-PRIEST model is leading this model's unit, improve the Ballistic Skill and Weapon Skill of this model's weapons by 1.",
-    "glossary": "glossary-datasheet-mindlock",
-    "rule": "unit-x-101",
-    "units": [
-      "unit-x-101"
-    ],
-    "datasheet": "unit-x-101",
-    "statline": "x-101-profile"
-  },
-  "datasheet-bound-creation": {
-    "title": "Bound Creation",
-    "summary": "While a TECH-PRIEST model is leading this model's unit, that TECH-PRIEST model has Feel No Pain 5+.",
-    "full": "While a TECH-PRIEST model is leading this model's unit, that TECH-PRIEST model has Feel No Pain 5+.",
-    "glossary": "glossary-datasheet-bound-creation",
-    "rule": "unit-x-101",
-    "units": [
-      "unit-x-101"
-    ],
-    "datasheet": "unit-x-101",
-    "statline": "x-101-profile"
-  },
-  "datasheet-servitor-bodyguard": {
-    "title": "Servitor Bodyguard",
-    "summary": "At the start of the Declare Battle Formations step, this model can join one other unit from your army that is being led by a TECH-PRIEST INFANTRY model.",
-    "full": "At the start of the Declare Battle Formations step, this model can join one other unit from your army that is being led by a TECH-PRIEST INFANTRY model. If it does, until the end of the battle, this model counts as being part of that Bodyguard unit, and that Bodyguard unit's Starting Strength is increased accordingly.",
-    "glossary": "glossary-datasheet-servitor-bodyguard",
-    "rule": "unit-x-101",
-    "units": [
-      "unit-x-101"
-    ],
-    "datasheet": "unit-x-101",
-    "statline": "x-101-profile"
-  },
-  "weapon-grav-gun": {
-    "title": "Grav-gun",
-    "summary": "Ranged · 18\" · A 2 · BS 3+ · S 5 · AP -1 · D 2 · Anti-Vehicle 4+",
-    "full": "Ranged · 18\" · A 2 · BS 3+ · S 5 · AP -1 · D 2 · Anti-Vehicle 4+",
-    "glossary": "glossary-weapon-grav-gun",
-    "rule": "unit-x-101",
-    "units": [
-      "unit-x-101"
-    ],
-    "datasheet": "unit-x-101",
-    "statline": "x-101-profile"
   }
 };

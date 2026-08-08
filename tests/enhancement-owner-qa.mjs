@@ -71,5 +71,5 @@ assert.deepEqual(matrix['adeptus-mechanicus']['enhancement-vinghs-wafers-of-dyna
 assert.deepEqual(matrix['adeptus-mechanicus']['enhancement-transoracular-dyad-wafers'].match,['unit-cybernetica-datasmith']);
 assert.deepEqual(matrix.tyranids['trygon-prime'].conditional,['unit-trygon']);
 assert.ok(matrix.tyranids['enhancement-adrenalised-onslaught'].match.includes('unit-hyperadapted-raveners'));
-assert.deepEqual(matrix['tau-empire']['thermoneutronic-projector'].match.sort(),['unit-commander-in-coldstar-battlesuit','unit-commander-in-crisis-battlesuit','unit-commander-in-enforcer-battlesuit'].sort());
+assert.deepEqual(matrix['tau-empire']['thermoneutronic-projector'].match.sort(),['unit-commander-in-coldstar-battlesuit','unit-commander-in-enforcer-battlesuit'].sort());
 console.log(`PASS  Exhaustive Enhancement owner matrix: ${Object.values(inventories).reduce((sum,items)=>sum+Object.keys(items).length,0)} Enhancements across four published books.`);

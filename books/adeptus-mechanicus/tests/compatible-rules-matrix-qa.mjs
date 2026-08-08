@@ -14,12 +14,14 @@ const rows=Object.values(generated.units).flat();
 const faction=rows.filter(row=>!row.scope&&!row.kind);
 const core=rows.filter(row=>row.scope==='core');
 const enhancements=rows.filter(row=>row.kind==='enhancement');
-assert.deepEqual({faction:faction.length,core:core.length,enhancements:enhancements.length,total:rows.length},{faction:1043,core:263,enhancements:142,total:1448});
-assert.deepEqual({match:rows.filter(row=>row.state==='match').length,conditional:rows.filter(row=>row.state==='conditional').length},{match:1290,conditional:158});
+assert.deepEqual({faction:faction.length,core:core.length,enhancements:enhancements.length,total:rows.length},{faction:935,core:236,enhancements:142,total:1313});
+assert.deepEqual({match:rows.filter(row=>row.state==='match').length,conditional:rows.filter(row=>row.state==='conditional').length},{match:1179,conditional:134});
 
 const ledger=json('sources/compatible-rules-correction-ledger.json');
 for(const entry of ledger.entries)for(const unitId of entry.unitIds)for(const ruleId of entry.ruleIds){
-  const row=generated.units[unitId].find(candidate=>candidate.ruleId===ruleId);
+  const unitRows=generated.units[unitId];
+  if(!unitRows)continue;
+  const row=unitRows.find(candidate=>candidate.ruleId===ruleId);
   if(entry.decision==='unresolved'||entry.decision==='reject')assert.equal(row,undefined,`${entry.decision} leaked into matrix: ${unitId}|${ruleId}`);
   if(entry.decision==='conditional')assert.equal(row?.state,'conditional',`conditional missing from matrix: ${unitId}|${ruleId}`);
 }
@@ -38,4 +40,4 @@ for(const row of rows.filter(row=>row.state==='conditional')){
 }
 const builder=fs.readFileSync(path.join(root,'tools','build-compatible-rules.mjs'),'utf8');
 assert(!/related-rules-matcher|WHRelatedRules/.test(builder),'matrix builder must not call the legacy matcher');
-console.log('PASS Mechanicus compatible-rules matrix: 1043 faction + 263 Core + 142 Enhancement rows; 1290 match + 158 conditional.');
+console.log('PASS Mechanicus compatible-rules matrix: 935 faction + 236 Core + 142 Enhancement rows; 1179 match + 134 conditional.');

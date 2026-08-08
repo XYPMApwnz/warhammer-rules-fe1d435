@@ -7,7 +7,7 @@ const root=path.dirname(fileURLToPath(import.meta.url));
 const ids=['stratagem-defect-scrutiny','stratagem-repolarised-augurs','stratagem-clandestine-reposition','stratagem-scriptural-prognosis','stratagem-overloaded-safeguards','stratagem-holy-avarice','stratagem-echoes-of-the-conduit-wars','stratagem-chant-of-electrotraction','stratagem-momentum-feedback','stratagem-verse-of-vengeance','stratagem-auto-oracular-retrieval','stratagem-incense-exhausts','stratagem-isolate-and-destroy'];
 const cards=markup=>[...markup.matchAll(/<article\b([^>]*\bclass="[^"]*\bstratagem\b[^"]*"[^>]*)>([\s\S]*?)<\/article>/g)].map(([,attrs,body])=>({id:attrs.match(/\bdata-rule-id="([^"]+)"/)?.[1],type:attrs.match(/\bdata-stratagem-type="([^"]+)"/)?.[1],labels:[...body.matchAll(/<span\b[^>]*class="stratagem-type"[^>]*>([^<]*)<\/span>/g)].map(match=>match[1].trim())}));
 const routes=fs.readdirSync(root).filter(name=>name.endsWith('.html'));
-assert.equal(routes.length,51,'Mechanicus Phone route count changed');
+assert.equal(routes.length,47,'Mechanicus Phone route count changed');
 const staticCards=routes.flatMap(name=>cards(fs.readFileSync(path.join(root,name),'utf8')));
 const relatedCards=cards(fs.readFileSync(path.join(root,'related-rules.inc'),'utf8'));
 for(const [label,inventory] of [['routes',staticCards],['Related Rules',relatedCards]])for(const id of ids){const card=inventory.find(item=>item.id===id);assert.ok(card,`${label} missing ${id}`);assert.equal(card.type,'unknown',`${label} reclassified ${id}`);assert.deepEqual(card.labels,['Type unverified'],`${label} misleading or duplicate label for ${id}`);}

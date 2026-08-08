@@ -35,7 +35,7 @@ for(const bookId of supported){
     const reader=fs.readFileSync(readerPath,'utf8');
     const points=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','adeptus-mechanicus-points.en.json'),'utf8'));
     const codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','adeptus-mechanicus-codex-datasheets.en.json'),'utf8'));
-    assert(points.units.length===38,'adeptus-mechanicus: points catalog is incomplete');
+    assert(points.units.length===34,'adeptus-mechanicus: points catalog is incomplete');
     assert(points.enhancements.length===34,'adeptus-mechanicus: Enhancement catalog is incomplete');
     const unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
     const enhancementTitles=new Set([...reader.matchAll(/data-enhancement-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
@@ -62,7 +62,7 @@ for(const bookId of supported){
   if(bookId==='tyranids'){
     const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8'),points=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','tyranids-points.en.json'),'utf8')),codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','tyranids-codex-datasheets.en.json'),'utf8'));
     const units=[...codex.datasheets,...codex.imperialArmour,...codex.legends],unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),enhancementTitles=new Set([...related.matchAll(/data-enhancement-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
-    assert(points.units.length===57,'tyranids: points catalog is incomplete');assert(points.enhancements.length===34,'tyranids: Enhancement catalog is incomplete');units.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`tyranids: unit ${unit.title} is absent from Roster Guide`));points.enhancements.forEach(item=>assert(enhancementTitles.has(entities.normalize(item.title)),`tyranids: Enhancement ${item.title} is absent from related rules`));
+    assert(points.units.length===50,'tyranids: points catalog is incomplete');assert(points.enhancements.length===34,'tyranids: Enhancement catalog is incomplete');units.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`tyranids: unit ${unit.title} is absent from Roster Guide`));points.enhancements.forEach(item=>assert(enhancementTitles.has(entities.normalize(item.title)),`tyranids: Enhancement ${item.title} is absent from related rules`));
     const desktopRoster=fs.readFileSync(path.join(bookRoot,'scripts','roster-filter.js'),'utf8'),phoneRoster=fs.readFileSync(path.join(bookRoot,'mobile','mobile.js'),'utf8');
     assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&/\.\/scripts\/app\.js\?v=\d+/.test(reader),'tyranids: roster or matrix controller is absent');assert(fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs')),'tyranids: matrix runtime is absent');
     assert(desktopRoster.includes("match[1].toLowerCase()==='xenos'")&&phoneRoster.includes("match[1].toLowerCase()==='xenos'"),'tyranids: desktop and Phone faction normalization do not share the correct Xenos parent contract');
@@ -81,7 +81,7 @@ for(const bookId of supported){
     const rosterCatalog=rosterDataContext.WH_BOOK_ROSTER_ENHANCEMENTS;
     const units=[...codex.datasheets,...codex.imperialArmour,...codex.legends];
     const unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
-    assert(points.units.length===63,'tau-empire: points catalog is incomplete');
+    assert(points.units.length===39,'tau-empire: points catalog is incomplete');
     assert(points.enhancements.length===23,'tau-empire: Enhancement catalog is incomplete');
     units.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`tau-empire: unit ${unit.title} is absent from Roster Guide`));
     points.enhancements.forEach(item=>{
@@ -103,10 +103,10 @@ for(const bookId of supported){
   if(bookId==='emperors-children'){
     const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8'),codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','emperors-children-codex-datasheets.en.json'),'utf8')),owners=JSON.parse(fs.readFileSync(path.join(bookRoot,'sources','enhancement-owner-matrix.json'),'utf8'));
     const units=[...(codex.datasheets||[])],unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),publishedOwners=Object.values(owners.enhancements).filter(item=>item.ownerGroup),enhancementIds=new Set([...related.matchAll(/data-rule-id="([^"]+)"/g)].map(match=>match[1]));
-    assert(units.length===23,"emperors-children: datasheet catalog is incomplete");
+    assert(units.length===18,"emperors-children: datasheet catalog is incomplete");
     units.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`emperors-children: unit ${unit.title} is absent from Roster Guide`));
     publishedOwners.forEach(item=>assert(enhancementIds.has(Object.entries(owners.enhancements).find(([,value])=>value===item)[0]),`emperors-children: Enhancement ${item.title} is absent from related rules`));
-    assert(!related.includes('Faultless Opportunist'),"emperors-children: unresolved Faultless Opportunist must remain hidden");
+    assert(related.includes('Faultless Opportunist'),"emperors-children: resolved Faultless Opportunist must remain available");
     assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&/\.\/scripts\/app\.js\?v=\d+/.test(reader),"emperors-children: roster or matrix controller is absent");
     assert(fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs'))&&fs.existsSync(path.join(bookRoot,'scripts','roster-data.js')),"emperors-children: matrix or roster data is absent");
     console.log(`PASS  emperors-children: ${units.length} units, ${publishedOwners.length} resolved Enhancements/UPGRADE, desktop/iPad + Phone Mode`);

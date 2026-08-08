@@ -7,41 +7,6 @@
   },
   "units": [
     {
-      "title": "Aun'shi",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Aun-shi",
-      "wargear": [
-        "None"
-      ],
-      "composition": "1 Aun’Shi – EPIC HERO\nThis model is equipped with: Fidelity."
-    },
-    {
-      "title": "Aun'va",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Aun-va",
-      "wargear": [
-        "None"
-      ],
-      "composition": "1 Aun’Va – EPIC HERO\n2 Ethereal Guards\nAun’Va is equipped with: close combat weapon.\n\nEach Ethereal Guard is equipped with: supreme honour blade."
-    },
-    {
-      "title": "AX-1-0 Tiger Shark",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/AX-1-0-Tiger-Shark",
-      "wargear": [
-        "This model can be equipped with up to 6 seeker missiles.",
-        "This model’s 2 burst cannons can be replaced with 2 cyclic ion blasters."
-      ],
-      "composition": "1 AX-1-0 Tiger Shark\nThis model is equipped with: 2 burst cannons; 2 missile pods; twin heavy rail cannon; armoured hull."
-    },
-    {
-      "title": "Barracuda",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Barracuda",
-      "wargear": [
-        "This model’s 2 long-barrelled burst cannons can be replaced with 2 cyclic ion blasters.",
-        "This model’s swiftstrike burst cannon can be replaced with one of the following:\n1 ion cannon\n1 swiftstrike railgun",
-        "This model can be equipped with up to 4 seeker missiles."
-      ],
-      "composition": "1 Barracuda\nThis model is equipped with: 2 long-barrelled burst cannons; swiftstrike burst cannon; 2 missile pods; armoured hull."
-    },
-    {
       "title": "Breacher Team",
       "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Breacher-Team",
       "wargear": [
@@ -86,17 +51,6 @@
       "composition": "1 Commander in Coldstar Battlesuit\nThis model is equipped with: high-output burst cannon; battlesuit fists."
     },
     {
-      "title": "Commander in Crisis Battlesuit",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Commander-In-Crisis-Battlesuit",
-      "wargear": [
-        "This model’s burst cannon can be replaced with one of the following:\n1 airbursting fragmentation projector*\n1 battlesuit support system*\n1 cyclic ion blaster\n1 fusion blaster\n1 missile pod\n1 plasma rifle\n1 shield generator*\n1 T’au flamer\n1 weapon support system*",
-        "This model can be equipped with up to two of the following, and can take duplicates:\n1 gun drone\n1 marker drone\n1 shield drone",
-        "This model can be equipped with up to three of the following, and can take duplicates:\n1 airbursting fragmentation projector*\n1 battlesuit support system*\n1 burst cannon\n1 cyclic ion blaster\n1 fusion blaster\n1 missile pod\n1 plasma rifle\n1 shield generator*\n1 T’au flamer\n1 weapon support system*",
-        "* This model cannot have duplicates of these pieces of wargear."
-      ],
-      "composition": "1 Commander in Crisis Battlesuit\nThis model is equipped with: burst cannon; battlesuit fists."
-    },
-    {
       "title": "Commander in Enforcer Battlesuit",
       "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Commander-In-Enforcer-Battlesuit",
       "wargear": [
@@ -112,18 +66,6 @@
       "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Commander-Shadowsun",
       "wargear": [],
       "composition": "1 Commander Shadowsun – EPIC HERO\nThis model is equipped with: flechette launcher; 2 high-energy fusion blasters; light missile pod; pulse pistol; battlesuit fists; advanced guardian drone; command-link drone."
-    },
-    {
-      "title": "Crisis Battlesuits",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Crisis-Battlesuits",
-      "wargear": [
-        "Any number of models can each have their burst cannon replaced with one of the following:\n1 airbursting fragmentation projector*\n1 battlesuit support system*\n1 cyclic ion blaster\n1 fusion blaster\n1 missile pod\n1 plasma rifle\n1 shield generator*\n1 T’au flamer\n1 weapon support system*",
-        "Any number of models can be equipped with up to two of the following, and can take duplicate\n1 gun drone\n1 marker drone\n1 shield drone",
-        "Any number of models can each be equipped with up to three of the following, and can take duplicates**:\n1 airbursting fragmentation projector*\n1 battlesuit support system*\n1 burst cannon\n1 cyclic ion blaster\n1 fusion blaster\n1 missile pod\n1 plasma rifle\n1 shield generator*\n1 T’au flamer\n1 weapon support system*",
-        "* Each model cannot have duplicates of these pieces of wargear.",
-        "** Each model cannot be equipped with more than 3 ranged weapons."
-      ],
-      "composition": "1 Crisis Shas’vre\n2-5 Crisis Shas’ui\nEvery model is equipped with: burst cannon; battlesuit fists."
     },
     {
       "title": "Crisis Fireknife Battlesuits",
@@ -169,14 +111,6 @@
       "composition": "1 Devilfish\nThis model is equipped with: accelerator burst cannon; 2 twin pulse carbines; armoured hull."
     },
     {
-      "title": "Drone Sentry Turret",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Drone-Sentry-Turret",
-      "wargear": [
-        "This model’s twin plasma rifle can be replaced with one of the following:\n1 twin burst cannon\n1 twin fusion blaster\n1 twin missile pod"
-      ],
-      "composition": "1 Drone Sentry Turret\nThis model is equipped with: twin plasma rifle."
-    },
-    {
       "title": "Ethereal",
       "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Ethereal",
       "wargear": [
@@ -204,14 +138,6 @@
       "composition": "1 Ghostkeel Battlesuit\nThis model is equipped with: fusion collider; twin T’au flamer; Ghostkeel fists."
     },
     {
-      "title": "Great Knarloc",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Great-Knarloc",
-      "wargear": [
-        "This model can be equipped with one of the following:\n1 Kroot bolt thrower and 1 Kroot rifle\n1 twin Kroot gun\n1 baggage harness"
-      ],
-      "composition": "1 Great Knarloc\nThis model is equipped with: Great Knarloc beak and talons."
-    },
-    {
       "title": "Hammerhead Gunship",
       "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Hammerhead-Gunship",
       "wargear": [
@@ -220,22 +146,6 @@
         "This model can be equipped with up to 2 seeker missiles."
       ],
       "composition": "1 Hammerhead Gunship\nThis model is equipped with: 1 railgun; 2 twin pulse carbines; armoured hull."
-    },
-    {
-      "title": "Heavy Gun Drones",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Heavy-Gun-Drones",
-      "wargear": [
-        "Any number of models can each have their burst cannon and markerlight replaced with 1 twin burst cannon."
-      ],
-      "composition": "2 Heavy Gun Drones\nEvery model is equipped with: burst cannon; markerlight; close combat weapon."
-    },
-    {
-      "title": "Knarloc Riders",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Knarloc-Riders",
-      "wargear": [
-        "None"
-      ],
-      "composition": "3 Knarloc Riders\nEvery model is equipped with: Kroot rifle; Knarloc beak and talons."
     },
     {
       "title": "Kroot Carnivores",
@@ -305,32 +215,6 @@
       "composition": "1-3 Krootox Riders\nEvery model is equipped with: repeater cannon; close combat weapon; Krootox fists."
     },
     {
-      "title": "Longstrike",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Longstrike",
-      "wargear": [
-        "This model’s railgun can be replaced with 1 ion cannon.",
-        "This model’s 2 twin pulse carbines can be replaced with one of the following:\n2 accelerator burst cannons\n2 smart missile systems",
-        "This model can be equipped with up to 2 seeker missiles."
-      ],
-      "composition": "1 Longstrike – EPIC HERO\nThis model is equipped with: 2 twin pulse carbines; railgun; armoured hull."
-    },
-    {
-      "title": "Manta",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Manta",
-      "wargear": [
-        "None"
-      ],
-      "composition": "1 Manta\nThis model is equipped with: 2 heavy rail cannons; 6 ion cannons; 2 long-barrelled burst cannon arrays; 2 missile pods; 10 seeker missiles; armoured hull."
-    },
-    {
-      "title": "Orca Dropship",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Orca-Dropship",
-      "wargear": [
-        "None"
-      ],
-      "composition": "1 Orca Dropship\nThis model is equipped with: 2 long-barrelled burst cannons; missile pod; armoured hull."
-    },
-    {
       "title": "Pathfinder Team",
       "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Pathfinder-Team",
       "wargear": [
@@ -351,36 +235,12 @@
       "composition": "1-3 Piranhas\nEvery model is equipped with: Piranha burst cannon; 2 twin pulse carbines; armoured hull."
     },
     {
-      "title": "R'varna Battlesuit",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/R-varna-Battlesuit",
-      "wargear": [
-        "This model can be equipped with up to 2 missile drones."
-      ],
-      "composition": "1 R’varna Battlesuit\nThis model is equipped with: 2 pulse submunitions cannons; battlesuit fists."
-    },
-    {
       "title": "Razorshark Strike Fighter",
       "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Razorshark-Strike-Fighter",
       "wargear": [
         "This model’s accelerator burst cannon can be replaced with 1 missile pod."
       ],
       "composition": "1 Razorshark Strike Fighter\nThis model is equipped with: accelerator burst cannon; quad ion turret; 2 seeker missiles; armoured hull."
-    },
-    {
-      "title": "Remora Stealth Drones",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Remora-Stealth-Drones",
-      "wargear": [
-        "None"
-      ],
-      "composition": "2 Remora Stealth Drones\nEvery model is equipped with: twin long-barrelled burst cannons; 2 Remora seeker missiles; close combat weapon."
-    },
-    {
-      "title": "Remote Sensor Tower",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Remote-Sensor-Tower",
-      "wargear": [
-        "None"
-      ],
-      "composition": "1 Remote Sensor Tower\nThis model is equipped with: nothing."
     },
     {
       "title": "Riptide Battlesuit",
@@ -391,14 +251,6 @@
         "This model can be equipped with up to 2 missile drones."
       ],
       "composition": "1 Riptide Battlesuit\nThis model is equipped with: heavy burst cannon; twin plasma rifle; Riptide fists."
-    },
-    {
-      "title": "Shas'o R'alai",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Shas-o-R-alai",
-      "wargear": [
-        "None"
-      ],
-      "composition": "1 Shas'o R'alai – EPIC HERO\nThis model is equipped with: experimental pulse submunitions rifle; battlesuit fists; blacklight marker drones."
     },
     {
       "title": "Sky Ray Gunship",
@@ -447,32 +299,6 @@
       "composition": "1 Sun Shark Bomber\nThis model is equipped with: missile pod; 2 seeker missiles; 2 twin ion rifles; armoured hull."
     },
     {
-      "title": "Ta'unar Supremacy Armour",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Ta-unar-Supremacy-Armour",
-      "wargear": [
-        "This model’s tri-axis ion cannon can be replaced with 1 fusion eradicator.",
-        "This model’s fusion eradicator can be replaced with 1 tri-axis ion cannon.",
-        "This model’s 3 pulse ordnance drivers can be replaced with one of the following:\n2 nexus missile launchers\n1 heavy rail cannon array and 1 fragmentation cluster shell launcher"
-      ],
-      "composition": "1 Ta’unar Supremacy Armour\nThis model is equipped with: 4 burst cannons; fusion eradicator; 3 pulse ordnance drivers; 4 smart missile systems; tri-axis ion cannon; crushing feet."
-    },
-    {
-      "title": "Tactical Drones",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Tactical-Drones",
-      "wargear": [
-        "None"
-      ],
-      "composition": "4-12 Tactical Drones\nEvery model is equipped with: twin pulse carbine; close combat weapon."
-    },
-    {
-      "title": "Tetras",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Tetras",
-      "wargear": [
-        "None"
-      ],
-      "composition": "2-4 Tetras\nEvery model is equipped with: 2 pulse rifles; close combat weapons."
-    },
-    {
       "title": "The Twin Lance",
       "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/The-Twin-Lance",
       "wargear": [
@@ -505,50 +331,12 @@
       "composition": "1 Tidewall Shieldline\nThis model can be equipped with 1 Tidewall defence platform"
     },
     {
-      "title": "Tiger Shark",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Tiger-Shark",
-      "wargear": [
-        "This model’s 2 burst cannons can be replaced with 2 cyclic ion blasters.",
-        "This model’s 2 ion cannons can be replaced with one of the following:\n2 swiftstrike burst cannons\n2 swiftstrike railguns",
-        "This model can be equipped with up to 6 seeker missiles.",
-        "This model’s transport bay can be replaced with 2 skyspear missile racks."
-      ],
-      "composition": "1 Tiger Shark\nThis model is equipped with: 2 burst cannons; 2 ion cannons; 2 missile pods; armoured hull; transport bay."
-    },
-    {
-      "title": "TX42 Piranha",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Tx42-Piranha",
-      "wargear": [
-        "This model’s 2 plasma rifles can be replaced with one of the following:\n2 fusion blasters\n2 missile pods\n2 rail rifles"
-      ],
-      "composition": "1 TX42 Piranha\nThis model is equipped with: 2 plasma rifles; armoured hull."
-    },
-    {
       "title": "Vespid Stingwings",
       "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Vespid-Stingwings",
       "wargear": [
         "If this unit contains 10 models:\nThe Vespid Strain Leader can be equipped with 1 Oversight Drone.\n1 Vespid Stingwing can replace its neutron blaster with 1 T’au flamer\n1 Vespid Stingwing can replace its neutron blaster with 1 neutron grenade launcher\n1 Vespid Stingwing can replace its neutron blaster with 1 neutron rail rifle."
       ],
       "composition": "1 Vespid Strain Leader\n4-9 Vespid Stingwings\nEvery model is equipped with: neutron blaster; stingwing claws."
-    },
-    {
-      "title": "XV9 Hazard Battlesuits",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Xv9-Hazard-Battlesuits",
-      "wargear": [
-        "Any number of models can each have their fusion cascade replaced with one of the following:\n1 phased ion gun\n1 twin hazard burst cannon",
-        "Any number of models can each have their twin hazard burst cannon replaced with one of the following:\n1 fusion cascade\n1 phased ion gun",
-        "Any number of models can each be equipped with one of the following:\n1 battlesuit support system\n1 shield generator\n1 weapon support system",
-        "Any number of models can each be equipped with up to two of the following, and can take duplicates:\n1 gun drone\n1 marker drone\n1 shield drone"
-      ],
-      "composition": "1-2 XV9 Hazard Battlesuits\nEvery model is equipped with: fusion cascade; twin hazard burst cannon; battlesuit fists."
-    },
-    {
-      "title": "Y'vahra Battlesuit",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/t-au-empire/Y-vahra-Battlesuit",
-      "wargear": [
-        "This model can be equipped with up to 2 missile drones."
-      ],
-      "composition": "1 Y’vahra Battlesuit\nThis model is equipped with: flechette pod; ionic discharge cannon; phased plasma-flamer; battlesuit fists."
     }
   ]
 }

@@ -16,8 +16,8 @@ const unresolved=json('reports/compatible-rules-unresolved.json');
 const pairsFromSnapshot=units=>new Set(Object.entries(units).flatMap(([unitId,ruleIds])=>ruleIds.map(ruleId=>`${unitId}|${ruleId}`)));
 const wahapediaFaction=pairsFromSnapshot(snapshot.units);
 const wahapediaCore=pairsFromSnapshot(snapshot.coreUnits);
-assert.equal(wahapediaFaction.size,902);
-assert.equal(wahapediaCore.size,250);
+assert.equal(wahapediaFaction.size,816);
+assert.equal(wahapediaCore.size,225);
 assert.deepEqual(ledger.basis.oldMatcher,{factionAssociations:1076,coreAssociations:263});
 assert.deepEqual(ledger.basis.comparison,{
   factionShared:898,

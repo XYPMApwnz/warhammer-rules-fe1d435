@@ -35,7 +35,7 @@ function mechanicusSource(){
   const official=read('books/adeptus-mechanicus/content/adeptus-mechanicus-rules.en.json');
   const extracted=read('books/adeptus-mechanicus/content/adeptus-mechanicus-codex-datasheets.en.json');
   const wargear=new Map(read('books/adeptus-mechanicus/content/adeptus-mechanicus-codex-wargear.en.json').units.map(unit=>[titleKey(unit.title),unit]));
-  const officialById=new Map(official.datasheets.map(unit=>[unit.id,unit])),units=[];
+  const officialById=new Map(official.datasheets.filter(unit=>unit.status!=='Warhammer Legends').map(unit=>[unit.id,unit])),units=[];
   for(const unit of extracted.datasheets){
     const exact=officialById.get(unit.id);
     if(!exact){units.push(wargear.has(titleKey(unit.title))?{...unit,...wargear.get(titleKey(unit.title))}:unit);continue;}
@@ -141,9 +141,13 @@ for(const book of ['death-guard','adeptus-mechanicus']){
     leader:profile.relations.canLead.map(item=>item.unitId),
     support:profile.relations.canSupport.map(item=>item.unitId)
   };
-  assert.deepEqual(actual,lockedRelations[book],`${book}: complete outgoing relation inventory`);
+  const expected=Object.fromEntries(Object.entries(lockedRelations[book]).filter(([unitId])=>sources[book].has(unitId)).map(([unitId,relations])=>[unitId,{
+    leader:relations.leader.filter(target=>sources[book].has(target)),
+    support:relations.support.filter(target=>sources[book].has(target))
+  }]));
+  assert.deepEqual(actual,expected,`${book}: complete outgoing relation inventory`);
 }
-assert.deepEqual(desktopProfiles.get('tau-empire/unit-commander-in-coldstar-battlesuit').relations.canLead.map(item=>item.unitId),['unit-crisis-battlesuits','unit-crisis-fireknife-battlesuits','unit-crisis-starscythe-battlesuits','unit-crisis-sunforge-battlesuits']);
+assert.deepEqual(desktopProfiles.get('tau-empire/unit-commander-in-coldstar-battlesuit').relations.canLead.map(item=>item.unitId),['unit-crisis-fireknife-battlesuits','unit-crisis-starscythe-battlesuits','unit-crisis-sunforge-battlesuits']);
 assert.ok(desktopProfiles.get('death-guard/unit-biologus-putrifier').relations.canSupport.some(item=>item.unitId==='unit-plague-marines'));
 const datasmithRelation=desktopProfiles.get('adeptus-mechanicus/unit-cybernetica-datasmith').relations.canSupport.find(item=>item.unitId==='unit-kastelan-robots');
 assert.equal(datasmithRelation?.mandatory,true);assert.deepEqual(datasmithRelation?.removeKeywords,['INFANTRY']);

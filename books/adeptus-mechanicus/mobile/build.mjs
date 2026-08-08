@@ -58,7 +58,7 @@ const categories=[...source.matchAll(/<section class="content-group" id="(datash
     return{id,title:clean(title),units};
   });
 const units=categories.flatMap(category=>category.units);
-if(detachments.length!==10||units.length!==38)throw new Error(`Expected 10 detachments and 38 datasheets, found ${detachments.length} and ${units.length}`);
+if(detachments.length!==10||units.length!==34)throw new Error(`Expected 10 detachments and 34 datasheets, found ${detachments.length} and ${units.length}`);
 
 const staticRoutes=[
   {file:'index.html',id:'start',title:'Start',type:'start'},

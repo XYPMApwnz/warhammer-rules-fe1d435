@@ -3,10 +3,10 @@ import path from 'node:path';
 
 const root=path.resolve(import.meta.dirname,'..');
 const books={
-  'tau-empire':{pages:61,detachments:3,updates:25,faqs:2,datasheets:39,imperialArmour:4,legends:20,units:63,enhancements:23,flagship:'Commander Farsight'},
+  'tau-empire':{pages:61,detachments:3,updates:25,faqs:2,datasheets:39,imperialArmour:0,legends:0,units:39,enhancements:23,flagship:'Commander Farsight'},
   'chaos-space-marines':{pages:102,detachments:9,updates:4,faqs:15,datasheets:58,imperialArmour:0,legends:53,units:111,enhancements:0,flagship:'Abaddon the Despoiler'},
   orks:{pages:85,detachments:6,updates:36,faqs:5,datasheets:57,imperialArmour:1,legends:30,units:88,enhancements:42,flagship:'Ghazghkull Thraka'},
-  'emperors-children':{pages:10,detachments:4,updates:17,faqs:3,datasheets:23,imperialArmour:0,legends:0,units:23,enhancements:31,flagship:'Fulgrim'},
+  'emperors-children':{pages:10,detachments:4,updates:17,faqs:3,datasheets:18,imperialArmour:0,legends:0,units:18,enhancements:31,flagship:'Fulgrim'},
   'space-marines':{pages:217,detachments:15,updates:4,faqs:14,datasheets:83,imperialArmour:1,legends:75,units:159,enhancements:85,flagship:'Intercessor Squad'},
   'dark-angels':{pages:16,detachments:5,updates:3,faqs:1,datasheets:16,imperialArmour:0,legends:3,units:19,enhancements:26,flagship:"Lion El'Jonson"}
 };

@@ -46,26 +46,26 @@ const rowInventory=rows=>rows.map(row=>JSON.stringify(row.map(item=>typeof item=
 const desktopWeaponRows=extractWeaponRows(reader),phoneWeaponRows=extractWeaponRows(mobileDatasheetMarkup),desktopWeaponTokens=desktopWeaponRows.flat(),phoneWeaponTokens=phoneWeaponRows.flat(),canonicalWeaponLabels=canonicalWeaponRows.flat();
 const unknownWeaponLabels=[...new Set(canonicalWeaponLabels.filter(label=>!expectedWeaponTerm(label)))].sort();
 
-assert.deepEqual([allUnits.length,canonicalWeaponRows.length,canonicalWeaponLabels.length],[63,192,277]);
+assert.deepEqual([allUnits.length,canonicalWeaponRows.length,canonicalWeaponLabels.length],[39,124,187]);
 assert.deepEqual(rowInventory(desktopWeaponRows),rowInventory(canonicalWeaponRows),'desktop weapon token inventory/order differs');
 assert.deepEqual(rowInventory(phoneWeaponRows),rowInventory(canonicalWeaponRows),'Phone weapon token inventory/order differs');
 for(const tokens of [desktopWeaponTokens,phoneWeaponTokens])for(const token of tokens){const expected=expectedWeaponTerm(token.label);assert.equal(token.element,expected?'button':'span',`${token.label}: wrong token kind`);assert.equal(token.term,expected,`${token.label}: wrong glossary target`);}
-assert.deepEqual(unknownWeaponLabels,['HOOKED']);
+assert.deepEqual(unknownWeaponLabels,[]);
 assert.doesNotMatch(reader+mobileDatasheetMarkup,/<button class="weapon-button"[^>]*>[^<]*<\/button><small>/i);
 assert.doesNotMatch(reader+mobileDatasheetMarkup,/<(?:button|span)[^>]*class="[^"]*\btag\b[^"]*"[^>]*>[^<]*<button/i);
-assert.equal(fs.readdirSync(path.join(root,'mobile')).filter(file=>file.endsWith('.html')).length,73);
+assert.equal(fs.readdirSync(path.join(root,'mobile')).filter(file=>file.endsWith('.html')).length,49);
 for(const output of [reader,mobileDatasheetMarkup]){assert.match(output,/death-guard\/styles\/content\.css\?v=\d+/);assert.match(output,/death-guard\/styles\/popups\.css\?v=\d+/);assert.match(output,/shared\/datasheet-system\.css\?v=\d+/);}
 
 assert.deepEqual([pack.meta.version,pack.meta.pageCount,pack.meta.sha256],['1.1',61,'32B985646BAA02A3B505FF3404E91D374A5F53C1D3B8000D7166CA94D1B52675']);
 assert.equal(pack.meta.legalFrom,'2026-07-22');
 assert.equal(manifest.layers.find(layer=>layer.id==='faction-pack-v1.1')?.legalFrom,pack.meta.legalFrom);
 assert.deepEqual([pack.detachments.length,pack.detachments.flatMap(item=>item.stratagems).length,pack.updates.length,pack.faqs.length],[3,7,25,2]);
-assert.deepEqual([codex.datasheets.length,codex.imperialArmour.length,codex.legends.length],[39,4,20]);
+assert.deepEqual([codex.datasheets.length,codex.imperialArmour.length,codex.legends.length],[39,0,0]);
 assert.deepEqual([parity.detachments.length,parity.detachments.flatMap(item=>item.stratagems).length],[4,24]);
 assert.deepEqual([mfm.version,mfm.verifiedUnits.length,mfm.detachments.length,mfm.enhancements.length],['v1.1',43,7,23]);
-assert.equal(wargear.units.length,63);
-assert.equal(points.units.length,63);
-assert.equal(points.units.filter(unit=>unit.pointsSource?.label==='Official MFM v1.1').length,43);
+assert.equal(wargear.units.length,39);
+assert.equal(points.units.length,39);
+assert.equal(points.units.filter(unit=>unit.pointsSource?.label==='Official MFM v1.1').length,39);
 assert.equal(Object.keys(relatedRules.stratagems).length,31);
 assert.equal(Object.keys(relatedRules.enhancements).length,23);
 assert.equal(new Set([...pack.detachments,...parity.detachments].map(item=>key(item.title))).size,7);
@@ -137,7 +137,7 @@ for(const title of ['Cadre Fireblade','Commander in Coldstar Battlesuit','Comman
   assert.ok(!unit.keywords.includes('Leader'),`${title}: Leader leaked into keywords`);
   assert.ok(unit.abilities.some(ability=>ability.title==='Leader'),`${title}: Leader ability missing`);
 }
-const crisisRelations=['Crisis Battlesuits','Crisis Fireknife Battlesuits','Crisis Starscythe Battlesuits','Crisis Sunforge Battlesuits'];
+const crisisRelations=['Crisis Fireknife Battlesuits','Crisis Starscythe Battlesuits','Crisis Sunforge Battlesuits'];
 for(const title of ['Commander Farsight','Commander in Coldstar Battlesuit','Commander in Enforcer Battlesuit']){
   const unit=byTitle(title);
   assert.deepEqual(unit.relations.leader,crisisRelations,`${title}: Crisis Leader graph differs`);
@@ -154,9 +154,9 @@ for(const title of ['Commander Farsight','Commander in Coldstar Battlesuit','Com
 for(const [local,entry] of Object.entries(context).filter(([id])=>id.includes('ability-leader'))){
   assert.equal(entry.termId,'core-leader',`${local}: Leader must resolve to the canonical Core term`);
 }
-const frameTitles=['Devilfish','Hammerhead Gunship','Manta','Piranhas','Sky Ray Gunship',"Ta'unar Supremacy Armour",'Tidewall Droneport','Tidewall Gunrig','Tidewall Shieldline','Razorshark Strike Fighter','Sun Shark Bomber'];
+const frameTitles=['Devilfish','Hammerhead Gunship','Piranhas','Sky Ray Gunship','Tidewall Droneport','Tidewall Gunrig','Tidewall Shieldline','Razorshark Strike Fighter','Sun Shark Bomber'];
 assert.deepEqual(currentUnits.filter(unit=>unit.keywords.includes('Frame')).map(unit=>unit.title).sort(),frameTitles.sort());
-for(const title of ['Tiger Shark','AX-1-0 Tiger Shark'])assert.ok(!byTitle(title).keywords.includes('Frame'),`${title}: obsolete FRAME keyword present`);
+for(const title of ['Tiger Shark','AX-1-0 Tiger Shark','Manta',"Ta'unar Supremacy Armour"])assert.equal(byTitle(title),undefined,`${title}: non-Codex datasheet leaked into the published book`);
 assert.doesNotMatch(JSON.stringify({codex,parity}),/bearer is select(?:[,.]|\s+and)|have the select ability|Monsteror|Vehicleunit|warrior s\b|fight ing\b/i);
 assert.match(parity.detachments.find(item=>item.id==='montka')?.enhancements.find(item=>item.id==='enhancement-strike-swiftly')?.text||'',/Scouts 6" ability/);
 assert.deepEqual(points.units.find(unit=>unit.title==='Pathfinder Team').paidWargear.map(item=>[item.name,item.value]),[['Ion rifle',5]]);
@@ -173,7 +173,7 @@ assert.match(reader,/scripts\/roster-filter\.js\?v=\d+/);
 assert.match(reader,/scripts\/app\.js\?v=\d+/);
 assert.doesNotMatch(related,/data-eligibility|data-keyword-grants/,'matrix template must not retain legacy matcher inputs');
 assert.match(reader,/Reference in verification/);
-assert.ok(Object.keys(context).length>=350,'T’au Glossary context is incomplete');
+assert.ok(Object.keys(context).length>=300,'T’au Glossary context is incomplete');
 assert.ok(context['tau-empire-ability-deep-strike']?.termId==='core-deep-strike','Core Deep Strike must be canonical, not duplicated');
 
 const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(repo,'books','shared','related-rules-matcher.js'),'utf8'),sandbox);
@@ -196,4 +196,4 @@ assert.equal(stratagemTypes.size,31,'T’au Stratagem map must cover all rendere
 assert.equal([...stratagemTypes.values()].filter(type=>type==='unknown').length,7,'T’au must preserve seven source-untyped Stratagems as unknown');
 assert.equal([...stratagemTypes.values()].filter(type=>type!=='unknown').length,24,'T’au must preserve 24 source-typed Stratagems');
 assert.match(fs.readFileSync(new URL('../scripts/app.js',import.meta.url),'utf8'),/decorateStratagemTypes\(document\)/);
-console.log("T'au Empire QA passed: official v1.1 pack/MFM, 43 current datasheets, 7 detachments, exact Wargear, Glossary and Related Rules contracts.");
+console.log("T'au Empire QA passed: official v1.1 pack/MFM, 39 Codex datasheets, 7 detachments, exact Wargear, Glossary and Related Rules contracts.");

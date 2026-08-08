@@ -15,80 +15,6 @@
   },
   "units": [
     {
-      "id": "unit-aunshi",
-      "title": "Aun'shi",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 50,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-aunva",
-      "title": "Aun'va",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "3 models",
-          "value": 65,
-          "minModels": 3,
-          "maxModels": 3
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-ax-1-0-tiger-shark",
-      "title": "AX-1-0 Tiger Shark",
-      "status": "Current",
-      "sourceLayer": "imperial-armour",
-      "points": [
-        {
-          "label": "1st unit · 1 model",
-          "value": 315,
-          "minModels": 1,
-          "maxModels": 1,
-          "minCopies": 1,
-          "maxCopies": 1
-        },
-        {
-          "label": "2nd + unit · 1 model",
-          "value": 375,
-          "minModels": 1,
-          "maxModels": 1,
-          "minCopies": 2
-        }
-      ],
-      "paidWargear": [],
-      "pointsSource": {
-        "label": "Official MFM v1.1",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-07-30"
-      }
-    },
-    {
-      "id": "unit-barracuda",
-      "title": "Barracuda",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 220,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": []
-    },
-    {
       "id": "unit-breacher-team",
       "title": "Breacher Team",
       "status": "Current",
@@ -234,21 +160,6 @@
       }
     },
     {
-      "id": "unit-commander-in-crisis-battlesuit",
-      "title": "Commander in Crisis Battlesuit",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 80,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": []
-    },
-    {
       "id": "unit-commander-in-enforcer-battlesuit",
       "title": "Commander in Enforcer Battlesuit",
       "status": "Current",
@@ -287,27 +198,6 @@
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
         "verifiedAt": "2026-07-30"
       }
-    },
-    {
-      "id": "unit-crisis-battlesuits",
-      "title": "Crisis Battlesuits",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "3 models",
-          "value": 200,
-          "minModels": 3,
-          "maxModels": 3
-        },
-        {
-          "label": "4-6 models",
-          "value": 400,
-          "minModels": 4,
-          "maxModels": 6
-        }
-      ],
-      "paidWargear": []
     },
     {
       "id": "unit-crisis-fireknife-battlesuits",
@@ -458,21 +348,6 @@
       }
     },
     {
-      "id": "unit-drone-sentry-turret",
-      "title": "Drone Sentry Turret",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 50,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": []
-    },
-    {
       "id": "unit-ethereal",
       "title": "Ethereal",
       "status": "Current",
@@ -548,21 +423,6 @@
       }
     },
     {
-      "id": "unit-great-knarloc",
-      "title": "Great Knarloc",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 100,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": []
-    },
-    {
       "id": "unit-hammerhead-gunship",
       "title": "Hammerhead Gunship",
       "status": "Current",
@@ -590,36 +450,6 @@
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
         "verifiedAt": "2026-07-30"
       }
-    },
-    {
-      "id": "unit-heavy-gun-drones",
-      "title": "Heavy Gun Drones",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "2 models",
-          "value": 45,
-          "minModels": 2,
-          "maxModels": 2
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-knarloc-riders",
-      "title": "Knarloc Riders",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "3 models",
-          "value": 110,
-          "minModels": 3,
-          "maxModels": 3
-        }
-      ],
-      "paidWargear": []
     },
     {
       "id": "unit-kroot-carnivores",
@@ -859,56 +689,6 @@
       }
     },
     {
-      "id": "unit-longstrike",
-      "title": "Longstrike",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 140,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-manta",
-      "title": "Manta",
-      "status": "Current",
-      "sourceLayer": "imperial-armour",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 2100,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": [],
-      "pointsSource": {
-        "label": "Official MFM v1.1",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-07-30"
-      }
-    },
-    {
-      "id": "unit-orca-dropship",
-      "title": "Orca Dropship",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 275,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": []
-    },
-    {
       "id": "unit-pathfinder-team",
       "title": "Pathfinder Team",
       "status": "Current",
@@ -1003,21 +783,6 @@
       }
     },
     {
-      "id": "unit-rvarna-battlesuit",
-      "title": "R'varna Battlesuit",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 200,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": []
-    },
-    {
       "id": "unit-razorshark-strike-fighter",
       "title": "Razorshark Strike Fighter",
       "status": "Current",
@@ -1036,36 +801,6 @@
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
         "verifiedAt": "2026-07-30"
       }
-    },
-    {
-      "id": "unit-remora-stealth-drones",
-      "title": "Remora Stealth Drones",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "2 models",
-          "value": 160,
-          "minModels": 2,
-          "maxModels": 2
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-remote-sensor-tower",
-      "title": "Remote Sensor Tower",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 50,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": []
     },
     {
       "id": "unit-riptide-battlesuit",
@@ -1101,21 +836,6 @@
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
         "verifiedAt": "2026-07-30"
       }
-    },
-    {
-      "id": "unit-shaso-ralai",
-      "title": "Shas'o R'alai",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 80,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": []
     },
     {
       "id": "unit-sky-ray-gunship",
@@ -1236,83 +956,6 @@
       }
     },
     {
-      "id": "unit-taunar-supremacy-armour",
-      "title": "Ta'unar Supremacy Armour",
-      "status": "Current",
-      "sourceLayer": "imperial-armour",
-      "points": [
-        {
-          "label": "1st unit · 1 model",
-          "value": 790,
-          "minModels": 1,
-          "maxModels": 1,
-          "minCopies": 1,
-          "maxCopies": 1
-        },
-        {
-          "label": "2nd + unit · 1 model",
-          "value": 890,
-          "minModels": 1,
-          "maxModels": 1,
-          "minCopies": 2
-        }
-      ],
-      "paidWargear": [],
-      "pointsSource": {
-        "label": "Official MFM v1.1",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-07-30"
-      }
-    },
-    {
-      "id": "unit-tactical-drones",
-      "title": "Tactical Drones",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "4 models",
-          "value": 70,
-          "minModels": 4,
-          "maxModels": 4
-        },
-        {
-          "label": "5-8 models",
-          "value": 140,
-          "minModels": 5,
-          "maxModels": 8
-        },
-        {
-          "label": "9-12 models",
-          "value": 210,
-          "minModels": 9,
-          "maxModels": 12
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-tetras",
-      "title": "Tetras",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "2 models",
-          "value": 80,
-          "minModels": 2,
-          "maxModels": 2
-        },
-        {
-          "label": "3-4 models",
-          "value": 160,
-          "minModels": 3,
-          "maxModels": 4
-        }
-      ],
-      "paidWargear": []
-    },
-    {
       "id": "unit-the-twin-lance",
       "title": "The Twin Lance",
       "status": "Current",
@@ -1399,50 +1042,6 @@
       }
     },
     {
-      "id": "unit-tiger-shark",
-      "title": "Tiger Shark",
-      "status": "Current",
-      "sourceLayer": "imperial-armour",
-      "points": [
-        {
-          "label": "1st unit · 1 model",
-          "value": 375,
-          "minModels": 1,
-          "maxModels": 1,
-          "minCopies": 1,
-          "maxCopies": 1
-        },
-        {
-          "label": "2nd + unit · 1 model",
-          "value": 425,
-          "minModels": 1,
-          "maxModels": 1,
-          "minCopies": 2
-        }
-      ],
-      "paidWargear": [],
-      "pointsSource": {
-        "label": "Official MFM v1.1",
-        "url": "https://mfm.warhammer-community.com/en/tau-empire",
-        "verifiedAt": "2026-07-30"
-      }
-    },
-    {
-      "id": "unit-tx42-piranha",
-      "title": "TX42 Piranha",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 60,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": []
-    },
-    {
       "id": "unit-vespid-stingwings",
       "title": "Vespid Stingwings",
       "status": "Current",
@@ -1467,29 +1066,6 @@
         "url": "https://mfm.warhammer-community.com/en/tau-empire",
         "verifiedAt": "2026-07-30"
       }
-    },
-    {
-      "id": "unit-xv9-hazard-battlesuits",
-      "title": "XV9 Hazard Battlesuits",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-yvahra-battlesuit",
-      "title": "Y'vahra Battlesuit",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 210,
-          "minModels": 1,
-          "maxModels": 1
-        }
-      ],
-      "paidWargear": []
     }
   ],
   "enhancements": [
@@ -1794,7 +1370,7 @@
     }
   ],
   "audit": {
-    "units": 63,
+    "units": 39,
     "enhancements": 23
   },
   "detachments": [

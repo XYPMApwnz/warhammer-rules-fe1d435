@@ -122,21 +122,6 @@
       "paidWargear": []
     },
     {
-      "id": "unit-daemonettes",
-      "title": "Daemonettes",
-      "status": "Current",
-      "sourceLayer": "codex",
-      "points": [
-        {
-          "label": "10 models",
-          "value": 90,
-          "minModels": 10,
-          "maxModels": 10
-        }
-      ],
-      "paidWargear": []
-    },
-    {
       "id": "unit-defiler",
       "title": "Defiler",
       "status": "Current",
@@ -165,27 +150,6 @@
           "modifiers": []
         }
       ]
-    },
-    {
-      "id": "unit-fiends",
-      "title": "Fiends",
-      "status": "Current",
-      "sourceLayer": "codex",
-      "points": [
-        {
-          "label": "3 models",
-          "value": 90,
-          "minModels": 3,
-          "maxModels": 3
-        },
-        {
-          "label": "4-6 models",
-          "value": 180,
-          "minModels": 4,
-          "maxModels": 6
-        }
-      ],
-      "paidWargear": []
     },
     {
       "id": "unit-flawless-blades",
@@ -255,25 +219,6 @@
           "value": 160,
           "minModels": 6,
           "maxModels": 10
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-keeper-of-secrets",
-      "title": "Keeper of Secrets",
-      "status": "Current",
-      "sourceLayer": "codex",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 255,
-          "minModels": 1,
-          "maxModels": 1
-        },
-        {
-          "label": "3+ unit: 1 models",
-          "value": 270
         }
       ],
       "paidWargear": []
@@ -361,42 +306,6 @@
         {
           "label": "3+ unit: 6 models",
           "value": 160
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-seekers",
-      "title": "Seekers",
-      "status": "Current",
-      "sourceLayer": "codex",
-      "points": [
-        {
-          "label": "5 models",
-          "value": 80,
-          "minModels": 5,
-          "maxModels": 5
-        },
-        {
-          "label": "6-10 models",
-          "value": 155,
-          "minModels": 6,
-          "maxModels": 10
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-shalaxi-helbane",
-      "title": "Shalaxi Helbane",
-      "status": "Current",
-      "sourceLayer": "codex",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 315,
-          "minModels": 1,
-          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -689,7 +598,7 @@
     }
   ],
   "audit": {
-    "units": 23,
+    "units": 18,
     "enhancements": 31
   }
 }

@@ -90,50 +90,6 @@
       "core-stratagem-insane-bravery",
       "core-stratagem-rapid-ingress"
     ],
-    "unit-death-guard-chaos-lord": [
-      "core-stratagem-command-re-roll",
-      "core-stratagem-counteroffensive",
-      "core-stratagem-epic-challenge",
-      "core-stratagem-explosives",
-      "core-stratagem-fire-overwatch",
-      "core-stratagem-heroic-intervention",
-      "core-stratagem-insane-bravery",
-      "core-stratagem-rapid-ingress"
-    ],
-    "unit-death-guard-chaos-lord-in-terminator-armour": [
-      "core-stratagem-command-re-roll",
-      "core-stratagem-counteroffensive",
-      "core-stratagem-epic-challenge",
-      "core-stratagem-fire-overwatch",
-      "core-stratagem-heroic-intervention",
-      "core-stratagem-insane-bravery",
-      "core-stratagem-rapid-ingress"
-    ],
-    "unit-death-guard-cultists": [
-      "core-stratagem-command-re-roll",
-      "core-stratagem-counteroffensive",
-      "core-stratagem-fire-overwatch",
-      "core-stratagem-heroic-intervention",
-      "core-stratagem-insane-bravery",
-      "core-stratagem-rapid-ingress"
-    ],
-    "unit-death-guard-possessed": [
-      "core-stratagem-command-re-roll",
-      "core-stratagem-counteroffensive",
-      "core-stratagem-fire-overwatch",
-      "core-stratagem-heroic-intervention",
-      "core-stratagem-insane-bravery",
-      "core-stratagem-rapid-ingress"
-    ],
-    "unit-death-guard-sorcerer-in-terminator-armour": [
-      "core-stratagem-command-re-roll",
-      "core-stratagem-counteroffensive",
-      "core-stratagem-epic-challenge",
-      "core-stratagem-fire-overwatch",
-      "core-stratagem-heroic-intervention",
-      "core-stratagem-insane-bravery",
-      "core-stratagem-rapid-ingress"
-    ],
     "unit-deathshroud-terminators": [
       "core-stratagem-command-re-roll",
       "core-stratagem-counteroffensive",
@@ -554,41 +510,6 @@
       "stratagem-shock-and-horror",
       "stratagem-simultaneous-contamination",
       "stratagem-territorial-infection"
-    ],
-    "unit-death-guard-chaos-lord": [],
-    "unit-death-guard-chaos-lord-in-terminator-armour": [
-      "stratagem-blooming-pestilence",
-      "stratagem-grim-reapers",
-      "stratagem-mortarion-s-teachings",
-      "stratagem-sickening-impact",
-      "stratagem-signal-pox",
-      "stratagem-undying-spite"
-    ],
-    "unit-death-guard-cultists": [],
-    "unit-death-guard-possessed": [
-      "stratagem-blessings-of-filth",
-      "stratagem-clutching-corruption",
-      "stratagem-creeping-blight",
-      "stratagem-disgustingly-resilient",
-      "stratagem-drawn-to-despair",
-      "stratagem-droning-horror",
-      "stratagem-eye-of-the-swarm",
-      "stratagem-grotesque-fortitude",
-      "stratagem-leechspore-eruption",
-      "stratagem-malignance-magnified",
-      "stratagem-nauseating-paroxysms",
-      "stratagem-plaguesurge",
-      "stratagem-rabid-infusion",
-      "stratagem-shambling-wall",
-      "stratagem-shock-and-horror"
-    ],
-    "unit-death-guard-sorcerer-in-terminator-armour": [
-      "stratagem-blooming-pestilence",
-      "stratagem-grim-reapers",
-      "stratagem-mortarion-s-teachings",
-      "stratagem-sickening-impact",
-      "stratagem-signal-pox",
-      "stratagem-undying-spite"
     ],
     "unit-deathshroud-terminators": [
       "stratagem-blessings-of-filth",

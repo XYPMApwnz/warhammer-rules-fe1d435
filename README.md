@@ -15,7 +15,7 @@ A local-first Warhammer 40,000 rules reference with Core Rules, Army Books, Mega
 - Space Marines
 - Dark Angels (with the Space Marines dependency)
 
-Death Guard and Adeptus Mechanicus are the mature roster-aware books. The seven generated Army Books remain visibly gated as verification references until their Codex structure, official MFM points and wargear restrictions have been checked.
+Books can be listed as `PREVIEW`, `FUNCTIONAL` or `PUBLICATION-READY`. Preview readiness covers the usable reader and build; optional roster and Compatible Rules support is evaluated only when advertised. Publication readiness remains a separate source-authority decision.
 
 ## Verification
 
@@ -23,7 +23,15 @@ Death Guard and Adeptus Mechanicus are the mature roster-aware books. The seven 
 npm.cmd test
 ```
 
-`npm test` verifies generated readers, source counts, pinned commits, semantic text integrity, explicit Related Rules eligibility and the shared integration contracts.
+`npm test` runs the normal Preview gate: generated freshness, basic rule data, shared integration and fatal runtime contracts.
+
+Run the extended source, parity, publication and browser checks separately:
+
+```powershell
+npm.cmd run test:full
+```
+
+`test:full` is not required for ordinary Preview development.
 
 To verify the external source snapshots as well:
 

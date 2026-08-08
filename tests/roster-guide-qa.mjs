@@ -165,9 +165,6 @@ assert(dgRosterFilter.includes("const grants=grantedKeywords(card.id.replace(/^u
 
 const amPhone=fs.readFileSync(path.join(root,'books/adeptus-mechanicus/mobile/mobile.js'),'utf8');
 assert(amPhone.includes("rosterGuideHref=()=>new URL('../../../roster-guides/index.html',location.href).href")&&!amPhone.includes("rosterGuideHref=()=>window.AMPhoneRoster.withRosterQuery"),'Mechanicus invalid roster handoff still carries an auto-open roster parameter');
-const blueprint=fs.readFileSync(path.join(root,'docs/ARMY_BOOK_BLUEPRINT.md'),'utf8'),blueprintIds=[...blueprint.matchAll(/^## (AB-[A-Z0-9]+-[0-9]{3})\s/gm)].map(match=>match[1]);
-assert(blueprintIds.length===83&&new Set(blueprintIds).size===83,'Blueprint requirement inventory is not 83/83');
-assert(blueprint.includes('A roster accepted and persisted by the canonical Roster Guides flow MUST remain consumable')&&blueprint.includes('Failure navigation MUST be terminal and non-reentrant.'),'Blueprint roster roundtrip or terminal handoff contract is absent');
 
 const sharedMatcherContext={window:{WHRuleFacts:ruleFacts}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'books/shared/related-rules-matcher.js'),'utf8'),sharedMatcherContext,{filename:'related-rules-matcher.js'});

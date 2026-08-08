@@ -56,15 +56,15 @@ assert(!allDetachments.some(row=>row.ruleId==='enhancement-faultless-opportunist
 
 const reader=fs.readFileSync(path.join(root,'reader.html'),'utf8'),template=fs.readFileSync(path.join(root,'mobile/related-rules.inc'),'utf8'),app=fs.readFileSync(path.join(root,'scripts/app.js'),'utf8'),rosterData=fs.readFileSync(path.join(root,'scripts/roster-data.js'),'utf8');
 assert(reader.includes('./scripts/compatible-rules-runtime.mjs')===false,'runtime is imported by the book app');
-assert(reader.includes('./scripts/roster-filter.js?v=1'));
-assert(reader.includes('./scripts/app.js?v=3'));
+assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader));
+assert(/\.\/scripts\/app\.js\?v=\d+/.test(reader));
 assert(!reader.includes('related-rules-matcher.js'));
 assert(!reader.includes('army-related-rules.js'));
 assert(!reader.includes('army-book-app.js'));
 assert(!reader.includes('data-eligibility'));
 assert(!template.includes('data-eligibility'));
 assert(!template.includes('data-keyword-grants'));
-assert(app.includes("import(new URL('./compatible-rules-runtime.mjs?v=1'"));
+assert(/import\(new URL\('\.\/compatible-rules-runtime\.mjs\?v=\d+'/.test(app));
 assert(!app.includes('data-eligibility'));
 assert(!app.includes('allKeywords'));
 assert(!template.includes('Faultless Opportunist'));

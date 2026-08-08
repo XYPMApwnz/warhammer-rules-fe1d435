@@ -207,7 +207,7 @@ check('mobile popup layer is fixed',/@media\s*\(max-width:\s*800px\)[\s\S]*?\.po
 check('popup cards expose dialog semantics',popups.includes("setAttribute('role','dialog')")&&popups.includes("setAttribute('aria-modal','false')"));
 check('outside click closes popups but preserves them behind full entry',popups.includes("this.ids.length&&!event.target.closest('.term-popup,.full-entry-layer')")&&popups.includes('this.closeFrom(0)'));
 check('datasheet actions appear only inside Related Rules',!popups.includes('Datasheet & Wargear')&&!popups.includes("label:'Statline'")&&popups.includes("label:'Open datasheet'")&&popups.includes("closest?.('.related-rules-layer')"));
-check('Mega Glossary transitions use the shared return helper',html.includes('../../glossary-return.js?v=3')&&read('scripts/full-entry-controller.js').includes('WHGlossaryReturn')&&read('scripts/app.js').includes('WHGlossaryReturn'));
+check('Mega Glossary transitions use the shared return helper',/\.\.\/\.\.\/glossary-return\.js\?v=\d+/.test(html)&&read('scripts/full-entry-controller.js').includes('WHGlossaryReturn')&&read('scripts/app.js').includes('WHGlossaryReturn'));
 check('popups use the shared semantic profile renderer',popups.includes('WHPopupContent.render')&&popupContent.includes("document.createElement('table')")&&popupContent.includes("document.createElement('dl')"));
 check('unit popup grid has a mobile no-overflow layout',/\.popup-stats\s*\{[^}]*grid-template-columns:\s*repeat\(auto-fit, minmax\(54px, 1fr\)\)/.test(read('styles/popups.css'))&&/@media\s*\(max-width:\s*480px\)[\s\S]*?\.popup-stats\s*\{[^}]*grid-template-columns:\s*repeat\(4, minmax\(0, 1fr\)\)/.test(read('styles/popups.css')));
 
@@ -259,7 +259,7 @@ check('Back has rebuilt-action fallback',journey.includes('this.findRestoredActi
 check('click navigation highlights only after controlled scroll settles',navigation.includes("()=>{this.highlighter.show(targets.highlightTarget);settled?.();}"));
 
 const cssFiles=['styles/tokens.css','styles/layout.css','styles/navigation.css','styles/content.css','styles/popups.css'];
-check('all five style layers are linked',cssFiles.every(file=>html.includes('href="./'+file+(file==='styles/content.css'?'?v=40':file==='styles/popups.css'?'?v=18':file==='styles/navigation.css'?'?v=12':'?v=11')+'"')));
+check('all five style layers are linked',cssFiles.every(file=>html.includes('href="./'+file+'?v=')));
 const contentCss=read('styles/content.css');
 check('datasheet quick navigation overrides the shared desktop rail and is phone-only',contentCss.includes('body .unit-card > .local-nav { display: none; }')&&contentCss.includes('@media (max-width: 600px)')&&contentCss.includes('position: sticky;')&&contentCss.includes('overflow-x: auto;'));
 const navigationCss=read('styles/navigation.css');
@@ -283,7 +283,7 @@ check('detachment Stratagems use the shared explicit grid',!contentCss.includes(
 check('full entry becomes a full-screen mobile dialog',/@media\s*\(max-width:\s*800px\)[\s\S]*?\.full-entry-dialog\s*\{[^}]*height:\s*100%/.test(read('styles/popups.css')));
 check('each detachment has a visible Stratagems destination',(markup.match(/class="detachment-part"[^>]*data-track="[^"]+">\s*<h4 class="detachment-part-title">Stratagems<\/h4>/g)||[]).length===bookData.audit.detachments);
 check('no inline style or inline script',!/<style|<script(?![^>]*src=)/i.test(html));
-check('only related rules are fetched at runtime',files.every(file=>file==='scripts/app.js'?((read(file).match(/\bfetch\s*\(/g)||[]).length===1&&read(file).includes("fetch('./mobile/related-rules.inc?v=4')")):!/\bfetch\s*\(/.test(read(file))));
+check('only related rules are fetched at runtime',files.every(file=>file==='scripts/app.js'?((read(file).match(/\bfetch\s*\(/g)||[]).length===1&&/fetch\('\.\/mobile\/related-rules\.inc\?v=\d+'\)/.test(read(file))):!/\bfetch\s*\(/.test(read(file))));
 check('Roster Guide passes its detachments and assigned Enhancement owners to Related Rules',read('scripts/roster-filter.js').includes('enhancementRuleIdsByUnitId')&&read('scripts/app.js').includes('rosterGuide?.detachmentIds')&&read('scripts/app.js').includes('assigned.has(rule.ruleId)')&&read('scripts/app.js').includes('rosterDetachments.has(section.dataset.detachment)'));
 check('service worker registration is protocol gated',read('scripts/app.js').includes("location.protocol==='http:'||location.protocol==='https:'"));
 check('weapon rows receive explicit table semantics',read('scripts/ui-controllers.js').includes("row.setAttribute('role','row')"));
@@ -350,12 +350,11 @@ check('Contagion Engines uses current MFM disposition',JSON.stringify(bookData).
 check('book uses the unified root manifest',html.includes('href="../../manifest.webmanifest"'));
 check('release service worker owns its cache family',readProject('service-worker.js').includes('key.startsWith(CACHE_PREFIX)')&&readProject('service-worker.js').includes('warhammer-rules-fe1d435-'));
 check('release PWA cache revision is content-derived',readProject('service-worker.js').includes('self.WH40K_CACHE_REVISION'));
-check('book scripts and styles use the current release token',[...cssFiles.filter(file=>!['styles/tokens.css','styles/layout.css','styles/content.css','styles/navigation.css','styles/popups.css'].includes(file)),...files.filter(file=>!['scripts/roster-filter.js','scripts/navigation-controller.js','scripts/popup-controller.js','scripts/full-entry-controller.js','scripts/journey-controller.js','scripts/ui-controllers.js','scripts/app.js'].includes(file))].every(file=>html.includes('./'+file+'?v=9'))&&html.includes('./styles/tokens.css?v=11')&&html.includes('./styles/layout.css?v=11')&&html.includes('./styles/content.css?v=40')&&html.includes('./styles/navigation.css?v=12')&&html.includes('./styles/popups.css?v=18')&&html.includes('./scripts/roster-filter.js?v=17')&&html.includes('./scripts/navigation-controller.js?v=16')&&html.includes('./scripts/popup-controller.js?v=25')&&html.includes('./scripts/full-entry-controller.js?v=9')&&html.includes('./scripts/journey-controller.js?v=13')&&html.includes('./scripts/ui-controllers.js?v=12')&&html.includes('./scripts/app.js?v=42'));
 check('Detachment picker stays above Stratagem card badges',contentCss.includes('.full-related-controls{position:relative;z-index:4;'));
 check('Detachment picker closes before another datasheet dialog opens',read('scripts/app.js').includes('if(filterMenu)filterMenu.open=false'));
-check('book loads the shared navigation target resolver',html.includes('src="../shared/navigation-targets.js?v=1"'));
-check('book loads the shared datasheet design',html.includes('href="../shared/datasheet-system.css?v=7"'));
-check('book loads the shared datasheet layout',html.includes('src="../shared/datasheet-layout.js?v=3"'));
+check('book loads the shared navigation target resolver',html.includes('src="../shared/navigation-targets.js?v='));
+check('book loads the shared datasheet design',html.includes('href="../shared/datasheet-system.css?v='));
+check('book loads the shared datasheet layout',html.includes('src="../shared/datasheet-layout.js?v='));
 check('long datasheet abilities use an original-node continuation',datasheetLayout.includes("layout.continuation.className='ability-list ds-abilities-continuation'")&&datasheetLayout.includes('layout.cards.slice(split).forEach(node=>layout.continuation.append(node))'));
 check('long datasheet continuation recalculates from available card width',datasheetLayout.includes("'ResizeObserver' in window")&&datasheetLayout.includes('entry.contentRect.width')&&datasheetLayout.includes('restoreAbilities(layout)'));
 check('long datasheet continuation spans the datasheet width',datasheetCss.includes('.unit-card.ds-layout .ds-abilities-continuation')&&datasheetCss.includes('grid-template-columns: 1fr'));

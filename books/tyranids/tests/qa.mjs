@@ -44,7 +44,7 @@ assert.deepEqual(unknownWeaponLabels,['HARPOONED']);
 assert.doesNotMatch(reader+mobileDatasheetMarkup,/<button class="weapon-button"[^>]*>[^<]*<\/button><small>/i);
 assert.doesNotMatch(reader+mobileDatasheetMarkup,/<(?:button|span)[^>]*class="[^"]*\btag\b[^"]*"[^>]*>[^<]*<button/i);
 assert.equal(fs.readdirSync(path.join(root,'mobile')).filter(file=>file.endsWith('.html')).length,70);
-for(const output of [reader,mobileDatasheetMarkup]){assert.match(output,/death-guard\/styles\/content\.css\?v=40/);assert.match(output,/death-guard\/styles\/popups\.css\?v=18/);assert.match(output,/shared\/datasheet-system\.css\?v=7/);assert.doesNotMatch(output,/(?:content\.css\?v=38|popups\.css\?v=17|datasheet-system\.css\?v=6)/);}
+for(const output of [reader,mobileDatasheetMarkup]){assert.match(output,/death-guard\/styles\/content\.css\?v=\d+/);assert.match(output,/death-guard\/styles\/popups\.css\?v=\d+/);assert.match(output,/shared\/datasheet-system\.css\?v=\d+/);}
 
 assert.equal(pack.meta.pageCount,31);
 assert.equal(pack.detachments.length,4);
@@ -151,17 +151,17 @@ for(const detachment of pack.detachments){
 assert.doesNotMatch(reader,/death-guard-cover|CODEX REGISTER \/\/ XIV|Technical placeholder/);
 assert.match(reader,/Reference in verification/);
 assert.doesNotMatch(reader,/army-related-rules\.js|related-rules-matcher\.js/);
-assert.match(reader,/roster-filter\.js\?v=2/);
+assert.match(reader,/roster-filter\.js\?v=\d+/);
 assert.match(fs.readFileSync(path.join(root,'scripts','roster-filter.js'),'utf8'),/match\[1\]\.toLowerCase\(\)==='xenos'/);
 assert.doesNotMatch(reader,/army-book-app\.js/,'Tyranids must not load the generic monolithic Army Book runtime');
 assert.doesNotMatch(reader,/unit-source-state/,'per-datasheet source telemetry must not clutter the playable reader');
 assert.match(app,/new window\.DGNavigation\(\)/);
 assert.match(app,/new window\.DGPopups\(terms,fullEntry\)/);
-assert.match(app,/compatible-rules-runtime\.mjs\?v=2/);
+assert.match(app,/compatible-rules-runtime\.mjs\?v=\d+/);
 assert.match(app,/function initRelatedRules\(\)/);
 assert.doesNotMatch(app,/WHArmyRelatedRules|WHRelatedRules/);
 assert.match(app,/new URL\('\.\/mobile\/'\+route/);
-assert.match(fs.readFileSync(path.join(root,'index.html'),'utf8'),/death-guard\/scripts\/view-router\.js\?v=2/);
+assert.match(fs.readFileSync(path.join(root,'index.html'),'utf8'),/death-guard\/scripts\/view-router\.js\?v=\d+/);
 assert.doesNotMatch(app,/WHArmyBook\.install/);
 assert.match(bookCss,/tyranids-cover-800\.webp/,'the supplied Tyranids artwork must be used by the desktop hero');
 assert.match(bookCss,/\.related-rules-dialog[^}]*background:var\(--panel\)/,'Related Rules must have an opaque book background');

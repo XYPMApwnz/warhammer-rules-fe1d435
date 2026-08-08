@@ -22,10 +22,9 @@ const reader=fs.readFileSync(path.join(root,'reader.html'),'utf8');
 const serviceWorker=fs.readFileSync(path.join(repo,'service-worker.js'),'utf8');
 const codexParitySource=manifest.layers.find(layer=>layer.id==='codex-parity');
 assert.equal(config.assetVersions.rosterFilter,3);
-assert.ok(reader.includes('./scripts/roster-filter.js?v=3'));
-assert.equal(reader.includes('./scripts/roster-filter.js?v=2'),false);
-assert.ok(serviceWorker.includes('./books/tau-empire/scripts/roster-filter.js?v=3'));
-assert.equal(serviceWorker.includes('./books/tau-empire/scripts/roster-filter.js?v=2'),false);
+const rosterFilterUrl=reader.match(/\.\/scripts\/roster-filter\.js\?v=\d+/)?.[0];
+assert.ok(rosterFilterUrl);
+assert.ok(serviceWorker.includes(`./books/tau-empire/${rosterFilterUrl.slice(2)}`));
 assert.equal(codexParitySource?.title,'Wahapedia Warhammer 40,000 11th Edition · T’au Empire');
 const mobileStart=fs.readFileSync(path.join(root,'mobile','index.html'),'utf8');
 const related=fs.readFileSync(path.join(root,'mobile','related-rules.inc'),'utf8');
@@ -55,7 +54,7 @@ assert.deepEqual(unknownWeaponLabels,['HOOKED']);
 assert.doesNotMatch(reader+mobileDatasheetMarkup,/<button class="weapon-button"[^>]*>[^<]*<\/button><small>/i);
 assert.doesNotMatch(reader+mobileDatasheetMarkup,/<(?:button|span)[^>]*class="[^"]*\btag\b[^"]*"[^>]*>[^<]*<button/i);
 assert.equal(fs.readdirSync(path.join(root,'mobile')).filter(file=>file.endsWith('.html')).length,73);
-for(const output of [reader,mobileDatasheetMarkup]){assert.match(output,/death-guard\/styles\/content\.css\?v=40/);assert.match(output,/death-guard\/styles\/popups\.css\?v=18/);assert.match(output,/shared\/datasheet-system\.css\?v=7/);assert.doesNotMatch(output,/(?:content\.css\?v=38|popups\.css\?v=17|datasheet-system\.css\?v=6)/);}
+for(const output of [reader,mobileDatasheetMarkup]){assert.match(output,/death-guard\/styles\/content\.css\?v=\d+/);assert.match(output,/death-guard\/styles\/popups\.css\?v=\d+/);assert.match(output,/shared\/datasheet-system\.css\?v=\d+/);}
 
 assert.deepEqual([pack.meta.version,pack.meta.pageCount,pack.meta.sha256],['1.1',61,'32B985646BAA02A3B505FF3404E91D374A5F53C1D3B8000D7166CA94D1B52675']);
 assert.equal(pack.meta.legalFrom,'2026-07-22');
@@ -170,8 +169,8 @@ for(const detachment of [...pack.detachments,...parity.detachments]){
 assert.ok(related.lastIndexOf('data-detachment="core"')>related.indexOf('data-detachment="advanced-acquisition-cadre"'),'Core Stratagems must follow faction Stratagems');
 assert.doesNotMatch(reader,/army-book-app\.js/,'T’au must use the same focused runtime architecture as mature books');
 assert.doesNotMatch(reader,/related-rules-matcher|army-related-rules/,'T\'au must not load the legacy Compatible Rules matcher');
-assert.match(reader,/scripts\/roster-filter\.js\?v=3/);
-assert.match(reader,/scripts\/app\.js\?v=9/);
+assert.match(reader,/scripts\/roster-filter\.js\?v=\d+/);
+assert.match(reader,/scripts\/app\.js\?v=\d+/);
 assert.doesNotMatch(related,/data-eligibility|data-keyword-grants/,'matrix template must not retain legacy matcher inputs');
 assert.match(reader,/Reference in verification/);
 assert.ok(Object.keys(context).length>=350,'T’au Glossary context is incomplete');

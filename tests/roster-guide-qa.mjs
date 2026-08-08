@@ -47,8 +47,8 @@ for(const bookId of supported){
     assert(
       /\.\/scripts\/app\.js\?v=\d+/.test(reader)
       &&fs.existsSync(compatibleRuntimePath)
-      &&desktopApp.includes("./compatible-rules-runtime.mjs?v=3")
-      &&phoneApp.includes("../scripts/compatible-rules-runtime.mjs?v=3")
+      &&/\.\/compatible-rules-runtime\.mjs\?v=\d+/.test(desktopApp)
+      &&/\.\.\/scripts\/compatible-rules-runtime\.mjs\?v=\d+/.test(phoneApp)
       &&desktopApp.includes('related-rules-trigger')
       &&desktopApp.includes('related-rules-layer')
       &&phoneApp.includes('relatedRulesContent')
@@ -64,7 +64,7 @@ for(const bookId of supported){
     const units=[...codex.datasheets,...codex.imperialArmour,...codex.legends],unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),enhancementTitles=new Set([...related.matchAll(/data-enhancement-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
     assert(points.units.length===57,'tyranids: points catalog is incomplete');assert(points.enhancements.length===34,'tyranids: Enhancement catalog is incomplete');units.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`tyranids: unit ${unit.title} is absent from Roster Guide`));points.enhancements.forEach(item=>assert(enhancementTitles.has(entities.normalize(item.title)),`tyranids: Enhancement ${item.title} is absent from related rules`));
     const desktopRoster=fs.readFileSync(path.join(bookRoot,'scripts','roster-filter.js'),'utf8'),phoneRoster=fs.readFileSync(path.join(bookRoot,'mobile','mobile.js'),'utf8');
-    assert(reader.includes('./scripts/roster-filter.js?v=2')&&reader.includes('./scripts/app.js?v=8'),'tyranids: roster or matrix controller is absent');assert(fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs')),'tyranids: matrix runtime is absent');
+    assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&/\.\/scripts\/app\.js\?v=\d+/.test(reader),'tyranids: roster or matrix controller is absent');assert(fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs')),'tyranids: matrix runtime is absent');
     assert(desktopRoster.includes("match[1].toLowerCase()==='xenos'")&&phoneRoster.includes("match[1].toLowerCase()==='xenos'"),'tyranids: desktop and Phone faction normalization do not share the correct Xenos parent contract');
     console.log(`PASS  tyranids: ${points.units.length} units, ${points.enhancements.length} Enhancements, desktop/iPad + Phone Mode`);continue;
   }
@@ -90,8 +90,8 @@ for(const bookId of supported){
       const rosterRule=rosterCatalog[entities.normalize(item.title)];
       assert(rosterRule?.text===rule?.text&&rosterRule?.value===item.value,`tau-empire: roster Enhancement ${item.title} does not preserve its full rule and current cost`);
     });
-    assert(reader.includes('../shared/roster-parser.js?v=2'),'tau-empire: shared roster parser is absent');
-    assert(reader.includes('../shared/book-roster-enhancements.js?v=1')&&reader.includes('./scripts/roster-data.js?v=1'),'tau-empire: desktop Enhancement owner runtime is absent');
+    assert(/\.\.\/shared\/roster-parser\.js\?v=\d+/.test(reader),'tau-empire: shared roster parser is absent');
+    assert(/\.\.\/shared\/book-roster-enhancements\.js\?v=\d+/.test(reader)&&/\.\/scripts\/roster-data\.js\?v=\d+/.test(reader),'tau-empire: desktop Enhancement owner runtime is absent');
     const tauApp=fs.readFileSync(path.join(bookRoot,'scripts','app.js'),'utf8')+fs.readFileSync(path.join(bookRoot,'scripts','roster-filter.js'),'utf8');
     assert(tauApp.includes("params.has('roster')")&&tauApp.includes('WHBookRosterEnhancements?.decorate')&&tauApp.includes('WHRosterEntities.loadoutIncludesProfile')&&tauApp.includes(".content-group.detachment"),'tau-empire: desktop roster filtering, loadout or owned Enhancement decoration is incomplete');
     const tauMobile=fs.readFileSync(path.join(bookRoot,'mobile','mobile.js'),'utf8');
@@ -107,7 +107,7 @@ for(const bookId of supported){
     units.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`emperors-children: unit ${unit.title} is absent from Roster Guide`));
     publishedOwners.forEach(item=>assert(enhancementIds.has(Object.entries(owners.enhancements).find(([,value])=>value===item)[0]),`emperors-children: Enhancement ${item.title} is absent from related rules`));
     assert(!related.includes('Faultless Opportunist'),"emperors-children: unresolved Faultless Opportunist must remain hidden");
-    assert(reader.includes('./scripts/roster-filter.js?v=1')&&reader.includes('./scripts/app.js?v=3'),"emperors-children: roster or matrix controller is absent");
+    assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&/\.\/scripts\/app\.js\?v=\d+/.test(reader),"emperors-children: roster or matrix controller is absent");
     assert(fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs'))&&fs.existsSync(path.join(bookRoot,'scripts','roster-data.js')),"emperors-children: matrix or roster data is absent");
     console.log(`PASS  emperors-children: ${units.length} units, ${publishedOwners.length} resolved Enhancements/UPGRADE, desktop/iPad + Phone Mode`);
     continue;

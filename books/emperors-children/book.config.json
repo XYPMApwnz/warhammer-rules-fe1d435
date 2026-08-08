@@ -5,6 +5,8 @@
   "shortTitle": "Emperor's Children Rules",
   "edition": "11E",
   "factionKeyword": "EMPEROR'S CHILDREN",
+  "coverImage": "assets/emperors-children-cover-800.webp",
+  "entryCoverImage": "assets/emperors-children-cover-480.webp",
   "armyRules": [
     "Thrill Seekers",
     "Pact of Excess"
@@ -18,6 +20,7 @@
   "legacyRelatedRuleAttributes": false,
   "assetVersions": {
     "app": 5,
+    "book": 3,
     "tokens": 2,
     "rosterFilter": 1,
     "rosterData": 1

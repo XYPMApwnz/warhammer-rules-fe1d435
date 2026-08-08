@@ -87,7 +87,7 @@ assert.throws(()=>ruleFacts.textFromDomLike({value:'Death Guard'}),TypeError);
 const desktopProfiles=new Map();let profiles=0,mobileProfiles=0;
 for(const book of Object.keys(sources)){
   const html=fs.readFileSync(path.join(root,'books',book,'reader.html'),'utf8');
-  assert.match(html,/shared\/rule-facts\.js\?v=4/,`${book}: shared facts runtime is absent`);
+  assert.match(html,/shared\/rule-facts\.js\?v=\d+/,`${book}: shared facts runtime is absent`);
   const expected=sources[book],seen=new Set();
   for(const tag of html.match(/<article class="unit-card\b[^>]*>/g)||[]){
     const unitId=attr(tag,'id'),compiled=JSON.parse(decode(attr(tag,'data-rule-facts'))),source=expected.get(unitId);

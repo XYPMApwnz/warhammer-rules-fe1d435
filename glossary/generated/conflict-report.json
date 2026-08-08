@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 1767,
-    "aliases": 716,
+    "terms": 1967,
+    "aliases": 728,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 112,
-    "duplicateCandidates": 14,
+    "aliasCandidates": 145,
+    "duplicateCandidates": 29,
     "keywordCandidates": 16
   },
   "definitionCandidates": [
@@ -939,6 +939,7 @@
       "normalizedTitle": "anti",
       "termIds": [
         "core-anti",
+        "emperors-children-ability-anti",
         "tau-empire-ability-anti"
       ],
       "status": "review-required"
@@ -947,6 +948,7 @@
       "normalizedTitle": "blast",
       "termIds": [
         "core-blast",
+        "emperors-children-ability-blast",
         "tau-empire-ability-blast"
       ],
       "status": "review-required"
@@ -955,6 +957,7 @@
       "normalizedTitle": "devastating-wounds",
       "termIds": [
         "core-devastating-wounds",
+        "emperors-children-ability-devastating-wounds",
         "tau-empire-ability-devastating-wounds"
       ],
       "status": "review-required"
@@ -963,6 +966,7 @@
       "normalizedTitle": "extra-attacks",
       "termIds": [
         "core-extra-attacks",
+        "emperors-children-ability-extra-attacks",
         "tau-empire-ability-extra-attacks"
       ],
       "status": "review-required"
@@ -979,6 +983,7 @@
       "normalizedTitle": "ignores-cover",
       "termIds": [
         "core-ignores-cover",
+        "emperors-children-ability-ignores-cover",
         "tau-empire-ability-ignores-cover"
       ],
       "status": "review-required"
@@ -987,6 +992,11 @@
       "normalizedTitle": "leader",
       "termIds": [
         "core-leader",
+        "emperors-children-ability-leader",
+        "emperors-children-ability-leader-2",
+        "emperors-children-ability-leader-3",
+        "emperors-children-ability-leader-4",
+        "emperors-children-ability-leader-5",
         "tyranids-ability-leader",
         "tyranids-ability-leader-2",
         "tyranids-ability-leader-3",
@@ -1003,6 +1013,7 @@
       "normalizedTitle": "lethal-hits",
       "termIds": [
         "core-lethal-hits",
+        "emperors-children-ability-lethal-hits",
         "tau-empire-ability-lethal-hits",
         "tyranids-ability-lethal-hits"
       ],
@@ -1012,6 +1023,7 @@
       "normalizedTitle": "melta",
       "termIds": [
         "core-melta",
+        "emperors-children-ability-melta",
         "tau-empire-ability-melta"
       ],
       "status": "review-required"
@@ -1020,6 +1032,7 @@
       "normalizedTitle": "pistol",
       "termIds": [
         "core-pistol",
+        "emperors-children-ability-pistol",
         "tau-empire-ability-pistol"
       ],
       "status": "review-required"
@@ -1028,6 +1041,7 @@
       "normalizedTitle": "rapid-fire",
       "termIds": [
         "core-rapid-fire",
+        "emperors-children-ability-rapid-fire",
         "tau-empire-ability-rapid-fire"
       ],
       "status": "review-required"
@@ -1044,6 +1058,7 @@
       "normalizedTitle": "sustained-hits",
       "termIds": [
         "core-sustained-hits",
+        "emperors-children-ability-sustained-hits",
         "tau-empire-ability-sustained-hits",
         "tyranids-ability-sustained-hits"
       ],
@@ -1078,7 +1093,8 @@
       "normalizedTitle": "combi-bolter",
       "termIds": [
         "death-guard-weapon-combi-bolter-blightlord-terminators-chaos-land-raider-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino-helbrute",
-        "adeptus-mechanicus-weapon-combi-bolter"
+        "adeptus-mechanicus-weapon-combi-bolter",
+        "emperors-children-weapon-combi-bolter"
       ],
       "status": "review-required"
     },
@@ -1088,7 +1104,16 @@
         "death-guard-weapon-combi-weapon-blightlord-terminators-chaos-land-raider-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino",
         "death-guard-weapon-combi-weapon-death-guard-chaos-lord",
         "death-guard-weapon-combi-weapon-death-guard-chaos-lord-in-terminator-armour",
-        "death-guard-weapon-combi-weapon-death-guard-sorcerer-in-terminator-armour"
+        "death-guard-weapon-combi-weapon-death-guard-sorcerer-in-terminator-armour",
+        "emperors-children-weapon-combi-weapon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "reaper-autocannon",
+      "termIds": [
+        "death-guard-weapon-reaper-autocannon-blightlord-terminators",
+        "emperors-children-weapon-reaper-autocannon"
       ],
       "status": "review-required"
     },
@@ -1103,6 +1128,8 @@
         "adeptus-mechanicus-weapon-close-combat-weapon-3",
         "adeptus-mechanicus-weapon-close-combat-weapon-4",
         "adeptus-mechanicus-weapon-close-combat-weapon-5",
+        "emperors-children-weapon-close-combat-weapon",
+        "emperors-children-weapon-close-combat-weapon-2",
         "tau-empire-weapon-close-combat-weapon",
         "tau-empire-weapon-close-combat-weapon-2",
         "tau-empire-weapon-close-combat-weapon-3",
@@ -1114,10 +1141,44 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "assault-ramp",
+      "termIds": [
+        "death-guard-ability-assault-ramp-chaos-land-raider",
+        "emperors-children-ability-assault-ramp"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "havoc-launcher",
+      "termIds": [
+        "death-guard-weapon-havoc-launcher-chaos-land-raider-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino",
+        "emperors-children-weapon-havoc-launcher"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "soulshatter-lascannon",
+      "termIds": [
+        "death-guard-weapon-soulshatter-lascannon-chaos-land-raider",
+        "emperors-children-weapon-soulshatter-lascannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "twin-heavy-bolter",
+      "termIds": [
+        "death-guard-weapon-twin-heavy-bolter-chaos-land-raider-helbrute",
+        "emperors-children-weapon-twin-heavy-bolter"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "armoured-tracks",
       "termIds": [
         "death-guard-weapon-armoured-tracks-chaos-land-raider",
-        "death-guard-weapon-armoured-tracks-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino-plagueburst-crawler"
+        "death-guard-weapon-armoured-tracks-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino-plagueburst-crawler",
+        "emperors-children-weapon-armoured-tracks",
+        "emperors-children-weapon-armoured-tracks-2"
       ],
       "status": "review-required"
     },
@@ -1141,7 +1202,8 @@
       "normalizedTitle": "hideous-mutations",
       "termIds": [
         "death-guard-weapon-hideous-mutations-chaos-spawn",
-        "death-guard-weapon-hideous-mutations-death-guard-possessed"
+        "death-guard-weapon-hideous-mutations-death-guard-possessed",
+        "emperors-children-weapon-hideous-mutations"
       ],
       "status": "review-required"
     },
@@ -1149,7 +1211,24 @@
       "normalizedTitle": "infernal-cannon",
       "termIds": [
         "death-guard-weapon-infernal-cannon-daemon-prince-of-nurgle",
-        "death-guard-weapon-infernal-cannon-daemon-prince-of-nurgle-with-wings"
+        "death-guard-weapon-infernal-cannon-daemon-prince-of-nurgle-with-wings",
+        "emperors-children-weapon-infernal-cannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "hellforged-weapons-strike",
+      "termIds": [
+        "death-guard-weapon-hellforged-weapons-strike-daemon-prince-of-nurgle-daemon-prince-of-nurgle-with-wings",
+        "emperors-children-weapon-hellforged-weapons-strike"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "hellforged-weapons-sweep",
+      "termIds": [
+        "death-guard-weapon-hellforged-weapons-sweep-daemon-prince-of-nurgle-daemon-prince-of-nurgle-with-wings",
+        "emperors-children-weapon-hellforged-weapons-sweep"
       ],
       "status": "review-required"
     },
@@ -1173,7 +1252,96 @@
       "normalizedTitle": "scuttling-walker",
       "termIds": [
         "death-guard-ability-scuttling-walker-defiler",
-        "adeptus-mechanicus-datasheet-scuttling-walker"
+        "adeptus-mechanicus-datasheet-scuttling-walker",
+        "emperors-children-ability-scuttling-walker"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "ectoplasma-destructor",
+      "termIds": [
+        "death-guard-weapon-ectoplasma-destructor-defiler",
+        "emperors-children-weapon-ectoplasma-destructor"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "excruciator-cannon",
+      "termIds": [
+        "death-guard-weapon-excruciator-cannon-defiler",
+        "emperors-children-weapon-excruciator-cannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "hades-battle-cannon",
+      "termIds": [
+        "death-guard-weapon-hades-battle-cannon-defiler",
+        "emperors-children-weapon-hades-battle-cannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "hades-lascannon",
+      "termIds": [
+        "death-guard-weapon-hades-lascannon-defiler",
+        "emperors-children-weapon-hades-lascannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "heavy-baleflamer",
+      "termIds": [
+        "death-guard-weapon-heavy-baleflamer-defiler",
+        "emperors-children-weapon-heavy-baleflamer"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "heavy-missile-launcher-krak",
+      "termIds": [
+        "death-guard-weapon-heavy-missile-launcher-krak-defiler",
+        "emperors-children-weapon-heavy-missile-launcher-krak"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "heavy-missile-launcher-frag",
+      "termIds": [
+        "death-guard-weapon-heavy-missile-launcher-frag-defiler",
+        "emperors-children-weapon-heavy-missile-launcher-frag"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "heavy-reaper-autocannon",
+      "termIds": [
+        "death-guard-weapon-heavy-reaper-autocannon-defiler",
+        "emperors-children-weapon-heavy-reaper-autocannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "electroscourge",
+      "termIds": [
+        "death-guard-weapon-electroscourge-defiler",
+        "emperors-children-weapon-electroscourge"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "shearing-claws-strike",
+      "termIds": [
+        "death-guard-weapon-shearing-claws-strike-defiler",
+        "emperors-children-weapon-shearing-claws-strike"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "shearing-claws-sweep",
+      "termIds": [
+        "death-guard-weapon-shearing-claws-sweep-defiler",
+        "emperors-children-weapon-shearing-claws-sweep"
       ],
       "status": "review-required"
     },
@@ -1181,7 +1349,16 @@
       "normalizedTitle": "heavy-flamer",
       "termIds": [
         "death-guard-weapon-heavy-flamer-helbrute",
-        "adeptus-mechanicus-weapon-heavy-flamer"
+        "adeptus-mechanicus-weapon-heavy-flamer",
+        "emperors-children-weapon-heavy-flamer"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "boltgun",
+      "termIds": [
+        "death-guard-weapon-boltgun-icon-bearer-plague-marines",
+        "emperors-children-weapon-boltgun"
       ],
       "status": "review-required"
     },
@@ -1190,7 +1367,8 @@
       "termIds": [
         "death-guard-weapon-plasma-pistol-standard-lord-of-poxes",
         "death-guard-weapon-plasma-pistol-standard-noxious-blightbringer-plague-marines-tallyman",
-        "death-guard-weapon-plasma-pistol-standard-death-guard-chaos-lord"
+        "death-guard-weapon-plasma-pistol-standard-death-guard-chaos-lord",
+        "emperors-children-weapon-plasma-pistol-standard"
       ],
       "status": "review-required"
     },
@@ -1200,7 +1378,8 @@
         "death-guard-weapon-plasma-pistol-supercharge-lord-of-poxes",
         "death-guard-weapon-plasma-pistol-supercharge-noxious-blightbringer",
         "death-guard-weapon-plasma-pistol-supercharge-plague-marines-tallyman",
-        "death-guard-weapon-plasma-pistol-supercharge-death-guard-chaos-lord"
+        "death-guard-weapon-plasma-pistol-supercharge-death-guard-chaos-lord",
+        "emperors-children-weapon-plasma-pistol-supercharge"
       ],
       "status": "review-required"
     },
@@ -1209,7 +1388,16 @@
       "termIds": [
         "death-guard-weapon-power-fist-lord-of-virulence",
         "death-guard-weapon-power-fist-plague-marines",
-        "adeptus-mechanicus-weapon-power-fist"
+        "adeptus-mechanicus-weapon-power-fist",
+        "emperors-children-weapon-power-fist"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "bolt-pistol",
+      "termIds": [
+        "death-guard-weapon-bolt-pistol-malignant-plaguecaster-plague-marines-plague-surgeon",
+        "emperors-children-weapon-bolt-pistol"
       ],
       "status": "review-required"
     },
@@ -1225,7 +1413,24 @@
       "normalizedTitle": "meltagun",
       "termIds": [
         "death-guard-weapon-meltagun-plague-marines",
-        "adeptus-mechanicus-weapon-meltagun"
+        "adeptus-mechanicus-weapon-meltagun",
+        "emperors-children-weapon-meltagun"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "plasma-gun-standard",
+      "termIds": [
+        "death-guard-weapon-plasma-gun-standard-plague-marines",
+        "emperors-children-weapon-plasma-gun-standard"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "plasma-gun-supercharge",
+      "termIds": [
+        "death-guard-weapon-plasma-gun-supercharge-plague-marines",
+        "emperors-children-weapon-plasma-gun-supercharge"
       ],
       "status": "review-required"
     },
@@ -1277,7 +1482,16 @@
       "normalizedTitle": "chainfist",
       "termIds": [
         "death-guard-weapon-chainfist-death-guard-chaos-lord-in-terminator-armour",
-        "death-guard-weapon-chainfist-death-guard-sorcerer-in-terminator-armour"
+        "death-guard-weapon-chainfist-death-guard-sorcerer-in-terminator-armour",
+        "emperors-children-weapon-chainfist"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "force-weapon",
+      "termIds": [
+        "death-guard-weapon-force-weapon-death-guard-sorcerer-in-terminator-armour",
+        "emperors-children-weapon-force-weapon"
       ],
       "status": "review-required"
     },
@@ -1328,6 +1542,7 @@
       "normalizedTitle": "supreme-commander",
       "termIds": [
         "adeptus-mechanicus-datasheet-supreme-commander",
+        "emperors-children-ability-supreme-commander",
         "tau-empire-ability-supreme-commander"
       ],
       "status": "review-required"
@@ -1425,9 +1640,117 @@
       "normalizedTitle": "damaged-1-5-wounds-remaining",
       "termIds": [
         "adeptus-mechanicus-datasheet-damaged-1-5-wounds-remaining",
+        "emperors-children-ability-damaged-1-5-wounds-remaining",
         "tau-empire-ability-damaged-1-5-wounds-remaining",
         "tau-empire-ability-damaged-1-5-wounds-remaining-2",
         "tyranids-ability-damaged-1-5-wounds-remaining"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "frenzied-ferocity",
+      "termIds": [
+        "emperors-children-enhancement-frenzied-ferocity",
+        "emperors-children-enhancement-frenzied-ferocity-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "eager-patrons",
+      "termIds": [
+        "emperors-children-enhancement-eager-patrons",
+        "emperors-children-enhancement-eager-patrons-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "beguiling-grotesquerie",
+      "termIds": [
+        "emperors-children-enhancement-beguiling-grotesquerie",
+        "emperors-children-enhancement-beguiling-grotesquerie-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "rapture-lash",
+      "termIds": [
+        "emperors-children-weapon-rapture-lash",
+        "emperors-children-weapon-rapture-lash-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "power-sword",
+      "termIds": [
+        "emperors-children-weapon-power-sword",
+        "emperors-children-weapon-power-sword-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "deadly-demise-d3",
+      "termIds": [
+        "emperors-children-ability-deadly-demise-d3",
+        "tau-empire-ability-deadly-demise-d3",
+        "tyranids-ability-deadly-demise-d3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "damaged-1-6-wounds-remaining",
+      "termIds": [
+        "emperors-children-ability-damaged-1-6-wounds-remaining",
+        "tau-empire-ability-damaged-1-6-wounds-remaining",
+        "tyranids-ability-damaged-1-6-wounds-remaining"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "deadly-demise-d6",
+      "termIds": [
+        "emperors-children-ability-deadly-demise-d6",
+        "tau-empire-ability-deadly-demise-d6",
+        "tyranids-ability-deadly-demise-d6"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "screamer-pistol",
+      "termIds": [
+        "emperors-children-weapon-screamer-pistol",
+        "emperors-children-weapon-screamer-pistol-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "feel-no-pain-5",
+      "termIds": [
+        "emperors-children-ability-feel-no-pain-5",
+        "tyranids-ability-feel-no-pain-5"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "magma-cutter",
+      "termIds": [
+        "emperors-children-weapon-magma-cutter",
+        "emperors-children-weapon-magma-cutter-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "airborne-predator",
+      "termIds": [
+        "emperors-children-ability-airborne-predator",
+        "tyranids-ability-airborne-predator"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "scouts-9",
+      "termIds": [
+        "emperors-children-ability-scouts-9",
+        "tau-empire-ability-scouts-9"
       ],
       "status": "review-required"
     },
@@ -1557,14 +1880,6 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "deadly-demise-d3",
-      "termIds": [
-        "tau-empire-ability-deadly-demise-d3",
-        "tyranids-ability-deadly-demise-d3"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "scouts-8",
       "termIds": [
         "tau-empire-ability-scouts-8",
@@ -1671,26 +1986,10 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "deadly-demise-d6",
-      "termIds": [
-        "tau-empire-ability-deadly-demise-d6",
-        "tyranids-ability-deadly-demise-d6"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "twin-missile-pod",
       "termIds": [
         "tau-empire-weapon-twin-missile-pod",
         "tau-empire-weapon-twin-missile-pod-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "damaged-1-6-wounds-remaining",
-      "termIds": [
-        "tau-empire-ability-damaged-1-6-wounds-remaining",
-        "tyranids-ability-damaged-1-6-wounds-remaining"
       ],
       "status": "review-required"
     },
@@ -1886,6 +2185,20 @@
     },
     {
       "termIds": [
+        "death-guard-ability-assault-ramp-chaos-land-raider",
+        "emperors-children-ability-assault-ramp"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "death-guard-ability-scuttling-walker-defiler",
+        "emperors-children-ability-scuttling-walker"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
         "death-guard-weapon-plague-combi-bolter-death-guard-chaos-lord",
         "death-guard-weapon-plague-combi-bolter-death-guard-chaos-lord-in-terminator-armour"
       ],
@@ -1908,6 +2221,7 @@
     {
       "termIds": [
         "adeptus-mechanicus-datasheet-supreme-commander",
+        "emperors-children-ability-supreme-commander",
         "tau-empire-ability-supreme-commander"
       ],
       "status": "review-required"
@@ -1922,6 +2236,108 @@
     },
     {
       "termIds": [
+        "adeptus-mechanicus-weapon-heavy-flamer",
+        "emperors-children-weapon-heavy-flamer"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-devastating-wounds",
+        "tau-empire-ability-devastating-wounds"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-pistol",
+        "tau-empire-ability-pistol"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-rapid-fire",
+        "tau-empire-ability-rapid-fire"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-melta",
+        "tau-empire-ability-melta"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-weapon-close-combat-weapon",
+        "tau-empire-weapon-close-combat-weapon-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-deadly-demise-d3",
+        "tau-empire-ability-deadly-demise-d3",
+        "tyranids-ability-deadly-demise-d3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-damaged-1-6-wounds-remaining",
+        "tau-empire-ability-damaged-1-6-wounds-remaining",
+        "tyranids-ability-damaged-1-6-wounds-remaining"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-extra-attacks",
+        "tau-empire-ability-extra-attacks"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-deadly-demise-d6",
+        "tau-empire-ability-deadly-demise-d6",
+        "tyranids-ability-deadly-demise-d6"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-ignores-cover",
+        "tau-empire-ability-ignores-cover"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-leader-2",
+        "tyranids-ability-leader-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-anti",
+        "tau-empire-ability-anti"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-blast",
+        "tau-empire-ability-blast"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-sustained-hits",
         "tau-empire-ability-sustained-hits",
         "tyranids-ability-sustained-hits"
       ],
@@ -1929,6 +2345,22 @@
     },
     {
       "termIds": [
+        "emperors-children-ability-feel-no-pain-5",
+        "tyranids-ability-feel-no-pain-5"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-damaged-1-5-wounds-remaining",
+        "tau-empire-ability-damaged-1-5-wounds-remaining",
+        "tyranids-ability-damaged-1-5-wounds-remaining"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-ability-lethal-hits",
         "tau-empire-ability-lethal-hits",
         "tyranids-ability-lethal-hits"
       ],
@@ -1936,8 +2368,8 @@
     },
     {
       "termIds": [
-        "tau-empire-ability-deadly-demise-d3",
-        "tyranids-ability-deadly-demise-d3"
+        "emperors-children-ability-scouts-9",
+        "tau-empire-ability-scouts-9"
       ],
       "status": "review-required"
     },
@@ -1950,29 +2382,8 @@
     },
     {
       "termIds": [
-        "tau-empire-ability-damaged-1-5-wounds-remaining",
-        "tyranids-ability-damaged-1-5-wounds-remaining"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
         "tau-empire-ability-deadly-demise-1",
         "tyranids-ability-deadly-demise-1"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "tau-empire-ability-deadly-demise-d6",
-        "tyranids-ability-deadly-demise-d6"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "tau-empire-ability-damaged-1-6-wounds-remaining",
-        "tyranids-ability-damaged-1-6-wounds-remaining"
       ],
       "status": "review-required"
     }

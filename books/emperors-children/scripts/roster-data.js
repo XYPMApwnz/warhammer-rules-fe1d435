@@ -28,7 +28,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "empyric suffusion": {
     "title": "Empyric Suffusion",
-    "text": "When you target this unit with the Heroic Intervention stratagem , that use is -1 CP.",
+    "text": "When you target this unit with the Heroic Intervention stratagem, that use is -1 CP.",
     "value": 15,
     "detachment": "Carnival of Excess",
     "tags": [],
@@ -598,7 +598,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "accomplished tactician": {
     "title": "Accomplished Tactician",
-    "text": "Once per turn, in your opponent's Shooting phase, just after an enemy unit has shot, you can select one friendly Emperor's Children unit within 9\" of the bearer that was hit by one or more of those attacks, then select one friendly Transport that unit is wholly within 6\" of and is able to embark within. That Emperor's Children unit can embark in that Transport .",
+    "text": "Once per turn, in your opponent's Shooting phase, just after an enemy unit has shot, you can select one friendly Emperor's Children unit within 9\" of the bearer that was hit by one or more of those attacks, then select one friendly Transport that unit is wholly within 6\" of and is able to embark within. That Emperor's Children unit can embark in that Transport.",
     "value": 35,
     "detachment": "Rapid Evisceration",
     "tags": [],
@@ -652,7 +652,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "spearhead striker": {
     "title": "Spearhead Striker",
-    "text": "Each time the bearer disembarks from a Transport , until the end of the turn, you can re-roll Charge rolls made for the bearer's unit and enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer's unit.",
+    "text": "Each time the bearer disembarks from a Transport, until the end of the turn, you can re-roll Charge rolls made for the bearer's unit and enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer's unit.",
     "value": 20,
     "detachment": "Rapid Evisceration",
     "tags": [],

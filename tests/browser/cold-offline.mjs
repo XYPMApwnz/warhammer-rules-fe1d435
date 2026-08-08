@@ -50,7 +50,8 @@ const books=[
   {name:'Death Guard',unit:'unit-chaos-land-raider',desktop:'/books/death-guard/reader.html#unit-chaos-land-raider',phone:'/books/death-guard/mobile/chaos-land-raider.html'},
   {name:'Adeptus Mechanicus',unit:'unit-skitarii-rangers',desktop:'/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers',phone:'/books/adeptus-mechanicus/mobile/skitarii-rangers.html'},
   {name:'Tyranids',unit:'unit-hive-tyrant',desktop:'/books/tyranids/reader.html#unit-hive-tyrant',phone:'/books/tyranids/mobile/hive-tyrant.html'},
-  {name:"T'au Empire",unit:'unit-breacher-team',desktop:'/books/tau-empire/reader.html#unit-breacher-team',phone:'/books/tau-empire/mobile/breacher-team.html'}
+  {name:"T'au Empire",unit:'unit-breacher-team',desktop:'/books/tau-empire/reader.html#unit-breacher-team',phone:'/books/tau-empire/mobile/breacher-team.html'},
+  {name:"Emperor's Children",unit:'unit-lord-exultant',desktop:'/books/emperors-children/reader.html#unit-lord-exultant',phone:'/books/emperors-children/mobile/lord-exultant.html'}
 ];
 
 async function openPhonePopup(page,name){
@@ -98,7 +99,7 @@ try{
       await openPhonePopup(page,book.name);
       assert.deepEqual(errors,[],`${book.name} emitted an uncaught runtime error`);
     }
-    console.log('PASS four Army Books open desktop content, Related Rules, Phone routes and glossary popups');
+    console.log('PASS five Army Books open desktop content, Related Rules, Phone routes and glossary popups');
   }finally{
     await bookContext.close();
   }
@@ -154,7 +155,7 @@ try{
     }
     await openPhonePopup(page,"T'au Empire offline");
     assert.deepEqual(errors,[],'Offline smoke emitted an uncaught runtime error');
-    console.log('PASS four visited Army Books remain usable after offline reload');
+    console.log('PASS five visited Army Books remain usable after offline reload');
   }finally{
     await offlineContext.close();
   }

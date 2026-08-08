@@ -9,9 +9,12 @@
   "rosterSupport": true,
   "compatibleRulesMatrix": true,
   "customApp": true,
+  "dedicatedMobile": true,
+  "mobileRelatedRulesSource": false,
   "legacyRelatedRuleAttributes": false,
   "assetVersions": {
-    "app": 3,
+    "app": 4,
+    "tokens": 2,
     "rosterFilter": 1,
     "rosterData": 1
   },

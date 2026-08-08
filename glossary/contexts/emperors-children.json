@@ -266,7 +266,7 @@
       }
     },
     "emperors-children-ability-deep-strike": {
-      "termId": "emperors-children-ability-deep-strike",
+      "termId": "core-deep-strike",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-deep-strike",
         "rule": "unit-daemonettes",
@@ -285,7 +285,7 @@
       }
     },
     "emperors-children-ability-fights-first": {
-      "termId": "emperors-children-ability-fights-first",
+      "termId": "core-fights-first",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-fights-first",
         "rule": "unit-daemonettes",
@@ -354,7 +354,7 @@
       }
     },
     "emperors-children-ability-precision": {
-      "termId": "emperors-children-ability-precision",
+      "termId": "core-precision",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-precision",
         "rule": "unit-infractors",
@@ -373,7 +373,7 @@
       }
     },
     "emperors-children-ability-hazardous": {
-      "termId": "emperors-children-ability-hazardous",
+      "termId": "core-hazardous",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-hazardous",
         "rule": "unit-infractors",
@@ -554,7 +554,7 @@
       }
     },
     "emperors-children-ability-infiltrators": {
-      "termId": "emperors-children-ability-infiltrators",
+      "termId": "core-infiltrators",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-infiltrators",
         "rule": "unit-tormentors",
@@ -791,7 +791,7 @@
       }
     },
     "emperors-children-ability-psychic": {
-      "termId": "emperors-children-ability-psychic",
+      "termId": "core-psychic",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-psychic",
         "rule": "unit-keeper-of-secrets",
@@ -822,7 +822,7 @@
       }
     },
     "emperors-children-ability-assault": {
-      "termId": "emperors-children-ability-assault",
+      "termId": "core-assault",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-assault",
         "rule": "unit-keeper-of-secrets",
@@ -972,7 +972,7 @@
       }
     },
     "emperors-children-ability-lance": {
-      "termId": "emperors-children-ability-lance",
+      "termId": "core-lance",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-lance",
         "rule": "unit-lord-exultant",
@@ -1479,7 +1479,7 @@
       }
     },
     "emperors-children-ability-lone-operative": {
-      "termId": "emperors-children-ability-lone-operative",
+      "termId": "core-lone-operative",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-lone-operative",
         "rule": "unit-lucius-the-eternal",
@@ -1611,7 +1611,7 @@
       }
     },
     "emperors-children-ability-twin-linked": {
-      "termId": "emperors-children-ability-twin-linked",
+      "termId": "core-twin-linked",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-twin-linked",
         "rule": "unit-chaos-terminators",
@@ -1624,7 +1624,7 @@
       }
     },
     "emperors-children-ability-torrent": {
-      "termId": "emperors-children-ability-torrent",
+      "termId": "core-torrent",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-torrent",
         "rule": "unit-chaos-terminators",
@@ -2070,7 +2070,7 @@
       }
     },
     "emperors-children-ability-hover": {
-      "termId": "emperors-children-ability-hover",
+      "termId": "core-hover",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-hover",
         "rule": "unit-heldrake",
@@ -2269,6 +2269,13 @@
         "rule": "detachment-coterie-of-the-conceited"
       }
     },
+    "emperors-children-enhancement-frenzied-ferocity-2": {
+      "termId": "emperors-children-enhancement-frenzied-ferocity-2",
+      "navigation": {
+        "glossary": "glossary-emperors-children-enhancement-frenzied-ferocity-2",
+        "rule": "detachment-elegant-brutes"
+      }
+    },
     "emperors-children-enhancement-intoxicating-musk": {
       "termId": "emperors-children-enhancement-intoxicating-musk",
       "navigation": {
@@ -2308,13 +2315,6 @@
       "termId": "emperors-children-enhancement-distortion",
       "navigation": {
         "glossary": "glossary-emperors-children-enhancement-distortion",
-        "rule": "detachment-peerless-bladesmen"
-      }
-    },
-    "emperors-children-enhancement-faultless-opportunist": {
-      "termId": "emperors-children-enhancement-faultless-opportunist",
-      "navigation": {
-        "glossary": "glossary-emperors-children-enhancement-faultless-opportunist",
         "rule": "detachment-peerless-bladesmen"
       }
     },
@@ -2379,6 +2379,20 @@
       "navigation": {
         "glossary": "glossary-emperors-children-enhancement-slayer-of-champions",
         "rule": "detachment-slaaneshs-chosen"
+      }
+    },
+    "emperors-children-enhancement-eager-patrons-2": {
+      "termId": "emperors-children-enhancement-eager-patrons-2",
+      "navigation": {
+        "glossary": "glossary-emperors-children-enhancement-eager-patrons-2",
+        "rule": "detachment-spectacle-of-slaughter"
+      }
+    },
+    "emperors-children-enhancement-beguiling-grotesquerie-2": {
+      "termId": "emperors-children-enhancement-beguiling-grotesquerie-2",
+      "navigation": {
+        "glossary": "glossary-emperors-children-enhancement-beguiling-grotesquerie-2",
+        "rule": "detachment-spectacle-of-slaughter"
       }
     }
   }

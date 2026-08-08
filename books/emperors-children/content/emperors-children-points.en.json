@@ -194,10 +194,10 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3-5 models",
+          "label": "3 models",
           "value": 95,
           "minModels": 3,
-          "maxModels": 5
+          "maxModels": 3
         },
         {
           "label": "4-6 models",
@@ -245,10 +245,10 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5-9 models",
+          "label": "5 models",
           "value": 85,
           "minModels": 5,
-          "maxModels": 9
+          "maxModels": 5
         },
         {
           "label": "6-10 models",
@@ -423,10 +423,10 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5-9 models",
+          "label": "5 models",
           "value": 80,
           "minModels": 5,
-          "maxModels": 9
+          "maxModels": 5
         },
         {
           "label": "6-10 models",
@@ -452,7 +452,7 @@
       "title": "Empyric Suffusion",
       "detachment": "Carnival of Excess",
       "value": 15,
-      "text": "When you target this unit with the Heroic Intervention stratagem , that use is -1 CP.",
+      "text": "When you target this unit with the Heroic Intervention stratagem, that use is -1 CP.",
       "profile": null
     },
     {
@@ -612,7 +612,7 @@
       "title": "Faultless Opportunist",
       "detachment": "Peerless Bladesmen",
       "value": 15,
-      "text": "You can target this unit with the Heroic Intervention stratagem , regardless of any other uses of that stratagem this phase. If you do: \n- That use is -1 CP. \n- That use does not prevent any uses of that stratagem on other units this phase.'",
+      "text": "You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: \n- That use is -1 CP. \n- That use does not prevent any uses of that stratagem on other units this phase.'",
       "profile": null
     },
     {
@@ -628,7 +628,7 @@
       "title": "Accomplished Tactician",
       "detachment": "Rapid Evisceration",
       "value": 35,
-      "text": "Once per turn, in your opponent's Shooting phase, just after an enemy unit has shot, you can select one friendly Emperor's Children unit within 9\" of the bearer that was hit by one or more of those attacks, then select one friendly Transport that unit is wholly within 6\" of and is able to embark within. That Emperor's Children unit can embark in that Transport .",
+      "text": "Once per turn, in your opponent's Shooting phase, just after an enemy unit has shot, you can select one friendly Emperor's Children unit within 9\" of the bearer that was hit by one or more of those attacks, then select one friendly Transport that unit is wholly within 6\" of and is able to embark within. That Emperor's Children unit can embark in that Transport.",
       "profile": null
     },
     {
@@ -644,7 +644,7 @@
       "title": "Spearhead Striker",
       "detachment": "Rapid Evisceration",
       "value": 20,
-      "text": "Each time the bearer disembarks from a Transport , until the end of the turn, you can re-roll Charge rolls made for the bearer's unit and enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer's unit.",
+      "text": "Each time the bearer disembarks from a Transport, until the end of the turn, you can re-roll Charge rolls made for the bearer's unit and enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer's unit.",
       "profile": null
     },
     {

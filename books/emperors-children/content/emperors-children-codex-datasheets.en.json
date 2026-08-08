@@ -2004,7 +2004,7 @@
       "title": "Chaos Land Raider",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "1 model",
@@ -2176,7 +2176,7 @@
       "title": "Chaos Spawn",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Beast",
       "points": [
         {
           "label": "2 models",
@@ -2256,7 +2256,7 @@
       "title": "Defiler",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "1 model",
@@ -2510,7 +2510,7 @@
       "title": "Heldrake",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "1 model",
@@ -2634,7 +2634,7 @@
       "title": "Maulerfiend",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "1 model",

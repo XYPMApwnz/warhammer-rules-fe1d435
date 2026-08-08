@@ -3677,7 +3677,7 @@
       "title": "Broadside Battlesuits",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "2 models",
@@ -3909,7 +3909,7 @@
       "title": "Crisis Fireknife Battlesuits",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "3 models",
@@ -4084,7 +4084,7 @@
       "title": "Crisis Starscythe Battlesuits",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "3 models",
@@ -4267,7 +4267,7 @@
       "title": "Crisis Sunforge Battlesuits",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "3 models",
@@ -4419,7 +4419,7 @@
       "title": "Ghostkeel Battlesuit",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "1 model",
@@ -4622,7 +4622,7 @@
       "title": "Hammerhead Gunship",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "1 model",
@@ -4820,7 +4820,7 @@
       "title": "Kroot Hounds",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Beast",
       "points": [
         {
           "label": "5 models",
@@ -4913,7 +4913,7 @@
       "title": "Krootox Rampagers",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Mounted",
       "points": [
         {
           "label": "3 models",
@@ -5049,7 +5049,7 @@
       "title": "Krootox Riders",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Mounted",
       "points": [
         {
           "label": "1-2 models",
@@ -5185,7 +5185,7 @@
       "title": "Piranhas",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "2 models",
@@ -5344,7 +5344,7 @@
       "title": "Razorshark Strike Fighter",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "1 model",
@@ -5497,7 +5497,7 @@
       "title": "Riptide Battlesuit",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "1 model",
@@ -5698,7 +5698,7 @@
       "title": "Sky Ray Gunship",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "1 model",
@@ -5844,7 +5844,7 @@
       "title": "Stormsurge",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "1 model",
@@ -6065,7 +6065,7 @@
       "title": "Sun Shark Bomber",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "1 model",
@@ -6218,7 +6218,7 @@
       "title": "Tidewall Droneport",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Fortification",
       "points": [
         {
           "label": "1 model",
@@ -6319,7 +6319,7 @@
       "title": "Tidewall Gunrig",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Fortification",
       "points": [
         {
           "label": "1 model",
@@ -6416,7 +6416,7 @@
       "title": "Tidewall Shieldline",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Fortification",
       "points": [
         {
           "label": "1 model",

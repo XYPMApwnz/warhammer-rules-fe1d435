@@ -119,16 +119,18 @@ const constraints=node=>{
 };
 const primaryCategory=entry=>clean((entry.categoryLinks||[]).find(item=>item.primary===true)?.name);
 const categoriesFor=entry=>unique((entry.categoryLinks||[]).map(item=>clean(item.name).replace(/^Faction:\s*/i,'')),item=>key(item));
-const categoryFor=(title,categories)=>{
+const categoryTitles=new Map([
+  ['epic hero','Epic Heroes'],
+  ['character','Characters'],
+  ['battleline','Battleline'],
+  ['dedicated transport','Dedicated Transports'],
+  ['monster','Monsters'],
+  ['infantry','Infantry']
+]);
+const categoryFor=(title,primary)=>{
   if(/\[legends]/i.test(title))return 'Warhammer Legends';
-  const values=new Set(categories.map(key));
-  if(values.has('epic hero'))return 'Epic Heroes';
-  if(values.has('character'))return 'Characters';
-  if(values.has('battleline'))return 'Battleline';
-  if(values.has('dedicated transport'))return 'Dedicated Transports';
-  if(values.has('monster'))return 'Monsters';
-  if(values.has('infantry'))return 'Infantry';
-  return 'Other';
+  const sourceCategory=clean(primary).replace(/^Faction:\s*/i,'');
+  return categoryTitles.get(key(sourceCategory))||sourceCategory||'Other';
 };
 
 function compositionFor(entry,title){
@@ -304,7 +306,7 @@ function parseDatasheet(link){
     title,
     status:legends?'Warhammer Legends':'Current',
     sourceLayer,
-    category:categoryFor(rawTitle,categories),
+    category:categoryFor(rawTitle,primaryCategory(entry)),
     points:pointRows(entry,composition),
     profiles:unique(statProfiles,item=>`${item.name}:${JSON.stringify(item.stats)}`),
     weapons:unique(weapons,item=>JSON.stringify(item)),
@@ -359,7 +361,9 @@ for(const unit of parsed){
 }
 const duplicates=parsed.filter((item,index)=>parsed.findIndex(other=>other.id===item.id)!==index);
 if(duplicates.length)throw new Error(`Duplicate datasheet ids: ${duplicates.map(item=>item.id).join(', ')}`);
-const sortUnits=items=>items.sort((a,b)=>a.category.localeCompare(b.category)||a.title.localeCompare(b.title));
+const stableCategoryTitles=new Set([...categoryTitles.values(),'Warhammer Legends']);
+const sortCategory=category=>stableCategoryTitles.has(category)?category:'Other';
+const sortUnits=items=>items.sort((a,b)=>sortCategory(a.category).localeCompare(sortCategory(b.category))||a.title.localeCompare(b.title));
 
 const allowedDetachments=new Set((config.enhancements?.detachments||[]).map(key));
 const enhancementItems=[];

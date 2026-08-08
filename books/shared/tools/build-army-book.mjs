@@ -159,8 +159,9 @@ const verificationBuild=manifest.gates?.publishAsComplete===false;
 const unitSourceState=unit=>verificationBuild&&!config.dedicatedMobile?`<div class="unit-source-state"><span>Datasheet structure · current 11e catalogue</span><span>${unit.pointsSource?`${esc(unit.pointsSource.label)} · checked ${esc(unit.pointsSource.verifiedAt)}`:'Points · catalogue snapshot'}</span>${unit.wargearSource?'<span>Wargear & composition · current 11e reference</span>':''}${unit.sourcePages?`<span>Official Faction Pack overlay · p. ${unit.sourcePages.join('–')}</span>`:''}</div>`:'';
 const armyRuleSources=[...(pack.updates||[]),...(codexParity?.armyRules||[])];
 const armyRules=(config.armyRules||['Shadow in the Warp','Synapse']).map(title=>armyRuleSources.find(item=>titleKey(item.subject||item.title)===titleKey(title))).filter(Boolean).map(item=>({id:`army-rule-${slug(item.subject||item.title)}`,title:item.subject||item.title,text:item.change||item.summary||item.text,sourcePages:item.sourcePages,source:item.sourcePages?'faction-pack':'codex-parity'}));
-const categoryOrder=['Epic Heroes','Characters','Battleline','Dedicated Transports','Monsters','Infantry','Other','Warhammer Legends'];
-const categories=categoryOrder.map(title=>({title,id:`datasheets-${slug(title)}`,units:units.filter(unit=>unit.category===title||title==='Warhammer Legends'&&unit.status==='Warhammer Legends')})).filter(group=>group.units.length);
+const fixedCategoryOrder=['Epic Heroes','Characters','Battleline','Dedicated Transports','Monsters','Infantry'];
+const categoryOrder=[...fixedCategoryOrder,...new Set(units.map(unit=>unit.category).filter(category=>!fixedCategoryOrder.includes(category)&&category!=='Other'&&category!=='Warhammer Legends')),'Other','Warhammer Legends'];
+const categories=categoryOrder.map(title=>({title,id:`datasheets-${slug(title)}`,units:units.filter(unit=>unit.category===title)})).filter(group=>group.units.length);
 const detachmentNav=detachments.map(det=>navBranch(`detachment-${det.id}`,det.title,2,
   navLeaf(`${det.id}-rule`,'Detachment Rule',3)
   +((det.enhancements||[]).length?navLeaf(`${det.id}-enhancements`,'Enhancement',3):'')

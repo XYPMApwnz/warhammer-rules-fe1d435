@@ -5711,7 +5711,7 @@
       "title": "Mucolid Spores",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Beast",
       "points": [
         {
           "label": "1 Mucolid Spore",
@@ -5786,7 +5786,7 @@
       "title": "Ripper Swarms",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Swarm",
       "points": [
         {
           "label": "1-2 models",
@@ -5893,7 +5893,7 @@
       "title": "Spore Mines",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Beast",
       "points": [
         {
           "label": "3 models",

@@ -13,7 +13,7 @@ const errors=[];
 function walk(directory){
   return fs.readdirSync(directory,{withFileTypes:true}).flatMap(entry=>{
     const target=path.join(directory,entry.name);
-    if(entry.isDirectory())return entry.name==='tmp'||entry.name==='node_modules'||entry.name==='design-prototypes'?[]:walk(target);
+    if(entry.isDirectory())return entry.name==='tmp'||entry.name==='node_modules'?[]:walk(target);
     return entry.name.endsWith('.html')?[target]:[];
   });
 }

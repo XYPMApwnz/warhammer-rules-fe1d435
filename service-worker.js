@@ -92,7 +92,7 @@ const APP_SHELL = [
   "./books/death-guard/scripts/full-entry-controller.js?v=9",
   "./books/death-guard/scripts/journey-controller.js?v=13",
   "./books/death-guard/scripts/ui-controllers.js?v=12",
-  "./books/death-guard/scripts/app.js?v=42",
+  "./books/death-guard/scripts/app.js?v=43",
   "./books/death-guard/scripts/compatible-stratagems-runtime.mjs?v=3",
   "./books/death-guard/generated/compatible-rules.json",
   "./books/core-rules/",

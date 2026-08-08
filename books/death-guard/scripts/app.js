@@ -178,7 +178,4 @@
     requestAnimationFrame(()=>{window.scrollTo(returnRecord.scrollX||0,returnRecord.scrollY||0);requestAnimationFrame(()=>{if(returnRecord.popupIds?.length)popups.restore(returnRecord.popupIds,{root,focus:false});window.WHGlossaryReturn.clear();});});
   }
   if((location.protocol==='http:'||location.protocol==='https:')&&'serviceWorker'in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('../../service-worker.js'));
-  if(new URLSearchParams(location.search).get('tapdebug')==='1'){
-    const diagnostics=document.createElement('script');diagnostics.src='./scripts/tap-diagnostics.js?v=2';document.body.append(diagnostics);
-  }
 }());

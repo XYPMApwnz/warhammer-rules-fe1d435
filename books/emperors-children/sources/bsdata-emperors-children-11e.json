@@ -110300,7 +110300,7 @@
     {
       "role": "enhancement-index",
       "file": "bsdata-enhancement-index.json",
-      "sha256": "B7F3048B11B68ABBB4AF99BEDB5E0F1B1888EB01C4AB203E0BFC85DFBAB21615",
+      "sha256": "93EE48C204947E392F06A809BA40308B7D05699E9EDE0D7653CFEC48828E158D",
       "data": {
         "schema": 1,
         "derivedFrom": {
@@ -111638,7 +111638,7 @@
                   ],
                   "type": "upgrade",
                   "import": true,
-                  "name": "Sublime Presence",
+                  "name": "Sublime Prescience",
                   "hidden": false,
                   "id": "336d-3ff2-42d5-e7d0",
                   "sortIndex": 27

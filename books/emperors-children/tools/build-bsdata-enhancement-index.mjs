@@ -21,7 +21,8 @@ const childIds=value=>{
   return own.concat(Object.values(value).flatMap(childIds));
 };
 const grouped=new Map([...detachments.values()].map(name=>[name,[]]));
-for(const enhancement of enhancementRoot.selectionEntries){
+for(const sourceEnhancement of enhancementRoot.selectionEntries){
+  const enhancement=sourceEnhancement.name==='Sublime Presence'?{...sourceEnhancement,name:'Sublime Prescience'}:sourceEnhancement;
   const ids=[...new Set(childIds(enhancement.modifiers||[]))];
   if(ids.length!==1)throw new Error(`${enhancement.name}: expected one detachment condition, got ${ids.length}`);
   grouped.get(detachments.get(ids[0])).push(enhancement);

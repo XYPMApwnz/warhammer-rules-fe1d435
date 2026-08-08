@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "verifiedAt": "2026-07-28",
+  "verifiedAt": "2026-08-08",
   "layers": [
     {
       "id": "faction-pack-v1.0",
@@ -29,10 +29,21 @@
       "updated": "2026-07-22",
       "url": "https://mfm.warhammer-community.com/en/emperors-children",
       "status": "snapshot-required"
+    },
+    {
+      "id": "codex-parity",
+      "authority": "secondary",
+      "role": "codex-rule-parity",
+      "title": "Wahapedia Warhammer 40,000 11th Edition ? Emperor?s Children",
+      "version": "1.1",
+      "retrievedAt": "2026-08-08",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/",
+      "localFile": "../content/emperors-children-codex-parity.en.json",
+      "coverage": "2 Army Rules, 6 Codex Detachments, 24 Enhancements and 36 canonically typed Stratagems"
     }
   ],
   "gates": {
     "publishAsComplete": false,
-    "reason": "Faction Pack v1.0 supplements the Codex. Codex text and the current MFM snapshot must be verified before this book can be labelled complete."
+    "reason": "The functional reference includes complete 11e Codex rules from a fixed secondary parity source. Publication remains gated until an authoritative official Codex source and current MFM snapshot are frozen."
   }
 }

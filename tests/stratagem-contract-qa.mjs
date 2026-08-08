@@ -21,7 +21,8 @@ const registry=Object.values(json('glossary/registry.en.json').terms);
 const sources=[
   ['adeptus-mechanicus','books/adeptus-mechanicus/content/adeptus-mechanicus-codex-detachments.en.json','books/adeptus-mechanicus/reader.html','books/adeptus-mechanicus/mobile/related-rules.inc'],
   ['tyranids','books/tyranids/content/tyranids-codex-parity.en.json','books/tyranids/reader.html','books/tyranids/mobile/related-rules.inc'],
-  ['tau-empire','books/tau-empire/content/tau-empire-codex-parity.en.json','books/tau-empire/reader.html','books/tau-empire/mobile/related-rules.inc']
+  ['tau-empire','books/tau-empire/content/tau-empire-codex-parity.en.json','books/tau-empire/reader.html','books/tau-empire/mobile/related-rules.inc'],
+  ['emperors-children','books/emperors-children/content/emperors-children-codex-parity.en.json','books/emperors-children/reader.html','books/emperors-children/mobile/related-rules.inc']
 ];
 for(const [bookId,sourceFile,readerFile,relatedFile] of sources){
   const source=json(sourceFile),reader=read(readerFile),related=read(relatedFile);
@@ -131,6 +132,17 @@ for(const file of [
 }
 
 const css=read('books/death-guard/styles/content.css');
+const ecPackStratagems=json('books/emperors-children/content/emperors-children-faction-pack.en.json').detachments.flatMap(detachment=>detachment.stratagems);
+const ecCodexStratagems=json('books/emperors-children/content/emperors-children-codex-parity.en.json').detachments.flatMap(detachment=>detachment.stratagems);
+const ecReader=read('books/emperors-children/reader.html');
+assert.equal(ecCodexStratagems.length,36);
+assert.equal(ecCodexStratagems.every(item=>item.typeStatus==='confirmed'&&['battle-tactic','strategic-ploy','wargear','epic-deed'].includes(item.canonicalType)),true);
+assert.equal(ecPackStratagems.length,15);
+assert.equal(ecPackStratagems.every(item=>item.canonicalType===null&&item.typeStatus==='source-untyped'&&item.sourceLabel.endsWith(' Stratagem')),true);
+assert.equal([...ecPackStratagems,...ecCodexStratagems].filter(item=>item.typeStatus==='unexplained-unknown').length,0);
+for(const item of ecPackStratagems){const rendered=card(ecReader,item.id);assert.match(rendered,/data-stratagem-type="source-untyped"/);assert.ok(rendered.includes(`<span class="stratagem-type">${item.sourceLabel}</span>`),`${item.id}: source label must remain visible`);}
+assert.match(css,/\.stratagem\{--strat-color:#756f61/,'source-untyped cards must retain the general fallback color');
+for(const color of ['#247090','#507f72','#a77b32','#a83338'])assert.notEqual(color,'#756f61');
 assert.match(css,/\.stratagem>\.compatibility-status\{grid-column:2\}/,'conditional compatibility status must clear the Stratagem CP rail');
 const readableStratagemGrid=/grid-template-columns:\s*repeat\(auto-fit,\s*minmax\(min\(100%,\s*360px\),\s*1fr\)\)/;
 assert.match(css,new RegExp(`\\.stratagem-grid\\s*\\{[^}]*${readableStratagemGrid.source}`),'Stratagem grids must preserve the canonical readable minimum card width');

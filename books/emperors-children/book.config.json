@@ -5,6 +5,10 @@
   "shortTitle": "Emperor's Children Rules",
   "edition": "11E",
   "factionKeyword": "EMPEROR'S CHILDREN",
+  "armyRules": [
+    "Thrill Seekers",
+    "Pact of Excess"
+  ],
   "includeCoreStratagems": true,
   "rosterSupport": true,
   "compatibleRulesMatrix": true,
@@ -13,7 +17,7 @@
   "mobileRelatedRulesSource": false,
   "legacyRelatedRuleAttributes": false,
   "assetVersions": {
-    "app": 4,
+    "app": 5,
     "tokens": 2,
     "rosterFilter": 1,
     "rosterData": 1
@@ -25,6 +29,7 @@
   },
   "sources": {
     "factionPack": "content/emperors-children-faction-pack.en.json",
+    "codexParity": "content/emperors-children-codex-parity.en.json",
     "codexDatasheets": "content/emperors-children-codex-datasheets.en.json",
     "relatedRules": "content/emperors-children-related-rules.en.json",
     "enhancementOwners": "sources/enhancement-owner-matrix.json",

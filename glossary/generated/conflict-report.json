@@ -1,12 +1,12 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 1967,
+    "terms": 2012,
     "aliases": 728,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 145,
+    "aliasCandidates": 146,
     "duplicateCandidates": 29,
     "keywordCandidates": 16
   },
@@ -1668,6 +1668,14 @@
       "termIds": [
         "emperors-children-enhancement-beguiling-grotesquerie",
         "emperors-children-enhancement-beguiling-grotesquerie-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "thrill-seekers",
+      "termIds": [
+        "emperors-children-ability-thrill-seekers",
+        "emperors-children-army-rule-thrill-seekers"
       ],
       "status": "review-required"
     },

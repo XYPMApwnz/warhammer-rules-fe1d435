@@ -11,70 +11,340 @@
         "unit-lord-kakophonist",
         "unit-sorcerer"
       ],
-      "noneKeywords": ["EPIC HERO"]
+      "noneKeywords": [
+        "EPIC HERO"
+      ]
     },
     "lord-exultant": {
       "subject": "model",
-      "unitIds": ["unit-lord-exultant"],
-      "noneKeywords": ["EPIC HERO"]
+      "unitIds": [
+        "unit-lord-exultant"
+      ],
+      "noneKeywords": [
+        "EPIC HERO"
+      ]
     },
     "lord-kakophonist": {
       "subject": "model",
-      "unitIds": ["unit-lord-kakophonist"],
-      "noneKeywords": ["EPIC HERO"]
+      "unitIds": [
+        "unit-lord-kakophonist"
+      ],
+      "noneKeywords": [
+        "EPIC HERO"
+      ]
     },
     "daemon-prince": {
       "subject": "model",
-      "unitIds": ["unit-daemon-prince-of-slaanesh"],
-      "noneKeywords": ["EPIC HERO"]
+      "unitIds": [
+        "unit-daemon-prince-of-slaanesh"
+      ],
+      "noneKeywords": [
+        "EPIC HERO"
+      ]
     },
     "terminator-squad-upgrade": {
       "subject": "unit",
-      "unitIds": ["unit-chaos-terminators"]
+      "unitIds": [
+        "unit-chaos-terminators"
+      ]
     },
     "flawless-blades-upgrade": {
       "subject": "unit",
-      "unitIds": ["unit-flawless-blades"]
+      "unitIds": [
+        "unit-flawless-blades"
+      ]
     }
   },
   "defaults": {
-    "standardAssignment": {"maxOwners": 1, "enhancementChoices": 1, "payPointsPerOwner": true},
-    "upgradeAssignment": {"maxOwners": 3, "enhancementChoices": 1, "payPointsPerOwner": true}
+    "standardAssignment": {
+      "maxOwners": 1,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    },
+    "upgradeAssignment": {
+      "maxOwners": 3,
+      "enhancementChoices": 1,
+      "payPointsPerOwner": true
+    }
   },
   "enhancements": {
-    "enhancement-dark-blessings": {"title": "Dark Blessings", "detachmentId": "carnival-of-excess", "points": 10, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-empyric-suffusion": {"title": "Empyric Suffusion", "detachmentId": "carnival-of-excess", "points": 15, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-possessed-blade": {"title": "Possessed Blade", "detachmentId": "carnival-of-excess", "points": 25, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-warp-walker": {"title": "Warp Walker", "detachmentId": "carnival-of-excess", "points": 30, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-pledge-of-dark-glory": {"title": "Pledge of Dark Glory", "detachmentId": "coterie-of-the-conceited", "points": 25, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-pledge-of-eternal-servitude": {"title": "Pledge of Eternal Servitude", "detachmentId": "coterie-of-the-conceited", "points": 25, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-pledge-of-mortal-pain": {"title": "Pledge of Mortal Pain", "detachmentId": "coterie-of-the-conceited", "points": 15, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-pledge-of-unholy-fortune": {"title": "Pledge of Unholy Fortune", "detachmentId": "coterie-of-the-conceited", "points": 30, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-tears-of-the-phoenix": {"title": "Tears of the Phoenix", "detachmentId": "court-of-the-phoenician", "points": 25, "tags": [], "ownerGroup": "emperors-children-character", "authority": "official-faction-pack-v1.0"},
-    "enhancement-exalted-patron": {"title": "Exalted Patron", "detachmentId": "court-of-the-phoenician", "points": 15, "tags": [], "ownerGroup": "lord-exultant", "authority": "official-faction-pack-v1.0"},
-    "enhancement-soulstain-made-manifest": {"title": "Soulstain Made Manifest", "detachmentId": "court-of-the-phoenician", "points": 15, "tags": [], "ownerGroup": "emperors-children-character", "authority": "official-faction-pack-v1.0"},
-    "enhancement-spiritsliver": {"title": "Spiritsliver", "detachmentId": "court-of-the-phoenician", "points": 20, "tags": [], "ownerGroup": "daemon-prince", "authority": "official-faction-pack-v1.0"},
-    "enhancement-cacophonic-accompaniment": {"title": "Cacophonic Accompaniment", "detachmentId": "elegant-brutes", "points": 20, "tags": [], "ownerGroup": "lord-kakophonist", "authority": "official-faction-pack-v1.0"},
-    "enhancement-frenzied-ferocity": {"title": "Frenzied Ferocity", "detachmentId": "elegant-brutes", "points": null, "tags": ["UPGRADE"], "ownerGroup": "terminator-squad-upgrade", "authority": "official-faction-pack-v1.0"},
-    "enhancement-euphoric-crown": {"title": "Euphoric Crown", "detachmentId": "frenzied-host", "points": 20, "tags": [], "ownerGroup": "lord-exultant", "authority": "official-faction-pack-v1.0"},
-    "enhancement-howling-plate": {"title": "Howling Plate", "detachmentId": "frenzied-host", "points": 20, "tags": [], "ownerGroup": "lord-exultant", "authority": "official-faction-pack-v1.0"},
-    "enhancement-intoxicating-musk": {"title": "Intoxicating Musk", "detachmentId": "mercurial-host", "points": 20, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-loathsome-dexterity": {"title": "Loathsome Dexterity", "detachmentId": "mercurial-host", "points": 10, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-steeped-in-suffering": {"title": "Steeped in Suffering", "detachmentId": "mercurial-host", "points": 20, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-tactical-perfection": {"title": "Tactical Perfection", "detachmentId": "mercurial-host", "points": 15, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-blinding-speed": {"title": "Blinding Speed", "detachmentId": "peerless-bladesmen", "points": 25, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-distortion": {"title": "Distortion", "detachmentId": "peerless-bladesmen", "points": 25, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-faultless-opportunist": {"title": "Faultless Opportunist", "detachmentId": "peerless-bladesmen", "points": 15, "tags": [], "ownerGroup": null, "authority": "secondary-bsdata-carry-forward", "status": "unresolved-owner"},
-    "enhancement-rise-to-the-challenge": {"title": "Rise to the Challenge", "detachmentId": "peerless-bladesmen", "points": 30, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-accomplished-tactician": {"title": "Accomplished Tactician", "detachmentId": "rapid-evisceration", "points": 35, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-heretek-adept": {"title": "Heretek Adept", "detachmentId": "rapid-evisceration", "points": 35, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-spearhead-striker": {"title": "Spearhead Striker", "detachmentId": "rapid-evisceration", "points": 20, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-sublime-presence": {"title": "Sublime Presence", "detachmentId": "rapid-evisceration", "points": 25, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-eager-to-prove": {"title": "Eager to Prove", "detachmentId": "slaaneshs-chosen", "points": 15, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-proud-and-vainglorious": {"title": "Proud and Vainglorious", "detachmentId": "slaaneshs-chosen", "points": 20, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-repulsed-by-weakness": {"title": "Repulsed by Weakness", "detachmentId": "slaaneshs-chosen", "points": 25, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-slayer-of-champions": {"title": "Slayer of Champions", "detachmentId": "slaaneshs-chosen", "points": 15, "tags": [], "ownerGroup": "emperors-children-character", "authority": "secondary-bsdata-carry-forward"},
-    "enhancement-eager-patrons": {"title": "Eager Patrons", "detachmentId": "spectacle-of-slaughter", "points": null, "tags": ["UPGRADE"], "ownerGroup": "flawless-blades-upgrade", "authority": "official-faction-pack-v1.0"},
-    "enhancement-beguiling-grotesquerie": {"title": "Beguiling Grotesquerie", "detachmentId": "spectacle-of-slaughter", "points": null, "tags": ["UPGRADE"], "ownerGroup": "flawless-blades-upgrade", "authority": "official-faction-pack-v1.0"}
+    "enhancement-dark-blessings": {
+      "title": "Dark Blessings",
+      "detachmentId": "carnival-of-excess",
+      "points": 10,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-empyric-suffusion": {
+      "title": "Empyric Suffusion",
+      "detachmentId": "carnival-of-excess",
+      "points": 15,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-possessed-blade": {
+      "title": "Possessed Blade",
+      "detachmentId": "carnival-of-excess",
+      "points": 25,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-warp-walker": {
+      "title": "Warp Walker",
+      "detachmentId": "carnival-of-excess",
+      "points": 30,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-pledge-of-dark-glory": {
+      "title": "Pledge of Dark Glory",
+      "detachmentId": "coterie-of-the-conceited",
+      "points": 25,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-pledge-of-eternal-servitude": {
+      "title": "Pledge of Eternal Servitude",
+      "detachmentId": "coterie-of-the-conceited",
+      "points": 25,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-pledge-of-mortal-pain": {
+      "title": "Pledge of Mortal Pain",
+      "detachmentId": "coterie-of-the-conceited",
+      "points": 15,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-pledge-of-unholy-fortune": {
+      "title": "Pledge of Unholy Fortune",
+      "detachmentId": "coterie-of-the-conceited",
+      "points": 30,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-tears-of-the-phoenix": {
+      "title": "Tears of the Phoenix",
+      "detachmentId": "court-of-the-phoenician",
+      "points": 25,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "official-faction-pack-v1.0"
+    },
+    "enhancement-exalted-patron": {
+      "title": "Exalted Patron",
+      "detachmentId": "court-of-the-phoenician",
+      "points": 15,
+      "tags": [],
+      "ownerGroup": "lord-exultant",
+      "authority": "official-faction-pack-v1.0"
+    },
+    "enhancement-soulstain-made-manifest": {
+      "title": "Soulstain Made Manifest",
+      "detachmentId": "court-of-the-phoenician",
+      "points": 15,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "official-faction-pack-v1.0"
+    },
+    "enhancement-spiritsliver": {
+      "title": "Spiritsliver",
+      "detachmentId": "court-of-the-phoenician",
+      "points": 20,
+      "tags": [],
+      "ownerGroup": "daemon-prince",
+      "authority": "official-faction-pack-v1.0"
+    },
+    "enhancement-cacophonic-accompaniment": {
+      "title": "Cacophonic Accompaniment",
+      "detachmentId": "elegant-brutes",
+      "points": 20,
+      "tags": [],
+      "ownerGroup": "lord-kakophonist",
+      "authority": "official-faction-pack-v1.0"
+    },
+    "enhancement-frenzied-ferocity": {
+      "title": "Frenzied Ferocity",
+      "detachmentId": "elegant-brutes",
+      "points": null,
+      "tags": [
+        "UPGRADE"
+      ],
+      "ownerGroup": "terminator-squad-upgrade",
+      "authority": "official-faction-pack-v1.0"
+    },
+    "enhancement-euphoric-crown": {
+      "title": "Euphoric Crown",
+      "detachmentId": "frenzied-host",
+      "points": 20,
+      "tags": [],
+      "ownerGroup": "lord-exultant",
+      "authority": "official-faction-pack-v1.0"
+    },
+    "enhancement-howling-plate": {
+      "title": "Howling Plate",
+      "detachmentId": "frenzied-host",
+      "points": 20,
+      "tags": [],
+      "ownerGroup": "lord-exultant",
+      "authority": "official-faction-pack-v1.0"
+    },
+    "enhancement-intoxicating-musk": {
+      "title": "Intoxicating Musk",
+      "detachmentId": "mercurial-host",
+      "points": 20,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-loathsome-dexterity": {
+      "title": "Loathsome Dexterity",
+      "detachmentId": "mercurial-host",
+      "points": 10,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-steeped-in-suffering": {
+      "title": "Steeped in Suffering",
+      "detachmentId": "mercurial-host",
+      "points": 20,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-tactical-perfection": {
+      "title": "Tactical Perfection",
+      "detachmentId": "mercurial-host",
+      "points": 15,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-blinding-speed": {
+      "title": "Blinding Speed",
+      "detachmentId": "peerless-bladesmen",
+      "points": 25,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-distortion": {
+      "title": "Distortion",
+      "detachmentId": "peerless-bladesmen",
+      "points": 25,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-faultless-opportunist": {
+      "title": "Faultless Opportunist",
+      "detachmentId": "peerless-bladesmen",
+      "points": 15,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-codex-parity"
+    },
+    "enhancement-rise-to-the-challenge": {
+      "title": "Rise to the Challenge",
+      "detachmentId": "peerless-bladesmen",
+      "points": 30,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-accomplished-tactician": {
+      "title": "Accomplished Tactician",
+      "detachmentId": "rapid-evisceration",
+      "points": 35,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-heretek-adept": {
+      "title": "Heretek Adept",
+      "detachmentId": "rapid-evisceration",
+      "points": 35,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-spearhead-striker": {
+      "title": "Spearhead Striker",
+      "detachmentId": "rapid-evisceration",
+      "points": 20,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-eager-to-prove": {
+      "title": "Eager to Prove",
+      "detachmentId": "slaaneshs-chosen",
+      "points": 15,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-proud-and-vainglorious": {
+      "title": "Proud and Vainglorious",
+      "detachmentId": "slaaneshs-chosen",
+      "points": 20,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-repulsed-by-weakness": {
+      "title": "Repulsed by Weakness",
+      "detachmentId": "slaaneshs-chosen",
+      "points": 25,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-slayer-of-champions": {
+      "title": "Slayer of Champions",
+      "detachmentId": "slaaneshs-chosen",
+      "points": 15,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-bsdata-carry-forward"
+    },
+    "enhancement-eager-patrons": {
+      "title": "Eager Patrons",
+      "detachmentId": "spectacle-of-slaughter",
+      "points": null,
+      "tags": [
+        "UPGRADE"
+      ],
+      "ownerGroup": "flawless-blades-upgrade",
+      "authority": "official-faction-pack-v1.0"
+    },
+    "enhancement-beguiling-grotesquerie": {
+      "title": "Beguiling Grotesquerie",
+      "detachmentId": "spectacle-of-slaughter",
+      "points": null,
+      "tags": [
+        "UPGRADE"
+      ],
+      "ownerGroup": "flawless-blades-upgrade",
+      "authority": "official-faction-pack-v1.0"
+    },
+    "enhancement-sublime-prescience": {
+      "title": "Sublime Prescience",
+      "detachmentId": "rapid-evisceration",
+      "points": 25,
+      "tags": [],
+      "ownerGroup": "emperors-children-character",
+      "authority": "secondary-codex-parity"
+    }
   }
 }

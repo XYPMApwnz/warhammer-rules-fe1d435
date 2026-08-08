@@ -895,30 +895,6 @@
       ],
       "conditions": []
     },
-    "enhancement-sublime-presence": {
-      "v": 1,
-      "roles": [
-        {
-          "id": "friendly-target",
-          "side": "friendly",
-          "subject": "unit",
-          "count": 1,
-          "selector": {
-            "unitIds": [
-              "unit-daemon-prince-of-slaanesh",
-              "unit-daemon-prince-of-slaanesh-with-wings",
-              "unit-lord-exultant",
-              "unit-lord-kakophonist",
-              "unit-sorcerer"
-            ],
-            "noneKeywords": [
-              "EPIC HERO"
-            ]
-          }
-        }
-      ],
-      "conditions": []
-    },
     "enhancement-eager-to-prove": {
       "v": 1,
       "roles": [
@@ -1046,6 +1022,30 @@
           "selector": {
             "unitIds": [
               "unit-flawless-blades"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-sublime-prescience": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "unitIds": [
+              "unit-daemon-prince-of-slaanesh",
+              "unit-daemon-prince-of-slaanesh-with-wings",
+              "unit-lord-exultant",
+              "unit-lord-kakophonist",
+              "unit-sorcerer"
             ],
             "noneKeywords": [
               "EPIC HERO"

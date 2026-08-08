@@ -2,7 +2,7 @@
   'use strict';
   const scriptUrl=document.currentScript.src;
   const compatibleRuntime=await import(new URL('../scripts/compatible-rules-runtime.mjs?v=1',scriptUrl)).catch(error=>{console.warn('Compatible rules unavailable.',error);return null;});
-  const {stratagemTypes}=await import(new URL('../scripts/stratagem-types.mjs?v=1',scriptUrl));
+  const {stratagemTypes}=await import(new URL('../scripts/stratagem-types.mjs?v=2',scriptUrl));
   const navButton=document.getElementById('navButton'),scrim=document.getElementById('navScrim'),nav=document.getElementById('mobileNav');
   const dialog=document.getElementById('termDialog'),popupLayer=document.getElementById('termPopupStack');
   const viewSwitch=document.querySelector('[data-view-switch]'),relatedRules=document.getElementById('relatedRules');
@@ -52,11 +52,11 @@
       card.dataset.turn=turn;card.classList.remove('turn-any','turn-yours','turn-their');card.classList.add(turn==='THEIR TURN'?'turn-their':turn==='YOUR TURN'?'turn-yours':'turn-any');
     });
   }
-  const stratagemTypeLabels={'battle-tactic':'Battle Tactic Stratagem','strategic-ploy':'Strategic Ploy Stratagem',wargear:'Wargear Stratagem','epic-deed':'Epic Deed Stratagem',core:'Core Stratagem',unknown:'Type unverified'};
+  const stratagemTypeLabels={'battle-tactic':'Battle Tactic Stratagem','strategic-ploy':'Strategic Ploy Stratagem',wargear:'Wargear Stratagem','epic-deed':'Epic Deed Stratagem',core:'Core Stratagem','source-untyped':'Source type unverified',unknown:'Type unverified'};
   function decorateStratagemTypes(root){
     root.querySelectorAll('.stratagem').forEach(card=>{
-      const labels=[...card.querySelectorAll('.stratagem-type')],current=/^(battle-tactic|strategic-ploy|wargear|epic-deed|core|unknown)$/.test(card.dataset.stratagemType||'')?card.dataset.stratagemType:'',id=card.dataset.ruleId||card.id||'',mapped=stratagemTypes.get(id)||stratagemTypes.get(id.replace(/^stratagem-/,'')),match=labels[0]?.textContent.trim().match(/(Battle Tactic|Strategic Ploy|Wargear|Epic Deed|Core) Stratagem\s*$/i),resolvedType=mapped||current||(match?match[1].toLowerCase().replace(/\s+/g,'-'):'unknown'),expected=stratagemTypeLabels[resolvedType];
-      card.dataset.stratagemType=resolvedType;const label=labels.shift()||document.createElement('span');labels.forEach(node=>node.remove());label.classList.add('stratagem-type');if(resolvedType==='unknown'||!label.textContent.trim().toLowerCase().endsWith(expected.toLowerCase()))label.textContent=expected;const head=card.querySelector('.stratagem-head'),host=head?.querySelector(':scope > div:not(.cp)')||head;host?.append(label);
+      const labels=[...card.querySelectorAll('.stratagem-type')],current=/^(battle-tactic|strategic-ploy|wargear|epic-deed|core|source-untyped|unknown)$/.test(card.dataset.stratagemType||'')?card.dataset.stratagemType:'',id=card.dataset.ruleId||card.id||'',rawMapped=stratagemTypes.get(id)||stratagemTypes.get(id.replace(/^stratagem-/,'')),mapped=typeof rawMapped==='string'?{canonicalType:rawMapped}:rawMapped||{},match=labels[0]?.textContent.trim().match(/(Battle Tactic|Strategic Ploy|Wargear|Epic Deed|Core) Stratagem\s*$/i),resolvedType=mapped.canonicalType||mapped.typeStatus||current||(match?match[1].toLowerCase().replace(/\s+/g,'-'):'unknown'),expected=mapped.sourceLabel||card.dataset.sourceLabel||stratagemTypeLabels[resolvedType]||stratagemTypeLabels.unknown;
+      card.dataset.stratagemType=resolvedType;const label=labels.shift()||document.createElement('span');labels.forEach(node=>node.remove());label.classList.add('stratagem-type');if(label.textContent.trim()!==expected)label.textContent=expected;const head=card.querySelector('.stratagem-head'),host=head?.querySelector(':scope > div:not(.cp)')||head;host?.append(label);
     });
   }
   decorateStratagemTurns(document);decorateStratagemTypes(document);

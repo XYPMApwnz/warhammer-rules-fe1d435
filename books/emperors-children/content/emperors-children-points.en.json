@@ -6,7 +6,7 @@
     "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
     "revision": "4",
     "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Chaos%20-%20Emperor%27s%20Children.json",
-    "snapshotSha256": "BB3756C2524B383BBB0B351504B0B6CC9567E1FE9AE53B284212452273EB6969"
+    "snapshotSha256": "C2126FF24A36B74B8E7EE87E5E24C6B4773D48073F3C7BF916D8D38D38816C48"
   },
   "units": [
     {
@@ -648,8 +648,8 @@
       "profile": null
     },
     {
-      "id": "enhancement-sublime-presence",
-      "title": "Sublime Presence",
+      "id": "enhancement-sublime-prescience",
+      "title": "Sublime Prescience",
       "detachment": "Rapid Evisceration",
       "value": 25,
       "text": "Once per turn, in your Movement phase, the bearer can use this Enhancement. If it does, select one friendly Emperor's Children Transport that is in Strategic Reserves. Until the end of the phase, for the purposes of setting up that Transport on the battlefield, treat the current battle round number as being one higher than it actually is.",

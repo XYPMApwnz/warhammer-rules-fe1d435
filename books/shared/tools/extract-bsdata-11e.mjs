@@ -144,10 +144,10 @@ function compositionFor(entry,title){
     const range=constraints(group);
     const childRanges=models.map(constraints);
     output.push({
-      name:clean(group.name),
+      name:config.transforms?.stripCompositionCountPrefixes?clean(group.name).replace(/^\d+(?:-\d+)?\s+/, ''):clean(group.name),
       min:range.min??childRanges.reduce((sum,item)=>sum+(item.min||0),0),
       max:range.max??childRanges.reduce((sum,item)=>sum+(item.max||item.min||0),0),
-      models:models.map(item=>clean(item.name))
+      models:models.map(item=>config.transforms?.stripCompositionCountPrefixes?clean(item.name).replace(/^\d+(?:-\d+)?\s+/, ''):clean(item.name))
     });
   }
   return unique(output,item=>`${key(item.name)}:${item.min}:${item.max}:${item.models.join('|')}`);

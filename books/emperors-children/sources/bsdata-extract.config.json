@@ -32,6 +32,9 @@
     "datasheets": "../content/emperors-children-codex-datasheets.en.json",
     "points": "../content/emperors-children-points.en.json"
   },
+  "transforms": {
+    "stripCompositionCountPrefixes": true
+  },
   "filters": {
     "excludeNames": [
       "Detachment",

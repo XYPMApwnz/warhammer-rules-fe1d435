@@ -76,9 +76,9 @@ def validate_related_rules(data: dict, errors: list[str]) -> None:
         for stratagem in detachment.get("stratagems", [])
     }
     eligibility = related.get("stratagems", {})
-    if set(eligibility) != stratagem_ids:
-        errors.append("related-rules Stratagem ids do not exactly match the Faction Pack")
-    for rule_id, schema in eligibility.items():
+    if missing := stratagem_ids - set(eligibility):
+        errors.append(f"related-rules is missing Faction Pack Stratagem ids {sorted(missing)}")
+    for rule_id, schema in ((rule_id, eligibility[rule_id]) for rule_id in stratagem_ids & set(eligibility)):
         if schema.get("v") != 1 or not schema.get("roles"):
             errors.append(f"{rule_id}: invalid related-rules v1 schema")
             continue

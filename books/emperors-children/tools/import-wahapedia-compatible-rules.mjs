@@ -20,16 +20,16 @@ export function parseRules(html){
   const start=html.indexOf('>STRATAGEMS</div>'),left=start<0?-1:html.lastIndexOf('<div class="dsLeft',start),end=left<0?-1:endOfDiv(html,left);
   if(start<0||end<0)return null;
   const result={faction:[],core:[],boarding:[]};
-  for(const match of html.slice(start,end).matchAll(/<div class="([^"]*\bs10Wrap\b[^"]*)"[^>]*>[\s\S]*?<div class="s10Name">([\s\S]*?)<\/div>/gi)){
+  for(const match of html.slice(start,end).matchAll(/<div class="([^"]*\b(?:s10Wrap|str11Wrap)\b[^"]*)"[^>]*>[\s\S]*?<div class="(?:s10Name|str11Name)">([\s\S]*?)<\/div>/gi)){
     const classes=match[1].split(/\s+/),name=decode(match[2]);
     if(classes.includes('sShowBoardingActions'))result.boarding.push(name);else if(classes.includes('sShowCoreStratagemsNonBA'))result.core.push(name);else result.faction.push(name);
   }
   return Object.fromEntries(Object.entries(result).map(([name,values])=>[name,unique(values)]));
 }
 function inventory(){
-  const codex=read('content/emperors-children-codex-datasheets.en.json'),pack=read('content/emperors-children-faction-pack.en.json');
+  const codex=read('content/emperors-children-codex-datasheets.en.json'),pack=read('content/emperors-children-faction-pack.en.json'),parity=read('content/emperors-children-codex-parity.en.json');
   const units=(codex.datasheets||[]).map(unit=>({unitId:unit.id,name:unit.title}));
-  const rules=pack.detachments.flatMap(detachment=>detachment.stratagems.map(rule=>({ruleId:rule.id,name:rule.title})));
+  const rules=[pack,parity].flatMap(source=>source.detachments.flatMap(detachment=>detachment.stratagems.map(rule=>({ruleId:rule.id,name:rule.title}))));
   const index=items=>items.reduce((map,item)=>{const name=key(item.name);map.set(name,[...(map.get(name)||[]),item]);return map;},new Map());
   return {units:units.sort((a,b)=>a.unitId.localeCompare(b.unitId)),rules:rules.sort((a,b)=>a.ruleId.localeCompare(b.ruleId)),unitByName:index(units),ruleByName:index(rules)};
 }
@@ -47,8 +47,8 @@ export function buildImport({pages,retrievedAt}){
   source.rules.filter(rule=>!seenRules.has(rule.ruleId)).forEach(rule=>unresolved.parse.push({kind:'official-stratagem',ruleId:rule.ruleId,reason:'not observed'}));
   const gaps=[...gapByName.values()].map(gap=>({...gap,unitIds:unique(gap.unitIds)})).sort((a,b)=>a.name.localeCompare(b.name,'en'));
   const sourceMeta={edition:'11',faction:"Emperor's Children",kind:'Wahapedia candidate associations',url:sourceUrl,authority:'secondary'};
-  const summary={datasheets:{canonical:source.units.length,imported:Object.keys(units).length},officialFactionStratagems:{canonical:source.rules.length,observed:seenRules.size},codexCarryForwardGaps:{names:gaps.length,associations:gaps.reduce((sum,gap)=>sum+gap.unitIds.length,0)},coreStratagems:{canonical:10,observed:seenCore.size},associations:{officialFaction:Object.values(units).flat().length,core:Object.values(coreUnits).flat().length},boardingActionNamesIgnored:boarding.size,unresolved:Object.values(unresolved).flat().length};
-  return {snapshot:{schema:'emperors-children-wahapedia-compatible-rules-snapshot/v1',retrievedAt,source:sourceMeta,scope:{datasheets:'23 current Codex datasheets',factionRules:'15 official Faction Pack v1.0 Stratagems only',excluded:'Codex carry-forward Stratagem names without a fixed local full-text source'},units,coreUnits},report:{schema:'emperors-children-compatible-rules-import-report/v1',retrievedAt,source:sourceMeta,summary,codexCarryForwardGaps:gaps,boardingActionsIgnored:unique(boarding),unresolved}};
+  const summary={datasheets:{canonical:source.units.length,imported:Object.keys(units).length},factionStratagems:{canonical:source.rules.length,observed:seenRules.size},unexplainedUnknowns:gaps.length,coreStratagems:{canonical:10,observed:seenCore.size},associations:{faction:Object.values(units).flat().length,core:Object.values(coreUnits).flat().length},boardingActionNamesIgnored:boarding.size,unresolved:Object.values(unresolved).flat().length+gaps.length};
+  return {snapshot:{schema:'emperors-children-wahapedia-compatible-rules-snapshot/v1',retrievedAt,source:sourceMeta,scope:{datasheets:'23 current Codex datasheets',factionRules:'15 official Faction Pack and 36 Codex Stratagems',excluded:'Boarding Actions only'},units,coreUnits},report:{schema:'emperors-children-compatible-rules-import-report/v1',retrievedAt,source:sourceMeta,summary,unexplainedUnknowns:gaps,boardingActionsIgnored:unique(boarding),unresolved}};
 }
 async function fetchText(url){const response=await fetch(url,{headers:{'user-agent':'warhammer-rules-compatible-rules-importer/1.0'}});if(!response.ok)throw new Error(`${url}: HTTP ${response.status}`);return response.text();}
 async function main(){
@@ -60,6 +60,6 @@ async function main(){
   fs.mkdirSync(output('reports'),{recursive:true});fs.writeFileSync(output('reports/compatible-rules-import-report.json'),stable(result.report));
   if(result.report.summary.unresolved)throw new Error(`Unresolved import rows: ${result.report.summary.unresolved}`);
   fs.writeFileSync(output('sources/wahapedia-compatible-rules.snapshot.json'),stable(result.snapshot));
-  console.log(`Imported ${result.report.summary.datasheets.imported} Emperor's Children datasheets: ${result.report.summary.associations.officialFaction} official faction + ${result.report.summary.associations.core} Core associations; ${result.report.summary.codexCarryForwardGaps.names} Codex names excluded.`);
+  console.log(`Imported ${result.report.summary.datasheets.imported} Emperor's Children datasheets: ${result.report.summary.associations.faction} faction + ${result.report.summary.associations.core} Core associations; ${result.report.summary.unexplainedUnknowns} unexplained names.`);
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href)main().catch(error=>{console.error(error.message);process.exitCode=1;});

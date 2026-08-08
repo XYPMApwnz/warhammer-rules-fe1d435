@@ -130,7 +130,10 @@
             "sourcePages": [
               2
             ]
-          }
+          },
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Elegant Brutes Stratagem"
         },
         {
           "id": "psychedelic-soulflame",
@@ -147,7 +150,10 @@
             "sourcePages": [
               2
             ]
-          }
+          },
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Elegant Brutes Stratagem"
         },
         {
           "id": "warp-plunge",
@@ -164,7 +170,10 @@
             "sourcePages": [
               2
             ]
-          }
+          },
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Elegant Brutes Stratagem"
         }
       ]
     },
@@ -242,7 +251,10 @@
             "sourcePages": [
               3
             ]
-          }
+          },
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Frenzied Host Stratagem"
         },
         {
           "id": "agonised-cacophony",
@@ -259,7 +271,10 @@
             "sourcePages": [
               3
             ]
-          }
+          },
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Frenzied Host Stratagem"
         },
         {
           "id": "absolute-sensory-overload",
@@ -276,7 +291,10 @@
             "sourcePages": [
               3
             ]
-          }
+          },
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Frenzied Host Stratagem"
         }
       ]
     },
@@ -353,7 +371,10 @@
             "sourcePages": [
               4
             ]
-          }
+          },
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Spectacle of Slaughter Stratagem"
         },
         {
           "id": "single-minded-strike",
@@ -370,7 +391,10 @@
             "sourcePages": [
               4
             ]
-          }
+          },
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Spectacle of Slaughter Stratagem"
         },
         {
           "id": "intoxicated-by-triumph",
@@ -387,7 +411,10 @@
             "sourcePages": [
               4
             ]
-          }
+          },
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Spectacle of Slaughter Stratagem"
         }
       ]
     },
@@ -507,7 +534,10 @@
             "sourcePages": [
               6
             ]
-          }
+          },
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Court of the Phoenician Stratagem"
         },
         {
           "id": "prideful-superiority",
@@ -524,7 +554,10 @@
             "sourcePages": [
               6
             ]
-          }
+          },
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Court of the Phoenician Stratagem"
         },
         {
           "id": "sinuous-breach",
@@ -541,7 +574,10 @@
             "sourcePages": [
               6
             ]
-          }
+          },
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Court of the Phoenician Stratagem"
         },
         {
           "id": "close-quarters-excruciation",
@@ -558,7 +594,10 @@
             "sourcePages": [
               6
             ]
-          }
+          },
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Court of the Phoenician Stratagem"
         },
         {
           "id": "euphoric-inspiration",
@@ -575,7 +614,10 @@
             "sourcePages": [
               6
             ]
-          }
+          },
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Court of the Phoenician Stratagem"
         },
         {
           "id": "catalytic-stimulus",
@@ -592,7 +634,10 @@
             "sourcePages": [
               6
             ]
-          }
+          },
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Court of the Phoenician Stratagem"
         }
       ]
     }

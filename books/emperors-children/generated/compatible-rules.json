@@ -2,9 +2,9 @@
   "schema": "emperors-children-compatible-rules/v1",
   "scope": {
     "datasheets": 23,
-    "officialFactionStratagems": 15,
-    "coreStratagems": 10,
-    "excludedCodexCarryForwardStratagems": 36
+    "factionPackStratagems": 15,
+    "codexStratagems": 36,
+    "coreStratagems": 10
   },
   "units": {
     "unit-chaos-land-raider": [
@@ -73,6 +73,132 @@
         "detachmentId": "court-of-the-phoenician",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-advance-and-claim",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dynamic-breakthrough",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-onto-the-next",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-outflanking-strike",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-reactive-disembarkation",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-chaos-rhino": [
@@ -141,6 +267,132 @@
         "detachmentId": "court-of-the-phoenician",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-advance-and-claim",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dynamic-breakthrough",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-onto-the-next",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-outflanking-strike",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-reactive-disembarkation",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-chaos-spawn": [
@@ -203,6 +455,114 @@
         "detachmentId": "court-of-the-phoenician",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cut-down-the-weak",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-crescendo",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-chaos-terminators": [
@@ -313,6 +673,150 @@
         "detachmentId": "elegant-brutes",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ceaseless-onslaught",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-combat-stimms",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cut-down-the-weak",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dark-vigour",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-embrace-the-pain",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-honour-the-prince",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-onto-the-next",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-crescendo",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       },
       {
         "ruleId": "warp-plunge",
@@ -464,6 +968,20 @@
         "detachmentId": "carnival-of-excess",
         "state": "match",
         "authority": "secondary-bsdata-carry-forward",
+        "tags": [],
+        "ownerSubject": "model",
+        "assignment": {
+          "maxOwners": 1,
+          "enhancementChoices": 1,
+          "payPointsPerOwner": true
+        }
+      },
+      {
+        "ruleId": "enhancement-faultless-opportunist",
+        "kind": "enhancement",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity",
         "tags": [],
         "ownerSubject": "model",
         "assignment": {
@@ -697,11 +1215,11 @@
         }
       },
       {
-        "ruleId": "enhancement-sublime-presence",
+        "ruleId": "enhancement-sublime-prescience",
         "kind": "enhancement",
         "detachmentId": "rapid-evisceration",
         "state": "match",
-        "authority": "secondary-bsdata-carry-forward",
+        "authority": "secondary-codex-parity",
         "tags": [],
         "ownerSubject": "model",
         "assignment": {
@@ -769,6 +1287,150 @@
         "detachmentId": "court-of-the-phoenician",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-beautiful-death",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cut-down-the-weak",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dark-vigour",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-devoted-duellists",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-diabolic-majesty",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-heightened-jealousy",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-refusal-to-be-outdone",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-vengeful-surge",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-daemon-prince-of-slaanesh-with-wings": [
@@ -914,6 +1576,20 @@
         "detachmentId": "carnival-of-excess",
         "state": "match",
         "authority": "secondary-bsdata-carry-forward",
+        "tags": [],
+        "ownerSubject": "model",
+        "assignment": {
+          "maxOwners": 1,
+          "enhancementChoices": 1,
+          "payPointsPerOwner": true
+        }
+      },
+      {
+        "ruleId": "enhancement-faultless-opportunist",
+        "kind": "enhancement",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity",
         "tags": [],
         "ownerSubject": "model",
         "assignment": {
@@ -1133,11 +1809,11 @@
         }
       },
       {
-        "ruleId": "enhancement-sublime-presence",
+        "ruleId": "enhancement-sublime-prescience",
         "kind": "enhancement",
         "detachmentId": "rapid-evisceration",
         "state": "match",
-        "authority": "secondary-bsdata-carry-forward",
+        "authority": "secondary-codex-parity",
         "tags": [],
         "ownerSubject": "model",
         "assignment": {
@@ -1205,6 +1881,150 @@
         "detachmentId": "court-of-the-phoenician",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-beautiful-death",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cut-down-the-weak",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dark-vigour",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-devoted-duellists",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-diabolic-majesty",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-heightened-jealousy",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-refusal-to-be-outdone",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-vengeful-surge",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-daemonettes": [
@@ -1243,6 +2063,36 @@
         "scope": "core",
         "state": "match",
         "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "stratagem-dark-apparitions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sycophantic-surge",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-crescendo",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-defiler": [
@@ -1323,6 +2173,114 @@
         "detachmentId": "court-of-the-phoenician",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cut-down-the-weak",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dynamic-breakthrough",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-fiends": [
@@ -1361,6 +2319,30 @@
         "scope": "core",
         "state": "match",
         "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sycophantic-surge",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-crescendo",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-flawless-blades": [
@@ -1489,6 +2471,150 @@
         "detachmentId": "spectacle-of-slaughter",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ceaseless-onslaught",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-combat-stimms",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cut-down-the-weak",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dark-vigour",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-embrace-the-pain",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-honour-the-prince",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-onto-the-next",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-crescendo",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-fulgrim": [
@@ -1575,6 +2701,150 @@
         "detachmentId": "court-of-the-phoenician",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-beautiful-death",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cut-down-the-weak",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dark-vigour",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-devoted-duellists",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-diabolic-majesty",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-heightened-jealousy",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-refusal-to-be-outdone",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-vengeful-surge",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-heldrake": [
@@ -1649,6 +2919,108 @@
         "detachmentId": "court-of-the-phoenician",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dynamic-breakthrough",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-infractors": [
@@ -1745,6 +3117,150 @@
         "detachmentId": "court-of-the-phoenician",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ceaseless-onslaught",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-combat-stimms",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cut-down-the-weak",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dark-vigour",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-embrace-the-pain",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-honour-the-prince",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-onto-the-next",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-crescendo",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-keeper-of-secrets": [
@@ -1795,6 +3311,24 @@
         "scope": "core",
         "state": "match",
         "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sycophantic-surge",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-lord-exultant": [
@@ -1988,6 +3522,20 @@
         "detachmentId": "court-of-the-phoenician",
         "state": "match",
         "authority": "official-faction-pack-v1.0",
+        "tags": [],
+        "ownerSubject": "model",
+        "assignment": {
+          "maxOwners": 1,
+          "enhancementChoices": 1,
+          "payPointsPerOwner": true
+        }
+      },
+      {
+        "ruleId": "enhancement-faultless-opportunist",
+        "kind": "enhancement",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity",
         "tags": [],
         "ownerSubject": "model",
         "assignment": {
@@ -2221,11 +3769,11 @@
         }
       },
       {
-        "ruleId": "enhancement-sublime-presence",
+        "ruleId": "enhancement-sublime-prescience",
         "kind": "enhancement",
         "detachmentId": "rapid-evisceration",
         "state": "match",
-        "authority": "secondary-bsdata-carry-forward",
+        "authority": "secondary-codex-parity",
         "tags": [],
         "ownerSubject": "model",
         "assignment": {
@@ -2291,6 +3839,186 @@
         "detachmentId": "court-of-the-phoenician",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-beautiful-death",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ceaseless-onslaught",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-combat-stimms",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cut-down-the-weak",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dark-vigour",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-devoted-duellists",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-diabolic-majesty",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-embrace-the-pain",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-heightened-jealousy",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-honour-the-prince",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-onto-the-next",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-refusal-to-be-outdone",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-vengeful-surge",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-crescendo",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-lord-kakophonist": [
@@ -2450,6 +4178,20 @@
         "detachmentId": "carnival-of-excess",
         "state": "match",
         "authority": "secondary-bsdata-carry-forward",
+        "tags": [],
+        "ownerSubject": "model",
+        "assignment": {
+          "maxOwners": 1,
+          "enhancementChoices": 1,
+          "payPointsPerOwner": true
+        }
+      },
+      {
+        "ruleId": "enhancement-faultless-opportunist",
+        "kind": "enhancement",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity",
         "tags": [],
         "ownerSubject": "model",
         "assignment": {
@@ -2669,11 +4411,11 @@
         }
       },
       {
-        "ruleId": "enhancement-sublime-presence",
+        "ruleId": "enhancement-sublime-prescience",
         "kind": "enhancement",
         "detachmentId": "rapid-evisceration",
         "state": "match",
-        "authority": "secondary-bsdata-carry-forward",
+        "authority": "secondary-codex-parity",
         "tags": [],
         "ownerSubject": "model",
         "assignment": {
@@ -2729,6 +4471,186 @@
         "detachmentId": "court-of-the-phoenician",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-beautiful-death",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ceaseless-onslaught",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-combat-stimms",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cut-down-the-weak",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dark-vigour",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-devoted-duellists",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-diabolic-majesty",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-embrace-the-pain",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-heightened-jealousy",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-honour-the-prince",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-onto-the-next",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-refusal-to-be-outdone",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-vengeful-surge",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-crescendo",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-lucius-the-eternal": [
@@ -2837,6 +4759,186 @@
           "attachment-unknown"
         ],
         "authority": "official-faction-pack-target-plus-secondary-bsdata-relation"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-beautiful-death",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ceaseless-onslaught",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-combat-stimms",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cut-down-the-weak",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dark-vigour",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-devoted-duellists",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-diabolic-majesty",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-embrace-the-pain",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-heightened-jealousy",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-honour-the-prince",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-onto-the-next",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-refusal-to-be-outdone",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-vengeful-surge",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-crescendo",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-maulerfiend": [
@@ -2917,6 +5019,114 @@
         "detachmentId": "court-of-the-phoenician",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cut-down-the-weak",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dynamic-breakthrough",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-noise-marines": [
@@ -2999,6 +5209,150 @@
         "detachmentId": "court-of-the-phoenician",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ceaseless-onslaught",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-combat-stimms",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cut-down-the-weak",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dark-vigour",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-embrace-the-pain",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-honour-the-prince",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-onto-the-next",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-crescendo",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-seekers": [
@@ -3037,6 +5391,30 @@
         "scope": "core",
         "state": "match",
         "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sycophantic-surge",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-crescendo",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-shalaxi-helbane": [
@@ -3087,6 +5465,24 @@
         "scope": "core",
         "state": "match",
         "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sycophantic-surge",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-sorcerer": [
@@ -3261,6 +5657,20 @@
         }
       },
       {
+        "ruleId": "enhancement-faultless-opportunist",
+        "kind": "enhancement",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity",
+        "tags": [],
+        "ownerSubject": "model",
+        "assignment": {
+          "maxOwners": 1,
+          "enhancementChoices": 1,
+          "payPointsPerOwner": true
+        }
+      },
+      {
         "ruleId": "enhancement-heretek-adept",
         "kind": "enhancement",
         "detachmentId": "rapid-evisceration",
@@ -3471,11 +5881,11 @@
         }
       },
       {
-        "ruleId": "enhancement-sublime-presence",
+        "ruleId": "enhancement-sublime-prescience",
         "kind": "enhancement",
         "detachmentId": "rapid-evisceration",
         "state": "match",
-        "authority": "secondary-bsdata-carry-forward",
+        "authority": "secondary-codex-parity",
         "tags": [],
         "ownerSubject": "model",
         "assignment": {
@@ -3541,6 +5951,186 @@
         "detachmentId": "court-of-the-phoenician",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-beautiful-death",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ceaseless-onslaught",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-combat-stimms",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cut-down-the-weak",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dark-vigour",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-devoted-duellists",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-diabolic-majesty",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-embrace-the-pain",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-heightened-jealousy",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-honour-the-prince",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-onto-the-next",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-refusal-to-be-outdone",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-vengeful-surge",
+        "detachmentId": "slaaneshs-chosen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-crescendo",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ],
     "unit-tormentors": [
@@ -3637,6 +6227,150 @@
         "detachmentId": "court-of-the-phoenician",
         "state": "match",
         "authority": "official-faction-pack-v1.0"
+      },
+      {
+        "ruleId": "stratagem-armour-of-abhorrence",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-capricious-reactions",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ceaseless-onslaught",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-combat-stimms",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-bladesman",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cruel-raiders",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-cut-down-the-weak",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-dark-vigour",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-death-ecstasy",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-deft-parry",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-embrace-the-pain",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-honour-the-prince",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-incessant-violence",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-martial-perfection",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-onto-the-next",
+        "detachmentId": "rapid-evisceration",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-protection-of-the-dark-prince",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sustained-by-agony",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-terrifying-spectacle",
+        "detachmentId": "peerless-bladesmen",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unbound-arrogance",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-unshakeable-opponents",
+        "detachmentId": "coterie-of-the-conceited",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-crescendo",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-excess",
+        "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
       }
     ]
   }

@@ -6,7 +6,7 @@
     "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
     "revision": "4",
     "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Chaos%20-%20Emperor%27s%20Children.json",
-    "snapshotSha256": "BB3756C2524B383BBB0B351504B0B6CC9567E1FE9AE53B284212452273EB6969"
+    "snapshotSha256": "C2126FF24A36B74B8E7EE87E5E24C6B4773D48073F3C7BF916D8D38D38816C48"
   },
   "datasheets": [
     {
@@ -263,7 +263,7 @@
           ]
         },
         {
-          "name": "4-9 Infractors",
+          "name": "Infractors",
           "min": 4,
           "max": 9,
           "models": [
@@ -482,7 +482,7 @@
           ]
         },
         {
-          "name": "4-9 Tormentors",
+          "name": "Tormentors",
           "min": 4,
           "max": 9,
           "models": [
@@ -2144,7 +2144,7 @@
           ]
         },
         {
-          "name": "4 Terminators",
+          "name": "Terminators",
           "min": 4,
           "max": 4,
           "models": [
@@ -2420,7 +2420,7 @@
           ]
         },
         {
-          "name": "5 Noise Marines",
+          "name": "Noise Marines",
           "min": 5,
           "max": 5,
           "models": [

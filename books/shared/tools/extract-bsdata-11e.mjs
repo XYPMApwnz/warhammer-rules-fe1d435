@@ -45,15 +45,19 @@ const faction=inputs.find(input=>input.role==='faction')?.data.catalogue;
 if(!faction)throw new Error('Config must identify one input with role "faction"');
 
 const byId=new Map();
-const index=value=>{
+const sourceRoleById=new Map();
+const index=(value,sourceRole)=>{
   if(!value||typeof value!=='object')return;
-  if(value.id&&!byId.has(value.id))byId.set(value.id,value);
+  if(value.id&&!byId.has(value.id)){
+    byId.set(value.id,value);
+    sourceRoleById.set(value.id,sourceRole);
+  }
   for(const child of Object.values(value)){
-    if(Array.isArray(child))child.forEach(index);
-    else if(child&&typeof child==='object')index(child);
+    if(Array.isArray(child))child.forEach(item=>index(item,sourceRole));
+    else if(child&&typeof child==='object')index(child,sourceRole);
   }
 };
-roots.forEach(index);
+inputs.forEach(input=>index(input.data.catalogue||input.data.gameSystem,input.role));
 
 const pointsCostType=roots.flatMap(root=>root.costTypes||[]).find(item=>item.name==='pts')?.id||'51b2-306e-1021-d207';
 const pointCost=entry=>Number((entry?.costs||[]).find(cost=>cost.name==='pts'||cost.typeId===pointsCostType)?.value||0);
@@ -77,7 +81,7 @@ function graph(entry){
     nodes.push(node);
     for(const profile of (node.profiles||[]).filter(profile=>profile.hidden!==true)){
       profiles.push(profile);
-      profileRecords.push({profile,ownerType:node.type||'group',ownerName:clean(node.name)});
+      profileRecords.push({profile,ownerType:node.type||'group',ownerName:clean(node.name),sourceRole:sourceRoleById.get(profile.id)||''});
     }
     for(const child of [...(node.selectionEntries||[]),...(node.selectionEntryGroups||[])])walk(child);
     for(const link of [...(node.entryLinks||[]),...(node.infoLinks||[])]){
@@ -86,7 +90,7 @@ function graph(entry){
       if(!target)continue;
       if(link.type==='profile'||target.typeName){
         profiles.push(target);
-        profileRecords.push({profile:target,ownerType:node.type||'group',ownerName:clean(node.name)});
+        profileRecords.push({profile:target,ownerType:node.type||'group',ownerName:clean(node.name),sourceRole:sourceRoleById.get(target.id)||''});
       }
       else if(link.type==='rule'){
         const suffix=(link.modifiers||[]).filter(mod=>mod.type==='append'&&mod.field==='name').map(mod=>clean(mod.value)).join(' ');
@@ -95,7 +99,7 @@ function graph(entry){
           text:clean(target.description||target.characteristics?.find(item=>item.name==='Description')?.$text)
         };
         rules.push(rule);
-        ruleRecords.push({...rule,ownerType:node.type||'group',ownerName:clean(node.name)});
+        ruleRecords.push({...rule,ownerType:node.type||'group',ownerName:clean(node.name),sourceRole:sourceRoleById.get(target.id)||''});
       }else if(['selectionEntry','selectionEntryGroup'].includes(link.type))walk(target);
     }
   };
@@ -282,15 +286,18 @@ function parseDatasheet(link){
   });
   const abilityRecords=resolved.profileRecords.filter(item=>item.profile.typeName==='Abilities').map(item=>{
     const rawText=(item.profile.characteristics||[]).find(characteristic=>characteristic.name==='Description')?.$text||'';
-    return{title:clean(item.profile.name),text:clean(rawText),rawText,ownerType:item.ownerType,ownerName:item.ownerName};
+    return{title:clean(item.profile.name),text:clean(rawText),rawText,ownerType:item.ownerType,ownerName:item.ownerName,sourceRole:item.sourceRole};
   });
   const separateWargear=config.faction?.separateWargearAbilities===true;
   const ruleRecords=resolved.ruleRecords.map(rule=>({...rule,rawText:rule.text}));
   const allRecords=[...abilityRecords,...ruleRecords];
-  const wargearAbilityKeys=new Set(separateWargear?allRecords.filter(item=>item.ownerType==='upgrade'&&key(item.ownerName)!==key(title)).map(item=>key(item.title)):[]);
-  const profileAbilities=abilityRecords.filter(item=>!wargearAbilityKeys.has(key(item.title)));
-  const ruleAbilities=ruleRecords.filter(item=>!wargearAbilityKeys.has(key(item.title)));
-  const wargearAbilities=allRecords.filter(item=>wargearAbilityKeys.has(key(item.title)));
+  const upgradeAbility=item=>separateWargear&&item.ownerType==='upgrade'&&key(item.ownerName)!==key(title);
+  const linkedCoreAbility=item=>upgradeAbility(item)&&item.sourceRole==='game-system';
+  const wargearAbility=item=>upgradeAbility(item)&&item.sourceRole!=='game-system'&&key(item.ownerName)===key(item.title);
+  const ordinaryAbility=item=>!linkedCoreAbility(item)&&!wargearAbility(item);
+  const profileAbilities=abilityRecords.filter(ordinaryAbility);
+  const ruleAbilities=ruleRecords.filter(ordinaryAbility);
+  const wargearAbilities=allRecords.filter(wargearAbility);
   let allAbilities=unique([...profileAbilities,...ruleAbilities].filter(item=>item.title),item=>`${key(item.title)}:${item.text}`);
   const relations=relationsFor(allAbilities,resolved.profiles);
   if(config.faction?.separateLeaderRelations===true){
@@ -310,8 +317,8 @@ function parseDatasheet(link){
     points:pointRows(entry,composition),
     profiles:unique(statProfiles,item=>`${item.name}:${JSON.stringify(item.stats)}`),
     weapons:unique(weapons,item=>JSON.stringify(item)),
-    abilities:allAbilities.map(({rawText,ownerType,ownerName,...ability})=>ability),
-    ...(separateWargear?{wargearAbilities:unique(wargearAbilities.filter(item=>item.title),item=>`${key(item.title)}:${item.text}`).map(({rawText,ownerType,ownerName,...ability})=>ability)}:{}),
+    abilities:allAbilities.map(({rawText,ownerType,ownerName,sourceRole,...ability})=>ability),
+    ...(separateWargear?{wargearAbilities:unique(wargearAbilities.filter(item=>item.title),item=>`${key(item.title)}:${item.text}`).map(({rawText,ownerType,ownerName,sourceRole,...ability})=>ability)}:{}),
     keywords:categories,
     composition,
     paidWargear:paidWargear(resolved.nodes),

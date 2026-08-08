@@ -107,14 +107,14 @@ const rulesFor=entry=>(entry.infoLinks||[]).filter(link=>link.type==='rule'&&lin
   const suffix=(link.modifiers||[]).filter(mod=>mod.type==='append'&&mod.field==='name').map(mod=>clean(mod.value)).join(' ');
   return {title:clean(`${link.name||target.name||''} ${suffix}`),text:clean(target.description||target.characteristics?.find(item=>item.name==='Description')?.$text),origin:'rule'};
 });
-const categoryFor=(title,categories)=>{
+const categoryFor=(title,categoryLinks)=>{
   if(/\[Legends]/i.test(title))return 'Warhammer Legends';
-  const values=new Set(categories.map(item=>item.toLowerCase()));
-  if(values.has('epic hero'))return 'Epic Heroes';
-  if(values.has('character'))return 'Characters';
-  if(values.has('battleline'))return 'Battleline';
-  if(values.has('dedicated transport'))return 'Dedicated Transports';
-  return 'Other';
+  const primary=clean(categoryLinks.find(item=>item.primary===true)?.name).replace(/^Faction:\s*/i,'');
+  if(/^epic hero$/i.test(primary))return 'Epic Heroes';
+  if(/^character$/i.test(primary))return 'Characters';
+  if(/^battleline$/i.test(primary))return 'Battleline';
+  if(/^dedicated transport$/i.test(primary))return 'Dedicated Transports';
+  return primary||'Other';
 };
 const compositionFor=(entry,old,title)=>{
   if(entry.type==='model')return `1 ${title}.`;
@@ -231,7 +231,7 @@ const datasheets=points.units.map(pointUnit=>{
     id:old.id||`unit-${key(pointUnit.title).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}`,
     title:pointUnit.title,
     status,
-    category:categoryFor(link.name,categories),
+    category:categoryFor(link.name,categoryLinks),
     points:[...new Set(pointUnit.points.map(row=>String(row.value)))],
     stats:statProfiles[0].stats,
     profiles:unique(statProfiles,item=>`${item.name}:${JSON.stringify(item.stats)}`),

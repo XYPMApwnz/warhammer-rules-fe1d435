@@ -5299,7 +5299,7 @@
         "en": "M - · T 9 · Sv 3+ · W 10 · Ld 7+ · OC -"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Vehicle datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -5343,7 +5343,7 @@
         "en": "M - · T 9 · Sv 3+ · W 10 · Ld 7+ · OC -"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Vehicle datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -5387,7 +5387,7 @@
         "en": "M 14\" · T 9 · Sv 3+ · W 10 · Ld 7+ · OC 0"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Vehicle datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -5475,7 +5475,7 @@
         "en": "M 6\" · T 3 · Sv 7+ · W 1 · Ld 7+ · OC 1 · Inv 5+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Infantry datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -5564,7 +5564,7 @@
         "en": "M 6\" · T 3 · Sv 7+ · W 1 · Ld 7+ · OC 1 · Inv 5+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Infantry datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -5609,7 +5609,7 @@
         "en": "M 5\" · T 4 · Sv 3+ · W 2 · Ld 7+ · OC 1 · Inv 5+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Infantry datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -5654,7 +5654,7 @@
         "en": "M 5\" · T 4 · Sv 3+ · W 2 · Ld 7+ · OC 1 · Inv 5+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Infantry datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -5699,7 +5699,7 @@
         "en": "M 10\" · T 7 · Sv 3+ · W 7 · Ld 7+ · OC 2 · Inv 5+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Vehicle datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -5748,7 +5748,7 @@
         "en": "M 6\" · T 9 · Sv 2+ · W 7 · Ld 7+ · OC 2 · Inv 5+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Vehicle datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -5795,7 +5795,7 @@
         "en": "M 5\" · T 7 · Sv 3+ · W 3 · Ld 7+ · OC 1 · Inv 6+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Infantry datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -5840,7 +5840,7 @@
         "en": "M 5\" · T 6 · Sv 3+ · W 3 · Ld 7+ · OC 1 · Inv 6+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Infantry datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -5885,7 +5885,7 @@
         "en": "M 8\" · T 10 · Sv 2+ · W 11 · Ld 7+ · OC 3 · Inv 4+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Vehicle datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -5929,7 +5929,7 @@
         "en": "M 12\" · T 4 · Sv 4+ · W 2 · Ld 7+ · OC 1 · Inv 5+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Infantry datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -5976,7 +5976,7 @@
         "en": "M 12\" · T 4 · Sv 4+ · W 2 · Ld 7+ · OC 1 · Inv 5+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Infantry datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -6023,7 +6023,7 @@
         "en": "M 12\" · T 4 · Sv 4+ · W 2 · Ld 7+ · OC 2 · Inv 5+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Mounted datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -6068,7 +6068,7 @@
         "en": "M 12\" · T 4 · Sv 4+ · W 2 · Ld 7+ · OC 2 · Inv 5+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Mounted datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -6113,7 +6113,7 @@
         "en": "M 6\" · T 4 · Sv 4+ · W 1 · Ld 8+ · OC 1 · Inv 6+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Infantry datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -6157,7 +6157,7 @@
         "en": "M 8\" · T 4 · Sv 4+ · W 2 · Ld 7+ · OC 1 · Inv 5+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Infantry datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -6204,7 +6204,7 @@
         "en": "M 8\" · T 4 · Sv 4+ · W 2 · Ld 7+ · OC 1 · Inv 5+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Infantry datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -6383,7 +6383,7 @@
         "en": "M 10\" · T 10 · Sv 2+ · W 12 · Ld 7+ · OC 3"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Vehicle datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -6472,7 +6472,7 @@
         "en": "M 10\" · T 7 · Sv 3+ · W 7 · Ld 7+ · OC 2 · Inv 5+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Vehicle datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -6518,7 +6518,7 @@
         "en": "M 10\" · T 7 · Sv 3+ · W 7 · Ld 7+ · OC 2 · Inv 5+"
       },
       "definition": {
-        "en": "Other datasheet. Codex transcription."
+        "en": "Vehicle datasheet. Codex transcription."
       },
       "structured": {
         "statline": {
@@ -7317,47 +7317,6 @@
         "en": "Close combat weapon"
       },
       "summary": {
-        "en": "Melee · Melee · A 3 · WS 4+ · S 6 · AP 0 · D 1"
-      },
-      "definition": {
-        "en": "Melee · Melee · A 3 · WS 4+ · S 6 · AP 0 · D 1"
-      },
-      "structured": {
-        "weapon": {
-          "Range": "Melee",
-          "A": "3",
-          "WS": "4+",
-          "S": "6",
-          "AP": "0",
-          "D": "1"
-        }
-      },
-      "presentation": "profile",
-      "aliases": [
-        "weapon-close-combat-weapon-3"
-      ],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "adeptus-mechanicus",
-        "revision": "v1.1 + pinned 11e catalogue",
-        "locator": "unit-kastelan-robots"
-      },
-      "status": "provisional",
-      "sourceRefs": [
-        "adeptus-mechanicus"
-      ],
-      "mentions": []
-    },
-    "adeptus-mechanicus-weapon-close-combat-weapon-4": {
-      "id": "adeptus-mechanicus-weapon-close-combat-weapon-4",
-      "kind": "weapon",
-      "scope": "adeptus-mechanicus",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Close combat weapon"
-      },
-      "summary": {
         "en": "Melee · Melee · A 2 · WS 4+ · S 5 · AP 0 · D 1"
       },
       "definition": {
@@ -7375,7 +7334,7 @@
       },
       "presentation": "profile",
       "aliases": [
-        "weapon-close-combat-weapon-4"
+        "weapon-close-combat-weapon-3"
       ],
       "related": [],
       "canonicalSource": {
@@ -7389,8 +7348,8 @@
       ],
       "mentions": []
     },
-    "adeptus-mechanicus-weapon-close-combat-weapon-5": {
-      "id": "adeptus-mechanicus-weapon-close-combat-weapon-5",
+    "adeptus-mechanicus-weapon-close-combat-weapon-4": {
+      "id": "adeptus-mechanicus-weapon-close-combat-weapon-4",
       "kind": "weapon",
       "scope": "adeptus-mechanicus",
       "edition": "11e",
@@ -7416,13 +7375,54 @@
       },
       "presentation": "profile",
       "aliases": [
-        "weapon-close-combat-weapon-5"
+        "weapon-close-combat-weapon-4"
       ],
       "related": [],
       "canonicalSource": {
         "documentId": "adeptus-mechanicus",
         "revision": "v1.1 + pinned 11e catalogue",
         "locator": "unit-pteraxii-skystalkers"
+      },
+      "status": "provisional",
+      "sourceRefs": [
+        "adeptus-mechanicus"
+      ],
+      "mentions": []
+    },
+    "adeptus-mechanicus-weapon-close-combat-weapon-5": {
+      "id": "adeptus-mechanicus-weapon-close-combat-weapon-5",
+      "kind": "weapon",
+      "scope": "adeptus-mechanicus",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Close combat weapon"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 3 · WS 4+ · S 6 · AP 0 · D 1"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 3 · WS 4+ · S 6 · AP 0 · D 1"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "3",
+          "WS": "4+",
+          "S": "6",
+          "AP": "0",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [
+        "weapon-close-combat-weapon-5"
+      ],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "adeptus-mechanicus",
+        "revision": "v1.1 + pinned 11e catalogue",
+        "locator": "unit-kastelan-robots"
       },
       "status": "provisional",
       "sourceRefs": [
@@ -11409,8 +11409,7 @@
       "status": "verified",
       "sourceRefs": [
         "core-rules",
-        "death-guard",
-        "tau-empire"
+        "death-guard"
       ],
       "summarySource": {
         "documentId": "core-rules",
@@ -12379,10 +12378,7 @@
       "status": "verified",
       "sourceRefs": [
         "core-rules",
-        "death-guard",
-        "emperors-children",
-        "tau-empire",
-        "tyranids"
+        "death-guard"
       ],
       "summarySource": {
         "documentId": "death-guard",
@@ -12690,8 +12686,7 @@
       "status": "verified",
       "sourceRefs": [
         "core-rules",
-        "death-guard",
-        "tau-empire"
+        "death-guard"
       ],
       "summarySource": {
         "documentId": "death-guard",
@@ -12761,9 +12756,7 @@
       "status": "verified",
       "sourceRefs": [
         "core-rules",
-        "death-guard",
-        "emperors-children",
-        "tyranids"
+        "death-guard"
       ],
       "summarySource": {
         "documentId": "death-guard",
@@ -12873,9 +12866,7 @@
       "status": "verified",
       "sourceRefs": [
         "core-rules",
-        "death-guard",
-        "emperors-children",
-        "tau-empire"
+        "death-guard"
       ],
       "summarySource": {
         "documentId": "death-guard",
@@ -12950,8 +12941,7 @@
       },
       "status": "verified",
       "sourceRefs": [
-        "core-rules",
-        "emperors-children"
+        "core-rules"
       ],
       "mentions": [],
       "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-17",
@@ -13025,8 +13015,7 @@
       "status": "verified",
       "sourceRefs": [
         "core-rules",
-        "death-guard",
-        "tau-empire"
+        "death-guard"
       ],
       "summarySource": {
         "documentId": "death-guard",
@@ -13068,10 +13057,7 @@
       "status": "verified",
       "sourceRefs": [
         "core-rules",
-        "death-guard",
-        "emperors-children",
-        "tau-empire",
-        "tyranids"
+        "death-guard"
       ],
       "summarySource": {
         "documentId": "death-guard",
@@ -13112,9 +13098,7 @@
       },
       "status": "verified",
       "sourceRefs": [
-        "core-rules",
-        "emperors-children",
-        "tau-empire"
+        "core-rules"
       ],
       "mentions": [],
       "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-21",
@@ -13152,8 +13136,7 @@
       "status": "verified",
       "sourceRefs": [
         "core-rules",
-        "death-guard",
-        "tau-empire"
+        "death-guard"
       ],
       "summarySource": {
         "documentId": "death-guard",
@@ -13233,10 +13216,7 @@
       "status": "verified",
       "sourceRefs": [
         "core-rules",
-        "death-guard",
-        "emperors-children",
-        "tau-empire",
-        "tyranids"
+        "death-guard"
       ],
       "summarySource": {
         "documentId": "death-guard",
@@ -13438,8 +13418,7 @@
       },
       "status": "verified",
       "sourceRefs": [
-        "core-rules",
-        "tau-empire"
+        "core-rules"
       ],
       "mentions": [],
       "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-26",
@@ -13543,9 +13522,7 @@
       "status": "verified",
       "sourceRefs": [
         "core-rules",
-        "death-guard",
-        "emperors-children",
-        "tau-empire"
+        "death-guard"
       ],
       "summarySource": {
         "documentId": "death-guard",
@@ -13585,8 +13562,7 @@
       "status": "verified",
       "sourceRefs": [
         "core-rules",
-        "death-guard",
-        "emperors-children"
+        "death-guard"
       ],
       "summarySource": {
         "documentId": "death-guard",
@@ -21567,9 +21543,7 @@
       "status": "verified",
       "sourceRefs": [
         "core-rules",
-        "death-guard",
-        "tau-empire",
-        "tyranids"
+        "death-guard"
       ],
       "summarySource": {
         "documentId": "death-guard",
@@ -21789,9 +21763,7 @@
       "status": "verified",
       "sourceRefs": [
         "core-rules",
-        "death-guard",
-        "emperors-children",
-        "tau-empire"
+        "death-guard"
       ],
       "summarySource": {
         "documentId": "death-guard",
@@ -21832,9 +21804,7 @@
       "status": "verified",
       "sourceRefs": [
         "core-rules",
-        "death-guard",
-        "emperors-children",
-        "tau-empire"
+        "death-guard"
       ],
       "summarySource": {
         "documentId": "death-guard",
@@ -33913,37 +33883,6 @@
       ],
       "mentions": []
     },
-    "emperors-children-ability-anti": {
-      "id": "emperors-children-ability-anti",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Anti"
-      },
-      "summary": {
-        "en": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example:…"
-      },
-      "definition": {
-        "en": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-chaos-rhino"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-chaos-rhino",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
     "emperors-children-ability-assault-ramp": {
       "id": "emperors-children-ability-assault-ramp",
       "kind": "datasheet-ability",
@@ -33992,37 +33931,6 @@
       },
       "structured": {},
       "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-chaos-rhino"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-chaos-rhino",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
-    "emperors-children-ability-blast": {
-      "id": "emperors-children-ability-blast",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Blast"
-      },
-      "summary": {
-        "en": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).…"
-      },
-      "definition": {
-        "en": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. *Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*"
-      },
-      "structured": {},
-      "presentation": "article",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -34223,99 +34131,6 @@
       ],
       "mentions": []
     },
-    "emperors-children-ability-deadly-demise-d3": {
-      "id": "emperors-children-ability-deadly-demise-d3",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Deadly Demise D3"
-      },
-      "summary": {
-        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise;…"
-      },
-      "definition": {
-        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-daemon-prince-of-slaanesh"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-daemon-prince-of-slaanesh",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
-    "emperors-children-ability-deadly-demise-d6": {
-      "id": "emperors-children-ability-deadly-demise-d6",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Deadly Demise D6"
-      },
-      "summary": {
-        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise;…"
-      },
-      "definition": {
-        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-fulgrim"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-fulgrim",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
-    "emperors-children-ability-devastating-wounds": {
-      "id": "emperors-children-ability-devastating-wounds",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Devastating Wounds"
-      },
-      "summary": {
-        "en": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon.…"
-      },
-      "definition": {
-        "en": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*"
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-sorcerer"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-sorcerer",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
     "emperors-children-ability-doom-siren": {
       "id": "emperors-children-ability-doom-siren",
       "kind": "datasheet-ability",
@@ -34502,99 +34317,6 @@
       ],
       "mentions": []
     },
-    "emperors-children-ability-extra-attacks": {
-      "id": "emperors-children-ability-extra-attacks",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Extra Attacks"
-      },
-      "summary": {
-        "en": "Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step Select Weapons, for each of those models, you must select:…"
-      },
-      "definition": {
-        "en": "Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step Select Weapons, for each of those models, you must select: - All of that model’s [EXTRA ATTACKS] weapons. - One of that model’s other melee weapons, if possible."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-lord-exultant"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-lord-exultant",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
-    "emperors-children-ability-feel-no-pain-5": {
-      "id": "emperors-children-ability-feel-no-pain-5",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Feel No Pain 5+"
-      },
-      "summary": {
-        "en": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
-      },
-      "definition": {
-        "en": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-lucius-the-eternal"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-lucius-the-eternal",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
-    "emperors-children-ability-firing-deck-2": {
-      "id": "emperors-children-ability-firing-deck-2",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Firing Deck 2"
-      },
-      "summary": {
-        "en": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1.…"
-      },
-      "definition": {
-        "en": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-chaos-rhino"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-chaos-rhino",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
     "emperors-children-ability-glutton-for-punishment": {
       "id": "emperors-children-ability-glutton-for-punishment",
       "kind": "datasheet-ability",
@@ -34651,192 +34373,6 @@
         "locator": "unit-infractors"
       },
       "fullRulePath": "books/emperors-children/reader.html#unit-infractors",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
-    "emperors-children-ability-ignores-cover": {
-      "id": "emperors-children-ability-ignores-cover",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Ignores Cover"
-      },
-      "summary": {
-        "en": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack Benefit of Cover, including from rules that give a model or unit the benefit of cover (for example Stealth )."
-      },
-      "definition": {
-        "en": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack Benefit of Cover, including from rules that give a model or unit the benefit of cover (for example Stealth )."
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-lord-exultant"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-lord-exultant",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
-    "emperors-children-ability-leader": {
-      "id": "emperors-children-ability-leader",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This model can be attached to the following units: Infractors; Tormentors"
-      },
-      "definition": {
-        "en": "This model can be attached to the following units: Infractors; Tormentors"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-lord-exultant"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-lord-exultant",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
-    "emperors-children-ability-leader-2": {
-      "id": "emperors-children-ability-leader-2",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes.…"
-      },
-      "definition": {
-        "en": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit. Each time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-lord-exultant"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-lord-exultant",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
-    "emperors-children-ability-leader-3": {
-      "id": "emperors-children-ability-leader-3",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This model can be attached to the following units: Emperor's Children Terminator Squad; Noise Marines"
-      },
-      "definition": {
-        "en": "This model can be attached to the following units: Emperor's Children Terminator Squad; Noise Marines"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-lord-kakophonist"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-lord-kakophonist",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
-    "emperors-children-ability-leader-4": {
-      "id": "emperors-children-ability-leader-4",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This model can be attached to the following units: Infractors; Noise Marines; Tormentors"
-      },
-      "definition": {
-        "en": "This model can be attached to the following units: Infractors; Noise Marines; Tormentors"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-sorcerer"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-sorcerer",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
-    "emperors-children-ability-leader-5": {
-      "id": "emperors-children-ability-leader-5",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This model can be attached to the following units: - Flawless Blades"
-      },
-      "definition": {
-        "en": "This model can be attached to the following units: - Flawless Blades"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-lucius-the-eternal"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-lucius-the-eternal",
       "status": "provisional",
       "sourceRefs": [
         "emperors-children"
@@ -34936,37 +34472,6 @@
       ],
       "mentions": []
     },
-    "emperors-children-ability-melta": {
-      "id": "emperors-children-ability-melta",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Melta"
-      },
-      "summary": {
-        "en": "This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D…"
-      },
-      "definition": {
-        "en": "This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic. *Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-tormentors"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-tormentors",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
     "emperors-children-ability-objective-defiled": {
       "id": "emperors-children-ability-objective-defiled",
       "kind": "datasheet-ability",
@@ -35060,68 +34565,6 @@
       ],
       "mentions": []
     },
-    "emperors-children-ability-pistol": {
-      "id": "emperors-children-ability-pistol",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Pistol"
-      },
-      "summary": {
-        "en": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting.…"
-      },
-      "definition": {
-        "en": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting. When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: - One or more of its [CLOSE-QUARTERS] weapons. - One or more of its other ranged weapons."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-infractors"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-infractors",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
-    "emperors-children-ability-rapid-fire": {
-      "id": "emperors-children-ability-rapid-fire",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Rapid Fire"
-      },
-      "summary": {
-        "en": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. *Example:…"
-      },
-      "definition": {
-        "en": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. *Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range, you would gather one additional attack dice for that weapon (for a total of two for that weapon).*"
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-tormentors"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-tormentors",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
     "emperors-children-ability-revel-in-desecration": {
       "id": "emperors-children-ability-revel-in-desecration",
       "kind": "datasheet-ability",
@@ -35147,37 +34590,6 @@
         "locator": "unit-defiler"
       },
       "fullRulePath": "books/emperors-children/reader.html#unit-defiler",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
-    "emperors-children-ability-scouts-6": {
-      "id": "emperors-children-ability-scouts-6",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Scouts 6\""
-      },
-      "summary": {
-        "en": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:…"
-      },
-      "definition": {
-        "en": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-infractors"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-infractors",
       "status": "provisional",
       "sourceRefs": [
         "emperors-children"
@@ -35325,37 +34737,6 @@
       },
       "structured": {},
       "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "emperors-children-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-fulgrim"
-      },
-      "fullRulePath": "books/emperors-children/reader.html#unit-fulgrim",
-      "status": "provisional",
-      "sourceRefs": [
-        "emperors-children"
-      ],
-      "mentions": []
-    },
-    "emperors-children-ability-sustained-hits": {
-      "id": "emperors-children-ability-sustained-hits",
-      "kind": "datasheet-ability",
-      "scope": "emperors-children",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Sustained Hits"
-      },
-      "summary": {
-        "en": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X. *Example:…"
-      },
-      "definition": {
-        "en": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X. *Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability)."
-      },
-      "structured": {},
-      "presentation": "article",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -43809,37 +43190,6 @@
       ],
       "mentions": []
     },
-    "tau-empire-ability-anti": {
-      "id": "tau-empire-ability-anti",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Anti"
-      },
-      "summary": {
-        "en": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example:…"
-      },
-      "definition": {
-        "en": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-kroot-war-shaper"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-kroot-war-shaper",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
     "tau-empire-ability-armour-hunter": {
       "id": "tau-empire-ability-armour-hunter",
       "kind": "datasheet-ability",
@@ -43958,68 +43308,6 @@
         "locator": "unit-ghostkeel-battlesuit"
       },
       "fullRulePath": "books/tau-empire/reader.html#unit-ghostkeel-battlesuit",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-blast": {
-      "id": "tau-empire-ability-blast",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Blast"
-      },
-      "summary": {
-        "en": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down).…"
-      },
-      "definition": {
-        "en": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. *Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*"
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-commander-in-coldstar-battlesuit"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-commander-in-coldstar-battlesuit",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-bodyguard": {
-      "id": "tau-empire-ability-bodyguard",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Bodyguard"
-      },
-      "summary": {
-        "en": "If this unit has a Starting Strength of 20, you can attach up to two Leader units to it instead of one, provided those Leaders are not duplicates (for example you cannot attach two WAR SHAPERS to this unit).…"
-      },
-      "definition": {
-        "en": "If this unit has a Starting Strength of 20, you can attach up to two Leader units to it instead of one, provided those Leaders are not duplicates (for example you cannot attach two WAR SHAPERS to this unit). If you do, and this unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-kroot-carnivores"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-kroot-carnivores",
       "status": "provisional",
       "sourceRefs": [
         "tau-empire"
@@ -44274,99 +43562,6 @@
       ],
       "mentions": []
     },
-    "tau-empire-ability-deadly-demise-1": {
-      "id": "tau-empire-ability-deadly-demise-1",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Deadly Demise 1"
-      },
-      "summary": {
-        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise;…"
-      },
-      "definition": {
-        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-piranhas"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-piranhas",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-deadly-demise-d3": {
-      "id": "tau-empire-ability-deadly-demise-d3",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Deadly Demise D3"
-      },
-      "summary": {
-        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise;…"
-      },
-      "definition": {
-        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-devilfish"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-devilfish",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-deadly-demise-d6": {
-      "id": "tau-empire-ability-deadly-demise-d6",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Deadly Demise D6"
-      },
-      "summary": {
-        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise;…"
-      },
-      "definition": {
-        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-riptide-battlesuit"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-riptide-battlesuit",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
     "tau-empire-ability-deadly-demise-d6-2": {
       "id": "tau-empire-ability-deadly-demise-d6-2",
       "kind": "datasheet-ability",
@@ -44392,37 +43587,6 @@
         "locator": "unit-stormsurge"
       },
       "fullRulePath": "books/tau-empire/reader.html#unit-stormsurge",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-devastating-wounds": {
-      "id": "tau-empire-ability-devastating-wounds",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Devastating Wounds"
-      },
-      "summary": {
-        "en": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon.…"
-      },
-      "definition": {
-        "en": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*"
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-kroot-farstalkers"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-kroot-farstalkers",
       "status": "provisional",
       "sourceRefs": [
         "tau-empire"
@@ -44584,37 +43748,6 @@
       ],
       "mentions": []
     },
-    "tau-empire-ability-extra-attacks": {
-      "id": "tau-empire-ability-extra-attacks",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Extra Attacks"
-      },
-      "summary": {
-        "en": "Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step Select Weapons, for each of those models, you must select:…"
-      },
-      "definition": {
-        "en": "Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step Select Weapons, for each of those models, you must select: - All of that model’s [EXTRA ATTACKS] weapons. - One of that model’s other melee weapons, if possible."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-kroot-lone-spear"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-kroot-lone-spear",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
     "tau-empire-ability-failure-is-not-an-option": {
       "id": "tau-empire-ability-failure-is-not-an-option",
       "kind": "datasheet-ability",
@@ -44733,68 +43866,6 @@
         "locator": "unit-crisis-fireknife-battlesuits"
       },
       "fullRulePath": "books/tau-empire/reader.html#unit-crisis-fireknife-battlesuits",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-firing-deck-11": {
-      "id": "tau-empire-ability-firing-deck-11",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Firing Deck 11"
-      },
-      "summary": {
-        "en": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1.…"
-      },
-      "definition": {
-        "en": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-tidewall-droneport"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-tidewall-droneport",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-firing-deck-20": {
-      "id": "tau-empire-ability-firing-deck-20",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Firing Deck 20"
-      },
-      "summary": {
-        "en": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1.…"
-      },
-      "definition": {
-        "en": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-tidewall-shieldline"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-tidewall-shieldline",
       "status": "provisional",
       "sourceRefs": [
         "tau-empire"
@@ -45018,37 +44089,6 @@
       ],
       "mentions": []
     },
-    "tau-empire-ability-heavy": {
-      "id": "tau-empire-ability-heavy",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Heavy"
-      },
-      "summary": {
-        "en": "In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit: - That unit is unengaged. - That unit was not set up on the battlefield this turn.…"
-      },
-      "definition": {
-        "en": "In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit: - That unit is unengaged. - That unit was not set up on the battlefield this turn. - No model in that unit has moved more than 3\" this turn."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-firesight-team"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-firesight-team",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
     "tau-empire-ability-heavy-walker": {
       "id": "tau-empire-ability-heavy-walker",
       "kind": "datasheet-ability",
@@ -45204,37 +44244,6 @@
       ],
       "mentions": []
     },
-    "tau-empire-ability-ignores-cover": {
-      "id": "tau-empire-ability-ignores-cover",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Ignores Cover"
-      },
-      "summary": {
-        "en": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack Benefit of Cover, including from rules that give a model or unit the benefit of cover (for example Stealth )."
-      },
-      "definition": {
-        "en": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack Benefit of Cover, including from rules that give a model or unit the benefit of cover (for example Stealth )."
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-commander-in-coldstar-battlesuit"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-commander-in-coldstar-battlesuit",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
     "tau-empire-ability-jammer-array": {
       "id": "tau-empire-ability-jammer-array",
       "kind": "datasheet-ability",
@@ -45359,37 +44368,6 @@
       ],
       "mentions": []
     },
-    "tau-empire-ability-lethal-hits": {
-      "id": "tau-empire-ability-lethal-hits",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Lethal Hits"
-      },
-      "summary": {
-        "en": "Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target. *Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack.…"
-      },
-      "definition": {
-        "en": "Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target. *Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].*"
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-kroot-war-shaper"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-kroot-war-shaper",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
     "tau-empire-ability-localised-stealth-projectors-aura": {
       "id": "tau-empire-ability-localised-stealth-projectors-aura",
       "kind": "datasheet-ability",
@@ -45477,37 +44455,6 @@
         "locator": "unit-breacher-team"
       },
       "fullRulePath": "books/tau-empire/reader.html#unit-breacher-team",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-melta": {
-      "id": "tau-empire-ability-melta",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Melta"
-      },
-      "summary": {
-        "en": "This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D…"
-      },
-      "definition": {
-        "en": "This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic. *Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-commander-in-coldstar-battlesuit"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-commander-in-coldstar-battlesuit",
       "status": "provisional",
       "sourceRefs": [
         "tau-empire"
@@ -45632,37 +44579,6 @@
         "locator": "unit-vespid-stingwings"
       },
       "fullRulePath": "books/tau-empire/reader.html#unit-vespid-stingwings",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-pistol": {
-      "id": "tau-empire-ability-pistol",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Pistol"
-      },
-      "summary": {
-        "en": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting.…"
-      },
-      "definition": {
-        "en": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting. When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: - One or more of its [CLOSE-QUARTERS] weapons. - One or more of its other ranged weapons."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-breacher-team"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-breacher-team",
       "status": "provisional",
       "sourceRefs": [
         "tau-empire"
@@ -45824,37 +44740,6 @@
       ],
       "mentions": []
     },
-    "tau-empire-ability-rapid-fire": {
-      "id": "tau-empire-ability-rapid-fire",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Rapid Fire"
-      },
-      "summary": {
-        "en": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. *Example:…"
-      },
-      "definition": {
-        "en": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. *Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range, you would gather one additional attack dice for that weapon (for a total of two for that weapon).*"
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-strike-team"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-strike-team",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
     "tau-empire-ability-recon-drone": {
       "id": "tau-empire-ability-recon-drone",
       "kind": "datasheet-ability",
@@ -46004,99 +44889,6 @@
         "locator": "unit-kroot-war-shaper"
       },
       "fullRulePath": "books/tau-empire/reader.html#unit-kroot-war-shaper",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-scouts-7": {
-      "id": "tau-empire-ability-scouts-7",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Scouts 7\""
-      },
-      "summary": {
-        "en": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:…"
-      },
-      "definition": {
-        "en": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-kroot-flesh-shaper"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-kroot-flesh-shaper",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-scouts-8": {
-      "id": "tau-empire-ability-scouts-8",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Scouts 8\""
-      },
-      "summary": {
-        "en": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:…"
-      },
-      "definition": {
-        "en": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-the-twin-lance"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-the-twin-lance",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-scouts-9": {
-      "id": "tau-empire-ability-scouts-9",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Scouts 9\""
-      },
-      "summary": {
-        "en": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:…"
-      },
-      "definition": {
-        "en": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-piranhas"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-piranhas",
       "status": "provisional",
       "sourceRefs": [
         "tau-empire"
@@ -46376,37 +45168,6 @@
         "locator": "unit-commander-shadowsun"
       },
       "fullRulePath": "books/tau-empire/reader.html#unit-commander-shadowsun",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
-    "tau-empire-ability-sustained-hits": {
-      "id": "tau-empire-ability-sustained-hits",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Sustained Hits"
-      },
-      "summary": {
-        "en": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X. *Example:…"
-      },
-      "definition": {
-        "en": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X. *Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability)."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-kroot-flesh-shaper"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-kroot-flesh-shaper",
       "status": "provisional",
       "sourceRefs": [
         "tau-empire"
@@ -54495,99 +53256,6 @@
       ],
       "mentions": []
     },
-    "tyranids-ability-deadly-demise-1": {
-      "id": "tyranids-ability-deadly-demise-1",
-      "kind": "datasheet-ability",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Deadly Demise 1"
-      },
-      "summary": {
-        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise;…"
-      },
-      "definition": {
-        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-biovores"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-biovores",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
-    "tyranids-ability-deadly-demise-d3": {
-      "id": "tyranids-ability-deadly-demise-d3",
-      "kind": "datasheet-ability",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Deadly Demise D3"
-      },
-      "summary": {
-        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise;…"
-      },
-      "definition": {
-        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-hive-tyrant"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-hive-tyrant",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
-    "tyranids-ability-deadly-demise-d6": {
-      "id": "tyranids-ability-deadly-demise-d6",
-      "kind": "datasheet-ability",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Deadly Demise D6"
-      },
-      "summary": {
-        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise;…"
-      },
-      "definition": {
-        "en": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-tervigon"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-tervigon",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
     "tyranids-ability-death-blow": {
       "id": "tyranids-ability-death-blow",
       "kind": "datasheet-ability",
@@ -54923,37 +53591,6 @@
         "locator": "unit-psychophage"
       },
       "fullRulePath": "books/tyranids/reader.html#unit-psychophage",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
-    "tyranids-ability-feel-no-pain-5": {
-      "id": "tyranids-ability-feel-no-pain-5",
-      "kind": "datasheet-ability",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Feel No Pain 5+"
-      },
-      "summary": {
-        "en": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
-      },
-      "definition": {
-        "en": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost."
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-old-one-eye"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-old-one-eye",
       "status": "provisional",
       "sourceRefs": [
         "tyranids"
@@ -55394,254 +54031,6 @@
       ],
       "mentions": []
     },
-    "tyranids-ability-leader": {
-      "id": "tyranids-ability-leader",
-      "kind": "datasheet-ability",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This model can be attached to the following unit: - Genestealers"
-      },
-      "definition": {
-        "en": "This model can be attached to the following unit: - Genestealers"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-broodlord"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-broodlord",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
-    "tyranids-ability-leader-2": {
-      "id": "tyranids-ability-leader-2",
-      "kind": "datasheet-ability",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes.…"
-      },
-      "definition": {
-        "en": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit. Each time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-broodlord"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-broodlord",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
-    "tyranids-ability-leader-3": {
-      "id": "tyranids-ability-leader-3",
-      "kind": "datasheet-ability",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This model can be attached to the following unit: - Tyrant Guard"
-      },
-      "definition": {
-        "en": "This model can be attached to the following unit: - Tyrant Guard"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-hive-tyrant"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-hive-tyrant",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
-    "tyranids-ability-leader-4": {
-      "id": "tyranids-ability-leader-4",
-      "kind": "datasheet-ability",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This unit can be attached to the following units: Raveners"
-      },
-      "definition": {
-        "en": "This unit can be attached to the following units: Raveners"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-hyperadapted-raveners"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-hyperadapted-raveners",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
-    "tyranids-ability-leader-5": {
-      "id": "tyranids-ability-leader-5",
-      "kind": "datasheet-ability",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This model can be attached to the following units: - Neurogaunts-Tyrant Guard-Zoanthropes"
-      },
-      "definition": {
-        "en": "This model can be attached to the following units: - Neurogaunts-Tyrant Guard-Zoanthropes"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-neurotyrant"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-neurotyrant",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
-    "tyranids-ability-leader-6": {
-      "id": "tyranids-ability-leader-6",
-      "kind": "datasheet-ability",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This model can be attached to the following unit: - Hormagaunts-Termagants-Tyranid Warriors with Melee Bio-weapons-Tyranid Warriors with Ranged Bio-weapons"
-      },
-      "definition": {
-        "en": "This model can be attached to the following unit: - Hormagaunts-Termagants-Tyranid Warriors with Melee Bio-weapons-Tyranid Warriors with Ranged Bio-weapons"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-tyranid-prime-with-lash-whip"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-tyranid-prime-with-lash-whip",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
-    "tyranids-ability-leader-7": {
-      "id": "tyranids-ability-leader-7",
-      "kind": "datasheet-ability",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This model can be attached to the following units: - Gargoyles-Tyranid Warriors With Melee Bio-Weapons-Tyranid Warriors With Ranged Bio-Weapons"
-      },
-      "definition": {
-        "en": "This model can be attached to the following units: - Gargoyles-Tyranid Warriors With Melee Bio-Weapons-Tyranid Warriors With Ranged Bio-Weapons"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-winged-tyranid-prime"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-winged-tyranid-prime",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
-    "tyranids-ability-leader-8": {
-      "id": "tyranids-ability-leader-8",
-      "kind": "datasheet-ability",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Leader"
-      },
-      "summary": {
-        "en": "This model can be attached to the following unit: - Carnifexes"
-      },
-      "definition": {
-        "en": "This model can be attached to the following unit: - Carnifexes"
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-old-one-eye"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-old-one-eye",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
     "tyranids-ability-malign-presence-aura": {
       "id": "tyranids-ability-malign-presence-aura",
       "kind": "datasheet-ability",
@@ -56039,37 +54428,6 @@
         "locator": "unit-tyrannofex"
       },
       "fullRulePath": "books/tyranids/reader.html#unit-tyrannofex",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
-    "tyranids-ability-scouts-8": {
-      "id": "tyranids-ability-scouts-8",
-      "kind": "datasheet-ability",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Scouts 8\""
-      },
-      "summary": {
-        "en": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following:…"
-      },
-      "definition": {
-        "en": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-broodlord"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-broodlord",
       "status": "provisional",
       "sourceRefs": [
         "tyranids"

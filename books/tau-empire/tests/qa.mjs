@@ -35,6 +35,7 @@ const key=value=>String(value).replace(/\s*\([^)]*\)\s*$/,'').trim().toLowerCase
 const decode=value=>value.replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&lt;','<').replaceAll('&gt;','>');
 const lines=value=>decode(value).split(/\r?\n/).map(line=>line.replace(/\s+/g,' ').trim()).filter(Boolean);
 const unitMarkup=(html,id)=>{const opener=new RegExp(`<article class="unit-card[^"]*" id="${id}"`).exec(html);assert.ok(opener,`${id}: card missing`);const start=opener.index,next=html.indexOf('<article class="unit-card',start+1);return html.slice(start,next<0?html.length:next);};
+const sectionMarkup=(html,id)=>{const match=new RegExp(`<section class="unit-part" id="${id}">([\\s\\S]*?)<\\/section>`).exec(html);assert.ok(match,`${id}: section missing`);return match[1];};
 const weaponBase=value=>{const normalized=String(value).toLowerCase().replace(/[^a-z0-9]+/g,' ').trim().replace(/\s+(?:d\d+|\d+)$/,'').trim();return normalized.startsWith('anti ')?'anti':normalized;};
 const coreWeaponTerms=new Map(Object.entries(glossary).filter(([id])=>id.startsWith('core-')).map(([id,term])=>[weaponBase(String(term.title?.en||'').replace(/^\[|\]$/g,'')),id]));
 const localWeaponTerms=new Map(Object.entries(context).map(([id,entry])=>[weaponBase(glossary[entry.termId]?.title?.en||''),id]).filter(([base])=>base));
@@ -55,6 +56,18 @@ assert.doesNotMatch(reader+mobileDatasheetMarkup,/<button class="weapon-button"[
 assert.doesNotMatch(reader+mobileDatasheetMarkup,/<(?:button|span)[^>]*class="[^"]*\btag\b[^"]*"[^>]*>[^<]*<button/i);
 assert.equal(fs.readdirSync(path.join(root,'mobile')).filter(file=>file.endsWith('.html')).length,49);
 for(const output of [reader,mobileDatasheetMarkup]){assert.match(output,/death-guard\/styles\/content\.css\?v=\d+/);assert.match(output,/death-guard\/styles\/popups\.css\?v=\d+/);assert.match(output,/shared\/datasheet-system\.css\?v=\d+/);}
+const sourceWargearAbilities=allUnits.flatMap(unit=>(unit.wargearAbilities||[]).map(ability=>({unit,ability})));
+assert.deepEqual([sourceWargearAbilities.length,new Set(sourceWargearAbilities.map(item=>item.ability.title)).size,new Set(sourceWargearAbilities.map(item=>item.unit.id)).size],[52,14,16]);
+for(const unit of allUnits){
+  const abilities=unit.wargearAbilities||[],id=`${unit.id.slice(5)}-wargear-abilities`;
+  assert.equal(unit.abilities.some(ability=>abilities.some(wargearAbility=>key(ability.title)===key(wargearAbility.title))),false,`${unit.title}: Wargear Ability duplicated in ordinary Abilities`);
+  if(!abilities.length){assert.ok(!unitMarkup(reader,unit.id).includes(`id="${id}"`),`${unit.title}: empty desktop Wargear Abilities section`);continue;}
+  const desktop=sectionMarkup(unitMarkup(reader,unit.id),id),phone=sectionMarkup(fs.readFileSync(path.join(root,'mobile',`${unit.id.slice(5)}.html`),'utf8'),id);
+  for(const output of [desktop,phone]){
+    assert.ok(output.includes('These abilities apply only while the corresponding wargear is equipped.'));
+    for(const ability of abilities)assert.match(output,new RegExp(`<button class="term-button" data-term="[^"]+"[^>]*>${ability.title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}<\\/button>`));
+  }
+}
 
 assert.deepEqual([pack.meta.version,pack.meta.pageCount,pack.meta.sha256],['1.1',61,'32B985646BAA02A3B505FF3404E91D374A5F53C1D3B8000D7166CA94D1B52675']);
 assert.equal(pack.meta.legalFrom,'2026-07-22');
@@ -100,7 +113,7 @@ const update=id=>{const matches=pack.updates.filter(item=>item.id===id);assert.e
 const sameText=(a,b)=>String(a||'').replace(/\s+/g,' ').trim()===String(b||'').replace(/\s+/g,' ').trim();
 const coveredUpdates=new Set();
 const cover=(id,condition)=>{assert.ok(condition,`${id}: official update is not effective`);coveredUpdates.add(id);};
-const ability=(unitTitle,abilityTitle)=>byTitle(unitTitle)?.abilities.find(item=>key(item.title)===key(abilityTitle));
+const ability=(unitTitle,abilityTitle)=>[...(byTitle(unitTitle)?.abilities||[]),...(byTitle(unitTitle)?.wargearAbilities||[])].find(item=>key(item.title)===key(abilityTitle));
 const detachment=id=>[...pack.detachments,...parity.detachments].find(item=>item.id===id);
 cover('army-for-the-greater-good',sameText(ability('Breacher Team','For The Greater Good')?.text,update('army-for-the-greater-good').change));
 for(const [id,detachmentId,kind,title] of [
@@ -173,8 +186,8 @@ assert.match(reader,/scripts\/roster-filter\.js\?v=\d+/);
 assert.match(reader,/scripts\/app\.js\?v=\d+/);
 assert.doesNotMatch(related,/data-eligibility|data-keyword-grants/,'matrix template must not retain legacy matcher inputs');
 assert.match(reader,/Reference in verification/);
-assert.ok(Object.keys(context).length>=300,'T’au Glossary context is incomplete');
-assert.ok(context['tau-empire-ability-deep-strike']?.termId==='core-deep-strike','Core Deep Strike must be canonical, not duplicated');
+assert.ok(Object.values(context).every(entry=>glossary[entry.termId]),"every T'au context entry must resolve a canonical glossary term");
+assert.ok(reader.includes('data-term="core-deep-strike"')&&!context['tau-empire-ability-deep-strike'],'Core Deep Strike must use the canonical term without a local duplicate');
 
 const sandbox={window:{}};vm.runInNewContext(fs.readFileSync(path.join(repo,'books','shared','related-rules-matcher.js'),'utf8'),sandbox);
 const keywordSet=values=>new Set(values.map(value=>value.toUpperCase()));

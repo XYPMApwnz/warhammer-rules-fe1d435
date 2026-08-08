@@ -62,12 +62,12 @@
       "termId": "core-deep-strike",
       "navigation": {
         "glossary": "glossary-core-deep-strike",
-        "datasheet": "unit-archaeopter-transvector",
-        "statline": "archaeopter-transvector-profile",
+        "datasheet": "unit-pteraxii-skystalkers",
+        "statline": "pteraxii-skystalkers-profile",
         "units": [
-          "unit-archaeopter-transvector",
           "unit-pteraxii-skystalkers",
-          "unit-pteraxii-sterylizors"
+          "unit-pteraxii-sterylizors",
+          "unit-archaeopter-transvector"
         ]
       }
     },
@@ -307,11 +307,11 @@
           "unit-skitarii-vanguard",
           "unit-skitarii-marshal",
           "unit-sydonian-skatros",
-          "unit-ironstrider-ballistarii",
-          "unit-serberys-raiders",
-          "unit-serberys-sulphurhounds",
           "unit-sicarian-infiltrators",
           "unit-sicarian-ruststalkers",
+          "unit-serberys-raiders",
+          "unit-serberys-sulphurhounds",
+          "unit-ironstrider-ballistarii",
           "unit-sydonian-dragoons-with-radium-jezzails",
           "unit-sydonian-dragoons-with-taser-lances"
         ]
@@ -374,25 +374,25 @@
           "unit-skorpius-dunerider",
           "unit-belisarius-cawl",
           "unit-thulia-ghuld",
-          "unit-archaeopter-fusilave",
-          "unit-archaeopter-stratoraptor",
-          "unit-archaeopter-transvector",
           "unit-corpuscarii-electro-priests",
           "unit-fulgurite-electro-priests",
           "unit-hastarii-exterminators",
           "unit-hastarii-fusiliers",
-          "unit-ironstrider-ballistarii",
-          "unit-kastelan-robots",
           "unit-kataphron-breachers",
           "unit-kataphron-destroyers",
-          "unit-onager-dunecrawler",
           "unit-pteraxii-skystalkers",
           "unit-pteraxii-sterylizors",
-          "unit-serberys-raiders",
-          "unit-serberys-sulphurhounds",
           "unit-servitor-battleclade",
           "unit-sicarian-infiltrators",
           "unit-sicarian-ruststalkers",
+          "unit-serberys-raiders",
+          "unit-serberys-sulphurhounds",
+          "unit-archaeopter-fusilave",
+          "unit-archaeopter-stratoraptor",
+          "unit-archaeopter-transvector",
+          "unit-ironstrider-ballistarii",
+          "unit-kastelan-robots",
+          "unit-onager-dunecrawler",
           "unit-skorpius-disintegrator",
           "unit-sydonian-dragoons-with-radium-jezzails",
           "unit-sydonian-dragoons-with-taser-lances"
@@ -800,9 +800,9 @@
         "units": [
           "unit-skitarii-rangers",
           "unit-skitarii-vanguard",
+          "unit-servitor-battleclade",
           "unit-serberys-raiders",
-          "unit-serberys-sulphurhounds",
-          "unit-servitor-battleclade"
+          "unit-serberys-sulphurhounds"
         ]
       }
     },
@@ -1547,109 +1547,6 @@
         ]
       }
     },
-    "datasheet-bomb-rack": {
-      "termId": "adeptus-mechanicus-datasheet-bomb-rack",
-      "navigation": {
-        "glossary": "glossary-datasheet-bomb-rack",
-        "rule": "unit-archaeopter-fusilave",
-        "datasheet": "unit-archaeopter-fusilave",
-        "statline": "archaeopter-fusilave-profile",
-        "units": [
-          "unit-archaeopter-fusilave"
-        ]
-      }
-    },
-    "datasheet-chaff-launcher": {
-      "termId": "adeptus-mechanicus-datasheet-chaff-launcher",
-      "navigation": {
-        "glossary": "glossary-datasheet-chaff-launcher",
-        "rule": "unit-archaeopter-fusilave",
-        "datasheet": "unit-archaeopter-fusilave",
-        "statline": "archaeopter-fusilave-profile",
-        "units": [
-          "unit-archaeopter-fusilave",
-          "unit-archaeopter-stratoraptor",
-          "unit-archaeopter-transvector"
-        ]
-      }
-    },
-    "datasheet-command-uplink": {
-      "termId": "adeptus-mechanicus-datasheet-command-uplink",
-      "navigation": {
-        "glossary": "glossary-datasheet-command-uplink",
-        "rule": "unit-archaeopter-fusilave",
-        "datasheet": "unit-archaeopter-fusilave",
-        "statline": "archaeopter-fusilave-profile",
-        "units": [
-          "unit-archaeopter-fusilave",
-          "unit-archaeopter-stratoraptor",
-          "unit-archaeopter-transvector"
-        ]
-      }
-    },
-    "datasheet-strafing-run": {
-      "termId": "adeptus-mechanicus-datasheet-strafing-run",
-      "navigation": {
-        "glossary": "glossary-datasheet-strafing-run",
-        "rule": "unit-archaeopter-stratoraptor",
-        "datasheet": "unit-archaeopter-stratoraptor",
-        "statline": "archaeopter-stratoraptor-profile",
-        "units": [
-          "unit-archaeopter-stratoraptor"
-        ]
-      }
-    },
-    "weapon-cognis-heavy-stubber": {
-      "termId": "adeptus-mechanicus-weapon-cognis-heavy-stubber",
-      "navigation": {
-        "glossary": "glossary-weapon-cognis-heavy-stubber",
-        "rule": "unit-archaeopter-stratoraptor",
-        "datasheet": "unit-archaeopter-stratoraptor",
-        "statline": "archaeopter-stratoraptor-profile",
-        "units": [
-          "unit-archaeopter-stratoraptor",
-          "unit-onager-dunecrawler",
-          "unit-skorpius-disintegrator"
-        ]
-      }
-    },
-    "weapon-heavy-phosphor-blaster": {
-      "termId": "adeptus-mechanicus-weapon-heavy-phosphor-blaster",
-      "navigation": {
-        "glossary": "glossary-weapon-heavy-phosphor-blaster",
-        "rule": "unit-archaeopter-stratoraptor",
-        "datasheet": "unit-archaeopter-stratoraptor",
-        "statline": "archaeopter-stratoraptor-profile",
-        "units": [
-          "unit-archaeopter-stratoraptor",
-          "unit-kastelan-robots"
-        ]
-      }
-    },
-    "weapon-twin-cognis-lascannon": {
-      "termId": "adeptus-mechanicus-weapon-twin-cognis-lascannon",
-      "navigation": {
-        "glossary": "glossary-weapon-twin-cognis-lascannon",
-        "rule": "unit-archaeopter-stratoraptor",
-        "datasheet": "unit-archaeopter-stratoraptor",
-        "statline": "archaeopter-stratoraptor-profile",
-        "units": [
-          "unit-archaeopter-stratoraptor"
-        ]
-      }
-    },
-    "datasheet-aerial-deployment": {
-      "termId": "adeptus-mechanicus-datasheet-aerial-deployment",
-      "navigation": {
-        "glossary": "glossary-datasheet-aerial-deployment",
-        "rule": "unit-archaeopter-transvector",
-        "datasheet": "unit-archaeopter-transvector",
-        "statline": "archaeopter-transvector-profile",
-        "units": [
-          "unit-archaeopter-transvector"
-        ]
-      }
-    },
     "datasheet-electro-shock": {
       "termId": "adeptus-mechanicus-datasheet-electro-shock",
       "navigation": {
@@ -1820,151 +1717,6 @@
         ]
       }
     },
-    "datasheet-elevated-strider": {
-      "termId": "adeptus-mechanicus-datasheet-elevated-strider",
-      "navigation": {
-        "glossary": "glossary-datasheet-elevated-strider",
-        "rule": "unit-ironstrider-ballistarii",
-        "datasheet": "unit-ironstrider-ballistarii",
-        "statline": "ironstrider-ballistarii-profile",
-        "units": [
-          "unit-ironstrider-ballistarii"
-        ]
-      }
-    },
-    "weapon-twin-cognis-autocannon": {
-      "termId": "adeptus-mechanicus-weapon-twin-cognis-autocannon",
-      "navigation": {
-        "glossary": "glossary-weapon-twin-cognis-autocannon",
-        "rule": "unit-ironstrider-ballistarii",
-        "datasheet": "unit-ironstrider-ballistarii",
-        "statline": "ironstrider-ballistarii-profile",
-        "units": [
-          "unit-ironstrider-ballistarii"
-        ]
-      }
-    },
-    "weapon-ironstrider-feet": {
-      "termId": "adeptus-mechanicus-weapon-ironstrider-feet",
-      "navigation": {
-        "glossary": "glossary-weapon-ironstrider-feet",
-        "rule": "unit-ironstrider-ballistarii",
-        "datasheet": "unit-ironstrider-ballistarii",
-        "statline": "ironstrider-ballistarii-profile",
-        "units": [
-          "unit-ironstrider-ballistarii",
-          "unit-sydonian-dragoons-with-radium-jezzails"
-        ]
-      }
-    },
-    "weapon-twin-cognis-lascannon-2": {
-      "termId": "adeptus-mechanicus-weapon-twin-cognis-lascannon-2",
-      "navigation": {
-        "glossary": "glossary-weapon-twin-cognis-lascannon-2",
-        "rule": "unit-ironstrider-ballistarii",
-        "datasheet": "unit-ironstrider-ballistarii",
-        "statline": "ironstrider-ballistarii-profile",
-        "units": [
-          "unit-ironstrider-ballistarii"
-        ]
-      }
-    },
-    "datasheet-robotic-bodyguard": {
-      "termId": "adeptus-mechanicus-datasheet-robotic-bodyguard",
-      "navigation": {
-        "glossary": "glossary-datasheet-robotic-bodyguard",
-        "rule": "unit-kastelan-robots",
-        "datasheet": "unit-kastelan-robots",
-        "statline": "kastelan-robots-profile",
-        "units": [
-          "unit-kastelan-robots"
-        ]
-      }
-    },
-    "datasheet-repulsor-grid": {
-      "termId": "adeptus-mechanicus-datasheet-repulsor-grid",
-      "navigation": {
-        "glossary": "glossary-datasheet-repulsor-grid",
-        "rule": "unit-kastelan-robots",
-        "datasheet": "unit-kastelan-robots",
-        "statline": "kastelan-robots-profile",
-        "units": [
-          "unit-kastelan-robots"
-        ]
-      }
-    },
-    "weapon-close-combat-weapon-3": {
-      "termId": "adeptus-mechanicus-weapon-close-combat-weapon-3",
-      "navigation": {
-        "glossary": "glossary-weapon-close-combat-weapon-3",
-        "rule": "unit-kastelan-robots",
-        "datasheet": "unit-kastelan-robots",
-        "statline": "kastelan-robots-profile",
-        "units": [
-          "unit-kastelan-robots"
-        ]
-      }
-    },
-    "weapon-twin-kastelan-phosphor-blaster": {
-      "termId": "adeptus-mechanicus-weapon-twin-kastelan-phosphor-blaster",
-      "navigation": {
-        "glossary": "glossary-weapon-twin-kastelan-phosphor-blaster",
-        "rule": "unit-kastelan-robots",
-        "datasheet": "unit-kastelan-robots",
-        "statline": "kastelan-robots-profile",
-        "units": [
-          "unit-kastelan-robots"
-        ]
-      }
-    },
-    "weapon-twin-kastelan-fist": {
-      "termId": "adeptus-mechanicus-weapon-twin-kastelan-fist",
-      "navigation": {
-        "glossary": "glossary-weapon-twin-kastelan-fist",
-        "rule": "unit-kastelan-robots",
-        "datasheet": "unit-kastelan-robots",
-        "statline": "kastelan-robots-profile",
-        "units": [
-          "unit-kastelan-robots"
-        ]
-      }
-    },
-    "weapon-kastelan-fist": {
-      "termId": "adeptus-mechanicus-weapon-kastelan-fist",
-      "navigation": {
-        "glossary": "glossary-weapon-kastelan-fist",
-        "rule": "unit-kastelan-robots",
-        "datasheet": "unit-kastelan-robots",
-        "statline": "kastelan-robots-profile",
-        "units": [
-          "unit-kastelan-robots"
-        ]
-      }
-    },
-    "weapon-kastelan-phosphor-blaster": {
-      "termId": "adeptus-mechanicus-weapon-kastelan-phosphor-blaster",
-      "navigation": {
-        "glossary": "glossary-weapon-kastelan-phosphor-blaster",
-        "rule": "unit-kastelan-robots",
-        "datasheet": "unit-kastelan-robots",
-        "statline": "kastelan-robots-profile",
-        "units": [
-          "unit-kastelan-robots"
-        ]
-      }
-    },
-    "weapon-incendine-combustor": {
-      "termId": "adeptus-mechanicus-weapon-incendine-combustor",
-      "navigation": {
-        "glossary": "glossary-weapon-incendine-combustor",
-        "rule": "unit-kastelan-robots",
-        "datasheet": "unit-kastelan-robots",
-        "statline": "kastelan-robots-profile",
-        "units": [
-          "unit-kastelan-robots"
-        ]
-      }
-    },
     "datasheet-breaching-command": {
       "termId": "adeptus-mechanicus-datasheet-breaching-command",
       "navigation": {
@@ -2061,10 +1813,10 @@
         ]
       }
     },
-    "weapon-close-combat-weapon-4": {
-      "termId": "adeptus-mechanicus-weapon-close-combat-weapon-4",
+    "weapon-close-combat-weapon-3": {
+      "termId": "adeptus-mechanicus-weapon-close-combat-weapon-3",
       "navigation": {
-        "glossary": "glossary-weapon-close-combat-weapon-4",
+        "glossary": "glossary-weapon-close-combat-weapon-3",
         "rule": "unit-kataphron-destroyers",
         "datasheet": "unit-kataphron-destroyers",
         "statline": "kataphron-destroyers-profile",
@@ -2109,127 +1861,6 @@
         ]
       }
     },
-    "datasheet-emanatus-forcefield-aura": {
-      "termId": "adeptus-mechanicus-datasheet-emanatus-forcefield-aura",
-      "navigation": {
-        "glossary": "glossary-datasheet-emanatus-forcefield-aura",
-        "rule": "unit-onager-dunecrawler",
-        "datasheet": "unit-onager-dunecrawler",
-        "statline": "onager-dunecrawler-profile",
-        "units": [
-          "unit-onager-dunecrawler"
-        ]
-      }
-    },
-    "datasheet-damaged-1-4-wounds-remaining": {
-      "termId": "adeptus-mechanicus-datasheet-damaged-1-4-wounds-remaining",
-      "navigation": {
-        "glossary": "glossary-datasheet-damaged-1-4-wounds-remaining",
-        "rule": "unit-onager-dunecrawler",
-        "datasheet": "unit-onager-dunecrawler",
-        "statline": "onager-dunecrawler-profile",
-        "units": [
-          "unit-onager-dunecrawler",
-          "unit-skorpius-disintegrator"
-        ]
-      }
-    },
-    "datasheet-scuttling-walker": {
-      "termId": "adeptus-mechanicus-datasheet-scuttling-walker",
-      "navigation": {
-        "glossary": "glossary-datasheet-scuttling-walker",
-        "rule": "unit-onager-dunecrawler",
-        "datasheet": "unit-onager-dunecrawler",
-        "statline": "onager-dunecrawler-profile",
-        "units": [
-          "unit-onager-dunecrawler"
-        ]
-      }
-    },
-    "weapon-dunecrawler-legs": {
-      "termId": "adeptus-mechanicus-weapon-dunecrawler-legs",
-      "navigation": {
-        "glossary": "glossary-weapon-dunecrawler-legs",
-        "rule": "unit-onager-dunecrawler",
-        "datasheet": "unit-onager-dunecrawler",
-        "statline": "onager-dunecrawler-profile",
-        "units": [
-          "unit-onager-dunecrawler"
-        ]
-      }
-    },
-    "weapon-eradication-beamer-dissipated": {
-      "termId": "adeptus-mechanicus-weapon-eradication-beamer-dissipated",
-      "navigation": {
-        "glossary": "glossary-weapon-eradication-beamer-dissipated",
-        "rule": "unit-onager-dunecrawler",
-        "datasheet": "unit-onager-dunecrawler",
-        "statline": "onager-dunecrawler-profile",
-        "units": [
-          "unit-onager-dunecrawler"
-        ]
-      }
-    },
-    "weapon-eradication-beamer-focused": {
-      "termId": "adeptus-mechanicus-weapon-eradication-beamer-focused",
-      "navigation": {
-        "glossary": "glossary-weapon-eradication-beamer-focused",
-        "rule": "unit-onager-dunecrawler",
-        "datasheet": "unit-onager-dunecrawler",
-        "statline": "onager-dunecrawler-profile",
-        "units": [
-          "unit-onager-dunecrawler"
-        ]
-      }
-    },
-    "weapon-daedalus-missile-launcher": {
-      "termId": "adeptus-mechanicus-weapon-daedalus-missile-launcher",
-      "navigation": {
-        "glossary": "glossary-weapon-daedalus-missile-launcher",
-        "rule": "unit-onager-dunecrawler",
-        "datasheet": "unit-onager-dunecrawler",
-        "statline": "onager-dunecrawler-profile",
-        "units": [
-          "unit-onager-dunecrawler"
-        ]
-      }
-    },
-    "weapon-icarus-array": {
-      "termId": "adeptus-mechanicus-weapon-icarus-array",
-      "navigation": {
-        "glossary": "glossary-weapon-icarus-array",
-        "rule": "unit-onager-dunecrawler",
-        "datasheet": "unit-onager-dunecrawler",
-        "statline": "onager-dunecrawler-profile",
-        "units": [
-          "unit-onager-dunecrawler"
-        ]
-      }
-    },
-    "weapon-neutron-laser": {
-      "termId": "adeptus-mechanicus-weapon-neutron-laser",
-      "navigation": {
-        "glossary": "glossary-weapon-neutron-laser",
-        "rule": "unit-onager-dunecrawler",
-        "datasheet": "unit-onager-dunecrawler",
-        "statline": "onager-dunecrawler-profile",
-        "units": [
-          "unit-onager-dunecrawler"
-        ]
-      }
-    },
-    "weapon-twin-onager-heavy-phosphor-blaster": {
-      "termId": "adeptus-mechanicus-weapon-twin-onager-heavy-phosphor-blaster",
-      "navigation": {
-        "glossary": "glossary-weapon-twin-onager-heavy-phosphor-blaster",
-        "rule": "unit-onager-dunecrawler",
-        "datasheet": "unit-onager-dunecrawler",
-        "statline": "onager-dunecrawler-profile",
-        "units": [
-          "unit-onager-dunecrawler"
-        ]
-      }
-    },
     "datasheet-ride-the-thermals": {
       "termId": "adeptus-mechanicus-datasheet-ride-the-thermals",
       "navigation": {
@@ -2269,10 +1900,10 @@
         ]
       }
     },
-    "weapon-close-combat-weapon-5": {
-      "termId": "adeptus-mechanicus-weapon-close-combat-weapon-5",
+    "weapon-close-combat-weapon-4": {
+      "termId": "adeptus-mechanicus-weapon-close-combat-weapon-4",
       "navigation": {
-        "glossary": "glossary-weapon-close-combat-weapon-5",
+        "glossary": "glossary-weapon-close-combat-weapon-4",
         "rule": "unit-pteraxii-skystalkers",
         "datasheet": "unit-pteraxii-skystalkers",
         "statline": "pteraxii-skystalkers-profile",
@@ -2326,114 +1957,6 @@
         "statline": "pteraxii-sterylizors-profile",
         "units": [
           "unit-pteraxii-sterylizors"
-        ]
-      }
-    },
-    "datasheet-tactica-obliqua": {
-      "termId": "adeptus-mechanicus-datasheet-tactica-obliqua",
-      "navigation": {
-        "glossary": "glossary-datasheet-tactica-obliqua",
-        "rule": "unit-serberys-raiders",
-        "datasheet": "unit-serberys-raiders",
-        "statline": "serberys-raiders-profile",
-        "units": [
-          "unit-serberys-raiders"
-        ]
-      }
-    },
-    "weapon-galvanic-carbine": {
-      "termId": "adeptus-mechanicus-weapon-galvanic-carbine",
-      "navigation": {
-        "glossary": "glossary-weapon-galvanic-carbine",
-        "rule": "unit-serberys-raiders",
-        "datasheet": "unit-serberys-raiders",
-        "statline": "serberys-raiders-profile",
-        "units": [
-          "unit-serberys-raiders"
-        ]
-      }
-    },
-    "weapon-cavalry-sabre-clawed-limbs": {
-      "termId": "adeptus-mechanicus-weapon-cavalry-sabre-clawed-limbs",
-      "navigation": {
-        "glossary": "glossary-weapon-cavalry-sabre-clawed-limbs",
-        "rule": "unit-serberys-raiders",
-        "datasheet": "unit-serberys-raiders",
-        "statline": "serberys-raiders-profile",
-        "units": [
-          "unit-serberys-raiders"
-        ]
-      }
-    },
-    "datasheet-line-breakers": {
-      "termId": "adeptus-mechanicus-datasheet-line-breakers",
-      "navigation": {
-        "glossary": "glossary-datasheet-line-breakers",
-        "rule": "unit-serberys-sulphurhounds",
-        "datasheet": "unit-serberys-sulphurhounds",
-        "statline": "serberys-sulphurhounds-profile",
-        "units": [
-          "unit-serberys-sulphurhounds"
-        ]
-      }
-    },
-    "weapon-cavalry-arc-maul": {
-      "termId": "adeptus-mechanicus-weapon-cavalry-arc-maul",
-      "navigation": {
-        "glossary": "glossary-weapon-cavalry-arc-maul",
-        "rule": "unit-serberys-sulphurhounds",
-        "datasheet": "unit-serberys-sulphurhounds",
-        "statline": "serberys-sulphurhounds-profile",
-        "units": [
-          "unit-serberys-sulphurhounds"
-        ]
-      }
-    },
-    "weapon-clawed-limbs": {
-      "termId": "adeptus-mechanicus-weapon-clawed-limbs",
-      "navigation": {
-        "glossary": "glossary-weapon-clawed-limbs",
-        "rule": "unit-serberys-sulphurhounds",
-        "datasheet": "unit-serberys-sulphurhounds",
-        "statline": "serberys-sulphurhounds-profile",
-        "units": [
-          "unit-serberys-sulphurhounds"
-        ]
-      }
-    },
-    "weapon-sulphur-breath": {
-      "termId": "adeptus-mechanicus-weapon-sulphur-breath",
-      "navigation": {
-        "glossary": "glossary-weapon-sulphur-breath",
-        "rule": "unit-serberys-sulphurhounds",
-        "datasheet": "unit-serberys-sulphurhounds",
-        "statline": "serberys-sulphurhounds-profile",
-        "units": [
-          "unit-serberys-sulphurhounds"
-        ]
-      }
-    },
-    "weapon-phosphor-pistol": {
-      "termId": "adeptus-mechanicus-weapon-phosphor-pistol",
-      "navigation": {
-        "glossary": "glossary-weapon-phosphor-pistol",
-        "rule": "unit-serberys-sulphurhounds",
-        "datasheet": "unit-serberys-sulphurhounds",
-        "statline": "serberys-sulphurhounds-profile",
-        "units": [
-          "unit-serberys-sulphurhounds"
-        ]
-      }
-    },
-    "weapon-phosphor-blast-carbine": {
-      "termId": "adeptus-mechanicus-weapon-phosphor-blast-carbine",
-      "navigation": {
-        "glossary": "glossary-weapon-phosphor-blast-carbine",
-        "rule": "unit-serberys-sulphurhounds",
-        "datasheet": "unit-serberys-sulphurhounds",
-        "statline": "serberys-sulphurhounds-profile",
-        "units": [
-          "unit-serberys-sulphurhounds"
         ]
       }
     },
@@ -2626,6 +2149,483 @@
         "statline": "sicarian-ruststalkers-profile",
         "units": [
           "unit-sicarian-ruststalkers"
+        ]
+      }
+    },
+    "datasheet-tactica-obliqua": {
+      "termId": "adeptus-mechanicus-datasheet-tactica-obliqua",
+      "navigation": {
+        "glossary": "glossary-datasheet-tactica-obliqua",
+        "rule": "unit-serberys-raiders",
+        "datasheet": "unit-serberys-raiders",
+        "statline": "serberys-raiders-profile",
+        "units": [
+          "unit-serberys-raiders"
+        ]
+      }
+    },
+    "weapon-galvanic-carbine": {
+      "termId": "adeptus-mechanicus-weapon-galvanic-carbine",
+      "navigation": {
+        "glossary": "glossary-weapon-galvanic-carbine",
+        "rule": "unit-serberys-raiders",
+        "datasheet": "unit-serberys-raiders",
+        "statline": "serberys-raiders-profile",
+        "units": [
+          "unit-serberys-raiders"
+        ]
+      }
+    },
+    "weapon-cavalry-sabre-clawed-limbs": {
+      "termId": "adeptus-mechanicus-weapon-cavalry-sabre-clawed-limbs",
+      "navigation": {
+        "glossary": "glossary-weapon-cavalry-sabre-clawed-limbs",
+        "rule": "unit-serberys-raiders",
+        "datasheet": "unit-serberys-raiders",
+        "statline": "serberys-raiders-profile",
+        "units": [
+          "unit-serberys-raiders"
+        ]
+      }
+    },
+    "datasheet-line-breakers": {
+      "termId": "adeptus-mechanicus-datasheet-line-breakers",
+      "navigation": {
+        "glossary": "glossary-datasheet-line-breakers",
+        "rule": "unit-serberys-sulphurhounds",
+        "datasheet": "unit-serberys-sulphurhounds",
+        "statline": "serberys-sulphurhounds-profile",
+        "units": [
+          "unit-serberys-sulphurhounds"
+        ]
+      }
+    },
+    "weapon-cavalry-arc-maul": {
+      "termId": "adeptus-mechanicus-weapon-cavalry-arc-maul",
+      "navigation": {
+        "glossary": "glossary-weapon-cavalry-arc-maul",
+        "rule": "unit-serberys-sulphurhounds",
+        "datasheet": "unit-serberys-sulphurhounds",
+        "statline": "serberys-sulphurhounds-profile",
+        "units": [
+          "unit-serberys-sulphurhounds"
+        ]
+      }
+    },
+    "weapon-clawed-limbs": {
+      "termId": "adeptus-mechanicus-weapon-clawed-limbs",
+      "navigation": {
+        "glossary": "glossary-weapon-clawed-limbs",
+        "rule": "unit-serberys-sulphurhounds",
+        "datasheet": "unit-serberys-sulphurhounds",
+        "statline": "serberys-sulphurhounds-profile",
+        "units": [
+          "unit-serberys-sulphurhounds"
+        ]
+      }
+    },
+    "weapon-sulphur-breath": {
+      "termId": "adeptus-mechanicus-weapon-sulphur-breath",
+      "navigation": {
+        "glossary": "glossary-weapon-sulphur-breath",
+        "rule": "unit-serberys-sulphurhounds",
+        "datasheet": "unit-serberys-sulphurhounds",
+        "statline": "serberys-sulphurhounds-profile",
+        "units": [
+          "unit-serberys-sulphurhounds"
+        ]
+      }
+    },
+    "weapon-phosphor-pistol": {
+      "termId": "adeptus-mechanicus-weapon-phosphor-pistol",
+      "navigation": {
+        "glossary": "glossary-weapon-phosphor-pistol",
+        "rule": "unit-serberys-sulphurhounds",
+        "datasheet": "unit-serberys-sulphurhounds",
+        "statline": "serberys-sulphurhounds-profile",
+        "units": [
+          "unit-serberys-sulphurhounds"
+        ]
+      }
+    },
+    "weapon-phosphor-blast-carbine": {
+      "termId": "adeptus-mechanicus-weapon-phosphor-blast-carbine",
+      "navigation": {
+        "glossary": "glossary-weapon-phosphor-blast-carbine",
+        "rule": "unit-serberys-sulphurhounds",
+        "datasheet": "unit-serberys-sulphurhounds",
+        "statline": "serberys-sulphurhounds-profile",
+        "units": [
+          "unit-serberys-sulphurhounds"
+        ]
+      }
+    },
+    "datasheet-bomb-rack": {
+      "termId": "adeptus-mechanicus-datasheet-bomb-rack",
+      "navigation": {
+        "glossary": "glossary-datasheet-bomb-rack",
+        "rule": "unit-archaeopter-fusilave",
+        "datasheet": "unit-archaeopter-fusilave",
+        "statline": "archaeopter-fusilave-profile",
+        "units": [
+          "unit-archaeopter-fusilave"
+        ]
+      }
+    },
+    "datasheet-chaff-launcher": {
+      "termId": "adeptus-mechanicus-datasheet-chaff-launcher",
+      "navigation": {
+        "glossary": "glossary-datasheet-chaff-launcher",
+        "rule": "unit-archaeopter-fusilave",
+        "datasheet": "unit-archaeopter-fusilave",
+        "statline": "archaeopter-fusilave-profile",
+        "units": [
+          "unit-archaeopter-fusilave",
+          "unit-archaeopter-stratoraptor",
+          "unit-archaeopter-transvector"
+        ]
+      }
+    },
+    "datasheet-command-uplink": {
+      "termId": "adeptus-mechanicus-datasheet-command-uplink",
+      "navigation": {
+        "glossary": "glossary-datasheet-command-uplink",
+        "rule": "unit-archaeopter-fusilave",
+        "datasheet": "unit-archaeopter-fusilave",
+        "statline": "archaeopter-fusilave-profile",
+        "units": [
+          "unit-archaeopter-fusilave",
+          "unit-archaeopter-stratoraptor",
+          "unit-archaeopter-transvector"
+        ]
+      }
+    },
+    "datasheet-strafing-run": {
+      "termId": "adeptus-mechanicus-datasheet-strafing-run",
+      "navigation": {
+        "glossary": "glossary-datasheet-strafing-run",
+        "rule": "unit-archaeopter-stratoraptor",
+        "datasheet": "unit-archaeopter-stratoraptor",
+        "statline": "archaeopter-stratoraptor-profile",
+        "units": [
+          "unit-archaeopter-stratoraptor"
+        ]
+      }
+    },
+    "weapon-cognis-heavy-stubber": {
+      "termId": "adeptus-mechanicus-weapon-cognis-heavy-stubber",
+      "navigation": {
+        "glossary": "glossary-weapon-cognis-heavy-stubber",
+        "rule": "unit-archaeopter-stratoraptor",
+        "datasheet": "unit-archaeopter-stratoraptor",
+        "statline": "archaeopter-stratoraptor-profile",
+        "units": [
+          "unit-archaeopter-stratoraptor",
+          "unit-onager-dunecrawler",
+          "unit-skorpius-disintegrator"
+        ]
+      }
+    },
+    "weapon-heavy-phosphor-blaster": {
+      "termId": "adeptus-mechanicus-weapon-heavy-phosphor-blaster",
+      "navigation": {
+        "glossary": "glossary-weapon-heavy-phosphor-blaster",
+        "rule": "unit-archaeopter-stratoraptor",
+        "datasheet": "unit-archaeopter-stratoraptor",
+        "statline": "archaeopter-stratoraptor-profile",
+        "units": [
+          "unit-archaeopter-stratoraptor",
+          "unit-kastelan-robots"
+        ]
+      }
+    },
+    "weapon-twin-cognis-lascannon": {
+      "termId": "adeptus-mechanicus-weapon-twin-cognis-lascannon",
+      "navigation": {
+        "glossary": "glossary-weapon-twin-cognis-lascannon",
+        "rule": "unit-archaeopter-stratoraptor",
+        "datasheet": "unit-archaeopter-stratoraptor",
+        "statline": "archaeopter-stratoraptor-profile",
+        "units": [
+          "unit-archaeopter-stratoraptor"
+        ]
+      }
+    },
+    "datasheet-aerial-deployment": {
+      "termId": "adeptus-mechanicus-datasheet-aerial-deployment",
+      "navigation": {
+        "glossary": "glossary-datasheet-aerial-deployment",
+        "rule": "unit-archaeopter-transvector",
+        "datasheet": "unit-archaeopter-transvector",
+        "statline": "archaeopter-transvector-profile",
+        "units": [
+          "unit-archaeopter-transvector"
+        ]
+      }
+    },
+    "datasheet-elevated-strider": {
+      "termId": "adeptus-mechanicus-datasheet-elevated-strider",
+      "navigation": {
+        "glossary": "glossary-datasheet-elevated-strider",
+        "rule": "unit-ironstrider-ballistarii",
+        "datasheet": "unit-ironstrider-ballistarii",
+        "statline": "ironstrider-ballistarii-profile",
+        "units": [
+          "unit-ironstrider-ballistarii"
+        ]
+      }
+    },
+    "weapon-twin-cognis-autocannon": {
+      "termId": "adeptus-mechanicus-weapon-twin-cognis-autocannon",
+      "navigation": {
+        "glossary": "glossary-weapon-twin-cognis-autocannon",
+        "rule": "unit-ironstrider-ballistarii",
+        "datasheet": "unit-ironstrider-ballistarii",
+        "statline": "ironstrider-ballistarii-profile",
+        "units": [
+          "unit-ironstrider-ballistarii"
+        ]
+      }
+    },
+    "weapon-ironstrider-feet": {
+      "termId": "adeptus-mechanicus-weapon-ironstrider-feet",
+      "navigation": {
+        "glossary": "glossary-weapon-ironstrider-feet",
+        "rule": "unit-ironstrider-ballistarii",
+        "datasheet": "unit-ironstrider-ballistarii",
+        "statline": "ironstrider-ballistarii-profile",
+        "units": [
+          "unit-ironstrider-ballistarii",
+          "unit-sydonian-dragoons-with-radium-jezzails"
+        ]
+      }
+    },
+    "weapon-twin-cognis-lascannon-2": {
+      "termId": "adeptus-mechanicus-weapon-twin-cognis-lascannon-2",
+      "navigation": {
+        "glossary": "glossary-weapon-twin-cognis-lascannon-2",
+        "rule": "unit-ironstrider-ballistarii",
+        "datasheet": "unit-ironstrider-ballistarii",
+        "statline": "ironstrider-ballistarii-profile",
+        "units": [
+          "unit-ironstrider-ballistarii"
+        ]
+      }
+    },
+    "datasheet-robotic-bodyguard": {
+      "termId": "adeptus-mechanicus-datasheet-robotic-bodyguard",
+      "navigation": {
+        "glossary": "glossary-datasheet-robotic-bodyguard",
+        "rule": "unit-kastelan-robots",
+        "datasheet": "unit-kastelan-robots",
+        "statline": "kastelan-robots-profile",
+        "units": [
+          "unit-kastelan-robots"
+        ]
+      }
+    },
+    "datasheet-repulsor-grid": {
+      "termId": "adeptus-mechanicus-datasheet-repulsor-grid",
+      "navigation": {
+        "glossary": "glossary-datasheet-repulsor-grid",
+        "rule": "unit-kastelan-robots",
+        "datasheet": "unit-kastelan-robots",
+        "statline": "kastelan-robots-profile",
+        "units": [
+          "unit-kastelan-robots"
+        ]
+      }
+    },
+    "weapon-close-combat-weapon-5": {
+      "termId": "adeptus-mechanicus-weapon-close-combat-weapon-5",
+      "navigation": {
+        "glossary": "glossary-weapon-close-combat-weapon-5",
+        "rule": "unit-kastelan-robots",
+        "datasheet": "unit-kastelan-robots",
+        "statline": "kastelan-robots-profile",
+        "units": [
+          "unit-kastelan-robots"
+        ]
+      }
+    },
+    "weapon-twin-kastelan-phosphor-blaster": {
+      "termId": "adeptus-mechanicus-weapon-twin-kastelan-phosphor-blaster",
+      "navigation": {
+        "glossary": "glossary-weapon-twin-kastelan-phosphor-blaster",
+        "rule": "unit-kastelan-robots",
+        "datasheet": "unit-kastelan-robots",
+        "statline": "kastelan-robots-profile",
+        "units": [
+          "unit-kastelan-robots"
+        ]
+      }
+    },
+    "weapon-twin-kastelan-fist": {
+      "termId": "adeptus-mechanicus-weapon-twin-kastelan-fist",
+      "navigation": {
+        "glossary": "glossary-weapon-twin-kastelan-fist",
+        "rule": "unit-kastelan-robots",
+        "datasheet": "unit-kastelan-robots",
+        "statline": "kastelan-robots-profile",
+        "units": [
+          "unit-kastelan-robots"
+        ]
+      }
+    },
+    "weapon-kastelan-fist": {
+      "termId": "adeptus-mechanicus-weapon-kastelan-fist",
+      "navigation": {
+        "glossary": "glossary-weapon-kastelan-fist",
+        "rule": "unit-kastelan-robots",
+        "datasheet": "unit-kastelan-robots",
+        "statline": "kastelan-robots-profile",
+        "units": [
+          "unit-kastelan-robots"
+        ]
+      }
+    },
+    "weapon-kastelan-phosphor-blaster": {
+      "termId": "adeptus-mechanicus-weapon-kastelan-phosphor-blaster",
+      "navigation": {
+        "glossary": "glossary-weapon-kastelan-phosphor-blaster",
+        "rule": "unit-kastelan-robots",
+        "datasheet": "unit-kastelan-robots",
+        "statline": "kastelan-robots-profile",
+        "units": [
+          "unit-kastelan-robots"
+        ]
+      }
+    },
+    "weapon-incendine-combustor": {
+      "termId": "adeptus-mechanicus-weapon-incendine-combustor",
+      "navigation": {
+        "glossary": "glossary-weapon-incendine-combustor",
+        "rule": "unit-kastelan-robots",
+        "datasheet": "unit-kastelan-robots",
+        "statline": "kastelan-robots-profile",
+        "units": [
+          "unit-kastelan-robots"
+        ]
+      }
+    },
+    "datasheet-emanatus-forcefield-aura": {
+      "termId": "adeptus-mechanicus-datasheet-emanatus-forcefield-aura",
+      "navigation": {
+        "glossary": "glossary-datasheet-emanatus-forcefield-aura",
+        "rule": "unit-onager-dunecrawler",
+        "datasheet": "unit-onager-dunecrawler",
+        "statline": "onager-dunecrawler-profile",
+        "units": [
+          "unit-onager-dunecrawler"
+        ]
+      }
+    },
+    "datasheet-damaged-1-4-wounds-remaining": {
+      "termId": "adeptus-mechanicus-datasheet-damaged-1-4-wounds-remaining",
+      "navigation": {
+        "glossary": "glossary-datasheet-damaged-1-4-wounds-remaining",
+        "rule": "unit-onager-dunecrawler",
+        "datasheet": "unit-onager-dunecrawler",
+        "statline": "onager-dunecrawler-profile",
+        "units": [
+          "unit-onager-dunecrawler",
+          "unit-skorpius-disintegrator"
+        ]
+      }
+    },
+    "datasheet-scuttling-walker": {
+      "termId": "adeptus-mechanicus-datasheet-scuttling-walker",
+      "navigation": {
+        "glossary": "glossary-datasheet-scuttling-walker",
+        "rule": "unit-onager-dunecrawler",
+        "datasheet": "unit-onager-dunecrawler",
+        "statline": "onager-dunecrawler-profile",
+        "units": [
+          "unit-onager-dunecrawler"
+        ]
+      }
+    },
+    "weapon-dunecrawler-legs": {
+      "termId": "adeptus-mechanicus-weapon-dunecrawler-legs",
+      "navigation": {
+        "glossary": "glossary-weapon-dunecrawler-legs",
+        "rule": "unit-onager-dunecrawler",
+        "datasheet": "unit-onager-dunecrawler",
+        "statline": "onager-dunecrawler-profile",
+        "units": [
+          "unit-onager-dunecrawler"
+        ]
+      }
+    },
+    "weapon-eradication-beamer-dissipated": {
+      "termId": "adeptus-mechanicus-weapon-eradication-beamer-dissipated",
+      "navigation": {
+        "glossary": "glossary-weapon-eradication-beamer-dissipated",
+        "rule": "unit-onager-dunecrawler",
+        "datasheet": "unit-onager-dunecrawler",
+        "statline": "onager-dunecrawler-profile",
+        "units": [
+          "unit-onager-dunecrawler"
+        ]
+      }
+    },
+    "weapon-eradication-beamer-focused": {
+      "termId": "adeptus-mechanicus-weapon-eradication-beamer-focused",
+      "navigation": {
+        "glossary": "glossary-weapon-eradication-beamer-focused",
+        "rule": "unit-onager-dunecrawler",
+        "datasheet": "unit-onager-dunecrawler",
+        "statline": "onager-dunecrawler-profile",
+        "units": [
+          "unit-onager-dunecrawler"
+        ]
+      }
+    },
+    "weapon-daedalus-missile-launcher": {
+      "termId": "adeptus-mechanicus-weapon-daedalus-missile-launcher",
+      "navigation": {
+        "glossary": "glossary-weapon-daedalus-missile-launcher",
+        "rule": "unit-onager-dunecrawler",
+        "datasheet": "unit-onager-dunecrawler",
+        "statline": "onager-dunecrawler-profile",
+        "units": [
+          "unit-onager-dunecrawler"
+        ]
+      }
+    },
+    "weapon-icarus-array": {
+      "termId": "adeptus-mechanicus-weapon-icarus-array",
+      "navigation": {
+        "glossary": "glossary-weapon-icarus-array",
+        "rule": "unit-onager-dunecrawler",
+        "datasheet": "unit-onager-dunecrawler",
+        "statline": "onager-dunecrawler-profile",
+        "units": [
+          "unit-onager-dunecrawler"
+        ]
+      }
+    },
+    "weapon-neutron-laser": {
+      "termId": "adeptus-mechanicus-weapon-neutron-laser",
+      "navigation": {
+        "glossary": "glossary-weapon-neutron-laser",
+        "rule": "unit-onager-dunecrawler",
+        "datasheet": "unit-onager-dunecrawler",
+        "statline": "onager-dunecrawler-profile",
+        "units": [
+          "unit-onager-dunecrawler"
+        ]
+      }
+    },
+    "weapon-twin-onager-heavy-phosphor-blaster": {
+      "termId": "adeptus-mechanicus-weapon-twin-onager-heavy-phosphor-blaster",
+      "navigation": {
+        "glossary": "glossary-weapon-twin-onager-heavy-phosphor-blaster",
+        "rule": "unit-onager-dunecrawler",
+        "datasheet": "unit-onager-dunecrawler",
+        "statline": "onager-dunecrawler-profile",
+        "units": [
+          "unit-onager-dunecrawler"
         ]
       }
     },
@@ -2942,27 +2942,6 @@
         "statline": "thulia-ghuld-profile"
       }
     },
-    "unit-archaeopter-fusilave": {
-      "termId": "adeptus-mechanicus-unit-archaeopter-fusilave",
-      "navigation": {
-        "datasheet": "unit-archaeopter-fusilave",
-        "statline": "archaeopter-fusilave-profile"
-      }
-    },
-    "unit-archaeopter-stratoraptor": {
-      "termId": "adeptus-mechanicus-unit-archaeopter-stratoraptor",
-      "navigation": {
-        "datasheet": "unit-archaeopter-stratoraptor",
-        "statline": "archaeopter-stratoraptor-profile"
-      }
-    },
-    "unit-archaeopter-transvector": {
-      "termId": "adeptus-mechanicus-unit-archaeopter-transvector",
-      "navigation": {
-        "datasheet": "unit-archaeopter-transvector",
-        "statline": "archaeopter-transvector-profile"
-      }
-    },
     "unit-corpuscarii-electro-priests": {
       "termId": "adeptus-mechanicus-unit-corpuscarii-electro-priests",
       "navigation": {
@@ -2991,20 +2970,6 @@
         "statline": "hastarii-fusiliers-profile"
       }
     },
-    "unit-ironstrider-ballistarii": {
-      "termId": "adeptus-mechanicus-unit-ironstrider-ballistarii",
-      "navigation": {
-        "datasheet": "unit-ironstrider-ballistarii",
-        "statline": "ironstrider-ballistarii-profile"
-      }
-    },
-    "unit-kastelan-robots": {
-      "termId": "adeptus-mechanicus-unit-kastelan-robots",
-      "navigation": {
-        "datasheet": "unit-kastelan-robots",
-        "statline": "kastelan-robots-profile"
-      }
-    },
     "unit-kataphron-breachers": {
       "termId": "adeptus-mechanicus-unit-kataphron-breachers",
       "navigation": {
@@ -3019,13 +2984,6 @@
         "statline": "kataphron-destroyers-profile"
       }
     },
-    "unit-onager-dunecrawler": {
-      "termId": "adeptus-mechanicus-unit-onager-dunecrawler",
-      "navigation": {
-        "datasheet": "unit-onager-dunecrawler",
-        "statline": "onager-dunecrawler-profile"
-      }
-    },
     "unit-pteraxii-skystalkers": {
       "termId": "adeptus-mechanicus-unit-pteraxii-skystalkers",
       "navigation": {
@@ -3038,20 +2996,6 @@
       "navigation": {
         "datasheet": "unit-pteraxii-sterylizors",
         "statline": "pteraxii-sterylizors-profile"
-      }
-    },
-    "unit-serberys-raiders": {
-      "termId": "adeptus-mechanicus-unit-serberys-raiders",
-      "navigation": {
-        "datasheet": "unit-serberys-raiders",
-        "statline": "serberys-raiders-profile"
-      }
-    },
-    "unit-serberys-sulphurhounds": {
-      "termId": "adeptus-mechanicus-unit-serberys-sulphurhounds",
-      "navigation": {
-        "datasheet": "unit-serberys-sulphurhounds",
-        "statline": "serberys-sulphurhounds-profile"
       }
     },
     "unit-servitor-battleclade": {
@@ -3073,6 +3017,62 @@
       "navigation": {
         "datasheet": "unit-sicarian-ruststalkers",
         "statline": "sicarian-ruststalkers-profile"
+      }
+    },
+    "unit-serberys-raiders": {
+      "termId": "adeptus-mechanicus-unit-serberys-raiders",
+      "navigation": {
+        "datasheet": "unit-serberys-raiders",
+        "statline": "serberys-raiders-profile"
+      }
+    },
+    "unit-serberys-sulphurhounds": {
+      "termId": "adeptus-mechanicus-unit-serberys-sulphurhounds",
+      "navigation": {
+        "datasheet": "unit-serberys-sulphurhounds",
+        "statline": "serberys-sulphurhounds-profile"
+      }
+    },
+    "unit-archaeopter-fusilave": {
+      "termId": "adeptus-mechanicus-unit-archaeopter-fusilave",
+      "navigation": {
+        "datasheet": "unit-archaeopter-fusilave",
+        "statline": "archaeopter-fusilave-profile"
+      }
+    },
+    "unit-archaeopter-stratoraptor": {
+      "termId": "adeptus-mechanicus-unit-archaeopter-stratoraptor",
+      "navigation": {
+        "datasheet": "unit-archaeopter-stratoraptor",
+        "statline": "archaeopter-stratoraptor-profile"
+      }
+    },
+    "unit-archaeopter-transvector": {
+      "termId": "adeptus-mechanicus-unit-archaeopter-transvector",
+      "navigation": {
+        "datasheet": "unit-archaeopter-transvector",
+        "statline": "archaeopter-transvector-profile"
+      }
+    },
+    "unit-ironstrider-ballistarii": {
+      "termId": "adeptus-mechanicus-unit-ironstrider-ballistarii",
+      "navigation": {
+        "datasheet": "unit-ironstrider-ballistarii",
+        "statline": "ironstrider-ballistarii-profile"
+      }
+    },
+    "unit-kastelan-robots": {
+      "termId": "adeptus-mechanicus-unit-kastelan-robots",
+      "navigation": {
+        "datasheet": "unit-kastelan-robots",
+        "statline": "kastelan-robots-profile"
+      }
+    },
+    "unit-onager-dunecrawler": {
+      "termId": "adeptus-mechanicus-unit-onager-dunecrawler",
+      "navigation": {
+        "datasheet": "unit-onager-dunecrawler",
+        "statline": "onager-dunecrawler-profile"
       }
     },
     "unit-skorpius-disintegrator": {

@@ -69,12 +69,12 @@ window.DG_TERMS={
     "glossary": "glossary-core-deep-strike",
     "fullRulePath": "books/core-rules/reader/core-abilities.html#rule-24-09",
     "units": [
-      "unit-archaeopter-transvector",
       "unit-pteraxii-skystalkers",
-      "unit-pteraxii-sterylizors"
+      "unit-pteraxii-sterylizors",
+      "unit-archaeopter-transvector"
     ],
-    "datasheet": "unit-archaeopter-transvector",
-    "statline": "archaeopter-transvector-profile"
+    "datasheet": "unit-pteraxii-skystalkers",
+    "statline": "pteraxii-skystalkers-profile"
   },
   "core-devastating-wounds": {
     "title": "DEVASTATING WOUNDS",
@@ -342,11 +342,11 @@ window.DG_TERMS={
       "unit-skitarii-vanguard",
       "unit-skitarii-marshal",
       "unit-sydonian-skatros",
-      "unit-ironstrider-ballistarii",
-      "unit-serberys-raiders",
-      "unit-serberys-sulphurhounds",
       "unit-sicarian-infiltrators",
       "unit-sicarian-ruststalkers",
+      "unit-serberys-raiders",
+      "unit-serberys-sulphurhounds",
+      "unit-ironstrider-ballistarii",
       "unit-sydonian-dragoons-with-radium-jezzails",
       "unit-sydonian-dragoons-with-taser-lances"
     ],
@@ -414,25 +414,25 @@ window.DG_TERMS={
       "unit-skorpius-dunerider",
       "unit-belisarius-cawl",
       "unit-thulia-ghuld",
-      "unit-archaeopter-fusilave",
-      "unit-archaeopter-stratoraptor",
-      "unit-archaeopter-transvector",
       "unit-corpuscarii-electro-priests",
       "unit-fulgurite-electro-priests",
       "unit-hastarii-exterminators",
       "unit-hastarii-fusiliers",
-      "unit-ironstrider-ballistarii",
-      "unit-kastelan-robots",
       "unit-kataphron-breachers",
       "unit-kataphron-destroyers",
-      "unit-onager-dunecrawler",
       "unit-pteraxii-skystalkers",
       "unit-pteraxii-sterylizors",
-      "unit-serberys-raiders",
-      "unit-serberys-sulphurhounds",
       "unit-servitor-battleclade",
       "unit-sicarian-infiltrators",
       "unit-sicarian-ruststalkers",
+      "unit-serberys-raiders",
+      "unit-serberys-sulphurhounds",
+      "unit-archaeopter-fusilave",
+      "unit-archaeopter-stratoraptor",
+      "unit-archaeopter-transvector",
+      "unit-ironstrider-ballistarii",
+      "unit-kastelan-robots",
+      "unit-onager-dunecrawler",
       "unit-skorpius-disintegrator",
       "unit-sydonian-dragoons-with-radium-jezzails",
       "unit-sydonian-dragoons-with-taser-lances"
@@ -840,9 +840,9 @@ window.DG_TERMS={
     "units": [
       "unit-skitarii-rangers",
       "unit-skitarii-vanguard",
+      "unit-servitor-battleclade",
       "unit-serberys-raiders",
-      "unit-serberys-sulphurhounds",
-      "unit-servitor-battleclade"
+      "unit-serberys-sulphurhounds"
     ],
     "datasheet": "unit-skitarii-rangers",
     "statline": "skitarii-rangers-profile"
@@ -1588,109 +1588,6 @@ window.DG_TERMS={
     "datasheet": "unit-thulia-ghuld",
     "statline": "thulia-ghuld-profile"
   },
-  "datasheet-bomb-rack": {
-    "title": "Bomb Rack",
-    "summary": "At the end of your opponent’s Fight phase, select one visible enemy unit (excluding Lone Operative units) within 24\" of this unit, and roll six D6 for that unit: for each 4+, that unit suffers 1 mortal wound.",
-    "full": "At the end of your opponent’s Fight phase, select one visible enemy unit (excluding Lone Operative units) within 24\" of this unit, and roll six D6 for that unit: for each 4+, that unit suffers 1 mortal wound.",
-    "glossary": "glossary-datasheet-bomb-rack",
-    "rule": "unit-archaeopter-fusilave",
-    "units": [
-      "unit-archaeopter-fusilave"
-    ],
-    "datasheet": "unit-archaeopter-fusilave",
-    "statline": "archaeopter-fusilave-profile"
-  },
-  "datasheet-chaff-launcher": {
-    "title": "Chaff Launcher",
-    "summary": "The bearer has the Smoke keyword.",
-    "full": "The bearer has the Smoke keyword.",
-    "glossary": "glossary-datasheet-chaff-launcher",
-    "rule": "unit-archaeopter-fusilave",
-    "units": [
-      "unit-archaeopter-fusilave",
-      "unit-archaeopter-stratoraptor",
-      "unit-archaeopter-transvector"
-    ],
-    "datasheet": "unit-archaeopter-fusilave",
-    "statline": "archaeopter-fusilave-profile"
-  },
-  "datasheet-command-uplink": {
-    "title": "Command Uplink",
-    "summary": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
-    "full": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
-    "glossary": "glossary-datasheet-command-uplink",
-    "rule": "unit-archaeopter-fusilave",
-    "units": [
-      "unit-archaeopter-fusilave",
-      "unit-archaeopter-stratoraptor",
-      "unit-archaeopter-transvector"
-    ],
-    "datasheet": "unit-archaeopter-fusilave",
-    "statline": "archaeopter-fusilave-profile"
-  },
-  "datasheet-strafing-run": {
-    "title": "Strafing Run",
-    "summary": "Each time this model makes a ranged attack that targets an enemy unit (excluding units that can Fly), add 1 to the Hit roll.",
-    "full": "Each time this model makes a ranged attack that targets an enemy unit (excluding units that can Fly), add 1 to the Hit roll.",
-    "glossary": "glossary-datasheet-strafing-run",
-    "rule": "unit-archaeopter-stratoraptor",
-    "units": [
-      "unit-archaeopter-stratoraptor"
-    ],
-    "datasheet": "unit-archaeopter-stratoraptor",
-    "statline": "archaeopter-stratoraptor-profile"
-  },
-  "weapon-cognis-heavy-stubber": {
-    "title": "Cognis heavy stubber",
-    "summary": "Ranged · 36\" · A 3 · BS 4+ · S 4 · AP 0 · D 1 · Rapid Fire 3, Sustained Hits 1",
-    "full": "Ranged · 36\" · A 3 · BS 4+ · S 4 · AP 0 · D 1 · Rapid Fire 3, Sustained Hits 1",
-    "glossary": "glossary-weapon-cognis-heavy-stubber",
-    "rule": "unit-archaeopter-stratoraptor",
-    "units": [
-      "unit-archaeopter-stratoraptor",
-      "unit-onager-dunecrawler",
-      "unit-skorpius-disintegrator"
-    ],
-    "datasheet": "unit-archaeopter-stratoraptor",
-    "statline": "archaeopter-stratoraptor-profile"
-  },
-  "weapon-heavy-phosphor-blaster": {
-    "title": "Heavy phosphor blaster",
-    "summary": "Ranged · 36\" · A 3 · BS 4+ · S 6 · AP -1 · D 2 · Ignores Cover",
-    "full": "Ranged · 36\" · A 3 · BS 4+ · S 6 · AP -1 · D 2 · Ignores Cover",
-    "glossary": "glossary-weapon-heavy-phosphor-blaster",
-    "rule": "unit-archaeopter-stratoraptor",
-    "units": [
-      "unit-archaeopter-stratoraptor",
-      "unit-kastelan-robots"
-    ],
-    "datasheet": "unit-archaeopter-stratoraptor",
-    "statline": "archaeopter-stratoraptor-profile"
-  },
-  "weapon-twin-cognis-lascannon": {
-    "title": "Twin cognis lascannon",
-    "summary": "Ranged · 48\" · A 1 · BS 4+ · S 12 · AP -3 · D D6+1 · Sustained hits 1, Twin-linked",
-    "full": "Ranged · 48\" · A 1 · BS 4+ · S 12 · AP -3 · D D6+1 · Sustained hits 1, Twin-linked",
-    "glossary": "glossary-weapon-twin-cognis-lascannon",
-    "rule": "unit-archaeopter-stratoraptor",
-    "units": [
-      "unit-archaeopter-stratoraptor"
-    ],
-    "datasheet": "unit-archaeopter-stratoraptor",
-    "statline": "archaeopter-stratoraptor-profile"
-  },
-  "datasheet-aerial-deployment": {
-    "title": "Aerial Deployment",
-    "summary": "In your first Movement phase, this unit can make an ingress move.",
-    "full": "In your first Movement phase, this unit can make an ingress move.",
-    "glossary": "glossary-datasheet-aerial-deployment",
-    "rule": "unit-archaeopter-transvector",
-    "units": [
-      "unit-archaeopter-transvector"
-    ],
-    "datasheet": "unit-archaeopter-transvector",
-    "statline": "archaeopter-transvector-profile"
-  },
   "datasheet-electro-shock": {
     "title": "Electro-shock",
     "summary": "In your Shooting phase, after this unit has shot, select one enemy unit (excluding Monsters and Vehicles) hit by one or more of those attacks.",
@@ -1861,151 +1758,6 @@ window.DG_TERMS={
     "datasheet": "unit-hastarii-fusiliers",
     "statline": "hastarii-fusiliers-profile"
   },
-  "datasheet-elevated-strider": {
-    "title": "Elevated Strider",
-    "summary": "This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-roll Desperate Escape tests taken for models in this unit.",
-    "full": "This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-roll Desperate Escape tests taken for models in this unit.",
-    "glossary": "glossary-datasheet-elevated-strider",
-    "rule": "unit-ironstrider-ballistarii",
-    "units": [
-      "unit-ironstrider-ballistarii"
-    ],
-    "datasheet": "unit-ironstrider-ballistarii",
-    "statline": "ironstrider-ballistarii-profile"
-  },
-  "weapon-twin-cognis-autocannon": {
-    "title": "Twin cognis autocannon",
-    "summary": "Ranged · 48\" · A 4 · BS 4+ · S 9 · AP -1 · D 3 · Sustained Hits 1, Twin-linked",
-    "full": "Ranged · 48\" · A 4 · BS 4+ · S 9 · AP -1 · D 3 · Sustained Hits 1, Twin-linked",
-    "glossary": "glossary-weapon-twin-cognis-autocannon",
-    "rule": "unit-ironstrider-ballistarii",
-    "units": [
-      "unit-ironstrider-ballistarii"
-    ],
-    "datasheet": "unit-ironstrider-ballistarii",
-    "statline": "ironstrider-ballistarii-profile"
-  },
-  "weapon-ironstrider-feet": {
-    "title": "Ironstrider feet",
-    "summary": "Melee · Melee · A 3 · WS 4+ · S 5 · AP 0 · D 1",
-    "full": "Melee · Melee · A 3 · WS 4+ · S 5 · AP 0 · D 1",
-    "glossary": "glossary-weapon-ironstrider-feet",
-    "rule": "unit-ironstrider-ballistarii",
-    "units": [
-      "unit-ironstrider-ballistarii",
-      "unit-sydonian-dragoons-with-radium-jezzails"
-    ],
-    "datasheet": "unit-ironstrider-ballistarii",
-    "statline": "ironstrider-ballistarii-profile"
-  },
-  "weapon-twin-cognis-lascannon-2": {
-    "title": "Twin cognis lascannon",
-    "summary": "Ranged · 48\" · A 2 · BS 4+ · S 12 · AP -3 · D D6+1 · Sustained Hits 1, Twin-linked",
-    "full": "Ranged · 48\" · A 2 · BS 4+ · S 12 · AP -3 · D D6+1 · Sustained Hits 1, Twin-linked",
-    "glossary": "glossary-weapon-twin-cognis-lascannon-2",
-    "rule": "unit-ironstrider-ballistarii",
-    "units": [
-      "unit-ironstrider-ballistarii"
-    ],
-    "datasheet": "unit-ironstrider-ballistarii",
-    "statline": "ironstrider-ballistarii-profile"
-  },
-  "datasheet-robotic-bodyguard": {
-    "title": "Robotic Bodyguard",
-    "summary": "While a Cybernetica Datasmith model is leading this unit, that model has the Feel No Pain 4+ ability.",
-    "full": "While a Cybernetica Datasmith model is leading this unit, that model has the Feel No Pain 4+ ability.",
-    "glossary": "glossary-datasheet-robotic-bodyguard",
-    "rule": "unit-kastelan-robots",
-    "units": [
-      "unit-kastelan-robots"
-    ],
-    "datasheet": "unit-kastelan-robots",
-    "statline": "kastelan-robots-profile"
-  },
-  "datasheet-repulsor-grid": {
-    "title": "Repulsor Grid",
-    "summary": "When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot, when this unit makes a save roll: \n- On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit has shot.",
-    "full": "When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot, when this unit makes a save roll: \n- On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit has shot.",
-    "glossary": "glossary-datasheet-repulsor-grid",
-    "rule": "unit-kastelan-robots",
-    "units": [
-      "unit-kastelan-robots"
-    ],
-    "datasheet": "unit-kastelan-robots",
-    "statline": "kastelan-robots-profile"
-  },
-  "weapon-close-combat-weapon-3": {
-    "title": "Close combat weapon",
-    "summary": "Melee · Melee · A 3 · WS 4+ · S 6 · AP 0 · D 1",
-    "full": "Melee · Melee · A 3 · WS 4+ · S 6 · AP 0 · D 1",
-    "glossary": "glossary-weapon-close-combat-weapon-3",
-    "rule": "unit-kastelan-robots",
-    "units": [
-      "unit-kastelan-robots"
-    ],
-    "datasheet": "unit-kastelan-robots",
-    "statline": "kastelan-robots-profile"
-  },
-  "weapon-twin-kastelan-phosphor-blaster": {
-    "title": "Twin Kastelan phosphor blaster",
-    "summary": "Ranged · 24\" · A 3 · BS 4+ · S 6 · AP -1 · D 1 · Ignores Cover, Twin-linked",
-    "full": "Ranged · 24\" · A 3 · BS 4+ · S 6 · AP -1 · D 1 · Ignores Cover, Twin-linked",
-    "glossary": "glossary-weapon-twin-kastelan-phosphor-blaster",
-    "rule": "unit-kastelan-robots",
-    "units": [
-      "unit-kastelan-robots"
-    ],
-    "datasheet": "unit-kastelan-robots",
-    "statline": "kastelan-robots-profile"
-  },
-  "weapon-twin-kastelan-fist": {
-    "title": "Twin Kastelan fist",
-    "summary": "Melee · Melee · A 4 · WS 4+ · S 12 · AP -2 · D 3 · Twin-linked",
-    "full": "Melee · Melee · A 4 · WS 4+ · S 12 · AP -2 · D 3 · Twin-linked",
-    "glossary": "glossary-weapon-twin-kastelan-fist",
-    "rule": "unit-kastelan-robots",
-    "units": [
-      "unit-kastelan-robots"
-    ],
-    "datasheet": "unit-kastelan-robots",
-    "statline": "kastelan-robots-profile"
-  },
-  "weapon-kastelan-fist": {
-    "title": "Kastelan fist",
-    "summary": "Melee · Melee · A 4 · WS 4+ · S 12 · AP -2 · D 3",
-    "full": "Melee · Melee · A 4 · WS 4+ · S 12 · AP -2 · D 3",
-    "glossary": "glossary-weapon-kastelan-fist",
-    "rule": "unit-kastelan-robots",
-    "units": [
-      "unit-kastelan-robots"
-    ],
-    "datasheet": "unit-kastelan-robots",
-    "statline": "kastelan-robots-profile"
-  },
-  "weapon-kastelan-phosphor-blaster": {
-    "title": "Kastelan phosphor blaster",
-    "summary": "Ranged · 24\" · A 3 · BS 4+ · S 6 · AP -1 · D 1 · Ignores Cover",
-    "full": "Ranged · 24\" · A 3 · BS 4+ · S 6 · AP -1 · D 1 · Ignores Cover",
-    "glossary": "glossary-weapon-kastelan-phosphor-blaster",
-    "rule": "unit-kastelan-robots",
-    "units": [
-      "unit-kastelan-robots"
-    ],
-    "datasheet": "unit-kastelan-robots",
-    "statline": "kastelan-robots-profile"
-  },
-  "weapon-incendine-combustor": {
-    "title": "Incendine combustor",
-    "summary": "Ranged · 12\" · A D6 · BS N/A · S 6 · AP -1 · D 1 · Ignores Cover, Torrent",
-    "full": "Ranged · 12\" · A D6 · BS N/A · S 6 · AP -1 · D 1 · Ignores Cover, Torrent",
-    "glossary": "glossary-weapon-incendine-combustor",
-    "rule": "unit-kastelan-robots",
-    "units": [
-      "unit-kastelan-robots"
-    ],
-    "datasheet": "unit-kastelan-robots",
-    "statline": "kastelan-robots-profile"
-  },
   "datasheet-breaching-command": {
     "title": "Breaching Command",
     "summary": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1.",
@@ -2102,11 +1854,11 @@ window.DG_TERMS={
     "datasheet": "unit-kataphron-destroyers",
     "statline": "kataphron-destroyers-profile"
   },
-  "weapon-close-combat-weapon-4": {
+  "weapon-close-combat-weapon-3": {
     "title": "Close combat weapon",
     "summary": "Melee · Melee · A 2 · WS 4+ · S 5 · AP 0 · D 1",
     "full": "Melee · Melee · A 2 · WS 4+ · S 5 · AP 0 · D 1",
-    "glossary": "glossary-weapon-close-combat-weapon-4",
+    "glossary": "glossary-weapon-close-combat-weapon-3",
     "rule": "unit-kataphron-destroyers",
     "units": [
       "unit-kataphron-destroyers"
@@ -2150,127 +1902,6 @@ window.DG_TERMS={
     "datasheet": "unit-kataphron-destroyers",
     "statline": "kataphron-destroyers-profile"
   },
-  "datasheet-emanatus-forcefield-aura": {
-    "title": "Emanatus Forcefield (Aura)",
-    "summary": "While a friendly Adeptus Mechanicus Battleline model is wholly within 6\" of this model, that Battleline model has a 4+ invulnerable save against ranged attacks.",
-    "full": "While a friendly Adeptus Mechanicus Battleline model is wholly within 6\" of this model, that Battleline model has a 4+ invulnerable save against ranged attacks.",
-    "glossary": "glossary-datasheet-emanatus-forcefield-aura",
-    "rule": "unit-onager-dunecrawler",
-    "units": [
-      "unit-onager-dunecrawler"
-    ],
-    "datasheet": "unit-onager-dunecrawler",
-    "statline": "onager-dunecrawler-profile"
-  },
-  "datasheet-damaged-1-4-wounds-remaining": {
-    "title": "Damaged: 1-4 wounds remaining",
-    "summary": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-datasheet-damaged-1-4-wounds-remaining",
-    "rule": "unit-onager-dunecrawler",
-    "units": [
-      "unit-onager-dunecrawler",
-      "unit-skorpius-disintegrator"
-    ],
-    "datasheet": "unit-onager-dunecrawler",
-    "statline": "onager-dunecrawler-profile"
-  },
-  "datasheet-scuttling-walker": {
-    "title": "Scuttling Walker",
-    "summary": "Each time this model makes a Normal, Advance or Fall Back move, it can move through friendly Monster and Vehicle models and sections of terrain features that are 4\" or less in height.",
-    "full": "Each time this model makes a Normal, Advance or Fall Back move, it can move through friendly Monster and Vehicle models and sections of terrain features that are 4\" or less in height.",
-    "glossary": "glossary-datasheet-scuttling-walker",
-    "rule": "unit-onager-dunecrawler",
-    "units": [
-      "unit-onager-dunecrawler"
-    ],
-    "datasheet": "unit-onager-dunecrawler",
-    "statline": "onager-dunecrawler-profile"
-  },
-  "weapon-dunecrawler-legs": {
-    "title": "Dunecrawler legs",
-    "summary": "Melee · Melee · A 3 · WS 4+ · S 6 · AP 0 · D 1",
-    "full": "Melee · Melee · A 3 · WS 4+ · S 6 · AP 0 · D 1",
-    "glossary": "glossary-weapon-dunecrawler-legs",
-    "rule": "unit-onager-dunecrawler",
-    "units": [
-      "unit-onager-dunecrawler"
-    ],
-    "datasheet": "unit-onager-dunecrawler",
-    "statline": "onager-dunecrawler-profile"
-  },
-  "weapon-eradication-beamer-dissipated": {
-    "title": "Eradication beamer - dissipated",
-    "summary": "Ranged · 36\" · A 3D3 · BS 4+ · S 9 · AP -2 · D 2 · Blast, Sustained Hits 1",
-    "full": "Ranged · 36\" · A 3D3 · BS 4+ · S 9 · AP -2 · D 2 · Blast, Sustained Hits 1",
-    "glossary": "glossary-weapon-eradication-beamer-dissipated",
-    "rule": "unit-onager-dunecrawler",
-    "units": [
-      "unit-onager-dunecrawler"
-    ],
-    "datasheet": "unit-onager-dunecrawler",
-    "statline": "onager-dunecrawler-profile"
-  },
-  "weapon-eradication-beamer-focused": {
-    "title": "Eradication beamer - focused",
-    "summary": "Ranged · 18\" · A 3D3 · BS 4+ · S 10 · AP -3 · D 3 · Blast, Sustained Hits 1",
-    "full": "Ranged · 18\" · A 3D3 · BS 4+ · S 10 · AP -3 · D 3 · Blast, Sustained Hits 1",
-    "glossary": "glossary-weapon-eradication-beamer-focused",
-    "rule": "unit-onager-dunecrawler",
-    "units": [
-      "unit-onager-dunecrawler"
-    ],
-    "datasheet": "unit-onager-dunecrawler",
-    "statline": "onager-dunecrawler-profile"
-  },
-  "weapon-daedalus-missile-launcher": {
-    "title": "Daedalus missile launcher",
-    "summary": "Ranged · 48\" · A 2 · BS 4+ · S 10 · AP -2 · D D6+1 · Anti-Fly 2+",
-    "full": "Ranged · 48\" · A 2 · BS 4+ · S 10 · AP -2 · D D6+1 · Anti-Fly 2+",
-    "glossary": "glossary-weapon-daedalus-missile-launcher",
-    "rule": "unit-onager-dunecrawler",
-    "units": [
-      "unit-onager-dunecrawler"
-    ],
-    "datasheet": "unit-onager-dunecrawler",
-    "statline": "onager-dunecrawler-profile"
-  },
-  "weapon-icarus-array": {
-    "title": "Icarus array",
-    "summary": "Ranged · 48\" · A 6 · BS 4+ · S 8 · AP -1 · D 2 · Anti-Fly 4+, Twin-linked",
-    "full": "Ranged · 48\" · A 6 · BS 4+ · S 8 · AP -1 · D 2 · Anti-Fly 4+, Twin-linked",
-    "glossary": "glossary-weapon-icarus-array",
-    "rule": "unit-onager-dunecrawler",
-    "units": [
-      "unit-onager-dunecrawler"
-    ],
-    "datasheet": "unit-onager-dunecrawler",
-    "statline": "onager-dunecrawler-profile"
-  },
-  "weapon-neutron-laser": {
-    "title": "Neutron laser",
-    "summary": "Ranged · 48\" · A 3 · BS 4+ · S 16 · AP -4 · D D6+2 · Heavy",
-    "full": "Ranged · 48\" · A 3 · BS 4+ · S 16 · AP -4 · D D6+2 · Heavy",
-    "glossary": "glossary-weapon-neutron-laser",
-    "rule": "unit-onager-dunecrawler",
-    "units": [
-      "unit-onager-dunecrawler"
-    ],
-    "datasheet": "unit-onager-dunecrawler",
-    "statline": "onager-dunecrawler-profile"
-  },
-  "weapon-twin-onager-heavy-phosphor-blaster": {
-    "title": "Twin Onager heavy phosphor blaster",
-    "summary": "Ranged · 36\" · A 12 · BS 4+ · S 6 · AP -1 · D 2 · Ignores Cover, Twin-linked",
-    "full": "Ranged · 36\" · A 12 · BS 4+ · S 6 · AP -1 · D 2 · Ignores Cover, Twin-linked",
-    "glossary": "glossary-weapon-twin-onager-heavy-phosphor-blaster",
-    "rule": "unit-onager-dunecrawler",
-    "units": [
-      "unit-onager-dunecrawler"
-    ],
-    "datasheet": "unit-onager-dunecrawler",
-    "statline": "onager-dunecrawler-profile"
-  },
   "datasheet-ride-the-thermals": {
     "title": "Ride the Thermals",
     "summary": "In your Shooting phase, after this unit has shot, if it is not within Engagement Range of one or more enemy units, it can do one of the following:\n- Make a Normal move of up to 6\".",
@@ -2310,11 +1941,11 @@ window.DG_TERMS={
     "datasheet": "unit-pteraxii-skystalkers",
     "statline": "pteraxii-skystalkers-profile"
   },
-  "weapon-close-combat-weapon-5": {
+  "weapon-close-combat-weapon-4": {
     "title": "Close combat weapon",
     "summary": "Melee · Melee · A 2 · WS 4+ · S 3 · AP 0 · D 1",
     "full": "Melee · Melee · A 2 · WS 4+ · S 3 · AP 0 · D 1",
-    "glossary": "glossary-weapon-close-combat-weapon-5",
+    "glossary": "glossary-weapon-close-combat-weapon-4",
     "rule": "unit-pteraxii-skystalkers",
     "units": [
       "unit-pteraxii-skystalkers"
@@ -2369,114 +2000,6 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-pteraxii-sterylizors",
     "statline": "pteraxii-sterylizors-profile"
-  },
-  "datasheet-tactica-obliqua": {
-    "title": "Tactica Obliqua",
-    "summary": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, it can do one of the following:\n- Make a Normal move of up to D6\".",
-    "full": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, it can do one of the following:\n- Make a Normal move of up to D6\".\n- Make a Normal move of up to 6\", provided every model in this unit ends that move wholly within 6\" of one or more friendly Adeptus Mechanicus Battleline units.",
-    "glossary": "glossary-datasheet-tactica-obliqua",
-    "rule": "unit-serberys-raiders",
-    "units": [
-      "unit-serberys-raiders"
-    ],
-    "datasheet": "unit-serberys-raiders",
-    "statline": "serberys-raiders-profile"
-  },
-  "weapon-galvanic-carbine": {
-    "title": "Galvanic carbine",
-    "summary": "Ranged · 18\" · A 3 · BS 4+ · S 4 · AP 0 · D 1 · Devastating Wounds",
-    "full": "Ranged · 18\" · A 3 · BS 4+ · S 4 · AP 0 · D 1 · Devastating Wounds",
-    "glossary": "glossary-weapon-galvanic-carbine",
-    "rule": "unit-serberys-raiders",
-    "units": [
-      "unit-serberys-raiders"
-    ],
-    "datasheet": "unit-serberys-raiders",
-    "statline": "serberys-raiders-profile"
-  },
-  "weapon-cavalry-sabre-clawed-limbs": {
-    "title": "Cavalry sabre & clawed limbs",
-    "summary": "Melee · Melee · A 4 · WS 4+ · S 4 · AP -1 · D 1",
-    "full": "Melee · Melee · A 4 · WS 4+ · S 4 · AP -1 · D 1",
-    "glossary": "glossary-weapon-cavalry-sabre-clawed-limbs",
-    "rule": "unit-serberys-raiders",
-    "units": [
-      "unit-serberys-raiders"
-    ],
-    "datasheet": "unit-serberys-raiders",
-    "statline": "serberys-raiders-profile"
-  },
-  "datasheet-line-breakers": {
-    "title": "Line-breakers",
-    "summary": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each model in this unit that is within Engagement Range of that enemy unit, adding 2 to the result if this unit started its Charge move within 6\" of one or more friendly Adeptus Mechanicus Battleline units.",
-    "full": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each model in this unit that is within Engagement Range of that enemy unit, adding 2 to the result if this unit started its Charge move within 6\" of one or more friendly Adeptus Mechanicus Battleline units. For each 4+, that enemy unit suffers 1 mortal wound.",
-    "glossary": "glossary-datasheet-line-breakers",
-    "rule": "unit-serberys-sulphurhounds",
-    "units": [
-      "unit-serberys-sulphurhounds"
-    ],
-    "datasheet": "unit-serberys-sulphurhounds",
-    "statline": "serberys-sulphurhounds-profile"
-  },
-  "weapon-cavalry-arc-maul": {
-    "title": "Cavalry arc maul",
-    "summary": "Melee · Melee · A 1 · WS 4+ · S 5 · AP -1 · D 1 · Anti-Vehicle 4+, Devastating Wounds, Extra Attacks",
-    "full": "Melee · Melee · A 1 · WS 4+ · S 5 · AP -1 · D 1 · Anti-Vehicle 4+, Devastating Wounds, Extra Attacks",
-    "glossary": "glossary-weapon-cavalry-arc-maul",
-    "rule": "unit-serberys-sulphurhounds",
-    "units": [
-      "unit-serberys-sulphurhounds"
-    ],
-    "datasheet": "unit-serberys-sulphurhounds",
-    "statline": "serberys-sulphurhounds-profile"
-  },
-  "weapon-clawed-limbs": {
-    "title": "Clawed limbs",
-    "summary": "Melee · Melee · A 4 · WS 4+ · S 4 · AP 0 · D 1",
-    "full": "Melee · Melee · A 4 · WS 4+ · S 4 · AP 0 · D 1",
-    "glossary": "glossary-weapon-clawed-limbs",
-    "rule": "unit-serberys-sulphurhounds",
-    "units": [
-      "unit-serberys-sulphurhounds"
-    ],
-    "datasheet": "unit-serberys-sulphurhounds",
-    "statline": "serberys-sulphurhounds-profile"
-  },
-  "weapon-sulphur-breath": {
-    "title": "Sulphur breath",
-    "summary": "Ranged · 9\" · A D6 · BS N/A · S 3 · AP -1 · D 1 · Ignores Cover, Pistol, Torrent",
-    "full": "Ranged · 9\" · A D6 · BS N/A · S 3 · AP -1 · D 1 · Ignores Cover, Pistol, Torrent",
-    "glossary": "glossary-weapon-sulphur-breath",
-    "rule": "unit-serberys-sulphurhounds",
-    "units": [
-      "unit-serberys-sulphurhounds"
-    ],
-    "datasheet": "unit-serberys-sulphurhounds",
-    "statline": "serberys-sulphurhounds-profile"
-  },
-  "weapon-phosphor-pistol": {
-    "title": "Phosphor pistol",
-    "summary": "Ranged · 12\" · A 1 · BS 4+ · S 4 · AP 0 · D 1 · Ignores Cover, Pistol",
-    "full": "Ranged · 12\" · A 1 · BS 4+ · S 4 · AP 0 · D 1 · Ignores Cover, Pistol",
-    "glossary": "glossary-weapon-phosphor-pistol",
-    "rule": "unit-serberys-sulphurhounds",
-    "units": [
-      "unit-serberys-sulphurhounds"
-    ],
-    "datasheet": "unit-serberys-sulphurhounds",
-    "statline": "serberys-sulphurhounds-profile"
-  },
-  "weapon-phosphor-blast-carbine": {
-    "title": "Phosphor blast carbine",
-    "summary": "Ranged · 18\" · A D6 · BS 4+ · S 6 · AP 0 · D 1 · Blast, Ignores cover",
-    "full": "Ranged · 18\" · A D6 · BS 4+ · S 6 · AP 0 · D 1 · Blast, Ignores cover",
-    "glossary": "glossary-weapon-phosphor-blast-carbine",
-    "rule": "unit-serberys-sulphurhounds",
-    "units": [
-      "unit-serberys-sulphurhounds"
-    ],
-    "datasheet": "unit-serberys-sulphurhounds",
-    "statline": "serberys-sulphurhounds-profile"
   },
   "datasheet-network-override": {
     "title": "Network Override",
@@ -2669,6 +2192,483 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-sicarian-ruststalkers",
     "statline": "sicarian-ruststalkers-profile"
+  },
+  "datasheet-tactica-obliqua": {
+    "title": "Tactica Obliqua",
+    "summary": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, it can do one of the following:\n- Make a Normal move of up to D6\".",
+    "full": "In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, it can do one of the following:\n- Make a Normal move of up to D6\".\n- Make a Normal move of up to 6\", provided every model in this unit ends that move wholly within 6\" of one or more friendly Adeptus Mechanicus Battleline units.",
+    "glossary": "glossary-datasheet-tactica-obliqua",
+    "rule": "unit-serberys-raiders",
+    "units": [
+      "unit-serberys-raiders"
+    ],
+    "datasheet": "unit-serberys-raiders",
+    "statline": "serberys-raiders-profile"
+  },
+  "weapon-galvanic-carbine": {
+    "title": "Galvanic carbine",
+    "summary": "Ranged · 18\" · A 3 · BS 4+ · S 4 · AP 0 · D 1 · Devastating Wounds",
+    "full": "Ranged · 18\" · A 3 · BS 4+ · S 4 · AP 0 · D 1 · Devastating Wounds",
+    "glossary": "glossary-weapon-galvanic-carbine",
+    "rule": "unit-serberys-raiders",
+    "units": [
+      "unit-serberys-raiders"
+    ],
+    "datasheet": "unit-serberys-raiders",
+    "statline": "serberys-raiders-profile"
+  },
+  "weapon-cavalry-sabre-clawed-limbs": {
+    "title": "Cavalry sabre & clawed limbs",
+    "summary": "Melee · Melee · A 4 · WS 4+ · S 4 · AP -1 · D 1",
+    "full": "Melee · Melee · A 4 · WS 4+ · S 4 · AP -1 · D 1",
+    "glossary": "glossary-weapon-cavalry-sabre-clawed-limbs",
+    "rule": "unit-serberys-raiders",
+    "units": [
+      "unit-serberys-raiders"
+    ],
+    "datasheet": "unit-serberys-raiders",
+    "statline": "serberys-raiders-profile"
+  },
+  "datasheet-line-breakers": {
+    "title": "Line-breakers",
+    "summary": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each model in this unit that is within Engagement Range of that enemy unit, adding 2 to the result if this unit started its Charge move within 6\" of one or more friendly Adeptus Mechanicus Battleline units.",
+    "full": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each model in this unit that is within Engagement Range of that enemy unit, adding 2 to the result if this unit started its Charge move within 6\" of one or more friendly Adeptus Mechanicus Battleline units. For each 4+, that enemy unit suffers 1 mortal wound.",
+    "glossary": "glossary-datasheet-line-breakers",
+    "rule": "unit-serberys-sulphurhounds",
+    "units": [
+      "unit-serberys-sulphurhounds"
+    ],
+    "datasheet": "unit-serberys-sulphurhounds",
+    "statline": "serberys-sulphurhounds-profile"
+  },
+  "weapon-cavalry-arc-maul": {
+    "title": "Cavalry arc maul",
+    "summary": "Melee · Melee · A 1 · WS 4+ · S 5 · AP -1 · D 1 · Anti-Vehicle 4+, Devastating Wounds, Extra Attacks",
+    "full": "Melee · Melee · A 1 · WS 4+ · S 5 · AP -1 · D 1 · Anti-Vehicle 4+, Devastating Wounds, Extra Attacks",
+    "glossary": "glossary-weapon-cavalry-arc-maul",
+    "rule": "unit-serberys-sulphurhounds",
+    "units": [
+      "unit-serberys-sulphurhounds"
+    ],
+    "datasheet": "unit-serberys-sulphurhounds",
+    "statline": "serberys-sulphurhounds-profile"
+  },
+  "weapon-clawed-limbs": {
+    "title": "Clawed limbs",
+    "summary": "Melee · Melee · A 4 · WS 4+ · S 4 · AP 0 · D 1",
+    "full": "Melee · Melee · A 4 · WS 4+ · S 4 · AP 0 · D 1",
+    "glossary": "glossary-weapon-clawed-limbs",
+    "rule": "unit-serberys-sulphurhounds",
+    "units": [
+      "unit-serberys-sulphurhounds"
+    ],
+    "datasheet": "unit-serberys-sulphurhounds",
+    "statline": "serberys-sulphurhounds-profile"
+  },
+  "weapon-sulphur-breath": {
+    "title": "Sulphur breath",
+    "summary": "Ranged · 9\" · A D6 · BS N/A · S 3 · AP -1 · D 1 · Ignores Cover, Pistol, Torrent",
+    "full": "Ranged · 9\" · A D6 · BS N/A · S 3 · AP -1 · D 1 · Ignores Cover, Pistol, Torrent",
+    "glossary": "glossary-weapon-sulphur-breath",
+    "rule": "unit-serberys-sulphurhounds",
+    "units": [
+      "unit-serberys-sulphurhounds"
+    ],
+    "datasheet": "unit-serberys-sulphurhounds",
+    "statline": "serberys-sulphurhounds-profile"
+  },
+  "weapon-phosphor-pistol": {
+    "title": "Phosphor pistol",
+    "summary": "Ranged · 12\" · A 1 · BS 4+ · S 4 · AP 0 · D 1 · Ignores Cover, Pistol",
+    "full": "Ranged · 12\" · A 1 · BS 4+ · S 4 · AP 0 · D 1 · Ignores Cover, Pistol",
+    "glossary": "glossary-weapon-phosphor-pistol",
+    "rule": "unit-serberys-sulphurhounds",
+    "units": [
+      "unit-serberys-sulphurhounds"
+    ],
+    "datasheet": "unit-serberys-sulphurhounds",
+    "statline": "serberys-sulphurhounds-profile"
+  },
+  "weapon-phosphor-blast-carbine": {
+    "title": "Phosphor blast carbine",
+    "summary": "Ranged · 18\" · A D6 · BS 4+ · S 6 · AP 0 · D 1 · Blast, Ignores cover",
+    "full": "Ranged · 18\" · A D6 · BS 4+ · S 6 · AP 0 · D 1 · Blast, Ignores cover",
+    "glossary": "glossary-weapon-phosphor-blast-carbine",
+    "rule": "unit-serberys-sulphurhounds",
+    "units": [
+      "unit-serberys-sulphurhounds"
+    ],
+    "datasheet": "unit-serberys-sulphurhounds",
+    "statline": "serberys-sulphurhounds-profile"
+  },
+  "datasheet-bomb-rack": {
+    "title": "Bomb Rack",
+    "summary": "At the end of your opponent’s Fight phase, select one visible enemy unit (excluding Lone Operative units) within 24\" of this unit, and roll six D6 for that unit: for each 4+, that unit suffers 1 mortal wound.",
+    "full": "At the end of your opponent’s Fight phase, select one visible enemy unit (excluding Lone Operative units) within 24\" of this unit, and roll six D6 for that unit: for each 4+, that unit suffers 1 mortal wound.",
+    "glossary": "glossary-datasheet-bomb-rack",
+    "rule": "unit-archaeopter-fusilave",
+    "units": [
+      "unit-archaeopter-fusilave"
+    ],
+    "datasheet": "unit-archaeopter-fusilave",
+    "statline": "archaeopter-fusilave-profile"
+  },
+  "datasheet-chaff-launcher": {
+    "title": "Chaff Launcher",
+    "summary": "The bearer has the Smoke keyword.",
+    "full": "The bearer has the Smoke keyword.",
+    "glossary": "glossary-datasheet-chaff-launcher",
+    "rule": "unit-archaeopter-fusilave",
+    "units": [
+      "unit-archaeopter-fusilave",
+      "unit-archaeopter-stratoraptor",
+      "unit-archaeopter-transvector"
+    ],
+    "datasheet": "unit-archaeopter-fusilave",
+    "statline": "archaeopter-fusilave-profile"
+  },
+  "datasheet-command-uplink": {
+    "title": "Command Uplink",
+    "summary": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+    "full": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+    "glossary": "glossary-datasheet-command-uplink",
+    "rule": "unit-archaeopter-fusilave",
+    "units": [
+      "unit-archaeopter-fusilave",
+      "unit-archaeopter-stratoraptor",
+      "unit-archaeopter-transvector"
+    ],
+    "datasheet": "unit-archaeopter-fusilave",
+    "statline": "archaeopter-fusilave-profile"
+  },
+  "datasheet-strafing-run": {
+    "title": "Strafing Run",
+    "summary": "Each time this model makes a ranged attack that targets an enemy unit (excluding units that can Fly), add 1 to the Hit roll.",
+    "full": "Each time this model makes a ranged attack that targets an enemy unit (excluding units that can Fly), add 1 to the Hit roll.",
+    "glossary": "glossary-datasheet-strafing-run",
+    "rule": "unit-archaeopter-stratoraptor",
+    "units": [
+      "unit-archaeopter-stratoraptor"
+    ],
+    "datasheet": "unit-archaeopter-stratoraptor",
+    "statline": "archaeopter-stratoraptor-profile"
+  },
+  "weapon-cognis-heavy-stubber": {
+    "title": "Cognis heavy stubber",
+    "summary": "Ranged · 36\" · A 3 · BS 4+ · S 4 · AP 0 · D 1 · Rapid Fire 3, Sustained Hits 1",
+    "full": "Ranged · 36\" · A 3 · BS 4+ · S 4 · AP 0 · D 1 · Rapid Fire 3, Sustained Hits 1",
+    "glossary": "glossary-weapon-cognis-heavy-stubber",
+    "rule": "unit-archaeopter-stratoraptor",
+    "units": [
+      "unit-archaeopter-stratoraptor",
+      "unit-onager-dunecrawler",
+      "unit-skorpius-disintegrator"
+    ],
+    "datasheet": "unit-archaeopter-stratoraptor",
+    "statline": "archaeopter-stratoraptor-profile"
+  },
+  "weapon-heavy-phosphor-blaster": {
+    "title": "Heavy phosphor blaster",
+    "summary": "Ranged · 36\" · A 3 · BS 4+ · S 6 · AP -1 · D 2 · Ignores Cover",
+    "full": "Ranged · 36\" · A 3 · BS 4+ · S 6 · AP -1 · D 2 · Ignores Cover",
+    "glossary": "glossary-weapon-heavy-phosphor-blaster",
+    "rule": "unit-archaeopter-stratoraptor",
+    "units": [
+      "unit-archaeopter-stratoraptor",
+      "unit-kastelan-robots"
+    ],
+    "datasheet": "unit-archaeopter-stratoraptor",
+    "statline": "archaeopter-stratoraptor-profile"
+  },
+  "weapon-twin-cognis-lascannon": {
+    "title": "Twin cognis lascannon",
+    "summary": "Ranged · 48\" · A 1 · BS 4+ · S 12 · AP -3 · D D6+1 · Sustained hits 1, Twin-linked",
+    "full": "Ranged · 48\" · A 1 · BS 4+ · S 12 · AP -3 · D D6+1 · Sustained hits 1, Twin-linked",
+    "glossary": "glossary-weapon-twin-cognis-lascannon",
+    "rule": "unit-archaeopter-stratoraptor",
+    "units": [
+      "unit-archaeopter-stratoraptor"
+    ],
+    "datasheet": "unit-archaeopter-stratoraptor",
+    "statline": "archaeopter-stratoraptor-profile"
+  },
+  "datasheet-aerial-deployment": {
+    "title": "Aerial Deployment",
+    "summary": "In your first Movement phase, this unit can make an ingress move.",
+    "full": "In your first Movement phase, this unit can make an ingress move.",
+    "glossary": "glossary-datasheet-aerial-deployment",
+    "rule": "unit-archaeopter-transvector",
+    "units": [
+      "unit-archaeopter-transvector"
+    ],
+    "datasheet": "unit-archaeopter-transvector",
+    "statline": "archaeopter-transvector-profile"
+  },
+  "datasheet-elevated-strider": {
+    "title": "Elevated Strider",
+    "summary": "This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-roll Desperate Escape tests taken for models in this unit.",
+    "full": "This unit is eligible to shoot in a turn in which it Fell Back or Advanced, and you can re-roll Desperate Escape tests taken for models in this unit.",
+    "glossary": "glossary-datasheet-elevated-strider",
+    "rule": "unit-ironstrider-ballistarii",
+    "units": [
+      "unit-ironstrider-ballistarii"
+    ],
+    "datasheet": "unit-ironstrider-ballistarii",
+    "statline": "ironstrider-ballistarii-profile"
+  },
+  "weapon-twin-cognis-autocannon": {
+    "title": "Twin cognis autocannon",
+    "summary": "Ranged · 48\" · A 4 · BS 4+ · S 9 · AP -1 · D 3 · Sustained Hits 1, Twin-linked",
+    "full": "Ranged · 48\" · A 4 · BS 4+ · S 9 · AP -1 · D 3 · Sustained Hits 1, Twin-linked",
+    "glossary": "glossary-weapon-twin-cognis-autocannon",
+    "rule": "unit-ironstrider-ballistarii",
+    "units": [
+      "unit-ironstrider-ballistarii"
+    ],
+    "datasheet": "unit-ironstrider-ballistarii",
+    "statline": "ironstrider-ballistarii-profile"
+  },
+  "weapon-ironstrider-feet": {
+    "title": "Ironstrider feet",
+    "summary": "Melee · Melee · A 3 · WS 4+ · S 5 · AP 0 · D 1",
+    "full": "Melee · Melee · A 3 · WS 4+ · S 5 · AP 0 · D 1",
+    "glossary": "glossary-weapon-ironstrider-feet",
+    "rule": "unit-ironstrider-ballistarii",
+    "units": [
+      "unit-ironstrider-ballistarii",
+      "unit-sydonian-dragoons-with-radium-jezzails"
+    ],
+    "datasheet": "unit-ironstrider-ballistarii",
+    "statline": "ironstrider-ballistarii-profile"
+  },
+  "weapon-twin-cognis-lascannon-2": {
+    "title": "Twin cognis lascannon",
+    "summary": "Ranged · 48\" · A 2 · BS 4+ · S 12 · AP -3 · D D6+1 · Sustained Hits 1, Twin-linked",
+    "full": "Ranged · 48\" · A 2 · BS 4+ · S 12 · AP -3 · D D6+1 · Sustained Hits 1, Twin-linked",
+    "glossary": "glossary-weapon-twin-cognis-lascannon-2",
+    "rule": "unit-ironstrider-ballistarii",
+    "units": [
+      "unit-ironstrider-ballistarii"
+    ],
+    "datasheet": "unit-ironstrider-ballistarii",
+    "statline": "ironstrider-ballistarii-profile"
+  },
+  "datasheet-robotic-bodyguard": {
+    "title": "Robotic Bodyguard",
+    "summary": "While a Cybernetica Datasmith model is leading this unit, that model has the Feel No Pain 4+ ability.",
+    "full": "While a Cybernetica Datasmith model is leading this unit, that model has the Feel No Pain 4+ ability.",
+    "glossary": "glossary-datasheet-robotic-bodyguard",
+    "rule": "unit-kastelan-robots",
+    "units": [
+      "unit-kastelan-robots"
+    ],
+    "datasheet": "unit-kastelan-robots",
+    "statline": "kastelan-robots-profile"
+  },
+  "datasheet-repulsor-grid": {
+    "title": "Repulsor Grid",
+    "summary": "When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot, when this unit makes a save roll: \n- On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit has shot.",
+    "full": "When an enemy unit targets this unit with ranged attacks, until that enemy unit has shot, when this unit makes a save roll: \n- On an unmodified 6, that enemy unit suffers 1 mortal wound after that enemy unit has shot.",
+    "glossary": "glossary-datasheet-repulsor-grid",
+    "rule": "unit-kastelan-robots",
+    "units": [
+      "unit-kastelan-robots"
+    ],
+    "datasheet": "unit-kastelan-robots",
+    "statline": "kastelan-robots-profile"
+  },
+  "weapon-close-combat-weapon-5": {
+    "title": "Close combat weapon",
+    "summary": "Melee · Melee · A 3 · WS 4+ · S 6 · AP 0 · D 1",
+    "full": "Melee · Melee · A 3 · WS 4+ · S 6 · AP 0 · D 1",
+    "glossary": "glossary-weapon-close-combat-weapon-5",
+    "rule": "unit-kastelan-robots",
+    "units": [
+      "unit-kastelan-robots"
+    ],
+    "datasheet": "unit-kastelan-robots",
+    "statline": "kastelan-robots-profile"
+  },
+  "weapon-twin-kastelan-phosphor-blaster": {
+    "title": "Twin Kastelan phosphor blaster",
+    "summary": "Ranged · 24\" · A 3 · BS 4+ · S 6 · AP -1 · D 1 · Ignores Cover, Twin-linked",
+    "full": "Ranged · 24\" · A 3 · BS 4+ · S 6 · AP -1 · D 1 · Ignores Cover, Twin-linked",
+    "glossary": "glossary-weapon-twin-kastelan-phosphor-blaster",
+    "rule": "unit-kastelan-robots",
+    "units": [
+      "unit-kastelan-robots"
+    ],
+    "datasheet": "unit-kastelan-robots",
+    "statline": "kastelan-robots-profile"
+  },
+  "weapon-twin-kastelan-fist": {
+    "title": "Twin Kastelan fist",
+    "summary": "Melee · Melee · A 4 · WS 4+ · S 12 · AP -2 · D 3 · Twin-linked",
+    "full": "Melee · Melee · A 4 · WS 4+ · S 12 · AP -2 · D 3 · Twin-linked",
+    "glossary": "glossary-weapon-twin-kastelan-fist",
+    "rule": "unit-kastelan-robots",
+    "units": [
+      "unit-kastelan-robots"
+    ],
+    "datasheet": "unit-kastelan-robots",
+    "statline": "kastelan-robots-profile"
+  },
+  "weapon-kastelan-fist": {
+    "title": "Kastelan fist",
+    "summary": "Melee · Melee · A 4 · WS 4+ · S 12 · AP -2 · D 3",
+    "full": "Melee · Melee · A 4 · WS 4+ · S 12 · AP -2 · D 3",
+    "glossary": "glossary-weapon-kastelan-fist",
+    "rule": "unit-kastelan-robots",
+    "units": [
+      "unit-kastelan-robots"
+    ],
+    "datasheet": "unit-kastelan-robots",
+    "statline": "kastelan-robots-profile"
+  },
+  "weapon-kastelan-phosphor-blaster": {
+    "title": "Kastelan phosphor blaster",
+    "summary": "Ranged · 24\" · A 3 · BS 4+ · S 6 · AP -1 · D 1 · Ignores Cover",
+    "full": "Ranged · 24\" · A 3 · BS 4+ · S 6 · AP -1 · D 1 · Ignores Cover",
+    "glossary": "glossary-weapon-kastelan-phosphor-blaster",
+    "rule": "unit-kastelan-robots",
+    "units": [
+      "unit-kastelan-robots"
+    ],
+    "datasheet": "unit-kastelan-robots",
+    "statline": "kastelan-robots-profile"
+  },
+  "weapon-incendine-combustor": {
+    "title": "Incendine combustor",
+    "summary": "Ranged · 12\" · A D6 · BS N/A · S 6 · AP -1 · D 1 · Ignores Cover, Torrent",
+    "full": "Ranged · 12\" · A D6 · BS N/A · S 6 · AP -1 · D 1 · Ignores Cover, Torrent",
+    "glossary": "glossary-weapon-incendine-combustor",
+    "rule": "unit-kastelan-robots",
+    "units": [
+      "unit-kastelan-robots"
+    ],
+    "datasheet": "unit-kastelan-robots",
+    "statline": "kastelan-robots-profile"
+  },
+  "datasheet-emanatus-forcefield-aura": {
+    "title": "Emanatus Forcefield (Aura)",
+    "summary": "While a friendly Adeptus Mechanicus Battleline model is wholly within 6\" of this model, that Battleline model has a 4+ invulnerable save against ranged attacks.",
+    "full": "While a friendly Adeptus Mechanicus Battleline model is wholly within 6\" of this model, that Battleline model has a 4+ invulnerable save against ranged attacks.",
+    "glossary": "glossary-datasheet-emanatus-forcefield-aura",
+    "rule": "unit-onager-dunecrawler",
+    "units": [
+      "unit-onager-dunecrawler"
+    ],
+    "datasheet": "unit-onager-dunecrawler",
+    "statline": "onager-dunecrawler-profile"
+  },
+  "datasheet-damaged-1-4-wounds-remaining": {
+    "title": "Damaged: 1-4 wounds remaining",
+    "summary": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "full": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "glossary": "glossary-datasheet-damaged-1-4-wounds-remaining",
+    "rule": "unit-onager-dunecrawler",
+    "units": [
+      "unit-onager-dunecrawler",
+      "unit-skorpius-disintegrator"
+    ],
+    "datasheet": "unit-onager-dunecrawler",
+    "statline": "onager-dunecrawler-profile"
+  },
+  "datasheet-scuttling-walker": {
+    "title": "Scuttling Walker",
+    "summary": "Each time this model makes a Normal, Advance or Fall Back move, it can move through friendly Monster and Vehicle models and sections of terrain features that are 4\" or less in height.",
+    "full": "Each time this model makes a Normal, Advance or Fall Back move, it can move through friendly Monster and Vehicle models and sections of terrain features that are 4\" or less in height.",
+    "glossary": "glossary-datasheet-scuttling-walker",
+    "rule": "unit-onager-dunecrawler",
+    "units": [
+      "unit-onager-dunecrawler"
+    ],
+    "datasheet": "unit-onager-dunecrawler",
+    "statline": "onager-dunecrawler-profile"
+  },
+  "weapon-dunecrawler-legs": {
+    "title": "Dunecrawler legs",
+    "summary": "Melee · Melee · A 3 · WS 4+ · S 6 · AP 0 · D 1",
+    "full": "Melee · Melee · A 3 · WS 4+ · S 6 · AP 0 · D 1",
+    "glossary": "glossary-weapon-dunecrawler-legs",
+    "rule": "unit-onager-dunecrawler",
+    "units": [
+      "unit-onager-dunecrawler"
+    ],
+    "datasheet": "unit-onager-dunecrawler",
+    "statline": "onager-dunecrawler-profile"
+  },
+  "weapon-eradication-beamer-dissipated": {
+    "title": "Eradication beamer - dissipated",
+    "summary": "Ranged · 36\" · A 3D3 · BS 4+ · S 9 · AP -2 · D 2 · Blast, Sustained Hits 1",
+    "full": "Ranged · 36\" · A 3D3 · BS 4+ · S 9 · AP -2 · D 2 · Blast, Sustained Hits 1",
+    "glossary": "glossary-weapon-eradication-beamer-dissipated",
+    "rule": "unit-onager-dunecrawler",
+    "units": [
+      "unit-onager-dunecrawler"
+    ],
+    "datasheet": "unit-onager-dunecrawler",
+    "statline": "onager-dunecrawler-profile"
+  },
+  "weapon-eradication-beamer-focused": {
+    "title": "Eradication beamer - focused",
+    "summary": "Ranged · 18\" · A 3D3 · BS 4+ · S 10 · AP -3 · D 3 · Blast, Sustained Hits 1",
+    "full": "Ranged · 18\" · A 3D3 · BS 4+ · S 10 · AP -3 · D 3 · Blast, Sustained Hits 1",
+    "glossary": "glossary-weapon-eradication-beamer-focused",
+    "rule": "unit-onager-dunecrawler",
+    "units": [
+      "unit-onager-dunecrawler"
+    ],
+    "datasheet": "unit-onager-dunecrawler",
+    "statline": "onager-dunecrawler-profile"
+  },
+  "weapon-daedalus-missile-launcher": {
+    "title": "Daedalus missile launcher",
+    "summary": "Ranged · 48\" · A 2 · BS 4+ · S 10 · AP -2 · D D6+1 · Anti-Fly 2+",
+    "full": "Ranged · 48\" · A 2 · BS 4+ · S 10 · AP -2 · D D6+1 · Anti-Fly 2+",
+    "glossary": "glossary-weapon-daedalus-missile-launcher",
+    "rule": "unit-onager-dunecrawler",
+    "units": [
+      "unit-onager-dunecrawler"
+    ],
+    "datasheet": "unit-onager-dunecrawler",
+    "statline": "onager-dunecrawler-profile"
+  },
+  "weapon-icarus-array": {
+    "title": "Icarus array",
+    "summary": "Ranged · 48\" · A 6 · BS 4+ · S 8 · AP -1 · D 2 · Anti-Fly 4+, Twin-linked",
+    "full": "Ranged · 48\" · A 6 · BS 4+ · S 8 · AP -1 · D 2 · Anti-Fly 4+, Twin-linked",
+    "glossary": "glossary-weapon-icarus-array",
+    "rule": "unit-onager-dunecrawler",
+    "units": [
+      "unit-onager-dunecrawler"
+    ],
+    "datasheet": "unit-onager-dunecrawler",
+    "statline": "onager-dunecrawler-profile"
+  },
+  "weapon-neutron-laser": {
+    "title": "Neutron laser",
+    "summary": "Ranged · 48\" · A 3 · BS 4+ · S 16 · AP -4 · D D6+2 · Heavy",
+    "full": "Ranged · 48\" · A 3 · BS 4+ · S 16 · AP -4 · D D6+2 · Heavy",
+    "glossary": "glossary-weapon-neutron-laser",
+    "rule": "unit-onager-dunecrawler",
+    "units": [
+      "unit-onager-dunecrawler"
+    ],
+    "datasheet": "unit-onager-dunecrawler",
+    "statline": "onager-dunecrawler-profile"
+  },
+  "weapon-twin-onager-heavy-phosphor-blaster": {
+    "title": "Twin Onager heavy phosphor blaster",
+    "summary": "Ranged · 36\" · A 12 · BS 4+ · S 6 · AP -1 · D 2 · Ignores Cover, Twin-linked",
+    "full": "Ranged · 36\" · A 12 · BS 4+ · S 6 · AP -1 · D 2 · Ignores Cover, Twin-linked",
+    "glossary": "glossary-weapon-twin-onager-heavy-phosphor-blaster",
+    "rule": "unit-onager-dunecrawler",
+    "units": [
+      "unit-onager-dunecrawler"
+    ],
+    "datasheet": "unit-onager-dunecrawler",
+    "statline": "onager-dunecrawler-profile"
   },
   "datasheet-blistering-salvoes": {
     "title": "Blistering Salvoes",

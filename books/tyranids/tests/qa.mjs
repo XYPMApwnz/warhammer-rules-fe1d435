@@ -69,7 +69,8 @@ for(const unit of [...codex.datasheets,...codex.imperialArmour,...codex.legends]
 }
 const termagants=codex.datasheets.find(unit=>unit.title==='Termagants');
 assert.deepEqual(termagants.abilities.map(item=>item.title),['Skulking Horrors','Synapse']);
-assert.ok(termagants.wargearAbilities.some(item=>item.title==='Torrent'));
+assert.ok(allUnits.every(unit=>(unit.wargearAbilities||[]).length===0),'linked weapon definitions must not become Wargear Abilities');
+assert.doesNotMatch(reader+mobileDatasheetMarkup,/>Wargear Abilities</,'empty Wargear Abilities sections must not render');
 const currentUnits=[...codex.datasheets,...codex.imperialArmour].filter(unit=>unit.status==='Current');
 const unit=title=>currentUnits.find(item=>item.title===title);
 assert.deepEqual(points.detachments.map(item=>[item.title,item.forceDisposition,item.detachmentPoints]),[
@@ -167,7 +168,7 @@ assert.match(bookCss,/tyranids-cover-800\.webp/,'the supplied Tyranids artwork m
 assert.match(bookCss,/\.related-rules-dialog[^}]*background:var\(--panel\)/,'Related Rules must have an opaque book background');
 assert.doesNotMatch(bookCss,/\.related-rules-dialog[^}]*background:var\(--void\)/,'Related Rules must not use the undefined transparent --void token');
 assert.doesNotMatch(bookCss,/html\[data-view="mobile"\]/,'Phone Mode must use focused pages, not the desktop monolith');
-assert.ok(Object.keys(context.terms).length>=300);
+assert.ok(Object.values(context.terms).every(entry=>glossary[entry.termId]),'every Tyranids context entry must resolve a canonical glossary term');
 assert.equal(context.terms['tyranids-detachment-rule-mindhunger'].navigation.rule,'detachment-ambush-predators');
 
 const allStratagems=[...pack.detachments,...codexParity.detachments].flatMap(detachment=>detachment.stratagems);

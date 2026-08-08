@@ -162,6 +162,44 @@ window.DG_TERMS={
     "datasheet": "unit-breacher-team",
     "statline": "breacher-team-profile"
   },
+  "tau-empire-ability-for-the-greater-good": {
+    "id": "tau-empire-ability-for-the-greater-good",
+    "title": "For The Greater Good",
+    "summary": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units. During your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase. Units from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units. Until the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+    "full": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units. During your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase. Units from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units. Until the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
+    "glossary": "glossary-tau-empire-ability-for-the-greater-good",
+    "rule": "unit-breacher-team",
+    "units": [
+      "unit-breacher-team",
+      "unit-strike-team",
+      "unit-cadre-fireblade",
+      "unit-commander-in-coldstar-battlesuit",
+      "unit-commander-in-enforcer-battlesuit",
+      "unit-ethereal",
+      "unit-firesight-team",
+      "unit-devilfish",
+      "unit-commander-farsight",
+      "unit-commander-shadowsun",
+      "unit-darkstrider",
+      "unit-the-twin-lance",
+      "unit-pathfinder-team",
+      "unit-stealth-battlesuits",
+      "unit-broadside-battlesuits",
+      "unit-crisis-fireknife-battlesuits",
+      "unit-crisis-starscythe-battlesuits",
+      "unit-crisis-sunforge-battlesuits",
+      "unit-ghostkeel-battlesuit",
+      "unit-hammerhead-gunship",
+      "unit-piranhas",
+      "unit-razorshark-strike-fighter",
+      "unit-riptide-battlesuit",
+      "unit-sky-ray-gunship",
+      "unit-stormsurge",
+      "unit-sun-shark-bomber"
+    ],
+    "datasheet": "unit-breacher-team",
+    "statline": "breacher-team-profile"
+  },
   "tau-empire-ability-marker-drone": {
     "id": "tau-empire-ability-marker-drone",
     "title": "Marker Drone",
@@ -230,161 +268,6 @@ window.DG_TERMS={
       "unit-crisis-fireknife-battlesuits",
       "unit-crisis-starscythe-battlesuits",
       "unit-crisis-sunforge-battlesuits"
-    ],
-    "datasheet": "unit-breacher-team",
-    "statline": "breacher-team-profile"
-  },
-  "tau-empire-ability-pistol": {
-    "id": "tau-empire-ability-pistol",
-    "title": "Pistol",
-    "summary": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: - One or more of its [CLOSE-QUARTERS] weapons. - One or more of its other ranged weapons.",
-    "full": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: - One or more of its [CLOSE-QUARTERS] weapons. - One or more of its other ranged weapons.",
-    "glossary": "glossary-tau-empire-ability-pistol",
-    "rule": "unit-breacher-team",
-    "units": [
-      "unit-breacher-team",
-      "unit-strike-team",
-      "unit-firesight-team",
-      "unit-kroot-war-shaper",
-      "unit-commander-shadowsun",
-      "unit-the-twin-lance",
-      "unit-kroot-carnivores",
-      "unit-kroot-farstalkers",
-      "unit-pathfinder-team",
-      "unit-stealth-battlesuits",
-      "unit-krootox-rampagers"
-    ],
-    "datasheet": "unit-breacher-team",
-    "statline": "breacher-team-profile"
-  },
-  "tau-empire-ability-assault": {
-    "id": "tau-empire-ability-assault",
-    "title": "Assault",
-    "summary": "Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).",
-    "full": "Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).",
-    "glossary": "glossary-tau-empire-ability-assault",
-    "rule": "unit-breacher-team",
-    "units": [
-      "unit-breacher-team",
-      "unit-strike-team",
-      "unit-cadre-fireblade",
-      "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-ethereal",
-      "unit-kroot-flesh-shaper",
-      "unit-kroot-lone-spear",
-      "unit-kroot-war-shaper",
-      "unit-devilfish",
-      "unit-darkstrider",
-      "unit-the-twin-lance",
-      "unit-pathfinder-team",
-      "unit-stealth-battlesuits",
-      "unit-vespid-stingwings",
-      "unit-broadside-battlesuits",
-      "unit-crisis-fireknife-battlesuits",
-      "unit-crisis-starscythe-battlesuits",
-      "unit-crisis-sunforge-battlesuits",
-      "unit-krootox-rampagers",
-      "unit-piranhas",
-      "unit-sky-ray-gunship",
-      "unit-tidewall-droneport"
-    ],
-    "datasheet": "unit-breacher-team",
-    "statline": "breacher-team-profile"
-  },
-  "tau-empire-ability-indirect-fire": {
-    "id": "tau-empire-ability-indirect-fire",
-    "title": "Indirect Fire",
-    "summary": "Units containing one or more models with an [INDIRECT FIRE] weapon can shoot using indirect shooting (10.07).",
-    "full": "Units containing one or more models with an [INDIRECT FIRE] weapon can shoot using indirect shooting (10.07).",
-    "glossary": "glossary-tau-empire-ability-indirect-fire",
-    "rule": "unit-breacher-team",
-    "units": [
-      "unit-breacher-team",
-      "unit-strike-team",
-      "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-devilfish",
-      "unit-broadside-battlesuits",
-      "unit-hammerhead-gunship",
-      "unit-riptide-battlesuit",
-      "unit-sky-ray-gunship",
-      "unit-stormsurge"
-    ],
-    "datasheet": "unit-breacher-team",
-    "statline": "breacher-team-profile"
-  },
-  "tau-empire-ability-twin-linked": {
-    "id": "tau-empire-ability-twin-linked",
-    "title": "Twin-linked",
-    "summary": "Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.",
-    "full": "Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.",
-    "glossary": "glossary-tau-empire-ability-twin-linked",
-    "rule": "unit-breacher-team",
-    "units": [
-      "unit-breacher-team",
-      "unit-strike-team",
-      "unit-cadre-fireblade",
-      "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-ethereal",
-      "unit-kroot-flesh-shaper",
-      "unit-devilfish",
-      "unit-the-twin-lance",
-      "unit-pathfinder-team",
-      "unit-stealth-battlesuits",
-      "unit-broadside-battlesuits",
-      "unit-crisis-fireknife-battlesuits",
-      "unit-crisis-starscythe-battlesuits",
-      "unit-crisis-sunforge-battlesuits",
-      "unit-ghostkeel-battlesuit",
-      "unit-hammerhead-gunship",
-      "unit-piranhas",
-      "unit-razorshark-strike-fighter",
-      "unit-riptide-battlesuit",
-      "unit-sky-ray-gunship",
-      "unit-stormsurge",
-      "unit-sun-shark-bomber",
-      "unit-tidewall-droneport",
-      "unit-tidewall-gunrig"
-    ],
-    "datasheet": "unit-breacher-team",
-    "statline": "breacher-team-profile"
-  },
-  "tau-empire-ability-for-the-greater-good": {
-    "id": "tau-empire-ability-for-the-greater-good",
-    "title": "For The Greater Good",
-    "summary": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units. During your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase. Units from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units. Until the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
-    "full": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units. During your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase. Units from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units. Until the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability.",
-    "glossary": "glossary-tau-empire-ability-for-the-greater-good",
-    "rule": "unit-breacher-team",
-    "units": [
-      "unit-breacher-team",
-      "unit-strike-team",
-      "unit-cadre-fireblade",
-      "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-ethereal",
-      "unit-firesight-team",
-      "unit-devilfish",
-      "unit-commander-farsight",
-      "unit-commander-shadowsun",
-      "unit-darkstrider",
-      "unit-the-twin-lance",
-      "unit-pathfinder-team",
-      "unit-stealth-battlesuits",
-      "unit-broadside-battlesuits",
-      "unit-crisis-fireknife-battlesuits",
-      "unit-crisis-starscythe-battlesuits",
-      "unit-crisis-sunforge-battlesuits",
-      "unit-ghostkeel-battlesuit",
-      "unit-hammerhead-gunship",
-      "unit-piranhas",
-      "unit-razorshark-strike-fighter",
-      "unit-riptide-battlesuit",
-      "unit-sky-ray-gunship",
-      "unit-stormsurge",
-      "unit-sun-shark-bomber"
     ],
     "datasheet": "unit-breacher-team",
     "statline": "breacher-team-profile"
@@ -509,25 +392,6 @@ window.DG_TERMS={
     "datasheet": "unit-strike-team",
     "statline": "strike-team-profile"
   },
-  "tau-empire-ability-rapid-fire": {
-    "id": "tau-empire-ability-rapid-fire",
-    "title": "Rapid Fire",
-    "summary": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. *Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range, you would gather one additional attack dice for that weapon (for a total of two for that weapon).*",
-    "full": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. *Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range, you would gather one additional attack dice for that weapon (for a total of two for that weapon).*",
-    "glossary": "glossary-tau-empire-ability-rapid-fire",
-    "rule": "unit-strike-team",
-    "units": [
-      "unit-strike-team",
-      "unit-cadre-fireblade",
-      "unit-kroot-trail-shaper",
-      "unit-the-twin-lance",
-      "unit-kroot-carnivores",
-      "unit-kroot-farstalkers",
-      "unit-krootox-riders"
-    ],
-    "datasheet": "unit-strike-team",
-    "statline": "strike-team-profile"
-  },
   "tau-empire-weapon-pulse-carbine": {
     "id": "tau-empire-weapon-pulse-carbine",
     "title": "Pulse carbine",
@@ -577,27 +441,6 @@ window.DG_TERMS={
     "rule": "unit-cadre-fireblade",
     "units": [
       "unit-cadre-fireblade"
-    ],
-    "datasheet": "unit-cadre-fireblade",
-    "statline": "cadre-fireblade-profile"
-  },
-  "tau-empire-ability-leader": {
-    "id": "tau-empire-ability-leader",
-    "title": "Leader",
-    "summary": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit. Each time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-    "full": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit. Each time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-    "glossary": "glossary-tau-empire-ability-leader",
-    "rule": "unit-cadre-fireblade",
-    "units": [
-      "unit-cadre-fireblade",
-      "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-ethereal",
-      "unit-kroot-flesh-shaper",
-      "unit-kroot-trail-shaper",
-      "unit-kroot-war-shaper",
-      "unit-commander-farsight",
-      "unit-darkstrider"
     ],
     "datasheet": "unit-cadre-fireblade",
     "statline": "cadre-fireblade-profile"
@@ -683,128 +526,6 @@ window.DG_TERMS={
       "unit-commander-in-enforcer-battlesuit",
       "unit-broadside-battlesuits",
       "unit-riptide-battlesuit"
-    ],
-    "datasheet": "unit-commander-in-coldstar-battlesuit",
-    "statline": "commander-in-coldstar-battlesuit-profile"
-  },
-  "tau-empire-ability-blast": {
-    "id": "tau-empire-ability-blast",
-    "title": "Blast",
-    "summary": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. *Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*",
-    "full": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. *Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*",
-    "glossary": "glossary-tau-empire-ability-blast",
-    "rule": "unit-commander-in-coldstar-battlesuit",
-    "units": [
-      "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-kroot-lone-spear",
-      "unit-kroot-carnivores",
-      "unit-vespid-stingwings",
-      "unit-hammerhead-gunship",
-      "unit-krootox-riders",
-      "unit-stormsurge"
-    ],
-    "datasheet": "unit-commander-in-coldstar-battlesuit",
-    "statline": "commander-in-coldstar-battlesuit-profile"
-  },
-  "tau-empire-ability-hazardous": {
-    "id": "tau-empire-ability-hazardous",
-    "title": "Hazardous",
-    "summary": "Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.",
-    "full": "Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.",
-    "glossary": "glossary-tau-empire-ability-hazardous",
-    "rule": "unit-commander-in-coldstar-battlesuit",
-    "units": [
-      "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-the-twin-lance",
-      "unit-pathfinder-team",
-      "unit-ghostkeel-battlesuit",
-      "unit-hammerhead-gunship",
-      "unit-razorshark-strike-fighter",
-      "unit-riptide-battlesuit",
-      "unit-sun-shark-bomber"
-    ],
-    "datasheet": "unit-commander-in-coldstar-battlesuit",
-    "statline": "commander-in-coldstar-battlesuit-profile"
-  },
-  "tau-empire-ability-torrent": {
-    "id": "tau-empire-ability-torrent",
-    "title": "Torrent",
-    "summary": "Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.",
-    "full": "Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.",
-    "glossary": "glossary-tau-empire-ability-torrent",
-    "rule": "unit-commander-in-coldstar-battlesuit",
-    "units": [
-      "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-kroot-farstalkers",
-      "unit-vespid-stingwings",
-      "unit-crisis-starscythe-battlesuits",
-      "unit-ghostkeel-battlesuit",
-      "unit-stormsurge"
-    ],
-    "datasheet": "unit-commander-in-coldstar-battlesuit",
-    "statline": "commander-in-coldstar-battlesuit-profile"
-  },
-  "tau-empire-ability-ignores-cover": {
-    "id": "tau-empire-ability-ignores-cover",
-    "title": "Ignores Cover",
-    "summary": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth ).",
-    "full": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth ).",
-    "glossary": "glossary-tau-empire-ability-ignores-cover",
-    "rule": "unit-commander-in-coldstar-battlesuit",
-    "units": [
-      "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-the-twin-lance",
-      "unit-kroot-farstalkers",
-      "unit-pathfinder-team",
-      "unit-vespid-stingwings",
-      "unit-crisis-starscythe-battlesuits",
-      "unit-ghostkeel-battlesuit",
-      "unit-stormsurge"
-    ],
-    "datasheet": "unit-commander-in-coldstar-battlesuit",
-    "statline": "commander-in-coldstar-battlesuit-profile"
-  },
-  "tau-empire-ability-melta": {
-    "id": "tau-empire-ability-melta",
-    "title": "Melta",
-    "summary": "This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic. *Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.",
-    "full": "This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic. *Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.",
-    "glossary": "glossary-tau-empire-ability-melta",
-    "rule": "unit-commander-in-coldstar-battlesuit",
-    "units": [
-      "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-commander-shadowsun",
-      "unit-the-twin-lance",
-      "unit-stealth-battlesuits",
-      "unit-crisis-sunforge-battlesuits",
-      "unit-ghostkeel-battlesuit",
-      "unit-piranhas",
-      "unit-riptide-battlesuit"
-    ],
-    "datasheet": "unit-commander-in-coldstar-battlesuit",
-    "statline": "commander-in-coldstar-battlesuit-profile"
-  },
-  "tau-empire-ability-deep-strike": {
-    "id": "tau-empire-ability-deep-strike",
-    "title": "Deep Strike",
-    "summary": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
-    "full": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
-    "glossary": "glossary-tau-empire-ability-deep-strike",
-    "rule": "unit-commander-in-coldstar-battlesuit",
-    "units": [
-      "unit-commander-in-coldstar-battlesuit",
-      "unit-commander-in-enforcer-battlesuit",
-      "unit-commander-farsight",
-      "unit-the-twin-lance",
-      "unit-vespid-stingwings",
-      "unit-crisis-fireknife-battlesuits",
-      "unit-crisis-starscythe-battlesuits",
-      "unit-crisis-sunforge-battlesuits"
     ],
     "datasheet": "unit-commander-in-coldstar-battlesuit",
     "statline": "commander-in-coldstar-battlesuit-profile"
@@ -1003,21 +724,6 @@ window.DG_TERMS={
     "datasheet": "unit-ethereal",
     "statline": "ethereal-profile"
   },
-  "tau-empire-ability-feel-no-pain": {
-    "id": "tau-empire-ability-feel-no-pain",
-    "title": "Feel No Pain",
-    "summary": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
-    "full": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
-    "glossary": "glossary-tau-empire-ability-feel-no-pain",
-    "rule": "unit-ethereal",
-    "units": [
-      "unit-ethereal",
-      "unit-kroot-flesh-shaper",
-      "unit-broadside-battlesuits"
-    ],
-    "datasheet": "unit-ethereal",
-    "statline": "ethereal-profile"
-  },
   "tau-empire-weapon-honour-stave": {
     "id": "tau-empire-weapon-honour-stave",
     "title": "Honour stave",
@@ -1040,102 +746,6 @@ window.DG_TERMS={
     "rule": "unit-firesight-team",
     "units": [
       "unit-firesight-team"
-    ],
-    "datasheet": "unit-firesight-team",
-    "statline": "firesight-team-profile"
-  },
-  "tau-empire-ability-heavy": {
-    "id": "tau-empire-ability-heavy",
-    "title": "Heavy",
-    "summary": "In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit: - That unit is unengaged. - That unit was not set up on the battlefield this turn. - No model in that unit has moved more than 3\" this turn.",
-    "full": "In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit: - That unit is unengaged. - That unit was not set up on the battlefield this turn. - No model in that unit has moved more than 3\" this turn.",
-    "glossary": "glossary-tau-empire-ability-heavy",
-    "rule": "unit-firesight-team",
-    "units": [
-      "unit-firesight-team",
-      "unit-kroot-lone-spear",
-      "unit-kroot-war-shaper",
-      "unit-kroot-farstalkers",
-      "unit-pathfinder-team",
-      "unit-broadside-battlesuits",
-      "unit-hammerhead-gunship",
-      "unit-krootox-riders",
-      "unit-stormsurge"
-    ],
-    "datasheet": "unit-firesight-team",
-    "statline": "firesight-team-profile"
-  },
-  "tau-empire-ability-precision": {
-    "id": "tau-empire-ability-precision",
-    "title": "Precision",
-    "summary": "While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.",
-    "full": "While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.",
-    "glossary": "glossary-tau-empire-ability-precision",
-    "rule": "unit-firesight-team",
-    "units": [
-      "unit-firesight-team",
-      "unit-kroot-lone-spear"
-    ],
-    "datasheet": "unit-firesight-team",
-    "statline": "firesight-team-profile"
-  },
-  "tau-empire-ability-infiltrators": {
-    "id": "tau-empire-ability-infiltrators",
-    "title": "Infiltrators",
-    "summary": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
-    "full": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
-    "glossary": "glossary-tau-empire-ability-infiltrators",
-    "rule": "unit-firesight-team",
-    "units": [
-      "unit-firesight-team",
-      "unit-kroot-flesh-shaper",
-      "unit-kroot-trail-shaper",
-      "unit-kroot-war-shaper",
-      "unit-commander-shadowsun",
-      "unit-darkstrider",
-      "unit-kroot-farstalkers",
-      "unit-pathfinder-team",
-      "unit-stealth-battlesuits",
-      "unit-ghostkeel-battlesuit"
-    ],
-    "datasheet": "unit-firesight-team",
-    "statline": "firesight-team-profile"
-  },
-  "tau-empire-ability-lone-operative": {
-    "id": "tau-empire-ability-lone-operative",
-    "title": "Lone Operative",
-    "summary": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
-    "full": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
-    "glossary": "glossary-tau-empire-ability-lone-operative",
-    "rule": "unit-firesight-team",
-    "units": [
-      "unit-firesight-team",
-      "unit-kroot-lone-spear",
-      "unit-commander-shadowsun",
-      "unit-ghostkeel-battlesuit"
-    ],
-    "datasheet": "unit-firesight-team",
-    "statline": "firesight-team-profile"
-  },
-  "tau-empire-ability-stealth": {
-    "id": "tau-empire-ability-stealth",
-    "title": "Stealth",
-    "summary": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
-    "full": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
-    "glossary": "glossary-tau-empire-ability-stealth",
-    "rule": "unit-firesight-team",
-    "units": [
-      "unit-firesight-team",
-      "unit-kroot-flesh-shaper",
-      "unit-kroot-lone-spear",
-      "unit-kroot-trail-shaper",
-      "unit-kroot-war-shaper",
-      "unit-commander-shadowsun",
-      "unit-kroot-carnivores",
-      "unit-kroot-farstalkers",
-      "unit-stealth-battlesuits",
-      "unit-ghostkeel-battlesuit",
-      "unit-kroot-hounds"
     ],
     "datasheet": "unit-firesight-team",
     "statline": "firesight-team-profile"
@@ -1227,43 +837,6 @@ window.DG_TERMS={
     "datasheet": "unit-kroot-flesh-shaper",
     "statline": "kroot-flesh-shaper-profile"
   },
-  "tau-empire-ability-scouts-7": {
-    "id": "tau-empire-ability-scouts-7",
-    "title": "Scouts 7\"",
-    "summary": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
-    "full": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
-    "glossary": "glossary-tau-empire-ability-scouts-7",
-    "rule": "unit-kroot-flesh-shaper",
-    "units": [
-      "unit-kroot-flesh-shaper",
-      "unit-kroot-lone-spear",
-      "unit-kroot-trail-shaper",
-      "unit-kroot-war-shaper",
-      "unit-darkstrider",
-      "unit-kroot-carnivores",
-      "unit-pathfinder-team",
-      "unit-kroot-hounds",
-      "unit-krootox-rampagers",
-      "unit-krootox-riders"
-    ],
-    "datasheet": "unit-kroot-flesh-shaper",
-    "statline": "kroot-flesh-shaper-profile"
-  },
-  "tau-empire-ability-sustained-hits": {
-    "id": "tau-empire-ability-sustained-hits",
-    "title": "Sustained Hits",
-    "summary": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X. *Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).",
-    "full": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X. *Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).",
-    "glossary": "glossary-tau-empire-ability-sustained-hits",
-    "rule": "unit-kroot-flesh-shaper",
-    "units": [
-      "unit-kroot-flesh-shaper",
-      "unit-the-twin-lance",
-      "unit-krootox-rampagers"
-    ],
-    "datasheet": "unit-kroot-flesh-shaper",
-    "statline": "kroot-flesh-shaper-profile"
-  },
   "tau-empire-weapon-twin-ritualistic-blades": {
     "id": "tau-empire-weapon-twin-ritualistic-blades",
     "title": "Twin ritualistic blades",
@@ -1312,36 +885,6 @@ window.DG_TERMS={
     "rule": "unit-kroot-lone-spear",
     "units": [
       "unit-kroot-lone-spear"
-    ],
-    "datasheet": "unit-kroot-lone-spear",
-    "statline": "kroot-lone-spear-profile"
-  },
-  "tau-empire-ability-lance": {
-    "id": "tau-empire-ability-lance",
-    "title": "Lance",
-    "summary": "Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.",
-    "full": "Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.",
-    "glossary": "glossary-tau-empire-ability-lance",
-    "rule": "unit-kroot-lone-spear",
-    "units": [
-      "unit-kroot-lone-spear",
-      "unit-krootox-rampagers"
-    ],
-    "datasheet": "unit-kroot-lone-spear",
-    "statline": "kroot-lone-spear-profile"
-  },
-  "tau-empire-ability-extra-attacks": {
-    "id": "tau-empire-ability-extra-attacks",
-    "title": "Extra Attacks",
-    "summary": "Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select: - All of that model’s [EXTRA ATTACKS] weapons. - One of that model’s other melee weapons, if possible.",
-    "full": "Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select: - All of that model’s [EXTRA ATTACKS] weapons. - One of that model’s other melee weapons, if possible.",
-    "glossary": "glossary-tau-empire-ability-extra-attacks",
-    "rule": "unit-kroot-lone-spear",
-    "units": [
-      "unit-kroot-lone-spear",
-      "unit-the-twin-lance",
-      "unit-krootox-rampagers",
-      "unit-krootox-riders"
     ],
     "datasheet": "unit-kroot-lone-spear",
     "statline": "kroot-lone-spear-profile"
@@ -1491,35 +1034,6 @@ window.DG_TERMS={
     "datasheet": "unit-kroot-war-shaper",
     "statline": "kroot-war-shaper-profile"
   },
-  "tau-empire-ability-lethal-hits": {
-    "id": "tau-empire-ability-lethal-hits",
-    "title": "Lethal Hits",
-    "summary": "Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target. *Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].*",
-    "full": "Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target. *Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].*",
-    "glossary": "glossary-tau-empire-ability-lethal-hits",
-    "rule": "unit-kroot-war-shaper",
-    "units": [
-      "unit-kroot-war-shaper"
-    ],
-    "datasheet": "unit-kroot-war-shaper",
-    "statline": "kroot-war-shaper-profile"
-  },
-  "tau-empire-ability-anti": {
-    "id": "tau-empire-ability-anti",
-    "title": "Anti",
-    "summary": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*",
-    "full": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*",
-    "glossary": "glossary-tau-empire-ability-anti",
-    "rule": "unit-kroot-war-shaper",
-    "units": [
-      "unit-kroot-war-shaper",
-      "unit-kroot-farstalkers",
-      "unit-pathfinder-team",
-      "unit-vespid-stingwings"
-    ],
-    "datasheet": "unit-kroot-war-shaper",
-    "statline": "kroot-war-shaper-profile"
-  },
   "tau-empire-weapon-bladestave-and-prey-hook": {
     "id": "tau-empire-weapon-bladestave-and-prey-hook",
     "title": "Bladestave and prey-hook",
@@ -1570,45 +1084,6 @@ window.DG_TERMS={
     "rule": "unit-devilfish",
     "units": [
       "unit-devilfish"
-    ],
-    "datasheet": "unit-devilfish",
-    "statline": "devilfish-profile"
-  },
-  "tau-empire-ability-one-shot": {
-    "id": "tau-empire-ability-one-shot",
-    "title": "One Shot",
-    "summary": "Each weapon with this ability can only be selected to make attacks with once per battle. If a destroyed model is returned to a unit, all of its [ONE SHOT] weapons that have already been selected to make attacks with during the battle cannot be selected to make attacks with again. If a new unit is added to an army, all [ONE SHOT] weapons in that unit can be selected to make attacks with once per battle.",
-    "full": "Each weapon with this ability can only be selected to make attacks with once per battle. If a destroyed model is returned to a unit, all of its [ONE SHOT] weapons that have already been selected to make attacks with during the battle cannot be selected to make attacks with again. If a new unit is added to an army, all [ONE SHOT] weapons in that unit can be selected to make attacks with once per battle.",
-    "glossary": "glossary-tau-empire-ability-one-shot",
-    "rule": "unit-devilfish",
-    "units": [
-      "unit-devilfish",
-      "unit-broadside-battlesuits",
-      "unit-hammerhead-gunship",
-      "unit-piranhas",
-      "unit-razorshark-strike-fighter",
-      "unit-sun-shark-bomber"
-    ],
-    "datasheet": "unit-devilfish",
-    "statline": "devilfish-profile"
-  },
-  "tau-empire-ability-deadly-demise-d3": {
-    "id": "tau-empire-ability-deadly-demise-d3",
-    "title": "Deadly Demise D3",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-tau-empire-ability-deadly-demise-d3",
-    "rule": "unit-devilfish",
-    "units": [
-      "unit-devilfish",
-      "unit-ghostkeel-battlesuit",
-      "unit-hammerhead-gunship",
-      "unit-razorshark-strike-fighter",
-      "unit-sky-ray-gunship",
-      "unit-sun-shark-bomber",
-      "unit-tidewall-droneport",
-      "unit-tidewall-gunrig",
-      "unit-tidewall-shieldline"
     ],
     "datasheet": "unit-devilfish",
     "statline": "devilfish-profile"
@@ -1954,19 +1429,6 @@ window.DG_TERMS={
     "datasheet": "unit-the-twin-lance",
     "statline": "the-twin-lance-profile"
   },
-  "tau-empire-ability-scouts-8": {
-    "id": "tau-empire-ability-scouts-8",
-    "title": "Scouts 8\"",
-    "summary": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
-    "full": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
-    "glossary": "glossary-tau-empire-ability-scouts-8",
-    "rule": "unit-the-twin-lance",
-    "units": [
-      "unit-the-twin-lance"
-    ],
-    "datasheet": "unit-the-twin-lance",
-    "statline": "the-twin-lance-profile"
-  },
   "tau-empire-weapon-fusion-eliminator": {
     "id": "tau-empire-weapon-fusion-eliminator",
     "title": "Fusion eliminator",
@@ -2097,19 +1559,6 @@ window.DG_TERMS={
     "datasheet": "unit-kroot-carnivores",
     "statline": "kroot-carnivores-profile"
   },
-  "tau-empire-ability-bodyguard": {
-    "id": "tau-empire-ability-bodyguard",
-    "title": "Bodyguard",
-    "summary": "If this unit has a Starting Strength of 20, you can attach up to two Leader units to it instead of one, provided those Leaders are not duplicates (e.g. you cannot attach two WAR SHAPERS to this unit). If you do, and this unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths.",
-    "full": "If this unit has a Starting Strength of 20, you can attach up to two Leader units to it instead of one, provided those Leaders are not duplicates (e.g. you cannot attach two WAR SHAPERS to this unit). If you do, and this unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths.",
-    "glossary": "glossary-tau-empire-ability-bodyguard",
-    "rule": "unit-kroot-carnivores",
-    "units": [
-      "unit-kroot-carnivores"
-    ],
-    "datasheet": "unit-kroot-carnivores",
-    "statline": "kroot-carnivores-profile"
-  },
   "tau-empire-weapon-close-combat-weapon-4": {
     "id": "tau-empire-weapon-close-combat-weapon-4",
     "title": "Close combat weapon",
@@ -2150,25 +1599,6 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-kroot-carnivores",
     "statline": "kroot-carnivores-profile"
-  },
-  "tau-empire-ability-devastating-wounds": {
-    "id": "tau-empire-ability-devastating-wounds",
-    "title": "Devastating Wounds",
-    "summary": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*",
-    "full": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*",
-    "glossary": "glossary-tau-empire-ability-devastating-wounds",
-    "rule": "unit-kroot-farstalkers",
-    "units": [
-      "unit-kroot-farstalkers",
-      "unit-pathfinder-team",
-      "unit-vespid-stingwings",
-      "unit-broadside-battlesuits",
-      "unit-hammerhead-gunship",
-      "unit-riptide-battlesuit",
-      "unit-tidewall-gunrig"
-    ],
-    "datasheet": "unit-kroot-farstalkers",
-    "statline": "kroot-farstalkers-profile"
   },
   "tau-empire-weapon-ripping-fangs": {
     "id": "tau-empire-weapon-ripping-fangs",
@@ -2392,19 +1822,6 @@ window.DG_TERMS={
     "datasheet": "unit-stealth-battlesuits",
     "statline": "stealth-battlesuits-profile"
   },
-  "tau-empire-ability-homing-beacon": {
-    "id": "tau-empire-ability-homing-beacon",
-    "title": "Homing Beacon",
-    "summary": "Once per battle, you can use the Rapid Ingress Stratagem for 0CP. The target must be set up within 3\" of the bearer’s unit and more than 8\" away from all enemy units. Designer’s Note: *Place a Homing Beacon token next to this unit, removing it once this ability is used.*",
-    "full": "Once per battle, you can use the Rapid Ingress Stratagem for 0CP. The target must be set up within 3\" of the bearer’s unit and more than 8\" away from all enemy units. Designer’s Note: *Place a Homing Beacon token next to this unit, removing it once this ability is used.*",
-    "glossary": "glossary-tau-empire-ability-homing-beacon",
-    "rule": "unit-stealth-battlesuits",
-    "units": [
-      "unit-stealth-battlesuits"
-    ],
-    "datasheet": "unit-stealth-battlesuits",
-    "statline": "stealth-battlesuits-profile"
-  },
   "tau-empire-ability-localised-stealth-projectors-aura": {
     "id": "tau-empire-ability-localised-stealth-projectors-aura",
     "title": "Localised Stealth Projectors (Aura)",
@@ -2415,6 +1832,19 @@ window.DG_TERMS={
     "units": [
       "unit-stealth-battlesuits",
       "unit-ghostkeel-battlesuit"
+    ],
+    "datasheet": "unit-stealth-battlesuits",
+    "statline": "stealth-battlesuits-profile"
+  },
+  "tau-empire-ability-homing-beacon": {
+    "id": "tau-empire-ability-homing-beacon",
+    "title": "Homing Beacon",
+    "summary": "Once per battle, you can use the Rapid Ingress Stratagem for 0CP. The target must be set up within 3\" of the bearer’s unit and more than 8\" away from all enemy units. Designer’s Note: *Place a Homing Beacon token next to this unit, removing it once this ability is used.*",
+    "full": "Once per battle, you can use the Rapid Ingress Stratagem for 0CP. The target must be set up within 3\" of the bearer’s unit and more than 8\" away from all enemy units. Designer’s Note: *Place a Homing Beacon token next to this unit, removing it once this ability is used.*",
+    "glossary": "glossary-tau-empire-ability-homing-beacon",
+    "rule": "unit-stealth-battlesuits",
+    "units": [
+      "unit-stealth-battlesuits"
     ],
     "datasheet": "unit-stealth-battlesuits",
     "statline": "stealth-battlesuits-profile"
@@ -2738,19 +2168,6 @@ window.DG_TERMS={
     "datasheet": "unit-ghostkeel-battlesuit",
     "statline": "ghostkeel-battlesuit-profile"
   },
-  "tau-empire-ability-battlesuit-support-system-3": {
-    "id": "tau-empire-ability-battlesuit-support-system-3",
-    "title": "Battlesuit Support System",
-    "summary": "The bearer is eligible to shoot in a turn in which it Fell Back but it loses the Smoke keyword.",
-    "full": "The bearer is eligible to shoot in a turn in which it Fell Back but it loses the Smoke keyword.",
-    "glossary": "glossary-tau-empire-ability-battlesuit-support-system-3",
-    "rule": "unit-ghostkeel-battlesuit",
-    "units": [
-      "unit-ghostkeel-battlesuit"
-    ],
-    "datasheet": "unit-ghostkeel-battlesuit",
-    "statline": "ghostkeel-battlesuit-profile"
-  },
   "tau-empire-ability-damaged-1-4-wounds-remaining": {
     "id": "tau-empire-ability-damaged-1-4-wounds-remaining",
     "title": "Damaged: 1-4 Wounds Remaining",
@@ -2763,6 +2180,19 @@ window.DG_TERMS={
       "unit-razorshark-strike-fighter",
       "unit-riptide-battlesuit",
       "unit-sun-shark-bomber"
+    ],
+    "datasheet": "unit-ghostkeel-battlesuit",
+    "statline": "ghostkeel-battlesuit-profile"
+  },
+  "tau-empire-ability-battlesuit-support-system-3": {
+    "id": "tau-empire-ability-battlesuit-support-system-3",
+    "title": "Battlesuit Support System",
+    "summary": "The bearer is eligible to shoot in a turn in which it Fell Back but it loses the Smoke keyword.",
+    "full": "The bearer is eligible to shoot in a turn in which it Fell Back but it loses the Smoke keyword.",
+    "glossary": "glossary-tau-empire-ability-battlesuit-support-system-3",
+    "rule": "unit-ghostkeel-battlesuit",
+    "units": [
+      "unit-ghostkeel-battlesuit"
     ],
     "datasheet": "unit-ghostkeel-battlesuit",
     "statline": "ghostkeel-battlesuit-profile"
@@ -3096,32 +2526,6 @@ window.DG_TERMS={
     "datasheet": "unit-piranhas",
     "statline": "piranhas-profile"
   },
-  "tau-empire-ability-deadly-demise-1": {
-    "id": "tau-empire-ability-deadly-demise-1",
-    "title": "Deadly Demise 1",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-tau-empire-ability-deadly-demise-1",
-    "rule": "unit-piranhas",
-    "units": [
-      "unit-piranhas"
-    ],
-    "datasheet": "unit-piranhas",
-    "statline": "piranhas-profile"
-  },
-  "tau-empire-ability-scouts-9": {
-    "id": "tau-empire-ability-scouts-9",
-    "title": "Scouts 9\"",
-    "summary": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
-    "full": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
-    "glossary": "glossary-tau-empire-ability-scouts-9",
-    "rule": "unit-piranhas",
-    "units": [
-      "unit-piranhas"
-    ],
-    "datasheet": "unit-piranhas",
-    "statline": "piranhas-profile"
-  },
   "tau-empire-weapon-piranha-burst-cannon": {
     "id": "tau-empire-weapon-piranha-burst-cannon",
     "title": "Piranha burst cannon",
@@ -3206,19 +2610,6 @@ window.DG_TERMS={
     "summary": "Once per battle, when this unit is selected to shoot in your Shooting phase, select one ranged weapon equipped by this model. Until the end of the phase, that weapon has the [DEVASTATING WOUNDS] ability.",
     "full": "Once per battle, when this unit is selected to shoot in your Shooting phase, select one ranged weapon equipped by this model. Until the end of the phase, that weapon has the [DEVASTATING WOUNDS] ability.",
     "glossary": "glossary-tau-empire-ability-nova-charge",
-    "rule": "unit-riptide-battlesuit",
-    "units": [
-      "unit-riptide-battlesuit"
-    ],
-    "datasheet": "unit-riptide-battlesuit",
-    "statline": "riptide-battlesuit-profile"
-  },
-  "tau-empire-ability-deadly-demise-d6": {
-    "id": "tau-empire-ability-deadly-demise-d6",
-    "title": "Deadly Demise D6",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-tau-empire-ability-deadly-demise-d6",
     "rule": "unit-riptide-battlesuit",
     "units": [
       "unit-riptide-battlesuit"
@@ -3594,20 +2985,6 @@ window.DG_TERMS={
     "datasheet": "unit-tidewall-droneport",
     "statline": "tidewall-droneport-profile"
   },
-  "tau-empire-ability-firing-deck-11": {
-    "id": "tau-empire-ability-firing-deck-11",
-    "title": "Firing Deck 11",
-    "summary": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "full": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "glossary": "glossary-tau-empire-ability-firing-deck-11",
-    "rule": "unit-tidewall-droneport",
-    "units": [
-      "unit-tidewall-droneport",
-      "unit-tidewall-gunrig"
-    ],
-    "datasheet": "unit-tidewall-droneport",
-    "statline": "tidewall-droneport-profile"
-  },
   "tau-empire-weapon-drone-defenders": {
     "id": "tau-empire-weapon-drone-defenders",
     "title": "Drone defenders",
@@ -3640,19 +3017,6 @@ window.DG_TERMS={
     "summary": "If equipped with a Tidewall defence platform, this FORTIFICATION has a Wounds characteristic of 15.",
     "full": "If equipped with a Tidewall defence platform, this FORTIFICATION has a Wounds characteristic of 15.",
     "glossary": "glossary-tau-empire-ability-tidewall-defence-platform",
-    "rule": "unit-tidewall-shieldline",
-    "units": [
-      "unit-tidewall-shieldline"
-    ],
-    "datasheet": "unit-tidewall-shieldline",
-    "statline": "tidewall-shieldline-profile"
-  },
-  "tau-empire-ability-firing-deck-20": {
-    "id": "tau-empire-ability-firing-deck-20",
-    "title": "Firing Deck 20",
-    "summary": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "full": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "glossary": "glossary-tau-empire-ability-firing-deck-20",
     "rule": "unit-tidewall-shieldline",
     "units": [
       "unit-tidewall-shieldline"

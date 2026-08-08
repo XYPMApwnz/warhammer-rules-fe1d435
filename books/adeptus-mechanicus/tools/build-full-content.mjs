@@ -212,7 +212,8 @@ const detNav=allDetachments.map(det=>{
   const slug=det.id.replace('detachment-','');
   return navBranch(det.id,det.title,2,navLeaf(det.rule.id,'Detachment Rule',3)+navLeaf(`${slug}-enhancements`,'Enhancement',3)+navLeaf(`${slug}-stratagems`,'Stratagems',3));
 }).join('');
-const categoryOrder=['Epic Heroes','Characters','Battleline','Dedicated Transports','Other','Warhammer Legends'];
+const fixedCategoryOrder=['Epic Heroes','Characters','Battleline','Dedicated Transports'];
+const categoryOrder=[...fixedCategoryOrder,...new Set(rules.datasheets.map(unit=>unit.category).filter(category=>!fixedCategoryOrder.includes(category)&&category!=='Other'&&category!=='Warhammer Legends')),'Other','Warhammer Legends'];
 const datasheetCategories=categoryOrder.map(title=>({title,id:`datasheets-${title.toLowerCase().replaceAll(/[^a-z0-9]+/g,'-')}`,units:rules.datasheets.filter(unit=>unit.category===title)})).filter(group=>group.units.length);
 const glossaryOrder=['Core abilities','Faction & publication','Datasheet abilities','Weapon profiles'];
 const glossaryGroups=glossaryOrder.map(title=>({title,id:title==='Core abilities'?'glossary-core':title==='Faction & publication'?'glossary-faction':`glossary-${slugify(title)}`,terms:rules.glossary.filter(term=>term.group===title)})).filter(group=>group.terms.length);

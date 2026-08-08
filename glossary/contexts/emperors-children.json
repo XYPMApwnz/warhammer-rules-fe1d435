@@ -217,70 +217,6 @@
         ]
       }
     },
-    "emperors-children-ability-icon-of-excess": {
-      "termId": "emperors-children-ability-icon-of-excess",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-icon-of-excess",
-        "rule": "unit-infractors",
-        "datasheet": "unit-infractors",
-        "statline": "infractors-profile",
-        "units": [
-          "unit-infractors",
-          "unit-tormentors"
-        ]
-      }
-    },
-    "emperors-children-ability-pistol": {
-      "termId": "emperors-children-ability-pistol",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-pistol",
-        "rule": "unit-infractors",
-        "datasheet": "unit-infractors",
-        "statline": "infractors-profile",
-        "units": [
-          "unit-infractors",
-          "unit-tormentors",
-          "unit-lord-exultant",
-          "unit-lord-kakophonist",
-          "unit-sorcerer",
-          "unit-flawless-blades",
-          "unit-noise-marines"
-        ]
-      }
-    },
-    "emperors-children-ability-precision": {
-      "termId": "core-precision",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-precision",
-        "rule": "unit-infractors",
-        "datasheet": "unit-infractors",
-        "statline": "infractors-profile",
-        "units": [
-          "unit-infractors",
-          "unit-tormentors",
-          "unit-lord-exultant",
-          "unit-sorcerer",
-          "unit-lucius-the-eternal",
-          "unit-flawless-blades",
-          "unit-defiler"
-        ]
-      }
-    },
-    "emperors-children-ability-hazardous": {
-      "termId": "core-hazardous",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-hazardous",
-        "rule": "unit-infractors",
-        "datasheet": "unit-infractors",
-        "statline": "infractors-profile",
-        "units": [
-          "unit-infractors",
-          "unit-tormentors",
-          "unit-lord-exultant",
-          "unit-sorcerer"
-        ]
-      }
-    },
     "emperors-children-ability-thrill-seekers": {
       "termId": "emperors-children-ability-thrill-seekers",
       "navigation": {
@@ -310,15 +246,16 @@
         ]
       }
     },
-    "emperors-children-ability-scouts-6": {
-      "termId": "emperors-children-ability-scouts-6",
+    "emperors-children-ability-icon-of-excess": {
+      "termId": "emperors-children-ability-icon-of-excess",
       "navigation": {
-        "glossary": "glossary-emperors-children-ability-scouts-6",
+        "glossary": "glossary-emperors-children-ability-icon-of-excess",
         "rule": "unit-infractors",
         "datasheet": "unit-infractors",
         "statline": "infractors-profile",
         "units": [
-          "unit-infractors"
+          "unit-infractors",
+          "unit-tormentors"
         ]
       }
     },
@@ -409,46 +346,6 @@
       "termId": "emperors-children-ability-objective-defiled",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-objective-defiled",
-        "rule": "unit-tormentors",
-        "datasheet": "unit-tormentors",
-        "statline": "tormentors-profile",
-        "units": [
-          "unit-tormentors"
-        ]
-      }
-    },
-    "emperors-children-ability-rapid-fire": {
-      "termId": "emperors-children-ability-rapid-fire",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-rapid-fire",
-        "rule": "unit-tormentors",
-        "datasheet": "unit-tormentors",
-        "statline": "tormentors-profile",
-        "units": [
-          "unit-tormentors",
-          "unit-chaos-rhino",
-          "unit-chaos-terminators",
-          "unit-chaos-land-raider"
-        ]
-      }
-    },
-    "emperors-children-ability-melta": {
-      "termId": "emperors-children-ability-melta",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-melta",
-        "rule": "unit-tormentors",
-        "datasheet": "unit-tormentors",
-        "statline": "tormentors-profile",
-        "units": [
-          "unit-tormentors",
-          "unit-defiler"
-        ]
-      }
-    },
-    "emperors-children-ability-infiltrators": {
-      "termId": "core-infiltrators",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-infiltrators",
         "rule": "unit-tormentors",
         "datasheet": "unit-tormentors",
         "statline": "tormentors-profile",
@@ -554,22 +451,6 @@
         ]
       }
     },
-    "emperors-children-ability-deadly-demise-d3": {
-      "termId": "emperors-children-ability-deadly-demise-d3",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-deadly-demise-d3",
-        "rule": "unit-daemon-prince-of-slaanesh",
-        "datasheet": "unit-daemon-prince-of-slaanesh",
-        "statline": "daemon-prince-of-slaanesh-profile",
-        "units": [
-          "unit-daemon-prince-of-slaanesh",
-          "unit-daemon-prince-of-slaanesh-with-wings",
-          "unit-chaos-rhino",
-          "unit-heldrake",
-          "unit-maulerfiend"
-        ]
-      }
-    },
     "emperors-children-weapon-hellforged-weapons-strike": {
       "termId": "emperors-children-weapon-hellforged-weapons-strike",
       "navigation": {
@@ -633,20 +514,6 @@
         ]
       }
     },
-    "emperors-children-ability-deep-strike": {
-      "termId": "core-deep-strike",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-deep-strike",
-        "rule": "unit-daemon-prince-of-slaanesh-with-wings",
-        "datasheet": "unit-daemon-prince-of-slaanesh-with-wings",
-        "statline": "daemon-prince-of-slaanesh-with-wings-profile",
-        "units": [
-          "unit-daemon-prince-of-slaanesh-with-wings",
-          "unit-fulgrim",
-          "unit-chaos-terminators"
-        ]
-      }
-    },
     "emperors-children-ability-perfectionists": {
       "termId": "emperors-children-ability-perfectionists",
       "navigation": {
@@ -680,76 +547,6 @@
         "statline": "lord-exultant-profile",
         "units": [
           "unit-lord-exultant"
-        ]
-      }
-    },
-    "emperors-children-ability-leader": {
-      "termId": "emperors-children-ability-leader",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-leader",
-        "rule": "unit-lord-exultant",
-        "datasheet": "unit-lord-exultant",
-        "statline": "lord-exultant-profile",
-        "units": [
-          "unit-lord-exultant"
-        ]
-      }
-    },
-    "emperors-children-ability-extra-attacks": {
-      "termId": "emperors-children-ability-extra-attacks",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-extra-attacks",
-        "rule": "unit-lord-exultant",
-        "datasheet": "unit-lord-exultant",
-        "statline": "lord-exultant-profile",
-        "units": [
-          "unit-lord-exultant",
-          "unit-fulgrim",
-          "unit-defiler"
-        ]
-      }
-    },
-    "emperors-children-ability-lance": {
-      "termId": "core-lance",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-lance",
-        "rule": "unit-lord-exultant",
-        "datasheet": "unit-lord-exultant",
-        "statline": "lord-exultant-profile",
-        "units": [
-          "unit-lord-exultant"
-        ]
-      }
-    },
-    "emperors-children-ability-ignores-cover": {
-      "termId": "emperors-children-ability-ignores-cover",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-ignores-cover",
-        "rule": "unit-lord-exultant",
-        "datasheet": "unit-lord-exultant",
-        "statline": "lord-exultant-profile",
-        "units": [
-          "unit-lord-exultant",
-          "unit-lord-kakophonist",
-          "unit-chaos-terminators",
-          "unit-noise-marines",
-          "unit-defiler",
-          "unit-heldrake"
-        ]
-      }
-    },
-    "emperors-children-ability-leader-2": {
-      "termId": "emperors-children-ability-leader-2",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-leader-2",
-        "rule": "unit-lord-exultant",
-        "datasheet": "unit-lord-exultant",
-        "statline": "lord-exultant-profile",
-        "units": [
-          "unit-lord-exultant",
-          "unit-lord-kakophonist",
-          "unit-sorcerer",
-          "unit-lucius-the-eternal"
         ]
       }
     },
@@ -828,18 +625,6 @@
         ]
       }
     },
-    "emperors-children-ability-leader-3": {
-      "termId": "emperors-children-ability-leader-3",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-leader-3",
-        "rule": "unit-lord-kakophonist",
-        "datasheet": "unit-lord-kakophonist",
-        "statline": "lord-kakophonist-profile",
-        "units": [
-          "unit-lord-kakophonist"
-        ]
-      }
-    },
     "emperors-children-ability-obsessive-annunciation": {
       "termId": "emperors-children-ability-obsessive-annunciation",
       "navigation": {
@@ -876,18 +661,6 @@
         ]
       }
     },
-    "emperors-children-ability-leader-4": {
-      "termId": "emperors-children-ability-leader-4",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-leader-4",
-        "rule": "unit-sorcerer",
-        "datasheet": "unit-sorcerer",
-        "statline": "sorcerer-profile",
-        "units": [
-          "unit-sorcerer"
-        ]
-      }
-    },
     "emperors-children-ability-warped-interference-psychic": {
       "termId": "emperors-children-ability-warped-interference-psychic",
       "navigation": {
@@ -909,35 +682,6 @@
         "statline": "sorcerer-profile",
         "units": [
           "unit-sorcerer"
-        ]
-      }
-    },
-    "emperors-children-ability-psychic": {
-      "termId": "core-psychic",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-psychic",
-        "rule": "unit-sorcerer",
-        "datasheet": "unit-sorcerer",
-        "statline": "sorcerer-profile",
-        "units": [
-          "unit-sorcerer"
-        ]
-      }
-    },
-    "emperors-children-ability-devastating-wounds": {
-      "termId": "emperors-children-ability-devastating-wounds",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-devastating-wounds",
-        "rule": "unit-sorcerer",
-        "datasheet": "unit-sorcerer",
-        "statline": "sorcerer-profile",
-        "units": [
-          "unit-sorcerer",
-          "unit-chaos-rhino",
-          "unit-chaos-terminators",
-          "unit-chaos-land-raider",
-          "unit-defiler",
-          "unit-heldrake"
         ]
       }
     },
@@ -981,47 +725,6 @@
       "termId": "emperors-children-ability-assault-vehicle",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-assault-vehicle",
-        "rule": "unit-chaos-rhino",
-        "datasheet": "unit-chaos-rhino",
-        "statline": "chaos-rhino-profile",
-        "units": [
-          "unit-chaos-rhino"
-        ]
-      }
-    },
-    "emperors-children-ability-anti": {
-      "termId": "emperors-children-ability-anti",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-anti",
-        "rule": "unit-chaos-rhino",
-        "datasheet": "unit-chaos-rhino",
-        "statline": "chaos-rhino-profile",
-        "units": [
-          "unit-chaos-rhino",
-          "unit-chaos-terminators",
-          "unit-chaos-land-raider",
-          "unit-heldrake"
-        ]
-      }
-    },
-    "emperors-children-ability-blast": {
-      "termId": "emperors-children-ability-blast",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-blast",
-        "rule": "unit-chaos-rhino",
-        "datasheet": "unit-chaos-rhino",
-        "statline": "chaos-rhino-profile",
-        "units": [
-          "unit-chaos-rhino",
-          "unit-chaos-land-raider",
-          "unit-defiler"
-        ]
-      }
-    },
-    "emperors-children-ability-firing-deck-2": {
-      "termId": "emperors-children-ability-firing-deck-2",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-firing-deck-2",
         "rule": "unit-chaos-rhino",
         "datasheet": "unit-chaos-rhino",
         "statline": "chaos-rhino-profile",
@@ -1143,36 +846,6 @@
         ]
       }
     },
-    "emperors-children-ability-sustained-hits": {
-      "termId": "emperors-children-ability-sustained-hits",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-sustained-hits",
-        "rule": "unit-fulgrim",
-        "datasheet": "unit-fulgrim",
-        "statline": "fulgrim-profile",
-        "units": [
-          "unit-fulgrim",
-          "unit-lucius-the-eternal",
-          "unit-chaos-terminators",
-          "unit-chaos-land-raider",
-          "unit-defiler"
-        ]
-      }
-    },
-    "emperors-children-ability-deadly-demise-d6": {
-      "termId": "emperors-children-ability-deadly-demise-d6",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-deadly-demise-d6",
-        "rule": "unit-fulgrim",
-        "datasheet": "unit-fulgrim",
-        "statline": "fulgrim-profile",
-        "units": [
-          "unit-fulgrim",
-          "unit-chaos-land-raider",
-          "unit-defiler"
-        ]
-      }
-    },
     "emperors-children-weapon-malefic-lash": {
       "termId": "emperors-children-weapon-malefic-lash",
       "navigation": {
@@ -1221,18 +894,6 @@
         ]
       }
     },
-    "emperors-children-ability-leader-5": {
-      "termId": "emperors-children-ability-leader-5",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-leader-5",
-        "rule": "unit-lucius-the-eternal",
-        "datasheet": "unit-lucius-the-eternal",
-        "statline": "lucius-the-eternal-profile",
-        "units": [
-          "unit-lucius-the-eternal"
-        ]
-      }
-    },
     "emperors-children-ability-duellists-hubris": {
       "termId": "emperors-children-ability-duellists-hubris",
       "navigation": {
@@ -1249,31 +910,6 @@
       "termId": "emperors-children-ability-a-challenge-worthy-of-skill",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-a-challenge-worthy-of-skill",
-        "rule": "unit-lucius-the-eternal",
-        "datasheet": "unit-lucius-the-eternal",
-        "statline": "lucius-the-eternal-profile",
-        "units": [
-          "unit-lucius-the-eternal"
-        ]
-      }
-    },
-    "emperors-children-ability-feel-no-pain-5": {
-      "termId": "emperors-children-ability-feel-no-pain-5",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-feel-no-pain-5",
-        "rule": "unit-lucius-the-eternal",
-        "datasheet": "unit-lucius-the-eternal",
-        "statline": "lucius-the-eternal-profile",
-        "units": [
-          "unit-lucius-the-eternal",
-          "unit-chaos-spawn"
-        ]
-      }
-    },
-    "emperors-children-ability-lone-operative": {
-      "termId": "core-lone-operative",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-lone-operative",
         "rule": "unit-lucius-the-eternal",
         "datasheet": "unit-lucius-the-eternal",
         "statline": "lucius-the-eternal-profile",
@@ -1315,33 +951,6 @@
         "statline": "chaos-terminators-profile",
         "units": [
           "unit-chaos-terminators"
-        ]
-      }
-    },
-    "emperors-children-ability-twin-linked": {
-      "termId": "core-twin-linked",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-twin-linked",
-        "rule": "unit-chaos-terminators",
-        "datasheet": "unit-chaos-terminators",
-        "statline": "chaos-terminators-profile",
-        "units": [
-          "unit-chaos-terminators",
-          "unit-chaos-land-raider"
-        ]
-      }
-    },
-    "emperors-children-ability-torrent": {
-      "termId": "core-torrent",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-torrent",
-        "rule": "unit-chaos-terminators",
-        "datasheet": "unit-chaos-terminators",
-        "statline": "chaos-terminators-profile",
-        "units": [
-          "unit-chaos-terminators",
-          "unit-defiler",
-          "unit-heldrake"
         ]
       }
     },
@@ -1409,18 +1018,6 @@
       "termId": "emperors-children-ability-daemonic-patrons",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-daemonic-patrons",
-        "rule": "unit-flawless-blades",
-        "datasheet": "unit-flawless-blades",
-        "statline": "flawless-blades-profile",
-        "units": [
-          "unit-flawless-blades"
-        ]
-      }
-    },
-    "emperors-children-ability-fights-first": {
-      "termId": "core-fights-first",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-fights-first",
         "rule": "unit-flawless-blades",
         "datasheet": "unit-flawless-blades",
         "statline": "flawless-blades-profile",
@@ -1757,18 +1354,6 @@
       "termId": "emperors-children-ability-airborne-predator",
       "navigation": {
         "glossary": "glossary-emperors-children-ability-airborne-predator",
-        "rule": "unit-heldrake",
-        "datasheet": "unit-heldrake",
-        "statline": "heldrake-profile",
-        "units": [
-          "unit-heldrake"
-        ]
-      }
-    },
-    "emperors-children-ability-hover": {
-      "termId": "core-hover",
-      "navigation": {
-        "glossary": "glossary-emperors-children-ability-hover",
         "rule": "unit-heldrake",
         "datasheet": "unit-heldrake",
         "statline": "heldrake-profile",

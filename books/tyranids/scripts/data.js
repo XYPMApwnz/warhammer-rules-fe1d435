@@ -306,31 +306,6 @@ window.DG_TERMS={
     "datasheet": "unit-gargoyles",
     "statline": "gargoyles-profile"
   },
-  "tyranids-ability-deep-strike": {
-    "id": "tyranids-ability-deep-strike",
-    "title": "Deep Strike",
-    "summary": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
-    "full": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
-    "glossary": "glossary-tyranids-ability-deep-strike",
-    "rule": "unit-gargoyles",
-    "units": [
-      "unit-gargoyles",
-      "unit-hyperadapted-raveners",
-      "unit-parasite-of-mortrex",
-      "unit-winged-hive-tyrant",
-      "unit-winged-tyranid-prime",
-      "unit-tyrannocyte",
-      "unit-the-red-terror",
-      "unit-raveners",
-      "unit-mawloc",
-      "unit-trygon",
-      "unit-mucolid-spores",
-      "unit-ripper-swarms",
-      "unit-spore-mines"
-    ],
-    "datasheet": "unit-gargoyles",
-    "statline": "gargoyles-profile"
-  },
   "tyranids-weapon-blinding-venom": {
     "id": "tyranids-weapon-blinding-venom",
     "title": "Blinding venom",
@@ -502,33 +477,6 @@ window.DG_TERMS={
     "datasheet": "unit-broodlord",
     "statline": "broodlord-profile"
   },
-  "tyranids-ability-leader": {
-    "id": "tyranids-ability-leader",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - Genestealers",
-    "full": "This model can be attached to the following unit: - Genestealers",
-    "glossary": "glossary-tyranids-ability-leader",
-    "rule": "unit-broodlord",
-    "units": [
-      "unit-broodlord"
-    ],
-    "datasheet": "unit-broodlord",
-    "statline": "broodlord-profile"
-  },
-  "tyranids-ability-scouts-8": {
-    "id": "tyranids-ability-scouts-8",
-    "title": "Scouts 8\"",
-    "summary": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
-    "full": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
-    "glossary": "glossary-tyranids-ability-scouts-8",
-    "rule": "unit-broodlord",
-    "units": [
-      "unit-broodlord",
-      "unit-genestealers"
-    ],
-    "datasheet": "unit-broodlord",
-    "statline": "broodlord-profile"
-  },
   "tyranids-ability-shadow-in-the-warp": {
     "id": "tyranids-ability-shadow-in-the-warp",
     "title": "Shadow in the Warp",
@@ -554,26 +502,6 @@ window.DG_TERMS={
       "unit-maleceptor",
       "unit-norn-assimilator",
       "unit-norn-emissary"
-    ],
-    "datasheet": "unit-broodlord",
-    "statline": "broodlord-profile"
-  },
-  "tyranids-ability-leader-2": {
-    "id": "tyranids-ability-leader-2",
-    "title": "Leader",
-    "summary": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit. Each time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-    "full": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit. Each time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-    "glossary": "glossary-tyranids-ability-leader-2",
-    "rule": "unit-broodlord",
-    "units": [
-      "unit-broodlord",
-      "unit-hive-tyrant",
-      "unit-hyperadapted-raveners",
-      "unit-neurotyrant",
-      "unit-tyranid-prime-with-lash-whip",
-      "unit-winged-tyranid-prime",
-      "unit-old-one-eye",
-      "unit-the-swarmlord"
     ],
     "datasheet": "unit-broodlord",
     "statline": "broodlord-profile"
@@ -604,20 +532,6 @@ window.DG_TERMS={
     "datasheet": "unit-hive-tyrant",
     "statline": "hive-tyrant-profile"
   },
-  "tyranids-ability-leader-3": {
-    "id": "tyranids-ability-leader-3",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - Tyrant Guard",
-    "full": "This model can be attached to the following unit: - Tyrant Guard",
-    "glossary": "glossary-tyranids-ability-leader-3",
-    "rule": "unit-hive-tyrant",
-    "units": [
-      "unit-hive-tyrant",
-      "unit-the-swarmlord"
-    ],
-    "datasheet": "unit-hive-tyrant",
-    "statline": "hive-tyrant-profile"
-  },
   "tyranids-ability-will-of-the-hive-mind": {
     "id": "tyranids-ability-will-of-the-hive-mind",
     "title": "Will of the Hive Mind",
@@ -628,29 +542,6 @@ window.DG_TERMS={
     "units": [
       "unit-hive-tyrant",
       "unit-winged-hive-tyrant"
-    ],
-    "datasheet": "unit-hive-tyrant",
-    "statline": "hive-tyrant-profile"
-  },
-  "tyranids-ability-deadly-demise-d3": {
-    "id": "tyranids-ability-deadly-demise-d3",
-    "title": "Deadly Demise D3",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-tyranids-ability-deadly-demise-d3",
-    "rule": "unit-hive-tyrant",
-    "units": [
-      "unit-hive-tyrant",
-      "unit-winged-hive-tyrant",
-      "unit-tyrannocyte",
-      "unit-the-swarmlord",
-      "unit-exocrine",
-      "unit-harpy",
-      "unit-haruspex",
-      "unit-hive-crone",
-      "unit-maleceptor",
-      "unit-sporocyst",
-      "unit-toxicrene"
     ],
     "datasheet": "unit-hive-tyrant",
     "statline": "hive-tyrant-profile"
@@ -737,19 +628,6 @@ window.DG_TERMS={
     "datasheet": "unit-hyperadapted-raveners",
     "statline": "hyperadapted-raveners-profile"
   },
-  "tyranids-ability-leader-4": {
-    "id": "tyranids-ability-leader-4",
-    "title": "Leader",
-    "summary": "This unit can be attached to the following units: Raveners",
-    "full": "This unit can be attached to the following units: Raveners",
-    "glossary": "glossary-tyranids-ability-leader-4",
-    "rule": "unit-hyperadapted-raveners",
-    "units": [
-      "unit-hyperadapted-raveners"
-    ],
-    "datasheet": "unit-hyperadapted-raveners",
-    "statline": "hyperadapted-raveners-profile"
-  },
   "tyranids-weapon-prime-claws-and-talons": {
     "id": "tyranids-weapon-prime-claws-and-talons",
     "title": "Prime claws and talons",
@@ -828,19 +706,6 @@ window.DG_TERMS={
     "datasheet": "unit-neurotyrant",
     "statline": "neurotyrant-profile"
   },
-  "tyranids-ability-leader-5": {
-    "id": "tyranids-ability-leader-5",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: - Neurogaunts - Tyrant Guard - Zoanthropes",
-    "full": "This model can be attached to the following units: - Neurogaunts - Tyrant Guard - Zoanthropes",
-    "glossary": "glossary-tyranids-ability-leader-5",
-    "rule": "unit-neurotyrant",
-    "units": [
-      "unit-neurotyrant"
-    ],
-    "datasheet": "unit-neurotyrant",
-    "statline": "neurotyrant-profile"
-  },
   "tyranids-weapon-neurotyrant-claws-and-lashes": {
     "id": "tyranids-weapon-neurotyrant-claws-and-lashes",
     "title": "Neurotyrant claws and lashes",
@@ -889,40 +754,6 @@ window.DG_TERMS={
     "rule": "unit-parasite-of-mortrex",
     "units": [
       "unit-parasite-of-mortrex"
-    ],
-    "datasheet": "unit-parasite-of-mortrex",
-    "statline": "parasite-of-mortrex-profile"
-  },
-  "tyranids-ability-lone-operative": {
-    "id": "tyranids-ability-lone-operative",
-    "title": "Lone Operative",
-    "summary": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
-    "full": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
-    "glossary": "glossary-tyranids-ability-lone-operative",
-    "rule": "unit-parasite-of-mortrex",
-    "units": [
-      "unit-parasite-of-mortrex",
-      "unit-deathleaper",
-      "unit-lictor",
-      "unit-neurolictor"
-    ],
-    "datasheet": "unit-parasite-of-mortrex",
-    "statline": "parasite-of-mortrex-profile"
-  },
-  "tyranids-ability-stealth": {
-    "id": "tyranids-ability-stealth",
-    "title": "Stealth",
-    "summary": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
-    "full": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
-    "glossary": "glossary-tyranids-ability-stealth",
-    "rule": "unit-parasite-of-mortrex",
-    "units": [
-      "unit-parasite-of-mortrex",
-      "unit-deathleaper",
-      "unit-lictor",
-      "unit-neurolictor",
-      "unit-venomthropes",
-      "unit-von-ryans-leapers"
     ],
     "datasheet": "unit-parasite-of-mortrex",
     "statline": "parasite-of-mortrex-profile"
@@ -996,22 +827,6 @@ window.DG_TERMS={
       "unit-norn-emissary",
       "unit-toxicrene",
       "unit-trygon",
-      "unit-tyrannofex"
-    ],
-    "datasheet": "unit-tervigon",
-    "statline": "tervigon-profile"
-  },
-  "tyranids-ability-deadly-demise-d6": {
-    "id": "tyranids-ability-deadly-demise-d6",
-    "title": "Deadly Demise D6",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-tyranids-ability-deadly-demise-d6",
-    "rule": "unit-tervigon",
-    "units": [
-      "unit-tervigon",
-      "unit-norn-assimilator",
-      "unit-norn-emissary",
       "unit-tyrannofex"
     ],
     "datasheet": "unit-tervigon",
@@ -1091,19 +906,6 @@ window.DG_TERMS={
     "summary": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed by those attacks, this unit can make a surge move of up to D6\".",
     "full": "In your opponent’s Shooting phase, when an enemy unit has shot, if a model in this unit was destroyed by those attacks, this unit can make a surge move of up to D6\".",
     "glossary": "glossary-tyranids-ability-aggressive-leader-beast",
-    "rule": "unit-tyranid-prime-with-lash-whip",
-    "units": [
-      "unit-tyranid-prime-with-lash-whip"
-    ],
-    "datasheet": "unit-tyranid-prime-with-lash-whip",
-    "statline": "tyranid-prime-with-lash-whip-profile"
-  },
-  "tyranids-ability-leader-6": {
-    "id": "tyranids-ability-leader-6",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - Hormagaunts - Termagants - Tyranid Warriors with Melee Bio-weapons - Tyranid Warriors with Ranged Bio-weapons",
-    "full": "This model can be attached to the following unit: - Hormagaunts - Termagants - Tyranid Warriors with Melee Bio-weapons - Tyranid Warriors with Ranged Bio-weapons",
-    "glossary": "glossary-tyranids-ability-leader-6",
     "rule": "unit-tyranid-prime-with-lash-whip",
     "units": [
       "unit-tyranid-prime-with-lash-whip"
@@ -1195,19 +997,6 @@ window.DG_TERMS={
     "summary": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
     "full": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
     "glossary": "glossary-tyranids-ability-death-blow",
-    "rule": "unit-winged-tyranid-prime",
-    "units": [
-      "unit-winged-tyranid-prime"
-    ],
-    "datasheet": "unit-winged-tyranid-prime",
-    "statline": "winged-tyranid-prime-profile"
-  },
-  "tyranids-ability-leader-7": {
-    "id": "tyranids-ability-leader-7",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: - Gargoyles - Tyranid Warriors With Melee Bio-Weapons - Tyranid Warriors With Ranged Bio-Weapons",
-    "full": "This model can be attached to the following units: - Gargoyles - Tyranid Warriors With Melee Bio-Weapons - Tyranid Warriors With Ranged Bio-Weapons",
-    "glossary": "glossary-tyranids-ability-leader-7",
     "rule": "unit-winged-tyranid-prime",
     "units": [
       "unit-winged-tyranid-prime"
@@ -1308,37 +1097,6 @@ window.DG_TERMS={
     "datasheet": "unit-deathleaper",
     "statline": "deathleaper-profile"
   },
-  "tyranids-ability-fights-first": {
-    "id": "tyranids-ability-fights-first",
-    "title": "Fights First",
-    "summary": "While every model in a unit has this ability, that unit is a Fights First unit. See the Resolve Fights First Combats step in the Fight phase (12.04).",
-    "full": "While every model in a unit has this ability, that unit is a Fights First unit. See the Resolve Fights First Combats step in the Fight phase (12.04).",
-    "glossary": "glossary-tyranids-ability-fights-first",
-    "rule": "unit-deathleaper",
-    "units": [
-      "unit-deathleaper",
-      "unit-lictor",
-      "unit-von-ryans-leapers"
-    ],
-    "datasheet": "unit-deathleaper",
-    "statline": "deathleaper-profile"
-  },
-  "tyranids-ability-infiltrators": {
-    "id": "tyranids-ability-infiltrators",
-    "title": "Infiltrators",
-    "summary": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
-    "full": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
-    "glossary": "glossary-tyranids-ability-infiltrators",
-    "rule": "unit-deathleaper",
-    "units": [
-      "unit-deathleaper",
-      "unit-lictor",
-      "unit-neurolictor",
-      "unit-von-ryans-leapers"
-    ],
-    "datasheet": "unit-deathleaper",
-    "statline": "deathleaper-profile"
-  },
   "tyranids-weapon-lictor-claws-and-talons": {
     "id": "tyranids-weapon-lictor-claws-and-talons",
     "title": "Lictor claws and talons",
@@ -1375,33 +1133,6 @@ window.DG_TERMS={
     "rule": "unit-old-one-eye",
     "units": [
       "unit-old-one-eye"
-    ],
-    "datasheet": "unit-old-one-eye",
-    "statline": "old-one-eye-profile"
-  },
-  "tyranids-ability-leader-8": {
-    "id": "tyranids-ability-leader-8",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - Carnifexes",
-    "full": "This model can be attached to the following unit: - Carnifexes",
-    "glossary": "glossary-tyranids-ability-leader-8",
-    "rule": "unit-old-one-eye",
-    "units": [
-      "unit-old-one-eye"
-    ],
-    "datasheet": "unit-old-one-eye",
-    "statline": "old-one-eye-profile"
-  },
-  "tyranids-ability-feel-no-pain-5": {
-    "id": "tyranids-ability-feel-no-pain-5",
-    "title": "Feel No Pain 5+",
-    "summary": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
-    "full": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
-    "glossary": "glossary-tyranids-ability-feel-no-pain-5",
-    "rule": "unit-old-one-eye",
-    "units": [
-      "unit-old-one-eye",
-      "unit-psychophage"
     ],
     "datasheet": "unit-old-one-eye",
     "statline": "old-one-eye-profile"
@@ -1597,23 +1328,6 @@ window.DG_TERMS={
     "rule": "unit-biovores",
     "units": [
       "unit-biovores"
-    ],
-    "datasheet": "unit-biovores",
-    "statline": "biovores-profile"
-  },
-  "tyranids-ability-deadly-demise-1": {
-    "id": "tyranids-ability-deadly-demise-1",
-    "title": "Deadly Demise 1",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-tyranids-ability-deadly-demise-1",
-    "rule": "unit-biovores",
-    "units": [
-      "unit-biovores",
-      "unit-pyrovores",
-      "unit-carnifexes",
-      "unit-psychophage",
-      "unit-screamer-killer"
     ],
     "datasheet": "unit-biovores",
     "statline": "biovores-profile"

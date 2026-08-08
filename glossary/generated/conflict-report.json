@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 1800,
+    "terms": 1748,
     "aliases": 659,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 122,
-    "duplicateCandidates": 23,
+    "aliasCandidates": 104,
+    "duplicateCandidates": 8,
     "keywordCandidates": 16
   },
   "definitionCandidates": [
@@ -936,123 +936,6 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "anti",
-      "termIds": [
-        "core-anti",
-        "emperors-children-ability-anti",
-        "tau-empire-ability-anti"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "blast",
-      "termIds": [
-        "core-blast",
-        "emperors-children-ability-blast",
-        "tau-empire-ability-blast"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "devastating-wounds",
-      "termIds": [
-        "core-devastating-wounds",
-        "emperors-children-ability-devastating-wounds",
-        "tau-empire-ability-devastating-wounds"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "extra-attacks",
-      "termIds": [
-        "core-extra-attacks",
-        "emperors-children-ability-extra-attacks",
-        "tau-empire-ability-extra-attacks"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "heavy",
-      "termIds": [
-        "core-heavy",
-        "tau-empire-ability-heavy"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "ignores-cover",
-      "termIds": [
-        "core-ignores-cover",
-        "emperors-children-ability-ignores-cover",
-        "tau-empire-ability-ignores-cover"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "leader",
-      "termIds": [
-        "core-leader",
-        "emperors-children-ability-leader",
-        "emperors-children-ability-leader-2",
-        "emperors-children-ability-leader-3",
-        "emperors-children-ability-leader-4",
-        "emperors-children-ability-leader-5",
-        "tyranids-ability-leader",
-        "tyranids-ability-leader-2",
-        "tyranids-ability-leader-3",
-        "tyranids-ability-leader-4",
-        "tyranids-ability-leader-5",
-        "tyranids-ability-leader-6",
-        "tyranids-ability-leader-7",
-        "tyranids-ability-leader-8"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "lethal-hits",
-      "termIds": [
-        "core-lethal-hits",
-        "tau-empire-ability-lethal-hits"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "melta",
-      "termIds": [
-        "core-melta",
-        "emperors-children-ability-melta",
-        "tau-empire-ability-melta"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "pistol",
-      "termIds": [
-        "core-pistol",
-        "emperors-children-ability-pistol",
-        "tau-empire-ability-pistol"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "rapid-fire",
-      "termIds": [
-        "core-rapid-fire",
-        "emperors-children-ability-rapid-fire",
-        "tau-empire-ability-rapid-fire"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "sustained-hits",
-      "termIds": [
-        "core-sustained-hits",
-        "emperors-children-ability-sustained-hits",
-        "tau-empire-ability-sustained-hits"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "explosives",
       "termIds": [
         "core-rule-15-05-explosives",
@@ -1462,14 +1345,6 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "twin-cognis-lascannon",
-      "termIds": [
-        "adeptus-mechanicus-weapon-twin-cognis-lascannon",
-        "adeptus-mechanicus-weapon-twin-cognis-lascannon-2"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "electrostatic-gauntlets",
       "termIds": [
         "adeptus-mechanicus-weapon-electrostatic-gauntlets",
@@ -1502,15 +1377,6 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "damaged-1-4-wounds-remaining",
-      "termIds": [
-        "adeptus-mechanicus-datasheet-damaged-1-4-wounds-remaining",
-        "tau-empire-ability-damaged-1-4-wounds-remaining",
-        "tyranids-ability-damaged-1-4-wounds-remaining"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "taser-goad",
       "termIds": [
         "adeptus-mechanicus-weapon-taser-goad",
@@ -1523,6 +1389,23 @@
       "termIds": [
         "adeptus-mechanicus-weapon-clawed-limbs",
         "tyranids-weapon-clawed-limbs"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "twin-cognis-lascannon",
+      "termIds": [
+        "adeptus-mechanicus-weapon-twin-cognis-lascannon",
+        "adeptus-mechanicus-weapon-twin-cognis-lascannon-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "damaged-1-4-wounds-remaining",
+      "termIds": [
+        "adeptus-mechanicus-datasheet-damaged-1-4-wounds-remaining",
+        "tau-empire-ability-damaged-1-4-wounds-remaining",
+        "tyranids-ability-damaged-1-4-wounds-remaining"
       ],
       "status": "review-required"
     },
@@ -1575,36 +1458,10 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "deadly-demise-d3",
-      "termIds": [
-        "emperors-children-ability-deadly-demise-d3",
-        "tau-empire-ability-deadly-demise-d3",
-        "tyranids-ability-deadly-demise-d3"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "screamer-pistol",
       "termIds": [
         "emperors-children-weapon-screamer-pistol",
         "emperors-children-weapon-screamer-pistol-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "deadly-demise-d6",
-      "termIds": [
-        "emperors-children-ability-deadly-demise-d6",
-        "tau-empire-ability-deadly-demise-d6",
-        "tyranids-ability-deadly-demise-d6"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "feel-no-pain-5",
-      "termIds": [
-        "emperors-children-ability-feel-no-pain-5",
-        "tyranids-ability-feel-no-pain-5"
       ],
       "status": "review-required"
     },
@@ -1735,14 +1592,6 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "scouts-8",
-      "termIds": [
-        "tau-empire-ability-scouts-8",
-        "tyranids-ability-scouts-8"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "fusion-eliminator",
       "termIds": [
         "tau-empire-weapon-fusion-eliminator",
@@ -1755,14 +1604,6 @@
       "termIds": [
         "tau-empire-weapon-xv-pulse-pistol",
         "tau-empire-weapon-xv-pulse-pistol-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "bodyguard",
-      "termIds": [
-        "tau-empire-ability-bodyguard",
-        "core-bodyguard"
       ],
       "status": "review-required"
     },
@@ -1780,14 +1621,6 @@
       "termIds": [
         "tau-empire-weapon-twin-burst-cannon",
         "tau-empire-weapon-twin-burst-cannon-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "deadly-demise-1",
-      "termIds": [
-        "tau-empire-ability-deadly-demise-1",
-        "tyranids-ability-deadly-demise-1"
       ],
       "status": "review-required"
     },
@@ -1997,101 +1830,8 @@
     },
     {
       "termIds": [
-        "emperors-children-ability-pistol",
-        "tau-empire-ability-pistol"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "emperors-children-ability-rapid-fire",
-        "tau-empire-ability-rapid-fire"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "emperors-children-ability-melta",
-        "tau-empire-ability-melta"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
         "emperors-children-weapon-close-combat-weapon",
         "tau-empire-weapon-close-combat-weapon-3"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "emperors-children-ability-deadly-demise-d3",
-        "tau-empire-ability-deadly-demise-d3",
-        "tyranids-ability-deadly-demise-d3"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "emperors-children-ability-extra-attacks",
-        "tau-empire-ability-extra-attacks"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "emperors-children-ability-ignores-cover",
-        "tau-empire-ability-ignores-cover"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "emperors-children-ability-leader-2",
-        "tyranids-ability-leader-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "emperors-children-ability-devastating-wounds",
-        "tau-empire-ability-devastating-wounds"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "emperors-children-ability-anti",
-        "tau-empire-ability-anti"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "emperors-children-ability-blast",
-        "tau-empire-ability-blast"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "emperors-children-ability-sustained-hits",
-        "tau-empire-ability-sustained-hits"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "emperors-children-ability-deadly-demise-d6",
-        "tau-empire-ability-deadly-demise-d6",
-        "tyranids-ability-deadly-demise-d6"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "emperors-children-ability-feel-no-pain-5",
-        "tyranids-ability-feel-no-pain-5"
       ],
       "status": "review-required"
     },
@@ -2107,20 +1847,6 @@
       "termIds": [
         "tau-empire-ability-for-the-greater-good",
         "tau-empire-army-rule-for-the-greater-good"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "tau-empire-ability-scouts-8",
-        "tyranids-ability-scouts-8"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "tau-empire-ability-deadly-demise-1",
-        "tyranids-ability-deadly-demise-1"
       ],
       "status": "review-required"
     },

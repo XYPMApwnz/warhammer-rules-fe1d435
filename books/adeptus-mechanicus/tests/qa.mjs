@@ -200,7 +200,7 @@ check('all navigation targets exist',navTargets.every(id=>idSet.has(id)),navTarg
 check('all navigation targets are tracked',navTargets.every(id=>trackTargets.includes(id)),navTargets.filter(id=>!trackTargets.includes(id)).join(', '));
 check('navigation depth stays at three',Math.max(...depths)===3);
 check('top-level navigation matches the DG contract',JSON.stringify(topLevelTargets)===JSON.stringify(['start','core-rules','detachments','datasheets','updates']),topLevelTargets.join(', '));
-check('datasheets use category then unit hierarchy',['datasheets-epic-heroes','datasheets-characters','datasheets-battleline','datasheets-dedicated-transports','datasheets-other'].every(id=>navTargets.includes(id))&&rules.datasheets.every(unit=>markup.includes(`data-nav-id="${unit.id}" data-nav-depth="3"`)));
+check('datasheets use source categories then unit hierarchy',['datasheets-epic-heroes','datasheets-characters','datasheets-battleline','datasheets-dedicated-transports','datasheets-infantry','datasheets-mounted','datasheets-vehicle'].every(id=>navTargets.includes(id))&&!navTargets.includes('datasheets-other')&&rules.datasheets.every(unit=>markup.includes(`data-nav-id="${unit.id}" data-nav-depth="3"`)));
 check('detachment navigation uses singular Enhancement label',(markup.match(/data-nav-depth="3"[^>]*>[\s\S]*?data-nav-target="[^"]+-enhancements">Enhancement<\/button>/g)||[]).length===allDetachments.length);
 check('all Journey targets resolve',journeyTargets.every(id=>idSet.has(id)));
 check('local datasheet tabs are not global navigation',localTargets.length>=rules.datasheets.length*4&&localTargets.every(id=>!navTargets.includes(id)));
@@ -217,7 +217,7 @@ check('desktop Doctrina selector remains interactive',markup.includes('class="pr
 check('Phone Doctrina shows both canonical branches',mobileArmyRules.includes('id="protector-imperative"')&&mobileArmyRules.includes('id="conqueror-imperative"')&&!/<section id="(?:protector|conqueror)-imperative"[^>]*\shidden\b/.test(mobileArmyRules));
 check('Phone Doctrina has no dead selector controls',!mobileArmyRules.includes('class="protocol-switch"')&&!mobileArmyRules.includes('data-protocol="protector"')&&!mobileArmyRules.includes('data-protocol="conqueror"'));
 check('Phone Doctrina preserves glossary rule links',mobileArmyRules.includes('id="protector-imperative" data-track="protector-imperative"')&&mobileArmyRules.includes('id="conqueror-imperative" data-track="conqueror-imperative"')&&mobileArmyRules.includes('data-full-rule-path="books/core-rules/reader/core-abilities.html#rule-24-16"'));
-check('Phone navigation has stable roster route metadata',(mobileUnitPage.match(/data-route-type="detachment"/g)||[]).length===10&&(mobileUnitPage.match(/data-route-type="unit"/g)||[]).length===34&&(mobileUnitPage.match(/data-unit-category=/g)||[]).length===5);
+check('Phone navigation has stable roster route metadata',(mobileUnitPage.match(/data-route-type="detachment"/g)||[]).length===10&&(mobileUnitPage.match(/data-route-type="unit"/g)||[]).length===34&&(mobileUnitPage.match(/data-unit-category=/g)||[]).length===7);
 check('Phone no-roster keeps Start',mobileUnitPage.includes('href="./index.html" data-route-type="start"'));
 check('Phone no-roster keeps Army Rules',mobileUnitPage.includes('href="./army-rules.html" data-route-type="section"'));
 check('Phone no-roster keeps Updates',mobileUnitPage.includes('href="./updates.html" data-route-type="section"'));

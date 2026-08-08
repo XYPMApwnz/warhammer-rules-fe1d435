@@ -3,7 +3,8 @@
   "faction": {
     "id": "tau-empire",
     "title": "T'au Empire",
-    "separateLeaderRelations": true
+    "separateLeaderRelations": true,
+    "separateWargearAbilities": true
   },
   "source": {
     "repository": "https://github.com/BSData/wh40k-11e",

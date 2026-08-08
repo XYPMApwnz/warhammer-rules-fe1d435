@@ -278,30 +278,6 @@
         ]
       }
     },
-    "tyranids-ability-deep-strike": {
-      "termId": "core-deep-strike",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-deep-strike",
-        "rule": "unit-gargoyles",
-        "datasheet": "unit-gargoyles",
-        "statline": "gargoyles-profile",
-        "units": [
-          "unit-gargoyles",
-          "unit-hyperadapted-raveners",
-          "unit-parasite-of-mortrex",
-          "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-tyrannocyte",
-          "unit-the-red-terror",
-          "unit-raveners",
-          "unit-mawloc",
-          "unit-trygon",
-          "unit-mucolid-spores",
-          "unit-ripper-swarms",
-          "unit-spore-mines"
-        ]
-      }
-    },
     "tyranids-weapon-blinding-venom": {
       "termId": "tyranids-weapon-blinding-venom",
       "navigation": {
@@ -460,31 +436,6 @@
         ]
       }
     },
-    "tyranids-ability-leader": {
-      "termId": "tyranids-ability-leader",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-leader",
-        "rule": "unit-broodlord",
-        "datasheet": "unit-broodlord",
-        "statline": "broodlord-profile",
-        "units": [
-          "unit-broodlord"
-        ]
-      }
-    },
-    "tyranids-ability-scouts-8": {
-      "termId": "tyranids-ability-scouts-8",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-scouts-8",
-        "rule": "unit-broodlord",
-        "datasheet": "unit-broodlord",
-        "statline": "broodlord-profile",
-        "units": [
-          "unit-broodlord",
-          "unit-genestealers"
-        ]
-      }
-    },
     "tyranids-ability-shadow-in-the-warp": {
       "termId": "tyranids-ability-shadow-in-the-warp",
       "navigation": {
@@ -513,25 +464,6 @@
         ]
       }
     },
-    "tyranids-ability-leader-2": {
-      "termId": "tyranids-ability-leader-2",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-leader-2",
-        "rule": "unit-broodlord",
-        "datasheet": "unit-broodlord",
-        "statline": "broodlord-profile",
-        "units": [
-          "unit-broodlord",
-          "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
-          "unit-neurotyrant",
-          "unit-tyranid-prime-with-lash-whip",
-          "unit-winged-tyranid-prime",
-          "unit-old-one-eye",
-          "unit-the-swarmlord"
-        ]
-      }
-    },
     "tyranids-weapon-broodlord-claws-and-talons": {
       "termId": "tyranids-weapon-broodlord-claws-and-talons",
       "navigation": {
@@ -556,19 +488,6 @@
         ]
       }
     },
-    "tyranids-ability-leader-3": {
-      "termId": "tyranids-ability-leader-3",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-leader-3",
-        "rule": "unit-hive-tyrant",
-        "datasheet": "unit-hive-tyrant",
-        "statline": "hive-tyrant-profile",
-        "units": [
-          "unit-hive-tyrant",
-          "unit-the-swarmlord"
-        ]
-      }
-    },
     "tyranids-ability-will-of-the-hive-mind": {
       "termId": "tyranids-ability-will-of-the-hive-mind",
       "navigation": {
@@ -579,28 +498,6 @@
         "units": [
           "unit-hive-tyrant",
           "unit-winged-hive-tyrant"
-        ]
-      }
-    },
-    "tyranids-ability-deadly-demise-d3": {
-      "termId": "tyranids-ability-deadly-demise-d3",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-deadly-demise-d3",
-        "rule": "unit-hive-tyrant",
-        "datasheet": "unit-hive-tyrant",
-        "statline": "hive-tyrant-profile",
-        "units": [
-          "unit-hive-tyrant",
-          "unit-winged-hive-tyrant",
-          "unit-tyrannocyte",
-          "unit-the-swarmlord",
-          "unit-exocrine",
-          "unit-harpy",
-          "unit-haruspex",
-          "unit-hive-crone",
-          "unit-maleceptor",
-          "unit-sporocyst",
-          "unit-toxicrene"
         ]
       }
     },
@@ -672,18 +569,6 @@
       "termId": "tyranids-ability-hypersensory-array",
       "navigation": {
         "glossary": "glossary-tyranids-ability-hypersensory-array",
-        "rule": "unit-hyperadapted-raveners",
-        "datasheet": "unit-hyperadapted-raveners",
-        "statline": "hyperadapted-raveners-profile",
-        "units": [
-          "unit-hyperadapted-raveners"
-        ]
-      }
-    },
-    "tyranids-ability-leader-4": {
-      "termId": "tyranids-ability-leader-4",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-leader-4",
         "rule": "unit-hyperadapted-raveners",
         "datasheet": "unit-hyperadapted-raveners",
         "statline": "hyperadapted-raveners-profile",
@@ -764,18 +649,6 @@
         ]
       }
     },
-    "tyranids-ability-leader-5": {
-      "termId": "tyranids-ability-leader-5",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-leader-5",
-        "rule": "unit-neurotyrant",
-        "datasheet": "unit-neurotyrant",
-        "statline": "neurotyrant-profile",
-        "units": [
-          "unit-neurotyrant"
-        ]
-      }
-    },
     "tyranids-weapon-neurotyrant-claws-and-lashes": {
       "termId": "tyranids-weapon-neurotyrant-claws-and-lashes",
       "navigation": {
@@ -821,38 +694,6 @@
         "statline": "parasite-of-mortrex-profile",
         "units": [
           "unit-parasite-of-mortrex"
-        ]
-      }
-    },
-    "tyranids-ability-lone-operative": {
-      "termId": "core-lone-operative",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-lone-operative",
-        "rule": "unit-parasite-of-mortrex",
-        "datasheet": "unit-parasite-of-mortrex",
-        "statline": "parasite-of-mortrex-profile",
-        "units": [
-          "unit-parasite-of-mortrex",
-          "unit-deathleaper",
-          "unit-lictor",
-          "unit-neurolictor"
-        ]
-      }
-    },
-    "tyranids-ability-stealth": {
-      "termId": "core-stealth",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-stealth",
-        "rule": "unit-parasite-of-mortrex",
-        "datasheet": "unit-parasite-of-mortrex",
-        "statline": "parasite-of-mortrex-profile",
-        "units": [
-          "unit-parasite-of-mortrex",
-          "unit-deathleaper",
-          "unit-lictor",
-          "unit-neurolictor",
-          "unit-venomthropes",
-          "unit-von-ryans-leapers"
         ]
       }
     },
@@ -925,21 +766,6 @@
         ]
       }
     },
-    "tyranids-ability-deadly-demise-d6": {
-      "termId": "tyranids-ability-deadly-demise-d6",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-deadly-demise-d6",
-        "rule": "unit-tervigon",
-        "datasheet": "unit-tervigon",
-        "statline": "tervigon-profile",
-        "units": [
-          "unit-tervigon",
-          "unit-norn-assimilator",
-          "unit-norn-emissary",
-          "unit-tyrannofex"
-        ]
-      }
-    },
     "tyranids-weapon-massive-scything-talons-strike": {
       "termId": "tyranids-weapon-massive-scything-talons-strike",
       "navigation": {
@@ -1007,18 +833,6 @@
       "termId": "tyranids-ability-aggressive-leader-beast",
       "navigation": {
         "glossary": "glossary-tyranids-ability-aggressive-leader-beast",
-        "rule": "unit-tyranid-prime-with-lash-whip",
-        "datasheet": "unit-tyranid-prime-with-lash-whip",
-        "statline": "tyranid-prime-with-lash-whip-profile",
-        "units": [
-          "unit-tyranid-prime-with-lash-whip"
-        ]
-      }
-    },
-    "tyranids-ability-leader-6": {
-      "termId": "tyranids-ability-leader-6",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-leader-6",
         "rule": "unit-tyranid-prime-with-lash-whip",
         "datasheet": "unit-tyranid-prime-with-lash-whip",
         "statline": "tyranid-prime-with-lash-whip-profile",
@@ -1103,18 +917,6 @@
       "termId": "tyranids-ability-death-blow",
       "navigation": {
         "glossary": "glossary-tyranids-ability-death-blow",
-        "rule": "unit-winged-tyranid-prime",
-        "datasheet": "unit-winged-tyranid-prime",
-        "statline": "winged-tyranid-prime-profile",
-        "units": [
-          "unit-winged-tyranid-prime"
-        ]
-      }
-    },
-    "tyranids-ability-leader-7": {
-      "termId": "tyranids-ability-leader-7",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-leader-7",
         "rule": "unit-winged-tyranid-prime",
         "datasheet": "unit-winged-tyranid-prime",
         "statline": "winged-tyranid-prime-profile",
@@ -1209,35 +1011,6 @@
         ]
       }
     },
-    "tyranids-ability-fights-first": {
-      "termId": "core-fights-first",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-fights-first",
-        "rule": "unit-deathleaper",
-        "datasheet": "unit-deathleaper",
-        "statline": "deathleaper-profile",
-        "units": [
-          "unit-deathleaper",
-          "unit-lictor",
-          "unit-von-ryans-leapers"
-        ]
-      }
-    },
-    "tyranids-ability-infiltrators": {
-      "termId": "core-infiltrators",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-infiltrators",
-        "rule": "unit-deathleaper",
-        "datasheet": "unit-deathleaper",
-        "statline": "deathleaper-profile",
-        "units": [
-          "unit-deathleaper",
-          "unit-lictor",
-          "unit-neurolictor",
-          "unit-von-ryans-leapers"
-        ]
-      }
-    },
     "tyranids-weapon-lictor-claws-and-talons": {
       "termId": "tyranids-weapon-lictor-claws-and-talons",
       "navigation": {
@@ -1272,31 +1045,6 @@
         "statline": "old-one-eye-profile",
         "units": [
           "unit-old-one-eye"
-        ]
-      }
-    },
-    "tyranids-ability-leader-8": {
-      "termId": "tyranids-ability-leader-8",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-leader-8",
-        "rule": "unit-old-one-eye",
-        "datasheet": "unit-old-one-eye",
-        "statline": "old-one-eye-profile",
-        "units": [
-          "unit-old-one-eye"
-        ]
-      }
-    },
-    "tyranids-ability-feel-no-pain-5": {
-      "termId": "tyranids-ability-feel-no-pain-5",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-feel-no-pain-5",
-        "rule": "unit-old-one-eye",
-        "datasheet": "unit-old-one-eye",
-        "statline": "old-one-eye-profile",
-        "units": [
-          "unit-old-one-eye",
-          "unit-psychophage"
         ]
       }
     },
@@ -1477,22 +1225,6 @@
         "statline": "biovores-profile",
         "units": [
           "unit-biovores"
-        ]
-      }
-    },
-    "tyranids-ability-deadly-demise-1": {
-      "termId": "tyranids-ability-deadly-demise-1",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-deadly-demise-1",
-        "rule": "unit-biovores",
-        "datasheet": "unit-biovores",
-        "statline": "biovores-profile",
-        "units": [
-          "unit-biovores",
-          "unit-pyrovores",
-          "unit-carnifexes",
-          "unit-psychophage",
-          "unit-screamer-killer"
         ]
       }
     },

@@ -38,20 +38,34 @@ for(const [id,expected] of Object.entries(books)){
   expect(codexLayer?.commit===points.source?.commit,`${label} points and Codex snapshot commits differ`);
 }
 
+const ownershipFixture=read('tests/fixtures/army-book-owned-datasheets.json');
 const ownershipSources=[
   ['death-guard',read('books/death-guard/content/death-guard-rules.en.json').sections.filter(item=>item.kind==='unit').map(item=>item.id)],
   ...['adeptus-mechanicus','tyranids','tau-empire','emperors-children','space-marines'].map(id=>[id,read(`books/${id}/content/${id}-codex-datasheets.en.json`).datasheets.map(item=>item.id)])
 ];
 const sortedIds=items=>[...new Set(items)].sort();
+const compareOwnershipLayer=(bookId,layer,expectedIds,actualIds)=>{
+  const expected=sortedIds(expectedIds);
+  const actual=sortedIds(actualIds);
+  for(const id of expected.filter(id=>!actual.includes(id)))errors.push(`${bookId}: expected Datasheet ID ${id} is absent from ${layer}`);
+  for(const id of actual.filter(id=>!expected.includes(id)))errors.push(`${bookId}: actual ${layer} contains unexpected Datasheet ID ${id}`);
+};
 for(const [id,sourceIds] of ownershipSources){
+  const fixture=ownershipFixture.books[id];
+  expect(!!fixture,`${id}: audited ownership fixture is absent`);
+  if(!fixture)continue;
+  expect(Array.isArray(fixture.datasheetIds),`${id}: audited ownership fixture datasheetIds is not an array`);
+  expect(fixture.provenance?.inventoryPath,`${id}: audited ownership fixture provenance is absent`);
+  expect(fixture.datasheetIds.length===new Set(fixture.datasheetIds).size,`${id}: audited ownership fixture contains duplicate Datasheet IDs`);
   const readerHtml=fs.readFileSync(path.join(root,'books',id,'reader.html'),'utf8');
   const desktopIds=sortedIds([...readerHtml.matchAll(/<article class="unit-card[^"]*" id="(unit-[^"]+)"/g)].map(match=>match[1]));
   const phoneDir=path.join(root,'books',id,'mobile');
   const phoneIds=sortedIds(fs.readdirSync(phoneDir).filter(file=>file.endsWith('.html')).flatMap(file=>[...fs.readFileSync(path.join(phoneDir,file),'utf8').matchAll(/<article class="unit-card[^"]*" id="(unit-[^"]+)"/g)].map(match=>match[1])));
-  const expected=sortedIds(sourceIds);
-  expect(JSON.stringify(desktopIds)===JSON.stringify(expected),`${id}: Desktop local Datasheet IDs differ from source-owned inventory`);
-  expect(JSON.stringify(phoneIds)===JSON.stringify(expected),`${id}: Phone local Datasheet IDs differ from source-owned inventory`);
+  compareOwnershipLayer(id,'extracted local inventory',fixture.datasheetIds,sourceIds);
+  compareOwnershipLayer(id,'Desktop output',fixture.datasheetIds,desktopIds);
+  compareOwnershipLayer(id,'Phone output',fixture.datasheetIds,phoneIds);
 }
+expect(Object.keys(ownershipFixture.books).length===ownershipSources.length,'audited ownership fixture book count does not match working Army Books');
 const dgOwned=read('books/death-guard/content/death-guard-rules.en.json').sections;
 for(const id of ["unit-beasts-of-nurgle","unit-great-unclean-one","unit-nurglings","unit-plague-drones","unit-plaguebearers","unit-rotigus"])expect(dgOwned.some(item=>item.id===id&&item.kind==='unit'&&item.local!==false),`death-guard: source-owned ${id} was pruned as a dependency`);
 const ecRaw=read('books/emperors-children/sources/bsdata-emperors-children-11e.json');
@@ -61,6 +75,12 @@ for(const title of ["Shalaxi Helbane","Keeper of Secrets","Daemonettes","Fiends"
 const tyrPackOwnership=read('books/tyranids/content/tyranids-faction-pack.en.json').datasheets;
 expect(tyrPackOwnership.imperialArmour.some(item=>item.id==='hyperadapted-raveners'),'tyranids: Hyperadapted Raveners must retain Imperial Armour source evidence');
 expect(!ownershipSources.find(([id])=>id==='tyranids')[1].includes('unit-hyperadapted-raveners'),'tyranids: Imperial Armour Hyperadapted Raveners leaked into local Datasheets');
+expect(ownershipFixture.books.tyranids.datasheetIds.includes('unit-raveners'),'tyranids: ordinary Raveners are absent from audited local ownership');
+expect(!ownershipFixture.books.tyranids.datasheetIds.includes('unit-hyperadapted-raveners'),'tyranids: Hyperadapted Raveners leaked into audited local ownership');
+for(const id of ['unit-kroot-carnivores','unit-vespid-stingwings'])expect(ownershipFixture.books['tau-empire'].datasheetIds.includes(id),`tau-empire: source-owned ${id} is absent from audited local ownership`);
+for(const id of ['unit-shalaxi-helbane','unit-keeper-of-secrets','unit-daemonettes','unit-fiends','unit-seekers'])expect(ownershipFixture.books['emperors-children'].datasheetIds.includes(id),`emperors-children: source-owned ${id} is absent from audited local ownership`);
+for(const id of ['unit-marneus-calgar-in-armour-of-antilochus','unit-intercessor-squad'])expect(ownershipFixture.books['space-marines'].datasheetIds.includes(id),`space-marines: source-owned ${id} is absent from audited local ownership`);
+expect(ownershipFixture.books['adeptus-mechanicus'].datasheetIds.includes('unit-thulia-ghuld'),'adeptus-mechanicus: source-owned unit-thulia-ghuld is absent from audited local ownership');
 
 const badPatterns=[
   /\b(?:TYRANIDS|ASTARTES|INFANTRY|VEHICLE|MONSTER|CHARACTER|PSYKER|BATTLELINE|MOUNTED|TRANSPORT)(?:unit|units|model|models|or|and|when)\b/i,

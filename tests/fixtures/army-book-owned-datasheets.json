@@ -1,0 +1,65 @@
+{
+  "schema": 1,
+  "books": {
+    "death-guard": {
+      "provenance": {
+        "inventoryPath": "books/death-guard/content/death-guard-rules.en.json",
+        "sourcePaths": ["books/death-guard/sources/source-manifest.json"],
+        "detail": "Audited local Death Guard Datasheet ownership, including the six source-published Nurgle Daemon Datasheets."
+      },
+      "datasheetIds": [
+        "unit-beasts-of-nurgle", "unit-biologus-putrifier", "unit-blightlord-terminators", "unit-chaos-land-raider", "unit-chaos-predator-annihilator", "unit-chaos-predator-destructor", "unit-chaos-rhino", "unit-chaos-spawn", "unit-daemon-prince-of-nurgle", "unit-daemon-prince-of-nurgle-with-wings", "unit-deathshroud-terminators", "unit-defiler", "unit-foetid-bloat-drone", "unit-foetid-bloat-drone-with-heavy-blight-launcher", "unit-foul-blightspawn", "unit-great-unclean-one", "unit-helbrute", "unit-icon-bearer", "unit-lord-of-contagion", "unit-lord-of-poxes", "unit-lord-of-virulence", "unit-malignant-plaguecaster", "unit-miasmic-malignifier", "unit-mortarion", "unit-myphitic-blight-hauler", "unit-noxious-blightbringer", "unit-nurglings", "unit-plague-drones", "unit-plague-marines", "unit-plague-surgeon", "unit-plaguebearers", "unit-plagueburst-crawler", "unit-poxwalkers", "unit-rotigus", "unit-tallyman", "unit-typhus"
+      ]
+    },
+    "adeptus-mechanicus": {
+      "provenance": {
+        "inventoryPath": "books/adeptus-mechanicus/content/adeptus-mechanicus-codex-datasheets.en.json",
+        "sourcePaths": ["books/adeptus-mechanicus/sources/bsdata-adeptus-mechanicus-11e.json", "books/adeptus-mechanicus/sources/source-manifest.json"],
+        "detail": "Audited local Adeptus Mechanicus Datasheet ownership from the frozen 11th-edition source set."
+      },
+      "datasheetIds": [
+        "unit-archaeopter-fusilave", "unit-archaeopter-stratoraptor", "unit-archaeopter-transvector", "unit-belisarius-cawl", "unit-corpuscarii-electro-priests", "unit-cybernetica-datasmith", "unit-fulgurite-electro-priests", "unit-hastarii-exterminators", "unit-hastarii-fusiliers", "unit-ironstrider-ballistarii", "unit-kastelan-robots", "unit-kataphron-breachers", "unit-kataphron-destroyers", "unit-onager-dunecrawler", "unit-pteraxii-skystalkers", "unit-pteraxii-sterylizors", "unit-serberys-raiders", "unit-serberys-sulphurhounds", "unit-servitor-battleclade", "unit-sicarian-infiltrators", "unit-sicarian-ruststalkers", "unit-skitarii-marshal", "unit-skitarii-rangers", "unit-skitarii-vanguard", "unit-skorpius-disintegrator", "unit-skorpius-dunerider", "unit-sydonian-dragoons-with-radium-jezzails", "unit-sydonian-dragoons-with-taser-lances", "unit-sydonian-skatros", "unit-tech-priest-dominus", "unit-tech-priest-enginseer", "unit-tech-priest-manipulus", "unit-technoarcheologist", "unit-thulia-ghuld"
+      ]
+    },
+    "tyranids": {
+      "provenance": {
+        "inventoryPath": "books/tyranids/content/tyranids-codex-datasheets.en.json",
+        "sourcePaths": ["books/tyranids/sources/bsdata-tyranids-11e.json", "books/tyranids/sources/source-manifest.json"],
+        "detail": "Audited local Tyranids Datasheet ownership; Hyperadapted Raveners remains excluded as an Imperial Armour record while Raveners remains local."
+      },
+      "datasheetIds": [
+        "unit-barbgaunts", "unit-biovores", "unit-broodlord", "unit-carnifexes", "unit-deathleaper", "unit-exocrine", "unit-gargoyles", "unit-genestealers", "unit-harpy", "unit-haruspex", "unit-hive-crone", "unit-hive-guard", "unit-hive-tyrant", "unit-hormagaunts", "unit-lictor", "unit-maleceptor", "unit-mawloc", "unit-mucolid-spores", "unit-neurogaunts", "unit-neurolictor", "unit-neurotyrant", "unit-norn-assimilator", "unit-norn-emissary", "unit-old-one-eye", "unit-parasite-of-mortrex", "unit-psychophage", "unit-pyrovores", "unit-raveners", "unit-ripper-swarms", "unit-screamer-killer", "unit-spore-mines", "unit-sporocyst", "unit-termagants", "unit-tervigon", "unit-the-red-terror", "unit-the-swarmlord", "unit-toxicrene", "unit-trygon", "unit-tyranid-prime-with-lash-whip", "unit-tyranid-warriors-with-melee-bio-weapons", "unit-tyranid-warriors-with-ranged-bio-weapons", "unit-tyrannocyte", "unit-tyrannofex", "unit-tyrant-guard", "unit-venomthropes", "unit-von-ryans-leapers", "unit-winged-hive-tyrant", "unit-winged-tyranid-prime", "unit-zoanthropes"
+      ]
+    },
+    "tau-empire": {
+      "provenance": {
+        "inventoryPath": "books/tau-empire/content/tau-empire-codex-datasheets.en.json",
+        "sourcePaths": ["books/tau-empire/sources/bsdata-tau-empire-11e.json", "books/tau-empire/sources/source-manifest.json"],
+        "detail": "Audited local T'au Empire Datasheet ownership, including source-owned Kroot and Vespid Datasheets."
+      },
+      "datasheetIds": [
+        "unit-breacher-team", "unit-broadside-battlesuits", "unit-cadre-fireblade", "unit-commander-farsight", "unit-commander-in-coldstar-battlesuit", "unit-commander-in-enforcer-battlesuit", "unit-commander-shadowsun", "unit-crisis-fireknife-battlesuits", "unit-crisis-starscythe-battlesuits", "unit-crisis-sunforge-battlesuits", "unit-darkstrider", "unit-devilfish", "unit-ethereal", "unit-firesight-team", "unit-ghostkeel-battlesuit", "unit-hammerhead-gunship", "unit-kroot-carnivores", "unit-kroot-farstalkers", "unit-kroot-flesh-shaper", "unit-kroot-hounds", "unit-kroot-lone-spear", "unit-kroot-trail-shaper", "unit-kroot-war-shaper", "unit-krootox-rampagers", "unit-krootox-riders", "unit-pathfinder-team", "unit-piranhas", "unit-razorshark-strike-fighter", "unit-riptide-battlesuit", "unit-sky-ray-gunship", "unit-stealth-battlesuits", "unit-stormsurge", "unit-strike-team", "unit-sun-shark-bomber", "unit-the-twin-lance", "unit-tidewall-droneport", "unit-tidewall-gunrig", "unit-tidewall-shieldline", "unit-vespid-stingwings"
+      ]
+    },
+    "emperors-children": {
+      "provenance": {
+        "inventoryPath": "books/emperors-children/content/emperors-children-codex-datasheets.en.json",
+        "sourcePaths": ["books/emperors-children/sources/bsdata-emperors-children-11e.json", "books/emperors-children/sources/source-manifest.json"],
+        "detail": "Audited local Emperor's Children Datasheet ownership, including the five source-published Slaanesh Daemon Datasheets."
+      },
+      "datasheetIds": [
+        "unit-chaos-land-raider", "unit-chaos-rhino", "unit-chaos-spawn", "unit-chaos-terminators", "unit-daemon-prince-of-slaanesh", "unit-daemon-prince-of-slaanesh-with-wings", "unit-daemonettes", "unit-defiler", "unit-fiends", "unit-flawless-blades", "unit-fulgrim", "unit-heldrake", "unit-infractors", "unit-keeper-of-secrets", "unit-lord-exultant", "unit-lord-kakophonist", "unit-lucius-the-eternal", "unit-maulerfiend", "unit-noise-marines", "unit-seekers", "unit-shalaxi-helbane", "unit-sorcerer", "unit-tormentors"
+      ]
+    },
+    "space-marines": {
+      "provenance": {
+        "inventoryPath": "books/space-marines/content/space-marines-codex-datasheets.en.json",
+        "sourcePaths": ["books/space-marines/sources/bsdata-space-marines-11e.json", "books/space-marines/sources/source-manifest.json"],
+        "detail": "Audited local Space Marines Datasheet ownership, including source-owned Chapter-specific Datasheets and generic units."
+      },
+      "datasheetIds": [
+        "unit-adrax-agatone", "unit-aethon-shaan", "unit-aggressor-squad", "unit-ancient", "unit-ancient-in-terminator-armor", "unit-apothecary", "unit-apothecary-biologis", "unit-assault-intercessor-squad", "unit-assault-intercessors-with-jump-packs", "unit-ballistus-dreadnought", "unit-bladeguard-ancient", "unit-bladeguard-veteran-squad", "unit-brutalis-dreadnought", "unit-caanok-var", "unit-captain", "unit-captain-in-gravis-armour", "unit-captain-in-phobos-armour", "unit-captain-in-terminator-armour", "unit-captain-with-jump-pack", "unit-cato-sicarius", "unit-centurion-assault-squad", "unit-centurion-devastator-squad", "unit-chaplain", "unit-chaplain-in-terminator-armour", "unit-chaplain-on-bike", "unit-chaplain-with-jump-pack", "unit-chief-librarian-tigurius", "unit-company-heroes", "unit-darnath-lysander", "unit-desolation-squad", "unit-devastator-squad", "unit-dreadnought", "unit-drop-pod", "unit-eliminator-squad", "unit-eradicator-squad", "unit-eradicator-squad-with-heavy-bolters", "unit-firestrike-servo-turrets", "unit-gladiator-lancer", "unit-gladiator-reaper", "unit-gladiator-valiant", "unit-hammerfall-bunker", "unit-heavy-intercessor-squad", "unit-hellblaster-squad", "unit-impulsor", "unit-inceptor-squad", "unit-incursor-squad", "unit-infernus-squad", "unit-infiltrator-squad", "unit-intercessor-squad", "unit-invader-atv", "unit-invictor-tactical-warsuit", "unit-iron-father-feirros", "unit-judiciar", "unit-kayvaan-shrike", "unit-korsarro-khan", "unit-land-raider", "unit-land-raider-crusader", "unit-land-raider-redeemer", "unit-land-speeder", "unit-librarian", "unit-librarian-in-phobos-armour", "unit-librarian-in-terminator-armour", "unit-lieutenant", "unit-lieutenant-in-phobos-armour", "unit-lieutenant-in-reiver-armour", "unit-lieutenant-titus", "unit-lieutenant-with-combi-weapon", "unit-marneus-calgar-in-armour-of-antilochus", "unit-outrider-squad", "unit-pedro-kantor", "unit-predator-annihilator", "unit-predator-destructor", "unit-razorback", "unit-redemptor-dreadnought", "unit-reiver-squad", "unit-repulsor", "unit-repulsor-executioner", "unit-rhino", "unit-roboute-guilliman", "unit-scout-squad", "unit-sternguard-veteran-squad", "unit-storm-speeder-hailstrike", "unit-storm-speeder-hammerstrike", "unit-storm-speeder-thunderstrike", "unit-stormhawk-interceptor", "unit-stormraven-gunship", "unit-stormtalon-gunship", "unit-suboden-khan", "unit-suppressor-squad", "unit-tactical-squad", "unit-techmarine", "unit-terminator-assault-squad", "unit-terminator-squad", "unit-tor-garadon", "unit-uriel-ventris", "unit-vanguard-veteran-squad-with-jump-packs", "unit-victrix-honour-guard", "unit-vindicator", "unit-vulkan-hestan", "unit-wardens-of-ultramar", "unit-whirlwind"
+      ]
+    }
+  }
+}

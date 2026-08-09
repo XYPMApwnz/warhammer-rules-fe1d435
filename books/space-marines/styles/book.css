@@ -35,3 +35,4 @@ html[data-view="mobile"] .unit-card.ds-layout .ds-main-grid{grid-template-column
 html[data-view="mobile"] .unit-card.ds-layout .ds-arsenal{border-right:0;border-bottom:1px solid var(--line)}
 html[data-view="mobile"] .detachment-part[id$="-stratagems"]>.detachment-content,
 html[data-view="mobile"] .core-stratagem-grid{grid-template-columns:1fr}
+.faction-hero-cover{background:linear-gradient(90deg,rgba(12,15,12,.98) 0%,rgba(12,15,12,.91) 43%,rgba(12,15,12,.42) 70%,rgba(12,15,12,.28) 100%),linear-gradient(0deg,rgba(13,15,13,.92),transparent 38%),url("../assets/space-marines-cover-800.webp") center 23% / cover no-repeat}.faction-hero-cover::after{display:none;content:none}

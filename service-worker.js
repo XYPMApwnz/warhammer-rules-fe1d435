@@ -229,7 +229,9 @@ const APP_SHELL = [
   ,SPACE_MARINES_FALLBACK
   ,"./books/space-marines/mobile/index.html"
   ,"./books/space-marines/styles/tokens.css?v=3"
-  ,"./books/space-marines/styles/book.css?v=2"
+  ,"./books/space-marines/styles/book.css?v=3"
+  ,"./books/space-marines/assets/space-marines-cover-480.webp"
+  ,"./books/space-marines/assets/space-marines-cover-800.webp"
   ,"./books/space-marines/scripts/data.js?v=2"
   ,"./books/space-marines/scripts/app.js?v=4"
   ,"./books/space-marines/mobile/mobile.css?v=1"

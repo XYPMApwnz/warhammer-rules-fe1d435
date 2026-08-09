@@ -313,7 +313,7 @@ INFANTRY_OR_MOUNTED = {"alternatives": [
 VETERANS = {"alternatives": [
     {"allKeywords": ["ADEPTUS ASTARTES", "DREADNOUGHT"]},
     {"allKeywords": ["ADEPTUS ASTARTES", "TERMINATOR"]},
-    {"unitIds": ["unit-bladeguard-veteran-squad", "unit-sternguard-veteran-squad", "unit-vanguard-veteran-squad"]},
+    {"unitIds": ["unit-bladeguard-veteran-squad", "unit-sternguard-veteran-squad", "unit-vanguard-veteran-squad-with-jump-packs"]},
 ]}
 ELITE_INFANTRY = {"alternatives": VETERANS["alternatives"][1:]}
 PHOBOS_OR_SCOUT = {"alternatives": [
@@ -489,6 +489,18 @@ def build() -> tuple[dict, dict]:
             "provenance": provenance([page]),
         })
 
+    oath_match = re.search(r"Oath of Moment\s*Change to:\s*(.*?)\s*Space Marine Chapters", pypdf_texts[58], re.S)
+    if not oath_match:
+        raise ValueError("Could not extract Oath of Moment from official Faction Pack page 59")
+    updates.insert(0, {
+        "id": "oath-of-moment",
+        "section": "Army Rules",
+        "subject": "Oath of Moment",
+        "change": clean(oath_match.group(1)),
+        "sourcePages": [59],
+        "provenance": provenance([59]),
+    })
+
     data = {
         "meta": meta,
         "provenance": {
@@ -589,7 +601,7 @@ def validate(data: dict, related: dict) -> list[str]:
         if not appears(faq["question"], source) or not appears(faq["answer"], source):
             errors.append(f"{faq['id']}: FAQ does not match PDF")
     for update in data["updates"]:
-        source = PdfReader(str(PDF)).pages[update["sourcePages"][0] - 1].extract_text() or ""
+        source = (PdfReader(str(PDF)).pages[update["sourcePages"][0] - 1].extract_text() or "").replace("INFANTRYmodels", "INFANTRY models")
         if not appears(update["change"], source):
             errors.append(f"{update['id']}: update text does not match PDF")
     serialized = json.dumps(data, ensure_ascii=False)

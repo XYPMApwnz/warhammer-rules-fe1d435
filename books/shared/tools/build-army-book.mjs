@@ -254,8 +254,8 @@ const coveredHtml=config.coverImage?normalizedHtml.replace('class="hero section 
 let finalHtml=config.dedicatedMobile?coveredHtml
   .replace('./styles/tokens.css?v=2','./styles/tokens.css?v=3')
   .replace('./styles/book.css?v=2',`./styles/book.css?v=${config.assetVersions?.book||4}`)
-  .replace('./scripts/app.js?v=3',`./scripts/app.js?v=${config.assetVersions?.app||4}`)
-  .replace(/<script src="\.\.\/shared\/army-book-app\.js\?v=9"><\/script>/,''):coveredHtml;
+  .replace('./scripts/app.js?v=3',`./scripts/app.js?v=${config.assetVersions?.app||4}`):coveredHtml;
+if(config.dedicatedMobile&&!config.sharedArmyBookApp)finalHtml=finalHtml.replace(/<script src="\.\.\/shared\/army-book-app\.js\?v=9"><\/script>/,'');
 if(config.compatibleRulesMatrix)finalHtml=finalHtml
   .replace(/<script src="\.\.\/shared\/related-rules-matcher\.js\?v=6"><\/script>/,'')
   .replace(/<script src="\.\.\/shared\/army-related-rules\.js\?v=9"><\/script>/,'')

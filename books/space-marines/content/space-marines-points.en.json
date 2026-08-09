@@ -6,18 +6,20 @@
     "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
     "revision": "5",
     "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Imperium%20-%20Space%20Marines.json",
-    "snapshotSha256": "038B45543C99FB33466431dC363BB1D0186d98E7Ed29E9FC83B7297D845D4D54"
+    "snapshotSha256": "038B45543C99FB33466431AC363BB1D0186A98E7EA29E9FC83B7297D845D4D54"
   },
   "units": [
     {
       "id": "unit-aggressor-squad",
-      "title": "dggressor Squad",
+      "title": "Aggressor Squad",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "3 models",
-          "value": 80
+          "value": 80,
+          "minModels": 3,
+          "maxModels": 3
         },
         {
           "label": "3+ unit: 3 models",
@@ -25,7 +27,9 @@
         },
         {
           "label": "4 models",
-          "value": 165
+          "value": 165,
+          "minModels": 4,
+          "maxModels": 4
         },
         {
           "label": "3+ unit: 4 models",
@@ -36,108 +40,96 @@
     },
     {
       "id": "unit-ancient",
-      "title": "dncient",
+      "title": "Ancient",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "1 model",
-          "value": 40
+          "value": 40,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
     },
     {
       "id": "unit-ancient-in-terminator-armor",
-      "title": "dncient in Terminator drmor",
+      "title": "Ancient in Terminator Armor",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "1 model",
-          "value": 65
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-ancient-on-bike",
-      "title": "dncient on Bike",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 90
+          "value": 65,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
     },
     {
       "id": "unit-apothecary",
-      "title": "dpothecary",
+      "title": "Apothecary",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "1 model",
-          "value": 40
+          "value": 40,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
     },
     {
       "id": "unit-apothecary-biologis",
-      "title": "dpothecary Biologis",
+      "title": "Apothecary Biologis",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "1 model",
-          "value": 70
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-apothecary-on-bike",
-      "title": "dpothecary on Bike",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 65
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
     },
     {
       "id": "unit-assault-intercessor-squad",
-      "title": "dssault Intercessor Squad",
+      "title": "Assault Intercessor Squad",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "5 models",
-          "value": 75
+          "value": 75,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
-          "label": "6 models",
-          "value": 150
+          "label": "6-10 models",
+          "value": 150,
+          "minModels": 6,
+          "maxModels": 10
         }
       ],
       "paidWargear": []
     },
     {
       "id": "unit-assault-intercessors-with-jump-packs",
-      "title": "dssault Intercessors with Jump Packs",
+      "title": "Assault Intercessors with Jump Packs",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "5 models",
-          "value": 85
+          "value": 85,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
           "label": "3+ unit: 5 models",
@@ -145,7 +137,9 @@
         },
         {
           "label": "6 models",
-          "value": 160
+          "value": 160,
+          "minModels": 6,
+          "maxModels": 6
         },
         {
           "label": "3+ unit: 6 models",
@@ -155,82 +149,20 @@
       "paidWargear": []
     },
     {
-      "id": "unit-assault-squad",
-      "title": "dssault Squad",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "5 models",
-          "value": 95
-        },
-        {
-          "label": "6 models",
-          "value": 190
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-assault-squad-with-jump-packs",
-      "title": "dssault Squad with Jump Packs",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "5 models",
-          "value": 115
-        },
-        {
-          "label": "6 models",
-          "value": 230
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-astartes-servitors",
-      "title": "dstartes Servitors",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "4 models",
-          "value": 55
-        }
-      ],
-      "paidWargear": []
-    },
-    {
       "id": "unit-astraeus",
-      "title": "dstraeus",
+      "title": "Astraeus",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "1 model",
-          "value": 525
+          "value": 525,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "2+ unit: 1 models",
           "value": 575
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-attack-bike-squad",
-      "title": "dttack Bike Squad",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 dttack Bike",
-          "value": 55
-        },
-        {
-          "label": "3 dttack Bikes",
-          "value": 165
         }
       ],
       "paidWargear": []
@@ -243,7 +175,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 150
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
@@ -253,31 +187,16 @@
       "paidWargear": []
     },
     {
-      "id": "unit-bike-squad",
-      "title": "Bike Squad",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "3 models",
-          "value": 80
-        },
-        {
-          "label": "4 models",
-          "value": 160
-        }
-      ],
-      "paidWargear": []
-    },
-    {
       "id": "unit-bladeguard-ancient",
-      "title": "Bladeguard dncient",
+      "title": "Bladeguard Ancient",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "1 model",
-          "value": 40
+          "value": 40,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -290,7 +209,9 @@
       "points": [
         {
           "label": "3 models",
-          "value": 80
+          "value": 80,
+          "minModels": 3,
+          "maxModels": 3
         },
         {
           "label": "3+ unit: 3 models",
@@ -298,7 +219,9 @@
         },
         {
           "label": "4 models",
-          "value": 160
+          "value": 160,
+          "minModels": 4,
+          "maxModels": 4
         },
         {
           "label": "3+ unit: 4 models",
@@ -315,24 +238,13 @@
       "points": [
         {
           "label": "1 model",
-          "value": 150
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
           "value": 160
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-caestus-assault-ram",
-      "title": "Caestus dssault Ram",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 215
         }
       ],
       "paidWargear": []
@@ -345,59 +257,54 @@
       "points": [
         {
           "label": "1 model",
-          "value": 80
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
     },
     {
       "id": "unit-captain-in-gravis-armour",
-      "title": "Captain in Gravis drmour",
+      "title": "Captain in Gravis Armour",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "1 model",
-          "value": 80
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
     },
     {
       "id": "unit-captain-in-phobos-armour",
-      "title": "Captain in Phobos drmour",
+      "title": "Captain in Phobos Armour",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "1 model",
-          "value": 70
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
     },
     {
       "id": "unit-captain-in-terminator-armour",
-      "title": "Captain in Terminator drmour",
+      "title": "Captain in Terminator Armour",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "1 model",
-          "value": 85
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-captain-on-bike",
-      "title": "Captain on Bike",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 95
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -410,37 +317,30 @@
       "points": [
         {
           "label": "1 model",
-          "value": 75
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-carab-culln-the-risen",
-      "title": "Carab Culln the Risen",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 250
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
     },
     {
       "id": "unit-centurion-assault-squad",
-      "title": "Centurion dssault Squad",
+      "title": "Centurion Assault Squad",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "3 models",
-          "value": 150
+          "value": 150,
+          "minModels": 3,
+          "maxModels": 3
         },
         {
-          "label": "4 models",
-          "value": 300
+          "label": "4-6 models",
+          "value": 300,
+          "minModels": 4,
+          "maxModels": 6
         }
       ],
       "paidWargear": []
@@ -453,24 +353,15 @@
       "points": [
         {
           "label": "3 models",
-          "value": 175
+          "value": 175,
+          "minModels": 3,
+          "maxModels": 3
         },
         {
-          "label": "4 models",
-          "value": 350
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-cerberus",
-      "title": "Cerberus",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 270
+          "label": "4-6 models",
+          "value": 350,
+          "minModels": 4,
+          "maxModels": 6
         }
       ],
       "paidWargear": []
@@ -483,46 +374,24 @@
       "points": [
         {
           "label": "1 model",
-          "value": 60
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-chaplain-cassius",
-      "title": "Chaplain Cassius",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 80
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-chaplain-venerable-dreadnought",
-      "title": "Chaplain Venerable Dreadnought",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 150
+          "value": 60,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
     },
     {
       "id": "unit-chaplain-in-terminator-armour",
-      "title": "Chaplain in Terminator drmour",
+      "title": "Chaplain in Terminator Armour",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "1 model",
-          "value": 75
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -535,7 +404,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 70
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -548,33 +419,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 75
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-command-squad",
-      "title": "Command Squad",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "5 models",
-          "value": 165
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-company-champion-on-bike",
-      "title": "Company Champion on Bike",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 60
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -587,63 +434,9 @@
       "points": [
         {
           "label": "4 models",
-          "value": 105
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-company-veterans-on-bikes",
-      "title": "Company Veterans on Bikes",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "2 models",
-          "value": 110
-        },
-        {
-          "label": "3 models",
-          "value": 275
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-deathstorm-drop-pod",
-      "title": "Deathstorm Drop Pod",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 95
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-deimos-predator",
-      "title": "Deimos Predator",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 115
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-deredeo-dreadnought",
-      "title": "Deredeo Dreadnought",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 160
+          "value": 105,
+          "minModels": 4,
+          "maxModels": 4
         }
       ],
       "paidWargear": []
@@ -656,7 +449,9 @@
       "points": [
         {
           "label": "5 models",
-          "value": 180
+          "value": 180,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
           "label": "2+ unit: 5 models",
@@ -673,11 +468,15 @@
       "points": [
         {
           "label": "5 models",
-          "value": 120
+          "value": 120,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
-          "label": "6 models",
-          "value": 200
+          "label": "6-10 models",
+          "value": 200,
+          "minModels": 6,
+          "maxModels": 10
         }
       ],
       "paidWargear": []
@@ -690,20 +489,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 135
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-dreadnought-drop-pod",
-      "title": "Dreadnought Drop Pod",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 75
+          "value": 135,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -716,7 +504,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 60
+          "value": 60,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "5+ unit: 1 models",
@@ -733,7 +523,9 @@
       "points": [
         {
           "label": "3 models",
-          "value": 75
+          "value": 75,
+          "minModels": 3,
+          "maxModels": 3
         }
       ],
       "paidWargear": []
@@ -746,7 +538,9 @@
       "points": [
         {
           "label": "3 models",
-          "value": 90
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3
         },
         {
           "label": "3+ unit: 3 models",
@@ -754,7 +548,9 @@
         },
         {
           "label": "4 models",
-          "value": 180
+          "value": 180,
+          "minModels": 4,
+          "maxModels": 4
         },
         {
           "label": "3+ unit: 4 models",
@@ -771,50 +567,13 @@
       "points": [
         {
           "label": "3 models",
-          "value": 80
+          "value": 80,
+          "minModels": 3,
+          "maxModels": 3
         },
         {
           "label": "3+ unit: 3 models",
           "value": 90
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-falchion",
-      "title": "Falchion",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 420
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-fellblade",
-      "title": "Fellblade",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 480
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-fire-raptor-gunship",
-      "title": "Fire Raptor Gunship",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 290
         }
       ],
       "paidWargear": []
@@ -835,7 +594,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 160
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
@@ -852,7 +613,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 160
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
@@ -869,7 +632,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 150
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
@@ -886,7 +651,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 175
+          "value": 175,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -899,11 +666,15 @@
       "points": [
         {
           "label": "5 models",
-          "value": 100
+          "value": 100,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
-          "label": "6 models",
-          "value": 200
+          "label": "6-10 models",
+          "value": 200,
+          "minModels": 6,
+          "maxModels": 10
         }
       ],
       "paidWargear": []
@@ -916,37 +687,15 @@
       "points": [
         {
           "label": "5 models",
-          "value": 110
+          "value": 110,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
-          "label": "6 models",
-          "value": 220
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-hunter",
-      "title": "Hunter",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 100
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-imperial-space-marine",
-      "title": "Imperial Space Marine",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 40
+          "label": "6-10 models",
+          "value": 220,
+          "minModels": 6,
+          "maxModels": 10
         }
       ],
       "paidWargear": []
@@ -959,7 +708,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 70
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "5+ unit: 1 models",
@@ -976,7 +727,9 @@
       "points": [
         {
           "label": "3 models",
-          "value": 125
+          "value": 125,
+          "minModels": 3,
+          "maxModels": 3
         },
         {
           "label": "3+ unit: 3 models",
@@ -984,7 +737,9 @@
         },
         {
           "label": "4 models",
-          "value": 250
+          "value": 250,
+          "minModels": 4,
+          "maxModels": 4
         },
         {
           "label": "3+ unit: 4 models",
@@ -1001,7 +756,9 @@
       "points": [
         {
           "label": "5 models",
-          "value": 85
+          "value": 85,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
           "label": "3+ unit: 5 models",
@@ -1009,7 +766,9 @@
         },
         {
           "label": "6 models",
-          "value": 150
+          "value": 150,
+          "minModels": 6,
+          "maxModels": 6
         },
         {
           "label": "3+ unit: 6 models",
@@ -1026,11 +785,15 @@
       "points": [
         {
           "label": "5 models",
-          "value": 85
+          "value": 85,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
-          "label": "6 models",
-          "value": 180
+          "label": "6-10 models",
+          "value": 180,
+          "minModels": 6,
+          "maxModels": 10
         }
       ],
       "paidWargear": []
@@ -1043,7 +806,9 @@
       "points": [
         {
           "label": "5 models",
-          "value": 110
+          "value": 110,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
           "label": "3+ unit: 5 models",
@@ -1051,7 +816,9 @@
         },
         {
           "label": "6 models",
-          "value": 180
+          "value": 180,
+          "minModels": 6,
+          "maxModels": 6
         },
         {
           "label": "3+ unit: 6 models",
@@ -1068,24 +835,30 @@
       "points": [
         {
           "label": "5 models",
-          "value": 80
+          "value": 80,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
-          "label": "6 models",
-          "value": 150
+          "label": "6-10 models",
+          "value": 150,
+          "minModels": 6,
+          "maxModels": 10
         }
       ],
       "paidWargear": []
     },
     {
       "id": "unit-invader-atv",
-      "title": "Invader dTV",
+      "title": "Invader ATV",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "1 model",
-          "value": 60
+          "value": 60,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1098,33 +871,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 125
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-ironclad-dreadnought",
-      "title": "Ironclad Dreadnought",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 150
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-javelin-attack-speeder",
-      "title": "Javelin dttack Speeder",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 110
+          "value": 125,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1137,20 +886,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 55
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-kratos",
-      "title": "Kratos",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 240
+          "value": 55,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1163,24 +901,13 @@
       "points": [
         {
           "label": "1 model",
-          "value": 220
+          "value": 220,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
           "value": 240
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-land-raider-achilles",
-      "title": "Land Raider dchilles",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 230
         }
       ],
       "paidWargear": []
@@ -1193,63 +920,13 @@
       "points": [
         {
           "label": "1 model",
-          "value": 220
+          "value": 220,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
           "value": 240
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-land-raider-excelsior",
-      "title": "Land Raider Excelsior",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 250
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-land-raider-helios",
-      "title": "Land Raider Helios",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 265
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-land-raider-prometheus",
-      "title": "Land Raider Prometheus",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 250
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-land-raider-proteus",
-      "title": "Land Raider Proteus",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 220
         }
       ],
       "paidWargear": []
@@ -1262,7 +939,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 250
+          "value": 250,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
@@ -1279,71 +958,13 @@
       "points": [
         {
           "label": "1 model",
-          "value": 105
+          "value": 105,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
           "value": 115
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-land-speeder-storm",
-      "title": "Land Speeder Storm",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-land-speeder-tempest",
-      "title": "Land Speeder Tempest",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 95
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-land-speeder-tornado",
-      "title": "Land Speeder Tornado",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 95
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-land-speeder-typhoon",
-      "title": "Land Speeder Typhoon",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 100
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-leviathan-dreadnought",
-      "title": "Leviathan Dreadnought",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 160
         }
       ],
       "paidWargear": []
@@ -1356,7 +977,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 70
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
@@ -1367,52 +990,30 @@
     },
     {
       "id": "unit-librarian-in-phobos-armour",
-      "title": "Librarian in Phobos drmour",
+      "title": "Librarian in Phobos Armour",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "1 model",
-          "value": 70
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
     },
     {
       "id": "unit-librarian-in-terminator-armour",
-      "title": "Librarian in Terminator drmour",
+      "title": "Librarian in Terminator Armour",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "1 model",
-          "value": 75
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-librarian-on-bike",
-      "title": "Librarian on Bike",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 80
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-librarian-with-jump-pack",
-      "title": "Librarian with Jump Pack",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 75
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1425,33 +1026,39 @@
       "points": [
         {
           "label": "1 model",
-          "value": 45
+          "value": 45,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
     },
     {
       "id": "unit-lieutenant-in-phobos-armour",
-      "title": "Lieutenant in Phobos drmour",
+      "title": "Lieutenant in Phobos Armour",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "1 model",
-          "value": 45
+          "value": 45,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
     },
     {
       "id": "unit-lieutenant-in-reiver-armour",
-      "title": "Lieutenant in Reiver drmour",
+      "title": "Lieutenant in Reiver Armour",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "1 model",
-          "value": 45
+          "value": 45,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1464,33 +1071,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 95
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-mastodon",
-      "title": "Mastodon",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 540
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-mortis-dreadnought",
-      "title": "Mortis Dreadnought",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 130
+          "value": 95,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1503,24 +1086,30 @@
       "points": [
         {
           "label": "3 models",
-          "value": 70
+          "value": 70,
+          "minModels": 3,
+          "maxModels": 3
         },
         {
-          "label": "4 models",
-          "value": 140
+          "label": "4-7 models",
+          "value": 140,
+          "minModels": 4,
+          "maxModels": 7
         }
       ],
       "paidWargear": []
     },
     {
       "id": "unit-predator-annihilator",
-      "title": "Predator dnnihilator",
+      "title": "Predator Annihilator",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "1 model",
-          "value": 135
+          "value": 135,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
@@ -1537,37 +1126,13 @@
       "points": [
         {
           "label": "1 model",
-          "value": 140
+          "value": 140,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
           "value": 150
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-primaris-company-champion",
-      "title": "Primaris Company Champion",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 55
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-rapier-carrier",
-      "title": "Rapier Carrier",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 90
         }
       ],
       "paidWargear": []
@@ -1580,7 +1145,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 85
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "5+ unit: 1 models",
@@ -1597,7 +1164,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 195
+          "value": 195,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
@@ -1614,54 +1183,15 @@
       "points": [
         {
           "label": "5 models",
-          "value": 75
+          "value": 75,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
-          "label": "6 models",
-          "value": 150
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-relic-contemptor-dreadnought",
-      "title": "Relic Contemptor Dreadnought",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 140
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-relic-razorback",
-      "title": "Relic Razorback",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 105
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-relic-terminator-squad",
-      "title": "Relic Terminator Squad",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "5 models",
-          "value": 200
-        },
-        {
-          "label": "6 models",
-          "value": 400
+          "label": "6-10 models",
+          "value": 150,
+          "minModels": 6,
+          "maxModels": 10
         }
       ],
       "paidWargear": []
@@ -1674,7 +1204,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 170
+          "value": 170,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
@@ -1691,7 +1223,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 255
+          "value": 255,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
@@ -1714,58 +1248,13 @@
       "points": [
         {
           "label": "1 model",
-          "value": 65
+          "value": 65,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "5+ unit: 1 models",
           "value": 75
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-rhino-primaris",
-      "title": "Rhino Primaris",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 95
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-scout-bike-squad",
-      "title": "Scout Bike Squad",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "3 models",
-          "value": 75
-        },
-        {
-          "label": "4 models",
-          "value": 150
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-scout-sniper-squad",
-      "title": "Scout Sniper Squad",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "5 models",
-          "value": 75
-        },
-        {
-          "label": "6 models",
-          "value": 150
         }
       ],
       "paidWargear": []
@@ -1778,7 +1267,9 @@
       "points": [
         {
           "label": "5 models",
-          "value": 65
+          "value": 65,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
           "label": "3+ unit: 5 models",
@@ -1786,141 +1277,13 @@
         },
         {
           "label": "6 models",
-          "value": 120
+          "value": 120,
+          "minModels": 6,
+          "maxModels": 6
         },
         {
           "label": "3+ unit: 6 models",
           "value": 130
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-sergeant-chronus",
-      "title": "Sergeant Chronus",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 75
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-sergeant-telion",
-      "title": "Sergeant Telion",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 70
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-sicaran-arcus",
-      "title": "Sicaran drcus",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 160
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-sicaran-battle-tank",
-      "title": "Sicaran Battle Tank",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 160
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-sicaran-omega",
-      "title": "Sicaran Omega",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 180
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-sicaran-punisher",
-      "title": "Sicaran Punisher",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 160
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-sicaran-venator",
-      "title": "Sicaran Venator",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 180
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-sokar-pattern-stormbird",
-      "title": "Sokar-pattern Stormbird",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 900
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-spartan",
-      "title": "Spartan",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 300
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-stalker",
-      "title": "Stalker",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 140
         }
       ],
       "paidWargear": []
@@ -1933,24 +1296,15 @@
       "points": [
         {
           "label": "5 models",
-          "value": 100
+          "value": 100,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
-          "label": "6 models",
-          "value": 200
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-storm-eagle-gunship",
-      "title": "Storm Eagle Gunship",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 250
+          "label": "6-10 models",
+          "value": 200,
+          "minModels": 6,
+          "maxModels": 10
         }
       ],
       "paidWargear": []
@@ -1963,7 +1317,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 105
+          "value": 105,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
@@ -1980,7 +1336,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 140
+          "value": 140,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
@@ -1997,7 +1355,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 135
+          "value": 135,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
@@ -2014,7 +1374,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 155
+          "value": 155,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -2027,7 +1389,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 280
+          "value": 280,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "2+ unit: 1 models",
@@ -2044,7 +1408,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 165
+          "value": 165,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -2057,7 +1423,9 @@
       "points": [
         {
           "label": "3 models",
-          "value": 85
+          "value": 85,
+          "minModels": 3,
+          "maxModels": 3
         }
       ],
       "paidWargear": []
@@ -2070,33 +1438,9 @@
       "points": [
         {
           "label": "10 models",
-          "value": 140
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-tarantula-air-defense-battery",
-      "title": "Tarantula dir Defense Battery",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 70
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-tarantula-sentry-battery",
-      "title": "Tarantula Sentry Battery",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 30
+          "value": 140,
+          "minModels": 10,
+          "maxModels": 10
         }
       ],
       "paidWargear": []
@@ -2109,37 +1453,30 @@
       "points": [
         {
           "label": "1 model",
-          "value": 55
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-techmarine-on-bike",
-      "title": "Techmarine on Bike",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 110
+          "value": 55,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
     },
     {
       "id": "unit-terminator-assault-squad",
-      "title": "Terminator dssault Squad",
+      "title": "Terminator Assault Squad",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
         {
           "label": "5 models",
-          "value": 155
+          "value": 155,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
-          "label": "6 models",
-          "value": 310
+          "label": "6-10 models",
+          "value": 310,
+          "minModels": 6,
+          "maxModels": 10
         }
       ],
       "paidWargear": [
@@ -2158,119 +1495,15 @@
       "points": [
         {
           "label": "5 models",
-          "value": 160
+          "value": 160,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
-          "label": "6 models",
-          "value": 320
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-terminus-ultra",
-      "title": "Terminus Ultra",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 285
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-terrax-pattern-termite",
-      "title": "Terrax-pattern Termite",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 200
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-thunderfire-cannon",
-      "title": "Thunderfire Cannon",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "2 models",
-          "value": 90
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-thunderhawk-gunship",
-      "title": "Thunderhawk Gunship",
-      "status": "Current",
-      "sourceLayer": "imperial-armour",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 840
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-thunderhawk-transporter",
-      "title": "Thunderhawk Transporter",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 495
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-typhon",
-      "title": "Typhon",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 320
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-tyrannic-war-veterans",
-      "title": "Tyrannic War Veterans",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "5 models",
-          "value": 85
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-vanguard-veteran-squad",
-      "title": "Vanguard Veteran Squad",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "5 models",
-          "value": 120
-        },
-        {
-          "label": "6 models",
-          "value": 240
+          "label": "6-10 models",
+          "value": 320,
+          "minModels": 6,
+          "maxModels": 10
         }
       ],
       "paidWargear": []
@@ -2283,7 +1516,9 @@
       "points": [
         {
           "label": "5 models",
-          "value": 105
+          "value": 105,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
           "label": "3+ unit: 5 models",
@@ -2291,24 +1526,13 @@
         },
         {
           "label": "6 models",
-          "value": 210
+          "value": 210,
+          "minModels": 6,
+          "maxModels": 6
         },
         {
           "label": "3+ unit: 6 models",
           "value": 220
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-venerable-dreadnought",
-      "title": "Venerable Dreadnought",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 165
         }
       ],
       "paidWargear": []
@@ -2321,24 +1545,13 @@
       "points": [
         {
           "label": "1 model",
-          "value": 185
+          "value": 185,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
           "value": 200
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-vindicator-laser-destroyer",
-      "title": "Vindicator Laser Destroyer",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 175
         }
       ],
       "paidWargear": []
@@ -2351,37 +1564,13 @@
       "points": [
         {
           "label": "1 model",
-          "value": 175
+          "value": 175,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "2+ unit: 1 models",
           "value": 195
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-whirlwind-scorpius",
-      "title": "Whirlwind Scorpius",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 115
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-xiphon-interceptor",
-      "title": "Xiphon Interceptor",
-      "status": "Warhammer Legends",
-      "sourceLayer": "legends",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 115
         }
       ],
       "paidWargear": []
@@ -2390,10 +1579,10 @@
   "enhancements": [
     {
       "id": "enhancement-fear-made-manifest-aura",
-      "title": "Fear Made Manifest [dura]",
+      "title": "Fear Made Manifest [Aura]",
       "detachment": "1st Company Task Force",
       "value": 30,
-      "text": "ddeptus dstartes model only. While an enemy unit (excluding Monsters and Vehicles) is within 6\" of the bearer, each time that unit fails a Battle-Shock test, one model in that unit is destroyed (chosen by it's controlling player.) Once per battle, when such an enemy unit fails a Battle-Shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
+      "text": "Adeptus Astartes model only. While an enemy unit (excluding Monsters and Vehicles) is within 6\" of the bearer, each time that unit fails a Battle-Shock test, one model in that unit is destroyed (chosen by it's controlling player.) Once per battle, when such an enemy unit fails a Battle-Shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
       "profile": null
     },
     {
@@ -2401,7 +1590,7 @@
       "title": "Iron Resolve",
       "detachment": "1st Company Task Force",
       "value": 15,
-      "text": "ddeptus dstartes Terminator model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer's unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Feel No Pain 5+ ability.",
+      "text": "Adeptus Astartes Terminator model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer's unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Feel No Pain 5+ ability.",
       "profile": null
     },
     {
@@ -2409,7 +1598,7 @@
       "title": "Rites of War",
       "detachment": "1st Company Task Force",
       "value": 10,
-      "text": "ddeptus dstartes Terminator model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer's unit as well.",
+      "text": "Adeptus Astartes Terminator model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer's unit as well.",
       "profile": null
     },
     {
@@ -2417,29 +1606,29 @@
       "title": "The Imperium's Sword",
       "detachment": "1st Company Task Force",
       "value": 25,
-      "text": "ddeptus dstartes model only. ddd 1 to the dttacks characteristic of the bearer's melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the dttacks characteristic of melee weapons equipped by all other models in the bearer's unit.",
+      "text": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer's melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer's unit.",
       "profile": null
     },
     {
       "id": "enhancement-architect-of-war",
-      "title": "drchitect of War",
-      "detachment": "dnvil Siege Force",
+      "title": "Architect of War",
+      "detachment": "Anvil Siege Force",
       "value": 25,
-      "text": "ddeptus dstartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
+      "text": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
       "profile": null
     },
     {
       "id": "enhancement-fleet-commander",
       "title": "Fleet Commander",
-      "detachment": "dnvil Siege Force",
+      "detachment": "Anvil Siege Force",
       "value": 15,
-      "text": "Captain model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. dt the start of your next Shooting phase, place another marker on the battlefield within 12\" of the center of the first marker, then draw a straight line between the center of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+ that unit suffers D3 mortal wounds. Both markers are then removed.",
+      "text": "Captain model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the center of the first marker, then draw a straight line between the center of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+ that unit suffers D3 mortal wounds. Both markers are then removed.",
       "profile": null
     },
     {
       "id": "enhancement-indomitable-fury",
       "title": "Indomitable Fury",
-      "detachment": "dnvil Siege Force",
+      "detachment": "Anvil Siege Force",
       "value": 20,
       "text": "Gravis Model only. The first time the bearer is destroyed, roll on D6 at the end of the phase. On a 2+ set the bearer back on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
       "profile": null
@@ -2447,41 +1636,41 @@
     {
       "id": "enhancement-stoic-defender",
       "title": "Stoic Defender",
-      "detachment": "dnvil Siege Force",
+      "detachment": "Anvil Siege Force",
       "value": 15,
-      "text": "ddeptus dstartes model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0",
+      "text": "Adeptus Astartes model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0",
       "profile": null
     },
     {
       "id": "enhancement-armoured-commander",
-      "title": "drmoured Commander",
-      "detachment": "drmoured Speartip",
+      "title": "Armoured Commander",
+      "detachment": "Armoured Speartip",
       "value": 25,
-      "text": "ddeptus dstartes model only. Once per turn, in your Movement phase, the bearer can use this\nEnhancement. If it does, select one friendly ddeptus dstartes Transport that is in Strategic Reserves. Until the end of the phase, for the purposes of setting up that Transport on the battlefield, treat the current battle round number as being one higher than it actually is.",
+      "text": "Adeptus Astartes model only. Once per turn, in your Movement phase, the bearer can use this\nEnhancement. If it does, select one friendly Adeptus Astartes Transport that is in Strategic Reserves. Until the end of the phase, for the purposes of setting up that Transport on the battlefield, treat the current battle round number as being one higher than it actually is.",
       "profile": null
     },
     {
       "id": "enhancement-liberator",
       "title": "Liberator",
-      "detachment": "drmoured Speartip",
+      "detachment": "Armoured Speartip",
       "value": 15,
-      "text": "ddeptus dstartes model only. If you control an objective marker at the end of your Command phase,\nand the bearer’s unit (or any Heavy Transport it is embarked within) is within range of that objective\nmarker, that objective marker remains under your control until your opponent’s Level of Control over\nthat objective marker is greater than yours at the end of a phase.",
+      "text": "Adeptus Astartes model only. If you control an objective marker at the end of your Command phase,\nand the bearer’s unit (or any Heavy Transport it is embarked within) is within range of that objective\nmarker, that objective marker remains under your control until your opponent’s Level of Control over\nthat objective marker is greater than yours at the end of a phase.",
       "profile": null
     },
     {
       "id": "enhancement-shock-deployment",
       "title": "Shock Deployment",
-      "detachment": "drmoured Speartip",
+      "detachment": "Armoured Speartip",
       "value": 20,
-      "text": "ddeptus dstartes Terminator or Gravis model only. In your Shooting phase, each time the bearer’s unit is selected to shoot, if it disembarked from a Transport this turn, until the end of the phase, ranged weapons equipped by models in that unit have the [SUSTdINED HITS 1] ability.",
+      "text": "Adeptus Astartes Terminator or Gravis model only. In your Shooting phase, each time the bearer’s unit is selected to shoot, if it disembarked from a Transport this turn, until the end of the phase, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
       "profile": null
     },
     {
       "id": "enhancement-tip-of-the-spear",
       "title": "Tip of the Spear",
-      "detachment": "drmoured Speartip",
+      "detachment": "Armoured Speartip",
       "value": 40,
-      "text": "ddeptus dstartes model only. If the bearer starts the battle embarked within a Transport, that transport\nhas the Scouts 6\" ability",
+      "text": "Adeptus Astartes model only. If the bearer starts the battle embarked within a Transport, that transport\nhas the Scouts 6\" ability",
       "profile": null
     },
     {
@@ -2489,7 +1678,7 @@
       "title": "Blades of Valour",
       "detachment": "Bastion Task Force",
       "value": 15,
-      "text": "ddeptus dstartes model only. Improve the drmour Penetration characteristic of melee weapons equipped by the bearer and Battleline models in the bearer’s unit by 1.",
+      "text": "Adeptus Astartes model only. Improve the Armour Penetration characteristic of melee weapons equipped by the bearer and Battleline models in the bearer’s unit by 1.",
       "profile": null
     },
     {
@@ -2497,7 +1686,7 @@
       "title": "Bombast Omnivox",
       "detachment": "Bastion Task Force",
       "value": 15,
-      "text": "ddeptus dstartes model only. Each time you select the bearer’s unit as the target of a Stratagem, roll one D6, adding 1 if the bearer’s unit has the Battleline keyword: on a 4+, you gain 1CP.",
+      "text": "Adeptus Astartes model only. Each time you select the bearer’s unit as the target of a Stratagem, roll one D6, adding 1 if the bearer’s unit has the Battleline keyword: on a 4+, you gain 1CP.",
       "profile": null
     },
     {
@@ -2505,7 +1694,7 @@
       "title": "Eye of the Primarch",
       "detachment": "Bastion Task Force",
       "value": 10,
-      "text": "ddeptus dstartes model only. Ranged weapons equipped by the bearer and Battleline models in the\nbearer’s unit have the [PRECISION] ability",
+      "text": "Adeptus Astartes model only. Ranged weapons equipped by the bearer and Battleline models in the\nbearer’s unit have the [PRECISION] ability",
       "profile": null
     },
     {
@@ -2513,15 +1702,15 @@
       "title": "Hero of the Chapter",
       "detachment": "Bastion Task Force",
       "value": 20,
-      "text": "ddeptus dstartes model only. While the bearer is leading a unit, the bearer has the Battleline keyword.",
+      "text": "Adeptus Astartes model only. While the bearer is leading a unit, the bearer has the Battleline keyword.",
       "profile": null
     },
     {
       "id": "enhancement-armour-of-antoninus",
-      "title": "drmour of dntoninus",
+      "title": "Armour of Antoninus",
       "detachment": "Blade of Ultramar",
       "value": 20,
-      "text": "ddeptus dstartes model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
+      "text": "Adeptus Astartes model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
       "profile": null
     },
     {
@@ -2529,7 +1718,7 @@
       "title": "Oath of Macragge",
       "detachment": "Blade of Ultramar",
       "value": 15,
-      "text": "ddeptus dstartes model only. ddd 1 to the dttacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the dssault Doctrine, add 2 to the dttacks and Strength characteristics of the bearer’s melee weapons instead.",
+      "text": "Adeptus Astartes model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead.",
       "profile": null
     },
     {
@@ -2537,7 +1726,7 @@
       "title": "Student of the Codex",
       "detachment": "Blade of Ultramar",
       "value": 20,
-      "text": "ddeptus dstartes model only. dt the start of your Command phase, if the bearer is on the battlefield, it\ncan use this Enhancement. If it does, until the start of your next Command phase, the Tactical doctrine is active for this unit (instead of any other Combat Doctrine you select to be active for your army, and even if there is no Combat Doctrine active for your army).",
+      "text": "Adeptus Astartes model only. At the start of your Command phase, if the bearer is on the battlefield, it\ncan use this Enhancement. If it does, until the start of your next Command phase, the Tactical doctrine is active for this unit (instead of any other Combat Doctrine you select to be active for your army, and even if there is no Combat Doctrine active for your army).",
       "profile": null
     },
     {
@@ -2545,7 +1734,7 @@
       "title": "Veteran of Behemoth",
       "detachment": "Blade of Ultramar",
       "value": 25,
-      "text": "ddeptus dstartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTdINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, , you can reroll ddvance rolls made for that unit.",
+      "text": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine,, you can reroll Advance rolls made for that unit.",
       "profile": null
     },
     {
@@ -2553,7 +1742,7 @@
       "title": "Castellum Omnivox",
       "detachment": "Ceramite Sentinels",
       "value": 20,
-      "text": "Each time the bearer’s unit makes a Fall Back move, select one of the following to apply to that unit until the end of the turn: \n- That unit is eligible to perform an dction in a turn in which it Fell Back. \n- That unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+      "text": "Each time the bearer’s unit makes a Fall Back move, select one of the following to apply to that unit until the end of the turn: \n- That unit is eligible to perform an Action in a turn in which it Fell Back. \n- That unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
       "profile": null
     },
     {
@@ -2561,7 +1750,7 @@
       "title": "Defensive Mastery",
       "detachment": "Ceramite Sentinels",
       "value": 25,
-      "text": "dfter both players have deployed their armies, select up to three ddeptus dstartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+      "text": "After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
       "profile": null
     },
     {
@@ -2585,7 +1774,7 @@
       "title": "Champion of the Feast",
       "detachment": "Emperor's Shield",
       "value": 25,
-      "text": "ddeptus dstartes model only. ddd 1 to the dttacks characteristic of the bearer's melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the dttacks characteristic of melee weapons equipped by all other models in the bearer's unit.",
+      "text": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer's melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer's unit.",
       "profile": null
     },
     {
@@ -2593,7 +1782,7 @@
       "title": "Disciple of Rhetoricus",
       "detachment": "Emperor's Shield",
       "value": 10,
-      "text": "ddeptus dstartes Terminator model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer's unit as well.",
+      "text": "Adeptus Astartes Terminator model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer's unit as well.",
       "profile": null
     },
     {
@@ -2601,7 +1790,7 @@
       "title": "Indomitable Champion",
       "detachment": "Emperor's Shield",
       "value": 20,
-      "text": "ddeptus dstartes Terminator model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.",
+      "text": "Adeptus Astartes Terminator model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.",
       "profile": null
     },
     {
@@ -2609,21 +1798,21 @@
       "title": "Malodraxian Standard",
       "detachment": "Emperor's Shield",
       "value": 20,
-      "text": "ddeptus dstartes dncient model only. Each time an attack targets the bearer’s unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of the bearer’s unit, subtract 1 from the Wound roll.",
+      "text": "Adeptus Astartes Ancient model only. Each time an attack targets the bearer’s unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of the bearer’s unit, subtract 1 from the Wound roll.",
       "profile": null
     },
     {
       "id": "enhancement-adamantine-mantle",
-      "title": "ddamantine Mantle",
-      "detachment": "Firestorm dssault Force",
+      "title": "Adamantine Mantle",
+      "detachment": "Firestorm Assault Force",
       "value": 20,
-      "text": "ddeptus dstartes model only. Each time an attack is allocated the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a [MELTd] or [TORRENT] weapon, change the Damage characteristic of that attack to 1 instead.",
+      "text": "Adeptus Astartes model only. Each time an attack is allocated the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a [MELTA] or [TORRENT] weapon, change the Damage characteristic of that attack to 1 instead.",
       "profile": null
     },
     {
       "id": "enhancement-champion-of-humanity",
       "title": "Champion of Humanity",
-      "detachment": "Firestorm dssault Force",
+      "detachment": "Firestorm Assault Force",
       "value": 10,
       "text": "Tacticus model only. While the bearer is leading a unit, models in that unit can ignore any or all modifiers to their characteristics and/or to any roll or test made for them (excluding modifiers to saving throws).",
       "profile": null
@@ -2631,25 +1820,25 @@
     {
       "id": "enhancement-forged-in-battle",
       "title": "Forged in Battle",
-      "detachment": "Firestorm dssault Force",
+      "detachment": "Firestorm Assault Force",
       "value": 15,
-      "text": "ddeptus dstartes model only. While the bearer is leading a unit, once per turn after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an umodified 6.",
+      "text": "Adeptus Astartes model only. While the bearer is leading a unit, once per turn after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an umodified 6.",
       "profile": null
     },
     {
       "id": "enhancement-war-tempered-artifice",
-      "title": "War-tempered drtifice",
-      "detachment": "Firestorm dssault Force",
+      "title": "War-tempered Artifice",
+      "detachment": "Firestorm Assault Force",
       "value": 25,
-      "text": "ddeptus dstartes Infantry model only. ddd 3 to the Strength characteristic of the bearer's melee weapons.",
+      "text": "Adeptus Astartes Infantry model only. Add 3 to the Strength characteristic of the bearer's melee weapons.",
       "profile": null
     },
     {
       "id": "enhancement-adamantine-mantle",
-      "title": "ddamantine Mantle",
+      "title": "Adamantine Mantle",
       "detachment": "Forgefather's Seekers",
       "value": 20,
-      "text": "ddeptus dstartes model only. Each time an attack is allocated the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a [MELTd] or [TORRENT] weapon, change the Damage characteristic of that attack to 1 instead.",
+      "text": "Adeptus Astartes model only. Each time an attack is allocated the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a [MELTA] or [TORRENT] weapon, change the Damage characteristic of that attack to 1 instead.",
       "profile": null
     },
     {
@@ -2657,7 +1846,7 @@
       "title": "Forged in Battle",
       "detachment": "Forgefather's Seekers",
       "value": 15,
-      "text": "ddeptus dstartes model only. While the bearer is leading a unit, once per turn after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an umodified 6.",
+      "text": "Adeptus Astartes model only. While the bearer is leading a unit, once per turn after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an umodified 6.",
       "profile": null
     },
     {
@@ -2665,15 +1854,15 @@
       "title": "Immolator",
       "detachment": "Forgefather's Seekers",
       "value": 10,
-      "text": "ddeptus dstartes model only. ddd 1 to the attacks characteristics of Torrent weapons equipped by models in the bearer's unit.",
+      "text": "Adeptus Astartes model only. Add 1 to the attacks characteristics of Torrent weapons equipped by models in the bearer's unit.",
       "profile": null
     },
     {
       "id": "enhancement-war-tempered-artifice",
-      "title": "War-tempered drtifice",
+      "title": "War-tempered Artifice",
       "detachment": "Forgefather's Seekers",
       "value": 25,
-      "text": "ddeptus dstartes Infantry model only. ddd 3 to the Strength characteristic of the bearer's melee weapons.",
+      "text": "Adeptus Astartes Infantry model only. Add 3 to the Strength characteristic of the bearer's melee weapons.",
       "profile": null
     },
     {
@@ -2681,7 +1870,7 @@
       "title": "Bellicose Weapon Spirits",
       "detachment": "Fulguris Task Force",
       "value": 15,
-      "text": "SPEEDER unit only. This unit can re-roll:\n\n\n▪ Damage rolls.\n▪ Rolls to determine the d of a weapon.",
+      "text": "SPEEDER unit only. This unit can re-roll:\n\n\n▪ Damage rolls.\n▪ Rolls to determine the A of a weapon.",
       "profile": null
     },
     {
@@ -2694,18 +1883,18 @@
     },
     {
       "id": "enhancement-adept-of-the-codex",
-      "title": "ddept of the Codex",
+      "title": "Adept of the Codex",
       "detachment": "Gladius Task Force",
       "value": 20,
-      "text": "Captain model only. dt the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that doctrine is active for the bearer’s unit only, even if you have already selected that doctrine to be active for your army this battle.",
+      "text": "Captain model only. At the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that doctrine is active for the bearer’s unit only, even if you have already selected that doctrine to be active for your army this battle.",
       "profile": null
     },
     {
       "id": "enhancement-artificer-armour",
-      "title": "drtificer drmour",
+      "title": "Artificer Armour",
       "detachment": "Gladius Task Force",
       "value": 20,
-      "text": "ddeptus dstartes model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
+      "text": "Adeptus Astartes model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
       "profile": null
     },
     {
@@ -2713,7 +1902,7 @@
       "title": "Fire Discipline",
       "detachment": "Gladius Task Force",
       "value": 25,
-      "text": "ddeptus dstartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTdINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, , you can reroll ddvance rolls made for that unit.",
+      "text": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine,, you can reroll Advance rolls made for that unit.",
       "profile": null
     },
     {
@@ -2721,47 +1910,47 @@
       "title": "The Honour Vehement",
       "detachment": "Gladius Task Force",
       "value": 15,
-      "text": "ddeptus dstartes model only. ddd 1 to the dttacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the dssault Doctrine, add 2 to the dttacks and Strength characteristics of the bearer’s melee weapons instead.",
+      "text": "Adeptus Astartes model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead.",
       "profile": null
     },
     {
       "id": "enhancement-iron-laurel",
       "title": "Iron Laurel",
-      "detachment": "Hammer of dvernii",
+      "detachment": "Hammer of Avernii",
       "value": 10,
-      "text": "ddeptus dstartes model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
+      "text": "Adeptus Astartes model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
       "profile": null
     },
     {
       "id": "enhancement-medusan-roar-aura",
-      "title": "Medusan Roar [dura]",
-      "detachment": "Hammer of dvernii",
+      "title": "Medusan Roar [Aura]",
+      "detachment": "Hammer of Avernii",
       "value": 30,
-      "text": "ddeptus dstartes model only. While an enemy unit (excluding Monsters and Vehicles) is within 6\" of\nthe bearer, each time that unit fails a Battle-shock test, one model in that unit is destroyed (chosen by\nits controlling player). Once per battle, when such an enemy unit fails a Battle-shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
+      "text": "Adeptus Astartes model only. While an enemy unit (excluding Monsters and Vehicles) is within 6\" of\nthe bearer, each time that unit fails a Battle-shock test, one model in that unit is destroyed (chosen by\nits controlling player). Once per battle, when such an enemy unit fails a Battle-shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
       "profile": null
     },
     {
       "id": "enhancement-spiritus-ferrum",
       "title": "Spiritus Ferrum",
-      "detachment": "Hammer of dvernii",
+      "detachment": "Hammer of Avernii",
       "value": 25,
-      "text": "ddeptus dstartes model only. ddd 1 to the dttacks characteristic of the bearer’s melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the dttacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well.",
+      "text": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well.",
       "profile": null
     },
     {
       "id": "enhancement-steel-font",
       "title": "Steel Font",
-      "detachment": "Hammer of dvernii",
+      "detachment": "Hammer of Avernii",
       "value": 15,
-      "text": "ddeptus dstartes Terminator model only. While the bearer is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit.",
+      "text": "Adeptus Astartes Terminator model only. While the bearer is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit.",
       "profile": null
     },
     {
       "id": "enhancement-astartes-tank-ace-aura",
-      "title": "dstartes Tank dce (dura)",
+      "title": "Astartes Tank Ace (Aura)",
       "detachment": "Headhunter Task Force",
       "value": 40,
-      "text": "ddeptus dstartes Vehicle model only. In your Shooting phase, while a friendly ddeptus dstartes\nVehicle unit is within 6\" of the bearer, ranged weapons equipped by models in that unit have the\n[dSSdULT] ability",
+      "text": "Adeptus Astartes Vehicle model only. In your Shooting phase, while a friendly Adeptus Astartes\nVehicle unit is within 6\" of the bearer, ranged weapons equipped by models in that unit have the\n[ASSAULT] ability",
       "profile": null
     },
     {
@@ -2769,7 +1958,7 @@
       "title": "Firestorm Coordinators",
       "detachment": "Headhunter Task Force",
       "value": 20,
-      "text": "ddeptus dstartes Vehicle model only. Ranged weapons equipped by the bearer have the\n[SUSTdINED HITS 1] ability.",
+      "text": "Adeptus Astartes Vehicle model only. Ranged weapons equipped by the bearer have the\n[SUSTAINED HITS 1] ability.",
       "profile": null
     },
     {
@@ -2777,7 +1966,7 @@
       "title": "Gunnery Honours",
       "detachment": "Headhunter Task Force",
       "value": 20,
-      "text": "ddeptus dstartes Vehicle model only. Once per phase, you can re-roll one Hit roll, one Wound roll\nand one Damage roll for the bearer.",
+      "text": "Adeptus Astartes Vehicle model only. Once per phase, you can re-roll one Hit roll, one Wound roll\nand one Damage roll for the bearer.",
       "profile": null
     },
     {
@@ -2785,15 +1974,15 @@
       "title": "Redoubtable Machine Spirit",
       "detachment": "Headhunter Task Force",
       "value": 25,
-      "text": "ddeptus dstartes Vehicle model only. The bearer has a 5+ invulnerable save and, at the end of your\nCommand phase, the bearer regains 1 lost wound.",
+      "text": "Adeptus Astartes Vehicle model only. The bearer has a 5+ invulnerable save and, at the end of your\nCommand phase, the bearer regains 1 lost wound.",
       "profile": null
     },
     {
       "id": "enhancement-adept-of-the-omnissiah",
-      "title": "ddept of the Omnissiah",
+      "title": "Adept of the Omnissiah",
       "detachment": "Ironstorm Spearhead",
       "value": 35,
-      "text": "Techmarine model only. Once per battle round, when a saving throw is failed for a friendly ddeptus dstartes Vehicle model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
+      "text": "Techmarine model only. Once per battle round, when a saving throw is failed for a friendly Adeptus Astartes Vehicle model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
       "profile": null
     },
     {
@@ -2801,15 +1990,15 @@
       "title": "Master of the Machine War",
       "detachment": "Ironstorm Spearhead",
       "value": 20,
-      "text": "dDEPTUS dSTdRTES model only. In your Command phase, select one dDEPTUS dSTdRTES VEHICLE within 6\" of the bearer. Until the start of your next Command phase, that VEHICLE is eligible to shoot even if it Fell Back or ddvanced this turn.",
+      "text": "ADEPTUS ASTARTES model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE within 6\" of the bearer. Until the start of your next Command phase, that VEHICLE is eligible to shoot even if it Fell Back or Advanced this turn.",
       "profile": null
     },
     {
       "id": "enhancement-target-augury-web",
-      "title": "Target dugury Web",
+      "title": "Target Augury Web",
       "detachment": "Ironstorm Spearhead",
       "value": 30,
-      "text": "TECHMdRINE model only. In your Command phase, select one dDEPTUS dSTdRTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that VEHICLE have the [Lethal Hits] ability.",
+      "text": "TECHMARINE model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that VEHICLE have the [Lethal Hits] ability.",
       "profile": null
     },
     {
@@ -2817,7 +2006,7 @@
       "title": "The Flesh is Weak",
       "detachment": "Ironstorm Spearhead",
       "value": 20,
-      "text": "ddeptus dstartes model only. The bearer has the Feel No Pain 4+ ability.",
+      "text": "Adeptus Astartes model only. The bearer has the Feel No Pain 4+ ability.",
       "profile": null
     },
     {
@@ -2825,7 +2014,7 @@
       "title": "Celerity",
       "detachment": "Librarius Conclave",
       "value": 35,
-      "text": "dDEPTUS dSTdRTES PSYKER model only.\n\n\n▪ When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge.\n\n\n▪ When this unit is selected to make a fall-back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge.",
+      "text": "ADEPTUS ASTARTES PSYKER model only.\n\n\n▪ When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge.\n\n\n▪ When this unit is selected to make a fall-back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge.",
       "profile": null
     },
     {
@@ -2833,7 +2022,7 @@
       "title": "Fusillade",
       "detachment": "Librarius Conclave",
       "value": 25,
-      "text": "dDEPTUS dSTdRTES PSYKER model only. This unit’s ranged attacks have:\n\n\n▪ [LETHdL HITS].\n▪ If this unit has the Pyromancy Discipline ability, [SUSTdINED HITS 1].",
+      "text": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have:\n\n\n▪ [LETHAL HITS].\n▪ If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1].",
       "profile": null
     },
     {
@@ -2841,7 +2030,7 @@
       "title": "Obfuscation",
       "detachment": "Librarius Conclave",
       "value": 25,
-      "text": "dDEPTUS dSTdRTES PSYKER model only.\n\n\n▪ Enemy units cannot target this unit with snap shooting attacks.\n▪ If this unit has the Telepathy Discipline ability, this unit has -3\" detection range.",
+      "text": "ADEPTUS ASTARTES PSYKER model only.\n\n\n▪ Enemy units cannot target this unit with snap shooting attacks.\n▪ If this unit has the Telepathy Discipline ability, this unit has -3\" detection range.",
       "profile": null
     },
     {
@@ -2849,7 +2038,7 @@
       "title": "Prescience",
       "detachment": "Librarius Conclave",
       "value": 20,
-      "text": "dDEPTUS dSTdRTES PSYKER model only (excluding TERMINdTOR models). (Once per turn per unit) In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if\nthis unit is unengaged, this unit can make a normal move of: \n\n\n▪ Up to D6\".\n▪ Or: If this unit has the Divination Discipline ability, up to 6\".",
+      "text": "ADEPTUS ASTARTES PSYKER model only (excluding TERMINATOR models). (Once per turn per unit) In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if\nthis unit is unengaged, this unit can make a normal move of: \n\n\n▪ Up to D6\".\n▪ Or: If this unit has the Divination Discipline ability, up to 6\".",
       "profile": null
     },
     {
@@ -2857,47 +2046,47 @@
       "title": "Temporal Corridor",
       "detachment": "Librarius Conclave",
       "value": 25,
-      "text": "dDEPTUS dSTdRTES PSYKER model only.\n▪ If this unit has the Telekinesis Discipline ability, this unit has Deep Strike.\n▪ dt the end of your opponent’s Fight phase, if this unit is unengaged, you can use this ability. If you do:\n ▫ Place this unit in strategic reserves.\n ▫ This unit can make an ingress move in your next Movement phase (including in your first turn)",
+      "text": "ADEPTUS ASTARTES PSYKER model only.\n▪ If this unit has the Telekinesis Discipline ability, this unit has Deep Strike.\n▪ At the end of your opponent’s Fight phase, if this unit is unengaged, you can use this ability. If you do:\n ▫ Place this unit in strategic reserves.\n ▫ This unit can make an ingress move in your next Movement phase (including in your first turn)",
       "profile": null
     },
     {
       "id": "enhancement-dedicated-gunship",
       "title": "Dedicated Gunship",
-      "detachment": "Orbital dssault Force",
+      "detachment": "Orbital Assault Force",
       "value": 15,
-      "text": "ddeptus dstartes Terminator model only. Once per battle, at the end of your opponent’s Fight\nphase, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer\ncan use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into\nStrategic Reserves.",
+      "text": "Adeptus Astartes Terminator model only. Once per battle, at the end of your opponent’s Fight\nphase, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer\ncan use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into\nStrategic Reserves.",
       "profile": null
     },
     {
       "id": "enhancement-laurels-of-thunder",
       "title": "Laurels of Thunder",
-      "detachment": "Orbital dssault Force",
+      "detachment": "Orbital Assault Force",
       "value": 15,
-      "text": "ddeptus dstartes model only. You can re-roll Charge rolls made for the bearer’s unit in a turn in which it was set up on the battlefield.",
+      "text": "Adeptus Astartes model only. You can re-roll Charge rolls made for the bearer’s unit in a turn in which it was set up on the battlefield.",
       "profile": null
     },
     {
       "id": "enhancement-orbital-uplink-reliquary",
       "title": "Orbital Uplink Reliquary",
-      "detachment": "Orbital dssault Force",
+      "detachment": "Orbital Assault Force",
       "value": 25,
-      "text": "ddeptus dstartes model only. dfter both players have deployed their armies, select up to three ddeptus dstartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
+      "text": "Adeptus Astartes model only. After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
       "profile": null
     },
     {
       "id": "enhancement-veteran-of-the-vanguard",
       "title": "Veteran of the Vanguard",
-      "detachment": "Orbital dssault Force",
+      "detachment": "Orbital Assault Force",
       "value": 20,
-      "text": "ddeptus dstartes model only. Models in the bearer’s unit have the Scouts 6\" ability",
+      "text": "Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability",
       "profile": null
     },
     {
       "id": "enhancement-avenging-avatar-aura",
-      "title": "dvenging dvatar (dura)",
+      "title": "Avenging Avatar (Aura)",
       "detachment": "Reclamation Force",
       "value": 10,
-      "text": "ddeptus dstartes model only. In the Battle-shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 9\" of the bearer, that enemy unit must take a Battle-shock test.",
+      "text": "Adeptus Astartes model only. In the Battle-shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 9\" of the bearer, that enemy unit must take a Battle-shock test.",
       "profile": null
     },
     {
@@ -2905,7 +2094,7 @@
       "title": "Liberatum",
       "detachment": "Reclamation Force",
       "value": 25,
-      "text": "ddeptus dstartes model only. Each time the bearer makes an attack that targets an enemy unit, if the\ntarget is within range of an objective marker, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+      "text": "Adeptus Astartes model only. Each time the bearer makes an attack that targets an enemy unit, if the\ntarget is within range of an objective marker, you can re-roll the Hit roll and you can re-roll the Wound roll.",
       "profile": null
     },
     {
@@ -2913,7 +2102,7 @@
       "title": "Scroll of Proclamation",
       "detachment": "Reclamation Force",
       "value": 15,
-      "text": "ddeptus dstartes model only. Each time the bearer’s unit declares a charge, if one or more targets of that charge are within range of an objective marker, you can re-roll the Charge roll.",
+      "text": "Adeptus Astartes model only. Each time the bearer’s unit declares a charge, if one or more targets of that charge are within range of an objective marker, you can re-roll the Charge roll.",
       "profile": null
     },
     {
@@ -2921,7 +2110,7 @@
       "title": "Seals of Reconquest",
       "detachment": "Reclamation Force",
       "value": 20,
-      "text": "ddeptus dstartes model only. Models in the bearer’s unit have a 5+ invulnerable save.",
+      "text": "Adeptus Astartes model only. Models in the bearer’s unit have a 5+ invulnerable save.",
       "profile": null
     },
     {
@@ -2929,7 +2118,7 @@
       "title": "Blackwing Shroud",
       "detachment": "Shadowmark Talon",
       "value": 25,
-      "text": "ddeptus dstartes Infantry model only. While the bearer is leading a unit, models in that unit have the\nInfiltrators ability.",
+      "text": "Adeptus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the\nInfiltrators ability.",
       "profile": null
     },
     {
@@ -2937,7 +2126,7 @@
       "title": "Coronal Susurrant",
       "detachment": "Shadowmark Talon",
       "value": 30,
-      "text": "Phobos model only. The bearer has the following ability:\n\n\nLord of Deceit (dura): Each time your opponent targets a unit from their army with a Stratagem, if that\nunit is within 12\" of this model, increase the cost of that usage of that Stratagem by 1CP.",
+      "text": "Phobos model only. The bearer has the following ability:\n\n\nLord of Deceit (Aura): Each time your opponent targets a unit from their army with a Stratagem, if that\nunit is within 12\" of this model, increase the cost of that usage of that Stratagem by 1CP.",
       "profile": null
     },
     {
@@ -2945,7 +2134,7 @@
       "title": "Hunter's Instincts",
       "detachment": "Shadowmark Talon",
       "value": 25,
-      "text": "ddeptus dstartes model only. In your Movement phase, if the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
+      "text": "Adeptus Astartes model only. In your Movement phase, if the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
       "profile": null
     },
     {
@@ -2953,7 +2142,7 @@
       "title": "Umbral Raptor",
       "detachment": "Shadowmark Talon",
       "value": 15,
-      "text": "ddeptus dstartes model only. The bearer has the Stealth and Lone Operative abilities.",
+      "text": "Adeptus Astartes model only. The bearer has the Stealth and Lone Operative abilities.",
       "profile": null
     },
     {
@@ -2961,7 +2150,7 @@
       "title": "Chogorian Huntmaster",
       "detachment": "Spearpoint Task Force",
       "value": 25,
-      "text": "ddeptus dstartes Mounted model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
+      "text": "Adeptus Astartes Mounted model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
       "profile": null
     },
     {
@@ -2969,7 +2158,7 @@
       "title": "Hunter's Eye",
       "detachment": "Spearpoint Task Force",
       "value": 20,
-      "text": "ddeptus dstartes model only. Ranged weapons equipped by models in the bearer’s unit have the\n[SUSTdINED HITS 1] and [IGNORES COVER] abilities.",
+      "text": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the\n[SUSTAINED HITS 1] and [IGNORES COVER] abilities.",
       "profile": null
     },
     {
@@ -2977,7 +2166,7 @@
       "title": "Spearpoint Paragon",
       "detachment": "Spearpoint Task Force",
       "value": 25,
-      "text": "ddeptus dstartes model only. Improve the Strength and drmour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and drmour Penetration characteristics of the bearer’s melee weapons by 2 instead.",
+      "text": "Adeptus Astartes model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead.",
       "profile": null
     },
     {
@@ -2985,7 +2174,7 @@
       "title": "Stormseer's Wisdom",
       "detachment": "Spearpoint Task Force",
       "value": 15,
-      "text": "ddeptus dstartes model only. While the bearer is leading a unit, you can re-roll ddvance rolls made for that unit.",
+      "text": "Adeptus Astartes model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit.",
       "profile": null
     },
     {
@@ -2993,7 +2182,7 @@
       "title": "Feinting Withdrawal",
       "detachment": "Stormlance Task Force",
       "value": 10,
-      "text": "ddeptus dstartes model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it fell back",
+      "text": "Adeptus Astartes model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it fell back",
       "profile": null
     },
     {
@@ -3001,7 +2190,7 @@
       "title": "Fury of the Storm",
       "detachment": "Stormlance Task Force",
       "value": 25,
-      "text": "ddeptus dstartes Mounted model only. Improve the Strength and drmour Penetration characteristics of the bearer's melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and drmour Penetration characteristics of the bearer's melee weapons by 2 instead.",
+      "text": "Adeptus Astartes Mounted model only. Improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 2 instead.",
       "profile": null
     },
     {
@@ -3009,7 +2198,7 @@
       "title": "Hunter's Instincts",
       "detachment": "Stormlance Task Force",
       "value": 25,
-      "text": "ddeptus dstartes Mounted model only. If the bearer's unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round as being one higher than it actually is",
+      "text": "Adeptus Astartes Mounted model only. If the bearer's unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round as being one higher than it actually is",
       "profile": null
     },
     {
@@ -3017,21 +2206,21 @@
       "title": "Portents of Wisdom",
       "detachment": "Stormlance Task Force",
       "value": 15,
-      "text": "ddeptus dstartes model only. While the bearer is leading a unit, you can re-roll ddvance rolls made for that unit.",
+      "text": "Adeptus Astartes model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit.",
       "profile": null
     },
     {
       "id": "enhancement-death-in-the-dark",
       "title": "Death in the Dark",
-      "detachment": "Subversion dssets",
+      "detachment": "Subversion Assets",
       "value": 15,
-      "text": "INFdNTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls.",
+      "text": "INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls.",
       "profile": null
     },
     {
       "id": "enhancement-shroud-field",
       "title": "Shroud Field",
-      "detachment": "Subversion dssets",
+      "detachment": "Subversion Assets",
       "value": 20,
       "text": "PHOBOS model only. This model has:\n\n\n▪ Lone Operative.\n▪ Stealth.",
       "profile": null
@@ -3049,7 +2238,7 @@
       "title": "Ghostweave Cloak",
       "detachment": "Vanguard Spearhead",
       "value": 15,
-      "text": "ddeptus dstartes model only. The bearer has the Stealth and Lone Operative dbilities",
+      "text": "Adeptus Astartes model only. The bearer has the Stealth and Lone Operative Abilities",
       "profile": null
     },
     {
@@ -3065,12 +2254,12 @@
       "title": "The Blade Driven Deep",
       "detachment": "Vanguard Spearhead",
       "value": 25,
-      "text": "ddpetus dstartes Infantry model only. While the bearer is leading a unit, models in that unit have the Infiltrators dbility",
+      "text": "Adeptus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
       "profile": null
     }
   ],
   "audit": {
-    "units": 159,
+    "units": 83,
     "enhancements": 85
   }
 }

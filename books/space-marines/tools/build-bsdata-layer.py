@@ -57,18 +57,16 @@ def build() -> tuple[dict, dict, dict]:
     with tempfile.TemporaryDirectory(prefix="space-marines-bsdata-", dir=ROOT / "sources") as temp:
         temp = Path(temp)
         snapshot, datasheets, points = extract(json.loads(json.dumps(config)), temp / "space-marines", "Imperium - Space Marines.json")
-        _, ultramarines, ultramarines_points = extract(json.loads(json.dumps(config)), temp / "ultramarines", "Imperium - Ultramarines.json")
 
-    datasheets["legends"] = [item for item in datasheets["legends"] if item["title"] != "Ferren Areios"]
-    extras = [item for item in ultramarines["legends"] if item["title"] in ULTRAMARINES_LEGENDS]
-    if {item["title"] for item in extras} != ULTRAMARINES_LEGENDS:
-        raise ValueError("Pinned Ultramarines catalogue does not contain all four official Legends supplements")
-    datasheets["legends"] = sorted(datasheets["legends"] + extras, key=lambda item: item["title"])
-    datasheets["audit"]["legends"] = len(datasheets["legends"])
+    codex_ids = {item["id"] for item in datasheets["datasheets"]}
+    datasheets["audit"]["excludedImperialArmour"] = len(datasheets["imperialArmour"])
+    datasheets["audit"]["excludedLegends"] = len(datasheets["legends"])
+    datasheets["imperialArmour"] = []
+    datasheets["legends"] = []
+    datasheets["audit"]["imperialArmour"] = 0
+    datasheets["audit"]["legends"] = 0
 
-    points["units"] = [item for item in points["units"] if item["title"] != "Ferren Areios"]
-    extra_points = [item for item in ultramarines_points["units"] if item["title"] in ULTRAMARINES_LEGENDS]
-    points["units"] = sorted(points["units"] + extra_points, key=lambda item: item["title"])
+    points["units"] = sorted((item for item in points["units"] if item["id"] in codex_ids), key=lambda item: item["title"])
     points["audit"]["units"] = len(points["units"])
     return snapshot, datasheets, points
 
@@ -81,10 +79,12 @@ def main() -> int:
     errors = []
     if len(datasheets["datasheets"]) != 83:
         errors.append("expected 83 codex datasheets")
-    if len(datasheets["imperialArmour"]) != 1:
-        errors.append("expected Thunderhawk Gunship as the sole current Imperial Armour datasheet")
-    if len(datasheets["legends"]) != 75:
-        errors.append(f"expected 75 official Legends datasheets, found {len(datasheets['legends'])}")
+    if datasheets["imperialArmour"]:
+        errors.append("expected no Imperial Armour datasheets in the Codex-native Preview inventory")
+    if datasheets["legends"]:
+        errors.append("expected no Legends datasheets in the Codex-native Preview inventory")
+    if len(points["units"]) != 83:
+        errors.append(f"expected points for 83 Codex datasheets, found {len(points['units'])}")
     if len(points["enhancements"]) != 85:
         errors.append(f"expected 85 enhancements across 22 detachments, found {len(points['enhancements'])}")
     if args.check:

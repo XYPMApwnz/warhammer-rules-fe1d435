@@ -51,7 +51,8 @@ const books=[
   {name:'Adeptus Mechanicus',unit:'unit-skitarii-rangers',desktop:'/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers',phone:'/books/adeptus-mechanicus/mobile/skitarii-rangers.html'},
   {name:'Tyranids',unit:'unit-hive-tyrant',desktop:'/books/tyranids/reader.html#unit-hive-tyrant',phone:'/books/tyranids/mobile/hive-tyrant.html'},
   {name:"T'au Empire",unit:'unit-breacher-team',desktop:'/books/tau-empire/reader.html#unit-breacher-team',phone:'/books/tau-empire/mobile/breacher-team.html'},
-  {name:"Emperor's Children",unit:'unit-lord-exultant',desktop:'/books/emperors-children/reader.html#unit-lord-exultant',phone:'/books/emperors-children/mobile/lord-exultant.html'}
+  {name:"Emperor's Children",unit:'unit-lord-exultant',desktop:'/books/emperors-children/reader.html#unit-lord-exultant',phone:'/books/emperors-children/mobile/lord-exultant.html'},
+  {name:'Space Marines',unit:'unit-assault-intercessor-squad',desktop:'/books/space-marines/reader.html#unit-assault-intercessor-squad',phone:'/books/space-marines/mobile/assault-intercessor-squad.html',related:false}
 ];
 
 async function openPhonePopup(page,name){
@@ -79,14 +80,16 @@ try{
       await unit.waitFor({state:'visible'});
       assert.ok((await unit.textContent()).trim().length>100,`${book.name} datasheet content is missing`);
 
-      const related=unit.locator('.related-rules-trigger').first();
-      await related.waitFor({state:'visible'});
-      await related.click();
-      const relatedLayer=page.locator('.related-rules-layer');
-      await relatedLayer.waitFor({state:'visible'});
-      assert.ok((await relatedLayer.textContent()).trim().length>20,`${book.name} Related Rules did not open`);
-      await page.locator('.related-rules-close').click();
-      await relatedLayer.waitFor({state:'hidden'});
+      if(book.related!==false){
+        const related=unit.locator('.related-rules-trigger').first();
+        await related.waitFor({state:'visible'});
+        await related.click();
+        const relatedLayer=page.locator('.related-rules-layer');
+        await relatedLayer.waitFor({state:'visible'});
+        assert.ok((await relatedLayer.textContent()).trim().length>20,`${book.name} Related Rules did not open`);
+        await page.locator('.related-rules-close').click();
+        await relatedLayer.waitFor({state:'hidden'});
+      }
 
       const switcher=page.locator('[data-view-switch]:visible').first();
       await Promise.all([
@@ -99,7 +102,7 @@ try{
       await openPhonePopup(page,book.name);
       assert.deepEqual(errors,[],`${book.name} emitted an uncaught runtime error`);
     }
-    console.log('PASS five Army Books open desktop content, Related Rules, Phone routes and glossary popups');
+    console.log('PASS six Army Books open desktop content, supported Related Rules, Phone routes and glossary popups');
   }finally{
     await bookContext.close();
   }
@@ -155,7 +158,7 @@ try{
     }
     await openPhonePopup(page,"T'au Empire offline");
     assert.deepEqual(errors,[],'Offline smoke emitted an uncaught runtime error');
-    console.log('PASS five visited Army Books remain usable after offline reload');
+    console.log('PASS six visited Army Books remain usable after offline reload');
   }finally{
     await offlineContext.close();
   }

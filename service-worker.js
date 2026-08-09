@@ -217,9 +217,14 @@ const APP_SHELL = [
   ,"./books/space-marines/"
   ,SPACE_MARINES_FALLBACK
   ,"./books/space-marines/mobile/index.html"
-  ,"./books/space-marines/styles/tokens.css?v=2"
+  ,"./books/space-marines/styles/tokens.css?v=3"
   ,"./books/space-marines/styles/book.css?v=2"
-  ,"./books/space-marines/scripts/app.js?v=2"
+  ,"./books/space-marines/scripts/data.js?v=2"
+  ,"./books/space-marines/scripts/app.js?v=4"
+  ,"./books/space-marines/mobile/mobile.css?v=1"
+  ,"./books/space-marines/mobile/mobile.js?v=1"
+  ,"./books/space-marines/mobile/phone-popup-controller.js?v=1"
+  ,"./books/space-marines/mobile/related-rules.inc?v=3"
   ,"./books/dark-angels/"
   ,DARK_ANGELS_FALLBACK
   ,"./books/dark-angels/mobile/index.html"

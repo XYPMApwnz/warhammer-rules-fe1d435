@@ -66,6 +66,9 @@ const blockedNamePatterns=(config.filters.excludeNamePatterns||[]).map(pattern=>
 const excludedNames=new Set((config.filters.excludeNames||[]).map(key));
 const excludedCategories=new Set((config.filters.excludePrimaryCategories||[]).map(key));
 const imperialArmourNames=new Set((config.filters.imperialArmourNames||[]).map(key));
+const weaponProfileTypes=new Set(['Ranged Weapons','Melee Weapons']);
+const isWeaponProfile=profile=>weaponProfileTypes.has(profile?.typeName);
+const ownsWeaponProfile=node=>(node.profiles||[]).some(isWeaponProfile)||[...(node.entryLinks||[]),...(node.infoLinks||[])].some(link=>link.type==='profile'&&isWeaponProfile(byId.get(link.targetId)));
 
 function graph(entry){
   const profiles=[];
@@ -74,23 +77,25 @@ function graph(entry){
   const ruleRecords=[];
   const nodes=[];
   const visited=new Set();
-  const walk=node=>{
+  const walk=(node,parentPath=[],parentWeaponBranch=false)=>{
     if(!node||typeof node!=='object'||visited.has(node.id))return;
     if(node!==entry&&blockedBranch.test(clean(node.name)))return;
     if(node.id)visited.add(node.id);
     nodes.push(node);
+    const sourcePath=[...parentPath,{type:node.type||'group',name:clean(node.name)}];
+    const weaponBranch=parentWeaponBranch||(node.type==='upgrade'&&ownsWeaponProfile(node));
     for(const profile of (node.profiles||[]).filter(profile=>profile.hidden!==true)){
       profiles.push(profile);
-      profileRecords.push({profile,ownerType:node.type||'group',ownerName:clean(node.name),sourceRole:sourceRoleById.get(profile.id)||''});
+      profileRecords.push({profile,ownerType:node.type||'group',ownerName:clean(node.name),sourceRole:sourceRoleById.get(profile.id)||'',sourceKind:weaponBranch?'weapon':'unit',sourcePath});
     }
-    for(const child of [...(node.selectionEntries||[]),...(node.selectionEntryGroups||[])])walk(child);
+    for(const child of [...(node.selectionEntries||[]),...(node.selectionEntryGroups||[])])walk(child,sourcePath,weaponBranch);
     for(const link of [...(node.entryLinks||[]),...(node.infoLinks||[])]){
       if(link.hidden===true)continue;
       const target=byId.get(link.targetId);
       if(!target)continue;
       if(link.type==='profile'||target.typeName){
         profiles.push(target);
-        profileRecords.push({profile:target,ownerType:node.type||'group',ownerName:clean(node.name),sourceRole:sourceRoleById.get(target.id)||''});
+        profileRecords.push({profile:target,ownerType:node.type||'group',ownerName:clean(node.name),sourceRole:sourceRoleById.get(target.id)||'',sourceKind:weaponBranch?'weapon':'unit',sourcePath});
       }
       else if(link.type==='rule'){
         const suffix=(link.modifiers||[]).filter(mod=>mod.type==='append'&&mod.field==='name').map(mod=>clean(mod.value)).join(' ');
@@ -99,8 +104,8 @@ function graph(entry){
           text:clean(target.description||target.characteristics?.find(item=>item.name==='Description')?.$text)
         };
         rules.push(rule);
-        ruleRecords.push({...rule,ownerType:node.type||'group',ownerName:clean(node.name),sourceRole:sourceRoleById.get(target.id)||''});
-      }else if(['selectionEntry','selectionEntryGroup'].includes(link.type))walk(target);
+        ruleRecords.push({...rule,ownerType:node.type||'group',ownerName:clean(node.name),sourceRole:sourceRoleById.get(target.id)||'',sourceKind:weaponBranch?'weapon':'unit',sourcePath});
+      }else if(['selectionEntry','selectionEntryGroup'].includes(link.type))walk(target,sourcePath,weaponBranch);
     }
   };
   walk(entry);
@@ -294,7 +299,8 @@ function parseDatasheet(link){
   const upgradeAbility=item=>separateWargear&&item.ownerType==='upgrade'&&key(item.ownerName)!==key(title);
   const linkedCoreAbility=item=>upgradeAbility(item)&&item.sourceRole==='game-system';
   const wargearAbility=item=>upgradeAbility(item)&&item.sourceRole!=='game-system'&&key(item.ownerName)===key(item.title);
-  const ordinaryAbility=item=>!linkedCoreAbility(item)&&!wargearAbility(item);
+  const weaponAbility=item=>item.sourceKind==='weapon';
+  const ordinaryAbility=item=>!linkedCoreAbility(item)&&!wargearAbility(item)&&!weaponAbility(item);
   const profileAbilities=abilityRecords.filter(ordinaryAbility);
   const ruleAbilities=ruleRecords.filter(ordinaryAbility);
   const wargearAbilities=allRecords.filter(wargearAbility);
@@ -317,8 +323,8 @@ function parseDatasheet(link){
     points:pointRows(entry,composition),
     profiles:unique(statProfiles,item=>`${item.name}:${JSON.stringify(item.stats)}`),
     weapons:unique(weapons,item=>JSON.stringify(item)),
-    abilities:allAbilities.map(({rawText,ownerType,ownerName,sourceRole,...ability})=>ability),
-    ...(separateWargear?{wargearAbilities:unique(wargearAbilities.filter(item=>item.title),item=>`${key(item.title)}:${item.text}`).map(({rawText,ownerType,ownerName,sourceRole,...ability})=>ability)}:{}),
+    abilities:allAbilities.map(({rawText,ownerType,ownerName,sourceRole,sourceKind,sourcePath,...ability})=>ability),
+    ...(separateWargear?{wargearAbilities:unique(wargearAbilities.filter(item=>item.title),item=>`${key(item.title)}:${item.text}`).map(({rawText,ownerType,ownerName,sourceRole,sourceKind,sourcePath,...ability})=>ability)}:{}),
     keywords:categories,
     composition,
     paidWargear:paidWargear(resolved.nodes),

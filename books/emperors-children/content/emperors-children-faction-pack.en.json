@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Emperor's Children Faction Pack",
-    "version": "1.0",
-    "legalFrom": "2026-06-20",
+    "version": "1.1",
+    "legalFrom": "2026-07-22",
     "pageCount": 10,
-    "sha256": "2B59FFF06A1E5F3164155D3CEEA0F773D565EAF85E6C5807B36B7D497D0307A3",
-    "file": "sources/emperors-children-faction-pack-v1.0.pdf"
+    "sha256": "1808FABB911F7A3E917AE5F2F12A6A7436ED97E1E5382238566DFD5E4540AA3C",
+    "file": "sources/emperors-children-faction-pack-v1.1.pdf"
   },
   "provenance": {
-    "sourceId": "emperors-children-faction-pack-v1.0",
+    "sourceId": "emperors-children-faction-pack-v1.1",
     "authority": "Games Workshop",
     "documentType": "faction-pack",
     "edition": "Warhammer 40,000 11th Edition",
@@ -17,24 +17,24 @@
   },
   "pages": {
     "1": {
-      "sha256": "B187776016245FF67AC4212B665F1AD528C8ECBB3D752CD5940485EB13D0B887",
-      "text": "EMPEROR'S CHILDREN\nFACTION PACK: VERSION 1.0\nLegal for matched play from 20th June 2026\nOn the following pages you will find additional rules and clarifications that supplement your Codex, from extra detachments and\ndatasheets to rules updates and FAQs. All of these changes are also updated in the Warhammer 40,000 app, along with points values\nfor your units and detachments.\nWHAT’S NEW? CONTENTS\nThis is the first iteration of this Faction Pack for this edition of Detachments .2\nWarhammer 40,000, combining some earlier updates with new Elegant Brutes .2\nrevisions designed to smooth the transition. As such, all of the following Frenzied Host .3\ncontent should be regarded as new, and individual changes are not Spectacle of Slaughter .4\nhighlighted. The next time this document is updated, this section will Court of the Phoenician .5\nsummarise what has been added or changed. Datasheets .7\nDefiler .7\nRules Updates .9"
+      "sha256": "D7A047A1DC8ACFE8B7934F5F631DD780DFB88F481D0257B1AC242FF49062A77F",
+      "text": "EMPEROR’S CHILDREN\nFACTION PACK: VERSION 1.1\nLegal for matched play from 22nd July 2026\nOn the following pages you will find additional rules and clarifications that supplement your Codex, from extra detachments and\ndatasheets to rules updates and FAQs. All of these changes are also updated in the Warhammer 40,000 app, along with points values\nfor your units and detachments.\nWHAT’S NEW? CONTENTS\n▪ Changes to Rules Updates. Detachments .2\n▪ 'Host' tag removed from Frenzied Host detachment. Elegant Brutes .2\n▪ Court of the Phoenician Detachment, Exalted Patron Enhancement Frenzied Host .3\nChange to: Spectacle of Slaughter .4\n'LORD EXULTANT model only. Add 1\" to the Move characteristic of the Court of the Phoenician .5\nbearer.' Datasheets .7\nDefiler .7\nRules Updates .9"
     },
     "2": {
       "sha256": "50A14E7B9F7726B512DD0FF50A281C8CF675E80BA3B0CF1D428DBFD0FBF51217",
       "text": "ELEGANT BRUTES\nSLAANESHI TERMINATORS BLEND MONSTROUS RESILIENCE WITH MARTIAL SKILL TO TERRIFYING EFFECT\nDETACHMENT RULES DELIGHT IN AGONY 1CP\nEAGER TO KILL ELEGANT BRUTES STRATAGEM\nSo well shielded by their armour are Emperor’s Children\nInfused with a ferocious need to exert their superiority before any\nTerminators that, when the foe’s attacks actually punch\nrival has the chance to outshine them, Chaos Terminators enter their through to wound them, the rarity of the sensation is an\ninvigorating tonic.\nchosen arena with a horrific dynamism.\nWHEN: Your opponent’s Shooting phase or the Fight phase, when an\nWhen a friendly EMPEROR’S CHILDREN TERMINATOR unit is set up, enemy unit targets a friendly EMPEROR’S CHILDREN TERMINATOR unit.\nthat unit has +1 to charge rolls until the end of the turn. TARGET: That EMPEROR’S CHILDREN TERMINATOR unit.\nEFFECT: Attacks that target your unit with a S greater than your unit’s\nT have -1 to wound rolls.\nENHANCEMENTS\nCACOPHONIC ACCOMPANIMENT PSYCHEDELIC SOULFLAME 1CP\nLike a parasite clinging to its host, this Lord Kakophonist’s mutated ELEGANT BRUTES STRATAGEM\narmour piggybacks on the teleport signals of Emperor’s Children The Terminators’ fervid need to annihilate ever more enemies\nmanifests as a lurid empyric firestorm which wreathes their\nTerminators, slingshotting him perilously through the Empyrean to\nblows and the projectiles spat from their guns.\nexplode onto the battlefield in a riot of discordant sonic fury.\nWHEN: Your Shooting phase or the Fight phase, when a friendly\nEMPEROR’S CHILDREN TERMINATOR unit is selected to attack.\nLORD KAKOPHONIST model only.\nTARGET: That EMPEROR’S CHILDREN TERMINATOR unit\n▪ This model has Deep Strike.\nEFFECT: Your unit’s attacks have +2 S.\n▪ This unit’s ranged attacks have [IGNORES COVER].\nFRENZIED FEROCITY UPGRADE\nEncumbered not at all despite the massive bulk of their armour, WARP PLUNGE 1CP\nthese Terminators’ mutant muscle and warp‑tainted reactions\nELEGANT BRUTES STRATAGEM\nallow them to indulge in every aspect of attacking the foe to\nwild excess. Addicted to the supreme danger of teleportation, these\nTerminators employ twisted warp sorcery to plunge into the\nimmaterium time and again.\nEMPEROR’S CHILDREN TERMINATOR SQUAD unit only. This unit’s attacks\nWHEN: End of your opponent’s Fight phase.\nhave [SUSTAINED HITS 1].\nTARGET: One friendly unengaged EMPEROR’S CHILDREN\nTERMINATOR unit.\nEFFECT: Place your unit in strategic reserves."
     },
     "3": {
-      "sha256": "4A5B8A9332227B8DCBD120DECA9BAC4A5442C2D098E228CCDACB462EF56E01EF",
-      "text": "UNIQUE: HOST\nFRENZIED HOST\nTORMENTORS AND INFRACTORS FORM THE HEART OF THIS WARBAND, DOING BATTLE WITH A HECTIC FRENZY\nDETACHMENT RULES POSSESSIVE MANIA 1CP\nFRANTIC FOCUS FRENZIED HOST STRATAGEM\nHaving seized some vital location or enthralling prize, these\nSeeming to be everywhere at once, bands of Infractors and\nSlaaneshi warriors experience a frenzied need to claim it that\nTormentors seek to embrace all the sensations the battlefield can renders them inured to the most grievous hurts.\noffer, never relenting for a moment. WHEN: Your opponent’s Shooting phase or the Fight phase, when an\nenemy unit targets a friendly EMPEROR’S CHILDREN BATTLELINE unit\nWhen a friendly EMPEROR’S CHILDREN BATTLELINE unit is selected within range of an objective.\nto make an advance/fall‑back move, that unit’s attacks have +1 S TARGET: That EMPEROR’S CHILDREN BATTLELINE unit.\nuntil the end of the turn. EFFECT: Attacks that target your unit have -1 AP until that enemy\nunit has attacked.\nThis detachment has the HOST tag and cannot be taken with\nanother HOST detachment.\nAGONISED CACOPHONY 1CP\nFRENZIED HOST STRATAGEM\nENHANCEMENTS Hurling vile semiorganic screamer grenades into the midst of\nthe foe, these warriors mark their presence not only by the\nEUPHORIC CROWN wails of their ordnance, but also by the agonised screams of\ntheir victims.\nThis champion of Slaanesh wears a helm that absorbs and amplifies\nWHEN: Start of your Shooting phase.\nthe frenzied carnival of carnage around them, driving the wearer\nTARGET: One friendly EMPEROR’S CHILDREN BATTLELINE unit.\ninto a frenzy of euphoric might.\nEFFECT: Select one visible enemy unit within 12\" of your unit. That\nenemy unit has +6\" detection range.\nLORD EXULTANT model only. This model’s melee attacks have +1 S.\nHOWLING PLATE\nABSOLUTE SENSORY OVERLOAD 1CP\nMutant vox‑emitters open like mouths all across this warrior’s\nFRENZIED HOST STRATAGEM\ngrotesque armour, vomiting targeted sonic shock waves that\nFar from hiding from the foe, these warriors unleash such an\nenhance his allies’ already furious firepower.\nunbearable barrage of blinding light and deafening sound that\nthose who try to take aim at them are temporarily deafened\nand blinded.\nLORD EXULTANT model only. This unit’s ranged attacks have +1 AP.\nWHEN: Your Shooting phase, when a friendly EMPEROR’S CHILDREN\nBATTLELINE unit is selected to shoot.\nTARGET: That EMPEROR’S CHILDREN BATTLELINE unit.\nEFFECT: Those ranged attacks do not prevent your unit from\nbeing hidden."
+      "sha256": "FAE0DD847248712AF0317038102A4FCAE4EF66163C31EA687D112504FD35F153",
+      "text": "FRENZIED HOST\nTORMENTORS AND INFRACTORS FORM THE HEART OF THIS WARBAND, DOING BATTLE WITH A HECTIC FRENZY\nDETACHMENT RULES POSSESSIVE MANIA 1CP\nFRANTIC FOCUS FRENZIED HOST STRATAGEM\nHaving seized some vital location or enthralling prize, these\nSeeming to be everywhere at once, bands of Infractors and\nSlaaneshi warriors experience a frenzied need to claim it that\nTormentors seek to embrace all the sensations the battlefield can renders them inured to the most grievous hurts.\noffer, never relenting for a moment. WHEN: Your opponent’s Shooting phase or the Fight phase, when an\nenemy unit targets a friendly EMPEROR’S CHILDREN BATTLELINE unit\nWhen a friendly EMPEROR’S CHILDREN BATTLELINE unit is selected within range of an objective.\nto make an advance/fall‑back move, that unit’s attacks have +1 S TARGET: That EMPEROR’S CHILDREN BATTLELINE unit.\nuntil the end of the turn. EFFECT: Attacks that target your unit have -1 AP until that enemy\nunit has attacked.\nThis detachment has the HOST tag and cannot be taken with\nanother HOST detachment.\nAGONISED CACOPHONY 1CP\nFRENZIED HOST STRATAGEM\nENHANCEMENTS Hurling vile semiorganic screamer grenades into the midst of\nthe foe, these warriors mark their presence not only by the\nEUPHORIC CROWN wails of their ordnance, but also by the agonised screams of\ntheir victims.\nThis champion of Slaanesh wears a helm that absorbs and amplifies\nWHEN: Start of your Shooting phase.\nthe frenzied carnival of carnage around them, driving the wearer\nTARGET: One friendly EMPEROR’S CHILDREN BATTLELINE unit.\ninto a frenzy of euphoric might.\nEFFECT: Select one visible enemy unit within 12\" of your unit. That\nenemy unit has +6\" detection range.\nLORD EXULTANT model only. This model’s melee attacks have +1 S.\nHOWLING PLATE\nABSOLUTE SENSORY OVERLOAD 1CP\nMutant vox‑emitters open like mouths all across this warrior’s\nFRENZIED HOST STRATAGEM\ngrotesque armour, vomiting targeted sonic shock waves that\nFar from hiding from the foe, these warriors unleash such an\nenhance his allies’ already furious firepower.\nunbearable barrage of blinding light and deafening sound that\nthose who try to take aim at them are temporarily deafened\nand blinded.\nLORD EXULTANT model only. This unit’s ranged attacks have +1 AP.\nWHEN: Your Shooting phase, when a friendly EMPEROR’S CHILDREN\nBATTLELINE unit is selected to shoot.\nTARGET: That EMPEROR’S CHILDREN BATTLELINE unit.\nEFFECT: Those ranged attacks do not prevent your unit from\nbeing hidden."
     },
     "4": {
       "sha256": "508399FDEBA535B8659D634DFD830A8195421DDA5DF8900C1DAE96459AD2D42C",
       "text": "SPECTACLE OF SLAUGHTER\nALL EYES FALL ON THE FLAWLESS BLADES AS THEY TURN THE BATTLEFIELD INTO A GLADIATORIAL STAGE\nDETACHMENT RULES HONOUR IS FOR FOOLS 1CP\nENTITLED TO VICTORY SPECTACLE OF SLAUGHTER STRATAGEM\nFar from facing enemy champions in fair duels one‑on‑one, the\nSo certain are the Flawless Blades in their arrogant pre‑eminence,\nFlawless Blades fall upon them like a pack of jackals competing\nso sure they have already won before the first blow is struck, that viciously to claim the glory of the kill.\nthey are filled with swift assurance that no foe can match. WHEN: Fight phase, when a friendly FLAWLESS BLADES unit is\nselected to fight.\nFriendly FLAWLESS BLADES units have Fights First. TARGET: That FLAWLESS BLADES unit.\nEFFECT: Your unit’s melee attacks have [PRECISION].\nENHANCEMENTS\nSINGLE-MINDED STRIKE 1CP\nEAGER PATRONS UPGRADE\nSPECTACLE OF SLAUGHTER STRATAGEM\nThe daemonic audience drawn by the deeds of these Flawless\nScornfully dismissing the chaff that blocks their path, the\nBlades is impatient for the spectacle to begin, and so bestows Flawless Blades swat them aside and sweep regally on toward\nsupernatural celerity upon those they consider the star performers. their true quarry.\nWHEN: Your Charge phase, when a friendly FLAWLESS BLADES unit\nFLAWLESS BLADES unit only. This unit has +2\" M. starts a charge move.\nTARGET: That FLAWLESS BLADES unit.\nBEGUILING GROTESQUERIE UPGRADE\nEFFECT: Your unit can move through models (excluding\nUnable to tear their gaze from the hypnotically hideous features of MONSTER/VEHICLE models).\nthe Flawless Blades, foes stare slack‑jawed in horrified fascination\nas their death stalks elegantly toward them.\nINTOXICATED BY TRIUMPH 1CP\nFLAWLESS BLADES unit only. Enemy units cannot target this unit SPECTACLE OF SLAUGHTER STRATAGEM\nwith snap shooting attacks. Seeing their foes fleeing in terror before them only fires the\nchem‑laced blood of the Flawless Blades, urging them on toward\ntheir next challenge all the quicker.\nWHEN: Your opponent’s Movement phase, when an enemy unit that\nwas engaged with a friendly FLAWLESS BLADES unit ends a fall‑back\nmove, if that FLAWLESS BLADES unit is unengaged.\nTARGET: That FLAWLESS BLADES unit.\nEFFECT: Your unit can make a normal move of up to D3+3\"."
     },
     "5": {
-      "sha256": "7491A33676BA5AAC29D5B029DC54B99CE75C238B35DA288A2BAC1ED0994570DF",
-      "text": "COURT OF THE\nPHOENICIAN\nMany are the Emperor’s Children that seek to join their daemonic gene-sire in his excessive\nspectacles of sublime artistry. Such warbands often style themselves as Fulgrim’s Court, a\nmocking reflection of the circles of patronised champions he once favoured with his intoxicating\npresence. These over-stimulated warriors lose themselves in hedonistic battle, aiming to commit\nexquisite acts of martial prowess to prove themselves worthy of the Daemon Primarch’s fleeting\napprobation and bask in the adulation they know is theirs by right.\nDETACHMENT RULE\nENHANCEMENTS\nSENSATIONAL PERFORMANCE TEARS OF THE PHOENIX\nThe craving for fresh experience and The addictive substance in these droplets is said to\nthe obsession with enacting ever more fracture consciousness – and sanity – to the point where\nexcessive destruction drives these warriors the imbiber perceives every strike and parries their\nto displays of sudden and obscene violence. opponents’ attempts.\nEmperor’s Children units from your Emperor’s Children model only. Each time a model\narmy have the following ability: in the bearer’s unit makes a melee attack, you can\nignore any or all modifiers to that attack’s Weapon\nSensational Performance: Each time Skill characteristic and any or all modifiers to the Hit\nthis unit is selected to fight, if this unit roll and Wound roll.\nmade a Charge move this turn, it can\nEXALTED PATRON\nuse this ability. If it does, until the end of\nthe phase: This champion is a domineering martial lord, hungry\nfor the adulation and audience of his warband’s most\n■ This unit cannot target a unit it was self-centred blademasters.\nwithin Engagement Range of at the\nstart of the turn. Lord Exultant model only. Add 1\" to the Move\n■ This unit cannot target a unit that characteristic of the bearer.\nwas the target of another unit’s attack\nthis phase. In the Declare Battle Formations step, the bearer can\n■ Improve the Strength and Armour be attached to a Flawless Blades unit.\nPenetration characteristics of this unit’s\nSOULSTAIN MADE MANIFEST\nmelee weapons by 1.\nThe corruption of this warrior’s soul is so total that it\nMASTER OF THE PAGEANT\nbleeds outwards in a nimbus of nauseating eldritch\nFulgrim sees war as a theatrical act, his horror that repulses his enemies.\nwarriors and the enemy alike a mere\nchorus to his own egotistical performance Emperor’s Children model only. At the start of the\nof sinuous strategy. Fight phase, you can select one enemy unit within\nEngagement Range of the bearer; that unit must take\nOnce per battle round, when you target a Battle‑shock test, subtracting 1 from the result.\na Fulgrim unit from your army with the\nSPIRITSLIVER\nSinuous Breach or Prideful Superiority\nStratagem, you can reduce the CP cost of This slender hellforged blade appears to weave in and\nthat use of that Stratagem by 1CP. out of being. Its daemonic bearer wields it in flickering\narcs at supernatural speed, swift enough for its\nphantasmal edge to slice apart a victim’s soul before it is\nlost to the Warp.\nEmperor’s Children Daemon Prince model only. Add\n1 to the Strength and Attacks characteristics of the\n5\nbearer’s melee weapons."
+      "sha256": "11D1556EB94F173324C8171DB7E0F9590FB11314F464C9E54987899079AA915D",
+      "text": "COURT OF THE\nPHOENICIAN\nMany are the Emperor’s Children that seek to join their daemonic gene-sire in his excessive\nspectacles of sublime artistry. Such warbands often style themselves as Fulgrim’s Court, a\nmocking reflection of the circles of patronised champions he once favoured with his intoxicating\npresence. These over-stimulated warriors lose themselves in hedonistic battle, aiming to commit\nexquisite acts of martial prowess to prove themselves worthy of the Daemon Primarch’s fleeting\napprobation and bask in the adulation they know is theirs by right.\nDETACHMENT RULE\nENHANCEMENTS\nSENSATIONAL PERFORMANCE TEARS OF THE PHOENIX\nThe craving for fresh experience and The addictive substance in these droplets is said to\nthe obsession with enacting ever more fracture consciousness – and sanity – to the point where\nexcessive destruction drives these warriors the imbiber perceives every strike and parries their\nto displays of sudden and obscene violence. opponents’ attempts.\nEmperor’s Children units from your Emperor’s Children model only. Each time a model\narmy have the following ability: in the bearer’s unit makes a melee attack, you can\nignore any or all modifiers to that attack’s Weapon\nSensational Performance: Each time Skill characteristic and any or all modifiers to the Hit\nthis unit is selected to fight, if this unit roll and Wound roll.\nmade a Charge move this turn, it can\nEXALTED PATRON\nuse this ability. If it does, until the end of\nthe phase: This champion is a domineering martial lord, hungry\nfor the adulation and audience of his warband’s most\n■ This unit cannot target a unit it was self-centred blademasters.\nwithin Engagement Range of at the\nstart of the turn. Lord Exultant model only. Add 1\" to the Move\n■ This unit cannot target a unit that characteristic of the bearer.\nwas the target of another unit’s attack\nSOULSTAIN MADE MANIFEST\nthis phase.\n■ Improve the Strength and Armour The corruption of this warrior’s soul is so total that it\nPenetration characteristics of this unit’s bleeds outwards in a nimbus of nauseating eldritch\nmelee weapons by 1. horror that repulses his enemies.\nMASTER OF THE PAGEANT Emperor’s Children model only. At the start of the\nFulgrim sees war as a theatrical act, his Fight phase, you can select one enemy unit within\nwarriors and the enemy alike a mere Engagement Range of the bearer; that unit must take\nchorus to his own egotistical performance a Battle‑shock test, subtracting 1 from the result.\nof sinuous strategy.\nSPIRITSLIVER\nOnce per battle round, when you target This slender hellforged blade appears to weave in and\na Fulgrim unit from your army with the out of being. Its daemonic bearer wields it in flickering\nSinuous Breach or Prideful Superiority arcs at supernatural speed, swift enough for its\nStratagem, you can reduce the CP cost of phantasmal edge to slice apart a victim’s soul before it is\nthat use of that Stratagem by 1CP. lost to the Warp.\nEmperor’s Children Daemon Prince model only. Add\n1 to the Strength and Attacks characteristics of the\nbearer’s melee weapons.\n5"
     },
     "6": {
       "sha256": "CC295587A3211CAEFFFE46FC3307798063FDCACA7C5B816539261F60A9E4CC2F",
@@ -49,8 +49,8 @@
       "text": "DEFILER\nMonstrous bio-mechanical Daemon Engines, Defilers are\npossessed of an insuppressible thirst for souls and lust for lurid\nslaughter. They are relentless in their pursuit of gratification,\nobliterating targets in tempests of gunfire and wading into enemy\nformations to rip warriors to shreds with their clanking claws.\nWARGEAR OPTIONS DAMAGED: 1-6 WOUNDS REMAINING\n■ This model’s Hades battle cannon can be replaced with 1 ectoplasma destructor. While this model has 1-6 wounds remaining, each time this\n■ This model’s excruciator cannons can be replaced with 2 magma cutters. model makes an attack, subtract 1 from the Hit roll.\n■ This model’s heavy baleflamer can be replaced with one of the following:\n◦ 1 Hades lascannon UNIT COMPOSITION\n◦ 1 heavy reaper autocannon\n◦ 1 electroscourge (a model cannot be equipped with more than one electroscourge) ■ 1 Defiler\n■ This model’s heavy missile launcher can be replaced with one of the following: This model is equipped with: 1 Hades battle cannon;\n◦ 1 Hades lascannon 2 excruciator cannons; 1 heavy missile launcher; 1 heavy\n◦ 1 heavy reaper autocannon baleflamer; 1 shearing claws\n◦ 1 electroscourge (a model cannot be equipped with more than one electroscourge)\nFACTION KEYWORDS:\nKEYWORDS: Vehicle, Walker, Chaos, Slaanesh, Daemon, Defiler\nEmperor’s Children"
     },
     "9": {
-      "sha256": "F9A2BD040E34591D3BB4DAE681560A761073847A7676DBA4F3DE5FF3B3B40344",
-      "text": "EMPEROR’S CHILDREN\nRULES UPDATES\nThis section presents updates and clarifications to your faction’s rules, designed to improve the gaming experience for all players.\nChanges applied after the first iteration of this Faction Pack will be highlighted in red.\nUPDATES Refusal to be Outdone Stratagem\nChange to:\n‘WHEN: Your Charge phase, when a friendly EMPEROR’S CHILDREN\nCARNIVAL OF EXCESS DETACHMENT\nCHARACTER unit within 12\" of an engaged enemy unit declares a charge.\nEmpyric Suffusion Enhancement TARGET: That EMPEROR’S CHILDREN CHARACTER unit.\nChange to: 'EMPEROR’S CHILDREN model only. When you target this unit EFFECT:\nwith the Heroic Intervention stratagem, that use is -1 CP.' ▪ Your unit can re-roll charge rolls.\n▪ Your unit must end that charge move engaged with one or more of\nCOTERIE OF THE CONCEITED DETACHMENT\nthose enemy units.’\nArmour of Abhorrence Stratagem, Effect Section\nDATASHEETS\nChange to:\nEffect: ‘Until the attacking unit has finished making its attacks, each Chaos Spawn, Scuttling Horrors Ability\ntime an attack targets your unit, worsen the Armour Penetration Change to:\ncharacteristic of that attack by 1.’ 'In your opponent's Movement phase, if an enemy unit ends a move\nwithin 8” of this unit, if this unit is not within Engagement Range of one\nMERCURIAL HOST DETACHMENT\nor more enemy units, this unit can make a Normal move of up to 6”.'\nDark Vigour Stratagem, Target Section\nChange 9\" to 8\". Chaos Terminators, Lethal Obsession Ability\nChange to:\nPEERLESS BLADESMEN DETACHMENT\n'In your Shooting phase, after this unit has shot, you can use this ability.\nFaultless Opportunist Enhancement If you do, select one enemy unit hit by those ranged attacks. Until the\nChange to: end of the turn, when this unit declares a charge:\n'You can target this unit with the Heroic Intervention stratagem, ▪ This unit can re-roll that charge roll.\nregardless of any other uses of that stratagem this phase. If you do: ▪ This unit must end that charge moveengaged with that enemy unit.\n▪ That use is -1 CP.\n▪ That use does not prevent any uses of that stratagem on other units Flawless Blades, Melee Weapons, Blissblade\nthis phase.' Change A to '4'.\nRAPID EVISCERATION DETACHMENT\nFulgrim\nOn to the Next Stratagem, When and Target Sections Add the following ability:\nChange to: ‘Serpentine: Each time this model makes a Normal, Advance or Fall\n‘WHEN: End of the Fight phase. TARGET: One EMPEROR’S CHILDREN unit Back move, it can move over sections of terrain features that are 4\" or\nfrom your army that destroyed an enemy unit this phase, and one less in height.’\nfriendly TRANSPORT it is able to embark within.\nHeldrake\nMechanised Murder Detachment Rule ▪ Profile: Change M to 12\", Sv to '3+' and OC to '-'.\nChange to: ▪ Keywords: Remove 'AIRCRAFT'.\n‘Each time an EMPEROR’S CHILDREN model from your army makes an\nattack, if it is a TRANSPORT model or disembarked from a TRANSPORT this Infractors, Melee Weapons, Power Sword\nturn, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.’ Change Strength characteristic to ‘5’.\nSLAANESH’S CHOSEN DETACHMENT\nTormentors, Melee Weapons, Power Sword\nVengeful Surge Stratagem, Effect Section Change Strength characteristic to ‘5’.\nChange to:\n'Your unit can make a surge move of up to D6\". If your unit is not your Chaos Land Raider and Chaos Rhino – Keywords Section\narmy's Favoured Champions, you can re-roll the dice to determine the Add 'FRAME'.\ndistance of that surge move.'"
+      "sha256": "F45189A9371E47FA66F42A9F4A49702B461D4DF9CEC16D484D4B15C9CC6F80C9",
+      "text": "EMPEROR’S CHILDREN\nRULES UPDATES\nThis section presents updates and clarifications to your faction’s rules, designed to improve the gaming experience for all players.\nChanges applied after the first iteration of this Faction Pack will be highlighted in red.\nUPDATES Refusal to be Outdone Stratagem\nChange to:\n‘WHEN: Your Charge phase, when a friendly EMPEROR’S CHILDREN\nCARNIVAL OF EXCESS DETACHMENT\nCHARACTER unit within 12\" of an engaged enemy unit declares a charge.\nEmpyric Suffusion Enhancement TARGET: That EMPEROR’S CHILDREN CHARACTER unit.\nChange to: 'EMPEROR’S CHILDREN model only. When you target this unit EFFECT:\nwith the Heroic Intervention stratagem, that use is -1 CP.' ▪ Your unit can re-roll charge rolls.\n▪ Your unit must end that charge move engaged with one or more of\nDark Apparitions Stratagem, Effect Section those enemy units.’\nChange 9\" to 8\".\nDATASHEETS\nCOTERIE OF THE CONCEITED DETACHMENT\nChaos Spawn, Scuttling Horrors Ability\nArmour of Abhorrence Stratagem, Effect Section Change to:\nChange to: 'In your opponent's Movement phase, if an enemy unit ends a move\nEffect: ‘Until the attacking unit has finished making its attacks, each within 8” of this unit, if this unit is not within Engagement Range of one\ntime an attack targets your unit, worsen the Armour Penetration or more enemy units, this unit can make a Normal move of up to 6”.'\ncharacteristic of that attack by 1.’\nChaos Terminators, Lethal Obsession Ability\nMERCURIAL HOST DETACHMENT\nChange to:\nDark Vigour Stratagem, Target Section 'In your Shooting phase, after this unit has shot, you can use this ability.\nChange 9\" to 8\". If you do, select one enemy unit hit by those ranged attacks. Until the\nend of the turn, when this unit declares a charge:\nPEERLESS BLADESMEN DETACHMENT\n▪ This unit can re-roll that charge roll.\nFaultless Opportunist Enhancement ▪ This unit must end that charge move engaged with that enemy unit.\nChange to:\n'You can target this unit with the Heroic Intervention stratagem, Flawless Blades, Melee Weapons, Blissblade\nregardless of any other uses of that stratagem this phase. If you do: Change A to '4'.\n▪ That use is -1 CP.\n▪ That use does not prevent any uses of that stratagem on other units Fulgrim, Keywords Section\nthis phase.' Add 'MOBILE'.\nRAPID EVISCERATION DETACHMENT\nHeldrake\nOn to the Next Stratagem, When and Target Sections ▪ Profile: Change M to 12\", Sv to '3+' and OC to '-'.\nChange to: ▪ Keywords: Remove 'AIRCRAFT'.\n‘WHEN: End of the Fight phase. TARGET: One EMPEROR’S CHILDREN unit\nfrom your army that destroyed an enemy unit this phase, and one Infractors, Melee Weapons, Power Sword\nfriendly TRANSPORT it is able to embark within. Change Strength characteristic to ‘5’.\nMechanised Murder Detachment Rule Tormentors, Melee Weapons, Power Sword\nChange to: Change Strength characteristic to ‘5’.\n‘Each time an EMPEROR’S CHILDREN model from your army makes an\nattack, if it is a TRANSPORT model or disembarked from a TRANSPORT this Chaos Land Raider and Chaos Rhino – Keywords Section\nturn, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.’ Add 'FRAME'.\nSLAANESH’S CHOSEN DETACHMENT\nVengeful Surge Stratagem, Effect Section\nChange to:\n'Your unit can make a surge move of up to D6\". If your unit is not your\narmy's Favoured Champions, you can re-roll the dice to determine the\ndistance of that surge move.'"
     },
     "10": {
       "sha256": "E3FF96FE0784DFD50E5D9FA5655A158C171D39CE0BCEB1EAA3A3737A42487061",
@@ -65,7 +65,7 @@
         2
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           2
         ]
@@ -77,7 +77,7 @@
           2
         ],
         "provenance": {
-          "sourceId": "emperors-children-faction-pack-v1.0",
+          "sourceId": "emperors-children-faction-pack-v1.1",
           "sourcePages": [
             2
           ]
@@ -92,7 +92,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               2
             ]
@@ -107,7 +107,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               2
             ]
@@ -126,7 +126,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               2
             ]
@@ -146,7 +146,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               2
             ]
@@ -166,7 +166,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               2
             ]
@@ -180,26 +180,24 @@
     {
       "id": "frenzied-host",
       "title": "Frenzied Host",
-      "tags": [
-        "Unique: Host"
-      ],
+      "tags": [],
       "sourcePages": [
         3
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           3
         ]
       },
       "rule": {
         "title": "Frantic Focus",
-        "text": "When a friendly EMPEROR’S CHILDREN BATTLELINE unit is selected to make an advance/fall-back move, that unit’s attacks have +1 S until the end of the turn. This detachment has the HOST tag and cannot be taken with another HOST detachment.",
+        "text": "When a friendly EMPEROR’S CHILDREN BATTLELINE unit is selected to make an advance/fall-back move, that unit’s attacks have +1 S until the end of the turn.",
         "sourcePages": [
           3
         ],
         "provenance": {
-          "sourceId": "emperors-children-faction-pack-v1.0",
+          "sourceId": "emperors-children-faction-pack-v1.1",
           "sourcePages": [
             3
           ]
@@ -214,7 +212,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               3
             ]
@@ -228,7 +226,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               3
             ]
@@ -247,7 +245,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               3
             ]
@@ -267,7 +265,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               3
             ]
@@ -287,7 +285,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               3
             ]
@@ -305,7 +303,7 @@
         4
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           4
         ]
@@ -317,7 +315,7 @@
           4
         ],
         "provenance": {
-          "sourceId": "emperors-children-faction-pack-v1.0",
+          "sourceId": "emperors-children-faction-pack-v1.1",
           "sourcePages": [
             4
           ]
@@ -333,7 +331,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               4
             ]
@@ -348,7 +346,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               4
             ]
@@ -367,7 +365,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               4
             ]
@@ -387,7 +385,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               4
             ]
@@ -407,7 +405,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               4
             ]
@@ -426,7 +424,7 @@
         6
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           5,
           6
@@ -443,7 +441,7 @@
               5
             ],
             "provenance": {
-              "sourceId": "emperors-children-faction-pack-v1.0",
+              "sourceId": "emperors-children-faction-pack-v1.1",
               "sourcePages": [
                 5
               ]
@@ -454,7 +452,7 @@
           5
         ],
         "provenance": {
-          "sourceId": "emperors-children-faction-pack-v1.0",
+          "sourceId": "emperors-children-faction-pack-v1.1",
           "sourcePages": [
             5
           ]
@@ -469,7 +467,7 @@
             5
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               5
             ]
@@ -478,12 +476,12 @@
         {
           "id": "exalted-patron",
           "title": "Exalted Patron",
-          "text": "LORD EXULTANT model only. Add 1\" to the Move characteristic of the bearer. In the Declare Battle Formations step, the bearer can be attached to a FLAWLESS BLADES unit.",
+          "text": "LORD EXULTANT model only. Add 1\" to the Move characteristic of the bearer.",
           "sourcePages": [
             5
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               5
             ]
@@ -497,7 +495,7 @@
             5
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               5
             ]
@@ -511,7 +509,7 @@
             5
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               5
             ]
@@ -530,7 +528,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -550,7 +548,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -570,7 +568,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -590,7 +588,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -610,7 +608,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -630,7 +628,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "emperors-children-faction-pack-v1.0",
+            "sourceId": "emperors-children-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -652,7 +650,7 @@
           8
         ],
         "provenance": {
-          "sourceId": "emperors-children-faction-pack-v1.0",
+          "sourceId": "emperors-children-faction-pack-v1.1",
           "sourcePages": [
             7,
             8
@@ -673,7 +671,7 @@
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -688,7 +686,7 @@
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -703,7 +701,7 @@
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -718,7 +716,7 @@
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -733,7 +731,7 @@
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -748,7 +746,7 @@
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -763,7 +761,7 @@
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -778,7 +776,7 @@
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -793,7 +791,7 @@
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -808,7 +806,7 @@
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -823,22 +821,22 @@
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
       }
     },
     {
-      "id": "fulgrim-serpentine",
+      "id": "fulgrim-mobile",
       "section": "Datasheets",
-      "subject": "Fulgrim",
-      "change": "Add the following ability: Serpentine: Each time this model makes a Normal, Advance or Fall Back move, it can move over sections of terrain features that are 4\" or less in height.",
+      "subject": "Fulgrim, Keywords Section",
+      "change": "Add 'MOBILE'.",
       "sourcePages": [
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -853,7 +851,7 @@
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -868,7 +866,7 @@
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -883,7 +881,7 @@
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -898,7 +896,7 @@
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -913,7 +911,7 @@
         9
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -929,7 +927,7 @@
         10
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           10
         ]
@@ -943,7 +941,7 @@
         10
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           10
         ]
@@ -957,7 +955,7 @@
         10
       ],
       "provenance": {
-        "sourceId": "emperors-children-faction-pack-v1.0",
+        "sourceId": "emperors-children-faction-pack-v1.1",
         "sourcePages": [
           10
         ]

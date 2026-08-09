@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "verifiedAt": "2026-07-28",
+  "verifiedAt": "2026-08-09",
   "layers": [
     {
       "id": "faction-pack-v1.0",
@@ -12,6 +12,19 @@
       "localFile": "space-marines-faction-pack-v1.0.pdf"
     },
     {
+      "id": "faction-pack-v1.1",
+      "authority": "official",
+      "role": "current-11e-overlay",
+      "title": "Space Marines Faction Pack v1.1",
+      "version": "1.1",
+      "retrievedAt": "2026-08-09",
+      "frozenAt": "2026-08-09",
+      "url": "https://assets.warhammer-community.com/eng_22-10_warhammer40000_faction_pack_space_marines-erhpiaprwa-ouizg2mmn9.pdf",
+      "localFile": "space-marines-faction-pack-v1.1.pdf",
+      "sha256": "0047AB9448EC438B07E1B04F81FE96546FB81C69732F5B6CA10F4CC29C2164DC",
+      "coverage": "6 Detachments, 7 current Space Marines datasheets, 2 Imperial Armour datasheets, updates and FAQ"
+    },
+    {
       "id": "codex-transcription",
       "authority": "community",
       "role": "codex-structure",
@@ -19,21 +32,57 @@
       "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
       "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Imperium%20-%20Space%20Marines.json",
       "localFile": "bsdata-space-marines-11e.json",
-      "supplementalCatalogue": "Imperium - Ultramarines.json (four official Ultramarines Legends datasheets only)",
-      "status": "requires-codex-verification"
+      "status": "requires-codex-verification",
+      "supplementalCatalogues": [
+        "Imperium - Imperial Fists.json",
+        "Imperium - Iron Hands.json",
+        "Imperium - Raven Guard.json",
+        "Imperium - Salamanders.json",
+        "Imperium - Ultramarines.json",
+        "Imperium - White Scars.json"
+      ],
+      "coverage": "101 current Space Marines-owned non-Legends/non-Imperial Armour datasheets",
+      "sha256": "391701EED6DD9621DE031D02DD84BE4587902BFFF18E5388DBB8DC61A1C4C9C6"
     },
     {
-      "id": "mfm",
+      "id": "mfm-v1.2",
       "authority": "official",
       "role": "points-and-roster-contract",
-      "title": "Munitorum Field Manual",
-      "updated": "2026-07-22",
+      "title": "Munitorum Field Manual v1.2",
       "url": "https://mfm.warhammer-community.com/en/space-marines",
-      "status": "snapshot-required"
+      "version": "1.2",
+      "verifiedAt": "2026-08-09",
+      "retrievedAt": "2026-08-09",
+      "frozenAt": "2026-08-09",
+      "localFile": "official-mfm-v1.2.json",
+      "localPath": "books/space-marines/sources/official-mfm-v1.2.json",
+      "sha256": "B4028D4AACE8E0E326A2D7676AF1D8F5262DF9221D4F6E0F958246D4C2B57E7E",
+      "coverage": {
+        "publishedUnits": 103,
+        "localUnits": 101,
+        "enhancements": 87,
+        "detachments": 23
+      },
+      "knownGaps": [
+        "Rule text and unit structure are outside the MFM scope."
+      ]
+    },
+    {
+      "id": "vengeful-hosts-current",
+      "authority": "mixed",
+      "role": "current-detachment-overlay",
+      "title": "Vengeful Hosts current rules",
+      "retrievedAt": "2026-08-09",
+      "localFile": "../content/space-marines-current-overlay.en.json",
+      "officialUrl": "https://www.warhammer-community.com/en-gb/articles/qbmycfzj/the-siege-of-death-mire-ends-who-won/",
+      "secondaryDetailUrl": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+      "knownGaps": [
+        "The official article confirms Imperator Unleashed; exact Enhancement and Stratagem wording remains secondary parity evidence."
+      ]
     }
   ],
   "gates": {
     "publishAsComplete": false,
-    "reason": "Faction Pack v1.0 supplements the Codex. Codex text and the current MFM snapshot must be verified before this book can be labelled complete."
+    "reason": "Current Faction Pack and MFM evidence are frozen. Codex rule-bearing text and some Vengeful Hosts detail remain pinned community/secondary transcriptions."
   }
 }

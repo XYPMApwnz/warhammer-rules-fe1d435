@@ -158,7 +158,7 @@
     "snapshot": "bsdata-tau-empire-11e.json",
     "datasheets": "../content/tau-empire-codex-datasheets.en.json",
     "points": "../content/tau-empire-points.en.json",
-    "officialPoints": "official-mfm-v1.1.json"
+    "officialPoints": "official-mfm-v1.2.json"
   },
   "filters": {
     "excludeNames": [

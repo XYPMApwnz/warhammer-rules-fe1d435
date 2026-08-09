@@ -161,7 +161,8 @@
   document.querySelectorAll(".content-group.detachment").forEach((section) => {
     if (!detachmentIds.has(section.id)) section.remove();
   });
-  const usesPactOfDecay = [...document.querySelectorAll('#pact-of-decay-datasheets .unit-card')].some((card) => selected.has(card.id));
+  const pactUnitIds = new Set(['unit-beasts-of-nurgle','unit-great-unclean-one','unit-nurglings','unit-plague-drones','unit-plaguebearers','unit-rotigus']);
+  const usesPactOfDecay = [...selected.keys()].some((id) => pactUnitIds.has(id));
   if (!usesPactOfDecay) {
     document.querySelector('#pact-of-decay')?.remove();
     document.querySelector('[data-nav-id="pact-of-decay"]')?.remove();

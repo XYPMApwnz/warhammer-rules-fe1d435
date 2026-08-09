@@ -69,8 +69,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tervigon",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -101,8 +100,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tervigon",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -133,8 +131,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tervigon",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -161,8 +158,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-hyperadapted-raveners",
           "unit-parasite-of-mortrex",
           "unit-tyranid-prime-with-lash-whip",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -297,8 +293,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tervigon",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -329,8 +324,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tervigon",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -361,8 +355,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tervigon",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -393,8 +386,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tervigon",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -426,7 +418,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
           "unit-winged-tyranid-prime",
-          "unit-malanthrope",
           "unit-trygon"
         ],
         "noneKeywords": [
@@ -462,7 +453,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
           "unit-winged-tyranid-prime",
-          "unit-malanthrope",
           "unit-trygon"
         ],
         "noneKeywords": [
@@ -579,8 +569,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tervigon",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -610,8 +599,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tervigon",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -641,8 +629,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tervigon",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -723,8 +710,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tervigon",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -755,8 +741,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tervigon",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -787,8 +772,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tervigon",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -819,8 +803,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tervigon",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -878,8 +861,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tervigon",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"
@@ -910,8 +892,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
           "unit-tervigon",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-hive-tyrant",
-          "unit-winged-tyranid-prime",
-          "unit-malanthrope"
+          "unit-winged-tyranid-prime"
         ],
         "noneKeywords": [
           "EPIC HERO"

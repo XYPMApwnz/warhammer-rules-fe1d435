@@ -1,15 +1,19 @@
 {
   "schema": 1,
-  "verifiedAt": "2026-08-08",
+  "verifiedAt": "2026-08-09",
   "layers": [
     {
-      "id": "faction-pack-v1.0",
+      "id": "faction-pack-v1.1",
       "authority": "official",
       "role": "11e-overlay",
-      "title": "Emperor's Children Faction Pack v1.0",
-      "legalFrom": "2026-06-20",
-      "url": "https://assets.warhammer-community.com/eng_10-06_warhammer40000_faction_pack_emperor_s_children-fffbpc3gn0-mesp5k6khu.pdf",
-      "localFile": "emperors-children-faction-pack-v1.0.pdf"
+      "title": "Emperor's Children Faction Pack v1.1",
+      "legalFrom": "2026-07-22",
+      "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40%2C000_faction_pack_emperor_s_children-srspmclqtm-i8ey7hgk2s.pdf",
+      "localFile": "emperors-children-faction-pack-v1.1.pdf",
+      "version": "1.1",
+      "retrievedAt": "2026-08-09",
+      "frozenAt": "2026-08-09",
+      "sha256": "1808FABB911F7A3E917AE5F2F12A6A7436ED97E1E5382238566DFD5E4540AA3C"
     },
     {
       "id": "codex-transcription",
@@ -22,19 +26,33 @@
       "status": "requires-codex-verification"
     },
     {
-      "id": "mfm",
+      "id": "mfm-v1.2",
       "authority": "official",
       "role": "points-and-roster-contract",
-      "title": "Munitorum Field Manual",
-      "updated": "2026-07-22",
+      "title": "Munitorum Field Manual v1.2",
       "url": "https://mfm.warhammer-community.com/en/emperors-children",
-      "status": "snapshot-required"
+      "version": "1.2",
+      "verifiedAt": "2026-08-09",
+      "retrievedAt": "2026-08-09",
+      "frozenAt": "2026-08-09",
+      "localFile": "official-mfm-v1.2.json",
+      "localPath": "books/emperors-children/sources/official-mfm-v1.2.json",
+      "sha256": "755B875CBAC000904B2A9C30853F9E1707FF5FB7F9ECFE4740FEB66F704823D2",
+      "coverage": {
+        "publishedUnits": 23,
+        "localUnits": 18,
+        "enhancements": 34,
+        "detachments": 10
+      },
+      "knownGaps": [
+        "Rule text and unit structure are outside the MFM scope."
+      ]
     },
     {
       "id": "codex-parity",
       "authority": "secondary",
       "role": "codex-rule-parity",
-      "title": "Wahapedia Warhammer 40,000 11th Edition ? Emperor?s Children",
+      "title": "Wahapedia Warhammer 40,000 11th Edition · Emperor’s Children",
       "version": "1.1",
       "retrievedAt": "2026-08-08",
       "url": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/",
@@ -44,6 +62,6 @@
   ],
   "gates": {
     "publishAsComplete": false,
-    "reason": "The functional reference includes complete 11e Codex rules from a fixed secondary parity source. Publication remains gated until an authoritative official Codex source and current MFM snapshot are frozen."
+    "reason": "Current Faction Pack v1.1 and MFM v1.2 are frozen official evidence. Codex rule-bearing text remains a fixed secondary parity source, so publication remains gated."
   }
 }

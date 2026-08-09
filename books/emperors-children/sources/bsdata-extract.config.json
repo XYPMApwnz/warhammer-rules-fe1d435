@@ -10,6 +10,19 @@
     "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
     "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Chaos%20-%20Emperor%27s%20Children.json"
   },
+  "unitCorrections": {
+    "Defiler": {
+      "addAbilities": [
+        {
+          "title": "Damaged: 1-6 Wounds Remaining",
+          "text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      ],
+      "weaponNames": {
+        "Magma cutter": "Magma cutters"
+      }
+    }
+  },
   "inputs": [
     {
       "role": "faction",
@@ -31,7 +44,8 @@
   "outputs": {
     "snapshot": "bsdata-emperors-children-11e.json",
     "datasheets": "../content/emperors-children-codex-datasheets.en.json",
-    "points": "../content/emperors-children-points.en.json"
+    "points": "../content/emperors-children-points.en.json",
+    "officialPoints": "official-mfm-v1.2.json"
   },
   "transforms": {
     "stripCompositionCountPrefixes": true

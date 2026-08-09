@@ -5,7 +5,7 @@
     "authority": "secondary",
     "edition": "11",
     "version": "1.1",
-    "title": "Wahapedia Warhammer 40,000 11th Edition ? Emperor?s Children",
+    "title": "Wahapedia Warhammer 40,000 11th Edition · Emperor’s Children",
     "url": "https://wahapedia.ru/wh40k11ed/factions/emperor-s-children/",
     "retrievedAt": "2026-08-08"
   },
@@ -66,7 +66,7 @@
           "effect": "Until the end of the phase, melee weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability.",
           "canonicalType": "battle-tactic",
           "typeStatus": "confirmed",
-          "sourceLabel": "Mercurial Host ? Battle Tactic Stratagem"
+          "sourceLabel": "Mercurial Host · Battle Tactic Stratagem"
         },
         {
           "id": "stratagem-combat-stimms",
@@ -78,7 +78,7 @@
           "effect": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Wound roll.",
           "canonicalType": "battle-tactic",
           "typeStatus": "confirmed",
-          "sourceLabel": "Mercurial Host ? Battle Tactic Stratagem"
+          "sourceLabel": "Mercurial Host · Battle Tactic Stratagem"
         },
         {
           "id": "stratagem-honour-the-prince",
@@ -90,7 +90,7 @@
           "effect": "Until the end of the phase, if your unit Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit.",
           "canonicalType": "battle-tactic",
           "typeStatus": "confirmed",
-          "sourceLabel": "Mercurial Host ? Battle Tactic Stratagem"
+          "sourceLabel": "Mercurial Host · Battle Tactic Stratagem"
         },
         {
           "id": "stratagem-dark-vigour",
@@ -102,7 +102,7 @@
           "effect": "Your unit can make a Normal move of up to 6\".",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Mercurial Host ? Strategic Ploy Stratagem"
+          "sourceLabel": "Mercurial Host · Strategic Ploy Stratagem"
         },
         {
           "id": "stratagem-capricious-reactions",
@@ -114,7 +114,7 @@
           "effect": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
           "canonicalType": "battle-tactic",
           "typeStatus": "confirmed",
-          "sourceLabel": "Mercurial Host ? Battle Tactic Stratagem"
+          "sourceLabel": "Mercurial Host · Battle Tactic Stratagem"
         },
         {
           "id": "stratagem-cruel-raiders",
@@ -126,7 +126,7 @@
           "effect": "Remove your unit from the battlefield and place it into Strategic Reserves.",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Mercurial Host ? Strategic Ploy Stratagem"
+          "sourceLabel": "Mercurial Host · Strategic Ploy Stratagem"
         }
       ]
     },
@@ -174,7 +174,7 @@
           "effect": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
           "canonicalType": "battle-tactic",
           "typeStatus": "confirmed",
-          "sourceLabel": "Peerless Bladesmen ? Battle Tactic Stratagem"
+          "sourceLabel": "Peerless Bladesmen · Battle Tactic Stratagem"
         },
         {
           "id": "stratagem-death-ecstasy",
@@ -186,7 +186,7 @@
           "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Peerless Bladesmen ? Strategic Ploy Stratagem"
+          "sourceLabel": "Peerless Bladesmen · Strategic Ploy Stratagem"
         },
         {
           "id": "stratagem-incessant-violence",
@@ -198,7 +198,7 @@
           "effect": "Until the end of the phase, each time a model in your unit makes a Consolidation move, it can move up to 6\" instead of up to 3\", provided your unit ends that Consolidation move within Engagement Range of one or more enemy units.",
           "canonicalType": "battle-tactic",
           "typeStatus": "confirmed",
-          "sourceLabel": "Peerless Bladesmen ? Battle Tactic Stratagem"
+          "sourceLabel": "Peerless Bladesmen · Battle Tactic Stratagem"
         },
         {
           "id": "stratagem-cruel-bladesman",
@@ -210,7 +210,7 @@
           "effect": "Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1.",
           "canonicalType": "battle-tactic",
           "typeStatus": "confirmed",
-          "sourceLabel": "Peerless Bladesmen ? Battle Tactic Stratagem"
+          "sourceLabel": "Peerless Bladesmen · Battle Tactic Stratagem"
         },
         {
           "id": "stratagem-terrifying-spectacle",
@@ -222,7 +222,7 @@
           "effect": "Each enemy unit within 6\" of your unit must take a Battle-shock test, subtracting 1 from that test if they are Below Half-strength. Enemy units affected by this Stratagem do not need to take any other Battle-shock tests in the same phase.",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Peerless Bladesmen ? Strategic Ploy Stratagem"
+          "sourceLabel": "Peerless Bladesmen · Strategic Ploy Stratagem"
         },
         {
           "id": "stratagem-cut-down-the-weak",
@@ -234,7 +234,7 @@
           "effect": "Your unit can declare a charge. When doing so, you must select that enemy unit as a target of that charge, and your unit does not receive a Charge bonus this turn.",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Peerless Bladesmen ? Strategic Ploy Stratagem"
+          "sourceLabel": "Peerless Bladesmen · Strategic Ploy Stratagem"
         }
       ]
     },
@@ -282,7 +282,7 @@
           "effect": "If your EMPEROR’S CHILDREN unit is wholly within 6\" of that TRANSPORT, it can embark within it.",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Rapid Evisceration ? Strategic Ploy Stratagem"
+          "sourceLabel": "Rapid Evisceration · Strategic Ploy Stratagem"
         },
         {
           "id": "stratagem-advance-and-claim",
@@ -294,7 +294,7 @@
           "effect": "Select one objective marker you control that your TRANSPORT is within range of. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Rapid Evisceration ? Strategic Ploy Stratagem"
+          "sourceLabel": "Rapid Evisceration · Strategic Ploy Stratagem"
         },
         {
           "id": "stratagem-dynamic-breakthrough",
@@ -306,7 +306,7 @@
           "effect": "Until the end of the phase, each time a model in your unit makes a move, it can move through enemy models (excluding MONSTERS and VEHICLES). When doing so, it can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
           "canonicalType": "epic-deed",
           "typeStatus": "confirmed",
-          "sourceLabel": "Rapid Evisceration ? Epic Deed Stratagem"
+          "sourceLabel": "Rapid Evisceration · Epic Deed Stratagem"
         },
         {
           "id": "stratagem-ceaseless-onslaught",
@@ -318,7 +318,7 @@
           "effect": "Until the end of the phase, your EMPEROR’S CHILDREN unit is eligible to declare a charge.",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Rapid Evisceration ? Strategic Ploy Stratagem"
+          "sourceLabel": "Rapid Evisceration · Strategic Ploy Stratagem"
         },
         {
           "id": "stratagem-reactive-disembarkation",
@@ -330,7 +330,7 @@
           "effect": "One EMPEROR’S CHILDREN unit embarked within your TRANSPORT can disembark. When doing so, models in that unit can be set up anywhere on the battlefield wholly within 6\" of that TRANSPORT and not within Engagement Range of one or more enemy units.",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Rapid Evisceration ? Strategic Ploy Stratagem"
+          "sourceLabel": "Rapid Evisceration · Strategic Ploy Stratagem"
         },
         {
           "id": "stratagem-outflanking-strike",
@@ -342,7 +342,7 @@
           "effect": "For each of those TRANSPORTS wholly within 9\" of one or more battlefield edges, remove it from the battlefield and place it into Strategic Reserves.",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Rapid Evisceration ? Strategic Ploy Stratagem"
+          "sourceLabel": "Rapid Evisceration · Strategic Ploy Stratagem"
         }
       ]
     },
@@ -390,7 +390,7 @@
           "effect": "Select one friendly LEGIONS OF EXCESS unit within 6\" of your unit. One model in that LEGIONS OF EXCESS unit recovers up to 3 lost wounds or, if it is a DAEMONETTES unit, return upto D3+3 destroyed models to it instead.",
           "canonicalType": "battle-tactic",
           "typeStatus": "confirmed",
-          "sourceLabel": "Carnival of Excess ? Battle Tactic Stratagem"
+          "sourceLabel": "Carnival of Excess · Battle Tactic Stratagem"
         },
         {
           "id": "stratagem-ecstatic-slaughter",
@@ -402,7 +402,7 @@
           "effect": "Your EMPEROR’S CHILDREN unit can declare a charge. If it does so and it has already been selected to fight this phase, it cannot fight again this phase.",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Carnival of Excess ? Strategic Ploy Stratagem"
+          "sourceLabel": "Carnival of Excess · Strategic Ploy Stratagem"
         },
         {
           "id": "stratagem-violent-crescendo",
@@ -414,7 +414,7 @@
           "effect": "Until the end of the phase, each time a model in your unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\". When doing so, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the closest enemy unit.",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Carnival of Excess ? Strategic Ploy Stratagem"
+          "sourceLabel": "Carnival of Excess · Strategic Ploy Stratagem"
         },
         {
           "id": "stratagem-sycophantic-surge",
@@ -426,7 +426,7 @@
           "effect": "Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced or Fell Back, provided at least one of the targets of that charge is within Engagement Range of one or more EMPEROR’S CHILDREN units from your army.",
           "canonicalType": "battle-tactic",
           "typeStatus": "confirmed",
-          "sourceLabel": "Carnival of Excess ? Battle Tactic Stratagem"
+          "sourceLabel": "Carnival of Excess · Battle Tactic Stratagem"
         },
         {
           "id": "stratagem-uncanny-reactions",
@@ -438,7 +438,7 @@
           "effect": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
           "canonicalType": "battle-tactic",
           "typeStatus": "confirmed",
-          "sourceLabel": "Carnival of Excess ? Battle Tactic Stratagem"
+          "sourceLabel": "Carnival of Excess · Battle Tactic Stratagem"
         },
         {
           "id": "stratagem-dark-apparitions",
@@ -450,7 +450,7 @@
           "effect": "Remove your unit from the battlefield and place it into Strategic Reserves. If it arrives back on the battlefield in the Reinforcements step of your next Movement phase using the Deep Strike ability, it can be set up anywhere that is more than 6\" horizontally away from all enemy units (instead of more than 8\"), provided it is also set up wholly within 8\" of one or more friendly EMPEROR’S CHILDREN units.",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Carnival of Excess ? Strategic Ploy Stratagem"
+          "sourceLabel": "Carnival of Excess · Strategic Ploy Stratagem"
         }
       ]
     },
@@ -498,7 +498,7 @@
           "effect": "Until the end of the phase, models in your unit have the Feel No Pain 6+ ability, and the Feel No Pain 4+ ability against mortal wounds.",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Coterie of the Conceited ? Strategic Ploy Stratagem"
+          "sourceLabel": "Coterie of the Conceited · Strategic Ploy Stratagem"
         },
         {
           "id": "stratagem-unshakeable-opponents",
@@ -510,7 +510,7 @@
           "effect": "Until the end of the turn, each time a model in your unit makes an attack, you can ignore any or all modifiers to the following: that attack’s Ballistic Skill or Weapon Skill characteristic; the Hit roll; the Wound roll.",
           "canonicalType": "epic-deed",
           "typeStatus": "confirmed",
-          "sourceLabel": "Coterie of the Conceited ? Epic Deed Stratagem"
+          "sourceLabel": "Coterie of the Conceited · Epic Deed Stratagem"
         },
         {
           "id": "stratagem-embrace-the-pain",
@@ -522,7 +522,7 @@
           "effect": "Until the end of the phase, each time an enemy model within Engagement Range of your unit selects targets, it must select your unit as the target of its attacks.",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Coterie of the Conceited ? Strategic Ploy Stratagem"
+          "sourceLabel": "Coterie of the Conceited · Strategic Ploy Stratagem"
         },
         {
           "id": "stratagem-martial-perfection",
@@ -534,7 +534,7 @@
           "effect": "Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll.",
           "canonicalType": "battle-tactic",
           "typeStatus": "confirmed",
-          "sourceLabel": "Coterie of the Conceited ? Battle Tactic Stratagem"
+          "sourceLabel": "Coterie of the Conceited · Battle Tactic Stratagem"
         },
         {
           "id": "stratagem-unbound-arrogance",
@@ -547,7 +547,7 @@
           "restrictions": "You can only use this Stratagem once per battle round.",
           "canonicalType": "epic-deed",
           "typeStatus": "confirmed",
-          "sourceLabel": "Coterie of the Conceited ? Epic Deed Stratagem"
+          "sourceLabel": "Coterie of the Conceited · Epic Deed Stratagem"
         },
         {
           "id": "stratagem-armour-of-abhorrence",
@@ -556,10 +556,10 @@
           "category": "Wargear",
           "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
           "target": "One EMPEROR’S CHILDREN unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-          "effect": "Until the attacking unit has finished making its attacks, each time an attack targets a model in your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
           "canonicalType": "wargear",
           "typeStatus": "confirmed",
-          "sourceLabel": "Coterie of the Conceited ? Wargear Stratagem"
+          "sourceLabel": "Coterie of the Conceited · Wargear Stratagem"
         }
       ]
     },
@@ -607,7 +607,7 @@
           "effect": "Select one enemy unit. Until the end of the phase, melee weapons equipped by models in those CHARACTER units have the [SUSTAINED HITS 1] ability while targeting that enemy unit.",
           "canonicalType": "battle-tactic",
           "typeStatus": "confirmed",
-          "sourceLabel": "Slaanesh's Chosen ? Battle Tactic Stratagem"
+          "sourceLabel": "Slaanesh's Chosen · Battle Tactic Stratagem"
         },
         {
           "id": "stratagem-beautiful-death",
@@ -619,7 +619,7 @@
           "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if your unit is your army’s Favoured Champions. On a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Slaanesh's Chosen ? Strategic Ploy Stratagem"
+          "sourceLabel": "Slaanesh's Chosen · Strategic Ploy Stratagem"
         },
         {
           "id": "stratagem-heightened-jealousy",
@@ -631,7 +631,7 @@
           "effect": "Until the end of the phase, each time a model in an EMPEROR’S CHILDREN CHARACTER unit from your army that is not your army’s Favoured Champions makes an attack, add 1 to the Strength characteristic of that attack.",
           "canonicalType": "battle-tactic",
           "typeStatus": "confirmed",
-          "sourceLabel": "Slaanesh's Chosen ? Battle Tactic Stratagem"
+          "sourceLabel": "Slaanesh's Chosen · Battle Tactic Stratagem"
         },
         {
           "id": "stratagem-diabolic-majesty",
@@ -644,7 +644,7 @@
           "restrictions": "You can only use this Stratagem once per battle round.",
           "canonicalType": "epic-deed",
           "typeStatus": "confirmed",
-          "sourceLabel": "Slaanesh's Chosen ? Epic Deed Stratagem"
+          "sourceLabel": "Slaanesh's Chosen · Epic Deed Stratagem"
         },
         {
           "id": "stratagem-refusal-to-be-outdone",
@@ -656,7 +656,7 @@
           "effect": "Your unit can re-roll charge rolls. Your unit must end that charge move engaged with one or more of those enemy units.",
           "canonicalType": "battle-tactic",
           "typeStatus": "confirmed",
-          "sourceLabel": "Slaanesh's Chosen ? Battle Tactic Stratagem"
+          "sourceLabel": "Slaanesh's Chosen · Battle Tactic Stratagem"
         },
         {
           "id": "stratagem-vengeful-surge",
@@ -668,7 +668,7 @@
           "effect": "Your unit can make a surge move of up to D6\". If your unit is not your army’s Favoured Champions, you can re-roll the dice to determine the distance of that surge move.",
           "canonicalType": "strategic-ploy",
           "typeStatus": "confirmed",
-          "sourceLabel": "Slaanesh's Chosen ? Strategic Ploy Stratagem"
+          "sourceLabel": "Slaanesh's Chosen · Strategic Ploy Stratagem"
         }
       ]
     }

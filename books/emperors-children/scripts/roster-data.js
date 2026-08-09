@@ -244,7 +244,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "exalted patron": {
     "title": "Exalted Patron",
-    "text": "LORD EXULTANT model only. Add 1\" to the Move characteristic of the bearer. In the Declare Battle Formations step, the bearer can be attached to a FLAWLESS BLADES unit.",
+    "text": "LORD EXULTANT model only. Add 1\" to the Move characteristic of the bearer.",
     "value": 15,
     "detachment": "Court of the Phoenician",
     "tags": [],
@@ -735,7 +735,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
     "title": "Eager to Prove",
     "text": "EMPEROR’S CHILDREN model only. You can re-roll Charge rolls made for the bearer’s unit. While the bearer’s unit is your army’s Favoured Champions , add 2\" to the Move characteristic of models in that unit.",
     "value": 15,
-    "detachment": "Slaanesh's Chosen",
+    "detachment": "SLAANESH’S CHOSEN",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -762,7 +762,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
     "title": "Repulsed by Weakness",
     "text": "EMPEROR’S CHILDREN model only. Each time an enemy unit (excluding MONSTERS and VEHICLES ) within Engagement Range of the bearer’s unit Falls Back , models in that enemy unit must take Desperate Escape tests . When doing so, if the bearer’s unit is your army’s Favoured Champions , subtract 1 from each of those Desperate Escape tests.",
     "value": 25,
-    "detachment": "Slaanesh's Chosen",
+    "detachment": "SLAANESH’S CHOSEN",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -789,7 +789,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
     "title": "Proud and Vainglorious",
     "text": "EMPEROR’S CHILDREN model only. You can re-roll Battle-shock and Leadership tests taken for the bearer’s unit. While the bearer’s unit is your army’s Favoured Champions , add 1 to the Objective Control characteristic of models in that unit.",
     "value": 20,
-    "detachment": "Slaanesh's Chosen",
+    "detachment": "SLAANESH’S CHOSEN",
     "tags": [],
     "owner": {
       "subject": "model",
@@ -816,7 +816,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
     "title": "Slayer of Champions",
     "text": "EMPEROR’S CHILDREN model only. The bearer’s melee weapons have the [PRECISION] ability, and each time the bearer makes a melee attack that targets a CHARACTER unit, improve the Strength and Armour Penetration characteristics of that attack by 1.",
     "value": 15,
-    "detachment": "Slaanesh's Chosen",
+    "detachment": "SLAANESH’S CHOSEN",
     "tags": [],
     "owner": {
       "subject": "model",

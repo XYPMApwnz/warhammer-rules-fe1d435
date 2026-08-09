@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "verifiedAt": "2026-07-30",
+  "verifiedAt": "2026-08-09",
   "layers": [
     {
       "id": "faction-pack-v1.1",
@@ -92,26 +92,28 @@
       ]
     },
     {
-      "id": "mfm",
+      "id": "mfm-v1.2",
       "authority": "official",
       "role": "points-and-roster-contract",
-      "title": "Munitorum Field Manual",
-      "updated": "2026-07-22",
+      "title": "Munitorum Field Manual v1.2",
       "url": "https://mfm.warhammer-community.com/en/tau-empire",
-      "version": "v1.1",
-      "verifiedAt": "2026-07-30",
-      "localFile": "official-mfm-v1.1.json",
-      "status": "verified-live-snapshot",
-      "retrievedAt": "2026-07-30",
-      "frozenAt": "2026-07-30",
+      "version": "1.2",
+      "verifiedAt": "2026-08-09",
+      "localFile": "official-mfm-v1.2.json",
+      "retrievedAt": "2026-08-09",
+      "frozenAt": "2026-08-09",
       "scope": [
         "43 current units",
         "23 Enhancements",
         "7 Detachments"
       ],
-      "coverage": "Official MFM v1.1 points and Detachment Points",
+      "coverage": {
+        "localUnits": 39,
+        "enhancements": 23,
+        "detachments": 7
+      },
       "knownGaps": [
-        "Legends points remain outside the official MFM layer."
+        "Rule text and unit structure are outside the MFM scope."
       ],
       "affectedRecords": [
         "unit points",
@@ -122,12 +124,13 @@
         "points data",
         "roster views"
       ],
-      "sha256": "CC1A1820070B72170D29DB936F6C93E41572EFCD5216E161C4AD0E5EB2406841"
+      "sha256": "237BDC1824FF14114CDE1E80CC5B1E30AACF459145DA5BABEFB311ECDECE8AED",
+      "localPath": "books/tau-empire/sources/official-mfm-v1.2.json"
     }
   ],
   "gates": {
     "publishAsComplete": false,
-    "reason": "Faction Pack v1.1 and MFM v1.1 are official. Codex text is still a pinned community transcription checked against Wahapedia, so the book remains a verification build."
+    "reason": "Faction Pack v1.1 and MFM v1.2 are official. Codex text remains a pinned community transcription checked against secondary parity evidence."
   },
   "bookId": "tau-empire",
   "edition": "11th Edition",

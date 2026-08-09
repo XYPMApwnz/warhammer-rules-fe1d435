@@ -399,7 +399,7 @@
         },
         {
           "title": "Leader",
-          "text": "This model can be attached to the following unit:\n- Genestealers"
+          "text": "This model can be attached to the following units: GENESTEALERS."
         },
         {
           "title": "Scouts 8\"",
@@ -530,7 +530,7 @@
         },
         {
           "title": "Leader",
-          "text": "This model can be attached to the following unit:\n- Tyrant Guard"
+          "text": "This model can be attached to the following units: TYRANT GUARD."
         },
         {
           "title": "Will of the Hive Mind",
@@ -587,7 +587,7 @@
       "id": "unit-hyperadapted-raveners",
       "title": "Hyperadapted Raveners",
       "status": "Current",
-      "sourceLayer": "codex",
+      "sourceLayer": "faction-pack",
       "category": "Characters",
       "points": [
         {
@@ -673,7 +673,7 @@
         },
         {
           "title": "Leader",
-          "text": "This unit can be attached to the following units: Raveners"
+          "text": "This model can be attached to the following units: RAVENERS."
         },
         {
           "title": "Shadow in the Warp",
@@ -697,7 +697,7 @@
         "Infantry",
         "Great Devourer",
         "Vanguard Invader",
-        "Burrower",
+        "Burrowers",
         "Hyperadapted Raveners",
         "Tyranids",
         "Character",
@@ -799,7 +799,7 @@
         },
         {
           "title": "Leader",
-          "text": "This model can be attached to the following units:\n- Neurogaunts \n- Tyrant Guard \n- Zoanthropes"
+          "text": "This model can be attached to the following units: NEUROGAUNTS, TYRANT GUARD, ZOANTHROPES."
         },
         {
           "title": "Shadow in the Warp",
@@ -1090,7 +1090,7 @@
       "id": "unit-tyranid-prime-with-lash-whip",
       "title": "Tyranid Prime with Lash Whip",
       "status": "Current",
-      "sourceLayer": "codex",
+      "sourceLayer": "faction-pack",
       "category": "Characters",
       "points": [
         {
@@ -1160,7 +1160,7 @@
         },
         {
           "title": "Leader",
-          "text": "This model can be attached to the following unit:\n- Hormagaunts \n- Termagants \n- Tyranid Warriors with Melee Bio-weapons \n- Tyranid Warriors with Ranged Bio-weapons"
+          "text": "This model can be attached to the following units: HORMAGAUNTS, TERMAGANTS, TYRANID WARRIORS WITH MELEE BIO-WEAPONS, TYRANID WARRIORS WITH RANGED BIO-WEAPONS."
         },
         {
           "title": "Synapse",
@@ -1401,7 +1401,7 @@
         },
         {
           "title": "Leader",
-          "text": "This model can be attached to the following units:\n- Gargoyles \n- Tyranid Warriors With Melee Bio-Weapons \n- Tyranid Warriors With Ranged Bio-Weapons"
+          "text": "This model can be attached to the following units: GARGOYLES, TYRANID WARRIORS WITH MELEE BIO-WEAPONS, TYRANID WARRIORS WITH RANGED BIO-WEAPONS."
         },
         {
           "title": "Deep Strike",
@@ -1725,7 +1725,7 @@
         },
         {
           "title": "Leader",
-          "text": "This model can be attached to the following unit:\n- Carnifexes"
+          "text": "This model can be attached to the following units: CARNIFEXES."
         },
         {
           "title": "Synapse",
@@ -1773,7 +1773,7 @@
       "id": "unit-the-red-terror",
       "title": "The Red Terror",
       "status": "Current",
-      "sourceLayer": "codex",
+      "sourceLayer": "faction-pack",
       "category": "Epic Heroes",
       "points": [
         {
@@ -1848,8 +1848,8 @@
         "Epic Hero",
         "Monster",
         "The Red Terror",
-        "Burrower",
-        "Mobile"
+        "Mobile",
+        "Burrower"
       ],
       "composition": [
         {
@@ -1936,7 +1936,7 @@
         },
         {
           "title": "Leader",
-          "text": "This model can be attached to the following unit:\n- Tyrant Guard"
+          "text": "This model can be attached to the following units: TYRANT GUARD."
         },
         {
           "title": "Deadly Demise D3",
@@ -2863,7 +2863,7 @@
         "Great Devourer",
         "Raveners",
         "Vanguard Invader",
-        "Burrower"
+        "Burrowers"
       ],
       "composition": [
         {

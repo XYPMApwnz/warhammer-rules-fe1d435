@@ -113,7 +113,7 @@ for(const keyword of new Set(legends.units.flatMap(unit=>unit.keywords).filter(v
   const summary=existingRuntime[id]?.summary||`${keyword} keyword.`;
   book.glossary.push({id,title:keyword,group:'Keywords',kind:'keyword',showGlossary:false,short:summary,full:summary});
 }
-book.audit.datasheets=book.sections.filter(section=>section.kind==='unit').length;
+book.audit.datasheets=book.sections.filter(section=>section.kind==='unit'&&section.local!==false).length;
 book.audit.glossary=book.glossary.length;
 writeJson(bookFile,book);
 
@@ -173,7 +173,7 @@ function replaceOrInsert(html,tag,id,beforeId,replacement){
 }
 const nav=legends.units.length?`<li data-nav-id="${legends.group.id}" data-nav-depth="2"><div class="toc-row"><button class="toc-label" data-nav-target="${legends.group.id}">${legends.group.title}</button><button class="toc-toggle" data-nav-toggle aria-label="Toggle ${legends.group.title}" aria-expanded="false"></button></div><ul class="toc-branch" hidden>${legends.units.map(unit=>`<li data-nav-id="${unit.id}" data-nav-depth="3"><div class="toc-row no-toggle"><button class="toc-label" data-nav-target="${unit.id}">${escapeHtml(unit.title)}</button></div></li>`).join('')}</ul></li>`:'';
 const content=legends.units.length?`<section class="content-group" id="${legends.group.id}" data-track="${legends.group.id}"><h3 class="category-title">${legends.group.title}</h3><div class="content-block"><p>${escapeHtml(legends.group.description)}</p></div>${legends.units.map(renderUnit).join('\n')}</section>`:'';
-const unitSections=book.sections.filter(section=>section.kind==='unit');
+const unitSections=book.sections.filter(section=>section.kind==='unit'&&section.local!==false);
 const keywordsOf=unit=>{
   const text=(unit.subsections||[]).find(section=>section.title==='Keywords')?.blocks?.map(block=>block.text||'').join(' ')||'';
   const intrinsic=(text.match(/Keywords:\s*(.*?)\.\s*Faction Keywords:/i)?.[1]||'').split(/[,;]/).map(value=>value.trim()).filter(Boolean);
@@ -198,11 +198,29 @@ let reader=fs.readFileSync(readerFile,'utf8');
 reader=reader.replace(/rule-facts\.js\?v=\d+/,'rule-facts.js?v=4');
 reader=reader.replace(/points-validator\.js\?v=\d+/,'points-validator.js?v=4');
 reader=reader.replace(/scripts\/app\.js\?v=\d+/,'scripts/app.js?v=43');
+reader=reader.replace(/scripts\/roster-filter\.js\?v=\d+/,'scripts/roster-filter.js?v=18');
 reader=reader.replace(/\sdata-eligibility="[^"]*"/g,'');
 reader=replaceOrInsert(reader,'li',legends.group.id,'pact-of-decay-datasheets',nav);
 reader=replaceOrInsert(reader,'section',legends.group.id,'pact-of-decay-datasheets',content);
 reader=replaceOrInsert(reader,'section','core-stratagems','detachments',renderCoreStratagemSection());
-reader=reader.replace(/<p class="lead">\d+ current Death Guard and Pact of Decay datasheets\.<\/p>/,`<p class="lead">${book.audit.datasheets} current Death Guard, Legends and Pact of Decay datasheets.</p>`);
+const dependencyIds=['unit-beasts-of-nurgle','unit-great-unclean-one','unit-nurglings','unit-plague-drones','unit-plaguebearers','unit-rotigus'];
+for(const id of dependencyIds)for(const tag of ['li','article']){const range=elementRange(reader,tag,id);if(range)reader=reader.slice(0,range[0])+reader.slice(range[1]);}
+for(const tag of ['li','section']){const range=elementRange(reader,tag,'pact-of-decay-datasheets');if(range)reader=reader.slice(0,range[0])+reader.slice(range[1]);}
+const moveWargearAbility=(unitSlug,abilityId)=>{
+  const abilityRange=elementRange(reader,'article',abilityId);if(!abilityRange)throw new Error(`Missing ${abilityId}`);
+  const ability=reader.slice(abilityRange[0],abilityRange[1]);
+  const sectionId=`${unitSlug}-wargear-abilities`,existing=elementRange(reader,'section',sectionId);
+  if(existing)reader=reader.slice(0,existing[0])+reader.slice(existing[1]);
+  else reader=reader.slice(0,abilityRange[0])+reader.slice(abilityRange[1]);
+  const composition=elementRange(reader,'section',`${unitSlug}-composition`);if(!composition)throw new Error(`Missing ${unitSlug} composition`);
+  const section=`<section class="unit-part" id="${sectionId}"><h4>Wargear Abilities</h4><p class="unit-note">These abilities apply only while the corresponding wargear is equipped.</p><div class="ability-list">${ability}</div></section>`;
+  reader=reader.slice(0,composition[0])+section+reader.slice(composition[0]);
+  const tab=`<button class="local-tab" data-journey-target="${sectionId}" data-journey-type="datasheet">Wargear Abilities</button>`;
+  if(!reader.includes(tab)){const marker=`<button class="local-tab" data-journey-target="${unitSlug}-wargear-options"`;reader=reader.replace(marker,tab+marker);}
+};
+moveWargearAbility('plague-marines','plague-marines-ability-icon-of-despair-aura');
+moveWargearAbility('deathshroud-terminators','deathshroud-terminators-ability-icon-of-despair-aura');
+reader=reader.replace(/<p class="lead">\d+ current Death Guard[^<]*datasheets\.<\/p>/,`<p class="lead">${book.audit.datasheets} current Death Guard datasheets.</p>`);
 reader=reader.replace(/9 detachments [^<]* \d+ datasheets [^<]* \d+ glossary entries/,`9 detachments · ${book.audit.datasheets} datasheets · ${book.glossary.length} glossary entries`);
 for(const unit of unitSections){
   const opener=new RegExp(`(<article\\b[^>]*\\bclass="[^"]*\\bunit-card\\b[^"]*"[^>]*\\bid="${unit.id}"[^>]*)(>)`,'i');

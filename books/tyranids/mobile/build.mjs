@@ -7,7 +7,7 @@ const glossaryContext=JSON.parse(await readFile(new URL('../../../glossary/conte
 const pointEnhancements=JSON.parse(await readFile(new URL('../content/tyranids-points.en.json',import.meta.url),'utf8')).enhancements;
 const factionPack=JSON.parse(await readFile(new URL('../content/tyranids-faction-pack.en.json',import.meta.url),'utf8'));
 const codexParity=JSON.parse(await readFile(new URL('../content/tyranids-codex-parity.en.json',import.meta.url),'utf8'));
-const titleKey=value=>value.replace(/\s*\(Aura\)$/i,'').replace(/\s+/g,' ').trim().toLowerCase();
+const titleKey=value=>value.replace(/\s*\((?:Aura|Upgrade)\)$/i,'').replace(/\s+/g,' ').trim().toLowerCase();
 const enhancementTitles=new Map(pointEnhancements.map(item=>[titleKey(item.title),item.title]));
 const coreStratagems=await readFile(new URL('../../death-guard/mobile/related-rules.inc',import.meta.url),'utf8').then(html=>html.slice(html.indexOf('<section class="related-detachment related-core"')));
 const mobileRulePaths=new Map();

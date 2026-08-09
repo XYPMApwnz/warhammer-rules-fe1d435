@@ -752,7 +752,7 @@
         },
         {
           "title": "Leader",
-          "text": "This model can be attached to the following units: Infractors; Tormentors"
+          "text": "This model can be attached to the following units: INFRACTORS, TORMENTORS."
         },
         {
           "title": "Leader",
@@ -860,7 +860,7 @@
       "abilities": [
         {
           "title": "Leader",
-          "text": "This model can be attached to the following units: Emperor's Children Terminator Squad; Noise Marines"
+          "text": "This model can be attached to the following units: CHAOS TERMINATORS, NOISE MARINES."
         },
         {
           "title": "Obsessive Annunciation",
@@ -986,7 +986,7 @@
       "abilities": [
         {
           "title": "Leader",
-          "text": "This model can be attached to the following units: Infractors; Noise Marines; Tormentors"
+          "text": "This model can be attached to the following units: INFRACTORS, NOISE MARINES, TORMENTORS."
         },
         {
           "title": "Warped Interference (Psychic)",
@@ -1361,7 +1361,7 @@
       "abilities": [
         {
           "title": "Leader",
-          "text": "This model can be attached to the following units:\n- Flawless Blades"
+          "text": "This model can be attached to the following units: FLAWLESS BLADES."
         },
         {
           "title": "Duellist’s Hubris",
@@ -2239,7 +2239,7 @@
           "abilities": ""
         },
         {
-          "name": "Magma cutter",
+          "name": "Magma cutters",
           "mode": "ranged",
           "range": "12\"",
           "a": "2",
@@ -2266,6 +2266,10 @@
         {
           "title": "Thrill Seekers",
           "text": "If your Army Faction is Emperor's Children, this unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back, but when doing so:\n- It cannot target a unit it was within Engagement Range of at the start of the turn\n- It cannot target a unit that was the target of another unit's charge or attack this phase."
+        },
+        {
+          "title": "Damaged: 1-6 Wounds Remaining",
+          "text": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
         }
       ],
       "wargearAbilities": [],

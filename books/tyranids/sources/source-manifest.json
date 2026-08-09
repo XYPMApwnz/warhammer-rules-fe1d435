@@ -3,7 +3,7 @@
   "bookId": "tyranids",
   "edition": "11th Edition",
   "language": "en",
-  "verifiedAt": "2026-07-29",
+  "verifiedAt": "2026-08-09",
   "precedence": [
     "official-current-update",
     "official-base-publication",
@@ -103,17 +103,17 @@
       "status": "requires-codex-verification"
     },
     {
-      "id": "mfm-v1.1",
-      "title": "Munitorum Field Manual v1.1",
+      "id": "mfm-v1.2",
+      "title": "Munitorum Field Manual v1.2",
       "edition": "11th Edition",
-      "version": "1.1",
+      "version": "1.2",
       "publicationDate": "2026-07-22",
       "effectiveDate": "2026-07-22",
-      "retrievedAt": "2026-07-29",
-      "frozenAt": "2026-07-29",
-      "localPath": "books/tyranids/sources/official-mfm-v1.1.json",
+      "retrievedAt": "2026-08-09",
+      "frozenAt": "2026-08-09",
+      "localPath": "books/tyranids/sources/official-mfm-v1.2.json",
       "url": "https://mfm.warhammer-community.com/en/tyranids",
-      "sha256": "C25AEEBFE8ED46CC47A0EA10BC791FEB9802048BC362C7CE2FB013BC76CA446E",
+      "sha256": "752E93B4F8BE245CF18A99E76F005DECB84C273635AC4567CEA5CE52F90A7818",
       "authority": "official",
       "role": "points-and-roster-contract",
       "scope": [
@@ -122,7 +122,8 @@
         "detachment-points"
       ],
       "coverage": {
-        "units": 57,
+        "units": 52,
+        "localUnits": 50,
         "enhancements": 34,
         "detachments": 10
       },
@@ -138,7 +139,9 @@
         "reader.html",
         "mobile/*.html",
         "roster-guides/points-data.js"
-      ]
+      ],
+      "verifiedAt": "2026-08-09",
+      "localFile": "official-mfm-v1.2.json"
     },
     {
       "id": "wahapedia-compatible-rules",
@@ -185,6 +188,6 @@
   ],
   "gates": {
     "publishAsComplete": false,
-    "reason": "Faction Pack v1.1 and MFM v1.1 are verified. Codex rule-bearing content remains a frozen community transcription and is explicitly identified as such."
+    "reason": "Faction Pack v1.1 and MFM v1.2 are verified. Codex rule-bearing content remains a frozen community transcription and is explicitly identified as such."
   }
 }

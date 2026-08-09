@@ -6,9 +6,54 @@
     "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
     "revision": "5",
     "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Imperium%20-%20Space%20Marines.json",
-    "snapshotSha256": "038B45543C99FB33466431AC363BB1D0186A98E7EA29E9FC83B7297D845D4D54"
+    "snapshotSha256": "D37086F5E65CAAF84EE8DDA92F148312E064B0F47CCF6DC43F196DDA9D67E691",
+    "officialMfm": {
+      "version": "v1.2",
+      "url": "https://mfm.warhammer-community.com/en/space-marines",
+      "verifiedAt": "2026-08-09"
+    }
   },
   "units": [
+    {
+      "id": "unit-adrax-agatone",
+      "title": "Adrax Agatone",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-aethon-shaan",
+      "title": "Aethon Shaan",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 100,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
     {
       "id": "unit-aggressor-squad",
       "title": "Aggressor Squad",
@@ -16,27 +61,42 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3 models",
+          "label": "1st to 2nd unit · 3 models",
           "value": 80,
           "minModels": 3,
-          "maxModels": 3
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 3 models",
-          "value": 90
-        },
-        {
-          "label": "4 models",
+          "label": "1st to 2nd unit · 6 models",
           "value": 165,
-          "minModels": 4,
-          "maxModels": 4
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 4 models",
-          "value": 175
+          "label": "3rd + unit · 3 models",
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 6 models",
+          "value": 175,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-ancient",
@@ -51,7 +111,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-ancient-in-terminator-armor",
@@ -81,7 +146,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-apothecary-biologis",
@@ -96,7 +166,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-assault-intercessor-squad",
@@ -111,13 +186,18 @@
           "maxModels": 5
         },
         {
-          "label": "6-10 models",
+          "label": "10 models",
           "value": 150,
-          "minModels": 6,
+          "minModels": 10,
           "maxModels": 10
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-assault-intercessors-with-jump-packs",
@@ -126,46 +206,42 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
+          "label": "1st to 2nd unit · 5 models",
           "value": 85,
           "minModels": 5,
-          "maxModels": 5
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 5 models",
-          "value": 95
-        },
-        {
-          "label": "6 models",
+          "label": "1st to 2nd unit · 10 models",
           "value": 160,
-          "minModels": 6,
-          "maxModels": 6
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 6 models",
-          "value": 170
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-astraeus",
-      "title": "Astraeus",
-      "status": "Current",
-      "sourceLayer": "codex",
-      "points": [
-        {
-          "label": "1 model",
-          "value": 525,
-          "minModels": 1,
-          "maxModels": 1
+          "label": "3rd + unit · 5 models",
+          "value": 95,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
         },
         {
-          "label": "2+ unit: 1 models",
-          "value": 575
+          "label": "3rd + unit · 10 models",
+          "value": 170,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-ballistus-dreadnought",
@@ -174,17 +250,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 150,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 160
+          "label": "3rd + unit · 1 model",
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-bladeguard-ancient",
@@ -199,7 +285,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-bladeguard-veteran-squad",
@@ -208,27 +299,42 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3 models",
+          "label": "1st to 2nd unit · 3 models",
           "value": 80,
           "minModels": 3,
-          "maxModels": 3
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 3 models",
-          "value": 90
-        },
-        {
-          "label": "4 models",
+          "label": "1st to 2nd unit · 6 models",
           "value": 160,
-          "minModels": 4,
-          "maxModels": 4
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 4 models",
-          "value": 170
+          "label": "3rd + unit · 3 models",
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 6 models",
+          "value": 170,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-brutalis-dreadnought",
@@ -237,17 +343,47 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 150,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 160
+          "label": "3rd + unit · 1 model",
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-caanok-var",
+      "title": "Caanok Var",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-captain",
@@ -262,7 +398,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-captain-in-gravis-armour",
@@ -277,7 +418,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-captain-in-phobos-armour",
@@ -292,7 +438,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-captain-in-terminator-armour",
@@ -307,7 +458,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-captain-with-jump-pack",
@@ -322,7 +478,32 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-cato-sicarius",
+      "title": "Cato Sicarius",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 105,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-centurion-assault-squad",
@@ -337,13 +518,18 @@
           "maxModels": 3
         },
         {
-          "label": "4-6 models",
+          "label": "6 models",
           "value": 300,
-          "minModels": 4,
+          "minModels": 6,
           "maxModels": 6
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-centurion-devastator-squad",
@@ -358,13 +544,24 @@
           "maxModels": 3
         },
         {
-          "label": "4-6 models",
+          "label": "6 models",
           "value": 350,
-          "minModels": 4,
+          "minModels": 6,
           "maxModels": 6
         }
       ],
-      "paidWargear": []
+      "paidWargear": [
+        {
+          "name": "Twin lascannon",
+          "value": 5,
+          "modifiers": []
+        }
+      ],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-chaplain",
@@ -379,7 +576,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-chaplain-in-terminator-armour",
@@ -394,7 +596,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-chaplain-on-bike",
@@ -409,7 +616,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-chaplain-with-jump-pack",
@@ -424,7 +636,32 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-chief-librarian-tigurius",
+      "title": "Chief Librarian Tigurius",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-company-heroes",
@@ -439,7 +676,32 @@
           "maxModels": 4
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-darnath-lysander",
+      "title": "Darnath Lysander",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 100,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-desolation-squad",
@@ -448,17 +710,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
+          "label": "1st unit · 5 models",
           "value": 180,
           "minModels": 5,
-          "maxModels": 5
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 1
         },
         {
-          "label": "2+ unit: 5 models",
-          "value": 210
+          "label": "2nd + unit · 5 models",
+          "value": 210,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 2
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-devastator-squad",
@@ -473,13 +745,18 @@
           "maxModels": 5
         },
         {
-          "label": "6-10 models",
+          "label": "10 models",
           "value": 200,
-          "minModels": 6,
+          "minModels": 10,
           "maxModels": 10
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-dreadnought",
@@ -494,7 +771,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-drop-pod",
@@ -503,17 +785,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 3rd unit · 1 model",
           "value": 60,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 3
         },
         {
-          "label": "5+ unit: 1 models",
-          "value": 70
+          "label": "4th + unit · 1 model",
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 4
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-eliminator-squad",
@@ -528,7 +820,12 @@
           "maxModels": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-eradicator-squad",
@@ -537,27 +834,42 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3 models",
+          "label": "1st to 2nd unit · 3 models",
           "value": 90,
           "minModels": 3,
-          "maxModels": 3
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 3 models",
-          "value": 100
-        },
-        {
-          "label": "4 models",
+          "label": "1st to 2nd unit · 6 models",
           "value": 180,
-          "minModels": 4,
-          "maxModels": 4
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 4 models",
-          "value": 190
+          "label": "3rd + unit · 3 models",
+          "value": 100,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 6 models",
+          "value": 190,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-eradicator-squad-with-heavy-bolters",
@@ -570,21 +882,40 @@
           "value": 80,
           "minModels": 3,
           "maxModels": 3
-        },
-        {
-          "label": "3+ unit: 3 models",
-          "value": 90
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-firestrike-servo-turrets",
       "title": "Firestrike Servo-Turrets",
       "status": "Current",
       "sourceLayer": "codex",
-      "points": [],
-      "paidWargear": []
+      "points": [
+        {
+          "label": "1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
+        },
+        {
+          "label": "2 models",
+          "value": 150,
+          "minModels": 2,
+          "maxModels": 2
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-gladiator-lancer",
@@ -593,17 +924,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 160,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 170
+          "label": "3rd + unit · 1 model",
+          "value": 170,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-gladiator-reaper",
@@ -612,17 +953,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 160,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 170
+          "label": "3rd + unit · 1 model",
+          "value": 170,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-gladiator-valiant",
@@ -631,17 +982,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 150,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 160
+          "label": "3rd + unit · 1 model",
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-hammerfall-bunker",
@@ -656,7 +1017,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-heavy-intercessor-squad",
@@ -671,13 +1037,18 @@
           "maxModels": 5
         },
         {
-          "label": "6-10 models",
+          "label": "10 models",
           "value": 200,
-          "minModels": 6,
+          "minModels": 10,
           "maxModels": 10
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-hellblaster-squad",
@@ -692,13 +1063,18 @@
           "maxModels": 5
         },
         {
-          "label": "6-10 models",
+          "label": "10 models",
           "value": 220,
-          "minModels": 6,
+          "minModels": 10,
           "maxModels": 10
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-impulsor",
@@ -707,17 +1083,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 3rd unit · 1 model",
           "value": 70,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 3
         },
         {
-          "label": "5+ unit: 1 models",
-          "value": 80
+          "label": "4th + unit · 1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 4
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-inceptor-squad",
@@ -726,27 +1112,42 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3 models",
+          "label": "1st to 2nd unit · 3 models",
           "value": 125,
           "minModels": 3,
-          "maxModels": 3
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 3 models",
-          "value": 140
-        },
-        {
-          "label": "4 models",
+          "label": "1st to 2nd unit · 6 models",
           "value": 250,
-          "minModels": 4,
-          "maxModels": 4
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 4 models",
-          "value": 265
+          "label": "3rd + unit · 3 models",
+          "value": 140,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 6 models",
+          "value": 265,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-incursor-squad",
@@ -755,27 +1156,42 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
+          "label": "1st to 2nd unit · 5 models",
           "value": 85,
           "minModels": 5,
-          "maxModels": 5
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 5 models",
-          "value": 95
-        },
-        {
-          "label": "6 models",
+          "label": "1st to 2nd unit · 10 models",
           "value": 150,
-          "minModels": 6,
-          "maxModels": 6
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 6 models",
-          "value": 160
+          "label": "3rd + unit · 5 models",
+          "value": 95,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 160,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-infernus-squad",
@@ -790,13 +1206,18 @@
           "maxModels": 5
         },
         {
-          "label": "6-10 models",
+          "label": "10 models",
           "value": 180,
-          "minModels": 6,
+          "minModels": 10,
           "maxModels": 10
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-infiltrator-squad",
@@ -805,27 +1226,42 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
+          "label": "1st to 2nd unit · 5 models",
           "value": 110,
           "minModels": 5,
-          "maxModels": 5
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 5 models",
-          "value": 120
-        },
-        {
-          "label": "6 models",
+          "label": "1st to 2nd unit · 10 models",
           "value": 180,
-          "minModels": 6,
-          "maxModels": 6
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 6 models",
-          "value": 190
+          "label": "3rd + unit · 5 models",
+          "value": 120,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 190,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-intercessor-squad",
@@ -840,13 +1276,18 @@
           "maxModels": 5
         },
         {
-          "label": "6-10 models",
+          "label": "10 models",
           "value": 150,
-          "minModels": 6,
+          "minModels": 10,
           "maxModels": 10
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-invader-atv",
@@ -861,7 +1302,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-invictor-tactical-warsuit",
@@ -876,11 +1322,76 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-iron-father-feirros",
+      "title": "Iron Father Feirros",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-judiciar",
       "title": "Judiciar",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 55,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-kayvaan-shrike",
+      "title": "Kayvaan Shrike",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 100,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-korsarro-khan",
+      "title": "Kor'sarro Khan",
       "status": "Current",
       "sourceLayer": "codex",
       "points": [
@@ -900,17 +1411,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 220,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 240
+          "label": "3rd + unit · 1 model",
+          "value": 240,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-land-raider-crusader",
@@ -919,17 +1440,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 220,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 240
+          "label": "3rd + unit · 1 model",
+          "value": 240,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-land-raider-redeemer",
@@ -938,17 +1469,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 250,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 270
+          "label": "3rd + unit · 1 model",
+          "value": 270,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-land-speeder",
@@ -961,13 +1502,14 @@
           "value": 105,
           "minModels": 1,
           "maxModels": 1
-        },
-        {
-          "label": "3+ unit: 1 models",
-          "value": 115
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-librarian",
@@ -976,17 +1518,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 70,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 80
+          "label": "3rd + unit · 1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-librarian-in-phobos-armour",
@@ -1001,7 +1553,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-librarian-in-terminator-armour",
@@ -1016,7 +1573,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-lieutenant",
@@ -1031,7 +1593,32 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-lieutenant-titus",
+      "title": "Lieutenant Titus",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 100,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-lieutenant-in-phobos-armour",
@@ -1046,7 +1633,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-lieutenant-in-reiver-armour",
@@ -1061,7 +1653,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-lieutenant-with-combi-weapon",
@@ -1076,7 +1673,32 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-marneus-calgar-in-armour-of-antilochus",
+      "title": "Marneus Calgar in Armour of Antilochus",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 155,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-outrider-squad",
@@ -1091,13 +1713,44 @@
           "maxModels": 3
         },
         {
-          "label": "4-7 models",
+          "label": "6 models",
           "value": 140,
-          "minModels": 4,
-          "maxModels": 7
+          "minModels": 6,
+          "maxModels": 6
         }
       ],
-      "paidWargear": []
+      "paidWargear": [
+        {
+          "name": "Invader ATV",
+          "value": 60,
+          "modifiers": []
+        }
+      ],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-pedro-kantor",
+      "title": "Pedro Kantor",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-predator-annihilator",
@@ -1106,17 +1759,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 135,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 145
+          "label": "3rd + unit · 1 model",
+          "value": 145,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-predator-destructor",
@@ -1125,17 +1788,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 140,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 150
+          "label": "3rd + unit · 1 model",
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-razorback",
@@ -1144,17 +1817,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 3rd unit · 1 model",
           "value": 85,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 3
         },
         {
-          "label": "5+ unit: 1 models",
-          "value": 95
+          "label": "4th + unit · 1 model",
+          "value": 95,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 4
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-redemptor-dreadnought",
@@ -1163,17 +1846,33 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 195,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 210
+          "label": "3rd + unit · 1 model",
+          "value": 210,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [
+        {
+          "name": "Macro plasma incinerator",
+          "value": 10,
+          "modifiers": []
+        }
+      ],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-reiver-squad",
@@ -1188,13 +1887,18 @@
           "maxModels": 5
         },
         {
-          "label": "6-10 models",
+          "label": "10 models",
           "value": 150,
-          "minModels": 6,
+          "minModels": 10,
           "maxModels": 10
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-repulsor",
@@ -1203,17 +1907,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 170,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 190
+          "label": "3rd + unit · 1 model",
+          "value": 190,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-repulsor-executioner",
@@ -1222,23 +1936,33 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 255,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 275
+          "label": "3rd + unit · 1 model",
+          "value": 275,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
       "paidWargear": [
         {
-          "name": "Heavy Laser Destroyer",
+          "name": "Heavy laser destroyer",
           "value": 10,
           "modifiers": []
         }
-      ]
+      ],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-rhino",
@@ -1247,17 +1971,47 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 3rd unit · 1 model",
           "value": 65,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 3
         },
         {
-          "label": "5+ unit: 1 models",
-          "value": 75
+          "label": "4th + unit · 1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 4
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-roboute-guilliman",
+      "title": "Roboute Guilliman",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 355,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-scout-squad",
@@ -1266,27 +2020,42 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
+          "label": "1st to 2nd unit · 5 models",
           "value": 65,
           "minModels": 5,
-          "maxModels": 5
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 5 models",
-          "value": 75
-        },
-        {
-          "label": "6 models",
+          "label": "1st to 2nd unit · 10 models",
           "value": 120,
-          "minModels": 6,
-          "maxModels": 6
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 6 models",
-          "value": 130
+          "label": "3rd + unit · 5 models",
+          "value": 75,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 130,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-sternguard-veteran-squad",
@@ -1301,13 +2070,18 @@
           "maxModels": 5
         },
         {
-          "label": "6-10 models",
+          "label": "10 models",
           "value": 200,
-          "minModels": 6,
+          "minModels": 10,
           "maxModels": 10
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-storm-speeder-hailstrike",
@@ -1316,17 +2090,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 105,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 115
+          "label": "3rd + unit · 1 model",
+          "value": 115,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-storm-speeder-hammerstrike",
@@ -1335,17 +2119,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 140,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 150
+          "label": "3rd + unit · 1 model",
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-storm-speeder-thunderstrike",
@@ -1354,17 +2148,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 135,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 145
+          "label": "3rd + unit · 1 model",
+          "value": 145,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-stormhawk-interceptor",
@@ -1379,7 +2183,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-stormraven-gunship",
@@ -1388,17 +2197,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st unit · 1 model",
           "value": 280,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
         },
         {
-          "label": "2+ unit: 1 models",
-          "value": 300
+          "label": "2nd + unit · 1 model",
+          "value": 300,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-stormtalon-gunship",
@@ -1413,7 +2232,32 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-suboden-khan",
+      "title": "Suboden Khan",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-suppressor-squad",
@@ -1428,7 +2272,12 @@
           "maxModels": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-tactical-squad",
@@ -1443,7 +2292,12 @@
           "maxModels": 10
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-techmarine",
@@ -1458,7 +2312,12 @@
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-terminator-assault-squad",
@@ -1473,9 +2332,9 @@
           "maxModels": 5
         },
         {
-          "label": "6-10 models",
+          "label": "10 models",
           "value": 310,
-          "minModels": 6,
+          "minModels": 10,
           "maxModels": 10
         }
       ],
@@ -1485,7 +2344,12 @@
           "value": 5,
           "modifiers": []
         }
-      ]
+      ],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-terminator-squad",
@@ -1500,13 +2364,58 @@
           "maxModels": 5
         },
         {
-          "label": "6-10 models",
+          "label": "10 models",
           "value": 320,
-          "minModels": 6,
+          "minModels": 10,
           "maxModels": 10
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-tor-garadon",
+      "title": "Tor Garadon",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-uriel-ventris",
+      "title": "Uriel Ventris",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 105,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-vanguard-veteran-squad-with-jump-packs",
@@ -1515,27 +2424,97 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
+          "label": "1st to 2nd unit · 5 models",
           "value": 105,
           "minModels": 5,
-          "maxModels": 5
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 5 models",
-          "value": 115
-        },
-        {
-          "label": "6 models",
+          "label": "1st to 2nd unit · 10 models",
           "value": 210,
-          "minModels": 6,
-          "maxModels": 6
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 6 models",
-          "value": 220
+          "label": "3rd + unit · 5 models",
+          "value": 115,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 220,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-victrix-honour-guard",
+      "title": "Victrix Honour Guard",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1st unit · 3 models",
+          "value": 110,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "1st unit · 6 models",
+          "value": 230,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 1
+        },
+        {
+          "label": "2nd + unit · 3 models",
+          "value": 130,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 2
+        },
+        {
+          "label": "2nd + unit · 6 models",
+          "value": 250,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 2
+        }
+      ],
+      "paidWargear": [
+        {
+          "name": "Banner of Macragge",
+          "value": 15,
+          "modifiers": []
+        },
+        {
+          "name": "Blades of honour",
+          "value": 10,
+          "modifiers": []
+        }
+      ],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-vindicator",
@@ -1544,17 +2523,62 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd unit · 1 model",
           "value": 185,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 200
+          "label": "3rd + unit · 1 model",
+          "value": 200,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "unit-vulkan-hestan",
+      "title": "Vulkan He'stan",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
+    },
+    {
+      "id": "unit-wardens-of-ultramar",
+      "title": "Wardens of Ultramar",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "6 models",
+          "value": 120,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "unit-whirlwind",
@@ -1563,27 +2587,55 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st unit · 1 model",
           "value": 175,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 1
         },
         {
-          "label": "2+ unit: 1 models",
-          "value": 195
+          "label": "2nd + unit · 1 model",
+          "value": 195,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 2
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     }
   ],
   "enhancements": [
     {
-      "id": "enhancement-fear-made-manifest-aura",
-      "title": "Fear Made Manifest [Aura]",
-      "detachment": "1st Company Task Force",
+      "id": "enhancement-fear-made-manifest",
+      "title": "Fear Made Manifest",
+      "detachment": "1ST COMPANY TASK FORCE",
       "value": 30,
-      "text": "Adeptus Astartes model only. While an enemy unit (excluding Monsters and Vehicles) is within 6\" of the bearer, each time that unit fails a Battle-Shock test, one model in that unit is destroyed (chosen by it's controlling player.) Once per battle, when such an enemy unit fails a Battle-Shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
-      "profile": null
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "enhancement-the-imperiums-sword",
+      "title": "The Imperium’s Sword",
+      "detachment": "1ST COMPANY TASK FORCE",
+      "value": 25,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-iron-resolve",
@@ -1591,7 +2643,12 @@
       "detachment": "1st Company Task Force",
       "value": 15,
       "text": "Adeptus Astartes Terminator model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer's unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Feel No Pain 5+ ability.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-rites-of-war",
@@ -1599,15 +2656,12 @@
       "detachment": "1st Company Task Force",
       "value": 10,
       "text": "Adeptus Astartes Terminator model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer's unit as well.",
-      "profile": null
-    },
-    {
-      "id": "enhancement-the-imperiums-sword",
-      "title": "The Imperium's Sword",
-      "detachment": "1st Company Task Force",
-      "value": 25,
-      "text": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer's melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer's unit.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-architect-of-war",
@@ -1615,7 +2669,12 @@
       "detachment": "Anvil Siege Force",
       "value": 25,
       "text": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-fleet-commander",
@@ -1623,7 +2682,12 @@
       "detachment": "Anvil Siege Force",
       "value": 15,
       "text": "Captain model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the center of the first marker, then draw a straight line between the center of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+ that unit suffers D3 mortal wounds. Both markers are then removed.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-indomitable-fury",
@@ -1631,7 +2695,12 @@
       "detachment": "Anvil Siege Force",
       "value": 20,
       "text": "Gravis Model only. The first time the bearer is destroyed, roll on D6 at the end of the phase. On a 2+ set the bearer back on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-stoic-defender",
@@ -1639,7 +2708,12 @@
       "detachment": "Anvil Siege Force",
       "value": 15,
       "text": "Adeptus Astartes model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-armoured-commander",
@@ -1647,7 +2721,12 @@
       "detachment": "Armoured Speartip",
       "value": 25,
       "text": "Adeptus Astartes model only. Once per turn, in your Movement phase, the bearer can use this\nEnhancement. If it does, select one friendly Adeptus Astartes Transport that is in Strategic Reserves. Until the end of the phase, for the purposes of setting up that Transport on the battlefield, treat the current battle round number as being one higher than it actually is.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-liberator",
@@ -1655,7 +2734,12 @@
       "detachment": "Armoured Speartip",
       "value": 15,
       "text": "Adeptus Astartes model only. If you control an objective marker at the end of your Command phase,\nand the bearer’s unit (or any Heavy Transport it is embarked within) is within range of that objective\nmarker, that objective marker remains under your control until your opponent’s Level of Control over\nthat objective marker is greater than yours at the end of a phase.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-shock-deployment",
@@ -1663,7 +2747,12 @@
       "detachment": "Armoured Speartip",
       "value": 20,
       "text": "Adeptus Astartes Terminator or Gravis model only. In your Shooting phase, each time the bearer’s unit is selected to shoot, if it disembarked from a Transport this turn, until the end of the phase, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-tip-of-the-spear",
@@ -1671,7 +2760,12 @@
       "detachment": "Armoured Speartip",
       "value": 40,
       "text": "Adeptus Astartes model only. If the bearer starts the battle embarked within a Transport, that transport\nhas the Scouts 6\" ability",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-blades-of-valour",
@@ -1679,7 +2773,12 @@
       "detachment": "Bastion Task Force",
       "value": 15,
       "text": "Adeptus Astartes model only. Improve the Armour Penetration characteristic of melee weapons equipped by the bearer and Battleline models in the bearer’s unit by 1.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-bombast-omnivox",
@@ -1687,7 +2786,12 @@
       "detachment": "Bastion Task Force",
       "value": 15,
       "text": "Adeptus Astartes model only. Each time you select the bearer’s unit as the target of a Stratagem, roll one D6, adding 1 if the bearer’s unit has the Battleline keyword: on a 4+, you gain 1CP.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-eye-of-the-primarch",
@@ -1695,7 +2799,12 @@
       "detachment": "Bastion Task Force",
       "value": 10,
       "text": "Adeptus Astartes model only. Ranged weapons equipped by the bearer and Battleline models in the\nbearer’s unit have the [PRECISION] ability",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-hero-of-the-chapter",
@@ -1703,7 +2812,12 @@
       "detachment": "Bastion Task Force",
       "value": 20,
       "text": "Adeptus Astartes model only. While the bearer is leading a unit, the bearer has the Battleline keyword.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-armour-of-antoninus",
@@ -1711,7 +2825,12 @@
       "detachment": "Blade of Ultramar",
       "value": 20,
       "text": "Adeptus Astartes model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-oath-of-macragge",
@@ -1719,7 +2838,12 @@
       "detachment": "Blade of Ultramar",
       "value": 15,
       "text": "Adeptus Astartes model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-student-of-the-codex",
@@ -1727,7 +2851,12 @@
       "detachment": "Blade of Ultramar",
       "value": 20,
       "text": "Adeptus Astartes model only. At the start of your Command phase, if the bearer is on the battlefield, it\ncan use this Enhancement. If it does, until the start of your next Command phase, the Tactical doctrine is active for this unit (instead of any other Combat Doctrine you select to be active for your army, and even if there is no Combat Doctrine active for your army).",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-veteran-of-behemoth",
@@ -1735,7 +2864,25 @@
       "detachment": "Blade of Ultramar",
       "value": 25,
       "text": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine,, you can reroll Advance rolls made for that unit.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "enhancement-spy-skull-data-link",
+      "title": "Spy-skull Data Link",
+      "detachment": "CERAMITE SENTINELS",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-castellum-omnivox",
@@ -1743,7 +2890,12 @@
       "detachment": "Ceramite Sentinels",
       "value": 20,
       "text": "Each time the bearer’s unit makes a Fall Back move, select one of the following to apply to that unit until the end of the turn: \n- That unit is eligible to perform an Action in a turn in which it Fell Back. \n- That unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-defensive-mastery",
@@ -1751,7 +2903,12 @@
       "detachment": "Ceramite Sentinels",
       "value": 25,
       "text": "After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-honour-indefatigable",
@@ -1759,15 +2916,12 @@
       "detachment": "Ceramite Sentinels",
       "value": 25,
       "text": "The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
-      "profile": null
-    },
-    {
-      "id": "enhancement-spy-skull-datalink",
-      "title": "Spy-skull Datalink",
-      "detachment": "Ceramite Sentinels",
-      "value": 15,
-      "text": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-champion-of-the-feast",
@@ -1775,7 +2929,12 @@
       "detachment": "Emperor's Shield",
       "value": 25,
       "text": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer's melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer's unit.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-disciple-of-rhetoricus",
@@ -1783,7 +2942,12 @@
       "detachment": "Emperor's Shield",
       "value": 10,
       "text": "Adeptus Astartes Terminator model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer's unit as well.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-indomitable-champion",
@@ -1791,7 +2955,12 @@
       "detachment": "Emperor's Shield",
       "value": 20,
       "text": "Adeptus Astartes Terminator model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-malodraxian-standard",
@@ -1799,7 +2968,12 @@
       "detachment": "Emperor's Shield",
       "value": 20,
       "text": "Adeptus Astartes Ancient model only. Each time an attack targets the bearer’s unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of the bearer’s unit, subtract 1 from the Wound roll.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-adamantine-mantle",
@@ -1807,7 +2981,12 @@
       "detachment": "Firestorm Assault Force",
       "value": 20,
       "text": "Adeptus Astartes model only. Each time an attack is allocated the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a [MELTA] or [TORRENT] weapon, change the Damage characteristic of that attack to 1 instead.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-champion-of-humanity",
@@ -1815,7 +2994,12 @@
       "detachment": "Firestorm Assault Force",
       "value": 10,
       "text": "Tacticus model only. While the bearer is leading a unit, models in that unit can ignore any or all modifiers to their characteristics and/or to any roll or test made for them (excluding modifiers to saving throws).",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-forged-in-battle",
@@ -1823,7 +3007,12 @@
       "detachment": "Firestorm Assault Force",
       "value": 15,
       "text": "Adeptus Astartes model only. While the bearer is leading a unit, once per turn after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an umodified 6.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-war-tempered-artifice",
@@ -1831,7 +3020,12 @@
       "detachment": "Firestorm Assault Force",
       "value": 25,
       "text": "Adeptus Astartes Infantry model only. Add 3 to the Strength characteristic of the bearer's melee weapons.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-adamantine-mantle",
@@ -1855,7 +3049,12 @@
       "detachment": "Forgefather's Seekers",
       "value": 10,
       "text": "Adeptus Astartes model only. Add 1 to the attacks characteristics of Torrent weapons equipped by models in the bearer's unit.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-war-tempered-artifice",
@@ -1867,19 +3066,29 @@
     },
     {
       "id": "enhancement-bellicose-weapon-spirits",
-      "title": "Bellicose Weapon Spirits",
+      "title": "Bellicose Weapon Spirits (Upgrade)",
       "detachment": "Fulguris Task Force",
       "value": 15,
       "text": "SPEEDER unit only. This unit can re-roll:\n\n\n▪ Damage rolls.\n▪ Rolls to determine the A of a weapon.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-raptorial-cogitator-core",
-      "title": "Raptorial Cogitator Core",
+      "title": "Raptorial Cogitator Core (Upgrade)",
       "detachment": "Fulguris Task Force",
       "value": 15,
       "text": "SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER]",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-adept-of-the-codex",
@@ -1887,7 +3096,12 @@
       "detachment": "Gladius Task Force",
       "value": 20,
       "text": "Captain model only. At the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that doctrine is active for the bearer’s unit only, even if you have already selected that doctrine to be active for your army this battle.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-artificer-armour",
@@ -1895,7 +3109,12 @@
       "detachment": "Gladius Task Force",
       "value": 20,
       "text": "Adeptus Astartes model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-fire-discipline",
@@ -1903,7 +3122,12 @@
       "detachment": "Gladius Task Force",
       "value": 25,
       "text": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine,, you can reroll Advance rolls made for that unit.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-the-honour-vehement",
@@ -1911,7 +3135,25 @@
       "detachment": "Gladius Task Force",
       "value": 15,
       "text": "Adeptus Astartes model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "enhancement-medusan-roar",
+      "title": "Medusan Roar",
+      "detachment": "HAMMER OF AVERNII",
+      "value": 30,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-iron-laurel",
@@ -1919,15 +3161,12 @@
       "detachment": "Hammer of Avernii",
       "value": 10,
       "text": "Adeptus Astartes model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
-      "profile": null
-    },
-    {
-      "id": "enhancement-medusan-roar-aura",
-      "title": "Medusan Roar [Aura]",
-      "detachment": "Hammer of Avernii",
-      "value": 30,
-      "text": "Adeptus Astartes model only. While an enemy unit (excluding Monsters and Vehicles) is within 6\" of\nthe bearer, each time that unit fails a Battle-shock test, one model in that unit is destroyed (chosen by\nits controlling player). Once per battle, when such an enemy unit fails a Battle-shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-spiritus-ferrum",
@@ -1935,7 +3174,12 @@
       "detachment": "Hammer of Avernii",
       "value": 25,
       "text": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-steel-font",
@@ -1943,15 +3187,25 @@
       "detachment": "Hammer of Avernii",
       "value": 15,
       "text": "Adeptus Astartes Terminator model only. While the bearer is leading a unit, in your Command phase, you can return 1 destroyed Bodyguard model to that unit.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-astartes-tank-ace-aura",
-      "title": "Astartes Tank Ace (Aura)",
+      "title": "Astartes Tank Ace",
       "detachment": "Headhunter Task Force",
       "value": 40,
       "text": "Adeptus Astartes Vehicle model only. In your Shooting phase, while a friendly Adeptus Astartes\nVehicle unit is within 6\" of the bearer, ranged weapons equipped by models in that unit have the\n[ASSAULT] ability",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-firestorm-coordinators",
@@ -1959,7 +3213,12 @@
       "detachment": "Headhunter Task Force",
       "value": 20,
       "text": "Adeptus Astartes Vehicle model only. Ranged weapons equipped by the bearer have the\n[SUSTAINED HITS 1] ability.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-gunnery-honours",
@@ -1967,7 +3226,12 @@
       "detachment": "Headhunter Task Force",
       "value": 20,
       "text": "Adeptus Astartes Vehicle model only. Once per phase, you can re-roll one Hit roll, one Wound roll\nand one Damage roll for the bearer.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-redoubtable-machine-spirit",
@@ -1975,7 +3239,25 @@
       "detachment": "Headhunter Task Force",
       "value": 25,
       "text": "Adeptus Astartes Vehicle model only. The bearer has a 5+ invulnerable save and, at the end of your\nCommand phase, the bearer regains 1 lost wound.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "enhancement-master-of-machine-war",
+      "title": "Master of Machine War",
+      "detachment": "IRONSTORM SPEARHEAD",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-adept-of-the-omnissiah",
@@ -1983,15 +3265,12 @@
       "detachment": "Ironstorm Spearhead",
       "value": 35,
       "text": "Techmarine model only. Once per battle round, when a saving throw is failed for a friendly Adeptus Astartes Vehicle model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
-      "profile": null
-    },
-    {
-      "id": "enhancement-master-of-the-machine-war",
-      "title": "Master of the Machine War",
-      "detachment": "Ironstorm Spearhead",
-      "value": 20,
-      "text": "ADEPTUS ASTARTES model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE within 6\" of the bearer. Until the start of your next Command phase, that VEHICLE is eligible to shoot even if it Fell Back or Advanced this turn.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-target-augury-web",
@@ -1999,15 +3278,25 @@
       "detachment": "Ironstorm Spearhead",
       "value": 30,
       "text": "TECHMARINE model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that VEHICLE have the [Lethal Hits] ability.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-the-flesh-is-weak",
-      "title": "The Flesh is Weak",
+      "title": "The Flesh Is Weak",
       "detachment": "Ironstorm Spearhead",
       "value": 20,
       "text": "Adeptus Astartes model only. The bearer has the Feel No Pain 4+ ability.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-celerity",
@@ -2015,7 +3304,12 @@
       "detachment": "Librarius Conclave",
       "value": 35,
       "text": "ADEPTUS ASTARTES PSYKER model only.\n\n\n▪ When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge.\n\n\n▪ When this unit is selected to make a fall-back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-fusillade",
@@ -2023,7 +3317,12 @@
       "detachment": "Librarius Conclave",
       "value": 25,
       "text": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have:\n\n\n▪ [LETHAL HITS].\n▪ If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1].",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-obfuscation",
@@ -2031,7 +3330,12 @@
       "detachment": "Librarius Conclave",
       "value": 25,
       "text": "ADEPTUS ASTARTES PSYKER model only.\n\n\n▪ Enemy units cannot target this unit with snap shooting attacks.\n▪ If this unit has the Telepathy Discipline ability, this unit has -3\" detection range.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-prescience",
@@ -2039,7 +3343,12 @@
       "detachment": "Librarius Conclave",
       "value": 20,
       "text": "ADEPTUS ASTARTES PSYKER model only (excluding TERMINATOR models). (Once per turn per unit) In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if\nthis unit is unengaged, this unit can make a normal move of: \n\n\n▪ Up to D6\".\n▪ Or: If this unit has the Divination Discipline ability, up to 6\".",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-temporal-corridor",
@@ -2047,7 +3356,12 @@
       "detachment": "Librarius Conclave",
       "value": 25,
       "text": "ADEPTUS ASTARTES PSYKER model only.\n▪ If this unit has the Telekinesis Discipline ability, this unit has Deep Strike.\n▪ At the end of your opponent’s Fight phase, if this unit is unengaged, you can use this ability. If you do:\n ▫ Place this unit in strategic reserves.\n ▫ This unit can make an ingress move in your next Movement phase (including in your first turn)",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-dedicated-gunship",
@@ -2055,7 +3369,12 @@
       "detachment": "Orbital Assault Force",
       "value": 15,
       "text": "Adeptus Astartes Terminator model only. Once per battle, at the end of your opponent’s Fight\nphase, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer\ncan use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into\nStrategic Reserves.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-laurels-of-thunder",
@@ -2063,7 +3382,12 @@
       "detachment": "Orbital Assault Force",
       "value": 15,
       "text": "Adeptus Astartes model only. You can re-roll Charge rolls made for the bearer’s unit in a turn in which it was set up on the battlefield.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-orbital-uplink-reliquary",
@@ -2071,7 +3395,12 @@
       "detachment": "Orbital Assault Force",
       "value": 25,
       "text": "Adeptus Astartes model only. After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-veteran-of-the-vanguard",
@@ -2079,15 +3408,25 @@
       "detachment": "Orbital Assault Force",
       "value": 20,
       "text": "Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-avenging-avatar-aura",
-      "title": "Avenging Avatar (Aura)",
+      "title": "Avenging Avatar",
       "detachment": "Reclamation Force",
       "value": 10,
       "text": "Adeptus Astartes model only. In the Battle-shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 9\" of the bearer, that enemy unit must take a Battle-shock test.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-liberatum",
@@ -2095,7 +3434,12 @@
       "detachment": "Reclamation Force",
       "value": 25,
       "text": "Adeptus Astartes model only. Each time the bearer makes an attack that targets an enemy unit, if the\ntarget is within range of an objective marker, you can re-roll the Hit roll and you can re-roll the Wound roll.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-scroll-of-proclamation",
@@ -2103,7 +3447,12 @@
       "detachment": "Reclamation Force",
       "value": 15,
       "text": "Adeptus Astartes model only. Each time the bearer’s unit declares a charge, if one or more targets of that charge are within range of an objective marker, you can re-roll the Charge roll.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-seals-of-reconquest",
@@ -2111,7 +3460,51 @@
       "detachment": "Reclamation Force",
       "value": 20,
       "text": "Adeptus Astartes model only. Models in the bearer’s unit have a 5+ invulnerable save.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "enhancement-hunters-eye",
+      "title": "Hunter’s Eye",
+      "detachment": "SPEARPOINT TASK FORCE",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "enhancement-stormseers-wisdom",
+      "title": "Stormseers' Wisdom",
+      "detachment": "SPEARPOINT TASK FORCE",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "enhancement-hunters-instincts",
+      "title": "Hunter’s Instincts",
+      "detachment": "STORMLANCE TASK FORCE",
+      "value": 25,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-blackwing-shroud",
@@ -2119,7 +3512,12 @@
       "detachment": "Shadowmark Talon",
       "value": 25,
       "text": "Adeptus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the\nInfiltrators ability.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-coronal-susurrant",
@@ -2127,7 +3525,12 @@
       "detachment": "Shadowmark Talon",
       "value": 30,
       "text": "Phobos model only. The bearer has the following ability:\n\n\nLord of Deceit (Aura): Each time your opponent targets a unit from their army with a Stratagem, if that\nunit is within 12\" of this model, increase the cost of that usage of that Stratagem by 1CP.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-hunters-instincts",
@@ -2143,7 +3546,12 @@
       "detachment": "Shadowmark Talon",
       "value": 15,
       "text": "Adeptus Astartes model only. The bearer has the Stealth and Lone Operative abilities.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-chogorian-huntmaster",
@@ -2151,15 +3559,12 @@
       "detachment": "Spearpoint Task Force",
       "value": 25,
       "text": "Adeptus Astartes Mounted model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
-      "profile": null
-    },
-    {
-      "id": "enhancement-hunters-eye",
-      "title": "Hunter's Eye",
-      "detachment": "Spearpoint Task Force",
-      "value": 20,
-      "text": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the\n[SUSTAINED HITS 1] and [IGNORES COVER] abilities.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-spearpoint-paragon",
@@ -2167,15 +3572,12 @@
       "detachment": "Spearpoint Task Force",
       "value": 25,
       "text": "Adeptus Astartes model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead.",
-      "profile": null
-    },
-    {
-      "id": "enhancement-stormseers-wisdom",
-      "title": "Stormseer's Wisdom",
-      "detachment": "Spearpoint Task Force",
-      "value": 15,
-      "text": "Adeptus Astartes model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-feinting-withdrawal",
@@ -2183,7 +3585,12 @@
       "detachment": "Stormlance Task Force",
       "value": 10,
       "text": "Adeptus Astartes model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it fell back",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-fury-of-the-storm",
@@ -2191,15 +3598,12 @@
       "detachment": "Stormlance Task Force",
       "value": 25,
       "text": "Adeptus Astartes Mounted model only. Improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 2 instead.",
-      "profile": null
-    },
-    {
-      "id": "enhancement-hunters-instincts",
-      "title": "Hunter's Instincts",
-      "detachment": "Stormlance Task Force",
-      "value": 25,
-      "text": "Adeptus Astartes Mounted model only. If the bearer's unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round as being one higher than it actually is",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-portents-of-wisdom",
@@ -2207,15 +3611,25 @@
       "detachment": "Stormlance Task Force",
       "value": 15,
       "text": "Adeptus Astartes model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-death-in-the-dark",
-      "title": "Death in the Dark",
+      "title": "Death in the Dark (Upgrade)",
       "detachment": "Subversion Assets",
       "value": 15,
       "text": "INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-shroud-field",
@@ -2223,7 +3637,12 @@
       "detachment": "Subversion Assets",
       "value": 20,
       "text": "PHOBOS model only. This model has:\n\n\n▪ Lone Operative.\n▪ Stealth.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-execute-and-redeploy",
@@ -2231,7 +3650,12 @@
       "detachment": "Vanguard Spearhead",
       "value": 20,
       "text": "Phobos model only. In your Shooting phase, after the bearer's unit has shot, if that unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does until the end of the turn, that unit is not eligible to delcare a charge. This cannot allow the bearer's unit to move more than once in your Shooting phase.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-ghostweave-cloak",
@@ -2239,7 +3663,12 @@
       "detachment": "Vanguard Spearhead",
       "value": 15,
       "text": "Adeptus Astartes model only. The bearer has the Stealth and Lone Operative Abilities",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-shadow-war-veteran",
@@ -2247,7 +3676,12 @@
       "detachment": "Vanguard Spearhead",
       "value": 30,
       "text": "Phobos model only. Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     },
     {
       "id": "enhancement-the-blade-driven-deep",
@@ -2255,11 +3689,171 @@
       "detachment": "Vanguard Spearhead",
       "value": 25,
       "text": "Adeptus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "enhancement-avenging-angel",
+      "title": "Avenging Angel",
+      "detachment": "Vengeful Hosts",
+      "value": 20,
+      "text": "ADEPTUS ASTARTES FLY INFANTRY model only. When this unit ends an ingress move, select up to one enemy unit within 9\" of this unit. That enemy unit makes a battle-shock roll, with -1 to that\nbattle-shock roll.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
+    },
+    {
+      "id": "enhancement-orksbane",
+      "title": "Orksbane",
+      "detachment": "Vengeful Hosts",
+      "value": 20,
+      "text": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon:",
+      "profile": {
+        "name": "Orksbane",
+        "type": "Melee Weapons",
+        "characteristics": {
+          "Range": "Melee",
+          "A": "4",
+          "WS": "2+",
+          "S": "8",
+          "AP": "-2",
+          "D": "3",
+          "Keywords": "Cleave 2"
+        }
+      },
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-09"
+      }
     }
   ],
   "audit": {
-    "units": 83,
-    "enhancements": 85
-  }
+    "units": 101,
+    "enhancements": 87
+  },
+  "detachments": [
+    {
+      "title": "1st Company Task Force",
+      "forceDisposition": "Purge the Foe",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Anvil Siege Force",
+      "forceDisposition": "Take and Hold",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Armoured Speartip",
+      "forceDisposition": "Take and Hold",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "Bastion Task Force",
+      "forceDisposition": "Take and Hold",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Blade of Ultramar",
+      "forceDisposition": "Priority Assets",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "Ceramite Sentinels",
+      "forceDisposition": "Take and Hold",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "EMPEROR’S SHIELD",
+      "forceDisposition": "Purge the Foe",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Firestorm Assault Force",
+      "forceDisposition": "Priority Assets",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "FORGEFATHER’S SEEKERS",
+      "forceDisposition": "Priority Assets",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Fulguris Task Force",
+      "forceDisposition": "Reconnaissance",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "Gladius Task Force",
+      "forceDisposition": "Priority Assets",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "Hammer of Avernii",
+      "forceDisposition": "Purge the Foe",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Headhunter Task Force",
+      "forceDisposition": "Priority Assets",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Ironstorm Spearhead",
+      "forceDisposition": "Take and Hold",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Librarius Conclave",
+      "forceDisposition": "Reconnaissance",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "Orbital Assault Force",
+      "forceDisposition": "Take and Hold",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Reclamation Force",
+      "forceDisposition": "Take and Hold",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Shadowmark Talon",
+      "forceDisposition": "Disruption",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Spearpoint Task Force",
+      "forceDisposition": "Disruption",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Stormlance Task Force",
+      "forceDisposition": "Disruption",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "Subversion Assets",
+      "forceDisposition": "Disruption",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "Vanguard Spearhead",
+      "forceDisposition": "Reconnaissance",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Vengeful Hosts",
+      "forceDisposition": "Take and Hold",
+      "detachmentPoints": 1
+    }
+  ]
 }

@@ -2,7 +2,9 @@
   "schema": 1,
   "faction": {
     "id": "space-marines",
-    "title": "Space Marines"
+    "title": "Space Marines",
+    "separateLeaderRelations": true,
+    "separateWargearAbilities": true
   },
   "source": {
     "repository": "https://github.com/BSData/wh40k-11e",
@@ -33,7 +35,8 @@
   "outputs": {
     "snapshot": "bsdata-space-marines-11e.json",
     "datasheets": "../content/space-marines-codex-datasheets.en.json",
-    "points": "../content/space-marines-points.en.json"
+    "points": "../content/space-marines-points.en.json",
+    "officialPoints": "official-mfm-v1.2.json"
   },
   "filters": {
     "excludeNames": [
@@ -62,6 +65,7 @@
       "\\[Crucible\\]"
     ],
     "imperialArmourNames": [
+      "Astraeus",
       "Thunderhawk Gunship"
     ]
   },
@@ -88,7 +92,8 @@
       "Shadowmark Talon",
       "Bastion Task Force",
       "Orbital Assault Force",
-      "Reclamation Force"
+      "Reclamation Force",
+      "Vengeful Hosts"
     ]
   }
 }

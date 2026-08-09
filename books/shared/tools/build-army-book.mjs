@@ -52,9 +52,10 @@ const unitById=new Map(units.map(unit=>[unit.id,unit])),unitByTitle=new Map(unit
 const codexDetachmentNames=unique(points.enhancements.map(item=>item.detachment),titleKey);
 const packByTitle=new Map(pack.detachments.map(item=>[titleKey(item.title),item]));
 const parityByTitle=new Map((codexParity?.detachments||[]).map(item=>[titleKey(item.title),item]));
-const enhancementPointsByTitle=new Map(points.enhancements.map(item=>[titleKey(item.title),item]));
+const pointTitleKey=value=>titleKey(value).replace(/ upgrade$/,'');
+const enhancementPointsByTitle=new Map(points.enhancements.map(item=>[pointTitleKey(item.title),item]));
 const detachmentMetaByTitle=new Map((points.detachments||[]).map(item=>[titleKey(item.title),item]));
-const enrichEnhancement=item=>{const current=enhancementPointsByTitle.get(titleKey(item.title));return current?{...item,value:current.value,pointsSource:current.pointsSource}:item;};
+const enrichEnhancement=item=>{const current=enhancementPointsByTitle.get(pointTitleKey(item.title));return current?{...item,value:current.value,pointsSource:current.pointsSource}:item;};
 const enrichDetachment=detachment=>({...detachment,...detachmentMetaByTitle.get(titleKey(detachment.title)),enhancements:(detachment.enhancements||[]).map(enrichEnhancement)});
 const detachments=codexDetachmentNames.map(title=>enrichDetachment(packByTitle.get(titleKey(title))||parityByTitle.get(titleKey(title))||{
   id:slug(title),title,sourceLayer:'codex-transcription',rule:null,

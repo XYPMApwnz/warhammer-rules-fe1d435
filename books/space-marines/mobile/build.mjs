@@ -20,7 +20,7 @@ const categories=[...source.matchAll(/<section class="content-group" id="(datash
   });return{id,title:clean(title),units};
 });
 const units=categories.flatMap(category=>category.units);
-if(detachments.length!==22||units.length!==83)throw new Error(`Expected 22 detachments and 83 datasheets, found ${detachments.length} and ${units.length}`);
+if(detachments.length!==23||units.length!==101)throw new Error(`Expected 23 detachments and 101 datasheets, found ${detachments.length} and ${units.length}`);
 const staticRoutes=[{file:'index.html',id:'start',title:'Start',type:'start'},{file:'army-rules.html',id:'army-rules',title:'Army Rules',type:'army-rules'},{file:'updates.html',id:'updates',title:'Updates',type:'section'}],routes=[...staticRoutes,...detachments,...units];
 const content=route=>portable(route.type==='start'?extract('section','start'):route.type==='army-rules'?extract('section','army-rules'):route.type==='section'||route.type==='detachment'?extract('section',route.id):extract('article',route.id));
 function navigation(route){

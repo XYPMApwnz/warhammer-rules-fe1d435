@@ -62,8 +62,8 @@ assert(/import\(new URL\('\.\/compatible-rules-runtime\.mjs\?v=\d+'/.test(app));
 assert(!app.includes('data-eligibility'));
 assert(!app.includes('allKeywords'));
 assert(template.includes('Faultless Opportunist'));
-for(const title of ['Frenzied Ferocity','Eager Patrons','Beguiling Grotesquerie']){const start=template.indexOf(title);assert(start>=0,title);const current=template.slice(template.lastIndexOf('<article',start),template.indexOf('</article>',start));assert(current.includes('Enhancement · UPGRADE'));assert(!/\d+ pts/.test(current),`${title} must not invent points`);}
+for(const [title,value] of [['Frenzied Ferocity',15],['Eager Patrons',20],['Beguiling Grotesquerie',15]]){const start=template.indexOf(title);assert(start>=0,title);const current=template.slice(template.lastIndexOf('<article',start),template.indexOf('</article>',start));assert(current.includes('Enhancement · UPGRADE'));assert(current.includes(`${value} pts`),`${title} current MFM points`);}
 assert(rosterData.includes('Faultless Opportunist'));
-assert(rosterData.includes('"value": null'));
+for(const value of [15,20])assert(rosterData.includes(`"value": ${value}`));
 
 console.log(`PASS Emperor's Children matrix runtime: 18 datasheets, ${all.length} rows, 49 observed of 51 faction Stratagems, no unexplained unknowns`);

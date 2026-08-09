@@ -1774,6 +1774,68 @@
       "conditions": [
         "detachment-army-restricted-to-ultramarines"
       ]
+    },
+    "vengeful-hosts-meteoric-onslaught": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "FLY",
+              "INFANTRY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "unit-charged-this-turn"
+      ]
+    },
+    "vengeful-hosts-purge-by-sectors": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "FLY",
+              "INFANTRY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "unit-unengaged",
+        "unit-eligible-to-fight"
+      ]
+    },
+    "vengeful-hosts-know-no-fear": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "unit-is-battle-shocked"
+      ]
     }
   }
 }

@@ -59,8 +59,8 @@ const categories = [...source.matchAll(/<section class="content-group" id="(data
   });
 
 const units = categories.flatMap(category => category.units);
-if (detachments.length !== 9 || units.length !== 36) {
-  throw new Error(`Expected 9 detachments and 36 datasheets, found ${detachments.length} and ${units.length}: ${categories.map(item => `${item.id}=${item.units.length}`).join(', ')}`);
+if (detachments.length !== 9 || units.length !== 30) {
+  throw new Error(`Expected 9 detachments and 30 datasheets, found ${detachments.length} and ${units.length}: ${categories.map(item => `${item.id}=${item.units.length}`).join(', ')}`);
 }
 
 const staticRoutes = [
@@ -122,7 +122,8 @@ for (const route of routes) {
 }
 for (const context of Object.values(glossaryContext)) {
   const fullRulePath = context.navigation?.fullRulePath || '';
-  if (fullRulePath.startsWith('books/death-guard/reader.html#') && !mobileRulePaths.has(fullRulePath.slice(fullRulePath.indexOf('#') + 1))) {
+  const ruleId = fullRulePath.slice(fullRulePath.indexOf('#') + 1);
+  if (fullRulePath.startsWith('books/death-guard/reader.html#') && source.includes(`id="${ruleId}"`) && !mobileRulePaths.has(ruleId)) {
     throw new Error(`Missing mobile rule route for ${fullRulePath}`);
   }
 }

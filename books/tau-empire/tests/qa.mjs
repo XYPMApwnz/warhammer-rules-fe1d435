@@ -12,7 +12,7 @@ const codex=json('content/tau-empire-codex-datasheets.en.json');
 const parity=json('content/tau-empire-codex-parity.en.json');
 const wargear=json('content/tau-empire-codex-wargear.en.json');
 const points=json('content/tau-empire-points.en.json');
-const mfm=json('sources/official-mfm-v1.1.json');
+const mfm=json('sources/official-mfm-v1.2.json');
 const relatedRules=json('content/tau-empire-related-rules.en.json');
 const manifest=json('sources/source-manifest.json');
 const config=json('book.config.json');
@@ -75,10 +75,10 @@ assert.equal(manifest.layers.find(layer=>layer.id==='faction-pack-v1.1')?.legalF
 assert.deepEqual([pack.detachments.length,pack.detachments.flatMap(item=>item.stratagems).length,pack.updates.length,pack.faqs.length],[3,7,25,2]);
 assert.deepEqual([codex.datasheets.length,codex.imperialArmour.length,codex.legends.length],[39,0,0]);
 assert.deepEqual([parity.detachments.length,parity.detachments.flatMap(item=>item.stratagems).length],[4,24]);
-assert.deepEqual([mfm.version,mfm.verifiedUnits.length,mfm.detachments.length,mfm.enhancements.length],['v1.1',43,7,23]);
+assert.deepEqual([mfm.version,mfm.verifiedUnits.length,mfm.detachments.length,mfm.enhancements.length],['v1.2',39,7,23]);
 assert.equal(wargear.units.length,39);
 assert.equal(points.units.length,39);
-assert.equal(points.units.filter(unit=>unit.pointsSource?.label==='Official MFM v1.1').length,39);
+assert.equal(points.units.filter(unit=>unit.pointsSource?.label==='Official MFM v1.2').length,39);
 assert.equal(Object.keys(relatedRules.stratagems).length,31);
 assert.equal(Object.keys(relatedRules.enhancements).length,23);
 assert.equal(new Set([...pack.detachments,...parity.detachments].map(item=>key(item.title))).size,7);
@@ -209,4 +209,4 @@ assert.equal(stratagemTypes.size,31,'T’au Stratagem map must cover all rendere
 assert.equal([...stratagemTypes.values()].filter(type=>type==='unknown').length,7,'T’au must preserve seven source-untyped Stratagems as unknown');
 assert.equal([...stratagemTypes.values()].filter(type=>type!=='unknown').length,24,'T’au must preserve 24 source-typed Stratagems');
 assert.match(fs.readFileSync(new URL('../scripts/app.js',import.meta.url),'utf8'),/decorateStratagemTypes\(document\)/);
-console.log("T'au Empire QA passed: official v1.1 pack/MFM, 39 Codex datasheets, 7 detachments, exact Wargear, Glossary and Related Rules contracts.");
+console.log("T'au Empire QA passed: official v1.1 pack and v1.2 MFM, 39 Codex datasheets, 7 detachments, exact Wargear, Glossary and Related Rules contracts.");

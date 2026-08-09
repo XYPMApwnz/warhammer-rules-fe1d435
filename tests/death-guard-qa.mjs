@@ -51,7 +51,7 @@ check('audited Faction Pack Stratagem wording stays official',
   ])&&
   ruleById('stratagem-nauseating-paroxysms')?.lines?.[0]==='WHEN: Start of the Fight phase'&&
   ruleById('stratagem-aggravus-spasms')?.lines?.[0]==='WHEN: Start of your Shooting Phase.');
-check('canonical content audit is 9 detachments, 36 datasheets and 366 terms',bookData.audit.detachments===9&&bookData.audit.datasheets===36&&bookData.glossary.length===366);
+check('canonical content audit is 9 detachments, 30 local datasheets and 366 terms',bookData.audit.detachments===9&&bookData.audit.datasheets===30&&bookData.glossary.length===366);
 const plagueEntry=glossaryRegistry.terms['death-guard-plague'];
 check('Plague means the chosen Nurgle’s Gift effect',plagueEntry.summary.en.includes('selected during Declare Battle Formations')&&plagueEntry.definition.en.includes('Skullsquirm Blight, Rattlejoint Ague or Scabrous Soulrot')&&plagueEntry.related.length===5);
 const plagueCards=['skullsquirm-blight','rattlejoint-ague','scabrous-soulrot'].map(id=>{
@@ -69,24 +69,24 @@ check('Mortarion uses the current Faction Pack wording',
   !mortarionAbility.full.includes('move within 9"'));
 check('Miasmic Malignifier uses the canonical Deployment ability name',
   html.includes('<h5>Deployment</h5>')&&!html.includes('<h5>Fortification Setup</h5>'));
-check('Pact of Decay datasheets identify their Tallyband Summoners context',
-  html.includes('Tallyband Summoners Detachment')&&
-  !html.includes('available through the current Pact of Decay army rule'));
+const pactDependencyIds=['unit-beasts-of-nurgle','unit-great-unclean-one','unit-nurglings','unit-plague-drones','unit-plaguebearers','unit-rotigus'];
+check('Pact of Decay dependencies retain their Tallyband Summoners context without becoming local datasheets',pactDependencyIds.every(id=>{const unit=bookData.sections.find(section=>section.id===id);return unit?.local===false&&JSON.stringify(unit).includes('Tallyband Summoners Detachment')&&!html.includes(`id="${id}"`);}));
 check('full gameplay block inventory is present',blockCount('enhancement')===30&&blockCount('rule')===45&&blockCount('statline')===36&&blockCount('weapon')===146,`enhancements ${blockCount('enhancement')}, rules ${blockCount('rule')}, statlines ${blockCount('statline')}, weapons ${blockCount('weapon')}`);
 check('all navigation targets exist',navTargets.every(id=>idSet.has(id)),navTargets.filter(id=>!idSet.has(id)).join(', '));
 check('all navigation targets have tracked ranges',navTargets.every(id=>trackTargets.includes(id)),navTargets.filter(id=>!trackTargets.includes(id)).join(', '));
-check('navigation covers the gameplay tree without inline glossary branches',navTargets.length===93&&!navTargets.some(id=>id==='glossary'||id==='core-stratagems'||id.startsWith('glossary-')),String(navTargets.length));
+check('navigation covers the gameplay tree without inline glossary branches',navTargets.length===86&&!navTargets.some(id=>id==='glossary'||id==='core-stratagems'||id.startsWith('glossary-')),String(navTargets.length));
 const depths=[...markup.matchAll(/data-nav-depth="(\d+)"/g)].map(match=>Number(match[1]));
 check('navigation depth is at most three',Math.max(...depths)===3);
-const unitIds=bookData.sections.filter(section=>section.kind==='unit').map(section=>section.id);
-check('all 36 datasheets are global navigation destinations',unitIds.length===36&&unitIds.every(id=>navTargets.includes(id)));
+const unitIds=bookData.sections.filter(section=>section.kind==='unit'&&section.local!==false).map(section=>section.id);
+check('all 30 local datasheets are global navigation destinations',unitIds.length===30&&unitIds.every(id=>navTargets.includes(id)));
 const unitById=id=>bookData.sections.find(section=>section.id===id);
 const legendIds=['unit-death-guard-possessed','unit-death-guard-chaos-lord','unit-death-guard-chaos-lord-in-terminator-armour','unit-death-guard-cultists','unit-death-guard-sorcerer-in-terminator-armour'];
 check('Death Guard Legends datasheets are absent from the published book',legendIds.every(id=>!unitById(id)&&!html.includes(`id="${id}"`)));
 const requiredWargear=['unit-plague-marines','unit-blightlord-terminators','unit-deathshroud-terminators','unit-chaos-land-raider','unit-chaos-predator-annihilator','unit-chaos-predator-destructor','unit-foetid-bloat-drone','unit-helbrute','unit-plagueburst-crawler','unit-chaos-rhino','unit-great-unclean-one','unit-plague-drones','unit-plaguebearers'];
 check('audited datasheets retain every missing Wargear Options block',requiredWargear.every(id=>unitById(id)?.subsections.some(part=>part.title==='Wargear Options')));
 const auditedAbilities=['mortarion-ability-supreme-commander','plague-marines-ability-icon-of-despair-aura','deathshroud-terminators-ability-icon-of-despair-aura','great-unclean-one-ability-reverberating-summons','plague-drones-ability-daemonic-icon','plague-drones-ability-instrument-of-chaos','plaguebearers-ability-daemonic-icon','plaguebearers-ability-instrument-of-chaos','miasmic-malignifier-ability-fortification-setup'];
-check('audited datasheet abilities remain complete',auditedAbilities.every(id=>bookData.sections.some(section=>(section.subsections||[]).some(part=>(part.blocks||[]).some(block=>block.id===id)))&&html.includes(`id="${id}"`)));
+const renderedAuditedAbilities=auditedAbilities.filter(id=>!/(?:great-unclean-one|plague-drones|plaguebearers)/.test(id));
+check('audited datasheet abilities remain complete',auditedAbilities.every(id=>bookData.sections.some(section=>(section.subsections||[]).some(part=>(part.blocks||[]).some(block=>block.id===id))))&&renderedAuditedAbilities.every(id=>html.includes(`id="${id}"`)));
 const pointValue=(id,label)=>unitById(id)?.points.find(row=>row.label===label)?.value;
 check('Death Guard points match Munitorum Field Manual v1.1',bookData.audit.currentMFM==='v1.1'&&pointValue('unit-mortarion','1 model')===390&&pointValue('unit-plague-marines','10 models')===180&&pointValue('unit-deathshroud-terminators','1st–2nd unit: 6 models')===305&&pointValue('unit-defiler','2nd+ unit: 1 model')===340&&pointValue('unit-chaos-rhino','1st–3rd unit: 1 model')===75);
 check('Contagion Engines separates rules and MFM provenance',JSON.stringify(bookData).includes('Rules source: Death Guard Faction Pack v1.0, p.2. Force Disposition and Detachment Points: Munitorum Field Manual v1.1, 22 July 2026.')&&html.includes('Rules source: Death Guard Faction Pack v1.0, p.2. Force Disposition and Detachment Points: Munitorum Field Manual v1.1, 22 July 2026.'));

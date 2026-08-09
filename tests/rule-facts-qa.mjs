@@ -57,7 +57,7 @@ function mechanicusSource(){
 
 function deathGuardSource(){
   const book=read('books/death-guard/content/death-guard-rules.en.json'),result=new Map();
-  for(const unit of book.sections.filter(section=>section.kind==='unit')){
+  for(const unit of book.sections.filter(section=>section.kind==='unit'&&section.local!==false)){
     const keywordText=(unit.subsections||[]).find(section=>section.title==='Keywords')?.blocks?.map(block=>block.text||'').join(' ')||'';
     const intrinsic=(keywordText.match(/Keywords:\s*(.*?)\.\s*Faction Keywords:/i)?.[1]||'').split(/[,;]/).map(value=>value.trim()).filter(Boolean);
     const faction=(keywordText.match(/Faction Keywords:\s*([^.]*)/i)?.[1]||'').split(/[,;]/).map(value=>value.trim()).filter(Boolean);

@@ -1185,6 +1185,14 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "magma-cutters",
+      "termIds": [
+        "death-guard-weapon-magma-cutters-defiler",
+        "emperors-children-weapon-magma-cutters"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "electroscourge",
       "termIds": [
         "death-guard-weapon-electroscourge-defiler",
@@ -1472,14 +1480,6 @@
         "tau-empire-ability-damaged-1-5-wounds-remaining",
         "tau-empire-ability-damaged-1-5-wounds-remaining-2",
         "tyranids-ability-damaged-1-5-wounds-remaining"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "magma-cutter",
-      "termIds": [
-        "emperors-children-weapon-magma-cutter",
-        "emperors-children-weapon-magma-cutter-2"
       ],
       "status": "review-required"
     },

@@ -818,7 +818,8 @@
         "datasheet": "unit-fulgrim",
         "statline": "fulgrim-profile",
         "units": [
-          "unit-fulgrim"
+          "unit-fulgrim",
+          "unit-defiler"
         ]
       }
     },
@@ -1338,10 +1339,10 @@
         ]
       }
     },
-    "emperors-children-weapon-magma-cutter": {
-      "termId": "emperors-children-weapon-magma-cutter",
+    "emperors-children-weapon-magma-cutters": {
+      "termId": "emperors-children-weapon-magma-cutters",
       "navigation": {
-        "glossary": "glossary-emperors-children-weapon-magma-cutter",
+        "glossary": "glossary-emperors-children-weapon-magma-cutters",
         "rule": "unit-defiler",
         "datasheet": "unit-defiler",
         "statline": "defiler-profile",
@@ -1422,10 +1423,10 @@
         ]
       }
     },
-    "emperors-children-weapon-magma-cutter-2": {
-      "termId": "emperors-children-weapon-magma-cutter-2",
+    "emperors-children-weapon-magma-cutter": {
+      "termId": "emperors-children-weapon-magma-cutter",
       "navigation": {
-        "glossary": "glossary-emperors-children-weapon-magma-cutter-2",
+        "glossary": "glossary-emperors-children-weapon-magma-cutter",
         "rule": "unit-maulerfiend",
         "datasheet": "unit-maulerfiend",
         "statline": "maulerfiend-profile",

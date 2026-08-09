@@ -1179,6 +1179,24 @@ window.DG_TERMS={
       "unit-impulsor",
       "unit-razorback",
       "unit-rhino",
+      "unit-adrax-agatone",
+      "unit-aethon-shaan",
+      "unit-caanok-var",
+      "unit-cato-sicarius",
+      "unit-chief-librarian-tigurius",
+      "unit-darnath-lysander",
+      "unit-iron-father-feirros",
+      "unit-kayvaan-shrike",
+      "unit-korsarro-khan",
+      "unit-lieutenant-titus",
+      "unit-marneus-calgar-in-armour-of-antilochus",
+      "unit-pedro-kantor",
+      "unit-roboute-guilliman",
+      "unit-suboden-khan",
+      "unit-tor-garadon",
+      "unit-uriel-ventris",
+      "unit-vulkan-hestan",
+      "unit-hammerfall-bunker",
       "unit-aggressor-squad",
       "unit-assault-intercessors-with-jump-packs",
       "unit-bladeguard-veteran-squad",
@@ -1201,7 +1219,9 @@ window.DG_TERMS={
       "unit-terminator-assault-squad",
       "unit-terminator-squad",
       "unit-vanguard-veteran-squad-with-jump-packs",
-      "unit-astraeus",
+      "unit-victrix-honour-guard",
+      "unit-invader-atv",
+      "unit-outrider-squad",
       "unit-ballistus-dreadnought",
       "unit-brutalis-dreadnought",
       "unit-dreadnought",
@@ -1209,100 +1229,16 @@ window.DG_TERMS={
       "unit-gladiator-lancer",
       "unit-gladiator-reaper",
       "unit-gladiator-valiant",
-      "unit-hammerfall-bunker",
-      "unit-invader-atv",
       "unit-invictor-tactical-warsuit",
       "unit-land-raider",
       "unit-land-raider-crusader",
       "unit-land-raider-redeemer",
       "unit-land-speeder",
-      "unit-outrider-squad",
       "unit-predator-annihilator",
       "unit-predator-destructor",
       "unit-redemptor-dreadnought",
       "unit-repulsor",
       "unit-repulsor-executioner",
-      "unit-storm-speeder-hailstrike",
-      "unit-storm-speeder-hammerstrike",
-      "unit-storm-speeder-thunderstrike",
-      "unit-stormhawk-interceptor",
-      "unit-stormraven-gunship",
-      "unit-stormtalon-gunship",
-      "unit-vindicator",
-      "unit-whirlwind"
-    ],
-    "datasheet": "unit-assault-intercessor-squad",
-    "statline": "assault-intercessor-squad-profile"
-  },
-  "space-marines-ability-templar-vows": {
-    "id": "space-marines-ability-templar-vows",
-    "title": "Templar Vows",
-    "summary": "If your Army Faction is Adeptus Astartes, at the start of the first battle round, select one of the following Vows to be active for Adeptus Astartes units from your army. While a Vow is active for your army, that unit has the associated ability below. Abhor the Witch, Destroy the Witch ■ Each time this unit declares a charge, if one or more targets of that charge have the Psyker keyword, you can re-roll the Charge roll. Melee weapons equipped by models in this unit have the [PRECISION] ability while targeting Psyker units. Accept Any Challenge, No Matter the Odds ■ Each time a model in this unit makes a melee attack, if the Strength characteristic of that attack is less than or equal to the Toughness characteristic of the target, add 1 to the wound roll Suffer Not the Unclean to Live ■ This unit is eligible to declare a charge in a turn in which it Fell Back, and each time a model in this unit makes a Pile-in or Consolidation move, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the nearest enemy unit. Uphold the Honour of the Emperor If this unit has the Infantry keyword: ■ At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of control over that objective marker is greater than yours at the end of the phase. ■ If the mission you are playing features Actions, this unit is eligible to start to perform an Action in a turn in which it Advanced.",
-    "full": "If your Army Faction is Adeptus Astartes, at the start of the first battle round, select one of the following Vows to be active for Adeptus Astartes units from your army. While a Vow is active for your army, that unit has the associated ability below. Abhor the Witch, Destroy the Witch ■ Each time this unit declares a charge, if one or more targets of that charge have the Psyker keyword, you can re-roll the Charge roll. Melee weapons equipped by models in this unit have the [PRECISION] ability while targeting Psyker units. Accept Any Challenge, No Matter the Odds ■ Each time a model in this unit makes a melee attack, if the Strength characteristic of that attack is less than or equal to the Toughness characteristic of the target, add 1 to the wound roll Suffer Not the Unclean to Live ■ This unit is eligible to declare a charge in a turn in which it Fell Back, and each time a model in this unit makes a Pile-in or Consolidation move, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the nearest enemy unit. Uphold the Honour of the Emperor If this unit has the Infantry keyword: ■ At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of control over that objective marker is greater than yours at the end of the phase. ■ If the mission you are playing features Actions, this unit is eligible to start to perform an Action in a turn in which it Advanced.",
-    "glossary": "glossary-space-marines-ability-templar-vows",
-    "rule": "unit-assault-intercessor-squad",
-    "units": [
-      "unit-assault-intercessor-squad",
-      "unit-heavy-intercessor-squad",
-      "unit-intercessor-squad",
-      "unit-tactical-squad",
-      "unit-ancient",
-      "unit-ancient-in-terminator-armor",
-      "unit-apothecary",
-      "unit-apothecary-biologis",
-      "unit-bladeguard-ancient",
-      "unit-captain",
-      "unit-captain-in-gravis-armour",
-      "unit-captain-in-phobos-armour",
-      "unit-captain-in-terminator-armour",
-      "unit-captain-with-jump-pack",
-      "unit-chaplain",
-      "unit-chaplain-in-terminator-armour",
-      "unit-chaplain-on-bike",
-      "unit-chaplain-with-jump-pack",
-      "unit-judiciar",
-      "unit-lieutenant",
-      "unit-lieutenant-in-phobos-armour",
-      "unit-lieutenant-in-reiver-armour",
-      "unit-lieutenant-with-combi-weapon",
-      "unit-techmarine",
-      "unit-drop-pod",
-      "unit-razorback",
-      "unit-rhino",
-      "unit-aggressor-squad",
-      "unit-assault-intercessors-with-jump-packs",
-      "unit-bladeguard-veteran-squad",
-      "unit-centurion-assault-squad",
-      "unit-centurion-devastator-squad",
-      "unit-company-heroes",
-      "unit-desolation-squad",
-      "unit-devastator-squad",
-      "unit-eliminator-squad",
-      "unit-eradicator-squad",
-      "unit-hellblaster-squad",
-      "unit-inceptor-squad",
-      "unit-incursor-squad",
-      "unit-infernus-squad",
-      "unit-infiltrator-squad",
-      "unit-reiver-squad",
-      "unit-scout-squad",
-      "unit-suppressor-squad",
-      "unit-terminator-assault-squad",
-      "unit-vanguard-veteran-squad-with-jump-packs",
-      "unit-astraeus",
-      "unit-ballistus-dreadnought",
-      "unit-brutalis-dreadnought",
-      "unit-dreadnought",
-      "unit-hammerfall-bunker",
-      "unit-invader-atv",
-      "unit-invictor-tactical-warsuit",
-      "unit-land-raider",
-      "unit-land-raider-redeemer",
-      "unit-land-speeder",
-      "unit-outrider-squad",
-      "unit-predator-annihilator",
-      "unit-predator-destructor",
-      "unit-redemptor-dreadnought",
       "unit-storm-speeder-hailstrike",
       "unit-storm-speeder-hammerstrike",
       "unit-storm-speeder-thunderstrike",
@@ -1392,6 +1328,7 @@ window.DG_TERMS={
       "unit-assault-intercessor-squad",
       "unit-bladeguard-ancient",
       "unit-captain-with-jump-pack",
+      "unit-wardens-of-ultramar",
       "unit-assault-intercessors-with-jump-packs",
       "unit-bladeguard-veteran-squad",
       "unit-vanguard-veteran-squad-with-jump-packs",
@@ -1597,7 +1534,8 @@ window.DG_TERMS={
     "rule": "unit-intercessor-squad",
     "units": [
       "unit-intercessor-squad",
-      "unit-ancient"
+      "unit-ancient",
+      "unit-wardens-of-ultramar"
     ],
     "datasheet": "unit-intercessor-squad",
     "statline": "intercessor-squad-profile"
@@ -1761,7 +1699,6 @@ window.DG_TERMS={
       "unit-razorback",
       "unit-rhino",
       "unit-terminator-squad",
-      "unit-astraeus",
       "unit-dreadnought",
       "unit-gladiator-lancer",
       "unit-land-raider",
@@ -2241,21 +2178,6 @@ window.DG_TERMS={
     "datasheet": "unit-bladeguard-ancient",
     "statline": "bladeguard-ancient-profile"
   },
-  "space-marines-ability-relic-shield": {
-    "id": "space-marines-ability-relic-shield",
-    "title": "Relic Shield",
-    "summary": "Add 1 to the bearer's Wounds characteristic.",
-    "full": "Add 1 to the bearer's Wounds characteristic.",
-    "glossary": "glossary-space-marines-ability-relic-shield",
-    "rule": "unit-captain",
-    "units": [
-      "unit-captain",
-      "unit-captain-with-jump-pack",
-      "unit-chaplain-in-terminator-armour"
-    ],
-    "datasheet": "unit-captain",
-    "statline": "captain-profile"
-  },
   "space-marines-ability-finest-hour": {
     "id": "space-marines-ability-finest-hour",
     "title": "Finest Hour",
@@ -2282,6 +2204,21 @@ window.DG_TERMS={
       "unit-captain-in-phobos-armour",
       "unit-captain-in-terminator-armour",
       "unit-captain-with-jump-pack"
+    ],
+    "datasheet": "unit-captain",
+    "statline": "captain-profile"
+  },
+  "space-marines-ability-relic-shield": {
+    "id": "space-marines-ability-relic-shield",
+    "title": "Relic Shield",
+    "summary": "Add 1 to the bearer's Wounds characteristic.",
+    "full": "Add 1 to the bearer's Wounds characteristic.",
+    "glossary": "glossary-space-marines-ability-relic-shield",
+    "rule": "unit-captain",
+    "units": [
+      "unit-captain",
+      "unit-captain-with-jump-pack",
+      "unit-chaplain-in-terminator-armour"
     ],
     "datasheet": "unit-captain",
     "statline": "captain-profile"
@@ -2339,7 +2276,12 @@ window.DG_TERMS={
       "unit-captain",
       "unit-captain-in-phobos-armour",
       "unit-lieutenant",
-      "unit-lieutenant-in-phobos-armour"
+      "unit-lieutenant-in-phobos-armour",
+      "unit-chief-librarian-tigurius",
+      "unit-iron-father-feirros",
+      "unit-korsarro-khan",
+      "unit-uriel-ventris",
+      "unit-vulkan-hestan"
     ],
     "datasheet": "unit-captain",
     "statline": "captain-profile"
@@ -2367,7 +2309,10 @@ window.DG_TERMS={
     "rule": "unit-captain",
     "units": [
       "unit-captain",
-      "unit-lieutenant"
+      "unit-lieutenant",
+      "unit-aethon-shaan",
+      "unit-lieutenant-titus",
+      "unit-suboden-khan"
     ],
     "datasheet": "unit-captain",
     "statline": "captain-profile"
@@ -2859,20 +2804,6 @@ window.DG_TERMS={
     "datasheet": "unit-librarian-in-terminator-armour",
     "statline": "librarian-in-terminator-armour-profile"
   },
-  "space-marines-ability-storm-shield": {
-    "id": "space-marines-ability-storm-shield",
-    "title": "Storm Shield",
-    "summary": "The bearer has a 4+ invulnerable save",
-    "full": "The bearer has a 4+ invulnerable save",
-    "glossary": "glossary-space-marines-ability-storm-shield",
-    "rule": "unit-lieutenant",
-    "units": [
-      "unit-lieutenant",
-      "unit-vanguard-veteran-squad-with-jump-packs"
-    ],
-    "datasheet": "unit-lieutenant",
-    "statline": "lieutenant-profile"
-  },
   "space-marines-ability-target-priority": {
     "id": "space-marines-ability-target-priority",
     "title": "Target Priority",
@@ -2901,6 +2832,20 @@ window.DG_TERMS={
     "datasheet": "unit-lieutenant",
     "statline": "lieutenant-profile"
   },
+  "space-marines-ability-storm-shield": {
+    "id": "space-marines-ability-storm-shield",
+    "title": "Storm Shield",
+    "summary": "The bearer has a 4+ invulnerable save",
+    "full": "The bearer has a 4+ invulnerable save",
+    "glossary": "glossary-space-marines-ability-storm-shield",
+    "rule": "unit-lieutenant",
+    "units": [
+      "unit-lieutenant",
+      "unit-vanguard-veteran-squad-with-jump-packs"
+    ],
+    "datasheet": "unit-lieutenant",
+    "statline": "lieutenant-profile"
+  },
   "space-marines-weapon-master-crafted-power-weapon-2": {
     "id": "space-marines-weapon-master-crafted-power-weapon-2",
     "title": "Master-crafted power weapon",
@@ -2909,7 +2854,9 @@ window.DG_TERMS={
     "glossary": "glossary-space-marines-weapon-master-crafted-power-weapon-2",
     "rule": "unit-lieutenant",
     "units": [
-      "unit-lieutenant"
+      "unit-lieutenant",
+      "unit-wardens-of-ultramar",
+      "unit-victrix-honour-guard"
     ],
     "datasheet": "unit-lieutenant",
     "statline": "lieutenant-profile"
@@ -3335,7 +3282,6 @@ window.DG_TERMS={
     "rule": "unit-impulsor",
     "units": [
       "unit-impulsor",
-      "unit-astraeus",
       "unit-gladiator-lancer",
       "unit-gladiator-reaper",
       "unit-gladiator-valiant",
@@ -3380,7 +3326,6 @@ window.DG_TERMS={
     "units": [
       "unit-razorback",
       "unit-centurion-devastator-squad",
-      "unit-astraeus",
       "unit-brutalis-dreadnought",
       "unit-land-raider",
       "unit-repulsor",
@@ -3402,7 +3347,6 @@ window.DG_TERMS={
     "units": [
       "unit-razorback",
       "unit-centurion-devastator-squad",
-      "unit-astraeus",
       "unit-dreadnought",
       "unit-repulsor",
       "unit-stormraven-gunship",
@@ -3475,6 +3419,1317 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-rhino",
     "statline": "rhino-profile"
+  },
+  "space-marines-ability-unto-the-anvil": {
+    "id": "space-marines-ability-unto-the-anvil",
+    "title": "Unto the Anvil",
+    "summary": "While this model is leading a unit, each time a model in that unit makes a melee attack, you can re-roll the Wound roll.",
+    "full": "While this model is leading a unit, each time a model in that unit makes a melee attack, you can re-roll the Wound roll.",
+    "glossary": "glossary-space-marines-ability-unto-the-anvil",
+    "rule": "unit-adrax-agatone",
+    "units": [
+      "unit-adrax-agatone"
+    ],
+    "datasheet": "unit-adrax-agatone",
+    "statline": "adrax-agatone-profile"
+  },
+  "space-marines-ability-lord-of-the-pyroclasts": {
+    "id": "space-marines-ability-lord-of-the-pyroclasts",
+    "title": "Lord of the Pyroclasts",
+    "summary": "While an enemy unit is within Engagement Range of this model, halve the Objective Control characteristic of models in that enemy unit",
+    "full": "While an enemy unit is within Engagement Range of this model, halve the Objective Control characteristic of models in that enemy unit",
+    "glossary": "glossary-space-marines-ability-lord-of-the-pyroclasts",
+    "rule": "unit-adrax-agatone",
+    "units": [
+      "unit-adrax-agatone"
+    ],
+    "datasheet": "unit-adrax-agatone",
+    "statline": "adrax-agatone-profile"
+  },
+  "space-marines-weapon-drakkis": {
+    "id": "space-marines-weapon-drakkis",
+    "title": "Drakkis",
+    "summary": "Ranged · 12\" · A D6+3 · BS N/A · S 4 · AP -1 · D 1 · Ignores Cover, Pistol, Torrent",
+    "full": "Ranged · 12\" · A D6+3 · BS N/A · S 4 · AP -1 · D 1 · Ignores Cover, Pistol, Torrent",
+    "glossary": "glossary-space-marines-weapon-drakkis",
+    "rule": "unit-adrax-agatone",
+    "units": [
+      "unit-adrax-agatone"
+    ],
+    "datasheet": "unit-adrax-agatone",
+    "statline": "adrax-agatone-profile"
+  },
+  "space-marines-weapon-malleus-noctum": {
+    "id": "space-marines-weapon-malleus-noctum",
+    "title": "Malleus Noctum",
+    "summary": "Melee · Melee · A 5 · WS 2+ · S 10 · AP -2 · D 3",
+    "full": "Melee · Melee · A 5 · WS 2+ · S 10 · AP -2 · D 3",
+    "glossary": "glossary-space-marines-weapon-malleus-noctum",
+    "rule": "unit-adrax-agatone",
+    "units": [
+      "unit-adrax-agatone"
+    ],
+    "datasheet": "unit-adrax-agatone",
+    "statline": "adrax-agatone-profile"
+  },
+  "space-marines-ability-chapter-master-of-the-raven-guard": {
+    "id": "space-marines-ability-chapter-master-of-the-raven-guard",
+    "title": "Chapter Master of the Raven Guard",
+    "summary": "At the start of the Declare Battle Formations step, if your army includes Aethon Shaan and Kayvaan Shrike, until the end of the battle, your Kayvaan Shrike unit loses its Lone Operative ability and it replaces its Chapter Master keyword with Captain.",
+    "full": "At the start of the Declare Battle Formations step, if your army includes Aethon Shaan and Kayvaan Shrike, until the end of the battle, your Kayvaan Shrike unit loses its Lone Operative ability and it replaces its Chapter Master keyword with Captain.",
+    "glossary": "glossary-space-marines-ability-chapter-master-of-the-raven-guard",
+    "rule": "unit-aethon-shaan",
+    "units": [
+      "unit-aethon-shaan"
+    ],
+    "datasheet": "unit-aethon-shaan",
+    "statline": "aethon-shaan-profile"
+  },
+  "space-marines-ability-master-of-shadows": {
+    "id": "space-marines-ability-master-of-shadows",
+    "title": "Master of Shadows",
+    "summary": "In your Command phase, you can select one unit from your opponent’s army. Until the start of your next Command phase, each time an Adeptus Astartes unit from your army declares a charge while it is within 12\" of that enemy unit, you can re-roll the Charge roll, but it must declare that enemy unit as a target of that charge (if possible).",
+    "full": "In your Command phase, you can select one unit from your opponent’s army. Until the start of your next Command phase, each time an Adeptus Astartes unit from your army declares a charge while it is within 12\" of that enemy unit, you can re-roll the Charge roll, but it must declare that enemy unit as a target of that charge (if possible).",
+    "glossary": "glossary-space-marines-ability-master-of-shadows",
+    "rule": "unit-aethon-shaan",
+    "units": [
+      "unit-aethon-shaan"
+    ],
+    "datasheet": "unit-aethon-shaan",
+    "statline": "aethon-shaan-profile"
+  },
+  "space-marines-ability-blackwing-mantle": {
+    "id": "space-marines-ability-blackwing-mantle",
+    "title": "Blackwing Mantle",
+    "summary": "You can target this model’s unit with the Rapid Ingress and Heroic Intervention Stratagems for 0CP, even if you have already used that Stratagem on a different unit this phase.",
+    "full": "You can target this model’s unit with the Rapid Ingress and Heroic Intervention Stratagems for 0CP, even if you have already used that Stratagem on a different unit this phase.",
+    "glossary": "glossary-space-marines-ability-blackwing-mantle",
+    "rule": "unit-aethon-shaan",
+    "units": [
+      "unit-aethon-shaan"
+    ],
+    "datasheet": "unit-aethon-shaan",
+    "statline": "aethon-shaan-profile"
+  },
+  "space-marines-weapon-claws-of-severax": {
+    "id": "space-marines-weapon-claws-of-severax",
+    "title": "Claws of Severax",
+    "summary": "Melee · Melee · A 7 · WS 2+ · S 5 · AP -2 · D 2 · Sustained Hits 2, Twin-linked",
+    "full": "Melee · Melee · A 7 · WS 2+ · S 5 · AP -2 · D 2 · Sustained Hits 2, Twin-linked",
+    "glossary": "glossary-space-marines-weapon-claws-of-severax",
+    "rule": "unit-aethon-shaan",
+    "units": [
+      "unit-aethon-shaan"
+    ],
+    "datasheet": "unit-aethon-shaan",
+    "statline": "aethon-shaan-profile"
+  },
+  "space-marines-ability-cold-and-calculating": {
+    "id": "space-marines-ability-cold-and-calculating",
+    "title": "Cold and Calculating",
+    "summary": "Each time a model in this model’s unit makes an attack that targets a Monster or Vehicle unit, that attack has the [LETHAL HITS] ability. Each time a model in this model’s unit makes an attack that targets any other unit, that attack has the [SUSTAINED HITS 1] ability.",
+    "full": "Each time a model in this model’s unit makes an attack that targets a Monster or Vehicle unit, that attack has the [LETHAL HITS] ability. Each time a model in this model’s unit makes an attack that targets any other unit, that attack has the [SUSTAINED HITS 1] ability.",
+    "glossary": "glossary-space-marines-ability-cold-and-calculating",
+    "rule": "unit-caanok-var",
+    "units": [
+      "unit-caanok-var"
+    ],
+    "datasheet": "unit-caanok-var",
+    "statline": "caanok-var-profile"
+  },
+  "space-marines-ability-cerebrex-logic-engine": {
+    "id": "space-marines-ability-cerebrex-logic-engine",
+    "title": "Cerebrex Logic Engine",
+    "summary": "■ At the start of the Declare Battle Formations step, you can select one Adeptus Astartes Infantry unit from your army. Until the end of the battle, that unit gains the Scouts 6\" ability. ■ After both players have deployed their armies, you can select one Adeptus Astartes unit from your army and redeploy it. When doing so, you can set that unit up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
+    "full": "■ At the start of the Declare Battle Formations step, you can select one Adeptus Astartes Infantry unit from your army. Until the end of the battle, that unit gains the Scouts 6\" ability. ■ After both players have deployed their armies, you can select one Adeptus Astartes unit from your army and redeploy it. When doing so, you can set that unit up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
+    "glossary": "glossary-space-marines-ability-cerebrex-logic-engine",
+    "rule": "unit-caanok-var",
+    "units": [
+      "unit-caanok-var"
+    ],
+    "datasheet": "unit-caanok-var",
+    "statline": "caanok-var-profile"
+  },
+  "space-marines-weapon-axiom-strike": {
+    "id": "space-marines-weapon-axiom-strike",
+    "title": "Axiom - Strike",
+    "summary": "Melee · Melee · A 5 · WS 2+ · S 8 · AP -2 · D 2",
+    "full": "Melee · Melee · A 5 · WS 2+ · S 8 · AP -2 · D 2",
+    "glossary": "glossary-space-marines-weapon-axiom-strike",
+    "rule": "unit-caanok-var",
+    "units": [
+      "unit-caanok-var"
+    ],
+    "datasheet": "unit-caanok-var",
+    "statline": "caanok-var-profile"
+  },
+  "space-marines-weapon-axiom-sweep": {
+    "id": "space-marines-weapon-axiom-sweep",
+    "title": "Axiom - Sweep",
+    "summary": "Melee · Melee · A 10 · WS 2+ · S 5 · AP -2 · D 1",
+    "full": "Melee · Melee · A 10 · WS 2+ · S 5 · AP -2 · D 1",
+    "glossary": "glossary-space-marines-weapon-axiom-sweep",
+    "rule": "unit-caanok-var",
+    "units": [
+      "unit-caanok-var"
+    ],
+    "datasheet": "unit-caanok-var",
+    "statline": "caanok-var-profile"
+  },
+  "space-marines-weapon-storm-bolter-2": {
+    "id": "space-marines-weapon-storm-bolter-2",
+    "title": "Storm bolter",
+    "summary": "Ranged · 24\" · A 2 · BS 2+ · S 4 · AP 0 · D 1 · Rapid Fire 2",
+    "full": "Ranged · 24\" · A 2 · BS 2+ · S 4 · AP 0 · D 1 · Rapid Fire 2",
+    "glossary": "glossary-space-marines-weapon-storm-bolter-2",
+    "rule": "unit-caanok-var",
+    "units": [
+      "unit-caanok-var"
+    ],
+    "datasheet": "unit-caanok-var",
+    "statline": "caanok-var-profile"
+  },
+  "space-marines-ability-knight-champion-of-macragge": {
+    "id": "space-marines-ability-knight-champion-of-macragge",
+    "title": "Knight Champion of Macragge",
+    "summary": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this model’s unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\".",
+    "full": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this model’s unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\".",
+    "glossary": "glossary-space-marines-ability-knight-champion-of-macragge",
+    "rule": "unit-cato-sicarius",
+    "units": [
+      "unit-cato-sicarius"
+    ],
+    "datasheet": "unit-cato-sicarius",
+    "statline": "cato-sicarius-profile"
+  },
+  "space-marines-ability-honour-or-death": {
+    "id": "space-marines-ability-honour-or-death",
+    "title": "Honour or Death",
+    "summary": "You can target this unit with the Heroic Intervention Stratagem for 0CP, even if you have already used that Stratagem on a different unit this phase.",
+    "full": "You can target this unit with the Heroic Intervention Stratagem for 0CP, even if you have already used that Stratagem on a different unit this phase.",
+    "glossary": "glossary-space-marines-ability-honour-or-death",
+    "rule": "unit-cato-sicarius",
+    "units": [
+      "unit-cato-sicarius"
+    ],
+    "datasheet": "unit-cato-sicarius",
+    "statline": "cato-sicarius-profile"
+  },
+  "space-marines-weapon-artisan-plasma-pistol": {
+    "id": "space-marines-weapon-artisan-plasma-pistol",
+    "title": "Artisan Plasma Pistol",
+    "summary": "Ranged · 12\" · A 1 · BS 2+ · S 8 · AP -3 · D 2 · Pistol",
+    "full": "Ranged · 12\" · A 1 · BS 2+ · S 8 · AP -3 · D 2 · Pistol",
+    "glossary": "glossary-space-marines-weapon-artisan-plasma-pistol",
+    "rule": "unit-cato-sicarius",
+    "units": [
+      "unit-cato-sicarius"
+    ],
+    "datasheet": "unit-cato-sicarius",
+    "statline": "cato-sicarius-profile"
+  },
+  "space-marines-weapon-talassarian-tempest-blade-strike": {
+    "id": "space-marines-weapon-talassarian-tempest-blade-strike",
+    "title": "➤ Talassarian Tempest Blade - Strike",
+    "summary": "Melee · Melee · A 4 · WS 2+ · S 6 · AP -3 · D 3 · Devastating Wounds",
+    "full": "Melee · Melee · A 4 · WS 2+ · S 6 · AP -3 · D 3 · Devastating Wounds",
+    "glossary": "glossary-space-marines-weapon-talassarian-tempest-blade-strike",
+    "rule": "unit-cato-sicarius",
+    "units": [
+      "unit-cato-sicarius"
+    ],
+    "datasheet": "unit-cato-sicarius",
+    "statline": "cato-sicarius-profile"
+  },
+  "space-marines-weapon-talassarian-tempest-blade-coup-de-grace": {
+    "id": "space-marines-weapon-talassarian-tempest-blade-coup-de-grace",
+    "title": "➤ Talassarian Tempest Blade - Coup de Grace",
+    "summary": "Melee · Melee · A 6 · WS 2+ · S 5 · AP -2 · D 2 · Precision",
+    "full": "Melee · Melee · A 6 · WS 2+ · S 5 · AP -2 · D 2 · Precision",
+    "glossary": "glossary-space-marines-weapon-talassarian-tempest-blade-coup-de-grace",
+    "rule": "unit-cato-sicarius",
+    "units": [
+      "unit-cato-sicarius"
+    ],
+    "datasheet": "unit-cato-sicarius",
+    "statline": "cato-sicarius-profile"
+  },
+  "space-marines-weapon-talassarian-tempest-blade-sweep": {
+    "id": "space-marines-weapon-talassarian-tempest-blade-sweep",
+    "title": "➤ Talassarian Tempest Blade - Sweep",
+    "summary": "Melee · Melee · A 9 · WS 2+ · S 5 · AP -2 · D 1 · Sustained Hits 1",
+    "full": "Melee · Melee · A 9 · WS 2+ · S 5 · AP -2 · D 1 · Sustained Hits 1",
+    "glossary": "glossary-space-marines-weapon-talassarian-tempest-blade-sweep",
+    "rule": "unit-cato-sicarius",
+    "units": [
+      "unit-cato-sicarius"
+    ],
+    "datasheet": "unit-cato-sicarius",
+    "statline": "cato-sicarius-profile"
+  },
+  "space-marines-ability-hood-of-hellfire": {
+    "id": "space-marines-ability-hood-of-hellfire",
+    "title": "Hood of Hellfire",
+    "summary": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.",
+    "full": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks and mortal wounds.",
+    "glossary": "glossary-space-marines-ability-hood-of-hellfire",
+    "rule": "unit-chief-librarian-tigurius",
+    "units": [
+      "unit-chief-librarian-tigurius"
+    ],
+    "datasheet": "unit-chief-librarian-tigurius",
+    "statline": "chief-librarian-tigurius-profile"
+  },
+  "space-marines-ability-master-of-prescience-psychic": {
+    "id": "space-marines-ability-master-of-prescience-psychic",
+    "title": "Master of Prescience (Psychic)",
+    "summary": "▪ This unit has Stealth. ▪ Melee attacks that target this unit have -1 to hit rolls. ▪ (Once per battle round, per army) When you target this unit with the Counteroffensive/Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP.",
+    "full": "▪ This unit has Stealth. ▪ Melee attacks that target this unit have -1 to hit rolls. ▪ (Once per battle round, per army) When you target this unit with the Counteroffensive/Fire Overwatch/Heroic Intervention stratagem, that use is -1 CP.",
+    "glossary": "glossary-space-marines-ability-master-of-prescience-psychic",
+    "rule": "unit-chief-librarian-tigurius",
+    "units": [
+      "unit-chief-librarian-tigurius"
+    ],
+    "datasheet": "unit-chief-librarian-tigurius",
+    "statline": "chief-librarian-tigurius-profile"
+  },
+  "space-marines-weapon-storm-of-the-emperors-wrath-witchfire": {
+    "id": "space-marines-weapon-storm-of-the-emperors-wrath-witchfire",
+    "title": "➤ Storm of the Emperor’s Wrath - Witchfire",
+    "summary": "Ranged · 18\" · A D6 · BS 2+ · S 6 · AP -2 · D 2 · Blast, Psychic",
+    "full": "Ranged · 18\" · A D6 · BS 2+ · S 6 · AP -2 · D 2 · Blast, Psychic",
+    "glossary": "glossary-space-marines-weapon-storm-of-the-emperors-wrath-witchfire",
+    "rule": "unit-chief-librarian-tigurius",
+    "units": [
+      "unit-chief-librarian-tigurius"
+    ],
+    "datasheet": "unit-chief-librarian-tigurius",
+    "statline": "chief-librarian-tigurius-profile"
+  },
+  "space-marines-weapon-storm-of-the-emperors-wrath-focused-witchfire": {
+    "id": "space-marines-weapon-storm-of-the-emperors-wrath-focused-witchfire",
+    "title": "➤ Storm of the Emperor’s Wrath - Focused Witchfire",
+    "summary": "Ranged · 18\" · A 2D6 · BS 2+ · S 6 · AP -2 · D 2 · Blast, Hazardous, Psychic",
+    "full": "Ranged · 18\" · A 2D6 · BS 2+ · S 6 · AP -2 · D 2 · Blast, Hazardous, Psychic",
+    "glossary": "glossary-space-marines-weapon-storm-of-the-emperors-wrath-focused-witchfire",
+    "rule": "unit-chief-librarian-tigurius",
+    "units": [
+      "unit-chief-librarian-tigurius"
+    ],
+    "datasheet": "unit-chief-librarian-tigurius",
+    "statline": "chief-librarian-tigurius-profile"
+  },
+  "space-marines-weapon-rod-of-tigurius": {
+    "id": "space-marines-weapon-rod-of-tigurius",
+    "title": "Rod of Tigurius",
+    "summary": "Melee · Melee · A 5 · WS 3+ · S 7 · AP -2 · D D3 · Psychic",
+    "full": "Melee · Melee · A 5 · WS 3+ · S 7 · AP -2 · D D3 · Psychic",
+    "glossary": "glossary-space-marines-weapon-rod-of-tigurius",
+    "rule": "unit-chief-librarian-tigurius",
+    "units": [
+      "unit-chief-librarian-tigurius"
+    ],
+    "datasheet": "unit-chief-librarian-tigurius",
+    "statline": "chief-librarian-tigurius-profile"
+  },
+  "space-marines-ability-icon-of-obstinacy": {
+    "id": "space-marines-ability-icon-of-obstinacy",
+    "title": "Icon of Obstinacy",
+    "summary": "Each time an attack targets this model's unit, if the Strength characteristic of that attack is greater than or equal to the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+    "full": "Each time an attack targets this model's unit, if the Strength characteristic of that attack is greater than or equal to the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+    "glossary": "glossary-space-marines-ability-icon-of-obstinacy",
+    "rule": "unit-darnath-lysander",
+    "units": [
+      "unit-darnath-lysander"
+    ],
+    "datasheet": "unit-darnath-lysander",
+    "statline": "darnath-lysander-profile"
+  },
+  "space-marines-ability-rampart": {
+    "id": "space-marines-ability-rampart",
+    "title": "Rampart",
+    "summary": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 2+ invulnerable save.",
+    "full": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 2+ invulnerable save.",
+    "glossary": "glossary-space-marines-ability-rampart",
+    "rule": "unit-darnath-lysander",
+    "units": [
+      "unit-darnath-lysander"
+    ],
+    "datasheet": "unit-darnath-lysander",
+    "statline": "darnath-lysander-profile"
+  },
+  "space-marines-ability-inspiring-commander": {
+    "id": "space-marines-ability-inspiring-commander",
+    "title": "Inspiring Commander",
+    "summary": "‘If you include this model in your army, until the end of the battle, non-Character models in Terminator Assault Squad and Terminator Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
+    "full": "‘If you include this model in your army, until the end of the battle, non-Character models in Terminator Assault Squad and Terminator Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
+    "glossary": "glossary-space-marines-ability-inspiring-commander",
+    "rule": "unit-darnath-lysander",
+    "units": [
+      "unit-darnath-lysander"
+    ],
+    "datasheet": "unit-darnath-lysander",
+    "statline": "darnath-lysander-profile"
+  },
+  "space-marines-weapon-fist-of-dorn": {
+    "id": "space-marines-weapon-fist-of-dorn",
+    "title": "Fist of Dorn",
+    "summary": "Melee · Melee · A 5 · WS 2+ · S 10 · AP -3 · D 3 · Devastating Wounds",
+    "full": "Melee · Melee · A 5 · WS 2+ · S 10 · AP -3 · D 3 · Devastating Wounds",
+    "glossary": "glossary-space-marines-weapon-fist-of-dorn",
+    "rule": "unit-darnath-lysander",
+    "units": [
+      "unit-darnath-lysander"
+    ],
+    "datasheet": "unit-darnath-lysander",
+    "statline": "darnath-lysander-profile"
+  },
+  "space-marines-ability-rites-of-tempering": {
+    "id": "space-marines-ability-rites-of-tempering",
+    "title": "Rites of Tempering",
+    "summary": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability",
+    "full": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability",
+    "glossary": "glossary-space-marines-ability-rites-of-tempering",
+    "rule": "unit-iron-father-feirros",
+    "units": [
+      "unit-iron-father-feirros"
+    ],
+    "datasheet": "unit-iron-father-feirros",
+    "statline": "iron-father-feirros-profile"
+  },
+  "space-marines-ability-iron-father": {
+    "id": "space-marines-ability-iron-father",
+    "title": "Iron Father",
+    "summary": "While this model is within 3\" of one or more friendly Adeptus Astartes Vehicle units, it has the Lone Operative ability.",
+    "full": "While this model is within 3\" of one or more friendly Adeptus Astartes Vehicle units, it has the Lone Operative ability.",
+    "glossary": "glossary-space-marines-ability-iron-father",
+    "rule": "unit-iron-father-feirros",
+    "units": [
+      "unit-iron-father-feirros"
+    ],
+    "datasheet": "unit-iron-father-feirros",
+    "statline": "iron-father-feirros-profile"
+  },
+  "space-marines-ability-master-of-the-forge": {
+    "id": "space-marines-ability-master-of-the-forge",
+    "title": "Master of the Forge",
+    "summary": "In your Command phase, select one friendly Adeptus Astartes Vehicle model within 3\" of this model. That model regains up to 3 lost wounds and, until the start of your next Command phase, each time that Vehicle model makes an attack, add 1 to the Hit roll. You cannot select a unit for this ability that has already been selected for the Blessing of the Omnissiah ability this phase, and vice versa.",
+    "full": "In your Command phase, select one friendly Adeptus Astartes Vehicle model within 3\" of this model. That model regains up to 3 lost wounds and, until the start of your next Command phase, each time that Vehicle model makes an attack, add 1 to the Hit roll. You cannot select a unit for this ability that has already been selected for the Blessing of the Omnissiah ability this phase, and vice versa.",
+    "glossary": "glossary-space-marines-ability-master-of-the-forge",
+    "rule": "unit-iron-father-feirros",
+    "units": [
+      "unit-iron-father-feirros"
+    ],
+    "datasheet": "unit-iron-father-feirros",
+    "statline": "iron-father-feirros-profile"
+  },
+  "space-marines-ability-inspiring-commander-2": {
+    "id": "space-marines-ability-inspiring-commander-2",
+    "title": "Inspiring Commander",
+    "summary": "If you include this model in your army, until the end of the battle, non-Character models in Heavy Intercessor Squad units from your army have an Objective Control characteristic of 3 while they are not Battle-shocked.",
+    "full": "If you include this model in your army, until the end of the battle, non-Character models in Heavy Intercessor Squad units from your army have an Objective Control characteristic of 3 while they are not Battle-shocked.",
+    "glossary": "glossary-space-marines-ability-inspiring-commander-2",
+    "rule": "unit-iron-father-feirros",
+    "units": [
+      "unit-iron-father-feirros"
+    ],
+    "datasheet": "unit-iron-father-feirros",
+    "statline": "iron-father-feirros-profile"
+  },
+  "space-marines-weapon-gorgons-wrath": {
+    "id": "space-marines-weapon-gorgons-wrath",
+    "title": "Gorgon's Wrath",
+    "summary": "Ranged · 36\" · A 3 · BS 2+ · S 5 · AP -1 · D 2 · Sustained Hits 2",
+    "full": "Ranged · 36\" · A 3 · BS 2+ · S 5 · AP -1 · D 2 · Sustained Hits 2",
+    "glossary": "glossary-space-marines-weapon-gorgons-wrath",
+    "rule": "unit-iron-father-feirros",
+    "units": [
+      "unit-iron-father-feirros"
+    ],
+    "datasheet": "unit-iron-father-feirros",
+    "statline": "iron-father-feirros-profile"
+  },
+  "space-marines-weapon-harrowhand": {
+    "id": "space-marines-weapon-harrowhand",
+    "title": "Harrowhand",
+    "summary": "Melee · Melee · A 6 · WS 3+ · S 7 · AP -2 · D 2",
+    "full": "Melee · Melee · A 6 · WS 3+ · S 7 · AP -2 · D 2",
+    "glossary": "glossary-space-marines-weapon-harrowhand",
+    "rule": "unit-iron-father-feirros",
+    "units": [
+      "unit-iron-father-feirros"
+    ],
+    "datasheet": "unit-iron-father-feirros",
+    "statline": "iron-father-feirros-profile"
+  },
+  "space-marines-weapon-medusan-manipuli": {
+    "id": "space-marines-weapon-medusan-manipuli",
+    "title": "Medusan Manipuli",
+    "summary": "Melee · Melee · A 2 · WS 3+ · S 8 · AP -2 · D 3 · Extra Attacks",
+    "full": "Melee · Melee · A 2 · WS 3+ · S 8 · AP -2 · D 3 · Extra Attacks",
+    "glossary": "glossary-space-marines-weapon-medusan-manipuli",
+    "rule": "unit-iron-father-feirros",
+    "units": [
+      "unit-iron-father-feirros"
+    ],
+    "datasheet": "unit-iron-father-feirros",
+    "statline": "iron-father-feirros-profile"
+  },
+  "space-marines-ability-trifold-path-of-shadow": {
+    "id": "space-marines-ability-trifold-path-of-shadow",
+    "title": "Trifold Path of Shadow",
+    "summary": "While this model is leading a unit, models in this unit cannot be targeted by ranged attacks unless the attacking model is within 12\".",
+    "full": "While this model is leading a unit, models in this unit cannot be targeted by ranged attacks unless the attacking model is within 12\".",
+    "glossary": "glossary-space-marines-ability-trifold-path-of-shadow",
+    "rule": "unit-kayvaan-shrike",
+    "units": [
+      "unit-kayvaan-shrike"
+    ],
+    "datasheet": "unit-kayvaan-shrike",
+    "statline": "kayvaan-shrike-profile"
+  },
+  "space-marines-ability-echo-of-the-ravenspire": {
+    "id": "space-marines-ability-echo-of-the-ravenspire",
+    "title": "Echo of the Ravenspire",
+    "summary": "At the end of your opponent’s turn, if this model’s unit is not within Engagement Range of any enemy models, you can remove it from the battlefield and place it into Strategic Reserves.",
+    "full": "At the end of your opponent’s turn, if this model’s unit is not within Engagement Range of any enemy models, you can remove it from the battlefield and place it into Strategic Reserves.",
+    "glossary": "glossary-space-marines-ability-echo-of-the-ravenspire",
+    "rule": "unit-kayvaan-shrike",
+    "units": [
+      "unit-kayvaan-shrike"
+    ],
+    "datasheet": "unit-kayvaan-shrike",
+    "statline": "kayvaan-shrike-profile"
+  },
+  "space-marines-ability-inspiring-commander-3": {
+    "id": "space-marines-ability-inspiring-commander-3",
+    "title": "Inspiring Commander",
+    "summary": "If you include this model in your army, until the end of the battle, non-Character models in Assault Intercessors with Jump Packs units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
+    "full": "If you include this model in your army, until the end of the battle, non-Character models in Assault Intercessors with Jump Packs units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
+    "glossary": "glossary-space-marines-ability-inspiring-commander-3",
+    "rule": "unit-kayvaan-shrike",
+    "units": [
+      "unit-kayvaan-shrike"
+    ],
+    "datasheet": "unit-kayvaan-shrike",
+    "statline": "kayvaan-shrike-profile"
+  },
+  "space-marines-weapon-blackout": {
+    "id": "space-marines-weapon-blackout",
+    "title": "Blackout",
+    "summary": "Ranged · 18\" · A 2 · BS 2+ · S 5 · AP -1 · D 2 · Pistol, Precision",
+    "full": "Ranged · 18\" · A 2 · BS 2+ · S 5 · AP -1 · D 2 · Pistol, Precision",
+    "glossary": "glossary-space-marines-weapon-blackout",
+    "rule": "unit-kayvaan-shrike",
+    "units": [
+      "unit-kayvaan-shrike"
+    ],
+    "datasheet": "unit-kayvaan-shrike",
+    "statline": "kayvaan-shrike-profile"
+  },
+  "space-marines-weapon-the-ravens-talons": {
+    "id": "space-marines-weapon-the-ravens-talons",
+    "title": "The Raven's Talons",
+    "summary": "Melee · Melee · A 7 · WS 2+ · S 5 · AP -2 · D 2 · Precision, Twin-linked",
+    "full": "Melee · Melee · A 7 · WS 2+ · S 5 · AP -2 · D 2 · Precision, Twin-linked",
+    "glossary": "glossary-space-marines-weapon-the-ravens-talons",
+    "rule": "unit-kayvaan-shrike",
+    "units": [
+      "unit-kayvaan-shrike"
+    ],
+    "datasheet": "unit-kayvaan-shrike",
+    "statline": "kayvaan-shrike-profile"
+  },
+  "space-marines-ability-for-the-khan": {
+    "id": "space-marines-ability-for-the-khan",
+    "title": "For the Khan!",
+    "summary": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability and melee weapons equipped by models in that unit have the [LANCE] ability.",
+    "full": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability and melee weapons equipped by models in that unit have the [LANCE] ability.",
+    "glossary": "glossary-space-marines-ability-for-the-khan",
+    "rule": "unit-korsarro-khan",
+    "units": [
+      "unit-korsarro-khan"
+    ],
+    "datasheet": "unit-korsarro-khan",
+    "statline": "korsarro-khan-profile"
+  },
+  "space-marines-ability-trophy-taker": {
+    "id": "space-marines-ability-trophy-taker",
+    "title": "Trophy Taker",
+    "summary": "Each time this model destroys an enemy Character model, you gain 1CP",
+    "full": "Each time this model destroys an enemy Character model, you gain 1CP",
+    "glossary": "glossary-space-marines-ability-trophy-taker",
+    "rule": "unit-korsarro-khan",
+    "units": [
+      "unit-korsarro-khan"
+    ],
+    "datasheet": "unit-korsarro-khan",
+    "statline": "korsarro-khan-profile"
+  },
+  "space-marines-ability-inspiring-commander-4": {
+    "id": "space-marines-ability-inspiring-commander-4",
+    "title": "Inspiring Commander",
+    "summary": "If you include this model in your army, until the end of the battle, non-Character models in Outrider Squad units from your army have an Objective Control characteristic of 3 while they are not Battle-shocked.",
+    "full": "If you include this model in your army, until the end of the battle, non-Character models in Outrider Squad units from your army have an Objective Control characteristic of 3 while they are not Battle-shocked.",
+    "glossary": "glossary-space-marines-ability-inspiring-commander-4",
+    "rule": "unit-korsarro-khan",
+    "units": [
+      "unit-korsarro-khan"
+    ],
+    "datasheet": "unit-korsarro-khan",
+    "statline": "korsarro-khan-profile"
+  },
+  "space-marines-weapon-moonfang": {
+    "id": "space-marines-weapon-moonfang",
+    "title": "Moonfang",
+    "summary": "Melee · Melee · A 6 · WS 2+ · S 5 · AP -2 · D 2 · Devastating Wounds, Precision",
+    "full": "Melee · Melee · A 6 · WS 2+ · S 5 · AP -2 · D 2 · Devastating Wounds, Precision",
+    "glossary": "glossary-space-marines-weapon-moonfang",
+    "rule": "unit-korsarro-khan",
+    "units": [
+      "unit-korsarro-khan"
+    ],
+    "datasheet": "unit-korsarro-khan",
+    "statline": "korsarro-khan-profile"
+  },
+  "space-marines-ability-honour-of-ultramar": {
+    "id": "space-marines-ability-honour-of-ultramar",
+    "title": "Honour of Ultramar",
+    "summary": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play.",
+    "full": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. This model can fight after the attacking unit has finished making its attacks. If one or more enemy models are destroyed as a result of those attacks, this model regains D3 lost wounds and is not destroyed; otherwise, it is removed from play.",
+    "glossary": "glossary-space-marines-ability-honour-of-ultramar",
+    "rule": "unit-lieutenant-titus",
+    "units": [
+      "unit-lieutenant-titus"
+    ],
+    "datasheet": "unit-lieutenant-titus",
+    "statline": "lieutenant-titus-profile"
+  },
+  "space-marines-ability-press-the-attack": {
+    "id": "space-marines-ability-press-the-attack",
+    "title": "Press the Attack",
+    "summary": "Weapons equipped by models in this unit have the Sustained Hits 1 ability.",
+    "full": "Weapons equipped by models in this unit have the Sustained Hits 1 ability.",
+    "glossary": "glossary-space-marines-ability-press-the-attack",
+    "rule": "unit-lieutenant-titus",
+    "units": [
+      "unit-lieutenant-titus"
+    ],
+    "datasheet": "unit-lieutenant-titus",
+    "statline": "lieutenant-titus-profile"
+  },
+  "space-marines-ability-honour-of-the-chapter": {
+    "id": "space-marines-ability-honour-of-the-chapter",
+    "title": "Honour of the Chapter",
+    "summary": "If this model is destroyed by a melee attack before it has fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
+    "full": "If this model is destroyed by a melee attack before it has fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking model's unit has finished making its attacks, and is then removed from play.",
+    "glossary": "glossary-space-marines-ability-honour-of-the-chapter",
+    "rule": "unit-lieutenant-titus",
+    "units": [
+      "unit-lieutenant-titus"
+    ],
+    "datasheet": "unit-lieutenant-titus",
+    "statline": "lieutenant-titus-profile"
+  },
+  "space-marines-weapon-astartes-chainsword-4": {
+    "id": "space-marines-weapon-astartes-chainsword-4",
+    "title": "Astartes chainsword",
+    "summary": "Melee · Melee · A 8 · WS 2+ · S 4 · AP -1 · D 1 · Anti-Infantry 2+",
+    "full": "Melee · Melee · A 8 · WS 2+ · S 4 · AP -1 · D 1 · Anti-Infantry 2+",
+    "glossary": "glossary-space-marines-weapon-astartes-chainsword-4",
+    "rule": "unit-lieutenant-titus",
+    "units": [
+      "unit-lieutenant-titus"
+    ],
+    "datasheet": "unit-lieutenant-titus",
+    "statline": "lieutenant-titus-profile"
+  },
+  "space-marines-ability-inspiring-leader": {
+    "id": "space-marines-ability-inspiring-leader",
+    "title": "Inspiring Leader",
+    "summary": "This unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back.",
+    "full": "This unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back.",
+    "glossary": "glossary-space-marines-ability-inspiring-leader",
+    "rule": "unit-marneus-calgar-in-armour-of-antilochus",
+    "units": [
+      "unit-marneus-calgar-in-armour-of-antilochus"
+    ],
+    "datasheet": "unit-marneus-calgar-in-armour-of-antilochus",
+    "statline": "marneus-calgar-in-armour-of-antilochus-profile"
+  },
+  "space-marines-ability-master-tactician": {
+    "id": "space-marines-ability-master-tactician",
+    "title": "Master Tactician",
+    "summary": "At the start of your Command phase, if this unit’s Marneus Calgar model is your Warlord and is on the battlefield, you gain 1CP.",
+    "full": "At the start of your Command phase, if this unit’s Marneus Calgar model is your Warlord and is on the battlefield, you gain 1CP.",
+    "glossary": "glossary-space-marines-ability-master-tactician",
+    "rule": "unit-marneus-calgar-in-armour-of-antilochus",
+    "units": [
+      "unit-marneus-calgar-in-armour-of-antilochus"
+    ],
+    "datasheet": "unit-marneus-calgar-in-armour-of-antilochus",
+    "statline": "marneus-calgar-in-armour-of-antilochus-profile"
+  },
+  "space-marines-weapon-gauntlets-of-ultramar": {
+    "id": "space-marines-weapon-gauntlets-of-ultramar",
+    "title": "Gauntlets of Ultramar",
+    "summary": "Ranged · 18\" · A 4 · BS 2+ · S 4 · AP -1 · D 2 · Pistol, Twin-linked",
+    "full": "Ranged · 18\" · A 4 · BS 2+ · S 4 · AP -1 · D 2 · Pistol, Twin-linked",
+    "glossary": "glossary-space-marines-weapon-gauntlets-of-ultramar",
+    "rule": "unit-marneus-calgar-in-armour-of-antilochus",
+    "units": [
+      "unit-marneus-calgar-in-armour-of-antilochus"
+    ],
+    "datasheet": "unit-marneus-calgar-in-armour-of-antilochus",
+    "statline": "marneus-calgar-in-armour-of-antilochus-profile"
+  },
+  "space-marines-weapon-gauntlets-of-ultramar-2": {
+    "id": "space-marines-weapon-gauntlets-of-ultramar-2",
+    "title": "Gauntlets of Ultramar",
+    "summary": "Melee · Melee · A 6 · WS 2+ · S 8 · AP -3 · D 3 · Twin-linked",
+    "full": "Melee · Melee · A 6 · WS 2+ · S 8 · AP -3 · D 3 · Twin-linked",
+    "glossary": "glossary-space-marines-weapon-gauntlets-of-ultramar-2",
+    "rule": "unit-marneus-calgar-in-armour-of-antilochus",
+    "units": [
+      "unit-marneus-calgar-in-armour-of-antilochus"
+    ],
+    "datasheet": "unit-marneus-calgar-in-armour-of-antilochus",
+    "statline": "marneus-calgar-in-armour-of-antilochus-profile"
+  },
+  "space-marines-ability-oath-of-rynn": {
+    "id": "space-marines-ability-oath-of-rynn",
+    "title": "Oath of Rynn",
+    "summary": "Once per battle, at the start of either player’s Command phase, this model can use this ability. When it does, until the end of the turn, add 1 to the Attacks characteristic of weapons equipped by models in this model’s unit.",
+    "full": "Once per battle, at the start of either player’s Command phase, this model can use this ability. When it does, until the end of the turn, add 1 to the Attacks characteristic of weapons equipped by models in this model’s unit.",
+    "glossary": "glossary-space-marines-ability-oath-of-rynn",
+    "rule": "unit-pedro-kantor",
+    "units": [
+      "unit-pedro-kantor"
+    ],
+    "datasheet": "unit-pedro-kantor",
+    "statline": "pedro-kantor-profile"
+  },
+  "space-marines-ability-to-the-last": {
+    "id": "space-marines-ability-to-the-last",
+    "title": "To the Last",
+    "summary": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Below Half-strength.",
+    "full": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Below Half-strength.",
+    "glossary": "glossary-space-marines-ability-to-the-last",
+    "rule": "unit-pedro-kantor",
+    "units": [
+      "unit-pedro-kantor"
+    ],
+    "datasheet": "unit-pedro-kantor",
+    "statline": "pedro-kantor-profile"
+  },
+  "space-marines-ability-inspiring-commander-5": {
+    "id": "space-marines-ability-inspiring-commander-5",
+    "title": "Inspiring Commander",
+    "summary": "If you include this model in your army, until the end of the battle, non-Character models in Sternguard Veteran Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
+    "full": "If you include this model in your army, until the end of the battle, non-Character models in Sternguard Veteran Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
+    "glossary": "glossary-space-marines-ability-inspiring-commander-5",
+    "rule": "unit-pedro-kantor",
+    "units": [
+      "unit-pedro-kantor"
+    ],
+    "datasheet": "unit-pedro-kantor",
+    "statline": "pedro-kantor-profile"
+  },
+  "space-marines-weapon-dorns-arrow": {
+    "id": "space-marines-weapon-dorns-arrow",
+    "title": "Dorn's Arrow",
+    "summary": "Ranged · 24\" · A 2 · BS 2+ · S 5 · AP -1 · D 2 · Rapid Fire 2, Sustained Hits 1",
+    "full": "Ranged · 24\" · A 2 · BS 2+ · S 5 · AP -1 · D 2 · Rapid Fire 2, Sustained Hits 1",
+    "glossary": "glossary-space-marines-weapon-dorns-arrow",
+    "rule": "unit-pedro-kantor",
+    "units": [
+      "unit-pedro-kantor"
+    ],
+    "datasheet": "unit-pedro-kantor",
+    "statline": "pedro-kantor-profile"
+  },
+  "space-marines-weapon-fist-of-retribution": {
+    "id": "space-marines-weapon-fist-of-retribution",
+    "title": "Fist of Retribution",
+    "summary": "Melee · Melee · A 5 · WS 2+ · S 8 · AP -3 · D 3",
+    "full": "Melee · Melee · A 5 · WS 2+ · S 8 · AP -3 · D 3",
+    "glossary": "glossary-space-marines-weapon-fist-of-retribution",
+    "rule": "unit-pedro-kantor",
+    "units": [
+      "unit-pedro-kantor"
+    ],
+    "datasheet": "unit-pedro-kantor",
+    "statline": "pedro-kantor-profile"
+  },
+  "space-marines-ability-author-of-the-codex": {
+    "id": "space-marines-ability-author-of-the-codex",
+    "title": "Author of the Codex",
+    "summary": "At the Start of your Command phase, select two Author of the Codex abilities (see left). Until the start of your next Command phase, this model has those abilities.’ Primarch of the XIII (Aura): While a friendly Adeptus Astartes unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit and you can re-roll Battle-shock and Leadership tests taken for that unit. Master of Battle: After you have selected an enemy unit using the Oath of Moment ability, select a second enemy unit. Until the start of your next Command phase, if your Oath of Moment target is destroyed, that second enemy unit becomes your Oath of Moment target until you select a new one. Supreme Strategist: Once per battle round, you can target one friendly ADEPTUS ASTARTES unit within 12\" of this model with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+    "full": "At the Start of your Command phase, select two Author of the Codex abilities (see left). Until the start of your next Command phase, this model has those abilities.’ Primarch of the XIII (Aura): While a friendly Adeptus Astartes unit is within 6\" of this model, add 1 to the Objective Control characteristic of models in that unit and you can re-roll Battle-shock and Leadership tests taken for that unit. Master of Battle: After you have selected an enemy unit using the Oath of Moment ability, select a second enemy unit. Until the start of your next Command phase, if your Oath of Moment target is destroyed, that second enemy unit becomes your Oath of Moment target until you select a new one. Supreme Strategist: Once per battle round, you can target one friendly ADEPTUS ASTARTES unit within 12\" of this model with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP.",
+    "glossary": "glossary-space-marines-ability-author-of-the-codex",
+    "rule": "unit-roboute-guilliman",
+    "units": [
+      "unit-roboute-guilliman"
+    ],
+    "datasheet": "unit-roboute-guilliman",
+    "statline": "roboute-guilliman-profile"
+  },
+  "space-marines-ability-ultramarines-bodyguard": {
+    "id": "space-marines-ability-ultramarines-bodyguard",
+    "title": "Ultramarines Bodyguard",
+    "summary": "While this model is within 3\" of one or more friendly Adeptus Astartes Infantry units, this model has the Lone Operative ability",
+    "full": "While this model is within 3\" of one or more friendly Adeptus Astartes Infantry units, this model has the Lone Operative ability",
+    "glossary": "glossary-space-marines-ability-ultramarines-bodyguard",
+    "rule": "unit-roboute-guilliman",
+    "units": [
+      "unit-roboute-guilliman"
+    ],
+    "datasheet": "unit-roboute-guilliman",
+    "statline": "roboute-guilliman-profile"
+  },
+  "space-marines-ability-armour-of-fate": {
+    "id": "space-marines-ability-armour-of-fate",
+    "title": "Armour of Fate",
+    "summary": "The first time this model is destroyed, roll one D6 at the end of the phase: on a 3+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy models, with 6 wounds remaining.",
+    "full": "The first time this model is destroyed, roll one D6 at the end of the phase: on a 3+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy models, with 6 wounds remaining.",
+    "glossary": "glossary-space-marines-ability-armour-of-fate",
+    "rule": "unit-roboute-guilliman",
+    "units": [
+      "unit-roboute-guilliman"
+    ],
+    "datasheet": "unit-roboute-guilliman",
+    "statline": "roboute-guilliman-profile"
+  },
+  "space-marines-ability-supreme-commander": {
+    "id": "space-marines-ability-supreme-commander",
+    "title": "Supreme Commander",
+    "summary": "If this model is in your army, it must be your Warlord.",
+    "full": "If this model is in your army, it must be your Warlord.",
+    "glossary": "glossary-space-marines-ability-supreme-commander",
+    "rule": "unit-roboute-guilliman",
+    "units": [
+      "unit-roboute-guilliman"
+    ],
+    "datasheet": "unit-roboute-guilliman",
+    "statline": "roboute-guilliman-profile"
+  },
+  "space-marines-weapon-hand-of-dominion": {
+    "id": "space-marines-weapon-hand-of-dominion",
+    "title": "Hand of Dominion",
+    "summary": "Ranged · 30\" · A 2 · BS 2+ · S 6 · AP -2 · D 2 · Rapid Fire 2",
+    "full": "Ranged · 30\" · A 2 · BS 2+ · S 6 · AP -2 · D 2 · Rapid Fire 2",
+    "glossary": "glossary-space-marines-weapon-hand-of-dominion",
+    "rule": "unit-roboute-guilliman",
+    "units": [
+      "unit-roboute-guilliman"
+    ],
+    "datasheet": "unit-roboute-guilliman",
+    "statline": "roboute-guilliman-profile"
+  },
+  "space-marines-weapon-hand-of-dominion-2": {
+    "id": "space-marines-weapon-hand-of-dominion-2",
+    "title": "Hand of Dominion",
+    "summary": "Melee · Melee · A 7 · WS 2+ · S 14 · AP -4 · D 4 · Lethal Hits",
+    "full": "Melee · Melee · A 7 · WS 2+ · S 14 · AP -4 · D 4 · Lethal Hits",
+    "glossary": "glossary-space-marines-weapon-hand-of-dominion-2",
+    "rule": "unit-roboute-guilliman",
+    "units": [
+      "unit-roboute-guilliman"
+    ],
+    "datasheet": "unit-roboute-guilliman",
+    "statline": "roboute-guilliman-profile"
+  },
+  "space-marines-weapon-the-emperors-sword": {
+    "id": "space-marines-weapon-the-emperors-sword",
+    "title": "The Emperor's Sword",
+    "summary": "Melee · Melee · A 14 · WS 2+ · S 8 · AP -3 · D 2 · Devastating Wounds",
+    "full": "Melee · Melee · A 14 · WS 2+ · S 8 · AP -3 · D 2 · Devastating Wounds",
+    "glossary": "glossary-space-marines-weapon-the-emperors-sword",
+    "rule": "unit-roboute-guilliman",
+    "units": [
+      "unit-roboute-guilliman"
+    ],
+    "datasheet": "unit-roboute-guilliman",
+    "statline": "roboute-guilliman-profile"
+  },
+  "space-marines-ability-spear-of-chogoris": {
+    "id": "space-marines-ability-spear-of-chogoris",
+    "title": "Spear of Chogoris",
+    "summary": "This model’s unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back. If that unit is already eligible to shoot and declare a charge in a turn in which it Advanced, add 1 to Advance and Charge rolls made for that unit instead.",
+    "full": "This model’s unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back. If that unit is already eligible to shoot and declare a charge in a turn in which it Advanced, add 1 to Advance and Charge rolls made for that unit instead.",
+    "glossary": "glossary-space-marines-ability-spear-of-chogoris",
+    "rule": "unit-suboden-khan",
+    "units": [
+      "unit-suboden-khan"
+    ],
+    "datasheet": "unit-suboden-khan",
+    "statline": "suboden-khan-profile"
+  },
+  "space-marines-ability-skilled-riders": {
+    "id": "space-marines-ability-skilled-riders",
+    "title": "Skilled Riders",
+    "summary": "Each time a model in this model’s unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.",
+    "full": "Each time a model in this model’s unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through terrain features.",
+    "glossary": "glossary-space-marines-ability-skilled-riders",
+    "rule": "unit-suboden-khan",
+    "units": [
+      "unit-suboden-khan"
+    ],
+    "datasheet": "unit-suboden-khan",
+    "statline": "suboden-khan-profile"
+  },
+  "space-marines-weapon-onslaught-gatling-cannon": {
+    "id": "space-marines-weapon-onslaught-gatling-cannon",
+    "title": "Onslaught Gatling Cannon",
+    "summary": "Ranged · 24\" · A 8 · BS 2+ · S 5 · AP 0 · D 1 · Devastating Wounds",
+    "full": "Ranged · 24\" · A 8 · BS 2+ · S 5 · AP 0 · D 1 · Devastating Wounds",
+    "glossary": "glossary-space-marines-weapon-onslaught-gatling-cannon",
+    "rule": "unit-suboden-khan",
+    "units": [
+      "unit-suboden-khan"
+    ],
+    "datasheet": "unit-suboden-khan",
+    "statline": "suboden-khan-profile"
+  },
+  "space-marines-weapon-stormtooth": {
+    "id": "space-marines-weapon-stormtooth",
+    "title": "Stormtooth",
+    "summary": "Melee · Melee · A 6 · WS 2+ · S 6 · AP -2 · D 2 · Lance, Anti-monster 4+, Anti-vehicle 4+",
+    "full": "Melee · Melee · A 6 · WS 2+ · S 6 · AP -2 · D 2 · Lance, Anti-monster 4+, Anti-vehicle 4+",
+    "glossary": "glossary-space-marines-weapon-stormtooth",
+    "rule": "unit-suboden-khan",
+    "units": [
+      "unit-suboden-khan"
+    ],
+    "datasheet": "unit-suboden-khan",
+    "statline": "suboden-khan-profile"
+  },
+  "space-marines-weapon-power-sword": {
+    "id": "space-marines-weapon-power-sword",
+    "title": "Power Sword",
+    "summary": "Melee · Melee · A 8 · WS 2+ · S 5 · AP -2 · D 1",
+    "full": "Melee · Melee · A 8 · WS 2+ · S 5 · AP -2 · D 1",
+    "glossary": "glossary-space-marines-weapon-power-sword",
+    "rule": "unit-suboden-khan",
+    "units": [
+      "unit-suboden-khan"
+    ],
+    "datasheet": "unit-suboden-khan",
+    "statline": "suboden-khan-profile"
+  },
+  "space-marines-ability-signum-array": {
+    "id": "space-marines-ability-signum-array",
+    "title": "Signum Array",
+    "summary": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
+    "full": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
+    "glossary": "glossary-space-marines-ability-signum-array",
+    "rule": "unit-tor-garadon",
+    "units": [
+      "unit-tor-garadon"
+    ],
+    "datasheet": "unit-tor-garadon",
+    "statline": "tor-garadon-profile"
+  },
+  "space-marines-ability-siege-captain": {
+    "id": "space-marines-ability-siege-captain",
+    "title": "Siege Captain",
+    "summary": "Each time this model makes an attack that targets a Monster, Vehicle, or Fortification unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 2.",
+    "full": "Each time this model makes an attack that targets a Monster, Vehicle, or Fortification unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 2.",
+    "glossary": "glossary-space-marines-ability-siege-captain",
+    "rule": "unit-tor-garadon",
+    "units": [
+      "unit-tor-garadon"
+    ],
+    "datasheet": "unit-tor-garadon",
+    "statline": "tor-garadon-profile"
+  },
+  "space-marines-weapon-artificer-grav-gun": {
+    "id": "space-marines-weapon-artificer-grav-gun",
+    "title": "Artificer Grav Gun",
+    "summary": "Ranged · 18\" · A 2 · BS 2+ · S 5 · AP -1 · D 2 · Anti-vehicle 2+",
+    "full": "Ranged · 18\" · A 2 · BS 2+ · S 5 · AP -1 · D 2 · Anti-vehicle 2+",
+    "glossary": "glossary-space-marines-weapon-artificer-grav-gun",
+    "rule": "unit-tor-garadon",
+    "units": [
+      "unit-tor-garadon"
+    ],
+    "datasheet": "unit-tor-garadon",
+    "statline": "tor-garadon-profile"
+  },
+  "space-marines-weapon-hand-of-defiance": {
+    "id": "space-marines-weapon-hand-of-defiance",
+    "title": "Hand of Defiance",
+    "summary": "Melee · Melee · A 5 · WS 2+ · S 12 · AP -2 · D 2",
+    "full": "Melee · Melee · A 5 · WS 2+ · S 12 · AP -2 · D 2",
+    "glossary": "glossary-space-marines-weapon-hand-of-defiance",
+    "rule": "unit-tor-garadon",
+    "units": [
+      "unit-tor-garadon"
+    ],
+    "datasheet": "unit-tor-garadon",
+    "statline": "tor-garadon-profile"
+  },
+  "space-marines-ability-unorthodox-strategist-aura": {
+    "id": "space-marines-ability-unorthodox-strategist-aura",
+    "title": "Unorthodox Strategist [Aura]",
+    "summary": "Each time your opponent targets a unit from their army with a stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP (this is not cumulative with any other rules that would increase the CP cost of that Stratagem).",
+    "full": "Each time your opponent targets a unit from their army with a stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP (this is not cumulative with any other rules that would increase the CP cost of that Stratagem).",
+    "glossary": "glossary-space-marines-ability-unorthodox-strategist-aura",
+    "rule": "unit-uriel-ventris",
+    "units": [
+      "unit-uriel-ventris"
+    ],
+    "datasheet": "unit-uriel-ventris",
+    "statline": "uriel-ventris-profile"
+  },
+  "space-marines-ability-master-of-the-fleet": {
+    "id": "space-marines-ability-master-of-the-fleet",
+    "title": "Master of the Fleet",
+    "summary": "During the Declare Battle Formations step, if your army includes this model, select one Phobos, Gravis, or Tacticus Adeptus Astartes Infantry unit from your army. That unit gains the Deep Strike ability.",
+    "full": "During the Declare Battle Formations step, if your army includes this model, select one Phobos, Gravis, or Tacticus Adeptus Astartes Infantry unit from your army. That unit gains the Deep Strike ability.",
+    "glossary": "glossary-space-marines-ability-master-of-the-fleet",
+    "rule": "unit-uriel-ventris",
+    "units": [
+      "unit-uriel-ventris"
+    ],
+    "datasheet": "unit-uriel-ventris",
+    "statline": "uriel-ventris-profile"
+  },
+  "space-marines-weapon-invictus": {
+    "id": "space-marines-weapon-invictus",
+    "title": "Invictus",
+    "summary": "Ranged · 24\" · A 2 · BS 2+ · S 4 · AP -1 · D 2",
+    "full": "Ranged · 24\" · A 2 · BS 2+ · S 4 · AP -1 · D 2",
+    "glossary": "glossary-space-marines-weapon-invictus",
+    "rule": "unit-uriel-ventris",
+    "units": [
+      "unit-uriel-ventris"
+    ],
+    "datasheet": "unit-uriel-ventris",
+    "statline": "uriel-ventris-profile"
+  },
+  "space-marines-weapon-sword-of-idaeus": {
+    "id": "space-marines-weapon-sword-of-idaeus",
+    "title": "Sword of Idaeus",
+    "summary": "Melee · Melee · A 6 · WS 2+ · S 6 · AP -2 · D 2 · Sustained Hits 1",
+    "full": "Melee · Melee · A 6 · WS 2+ · S 6 · AP -2 · D 2 · Sustained Hits 1",
+    "glossary": "glossary-space-marines-weapon-sword-of-idaeus",
+    "rule": "unit-uriel-ventris",
+    "units": [
+      "unit-uriel-ventris"
+    ],
+    "datasheet": "unit-uriel-ventris",
+    "statline": "uriel-ventris-profile"
+  },
+  "space-marines-ability-forgefather": {
+    "id": "space-marines-ability-forgefather",
+    "title": "Forgefather",
+    "summary": "In your Shooting phase, select one enemy unit within 24\" of and visible to this model. Until the end of the phase, each time a friendly Adeptus Astartes model makes a ranged attack with a Torrent or Melta weapon that targets that enemy unit, you can re-roll the Wound roll",
+    "full": "In your Shooting phase, select one enemy unit within 24\" of and visible to this model. Until the end of the phase, each time a friendly Adeptus Astartes model makes a ranged attack with a Torrent or Melta weapon that targets that enemy unit, you can re-roll the Wound roll",
+    "glossary": "glossary-space-marines-ability-forgefather",
+    "rule": "unit-vulkan-hestan",
+    "units": [
+      "unit-vulkan-hestan"
+    ],
+    "datasheet": "unit-vulkan-hestan",
+    "statline": "vulkan-hestan-profile"
+  },
+  "space-marines-ability-seeker-of-the-unfound": {
+    "id": "space-marines-ability-seeker-of-the-unfound",
+    "title": "Seeker of the Unfound",
+    "summary": "The first time this model is set up on the battlefield, select one objective marker on the battlefield. While this model is within range of that objective marker, it has an Objective Control characteristic of 10, a Leadership characteristic of 5+ and the Feel No Pain 4+ ability.",
+    "full": "The first time this model is set up on the battlefield, select one objective marker on the battlefield. While this model is within range of that objective marker, it has an Objective Control characteristic of 10, a Leadership characteristic of 5+ and the Feel No Pain 4+ ability.",
+    "glossary": "glossary-space-marines-ability-seeker-of-the-unfound",
+    "rule": "unit-vulkan-hestan",
+    "units": [
+      "unit-vulkan-hestan"
+    ],
+    "datasheet": "unit-vulkan-hestan",
+    "statline": "vulkan-hestan-profile"
+  },
+  "space-marines-ability-inspiring-commander-6": {
+    "id": "space-marines-ability-inspiring-commander-6",
+    "title": "Inspiring Commander",
+    "summary": "If you include this model in your army, until the end of the battle, non-Character models in Infernus Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
+    "full": "If you include this model in your army, until the end of the battle, non-Character models in Infernus Squad units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked.",
+    "glossary": "glossary-space-marines-ability-inspiring-commander-6",
+    "rule": "unit-vulkan-hestan",
+    "units": [
+      "unit-vulkan-hestan"
+    ],
+    "datasheet": "unit-vulkan-hestan",
+    "statline": "vulkan-hestan-profile"
+  },
+  "space-marines-weapon-gauntlet-of-the-forge": {
+    "id": "space-marines-weapon-gauntlet-of-the-forge",
+    "title": "Gauntlet of the Forge",
+    "summary": "Ranged · 12\" · A D6+3 · BS N/A · S 6 · AP -1 · D 1 · Ignores Cover, Pistol, Torrent",
+    "full": "Ranged · 12\" · A D6+3 · BS N/A · S 6 · AP -1 · D 1 · Ignores Cover, Pistol, Torrent",
+    "glossary": "glossary-space-marines-weapon-gauntlet-of-the-forge",
+    "rule": "unit-vulkan-hestan",
+    "units": [
+      "unit-vulkan-hestan"
+    ],
+    "datasheet": "unit-vulkan-hestan",
+    "statline": "vulkan-hestan-profile"
+  },
+  "space-marines-weapon-spear-of-vulkan": {
+    "id": "space-marines-weapon-spear-of-vulkan",
+    "title": "Spear of Vulkan",
+    "summary": "Melee · Melee · A 6 · WS 2+ · S 6 · AP -2 · D 2 · Devastating Wounds",
+    "full": "Melee · Melee · A 6 · WS 2+ · S 6 · AP -2 · D 2 · Devastating Wounds",
+    "glossary": "glossary-space-marines-weapon-spear-of-vulkan",
+    "rule": "unit-vulkan-hestan",
+    "units": [
+      "unit-vulkan-hestan"
+    ],
+    "datasheet": "unit-vulkan-hestan",
+    "statline": "vulkan-hestan-profile"
+  },
+  "space-marines-ability-second-company-banner": {
+    "id": "space-marines-ability-second-company-banner",
+    "title": "Second Company Banner",
+    "summary": "While this unit contains Ancient Gadriel, add 1 to the Objective Control characteristic of models in this unit. While this unit contains Ancient Gadriel and Captain Titus, improve the Leadership characteristic of models in this unit by 1 as well.",
+    "full": "While this unit contains Ancient Gadriel, add 1 to the Objective Control characteristic of models in this unit. While this unit contains Ancient Gadriel and Captain Titus, improve the Leadership characteristic of models in this unit by 1 as well.",
+    "glossary": "glossary-space-marines-ability-second-company-banner",
+    "rule": "unit-wardens-of-ultramar",
+    "units": [
+      "unit-wardens-of-ultramar"
+    ],
+    "datasheet": "unit-wardens-of-ultramar",
+    "statline": "wardens-of-ultramar-profile"
+  },
+  "space-marines-ability-strategium-command": {
+    "id": "space-marines-ability-strategium-command",
+    "title": "Strategium Command",
+    "summary": "After both players have deployed their armies, if this unit is on the battlefield (or any Transport it is embarked within is on the battlefield), select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+    "full": "After both players have deployed their armies, if this unit is on the battlefield (or any Transport it is embarked within is on the battlefield), select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+    "glossary": "glossary-space-marines-ability-strategium-command",
+    "rule": "unit-wardens-of-ultramar",
+    "units": [
+      "unit-wardens-of-ultramar"
+    ],
+    "datasheet": "unit-wardens-of-ultramar",
+    "statline": "wardens-of-ultramar-profile"
+  },
+  "space-marines-ability-heroes-of-ultramar": {
+    "id": "space-marines-ability-heroes-of-ultramar",
+    "title": "Heroes of Ultramar",
+    "summary": "At the start of the Declare Battle Formations step, this unit can join one of the following units. This unit then counts as part of that unit for the rest of the battle, and that unit’s Starting Strength is increased accordingly. ■ ASSAULT INTERCESSOR SQUAD ■ BLADEGUARD VETERAN SQUAD ■ INTERCESSOR SQUAD ■ STERNGUARD VETERAN SQUAD This unit cannot join an Attached unit, and only Captain Titus can join a unit this unit has joined.",
+    "full": "At the start of the Declare Battle Formations step, this unit can join one of the following units. This unit then counts as part of that unit for the rest of the battle, and that unit’s Starting Strength is increased accordingly. ■ ASSAULT INTERCESSOR SQUAD ■ BLADEGUARD VETERAN SQUAD ■ INTERCESSOR SQUAD ■ STERNGUARD VETERAN SQUAD This unit cannot join an Attached unit, and only Captain Titus can join a unit this unit has joined.",
+    "glossary": "glossary-space-marines-ability-heroes-of-ultramar",
+    "rule": "unit-wardens-of-ultramar",
+    "units": [
+      "unit-wardens-of-ultramar"
+    ],
+    "datasheet": "unit-wardens-of-ultramar",
+    "statline": "wardens-of-ultramar-profile"
+  },
+  "space-marines-ability-storm-shield-2": {
+    "id": "space-marines-ability-storm-shield-2",
+    "title": "Storm Shield",
+    "summary": "The bearer has a 4+ Invulnerable save.",
+    "full": "The bearer has a 4+ Invulnerable save.",
+    "glossary": "glossary-space-marines-ability-storm-shield-2",
+    "rule": "unit-wardens-of-ultramar",
+    "units": [
+      "unit-wardens-of-ultramar"
+    ],
+    "datasheet": "unit-wardens-of-ultramar",
+    "statline": "wardens-of-ultramar-profile"
+  },
+  "space-marines-ability-refractor-field": {
+    "id": "space-marines-ability-refractor-field",
+    "title": "Refractor Field",
+    "summary": "The bearer has a 5+ invulnerable save.",
+    "full": "The bearer has a 5+ invulnerable save.",
+    "glossary": "glossary-space-marines-ability-refractor-field",
+    "rule": "unit-wardens-of-ultramar",
+    "units": [
+      "unit-wardens-of-ultramar"
+    ],
+    "datasheet": "unit-wardens-of-ultramar",
+    "statline": "wardens-of-ultramar-profile"
+  },
+  "space-marines-weapon-close-combat-weapon-6": {
+    "id": "space-marines-weapon-close-combat-weapon-6",
+    "title": "Close combat weapon",
+    "summary": "Melee · Melee · A 4 · WS 2+ · S 4 · AP 0 · D 1",
+    "full": "Melee · Melee · A 4 · WS 2+ · S 4 · AP 0 · D 1",
+    "glossary": "glossary-space-marines-weapon-close-combat-weapon-6",
+    "rule": "unit-wardens-of-ultramar",
+    "units": [
+      "unit-wardens-of-ultramar"
+    ],
+    "datasheet": "unit-wardens-of-ultramar",
+    "statline": "wardens-of-ultramar-profile"
+  },
+  "space-marines-weapon-archeotech-laspistol": {
+    "id": "space-marines-weapon-archeotech-laspistol",
+    "title": "Archeotech Laspistol",
+    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP -1 · D 1 · Pistol",
+    "full": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP -1 · D 1 · Pistol",
+    "glossary": "glossary-space-marines-weapon-archeotech-laspistol",
+    "rule": "unit-wardens-of-ultramar",
+    "units": [
+      "unit-wardens-of-ultramar"
+    ],
+    "datasheet": "unit-wardens-of-ultramar",
+    "statline": "wardens-of-ultramar-profile"
+  },
+  "space-marines-weapon-power-weapon-4": {
+    "id": "space-marines-weapon-power-weapon-4",
+    "title": "Power Weapon",
+    "summary": "Melee · Melee · A 4 · WS 2+ · S 4 · AP -2 · D 1",
+    "full": "Melee · Melee · A 4 · WS 2+ · S 4 · AP -2 · D 1",
+    "glossary": "glossary-space-marines-weapon-power-weapon-4",
+    "rule": "unit-wardens-of-ultramar",
+    "units": [
+      "unit-wardens-of-ultramar"
+    ],
+    "datasheet": "unit-wardens-of-ultramar",
+    "statline": "wardens-of-ultramar-profile"
+  },
+  "space-marines-weapon-astropathic-blast": {
+    "id": "space-marines-weapon-astropathic-blast",
+    "title": "Astropathic Blast",
+    "summary": "Ranged · 12\" · A D6 · BS 3+ · S 4 · AP -1 · D 1 · Blast, Psychic",
+    "full": "Ranged · 12\" · A D6 · BS 3+ · S 4 · AP -1 · D 1 · Blast, Psychic",
+    "glossary": "glossary-space-marines-weapon-astropathic-blast",
+    "rule": "unit-wardens-of-ultramar",
+    "units": [
+      "unit-wardens-of-ultramar"
+    ],
+    "datasheet": "unit-wardens-of-ultramar",
+    "statline": "wardens-of-ultramar-profile"
+  },
+  "space-marines-weapon-force-stave": {
+    "id": "space-marines-weapon-force-stave",
+    "title": "Force Stave",
+    "summary": "Melee · Melee · A 1 · WS 2+ · S 5 · AP -2 · D 2 · Psychic",
+    "full": "Melee · Melee · A 1 · WS 2+ · S 5 · AP -2 · D 2 · Psychic",
+    "glossary": "glossary-space-marines-weapon-force-stave",
+    "rule": "unit-wardens-of-ultramar",
+    "units": [
+      "unit-wardens-of-ultramar"
+    ],
+    "datasheet": "unit-wardens-of-ultramar",
+    "statline": "wardens-of-ultramar-profile"
+  },
+  "space-marines-ability-fortification": {
+    "id": "space-marines-ability-fortification",
+    "title": "Fortification",
+    "summary": "While an enemy unit is only within Engagement Range of one or more Fortifications from your army: ■ That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll. ■ Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
+    "full": "While an enemy unit is only within Engagement Range of one or more Fortifications from your army: ■ That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll. ■ Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
+    "glossary": "glossary-space-marines-ability-fortification",
+    "rule": "unit-hammerfall-bunker",
+    "units": [
+      "unit-hammerfall-bunker"
+    ],
+    "datasheet": "unit-hammerfall-bunker",
+    "statline": "hammerfall-bunker-profile"
+  },
+  "space-marines-ability-ceramite-cover": {
+    "id": "space-marines-ability-ceramite-cover",
+    "title": "Ceramite Cover",
+    "summary": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack.",
+    "full": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack.",
+    "glossary": "glossary-space-marines-ability-ceramite-cover",
+    "rule": "unit-hammerfall-bunker",
+    "units": [
+      "unit-hammerfall-bunker"
+    ],
+    "datasheet": "unit-hammerfall-bunker",
+    "statline": "hammerfall-bunker-profile"
+  },
+  "space-marines-ability-defensive-array": {
+    "id": "space-marines-ability-defensive-array",
+    "title": "Defensive Array",
+    "summary": "You can target this Fortification with the Fire Overwatch Strategem for 0CP, and can do so even if you have already targeted another unit with that Stratagem this turn. This Fortification can only be targeted with that Stratagem once per turn.",
+    "full": "You can target this Fortification with the Fire Overwatch Strategem for 0CP, and can do so even if you have already targeted another unit with that Stratagem this turn. This Fortification can only be targeted with that Stratagem once per turn.",
+    "glossary": "glossary-space-marines-ability-defensive-array",
+    "rule": "unit-hammerfall-bunker",
+    "units": [
+      "unit-hammerfall-bunker"
+    ],
+    "datasheet": "unit-hammerfall-bunker",
+    "statline": "hammerfall-bunker-profile"
+  },
+  "space-marines-ability-damaged-1-4-wounds-remaining": {
+    "id": "space-marines-ability-damaged-1-4-wounds-remaining",
+    "title": "Damaged: 1-4 Wounds Remaining",
+    "summary": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "full": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "glossary": "glossary-space-marines-ability-damaged-1-4-wounds-remaining",
+    "rule": "unit-hammerfall-bunker",
+    "units": [
+      "unit-hammerfall-bunker",
+      "unit-ballistus-dreadnought",
+      "unit-brutalis-dreadnought",
+      "unit-gladiator-lancer",
+      "unit-gladiator-reaper",
+      "unit-gladiator-valiant",
+      "unit-invictor-tactical-warsuit",
+      "unit-predator-annihilator",
+      "unit-predator-destructor",
+      "unit-redemptor-dreadnought",
+      "unit-vindicator",
+      "unit-whirlwind"
+    ],
+    "datasheet": "unit-hammerfall-bunker",
+    "statline": "hammerfall-bunker-profile"
+  },
+  "space-marines-weapon-hammerfall-missile-launcher-superfrag": {
+    "id": "space-marines-weapon-hammerfall-missile-launcher-superfrag",
+    "title": "➤ Hammerfall Missile Launcher - Superfrag",
+    "summary": "Ranged · 48\" · A 2d6+2 · BS 4+ · S 5 · AP 0 · D 1 · Blast",
+    "full": "Ranged · 48\" · A 2d6+2 · BS 4+ · S 5 · AP 0 · D 1 · Blast",
+    "glossary": "glossary-space-marines-weapon-hammerfall-missile-launcher-superfrag",
+    "rule": "unit-hammerfall-bunker",
+    "units": [
+      "unit-hammerfall-bunker"
+    ],
+    "datasheet": "unit-hammerfall-bunker",
+    "statline": "hammerfall-bunker-profile"
+  },
+  "space-marines-weapon-hammerfall-missile-launcher-superkrak": {
+    "id": "space-marines-weapon-hammerfall-missile-launcher-superkrak",
+    "title": "➤ Hammerfall Missile Launcher - Superkrak",
+    "summary": "Ranged · 48\" · A 2 · BS 4+ · S 10 · AP -2 · D D6+1",
+    "full": "Ranged · 48\" · A 2 · BS 4+ · S 10 · AP -2 · D D6+1",
+    "glossary": "glossary-space-marines-weapon-hammerfall-missile-launcher-superkrak",
+    "rule": "unit-hammerfall-bunker",
+    "units": [
+      "unit-hammerfall-bunker"
+    ],
+    "datasheet": "unit-hammerfall-bunker",
+    "statline": "hammerfall-bunker-profile"
+  },
+  "space-marines-weapon-hammerfall-heavy-bolter-array": {
+    "id": "space-marines-weapon-hammerfall-heavy-bolter-array",
+    "title": "Hammerfall Heavy Bolter Array",
+    "summary": "Ranged · 36\" · A 6 · BS 4+ · S 5 · AP -1 · D 2 · Defensive Array, Sustained Hits 1, Twin-linked",
+    "full": "Ranged · 36\" · A 6 · BS 4+ · S 5 · AP -1 · D 2 · Defensive Array, Sustained Hits 1, Twin-linked",
+    "glossary": "glossary-space-marines-weapon-hammerfall-heavy-bolter-array",
+    "rule": "unit-hammerfall-bunker",
+    "units": [
+      "unit-hammerfall-bunker"
+    ],
+    "datasheet": "unit-hammerfall-bunker",
+    "statline": "hammerfall-bunker-profile"
+  },
+  "space-marines-weapon-hammerfall-heavy-flamer-array": {
+    "id": "space-marines-weapon-hammerfall-heavy-flamer-array",
+    "title": "Hammerfall Heavy Flamer Array",
+    "summary": "Ranged · 12\" · A 2D6 · BS N/A · S 5 · AP -1 · D 1 · Defensive Array, Ignores Cover, Torrent, Twin-linked",
+    "full": "Ranged · 12\" · A 2D6 · BS N/A · S 5 · AP -1 · D 1 · Defensive Array, Ignores Cover, Torrent, Twin-linked",
+    "glossary": "glossary-space-marines-weapon-hammerfall-heavy-flamer-array",
+    "rule": "unit-hammerfall-bunker",
+    "units": [
+      "unit-hammerfall-bunker"
+    ],
+    "datasheet": "unit-hammerfall-bunker",
+    "statline": "hammerfall-bunker-profile"
   },
   "space-marines-ability-close-quarters-firepower": {
     "id": "space-marines-ability-close-quarters-firepower",
@@ -3763,12 +5018,12 @@ window.DG_TERMS={
     "datasheet": "unit-company-heroes",
     "statline": "company-heroes-profile"
   },
-  "space-marines-weapon-close-combat-weapon-6": {
-    "id": "space-marines-weapon-close-combat-weapon-6",
+  "space-marines-weapon-close-combat-weapon-7": {
+    "id": "space-marines-weapon-close-combat-weapon-7",
     "title": "Close combat weapon",
     "summary": "Melee · Melee · A 5 · WS 3+ · S 4 · AP 0 · D 1",
     "full": "Melee · Melee · A 5 · WS 3+ · S 4 · AP 0 · D 1",
-    "glossary": "glossary-space-marines-weapon-close-combat-weapon-6",
+    "glossary": "glossary-space-marines-weapon-close-combat-weapon-7",
     "rule": "unit-company-heroes",
     "units": [
       "unit-company-heroes",
@@ -4428,12 +5683,12 @@ window.DG_TERMS={
     "datasheet": "unit-sternguard-veteran-squad",
     "statline": "sternguard-veteran-squad-profile"
   },
-  "space-marines-weapon-power-weapon-4": {
-    "id": "space-marines-weapon-power-weapon-4",
+  "space-marines-weapon-power-weapon-5": {
+    "id": "space-marines-weapon-power-weapon-5",
     "title": "Power weapon",
     "summary": "Melee · Melee · A 5 · WS 3+ · S 5 · AP -2 · D 1",
     "full": "Melee · Melee · A 5 · WS 3+ · S 5 · AP -2 · D 1",
-    "glossary": "glossary-space-marines-weapon-power-weapon-4",
+    "glossary": "glossary-space-marines-weapon-power-weapon-5",
     "rule": "unit-sternguard-veteran-squad",
     "units": [
       "unit-sternguard-veteran-squad"
@@ -4454,12 +5709,12 @@ window.DG_TERMS={
     "datasheet": "unit-sternguard-veteran-squad",
     "statline": "sternguard-veteran-squad-profile"
   },
-  "space-marines-weapon-astartes-chainsword-4": {
-    "id": "space-marines-weapon-astartes-chainsword-4",
+  "space-marines-weapon-astartes-chainsword-5": {
+    "id": "space-marines-weapon-astartes-chainsword-5",
     "title": "Astartes Chainsword",
     "summary": "Melee · Melee · A 6 · WS 3+ · S 4 · AP -1 · D 1",
     "full": "Melee · Melee · A 6 · WS 3+ · S 4 · AP -1 · D 1",
-    "glossary": "glossary-space-marines-weapon-astartes-chainsword-4",
+    "glossary": "glossary-space-marines-weapon-astartes-chainsword-5",
     "rule": "unit-sternguard-veteran-squad",
     "units": [
       "unit-sternguard-veteran-squad"
@@ -4546,12 +5801,12 @@ window.DG_TERMS={
     "datasheet": "unit-terminator-assault-squad",
     "statline": "terminator-assault-squad-profile"
   },
-  "space-marines-ability-storm-shield-2": {
-    "id": "space-marines-ability-storm-shield-2",
+  "space-marines-ability-storm-shield-3": {
+    "id": "space-marines-ability-storm-shield-3",
     "title": "Storm Shield",
     "summary": "The bearer has a Wounds characteristic of 4.",
     "full": "The bearer has a Wounds characteristic of 4.",
-    "glossary": "glossary-space-marines-ability-storm-shield-2",
+    "glossary": "glossary-space-marines-ability-storm-shield-3",
     "rule": "unit-terminator-assault-squad",
     "units": [
       "unit-terminator-assault-squad"
@@ -4706,125 +5961,133 @@ window.DG_TERMS={
     "datasheet": "unit-vanguard-veteran-squad-with-jump-packs",
     "statline": "vanguard-veteran-squad-with-jump-packs-profile"
   },
-  "space-marines-ability-suppression-fire-2": {
-    "id": "space-marines-ability-suppression-fire-2",
-    "title": "Suppression Fire",
-    "summary": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more attacks made with its twin macro-accelerator cannon this phase. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
-    "full": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more attacks made with its twin macro-accelerator cannon this phase. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-space-marines-ability-suppression-fire-2",
-    "rule": "unit-astraeus",
+  "space-marines-ability-ultramarines-honour-guard": {
+    "id": "space-marines-ability-ultramarines-honour-guard",
+    "title": "Ultramarines Honour Guard",
+    "summary": "While a Captain or Chapter Master model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll",
+    "full": "While a Captain or Chapter Master model is leading this unit, each time an attack targets this unit, subtract 1 from the Wound roll",
+    "glossary": "glossary-space-marines-ability-ultramarines-honour-guard",
+    "rule": "unit-victrix-honour-guard",
     "units": [
-      "unit-astraeus"
+      "unit-victrix-honour-guard"
     ],
-    "datasheet": "unit-astraeus",
-    "statline": "astraeus-profile"
+    "datasheet": "unit-victrix-honour-guard",
+    "statline": "victrix-honour-guard-profile"
   },
-  "space-marines-ability-invulnerable-save-3": {
-    "id": "space-marines-ability-invulnerable-save-3",
-    "title": "*Invulnerable Save",
-    "summary": "This model has a 5+ invulnerable save against ranged attacks.",
-    "full": "This model has a 5+ invulnerable save against ranged attacks.",
-    "glossary": "glossary-space-marines-ability-invulnerable-save-3",
-    "rule": "unit-astraeus",
+  "space-marines-ability-glory-of-ultramar": {
+    "id": "space-marines-ability-glory-of-ultramar",
+    "title": "Glory of Ultramar",
+    "summary": "In your opponent’s Shooting phase, each time an enemy unit has shot, if any models from this unit were destroyed as a result of those attacks, this unit can make a Surge move. To do so, roll one D6: models in this unit move a number of inches up to the result, but this unit must end that move as close as possible to the closest enemy unit (excluding Aircraft). When doing so, those models can be moved within Engagement Range of that enemy unit. This unit cannot make a Surge move while it is Battle-shocked or within Engagement Range of one or more enemy units, and can only make one Surge move per phase.",
+    "full": "In your opponent’s Shooting phase, each time an enemy unit has shot, if any models from this unit were destroyed as a result of those attacks, this unit can make a Surge move. To do so, roll one D6: models in this unit move a number of inches up to the result, but this unit must end that move as close as possible to the closest enemy unit (excluding Aircraft). When doing so, those models can be moved within Engagement Range of that enemy unit. This unit cannot make a Surge move while it is Battle-shocked or within Engagement Range of one or more enemy units, and can only make one Surge move per phase.",
+    "glossary": "glossary-space-marines-ability-glory-of-ultramar",
+    "rule": "unit-victrix-honour-guard",
     "units": [
-      "unit-astraeus"
+      "unit-victrix-honour-guard"
     ],
-    "datasheet": "unit-astraeus",
-    "statline": "astraeus-profile"
+    "datasheet": "unit-victrix-honour-guard",
+    "statline": "victrix-honour-guard-profile"
   },
-  "space-marines-ability-damaged-1-8-wounds-remaining": {
-    "id": "space-marines-ability-damaged-1-8-wounds-remaining",
-    "title": "Damaged: 1-8 wounds remaining",
-    "summary": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-space-marines-ability-damaged-1-8-wounds-remaining",
-    "rule": "unit-astraeus",
+  "space-marines-ability-banner-of-macragge": {
+    "id": "space-marines-ability-banner-of-macragge",
+    "title": "Banner of Macragge",
+    "summary": "Once per battle, at the start of the Fight phase, the bearer can use this ability. If it does, until the end of the phase, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in the bearer’s unit.",
+    "full": "Once per battle, at the start of the Fight phase, the bearer can use this ability. If it does, until the end of the phase, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in the bearer’s unit.",
+    "glossary": "glossary-space-marines-ability-banner-of-macragge",
+    "rule": "unit-victrix-honour-guard",
     "units": [
-      "unit-astraeus"
+      "unit-victrix-honour-guard"
     ],
-    "datasheet": "unit-astraeus",
-    "statline": "astraeus-profile"
+    "datasheet": "unit-victrix-honour-guard",
+    "statline": "victrix-honour-guard-profile"
   },
-  "space-marines-ability-deadly-demise-d6-2": {
-    "id": "space-marines-ability-deadly-demise-d6-2",
-    "title": "Deadly Demise D6+2",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-space-marines-ability-deadly-demise-d6-2",
-    "rule": "unit-astraeus",
+  "space-marines-weapon-master-crafted-bolt-carbine": {
+    "id": "space-marines-weapon-master-crafted-bolt-carbine",
+    "title": "Master-crafted Bolt Carbine",
+    "summary": "Ranged · 24\" · A 2 · BS 2+ · S 4 · AP -1 · D 2",
+    "full": "Ranged · 24\" · A 2 · BS 2+ · S 4 · AP -1 · D 2",
+    "glossary": "glossary-space-marines-weapon-master-crafted-bolt-carbine",
+    "rule": "unit-victrix-honour-guard",
     "units": [
-      "unit-astraeus"
+      "unit-victrix-honour-guard"
     ],
-    "datasheet": "unit-astraeus",
-    "statline": "astraeus-profile"
+    "datasheet": "unit-victrix-honour-guard",
+    "statline": "victrix-honour-guard-profile"
   },
-  "space-marines-weapon-twin-macro-accelerator-cannon": {
-    "id": "space-marines-weapon-twin-macro-accelerator-cannon",
-    "title": "Twin macro-accelerator cannon",
-    "summary": "Ranged · 72\" · A 12 · BS 3+ · S 9 · AP -1 · D 3 · Sustained Hits 1, Twin-linked",
-    "full": "Ranged · 72\" · A 12 · BS 3+ · S 9 · AP -1 · D 3 · Sustained Hits 1, Twin-linked",
-    "glossary": "glossary-space-marines-weapon-twin-macro-accelerator-cannon",
-    "rule": "unit-astraeus",
+  "space-marines-weapon-blades-of-honour": {
+    "id": "space-marines-weapon-blades-of-honour",
+    "title": "Blades of Honour",
+    "summary": "Melee · Melee · A 6 · WS 2+ · S 5 · AP -2 · D 2 · Precision, Twin-linked",
+    "full": "Melee · Melee · A 6 · WS 2+ · S 5 · AP -2 · D 2 · Precision, Twin-linked",
+    "glossary": "glossary-space-marines-weapon-blades-of-honour",
+    "rule": "unit-victrix-honour-guard",
     "units": [
-      "unit-astraeus"
+      "unit-victrix-honour-guard"
     ],
-    "datasheet": "unit-astraeus",
-    "statline": "astraeus-profile"
+    "datasheet": "unit-victrix-honour-guard",
+    "statline": "victrix-honour-guard-profile"
   },
-  "space-marines-weapon-astraeus-las-ripper": {
-    "id": "space-marines-weapon-astraeus-las-ripper",
-    "title": "Astraeus las-ripper",
-    "summary": "Ranged · 36\" · A 2 · BS 3+ · S 12 · AP -3 · D D6+1",
-    "full": "Ranged · 36\" · A 2 · BS 3+ · S 12 · AP -3 · D D6+1",
-    "glossary": "glossary-space-marines-weapon-astraeus-las-ripper",
-    "rule": "unit-astraeus",
+  "space-marines-ability-outrider-escort": {
+    "id": "space-marines-ability-outrider-escort",
+    "title": "Outrider Escort",
+    "summary": "Once per turn, in your opponent's Shooting phase, when another friendly Adeptus Astartes Mounted unit within 6\" of this model is selected as the target of an attack, one model from your army with this ability can use it. If it does, after that enemy unit has finished making its attacks, that model can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit [and only if it is an eligible target).",
+    "full": "Once per turn, in your opponent's Shooting phase, when another friendly Adeptus Astartes Mounted unit within 6\" of this model is selected as the target of an attack, one model from your army with this ability can use it. If it does, after that enemy unit has finished making its attacks, that model can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit [and only if it is an eligible target).",
+    "glossary": "glossary-space-marines-ability-outrider-escort",
+    "rule": "unit-invader-atv",
     "units": [
-      "unit-astraeus"
+      "unit-invader-atv"
     ],
-    "datasheet": "unit-astraeus",
-    "statline": "astraeus-profile"
+    "datasheet": "unit-invader-atv",
+    "statline": "invader-atv-profile"
   },
-  "space-marines-weapon-plasma-eradicator-standard": {
-    "id": "space-marines-weapon-plasma-eradicator-standard",
-    "title": "➤ Plasma eradicator - standard",
-    "summary": "Ranged · 36\" · A D6 · BS 3+ · S 7 · AP -2 · D 2 · Blast",
-    "full": "Ranged · 36\" · A D6 · BS 3+ · S 7 · AP -2 · D 2 · Blast",
-    "glossary": "glossary-space-marines-weapon-plasma-eradicator-standard",
-    "rule": "unit-astraeus",
+  "space-marines-weapon-onslaught-gatling-cannon-2": {
+    "id": "space-marines-weapon-onslaught-gatling-cannon-2",
+    "title": "Onslaught gatling cannon",
+    "summary": "Ranged · 24\" · A 8 · BS 3+ · S 5 · AP 0 · D 1 · Devastating Wounds",
+    "full": "Ranged · 24\" · A 8 · BS 3+ · S 5 · AP 0 · D 1 · Devastating Wounds",
+    "glossary": "glossary-space-marines-weapon-onslaught-gatling-cannon-2",
+    "rule": "unit-invader-atv",
     "units": [
-      "unit-astraeus"
+      "unit-invader-atv",
+      "unit-outrider-squad",
+      "unit-land-speeder",
+      "unit-redemptor-dreadnought",
+      "unit-storm-speeder-hailstrike"
     ],
-    "datasheet": "unit-astraeus",
-    "statline": "astraeus-profile"
+    "datasheet": "unit-invader-atv",
+    "statline": "invader-atv-profile"
   },
-  "space-marines-weapon-plasma-eradicator-supercharge": {
-    "id": "space-marines-weapon-plasma-eradicator-supercharge",
-    "title": "➤ Plasma eradicator - supercharge",
-    "summary": "Ranged · 36\" · A D6 · BS 3+ · S 8 · AP -3 · D 3 · Blast, Hazardous",
-    "full": "Ranged · 36\" · A D6 · BS 3+ · S 8 · AP -3 · D 3 · Blast, Hazardous",
-    "glossary": "glossary-space-marines-weapon-plasma-eradicator-supercharge",
-    "rule": "unit-astraeus",
+  "space-marines-weapon-multi-melta-2": {
+    "id": "space-marines-weapon-multi-melta-2",
+    "title": "Multi-melta",
+    "summary": "Ranged · 18\" · A 2 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2",
+    "full": "Ranged · 18\" · A 2 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2",
+    "glossary": "glossary-space-marines-weapon-multi-melta-2",
+    "rule": "unit-invader-atv",
     "units": [
-      "unit-astraeus"
+      "unit-invader-atv",
+      "unit-outrider-squad",
+      "unit-dreadnought",
+      "unit-gladiator-valiant",
+      "unit-land-raider",
+      "unit-land-raider-crusader",
+      "unit-land-raider-redeemer",
+      "unit-land-speeder"
     ],
-    "datasheet": "unit-astraeus",
-    "statline": "astraeus-profile"
+    "datasheet": "unit-invader-atv",
+    "statline": "invader-atv-profile"
   },
-  "space-marines-weapon-armoured-hull-2": {
-    "id": "space-marines-weapon-armoured-hull-2",
-    "title": "Armoured hull",
-    "summary": "Melee · Melee · A 6 · WS 4+ · S 8 · AP 0 · D 1",
-    "full": "Melee · Melee · A 6 · WS 4+ · S 8 · AP 0 · D 1",
-    "glossary": "glossary-space-marines-weapon-armoured-hull-2",
-    "rule": "unit-astraeus",
+  "space-marines-ability-thunderous-impact": {
+    "id": "space-marines-ability-thunderous-impact",
+    "title": "Thunderous Impact",
+    "summary": "Each time a model in this unit makes a melee attack, if this unit made a Charge move this turn, improve the Strength and Damage characteristics of that attack by 1",
+    "full": "Each time a model in this unit makes a melee attack, if this unit made a Charge move this turn, improve the Strength and Damage characteristics of that attack by 1",
+    "glossary": "glossary-space-marines-ability-thunderous-impact",
+    "rule": "unit-outrider-squad",
     "units": [
-      "unit-astraeus",
-      "unit-repulsor",
-      "unit-repulsor-executioner",
-      "unit-stormraven-gunship"
+      "unit-outrider-squad"
     ],
-    "datasheet": "unit-astraeus",
-    "statline": "astraeus-profile"
+    "datasheet": "unit-outrider-squad",
+    "statline": "outrider-squad-profile"
   },
   "space-marines-ability-ballistus-strike": {
     "id": "space-marines-ability-ballistus-strike",
@@ -4835,30 +6098,6 @@ window.DG_TERMS={
     "rule": "unit-ballistus-dreadnought",
     "units": [
       "unit-ballistus-dreadnought"
-    ],
-    "datasheet": "unit-ballistus-dreadnought",
-    "statline": "ballistus-dreadnought-profile"
-  },
-  "space-marines-ability-damaged-1-4-wounds-remaining": {
-    "id": "space-marines-ability-damaged-1-4-wounds-remaining",
-    "title": "Damaged: 1-4 Wounds Remaining",
-    "summary": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-space-marines-ability-damaged-1-4-wounds-remaining",
-    "rule": "unit-ballistus-dreadnought",
-    "units": [
-      "unit-ballistus-dreadnought",
-      "unit-brutalis-dreadnought",
-      "unit-gladiator-lancer",
-      "unit-gladiator-reaper",
-      "unit-gladiator-valiant",
-      "unit-hammerfall-bunker",
-      "unit-invictor-tactical-warsuit",
-      "unit-predator-annihilator",
-      "unit-predator-destructor",
-      "unit-redemptor-dreadnought",
-      "unit-vindicator",
-      "unit-whirlwind"
     ],
     "datasheet": "unit-ballistus-dreadnought",
     "statline": "ballistus-dreadnought-profile"
@@ -5074,35 +6313,15 @@ window.DG_TERMS={
     "datasheet": "unit-dreadnought",
     "statline": "dreadnought-profile"
   },
-  "space-marines-weapon-close-combat-weapon-7": {
-    "id": "space-marines-weapon-close-combat-weapon-7",
+  "space-marines-weapon-close-combat-weapon-8": {
+    "id": "space-marines-weapon-close-combat-weapon-8",
     "title": "Close combat weapon",
     "summary": "Melee · Melee · A 5 · WS 3+ · S 6 · AP 0 · D 1",
     "full": "Melee · Melee · A 5 · WS 3+ · S 6 · AP 0 · D 1",
-    "glossary": "glossary-space-marines-weapon-close-combat-weapon-7",
+    "glossary": "glossary-space-marines-weapon-close-combat-weapon-8",
     "rule": "unit-dreadnought",
     "units": [
       "unit-dreadnought"
-    ],
-    "datasheet": "unit-dreadnought",
-    "statline": "dreadnought-profile"
-  },
-  "space-marines-weapon-multi-melta-2": {
-    "id": "space-marines-weapon-multi-melta-2",
-    "title": "Multi-melta",
-    "summary": "Ranged · 18\" · A 2 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2",
-    "full": "Ranged · 18\" · A 2 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2",
-    "glossary": "glossary-space-marines-weapon-multi-melta-2",
-    "rule": "unit-dreadnought",
-    "units": [
-      "unit-dreadnought",
-      "unit-gladiator-valiant",
-      "unit-invader-atv",
-      "unit-land-raider",
-      "unit-land-raider-crusader",
-      "unit-land-raider-redeemer",
-      "unit-land-speeder",
-      "unit-outrider-squad"
     ],
     "datasheet": "unit-dreadnought",
     "statline": "dreadnought-profile"
@@ -5279,127 +6498,6 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-gladiator-valiant",
     "statline": "gladiator-valiant-profile"
-  },
-  "space-marines-ability-fortification": {
-    "id": "space-marines-ability-fortification",
-    "title": "Fortification",
-    "summary": "While an enemy unit is only within Engagement Range of one or more Fortifications from your army: ■ That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll. ■ Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
-    "full": "While an enemy unit is only within Engagement Range of one or more Fortifications from your army: ■ That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll. ■ Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
-    "glossary": "glossary-space-marines-ability-fortification",
-    "rule": "unit-hammerfall-bunker",
-    "units": [
-      "unit-hammerfall-bunker"
-    ],
-    "datasheet": "unit-hammerfall-bunker",
-    "statline": "hammerfall-bunker-profile"
-  },
-  "space-marines-ability-ceramite-cover": {
-    "id": "space-marines-ability-ceramite-cover",
-    "title": "Ceramite Cover",
-    "summary": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack.",
-    "full": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack.",
-    "glossary": "glossary-space-marines-ability-ceramite-cover",
-    "rule": "unit-hammerfall-bunker",
-    "units": [
-      "unit-hammerfall-bunker"
-    ],
-    "datasheet": "unit-hammerfall-bunker",
-    "statline": "hammerfall-bunker-profile"
-  },
-  "space-marines-ability-defensive-array": {
-    "id": "space-marines-ability-defensive-array",
-    "title": "Defensive Array",
-    "summary": "You can target this Fortification with the Fire Overwatch Strategem for 0CP, and can do so even if you have already targeted another unit with that Stratagem this turn. This Fortification can only be targeted with that Stratagem once per turn.",
-    "full": "You can target this Fortification with the Fire Overwatch Strategem for 0CP, and can do so even if you have already targeted another unit with that Stratagem this turn. This Fortification can only be targeted with that Stratagem once per turn.",
-    "glossary": "glossary-space-marines-ability-defensive-array",
-    "rule": "unit-hammerfall-bunker",
-    "units": [
-      "unit-hammerfall-bunker"
-    ],
-    "datasheet": "unit-hammerfall-bunker",
-    "statline": "hammerfall-bunker-profile"
-  },
-  "space-marines-weapon-hammerfall-missile-launcher-superfrag": {
-    "id": "space-marines-weapon-hammerfall-missile-launcher-superfrag",
-    "title": "➤ Hammerfall Missile Launcher - Superfrag",
-    "summary": "Ranged · 48\" · A 2d6+2 · BS 4+ · S 5 · AP 0 · D 1 · Blast",
-    "full": "Ranged · 48\" · A 2d6+2 · BS 4+ · S 5 · AP 0 · D 1 · Blast",
-    "glossary": "glossary-space-marines-weapon-hammerfall-missile-launcher-superfrag",
-    "rule": "unit-hammerfall-bunker",
-    "units": [
-      "unit-hammerfall-bunker"
-    ],
-    "datasheet": "unit-hammerfall-bunker",
-    "statline": "hammerfall-bunker-profile"
-  },
-  "space-marines-weapon-hammerfall-missile-launcher-superkrak": {
-    "id": "space-marines-weapon-hammerfall-missile-launcher-superkrak",
-    "title": "➤ Hammerfall Missile Launcher - Superkrak",
-    "summary": "Ranged · 48\" · A 2 · BS 4+ · S 10 · AP -2 · D D6+1",
-    "full": "Ranged · 48\" · A 2 · BS 4+ · S 10 · AP -2 · D D6+1",
-    "glossary": "glossary-space-marines-weapon-hammerfall-missile-launcher-superkrak",
-    "rule": "unit-hammerfall-bunker",
-    "units": [
-      "unit-hammerfall-bunker"
-    ],
-    "datasheet": "unit-hammerfall-bunker",
-    "statline": "hammerfall-bunker-profile"
-  },
-  "space-marines-weapon-hammerfall-heavy-bolter-array": {
-    "id": "space-marines-weapon-hammerfall-heavy-bolter-array",
-    "title": "Hammerfall Heavy Bolter Array",
-    "summary": "Ranged · 36\" · A 6 · BS 4+ · S 5 · AP -1 · D 2 · Defensive Array, Sustained Hits 1, Twin-linked",
-    "full": "Ranged · 36\" · A 6 · BS 4+ · S 5 · AP -1 · D 2 · Defensive Array, Sustained Hits 1, Twin-linked",
-    "glossary": "glossary-space-marines-weapon-hammerfall-heavy-bolter-array",
-    "rule": "unit-hammerfall-bunker",
-    "units": [
-      "unit-hammerfall-bunker"
-    ],
-    "datasheet": "unit-hammerfall-bunker",
-    "statline": "hammerfall-bunker-profile"
-  },
-  "space-marines-weapon-hammerfall-heavy-flamer-array": {
-    "id": "space-marines-weapon-hammerfall-heavy-flamer-array",
-    "title": "Hammerfall Heavy Flamer Array",
-    "summary": "Ranged · 12\" · A 2D6 · BS N/A · S 5 · AP -1 · D 1 · Defensive Array, Ignores Cover, Torrent, Twin-linked",
-    "full": "Ranged · 12\" · A 2D6 · BS N/A · S 5 · AP -1 · D 1 · Defensive Array, Ignores Cover, Torrent, Twin-linked",
-    "glossary": "glossary-space-marines-weapon-hammerfall-heavy-flamer-array",
-    "rule": "unit-hammerfall-bunker",
-    "units": [
-      "unit-hammerfall-bunker"
-    ],
-    "datasheet": "unit-hammerfall-bunker",
-    "statline": "hammerfall-bunker-profile"
-  },
-  "space-marines-ability-outrider-escort": {
-    "id": "space-marines-ability-outrider-escort",
-    "title": "Outrider Escort",
-    "summary": "Once per turn, in your opponent's Shooting phase, when another friendly Adeptus Astartes Mounted unit within 6\" of this model is selected as the target of an attack, one model from your army with this ability can use it. If it does, after that enemy unit has finished making its attacks, that model can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit [and only if it is an eligible target).",
-    "full": "Once per turn, in your opponent's Shooting phase, when another friendly Adeptus Astartes Mounted unit within 6\" of this model is selected as the target of an attack, one model from your army with this ability can use it. If it does, after that enemy unit has finished making its attacks, that model can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit [and only if it is an eligible target).",
-    "glossary": "glossary-space-marines-ability-outrider-escort",
-    "rule": "unit-invader-atv",
-    "units": [
-      "unit-invader-atv"
-    ],
-    "datasheet": "unit-invader-atv",
-    "statline": "invader-atv-profile"
-  },
-  "space-marines-weapon-onslaught-gatling-cannon": {
-    "id": "space-marines-weapon-onslaught-gatling-cannon",
-    "title": "Onslaught gatling cannon",
-    "summary": "Ranged · 24\" · A 8 · BS 3+ · S 5 · AP 0 · D 1 · Devastating Wounds",
-    "full": "Ranged · 24\" · A 8 · BS 3+ · S 5 · AP 0 · D 1 · Devastating Wounds",
-    "glossary": "glossary-space-marines-weapon-onslaught-gatling-cannon",
-    "rule": "unit-invader-atv",
-    "units": [
-      "unit-invader-atv",
-      "unit-land-speeder",
-      "unit-outrider-squad",
-      "unit-redemptor-dreadnought",
-      "unit-storm-speeder-hailstrike"
-    ],
-    "datasheet": "unit-invader-atv",
-    "statline": "invader-atv-profile"
   },
   "space-marines-ability-combat-support": {
     "id": "space-marines-ability-combat-support",
@@ -5652,19 +6750,6 @@ window.DG_TERMS={
     "datasheet": "unit-land-speeder",
     "statline": "land-speeder-profile"
   },
-  "space-marines-ability-thunderous-impact": {
-    "id": "space-marines-ability-thunderous-impact",
-    "title": "Thunderous Impact",
-    "summary": "Each time a model in this unit makes a melee attack, if this unit made a Charge move this turn, improve the Strength and Damage characteristics of that attack by 1",
-    "full": "Each time a model in this unit makes a melee attack, if this unit made a Charge move this turn, improve the Strength and Damage characteristics of that attack by 1",
-    "glossary": "glossary-space-marines-ability-thunderous-impact",
-    "rule": "unit-outrider-squad",
-    "units": [
-      "unit-outrider-squad"
-    ],
-    "datasheet": "unit-outrider-squad",
-    "statline": "outrider-squad-profile"
-  },
   "space-marines-ability-annihilator": {
     "id": "space-marines-ability-annihilator",
     "title": "Annihilator",
@@ -5849,6 +6934,21 @@ window.DG_TERMS={
     "units": [
       "unit-repulsor",
       "unit-stormhawk-interceptor"
+    ],
+    "datasheet": "unit-repulsor",
+    "statline": "repulsor-profile"
+  },
+  "space-marines-weapon-armoured-hull-2": {
+    "id": "space-marines-weapon-armoured-hull-2",
+    "title": "Armoured Hull",
+    "summary": "Melee · Melee · A 6 · WS 4+ · S 8 · AP 0 · D 1",
+    "full": "Melee · Melee · A 6 · WS 4+ · S 8 · AP 0 · D 1",
+    "glossary": "glossary-space-marines-weapon-armoured-hull-2",
+    "rule": "unit-repulsor",
+    "units": [
+      "unit-repulsor",
+      "unit-repulsor-executioner",
+      "unit-stormraven-gunship"
     ],
     "datasheet": "unit-repulsor",
     "statline": "repulsor-profile"
@@ -6260,12 +7360,20 @@ window.DG_TERMS={
     "datasheet": "unit-whirlwind",
     "statline": "whirlwind-profile"
   },
-  "space-marines-enhancement-fear-made-manifest-aura": {
-    "id": "space-marines-enhancement-fear-made-manifest-aura",
-    "title": "Fear Made Manifest [Aura]",
-    "summary": "Adeptus Astartes model only. While an enemy unit (excluding Monsters and Vehicles) is within 6\" of the bearer, each time that unit fails a Battle-Shock test, one model in that unit is destroyed (chosen by it's controlling player.) Once per battle, when such an enemy unit fails a Battle-Shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
-    "full": "Adeptus Astartes model only. While an enemy unit (excluding Monsters and Vehicles) is within 6\" of the bearer, each time that unit fails a Battle-Shock test, one model in that unit is destroyed (chosen by it's controlling player.) Once per battle, when such an enemy unit fails a Battle-Shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
-    "glossary": "glossary-space-marines-enhancement-fear-made-manifest-aura",
+  "space-marines-enhancement-fear-made-manifest": {
+    "id": "space-marines-enhancement-fear-made-manifest",
+    "title": "Fear Made Manifest",
+    "summary": "Fear Made Manifest appears in the Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-space-marines-enhancement-fear-made-manifest",
+    "rule": "detachment-1st-company-task-force"
+  },
+  "space-marines-enhancement-the-imperiums-sword": {
+    "id": "space-marines-enhancement-the-imperiums-sword",
+    "title": "The Imperium’s Sword",
+    "summary": "The Imperium’s Sword appears in the Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-space-marines-enhancement-the-imperiums-sword",
     "rule": "detachment-1st-company-task-force"
   },
   "space-marines-enhancement-iron-resolve": {
@@ -6282,14 +7390,6 @@ window.DG_TERMS={
     "summary": "Adeptus Astartes Terminator model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer's unit as well.",
     "full": "Adeptus Astartes Terminator model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer's unit as well.",
     "glossary": "glossary-space-marines-enhancement-rites-of-war",
-    "rule": "detachment-1st-company-task-force"
-  },
-  "space-marines-enhancement-the-imperiums-sword": {
-    "id": "space-marines-enhancement-the-imperiums-sword",
-    "title": "The Imperium's Sword",
-    "summary": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer's melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer's unit.",
-    "full": "Adeptus Astartes model only. Add 1 to the Attacks characteristic of the bearer's melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer's unit.",
-    "glossary": "glossary-space-marines-enhancement-the-imperiums-sword",
     "rule": "detachment-1st-company-task-force"
   },
   "space-marines-enhancement-architect-of-war": {
@@ -6388,20 +7488,20 @@ window.DG_TERMS={
     "glossary": "glossary-space-marines-enhancement-the-honour-vehement",
     "rule": "detachment-gladius-task-force"
   },
+  "space-marines-enhancement-master-of-machine-war": {
+    "id": "space-marines-enhancement-master-of-machine-war",
+    "title": "Master of Machine War",
+    "summary": "Master of Machine War appears in the Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-space-marines-enhancement-master-of-machine-war",
+    "rule": "detachment-ironstorm-spearhead"
+  },
   "space-marines-enhancement-adept-of-the-omnissiah": {
     "id": "space-marines-enhancement-adept-of-the-omnissiah",
     "title": "Adept of the Omnissiah",
     "summary": "Techmarine model only. Once per battle round, when a saving throw is failed for a friendly Adeptus Astartes Vehicle model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
     "full": "Techmarine model only. Once per battle round, when a saving throw is failed for a friendly Adeptus Astartes Vehicle model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
     "glossary": "glossary-space-marines-enhancement-adept-of-the-omnissiah",
-    "rule": "detachment-ironstorm-spearhead"
-  },
-  "space-marines-enhancement-master-of-the-machine-war": {
-    "id": "space-marines-enhancement-master-of-the-machine-war",
-    "title": "Master of the Machine War",
-    "summary": "ADEPTUS ASTARTES model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE within 6\" of the bearer. Until the start of your next Command phase, that VEHICLE is eligible to shoot even if it Fell Back or Advanced this turn.",
-    "full": "ADEPTUS ASTARTES model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE within 6\" of the bearer. Until the start of your next Command phase, that VEHICLE is eligible to shoot even if it Fell Back or Advanced this turn.",
-    "glossary": "glossary-space-marines-enhancement-master-of-the-machine-war",
     "rule": "detachment-ironstorm-spearhead"
   },
   "space-marines-enhancement-target-augury-web": {
@@ -6414,11 +7514,19 @@ window.DG_TERMS={
   },
   "space-marines-enhancement-the-flesh-is-weak": {
     "id": "space-marines-enhancement-the-flesh-is-weak",
-    "title": "The Flesh is Weak",
+    "title": "The Flesh Is Weak",
     "summary": "Adeptus Astartes model only. The bearer has the Feel No Pain 4+ ability.",
     "full": "Adeptus Astartes model only. The bearer has the Feel No Pain 4+ ability.",
     "glossary": "glossary-space-marines-enhancement-the-flesh-is-weak",
     "rule": "detachment-ironstorm-spearhead"
+  },
+  "space-marines-enhancement-hunters-instincts-2": {
+    "id": "space-marines-enhancement-hunters-instincts-2",
+    "title": "Hunter’s Instincts",
+    "summary": "Hunter’s Instincts appears in the Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-space-marines-enhancement-hunters-instincts-2",
+    "rule": "detachment-stormlance-task-force"
   },
   "space-marines-enhancement-feinting-withdrawal": {
     "id": "space-marines-enhancement-feinting-withdrawal",
@@ -6434,14 +7542,6 @@ window.DG_TERMS={
     "summary": "Adeptus Astartes Mounted model only. Improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 2 instead.",
     "full": "Adeptus Astartes Mounted model only. Improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 2 instead.",
     "glossary": "glossary-space-marines-enhancement-fury-of-the-storm",
-    "rule": "detachment-stormlance-task-force"
-  },
-  "space-marines-enhancement-hunters-instincts-2": {
-    "id": "space-marines-enhancement-hunters-instincts-2",
-    "title": "Hunter's Instincts",
-    "summary": "Adeptus Astartes Mounted model only. If the bearer's unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round as being one higher than it actually is",
-    "full": "Adeptus Astartes Mounted model only. If the bearer's unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round as being one higher than it actually is",
-    "glossary": "glossary-space-marines-enhancement-hunters-instincts-2",
     "rule": "detachment-stormlance-task-force"
   },
   "space-marines-enhancement-portents-of-wisdom": {
@@ -6483,6 +7583,54 @@ window.DG_TERMS={
     "full": "Adeptus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
     "glossary": "glossary-space-marines-enhancement-the-blade-driven-deep",
     "rule": "detachment-vanguard-spearhead"
+  },
+  "space-marines-enhancement-avenging-angel": {
+    "id": "space-marines-enhancement-avenging-angel",
+    "title": "Avenging Angel",
+    "summary": "ADEPTUS ASTARTES FLY INFANTRY model only. Each time the bearer’s unit ends an ingress move, select one enemy unit within 9\" of it; that enemy unit must take a Battle-shock test, subtracting 1 from that test.",
+    "full": "ADEPTUS ASTARTES FLY INFANTRY model only. Each time the bearer’s unit ends an ingress move, select one enemy unit within 9\" of it; that enemy unit must take a Battle-shock test, subtracting 1 from that test.",
+    "glossary": "glossary-space-marines-enhancement-avenging-angel",
+    "rule": "detachment-vengeful-hosts"
+  },
+  "space-marines-enhancement-orksbane": {
+    "id": "space-marines-enhancement-orksbane",
+    "title": "Orksbane",
+    "summary": "ADEPTUS ASTARTES FLY INFANTRY model only. The bearer is equipped with Orksbane.",
+    "full": "ADEPTUS ASTARTES FLY INFANTRY model only. The bearer is equipped with Orksbane.",
+    "glossary": "glossary-space-marines-enhancement-orksbane",
+    "rule": "detachment-vengeful-hosts"
+  },
+  "space-marines-stratagem-meteoric-onslaught": {
+    "id": "space-marines-stratagem-meteoric-onslaught",
+    "title": "METEORIC ONSLAUGHT",
+    "summary": "Fight phase. One friendly ADEPTUS ASTARTES FLY INFANTRY unit that charged this turn and has not been selected to fight this phase. Until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in your unit.",
+    "full": "Fight phase. One friendly ADEPTUS ASTARTES FLY INFANTRY unit that charged this turn and has not been selected to fight this phase. Until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in your unit.",
+    "glossary": "glossary-space-marines-stratagem-meteoric-onslaught",
+    "rule": "detachment-vengeful-hosts"
+  },
+  "space-marines-stratagem-purge-by-sectors": {
+    "id": "space-marines-stratagem-purge-by-sectors",
+    "title": "PURGE BY SECTORS",
+    "summary": "End of the Fight phase. One friendly ADEPTUS ASTARTES FLY INFANTRY unit that is not within Engagement Range of one or more enemy units and is eligible to fight. Your unit can make a Normal move of up to D3+3\".",
+    "full": "End of the Fight phase. One friendly ADEPTUS ASTARTES FLY INFANTRY unit that is not within Engagement Range of one or more enemy units and is eligible to fight. Your unit can make a Normal move of up to D3+3\".",
+    "glossary": "glossary-space-marines-stratagem-purge-by-sectors",
+    "rule": "detachment-vengeful-hosts"
+  },
+  "space-marines-stratagem-know-no-fear": {
+    "id": "space-marines-stratagem-know-no-fear",
+    "title": "KNOW NO FEAR",
+    "summary": "Your Command phase. One friendly Battle-shocked ADEPTUS ASTARTES unit. Your unit is no longer Battle-shocked.",
+    "full": "Your Command phase. One friendly Battle-shocked ADEPTUS ASTARTES unit. Your unit is no longer Battle-shocked.",
+    "glossary": "glossary-space-marines-stratagem-know-no-fear",
+    "rule": "detachment-vengeful-hosts"
+  },
+  "space-marines-detachment-rule-imperator-unleashed": {
+    "id": "space-marines-detachment-rule-imperator-unleashed",
+    "title": "Imperator Unleashed",
+    "summary": "In a turn in which a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress move or a Charge move, each time a model in that unit makes an attack, you can re-roll a Hit roll of 1.",
+    "full": "In a turn in which a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress move or a Charge move, each time a model in that unit makes an attack, you can re-roll a Hit roll of 1.",
+    "glossary": "glossary-space-marines-detachment-rule-imperator-unleashed",
+    "rule": "detachment-vengeful-hosts"
   },
   "space-marines-army-rule-oath-of-moment": {
     "id": "space-marines-army-rule-oath-of-moment",

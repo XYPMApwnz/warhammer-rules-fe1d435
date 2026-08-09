@@ -12,17 +12,32 @@
   ],
   "compactSharedAbilities": [
     "Oath of Moment",
-    "Templar Vows",
+    "Anti",
+    "Assault",
+    "Blast",
+    "Close-quarters",
     "Deadly Demise",
     "Deep Strike",
+    "Devastating Wounds",
+    "Extra Attacks",
     "Feel No Pain",
     "Firing Deck",
+    "Hazardous",
+    "Heavy",
     "Hover",
+    "Ignores Cover",
     "Infiltrators",
     "Leader",
     "Lone Operative",
+    "Melta",
+    "Pistol",
+    "Precision",
+    "Rapid Fire",
     "Scouts",
-    "Stealth"
+    "Stealth",
+    "Sustained Hits",
+    "Torrent",
+    "Twin-linked"
   ],
   "assetVersions": {
     "app": 4,
@@ -30,15 +45,16 @@
     "tokens": 3
   },
   "expected": {
-    "matchedDetachments": 22,
+    "matchedDetachments": 23,
     "factionPackDetachments": 15,
-    "codexDatasheets": 83,
+    "codexDatasheets": 101,
     "imperialArmourDatasheets": 0,
     "legendsDatasheets": 0
   },
   "sources": {
     "factionPack": "content/space-marines-faction-pack.en.json",
     "codexDatasheets": "content/space-marines-codex-datasheets.en.json",
+    "codexParity": "content/space-marines-current-overlay.en.json",
     "relatedRules": "content/space-marines-related-rules.en.json",
     "manifest": "sources/source-manifest.json"
   }

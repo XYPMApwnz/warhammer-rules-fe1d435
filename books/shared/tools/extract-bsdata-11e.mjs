@@ -336,6 +336,7 @@ const parsed=rootLinks.map(parseDatasheet);
 for(const unit of parsed){
   const correction=config.unitCorrections?.[unit.title];
   if(!correction)continue;
+  if(correction.sourceLayer)unit.sourceLayer=correction.sourceLayer;
   if(correction.addKeywords)unit.keywords=unique([...unit.keywords,...correction.addKeywords],key);
   if(correction.removeKeywords){
     const removed=new Set(correction.removeKeywords.map(key));
@@ -421,13 +422,13 @@ const sourceMeta={
 const datasheets={
   schema:1,
   source:sourceMeta,
-  datasheets:sortUnits(parsed.filter(item=>item.sourceLayer==='codex')),
+  datasheets:sortUnits(parsed.filter(item=>item.sourceLayer==='codex'||item.sourceLayer==='faction-pack')),
   imperialArmour:sortUnits(parsed.filter(item=>item.sourceLayer==='imperial-armour')),
   legends:sortUnits(parsed.filter(item=>item.sourceLayer==='legends')),
   audit:{
     rootEntries:(faction.entryLinks||[]).length,
     excludedEntries:(faction.entryLinks||[]).length-rootLinks.length,
-    datasheets:parsed.filter(item=>item.sourceLayer==='codex').length,
+    datasheets:parsed.filter(item=>item.sourceLayer==='codex'||item.sourceLayer==='faction-pack').length,
     imperialArmour:parsed.filter(item=>item.sourceLayer==='imperial-armour').length,
     imperialArmourLegends:parsed.filter(item=>item.sourceLayer==='imperial-armour'&&item.status==='Warhammer Legends').length,
     currentImperialArmour:parsed.filter(item=>item.sourceLayer==='imperial-armour'&&item.status!=='Warhammer Legends').length,
@@ -452,6 +453,7 @@ if(config.outputs.officialPoints){
       if(override.paidWargear)unit.paidWargear=override.paidWargear;
       if(override.leader?.length){
         const datasheet=parsed.find(item=>item.id===unit.id),text=`This model can be attached to the following units: ${override.leader.join(', ')}.`;
+        if(config.faction?.separateLeaderRelations&&datasheet)datasheet.relations.leader=override.leader;
         const ability=datasheet?.abilities.find(item=>key(item.title)==='leader');
         if(ability)ability.text=text;
         else datasheet?.abilities.push({title:'Leader',text});
@@ -470,7 +472,8 @@ if(config.outputs.officialPoints){
     points.enhancements.push({...(sourceItem||{}),id:item.id||sourceItem?.id||`enhancement-${slug(item.title)}`,title:item.title,detachment:item.detachment||sourceItem?.detachment||'',value:item.value,text:item.text||sourceItem?.text||'',profile:sourceItem?.profile||null,pointsSource:{label:`Official MFM ${official.version}`,url:official.url,verifiedAt:official.verifiedAt}});
   }
   points.enhancements.sort((a,b)=>a.detachment.localeCompare(b.detachment)||a.title.localeCompare(b.title));
-  points.detachments=official.detachments||[];
+  const detachmentTitles=new Map((config.enhancements?.detachments||[]).map(title=>[key(title),title]));
+  points.detachments=(official.detachments||[]).map(item=>({...item,title:detachmentTitles.get(key(item.title))||item.title,forceDisposition:item.forceDisposition?.replace(/\b(?:And|The)\b/g,word=>word.toLowerCase())}));
   points.source={...sourceMeta,officialMfm:{version:official.version,url:official.url,verifiedAt:official.verifiedAt}};
   points.audit.enhancements=points.enhancements.length;
 }

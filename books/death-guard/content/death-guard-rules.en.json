@@ -4282,7 +4282,14 @@
               "termId": "ability-infused-with-the-blessings-of-nurgle-577c42e",
               "title": "Infused with the Blessings of Nurgle",
               "text": "In your Shooting phase, each time this unit is selected to shoot, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that enemy unit is Afflicted."
-            },
+            }
+          ],
+          "number": ""
+        },
+        {
+          "id": "plague-marines-wargear-abilities",
+          "title": "Wargear Abilities",
+          "blocks": [
             {
               "type": "ability",
               "termId": null,
@@ -4290,8 +4297,7 @@
               "title": "Icon of Despair (Aura)",
               "text": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1."
             }
-          ],
-          "number": ""
+          ]
         },
         {
           "id": "plague-marines-composition",
@@ -4760,7 +4766,14 @@
               "termId": "ability-death-approaches-3347016",
               "title": "Death Approaches",
               "text": "Each time this unit is set up on the battlefield using the Deep Strike ability, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all Afflicted enemy units, and more than 8\" horizontally away from all other enemy units."
-            },
+            }
+          ],
+          "number": ""
+        },
+        {
+          "id": "deathshroud-terminators-wargear-abilities",
+          "title": "Wargear Abilities",
+          "blocks": [
             {
               "type": "ability",
               "termId": null,
@@ -4768,8 +4781,7 @@
               "title": "Icon of Despair (Aura)",
               "text": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1."
             }
-          ],
-          "number": ""
+          ]
         },
         {
           "id": "deathshroud-terminators-composition",
@@ -7513,7 +7525,8 @@
           "number": ""
         }
       ],
-      "number": "4.10.1"
+      "number": "4.10.1",
+      "local": false
     },
     {
       "id": "unit-great-unclean-one",
@@ -7745,7 +7758,8 @@
           "number": ""
         }
       ],
-      "number": "4.10.2"
+      "number": "4.10.2",
+      "local": false
     },
     {
       "id": "unit-nurglings",
@@ -7867,7 +7881,8 @@
           "number": ""
         }
       ],
-      "number": "4.10.3"
+      "number": "4.10.3",
+      "local": false
     },
     {
       "id": "unit-plague-drones",
@@ -8046,7 +8061,8 @@
           "number": ""
         }
       ],
-      "number": "4.10.4"
+      "number": "4.10.4",
+      "local": false
     },
     {
       "id": "unit-plaguebearers",
@@ -8189,7 +8205,8 @@
           "number": ""
         }
       ],
-      "number": "4.10.5"
+      "number": "4.10.5",
+      "local": false
     },
     {
       "id": "unit-rotigus",
@@ -8349,7 +8366,8 @@
           "number": ""
         }
       ],
-      "number": "4.10.6"
+      "number": "4.10.6",
+      "local": false
     },
     {
       "id": "sources-and-version",
@@ -13836,7 +13854,7 @@
   ],
   "audit": {
     "detachments": 9,
-    "datasheets": 36,
+    "datasheets": 30,
     "currentFactionPack": "v1.0",
     "officialFactionPackDate": "2026-06-20",
     "currentMFM": "v1.1",

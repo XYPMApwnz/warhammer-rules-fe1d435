@@ -22,7 +22,6 @@
     "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth ).": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth)."
   },
   "keywordCorrections": {
-    "Burrowers": "Burrower",
     "Malceptor": "Maleceptor"
   },
   "unitCorrections": {
@@ -42,6 +41,7 @@
       ]
     },
     "Hyperadapted Raveners": {
+      "sourceLayer": "faction-pack",
       "addKeywords": [
         "Synapse"
       ],
@@ -58,6 +58,7 @@
       ]
     },
     "Tyranid Prime with Lash Whip": {
+      "sourceLayer": "faction-pack",
       "removeKeywords": [
         "Leader"
       ],
@@ -204,6 +205,15 @@
         "Spinemaw": "Spinemaws"
       }
     },
+    "The Red Terror": {
+      "sourceLayer": "faction-pack",
+      "addKeywords": [
+        "Burrower"
+      ],
+      "removeKeywords": [
+        "Burrowers"
+      ]
+    },
     "Malanthrope": {
       "weaponSkills": {
         "Grasping tail": "4+"
@@ -228,7 +238,7 @@
     "snapshot": "bsdata-tyranids-11e.json",
     "datasheets": "../content/tyranids-codex-datasheets.en.json",
     "points": "../content/tyranids-points.en.json",
-    "officialPoints": "official-mfm-v1.1.json"
+    "officialPoints": "official-mfm-v1.2.json"
   },
   "filters": {
     "excludeNames": [

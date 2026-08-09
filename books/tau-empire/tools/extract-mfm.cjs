@@ -3,7 +3,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 
 const root=path.resolve(__dirname,'..');
-const outputPath=path.join(root,'sources','official-mfm-v1.1.json');
+const outputPath=path.join(root,'sources','official-mfm-v1.2.json');
 const datasheets=require(path.join(root,'content','tau-empire-codex-datasheets.en.json'));
 const currentUnits=[...datasheets.datasheets,...datasheets.imperialArmour].filter(unit=>unit.status==='Current');
 const sourceUrl='https://mfm.warhammer-community.com/en/tau-empire';
@@ -55,7 +55,7 @@ async function main(){
   });
   await browser.close();
 
-  if(remote.version!=='v1.1')throw new Error(`Expected current MFM v1.1, found ${remote.version||'unknown'}`);
+  if(remote.version!=='v1.2')throw new Error(`Expected current MFM v1.2, found ${remote.version||'unknown'}`);
   const byTitle=new Map(remote.units.map(unit=>[key(unit.title),unit]));
   const verifiedUnits=[],unitOverrides=[];
   for(const unit of currentUnits){

@@ -10,11 +10,11 @@ import pdfplumber
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PDF = ROOT / "sources" / "emperors-children-faction-pack-v1.0.pdf"
+PDF = ROOT / "sources" / "emperors-children-faction-pack-v1.1.pdf"
 OUTPUT = ROOT / "content" / "emperors-children-faction-pack.en.json"
 RELATED = ROOT / "content" / "emperors-children-related-rules.en.json"
 DATASHEETS = ROOT / "content" / "emperors-children-codex-datasheets.en.json"
-SOURCE_ID = "emperors-children-faction-pack-v1.0"
+SOURCE_ID = "emperors-children-faction-pack-v1.1"
 
 
 def clean_text(value: str) -> str:
@@ -53,11 +53,11 @@ def extract_source() -> tuple[dict, dict[str, dict]]:
             }
         meta = {
             "title": "Emperor's Children Faction Pack",
-            "version": "1.0",
-            "legalFrom": "2026-06-20",
+            "version": "1.1",
+            "legalFrom": "2026-07-22",
             "pageCount": len(document.pages),
             "sha256": digest,
-            "file": "sources/emperors-children-faction-pack-v1.0.pdf",
+            "file": "sources/emperors-children-faction-pack-v1.1.pdf",
         }
     return meta, pages
 

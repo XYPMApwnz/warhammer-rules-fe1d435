@@ -50,8 +50,8 @@ window.DG_TERMS={
   "emperors-children-detachment-rule-frantic-focus": {
     "id": "emperors-children-detachment-rule-frantic-focus",
     "title": "Frantic Focus",
-    "summary": "When a friendly EMPEROR’S CHILDREN BATTLELINE unit is selected to make an advance/fall-back move, that unit’s attacks have +1 S until the end of the turn. This detachment has the HOST tag and cannot be taken with another HOST detachment.",
-    "full": "When a friendly EMPEROR’S CHILDREN BATTLELINE unit is selected to make an advance/fall-back move, that unit’s attacks have +1 S until the end of the turn. This detachment has the HOST tag and cannot be taken with another HOST detachment.",
+    "summary": "When a friendly EMPEROR’S CHILDREN BATTLELINE unit is selected to make an advance/fall-back move, that unit’s attacks have +1 S until the end of the turn.",
+    "full": "When a friendly EMPEROR’S CHILDREN BATTLELINE unit is selected to make an advance/fall-back move, that unit’s attacks have +1 S until the end of the turn.",
     "glossary": "glossary-emperors-children-detachment-rule-frantic-focus",
     "rule": "detachment-frenzied-host"
   },
@@ -162,8 +162,8 @@ window.DG_TERMS={
   "emperors-children-enhancement-exalted-patron": {
     "id": "emperors-children-enhancement-exalted-patron",
     "title": "Exalted Patron",
-    "summary": "LORD EXULTANT model only. Add 1\" to the Move characteristic of the bearer. In the Declare Battle Formations step, the bearer can be attached to a FLAWLESS BLADES unit.",
-    "full": "LORD EXULTANT model only. Add 1\" to the Move characteristic of the bearer. In the Declare Battle Formations step, the bearer can be attached to a FLAWLESS BLADES unit.",
+    "summary": "LORD EXULTANT model only. Add 1\" to the Move characteristic of the bearer.",
+    "full": "LORD EXULTANT model only. Add 1\" to the Move characteristic of the bearer.",
     "glossary": "glossary-emperors-children-enhancement-exalted-patron",
     "rule": "detachment-court-of-the-phoenician"
   },
@@ -891,7 +891,8 @@ window.DG_TERMS={
     "glossary": "glossary-emperors-children-ability-damaged-1-6-wounds-remaining",
     "rule": "unit-fulgrim",
     "units": [
-      "unit-fulgrim"
+      "unit-fulgrim",
+      "unit-defiler"
     ],
     "datasheet": "unit-fulgrim",
     "statline": "fulgrim-profile"
@@ -1455,12 +1456,12 @@ window.DG_TERMS={
     "datasheet": "unit-defiler",
     "statline": "defiler-profile"
   },
-  "emperors-children-weapon-magma-cutter": {
-    "id": "emperors-children-weapon-magma-cutter",
-    "title": "Magma cutter",
+  "emperors-children-weapon-magma-cutters": {
+    "id": "emperors-children-weapon-magma-cutters",
+    "title": "Magma cutters",
     "summary": "Ranged · 12\" · A 2 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2",
     "full": "Ranged · 12\" · A 2 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2",
-    "glossary": "glossary-emperors-children-weapon-magma-cutter",
+    "glossary": "glossary-emperors-children-weapon-magma-cutters",
     "rule": "unit-defiler",
     "units": [
       "unit-defiler"
@@ -1546,12 +1547,12 @@ window.DG_TERMS={
     "datasheet": "unit-maulerfiend",
     "statline": "maulerfiend-profile"
   },
-  "emperors-children-weapon-magma-cutter-2": {
-    "id": "emperors-children-weapon-magma-cutter-2",
+  "emperors-children-weapon-magma-cutter": {
+    "id": "emperors-children-weapon-magma-cutter",
     "title": "Magma cutter",
     "summary": "Ranged · 6\" · A 2 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2",
     "full": "Ranged · 6\" · A 2 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2",
-    "glossary": "glossary-emperors-children-weapon-magma-cutter-2",
+    "glossary": "glossary-emperors-children-weapon-magma-cutter",
     "rule": "unit-maulerfiend",
     "units": [
       "unit-maulerfiend"
@@ -1735,8 +1736,8 @@ window.DG_TERMS={
   "emperors-children-stratagem-armour-of-abhorrence": {
     "id": "emperors-children-stratagem-armour-of-abhorrence",
     "title": "ARMOUR OF ABHORRENCE",
-    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One EMPEROR’S CHILDREN unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets a model in your unit, worsen the Armour Penetration characteristic of that attack by 1.",
-    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One EMPEROR’S CHILDREN unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets a model in your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One EMPEROR’S CHILDREN unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One EMPEROR’S CHILDREN unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
     "glossary": "glossary-emperors-children-stratagem-armour-of-abhorrence",
     "rule": "detachment-coterie-of-the-conceited"
   },

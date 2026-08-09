@@ -1,0 +1,1340 @@
+{
+  "schema": 1,
+  "source": {
+    "title": "Wahapedia Warhammer 40,000 11th Edition · Space Marines",
+    "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+    "authority": "secondary",
+    "checkedAt": "2026-08-09"
+  },
+  "units": [
+    {
+      "title": "Adrax Agatone",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Adrax-Agatone",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Adrax-Agatone"
+      },
+      "wargear": [],
+      "composition": "1 Adrax Agatone – EPIC HERO\nThis model is equipped with: Drakkis; Malleus Noctum."
+    },
+    {
+      "title": "Aethon Shaan",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Aethon-Shaan",
+      "source": {
+        "authority": "official",
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "localFile": "../sources/space-marines-faction-pack-v1.1.pdf",
+        "pages": [
+          22,
+          23
+        ]
+      },
+      "wargear": [],
+      "composition": "1 Aethon Shaan – Epic Hero\nThis model is equipped with: 1 heavy bolt pistol; 1 Claws of Severax."
+    },
+    {
+      "title": "Aggressor Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Aggressor-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Aggressor-Squad"
+      },
+      "wargear": [
+        "All models in this unit can each have their flamestorm gauntlets replaced with 1 auto boltstorm gauntlets and 1 fragstorm grenade launcher."
+      ],
+      "composition": "1 Aggressor Sergeant\n2-5 Aggressors\nEvery model is equipped with: flamestorm gauntlets; twin power fist."
+    },
+    {
+      "title": "Ancient",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Ancient",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Ancient"
+      },
+      "wargear": [
+        "This model’s bolt rifle and close combat weapon can be replaced with 1 power weapon."
+      ],
+      "composition": "1 Ancient\nThis model is equipped with: bolt pistol; bolt rifle; close combat weapon."
+    },
+    {
+      "title": "Ancient in Terminator Armor",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Ancient-In-Terminator-Armour",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Ancient-In-Terminator-Armour"
+      },
+      "wargear": [
+        "This model’s power fist can be replaced with one of the following:\n1 chainfist\n1 close combat weapon\n1 power weapon\n1 thunder hammer",
+        "This model’s storm bolter and power fist can be replaced with one of the following:\n1 twin lightning claws\n1 thunder hammer and 1 Terminator storm shield"
+      ],
+      "composition": "1 Ancient in Terminator Armour\nThis model is equipped with: storm bolter; power fist."
+    },
+    {
+      "title": "Apothecary",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Apothecary",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Apothecary"
+      },
+      "wargear": [],
+      "composition": "1 Apothecary\nThis model is equipped with: absolvor bolt pistol; reductor pistol; close combat weapon."
+    },
+    {
+      "title": "Apothecary Biologis",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Apothecary-Biologis",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Apothecary-Biologis"
+      },
+      "wargear": [],
+      "composition": "1 Apothecary Biologis\nThis model is equipped with: absolvor bolt pistol; close combat weapon."
+    },
+    {
+      "title": "Assault Intercessor Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Assault-Intercessor-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Assault-Intercessor-Squad"
+      },
+      "wargear": [
+        "The Assault Intercessor Sergeant’s heavy bolt pistol can be replaced with one of the following:\n1 hand flamer\n1 plasma pistol",
+        "The Assault Intercessor Sergeant’s Astartes chainsword can be replaced with one of the following:\n1 power fist\n1 power weapon\n1 thunder hammer"
+      ],
+      "composition": "1 Assault Intercessor Sergeant\n4-9 Assault Intercessors\nEvery model is equipped with: heavy bolt pistol; Astartes chainsword."
+    },
+    {
+      "title": "Assault Intercessors with Jump Packs",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Assault-Intercessors-With-Jump-Packs",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Assault-Intercessors-With-Jump-Packs"
+      },
+      "wargear": [
+        "For every 5 models in this unit, 1 Assault Intercessor with Jump Pack’s heavy bolt pistol can be replaced with 1 plasma pistol.",
+        "The Assault Intercessor Sergeant with Jump Pack’s Astartes chainsword can be replaced with one of the following:\n\n1 power weapon\n1 power fist",
+        "The Assault Intercessor Sergeant with Jump Pack’s heavy bolt pistol can be replaced with one of the following:\n\n1 hand flamer\n1 plasma pistol"
+      ],
+      "composition": "1 Assault Intercessor Sergeant with Jump Pack\n4-9 Assault Intercessors with Jump Packs\nEach model is equipped with: heavy bolt pistol; Astartes chainsword."
+    },
+    {
+      "title": "Ballistus Dreadnought",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Ballistus-Dreadnought",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Ballistus-Dreadnought"
+      },
+      "wargear": [],
+      "composition": "1 Ballistus Dreadnought\nThis model is equipped with: Ballistus missile launcher; Ballistus lascannon; twin storm bolter; armoured feet."
+    },
+    {
+      "title": "Bladeguard Ancient",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Bladeguard-Ancient",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Bladeguard-Ancient"
+      },
+      "wargear": [],
+      "composition": "1 Bladeguard Ancient\nThis model is equipped with: heavy bolt pistol; close combat weapon."
+    },
+    {
+      "title": "Bladeguard Veteran Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Bladeguard-Veteran-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Bladeguard-Veteran-Squad"
+      },
+      "wargear": [
+        "The Bladeguard Veteran Sergeant’s heavy bolt pistol can be replaced with one of the following:\n1 neo-volkite pistol\n1 plasma pistol"
+      ],
+      "composition": "1 Bladeguard Veteran Sergeant\n2-5 Bladeguard Veterans\nEvery model is equipped with: heavy bolt pistol; master-crafted power weapon."
+    },
+    {
+      "title": "Brutalis Dreadnought",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Brutalis-Dreadnought-UL",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Brutalis-Dreadnought-UL"
+      },
+      "wargear": [
+        "This model’s twin heavy bolter can be replaced with 1 twin multi-melta.",
+        "This model’s Brutalis fists and Brutalis bolt rifles can be replaced with 1 Brutalis talons."
+      ],
+      "composition": "1 Brutalis Dreadnought\nThis model is equipped with: twin Icarus ironhail heavy stubber; twin heavy bolter; Brutalis bolt rifles; Brutalis fists."
+    },
+    {
+      "title": "Caanok Var",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Caanok-Var",
+      "source": {
+        "authority": "official",
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "localFile": "../sources/space-marines-faction-pack-v1.1.pdf",
+        "pages": [
+          14,
+          15
+        ]
+      },
+      "wargear": [],
+      "composition": "1 Caanok Var – Epic Hero\nThis model is equipped with: 1 storm bolter; 1 Axiom."
+    },
+    {
+      "title": "Captain",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Captain",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Captain"
+      },
+      "wargear": [
+        "This model’s bolt pistol, master-crafted bolter and close combat weapon can be replaced with one of the following:\n\n1 heavy bolt pistol and 1 power fist\n1 heavy bolt pistol and 1 master-crafted power weapon\n1 neo-volkite pistol and 1 power fist\n1 neo-volkite pistol and 1 master-crafted power weapon\n1 plasma pistol and 1 power fist\n1 plasma pistol and 1 master-crafted power weapon\n1 heavy bolt pistol, 1 master-crafted power weapon and 1 relic shield",
+        "This model’s close combat weapon can be replaced with one of the following:\n\n1 master-crafted power weapon\n1 power fist"
+      ],
+      "composition": "1 Captain\nThis model is equipped with: bolt pistol; master-crafted bolter; close combat weapon."
+    },
+    {
+      "title": "Captain in Gravis Armour",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Captain-In-Gravis-Armour",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Captain-In-Gravis-Armour"
+      },
+      "wargear": [
+        "This model’s master-crafted heavy bolt rifle and master-crafted power weapon can be replaced with:\n1 boltstorm gauntlet, 1 power fist and 1 relic chainsword\n1 boltstorm gauntlet, 1 power fist and 1 relic blade\n1 boltstorm gauntlet, 1 power fist and 1 relic fist"
+      ],
+      "composition": "1 Captain in Gravis Armour\nThis model is equipped with: master-crafted heavy bolt rifle; master-crafted power weapon."
+    },
+    {
+      "title": "Captain in Phobos Armour",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Captain-In-Phobos-Armour",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Captain-In-Phobos-Armour"
+      },
+      "wargear": [],
+      "composition": "1 Captain in Phobos Armour\nThis model is equipped with: bolt pistol; instigator bolt carbine; combat knife."
+    },
+    {
+      "title": "Captain in Terminator Armour",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Captain-In-Terminator-Armour",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Captain-In-Terminator-Armour"
+      },
+      "wargear": [
+        "This model’s storm bolter can be replaced with 1 combi-weapon",
+        "This model’s relic weapon can be replaced with 1 relic fist"
+      ],
+      "composition": "1 Captain in Terminator Armour\nThis model is equipped with: storm bolter; relic weapon."
+    },
+    {
+      "title": "Captain with Jump Pack",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Captain-With-Jump-Pack",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Captain-With-Jump-Pack"
+      },
+      "wargear": [
+        "This model’s heavy bolt pistol can be replaced with one of the following:\n\n1 plasma pistol\n1 hand flamer",
+        "This model’s Astartes chainsword can be replaced with one of the following:\n\n1 power fist\n1 relic weapon",
+        "This model’s heavy bolt pistol and Astartes chainsword can be replaced with 1 thunder hammer and 1 relic shield.",
+        "If this model is equipped with a heavy bolt pistol and an Astartes chainsword, it can be equipped with 1 relic shield. This model’s heavy bolt pistol and Astartes chainsword cannot be replaced."
+      ],
+      "composition": "1 Captain with Jump Pack\nThis model is equipped with: heavy bolt pistol; Astartes chainsword."
+    },
+    {
+      "title": "Cato Sicarius",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Cato-Sicarius",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Cato-Sicarius"
+      },
+      "wargear": [],
+      "composition": "1 Cato Sicarius – EPIC HERO\nThis model is equipped with: 1 artisan plasma pistol; 1 Talassarian tempest blade."
+    },
+    {
+      "title": "Centurion Assault Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Centurion-Assault-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Centurion-Assault-Squad"
+      },
+      "wargear": [
+        "Any number of models can each have their twin flamer replaced with 1 twin meltagun.",
+        "Any number of models can each have their Centurion bolters replaced with 1 Centurion assault launcher."
+      ],
+      "composition": "1 Assault Centurion Sergeant\n2-5 Assault Centurions\nEvery model is equipped with: twin flamer; siege drills; Centurion bolters."
+    },
+    {
+      "title": "Centurion Devastator Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Centurion-Devastator-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Centurion-Devastator-Squad"
+      },
+      "wargear": [
+        "Any number of models can each have their Centurion bolters replaced with 1 Centurion missile launcher.",
+        "Any number of models can each have their grav-cannon replaced with one of the following:\n1 twin heavy bolter\n1 twin lascannon"
+      ],
+      "composition": "1 Devastator Centurion Sergeant\n2-5 Devastator Centurions\nEvery model is equipped with: grav-cannon; Centurion bolters; Centurion fists."
+    },
+    {
+      "title": "Chaplain",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Chaplain",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Chaplain"
+      },
+      "wargear": [],
+      "composition": "1 Chaplain\nThis model is equipped with: absolvor bolt pistol; crozius arcanum."
+    },
+    {
+      "title": "Chaplain in Terminator Armour",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Chaplain-In-Terminator-Armour",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Chaplain-In-Terminator-Armour"
+      },
+      "wargear": [
+        "This model’s storm bolter can be replaced with 1 relic shield."
+      ],
+      "composition": "1 Chaplain in Terminator Armour\nThis model is equipped with: storm bolter; crozius arcanum."
+    },
+    {
+      "title": "Chaplain on Bike",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Chaplain-On-Bike",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Chaplain-On-Bike"
+      },
+      "wargear": [],
+      "composition": "1 Chaplain on Bike\nThis model is equipped with: absolvor bolt pistol; twin bolt rifle; crozius arcanum."
+    },
+    {
+      "title": "Chaplain with Jump Pack",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Chaplain-With-Jump-Pack",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Chaplain-With-Jump-Pack"
+      },
+      "wargear": [
+        "This model’s bolt pistol can be replaced with one of the following:\n1 boltgun\n1 combi-weapon\n1 grav-pistol\n1 hand flamer\n1 inferno pistol\n1 plasma pistol\n1 storm bolter\n1 power fist\n1 absolvor bolt pistol."
+      ],
+      "composition": "1 Chaplain with Jump Pack\nThis model is equipped with: bolt pistol; crozius arcanum."
+    },
+    {
+      "title": "Chief Librarian Tigurius",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Chief-Librarian-Tigurius",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Chief-Librarian-Tigurius"
+      },
+      "wargear": [],
+      "composition": "1 Chief Librarian Tigurius – EPIC HERO\nThis model is equipped with: bolt pistol; Storm of the Emperor’s Wrath; Rod of Tigurius."
+    },
+    {
+      "title": "Company Heroes",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Company-Heroes",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Company-Heroes"
+      },
+      "wargear": [],
+      "composition": "1 Ancient\n1 Company Champion\n2 Company Veterans\nThe Ancient is equipped with: bolt pistol; bolt rifle; close combat weapon.\n\nThe Company Champion is equipped with: bolt pistol; master-crafted power weapon.\n\nOne Company Veteran is equipped with: bolt pistol; master-crafted heavy bolter; close combat weapon.\n\nOne Company Veteran is equipped with: bolt pistol; master-crafted bolt rifle; close combat weapon."
+    },
+    {
+      "title": "Darnath Lysander",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Darnath-Lysander",
+      "source": {
+        "authority": "official",
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "localFile": "../sources/space-marines-faction-pack-v1.1.pdf",
+        "pages": [
+          24,
+          25
+        ]
+      },
+      "wargear": [],
+      "composition": "1 Darnath Lysander – Epic Hero\nThis model is equipped with: 1 Fist of Dorn."
+    },
+    {
+      "title": "Desolation Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Desolation-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Desolation-Squad"
+      },
+      "wargear": [
+        "All of the models in this unit can each have their superfrag rocket launcher replaced with 1 superkrak rocket launcher.",
+        "The Desolation Sergeant’s superfrag rocket launcher or superkrak rocket launcher can be replaced with 1 vengor launcher."
+      ],
+      "composition": "1 Desolation Sergeant\n4 Desolation Marines\nEvery model is equipped with: bolt pistol; castellan launcher; superfrag rocket launcher; close combat weapon."
+    },
+    {
+      "title": "Devastator Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Devastator-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Devastator-Squad"
+      },
+      "wargear": [
+        "Up to 4 Devastator Marines can each have their boltgun replaced with one of the following:\n\n1 grav-cannon\n1 heavy bolter\n1 lascannon\n1 missile launcher\n1 multi-melta\n1 plasma cannon",
+        "The Devastator Sergeant’s bolt pistol and boltgun can be replaced with two different weapons from the following list:*\n\n1 Astartes chain sword\n1 bolt pistol\n1 boltgun\n1 combi-weapon\n1 grav-pistol\n1 plasma pistol\n1 power fist\n1 power weapon\n1 thunder hammer",
+        "* This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)"
+      ],
+      "composition": "1 Devastator Sergeant\n4-9 Devastator Marines\nEvery model is equipped with: bolt pistol; boltgun; close combat weapon."
+    },
+    {
+      "title": "Dreadnought",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Dreadnought",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Dreadnought"
+      },
+      "wargear": [
+        "This model’s assault cannon can be replaced with one of the following:\n1 heavy plasma cannon\n1 multi-melta\n1 twin lascannon",
+        "This model’s Dreadnought combat weapon and storm bolter can be replaced with one of the following:\n1 missile launcher and 1 close combat weapon\n1 heavy flamer and 1 Dreadnought combat weapon"
+      ],
+      "composition": "1 Dreadnought\nThis model is equipped with: assault cannon; storm bolter; Dreadnought combat weapon."
+    },
+    {
+      "title": "Drop Pod",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Drop-Pod",
+      "source": {
+        "authority": "official",
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "localFile": "../sources/space-marines-faction-pack-v1.1.pdf",
+        "pages": [
+          26,
+          27
+        ]
+      },
+      "wargear": [],
+      "composition": "1 Drop Pod"
+    },
+    {
+      "title": "Eliminator Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Eliminator-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Eliminator-Squad"
+      },
+      "wargear": [
+        "The Eliminator Sergeant’s bolt sniper rifle can be replaced with one of the following:\n1 instigator bolt carbine\n1 las fusil",
+        "All Eliminators in this unit can each have their bolt sniper rifle replaced with 1 las fusil."
+      ],
+      "composition": "1 Eliminator Sergeant\n2 Eliminators\nEvery model is equipped with: bolt pistol; bolt sniper rifle; close combat weapon."
+    },
+    {
+      "title": "Eradicator Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Eradicator-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Eradicator-Squad"
+      },
+      "wargear": [
+        "For every 3 models in this unit, 1 Eradicator’s melta rifle can be replaced with 1 multi-melta."
+      ],
+      "composition": "1 Eradicator Sergeant\n2-5 Eradicators\nEvery model is equipped with: bolt pistol; melta rifle; close combat weapon."
+    },
+    {
+      "title": "Eradicator Squad with Heavy Bolters",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Eradicator-Squad-with-Heavy-Bolters",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Eradicator-Squad-with-Heavy-Bolters"
+      },
+      "wargear": [],
+      "composition": "1 Eradicator Sergeant\n2 Eradicators\nEvery model is equipped with: 1 bolt pistol; 1 heavy bolter; 1 close-combat weapon"
+    },
+    {
+      "title": "Firestrike Servo-Turrets",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Firestrike-Servo-turrets",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Firestrike-Servo-turrets"
+      },
+      "wargear": [
+        "Any number of models can each have their twin Firestrike las-talon replaced with 1 twin Firestrike autocannon."
+      ],
+      "composition": "1-2 Firestrike Servo-turrets\nEvery model is equipped with: twin Firestrike las-talon; close combat weapon."
+    },
+    {
+      "title": "Gladiator Lancer",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Gladiator-Lancer",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Gladiator-Lancer"
+      },
+      "wargear": [
+        "This model’s 2 storm bolters can be replaced with 2 fragstorm grenade launchers.",
+        "This model can be equipped with 1 ironhail heavy stubber.",
+        "This model can be equipped with 1 Icarus rocket pod."
+      ],
+      "composition": "1 Gladiator Lancer\nThis model is equipped with: Lancer laser destroyer; 2 storm bolters; armoured hull."
+    },
+    {
+      "title": "Gladiator Reaper",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Gladiator-Reaper",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Gladiator-Reaper"
+      },
+      "wargear": [
+        "This model can be equipped with 1 ironhail heavy stubber.",
+        "This model can be equipped with 1 Icarus rocket pod."
+      ],
+      "composition": "1 Gladiator Reaper\nThis model is equipped with: 2 tempest bolters; twin heavy onslaught gatling cannon; armoured hull."
+    },
+    {
+      "title": "Gladiator Valiant",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Gladiator-Valiant",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Gladiator-Valiant"
+      },
+      "wargear": [
+        "This model can be equipped with 1 ironhail heavy stubber.",
+        "This model can be equipped with 1 Icarus rocket pod."
+      ],
+      "composition": "1 Gladiator Valiant\nThis model is equipped with: 2 multi-meltas; twin las-talon; armoured hull."
+    },
+    {
+      "title": "Hammerfall Bunker",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Hammerfall-Bunker",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Hammerfall-Bunker"
+      },
+      "wargear": [
+        "This model’s Hammerfall heavy bolter array can be replaced with 1 Hammerfall heavy flamer array."
+      ],
+      "composition": "1 Hammerfall Bunker\nThis model is equipped with: Hammerfall heavy bolter array; Hammerfall missile launcher."
+    },
+    {
+      "title": "Heavy Intercessor Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Heavy-Intercessor-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Heavy-Intercessor-Squad"
+      },
+      "wargear": [
+        "For every 5 models in this unit, 1 Heavy Intercessor’s heavy bolt rifle can be replaced with 1 heavy bolter."
+      ],
+      "composition": "1 Heavy Intercessor Sergeant\n4-9 Heavy Intercessors\nEvery model is equipped with: bolt pistol; heavy bolt rifle; close combat weapon."
+    },
+    {
+      "title": "Hellblaster Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Hellblaster-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Hellblaster-Squad"
+      },
+      "wargear": [
+        "The Hellblaster Sergeant’s bolt pistol can be replaced with 1 plasma pistol."
+      ],
+      "composition": "1 Hellblaster Sergeant\n4-9 Hellblasters\nEvery model is equipped with: bolt pistol; plasma incinerator; close combat weapon."
+    },
+    {
+      "title": "Impulsor",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Impulsor",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Impulsor"
+      },
+      "wargear": [
+        "This model can be equipped with 1 ironhail heavy stubber.",
+        "This model’s 2 storm bolters can be replaced with 2 fragstorm grenade launchers.",
+        "This model can be equipped with one of the following:\n1 bellicatus missile array\n1 ironhail skytalon array\n1 orbital comms array\n1 shield dome"
+      ],
+      "composition": "1 Impulsor\nThis model is equipped with: 2 storm bolters; armoured hull."
+    },
+    {
+      "title": "Inceptor Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Inceptor-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Inceptor-Squad"
+      },
+      "wargear": [
+        "All models in this unit can each have their assault bolters replaced with 1 plasma exterminators."
+      ],
+      "composition": "1 Inceptor Sergeant\n2-5 Inceptors\nEvery model is equipped with: assault bolters; close combat weapon."
+    },
+    {
+      "title": "Incursor Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Incursor-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Incursor-Squad"
+      },
+      "wargear": [
+        "One Incursor can be equipped with 1 haywire mine."
+      ],
+      "composition": "1 Incursor Sergeant\n4-9 Incursors\nEvery model is equipped with: bolt pistol; occulus bolt carbine; paired combat blades."
+    },
+    {
+      "title": "Infernus Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Infernus-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Infernus-Squad"
+      },
+      "wargear": [],
+      "composition": "1 Infernus Sergeant\n4-9 Infernus Marines\nEvery model is equipped with: bolt pistol; pyreblaster; close combat weapon."
+    },
+    {
+      "title": "Infiltrator Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Infiltrator-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Infiltrator-Squad"
+      },
+      "wargear": [
+        "1 Infiltrator can be equipped with 1 helix gauntlet.*",
+        "1 Infiltrator can be equipped with 1 Infiltrator comms array.*",
+        "* These options cannot be taken on the same model."
+      ],
+      "composition": "1 Infiltrator Sergeant\n4-9 Infiltrators\nEvery model is equipped with: bolt pistol; marksman bolt carbine; close combat weapon."
+    },
+    {
+      "title": "Intercessor Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Intercessor-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Intercessor-Squad"
+      },
+      "wargear": [
+        "The Intercessor Sergeant’s bolt rifle can be replaced with one of the following:\n1 Astartes chainsword\n1 hand flamer\n1 plasma pistol\n1 power weapon",
+        "The Intercessor Sergeant’s close combat weapon can be replaced with one of the following:\n1 Astartes chainsword\n1 power fist\n1 power weapon\n1 thunder hammer",
+        "For every 5 models in this unit, 1 model equipped with a bolt rifle can be equipped with 1 Astartes grenade launcher."
+      ],
+      "composition": "1 Intercessor Sergeant\n4-9 Intercessors\nEvery model is equipped with: bolt pistol; bolt rifle; close combat weapon."
+    },
+    {
+      "title": "Invader ATV",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Invader-ATV",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Invader-ATV"
+      },
+      "wargear": [
+        "This model’s onslaught gatling cannon can be replaced with 1 multi-melta."
+      ],
+      "composition": "1 Invader ATV\nThis model is equipped with: bolt pistol, twin bolt rifle; onslaught gatling cannon; close combat weapon."
+    },
+    {
+      "title": "Invictor Tactical Warsuit",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Invictor-Tactical-Warsuit",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Invictor-Tactical-Warsuit"
+      },
+      "wargear": [
+        "This model’s incendium cannon can be replaced with 1 twin ironhail autocannon."
+      ],
+      "composition": "1 Invictor Tactical Warsuit\nThis model is equipped with: fragstorm grenade launcher; heavy bolter; incendium cannon; twin ironhail heavy stubber; Invictor fist."
+    },
+    {
+      "title": "Iron Father Feirros",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Iron-Father-Feirros",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Iron-Father-Feirros"
+      },
+      "wargear": [],
+      "composition": "1 Iron Father Feirros – EPIC HERO\nThis model is equipped with: bolt pistol; Gorgon’s Wrath; Harrowhand; Medusan manipuli."
+    },
+    {
+      "title": "Judiciar",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Judiciar",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Judiciar"
+      },
+      "wargear": [],
+      "composition": "1 Judiciar\nThis model is equipped with: absolvor bolt pistol; executioner relic blade."
+    },
+    {
+      "title": "Kayvaan Shrike",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Kayvaan-Shrike",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Kayvaan-Shrike"
+      },
+      "wargear": [],
+      "composition": "1 Kayvaan Shrike – EPIC HERO\nThis model is equipped with: Blackout; the Raven’s Talons."
+    },
+    {
+      "title": "Kor'sarro Khan",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Kor-sarro-Khan",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Kor-sarro-Khan"
+      },
+      "wargear": [],
+      "composition": "1 Kor’sarro Khan – EPIC HERO\nThis model is equipped with: bolt pistol; Moonfang."
+    },
+    {
+      "title": "Land Raider",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Land-Raider",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Land-Raider"
+      },
+      "wargear": [
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with 1 multi-melta.",
+        "This model can be equipped with 1 storm bolter."
+      ],
+      "composition": "1 Land Raider\nThis model is equipped with: twin heavy bolter; 2 godhammer lascannons; armoured tracks."
+    },
+    {
+      "title": "Land Raider Crusader",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Land-Raider-Crusader",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Land-Raider-Crusader"
+      },
+      "wargear": [
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with 1 multi-melta.",
+        "This model can be equipped with 1 storm bolter."
+      ],
+      "composition": "1 Land Raider Crusader\nThis model is equipped with: 2 hurricane bolters; twin assault cannon; armoured tracks."
+    },
+    {
+      "title": "Land Raider Redeemer",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Land-Raider-Redeemer",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Land-Raider-Redeemer"
+      },
+      "wargear": [
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with 1 multi-melta.",
+        "This model can be equipped with 1 storm bolter."
+      ],
+      "composition": "1 Land Raider Redeemer\nThis model is equipped with: 2 flamestorm cannons; twin assault cannon; armoured tracks."
+    },
+    {
+      "title": "Land Speeder",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Land-Speeder",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Land-Speeder"
+      },
+      "wargear": [
+        "This model can have its 1 onslaught gatling cannon replaced with 1 heavy flamer"
+      ],
+      "composition": "1 Land Speeder\nThis model is equipped with: 1 multi-melta; 1 onslaught gatling cannon; 1 stormfury missile launcher; 1 close-combat weapon"
+    },
+    {
+      "title": "Librarian",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Librarian",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Librarian"
+      },
+      "wargear": [],
+      "composition": "1 Librarian\nThis model is equipped with: bolt pistol; Smite; force weapon."
+    },
+    {
+      "title": "Librarian in Phobos Armour",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Librarian-In-Phobos-Armour",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Librarian-In-Phobos-Armour"
+      },
+      "wargear": [],
+      "composition": "1 Librarian in Phobos Armour\nThis model is equipped with: bolt pistol; Smite; force weapon."
+    },
+    {
+      "title": "Librarian in Terminator Armour",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Librarian-In-Terminator-Armour",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Librarian-In-Terminator-Armour"
+      },
+      "wargear": [
+        "This model can be equipped with one of the following:\n1 combi-weapon\n1 storm bolter"
+      ],
+      "composition": "1 Librarian in Terminator Armour\nThis model is equipped with: Smite; force weapon."
+    },
+    {
+      "title": "Lieutenant",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Lieutenant",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Lieutenant"
+      },
+      "wargear": [
+        "This model’s master-crafted bolter can be replaced with one of the following:\n\n1 plasma pistol\n1 master-crafted power weapon\n1 power fist",
+        "This model’s bolt pistol, master-crafted bolter and close combat weapon can be replaced with 1 neo volkite pistol, 1 master-crafted power weapon and 1 storm shield.",
+        "This model’s bolt pistol can be replaced with 1 heavy bolt pistol.",
+        "This model’s close combat weapon can be replaced with one of the following:\n\n1 master-crafted power weapon\n1 power fist"
+      ],
+      "composition": "1 Lieutenant\nThis model is equipped with: bolt pistol; master-crafted bolter; close combat weapon."
+    },
+    {
+      "title": "Lieutenant in Phobos Armour",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Lieutenant-In-Phobos-Armour",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Lieutenant-In-Phobos-Armour"
+      },
+      "wargear": [],
+      "composition": "1 Lieutenant in Phobos Armour\nThis model is equipped with: bolt pistol; master-crafted scoped bolt carbine; paired combat blades."
+    },
+    {
+      "title": "Lieutenant in Reiver Armour",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Lieutenant-In-Reiver-Armour",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Lieutenant-In-Reiver-Armour"
+      },
+      "wargear": [],
+      "composition": "1 Lieutenant in Reiver Armour\nThis model is equipped with: master-crafted special issue bolt pistol; combat knife."
+    },
+    {
+      "title": "Lieutenant Titus",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Captain-Titus",
+      "source": {
+        "authority": "official",
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "localFile": "../sources/space-marines-faction-pack-v1.1.pdf",
+        "pages": [
+          20,
+          21
+        ]
+      },
+      "wargear": [],
+      "composition": "1 Lieutenant Titus – Epic Hero\nThis model is equipped with: heavy bolt pistol; Astartes chainsword."
+    },
+    {
+      "title": "Lieutenant with Combi-weapon",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Lieutenant-with-Combi-weapon",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Lieutenant-with-Combi-weapon"
+      },
+      "wargear": [],
+      "composition": "1 Lieutenant with Combi-weapon\nThis model is equipped with: combi-weapon; paired combat blades."
+    },
+    {
+      "title": "Marneus Calgar in Armour of Antilochus",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Marneus-Calgar-in-Armour-of-Antilochus",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Marneus-Calgar-in-Armour-of-Antilochus"
+      },
+      "wargear": [],
+      "composition": "1 Marneus Calgar in Armour of Antilochus – EPIC HERO\nThis model is equipped with: 1 Gauntlets of Ultramar."
+    },
+    {
+      "title": "Outrider Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Outrider-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Outrider-Squad"
+      },
+      "wargear": [
+        "An Invader ATV’s onslaught gatling cannon can be replaced with 1 multi-melta."
+      ],
+      "composition": "1 Outrider Sergeant\n2-5 Outriders\n0-1 Invader ATV\nThe Outrider Sergeant and every Outrider is equipped with: heavy bolt pistol; twin bolt rifle; Astartes chainsword.\n\nAn Invader ATV is equipped with: bolt pistol; twin bolt rifle; onslaught gatling cannon; close combat weapon."
+    },
+    {
+      "title": "Pedro Kantor",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Pedro-Kantor",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Pedro-Kantor"
+      },
+      "wargear": [],
+      "composition": "1 Pedro Kantor – EPIC HERO\nThis model is equipped with: Dorn’s Arrow; Fist of Retribution."
+    },
+    {
+      "title": "Predator Annihilator",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Predator-Annihilator",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Predator-Annihilator"
+      },
+      "wargear": [
+        "This model can be equipped with one of the following:\n2 heavy bolters\n2 lascannons",
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with 1 storm bolter."
+      ],
+      "composition": "1 Predator Annihilator\nThis model is equipped with: Predator twin lascannon; armoured tracks."
+    },
+    {
+      "title": "Predator Destructor",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Predator-Destructor",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Predator-Destructor"
+      },
+      "wargear": [
+        "This model can be equipped with one of the following:\n2 heavy bolters\n2 lascannons",
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with 1 storm bolter."
+      ],
+      "composition": "1 Predator Destructor\nThis model is equipped with: Predator autocannon; armoured tracks."
+    },
+    {
+      "title": "Razorback",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Razorback",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Razorback"
+      },
+      "wargear": [
+        "This model’s twin heavy bolter can be replaced with 1 twin lascannon.",
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with 1 storm bolter."
+      ],
+      "composition": "1 Razorback\nThis model is equipped with: twin heavy bolter; armoured tracks."
+    },
+    {
+      "title": "Redemptor Dreadnought",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Redemptor-Dreadnought",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Redemptor-Dreadnought"
+      },
+      "wargear": [
+        "This model can be equipped with 1 Icarus rocket pod.",
+        "This model’s heavy flamer can be replaced with 1 onslaught gatling cannon.",
+        "This model’s heavy onslaught gatling cannon can be replaced with 1 macro plasma incinerator.",
+        "This model’s twin fragstorm grenade launcher can be replaced with 1 twin storm bolter."
+      ],
+      "composition": "1 Redemptor Dreadnought\nThis model is equipped with: Twin fragstorm grenade launcher; heavy flamer; heavy onslaught gatling cannon; Redemptor fist."
+    },
+    {
+      "title": "Reiver Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Reiver-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Reiver-Squad"
+      },
+      "wargear": [
+        "All models in this unit can each have their combat knife replaced with 1 bolt carbine and 1 close combat weapon.",
+        "If the Reiver Sergeant is equipped with 1 bolt carbine, it can be equipped with 1 combat knife.",
+        "All models in this unit can each be equipped with 1 Reiver grav-chute.",
+        "All models in this unit can each be equipped with 1 grapnel launcher."
+      ],
+      "composition": "1 Reiver Sergeant\n4-9 Reivers\nEvery model is equipped with: special issue bolt pistol; combat knife."
+    },
+    {
+      "title": "Repulsor",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Repulsor",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Repulsor"
+      },
+      "wargear": [
+        "This model’s twin heavy bolter can be replaced with 1 twin lascannon.",
+        "This model’s heavy onslaught gatling cannon can be replaced with 1 las-talon."
+      ],
+      "composition": "1 Repulsor\nThis model is equipped with: heavy onslaught gatling cannon; hunter-slayer missile; Repulsor defensive array; twin heavy bolter; armoured hull."
+    },
+    {
+      "title": "Repulsor Executioner",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Repulsor-Executioner",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Repulsor-Executioner"
+      },
+      "wargear": [
+        "This model’s macro plasma incinerator can be replaced with 1 heavy laser destroyer.",
+        "This model can be equipped with 1 ironhail heavy stubber.",
+        "This model can be equipped with 1 Icarus rocket pod."
+      ],
+      "composition": "1 Repulsor Executioner\nThis model is equipped with: heavy onslaught gatling cannon; macro plasma incinerator; Repulsor Executioner defensive array; twin heavy bolter; twin Icarus ironhail heavy stubber; armoured hull."
+    },
+    {
+      "title": "Rhino",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Rhino",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Rhino"
+      },
+      "wargear": [
+        "This model can be equipped with 1 hunter-killer missile."
+      ],
+      "composition": "1 Rhino\nThis model is equipped with: storm bolter; armoured tracks."
+    },
+    {
+      "title": "Roboute Guilliman",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Roboute-Guilliman",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Roboute-Guilliman"
+      },
+      "wargear": [],
+      "composition": "1 Roboute Guilliman – EPIC HERO\nThis model is equipped with: Hand of Dominion; Emperor’s Sword."
+    },
+    {
+      "title": "Scout Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Scout-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Scout-Squad"
+      },
+      "wargear": [
+        "The Scout Sergeant's boltgun can be replaced with 1 Astartes chainsword.",
+        "Any number of models can each have their boltgun replaced with one of the following:\n\n1 Astartes shotgun\n1 combat knife",
+        "For every 5 models in this unit, 1 Scout’s boltgun can be replaced with 1 Scout sniper rifle.",
+        "For every 5 models in this unit, 1 Scout’s boltgun can be replaced with one of the following:\n\n1 heavy bolter\n1 missile launcher"
+      ],
+      "composition": "1 Scout Sergeant\n4-9 Scouts\nEvery model is equipped with: bolt pistol; boltgun; close combat weapon."
+    },
+    {
+      "title": "Sternguard Veteran Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Sternguard-Veteran-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Sternguard-Veteran-Squad"
+      },
+      "wargear": [
+        "The Sternguard Veteran Sergeant’s Sternguard bolt rifle can be replaced with one of the following:\n\n1 Astartes chainsword\n1 combi-weapon\n1 power weapon\n1 power fist\n1 Astartes chainsword and 1 Sternguard bolt rifle*\n1 power weapon and 1 Sternguard bolt rifle*\n1 power fist and 1 Sternguard bolt rifle*",
+        "Any number of Sternguard Veterans can each have their Sternguard bolt rifle replaced with 1 combi-weapon.",
+        "For every 5 models in this unit, 1 Sternguard Veteran’s Sternguard bolt rifle can be replaced with one of the following:\n\n1 pyrecannon\n1 Sternguard heavy bolter",
+        "* This model's Sternguard bolt rifle cannot be replaced."
+      ],
+      "composition": "1 Sternguard Veteran Sergeant\n4-9 Sternguard Veterans\nEvery model is equipped with: Sternguard bolt pistol; Sternguard bolt rifle; close combat weapon."
+    },
+    {
+      "title": "Storm Speeder Hailstrike",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Storm-Speeder-Hailstrike",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Storm-Speeder-Hailstrike"
+      },
+      "wargear": [],
+      "composition": "1 Storm Speeder Hailstrike\nThis model is equipped with: 2 fragstorm grenade launchers; onslaught gatling cannon; twin ironhail heavy stubber; close combat weapon."
+    },
+    {
+      "title": "Storm Speeder Hammerstrike",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Storm-Speeder-Hammerstrike",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Storm-Speeder-Hammerstrike"
+      },
+      "wargear": [],
+      "composition": "1 Storm Speeder Hammerstrike\nThis model is equipped with: Hammerstrike missile launcher; 2 krakstorm grenade launchers; melta destroyer; close combat weapon."
+    },
+    {
+      "title": "Storm Speeder Thunderstrike",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Storm-Speeder-Thunderstrike",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Storm-Speeder-Thunderstrike"
+      },
+      "wargear": [],
+      "composition": "1 Storm Speeder Thunderstrike\nThis model is equipped with: stormfury missiles; Thunderstrike las-talon; twin Icarus rocket pod; close combat weapon."
+    },
+    {
+      "title": "Stormhawk Interceptor",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Stormhawk-Interceptor",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Stormhawk-Interceptor"
+      },
+      "wargear": [
+        "This model’s skyhammer missile launcher can be replaced with one of the following:\n1 twin heavy bolter\n1 typhoon missile launcher",
+        "This model’s las-talon can be replaced with 1 Icarus stormcannon."
+      ],
+      "composition": "1 Stormhawk Interceptor\nThis model is equipped with: twin assault cannon; skyhammer missile launcher; las-talon; armoured hull."
+    },
+    {
+      "title": "Stormraven Gunship",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Stormraven-Gunship",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Stormraven-Gunship"
+      },
+      "wargear": [
+        "This model’s twin assault cannon can be replaced with one of the following:\n1 twin heavy plasma cannon\n1 twin lascannon",
+        "This model’s typhoon missile launcher can be replaced with one of the following:\n1 twin heavy bolter\n1 twin multi-melta",
+        "This model can be equipped with 2 hurricane bolters."
+      ],
+      "composition": "1 Stormraven Gunship\nThis model is equipped with: 2 stormstrike missile launchers; twin assault cannon; typhoon missile launcher; armoured hull."
+    },
+    {
+      "title": "Stormtalon Gunship",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Stormtalon-Gunship",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Stormtalon-Gunship"
+      },
+      "wargear": [
+        "This model’s skyhammer missile launcher can be replaced with one of the following:\n1 twin heavy bolter\n1 twin lascannon\n1 typhoon missile launcher"
+      ],
+      "composition": "1 Stormtalon Gunship\nThis model is equipped with: skyhammer missile launcher; twin assault cannon; armoured hull."
+    },
+    {
+      "title": "Suboden Khan",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Suboden-Khan",
+      "source": {
+        "authority": "official",
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "localFile": "../sources/space-marines-faction-pack-v1.1.pdf",
+        "pages": [
+          16,
+          17
+        ]
+      },
+      "wargear": [],
+      "composition": "1 Suboden Khan – Epic Hero\nThis model is equipped with: 1 heavy bolt pistol; 1 onslaught gatling cannon; Stormtooth; power sword."
+    },
+    {
+      "title": "Suppressor Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Suppressor-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Suppressor-Squad"
+      },
+      "wargear": [],
+      "composition": "1 Suppressor Sergeant\n2 Suppressors\nEvery model is equipped with: accelerator autocannon; bolt pistol; close combat weapon."
+    },
+    {
+      "title": "Tactical Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Tactical-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Tactical-Squad"
+      },
+      "wargear": [
+        "1 Tactical Marine’s boltgun can be replaced with one of the following:\n\n1 flamer\n1 heavy bolter\n1 grav-cannon\n1 grav-gun\n1 lascannon\n1 meltagun\n1 missile launcher\n1 multi-melta\n1 plasma cannon\n1 plasma gun",
+        "1 Tactical Marine’s boltgun can be replaced with one of the following:\n\n1 flamer\n1 grav-gun\n1 meltagun\n1 plasma gun",
+        "The Tactical Sergeant’s bolt pistol and boltgun can be replaced with 1 twin lightning claws, or two different weapons from the following list:*\n\n1 Astartes chainsword\n1 bolt pistol\n1 boltgun\n1 combi-weapon\n1 grav-pistol\n1 plasma pistol\n1 storm bolter\n1 power fist\n1 power weapon\n1 thunder hammer",
+        "* This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)."
+      ],
+      "composition": "1 Tactical Sergeant\n9 Tactical Marines\nEvery model is equipped with: bolt pistol; boltgun; close combat weapon."
+    },
+    {
+      "title": "Techmarine",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Techmarine",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Techmarine"
+      },
+      "wargear": [],
+      "composition": "1 Techmarine\nThis model is equipped with: forge bolter; grav-pistol; Omnissian power axe; servo-arm."
+    },
+    {
+      "title": "Terminator Assault Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Terminator-Assault-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Terminator-Assault-Squad"
+      },
+      "wargear": [
+        "Any number of models can each have their thunder hammer and storm shield replaced with 1 twin lightning claws."
+      ],
+      "composition": "1 Assault Terminator Sergeant\n4-9 Assault Terminators\nEvery model is equipped with: thunder hammer; storm shield."
+    },
+    {
+      "title": "Terminator Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Terminator-Squad",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Terminator-Squad"
+      },
+      "wargear": [
+        "For every 5 models in this unit, 1 Terminator’s storm bolter can be replaced with one of the following:\n1 assault cannon\n1 heavy flamer\n1 cyclone missile launcher and 1 storm bolter.*",
+        "Any number of models can each have their power fist replaced with 1 chainfist.",
+        "The Terminator Sergeant’s power fist can be replaced with 1 power weapon.",
+        "* This model’s storm bolter cannot be replaced."
+      ],
+      "composition": "1 Terminator Sergeant\n4-9 Terminators\nEvery model is equipped with: storm bolter; power fist."
+    },
+    {
+      "title": "Tor Garadon",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Tor-Garadon",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Tor-Garadon"
+      },
+      "wargear": [],
+      "composition": "1 Tor Garadon – EPIC HERO\nThis model is equipped with: artificer grav-gun; Hand of Defiance."
+    },
+    {
+      "title": "Uriel Ventris",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Uriel-Ventris",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Uriel-Ventris"
+      },
+      "wargear": [],
+      "composition": "1 Uriel Ventris – EPIC HERO\nThis model is equipped with: bolt pistol; Invictus; Sword of Idaeus."
+    },
+    {
+      "title": "Vanguard Veteran Squad with Jump Packs",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Vanguard-Veteran-Squad-With-Jump-Packs",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Vanguard-Veteran-Squad-With-Jump-Packs"
+      },
+      "wargear": [
+        "Any number of models can each have their bolt pistol replaced one of the following:\n1 storm shield\n1 grav-pistol\n1 hand flamer\n1 inferno pistol\n1 plasma pistol",
+        "All models can each have their Bolt Pistol and Vanguard Veteran Weapon replaced with:\n1 Heavy Bolt Pistol and 1 Master-crafted Power Weapon",
+        "For every 5 models in this unit, 1 model can replace their Heavy Bolt Pistol with 1 Plasma Pistol."
+      ],
+      "composition": "1 Vanguard Veteran Sergeant with Jump Pack\n4-9 Vanguard Veterans with Jump Packs\nEvery model is equipped with: bolt pistol; Vanguard Veteran weapon."
+    },
+    {
+      "title": "Victrix Honour Guard",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Victrix-Honour-Guard",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Victrix-Honour-Guard"
+      },
+      "wargear": [],
+      "composition": "0-1 Chapter Ancient – EPIC HERO\n0-1 Chapter Champion – EPIC HERO\n1-6 Victrix Honour Guard\nThe Chapter Ancient is equipped with: 1 master-crafted power weapon; banner of Macragge.\n\nThe Chapter Champion is equipped with: 1 blades of honour.\n\nEach Victrix Honour Guard model is equipped with: 1 master-crafted bolt carbine; 1 master-crafted power weapon."
+    },
+    {
+      "title": "Vindicator",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Vindicator",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Vindicator"
+      },
+      "wargear": [
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with 1 storm bolter."
+      ],
+      "composition": "1 Vindicator\nThis model is equipped with: demolisher cannon; armoured tracks."
+    },
+    {
+      "title": "Vulkan He'stan",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Vulkan-He-stan",
+      "source": {
+        "authority": "official",
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "localFile": "../sources/space-marines-faction-pack-v1.1.pdf",
+        "pages": [
+          18,
+          19
+        ]
+      },
+      "wargear": [],
+      "composition": "1 Vulkan He’stan – Epic Hero\nThis model is equipped with: 1 bolt pistol; 1 Gauntlet of the Forge; 1 Spear of Vulkan."
+    },
+    {
+      "title": "Wardens of Ultramar",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Wardens-of-Ultramar-1",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Wardens-of-Ultramar-1"
+      },
+      "wargear": [],
+      "composition": "1 Ancient Gadriel – EPIC HERO\n1 Veteran Sergeant Metaurus – EPIC HERO\n1 Gaius Silva – EPIC HERO\n1 Aemelia Minervas – EPIC HERO\n1 Dainal Kornelius – EPIC HERO\n1 Lucia Vestha – EPIC HERO\nAncient Gadriel is equipped with: bolt rifle; close combat weapon.\n\nVeteran Sergeant Metaurus is equipped with: heavy bolt pistol; master-crafted power weapon; storm shield.\n\nGaius Silva is equipped with: archeotech laspistol; power weapon; refractor field.\n\nAemelia Minervas is equipped with: archeotech laspistol; power weapon.\n\nDainal Kornelius is equipped with: Astropathic Blast; force stave.\n\nLucia Vestha is equipped with: archeotech laspistol; close combat weapon."
+    },
+    {
+      "title": "Whirlwind",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Whirlwind",
+      "source": {
+        "authority": "secondary",
+        "sourceId": "wahapedia-space-marines-11e",
+        "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/Whirlwind"
+      },
+      "wargear": [
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with 1 storm bolter."
+      ],
+      "composition": "1 Whirlwind\nThis model is equipped with: Whirlwind vengeance launcher; armoured tracks."
+    }
+  ]
+}

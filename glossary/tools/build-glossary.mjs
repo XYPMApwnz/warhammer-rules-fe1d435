@@ -84,7 +84,7 @@ const allGenericArmyBooks=fs.readdirSync(path.join(root,'books'),{withFileTypes:
     if(!config.sources?.relatedRules||!fs.existsSync(packFile))return[];
     return [{id:config.id,title:config.title,root:bookRoot,config,runtime:loadWindow(runtimeFile).DG_TERMS,pack:readJson(packFile)}];
   });
-const genericArmyBooks=allGenericArmyBooks.filter(book=>['tyranids','tau-empire','emperors-children'].includes(book.id));
+const genericArmyBooks=allGenericArmyBooks.filter(book=>['tyranids','tau-empire','emperors-children','space-marines'].includes(book.id));
 const coreData=loadWindow(path.join(root,'books','core-rules','content','core-rules.en.js')).CORE_RULES;
 const coreCurated=coreData.terms;
 const coreSource=loadWindow(path.join(root,'books','core-rules','content','core-rules.source.en.js')).CORE_PDF_SOURCE;

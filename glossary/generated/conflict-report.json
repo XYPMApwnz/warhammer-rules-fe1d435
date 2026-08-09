@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 1767,
+    "terms": 2435,
     "aliases": 659,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 104,
-    "duplicateCandidates": 8,
+    "aliasCandidates": 154,
+    "duplicateCandidates": 30,
     "keywordCandidates": 16
   },
   "definitionCandidates": [
@@ -944,6 +944,14 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "only-in-death-does-duty-end",
+      "termIds": [
+        "core-rule-19-04-01-only-in-death-does-duty-end",
+        "space-marines-stratagem-only-in-death-does-duty-end"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "deaths-heads",
       "termIds": [
         "death-guard-stratagem-deaths-heads",
@@ -972,7 +980,8 @@
       "normalizedTitle": "combi-weapon",
       "termIds": [
         "death-guard-weapon-combi-weapon-blightlord-terminators-chaos-land-raider-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino",
-        "emperors-children-weapon-combi-weapon"
+        "emperors-children-weapon-combi-weapon",
+        "space-marines-weapon-combi-weapon"
       ],
       "status": "review-required"
     },
@@ -997,6 +1006,14 @@
         "adeptus-mechanicus-weapon-close-combat-weapon-5",
         "emperors-children-weapon-close-combat-weapon",
         "emperors-children-weapon-close-combat-weapon-2",
+        "space-marines-weapon-close-combat-weapon",
+        "space-marines-weapon-close-combat-weapon-2",
+        "space-marines-weapon-close-combat-weapon-3",
+        "space-marines-weapon-close-combat-weapon-4",
+        "space-marines-weapon-close-combat-weapon-5",
+        "space-marines-weapon-close-combat-weapon-6",
+        "space-marines-weapon-close-combat-weapon-7",
+        "space-marines-weapon-close-combat-weapon-8",
         "tau-empire-weapon-close-combat-weapon",
         "tau-empire-weapon-close-combat-weapon-2",
         "tau-empire-weapon-close-combat-weapon-3",
@@ -1008,7 +1025,8 @@
       "normalizedTitle": "assault-ramp",
       "termIds": [
         "death-guard-ability-assault-ramp-chaos-land-raider",
-        "emperors-children-ability-assault-ramp"
+        "emperors-children-ability-assault-ramp",
+        "space-marines-ability-assault-ramp"
       ],
       "status": "review-required"
     },
@@ -1032,7 +1050,8 @@
       "normalizedTitle": "twin-heavy-bolter",
       "termIds": [
         "death-guard-weapon-twin-heavy-bolter-chaos-land-raider-helbrute",
-        "emperors-children-weapon-twin-heavy-bolter"
+        "emperors-children-weapon-twin-heavy-bolter",
+        "space-marines-weapon-twin-heavy-bolter"
       ],
       "status": "review-required"
     },
@@ -1042,7 +1061,9 @@
         "death-guard-weapon-armoured-tracks-chaos-land-raider",
         "death-guard-weapon-armoured-tracks-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino-plagueburst-crawler",
         "emperors-children-weapon-armoured-tracks",
-        "emperors-children-weapon-armoured-tracks-2"
+        "emperors-children-weapon-armoured-tracks-2",
+        "space-marines-weapon-armoured-tracks",
+        "space-marines-weapon-armoured-tracks-2"
       ],
       "status": "review-required"
     },
@@ -1050,7 +1071,36 @@
       "normalizedTitle": "heavy-bolter",
       "termIds": [
         "death-guard-weapon-heavy-bolter-chaos-predator-annihilator-chaos-predator-destructor",
-        "adeptus-mechanicus-weapon-heavy-bolter"
+        "adeptus-mechanicus-weapon-heavy-bolter",
+        "space-marines-weapon-heavy-bolter",
+        "space-marines-weapon-heavy-bolter-2",
+        "space-marines-weapon-heavy-bolter-3",
+        "space-marines-weapon-heavy-bolter-4"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "lascannon",
+      "termIds": [
+        "death-guard-weapon-lascannon-chaos-predator-annihilator-chaos-predator-destructor",
+        "space-marines-weapon-lascannon",
+        "space-marines-weapon-lascannon-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "predator-twin-lascannon",
+      "termIds": [
+        "death-guard-weapon-predator-twin-lascannon-chaos-predator-annihilator",
+        "space-marines-weapon-predator-twin-lascannon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "predator-autocannon",
+      "termIds": [
+        "death-guard-weapon-predator-autocannon-chaos-predator-destructor",
+        "space-marines-weapon-predator-autocannon"
       ],
       "status": "review-required"
     },
@@ -1058,7 +1108,8 @@
       "normalizedTitle": "fire-support",
       "termIds": [
         "death-guard-ability-fire-support-chaos-rhino",
-        "adeptus-mechanicus-datasheet-fire-support"
+        "adeptus-mechanicus-datasheet-fire-support",
+        "space-marines-ability-fire-support"
       ],
       "status": "review-required"
     },
@@ -1220,7 +1271,43 @@
       "normalizedTitle": "heavy-flamer",
       "termIds": [
         "death-guard-weapon-heavy-flamer-helbrute",
-        "emperors-children-weapon-heavy-flamer"
+        "emperors-children-weapon-heavy-flamer",
+        "space-marines-weapon-heavy-flamer"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "missile-launcher-frag",
+      "termIds": [
+        "death-guard-weapon-missile-launcher-frag-helbrute-myphitic-blight-hauler",
+        "space-marines-weapon-missile-launcher-frag",
+        "space-marines-weapon-missile-launcher-frag-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "missile-launcher-krak",
+      "termIds": [
+        "death-guard-weapon-missile-launcher-krak-helbrute-myphitic-blight-hauler",
+        "space-marines-weapon-missile-launcher-krak",
+        "space-marines-weapon-missile-launcher-krak-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "multi-melta",
+      "termIds": [
+        "death-guard-weapon-multi-melta-helbrute-myphitic-blight-hauler",
+        "space-marines-weapon-multi-melta",
+        "space-marines-weapon-multi-melta-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "twin-lascannon",
+      "termIds": [
+        "death-guard-weapon-twin-lascannon-helbrute",
+        "space-marines-weapon-twin-lascannon"
       ],
       "status": "review-required"
     },
@@ -1228,7 +1315,8 @@
       "normalizedTitle": "boltgun",
       "termIds": [
         "death-guard-weapon-boltgun-icon-bearer-plague-marines",
-        "emperors-children-weapon-boltgun"
+        "emperors-children-weapon-boltgun",
+        "space-marines-weapon-boltgun"
       ],
       "status": "review-required"
     },
@@ -1237,7 +1325,8 @@
       "termIds": [
         "death-guard-weapon-plasma-pistol-standard-lord-of-poxes",
         "death-guard-weapon-plasma-pistol-standard-noxious-blightbringer-plague-marines-tallyman",
-        "emperors-children-weapon-plasma-pistol-standard"
+        "emperors-children-weapon-plasma-pistol-standard",
+        "space-marines-weapon-plasma-pistol-standard"
       ],
       "status": "review-required"
     },
@@ -1247,7 +1336,8 @@
         "death-guard-weapon-plasma-pistol-supercharge-lord-of-poxes",
         "death-guard-weapon-plasma-pistol-supercharge-noxious-blightbringer",
         "death-guard-weapon-plasma-pistol-supercharge-plague-marines-tallyman",
-        "emperors-children-weapon-plasma-pistol-supercharge"
+        "emperors-children-weapon-plasma-pistol-supercharge",
+        "space-marines-weapon-plasma-pistol-supercharge"
       ],
       "status": "review-required"
     },
@@ -1257,7 +1347,12 @@
         "death-guard-weapon-power-fist-lord-of-virulence",
         "death-guard-weapon-power-fist-plague-marines",
         "adeptus-mechanicus-weapon-power-fist",
-        "emperors-children-weapon-power-fist"
+        "emperors-children-weapon-power-fist",
+        "space-marines-weapon-power-fist",
+        "space-marines-weapon-power-fist-2",
+        "space-marines-weapon-power-fist-3",
+        "space-marines-weapon-power-fist-4",
+        "space-marines-weapon-power-fist-5"
       ],
       "status": "review-required"
     },
@@ -1265,7 +1360,9 @@
       "normalizedTitle": "bolt-pistol",
       "termIds": [
         "death-guard-weapon-bolt-pistol-malignant-plaguecaster-plague-marines-plague-surgeon",
-        "emperors-children-weapon-bolt-pistol"
+        "emperors-children-weapon-bolt-pistol",
+        "space-marines-weapon-bolt-pistol",
+        "space-marines-weapon-bolt-pistol-2"
       ],
       "status": "review-required"
     },
@@ -1273,6 +1370,7 @@
       "normalizedTitle": "fortification",
       "termIds": [
         "death-guard-ability-fortification-miasmic-malignifier",
+        "space-marines-ability-fortification",
         "tau-empire-ability-fortification"
       ],
       "status": "review-required"
@@ -1282,7 +1380,8 @@
       "termIds": [
         "death-guard-weapon-meltagun-plague-marines",
         "adeptus-mechanicus-weapon-meltagun",
-        "emperors-children-weapon-meltagun"
+        "emperors-children-weapon-meltagun",
+        "space-marines-weapon-meltagun"
       ],
       "status": "review-required"
     },
@@ -1290,7 +1389,8 @@
       "normalizedTitle": "plasma-gun-standard",
       "termIds": [
         "death-guard-weapon-plasma-gun-standard-plague-marines",
-        "emperors-children-weapon-plasma-gun-standard"
+        "emperors-children-weapon-plasma-gun-standard",
+        "space-marines-weapon-plasma-gun-standard"
       ],
       "status": "review-required"
     },
@@ -1298,7 +1398,25 @@
       "normalizedTitle": "plasma-gun-supercharge",
       "termIds": [
         "death-guard-weapon-plasma-gun-supercharge-plague-marines",
-        "emperors-children-weapon-plasma-gun-supercharge"
+        "emperors-children-weapon-plasma-gun-supercharge",
+        "space-marines-weapon-plasma-gun-supercharge"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "transport",
+      "termIds": [
+        "keyword-transport",
+        "space-marines-ability-transport",
+        "space-marines-ability-transport-2",
+        "space-marines-ability-transport-3",
+        "space-marines-ability-transport-4",
+        "space-marines-ability-transport-5",
+        "space-marines-ability-transport-6",
+        "space-marines-ability-transport-7",
+        "space-marines-ability-transport-8",
+        "space-marines-ability-transport-9",
+        "space-marines-ability-transport-10"
       ],
       "status": "review-required"
     },
@@ -1335,9 +1453,19 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "servo-arm",
+      "termIds": [
+        "adeptus-mechanicus-weapon-servo-arm",
+        "space-marines-weapon-servo-arm"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "armoured-hull",
       "termIds": [
         "adeptus-mechanicus-weapon-armoured-hull",
+        "space-marines-weapon-armoured-hull",
+        "space-marines-weapon-armoured-hull-2",
         "tau-empire-weapon-armoured-hull",
         "tau-empire-weapon-armoured-hull-2"
       ],
@@ -1348,6 +1476,7 @@
       "termIds": [
         "adeptus-mechanicus-datasheet-supreme-commander",
         "emperors-children-ability-supreme-commander",
+        "space-marines-ability-supreme-commander",
         "tau-empire-ability-supreme-commander"
       ],
       "status": "review-required"
@@ -1364,7 +1493,12 @@
       "normalizedTitle": "power-weapon",
       "termIds": [
         "adeptus-mechanicus-weapon-power-weapon",
-        "adeptus-mechanicus-weapon-power-weapon-2"
+        "adeptus-mechanicus-weapon-power-weapon-2",
+        "space-marines-weapon-power-weapon",
+        "space-marines-weapon-power-weapon-2",
+        "space-marines-weapon-power-weapon-3",
+        "space-marines-weapon-power-weapon-4",
+        "space-marines-weapon-power-weapon-5"
       ],
       "status": "review-required"
     },
@@ -1401,6 +1535,14 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "strafing-run",
+      "termIds": [
+        "adeptus-mechanicus-datasheet-strafing-run",
+        "space-marines-ability-strafing-run"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "twin-cognis-lascannon",
       "termIds": [
         "adeptus-mechanicus-weapon-twin-cognis-lascannon",
@@ -1412,6 +1554,7 @@
       "normalizedTitle": "damaged-1-4-wounds-remaining",
       "termIds": [
         "adeptus-mechanicus-datasheet-damaged-1-4-wounds-remaining",
+        "space-marines-ability-damaged-1-4-wounds-remaining",
         "tau-empire-ability-damaged-1-4-wounds-remaining",
         "tyranids-ability-damaged-1-4-wounds-remaining"
       ],
@@ -1461,7 +1604,8 @@
       "normalizedTitle": "power-sword",
       "termIds": [
         "emperors-children-weapon-power-sword",
-        "emperors-children-weapon-power-sword-2"
+        "emperors-children-weapon-power-sword-2",
+        "space-marines-weapon-power-sword"
       ],
       "status": "review-required"
     },
@@ -1474,9 +1618,35 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "force-weapon",
+      "termIds": [
+        "emperors-children-weapon-force-weapon",
+        "space-marines-weapon-force-weapon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "assault-vehicle",
+      "termIds": [
+        "emperors-children-ability-assault-vehicle",
+        "space-marines-ability-assault-vehicle"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "chainfist",
+      "termIds": [
+        "emperors-children-weapon-chainfist",
+        "space-marines-weapon-chainfist",
+        "space-marines-weapon-chainfist-2"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "damaged-1-5-wounds-remaining",
       "termIds": [
         "emperors-children-ability-damaged-1-5-wounds-remaining",
+        "space-marines-ability-damaged-1-5-wounds-remaining",
         "tau-empire-ability-damaged-1-5-wounds-remaining",
         "tau-empire-ability-damaged-1-5-wounds-remaining-2",
         "tyranids-ability-damaged-1-5-wounds-remaining"
@@ -1488,6 +1658,314 @@
       "termIds": [
         "emperors-children-ability-airborne-predator",
         "tyranids-ability-airborne-predator"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "strike-from-the-shadows",
+      "termIds": [
+        "space-marines-stratagem-strike-from-the-shadows",
+        "space-marines-stratagem-strike-from-the-shadows-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "rapid-deployment",
+      "termIds": [
+        "space-marines-detachment-rule-rapid-deployment",
+        "tau-empire-ability-rapid-deployment"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "armour-of-contempt",
+      "termIds": [
+        "space-marines-stratagem-armour-of-contempt",
+        "space-marines-stratagem-armour-of-contempt-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "rapid-embarkation",
+      "termIds": [
+        "space-marines-stratagem-rapid-embarkation",
+        "space-marines-stratagem-rapid-embarkation-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "hunters-instincts",
+      "termIds": [
+        "space-marines-stratagem-hunters-instincts",
+        "space-marines-enhancement-hunters-instincts",
+        "space-marines-enhancement-hunters-instincts-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "adamantine-mantle",
+      "termIds": [
+        "space-marines-enhancement-adamantine-mantle",
+        "space-marines-enhancement-adamantine-mantle-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "forged-in-battle",
+      "termIds": [
+        "space-marines-enhancement-forged-in-battle",
+        "space-marines-enhancement-forged-in-battle-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "war-tempered-artifice",
+      "termIds": [
+        "space-marines-enhancement-war-tempered-artifice",
+        "space-marines-enhancement-war-tempered-artifice-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "crucible-of-battle",
+      "termIds": [
+        "space-marines-stratagem-crucible-of-battle",
+        "space-marines-stratagem-crucible-of-battle-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "immolation-protocols",
+      "termIds": [
+        "space-marines-stratagem-immolation-protocols",
+        "space-marines-stratagem-immolation-protocols-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "burning-vengeance",
+      "termIds": [
+        "space-marines-stratagem-burning-vengeance",
+        "space-marines-stratagem-burning-vengeance-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "fury-of-the-first",
+      "termIds": [
+        "space-marines-stratagem-fury-of-the-first",
+        "space-marines-ability-fury-of-the-first"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "shock-assault",
+      "termIds": [
+        "space-marines-ability-shock-assault",
+        "space-marines-stratagem-shock-assault"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "oath-of-moment",
+      "termIds": [
+        "space-marines-ability-oath-of-moment",
+        "space-marines-army-rule-oath-of-moment"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "heavy-bolt-pistol",
+      "termIds": [
+        "space-marines-weapon-heavy-bolt-pistol",
+        "space-marines-weapon-heavy-bolt-pistol-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "astartes-chainsword",
+      "termIds": [
+        "space-marines-weapon-astartes-chainsword",
+        "space-marines-weapon-astartes-chainsword-2",
+        "space-marines-weapon-astartes-chainsword-3",
+        "space-marines-weapon-astartes-chainsword-4",
+        "space-marines-weapon-astartes-chainsword-5"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "thunder-hammer",
+      "termIds": [
+        "space-marines-weapon-thunder-hammer",
+        "space-marines-weapon-thunder-hammer-2",
+        "space-marines-weapon-thunder-hammer-3",
+        "space-marines-weapon-thunder-hammer-4",
+        "space-marines-weapon-thunder-hammer-5"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "bolt-rifle",
+      "termIds": [
+        "space-marines-weapon-bolt-rifle",
+        "space-marines-weapon-bolt-rifle-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "grav-pistol",
+      "termIds": [
+        "space-marines-weapon-grav-pistol",
+        "space-marines-weapon-grav-pistol-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "storm-bolter",
+      "termIds": [
+        "space-marines-weapon-storm-bolter",
+        "space-marines-weapon-storm-bolter-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "twin-lightning-claws",
+      "termIds": [
+        "space-marines-weapon-twin-lightning-claws",
+        "space-marines-weapon-twin-lightning-claws-2",
+        "space-marines-weapon-twin-lightning-claws-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "grav-cannon",
+      "termIds": [
+        "space-marines-weapon-grav-cannon",
+        "space-marines-weapon-grav-cannon-2",
+        "space-marines-weapon-grav-cannon-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "master-crafted-power-weapon",
+      "termIds": [
+        "space-marines-weapon-master-crafted-power-weapon",
+        "space-marines-weapon-master-crafted-power-weapon-2",
+        "space-marines-weapon-master-crafted-power-weapon-3",
+        "space-marines-weapon-master-crafted-power-weapon-4",
+        "space-marines-weapon-master-crafted-power-weapon-5"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "neo-volkite-pistol",
+      "termIds": [
+        "space-marines-weapon-neo-volkite-pistol",
+        "space-marines-weapon-neo-volkite-pistol-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "relic-fist",
+      "termIds": [
+        "space-marines-weapon-relic-fist",
+        "space-marines-weapon-relic-fist-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "instigator-bolt-carbine",
+      "termIds": [
+        "space-marines-weapon-instigator-bolt-carbine",
+        "space-marines-weapon-instigator-bolt-carbine-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "combat-knife",
+      "termIds": [
+        "space-marines-weapon-combat-knife",
+        "space-marines-weapon-combat-knife-2",
+        "space-marines-weapon-combat-knife-3",
+        "space-marines-weapon-combat-knife-4"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "invulnerable-save",
+      "termIds": [
+        "space-marines-ability-invulnerable-save",
+        "space-marines-ability-invulnerable-save-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "storm-shield",
+      "termIds": [
+        "space-marines-ability-storm-shield",
+        "space-marines-ability-storm-shield-2",
+        "space-marines-ability-storm-shield-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "paired-combat-blades",
+      "termIds": [
+        "space-marines-weapon-paired-combat-blades",
+        "space-marines-weapon-paired-combat-blades-2",
+        "space-marines-weapon-paired-combat-blades-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "inspiring-commander",
+      "termIds": [
+        "space-marines-ability-inspiring-commander",
+        "space-marines-ability-inspiring-commander-2",
+        "space-marines-ability-inspiring-commander-3",
+        "space-marines-ability-inspiring-commander-4",
+        "space-marines-ability-inspiring-commander-5",
+        "space-marines-ability-inspiring-commander-6"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "gauntlets-of-ultramar",
+      "termIds": [
+        "space-marines-weapon-gauntlets-of-ultramar",
+        "space-marines-weapon-gauntlets-of-ultramar-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "hand-of-dominion",
+      "termIds": [
+        "space-marines-weapon-hand-of-dominion",
+        "space-marines-weapon-hand-of-dominion-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "onslaught-gatling-cannon",
+      "termIds": [
+        "space-marines-weapon-onslaught-gatling-cannon",
+        "space-marines-weapon-onslaught-gatling-cannon-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "guerrilla-tactics",
+      "termIds": [
+        "space-marines-ability-guerrilla-tactics",
+        "space-marines-stratagem-guerrilla-tactics"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "skyhammer-missile-launcher",
+      "termIds": [
+        "space-marines-weapon-skyhammer-missile-launcher",
+        "space-marines-weapon-skyhammer-missile-launcher-2"
       ],
       "status": "review-required"
     },
@@ -1801,7 +2279,8 @@
     {
       "termIds": [
         "death-guard-ability-assault-ramp-chaos-land-raider",
-        "emperors-children-ability-assault-ramp"
+        "emperors-children-ability-assault-ramp",
+        "space-marines-ability-assault-ramp"
       ],
       "status": "review-required"
     },
@@ -1814,15 +2293,45 @@
     },
     {
       "termIds": [
+        "adeptus-mechanicus-weapon-power-fist",
+        "space-marines-weapon-power-fist-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "adeptus-mechanicus-datasheet-fire-support",
+        "space-marines-ability-fire-support"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "adeptus-mechanicus-weapon-armoured-hull",
+        "space-marines-weapon-armoured-hull"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
         "adeptus-mechanicus-datasheet-supreme-commander",
         "emperors-children-ability-supreme-commander",
+        "space-marines-ability-supreme-commander",
         "tau-empire-ability-supreme-commander"
       ],
       "status": "review-required"
     },
     {
       "termIds": [
+        "adeptus-mechanicus-weapon-heavy-bolter",
+        "space-marines-weapon-heavy-bolter-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
         "adeptus-mechanicus-datasheet-damaged-1-4-wounds-remaining",
+        "space-marines-ability-damaged-1-4-wounds-remaining",
         "tau-empire-ability-damaged-1-4-wounds-remaining",
         "tyranids-ability-damaged-1-4-wounds-remaining"
       ],
@@ -1830,16 +2339,144 @@
     },
     {
       "termIds": [
+        "emperors-children-weapon-plasma-pistol-standard",
+        "space-marines-weapon-plasma-pistol-standard"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-weapon-plasma-pistol-supercharge",
+        "space-marines-weapon-plasma-pistol-supercharge"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
         "emperors-children-weapon-close-combat-weapon",
+        "space-marines-weapon-close-combat-weapon",
         "tau-empire-weapon-close-combat-weapon-3"
       ],
       "status": "review-required"
     },
     {
       "termIds": [
+        "emperors-children-weapon-close-combat-weapon-2",
+        "space-marines-weapon-close-combat-weapon-5"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-weapon-power-fist",
+        "space-marines-weapon-power-fist"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-weapon-armoured-tracks",
+        "space-marines-weapon-armoured-tracks"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-weapon-combi-weapon",
+        "space-marines-weapon-combi-weapon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-weapon-chainfist",
+        "space-marines-weapon-chainfist-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-weapon-heavy-flamer",
+        "space-marines-weapon-heavy-flamer"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
         "emperors-children-ability-damaged-1-5-wounds-remaining",
+        "space-marines-ability-damaged-1-5-wounds-remaining",
         "tau-empire-ability-damaged-1-5-wounds-remaining",
         "tyranids-ability-damaged-1-5-wounds-remaining"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-weapon-armoured-tracks-2",
+        "space-marines-weapon-armoured-tracks-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "emperors-children-weapon-twin-heavy-bolter",
+        "space-marines-weapon-twin-heavy-bolter"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-stratagem-armour-of-contempt",
+        "space-marines-stratagem-armour-of-contempt-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-enhancement-adamantine-mantle",
+        "space-marines-enhancement-adamantine-mantle-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-enhancement-forged-in-battle",
+        "space-marines-enhancement-forged-in-battle-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-enhancement-war-tempered-artifice",
+        "space-marines-enhancement-war-tempered-artifice-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-stratagem-crucible-of-battle",
+        "space-marines-stratagem-crucible-of-battle-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-close-combat-weapon-2",
+        "tau-empire-weapon-close-combat-weapon-4"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-grav-cannon-2",
+        "space-marines-weapon-grav-cannon-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-ability-transport-7",
+        "space-marines-ability-transport-8"
       ],
       "status": "review-required"
     },

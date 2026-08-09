@@ -11,7 +11,7 @@ const deathGuardSource=JSON.parse(fs.readFileSync(path.join(repoRoot,'books','de
 const errors=[];
 const ids=new Set(Object.keys(registry.terms));
 const presentations=new Set(['atomic','article','profile','reference','metadata']);
-const publicScopes=new Set(['global','death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children']);
+const publicScopes=new Set(['global','death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','space-marines']);
 const clean=value=>String(value||'').replace(/\s+/g,' ').trim();
 function semanticAnomalies(value){
   const text=String(value||''),issues=[];
@@ -77,7 +77,7 @@ for(const entry of deathGuardSource.glossary.filter(entry=>entry.kind==='unit'&&
   if(!target||!unit)errors.push(`${entry.id}: missing Death Guard unit mapping`);
   else if(JSON.stringify(registry.terms[target]?.structured?.points||[])!==JSON.stringify(unit.points||[]))errors.push(`${entry.id}: glossary points differ from the effective datasheet`);
 }
-for(const bookId of ['core-rules','death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children']){
+for(const bookId of ['core-rules','death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','space-marines']){
   const context=JSON.parse(fs.readFileSync(path.join(root,'contexts',`${bookId}.json`),'utf8'));
   for(const [localId,entry] of Object.entries(context.terms)){
     if(!ids.has(aliases[entry.termId]||entry.termId))errors.push(`${bookId}/${localId}: unknown term ${entry.termId}`);

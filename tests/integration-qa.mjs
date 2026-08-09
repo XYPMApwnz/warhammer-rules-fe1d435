@@ -31,7 +31,8 @@ const books=[
   {id:'adeptus-mechanicus',phone:'skitarii-rangers.html',matrix:'books/adeptus-mechanicus/generated/compatible-rules.json'},
   {id:'tyranids',phone:'hive-tyrant.html',matrix:'books/tyranids/generated/compatible-rules.json'},
   {id:'tau-empire',phone:'breacher-team.html',matrix:'books/tau-empire/generated/compatible-rules.json'},
-  {id:'emperors-children',phone:'lord-exultant.html',matrix:'books/emperors-children/generated/compatible-rules.json'}
+  {id:'emperors-children',phone:'lord-exultant.html',matrix:'books/emperors-children/generated/compatible-rules.json'},
+  {id:'space-marines',phone:'intercessor-squad.html',matrix:'books/space-marines/generated/compatible-rules.json',roster:false}
 ];
 
 for(const book of books){
@@ -43,7 +44,7 @@ for(const book of books){
 
   const readerHtml=read(reader);
   const phoneHtml=read(phone);
-  check(`${book.id} exposes roster-aware production paths`,/scripts\/roster-filter\.js\?v=\d+/.test(readerHtml)&&/mobile\.js\?v=\d+/.test(phoneHtml));
+  check(`${book.id} exposes required production paths`,(book.roster===false||/scripts\/roster-filter\.js\?v=\d+/.test(readerHtml))&&/mobile\.js\?v=\d+/.test(phoneHtml));
   if(book.matrix)check(`${book.id} Compatible Rules matrix exists`,exists(book.matrix));
 }
 

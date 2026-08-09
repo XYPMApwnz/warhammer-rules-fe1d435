@@ -18,7 +18,7 @@ function walk(directory){
   });
 }
 
-const publishedBooks=['core-rules','death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children'];
+const publishedBooks=['core-rules','death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','space-marines'];
 const htmlFiles=[
   path.join(root,'index.html'),
   ...publishedBooks.flatMap(book=>walk(path.join(root,'books',book))),

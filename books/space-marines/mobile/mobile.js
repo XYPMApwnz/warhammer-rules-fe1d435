@@ -1,8 +1,9 @@
-(function(){
+(async function(){
   'use strict';
+  const scriptUrl=document.currentScript.src,compatibleRuntime=await import(new URL('../scripts/compatible-rules-runtime.mjs?v=1',scriptUrl)),compatibleMatrix=await compatibleRuntime.loadCompatibleRules(new URL('../generated/compatible-rules.json',scriptUrl));
   const navButton=document.getElementById('navButton'),scrim=document.getElementById('navScrim'),nav=document.getElementById('mobileNav');
   const dialog=document.getElementById('termDialog'),popupLayer=document.getElementById('termPopupStack'),viewSwitch=document.querySelector('[data-view-switch]');
-  const drawerMedia=matchMedia('(max-width: 800px)'),params=new URLSearchParams(location.search);
+  const drawerMedia=matchMedia('(max-width: 800px)'),params=new URLSearchParams(location.search),unit=document.querySelector('.unit-card'),relatedRules=document.getElementById('relatedRules'),relatedContent=document.getElementById('relatedRulesContent'),relatedDetachment=document.getElementById('relatedDetachment');
   const terms=Object.freeze({...window.WH40K_GLOSSARY.forBook('space-marines'),...(window.DG_TERMS||{})});
   window.WHGlossaryAutolink?.configure('space-marines');
   const popups=new window.SMPhonePopups({dialog,layer:popupLayer,terms,safeFallback:()=>navButton});
@@ -19,9 +20,14 @@
   document.addEventListener('click',event=>{const local=event.target.closest('[data-journey-target]');if(local){event.preventDefault();document.getElementById(local.dataset.journeyTarget)?.scrollIntoView({block:'start'});return;}const trigger=event.target.closest('[data-term]');if(trigger){event.preventDefault();showTerm(trigger);}});
   navButton.addEventListener('click',()=>drawer(!document.body.classList.contains('nav-drawer-open')));scrim.addEventListener('click',()=>drawer(false));
   drawerMedia.addEventListener?.('change',syncDrawerMode);syncDrawerMode();
+  if(relatedRules&&unit){
+    const response=await fetch('./related-rules.inc?v=4');if(!response.ok)throw new Error(`HTTP ${response.status}`);const template=document.createElement('template');template.innerHTML=await response.text();const fragment=template.content;fragment.querySelectorAll('[id]').forEach(node=>{node.dataset.ruleId=node.id;node.removeAttribute('id');});const sections=[...fragment.querySelectorAll('.related-detachment')],tabs=[...relatedRules.querySelectorAll('[data-related-tab]')];let kind='stratagems';
+    const filter=()=>{const rules=compatibleRuntime.getCompatibleRules(compatibleMatrix,unit.id,{detachmentId:relatedDetachment.value}),byId=new Map(rules.map(rule=>[rule.ruleId,rule])),hasEnhancements=rules.some(rule=>rule.kind==='enhancement');if(kind==='enhancements'&&!hasEnhancements)kind='stratagems';tabs.find(tab=>tab.dataset.relatedTab==='enhancements').hidden=!hasEnhancements;relatedContent.querySelectorAll('.stratagem,.enhancement').forEach(card=>card.hidden=!byId.has(card.dataset.ruleId));relatedContent.querySelectorAll('[data-related-kind]').forEach(group=>group.hidden=group.dataset.relatedKind!==kind||![...group.querySelectorAll('.stratagem,.enhancement')].some(card=>!card.hidden));sections.forEach(section=>section.hidden=!(section.dataset.detachment==='core'||relatedDetachment.value==='all'||section.dataset.detachment===relatedDetachment.value)||![...section.querySelectorAll('[data-related-kind]')].some(group=>!group.hidden));tabs.forEach(tab=>tab.setAttribute('aria-pressed',String(tab.dataset.relatedTab===kind)));};
+    relatedContent.replaceChildren(fragment);relatedDetachment.addEventListener('change',filter);tabs.forEach(tab=>tab.addEventListener('click',()=>{kind=tab.dataset.relatedTab;filter();}));filter();
+  }
   const documentTriggers=()=>[...document.querySelectorAll('main [data-term]')];
   const findRoot=(state,all=documentTriggers())=>all[state?.triggerIndex]?.dataset.term===state?.rootTerm?all[state.triggerIndex]:all.find(node=>node.dataset.term===state?.rootTerm)||null;
   window.WHPageState?.install({beforeRestore(){popups.closeAll({focus:false});},snapshot(){const popupIds=popups.snapshot(),root=popups.rootElement(),all=documentTriggers();return popupIds.length?{popupIds,rootTerm:popupIds[0],triggerIndex:root?all.indexOf(root):-1}:null;},restore(state){if(state?.popupIds?.length)popups.restore(state.popupIds,{root:findRoot(state),focus:true});}});
   const returnRecord=window.WHGlossaryReturn?.read();
   if(window.WHGlossaryReturn?.shouldRestoreAutomatically(returnRecord))requestAnimationFrame(()=>{const popupIds=returnRecord.popupIds?.length?returnRecord.popupIds:[returnRecord.rootTerm||returnRecord.termId].filter(Boolean),trigger=findRoot({rootTerm:returnRecord.rootTerm||returnRecord.termId,triggerIndex:returnRecord.triggerIndex});window.scrollTo(returnRecord.scrollX||0,returnRecord.scrollY||0);requestAnimationFrame(()=>{if(trigger&&popupIds.length)popups.restore(popupIds,{root:trigger,focus:false});window.WHGlossaryReturn.clear();});});
-}());
+}()).catch(error=>{document.documentElement.dataset.bookError=String(error?.stack||error);console.error(error);});

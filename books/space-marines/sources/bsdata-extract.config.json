@@ -14,6 +14,15 @@
   "textCorrections": {
     "Adpetus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the Infiltrators Ability": "Adeptus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability."
   },
+  "unitCorrections": {
+    "Invader ATV": {
+      "abilities": {
+        "Outrider Escort": {
+          "text": "Once per turn, in your opponent’s Shooting phase, when another friendly ADEPTUS ASTARTES MOUNTED unit within 6\" of this model is selected as the target of an attack, one model from your army with this ability can use it. If it does, after that enemy unit has finished making its attacks, that model can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit (and only if it is an eligible target)."
+        }
+      }
+    }
+  },
   "inputs": [
     {
       "role": "faction",

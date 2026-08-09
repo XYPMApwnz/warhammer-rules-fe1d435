@@ -6029,8 +6029,8 @@ window.DG_TERMS={
   "space-marines-ability-outrider-escort": {
     "id": "space-marines-ability-outrider-escort",
     "title": "Outrider Escort",
-    "summary": "Once per turn, in your opponent's Shooting phase, when another friendly Adeptus Astartes Mounted unit within 6\" of this model is selected as the target of an attack, one model from your army with this ability can use it. If it does, after that enemy unit has finished making its attacks, that model can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit [and only if it is an eligible target).",
-    "full": "Once per turn, in your opponent's Shooting phase, when another friendly Adeptus Astartes Mounted unit within 6\" of this model is selected as the target of an attack, one model from your army with this ability can use it. If it does, after that enemy unit has finished making its attacks, that model can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit [and only if it is an eligible target).",
+    "summary": "Once per turn, in your opponent’s Shooting phase, when another friendly ADEPTUS ASTARTES MOUNTED unit within 6\" of this model is selected as the target of an attack, one model from your army with this ability can use it. If it does, after that enemy unit has finished making its attacks, that model can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit (and only if it is an eligible target).",
+    "full": "Once per turn, in your opponent’s Shooting phase, when another friendly ADEPTUS ASTARTES MOUNTED unit within 6\" of this model is selected as the target of an attack, one model from your army with this ability can use it. If it does, after that enemy unit has finished making its attacks, that model can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit (and only if it is an eligible target).",
     "glossary": "glossary-space-marines-ability-outrider-escort",
     "rule": "unit-invader-atv",
     "units": [
@@ -7360,228 +7360,572 @@ window.DG_TERMS={
     "datasheet": "unit-whirlwind",
     "statline": "whirlwind-profile"
   },
-  "space-marines-enhancement-fear-made-manifest": {
-    "id": "space-marines-enhancement-fear-made-manifest",
-    "title": "Fear Made Manifest",
-    "summary": "Fear Made Manifest appears in the Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-space-marines-enhancement-fear-made-manifest",
-    "rule": "detachment-1st-company-task-force"
-  },
   "space-marines-enhancement-the-imperiums-sword": {
     "id": "space-marines-enhancement-the-imperiums-sword",
-    "title": "The Imperium’s Sword",
-    "summary": "The Imperium’s Sword appears in the Space Marines reference.",
-    "full": "",
+    "title": "THE IMPERIUM’S SWORD",
+    "summary": "ADEPTUS ASTARTES model only. Add 1 to the Attacks characteristic of the bearers melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well.",
+    "full": "ADEPTUS ASTARTES model only. Add 1 to the Attacks characteristic of the bearers melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well.",
     "glossary": "glossary-space-marines-enhancement-the-imperiums-sword",
     "rule": "detachment-1st-company-task-force"
   },
-  "space-marines-enhancement-iron-resolve": {
-    "id": "space-marines-enhancement-iron-resolve",
-    "title": "Iron Resolve",
-    "summary": "Adeptus Astartes Terminator model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer's unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Feel No Pain 5+ ability.",
-    "full": "Adeptus Astartes Terminator model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer's unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Feel No Pain 5+ ability.",
-    "glossary": "glossary-space-marines-enhancement-iron-resolve",
+  "space-marines-enhancement-fear-made-manifest-aura": {
+    "id": "space-marines-enhancement-fear-made-manifest-aura",
+    "title": "FEAR MADE MANIFEST (AURA)",
+    "summary": "ADEPTUS ASTARTES model only. While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of the bearer, each time that unit fails a Battle-shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle-shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
+    "full": "ADEPTUS ASTARTES model only. While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of the bearer, each time that unit fails a Battle-shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle-shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
+    "glossary": "glossary-space-marines-enhancement-fear-made-manifest-aura",
     "rule": "detachment-1st-company-task-force"
   },
   "space-marines-enhancement-rites-of-war": {
     "id": "space-marines-enhancement-rites-of-war",
-    "title": "Rites of War",
-    "summary": "Adeptus Astartes Terminator model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer's unit as well.",
-    "full": "Adeptus Astartes Terminator model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer's unit as well.",
+    "title": "RITES OF WAR",
+    "summary": "ADEPTUS ASTARTES TERMINATOR model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
+    "full": "ADEPTUS ASTARTES TERMINATOR model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
     "glossary": "glossary-space-marines-enhancement-rites-of-war",
     "rule": "detachment-1st-company-task-force"
   },
-  "space-marines-enhancement-architect-of-war": {
-    "id": "space-marines-enhancement-architect-of-war",
-    "title": "Architect of War",
-    "summary": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
-    "full": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
-    "glossary": "glossary-space-marines-enhancement-architect-of-war",
+  "space-marines-enhancement-iron-resolve": {
+    "id": "space-marines-enhancement-iron-resolve",
+    "title": "IRON RESOLVE",
+    "summary": "ADEPTUS ASTARTES TERMINATOR model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer’s unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Feel No Pain 5+ ability.",
+    "full": "ADEPTUS ASTARTES TERMINATOR model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer’s unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Feel No Pain 5+ ability.",
+    "glossary": "glossary-space-marines-enhancement-iron-resolve",
+    "rule": "detachment-1st-company-task-force"
+  },
+  "space-marines-stratagem-armour-of-contempt-2": {
+    "id": "space-marines-stratagem-armour-of-contempt-2",
+    "title": "ARMOUR OF CONTEMPT",
+    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+    "glossary": "glossary-space-marines-stratagem-armour-of-contempt-2",
+    "rule": "detachment-1st-company-task-force"
+  },
+  "space-marines-stratagem-heroes-of-the-chapter": {
+    "id": "space-marines-stratagem-heroes-of-the-chapter",
+    "title": "HEROES OF THE CHAPTER",
+    "summary": "Your Shooting phase or the Fight phase. One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack, add 1 to the Hit roll. If your unit is Below Half-strength, add 1 to the Wound roll as well.",
+    "full": "Your Shooting phase or the Fight phase. One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack, add 1 to the Hit roll. If your unit is Below Half-strength, add 1 to the Wound roll as well.",
+    "glossary": "glossary-space-marines-stratagem-heroes-of-the-chapter",
+    "rule": "detachment-1st-company-task-force"
+  },
+  "space-marines-stratagem-terrifying-proficiency": {
+    "id": "space-marines-stratagem-terrifying-proficiency",
+    "title": "TERRIFYING PROFICIENCY",
+    "summary": "Your Fight phase. One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army that made a Charge move this turn and destroyed one or more enemy units this phase. In your opponent’s next Command phase, each enemy unit within 6\" of your unit must take a Battle-shock test. If the unit taking that test is Below Half-strength, subtract 1 from that test. Enemy units affected by this Stratagem do not need to take any other Battle-shock tests in the same phase.",
+    "full": "Your Fight phase. One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army that made a Charge move this turn and destroyed one or more enemy units this phase. In your opponent’s next Command phase, each enemy unit within 6\" of your unit must take a Battle-shock test. If the unit taking that test is Below Half-strength, subtract 1 from that test. Enemy units affected by this Stratagem do not need to take any other Battle-shock tests in the same phase.",
+    "glossary": "glossary-space-marines-stratagem-terrifying-proficiency",
+    "rule": "detachment-1st-company-task-force"
+  },
+  "space-marines-stratagem-duty-and-honour": {
+    "id": "space-marines-stratagem-duty-and-honour",
+    "title": "DUTY AND HONOUR",
+    "summary": "Your Movement phase. One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army within range of an objective marker you control. That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+    "full": "Your Movement phase. One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army within range of an objective marker you control. That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+    "glossary": "glossary-space-marines-stratagem-duty-and-honour",
+    "rule": "detachment-1st-company-task-force"
+  },
+  "space-marines-stratagem-orbital-teleportarium": {
+    "id": "space-marines-stratagem-orbital-teleportarium",
+    "title": "ORBITAL TELEPORTARIUM",
+    "summary": "End of your opponent’s Fight phase. One ADEPTUS ASTARTES TERMINATOR unit from your army. Remove your unit from the battlefield and place it into Strategic Reserves. It will arrive back on the battlefield in the Reinforcements step of your next Movement phase using the Deep Strike ability. You cannot select a unit that is within Engagement Range of one or more enemy units.",
+    "full": "End of your opponent’s Fight phase. One ADEPTUS ASTARTES TERMINATOR unit from your army. Remove your unit from the battlefield and place it into Strategic Reserves. It will arrive back on the battlefield in the Reinforcements step of your next Movement phase using the Deep Strike ability. You cannot select a unit that is within Engagement Range of one or more enemy units.",
+    "glossary": "glossary-space-marines-stratagem-orbital-teleportarium",
+    "rule": "detachment-1st-company-task-force"
+  },
+  "space-marines-stratagem-legendary-fortitude": {
+    "id": "space-marines-stratagem-legendary-fortitude",
+    "title": "LEGENDARY FORTITUDE",
+    "summary": "Your opponent’s Charge phase, just after an enemy unit ends a Charge move. One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army within Engagement Range of that enemy unit. Until the end of the turn, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.",
+    "full": "Your opponent’s Charge phase, just after an enemy unit ends a Charge move. One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army within Engagement Range of that enemy unit. Until the end of the turn, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.",
+    "glossary": "glossary-space-marines-stratagem-legendary-fortitude",
+    "rule": "detachment-1st-company-task-force"
+  },
+  "space-marines-detachment-rule-extremis-level-threat": {
+    "id": "space-marines-detachment-rule-extremis-level-threat",
+    "title": "EXTREMIS-LEVEL THREAT",
+    "summary": "Once per battle, in your Command phase, you can use this ability. If you do, until the start of your next Command phase, each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re-roll the Wound roll as well.",
+    "full": "Once per battle, in your Command phase, you can use this ability. If you do, until the start of your next Command phase, each time a model from your army with the Oath of Moment ability makes an attack that targets your Oath of Moment target, you can re-roll the Wound roll as well.",
+    "glossary": "glossary-space-marines-detachment-rule-extremis-level-threat",
+    "rule": "detachment-1st-company-task-force"
+  },
+  "space-marines-enhancement-indomitable-fury": {
+    "id": "space-marines-enhancement-indomitable-fury",
+    "title": "INDOMITABLE FURY",
+    "summary": "GRAVIS model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+    "full": "GRAVIS model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+    "glossary": "glossary-space-marines-enhancement-indomitable-fury",
     "rule": "detachment-anvil-siege-force"
   },
   "space-marines-enhancement-fleet-commander": {
     "id": "space-marines-enhancement-fleet-commander",
-    "title": "Fleet Commander",
-    "summary": "Captain model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the center of the first marker, then draw a straight line between the center of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+ that unit suffers D3 mortal wounds. Both markers are then removed.",
-    "full": "Captain model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the center of the first marker, then draw a straight line between the center of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+ that unit suffers D3 mortal wounds. Both markers are then removed.",
+    "title": "FLEET COMMANDER",
+    "summary": "CAPTAIN model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the centre of the first marker, then draw a straight line between the centre of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+, that unit suffers D3 mortal wounds. Both markers are then removed.",
+    "full": "CAPTAIN model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the centre of the first marker, then draw a straight line between the centre of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+, that unit suffers D3 mortal wounds. Both markers are then removed.",
     "glossary": "glossary-space-marines-enhancement-fleet-commander",
-    "rule": "detachment-anvil-siege-force"
-  },
-  "space-marines-enhancement-indomitable-fury": {
-    "id": "space-marines-enhancement-indomitable-fury",
-    "title": "Indomitable Fury",
-    "summary": "Gravis Model only. The first time the bearer is destroyed, roll on D6 at the end of the phase. On a 2+ set the bearer back on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
-    "full": "Gravis Model only. The first time the bearer is destroyed, roll on D6 at the end of the phase. On a 2+ set the bearer back on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
-    "glossary": "glossary-space-marines-enhancement-indomitable-fury",
     "rule": "detachment-anvil-siege-force"
   },
   "space-marines-enhancement-stoic-defender": {
     "id": "space-marines-enhancement-stoic-defender",
-    "title": "Stoic Defender",
-    "summary": "Adeptus Astartes model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0",
-    "full": "Adeptus Astartes model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0",
+    "title": "STOIC DEFENDER",
+    "summary": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0.",
+    "full": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0.",
     "glossary": "glossary-space-marines-enhancement-stoic-defender",
     "rule": "detachment-anvil-siege-force"
   },
-  "space-marines-enhancement-adamantine-mantle-2": {
-    "id": "space-marines-enhancement-adamantine-mantle-2",
-    "title": "Adamantine Mantle",
-    "summary": "Adeptus Astartes model only. Each time an attack is allocated the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a [MELTA] or [TORRENT] weapon, change the Damage characteristic of that attack to 1 instead.",
-    "full": "Adeptus Astartes model only. Each time an attack is allocated the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a [MELTA] or [TORRENT] weapon, change the Damage characteristic of that attack to 1 instead.",
-    "glossary": "glossary-space-marines-enhancement-adamantine-mantle-2",
-    "rule": "detachment-firestorm-assault-force"
+  "space-marines-enhancement-architect-of-war": {
+    "id": "space-marines-enhancement-architect-of-war",
+    "title": "ARCHITECT OF WAR",
+    "summary": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
+    "full": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
+    "glossary": "glossary-space-marines-enhancement-architect-of-war",
+    "rule": "detachment-anvil-siege-force"
+  },
+  "space-marines-stratagem-rigid-discipline": {
+    "id": "space-marines-stratagem-rigid-discipline",
+    "title": "RIGID DISCIPLINE",
+    "summary": "End of the Fight phase. One ADEPTUS ASTARTES unit from your army that is within Engagement Range of one or more enemy units. Your unit can immediately make a Fall Back move of up to 6\". When making that move, your unit must end that move either wholly within your deployment zone or within range of an objective marker.",
+    "full": "End of the Fight phase. One ADEPTUS ASTARTES unit from your army that is within Engagement Range of one or more enemy units. Your unit can immediately make a Fall Back move of up to 6\". When making that move, your unit must end that move either wholly within your deployment zone or within range of an objective marker.",
+    "glossary": "glossary-space-marines-stratagem-rigid-discipline",
+    "rule": "detachment-anvil-siege-force"
+  },
+  "space-marines-stratagem-not-one-backwards-step": {
+    "id": "space-marines-stratagem-not-one-backwards-step",
+    "title": "NOT ONE BACKWARDS STEP",
+    "summary": "Your Command phase. One ADEPTUS ASTARTES INFANTRY unit from your army within range of an objective marker. Until the end of the turn, double the Objective Control characteristic of models in your unit, but it must Remain Stationary this turn.",
+    "full": "Your Command phase. One ADEPTUS ASTARTES INFANTRY unit from your army within range of an objective marker. Until the end of the turn, double the Objective Control characteristic of models in your unit, but it must Remain Stationary this turn.",
+    "glossary": "glossary-space-marines-stratagem-not-one-backwards-step",
+    "rule": "detachment-anvil-siege-force"
+  },
+  "space-marines-stratagem-no-threat-too-great": {
+    "id": "space-marines-stratagem-no-threat-too-great",
+    "title": "NO THREAT TOO GREAT",
+    "summary": "Your Shooting phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes a ranged attack that targets a MONSTER or VEHICLE unit, you can re-roll the Wound roll.",
+    "full": "Your Shooting phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes a ranged attack that targets a MONSTER or VEHICLE unit, you can re-roll the Wound roll.",
+    "glossary": "glossary-space-marines-stratagem-no-threat-too-great",
+    "rule": "detachment-anvil-siege-force"
+  },
+  "space-marines-stratagem-battle-drill-recall": {
+    "id": "space-marines-stratagem-battle-drill-recall",
+    "title": "BATTLE DRILL RECALL",
+    "summary": "Your Shooting phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability. If your unit Remained Stationary this turn, then until the end of the phase, each time a model in your unit makes a ranged attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
+    "full": "Your Shooting phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability. If your unit Remained Stationary this turn, then until the end of the phase, each time a model in your unit makes a ranged attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
+    "glossary": "glossary-space-marines-stratagem-battle-drill-recall",
+    "rule": "detachment-anvil-siege-force"
+  },
+  "space-marines-stratagem-hail-of-vengeance": {
+    "id": "space-marines-stratagem-hail-of-vengeance",
+    "title": "HAIL OF VENGEANCE",
+    "summary": "Your opponent’s Shooting phase, just after an enemy unit has resolved its attacks. One ADEPTUS ASTARTES unit from your army that had one or more of its models destroyed as a result of the attacking unit’s attacks. Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
+    "full": "Your opponent’s Shooting phase, just after an enemy unit has resolved its attacks. One ADEPTUS ASTARTES unit from your army that had one or more of its models destroyed as a result of the attacking unit’s attacks. Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
+    "glossary": "glossary-space-marines-stratagem-hail-of-vengeance",
+    "rule": "detachment-anvil-siege-force"
+  },
+  "space-marines-detachment-rule-shield-of-the-imperium": {
+    "id": "space-marines-detachment-rule-shield-of-the-imperium",
+    "title": "SHIELD OF THE IMPERIUM",
+    "summary": "Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [HEAVY] ability. If such a weapon already has this ability, each time an attack is made with that weapon, if the attacking model’s unit Remained Stationary this turn, add 1 to the Wound roll.",
+    "full": "Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [HEAVY] ability. If such a weapon already has this ability, each time an attack is made with that weapon, if the attacking model’s unit Remained Stationary this turn, add 1 to the Wound roll.",
+    "glossary": "glossary-space-marines-detachment-rule-shield-of-the-imperium",
+    "rule": "detachment-anvil-siege-force"
   },
   "space-marines-enhancement-champion-of-humanity": {
     "id": "space-marines-enhancement-champion-of-humanity",
-    "title": "Champion of Humanity",
-    "summary": "Tacticus model only. While the bearer is leading a unit, models in that unit can ignore any or all modifiers to their characteristics and/or to any roll or test made for them (excluding modifiers to saving throws).",
-    "full": "Tacticus model only. While the bearer is leading a unit, models in that unit can ignore any or all modifiers to their characteristics and/or to any roll or test made for them (excluding modifiers to saving throws).",
+    "title": "CHAMPION OF HUMANITY",
+    "summary": "TACTICUS model only. While the bearer is leading a unit, models in that unit can ignore any or all modifiers to their characteristics and/or to any roll or test made for them (excluding modifiers to saving throws).",
+    "full": "TACTICUS model only. While the bearer is leading a unit, models in that unit can ignore any or all modifiers to their characteristics and/or to any roll or test made for them (excluding modifiers to saving throws).",
     "glossary": "glossary-space-marines-enhancement-champion-of-humanity",
-    "rule": "detachment-firestorm-assault-force"
-  },
-  "space-marines-enhancement-forged-in-battle-2": {
-    "id": "space-marines-enhancement-forged-in-battle-2",
-    "title": "Forged in Battle",
-    "summary": "Adeptus Astartes model only. While the bearer is leading a unit, once per turn after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an umodified 6.",
-    "full": "Adeptus Astartes model only. While the bearer is leading a unit, once per turn after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an umodified 6.",
-    "glossary": "glossary-space-marines-enhancement-forged-in-battle-2",
     "rule": "detachment-firestorm-assault-force"
   },
   "space-marines-enhancement-war-tempered-artifice-2": {
     "id": "space-marines-enhancement-war-tempered-artifice-2",
-    "title": "War-tempered Artifice",
-    "summary": "Adeptus Astartes Infantry model only. Add 3 to the Strength characteristic of the bearer's melee weapons.",
-    "full": "Adeptus Astartes Infantry model only. Add 3 to the Strength characteristic of the bearer's melee weapons.",
+    "title": "WAR-TEMPERED ARTIFICE",
+    "summary": "ADEPTUS ASTARTES INFANTRY model only. Add 3 to the Strength characteristic of the bearer’s melee weapons.",
+    "full": "ADEPTUS ASTARTES INFANTRY model only. Add 3 to the Strength characteristic of the bearer’s melee weapons.",
     "glossary": "glossary-space-marines-enhancement-war-tempered-artifice-2",
     "rule": "detachment-firestorm-assault-force"
   },
-  "space-marines-enhancement-adept-of-the-codex": {
-    "id": "space-marines-enhancement-adept-of-the-codex",
-    "title": "Adept of the Codex",
-    "summary": "Captain model only. At the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that doctrine is active for the bearer’s unit only, even if you have already selected that doctrine to be active for your army this battle.",
-    "full": "Captain model only. At the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that doctrine is active for the bearer’s unit only, even if you have already selected that doctrine to be active for your army this battle.",
-    "glossary": "glossary-space-marines-enhancement-adept-of-the-codex",
-    "rule": "detachment-gladius-task-force"
+  "space-marines-enhancement-forged-in-battle-2": {
+    "id": "space-marines-enhancement-forged-in-battle-2",
+    "title": "FORGED IN BATTLE",
+    "summary": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, once per turn, after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an unmodified 6.",
+    "full": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, once per turn, after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an unmodified 6.",
+    "glossary": "glossary-space-marines-enhancement-forged-in-battle-2",
+    "rule": "detachment-firestorm-assault-force"
+  },
+  "space-marines-enhancement-adamantine-mantle-2": {
+    "id": "space-marines-enhancement-adamantine-mantle-2",
+    "title": "ADAMANTINE MANTLE",
+    "summary": "ADEPTUS ASTARTES model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a Melta or Torrent weapon, change the Damage characteristic of that attack to 1 instead.",
+    "full": "ADEPTUS ASTARTES model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a Melta or Torrent weapon, change the Damage characteristic of that attack to 1 instead.",
+    "glossary": "glossary-space-marines-enhancement-adamantine-mantle-2",
+    "rule": "detachment-firestorm-assault-force"
+  },
+  "space-marines-stratagem-crucible-of-battle-2": {
+    "id": "space-marines-stratagem-crucible-of-battle-2",
+    "title": "CRUCIBLE OF BATTLE",
+    "summary": "Your Shooting phase or the Fight phase. One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets the closest eligible target within 6\", add 1 to the Wound roll.",
+    "full": "Your Shooting phase or the Fight phase. One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets the closest eligible target within 6\", add 1 to the Wound roll.",
+    "glossary": "glossary-space-marines-stratagem-crucible-of-battle-2",
+    "rule": "detachment-firestorm-assault-force"
+  },
+  "space-marines-stratagem-rapid-embarkation-2": {
+    "id": "space-marines-stratagem-rapid-embarkation-2",
+    "title": "RAPID EMBARKATION",
+    "summary": "End of the Fight phase. One ADEPTUS ASTARTES TRANSPORT unit from your army that has no models embarked within it, and one ADEPTUS ASTARTES INFANTRY unit from your army wholly within 6\" of that TRANSPORT. Your INFANTRY unit can embark within that TRANSPORT. You cannot target an INFANTRY unit that is within Engagement Range of one or more enemy units, that cannot normally embark within that TRANSPORT, or that disembarked from a TRANSPORT this turn.",
+    "full": "End of the Fight phase. One ADEPTUS ASTARTES TRANSPORT unit from your army that has no models embarked within it, and one ADEPTUS ASTARTES INFANTRY unit from your army wholly within 6\" of that TRANSPORT. Your INFANTRY unit can embark within that TRANSPORT. You cannot target an INFANTRY unit that is within Engagement Range of one or more enemy units, that cannot normally embark within that TRANSPORT, or that disembarked from a TRANSPORT this turn.",
+    "glossary": "glossary-space-marines-stratagem-rapid-embarkation-2",
+    "rule": "detachment-firestorm-assault-force"
+  },
+  "space-marines-stratagem-immolation-protocols-2": {
+    "id": "space-marines-stratagem-immolation-protocols-2",
+    "title": "IMMOLATION PROTOCOLS",
+    "summary": "Your Shooting phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase. Until the end of the phase, Torrent weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability.",
+    "full": "Your Shooting phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase. Until the end of the phase, Torrent weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability.",
+    "glossary": "glossary-space-marines-stratagem-immolation-protocols-2",
+    "rule": "detachment-firestorm-assault-force"
+  },
+  "space-marines-stratagem-onslaught-of-fire": {
+    "id": "space-marines-stratagem-onslaught-of-fire",
+    "title": "ONSLAUGHT OF FIRE",
+    "summary": "Your Shooting phase. One ADEPTUS ASTARTES unit from your army that disembarked from a TRANSPORT this turn and has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes a ranged attack that targets the closest eligible target within 12\", add 1 to the Hit roll. If one or more enemy models are destroyed as the result of any of those attacks, select one of those destroyed models; that destroyed model’s unit must take a Battle-shock test.",
+    "full": "Your Shooting phase. One ADEPTUS ASTARTES unit from your army that disembarked from a TRANSPORT this turn and has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes a ranged attack that targets the closest eligible target within 12\", add 1 to the Hit roll. If one or more enemy models are destroyed as the result of any of those attacks, select one of those destroyed models; that destroyed model’s unit must take a Battle-shock test.",
+    "glossary": "glossary-space-marines-stratagem-onslaught-of-fire",
+    "rule": "detachment-firestorm-assault-force"
+  },
+  "space-marines-stratagem-burning-vengeance-2": {
+    "id": "space-marines-stratagem-burning-vengeance-2",
+    "title": "BURNING VENGEANCE",
+    "summary": "Your opponent’s Shooting phase, just after an enemy unit has resolved its attacks. One ADEPTUS ASTARTES TRANSPORT unit from your army that was selected as the target of one or more of the attacking unit’s attacks. One unit embarked within that TRANSPORT can disembark as if it were your Movement phase, and can then shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
+    "full": "Your opponent’s Shooting phase, just after an enemy unit has resolved its attacks. One ADEPTUS ASTARTES TRANSPORT unit from your army that was selected as the target of one or more of the attacking unit’s attacks. One unit embarked within that TRANSPORT can disembark as if it were your Movement phase, and can then shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
+    "glossary": "glossary-space-marines-stratagem-burning-vengeance-2",
+    "rule": "detachment-firestorm-assault-force"
+  },
+  "space-marines-detachment-rule-close-range-eradication": {
+    "id": "space-marines-detachment-rule-close-range-eradication",
+    "title": "CLOSE-RANGE ERADICATION",
+    "summary": "Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\", add 1 to the Strength characteristic of that attack.",
+    "full": "Ranged weapons equipped by ADEPTUS ASTARTES models from your army have the [ASSAULT] ability, and each time an attack made with such a weapon targets a unit within 12\", add 1 to the Strength characteristic of that attack.",
+    "glossary": "glossary-space-marines-detachment-rule-close-range-eradication",
+    "rule": "detachment-firestorm-assault-force"
   },
   "space-marines-enhancement-artificer-armour": {
     "id": "space-marines-enhancement-artificer-armour",
-    "title": "Artificer Armour",
-    "summary": "Adeptus Astartes model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
-    "full": "Adeptus Astartes model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
+    "title": "ARTIFICER ARMOUR",
+    "summary": "ADEPTUS ASTARTES model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
+    "full": "ADEPTUS ASTARTES model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
     "glossary": "glossary-space-marines-enhancement-artificer-armour",
-    "rule": "detachment-gladius-task-force"
-  },
-  "space-marines-enhancement-fire-discipline": {
-    "id": "space-marines-enhancement-fire-discipline",
-    "title": "Fire Discipline",
-    "summary": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine,, you can reroll Advance rolls made for that unit.",
-    "full": "Adeptus Astartes model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine,, you can reroll Advance rolls made for that unit.",
-    "glossary": "glossary-space-marines-enhancement-fire-discipline",
     "rule": "detachment-gladius-task-force"
   },
   "space-marines-enhancement-the-honour-vehement": {
     "id": "space-marines-enhancement-the-honour-vehement",
-    "title": "The Honour Vehement",
-    "summary": "Adeptus Astartes model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead.",
-    "full": "Adeptus Astartes model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearer’s melee weapons instead.",
+    "title": "THE HONOUR VEHEMENT",
+    "summary": "ADEPTUS ASTARTES model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearers melee weapons instead.",
+    "full": "ADEPTUS ASTARTES model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearers melee weapons instead.",
     "glossary": "glossary-space-marines-enhancement-the-honour-vehement",
     "rule": "detachment-gladius-task-force"
   },
-  "space-marines-enhancement-master-of-machine-war": {
-    "id": "space-marines-enhancement-master-of-machine-war",
-    "title": "Master of Machine War",
-    "summary": "Master of Machine War appears in the Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-space-marines-enhancement-master-of-machine-war",
-    "rule": "detachment-ironstorm-spearhead"
+  "space-marines-enhancement-adept-of-the-codex": {
+    "id": "space-marines-enhancement-adept-of-the-codex",
+    "title": "ADEPT OF THE CODEX",
+    "summary": "CAPTAIN model only. At the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that Combat Doctrine is active for the bearer’s unit only, even if you have already selected that Combat Doctrine to be active for your army this battle.",
+    "full": "CAPTAIN model only. At the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that Combat Doctrine is active for the bearer’s unit only, even if you have already selected that Combat Doctrine to be active for your army this battle.",
+    "glossary": "glossary-space-marines-enhancement-adept-of-the-codex",
+    "rule": "detachment-gladius-task-force"
   },
-  "space-marines-enhancement-adept-of-the-omnissiah": {
-    "id": "space-marines-enhancement-adept-of-the-omnissiah",
-    "title": "Adept of the Omnissiah",
-    "summary": "Techmarine model only. Once per battle round, when a saving throw is failed for a friendly Adeptus Astartes Vehicle model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
-    "full": "Techmarine model only. Once per battle round, when a saving throw is failed for a friendly Adeptus Astartes Vehicle model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
-    "glossary": "glossary-space-marines-enhancement-adept-of-the-omnissiah",
-    "rule": "detachment-ironstorm-spearhead"
+  "space-marines-enhancement-fire-discipline": {
+    "id": "space-marines-enhancement-fire-discipline",
+    "title": "FIRE DISCIPLINE",
+    "summary": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can reroll Advance rolls made for that unit.",
+    "full": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can reroll Advance rolls made for that unit.",
+    "glossary": "glossary-space-marines-enhancement-fire-discipline",
+    "rule": "detachment-gladius-task-force"
+  },
+  "space-marines-stratagem-only-in-death-does-duty-end": {
+    "id": "space-marines-stratagem-only-in-death-does-duty-end",
+    "title": "ONLY IN DEATH DOES DUTY END",
+    "summary": "Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+    "full": "Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+    "glossary": "glossary-space-marines-stratagem-only-in-death-does-duty-end",
+    "rule": "detachment-gladius-task-force"
+  },
+  "space-marines-stratagem-honour-the-chapter": {
+    "id": "space-marines-stratagem-honour-the-chapter",
+    "title": "HONOUR THE CHAPTER",
+    "summary": "Fight phase. One ADEPTUS ASTARTES unit from your army. Until the end of the phase, melee weapons equipped by models in your unit have the [LANCE] ability. If your unit is under the effects of the Assault Doctrine, until the end of the phase, improve the Armour Penetration characteristic of such weapons by 1 as well.",
+    "full": "Fight phase. One ADEPTUS ASTARTES unit from your army. Until the end of the phase, melee weapons equipped by models in your unit have the [LANCE] ability. If your unit is under the effects of the Assault Doctrine, until the end of the phase, improve the Armour Penetration characteristic of such weapons by 1 as well.",
+    "glossary": "glossary-space-marines-stratagem-honour-the-chapter",
+    "rule": "detachment-gladius-task-force"
+  },
+  "space-marines-stratagem-adaptive-strategy": {
+    "id": "space-marines-stratagem-adaptive-strategy",
+    "title": "ADAPTIVE STRATEGY",
+    "summary": "Your Command phase. One ADEPTUS ASTARTES unit from your army. Select the Devastator Doctrine, Tactical Doctrine or Assault Doctrine. Until the start of your next Command phase, that Combat Doctrine is active for that unit instead of any other Combat Doctrine that is active for your army, even if you have already selected that doctrine this battle.",
+    "full": "Your Command phase. One ADEPTUS ASTARTES unit from your army. Select the Devastator Doctrine, Tactical Doctrine or Assault Doctrine. Until the start of your next Command phase, that Combat Doctrine is active for that unit instead of any other Combat Doctrine that is active for your army, even if you have already selected that doctrine this battle.",
+    "glossary": "glossary-space-marines-stratagem-adaptive-strategy",
+    "rule": "detachment-gladius-task-force"
+  },
+  "space-marines-stratagem-storm-of-fire": {
+    "id": "space-marines-stratagem-storm-of-fire",
+    "title": "STORM OF FIRE",
+    "summary": "Your Shooting phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability. If your unit is under the effects of the Devastator Doctrine, until the end of the phase, improve the Armour Penetration characteristic of such weapons by 1 as well.",
+    "full": "Your Shooting phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability. If your unit is under the effects of the Devastator Doctrine, until the end of the phase, improve the Armour Penetration characteristic of such weapons by 1 as well.",
+    "glossary": "glossary-space-marines-stratagem-storm-of-fire",
+    "rule": "detachment-gladius-task-force"
+  },
+  "space-marines-stratagem-squad-tactics": {
+    "id": "space-marines-stratagem-squad-tactics",
+    "title": "SQUAD TACTICS",
+    "summary": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army that is within 8\" of the enemy unit that just ended that move. Your unit can make a Normal move of up to D6\", or a Normal move of up to 6\" instead if it is under the effects of the Tactical Doctrine. You cannot select a unit that is within Engagement Range of one or more enemy units.",
+    "full": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army that is within 8\" of the enemy unit that just ended that move. Your unit can make a Normal move of up to D6\", or a Normal move of up to 6\" instead if it is under the effects of the Tactical Doctrine. You cannot select a unit that is within Engagement Range of one or more enemy units.",
+    "glossary": "glossary-space-marines-stratagem-squad-tactics",
+    "rule": "detachment-gladius-task-force"
+  },
+  "space-marines-detachment-rule-combat-doctrines": {
+    "id": "space-marines-detachment-rule-combat-doctrines",
+    "title": "COMBAT DOCTRINES",
+    "summary": "At the start of your Command phase, you can select one of the Combat Doctrines listed below. Until the start of your next Command phase, that Combat Doctrine is active and its effects apply to all ADEPTUS ASTARTES units from your army. You can only select each Combat Doctrine once per battle.",
+    "full": "At the start of your Command phase, you can select one of the Combat Doctrines listed below. Until the start of your next Command phase, that Combat Doctrine is active and its effects apply to all ADEPTUS ASTARTES units from your army. You can only select each Combat Doctrine once per battle.",
+    "glossary": "glossary-space-marines-detachment-rule-combat-doctrines",
+    "rule": "detachment-gladius-task-force"
   },
   "space-marines-enhancement-target-augury-web": {
     "id": "space-marines-enhancement-target-augury-web",
-    "title": "Target Augury Web",
-    "summary": "TECHMARINE model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that VEHICLE have the [Lethal Hits] ability.",
-    "full": "TECHMARINE model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that VEHICLE have the [Lethal Hits] ability.",
+    "title": "TARGET AUGURY WEB",
+    "summary": "TECHMARINE model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that VEHICLE model have the [LETHAL HITS] ability.",
+    "full": "TECHMARINE model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that VEHICLE model have the [LETHAL HITS] ability.",
     "glossary": "glossary-space-marines-enhancement-target-augury-web",
     "rule": "detachment-ironstorm-spearhead"
   },
   "space-marines-enhancement-the-flesh-is-weak": {
     "id": "space-marines-enhancement-the-flesh-is-weak",
-    "title": "The Flesh Is Weak",
-    "summary": "Adeptus Astartes model only. The bearer has the Feel No Pain 4+ ability.",
-    "full": "Adeptus Astartes model only. The bearer has the Feel No Pain 4+ ability.",
+    "title": "THE FLESH IS WEAK",
+    "summary": "ADEPTUS ASTARTES model only. The bearer has the Feel No Pain 4+ ability.",
+    "full": "ADEPTUS ASTARTES model only. The bearer has the Feel No Pain 4+ ability.",
     "glossary": "glossary-space-marines-enhancement-the-flesh-is-weak",
     "rule": "detachment-ironstorm-spearhead"
   },
-  "space-marines-enhancement-hunters-instincts-2": {
-    "id": "space-marines-enhancement-hunters-instincts-2",
-    "title": "Hunter’s Instincts",
-    "summary": "Hunter’s Instincts appears in the Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-space-marines-enhancement-hunters-instincts-2",
-    "rule": "detachment-stormlance-task-force"
+  "space-marines-enhancement-adept-of-the-omnissiah": {
+    "id": "space-marines-enhancement-adept-of-the-omnissiah",
+    "title": "ADEPT OF THE OMNISSIAH",
+    "summary": "TECHMARINE model only. Once per battle round, when a saving throw is failed for a friendly ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
+    "full": "TECHMARINE model only. Once per battle round, when a saving throw is failed for a friendly ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
+    "glossary": "glossary-space-marines-enhancement-adept-of-the-omnissiah",
+    "rule": "detachment-ironstorm-spearhead"
   },
-  "space-marines-enhancement-feinting-withdrawal": {
-    "id": "space-marines-enhancement-feinting-withdrawal",
-    "title": "Feinting Withdrawal",
-    "summary": "Adeptus Astartes model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it fell back",
-    "full": "Adeptus Astartes model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it fell back",
-    "glossary": "glossary-space-marines-enhancement-feinting-withdrawal",
-    "rule": "detachment-stormlance-task-force"
+  "space-marines-enhancement-master-of-machine-war": {
+    "id": "space-marines-enhancement-master-of-machine-war",
+    "title": "MASTER OF MACHINE WAR",
+    "summary": "ADEPTUS ASTARTES model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, that VEHICLE is eligible to shoot even if it Fell Back or Advanced this turn.",
+    "full": "ADEPTUS ASTARTES model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, that VEHICLE is eligible to shoot even if it Fell Back or Advanced this turn.",
+    "glossary": "glossary-space-marines-enhancement-master-of-machine-war",
+    "rule": "detachment-ironstorm-spearhead"
+  },
+  "space-marines-stratagem-unbowed-conviction": {
+    "id": "space-marines-stratagem-unbowed-conviction",
+    "title": "UNBOWED CONVICTION",
+    "summary": "Command phase. One ADEPTUS ASTARTES unit from your army that is below its Starting Strength. Until the end of the turn, your unit can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws).",
+    "full": "Command phase. One ADEPTUS ASTARTES unit from your army that is below its Starting Strength. Until the end of the turn, your unit can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws).",
+    "glossary": "glossary-space-marines-stratagem-unbowed-conviction",
+    "rule": "detachment-ironstorm-spearhead"
+  },
+  "space-marines-stratagem-mercy-is-weakness": {
+    "id": "space-marines-stratagem-mercy-is-weakness",
+    "title": "MERCY IS WEAKNESS",
+    "summary": "Your Shooting phase or the Fight phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is below its Starting Strength, that attack has the [SUSTAINED HITS 1] ability, and when making such an attack, if the attacking model is a VEHICLE, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
+    "full": "Your Shooting phase or the Fight phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is below its Starting Strength, that attack has the [SUSTAINED HITS 1] ability, and when making such an attack, if the attacking model is a VEHICLE, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
+    "glossary": "glossary-space-marines-stratagem-mercy-is-weakness",
+    "rule": "detachment-ironstorm-spearhead"
+  },
+  "space-marines-stratagem-vengeful-animus": {
+    "id": "space-marines-stratagem-vengeful-animus",
+    "title": "VENGEFUL ANIMUS",
+    "summary": "Any phase, just after an ADEPTUS ASTARTES VEHICLE model from your army with the Deadly Demise ability is destroyed. That ADEPTUS ASTARTES VEHICLE model. You can use this Stratagem on that model even though it was just destroyed. Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.",
+    "full": "Any phase, just after an ADEPTUS ASTARTES VEHICLE model from your army with the Deadly Demise ability is destroyed. That ADEPTUS ASTARTES VEHICLE model. You can use this Stratagem on that model even though it was just destroyed. Do not roll one D6 to determine whether mortal wounds are inflicted by your model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted.",
+    "glossary": "glossary-space-marines-stratagem-vengeful-animus",
+    "rule": "detachment-ironstorm-spearhead"
+  },
+  "space-marines-stratagem-ancient-fury": {
+    "id": "space-marines-stratagem-ancient-fury",
+    "title": "ANCIENT FURY",
+    "summary": "Your Command phase. One ADEPTUS ASTARTES WALKER model from your army. Until the start of your next Command phase, improve your model’s Move, Toughness, Leadership and Objective Control characteristics by 1 and each time your model makes an attack, add 1 to the Hit roll.",
+    "full": "Your Command phase. One ADEPTUS ASTARTES WALKER model from your army. Until the start of your next Command phase, improve your model’s Move, Toughness, Leadership and Objective Control characteristics by 1 and each time your model makes an attack, add 1 to the Hit roll.",
+    "glossary": "glossary-space-marines-stratagem-ancient-fury",
+    "rule": "detachment-ironstorm-spearhead"
+  },
+  "space-marines-stratagem-power-of-the-machine-spirit": {
+    "id": "space-marines-stratagem-power-of-the-machine-spirit",
+    "title": "POWER OF THE MACHINE SPIRIT",
+    "summary": "Your opponent’s Shooting phase, just after an enemy unit has resolved its attacks. One ADEPTUS ASTARTES VEHICLE unit from your army that was reduced to Below Half-strength as a result of the attacking unit’s attacks. Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
+    "full": "Your opponent’s Shooting phase, just after an enemy unit has resolved its attacks. One ADEPTUS ASTARTES VEHICLE unit from your army that was reduced to Below Half-strength as a result of the attacking unit’s attacks. Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
+    "glossary": "glossary-space-marines-stratagem-power-of-the-machine-spirit",
+    "rule": "detachment-ironstorm-spearhead"
+  },
+  "space-marines-detachment-rule-armoured-wrath": {
+    "id": "space-marines-detachment-rule-armoured-wrath",
+    "title": "ARMOURED WRATH",
+    "summary": "Once per phase for each ADEPTUS ASTARTES unit in your army, you can re-roll one Hit roll, one Wound roll or one Damage roll made for a model in that unit.",
+    "full": "Once per phase for each ADEPTUS ASTARTES unit in your army, you can re-roll one Hit roll, one Wound roll or one Damage roll made for a model in that unit.",
+    "glossary": "glossary-space-marines-detachment-rule-armoured-wrath",
+    "rule": "detachment-ironstorm-spearhead"
   },
   "space-marines-enhancement-fury-of-the-storm": {
     "id": "space-marines-enhancement-fury-of-the-storm",
-    "title": "Fury of the Storm",
-    "summary": "Adeptus Astartes Mounted model only. Improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 2 instead.",
-    "full": "Adeptus Astartes Mounted model only. Improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearer's melee weapons by 2 instead.",
+    "title": "FURY OF THE STORM",
+    "summary": "ADEPTUS ASTARTES MOUNTED model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearers melee weapons by 2 instead.",
+    "full": "ADEPTUS ASTARTES MOUNTED model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearers melee weapons by 2 instead.",
     "glossary": "glossary-space-marines-enhancement-fury-of-the-storm",
     "rule": "detachment-stormlance-task-force"
   },
   "space-marines-enhancement-portents-of-wisdom": {
     "id": "space-marines-enhancement-portents-of-wisdom",
-    "title": "Portents of Wisdom",
-    "summary": "Adeptus Astartes model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit.",
-    "full": "Adeptus Astartes model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit.",
+    "title": "PORTENTS OF WISDOM",
+    "summary": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit.",
+    "full": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit.",
     "glossary": "glossary-space-marines-enhancement-portents-of-wisdom",
     "rule": "detachment-stormlance-task-force"
   },
-  "space-marines-enhancement-execute-and-redeploy": {
-    "id": "space-marines-enhancement-execute-and-redeploy",
-    "title": "Execute and Redeploy",
-    "summary": "Phobos model only. In your Shooting phase, after the bearer's unit has shot, if that unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does until the end of the turn, that unit is not eligible to delcare a charge. This cannot allow the bearer's unit to move more than once in your Shooting phase.",
-    "full": "Phobos model only. In your Shooting phase, after the bearer's unit has shot, if that unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does until the end of the turn, that unit is not eligible to delcare a charge. This cannot allow the bearer's unit to move more than once in your Shooting phase.",
-    "glossary": "glossary-space-marines-enhancement-execute-and-redeploy",
+  "space-marines-enhancement-feinting-withdrawal": {
+    "id": "space-marines-enhancement-feinting-withdrawal",
+    "title": "FEINTING WITHDRAWAL",
+    "summary": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it Fell Back.",
+    "full": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it Fell Back.",
+    "glossary": "glossary-space-marines-enhancement-feinting-withdrawal",
+    "rule": "detachment-stormlance-task-force"
+  },
+  "space-marines-enhancement-hunters-instincts-2": {
+    "id": "space-marines-enhancement-hunters-instincts-2",
+    "title": "HUNTER’S INSTINCTS",
+    "summary": "ADEPTUS ASTARTES MOUNTED model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
+    "full": "ADEPTUS ASTARTES MOUNTED model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
+    "glossary": "glossary-space-marines-enhancement-hunters-instincts-2",
+    "rule": "detachment-stormlance-task-force"
+  },
+  "space-marines-stratagem-blitzing-fusillade": {
+    "id": "space-marines-stratagem-blitzing-fusillade",
+    "title": "BLITZING FUSILLADE",
+    "summary": "Your Shooting phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your unit have the [ASSAULT] ability. If such a weapon already has this ability, until the end of the phase, that weapon has the [SUSTAINED HITS 1] ability as well.",
+    "full": "Your Shooting phase. One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your unit have the [ASSAULT] ability. If such a weapon already has this ability, until the end of the phase, that weapon has the [SUSTAINED HITS 1] ability as well.",
+    "glossary": "glossary-space-marines-stratagem-blitzing-fusillade",
+    "rule": "detachment-stormlance-task-force"
+  },
+  "space-marines-stratagem-full-throttle": {
+    "id": "space-marines-stratagem-full-throttle",
+    "title": "FULL THROTTLE",
+    "summary": "Your Movement phase. One ADEPTUS ASTARTES MOUNTED or ADEPTUS ASTARTES VEHICLE unit (excluding WALKERS) from your army. Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit, or 9\" instead if your unit is MOUNTED.",
+    "full": "Your Movement phase. One ADEPTUS ASTARTES MOUNTED or ADEPTUS ASTARTES VEHICLE unit (excluding WALKERS) from your army. Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit, or 9\" instead if your unit is MOUNTED.",
+    "glossary": "glossary-space-marines-stratagem-full-throttle",
+    "rule": "detachment-stormlance-task-force"
+  },
+  "space-marines-stratagem-shock-assault": {
+    "id": "space-marines-stratagem-shock-assault",
+    "title": "SHOCK ASSAULT",
+    "summary": "Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight. That ADEPTUS ASTARTES unit. Your unit’s melee attacks have [LANCE].",
+    "full": "Fight phase, when a friendly ADEPTUS ASTARTES unit is selected to fight. That ADEPTUS ASTARTES unit. Your unit’s melee attacks have [LANCE].",
+    "glossary": "glossary-space-marines-stratagem-shock-assault",
+    "rule": "detachment-stormlance-task-force"
+  },
+  "space-marines-stratagem-ride-hard-ride-fast": {
+    "id": "space-marines-stratagem-ride-hard-ride-fast",
+    "title": "RIDE HARD, RIDE FAST",
+    "summary": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES MOUNTED or ADEPTUS ASTARTES FLY VEHICLE unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time an attack targets your unit, subtract 1 from the Wound roll.",
+    "full": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES MOUNTED or ADEPTUS ASTARTES FLY VEHICLE unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time an attack targets your unit, subtract 1 from the Wound roll.",
+    "glossary": "glossary-space-marines-stratagem-ride-hard-ride-fast",
+    "rule": "detachment-stormlance-task-force"
+  },
+  "space-marines-stratagem-wind-swift-evasion": {
+    "id": "space-marines-stratagem-wind-swift-evasion",
+    "title": "WIND-SWIFT EVASION",
+    "summary": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army that is within 8\" of that enemy unit. Your unit can make a Normal move of up to 6\". You cannot select a unit that is within Engagement Range of one or more enemy units.",
+    "full": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army that is within 8\" of that enemy unit. Your unit can make a Normal move of up to 6\". You cannot select a unit that is within Engagement Range of one or more enemy units.",
+    "glossary": "glossary-space-marines-stratagem-wind-swift-evasion",
+    "rule": "detachment-stormlance-task-force"
+  },
+  "space-marines-detachment-rule-lightning-assault": {
+    "id": "space-marines-detachment-rule-lightning-assault",
+    "title": "LIGHTNING ASSAULT",
+    "summary": "ADEPTUS ASTARTES units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back.",
+    "full": "ADEPTUS ASTARTES units from your army are eligible to declare a charge in a turn in which they Advanced or Fell Back.",
+    "glossary": "glossary-space-marines-detachment-rule-lightning-assault",
+    "rule": "detachment-stormlance-task-force"
+  },
+  "space-marines-enhancement-the-blade-driven-deep": {
+    "id": "space-marines-enhancement-the-blade-driven-deep",
+    "title": "THE BLADE DRIVEN DEEP",
+    "summary": "ADEPTUS ASTARTES INFANTRY model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
+    "full": "ADEPTUS ASTARTES INFANTRY model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
+    "glossary": "glossary-space-marines-enhancement-the-blade-driven-deep",
     "rule": "detachment-vanguard-spearhead"
   },
   "space-marines-enhancement-ghostweave-cloak": {
     "id": "space-marines-enhancement-ghostweave-cloak",
-    "title": "Ghostweave Cloak",
-    "summary": "Adeptus Astartes model only. The bearer has the Stealth and Lone Operative Abilities",
-    "full": "Adeptus Astartes model only. The bearer has the Stealth and Lone Operative Abilities",
+    "title": "GHOSTWEAVE CLOAK",
+    "summary": "ADEPTUS ASTARTES model only. The bearer has the Stealth and Lone Operative abilities.",
+    "full": "ADEPTUS ASTARTES model only. The bearer has the Stealth and Lone Operative abilities.",
     "glossary": "glossary-space-marines-enhancement-ghostweave-cloak",
+    "rule": "detachment-vanguard-spearhead"
+  },
+  "space-marines-enhancement-execute-and-redeploy": {
+    "id": "space-marines-enhancement-execute-and-redeploy",
+    "title": "EXECUTE AND REDEPLOY",
+    "summary": "PHOBOS model only. In your Shooting phase, after the bearer’s unit has shot, if that unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge. This cannot allow the bearer’s unit to move more than once in your Shooting phase.",
+    "full": "PHOBOS model only. In your Shooting phase, after the bearer’s unit has shot, if that unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge. This cannot allow the bearer’s unit to move more than once in your Shooting phase.",
+    "glossary": "glossary-space-marines-enhancement-execute-and-redeploy",
     "rule": "detachment-vanguard-spearhead"
   },
   "space-marines-enhancement-shadow-war-veteran": {
     "id": "space-marines-enhancement-shadow-war-veteran",
-    "title": "Shadow War Veteran",
-    "summary": "Phobos model only. Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP",
-    "full": "Phobos model only. Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP",
+    "title": "SHADOW WAR VETERAN",
+    "summary": "PHOBOS model only. The bearer has the following ability: Lord of Deceit (Aura): Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.",
+    "full": "PHOBOS model only. The bearer has the following ability: Lord of Deceit (Aura): Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.",
     "glossary": "glossary-space-marines-enhancement-shadow-war-veteran",
     "rule": "detachment-vanguard-spearhead"
   },
-  "space-marines-enhancement-the-blade-driven-deep": {
-    "id": "space-marines-enhancement-the-blade-driven-deep",
-    "title": "The Blade Driven Deep",
-    "summary": "Adeptus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
-    "full": "Adeptus Astartes Infantry model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
-    "glossary": "glossary-space-marines-enhancement-the-blade-driven-deep",
+  "space-marines-stratagem-a-deadly-prize": {
+    "id": "space-marines-stratagem-a-deadly-prize",
+    "title": "A DEADLY PRIZE",
+    "summary": "Start of the Command phase. One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army within range of an objective marker you control. That objective marker is said to be Sabotaged, and remains under your control even if you have no models within range of it, until your opponent controls it at the start or end of any turn. While an objective marker is Sabotaged and under your control, each time an enemy unit ends a Normal, Advance, Fall Back or Charge move within range of that objective marker, roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds.",
+    "full": "Start of the Command phase. One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army within range of an objective marker you control. That objective marker is said to be Sabotaged, and remains under your control even if you have no models within range of it, until your opponent controls it at the start or end of any turn. While an objective marker is Sabotaged and under your control, each time an enemy unit ends a Normal, Advance, Fall Back or Charge move within range of that objective marker, roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds.",
+    "glossary": "glossary-space-marines-stratagem-a-deadly-prize",
+    "rule": "detachment-vanguard-spearhead"
+  },
+  "space-marines-stratagem-surgical-strikes": {
+    "id": "space-marines-stratagem-surgical-strikes",
+    "title": "SURGICAL STRIKES",
+    "summary": "Fight phase. One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to fight this phase. Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability.",
+    "full": "Fight phase. One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to fight this phase. Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability.",
+    "glossary": "glossary-space-marines-stratagem-surgical-strikes",
+    "rule": "detachment-vanguard-spearhead"
+  },
+  "space-marines-stratagem-strike-from-the-shadows-2": {
+    "id": "space-marines-stratagem-strike-from-the-shadows-2",
+    "title": "STRIKE FROM THE SHADOWS",
+    "summary": "Your Shooting phase. One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes a ranged attack that targets an enemy unit that is more than 12\" away, improve the Ballistic Skill and Armour Penetration characteristics of that attack by 1. If one or more enemy models are destroyed as a result of those attacks, select one of those destroyed models; that destroyed model’s unit must take a Battle-shock test.",
+    "full": "Your Shooting phase. One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to shoot this phase. Until the end of the phase, each time a model in your unit makes a ranged attack that targets an enemy unit that is more than 12\" away, improve the Ballistic Skill and Armour Penetration characteristics of that attack by 1. If one or more enemy models are destroyed as a result of those attacks, select one of those destroyed models; that destroyed model’s unit must take a Battle-shock test.",
+    "glossary": "glossary-space-marines-stratagem-strike-from-the-shadows-2",
+    "rule": "detachment-vanguard-spearhead"
+  },
+  "space-marines-stratagem-calculated-feint": {
+    "id": "space-marines-stratagem-calculated-feint",
+    "title": "CALCULATED FEINT",
+    "summary": "Your opponent’s Charge phase, just after an enemy unit declares a charge. One friendly ADEPTUS ASTARTES INFANTRY unit within 12\" of that enemy unit. Your unit can make a Normal move of up to D6\", or up to 6\" instead if it is a PHOBOS or SCOUT SQUAD unit. RESTRICTION: You cannot select a unit that is within Engagement Range of one or more enemy units.",
+    "full": "Your opponent’s Charge phase, just after an enemy unit declares a charge. One friendly ADEPTUS ASTARTES INFANTRY unit within 12\" of that enemy unit. Your unit can make a Normal move of up to D6\", or up to 6\" instead if it is a PHOBOS or SCOUT SQUAD unit. RESTRICTION: You cannot select a unit that is within Engagement Range of one or more enemy units.",
+    "glossary": "glossary-space-marines-stratagem-calculated-feint",
+    "rule": "detachment-vanguard-spearhead"
+  },
+  "space-marines-stratagem-guerrilla-tactics": {
+    "id": "space-marines-stratagem-guerrilla-tactics",
+    "title": "GUERRILLA TACTICS",
+    "summary": "End of your opponent’s Fight phase. Up to two PHOBOS and/or SCOUT SQUAD units from your army, or one other ADEPTUS ASTARTES INFANTRY unit from your army. Remove those units from the battlefield and place them into Strategic Reserves. Each unit selected for this Stratagem must be more than 3\" away from all enemy models.",
+    "full": "End of your opponent’s Fight phase. Up to two PHOBOS and/or SCOUT SQUAD units from your army, or one other ADEPTUS ASTARTES INFANTRY unit from your army. Remove those units from the battlefield and place them into Strategic Reserves. Each unit selected for this Stratagem must be more than 3\" away from all enemy models.",
+    "glossary": "glossary-space-marines-stratagem-guerrilla-tactics",
+    "rule": "detachment-vanguard-spearhead"
+  },
+  "space-marines-detachment-rule-shadow-masters": {
+    "id": "space-marines-detachment-rule-shadow-masters",
+    "title": "SHADOW MASTERS",
+    "summary": "Each time a ranged attack targets an ADEPTUS ASTARTES unit from your army, unless the attacking model is within 12\", the target has the Benefit of Cover against that attack.",
+    "full": "Each time a ranged attack targets an ADEPTUS ASTARTES unit from your army, unless the attacking model is within 12\", the target has the Benefit of Cover against that attack.",
+    "glossary": "glossary-space-marines-detachment-rule-shadow-masters",
     "rule": "detachment-vanguard-spearhead"
   },
   "space-marines-enhancement-avenging-angel": {

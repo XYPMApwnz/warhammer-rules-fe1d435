@@ -617,18 +617,20 @@ def main() -> int:
     args = parser.parse_args()
     data, related = build()
     errors = validate(data, related)
+    existing_related = json.loads(RELATED.read_text(encoding="utf-8")) if RELATED.exists() else {"schema": 1, "faction": "Space Marines", "stratagems": {}}
+    combined_related = existing_related | {"schema": 1, "faction": "Space Marines", "sourceId": existing_related.get("sourceId", SOURCE_ID), "stratagems": existing_related.get("stratagems", {}) | related["stratagems"]}
     if args.check:
         if not OUTPUT.exists() or json.loads(OUTPUT.read_text(encoding="utf-8")) != data:
             errors.append("Faction Pack snapshot is stale")
-        if not RELATED.exists() or json.loads(RELATED.read_text(encoding="utf-8")) != related:
-            errors.append("related-rules snapshot is stale")
+        if not RELATED.exists() or any(existing_related.get("stratagems", {}).get(key) != value for key, value in related["stratagems"].items()):
+            errors.append("Faction Pack related-rules records are stale")
     if errors:
         print("\n".join(errors))
         return 1
     if not args.check:
         OUTPUT.parent.mkdir(parents=True, exist_ok=True)
         OUTPUT.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        RELATED.write_text(json.dumps(related, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        RELATED.write_text(json.dumps(combined_related, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         print(f"Wrote {OUTPUT.name} and {RELATED.name}")
     else:
         print("Space Marines Faction Pack source layer is current")

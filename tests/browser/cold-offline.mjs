@@ -53,7 +53,7 @@ const books=[
   {name:"T'au Empire",unit:'unit-breacher-team',desktop:'/books/tau-empire/reader.html#unit-breacher-team',phone:'/books/tau-empire/mobile/breacher-team.html'},
   {name:"Emperor's Children",unit:'unit-shalaxi-helbane',desktop:'/books/emperors-children/reader.html#unit-shalaxi-helbane',phone:'/books/emperors-children/mobile/shalaxi-helbane.html'},
   {name:"Emperor's Children Daemonettes",unit:'unit-daemonettes',desktop:'/books/emperors-children/reader.html#unit-daemonettes',phone:'/books/emperors-children/mobile/daemonettes.html'},
-  {name:'Space Marines',unit:'unit-assault-intercessor-squad',desktop:'/books/space-marines/reader.html#unit-assault-intercessor-squad',phone:'/books/space-marines/mobile/assault-intercessor-squad.html',related:false}
+  {name:'Space Marines',unit:'unit-intercessor-squad',desktop:'/books/space-marines/reader.html#unit-intercessor-squad',phone:'/books/space-marines/mobile/intercessor-squad.html'}
 ];
 
 async function openPhonePopup(page,name){
@@ -80,6 +80,7 @@ try{
       const unit=page.locator(`#${book.unit}`);
       await unit.waitFor({state:'visible'});
       assert.ok((await unit.textContent()).trim().length>100,`${book.name} datasheet content is missing`);
+      if(book.name==='Space Marines'){assert.match(await unit.textContent(),/Every model is equipped with:/);assert.match(await unit.textContent(),/Wargear Options/);}
 
       if(book.related!==false){
         const related=unit.locator('.related-rules-trigger').first();
@@ -100,6 +101,7 @@ try{
       const phoneUnit=page.locator(`#${book.unit}, main .unit-card`).first();
       await phoneUnit.waitFor({state:'visible'});
       assert.ok((await phoneUnit.textContent()).trim().length>100,`${book.name} Phone content is missing`);
+      if(book.name==='Space Marines'){assert.ok(await page.locator('#relatedRules').count(),'Space Marines Phone Datasheet Tools are missing');assert.match(await phoneUnit.textContent(),/Wargear Options/);}
       await openPhonePopup(page,book.name);
       assert.deepEqual(errors,[],`${book.name} emitted an uncaught runtime error`);
     }

@@ -68,6 +68,24 @@
       ]
     },
     {
+      "id": "codex-detail-parity",
+      "authority": "secondary",
+      "role": "codex-datasheet-and-detachment-detail",
+      "title": "Wahapedia Warhammer 40,000 11th Edition · Space Marines",
+      "retrievedAt": "2026-08-09",
+      "frozenAt": "2026-08-09",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
+      "localFiles": [
+        "../content/space-marines-codex-wargear.en.json",
+        "../content/space-marines-current-overlay.en.json",
+        "wahapedia-compatible-rules.snapshot.json"
+      ],
+      "coverage": "Exact composition and Wargear Options for 101 local Datasheets; full parity for 7 base Codex Detachments; source-defined Compatible Rules inputs",
+      "knownGaps": [
+        "This is secondary parity evidence and does not replace an authoritative official Codex source."
+      ]
+    },
+    {
       "id": "vengeful-hosts-current",
       "authority": "mixed",
       "role": "current-detachment-overlay",

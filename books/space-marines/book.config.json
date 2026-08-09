@@ -9,6 +9,9 @@
   "entryCoverImage": "assets/space-marines-cover-480.webp",
   "dedicatedMobile": true,
   "sharedArmyBookApp": true,
+  "compatibleRulesMatrix": true,
+  "includeCoreStratagems": true,
+  "legacyRelatedRuleAttributes": false,
   "armyRules": [
     "Oath of Moment"
   ],
@@ -42,7 +45,7 @@
     "Twin-linked"
   ],
   "assetVersions": {
-    "app": 4,
+    "app": 5,
     "book": 3,
     "tokens": 3
   },
@@ -57,6 +60,7 @@
     "factionPack": "content/space-marines-faction-pack.en.json",
     "codexDatasheets": "content/space-marines-codex-datasheets.en.json",
     "codexParity": "content/space-marines-current-overlay.en.json",
+    "codexWargear": "content/space-marines-codex-wargear.en.json",
     "relatedRules": "content/space-marines-related-rules.en.json",
     "manifest": "sources/source-manifest.json"
   }

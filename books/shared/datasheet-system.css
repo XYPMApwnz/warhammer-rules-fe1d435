@@ -668,3 +668,24 @@ button.popup-ability-chip:focus-visible { border-color: var(--pink); color: var(
 @container (max-width:760px){.unit-card.ds-layout .points.ds-cost:has(.ds-cost-cell:only-child){width:min(100%,310px);justify-self:start}.unit-card .weapon-tags,.unit-card .weapon-row small,.unit-card.ds-layout .ds-identity span{font-size:10px}}
 @media (hover:none){.unit-card button:active,.unit-card a:active{filter:brightness(1.16)}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+
+/* Structured costs and compact shared abilities. */
+.unit-card.ds-layout .ds-cost-grid{grid-template-columns:repeat(auto-fit,minmax(min(135px,100%),1fr))}
+.unit-card.ds-layout .ds-cost-cell{min-width:0;box-sizing:border-box}
+.unit-card.ds-layout .ds-cost-cell small{overflow-wrap:normal}
+.unit-card.ds-layout .ds-cost-cell strong{white-space:nowrap}
+.unit-card .shared-ability-group{margin:0}
+.unit-card .shared-ability-group>h5{margin:0 0 7px;color:var(--muted);font:800 10px/1 var(--ds-data);letter-spacing:.1em;text-transform:uppercase}
+.unit-card .shared-abilities{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 13px}
+.unit-card .shared-abilities .term-button,
+.unit-card .ability[id$="-ability-core"] p .term-button,
+.unit-card .ability[id$="-ability-faction"] p .term-button{display:inline-flex;align-items:center;max-width:100%;padding:6px 9px;border:1px solid color-mix(in srgb,var(--green) 30%,var(--line));border-radius:2px;background:color-mix(in srgb,var(--green) 7%,transparent);color:var(--ink);font:750 11px/1.2 var(--ds-data);letter-spacing:.035em;text-align:left;text-decoration:none;overflow-wrap:anywhere}
+.unit-card .shared-abilities .term-button:hover,
+.unit-card .ability[id$="-ability-core"] p .term-button:hover,
+.unit-card .ability[id$="-ability-faction"] p .term-button:hover{border-color:color-mix(in srgb,var(--green) 60%,var(--line));background:color-mix(in srgb,var(--green) 13%,transparent)}
+.unit-card .shared-abilities+.ability-list{margin-top:2px}
+.unit-card .ability{width:100%;box-sizing:border-box}
+.unit-card .ability h5,.unit-card .ability h5 .term-button{max-width:100%;text-align:left;overflow-wrap:anywhere}
+.unit-card .ability h5 .term-button{display:block;width:100%}
+.unit-card .ability[id$="-ability-core"],.unit-card .ability[id$="-ability-faction"]{padding:11px 12px;background:color-mix(in srgb,var(--green) 3%,transparent)}
+@media(max-width:390px){.unit-card.ds-layout .ds-cost-grid{grid-template-columns:repeat(auto-fit,minmax(min(130px,100%),1fr))}.unit-card.ds-layout .ds-cost-cell{padding:11px 10px}.unit-card.ds-layout .ds-cost-cell strong{font-size:22px}.unit-card .shared-abilities{gap:6px}.unit-card .shared-abilities .term-button{padding:6px 8px}}

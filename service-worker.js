@@ -1,4 +1,4 @@
-﻿importScripts("./glossary/generated/cache-revision.js");
+importScripts("./glossary/generated/cache-revision.js");
 const CACHE_PREFIX = "warhammer-rules-fe1d435-";
 const CACHE_NAME = `${CACHE_PREFIX}${self.WH40K_CACHE_REVISION || "fallback"}`;
 const APP_SHELL_BATCH_SIZE = 4;
@@ -83,7 +83,7 @@ const APP_SHELL = [
   "./books/shared/navigation-targets.js?v=1",
   "./books/shared/popup-rule-actions.js?v=1",
   "./books/shared/datasheet-layout.js?v=3",
-  "./books/shared/datasheet-system.css?v=7",
+  "./books/shared/datasheet-system.css?v=8",
   "./books/shared/popup-content.js?v=3",
   "./books/shared/glossary-autolink.js?v=8",
   "./books/shared/rule-facts.js?v=4",

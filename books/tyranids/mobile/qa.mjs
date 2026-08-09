@@ -4,7 +4,7 @@ import {readdir,readFile,stat} from 'node:fs/promises';
 const root=new URL('./',import.meta.url);
 const files=(await readdir(root)).filter(name=>name.endsWith('.html'));
 const runtime=await readFile(new URL('mobile.js',root),'utf8');
-assert.equal(files.length,63,'Phone Mode must contain start, updates, army rules, 10 detachments and 50 datasheets');
+assert.equal(files.length,62,'Phone Mode must contain start, updates, army rules, 10 detachments and 49 datasheets');
 for(const file of files){
   const html=await readFile(new URL(file,root),'utf8');
   assert.match(html,/\.\/mobile\.js\?v=\d+/);

@@ -10,7 +10,7 @@
     "INSANE BRAVERY",
     "VYING FOR VICTORY"
   ],
-  "retrievedAt": "2026-08-08",
+  "retrievedAt": "2026-08-09",
   "schema": "emperors-children-compatible-rules-import-report/v1",
   "source": {
     "authority": "secondary",
@@ -21,8 +21,8 @@
   },
   "summary": {
     "associations": {
-      "core": 128,
-      "faction": 521
+      "core": 162,
+      "faction": 540
     },
     "boardingActionNamesIgnored": 9,
     "coreStratagems": {
@@ -30,12 +30,12 @@
       "observed": 10
     },
     "datasheets": {
-      "canonical": 18,
-      "imported": 18
+      "canonical": 23,
+      "imported": 23
     },
     "factionStratagems": {
       "canonical": 51,
-      "observed": 49
+      "observed": 51
     },
     "unexplainedUnknowns": 0,
     "unresolved": 0

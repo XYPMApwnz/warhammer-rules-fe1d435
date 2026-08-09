@@ -101,7 +101,8 @@ book.sections=book.sections.filter(section=>section.id!==legends.group.id&&!sect
 const pactIndex=book.sections.findIndex(section=>section.id==='pact-of-decay-datasheets');
 if(pactIndex<0)throw new Error('Missing Pact of Decay group');
 if(legends.units.length)book.sections.splice(pactIndex,0,{...legends.group,kind:'unit-group',blocks:[{type:'p',text:legends.group.description}],subsections:[]},...legends.units.map(sectionUnit));
-const pactUnits=book.sections.filter(section=>section.id==='pact-of-decay-datasheets'||['unit-beasts-of-nurgle','unit-great-unclean-one','unit-nurglings','unit-plague-drones','unit-plaguebearers','unit-rotigus'].includes(section.id));
+const dependencyIds=['unit-beasts-of-nurgle','unit-great-unclean-one','unit-nurglings','unit-plague-drones','unit-plaguebearers','unit-rotigus'];
+const pactUnits=book.sections.filter(section=>section.id==='pact-of-decay-datasheets'||dependencyIds.includes(section.id));
 pactUnits.forEach((section,index)=>{section.number=index?`4.10.${index}`:'4.10';});
 book.glossary=book.glossary.filter(term=>!term.legends);
 const existingGlossaryIds=new Set(book.glossary.map(term=>term.id));
@@ -113,7 +114,7 @@ for(const keyword of new Set(legends.units.flatMap(unit=>unit.keywords).filter(v
   const summary=existingRuntime[id]?.summary||`${keyword} keyword.`;
   book.glossary.push({id,title:keyword,group:'Keywords',kind:'keyword',showGlossary:false,short:summary,full:summary});
 }
-book.audit.datasheets=book.sections.filter(section=>section.kind==='unit'&&section.local!==false).length;
+book.audit.datasheets=book.sections.filter(section=>section.kind==='unit').length;
 book.audit.glossary=book.glossary.length;
 writeJson(bookFile,book);
 
@@ -173,7 +174,7 @@ function replaceOrInsert(html,tag,id,beforeId,replacement){
 }
 const nav=legends.units.length?`<li data-nav-id="${legends.group.id}" data-nav-depth="2"><div class="toc-row"><button class="toc-label" data-nav-target="${legends.group.id}">${legends.group.title}</button><button class="toc-toggle" data-nav-toggle aria-label="Toggle ${legends.group.title}" aria-expanded="false"></button></div><ul class="toc-branch" hidden>${legends.units.map(unit=>`<li data-nav-id="${unit.id}" data-nav-depth="3"><div class="toc-row no-toggle"><button class="toc-label" data-nav-target="${unit.id}">${escapeHtml(unit.title)}</button></div></li>`).join('')}</ul></li>`:'';
 const content=legends.units.length?`<section class="content-group" id="${legends.group.id}" data-track="${legends.group.id}"><h3 class="category-title">${legends.group.title}</h3><div class="content-block"><p>${escapeHtml(legends.group.description)}</p></div>${legends.units.map(renderUnit).join('\n')}</section>`:'';
-const unitSections=book.sections.filter(section=>section.kind==='unit'&&section.local!==false);
+const unitSections=book.sections.filter(section=>section.kind==='unit');
 const keywordsOf=unit=>{
   const text=(unit.subsections||[]).find(section=>section.title==='Keywords')?.blocks?.map(block=>block.text||'').join(' ')||'';
   const intrinsic=(text.match(/Keywords:\s*(.*?)\.\s*Faction Keywords:/i)?.[1]||'').split(/[,;]/).map(value=>value.trim()).filter(Boolean);
@@ -203,9 +204,7 @@ reader=reader.replace(/\sdata-eligibility="[^"]*"/g,'');
 reader=replaceOrInsert(reader,'li',legends.group.id,'pact-of-decay-datasheets',nav);
 reader=replaceOrInsert(reader,'section',legends.group.id,'pact-of-decay-datasheets',content);
 reader=replaceOrInsert(reader,'section','core-stratagems','detachments',renderCoreStratagemSection());
-const dependencyIds=['unit-beasts-of-nurgle','unit-great-unclean-one','unit-nurglings','unit-plague-drones','unit-plaguebearers','unit-rotigus'];
-for(const id of dependencyIds)for(const tag of ['li','article']){const range=elementRange(reader,tag,id);if(range)reader=reader.slice(0,range[0])+reader.slice(range[1]);}
-for(const tag of ['li','section']){const range=elementRange(reader,tag,'pact-of-decay-datasheets');if(range)reader=reader.slice(0,range[0])+reader.slice(range[1]);}
+reader=reader.replace(/9 detachments · \d+ datasheets · 366 glossary entries/,`9 detachments · ${unitSections.length} datasheets · 366 glossary entries`);
 const moveWargearAbility=(unitSlug,abilityId)=>{
   const abilityRange=elementRange(reader,'article',abilityId);if(!abilityRange)throw new Error(`Missing ${abilityId}`);
   const ability=reader.slice(abilityRange[0],abilityRange[1]);

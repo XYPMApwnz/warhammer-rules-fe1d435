@@ -40,18 +40,6 @@
         "Leader"
       ]
     },
-    "Hyperadapted Raveners": {
-      "sourceLayer": "faction-pack",
-      "addKeywords": [
-        "Synapse"
-      ],
-      "removeKeywords": [
-        "Leader"
-      ],
-      "removeAbilities": [
-        "Sustained Hits"
-      ]
-    },
     "Lictor": {
       "removeAbilities": [
         "Deep Strike"
@@ -251,7 +239,8 @@
       "Hierophant",
       "Malanthrope",
       "Scythed Hierodule",
-      "Sky-slasher Swarms"
+      "Sky-slasher Swarms",
+      "Hyperadapted Raveners"
     ],
     "excludeNamePatterns": [
       "\\[Crucible\\]$",

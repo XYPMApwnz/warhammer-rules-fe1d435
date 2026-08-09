@@ -230,7 +230,6 @@
           "unit-termagants",
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -446,7 +445,6 @@
         "units": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -550,66 +548,6 @@
         "units": [
           "unit-hive-tyrant",
           "unit-winged-hive-tyrant"
-        ]
-      }
-    },
-    "tyranids-ability-alpha-invader": {
-      "termId": "tyranids-ability-alpha-invader",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-alpha-invader",
-        "rule": "unit-hyperadapted-raveners",
-        "datasheet": "unit-hyperadapted-raveners",
-        "statline": "hyperadapted-raveners-profile",
-        "units": [
-          "unit-hyperadapted-raveners"
-        ]
-      }
-    },
-    "tyranids-ability-hypersensory-array": {
-      "termId": "tyranids-ability-hypersensory-array",
-      "navigation": {
-        "glossary": "glossary-tyranids-ability-hypersensory-array",
-        "rule": "unit-hyperadapted-raveners",
-        "datasheet": "unit-hyperadapted-raveners",
-        "statline": "hyperadapted-raveners-profile",
-        "units": [
-          "unit-hyperadapted-raveners"
-        ]
-      }
-    },
-    "tyranids-weapon-prime-claws-and-talons": {
-      "termId": "tyranids-weapon-prime-claws-and-talons",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-prime-claws-and-talons",
-        "rule": "unit-hyperadapted-raveners",
-        "datasheet": "unit-hyperadapted-raveners",
-        "statline": "hyperadapted-raveners-profile",
-        "units": [
-          "unit-hyperadapted-raveners"
-        ]
-      }
-    },
-    "tyranids-weapon-ravener-heavy-claws-and-talons": {
-      "termId": "tyranids-weapon-ravener-heavy-claws-and-talons",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-ravener-heavy-claws-and-talons",
-        "rule": "unit-hyperadapted-raveners",
-        "datasheet": "unit-hyperadapted-raveners",
-        "statline": "hyperadapted-raveners-profile",
-        "units": [
-          "unit-hyperadapted-raveners"
-        ]
-      }
-    },
-    "tyranids-weapon-venom-bolt": {
-      "termId": "tyranids-weapon-venom-bolt",
-      "navigation": {
-        "glossary": "glossary-tyranids-weapon-venom-bolt",
-        "rule": "unit-hyperadapted-raveners",
-        "datasheet": "unit-hyperadapted-raveners",
-        "statline": "hyperadapted-raveners-profile",
-        "units": [
-          "unit-hyperadapted-raveners"
         ]
       }
     },

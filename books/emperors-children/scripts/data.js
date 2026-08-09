@@ -231,6 +231,61 @@ window.DG_TERMS={
     "glossary": "glossary-emperors-children-stratagem-catalytic-stimulus",
     "rule": "detachment-court-of-the-phoenician"
   },
+  "emperors-children-ability-horrifying-beauty": {
+    "id": "emperors-children-ability-horrifying-beauty",
+    "title": "Horrifying Beauty",
+    "summary": "At the start of the Fight phase, each enemy unit in Engagement Range of one or more units from your army with this ability must take a Battle-shock test, subtracting 1 from that test if that enemy unit is Below Half-strength.",
+    "full": "At the start of the Fight phase, each enemy unit in Engagement Range of one or more units from your army with this ability must take a Battle-shock test, subtracting 1 from that test if that enemy unit is Below Half-strength.",
+    "glossary": "glossary-emperors-children-ability-horrifying-beauty",
+    "rule": "unit-daemonettes",
+    "units": [
+      "unit-daemonettes"
+    ],
+    "datasheet": "unit-daemonettes",
+    "statline": "daemonettes-profile"
+  },
+  "emperors-children-ability-daemonic-icon": {
+    "id": "emperors-children-ability-daemonic-icon",
+    "title": "Daemonic Icon",
+    "summary": "Models in the bearer's unit have a Leadership characteristic of 6+.",
+    "full": "Models in the bearer's unit have a Leadership characteristic of 6+.",
+    "glossary": "glossary-emperors-children-ability-daemonic-icon",
+    "rule": "unit-daemonettes",
+    "units": [
+      "unit-daemonettes",
+      "unit-seekers"
+    ],
+    "datasheet": "unit-daemonettes",
+    "statline": "daemonettes-profile"
+  },
+  "emperors-children-ability-instrument-of-chaos": {
+    "id": "emperors-children-ability-instrument-of-chaos",
+    "title": "Instrument of Chaos",
+    "summary": "Add 1 to Charge rolls made for the bearer's unit.",
+    "full": "Add 1 to Charge rolls made for the bearer's unit.",
+    "glossary": "glossary-emperors-children-ability-instrument-of-chaos",
+    "rule": "unit-daemonettes",
+    "units": [
+      "unit-daemonettes",
+      "unit-seekers"
+    ],
+    "datasheet": "unit-daemonettes",
+    "statline": "daemonettes-profile"
+  },
+  "emperors-children-weapon-slashing-claws": {
+    "id": "emperors-children-weapon-slashing-claws",
+    "title": "Slashing claws",
+    "summary": "Melee · Melee · A 3 · WS 3+ · S 4 · AP -1 · D 1 · Devastating Wounds",
+    "full": "Melee · Melee · A 3 · WS 3+ · S 4 · AP -1 · D 1 · Devastating Wounds",
+    "glossary": "glossary-emperors-children-weapon-slashing-claws",
+    "rule": "unit-daemonettes",
+    "units": [
+      "unit-daemonettes",
+      "unit-seekers"
+    ],
+    "datasheet": "unit-daemonettes",
+    "statline": "daemonettes-profile"
+  },
   "emperors-children-ability-excessive-assault": {
     "id": "emperors-children-ability-excessive-assault",
     "title": "Excessive Assault",
@@ -563,6 +618,139 @@ window.DG_TERMS={
     "datasheet": "unit-daemon-prince-of-slaanesh-with-wings",
     "statline": "daemon-prince-of-slaanesh-with-wings-profile"
   },
+  "emperors-children-ability-daemon-lord-of-slaanesh-aura": {
+    "id": "emperors-children-ability-daemon-lord-of-slaanesh-aura",
+    "title": "Daemon Lord of Slaanesh (Aura)",
+    "summary": "While a friendly Legions of Excess unit is within 6\" of this model, improve the Armour Penetration of melee weapons in that unit by 1.",
+    "full": "While a friendly Legions of Excess unit is within 6\" of this model, improve the Armour Penetration of melee weapons in that unit by 1.",
+    "glossary": "glossary-emperors-children-ability-daemon-lord-of-slaanesh-aura",
+    "rule": "unit-keeper-of-secrets",
+    "units": [
+      "unit-keeper-of-secrets"
+    ],
+    "datasheet": "unit-keeper-of-secrets",
+    "statline": "keeper-of-secrets-profile"
+  },
+  "emperors-children-ability-mesmerising-form": {
+    "id": "emperors-children-ability-mesmerising-form",
+    "title": "Mesmerising Form",
+    "summary": "Each time an attack targets this model, subtract 1 from the Hit roll.",
+    "full": "Each time an attack targets this model, subtract 1 from the Hit roll.",
+    "glossary": "glossary-emperors-children-ability-mesmerising-form",
+    "rule": "unit-keeper-of-secrets",
+    "units": [
+      "unit-keeper-of-secrets"
+    ],
+    "datasheet": "unit-keeper-of-secrets",
+    "statline": "keeper-of-secrets-profile"
+  },
+  "emperors-children-ability-damaged-1-6-wounds-remaining": {
+    "id": "emperors-children-ability-damaged-1-6-wounds-remaining",
+    "title": "Damaged: 1-6 wounds remaining",
+    "summary": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "full": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "glossary": "glossary-emperors-children-ability-damaged-1-6-wounds-remaining",
+    "rule": "unit-keeper-of-secrets",
+    "units": [
+      "unit-keeper-of-secrets",
+      "unit-fulgrim",
+      "unit-defiler"
+    ],
+    "datasheet": "unit-keeper-of-secrets",
+    "statline": "keeper-of-secrets-profile"
+  },
+  "emperors-children-ability-shining-aegis": {
+    "id": "emperors-children-ability-shining-aegis",
+    "title": "Shining aegis",
+    "summary": "The bearer has a Save characteristic of 3+.",
+    "full": "The bearer has a Save characteristic of 3+.",
+    "glossary": "glossary-emperors-children-ability-shining-aegis",
+    "rule": "unit-keeper-of-secrets",
+    "units": [
+      "unit-keeper-of-secrets"
+    ],
+    "datasheet": "unit-keeper-of-secrets",
+    "statline": "keeper-of-secrets-profile"
+  },
+  "emperors-children-weapon-phantasmagoria-witchfire": {
+    "id": "emperors-children-weapon-phantasmagoria-witchfire",
+    "title": "➤ Phantasmagoria - witchfire",
+    "summary": "Ranged · 18\" · A 6 · BS 2+ · S 6 · AP -2 · D 1 · Devastating Wounds, Psychic",
+    "full": "Ranged · 18\" · A 6 · BS 2+ · S 6 · AP -2 · D 1 · Devastating Wounds, Psychic",
+    "glossary": "glossary-emperors-children-weapon-phantasmagoria-witchfire",
+    "rule": "unit-keeper-of-secrets",
+    "units": [
+      "unit-keeper-of-secrets"
+    ],
+    "datasheet": "unit-keeper-of-secrets",
+    "statline": "keeper-of-secrets-profile"
+  },
+  "emperors-children-weapon-phantasmagoria-focused-witchfire": {
+    "id": "emperors-children-weapon-phantasmagoria-focused-witchfire",
+    "title": "➤ Phantasmagoria - focused witchfire",
+    "summary": "Ranged · 18\" · A 9 · BS 2+ · S 6 · AP -2 · D 1 · Devastating Wounds, Hazardous, Psychic",
+    "full": "Ranged · 18\" · A 9 · BS 2+ · S 6 · AP -2 · D 1 · Devastating Wounds, Hazardous, Psychic",
+    "glossary": "glossary-emperors-children-weapon-phantasmagoria-focused-witchfire",
+    "rule": "unit-keeper-of-secrets",
+    "units": [
+      "unit-keeper-of-secrets"
+    ],
+    "datasheet": "unit-keeper-of-secrets",
+    "statline": "keeper-of-secrets-profile"
+  },
+  "emperors-children-weapon-snapping-claws": {
+    "id": "emperors-children-weapon-snapping-claws",
+    "title": "Snapping claws",
+    "summary": "Melee · Melee · A 4 · WS 2+ · S 6 · AP -2 · D 3 · Devastating Wounds, Extra Attacks",
+    "full": "Melee · Melee · A 4 · WS 2+ · S 6 · AP -2 · D 3 · Devastating Wounds, Extra Attacks",
+    "glossary": "glossary-emperors-children-weapon-snapping-claws",
+    "rule": "unit-keeper-of-secrets",
+    "units": [
+      "unit-keeper-of-secrets",
+      "unit-shalaxi-helbane"
+    ],
+    "datasheet": "unit-keeper-of-secrets",
+    "statline": "keeper-of-secrets-profile"
+  },
+  "emperors-children-weapon-witstealer-sword": {
+    "id": "emperors-children-weapon-witstealer-sword",
+    "title": "Witstealer sword",
+    "summary": "Melee · Melee · A 6 · WS 2+ · S 8 · AP -2 · D 3",
+    "full": "Melee · Melee · A 6 · WS 2+ · S 8 · AP -2 · D 3",
+    "glossary": "glossary-emperors-children-weapon-witstealer-sword",
+    "rule": "unit-keeper-of-secrets",
+    "units": [
+      "unit-keeper-of-secrets"
+    ],
+    "datasheet": "unit-keeper-of-secrets",
+    "statline": "keeper-of-secrets-profile"
+  },
+  "emperors-children-weapon-living-whip": {
+    "id": "emperors-children-weapon-living-whip",
+    "title": "Living whip",
+    "summary": "Ranged · 12\" · A 6 · BS 2+ · S 6 · AP -1 · D 2 · Assault",
+    "full": "Ranged · 12\" · A 6 · BS 2+ · S 6 · AP -1 · D 2 · Assault",
+    "glossary": "glossary-emperors-children-weapon-living-whip",
+    "rule": "unit-keeper-of-secrets",
+    "units": [
+      "unit-keeper-of-secrets"
+    ],
+    "datasheet": "unit-keeper-of-secrets",
+    "statline": "keeper-of-secrets-profile"
+  },
+  "emperors-children-weapon-ritual-knife": {
+    "id": "emperors-children-weapon-ritual-knife",
+    "title": "Ritual knife",
+    "summary": "Melee · Melee · A 3 · WS 2+ · S 6 · AP -2 · D 2 · Extra Attacks",
+    "full": "Melee · Melee · A 3 · WS 2+ · S 6 · AP -2 · D 2 · Extra Attacks",
+    "glossary": "glossary-emperors-children-weapon-ritual-knife",
+    "rule": "unit-keeper-of-secrets",
+    "units": [
+      "unit-keeper-of-secrets"
+    ],
+    "datasheet": "unit-keeper-of-secrets",
+    "statline": "keeper-of-secrets-profile"
+  },
   "emperors-children-ability-perfectionists": {
     "id": "emperors-children-ability-perfectionists",
     "title": "Perfectionists",
@@ -883,20 +1071,6 @@ window.DG_TERMS={
     "datasheet": "unit-fulgrim",
     "statline": "fulgrim-profile"
   },
-  "emperors-children-ability-damaged-1-6-wounds-remaining": {
-    "id": "emperors-children-ability-damaged-1-6-wounds-remaining",
-    "title": "Damaged: 1-6 Wounds Remaining",
-    "summary": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-emperors-children-ability-damaged-1-6-wounds-remaining",
-    "rule": "unit-fulgrim",
-    "units": [
-      "unit-fulgrim",
-      "unit-defiler"
-    ],
-    "datasheet": "unit-fulgrim",
-    "statline": "fulgrim-profile"
-  },
   "emperors-children-ability-supreme-commander": {
     "id": "emperors-children-ability-supreme-commander",
     "title": "Supreme Commander",
@@ -1026,6 +1200,97 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-lucius-the-eternal",
     "statline": "lucius-the-eternal-profile"
+  },
+  "emperors-children-ability-no-prey-can-evade": {
+    "id": "emperors-children-ability-no-prey-can-evade",
+    "title": "No Prey Can Evade",
+    "summary": "You can re-roll Advance and Charge rolls made for this model.",
+    "full": "You can re-roll Advance and Charge rolls made for this model.",
+    "glossary": "glossary-emperors-children-ability-no-prey-can-evade",
+    "rule": "unit-shalaxi-helbane",
+    "units": [
+      "unit-shalaxi-helbane"
+    ],
+    "datasheet": "unit-shalaxi-helbane",
+    "statline": "shalaxi-helbane-profile"
+  },
+  "emperors-children-ability-monarch-of-the-hunt": {
+    "id": "emperors-children-ability-monarch-of-the-hunt",
+    "title": "Monarch of the Hunt",
+    "summary": "At the start of the first battle round, select one enemy unit to be this model's quarry. Each time this model makes a melee attack that targets its quarry, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model's quarry is destroyed, select one new enemy unit to be this model's quarry.",
+    "full": "At the start of the first battle round, select one enemy unit to be this model's quarry. Each time this model makes a melee attack that targets its quarry, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model's quarry is destroyed, select one new enemy unit to be this model's quarry.",
+    "glossary": "glossary-emperors-children-ability-monarch-of-the-hunt",
+    "rule": "unit-shalaxi-helbane",
+    "units": [
+      "unit-shalaxi-helbane"
+    ],
+    "datasheet": "unit-shalaxi-helbane",
+    "statline": "shalaxi-helbane-profile"
+  },
+  "emperors-children-ability-damaged-1-7-wounds-remaining": {
+    "id": "emperors-children-ability-damaged-1-7-wounds-remaining",
+    "title": "Damaged: 1-7 wounds remaining",
+    "summary": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "full": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+    "glossary": "glossary-emperors-children-ability-damaged-1-7-wounds-remaining",
+    "rule": "unit-shalaxi-helbane",
+    "units": [
+      "unit-shalaxi-helbane"
+    ],
+    "datasheet": "unit-shalaxi-helbane",
+    "statline": "shalaxi-helbane-profile"
+  },
+  "emperors-children-weapon-lash-of-slaanesh": {
+    "id": "emperors-children-weapon-lash-of-slaanesh",
+    "title": "Lash of Slaanesh",
+    "summary": "Ranged · 12\" · A 6 · BS 2+ · S 6 · AP -1 · D 2 · Assault",
+    "full": "Ranged · 12\" · A 6 · BS 2+ · S 6 · AP -1 · D 2 · Assault",
+    "glossary": "glossary-emperors-children-weapon-lash-of-slaanesh",
+    "rule": "unit-shalaxi-helbane",
+    "units": [
+      "unit-shalaxi-helbane"
+    ],
+    "datasheet": "unit-shalaxi-helbane",
+    "statline": "shalaxi-helbane-profile"
+  },
+  "emperors-children-weapon-pavane-of-slaanesh-witchfire": {
+    "id": "emperors-children-weapon-pavane-of-slaanesh-witchfire",
+    "title": "➤ Pavane of Slaanesh - witchfire",
+    "summary": "Ranged · 18\" · A D6 · BS 2+ · S 9 · AP -1 · D D3 · Devastating Wounds, Psychic",
+    "full": "Ranged · 18\" · A D6 · BS 2+ · S 9 · AP -1 · D D3 · Devastating Wounds, Psychic",
+    "glossary": "glossary-emperors-children-weapon-pavane-of-slaanesh-witchfire",
+    "rule": "unit-shalaxi-helbane",
+    "units": [
+      "unit-shalaxi-helbane"
+    ],
+    "datasheet": "unit-shalaxi-helbane",
+    "statline": "shalaxi-helbane-profile"
+  },
+  "emperors-children-weapon-pavane-of-slaanesh-focused-witchfire": {
+    "id": "emperors-children-weapon-pavane-of-slaanesh-focused-witchfire",
+    "title": "➤ Pavane of Slaanesh - focused witchfire",
+    "summary": "Ranged · 18\" · A D6 · BS 2+ · S 9 · AP -2 · D D3 · Hazardous, Devastating Wounds, Psychic, Sustained Hits 3",
+    "full": "Ranged · 18\" · A D6 · BS 2+ · S 9 · AP -2 · D D3 · Hazardous, Devastating Wounds, Psychic, Sustained Hits 3",
+    "glossary": "glossary-emperors-children-weapon-pavane-of-slaanesh-focused-witchfire",
+    "rule": "unit-shalaxi-helbane",
+    "units": [
+      "unit-shalaxi-helbane"
+    ],
+    "datasheet": "unit-shalaxi-helbane",
+    "statline": "shalaxi-helbane-profile"
+  },
+  "emperors-children-weapon-soulpiercer": {
+    "id": "emperors-children-weapon-soulpiercer",
+    "title": "Soulpiercer",
+    "summary": "Melee · Melee · A 6 · WS 2+ · S 12 · AP -3 · D D6+2 · Precision",
+    "full": "Melee · Melee · A 6 · WS 2+ · S 12 · AP -3 · D D6+2 · Precision",
+    "glossary": "glossary-emperors-children-weapon-soulpiercer",
+    "rule": "unit-shalaxi-helbane",
+    "units": [
+      "unit-shalaxi-helbane"
+    ],
+    "datasheet": "unit-shalaxi-helbane",
+    "statline": "shalaxi-helbane-profile"
   },
   "emperors-children-ability-lethal-obsession": {
     "id": "emperors-children-ability-lethal-obsession",
@@ -1469,6 +1734,32 @@ window.DG_TERMS={
     "datasheet": "unit-defiler",
     "statline": "defiler-profile"
   },
+  "emperors-children-ability-soporific-musk": {
+    "id": "emperors-children-ability-soporific-musk",
+    "title": "Soporific Musk",
+    "summary": "Each time an enemy unit (excluding Monsters and Vehicles ) within Engagement Range of one or more units from your army with this ability Falls Back, models in that unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests.",
+    "full": "Each time an enemy unit (excluding Monsters and Vehicles ) within Engagement Range of one or more units from your army with this ability Falls Back, models in that unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests.",
+    "glossary": "glossary-emperors-children-ability-soporific-musk",
+    "rule": "unit-fiends",
+    "units": [
+      "unit-fiends"
+    ],
+    "datasheet": "unit-fiends",
+    "statline": "fiends-profile"
+  },
+  "emperors-children-weapon-barbed-tail-and-dissecting-claws": {
+    "id": "emperors-children-weapon-barbed-tail-and-dissecting-claws",
+    "title": "Barbed tail and dissecting claws",
+    "summary": "Melee · Melee · A 5 · WS 3+ · S 5 · AP -2 · D 2 · Devastating Wounds",
+    "full": "Melee · Melee · A 5 · WS 3+ · S 5 · AP -2 · D 2 · Devastating Wounds",
+    "glossary": "glossary-emperors-children-weapon-barbed-tail-and-dissecting-claws",
+    "rule": "unit-fiends",
+    "units": [
+      "unit-fiends"
+    ],
+    "datasheet": "unit-fiends",
+    "statline": "fiends-profile"
+  },
   "emperors-children-ability-airborne-predator": {
     "id": "emperors-children-ability-airborne-predator",
     "title": "Airborne Predator",
@@ -1572,6 +1863,32 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-maulerfiend",
     "statline": "maulerfiend-profile"
+  },
+  "emperors-children-ability-unholy-speed": {
+    "id": "emperors-children-ability-unholy-speed",
+    "title": "Unholy Speed",
+    "summary": "You can re-roll Advance and Charge rolls made for this unit.",
+    "full": "You can re-roll Advance and Charge rolls made for this unit.",
+    "glossary": "glossary-emperors-children-ability-unholy-speed",
+    "rule": "unit-seekers",
+    "units": [
+      "unit-seekers"
+    ],
+    "datasheet": "unit-seekers",
+    "statline": "seekers-profile"
+  },
+  "emperors-children-weapon-lashing-tongues": {
+    "id": "emperors-children-weapon-lashing-tongues",
+    "title": "Lashing tongues",
+    "summary": "Melee · Melee · A 2 · WS 4+ · S 4 · AP 0 · D 1 · Extra Attacks, Lethal Hits",
+    "full": "Melee · Melee · A 2 · WS 4+ · S 4 · AP 0 · D 1 · Extra Attacks, Lethal Hits",
+    "glossary": "glossary-emperors-children-weapon-lashing-tongues",
+    "rule": "unit-seekers",
+    "units": [
+      "unit-seekers"
+    ],
+    "datasheet": "unit-seekers",
+    "statline": "seekers-profile"
   },
   "emperors-children-enhancement-empyric-suffusion": {
     "id": "emperors-children-enhancement-empyric-suffusion",

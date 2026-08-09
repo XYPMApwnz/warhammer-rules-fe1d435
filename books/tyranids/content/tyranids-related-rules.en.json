@@ -1107,7 +1107,6 @@
           "unitIds": [
             "unit-broodlord",
             "unit-hive-tyrant",
-            "unit-hyperadapted-raveners",
             "unit-neurotyrant",
             "unit-parasite-of-mortrex",
             "unit-tervigon",
@@ -1135,7 +1134,6 @@
           "unitIds": [
             "unit-broodlord",
             "unit-hive-tyrant",
-            "unit-hyperadapted-raveners",
             "unit-neurotyrant",
             "unit-parasite-of-mortrex",
             "unit-tervigon",
@@ -1163,7 +1161,6 @@
           "unitIds": [
             "unit-broodlord",
             "unit-hive-tyrant",
-            "unit-hyperadapted-raveners",
             "unit-neurotyrant",
             "unit-parasite-of-mortrex",
             "unit-tervigon",
@@ -1190,7 +1187,6 @@
         "selector": {
           "unitIds": [
             "unit-broodlord",
-            "unit-hyperadapted-raveners",
             "unit-parasite-of-mortrex",
             "unit-tyranid-prime-with-lash-whip",
             "unit-winged-tyranid-prime"
@@ -1307,7 +1303,6 @@
           "unitIds": [
             "unit-broodlord",
             "unit-hive-tyrant",
-            "unit-hyperadapted-raveners",
             "unit-neurotyrant",
             "unit-parasite-of-mortrex",
             "unit-tervigon",
@@ -1335,7 +1330,6 @@
           "unitIds": [
             "unit-broodlord",
             "unit-hive-tyrant",
-            "unit-hyperadapted-raveners",
             "unit-neurotyrant",
             "unit-parasite-of-mortrex",
             "unit-tervigon",
@@ -1363,7 +1357,6 @@
           "unitIds": [
             "unit-broodlord",
             "unit-hive-tyrant",
-            "unit-hyperadapted-raveners",
             "unit-neurotyrant",
             "unit-parasite-of-mortrex",
             "unit-tervigon",
@@ -1391,7 +1384,6 @@
           "unitIds": [
             "unit-broodlord",
             "unit-hive-tyrant",
-            "unit-hyperadapted-raveners",
             "unit-neurotyrant",
             "unit-parasite-of-mortrex",
             "unit-tervigon",
@@ -1419,7 +1411,6 @@
           "unitIds": [
             "unit-broodlord",
             "unit-hive-tyrant",
-            "unit-hyperadapted-raveners",
             "unit-neurotyrant",
             "unit-parasite-of-mortrex",
             "unit-tervigon",
@@ -1451,7 +1442,6 @@
           "unitIds": [
             "unit-broodlord",
             "unit-hive-tyrant",
-            "unit-hyperadapted-raveners",
             "unit-neurotyrant",
             "unit-parasite-of-mortrex",
             "unit-tervigon",
@@ -1481,7 +1471,6 @@
         "subject": "model",
         "selector": {
           "unitIds": [
-            "unit-hyperadapted-raveners",
             "unit-parasite-of-mortrex",
             "unit-winged-hive-tyrant",
             "unit-winged-tyranid-prime",
@@ -1682,7 +1671,6 @@
           "unitIds": [
             "unit-broodlord",
             "unit-hive-tyrant",
-            "unit-hyperadapted-raveners",
             "unit-neurotyrant",
             "unit-parasite-of-mortrex",
             "unit-tervigon",
@@ -1710,7 +1698,6 @@
           "unitIds": [
             "unit-broodlord",
             "unit-hive-tyrant",
-            "unit-hyperadapted-raveners",
             "unit-neurotyrant",
             "unit-parasite-of-mortrex",
             "unit-tervigon",
@@ -1738,7 +1725,6 @@
           "unitIds": [
             "unit-broodlord",
             "unit-hive-tyrant",
-            "unit-hyperadapted-raveners",
             "unit-neurotyrant",
             "unit-parasite-of-mortrex",
             "unit-tervigon",
@@ -1766,7 +1752,6 @@
           "unitIds": [
             "unit-broodlord",
             "unit-hive-tyrant",
-            "unit-hyperadapted-raveners",
             "unit-neurotyrant",
             "unit-parasite-of-mortrex",
             "unit-tervigon",
@@ -1793,7 +1778,6 @@
         "selector": {
           "unitIds": [
             "unit-broodlord",
-            "unit-hyperadapted-raveners",
             "unit-parasite-of-mortrex",
             "unit-winged-hive-tyrant",
             "unit-winged-tyranid-prime"
@@ -1818,7 +1802,6 @@
           "unitIds": [
             "unit-broodlord",
             "unit-hive-tyrant",
-            "unit-hyperadapted-raveners",
             "unit-neurotyrant",
             "unit-parasite-of-mortrex",
             "unit-tervigon",
@@ -1846,7 +1829,6 @@
           "unitIds": [
             "unit-broodlord",
             "unit-hive-tyrant",
-            "unit-hyperadapted-raveners",
             "unit-neurotyrant",
             "unit-parasite-of-mortrex",
             "unit-tervigon",
@@ -1873,7 +1855,6 @@
         "selector": {
           "unitIds": [
             "unit-broodlord",
-            "unit-hyperadapted-raveners",
             "unit-parasite-of-mortrex",
             "unit-winged-hive-tyrant",
             "unit-winged-tyranid-prime"

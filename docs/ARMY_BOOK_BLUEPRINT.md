@@ -34,7 +34,8 @@ not mandatory architectural templates.**
 - Local Datasheets MUST belong to the book, Codex or Faction Pack. Legends, external
   or retired supplements, foreign-faction Datasheets and allied dependencies MUST
   NOT appear as local content merely because roster rules can use them or they share
-  a faction keyword.
+  a faction keyword. Explicit publication in the owning Codex or Faction Pack determines
+  local Datasheet ownership and takes precedence over faction/subfaction keywords or roster/dependency semantics.
 - Where source, New Recruit or BSData primary-category semantics are available,
   Datasheet grouping MUST preserve meaningful categories. `Other` is a fallback for
   absent or genuinely general classification, not a bucket for unrecognised types;

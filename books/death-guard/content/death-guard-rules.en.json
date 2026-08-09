@@ -7525,8 +7525,7 @@
           "number": ""
         }
       ],
-      "number": "4.10.1",
-      "local": false
+      "number": "4.10.1"
     },
     {
       "id": "unit-great-unclean-one",
@@ -7758,8 +7757,7 @@
           "number": ""
         }
       ],
-      "number": "4.10.2",
-      "local": false
+      "number": "4.10.2"
     },
     {
       "id": "unit-nurglings",
@@ -7881,8 +7879,7 @@
           "number": ""
         }
       ],
-      "number": "4.10.3",
-      "local": false
+      "number": "4.10.3"
     },
     {
       "id": "unit-plague-drones",
@@ -8061,8 +8058,7 @@
           "number": ""
         }
       ],
-      "number": "4.10.4",
-      "local": false
+      "number": "4.10.4"
     },
     {
       "id": "unit-plaguebearers",
@@ -8205,8 +8201,7 @@
           "number": ""
         }
       ],
-      "number": "4.10.5",
-      "local": false
+      "number": "4.10.5"
     },
     {
       "id": "unit-rotigus",
@@ -8366,8 +8361,7 @@
           "number": ""
         }
       ],
-      "number": "4.10.6",
-      "local": false
+      "number": "4.10.6"
     },
     {
       "id": "sources-and-version",
@@ -13854,7 +13848,7 @@
   ],
   "audit": {
     "detachments": 9,
-    "datasheets": 30,
+    "datasheets": 36,
     "currentFactionPack": "v1.0",
     "officialFactionPackDate": "2026-06-20",
     "currentMFM": "v1.1",

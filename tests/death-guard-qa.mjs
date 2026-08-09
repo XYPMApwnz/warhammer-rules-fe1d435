@@ -51,7 +51,7 @@ check('audited Faction Pack Stratagem wording stays official',
   ])&&
   ruleById('stratagem-nauseating-paroxysms')?.lines?.[0]==='WHEN: Start of the Fight phase'&&
   ruleById('stratagem-aggravus-spasms')?.lines?.[0]==='WHEN: Start of your Shooting Phase.');
-check('canonical content audit is 9 detachments, 30 local datasheets and 366 terms',bookData.audit.detachments===9&&bookData.audit.datasheets===30&&bookData.glossary.length===366);
+check('canonical content audit is 9 detachments, 36 local datasheets and 366 terms',bookData.audit.detachments===9&&bookData.audit.datasheets===36&&bookData.glossary.length===366);
 const plagueEntry=glossaryRegistry.terms['death-guard-plague'];
 check('Plague means the chosen Nurgle’s Gift effect',plagueEntry.summary.en.includes('selected during Declare Battle Formations')&&plagueEntry.definition.en.includes('Skullsquirm Blight, Rattlejoint Ague or Scabrous Soulrot')&&plagueEntry.related.length===5);
 const plagueCards=['skullsquirm-blight','rattlejoint-ague','scabrous-soulrot'].map(id=>{
@@ -70,15 +70,15 @@ check('Mortarion uses the current Faction Pack wording',
 check('Miasmic Malignifier uses the canonical Deployment ability name',
   html.includes('<h5>Deployment</h5>')&&!html.includes('<h5>Fortification Setup</h5>'));
 const pactDependencyIds=['unit-beasts-of-nurgle','unit-great-unclean-one','unit-nurglings','unit-plague-drones','unit-plaguebearers','unit-rotigus'];
-check('Pact of Decay dependencies retain their Tallyband Summoners context without becoming local datasheets',pactDependencyIds.every(id=>{const unit=bookData.sections.find(section=>section.id===id);return unit?.local===false&&JSON.stringify(unit).includes('Tallyband Summoners Detachment')&&!html.includes(`id="${id}"`);}));
+check('Pact of Decay publications remain local datasheets with their Tallyband Summoners context',pactDependencyIds.every(id=>{const unit=bookData.sections.find(section=>section.id===id);return unit&&unit.local!==false&&JSON.stringify(unit).includes('Tallyband Summoners Detachment')&&html.includes(`id="${id}"`);}));
 check('full gameplay block inventory is present',blockCount('enhancement')===30&&blockCount('rule')===45&&blockCount('statline')===36&&blockCount('weapon')===146,`enhancements ${blockCount('enhancement')}, rules ${blockCount('rule')}, statlines ${blockCount('statline')}, weapons ${blockCount('weapon')}`);
 check('all navigation targets exist',navTargets.every(id=>idSet.has(id)),navTargets.filter(id=>!idSet.has(id)).join(', '));
 check('all navigation targets have tracked ranges',navTargets.every(id=>trackTargets.includes(id)),navTargets.filter(id=>!trackTargets.includes(id)).join(', '));
-check('navigation covers the gameplay tree without inline glossary branches',navTargets.length===86&&!navTargets.some(id=>id==='glossary'||id==='core-stratagems'||id.startsWith('glossary-')),String(navTargets.length));
+check('navigation covers the gameplay tree without inline glossary branches',navTargets.length===93&&!navTargets.some(id=>id==='glossary'||id==='core-stratagems'||id.startsWith('glossary-')),String(navTargets.length));
 const depths=[...markup.matchAll(/data-nav-depth="(\d+)"/g)].map(match=>Number(match[1]));
 check('navigation depth is at most three',Math.max(...depths)===3);
 const unitIds=bookData.sections.filter(section=>section.kind==='unit'&&section.local!==false).map(section=>section.id);
-check('all 30 local datasheets are global navigation destinations',unitIds.length===30&&unitIds.every(id=>navTargets.includes(id)));
+check('all 36 local datasheets are global navigation destinations',unitIds.length===36&&unitIds.every(id=>navTargets.includes(id)));
 const unitById=id=>bookData.sections.find(section=>section.id===id);
 const legendIds=['unit-death-guard-possessed','unit-death-guard-chaos-lord','unit-death-guard-chaos-lord-in-terminator-armour','unit-death-guard-cultists','unit-death-guard-sorcerer-in-terminator-armour'];
 check('Death Guard Legends datasheets are absent from the published book',legendIds.every(id=>!unitById(id)&&!html.includes(`id="${id}"`)));

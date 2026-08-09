@@ -1,4 +1,4 @@
-import {readFile,writeFile} from 'node:fs/promises';
+import {readdir,readFile,unlink,writeFile} from 'node:fs/promises';
 
 const source=await readFile(new URL('../reader.html',import.meta.url),'utf8');
 const glossary=JSON.parse(await readFile(new URL('../../../glossary/registry.en.json',import.meta.url),'utf8')).terms;
@@ -67,7 +67,7 @@ const categories=[...source.matchAll(/<section class="content-group" id="(datash
     return{id,title:clean(title),units};
   });
 const units=categories.flatMap(category=>category.units);
-if(detachments.length!==10||units.length!==50)throw new Error(`Expected 10 detachments and 50 datasheets, found ${detachments.length} and ${units.length}`);
+if(detachments.length!==10||units.length!==49)throw new Error(`Expected 10 detachments and 49 datasheets, found ${detachments.length} and ${units.length}`);
 
 const armyRulesContent=source.includes('id="army-rules"')?extract('section','army-rules'):
   `<section class="section" id="army-rules"><h2 class="section-title">Army Rules</h2><p class="lead">Current official replacements for the Tyranids army rules.</p>${extract('section','update-army-shadow-in-the-warp')}${extract('section','update-army-synapse')}</section>`;
@@ -112,6 +112,8 @@ for(const route of routes)await writeFile(new URL(route.file,import.meta.url),pa
   .replace('<a class="phone-glossary" href="../../../glossary/index.html">','<a class="phone-glossary" href="../../../roster-guides/index.html" data-roster-guides-link hidden>&larr; Roster Guides</a><a class="phone-glossary" href="../../../glossary/index.html">')
   .replace('<script src="../../shared/related-rules-matcher.js?v=4"></script><script src="../../shared/army-related-rules.js?v=6"></script>','')
   .replace('rule-facts.js?v=1','rule-facts.js?v=4'));
+const routeFiles=new Set(routes.map(route=>route.file));
+for(const file of await readdir(new URL('./',import.meta.url)))if(file.endsWith('.html')&&!routeFiles.has(file))await unlink(new URL(file,import.meta.url));
 await writeFile(new URL('related-rules.inc',import.meta.url),relatedRules());
 for(const route of routes.filter(route=>route.type!=='start')){
   const html=await readFile(new URL(route.file,import.meta.url),'utf8');

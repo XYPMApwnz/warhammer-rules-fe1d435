@@ -54,10 +54,26 @@
       "core-stratagem-insane-bravery",
       "core-stratagem-rapid-ingress"
     ],
+    "unit-daemonettes": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
     "unit-defiler": [
       "core-stratagem-command-re-roll",
       "core-stratagem-counteroffensive",
       "core-stratagem-crushing-impact",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-fiends": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
       "core-stratagem-fire-overwatch",
       "core-stratagem-heroic-intervention",
       "core-stratagem-insane-bravery",
@@ -94,6 +110,16 @@
       "core-stratagem-command-re-roll",
       "core-stratagem-counteroffensive",
       "core-stratagem-explosives",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-keeper-of-secrets": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-crushing-impact",
+      "core-stratagem-epic-challenge",
       "core-stratagem-fire-overwatch",
       "core-stratagem-heroic-intervention",
       "core-stratagem-insane-bravery",
@@ -145,6 +171,24 @@
       "core-stratagem-insane-bravery",
       "core-stratagem-rapid-ingress"
     ],
+    "unit-seekers": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
+    "unit-shalaxi-helbane": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-crushing-impact",
+      "core-stratagem-epic-challenge",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
     "unit-sorcerer": [
       "core-stratagem-command-re-roll",
       "core-stratagem-counteroffensive",
@@ -165,10 +209,10 @@
       "core-stratagem-rapid-ingress"
     ]
   },
-  "retrievedAt": "2026-08-08",
+  "retrievedAt": "2026-08-09",
   "schema": "emperors-children-wahapedia-compatible-rules-snapshot/v1",
   "scope": {
-    "datasheets": "18 Codex-native datasheets",
+    "datasheets": "23 current Codex datasheets",
     "excluded": "Boarding Actions only",
     "factionRules": "15 official Faction Pack and 36 Codex Stratagems"
   },
@@ -355,6 +399,13 @@
       "stratagem-vengeful-surge",
       "stratagem-violent-excess"
     ],
+    "unit-daemonettes": [
+      "stratagem-dark-apparitions",
+      "stratagem-ecstatic-slaughter",
+      "stratagem-sycophantic-surge",
+      "stratagem-uncanny-reactions",
+      "stratagem-violent-crescendo"
+    ],
     "unit-defiler": [
       "catalytic-stimulus",
       "close-quarters-excruciation",
@@ -380,6 +431,12 @@
       "stratagem-uncanny-reactions",
       "stratagem-unshakeable-opponents",
       "stratagem-violent-excess"
+    ],
+    "unit-fiends": [
+      "stratagem-ecstatic-slaughter",
+      "stratagem-sycophantic-surge",
+      "stratagem-uncanny-reactions",
+      "stratagem-violent-crescendo"
     ],
     "unit-flawless-blades": [
       "catalytic-stimulus",
@@ -503,6 +560,11 @@
       "stratagem-unshakeable-opponents",
       "stratagem-violent-crescendo",
       "stratagem-violent-excess"
+    ],
+    "unit-keeper-of-secrets": [
+      "stratagem-ecstatic-slaughter",
+      "stratagem-sycophantic-surge",
+      "stratagem-uncanny-reactions"
     ],
     "unit-lord-exultant": [
       "catalytic-stimulus",
@@ -667,6 +729,17 @@
       "stratagem-unshakeable-opponents",
       "stratagem-violent-crescendo",
       "stratagem-violent-excess"
+    ],
+    "unit-seekers": [
+      "stratagem-ecstatic-slaughter",
+      "stratagem-sycophantic-surge",
+      "stratagem-uncanny-reactions",
+      "stratagem-violent-crescendo"
+    ],
+    "unit-shalaxi-helbane": [
+      "stratagem-ecstatic-slaughter",
+      "stratagem-sycophantic-surge",
+      "stratagem-uncanny-reactions"
     ],
     "unit-sorcerer": [
       "catalytic-stimulus",

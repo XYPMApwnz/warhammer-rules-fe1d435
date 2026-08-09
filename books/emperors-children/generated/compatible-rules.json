@@ -1,7 +1,7 @@
 {
   "schema": "emperors-children-compatible-rules/v1",
   "scope": {
-    "datasheets": 18,
+    "datasheets": 23,
     "factionPackStratagems": 15,
     "codexStratagems": 36,
     "coreStratagems": 10
@@ -2027,6 +2027,74 @@
         "authority": "secondary-codex-parity"
       }
     ],
+    "unit-daemonettes": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "stratagem-dark-apparitions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sycophantic-surge",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-crescendo",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      }
+    ],
     "unit-defiler": [
       {
         "ruleId": "catalytic-stimulus",
@@ -2211,6 +2279,68 @@
       {
         "ruleId": "stratagem-violent-excess",
         "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      }
+    ],
+    "unit-fiends": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sycophantic-surge",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-crescendo",
+        "detachmentId": "carnival-of-excess",
         "state": "match",
         "authority": "secondary-codex-parity"
       }
@@ -3129,6 +3259,74 @@
       {
         "ruleId": "stratagem-violent-excess",
         "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      }
+    ],
+    "unit-keeper-of-secrets": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sycophantic-surge",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
         "state": "match",
         "authority": "secondary-codex-parity"
       }
@@ -5153,6 +5351,136 @@
       {
         "ruleId": "stratagem-violent-excess",
         "detachmentId": "mercurial-host",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      }
+    ],
+    "unit-seekers": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sycophantic-surge",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-violent-crescendo",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      }
+    ],
+    "unit-shalaxi-helbane": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-crushing-impact",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match",
+        "authority": "official-core-rules-local-render"
+      },
+      {
+        "ruleId": "stratagem-ecstatic-slaughter",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-sycophantic-surge",
+        "detachmentId": "carnival-of-excess",
+        "state": "match",
+        "authority": "secondary-codex-parity"
+      },
+      {
+        "ruleId": "stratagem-uncanny-reactions",
+        "detachmentId": "carnival-of-excess",
         "state": "match",
         "authority": "secondary-codex-parity"
       }

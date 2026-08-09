@@ -33945,6 +33945,37 @@
       ],
       "mentions": []
     },
+    "emperors-children-ability-daemon-lord-of-slaanesh-aura": {
+      "id": "emperors-children-ability-daemon-lord-of-slaanesh-aura",
+      "kind": "datasheet-ability",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Daemon Lord of Slaanesh (Aura)"
+      },
+      "summary": {
+        "en": "While a friendly Legions of Excess unit is within 6\" of this model, improve the Armour Penetration of melee weapons in that unit by 1."
+      },
+      "definition": {
+        "en": "While a friendly Legions of Excess unit is within 6\" of this model, improve the Armour Penetration of melee weapons in that unit by 1."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-keeper-of-secrets"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-keeper-of-secrets",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
     "emperors-children-ability-daemon-prince-of-slaanesh": {
       "id": "emperors-children-ability-daemon-prince-of-slaanesh",
       "kind": "datasheet-ability",
@@ -34001,6 +34032,37 @@
         "locator": "unit-daemon-prince-of-slaanesh-with-wings"
       },
       "fullRulePath": "books/emperors-children/reader.html#unit-daemon-prince-of-slaanesh-with-wings",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-ability-daemonic-icon": {
+      "id": "emperors-children-ability-daemonic-icon",
+      "kind": "datasheet-ability",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Daemonic Icon"
+      },
+      "summary": {
+        "en": "Models in the bearer's unit have a Leadership characteristic of 6+."
+      },
+      "definition": {
+        "en": "Models in the bearer's unit have a Leadership characteristic of 6+."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-daemonettes"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-daemonettes",
       "status": "provisional",
       "sourceRefs": [
         "emperors-children"
@@ -34107,7 +34169,7 @@
       "edition": "11e",
       "language": "en",
       "title": {
-        "en": "Damaged: 1-6 Wounds Remaining"
+        "en": "Damaged: 1-6 wounds remaining"
       },
       "summary": {
         "en": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
@@ -34122,9 +34184,40 @@
       "canonicalSource": {
         "documentId": "emperors-children-codex-transcription",
         "revision": "pinned BSData",
-        "locator": "unit-fulgrim"
+        "locator": "unit-keeper-of-secrets"
       },
-      "fullRulePath": "books/emperors-children/reader.html#unit-fulgrim",
+      "fullRulePath": "books/emperors-children/reader.html#unit-keeper-of-secrets",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-ability-damaged-1-7-wounds-remaining": {
+      "id": "emperors-children-ability-damaged-1-7-wounds-remaining",
+      "kind": "datasheet-ability",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Damaged: 1-7 wounds remaining"
+      },
+      "summary": {
+        "en": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+      },
+      "definition": {
+        "en": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-shalaxi-helbane"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-shalaxi-helbane",
       "status": "provisional",
       "sourceRefs": [
         "emperors-children"
@@ -34348,6 +34441,37 @@
       ],
       "mentions": []
     },
+    "emperors-children-ability-horrifying-beauty": {
+      "id": "emperors-children-ability-horrifying-beauty",
+      "kind": "datasheet-ability",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Horrifying Beauty"
+      },
+      "summary": {
+        "en": "At the start of the Fight phase, each enemy unit in Engagement Range of one or more units from your army with this ability must take a Battle-shock test, subtracting 1 from that test if that enemy unit is Below Half-strength."
+      },
+      "definition": {
+        "en": "At the start of the Fight phase, each enemy unit in Engagement Range of one or more units from your army with this ability must take a Battle-shock test, subtracting 1 from that test if that enemy unit is Below Half-strength."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-daemonettes"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-daemonettes",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
     "emperors-children-ability-icon-of-excess": {
       "id": "emperors-children-ability-icon-of-excess",
       "kind": "datasheet-ability",
@@ -34373,6 +34497,37 @@
         "locator": "unit-infractors"
       },
       "fullRulePath": "books/emperors-children/reader.html#unit-infractors",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-ability-instrument-of-chaos": {
+      "id": "emperors-children-ability-instrument-of-chaos",
+      "kind": "datasheet-ability",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Instrument of Chaos"
+      },
+      "summary": {
+        "en": "Add 1 to Charge rolls made for the bearer's unit."
+      },
+      "definition": {
+        "en": "Add 1 to Charge rolls made for the bearer's unit."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-daemonettes"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-daemonettes",
       "status": "provisional",
       "sourceRefs": [
         "emperors-children"
@@ -34466,6 +34621,99 @@
         "locator": "unit-lord-exultant"
       },
       "fullRulePath": "books/emperors-children/reader.html#unit-lord-exultant",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-ability-mesmerising-form": {
+      "id": "emperors-children-ability-mesmerising-form",
+      "kind": "datasheet-ability",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Mesmerising Form"
+      },
+      "summary": {
+        "en": "Each time an attack targets this model, subtract 1 from the Hit roll."
+      },
+      "definition": {
+        "en": "Each time an attack targets this model, subtract 1 from the Hit roll."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-keeper-of-secrets"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-keeper-of-secrets",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-ability-monarch-of-the-hunt": {
+      "id": "emperors-children-ability-monarch-of-the-hunt",
+      "kind": "datasheet-ability",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Monarch of the Hunt"
+      },
+      "summary": {
+        "en": "At the start of the first battle round, select one enemy unit to be this model's quarry. Each time this model makes a melee attack that targets its quarry, you can re-roll the Hit roll and you can re-roll the Wound roll.…"
+      },
+      "definition": {
+        "en": "At the start of the first battle round, select one enemy unit to be this model's quarry. Each time this model makes a melee attack that targets its quarry, you can re-roll the Hit roll and you can re-roll the Wound roll. Each time this model's quarry is destroyed, select one new enemy unit to be this model's quarry."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-shalaxi-helbane"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-shalaxi-helbane",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-ability-no-prey-can-evade": {
+      "id": "emperors-children-ability-no-prey-can-evade",
+      "kind": "datasheet-ability",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "No Prey Can Evade"
+      },
+      "summary": {
+        "en": "You can re-roll Advance and Charge rolls made for this model."
+      },
+      "definition": {
+        "en": "You can re-roll Advance and Charge rolls made for this model."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-shalaxi-helbane"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-shalaxi-helbane",
       "status": "provisional",
       "sourceRefs": [
         "emperors-children"
@@ -34689,6 +34937,68 @@
       ],
       "mentions": []
     },
+    "emperors-children-ability-shining-aegis": {
+      "id": "emperors-children-ability-shining-aegis",
+      "kind": "datasheet-ability",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Shining aegis"
+      },
+      "summary": {
+        "en": "The bearer has a Save characteristic of 3+."
+      },
+      "definition": {
+        "en": "The bearer has a Save characteristic of 3+."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-keeper-of-secrets"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-keeper-of-secrets",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-ability-soporific-musk": {
+      "id": "emperors-children-ability-soporific-musk",
+      "kind": "datasheet-ability",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Soporific Musk"
+      },
+      "summary": {
+        "en": "Each time an enemy unit (excluding Monsters and Vehicles ) within Engagement Range of one or more units from your army with this ability Falls Back, models in that unit must take Desperate Escape tests.…"
+      },
+      "definition": {
+        "en": "Each time an enemy unit (excluding Monsters and Vehicles ) within Engagement Range of one or more units from your army with this ability Falls Back, models in that unit must take Desperate Escape tests. When doing so, if that enemy unit is also Battle-shocked, subtract 1 from each of those Desperate Escape tests."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-fiends"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-fiends",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
     "emperors-children-ability-stimulated-by-pain": {
       "id": "emperors-children-ability-stimulated-by-pain",
       "kind": "datasheet-ability",
@@ -34807,6 +35117,37 @@
         "locator": "unit-infractors"
       },
       "fullRulePath": "books/emperors-children/reader.html#unit-infractors",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-ability-unholy-speed": {
+      "id": "emperors-children-ability-unholy-speed",
+      "kind": "datasheet-ability",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Unholy Speed"
+      },
+      "summary": {
+        "en": "You can re-roll Advance and Charge rolls made for this unit."
+      },
+      "definition": {
+        "en": "You can re-roll Advance and Charge rolls made for this unit."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-seekers"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-seekers",
       "status": "provisional",
       "sourceRefs": [
         "emperors-children"
@@ -38227,6 +38568,46 @@
       ],
       "mentions": []
     },
+    "emperors-children-weapon-barbed-tail-and-dissecting-claws": {
+      "id": "emperors-children-weapon-barbed-tail-and-dissecting-claws",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Barbed tail and dissecting claws"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 5 · WS 3+ · S 5 · AP -2 · D 2 · Devastating Wounds"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 5 · WS 3+ · S 5 · AP -2 · D 2 · Devastating Wounds"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "5",
+          "WS": "3+",
+          "S": "5",
+          "AP": "-2",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-fiends"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-fiends",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
     "emperors-children-weapon-blade-of-the-laer": {
       "id": "emperors-children-weapon-blade-of-the-laer",
       "kind": "weapon",
@@ -39507,6 +39888,46 @@
       ],
       "mentions": []
     },
+    "emperors-children-weapon-lash-of-slaanesh": {
+      "id": "emperors-children-weapon-lash-of-slaanesh",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Lash of Slaanesh"
+      },
+      "summary": {
+        "en": "Ranged · 12\" · A 6 · BS 2+ · S 6 · AP -1 · D 2 · Assault"
+      },
+      "definition": {
+        "en": "Ranged · 12\" · A 6 · BS 2+ · S 6 · AP -1 · D 2 · Assault"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "12\"",
+          "A": "6",
+          "BS": "2+",
+          "S": "6",
+          "AP": "-1",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-shalaxi-helbane"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-shalaxi-helbane",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
     "emperors-children-weapon-lash-of-torment": {
       "id": "emperors-children-weapon-lash-of-torment",
       "kind": "weapon",
@@ -39581,6 +40002,86 @@
         "locator": "unit-maulerfiend"
       },
       "fullRulePath": "books/emperors-children/reader.html#unit-maulerfiend",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-weapon-lashing-tongues": {
+      "id": "emperors-children-weapon-lashing-tongues",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Lashing tongues"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 2 · WS 4+ · S 4 · AP 0 · D 1 · Extra Attacks, Lethal Hits"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 2 · WS 4+ · S 4 · AP 0 · D 1 · Extra Attacks, Lethal Hits"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "2",
+          "WS": "4+",
+          "S": "4",
+          "AP": "0",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-seekers"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-seekers",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-weapon-living-whip": {
+      "id": "emperors-children-weapon-living-whip",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Living whip"
+      },
+      "summary": {
+        "en": "Ranged · 12\" · A 6 · BS 2+ · S 6 · AP -1 · D 2 · Assault"
+      },
+      "definition": {
+        "en": "Ranged · 12\" · A 6 · BS 2+ · S 6 · AP -1 · D 2 · Assault"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "12\"",
+          "A": "6",
+          "BS": "2+",
+          "S": "6",
+          "AP": "-1",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-keeper-of-secrets"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-keeper-of-secrets",
       "status": "provisional",
       "sourceRefs": [
         "emperors-children"
@@ -39861,6 +40362,166 @@
         "locator": "unit-chaos-terminators"
       },
       "fullRulePath": "books/emperors-children/reader.html#unit-chaos-terminators",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-weapon-pavane-of-slaanesh-focused-witchfire": {
+      "id": "emperors-children-weapon-pavane-of-slaanesh-focused-witchfire",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Pavane of Slaanesh - focused witchfire"
+      },
+      "summary": {
+        "en": "Ranged · 18\" · A D6 · BS 2+ · S 9 · AP -2 · D D3 · Hazardous, Devastating Wounds, Psychic, Sustained Hits 3"
+      },
+      "definition": {
+        "en": "Ranged · 18\" · A D6 · BS 2+ · S 9 · AP -2 · D D3 · Hazardous, Devastating Wounds, Psychic, Sustained Hits 3"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "18\"",
+          "A": "D6",
+          "BS": "2+",
+          "S": "9",
+          "AP": "-2",
+          "D": "D3"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-shalaxi-helbane"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-shalaxi-helbane",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-weapon-pavane-of-slaanesh-witchfire": {
+      "id": "emperors-children-weapon-pavane-of-slaanesh-witchfire",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Pavane of Slaanesh - witchfire"
+      },
+      "summary": {
+        "en": "Ranged · 18\" · A D6 · BS 2+ · S 9 · AP -1 · D D3 · Devastating Wounds, Psychic"
+      },
+      "definition": {
+        "en": "Ranged · 18\" · A D6 · BS 2+ · S 9 · AP -1 · D D3 · Devastating Wounds, Psychic"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "18\"",
+          "A": "D6",
+          "BS": "2+",
+          "S": "9",
+          "AP": "-1",
+          "D": "D3"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-shalaxi-helbane"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-shalaxi-helbane",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-weapon-phantasmagoria-focused-witchfire": {
+      "id": "emperors-children-weapon-phantasmagoria-focused-witchfire",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Phantasmagoria - focused witchfire"
+      },
+      "summary": {
+        "en": "Ranged · 18\" · A 9 · BS 2+ · S 6 · AP -2 · D 1 · Devastating Wounds, Hazardous, Psychic"
+      },
+      "definition": {
+        "en": "Ranged · 18\" · A 9 · BS 2+ · S 6 · AP -2 · D 1 · Devastating Wounds, Hazardous, Psychic"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "18\"",
+          "A": "9",
+          "BS": "2+",
+          "S": "6",
+          "AP": "-2",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-keeper-of-secrets"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-keeper-of-secrets",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-weapon-phantasmagoria-witchfire": {
+      "id": "emperors-children-weapon-phantasmagoria-witchfire",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Phantasmagoria - witchfire"
+      },
+      "summary": {
+        "en": "Ranged · 18\" · A 6 · BS 2+ · S 6 · AP -2 · D 1 · Devastating Wounds, Psychic"
+      },
+      "definition": {
+        "en": "Ranged · 18\" · A 6 · BS 2+ · S 6 · AP -2 · D 1 · Devastating Wounds, Psychic"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "18\"",
+          "A": "6",
+          "BS": "2+",
+          "S": "6",
+          "AP": "-2",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-keeper-of-secrets"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-keeper-of-secrets",
       "status": "provisional",
       "sourceRefs": [
         "emperors-children"
@@ -40307,6 +40968,46 @@
       ],
       "mentions": []
     },
+    "emperors-children-weapon-ritual-knife": {
+      "id": "emperors-children-weapon-ritual-knife",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Ritual knife"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 3 · WS 2+ · S 6 · AP -2 · D 2 · Extra Attacks"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 3 · WS 2+ · S 6 · AP -2 · D 2 · Extra Attacks"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "3",
+          "WS": "2+",
+          "S": "6",
+          "AP": "-2",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-keeper-of-secrets"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-keeper-of-secrets",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
     "emperors-children-weapon-screamer-pistol": {
       "id": "emperors-children-weapon-screamer-pistol",
       "kind": "weapon",
@@ -40507,6 +41208,86 @@
       ],
       "mentions": []
     },
+    "emperors-children-weapon-slashing-claws": {
+      "id": "emperors-children-weapon-slashing-claws",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Slashing claws"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 3 · WS 3+ · S 4 · AP -1 · D 1 · Devastating Wounds"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 3 · WS 3+ · S 4 · AP -1 · D 1 · Devastating Wounds"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "3",
+          "WS": "3+",
+          "S": "4",
+          "AP": "-1",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-daemonettes"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-daemonettes",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-weapon-snapping-claws": {
+      "id": "emperors-children-weapon-snapping-claws",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Snapping claws"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 4 · WS 2+ · S 6 · AP -2 · D 3 · Devastating Wounds, Extra Attacks"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 4 · WS 2+ · S 6 · AP -2 · D 3 · Devastating Wounds, Extra Attacks"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "4",
+          "WS": "2+",
+          "S": "6",
+          "AP": "-2",
+          "D": "3"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-keeper-of-secrets"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-keeper-of-secrets",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
     "emperors-children-weapon-sonic-blaster": {
       "id": "emperors-children-weapon-sonic-blaster",
       "kind": "weapon",
@@ -40541,6 +41322,46 @@
         "locator": "unit-noise-marines"
       },
       "fullRulePath": "books/emperors-children/reader.html#unit-noise-marines",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-weapon-soulpiercer": {
+      "id": "emperors-children-weapon-soulpiercer",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Soulpiercer"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 6 · WS 2+ · S 12 · AP -3 · D D6+2 · Precision"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 6 · WS 2+ · S 12 · AP -3 · D D6+2 · Precision"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "6",
+          "WS": "2+",
+          "S": "12",
+          "AP": "-3",
+          "D": "D6+2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-shalaxi-helbane"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-shalaxi-helbane",
       "status": "provisional",
       "sourceRefs": [
         "emperors-children"
@@ -40621,6 +41442,46 @@
         "locator": "unit-chaos-land-raider"
       },
       "fullRulePath": "books/emperors-children/reader.html#unit-chaos-land-raider",
+      "status": "provisional",
+      "sourceRefs": [
+        "emperors-children"
+      ],
+      "mentions": []
+    },
+    "emperors-children-weapon-witstealer-sword": {
+      "id": "emperors-children-weapon-witstealer-sword",
+      "kind": "weapon",
+      "scope": "emperors-children",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Witstealer sword"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 6 · WS 2+ · S 8 · AP -2 · D 3"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 6 · WS 2+ · S 8 · AP -2 · D 3"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "6",
+          "WS": "2+",
+          "S": "8",
+          "AP": "-2",
+          "D": "3"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "emperors-children-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-keeper-of-secrets"
+      },
+      "fullRulePath": "books/emperors-children/reader.html#unit-keeper-of-secrets",
       "status": "provisional",
       "sourceRefs": [
         "emperors-children"
@@ -52853,37 +53714,6 @@
       ],
       "mentions": []
     },
-    "tyranids-ability-alpha-invader": {
-      "id": "tyranids-ability-alpha-invader",
-      "kind": "datasheet-ability",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Alpha Invader"
-      },
-      "summary": {
-        "en": "Weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability."
-      },
-      "definition": {
-        "en": "Weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability."
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-hyperadapted-raveners"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-hyperadapted-raveners",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
     "tyranids-ability-alpha-leader": {
       "id": "tyranids-ability-alpha-leader",
       "kind": "datasheet-ability",
@@ -53901,37 +54731,6 @@
         "locator": "unit-deathleaper"
       },
       "fullRulePath": "books/tyranids/reader.html#unit-deathleaper",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
-    "tyranids-ability-hypersensory-array": {
-      "id": "tyranids-ability-hypersensory-array",
-      "kind": "datasheet-ability",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Hypersensory Array"
-      },
-      "summary": {
-        "en": "Once per battle round, you can target this unit with the Rapid Ingress/Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: - That use is -1 CP. - That use does not prevent any uses of that stratagem on other units this phase."
-      },
-      "definition": {
-        "en": "Once per battle round, you can target this unit with the Rapid Ingress/Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: - That use is -1 CP. - That use does not prevent any uses of that stratagem on other units this phase."
-      },
-      "structured": {},
-      "presentation": "atomic",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-hyperadapted-raveners"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-hyperadapted-raveners",
       "status": "provisional",
       "sourceRefs": [
         "tyranids"
@@ -60712,46 +61511,6 @@
       ],
       "mentions": []
     },
-    "tyranids-weapon-prime-claws-and-talons": {
-      "id": "tyranids-weapon-prime-claws-and-talons",
-      "kind": "weapon",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Prime claws and talons"
-      },
-      "summary": {
-        "en": "Melee · Melee · A 6 · WS 3+ · S 5 · AP -2 · D 2 · Anti-Monster 5+, Anti-Vehicle 5+, Twin-linked"
-      },
-      "definition": {
-        "en": "Melee · Melee · A 6 · WS 3+ · S 5 · AP -2 · D 2 · Anti-Monster 5+, Anti-Vehicle 5+, Twin-linked"
-      },
-      "structured": {
-        "weapon": {
-          "Range": "Melee",
-          "A": "6",
-          "WS": "3+",
-          "S": "5",
-          "AP": "-2",
-          "D": "2"
-        }
-      },
-      "presentation": "profile",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-hyperadapted-raveners"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-hyperadapted-raveners",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
     "tyranids-weapon-prime-talons": {
       "id": "tyranids-weapon-prime-talons",
       "kind": "weapon",
@@ -61066,46 +61825,6 @@
         "locator": "unit-raveners"
       },
       "fullRulePath": "books/tyranids/reader.html#unit-raveners",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
-    "tyranids-weapon-ravener-heavy-claws-and-talons": {
-      "id": "tyranids-weapon-ravener-heavy-claws-and-talons",
-      "kind": "weapon",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Ravener heavy claws and talons"
-      },
-      "summary": {
-        "en": "Melee · Melee · A 3 · WS 3+ · S 5 · AP -2 · D 2 · Anti-Monster 5+, Anti-Vehicle 5+, Twin-linked"
-      },
-      "definition": {
-        "en": "Melee · Melee · A 3 · WS 3+ · S 5 · AP -2 · D 2 · Anti-Monster 5+, Anti-Vehicle 5+, Twin-linked"
-      },
-      "structured": {
-        "weapon": {
-          "Range": "Melee",
-          "A": "3",
-          "WS": "3+",
-          "S": "5",
-          "AP": "-2",
-          "D": "2"
-        }
-      },
-      "presentation": "profile",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-hyperadapted-raveners"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-hyperadapted-raveners",
       "status": "provisional",
       "sourceRefs": [
         "tyranids"
@@ -62586,46 +63305,6 @@
         "locator": "unit-winged-hive-tyrant"
       },
       "fullRulePath": "books/tyranids/reader.html#unit-winged-hive-tyrant",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
-    "tyranids-weapon-venom-bolt": {
-      "id": "tyranids-weapon-venom-bolt",
-      "kind": "weapon",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Venom bolt"
-      },
-      "summary": {
-        "en": "Ranged · 12\" · A D6+3 · BS N/A · S 6 · AP -1 · D 1 · Assault, Ignores Cover, Torrent"
-      },
-      "definition": {
-        "en": "Ranged · 12\" · A D6+3 · BS N/A · S 6 · AP -1 · D 1 · Assault, Ignores Cover, Torrent"
-      },
-      "structured": {
-        "weapon": {
-          "Range": "12\"",
-          "A": "D6+3",
-          "BS": "N/A",
-          "S": "6",
-          "AP": "-1",
-          "D": "1"
-        }
-      },
-      "presentation": "profile",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-hyperadapted-raveners"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-hyperadapted-raveners",
       "status": "provisional",
       "sourceRefs": [
         "tyranids"

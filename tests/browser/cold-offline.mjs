@@ -47,11 +47,12 @@ const control=async page=>{
 };
 
 const books=[
-  {name:'Death Guard',unit:'unit-chaos-land-raider',desktop:'/books/death-guard/reader.html#unit-chaos-land-raider',phone:'/books/death-guard/mobile/chaos-land-raider.html'},
+  {name:'Death Guard',unit:'unit-great-unclean-one',desktop:'/books/death-guard/reader.html#unit-great-unclean-one',phone:'/books/death-guard/mobile/great-unclean-one.html'},
   {name:'Adeptus Mechanicus',unit:'unit-skitarii-rangers',desktop:'/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers',phone:'/books/adeptus-mechanicus/mobile/skitarii-rangers.html'},
   {name:'Tyranids',unit:'unit-hive-tyrant',desktop:'/books/tyranids/reader.html#unit-hive-tyrant',phone:'/books/tyranids/mobile/hive-tyrant.html'},
   {name:"T'au Empire",unit:'unit-breacher-team',desktop:'/books/tau-empire/reader.html#unit-breacher-team',phone:'/books/tau-empire/mobile/breacher-team.html'},
-  {name:"Emperor's Children",unit:'unit-lord-exultant',desktop:'/books/emperors-children/reader.html#unit-lord-exultant',phone:'/books/emperors-children/mobile/lord-exultant.html'},
+  {name:"Emperor's Children",unit:'unit-shalaxi-helbane',desktop:'/books/emperors-children/reader.html#unit-shalaxi-helbane',phone:'/books/emperors-children/mobile/shalaxi-helbane.html'},
+  {name:"Emperor's Children Daemonettes",unit:'unit-daemonettes',desktop:'/books/emperors-children/reader.html#unit-daemonettes',phone:'/books/emperors-children/mobile/daemonettes.html'},
   {name:'Space Marines',unit:'unit-assault-intercessor-squad',desktop:'/books/space-marines/reader.html#unit-assault-intercessor-squad',phone:'/books/space-marines/mobile/assault-intercessor-squad.html',related:false}
 ];
 

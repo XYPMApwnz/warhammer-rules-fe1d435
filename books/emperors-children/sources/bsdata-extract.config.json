@@ -55,12 +55,7 @@
       "Detachment",
       "Show/Hide Options",
       "Order of Battle",
-      "Combat Elixirs equipped in Current Battle",
-      "Daemonettes",
-      "Fiends",
-      "Keeper of Secrets",
-      "Seekers",
-      "Shalaxi Helbane"
+      "Combat Elixirs equipped in Current Battle"
     ],
     "excludeNamePatterns": [
       "\\[Crucible\\]$",

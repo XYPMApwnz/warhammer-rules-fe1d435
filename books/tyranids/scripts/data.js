@@ -257,7 +257,6 @@ window.DG_TERMS={
       "unit-termagants",
       "unit-broodlord",
       "unit-hive-tyrant",
-      "unit-hyperadapted-raveners",
       "unit-neurotyrant",
       "unit-parasite-of-mortrex",
       "unit-tervigon",
@@ -487,7 +486,6 @@ window.DG_TERMS={
     "units": [
       "unit-broodlord",
       "unit-hive-tyrant",
-      "unit-hyperadapted-raveners",
       "unit-neurotyrant",
       "unit-parasite-of-mortrex",
       "unit-tervigon",
@@ -601,71 +599,6 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-hive-tyrant",
     "statline": "hive-tyrant-profile"
-  },
-  "tyranids-ability-alpha-invader": {
-    "id": "tyranids-ability-alpha-invader",
-    "title": "Alpha Invader",
-    "summary": "Weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.",
-    "full": "Weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.",
-    "glossary": "glossary-tyranids-ability-alpha-invader",
-    "rule": "unit-hyperadapted-raveners",
-    "units": [
-      "unit-hyperadapted-raveners"
-    ],
-    "datasheet": "unit-hyperadapted-raveners",
-    "statline": "hyperadapted-raveners-profile"
-  },
-  "tyranids-ability-hypersensory-array": {
-    "id": "tyranids-ability-hypersensory-array",
-    "title": "Hypersensory Array",
-    "summary": "Once per battle round, you can target this unit with the Rapid Ingress/Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: - That use is -1 CP. - That use does not prevent any uses of that stratagem on other units this phase.",
-    "full": "Once per battle round, you can target this unit with the Rapid Ingress/Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: - That use is -1 CP. - That use does not prevent any uses of that stratagem on other units this phase.",
-    "glossary": "glossary-tyranids-ability-hypersensory-array",
-    "rule": "unit-hyperadapted-raveners",
-    "units": [
-      "unit-hyperadapted-raveners"
-    ],
-    "datasheet": "unit-hyperadapted-raveners",
-    "statline": "hyperadapted-raveners-profile"
-  },
-  "tyranids-weapon-prime-claws-and-talons": {
-    "id": "tyranids-weapon-prime-claws-and-talons",
-    "title": "Prime claws and talons",
-    "summary": "Melee · Melee · A 6 · WS 3+ · S 5 · AP -2 · D 2 · Anti-Monster 5+, Anti-Vehicle 5+, Twin-linked",
-    "full": "Melee · Melee · A 6 · WS 3+ · S 5 · AP -2 · D 2 · Anti-Monster 5+, Anti-Vehicle 5+, Twin-linked",
-    "glossary": "glossary-tyranids-weapon-prime-claws-and-talons",
-    "rule": "unit-hyperadapted-raveners",
-    "units": [
-      "unit-hyperadapted-raveners"
-    ],
-    "datasheet": "unit-hyperadapted-raveners",
-    "statline": "hyperadapted-raveners-profile"
-  },
-  "tyranids-weapon-ravener-heavy-claws-and-talons": {
-    "id": "tyranids-weapon-ravener-heavy-claws-and-talons",
-    "title": "Ravener heavy claws and talons",
-    "summary": "Melee · Melee · A 3 · WS 3+ · S 5 · AP -2 · D 2 · Anti-Monster 5+, Anti-Vehicle 5+, Twin-linked",
-    "full": "Melee · Melee · A 3 · WS 3+ · S 5 · AP -2 · D 2 · Anti-Monster 5+, Anti-Vehicle 5+, Twin-linked",
-    "glossary": "glossary-tyranids-weapon-ravener-heavy-claws-and-talons",
-    "rule": "unit-hyperadapted-raveners",
-    "units": [
-      "unit-hyperadapted-raveners"
-    ],
-    "datasheet": "unit-hyperadapted-raveners",
-    "statline": "hyperadapted-raveners-profile"
-  },
-  "tyranids-weapon-venom-bolt": {
-    "id": "tyranids-weapon-venom-bolt",
-    "title": "Venom bolt",
-    "summary": "Ranged · 12\" · A D6+3 · BS N/A · S 6 · AP -1 · D 1 · Assault, Ignores Cover, Torrent",
-    "full": "Ranged · 12\" · A D6+3 · BS N/A · S 6 · AP -1 · D 1 · Assault, Ignores Cover, Torrent",
-    "glossary": "glossary-tyranids-weapon-venom-bolt",
-    "rule": "unit-hyperadapted-raveners",
-    "units": [
-      "unit-hyperadapted-raveners"
-    ],
-    "datasheet": "unit-hyperadapted-raveners",
-    "statline": "hyperadapted-raveners-profile"
   },
   "tyranids-ability-node-lash-psychic": {
     "id": "tyranids-ability-node-lash-psychic",

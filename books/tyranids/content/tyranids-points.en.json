@@ -397,35 +397,6 @@
       }
     },
     {
-      "id": "unit-hyperadapted-raveners",
-      "title": "Hyperadapted Raveners",
-      "status": "Current",
-      "sourceLayer": "faction-pack",
-      "points": [
-        {
-          "label": "1st to 2nd unit · 5 models",
-          "value": 165,
-          "minModels": 5,
-          "maxModels": 5,
-          "minCopies": 1,
-          "maxCopies": 2
-        },
-        {
-          "label": "3rd + unit · 5 models",
-          "value": 175,
-          "minModels": 5,
-          "maxModels": 5,
-          "minCopies": 3
-        }
-      ],
-      "paidWargear": [],
-      "pointsSource": {
-        "label": "Official MFM v1.2",
-        "url": "https://mfm.warhammer-community.com/en/tyranids",
-        "verifiedAt": "2026-08-09"
-      }
-    },
-    {
       "id": "unit-lictor",
       "title": "Lictor",
       "status": "Current",
@@ -1760,7 +1731,7 @@
     }
   ],
   "audit": {
-    "units": 50,
+    "units": 49,
     "enhancements": 34
   },
   "detachments": [

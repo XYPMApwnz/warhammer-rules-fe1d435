@@ -22,7 +22,7 @@
     "SWARM HUNTERS",
     "TALON-TIP SWARM"
   ],
-  "retrievedAt": "2026-08-02",
+  "retrievedAt": "2026-08-09",
   "schema": "compatible-rules-import-report/v1",
   "source": {
     "edition": "11",
@@ -32,8 +32,8 @@
   },
   "summary": {
     "associations": {
-      "core": 335,
-      "faction": 1109
+      "core": 328,
+      "faction": 1086
     },
     "boardingActionNamesIgnored": 21,
     "coreStratagems": {
@@ -41,8 +41,8 @@
       "observed": 9
     },
     "datasheets": {
-      "canonical": 50,
-      "imported": 50
+      "canonical": 49,
+      "imported": 49
     },
     "factionStratagems": {
       "canonical": 51,

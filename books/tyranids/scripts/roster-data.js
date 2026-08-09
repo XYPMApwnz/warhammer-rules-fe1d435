@@ -63,7 +63,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -94,7 +93,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -125,7 +123,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -155,7 +152,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
       "selector": {
         "unitIds": [
           "unit-broodlord",
-          "unit-hyperadapted-raveners",
           "unit-parasite-of-mortrex",
           "unit-tyranid-prime-with-lash-whip",
           "unit-winged-tyranid-prime"
@@ -287,7 +283,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -318,7 +313,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -349,7 +343,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -380,7 +373,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -411,7 +403,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -446,7 +437,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -479,7 +469,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
       "subject": "model",
       "selector": {
         "unitIds": [
-          "unit-hyperadapted-raveners",
           "unit-parasite-of-mortrex",
           "unit-winged-hive-tyrant",
           "unit-winged-tyranid-prime",
@@ -704,7 +693,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -735,7 +723,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -766,7 +753,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -797,7 +783,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -827,7 +812,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
       "selector": {
         "unitIds": [
           "unit-broodlord",
-          "unit-hyperadapted-raveners",
           "unit-parasite-of-mortrex",
           "unit-winged-hive-tyrant",
           "unit-winged-tyranid-prime"
@@ -855,7 +839,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -886,7 +869,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
         "unitIds": [
           "unit-broodlord",
           "unit-hive-tyrant",
-          "unit-hyperadapted-raveners",
           "unit-neurotyrant",
           "unit-parasite-of-mortrex",
           "unit-tervigon",
@@ -916,7 +898,6 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
       "selector": {
         "unitIds": [
           "unit-broodlord",
-          "unit-hyperadapted-raveners",
           "unit-parasite-of-mortrex",
           "unit-winged-hive-tyrant",
           "unit-winged-tyranid-prime"

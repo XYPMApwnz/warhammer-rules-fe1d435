@@ -516,7 +516,7 @@
 <br>Any phase.</p>
 <p class="field">
 <b>TARGET</b>
-<br>One <button class="term-button" data-term="term-nurglings" data-term-title="Nurglings" data-term-summary="M 5&quot; · T 3 · Sv 7+ · W 4 · Ld 8+ · OC 0 · Inv 5+">NURGLINGS</button> unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.</p>
+<br>One <button class="term-button" data-term="term-nurglings" data-term-title="Nurglings" data-term-summary="M 5&quot; · T 3 · Sv 7+ · W 4 · Ld 8+ · OC 0 · Inv 5+" data-full-rule-path="books/death-guard/reader.html#unit-nurglings" data-mobile-rule-path="books/death-guard/mobile/nurglings.html#unit-nurglings">NURGLINGS</button> unit from your army that was just destroyed. You can target that unit with this Stratagem even though it was just destroyed.</p>
 <p class="field">
 <b>EFFECT</b>
 <br>Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength and with its full wounds remaining.</p>
@@ -653,7 +653,7 @@
 <h4>
 <button class="term-button" data-term="entropic-knell" data-term-title="Entropic Knell" data-term-summary="GREAT UNCLEAN ONE only. In the Battle-shock step of your opponent’s Command phase, each enemy unit within 6&quot; of the bearer that is below its Starting Strength must take a Battle-shock test, subtracting 1 from that test." data-full-rule-path="books/death-guard/reader.html#enhancement-entropic-knell" data-mobile-rule-path="books/death-guard/mobile/tallyband-summoners.html#enhancement-entropic-knell">Entropic Knell</button> - 15 pts</h4>
 <p>
-<button class="term-button" data-term="term-great-unclean-one" data-term-title="Great Unclean One" data-term-summary="M 7&quot; · T 12 · Sv 5+ · W 20 · Ld 6+ · OC 5 · Inv 4+">GREAT UNCLEAN ONE</button> only. In the Battle-shock step of your opponent’s Command phase, each enemy unit within 6&quot; of the bearer that is below its Starting Strength must take a Battle-shock test, subtracting 1 from that test.</p>
+<button class="term-button" data-term="term-great-unclean-one" data-term-title="Great Unclean One" data-term-summary="M 7&quot; · T 12 · Sv 5+ · W 20 · Ld 6+ · OC 5 · Inv 4+" data-full-rule-path="books/death-guard/reader.html#unit-great-unclean-one" data-mobile-rule-path="books/death-guard/mobile/great-unclean-one.html#unit-great-unclean-one">GREAT UNCLEAN ONE</button> only. In the Battle-shock step of your opponent’s Command phase, each enemy unit within 6&quot; of the bearer that is below its Starting Strength must take a Battle-shock test, subtracting 1 from that test.</p>
 </article>
 <article class="enhancement surface" id="enhancement-tome-of-bounteous-blessings" data-rule-id="enhancement-tome-of-bounteous-blessings" data-enhancement-tags="" data-owner-subject="model">
 <div class="eyebrow">Enhancement</div>

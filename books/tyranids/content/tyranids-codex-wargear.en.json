@@ -3,7 +3,7 @@
   "source": {
     "title": "Wahapedia Warhammer 40,000 11th Edition · Tyranids",
     "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/",
-    "checkedAt": "2026-07-29"
+    "checkedAt": "2026-08-09"
   },
   "units": [
     {
@@ -102,12 +102,6 @@
       "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Hormagaunts",
       "wargear": [],
       "composition": "10-20 Hormagaunts\nEvery model is equipped with: Hormagaunt talons."
-    },
-    {
-      "title": "Hyperadapted Raveners",
-      "url": "https://wahapedia.ru/wh40k11ed/factions/tyranids/Hyperadapted-Raveners",
-      "wargear": [],
-      "composition": "1 Ravener Prime\n4 Raveners\nThe Ravener Prime is equipped with: Prime claws and talons.\n\n3 Raveners are equipped with: Ravener heavy claws and talons.\n\n1 Ravener is equipped with: venom bolt; Ravener heavy claws and talons."
     },
     {
       "title": "Lictor",

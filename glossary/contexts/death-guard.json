@@ -1240,7 +1240,8 @@
       "termId": "death-guard-unit-beasts-of-nurgle",
       "navigation": {
         "glossary": "glossary-term-beasts-of-nurgle",
-        "rule": "unit-beasts-of-nurgle"
+        "rule": "unit-beasts-of-nurgle",
+        "fullRulePath": "books/death-guard/reader.html#unit-beasts-of-nurgle"
       },
       "owners": [],
       "visible": false
@@ -1250,7 +1251,8 @@
       "navigation": {
         "glossary": "glossary-ability-grotesque-regeneration-60c7e2a",
         "rule": "beasts-of-nurgle-ability-grotesque-regeneration",
-        "datasheet": "unit-beasts-of-nurgle"
+        "datasheet": "unit-beasts-of-nurgle",
+        "fullRulePath": "books/death-guard/reader.html#beasts-of-nurgle-ability-grotesque-regeneration"
       },
       "owners": [
         "unit-beasts-of-nurgle"
@@ -2263,7 +2265,8 @@
       "termId": "death-guard-unit-great-unclean-one",
       "navigation": {
         "glossary": "glossary-term-great-unclean-one",
-        "rule": "unit-great-unclean-one"
+        "rule": "unit-great-unclean-one",
+        "fullRulePath": "books/death-guard/reader.html#unit-great-unclean-one"
       },
       "owners": [],
       "visible": false
@@ -2273,7 +2276,8 @@
       "navigation": {
         "glossary": "glossary-ability-daemon-lord-of-nurgle-aura-d613df7",
         "rule": "great-unclean-one-ability-daemon-lord-of-nurgle-aura",
-        "datasheet": "unit-great-unclean-one"
+        "datasheet": "unit-great-unclean-one",
+        "fullRulePath": "books/death-guard/reader.html#great-unclean-one-ability-daemon-lord-of-nurgle-aura"
       },
       "owners": [
         "unit-great-unclean-one"
@@ -2285,7 +2289,8 @@
       "navigation": {
         "glossary": "glossary-ability-nurgles-rot-psychic-80d4e3f",
         "rule": "great-unclean-one-ability-nurgles-rot-psychic",
-        "datasheet": "unit-great-unclean-one"
+        "datasheet": "unit-great-unclean-one",
+        "fullRulePath": "books/death-guard/reader.html#great-unclean-one-ability-nurgles-rot-psychic"
       },
       "owners": [
         "unit-great-unclean-one"
@@ -3144,7 +3149,8 @@
       "termId": "death-guard-unit-nurglings",
       "navigation": {
         "glossary": "glossary-term-nurglings",
-        "rule": "unit-nurglings"
+        "rule": "unit-nurglings",
+        "fullRulePath": "books/death-guard/reader.html#unit-nurglings"
       },
       "owners": [],
       "visible": false
@@ -3154,7 +3160,8 @@
       "navigation": {
         "glossary": "glossary-ability-mischief-makers-6a686e9",
         "rule": "nurglings-ability-mischief-makers",
-        "datasheet": "unit-nurglings"
+        "datasheet": "unit-nurglings",
+        "fullRulePath": "books/death-guard/reader.html#nurglings-ability-mischief-makers"
       },
       "owners": [
         "unit-nurglings"
@@ -3177,7 +3184,8 @@
       "termId": "death-guard-unit-plague-drones",
       "navigation": {
         "glossary": "glossary-term-plague-drones",
-        "rule": "unit-plague-drones"
+        "rule": "unit-plague-drones",
+        "fullRulePath": "books/death-guard/reader.html#unit-plague-drones"
       },
       "owners": [],
       "visible": false
@@ -3187,7 +3195,8 @@
       "navigation": {
         "glossary": "glossary-ability-deaths-heads-546f077",
         "rule": "plague-drones-ability-deaths-heads",
-        "datasheet": "unit-plague-drones"
+        "datasheet": "unit-plague-drones",
+        "fullRulePath": "books/death-guard/reader.html#plague-drones-ability-deaths-heads"
       },
       "owners": [
         "unit-plague-drones"
@@ -3415,7 +3424,8 @@
       "termId": "death-guard-unit-plaguebearers",
       "navigation": {
         "glossary": "glossary-term-plaguebearers",
-        "rule": "unit-plaguebearers"
+        "rule": "unit-plaguebearers",
+        "fullRulePath": "books/death-guard/reader.html#unit-plaguebearers"
       },
       "owners": [],
       "visible": false
@@ -3425,7 +3435,8 @@
       "navigation": {
         "glossary": "glossary-ability-infected-outbreak-faaf2d1",
         "rule": "plaguebearers-ability-infected-outbreak",
-        "datasheet": "unit-plaguebearers"
+        "datasheet": "unit-plaguebearers",
+        "fullRulePath": "books/death-guard/reader.html#plaguebearers-ability-infected-outbreak"
       },
       "owners": [
         "unit-plaguebearers"
@@ -3542,7 +3553,8 @@
       "termId": "death-guard-unit-rotigus",
       "navigation": {
         "glossary": "glossary-term-rotigus",
-        "rule": "unit-rotigus"
+        "rule": "unit-rotigus",
+        "fullRulePath": "books/death-guard/reader.html#unit-rotigus"
       },
       "owners": [],
       "visible": false
@@ -3552,7 +3564,8 @@
       "navigation": {
         "glossary": "glossary-ability-virulent-blessing-psychic-62e7cae",
         "rule": "rotigus-ability-virulent-blessing-psychic",
-        "datasheet": "unit-rotigus"
+        "datasheet": "unit-rotigus",
+        "fullRulePath": "books/death-guard/reader.html#rotigus-ability-virulent-blessing-psychic"
       },
       "owners": [
         "unit-rotigus"
@@ -3564,7 +3577,8 @@
       "navigation": {
         "glossary": "glossary-ability-deluge-of-nurgle-aura-49f7690",
         "rule": "rotigus-ability-deluge-of-nurgle-aura",
-        "datasheet": "unit-rotigus"
+        "datasheet": "unit-rotigus",
+        "fullRulePath": "books/death-guard/reader.html#rotigus-ability-deluge-of-nurgle-aura"
       },
       "owners": [
         "unit-rotigus"

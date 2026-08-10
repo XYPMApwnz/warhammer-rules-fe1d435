@@ -4,6 +4,12 @@
   "title": "Dark Angels",
   "shortTitle": "Dark Angels Rules",
   "edition": "11E",
+  "coverImage": "assets/dark-angels-cover-800.webp",
+  "entryCoverImage": "assets/dark-angels-cover-480.webp",
+  "reviewEntry": true,
+  "assetVersions": {
+    "book": 3
+  },
   "factionKeyword": "DARK ANGELS",
   "dependencies": ["space-marines"],
   "currentDatasheetsOnly": true,

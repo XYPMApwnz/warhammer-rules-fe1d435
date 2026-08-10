@@ -37,6 +37,14 @@ const datasheetCss=text('books/shared/datasheet-system.css');
 assert.match(datasheetCss,/\.shared-abilities \.term-button[\s\S]*text-decoration:none/,'Shared abilities must render as compact chips');
 assert.match(datasheetCss,/\.ability h5,\.unit-card \.ability h5 \.term-button[\s\S]*text-align:left/,'Full ability titles must remain left aligned');
 const unitCard=(book,id)=>{const source=text(`books/${book}/reader.html`),match=source.match(new RegExp(`<article class="unit-card[^>]*" id="${id}"[\\s\\S]*?<\\/article>`));assert.ok(match,`${book}: missing ${id}`);return match[0];};
+const daEntry=text('books/dark-angels/index.html'),daReader=text('books/dark-angels/reader.html'),daCss=text('books/dark-angels/styles/book.css'),daManifest=JSON.parse(text('books/dark-angels/sources/source-manifest.json'));
+assert.ok(library.includes('books/dark-angels/index.html')&&library.includes('source-limited preview'),'Library must expose the Dark Angels source-limited preview');
+assert.ok(daEntry.includes('dark-angels-cover-480.webp')&&!daEntry.includes('class="entry-mark"'),'Dark Angels entry must use cover art instead of a text placeholder');
+assert.ok(daReader.includes('faction-hero-cover')&&daCss.includes('dark-angels-cover-800.webp'),'Dark Angels Desktop and Phone Start must use the shared cover hero');
+assert.equal((daReader.match(/<article class="unit-card/g)||[]).length,16,'Dark Angels review must expose 16 current local datasheets');
+assert.equal((daReader.match(/Codex source required/g)||[]).length,3,'Dark Angels must expose three source-limited Codex Detachments');
+assert.equal(daManifest.gates.publishAsComplete,false,'Dark Angels review must not be marked complete');
+assert.ok(!unitCard('dark-angels','unit-belial').includes('dark-angels-cover'),'Dark Angels cover art must not repeat inside Datasheets');
 for(const [book,id,tiers] of [['death-guard','unit-plague-marines',3],['adeptus-mechanicus','unit-kataphron-breachers',2],['tyranids','unit-termagants',2],['tau-empire','unit-broadside-battlesuits',2],['emperors-children','unit-infractors',2],['space-marines','unit-heavy-intercessor-squad',2]]){
   const card=unitCard(book,id),rows=(card.match(/class="points-row/g)||[]).length,status=card.match(/class="unit-status"[^>]*>([^<]*)</)?.[1]||'';
   assert.ok(rows>=tiers,`${book}: each point tier must have its own structured row`);

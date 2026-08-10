@@ -32,7 +32,8 @@ const books=[
   {id:'tyranids',phone:'hive-tyrant.html',matrix:'books/tyranids/generated/compatible-rules.json'},
   {id:'tau-empire',phone:'breacher-team.html',matrix:'books/tau-empire/generated/compatible-rules.json'},
   {id:'emperors-children',phone:'lord-exultant.html',matrix:'books/emperors-children/generated/compatible-rules.json'},
-  {id:'space-marines',phone:'intercessor-squad.html',matrix:'books/space-marines/generated/compatible-rules.json',roster:false}
+  {id:'space-marines',phone:'intercessor-squad.html',matrix:'books/space-marines/generated/compatible-rules.json',roster:false},
+  {id:'dark-angels',phone:'index.html',matrix:null,roster:false,singleReader:true}
 ];
 
 for(const book of books){
@@ -42,10 +43,16 @@ for(const book of books){
   check(`${book.id} public routes exist`,exists(entry)&&exists(reader)&&exists(phone));
   check(`${book.id} is linked from the Library`,library.includes(`books/${book.id}/`));
 
+  const entryHtml=read(entry);
   const readerHtml=read(reader);
   const phoneHtml=read(phone);
-  check(`${book.id} exposes required production paths`,(book.roster===false||/scripts\/roster-filter\.js\?v=\d+/.test(readerHtml))&&/mobile\.js\?v=\d+/.test(phoneHtml));
+  const phoneRuntime=book.singleReader?phoneHtml.includes('new URL("../reader.html"')&&phoneHtml.includes('searchParams.set("view","mobile")'):/mobile\.js\?v=\d+/.test(phoneHtml);
+  check(`${book.id} exposes required production paths`,(book.roster===false||/scripts\/roster-filter\.js\?v=\d+/.test(readerHtml))&&phoneRuntime);
   if(book.matrix)check(`${book.id} Compatible Rules matrix exists`,exists(book.matrix));
+  if(book.id==='dark-angels'){
+    check('dark-angels entry exposes source-limited review status and artwork',entryHtml.includes('Source-limited preview')&&entryHtml.includes('dark-angels-cover-480.webp')&&!entryHtml.includes('class="entry-mark"'));
+    check('dark-angels reader preserves review inventory and source gaps',(readerHtml.match(/<article class="unit-card/g)||[]).length===16&&(readerHtml.match(/Codex source required/g)||[]).length===3);
+  }
 }
 
 check('Core Rules route exists and is linked',exists('books/core-rules/index.html')&&library.includes('books/core-rules/'));

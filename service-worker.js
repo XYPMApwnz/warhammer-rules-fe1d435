@@ -17,7 +17,7 @@ const CHAOS_SPACE_MARINES_FALLBACK = LIBRARY_FALLBACK;
 const ORKS_FALLBACK = LIBRARY_FALLBACK;
 const EMPERORS_CHILDREN_FALLBACK = "./books/emperors-children/index.html";
 const SPACE_MARINES_FALLBACK = LIBRARY_FALLBACK;
-const DARK_ANGELS_FALLBACK = LIBRARY_FALLBACK;
+const DARK_ANGELS_FALLBACK = "./books/dark-angels/index.html";
 const APP_SHELL = [
   "./",
   LIBRARY_FALLBACK,
@@ -242,9 +242,13 @@ const APP_SHELL = [
   ,"./books/space-marines/mobile/related-rules.inc?v=4"
   ,"./books/dark-angels/"
   ,DARK_ANGELS_FALLBACK
+  ,"./books/dark-angels/reader.html"
   ,"./books/dark-angels/mobile/index.html"
   ,"./books/dark-angels/styles/tokens.css?v=2"
-  ,"./books/dark-angels/styles/book.css?v=2"
+  ,"./books/dark-angels/styles/book.css?v=3"
+  ,"./books/dark-angels/assets/dark-angels-cover-480.webp"
+  ,"./books/dark-angels/assets/dark-angels-cover-800.webp"
+  ,"./books/dark-angels/scripts/data.js?v=2"
   ,"./books/dark-angels/scripts/app.js?v=2"
   ,"./books/shared/modal-focus.js?v=1"
   ,"./books/shared/army-related-rules.js?v=9"

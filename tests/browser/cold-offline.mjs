@@ -53,13 +53,23 @@ const books=[
   {name:"T'au Empire",unit:'unit-breacher-team',desktop:'/books/tau-empire/reader.html#unit-breacher-team',phone:'/books/tau-empire/mobile/breacher-team.html'},
   {name:"Emperor's Children",unit:'unit-shalaxi-helbane',desktop:'/books/emperors-children/reader.html#unit-shalaxi-helbane',phone:'/books/emperors-children/mobile/shalaxi-helbane.html'},
   {name:"Emperor's Children Daemonettes",unit:'unit-daemonettes',desktop:'/books/emperors-children/reader.html#unit-daemonettes',phone:'/books/emperors-children/mobile/daemonettes.html'},
-  {name:'Space Marines',unit:'unit-intercessor-squad',desktop:'/books/space-marines/reader.html#unit-intercessor-squad',phone:'/books/space-marines/mobile/intercessor-squad.html'}
+  {name:'Space Marines',unit:'unit-intercessor-squad',desktop:'/books/space-marines/reader.html#unit-intercessor-squad',phone:'/books/space-marines/mobile/intercessor-squad.html'},
+  {name:'Dark Angels',unit:'unit-belial',desktop:'/books/dark-angels/reader.html#unit-belial',phone:'/books/dark-angels/reader.html?view=mobile#unit-belial',related:false,singleReader:true}
 ];
 
-async function openPhonePopup(page,name){
+async function openPhonePopup(page,name,singleReader=false){
   const trigger=page.locator('main button[data-term]:visible').first();
   await trigger.waitFor({state:'visible'});
   await trigger.click();
+  if(singleReader){
+    const card=page.locator('#popupLayer .term-popup').last();
+    await card.waitFor({state:'visible'});
+    assert.ok((await card.textContent()).trim().length>10,`${name} popup lost its rule content`);
+    await card.locator('[data-popup-close]').click();
+    await card.waitFor({state:'hidden'});
+    assert.equal(await trigger.evaluate(node=>node===document.activeElement),true,`${name} popup must restore focus`);
+    return;
+  }
   const dialog=page.locator('#termDialog');
   const card=page.locator('#termPopupStack .mobile-popup-card').first();
   await dialog.waitFor({state:'visible'});
@@ -74,6 +84,18 @@ try{
   const bookContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1440,height:900}});
   try{
     const {page,errors}=await observedPage(bookContext);
+    await page.goto(`${origin}/index.html`);
+    const darkAngelsCard=page.locator('a.book.da');
+    await darkAngelsCard.waitFor({state:'visible'});
+    const darkAngelsCover=darkAngelsCard.locator('img');
+    await darkAngelsCover.scrollIntoViewIfNeeded();
+    await darkAngelsCover.evaluate(image=>image.decode());
+    assert.equal(await darkAngelsCover.evaluate(image=>image.complete&&image.naturalWidth>0&&Math.abs(image.naturalWidth/image.naturalHeight-.8)<.01),true,'Dark Angels Library artwork failed to load');
+    await Promise.all([
+      page.waitForURL(url=>url.pathname==='/books/dark-angels/reader.html'&&url.searchParams.get('view')!=='mobile'),
+      darkAngelsCard.click()
+    ]);
+    assert.match(await page.locator('#start').evaluate(node=>getComputedStyle(node).backgroundImage),/dark-angels-cover-800\.webp/,'Dark Angels Desktop Start lost its artwork');
     for(const book of books){
       errors.length=0;
       await page.goto(origin+book.desktop);
@@ -94,20 +116,54 @@ try{
       }
 
       const switcher=page.locator('[data-view-switch]:visible').first();
+      const phoneTarget=new URL(book.phone,origin);
       await Promise.all([
-        page.waitForURL(url=>url.pathname===book.phone),
+        page.waitForURL(url=>url.pathname===phoneTarget.pathname&&(!phoneTarget.search||url.search===phoneTarget.search)&&(!phoneTarget.hash||url.hash===phoneTarget.hash)),
         switcher.click()
       ]);
       const phoneUnit=page.locator(`#${book.unit}, main .unit-card`).first();
       await phoneUnit.waitFor({state:'visible'});
       assert.ok((await phoneUnit.textContent()).trim().length>100,`${book.name} Phone content is missing`);
       if(book.name==='Space Marines'){assert.ok(await page.locator('#relatedRules').count(),'Space Marines Phone Datasheet Tools are missing');assert.match(await phoneUnit.textContent(),/Wargear Options/);}
-      await openPhonePopup(page,book.name);
+      await openPhonePopup(page,book.name,book.singleReader);
       assert.deepEqual(errors,[],`${book.name} emitted an uncaught runtime error`);
     }
     console.log('PASS six Army Books open desktop content, supported Related Rules, Phone routes and glossary popups');
   }finally{
     await bookContext.close();
+  }
+
+  const previewContext=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});
+  try{
+    const {page,errors}=await observedPage(previewContext);
+    await page.goto(`${origin}/index.html`);
+    await Promise.all([
+      page.waitForURL(url=>url.pathname==='/books/dark-angels/reader.html'&&url.searchParams.get('view')==='mobile'),
+      page.locator('a.book.da').click()
+    ]);
+    assert.match(await page.locator('#start').evaluate(node=>getComputedStyle(node).backgroundImage),/dark-angels-cover-800\.webp/,'Dark Angels Phone Start lost its artwork');
+    for(const viewport of [{width:390,height:844},{width:430,height:932}]){
+      await page.setViewportSize(viewport);
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,`Dark Angels overflows at ${viewport.width}px`);
+    }
+    assert.deepEqual(errors,[],'Dark Angels responsive preview emitted an uncaught runtime error');
+  }finally{
+    await previewContext.close();
+  }
+
+  const noScriptContext=await browser.newContext({javaScriptEnabled:false,serviceWorkers:'block',viewport:{width:390,height:844}});
+  try{
+    const page=await noScriptContext.newPage();
+    await page.goto(`${origin}/books/dark-angels/index.html`);
+    const art=page.locator('.entry-art img');
+    await art.waitFor({state:'visible'});
+    await art.evaluate(image=>image.decode());
+    assert.equal(await art.evaluate(image=>image.complete&&image.naturalWidth>0&&Math.abs(image.naturalWidth/image.naturalHeight-.8)<.01),true,'Dark Angels no-JS entry artwork failed to load');
+    assert.equal(await page.locator('a[href="./reader.html?view=full"]').count(),1,'Dark Angels no-JS Desktop link is missing');
+    assert.equal(await page.locator('a[href="./mobile/index.html?view=mobile"]').count(),1,'Dark Angels no-JS Phone link is missing');
+    assert.equal(await page.locator('a[href="../../index.html"]').count(),1,'Dark Angels no-JS Library return is missing');
+  }finally{
+    await noScriptContext.close();
   }
 
   const rosterContext=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});
@@ -150,6 +206,7 @@ try{
       await page.locator('main .unit-card').first().waitFor({state:'visible'});
       await page.waitForFunction(async()=>Boolean(await caches.match(location.href)));
     }
+    assert.equal(await page.evaluate(async()=>Boolean(await caches.match(new URL('/books/dark-angels/assets/dark-angels-cover-800.webp',location.origin).href))),true,'Dark Angels artwork is absent from the offline cache');
     errors.length=0;
     await offlineContext.setOffline(true);
     for(const book of books){
@@ -159,7 +216,7 @@ try{
       await content.waitFor({state:'visible'});
       assert.ok((await content.textContent()).trim().length>100,`${book.name} is unusable after offline reload`);
     }
-    await openPhonePopup(page,"T'au Empire offline");
+    await openPhonePopup(page,'Dark Angels offline',true);
     assert.deepEqual(errors,[],'Offline smoke emitted an uncaught runtime error');
     console.log('PASS six visited Army Books remain usable after offline reload');
   }finally{

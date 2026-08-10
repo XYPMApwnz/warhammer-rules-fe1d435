@@ -33,6 +33,7 @@
   ],
   "gates": {
     "publishAsComplete": false,
-    "reason": "Faction Pack v1.0 supplements the Codex. Codex text and the current MFM snapshot must be verified before this book can be labelled complete."
+    "reviewLabel": "Source-limited preview",
+    "reason": "Official Dark Angels Faction Pack content is frozen and verified. Three Codex Detachments remain source-limited because the complete frozen Codex source is not available in this repository. Dark Angels points use pinned secondary data and are not backed by a frozen official MFM snapshot."
   }
 }

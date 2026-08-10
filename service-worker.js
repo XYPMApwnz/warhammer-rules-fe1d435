@@ -17,7 +17,9 @@ const CHAOS_SPACE_MARINES_FALLBACK = LIBRARY_FALLBACK;
 const ORKS_FALLBACK = LIBRARY_FALLBACK;
 const EMPERORS_CHILDREN_FALLBACK = "./books/emperors-children/index.html";
 const SPACE_MARINES_FALLBACK = LIBRARY_FALLBACK;
-const DARK_ANGELS_FALLBACK = "./books/dark-angels/index.html";
+const DARK_ANGELS_ENTRY_FALLBACK = "./books/dark-angels/index.html";
+const DARK_ANGELS_DESKTOP_FALLBACK = "./books/dark-angels/reader.html";
+const DARK_ANGELS_MOBILE_FALLBACK = "./books/dark-angels/mobile/index.html";
 const APP_SHELL = [
   "./",
   LIBRARY_FALLBACK,
@@ -241,9 +243,12 @@ const APP_SHELL = [
   ,"./books/space-marines/mobile/phone-popup-controller.js?v=1"
   ,"./books/space-marines/mobile/related-rules.inc?v=4"
   ,"./books/dark-angels/"
-  ,DARK_ANGELS_FALLBACK
+  ,DARK_ANGELS_ENTRY_FALLBACK
   ,"./books/dark-angels/reader.html"
-  ,"./books/dark-angels/mobile/index.html"
+  ,DARK_ANGELS_MOBILE_FALLBACK
+  ,"./books/dark-angels/mobile/mobile.css?v=1"
+  ,"./books/dark-angels/mobile/mobile.js?v=1"
+  ,"./books/dark-angels/mobile/phone-popup-controller.js?v=1"
   ,"./books/dark-angels/styles/tokens.css?v=2"
   ,"./books/dark-angels/styles/book.css?v=3"
   ,"./books/dark-angels/assets/dark-angels-cover-480.webp"
@@ -271,7 +276,9 @@ function navigationFallback(url) {
   if (path.includes("/books/orks/")) return ORKS_FALLBACK;
   if (path.includes("/books/emperors-children/")) return EMPERORS_CHILDREN_FALLBACK;
   if (path.includes("/books/space-marines/")) return SPACE_MARINES_FALLBACK;
-  if (path.includes("/books/dark-angels/")) return DARK_ANGELS_FALLBACK;
+  if (path.includes("/books/dark-angels/mobile/")) return DARK_ANGELS_MOBILE_FALLBACK;
+  if (path.endsWith("/books/dark-angels/reader.html")) return DARK_ANGELS_DESKTOP_FALLBACK;
+  if (path.includes("/books/dark-angels/")) return DARK_ANGELS_ENTRY_FALLBACK;
   return LIBRARY_FALLBACK;
 }
 

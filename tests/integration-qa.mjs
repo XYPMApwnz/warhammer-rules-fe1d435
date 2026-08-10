@@ -33,7 +33,7 @@ const books=[
   {id:'tau-empire',phone:'breacher-team.html',matrix:'books/tau-empire/generated/compatible-rules.json'},
   {id:'emperors-children',phone:'lord-exultant.html',matrix:'books/emperors-children/generated/compatible-rules.json'},
   {id:'space-marines',phone:'intercessor-squad.html',matrix:'books/space-marines/generated/compatible-rules.json',roster:false},
-  {id:'dark-angels',phone:'index.html',matrix:null,roster:false,singleReader:true}
+  {id:'dark-angels',phone:'belial.html',matrix:null,roster:false}
 ];
 
 for(const book of books){
@@ -52,6 +52,8 @@ for(const book of books){
   if(book.id==='dark-angels'){
     check('dark-angels entry exposes source-limited review status and artwork',entryHtml.includes('Source-limited preview')&&entryHtml.includes('dark-angels-cover-480.webp')&&!entryHtml.includes('class="entry-mark"'));
     check('dark-angels reader exposes separated local/shared inventory and preserves source gaps',(readerHtml.match(/<article class="unit-card/g)||[]).length===98&&readerHtml.includes('data-nav-id="datasheets-dark-angels"')&&readerHtml.includes('data-nav-id="datasheets-space-marines"')&&(readerHtml.match(/Codex source required/g)||[]).length===3);
+    const phoneRoutes=fs.readdirSync(path.join(root,'books/dark-angels/mobile')).filter(file=>file.endsWith('.html'));
+    check('dark-angels exposes deterministic generated Phone routes',phoneRoutes.length===109&&phoneHtml.includes('id="unit-belial"')&&!phoneHtml.includes('reader.html?view=mobile'));
   }
 }
 

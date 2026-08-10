@@ -1,1 +1,1 @@
-try{window.WHArmyBook.install({"bookId":"dark-angels","readerPath":"./reader.html"});}catch(error){document.documentElement.dataset.bookError=String(error&&error.stack||error);console.error(error);}
+try{window.WHArmyBook.install({"bookId":"dark-angels","readerPath":"./reader.html","dedicatedMobile":true});}catch(error){document.documentElement.dataset.bookError=String(error&&error.stack||error);console.error(error);}

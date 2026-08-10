@@ -54,7 +54,7 @@ const books=[
   {name:"Emperor's Children",unit:'unit-shalaxi-helbane',desktop:'/books/emperors-children/reader.html#unit-shalaxi-helbane',phone:'/books/emperors-children/mobile/shalaxi-helbane.html'},
   {name:"Emperor's Children Daemonettes",unit:'unit-daemonettes',desktop:'/books/emperors-children/reader.html#unit-daemonettes',phone:'/books/emperors-children/mobile/daemonettes.html'},
   {name:'Space Marines',unit:'unit-intercessor-squad',desktop:'/books/space-marines/reader.html#unit-intercessor-squad',phone:'/books/space-marines/mobile/intercessor-squad.html'},
-  {name:'Dark Angels',unit:'unit-belial',desktop:'/books/dark-angels/reader.html#unit-belial',phone:'/books/dark-angels/reader.html?view=mobile#unit-belial',offline:'/books/dark-angels/reader.html?view=mobile#unit-hellblaster-squad',offlineUnit:'unit-hellblaster-squad',related:false,singleReader:true}
+  {name:'Dark Angels',unit:'unit-belial',desktop:'/books/dark-angels/reader.html#unit-belial',phone:'/books/dark-angels/mobile/belial.html',offline:'/books/dark-angels/mobile/hellblaster-squad.html',offlineUnit:'unit-hellblaster-squad',related:false}
 ];
 
 async function openPhonePopup(page,name,singleReader=false){
@@ -90,6 +90,17 @@ async function assertDarkAngelsLeaderJourney(page,leaderId,targetId){
   assert.match(await page.locator(`#${targetId}`).textContent(),/Space Marines shared datasheet/,'Shared Leader destination lost ownership presentation');
   await page.locator('#backButton').click();
   await page.locator(`#tocTree [data-nav-target="${leaderId}"].is-current`).waitFor({state:'visible'});
+}
+
+async function assertDarkAngelsPhoneLeaderJourney(page,leaderFile,leaderId,targetFile,targetId){
+  await page.goto(`${origin}/books/dark-angels/mobile/${leaderFile}`);
+  const link=page.locator(`#${leaderId} [data-journey-target="${targetId}"]`);
+  await link.waitFor({state:'visible'});
+  await Promise.all([page.waitForURL(url=>url.pathname===`/books/dark-angels/mobile/${targetFile}`),link.click()]);
+  assert.match(await page.locator(`#${targetId}`).textContent(),/Space Marines shared datasheet/,'Phone Leader destination lost ownership presentation');
+  await page.goBack();
+  await page.locator(`#${leaderId}`).waitFor({state:'visible'});
+  assert.equal(new URL(page.url()).pathname,`/books/dark-angels/mobile/${leaderFile}`,'Phone Back lost the originating Dark Angels Leader route');
 }
 
 try{
@@ -148,6 +159,26 @@ try{
     await assertDarkAngelsLeaderJourney(page,'unit-belial','unit-terminator-squad');
     await assertDarkAngelsLeaderJourney(page,'unit-azrael','unit-hellblaster-squad');
     await assertDarkAngelsLeaderJourney(page,'unit-sammael','unit-outrider-squad');
+    await assertDarkAngelsPhoneLeaderJourney(page,'belial.html','unit-belial','terminator-squad.html','unit-terminator-squad');
+    await assertDarkAngelsPhoneLeaderJourney(page,'azrael.html','unit-azrael','hellblaster-squad.html','unit-hellblaster-squad');
+    await assertDarkAngelsPhoneLeaderJourney(page,'sammael.html','unit-sammael','outrider-squad.html','unit-outrider-squad');
+    await page.goto(`${origin}/books/dark-angels/mobile/deathwing-knights.html`);
+    const deathwingWargear=await page.locator('#deathwing-knights-wargear-abilities').textContent();
+    assert.match(deathwingWargear,/Watcher in the Dark/,'Dark Angels Phone Wargear ability regressed');
+    assert.match(deathwingWargear,/These abilities apply only while the corresponding wargear is equipped\./,'Dark Angels Phone Wargear note regressed');
+    const glossaryTrigger=page.locator('#unit-deathwing-knights button[data-term]').first();
+    await glossaryTrigger.click();
+    const glossaryLink=page.locator('#termPopupStack a[data-mega-glossary]').first();
+    await Promise.all([page.waitForURL(url=>url.pathname==='/glossary/index.html'),glossaryLink.click()]);
+    await page.goBack();
+    await page.locator('#termDialog').waitFor({state:'visible'});
+    await page.locator('[data-popup-close="0"]').click();
+    await page.goto(`${origin}/books/dark-angels/mobile/army-rules.html`);
+    assert.match(await page.locator('main').textContent(),/Oath of Moment/);
+    await page.goto(`${origin}/books/dark-angels/mobile/dark-age-arsenal.html`);
+    assert.match(await page.locator('main').textContent(),/Searing Bursts/);
+    await page.goto(`${origin}/books/dark-angels/mobile/company-of-hunters.html`);
+    assert.match(await page.locator('main').textContent(),/Codex source required/);
     console.log('PASS six Army Books open desktop content, supported Related Rules, Phone routes and glossary popups');
   }finally{
     await bookContext.close();
@@ -157,22 +188,21 @@ try{
   try{
     const {page,errors}=await observedPage(previewContext);
     await page.goto(`${origin}/index.html`);
-    await Promise.all([
-      page.waitForURL(url=>url.pathname==='/books/dark-angels/reader.html'&&url.searchParams.get('view')==='mobile'),
-      page.locator('a.book.da').click()
-    ]);
+    await Promise.all([page.waitForURL(url=>url.pathname==='/books/dark-angels/mobile/index.html'),page.locator('a.book.da').click()]);
     assert.match(await page.locator('#start').evaluate(node=>getComputedStyle(node).backgroundImage),/dark-angels-cover-800\.webp/,'Dark Angels Phone Start lost its artwork');
-    await page.locator('#navMenu').click();
-    await page.locator('li[data-nav-id="datasheets"] > .toc-row > [data-nav-toggle]').click();
-    await page.locator('li[data-nav-id="datasheets-space-marines"] > .toc-row > [data-nav-toggle]').click();
-    await page.locator('li[data-nav-id="datasheets-space-marines-infantry"] > .toc-row > [data-nav-toggle]').click();
-    await page.locator('li[data-nav-id="unit-hellblaster-squad"] > .toc-row > [data-nav-target="unit-hellblaster-squad"]').click();
-    await page.locator('#tocTree [data-nav-target="unit-hellblaster-squad"].is-current').waitFor({state:'attached'});
+    await page.locator('#navButton').click();
+    await page.locator('.phone-tree > details').nth(1).locator(':scope > summary').click();
+    await page.locator('[data-datasheet-owner="space-marines"] > summary').click();
+    await page.locator('[data-category-id="datasheets-space-marines-infantry"] > summary').click();
+    await Promise.all([page.waitForURL(url=>url.pathname==='/books/dark-angels/mobile/hellblaster-squad.html'),page.locator('a[href="./hellblaster-squad.html"]').click()]);
+    assert.equal(await page.locator('a[href="./hellblaster-squad.html"][aria-current="page"]').count(),1,'Dark Angels Phone current route is not marked');
     assert.match(await page.locator('#unit-hellblaster-squad').textContent(),/Space Marines shared datasheet/,'Dark Angels Phone shared datasheet lost ownership context');
     for(const viewport of [{width:390,height:844},{width:430,height:932}]){
       await page.setViewportSize(viewport);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,`Dark Angels overflows at ${viewport.width}px`);
     }
+    await page.reload();
+    await page.locator('#unit-hellblaster-squad').waitFor({state:'visible'});
     assert.deepEqual(errors,[],'Dark Angels responsive preview emitted an uncaught runtime error');
   }finally{
     await previewContext.close();
@@ -189,6 +219,10 @@ try{
     assert.equal(await page.locator('a[href="./reader.html?view=full"]').count(),1,'Dark Angels no-JS Desktop link is missing');
     assert.equal(await page.locator('a[href="./mobile/index.html?view=mobile"]').count(),1,'Dark Angels no-JS Phone link is missing');
     assert.equal(await page.locator('a[href="../../index.html"]').count(),1,'Dark Angels no-JS Library return is missing');
+    await page.goto(`${origin}/books/dark-angels/mobile/belial.html`);
+    assert.ok((await page.locator('#unit-belial').textContent()).trim().length>100,'Dark Angels no-JS Phone Datasheet is not meaningful');
+    assert.equal(await page.locator('a[href="../../../index.html"]').count(),1,'Dark Angels no-JS Phone Library link is missing');
+    assert.equal(await page.locator('[data-view-switch]').count(),1,'Dark Angels no-JS Phone Desktop link is missing');
   }finally{
     await noScriptContext.close();
   }
@@ -295,7 +329,7 @@ try{
       await content.waitFor({state:'visible'});
       assert.ok((await content.textContent()).trim().length>100,`${book.name} is unusable after offline reload`);
     }
-    await openPhonePopup(page,'Dark Angels offline',true);
+    await openPhonePopup(page,'Dark Angels offline');
     assert.deepEqual(errors,[],'Offline smoke emitted an uncaught runtime error');
     console.log('PASS six visited Army Books remain usable after offline reload');
   }finally{

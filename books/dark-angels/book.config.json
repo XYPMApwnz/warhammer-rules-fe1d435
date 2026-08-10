@@ -7,8 +7,10 @@
   "coverImage": "assets/dark-angels-cover-800.webp",
   "entryCoverImage": "assets/dark-angels-cover-480.webp",
   "reviewEntry": true,
+  "generatedMobile": true,
   "assetVersions": {
-    "book": 3
+    "book": 3,
+    "app": 3
   },
   "factionKeyword": "DARK ANGELS",
   "dependencies": ["space-marines"],

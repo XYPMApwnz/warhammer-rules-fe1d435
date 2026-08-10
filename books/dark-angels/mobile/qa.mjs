@@ -1,0 +1,29 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+
+const root=path.dirname(fileURLToPath(import.meta.url)),bookRoot=path.resolve(root,'..');
+const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),config=JSON.parse(fs.readFileSync(path.join(bookRoot,'book.config.json'),'utf8')),manifest=JSON.parse(fs.readFileSync(path.join(bookRoot,'sources/source-manifest.json'),'utf8'));
+const routeIds=[...reader.matchAll(/<(?:section|article)[^>]+id="((?:detachment|unit)-[^"]+)"/g)].map(match=>match[1]);
+const routes=['index.html','army-rules.html','updates.html',...routeIds.map(id=>id.replace(/^(?:detachment|unit)-/,'')+'.html')],htmlFiles=fs.readdirSync(root).filter(file=>file.endsWith('.html')).sort();
+assert.equal(routeIds.filter(id=>id.startsWith('detachment-')).length,8);
+assert.equal(routeIds.filter(id=>id.startsWith('unit-')).length,98);
+assert.equal(new Set(routeIds).size,106);
+assert.equal(routes.length,109);
+assert.deepEqual(htmlFiles,routes.slice().sort(),'Phone routes contain missing or orphan HTML');
+for(const route of routes){const html=fs.readFileSync(path.join(root,route),'utf8');assert.match(html,/\.\/mobile\.js\?v=1/);assert.match(html,/\.\/phone-popup-controller\.js\?v=1/);assert.doesNotMatch(html,/reader\.html\?view=mobile/);assert.match(html,/data-view-switch/);}
+const start=fs.readFileSync(path.join(root,'index.html'),'utf8'),belial=fs.readFileSync(path.join(root,'belial.html'),'utf8'),knights=fs.readFileSync(path.join(root,'deathwing-knights.html'),'utf8');
+assert.match(fs.readFileSync(path.join(root,'../reader.html'),'utf8'),/\.\/scripts\/app\.js\?v=3/,'Dark Angels Desktop app version was not bumped for generated Phone routing');
+assert.match(start,/id="start"/);assert.match(start,/Source-limited preview/);assert.match(start,/faction-hero-cover/);assert.doesNotMatch(belial,/dark-angels-cover/);
+assert.match(fs.readFileSync(path.join(root,'army-rules.html'),'utf8'),/data-term="space-marines-army-rule-oath-of-moment"/);
+assert.equal(routes.filter(file=>['company-of-hunters.html','dark-age-arsenal.html','darkflight-pursuit.html','inner-circle-task-force.html','interrogation-conclave.html','lion-s-blade-task-force.html','unforgiven-task-force.html','wrath-of-the-rock.html'].includes(file)).length,8);
+assert.equal(['company-of-hunters.html','inner-circle-task-force.html','unforgiven-task-force.html'].filter(file=>fs.readFileSync(path.join(root,file),'utf8').includes('Codex source required')).length,3);
+assert.match(start,/data-datasheet-owner="dark-angels"[\s\S]*Dark Angels <span>16<\/span>/);assert.match(start,/data-datasheet-owner="space-marines"[\s\S]*Space Marines <span>82<\/span>/);
+for(const file of ['hellblaster-squad.html','intercessor-squad.html','bladeguard-veteran-squad.html','terminator-squad.html','terminator-assault-squad.html','outrider-squad.html','land-raider.html','redemptor-dreadnought.html'])assert.ok(htmlFiles.includes(file),`Missing shared route ${file}`);
+for(const file of ['victrix-honour-guard.html','roboute-guilliman.html','marneus-calgar-in-armour-of-antilochus.html','vulkan-hestan.html','kayvaan-shrike.html','ravenwing-talonmaster.html','deathwing-strikemaster.html','deathwing-command-squad.html'])assert.ok(!htmlFiles.includes(file),`Excluded route leaked: ${file}`);
+for(const [leader,target,file] of [['belial','unit-terminator-squad','terminator-squad.html'],['azrael','unit-hellblaster-squad','hellblaster-squad.html'],['sammael','unit-outrider-squad','outrider-squad.html']])assert.match(fs.readFileSync(path.join(root,`${leader}.html`),'utf8'),new RegExp(`data-journey-target="${target}"[^>]*href="\\./${file}"`));
+assert.match(knights,/Watcher in the Dark/);assert.match(knights,/These abilities apply only while the corresponding wargear is equipped\./);
+assert.match(fs.readFileSync(path.join(root,'hellblaster-squad.html'),'utf8'),/data-term="space-marines-/);assert.doesNotMatch(fs.readFileSync(path.join(root,'hellblaster-squad.html'),'utf8'),/data-term="dark-angels-weapon-/);
+assert.equal(config.generatedMobile,true);assert.equal(manifest.gates.publishAsComplete,false);assert.doesNotMatch(fs.readFileSync(path.join(root,'mobile.js'),'utf8'),/roster|compatible/i);
+console.log('Dark Angels Phone QA: 109 routes, 8 Detachments, 16 local and 82 shared Datasheets.');

@@ -244,8 +244,12 @@ function pointRows(entry,composition){
 }
 
 function relationTargets(text){
-  const output=[];
-  for(const match of String(text||'').matchAll(/\^\^(.+?)\^\^/g))output.push(clean(match[1]));
+  const value=String(text||''),output=[];
+  for(const match of value.matchAll(/\^\^(.+?)\^\^/g))output.push(clean(match[1]));
+  if(!output.length){
+    const list=value.match(/attached to the following units:\s*([\s\S]+)$/i)?.[1];
+    if(list)output.push(...list.split(/\s*■\s*/).map(clean).filter(Boolean));
+  }
   return unique(output,item=>key(item));
 }
 function relationsFor(abilities,profiles){
@@ -412,10 +416,16 @@ const findEnhancements=value=>{
 };
 roots.forEach(findEnhancements);
 const enhancements=unique(enhancementItems,item=>`${key(item.detachment)}:${key(item.title)}`).sort((a,b)=>a.detachment.localeCompare(b.detachment)||a.title.localeCompare(b.title));
+if(config.faction?.qualifyDuplicateEnhancementIds===true){
+  const counts=new Map();
+  for(const item of enhancements)counts.set(key(item.title),(counts.get(key(item.title))||0)+1);
+  for(const item of enhancements)if(counts.get(key(item.title))>1)item.id=`enhancement-${slug(item.detachment)}-${slug(item.title)}`;
+}
 const publishedTitles=new Set(parsed.map(item=>key(item.title)));
-for(const unit of parsed)for(const role of ['leader','support'])unit.relations[role]=(unit.relations[role]||[])
-  .flatMap(target=>String(target).split(/[;,]/).map(value=>value.trim()).filter(Boolean))
-  .filter(target=>publishedTitles.has(key(target)));
+for(const unit of parsed)for(const role of ['leader','support']){
+  unit.relations[role]=(unit.relations[role]||[]).flatMap(target=>String(target).split(/[;,]/).map(value=>value.trim()).filter(Boolean));
+  if(config.faction?.preserveExternalRelations!==true)unit.relations[role]=unit.relations[role].filter(target=>publishedTitles.has(key(target)));
+}
 
 const sourceMeta={
   title:`BSData Warhammer 40,000 11th Edition · ${config.faction.title}`,

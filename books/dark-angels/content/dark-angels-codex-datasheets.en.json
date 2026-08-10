@@ -18,7 +18,9 @@
       "points": [
         {
           "label": "3 models",
-          "value": 105
+          "value": 105,
+          "minModels": 3,
+          "maxModels": 3
         },
         {
           "label": "3+ unit: 3 models",
@@ -157,29 +159,10 @@
         },
         {
           "title": "Honour or Death",
-          "text": "While this unit contains a Ravenwing Champion, add 1 to Advance and Charge rolls made for this unit and you can target this unit with the Heroic Intervention Stratagem for 0CP."
-        },
-        {
-          "title": "Pistol",
-          "text": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. \n\nUnits containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: \n- One or more of its [CLOSE-QUARTERS] weapons. \n- One or more of its other ranged weapons."
-        },
-        {
-          "title": "Blast",
-          "text": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. \n*Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*"
-        },
-        {
-          "title": "Hazardous",
-          "text": "Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step."
-        },
-        {
-          "title": "Rapid Fire",
-          "text": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. \n*Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range, you would gather one additional attack dice for that weapon (for a total of two for that weapon).*"
-        },
-        {
-          "title": "Devastating Wounds",
-          "text": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. \nMortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. \nExample: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*"
+          "text": "While this unit contains a Ravenwing Champion, add 1 to Advance and Charge rolls made for this unit. When you target this unit with the Heroic Intervention Stratagem, that use is -1 CP."
         }
       ],
+      "wargearAbilities": [],
       "keywords": [
         "Mounted",
         "Grenades",
@@ -220,7 +203,10 @@
       "paidWargear": [],
       "relations": {
         "leader": [],
-        "support": [],
+        "support": [
+          "Outrider Squad",
+          "Ravenwing Black Knights"
+        ],
         "attachedUnit": [],
         "transport": []
       }
@@ -234,7 +220,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 70
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "profiles": [
@@ -294,16 +282,9 @@
         {
           "title": "Feared Interrogator",
           "text": "At the start of the Fight phase, each enemy Character unit within 6\" of this model must take a Battle-shock test, subtracting 1 from that test when they do. In addition, each time this model destroys an enemy Character model with a melee attack, you gain 1CP."
-        },
-        {
-          "title": "Leader",
-          "text": "This model can be attached to the following units:\n■ Assault Intercessor Squad\n■ Bladeguard Veteran Squad\n■ Hellblaster Squad\n■ Infernus Squad\n■ Inner Circle Companions\n■ Intercessor Squad\n■ Sternguard Veteran Squad\n■ Tactical Squad"
-        },
-        {
-          "title": "Pistol",
-          "text": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. \n\nUnits containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: \n- One or more of its [CLOSE-QUARTERS] weapons. \n- One or more of its other ranged weapons."
         }
       ],
+      "wargearAbilities": [],
       "keywords": [
         "Character",
         "Epic Hero",
@@ -329,7 +310,16 @@
       ],
       "paidWargear": [],
       "relations": {
-        "leader": [],
+        "leader": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Inner Circle Companions",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad",
+          "Tactical Squad"
+        ],
         "support": [],
         "attachedUnit": [],
         "transport": []
@@ -344,7 +334,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 140
+          "value": 140,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "profiles": [
@@ -397,24 +389,9 @@
         {
           "title": "The Lion Helm",
           "text": "Models in the bearer’s unit have a 4+ invulnerable save. In addition, once per battle, in any phase, the bearer can summon a Watcher in the Dark. When it does, until the end of the phase, models in the bearer’s unit have the Feel No Pain 4+ ability against mortal wounds."
-        },
-        {
-          "title": "Leader",
-          "text": "This model can be attached to the following units:\n■ Assault Intercessor Squad\n■ Bladeguard Veteran Squad\n■ Hellblaster Squad\n■ Infernus Squad\n■ Inner Circle Companions\n■ Intercessor Squad\n■ Sternguard Veteran Squad\n■ Tactical Squad"
-        },
-        {
-          "title": "Anti",
-          "text": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.\n*Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
-        },
-        {
-          "title": "Devastating Wounds",
-          "text": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. \nMortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. \nExample: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*"
-        },
-        {
-          "title": "Rapid Fire",
-          "text": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. \n*Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range, you would gather one additional attack dice for that weapon (for a total of two for that weapon).*"
         }
       ],
+      "wargearAbilities": [],
       "keywords": [
         "Character",
         "Epic Hero",
@@ -440,7 +417,16 @@
       ],
       "paidWargear": [],
       "relations": {
-        "leader": [],
+        "leader": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Inner Circle Companions",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad",
+          "Tactical Squad"
+        ],
         "support": [],
         "attachedUnit": [],
         "transport": []
@@ -455,7 +441,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 75
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "profiles": [
@@ -506,22 +494,11 @@
           "text": "Each time a melee attack is allocated to this model, after the attacking model’s unit has finished making its attacks, roll one D6 (to a maximum of six D6 per attacking unit): for each 4+, the attacking unit suffers 1 mortal wound."
         },
         {
-          "title": "Leader",
-          "text": "This unit can be attached to the following units:\n■ Deathwing Knights\n■ Deathwing Terminator Squad\n■ Terminator Assault Squad\n■ Terminator Squad"
-        },
-        {
-          "title": "Precision",
-          "text": "While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group."
-        },
-        {
-          "title": "Rapid Fire",
-          "text": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. \n*Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range, you would gather one additional attack dice for that weapon (for a total of two for that weapon).*"
-        },
-        {
           "title": "Deep Strike",
           "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
         }
       ],
+      "wargearAbilities": [],
       "keywords": [
         "Character",
         "Epic Hero",
@@ -546,7 +523,12 @@
       ],
       "paidWargear": [],
       "relations": {
-        "leader": [],
+        "leader": [
+          "Deathwing Knights",
+          "Deathwing Terminator Squad",
+          "Terminator Assault Squad",
+          "Terminator Squad"
+        ],
         "support": [],
         "attachedUnit": [],
         "transport": []
@@ -561,7 +543,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 75
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "profiles": [
@@ -634,38 +618,11 @@
           "text": "While this model is leading a unit, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. When this model is destroyed, each friendly Adeptus Astartes unit within 6\" of this model must take a Battle-shock test."
         },
         {
-          "title": "Leader",
-          "text": "This model can be attached to the following units:\n■ Assault Intercessor Squad\n■ Bladeguard Veteran Squad\n■ Hellblaster Squad\n■ Infernus Squad\n■ Inner Circle Companions\n■ Intercessor Squad\n■ Sternguard Veterans Squad\n■ Tactical Squad"
-        },
-        {
           "title": "Psychic Hood",
           "text": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks."
-        },
-        {
-          "title": "Pistol",
-          "text": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. \n\nUnits containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: \n- One or more of its [CLOSE-QUARTERS] weapons. \n- One or more of its other ranged weapons."
-        },
-        {
-          "title": "Precision",
-          "text": "While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group."
-        },
-        {
-          "title": "Devastating Wounds",
-          "text": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. \nMortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. \nExample: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*"
-        },
-        {
-          "title": "Psychic",
-          "text": "Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules)."
-        },
-        {
-          "title": "Hazardous",
-          "text": "Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step."
-        },
-        {
-          "title": "Anti",
-          "text": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.\n*Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
         }
       ],
+      "wargearAbilities": [],
       "keywords": [
         "Character",
         "Epic Hero",
@@ -691,7 +648,16 @@
       ],
       "paidWargear": [],
       "relations": {
-        "leader": [],
+        "leader": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Inner Circle Companions",
+          "Intercessor Squad",
+          "Sternguard Veterans Squad",
+          "Tactical Squad"
+        ],
         "support": [],
         "attachedUnit": [],
         "transport": []
@@ -706,7 +672,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 70
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "profiles": [
@@ -755,12 +723,9 @@
         {
           "title": "The Spiritshield Helm",
           "text": "This model has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds."
-        },
-        {
-          "title": "Leader",
-          "text": "This model can be attached to the following units:\n■ Assault Intercessor Squad\n■ Bladeguard Veteran Squad\n■ Infernus Squad\n■ Inner Circle Companions\n■ Intercessor Squad\n■ Sternguard Veteran Squad\n■ Tactical Squad"
         }
       ],
+      "wargearAbilities": [],
       "keywords": [
         "Character",
         "Epic Hero",
@@ -786,7 +751,15 @@
       ],
       "paidWargear": [],
       "relations": {
-        "leader": [],
+        "leader": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Infernus Squad",
+          "Inner Circle Companions",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad",
+          "Tactical Squad"
+        ],
         "support": [],
         "attachedUnit": [],
         "transport": []
@@ -801,7 +774,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 265
+          "value": 265,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "profiles": [
@@ -878,18 +853,6 @@
           "text": "While this model is within 3\" of one or more friendly Adeptus Astartes Infantry units, this model has the Lone Operative ability."
         },
         {
-          "title": "Pistol",
-          "text": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. \n\nUnits containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: \n- One or more of its [CLOSE-QUARTERS] weapons. \n- One or more of its other ranged weapons."
-        },
-        {
-          "title": "Lethal Hits",
-          "text": "Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target. \n*Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].*"
-        },
-        {
-          "title": "Sustained Hits",
-          "text": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.\n*Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability)."
-        },
-        {
           "title": "Deep Strike",
           "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
         },
@@ -898,6 +861,7 @@
           "text": "While every model in a unit has this ability, that unit is a Fights First unit. \nSee the Resolve Fights First Combats step in the Fight phase (12.04)."
         }
       ],
+      "wargearAbilities": [],
       "keywords": [
         "Character",
         "Epic Hero",
@@ -936,7 +900,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 95
+          "value": 95,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "profiles": [
@@ -1001,40 +967,18 @@
       ],
       "abilities": [
         {
-          "title": "Leader",
-          "text": "This model can be attached to the following units:\n■ Outrider Squad\n■ Ravenwing Black Knights"
-        },
-        {
           "title": "Grand Master of the Ravenwing",
           "text": "▪ This unit’s ranged attacks have [ASSAULT].\n▪ When this unit is selected to make an advance move, that advance move does not prevent this unit from being eligible to declare a charge.\n▪ This unit has MOBILE"
         },
         {
           "title": "Cut Off Their Escape",
           "text": "Each time an enemy unit (excluding Monsters and Vehicles) within Engagement Range of this model’s unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests as if their unit was Battle-shocked. When doing so, if that enemy unit is also Battle-shocked by other means, subtract 1 from each of those Desperate Escape tests."
-        },
+        }
+      ],
+      "wargearAbilities": [
         {
           "title": "Master of the Ravenwing",
           "text": "Ravenwing model only. This model's unit can declare a charge in a turn in which it Advanced, and you can re-roll Charge rolls made for that unit."
-        },
-        {
-          "title": "Pistol",
-          "text": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. \n\nUnits containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: \n- One or more of its [CLOSE-QUARTERS] weapons. \n- One or more of its other ranged weapons."
-        },
-        {
-          "title": "Blast",
-          "text": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. \n*Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*"
-        },
-        {
-          "title": "Rapid Fire",
-          "text": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. \n*Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range, you would gather one additional attack dice for that weapon (for a total of two for that weapon).*"
-        },
-        {
-          "title": "Twin-linked",
-          "text": "Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll."
-        },
-        {
-          "title": "Sustained Hits",
-          "text": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.\n*Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability)."
         }
       ],
       "keywords": [
@@ -1063,7 +1007,10 @@
       ],
       "paidWargear": [],
       "relations": {
-        "leader": [],
+        "leader": [
+          "Outrider Squad",
+          "Ravenwing Black Knights"
+        ],
         "support": [],
         "attachedUnit": [],
         "transport": []
@@ -1078,7 +1025,9 @@
       "points": [
         {
           "label": "5 models",
-          "value": 240
+          "value": 240,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
           "label": "3+ unit: 5 models",
@@ -1171,28 +1120,14 @@
           "text": "At the start of the battle, you can set up one Teleport Homer token for this unit anywhere on the battlefield that is not in your opponent’s deployment zone. If you do, once per battle, you can target this unit with the Rapid Ingress Stratagem for 0CP, but when resolving that Stratagem, you must set this unit up within 3\" horizontally of that token and not within 8\" horizontally of any enemy models. That token is then removed."
         },
         {
-          "title": "Watcher in the Dark",
-          "text": "Once per battle, in any phase, just after a mortal wound is allocated to an Adeptus Astartes model in this unit, this unit can summon a Watcher in the Dark. When it does, until the end of the phase, models in this unit have the Feel No Pain 4+ ability against mortal wounds."
-        },
-        {
-          "title": "Anti",
-          "text": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.\n*Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
-        },
-        {
-          "title": "Devastating Wounds",
-          "text": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. \nMortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. \nExample: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*"
-        },
-        {
-          "title": "Sustained Hits",
-          "text": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.\n*Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability)."
-        },
-        {
-          "title": "Lethal Hits",
-          "text": "Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target. \n*Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].*"
-        },
-        {
           "title": "Deep Strike",
           "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "wargearAbilities": [
+        {
+          "title": "Watcher in the Dark",
+          "text": "Once per battle, in any phase, just after a mortal wound is allocated to an Adeptus Astartes model in this unit, this unit can summon a Watcher in the Dark. When it does, until the end of the phase, models in this unit have the Feel No Pain 4+ ability against mortal wounds."
         }
       ],
       "keywords": [
@@ -1232,11 +1167,15 @@
       "points": [
         {
           "label": "5 models",
-          "value": 165
+          "value": 165,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
-          "label": "10 models",
-          "value": 330
+          "label": "6-10 models",
+          "value": 330,
+          "minModels": 6,
+          "maxModels": 10
         }
       ],
       "profiles": [
@@ -1402,40 +1341,14 @@
           "text": "At the start of the battle, you can set up one Teleport Homer token for this unit anywhere on the battlefield that is not in your opponent’s deployment zone. If you do, once per battle, you can target this unit with the Rapid Ingress Stratagem for 0CP, but when resolving that Stratagem, you must set this unit up within 3\" horizontally of that token and not within 8\" horizontally of any enemy models. That token is then removed."
         },
         {
-          "title": "Watcher in the Dark",
-          "text": "Once per battle, in any phase, just after a mortal wound is allocated to an Adeptus Astartes model in this unit, this unit can summon a Watcher in the Dark. When it does, until the end of the phase, models in this unit have the Feel No Pain 4+ ability against mortal wounds."
-        },
-        {
-          "title": "Anti",
-          "text": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.\n*Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
-        },
-        {
-          "title": "Blast",
-          "text": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. \n*Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*"
-        },
-        {
-          "title": "Rapid Fire",
-          "text": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. \n*Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range, you would gather one additional attack dice for that weapon (for a total of two for that weapon).*"
-        },
-        {
-          "title": "Hazardous",
-          "text": "Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step."
-        },
-        {
-          "title": "Devastating Wounds",
-          "text": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. \nMortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. \nExample: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*"
-        },
-        {
-          "title": "Ignores Cover",
-          "text": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth)."
-        },
-        {
-          "title": "Torrent",
-          "text": "Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target."
-        },
-        {
           "title": "Deep Strike",
           "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "wargearAbilities": [
+        {
+          "title": "Watcher in the Dark",
+          "text": "Once per battle, in any phase, just after a mortal wound is allocated to an Adeptus Astartes model in this unit, this unit can summon a Watcher in the Dark. When it does, until the end of the phase, models in this unit have the Feel No Pain 4+ ability against mortal wounds."
         }
       ],
       "keywords": [
@@ -1477,7 +1390,9 @@
       "points": [
         {
           "label": "3 models",
-          "value": 80
+          "value": 80,
+          "minModels": 3,
+          "maxModels": 3
         },
         {
           "label": "3+ unit: 3 models",
@@ -1485,7 +1400,9 @@
         },
         {
           "label": "6 models",
-          "value": 160
+          "value": 160,
+          "minModels": 6,
+          "maxModels": 6
         },
         {
           "label": "3+ unit: 6 models",
@@ -1555,6 +1472,7 @@
           "text": "Each time a model in this unit makes an attack that targets a Character unit, add 1 to the Hit roll."
         }
       ],
+      "wargearAbilities": [],
       "keywords": [
         "Infantry",
         "Imperium",
@@ -1587,11 +1505,13 @@
       "title": "Land Speeder Vengeance",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "1 model",
-          "value": 130
+          "value": 130,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
@@ -1679,30 +1599,11 @@
           "text": "Once per turn, in your opponent’s Shooting phase, when another friendly Adeptus Astartes unit within 6\" of this model is destroyed, one model with this ability can use it. If it does, after the attacking unit has finished making its attacks, that model can shoot as if it were your Shooting phase, but when resolving those attacks it can only target that enemy unit (and only if it is an eligible target)."
         },
         {
-          "title": "Blast",
-          "text": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. \n*Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*"
-        },
-        {
-          "title": "Twin-linked",
-          "text": "Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll."
-        },
-        {
-          "title": "Hazardous",
-          "text": "Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step."
-        },
-        {
-          "title": "Devastating Wounds",
-          "text": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. \nMortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. \nExample: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*"
-        },
-        {
-          "title": "Sustained Hits",
-          "text": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.\n*Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability)."
-        },
-        {
           "title": "Deadly Demise D3",
-          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n*Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
         }
       ],
+      "wargearAbilities": [],
       "keywords": [
         "Fly",
         "Imperium",
@@ -1736,11 +1637,13 @@
       "title": "Nephilim Jetfighter",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "1 model",
-          "value": 180
+          "value": 180,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "profiles": [
@@ -1828,22 +1731,11 @@
           "text": "5+"
         },
         {
-          "title": "Anti",
-          "text": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.\n*Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
-        },
-        {
-          "title": "Sustained Hits",
-          "text": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.\n*Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability)."
-        },
-        {
-          "title": "Twin-linked",
-          "text": "Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll."
-        },
-        {
           "title": "Deadly Demise D3",
-          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n*Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
         }
       ],
+      "wargearAbilities": [],
       "keywords": [
         "Vehicle",
         "Fly",
@@ -1877,11 +1769,13 @@
       "title": "Ravenwing Black Knights",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Mounted",
       "points": [
         {
           "label": "3 models",
-          "value": 75
+          "value": 75,
+          "minModels": 3,
+          "maxModels": 3
         },
         {
           "label": "3+ unit: 3 models",
@@ -1889,7 +1783,9 @@
         },
         {
           "label": "6 models",
-          "value": 150
+          "value": 150,
+          "minModels": 6,
+          "maxModels": 6
         },
         {
           "label": "3+ unit: 6 models",
@@ -1998,28 +1894,9 @@
         {
           "title": "Attached Unit",
           "text": "If a Character unit from your army with the Leader ability can be attached to an Outrider Squad, it can be attached to this unit instead."
-        },
-        {
-          "title": "Pistol",
-          "text": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. \n\nUnits containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: \n- One or more of its [CLOSE-QUARTERS] weapons. \n- One or more of its other ranged weapons."
-        },
-        {
-          "title": "Blast",
-          "text": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. \n*Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*"
-        },
-        {
-          "title": "Hazardous",
-          "text": "Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step."
-        },
-        {
-          "title": "Rapid Fire",
-          "text": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. \n*Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range, you would gather one additional attack dice for that weapon (for a total of two for that weapon).*"
-        },
-        {
-          "title": "Devastating Wounds",
-          "text": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. \nMortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. \nExample: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*"
         }
       ],
+      "wargearAbilities": [],
       "keywords": [
         "Mounted",
         "Grenades",
@@ -2054,11 +1931,13 @@
       "title": "Ravenwing Dark Talon",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "1 model",
-          "value": 200
+          "value": 200,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "profiles": [
@@ -2120,26 +1999,11 @@
           "text": "While this model has 1-3 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
         },
         {
-          "title": "Rapid Fire",
-          "text": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. \n*Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range, you would gather one additional attack dice for that weapon (for a total of two for that weapon).*"
-        },
-        {
-          "title": "Twin-linked",
-          "text": "Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll."
-        },
-        {
-          "title": "Blast",
-          "text": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. \n*Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*"
-        },
-        {
-          "title": "Devastating Wounds",
-          "text": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. \nMortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. \nExample: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*"
-        },
-        {
           "title": "Deadly Demise D3",
-          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n*Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
         }
       ],
+      "wargearAbilities": [],
       "keywords": [
         "Imperium",
         "Fly",
@@ -2173,11 +2037,13 @@
       "title": "Ravenwing Darkshroud",
       "status": "Current",
       "sourceLayer": "codex",
-      "category": "Other",
+      "category": "Vehicle",
       "points": [
         {
           "label": "1 model",
-          "value": 70
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "profiles": [
@@ -2239,18 +2105,11 @@
           "text": "Friendly ADEPTUS ASTARTES units within 6\" of this unit have Stealth"
         },
         {
-          "title": "Devastating Wounds",
-          "text": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. \nMortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. \nExample: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*"
-        },
-        {
-          "title": "Sustained Hits",
-          "text": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.\n*Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability)."
-        },
-        {
           "title": "Deadly Demise D3",
-          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n*Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
         }
       ],
+      "wargearAbilities": [],
       "keywords": [
         "Darkshroud",
         "Imperium",
@@ -2291,11 +2150,15 @@
       "points": [
         {
           "label": "5 models",
-          "value": 200
+          "value": 200,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
-          "label": "10 models",
-          "value": 400
+          "label": "6-10 models",
+          "value": 400,
+          "minModels": 6,
+          "maxModels": 10
         }
       ],
       "profiles": [
@@ -2533,10 +2396,6 @@
           "text": "If a Character unit from your army with the Leader ability can be attached to a Terminator Squad, it can be attached to this unit instead."
         },
         {
-          "title": "Watcher in the Dark",
-          "text": "Once per battle, in any phase, just after a mortal wound is allocated to an Adeptus Astartes model in this unit, this unit can summon a Watcher in the Dark. When it does, until the end of the phase, models in this unit have the Feel No Pain 4+ ability against mortal wounds."
-        },
-        {
           "title": "Invulnerable Save",
           "text": "4+"
         },
@@ -2553,48 +2412,18 @@
           "text": "While this unit contains a Company Champion, add 1 to Advance and Charge rolls made for this unit and you can target this unit with the Heroic Intervention Stratagem for 0CP."
         },
         {
-          "title": "Storm Shield",
-          "text": "The bearer has a Wounds characteristic of 4."
-        },
-        {
-          "title": "Anti",
-          "text": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.\n*Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
-        },
-        {
-          "title": "Precision",
-          "text": "While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group."
-        },
-        {
-          "title": "Rapid Fire",
-          "text": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. \n*Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range, you would gather one additional attack dice for that weapon (for a total of two for that weapon).*"
-        },
-        {
-          "title": "Blast",
-          "text": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. \n*Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*"
-        },
-        {
-          "title": "Devastating Wounds",
-          "text": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. \nMortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. \nExample: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*"
-        },
-        {
-          "title": "Ignores Cover",
-          "text": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth)."
-        },
-        {
-          "title": "Torrent",
-          "text": "Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target."
-        },
-        {
-          "title": "Hazardous",
-          "text": "Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step."
-        },
-        {
-          "title": "Twin-linked",
-          "text": "Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll."
-        },
-        {
           "title": "Deep Strike",
           "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "wargearAbilities": [
+        {
+          "title": "Watcher in the Dark",
+          "text": "Once per battle, in any phase, just after a mortal wound is allocated to an Adeptus Astartes model in this unit, this unit can summon a Watcher in the Dark. When it does, until the end of the phase, models in this unit have the Feel No Pain 4+ ability against mortal wounds."
+        },
+        {
+          "title": "Storm Shield",
+          "text": "The bearer has a Wounds characteristic of 4."
         }
       ],
       "keywords": [
@@ -2641,7 +2470,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 80
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "profiles": [
@@ -2743,10 +2574,6 @@
           "text": "4+"
         },
         {
-          "title": "Leader",
-          "text": "This unit can be attached to the following units:\n■ Deathwing Command Squad\n■ Deathwing Terminator Squad\n\n■ Relic Terminator Squad\n■ Terminator Assault Squad\n■ Terminator Squad"
-        },
-        {
           "title": "Tactical Precision",
           "text": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
         },
@@ -2755,24 +2582,14 @@
           "text": "Each time this model makes an attack that targets an enemy unit that is Below Half-strength, add 1 to the Hit roll and add 1 to the Wound roll."
         },
         {
-          "title": "Storm Shield",
-          "text": "The bearer has a Wounds characteristic of 6."
-        },
-        {
-          "title": "Anti",
-          "text": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound.\n*Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*"
-        },
-        {
-          "title": "Devastating Wounds",
-          "text": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. \nMortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. \nExample: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*"
-        },
-        {
-          "title": "Twin-linked",
-          "text": "Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll."
-        },
-        {
           "title": "Deep Strike",
           "text": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone."
+        }
+      ],
+      "wargearAbilities": [
+        {
+          "title": "Storm Shield",
+          "text": "The bearer has a Wounds characteristic of 6."
         }
       ],
       "keywords": [
@@ -2798,7 +2615,13 @@
       ],
       "paidWargear": [],
       "relations": {
-        "leader": [],
+        "leader": [
+          "Deathwing Command Squad",
+          "Deathwing Terminator Squad",
+          "Relic Terminator Squad",
+          "Terminator Assault Squad",
+          "Terminator Squad"
+        ],
         "support": [],
         "attachedUnit": [],
         "transport": []
@@ -2813,7 +2636,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 105
+          "value": 105,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "profiles": [
@@ -2883,22 +2708,11 @@
           "text": "5+"
         },
         {
-          "title": "Twin-linked",
-          "text": "Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll."
-        },
-        {
-          "title": "Sustained Hits",
-          "text": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X.\n*Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability)."
-        },
-        {
-          "title": "Devastating Wounds",
-          "text": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. \nMortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. \nExample: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*"
-        },
-        {
           "title": "Deadly Demise 1",
-          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n*Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
+          "text": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). \n *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*"
         }
       ],
+      "wargearAbilities": [],
       "keywords": [
         "Vehicle",
         "Character",

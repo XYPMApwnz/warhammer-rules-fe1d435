@@ -6,9 +6,48 @@
   "edition": "11E",
   "factionKeyword": "DARK ANGELS",
   "dependencies": ["space-marines"],
+  "currentDatasheetsOnly": true,
+  "dependencyDatasheets": {
+    "render": false,
+    "currentOnly": true,
+    "excludeAnyKeywords": [
+      "IMPERIAL FISTS",
+      "IRON HANDS",
+      "RAVEN GUARD",
+      "SALAMANDERS",
+      "ULTRAMARINES",
+      "WHITE SCARS"
+    ]
+  },
+  "armyRules": ["Oath of Moment"],
+  "armyRuleTermIds": {
+    "Oath of Moment": "space-marines-army-rule-oath-of-moment"
+  },
+  "compactSharedAbilities": [
+    "Oath of Moment",
+    "Anti",
+    "Blast",
+    "Deadly Demise",
+    "Deep Strike",
+    "Devastating Wounds",
+    "Feel No Pain",
+    "Fights First",
+    "Hazardous",
+    "Ignores Cover",
+    "Leader",
+    "Lethal Hits",
+    "Pistol",
+    "Precision",
+    "Rapid Fire",
+    "Sustained Hits",
+    "Torrent",
+    "Twin-linked"
+  ],
+  "detachmentQualifiedEnhancementPoints": true,
   "expected": {
     "matchedDetachments": 8,
     "factionPackDetachments": 5,
+    "codexDatasheets": 16,
     "legendsDatasheets": 3
   },
   "sources": {

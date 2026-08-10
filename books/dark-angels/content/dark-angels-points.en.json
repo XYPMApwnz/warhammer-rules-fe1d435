@@ -17,7 +17,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 70
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -30,7 +32,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 140
+          "value": 140,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -43,7 +47,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 75
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -56,11 +62,15 @@
       "points": [
         {
           "label": "5 models",
-          "value": 200
+          "value": 200,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
-          "label": "10 models",
-          "value": 400
+          "label": "6-10 models",
+          "value": 400,
+          "minModels": 6,
+          "maxModels": 10
         }
       ],
       "paidWargear": []
@@ -73,7 +83,9 @@
       "points": [
         {
           "label": "5 models",
-          "value": 240
+          "value": 240,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
           "label": "3+ unit: 5 models",
@@ -90,7 +102,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 80
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -103,11 +117,15 @@
       "points": [
         {
           "label": "5 models",
-          "value": 165
+          "value": 165,
+          "minModels": 5,
+          "maxModels": 5
         },
         {
-          "label": "10 models",
-          "value": 330
+          "label": "6-10 models",
+          "value": 330,
+          "minModels": 6,
+          "maxModels": 10
         }
       ],
       "paidWargear": []
@@ -120,7 +138,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 75
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -133,7 +153,9 @@
       "points": [
         {
           "label": "3 models",
-          "value": 80
+          "value": 80,
+          "minModels": 3,
+          "maxModels": 3
         },
         {
           "label": "3+ unit: 3 models",
@@ -141,7 +163,9 @@
         },
         {
           "label": "6 models",
-          "value": 160
+          "value": 160,
+          "minModels": 6,
+          "maxModels": 6
         },
         {
           "label": "3+ unit: 6 models",
@@ -158,7 +182,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 130
+          "value": 130,
+          "minModels": 1,
+          "maxModels": 1
         },
         {
           "label": "3+ unit: 1 models",
@@ -175,7 +201,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 70
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -188,7 +216,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 265
+          "value": 265,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -201,7 +231,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 180
+          "value": 180,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -214,7 +246,9 @@
       "points": [
         {
           "label": "3 models",
-          "value": 75
+          "value": 75,
+          "minModels": 3,
+          "maxModels": 3
         },
         {
           "label": "3+ unit: 3 models",
@@ -222,7 +256,9 @@
         },
         {
           "label": "6 models",
-          "value": 150
+          "value": 150,
+          "minModels": 6,
+          "maxModels": 6
         },
         {
           "label": "3+ unit: 6 models",
@@ -239,7 +275,9 @@
       "points": [
         {
           "label": "3 models",
-          "value": 105
+          "value": 105,
+          "minModels": 3,
+          "maxModels": 3
         },
         {
           "label": "3+ unit: 3 models",
@@ -256,7 +294,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 200
+          "value": 200,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -269,7 +309,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 70
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -282,7 +324,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 105
+          "value": 105,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -295,7 +339,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 95
+          "value": 95,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -375,7 +421,7 @@
       "profile": null
     },
     {
-      "id": "enhancement-deathwing-assault",
+      "id": "enhancement-inner-circle-task-force-deathwing-assault",
       "title": "Deathwing Assault",
       "detachment": "Inner Circle Task Force",
       "value": 30,
@@ -487,7 +533,7 @@
       "profile": null
     },
     {
-      "id": "enhancement-deathwing-assault",
+      "id": "enhancement-wrath-of-the-rock-deathwing-assault",
       "title": "Deathwing Assault",
       "detachment": "Wrath of the Rock",
       "value": 15,

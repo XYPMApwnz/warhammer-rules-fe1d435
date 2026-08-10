@@ -31,13 +31,19 @@ const unitInventory=layer=>[...(layer.datasheets||[]),...(layer.imperialArmour||
 const dependencyCodices=(config.dependencies||[]).map(id=>{
   const dependencyRoot=path.join(repo,'books',id),dependencyConfig=JSON.parse(fs.readFileSync(path.join(dependencyRoot,'book.config.json'),'utf8'));
   const dependencyCodex=JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.codexDatasheets),'utf8'));
-  return {id,codex:dependencyCodex};
+  const dependencyPack=JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.factionPack),'utf8'));
+  return {id,config:dependencyConfig,codex:dependencyCodex,pack:dependencyPack};
 });
-const ownUnits=unitInventory(codex);
+const dependencyScope=config.dependencyDatasheets||{};
+const excludedDependencyKeywords=new Set((dependencyScope.excludeAnyKeywords||[]).map(value=>clean(value).toUpperCase()));
+const dependencyUnits=dependencyCodices.flatMap(dependency=>(dependencyScope.currentOnly?dependency.codex.datasheets||[]:unitInventory(dependency.codex))
+  .filter(unit=>!(unit.keywords||[]).some(keyword=>excludedDependencyKeywords.has(clean(keyword).toUpperCase())))
+  .map(unit=>({...unit,dependencyBook:dependency.id,sourceLayer:`${dependency.id}-${unit.sourceLayer||'source'}`})));
+const ownUnits=config.currentDatasheetsOnly?codex.datasheets||[]:unitInventory(codex);
 const pointsByTitle=new Map(points.units.map(item=>[titleKey(item.title),item]));
 const wargearByTitle=new Map((codexWargear?.units||[]).map(item=>[titleKey(item.title),item]));
 const mergedUnits=new Map();
-for(const dependency of dependencyCodices)for(const unit of unitInventory(dependency.codex))mergedUnits.set(unit.id,{...unit,dependencyBook:dependency.id,sourceLayer:`${dependency.id}-${unit.sourceLayer||'source'}`});
+if(dependencyScope.render!==false)for(const unit of dependencyUnits)mergedUnits.set(unit.id,unit);
 for(const unit of ownUnits){
   const point=pointsByTitle.get(titleKey(unit.title)),exact=wargearByTitle.get(titleKey(unit.title));
   mergedUnits.set(unit.id,{...unit,...(point?{points:point.points,paidWargear:point.paidWargear,pointsSource:point.pointsSource}:{}),...(exact?{wargear:exact.wargear,compositionText:exact.composition,wargearSource:{label:codexWargear.source?.label||'Current 11e reference',url:exact.url}}:{})});
@@ -47,16 +53,18 @@ const units=[...mergedUnits.values()].map(unit=>{
   const official=officialIds.get(titleKey(unit.title));
   return official?{...unit,sourcePages:official.sourcePages,provenance:official.provenance,sourceLayer:unit.sourceLayer==='codex'?'faction-pack':unit.sourceLayer}:unit;
 });
-const unitById=new Map(units.map(unit=>[unit.id,unit])),unitByTitle=new Map(units.map(unit=>[titleKey(unit.title),unit]));
+const relationUnits=unique([...units,...dependencyUnits],unit=>unit.id);
+const unitById=new Map(relationUnits.map(unit=>[unit.id,unit])),unitByTitle=new Map(relationUnits.map(unit=>[titleKey(unit.title),unit]));
 
 const codexDetachmentNames=unique(points.enhancements.map(item=>item.detachment),titleKey);
 const packByTitle=new Map(pack.detachments.map(item=>[titleKey(item.title),item]));
 const parityByTitle=new Map((codexParity?.detachments||[]).map(item=>[titleKey(item.title),item]));
 const pointTitleKey=value=>titleKey(value).replace(/ upgrade$/,'');
 const enhancementPointsByTitle=new Map(points.enhancements.map(item=>[pointTitleKey(item.title),item]));
+const enhancementPointsByDetachment=new Map(points.enhancements.map(item=>[`${titleKey(item.detachment)}\0${pointTitleKey(item.title)}`,item]));
 const detachmentMetaByTitle=new Map((points.detachments||[]).map(item=>[titleKey(item.title),item]));
-const enrichEnhancement=item=>{const current=enhancementPointsByTitle.get(pointTitleKey(item.title));return current?{...item,value:current.value,pointsSource:current.pointsSource}:item;};
-const enrichDetachment=detachment=>({...detachment,...detachmentMetaByTitle.get(titleKey(detachment.title)),enhancements:(detachment.enhancements||[]).map(enrichEnhancement)});
+const enrichEnhancement=(item,detachment)=>{const qualified=Boolean(config.detachmentQualifiedEnhancementPoints),current=qualified?enhancementPointsByDetachment.get(`${titleKey(detachment)}\0${pointTitleKey(item.title)}`):enhancementPointsByTitle.get(pointTitleKey(item.title));return current?{...item,...(qualified&&current.id?{id:current.id}:{}),value:current.value,pointsSource:current.pointsSource}:item;};
+const enrichDetachment=detachment=>({...detachment,...detachmentMetaByTitle.get(titleKey(detachment.title)),enhancements:(detachment.enhancements||[]).map(item=>enrichEnhancement(item,detachment.title))});
 const detachments=codexDetachmentNames.map(title=>enrichDetachment(packByTitle.get(titleKey(title))||parityByTitle.get(titleKey(title))||{
   id:slug(title),title,sourceLayer:'codex-transcription',rule:null,
   enhancements:points.enhancements.filter(item=>titleKey(item.detachment)===titleKey(title)),stratagems:[]
@@ -130,7 +138,7 @@ for(const leader of units){
     }
   }
 }
-const relationGraphs=buildRelationGraphs(units,relationEdges);
+const relationGraphs=buildRelationGraphs(relationUnits,relationEdges);
 
 const terms=new Map();
 function addTerm(title,summary,sectionId,kind='faction-term',unitId=''){
@@ -159,8 +167,9 @@ const sourceLink=pages=>`<a class="source-link" href="./sources/${esc(path.basen
 const codexSourceLink=()=>`<a class="source-link" href="${esc(codexParity.source.url)}">${esc(codexParity.source.title)}</a>`;
 const verificationBuild=manifest.gates?.publishAsComplete===false;
 const unitSourceState=unit=>verificationBuild&&!config.dedicatedMobile?`<div class="unit-source-state"><span>Datasheet structure · current 11e catalogue</span><span>${unit.pointsSource?`${esc(unit.pointsSource.label)} · checked ${esc(unit.pointsSource.verifiedAt)}`:'Points · catalogue snapshot'}</span>${unit.wargearSource?'<span>Wargear & composition · current 11e reference</span>':''}${unit.sourcePages?`<span>Official Faction Pack overlay · p. ${unit.sourcePages.join('–')}</span>`:''}</div>`:'';
-const armyRuleSources=[...(pack.updates||[]),...(codexParity?.armyRules||[])];
-const armyRules=(config.armyRules||['Shadow in the Warp','Synapse']).map(title=>armyRuleSources.find(item=>titleKey(item.subject||item.title)===titleKey(title))).filter(Boolean).map(item=>({id:`army-rule-${slug(item.subject||item.title)}`,title:item.subject||item.title,text:item.change||item.summary||item.text,sourcePages:item.sourcePages,source:item.sourcePages?'faction-pack':'codex-parity'}));
+const dependencyArmyRuleSources=dependencyCodices.flatMap(dependency=>(dependency.pack.updates||[]).map(item=>({...item,sourceBook:dependency.id,sourceFile:dependency.pack.meta.file,sourceVersion:dependency.pack.meta.version})));
+const armyRuleSources=[...(pack.updates||[]),...(codexParity?.armyRules||[]),...dependencyArmyRuleSources];
+const armyRules=(config.armyRules||['Shadow in the Warp','Synapse']).map(title=>armyRuleSources.find(item=>titleKey(item.subject||item.title)===titleKey(title))).filter(Boolean).map(item=>({id:`army-rule-${slug(item.subject||item.title)}`,termId:config.armyRuleTermIds?.[item.subject||item.title],title:item.subject||item.title,text:item.change||item.summary||item.text,sourcePages:item.sourcePages,source:item.sourceBook?'dependency':item.sourcePages?'faction-pack':'codex-parity',sourceBook:item.sourceBook,sourceFile:item.sourceFile,sourceVersion:item.sourceVersion}));
 const fixedCategoryOrder=['Epic Heroes','Characters','Battleline','Dedicated Transports','Monsters','Infantry'];
 const categoryOrder=[...fixedCategoryOrder,...new Set(units.map(unit=>unit.category).filter(category=>!fixedCategoryOrder.includes(category)&&category!=='Other'&&category!=='Warhammer Legends')),'Other','Warhammer Legends'];
 const categories=categoryOrder.map(title=>({title,id:`datasheets-${slug(title)}`,units:units.filter(unit=>unit.category===title)})).filter(group=>group.units.length);
@@ -220,7 +229,8 @@ const unitCard=unit=>{
   return`<article class="unit-card surface${unit.status==='Warhammer Legends'?' legends-card':''}" id="${unit.id}" data-track="${unit.id}" data-unit-title="${esc(unit.title)}" data-rule-facts="${esc(JSON.stringify(ruleFacts))}"><div class="unit-header"><div><div class="eyebrow">${esc(unit.status)} · ${esc(unit.sourceLayer)}</div><h3>${esc(unit.title)}</h3></div><div class="unit-status">${esc(pointsSummary||'POINTS PENDING')}</div></div>${unitSourceState(unit)}<div class="local-nav">${tabs}</div><section class="unit-part" id="${parts.profile}"><h4>Profile & Weapons</h4>${pointsPanel}${statline(unit)}${weaponTables(unit)}</section><section class="unit-part" id="${parts.abilities}"><h4>Abilities</h4>${shared.length?`<div class="keyword-list shared-abilities">${shared.map(item=>`<button class="term-button" data-term="${item.termId}" data-source-field="abilities.${esc(slug(item.title))}" data-source-value="${esc(item.text)}">${esc(item.title)}</button>`).join('')}</div>`:''}<div class="ability-list">${specific.map(item=>`<article class="ability" data-source-field="abilities.${esc(slug(item.title))}"><h5><button class="term-button" data-term="${item.termId}">${esc(item.title)}</button></h5>${item.text?`<p data-source-field="text">${esc(item.text)}</p>`:''}</article>`).join('')}</div></section>${wargearAbilitySection}<section class="unit-part" id="${parts.composition}"><h4>Composition & Wargear</h4>${composition}${wargear}${unit.paidWargear?.length?`<h5>Paid wargear</h5><ul>${unit.paidWargear.map(item=>`<li>${esc(item.name)} · +${item.value} pts</li>`).join('')}</ul>`:''}</section>${leader}<section class="unit-part" id="${parts.keywords}"><h4>Keywords</h4><div class="keyword-list">${(unit.keywords||[]).map(item=>`<span data-source-field="keywords.${esc(slug(item))}">${esc(item)}</span>`).join('')}</div></section>${unit.sourcePages?`<p class="source">${sourceLink(unit.sourcePages)}</p>`:''}</article>`;
 };
 const datasheetHtml=categories.map(group=>tracked(group.id,group.title,group.units.map(unitCard).join(''))).join('');
-const armyRulesHtml=armyRules.map(item=>tracked(item.id,item.title,`<article class="rule-card surface"><div class="eyebrow">Army rule</div><h4><button class="term-button" data-term="${addTerm(item.title,item.text,item.id,'army-rule')}">${esc(item.title)}</button></h4><p data-source-field="text">${esc(item.text)}</p><p class="source">${item.source==='faction-pack'?sourceLink(item.sourcePages):codexSourceLink()}</p></article>`)).join('');
+const armyRuleSourceLink=item=>item.source==='dependency'?`<a class="source-link" href="../${esc(item.sourceBook)}/${esc(item.sourceFile)}#page=${item.sourcePages[0]}">${esc(item.sourceBook)} Faction Pack v${esc(item.sourceVersion)} · p. ${item.sourcePages.join('–')}</a>`:item.source==='faction-pack'?sourceLink(item.sourcePages):codexSourceLink();
+const armyRulesHtml=armyRules.map(item=>tracked(item.id,item.title,`<article class="rule-card surface"><div class="eyebrow">Army rule</div><h4><button class="term-button" data-term="${item.termId||addTerm(item.title,item.text,item.id,'army-rule')}">${esc(item.title)}</button></h4><p data-source-field="text">${esc(item.text)}</p><p class="source">${armyRuleSourceLink(item)}</p></article>`)).join('');
 const updatesHtml=[...pack.updates.filter(item=>!armyRules.some(rule=>rule.title===item.subject)).map(item=>({id:item.id,title:item.title||item.subject,text:item.summary||item.text||item.change,pages:item.sourcePages,type:'Official update'})),...pack.faqs.map(item=>({id:item.id,title:item.question,text:item.answer,pages:item.sourcePages,type:'Official FAQ'}))].map(item=>tracked(`update-${item.id}`,item.title,`<article class="rule-card surface"><div class="eyebrow">${item.type}</div><p>${esc(item.text)}</p><p class="source">${sourceLink(item.pages)}</p></article>`)).join('');
 
 const sharedCoreInc=(()=>{if(!config.includeCoreStratagems)return'';const value=fs.readFileSync(path.join(repo,'books','adeptus-mechanicus','mobile','related-rules.inc'),'utf8'),start=value.indexOf('<section class="related-detachment related-core"'),next=value.indexOf('<section class="related-detachment',start+1);if(start<0)throw new Error('Core Stratagems source is absent');return next>start?value.slice(start,next):value.slice(start);})();
@@ -325,7 +335,7 @@ const outputs=new Map([
 const errors=[];
 if(detachments.length!==config.expected.matchedDetachments)errors.push(`expected ${config.expected.matchedDetachments} detachments, got ${detachments.length}`);
 if(pack.detachments.length!==config.expected.factionPackDetachments)errors.push('Faction Pack detachment count mismatch');
-if(ownUnits.filter(unit=>unit.status==='Warhammer Legends').length!==config.expected.legendsDatasheets)errors.push('Legends count mismatch');
+if((codex.legends||[]).length!==config.expected.legendsDatasheets)errors.push('Legends count mismatch');
 if(new Set(units.map(unit=>unit.id)).size!==units.length)errors.push('duplicate unit IDs');
 if([...outputs.values()].some(value=>/\uFFFD|вЂ|вњ|в†|В·/.test(value)))errors.push('mojibake in generated output');
 if(errors.length)throw new Error(errors.join('\n'));

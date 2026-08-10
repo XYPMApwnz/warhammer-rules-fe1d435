@@ -6,7 +6,7 @@ import json
 import re
 from pathlib import Path
 
-import pdfplumber
+from pypdf import PdfReader
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,6 +14,7 @@ PDF = ROOT / "sources" / "dark-angels-faction-pack-v1.0.pdf"
 OUTPUT = ROOT / "content" / "dark-angels-faction-pack.en.json"
 RELATED_OUTPUT = ROOT / "content" / "dark-angels-related-rules.en.json"
 SOURCE_ID = "dark-angels-faction-pack-v1.0"
+EXPECTED_PDF_SHA256 = "7F1EFE2D62F57597D0949D62B8D9BF0675E0199A6E99A1EEF61BFA65DE76AA52"
 
 
 def e(title: str, points: int) -> dict:
@@ -51,7 +52,7 @@ MFM_DETACHMENTS = [
 def clean(value: str) -> str:
     value = value.replace("\ufffd", ".").replace("\u00ad", "").replace("\r\n", "\n")
     value = value.replace("ADEPTUS ASTARTESunits", "ADEPTUS ASTARTES units")
-    value = value.replace("Dark Dge Drsenal", "Dark Age Arsenal")
+    value = value.replace("Y our", "Your").replace("T ask", "Task")
     return re.sub(r"\n{3,}", "\n\n", re.sub(r"[ \t]+\n", "\n", value)).strip()
 
 
@@ -70,10 +71,6 @@ def slug(value: str) -> str:
 
 def source(item: dict, pages: list[int]) -> dict:
     return {**item, "sourcePages": pages, "provenance": {"sourceId": SOURCE_ID, "sourcePages": pages}}
-
-
-def crop(page, box) -> str:
-    return clean(page.crop(box).extract_text(x_tolerance=2, y_tolerance=3) or "")
 
 
 def heading(lines: list[str], title: str) -> tuple[int, int]:
@@ -114,11 +111,16 @@ def fields(body: str) -> dict:
     return output
 
 
-def columns(page_number: int, pages):
-    page = pages[page_number - 1]
-    if page_number <= 4:
-        return crop(page, (20, 220, 300, 780)), crop(page, (310, 220, 595, 780)), [crop(page, (310, 220, 595, 780))]
-    return crop(page, (150, 230, 340, 760)), crop(page, (345, 230, 540, 760)), [crop(pages[page_number], (180, 65, 340, 750)), crop(pages[page_number], (375, 65, 535, 750))]
+def page_text(page) -> str:
+    return clean(page.extract_text() or "")
+
+
+def stratagem_type(body: str, detachment: str) -> dict:
+    match = re.search(r"\b(BATTLE TACTIC|STRATEGIC PLOY|EPIC DEED|WARGEAR) STRATAGEM\b", body, re.I)
+    if not match:
+        return {"canonicalType": None, "typeStatus": "source-untyped", "sourceLabel": f"{detachment} Stratagem"}
+    label = match.group(1).title()
+    return {"canonicalType": slug(label), "typeStatus": "confirmed", "sourceLabel": f"{detachment} · {label} Stratagem"}
 
 
 def extract_detachments(pages) -> list[dict]:
@@ -128,13 +130,14 @@ def extract_detachments(pages) -> list[dict]:
         for item in spec["stratagems"]:
             name_counts[slug(item["title"])] = name_counts.get(slug(item["title"]), 0) + 1
     for spec in DETACHMENTS:
-        left, right, strat_columns = columns(spec["page"], pages)
+        detachment_text = page_text(pages[spec["page"] - 1])
         if spec["page"] <= 4:
-            rule_blocks = blocks(left, [spec["rule"], *[item["title"] for item in spec["enhancements"]]])
+            combined = blocks(detachment_text, [spec["rule"], *[item["title"] for item in spec["enhancements"]], *[item["title"] for item in spec["stratagems"]]])
+            rule_blocks = combined
+            strat_blocks = combined
         else:
-            rule_blocks = blocks(left, [spec["rule"]])
-            rule_blocks.update(blocks(right, [item["title"] for item in spec["enhancements"]]))
-        strat_blocks = blocks("\n".join(strat_columns), [item["title"] for item in spec["stratagems"]])
+            rule_blocks = blocks(detachment_text, [spec["rule"], *[item["title"] for item in spec["enhancements"]]])
+            strat_blocks = blocks(page_text(pages[spec["page"]]), [item["title"] for item in spec["stratagems"]])
         strat_page = spec["page"] if spec["page"] <= 4 else spec["page"] + 1
         stratagems = []
         for item in spec["stratagems"]:
@@ -143,7 +146,7 @@ def extract_detachments(pages) -> list[dict]:
                 raise ValueError(f"Incomplete Stratagem: {spec['title']} / {item['title']}")
             base_id = slug(item["title"])
             item_id = f"{slug(spec['title'])}-{base_id}" if name_counts[base_id] > 1 else base_id
-            stratagems.append(source({"id": item_id, "title": item["title"], "cp": item["cp"], **parsed}, [strat_page]))
+            stratagems.append(source({"id": item_id, "title": item["title"], "cp": item["cp"], **parsed, **stratagem_type(strat_blocks[item["title"]], spec["title"])}, [strat_page]))
         pages_used = [spec["page"]] if strat_page == spec["page"] else [spec["page"], strat_page]
         output.append(source({
             "id": slug(spec["title"]), "title": spec["title"],
@@ -164,24 +167,28 @@ def title_case(value: str) -> str:
 
 def build() -> dict:
     digest = hashlib.sha256(PDF.read_bytes()).hexdigest().upper()
-    page_data, page_objects = {}, []
-    with pdfplumber.open(PDF) as document:
-        for number, page in enumerate(document.pages, 1):
-            text = clean(page.extract_text(x_tolerance=2, y_tolerance=3) or "")
-            page_objects.append(page)
-            page_data[str(number)] = {"sha256": hashlib.sha256(text.encode()).hexdigest().upper(), "text": text}
-        meta = {"title": "Dark Angels Faction Pack", "version": "1.0", "legalFrom": "2026-06-20", "pageCount": len(document.pages), "sha256": digest, "file": "sources/dark-angels-faction-pack-v1.0.pdf"}
-        detachments = extract_detachments(page_objects)
-        updates = [
-            source({"id": "rules-updates-9-left", "section": "Rules Updates", "subject": "Page 9 · left column", "change": crop(page_objects[8], (35, 190, 295, 780))}, [9]),
-            source({"id": "rules-updates-9-right", "section": "Datasheets", "subject": "Page 9 · right column", "change": crop(page_objects[8], (300, 190, 555, 780))}, [9]),
-            source({"id": "rules-updates-10-left", "section": "Datasheets", "subject": "Page 10 · left column", "change": crop(page_objects[9], (35, 60, 295, 780))}, [10]),
-        ]
-        faqs = parse_faq(crop(page_objects[9], (300, 60, 555, 780)))
-        legends = []
-        for first in (11, 13, 15):
-            raw = re.sub(r"\s+WARHAMMER\s+L\s*E\s*G\s*E\s*N\s*D\s*S.*$", "", page_data[str(first)]["text"].splitlines()[0], flags=re.I)
-            legends.append(source({"id": slug(raw), "title": title_case(raw)}, [first, first + 1]))
+    document = PdfReader(PDF)
+    page_objects = list(document.pages)
+    page_data = {}
+    for number, page in enumerate(page_objects, 1):
+        text = page_text(page)
+        page_data[str(number)] = {"sha256": hashlib.sha256(text.encode()).hexdigest().upper(), "text": text}
+    meta = {"title": "Dark Angels Faction Pack", "version": "1.0", "legalFrom": "2026-06-20", "pageCount": len(page_objects), "sha256": digest, "file": "sources/dark-angels-faction-pack-v1.0.pdf"}
+    detachments = extract_detachments(page_objects)
+    page_nine = page_data["9"]["text"]
+    updates_text, datasheets_nine = page_nine.split("\nDATASHEETS\n", 1)
+    updates_text = updates_text.split("\nUPDATES\n", 1)[1]
+    datasheets_ten, faq_text = page_data["10"]["text"].split("\nFAQS\n", 1)
+    updates = [
+        source({"id": "rules-updates-9-left", "section": "Rules Updates", "subject": "Page 9 · updates", "change": updates_text}, [9]),
+        source({"id": "rules-updates-9-right", "section": "Datasheets", "subject": "Page 9 · datasheets", "change": datasheets_nine}, [9]),
+        source({"id": "rules-updates-10-left", "section": "Datasheets", "subject": "Page 10 · datasheets", "change": datasheets_ten}, [10]),
+    ]
+    faqs = parse_faq(faq_text)
+    legends = []
+    for first in (11, 13, 15):
+        raw = re.sub(r"\s+WARHAMMER\s+L\s*E\s*G\s*E\s*N\s*D\s*S.*$", "", page_data[str(first)]["text"].splitlines()[0], flags=re.I)
+        legends.append(source({"id": slug(raw), "title": title_case(raw)}, [first, first + 1]))
     return {
         "meta": meta,
         "provenance": {"sourceId": SOURCE_ID, "authority": "Games Workshop", "documentType": "faction-pack", "edition": "Warhammer 40,000 11th Edition", "pageNumbering": "physical PDF pages", "note": "Supplement layer. Dark Angels armies also depend on the Space Marines base rules and datasheets."},
@@ -208,6 +215,12 @@ def validate(data: dict, related: dict) -> list[str]:
         errors.append("Space Marines supplement dependency is invalid")
     if chr(0xFFFD) in json.dumps(data, ensure_ascii=False):
         errors.append("replacement character found")
+    if data.get("meta", {}).get("sha256") != EXPECTED_PDF_SHA256:
+        errors.append("official PDF SHA-256 mismatch")
+    serialized = json.dumps(data, ensure_ascii=False)
+    for corrupted in ("Dark Dngels", "DDEPTUS DSTDRTES", "Drmour of Contempt", "Dncient", "Deathwing Dssault"):
+        if corrupted in serialized:
+            errors.append(f"corrupted PDF text remains: {corrupted}")
     return errors
 
 

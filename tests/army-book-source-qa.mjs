@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 
 const root=path.resolve(import.meta.dirname,'..');
 const books={
@@ -37,6 +38,65 @@ for(const [id,expected] of Object.entries(books)){
   expect(Boolean(codexLayer?.commit),`${label} missing pinned Codex snapshot commit`);
   expect(codexLayer?.commit===points.source?.commit,`${label} points and Codex snapshot commits differ`);
 }
+
+const daConfig=read('books/dark-angels/book.config.json');
+const daPack=read(`books/dark-angels/${daConfig.sources.factionPack}`);
+const daCodex=read(`books/dark-angels/${daConfig.sources.codexDatasheets}`);
+const daPoints=read('books/dark-angels/content/dark-angels-points.en.json');
+const daReader=fs.readFileSync(path.join(root,'books/dark-angels/reader.html'),'utf8');
+const daPdf=fs.readFileSync(path.join(root,'books/dark-angels/sources/dark-angels-faction-pack-v1.0.pdf'));
+const daDigest=crypto.createHash('sha256').update(daPdf).digest('hex').toUpperCase();
+expect(daDigest==='7F1EFE2D62F57597D0949D62B8D9BF0675E0199A6E99A1EEF61BFA65DE76AA52','dark-angels: official PDF SHA-256 changed');
+expect(daPack.meta?.sha256===daDigest,'dark-angels: generated provenance must use the committed PDF hash');
+const daSerialized=JSON.stringify(daPack);
+for(const corrupted of ['Dark Dngels','DDEPTUS DSTDRTES','Drmour of Contempt','Dncient','Deathwing Dssault'])expect(!daSerialized.includes(corrupted),`dark-angels: corrupted extraction remains: ${corrupted}`);
+for(const required of ['Dark Angels','ADEPTUS ASTARTES','Armour of Contempt','Ancient Weapons','Deathwing Assault'])expect(daSerialized.includes(required),`dark-angels: corrected extraction missing ${required}`);
+
+const daStratagems=daPack.detachments.flatMap(detachment=>detachment.stratagems);
+const daUntyped=new Set(['Searing Bursts','No Sacrifice Too Great','Revelation of Guilt','Skyborne Surveillance','Wings of Shadow','We Are Vengeance','Exacting Punishment','Terrifying Zeal','Wages of Cowardice']);
+const daTypes=new Map([
+  ['Overpowering Exaction','strategic-ploy'],['Armour of Contempt','battle-tactic'],['Strength in Unity','battle-tactic'],
+  ['Knights of Iron','strategic-ploy'],['Illuminating Fire','battle-tactic'],['Inescapable Wrath','strategic-ploy'],
+  ['Inescapable Justice','battle-tactic'],["Lion’s Will",'strategic-ploy'],['Tactical Mastery','battle-tactic'],
+  ['Relics of the Dark Age','strategic-ploy'],['Leonine Aggression','strategic-ploy']
+]);
+expect(daStratagems.length===21,'dark-angels: expected 21 Faction Pack Stratagems');
+expect(daStratagems.filter(item=>item.typeStatus==='source-untyped'&&item.canonicalType===null&&daUntyped.has(item.title)).length===9,'dark-angels: expected nine source-untyped Stratagems');
+expect(daStratagems.filter(item=>item.typeStatus==='confirmed'&&daTypes.get(item.title)===item.canonicalType).length===12,'dark-angels: expected twelve source-confirmed canonical Stratagem types');
+
+const daCurrent=daCodex.datasheets,daLegends=daCodex.legends;
+expect(daCurrent.length===16,'dark-angels: current local inventory must contain 16 datasheets');
+expect(daLegends.length===3,'dark-angels: source archive must retain three Legends datasheets');
+const categoryCounts=Object.groupBy(daCurrent,unit=>unit.category);
+for(const [category,count] of Object.entries({'Characters':1,'Epic Heroes':7,'Infantry':3,'Vehicle':4,'Mounted':1}))expect((categoryCounts[category]||[]).length===count,`dark-angels: expected ${count} ${category}`);
+expect(!categoryCounts.Other,'dark-angels: source categories must not fall through to Other');
+
+const chapterKeywords=new Set(daConfig.dependencyDatasheets.excludeAnyKeywords);
+const smCodex=read('books/space-marines/content/space-marines-codex-datasheets.en.json');
+const smGeneric=smCodex.datasheets.filter(unit=>!unit.keywords.some(keyword=>chapterKeywords.has(keyword.toUpperCase())));
+expect(smCodex.datasheets.length-smGeneric.length===19,'dark-angels: expected 19 source-keyworded other-Chapter Space Marines exclusions');
+expect(smGeneric.length===82,'dark-angels: expected 82 generic Space Marines dependency candidates');
+expect((daReader.match(/<article class="unit-card/g)||[]).length===16,'dark-angels: reader must render only 16 local datasheets');
+for(const unit of daLegends)expect(!daReader.includes(`id="${unit.id}"`),`dark-angels: reader leaks Legends ${unit.title}`);
+for(const unit of smCodex.datasheets)expect(!daReader.includes(`id="${unit.id}"`),`dark-angels: reader renders dependency ${unit.title} as local`);
+
+const unitByTitle=new Map(daCurrent.map(unit=>[unit.title,unit]));
+expect(daCurrent.some(unit=>(unit.relations?.leader||[]).length||(unit.relations?.support||[]).length),'dark-angels: Leader/support relations must not remain globally empty');
+for(const [title,target,role='leader'] of [['Asmodai','Inner Circle Companions'],['Belial','Terminator Squad'],['Sammael','Outrider Squad'],['Ravenwing Command Squad','Ravenwing Black Knights','support']])expect(unitByTitle.get(title)?.relations?.[role]?.includes(target),`dark-angels: ${title} missing ${role} destination ${target}`);
+expect(unitByTitle.get('Ezekiel')?.relations?.leader?.includes('Sternguard Veterans Squad'),'dark-angels: unresolved Ezekiel source spelling must remain explicit');
+
+for(const title of ['Deathwing Knights','Deathwing Terminator Squad'])expect(unitByTitle.get(title)?.wargearAbilities?.some(item=>item.title==='Watcher in the Dark'),`dark-angels: ${title} must preserve source-owned Watcher in the Dark wargear`);
+for(const [unit,title] of [['Azrael','The Lion Helm'],['Lazarus','The Spiritshield Helm'],['Deathwing Knights','Teleport Homer'],['Ravenwing Command Squad','Narthecium'],['Ravenwing Command Squad','Astartes Banner'],['Ravenwing Command Squad','Honour or Death']])expect(unitByTitle.get(unit)?.abilities.some(item=>item.title===title),`dark-angels: ${unit} must keep ${title} as an ordinary datasheet ability`);
+expect(!daCurrent.some(unit=>(unit.wargearAbilities||[]).some(item=>item.title==='Invulnerable Save')),'dark-angels: Invulnerable Save must not be inferred as a Wargear Ability');
+expect(/that use is [-\u2011]1 CP/i.test(unitByTitle.get('Ravenwing Command Squad')?.abilities.find(item=>item.title==='Honour or Death')?.text||''),'dark-angels: Honour or Death must use the official -1 CP update');
+
+const deathwingAssault=daPoints.enhancements.filter(item=>item.title==='Deathwing Assault');
+expect(deathwingAssault.length===2,'dark-angels: expected two Deathwing Assault Enhancements');
+expect(new Set(deathwingAssault.map(item=>item.id)).size===2,'dark-angels: Deathwing Assault IDs must be detachment-qualified');
+expect(new Set(deathwingAssault.map(item=>item.detachment)).size===2,'dark-angels: Deathwing Assault instances must retain separate Detachments');
+expect(new Set(deathwingAssault.map(item=>item.value)).size===2,'dark-angels: Deathwing Assault instances must retain separate points');
+expect(daReader.includes('data-term="space-marines-army-rule-oath-of-moment"'),'dark-angels: Oath of Moment must use the shared Space Marines identity');
+expect(!daReader.includes('data-term="dark-angels-army-rule-oath-of-moment"'),'dark-angels: Oath of Moment must not be duplicated as a local identity');
 
 const ownershipFixture=read('tests/fixtures/army-book-owned-datasheets.json');
 const ownershipSources=[

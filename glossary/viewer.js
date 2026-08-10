@@ -19,6 +19,7 @@
   for(const term of terms){const title=normalize(displayTitle(term));titleCounts.set(title,(titleCounts.get(title)||0)+1);}
   const technicalAlias=/(?:^|-)(unit|weapon|ability|stratagem|enhancement|detachment)-/;
   const repeatsDefinition=(summary,definition)=>{const quick=normalize(summary),full=normalize(definition);return quick&&full.startsWith(quick);};
+  const presentationPriority=term=>term.presentation==='profile'?1:0;
   const duplicateQualifier=term=>{const same=terms.filter(other=>normalize(displayTitle(other))===normalize(displayTitle(term)));if(new Set(same.map(other=>other.scope)).size>1)return scopeLabel(term);return humanize(String(term.canonicalSource?.locator||kindLabel(term)).replace(/^unit-/,''));};
   if(returnRecord){libraryBack.href=returnRecord.path;libraryBack.textContent='← Return to popup';libraryBack.addEventListener('click',()=>window.WHGlossaryReturn?.setRestoreMode('automatic'));}
   document.getElementById('termCount').textContent=api.counts.terms;
@@ -39,7 +40,7 @@
     if(definition.includes(query))return 6;
     return Number.POSITIVE_INFINITY;
   }
-  function visibleTerms(){const query=normalize(search.value),ranked=terms.map(term=>({term,score:score(term,query)})).filter(item=>(category==='all'||item.term.kind===category)&&Number.isFinite(item.score));const titleMatches=ranked.filter(item=>item.score<5);return(query&&titleMatches.length?titleMatches:ranked).sort((a,b)=>a.score-b.score||displayTitle(a.term).localeCompare(displayTitle(b.term))).map(item=>item.term);}
+  function visibleTerms(){const query=normalize(search.value),ranked=terms.map(term=>({term,score:score(term,query)})).filter(item=>(category==='all'||item.term.kind===category)&&Number.isFinite(item.score));const titleMatches=ranked.filter(item=>item.score<5);return(query&&titleMatches.length?titleMatches:ranked).sort((a,b)=>a.score-b.score||presentationPriority(a.term)-presentationPriority(b.term)||displayTitle(a.term).localeCompare(displayTitle(b.term))).map(item=>item.term);}
   function renderList(){
     const visible=visibleTerms(),shown=visible.slice(0,visibleLimit);
     resultCount.textContent=`${shown.length} of ${visible.length} entries shown`;
@@ -89,7 +90,7 @@
     const summaryText=term.summary?.en||'',definitionText=term.definition?.en||'';
     if(summaryText&&!placeholder.test(summaryText)&&!repeatsDefinition(summaryText,definitionText)){const quick=renderDefinition(summaryText);quick.classList.add('summary');detail.append(sectionLabel('Quick rule'),quick);}
     const profile=renderProfile(term.structured);if(profile)detail.append(sectionLabel('Profile'),profile);
-    if(definitionText&&!placeholder.test(definitionText)&&term.presentation!=='profile'&&normalize(definitionText)!==normalize(summaryText))detail.append(sectionLabel('Full rule'),renderDefinition(definitionText));
+    if(definitionText&&!placeholder.test(definitionText)&&term.presentation!=='profile')detail.append(sectionLabel(normalize(definitionText)===normalize(summaryText)?'Rule':'Full rule'),renderDefinition(definitionText));
     if(term.fullRulePath){const action=document.createElement('a');action.className='full-rule-action';action.href=new URL(`../${term.fullRulePath.replace(/^\/+/, '')}`,location.href).href;action.textContent='Open full rule →';action.addEventListener('click',()=>window.WHGlossaryReturn?.setRestoreMode('manual'));detail.append(action);}
     const groups=[['Rules of this unit type',term.references?.intrinsicRules||[]],['Referenced by core rules',term.references?.referencedByRules||[]],['Common rules',term.references?.commonRules||[]],['Faction terms',term.references?.factionTerms||[]],['Related keywords',term.references?.relatedKeywords||[]],['Related terms',term.related||[]]];
     const seenConnections=new Set();
@@ -98,7 +99,11 @@
     if(connectionCount){const connections=detailsBlock(`Explore connections · ${connectionCount} related rules and terms`,'connection-details');for(const [label,ids] of uniqueGroups){const section=renderReferences(label,ids,label==='Faction terms'?16:24);if(section)connections.content.append(section);}detail.append(connections.node);}
     const registry=detailsBlock('Registry details','registry-details'),source=term.canonicalSource||{};
     const meta=document.createElement('div');meta.className='meta-grid';
-    for(const [label,value] of [['Internal ID',term.id],['Kind',term.kind],['Scope',term.scope],['Presentation',term.presentation],['Status',term.status],['Canonical source',source.documentId||'unknown'],['Aliases',(term.aliases||[]).join(', ')||'None'],['Edition',term.edition]]){const cell=document.createElement('div'),key=document.createElement('small'),data=document.createElement('b');key.textContent=label;data.textContent=value||'—';cell.append(key,data);meta.append(cell);}registry.content.append(meta);detail.append(registry.node);
+    const registryRows=[['Internal ID',term.id],['Kind',term.kind],['Scope',term.scope],['Presentation',term.presentation],['Status',term.status],['Canonical source',source.documentId||'unknown'],['Aliases',(term.aliases||[]).join(', ')||'None'],['Edition',term.edition]];
+    if(source.revision)registryRows.push(['Source revision',source.revision]);
+    if(source.locator)registryRows.push(['Source locator',source.locator]);
+    if(term.sourceRefs?.length)registryRows.push(['Contributing sources',term.sourceRefs.join(', ')]);
+    for(const [label,value] of registryRows){const cell=document.createElement('div'),key=document.createElement('small'),data=document.createElement('b');key.textContent=label;data.textContent=value;cell.append(key,data);meta.append(cell);}registry.content.append(meta);detail.append(registry.node);
     window.WHGlossaryAutolink?.apply(detail,term.scope==='global'?'core-rules':term.scope);
     for(const trigger of detail.querySelectorAll(`[data-autolink][data-term="${CSS.escape(term.id)}"]`))trigger.replaceWith(document.createTextNode(trigger.textContent));
     if(scrollToArticle){detail.scrollIntoView({block:'start'});title.focus({preventScroll:true});}

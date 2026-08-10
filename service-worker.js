@@ -58,7 +58,7 @@ const APP_SHELL = [
   "./glossary/viewer-profiles.css?v=2",
   "./glossary/viewer-progressive.css?v=3",
   "./glossary/viewer-popup.css?v=1",
-  "./glossary/viewer.js?v=12",
+  "./glossary/viewer.js?v=13",
   "./books/death-guard/",
   DEATH_GUARD_FALLBACK,
   "./books/death-guard/reader.html",

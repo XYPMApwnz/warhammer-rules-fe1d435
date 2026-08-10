@@ -14,7 +14,8 @@
   "dependencies": ["space-marines"],
   "currentDatasheetsOnly": true,
   "dependencyDatasheets": {
-    "render": false,
+    "render": true,
+    "groupByBook": true,
     "currentOnly": true,
     "excludeAnyKeywords": [
       "IMPERIAL FISTS",

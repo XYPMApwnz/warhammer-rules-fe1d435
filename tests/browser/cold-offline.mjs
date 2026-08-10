@@ -54,7 +54,7 @@ const books=[
   {name:"Emperor's Children",unit:'unit-shalaxi-helbane',desktop:'/books/emperors-children/reader.html#unit-shalaxi-helbane',phone:'/books/emperors-children/mobile/shalaxi-helbane.html'},
   {name:"Emperor's Children Daemonettes",unit:'unit-daemonettes',desktop:'/books/emperors-children/reader.html#unit-daemonettes',phone:'/books/emperors-children/mobile/daemonettes.html'},
   {name:'Space Marines',unit:'unit-intercessor-squad',desktop:'/books/space-marines/reader.html#unit-intercessor-squad',phone:'/books/space-marines/mobile/intercessor-squad.html'},
-  {name:'Dark Angels',unit:'unit-belial',desktop:'/books/dark-angels/reader.html#unit-belial',phone:'/books/dark-angels/reader.html?view=mobile#unit-belial',related:false,singleReader:true}
+  {name:'Dark Angels',unit:'unit-belial',desktop:'/books/dark-angels/reader.html#unit-belial',phone:'/books/dark-angels/reader.html?view=mobile#unit-belial',offline:'/books/dark-angels/reader.html?view=mobile#unit-hellblaster-squad',offlineUnit:'unit-hellblaster-squad',related:false,singleReader:true}
 ];
 
 async function openPhonePopup(page,name,singleReader=false){
@@ -80,6 +80,18 @@ async function openPhonePopup(page,name,singleReader=false){
   assert.equal(await trigger.evaluate(node=>node===document.activeElement),true,`${name} popup must restore focus`);
 }
 
+async function assertDarkAngelsLeaderJourney(page,leaderId,targetId){
+  await page.goto(`${origin}/books/dark-angels/reader.html#${leaderId}`);
+  const link=page.locator(`#${leaderId} [data-journey-target="${targetId}"]`);
+  await link.waitFor({state:'visible'});
+  await link.click();
+  await page.locator(`#tocTree [data-nav-target="${targetId}"].is-current`).waitFor({state:'visible'});
+  assert.equal(new URL(page.url()).pathname,'/books/dark-angels/reader.html','Shared Leader destination must retain Dark Angels reading context');
+  assert.match(await page.locator(`#${targetId}`).textContent(),/Space Marines shared datasheet/,'Shared Leader destination lost ownership presentation');
+  await page.locator('#backButton').click();
+  await page.locator(`#tocTree [data-nav-target="${leaderId}"].is-current`).waitFor({state:'visible'});
+}
+
 try{
   const bookContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1440,height:900}});
   try{
@@ -96,6 +108,11 @@ try{
       darkAngelsCard.click()
     ]);
     assert.match(await page.locator('#start').evaluate(node=>getComputedStyle(node).backgroundImage),/dark-angels-cover-800\.webp/,'Dark Angels Desktop Start lost its artwork');
+    assert.equal(await page.locator('.unit-card').count(),98,'Dark Angels reader must expose 16 local and 82 shared datasheets');
+    assert.equal(await page.locator('#tocTree [data-nav-id="datasheets-dark-angels"]').count(),1,'Dark Angels local ownership branch is missing');
+    assert.equal(await page.locator('#tocTree [data-nav-id="datasheets-space-marines"]').count(),1,'Space Marines shared ownership branch is missing');
+    for(const id of ['unit-hellblaster-squad','unit-intercessor-squad','unit-bladeguard-veteran-squad','unit-terminator-squad','unit-terminator-assault-squad','unit-outrider-squad','unit-land-raider','unit-redemptor-dreadnought'])assert.equal(await page.locator(`#${id}`).count(),1,`Dark Angels reader lost shared ${id}`);
+    for(const id of ['unit-roboute-guilliman','unit-marneus-calgar-in-armour-of-antilochus','unit-vulkan-hestan','unit-kayvaan-shrike','unit-victrix-honour-guard'])assert.equal(await page.locator(`#${id}`).count(),0,`Dark Angels reader leaked foreign Chapter ${id}`);
     for(const book of books){
       errors.length=0;
       await page.goto(origin+book.desktop);
@@ -128,6 +145,9 @@ try{
       await openPhonePopup(page,book.name,book.singleReader);
       assert.deepEqual(errors,[],`${book.name} emitted an uncaught runtime error`);
     }
+    await assertDarkAngelsLeaderJourney(page,'unit-belial','unit-terminator-squad');
+    await assertDarkAngelsLeaderJourney(page,'unit-azrael','unit-hellblaster-squad');
+    await assertDarkAngelsLeaderJourney(page,'unit-sammael','unit-outrider-squad');
     console.log('PASS six Army Books open desktop content, supported Related Rules, Phone routes and glossary popups');
   }finally{
     await bookContext.close();
@@ -142,6 +162,13 @@ try{
       page.locator('a.book.da').click()
     ]);
     assert.match(await page.locator('#start').evaluate(node=>getComputedStyle(node).backgroundImage),/dark-angels-cover-800\.webp/,'Dark Angels Phone Start lost its artwork');
+    await page.locator('#navMenu').click();
+    await page.locator('li[data-nav-id="datasheets"] > .toc-row > [data-nav-toggle]').click();
+    await page.locator('li[data-nav-id="datasheets-space-marines"] > .toc-row > [data-nav-toggle]').click();
+    await page.locator('li[data-nav-id="datasheets-space-marines-infantry"] > .toc-row > [data-nav-toggle]').click();
+    await page.locator('li[data-nav-id="unit-hellblaster-squad"] > .toc-row > [data-nav-target="unit-hellblaster-squad"]').click();
+    await page.locator('#tocTree [data-nav-target="unit-hellblaster-squad"].is-current').waitFor({state:'attached'});
+    assert.match(await page.locator('#unit-hellblaster-squad').textContent(),/Space Marines shared datasheet/,'Dark Angels Phone shared datasheet lost ownership context');
     for(const viewport of [{width:390,height:844},{width:430,height:932}]){
       await page.setViewportSize(viewport);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,`Dark Angels overflows at ${viewport.width}px`);
@@ -202,17 +229,17 @@ try{
     await page.goto(`${origin}/index.html?offline-smoke=1`);
     await control(page);
     for(const book of books){
-      await page.goto(origin+book.phone);
-      await page.locator('main .unit-card').first().waitFor({state:'visible'});
+      await page.goto(origin+(book.offline||book.phone));
+      await page.locator(`#${book.offlineUnit||book.unit}`).waitFor({state:'visible'});
       await page.waitForFunction(async()=>Boolean(await caches.match(location.href)));
     }
     assert.equal(await page.evaluate(async()=>Boolean(await caches.match(new URL('/books/dark-angels/assets/dark-angels-cover-800.webp',location.origin).href))),true,'Dark Angels artwork is absent from the offline cache');
     errors.length=0;
     await offlineContext.setOffline(true);
     for(const book of books){
-      await page.goto(origin+book.phone,{waitUntil:'domcontentloaded'});
+      await page.goto(origin+(book.offline||book.phone),{waitUntil:'domcontentloaded'});
       await page.reload({waitUntil:'domcontentloaded'});
-      const content=page.locator('main .unit-card').first();
+      const content=page.locator(`#${book.offlineUnit||book.unit}`);
       await content.waitFor({state:'visible'});
       assert.ok((await content.textContent()).trim().length>100,`${book.name} is unusable after offline reload`);
     }

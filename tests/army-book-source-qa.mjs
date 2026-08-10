@@ -76,9 +76,20 @@ const smCodex=read('books/space-marines/content/space-marines-codex-datasheets.e
 const smGeneric=smCodex.datasheets.filter(unit=>!unit.keywords.some(keyword=>chapterKeywords.has(keyword.toUpperCase())));
 expect(smCodex.datasheets.length-smGeneric.length===19,'dark-angels: expected 19 source-keyworded other-Chapter Space Marines exclusions');
 expect(smGeneric.length===82,'dark-angels: expected 82 generic Space Marines dependency candidates');
-expect((daReader.match(/<article class="unit-card/g)||[]).length===16,'dark-angels: reader must render only 16 local datasheets');
+const daReaderUnitIds=[...daReader.matchAll(/<article class="unit-card[^>]* id="([^"]+)"/g)].map(match=>match[1]);
+expect(daReaderUnitIds.length===98,'dark-angels: reader must render 16 local and 82 shared datasheets');
+expect(new Set(daReaderUnitIds).size===98,'dark-angels: reader contains duplicate canonical datasheet IDs');
+for(const unit of daCurrent)expect(daReaderUnitIds.includes(unit.id),`dark-angels: reader lost local datasheet ${unit.title}`);
+for(const unit of smGeneric)expect(daReaderUnitIds.includes(unit.id),`dark-angels: reader lost shared Space Marines datasheet ${unit.title}`);
 for(const unit of daLegends)expect(!daReader.includes(`id="${unit.id}"`),`dark-angels: reader leaks Legends ${unit.title}`);
-for(const unit of smCodex.datasheets)expect(!daReader.includes(`id="${unit.id}"`),`dark-angels: reader renders dependency ${unit.title} as local`);
+for(const unit of smCodex.datasheets.filter(unit=>!smGeneric.includes(unit)))expect(!daReaderUnitIds.includes(unit.id),`dark-angels: reader leaks other-Chapter Space Marines datasheet ${unit.title}`);
+const sharedCategoryCounts=Object.groupBy(smGeneric,unit=>unit.category);
+for(const [category,count] of Object.entries({'Battleline':4,'Characters':23,'Dedicated Transports':4,'Fortification':1,'Infantry':23,'Mounted':2,'Vehicle':25}))expect((sharedCategoryCounts[category]||[]).length===count,`dark-angels: expected ${count} shared Space Marines ${category}`);
+for(const title of ['Hellblaster Squad','Intercessor Squad','Bladeguard Veteran Squad','Terminator Squad','Terminator Assault Squad','Outrider Squad','Land Raider','Redemptor Dreadnought'])expect(daReaderUnitIds.includes(smGeneric.find(unit=>unit.title===title)?.id),`dark-angels: representative shared datasheet missing ${title}`);
+expect(daReader.includes('data-nav-id="datasheets-dark-angels"')&&daReader.includes('data-nav-id="datasheets-space-marines"'),'dark-angels: Datasheets navigation must separate local and shared ownership');
+expect(daReader.includes('data-term="space-marines-weapon-'),'dark-angels: shared datasheets must preserve canonical Space Marines term identity');
+expect(!daReader.includes('data-term="dark-angels-weapon-plasma-incinerator'),'dark-angels: shared datasheet terms must not be duplicated under Dark Angels identity');
+for(const [leader,target] of [['Belial','Terminator Squad'],['Azrael','Hellblaster Squad'],['Sammael','Outrider Squad']]){const targetId=smGeneric.find(unit=>unit.title===target)?.id;expect(daReader.includes(`data-journey-target="${targetId}"`),`dark-angels: ${leader} must link to shared ${target}`);}
 
 const unitByTitle=new Map(daCurrent.map(unit=>[unit.title,unit]));
 expect(daCurrent.some(unit=>(unit.relations?.leader||[]).length||(unit.relations?.support||[]).length),'dark-angels: Leader/support relations must not remain globally empty');

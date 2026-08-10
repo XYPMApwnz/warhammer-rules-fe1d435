@@ -23,9 +23,9 @@
   }
   const detachments=(roster.detachments?.length?roster.detachments.map(item=>item.label):[roster.detachment]).flatMap(split).map(label=>label.replace(/\s*\([^)]*\)\s*$/,'')).filter(Boolean);
   const canonicalDetachmentIds=[...document.querySelectorAll('.content-group.detachment[data-detachment]')].map(section=>section.dataset.detachment);
-  const detachmentId=window.AMRosterEnhancements?.resolveDetachment(detachments,canonicalDetachmentIds);
-  if(!detachmentId){location.replace('../../roster-guides/index.html');return;}
-  const detachmentIds=new Set([detachmentId]),detachmentLabel=detachments.find(label=>slug(label)===detachmentId)||detachmentId;
+  const resolvedDetachmentIds=detachments.map(label=>window.AMRosterEnhancements?.resolveDetachment([label],canonicalDetachmentIds));
+  if(!resolvedDetachmentIds.length||resolvedDetachmentIds.some(id=>!id)){location.replace('../../roster-guides/index.html');return;}
+  const detachmentIds=new Set(resolvedDetachmentIds),detachmentLabel=detachments.join(' + ');
   const enhancementIds=new Map([...document.querySelectorAll('.enhancement[data-enhancement-title][data-rule-id]')].map(card=>[normalize(card.dataset.enhancementTitle),card.dataset.ruleId]));
   const enhancementRuleIdsByUnitId={};
   for(const [cardId,entry] of selected){

@@ -277,7 +277,7 @@ const normalizedHtml=html
   .replace('../../glossary/generated/glossary.en.js','../../glossary/generated/glossary.en.js?v=tyranids-1')
   .replace('./scripts/data.js','./scripts/data.js?v=2')
   .replace('<script src="../shared/army-related-rules.js"></script>','<script src="../shared/modal-focus.js?v=1"></script><script src="../shared/army-related-rules.js"></script>')
-  .replace('../shared/army-related-rules.js','../shared/army-related-rules.js?v=9')
+  .replace('../shared/army-related-rules.js','../shared/army-related-rules.js?v=10')
   .replace('../shared/army-book-app.js','../shared/army-book-app.js?v=9')
   .replace('./scripts/app.js',`./scripts/app.js?v=${config.assetVersions?.app||(config.dedicatedMobile?'3':'2')}`);
 const coveredHtml=config.coverImage?normalizedHtml.replace('class="hero section surface faction-hero"','class="hero section surface faction-hero faction-hero-cover"'):normalizedHtml;
@@ -289,7 +289,7 @@ if(config.dedicatedMobile&&!config.sharedArmyBookApp)finalHtml=finalHtml.replace
 if(config.compatibleRulesMatrix){
   finalHtml=finalHtml
     .replace(/<script src="\.\.\/shared\/related-rules-matcher\.js\?v=6"><\/script>/,'')
-    .replace(/<script src="\.\.\/shared\/army-related-rules\.js\?v=9"><\/script>/,'');
+    .replace(/<script src="\.\.\/shared\/army-related-rules\.js(?:\?v=\d+)?"><\/script>/,'');
   if(!config.sharedArmyBookApp)finalHtml=finalHtml.replace(/<script src="\.\.\/shared\/army-book-app\.js\?v=9"><\/script>/,'');
   if(config.rosterSupport)finalHtml=finalHtml.replace('<script src="./scripts/app.js',`<script src="./scripts/roster-filter.js?v=${config.assetVersions?.rosterFilter||1}"></script><script src="./scripts/app.js`);
 }

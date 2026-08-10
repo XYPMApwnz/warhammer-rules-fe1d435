@@ -21,7 +21,7 @@ const glossary=JSON.parse(fs.readFileSync(path.join(repo,'glossary','registry.en
 const reader=fs.readFileSync(path.join(root,'reader.html'),'utf8');
 const serviceWorker=fs.readFileSync(path.join(repo,'service-worker.js'),'utf8');
 const codexParitySource=manifest.layers.find(layer=>layer.id==='codex-parity');
-assert.equal(config.assetVersions.rosterFilter,3);
+assert.equal(config.assetVersions.rosterFilter,4);
 const rosterFilterUrl=reader.match(/\.\/scripts\/roster-filter\.js\?v=\d+/)?.[0];
 assert.ok(rosterFilterUrl);
 assert.ok(serviceWorker.includes(`./books/tau-empire/${rosterFilterUrl.slice(2)}`));

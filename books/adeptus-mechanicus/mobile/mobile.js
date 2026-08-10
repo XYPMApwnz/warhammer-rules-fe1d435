@@ -5,20 +5,21 @@
   const resolveContext=(parsed,detachmentIds,unitIds,resolveDetachment)=>{
     if(!adeptusMechanicusFaction(parsed?.faction)||!parsed?.units?.length)throw new Error('Roster faction or units unavailable');
     const labels=parsed.detachments?.length?parsed.detachments.map(item=>item.label):[parsed.detachment];
-    const detachmentId=resolveDetachment(labels,detachmentIds);
-    if(!detachmentId)throw new Error('Roster Detachment unavailable');
+    const resolved=labels.map(label=>resolveDetachment([label],detachmentIds));
+    if(!resolved.length||resolved.some(id=>!id))throw new Error('Roster Detachment unavailable');
+    const resolvedDetachmentIds=[...new Set(resolved)];
     const knownUnits=new Set(unitIds),instancesByUnitId={};
     for(const instance of parsed.units){const unitId=`unit-${slug(instance.name)}`;if(knownUnits.has(unitId))(instancesByUnitId[unitId]||=[]).push(instance);}
     const resolvedUnitIds=Object.keys(instancesByUnitId);
     if(!resolvedUnitIds.length)throw new Error('Roster units unavailable');
-    return{parsed,detachmentId,unitIds:resolvedUnitIds,instancesByUnitId};
+    return{parsed,detachmentId:resolvedDetachmentIds[0],detachmentIds:resolvedDetachmentIds,unitIds:resolvedUnitIds,instancesByUnitId};
   };
   const filterNavigation=(navigation,context)=>{
     if(!context)return{detachmentIds:[...navigation.detachmentIds],categories:navigation.categories.map(category=>({...category,unitIds:[...category.unitIds]}))};
     const units=new Set(context.unitIds);
-    return{detachmentIds:navigation.detachmentIds.filter(id=>id===context.detachmentId),categories:navigation.categories.map(category=>({...category,unitIds:category.unitIds.filter(id=>units.has(id))})).filter(category=>category.unitIds.length)};
+    return{detachmentIds:navigation.detachmentIds.filter(id=>context.detachmentIds.includes(id)),categories:navigation.categories.map(category=>({...category,unitIds:category.unitIds.filter(id=>units.has(id))})).filter(category=>category.unitIds.length)};
   };
-  const routeAllowed=(type,id,context)=>!context||type==='unit'?context?.unitIds.includes(id)!==false:type==='detachment'?id===context.detachmentId:true;
+  const routeAllowed=(type,id,context)=>!context||type==='unit'?context?.unitIds.includes(id)!==false:type==='detachment'?context.detachmentIds.includes(id):true;
   const cardContext=(context,unitId)=>{const instances=context?.instancesByUnitId?.[unitId]||[];return{instances,points:instances.reduce((sum,item)=>sum+(Number(item.points)||0),0),loadout:instances.flatMap(item=>[item.wargear,...(item.models||[]).flatMap(model=>[model.wargear,...(model.loadouts||[]).map(loadout=>loadout.wargear)])].filter(Boolean))};};
   const withRosterQuery=(href,rosterId,hash='')=>{const destination=new URL(href);destination.search='';destination.searchParams.set('roster',rosterId);if(hash)destination.hash=hash;return destination.href;};
   const viewSwitchHref=(href,search,hash='')=>{const destination=new URL(href);destination.search=search;if(hash)destination.hash=hash;return destination.href;};
@@ -71,8 +72,9 @@ if(typeof document!=='undefined')(async function(){
       categoryGroups.forEach(group=>{if(!allowedCategories.has(group.dataset.unitCategory))group.remove();});
       nav.querySelectorAll('[data-route-type]').forEach(link=>{link.href=window.AMPhoneRoster.withRosterQuery(link.href,rosterId,link.hash);});
       if(rosterGuides)rosterGuides.href=window.AMPhoneRoster.withRosterQuery(rosterGuides.href,rosterId,rosterGuides.hash);
-      rosterDetachments=[rosterContext.detachmentId];
+      rosterDetachments=[...rosterContext.detachmentIds];
       window.AM_ROSTER_GUIDE=Object.freeze({detachmentIds:rosterDetachments});
+      relatedDetachment.value='all';relatedDetachment.closest('label')?.remove();
       if(unit){
         const currentCard=window.AMPhoneRoster.cardContext(rosterContext,unit.id);
         if(!currentCard.instances.length)throw new Error('Current datasheet is outside roster');
@@ -120,7 +122,7 @@ if(typeof document!=='undefined')(async function(){
 
   function filterRelated(){
     if(!relatedRulesEnabled||!relatedContent||!unit||!compatibleRulesMatrix)return;
-    const selected=relatedDetachment.value;
+    const selected=rosterMode?'all':relatedDetachment.value;
     const compatible=compatibleRuntime.getCompatibleRules(compatibleRulesMatrix,unit.id,{detachmentId:selected});
     const allowed=new Map(window.AMRosterEnhancements.filterCompatibleRules(compatible,rosterMode,assignedEnhancementRuleIds).map(item=>[item.ruleId,item]));
     relatedContent.querySelectorAll('.stratagem,.enhancement').forEach(card=>{
@@ -153,7 +155,7 @@ if(typeof document!=='undefined')(async function(){
       const [response,matrix]=await Promise.all([fetch('./related-rules.inc?v=4'),compatibleRuntime.loadCompatibleRules(new URL('../generated/compatible-rules.json',scriptUrl))]);if(!response.ok)throw new Error(`HTTP ${response.status}`);
       relatedContent.innerHTML=await response.text();decorateStratagemTurns(relatedContent);decorateStratagemTypes(relatedContent);compatibleRulesMatrix=matrix;relatedLoaded=true;
       if(rosterMode){const normalizeTitle=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');assignedEnhancementRuleIds=new Set([...relatedContent.querySelectorAll('.enhancement[data-enhancement-title]')].filter(card=>assignedEnhancementNames.has(normalizeTitle(card.dataset.enhancementTitle))).map(card=>card.dataset.ruleId||card.id));}
-      if(rosterMode){[...relatedDetachment.options].forEach(option=>{if(option.value==='all'||option.value!==rosterDetachments[0])option.remove();});if(relatedDetachment.options.length!==1||relatedDetachment.options[0].value!==rosterDetachments[0])throw new Error('Roster data unavailable');relatedDetachment.value=rosterDetachments[0];relatedDetachment.disabled=true;}
+      if(rosterMode){const sections=[...relatedContent.querySelectorAll('.related-detachment:not(.related-core)')];if(rosterDetachments.some(id=>!sections.some(section=>section.dataset.detachment===id)))throw new Error('Roster data unavailable');sections.forEach(section=>{if(!rosterDetachments.includes(section.dataset.detachment))section.remove();});}
       filterRelated();
     }catch(error){
       if(rosterMode&&error?.message==='Roster data unavailable'){relatedRulesEnabled=false;relatedRules?.remove();return;}
@@ -175,7 +177,7 @@ if(typeof document!=='undefined')(async function(){
   });
   navButton.addEventListener('click',()=>drawer(!document.body.classList.contains('nav-drawer-open')));scrim.addEventListener('click',()=>drawer(false));
   if(relatedRulesEnabled&&relatedRules){if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{if(!entries.some(entry=>entry.isIntersecting))return;observer.disconnect();loadRelated();},{rootMargin:'600px 0px'});observer.observe(relatedRules);}else loadRelated();}
-  if(relatedRulesEnabled&&relatedDetachment){try{const saved=localStorage.getItem('adeptus-mechanicus-detachment-filter');if(saved&&relatedDetachment.querySelector(`option[value="${CSS.escape(saved)}"]`))relatedDetachment.value=saved;}catch{}relatedDetachment.addEventListener('change',()=>{try{localStorage.setItem('adeptus-mechanicus-detachment-filter',relatedDetachment.value);}catch{}filterRelated();});filterRelated();}
+  if(relatedRulesEnabled&&relatedDetachment&&!rosterMode){try{const saved=localStorage.getItem('adeptus-mechanicus-detachment-filter');if(saved&&relatedDetachment.querySelector(`option[value="${CSS.escape(saved)}"]`))relatedDetachment.value=saved;}catch{}relatedDetachment.addEventListener('change',()=>{try{localStorage.setItem('adeptus-mechanicus-detachment-filter',relatedDetachment.value);}catch{}filterRelated();});filterRelated();}
   if(relatedRulesEnabled)relatedRules?.addEventListener('click',event=>{const tab=event.target.closest('[data-related-tab]');if(tab){relatedKind=tab.dataset.relatedTab;filterRelated();}});
   drawerMedia.addEventListener?.('change',syncDrawerMode);syncDrawerMode();
   const documentTriggers=()=>[...document.querySelectorAll('main [data-term],#relatedRules [data-term]')];

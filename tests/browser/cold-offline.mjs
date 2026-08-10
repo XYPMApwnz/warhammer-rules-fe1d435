@@ -204,6 +204,12 @@ try{
     await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?roster=${encodeURIComponent(rosterId)}`);
     await page.waitForFunction(()=>document.documentElement.dataset.rosterActive==='true');
     assert.ok(await page.locator('#relatedRules').count(),'Valid roster must expose roster-aware rules');
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.waitForFunction(()=>document.querySelectorAll('#relatedRulesContent .related-detachment').length>0);
+    assert.equal(await page.locator('#relatedDetachment').count(),0,'One-Detachment Phone roster still exposes a Detachment selector');
+    const oneDetachmentHeadings=await page.locator('#relatedRulesContent .related-detachment:visible > h2').allTextContents();
+    assert.ok(oneDetachmentHeadings.some(title=>title.startsWith('Kauyon')),'One-Detachment roster omitted its Detachment rules');
+    assert.ok(!oneDetachmentHeadings.some(title=>title.startsWith("Mont'ka")),'One-Detachment roster included a foreign Detachment');
 
     await page.goto(`${origin}/index.html?roster-smoke-control=1`);
     await page.evaluate(record=>{
@@ -221,6 +227,52 @@ try{
     console.log('PASS representative valid roster and wrong-faction fail-closed flow without redirect loop');
   }finally{
     await rosterContext.close();
+  }
+
+  const compatibleRosterContext=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});
+  try{
+    const {page,errors}=await observedPage(compatibleRosterContext);
+    const rosterRecord={id:'multi-detachment-compatible',name:'Multi-detachment Compatible Rules fixture',roster:{faction:"Emperor's Children",detachment:'Carnival of Excess',detachments:[{label:'Carnival of Excess'},{label:'Frenzied Host'}],units:[{id:'fixture-lord-exultant',name:'Lord Exultant',quantity:1,points:0}],enhancements:[{name:'Dark Blessings',ownerStatus:'resolved',ownerUnitId:'fixture-lord-exultant'},{name:'Euphoric Crown',ownerStatus:'resolved',ownerUnitId:'fixture-lord-exultant'}]}};
+    await page.goto(`${origin}/books/emperors-children/reader.html#unit-lord-exultant`);
+    await page.locator('#unit-lord-exultant .related-rules-trigger').click();
+    await page.locator('.full-related-filter').waitFor({state:'visible'});
+    assert.match(await page.locator('.full-related-filter').textContent(),/All Detachments/,'Non-roster All Detachments selector regressed');
+    await page.locator('.related-rules-close').click();
+    await page.evaluate(record=>{localStorage.setItem('emperors-children-detachment-filter','court-of-the-phoenician');localStorage.setItem('wh40k-rosters-v1',JSON.stringify([record]));},rosterRecord);
+
+    await page.goto(`${origin}/books/emperors-children/reader.html?roster=${rosterRecord.id}#unit-lord-exultant`);
+    await page.waitForFunction(()=>window.EC_ROSTER_GUIDE?.detachmentIds?.length===2);
+    await page.locator('#unit-lord-exultant .related-rules-trigger').click();
+    await page.locator('.full-related-content').waitFor({state:'visible'});
+    assert.equal(await page.locator('.full-related-filter').count(),0,'Desktop roster mode still exposes a Detachment selector');
+    const desktopHeadings=await page.locator('.full-related-content .related-detachment:visible > h2').allTextContents();
+    assert.ok(desktopHeadings.some(title=>title.startsWith('Carnival of Excess'))&&desktopHeadings.some(title=>title.startsWith('Frenzied Host')),'Desktop roster union omitted a roster Detachment');
+    assert.ok(!desktopHeadings.some(title=>title.startsWith('Court of the Phoenician')),'Desktop roster union included a foreign Detachment');
+    assert.equal(desktopHeadings.filter(title=>title==='Core Stratagems').length,1,'Desktop roster union duplicated Core Stratagems');
+    await page.locator('[data-kind="enhancements"]').click();
+    const enhancementHeadings=await page.locator('.full-related-content .related-detachment:visible > h2').allTextContents();
+    assert.ok(enhancementHeadings.some(title=>title.startsWith('Carnival of Excess'))&&enhancementHeadings.some(title=>title.startsWith('Frenzied Host')),'Desktop roster union omitted an assigned Enhancement group');
+    const snapshot=await page.evaluate(()=>window.DG_APP.relatedRules.snapshot());
+    assert.equal(snapshot.detachment,'all','Roster snapshot persisted a manual Detachment');
+    await page.locator('.related-rules-close').click();
+    await page.evaluate(state=>window.DG_APP.relatedRules.restore(state),snapshot);
+    await page.locator('.full-related-content').waitFor({state:'visible'});
+    assert.equal(await page.locator('.full-related-filter').count(),0,'Restored roster state reintroduced the Detachment selector');
+    assert.deepEqual(errors,[],'Desktop roster Compatible Rules emitted an uncaught runtime error');
+
+    errors.length=0;
+    await page.goto(`${origin}/books/emperors-children/mobile/lord-exultant.html?roster=${rosterRecord.id}`);
+    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
+    await page.waitForFunction(()=>document.querySelectorAll('#relatedRulesContent .related-detachment').length>0);
+    assert.equal(await page.locator('#relatedDetachment').count(),0,'Phone roster mode still exposes a Detachment selector');
+    const phoneHeadings=await page.locator('#relatedRulesContent .related-detachment:visible > h2').allTextContents();
+    assert.ok(phoneHeadings.some(title=>title.startsWith('Carnival of Excess'))&&phoneHeadings.some(title=>title.startsWith('Frenzied Host')),'Phone roster union omitted a roster Detachment');
+    assert.ok(!phoneHeadings.some(title=>title.startsWith('Court of the Phoenician')),'Phone roster union included a foreign Detachment');
+    assert.equal(phoneHeadings.filter(title=>title==='Core Stratagems').length,1,'Phone roster union duplicated Core Stratagems');
+    assert.deepEqual(errors,[],'Phone roster Compatible Rules emitted an uncaught runtime error');
+    console.log('PASS roster Compatible Rules union all saved Detachments without a selector on Desktop and Phone');
+  }finally{
+    await compatibleRosterContext.close();
   }
 
   const offlineContext=await browser.newContext({serviceWorkers:'allow',viewport:{width:390,height:844}});

@@ -85,12 +85,12 @@
           if(rosterMode){sections.forEach(section=>{if(section.dataset.detachment!=='core'&&!rosterDetachments.has(section.dataset.detachment))section.remove();});sections=sections.filter(section=>section.dataset.detachment==='core'||rosterDetachments.has(section.dataset.detachment));}
           const detachmentSections=sections.filter(section=>section.dataset.detachment!=='core');
           const choices=[...(rosterMode&&detachmentSections.length===1?[]:[['all',rosterMode?'All roster detachments':'All detachments']]),...detachmentSections.map(section=>[section.dataset.detachment,section.querySelector('h2').textContent])];
-          detachment=choices.length===1?choices[0][0]:'all';
+          detachment=rosterMode?'all':(choices.length===1?choices[0][0]:'all');
           if(!rosterMode)try{const saved=localStorage.getItem(options.storageKey);if(choices.some(([value])=>value===saved))detachment=saved;}catch{}
           filterMenu=document.createElement('details');filterMenu.className='full-related-filter';filterMenu.classList.toggle('is-static',choices.length===1);
           filterMenu.innerHTML='<summary><span>'+choices.find(([value])=>value===detachment)[1]+'</span></summary><div>'+choices.map(([value,label])=>'<button type="button" data-detachment="'+value+'" aria-pressed="'+(value===detachment)+'">'+label+'</button>').join('')+'</div>';
           tabs=document.createElement('div');tabs.className='full-related-tabs';tabs.innerHTML='<button type="button" data-kind="stratagems" aria-pressed="true">Stratagems</button><button type="button" data-kind="enhancements" aria-pressed="false">Enhancements</button>';
-          const controls=document.createElement('div');controls.className='full-related-controls';controls.append(filterMenu,tabs);
+          const controls=document.createElement('div');controls.className='full-related-controls';if(!rosterMode)controls.append(filterMenu);controls.append(tabs);
           content=document.createElement('div');content.className='full-related-content';content.append(fragment);
           empty=document.createElement('p');empty.className='full-related-empty';body.replaceChildren(controls,content,empty);
           filterMenu.addEventListener('click',event=>{
@@ -106,7 +106,7 @@
           body.replaceChildren(message,retry);return null;
         }
       }
-      if(state.detachment&&sections.some(section=>section.dataset.detachment===state.detachment))detachment=state.detachment;
+      if(!rosterMode&&state.detachment&&sections.some(section=>section.dataset.detachment===state.detachment))detachment=state.detachment;
       filter();
       if(filterMenu){
         const selected=filterMenu.querySelector(`[data-detachment="${CSS.escape(detachment)}"]`);

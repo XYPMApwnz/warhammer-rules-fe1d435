@@ -22,7 +22,7 @@
 
   const slug = (value) => String(value || "").toLowerCase().replace(/[’']/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   const normalize = (value) => String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
-  const resolveRosterDetachmentId=(normalizedIds,availableIds)=>{const ids=new Set(normalizedIds.filter(Boolean));if(ids.size!==1)return null;const[id]=ids;return availableIds.filter(candidate=>candidate===id).length===1?id:null;};
+  const resolveRosterDetachmentIds=(normalizedIds,availableIds)=>{const ids=[...new Set(normalizedIds.filter(Boolean))];return ids.length&&ids.every(id=>availableIds.filter(candidate=>candidate===id).length===1)?ids:null;};
   const detachmentKeywordGrants = [
     {detachment:'shamblerot-vectorium',units:['poxwalkers'],id:'keyword-battleline',title:'BATTLELINE'},
     {detachment:'contagion-engines',units:['foetid-bloat-drone','foetid-bloat-drone-with-heavy-blight-launcher','helbrute','myphitic-blight-hauler'],id:'keyword-contagion-engine',title:'CONTAGION ENGINE'}
@@ -113,13 +113,13 @@
   const detachments = storedDetachments.flatMap((item) => splitLabels(item.label || "").map((label) => ({ ...item, label, name:label.replace(/\s*\([^)]*\)\s*$/, "") })));
   const normalizedDetachmentIds = detachments.map((item) => `detachment-${slug(item.name || item.label.split("(")[0])}`).filter((id) => id !== "detachment-");
   const availableDetachmentIds = [...document.querySelectorAll(".content-group.detachment")].map((section) => section.id);
-  const resolvedDetachmentId = resolveRosterDetachmentId(normalizedDetachmentIds,availableDetachmentIds);
-  if (!resolvedDetachmentId) {
+  const resolvedDetachmentIds = resolveRosterDetachmentIds(normalizedDetachmentIds,availableDetachmentIds);
+  if (!resolvedDetachmentIds) {
     location.replace("../../roster-guides/index.html");
     return;
   }
-  const detachmentIds = new Set([resolvedDetachmentId]);
-  const detachmentLabel = detachments.find((item) => `detachment-${slug(item.name || item.label.split("(")[0])}` === resolvedDetachmentId).label;
+  const detachmentIds = new Set(resolvedDetachmentIds);
+  const detachmentLabel = detachments.map(item=>item.label).join(' + ');
   const selected = new Map();
 
   for (const unit of roster.units) {

@@ -180,5 +180,16 @@ const datasmith=matcherContext(['INFANTRY','CHARACTER','TECH-PRIEST'],{candidate
 assert(sharedMatcher.matches({targets:[{side:'friendly',all:['ADEPTUS MECHANICUS','VEHICLE']}]},datasmith),'Datasmith and Kastelan Attached Unit loses VEHICLE relevance');
 assert(!sharedMatcher.matches({targets:[{side:'friendly',all:['ADEPTUS MECHANICUS','INFANTRY']}]},datasmith),'Datasmith and Kastelan Attached Unit incorrectly keeps INFANTRY');
 
+const rosterCompatibleBooks=['death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children'];
+for(const bookId of rosterCompatibleBooks){
+  const desktop=fs.readFileSync(path.join(root,`books/${bookId}/scripts/app.js`),'utf8');
+  const phone=fs.readFileSync(path.join(root,`books/${bookId}/mobile/mobile.js`),'utf8');
+  assert(/detachment\s*=\s*rosterMode\s*\?\s*['"]all['"]/.test(desktop),`${bookId}: Desktop roster mode does not use the all-detachment union`);
+  assert(/if\s*\(!rosterMode\)\s*controls\.append\(filterMenu\)/.test(desktop),`${bookId}: Desktop roster mode still mounts the Detachment selector`);
+  assert(/selected\s*=\s*rosterMode\s*\?\s*['"]all['"]/.test(phone),`${bookId}: Phone roster mode does not use the all-detachment union`);
+  assert(phone.includes("relatedDetachment.closest('label')?.remove()"),`${bookId}: Phone roster mode still mounts the Detachment selector`);
+  assert(/if\s*\(relatedRulesEnabled\s*&&\s*relatedDetachment\s*&&\s*!rosterMode\)/.test(phone),`${bookId}: Phone roster mode can still restore a stale manual filter`);
+}
+
 if(failures.length){failures.forEach(message=>console.error(`FAIL  ${message}`));process.exitCode=1;}
 else console.log(`Roster Guide contract passed for ${supported.length} book(s).`);

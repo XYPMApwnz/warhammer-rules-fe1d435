@@ -44,8 +44,8 @@
   "compatibleRulesMatrix": true,
   "legacyRelatedRuleAttributes": false,
   "assetVersions": {
-    "app": 8,
-    "rosterFilter": 2
+    "app": 9,
+    "rosterFilter": 3
   },
   "expected": {
     "matchedDetachments": 10,

@@ -10,9 +10,10 @@
   const drawerMedia=matchMedia('(max-width: 800px)'),unit=document.querySelector('.unit-card'),params=new URLSearchParams(location.search),rosterMode=params.has('roster');
   const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/\s*\(aura\)\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim(),slug=value=>normalize(value).replace(/\s+/g,'-');
   const tyranidsFaction=value=>{const match=String(value||'').trim().match(/^(?:(Chaos|Imperium|Xenos)\s*[-–—]\s*)?(.*)$/i);return normalize(match?.[2])==='tyranids'&&(!match?.[1]||match[1].toLowerCase()==='xenos');};
-  function rosterContext(){if(!rosterMode)return null;let record;try{record=(JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[]).find(item=>item?.id===params.get('roster'));}catch{}if(!record)return null;let roster=record.roster;if(record.sourceText&&window.WHRosterParser){const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)roster=parsed;}if(!tyranidsFaction(roster?.faction))return null;const owners=new Set((roster.units||[]).filter(item=>normalize(item.name)===normalize(unit?.dataset.unitTitle)).map(item=>item.id)),enhancements=new Set((roster.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&owners.has(item.ownerUnitId)).map(item=>normalize(item.name))),detachments=[...new Set((roster.detachments?.length?roster.detachments.map(item=>item.label):[roster.detachment]).filter(Boolean).map(slug))];return detachments.length===1?{detachments,enhancements}:null;}
+  function rosterContext(){if(!rosterMode)return null;let record;try{record=(JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[]).find(item=>item?.id===params.get('roster'));}catch{}if(!record)return null;let roster=record.roster;if(record.sourceText&&window.WHRosterParser){const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)roster=parsed;}if(!tyranidsFaction(roster?.faction))return null;const owners=new Set((roster.units||[]).filter(item=>normalize(item.name)===normalize(unit?.dataset.unitTitle)).map(item=>item.id)),enhancements=new Set((roster.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&owners.has(item.ownerUnitId)).map(item=>normalize(item.name))),detachments=[...new Set((roster.detachments?.length?roster.detachments.map(item=>item.label):[roster.detachment]).filter(Boolean).map(slug))];return detachments.length?{detachments,enhancements}:null;}
 const roster=rosterContext();
 if(rosterMode&&!roster){location.replace('../../../roster-guides/index.html');return;}
+if(rosterMode){relatedDetachment.value='all';relatedDetachment.closest('label')?.remove();}
 const relatedRulesEnabled=compatibleRuntime?.compatibleRulesEnabled===true;
   const terms=Object.freeze({...window.WH40K_GLOSSARY.forBook('tyranids')});
   window.WHGlossaryAutolink?.configure('tyranids');
@@ -44,7 +45,7 @@ const relatedRulesEnabled=compatibleRuntime?.compatibleRulesEnabled===true;
 
   function filterRelated(){
     if(!relatedRulesEnabled||!relatedContent||!unit||!relatedLoaded)return;
-    const selected=relatedDetachment.value,allowed=new Map(compatibleRuntime.getCompatibleRules(compatibleMatrix,unit.id,{detachmentId:selected}).filter(item=>!rosterMode||item.kind!=='enhancement'||assignedEnhancementRuleIds.has(item.ruleId)).map(item=>[item.ruleId,item]));
+    const selected=rosterMode?'all':relatedDetachment.value,allowed=new Map(compatibleRuntime.getCompatibleRules(compatibleMatrix,unit.id,{detachmentId:selected}).filter(item=>!rosterMode||item.kind!=='enhancement'||assignedEnhancementRuleIds.has(item.ruleId)).map(item=>[item.ruleId,item]));
     relatedContent.querySelectorAll('.stratagem,.enhancement').forEach(card=>{
       const result=allowed.get(card.dataset.ruleId||card.id);card.hidden=!result;card.dataset.matchState=result?.state||'no-match';
       card.querySelector(':scope > .compatibility-status')?.remove();
@@ -71,7 +72,7 @@ const relatedRulesEnabled=compatibleRuntime?.compatibleRulesEnabled===true;
     try{
       const [response,matrix]=await Promise.all([fetch('./related-rules.inc?v=4'),compatibleRuntime.loadCompatibleRules(new URL('../generated/compatible-rules.json',scriptUrl))]);if(!response.ok)throw new Error(`HTTP ${response.status}`);
       relatedContent.innerHTML=await response.text();decorateStratagemTurns(relatedContent);decorateStratagemTypes(relatedContent);compatibleMatrix=matrix;relatedLoaded=true;
-      if(rosterMode){assignedEnhancementRuleIds=new Set([...relatedContent.querySelectorAll('.enhancement[data-enhancement-title]')].filter(card=>roster.enhancements.has(normalize(card.dataset.enhancementTitle))).map(card=>card.dataset.ruleId||card.id));[...relatedDetachment.options].forEach(option=>{if(option.value==='all'||!roster.detachments.includes(option.value))option.remove();});if(!relatedDetachment.options.length)throw new Error('Roster data unavailable');relatedDetachment.value=relatedDetachment.options[0].value;relatedDetachment.disabled=relatedDetachment.options.length===1;document.querySelector('[data-roster-guides-link]')?.removeAttribute('hidden');}
+      if(rosterMode){assignedEnhancementRuleIds=new Set([...relatedContent.querySelectorAll('.enhancement[data-enhancement-title]')].filter(card=>roster.enhancements.has(normalize(card.dataset.enhancementTitle))).map(card=>card.dataset.ruleId||card.id));const sections=[...relatedContent.querySelectorAll('.related-detachment:not(.related-core)')];if(roster.detachments.some(id=>!sections.some(section=>section.dataset.detachment===id)))throw new Error('Roster data unavailable');sections.forEach(section=>{if(!roster.detachments.includes(section.dataset.detachment))section.remove();});document.querySelector('[data-roster-guides-link]')?.removeAttribute('hidden');}
       filterRelated();
     }catch{
       const message=document.createElement('p');message.className='related-status';message.textContent='Could not load related rules. Check the connection and try again.';
@@ -91,7 +92,7 @@ const relatedRulesEnabled=compatibleRuntime?.compatibleRulesEnabled===true;
   });
   navButton.addEventListener('click',()=>drawer(!document.body.classList.contains('nav-drawer-open')));scrim.addEventListener('click',()=>drawer(false));
   if(relatedRulesEnabled&&relatedRules){if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)){observer.disconnect();loadRelated();}},{rootMargin:'600px 0px'});observer.observe(relatedRules);}else loadRelated();}
-  if(relatedRulesEnabled&&relatedDetachment){try{const saved=localStorage.getItem('tyranids-detachment-filter');if(saved&&relatedDetachment.querySelector(`option[value="${CSS.escape(saved)}"]`))relatedDetachment.value=saved;}catch{}relatedDetachment.addEventListener('change',()=>{try{localStorage.setItem('tyranids-detachment-filter',relatedDetachment.value);}catch{}filterRelated();});}
+  if(relatedRulesEnabled&&relatedDetachment&&!rosterMode){try{const saved=localStorage.getItem('tyranids-detachment-filter');if(saved&&relatedDetachment.querySelector(`option[value="${CSS.escape(saved)}"]`))relatedDetachment.value=saved;}catch{}relatedDetachment.addEventListener('change',()=>{try{localStorage.setItem('tyranids-detachment-filter',relatedDetachment.value);}catch{}filterRelated();});}
   if(relatedRulesEnabled)relatedRules?.addEventListener('click',event=>{const tab=event.target.closest('[data-related-tab]');if(tab){relatedKind=tab.dataset.relatedTab;filterRelated();}});
   drawerMedia.addEventListener?.('change',syncDrawerMode);syncDrawerMode();
   const documentTriggers=()=>[...document.querySelectorAll('main [data-term],#relatedRules [data-term]')];

@@ -44,10 +44,10 @@
   "compatibleRulesMatrix": true,
   "legacyRelatedRuleAttributes": false,
   "assetVersions": {
-    "app": 9,
+    "app": 10,
     "book": 5,
     "mobile": 2,
-    "rosterFilter": 3,
+    "rosterFilter": 4,
     "rosterData": 1
   },
   "expected": {

@@ -27,10 +27,11 @@
   window.WHGlossaryAutolink?.configure('death-guard');
   const popups=new window.DGPhonePopups({dialog,layer:popupLayer,terms,safeFallback:()=>navButton});
   const slug = value => String(value || '').toLowerCase().replace(/['\u2019]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  const resolveRosterDetachmentId=(normalizedIds,availableIds)=>{const ids=new Set(normalizedIds.filter(Boolean));if(ids.size!==1)return null;const[id]=ids;return availableIds.filter(candidate=>candidate===id).length===1?id:null;};
+  const resolveRosterDetachmentIds=(normalizedIds,availableIds)=>{const ids=[...new Set(normalizedIds.filter(Boolean))];return ids.length&&ids.every(id=>availableIds.filter(candidate=>candidate===id).length===1)?ids:null;};
   let relatedRulesEnabled = Boolean(compatibleRuntime?.compatibleStratagemsReviewEnabled);
   let compatibleRulesMatrix = null;
   let assignedEnhancementIds = rosterMode ? new Set() : null;
+  let rosterDetachmentIds = [];
   if (!relatedRulesEnabled) relatedRules?.remove();
 
   if (rosterMode) {
@@ -44,14 +45,11 @@
       const faction=String(parsed.faction||'').replace(/^Chaos\s*[-–—]\s*/i,'').trim().toLowerCase();
       if(faction!=='death guard')throw new Error('Roster faction unavailable');
       const normalizedDetachmentIds = (parsed.detachments?.length ? parsed.detachments.map(item => item.name || item.label) : [parsed.detachment]).map(slug).filter(Boolean);
-      const resolvedDetachmentId = resolveRosterDetachmentId(normalizedDetachmentIds,[...relatedDetachment.options].map(option=>option.value));
-      if (!resolvedDetachmentId) throw new Error('Roster Detachment unavailable');
-      const matchingOptions = [...relatedDetachment.options].filter(option => option.value === resolvedDetachmentId);
-      if (matchingOptions.length !== 1) throw new Error('Roster Detachment ambiguous');
-      const [matchingOption] = matchingOptions;
-      [...relatedDetachment.options].forEach(option => { if (option !== matchingOption) option.remove(); });
-      relatedDetachment.value = resolvedDetachmentId;
-      relatedDetachment.disabled = true;
+      rosterDetachmentIds = resolveRosterDetachmentIds(normalizedDetachmentIds,[...relatedDetachment.options].map(option=>option.value));
+      if (!rosterDetachmentIds) throw new Error('Roster Detachment unavailable');
+      relatedDetachment.value = 'all';
+      relatedDetachment.closest('label')?.remove();
+      window.DG_ROSTER_GUIDE=Object.freeze({detachmentIds:rosterDetachmentIds});
       const unitSlug = unit.id.replace(/^unit-/, '');
       const matching = parsed.units.filter(item => slug(item.name) === unitSlug);
       const ownerIds=new Set(matching.map(item=>item.id));
@@ -110,7 +108,7 @@
 
   function filterRelated() {
     if (!relatedContent || !unit || !compatibleRulesMatrix) return;
-    const selected = relatedDetachment.value;
+    const selected = rosterMode ? 'all' : relatedDetachment.value;
     const compatible=compatibleRuntime.getCompatibleStratagems(compatibleRulesMatrix,unit.id,{detachmentId:selected,warlord:unit.dataset.rosterWarlord==='true'}),rules=assignedEnhancementIds?compatible.filter(rule=>rule.kind!=='enhancement'||assignedEnhancementIds.has(rule.ruleId)):compatible,byId=new Map(rules.map(rule=>[rule.ruleId,rule]));
     const hasEnhancements=rules.some(rule=>rule.kind==='enhancement');
     if(relatedKind==='enhancements'&&!hasEnhancements)relatedKind='stratagems';
@@ -149,7 +147,8 @@
     try {
       const [response,matrix] = await Promise.all([fetch('./related-rules.inc?v=4'),compatibleRuntime.loadCompatibleStratagems(new URL('../generated/compatible-rules.json',scriptUrl))]);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      relatedContent.innerHTML = await response.text();decorateStratagemTurns(relatedContent);decorateStratagemTypes(relatedContent);compatibleRulesMatrix=matrix;
+      relatedContent.innerHTML = await response.text();
+      if(rosterMode)relatedContent.querySelectorAll('.related-detachment:not(.related-core)').forEach(section=>{if(!rosterDetachmentIds.includes(section.dataset.detachment))section.remove();});decorateStratagemTurns(relatedContent);decorateStratagemTypes(relatedContent);compatibleRulesMatrix=matrix;
       const tabs=document.createElement('div');tabs.className='full-related-tabs';tabs.innerHTML='<button type="button" data-related-tab="stratagems" aria-pressed="true">Stratagems</button><button type="button" data-related-tab="enhancements" aria-pressed="false">Enhancements</button>';
       relatedRules.querySelector('.related-controls')?.append(tabs);
       relatedLoaded = true;
@@ -217,7 +216,7 @@
       observer.observe(relatedRules);
     } else loadRelated();
   }
-  if (relatedRulesEnabled && relatedDetachment) {
+  if (relatedRulesEnabled && relatedDetachment && !rosterMode) {
     try {
       const saved = localStorage.getItem('death-guard-detachment-filter');
       if (saved && relatedDetachment.querySelector(`option[value="${CSS.escape(saved)}"]`)) relatedDetachment.value = saved;

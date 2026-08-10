@@ -19,7 +19,7 @@
   "mobileRelatedRulesSource": false,
   "legacyRelatedRuleAttributes": false,
   "assetVersions": {
-    "app": 5,
+    "app": 6,
     "book": 3,
     "tokens": 2,
     "rosterFilter": 1,

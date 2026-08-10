@@ -14,7 +14,7 @@ const routes=['index.html','army-rules.html','updates.html',...routeIds.map(id=>
 assert.equal(new Set(routeIds).size,33,'Expected 10 Detachments and 23 Datasheets');
 for(const route of routes){
   const html=fs.readFileSync(path.join(root,route),'utf8');
-  assert.match(html,/\.\/mobile\.js\?v=2/);
+  assert.match(html,/\.\/mobile\.js\?v=3/);
   assert.match(html,/\.\/phone-popup-controller\.js\?v=1/);
   assert.match(html,/data-view-switch/);
 }

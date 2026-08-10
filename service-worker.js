@@ -77,7 +77,7 @@ const APP_SHELL = [
 
   "./books/death-guard/mobile/index.html",
   "./books/death-guard/mobile/mobile.css?v=11",
-  "./books/death-guard/mobile/mobile.js?v=29",
+  "./books/death-guard/mobile/mobile.js?v=30",
   "./books/death-guard/mobile/phone-popup-controller.js?v=1",
   "./books/death-guard/mobile/related-rules.inc?v=4",
   "./books/shared/navigation-targets.js?v=1",
@@ -98,12 +98,12 @@ const APP_SHELL = [
   "./books/death-guard/styles/content.css?v=40",
   "./books/death-guard/styles/popups.css?v=18",
   "./books/death-guard/scripts/navigation-controller.js?v=16",
-  "./books/death-guard/scripts/roster-filter.js?v=18",
+  "./books/death-guard/scripts/roster-filter.js?v=19",
   "./books/death-guard/scripts/popup-controller.js?v=25",
   "./books/death-guard/scripts/full-entry-controller.js?v=9",
   "./books/death-guard/scripts/journey-controller.js?v=13",
   "./books/death-guard/scripts/ui-controllers.js?v=12",
-  "./books/death-guard/scripts/app.js?v=43",
+  "./books/death-guard/scripts/app.js?v=44",
   "./books/death-guard/scripts/compatible-stratagems-runtime.mjs?v=3",
   "./books/death-guard/generated/compatible-rules.json",
   "./books/core-rules/",
@@ -142,7 +142,7 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/reader.html",
   "./books/adeptus-mechanicus/mobile/index.html",
   "./books/adeptus-mechanicus/mobile/mobile.css?v=4",
-  "./books/adeptus-mechanicus/mobile/mobile.js?v=16",
+  "./books/adeptus-mechanicus/mobile/mobile.js?v=17",
   "./books/adeptus-mechanicus/mobile/phone-popup-controller.js?v=1",
   "./books/adeptus-mechanicus/assets/mechanicus-logo.png",
   "./books/adeptus-mechanicus/assets/mechanicus-cover-800.webp",
@@ -152,10 +152,10 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/scripts/faction-ui.js?v=1",
   "./books/adeptus-mechanicus/mobile/related-rules.inc?v=4",
   "./books/adeptus-mechanicus/scripts/roster-enhancements.js?v=2",
-  "./books/adeptus-mechanicus/scripts/roster-filter.js?v=4",
+  "./books/adeptus-mechanicus/scripts/roster-filter.js?v=5",
   "./books/adeptus-mechanicus/scripts/compatible-rules-runtime.mjs?v=3",
   "./books/adeptus-mechanicus/generated/compatible-rules.json",
-  "./books/adeptus-mechanicus/scripts/app.js?v=34"
+  "./books/adeptus-mechanicus/scripts/app.js?v=35"
   ,"./books/tyranids/"
   ,TYRANIDS_ENTRY_FALLBACK
   ,TYRANIDS_DESKTOP_FALLBACK
@@ -165,13 +165,13 @@ const APP_SHELL = [
   ,"./books/tyranids/styles/book.css?v=4"
   ,"./books/tyranids/scripts/data.js?v=2"
   ,"./books/tyranids/scripts/roster-data.js?v=1"
-  ,"./books/tyranids/scripts/roster-filter.js?v=2"
+  ,"./books/tyranids/scripts/roster-filter.js?v=3"
   ,"./books/tyranids/scripts/compatible-rules-runtime.mjs?v=2"
   ,"./books/tyranids/scripts/stratagem-types.mjs?v=1"
   ,"./books/tyranids/generated/compatible-rules.json"
-  ,"./books/tyranids/scripts/app.js?v=8"
+  ,"./books/tyranids/scripts/app.js?v=9"
   ,"./books/tyranids/mobile/mobile.css?v=2"
-  ,"./books/tyranids/mobile/mobile.js?v=10"
+  ,"./books/tyranids/mobile/mobile.js?v=11"
   ,"./books/tyranids/mobile/phone-popup-controller.js?v=1"
   ,"./books/tyranids/mobile/related-rules.inc?v=4"
   ,"./glossary/generated/glossary.en.js?v=tyranids-1"
@@ -183,14 +183,14 @@ const APP_SHELL = [
   ,"./books/tau-empire/styles/book.css?v=5"
   ,"./books/tau-empire/assets/tau-empire-cover-800.webp"
   ,"./books/tau-empire/scripts/data.js?v=2"
-  ,"./books/tau-empire/scripts/app.js?v=9"
+  ,"./books/tau-empire/scripts/app.js?v=10"
   ,"./books/tau-empire/scripts/stratagem-types.mjs?v=1"
-  ,"./books/tau-empire/scripts/roster-filter.js?v=3"
+  ,"./books/tau-empire/scripts/roster-filter.js?v=4"
   ,"./books/tau-empire/scripts/compatible-rules-runtime.mjs?v=1"
   ,"./books/tau-empire/generated/compatible-rules.json"
   ,"./books/tau-empire/scripts/roster-data.js?v=1"
   ,"./books/tau-empire/mobile/mobile.css?v=2"
-  ,"./books/tau-empire/mobile/mobile.js?v=8"
+  ,"./books/tau-empire/mobile/mobile.js?v=9"
   ,"./books/tau-empire/mobile/phone-popup-controller.js?v=1"
   ,"./books/tau-empire/mobile/related-rules.inc?v=2"
   ,"./books/shared/book-roster-enhancements.js?v=1"
@@ -223,8 +223,8 @@ const APP_SHELL = [
   ,"./books/emperors-children/scripts/stratagem-types.mjs?v=2"
   ,"./books/emperors-children/generated/compatible-rules.json"
   ,"./books/emperors-children/mobile/related-rules.inc?v=2"
-  ,"./books/emperors-children/scripts/app.js?v=5"
-  ,"./books/emperors-children/mobile/mobile.js?v=2"
+  ,"./books/emperors-children/scripts/app.js?v=6"
+  ,"./books/emperors-children/mobile/mobile.js?v=3"
   ,"./books/space-marines/"
   ,SPACE_MARINES_FALLBACK
   ,"./books/space-marines/mobile/index.html"

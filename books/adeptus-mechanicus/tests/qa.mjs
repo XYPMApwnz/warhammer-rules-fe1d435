@@ -109,10 +109,12 @@ check('Mechanicus Phone rejects wrong faction parents',['Chaos - Adeptus Mechani
 check('Phone resolves one known Detachment',phoneContext.detachmentId===knownDetachmentId);
 check('Phone zero Detachment fails closed',rejectsPhone({...phoneParsed,detachments:[],detachment:''}));
 check('Phone unknown Detachment fails closed',rejectsPhone({...phoneParsed,detachments:[{label:'Unknown Forge'}]}));
-check('Phone ambiguous Detachments fail closed',rejectsPhone({...phoneParsed,detachments:[{label:allDetachments[0].title},{label:allDetachments[1].title}]}));
+const multiPhoneContext=phoneLogic.resolveContext({...phoneParsed,detachments:[{label:allDetachments[0].title},{label:allDetachments[1].title}]},detachmentInventory,phoneUnits,rosterLogic.resolveDetachment);
+check('Phone retains two known Detachments',JSON.stringify(multiPhoneContext.detachmentIds)===JSON.stringify([knownDetachmentId,detachmentSlug(allDetachments[1].title)]));
 check('Phone duplicate normalized Detachment remains valid',phoneLogic.resolveContext({...phoneParsed,detachments:[{label:knownDetachment},{label:knownDetachment.toUpperCase()}]},detachmentInventory,phoneUnits,rosterLogic.resolveDetachment).detachmentId===knownDetachmentId);
 const phoneNavigation={detachmentIds:[knownDetachmentId,detachmentSlug(allDetachments[1].title)],categories:[{id:'battleline',unitIds:['unit-skitarii-rangers','unit-skitarii-vanguard']},{id:'other',unitIds:['unit-onager-dunecrawler']}]},filteredPhoneNavigation=phoneLogic.filterNavigation(phoneNavigation,phoneContext),unfilteredPhoneNavigation=phoneLogic.filterNavigation(phoneNavigation,null);
 check('Phone navigation keeps only resolved Detachment',JSON.stringify(filteredPhoneNavigation.detachmentIds)===JSON.stringify([knownDetachmentId]));
+check('Phone multi-Detachment navigation keeps every resolved Detachment',JSON.stringify(phoneLogic.filterNavigation(phoneNavigation,multiPhoneContext).detachmentIds)===JSON.stringify(phoneNavigation.detachmentIds));
 check('Phone navigation keeps one link for duplicate datasheet instances',JSON.stringify(filteredPhoneNavigation.categories)===JSON.stringify([{id:'battleline',unitIds:['unit-skitarii-rangers']}]));
 check('Phone navigation removes empty categories and keeps non-empty groups',filteredPhoneNavigation.categories.length===1&&filteredPhoneNavigation.categories[0].id==='battleline');
 check('Phone current datasheet outside roster fails closed',!phoneLogic.routeAllowed('unit','unit-skitarii-vanguard',phoneContext)&&phoneLogic.routeAllowed('unit','unit-skitarii-rangers',phoneContext)&&!phoneLogic.routeAllowed('detachment',detachmentSlug(allDetachments[1].title),phoneContext));

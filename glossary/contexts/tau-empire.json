@@ -147,7 +147,7 @@
       }
     },
     "tau-empire-ability-for-the-greater-good": {
-      "termId": "tau-empire-ability-for-the-greater-good",
+      "termId": "tau-empire-army-rule-for-the-greater-good",
       "navigation": {
         "glossary": "glossary-tau-empire-ability-for-the-greater-good",
         "rule": "unit-breacher-team",
@@ -180,7 +180,8 @@
           "unit-sky-ray-gunship",
           "unit-stormsurge",
           "unit-sun-shark-bomber"
-        ]
+        ],
+        "fullRulePath": "books/tau-empire/reader.html#unit-breacher-team"
       }
     },
     "tau-empire-ability-marker-drone": {

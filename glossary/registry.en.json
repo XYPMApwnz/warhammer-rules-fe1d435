@@ -11303,7 +11303,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "core-active-player": {
       "id": "core-active-player",
@@ -11335,6 +11336,7 @@
       ],
       "mentions": [],
       "presentation": "article",
+      "matchLabels": [],
       "summarySource": {
         "documentId": "core-rules",
         "kind": "curated-operational-reference"
@@ -11456,7 +11458,8 @@
         "kind": "curated-reference"
       },
       "mentions": [],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "core-battle-round": {
       "id": "core-battle-round",
@@ -11485,7 +11488,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "core-battle-shocked": {
       "id": "core-battle-shocked",
@@ -11551,7 +11555,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "core-below-starting-strength": {
       "id": "core-below-starting-strength",
@@ -11580,7 +11585,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "core-blast": {
       "id": "core-blast",
@@ -11647,7 +11653,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "core-characteristic-armour-penetration": {
       "id": "core-characteristic-armour-penetration",
@@ -11676,7 +11683,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "core-characteristic-attacks": {
       "id": "core-characteristic-attacks",
@@ -11740,7 +11748,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "core-characteristic-damage": {
       "id": "core-characteristic-damage",
@@ -11804,7 +11813,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "core-characteristic-leadership": {
       "id": "core-characteristic-leadership",
@@ -11833,7 +11843,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "core-characteristic-move": {
       "id": "core-characteristic-move",
@@ -11862,7 +11873,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "core-characteristic-range": {
       "id": "core-characteristic-range",
@@ -11926,7 +11938,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "core-characteristic-strength": {
       "id": "core-characteristic-strength",
@@ -11955,7 +11968,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "core-characteristic-toughness": {
       "id": "core-characteristic-toughness",
@@ -11984,7 +11998,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "core-characteristic-weapon-skill": {
       "id": "core-characteristic-weapon-skill",
@@ -12013,7 +12028,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "core-characteristic-wounds": {
       "id": "core-characteristic-wounds",
@@ -12042,7 +12058,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "core-charge-phase": {
       "id": "core-charge-phase",
@@ -12071,7 +12088,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "core-cleave": {
       "id": "core-cleave",
@@ -12175,7 +12193,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "core-critical-hit": {
       "id": "core-critical-hit",
@@ -12208,7 +12227,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "core-critical-wound": {
       "id": "core-critical-wound",
@@ -12241,7 +12261,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "core-damage-roll": {
       "id": "core-damage-roll",
@@ -12346,7 +12367,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "core-deep-strike": {
       "id": "core-deep-strike",
@@ -12418,7 +12440,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "core-destroyed": {
       "id": "core-destroyed",
@@ -12480,7 +12503,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "core-detection-range": {
       "id": "core-detection-range",
@@ -12514,7 +12538,8 @@
         "documentId": "death-guard",
         "kind": "curated-reference"
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "core-devastating-wounds": {
       "id": "core-devastating-wounds",
@@ -12618,7 +12643,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "core-extra-attacks": {
       "id": "core-extra-attacks",
@@ -12726,7 +12752,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "core-fights-first": {
       "id": "core-fights-first",
@@ -12836,7 +12863,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "core-hazardous": {
       "id": "core-hazardous",
@@ -13299,7 +13327,8 @@
         "documentId": "death-guard",
         "kind": "curated-reference"
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "core-movement-phase": {
       "id": "core-movement-phase",
@@ -13328,7 +13357,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "core-objective-control": {
       "id": "core-objective-control",
@@ -13361,7 +13391,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "core-objective-marker": {
       "id": "core-objective-marker",
@@ -13390,7 +13421,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "core-one-shot": {
       "id": "core-one-shot",
@@ -13492,7 +13524,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "core-precision": {
       "id": "core-precision",
@@ -13673,7 +13706,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "core-rule-01-01-01-you": {
       "id": "core-rule-01-01-01-you",
@@ -14790,7 +14824,9 @@
       "definition": {
         "en": "Some rules may use the term Leadership test, this is the same as leadership roll."
       },
-      "aliases": [],
+      "aliases": [
+        "leadership-test"
+      ],
       "related": [],
       "canonicalSource": {
         "documentId": "core-rules",
@@ -14823,9 +14859,7 @@
       "definition": {
         "en": "To make a leadership roll for a unit, its controlling player rolls 2D6: if the result is equal to or greater than one or more of the Ld characteristics in that unit, that roll succeeds. Otherwise, that roll fails. The rule that instructed you to make that leadership roll will describe the effects of that roll succeeding or failing."
       },
-      "aliases": [
-        "leadership-test"
-      ],
+      "aliases": [],
       "related": [],
       "canonicalSource": {
         "documentId": "core-rules",
@@ -14837,7 +14871,6 @@
         "core-rules"
       ],
       "matchLabels": [
-        "Leadership test",
         "Leadership tests",
         "01.06"
       ],
@@ -14893,7 +14926,9 @@
       "definition": {
         "en": "The term Battle-shock test is the same as battle-shock roll."
       },
-      "aliases": [],
+      "aliases": [
+        "battle-shock-test"
+      ],
       "related": [],
       "canonicalSource": {
         "documentId": "core-rules",
@@ -14928,7 +14963,6 @@
       },
       "aliases": [
         "battle-shock-roll",
-        "battle-shock-test",
         "battle-shock-tests"
       ],
       "related": [],
@@ -14942,7 +14976,6 @@
         "core-rules"
       ],
       "matchLabels": [
-        "Battle-shock test",
         "Battle-shock tests",
         "Battle-shock roll",
         "Battle-shock rolls",
@@ -16712,7 +16745,9 @@
       "definition": {
         "en": "The term ‘saving throw’ is the same as save roll."
       },
-      "aliases": [],
+      "aliases": [
+        "saving-throw"
+      ],
       "related": [],
       "canonicalSource": {
         "documentId": "core-rules",
@@ -16779,8 +16814,7 @@
         "en": "The opposing player resolves the following sequence: Create Groups: Divide all models in the target unit into the following groups, as many times as required: • One group for each CHARACTER model. • One group for all other models with the same W, Sv and InSv characteristics. Allocation Order: Declare the order in which those groups will have attacks allocated to them, applying all of the following: • If a non-CHARACTER group contains a model that has lost one or more wounds, that group must be first in the allocation order. • No CHARACTER group can be earlier in the allocation order than a non-CHARACTER group. • CHARACTER groups containing a model that has lost one or more wounds must be earlier in the allocation order than CHARACTER groups containing no wounded models. Make Save Rolls: The opposing player makes one save roll for each attack that wounded the target by rolling one D6."
       },
       "aliases": [
-        "save-roll",
-        "saving-throw"
+        "save-roll"
       ],
       "related": [],
       "canonicalSource": {
@@ -16795,7 +16829,6 @@
       "matchLabels": [
         "Save roll",
         "Save rolls",
-        "Saving throw",
         "Saving throws",
         "05.03"
       ],
@@ -21484,7 +21517,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "core-starting-strength": {
       "id": "core-starting-strength",
@@ -21513,7 +21547,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "core-stealth": {
       "id": "core-stealth",
@@ -21849,6 +21884,7 @@
       ],
       "mentions": [],
       "presentation": "article",
+      "matchLabels": [],
       "summarySource": {
         "documentId": "core-rules",
         "kind": "curated-operational-reference"
@@ -21886,6 +21922,7 @@
       ],
       "mentions": [],
       "presentation": "article",
+      "matchLabels": [],
       "summarySource": {
         "documentId": "core-rules",
         "kind": "curated-operational-reference"
@@ -21921,7 +21958,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-barrage-of-filth-defiler": {
       "id": "death-guard-ability-barrage-of-filth-defiler",
@@ -21953,7 +21991,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-blessed-icon-of-disease-icon-bearer": {
       "id": "death-guard-ability-blessed-icon-of-disease-icon-bearer",
@@ -21987,7 +22026,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-blight-bombardment-lord-of-virulence": {
       "id": "death-guard-ability-blight-bombardment-lord-of-virulence",
@@ -22022,7 +22062,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-blinding-spray-foul-blightspawn": {
       "id": "death-guard-ability-blinding-spray-foul-blightspawn",
@@ -22056,7 +22097,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-blistering-fusillade-blightlord-terminators": {
       "id": "death-guard-ability-blistering-fusillade-blightlord-terminators",
@@ -22091,7 +22133,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-curse-of-the-walking-pox-poxwalkers": {
       "id": "death-guard-ability-curse-of-the-walking-pox-poxwalkers",
@@ -22127,7 +22170,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-daemon-lord-of-nurgle-aura-great-unclean-one": {
       "id": "death-guard-ability-daemon-lord-of-nurgle-aura-great-unclean-one",
@@ -22161,7 +22205,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-deadly-vectors": {
       "id": "death-guard-ability-deadly-vectors",
@@ -22195,7 +22240,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-death-approaches-deathshroud-terminators": {
       "id": "death-guard-ability-death-approaches-deathshroud-terminators",
@@ -22230,7 +22276,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-death-guard-defenders-daemon-prince-of-nurgle": {
       "id": "death-guard-ability-death-guard-defenders-daemon-prince-of-nurgle",
@@ -22266,7 +22313,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-deaths-heads-plague-drones": {
       "id": "death-guard-ability-deaths-heads-plague-drones",
@@ -22300,7 +22348,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-deluge-of-nurgle-aura-rotigus": {
       "id": "death-guard-ability-deluge-of-nurgle-aura-rotigus",
@@ -22332,7 +22381,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-diseased-cover-miasmic-malignifier": {
       "id": "death-guard-ability-diseased-cover-miasmic-malignifier",
@@ -22366,7 +22416,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-diseased-malice-helbrute": {
       "id": "death-guard-ability-diseased-malice-helbrute",
@@ -22400,7 +22451,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-eater-plague-psychic-typhus": {
       "id": "death-guard-ability-eater-plague-psychic-typhus",
@@ -22436,7 +22488,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-enfeebling-miasma-aura-daemon-prince-of-nurgle-with-wings": {
       "id": "death-guard-ability-enfeebling-miasma-aura-daemon-prince-of-nurgle-with-wings",
@@ -22468,7 +22521,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-explosive-blight-foetid-bloat-drone-with-heavy-blight-launcher": {
       "id": "death-guard-ability-explosive-blight-foetid-bloat-drone-with-heavy-blight-launcher",
@@ -22502,7 +22556,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-extraction-of-fresh-disease-biologus-putrifier": {
       "id": "death-guard-ability-extraction-of-fresh-disease-biologus-putrifier",
@@ -22534,7 +22589,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-fevered-strategist-daemon-prince-of-nurgle": {
       "id": "death-guard-ability-fevered-strategist-daemon-prince-of-nurgle",
@@ -22568,7 +22624,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-fire-support-chaos-rhino": {
       "id": "death-guard-ability-fire-support-chaos-rhino",
@@ -22602,7 +22659,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-fortification-miasmic-malignifier": {
       "id": "death-guard-ability-fortification-miasmic-malignifier",
@@ -22636,7 +22694,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-foul-infusion-biologus-putrifier": {
       "id": "death-guard-ability-foul-infusion-biologus-putrifier",
@@ -22670,7 +22729,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-froth-spattered-frenzy-helbrute": {
       "id": "death-guard-ability-froth-spattered-frenzy-helbrute",
@@ -22704,7 +22764,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-gift-of-contagion-psychic-malignant-plaguecaster": {
       "id": "death-guard-ability-gift-of-contagion-psychic-malignant-plaguecaster",
@@ -22739,7 +22800,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-gift-of-poxes-lord-of-poxes": {
       "id": "death-guard-ability-gift-of-poxes-lord-of-poxes",
@@ -22773,7 +22835,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-grotesque-regeneration-beasts-of-nurgle": {
       "id": "death-guard-ability-grotesque-regeneration-beasts-of-nurgle",
@@ -22807,7 +22870,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-hail-of-corrosive-disease-chaos-predator-destructor": {
       "id": "death-guard-ability-hail-of-corrosive-disease-chaos-predator-destructor",
@@ -22841,7 +22905,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-horrifying-visage-daemon-prince-of-nurgle-with-wings": {
       "id": "death-guard-ability-horrifying-visage-daemon-prince-of-nurgle-with-wings",
@@ -22873,7 +22938,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-host-of-plagues-mortarion": {
       "id": "death-guard-ability-host-of-plagues-mortarion",
@@ -22907,7 +22973,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-hovering-death-foetid-bloat-drone": {
       "id": "death-guard-ability-hovering-death-foetid-bloat-drone",
@@ -22939,7 +23006,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-hypervirulent-strains": {
       "id": "death-guard-ability-hypervirulent-strains",
@@ -22975,7 +23043,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-infected-outbreak-plaguebearers": {
       "id": "death-guard-ability-infected-outbreak-plaguebearers",
@@ -23007,7 +23076,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-inflamed-infections-plague-surgeon": {
       "id": "death-guard-ability-inflamed-infections-plague-surgeon",
@@ -23039,7 +23109,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-infused-with-the-blessings-of-nurgle-plague-marines": {
       "id": "death-guard-ability-infused-with-the-blessings-of-nurgle-plague-marines",
@@ -23073,7 +23144,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-lethal-ichor-chaos-spawn": {
       "id": "death-guard-ability-lethal-ichor-chaos-spawn",
@@ -23105,7 +23177,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-lord-of-the-death-guard-mortarion": {
       "id": "death-guard-ability-lord-of-the-death-guard-mortarion",
@@ -23137,7 +23210,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-malicious-calculations-tallyman": {
       "id": "death-guard-ability-malicious-calculations-tallyman",
@@ -23169,7 +23243,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-manifold-maladies": {
       "id": "death-guard-ability-manifold-maladies",
@@ -23203,7 +23278,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-metalophagic-infection-chaos-predator-annihilator": {
       "id": "death-guard-ability-metalophagic-infection-chaos-predator-annihilator",
@@ -23239,7 +23315,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-miasma-of-pestilence-aura-daemon-prince-of-nurgle": {
       "id": "death-guard-ability-miasma-of-pestilence-aura-daemon-prince-of-nurgle",
@@ -23273,7 +23350,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-miasmic-bombardment": {
       "id": "death-guard-ability-miasmic-bombardment",
@@ -23307,7 +23385,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-mischief-makers-nurglings": {
       "id": "death-guard-ability-mischief-makers-nurglings",
@@ -23339,7 +23418,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-numberless-horde": {
       "id": "death-guard-ability-numberless-horde",
@@ -23374,7 +23454,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-nurgles-rot-psychic-great-unclean-one": {
       "id": "death-guard-ability-nurgles-rot-psychic-great-unclean-one",
@@ -23406,7 +23487,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-pestilent-fallout-psychic-malignant-plaguecaster": {
       "id": "death-guard-ability-pestilent-fallout-psychic-malignant-plaguecaster",
@@ -23440,7 +23522,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-putrefying-stink-foul-blightspawn": {
       "id": "death-guard-ability-putrefying-stink-foul-blightspawn",
@@ -23472,7 +23555,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-putrescent-fog-aura-miasmic-malignifier": {
       "id": "death-guard-ability-putrescent-fog-aura-miasmic-malignifier",
@@ -23504,7 +23588,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-reverberant-rancidity": {
       "id": "death-guard-ability-reverberant-rancidity",
@@ -23541,7 +23626,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-scuttling-walker-defiler": {
       "id": "death-guard-ability-scuttling-walker-defiler",
@@ -23573,7 +23659,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-sevenfold-chant-tallyman": {
       "id": "death-guard-ability-sevenfold-chant-tallyman",
@@ -23605,7 +23692,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-shroud-of-disease-lord-of-poxes": {
       "id": "death-guard-ability-shroud-of-disease-lord-of-poxes",
@@ -23637,7 +23725,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-sickening-vitality-noxious-blightbringer": {
       "id": "death-guard-ability-sickening-vitality-noxious-blightbringer",
@@ -23669,7 +23758,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-silent-bodyguard-deathshroud-terminators": {
       "id": "death-guard-ability-silent-bodyguard-deathshroud-terminators",
@@ -23704,7 +23794,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-spore-laced-shock-waves-plagueburst-crawler": {
       "id": "death-guard-ability-spore-laced-shock-waves-plagueburst-crawler",
@@ -23739,7 +23830,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-tainted-narthecium-plague-surgeon": {
       "id": "death-guard-ability-tainted-narthecium-plague-surgeon",
@@ -23771,7 +23863,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-tank-hunters-myphitic-blight-hauler": {
       "id": "death-guard-ability-tank-hunters-myphitic-blight-hauler",
@@ -23806,7 +23899,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-the-destroyer-hive-typhus": {
       "id": "death-guard-ability-the-destroyer-hive-typhus",
@@ -23838,7 +23932,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-tocsin-of-misery-aura-noxious-blightbringer": {
       "id": "death-guard-ability-tocsin-of-misery-aura-noxious-blightbringer",
@@ -23872,7 +23967,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-unclean-icon-icon-bearer": {
       "id": "death-guard-ability-unclean-icon-icon-bearer",
@@ -23904,7 +24000,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-unholy-resilience-lord-of-contagion": {
       "id": "death-guard-ability-unholy-resilience-lord-of-contagion",
@@ -23936,7 +24033,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-vector-of-disease-lord-of-contagion": {
       "id": "death-guard-ability-vector-of-disease-lord-of-contagion",
@@ -23970,7 +24068,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-verminous-haze": {
       "id": "death-guard-ability-verminous-haze",
@@ -24005,7 +24104,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-virulent-aura-lord-of-virulence": {
       "id": "death-guard-ability-virulent-aura-lord-of-virulence",
@@ -24037,7 +24137,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-ability-virulent-blessing-psychic-rotigus": {
       "id": "death-guard-ability-virulent-blessing-psychic-rotigus",
@@ -24071,7 +24172,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-warped-and-rusted-animus": {
       "id": "death-guard-ability-warped-and-rusted-animus",
@@ -24108,7 +24210,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-ability-worldblight": {
       "id": "death-guard-ability-worldblight",
@@ -24143,7 +24246,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-army-rules-afflicted": {
       "id": "death-guard-army-rules-afflicted",
@@ -24177,7 +24281,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-army-rules-contagion-range": {
       "id": "death-guard-army-rules-contagion-range",
@@ -24209,7 +24314,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-army-rules-nurgles-gift": {
       "id": "death-guard-army-rules-nurgles-gift",
@@ -24245,7 +24351,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-army-rules-pact-of-decay": {
       "id": "death-guard-army-rules-pact-of-decay",
@@ -24279,7 +24386,8 @@
         "curated-glossary"
       ],
       "curated": true,
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-detachment-champions-of-contagion": {
       "id": "death-guard-detachment-champions-of-contagion",
@@ -24313,7 +24421,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-detachment-contagion-engines": {
       "id": "death-guard-detachment-contagion-engines",
@@ -24350,7 +24459,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-detachment-death-lords-chosen": {
       "id": "death-guard-detachment-death-lords-chosen",
@@ -24384,7 +24494,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-detachment-flyblown-host": {
       "id": "death-guard-detachment-flyblown-host",
@@ -24419,7 +24530,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-detachment-mortarions-hammer": {
       "id": "death-guard-detachment-mortarions-hammer",
@@ -24453,7 +24565,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-detachment-paragons-of-putrescence": {
       "id": "death-guard-detachment-paragons-of-putrescence",
@@ -24489,7 +24602,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-detachment-shamblerot-vectorium": {
       "id": "death-guard-detachment-shamblerot-vectorium",
@@ -24524,7 +24638,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-detachment-tallyband-summoners": {
       "id": "death-guard-detachment-tallyband-summoners",
@@ -24561,7 +24676,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-detachment-virulent-vectorium": {
       "id": "death-guard-detachment-virulent-vectorium",
@@ -24596,7 +24712,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-enhancement-arch-contaminator": {
       "id": "death-guard-enhancement-arch-contaminator",
@@ -24630,7 +24747,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-beckoning-blight": {
       "id": "death-guard-enhancement-beckoning-blight",
@@ -24666,7 +24784,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-enhancement-bilemaw-blight": {
       "id": "death-guard-enhancement-bilemaw-blight",
@@ -24700,7 +24819,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-cornucophagus": {
       "id": "death-guard-enhancement-cornucophagus",
@@ -24735,7 +24855,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-enhancement-daemon-weapon-of-nurgle": {
       "id": "death-guard-enhancement-daemon-weapon-of-nurgle",
@@ -24769,7 +24890,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-entropic-knell": {
       "id": "death-guard-enhancement-entropic-knell",
@@ -24803,7 +24925,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-eye-of-affliction": {
       "id": "death-guard-enhancement-eye-of-affliction",
@@ -24839,7 +24962,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-face-of-death": {
       "id": "death-guard-enhancement-face-of-death",
@@ -24873,7 +24997,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-fell-harvester": {
       "id": "death-guard-enhancement-fell-harvester",
@@ -24907,7 +25032,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-final-ingredient": {
       "id": "death-guard-enhancement-final-ingredient",
@@ -24943,7 +25069,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-enhancement-furnace-of-plagues": {
       "id": "death-guard-enhancement-furnace-of-plagues",
@@ -24978,7 +25105,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-helm-of-the-fly-king": {
       "id": "death-guard-enhancement-helm-of-the-fly-king",
@@ -25012,7 +25140,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-host-of-the-hybridised-pox": {
       "id": "death-guard-enhancement-host-of-the-hybridised-pox",
@@ -25049,7 +25178,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-enhancement-insectile-murmuration": {
       "id": "death-guard-enhancement-insectile-murmuration",
@@ -25088,7 +25218,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-lancet-of-the-worldsore": {
       "id": "death-guard-enhancement-lancet-of-the-worldsore",
@@ -25128,7 +25259,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-lord-of-the-walking-pox": {
       "id": "death-guard-enhancement-lord-of-the-walking-pox",
@@ -25162,7 +25294,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-needle-of-nurgle": {
       "id": "death-guard-enhancement-needle-of-nurgle",
@@ -25197,7 +25330,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-parasitic-woe-reaper": {
       "id": "death-guard-enhancement-parasitic-woe-reaper",
@@ -25233,7 +25367,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-plagueveil": {
       "id": "death-guard-enhancement-plagueveil",
@@ -25272,7 +25407,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-rejuvenating-swarm": {
       "id": "death-guard-enhancement-rejuvenating-swarm",
@@ -25308,7 +25444,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-revolting-regeneration": {
       "id": "death-guard-enhancement-revolting-regeneration",
@@ -25343,7 +25480,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-shriekworm-familiar": {
       "id": "death-guard-enhancement-shriekworm-familiar",
@@ -25377,7 +25515,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-sorrowsyphon": {
       "id": "death-guard-enhancement-sorrowsyphon",
@@ -25412,7 +25551,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-enhancement-talisman-of-burgeoning": {
       "id": "death-guard-enhancement-talisman-of-burgeoning",
@@ -25447,7 +25587,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-tendrilous-emissions": {
       "id": "death-guard-enhancement-tendrilous-emissions",
@@ -25484,7 +25625,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-enhancement-tome-of-bounteous-blessings": {
       "id": "death-guard-enhancement-tome-of-bounteous-blessings",
@@ -25520,7 +25662,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-enhancement-vile-vigour": {
       "id": "death-guard-enhancement-vile-vigour",
@@ -25554,7 +25697,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-visions-of-virulence": {
       "id": "death-guard-enhancement-visions-of-virulence",
@@ -25589,7 +25733,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-enhancement-warprot-talisman": {
       "id": "death-guard-enhancement-warprot-talisman",
@@ -25623,7 +25768,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-enhancement-witherbone-pipes": {
       "id": "death-guard-enhancement-witherbone-pipes",
@@ -25658,7 +25804,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-plague": {
       "id": "death-guard-plague",
@@ -25731,7 +25878,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-plagues-scabrous-soulrot": {
       "id": "death-guard-plagues-scabrous-soulrot",
@@ -25763,7 +25911,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-plagues-skullsquirm-blight": {
       "id": "death-guard-plagues-skullsquirm-blight",
@@ -25795,7 +25944,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-aggravus-spasms": {
       "id": "death-guard-stratagem-aggravus-spasms",
@@ -25832,7 +25982,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-stratagem-all-is-rot": {
       "id": "death-guard-stratagem-all-is-rot",
@@ -25866,7 +26017,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-avatars-of-decay": {
       "id": "death-guard-stratagem-avatars-of-decay",
@@ -25901,7 +26053,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-stratagem-blessings-of-filth": {
       "id": "death-guard-stratagem-blessings-of-filth",
@@ -25936,7 +26089,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-blighted-land": {
       "id": "death-guard-stratagem-blighted-land",
@@ -25972,7 +26126,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-bloodrust-deluge": {
       "id": "death-guard-stratagem-bloodrust-deluge",
@@ -26006,7 +26161,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-stratagem-blooming-pestilence": {
       "id": "death-guard-stratagem-blooming-pestilence",
@@ -26041,7 +26197,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-stratagem-clutching-corruption": {
       "id": "death-guard-stratagem-clutching-corruption",
@@ -26076,7 +26233,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-creeping-blight": {
       "id": "death-guard-stratagem-creeping-blight",
@@ -26112,7 +26270,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-deaths-heads": {
       "id": "death-guard-stratagem-deaths-heads",
@@ -26147,7 +26306,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-disgustingly-resilient": {
       "id": "death-guard-stratagem-disgustingly-resilient",
@@ -26181,7 +26341,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-drawn-to-despair": {
       "id": "death-guard-stratagem-drawn-to-despair",
@@ -26215,7 +26376,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-droning-horror": {
       "id": "death-guard-stratagem-droning-horror",
@@ -26249,7 +26411,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-eye-of-the-swarm": {
       "id": "death-guard-stratagem-eye-of-the-swarm",
@@ -26284,7 +26447,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-stratagem-eyestinger-storm": {
       "id": "death-guard-stratagem-eyestinger-storm",
@@ -26320,7 +26484,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-fleshy-avalanche": {
       "id": "death-guard-stratagem-fleshy-avalanche",
@@ -26355,7 +26520,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-font-of-filth": {
       "id": "death-guard-stratagem-font-of-filth",
@@ -26391,7 +26557,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-fresh-vectors": {
       "id": "death-guard-stratagem-fresh-vectors",
@@ -26423,7 +26590,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-stratagem-gnawing-hunger": {
       "id": "death-guard-stratagem-gnawing-hunger",
@@ -26457,7 +26625,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-grim-reapers": {
       "id": "death-guard-stratagem-grim-reapers",
@@ -26491,7 +26660,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-grip-of-the-walking-pox": {
       "id": "death-guard-stratagem-grip-of-the-walking-pox",
@@ -26526,7 +26696,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-grotesque-fortitude": {
       "id": "death-guard-stratagem-grotesque-fortitude",
@@ -26561,7 +26732,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-hidden-amongst-the-dead": {
       "id": "death-guard-stratagem-hidden-amongst-the-dead",
@@ -26597,7 +26769,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-leechspore-eruption": {
       "id": "death-guard-stratagem-leechspore-eruption",
@@ -26631,7 +26804,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-malignance-magnified": {
       "id": "death-guard-stratagem-malignance-magnified",
@@ -26666,7 +26840,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-mireslick": {
       "id": "death-guard-stratagem-mireslick",
@@ -26700,7 +26875,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-mobile-vector": {
       "id": "death-guard-stratagem-mobile-vector",
@@ -26736,7 +26912,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-mortarions-teachings": {
       "id": "death-guard-stratagem-mortarions-teachings",
@@ -26771,7 +26948,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-nauseating-paroxysms": {
       "id": "death-guard-stratagem-nauseating-paroxysms",
@@ -26805,7 +26983,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-stratagem-overwhelming-generosity": {
       "id": "death-guard-stratagem-overwhelming-generosity",
@@ -26840,7 +27019,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-persistent-pests": {
       "id": "death-guard-stratagem-persistent-pests",
@@ -26874,7 +27054,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-plaguesurge": {
       "id": "death-guard-stratagem-plaguesurge",
@@ -26909,7 +27090,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-stratagem-putrid-detonation": {
       "id": "death-guard-stratagem-putrid-detonation",
@@ -26946,7 +27128,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-rabid-infusion": {
       "id": "death-guard-stratagem-rabid-infusion",
@@ -26982,7 +27165,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-stratagem-relentless-grind": {
       "id": "death-guard-stratagem-relentless-grind",
@@ -27017,7 +27201,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-shambling-wall": {
       "id": "death-guard-stratagem-shambling-wall",
@@ -27052,7 +27237,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-shock-and-horror": {
       "id": "death-guard-stratagem-shock-and-horror",
@@ -27086,7 +27272,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-sickening-impact": {
       "id": "death-guard-stratagem-sickening-impact",
@@ -27120,7 +27307,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-signal-pox": {
       "id": "death-guard-stratagem-signal-pox",
@@ -27155,7 +27343,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-simultaneous-contamination": {
       "id": "death-guard-stratagem-simultaneous-contamination",
@@ -27190,7 +27379,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-stratagem-smeared-with-filth": {
       "id": "death-guard-stratagem-smeared-with-filth",
@@ -27225,7 +27415,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-soulrot-flux": {
       "id": "death-guard-stratagem-soulrot-flux",
@@ -27257,7 +27448,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-stinking-mire": {
       "id": "death-guard-stratagem-stinking-mire",
@@ -27292,7 +27484,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-stratagem-territorial-infection": {
       "id": "death-guard-stratagem-territorial-infection",
@@ -27327,7 +27520,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "death-guard-stratagem-undying-spite": {
       "id": "death-guard-stratagem-undying-spite",
@@ -27361,7 +27555,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-beasts-of-nurgle": {
       "id": "death-guard-unit-beasts-of-nurgle",
@@ -27413,7 +27608,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-biologus-putrifier": {
       "id": "death-guard-unit-biologus-putrifier",
@@ -27460,7 +27656,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-blightlord-terminators": {
       "id": "death-guard-unit-blightlord-terminators",
@@ -27516,7 +27713,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-chaos-land-raider": {
       "id": "death-guard-unit-chaos-land-raider",
@@ -27567,7 +27765,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-chaos-predator-annihilator": {
       "id": "death-guard-unit-chaos-predator-annihilator",
@@ -27618,7 +27817,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-chaos-predator-destructor": {
       "id": "death-guard-unit-chaos-predator-destructor",
@@ -27669,7 +27869,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-chaos-rhino": {
       "id": "death-guard-unit-chaos-rhino",
@@ -27720,7 +27921,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-chaos-spawn": {
       "id": "death-guard-unit-chaos-spawn",
@@ -27767,7 +27969,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-daemon-prince-of-nurgle": {
       "id": "death-guard-unit-daemon-prince-of-nurgle",
@@ -27815,7 +28018,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-daemon-prince-of-nurgle-with-wings": {
       "id": "death-guard-unit-daemon-prince-of-nurgle-with-wings",
@@ -27863,7 +28067,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-deathshroud-terminators": {
       "id": "death-guard-unit-deathshroud-terminators",
@@ -27923,7 +28128,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-defiler": {
       "id": "death-guard-unit-defiler",
@@ -27975,7 +28181,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-foetid-bloat-drone": {
       "id": "death-guard-unit-foetid-bloat-drone",
@@ -28027,7 +28234,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-foetid-bloat-drone-with-heavy-blight-launcher": {
       "id": "death-guard-unit-foetid-bloat-drone-with-heavy-blight-launcher",
@@ -28079,7 +28287,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-foul-blightspawn": {
       "id": "death-guard-unit-foul-blightspawn",
@@ -28126,7 +28335,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-great-unclean-one": {
       "id": "death-guard-unit-great-unclean-one",
@@ -28178,7 +28388,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-helbrute": {
       "id": "death-guard-unit-helbrute",
@@ -28225,7 +28436,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-icon-bearer": {
       "id": "death-guard-unit-icon-bearer",
@@ -28272,7 +28484,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-lord-of-contagion": {
       "id": "death-guard-unit-lord-of-contagion",
@@ -28320,7 +28533,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-lord-of-poxes": {
       "id": "death-guard-unit-lord-of-poxes",
@@ -28368,7 +28582,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-lord-of-virulence": {
       "id": "death-guard-unit-lord-of-virulence",
@@ -28416,7 +28631,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-malignant-plaguecaster": {
       "id": "death-guard-unit-malignant-plaguecaster",
@@ -28463,7 +28679,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-miasmic-malignifier": {
       "id": "death-guard-unit-miasmic-malignifier",
@@ -28510,7 +28727,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-mortarion": {
       "id": "death-guard-unit-mortarion",
@@ -28558,7 +28776,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-myphitic-blight-hauler": {
       "id": "death-guard-unit-myphitic-blight-hauler",
@@ -28610,7 +28829,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-noxious-blightbringer": {
       "id": "death-guard-unit-noxious-blightbringer",
@@ -28657,7 +28877,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-nurglings": {
       "id": "death-guard-unit-nurglings",
@@ -28709,7 +28930,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-plague-drones": {
       "id": "death-guard-unit-plague-drones",
@@ -28761,7 +28983,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-plague-marines": {
       "id": "death-guard-unit-plague-marines",
@@ -28816,7 +29039,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-plague-surgeon": {
       "id": "death-guard-unit-plague-surgeon",
@@ -28863,7 +29087,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-plaguebearers": {
       "id": "death-guard-unit-plaguebearers",
@@ -28911,7 +29136,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-plagueburst-crawler": {
       "id": "death-guard-unit-plagueburst-crawler",
@@ -28963,7 +29189,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-poxwalkers": {
       "id": "death-guard-unit-poxwalkers",
@@ -29014,7 +29241,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-rotigus": {
       "id": "death-guard-unit-rotigus",
@@ -29062,7 +29290,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-tallyman": {
       "id": "death-guard-unit-tallyman",
@@ -29109,7 +29338,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-unit-typhus": {
       "id": "death-guard-unit-typhus",
@@ -29157,7 +29387,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "death-guard-weapon-armoured-tracks-chaos-land-raider": {
       "id": "death-guard-weapon-armoured-tracks-chaos-land-raider",
@@ -29199,7 +29430,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-armoured-tracks-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino-plagueburst-crawler": {
       "id": "death-guard-weapon-armoured-tracks-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino-plagueburst-crawler",
@@ -29241,7 +29473,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-balesword-plague-surgeon": {
       "id": "death-guard-weapon-balesword-plague-surgeon",
@@ -29283,7 +29516,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-bile-spurt-myphitic-blight-hauler": {
       "id": "death-guard-weapon-bile-spurt-myphitic-blight-hauler",
@@ -29325,7 +29559,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-bileblade-great-unclean-one": {
       "id": "death-guard-weapon-bileblade-great-unclean-one",
@@ -29367,7 +29602,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-bilesword-strike-great-unclean-one": {
       "id": "death-guard-weapon-bilesword-strike-great-unclean-one",
@@ -29409,7 +29645,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-bilesword-sweep-great-unclean-one": {
       "id": "death-guard-weapon-bilesword-sweep-great-unclean-one",
@@ -29451,7 +29688,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-blight-launcher-blightlord-terminators-plague-marines": {
       "id": "death-guard-weapon-blight-launcher-blightlord-terminators-plague-marines",
@@ -29493,7 +29731,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-bolt-pistol-malignant-plaguecaster-plague-marines-plague-surgeon": {
       "id": "death-guard-weapon-bolt-pistol-malignant-plaguecaster-plague-marines-plague-surgeon",
@@ -29535,7 +29774,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-boltgun-icon-bearer-plague-marines": {
       "id": "death-guard-weapon-boltgun-icon-bearer-plague-marines",
@@ -29577,7 +29817,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-bubotic-blade-blightlord-terminators": {
       "id": "death-guard-weapon-bubotic-blade-blightlord-terminators",
@@ -29619,7 +29860,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-bubotic-weapons-plague-marines": {
       "id": "death-guard-weapon-bubotic-weapons-plague-marines",
@@ -29661,7 +29903,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-close-combat-weapon-blightlord-terminators": {
       "id": "death-guard-weapon-close-combat-weapon-blightlord-terminators",
@@ -29703,7 +29946,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-close-combat-weapon-foul-blightspawn-tallyman": {
       "id": "death-guard-weapon-close-combat-weapon-foul-blightspawn-tallyman",
@@ -29745,7 +29989,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-close-combat-weapon-helbrute": {
       "id": "death-guard-weapon-close-combat-weapon-helbrute",
@@ -29787,7 +30032,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-combi-bolter-blightlord-terminators-chaos-land-raider-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino-helbrute": {
       "id": "death-guard-weapon-combi-bolter-blightlord-terminators-chaos-land-raider-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino-helbrute",
@@ -29829,7 +30075,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-combi-weapon-blightlord-terminators-chaos-land-raider-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino": {
       "id": "death-guard-weapon-combi-weapon-blightlord-terminators-chaos-land-raider-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino",
@@ -29871,7 +30118,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-corrupted-staff-malignant-plaguecaster": {
       "id": "death-guard-weapon-corrupted-staff-malignant-plaguecaster",
@@ -29913,7 +30161,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-cursed-plague-bell-noxious-blightbringer": {
       "id": "death-guard-weapon-cursed-plague-bell-noxious-blightbringer",
@@ -29955,7 +30204,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-deaths-heads-plague-drones": {
       "id": "death-guard-weapon-deaths-heads-plague-drones",
@@ -29997,7 +30247,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-diseased-claws-and-teeth-nurglings": {
       "id": "death-guard-weapon-diseased-claws-and-teeth-nurglings",
@@ -30039,7 +30290,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-doomsday-bell-great-unclean-one": {
       "id": "death-guard-weapon-doomsday-bell-great-unclean-one",
@@ -30081,7 +30333,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-ectoplasma-destructor-defiler": {
       "id": "death-guard-weapon-ectoplasma-destructor-defiler",
@@ -30123,7 +30376,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-electroscourge-defiler": {
       "id": "death-guard-weapon-electroscourge-defiler",
@@ -30165,7 +30419,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-entropy-cannon-plagueburst-crawler": {
       "id": "death-guard-weapon-entropy-cannon-plagueburst-crawler",
@@ -30207,7 +30462,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-excruciator-cannon-defiler": {
       "id": "death-guard-weapon-excruciator-cannon-defiler",
@@ -30249,7 +30505,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-flail-of-corruption-blightlord-terminators": {
       "id": "death-guard-weapon-flail-of-corruption-blightlord-terminators",
@@ -30291,7 +30548,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-fleshmower-foetid-bloat-drone": {
       "id": "death-guard-weapon-fleshmower-foetid-bloat-drone",
@@ -30333,7 +30591,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-foul-mouthparts-plague-drones": {
       "id": "death-guard-weapon-foul-mouthparts-plague-drones",
@@ -30375,7 +30634,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-gnarlrod-strike-rotigus": {
       "id": "death-guard-weapon-gnarlrod-strike-rotigus",
@@ -30417,7 +30677,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-gnarlrod-sweep-rotigus": {
       "id": "death-guard-weapon-gnarlrod-sweep-rotigus",
@@ -30459,7 +30720,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-gnashing-maw-myphitic-blight-hauler": {
       "id": "death-guard-weapon-gnashing-maw-myphitic-blight-hauler",
@@ -30501,7 +30763,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-great-plague-blade-lord-of-poxes": {
       "id": "death-guard-weapon-great-plague-blade-lord-of-poxes",
@@ -30543,7 +30806,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-hades-battle-cannon-defiler": {
       "id": "death-guard-weapon-hades-battle-cannon-defiler",
@@ -30585,7 +30849,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-hades-lascannon-defiler": {
       "id": "death-guard-weapon-hades-lascannon-defiler",
@@ -30627,7 +30892,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-havoc-launcher-chaos-land-raider-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino": {
       "id": "death-guard-weapon-havoc-launcher-chaos-land-raider-chaos-predator-annihilator-chaos-predator-destructor-chaos-rhino",
@@ -30669,7 +30935,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-heavy-baleflamer-defiler": {
       "id": "death-guard-weapon-heavy-baleflamer-defiler",
@@ -30711,7 +30978,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-heavy-blight-launcher-foetid-bloat-drone-with-heavy-blight-launcher": {
       "id": "death-guard-weapon-heavy-blight-launcher-foetid-bloat-drone-with-heavy-blight-launcher",
@@ -30753,7 +31021,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-heavy-bolter-chaos-predator-annihilator-chaos-predator-destructor": {
       "id": "death-guard-weapon-heavy-bolter-chaos-predator-annihilator-chaos-predator-destructor",
@@ -30795,7 +31064,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-heavy-flamer-helbrute": {
       "id": "death-guard-weapon-heavy-flamer-helbrute",
@@ -30837,7 +31107,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-heavy-missile-launcher-frag-defiler": {
       "id": "death-guard-weapon-heavy-missile-launcher-frag-defiler",
@@ -30879,7 +31150,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-heavy-missile-launcher-krak-defiler": {
       "id": "death-guard-weapon-heavy-missile-launcher-krak-defiler",
@@ -30921,7 +31193,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-heavy-plague-weapon-plague-marines": {
       "id": "death-guard-weapon-heavy-plague-weapon-plague-marines",
@@ -30963,7 +31236,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-heavy-reaper-autocannon-defiler": {
       "id": "death-guard-weapon-heavy-reaper-autocannon-defiler",
@@ -31005,7 +31279,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-heavy-slugger-plagueburst-crawler": {
       "id": "death-guard-weapon-heavy-slugger-plagueburst-crawler",
@@ -31047,7 +31322,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-helbrute-fist-helbrute": {
       "id": "death-guard-weapon-helbrute-fist-helbrute",
@@ -31089,7 +31365,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-helbrute-hammer-helbrute": {
       "id": "death-guard-weapon-helbrute-hammer-helbrute",
@@ -31131,7 +31408,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-hellforged-weapons-strike-daemon-prince-of-nurgle-daemon-prince-of-nurgle-with-wings": {
       "id": "death-guard-weapon-hellforged-weapons-strike-daemon-prince-of-nurgle-daemon-prince-of-nurgle-with-wings",
@@ -31173,7 +31451,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-hellforged-weapons-sweep-daemon-prince-of-nurgle-daemon-prince-of-nurgle-with-wings": {
       "id": "death-guard-weapon-hellforged-weapons-sweep-daemon-prince-of-nurgle-daemon-prince-of-nurgle-with-wings",
@@ -31215,7 +31494,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-hideous-mutations-chaos-spawn": {
       "id": "death-guard-weapon-hideous-mutations-chaos-spawn",
@@ -31257,7 +31537,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-hyper-blight-grenades-biologus-putrifier": {
       "id": "death-guard-weapon-hyper-blight-grenades-biologus-putrifier",
@@ -31299,7 +31580,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-improvised-weapon-poxwalkers": {
       "id": "death-guard-weapon-improvised-weapon-poxwalkers",
@@ -31341,7 +31623,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-infernal-cannon-daemon-prince-of-nurgle": {
       "id": "death-guard-weapon-infernal-cannon-daemon-prince-of-nurgle",
@@ -31383,7 +31666,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-infernal-cannon-daemon-prince-of-nurgle-with-wings": {
       "id": "death-guard-weapon-infernal-cannon-daemon-prince-of-nurgle-with-wings",
@@ -31425,7 +31709,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-injector-pistol-biologus-putrifier": {
       "id": "death-guard-weapon-injector-pistol-biologus-putrifier",
@@ -31467,7 +31752,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-lakrimae-strike-typhus": {
       "id": "death-guard-weapon-lakrimae-strike-typhus",
@@ -31509,7 +31795,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-lakrimae-sweep-typhus": {
       "id": "death-guard-weapon-lakrimae-sweep-typhus",
@@ -31551,7 +31838,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-lantern-mortarion": {
       "id": "death-guard-weapon-lantern-mortarion",
@@ -31593,7 +31881,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-lascannon-chaos-predator-annihilator-chaos-predator-destructor": {
       "id": "death-guard-weapon-lascannon-chaos-predator-annihilator-chaos-predator-destructor",
@@ -31635,7 +31924,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-magma-cutters-defiler": {
       "id": "death-guard-weapon-magma-cutters-defiler",
@@ -31677,7 +31967,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-manreaper-strike-deathshroud-terminators": {
       "id": "death-guard-weapon-manreaper-strike-deathshroud-terminators",
@@ -31719,7 +32010,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-manreaper-strike-lord-of-contagion": {
       "id": "death-guard-weapon-manreaper-strike-lord-of-contagion",
@@ -31761,7 +32053,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-manreaper-sweep-deathshroud-terminators": {
       "id": "death-guard-weapon-manreaper-sweep-deathshroud-terminators",
@@ -31803,7 +32096,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-manreaper-sweep-lord-of-contagion": {
       "id": "death-guard-weapon-manreaper-sweep-lord-of-contagion",
@@ -31845,7 +32139,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-meltagun-plague-marines": {
       "id": "death-guard-weapon-meltagun-plague-marines",
@@ -31887,7 +32182,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-miasmic-gouts-miasmic-malignifier": {
       "id": "death-guard-weapon-miasmic-gouts-miasmic-malignifier",
@@ -31929,7 +32225,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-missile-launcher-frag-helbrute-myphitic-blight-hauler": {
       "id": "death-guard-weapon-missile-launcher-frag-helbrute-myphitic-blight-hauler",
@@ -31971,7 +32268,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-missile-launcher-krak-helbrute-myphitic-blight-hauler": {
       "id": "death-guard-weapon-missile-launcher-krak-helbrute-myphitic-blight-hauler",
@@ -32013,7 +32311,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-multi-melta-helbrute-myphitic-blight-hauler": {
       "id": "death-guard-weapon-multi-melta-helbrute-myphitic-blight-hauler",
@@ -32055,7 +32354,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plague-belcher-plague-marines": {
       "id": "death-guard-weapon-plague-belcher-plague-marines",
@@ -32097,7 +32397,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plague-flail-great-unclean-one": {
       "id": "death-guard-weapon-plague-flail-great-unclean-one",
@@ -32139,7 +32440,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plague-knife-icon-bearer": {
       "id": "death-guard-weapon-plague-knife-icon-bearer",
@@ -32181,7 +32483,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plague-knives-biologus-putrifier": {
       "id": "death-guard-weapon-plague-knives-biologus-putrifier",
@@ -32223,7 +32526,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plague-knives-plague-marines": {
       "id": "death-guard-weapon-plague-knives-plague-marines",
@@ -32265,7 +32569,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plague-probe-foetid-bloat-drone-foetid-bloat-drone-with-heavy-blight-launcher": {
       "id": "death-guard-weapon-plague-probe-foetid-bloat-drone-foetid-bloat-drone-with-heavy-blight-launcher",
@@ -32307,7 +32612,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plague-spewer-blightlord-terminators-plague-marines": {
       "id": "death-guard-weapon-plague-spewer-blightlord-terminators-plague-marines",
@@ -32349,7 +32655,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plague-sprayer-foul-blightspawn": {
       "id": "death-guard-weapon-plague-sprayer-foul-blightspawn",
@@ -32391,7 +32698,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plague-wind-focused-witchfire-malignant-plaguecaster": {
       "id": "death-guard-weapon-plague-wind-focused-witchfire-malignant-plaguecaster",
@@ -32433,7 +32741,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plague-wind-witchfire-malignant-plaguecaster": {
       "id": "death-guard-weapon-plague-wind-witchfire-malignant-plaguecaster",
@@ -32475,7 +32784,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plagueburst-mortar-plagueburst-crawler": {
       "id": "death-guard-weapon-plagueburst-mortar-plagueburst-crawler",
@@ -32517,7 +32827,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plaguespitter-foetid-bloat-drone-plagueburst-crawler": {
       "id": "death-guard-weapon-plaguespitter-foetid-bloat-drone-plagueburst-crawler",
@@ -32559,7 +32870,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plaguespurt-gauntlet-deathshroud-terminators": {
       "id": "death-guard-weapon-plaguespurt-gauntlet-deathshroud-terminators",
@@ -32601,7 +32913,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plaguesword-plague-drones-plaguebearers": {
       "id": "death-guard-weapon-plaguesword-plague-drones-plaguebearers",
@@ -32643,7 +32956,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plasma-cannon-helbrute": {
       "id": "death-guard-weapon-plasma-cannon-helbrute",
@@ -32685,7 +32999,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plasma-gun-standard-plague-marines": {
       "id": "death-guard-weapon-plasma-gun-standard-plague-marines",
@@ -32727,7 +33042,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plasma-gun-supercharge-plague-marines": {
       "id": "death-guard-weapon-plasma-gun-supercharge-plague-marines",
@@ -32769,7 +33085,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plasma-pistol-standard-lord-of-poxes": {
       "id": "death-guard-weapon-plasma-pistol-standard-lord-of-poxes",
@@ -32811,7 +33128,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plasma-pistol-standard-noxious-blightbringer-plague-marines-tallyman": {
       "id": "death-guard-weapon-plasma-pistol-standard-noxious-blightbringer-plague-marines-tallyman",
@@ -32853,7 +33171,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plasma-pistol-supercharge-lord-of-poxes": {
       "id": "death-guard-weapon-plasma-pistol-supercharge-lord-of-poxes",
@@ -32895,7 +33214,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plasma-pistol-supercharge-noxious-blightbringer": {
       "id": "death-guard-weapon-plasma-pistol-supercharge-noxious-blightbringer",
@@ -32937,7 +33257,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-plasma-pistol-supercharge-plague-marines-tallyman": {
       "id": "death-guard-weapon-plasma-pistol-supercharge-plague-marines-tallyman",
@@ -32979,7 +33300,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-power-fist-lord-of-virulence": {
       "id": "death-guard-weapon-power-fist-lord-of-virulence",
@@ -33021,7 +33343,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-power-fist-plague-marines": {
       "id": "death-guard-weapon-power-fist-plague-marines",
@@ -33063,7 +33386,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-power-scourge-helbrute": {
       "id": "death-guard-weapon-power-scourge-helbrute",
@@ -33105,7 +33429,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-predator-autocannon-chaos-predator-destructor": {
       "id": "death-guard-weapon-predator-autocannon-chaos-predator-destructor",
@@ -33147,7 +33472,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-predator-twin-lascannon-chaos-predator-annihilator": {
       "id": "death-guard-weapon-predator-twin-lascannon-chaos-predator-annihilator",
@@ -33189,7 +33515,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-putrid-appendages-beasts-of-nurgle": {
       "id": "death-guard-weapon-putrid-appendages-beasts-of-nurgle",
@@ -33231,7 +33558,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-putrid-vomit-great-unclean-one": {
       "id": "death-guard-weapon-putrid-vomit-great-unclean-one",
@@ -33273,7 +33601,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-reaper-autocannon-blightlord-terminators": {
       "id": "death-guard-weapon-reaper-autocannon-blightlord-terminators",
@@ -33315,7 +33644,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-rothail-volley-gun-plagueburst-crawler": {
       "id": "death-guard-weapon-rothail-volley-gun-plagueburst-crawler",
@@ -33357,7 +33687,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-rotwind-mortarion": {
       "id": "death-guard-weapon-rotwind-mortarion",
@@ -33399,7 +33730,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-shearing-claws-strike-defiler": {
       "id": "death-guard-weapon-shearing-claws-strike-defiler",
@@ -33441,7 +33773,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-shearing-claws-sweep-defiler": {
       "id": "death-guard-weapon-shearing-claws-sweep-defiler",
@@ -33483,7 +33816,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-silence-strike-mortarion": {
       "id": "death-guard-weapon-silence-strike-mortarion",
@@ -33525,7 +33859,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-silence-sweep-mortarion": {
       "id": "death-guard-weapon-silence-sweep-mortarion",
@@ -33567,7 +33902,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-soulshatter-lascannon-chaos-land-raider": {
       "id": "death-guard-weapon-soulshatter-lascannon-chaos-land-raider",
@@ -33609,7 +33945,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-streams-of-brackish-filth-rotigus": {
       "id": "death-guard-weapon-streams-of-brackish-filth-rotigus",
@@ -33651,7 +33988,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-twin-autocannon-helbrute": {
       "id": "death-guard-weapon-twin-autocannon-helbrute",
@@ -33693,7 +34031,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-twin-heavy-bolter-chaos-land-raider-helbrute": {
       "id": "death-guard-weapon-twin-heavy-bolter-chaos-land-raider-helbrute",
@@ -33735,7 +34074,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-twin-lascannon-helbrute": {
       "id": "death-guard-weapon-twin-lascannon-helbrute",
@@ -33777,7 +34117,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "death-guard-weapon-twin-plague-spewer-lord-of-virulence": {
       "id": "death-guard-weapon-twin-plague-spewer-lord-of-virulence",
@@ -33819,7 +34160,8 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "profile"
+      "presentation": "profile",
+      "matchLabels": []
     },
     "emperors-children-ability-a-challenge-worthy-of-skill": {
       "id": "emperors-children-ability-a-challenge-worthy-of-skill",
@@ -41519,7 +41861,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "faq-blast-during-close-quarters-shooting": {
       "id": "faq-blast-during-close-quarters-shooting",
@@ -41552,7 +41895,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "faq-embark-after-scout-move": {
       "id": "faq-embark-after-scout-move",
@@ -41585,7 +41929,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "faq-no-ranged-weapons-eligible-to-shoot": {
       "id": "faq-no-ranged-weapons-eligible-to-shoot",
@@ -41618,7 +41963,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "faq-overrun-fight-without-fight-eligibility": {
       "id": "faq-overrun-fight-without-fight-eligibility",
@@ -41650,7 +41996,8 @@
         "core-rules"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-adeptus-mechanicus": {
       "id": "keyword-adeptus-mechanicus",
@@ -41721,7 +42068,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "keyword-aircraft": {
       "id": "keyword-aircraft",
@@ -41806,7 +42154,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-beast": {
       "id": "keyword-beast",
@@ -41854,7 +42203,8 @@
           "keyword-swarm"
         ]
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-chaos": {
       "id": "keyword-chaos",
@@ -41893,7 +42243,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-character": {
       "id": "keyword-character",
@@ -41936,7 +42287,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-cult-mechanicus": {
       "id": "keyword-cult-mechanicus",
@@ -41983,7 +42335,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "keyword-daemon": {
       "id": "keyword-daemon",
@@ -42022,7 +42375,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-daemon-prince": {
       "id": "keyword-daemon-prince",
@@ -42061,7 +42415,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata"
+      "presentation": "metadata",
+      "matchLabels": []
     },
     "keyword-daemon-prince-with-wings": {
       "id": "keyword-daemon-prince-with-wings",
@@ -42100,7 +42455,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata"
+      "presentation": "metadata",
+      "matchLabels": []
     },
     "keyword-death-guard": {
       "id": "keyword-death-guard",
@@ -42172,7 +42528,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "keyword-dedicated-transport": {
       "id": "keyword-dedicated-transport",
@@ -42218,7 +42575,8 @@
           "keyword-transport"
         ]
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-electro-priests": {
       "id": "keyword-electro-priests",
@@ -42261,7 +42619,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "keyword-epic-hero": {
       "id": "keyword-epic-hero",
@@ -42300,7 +42659,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-explosives": {
       "id": "keyword-explosives",
@@ -42338,7 +42698,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "keyword-fly": {
       "id": "keyword-fly",
@@ -42388,7 +42749,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-fortifications": {
       "id": "keyword-fortifications",
@@ -42428,7 +42790,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "keyword-grenades": {
       "id": "keyword-grenades",
@@ -42467,7 +42830,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-hastarii": {
       "id": "keyword-hastarii",
@@ -42505,7 +42869,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata"
+      "presentation": "metadata",
+      "matchLabels": []
     },
     "keyword-imperium": {
       "id": "keyword-imperium",
@@ -42545,7 +42910,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "keyword-infantry": {
       "id": "keyword-infantry",
@@ -42593,7 +42959,8 @@
           "keyword-swarm"
         ]
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-jump-pack": {
       "id": "keyword-jump-pack",
@@ -42631,7 +42998,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata"
+      "presentation": "metadata",
+      "matchLabels": []
     },
     "keyword-kataphron": {
       "id": "keyword-kataphron",
@@ -42671,7 +43039,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "keyword-land-raider": {
       "id": "keyword-land-raider",
@@ -42710,7 +43079,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata"
+      "presentation": "metadata",
+      "matchLabels": []
     },
     "keyword-legio-cybernetica": {
       "id": "keyword-legio-cybernetica",
@@ -42756,7 +43126,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "keyword-monster": {
       "id": "keyword-monster",
@@ -42805,7 +43176,8 @@
           "keyword-vehicle"
         ]
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-mounted": {
       "id": "keyword-mounted",
@@ -42847,7 +43219,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "keyword-nurgle": {
       "id": "keyword-nurgle",
@@ -42886,7 +43259,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-plague-legions": {
       "id": "keyword-plague-legions",
@@ -42939,7 +43313,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "keyword-poxwalker": {
       "id": "keyword-poxwalker",
@@ -42980,7 +43355,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "keyword-predator-annihilator": {
       "id": "keyword-predator-annihilator",
@@ -43019,7 +43395,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata"
+      "presentation": "metadata",
+      "matchLabels": []
     },
     "keyword-predator-destructor": {
       "id": "keyword-predator-destructor",
@@ -43058,7 +43435,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata"
+      "presentation": "metadata",
+      "matchLabels": []
     },
     "keyword-primarch": {
       "id": "keyword-primarch",
@@ -43097,7 +43475,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata"
+      "presentation": "metadata",
+      "matchLabels": []
     },
     "keyword-psyker": {
       "id": "keyword-psyker",
@@ -43136,7 +43515,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-pteraxii": {
       "id": "keyword-pteraxii",
@@ -43178,7 +43558,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "keyword-rhino": {
       "id": "keyword-rhino",
@@ -43217,7 +43598,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata"
+      "presentation": "metadata",
+      "matchLabels": []
     },
     "keyword-secutarii": {
       "id": "keyword-secutarii",
@@ -43255,7 +43637,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata"
+      "presentation": "metadata",
+      "matchLabels": []
     },
     "keyword-sicarian": {
       "id": "keyword-sicarian",
@@ -43298,7 +43681,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "keyword-skitarii": {
       "id": "keyword-skitarii",
@@ -43361,7 +43745,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "keyword-smoke": {
       "id": "keyword-smoke",
@@ -43402,7 +43787,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-summoned": {
       "id": "keyword-summoned",
@@ -43441,7 +43827,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "metadata"
+      "presentation": "metadata",
+      "matchLabels": []
     },
     "keyword-swarm": {
       "id": "keyword-swarm",
@@ -43487,7 +43874,8 @@
           "keyword-beast"
         ]
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-sydonian": {
       "id": "keyword-sydonian",
@@ -43527,7 +43915,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "keyword-tech-priest": {
       "id": "keyword-tech-priest",
@@ -43590,7 +43979,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "reference"
+      "presentation": "reference",
+      "matchLabels": []
     },
     "keyword-terminator": {
       "id": "keyword-terminator",
@@ -43629,7 +44019,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-titanic": {
       "id": "keyword-titanic",
@@ -43671,7 +44062,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "keyword-towering": {
       "id": "keyword-towering",
@@ -43711,7 +44103,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "keyword-transport": {
       "id": "keyword-transport",
@@ -43763,7 +44156,8 @@
           "keyword-vehicle"
         ]
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-vehicle": {
       "id": "keyword-vehicle",
@@ -43813,7 +44207,8 @@
           "keyword-walker"
         ]
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-walker": {
       "id": "keyword-walker",
@@ -43856,7 +44251,8 @@
           "keyword-vehicle"
         ]
       },
-      "presentation": "article"
+      "presentation": "article",
+      "matchLabels": []
     },
     "keyword-warlord": {
       "id": "keyword-warlord",
@@ -43894,7 +44290,8 @@
         "factionTerms": [],
         "relatedKeywords": []
       },
-      "presentation": "atomic"
+      "presentation": "atomic",
+      "matchLabels": []
     },
     "space-marines-ability-ancient-banner": {
       "id": "space-marines-ability-ancient-banner",
@@ -59833,47 +60230,9 @@
         }
       },
       "presentation": "profile",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "space-marines-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-centurion-devastator-squad"
-      },
-      "fullRulePath": "books/space-marines/reader.html#unit-centurion-devastator-squad",
-      "status": "provisional",
-      "sourceRefs": [
-        "space-marines"
+      "aliases": [
+        "space-marines-weapon-grav-cannon-3"
       ],
-      "mentions": []
-    },
-    "space-marines-weapon-grav-cannon-3": {
-      "id": "space-marines-weapon-grav-cannon-3",
-      "kind": "weapon",
-      "scope": "space-marines",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Grav-cannon"
-      },
-      "summary": {
-        "en": "Ranged · 24\" · A 3 · BS 3+ · S 6 · AP -1 · D 3 · Anti-Vehicle 2+"
-      },
-      "definition": {
-        "en": "Ranged · 24\" · A 3 · BS 3+ · S 6 · AP -1 · D 3 · Anti-Vehicle 2+"
-      },
-      "structured": {
-        "weapon": {
-          "Range": "24\"",
-          "A": "3",
-          "BS": "3+",
-          "S": "6",
-          "AP": "-1",
-          "D": "3"
-        }
-      },
-      "presentation": "profile",
-      "aliases": [],
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-codex-transcription",
@@ -67844,37 +68203,6 @@
       ],
       "mentions": []
     },
-    "tau-empire-ability-for-the-greater-good": {
-      "id": "tau-empire-ability-for-the-greater-good",
-      "kind": "datasheet-ability",
-      "scope": "tau-empire",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "For The Greater Good"
-      },
-      "summary": {
-        "en": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.…"
-      },
-      "definition": {
-        "en": "If your Army Faction is T’AU EMPIRE, at the start of your Shooting phase you can select units from your army with this ability to become Observer units. During your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding FORTIFICATION and Battle-shocked units) select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase. Units from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units. Until the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the [IGNORES COVER] ability."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tau-empire-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-breacher-team"
-      },
-      "fullRulePath": "books/tau-empire/reader.html#unit-breacher-team",
-      "status": "provisional",
-      "sourceRefs": [
-        "tau-empire"
-      ],
-      "mentions": []
-    },
     "tau-empire-ability-fortification": {
       "id": "tau-empire-ability-fortification",
       "kind": "datasheet-ability",
@@ -69535,7 +69863,9 @@
       },
       "structured": {},
       "presentation": "article",
-      "aliases": [],
+      "aliases": [
+        "tau-empire-ability-for-the-greater-good"
+      ],
       "related": [],
       "canonicalSource": {
         "documentId": "tau-empire-codex-transcription",
@@ -78406,37 +78736,6 @@
       ],
       "mentions": []
     },
-    "tyranids-ability-shadow-in-the-warp": {
-      "id": "tyranids-ability-shadow-in-the-warp",
-      "kind": "datasheet-ability",
-      "scope": "tyranids",
-      "edition": "11e",
-      "language": "en",
-      "title": {
-        "en": "Shadow in the Warp"
-      },
-      "summary": {
-        "en": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp.…"
-      },
-      "definition": {
-        "en": "If your Army Faction is TYRANIDS, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more SYNAPSE units from your army, subtract 1 from that test."
-      },
-      "structured": {},
-      "presentation": "article",
-      "aliases": [],
-      "related": [],
-      "canonicalSource": {
-        "documentId": "tyranids-codex-transcription",
-        "revision": "pinned BSData",
-        "locator": "unit-broodlord"
-      },
-      "fullRulePath": "books/tyranids/reader.html#unit-broodlord",
-      "status": "provisional",
-      "sourceRefs": [
-        "tyranids"
-      ],
-      "mentions": []
-    },
     "tyranids-ability-singular-purpose": {
       "id": "tyranids-ability-singular-purpose",
       "kind": "datasheet-ability",
@@ -79012,7 +79311,9 @@
       },
       "structured": {},
       "presentation": "article",
-      "aliases": [],
+      "aliases": [
+        "tyranids-ability-shadow-in-the-warp"
+      ],
       "related": [],
       "canonicalSource": {
         "documentId": "tyranids-codex-transcription",

@@ -436,7 +436,7 @@
       }
     },
     "tyranids-ability-shadow-in-the-warp": {
-      "termId": "tyranids-ability-shadow-in-the-warp",
+      "termId": "tyranids-army-rule-shadow-in-the-warp",
       "navigation": {
         "glossary": "glossary-tyranids-ability-shadow-in-the-warp",
         "rule": "unit-broodlord",
@@ -459,7 +459,8 @@
           "unit-maleceptor",
           "unit-norn-assimilator",
           "unit-norn-emissary"
-        ]
+        ],
+        "fullRulePath": "books/tyranids/reader.html#unit-broodlord"
       }
     },
     "tyranids-weapon-broodlord-claws-and-talons": {

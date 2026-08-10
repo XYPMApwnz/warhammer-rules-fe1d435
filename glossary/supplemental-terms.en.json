@@ -460,7 +460,6 @@
     "core-rule-05-03-save-rolls": [
       "Save roll",
       "Save rolls",
-      "Saving throw",
       "Saving throws"
     ],
     "core-rule-06-02-mortal-wounds": [
@@ -468,11 +467,9 @@
       "Mortal wounds"
     ],
     "core-rule-01-06-leadership-rolls": [
-      "Leadership test",
       "Leadership tests"
     ],
     "core-rule-01-07-battle-shock-rolls": [
-      "Battle-shock test",
       "Battle-shock tests",
       "Battle-shock roll",
       "Battle-shock rolls"
@@ -522,10 +519,10 @@
     "hit-roll": "core-rule-05-01-hit-rolls",
     "wound-roll": "core-rule-05-02-wound-rolls",
     "save-roll": "core-rule-05-03-save-rolls",
-    "saving-throw": "core-rule-05-03-save-rolls",
+    "saving-throw": "core-rule-05-03-01-saving-throw",
     "mortal-wound": "core-rule-06-02-mortal-wounds",
-    "leadership-test": "core-rule-01-06-leadership-rolls",
-    "battle-shock-test": "core-rule-01-07-battle-shock-rolls",
+    "leadership-test": "core-rule-01-06-01-leadership-test",
+    "battle-shock-test": "core-rule-01-07-02-battle-shock-test",
     "battle-shock-tests": "core-rule-01-07-battle-shock-rolls",
     "battle-shock-roll": "core-rule-01-07-battle-shock-rolls",
     "battle-shocked": "core-battle-shocked",

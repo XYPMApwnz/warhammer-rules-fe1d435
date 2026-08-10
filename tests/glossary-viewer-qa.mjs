@@ -19,8 +19,8 @@ const visibleTextBlocks=term=>{
     Number(meaningful(definition)&&term.presentation!=='profile');
 };
 
-assert.equal(values.length,2435,'canonical entry count must remain stable');
-assert.equal(Object.keys(aliases).length,659,'alias count must remain stable');
+assert.equal(values.length,2432,'canonical entry count must remain stable');
+assert.equal(Object.keys(aliases).length,662,'alias count must remain stable');
 
 assert.match(viewer,/const titleCounts=new Map\(\)/,'duplicate titles must be detected');
 assert.match(viewer,/className='term-qualifier'/,'duplicate titles must display a source qualifier');

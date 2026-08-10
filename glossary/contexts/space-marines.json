@@ -4560,7 +4560,7 @@
       }
     },
     "space-marines-weapon-grav-cannon-3": {
-      "termId": "space-marines-weapon-grav-cannon-3",
+      "termId": "space-marines-weapon-grav-cannon-2",
       "navigation": {
         "glossary": "glossary-space-marines-weapon-grav-cannon-3",
         "rule": "unit-centurion-devastator-squad",
@@ -4568,7 +4568,8 @@
         "statline": "centurion-devastator-squad-profile",
         "units": [
           "unit-centurion-devastator-squad"
-        ]
+        ],
+        "fullRulePath": "books/space-marines/reader.html#unit-centurion-devastator-squad"
       }
     },
     "space-marines-ability-ancient-banner": {

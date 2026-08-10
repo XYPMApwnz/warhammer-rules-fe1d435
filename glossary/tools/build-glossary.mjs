@@ -386,6 +386,12 @@ const isCoreAbilityCopy=(term,text)=>{
     .filter(Boolean)
     .some(value=>{const canonical=clean(value).toLowerCase();return canonical===candidate||canonical.endsWith(candidate);});
 };
+const confirmedCanonicalAliases={
+  'space-marines-weapon-grav-cannon-3':'space-marines-weapon-grav-cannon-2',
+  'tau-empire-ability-for-the-greater-good':'tau-empire-army-rule-for-the-greater-good',
+  'tyranids-ability-shadow-in-the-warp':'tyranids-army-rule-shadow-in-the-warp'
+};
+const confirmedCoreSingularAliases=['saving-throw','leadership-test','battle-shock-test'];
 
 for(const book of genericArmyBooks){
   const officialTitles=new Set(book.pack.detachments.flatMap(detachment=>[
@@ -406,6 +412,13 @@ for(const book of genericArmyBooks){
       addContext(book.id,localId,coreAbility.id,entry);
       continue;
     }
+    const canonicalId=confirmedCanonicalAliases[localId];
+    if(canonicalId){
+      aliases[localId]=canonicalId;
+      addContext(book.id,localId,canonicalId,entry);
+      if(entry.rule)contexts[book.id][localId].navigation.fullRulePath=`books/${book.id}/reader.html#${entry.rule}`;
+      continue;
+    }
     addTerm({
       id:localId,
       kind,
@@ -418,6 +431,7 @@ for(const book of genericArmyBooks){
     addContext(book.id,localId,localId,entry);
   }
 }
+for(const [alias,target] of Object.entries(confirmedCanonicalAliases))if(!registry.has(target))throw new Error(`Unknown confirmed canonical alias target: ${alias} -> ${target}`);
 
 for(const entry of supplemental.terms||[]){
   if(registry.has(entry.id))continue;
@@ -518,6 +532,10 @@ for(const [alias,target] of Object.entries(existingAliases)){
   if(!registry.has(target))continue;
   if(aliases[alias]&&aliases[alias]!==target)continue;
   aliases[alias]=target;
+}
+for(const alias of confirmedCoreSingularAliases){
+  const target=aliases[alias];
+  for(const term of registry.values())if(term.id!==target&&term.matchLabels)term.matchLabels=term.matchLabels.filter(label=>slug(label)!==alias);
 }
 for(const [bookId,records] of Object.entries(existingContexts)){
   for(const [localId,record] of Object.entries(records))if(record.curated===true&&registry.has(aliases[record.termId]||record.termId))contexts[bookId][localId]=record;

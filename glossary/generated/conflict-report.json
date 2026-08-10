@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 2435,
-    "aliases": 659,
+    "terms": 2432,
+    "aliases": 662,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 154,
-    "duplicateCandidates": 30,
+    "aliasCandidates": 152,
+    "duplicateCandidates": 27,
     "keywordCandidates": 16
   },
   "definitionCandidates": [
@@ -1841,8 +1841,7 @@
       "normalizedTitle": "grav-cannon",
       "termIds": [
         "space-marines-weapon-grav-cannon",
-        "space-marines-weapon-grav-cannon-2",
-        "space-marines-weapon-grav-cannon-3"
+        "space-marines-weapon-grav-cannon-2"
       ],
       "status": "review-required"
     },
@@ -1982,14 +1981,6 @@
       "termIds": [
         "tau-empire-enhancement-unmasking-suite-upgrade",
         "tau-empire-enhancement-unmasking-suite-upgrade-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "for-the-greater-good",
-      "termIds": [
-        "tau-empire-ability-for-the-greater-good",
-        "tau-empire-army-rule-for-the-greater-good"
       ],
       "status": "review-required"
     },
@@ -2159,14 +2150,6 @@
         "tyranids-weapon-chitinous-claws-and-teeth-4",
         "tyranids-weapon-chitinous-claws-and-teeth-5",
         "tyranids-weapon-chitinous-claws-and-teeth-6"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "shadow-in-the-warp",
-      "termIds": [
-        "tyranids-ability-shadow-in-the-warp",
-        "tyranids-army-rule-shadow-in-the-warp"
       ],
       "status": "review-required"
     },
@@ -2468,29 +2451,8 @@
     },
     {
       "termIds": [
-        "space-marines-weapon-grav-cannon-2",
-        "space-marines-weapon-grav-cannon-3"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
         "space-marines-ability-transport-7",
         "space-marines-ability-transport-8"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "tau-empire-ability-for-the-greater-good",
-        "tau-empire-army-rule-for-the-greater-good"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "tyranids-ability-shadow-in-the-warp",
-        "tyranids-army-rule-shadow-in-the-warp"
       ],
       "status": "review-required"
     }

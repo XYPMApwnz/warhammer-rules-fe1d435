@@ -466,7 +466,7 @@
         "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [
         "datasheet-damaged-1-4-wounds-remaining"
       ],
@@ -5328,7 +5328,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-archaeopter-stratoraptor": {
       "id": "adeptus-mechanicus-unit-archaeopter-stratoraptor",
@@ -5372,7 +5372,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-archaeopter-transvector": {
       "id": "adeptus-mechanicus-unit-archaeopter-transvector",
@@ -5416,7 +5416,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-belisarius-cawl": {
       "id": "adeptus-mechanicus-unit-belisarius-cawl",
@@ -5460,7 +5460,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-corpuscarii-electro-priests": {
       "id": "adeptus-mechanicus-unit-corpuscarii-electro-priests",
@@ -5505,7 +5505,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-cybernetica-datasmith": {
       "id": "adeptus-mechanicus-unit-cybernetica-datasmith",
@@ -5549,7 +5549,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-fulgurite-electro-priests": {
       "id": "adeptus-mechanicus-unit-fulgurite-electro-priests",
@@ -5594,7 +5594,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-hastarii-exterminators": {
       "id": "adeptus-mechanicus-unit-hastarii-exterminators",
@@ -5639,7 +5639,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-hastarii-fusiliers": {
       "id": "adeptus-mechanicus-unit-hastarii-fusiliers",
@@ -5684,7 +5684,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-ironstrider-ballistarii": {
       "id": "adeptus-mechanicus-unit-ironstrider-ballistarii",
@@ -5733,7 +5733,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-kastelan-robots": {
       "id": "adeptus-mechanicus-unit-kastelan-robots",
@@ -5780,7 +5780,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-kataphron-breachers": {
       "id": "adeptus-mechanicus-unit-kataphron-breachers",
@@ -5825,7 +5825,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-kataphron-destroyers": {
       "id": "adeptus-mechanicus-unit-kataphron-destroyers",
@@ -5870,7 +5870,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-onager-dunecrawler": {
       "id": "adeptus-mechanicus-unit-onager-dunecrawler",
@@ -5914,7 +5914,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-pteraxii-skystalkers": {
       "id": "adeptus-mechanicus-unit-pteraxii-skystalkers",
@@ -5961,7 +5961,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-pteraxii-sterylizors": {
       "id": "adeptus-mechanicus-unit-pteraxii-sterylizors",
@@ -6008,7 +6008,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-serberys-raiders": {
       "id": "adeptus-mechanicus-unit-serberys-raiders",
@@ -6053,7 +6053,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-serberys-sulphurhounds": {
       "id": "adeptus-mechanicus-unit-serberys-sulphurhounds",
@@ -6098,7 +6098,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-servitor-battleclade": {
       "id": "adeptus-mechanicus-unit-servitor-battleclade",
@@ -6142,7 +6142,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-sicarian-infiltrators": {
       "id": "adeptus-mechanicus-unit-sicarian-infiltrators",
@@ -6189,7 +6189,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-sicarian-ruststalkers": {
       "id": "adeptus-mechanicus-unit-sicarian-ruststalkers",
@@ -6236,7 +6236,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-skitarii-marshal": {
       "id": "adeptus-mechanicus-unit-skitarii-marshal",
@@ -6280,7 +6280,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-skitarii-rangers": {
       "id": "adeptus-mechanicus-unit-skitarii-rangers",
@@ -6324,7 +6324,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-skitarii-vanguard": {
       "id": "adeptus-mechanicus-unit-skitarii-vanguard",
@@ -6368,7 +6368,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-skorpius-disintegrator": {
       "id": "adeptus-mechanicus-unit-skorpius-disintegrator",
@@ -6412,7 +6412,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-skorpius-dunerider": {
       "id": "adeptus-mechanicus-unit-skorpius-dunerider",
@@ -6457,7 +6457,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-sydonian-dragoons-with-radium-jezzails": {
       "id": "adeptus-mechanicus-unit-sydonian-dragoons-with-radium-jezzails",
@@ -6503,7 +6503,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-sydonian-dragoons-with-taser-lances": {
       "id": "adeptus-mechanicus-unit-sydonian-dragoons-with-taser-lances",
@@ -6549,7 +6549,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-sydonian-skatros": {
       "id": "adeptus-mechanicus-unit-sydonian-skatros",
@@ -6593,7 +6593,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-tech-priest-dominus": {
       "id": "adeptus-mechanicus-unit-tech-priest-dominus",
@@ -6637,7 +6637,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-tech-priest-enginseer": {
       "id": "adeptus-mechanicus-unit-tech-priest-enginseer",
@@ -6681,7 +6681,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-tech-priest-manipulus": {
       "id": "adeptus-mechanicus-unit-tech-priest-manipulus",
@@ -6725,7 +6725,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-technoarcheologist": {
       "id": "adeptus-mechanicus-unit-technoarcheologist",
@@ -6769,7 +6769,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-unit-thulia-ghuld": {
       "id": "adeptus-mechanicus-unit-thulia-ghuld",
@@ -6813,7 +6813,7 @@
         "adeptus-mechanicus"
       ],
       "mentions": [],
-      "presentation": "article"
+      "presentation": "metadata"
     },
     "adeptus-mechanicus-weapon-alpha-combat-weapon": {
       "id": "adeptus-mechanicus-weapon-alpha-combat-weapon",
@@ -27608,7 +27608,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-biologus-putrifier": {
@@ -27656,7 +27656,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-blightlord-terminators": {
@@ -27713,7 +27713,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-chaos-land-raider": {
@@ -27765,7 +27765,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-chaos-predator-annihilator": {
@@ -27817,7 +27817,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-chaos-predator-destructor": {
@@ -27869,7 +27869,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-chaos-rhino": {
@@ -27921,7 +27921,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-chaos-spawn": {
@@ -27969,7 +27969,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-daemon-prince-of-nurgle": {
@@ -28018,7 +28018,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-daemon-prince-of-nurgle-with-wings": {
@@ -28067,7 +28067,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-deathshroud-terminators": {
@@ -28128,7 +28128,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-defiler": {
@@ -28181,7 +28181,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-foetid-bloat-drone": {
@@ -28234,7 +28234,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-foetid-bloat-drone-with-heavy-blight-launcher": {
@@ -28287,7 +28287,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-foul-blightspawn": {
@@ -28335,7 +28335,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-great-unclean-one": {
@@ -28388,7 +28388,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-helbrute": {
@@ -28436,7 +28436,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-icon-bearer": {
@@ -28484,7 +28484,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-lord-of-contagion": {
@@ -28533,7 +28533,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-lord-of-poxes": {
@@ -28582,7 +28582,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-lord-of-virulence": {
@@ -28631,7 +28631,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-malignant-plaguecaster": {
@@ -28679,7 +28679,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-miasmic-malignifier": {
@@ -28727,7 +28727,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-mortarion": {
@@ -28776,7 +28776,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-myphitic-blight-hauler": {
@@ -28829,7 +28829,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-noxious-blightbringer": {
@@ -28877,7 +28877,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-nurglings": {
@@ -28930,7 +28930,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-plague-drones": {
@@ -28983,7 +28983,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-plague-marines": {
@@ -29039,7 +29039,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-plague-surgeon": {
@@ -29087,7 +29087,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-plaguebearers": {
@@ -29136,7 +29136,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-plagueburst-crawler": {
@@ -29189,7 +29189,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-poxwalkers": {
@@ -29241,7 +29241,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-rotigus": {
@@ -29290,7 +29290,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-tallyman": {
@@ -29338,7 +29338,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-unit-typhus": {
@@ -29387,7 +29387,7 @@
       "sourceRefs": [
         "death-guard"
       ],
-      "presentation": "article",
+      "presentation": "metadata",
       "matchLabels": []
     },
     "death-guard-weapon-armoured-tracks-chaos-land-raider": {
@@ -34489,7 +34489,7 @@
         "en": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -34520,7 +34520,7 @@
         "en": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -34551,7 +34551,7 @@
         "en": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -45208,7 +45208,7 @@
         "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -45239,7 +45239,7 @@
         "en": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -46727,7 +46727,7 @@
         "en": "4+"
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -46758,7 +46758,7 @@
         "en": "This model has a 4+ invulnerable save against melee attacks."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -49207,7 +49207,7 @@
         "en": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. It cannot transport Jump Pack, Wulfen, Gravis, Centurion or Terminator models."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -49238,7 +49238,7 @@
         "en": "This model has a transport capacity of 12 Adeptus Astartes Infantry models and 1 Dreadnought model. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -49269,7 +49269,7 @@
         "en": "This model has a transport capacity of 7 TACTICUS or PHOBOS INFANTRY models. It cannot transport JUMP PACK models."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -49300,7 +49300,7 @@
         "en": "This model has a transport capacity of 6 Adeptus Astartes Infantry models. It cannot transport JUMP PACK, WULFEN, PHOBOS, GRAVIS, CENTURION, TERMINATOR or TACTICUS models (excluding TACTICUS CHARACTER models that began the battle attached to a non-TACTICUS unit)"
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -49331,7 +49331,7 @@
         "en": "This model has a transport capacity of 12 ADEPTUS ASTARTES INFANTRY models. It cannot transport JUMP PACK, WULFEN, PHOBOS, GRAVIS, CENTURION, TERMINATOR or TACTICUS models (excluding TACTICUS CHARACTER models that began the battle attached to a non-TACTICUS unit)"
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -49362,7 +49362,7 @@
         "en": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -49393,7 +49393,7 @@
         "en": "This model has a transport capacity of 16 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -49424,7 +49424,7 @@
         "en": "This model has a transport capacity of 14 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -49455,7 +49455,7 @@
         "en": "This model has a transport capacity of 14 ADEPTUS ASTARTES INFANTRY models. Each JUMP PACK, WULFEN, GRAVIS or TERMINATOR model takes up the space of 2 models and each CENTURION model takes up the space of 3 models."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -49486,7 +49486,7 @@
         "en": "This model has a transport capacity of 7 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -67816,7 +67816,7 @@
         "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -67847,7 +67847,7 @@
         "en": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -67878,7 +67878,7 @@
         "en": "While this model has 1-5 wounds remaining, subtract 3 from this models Objective Control characteristic, and each time this model makes an attack, subtract 1 from the Hit roll."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -77481,7 +77481,7 @@
         "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {
@@ -77512,7 +77512,7 @@
         "en": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "metadata",
       "aliases": [],
       "related": [],
       "canonicalSource": {

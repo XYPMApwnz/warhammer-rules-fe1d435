@@ -392,6 +392,31 @@ const confirmedCanonicalAliases={
   'tyranids-ability-shadow-in-the-warp':'tyranids-army-rule-shadow-in-the-warp'
 };
 const confirmedCoreSingularAliases=['saving-throw','leadership-test','battle-shock-test'];
+const contextOnlyTermIds=new Set([
+  'space-marines-ability-invulnerable-save',
+  'space-marines-ability-invulnerable-save-2',
+  'space-marines-ability-transport',
+  'space-marines-ability-transport-2',
+  'space-marines-ability-transport-3',
+  'space-marines-ability-transport-4',
+  'space-marines-ability-transport-5',
+  'space-marines-ability-transport-6',
+  'space-marines-ability-transport-7',
+  'space-marines-ability-transport-8',
+  'space-marines-ability-transport-9',
+  'space-marines-ability-transport-10',
+  'adeptus-mechanicus-datasheet-damaged-1-4-wounds-remaining',
+  'emperors-children-ability-damaged-1-5-wounds-remaining',
+  'emperors-children-ability-damaged-1-6-wounds-remaining',
+  'emperors-children-ability-damaged-1-7-wounds-remaining',
+  'space-marines-ability-damaged-1-4-wounds-remaining',
+  'space-marines-ability-damaged-1-5-wounds-remaining',
+  'tau-empire-ability-damaged-1-4-wounds-remaining',
+  'tau-empire-ability-damaged-1-5-wounds-remaining',
+  'tau-empire-ability-damaged-1-5-wounds-remaining-2',
+  'tyranids-ability-damaged-1-4-wounds-remaining',
+  'tyranids-ability-damaged-1-5-wounds-remaining'
+]);
 
 for(const book of genericArmyBooks){
   const officialTitles=new Set(book.pack.detachments.flatMap(detachment=>[
@@ -624,8 +649,12 @@ for(const term of registry.values()){
   if(term.definition?.en)term.definition.en=humanizeCoreReferences(term.definition.en);
 }
 for(const term of registry.values())term.aliases=[...new Set([...(term.aliases||[]),...Object.entries(aliases).filter(([,target])=>target===term.id).map(([alias])=>alias)])].filter(alias=>alias!==term.id).sort();
+for(const id of contextOnlyTermIds)if(!registry.has(id))throw new Error(`Missing confirmed context-only term: ${id}`);
+const contextOnlyTerms=[...registry.values()].filter(term=>term.kind==='unit'||contextOnlyTermIds.has(term.id));
+if(contextOnlyTerms.length!==93)throw new Error(`Expected 93 confirmed context-only terms, got ${contextOnlyTerms.length}`);
 for(const term of registry.values()){
-  if(term.kind==='weapon'||term.structured?.weapon)term.presentation='profile';
+  if(term.kind==='unit'||contextOnlyTermIds.has(term.id))term.presentation='metadata';
+  else if(term.kind==='weapon'||term.structured?.weapon)term.presentation='profile';
   else if(!term.presentation||term.presentation==='atomic'||term.presentation==='article')term.presentation=clean(term.summary?.en)===clean(term.definition?.en)?'atomic':'article';
 }
 

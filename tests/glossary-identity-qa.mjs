@@ -5,7 +5,7 @@ import vm from 'node:vm';
 const read=path=>fs.readFileSync(new URL(`../${path}`,import.meta.url),'utf8');
 const registry=JSON.parse(read('glossary/registry.en.json')).terms;
 const aliases=JSON.parse(read('glossary/aliases.en.json')).aliases;
-const contexts=Object.fromEntries(['space-marines','tau-empire','tyranids'].map(book=>[
+const contexts=Object.fromEntries(['death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','space-marines'].map(book=>[
   book,
   JSON.parse(read(`glossary/contexts/${book}.json`)).terms
 ]));
@@ -62,6 +62,31 @@ for(const [book,localId,target,ownerCount,rule] of localCases){
   assert.equal(linkable.owners.length,ownerCount);
 }
 
+const contextOnlyCases=[
+  ['space-marines','space-marines-ability-invulnerable-save'],
+  ['space-marines','space-marines-ability-invulnerable-save-2'],
+  ['space-marines','space-marines-ability-transport'],
+  ['space-marines','space-marines-ability-damaged-1-4-wounds-remaining'],
+  ['adeptus-mechanicus','adeptus-mechanicus-datasheet-damaged-1-4-wounds-remaining'],
+  ['death-guard','death-guard-unit-plague-marines'],
+  ['adeptus-mechanicus','adeptus-mechanicus-unit-onager-dunecrawler']
+];
+for(const [book,id] of contextOnlyCases){
+  const term=registry[id],view=api.forBook(book)[id];
+  const context=Object.values(contexts[book]).find(entry=>(aliases[entry.termId]||entry.termId)===id);
+  const linkable=api.linkables(book).find(entry=>entry.termId===id);
+  assert.ok(term&&view&&context&&linkable,`${id} must retain registry, book context and linkable identity`);
+  assert.equal(term.presentation,'metadata',`${id} must be hidden only by presentation`);
+  assert.equal(api.get(id).id,id,`${id} must remain directly addressable`);
+  assert.equal(view.definition,term.definition.en,`${id} must retain its definition`);
+  assert.equal(JSON.stringify(view.source),JSON.stringify(term.canonicalSource),`${id} must retain source provenance`);
+  assert.equal(linkable.termId,id,`${id} must not redirect to another canonical entry`);
+}
+assert.equal(api.forBook('space-marines')['space-marines-ability-invulnerable-save'].definition,'4+');
+assert.equal(api.forBook('space-marines')['space-marines-ability-invulnerable-save-2'].definition,'This model has a 4+ invulnerable save against melee attacks.');
+assert.equal(api.forBook('space-marines')['space-marines-ability-transport'].fullRulePath,'books/space-marines/reader.html#unit-drop-pod');
+assert.equal(api.forBook('space-marines')['space-marines-ability-damaged-1-4-wounds-remaining'].fullRulePath,'books/space-marines/reader.html#unit-hammerfall-bunker');
+
 const keepPairs=[
   ['space-marines-ability-transport-7','space-marines-ability-transport-8'],
   ['space-marines-enhancement-adamantine-mantle','space-marines-enhancement-adamantine-mantle-2'],
@@ -77,4 +102,4 @@ for(const [first,second] of keepPairs){
   assert.notEqual(contexts['space-marines'][first].navigation.rule,contexts['space-marines'][second].navigation.rule);
 }
 
-console.log('Glossary identity QA passed: 6 targeted resolutions, 3 preserved local contexts, 6 keep-both controls.');
+console.log('Glossary identity QA passed: 6 targeted resolutions, 7 context-only identities, 3 preserved local contexts, 6 keep-both controls.');

@@ -1,7 +1,7 @@
 {
   "source": "https://mfm.warhammer-community.com/en/adeptus-mechanicus",
-  "version": "v1.1",
-  "capturedAt": "2026-07-29",
+  "version": "v1.2",
+  "capturedAt": "2026-08-11",
   "units": {
     "Archaeopter Fusilave": {"points":[["1 model",160]]},
     "Archaeopter Stratoraptor": {"points":[["1 model",185]]},

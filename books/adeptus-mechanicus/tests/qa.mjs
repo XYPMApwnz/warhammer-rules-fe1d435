@@ -34,7 +34,7 @@ const codexParity=json('content/adeptus-mechanicus-codex-parity.en.json');
 const codexDatasheets=json('content/adeptus-mechanicus-codex-datasheets.en.json');
 const codexWargear=json('content/adeptus-mechanicus-codex-wargear.en.json');
 const currentPoints=json('content/adeptus-mechanicus-points.en.json');
-const officialMfm=json('sources/official-mfm-v1.1.json');
+const officialMfm=json('sources/official-mfm-v1.2.json');
 const relatedRulesConfig=json('content/adeptus-mechanicus-related-rules.en.json');
 const factionDatasheets=new Map(factionRules.datasheets.map(unit=>[unit.id,unit]));
 const mergedDatasheets=codexDatasheets.datasheets.map(unit=>factionDatasheets.has(unit.id)?{...unit,...factionDatasheets.get(unit.id),category:unit.category}:unit);
@@ -230,7 +230,7 @@ check('Phone no-roster keeps desktop switch',mobileUnitPage.includes('data-view-
 check('Phone no-roster keeps All Detachments',mobileUnitPage.includes('<option value="all">All detachments</option>'));
 check('local official transcripts are embedded',(markup.match(/class="source-transcript"/g)||[]).length===rules.updates.length+rules.detachments.length+factionRules.datasheets.filter(unit=>unit.status!=='Warhammer Legends').length+2);
 check('Codex transcription status is explicit',markup.includes('Codex transcription layer')&&markup.includes('34 indexed datasheets'));
-check('official MFM verification is visible',markup.includes('Munitorum Field Manual v1.1')&&markup.includes('All 34 current Enhancement costs'));
+check('official MFM verification is visible',markup.includes('Munitorum Field Manual v1.2')&&markup.includes('All 34 current Enhancement costs'));
 check('generated reader identifies the current 27-page Faction Pack',markup.includes('Faction Pack v1.1')&&markup.includes('27 pages')&&!markup.includes('Faction Pack v1.0'));
 check('generated hero contains no technical placeholders',!read('tools/build-full-content.mjs').includes('Technical placeholder')&&!html.includes('Technical placeholder')&&markup.includes('11th Edition Army Book')&&markup.includes('Adeptus Mechanicus emblem'));
 check('Stratagem restrictions render as a separate field',markup.includes('<b>Restrictions</b>')&&markup.includes('Programmed Withdrawal'));
@@ -354,7 +354,7 @@ check('official MFM unit sizes are locked',[
   ['Skitarii Rangers','10 models'],
   ['Sydonian Skatros','1 model']
 ].every(([title,label])=>currentPoints.units.find(unit=>unit.title===title)?.points.some(row=>row.label===label)));
-check('official MFM provenance is locked',currentPoints.source.officialVersion==='v1.1'&&currentPoints.source.officialUrl==='https://mfm.warhammer-community.com/en/adeptus-mechanicus');
+check('official MFM provenance is locked',currentPoints.source.officialVersion==='v1.2'&&currentPoints.source.officialUrl==='https://mfm.warhammer-community.com/en/adeptus-mechanicus');
 check('carried-forward rules no longer use placeholder wording',!JSON.stringify(codex).match(/rule's listed roll|following the rule's unit restrictions|under the listed Acquisition conditions|according to the Stratagem's conditions/));
 check('personal roster integration is loaded',/\.\.\/shared\/roster-parser\.js\?v=\d+/.test(html)&&/\.\.\/\.\.\/roster-guides\/points-validator\.js\?v=\d+/.test(html)&&/\.\/scripts\/roster-filter\.js\?v=\d+/.test(html)&&html.includes('data-roster-guides'));
 check('Compatible Rules runtime uses only the generated matrix',read('scripts/app.js').includes('generated/compatible-rules.json')&&read('mobile/mobile.js').includes('generated/compatible-rules.json')&&!read('scripts/app.js').includes('AMRelatedRules')&&!read('mobile/mobile.js').includes('AMRelatedRules'));

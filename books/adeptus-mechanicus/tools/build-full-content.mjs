@@ -19,7 +19,7 @@ const codex={...codexSource,detachments:codexSource.detachments.map(detachment=>
 const codexDatasheets=readJson('content/adeptus-mechanicus-codex-datasheets.en.json');
 const codexWargear=readJson('content/adeptus-mechanicus-codex-wargear.en.json');
 const pointsCatalog=readJson('content/adeptus-mechanicus-points.en.json');
-const officialMfm=readJson('sources/official-mfm-v1.1.json');
+const officialMfm=readJson('sources/official-mfm-v1.2.json');
 const unitImages=readJson('presentation/unit-images.json').units;
 const globalGlossary=readJson('../../glossary/registry.en.json').terms;
 const pointsByUnit=new Map(pointsCatalog.units.map(unit=>[unit.title.toLowerCase(),unit]));

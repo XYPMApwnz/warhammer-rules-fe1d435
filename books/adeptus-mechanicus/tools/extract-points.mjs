@@ -6,7 +6,7 @@ import {normalizedFileSha256} from './source-hash.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const sourcePath=path.join(root,'sources','bsdata-adeptus-mechanicus-11e.json');
 const outputPath=path.join(root,'content','adeptus-mechanicus-points.en.json');
-const officialMfm=JSON.parse(fs.readFileSync(path.join(root,'sources','official-mfm-v1.1.json'),'utf8'));
+const officialMfm=JSON.parse(fs.readFileSync(path.join(root,'sources','official-mfm-v1.2.json'),'utf8'));
 const source=JSON.parse(fs.readFileSync(sourcePath,'utf8')).catalogue;
 const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const clean=value=>String(value??'').replaceAll('^^**','').replaceAll('**^^','').replaceAll('**','').replaceAll('\u00a0',' ').replace(/\s+/g,' ').trim();

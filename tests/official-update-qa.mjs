@@ -253,6 +253,7 @@ function tauObserved(update,target){
     return exactlyOne(collection.filter(item=>item.id===(target.enhancementId||target.stratagemId)),`T'au ${target.enhancementId||target.stratagemId}`)[target.field];
   }
   const unit=exactlyOne(tauUnits.filter(item=>item.id===target.unitId),`T'au ${target.unitId}`);
+  if(target.kind==='wargear-ability')return exactlyOne(unit.wargearAbilities.filter(item=>slug(item.title)===slug(target.title)),`T'au ${target.title}`)[target.field];
   if(target.kind==='ability')return exactlyOne(unit.abilities.filter(item=>slug(item.title)===slug(target.title)),`T'au ${target.title}`)[target.field];
   if(target.kind==='keyword')return unit.keywords.some(item=>slug(item)===slug(target.value));
   if(target.kind==='weapon-profile')return exactlyOne(unit.weapons.filter(item=>slug(item.name)===target.profileKey),`T'au ${target.profileKey}`);
@@ -332,6 +333,7 @@ function surfaceObserved(bookId,target,html){
     if(!field(ability,target.field).length&&attr(ability,'data-source-value')!==null)return decode(attr(ability,'data-source-value'));
     return textField(ability,target.field);
   }
+  if(target.kind==='wargear-ability')return textField(exactlyOne(field(scope,`wargearAbilities.${slug(target.title)}`),`wargear ability ${target.title}`),target.field);
   if(target.kind==='enhancement-text'){
     const card=exactlyOne(elementsByAttribute(scope,'data-rule-id',target.enhancementId),`enhancement ${target.title}`);
     return textField(card,target.field);

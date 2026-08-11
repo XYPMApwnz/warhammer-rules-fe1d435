@@ -42,6 +42,7 @@
   ],
   "gates": {
     "publishAsComplete": false,
+    "reviewLabel": "Verification build",
     "reason": "Official Faction Pack v1.1 is frozen; official live MFM v1.2 is preserved as a dated repository capture verified 11 August 2026. Codex text must still be verified before this book can be labelled complete."
   }
 }

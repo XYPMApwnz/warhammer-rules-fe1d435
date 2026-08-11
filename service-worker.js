@@ -13,7 +13,9 @@ const TYRANIDS_MOBILE_FALLBACK = "./books/tyranids/mobile/index.html";
 const TAU_EMPIRE_ENTRY_FALLBACK = "./books/tau-empire/index.html";
 const TAU_EMPIRE_DESKTOP_FALLBACK = "./books/tau-empire/reader.html";
 const TAU_EMPIRE_MOBILE_FALLBACK = "./books/tau-empire/mobile/index.html";
-const CHAOS_SPACE_MARINES_FALLBACK = LIBRARY_FALLBACK;
+const CHAOS_SPACE_MARINES_ENTRY_FALLBACK = "./books/chaos-space-marines/index.html";
+const CHAOS_SPACE_MARINES_DESKTOP_FALLBACK = "./books/chaos-space-marines/reader.html";
+const CHAOS_SPACE_MARINES_MOBILE_FALLBACK = "./books/chaos-space-marines/mobile/index.html";
 const ORKS_FALLBACK = LIBRARY_FALLBACK;
 const EMPERORS_CHILDREN_FALLBACK = "./books/emperors-children/index.html";
 const SPACE_MARINES_FALLBACK = LIBRARY_FALLBACK;
@@ -201,11 +203,23 @@ const APP_SHELL = [
   ,"./books/tau-empire/mobile/related-rules.inc?v=2"
   ,"./books/shared/book-roster-enhancements.js?v=1"
   ,"./books/chaos-space-marines/"
-  ,CHAOS_SPACE_MARINES_FALLBACK
-  ,"./books/chaos-space-marines/mobile/index.html"
+  ,CHAOS_SPACE_MARINES_ENTRY_FALLBACK
+  ,CHAOS_SPACE_MARINES_DESKTOP_FALLBACK
+  ,CHAOS_SPACE_MARINES_MOBILE_FALLBACK
   ,"./books/chaos-space-marines/styles/tokens.css?v=2"
-  ,"./books/chaos-space-marines/styles/book.css?v=2"
-  ,"./books/chaos-space-marines/scripts/app.js?v=2"
+  ,"./books/chaos-space-marines/styles/book.css?v=3"
+  ,"./books/chaos-space-marines/assets/chaos-space-marines-cover-480.webp"
+  ,"./books/chaos-space-marines/assets/chaos-space-marines-cover-800.webp"
+  ,"./books/chaos-space-marines/scripts/data.js?v=2"
+  ,"./books/chaos-space-marines/scripts/app.js?v=4"
+  ,"./books/chaos-space-marines/scripts/roster-filter.js?v=1"
+  ,"./books/chaos-space-marines/scripts/compatible-rules-runtime.mjs?v=1"
+  ,"./books/chaos-space-marines/generated/compatible-rules.json"
+  ,"./books/chaos-space-marines/scripts/roster-data.js?v=1"
+  ,"./books/chaos-space-marines/mobile/mobile.css?v=1"
+  ,"./books/chaos-space-marines/mobile/mobile.js?v=2"
+  ,"./books/chaos-space-marines/mobile/phone-popup-controller.js?v=1"
+  ,"./books/chaos-space-marines/mobile/related-rules.inc?v=1"
   ,"./books/orks/"
   ,ORKS_FALLBACK
   ,"./books/orks/mobile/index.html"
@@ -276,7 +290,9 @@ function navigationFallback(url) {
   if (path.includes("/books/tau-empire/mobile/")) return TAU_EMPIRE_MOBILE_FALLBACK;
   if (path.endsWith("/books/tau-empire/reader.html")) return TAU_EMPIRE_DESKTOP_FALLBACK;
   if (path.endsWith("/books/tau-empire/") || path.endsWith("/books/tau-empire/index.html")) return TAU_EMPIRE_ENTRY_FALLBACK;
-  if (path.includes("/books/chaos-space-marines/")) return CHAOS_SPACE_MARINES_FALLBACK;
+  if (path.includes("/books/chaos-space-marines/mobile/")) return CHAOS_SPACE_MARINES_MOBILE_FALLBACK;
+  if (path.endsWith("/books/chaos-space-marines/reader.html")) return CHAOS_SPACE_MARINES_DESKTOP_FALLBACK;
+  if (path.endsWith("/books/chaos-space-marines/") || path.endsWith("/books/chaos-space-marines/index.html")) return CHAOS_SPACE_MARINES_ENTRY_FALLBACK;
   if (path.includes("/books/orks/")) return ORKS_FALLBACK;
   if (path.includes("/books/emperors-children/")) return EMPERORS_CHILDREN_FALLBACK;
   if (path.includes("/books/space-marines/")) return SPACE_MARINES_FALLBACK;

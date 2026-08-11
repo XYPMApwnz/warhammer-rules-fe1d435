@@ -32,6 +32,7 @@ const books=[
   {id:'tyranids',phone:'hive-tyrant.html',matrix:'books/tyranids/generated/compatible-rules.json'},
   {id:'tau-empire',phone:'breacher-team.html',matrix:'books/tau-empire/generated/compatible-rules.json'},
   {id:'emperors-children',phone:'lord-exultant.html',matrix:'books/emperors-children/generated/compatible-rules.json'},
+  {id:'chaos-space-marines',phone:'abaddon-the-despoiler.html',matrix:'books/chaos-space-marines/generated/compatible-rules.json'},
   {id:'space-marines',phone:'intercessor-squad.html',matrix:'books/space-marines/generated/compatible-rules.json',roster:false},
   {id:'dark-angels',phone:'belial.html',matrix:null,roster:false}
 ];
@@ -49,6 +50,12 @@ for(const book of books){
   const phoneRuntime=book.singleReader?phoneHtml.includes('new URL("../reader.html"')&&phoneHtml.includes('searchParams.set("view","mobile")'):/mobile\.js\?v=\d+/.test(phoneHtml);
   check(`${book.id} exposes required production paths`,(book.roster===false||/scripts\/roster-filter\.js\?v=\d+/.test(readerHtml))&&phoneRuntime);
   if(book.matrix)check(`${book.id} Compatible Rules matrix exists`,exists(book.matrix));
+  if(book.id==='chaos-space-marines'){
+    check('chaos-space-marines entry exposes verification status and artwork',entryHtml.includes('Verification build')&&entryHtml.includes('chaos-space-marines-cover-480.webp')&&!entryHtml.includes('class="entry-mark"'));
+    check('chaos-space-marines reader preserves current publication inventory',(readerHtml.match(/<article class="unit-card/g)||[]).length===54&&(readerHtml.match(/data-nav-id="detachment-[^"]+"/g)||[]).length===17&&readerHtml.includes('faction-hero-cover'));
+    const phoneRoutes=fs.readdirSync(path.join(root,'books/chaos-space-marines/mobile')).filter(file=>file.endsWith('.html'));
+    check('chaos-space-marines exposes 74 generated Phone routes',phoneRoutes.length===74&&phoneHtml.includes('id="unit-abaddon-the-despoiler"')&&!phoneHtml.includes('reader.html?view=mobile'));
+  }
   if(book.id==='dark-angels'){
     check('dark-angels entry exposes source-limited review status and artwork',entryHtml.includes('Source-limited preview')&&entryHtml.includes('dark-angels-cover-480.webp')&&!entryHtml.includes('class="entry-mark"'));
     check('dark-angels reader exposes one categorized inventory while preserving ownership and source gaps',(readerHtml.match(/<article class="unit-card/g)||[]).length===98&&(readerHtml.match(/Space Marines shared datasheet/g)||[]).length===82&&!readerHtml.includes('data-nav-id="datasheets-dark-angels"')&&!readerHtml.includes('data-nav-id="datasheets-space-marines"')&&readerHtml.includes('data-nav-id="datasheets-epic-heroes"')&&readerHtml.includes('data-nav-id="datasheets-vehicle"')&&(readerHtml.match(/Codex source required/g)||[]).length===3);

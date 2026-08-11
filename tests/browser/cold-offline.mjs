@@ -53,6 +53,7 @@ const books=[
   {name:"T'au Empire",unit:'unit-breacher-team',desktop:'/books/tau-empire/reader.html#unit-breacher-team',phone:'/books/tau-empire/mobile/breacher-team.html'},
   {name:"Emperor's Children",unit:'unit-shalaxi-helbane',desktop:'/books/emperors-children/reader.html#unit-shalaxi-helbane',phone:'/books/emperors-children/mobile/shalaxi-helbane.html'},
   {name:"Emperor's Children Daemonettes",unit:'unit-daemonettes',desktop:'/books/emperors-children/reader.html#unit-daemonettes',phone:'/books/emperors-children/mobile/daemonettes.html'},
+  {name:'Chaos Space Marines',unit:'unit-abaddon-the-despoiler',desktop:'/books/chaos-space-marines/reader.html#unit-abaddon-the-despoiler',phone:'/books/chaos-space-marines/mobile/abaddon-the-despoiler.html'},
   {name:'Space Marines',unit:'unit-intercessor-squad',desktop:'/books/space-marines/reader.html#unit-intercessor-squad',phone:'/books/space-marines/mobile/intercessor-squad.html'},
   {name:'Dark Angels',unit:'unit-belial',desktop:'/books/dark-angels/reader.html#unit-belial',phone:'/books/dark-angels/mobile/belial.html',offline:'/books/dark-angels/mobile/hellblaster-squad.html',offlineUnit:'unit-hellblaster-squad',related:false}
 ];
@@ -107,6 +108,15 @@ try{
   const bookContext=await browser.newContext({serviceWorkers:'block',viewport:{width:1440,height:900}});
   try{
     const {page,errors}=await observedPage(bookContext);
+    await page.goto(`${origin}/index.html`);
+    const csmCard=page.locator('a.book.csm');
+    await csmCard.waitFor({state:'visible'});
+    const csmCover=csmCard.locator('img');
+    await csmCover.scrollIntoViewIfNeeded();
+    await csmCover.evaluate(image=>image.decode());
+    assert.equal(await csmCover.evaluate(image=>image.complete&&image.naturalWidth>0&&Math.abs(image.naturalWidth/image.naturalHeight-.8)<.01),true,'Chaos Space Marines Library artwork failed to load');
+    await Promise.all([page.waitForURL(url=>url.pathname==='/books/chaos-space-marines/reader.html'),csmCard.click()]);
+    assert.match(await page.locator('#start').evaluate(node=>getComputedStyle(node).backgroundImage),/chaos-space-marines-cover-800\.webp/,'Chaos Space Marines Desktop Start lost its artwork');
     await page.goto(`${origin}/index.html`);
     const darkAngelsCard=page.locator('a.book.da');
     await darkAngelsCard.waitFor({state:'visible'});
@@ -179,7 +189,7 @@ try{
     assert.match(await page.locator('main').textContent(),/Searing Bursts/);
     await page.goto(`${origin}/books/dark-angels/mobile/company-of-hunters.html`);
     assert.match(await page.locator('main').textContent(),/Codex source required/);
-    console.log('PASS six Army Books open desktop content, supported Related Rules, Phone routes and glossary popups');
+    console.log('PASS published Army Books open desktop content, supported Related Rules, Phone routes and glossary popups');
   }finally{
     await bookContext.close();
   }
@@ -219,6 +229,14 @@ try{
   const noScriptContext=await browser.newContext({javaScriptEnabled:false,serviceWorkers:'block',viewport:{width:390,height:844}});
   try{
     const page=await noScriptContext.newPage();
+    await page.goto(`${origin}/books/chaos-space-marines/index.html`);
+    const csmArt=page.locator('.entry-art img');
+    await csmArt.waitFor({state:'visible'});
+    await csmArt.evaluate(image=>image.decode());
+    assert.equal(await csmArt.evaluate(image=>image.complete&&image.naturalWidth>0&&Math.abs(image.naturalWidth/image.naturalHeight-.8)<.01),true,'Chaos Space Marines no-JS entry artwork failed to load');
+    assert.equal(await page.locator('a[href="./reader.html?view=full"]').count(),1,'Chaos Space Marines no-JS Desktop link is missing');
+    assert.equal(await page.locator('a[href="./mobile/index.html?view=mobile"]').count(),1,'Chaos Space Marines no-JS Phone link is missing');
+    assert.equal(await page.locator('a[href="../../index.html"]').count(),1,'Chaos Space Marines no-JS Library return is missing');
     await page.goto(`${origin}/books/dark-angels/index.html`);
     const art=page.locator('.entry-art img');
     await art.waitFor({state:'visible'});
@@ -312,7 +330,17 @@ try{
     assert.ok(!phoneHeadings.some(title=>title.startsWith('Court of the Phoenician')),'Phone roster union included a foreign Detachment');
     assert.equal(phoneHeadings.filter(title=>title==='Core Stratagems').length,1,'Phone roster union duplicated Core Stratagems');
     assert.deepEqual(errors,[],'Phone roster Compatible Rules emitted an uncaught runtime error');
-    console.log('PASS roster Compatible Rules union all saved Detachments without a selector on Desktop and Phone');
+    const csmRosterRecord={id:'csm-publication-roster',name:'CSM publication fixture',roster:{faction:'Chaos - Chaos Space Marines',detachment:'Nightmare Hunt',detachments:[{label:'Nightmare Hunt'}],units:[{id:'fixture-chaos-lord-jump-pack',name:'Chaos Lord with Jump Pack',quantity:1,points:80}],enhancements:[]}};
+    await page.evaluate(record=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([record])),csmRosterRecord);
+    await page.goto(`${origin}/books/chaos-space-marines/reader.html?roster=${csmRosterRecord.id}#unit-chaos-lord-with-jump-pack`);
+    await page.waitForFunction(()=>document.documentElement.dataset.rosterActive==='true');
+    await page.locator('#unit-chaos-lord-with-jump-pack .related-rules-trigger').click();
+    await page.locator('.full-related-content').waitFor({state:'visible'});
+    assert.equal(await page.locator('.full-related-filter').count(),0,'CSM roster mode still exposes a Detachment selector');
+    const csmHeadings=await page.locator('.full-related-content .related-detachment:visible > h2').allTextContents();
+    assert.ok(csmHeadings.some(title=>title.startsWith('Nightmare Hunt'))&&csmHeadings.includes('Core Stratagems'),'CSM roster lost deterministic Compatible Rules');
+    assert.deepEqual(errors,[],'CSM roster publication smoke emitted an uncaught runtime error');
+    console.log('PASS roster Compatible Rules for published books without a selector on Desktop and Phone');
   }finally{
     await compatibleRosterContext.close();
   }
@@ -327,6 +355,7 @@ try{
       await page.locator(`#${book.offlineUnit||book.unit}`).waitFor({state:'visible'});
       await page.waitForFunction(async()=>Boolean(await caches.match(location.href)));
     }
+    assert.equal(await page.evaluate(async()=>Boolean(await caches.match(new URL('/books/chaos-space-marines/assets/chaos-space-marines-cover-800.webp',location.origin).href))),true,'Chaos Space Marines artwork is absent from the offline cache');
     assert.equal(await page.evaluate(async()=>Boolean(await caches.match(new URL('/books/dark-angels/assets/dark-angels-cover-800.webp',location.origin).href))),true,'Dark Angels artwork is absent from the offline cache');
     errors.length=0;
     await offlineContext.setOffline(true);
@@ -339,7 +368,7 @@ try{
     }
     await openPhonePopup(page,'Dark Angels offline');
     assert.deepEqual(errors,[],'Offline smoke emitted an uncaught runtime error');
-    console.log('PASS six visited Army Books remain usable after offline reload');
+    console.log('PASS published visited Army Books remain usable after offline reload');
   }finally{
     await offlineContext.close();
   }

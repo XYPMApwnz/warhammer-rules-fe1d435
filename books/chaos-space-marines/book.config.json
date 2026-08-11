@@ -5,6 +5,9 @@
   "shortTitle": "Chaos Space Marines Rules",
   "edition": "11E",
   "factionKeyword": "HERETIC ASTARTES",
+  "coverImage": "assets/chaos-space-marines-cover-800.webp",
+  "entryCoverImage": "assets/chaos-space-marines-cover-480.webp",
+  "reviewEntry": true,
   "currentDatasheetsOnly": true,
   "generatedMobile": true,
   "mobileRelatedRulesSource": true,
@@ -15,7 +18,7 @@
   "legacyRelatedRuleAttributes": false,
   "detachmentQualifiedEnhancementPoints": true,
   "assetVersions": {
-    "book": 2,
+    "book": 3,
     "app": 4,
     "rosterFilter": 1,
     "rosterData": 1

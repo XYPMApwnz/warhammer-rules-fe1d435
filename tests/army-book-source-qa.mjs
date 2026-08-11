@@ -8,7 +8,7 @@ const books={
   'chaos-space-marines':{pages:102,detachments:9,updates:4,faqs:15,datasheets:54,imperialArmour:0,legends:53,units:107,enhancements:62,flagship:'Abaddon the Despoiler'},
   orks:{pages:87,detachments:7,updates:42,faqs:5,datasheets:57,imperialArmour:1,legends:30,units:88,enhancements:44,flagship:'Ghazghkull Thraka'},
   'emperors-children':{pages:10,detachments:4,updates:17,faqs:3,datasheets:23,imperialArmour:0,legends:0,units:23,enhancements:34,flagship:'Fulgrim'},
-  'space-marines':{pages:217,detachments:15,updates:5,faqs:14,datasheets:101,imperialArmour:0,legends:0,units:101,enhancements:87,flagship:'Intercessor Squad'},
+  'space-marines':{pages:219,detachments:16,updates:5,faqs:14,datasheets:101,imperialArmour:0,legends:0,units:101,enhancements:87,flagship:'Intercessor Squad'},
   'dark-angels':{pages:17,detachments:5,updates:4,faqs:1,datasheets:16,imperialArmour:0,legends:3,units:19,enhancements:26,flagship:"Lion El'Jonson"}
 };
 

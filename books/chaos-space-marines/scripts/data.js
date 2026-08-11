@@ -5255,5 +5255,13 @@ window.DG_TERMS={
     "full": "",
     "glossary": "glossary-chaos-space-marines-enhancement-warmasters-gift",
     "rule": "detachment-veterans-of-the-long-war"
+  },
+  "chaos-space-marines-army-rule-dark-pacts": {
+    "id": "chaos-space-marines-army-rule-dark-pacts",
+    "title": "Dark Pacts",
+    "summary": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]",
+    "full": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase: ■ [LETHAL HITS] ■ [SUSTAINED HITS 1]",
+    "glossary": "glossary-chaos-space-marines-army-rule-dark-pacts",
+    "rule": "army-rule-dark-pacts"
   }
 };

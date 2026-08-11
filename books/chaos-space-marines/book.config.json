@@ -6,6 +6,8 @@
   "edition": "11E",
   "factionKeyword": "HERETIC ASTARTES",
   "currentDatasheetsOnly": true,
+  "armyRules": ["Dark Pacts"],
+  "renderTransportRelations": true,
   "expected": {
     "matchedDetachments": 17,
     "factionPackDetachments": 9,

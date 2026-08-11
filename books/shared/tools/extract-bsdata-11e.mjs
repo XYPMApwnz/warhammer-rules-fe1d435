@@ -469,10 +469,15 @@ if(config.outputs.officialPoints){
       if(override.paidWargear)unit.paidWargear=override.paidWargear;
       if(override.leader?.length){
         const datasheet=parsed.find(item=>item.id===unit.id),text=`This model can be attached to the following units: ${override.leader.join(', ')}.`;
-        if(config.faction?.separateLeaderRelations&&datasheet)datasheet.relations.leader=override.leader;
-        const ability=datasheet?.abilities.find(item=>key(item.title)==='leader');
-        if(ability)ability.text=text;
-        else datasheet?.abilities.push({title:'Leader',text});
+        const separateLeaderRelation=config.faction?.separateLeaderRelations===true||(config.faction?.leaderRelationOverrides||[]).some(title=>key(title)===key(unit.title));
+        if(separateLeaderRelation&&datasheet){
+          datasheet.relations.leader=override.leader;
+          datasheet.abilities=datasheet.abilities.filter(item=>key(item.title)!=='leader'||relationTargets(item.text).length===0);
+        }else{
+          const ability=datasheet?.abilities.find(item=>key(item.title)==='leader');
+          if(ability)ability.text=text;
+          else datasheet?.abilities.push({title:'Leader',text});
+        }
       }
     }
     if(verifiedUnits.has(key(unit.title)))unit.pointsSource={label:`Official MFM ${official.version}`,url:official.url,verifiedAt:official.verifiedAt};

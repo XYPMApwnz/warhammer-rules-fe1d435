@@ -2734,7 +2734,7 @@
       "abilities": [
         {
           "title": "Leader",
-          "text": "This model can be attached to the following units: TRAITOR GUARDSMEN SQUAD."
+          "text": "This unit can be attached to the following unit:\n■ TRAITOR GUARDSMAN SQUAD"
         },
         {
           "title": "Brutal Example",
@@ -2793,7 +2793,9 @@
       ],
       "paidWargear": [],
       "relations": {
-        "leader": [],
+        "leader": [
+          "TRAITOR GUARDSMEN SQUAD"
+        ],
         "support": [],
         "attachedUnit": [],
         "transport": []
@@ -4059,10 +4061,6 @@
         {
           "title": "Dark Pacts",
           "text": "If your Army Faction is Heretic Astartes, each time a unit with this ability is selected to shoot or fight, it can make a Dark Pact. If it does, it must first take a Leadership test before any effects of the Dark Pact are resolved; if that test is failed, that unit suffers D3 mortal wounds. Then, select one of the following abilities for that unit’s weapons to gain until the end of the phase:\n■ [LETHAL HITS]\n■ [SUSTAINED HITS 1]"
-        },
-        {
-          "title": "Leader",
-          "text": "This model can be attached to the following units: CHOSEN, LEGIONARIES, RED CORSAIRS RAIDERS."
         }
       ],
       "keywords": [
@@ -4118,7 +4116,11 @@
       ],
       "paidWargear": [],
       "relations": {
-        "leader": [],
+        "leader": [
+          "CHOSEN",
+          "LEGIONARIES",
+          "RED CORSAIRS RAIDERS"
+        ],
         "support": [],
         "attachedUnit": [],
         "transport": []

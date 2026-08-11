@@ -44,6 +44,7 @@ const csmCodex=read('books/chaos-space-marines/content/chaos-space-marines-codex
 const csmPoints=read('books/chaos-space-marines/content/chaos-space-marines-points.en.json');
 const csmRelated=read('books/chaos-space-marines/content/chaos-space-marines-related-rules.en.json');
 const csmMfm=read('books/chaos-space-marines/sources/official-mfm-v1.2.json');
+const csmReader=fs.readFileSync(path.join(root,'books/chaos-space-marines/reader.html'),'utf8');
 expect(csmPack.meta?.version==='1.1'&&csmPack.meta?.sha256==='407DD6F175A7C27E0CB20BC95F68675AB0F9250883F08660CD2F16EF6D9F4998','chaos-space-marines: current official Faction Pack v1.1 provenance mismatch');
 expect(csmMfm.version==='v1.2'&&csmMfm.verifiedUnits?.length===54&&csmMfm.detachments?.length===17&&csmMfm.enhancements?.length===62,'chaos-space-marines: official MFM v1.2 capture inventory mismatch');
 expect(new Set(csmPoints.enhancements.map(item=>`${item.detachment}|${item.title}`)).size===62,'chaos-space-marines: detachment-qualified Enhancement identity collision');
@@ -52,6 +53,26 @@ const csmCurrentIds=new Set(csmCodex.datasheets.map(item=>item.id));
 const csmRelatedIds=[];
 (function collectUnitIds(value){if(Array.isArray(value))value.forEach(collectUnitIds);else if(value&&typeof value==='object')for(const [key,item] of Object.entries(value))key==='unitIds'&&Array.isArray(item)?csmRelatedIds.push(...item):collectUnitIds(item);})(csmRelated);
 expect(csmRelatedIds.every(id=>csmCurrentIds.has(id)),'chaos-space-marines: Compatible Rules reference a non-current Datasheet');
+const csmByTitle=new Map(csmCodex.datasheets.map(item=>[item.title,item]));
+expect(csmCodex.datasheets.some(unit=>unit.abilities?.some(item=>item.title==='Dark Pacts'&&item.text.includes('make a Dark Pact'))),'chaos-space-marines: frozen Datasheet evidence is missing Dark Pacts');
+expect(csmReader.includes('<section class="content-group" id="army-rule-dark-pacts"'),'chaos-space-marines: Dark Pacts is absent from the rendered Army Rules section');
+for(const [leader,targets] of [['Traitor Enforcer',['TRAITOR GUARDSMEN SQUAD']],['Masters of the Maelstrom',['CHOSEN','LEGIONARIES','RED CORSAIRS RAIDERS']]]){
+  const unit=csmByTitle.get(leader);
+  for(const target of targets){
+    expect(unit?.relations?.leader?.includes(target),`chaos-space-marines: ${leader} missing frozen Leader destination ${target}`);
+    const targetId=[...csmByTitle.values()].find(item=>item.title.toUpperCase()===target)?.id;
+    expect(targetId&&csmReader.includes(`data-journey-target="${targetId}"`),`chaos-space-marines: ${leader} Leader destination ${target} is not clickable`);
+  }
+}
+const csmDefiler=csmByTitle.get('Defiler');
+expect(csmDefiler?.abilities?.some(item=>item.title.startsWith('Damaged:')&&item.text.includes('1-6 wounds remaining')),'chaos-space-marines: Defiler Damaged rule is missing');
+const csmTransports=csmCodex.datasheets.filter(unit=>unit.relations?.transport?.length);
+expect(csmTransports.length===2&&csmReader.includes('<h4>Transport</h4>'),'chaos-space-marines: expected two rendered source-backed Transport relations');
+for(const [title,options] of [['Defiler',[['Heavy reaper autocannon',15],['Hades lascannon',15]]],['Forgefiend',[['Ectoplasma cannon',5]]]]){
+  const actual=(csmByTitle.get(title)?.paidWargear||[]).map(item=>[item.name,item.value]).sort(([a],[b])=>a.localeCompare(b));
+  expect(JSON.stringify(actual)===JSON.stringify([...options].sort(([a],[b])=>a.localeCompare(b))),`chaos-space-marines: ${title} paid options do not match MFM v1.2`);
+  for(const [name,value] of options)expect(csmReader.includes(`${name} · +${value} pts`),`chaos-space-marines: ${title} paid option ${name} is not rendered`);
+}
 
 const daConfig=read('books/dark-angels/book.config.json');
 const daPack=read(`books/dark-angels/${daConfig.sources.factionPack}`);

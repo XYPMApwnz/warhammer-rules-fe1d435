@@ -2,7 +2,11 @@
   "schema": 1,
   "faction": {
     "id": "chaos-space-marines",
-    "title": "Chaos Space Marines"
+    "title": "Chaos Space Marines",
+    "leaderRelationOverrides": [
+      "Traitor Enforcer",
+      "Masters of the Maelstrom"
+    ]
   },
   "source": {
     "repository": "https://github.com/BSData/wh40k-11e",

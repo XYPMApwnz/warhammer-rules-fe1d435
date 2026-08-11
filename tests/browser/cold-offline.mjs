@@ -203,6 +203,14 @@ try{
     }
     await page.reload();
     await page.locator('#unit-hellblaster-squad').waitFor({state:'visible'});
+    for(const [desktopTarget,phonePath] of [['start','/books/dark-angels/mobile/index.html'],['army-rules','/books/dark-angels/mobile/army-rules.html'],['unit-belial','/books/dark-angels/mobile/belial.html'],['unit-terminator-squad','/books/dark-angels/mobile/terminator-squad.html'],['unit-hellblaster-squad','/books/dark-angels/mobile/hellblaster-squad.html'],['detachment-wrath-of-the-rock','/books/dark-angels/mobile/wrath-of-the-rock.html'],['updates','/books/dark-angels/mobile/updates.html']]){
+      await page.goto(`${origin}/books/dark-angels/reader.html#${desktopTarget}`);
+      await Promise.all([page.waitForURL(url=>url.pathname===phonePath&&!url.hash),page.locator('[data-view-switch]').click()]);
+    }
+    await page.goto(`${origin}/books/dark-angels/mobile/belial.html`);
+    await page.locator('#navButton').click();
+    await Promise.all([page.waitForURL(url=>url.pathname==='/books/dark-angels/reader.html'&&url.hash==='#unit-belial',{waitUntil:'commit'}),page.locator('[data-view-switch]').click()]);
+    await page.locator('#unit-belial').waitFor({state:'visible'});
     assert.deepEqual(errors,[],'Dark Angels responsive preview emitted an uncaught runtime error');
   }finally{
     await previewContext.close();

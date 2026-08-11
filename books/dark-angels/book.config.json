@@ -10,7 +10,7 @@
   "generatedMobile": true,
   "assetVersions": {
     "book": 3,
-    "app": 3
+    "app": 4
   },
   "factionKeyword": "DARK ANGELS",
   "dependencies": ["space-marines"],

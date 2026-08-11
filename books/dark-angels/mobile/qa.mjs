@@ -13,8 +13,9 @@ assert.equal(new Set(routeIds).size,106);
 assert.equal(routes.length,109);
 assert.deepEqual(htmlFiles,routes.slice().sort(),'Phone routes contain missing or orphan HTML');
 for(const route of routes){const html=fs.readFileSync(path.join(root,route),'utf8');assert.match(html,/\.\/mobile\.js\?v=1/);assert.match(html,/\.\/phone-popup-controller\.js\?v=1/);assert.doesNotMatch(html,/reader\.html\?view=mobile/);assert.match(html,/data-view-switch/);}
-const start=fs.readFileSync(path.join(root,'index.html'),'utf8'),belial=fs.readFileSync(path.join(root,'belial.html'),'utf8'),knights=fs.readFileSync(path.join(root,'deathwing-knights.html'),'utf8');
-assert.match(fs.readFileSync(path.join(root,'../reader.html'),'utf8'),/\.\/scripts\/app\.js\?v=3/,'Dark Angels Desktop app version was not bumped for generated Phone routing');
+const start=fs.readFileSync(path.join(root,'index.html'),'utf8'),belial=fs.readFileSync(path.join(root,'belial.html'),'utf8'),knights=fs.readFileSync(path.join(root,'deathwing-knights.html'),'utf8'),desktopApp=fs.readFileSync(path.join(root,'../scripts/app.js'),'utf8');
+assert.match(fs.readFileSync(path.join(root,'../reader.html'),'utf8'),/\.\/scripts\/app\.js\?v=4/,'Dark Angels Desktop app version was not bumped for semantic Phone routing');
+assert.match(desktopApp,/hashId\.startsWith\('unit-'\)/);assert.match(desktopApp,/hashId\.startsWith\('detachment-'\)/);assert.match(desktopApp,/active==='army-rules'/);assert.match(desktopApp,/active==='updates'/);assert.doesNotMatch(desktopApp,/belial/i,'Desktop to Phone mapping must not special-case Belial');
 assert.match(start,/id="start"/);assert.match(start,/Source-limited preview/);assert.match(start,/faction-hero-cover/);assert.doesNotMatch(belial,/dark-angels-cover/);
 assert.match(fs.readFileSync(path.join(root,'army-rules.html'),'utf8'),/data-term="space-marines-army-rule-oath-of-moment"/);
 assert.equal(routes.filter(file=>['company-of-hunters.html','dark-age-arsenal.html','darkflight-pursuit.html','inner-circle-task-force.html','interrogation-conclave.html','lion-s-blade-task-force.html','unforgiven-task-force.html','wrath-of-the-rock.html'].includes(file)).length,8);

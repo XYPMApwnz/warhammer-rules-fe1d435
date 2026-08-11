@@ -31,6 +31,8 @@ def transparent_product_image(source, config):
         queue.extend((x, (height - 1) * width + x))
     for y in range(height):
         queue.extend((y * width, y * width + width - 1))
+    for x, y in config["processing"].get("backgroundSeeds", []):
+        queue.append(y * width + x)
     while queue:
         index = queue.popleft()
         if background[index] or not candidate[index]:

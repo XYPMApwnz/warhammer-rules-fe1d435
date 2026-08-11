@@ -63,7 +63,7 @@
         "imageUrl": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120116015_BelisariusCawl01.jpg",
         "originalFilename": "99120116015_BelisariusCawl01.jpg"
       },
-      "processing": { "crop": [470, 52, 874, 467], "minLuma": 238, "maxChroma": 28, "backgroundDistance": 20 },
+      "processing": { "crop": [470, 52, 874, 467], "backgroundSeeds": [[89, 36], [33, 346], [323, 387], [83, 401], [76, 255], [396, 20], [0, 220], [125, 276], [55, 271], [390, 215]], "minLuma": 238, "maxChroma": 28, "backgroundDistance": 20 },
       "presentation": {
         "mode": "background",
         "desktop": { "scale": 1.2, "x": "8%", "y": "0%", "opacity": 0.24 },

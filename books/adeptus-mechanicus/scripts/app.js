@@ -5,12 +5,6 @@
   let relatedRulesTemplate,compatibleRulesMatrix;
   const params=new URLSearchParams(location.search),rosterMode=params.has('roster');
 
-  function initCawlAbilityColumns(){
-    if(!matchMedia('(min-width:801px)').matches)return;
-    const card=document.getElementById('unit-belisarius-cawl'),arsenal=card?.querySelector(':scope > .ds-main-grid > .ds-arsenal'),continuation=card?.querySelector(':scope > .ds-abilities-continuation');
-    if(arsenal&&continuation)arsenal.append(continuation);
-  }
-
   async function getRelatedRulesTemplate(){
     if(!relatedRulesTemplate)relatedRulesTemplate=fetch('./mobile/related-rules.inc?v=4').then(response=>{if(!response.ok)throw new Error(`HTTP ${response.status}`);return response.text();}).then(html=>{const template=document.createElement('template');template.innerHTML=html;return template;}).catch(error=>{relatedRulesTemplate=null;throw error;});
     return relatedRulesTemplate;
@@ -91,7 +85,6 @@
   const terms=window.WH40K_GLOSSARY?.forBook('adeptus-mechanicus')||window.DG_TERMS,documentRoot=document.querySelector('.document');window.WHGlossaryAutolink?.apply(documentRoot,'adeptus-mechanicus');window.WHGlossaryAutolink?.validate(documentRoot,terms);
   decorateStratagemTurns(document);decorateStratagemTypes(document);
   const navigation=new window.DGNavigation(),fullEntry=new window.DGFullEntry(window.WH40K_GLOSSARY),popups=new window.DGPopups(terms,fullEntry),relatedRules=initRelatedRules(),journey=new window.DGJourney(navigation,popups,null,relatedRules);new window.DGTableAccessibility();new window.AMDoctrina();
-  requestAnimationFrame(()=>requestAnimationFrame(initCawlAbilityColumns));
   const rosterGuides=document.querySelector('[data-roster-guides]'),viewSwitch=document.querySelector('[data-view-switch]');if(rosterGuides)rosterGuides.hidden=!params.get('roster');
   viewSwitch?.addEventListener('click',()=>{const active=navigation.active;let route='index.html',anchor='start';for(let node=navigation.byId.get(active)?.node;node;node=node.parentElement?.closest('[data-nav-id]')){const id=node.dataset.navId;if(id==='start'){anchor=active;break;}if(id==='updates'){route='updates.html';anchor=active;break;}if(id==='core-rules'){route='army-rules.html';anchor=active;break;}if(id.startsWith('detachment-')){route=id.slice(11)+'.html';anchor=active;break;}if(id.startsWith('unit-')){route=id.slice(5)+'.html';anchor=active;break;}}const destination=new URL('./mobile/'+route,location.href);destination.search=params.toString();destination.hash=anchor;viewSwitch.href=destination.href;});
   window.DG_APP=Object.freeze({navigation,popups,fullEntry,journey,relatedRules});window.WHPageState?.installArmyBook(window.DG_APP);

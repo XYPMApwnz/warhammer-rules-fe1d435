@@ -89,7 +89,7 @@
 
     const list=direct(abilities,'.ability-list');
     if(list){
-      const layout={card,grid,arsenal,support,list,cards:Array.from(list.children).filter(node=>node.matches?.('.ability')),continuation:null,lastWidth:0};
+      const layout={card,grid,arsenal,support,list,cards:Array.from(list.children).filter(node=>node.matches?.('.ability')),continuation:null,continuationHost:card.dataset.abilityContinuation==='arsenal'?arsenal:null,lastWidth:0};
       layouts.push(layout);
       layoutByCard.set(card,layout);
     }
@@ -122,7 +122,8 @@
       layout.continuation=document.createElement('div');
       layout.continuation.className='ability-list ds-abilities-continuation';
     }
-    layout.grid.after(layout.continuation);
+    if(layout.continuationHost)layout.continuationHost.append(layout.continuation);
+    else layout.grid.after(layout.continuation);
     layout.cards.slice(split).forEach(node=>layout.continuation.append(node));
   }
 

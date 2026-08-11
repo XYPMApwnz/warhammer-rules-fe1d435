@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "verifiedAt": "2026-08-09",
+  "verifiedAt": "2026-08-11",
   "layers": [
     {
       "id": "faction-pack-v1.1",
@@ -98,12 +98,12 @@
       "title": "Munitorum Field Manual v1.2",
       "url": "https://mfm.warhammer-community.com/en/tau-empire",
       "version": "1.2",
-      "verifiedAt": "2026-08-09",
+      "verifiedAt": "2026-08-11",
       "localFile": "official-mfm-v1.2.json",
-      "retrievedAt": "2026-08-09",
-      "frozenAt": "2026-08-09",
+      "retrievedAt": "2026-08-11",
+      "frozenAt": "2026-08-11",
       "scope": [
-        "43 current units",
+        "43 live unit records (39 current Codex surface; 4 Imperial Armour / special scope)",
         "23 Enhancements",
         "7 Detachments"
       ],
@@ -124,7 +124,7 @@
         "points data",
         "roster views"
       ],
-      "sha256": "237BDC1824FF14114CDE1E80CC5B1E30AACF459145DA5BABEFB311ECDECE8AED",
+      "sha256": "491FA51845D931A84D32A11AF7274C4B3A0F7912D345A7F3F9067CC1C15C3534",
       "localPath": "books/tau-empire/sources/official-mfm-v1.2.json"
     }
   ],
@@ -138,7 +138,7 @@
   "publishAsComplete": false,
   "precedence": [
     "official-faction-pack-v1.1",
-    "official-mfm-v1.1",
+    "official-mfm-v1.2",
     "community-codex-transcription",
     "wahapedia-secondary-parity"
   ],

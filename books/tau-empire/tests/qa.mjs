@@ -173,6 +173,7 @@ for(const title of ['Tiger Shark','AX-1-0 Tiger Shark','Manta',"Ta'unar Supremac
 assert.doesNotMatch(JSON.stringify({codex,parity}),/bearer is select(?:[,.]|\s+and)|have the select ability|Monsteror|Vehicleunit|warrior s\b|fight ing\b/i);
 assert.match(parity.detachments.find(item=>item.id==='montka')?.enhancements.find(item=>item.id==='enhancement-strike-swiftly')?.text||'',/Scouts 6" ability/);
 assert.deepEqual(points.units.find(unit=>unit.title==='Pathfinder Team').paidWargear.map(item=>[item.name,item.value]),[['Ion rifle',5]]);
+assert.deepEqual(points.units.find(unit=>unit.title==='Tidewall Shieldline').paidWargear.map(item=>[item.name,item.value]),[['Tidewall Defence Platform',20]]);
 for(const [title,values] of [['Commander Farsight',[70]],['Devilfish',[75,85]],['Pathfinder Team',[85,100]],['Riptide Battlesuit',[190,220]],['Stormsurge',[375,400]]])assert.deepEqual(points.units.find(unit=>unit.title===title).points.map(item=>item.value),values,`${title}: MFM values differ`);
 
 for(const detachment of [...pack.detachments,...parity.detachments]){

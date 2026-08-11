@@ -14,8 +14,9 @@
       },
       "processing": { "minLuma": 238, "maxChroma": 28, "backgroundDistance": 20 },
       "presentation": {
-        "desktop": { "scale": 1.04, "x": "0%", "y": "1%" },
-        "phone": { "scale": 1.08, "x": "0%", "y": "2%" }
+        "mode": "background",
+        "desktop": { "scale": 1.5, "x": "-10%", "y": "3%", "opacity": 0.22 },
+        "phone": { "scale": 1.3, "x": "-8%", "y": "3%", "opacity": 0.19 }
       }
     },
     "unit-skitarii-rangers": {
@@ -31,8 +32,9 @@
       },
       "processing": { "minLuma": 185, "maxChroma": 20, "backgroundDistance": 20 },
       "presentation": {
-        "desktop": { "scale": 1.06, "x": "0%", "y": "2%" },
-        "phone": { "scale": 1.08, "x": "0%", "y": "3%" }
+        "mode": "background",
+        "desktop": { "scale": 1.35, "x": "-12%", "y": "0%", "opacity": 0.22 },
+        "phone": { "scale": 1.18, "x": "-10%", "y": "0%", "opacity": 0.18 }
       }
     },
     "unit-onager-dunecrawler": {
@@ -48,8 +50,9 @@
       },
       "processing": { "minLuma": 190, "maxChroma": 20, "backgroundDistance": 20 },
       "presentation": {
-        "desktop": { "scale": 1.07, "x": "0%", "y": "2%" },
-        "phone": { "scale": 1.1, "x": "0%", "y": "3%" }
+        "mode": "background",
+        "desktop": { "scale": 1.35, "x": "-10%", "y": "3%", "opacity": 0.23 },
+        "phone": { "scale": 1.18, "x": "-8%", "y": "4%", "opacity": 0.2 }
       }
     },
     "unit-belisarius-cawl": {

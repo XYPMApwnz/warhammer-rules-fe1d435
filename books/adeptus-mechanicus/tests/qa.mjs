@@ -23,6 +23,7 @@ const sharedDatasheetLayout=fs.readFileSync(path.resolve(root,'..','shared','dat
 const sharedDatasheetCss=fs.readFileSync(path.resolve(root,'..','shared','datasheet-system.css'),'utf8');
 const sharedPopupContent=fs.readFileSync(path.resolve(root,'..','shared','popup-content.js'),'utf8');
 const sharedGlossaryAutolink=fs.readFileSync(path.resolve(root,'..','shared','glossary-autolink.js'),'utf8');
+const serviceWorker=read('../../service-worker.js');
 const glossaryRegistryText=fs.readFileSync(path.resolve(root,'..','..','glossary','registry.en.json'),'utf8');
 const glossaryRegistry=JSON.parse(glossaryRegistryText);
 const glossaryBuildSource=fs.readFileSync(path.resolve(root,'..','..','glossary','tools','build-glossary.mjs'),'utf8');
@@ -243,6 +244,17 @@ check('known BSData spelling errors stay normalised',!html.includes(' mdel ')&&!
 check('Mechanicus glossary definitions preserve full rules text',glossaryRegistry.terms?.['adeptus-mechanicus-datasheet-data-spike']?.definition?.en?.length>300);
 check('no inline script or style',!/<style|<script(?![^>]*src=)/i.test(html));
 check('all stylesheet and script assets resolve',[...markup.matchAll(/(?:href|src)="([^"?#]+)"/g)].map(x=>x[1]).filter(file=>!file.endsWith('.pdf')&&!/^(?:https?:|data:)/.test(file)).every(file=>fs.existsSync(path.resolve(root,file))));
+
+const unitImageManifest=json('presentation/unit-images.json');
+const unitImageIds=['unit-thulia-ghuld','unit-skitarii-rangers','unit-onager-dunecrawler'];
+const unitImageEntries=Object.entries(unitImageManifest.units||{});
+const unitImagePages=['thulia-ghuld.html','skitarii-rangers.html','onager-dunecrawler.html'].map(file=>read(`mobile/${file}`));
+check('unit image proof-of-concept is opt-in for exactly three datasheets',JSON.stringify(unitImageEntries.map(([id])=>id).sort())===JSON.stringify([...unitImageIds].sort())&&(html.match(/<figure class="unit-art"/g)||[]).length===3&&unitImagePages.every(page=>page.includes('<figure class="unit-art"'))&&!read('mobile/belisarius-cawl.html').includes('<figure class="unit-art"'));
+check('unit image provenance is official and complete',unitImageEntries.every(([id,item])=>unitImageIds.includes(id)&&item.unitName&&item.source.productUrl.startsWith('https://www.warhammer.com/')&&item.source.imageUrl.startsWith('https://www.warhammer.com/app/resources/catalog/product/')&&item.source.originalFilename&&item.original.endsWith(item.source.originalFilename)));
+check('unit art remains decorative and layout-stable on Desktop and Phone',(html.match(/<figure class="unit-art" aria-hidden="true"/g)||[]).length===3&&(html.match(/<img src="\.\/assets\/unit-images\/[^"]+" width="920" height="950" alt=""/g)||[]).length===3&&unitImagePages.every(page=>/<img src="\.\.\/assets\/unit-images\/[^"]+" width="920" height="950" alt=""/.test(page)));
+check('processed unit art is cached while official originals stay out of the app shell',unitImageEntries.every(([,item])=>fs.existsSync(path.join(root,item.asset))&&fs.existsSync(path.join(root,item.original))&&serviceWorker.includes(`./books/adeptus-mechanicus/${item.asset}`)&&!serviceWorker.includes(`./books/adeptus-mechanicus/${item.original}`)));
+const unitImageBuild=spawnSync('C:\\Users\\denis\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe',[path.join(root,'tools','build-unit-images.py'),'--check'],{encoding:'utf8'});
+check('transparent unit image derivatives are current',unitImageBuild.status===0,(unitImageBuild.stderr||unitImageBuild.stdout).trim());
 
 const context={window:{},Object};vm.runInNewContext(read('scripts/data.js'),context);
 const terms=context.window.DG_TERMS||{};

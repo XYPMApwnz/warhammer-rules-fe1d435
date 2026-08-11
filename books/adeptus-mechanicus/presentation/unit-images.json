@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "units": {
+    "unit-thulia-ghuld": {
+      "unitName": "Thulia Ghuld",
+      "asset": "assets/unit-images/thulia-ghuld.webp",
+      "original": "sources/unit-images/99120116050_ThuliaGhuld1.jpg",
+      "width": 920,
+      "height": 950,
+      "source": {
+        "productUrl": "https://www.warhammer.com/en-GB/shop/adeptus-mechanicus-thulia-ghuld-2026",
+        "imageUrl": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120116050_ThuliaGhuld1.jpg",
+        "originalFilename": "99120116050_ThuliaGhuld1.jpg"
+      },
+      "processing": { "minLuma": 238, "maxChroma": 28, "backgroundDistance": 20 },
+      "presentation": {
+        "desktop": { "scale": 1.04, "x": "0%", "y": "1%" },
+        "phone": { "scale": 1.08, "x": "0%", "y": "2%" }
+      }
+    },
+    "unit-skitarii-rangers": {
+      "unitName": "Skitarii Rangers",
+      "asset": "assets/unit-images/skitarii-rangers.webp",
+      "original": "sources/unit-images/99120116002_SkitariiRangers01.jpg",
+      "width": 920,
+      "height": 950,
+      "source": {
+        "productUrl": "https://www.warhammer.com/en-GB/shop/Skitarii-Rangers-2017",
+        "imageUrl": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120116002_SkitariiRangers01.jpg",
+        "originalFilename": "99120116002_SkitariiRangers01.jpg"
+      },
+      "processing": { "minLuma": 185, "maxChroma": 20, "backgroundDistance": 20 },
+      "presentation": {
+        "desktop": { "scale": 1.06, "x": "0%", "y": "2%" },
+        "phone": { "scale": 1.08, "x": "0%", "y": "3%" }
+      }
+    },
+    "unit-onager-dunecrawler": {
+      "unitName": "Onager Dunecrawler",
+      "asset": "assets/unit-images/onager-dunecrawler.webp",
+      "original": "sources/unit-images/99120116004_AdMecOnagerDunecrawler01.jpg",
+      "width": 920,
+      "height": 950,
+      "source": {
+        "productUrl": "https://www.warhammer.com/en-GB/shop/Onager-Dunecrawler",
+        "imageUrl": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120116004_AdMecOnagerDunecrawler01.jpg",
+        "originalFilename": "99120116004_AdMecOnagerDunecrawler01.jpg"
+      },
+      "processing": { "minLuma": 190, "maxChroma": 20, "backgroundDistance": 20 },
+      "presentation": {
+        "desktop": { "scale": 1.07, "x": "0%", "y": "2%" },
+        "phone": { "scale": 1.1, "x": "0%", "y": "3%" }
+      }
+    }
+  }
+}

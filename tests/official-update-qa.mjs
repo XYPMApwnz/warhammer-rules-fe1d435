@@ -113,14 +113,16 @@ const glossaryContexts=Object.fromEntries(['death-guard','adeptus-mechanicus','t
 ]));
 
 const dgOfficialMarkers=[
-  ['dg-fp-1.0-p7-contagion-range-cap','Gift - Contagion Range:'],
-  ['dg-fp-1.0-p7-skullsquirm-blight','Gift - Skullsquirm Blight:'],
-  ['dg-fp-1.0-p7-beckoning-blight','Tallyband Summoners - Beckoning Blight:'],
-  ['dg-fp-1.0-p7-frame-keywords','Add FRAME to Chaos Land Raider'],
-  ['dg-fp-1.0-p7-typhus-eater-plague','Typhus - Eater Plague:'],
-  ['dg-fp-1.0-p7-predator-autocannon-strength','Chaos Predator Destructor - Predator autocannon:'],
-  ['dg-fp-1.0-p7-death-approaches','Deathshroud Terminators - Death Approaches:'],
-  ['dg-fp-1.0-p7-spore-laced-shock-waves-faq','Spore-laced Shock Waves ability does not inflict']
+  ['dg-fp-1.1-p7-contagion-range-cap','Gift - Contagion Range:'],
+  ['dg-fp-1.1-p7-skullsquirm-blight','Gift - Skullsquirm Blight:'],
+  ['dg-fp-1.1-p7-beckoning-blight','Tallyband Summoners - Beckoning Blight:'],
+  ['dg-fp-1.1-p7-frame-keywords','Add FRAME to Chaos Land Raider'],
+  ['dg-fp-1.1-p7-typhus-eater-plague','Typhus - Eater Plague:'],
+  ['dg-fp-1.1-p7-predator-autocannon-strength','Chaos Predator Destructor - Predator autocannon:'],
+  ['dg-fp-1.1-p7-death-approaches','Deathshroud Terminators - Death Approaches:'],
+  ['dg-fp-1.1-p7-worldblight','Virulent Vectorium - Worldblight:'],
+  ['dg-fp-1.1-p7-mortarion-lord-of-the-death-guard','Mortarion - Lord of the Death Guard:'],
+  ['dg-fp-1.1-p7-spore-laced-shock-waves-faq','Spore-laced Shock Waves ability does not inflict']
 ];
 
 const amOfficialMarkers=[

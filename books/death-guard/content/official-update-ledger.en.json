@@ -2,9 +2,9 @@
   "schema": 1,
   "updates": [
     {
-      "id": "dg-fp-1.0-p7-contagion-range-cap",
+      "id": "dg-fp-1.1-p7-contagion-range-cap",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.0",
+        "documentId": "death-guard-faction-pack-v1.1",
         "page": 7
       },
       "targets": [
@@ -21,9 +21,9 @@
       ]
     },
     {
-      "id": "dg-fp-1.0-p7-skullsquirm-blight",
+      "id": "dg-fp-1.1-p7-skullsquirm-blight",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.0",
+        "documentId": "death-guard-faction-pack-v1.1",
         "page": 7
       },
       "targets": [
@@ -40,9 +40,9 @@
       ]
     },
     {
-      "id": "dg-fp-1.0-p7-beckoning-blight",
+      "id": "dg-fp-1.1-p7-beckoning-blight",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.0",
+        "documentId": "death-guard-faction-pack-v1.1",
         "page": 7
       },
       "targets": [
@@ -59,9 +59,9 @@
       ]
     },
     {
-      "id": "dg-fp-1.0-p7-frame-keywords",
+      "id": "dg-fp-1.1-p7-frame-keywords",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.0",
+        "documentId": "death-guard-faction-pack-v1.1",
         "page": 7
       },
       "targets": [
@@ -208,9 +208,9 @@
       ]
     },
     {
-      "id": "dg-fp-1.0-p7-typhus-eater-plague",
+      "id": "dg-fp-1.1-p7-typhus-eater-plague",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.0",
+        "documentId": "death-guard-faction-pack-v1.1",
         "page": 7
       },
       "targets": [
@@ -228,9 +228,9 @@
       ]
     },
     {
-      "id": "dg-fp-1.0-p7-predator-autocannon-strength",
+      "id": "dg-fp-1.1-p7-predator-autocannon-strength",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.0",
+        "documentId": "death-guard-faction-pack-v1.1",
         "page": 7
       },
       "targets": [
@@ -248,9 +248,9 @@
       ]
     },
     {
-      "id": "dg-fp-1.0-p7-death-approaches",
+      "id": "dg-fp-1.1-p7-death-approaches",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.0",
+        "documentId": "death-guard-faction-pack-v1.1",
         "page": 7
       },
       "targets": [
@@ -268,9 +268,59 @@
       ]
     },
     {
-      "id": "dg-fp-1.0-p7-spore-laced-shock-waves-faq",
+      "id": "dg-fp-1.1-p7-worldblight",
       "source": {
-        "documentId": "death-guard-faction-pack-v1.0",
+        "documentId": "death-guard-faction-pack-v1.1",
+        "page": 7
+      },
+      "targets": [
+        {
+          "kind": "rule-replacement",
+          "owner": "rule-worldblight",
+          "title": "Worldblight",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "At the end of your Command phase, if a friendly DEATH GUARD unit is controlling an objective, that objective is secured. Until you lose control of that objective, while an enemy unit is within range of that objective, that enemy unit is Afflicted (pg 71).",
+          "unavailableReason": null,
+          "glossaryTermId": "death-guard-ability-worldblight"
+        }
+      ]
+    },
+    {
+      "id": "dg-fp-1.1-p7-mortarion-lord-of-the-death-guard",
+      "source": {
+        "documentId": "death-guard-faction-pack-v1.1",
+        "page": 7
+      },
+      "targets": [
+        {
+          "kind": "ability-replacement",
+          "unitId": "unit-mortarion",
+          "owner": "mortarion-ability-diseased-influence",
+          "title": "Diseased Influence",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "Just after an enemy unit ends a Normal, Advance or Fall Back move within 8\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\".",
+          "unavailableReason": null,
+          "glossaryTermId": "death-guard-ability-lord-of-the-death-guard-mortarion"
+        },
+        {
+          "kind": "ability-replacement",
+          "unitId": "unit-mortarion",
+          "owner": "mortarion-ability-inflamed-reprisal",
+          "title": "Inflamed Reprisal",
+          "field": "text",
+          "expectedBefore": null,
+          "effectiveAfter": "In your opponent’s Shooting phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. If it does, after the attacking unit has finished making its attacks, that DEATH GUARD unit can shoot as if it were your Shooting phase, but when resolving those attacks, worsen the BS characteristic of that attack by 1 and it can only target that enemy unit (and only if it is an eligible target).",
+          "unavailableReason": null,
+          "glossaryTermId": "death-guard-ability-lord-of-the-death-guard-mortarion"
+        }
+      ]
+    },
+    {
+      "id": "dg-fp-1.1-p7-spore-laced-shock-waves-faq",
+      "source": {
+        "documentId": "death-guard-faction-pack-v1.1",
         "page": 7
       },
       "targets": [

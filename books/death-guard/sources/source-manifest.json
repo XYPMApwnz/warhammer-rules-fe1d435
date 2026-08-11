@@ -1,0 +1,51 @@
+{
+  "schema": 1,
+  "bookId": "death-guard",
+  "verifiedAt": "2026-08-11",
+  "publicationStatus": "source-limited",
+  "sources": [
+    {
+      "id": "death-guard-faction-pack-v1.1",
+      "title": "Death Guard Faction Pack",
+      "authority": "official-primary",
+      "version": "v1.1",
+      "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_death_guard-333phejcfc-tvefnstlub.pdf",
+      "localPath": "sources/death-guard-faction-pack-v1.1.pdf",
+      "sha256": "39BE9FACB97AA6C467544FF6A01D32C4A17E24BAAAE07A79D49331B854C8FB8F",
+      "pages": 17,
+      "effectiveDate": "2026-07-22",
+      "retrievedAt": "2026-08-11",
+      "frozenAt": "2026-08-11",
+      "previousFrozenOfficialBinary": "absent"
+    },
+    {
+      "id": "death-guard-mfm-v1.2-capture-2026-08-11",
+      "title": "Munitorum Field Manual live capture",
+      "authority": "official-live-dated-capture",
+      "version": "v1.2",
+      "url": "https://mfm.warhammer-community.com/en/death-guard",
+      "localPath": "sources/official-mfm-v1.2.json",
+      "sourceUpdatedAt": "2026-07-22",
+      "capturedAt": "2026-08-11",
+      "captureSha256": "4D8662B9779691D14799F52894AD3D6940ED3CD5D2198736ECD294D3987F8A15"
+    },
+    {
+      "id": "death-guard-codex-transcription",
+      "title": "Pinned Codex transcription",
+      "authority": "community-secondary",
+      "frozenOfficial": false
+    }
+  ],
+  "currentScope": {
+    "units": 36,
+    "detachments": 9,
+    "enhancements": 30,
+    "legendsExcluded": 5,
+    "otherScope": 0,
+    "removedOrSuperseded": 0,
+    "unresolved": 0
+  },
+  "knownGaps": [
+    "No frozen authoritative official Codex source is present; Codex-derived rules remain community/secondary transcription."
+  ]
+}

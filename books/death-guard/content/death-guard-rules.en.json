@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "death-guard-11ed-v1.0-working",
+  "version": "death-guard-11ed-v1.1-working",
   "title": "Death Guard - 11th Edition Rules",
   "subtitle": "Technical placeholder.",
   "sections": [
@@ -138,7 +138,7 @@
               "id": "rule-worldblight",
               "termId": "detachment-rule-worldblight",
               "title": "Worldblight",
-              "text": "If you control an objective marker at the end of your Command phase and a DEATH GUARD unit from your army (excluding Battle-shocked units) is within range of that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase. In addition, until you lose control of that objective marker, it has the Nurgle’s Gift ability as if it were a DEATH GUARD model from your army."
+              "text": "At the end of your Command phase, if a friendly DEATH GUARD unit is controlling an objective, that objective is secured. Until you lose control of that objective, while an enemy unit is within range of that objective, that enemy unit is Afflicted (pg 71)."
             }
           ],
           "number": "2.1.1"
@@ -1433,7 +1433,7 @@
         },
         {
           "type": "p",
-          "text": "Rules source: Death Guard Faction Pack v1.0, p.2. Force Disposition and Detachment Points: Munitorum Field Manual v1.1, 22 July 2026."
+          "text": "Rules source: Death Guard Faction Pack v1.1, p.2. Force Disposition and Detachment Points: Munitorum Field Manual v1.2, 22 July 2026."
         }
       ],
       "subsections": [
@@ -1556,7 +1556,7 @@
         },
         {
           "type": "p",
-          "text": "Source: Death Guard Faction Pack v1.0, p.3."
+          "text": "Source: Death Guard Faction Pack v1.1, p.3."
         }
       ],
       "subsections": [
@@ -1678,7 +1678,7 @@
         },
         {
           "type": "p",
-          "text": "Source: Death Guard Faction Pack v1.0, p.4."
+          "text": "Source: Death Guard Faction Pack v1.1, p.4."
         }
       ],
       "subsections": [
@@ -1839,6 +1839,14 @@
         },
         {
           "type": "p",
+          "text": "Virulent Vectorium - Worldblight: At the end of your Command phase, if a friendly DEATH GUARD unit is controlling an objective, that objective is secured. Until you lose control of that objective, while an enemy unit is within range of that objective, that enemy unit is Afflicted (pg 71)."
+        },
+        {
+          "type": "p",
+          "text": "Mortarion - Lord of the Death Guard: Once per turn, this model can use one of the following abilities. Diseased Influence: Just after an enemy unit ends a Normal, Advance or Fall Back move within 8\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\". Boon of Death: In the Fight phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. Until the end of the phase, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6. On a 2+, do not remove it from play; it can fight after the attacking unit has finished its attacks, then it is removed from play. Inflamed Reprisal: In your opponent’s Shooting phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. If it does, after the attacking unit has finished making its attacks, that DEATH GUARD unit can shoot as if it were your Shooting phase, but when resolving those attacks, worsen the BS characteristic of that attack by 1 and it can only target that enemy unit (and only if it is an eligible target)."
+        },
+        {
+          "type": "p",
           "text": "FAQ: Plagueburst Crawler’s Spore-laced Shock Waves ability does not inflict mortal wounds every turn to units affected by the ability.",
           "id": "faq-spore-laced-shock-waves"
         }
@@ -1980,7 +1988,19 @@
               "id": "mortarion-ability-lord-of-the-death-guard",
               "termId": "ability-lord-of-the-death-guard-90db1c4",
               "title": "Lord of the Death Guard",
-              "text": "Once per turn, this model can use one of the following abilities. Diseased Influence: Just after an enemy unit ends a Normal, Advance or Fall Back move within 8\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\". Boon of Death: In the Fight phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. Until the end of the phase, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6. On a 2+, do not remove it from play; it can fight after the attacking unit has finished its attacks, then it is removed from play. Inflamed Reprisal: In your opponent’s Shooting phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. After the attacking unit has finished its attacks, that DEATH GUARD unit can shoot as if it were your Shooting phase, but only at that enemy unit and only if it is an eligible target; each time a model in that DEATH GUARD unit makes an attack during that shooting, worsen the BS characteristic of that attack by 1."
+              "text": "Once per turn, this model can use one of the following abilities. Diseased Influence: Just after an enemy unit ends a Normal, Advance or Fall Back move within 8\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\". Boon of Death: In the Fight phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. Until the end of the phase, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6. On a 2+, do not remove it from play; it can fight after the attacking unit has finished its attacks, then it is removed from play. Inflamed Reprisal: In your opponent’s Shooting phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. If it does, after the attacking unit has finished making its attacks, that DEATH GUARD unit can shoot as if it were your Shooting phase, but when resolving those attacks, worsen the BS characteristic of that attack by 1 and it can only target that enemy unit (and only if it is an eligible target).",
+              "choices": [
+                {
+                  "id": "mortarion-ability-diseased-influence",
+                  "title": "Diseased Influence",
+                  "text": "Just after an enemy unit ends a Normal, Advance or Fall Back move within 8\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\"."
+                },
+                {
+                  "id": "mortarion-ability-inflamed-reprisal",
+                  "title": "Inflamed Reprisal",
+                  "text": "In your opponent’s Shooting phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. If it does, after the attacking unit has finished making its attacks, that DEATH GUARD unit can shoot as if it were your Shooting phase, but when resolving those attacks, worsen the BS characteristic of that attack by 1 and it can only target that enemy unit (and only if it is an eligible target)."
+                }
+              ]
             },
             {
               "type": "ability",
@@ -6069,7 +6089,7 @@
             },
             {
               "type": "p",
-              "text": "Source: Death Guard Faction Pack v1.0, pp.5-6."
+              "text": "Source: Death Guard Faction Pack v1.1, pp.5-6."
             }
           ],
           "number": ""
@@ -8370,11 +8390,15 @@
       "blocks": [
         {
           "type": "p",
-          "text": "Death Guard Faction Pack v1.0. Legal for matched play from 20 June 2026."
+          "text": "Official rules overlay: Death Guard Faction Pack v1.1, legal 22 July 2026; frozen and verified 11 August 2026."
         },
         {
           "type": "p",
-          "text": "The Faction Pack supplements Codex: Death Guard. Faction Pack replacements have been applied to the affected rules and datasheets in this build."
+          "text": "Official points: Munitorum Field Manual v1.2 live source, updated 22 July 2026; dated repository capture verified 11 August 2026."
+        },
+        {
+          "type": "p",
+          "text": "Remaining authority gap: Codex-derived rules use the pinned community transcription because no frozen official Codex source is present in this repository."
         }
       ],
       "subsections": [],
@@ -8656,7 +8680,7 @@
       "group": "Detachments",
       "kind": "detachment",
       "short": "Take and Hold, 3DP.",
-      "full": "If you control an objective marker at the end of your Command phase and a DEATH GUARD unit from your army (excluding Battle-shocked units) is within range of that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase. In addition, until you lose control of that objective marker, it has the Nurgle’s Gift ability as if it were a DEATH GUARD model from your army.",
+      "full": "At the end of your Command phase, if a friendly DEATH GUARD unit is controlling an objective, that objective is secured. Until you lose control of that objective, while an enemy unit is within range of that objective, that enemy unit is Afflicted (pg 71).",
       "sectionId": "virulent-vectorium-rule"
     },
     {
@@ -8664,9 +8688,10 @@
       "title": "Worldblight",
       "group": "Detachments",
       "kind": "ability",
-      "short": "If you control an objective marker at the end of your Command phase and a DEATH GUARD unit from your army (excluding Battle-shocked units) is within range of that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
-      "full": "If you control an objective marker at the end of your Command phase and a DEATH GUARD unit from your army (excluding Battle-shocked units) is within range of that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase. In addition, until you lose control of that objective marker, it has the Nurgle’s Gift ability as if it were a DEATH GUARD model from your army.",
-      "sectionId": "virulent-vectorium-rule"
+      "short": "An objective controlled by a friendly DEATH GUARD unit is secured; while you retain it, nearby enemy units are Afflicted.",
+      "full": "At the end of your Command phase, if a friendly DEATH GUARD unit is controlling an objective, that objective is secured. Until you lose control of that objective, while an enemy unit is within range of that objective, that enemy unit is Afflicted (pg 71).",
+      "sectionId": "virulent-vectorium-rule",
+      "detail": "At the end of your Command phase, if a friendly DEATH GUARD unit is controlling an objective, that objective is secured. Until you lose control of that objective, while an enemy unit is within range of that objective, that enemy unit is Afflicted (pg 71)."
     },
     {
       "id": "daemon-weapon-of-nurgle",
@@ -12315,11 +12340,12 @@
       "kind": "ability",
       "showGlossary": false,
       "short": "Once per turn, choose one: a nearby unit can make a reactive 5\" Normal move; fight on death on a 2+; or shoot back after being attacked.",
-      "full": "Once per turn, this model can use one of the following abilities. Diseased Influence: Just after an enemy unit ends a Normal, Advance or Fall Back move within 8\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\". Boon of Death: In the Fight phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. Until the end of the phase, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6. On a 2+, do not remove it from play; it can fight after the attacking unit has finished its attacks, then it is removed from play. Inflamed Reprisal: In your opponent’s Shooting phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. After the attacking unit has finished its attacks, that DEATH GUARD unit can shoot as if it were your Shooting phase, but only at that enemy unit and only if it is an eligible target; each time a model in that DEATH GUARD unit makes an attack during that shooting, worsen the BS characteristic of that attack by 1.",
+      "full": "Once per turn, this model can use one of the following abilities. Diseased Influence: Just after an enemy unit ends a Normal, Advance or Fall Back move within 8\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\". Boon of Death: In the Fight phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. Until the end of the phase, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6. On a 2+, do not remove it from play; it can fight after the attacking unit has finished its attacks, then it is removed from play. Inflamed Reprisal: In your opponent’s Shooting phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. If it does, after the attacking unit has finished making its attacks, that DEATH GUARD unit can shoot as if it were your Shooting phase, but when resolving those attacks, worsen the BS characteristic of that attack by 1 and it can only target that enemy unit (and only if it is an eligible target).",
       "sectionId": "mortarion-ability-lord-of-the-death-guard",
       "unitIds": [
         "unit-mortarion"
-      ]
+      ],
+      "detail": "Once per turn, this model can use one of the following abilities. Diseased Influence: Just after an enemy unit ends a Normal, Advance or Fall Back move within 8\" of a friendly DEATH GUARD unit that is within 6\" of this model, if that DEATH GUARD unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 5\". Boon of Death: In the Fight phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. Until the end of the phase, each time a model in that unit is destroyed by a melee attack, if it has not fought this phase, roll one D6. On a 2+, do not remove it from play; it can fight after the attacking unit has finished its attacks, then it is removed from play. Inflamed Reprisal: In your opponent’s Shooting phase, when a friendly DEATH GUARD unit within 6\" of this model is selected as the target of an attack, this model can use this ability. If it does, after the attacking unit has finished making its attacks, that DEATH GUARD unit can shoot as if it were your Shooting phase, but when resolving those attacks, worsen the BS characteristic of that attack by 1 and it can only target that enemy unit (and only if it is an eligible target)."
     },
     {
       "id": "ability-host-of-plagues-2f9d0aa",
@@ -13849,9 +13875,10 @@
   "audit": {
     "detachments": 9,
     "datasheets": 36,
-    "currentFactionPack": "v1.0",
-    "officialFactionPackDate": "2026-06-20",
-    "currentMFM": "v1.1",
-    "glossary": 366
+    "currentFactionPack": "v1.1",
+    "officialFactionPackDate": "2026-07-22",
+    "currentMFM": "v1.2",
+    "glossary": 366,
+    "verifiedAt": "2026-08-11"
   }
 }

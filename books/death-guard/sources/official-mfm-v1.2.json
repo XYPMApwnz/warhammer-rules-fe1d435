@@ -1,0 +1,1134 @@
+{
+  "captureSha256": "4D8662B9779691D14799F52894AD3D6940ED3CD5D2198736ECD294D3987F8A15",
+  "schema": 1,
+  "title": "Death Guard Munitorum Field Manual dated capture",
+  "version": "v1.2",
+  "sourceUpdatedAt": "2026-07-22",
+  "capturedAt": "2026-08-11",
+  "url": "https://mfm.warhammer-community.com/en/death-guard",
+  "counts": {
+    "units": 36,
+    "detachments": 9,
+    "enhancements": 30,
+    "pricedOptions": 2,
+    "legends": 5
+  },
+  "units": [
+    {
+      "unitId": "unit-biologus-putrifier",
+      "title": "BIOLOGUS PUTRIFIER",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 60
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-blightlord-terminators",
+      "title": "BLIGHTLORD TERMINATORS",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "3 models",
+              "value": 115
+            },
+            {
+              "label": "5 models",
+              "value": 185
+            },
+            {
+              "label": "10 models",
+              "value": 370
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-chaos-land-raider",
+      "title": "CHAOS LAND RAIDER",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR 1ST TO 2ND UNITS COST",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 220
+            }
+          ]
+        },
+        {
+          "label": "YOUR 3RD + UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 240
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-chaos-predator-annihilator",
+      "title": "CHAOS PREDATOR ANNIHILATOR",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR 1ST TO 2ND UNITS COST",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 135
+            }
+          ]
+        },
+        {
+          "label": "YOUR 3RD + UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 145
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-chaos-predator-destructor",
+      "title": "CHAOS PREDATOR DESTRUCTOR",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR 1ST TO 2ND UNITS COST",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 145
+            }
+          ]
+        },
+        {
+          "label": "YOUR 3RD + UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 155
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-chaos-rhino",
+      "title": "CHAOS RHINO",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR 1ST TO 3RD UNITS COST",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 75
+            }
+          ]
+        },
+        {
+          "label": "YOUR 4TH + UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 85
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-chaos-spawn",
+      "title": "CHAOS SPAWN",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "2 models",
+              "value": 80
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-daemon-prince-of-nurgle",
+      "title": "DAEMON PRINCE OF NURGLE",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 195
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-daemon-prince-of-nurgle-with-wings",
+      "title": "DAEMON PRINCE OF NURGLE WITH WINGS",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 170
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-deathshroud-terminators",
+      "title": "DEATHSHROUD TERMINATORS",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR 1ST TO 2ND UNITS COST",
+          "values": [
+            {
+              "label": "3 models",
+              "value": 160
+            },
+            {
+              "label": "6 models",
+              "value": 305
+            }
+          ]
+        },
+        {
+          "label": "YOUR 3RD + UNIT COSTS",
+          "values": [
+            {
+              "label": "3 models",
+              "value": 170
+            },
+            {
+              "label": "6 models",
+              "value": 315
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-defiler",
+      "title": "DEFILER",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR 1ST UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 300
+            }
+          ]
+        },
+        {
+          "label": "YOUR 2ND + UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 340
+            }
+          ]
+        }
+      ],
+      "paidWargear": [
+        {
+          "label": "per Heavy reaper autocannon",
+          "value": 15
+        },
+        {
+          "label": "per Hades lascannon",
+          "value": 15
+        }
+      ]
+    },
+    {
+      "unitId": "unit-foetid-bloat-drone",
+      "title": "FOETID BLOAT-DRONE",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR 1ST TO 2ND UNITS COST",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 100
+            }
+          ]
+        },
+        {
+          "label": "YOUR 3RD + UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 110
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-foetid-bloat-drone-with-heavy-blight-launcher",
+      "title": "FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR 1ST TO 2ND UNITS COST",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 125
+            }
+          ]
+        },
+        {
+          "label": "YOUR 3RD + UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 135
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-foul-blightspawn",
+      "title": "FOUL BLIGHTSPAWN",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 65
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-helbrute",
+      "title": "HELBRUTE",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 110
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-icon-bearer",
+      "title": "ICON BEARER",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 45
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-lord-of-contagion",
+      "title": "LORD OF CONTAGION",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 120
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-lord-of-poxes",
+      "title": "LORD OF POXES",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 65
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-lord-of-virulence",
+      "title": "LORD OF VIRULENCE",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 100
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-malignant-plaguecaster",
+      "title": "MALIGNANT PLAGUECASTER",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 60
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-miasmic-malignifier",
+      "title": "MIASMIC MALIGNIFIER",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 105
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-mortarion",
+      "title": "MORTARION",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 390
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-myphitic-blight-hauler",
+      "title": "MYPHITIC BLIGHT-HAULERS",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 100
+            },
+            {
+              "label": "2 models",
+              "value": 200
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-noxious-blightbringer",
+      "title": "NOXIOUS BLIGHTBRINGER",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 60
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-plagueburst-crawler",
+      "title": "PLAGUEBURST CRAWLER",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR 1ST UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 185
+            }
+          ]
+        },
+        {
+          "label": "YOUR 2ND + UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 210
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-plague-marines",
+      "title": "PLAGUE MARINES",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "5 models",
+              "value": 90
+            },
+            {
+              "label": "7 models",
+              "value": 125
+            },
+            {
+              "label": "10 models",
+              "value": 180
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-plague-surgeon",
+      "title": "PLAGUE SURGEON",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 50
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-poxwalkers",
+      "title": "POXWALKERS",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "10 models",
+              "value": 65
+            },
+            {
+              "label": "20 models",
+              "value": 130
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-tallyman",
+      "title": "TALLYMAN",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 60
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-typhus",
+      "title": "TYPHUS",
+      "sourceGroup": "Death Guard",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 100
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-beasts-of-nurgle",
+      "title": "BEASTS OF NURGLE",
+      "sourceGroup": "Plague Legions",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 70
+            },
+            {
+              "label": "2 models",
+              "value": 140
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-great-unclean-one",
+      "title": "GREAT UNCLEAN ONE",
+      "sourceGroup": "Plague Legions",
+      "schedules": [
+        {
+          "label": "YOUR 1ST TO 2ND UNITS COST",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 265
+            }
+          ]
+        },
+        {
+          "label": "YOUR 3RD + UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 280
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-nurglings",
+      "title": "NURGLINGS",
+      "sourceGroup": "Plague Legions",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "3 models",
+              "value": 45
+            },
+            {
+              "label": "6 models",
+              "value": 90
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-plaguebearers",
+      "title": "PLAGUEBEARERS",
+      "sourceGroup": "Plague Legions",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "10 models",
+              "value": 115
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-plague-drones",
+      "title": "PLAGUE DRONES",
+      "sourceGroup": "Plague Legions",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "3 models",
+              "value": 110
+            },
+            {
+              "label": "6 models",
+              "value": 220
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "unitId": "unit-rotigus",
+      "title": "ROTIGUS",
+      "sourceGroup": "Plague Legions",
+      "schedules": [
+        {
+          "label": "YOUR UNIT COSTS",
+          "values": [
+            {
+              "label": "1 model",
+              "value": 280
+            }
+          ]
+        }
+      ],
+      "paidWargear": []
+    }
+  ],
+  "detachments": [
+    {
+      "disposition": "TAKE AND HOLD",
+      "dp": "2DP",
+      "enhancements": [
+        {
+          "title": "Cornucophagus",
+          "value": 35
+        },
+        {
+          "title": "Final Ingredient",
+          "value": 20
+        },
+        {
+          "title": "Needle of Nurgle",
+          "value": 25
+        },
+        {
+          "title": "Visions of Virulence",
+          "value": 15
+        }
+      ],
+      "tags": [
+        "UNIQUE: FLYBLOWN"
+      ],
+      "title": "CHAMPIONS OF CONTAGION"
+    },
+    {
+      "disposition": "RECONNAISSANCE",
+      "dp": "1DP",
+      "enhancements": [
+        {
+          "title": "Lancet of the Worldsore (Upgrade)",
+          "value": 15
+        },
+        {
+          "title": "Parasitic Woe‑reaper (Upgrade)",
+          "value": 15
+        }
+      ],
+      "tags": [
+        "UNIQUE: ENGINES"
+      ],
+      "title": "CONTAGION ENGINES"
+    },
+    {
+      "disposition": "PRIORITY ASSETS",
+      "dp": "2DP",
+      "enhancements": [
+        {
+          "title": "Face of Death",
+          "value": 10
+        },
+        {
+          "title": "Helm of The Fly King",
+          "value": 20
+        },
+        {
+          "title": "Vile Vigour",
+          "value": 15
+        },
+        {
+          "title": "Warprot Talisman",
+          "value": 30
+        }
+      ],
+      "tags": [],
+      "title": "DEATH LORD’S CHOSEN"
+    },
+    {
+      "disposition": "RECONNAISSANCE",
+      "dp": "1DP",
+      "enhancements": [
+        {
+          "title": "Insectile Murmuration (Upgrade)",
+          "value": 15
+        },
+        {
+          "title": "Plagueveil (Upgrade)",
+          "value": 15
+        }
+      ],
+      "tags": [
+        "UNIQUE: FLYBLOWN"
+      ],
+      "title": "FLYBLOWN HOST"
+    },
+    {
+      "disposition": "PURGE THE FOE",
+      "dp": "2DP",
+      "enhancements": [
+        {
+          "title": "Bilemaw Blight",
+          "value": 10
+        },
+        {
+          "title": "Eye of Affliction",
+          "value": 20
+        },
+        {
+          "title": "Shriekworm Familiar",
+          "value": 15
+        },
+        {
+          "title": "Tendrilous Emissions",
+          "value": 30
+        }
+      ],
+      "tags": [
+        "UNIQUE: ENGINES"
+      ],
+      "title": "MORTARION’S HAMMER"
+    },
+    {
+      "disposition": "PRIORITY ASSETS",
+      "dp": "1DP",
+      "enhancements": [
+        {
+          "title": "Host of the Hybridised Pox",
+          "value": 40
+        },
+        {
+          "title": "Rejuvenating Swarm",
+          "value": 20
+        }
+      ],
+      "tags": [],
+      "title": "PARAGONS OF PUTRESCENCE"
+    },
+    {
+      "disposition": "DISRUPTION",
+      "dp": "2DP",
+      "enhancements": [
+        {
+          "title": "Lord of the Walking Pox",
+          "value": 15
+        },
+        {
+          "title": "Sorrowsyphon",
+          "value": 10
+        },
+        {
+          "title": "Talisman of Burgeoning",
+          "value": 25
+        },
+        {
+          "title": "Witherbone Pipes",
+          "value": 25
+        }
+      ],
+      "tags": [],
+      "title": "SHAMBLEROT VECTORIUM"
+    },
+    {
+      "disposition": "DISRUPTION",
+      "dp": "2DP",
+      "enhancements": [
+        {
+          "title": "Beckoning Blight",
+          "value": 20
+        },
+        {
+          "title": "Entropic Knell",
+          "value": 15
+        },
+        {
+          "title": "Fell Harvester",
+          "value": 10
+        },
+        {
+          "title": "Tome of Bounteous Blessings",
+          "value": 20
+        }
+      ],
+      "tags": [],
+      "title": "TALLYBAND SUMMONERS"
+    },
+    {
+      "disposition": "TAKE AND HOLD",
+      "dp": "3DP",
+      "enhancements": [
+        {
+          "title": "Arch Contaminator",
+          "value": 25
+        },
+        {
+          "title": "Daemon Weapon of Nurgle",
+          "value": 10
+        },
+        {
+          "title": "Furnace of Plagues",
+          "value": 25
+        },
+        {
+          "title": "Revolting Regeneration",
+          "value": 30
+        }
+      ],
+      "tags": [],
+      "title": "VIRULENT VECTORIUM"
+    }
+  ],
+  "enhancements": [
+    {
+      "detachment": "CHAMPIONS OF CONTAGION",
+      "title": "Cornucophagus",
+      "value": 35
+    },
+    {
+      "detachment": "CHAMPIONS OF CONTAGION",
+      "title": "Final Ingredient",
+      "value": 20
+    },
+    {
+      "detachment": "CHAMPIONS OF CONTAGION",
+      "title": "Needle of Nurgle",
+      "value": 25
+    },
+    {
+      "detachment": "CHAMPIONS OF CONTAGION",
+      "title": "Visions of Virulence",
+      "value": 15
+    },
+    {
+      "detachment": "CONTAGION ENGINES",
+      "title": "Lancet of the Worldsore (Upgrade)",
+      "value": 15
+    },
+    {
+      "detachment": "CONTAGION ENGINES",
+      "title": "Parasitic Woe‑reaper (Upgrade)",
+      "value": 15
+    },
+    {
+      "detachment": "DEATH LORD’S CHOSEN",
+      "title": "Face of Death",
+      "value": 10
+    },
+    {
+      "detachment": "DEATH LORD’S CHOSEN",
+      "title": "Helm of The Fly King",
+      "value": 20
+    },
+    {
+      "detachment": "DEATH LORD’S CHOSEN",
+      "title": "Vile Vigour",
+      "value": 15
+    },
+    {
+      "detachment": "DEATH LORD’S CHOSEN",
+      "title": "Warprot Talisman",
+      "value": 30
+    },
+    {
+      "detachment": "FLYBLOWN HOST",
+      "title": "Insectile Murmuration (Upgrade)",
+      "value": 15
+    },
+    {
+      "detachment": "FLYBLOWN HOST",
+      "title": "Plagueveil (Upgrade)",
+      "value": 15
+    },
+    {
+      "detachment": "MORTARION’S HAMMER",
+      "title": "Bilemaw Blight",
+      "value": 10
+    },
+    {
+      "detachment": "MORTARION’S HAMMER",
+      "title": "Eye of Affliction",
+      "value": 20
+    },
+    {
+      "detachment": "MORTARION’S HAMMER",
+      "title": "Shriekworm Familiar",
+      "value": 15
+    },
+    {
+      "detachment": "MORTARION’S HAMMER",
+      "title": "Tendrilous Emissions",
+      "value": 30
+    },
+    {
+      "detachment": "PARAGONS OF PUTRESCENCE",
+      "title": "Host of the Hybridised Pox",
+      "value": 40
+    },
+    {
+      "detachment": "PARAGONS OF PUTRESCENCE",
+      "title": "Rejuvenating Swarm",
+      "value": 20
+    },
+    {
+      "detachment": "SHAMBLEROT VECTORIUM",
+      "title": "Lord of the Walking Pox",
+      "value": 15
+    },
+    {
+      "detachment": "SHAMBLEROT VECTORIUM",
+      "title": "Sorrowsyphon",
+      "value": 10
+    },
+    {
+      "detachment": "SHAMBLEROT VECTORIUM",
+      "title": "Talisman of Burgeoning",
+      "value": 25
+    },
+    {
+      "detachment": "SHAMBLEROT VECTORIUM",
+      "title": "Witherbone Pipes",
+      "value": 25
+    },
+    {
+      "detachment": "TALLYBAND SUMMONERS",
+      "title": "Beckoning Blight",
+      "value": 20
+    },
+    {
+      "detachment": "TALLYBAND SUMMONERS",
+      "title": "Entropic Knell",
+      "value": 15
+    },
+    {
+      "detachment": "TALLYBAND SUMMONERS",
+      "title": "Fell Harvester",
+      "value": 10
+    },
+    {
+      "detachment": "TALLYBAND SUMMONERS",
+      "title": "Tome of Bounteous Blessings",
+      "value": 20
+    },
+    {
+      "detachment": "VIRULENT VECTORIUM",
+      "title": "Arch Contaminator",
+      "value": 25
+    },
+    {
+      "detachment": "VIRULENT VECTORIUM",
+      "title": "Daemon Weapon of Nurgle",
+      "value": 10
+    },
+    {
+      "detachment": "VIRULENT VECTORIUM",
+      "title": "Furnace of Plagues",
+      "value": 25
+    },
+    {
+      "detachment": "VIRULENT VECTORIUM",
+      "title": "Revolting Regeneration",
+      "value": 30
+    }
+  ],
+  "legends": [
+    "DEATH GUARD CHAOS LORD",
+    "DEATH GUARD CHAOS LORD IN TERMINATOR ARMOUR",
+    "DEATH GUARD CULTISTS",
+    "DEATH GUARD POSSESSED",
+    "DEATH GUARD SORCERER IN TERMINATOR ARMOUR"
+  ]
+}

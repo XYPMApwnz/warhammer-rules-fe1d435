@@ -127,6 +127,10 @@ function coreAbilityText(text){
     .replace('Leader',termButton('core-leader','Leader'))
     .replace("Nurgle's Gift",termButton('nurgles-gift',"Nurgle's Gift"));
 }
+function renderUpdateSection(){
+  const section=book.sections.find(item=>item.id==='rules-updates');
+  return `<section class="content-group" id="rules-updates" data-track="rules-updates"><h3 class="category-title">${escapeHtml(section.title)}</h3><article class="rule-card surface">${section.blocks.map(block=>`<div class="content-block"><p${block.text.startsWith('FAQ:')?' id="faq-spore-laced-shock-waves" data-source-field="text"':''}>${escapeHtml(block.text)}</p></div>`).join('')}</article></section>`;
+}
 function renderPoints(points){return `<div class="points-panel surface"><div class="eyebrow">Points</div>${points.map(point=>`<div class="points-row"><span>${escapeHtml(point.label)}</span><strong>${point.value} pts</strong></div>`).join('')}</div>`;}
 function renderStatline(values){return `<div class="statline">${Object.entries(values).map(([label,value])=>`<div class="stat"><b>${label}</b><span>${escapeHtml(value)}</span></div>`).join('')}</div>`;}
 function renderWeaponGroup(unit,mode){
@@ -204,6 +208,7 @@ reader=reader.replace(/\sdata-eligibility="[^"]*"/g,'');
 reader=replaceOrInsert(reader,'li',legends.group.id,'pact-of-decay-datasheets',nav);
 reader=replaceOrInsert(reader,'section',legends.group.id,'pact-of-decay-datasheets',content);
 reader=replaceOrInsert(reader,'section','core-stratagems','detachments',renderCoreStratagemSection());
+reader=replaceOrInsert(reader,'section','rules-updates','rules-updates',renderUpdateSection());
 reader=reader.replace(/9 detachments · \d+ datasheets · 366 glossary entries/,`9 detachments · ${unitSections.length} datasheets · 366 glossary entries`);
 const moveWargearAbility=(unitSlug,abilityId)=>{
   const abilityRange=elementRange(reader,'article',abilityId);if(!abilityRange)throw new Error(`Missing ${abilityId}`);

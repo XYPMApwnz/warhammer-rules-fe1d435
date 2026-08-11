@@ -1,4 +1,52 @@
 window.DG_TERMS={
+  "orks-detachment-rule-jungle-know-wotz": {
+    "id": "orks-detachment-rule-jungle-know-wotz",
+    "title": "Jungle Know-Wotz",
+    "summary": "In the Declare Battle Formations step, select up to three friendly MOB/KOMMANDOS units. Those units have Scouts 6\" until the end of the battle.",
+    "full": "In the Declare Battle Formations step, select up to three friendly MOB/KOMMANDOS units. Those units have Scouts 6\" until the end of the battle.",
+    "glossary": "glossary-orks-detachment-rule-jungle-know-wotz",
+    "rule": "detachment-equatorial-hordes"
+  },
+  "orks-enhancement-kunnin-hunta": {
+    "id": "orks-enhancement-kunnin-hunta",
+    "title": "Kunnin’ Hunta",
+    "summary": "BEASTBOSS/INFANTRY WARBOSS model only. (Once per turn, per unit) In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is unengaged, this unit can make a normal move of up to D3+3\".",
+    "full": "BEASTBOSS/INFANTRY WARBOSS model only. (Once per turn, per unit) In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is unengaged, this unit can make a normal move of up to D3+3\".",
+    "glossary": "glossary-orks-enhancement-kunnin-hunta",
+    "rule": "detachment-equatorial-hordes"
+  },
+  "orks-enhancement-unkillable-scourge": {
+    "id": "orks-enhancement-unkillable-scourge",
+    "title": "Unkillable Scourge",
+    "summary": "BEASTBOSS/INFANTRY WARBOSS model only. When this model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to that roll if the Waaagh! is active for this unit: On a 3+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.",
+    "full": "BEASTBOSS/INFANTRY WARBOSS model only. When this model is destroyed, if this unit has not been selected to fight this phase, roll one D6, with +1 to that roll if the Waaagh! is active for this unit: On a 3+, do not remove this model from the battlefield. When this unit has fought, or at the end of the phase (whichever comes first), this model is removed from the battlefield.",
+    "glossary": "glossary-orks-enhancement-unkillable-scourge",
+    "rule": "detachment-equatorial-hordes"
+  },
+  "orks-stratagem-concealed-krumpin": {
+    "id": "orks-stratagem-concealed-krumpin",
+    "title": "Concealed Krumpin’",
+    "summary": "Your Shooting phase or the Fight phase, when a friendly hidden MOB unit is selected to attack. That MOB unit. Your unit’s attacks have [LETHAL HITS].",
+    "full": "Your Shooting phase or the Fight phase, when a friendly hidden MOB unit is selected to attack. That MOB unit. Your unit’s attacks have [LETHAL HITS].",
+    "glossary": "glossary-orks-stratagem-concealed-krumpin",
+    "rule": "detachment-equatorial-hordes"
+  },
+  "orks-stratagem-stragglerz": {
+    "id": "orks-stratagem-stragglerz",
+    "title": "Stragglerz",
+    "summary": "Your Command phase. One friendly MOB/KOMMANDOS unit. Your unit heals 2D3 wounds.",
+    "full": "Your Command phase. One friendly MOB/KOMMANDOS unit. Your unit heals 2D3 wounds.",
+    "glossary": "glossary-orks-stratagem-stragglerz",
+    "rule": "detachment-equatorial-hordes"
+  },
+  "orks-stratagem-deyre-over-ere": {
+    "id": "orks-stratagem-deyre-over-ere",
+    "title": "Dey’re Over ‘Ere",
+    "summary": "Start of your Shooting phase. One friendly MOB/KOMMANDOS unit. While a visible enemy unit is within 6\" of your unit, that unit has +3\" detection range.",
+    "full": "Start of your Shooting phase. One friendly MOB/KOMMANDOS unit. While a visible enemy unit is within 6\" of your unit, that unit has +3\" detection range.",
+    "glossary": "glossary-orks-stratagem-deyre-over-ere",
+    "rule": "detachment-equatorial-hordes"
+  },
   "orks-detachment-rule-thundering-wagons": {
     "id": "orks-detachment-rule-thundering-wagons",
     "title": "Thundering Wagons",
@@ -420,110 +468,6 @@ window.DG_TERMS={
     "datasheet": "unit-beast-snagga-boyz",
     "statline": "beast-snagga-boyz-profile"
   },
-  "orks-ability-blast": {
-    "id": "orks-ability-blast",
-    "title": "Blast",
-    "summary": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. *Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*",
-    "full": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. *Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*",
-    "glossary": "glossary-orks-ability-blast",
-    "rule": "unit-beast-snagga-boyz",
-    "units": [
-      "unit-beast-snagga-boyz",
-      "unit-boyz",
-      "unit-beastboss-on-squigosaur",
-      "unit-big-mek-in-mega-armour",
-      "unit-big-mek-with-shokk-attack-gun",
-      "unit-mek",
-      "unit-mozrog-skragbad",
-      "unit-burna-boyz",
-      "unit-kommandos",
-      "unit-lootas",
-      "unit-tankbustas",
-      "unit-hunta-rig",
-      "unit-kill-rig",
-      "unit-battlewagon",
-      "unit-biged-bossbunka",
-      "unit-burna-bommer",
-      "unit-deff-dread",
-      "unit-deffkoptas",
-      "unit-gorkanaut",
-      "unit-killa-kans",
-      "unit-megatrakk-scrapjet",
-      "unit-mek-gunz",
-      "unit-morkanaut",
-      "unit-rukkatrukk-squigbuggy",
-      "unit-shokkjump-dragsta",
-      "unit-stompa",
-      "unit-wazbom-blastajet",
-      "unit-gargantuan-squiggoth",
-      "unit-big-gunz",
-      "unit-big-mek-on-warbike",
-      "unit-big-trakk",
-      "unit-chinork-warkopta",
-      "unit-deff-rolla-battle-fortress",
-      "unit-deffkoptas-with-big-shootas",
-      "unit-fighta-bommer",
-      "unit-grot-bomm-launcha",
-      "unit-grot-mega-tank",
-      "unit-grot-tanks",
-      "unit-kannonwagon",
-      "unit-kill-krusha",
-      "unit-kill-tank",
-      "unit-lifta-wagon",
-      "unit-squiggoth",
-      "unit-warbuggies"
-    ],
-    "datasheet": "unit-beast-snagga-boyz",
-    "statline": "beast-snagga-boyz-profile"
-  },
-  "orks-ability-close-quarters": {
-    "id": "orks-ability-close-quarters",
-    "title": "Close-quarters",
-    "summary": "Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: - One or more of its [CLOSE-QUARTERS] weapons. - One or more of its other ranged weapons.",
-    "full": "Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: - One or more of its [CLOSE-QUARTERS] weapons. - One or more of its other ranged weapons.",
-    "glossary": "glossary-orks-ability-close-quarters",
-    "rule": "unit-beast-snagga-boyz",
-    "units": [
-      "unit-beast-snagga-boyz",
-      "unit-boyz",
-      "unit-beastboss-on-squigosaur",
-      "unit-bigboss",
-      "unit-gretchin",
-      "unit-kommandos",
-      "unit-nobz",
-      "unit-stormboyz",
-      "unit-deffkoptas",
-      "unit-squighog-boyz",
-      "unit-warbikers",
-      "unit-big-mek-on-warbike",
-      "unit-big-mek-with-kustom-force-field",
-      "unit-boss-zagstruk",
-      "unit-deffkoptas-with-big-shootas",
-      "unit-mad-dok-grotsnik",
-      "unit-nobz-on-warbikes"
-    ],
-    "datasheet": "unit-beast-snagga-boyz",
-    "statline": "beast-snagga-boyz-profile"
-  },
-  "orks-ability-feel-no-pain-6": {
-    "id": "orks-ability-feel-no-pain-6",
-    "title": "Feel No Pain 6+",
-    "summary": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
-    "full": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
-    "glossary": "glossary-orks-ability-feel-no-pain-6",
-    "rule": "unit-beast-snagga-boyz",
-    "units": [
-      "unit-beast-snagga-boyz",
-      "unit-beastboss",
-      "unit-wurrboy",
-      "unit-zodgrod-wortsnagga",
-      "unit-hunta-rig",
-      "unit-kill-rig",
-      "unit-boss-zagstruk"
-    ],
-    "datasheet": "unit-beast-snagga-boyz",
-    "statline": "beast-snagga-boyz-profile"
-  },
   "orks-ability-waaagh": {
     "id": "orks-ability-waaagh",
     "title": "Waaagh!",
@@ -589,37 +533,7 @@ window.DG_TERMS={
       "unit-warbikers",
       "unit-wartrakk",
       "unit-wazbom-blastajet",
-      "unit-gargantuan-squiggoth",
-      "unit-attack-fighta",
-      "unit-big-gunz",
-      "unit-big-mek-on-warbike",
-      "unit-big-mek-with-kustom-force-field",
-      "unit-big-trakk",
-      "unit-boss-zagstruk",
-      "unit-chinork-warkopta",
-      "unit-da-red-gobbo",
-      "unit-deff-rolla-battle-fortress",
-      "unit-deffkoptas-with-big-shootas",
-      "unit-fighta-bommer",
-      "unit-grot-bomm-launcha",
-      "unit-grot-mega-tank",
-      "unit-grot-tanks",
-      "unit-kannonwagon",
-      "unit-kaptin-badrukk",
-      "unit-kill-krusha",
-      "unit-kill-tank",
-      "unit-lifta-wagon",
-      "unit-mad-dok-grotsnik",
-      "unit-mega-dread",
-      "unit-meka-dread",
-      "unit-mekboy-workshop",
-      "unit-nobz-on-warbikes",
-      "unit-painboy-on-warbike",
-      "unit-skorchas",
-      "unit-squiggoth",
-      "unit-ufthak-blackhawk",
-      "unit-warboss-on-warbike",
-      "unit-warbuggies"
+      "unit-gargantuan-squiggoth"
     ],
     "datasheet": "unit-beast-snagga-boyz",
     "statline": "beast-snagga-boyz-profile"
@@ -678,8 +592,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-choppa",
     "rule": "unit-beast-snagga-boyz",
     "units": [
-      "unit-beast-snagga-boyz",
-      "unit-nobz-on-warbikes"
+      "unit-beast-snagga-boyz"
     ],
     "datasheet": "unit-beast-snagga-boyz",
     "statline": "beast-snagga-boyz-profile"
@@ -715,13 +628,7 @@ window.DG_TERMS={
       "unit-stormboyz",
       "unit-deffkoptas",
       "unit-squighog-boyz",
-      "unit-warbikers",
-      "unit-big-mek-on-warbike",
-      "unit-big-mek-with-kustom-force-field",
-      "unit-boss-zagstruk",
-      "unit-deffkoptas-with-big-shootas",
-      "unit-mad-dok-grotsnik",
-      "unit-nobz-on-warbikes"
+      "unit-warbikers"
     ],
     "datasheet": "unit-beast-snagga-boyz",
     "statline": "beast-snagga-boyz-profile"
@@ -735,131 +642,6 @@ window.DG_TERMS={
     "rule": "unit-boyz",
     "units": [
       "unit-boyz"
-    ],
-    "datasheet": "unit-boyz",
-    "statline": "boyz-profile"
-  },
-  "orks-ability-rapid-fire": {
-    "id": "orks-ability-rapid-fire",
-    "title": "Rapid Fire",
-    "summary": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. *Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range, you would gather one additional attack dice for that weapon (for a total of two for that weapon).*",
-    "full": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. *Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range, you would gather one additional attack dice for that weapon (for a total of two for that weapon).*",
-    "glossary": "glossary-orks-ability-rapid-fire",
-    "rule": "unit-boyz",
-    "units": [
-      "unit-boyz",
-      "unit-bannernob",
-      "unit-beastboss",
-      "unit-big-mek-in-mega-armour",
-      "unit-warboss",
-      "unit-warboss-in-mega-armour",
-      "unit-trukk",
-      "unit-ghazghkull-thraka",
-      "unit-burna-boyz",
-      "unit-kommandos",
-      "unit-lootas",
-      "unit-meganobz",
-      "unit-nobz",
-      "unit-battlewagon",
-      "unit-biged-bossbunka",
-      "unit-blitza-bommer",
-      "unit-boomdakka-snazzwagon",
-      "unit-burna-bommer",
-      "unit-dakkajet",
-      "unit-deff-dread",
-      "unit-gorkanaut",
-      "unit-killa-kans",
-      "unit-kustom-boosta-blasta",
-      "unit-megatrakk-scrapjet",
-      "unit-morkanaut",
-      "unit-stompa",
-      "unit-warbikers",
-      "unit-wartrakk",
-      "unit-wazbom-blastajet",
-      "unit-attack-fighta",
-      "unit-big-mek-on-warbike",
-      "unit-big-trakk",
-      "unit-chinork-warkopta",
-      "unit-deff-rolla-battle-fortress",
-      "unit-deffkoptas-with-big-shootas",
-      "unit-fighta-bommer",
-      "unit-grot-mega-tank",
-      "unit-grot-tanks",
-      "unit-kannonwagon",
-      "unit-kill-krusha",
-      "unit-kill-tank",
-      "unit-lifta-wagon",
-      "unit-nobz-on-warbikes",
-      "unit-painboy-on-warbike",
-      "unit-warboss-on-warbike",
-      "unit-warbuggies"
-    ],
-    "datasheet": "unit-boyz",
-    "statline": "boyz-profile"
-  },
-  "orks-ability-devastating-wounds": {
-    "id": "orks-ability-devastating-wounds",
-    "title": "Devastating Wounds",
-    "summary": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*",
-    "full": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*",
-    "glossary": "glossary-orks-ability-devastating-wounds",
-    "rule": "unit-boyz",
-    "units": [
-      "unit-boyz",
-      "unit-beastboss",
-      "unit-beastboss-on-squigosaur",
-      "unit-big-mek",
-      "unit-big-mek-in-mega-armour",
-      "unit-warboss",
-      "unit-ghazghkull-thraka",
-      "unit-mozrog-skragbad",
-      "unit-breaka-boyz",
-      "unit-meganobz",
-      "unit-nobz",
-      "unit-killa-kans",
-      "unit-mek-gunz",
-      "unit-shokkjump-dragsta",
-      "unit-big-gunz",
-      "unit-big-mek-on-warbike",
-      "unit-da-red-gobbo",
-      "unit-deff-rolla-battle-fortress",
-      "unit-grot-tanks",
-      "unit-ufthak-blackhawk"
-    ],
-    "datasheet": "unit-boyz",
-    "statline": "boyz-profile"
-  },
-  "orks-ability-anti": {
-    "id": "orks-ability-anti",
-    "title": "Anti",
-    "summary": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*",
-    "full": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*",
-    "glossary": "glossary-orks-ability-anti",
-    "rule": "unit-boyz",
-    "units": [
-      "unit-boyz",
-      "unit-beastboss",
-      "unit-beastboss-on-squigosaur",
-      "unit-big-mek",
-      "unit-big-mek-in-mega-armour",
-      "unit-painboss",
-      "unit-painboy",
-      "unit-warboss",
-      "unit-mozrog-skragbad",
-      "unit-zodgrod-wortsnagga",
-      "unit-breaka-boyz",
-      "unit-meganobz",
-      "unit-nobz",
-      "unit-tankbustas",
-      "unit-hunta-rig",
-      "unit-kill-rig",
-      "unit-battlewagon",
-      "unit-mek-gunz",
-      "unit-squighog-boyz",
-      "unit-big-mek-on-warbike",
-      "unit-lifta-wagon",
-      "unit-mad-dok-grotsnik",
-      "unit-painboy-on-warbike"
     ],
     "datasheet": "unit-boyz",
     "statline": "boyz-profile"
@@ -911,12 +693,7 @@ window.DG_TERMS={
       "unit-blitza-bommer",
       "unit-boomdakka-snazzwagon",
       "unit-deff-dread",
-      "unit-stompa",
-      "unit-big-trakk",
-      "unit-chinork-warkopta",
-      "unit-deff-rolla-battle-fortress",
-      "unit-kannonwagon",
-      "unit-lifta-wagon"
+      "unit-stompa"
     ],
     "datasheet": "unit-boyz",
     "statline": "boyz-profile"
@@ -953,12 +730,7 @@ window.DG_TERMS={
       "unit-deff-dread",
       "unit-gorkanaut",
       "unit-morkanaut",
-      "unit-shokkjump-dragsta",
-      "unit-big-mek-on-warbike",
-      "unit-chinork-warkopta",
-      "unit-deff-rolla-battle-fortress",
-      "unit-kill-krusha",
-      "unit-lifta-wagon"
+      "unit-shokkjump-dragsta"
     ],
     "datasheet": "unit-boyz",
     "statline": "boyz-profile"
@@ -973,8 +745,7 @@ window.DG_TERMS={
     "units": [
       "unit-boyz",
       "unit-nobz",
-      "unit-warbikers",
-      "unit-nobz-on-warbikes"
+      "unit-warbikers"
     ],
     "datasheet": "unit-boyz",
     "statline": "boyz-profile"
@@ -1036,9 +807,7 @@ window.DG_TERMS={
       "unit-meganobz",
       "unit-nobz",
       "unit-stormboyz",
-      "unit-warbikers",
-      "unit-nobz-on-warbikes",
-      "unit-painboy-on-warbike"
+      "unit-warbikers"
     ],
     "datasheet": "unit-boyz",
     "statline": "boyz-profile"
@@ -1055,8 +824,7 @@ window.DG_TERMS={
       "unit-big-mek-in-mega-armour",
       "unit-warboss",
       "unit-meganobz",
-      "unit-nobz",
-      "unit-big-mek-on-warbike"
+      "unit-nobz"
     ],
     "datasheet": "unit-boyz",
     "statline": "boyz-profile"
@@ -1067,32 +835,6 @@ window.DG_TERMS={
     "summary": "- This unit has a 5+ InSv. - While the Waaagh! is active for this unit, this unit has +1 T.",
     "full": "- This unit has a 5+ InSv. - While the Waaagh! is active for this unit, this unit has +1 T.",
     "glossary": "glossary-orks-ability-waaagh-banner",
-    "rule": "unit-bannernob",
-    "units": [
-      "unit-bannernob"
-    ],
-    "datasheet": "unit-bannernob",
-    "statline": "bannernob-profile"
-  },
-  "orks-ability-leader": {
-    "id": "orks-ability-leader",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: - BOYZ - BREAKA BOYZ - BURNA BOYZ - FLASH GITZ - LOOTAS - NOBZ - TANKBUSTAS",
-    "full": "This model can be attached to the following units: - BOYZ - BREAKA BOYZ - BURNA BOYZ - FLASH GITZ - LOOTAS - NOBZ - TANKBUSTAS",
-    "glossary": "glossary-orks-ability-leader",
-    "rule": "unit-bannernob",
-    "units": [
-      "unit-bannernob"
-    ],
-    "datasheet": "unit-bannernob",
-    "statline": "bannernob-profile"
-  },
-  "orks-ability-support": {
-    "id": "orks-ability-support",
-    "title": "Support",
-    "summary": "Support appears in the Orks reference.",
-    "full": "",
-    "glossary": "glossary-orks-ability-support",
     "rule": "unit-bannernob",
     "units": [
       "unit-bannernob"
@@ -1135,54 +877,6 @@ window.DG_TERMS={
     "rule": "unit-beastboss",
     "units": [
       "unit-beastboss"
-    ],
-    "datasheet": "unit-beastboss",
-    "statline": "beastboss-profile"
-  },
-  "orks-ability-leader-2": {
-    "id": "orks-ability-leader-2",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - Beast Snagga Boyz",
-    "full": "This model can be attached to the following unit: - Beast Snagga Boyz",
-    "glossary": "glossary-orks-ability-leader-2",
-    "rule": "unit-beastboss",
-    "units": [
-      "unit-beastboss",
-      "unit-wurrboy"
-    ],
-    "datasheet": "unit-beastboss",
-    "statline": "beastboss-profile"
-  },
-  "orks-ability-leader-3": {
-    "id": "orks-ability-leader-3",
-    "title": "Leader",
-    "summary": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit. Each time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-    "full": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit. Each time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-    "glossary": "glossary-orks-ability-leader-3",
-    "rule": "unit-beastboss",
-    "units": [
-      "unit-beastboss",
-      "unit-big-mek",
-      "unit-big-mek-with-shokk-attack-gun",
-      "unit-bigboss",
-      "unit-deffkilla-wartrike",
-      "unit-mek",
-      "unit-painboss",
-      "unit-warboss",
-      "unit-warboss-in-mega-armour",
-      "unit-weirdboy",
-      "unit-wurrboy",
-      "unit-ghazghkull-thraka",
-      "unit-mozrog-skragbad",
-      "unit-zodgrod-wortsnagga",
-      "unit-big-mek-on-warbike",
-      "unit-big-mek-with-kustom-force-field",
-      "unit-boss-zagstruk",
-      "unit-kaptin-badrukk",
-      "unit-mad-dok-grotsnik",
-      "unit-painboy-on-warbike",
-      "unit-ufthak-blackhawk",
-      "unit-warboss-on-warbike"
     ],
     "datasheet": "unit-beastboss",
     "statline": "beastboss-profile"
@@ -1253,49 +947,6 @@ window.DG_TERMS={
     "datasheet": "unit-beastboss-on-squigosaur",
     "statline": "beastboss-on-squigosaur-profile"
   },
-  "orks-ability-extra-attacks": {
-    "id": "orks-ability-extra-attacks",
-    "title": "Extra Attacks",
-    "summary": "Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select: - All of that model’s [EXTRA ATTACKS] weapons. - One of that model’s other melee weapons, if possible.",
-    "full": "Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select: - All of that model’s [EXTRA ATTACKS] weapons. - One of that model’s other melee weapons, if possible.",
-    "glossary": "glossary-orks-ability-extra-attacks",
-    "rule": "unit-beastboss-on-squigosaur",
-    "units": [
-      "unit-beastboss-on-squigosaur",
-      "unit-painboy",
-      "unit-warboss",
-      "unit-trukk",
-      "unit-mozrog-skragbad",
-      "unit-wazdakka-gutsmek",
-      "unit-hunta-rig",
-      "unit-kill-rig",
-      "unit-battlewagon",
-      "unit-squighog-boyz",
-      "unit-lifta-wagon",
-      "unit-mad-dok-grotsnik",
-      "unit-painboy-on-warbike",
-      "unit-ufthak-blackhawk"
-    ],
-    "datasheet": "unit-beastboss-on-squigosaur",
-    "statline": "beastboss-on-squigosaur-profile"
-  },
-  "orks-ability-feel-no-pain-5": {
-    "id": "orks-ability-feel-no-pain-5",
-    "title": "Feel No Pain 5+",
-    "summary": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
-    "full": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
-    "glossary": "glossary-orks-ability-feel-no-pain-5",
-    "rule": "unit-beastboss-on-squigosaur",
-    "units": [
-      "unit-beastboss-on-squigosaur",
-      "unit-painboss",
-      "unit-mozrog-skragbad",
-      "unit-squighog-boyz",
-      "unit-mad-dok-grotsnik"
-    ],
-    "datasheet": "unit-beastboss-on-squigosaur",
-    "statline": "beastboss-on-squigosaur-profile"
-  },
   "orks-weapon-squigosaurs-jaws": {
     "id": "orks-weapon-squigosaurs-jaws",
     "title": "Squigosaur’s jaws",
@@ -1319,9 +970,7 @@ window.DG_TERMS={
     "units": [
       "unit-big-mek",
       "unit-big-mek-in-mega-armour",
-      "unit-big-mek-with-shokk-attack-gun",
-      "unit-big-mek-on-warbike",
-      "unit-big-mek-with-kustom-force-field"
+      "unit-big-mek-with-shokk-attack-gun"
     ],
     "datasheet": "unit-big-mek",
     "statline": "big-mek-profile"
@@ -1335,54 +984,6 @@ window.DG_TERMS={
     "rule": "unit-big-mek",
     "units": [
       "unit-big-mek"
-    ],
-    "datasheet": "unit-big-mek",
-    "statline": "big-mek-profile"
-  },
-  "orks-ability-leader-4": {
-    "id": "orks-ability-leader-4",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: - BOYZ - BREAKA BOYZ - LOOTAS - MEK GUNZ - NOBZ - TANKBUSTAS",
-    "full": "This model can be attached to the following units: - BOYZ - BREAKA BOYZ - LOOTAS - MEK GUNZ - NOBZ - TANKBUSTAS",
-    "glossary": "glossary-orks-ability-leader-4",
-    "rule": "unit-big-mek",
-    "units": [
-      "unit-big-mek",
-      "unit-big-mek-with-shokk-attack-gun"
-    ],
-    "datasheet": "unit-big-mek",
-    "statline": "big-mek-profile"
-  },
-  "orks-ability-hazardous": {
-    "id": "orks-ability-hazardous",
-    "title": "Hazardous",
-    "summary": "Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.",
-    "full": "Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.",
-    "glossary": "glossary-orks-ability-hazardous",
-    "rule": "unit-big-mek",
-    "units": [
-      "unit-big-mek",
-      "unit-big-mek-in-mega-armour",
-      "unit-mek",
-      "unit-weirdboy",
-      "unit-wurrboy",
-      "unit-breaka-boyz",
-      "unit-burna-boyz",
-      "unit-lootas",
-      "unit-kill-rig",
-      "unit-deff-dread",
-      "unit-deffkoptas",
-      "unit-mek-gunz",
-      "unit-morkanaut",
-      "unit-shokkjump-dragsta",
-      "unit-wazbom-blastajet",
-      "unit-big-mek-on-warbike",
-      "unit-chinork-warkopta",
-      "unit-deffkoptas-with-big-shootas",
-      "unit-grot-mega-tank",
-      "unit-grot-tanks",
-      "unit-kaptin-badrukk",
-      "unit-ufthak-blackhawk"
     ],
     "datasheet": "unit-big-mek",
     "statline": "big-mek-profile"
@@ -1441,10 +1042,7 @@ window.DG_TERMS={
       "unit-lootas",
       "unit-deff-dread",
       "unit-deffkoptas",
-      "unit-morkanaut",
-      "unit-big-mek-on-warbike",
-      "unit-chinork-warkopta",
-      "unit-deffkoptas-with-big-shootas"
+      "unit-morkanaut"
     ],
     "datasheet": "unit-big-mek",
     "statline": "big-mek-profile"
@@ -1470,8 +1068,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-ability-kustom-force-field",
     "rule": "unit-big-mek-in-mega-armour",
     "units": [
-      "unit-big-mek-in-mega-armour",
-      "unit-big-mek-on-warbike"
+      "unit-big-mek-in-mega-armour"
     ],
     "datasheet": "unit-big-mek-in-mega-armour",
     "statline": "big-mek-in-mega-armour-profile"
@@ -1510,10 +1107,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-killsaw",
     "rule": "unit-big-mek-in-mega-armour",
     "units": [
-      "unit-big-mek-in-mega-armour",
-      "unit-big-mek-on-warbike",
-      "unit-deffkoptas-with-big-shootas",
-      "unit-warboss-on-warbike"
+      "unit-big-mek-in-mega-armour"
     ],
     "datasheet": "unit-big-mek-in-mega-armour",
     "statline": "big-mek-in-mega-armour-profile"
@@ -1544,26 +1138,6 @@ window.DG_TERMS={
     "datasheet": "unit-big-mek-with-shokk-attack-gun",
     "statline": "big-mek-with-shokk-attack-gun-profile"
   },
-  "orks-ability-heavy": {
-    "id": "orks-ability-heavy",
-    "title": "Heavy",
-    "summary": "In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit: - That unit is unengaged. - That unit was not set up on the battlefield this turn. - No model in that unit has moved more than 3\" this turn.",
-    "full": "In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit: - That unit is unengaged. - That unit was not set up on the battlefield this turn. - No model in that unit has moved more than 3\" this turn.",
-    "glossary": "glossary-orks-ability-heavy",
-    "rule": "unit-big-mek-with-shokk-attack-gun",
-    "units": [
-      "unit-big-mek-with-shokk-attack-gun",
-      "unit-flash-gitz",
-      "unit-lootas",
-      "unit-big-mek-dakkarig",
-      "unit-big-gunz",
-      "unit-big-mek-on-warbike",
-      "unit-kaptin-badrukk",
-      "unit-kill-krusha"
-    ],
-    "datasheet": "unit-big-mek-with-shokk-attack-gun",
-    "statline": "big-mek-with-shokk-attack-gun-profile"
-  },
   "orks-weapon-close-combat-weapon-3": {
     "id": "orks-weapon-close-combat-weapon-3",
     "title": "Close combat weapon",
@@ -1572,8 +1146,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-close-combat-weapon-3",
     "rule": "unit-big-mek-with-shokk-attack-gun",
     "units": [
-      "unit-big-mek-with-shokk-attack-gun",
-      "unit-big-mek-on-warbike"
+      "unit-big-mek-with-shokk-attack-gun"
     ],
     "datasheet": "unit-big-mek-with-shokk-attack-gun",
     "statline": "big-mek-with-shokk-attack-gun-profile"
@@ -1586,8 +1159,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-shokk-attack-gun",
     "rule": "unit-big-mek-with-shokk-attack-gun",
     "units": [
-      "unit-big-mek-with-shokk-attack-gun",
-      "unit-big-mek-on-warbike"
+      "unit-big-mek-with-shokk-attack-gun"
     ],
     "datasheet": "unit-big-mek-with-shokk-attack-gun",
     "statline": "big-mek-with-shokk-attack-gun-profile"
@@ -1605,20 +1177,6 @@ window.DG_TERMS={
     "datasheet": "unit-bigboss",
     "statline": "bigboss-profile"
   },
-  "orks-ability-leader-5": {
-    "id": "orks-ability-leader-5",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: - BOYZ - BREAKA BOYZ - NOBZ",
-    "full": "This model can be attached to the following units: - BOYZ - BREAKA BOYZ - NOBZ",
-    "glossary": "glossary-orks-ability-leader-5",
-    "rule": "unit-bigboss",
-    "units": [
-      "unit-bigboss",
-      "unit-warboss"
-    ],
-    "datasheet": "unit-bigboss",
-    "statline": "bigboss-profile"
-  },
   "orks-ability-breakin-heads": {
     "id": "orks-ability-breakin-heads",
     "title": "Breakin’ Heads",
@@ -1628,46 +1186,6 @@ window.DG_TERMS={
     "rule": "unit-bigboss",
     "units": [
       "unit-bigboss"
-    ],
-    "datasheet": "unit-bigboss",
-    "statline": "bigboss-profile"
-  },
-  "orks-ability-cleave": {
-    "id": "orks-ability-cleave",
-    "title": "Cleave",
-    "summary": "This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). *Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).*",
-    "full": "This ability always takes the form [CLEAVE X]. Each time you gather attack dice for a [CLEAVE] weapon, if you only selected one target for all of that weapon’s attacks, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). *Example: If a [CLEAVE 1] weapon with an A characteristic of 3 targets one unit containing 16 models, you would gather three additional attack dice for that weapon (for a total of six for that weapon).*",
-    "glossary": "glossary-orks-ability-cleave",
-    "rule": "unit-bigboss",
-    "units": [
-      "unit-bigboss",
-      "unit-warboss"
-    ],
-    "datasheet": "unit-bigboss",
-    "statline": "bigboss-profile"
-  },
-  "orks-ability-sustained-hits": {
-    "id": "orks-ability-sustained-hits",
-    "title": "Sustained Hits",
-    "summary": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X. *Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).",
-    "full": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X. *Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).",
-    "glossary": "glossary-orks-ability-sustained-hits",
-    "rule": "unit-bigboss",
-    "units": [
-      "unit-bigboss",
-      "unit-wazdakka-gutsmek",
-      "unit-flash-gitz",
-      "unit-big-mek-dakkarig",
-      "unit-biged-bossbunka",
-      "unit-blitza-bommer",
-      "unit-boomdakka-snazzwagon",
-      "unit-burna-bommer",
-      "unit-dakkajet",
-      "unit-stompa",
-      "unit-wazbom-blastajet",
-      "unit-kaptin-badrukk",
-      "unit-kill-tank",
-      "unit-mad-dok-grotsnik"
     ],
     "datasheet": "unit-bigboss",
     "statline": "bigboss-profile"
@@ -1693,8 +1211,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-ability-speedboss",
     "rule": "unit-deffkilla-wartrike",
     "units": [
-      "unit-deffkilla-wartrike",
-      "unit-warboss-on-warbike"
+      "unit-deffkilla-wartrike"
     ],
     "datasheet": "unit-deffkilla-wartrike",
     "statline": "deffkilla-wartrike-profile"
@@ -1708,137 +1225,6 @@ window.DG_TERMS={
     "rule": "unit-deffkilla-wartrike",
     "units": [
       "unit-deffkilla-wartrike"
-    ],
-    "datasheet": "unit-deffkilla-wartrike",
-    "statline": "deffkilla-wartrike-profile"
-  },
-  "orks-ability-leader-6": {
-    "id": "orks-ability-leader-6",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - NOBZ ON WARBIKES - SKORCHAS - WARBIKERS - WARBUGGIES",
-    "full": "This model can be attached to the following unit: - NOBZ ON WARBIKES - SKORCHAS - WARBIKERS - WARBUGGIES",
-    "glossary": "glossary-orks-ability-leader-6",
-    "rule": "unit-deffkilla-wartrike",
-    "units": [
-      "unit-deffkilla-wartrike",
-      "unit-big-mek-on-warbike",
-      "unit-painboy-on-warbike"
-    ],
-    "datasheet": "unit-deffkilla-wartrike",
-    "statline": "deffkilla-wartrike-profile"
-  },
-  "orks-ability-assault": {
-    "id": "orks-ability-assault",
-    "title": "Assault",
-    "summary": "Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).",
-    "full": "Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).",
-    "glossary": "glossary-orks-ability-assault",
-    "rule": "unit-deffkilla-wartrike",
-    "units": [
-      "unit-deffkilla-wartrike",
-      "unit-wazdakka-gutsmek",
-      "unit-boomdakka-snazzwagon",
-      "unit-kustom-boosta-blasta",
-      "unit-rukkatrukk-squigbuggy",
-      "unit-squighog-boyz",
-      "unit-warbikers",
-      "unit-big-mek-on-warbike",
-      "unit-nobz-on-warbikes",
-      "unit-painboy-on-warbike",
-      "unit-warboss-on-warbike"
-    ],
-    "datasheet": "unit-deffkilla-wartrike",
-    "statline": "deffkilla-wartrike-profile"
-  },
-  "orks-ability-torrent": {
-    "id": "orks-ability-torrent",
-    "title": "Torrent",
-    "summary": "Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.",
-    "full": "Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.",
-    "glossary": "glossary-orks-ability-torrent",
-    "rule": "unit-deffkilla-wartrike",
-    "units": [
-      "unit-deffkilla-wartrike",
-      "unit-burna-boyz",
-      "unit-kommandos",
-      "unit-kill-rig",
-      "unit-deff-dread",
-      "unit-gorkanaut",
-      "unit-killa-kans",
-      "unit-kustom-boosta-blasta",
-      "unit-stompa",
-      "unit-chinork-warkopta",
-      "unit-deff-rolla-battle-fortress",
-      "unit-grot-mega-tank",
-      "unit-grot-tanks",
-      "unit-kill-krusha",
-      "unit-kill-tank",
-      "unit-mega-dread",
-      "unit-skorchas"
-    ],
-    "datasheet": "unit-deffkilla-wartrike",
-    "statline": "deffkilla-wartrike-profile"
-  },
-  "orks-ability-melta": {
-    "id": "orks-ability-melta",
-    "title": "Melta",
-    "summary": "This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic. *Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.",
-    "full": "This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic. *Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.",
-    "glossary": "glossary-orks-ability-melta",
-    "rule": "unit-deffkilla-wartrike",
-    "units": [
-      "unit-deffkilla-wartrike"
-    ],
-    "datasheet": "unit-deffkilla-wartrike",
-    "statline": "deffkilla-wartrike-profile"
-  },
-  "orks-ability-ignores-cover": {
-    "id": "orks-ability-ignores-cover",
-    "title": "Ignores Cover",
-    "summary": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).",
-    "full": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).",
-    "glossary": "glossary-orks-ability-ignores-cover",
-    "rule": "unit-deffkilla-wartrike",
-    "units": [
-      "unit-deffkilla-wartrike",
-      "unit-burna-boyz",
-      "unit-kommandos",
-      "unit-burna-bommer",
-      "unit-deff-dread",
-      "unit-gorkanaut",
-      "unit-killa-kans",
-      "unit-kustom-boosta-blasta",
-      "unit-rukkatrukk-squigbuggy",
-      "unit-stompa",
-      "unit-chinork-warkopta",
-      "unit-deff-rolla-battle-fortress",
-      "unit-grot-mega-tank",
-      "unit-grot-tanks",
-      "unit-kill-krusha",
-      "unit-kill-tank",
-      "unit-skorchas"
-    ],
-    "datasheet": "unit-deffkilla-wartrike",
-    "statline": "deffkilla-wartrike-profile"
-  },
-  "orks-ability-deadly-demise-1": {
-    "id": "orks-ability-deadly-demise-1",
-    "title": "Deadly Demise 1",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-orks-ability-deadly-demise-1",
-    "rule": "unit-deffkilla-wartrike",
-    "units": [
-      "unit-deffkilla-wartrike",
-      "unit-boomdakka-snazzwagon",
-      "unit-deff-dread",
-      "unit-killa-kans",
-      "unit-kustom-boosta-blasta",
-      "unit-megatrakk-scrapjet",
-      "unit-rukkatrukk-squigbuggy",
-      "unit-shokkjump-dragsta",
-      "unit-grot-tanks",
-      "unit-mekboy-workshop"
     ],
     "datasheet": "unit-deffkilla-wartrike",
     "statline": "deffkilla-wartrike-profile"
@@ -1916,21 +1302,6 @@ window.DG_TERMS={
     "glossary": "glossary-orks-ability-mekaniak",
     "rule": "unit-mek",
     "units": [
-      "unit-mek",
-      "unit-big-mek-on-warbike",
-      "unit-meka-dread"
-    ],
-    "datasheet": "unit-mek",
-    "statline": "mek-profile"
-  },
-  "orks-ability-leader-7": {
-    "id": "orks-ability-leader-7",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: - BOYZ - LOOTAS - MEK GUNZ - NOBZ - TANKBUSTAS",
-    "full": "This model can be attached to the following units: - BOYZ - LOOTAS - MEK GUNZ - NOBZ - TANKBUSTAS",
-    "glossary": "glossary-orks-ability-leader-7",
-    "rule": "unit-mek",
-    "units": [
       "unit-mek"
     ],
     "datasheet": "unit-mek",
@@ -1970,8 +1341,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-kustom-mega-slugga",
     "rule": "unit-mek",
     "units": [
-      "unit-mek",
-      "unit-big-mek-on-warbike"
+      "unit-mek"
     ],
     "datasheet": "unit-mek",
     "statline": "mek-profile"
@@ -1985,8 +1355,7 @@ window.DG_TERMS={
     "rule": "unit-painboss",
     "units": [
       "unit-painboss",
-      "unit-painboy",
-      "unit-painboy-on-warbike"
+      "unit-painboy"
     ],
     "datasheet": "unit-painboss",
     "statline": "painboss-profile"
@@ -1997,19 +1366,6 @@ window.DG_TERMS={
     "summary": "At the end of your Movement phase, select one friendly BEAST SNAGGA CHARACTER model within 3\" of this model. That model is healed and regains up to 3 lost wounds. Each model can only be healed once per turn",
     "full": "At the end of your Movement phase, select one friendly BEAST SNAGGA CHARACTER model within 3\" of this model. That model is healed and regains up to 3 lost wounds. Each model can only be healed once per turn",
     "glossary": "glossary-orks-ability-sawbonez",
-    "rule": "unit-painboss",
-    "units": [
-      "unit-painboss"
-    ],
-    "datasheet": "unit-painboss",
-    "statline": "painboss-profile"
-  },
-  "orks-ability-leader-8": {
-    "id": "orks-ability-leader-8",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - BEAST SNAGGA BOYZ",
-    "full": "This model can be attached to the following unit: - BEAST SNAGGA BOYZ",
-    "glossary": "glossary-orks-ability-leader-8",
     "rule": "unit-painboss",
     "units": [
       "unit-painboss"
@@ -2052,53 +1408,6 @@ window.DG_TERMS={
     "glossary": "glossary-orks-ability-hold-still-and-say-aargh",
     "rule": "unit-painboy",
     "units": [
-      "unit-painboy",
-      "unit-painboy-on-warbike"
-    ],
-    "datasheet": "unit-painboy",
-    "statline": "painboy-profile"
-  },
-  "orks-ability-leader-9": {
-    "id": "orks-ability-leader-9",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: - BOYZ - BREAKA BOYZ - BURNA BOYZ - LOOTAS - NOBZ - TANKBUSTAS",
-    "full": "This model can be attached to the following units: - BOYZ - BREAKA BOYZ - BURNA BOYZ - LOOTAS - NOBZ - TANKBUSTAS",
-    "glossary": "glossary-orks-ability-leader-9",
-    "rule": "unit-painboy",
-    "units": [
-      "unit-painboy"
-    ],
-    "datasheet": "unit-painboy",
-    "statline": "painboy-profile"
-  },
-  "orks-ability-precision": {
-    "id": "orks-ability-precision",
-    "title": "Precision",
-    "summary": "While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.",
-    "full": "While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.",
-    "glossary": "glossary-orks-ability-precision",
-    "rule": "unit-painboy",
-    "units": [
-      "unit-painboy",
-      "unit-weirdboy",
-      "unit-boss-snikrot",
-      "unit-wazdakka-gutsmek",
-      "unit-shokkjump-dragsta",
-      "unit-mad-dok-grotsnik",
-      "unit-painboy-on-warbike",
-      "unit-ufthak-blackhawk"
-    ],
-    "datasheet": "unit-painboy",
-    "statline": "painboy-profile"
-  },
-  "orks-ability-support-2": {
-    "id": "orks-ability-support-2",
-    "title": "Support",
-    "summary": "Support appears in the Orks reference.",
-    "full": "",
-    "glossary": "glossary-orks-ability-support-2",
-    "rule": "unit-painboy",
-    "units": [
       "unit-painboy"
     ],
     "datasheet": "unit-painboy",
@@ -2112,9 +1421,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-urty-syringe",
     "rule": "unit-painboy",
     "units": [
-      "unit-painboy",
-      "unit-mad-dok-grotsnik",
-      "unit-painboy-on-warbike"
+      "unit-painboy"
     ],
     "datasheet": "unit-painboy",
     "statline": "painboy-profile"
@@ -2142,68 +1449,6 @@ window.DG_TERMS={
     "rule": "unit-warboss",
     "units": [
       "unit-warboss"
-    ],
-    "datasheet": "unit-warboss",
-    "statline": "warboss-profile"
-  },
-  "orks-ability-pistol": {
-    "id": "orks-ability-pistol",
-    "title": "Pistol",
-    "summary": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: - One or more of its [CLOSE-QUARTERS] weapons. - One or more of its other ranged weapons.",
-    "full": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: - One or more of its [CLOSE-QUARTERS] weapons. - One or more of its other ranged weapons.",
-    "glossary": "glossary-orks-ability-pistol",
-    "rule": "unit-warboss",
-    "units": [
-      "unit-warboss",
-      "unit-boss-snikrot",
-      "unit-zodgrod-wortsnagga",
-      "unit-breaka-boyz",
-      "unit-gretchin",
-      "unit-tankbustas",
-      "unit-boomdakka-snazzwagon",
-      "unit-kustom-boosta-blasta",
-      "unit-da-red-gobbo",
-      "unit-kaptin-badrukk"
-    ],
-    "datasheet": "unit-warboss",
-    "statline": "warboss-profile"
-  },
-  "orks-ability-twin-linked": {
-    "id": "orks-ability-twin-linked",
-    "title": "Twin-linked",
-    "summary": "Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.",
-    "full": "Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.",
-    "glossary": "glossary-orks-ability-twin-linked",
-    "rule": "unit-warboss",
-    "units": [
-      "unit-warboss",
-      "unit-boss-snikrot",
-      "unit-breaka-boyz",
-      "unit-meganobz",
-      "unit-blitza-bommer",
-      "unit-burna-bommer",
-      "unit-dakkajet",
-      "unit-deffkoptas",
-      "unit-gorkanaut",
-      "unit-kustom-boosta-blasta",
-      "unit-megatrakk-scrapjet",
-      "unit-morkanaut",
-      "unit-stompa",
-      "unit-warbikers",
-      "unit-wazbom-blastajet",
-      "unit-attack-fighta",
-      "unit-big-mek-on-warbike",
-      "unit-deff-rolla-battle-fortress",
-      "unit-deffkoptas-with-big-shootas",
-      "unit-fighta-bommer",
-      "unit-grot-mega-tank",
-      "unit-kill-krusha",
-      "unit-kill-tank",
-      "unit-mega-dread",
-      "unit-nobz-on-warbikes",
-      "unit-painboy-on-warbike",
-      "unit-warboss-on-warbike",
-      "unit-warbuggies"
     ],
     "datasheet": "unit-warboss",
     "statline": "warboss-profile"
@@ -2242,8 +1487,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-big-choppa-2",
     "rule": "unit-warboss",
     "units": [
-      "unit-warboss",
-      "unit-warboss-on-warbike"
+      "unit-warboss"
     ],
     "datasheet": "unit-warboss",
     "statline": "warboss-profile"
@@ -2256,8 +1500,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-power-klaw-3",
     "rule": "unit-warboss",
     "units": [
-      "unit-warboss",
-      "unit-warboss-on-warbike"
+      "unit-warboss"
     ],
     "datasheet": "unit-warboss",
     "statline": "warboss-profile"
@@ -2281,19 +1524,6 @@ window.DG_TERMS={
     "summary": "While the Waaagh! is active for your army, this model’s ’uge choppa has a Damage characteristic of 3.",
     "full": "While the Waaagh! is active for your army, this model’s ’uge choppa has a Damage characteristic of 3.",
     "glossary": "glossary-orks-ability-dead-brutal",
-    "rule": "unit-warboss-in-mega-armour",
-    "units": [
-      "unit-warboss-in-mega-armour"
-    ],
-    "datasheet": "unit-warboss-in-mega-armour",
-    "statline": "warboss-in-mega-armour-profile"
-  },
-  "orks-ability-leader-10": {
-    "id": "orks-ability-leader-10",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - Meganobz",
-    "full": "This model can be attached to the following unit: - Meganobz",
-    "glossary": "glossary-orks-ability-leader-10",
     "rule": "unit-warboss-in-mega-armour",
     "units": [
       "unit-warboss-in-mega-armour"
@@ -2353,59 +1583,6 @@ window.DG_TERMS={
     "datasheet": "unit-weirdboy",
     "statline": "weirdboy-profile"
   },
-  "orks-ability-leader-11": {
-    "id": "orks-ability-leader-11",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - BOYZ - BREAKA BOYZ",
-    "full": "This model can be attached to the following unit: - BOYZ - BREAKA BOYZ",
-    "glossary": "glossary-orks-ability-leader-11",
-    "rule": "unit-weirdboy",
-    "units": [
-      "unit-weirdboy"
-    ],
-    "datasheet": "unit-weirdboy",
-    "statline": "weirdboy-profile"
-  },
-  "orks-ability-psychic": {
-    "id": "orks-ability-psychic",
-    "title": "Psychic",
-    "summary": "Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).",
-    "full": "Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).",
-    "glossary": "glossary-orks-ability-psychic",
-    "rule": "unit-weirdboy",
-    "units": [
-      "unit-weirdboy",
-      "unit-wurrboy"
-    ],
-    "datasheet": "unit-weirdboy",
-    "statline": "weirdboy-profile"
-  },
-  "orks-ability-deadly-demise-d3": {
-    "id": "orks-ability-deadly-demise-d3",
-    "title": "Deadly Demise D3",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-orks-ability-deadly-demise-d3",
-    "rule": "unit-weirdboy",
-    "units": [
-      "unit-weirdboy",
-      "unit-wurrboy",
-      "unit-trukk",
-      "unit-wazdakka-gutsmek",
-      "unit-biged-bossbunka",
-      "unit-blitza-bommer",
-      "unit-burna-bommer",
-      "unit-dakkajet",
-      "unit-wazbom-blastajet",
-      "unit-attack-fighta",
-      "unit-big-trakk",
-      "unit-chinork-warkopta",
-      "unit-fighta-bommer",
-      "unit-grot-mega-tank"
-    ],
-    "datasheet": "unit-weirdboy",
-    "statline": "weirdboy-profile"
-  },
   "orks-weapon-weirdboy-staff": {
     "id": "orks-weapon-weirdboy-staff",
     "title": "Weirdboy staff",
@@ -2435,8 +1612,8 @@ window.DG_TERMS={
   "orks-ability-roar-of-mork-psychic": {
     "id": "orks-ability-roar-of-mork-psychic",
     "title": "Roar of Mork (Psychic)",
-    "summary": "In your opponent’s Command phase, you can select one enemy unit within 18\" of and visible to this Psyker and roll one D6: on a 1, this Psyker’s unit suffers D3 mortal wounds; on a 2+, until the start of your opponent’s next Command phase, that enemy unit is confrazzled. While a unit is confrazzled, each time a Battle-shock or Leadership test is taken for it, subtract 2 from that test.",
-    "full": "In your opponent’s Command phase, you can select one enemy unit within 18\" of and visible to this Psyker and roll one D6: on a 1, this Psyker’s unit suffers D3 mortal wounds; on a 2+, until the start of your opponent’s next Command phase, that enemy unit is confrazzled. While a unit is confrazzled, each time a Battle-shock or Leadership test is taken for it, subtract 2 from that test.",
+    "summary": "In your opponent’s Command phase, you can select one enemy unit within 18\" of and visible to this Psyker and roll one D6: on a 1, this Psyker ’s unit suffers D3 mortal wounds; on a 2+, until the start of your opponent’s next Command phase, that enemy unit is confrazzled. While a unit is confrazzled, each time a Battle-shock or Leadership test is taken for it, subtract 2 from that test.",
+    "full": "In your opponent’s Command phase, you can select one enemy unit within 18\" of and visible to this Psyker and roll one D6: on a 1, this Psyker ’s unit suffers D3 mortal wounds; on a 2+, until the start of your opponent’s next Command phase, that enemy unit is confrazzled. While a unit is confrazzled, each time a Battle-shock or Leadership test is taken for it, subtract 2 from that test.",
     "glossary": "glossary-orks-ability-roar-of-mork-psychic",
     "rule": "unit-wurrboy",
     "units": [
@@ -2481,8 +1658,7 @@ window.DG_TERMS={
     "units": [
       "unit-wurrboy",
       "unit-nobz",
-      "unit-tankbustas",
-      "unit-nobz-on-warbikes"
+      "unit-tankbustas"
     ],
     "datasheet": "unit-wurrboy",
     "statline": "wurrboy-profile"
@@ -2500,22 +1676,6 @@ window.DG_TERMS={
     "datasheet": "unit-trukk",
     "statline": "trukk-profile"
   },
-  "orks-ability-firing-deck-12": {
-    "id": "orks-ability-firing-deck-12",
-    "title": "Firing Deck 12",
-    "summary": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "full": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "glossary": "glossary-orks-ability-firing-deck-12",
-    "rule": "unit-trukk",
-    "units": [
-      "unit-trukk",
-      "unit-big-trakk",
-      "unit-chinork-warkopta",
-      "unit-kill-krusha"
-    ],
-    "datasheet": "unit-trukk",
-    "statline": "trukk-profile"
-  },
   "orks-weapon-wreckin-ball": {
     "id": "orks-weapon-wreckin-ball",
     "title": "Wreckin' ball",
@@ -2525,8 +1685,7 @@ window.DG_TERMS={
     "rule": "unit-trukk",
     "units": [
       "unit-trukk",
-      "unit-battlewagon",
-      "unit-lifta-wagon"
+      "unit-battlewagon"
     ],
     "datasheet": "unit-trukk",
     "statline": "trukk-profile"
@@ -2539,8 +1698,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-spiked-wheel",
     "rule": "unit-trukk",
     "units": [
-      "unit-trukk",
-      "unit-warbuggies"
+      "unit-trukk"
     ],
     "datasheet": "unit-trukk",
     "statline": "trukk-profile"
@@ -2571,48 +1729,6 @@ window.DG_TERMS={
     "datasheet": "unit-boss-snikrot",
     "statline": "boss-snikrot-profile"
   },
-  "orks-ability-infiltrators": {
-    "id": "orks-ability-infiltrators",
-    "title": "Infiltrators",
-    "summary": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
-    "full": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
-    "glossary": "glossary-orks-ability-infiltrators",
-    "rule": "unit-boss-snikrot",
-    "units": [
-      "unit-boss-snikrot",
-      "unit-kommandos"
-    ],
-    "datasheet": "unit-boss-snikrot",
-    "statline": "boss-snikrot-profile"
-  },
-  "orks-ability-stealth": {
-    "id": "orks-ability-stealth",
-    "title": "Stealth",
-    "summary": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
-    "full": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
-    "glossary": "glossary-orks-ability-stealth",
-    "rule": "unit-boss-snikrot",
-    "units": [
-      "unit-boss-snikrot",
-      "unit-kommandos"
-    ],
-    "datasheet": "unit-boss-snikrot",
-    "statline": "boss-snikrot-profile"
-  },
-  "orks-ability-lone-operative": {
-    "id": "orks-ability-lone-operative",
-    "title": "Lone Operative",
-    "summary": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
-    "full": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
-    "glossary": "glossary-orks-ability-lone-operative",
-    "rule": "unit-boss-snikrot",
-    "units": [
-      "unit-boss-snikrot",
-      "unit-wazdakka-gutsmek"
-    ],
-    "datasheet": "unit-boss-snikrot",
-    "statline": "boss-snikrot-profile"
-  },
   "orks-weapon-morks-teeth": {
     "id": "orks-weapon-morks-teeth",
     "title": "Mork’s Teeth",
@@ -2634,8 +1750,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-slugga-3",
     "rule": "unit-boss-snikrot",
     "units": [
-      "unit-boss-snikrot",
-      "unit-kaptin-badrukk"
+      "unit-boss-snikrot"
     ],
     "datasheet": "unit-boss-snikrot",
     "statline": "boss-snikrot-profile"
@@ -2679,19 +1794,6 @@ window.DG_TERMS={
     "datasheet": "unit-ghazghkull-thraka",
     "statline": "ghazghkull-thraka-profile"
   },
-  "orks-ability-leader-12": {
-    "id": "orks-ability-leader-12",
-    "title": "Leader",
-    "summary": "This unit can be attached to the following units: - BOYZ - BREAKA BOYZ - MEGANOBZ - NOBZ",
-    "full": "This unit can be attached to the following units: - BOYZ - BREAKA BOYZ - MEGANOBZ - NOBZ",
-    "glossary": "glossary-orks-ability-leader-12",
-    "rule": "unit-ghazghkull-thraka",
-    "units": [
-      "unit-ghazghkull-thraka"
-    ],
-    "datasheet": "unit-ghazghkull-thraka",
-    "statline": "ghazghkull-thraka-profile"
-  },
   "orks-ability-invulnerable-save-2": {
     "id": "orks-ability-invulnerable-save-2",
     "title": "Invulnerable Save (2+*)",
@@ -2701,21 +1803,6 @@ window.DG_TERMS={
     "rule": "unit-ghazghkull-thraka",
     "units": [
       "unit-ghazghkull-thraka"
-    ],
-    "datasheet": "unit-ghazghkull-thraka",
-    "statline": "ghazghkull-thraka-profile"
-  },
-  "orks-ability-lethal-hits": {
-    "id": "orks-ability-lethal-hits",
-    "title": "Lethal Hits",
-    "summary": "Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target. *Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].*",
-    "full": "Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target. *Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].*",
-    "glossary": "glossary-orks-ability-lethal-hits",
-    "rule": "unit-ghazghkull-thraka",
-    "units": [
-      "unit-ghazghkull-thraka",
-      "unit-flash-gitz",
-      "unit-nobz"
     ],
     "datasheet": "unit-ghazghkull-thraka",
     "statline": "ghazghkull-thraka-profile"
@@ -2798,19 +1885,6 @@ window.DG_TERMS={
     "datasheet": "unit-mozrog-skragbad",
     "statline": "mozrog-skragbad-profile"
   },
-  "orks-ability-leader-13": {
-    "id": "orks-ability-leader-13",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - Squighog Boyz",
-    "full": "This model can be attached to the following unit: - Squighog Boyz",
-    "glossary": "glossary-orks-ability-leader-13",
-    "rule": "unit-mozrog-skragbad",
-    "units": [
-      "unit-mozrog-skragbad"
-    ],
-    "datasheet": "unit-mozrog-skragbad",
-    "statline": "mozrog-skragbad-profile"
-  },
   "orks-weapon-big-chompas-jaws": {
     "id": "orks-weapon-big-chompas-jaws",
     "title": "Big Chompa’s jaws",
@@ -2872,42 +1946,6 @@ window.DG_TERMS={
     "rule": "unit-wazdakka-gutsmek",
     "units": [
       "unit-wazdakka-gutsmek"
-    ],
-    "datasheet": "unit-wazdakka-gutsmek",
-    "statline": "wazdakka-gutsmek-profile"
-  },
-  "orks-ability-lance": {
-    "id": "orks-ability-lance",
-    "title": "Lance",
-    "summary": "Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.",
-    "full": "Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.",
-    "glossary": "glossary-orks-ability-lance",
-    "rule": "unit-wazdakka-gutsmek",
-    "units": [
-      "unit-wazdakka-gutsmek",
-      "unit-hunta-rig",
-      "unit-kill-rig",
-      "unit-squighog-boyz",
-      "unit-gargantuan-squiggoth",
-      "unit-nobz-on-warbikes"
-    ],
-    "datasheet": "unit-wazdakka-gutsmek",
-    "statline": "wazdakka-gutsmek-profile"
-  },
-  "orks-ability-deep-strike": {
-    "id": "orks-ability-deep-strike",
-    "title": "Deep Strike",
-    "summary": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
-    "full": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
-    "glossary": "glossary-orks-ability-deep-strike",
-    "rule": "unit-wazdakka-gutsmek",
-    "units": [
-      "unit-wazdakka-gutsmek",
-      "unit-stormboyz",
-      "unit-deffkoptas",
-      "unit-boss-zagstruk",
-      "unit-chinork-warkopta",
-      "unit-deffkoptas-with-big-shootas"
     ],
     "datasheet": "unit-wazdakka-gutsmek",
     "statline": "wazdakka-gutsmek-profile"
@@ -3003,19 +2041,6 @@ window.DG_TERMS={
     "datasheet": "unit-zodgrod-wortsnagga",
     "statline": "zodgrod-wortsnagga-profile"
   },
-  "orks-ability-leader-14": {
-    "id": "orks-ability-leader-14",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - Gretchin",
-    "full": "This model can be attached to the following unit: - Gretchin",
-    "glossary": "glossary-orks-ability-leader-14",
-    "rule": "unit-zodgrod-wortsnagga",
-    "units": [
-      "unit-zodgrod-wortsnagga"
-    ],
-    "datasheet": "unit-zodgrod-wortsnagga",
-    "statline": "zodgrod-wortsnagga-profile"
-  },
   "orks-weapon-da-grabzappa": {
     "id": "orks-weapon-da-grabzappa",
     "title": "Da Grabzappa",
@@ -3041,19 +2066,6 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-zodgrod-wortsnagga",
     "statline": "zodgrod-wortsnagga-profile"
-  },
-  "orks-ability-attached-unit": {
-    "id": "orks-ability-attached-unit",
-    "title": "Attached Unit",
-    "summary": "If a CHARACTER unit from your army with the Leader ability can be attached to a BOYZ unit, it can be attached to this unit instead.",
-    "full": "If a CHARACTER unit from your army with the Leader ability can be attached to a BOYZ unit, it can be attached to this unit instead.",
-    "glossary": "glossary-orks-ability-attached-unit",
-    "rule": "unit-breaka-boyz",
-    "units": [
-      "unit-breaka-boyz"
-    ],
-    "datasheet": "unit-breaka-boyz",
-    "statline": "breaka-boyz-profile"
   },
   "orks-ability-trophy-hunters": {
     "id": "orks-ability-trophy-hunters",
@@ -3148,9 +2160,7 @@ window.DG_TERMS={
     "units": [
       "unit-breaka-boyz",
       "unit-flash-gitz",
-      "unit-tankbustas",
-      "unit-big-mek-on-warbike",
-      "unit-big-mek-with-kustom-force-field"
+      "unit-tankbustas"
     ],
     "datasheet": "unit-breaka-boyz",
     "statline": "breaka-boyz-profile"
@@ -3374,8 +2384,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-big-choppa-3",
     "rule": "unit-kommandos",
     "units": [
-      "unit-kommandos",
-      "unit-big-mek-on-warbike"
+      "unit-kommandos"
     ],
     "datasheet": "unit-kommandos",
     "statline": "kommandos-profile"
@@ -3427,9 +2436,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-killsaw-3",
     "rule": "unit-meganobz",
     "units": [
-      "unit-meganobz",
-      "unit-nobz-on-warbikes",
-      "unit-painboy-on-warbike"
+      "unit-meganobz"
     ],
     "datasheet": "unit-meganobz",
     "statline": "meganobz-profile"
@@ -3499,19 +2506,6 @@ window.DG_TERMS={
     "datasheet": "unit-tankbustas",
     "statline": "tankbustas-profile"
   },
-  "orks-ability-attached-unit-2": {
-    "id": "orks-ability-attached-unit-2",
-    "title": "Attached Unit",
-    "summary": "If a CHARACTER unit from your army with the Leader ability can be attached to a LOOTAS unit, it can be attached to this unit instead.",
-    "full": "If a CHARACTER unit from your army with the Leader ability can be attached to a LOOTAS unit, it can be attached to this unit instead.",
-    "glossary": "glossary-orks-ability-attached-unit-2",
-    "rule": "unit-tankbustas",
-    "units": [
-      "unit-tankbustas"
-    ],
-    "datasheet": "unit-tankbustas",
-    "statline": "tankbustas-profile"
-  },
   "orks-ability-pulsa-rokkit": {
     "id": "orks-ability-pulsa-rokkit",
     "title": "Pulsa Rokkit",
@@ -3548,68 +2542,7 @@ window.DG_TERMS={
     "units": [
       "unit-hunta-rig",
       "unit-kill-rig",
-      "unit-battlewagon",
-      "unit-kannonwagon",
-      "unit-lifta-wagon",
-      "unit-mega-dread",
-      "unit-meka-dread"
-    ],
-    "datasheet": "unit-hunta-rig",
-    "statline": "hunta-rig-profile"
-  },
-  "orks-ability-indirect-fire": {
-    "id": "orks-ability-indirect-fire",
-    "title": "Indirect Fire",
-    "summary": "Units containing one or more models with an [INDIRECT FIRE] weapon can shoot using indirect shooting (10.07).",
-    "full": "Units containing one or more models with an [INDIRECT FIRE] weapon can shoot using indirect shooting (10.07).",
-    "glossary": "glossary-orks-ability-indirect-fire",
-    "rule": "unit-hunta-rig",
-    "units": [
-      "unit-hunta-rig",
-      "unit-kill-rig",
-      "unit-battlewagon",
-      "unit-rukkatrukk-squigbuggy",
-      "unit-big-gunz",
-      "unit-deff-rolla-battle-fortress",
-      "unit-fighta-bommer",
-      "unit-grot-bomm-launcha"
-    ],
-    "datasheet": "unit-hunta-rig",
-    "statline": "hunta-rig-profile"
-  },
-  "orks-ability-deadly-demise-d6": {
-    "id": "orks-ability-deadly-demise-d6",
-    "title": "Deadly Demise D6",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-orks-ability-deadly-demise-d6",
-    "rule": "unit-hunta-rig",
-    "units": [
-      "unit-hunta-rig",
-      "unit-kill-rig",
-      "unit-battlewagon",
-      "unit-gorkanaut",
-      "unit-morkanaut",
-      "unit-kannonwagon",
-      "unit-lifta-wagon",
-      "unit-mega-dread",
-      "unit-meka-dread",
-      "unit-squiggoth"
-    ],
-    "datasheet": "unit-hunta-rig",
-    "statline": "hunta-rig-profile"
-  },
-  "orks-ability-firing-deck-11": {
-    "id": "orks-ability-firing-deck-11",
-    "title": "Firing Deck 11",
-    "summary": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "full": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "glossary": "glossary-orks-ability-firing-deck-11",
-    "rule": "unit-hunta-rig",
-    "units": [
-      "unit-hunta-rig",
-      "unit-battlewagon",
-      "unit-biged-bossbunka"
+      "unit-battlewagon"
     ],
     "datasheet": "unit-hunta-rig",
     "statline": "hunta-rig-profile"
@@ -3783,9 +2716,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-deff-rolla",
     "rule": "unit-battlewagon",
     "units": [
-      "unit-battlewagon",
-      "unit-deff-rolla-battle-fortress",
-      "unit-lifta-wagon"
+      "unit-battlewagon"
     ],
     "datasheet": "unit-battlewagon",
     "statline": "battlewagon-profile"
@@ -3798,8 +2729,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-tracks-and-wheels",
     "rule": "unit-battlewagon",
     "units": [
-      "unit-battlewagon",
-      "unit-lifta-wagon"
+      "unit-battlewagon"
     ],
     "datasheet": "unit-battlewagon",
     "statline": "battlewagon-profile"
@@ -3812,8 +2742,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-lobba",
     "rule": "unit-battlewagon",
     "units": [
-      "unit-battlewagon",
-      "unit-deff-rolla-battle-fortress"
+      "unit-battlewagon"
     ],
     "datasheet": "unit-battlewagon",
     "statline": "battlewagon-profile"
@@ -3826,8 +2755,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-grabbin-klaw",
     "rule": "unit-battlewagon",
     "units": [
-      "unit-battlewagon",
-      "unit-lifta-wagon"
+      "unit-battlewagon"
     ],
     "datasheet": "unit-battlewagon",
     "statline": "battlewagon-profile"
@@ -3835,8 +2763,8 @@ window.DG_TERMS={
   "orks-ability-dakkablitz": {
     "id": "orks-ability-dakkablitz",
     "title": "Dakkablitz",
-    "summary": "In your Shooting phase, while making attacks with this unit, if its blitzkannon targeted a non-MONSTER/VEHICLE unit, that weapon has +6 A.",
-    "full": "In your Shooting phase, while making attacks with this unit, if its blitzkannon targeted a non-MONSTER/VEHICLE unit, that weapon has +6 A.",
+    "summary": "In your Shooting phase, while making attacks with this unit, if its blitzkannon targeted a non- MONSTER/VEHICLE unit, that weapon has +6 A.",
+    "full": "In your Shooting phase, while making attacks with this unit, if its blitzkannon targeted a non- MONSTER/VEHICLE unit, that weapon has +6 A.",
     "glossary": "glossary-orks-ability-dakkablitz",
     "rule": "unit-big-mek-dakkarig",
     "units": [
@@ -3892,8 +2820,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-ability-ramshackle-cover",
     "rule": "unit-biged-bossbunka",
     "units": [
-      "unit-biged-bossbunka",
-      "unit-mekboy-workshop"
+      "unit-biged-bossbunka"
     ],
     "datasheet": "unit-biged-bossbunka",
     "statline": "biged-bossbunka-profile"
@@ -3919,8 +2846,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-ability-fortification",
     "rule": "unit-biged-bossbunka",
     "units": [
-      "unit-biged-bossbunka",
-      "unit-mekboy-workshop"
+      "unit-biged-bossbunka"
     ],
     "datasheet": "unit-biged-bossbunka",
     "statline": "biged-bossbunka-profile"
@@ -3975,10 +2901,7 @@ window.DG_TERMS={
       "unit-blitza-bommer",
       "unit-burna-bommer",
       "unit-dakkajet",
-      "unit-wazbom-blastajet",
-      "unit-big-trakk",
-      "unit-fighta-bommer",
-      "unit-grot-mega-tank"
+      "unit-wazbom-blastajet"
     ],
     "datasheet": "unit-blitza-bommer",
     "statline": "blitza-bommer-profile"
@@ -4009,11 +2932,7 @@ window.DG_TERMS={
       "unit-blitza-bommer",
       "unit-burna-bommer",
       "unit-dakkajet",
-      "unit-wazbom-blastajet",
-      "unit-attack-fighta",
-      "unit-big-trakk",
-      "unit-chinork-warkopta",
-      "unit-fighta-bommer"
+      "unit-wazbom-blastajet"
     ],
     "datasheet": "unit-blitza-bommer",
     "statline": "blitza-bommer-profile"
@@ -4096,14 +3015,7 @@ window.DG_TERMS={
       "unit-gorkanaut",
       "unit-megatrakk-scrapjet",
       "unit-morkanaut",
-      "unit-stompa",
-      "unit-attack-fighta",
-      "unit-deff-rolla-battle-fortress",
-      "unit-deffkoptas-with-big-shootas",
-      "unit-fighta-bommer",
-      "unit-kill-krusha",
-      "unit-kill-tank",
-      "unit-warbuggies"
+      "unit-stompa"
     ],
     "datasheet": "unit-burna-bommer",
     "statline": "burna-bommer-profile"
@@ -4171,13 +3083,7 @@ window.DG_TERMS={
       "unit-deff-dread",
       "unit-gorkanaut",
       "unit-killa-kans",
-      "unit-stompa",
-      "unit-chinork-warkopta",
-      "unit-deff-rolla-battle-fortress",
-      "unit-grot-tanks",
-      "unit-kill-krusha",
-      "unit-kill-tank",
-      "unit-skorchas"
+      "unit-stompa"
     ],
     "datasheet": "unit-deff-dread",
     "statline": "deff-dread-profile"
@@ -4190,8 +3096,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-ability-deff-from-above",
     "rule": "unit-deffkoptas",
     "units": [
-      "unit-deffkoptas",
-      "unit-deffkoptas-with-big-shootas"
+      "unit-deffkoptas"
     ],
     "datasheet": "unit-deffkoptas",
     "statline": "deffkoptas-profile"
@@ -4204,8 +3109,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-kopta-rokkits",
     "rule": "unit-deffkoptas",
     "units": [
-      "unit-deffkoptas",
-      "unit-deffkoptas-with-big-shootas"
+      "unit-deffkoptas"
     ],
     "datasheet": "unit-deffkoptas",
     "statline": "deffkoptas-profile"
@@ -4218,8 +3122,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-spinnin-blades",
     "rule": "unit-deffkoptas",
     "units": [
-      "unit-deffkoptas",
-      "unit-deffkoptas-with-big-shootas"
+      "unit-deffkoptas"
     ],
     "datasheet": "unit-deffkoptas",
     "statline": "deffkoptas-profile"
@@ -4260,9 +3163,7 @@ window.DG_TERMS={
     "rule": "unit-gorkanaut",
     "units": [
       "unit-gorkanaut",
-      "unit-morkanaut",
-      "unit-deff-rolla-battle-fortress",
-      "unit-kill-krusha"
+      "unit-morkanaut"
     ],
     "datasheet": "unit-gorkanaut",
     "statline": "gorkanaut-profile"
@@ -4353,8 +3254,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-grotzooka",
     "rule": "unit-killa-kans",
     "units": [
-      "unit-killa-kans",
-      "unit-grot-tanks"
+      "unit-killa-kans"
     ],
     "datasheet": "unit-killa-kans",
     "statline": "killa-kans-profile"
@@ -4367,8 +3267,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-rokkit-launcha-3",
     "rule": "unit-killa-kans",
     "units": [
-      "unit-killa-kans",
-      "unit-grot-tanks"
+      "unit-killa-kans"
     ],
     "datasheet": "unit-killa-kans",
     "statline": "killa-kans-profile"
@@ -4459,9 +3358,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-wing-missiles",
     "rule": "unit-megatrakk-scrapjet",
     "units": [
-      "unit-megatrakk-scrapjet",
-      "unit-attack-fighta",
-      "unit-fighta-bommer"
+      "unit-megatrakk-scrapjet"
     ],
     "datasheet": "unit-megatrakk-scrapjet",
     "statline": "megatrakk-scrapjet-profile"
@@ -4932,11 +3829,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-twin-dakkagun",
     "rule": "unit-warbikers",
     "units": [
-      "unit-warbikers",
-      "unit-big-mek-on-warbike",
-      "unit-nobz-on-warbikes",
-      "unit-painboy-on-warbike",
-      "unit-warboss-on-warbike"
+      "unit-warbikers"
     ],
     "datasheet": "unit-warbikers",
     "statline": "warbikers-profile"
@@ -5097,19 +3990,6 @@ window.DG_TERMS={
     "datasheet": "unit-gargantuan-squiggoth",
     "statline": "gargantuan-squiggoth-profile"
   },
-  "orks-ability-firing-deck-20": {
-    "id": "orks-ability-firing-deck-20",
-    "title": "Firing Deck 20",
-    "summary": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "full": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "glossary": "glossary-orks-ability-firing-deck-20",
-    "rule": "unit-gargantuan-squiggoth",
-    "units": [
-      "unit-gargantuan-squiggoth"
-    ],
-    "datasheet": "unit-gargantuan-squiggoth",
-    "statline": "gargantuan-squiggoth-profile"
-  },
   "orks-weapon-huge-tusks-strike": {
     "id": "orks-weapon-huge-tusks-strike",
     "title": "➤ Huge tusks - strike",
@@ -5157,10 +4037,7 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-kannon-shell-2",
     "rule": "unit-gargantuan-squiggoth",
     "units": [
-      "unit-gargantuan-squiggoth",
-      "unit-big-trakk",
-      "unit-deff-rolla-battle-fortress",
-      "unit-squiggoth"
+      "unit-gargantuan-squiggoth"
     ],
     "datasheet": "unit-gargantuan-squiggoth",
     "statline": "gargantuan-squiggoth-profile"
@@ -5173,1368 +4050,14 @@ window.DG_TERMS={
     "glossary": "glossary-orks-weapon-kannon-frag-2",
     "rule": "unit-gargantuan-squiggoth",
     "units": [
-      "unit-gargantuan-squiggoth",
-      "unit-big-trakk",
-      "unit-deff-rolla-battle-fortress",
-      "unit-squiggoth"
+      "unit-gargantuan-squiggoth"
     ],
     "datasheet": "unit-gargantuan-squiggoth",
     "statline": "gargantuan-squiggoth-profile"
   },
-  "orks-ability-interceptor": {
-    "id": "orks-ability-interceptor",
-    "title": "Interceptor",
-    "summary": "Each time this model makes a ranged attack that targets a unit that can FLY, add 1 to the Hit roll.",
-    "full": "Each time this model makes a ranged attack that targets a unit that can FLY, add 1 to the Hit roll.",
-    "glossary": "glossary-orks-ability-interceptor",
-    "rule": "unit-attack-fighta",
-    "units": [
-      "unit-attack-fighta"
-    ],
-    "datasheet": "unit-attack-fighta",
-    "statline": "attack-fighta-profile"
-  },
-  "orks-ability-small-bomms": {
-    "id": "orks-ability-small-bomms",
-    "title": "Small Bomms",
-    "summary": "Each time the bearer ends a Normal move, you can select one enemy unit it moved across during that move and roll three D6: for each 4+, that unit suffers 1 mortal wound.",
-    "full": "Each time the bearer ends a Normal move, you can select one enemy unit it moved across during that move and roll three D6: for each 4+, that unit suffers 1 mortal wound.",
-    "glossary": "glossary-orks-ability-small-bomms",
-    "rule": "unit-attack-fighta",
-    "units": [
-      "unit-attack-fighta",
-      "unit-fighta-bommer"
-    ],
-    "datasheet": "unit-attack-fighta",
-    "statline": "attack-fighta-profile"
-  },
-  "orks-ability-splat-2": {
-    "id": "orks-ability-splat-2",
-    "title": "Splat!",
-    "summary": "Each time a model in this unit makes a ranged attack that targets a unit containing 10 or more models, re-roll a Hit roll of 1.",
-    "full": "Each time a model in this unit makes a ranged attack that targets a unit containing 10 or more models, re-roll a Hit roll of 1.",
-    "glossary": "glossary-orks-ability-splat-2",
-    "rule": "unit-big-gunz",
-    "units": [
-      "unit-big-gunz"
-    ],
-    "datasheet": "unit-big-gunz",
-    "statline": "big-gunz-profile"
-  },
-  "orks-ability-big-gunz": {
-    "id": "orks-ability-big-gunz",
-    "title": "Big Gunz",
-    "summary": "Designer’s Note: *Place two Grot Crew tokens next to each Big Gun model when this unit is first set up, removing one each time its Big Gun model loses a wound (a Big Gun model itself is considered to represent its final wound).*",
-    "full": "Designer’s Note: *Place two Grot Crew tokens next to each Big Gun model when this unit is first set up, removing one each time its Big Gun model loses a wound (a Big Gun model itself is considered to represent its final wound).*",
-    "glossary": "glossary-orks-ability-big-gunz",
-    "rule": "unit-big-gunz",
-    "units": [
-      "unit-big-gunz"
-    ],
-    "datasheet": "unit-big-gunz",
-    "statline": "big-gunz-profile"
-  },
-  "orks-weapon-kannon-frag-3": {
-    "id": "orks-weapon-kannon-frag-3",
-    "title": "➤ Kannon - frag",
-    "summary": "Ranged · 36\" · A D6 · BS 6+ · S 5 · AP 0 · D 1 · Blast, Heavy",
-    "full": "Ranged · 36\" · A D6 · BS 6+ · S 5 · AP 0 · D 1 · Blast, Heavy",
-    "glossary": "glossary-orks-weapon-kannon-frag-3",
-    "rule": "unit-big-gunz",
-    "units": [
-      "unit-big-gunz"
-    ],
-    "datasheet": "unit-big-gunz",
-    "statline": "big-gunz-profile"
-  },
-  "orks-weapon-kannon-shell-3": {
-    "id": "orks-weapon-kannon-shell-3",
-    "title": "➤ Kannon - shell",
-    "summary": "Ranged · 36\" · A 1 · BS 6+ · S 9 · AP -2 · D D6 · Heavy",
-    "full": "Ranged · 36\" · A 1 · BS 6+ · S 9 · AP -2 · D D6 · Heavy",
-    "glossary": "glossary-orks-weapon-kannon-shell-3",
-    "rule": "unit-big-gunz",
-    "units": [
-      "unit-big-gunz"
-    ],
-    "datasheet": "unit-big-gunz",
-    "statline": "big-gunz-profile"
-  },
-  "orks-weapon-close-combat-weapons": {
-    "id": "orks-weapon-close-combat-weapons",
-    "title": "Close combat weapons",
-    "summary": "Melee · Melee · A 2 · WS 3+ · S 4 · AP 0 · D 1",
-    "full": "Melee · Melee · A 2 · WS 3+ · S 4 · AP 0 · D 1",
-    "glossary": "glossary-orks-weapon-close-combat-weapons",
-    "rule": "unit-big-gunz",
-    "units": [
-      "unit-big-gunz"
-    ],
-    "datasheet": "unit-big-gunz",
-    "statline": "big-gunz-profile"
-  },
-  "orks-weapon-lobba-2": {
-    "id": "orks-weapon-lobba-2",
-    "title": "Lobba",
-    "summary": "Ranged · 48\" · A D6 · BS 6+ · S 5 · AP 0 · D 1 · Blast, Heavy, Indirect Fire",
-    "full": "Ranged · 48\" · A D6 · BS 6+ · S 5 · AP 0 · D 1 · Blast, Heavy, Indirect Fire",
-    "glossary": "glossary-orks-weapon-lobba-2",
-    "rule": "unit-big-gunz",
-    "units": [
-      "unit-big-gunz"
-    ],
-    "datasheet": "unit-big-gunz",
-    "statline": "big-gunz-profile"
-  },
-  "orks-weapon-zzap-gun-2": {
-    "id": "orks-weapon-zzap-gun-2",
-    "title": "Zzap gun",
-    "summary": "Ranged · 36\" · A 1 · BS 6+ · S 2D6 · AP -3 · D 3 · Devastating Wounds, Heavy",
-    "full": "Ranged · 36\" · A 1 · BS 6+ · S 2D6 · AP -3 · D 3 · Devastating Wounds, Heavy",
-    "glossary": "glossary-orks-weapon-zzap-gun-2",
-    "rule": "unit-big-gunz",
-    "units": [
-      "unit-big-gunz"
-    ],
-    "datasheet": "unit-big-gunz",
-    "statline": "big-gunz-profile"
-  },
-  "orks-weapon-power-klaw-4": {
-    "id": "orks-weapon-power-klaw-4",
-    "title": "Power klaw",
-    "summary": "Melee · Melee · A 4 · WS 4+ · S 9 · AP -2 · D 2",
-    "full": "Melee · Melee · A 4 · WS 4+ · S 9 · AP -2 · D 2",
-    "glossary": "glossary-orks-weapon-power-klaw-4",
-    "rule": "unit-big-mek-on-warbike",
-    "units": [
-      "unit-big-mek-on-warbike"
-    ],
-    "datasheet": "unit-big-mek-on-warbike",
-    "statline": "big-mek-on-warbike-profile"
-  },
-  "orks-ability-kustom-force-field-2": {
-    "id": "orks-ability-kustom-force-field-2",
-    "title": "Kustom Force Field",
-    "summary": "While this model is leading a unit, models in that unit have a 5+ invulnerable save against ranged attacks. Once per battle, at the start of any phase, this model can overcharge its kustom force field. If it does, until the end of the phase, this invulnerable save is improved to 4+.",
-    "full": "While this model is leading a unit, models in that unit have a 5+ invulnerable save against ranged attacks. Once per battle, at the start of any phase, this model can overcharge its kustom force field. If it does, until the end of the phase, this invulnerable save is improved to 4+.",
-    "glossary": "glossary-orks-ability-kustom-force-field-2",
-    "rule": "unit-big-mek-with-kustom-force-field",
-    "units": [
-      "unit-big-mek-with-kustom-force-field"
-    ],
-    "datasheet": "unit-big-mek-with-kustom-force-field",
-    "statline": "big-mek-with-kustom-force-field-profile"
-  },
-  "orks-ability-leader-15": {
-    "id": "orks-ability-leader-15",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: - BOYZ - BURNA BOYZ - LOOTAS - NOBZ - TANKBUSTAS",
-    "full": "This model can be attached to the following units: - BOYZ - BURNA BOYZ - LOOTAS - NOBZ - TANKBUSTAS",
-    "glossary": "glossary-orks-ability-leader-15",
-    "rule": "unit-big-mek-with-kustom-force-field",
-    "units": [
-      "unit-big-mek-with-kustom-force-field"
-    ],
-    "datasheet": "unit-big-mek-with-kustom-force-field",
-    "statline": "big-mek-with-kustom-force-field-profile"
-  },
-  "orks-ability-grot-helper": {
-    "id": "orks-ability-grot-helper",
-    "title": "Grot Helper",
-    "summary": "Once per battle, the bearer can overcharge its kustom force field one additional time. Designer’s Note: Place a Grot Helper token next to the bearer, removing it once this ability has been used.",
-    "full": "Once per battle, the bearer can overcharge its kustom force field one additional time. Designer’s Note: Place a Grot Helper token next to the bearer, removing it once this ability has been used.",
-    "glossary": "glossary-orks-ability-grot-helper",
-    "rule": "unit-big-mek-with-kustom-force-field",
-    "units": [
-      "unit-big-mek-with-kustom-force-field"
-    ],
-    "datasheet": "unit-big-mek-with-kustom-force-field",
-    "statline": "big-mek-with-kustom-force-field-profile"
-  },
-  "orks-ability-spiked-ram": {
-    "id": "orks-ability-spiked-ram",
-    "title": "Spiked Ram",
-    "summary": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds.",
-    "full": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds.",
-    "glossary": "glossary-orks-ability-spiked-ram",
-    "rule": "unit-big-trakk",
-    "units": [
-      "unit-big-trakk"
-    ],
-    "datasheet": "unit-big-trakk",
-    "statline": "big-trakk-profile"
-  },
-  "orks-weapon-supa-kannon-shell": {
-    "id": "orks-weapon-supa-kannon-shell",
-    "title": "➤ Supa-kannon - shell",
-    "summary": "Ranged · 36\" · A 1 · BS 5+ · S 9 · AP -2 · D D3+3",
-    "full": "Ranged · 36\" · A 1 · BS 5+ · S 9 · AP -2 · D D3+3",
-    "glossary": "glossary-orks-weapon-supa-kannon-shell",
-    "rule": "unit-big-trakk",
-    "units": [
-      "unit-big-trakk",
-      "unit-kannonwagon"
-    ],
-    "datasheet": "unit-big-trakk",
-    "statline": "big-trakk-profile"
-  },
-  "orks-weapon-supa-kannon-frag": {
-    "id": "orks-weapon-supa-kannon-frag",
-    "title": "➤ Supa-kannon - frag",
-    "summary": "Ranged · 36\" · A D6+3 · BS 5+ · S 5 · AP 0 · D 1 · Blast",
-    "full": "Ranged · 36\" · A D6+3 · BS 5+ · S 5 · AP 0 · D 1 · Blast",
-    "glossary": "glossary-orks-weapon-supa-kannon-frag",
-    "rule": "unit-big-trakk",
-    "units": [
-      "unit-big-trakk",
-      "unit-kannonwagon"
-    ],
-    "datasheet": "unit-big-trakk",
-    "statline": "big-trakk-profile"
-  },
-  "orks-ability-drill-boss": {
-    "id": "orks-ability-drill-boss",
-    "title": "Drill Boss",
-    "summary": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll.",
-    "full": "While this model is leading a unit, each time a model in that unit makes a melee attack, add 1 to the Hit roll.",
-    "glossary": "glossary-orks-ability-drill-boss",
-    "rule": "unit-boss-zagstruk",
-    "units": [
-      "unit-boss-zagstruk"
-    ],
-    "datasheet": "unit-boss-zagstruk",
-    "statline": "boss-zagstruk-profile"
-  },
-  "orks-ability-plummeting-descent": {
-    "id": "orks-ability-plummeting-descent",
-    "title": "Plummeting Descent",
-    "summary": "You can re-roll Charge rolls made for this model’s unit in a turn in which it was set up on the battlefield from Reserves.",
-    "full": "You can re-roll Charge rolls made for this model’s unit in a turn in which it was set up on the battlefield from Reserves.",
-    "glossary": "glossary-orks-ability-plummeting-descent",
-    "rule": "unit-boss-zagstruk",
-    "units": [
-      "unit-boss-zagstruk"
-    ],
-    "datasheet": "unit-boss-zagstruk",
-    "statline": "boss-zagstruk-profile"
-  },
-  "orks-ability-leader-16": {
-    "id": "orks-ability-leader-16",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - Stormboyz",
-    "full": "This model can be attached to the following unit: - Stormboyz",
-    "glossary": "glossary-orks-ability-leader-16",
-    "rule": "unit-boss-zagstruk",
-    "units": [
-      "unit-boss-zagstruk"
-    ],
-    "datasheet": "unit-boss-zagstruk",
-    "statline": "boss-zagstruk-profile"
-  },
-  "orks-weapon-da-vulchas-klaws-and-choppa": {
-    "id": "orks-weapon-da-vulchas-klaws-and-choppa",
-    "title": "Da Vulcha’s Klaws and choppa",
-    "summary": "Melee · Melee · A 6 · WS 2+ · S 8 · AP -2 · D 2",
-    "full": "Melee · Melee · A 6 · WS 2+ · S 8 · AP -2 · D 2",
-    "glossary": "glossary-orks-weapon-da-vulchas-klaws-and-choppa",
-    "rule": "unit-boss-zagstruk",
-    "units": [
-      "unit-boss-zagstruk"
-    ],
-    "datasheet": "unit-boss-zagstruk",
-    "statline": "boss-zagstruk-profile"
-  },
-  "orks-ability-aerial-deployment": {
-    "id": "orks-ability-aerial-deployment",
-    "title": "Aerial Deployment",
-    "summary": "If this model starts the game in Strategic Reserves, it can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
-    "full": "If this model starts the game in Strategic Reserves, it can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
-    "glossary": "glossary-orks-ability-aerial-deployment",
-    "rule": "unit-chinork-warkopta",
-    "units": [
-      "unit-chinork-warkopta"
-    ],
-    "datasheet": "unit-chinork-warkopta",
-    "statline": "chinork-warkopta-profile"
-  },
-  "orks-ability-big-bomms": {
-    "id": "orks-ability-big-bomms",
-    "title": "Big Bomms",
-    "summary": "Once per battle, after the bearer ends a Normal move, you can select one enemy unit it moved across during that move and roll six D6: for each 4+, that unit suffers 1 mortal wound.",
-    "full": "Once per battle, after the bearer ends a Normal move, you can select one enemy unit it moved across during that move and roll six D6: for each 4+, that unit suffers 1 mortal wound.",
-    "glossary": "glossary-orks-ability-big-bomms",
-    "rule": "unit-chinork-warkopta",
-    "units": [
-      "unit-chinork-warkopta"
-    ],
-    "datasheet": "unit-chinork-warkopta",
-    "statline": "chinork-warkopta-profile"
-  },
-  "orks-weapon-deffgun-2": {
-    "id": "orks-weapon-deffgun-2",
-    "title": "Deffgun",
-    "summary": "Ranged · 48\" · A 2 · BS 5+ · S 8 · AP -1 · D 2 · Rapid Fire 1",
-    "full": "Ranged · 48\" · A 2 · BS 5+ · S 8 · AP -1 · D 2 · Rapid Fire 1",
-    "glossary": "glossary-orks-weapon-deffgun-2",
-    "rule": "unit-chinork-warkopta",
-    "units": [
-      "unit-chinork-warkopta"
-    ],
-    "datasheet": "unit-chinork-warkopta",
-    "statline": "chinork-warkopta-profile"
-  },
-  "orks-weapon-rattler-kannon": {
-    "id": "orks-weapon-rattler-kannon",
-    "title": "Rattler kannon",
-    "summary": "Ranged · 24\" · A 6 · BS 5+ · S 6 · AP -1 · D 1",
-    "full": "Ranged · 24\" · A 6 · BS 5+ · S 6 · AP -1 · D 1",
-    "glossary": "glossary-orks-weapon-rattler-kannon",
-    "rule": "unit-chinork-warkopta",
-    "units": [
-      "unit-chinork-warkopta"
-    ],
-    "datasheet": "unit-chinork-warkopta",
-    "statline": "chinork-warkopta-profile"
-  },
-  "orks-ability-da-revolushun": {
-    "id": "orks-ability-da-revolushun",
-    "title": "Da Revolushun!",
-    "summary": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.",
-    "full": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.",
-    "glossary": "glossary-orks-ability-da-revolushun",
-    "rule": "unit-da-red-gobbo",
-    "units": [
-      "unit-da-red-gobbo"
-    ],
-    "datasheet": "unit-da-red-gobbo",
-    "statline": "da-red-gobbo-profile"
-  },
-  "orks-ability-has-yoo-been-a-good-little-grot-this-year": {
-    "id": "orks-ability-has-yoo-been-a-good-little-grot-this-year",
-    "title": "Has Yoo Been a Good Little Grot This Year?",
-    "summary": "Once per battle, in your Shooting phase, you can target this model’s unit with the Grenade Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
-    "full": "Once per battle, in your Shooting phase, you can target this model’s unit with the Grenade Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
-    "glossary": "glossary-orks-ability-has-yoo-been-a-good-little-grot-this-year",
-    "rule": "unit-da-red-gobbo",
-    "units": [
-      "unit-da-red-gobbo"
-    ],
-    "datasheet": "unit-da-red-gobbo",
-    "statline": "da-red-gobbo-profile"
-  },
-  "orks-weapon-kustom-grot-blasta": {
-    "id": "orks-weapon-kustom-grot-blasta",
-    "title": "Kustom grot blasta",
-    "summary": "Ranged · 12\" · A D3 · BS 4+ · S 4 · AP 0 · D 1 · Devastating Wounds, Pistol",
-    "full": "Ranged · 12\" · A D3 · BS 4+ · S 4 · AP 0 · D 1 · Devastating Wounds, Pistol",
-    "glossary": "glossary-orks-weapon-kustom-grot-blasta",
-    "rule": "unit-da-red-gobbo",
-    "units": [
-      "unit-da-red-gobbo"
-    ],
-    "datasheet": "unit-da-red-gobbo",
-    "statline": "da-red-gobbo-profile"
-  },
-  "orks-weapon-icon-of-da-revolushun": {
-    "id": "orks-weapon-icon-of-da-revolushun",
-    "title": "Icon of da Revolushun",
-    "summary": "Melee · Melee · A 3 · WS 4+ · S 3 · AP 0 · D 1 · Devastating Wounds",
-    "full": "Melee · Melee · A 3 · WS 4+ · S 3 · AP 0 · D 1 · Devastating Wounds",
-    "glossary": "glossary-orks-weapon-icon-of-da-revolushun",
-    "rule": "unit-da-red-gobbo",
-    "units": [
-      "unit-da-red-gobbo"
-    ],
-    "datasheet": "unit-da-red-gobbo",
-    "statline": "da-red-gobbo-profile"
-  },
-  "orks-ability-rolling-fortress": {
-    "id": "orks-ability-rolling-fortress",
-    "title": "Rolling Fortress",
-    "summary": "Each time a ranged attack is allocated to an ORKS model from your army, if that model is not fully visible to every model in the attacking unit because of this DEFF ROLLA BATTLE FORTRESS model, that model has the Benefit of Cover against that attack.",
-    "full": "Each time a ranged attack is allocated to an ORKS model from your army, if that model is not fully visible to every model in the attacking unit because of this DEFF ROLLA BATTLE FORTRESS model, that model has the Benefit of Cover against that attack.",
-    "glossary": "glossary-orks-ability-rolling-fortress",
-    "rule": "unit-deff-rolla-battle-fortress",
-    "units": [
-      "unit-deff-rolla-battle-fortress"
-    ],
-    "datasheet": "unit-deff-rolla-battle-fortress",
-    "statline": "deff-rolla-battle-fortress-profile"
-  },
-  "orks-ability-deadly-demise-d6-2": {
-    "id": "orks-ability-deadly-demise-d6-2",
-    "title": "Deadly Demise D6+2",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-orks-ability-deadly-demise-d6-2",
-    "rule": "unit-deff-rolla-battle-fortress",
-    "units": [
-      "unit-deff-rolla-battle-fortress",
-      "unit-kill-krusha",
-      "unit-kill-tank"
-    ],
-    "datasheet": "unit-deff-rolla-battle-fortress",
-    "statline": "deff-rolla-battle-fortress-profile"
-  },
-  "orks-ability-firing-deck-22": {
-    "id": "orks-ability-firing-deck-22",
-    "title": "Firing Deck 22",
-    "summary": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "full": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "glossary": "glossary-orks-ability-firing-deck-22",
-    "rule": "unit-deff-rolla-battle-fortress",
-    "units": [
-      "unit-deff-rolla-battle-fortress"
-    ],
-    "datasheet": "unit-deff-rolla-battle-fortress",
-    "statline": "deff-rolla-battle-fortress-profile"
-  },
-  "orks-weapon-zzap-gun-3": {
-    "id": "orks-weapon-zzap-gun-3",
-    "title": "Zzap gun",
-    "summary": "Ranged · 36\" · A 1 · BS 5+ · S 2D6 · AP -3 · D 3 · Devastating Wounds",
-    "full": "Ranged · 36\" · A 1 · BS 5+ · S 2D6 · AP -3 · D 3 · Devastating Wounds",
-    "glossary": "glossary-orks-weapon-zzap-gun-3",
-    "rule": "unit-deff-rolla-battle-fortress",
-    "units": [
-      "unit-deff-rolla-battle-fortress"
-    ],
-    "datasheet": "unit-deff-rolla-battle-fortress",
-    "statline": "deff-rolla-battle-fortress-profile"
-  },
-  "orks-ability-strafing-run": {
-    "id": "orks-ability-strafing-run",
-    "title": "Strafing Run",
-    "summary": "Each time this model makes a ranged attack that targets a unit that cannot FLY, add 1 to the Hit roll.",
-    "full": "Each time this model makes a ranged attack that targets a unit that cannot FLY, add 1 to the Hit roll.",
-    "glossary": "glossary-orks-ability-strafing-run",
-    "rule": "unit-fighta-bommer",
-    "units": [
-      "unit-fighta-bommer"
-    ],
-    "datasheet": "unit-fighta-bommer",
-    "statline": "fighta-bommer-profile"
-  },
-  "orks-ability-one-shot": {
-    "id": "orks-ability-one-shot",
-    "title": "One Shot",
-    "summary": "Each weapon with this ability can only be selected to make attacks with once per battle. If a destroyed model is returned to a unit, all of its [ONE SHOT] weapons that have already been selected to make attacks with during the battle cannot be selected to make attacks with again. If a new unit is added to an army, all [ONE SHOT] weapons in that unit can be selected to make attacks with once per battle.",
-    "full": "Each weapon with this ability can only be selected to make attacks with once per battle. If a destroyed model is returned to a unit, all of its [ONE SHOT] weapons that have already been selected to make attacks with during the battle cannot be selected to make attacks with again. If a new unit is added to an army, all [ONE SHOT] weapons in that unit can be selected to make attacks with once per battle.",
-    "glossary": "glossary-orks-ability-one-shot",
-    "rule": "unit-fighta-bommer",
-    "units": [
-      "unit-fighta-bommer",
-      "unit-grot-bomm-launcha"
-    ],
-    "datasheet": "unit-fighta-bommer",
-    "statline": "fighta-bommer-profile"
-  },
-  "orks-weapon-grot-guided-bomm": {
-    "id": "orks-weapon-grot-guided-bomm",
-    "title": "Grot-guided bomm",
-    "summary": "Ranged · 72\" · A D6 · BS 4+ · S 8 · AP -2 · D 2 · Blast, One Shot, Indirect Fire",
-    "full": "Ranged · 72\" · A D6 · BS 4+ · S 8 · AP -2 · D 2 · Blast, One Shot, Indirect Fire",
-    "glossary": "glossary-orks-weapon-grot-guided-bomm",
-    "rule": "unit-fighta-bommer",
-    "units": [
-      "unit-fighta-bommer"
-    ],
-    "datasheet": "unit-fighta-bommer",
-    "statline": "fighta-bommer-profile"
-  },
-  "orks-ability-furious-barrage": {
-    "id": "orks-ability-furious-barrage",
-    "title": "Furious Barrage",
-    "summary": "Each time this model makes a ranged attack that targets an enemy unit that contains five or more models, you can re-roll the Hit roll.",
-    "full": "Each time this model makes a ranged attack that targets an enemy unit that contains five or more models, you can re-roll the Hit roll.",
-    "glossary": "glossary-orks-ability-furious-barrage",
-    "rule": "unit-grot-bomm-launcha",
-    "units": [
-      "unit-grot-bomm-launcha"
-    ],
-    "datasheet": "unit-grot-bomm-launcha",
-    "statline": "grot-bomm-launcha-profile"
-  },
-  "orks-weapon-grot-guided-bomms": {
-    "id": "orks-weapon-grot-guided-bomms",
-    "title": "Grot-guided bomms",
-    "summary": "Ranged · 72\" · A D6 · BS 4+ · S 8 · AP -2 · D 2 · Blast, One Shot, Indirect Fire",
-    "full": "Ranged · 72\" · A D6 · BS 4+ · S 8 · AP -2 · D 2 · Blast, One Shot, Indirect Fire",
-    "glossary": "glossary-orks-weapon-grot-guided-bomms",
-    "rule": "unit-grot-bomm-launcha",
-    "units": [
-      "unit-grot-bomm-launcha"
-    ],
-    "datasheet": "unit-grot-bomm-launcha",
-    "statline": "grot-bomm-launcha-profile"
-  },
-  "orks-weapon-spiked-wheel-2": {
-    "id": "orks-weapon-spiked-wheel-2",
-    "title": "Spiked wheel",
-    "summary": "Melee · Melee · A 2 · WS 4+ · S 6 · AP 0 · D 1",
-    "full": "Melee · Melee · A 2 · WS 4+ · S 6 · AP 0 · D 1",
-    "glossary": "glossary-orks-weapon-spiked-wheel-2",
-    "rule": "unit-grot-bomm-launcha",
-    "units": [
-      "unit-grot-bomm-launcha",
-      "unit-skorchas"
-    ],
-    "datasheet": "unit-grot-bomm-launcha",
-    "statline": "grot-bomm-launcha-profile"
-  },
-  "orks-ability-bizarrely-resilient": {
-    "id": "orks-ability-bizarrely-resilient",
-    "title": "Bizarrely Resilient",
-    "summary": "Each time an attack targets this model, worsen the Armour Penetration characteristic of that attack by 1.",
-    "full": "Each time an attack targets this model, worsen the Armour Penetration characteristic of that attack by 1.",
-    "glossary": "glossary-orks-ability-bizarrely-resilient",
-    "rule": "unit-grot-mega-tank",
-    "units": [
-      "unit-grot-mega-tank"
-    ],
-    "datasheet": "unit-grot-mega-tank",
-    "statline": "grot-mega-tank-profile"
-  },
-  "orks-weapon-armoured-hull-2": {
-    "id": "orks-weapon-armoured-hull-2",
-    "title": "Armoured hull",
-    "summary": "Melee · Melee · A 6 · WS 4+ · S 4 · AP 0 · D 1",
-    "full": "Melee · Melee · A 6 · WS 4+ · S 4 · AP 0 · D 1",
-    "glossary": "glossary-orks-weapon-armoured-hull-2",
-    "rule": "unit-grot-mega-tank",
-    "units": [
-      "unit-grot-mega-tank"
-    ],
-    "datasheet": "unit-grot-mega-tank",
-    "statline": "grot-mega-tank-profile"
-  },
-  "orks-weapon-mega-tank-weapons": {
-    "id": "orks-weapon-mega-tank-weapons",
-    "title": "Mega-tank weapons",
-    "summary": "Ranged · 18\" · A 10 · BS 4+ · S 5 · AP 0 · D 1 · Rapid Fire 10",
-    "full": "Ranged · 18\" · A 10 · BS 4+ · S 5 · AP 0 · D 1 · Rapid Fire 10",
-    "glossary": "glossary-orks-weapon-mega-tank-weapons",
-    "rule": "unit-grot-mega-tank",
-    "units": [
-      "unit-grot-mega-tank"
-    ],
-    "datasheet": "unit-grot-mega-tank",
-    "statline": "grot-mega-tank-profile"
-  },
-  "orks-weapon-twin-big-shoota-2": {
-    "id": "orks-weapon-twin-big-shoota-2",
-    "title": "Twin big shoota",
-    "summary": "Ranged · 18\" · A 3 · BS 4+ · S 5 · AP 0 · D 1 · Rapid Fire 2, Twin-linked",
-    "full": "Ranged · 18\" · A 3 · BS 4+ · S 5 · AP 0 · D 1 · Rapid Fire 2, Twin-linked",
-    "glossary": "glossary-orks-weapon-twin-big-shoota-2",
-    "rule": "unit-grot-mega-tank",
-    "units": [
-      "unit-grot-mega-tank"
-    ],
-    "datasheet": "unit-grot-mega-tank",
-    "statline": "grot-mega-tank-profile"
-  },
-  "orks-weapon-twin-grotzooka": {
-    "id": "orks-weapon-twin-grotzooka",
-    "title": "Twin grotzooka",
-    "summary": "Ranged · 18\" · A D3+3 · BS 4+ · S 6 · AP -1 · D 1 · Blast, Ignores Cover, Twin-linked",
-    "full": "Ranged · 18\" · A D3+3 · BS 4+ · S 6 · AP -1 · D 1 · Blast, Ignores Cover, Twin-linked",
-    "glossary": "glossary-orks-weapon-twin-grotzooka",
-    "rule": "unit-grot-mega-tank",
-    "units": [
-      "unit-grot-mega-tank"
-    ],
-    "datasheet": "unit-grot-mega-tank",
-    "statline": "grot-mega-tank-profile"
-  },
-  "orks-weapon-twin-kustom-mega-blasta": {
-    "id": "orks-weapon-twin-kustom-mega-blasta",
-    "title": "Twin kustom mega-blasta",
-    "summary": "Ranged · 24\" · A 2 · BS 4+ · S 9 · AP -2 · D D6 · Hazardous, Twin-linked",
-    "full": "Ranged · 24\" · A 2 · BS 4+ · S 9 · AP -2 · D D6 · Hazardous, Twin-linked",
-    "glossary": "glossary-orks-weapon-twin-kustom-mega-blasta",
-    "rule": "unit-grot-mega-tank",
-    "units": [
-      "unit-grot-mega-tank"
-    ],
-    "datasheet": "unit-grot-mega-tank",
-    "statline": "grot-mega-tank-profile"
-  },
-  "orks-weapon-twin-rokkit-launcha": {
-    "id": "orks-weapon-twin-rokkit-launcha",
-    "title": "Twin rokkit launcha",
-    "summary": "Ranged · 24\" · A D3 · BS 4+ · S 9 · AP -2 · D 3 · Blast, Twin-linked",
-    "full": "Ranged · 24\" · A D3 · BS 4+ · S 9 · AP -2 · D 3 · Blast, Twin-linked",
-    "glossary": "glossary-orks-weapon-twin-rokkit-launcha",
-    "rule": "unit-grot-mega-tank",
-    "units": [
-      "unit-grot-mega-tank"
-    ],
-    "datasheet": "unit-grot-mega-tank",
-    "statline": "grot-mega-tank-profile"
-  },
-  "orks-weapon-twin-skorcha": {
-    "id": "orks-weapon-twin-skorcha",
-    "title": "Twin skorcha",
-    "summary": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP -1 · D 1 · Ignores Cover, Torrent, Twin-linked",
-    "full": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP -1 · D 1 · Ignores Cover, Torrent, Twin-linked",
-    "glossary": "glossary-orks-weapon-twin-skorcha",
-    "rule": "unit-grot-mega-tank",
-    "units": [
-      "unit-grot-mega-tank"
-    ],
-    "datasheet": "unit-grot-mega-tank",
-    "statline": "grot-mega-tank-profile"
-  },
-  "orks-ability-scatter": {
-    "id": "orks-ability-scatter",
-    "title": "Scatter!",
-    "summary": "In your opponent's Movement phase, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\".",
-    "full": "In your opponent's Movement phase, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\".",
-    "glossary": "glossary-orks-ability-scatter",
-    "rule": "unit-grot-tanks",
-    "units": [
-      "unit-grot-tanks"
-    ],
-    "datasheet": "unit-grot-tanks",
-    "statline": "grot-tanks-profile"
-  },
-  "orks-weapon-grot-tank-shoota": {
-    "id": "orks-weapon-grot-tank-shoota",
-    "title": "Grot tank shoota",
-    "summary": "Ranged · 36\" · A 3 · BS 4+ · S 5 · AP 0 · D 1 · Devastating Wounds, Rapid Fire 2",
-    "full": "Ranged · 36\" · A 3 · BS 4+ · S 5 · AP 0 · D 1 · Devastating Wounds, Rapid Fire 2",
-    "glossary": "glossary-orks-weapon-grot-tank-shoota",
-    "rule": "unit-grot-tanks",
-    "units": [
-      "unit-grot-tanks"
-    ],
-    "datasheet": "unit-grot-tanks",
-    "statline": "grot-tanks-profile"
-  },
-  "orks-weapon-ramshackle-hull": {
-    "id": "orks-weapon-ramshackle-hull",
-    "title": "Ramshackle hull",
-    "summary": "Melee · Melee · A 3 · WS 5+ · S 6 · AP 0 · D 1",
-    "full": "Melee · Melee · A 3 · WS 5+ · S 6 · AP 0 · D 1",
-    "glossary": "glossary-orks-weapon-ramshackle-hull",
-    "rule": "unit-grot-tanks",
-    "units": [
-      "unit-grot-tanks"
-    ],
-    "datasheet": "unit-grot-tanks",
-    "statline": "grot-tanks-profile"
-  },
-  "orks-weapon-kustom-mega-blasta-2": {
-    "id": "orks-weapon-kustom-mega-blasta-2",
-    "title": "Kustom mega-blasta",
-    "summary": "Ranged · 24\" · A 2 · BS 4+ · S 9 · AP -2 · D D6 · Hazardous",
-    "full": "Ranged · 24\" · A 2 · BS 4+ · S 9 · AP -2 · D D6 · Hazardous",
-    "glossary": "glossary-orks-weapon-kustom-mega-blasta-2",
-    "rule": "unit-grot-tanks",
-    "units": [
-      "unit-grot-tanks"
-    ],
-    "datasheet": "unit-grot-tanks",
-    "statline": "grot-tanks-profile"
-  },
-  "orks-ability-big-booms": {
-    "id": "orks-ability-big-booms",
-    "title": "Big Booms",
-    "summary": "In your Shooting phase, just after selecting a target for this model’s supa-kannon, roll one D6 for the target unit and every other unit within 3\" of that unit: on a 5+, the unit being rolled for is struck by a concussive wave. After this model has finished making its attacks against that target unit this phase, each unit struck by a concussive wave this phase suffers D3 mortal wounds.",
-    "full": "In your Shooting phase, just after selecting a target for this model’s supa-kannon, roll one D6 for the target unit and every other unit within 3\" of that unit: on a 5+, the unit being rolled for is struck by a concussive wave. After this model has finished making its attacks against that target unit this phase, each unit struck by a concussive wave this phase suffers D3 mortal wounds.",
-    "glossary": "glossary-orks-ability-big-booms",
-    "rule": "unit-kannonwagon",
-    "units": [
-      "unit-kannonwagon"
-    ],
-    "datasheet": "unit-kannonwagon",
-    "statline": "kannonwagon-profile"
-  },
-  "orks-ability-firing-deck-6": {
-    "id": "orks-ability-firing-deck-6",
-    "title": "Firing Deck 6",
-    "summary": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "full": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "glossary": "glossary-orks-ability-firing-deck-6",
-    "rule": "unit-kannonwagon",
-    "units": [
-      "unit-kannonwagon"
-    ],
-    "datasheet": "unit-kannonwagon",
-    "statline": "kannonwagon-profile"
-  },
-  "orks-weapon-spiked-ram": {
-    "id": "orks-weapon-spiked-ram",
-    "title": "Spiked ram",
-    "summary": "Melee · Melee · A 3 · WS 4+ · S 8 · AP 0 · D 1",
-    "full": "Melee · Melee · A 3 · WS 4+ · S 8 · AP 0 · D 1",
-    "glossary": "glossary-orks-weapon-spiked-ram",
-    "rule": "unit-kannonwagon",
-    "units": [
-      "unit-kannonwagon"
-    ],
-    "datasheet": "unit-kannonwagon",
-    "statline": "kannonwagon-profile"
-  },
-  "orks-ability-flashiest-gitz": {
-    "id": "orks-ability-flashiest-gitz",
-    "title": "Flashiest Gitz",
-    "summary": "While this model is leading a unit, each time a model in that unit makes a ranged attack, you can re-roll the Hit roll.",
-    "full": "While this model is leading a unit, each time a model in that unit makes a ranged attack, you can re-roll the Hit roll.",
-    "glossary": "glossary-orks-ability-flashiest-gitz",
-    "rule": "unit-kaptin-badrukk",
-    "units": [
-      "unit-kaptin-badrukk"
-    ],
-    "datasheet": "unit-kaptin-badrukk",
-    "statline": "kaptin-badrukk-profile"
-  },
-  "orks-ability-ded-glowy-ammo-aura": {
-    "id": "orks-ability-ded-glowy-ammo-aura",
-    "title": "Ded Glowy Ammo (Aura)",
-    "summary": "While an enemy INFANTRY unit is within 6\" of this model, subtract 1 from the Toughness characteristic of models in that unit.",
-    "full": "While an enemy INFANTRY unit is within 6\" of this model, subtract 1 from the Toughness characteristic of models in that unit.",
-    "glossary": "glossary-orks-ability-ded-glowy-ammo-aura",
-    "rule": "unit-kaptin-badrukk",
-    "units": [
-      "unit-kaptin-badrukk"
-    ],
-    "datasheet": "unit-kaptin-badrukk",
-    "statline": "kaptin-badrukk-profile"
-  },
-  "orks-ability-leader-17": {
-    "id": "orks-ability-leader-17",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - Flash Gitz",
-    "full": "This model can be attached to the following unit: - Flash Gitz",
-    "glossary": "glossary-orks-ability-leader-17",
-    "rule": "unit-kaptin-badrukk",
-    "units": [
-      "unit-kaptin-badrukk"
-    ],
-    "datasheet": "unit-kaptin-badrukk",
-    "statline": "kaptin-badrukk-profile"
-  },
-  "orks-weapon-choppa-5": {
-    "id": "orks-weapon-choppa-5",
-    "title": "Choppa",
-    "summary": "Melee · Melee · A 6 · WS 2+ · S 5 · AP -1 · D 1",
-    "full": "Melee · Melee · A 6 · WS 2+ · S 5 · AP -1 · D 1",
-    "glossary": "glossary-orks-weapon-choppa-5",
-    "rule": "unit-kaptin-badrukk",
-    "units": [
-      "unit-kaptin-badrukk"
-    ],
-    "datasheet": "unit-kaptin-badrukk",
-    "statline": "kaptin-badrukk-profile"
-  },
-  "orks-weapon-da-rippa-standard": {
-    "id": "orks-weapon-da-rippa-standard",
-    "title": "➤ Da Rippa - standard",
-    "summary": "Ranged · 24\" · A 3 · BS 5+ · S 7 · AP -2 · D 2 · Heavy, Sustained Hits 1",
-    "full": "Ranged · 24\" · A 3 · BS 5+ · S 7 · AP -2 · D 2 · Heavy, Sustained Hits 1",
-    "glossary": "glossary-orks-weapon-da-rippa-standard",
-    "rule": "unit-kaptin-badrukk",
-    "units": [
-      "unit-kaptin-badrukk"
-    ],
-    "datasheet": "unit-kaptin-badrukk",
-    "statline": "kaptin-badrukk-profile"
-  },
-  "orks-weapon-da-rippa-supercharge": {
-    "id": "orks-weapon-da-rippa-supercharge",
-    "title": "➤ Da Rippa - supercharge",
-    "summary": "Ranged · 24\" · A 3 · BS 5+ · S 8 · AP -3 · D 3 · Hazardous, Heavy, Sustained Hits 1",
-    "full": "Ranged · 24\" · A 3 · BS 5+ · S 8 · AP -3 · D 3 · Hazardous, Heavy, Sustained Hits 1",
-    "glossary": "glossary-orks-weapon-da-rippa-supercharge",
-    "rule": "unit-kaptin-badrukk",
-    "units": [
-      "unit-kaptin-badrukk"
-    ],
-    "datasheet": "unit-kaptin-badrukk",
-    "statline": "kaptin-badrukk-profile"
-  },
-  "orks-ability-da-biggest-booms": {
-    "id": "orks-ability-da-biggest-booms",
-    "title": "Da Biggest Booms",
-    "summary": "In your Shooting phase, just after selecting a target for this model’s krusha kannon, the target unit and every other enemy INFANTRY unit within 3\" of that unit must take a Battle-shock test.",
-    "full": "In your Shooting phase, just after selecting a target for this model’s krusha kannon, the target unit and every other enemy INFANTRY unit within 3\" of that unit must take a Battle-shock test.",
-    "glossary": "glossary-orks-ability-da-biggest-booms",
-    "rule": "unit-kill-krusha",
-    "units": [
-      "unit-kill-krusha"
-    ],
-    "datasheet": "unit-kill-krusha",
-    "statline": "kill-krusha-profile"
-  },
-  "orks-weapon-krusha-kannon-tankhamma-shell": {
-    "id": "orks-weapon-krusha-kannon-tankhamma-shell",
-    "title": "➤ Krusha kannon - tankhamma shell",
-    "summary": "Ranged · 60\" · A 1 · BS 5+ · S 16 · AP -3 · D 6 · Heavy",
-    "full": "Ranged · 60\" · A 1 · BS 5+ · S 16 · AP -3 · D 6 · Heavy",
-    "glossary": "glossary-orks-weapon-krusha-kannon-tankhamma-shell",
-    "rule": "unit-kill-krusha",
-    "units": [
-      "unit-kill-krusha"
-    ],
-    "datasheet": "unit-kill-krusha",
-    "statline": "kill-krusha-profile"
-  },
-  "orks-weapon-krusha-kannon-blast-burna": {
-    "id": "orks-weapon-krusha-kannon-blast-burna",
-    "title": "➤ Krusha kannon - blast burna",
-    "summary": "Ranged · 48\" · A 3D6 · BS 5+ · S 6 · AP -1 · D 1 · Blast",
-    "full": "Ranged · 48\" · A 3D6 · BS 5+ · S 6 · AP -1 · D 1 · Blast",
-    "glossary": "glossary-orks-weapon-krusha-kannon-blast-burna",
-    "rule": "unit-kill-krusha",
-    "units": [
-      "unit-kill-krusha"
-    ],
-    "datasheet": "unit-kill-krusha",
-    "statline": "kill-krusha-profile"
-  },
-  "orks-weapon-tracks-and-wheels-2": {
-    "id": "orks-weapon-tracks-and-wheels-2",
-    "title": "Tracks and wheels",
-    "summary": "Melee · Melee · A 6 · WS 4+ · S 8 · AP -1 · D 1",
-    "full": "Melee · Melee · A 6 · WS 4+ · S 8 · AP -1 · D 1",
-    "glossary": "glossary-orks-weapon-tracks-and-wheels-2",
-    "rule": "unit-kill-krusha",
-    "units": [
-      "unit-kill-krusha"
-    ],
-    "datasheet": "unit-kill-krusha",
-    "statline": "kill-krusha-profile"
-  },
-  "orks-ability-wall-of-dakka": {
-    "id": "orks-ability-wall-of-dakka",
-    "title": "Wall of Dakka",
-    "summary": "Each time this model makes a ranged attack that targets a unit within half range, add 1 to the Hit roll.",
-    "full": "Each time this model makes a ranged attack that targets a unit within half range, add 1 to the Hit roll.",
-    "glossary": "glossary-orks-ability-wall-of-dakka",
-    "rule": "unit-kill-tank",
-    "units": [
-      "unit-kill-tank"
-    ],
-    "datasheet": "unit-kill-tank",
-    "statline": "kill-tank-profile"
-  },
-  "orks-ability-damaged-1-8-wounds-remaining": {
-    "id": "orks-ability-damaged-1-8-wounds-remaining",
-    "title": "Damaged: 1-8 Wounds Remaining",
-    "summary": "While this model has 1-8 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-8 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-orks-ability-damaged-1-8-wounds-remaining",
-    "rule": "unit-kill-tank",
-    "units": [
-      "unit-kill-tank"
-    ],
-    "datasheet": "unit-kill-tank",
-    "statline": "kill-tank-profile"
-  },
-  "orks-weapon-reinforced-ram": {
-    "id": "orks-weapon-reinforced-ram",
-    "title": "Reinforced ram",
-    "summary": "Melee · Melee · A 8 · WS 4+ · S 9 · AP -1 · D 2",
-    "full": "Melee · Melee · A 8 · WS 4+ · S 9 · AP -1 · D 2",
-    "glossary": "glossary-orks-weapon-reinforced-ram",
-    "rule": "unit-kill-tank",
-    "units": [
-      "unit-kill-tank"
-    ],
-    "datasheet": "unit-kill-tank",
-    "statline": "kill-tank-profile"
-  },
-  "orks-weapon-bursta-kannon": {
-    "id": "orks-weapon-bursta-kannon",
-    "title": "Bursta kannon",
-    "summary": "Ranged · 36\" · A 3D6 · BS 5+ · S 14 · AP -2 · D 3 · Blast",
-    "full": "Ranged · 36\" · A 3D6 · BS 5+ · S 14 · AP -2 · D 3 · Blast",
-    "glossary": "glossary-orks-weapon-bursta-kannon",
-    "rule": "unit-kill-tank",
-    "units": [
-      "unit-kill-tank"
-    ],
-    "datasheet": "unit-kill-tank",
-    "statline": "kill-tank-profile"
-  },
-  "orks-weapon-giga-shoota": {
-    "id": "orks-weapon-giga-shoota",
-    "title": "Giga shoota",
-    "summary": "Ranged · 48\" · A 30 · BS 5+ · S 6 · AP -1 · D 1 · Sustained Hits 1",
-    "full": "Ranged · 48\" · A 30 · BS 5+ · S 6 · AP -1 · D 1 · Sustained Hits 1",
-    "glossary": "glossary-orks-weapon-giga-shoota",
-    "rule": "unit-kill-tank",
-    "units": [
-      "unit-kill-tank"
-    ],
-    "datasheet": "unit-kill-tank",
-    "statline": "kill-tank-profile"
-  },
-  "orks-ability-da-bigger-dey-are-da-better-dey-drop": {
-    "id": "orks-ability-da-bigger-dey-are-da-better-dey-drop",
-    "title": "Da Bigger Dey Are, da Better Dey Drop",
-    "summary": "Each time an attack made with this model’s lifta-droppa destroys an enemy model that has the Deadly Demise ability, that model’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 3+ instead of on a 6.",
-    "full": "Each time an attack made with this model’s lifta-droppa destroys an enemy model that has the Deadly Demise ability, that model’s Deadly Demise ability inflicts mortal wounds on a D6 roll of 3+ instead of on a 6.",
-    "glossary": "glossary-orks-ability-da-bigger-dey-are-da-better-dey-drop",
-    "rule": "unit-lifta-wagon",
-    "units": [
-      "unit-lifta-wagon"
-    ],
-    "datasheet": "unit-lifta-wagon",
-    "statline": "lifta-wagon-profile"
-  },
-  "orks-weapon-lifta-droppa": {
-    "id": "orks-weapon-lifta-droppa",
-    "title": "Lifta-droppa",
-    "summary": "Ranged · 36\" · A 4 · BS 5+ · S 6 · AP -3 · D D6+1 · Anti-Vehicle 3+",
-    "full": "Ranged · 36\" · A 4 · BS 5+ · S 6 · AP -3 · D D6+1 · Anti-Vehicle 3+",
-    "glossary": "glossary-orks-weapon-lifta-droppa",
-    "rule": "unit-lifta-wagon",
-    "units": [
-      "unit-lifta-wagon"
-    ],
-    "datasheet": "unit-lifta-wagon",
-    "statline": "lifta-wagon-profile"
-  },
-  "orks-ability-mad-dok": {
-    "id": "orks-ability-mad-dok",
-    "title": "Mad Dok",
-    "summary": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability.",
-    "full": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability.",
-    "glossary": "glossary-orks-ability-mad-dok",
-    "rule": "unit-mad-dok-grotsnik",
-    "units": [
-      "unit-mad-dok-grotsnik"
-    ],
-    "datasheet": "unit-mad-dok-grotsnik",
-    "statline": "mad-dok-grotsnik-profile"
-  },
-  "orks-ability-one-scalpel-short-of-a-medpack": {
-    "id": "orks-ability-one-scalpel-short-of-a-medpack",
-    "title": "One Scalpel Short of a Medpack",
-    "summary": "While this model is leading a unit, that unit is eligible to declare a charge in a turn in which it Fell Back.",
-    "full": "While this model is leading a unit, that unit is eligible to declare a charge in a turn in which it Fell Back.",
-    "glossary": "glossary-orks-ability-one-scalpel-short-of-a-medpack",
-    "rule": "unit-mad-dok-grotsnik",
-    "units": [
-      "unit-mad-dok-grotsnik"
-    ],
-    "datasheet": "unit-mad-dok-grotsnik",
-    "statline": "mad-dok-grotsnik-profile"
-  },
-  "orks-ability-leader-18": {
-    "id": "orks-ability-leader-18",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: - Boyz - Burna Boyz - Tankbustas - Lootas - Nobz",
-    "full": "This model can be attached to the following units: - Boyz - Burna Boyz - Tankbustas - Lootas - Nobz",
-    "glossary": "glossary-orks-ability-leader-18",
-    "rule": "unit-mad-dok-grotsnik",
-    "units": [
-      "unit-mad-dok-grotsnik"
-    ],
-    "datasheet": "unit-mad-dok-grotsnik",
-    "statline": "mad-dok-grotsnik-profile"
-  },
-  "orks-weapon-power-klaw-5": {
-    "id": "orks-weapon-power-klaw-5",
-    "title": "Power klaw",
-    "summary": "Melee · Melee · A 4 · WS 3+ · S 9 · AP -2 · D 2 · Sustained Hits 1",
-    "full": "Melee · Melee · A 4 · WS 3+ · S 9 · AP -2 · D 2 · Sustained Hits 1",
-    "glossary": "glossary-orks-weapon-power-klaw-5",
-    "rule": "unit-mad-dok-grotsnik",
-    "units": [
-      "unit-mad-dok-grotsnik"
-    ],
-    "datasheet": "unit-mad-dok-grotsnik",
-    "statline": "mad-dok-grotsnik-profile"
-  },
-  "orks-ability-mega-carnage": {
-    "id": "orks-ability-mega-carnage",
-    "title": "Mega Carnage",
-    "summary": "Each time this model is selected to fight, you can select one enemy unit within Engagement Range of it and roll one D6, adding 2 to the result if this model made a Charge move this turn: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers 3 mortal wounds.",
-    "full": "Each time this model is selected to fight, you can select one enemy unit within Engagement Range of it and roll one D6, adding 2 to the result if this model made a Charge move this turn: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers 3 mortal wounds.",
-    "glossary": "glossary-orks-ability-mega-carnage",
-    "rule": "unit-mega-dread",
-    "units": [
-      "unit-mega-dread"
-    ],
-    "datasheet": "unit-mega-dread",
-    "statline": "mega-dread-profile"
-  },
-  "orks-ability-dead-rippy": {
-    "id": "orks-ability-dead-rippy",
-    "title": "Dead Rippy",
-    "summary": "If this model is equipped with 2 dread killsaws, those weapons have the [TWIN-LINKED] ability. If this model is equipped with 2 dread rippa klaws, those weapons have the [TWIN-LINKED] ability.",
-    "full": "If this model is equipped with 2 dread killsaws, those weapons have the [TWIN-LINKED] ability. If this model is equipped with 2 dread rippa klaws, those weapons have the [TWIN-LINKED] ability.",
-    "glossary": "glossary-orks-ability-dead-rippy",
-    "rule": "unit-mega-dread",
-    "units": [
-      "unit-mega-dread"
-    ],
-    "datasheet": "unit-mega-dread",
-    "statline": "mega-dread-profile"
-  },
-  "orks-weapon-boombits": {
-    "id": "orks-weapon-boombits",
-    "title": "Boombits",
-    "summary": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP 0 · D 1 · Torrent",
-    "full": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP 0 · D 1 · Torrent",
-    "glossary": "glossary-orks-weapon-boombits",
-    "rule": "unit-mega-dread",
-    "units": [
-      "unit-mega-dread"
-    ],
-    "datasheet": "unit-mega-dread",
-    "statline": "mega-dread-profile"
-  },
-  "orks-weapon-dread-killsaw": {
-    "id": "orks-weapon-dread-killsaw",
-    "title": "Dread killsaw",
-    "summary": "Melee · Melee · A 4 · WS 3+ · S 14 · AP -3 · D 4",
-    "full": "Melee · Melee · A 4 · WS 3+ · S 14 · AP -3 · D 4",
-    "glossary": "glossary-orks-weapon-dread-killsaw",
-    "rule": "unit-mega-dread",
-    "units": [
-      "unit-mega-dread",
-      "unit-meka-dread"
-    ],
-    "datasheet": "unit-mega-dread",
-    "statline": "mega-dread-profile"
-  },
-  "orks-weapon-killkannon-2": {
-    "id": "orks-weapon-killkannon-2",
-    "title": "Killkannon",
-    "summary": "Ranged · 24\" · A D6+3 · BS 5+ · S 9 · AP -2 · D 2",
-    "full": "Ranged · 24\" · A D6+3 · BS 5+ · S 9 · AP -2 · D 2",
-    "glossary": "glossary-orks-weapon-killkannon-2",
-    "rule": "unit-mega-dread",
-    "units": [
-      "unit-mega-dread",
-      "unit-meka-dread"
-    ],
-    "datasheet": "unit-mega-dread",
-    "statline": "mega-dread-profile"
-  },
-  "orks-weapon-dread-rippa-klaw": {
-    "id": "orks-weapon-dread-rippa-klaw",
-    "title": "Dread rippa klaw",
-    "summary": "Melee · Melee · A 6 · WS 3+ · S 12 · AP -2 · D 3",
-    "full": "Melee · Melee · A 6 · WS 3+ · S 12 · AP -2 · D 3",
-    "glossary": "glossary-orks-weapon-dread-rippa-klaw",
-    "rule": "unit-mega-dread",
-    "units": [
-      "unit-mega-dread",
-      "unit-meka-dread"
-    ],
-    "datasheet": "unit-mega-dread",
-    "statline": "mega-dread-profile"
-  },
-  "orks-weapon-stompy-feet-3": {
-    "id": "orks-weapon-stompy-feet-3",
-    "title": "Stompy feet",
-    "summary": "Melee · Melee · A 4 · WS 3+ · S 7 · AP 0 · D 1",
-    "full": "Melee · Melee · A 4 · WS 3+ · S 7 · AP 0 · D 1",
-    "glossary": "glossary-orks-weapon-stompy-feet-3",
-    "rule": "unit-mega-dread",
-    "units": [
-      "unit-mega-dread",
-      "unit-meka-dread"
-    ],
-    "datasheet": "unit-mega-dread",
-    "statline": "mega-dread-profile"
-  },
-  "orks-ability-workshop": {
-    "id": "orks-ability-workshop",
-    "title": "Workshop",
-    "summary": "When this FORTIFICATION is set up, all parts of it must be set up within 1” of another part. At the end of your Movement phase, each friendly ORKS VEHICLE model within 12” of this FORTIFICATION can regain up to D3 lost wounds (roll separately for each model). Each model can only be affected by this ability once per turn.",
-    "full": "When this FORTIFICATION is set up, all parts of it must be set up within 1” of another part. At the end of your Movement phase, each friendly ORKS VEHICLE model within 12” of this FORTIFICATION can regain up to D3 lost wounds (roll separately for each model). Each model can only be affected by this ability once per turn.",
-    "glossary": "glossary-orks-ability-workshop",
-    "rule": "unit-mekboy-workshop",
-    "units": [
-      "unit-mekboy-workshop"
-    ],
-    "datasheet": "unit-mekboy-workshop",
-    "statline": "mekboy-workshop-profile"
-  },
-  "orks-ability-drive-by-krumpin": {
-    "id": "orks-ability-drive-by-krumpin",
-    "title": "Drive-by Krumpin'",
-    "summary": "Each time this unit Consolidates, each model in this unit can move up to 6\" instead of up to 3\".",
-    "full": "Each time this unit Consolidates, each model in this unit can move up to 6\" instead of up to 3\".",
-    "glossary": "glossary-orks-ability-drive-by-krumpin",
-    "rule": "unit-nobz-on-warbikes",
-    "units": [
-      "unit-nobz-on-warbikes"
-    ],
-    "datasheet": "unit-nobz-on-warbikes",
-    "statline": "nobz-on-warbikes-profile"
-  },
-  "orks-ability-speed-freeks-mob": {
-    "id": "orks-ability-speed-freeks-mob",
-    "title": "Speed Freeks Mob",
-    "summary": "If a model from your army with the Leader ability can be attached to a Warbikers unit, it can be attached to this unit instead.",
-    "full": "If a model from your army with the Leader ability can be attached to a Warbikers unit, it can be attached to this unit instead.",
-    "glossary": "glossary-orks-ability-speed-freeks-mob",
-    "rule": "unit-nobz-on-warbikes",
-    "units": [
-      "unit-nobz-on-warbikes"
-    ],
-    "datasheet": "unit-nobz-on-warbikes",
-    "statline": "nobz-on-warbikes-profile"
-  },
-  "orks-weapon-power-stabba": {
-    "id": "orks-weapon-power-stabba",
-    "title": "Power stabba",
-    "summary": "Melee · Melee · A 3 · WS 4+ · S 8 · AP -1 · D 2 · Lance",
-    "full": "Melee · Melee · A 3 · WS 4+ · S 8 · AP -1 · D 2 · Lance",
-    "glossary": "glossary-orks-weapon-power-stabba",
-    "rule": "unit-nobz-on-warbikes",
-    "units": [
-      "unit-nobz-on-warbikes"
-    ],
-    "datasheet": "unit-nobz-on-warbikes",
-    "statline": "nobz-on-warbikes-profile"
-  },
-  "orks-ability-feel-no-pain": {
-    "id": "orks-ability-feel-no-pain",
-    "title": "Feel No Pain",
-    "summary": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
-    "full": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
-    "glossary": "glossary-orks-ability-feel-no-pain",
-    "rule": "unit-painboy-on-warbike",
-    "units": [
-      "unit-painboy-on-warbike"
-    ],
-    "datasheet": "unit-painboy-on-warbike",
-    "statline": "painboy-on-warbike-profile"
-  },
-  "orks-ability-pyromaniaks-2": {
-    "id": "orks-ability-pyromaniaks-2",
-    "title": "Pyromaniaks",
-    "summary": "Each time a model in this unit makes a ranged attack with a Torrent weapon that targets an enemy unit within 6\", re-roll a Wound roll of 1. If the target of that attack is also within range of an objective marker, you can re-roll the Wound roll instead.",
-    "full": "Each time a model in this unit makes a ranged attack with a Torrent weapon that targets an enemy unit within 6\", re-roll a Wound roll of 1. If the target of that attack is also within range of an objective marker, you can re-roll the Wound roll instead.",
-    "glossary": "glossary-orks-ability-pyromaniaks-2",
-    "rule": "unit-skorchas",
-    "units": [
-      "unit-skorchas"
-    ],
-    "datasheet": "unit-skorchas",
-    "statline": "skorchas-profile"
-  },
-  "orks-ability-speed-freeks": {
-    "id": "orks-ability-speed-freeks",
-    "title": "Speed Freeks",
-    "summary": "If a model from your army with the Leader ability can be attached to a Warbikers unit, it can be attached to this unit instead.",
-    "full": "If a model from your army with the Leader ability can be attached to a Warbikers unit, it can be attached to this unit instead.",
-    "glossary": "glossary-orks-ability-speed-freeks",
-    "rule": "unit-skorchas",
-    "units": [
-      "unit-skorchas",
-      "unit-warbuggies"
-    ],
-    "datasheet": "unit-skorchas",
-    "statline": "skorchas-profile"
-  },
-  "orks-ability-trample": {
-    "id": "orks-ability-trample",
-    "title": "Trample",
-    "summary": "Each time this model is selected to fight, you can select one enemy unit within Engagement Range of it and roll one D6, adding 2 to the result if this model made a Charge move this turn: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers 3 mortal wounds.",
-    "full": "Each time this model is selected to fight, you can select one enemy unit within Engagement Range of it and roll one D6, adding 2 to the result if this model made a Charge move this turn: on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6+, that enemy unit suffers 3 mortal wounds.",
-    "glossary": "glossary-orks-ability-trample",
-    "rule": "unit-squiggoth",
-    "units": [
-      "unit-squiggoth"
-    ],
-    "datasheet": "unit-squiggoth",
-    "statline": "squiggoth-profile"
-  },
-  "orks-ability-damaged-1-6-wounds-remaining": {
-    "id": "orks-ability-damaged-1-6-wounds-remaining",
-    "title": "Damaged: 1-6 Wounds Remaining",
-    "summary": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-orks-ability-damaged-1-6-wounds-remaining",
-    "rule": "unit-squiggoth",
-    "units": [
-      "unit-squiggoth"
-    ],
-    "datasheet": "unit-squiggoth",
-    "statline": "squiggoth-profile"
-  },
-  "orks-ability-firing-deck-10": {
-    "id": "orks-ability-firing-deck-10",
-    "title": "Firing Deck 10",
-    "summary": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "full": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "glossary": "glossary-orks-ability-firing-deck-10",
-    "rule": "unit-squiggoth",
-    "units": [
-      "unit-squiggoth"
-    ],
-    "datasheet": "unit-squiggoth",
-    "statline": "squiggoth-profile"
-  },
-  "orks-weapon-gorin-horns-sweep": {
-    "id": "orks-weapon-gorin-horns-sweep",
-    "title": "➤ Gorin’ horns - sweep",
-    "summary": "Melee · Melee · A 8 · WS 3+ · S 9 · AP -1 · D 2",
-    "full": "Melee · Melee · A 8 · WS 3+ · S 9 · AP -1 · D 2",
-    "glossary": "glossary-orks-weapon-gorin-horns-sweep",
-    "rule": "unit-squiggoth",
-    "units": [
-      "unit-squiggoth"
-    ],
-    "datasheet": "unit-squiggoth",
-    "statline": "squiggoth-profile"
-  },
-  "orks-weapon-gorin-horns-strike": {
-    "id": "orks-weapon-gorin-horns-strike",
-    "title": "➤ Gorin’ horns - strike",
-    "summary": "Melee · Melee · A 4 · WS 3+ · S 12 · AP -2 · D D6",
-    "full": "Melee · Melee · A 4 · WS 3+ · S 12 · AP -2 · D D6",
-    "glossary": "glossary-orks-weapon-gorin-horns-strike",
-    "rule": "unit-squiggoth",
-    "units": [
-      "unit-squiggoth"
-    ],
-    "datasheet": "unit-squiggoth",
-    "statline": "squiggoth-profile"
-  },
-  "orks-ability-tellyporta-tech": {
-    "id": "orks-ability-tellyporta-tech",
-    "title": "Tellyporta Tech",
-    "summary": "While this model is leading a unit, models in that unit have the Deep Strike ability.",
-    "full": "While this model is leading a unit, models in that unit have the Deep Strike ability.",
-    "glossary": "glossary-orks-ability-tellyporta-tech",
-    "rule": "unit-ufthak-blackhawk",
-    "units": [
-      "unit-ufthak-blackhawk"
-    ],
-    "datasheet": "unit-ufthak-blackhawk",
-    "statline": "ufthak-blackhawk-profile"
-  },
-  "orks-ability-gargantsmasha": {
-    "id": "orks-ability-gargantsmasha",
-    "title": "Gargantsmasha",
-    "summary": "Each time this model makes an attack that targets a Titanic* unit, you can re-roll the Hit roll and you can re-roll the Wound roll.",
-    "full": "Each time this model makes an attack that targets a Titanic* unit, you can re-roll the Hit roll and you can re-roll the Wound roll.",
-    "glossary": "glossary-orks-ability-gargantsmasha",
-    "rule": "unit-ufthak-blackhawk",
-    "units": [
-      "unit-ufthak-blackhawk"
-    ],
-    "datasheet": "unit-ufthak-blackhawk",
-    "statline": "ufthak-blackhawk-profile"
-  },
-  "orks-ability-leader-19": {
-    "id": "orks-ability-leader-19",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: - BOYZ - NOBZ",
-    "full": "This model can be attached to the following units: - BOYZ - NOBZ",
-    "glossary": "glossary-orks-ability-leader-19",
-    "rule": "unit-ufthak-blackhawk",
-    "units": [
-      "unit-ufthak-blackhawk"
-    ],
-    "datasheet": "unit-ufthak-blackhawk",
-    "statline": "ufthak-blackhawk-profile"
-  },
-  "orks-weapon-shokk-rifle": {
-    "id": "orks-weapon-shokk-rifle",
-    "title": "Shokk rifle",
-    "summary": "Ranged · 24\" · A 1 · BS 4+ · S 8 · AP -2 · D D6+1 · Devastating Wounds, Hazardous, Precision",
-    "full": "Ranged · 24\" · A 1 · BS 4+ · S 8 · AP -2 · D D6+1 · Devastating Wounds, Hazardous, Precision",
-    "glossary": "glossary-orks-weapon-shokk-rifle",
-    "rule": "unit-ufthak-blackhawk",
-    "units": [
-      "unit-ufthak-blackhawk"
-    ],
-    "datasheet": "unit-ufthak-blackhawk",
-    "statline": "ufthak-blackhawk-profile"
-  },
-  "orks-weapon-princess-jaws": {
-    "id": "orks-weapon-princess-jaws",
-    "title": "Princess' jaws",
-    "summary": "Melee · Melee · A 2 · WS 4+ · S 4 · AP 0 · D 1 · Extra Attacks",
-    "full": "Melee · Melee · A 2 · WS 4+ · S 4 · AP 0 · D 1 · Extra Attacks",
-    "glossary": "glossary-orks-weapon-princess-jaws",
-    "rule": "unit-ufthak-blackhawk",
-    "units": [
-      "unit-ufthak-blackhawk"
-    ],
-    "datasheet": "unit-ufthak-blackhawk",
-    "statline": "ufthak-blackhawk-profile"
-  },
-  "orks-weapon-snazzhammer": {
-    "id": "orks-weapon-snazzhammer",
-    "title": "Snazzhammer",
-    "summary": "Melee · Melee · A 4 · WS 3+ · S 10 · AP -2 · D 2 · Devastating Wounds",
-    "full": "Melee · Melee · A 4 · WS 3+ · S 10 · AP -2 · D 2 · Devastating Wounds",
-    "glossary": "glossary-orks-weapon-snazzhammer",
-    "rule": "unit-ufthak-blackhawk",
-    "units": [
-      "unit-ufthak-blackhawk"
-    ],
-    "datasheet": "unit-ufthak-blackhawk",
-    "statline": "ufthak-blackhawk-profile"
-  },
-  "orks-ability-high-octane-fuel": {
-    "id": "orks-ability-high-octane-fuel",
-    "title": "High-octane Fuel",
-    "summary": "Each time this model’s unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in this model’s unit.",
-    "full": "Each time this model’s unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in this model’s unit.",
-    "glossary": "glossary-orks-ability-high-octane-fuel",
-    "rule": "unit-warboss-on-warbike",
-    "units": [
-      "unit-warboss-on-warbike"
-    ],
-    "datasheet": "unit-warboss-on-warbike",
-    "statline": "warboss-on-warbike-profile"
-  },
-  "orks-ability-leader-20": {
-    "id": "orks-ability-leader-20",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: - NOBZ ON WARBIKES - SKORCHAS - WARBIKERS - WARBUGGIES",
-    "full": "This model can be attached to the following units: - NOBZ ON WARBIKES - SKORCHAS - WARBIKERS - WARBUGGIES",
-    "glossary": "glossary-orks-ability-leader-20",
-    "rule": "unit-warboss-on-warbike",
-    "units": [
-      "unit-warboss-on-warbike"
-    ],
-    "datasheet": "unit-warboss-on-warbike",
-    "statline": "warboss-on-warbike-profile"
-  },
-  "orks-ability-outflank": {
-    "id": "orks-ability-outflank",
-    "title": "Outflank",
-    "summary": "When this unit arrives from Strategic Reserves, it can be set up within your opponent’s deployment zone (all other restrictions still apply).",
-    "full": "When this unit arrives from Strategic Reserves, it can be set up within your opponent’s deployment zone (all other restrictions still apply).",
-    "glossary": "glossary-orks-ability-outflank",
-    "rule": "unit-warbuggies",
-    "units": [
-      "unit-warbuggies"
-    ],
-    "datasheet": "unit-warbuggies",
-    "statline": "warbuggies-profile"
-  },
-  "orks-weapon-rack-of-rokkits": {
-    "id": "orks-weapon-rack-of-rokkits",
-    "title": "Rack of rokkits",
-    "summary": "Ranged · 24\" · A D3+1 · BS 5+ · S 9 · AP -2 · D 3 · Blast",
-    "full": "Ranged · 24\" · A D3+1 · BS 5+ · S 9 · AP -2 · D 3 · Blast",
-    "glossary": "glossary-orks-weapon-rack-of-rokkits",
-    "rule": "unit-warbuggies",
-    "units": [
-      "unit-warbuggies"
-    ],
-    "datasheet": "unit-warbuggies",
-    "statline": "warbuggies-profile"
-  },
   "orks-enhancement-eadstompa": {
     "id": "orks-enhancement-eadstompa",
-    "title": "'Eadstompa",
+    "title": "’Eadstompa",
     "summary": "Infantry Warboss model only. Each time the bearer makes an attack that targets a unit that is below its Starting Strength, re-roll a Wound roll of 1. If that unit is Below Half-strength, you can re-roll the Wound roll instead.",
     "full": "Infantry Warboss model only. Each time the bearer makes an attack that targets a unit that is below its Starting Strength, re-roll a Wound roll of 1. If that unit is Below Half-strength, you can re-roll the Wound roll instead.",
     "glossary": "glossary-orks-enhancement-eadstompa",
@@ -6590,7 +4113,7 @@ window.DG_TERMS={
   },
   "orks-enhancement-surly-as-a-squiggoth": {
     "id": "orks-enhancement-surly-as-a-squiggoth",
-    "title": "Surly As A Squiggoth",
+    "title": "Surly as a Squiggoth",
     "summary": "Beastboss On Squigosaur model only. While the bearer is leading a unit, each time an attack targets that unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
     "full": "Beastboss On Squigosaur model only. While the bearer is leading a unit, each time an attack targets that unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
     "glossary": "glossary-orks-enhancement-surly-as-a-squiggoth",
@@ -6638,7 +4161,7 @@ window.DG_TERMS={
   },
   "orks-enhancement-brutal-but-kunnin": {
     "id": "orks-enhancement-brutal-but-kunnin",
-    "title": "Brutal But Kunnin'",
+    "title": "Brutal But Kunnin’",
     "summary": "Orks Infantry model only. In your Command phase, if the bearer is on the battlefield (or is embarked within a Transport that is on the battlefield), roll one D6, adding 2 to the result if the bearer's unit contains 10 or more models: on a 5+, you gain 1 CP.",
     "full": "Orks Infantry model only. In your Command phase, if the bearer is on the battlefield (or is embarked within a Transport that is on the battlefield), roll one D6, adding 2 to the result if the bearer's unit contains 10 or more models: on a 5+, you gain 1 CP.",
     "glossary": "glossary-orks-enhancement-brutal-but-kunnin",

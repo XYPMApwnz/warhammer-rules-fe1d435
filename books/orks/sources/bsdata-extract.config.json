@@ -22,7 +22,8 @@
   "outputs": {
     "snapshot": "bsdata-orks-11e.json",
     "datasheets": "../content/orks-codex-datasheets.en.json",
-    "points": "../content/orks-points.en.json"
+    "points": "../content/orks-points.en.json",
+    "officialPoints": "official-mfm-v1.2.json"
   },
   "filters": {
     "excludeNames": [
@@ -73,8 +74,10 @@
       "Freebooter Krew",
       "Speedwaaagh!",
       "Blitz Brigade",
-      "Rollin' Deff"
-    ]
+      "Rollin' Deff",
+      "Equatorial Hordes"
+    ],
+    "identity": "detachment-title"
   },
   "quarantine": {
     "detachments": [
@@ -92,17 +95,5 @@
       "Da Red Gobbo's A-bomb-inable Snowman [Legends]",
       "Da Red Gobbo's Tinboy [Legends]"
     ]
-  },
-  "pendingOverlays": [
-    {
-      "name": "Equatorial Hordes",
-      "authority": "official",
-      "status": "pending-structured-source",
-      "relatedEntries": [
-        "Warboss (Armageddon)",
-        "Boyz (Armageddon)",
-        "Gretchin (Armageddon)"
-      ]
-    }
-  ]
+  }
 }

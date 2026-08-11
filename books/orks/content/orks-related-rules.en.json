@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "faction": "Orks",
-  "sourceId": "orks-faction-pack-v1.0",
+  "sourceId": "orks-faction-pack-v1.1",
   "stratagems": {
     "brutal-broadside": {
       "v": 1,
@@ -613,6 +613,72 @@
         "was-within-engagement-range-of-that-enemy-at-start-of-phase",
         "not-within-engagement-range"
       ]
+    },
+    "concealed-krumpin": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ORKS",
+              "MOB"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "selected-to-attack"
+      ]
+    },
+    "stragglerz": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ORKS"
+            ],
+            "anyKeywords": [
+              "MOB",
+              "KOMMANDOS"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "command-phase"
+      ]
+    },
+    "deyre-over-ere": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ORKS"
+            ],
+            "anyKeywords": [
+              "MOB",
+              "KOMMANDOS"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "start-of-shooting-phase"
+      ]
     }
   },
   "enhancements": {
@@ -638,8 +704,7 @@
               "unit-warboss",
               "unit-warboss-in-mega-armour",
               "unit-weirdboy",
-              "unit-wurrboy",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-wurrboy"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -673,11 +738,7 @@
               "unit-warboss",
               "unit-warboss-in-mega-armour",
               "unit-weirdboy",
-              "unit-wurrboy",
-              "unit-big-mek-on-warbike",
-              "unit-big-mek-with-kustom-force-field",
-              "unit-painboy-on-warbike",
-              "unit-warboss-on-warbike"
+              "unit-wurrboy"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -700,8 +761,7 @@
               "unit-big-mek",
               "unit-big-mek-in-mega-armour",
               "unit-big-mek-with-shokk-attack-gun",
-              "unit-mek",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-mek"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -733,8 +793,7 @@
               "unit-warboss",
               "unit-warboss-in-mega-armour",
               "unit-weirdboy",
-              "unit-wurrboy",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-wurrboy"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -937,8 +996,7 @@
               "unit-big-mek",
               "unit-big-mek-in-mega-armour",
               "unit-big-mek-with-shokk-attack-gun",
-              "unit-mek",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-mek"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -961,8 +1019,7 @@
               "unit-big-mek",
               "unit-big-mek-in-mega-armour",
               "unit-big-mek-with-shokk-attack-gun",
-              "unit-mek",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-mek"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -985,8 +1042,7 @@
               "unit-big-mek",
               "unit-big-mek-in-mega-armour",
               "unit-big-mek-with-shokk-attack-gun",
-              "unit-mek",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-mek"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1009,8 +1065,7 @@
               "unit-big-mek",
               "unit-big-mek-in-mega-armour",
               "unit-big-mek-with-shokk-attack-gun",
-              "unit-mek",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-mek"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1034,8 +1089,7 @@
               "unit-beastboss-on-squigosaur",
               "unit-deffkilla-wartrike",
               "unit-warboss",
-              "unit-warboss-in-mega-armour",
-              "unit-warboss-on-warbike"
+              "unit-warboss-in-mega-armour"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1069,11 +1123,7 @@
               "unit-warboss",
               "unit-warboss-in-mega-armour",
               "unit-weirdboy",
-              "unit-wurrboy",
-              "unit-big-mek-on-warbike",
-              "unit-big-mek-with-kustom-force-field",
-              "unit-painboy-on-warbike",
-              "unit-warboss-on-warbike"
+              "unit-wurrboy"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1095,9 +1145,7 @@
             "unitIds": [
               "unit-big-mek",
               "unit-painboy",
-              "unit-big-mek-dakkarig",
-              "unit-big-mek-on-warbike",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-big-mek-dakkarig"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1131,11 +1179,7 @@
               "unit-warboss",
               "unit-warboss-in-mega-armour",
               "unit-weirdboy",
-              "unit-wurrboy",
-              "unit-big-mek-on-warbike",
-              "unit-big-mek-with-kustom-force-field",
-              "unit-painboy-on-warbike",
-              "unit-warboss-on-warbike"
+              "unit-wurrboy"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1179,8 +1223,7 @@
               "unit-meganobz",
               "unit-nobz",
               "unit-stormboyz",
-              "unit-tankbustas",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-tankbustas"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1224,8 +1267,7 @@
               "unit-meganobz",
               "unit-nobz",
               "unit-stormboyz",
-              "unit-tankbustas",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-tankbustas"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1269,8 +1311,7 @@
               "unit-meganobz",
               "unit-nobz",
               "unit-stormboyz",
-              "unit-tankbustas",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-tankbustas"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1314,8 +1355,7 @@
               "unit-meganobz",
               "unit-nobz",
               "unit-stormboyz",
-              "unit-tankbustas",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-tankbustas"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1359,8 +1399,7 @@
               "unit-meganobz",
               "unit-nobz",
               "unit-stormboyz",
-              "unit-tankbustas",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-tankbustas"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1394,11 +1433,7 @@
               "unit-warboss",
               "unit-warboss-in-mega-armour",
               "unit-weirdboy",
-              "unit-wurrboy",
-              "unit-big-mek-on-warbike",
-              "unit-big-mek-with-kustom-force-field",
-              "unit-painboy-on-warbike",
-              "unit-warboss-on-warbike"
+              "unit-wurrboy"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1482,8 +1517,7 @@
               "unit-meganobz",
               "unit-nobz",
               "unit-stormboyz",
-              "unit-tankbustas",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-tankbustas"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1527,8 +1561,7 @@
               "unit-meganobz",
               "unit-nobz",
               "unit-stormboyz",
-              "unit-tankbustas",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-tankbustas"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1615,8 +1648,7 @@
               "unit-big-mek",
               "unit-big-mek-in-mega-armour",
               "unit-big-mek-with-shokk-attack-gun",
-              "unit-mek",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-mek"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1657,9 +1689,7 @@
           "selector": {
             "unitIds": [
               "unit-big-mek",
-              "unit-big-mek-dakkarig",
-              "unit-big-mek-on-warbike",
-              "unit-big-mek-with-kustom-force-field"
+              "unit-big-mek-dakkarig"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1693,11 +1723,7 @@
               "unit-warboss",
               "unit-warboss-in-mega-armour",
               "unit-weirdboy",
-              "unit-wurrboy",
-              "unit-big-mek-on-warbike",
-              "unit-big-mek-with-kustom-force-field",
-              "unit-painboy-on-warbike",
-              "unit-warboss-on-warbike"
+              "unit-wurrboy"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1752,11 +1778,7 @@
               "unit-warboss",
               "unit-warboss-in-mega-armour",
               "unit-weirdboy",
-              "unit-wurrboy",
-              "unit-big-mek-on-warbike",
-              "unit-big-mek-with-kustom-force-field",
-              "unit-painboy-on-warbike",
-              "unit-warboss-on-warbike"
+              "unit-wurrboy"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1790,11 +1812,7 @@
               "unit-warboss",
               "unit-warboss-in-mega-armour",
               "unit-weirdboy",
-              "unit-wurrboy",
-              "unit-big-mek-on-warbike",
-              "unit-big-mek-with-kustom-force-field",
-              "unit-painboy-on-warbike",
-              "unit-warboss-on-warbike"
+              "unit-wurrboy"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1828,11 +1846,7 @@
               "unit-warboss",
               "unit-warboss-in-mega-armour",
               "unit-weirdboy",
-              "unit-wurrboy",
-              "unit-big-mek-on-warbike",
-              "unit-big-mek-with-kustom-force-field",
-              "unit-painboy-on-warbike",
-              "unit-warboss-on-warbike"
+              "unit-wurrboy"
             ],
             "noneKeywords": [
               "EPIC HERO"
@@ -1866,11 +1880,67 @@
               "unit-warboss",
               "unit-warboss-in-mega-armour",
               "unit-weirdboy",
-              "unit-wurrboy",
-              "unit-big-mek-on-warbike",
-              "unit-big-mek-with-kustom-force-field",
-              "unit-painboy-on-warbike",
-              "unit-warboss-on-warbike"
+              "unit-wurrboy"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "kunnin-hunta": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "alternatives": [
+              {
+                "allKeywords": [
+                  "BEASTBOSS"
+                ]
+              },
+              {
+                "allKeywords": [
+                  "INFANTRY",
+                  "WARBOSS"
+                ]
+              }
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "unkillable-scourge": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "alternatives": [
+              {
+                "allKeywords": [
+                  "BEASTBOSS"
+                ]
+              },
+              {
+                "allKeywords": [
+                  "INFANTRY",
+                  "WARBOSS"
+                ]
+              }
             ],
             "noneKeywords": [
               "EPIC HERO"

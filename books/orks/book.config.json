@@ -6,8 +6,8 @@
   "edition": "11E",
   "factionKeyword": "ORKS",
   "expected": {
-    "matchedDetachments": 12,
-    "factionPackDetachments": 6,
+    "matchedDetachments": 13,
+    "factionPackDetachments": 7,
     "legendsDatasheets": 30
   },
   "sources": {
@@ -15,5 +15,9 @@
     "codexDatasheets": "content/orks-codex-datasheets.en.json",
     "relatedRules": "content/orks-related-rules.en.json",
     "manifest": "sources/source-manifest.json"
-  }
+  },
+  "currentDatasheetLayers": [
+    "datasheets",
+    "imperialArmour"
+  ]
 }

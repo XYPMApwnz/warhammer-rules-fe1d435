@@ -44,7 +44,7 @@ const dependencyUnits=dependencyCodices.flatMap(dependency=>(dependencyScope.cur
     const point=dependency.pointsByTitle.get(titleKey(unit.title)),exact=dependency.wargearByTitle.get(titleKey(unit.title)),official=dependency.officialByTitle.get(titleKey(unit.title));
     return {...unit,...(point?{points:point.points,paidWargear:point.paidWargear,pointsSource:point.pointsSource}:{}),...(exact?{wargear:exact.wargear,compositionText:exact.composition,wargearSource:{label:dependency.wargearSource?.label||'Current 11e reference',url:exact.url}}:{}),...(official?{sourcePages:official.sourcePages,provenance:official.provenance}:{}),dependencyBook:dependency.id,dependencyTitle:dependency.config.title,dependencySourceFile:path.basename(dependency.pack.meta.file),dependencySourceVersion:dependency.pack.meta.version,dependencyCompactSharedAbilities:dependency.config.compactSharedAbilities||[],sourceLayer:`${dependency.id}-${official&&unit.sourceLayer==='codex'?'faction-pack':unit.sourceLayer||'source'}`};
   }));
-const ownUnits=config.currentDatasheetsOnly?codex.datasheets||[]:unitInventory(codex);
+const ownUnits=config.currentDatasheetLayers?config.currentDatasheetLayers.flatMap(layer=>codex[layer]||[]):config.currentDatasheetsOnly?codex.datasheets||[]:unitInventory(codex);
 const pointsByTitle=new Map(points.units.map(item=>[titleKey(item.title),item]));
 const wargearByTitle=new Map((codexWargear?.units||[]).map(item=>[titleKey(item.title),item]));
 const mergedUnits=new Map();

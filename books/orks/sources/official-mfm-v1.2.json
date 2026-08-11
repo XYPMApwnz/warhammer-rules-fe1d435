@@ -1,0 +1,1201 @@
+{
+  "captureSha256": "BC7375F169655CCFBAEEE0135BEFE840B94C1FB50067EECC6209376F2D95449E",
+  "schema": 1,
+  "title": "Orks Munitorum Field Manual dated capture",
+  "version": "v1.2",
+  "verifiedAt": "2026-08-11",
+  "url": "https://mfm.warhammer-community.com/en/orks",
+  "detachments": [
+    {
+      "title": "BLITZ BRIGADE",
+      "detachmentPoints": 2,
+      "forceDisposition": "RECONNAISSANCE"
+    },
+    {
+      "title": "BULLY BOYZ",
+      "detachmentPoints": 2,
+      "forceDisposition": "PURGE THE FOE"
+    },
+    {
+      "title": "DA BIG HUNT",
+      "detachmentPoints": 2,
+      "forceDisposition": "PURGE THE FOE"
+    },
+    {
+      "title": "DREAD MOB",
+      "detachmentPoints": 2,
+      "forceDisposition": "PRIORITY ASSETS"
+    },
+    {
+      "title": "EQUATORIAL HORDES",
+      "detachmentPoints": 1,
+      "forceDisposition": "DISRUPTION"
+    },
+    {
+      "title": "FREEBOOTER KREW",
+      "detachmentPoints": 2,
+      "forceDisposition": "TAKE AND HOLD"
+    },
+    {
+      "title": "GREEN TIDE",
+      "detachmentPoints": 3,
+      "forceDisposition": "TAKE AND HOLD"
+    },
+    {
+      "title": "KULT OF SPEED",
+      "detachmentPoints": 2,
+      "forceDisposition": "DISRUPTION"
+    },
+    {
+      "title": "MORE DAKKA!",
+      "detachmentPoints": 1,
+      "forceDisposition": "DISRUPTION"
+    },
+    {
+      "title": "ROLLIN' DEFF",
+      "detachmentPoints": 1,
+      "forceDisposition": "PRIORITY ASSETS"
+    },
+    {
+      "title": "SPEEDWAAAGH!",
+      "detachmentPoints": 2,
+      "forceDisposition": "RECONNAISSANCE"
+    },
+    {
+      "title": "TAKTIKAL BRIGADE",
+      "detachmentPoints": 1,
+      "forceDisposition": "RECONNAISSANCE"
+    },
+    {
+      "title": "WAR HORDE",
+      "detachmentPoints": 3,
+      "forceDisposition": "TAKE AND HOLD"
+    }
+  ],
+  "enhancements": [
+    {
+      "detachment": "BLITZ BRIGADE",
+      "title": "Blitzkaptin",
+      "value": 25
+    },
+    {
+      "detachment": "BLITZ BRIGADE",
+      "title": "Runnin’ Boots",
+      "value": 10,
+      "sourceTitle": "Runnin' Boots"
+    },
+    {
+      "detachment": "BLITZ BRIGADE",
+      "title": "Supercharged Squig Oil",
+      "value": 10
+    },
+    {
+      "detachment": "BLITZ BRIGADE",
+      "title": "Tuff Git",
+      "value": 5
+    },
+    {
+      "detachment": "BULLY BOYZ",
+      "title": "Big Gob",
+      "value": 20
+    },
+    {
+      "detachment": "BULLY BOYZ",
+      "title": "Da Biggest Boss",
+      "value": 15
+    },
+    {
+      "detachment": "BULLY BOYZ",
+      "title": "’Eadstompa",
+      "value": 10,
+      "sourceTitle": "'Eadstompa"
+    },
+    {
+      "detachment": "BULLY BOYZ",
+      "title": "Tellyporta",
+      "value": 25
+    },
+    {
+      "detachment": "DA BIG HUNT",
+      "title": "Glory Hog",
+      "value": 30
+    },
+    {
+      "detachment": "DA BIG HUNT",
+      "title": "Proper Killy",
+      "value": 15
+    },
+    {
+      "detachment": "DA BIG HUNT",
+      "title": "Skrag Every Stash!",
+      "value": 25
+    },
+    {
+      "detachment": "DA BIG HUNT",
+      "title": "Surly as a Squiggoth",
+      "value": 20
+    },
+    {
+      "detachment": "DREAD MOB",
+      "title": "Gitfinder Gogglez",
+      "value": 10
+    },
+    {
+      "detachment": "DREAD MOB",
+      "title": "Press It Fasta!",
+      "value": 35
+    },
+    {
+      "detachment": "DREAD MOB",
+      "title": "Smoky Gubbinz",
+      "value": 15
+    },
+    {
+      "detachment": "DREAD MOB",
+      "title": "Supa-glowy Fing",
+      "value": 20
+    },
+    {
+      "detachment": "EQUATORIAL HORDES",
+      "title": "Kunnin’ Hunta",
+      "value": 25,
+      "sourceTitle": "Kunnin' Hunta"
+    },
+    {
+      "detachment": "EQUATORIAL HORDES",
+      "title": "Unkillable Scourge",
+      "value": 25
+    },
+    {
+      "detachment": "FREEBOOTER KREW",
+      "title": "Bionik Workshop",
+      "value": 15
+    },
+    {
+      "detachment": "FREEBOOTER KREW",
+      "title": "Da Kaptin",
+      "value": 10
+    },
+    {
+      "detachment": "FREEBOOTER KREW",
+      "title": "Git-Spotter Squig",
+      "value": 20
+    },
+    {
+      "detachment": "FREEBOOTER KREW",
+      "title": "Razgit’s Magik Map",
+      "value": 25,
+      "sourceTitle": "Razgit's Magik Map"
+    },
+    {
+      "detachment": "GREEN TIDE",
+      "title": "Bloodthirsty Belligerence",
+      "value": 15
+    },
+    {
+      "detachment": "GREEN TIDE",
+      "title": "Brutal But Kunnin’",
+      "value": 25,
+      "sourceTitle": "Brutal But Kunnin'"
+    },
+    {
+      "detachment": "GREEN TIDE",
+      "title": "Ferocious Show Off",
+      "value": 10
+    },
+    {
+      "detachment": "GREEN TIDE",
+      "title": "Raucous Warcaller",
+      "value": 20
+    },
+    {
+      "detachment": "KULT OF SPEED",
+      "title": "Fasta Than Yooz",
+      "value": 35
+    },
+    {
+      "detachment": "KULT OF SPEED",
+      "title": "Speed Makes Right",
+      "value": 25
+    },
+    {
+      "detachment": "KULT OF SPEED",
+      "title": "Squig-hide Tyres",
+      "value": 15
+    },
+    {
+      "detachment": "KULT OF SPEED",
+      "title": "Wazblasta",
+      "value": 10
+    },
+    {
+      "detachment": "MORE DAKKA!",
+      "title": "Da Gobshot Thunderbuss",
+      "value": 15
+    },
+    {
+      "detachment": "MORE DAKKA!",
+      "title": "Dead Shiny Shootas (Upgrade)",
+      "value": 15,
+      "sourceTitle": "Dead Shiny Shootas"
+    },
+    {
+      "detachment": "ROLLIN' DEFF",
+      "title": "Boarding Ramps (Upgrade)",
+      "value": 10,
+      "sourceTitle": "Boarding Ramps"
+    },
+    {
+      "detachment": "ROLLIN' DEFF",
+      "title": "Targetin’ Gizmos (Upgrade)",
+      "value": 15,
+      "sourceTitle": "Targetin' Gizmos"
+    },
+    {
+      "detachment": "SPEEDWAAAGH!",
+      "title": "Dakkamek",
+      "value": 25
+    },
+    {
+      "detachment": "SPEEDWAAAGH!",
+      "title": "Kustom Shokk Box",
+      "value": 10
+    },
+    {
+      "detachment": "SPEEDWAAAGH!",
+      "title": "Master Meknologist",
+      "value": 20
+    },
+    {
+      "detachment": "SPEEDWAAAGH!",
+      "title": "Supa-Burny Fuel",
+      "value": 15
+    },
+    {
+      "detachment": "TAKTIKAL BRIGADE",
+      "title": "Mork’s Kunnin’",
+      "value": 20,
+      "sourceTitle": "Mork's Kunnin'"
+    },
+    {
+      "detachment": "TAKTIKAL BRIGADE",
+      "title": "Slippery Git",
+      "value": 15
+    },
+    {
+      "detachment": "WAR HORDE",
+      "title": "Follow Me Ladz",
+      "value": 25
+    },
+    {
+      "detachment": "WAR HORDE",
+      "title": "Headwoppa’s Killchoppa",
+      "value": 20
+    },
+    {
+      "detachment": "WAR HORDE",
+      "title": "Kunnin’ But Brutal",
+      "value": 15
+    },
+    {
+      "detachment": "WAR HORDE",
+      "title": "Supa-Cybork Body",
+      "value": 15
+    }
+  ],
+  "unitOverrides": [
+    {
+      "title": "BANNERNOB",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 50,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "BATTLEWAGON",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 145,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ],
+      "paidWargear": [
+        {
+          "label": "per ard case",
+          "value": 15
+        }
+      ]
+    },
+    {
+      "title": "BEAST SNAGGA BOYZ",
+      "points": [
+        {
+          "label": "10 models",
+          "value": 90,
+          "maxModels": 10,
+          "minModels": 10
+        },
+        {
+          "label": "20 models",
+          "value": 170,
+          "maxModels": 20,
+          "minModels": 20
+        }
+      ]
+    },
+    {
+      "title": "BEASTBOSS",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 80,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "BEASTBOSS ON SQUIGOSAUR",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 95,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "BIG MEK",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 70,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "BIG MEK DAKKARIG",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 115,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "BIG MEK IN MEGA ARMOUR",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 80,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "BIG MEK WITH SHOKK ATTACK GUN",
+      "points": [
+        {
+          "label": "1 unit · 1 model",
+          "value": 70,
+          "minCopies": 1,
+          "maxCopies": 1,
+          "prefix": "1 unit",
+          "maxModels": 1,
+          "minModels": 1
+        },
+        {
+          "label": "2+ unit · 1 model",
+          "value": 80,
+          "minCopies": 2,
+          "prefix": "2+ unit",
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "BIG’ED BOSSBUNKA",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 135,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "BIGBOSS",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 55,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "BLITZA-BOMMER",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 105,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "BOOMDAKKA SNAZZWAGON",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 70,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "BOSS SNIKROT",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 75,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "BOYZ",
+      "points": [
+        {
+          "label": "4+ unit · 10 models",
+          "value": 85,
+          "minCopies": 4,
+          "prefix": "4+ unit",
+          "maxModels": 10,
+          "minModels": 10
+        },
+        {
+          "label": "4+ unit · 20 models",
+          "value": 170,
+          "minCopies": 4,
+          "prefix": "4+ unit",
+          "maxModels": 20,
+          "minModels": 20
+        }
+      ]
+    },
+    {
+      "title": "BREAKA BOYZ",
+      "points": [
+        {
+          "label": "3+ unit · 6 models",
+          "value": 135,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 6,
+          "minModels": 6
+        }
+      ]
+    },
+    {
+      "title": "BURNA BOYZ",
+      "points": [
+        {
+          "label": "5 models",
+          "value": 60,
+          "maxModels": 5,
+          "minModels": 5
+        },
+        {
+          "label": "10 models",
+          "value": 120,
+          "maxModels": 10,
+          "minModels": 10
+        }
+      ]
+    },
+    {
+      "title": "BURNA-BOMMER",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 115,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "DAKKAJET",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 125,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "DEFF DREAD",
+      "points": [
+        {
+          "label": "3+ unit · 1 model",
+          "value": 120,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "DEFFKILLA WARTRIKE",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 70,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "DEFFKOPTAS",
+      "points": [
+        {
+          "label": "3 models",
+          "value": 75,
+          "maxModels": 3,
+          "minModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 140,
+          "maxModels": 6,
+          "minModels": 6
+        }
+      ]
+    },
+    {
+      "title": "FLASH GITZ",
+      "points": [
+        {
+          "label": "3+ unit · 5 models",
+          "value": 85,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 5,
+          "minModels": 5
+        },
+        {
+          "label": "3+ unit · 10 models",
+          "value": 160,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 10,
+          "minModels": 10
+        }
+      ]
+    },
+    {
+      "title": "GARGANTUAN SQUIGGOTH",
+      "points": [
+        {
+          "label": "1 unit · 1 model",
+          "value": 440,
+          "minCopies": 1,
+          "maxCopies": 1,
+          "prefix": "1 unit",
+          "maxModels": 1,
+          "minModels": 1
+        },
+        {
+          "label": "2+ unit · 1 model",
+          "value": 490,
+          "minCopies": 2,
+          "prefix": "2+ unit",
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "GHAZGHKULL THRAKA",
+      "points": [
+        {
+          "label": "2 models",
+          "value": 235,
+          "maxModels": 2,
+          "minModels": 2
+        }
+      ]
+    },
+    {
+      "title": "GORKANAUT",
+      "points": [
+        {
+          "label": "3+ unit · 1 model",
+          "value": 275,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "GRETCHIN",
+      "points": [
+        {
+          "label": "10 Gretchin",
+          "value": 45
+        },
+        {
+          "label": "1 Runtherd, 10 Gretchin",
+          "value": 45
+        },
+        {
+          "label": "20 Gretchin",
+          "value": 80
+        },
+        {
+          "label": "1 Runtherd, 20 Gretchin",
+          "value": 85
+        },
+        {
+          "label": "2 Runtherd, 20 Gretchin",
+          "value": 90
+        }
+      ]
+    },
+    {
+      "title": "HUNTA RIG",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 125,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "KILL RIG",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 145,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "KILLA KANS",
+      "points": [
+        {
+          "label": "3+ unit · 3 models",
+          "value": 130,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 3,
+          "minModels": 3
+        },
+        {
+          "label": "3+ unit · 6 models",
+          "value": 250,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 6,
+          "minModels": 6
+        }
+      ]
+    },
+    {
+      "title": "KOMMANDOS",
+      "points": [
+        {
+          "label": "10 models",
+          "value": 120,
+          "maxModels": 10,
+          "minModels": 10
+        }
+      ]
+    },
+    {
+      "title": "KUSTOM BOOSTA-BLASTA",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 70,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "LOOTAS",
+      "points": [
+        {
+          "label": "3+ unit · 5 models",
+          "value": 60,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 5,
+          "minModels": 5
+        },
+        {
+          "label": "3+ unit · 10 models",
+          "value": 110,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 10,
+          "minModels": 10
+        }
+      ]
+    },
+    {
+      "title": "MEGANOBZ",
+      "points": [
+        {
+          "label": "3+ unit · 2 models",
+          "value": 80,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 2,
+          "minModels": 2
+        },
+        {
+          "label": "3+ unit · 3 models",
+          "value": 110,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 3,
+          "minModels": 3
+        },
+        {
+          "label": "3+ unit · 5 models",
+          "value": 170,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 5,
+          "minModels": 5
+        },
+        {
+          "label": "3+ unit · 6 models",
+          "value": 200,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 6,
+          "minModels": 6
+        }
+      ]
+    },
+    {
+      "title": "MEGATRAKK SCRAPJET",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 75,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "MEK",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 55,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "MEK GUNZ",
+      "points": [
+        {
+          "label": "3+ unit · 1 model",
+          "value": 55,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 1,
+          "minModels": 1
+        },
+        {
+          "label": "3+ unit · 2 models",
+          "value": 100,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 2,
+          "minModels": 2
+        },
+        {
+          "label": "3+ unit · 3 models",
+          "value": 145,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 3,
+          "minModels": 3
+        }
+      ]
+    },
+    {
+      "title": "MORKANAUT",
+      "points": [
+        {
+          "label": "3+ unit · 1 model",
+          "value": 290,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "MOZROG SKRAGBAD",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 125,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "NOBZ",
+      "points": [
+        {
+          "label": "3+ unit · 5 models",
+          "value": 115,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 5,
+          "minModels": 5
+        },
+        {
+          "label": "3+ unit · 10 models",
+          "value": 220,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 10,
+          "minModels": 10
+        }
+      ]
+    },
+    {
+      "title": "PAINBOSS",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 70,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "PAINBOY",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 90,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "RUKKATRUKK SQUIGBUGGY",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 85,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "SHOKKJUMP DRAGSTA",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 70,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "SQUIGHOG BOYZ",
+      "points": [
+        {
+          "label": "4 models",
+          "value": 140,
+          "maxModels": 4,
+          "minModels": 4
+        },
+        {
+          "label": "8 models",
+          "value": 270,
+          "maxModels": 8,
+          "minModels": 8
+        }
+      ]
+    },
+    {
+      "title": "STOMPA",
+      "points": [
+        {
+          "label": "1 unit · 1 model",
+          "value": 600,
+          "minCopies": 1,
+          "maxCopies": 1,
+          "prefix": "1 unit",
+          "maxModels": 1,
+          "minModels": 1
+        },
+        {
+          "label": "2+ unit · 1 model",
+          "value": 700,
+          "minCopies": 2,
+          "prefix": "2+ unit",
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "STORMBOYZ",
+      "points": [
+        {
+          "label": "5 models",
+          "value": 65,
+          "maxModels": 5,
+          "minModels": 5
+        },
+        {
+          "label": "10 models",
+          "value": 130,
+          "maxModels": 10,
+          "minModels": 10
+        }
+      ]
+    },
+    {
+      "title": "TANKBUSTAS",
+      "points": [
+        {
+          "label": "3+ unit · 6 models",
+          "value": 135,
+          "minCopies": 3,
+          "prefix": "3+ unit",
+          "maxModels": 6,
+          "minModels": 6
+        }
+      ]
+    },
+    {
+      "title": "TRUKK",
+      "points": [
+        {
+          "label": "4+ unit · 1 model",
+          "value": 65,
+          "minCopies": 4,
+          "prefix": "4+ unit",
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "WARBIKERS",
+      "points": [
+        {
+          "label": "3 models",
+          "value": 60,
+          "maxModels": 3,
+          "minModels": 3
+        },
+        {
+          "label": "6 models",
+          "value": 120,
+          "maxModels": 6,
+          "minModels": 6
+        }
+      ]
+    },
+    {
+      "title": "WARBOSS",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 85,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "WARBOSS IN MEGA ARMOUR",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 80,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "WARTRAKK",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 60,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "WAZBOM BLASTAJET",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 165,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "WAZDAKKA GUTSMEK",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 175,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "WEIRDBOY",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 65,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "WURRBOY",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 60,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    },
+    {
+      "title": "ZODGROD WORTSNAGGA",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 80,
+          "maxModels": 1,
+          "minModels": 1
+        }
+      ]
+    }
+  ],
+  "verifiedUnits": [
+    "BANNERNOB",
+    "BATTLEWAGON",
+    "BEAST SNAGGA BOYZ",
+    "BEASTBOSS",
+    "BEASTBOSS ON SQUIGOSAUR",
+    "BIG MEK",
+    "BIG MEK DAKKARIG",
+    "BIG MEK IN MEGA ARMOUR",
+    "BIG MEK WITH SHOKK ATTACK GUN",
+    "BIGBOSS",
+    "BIG’ED BOSSBUNKA",
+    "BLITZA-BOMMER",
+    "BOOMDAKKA SNAZZWAGON",
+    "BOSS SNIKROT",
+    "BOYZ",
+    "BREAKA BOYZ",
+    "BURNA BOYZ",
+    "BURNA-BOMMER",
+    "DAKKAJET",
+    "DEFF DREAD",
+    "DEFFKILLA WARTRIKE",
+    "DEFFKOPTAS",
+    "FLASH GITZ",
+    "GARGANTUAN SQUIGGOTH",
+    "GHAZGHKULL THRAKA",
+    "GORKANAUT",
+    "GRETCHIN",
+    "HUNTA RIG",
+    "KILL RIG",
+    "KILLA KANS",
+    "KOMMANDOS",
+    "KUSTOM BOOSTA-BLASTA",
+    "LOOTAS",
+    "MEGANOBZ",
+    "MEGATRAKK SCRAPJET",
+    "MEK",
+    "MEK GUNZ",
+    "MORKANAUT",
+    "MOZROG SKRAGBAD",
+    "NOBZ",
+    "PAINBOSS",
+    "PAINBOY",
+    "RUKKATRUKK SQUIGBUGGY",
+    "SHOKKJUMP DRAGSTA",
+    "SQUIGHOG BOYZ",
+    "STOMPA",
+    "STORMBOYZ",
+    "TANKBUSTAS",
+    "TRUKK",
+    "WARBIKERS",
+    "WARBOSS",
+    "WARBOSS IN MEGA ARMOUR",
+    "WARTRAKK",
+    "WAZBOM BLASTAJET",
+    "WAZDAKKA GUTSMEK",
+    "WEIRDBOY",
+    "WURRBOY",
+    "ZODGROD WORTSNAGGA"
+  ]
+}

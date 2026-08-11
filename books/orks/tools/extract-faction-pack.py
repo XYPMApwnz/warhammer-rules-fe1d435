@@ -10,11 +10,12 @@ import pdfplumber
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PDF = ROOT / "sources" / "orks-faction-pack-v1.0.pdf"
+PDF = ROOT / "sources" / "orks-faction-pack-v1.1.pdf"
 OUTPUT = ROOT / "content" / "orks-faction-pack.en.json"
 RELATED = ROOT / "content" / "orks-related-rules.en.json"
 CODEX = ROOT / "content" / "orks-codex-datasheets.en.json"
-SOURCE_ID = "orks-faction-pack-v1.0"
+MFM = ROOT / "sources" / "official-mfm-v1.2.json"
+SOURCE_ID = "orks-faction-pack-v1.1"
 
 
 def clean_text(value: str) -> str:
@@ -57,11 +58,11 @@ def extract_source() -> tuple[dict, dict[str, dict]]:
             }
         meta = {
             "title": "Orks Faction Pack",
-            "version": "1.0",
-            "legalFrom": "2026-06-20",
+            "version": "1.1",
+            "legalFrom": "2026-07-22",
             "pageCount": len(document.pages),
             "sha256": digest,
-            "file": "sources/orks-faction-pack-v1.0.pdf",
+            "file": "sources/orks-faction-pack-v1.1.pdf",
         }
     return meta, pages
 
@@ -72,8 +73,13 @@ def validate(data: dict) -> list[str]:
     for marker in ("\ufffd", "\u00c3", "\u00e2\u0080", "\u00ef\u00bf\u00bd"):
         if marker in serialized:
             errors.append(f"mojibake marker found: {marker!r}")
-    if len(data.get("detachments", [])) != 6:
-        errors.append("expected 6 Faction Pack detachments")
+    if len(data.get("detachments", [])) != 7:
+        errors.append("expected 7 Faction Pack detachments")
+    if {item.get("id") for item in data.get("detachments", [])} != {
+        "equatorial-hordes", "rollin-deff", "more-dakka", "taktikal-brigade",
+        "speedwaaagh", "blitz-brigade", "freebooter-krew"
+    }:
+        errors.append("Faction Pack detachment inventory mismatch")
     for detachment in data.get("detachments", []):
         rule = detachment.get("rule", {})
         if not rule.get("text"):
@@ -94,8 +100,18 @@ def validate(data: dict) -> list[str]:
     for group, count in expected.items():
         if len(data.get("datasheets", {}).get(group, [])) != count:
             errors.append(f"expected {count} {group} datasheets")
-    if len(data.get("updates", [])) != 36:
-        errors.append("expected 36 rules updates")
+    if len(data.get("updates", [])) != 42:
+        errors.append("expected 42 structured rules updates")
+    required_updates = {
+        "bully-boyz-krushin-impact-name",
+        "dread-mob-conniving-runts-target",
+        "boomdakka-snazzwagon-billowing-fumes",
+        "boyz-weapons-and-wargear",
+        "shokkjump-dragsta-shokk-tunnel",
+        "wazdakka-gutsmek-shokk-attack-engine",
+    }
+    if not required_updates <= {item.get("id") for item in data.get("updates", [])}:
+        errors.append("Faction Pack v1.1 update inventory is incomplete")
     for update in data.get("updates", []):
         page_text = source_text(data, update.get("sourcePages", []))
         for field in ("subject", "change"):
@@ -138,6 +154,21 @@ def validate(data: dict) -> list[str]:
     excluded = {"Grotmas Gitz", "Da Red Gobbo's A-bomb-inable Snowman", "Da Red Gobbo's Tinboy"}
     if excluded & {item.get("title") for item in codex.get("legends", [])}:
         errors.append("seasonal Red Gobbo entries leaked into official Legends")
+    current_ids = {item.get("id") for group in ("datasheets", "imperialArmour") for item in codex.get(group, [])}
+    for kind in ("stratagems", "enhancements"):
+        for rule_id, eligibility in related.get(kind, {}).items():
+            for role in eligibility.get("roles", []):
+                stale = set(role.get("selector", {}).get("unitIds", [])) - current_ids
+                if stale:
+                    errors.append(f"{rule_id}/{role.get('id')}: non-current unit IDs {sorted(stale)}")
+    mfm = json.loads(MFM.read_text(encoding="utf-8"))
+    if mfm.get("version") != "v1.2" or len(mfm.get("verifiedUnits", [])) != 58:
+        errors.append("official MFM v1.2 current unit inventory mismatch")
+    if len(mfm.get("detachments", [])) != 13 or len(mfm.get("enhancements", [])) != 44:
+        errors.append("official MFM v1.2 Detachment/Enhancement inventory mismatch")
+    battlewagon = next((item for item in mfm.get("unitOverrides", []) if item.get("title") == "BATTLEWAGON"), {})
+    if battlewagon.get("paidWargear") != [{"label": "per ard case", "value": 15}]:
+        errors.append("Battlewagon ard case option does not match official MFM")
     return errors
 
 

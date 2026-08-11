@@ -20,7 +20,7 @@ const readerProfiles=book=>{
   }
   return result;
 };
-const dgProfiles=readerProfiles('death-guard'),mechanicusProfiles=readerProfiles('adeptus-mechanicus'),tyranidsProfiles=readerProfiles('tyranids'),tauProfiles=readerProfiles('tau-empire');
+const dgProfiles=readerProfiles('death-guard'),mechanicusProfiles=readerProfiles('adeptus-mechanicus'),tyranidsProfiles=readerProfiles('tyranids'),tauProfiles=readerProfiles('tau-empire'),csmProfiles=readerProfiles('chaos-space-marines');
 
 const deathGuard=read('books/death-guard/content/death-guard-rules.en.json');
 const dgUnits={};
@@ -103,12 +103,28 @@ const tauEnhancements=Object.fromEntries(tau.enhancements.flatMap(enhancement=>{
   const base=enhancement.title.replace(/\s*\(Upgrade\)\s*$/i,'').replace(/\s+Upgrade$/i,'');
   return [...new Set([enhancement.title,base,`${base} Upgrade`,`${base} (Upgrade)`])].map(name=>[normalize(name),record]);
 }));
+const csm=read('books/chaos-space-marines/content/chaos-space-marines-points.en.json');
+const csmPack=read('books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json');
+const csmContracts=read('books/chaos-space-marines/content/chaos-space-marines-related-rules.en.json').enhancements;
+const csmUnits=Object.fromEntries(csm.units.filter(unit=>unit.status==='Current').map(unit=>[normalize(unit.title),{...unit,wargear:unit.paidWargear||[],...csmProfiles[normalize(unit.title)]}]));
+const csmPackDetachments=new Map(csmPack.detachments.map(detachment=>[normalize(detachment.title),detachment]));
+const csmEnhancementGroups=new Map();
+for(const enhancement of csm.enhancements){
+  const detachment=csmPackDetachments.get(normalize(enhancement.detachment));
+  const source=detachment?.enhancements.find(item=>normalize(item.title)===normalize(enhancement.title));
+  const contract=source&&csmContracts[source.id];
+  const role=contract?.roles?.find(item=>item.side==='friendly'&&item.subject==='unit');
+  const record={...enhancement,...(role?{owner:{subject:'unit',selector:role.selector}}:{sourceLimited:true})};
+  const key=normalize(enhancement.title),group=csmEnhancementGroups.get(key)||[];group.push(record);csmEnhancementGroups.set(key,group);
+}
+const csmEnhancements=Object.fromEntries([...csmEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
 
 const catalog={
   'death guard':{units:dgUnits,enhancements:dgEnhancements},
   'adeptus mechanicus':{units:mechanicusUnits,enhancements:mechanicusEnhancements},
   'tyranids':{units:tyranidsUnits,enhancements:tyranidsEnhancements},
-  't au empire':{units:tauUnits,enhancements:tauEnhancements}
+  't au empire':{units:tauUnits,enhancements:tauEnhancements},
+  'chaos space marines':{units:csmUnits,enhancements:csmEnhancements}
 };
 fs.writeFileSync(path.join(root,'roster-guides','points-data.js'),`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`);
-console.log(`Points catalog: ${Object.keys(dgUnits).length} Death Guard, ${Object.keys(mechanicusUnits).length} Adeptus Mechanicus, ${Object.keys(tyranidsUnits).length} Tyranids and ${Object.keys(tauUnits).length} T'au Empire units.`);
+console.log(`Points catalog: ${Object.keys(dgUnits).length} Death Guard, ${Object.keys(mechanicusUnits).length} Adeptus Mechanicus, ${Object.keys(tyranidsUnits).length} Tyranids, ${Object.keys(tauUnits).length} T'au Empire and ${Object.keys(csmUnits).length} Chaos Space Marines units.`);

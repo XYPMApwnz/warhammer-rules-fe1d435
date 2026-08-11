@@ -39,7 +39,7 @@ assert.deepEqual(Object.fromEntries(categories.map(category=>[category.title,cat
 
 for(const route of routes){
   const html=fs.readFileSync(path.join(root,route),'utf8');
-  assert.match(html,/\.\/mobile\.js\?v=1/);
+  assert.match(html,/\.\/mobile\.js\?v=2/);
   assert.match(html,/\.\/phone-popup-controller\.js\?v=1/);
   assert.doesNotMatch(html,/reader\.html\?view=mobile/);
   assert.match(html,/data-view-switch/);
@@ -53,11 +53,11 @@ const defiler=fs.readFileSync(path.join(root,'defiler.html'),'utf8');
 const rhino=fs.readFileSync(path.join(root,'chaos-rhino.html'),'utf8');
 const desktopApp=fs.readFileSync(path.join(bookRoot,'scripts/app.js'),'utf8');
 
-assert.match(reader,/\.\/scripts\/app\.js\?v=3/,'CSM Desktop app version was not bumped for semantic Phone routing');
-assert.match(desktopApp,/hashId\.startsWith\('unit-'\)/);
-assert.match(desktopApp,/hashId\.startsWith\('detachment-'\)/);
-assert.match(desktopApp,/active==='army-rules'/);
-assert.match(desktopApp,/active==='updates'/);
+assert.match(reader,/\.\/scripts\/app\.js\?v=4/,'CSM Desktop app version was not bumped for roster and Compatible Rules wiring');
+assert.match(desktopApp,/id\.startsWith\('unit-'\)/);
+assert.match(desktopApp,/id\.startsWith\('detachment-'\)/);
+assert.match(desktopApp,/id==='army-rules'/);
+assert.match(desktopApp,/id==='updates'/);
 assert.doesNotMatch(desktopApp,/abaddon/i,'Desktop to Phone mapping must not special-case Abaddon');
 assert.match(start,/id="start"/);
 assert.match(armyRules,/Dark Pacts/);
@@ -79,7 +79,9 @@ const foreign=[['Khorne Berzerkers','khorne-berzerkers.html'],['Noise Marines','
 for(const [title,file] of foreign){assert.ok(extractConfig.filters.excludeNames.includes(title),`Missing source exclusion for ${title}`);assert.ok(!htmlFiles.includes(file),`Other-faction route leaked: ${file}`);}
 
 assert.equal(config.generatedMobile,true);
-assert.equal(config.assetVersions.app,3);
+assert.equal(config.assetVersions.app,4);
 assert.equal(manifest.gates.publishAsComplete,false);
-assert.doesNotMatch(fs.readFileSync(path.join(root,'mobile.js'),'utf8'),/roster/i);
+const mobileRuntime=fs.readFileSync(path.join(root,'mobile.js'),'utf8');
+assert.match(mobileRuntime,/rosterMode\?['"]all['"]:/,'Phone roster mode must use the all-Detachment union');
+assert.match(mobileRuntime,/new URLSearchParams\(location\.search\)/,'Phone routes must preserve the roster query');
 console.log('Chaos Space Marines Phone QA: 74 routes, 17 Detachments, 54 current Datasheets, 53 Legends and 4 other-faction units excluded.');

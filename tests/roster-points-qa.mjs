@@ -211,4 +211,19 @@ assert.equal(conflictingOwner.enhancements.length,1,'conflicting header and inli
 assert.equal(conflictingOwner.enhancements[0].ownerStatus,'ambiguous');
 assert.deepEqual([...conflictingOwner.enhancements[0].ownerCandidates],['Lord of Contagion','Lord of Virulence']);
 assert.match(conflictingOwner.warnings[0],/conflicts between header and inline metadata/);
+
+const csmCatalog=WH_POINTS_CATALOG['chaos space marines'];
+assert.equal(Object.keys(csmCatalog.units).length,54,'CSM points catalog must expose current Datasheets only');
+for(const title of ['khorne berzerkers','noise marines','plague marines','rubric marines'])assert.equal(csmCatalog.units[title],undefined,`${title} must not enter the CSM points catalog`);
+const duplicateWarp=csmCatalog.enhancements['warp fuelled thrusters'];
+assert.ok(Array.isArray(duplicateWarp)&&duplicateWarp.length===2,'duplicate Enhancement titles must retain detachment-qualified identities');
+assert.equal(new Set(duplicateWarp.map(item=>item.id)).size,2);
+const csmOwner=rosterUnit('jump-lord','Chaos Lord with Jump Pack');
+const csmRoster=detachment=>({units:[csmOwner],detachments:[{name:detachment}],enhancements:[ownedEnhancement('Warp-Fuelled Thrusters',csmOwner.id)],declared:0,unitLineTotal:0});
+const nightmareWarp=WHRosterPoints.check(csmRoster('Nightmare Hunt'),'chaos space marines');
+assert.equal(nightmareWarp.enhancements[0].id,'enhancement-nightmare-hunt-warp-fuelled-thrusters');
+assert.equal(nightmareWarp.enhancements[0].ownerEligibility,'valid');
+const dreadWarp=WHRosterPoints.check(csmRoster('Dread Talons'),'chaos space marines');
+assert.equal(dreadWarp.enhancements[0].id,'enhancement-dread-talons-warp-fuelled-thrusters');
+assert.equal(dreadWarp.enhancements[0].ownerEligibility,'unverified');
 console.log('Roster parser and points QA passed.');

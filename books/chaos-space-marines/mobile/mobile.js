@@ -1,31 +1,131 @@
-(function(){
+(async function(){
   'use strict';
+  const scriptUrl=document.currentScript.src;
+  const compatibleRuntime=await import(new URL('../scripts/compatible-rules-runtime.mjs?v=1',scriptUrl)).catch(error=>{console.warn('Compatible rules unavailable.',error);return null;});
+  const stratagemTypes=new Map();
   const navButton=document.getElementById('navButton'),scrim=document.getElementById('navScrim'),nav=document.getElementById('mobileNav');
-  const dialog=document.getElementById('termDialog'),popupLayer=document.getElementById('termPopupStack'),viewSwitch=document.querySelector('[data-view-switch]');
-  const drawerMedia=matchMedia('(max-width: 800px)'),terms=Object.freeze({...window.WH40K_GLOSSARY.forBook('chaos-space-marines')});
+  const dialog=document.getElementById('termDialog'),popupLayer=document.getElementById('termPopupStack');
+  const viewSwitch=document.querySelector('[data-view-switch]'),relatedRules=document.getElementById('relatedRules');
+  const relatedContent=document.getElementById('relatedRulesContent'),relatedDetachment=document.getElementById('relatedDetachment');
+  const drawerMedia=matchMedia('(max-width: 800px)'),unit=document.querySelector('.unit-card'),params=new URLSearchParams(location.search),rosterMode=params.has('roster');
+  const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/\s*\(aura\)\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim(),slug=value=>normalize(value).replace(/\s+/g,'-'),normalizeChaosSpaceMarinesFaction=value=>normalize(String(value||'').replace(/^Chaos\s*[-–—]\s{0,}/i,''));
+  function rosterContext(){
+    if(!rosterMode)return null;
+    let record;try{record=(JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[]).find(item=>item?.id===params.get('roster'));}catch{}
+    if(!record)return null;
+    let roster=record.roster;
+    if(record.sourceText&&window.WHRosterParser){const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)roster=parsed;}
+    if(!['chaos space marines'].includes(normalizeChaosSpaceMarinesFaction(roster?.faction))||!roster?.units?.length)return null;
+    const selected=new Map();
+    for(const item of roster.units){const key=normalize(item.name),entry=selected.get(key)||{units:[],loadout:[]};entry.units.push(item);entry.loadout.push(...[item.wargear,...(item.models||[]).flatMap(model=>[model.wargear,...(model.loadouts||[]).map(loadout=>loadout.wargear)])].filter(Boolean));selected.set(key,entry);}
+    const detachments=[...new Set((roster.detachments?.length?roster.detachments.map(item=>item.label):[roster.detachment]).flatMap(value=>String(value||'').split(/\s*,\s*(?![^()]*\))/)).map(value=>slug(value.replace(/\s*\([^)]*\)\s*$/,''))).filter(Boolean))];
+    if(!detachments.length)return null;
+    const entry=unit?selected.get(normalize(unit.dataset.unitTitle)):null;if(unit&&!entry)return null;
+    const owners=new Set((entry?.units||[]).map(item=>item.id)),enhancements=new Set((roster.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&owners.has(item.ownerUnitId)).map(item=>normalize(item.name)));
+    return{record,roster,selected,entry,detachments,enhancements};
+  }
+  const roster=rosterContext();if(rosterMode&&!roster){location.replace('../../../roster-guides/index.html');return;}
+if(rosterMode&&relatedDetachment){relatedDetachment.value='all';relatedDetachment.closest('label')?.remove();}
+  const relatedRulesEnabled=Boolean(compatibleRuntime&&relatedRules)&&(!rosterMode||!!roster);
+  const terms=Object.freeze({...window.WH40K_GLOSSARY.forBook('chaos-space-marines')});
   window.WHGlossaryAutolink?.configure('chaos-space-marines');
   const popups=new window.CSMPhonePopups({dialog,layer:popupLayer,terms,safeFallback:()=>navButton});
+  let gesture=null,suppressed=null,relatedLoaded=false,relatedKind='stratagems';
+  let compatibleMatrix,assignedEnhancementRuleIds=new Set();
+  if(!relatedRulesEnabled)relatedRules?.remove();
 
-  if(viewSwitch){const destination=new URL(viewSwitch.href);destination.search=location.search;viewSwitch.href=destination.href;}
+  if(viewSwitch){const destination=new URL(viewSwitch.href);destination.search=params.toString();if(location.hash)destination.hash=location.hash;viewSwitch.href=destination.href;}
+  if(rosterMode){
+    for(const link of nav.querySelectorAll('a[href$=".html"]')){const destination=new URL(link.href);destination.searchParams.set('roster',params.get('roster'));link.href=destination.href;if(link.closest('.mobile-unit-groups'))link.hidden=!roster.selected.has(normalize(link.textContent));}
+    for(const link of nav.querySelectorAll('.phone-tree > details:first-of-type .mobile-nav-branch > a'))link.hidden=!roster.detachments.includes(slug(link.textContent));
+    for(const group of nav.querySelectorAll('.mobile-unit-groups > details'))group.hidden=![...group.querySelectorAll('a')].some(link=>!link.hidden);
+    if(unit){const composition=unit.querySelector('[id$="-composition"]');if(composition){const heading=composition.querySelector('h4'),block=document.createElement('div');block.className='content-block roster-composition';const label=document.createElement('strong');label.textContent='Roster loadout';const list=document.createElement('ul');for(const item of roster.entry.units){const row=document.createElement('li');row.textContent=`${item.quantity||1}× ${item.name}${item.wargear?` — ${item.wargear}`:''}`;list.append(row);}block.append(label,list);composition.replaceChildren(heading,block);}if(roster.entry.loadout.length&&window.WHRosterEntities)unit.querySelectorAll('.weapon-row:not(.weapon-head)').forEach(row=>{const label=row.querySelector('.weapon-button')?.textContent||row.firstElementChild?.textContent;if(label&&!window.WHRosterEntities.loadoutIncludesProfile(roster.entry.loadout,label))row.remove();});}
+    document.documentElement.dataset.rosterActive='true';document.querySelector('[data-roster-guides-link]')?.removeAttribute('hidden');
+  }
   function drawer(open){document.body.classList.toggle('nav-drawer-open',open);navButton.setAttribute('aria-expanded',String(open));nav.setAttribute('aria-hidden',String(!open));scrim.hidden=!open;}
   function syncDrawerMode(){const returnFocus=nav.contains(document.activeElement);if(drawerMedia.matches)drawer(false);else{document.body.classList.remove('nav-drawer-open');nav.setAttribute('aria-hidden','false');scrim.hidden=true;}if(returnFocus&&nav.getAttribute('aria-hidden')==='true')navButton.focus({preventScroll:true});}
   const showTerm=trigger=>popups.open(trigger.dataset.term,trigger);
 
+  function decorateStratagemTurns(root){
+    root.querySelectorAll('.stratagem').forEach(card=>{
+      const when=[...card.querySelectorAll('.field,.label-row')].find(field=>field.querySelector('b')?.textContent.trim().toLowerCase()==='when')?.textContent||'';
+      const turn=/opponent|enemy/i.test(when)?'THEIR TURN':/your\b/i.test(when)?'YOUR TURN':'ANY TURN';
+      card.dataset.turn=turn;card.classList.remove('turn-any','turn-yours','turn-their');card.classList.add(turn==='THEIR TURN'?'turn-their':turn==='YOUR TURN'?'turn-yours':'turn-any');
+    });
+  }
+  const stratagemTypeLabels={'battle-tactic':'Battle Tactic Stratagem','strategic-ploy':'Strategic Ploy Stratagem',wargear:'Wargear Stratagem','epic-deed':'Epic Deed Stratagem',core:'Core Stratagem','source-untyped':'Source type unverified',unknown:'Type unverified'};
+  function decorateStratagemTypes(root){
+    root.querySelectorAll('.stratagem').forEach(card=>{
+      const labels=[...card.querySelectorAll('.stratagem-type')],current=/^(battle-tactic|strategic-ploy|wargear|epic-deed|core|source-untyped|unknown)$/.test(card.dataset.stratagemType||'')?card.dataset.stratagemType:'',id=card.dataset.ruleId||card.id||'',rawMapped=stratagemTypes.get(id)||stratagemTypes.get(id.replace(/^stratagem-/,'')),mapped=typeof rawMapped==='string'?{canonicalType:rawMapped}:rawMapped||{},match=labels[0]?.textContent.trim().match(/(Battle Tactic|Strategic Ploy|Wargear|Epic Deed|Core) Stratagem\s*$/i),resolvedType=mapped.canonicalType||mapped.typeStatus||current||(match?match[1].toLowerCase().replace(/\s+/g,'-'):'unknown'),expected=mapped.sourceLabel||card.dataset.sourceLabel||stratagemTypeLabels[resolvedType]||stratagemTypeLabels.unknown;
+      card.dataset.stratagemType=resolvedType;const label=labels.shift()||document.createElement('span');labels.forEach(node=>node.remove());label.classList.add('stratagem-type');if(label.textContent.trim()!==expected)label.textContent=expected;const head=card.querySelector('.stratagem-head'),host=head?.querySelector(':scope > div:not(.cp)')||head;host?.append(label);
+    });
+  }
+  decorateStratagemTurns(document);decorateStratagemTypes(document);
+
+  function filterRelated(){
+    if(!relatedRulesEnabled||!relatedContent||!unit||!relatedLoaded)return;
+    const selected=rosterMode?'all':relatedDetachment.value,allowed=new Map(compatibleRuntime.getCompatibleRules(compatibleMatrix,unit.id,{detachmentId:selected}).filter(item=>!rosterMode||item.kind!=='enhancement'||assignedEnhancementRuleIds.has(item.ruleId)).map(item=>[item.ruleId,item]));
+    relatedContent.querySelectorAll('.stratagem,.enhancement').forEach(card=>{
+      const result=allowed.get(card.dataset.ruleId||card.id);card.hidden=!result;card.dataset.matchState=result?.state||'no-match';
+      card.querySelector(':scope > .compatibility-status')?.remove();
+      if(result?.state==='conditional'){
+        const status=document.createElement('p');status.className='compatibility-status';
+        const heading=document.createElement('strong');heading.textContent='Conditionally compatible';status.append(heading);for(const condition of compatibleRuntime.conditionsFor(result)){const line=document.createElement('span');line.textContent=compatibleRuntime.conditionLabels[condition]||'Check the full card conditions';status.append(line);}
+        card.prepend(status);
+      }
+    });
+    const enhancementTab=relatedRules.querySelector('[data-related-tab="enhancements"]');
+    const hasEnhancements=[...relatedContent.querySelectorAll('.enhancement')].some(card=>!card.hidden);
+    if(enhancementTab)enhancementTab.hidden=!hasEnhancements;
+    if(relatedKind==='enhancements'&&!hasEnhancements)relatedKind='stratagems';
+    relatedContent.querySelectorAll('[data-related-kind]').forEach(group=>group.hidden=group.dataset.relatedKind!==relatedKind||![...group.querySelectorAll('.stratagem,.enhancement')].some(card=>!card.hidden));
+    relatedContent.querySelectorAll('.related-detachment').forEach(section=>{const selectedDetachment=section.dataset.detachment==='core'||selected==='all'||section.dataset.detachment===selected;section.hidden=!selectedDetachment||![...section.querySelectorAll('[data-related-kind]')].some(group=>!group.hidden);});
+    relatedRules.querySelectorAll('[data-related-tab]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.relatedTab===relatedKind)));
+    const hasVisible=[...relatedContent.querySelectorAll('.related-detachment')].some(section=>!section.hidden);
+    let empty=relatedContent.querySelector('.related-empty');
+    if(!hasVisible&&!empty){empty=document.createElement('p');empty.className='related-status related-empty';relatedContent.append(empty);}
+    if(empty){empty.hidden=hasVisible;empty.textContent=`No matching ${relatedKind} for this datasheet.`;}
+  }
+  async function loadRelated(){
+    if(!relatedRulesEnabled||relatedLoaded)return;
+    try{
+      const [response,matrix]=await Promise.all([fetch('./related-rules.inc?v=1'),compatibleRuntime.loadCompatibleRules(new URL('../generated/compatible-rules.json',scriptUrl))]);if(!response.ok)throw new Error(`HTTP ${response.status}`);
+      relatedContent.innerHTML=await response.text();decorateStratagemTurns(relatedContent);decorateStratagemTypes(relatedContent);compatibleMatrix=matrix;relatedLoaded=true;
+      if(rosterMode){assignedEnhancementRuleIds=new Set([...relatedContent.querySelectorAll('.enhancement')].filter(card=>roster.detachments.includes(card.closest('.related-detachment')?.dataset.detachment||'')&&roster.enhancements.has(normalize(card.dataset.enhancementTitle||card.querySelector('h4')?.textContent||''))).map(card=>card.dataset.ruleId||card.id));const sections=[...relatedContent.querySelectorAll('.related-detachment:not(.related-core)')];if(roster.detachments.some(id=>!sections.some(section=>section.dataset.detachment===id)))throw new Error('Roster data unavailable');sections.forEach(section=>{if(!roster.detachments.includes(section.dataset.detachment))section.remove();});document.querySelector('[data-roster-guides-link]')?.removeAttribute('hidden');}
+      filterRelated();
+    }catch{
+      const message=document.createElement('p');message.className='related-status';message.textContent='Could not load related rules. Check the connection and try again.';
+      const retry=document.createElement('button');retry.type='button';retry.className='related-retry';retry.textContent='Try again';retry.addEventListener('click',loadRelated);relatedContent.replaceChildren(message,retry);
+    }
+  }
+
+  document.addEventListener('pointerdown',event=>{if(event.pointerType==='mouse'){suppressed=null;return;}if(!event.isPrimary)return;suppressed=null;const trigger=event.target.closest('[data-term]');gesture=trigger?{trigger,id:event.pointerId,x:event.clientX,y:event.clientY,moved:false}:null;},{capture:true,passive:true});
+  document.addEventListener('pointermove',event=>{if(gesture&&gesture.id===event.pointerId&&Math.hypot(event.clientX-gesture.x,event.clientY-gesture.y)>10)gesture.moved=true;},{capture:true,passive:true});
+  document.addEventListener('pointerup',event=>{if(!gesture||gesture.id!==event.pointerId)return;const completed=gesture;gesture=null;if(completed.moved)return;suppressed={trigger:completed.trigger,until:performance.now()+700};showTerm(completed.trigger);},{capture:true,passive:true});
+  document.addEventListener('pointercancel',()=>{gesture=null;suppressed=null;},{capture:true,passive:true});
+  document.addEventListener('click',event=>{if(!suppressed)return;const active=performance.now()<suppressed.until;suppressed=null;if(active){event.preventDefault();event.stopImmediatePropagation();}},{capture:true});
   document.addEventListener('click',event=>{
-    const journey=event.target.closest('[data-journey-target]');
-    if(journey&&!journey.matches('a[href]')){const target=document.getElementById(journey.dataset.journeyTarget);if(target){event.preventDefault();target.scrollIntoView({block:'start'});return;}}
-    const trigger=event.target.closest('[data-term]');if(!trigger)return;event.preventDefault();showTerm(trigger);
+    const local=event.target.closest('[data-journey-target]');if(local){event.preventDefault();document.getElementById(local.dataset.journeyTarget)?.scrollIntoView({block:'start'});return;}
+    const trigger=event.target.closest('[data-term]');if(!trigger)return;
+    event.preventDefault();showTerm(trigger);
   });
   navButton.addEventListener('click',()=>drawer(!document.body.classList.contains('nav-drawer-open')));scrim.addEventListener('click',()=>drawer(false));
+  if(relatedRulesEnabled&&relatedRules){if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{if(entries.some(entry=>entry.isIntersecting)){observer.disconnect();loadRelated();}},{rootMargin:'600px 0px'});observer.observe(relatedRules);}else loadRelated();}
+  if(relatedRulesEnabled&&relatedDetachment&&!rosterMode){try{const saved=localStorage.getItem('chaos-space-marines-detachment-filter');if(saved&&relatedDetachment.querySelector(`option[value="${CSS.escape(saved)}"]`))relatedDetachment.value=saved;}catch{}relatedDetachment.addEventListener('change',()=>{try{localStorage.setItem('chaos-space-marines-detachment-filter',relatedDetachment.value);}catch{}filterRelated();});}
+  if(relatedRulesEnabled)relatedRules?.addEventListener('click',event=>{const tab=event.target.closest('[data-related-tab]');if(tab){relatedKind=tab.dataset.relatedTab;filterRelated();}});
   drawerMedia.addEventListener?.('change',syncDrawerMode);syncDrawerMode();
-
-  const documentTriggers=()=>[...document.querySelectorAll('main [data-term]')];
+  const documentTriggers=()=>[...document.querySelectorAll('main [data-term],#relatedRules [data-term]')];
   const findRoot=(state,all=documentTriggers())=>all[state?.triggerIndex]?.dataset.term===state?.rootTerm?all[state.triggerIndex]:all.find(node=>node.dataset.term===state?.rootTerm)||null;
-  window.WHPageState?.install({beforeRestore(){popups.closeAll({focus:false});},snapshot(){const popupIds=popups.snapshot(),root=popups.rootElement(),all=documentTriggers();return popupIds.length?{popupIds,rootTerm:popupIds[0],triggerIndex:root?all.indexOf(root):-1}:null;},restore(state){if(state?.popupIds?.length)popups.restore(state.popupIds,{root:findRoot(state),focus:true});}});
+  window.WHPageState?.install({
+    beforeRestore(){popups.closeAll({focus:false});},
+    snapshot(){const popupIds=popups.snapshot(),root=popups.rootElement(),all=documentTriggers();return popupIds.length?{popupIds,rootTerm:popupIds[0],triggerIndex:root?all.indexOf(root):-1}:null;},
+    restore(state){if(state?.popupIds?.length)popups.restore(state.popupIds,{root:findRoot(state),focus:true});}
+  });
   const returnRecord=window.WHGlossaryReturn?.read();
   if(window.WHGlossaryReturn?.shouldRestoreAutomatically(returnRecord))requestAnimationFrame(()=>{
-    const popupIds=returnRecord.popupIds?.length?returnRecord.popupIds:[returnRecord.rootTerm||returnRecord.termId].filter(Boolean),trigger=findRoot({rootTerm:returnRecord.rootTerm||returnRecord.termId,triggerIndex:returnRecord.triggerIndex});
-    window.scrollTo(returnRecord.scrollX||0,returnRecord.scrollY||0);requestAnimationFrame(()=>{if(trigger&&popupIds.length)popups.restore(popupIds,{root:trigger,focus:false});window.WHGlossaryReturn.clear();});
+    const popupIds=returnRecord.popupIds?.length?returnRecord.popupIds:[returnRecord.rootTerm||returnRecord.termId].filter(Boolean);
+    const trigger=findRoot({rootTerm:returnRecord.rootTerm||returnRecord.termId,triggerIndex:returnRecord.triggerIndex});
+    window.scrollTo(returnRecord.scrollX||0,returnRecord.scrollY||0);
+    requestAnimationFrame(()=>{if(trigger&&popupIds.length)popups.restore(popupIds,{root:trigger,focus:false});window.WHGlossaryReturn.clear();});
   });
-  if((location.protocol==='http:'||location.protocol==='https:')&&'serviceWorker'in navigator)addEventListener('load',()=>navigator.serviceWorker.register('../../../service-worker.js'));
 }());

@@ -112,6 +112,20 @@ for(const bookId of supported){
     console.log(`PASS  emperors-children: ${units.length} units, ${publishedOwners.length} resolved Enhancements/UPGRADE, desktop/iPad + Phone Mode`);
     continue;
   }
+  if(bookId==='chaos-space-marines'){
+    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8'),codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','chaos-space-marines-codex-datasheets.en.json'),'utf8'));
+    const unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
+    assert(codex.datasheets.length===54,'chaos-space-marines: current Datasheet catalog is incomplete');
+    assert(codex.legends.length===53,'chaos-space-marines: Legends inventory changed');
+    codex.datasheets.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`chaos-space-marines: unit ${unit.title} is absent from Roster Guide`));
+    for(const title of ['Khorne Berzerkers','Noise Marines','Plague Marines','Rubric Marines'])assert(!unitTitles.has(entities.normalize(title)),`chaos-space-marines: borrowed unit ${title} entered the current surface`);
+    assert((related.match(/class="stratagem surface"/g)||[]).length===55,'chaos-space-marines: 45 faction and 10 Core Stratagems are required');
+    assert((related.match(/class="enhancement\b/g)||[]).length===30,'chaos-space-marines: all 30 source-backed FP Enhancements are required');
+    assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&/\.\/scripts\/app\.js\?v=\d+/.test(reader),'chaos-space-marines: roster or matrix controller is absent');
+    assert(fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs'))&&fs.existsSync(path.join(bookRoot,'scripts','roster-data.js')),'chaos-space-marines: matrix or roster data is absent');
+    console.log('PASS  chaos-space-marines: 54 current units, 17 Detachments, desktop/iPad + Phone routes');
+    continue;
+  }
   const dataPath=path.join(bookRoot,'content',`${bookId}-rules.en.json`);
   const readerPath=path.join(bookRoot,'reader.html');
   const relatedPath=path.join(bookRoot,'mobile','related-rules.inc');
@@ -180,7 +194,7 @@ const datasmith=matcherContext(['INFANTRY','CHARACTER','TECH-PRIEST'],{candidate
 assert(sharedMatcher.matches({targets:[{side:'friendly',all:['ADEPTUS MECHANICUS','VEHICLE']}]},datasmith),'Datasmith and Kastelan Attached Unit loses VEHICLE relevance');
 assert(!sharedMatcher.matches({targets:[{side:'friendly',all:['ADEPTUS MECHANICUS','INFANTRY']}]},datasmith),'Datasmith and Kastelan Attached Unit incorrectly keeps INFANTRY');
 
-const rosterCompatibleBooks=['death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children'];
+const rosterCompatibleBooks=['death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','chaos-space-marines'];
 for(const bookId of rosterCompatibleBooks){
   const desktop=fs.readFileSync(path.join(root,`books/${bookId}/scripts/app.js`),'utf8');
   const phone=fs.readFileSync(path.join(root,`books/${bookId}/mobile/mobile.js`),'utf8');

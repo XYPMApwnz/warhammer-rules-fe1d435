@@ -49,13 +49,15 @@
     const selectedDetachments=new Set((roster.detachments||[{name:roster.detachment,label:roster.detachment}]).flatMap(item=>[item.name,item.label]).map(normalize).filter(Boolean));
     for(const raw of roster.enhancements||[]){
       const name=enhancementName(raw);if(!name)continue;
-      const enhancement=catalog.enhancements[normalize(name)];
-      if(!enhancement){unresolved.push(`Enhancement: ${name}`);continue;}
+      const entry=catalog.enhancements[normalize(name)],candidates=(Array.isArray(entry)?entry:[entry]).filter(Boolean),selected=candidates.filter(item=>!item.detachment||selectedDetachments.has(normalize(item.detachment)));
+      const enhancement=selected.length===1?selected[0]:candidates.length===1?candidates[0]:null;
+      if(!enhancement){unresolved.push(`Enhancement Detachment: ${name}`);continue;}
       total+=Number(enhancement.value);
       const rosterUnit=(roster.units||[]).find(unit=>unit.id===raw.ownerUnitId),owner=catalog.units[normalize(rosterUnit?.name)];
       let ownerEligibility='valid',ownerMessage='';
       if(raw.ownerStatus!=='resolved'||!rosterUnit||!owner){ownerEligibility='invalid';ownerMessage='Invalid Enhancement owner';}
       else if(enhancement.detachment&&!selectedDetachments.has(normalize(enhancement.detachment))){ownerEligibility='invalid';ownerMessage='Enhancement is not available in the selected Detachment';}
+      else if(enhancement.sourceLimited){ownerEligibility='unverified';ownerMessage='Enhancement owner eligibility is source-limited';}
       else if(!ownerMatches(enhancement,owner,faction)){ownerEligibility='invalid';ownerMessage=keywords(owner).has('EPIC HERO')?'Epic Hero cannot receive this Enhancement':'Invalid Enhancement owner';}
       const result={...raw,id:enhancement.id,name:enhancement.title,currentCost:Number(enhancement.value),text:enhancement.text||'',effect:enhancement.effect||'',tags:enhancement.tags||[],assignment:enhancement.assignment||null,ownerEligibility,ownerMessage};
       enhancements.push(result);

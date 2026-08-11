@@ -6,7 +6,12 @@
     "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
     "revision": "3",
     "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Imperium%20-%20Dark%20Angels.json",
-    "snapshotSha256": "6DFEE5B8C4B159FE401301999C215EEE242E71822A1C4C9B05D49B30714872D0"
+    "snapshotSha256": "6DFEE5B8C4B159FE401301999C215EEE242E71822A1C4C9B05D49B30714872D0",
+    "officialMfm": {
+      "version": "v1.2",
+      "url": "https://mfm.warhammer-community.com/en/dark-angels",
+      "verifiedAt": "2026-08-11"
+    }
   },
   "units": [
     {
@@ -16,13 +21,18 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "unit · 1 model",
           "value": 70,
           "minModels": 1,
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-azrael",
@@ -31,13 +41,18 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "unit · 1 model",
           "value": 140,
           "minModels": 1,
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-belial",
@@ -46,13 +61,18 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "unit · 1 model",
           "value": 75,
           "minModels": 1,
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-deathwing-command-squad",
@@ -82,17 +102,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
+          "label": "1st to 2nd · 5 models",
           "value": 240,
           "minModels": 5,
-          "maxModels": 5
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 5 models",
-          "value": 260
+          "label": "3rd + · 5 models",
+          "value": 260,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-deathwing-strikemaster",
@@ -116,19 +146,24 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
+          "label": "unit · 5 models",
           "value": 165,
           "minModels": 5,
           "maxModels": 5
         },
         {
-          "label": "6-10 models",
+          "label": "unit · 10 models",
           "value": 330,
-          "minModels": 6,
+          "minModels": 10,
           "maxModels": 10
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-ezekiel",
@@ -137,13 +172,18 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "unit · 1 model",
           "value": 75,
           "minModels": 1,
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-inner-circle-companions",
@@ -152,27 +192,42 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3 models",
+          "label": "1st to 2nd · 3 models",
           "value": 80,
           "minModels": 3,
-          "maxModels": 3
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 3 models",
-          "value": 90
-        },
-        {
-          "label": "6 models",
+          "label": "1st to 2nd · 6 models",
           "value": 160,
           "minModels": 6,
-          "maxModels": 6
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 6 models",
-          "value": 170
+          "label": "3rd + · 3 models",
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 6 models",
+          "value": 170,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-land-speeder-vengeance",
@@ -181,17 +236,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st to 2nd · 1 model",
           "value": 130,
           "minModels": 1,
-          "maxModels": 1
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 1 models",
-          "value": 140
+          "label": "3rd + · 1 model",
+          "value": 140,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-lazarus",
@@ -200,13 +265,18 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "unit · 1 model",
           "value": 70,
           "minModels": 1,
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-lion-eljonson",
@@ -215,13 +285,18 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "unit · 1 model",
           "value": 265,
           "minModels": 1,
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-nephilim-jetfighter",
@@ -230,13 +305,18 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "unit · 1 model",
           "value": 180,
           "minModels": 1,
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-ravenwing-black-knights",
@@ -245,27 +325,24 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3 models",
+          "label": "unit · 3 models",
           "value": 75,
           "minModels": 3,
           "maxModels": 3
         },
         {
-          "label": "3+ unit: 3 models",
-          "value": 85
-        },
-        {
-          "label": "6 models",
+          "label": "unit · 6 models",
           "value": 150,
           "minModels": 6,
           "maxModels": 6
-        },
-        {
-          "label": "3+ unit: 6 models",
-          "value": 160
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-ravenwing-command-squad",
@@ -274,17 +351,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3 models",
+          "label": "1st to 2nd · 3 models",
           "value": 105,
           "minModels": 3,
-          "maxModels": 3
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 3 models",
-          "value": 115
+          "label": "3rd + · 3 models",
+          "value": 115,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-ravenwing-dark-talon",
@@ -293,13 +380,18 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "unit · 1 model",
           "value": 200,
           "minModels": 1,
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-ravenwing-darkshroud",
@@ -308,13 +400,18 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "unit · 1 model",
           "value": 70,
           "minModels": 1,
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-ravenwing-talonmaster",
@@ -338,13 +435,18 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "unit · 1 model",
           "value": 95,
           "minModels": 1,
           "maxModels": 1
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     }
   ],
   "enhancements": [
@@ -354,7 +456,12 @@
       "detachment": "Company of Hunters",
       "value": 15,
       "text": "RAVENWING model only. If the bearer's unit starts the battle in Strategic Reserves, its points value does not count towards the combined points limit for units from your army that are in Strategic Reserve, and for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-master-crafted-weapon",
@@ -362,7 +469,12 @@
       "detachment": "Company of Hunters",
       "value": 10,
       "text": "RAVENWING model only. Melee weapons equipped by the bearer have the Precision ability.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-mounted-strategist",
@@ -370,7 +482,12 @@
       "detachment": "Company of Hunters",
       "value": 30,
       "text": "RAVENWING model only. You can re-roll Advance and Charge rolls made for the bearer’s unit.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-recon-hunter",
@@ -378,7 +495,12 @@
       "detachment": "Company of Hunters",
       "value": 20,
       "text": "RAVENWING model only. Models in the bearer's unit have the Scouts 9\" ability.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-entreaty-of-perpetual-ardour",
@@ -386,7 +508,12 @@
       "detachment": "Dark Age Arsenal",
       "value": 15,
       "text": "HELLBLASTER SQUAD only. This unit’s snap shooting attacks hit on unmodified hit rolls of 5+.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-petition-of-stability",
@@ -394,7 +521,12 @@
       "detachment": "Dark Age Arsenal",
       "value": 15,
       "text": "ADEPTUS ASTARTES unit only. This unit’s plasma attacks have +6\" R.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-nightforged-battery",
@@ -402,7 +534,12 @@
       "detachment": "Darkflight Pursuit",
       "value": 15,
       "text": "LAND SPEEDER VENGEANCE unit only. This unit can re-roll:\n\n\n▪ Rolls to determine the A of a weapon.\n▪ Hazard rolls.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-thundercowl-turbines",
@@ -410,7 +547,12 @@
       "detachment": "Darkflight Pursuit",
       "value": 15,
       "text": "RAVENWING FLY unit only. In your first Movement phase, this unit can make an ingress move.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-champion-of-the-deathwing",
@@ -418,7 +560,12 @@
       "detachment": "Inner Circle Task Force",
       "value": 15,
       "text": "Deathwing model only. Melee weapons equipped by the bearer have the [LETHAL HITS] ability, and each time the bearer makes a melee attack, if it is within range of your Vowed objective marker, a Critical Hit is scored on an unmodified Hit roll of 5+.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-inner-circle-task-force-deathwing-assault",
@@ -426,7 +573,12 @@
       "detachment": "Inner Circle Task Force",
       "value": 30,
       "text": "Deathwing model with the Deep Strike ability only. The bearer's unit can set up using the Deep Strike ability in the Reinforcement step of your first, second or third Movement phase, regardless of any mission rules.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-eye-of-the-unseen",
@@ -434,7 +586,12 @@
       "detachment": "Inner Circle Task Force",
       "value": 10,
       "text": "Deathwing model only. Each time you target the bearer's unit with a Stratagem, roll one D6, adding 1 if the bearer is within range of your Vowed objective marker: on a 5+ you gain 1CP.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-singular-will",
@@ -442,7 +599,12 @@
       "detachment": "Inner Circle Task Force",
       "value": 20,
       "text": "Deathwing model only. Each time the bearer's unit Pile In or Consolidates, models in that unit can move an additional 3\".",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-inescapable-interrogation",
@@ -450,7 +612,12 @@
       "detachment": "Interrogation Conclave",
       "value": 20,
       "text": "CHAPLAIN model only. This unit’s ranged attacks have [IGNORES COVER].",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-limitless-zeal",
@@ -458,7 +625,12 @@
       "detachment": "Interrogation Conclave",
       "value": 10,
       "text": "CHAPLAIN model only. This unit has +1 to charge rolls",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-calibanite-armaments",
@@ -466,7 +638,12 @@
       "detachment": "Lion's Blade Task Force",
       "value": 15,
       "text": "Adeptus Astartes model only. Add 1 to the Damage characteristic of the bearer’s melee weapons.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-fulgus-magna",
@@ -474,7 +651,12 @@
       "detachment": "Lion's Blade Task Force",
       "value": 20,
       "text": "Deathwing model only. Once per battle, at the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-lord-of-the-hunt",
@@ -482,15 +664,25 @@
       "detachment": "Lion's Blade Task Force",
       "value": 15,
       "text": "Ravenwing model only. The bearer’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back and you can re-roll Desperate Escape tests taken for models in the bearer’s unit.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-stalwart-champion",
       "title": "Stalwart Champion",
       "detachment": "Lion's Blade Task Force",
-      "value": 25,
+      "value": 15,
       "text": "Captain, Chaplain or Lieutenant model only. While the bearer’s unit is not Battle-shocked, add 1 to the Objective Control characteristic of models in the bearer’s unit.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-pennant-of-remembrance",
@@ -498,7 +690,12 @@
       "detachment": "Unforgiven Task Force",
       "value": 10,
       "text": "Ancient model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability. While that unit\nis Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-shroud-of-heroes",
@@ -506,7 +703,12 @@
       "detachment": "Unforgiven Task Force",
       "value": 25,
       "text": "ADEPTUS ASTARTES model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6:\n▪ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining, or its full wounds remaining if this model was battle-shocked when it was destroyed",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-stubborn-tenacity",
@@ -514,7 +716,12 @@
       "detachment": "Unforgiven Task Force",
       "value": 15,
       "text": "Adeptus Astartes model only. While the bearer is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Battle-shocked and below its Starting Strength.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-weapons-of-the-first-legion",
@@ -522,7 +729,12 @@
       "detachment": "Unforgiven Task Force",
       "value": 15,
       "text": "Adeptus Astartes model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. While the bearer is Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-ancient-weapons",
@@ -530,7 +742,12 @@
       "detachment": "Wrath of the Rock",
       "value": 25,
       "text": "Adeptus Astartes model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, and improve the Armour Penetration and Damage characteristics of those weapons by 1.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-wrath-of-the-rock-deathwing-assault",
@@ -538,7 +755,12 @@
       "detachment": "Wrath of the Rock",
       "value": 15,
       "text": "Deathwing model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-lord-of-the-ravenwing",
@@ -546,7 +768,12 @@
       "detachment": "Wrath of the Rock",
       "value": 10,
       "text": "Ravenwing model only. You can re-roll Advance and Charge rolls made for the bearer’s unit.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "enhancement-tempered-in-battle-aura",
@@ -554,11 +781,58 @@
       "detachment": "Wrath of the Rock",
       "value": 10,
       "text": "Adeptus Astartes model only. While a friendly Adeptus Astartes unit is within 6\" of this model, you can re-roll Battle-shock and Leadership tests taken for that unit.",
-      "profile": null
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      }
     }
   ],
   "audit": {
     "units": 19,
     "enhancements": 26
-  }
+  },
+  "detachments": [
+    {
+      "title": "Company of Hunters",
+      "forceDisposition": "DISRUPTION",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Dark Age Arsenal",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "Darkflight Pursuit",
+      "forceDisposition": "RECONNAISSANCE",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "Inner Circle Task Force",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Interrogation Conclave",
+      "forceDisposition": "TAKE AND HOLD",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "Lion's Blade Task Force",
+      "forceDisposition": "PURGE THE FOE",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Unforgiven Task Force",
+      "forceDisposition": "TAKE AND HOLD",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Wrath of the Rock",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 3
+    }
+  ]
 }

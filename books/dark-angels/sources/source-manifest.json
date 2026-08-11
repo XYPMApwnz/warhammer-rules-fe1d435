@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "verifiedAt": "2026-07-28",
+  "verifiedAt": "2026-08-11",
   "layers": [
     {
       "id": "faction-pack-v1.0",
@@ -10,6 +10,24 @@
       "legalFrom": "2026-06-20",
       "url": "https://assets.warhammer-community.com/eng_08-06_warhammer40000_faction_pack_dark_angels-fw4ot2jwtw-hplla1qiky.pdf",
       "localFile": "dark-angels-faction-pack-v1.0.pdf"
+      ,
+      "status": "superseded",
+      "sha256": "7F1EFE2D62F57597D0949D62B8D9BF0675E0199A6E99A1EEF61BFA65DE76AA52",
+      "pageCount": 16
+    },
+    {
+      "id": "faction-pack-v1.1",
+      "authority": "official",
+      "role": "11e-overlay-current",
+      "title": "Dark Angels Faction Pack v1.1",
+      "legalFrom": "2026-07-22",
+      "retrievedAt": "2026-08-11",
+      "frozenAt": "2026-08-11",
+      "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_dark_angels-vml9eoamc5-muz1tp9qlk.pdf",
+      "localFile": "dark-angels-faction-pack-v1.1.pdf",
+      "sha256": "A29FB27970A47E174E4014C7D39DC99FEECB5940684E1DBA04EA218E7BC4106F",
+      "pageCount": 17,
+      "status": "current"
     },
     {
       "id": "codex-transcription",
@@ -27,13 +45,48 @@
       "role": "points-and-roster-contract",
       "title": "Munitorum Field Manual",
       "updated": "2026-07-22",
+      "version": "v1.2",
+      "capturedAt": "2026-08-11",
       "url": "https://mfm.warhammer-community.com/en/dark-angels",
-      "status": "snapshot-required"
+      "localFile": "official-mfm-v1.2.json",
+      "captureSha256": "BD358079BB88A455460686F0E4F09B504B4C950DAC2B49CE85257A6B2D95D045",
+      "structuredCaptureSha256": "51D3C92BBF81B915A72E609580A98EAC77A929F4BFBC6AC1F6C52F4CB12D144B",
+      "status": "dated-capture"
+    }
+  ],
+  "dependencies": {
+    "spaceMarines": {
+      "authority": "canonical-shared",
+      "sourceDatasheets": 101,
+      "foreignChapterExcluded": 19,
+      "eligibleShared": 82,
+      "mfmSpecialScopeExcluded": [
+        "Astraeus",
+        "Thunderhawk Gunship"
+      ],
+      "unresolved": 0
+    }
+  },
+  "knownGaps": [
+    {
+      "id": "DA-GAP-001",
+      "status": "open",
+      "reason": "A frozen authoritative Dark Angels Codex source is not present."
+    },
+    {
+      "id": "DA-GAP-004",
+      "status": "closed",
+      "reason": "Current official MFM v1.2 is preserved as a dated repository capture."
+    },
+    {
+      "id": "DA-GAP-005",
+      "status": "open",
+      "reason": "Three Codex-derived Detachments remain source-limited without the frozen Codex."
     }
   ],
   "gates": {
     "publishAsComplete": false,
     "reviewLabel": "Source-limited preview",
-    "reason": "Official Dark Angels Faction Pack content is frozen and verified. Three Codex Detachments remain source-limited because the complete frozen Codex source is not available in this repository. Dark Angels points use pinned secondary data and are not backed by a frozen official MFM snapshot."
+    "reason": "Current official Dark Angels Faction Pack v1.1 is frozen and verified. Current official MFM v1.2 points are preserved as a dated capture. Three Codex-derived Detachments remain source-limited because the complete frozen Codex source is not available in this repository."
   }
 }

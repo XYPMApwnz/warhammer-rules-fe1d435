@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Dark Angels Faction Pack",
-    "version": "1.0",
-    "legalFrom": "2026-06-20",
-    "pageCount": 16,
-    "sha256": "7F1EFE2D62F57597D0949D62B8D9BF0675E0199A6E99A1EEF61BFA65DE76AA52",
-    "file": "sources/dark-angels-faction-pack-v1.0.pdf"
+    "version": "1.1",
+    "legalFrom": "2026-07-22",
+    "pageCount": 17,
+    "sha256": "A29FB27970A47E174E4014C7D39DC99FEECB5940684E1DBA04EA218E7BC4106F",
+    "file": "sources/dark-angels-faction-pack-v1.1.pdf"
   },
   "provenance": {
-    "sourceId": "dark-angels-faction-pack-v1.0",
+    "sourceId": "dark-angels-faction-pack-v1.1",
     "authority": "Games Workshop",
     "documentType": "faction-pack",
     "edition": "Warhammer 40,000 11th Edition",
@@ -23,8 +23,8 @@
   },
   "pages": {
     "1": {
-      "sha256": "CB71ADC6E9B5DA4E7E7B72FB6D38220CCD2BD2F3DEE7EA6C0E06A15116939812",
-      "text": "DARK ANGELS\nFACTION PACK: VERSION 1.0\nLegal for matched play from 20th June 2026\nOn the following pages you will find additional rules and clarifications that supplement your Codex, from extra detachments and\ndatasheets to rules updates and FAQs. All of these changes are also updated in the Warhammer 40,000 app, along with points values\nfor your units and detachments.\nWHAT’S NEW?\nThis is the first iteration of this Faction Pack for this edition of\nWarhammer 40,000, combining some earlier updates with new\nrevisions designed to smooth the transition. As such, all of the following\ncontent should be regarded as new, and individual changes are not\nhighlighted. The next time this document is updated, this section will\nsummarise what has been added or changed.\nCONTENTS\nDetachments .................................................................................2\nDark Age Arsenal ..........................................................................................2\nDarkflight Pursuit ........................................................................................3\nInterrogation Conclave ...............................................................................4\nLion’s Blade Task Force ..............................................................................5\nWrath of the Rock ........................................................................................7\nRules Updates ...............................................................................9\nLegends Datasheets ...................................................................11"
+      "sha256": "E750C4C5222CC95CA0D75145D8CFD618F162EE4711F57080EA50AFD9293CE928",
+      "text": "DARK ANGELS\nFACTION PACK: VERSION 1.1\nLegal for matched play from 22nd July 2026\nOn the following pages you will find additional rules and clarifications that supplement your Codex, from extra detachments and\ndatasheets to rules updates and FAQs. All of these changes are also updated in the Warhammer 40,000 app, along with points values\nfor your units and detachments.\nWHAT’S NEW?\n ▪ Changes to Rules Updates\nCONTENTS\nDetachments .................................................................................2\nDark Age Arsenal ..........................................................................................2\nDarkflight Pursuit ........................................................................................3\nInterrogation Conclave ...............................................................................4\nLion’s Blade Task Force ..............................................................................5\nWrath of the Rock ........................................................................................7\nRules Updates ...............................................................................9\nLegends Datasheets ...................................................................12"
     },
     "2": {
       "sha256": "9BBBA5916DBCE3AC3D804A18E177E2F2E77B935D6A14B06F7028EA9D639989DD",
@@ -55,34 +55,38 @@
       "text": "INESCAPABLE JUSTICE\nWRATH OF THE ROCK – BATTLE TACTIC STRATAGEM\nThe Dark Angels pursue their enemies relentlessly,\neliminating one with ruthless precision before\nturning to the next.\nWHEN: Any phase, just after your Oath of Moment\ntarget is destroyed.\nTARGET: One Adeptus Astartes Character  unit that\nis on the battlefield.\nEFFECT: Select one enemy unit within 12\" and\nvisible to your unit. That enemy unit becomes your\nOath of Moment target until the start of your next\nCommand phase.\nLION’S WILL\nWRATH OF THE ROCK – STRATEGIC PLOY STRATAGEM\nUnflinching in their loyalty to Chapter and Primarch,\nDark Angels battle‑brothers seize and hold their\nobjectives with unrelenting determination and\nzealous fury.\nWHEN: Command phase.\nTARGET: One Adeptus Astartes  unit from your army\nthat is within Engagement Range of one or more\nenemy units.\nEFFECT: Until the start of your next Command\nphase, add 1 to the Objective Control characteristic\nof models in your unit. In addition, until the end of\nthe turn, if your unit does not have the Deathwing ,\nRavenwing  or Vehicle  keyword, each time a model\nin your unit makes an attack, add 1 to the Hit roll.\nARMOUR OF CONTEMPT\nWRATH OF THE ROCK – BATTLE TACTIC STRATAGEM\nThe belligerence of the Adeptus Astartes combined\nwith their transhuman physiology makes them\nunyielding foes to face.\nWHEN: Your opponent’s Shooting phase or the\nFight phase, just after an enemy unit has selected\nits targets.\nTARGET: One Adeptus Astartes unit from your army\nthat was selected as the target of one or more of the\nattacking unit’s attacks.\nEFFECT: Until the attacking unit has finished making\nits attacks, each time an attack targets your unit,\nworsen the Armour Penetration characteristic of that\nattack by 1.\nTACTICAL MASTERY\nWRATH OF THE ROCK – BATTLE TACTIC STRATAGEM\nWhen the constituent elements of the Dark Angels\nfight as one, the enemy is often overwhelmed\nand torn apart by the fluidity of the Chapter’s\nrapid advances, tactical withdrawals and\nunexpected counteroffensives.\nWHEN: Your Movement phase.\nTARGET: One Adeptus Astartes  unit from your army.\nEFFECT: Until the end of the turn, your unit is eligible\nto shoot and declare a charge in a turn in which it\nAdvanced. If your unit has the Ravenwing  keyword,\nit is also eligible to shoot and declare a charge in a\nturn in which it Fell Back.\nRELICS OF THE DARK AGE\nWRATH OF THE ROCK – STRATEGIC PLOY STRATAGEM\nAmongst the many secrets hoarded by the Dark\nAngels are those technological in nature. The\narmouries of the Rock contain potent weapons\nunseen in the armouries of other Chapters.\nWHEN: Your Shooting phase.\nTARGET: One Adeptus Astartes Infantry  or\nAdeptus Astartes Mounted  unit from your army\nthat has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, add 2 to the\nStrength characteristic of ranged weapons equipped\nby models in your unit.\nLEONINE AGGRESSION\nWRATH OF THE ROCK – STRATEGIC PLOY STRATAGEM\nThe Dark Angels are always aggressive in their\nwaging of war, seizing any opportunity to pounce\nupon and annihilate their prey.\nWHEN: End of your opponent’s Charge phase.\nTARGET: One Adeptus Astartes  unit from your\narmy within 3\" of one or more enemy units, or one\nDeathwing  unit from your army within 6\" of one or\nmore enemy units.\nEFFECT: Your unit now declares a charge that only\ntargets one or more of those enemy units, and you\nresolve that charge.\nRESTRICTIONS: Note that even if this charge is\nsuccessful, your unit does not receive any Charge\nbonus this turn.\n2CP\n1CP\n1CP\n1CP\n1CP\n1CP\n8"
     },
     "9": {
-      "sha256": "06F7070B6E3FD4BBE5DD5E404D9F68994C88F8774061F18A4BA26F39D82EB377",
-      "text": "DARK ANGELS\nRULES UPDATES\nThis section presents updates and clarifications to your faction’s rules, designed to improve the gaming experience for all players.\nChanges applied after the first iteration of this Faction Pack will be highlighted in red.\nUPDATES\nCOMPANY OF HUNTERS DETACHMENT\nMasters of Manoeuvre Detachment Rule\nChange to ‘ADEPTUS ASTARTES units from your army are eligible to\nshoot in a turn in which they Advanced or Fell Back. ADEPTUS ASTARTES\nMOUNTED units from your army are eligible to shoot and declare a charge\nin a turn in which they Advanced or Fell Back.’\nKeywords Section\nChange to 'OUTRIDER SQUAD units from your army gain the\nBATTLELINE keyword.’\nMounted Strategist Enhancement\nChange to ‘RAVENWING model only. You can re‑roll Advance and Charge\nrolls made for the bearer’s unit.’\nINNER CIRCLE TASK FORCE DETACHMENT\nVowed Target Detachment Rule\nChange to:\n‘At the start of your Movement phase, select one of the following:\n ▪  Defensive Footing: Select one objective you control. Until the start of\nyour next Movement phase, that objective is your Vowed objective.\n ▪  Aggressive Push: Select one or more objective you do not control.\nUntil the start of your next Movement phase, each of those\nobjectives is one of your Vowed objectives. If a rule refers to a unit\nor model being within range of your Vowed objective, that rule takes\neffect if that unit or model is within range of one or more of your\nVowed objectives. Each time a DEATHWING INFANTRY unit from your\narmy makes an attack that targets a unit within range of one or more\nof your Vowed objectives, add 1 to the Wound roll.’\nRelic Teleportarium Stratagem, Effect Section\nChange 3\" to 6\".\nUNFORGIVEN TASK FORCE DETACHMENT\nGrim Resolve Detachment Rule\nChange to:\n‘While an ADEPTUS ASTARTES unit from your army is Battle‑shocked,\nchange the Objective Control characteristic of models in that unit to 1\ninstead of '‑'.\nIn your Command phase, you can select one ADEPTUS ASTARTES unit\nfrom your army. Until the start of your next Command phase, add 1 to\nthe Objective Control characteristic of models in that unit.’\nCompany of Hunters, Inner Circle Task Force, Unforgiven Task Force –\nArmour of Contempt Stratagem, Effect section\nChange to:\n‘Until the attacking unit has finished making its attacks, each time an\nattack targets your unit, worsen the Armour Penetration characteristic\nof that attack by 1.’\nDATASHEETS\nNephilim Jetfighter, Ravenwing Dark Talon\n• Core Abilities: Remove 'Hover'.\n ▪  Profile: Change M and OC to '‑'.\nDeathwing Terminator Squad, Deathwing Knights – Watcher in the\nDark Ability\nChange to:\n‘Once per battle, in any phase, just after a mortal wound is allocated\nto an ADEPTUS ASTARTES model in this unit, this unit can summon a\nWatcher in the Dark. When it does, until the end of the phase, models in\nthis unit have the Feel No Pain 4+ ability against mortal wounds.’\nDeathwing Terminator Squad, Teleport Homer Ability\nChange 9\" to 8\".\nDeathwing Knights\n• Teleport Homer Ability: Change 9\" to 8\".\n• Melee Weapons: Change the mace of absolution and power weapon\nprofiles to:\nMace of Absolution\n[ANTI-MONSTER 4+, ANTI-VEHICLE 4+]\nRANGE A WS S AP D\nMelee 4 2+ 6 ‑2 2\nPower Weapon\nRANGE A WS S AP D\nMelee 5 2+ 6 ‑2 2\nInner Circle Companions, Calibanite Greatsword Profiles\nChange to:\nCalibanite Greatsword - Strike [LETHAL HITS]\nRANGE A WS S AP D\nMelee 4 3+ 6 ‑2 2\nCalibanite Greatsword - Sweep [SUSTAINED HITS 2]\nRANGE A WS S AP D\nMelee 5 3+ 6 ‑2 1\nLand Speeder Vengeance, Plasma Storm Battery Profiles\nChange to:\nPlasma Storm Battery - Standard [BLAST, TWIN-LINKED]\nRANGE A BS S AP D\n36\" D6+1 3+ 8 ‑2 2\nPlasma Storm Battery - Supercharge\n[BLAST, HAZARDOUS, TWIN-LINKED]\nRANGE A BS S AP D\n36\" D6+1 3+ 9 ‑3 3"
+      "sha256": "59E0530E4A95CC2C67BF4BD6024EB6BD837B8C97FD39C25182CF8AF627399179",
+      "text": "DARK ANGELS\nRULES UPDATES\nThis section presents updates and clarifications to your faction’s rules, designed to improve the gaming experience for all players.\nChanges applied after the first iteration of this Faction Pack will be highlighted in red.\nUPDATES\nDETACHMENTS (VARIOUS)\nCompany of Hunters, Inner Circle Task Force, Unforgiven Task Force –\nArmour of Contempt Stratagem, Effect section\nChange to:\n‘Until the attacking unit has finished making its attacks, each time an\nattack targets your unit, worsen the Armour Penetration characteristic\nof that attack by 1.’\nCOMPANY OF HUNTERS DETACHMENT\nMasters of Manoeuvre Detachment Rule\nChange to:\n‘Friendly ADEPTUS ASTARTES have:\n ▪ This unit’s ranged attacks have [ASSAULT].\n ▪  When this unit is selected to make a fall-back move, that fall-back\nmove does not prevent this unit from being eligible to shoot.\nFriendly ADEPTUS ASTARTES MOUNTED have:\n ▪ This unit’s ranged attacks have [ASSAULT].\n ▪  When this unit is selected to make an advance move, that advance\nmove does not prevent this unit from being eligible to declare\na charge.\n ▪  When this unit is selected to make a fall-back move, that fall-back\nmove does not prevent this unit from being eligible to shoot and\neligible to declare a charge.’\nKeywords Section\nChange to 'OUTRIDER SQUAD units from your army gain the\nBATTLELINE keyword.’\nMounted Strategist Enhancement\nChange to ‘RAVENWING model only. You can re‑roll Advance and Charge\nrolls made for the bearer’s unit.’\nDeath on the Wind Stratagem\nChange to:\n‘WHEN: Your Movement phase, when a friendly ADEPTUS ASTARTES unit\nends an advance move.\nTARGET: That ADEPTUS ASTARTES unit.\nEFFECT: That advance move does not prevent your unit from being\neligible to declare a charge.’\nTalon Strike Stratagem\nChange to:\n‘WHEN: Fight phase, when a friendly ADEPTUS ASTARTES unit is selected\nto fight.\nTARGET: That ADEPTUS ASTARTES unit.\nEFFECT: Your unit’s melee attacks have [LANCE].’\nINNER CIRCLE TASK FORCE DETACHMENT\nVowed Target Detachment Rule\nChange to:\n‘At the start of your Movement phase, select one of the following:\n ▪  Defensive Footing: Select one objective you control. Until the start of\nyour next Movement phase, that objective is your Vowed objective.\n ▪  Aggressive Push: Select one or more objective you do not control.\nUntil the start of your next Movement phase, each of those\nobjectives is one of your Vowed objectives. If a rule refers to a unit\nor model being within range of your Vowed objective, that rule takes\neffect if that unit or model is within range of one or more of your\nVowed objectives. Each time a DEATHWING INFANTRY unit from your\narmy makes an attack that targets a unit within range of one or more\nof your Vowed objectives, add 1 to the Wound roll.’\nRelic Teleportarium Stratagem, Effect Section\nChange 3\" to 6\".\nUNFORGIVEN TASK FORCE DETACHMENT\nGrim Resolve Detachment Rule\nChange to:\n‘While an ADEPTUS ASTARTES unit from your army is Battle‑shocked,\nchange the Objective Control characteristic of models in that unit to 1\ninstead of '‑'.\nIn your Command phase, you can select one ADEPTUS ASTARTES unit\nfrom your army. Until the start of your next Command phase, add 1 to\nthe Objective Control characteristic of models in that unit.’\nShroud of Heroes Enhancement\nChange to:\n‘ADEPTUS ASTARTES model only. (Once per battle, per army) When this\nmodel is destroyed, at the end of the phase, roll one D6:\n ▪  On a 2+, set up this model on the battlefield, unengaged and as close\nas possible to where it was destroyed. This model is not part of an\nattached unit and its unit has a starting strength of 1. This model has\n3 wounds remaining, or its full wounds remaining if this model was\nbattle-shocked when it was destroyed.’\nDATASHEETS\nNephilim Jetfighter, Ravenwing Dark Talon\n• Core Abilities: Remove 'Hover'.\n ▪  Profile: Change M and OC to '‑'.\nDeathwing Terminator Squad, Deathwing Knights – Watcher in the\nDark Ability\nChange to:\n‘Once per battle, in any phase, just after a mortal wound is allocated\nto an ADEPTUS ASTARTES model in this unit, this unit can summon a\nWatcher in the Dark. When it does, until the end of the phase, models in\nthis unit have the Feel No Pain 4+ ability against mortal wounds.’"
     },
     "10": {
-      "sha256": "FACDC3DE896E9DB80B9F2D2BB410A0A229E8E3A09FBA1AEE9DAA0211AB8E01B2",
-      "text": "Lion El’Jonson\n ▪  All Secrets Revealed Ability – Change to:\n‘Mist-wreathed Shadow Realms: In your Command phase, if this unit\nis not within Engagement Range of one or more enemy units, you can\nremove it from the battlefield and place it into Strategic Reserves.'\n ▪  Martial Exemplar (Aura) Ability – Change to:\n‘Martial Exemplar (Aura): While a friendly ADEPTUS ASTARTES unit is\nwithin 6\" of this model, each time a model in that unit makes a melee\nattack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1.'\n ▪  Primarch of the First Legion Ability – Change to:\n‘Primarch of the First Legion: At the start of your Command phase,\nselect two Primarch of the First Legion abilities. Until the start of your\nnext Command phase, this model has those abilities.’\n ▪  The Emperor’s Shield Ability – Change to:\n‘Each time an attack targets this model, if the Strength characteristic\nof that attack is greater than the Toughness characteristic of this\nmodel, subtract 1 from the Wound roll.’\n ▪  Fealty weapon profile: change to:\nFealty - Strike [LETHAL HITS]\nRANGE A WS S AP D\nMelee 8 2+ 12 ‑4 4\nFealty - Sweep [SUSTAINED HITS 1]\nRANGE A WS S AP D\nMelee 16 2+ 6 ‑3 2\nRavenwing Black Knights, Ravenwing Command Squad – Black Knight\nCombat Weapon Profile\nAdd[DEVASTATING WOUNDS].\nRavenwing Command Squad, Honour or Death Ability\nChange to:\n'While this unit contains a Ravenwing Champion, add 1 to Advance\nand Charge rolls made for this unit.When you target this unit with the\nHeroic Intervention stratagem, that use is ‑1 CP.'\nSammael, Grand Master of the Ravenwing Ability\nChange to:\n‘While this model is leading a unit, that unit is eligible to shoot and\ndeclare a charge in a turn in which it Advanced. If that unit is already\neligible to shoot and declare a charge in a turn in which it Advanced,\nadd 1 to Advance and Charge rolls made for that unit instead.’\nLand Speeder Vengeance, Ravenwing Darkshroud, Sammael –\nKeywords Section\nAdd 'FRAME'.\nFAQS\nQ: While using the Wrath of the Rock Detachment, can I use the Charge\nmove from the Leonine Aggression Stratagem to move a unit out of\nEngagement Range with another unit?\nA: No."
+      "sha256": "C051AD277FC20B77698C0C5AAAF6778D650FD570CF384F42CA4A4C2A9EA6A296",
+      "text": "Deathwing Terminator Squad, Teleport Homer Ability\nChange 9\" to 8\".\nDeathwing Knights\n• Teleport Homer Ability: Change 9\" to 8\".\n•  Melee Weapons: Change the mace of absolution and power weapon\nprofiles to:\nMace of Absolution\n[ANTI-MONSTER 4+, ANTI-VEHICLE 4+]\nRANGE A WS S AP D\nMelee 4 2+ 6 ‑2 2\nPower Weapon\nRANGE A WS S AP D\nMelee 5 2+ 6 ‑2 2\nInner Circle Companions, Braziers of Judgement ability\nChange to:\n ▪ This unit has Stealth.\n ▪ Melee attacks that target this unit have ‑1 to hit rolls.\nInner Circle Companions, Calibanite Greatsword Profiles\nChange to:\nCalibanite Greatsword - Strike [LETHAL HITS]\nRANGE A WS S AP D\nMelee 4 3+ 6 ‑2 2\nCalibanite Greatsword - Sweep [SUSTAINED HITS 2]\nRANGE A WS S AP D\nMelee 5 3+ 6 ‑2 1\nLand Speeder Vengeance, Plasma Storm Battery Profiles\nChange to:\nPlasma Storm Battery - Standard [BLAST, TWIN-LINKED]\nRANGE A BS S AP D\n36\" D6+1 3+ 8 ‑2 2\nPlasma Storm Battery - Supercharge\n[BLAST, HAZARDOUS, TWIN-LINKED]\nRANGE A BS S AP D\n36\" D6+1 3+ 9 ‑3 3\nLion El’Jonson\n ▪ Keywords section: Add 'MOBILE'.\n ▪  All Secrets Revealed Ability – Change to:\n‘Mist-wreathed Shadow Realms: At the end of your opponent’s turn,\nif this unit is unengaged, you can use this ability. If you do:\n ▫ Place this unit in strategic reserves.\n ▫  This unit can make an ingress move in your next Movement\nphase (including in your first turn).’\n ▪  Martial Exemplar (Aura) Ability – Change to:\n‘Martial Exemplar (Aura): While a friendly ADEPTUS ASTARTES unit is\nwithin 6\" of this model, each time a model in that unit makes a melee\nattack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1.'\n ▪  Primarch of the First Legion Ability – Change to:\n‘Primarch of the First Legion: At the start of your Command phase,\nselect two Primarch of the First Legion abilities. Until the start of your\nnext Command phase, this model has those abilities.’\n ▪  The Emperor’s Shield Ability – Change to:\n‘Each time an attack targets this model, if the Strength characteristic\nof that attack is greater than the Toughness characteristic of this\nmodel, subtract 1 from the Wound roll.’\n ▪  Fealty weapon profile: change to:\nFealty - Strike [LETHAL HITS]\nRANGE A WS S AP D\nMelee 8 2+ 12 ‑4 4\nFealty - Sweep [SUSTAINED HITS 1]\nRANGE A WS S AP D\nMelee 16 2+ 6 ‑3 2\nNephilim Jetfighter, Lightning-fast Manoeuvres Ability\nChange to:\n‘Ranged attacks that target this unit have ‑1 to wound rolls.’\nRavenwing Black Knights, Ravenwing Command Squad – Black Knight\nCombat Weapon Profile\nBlack Knight Combat Weapon [DEVASTATING WOUNDS]\nRANGE A WS S AP D\nMelee 3 3+ 5 ‑2 1\nRavenwing Command Squad, Keywords Section\nRemove ‘Leader’, add ‘Support’.\nRavenwing Command Squad, Honour or Death Ability\nChange to:\n'While this unit contains a Ravenwing Champion, add 1 to Advance\nand Charge rolls made for this unit.When you target this unit with the\nHeroic Intervention stratagem, that use is ‑1 CP.'\nRavenwing Darkshroud, Icon of Old Caliban Ability\nChange to:\n‘Friendly ADEPTUS ASTARTES units within 6\" of this unit have Stealth.’"
     },
     "11": {
+      "sha256": "F690909FB1655782B600334D1463AB654F5FAA08FCC92B3050C65E1F3DA3CD54",
+      "text": "Ravenwing Dark Talon, Stasis Bomb Ability\nChange to:\n‘Stasis Bomb: At the end of your opponent’s Fight phase, select one\nvisible enemy unit (excluding AIRCRAFT/Lone Operative units) within\n24\" of this unit. That enemy unit is slowed until the end of your\nopponent’s next Movement phase:\n ▪  While a unit is slowed, in your opponent’s Movement phase, when\nthat unit is selected to move, unless that unit remains stationary,\nroll one D6:\n ▫  On a 1‑4, that unit suffers D3 mortal wounds and that unit has\n‑2\" M.\n ▫  On a 5‑6, that unit suffers 2D3 mortal wounds and that unit has\n‑3\" M.’\nSammael, Grand Master of the Ravenwing Ability\nChange to:\n ▪ This unit’s ranged attacks have [ASSAULT].\n ▪  When this unit is selected to make an advance move, that advance\nmove does not prevent this unit from being eligible to declare\na charge.\n ▪ This unit has MOBILE.\nLand Speeder Vengeance, Ravenwing Darkshroud, Sammael –\nKeywords Section\nAdd 'FRAME'.\nFAQS\nQ: While using the Wrath of the Rock Detachment, can I use the Charge\nmove from the Leonine Aggression Stratagem to move a unit out of\nEngagement Range with another unit?\nA: No."
+    },
+    "12": {
       "sha256": "674B3C171F17495521B2493DE99DF08B57FA1DDA7B9270B522DDF3C5F0DBFC14",
       "text": "W ARHAMMER  LEGENDS\nRAVENWING TALONMASTER\nRANGED WEAPONS RANGE A BS S AP D\nTwin assault cannon\n[DEVASTATING WOUNDS,TWIN-LINKED] 24\" 6 3+ 6 0 1\nTwin heavy bolter [SUSTAINED HITS 1, TWIN-LINKED] 36\" 3 3+ 5 ‑1 2\nMELEE WEAPONS RANGE A WS S AP D\nPower weapon Melee 5 3+ 5 ‑2 1\nFACTION KEYWORDS:\nAdeptus Astartes, Dark Angels\nABILITIES\nCORE: Deadly Demise 1\nFACTION: Oath of Moment\nT alonmaster: While this model is within 3\" of one or more\nother friendly Adeptus Astartes Mounted  or Adeptus\nAstartes Fly Vehicle  units, this model has the Lone\nOperative ability.\nNowhere to Hide: While a friendly Adeptus Astartes\nMounted  or Adeptus Astartes Fly Vehicle  unit is within 6\"\nof this model, ranged weapons equipped by models in that\nunit have the [IGNORES COVER] ability.\nMaster of Manoeuvre: In your opponent’s Movement phase,\nwhen an enemy unit ends a Normal, Advance or Fall Back\nmove within 8\" of this model, if this model is not within\nEngagement Range of one or more enemy units, this model\ncan make a Normal move of up to 6\".\nM T SV W LD OC\n16\" 7 3+ 6 6+ 2\nINVULNERABLE SAVE5+\nKEYWORDS:   Vehicle, Character, Fly, Frame, Imperium, Ravenwing,\nRavenwing Talonmaster"
     },
-    "12": {
+    "13": {
       "sha256": "2A0EA3894AA54BC0B002FF32129BAAB911DAAE20F2C6668A5C07816A516A67F4",
       "text": "W ARHAMMER  LEGENDS\nWARGEAR OPTIONS\n ■   None\nUNIT COMPOSITION\n ■ 1 Ravenwing T alonmaster\nThis model is equipped with: twin assault cannon; twin heavy\nbolter; power weapon.\nRAVENWING TALONMASTER\nMounted in a Land Speeder outfitted with additional auspex scanners\nand vox-casters, it is a Talonmaster’s role to direct the Ravenwing’s\nfire, using his equipment to ensure no quarry can hide from them.\nThey even identify foes seeking temporary refuge in dense terrain,\nrevealing their location to all Ravenwing warriors.\nKEYWORDS:   Vehicle, Character, Fly, Frame, Imperium, Ravenwing,\nRavenwing Talonmaster\nFACTION KEYWORDS:\nAdeptus Astartes, Dark Angels"
     },
-    "13": {
+    "14": {
       "sha256": "2295DE02595BD70437C04FA878DF815D1B2262C8F699CB501DCEDB7C42F37750",
       "text": "W ARHAMMER  LEGENDS\nDEATHWING STRIKEMASTER\nRANGED WEAPONS RANGE A BS S AP D\nStorm bolter [RAPID FIRE 2] 24\" 2 2+ 4 0 1\nMELEE WEAPONS RANGE A WS S AP D\nChainfist  [ANTI-VEHICLE 3+] Melee 4 3+ 8 ‑2 2\nMace of absolution Melee 5 2+ 6 ‑1 3\nMaster‑crafted power weapon Melee 5 2+ 5 ‑2 2\nPower fist Melee 4 2+ 8 ‑2 2\nThunder hammer [DEVASTATING WOUNDS] Melee 4 3+ 8 ‑2 2\nTwin lightning claws [TWIN-LINKED] Melee 6 2+ 5 ‑2 1\nFACTION KEYWORDS:\nAdeptus Astartes, Dark Angels\nABILITIES\nCORE: Deep Strike, Support\nFACTION: Oath of Moment\nT actical Precision: While this model is leading a unit,\nweapons equipped by models in that unit have the\n[LETHAL HITS] ability.\nVanquish the Foe: Each time this model makes an attack that\ntargets an enemy unit that is Below Half‑strength, add 1 to the\nHit roll and add 1 to the Wound roll.\nWARGEAR ABILITIES\nStorm Shield: The bearer has a Wounds characteristic of 6.\nM T SV W LD OC\n5\" 5 2+ 5 6+ 1\nINVULNERABLE SAVE4+\nKEYWORDS:   Infantry, Character, Imperium, Deathwing, Terminator,\nLieutenant, Deathwing Strikemaster"
     },
-    "14": {
+    "15": {
       "sha256": "701516562BBEFC11C097E2EEF34B93042AC56B7EF891F58AD5B70ABEA4B93C90",
       "text": "W ARHAMMER  LEGENDS\nWARGEAR OPTIONS\n ■   This model’s storm bolter and master‑crafted power weapon can be replaced with either 1 twin\nlightning claws, or two different weapons from the following list:\n ◦ 1 storm bolter\n ◦ 1 chainfist\n ◦ 1 mace of absolution\n ◦ 1 power fist\n ◦ 1 thunder hammer\n ◦ 1 storm shield\nUNIT COMPOSITION\n ■ 1 Deathwing Strikemaster\nThis model is equipped with: storm bolter; master‑crafted\npower weapon.\nLEADER\nThis model can be attached to the following units:\n ■ Deathwing Command Squad\n ■ Deathwing Terminator Squad\n ■ Relic Terminator Squad\n ■ Terminator Assault Squad\n ■ Terminator Squad\nDEATHWING STRIKEMASTER\nDeathwing Strikemasters serve as the Deathwing’s Lieutenants. To\nearn such an esteemed rank they have carried out deeds of enormous\nbravery on countless battlefields, honing their skills as warriors and\nleaders. In battle they guide their Deathwing brethren with skill and\npride, bringing death to the enemy.\nKEYWORDS:   Infantry, Character, Imperium, Deathwing, Terminator,\nLieutenant, Deathwing Strikemaster\nFACTION KEYWORDS:\nAdeptus Astartes, Dark Angels"
     },
-    "15": {
+    "16": {
       "sha256": "E42EB9BA98F4C89F263E3B4589875BE9CA43F59D0B81312B13BCCD639BE8926C",
       "text": "W ARHAMMER  LEGENDS\nDEATHWING COMMAND SQUAD\nRANGED WEAPONS RANGE A BS S AP D\nAssault cannon [DEVASTATING WOUNDS] 24\" 6 3+ 6 0 1\nCyclone missile launcher – frag [BLAST] 36\" 2D6 3+ 4 0 1\nCyclone missile launcher – krak 36\" 2 3+ 9 ‑2 D6\nHeavy flamer [IGNORES COVER, TORRENT] 12\" D6 N/A 5 ‑1 1\nPlasma cannon – standard [BLAST] 36\" D3 3+ 7 ‑2 1\nPlasma cannon – supercharge [BLAST, HAZARDOUS] 36\" D3 3+ 8 ‑3 2\nStorm bolter [RAPID FIRE 2] 24\" 2 3+ 4 0 1\nMELEE WEAPONS RANGE A WS S AP D\nChainfist [ANTI-VEHICLE 3+] Melee 3 4+ 8 ‑2 2\nHalberd of Caliban [PRECISION] Melee 5 3+ 6 ‑2 2\nPower fist Melee 3 3+ 8 ‑2 2\nPower weapon Melee 4 3+ 5 ‑2 1\nThunder hammer [DEVASTATING WOUNDS] Melee 3 4+ 8 ‑2 2\nTwin lightning claws [TWIN-LINKED] Melee 5 3+ 5 ‑2 1\nFACTION KEYWORDS:\nAdeptus Astartes, Dark Angels\nABILITIES\nCORE: Deep Strike\nFACTION: Oath of Moment\nNarthecium: While this unit contains an Apothecary, in\nyour Command phase, you can return 1 destroyed model\n(excluding Character  models) to this unit.\nAstartes Banner: While this unit contains an Ancient, add 1 to\nthe Objective Control characteristic of its models.\nHonour or Death: While this unit contains a Company\nChampion, add 1 to Advance and Charge rolls made for this\nunit. When you target this unit with the Heroic Intervention\nstratagem, that use is ‑1 CP.\nWARGEAR ABILITIES\nStorm Shield: The bearer has a Wounds characteristic of 4.\nM T SV W LD OC\n5\" 5 2+ 3 6+ 1\n Before selecting targets for this weapon, select one of its profiles to make attacks with.\nINVULNERABLE SAVE4+\nKEYWORDS:   Infantry, Imperium, Deathwing, Terminator,\nDeathwing Command Squad"
     },
-    "16": {
+    "17": {
       "sha256": "93D80B9C890BCEF167417D33855EAE3C025143A501F6294D18D810CF29A57526",
       "text": "W ARHAMMER  LEGENDS\nWARGEAR OPTIONS\n ■  Any number of Deathwing Command Terminators can each have their storm bolter and power fist\nreplaced with one of the following:\n ◦ 1 twin lightning claws\n ◦ 1 thunder hammer and 1 storm shield\n ■  Any number of Deathwing Command Terminators can each have their power fist replaced with\n1 chainfist.\n ■ 1 Deathwing Command Terminator’s power fist can be replaced with 1 power weapon.\n ■  For every 5 models in this unit, 1 Deathwing Command Terminator can replace its storm bolter with\none of the following:\n ◦ 1 assault cannon\n ◦ 1 heavy flamer\n ◦ 1 plasma cannon\n ◦ 1 storm bolter and 1 cyclone missile launcher (this model’s storm bolter cannot be replaced)\n ■ This unit can be equipped with 1 Watcher in the Dark.*\n* The rules for a Watcher in the Dark can be found on the Deathwing Knights  datasheet.\nUNIT COMPOSITION\n ■ 1 Deathwing Ancient\n ■ 1 Deathwing Apothecary\n ■ 1 Deathwing Champion\n ■ 2-7 Deathwing Command Terminators\nThe Deathwing Ancient is equipped with: storm bolter;\npower fist.\nThe Deathwing Apothecary is equipped with: storm\nbolter; chainfist.\nThe Deathwing Champion is equipped with: halberd\nof Caliban.\nEvery Deathwing Command Terminator is equipped with:\nstorm bolter; power fist.\nATTACHED UNIT\nIf a Character  unit from your army with the Leader ability\ncan be attached to a Terminator Squad , it can be attached to\nthis unit instead.\nDEATHWING COMMAND SQUAD\nOn occasion a Deathwing squad will be formed into an honour guard\nto accompany high-ranking members of the Inner Circle, such as\nLibrarians, Interrogator-Chaplains and even Company Masters.\nTogether, they will lead their brothers straight into the heart of battle,\nwhere their skills are most needed.\nKEYWORDS:   Infantry, Imperium, Deathwing, Terminator,\nDeathwing Command Squad\nFACTION KEYWORDS:\nAdeptus Astartes, Dark Angels"
     }
@@ -98,7 +102,7 @@
           2
         ],
         "provenance": {
-          "sourceId": "dark-angels-faction-pack-v1.0",
+          "sourceId": "dark-angels-faction-pack-v1.1",
           "sourcePages": [
             2
           ]
@@ -114,7 +118,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               2
             ]
@@ -129,7 +133,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               2
             ]
@@ -151,7 +155,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               2
             ]
@@ -171,7 +175,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               2
             ]
@@ -191,7 +195,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               2
             ]
@@ -202,7 +206,7 @@
         2
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.0",
+        "sourceId": "dark-angels-faction-pack-v1.1",
         "sourcePages": [
           2
         ]
@@ -218,7 +222,7 @@
           3
         ],
         "provenance": {
-          "sourceId": "dark-angels-faction-pack-v1.0",
+          "sourceId": "dark-angels-faction-pack-v1.1",
           "sourcePages": [
             3
           ]
@@ -234,7 +238,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               3
             ]
@@ -249,7 +253,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               3
             ]
@@ -271,7 +275,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               3
             ]
@@ -291,7 +295,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               3
             ]
@@ -311,7 +315,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               3
             ]
@@ -322,7 +326,7 @@
         3
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.0",
+        "sourceId": "dark-angels-faction-pack-v1.1",
         "sourcePages": [
           3
         ]
@@ -338,7 +342,7 @@
           4
         ],
         "provenance": {
-          "sourceId": "dark-angels-faction-pack-v1.0",
+          "sourceId": "dark-angels-faction-pack-v1.1",
           "sourcePages": [
             4
           ]
@@ -354,7 +358,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               4
             ]
@@ -369,7 +373,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               4
             ]
@@ -391,7 +395,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               4
             ]
@@ -411,7 +415,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               4
             ]
@@ -431,7 +435,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               4
             ]
@@ -442,7 +446,7 @@
         4
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.0",
+        "sourceId": "dark-angels-faction-pack-v1.1",
         "sourcePages": [
           4
         ]
@@ -458,7 +462,7 @@
           5
         ],
         "provenance": {
-          "sourceId": "dark-angels-faction-pack-v1.0",
+          "sourceId": "dark-angels-faction-pack-v1.1",
           "sourcePages": [
             5
           ]
@@ -474,7 +478,7 @@
             5
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               5
             ]
@@ -489,7 +493,7 @@
             5
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               5
             ]
@@ -504,7 +508,7 @@
             5
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               5
             ]
@@ -519,7 +523,7 @@
             5
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               5
             ]
@@ -542,7 +546,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -562,7 +566,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -582,7 +586,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -602,7 +606,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -623,7 +627,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -644,7 +648,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -656,7 +660,7 @@
         6
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.0",
+        "sourceId": "dark-angels-faction-pack-v1.1",
         "sourcePages": [
           5,
           6
@@ -673,7 +677,7 @@
           7
         ],
         "provenance": {
-          "sourceId": "dark-angels-faction-pack-v1.0",
+          "sourceId": "dark-angels-faction-pack-v1.1",
           "sourcePages": [
             7
           ]
@@ -689,7 +693,7 @@
             7
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               7
             ]
@@ -704,7 +708,7 @@
             7
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               7
             ]
@@ -719,7 +723,7 @@
             7
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               7
             ]
@@ -734,7 +738,7 @@
             7
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               7
             ]
@@ -756,7 +760,7 @@
             8
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               8
             ]
@@ -776,7 +780,7 @@
             8
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               8
             ]
@@ -796,7 +800,7 @@
             8
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               8
             ]
@@ -816,7 +820,7 @@
             8
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               8
             ]
@@ -836,7 +840,7 @@
             8
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               8
             ]
@@ -857,7 +861,7 @@
             8
           ],
           "provenance": {
-            "sourceId": "dark-angels-faction-pack-v1.0",
+            "sourceId": "dark-angels-faction-pack-v1.1",
             "sourcePages": [
               8
             ]
@@ -869,7 +873,7 @@
         8
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.0",
+        "sourceId": "dark-angels-faction-pack-v1.1",
         "sourcePages": [
           7,
           8
@@ -878,9 +882,9 @@
     }
   ],
   "detachmentAudit": {
-    "source": "Munitorum Field Manual v1.0",
+    "source": "Munitorum Field Manual v1.2 dated capture",
     "url": "https://mfm.warhammer-community.com/en/dark-angels",
-    "checkedAt": "2026-07-28",
+    "checkedAt": "2026-08-11",
     "expected": 8,
     "count": 8,
     "current": [
@@ -907,12 +911,12 @@
       "id": "rules-updates-9-left",
       "section": "Rules Updates",
       "subject": "Page 9 · updates",
-      "change": "COMPANY OF HUNTERS DETACHMENT\nMasters of Manoeuvre Detachment Rule\nChange to ‘ADEPTUS ASTARTES units from your army are eligible to\nshoot in a turn in which they Advanced or Fell Back. ADEPTUS ASTARTES\nMOUNTED units from your army are eligible to shoot and declare a charge\nin a turn in which they Advanced or Fell Back.’\nKeywords Section\nChange to 'OUTRIDER SQUAD units from your army gain the\nBATTLELINE keyword.’\nMounted Strategist Enhancement\nChange to ‘RAVENWING model only. You can re‑roll Advance and Charge\nrolls made for the bearer’s unit.’\nINNER CIRCLE TASK FORCE DETACHMENT\nVowed Target Detachment Rule\nChange to:\n‘At the start of your Movement phase, select one of the following:\n ▪  Defensive Footing: Select one objective you control. Until the start of\nyour next Movement phase, that objective is your Vowed objective.\n ▪  Aggressive Push: Select one or more objective you do not control.\nUntil the start of your next Movement phase, each of those\nobjectives is one of your Vowed objectives. If a rule refers to a unit\nor model being within range of your Vowed objective, that rule takes\neffect if that unit or model is within range of one or more of your\nVowed objectives. Each time a DEATHWING INFANTRY unit from your\narmy makes an attack that targets a unit within range of one or more\nof your Vowed objectives, add 1 to the Wound roll.’\nRelic Teleportarium Stratagem, Effect Section\nChange 3\" to 6\".\nUNFORGIVEN TASK FORCE DETACHMENT\nGrim Resolve Detachment Rule\nChange to:\n‘While an ADEPTUS ASTARTES unit from your army is Battle‑shocked,\nchange the Objective Control characteristic of models in that unit to 1\ninstead of '‑'.\nIn your Command phase, you can select one ADEPTUS ASTARTES unit\nfrom your army. Until the start of your next Command phase, add 1 to\nthe Objective Control characteristic of models in that unit.’\nCompany of Hunters, Inner Circle Task Force, Unforgiven Task Force –\nArmour of Contempt Stratagem, Effect section\nChange to:\n‘Until the attacking unit has finished making its attacks, each time an\nattack targets your unit, worsen the Armour Penetration characteristic\nof that attack by 1.’",
+      "change": "DETACHMENTS (VARIOUS)\nCompany of Hunters, Inner Circle Task Force, Unforgiven Task Force –\nArmour of Contempt Stratagem, Effect section\nChange to:\n‘Until the attacking unit has finished making its attacks, each time an\nattack targets your unit, worsen the Armour Penetration characteristic\nof that attack by 1.’\nCOMPANY OF HUNTERS DETACHMENT\nMasters of Manoeuvre Detachment Rule\nChange to:\n‘Friendly ADEPTUS ASTARTES have:\n ▪ This unit’s ranged attacks have [ASSAULT].\n ▪  When this unit is selected to make a fall-back move, that fall-back\nmove does not prevent this unit from being eligible to shoot.\nFriendly ADEPTUS ASTARTES MOUNTED have:\n ▪ This unit’s ranged attacks have [ASSAULT].\n ▪  When this unit is selected to make an advance move, that advance\nmove does not prevent this unit from being eligible to declare\na charge.\n ▪  When this unit is selected to make a fall-back move, that fall-back\nmove does not prevent this unit from being eligible to shoot and\neligible to declare a charge.’\nKeywords Section\nChange to 'OUTRIDER SQUAD units from your army gain the\nBATTLELINE keyword.’\nMounted Strategist Enhancement\nChange to ‘RAVENWING model only. You can re‑roll Advance and Charge\nrolls made for the bearer’s unit.’\nDeath on the Wind Stratagem\nChange to:\n‘WHEN: Your Movement phase, when a friendly ADEPTUS ASTARTES unit\nends an advance move.\nTARGET: That ADEPTUS ASTARTES unit.\nEFFECT: That advance move does not prevent your unit from being\neligible to declare a charge.’\nTalon Strike Stratagem\nChange to:\n‘WHEN: Fight phase, when a friendly ADEPTUS ASTARTES unit is selected\nto fight.\nTARGET: That ADEPTUS ASTARTES unit.\nEFFECT: Your unit’s melee attacks have [LANCE].’\nINNER CIRCLE TASK FORCE DETACHMENT\nVowed Target Detachment Rule\nChange to:\n‘At the start of your Movement phase, select one of the following:\n ▪  Defensive Footing: Select one objective you control. Until the start of\nyour next Movement phase, that objective is your Vowed objective.\n ▪  Aggressive Push: Select one or more objective you do not control.\nUntil the start of your next Movement phase, each of those\nobjectives is one of your Vowed objectives. If a rule refers to a unit\nor model being within range of your Vowed objective, that rule takes\neffect if that unit or model is within range of one or more of your\nVowed objectives. Each time a DEATHWING INFANTRY unit from your\narmy makes an attack that targets a unit within range of one or more\nof your Vowed objectives, add 1 to the Wound roll.’\nRelic Teleportarium Stratagem, Effect Section\nChange 3\" to 6\".\nUNFORGIVEN TASK FORCE DETACHMENT\nGrim Resolve Detachment Rule\nChange to:\n‘While an ADEPTUS ASTARTES unit from your army is Battle‑shocked,\nchange the Objective Control characteristic of models in that unit to 1\ninstead of '‑'.\nIn your Command phase, you can select one ADEPTUS ASTARTES unit\nfrom your army. Until the start of your next Command phase, add 1 to\nthe Objective Control characteristic of models in that unit.’\nShroud of Heroes Enhancement\nChange to:\n‘ADEPTUS ASTARTES model only. (Once per battle, per army) When this\nmodel is destroyed, at the end of the phase, roll one D6:\n ▪  On a 2+, set up this model on the battlefield, unengaged and as close\nas possible to where it was destroyed. This model is not part of an\nattached unit and its unit has a starting strength of 1. This model has\n3 wounds remaining, or its full wounds remaining if this model was\nbattle-shocked when it was destroyed.’",
       "sourcePages": [
         9
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.0",
+        "sourceId": "dark-angels-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -922,12 +926,12 @@
       "id": "rules-updates-9-right",
       "section": "Datasheets",
       "subject": "Page 9 · datasheets",
-      "change": "Nephilim Jetfighter, Ravenwing Dark Talon\n• Core Abilities: Remove 'Hover'.\n ▪  Profile: Change M and OC to '‑'.\nDeathwing Terminator Squad, Deathwing Knights – Watcher in the\nDark Ability\nChange to:\n‘Once per battle, in any phase, just after a mortal wound is allocated\nto an ADEPTUS ASTARTES model in this unit, this unit can summon a\nWatcher in the Dark. When it does, until the end of the phase, models in\nthis unit have the Feel No Pain 4+ ability against mortal wounds.’\nDeathwing Terminator Squad, Teleport Homer Ability\nChange 9\" to 8\".\nDeathwing Knights\n• Teleport Homer Ability: Change 9\" to 8\".\n• Melee Weapons: Change the mace of absolution and power weapon\nprofiles to:\nMace of Absolution\n[ANTI-MONSTER 4+, ANTI-VEHICLE 4+]\nRANGE A WS S AP D\nMelee 4 2+ 6 ‑2 2\nPower Weapon\nRANGE A WS S AP D\nMelee 5 2+ 6 ‑2 2\nInner Circle Companions, Calibanite Greatsword Profiles\nChange to:\nCalibanite Greatsword - Strike [LETHAL HITS]\nRANGE A WS S AP D\nMelee 4 3+ 6 ‑2 2\nCalibanite Greatsword - Sweep [SUSTAINED HITS 2]\nRANGE A WS S AP D\nMelee 5 3+ 6 ‑2 1\nLand Speeder Vengeance, Plasma Storm Battery Profiles\nChange to:\nPlasma Storm Battery - Standard [BLAST, TWIN-LINKED]\nRANGE A BS S AP D\n36\" D6+1 3+ 8 ‑2 2\nPlasma Storm Battery - Supercharge\n[BLAST, HAZARDOUS, TWIN-LINKED]\nRANGE A BS S AP D\n36\" D6+1 3+ 9 ‑3 3",
+      "change": "Nephilim Jetfighter, Ravenwing Dark Talon\n• Core Abilities: Remove 'Hover'.\n ▪  Profile: Change M and OC to '‑'.\nDeathwing Terminator Squad, Deathwing Knights – Watcher in the\nDark Ability\nChange to:\n‘Once per battle, in any phase, just after a mortal wound is allocated\nto an ADEPTUS ASTARTES model in this unit, this unit can summon a\nWatcher in the Dark. When it does, until the end of the phase, models in\nthis unit have the Feel No Pain 4+ ability against mortal wounds.’",
       "sourcePages": [
         9
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.0",
+        "sourceId": "dark-angels-faction-pack-v1.1",
         "sourcePages": [
           9
         ]
@@ -937,14 +941,29 @@
       "id": "rules-updates-10-left",
       "section": "Datasheets",
       "subject": "Page 10 · datasheets",
-      "change": "Lion El’Jonson\n ▪  All Secrets Revealed Ability – Change to:\n‘Mist-wreathed Shadow Realms: In your Command phase, if this unit\nis not within Engagement Range of one or more enemy units, you can\nremove it from the battlefield and place it into Strategic Reserves.'\n ▪  Martial Exemplar (Aura) Ability – Change to:\n‘Martial Exemplar (Aura): While a friendly ADEPTUS ASTARTES unit is\nwithin 6\" of this model, each time a model in that unit makes a melee\nattack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1.'\n ▪  Primarch of the First Legion Ability – Change to:\n‘Primarch of the First Legion: At the start of your Command phase,\nselect two Primarch of the First Legion abilities. Until the start of your\nnext Command phase, this model has those abilities.’\n ▪  The Emperor’s Shield Ability – Change to:\n‘Each time an attack targets this model, if the Strength characteristic\nof that attack is greater than the Toughness characteristic of this\nmodel, subtract 1 from the Wound roll.’\n ▪  Fealty weapon profile: change to:\nFealty - Strike [LETHAL HITS]\nRANGE A WS S AP D\nMelee 8 2+ 12 ‑4 4\nFealty - Sweep [SUSTAINED HITS 1]\nRANGE A WS S AP D\nMelee 16 2+ 6 ‑3 2\nRavenwing Black Knights, Ravenwing Command Squad – Black Knight\nCombat Weapon Profile\nAdd[DEVASTATING WOUNDS].\nRavenwing Command Squad, Honour or Death Ability\nChange to:\n'While this unit contains a Ravenwing Champion, add 1 to Advance\nand Charge rolls made for this unit.When you target this unit with the\nHeroic Intervention stratagem, that use is ‑1 CP.'\nSammael, Grand Master of the Ravenwing Ability\nChange to:\n‘While this model is leading a unit, that unit is eligible to shoot and\ndeclare a charge in a turn in which it Advanced. If that unit is already\neligible to shoot and declare a charge in a turn in which it Advanced,\nadd 1 to Advance and Charge rolls made for that unit instead.’\nLand Speeder Vengeance, Ravenwing Darkshroud, Sammael –\nKeywords Section\nAdd 'FRAME'.",
+      "change": "Deathwing Terminator Squad, Teleport Homer Ability\nChange 9\" to 8\".\nDeathwing Knights\n• Teleport Homer Ability: Change 9\" to 8\".\n•  Melee Weapons: Change the mace of absolution and power weapon\nprofiles to:\nMace of Absolution\n[ANTI-MONSTER 4+, ANTI-VEHICLE 4+]\nRANGE A WS S AP D\nMelee 4 2+ 6 ‑2 2\nPower Weapon\nRANGE A WS S AP D\nMelee 5 2+ 6 ‑2 2\nInner Circle Companions, Braziers of Judgement ability\nChange to:\n ▪ This unit has Stealth.\n ▪ Melee attacks that target this unit have ‑1 to hit rolls.\nInner Circle Companions, Calibanite Greatsword Profiles\nChange to:\nCalibanite Greatsword - Strike [LETHAL HITS]\nRANGE A WS S AP D\nMelee 4 3+ 6 ‑2 2\nCalibanite Greatsword - Sweep [SUSTAINED HITS 2]\nRANGE A WS S AP D\nMelee 5 3+ 6 ‑2 1\nLand Speeder Vengeance, Plasma Storm Battery Profiles\nChange to:\nPlasma Storm Battery - Standard [BLAST, TWIN-LINKED]\nRANGE A BS S AP D\n36\" D6+1 3+ 8 ‑2 2\nPlasma Storm Battery - Supercharge\n[BLAST, HAZARDOUS, TWIN-LINKED]\nRANGE A BS S AP D\n36\" D6+1 3+ 9 ‑3 3\nLion El’Jonson\n ▪ Keywords section: Add 'MOBILE'.\n ▪  All Secrets Revealed Ability – Change to:\n‘Mist-wreathed Shadow Realms: At the end of your opponent’s turn,\nif this unit is unengaged, you can use this ability. If you do:\n ▫ Place this unit in strategic reserves.\n ▫  This unit can make an ingress move in your next Movement\nphase (including in your first turn).’\n ▪  Martial Exemplar (Aura) Ability – Change to:\n‘Martial Exemplar (Aura): While a friendly ADEPTUS ASTARTES unit is\nwithin 6\" of this model, each time a model in that unit makes a melee\nattack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1.'\n ▪  Primarch of the First Legion Ability – Change to:\n‘Primarch of the First Legion: At the start of your Command phase,\nselect two Primarch of the First Legion abilities. Until the start of your\nnext Command phase, this model has those abilities.’\n ▪  The Emperor’s Shield Ability – Change to:\n‘Each time an attack targets this model, if the Strength characteristic\nof that attack is greater than the Toughness characteristic of this\nmodel, subtract 1 from the Wound roll.’\n ▪  Fealty weapon profile: change to:\nFealty - Strike [LETHAL HITS]\nRANGE A WS S AP D\nMelee 8 2+ 12 ‑4 4\nFealty - Sweep [SUSTAINED HITS 1]\nRANGE A WS S AP D\nMelee 16 2+ 6 ‑3 2\nNephilim Jetfighter, Lightning-fast Manoeuvres Ability\nChange to:\n‘Ranged attacks that target this unit have ‑1 to wound rolls.’\nRavenwing Black Knights, Ravenwing Command Squad – Black Knight\nCombat Weapon Profile\nBlack Knight Combat Weapon [DEVASTATING WOUNDS]\nRANGE A WS S AP D\nMelee 3 3+ 5 ‑2 1\nRavenwing Command Squad, Keywords Section\nRemove ‘Leader’, add ‘Support’.\nRavenwing Command Squad, Honour or Death Ability\nChange to:\n'While this unit contains a Ravenwing Champion, add 1 to Advance\nand Charge rolls made for this unit.When you target this unit with the\nHeroic Intervention stratagem, that use is ‑1 CP.'\nRavenwing Darkshroud, Icon of Old Caliban Ability\nChange to:\n‘Friendly ADEPTUS ASTARTES units within 6\" of this unit have Stealth.’",
       "sourcePages": [
         10
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.0",
+        "sourceId": "dark-angels-faction-pack-v1.1",
         "sourcePages": [
           10
+        ]
+      }
+    },
+    {
+      "id": "rules-updates-11-left",
+      "section": "Datasheets",
+      "subject": "Page 11 · datasheets",
+      "change": "Ravenwing Dark Talon, Stasis Bomb Ability\nChange to:\n‘Stasis Bomb: At the end of your opponent’s Fight phase, select one\nvisible enemy unit (excluding AIRCRAFT/Lone Operative units) within\n24\" of this unit. That enemy unit is slowed until the end of your\nopponent’s next Movement phase:\n ▪  While a unit is slowed, in your opponent’s Movement phase, when\nthat unit is selected to move, unless that unit remains stationary,\nroll one D6:\n ▫  On a 1‑4, that unit suffers D3 mortal wounds and that unit has\n‑2\" M.\n ▫  On a 5‑6, that unit suffers 2D3 mortal wounds and that unit has\n‑3\" M.’\nSammael, Grand Master of the Ravenwing Ability\nChange to:\n ▪ This unit’s ranged attacks have [ASSAULT].\n ▪  When this unit is selected to make an advance move, that advance\nmove does not prevent this unit from being eligible to declare\na charge.\n ▪ This unit has MOBILE.\nLand Speeder Vengeance, Ravenwing Darkshroud, Sammael –\nKeywords Section\nAdd 'FRAME'.",
+      "sourcePages": [
+        11
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourcePages": [
+          11
         ]
       }
     }
@@ -958,7 +977,7 @@
         10
       ],
       "provenance": {
-        "sourceId": "dark-angels-faction-pack-v1.0",
+        "sourceId": "dark-angels-faction-pack-v1.1",
         "sourcePages": [
           10
         ]
@@ -972,14 +991,14 @@
         "id": "w-arhammer-legends",
         "title": "W Arhammer Legends",
         "sourcePages": [
-          11,
-          12
+          12,
+          13
         ],
         "provenance": {
-          "sourceId": "dark-angels-faction-pack-v1.0",
+          "sourceId": "dark-angels-faction-pack-v1.1",
           "sourcePages": [
-            11,
-            12
+            12,
+            13
           ]
         }
       },
@@ -987,14 +1006,14 @@
         "id": "w-arhammer-legends",
         "title": "W Arhammer Legends",
         "sourcePages": [
-          13,
-          14
+          14,
+          15
         ],
         "provenance": {
-          "sourceId": "dark-angels-faction-pack-v1.0",
+          "sourceId": "dark-angels-faction-pack-v1.1",
           "sourcePages": [
-            13,
-            14
+            14,
+            15
           ]
         }
       },
@@ -1002,14 +1021,14 @@
         "id": "w-arhammer-legends",
         "title": "W Arhammer Legends",
         "sourcePages": [
-          15,
-          16
+          16,
+          17
         ],
         "provenance": {
-          "sourceId": "dark-angels-faction-pack-v1.0",
+          "sourceId": "dark-angels-faction-pack-v1.1",
           "sourcePages": [
-            15,
-            16
+            16,
+            17
           ]
         }
       }

@@ -10,11 +10,11 @@ from pypdf import PdfReader
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PDF = ROOT / "sources" / "dark-angels-faction-pack-v1.0.pdf"
+PDF = ROOT / "sources" / "dark-angels-faction-pack-v1.1.pdf"
 OUTPUT = ROOT / "content" / "dark-angels-faction-pack.en.json"
 RELATED_OUTPUT = ROOT / "content" / "dark-angels-related-rules.en.json"
-SOURCE_ID = "dark-angels-faction-pack-v1.0"
-EXPECTED_PDF_SHA256 = "7F1EFE2D62F57597D0949D62B8D9BF0675E0199A6E99A1EEF61BFA65DE76AA52"
+SOURCE_ID = "dark-angels-faction-pack-v1.1"
+EXPECTED_PDF_SHA256 = "A29FB27970A47E174E4014C7D39DC99FEECB5940684E1DBA04EA218E7BC4106F"
 
 
 def e(title: str, points: int) -> dict:
@@ -173,20 +173,22 @@ def build() -> dict:
     for number, page in enumerate(page_objects, 1):
         text = page_text(page)
         page_data[str(number)] = {"sha256": hashlib.sha256(text.encode()).hexdigest().upper(), "text": text}
-    meta = {"title": "Dark Angels Faction Pack", "version": "1.0", "legalFrom": "2026-06-20", "pageCount": len(page_objects), "sha256": digest, "file": "sources/dark-angels-faction-pack-v1.0.pdf"}
+    meta = {"title": "Dark Angels Faction Pack", "version": "1.1", "legalFrom": "2026-07-22", "pageCount": len(page_objects), "sha256": digest, "file": "sources/dark-angels-faction-pack-v1.1.pdf"}
     detachments = extract_detachments(page_objects)
     page_nine = page_data["9"]["text"]
     updates_text, datasheets_nine = page_nine.split("\nDATASHEETS\n", 1)
     updates_text = updates_text.split("\nUPDATES\n", 1)[1]
-    datasheets_ten, faq_text = page_data["10"]["text"].split("\nFAQS\n", 1)
+    datasheets_ten = page_data["10"]["text"]
+    datasheets_eleven, faq_text = page_data["11"]["text"].split("\nFAQS\n", 1)
     updates = [
         source({"id": "rules-updates-9-left", "section": "Rules Updates", "subject": "Page 9 · updates", "change": updates_text}, [9]),
         source({"id": "rules-updates-9-right", "section": "Datasheets", "subject": "Page 9 · datasheets", "change": datasheets_nine}, [9]),
         source({"id": "rules-updates-10-left", "section": "Datasheets", "subject": "Page 10 · datasheets", "change": datasheets_ten}, [10]),
+        source({"id": "rules-updates-11-left", "section": "Datasheets", "subject": "Page 11 · datasheets", "change": datasheets_eleven}, [11]),
     ]
     faqs = parse_faq(faq_text)
     legends = []
-    for first in (11, 13, 15):
+    for first in (12, 14, 16):
         raw = re.sub(r"\s+WARHAMMER\s+L\s*E\s*G\s*E\s*N\s*D\s*S.*$", "", page_data[str(first)]["text"].splitlines()[0], flags=re.I)
         legends.append(source({"id": slug(raw), "title": title_case(raw)}, [first, first + 1]))
     return {
@@ -195,7 +197,7 @@ def build() -> dict:
         "dependency": {"type": "codex-supplement", "book": "space-marines", "required": True, "duplicatedHere": False},
         "pages": page_data,
         "detachments": detachments,
-        "detachmentAudit": {"source": "Munitorum Field Manual v1.0", "url": "https://mfm.warhammer-community.com/en/dark-angels", "checkedAt": "2026-07-28", "expected": 8, "count": len(MFM_DETACHMENTS), "current": MFM_DETACHMENTS, "factionPackCount": len(DETACHMENTS), "factionPack": [item["title"] for item in DETACHMENTS]},
+        "detachmentAudit": {"source": "Munitorum Field Manual v1.2 dated capture", "url": "https://mfm.warhammer-community.com/en/dark-angels", "checkedAt": "2026-08-11", "expected": 8, "count": len(MFM_DETACHMENTS), "current": MFM_DETACHMENTS, "factionPackCount": len(DETACHMENTS), "factionPack": [item["title"] for item in DETACHMENTS]},
         "updates": updates, "faqs": faqs,
         "datasheets": {"matched": [], "legends": legends},
     }
@@ -204,7 +206,7 @@ def build() -> dict:
 def validate(data: dict, related: dict) -> list[str]:
     errors = []
     strata = [item for detachment in data.get("detachments", []) for item in detachment.get("stratagems", [])]
-    checks = [(len(data.get("detachments", [])), 5, "detachments"), (len(strata), 21, "Stratagems"), (sum(len(item["enhancements"]) for item in data.get("detachments", [])), 14, "Enhancements"), (len(data.get("faqs", [])), 1, "FAQs"), (len(data.get("datasheets", {}).get("legends", [])), 3, "Legends"), (len(data.get("detachmentAudit", {}).get("current", [])), 8, "MFM detachments")]
+    checks = [(len(data.get("detachments", [])), 5, "detachments"), (len(strata), 21, "Stratagems"), (sum(len(item["enhancements"]) for item in data.get("detachments", [])), 14, "Enhancements"), (len(data.get("updates", [])), 4, "updates"), (len(data.get("faqs", [])), 1, "FAQs"), (len(data.get("datasheets", {}).get("legends", [])), 3, "Legends"), (len(data.get("detachmentAudit", {}).get("current", [])), 8, "MFM detachments")]
     for actual, expected, label in checks:
         if actual != expected:
             errors.append(f"expected {expected} {label}, found {actual}")

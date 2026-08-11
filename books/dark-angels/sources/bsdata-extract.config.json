@@ -23,7 +23,8 @@
   "outputs": {
     "snapshot": "bsdata-dark-angels-11e.json",
     "datasheets": "../content/dark-angels-codex-datasheets.en.json",
-    "points": "../content/dark-angels-points.en.json"
+    "points": "../content/dark-angels-points.en.json",
+    "officialPoints": "official-mfm-v1.2.json"
   },
   "filters": {
     "excludeNames": ["Detachment", "Show/Hide Options", "Order of Battle"],
@@ -37,6 +38,7 @@
     "imperialArmourNames": []
   },
   "enhancements": {
+    "identity": "detachment-title",
     "detachments": [
       "Company of Hunters", "Dark Age Arsenal", "Darkflight Pursuit",
       "Inner Circle Task Force", "Interrogation Conclave", "Lion's Blade Task Force",
@@ -44,6 +46,30 @@
     ]
   },
   "unitCorrections": {
+    "Lion El'Jonson": {
+      "abilities": {
+        "The Emperor's Shield": {
+          "text": "Each time an attack targets this model, if the Strength characteristic of that attack is greater than the Toughness characteristic of this model, subtract 1 from the Wound roll."
+        }
+      },
+      "addAbilities": [
+        {
+          "title": "Mist-wreathed Shadow Realms",
+          "text": "At the end of your opponent's turn, if this unit is unengaged, you can use this ability. If you do: place this unit in Strategic Reserves; this unit can make an ingress move in your next Movement phase (including in your first turn)."
+        },
+        {
+          "title": "Martial Exemplar (Aura)",
+          "text": "While a friendly ADEPTUS ASTARTES unit is within 6\" of this model, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1."
+        }
+      ]
+    },
+    "Inner Circle Companions": {
+      "abilities": {
+        "Braziers of Judgement": {
+          "text": "This unit has Stealth. Melee attacks that target this unit have -1 to Hit rolls."
+        }
+      }
+    },
     "Ravenwing Command Squad": {
       "abilities": {
         "Honour or Death": {

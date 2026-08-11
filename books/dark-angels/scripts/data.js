@@ -5732,8 +5732,8 @@ window.DG_TERMS={
   "dark-angels-ability-the-emperors-shield": {
     "id": "dark-angels-ability-the-emperors-shield",
     "title": "The Emperor's Shield",
-    "summary": "Each time an attack is allocated to this model, if the Strength characteristic of that attack is greater than the Toughness characteristic of this model, subtract 1 from the Wound roll.",
-    "full": "Each time an attack is allocated to this model, if the Strength characteristic of that attack is greater than the Toughness characteristic of this model, subtract 1 from the Wound roll.",
+    "summary": "Each time an attack targets this model, if the Strength characteristic of that attack is greater than the Toughness characteristic of this model, subtract 1 from the Wound roll.",
+    "full": "Each time an attack targets this model, if the Strength characteristic of that attack is greater than the Toughness characteristic of this model, subtract 1 from the Wound roll.",
     "glossary": "glossary-dark-angels-ability-the-emperors-shield",
     "rule": "unit-lion-eljonson",
     "units": [
@@ -5748,6 +5748,32 @@ window.DG_TERMS={
     "summary": "While this model is within 3\" of one or more friendly Adeptus Astartes Infantry units, this model has the Lone Operative ability.",
     "full": "While this model is within 3\" of one or more friendly Adeptus Astartes Infantry units, this model has the Lone Operative ability.",
     "glossary": "glossary-dark-angels-ability-dark-angels-bodyguard",
+    "rule": "unit-lion-eljonson",
+    "units": [
+      "unit-lion-eljonson"
+    ],
+    "datasheet": "unit-lion-eljonson",
+    "statline": "lion-eljonson-profile"
+  },
+  "dark-angels-ability-mist-wreathed-shadow-realms": {
+    "id": "dark-angels-ability-mist-wreathed-shadow-realms",
+    "title": "Mist-wreathed Shadow Realms",
+    "summary": "At the end of your opponent's turn, if this unit is unengaged, you can use this ability. If you do: place this unit in Strategic Reserves; this unit can make an ingress move in your next Movement phase (including in your first turn).",
+    "full": "At the end of your opponent's turn, if this unit is unengaged, you can use this ability. If you do: place this unit in Strategic Reserves; this unit can make an ingress move in your next Movement phase (including in your first turn).",
+    "glossary": "glossary-dark-angels-ability-mist-wreathed-shadow-realms",
+    "rule": "unit-lion-eljonson",
+    "units": [
+      "unit-lion-eljonson"
+    ],
+    "datasheet": "unit-lion-eljonson",
+    "statline": "lion-eljonson-profile"
+  },
+  "dark-angels-ability-martial-exemplar-aura": {
+    "id": "dark-angels-ability-martial-exemplar-aura",
+    "title": "Martial Exemplar (Aura)",
+    "summary": "While a friendly ADEPTUS ASTARTES unit is within 6\" of this model, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+    "full": "While a friendly ADEPTUS ASTARTES unit is within 6\" of this model, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+    "glossary": "glossary-dark-angels-ability-martial-exemplar-aura",
     "rule": "unit-lion-eljonson",
     "units": [
       "unit-lion-eljonson"
@@ -6126,8 +6152,8 @@ window.DG_TERMS={
   "dark-angels-ability-braziers-of-judgement": {
     "id": "dark-angels-ability-braziers-of-judgement",
     "title": "Braziers of Judgement",
-    "summary": "Inner Circle Companions, Braziers of Judgement ability Change to: ▪ This unit has Stealth. ▪ Melee attacks that target this unit have -1 to hit rolls.",
-    "full": "Inner Circle Companions, Braziers of Judgement ability Change to: ▪ This unit has Stealth. ▪ Melee attacks that target this unit have -1 to hit rolls.",
+    "summary": "This unit has Stealth. Melee attacks that target this unit have -1 to Hit rolls.",
+    "full": "This unit has Stealth. Melee attacks that target this unit have -1 to Hit rolls.",
     "glossary": "glossary-dark-angels-ability-braziers-of-judgement",
     "rule": "unit-inner-circle-companions",
     "units": [

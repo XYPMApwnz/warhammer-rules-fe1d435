@@ -1,0 +1,660 @@
+{
+  "schema": 1,
+  "title": "Dark Angels Munitorum Field Manual dated capture",
+  "version": "v1.2",
+  "sourceUpdatedAt": "2026-07-22",
+  "verifiedAt": "2026-08-11",
+  "capturedAt": "2026-08-11",
+  "url": "https://mfm.warhammer-community.com/en/dark-angels",
+  "captureSha256": "BD358079BB88A455460686F0E4F09B504B4C950DAC2B49CE85257A6B2D95D045",
+  "counts": {
+    "nativeUnits": 16,
+    "canonicalSharedUnits": 82,
+    "specialScopeUnits": 2,
+    "routeUnits": 100,
+    "localDetachments": 8,
+    "localEnhancements": 26,
+    "legends": 3,
+    "unresolved": 0
+  },
+  "verifiedUnits": [
+    "Asmodai",
+    "Azrael",
+    "Belial",
+    "Deathwing Knights",
+    "Deathwing Terminator Squad",
+    "Ezekiel",
+    "Inner Circle Companions",
+    "Land Speeder Vengeance",
+    "Lazarus",
+    "Lion El'Jonson",
+    "Nephilim Jetfighter",
+    "Ravenwing Black Knights",
+    "Ravenwing Command Squad",
+    "Ravenwing Darkshroud",
+    "Ravenwing Dark Talon",
+    "Sammael"
+  ],
+  "unitOverrides": [
+    {
+      "title": "Asmodai",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Azrael",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 140,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Belial",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Deathwing Knights",
+      "points": [
+        {
+          "label": "1st to 2nd · 5 models",
+          "value": 240,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 5 models",
+          "value": 260,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "Deathwing Terminator Squad",
+      "points": [
+        {
+          "label": "unit · 5 models",
+          "value": 165,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "unit · 10 models",
+          "value": 330,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ]
+    },
+    {
+      "title": "Ezekiel",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Inner Circle Companions",
+      "points": [
+        {
+          "label": "1st to 2nd · 3 models",
+          "value": 80,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd · 6 models",
+          "value": 160,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 3 models",
+          "value": 90,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 6 models",
+          "value": 170,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "Land Speeder Vengeance",
+      "points": [
+        {
+          "label": "1st to 2nd · 1 model",
+          "value": 130,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 1 model",
+          "value": 140,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "Lazarus",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Lion El'Jonson",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 265,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Nephilim Jetfighter",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 180,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Ravenwing Black Knights",
+      "points": [
+        {
+          "label": "unit · 3 models",
+          "value": 75,
+          "minModels": 3,
+          "maxModels": 3
+        },
+        {
+          "label": "unit · 6 models",
+          "value": 150,
+          "minModels": 6,
+          "maxModels": 6
+        }
+      ]
+    },
+    {
+      "title": "Ravenwing Command Squad",
+      "points": [
+        {
+          "label": "1st to 2nd · 3 models",
+          "value": 105,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 3 models",
+          "value": 115,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "Ravenwing Darkshroud",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Ravenwing Dark Talon",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 200,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Sammael",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 95,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    }
+  ],
+  "detachments": [
+    {
+      "title": "Company of Hunters",
+      "forceDisposition": "DISRUPTION",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Dark Age Arsenal",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "Darkflight Pursuit",
+      "forceDisposition": "RECONNAISSANCE",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "Inner Circle Task Force",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Interrogation Conclave",
+      "forceDisposition": "TAKE AND HOLD",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "Lion's Blade Task Force",
+      "forceDisposition": "PURGE THE FOE",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Unforgiven Task Force",
+      "forceDisposition": "TAKE AND HOLD",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Wrath of the Rock",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 3
+    }
+  ],
+  "enhancements": [
+    {
+      "title": "Master-crafted Weapon",
+      "detachment": "Company of Hunters",
+      "value": 10
+    },
+    {
+      "title": "Master of Manoeuvre",
+      "detachment": "Company of Hunters",
+      "value": 15
+    },
+    {
+      "title": "Mounted Strategist",
+      "detachment": "Company of Hunters",
+      "value": 30
+    },
+    {
+      "title": "Recon Hunter",
+      "detachment": "Company of Hunters",
+      "value": 20
+    },
+    {
+      "title": "Entreaty of Perpetual Ardour",
+      "detachment": "Dark Age Arsenal",
+      "value": 15
+    },
+    {
+      "title": "Petition of Stability",
+      "detachment": "Dark Age Arsenal",
+      "value": 15
+    },
+    {
+      "title": "Nightforged Battery",
+      "detachment": "Darkflight Pursuit",
+      "value": 15
+    },
+    {
+      "title": "Thundercowl Turbines",
+      "detachment": "Darkflight Pursuit",
+      "value": 15
+    },
+    {
+      "title": "Champion of the Deathwing",
+      "detachment": "Inner Circle Task Force",
+      "value": 15
+    },
+    {
+      "title": "Deathwing Assault",
+      "detachment": "Inner Circle Task Force",
+      "value": 30
+    },
+    {
+      "title": "Eye of the Unseen",
+      "detachment": "Inner Circle Task Force",
+      "value": 10
+    },
+    {
+      "title": "Singular Will",
+      "detachment": "Inner Circle Task Force",
+      "value": 20
+    },
+    {
+      "title": "Inescapable Interrogation",
+      "detachment": "Interrogation Conclave",
+      "value": 20
+    },
+    {
+      "title": "Limitless Zeal",
+      "detachment": "Interrogation Conclave",
+      "value": 10
+    },
+    {
+      "title": "Calibanite Armaments",
+      "detachment": "Lion's Blade Task Force",
+      "value": 15
+    },
+    {
+      "title": "Fulgus Magna",
+      "detachment": "Lion's Blade Task Force",
+      "value": 20
+    },
+    {
+      "title": "Lord of the Hunt",
+      "detachment": "Lion's Blade Task Force",
+      "value": 15
+    },
+    {
+      "title": "Stalwart Champion",
+      "detachment": "Lion's Blade Task Force",
+      "value": 15
+    },
+    {
+      "title": "Pennant of Remembrance",
+      "detachment": "Unforgiven Task Force",
+      "value": 10
+    },
+    {
+      "title": "Shroud of Heroes",
+      "detachment": "Unforgiven Task Force",
+      "value": 25
+    },
+    {
+      "title": "Stubborn Tenacity",
+      "detachment": "Unforgiven Task Force",
+      "value": 15
+    },
+    {
+      "title": "Weapons of the First Legion",
+      "detachment": "Unforgiven Task Force",
+      "value": 15
+    },
+    {
+      "title": "Ancient Weapons",
+      "detachment": "Wrath of the Rock",
+      "value": 25
+    },
+    {
+      "title": "Deathwing Assault",
+      "detachment": "Wrath of the Rock",
+      "value": 15
+    },
+    {
+      "title": "Lord of the Ravenwing",
+      "detachment": "Wrath of the Rock",
+      "value": 10
+    },
+    {
+      "title": "Tempered in Battle (Aura)",
+      "detachment": "Wrath of the Rock",
+      "value": 10
+    }
+  ],
+  "dependencyInventory": {
+    "sourceDatasheets": 101,
+    "foreignChapterExcluded": 19,
+    "eligibleCanonicalShared": 82,
+    "mfmSharedRecords": 84,
+    "chapterKeywordEvidence": [
+      "IMPERIAL FISTS",
+      "IRON HANDS",
+      "RAVEN GUARD",
+      "SALAMANDERS",
+      "ULTRAMARINES",
+      "WHITE SCARS"
+    ],
+    "canonicalSharedTitles": [
+      "Aggressor Squad",
+      "Ancient",
+      "Ancient in Terminator Armor",
+      "Apothecary",
+      "Apothecary Biologis",
+      "Assault Intercessor Squad",
+      "Assault Intercessors with Jump Packs",
+      "Ballistus Dreadnought",
+      "Bladeguard Ancient",
+      "Bladeguard Veteran Squad",
+      "Brutalis Dreadnought",
+      "Captain",
+      "Captain in Gravis Armour",
+      "Captain in Phobos Armour",
+      "Captain in Terminator Armour",
+      "Captain with Jump Pack",
+      "Centurion Assault Squad",
+      "Centurion Devastator Squad",
+      "Chaplain",
+      "Chaplain in Terminator Armour",
+      "Chaplain on Bike",
+      "Chaplain with Jump Pack",
+      "Company Heroes",
+      "Desolation Squad",
+      "Devastator Squad",
+      "Dreadnought",
+      "Drop Pod",
+      "Eliminator Squad",
+      "Eradicator Squad",
+      "Eradicator Squad with Heavy Bolters",
+      "Firestrike Servo-Turrets",
+      "Gladiator Lancer",
+      "Gladiator Reaper",
+      "Gladiator Valiant",
+      "Hammerfall Bunker",
+      "Heavy Intercessor Squad",
+      "Hellblaster Squad",
+      "Impulsor",
+      "Inceptor Squad",
+      "Incursor Squad",
+      "Infernus Squad",
+      "Infiltrator Squad",
+      "Intercessor Squad",
+      "Invader ATV",
+      "Invictor Tactical Warsuit",
+      "Judiciar",
+      "Land Raider",
+      "Land Raider Crusader",
+      "Land Raider Redeemer",
+      "Land Speeder",
+      "Librarian",
+      "Librarian in Phobos Armour",
+      "Librarian in Terminator Armour",
+      "Lieutenant",
+      "Lieutenant in Phobos Armour",
+      "Lieutenant in Reiver Armour",
+      "Lieutenant with Combi-weapon",
+      "Outrider Squad",
+      "Predator Annihilator",
+      "Predator Destructor",
+      "Razorback",
+      "Redemptor Dreadnought",
+      "Reiver Squad",
+      "Repulsor",
+      "Repulsor Executioner",
+      "Rhino",
+      "Scout Squad",
+      "Sternguard Veteran Squad",
+      "Storm Speeder Hailstrike",
+      "Storm Speeder Hammerstrike",
+      "Storm Speeder Thunderstrike",
+      "Stormhawk Interceptor",
+      "Stormraven Gunship",
+      "Stormtalon Gunship",
+      "Suppressor Squad",
+      "Tactical Squad",
+      "Techmarine",
+      "Terminator Assault Squad",
+      "Terminator Squad",
+      "Vanguard Veteran Squad with Jump Packs",
+      "Vindicator",
+      "Whirlwind"
+    ],
+    "foreignChapterTitles": [
+      "Adrax Agatone",
+      "Aethon Shaan",
+      "Caanok Var",
+      "Cato Sicarius",
+      "Chief Librarian Tigurius",
+      "Darnath Lysander",
+      "Iron Father Feirros",
+      "Kayvaan Shrike",
+      "Kor'sarro Khan",
+      "Lieutenant Titus",
+      "Marneus Calgar in Armour of Antilochus",
+      "Pedro Kantor",
+      "Roboute Guilliman",
+      "Suboden Khan",
+      "Tor Garadon",
+      "Uriel Ventris",
+      "Victrix Honour Guard",
+      "Vulkan He'stan",
+      "Wardens of Ultramar"
+    ],
+    "specialScope": [
+      {
+        "title": "Astraeus",
+        "points": [
+          {
+            "label": "1st · 1 model",
+            "value": 525,
+            "minModels": 1,
+            "maxModels": 1,
+            "minCopies": 1,
+            "maxCopies": 1
+          },
+          {
+            "label": "2nd + · 1 model",
+            "value": 575,
+            "minModels": 1,
+            "maxModels": 1,
+            "minCopies": 2
+          }
+        ],
+        "scope": "special-imperial-armour",
+        "includedInCurrentDatasheets": false,
+        "reason": "Priced by live MFM, but absent from the current canonical 11th Edition Space Marines Faction Pack datasheet source."
+      },
+      {
+        "title": "Thunderhawk Gunship",
+        "points": [
+          {
+            "label": "unit · 1 model",
+            "value": 840,
+            "minModels": 1,
+            "maxModels": 1
+          }
+        ],
+        "scope": "special-imperial-armour",
+        "includedInCurrentDatasheets": false,
+        "reason": "Priced by live MFM, but absent from the current canonical 11th Edition Space Marines Faction Pack datasheet source."
+      }
+    ],
+    "spellingAliases": {
+      "ANCIENT IN TERMINATOR ARMOUR": "Ancient in Terminator Armor"
+    },
+    "unresolved": []
+  },
+  "legends": [
+    {
+      "title": "DEATHWING COMMAND SQUAD",
+      "points": [
+        {
+          "label": "unit · 5 models",
+          "value": 200,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "unit · 10 models",
+          "value": 400,
+          "minModels": 10,
+          "maxModels": 10
+        }
+      ],
+      "includedInCurrentDatasheets": false
+    },
+    {
+      "title": "DEATHWING STRIKEMASTER",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "includedInCurrentDatasheets": false
+    },
+    {
+      "title": "RAVENWING TALONMASTER",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 105,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "includedInCurrentDatasheets": false
+    }
+  ],
+  "captureDataSha256": "9D5277A780B5D8B9DC99DB5C6819049E5AF1B6B5844D52664F82BFE3D18A1553"
+}

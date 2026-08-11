@@ -9,7 +9,7 @@ const books={
   orks:{pages:87,detachments:7,updates:42,faqs:5,datasheets:57,imperialArmour:1,legends:30,units:88,enhancements:44,flagship:'Ghazghkull Thraka'},
   'emperors-children':{pages:10,detachments:4,updates:17,faqs:3,datasheets:23,imperialArmour:0,legends:0,units:23,enhancements:34,flagship:'Fulgrim'},
   'space-marines':{pages:217,detachments:15,updates:5,faqs:14,datasheets:101,imperialArmour:0,legends:0,units:101,enhancements:87,flagship:'Intercessor Squad'},
-  'dark-angels':{pages:16,detachments:5,updates:3,faqs:1,datasheets:16,imperialArmour:0,legends:3,units:19,enhancements:26,flagship:"Lion El'Jonson"}
+  'dark-angels':{pages:17,detachments:5,updates:4,faqs:1,datasheets:16,imperialArmour:0,legends:3,units:19,enhancements:26,flagship:"Lion El'Jonson"}
 };
 
 const errors=[];
@@ -57,14 +57,17 @@ const daConfig=read('books/dark-angels/book.config.json');
 const daPack=read(`books/dark-angels/${daConfig.sources.factionPack}`);
 const daCodex=read(`books/dark-angels/${daConfig.sources.codexDatasheets}`);
 const daPoints=read('books/dark-angels/content/dark-angels-points.en.json');
+const daMfm=read('books/dark-angels/sources/official-mfm-v1.2.json');
+const daManifest=read('books/dark-angels/sources/source-manifest.json');
 const daReader=fs.readFileSync(path.join(root,'books/dark-angels/reader.html'),'utf8');
-const daPdf=fs.readFileSync(path.join(root,'books/dark-angels/sources/dark-angels-faction-pack-v1.0.pdf'));
+const daPdf=fs.readFileSync(path.join(root,'books/dark-angels/sources/dark-angels-faction-pack-v1.1.pdf'));
 const daDigest=crypto.createHash('sha256').update(daPdf).digest('hex').toUpperCase();
-expect(daDigest==='7F1EFE2D62F57597D0949D62B8D9BF0675E0199A6E99A1EEF61BFA65DE76AA52','dark-angels: official PDF SHA-256 changed');
+expect(daDigest==='A29FB27970A47E174E4014C7D39DC99FEECB5940684E1DBA04EA218E7BC4106F','dark-angels: official PDF SHA-256 changed');
 expect(daPack.meta?.sha256===daDigest,'dark-angels: generated provenance must use the committed PDF hash');
 const daSerialized=JSON.stringify(daPack);
 for(const corrupted of ['Dark Dngels','DDEPTUS DSTDRTES','Drmour of Contempt','Dncient','Deathwing Dssault'])expect(!daSerialized.includes(corrupted),`dark-angels: corrupted extraction remains: ${corrupted}`);
 for(const required of ['Dark Angels','ADEPTUS ASTARTES','Armour of Contempt','Ancient Weapons','Deathwing Assault'])expect(daSerialized.includes(required),`dark-angels: corrected extraction missing ${required}`);
+for(const required of ['Mist-wreathed Shadow Realms','Martial Exemplar','Lightning-fast Manoeuvres','Grand Master of the Ravenwing'])expect(daSerialized.includes(required),`dark-angels: Faction Pack v1.1 update missing ${required}`);
 
 const daStratagems=daPack.detachments.flatMap(detachment=>detachment.stratagems);
 const daUntyped=new Set(['Searing Bursts','No Sacrifice Too Great','Revelation of Guilt','Skyborne Surveillance','Wings of Shadow','We Are Vengeance','Exacting Punishment','Terrifying Zeal','Wages of Cowardice']);
@@ -100,7 +103,7 @@ for(const unit of smCodex.datasheets.filter(unit=>!smGeneric.includes(unit)))exp
 const sharedCategoryCounts=Object.groupBy(smGeneric,unit=>unit.category);
 for(const [category,count] of Object.entries({'Battleline':4,'Characters':23,'Dedicated Transports':4,'Fortification':1,'Infantry':23,'Mounted':2,'Vehicle':25}))expect((sharedCategoryCounts[category]||[]).length===count,`dark-angels: expected ${count} shared Space Marines ${category}`);
 for(const title of ['Hellblaster Squad','Intercessor Squad','Bladeguard Veteran Squad','Terminator Squad','Terminator Assault Squad','Outrider Squad','Land Raider','Redemptor Dreadnought'])expect(daReaderUnitIds.includes(smGeneric.find(unit=>unit.title===title)?.id),`dark-angels: representative shared datasheet missing ${title}`);
-expect(daReader.includes('data-nav-id="datasheets-dark-angels"')&&daReader.includes('data-nav-id="datasheets-space-marines"'),'dark-angels: Datasheets navigation must separate local and shared ownership');
+expect(!daReader.includes('data-nav-id="datasheets-dark-angels"')&&!daReader.includes('data-nav-id="datasheets-space-marines"'),'dark-angels: Datasheets navigation must remain unified');
 expect(daReader.includes('data-term="space-marines-weapon-'),'dark-angels: shared datasheets must preserve canonical Space Marines term identity');
 expect(!daReader.includes('data-term="dark-angels-weapon-plasma-incinerator'),'dark-angels: shared datasheet terms must not be duplicated under Dark Angels identity');
 for(const [leader,target] of [['Belial','Terminator Squad'],['Azrael','Hellblaster Squad'],['Sammael','Outrider Squad']]){const targetId=smGeneric.find(unit=>unit.title===target)?.id;expect(daReader.includes(`data-journey-target="${targetId}"`),`dark-angels: ${leader} must link to shared ${target}`);}
@@ -114,12 +117,27 @@ for(const title of ['Deathwing Knights','Deathwing Terminator Squad'])expect(uni
 for(const [unit,title] of [['Azrael','The Lion Helm'],['Lazarus','The Spiritshield Helm'],['Deathwing Knights','Teleport Homer'],['Ravenwing Command Squad','Narthecium'],['Ravenwing Command Squad','Astartes Banner'],['Ravenwing Command Squad','Honour or Death']])expect(unitByTitle.get(unit)?.abilities.some(item=>item.title===title),`dark-angels: ${unit} must keep ${title} as an ordinary datasheet ability`);
 expect(!daCurrent.some(unit=>(unit.wargearAbilities||[]).some(item=>item.title==='Invulnerable Save')),'dark-angels: Invulnerable Save must not be inferred as a Wargear Ability');
 expect(/that use is [-\u2011]1 CP/i.test(unitByTitle.get('Ravenwing Command Squad')?.abilities.find(item=>item.title==='Honour or Death')?.text||''),'dark-angels: Honour or Death must use the official -1 CP update');
+expect(unitByTitle.get("Lion El'Jonson")?.abilities.some(item=>item.title==='Mist-wreathed Shadow Realms'),'dark-angels: Lion must preserve the v1.1 reserve ability');
+expect(unitByTitle.get("Lion El'Jonson")?.abilities.some(item=>item.title==='Martial Exemplar (Aura)'),'dark-angels: Lion must preserve the v1.1 Martial Exemplar aura');
+expect(unitByTitle.get('Inner Circle Companions')?.abilities.find(item=>item.title==='Braziers of Judgement')?.text==='This unit has Stealth. Melee attacks that target this unit have -1 to Hit rolls.','dark-angels: Braziers of Judgement must use clean v1.1 wording');
 
 const deathwingAssault=daPoints.enhancements.filter(item=>item.title==='Deathwing Assault');
 expect(deathwingAssault.length===2,'dark-angels: expected two Deathwing Assault Enhancements');
 expect(new Set(deathwingAssault.map(item=>item.id)).size===2,'dark-angels: Deathwing Assault IDs must be detachment-qualified');
 expect(new Set(deathwingAssault.map(item=>item.detachment)).size===2,'dark-angels: Deathwing Assault instances must retain separate Detachments');
 expect(new Set(deathwingAssault.map(item=>item.value)).size===2,'dark-angels: Deathwing Assault instances must retain separate points');
+expect(daMfm.version==='v1.2'&&daMfm.sourceUpdatedAt==='2026-07-22'&&daMfm.capturedAt==='2026-08-11','dark-angels: MFM v1.2 dated capture metadata is invalid');
+expect(daMfm.counts.nativeUnits===16&&daMfm.counts.canonicalSharedUnits===82&&daMfm.counts.specialScopeUnits===2&&daMfm.counts.routeUnits===100,'dark-angels: MFM inventory classification is invalid');
+expect(daMfm.counts.localDetachments===8&&daMfm.counts.localEnhancements===26&&daMfm.counts.unresolved===0,'dark-angels: MFM local inventory must be fully resolved');
+expect(daMfm.dependencyInventory.specialScope.map(item=>item.title).join('|')==='Astraeus|Thunderhawk Gunship','dark-angels: MFM special/Imperial Armour classification changed');
+expect(daMfm.dependencyInventory.specialScope.every(item=>item.includedInCurrentDatasheets===false),'dark-angels: MFM-only special-scope records must not enter current Datasheets');
+expect(!daReader.includes('unit-astraeus')&&!daReader.includes('unit-thunderhawk-gunship'),'dark-angels: special/Imperial Armour records leaked into current navigation');
+const daBlackKnights=daPoints.units.find(item=>item.title==='Ravenwing Black Knights');
+expect(daBlackKnights?.points.length===2&&daBlackKnights.points.map(item=>item.value).join('|')==='75|150','dark-angels: Ravenwing Black Knights must use current MFM points without stale copy premiums');
+expect(daPoints.enhancements.find(item=>item.title==='Stalwart Champion')?.value===15,'dark-angels: Stalwart Champion must use current MFM points');
+expect(daManifest.layers.some(layer=>layer.id==='faction-pack-v1.1'&&layer.status==='current'&&layer.sha256===daDigest),'dark-angels: source manifest must identify current Faction Pack v1.1');
+expect(daManifest.layers.some(layer=>layer.id==='mfm'&&layer.version==='v1.2'&&layer.status==='dated-capture'),'dark-angels: source manifest must identify current dated MFM capture');
+expect(daManifest.gates?.publishAsComplete===false,'dark-angels: publishAsComplete must remain false');
 expect(daReader.includes('data-term="space-marines-army-rule-oath-of-moment"'),'dark-angels: Oath of Moment must use the shared Space Marines identity');
 expect(!daReader.includes('data-term="dark-angels-army-rule-oath-of-moment"'),'dark-angels: Oath of Moment must not be duplicated as a local identity');
 

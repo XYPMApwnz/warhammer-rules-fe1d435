@@ -14,6 +14,8 @@ MANIFEST = ROOT / "presentation" / "unit-images.json"
 
 def transparent_product_image(source, config):
     image = Image.open(source).convert("RGBA")
+    if crop := config["processing"].get("crop"):
+        image = image.crop(tuple(crop))
     width, height = image.size
     rgb = image.convert("RGB")
     pixels = list(rgb.getdata())

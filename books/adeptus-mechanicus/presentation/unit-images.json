@@ -51,6 +51,24 @@
         "desktop": { "scale": 1.07, "x": "0%", "y": "2%" },
         "phone": { "scale": 1.1, "x": "0%", "y": "3%" }
       }
+    },
+    "unit-belisarius-cawl": {
+      "unitName": "Belisarius Cawl",
+      "asset": "assets/unit-images/belisarius-cawl-background.webp",
+      "original": "sources/unit-images/99120116015_BelisariusCawl01.jpg",
+      "width": 404,
+      "height": 415,
+      "source": {
+        "productUrl": "https://www.warhammer.com/en-GB/shop/Adeptus-Mechanicus-Belisarius-Cawl-2017",
+        "imageUrl": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120116015_BelisariusCawl01.jpg",
+        "originalFilename": "99120116015_BelisariusCawl01.jpg"
+      },
+      "processing": { "crop": [470, 52, 874, 467], "minLuma": 238, "maxChroma": 28, "backgroundDistance": 20 },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.2, "x": "8%", "y": "0%", "opacity": 0.24 },
+        "phone": { "scale": 1.08, "x": "8%", "y": "0%", "opacity": 0.2 }
+      }
     }
   }
 }

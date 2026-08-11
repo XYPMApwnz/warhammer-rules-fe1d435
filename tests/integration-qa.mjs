@@ -51,7 +51,7 @@ for(const book of books){
   if(book.matrix)check(`${book.id} Compatible Rules matrix exists`,exists(book.matrix));
   if(book.id==='dark-angels'){
     check('dark-angels entry exposes source-limited review status and artwork',entryHtml.includes('Source-limited preview')&&entryHtml.includes('dark-angels-cover-480.webp')&&!entryHtml.includes('class="entry-mark"'));
-    check('dark-angels reader exposes separated local/shared inventory and preserves source gaps',(readerHtml.match(/<article class="unit-card/g)||[]).length===98&&readerHtml.includes('data-nav-id="datasheets-dark-angels"')&&readerHtml.includes('data-nav-id="datasheets-space-marines"')&&(readerHtml.match(/Codex source required/g)||[]).length===3);
+    check('dark-angels reader exposes one categorized inventory while preserving ownership and source gaps',(readerHtml.match(/<article class="unit-card/g)||[]).length===98&&(readerHtml.match(/Space Marines shared datasheet/g)||[]).length===82&&!readerHtml.includes('data-nav-id="datasheets-dark-angels"')&&!readerHtml.includes('data-nav-id="datasheets-space-marines"')&&readerHtml.includes('data-nav-id="datasheets-epic-heroes"')&&readerHtml.includes('data-nav-id="datasheets-vehicle"')&&(readerHtml.match(/Codex source required/g)||[]).length===3);
     const phoneRoutes=fs.readdirSync(path.join(root,'books/dark-angels/mobile')).filter(file=>file.endsWith('.html'));
     check('dark-angels exposes deterministic generated Phone routes',phoneRoutes.length===109&&phoneHtml.includes('id="unit-belial"')&&!phoneHtml.includes('reader.html?view=mobile'));
   }

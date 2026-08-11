@@ -17,7 +17,7 @@
   "currentDatasheetsOnly": true,
   "dependencyDatasheets": {
     "render": true,
-    "groupByBook": true,
+    "groupByBook": false,
     "currentOnly": true,
     "excludeAnyKeywords": [
       "IMPERIAL FISTS",
@@ -27,6 +27,11 @@
       "ULTRAMARINES",
       "WHITE SCARS"
     ]
+  },
+  "datasheetCategoryLabels": {
+    "Epic Hero": "Epic Heroes",
+    "Character": "Characters",
+    "Dedicated Transport": "Dedicated Transports"
   },
   "armyRules": ["Oath of Moment"],
   "armyRuleTermIds": {

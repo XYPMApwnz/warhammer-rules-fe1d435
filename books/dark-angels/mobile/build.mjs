@@ -25,13 +25,14 @@ const attr=(html,name)=>new RegExp(`\\s${name}="([^"]*)"`).exec(html)?.[1]||'';
 
 const detachments=[...source.matchAll(/<section class="content-group detachment" id="(detachment-[^"]+)"[^>]*>\s*<h3 class="category-title(?: detachment-title)?">([\s\S]*?)<\/h3>/g)].map(([,id,heading])=>({id,title:clean(heading.replace(/<span[\s\S]*$/,'')),file:`${id.slice(11)}.html`,type:'detachment'}));
 const categories=[...source.matchAll(/<section class="content-group" id="(datasheets-[^"]+)"[^>]*>\s*<h3 class="category-title">([^<]+)<\/h3>/g)].map(([,id,title])=>{
-  const section=extract('section',id),owner=id.startsWith('datasheets-space-marines-')?'space-marines':'dark-angels';
+  const section=extract('section',id);
   const units=[...section.matchAll(/<article\b[^>]*\bclass="[^"]*\bunit-card\b[^"]*"[^>]*\bid="(unit-[^"]+)"[^>]*>/g)].map(([,unitId])=>{
     const article=extract('article',unitId,section),unitTitle=/<h3(?: class="unit-name")?>([\s\S]*?)<\/h3>/.exec(article)?.[1];
     if(!unitTitle)throw new Error(`Missing title for ${unitId}`);
+    const owner=/Space Marines shared datasheet/.test(article)?'space-marines':'dark-angels';
     return{id:unitId,title:clean(unitTitle),file:`${unitId.slice(5)}.html`,type:'unit',category:id,owner};
   });
-  return{id,title:clean(title),owner,units};
+  return{id,title:clean(title),units};
 });
 const units=categories.flatMap(category=>category.units),localUnits=units.filter(unit=>unit.owner==='dark-angels'),sharedUnits=units.filter(unit=>unit.owner==='space-marines');
 if(detachments.length!==8||localUnits.length!==16||sharedUnits.length!==82)throw new Error(`Expected 8 Detachments, 16 Dark Angels and 82 Space Marines Datasheets; found ${detachments.length}, ${localUnits.length} and ${sharedUnits.length}`);
@@ -72,12 +73,9 @@ for(const context of Object.values(glossaryContext)){
 
 const link=(route,active)=>`<a href="./${route.file}"${route.id===active?' aria-current="page"':''}>${route.title}</a>`;
 function navigation(route){
-  const activeCategory=categories.find(category=>category.id===route.category),owners=[{id:'dark-angels',title:'Dark Angels',units:localUnits},{id:'space-marines',title:'Space Marines',units:sharedUnits}];
-  const datasheets=owners.map(owner=>{
-    const ownerCategories=categories.filter(category=>category.owner===owner.id),active=route.owner===owner.id;
-    return `<details data-datasheet-owner="${owner.id}"${active?' open':''}><summary>${owner.title} <span>${owner.units.length}</span></summary><div class="mobile-nav-branch mobile-unit-groups">${ownerCategories.map(category=>`<details data-category-id="${category.id}"${category===activeCategory?' open':''}><summary>${category.title} <span>${category.units.length}</span></summary><div class="mobile-nav-branch">${category.units.map(item=>link(item,route.id)).join('')}</div></details>`).join('')}</div></details>`;
-  }).join('');
-  return `${staticRoutes.slice(0,2).map(item=>link(item,route.id)).join('')}<details name="mobile-primary"${route.type==='detachment'?' open':''}><summary>Detachments <span>${detachments.length}</span></summary><div class="mobile-nav-branch">${detachments.map(item=>link(item,route.id)).join('')}</div></details><details name="mobile-primary"${route.type==='unit'?' open':''}><summary>Datasheets <span>${units.length}</span></summary><div class="mobile-nav-branch mobile-ownership-groups">${datasheets}</div></details>${link(staticRoutes[2],route.id)}`;
+  const activeCategory=categories.find(category=>category.id===route.category);
+  const datasheets=categories.map(category=>`<details data-category-id="${category.id}"${category===activeCategory?' open':''}><summary>${category.title} <span>${category.units.length}</span></summary><div class="mobile-nav-branch">${category.units.map(item=>link(item,route.id)).join('')}</div></details>`).join('');
+  return `${staticRoutes.slice(0,2).map(item=>link(item,route.id)).join('')}<details name="mobile-primary"${route.type==='detachment'?' open':''}><summary>Detachments <span>${detachments.length}</span></summary><div class="mobile-nav-branch">${detachments.map(item=>link(item,route.id)).join('')}</div></details><details name="mobile-primary"${route.type==='unit'?' open':''}><summary>Datasheets <span>${units.length}</span></summary><div class="mobile-nav-branch mobile-unit-groups">${datasheets}</div></details>${link(staticRoutes[2],route.id)}`;
 }
 
 function page(route){

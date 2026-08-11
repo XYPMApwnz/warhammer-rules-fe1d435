@@ -41,8 +41,8 @@
     .book.dg .cover img{object-fit:cover;object-position:center}
   </style>
 </head>
-<body data-last-checked="2026-07-21">
-  <header class="topbar"><div class="brand"><a href="https://warhammer40000.com/" target="_blank" rel="noreferrer"><img class="warhammer-logo" src="assets/warhammer-40000-logo-optimized.png" alt="Warhammer 40,000"></a><a href="https://www.warhammer.com/" target="_blank" rel="noreferrer"><img class="gw-logo" src="assets/games-workshop-logo.png" alt="Games Workshop"></a></div><div class="top-actions"><a class="utility glossary-link" href="glossary/index.html">Mega Glossary</a><div class="status"><i></i><span>Sources checked</span></div></div></header>
+<body data-last-checked="2026-08-11">
+  <header class="topbar"><div class="brand"><a href="https://warhammer40000.com/" target="_blank" rel="noreferrer"><img class="warhammer-logo" src="assets/warhammer-40000-logo-optimized.png" alt="Warhammer 40,000"></a><a href="https://www.warhammer.com/" target="_blank" rel="noreferrer"><img class="gw-logo" src="assets/games-workshop-logo.png" alt="Games Workshop"></a></div><div class="top-actions"><a class="utility glossary-link" href="glossary/index.html">Mega Glossary</a><div class="status"><i></i><span>Source status</span></div></div></header>
   <main>
     <section class="hero"><p class="eyebrow">Library // 11th Edition</p><h1>In the grim darkness of the far future, there is only <span>KURILKA WAHAEBA</span>.</h1><p class="hero-copy">A unified reference for Core Rules, Army Books, shared terminology and roster-specific game guides.</p></section>
     <section class="library" aria-labelledby="library-title">
@@ -53,7 +53,7 @@
           <a class="book roster" href="roster-guides/index.html"><span class="cover"><span class="cover-mark"><small>Army builder</small><strong>Roster Guides</strong></span></span><span class="book-copy"><small>New Recruit roster tools</small><strong>Army Builder</strong></span></a>
         </div></section>
         <section class="library-shelf" aria-labelledby="imperium-title"><div class="shelf-head"><h3 id="imperium-title">Imperium</h3><span>Armies of the Imperium</span></div><div class="book-row">
-            <a class="book am" href="books/adeptus-mechanicus/index.html"><span class="cover"><img src="assets/adeptus-mechanicus-cover-480.webp" width="480" height="600" alt="Adeptus Mechanicus cover"></span><span class="book-copy"><small>Complete reference</small><strong>Adeptus Mechanicus</strong></span></a>
+            <a class="book am" href="books/adeptus-mechanicus/index.html"><span class="cover"><img src="assets/adeptus-mechanicus-cover-480.webp" width="480" height="600" alt="Adeptus Mechanicus cover"></span><span class="book-copy"><small>Verification build</small><strong>Adeptus Mechanicus</strong></span></a>
         </div></section>
         <section class="library-shelf" aria-labelledby="space-marines-title"><div class="shelf-head"><h3 id="space-marines-title">Space Marines &amp; Successors</h3><span>Adeptus Astartes</span></div><div class="book-row">
             <a class="book sm" href="books/space-marines/index.html"><span class="cover"><picture><source type="image/webp" srcset="books/space-marines/assets/space-marines-cover-480.webp 480w, books/space-marines/assets/space-marines-cover-800.webp 800w" sizes="(max-width: 800px) 100vw, 32vw"><img src="books/space-marines/assets/space-marines-cover-480.webp" width="480" height="600" loading="lazy" decoding="async" alt="Space Marines cover"></picture></span><span class="book-copy"><small>Interactive reference &middot; source-gated preview</small><strong>Space Marines</strong></span></a>
@@ -69,12 +69,12 @@
         </div></section>
       </div>
     </section>
-    <section class="support" aria-labelledby="support-title"><div class="section-head"><h2 id="support-title">Project information</h2><span>Supporting material</span></div><div class="support-grid"><article class="support-card"><h3>Sources & updates</h3><p>Official Games Workshop publications are the primary source. <a href="https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/" target="_blank" rel="noreferrer">Open official downloads ↗</a></p><div class="checked">Sources checked</div></article><article class="support-card"><h3>Mega Glossary</h3><p>The shared terminology service used by every rules space. <a href="glossary/index.html">Search the glossary →</a></p></article></div></section>
+    <section class="support" aria-labelledby="support-title"><div class="section-head"><h2 id="support-title">Project information</h2><span>Supporting material</span></div><div class="support-grid"><article class="support-card"><h3>Sources & updates</h3><p>Official Games Workshop publications are the primary source. <a href="https://www.warhammer-community.com/en-gb/downloads/warhammer-40000/" target="_blank" rel="noreferrer">Open official downloads ↗</a></p><div class="checked">Source status</div></article><article class="support-card"><h3>Mega Glossary</h3><p>The shared terminology service used by every rules space. <a href="glossary/index.html">Search the glossary →</a></p></article></div></section>
   </main>
   <footer class="footer"><span>WH40K Rules Library</span><span>Warhammer 40,000 and related marks belong to Games Workshop.</span></footer>
   <script>
     const checkedAt=new Date(`${document.body.dataset.lastChecked}T12:00:00`),stale=(Date.now()-checkedAt.getTime())/86400000>14,date=new Intl.DateTimeFormat('en-GB').format(checkedAt);
-    for(const element of document.querySelectorAll('.status,.checked')){element.classList.toggle('stale',stale);if(element.classList.contains('status'))element.querySelector('span').textContent=stale?`Review required · ${date}`:`Sources checked ${date}`;else element.textContent=`Sources checked: ${date} // ${stale?'Review required':'Active'}`;}
+    for(const element of document.querySelectorAll('.status,.checked')){element.classList.toggle('stale',stale);if(element.classList.contains('status'))element.querySelector('span').textContent=`Source status · ${stale?'Audit refresh due':'Audit run'} · ${date}`;else element.textContent=`Audit run: ${date} // ${stale?'Refresh due':'Per-book authority varies'}`;}
     if('serviceWorker' in navigator&&location.protocol.startsWith('http'))addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js'));
   </script>
 </body>

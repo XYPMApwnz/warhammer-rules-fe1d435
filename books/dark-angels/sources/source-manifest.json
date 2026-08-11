@@ -87,6 +87,6 @@
   "gates": {
     "publishAsComplete": false,
     "reviewLabel": "Source-limited preview",
-    "reason": "Current official Dark Angels Faction Pack v1.1 is frozen and verified. Current official MFM v1.2 points are preserved as a dated capture. Three Codex-derived Detachments remain source-limited because the complete frozen Codex source is not available in this repository."
+    "reason": "Current official Dark Angels Faction Pack v1.1 is frozen. Official live MFM v1.2 points are preserved as a dated repository capture; both were verified 11 August 2026. Three Codex-derived Detachments remain source-limited because the complete frozen Codex source is not available in this repository."
   }
 }

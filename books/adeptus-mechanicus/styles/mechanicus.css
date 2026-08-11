@@ -62,6 +62,8 @@
 .legends-card .unit-status { border-color:var(--pink); color:var(--pink); }
 .weapon-row strong,.weapon-row small { display:block; }
 .weapon-row small { margin-top:5px; color:var(--green); font:700 8px/1.35 ui-monospace,monospace; }
+.unit-card .weapon-table .weapon-row:not(.weapon-head) > div:first-child { padding-left:8px; }
+.unit-card .weapon-button { text-align:left; }
 .unit-note { margin:0 0 12px; color:var(--muted); font-size:.9em; }
 .invulnerable { border-left:2px solid var(--green-deep); }
 .glossary-full { color:var(--muted); font-size:.92em; }

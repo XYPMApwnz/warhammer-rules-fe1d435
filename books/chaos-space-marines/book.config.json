@@ -5,8 +5,9 @@
   "shortTitle": "Chaos Space Marines Rules",
   "edition": "11E",
   "factionKeyword": "HERETIC ASTARTES",
+  "currentDatasheetsOnly": true,
   "expected": {
-    "matchedDetachments": 9,
+    "matchedDetachments": 17,
     "factionPackDetachments": 9,
     "legendsDatasheets": 53
   },

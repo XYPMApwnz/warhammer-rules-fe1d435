@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Chaos Space Marines Faction Pack",
-    "version": "1.0",
-    "legalFrom": "2026-06-20",
+    "version": "1.1",
+    "legalFrom": "2026-07-22",
     "pageCount": 102,
-    "sha256": "4065D5349C1417E9083474F3E35A006AE0FB8D4D3515F261A1C3F10A00902BCD",
-    "file": "sources/chaos-space-marines-faction-pack-v1.0.pdf"
+    "sha256": "407DD6F175A7C27E0CB20BC95F68675AB0F9250883F08660CD2F16EF6D9F4998",
+    "file": "sources/chaos-space-marines-faction-pack-v1.1.pdf"
   },
   "provenance": {
-    "sourceId": "chaos-space-marines-faction-pack-v1.0",
+    "sourceId": "chaos-space-marines-faction-pack-v1.1",
     "authority": "Games Workshop",
     "documentType": "faction-pack",
     "edition": "Warhammer 40,000 11th Edition",
@@ -17,20 +17,20 @@
   },
   "pages": {
     "1": {
-      "sha256": "62F0BE9FF16779EA369144E5D0B0E92F73649753D575020BC29387848E9982C5",
-      "text": "CHAOS SPACE MARINES\nFACTION PACK: VERSION 1.0\nLegal for matched play from 20th June 2026\nOn the following pages you will find additional rules and clarifications that supplement your Codex, from extra detachments and\ndatasheets to rules updates and FAQs. All of these changes are also updated in the Warhammer 40,000 app, along with points values\nfor your units and detachments.\nWHAT’S NEW? CONTENTS\nThis is the first iteration of this Faction Pack for this edition of Detachments .................................................................................2\nWarhammer 40,000, combining some earlier updates with new Cabal of Chaos ..............................................................................................2\nrevisions designed to smooth the transition. As such, all of the following Devotees of Destruction ............................................................................3\ncontent should be regarded as new, and individual changes are not Murdertalon Raiders ...................................................................................4\nhighlighted. The next time this document is updated, this section will Warpstrike Champions ..............................................................................5\nsummarise what has been added or changed. Cult of the Arkifane ......................................................................................7\nCreations of Bile...........................................................................................9\nNightmare Hunt ........................................................................................11\nHuron’s Marauders ...................................................................................13\nRenegade Warband .................................................................................15\nDatasheets ..................................................................................17\nKravek Morne ............................................................................................17\nMutilators ...................................................................................................19\nDefiler ..........................................................................................................21\nHuron Blackheart .....................................................................................23\nMasters of the Maelstrom ......................................................................25\nRed Corsairs Raiders ...............................................................................27\nRed Corsairs Reave-Captain ..................................................................29\nNemesis Claw ............................................................................................31\nRaptors ........................................................................................................33\nWarp Talons ................................................................................................35\nRules Updates .............................................................................37\nLegends Datasheets ...................................................................40"
+      "sha256": "7B6130198E80081DE3EF96AD71E48227DF0B6D7D83D3A6D75B50B1FA491FFD47",
+      "text": "CHAOS SPACE MARINES\nFACTION PACK: VERSION 1.1\nLegal for matched play from 22nd July 2026\nOn the following pages you will find additional rules and clarifications that supplement your Codex, from extra detachments and\ndatasheets to rules updates and FAQs. All of these changes are also updated in the Warhammer 40,000 app, along with points values\nfor your units and detachments.\nWHAT’S NEW? CONTENTS\nCabal of Chaos Detachment, Empyric Wellspring detachment rule Detachments .................................................................................2\nChange to: Cabal of Chaos ..............................................................................................2\n▪ In your Shooting phase, when a friendly HERETIC ASTARTES PSYKER Devotees of Destruction ............................................................................3\nunit (excluding DAEMON units) is selected to shoot, if that unit makes a Murdertalon Raiders ...................................................................................4\nDark Pact, that unit’s ranged attacks have +1 S. Warpstrike Champions ..............................................................................5\n▪ In the Fight phase, when a friendly HERETIC ASTARTES DAEMON Cult of the Arkifane ......................................................................................7\nPRINCE/DAEMON PRINCE WITH WINGS unit (excluding KHORNE units) is Creations of Bile...........................................................................................9\nselected to fight, if that unit makes a Dark Pact, that unit’s melee Nightmare Hunt ........................................................................................11\nattacks have: Huron’s Marauders ...................................................................................13\n▫ +2 S. Renegade Warband .................................................................................15\n▫ +1 AP. Datasheets ..................................................................................17\n▪ Nightmare Hunt Detachment, Sorrowscent Vulture Enhancement Kravek Morne ............................................................................................17\nChange to: Mutilators ...................................................................................................19\n‘CHAOS LORD JUMP PACK model only. Models in the bearer’s unit have Defiler ..........................................................................................................21\nthe Scouts 6\" ability.’ Huron Blackheart .....................................................................................23\n▪ Defiler Datasheet, Daemonforge Ability Masters of the Maelstrom ......................................................................25\nChange to: Red Corsairs Raiders ...............................................................................27\n‘Each time this unit makes a Dark Pact, until the end of the phase, Red Corsairs Reave-Captain ..................................................................29\neach time this model makes an attack, re-roll a Wound roll of 1.’ Nemesis Claw ............................................................................................31\nRaptors ........................................................................................................33\nWarp Talons ................................................................................................35\nRules Updates .............................................................................37\nLegends Datasheets ...................................................................40"
     },
     "2": {
-      "sha256": "F165C9FC782B0FA7024BF75A5026947233EDABDE51F5D17E6EA5572474103170",
-      "text": "CABAL OF CHAOS\nA CABAL OF WARP‑TOUCHED SORCERERS UNLEASH THEIR SUPERNATURAL POWERS TO MUTATE AND DESTROY\nDETACHMENT RULES INFERNAL VIGOUR 1CP\nEMPYRIC WELLSPRING CABAL OF CHAOS STRATAGEM\nWith the unbound energies of the Warp surging through them, this\nThe sorcerous powers wielded by a cabal inevitably draw the\ninfernal champion heals of their hurts as quickly as the enemy\nattention of the Dark Gods, flooding the battlefield with immaterial can inflict them.\nenergies that empower their dark magicks and their daemonically WHEN: Your Command phase.\ngifted comrades alike.\nTARGET: One friendly HERETIC ASTARTES PSYKER/DAEMON unit\n(excluding KHORNE units).\n▪ In your Shooting phase, when a friendly HERETIC ASTARTES EFFECT: Your unit heals D3+1 wounds.\nPSYKER unit (excluding DAEMON units) is selected to shoot, if that\nunit makes a Dark Pact, that unit’s ranged attacks have +1 S.\n▪ In the Fight phase, when a friendly HERETIC ASTARTES DAEMON FLESHY CURSE 1CP\nPRINCE unit (excluding KHORNE units) is selected to fight, if that CABAL OF CHAOS STRATAGEM\nunit makes a Dark Pact, that unit’s melee attacks have:\nChanting words of forbidden power, this heretic witch triggers\n▫ +2 S. a ghastly explosion of hypermutation within the bodies of foes,\n▫ +1 AP. rapidly transforming them into heaving mounds of gibbering meat.\nWHEN: Start of your Shooting phase.\nTARGET: One friendly HERETIC ASTARTES PSYKER unit.\nENHANCEMENTS EFFECT: Select one visible enemy unit within 12\" of your unit. Roll\none D6:\nTOUCHED BY THE WARP\n▪ On a 1, that enemy unit suffers 1 mortal wound.\nSaturated with empyric energies, this dark champion has ▪ On a 2‑4, that enemy unit suffers D3 mortal wounds.\nspontaneously manifested the mutant powers of a true psyker. ▪ On a 5‑6, that enemy unit suffers 2D3 mortal wounds.\nThese mortal wounds are inflicted by a psychic attack.\nHERETIC ASTARTES model only (excluding KHORNE models).\n▪ This model has PSYKER.\nWREATHED IN WARPFLAME 1CP\n▪ This model’s weapons have [PSYCHIC].\nCABAL OF CHAOS STRATAGEM\nCONDUIT OF CHAOS\nSecondary cantrips blossom out like poisoned flowers from the\nLike a lightning rod, this blessed fiend attracts the arcane energies heart of this sorcerous manifestation, raining mutating flame\nupon the foe in roiling clouds.\nof the Warp, unleashing them in a crackling storm of mutating\nhorror as it plunges into the foe. WHEN: Your Shooting phase, when a friendly HERETIC ASTARTES\nPSYKER unit is selected to shoot.\nHERETIC ASTARTES DAEMON model only (excluding KHORNE models). TARGET: That HERETIC ASTARTES PSYKER unit.\nThis model’s melee attacks have [LANCE]. EFFECT: Your unit’s ranged attacks have [IGNORES COVER]."
+      "sha256": "53658EDF3536C853114E6DE04F8DB7778AF4004A9F8FDABFE51AD8EC6DE464DB",
+      "text": "CABAL OF CHAOS\nA CABAL OF WARP‑TOUCHED SORCERERS UNLEASH THEIR SUPERNATURAL POWERS TO MUTATE AND DESTROY\nDETACHMENT RULES INFERNAL VIGOUR 1CP\nEMPYRIC WELLSPRING CABAL OF CHAOS STRATAGEM\nWith the unbound energies of the Warp surging through them, this\nThe sorcerous powers wielded by a cabal inevitably draw the\ninfernal champion heals of their hurts as quickly as the enemy\nattention of the Dark Gods, flooding the battlefield with immaterial can inflict them.\nenergies that empower their dark magicks and their daemonically WHEN: Your Command phase.\ngifted comrades alike.\nTARGET: One friendly HERETIC ASTARTES PSYKER/DAEMON unit\n(excluding KHORNE units).\n▪ In your Shooting phase, when a friendly HERETIC ASTARTES EFFECT: Your unit heals D3+1 wounds.\nPSYKER unit (excluding DAEMON units) is selected to shoot, if that\nunit makes a Dark Pact, that unit’s ranged attacks have +1 S.\n▪ In the Fight phase, when a friendly HERETIC ASTARTES DAEMON FLESHY CURSE 1CP\nPRINCE/DAEMON PRINCE WITH WINGS unit (excluding KHORNE units) CABAL OF CHAOS STRATAGEM\nis selected to fight, if that unit makes a Dark Pact, that unit’s\nChanting words of forbidden power, this heretic witch triggers\nmelee attacks have: a ghastly explosion of hypermutation within the bodies of foes,\n▫ +2 S. rapidly transforming them into heaving mounds of gibbering meat.\n▫ +1 AP. WHEN: Start of your Shooting phase.\nTARGET: One friendly HERETIC ASTARTES PSYKER unit.\nEFFECT: Select one visible enemy unit within 12\" of your unit. Roll\nENHANCEMENTS one D6:\nTOUCHED BY THE WARP ▪ On a 1, that enemy unit suffers 1 mortal wound.\n▪ On a 2-4, that enemy unit suffers D3 mortal wounds.\nSaturated with empyric energies, this dark champion has ▪ On a 5-6, that enemy unit suffers 2D3 mortal wounds.\nspontaneously manifested the mutant powers of a true psyker. These mortal wounds are inflicted by a psychic attack.\nHERETIC ASTARTES model only (excluding KHORNE models).\nWREATHED IN WARPFLAME 1CP\n▪ This model has PSYKER.\n▪ This model’s weapons have [PSYCHIC]. CABAL OF CHAOS STRATAGEM\nSecondary cantrips blossom out like poisoned flowers from the\nCONDUIT OF CHAOS\nheart of this sorcerous manifestation, raining mutating flame\nupon the foe in roiling clouds.\nLike a lightning rod, this blessed fiend attracts the arcane energies\nof the Warp, unleashing them in a crackling storm of mutating WHEN: Your Shooting phase, when a friendly HERETIC ASTARTES\nPSYKER unit is selected to shoot.\nhorror as it plunges into the foe.\nTARGET: That HERETIC ASTARTES PSYKER unit.\nHERETIC ASTARTES DAEMON model only (excluding KHORNE models). EFFECT: Your unit’s ranged attacks have [IGNORES COVER].\nThis model’s melee attacks have [LANCE]."
     },
     "3": {
-      "sha256": "499984265E9EA517B49833504D580EDE60F29920D7CA26BE58B9726FE424A6C1",
-      "text": "DEVOTEES OF DESTRUCTION\nREJOICING, THESE WARRIORS UNLEASH INFERNAL FIREPOWER IN THE NAME OF THE DARK GODS\nDETACHMENT RULES RUINATION’S BOUNTY 1CP\nRAIN OF RUIN DEVOTEES OF DESTRUCTION STRATAGEM\nAs the murderous rain of projectiles redoubles and the fires of\nIt is not enough for these heretical reavers merely to defeat their\nruin burn higher, so the favour of the Dark Gods falls upon the\nfoes. Instead, they must pound all before them to smouldering architects of this devastation.\noblivion with overwhelming salvoes of fire. WHEN: Your Shooting phase, when a friendly HAVOCS/OBLITERATORS\nunit is selected to shoot.\nFriendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY]. TARGET: That HAVOCS/OBLITERATORS unit.\nEFFECT: When your unit uses the Dark Pacts ability, your unit’s\nranged attacks have:\nENHANCEMENTS ▪ [LETHAL HITS].\nPACT OF DESTRUCTION ▪ [SUSTAINED HITS 1].\nThere are those daemonic entities within the Warp that are willing\nto offer their boons to any who will wreak wholesale devastation SNARE OF FIRE 1CP\nin their name, at least for as long as the carnage holds their\nDEVOTEES OF DESTRUCTION STRATAGEM\ncapricious attention.\nEven as the foe attempts to escape the rain of ruination, or to\nclose with the foes so cruelly winnowing their ranks, so these\nWARPSMITH model only. Havocs move to establish new sight lines and draw their victims\ninto an inescapable crossfire.\n▪ When this unit uses its Dark Pacts ability, this unit can re‑roll\nLeadership rolls. WHEN: Your opponent’s Movement phase, when an enemy unit ends\na move within 8\" of a friendly unengaged HAVOCS unit.\n▪ In your Shooting phase, when this unit has shot, if this unit used\nTARGET: That HAVOCS unit.\nits Dark Pacts ability and if those attacks destroyed an enemy\nEFFECT: Your unit can make a normal move of up to D3+3\".\nmodel, this unit heals 3 wounds.\nEYE OF OBLIVION\nUNDYING HATRED 1CP\nThis vile technodaemonic parasite nests within the emptied eye\nsocket of its host, driving filament tendrils deep into their brain and DEVOTEES OF DESTRUCTION STRATAGEM\nfeeding on their animus in exchange for revealing the secrets of its Gripped by a maniacal need to annihilate their hated enemies,\nthese killers will not easily succumb to the clutches of death.\nsupernatural vision.\nWHEN: Your opponent’s Shooting phase, when an enemy unit\nWARPSMITH model only. When this unit is selected to shoot, select targets a friendly HAVOCS/OBLITERATORS unit.\none enemy unit within 24\" of this unit. That enemy unit has +6\" TARGET: That HAVOCS/OBLITERATORS unit.\ndetection range until this unit has shot. EFFECT: Attacks that target your unit with a S greater than your unit’s\nT have ‑1 to wound rolls."
+      "sha256": "4C927DAD2E2027E39E94FE5C7EF339C0A4DA3C34450E136169DD8CB44841F896",
+      "text": "DEVOTEES OF DESTRUCTION\nREJOICING, THESE WARRIORS UNLEASH INFERNAL FIREPOWER IN THE NAME OF THE DARK GODS\nDETACHMENT RULES RUINATION’S BOUNTY 1CP\nRAIN OF RUIN DEVOTEES OF DESTRUCTION STRATAGEM\nAs the murderous rain of projectiles redoubles and the fires of\nIt is not enough for these heretical reavers merely to defeat their\nruin burn higher, so the favour of the Dark Gods falls upon the\nfoes. Instead, they must pound all before them to smouldering architects of this devastation.\noblivion with overwhelming salvoes of fire. WHEN: Your Shooting phase, when a friendly HAVOCS/OBLITERATORS\nunit is selected to shoot.\nFriendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY]. TARGET: That HAVOCS/OBLITERATORS unit.\nEFFECT: When your unit uses the Dark Pacts ability, your unit’s\nranged attacks have:\nENHANCEMENTS ▪ [LETHAL HITS].\nPACT OF DESTRUCTION ▪ [SUSTAINED HITS 1].\nThere are those daemonic entities within the Warp that are willing\nto offer their boons to any who will wreak wholesale devastation SNARE OF FIRE 1CP\nin their name, at least for as long as the carnage holds their\nDEVOTEES OF DESTRUCTION STRATAGEM\ncapricious attention.\nEven as the foe attempts to escape the rain of ruination, or to\nclose with the foes so cruelly winnowing their ranks, so these\nWARPSMITH model only. Havocs move to establish new sight lines and draw their victims\ninto an inescapable crossfire.\n▪ When this unit uses its Dark Pacts ability, this unit can re-roll\nLeadership rolls. WHEN: Your opponent’s Movement phase, when an enemy unit ends\na move within 8\" of a friendly unengaged HAVOCS unit.\n▪ In your Shooting phase, when this unit has shot, if this unit used\nTARGET: That HAVOCS unit.\nits Dark Pacts ability and if those attacks destroyed an enemy\nEFFECT: Your unit can make a normal move of up to D3+3\".\nmodel, this unit heals 3 wounds.\nEYE OF OBLIVION\nUNDYING HATRED 1CP\nThis vile technodaemonic parasite nests within the emptied eye\nsocket of its host, driving filament tendrils deep into their brain and DEVOTEES OF DESTRUCTION STRATAGEM\nfeeding on their animus in exchange for revealing the secrets of its Gripped by a maniacal need to annihilate their hated enemies,\nthese killers will not easily succumb to the clutches of death.\nsupernatural vision.\nWHEN: Your opponent’s Shooting phase, when an enemy unit\nWARPSMITH model only. When this unit is selected to shoot, select targets a friendly HAVOCS/OBLITERATORS unit.\none enemy unit within 24\" of this unit. That enemy unit has +6\" TARGET: That HAVOCS/OBLITERATORS unit.\ndetection range until this unit has shot. EFFECT: Attacks that target your unit with a S greater than your unit’s\nT have -1 to wound rolls."
     },
     "4": {
-      "sha256": "EAA3A7290C6884740140BE4789557EB612890DD2CFC8D4C4C49AA8A6B94DA0FB",
-      "text": "UNIQUE: NIGHTMARE\nMURDERTALON RAIDERS\nVICIOUS PACKS OF RAPTORS AND WARP TALONS DESCEND UPON THEIR TERRIFIED PREY\nDETACHMENT RULES PLUNGING TALONS 1CP\nPREY ON THE WEAK MURDERTALON RAIDERS STRATAGEM\nWith a last-second blast of speed from their jump packs, the\nThe more bloodied, scattered and thinned are the ranks of the\nChaos Space Marines slam into their enemies blades-first.\nenemy, the more frenzied and brutal the attacks of these sadistic\nWHEN: Fight phase, when a friendly HERETIC ASTARTES INFANTRY FLY\nChaos Space Marines become.\nunit that made a charge move this turn is selected to fight.\nTARGET: That HERETIC ASTARTES INFANTRY FLY unit.\n▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that\nEFFECT: Your unit’s melee attacks have [LANCE].\ntarget a battle-shocked unit or a unit at or below half-strength\ncan re‑roll hit rolls of 1.\n▪ When an enemy unit’s attacks target a friendly HERETIC RAKING PASS 1CP\nASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked\nor at or below half-strength, those attacks have ‑1 to hit rolls. MURDERTALON RAIDERS STRATAGEM\nSurging in and out of the enemy lines on wings of dark fire,\nthese predatory killers wreak bloody havoc.\nThis detachment has the NIGHTMARE tag and cannot be taken with\nanother NIGHTMARE detachment. WHEN: Your Movement phase, when a friendly HERETIC ASTARTES\nINFANTRY FLY unit is selected to make a fall-back move.\nTARGET: That HERETIC ASTARTES INFANTRY FLY unit.\nENHANCEMENTS EFFECT: That move does not prevent your unit from being eligible to\ndeclare a charge.\nSHADOWCOWL TALISMAN\nWorked with diabolical incantations of occlusion, wound about with WARP-TWISTED TERRORS 1CP\nsubtle enchantments, this onyx disc draws a penumbral aura about\nthe bearer that hides him from the eyes of his prey. MURDERTALON RAIDERS STRATAGEM\nSo hideous and otherworldly have many Warp Talons been rendered\nby the energies of the Warp, that merely to look upon their\nCHAOS LORD WITH JUMP PACK model only. This unit has 5+ InSv. approach is enough to scare the enemy out of their minds.\nPACT OF CURSED PINIONS WHEN: Your Movement phase, when a friendly WARP TALONS unit\nends a move.\nSharing their mortal frame with a predatory possessor daemon\nTARGET: That WARP TALONS unit.\nlends this dark champion additional might and swiftness, though it\nEFFECT: Select one visible enemy unit (excluding MONSTER/VEHICLE\nmay yet damn them for eternity.\nunits) within 9\" of your unit. That enemy unit makes a battle-shock\nroll, with ‑1 to that battle-shock roll.\nCHAOS LORD WITH JUMP PACK model only.\n▪ This model has DAEMON.\n▪ This model’s melee attacks have +1 A."
+      "sha256": "0A506E7B70A1701403E47E38371C066B314190D1BDCDD8000E1198910D10BF21",
+      "text": "UNIQUE: NIGHTMARE\nMURDERTALON RAIDERS\nVICIOUS PACKS OF RAPTORS AND WARP TALONS DESCEND UPON THEIR TERRIFIED PREY\nDETACHMENT RULES PLUNGING TALONS 1CP\nPREY ON THE WEAK MURDERTALON RAIDERS STRATAGEM\nWith a last-second blast of speed from their jump packs, the\nThe more bloodied, scattered and thinned are the ranks of the\nChaos Space Marines slam into their enemies blades-first.\nenemy, the more frenzied and brutal the attacks of these sadistic\nWHEN: Fight phase, when a friendly HERETIC ASTARTES INFANTRY FLY\nChaos Space Marines become.\nunit that made a charge move this turn is selected to fight.\nTARGET: That HERETIC ASTARTES INFANTRY FLY unit.\n▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that\nEFFECT: Your unit’s melee attacks have [LANCE].\ntarget a battle-shocked unit or a unit at or below half-strength\ncan re-roll hit rolls of 1.\n▪ When an enemy unit’s attacks target a friendly HERETIC RAKING PASS 1CP\nASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked\nor at or below half-strength, those attacks have -1 to hit rolls. MURDERTALON RAIDERS STRATAGEM\nSurging in and out of the enemy lines on wings of dark fire,\nthese predatory killers wreak bloody havoc.\nThis detachment has the NIGHTMARE tag and cannot be taken with\nanother NIGHTMARE detachment. WHEN: Your Movement phase, when a friendly HERETIC ASTARTES\nINFANTRY FLY unit is selected to make a fall-back move.\nTARGET: That HERETIC ASTARTES INFANTRY FLY unit.\nENHANCEMENTS EFFECT: That move does not prevent your unit from being eligible to\ndeclare a charge.\nSHADOWCOWL TALISMAN\nWorked with diabolical incantations of occlusion, wound about with WARP-TWISTED TERRORS 1CP\nsubtle enchantments, this onyx disc draws a penumbral aura about\nthe bearer that hides him from the eyes of his prey. MURDERTALON RAIDERS STRATAGEM\nSo hideous and otherworldly have many Warp Talons been rendered\nby the energies of the Warp, that merely to look upon their\nCHAOS LORD WITH JUMP PACK model only. This unit has 5+ InSv. approach is enough to scare the enemy out of their minds.\nPACT OF CURSED PINIONS WHEN: Your Movement phase, when a friendly WARP TALONS unit\nends a move.\nSharing their mortal frame with a predatory possessor daemon\nTARGET: That WARP TALONS unit.\nlends this dark champion additional might and swiftness, though it\nEFFECT: Select one visible enemy unit (excluding MONSTER/VEHICLE\nmay yet damn them for eternity.\nunits) within 9\" of your unit. That enemy unit makes a battle-shock\nroll, with -1 to that battle-shock roll.\nCHAOS LORD WITH JUMP PACK model only.\n▪ This model has DAEMON.\n▪ This model’s melee attacks have +1 A."
     },
     "5": {
       "sha256": "CF40DA9892FE42EC4EB186D9D80946DB38B4A533F8F169C871321A40AD9F6FF6",
@@ -57,8 +57,8 @@
       "text": "MONSTROUS VISAGES DELAYED MUTATIONS\nCREATIONS OF BILE – STRATEGIC PLOY STRATAGEM CREATIONS OF BILE – STRATEGIC PLOY STRATAGEM\nBile’s experimental ministrations have left these Fabius Bile’s experiments are notoriously unstable.\nwarriors as freakish monsters. Cursed with clusters In the heat of battle, new mutations may burst forth\n2CP\nof compound eyes, distended, fang‑stuffed jaws in explosions of gristle and oozing gore, many of\nor myriad other grotesqueries, they are hideous which are as lethal to the subject as they are to\nto behold. the enemy.\n1CP\nWHEN: Your opponent’s Shooting phase or the WHEN: Your Command phase.\nFight phase, just after an enemy unit has selected TARGET: One Heretic Astartes Infantry unit\nits targets. (excluding Damned units) from your army.\nTARGET: One Heretic Astartes Infantry unit from EFFECT: Your unit suffers D3 mortal wounds.\nyour army that was selected as the target of one or Then select one augmentation (see Experimental\nmore of the attacking unit’s attacks. Augmentations). Until the start of your next\nEFFECT: Until the end of the phase, each time an Command phase, models in your unit have the\nattack targets your unit, subtract 1 from the Hit roll. selected augmentation in addition to any other\naugmentations they have.\nMASTERS ARE WATCHING\nDIABOLIC REGENERATION\nCREATIONS OF BILE – STRATEGIC PLOY STRATAGEM\nCREATIONS OF BILE – STRATEGIC PLOY STRATAGEM\nFeeling the expectant gaze of Bile’s greatest\ncreations from across the battlefield, transhuman Not even death can lay the most vile of Bile’s\n1CP\nand mortal warriors strive slavishly to impress. creations low.\n1CP\nWHEN: Fight phase, just after an enemy unit has WHEN: Your Command phase.\nselected its targets. TARGET: One Heretic Astartes Infantry unit\nTARGET: One Heretic Astartes Infantry unit from (excluding Damned units) from your army.\nyour army that was selected as the target of one or EFFECT: One destroyed model (excluding\nmore of the attacking unit’s attacks. Character models) is returned to your unit. If your\nEFFECT: Until the end of the phase, each time a unit is a Battleline unit, D3 destroyed models\nmodel in your unit is destroyed, if that model has not (excluding Character models) are returned to your\nfought this phase, roll one D6, subtracting 1 from the unit instead.\nresult if it is a Damned unit: on a 4+, do not remove\nit from play. That destroyed model can fight after the\nAUTOSTIMULANTS\nattacking unit has finished making its attacks, and is\nthen removed from play.\nCREATIONS OF BILE – STRATEGIC PLOY STRATAGEM\nArrays of subdermal vials inject autostimulants and\nSPECIMENS FOR THE SPIDER biocatalysts into the warriors’ enhanced muscles,\n1CP\ninvigorating them for incredible feats of exertion.\nCREATIONS OF BILE – STRATEGIC PLOY STRATAGEM\nWHEN: Start of your Charge phase.\nThe Clonefather’s agents are always searching\nfor new test subjects. They strive to harvest the TARGET: One Heretic Astartes Infantry unit from\n2CP\nbodies of great leaders and champions, dragging your army.\nthem from battle and leaving the remaining foes EFFECT: Until the end of the turn, your unit is eligible\nutterly demoralised. to declare a charge in a turn in which it Advanced.\nWHEN: Fight phase.\nTARGET: One Heretic Astartes Infantry unit\nfrom your army that has not been selected to fight\nthis phase.\nEFFECT: Until the end of the phase, each time a\nmodel in your unit makes a melee attack that targets\na Character unit, you can re-roll the Wound roll.\nAfter your unit has fought, if one or more enemy\nCharacter models were destroyed as a result of\nthose attacks, select one enemy unit within 6\" of\nyour unit. That enemy unit must take a Battle-shock\ntest. If the enemy Warlord was destroyed as a\nresult of those attacks, each enemy unit within 6\" of\nyour unit must take a Battle-shock test instead.\n10"
     },
     "11": {
-      "sha256": "38FA930BFF1B2E86D3B3CF74DD3AC8C96166B2D99BEADB704B1D7E2A83D44BB7",
-      "text": "NIGHTMARE HUNT\nMany warbands of the Traitor Legions embrace shock assaults of limitless cruelty and terror.\nThe tactics of a Nightmare Hunt have been employed to fuel sorcerous rituals with their victims’\nfear, to sow discord and dread amongst the enemy, or to serve as reminders to circling rivals of a\nwarband’s superiority. For some Heretic Astartes, however, murder and misery‑making for their\nown sake provide a sadistic delight. Such warriors steal onto the battlefield, darkness their ally\nas they prowl closer to their prey. Howling horrors plummet from dark skies or tear their way into\nreality, ready to rend the foe apart in gruesome spectacles. Every panicked error their quarry\nmakes is another vulnerability that a Nightmare Hunt’s predators gladly sink their talons into.\nDETACHMENT RULE\nENHANCEMENTS\nTERROR MADE MANIFEST GREYVEIL HEX\nWith vox‑augmented screams or bedecked Incised into this warrior’s battleplate is a runic curse\nin grisly trophies, these nightmarish raiders which dims his form in the minds of his prey, until all\npossess a terrifying presence. Even the most they perceive is a mass of talons and shadow.\nstoic of opponents can be shaken by their\nsadistic cruelty. Once fear has its hooks Chaos Lord model only. Models in the bearer’s unit\ninto them, they become easier prey. have the Stealth ability.\nIn the Battle‑shock step of your While the bearer’s unit is within range of one or\nopponent’s Command phase, if an enemy more objective markers you control, that unit can\nunit that is below its Starting Strength only be selected as the target of a ranged attack if the\nis within 12\" of one or more Heretic attacking model is within 18\".\nAstartes units from your army, that\nWARP‑FUELLED THRUSTERS\nenemy unit must take a Battle‑shock test,\nsubtracting 1 from the result. Enemy Bathed in warp energies, this Lord’s jump pack\nunits affected by this Detachment rule do tears rifts in reality, allowing them to withdraw at a\nnot need to take any other Battle‑shock moment’s notice.\ntests in the same phase.\nChaos Lord Jump Pack model only. At the end of\nEach time a Heretic astartes model from your opponent’s Fight phase, if the bearer’s unit is\nyour army makes an attack that targets a not within Engagement Range of one or more enemy\nunit that is Below Half‑strength, add 1 to units, you can remove the bearer’s unit from the\nthe Hit roll. battlefield and place it into Strategic Reserves.\nEach time an attack targets a Heretic TERRORGLUT PARASITE\nastartes unit from your army, if the A daemonic pact sealed in fear and dread allowed this\nattacking model is Battle‐shocked, entity to squirm into reality. Coiled tightly and invisibly\nsubtract 1 from the Hit roll. about a warrior’s soul, the being wears away at the\nsanity of those he faces and feasts on their terror.\nEach time a Heretic astartes model\nfrom your army makes an attack that Heretic Astartes model only. At the start of the Fight\ntargets a Battle‐shocked unit, add 1 to the phase, each enemy unit within Engagement Range of\nWound roll. the bearer must take a Battle‑shock test, subtracting 1\nfrom the result.\nSORROWSCENT VULTURE\nThis champion demands to be in the vanguard of the\nhunt, their eagerness to inflict suffering manifesting in a\ndaring lunge towards enemy lines.\nChaos Lord Jump Pack model only. Models in the\nbearer’s unit have the Scouts 6\" ability.\n11 In the Declare Battle Formations step, the bearer can\nbe attached to a Warp Talons unit."
+      "sha256": "7018ED45B7BFE9A31EDC96891DA2EC4BDE1656B1E75A031E07101BC2F6197F45",
+      "text": "NIGHTMARE HUNT\nMany warbands of the Traitor Legions embrace shock assaults of limitless cruelty and terror.\nThe tactics of a Nightmare Hunt have been employed to fuel sorcerous rituals with their victims’\nfear, to sow discord and dread amongst the enemy, or to serve as reminders to circling rivals of a\nwarband’s superiority. For some Heretic Astartes, however, murder and misery‑making for their\nown sake provide a sadistic delight. Such warriors steal onto the battlefield, darkness their ally\nas they prowl closer to their prey. Howling horrors plummet from dark skies or tear their way into\nreality, ready to rend the foe apart in gruesome spectacles. Every panicked error their quarry\nmakes is another vulnerability that a Nightmare Hunt’s predators gladly sink their talons into.\nDETACHMENT RULE\nENHANCEMENTS\nTERROR MADE MANIFEST GREYVEIL HEX\nWith vox‑augmented screams or bedecked Incised into this warrior’s battleplate is a runic curse\nin grisly trophies, these nightmarish raiders which dims his form in the minds of his prey, until all\npossess a terrifying presence. Even the most they perceive is a mass of talons and shadow.\nstoic of opponents can be shaken by their\nsadistic cruelty. Once fear has its hooks Chaos Lord model only. Models in the bearer’s unit\ninto them, they become easier prey. have the Stealth ability.\nIn the Battle‑shock step of your While the bearer’s unit is within range of one or\nopponent’s Command phase, if an enemy more objective markers you control, that unit can\nunit that is below its Starting Strength only be selected as the target of a ranged attack if the\nis within 12\" of one or more Heretic attacking model is within 18\".\nAstartes units from your army, that\nWARP‑FUELLED THRUSTERS\nenemy unit must take a Battle‑shock test,\nsubtracting 1 from the result. Enemy Bathed in warp energies, this Lord’s jump pack\nunits affected by this Detachment rule do tears rifts in reality, allowing them to withdraw at a\nnot need to take any other Battle‑shock moment’s notice.\ntests in the same phase.\nChaos Lord Jump Pack model only. At the end of\nEach time a Heretic astartes model from your opponent’s Fight phase, if the bearer’s unit is\nyour army makes an attack that targets a not within Engagement Range of one or more enemy\nunit that is Below Half‑strength, add 1 to units, you can remove the bearer’s unit from the\nthe Hit roll. battlefield and place it into Strategic Reserves.\nEach time an attack targets a Heretic TERRORGLUT PARASITE\nastartes unit from your army, if the A daemonic pact sealed in fear and dread allowed this\nattacking model is Battle‐shocked, entity to squirm into reality. Coiled tightly and invisibly\nsubtract 1 from the Hit roll. about a warrior’s soul, the being wears away at the\nsanity of those he faces and feasts on their terror.\nEach time a Heretic astartes model\nfrom your army makes an attack that Heretic Astartes model only. At the start of the Fight\ntargets a Battle‐shocked unit, add 1 to the phase, each enemy unit within Engagement Range of\nWound roll. the bearer must take a Battle‑shock test, subtracting 1\nfrom the result.\nSORROWSCENT VULTURE\nThis champion demands to be in the vanguard of the\nhunt, their eagerness to inflict suffering manifesting in a\ndaring lunge towards enemy lines.\nChaos Lord Jump Pack model only. Models in the\nbearer’s unit have the Scouts 6\" ability.\n11"
     },
     "12": {
       "sha256": "17120B892CBE8286C7608BBF39F033FCDFED6C291FE3FB44552544D27DF2BE18",
@@ -97,8 +97,8 @@
       "text": "MUTILATORS\nThe grotesque, warp-saturated forms of Mutilators shift at will,\nsprouting oversized close-combat weapons and mutant siege\nappendages depending on the foes they face. Bursting from amidst\ncoruscating teleportation flares, the hulking brutes charge headlong\ninto their shocked victims to butcher everything within arm’s reach.\nWARGEAR OPTIONS UNIT COMPOSITION\n■ None ■ 3 Mutilators\nEvery model is equipped with: 1 fleshmetal weapons.\nFACTION KEYWORDS:\nKEYWORDS: Infantry, Chaos, Daemon, Mutilators\nHeretic Astartes"
     },
     "21": {
-      "sha256": "9A6CBB8BCC8D83E447C4881EBBBD7DEBEBB84B9C58BCDA7804CDA2394C1FEA31",
-      "text": "DEFILER\nM T SV W LD OC\n12\" 11 3+ 18 6+ 5\n5+ INVULNERABLE SAVE\nRANGED WEAPONS RANGE A BS S AP D ABILITIES\nHades battle cannon [BLAST] 48\" D6+3 3+ 10 -1 3 CORE: Deadly Demise D6\nEctoplasma destructor [BLAST] 36\" D6 3+ 12 -3 3\nExcruciator cannon 36\" 6 3+ 6 -1 2 FACTION: Dark Pacts\nMagma cutters [MELTA 2] 12\" 2 3+ 9 -4 D6\nScuttling Walker: Each time this unit makes a Normal,\nHeavy baleflamer [IGNORES COVER, TORRENT] 12\" D6+3 N/A 7 -2 2 Advance or Fall Back move, it can move through models\nHades lascannon 48\" 2 3+ 12 -3 D6+1 (excluding Titanic models) and terrain features. When doing\nHeavy reaper autocannon so, it can move within Engagement Range of enemy models,\n48\" 4 3+ 9 -1 3\n[DEVASTATING WOUNDS, SUSTAINED HITS 1] but cannot end that move within Engagement Range of them,\nHeavy missile launcher – krak 48\" 2 3+ 10 -2 D6+1 and any Desperate Escape test is automatically passed.\nHeavy missile launcher – frag [BLAST] 48\" 2D6 3+ 5 -1 1 Daemonforge: Each time this unit makes a Dark Pact, until\nthe end of the phase, each time this model makes an attack,\nMELEE WEAPONS RANGE A WS S AP D\nre-roll a Wound roll of 1. In addition, once per battle, when\nShearing claws – strike Melee 5 3+ 16 -3 D6+1 this unit makes a Dark Pact, before making the resulting\nShearing claws – sweep Melee 10 3+ 6 -2 1 Leadership test, you can declare it will overcharge its\nElectroscourge [EXTRA ATTACKS, SUSTAINED HITS 2] Melee 5 3+ 12 -2 2 daemonforge. If it does:\n■ If the resulting Leadership test is failed, this model suffers 3\nmortal wounds instead of D3 mortal wounds.\n■ Until the end of the phase, each time this model makes an\nattack, you can re-roll the Wound roll.\nBefore selecting targets for this weapon, select one of its profiles to make attacks with.\nFACTION KEYWORDS:\nKEYWORDS: Vehicle, Walker, Chaos, Daemon, Defiler\nHeretic Astartes"
+      "sha256": "052E16E3B56B4CF8DE28EC73F57B7329E3B208729E63935248D2F5186C3F4E8D",
+      "text": "DEFILER\nM T SV W LD OC\n12\" 11 3+ 18 6+ 5\n5+ INVULNERABLE SAVE\nRANGED WEAPONS RANGE A BS S AP D ABILITIES\nHades battle cannon [BLAST] 48\" D6+3 3+ 10 -1 3 CORE: Deadly Demise D6\nEctoplasma destructor [BLAST] 36\" D6 3+ 12 -3 3\nExcruciator cannon 36\" 6 3+ 6 -1 2 FACTION: Dark Pacts\nMagma cutters [MELTA 2] 12\" 2 3+ 9 -4 D6\nScuttling Walker: Each time this unit makes a Normal,\nHeavy baleflamer [IGNORES COVER, TORRENT] 12\" D6+3 N/A 7 -2 2 Advance or Fall Back move, it can move through models\nHades lascannon 48\" 2 3+ 12 -3 D6+1 (excluding Titanic models) and terrain features. When doing\nHeavy reaper autocannon so, it can move within Engagement Range of enemy models,\n48\" 4 3+ 9 -1 3\n[DEVASTATING WOUNDS, SUSTAINED HITS 1] but cannot end that move within Engagement Range of them,\nHeavy missile launcher – krak 48\" 2 3+ 10 -2 D6+1 and any Desperate Escape test is automatically passed.\nHeavy missile launcher – frag [BLAST] 48\" 2D6 3+ 5 -1 1 Daemonforge: Each time this unit makes a Dark Pact, until\nthe end of the phase, each time this model makes an attack,\nMELEE WEAPONS RANGE A WS S AP D\nre-roll a Wound roll of 1.\nShearing claws – strike Melee 5 3+ 16 -3 D6+1\nShearing claws – sweep Melee 10 3+ 6 -2 1\nElectroscourge [EXTRA ATTACKS, SUSTAINED HITS 2] Melee 5 3+ 12 -2 2\nBefore selecting targets for this weapon, select one of its profiles to make attacks with.\nFACTION KEYWORDS:\nKEYWORDS: Vehicle, Walker, Chaos, Daemon, Defiler\nHeretic Astartes"
     },
     "22": {
       "sha256": "9D9676BC045D4C95AF489C36B3F72A38AF8D02A33C6D778F3F493D9FE68B8CA5",
@@ -161,12 +161,12 @@
       "text": "WARP TALONS\nOften appearing from the Immaterium, wreathed in unholy fire and\nwith their armour warped into daemonic likenesses, Warp Talons\nare tainted warriors who have fallen further than most. They are\nskyborne assassins, their flaming talons equally adept at slicing\nthrough armour or tearing through the fabric of realspace.\nWARGEAR OPTIONS UNIT COMPOSITION\n■ None. ■ 1 Warp Talon Champion\n■ 4‑9 Warp Talons\nEvery model is equipped with: warp claws.\nFACTION KEYWORDS:\nKEYWORDS: Infantry, Fly, Jump Packs, Grenades, Chaos, Daemon, Warp Talons\nHeretic Astartes"
     },
     "37": {
-      "sha256": "9E740BB2FC9E5506B900CB3838DFC4598895146371BA04B966CDF3E6C2C7D443",
-      "text": "CHAOS SPACE MARINES\nRULES UPDATES\nThis section presents updates and clarifications to your faction’s rules, designed to improve the gaming experience for all players.\nChanges applied after the first iteration of this Faction Pack will be highlighted in red.\nSOULFORGED WARPACK DETACHMENT\nUPDATES\nFeeding Frenzy Stratagem, Target Section\nChange to: ‘One HERETIC ASTARTES DAEMON VEHICLE or VASHTORR THE\nCHAOS CULT DETACHMENT\nARKIFANE unit from your army that is within Engagement Range of that\nChaos Cult Detachment, Keywords Section enemy unit.’\nChange to:\n‘TRAITOR GUARDSMEN SQUAD units from your army gain the Unstoppable Rampage Stratagem, Target Section\nBATTLELINE keyword.’ Change to: ‘One HERETIC ASTARTES DAEMON VEHICLE or VASHTORR THE\nARKIFANE unit from your army that has not been selected to move or\nWarped Foresight Enhancement charge this phase.’\nChange to:\n‘DARK APOSTLE or DAMNED model only. While the bearer is leading a Predatory Pursuit Stratagem, Target Section\nunit with the Scouts 6” ability, every model in the bearer’s unit has the Change to: ‘One HERETIC ASTARTES DAEMON VEHICLE or VASHTORR THE\nScouts 6” ability. ARKIFANE unit from your army that is within 8” of that enemy unit and\nnot within Engagement Range of one or more enemy units.’\nDECEPTORS DETACHMENT\nVETERANS OF THE LONG WAR DETACHMENT\nRelentless Pursuit Stratagem, Target Section\nChange 9\" to 8\". Eager For Vengeance Enhancement\nChange to:\nFalsehood Enhancement, third sentence ‘HERETIC ASTARTES model only (excluding DAMNED models). The bearer’s\nChange to: unit is eligible to shoot and declare a charge in a turn in which it Fell\n‘If you do, in one of your Movement phases, you can select one model Back. Each time a model in the bearer’s unit makes an attack that\nin a friendly LEGIONARIES or CHOSEN unit that has two or more models targets your focus of hatred, if the bearer’s unit Fell Back this turn, add 1\nremaining and is on the battlefield (excluding Attached units).’ to the Hit roll, and each time you select your focus of hatred as a target\nof that unit’s charge, add 1 to the Charge roll.’\nDREAD TALONS DETACHMENT\nScreaming Descent Stratagem, Effect section Bringers of Despair Stratagem\nChange to: ▪ CP Cost: change to '1CP'.\n'Set your unit up anywhere on the battlefield that is more than 6\" ▪ When section: change to 'Fight phase.'\nhorizontally away from all enemy units, but until the end of the turn,\nit is not eligible to declare a charge. Then select one enemy INFANTRY Millennia of Experience Stratagem, Target Section\nor MOUNTED unit within 9\" of and visible to your unit: that unit makes a Change 9\" to 8\".\nbattle‑shock roll.’\nContemptuous Disregard Stratagem, Effect Section\nPACTBOUND ZEALOTS DETACHMENT\nChange to:\nMarks of Chaos Detachment Rule, Restrictions Section ‘Until the attacking unit has finished making its attacks, each time an\nAdd an additional bullet point: attack targets your unit, worsen the Armour Penetration characteristic\n‘• A unit can only embark within (or start the battle embarked within) of that attack by 1.’\naTRANSPORT if both of those units share the same keyword from the\nDATASHEETS\nlist above.’\nMaster of Executions, Core Abilities Section\nRestrictions Section Remove 'Leader', add 'Support'.\nChange to:\n‘A CHARACTER/EPIC HERO unit can only be attached to a unit if both units Chaos Land Raider, Chaos Predator Annihilator, Chaos Predator\nshare the same keyword from the list above.' Destructor, Chaos Rhino, Chaos Vindicator, Khorne Lord of Skulls,\nNoctilith Crown – Keywords Section\nRENEGADE RAIDERS DETACHMENT\nAdd 'FRAME'.\nUnfailingly Obdurate Stratagem, Effect Section\nChange to: Heldrake\n‘Until the attacking unit has finished making its attacks, each time an ▪ Profile: Change M to 12\" and OC to '‑'.\nattack targets your unit, worsen the Armour Penetration characteristic ▪ Keywords: Remove 'AIRCRAFT'.\nof that attack by 1.’"
+      "sha256": "1B4F6956637917E68DF3B78A833ACE4C4C7A8458740C04BA3C5C515E6DAD183A",
+      "text": "CHAOS SPACE MARINES\nRULES UPDATES\nThis section presents updates and clarifications to your faction’s rules, designed to improve the gaming experience for all players.\nChanges applied after the first iteration of this Faction Pack will be highlighted in red.\nSOULFORGED WARPACK DETACHMENT\nUPDATES\nFeeding Frenzy Stratagem, Target Section\nChange to: ‘One HERETIC ASTARTES DAEMON VEHICLE or VASHTORR THE\nCHAOS CULT DETACHMENT\nARKIFANE unit from your army that is within Engagement Range of that\nChaos Cult Detachment, Keywords Section enemy unit.’\nChange to:\n‘TRAITOR GUARDSMEN SQUAD units from your army gain the Unstoppable Rampage Stratagem, Target Section\nBATTLELINE keyword.’ Change to: ‘One HERETIC ASTARTES DAEMON VEHICLE or VASHTORR THE\nARKIFANE unit from your army that has not been selected to move or\nWarped Foresight Enhancement charge this phase.’\nChange to:\n‘DARK APOSTLE or DAMNED model only. While the bearer is leading a Predatory Pursuit Stratagem, Target Section\nunit with the Scouts 6” ability, every model in the bearer’s unit has the Change to: ‘One HERETIC ASTARTES DAEMON VEHICLE or VASHTORR THE\nScouts 6” ability. ARKIFANE unit from your army that is within 8” of that enemy unit and\nnot within Engagement Range of one or more enemy units.’\nDECEPTORS DETACHMENT\nVETERANS OF THE LONG WAR DETACHMENT\nRelentless Pursuit Stratagem, Target Section\nChange 9\" to 8\". Eager For Vengeance Enhancement\nChange to:\nFalsehood Enhancement, third sentence ‘HERETIC ASTARTES model only (excluding DAMNED models). The bearer’s\nChange to: unit is eligible to shoot and declare a charge in a turn in which it Fell\n‘If you do, in one of your Movement phases, you can select one model Back. Each time a model in the bearer’s unit makes an attack that\nin a friendly LEGIONARIES or CHOSEN unit that has two or more models targets your focus of hatred, if the bearer’s unit Fell Back this turn, add 1\nremaining and is on the battlefield (excluding Attached units).’ to the Hit roll, and each time you select your focus of hatred as a target\nof that unit’s charge, add 1 to the Charge roll.’\nDREAD TALONS DETACHMENT\nScreaming Descent Stratagem, Effect section Bringers of Despair Stratagem\nChange to: ▪ CP Cost: change to '1CP'.\n'Set your unit up anywhere on the battlefield that is more than 6\" ▪ When section: change to 'Fight phase.'\nhorizontally away from all enemy units, but until the end of the turn,\nit is not eligible to declare a charge. Then select one enemy INFANTRY Millennia of Experience Stratagem, Target Section\nor MOUNTED unit within 9\" of and visible to your unit: that unit makes a Change 9\" to 8\".\nbattle-shock roll.’\nContemptuous Disregard Stratagem, Effect Section\nPACTBOUND ZEALOTS DETACHMENT\nChange to:\nMarks of Chaos Detachment Rule, Restrictions Section ‘Until the attacking unit has finished making its attacks, each time an\nAdd an additional bullet point: attack targets your unit, worsen the Armour Penetration characteristic\n‘• A unit can only embark within (or start the battle embarked within) of that attack by 1.’\naTRANSPORT if both of those units share the same keyword from the\nDATASHEETS\nlist above.’\nMaster of Executions, Core Abilities Section\nRestrictions Section Remove 'Leader', add 'Support'.\nChange to:\n‘A CHARACTER/EPIC HERO unit can only be attached to a unit if both units Chaos Land Raider, Chaos Predator Annihilator, Chaos Predator\nshare the same keyword from the list above.' Destructor, Chaos Rhino, Chaos Vindicator, Khorne Lord of Skulls,\nNoctilith Crown – Keywords Section\nRENEGADE RAIDERS DETACHMENT\nAdd 'FRAME'.\nUnfailingly Obdurate Stratagem, Effect Section\nChange to: Heldrake\n‘Until the attacking unit has finished making its attacks, each time an ▪ Profile: Change M to 12\" and OC to '-'.\nattack targets your unit, worsen the Armour Penetration characteristic ▪ Keywords: Remove 'AIRCRAFT'.\nof that attack by 1.’"
     },
     "38": {
-      "sha256": "FE55211C0A87FF9ECD0E69C20265824B8B822A8B67AA5571FB8A87FB1D60B279",
-      "text": "Abaddon the Despoiler, Dark Destiny Ability Obliterators, Warp Rift Firepower Ability\nChange to: Change to:\n‘Each time this model’s unit makes a Dark Pact and does not fail the ‘Warp Rift Firepower (Once per battle, per unit): In your Shooting\nresulting leadership roll, if the result of that roll was 7+, you gain 1CP.’ phase, when this unit is selected to shoot, you can use this ability. If you\ndo, this unit's ranged attacks have [INDIRECT FIRE].'\nAccursed Cultists, Howling Horde Ability\nChange to: Vashtorr the Arkifane\n'In your opponent's Shooting phase, when an enemy unit has shot, if ▪ Abilities section: add ‘Indentured Daemon Engines: While this\na model from this unit was destroyed as a result of those attacks, this model is within 3\" of one or more friendly DAEMON VEHICLE units, this\nunit can make a surge move of up to D6\".' model has the Lone Operative ability.’\n▪ Reorder Reality ability: change to 'Each time an enemy unit within\nCypher, Agent of Discord Ability 18\" of this model targets this model, subtract 1 from the Hit roll and,\nChange to: until the end of the phase, that enemy unit’s ranged weapons have\n'Agent of Discord: Once per turn, when your opponent targets a unit the [HAZARDOUS] ability.’\nfrom their army within 12” of this model with a stratagem, you can use ▪ Unholy Mechanisms ability: change to 'While a friendly DAEMON\nthis ability. If you do increase the CP cost of that use of that stratagem VEHICLE unit is within 6\" of this model, add 2 to the Strength\nby 1CP.' characteristic of weapons equipped by models in that unit.’\n▪ Vashtorr’s hammer weapon profile: change to:\nFabius Bile, Chirurgeon Ability\nChange to: Vashtorr's Hammer - Strike\n‘The first time this unit’s FABIUS BILE model is destroyed, at the end [ANTI-VEHICLE 4+, DEVASTATING WOUNDS]\nof the phase, roll one D6: on a 2+, set it back up on the battlefield, as\nRANGE A WS S AP D\nclose as possible to where it was destroyed and not within Engagement\nRange of any enemy models, with its full wounds remaining.' Melee 6 2+ 14 ‑3 3\nChaos Lord in Terminator Armour, Keywords Section Vashtorr's Hammer - Sweep\nAdd ‘CHAOS LORD’. [ANTI-VEHICLE 4+, DEVASTATING WOUNDS]\nRANGE A WS S AP D\nChaos Rhino, Wargear Options\nMelee 12 2+ 8 ‑1 2\nChange the second bullet point to:\n‘• This model can be equipped with 1 havoc launcher or can replace 1\ncombi‑bolter with 1 havoc launcher.’ Warp Talons, Warp Strike Ability\nChange to:\nChaos Predator Annihilator, Annihilator Ability ‘At the end of the Fight phase, if this unit destroyed one or more enemy\nChange to: units this phase and is not within Engagement Range of one or more\n‘Each time a ranged attack made by this model is allocated to a MONSTER enemy units, you can remove this unit from the battlefield and place it\nor VEHICLE model, you can re‑roll the Damage roll.’ into Strategic Reserves.’\nChaos Predator Destructor, Melee Weapons, Armoured Tracks\nChange WS to ‘4+’. Chaos Rhino, Transport Section\nChange to:\nHeretic Astartes Daemon Prince, Abilities Section ‘This model has a transport capacity of 12 HERETIC ASTARTES INFANTRY\nAdd the following: models. It cannot transport TERMINATOR, JUMP PACK, MUTILATORS,\n‘Lord of Chaos: While this model is within 3\" of a friendly HERETIC OBLITERATORS or POSSESSED models.’\nASTARTES INFANTRY unit, this model has Lone Operative.’\nChaos Land Raider, Transport Section\nLord Discordant on Helstalker• Move characteristic: Change to 14\". Change to:\n▪ Invulnerable save: Change to 4+. ‘This model has a transport capacity of 12 HERETIC ASTARTES INFANTRY\n▪ Corrupt Machine Spirits ability: Change to ‘At the start of your models (excluding OBLITERATOR and JUMP PACK models). Each\nShooting phase, select one visible enemy VEHICLE unit within 12\" POSSESSED, MUTILATORS and TERMINATOR model takes up the space of\nof this model and roll one D6: on a 2‑3, that enemy unit suffers D3 2 models.’\nmortal wounds; on a 4‑5, that enemy unit suffers 3 mortal wounds;\non a 6, that enemy unit suffers D3+3 mortal wounds.’ Traitor Guardsmen Squad,Twisted Defence Force Ability\n▪ Spirit Thief ability: Change to ‘At the start of your Shooting phase, Change to:\nselect one visible enemy VEHICLE unit. Until the end of the phase, 'While this unit is within range of an objective, this unit has +1 Sv\neach time a friendly HERETIC ASTARTES model makes an attack that against ranged attacks.'\ntargets that unit, re‑roll a Wound roll of 1.’\n▪ Impaler chainglaive weapon profile: change to:\nImpaler Chainglaive [LANCE]\nRANGE A WS S AP D\nMelee 5 2+ 8 ‑3 3"
+      "sha256": "A1AE505656BF156DEA5AEFD8A525C838DC7E6DBB20D22305FEA01F7D0EC50ED2",
+      "text": "Abaddon the Despoiler, Dark Destiny Ability Obliterators, Warp Rift Firepower Ability\nChange to: Change to:\n‘Each time this model’s unit makes a Dark Pact and does not fail the ‘Warp Rift Firepower (Once per battle, per unit): In your Shooting\nresulting leadership roll, if the result of that roll was 7+, you gain 1CP.’ phase, when this unit is selected to shoot, you can use this ability. If you\ndo, this unit's ranged attacks have [INDIRECT FIRE].'\nAccursed Cultists, Howling Horde Ability\nChange to: Vashtorr the Arkifane\n'In your opponent's Shooting phase, when an enemy unit has shot, if ▪ Abilities section: add ‘Indentured Daemon Engines: While this\na model from this unit was destroyed as a result of those attacks, this model is within 3\" of one or more friendly DAEMON VEHICLE units, this\nunit can make a surge move of up to D6\".' model has the Lone Operative ability.’\n▪ Reorder Reality ability: change to 'Each time an enemy unit within\nCypher, Agent of Discord Ability 18\" of this model targets this model, subtract 1 from the Hit roll and,\nChange to: until the end of the phase, that enemy unit’s ranged weapons have\n'Agent of Discord: Once per turn, when your opponent targets a unit the [HAZARDOUS] ability.’\nfrom their army within 12” of this model with a stratagem, you can use ▪ Unholy Mechanisms ability: change to 'While a friendly DAEMON\nthis ability. If you do increase the CP cost of that use of that stratagem VEHICLE unit is within 6\" of this model, add 2 to the Strength\nby 1CP.' characteristic of weapons equipped by models in that unit.’\n▪ Vashtorr’s hammer weapon profile: change to:\nFabius Bile, Chirurgeon Ability\nChange to: Vashtorr's Hammer - Strike\n‘The first time this unit’s FABIUS BILE model is destroyed, at the end [ANTI-VEHICLE 4+, DEVASTATING WOUNDS]\nof the phase, roll one D6: on a 2+, set it back up on the battlefield, as\nRANGE A WS S AP D\nclose as possible to where it was destroyed and not within Engagement\nRange of any enemy models, with its full wounds remaining.' Melee 6 2+ 14 -3 3\nChaos Lord in Terminator Armour, Keywords Section Vashtorr's Hammer - Sweep\nAdd ‘CHAOS LORD’. [ANTI-VEHICLE 4+, DEVASTATING WOUNDS]\nRANGE A WS S AP D\nChaos Rhino, Wargear Options\nMelee 12 2+ 8 -1 2\nChange the second bullet point to:\n‘• This model can be equipped with 1 havoc launcher or can replace 1\ncombi-bolter with 1 havoc launcher.’ Warp Talons, Warp Strike Ability\nChange to:\nChaos Predator Annihilator, Annihilator Ability ‘At the end of the Fight phase, if this unit destroyed one or more enemy\nChange to: units this phase and is not within Engagement Range of one or more\n‘Each time a ranged attack made by this model is allocated to a MONSTER enemy units, you can remove this unit from the battlefield and place it\nor VEHICLE model, you can re-roll the Damage roll.’ into Strategic Reserves.’\nChaos Predator Destructor, Melee Weapons, Armoured Tracks\nChange WS to ‘4+’. Chaos Rhino, Transport Section\nChange to:\nHeretic Astartes Daemon Prince, Abilities Section ‘This model has a transport capacity of 12 HERETIC ASTARTES INFANTRY\nAdd the following: models. It cannot transport TERMINATOR, JUMP PACK, MUTILATORS,\n‘Lord of Chaos: While this model is within 3\" of a friendly HERETIC OBLITERATORS or POSSESSED models.’\nASTARTES INFANTRY unit, this model has Lone Operative.’\nChaos Land Raider, Transport Section\nLord Discordant on Helstalker• Move characteristic: Change to 14\". Change to:\n▪ Invulnerable save: Change to 4+. ‘This model has a transport capacity of 12 HERETIC ASTARTES INFANTRY\n▪ Corrupt Machine Spirits ability: Change to ‘At the start of your models (excluding OBLITERATOR and JUMP PACK models). Each\nShooting phase, select one visible enemy VEHICLE unit within 12\" POSSESSED, MUTILATORS and TERMINATOR model takes up the space of\nof this model and roll one D6: on a 2-3, that enemy unit suffers D3 2 models.’\nmortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds;\non a 6, that enemy unit suffers D3+3 mortal wounds.’ Traitor Guardsmen Squad,Twisted Defence Force Ability\n▪ Spirit Thief ability: Change to ‘At the start of your Shooting phase, Change to:\nselect one visible enemy VEHICLE unit. Until the end of the phase, 'While this unit is within range of an objective, this unit has +1 Sv\neach time a friendly HERETIC ASTARTES model makes an attack that against ranged attacks.'\ntargets that unit, re-roll a Wound roll of 1.’\n▪ Impaler chainglaive weapon profile: change to:\nImpaler Chainglaive [LANCE]\nRANGE A WS S AP D\nMelee 5 2+ 8 -3 3"
     },
     "39": {
       "sha256": "EBEDE1B4AF6D23186C5CD38DEAB5AA348FE2E290BBE163B92EF42EBDE5BA3E65",
@@ -431,12 +431,12 @@
       "title": "Cabal of Chaos",
       "rule": {
         "title": "Empyric Wellspring",
-        "text": "The sorcerous powers wielded by a cabal inevitably draw the attention of the Dark Gods, flooding the battlefield with immaterial energies that empower their dark magicks and their daemonically gifted comrades alike. ▪ In your Shooting phase, when a friendly HERETIC ASTARTES PSYKER unit (excluding DAEMON units) is selected to shoot, if that unit makes a Dark Pact, that unit’s ranged attacks have +1 S. ▪ In the Fight phase, when a friendly HERETIC ASTARTES DAEMON PRINCE unit (excluding KHORNE units) is selected to fight, if that unit makes a Dark Pact, that unit’s melee attacks have: ▫ +2 S. ▫ +1 AP.",
+        "text": "The sorcerous powers wielded by a cabal inevitably draw the attention of the Dark Gods, flooding the battlefield with immaterial energies that empower their dark magicks and their daemonically gifted comrades alike. ▪ In your Shooting phase, when a friendly HERETIC ASTARTES PSYKER unit (excluding DAEMON units) is selected to shoot, if that unit makes a Dark Pact, that unit’s ranged attacks have +1 S. ▪ In the Fight phase, when a friendly HERETIC ASTARTES DAEMON PRINCE/DAEMON PRINCE WITH WINGS unit (excluding KHORNE units) is selected to fight, if that unit makes a Dark Pact, that unit’s melee attacks have: ▫ +2 S. ▫ +1 AP.",
         "sourcePages": [
           2
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             2
           ]
@@ -452,7 +452,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               2
             ]
@@ -467,7 +467,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               2
             ]
@@ -486,7 +486,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               2
             ]
@@ -498,12 +498,12 @@
           "cp": 1,
           "when": "Start of your Shooting phase.",
           "target": "One friendly HERETIC ASTARTES PSYKER unit.",
-          "effect": "Select one visible enemy unit within 12\" of your unit. Roll one D6: ▪ On a 1, that enemy unit suffers 1 mortal wound. ▪ On a 2‑4, that enemy unit suffers D3 mortal wounds. ▪ On a 5‑6, that enemy unit suffers 2D3 mortal wounds. These mortal wounds are inflicted by a psychic attack.",
+          "effect": "Select one visible enemy unit within 12\" of your unit. Roll one D6: ▪ On a 1, that enemy unit suffers 1 mortal wound. ▪ On a 2-4, that enemy unit suffers D3 mortal wounds. ▪ On a 5-6, that enemy unit suffers 2D3 mortal wounds. These mortal wounds are inflicted by a psychic attack.",
           "sourcePages": [
             2
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               2
             ]
@@ -520,7 +520,7 @@
             2
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               2
             ]
@@ -531,7 +531,7 @@
         2
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           2
         ]
@@ -547,7 +547,7 @@
           3
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             3
           ]
@@ -558,12 +558,12 @@
           "id": "pact-of-destruction",
           "title": "Pact of Destruction",
           "points": 15,
-          "text": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re‑roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
+          "text": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re-roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
           "sourcePages": [
             3
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               3
             ]
@@ -578,7 +578,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               3
             ]
@@ -597,7 +597,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               3
             ]
@@ -614,7 +614,7 @@
             3
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               3
             ]
@@ -626,12 +626,12 @@
           "cp": 1,
           "when": "Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit.",
           "target": "That HAVOCS/OBLITERATORS unit.",
-          "effect": "Attacks that target your unit with a S greater than your unit’s T have ‑1 to wound rolls.",
+          "effect": "Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.",
           "sourcePages": [
             3
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               3
             ]
@@ -642,7 +642,7 @@
         3
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           3
         ]
@@ -653,12 +653,12 @@
       "title": "Murdertalon Raiders",
       "rule": {
         "title": "Prey on the Weak",
-        "text": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re‑roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have ‑1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
+        "text": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re-roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have -1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
         "sourcePages": [
           4
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             4
           ]
@@ -674,7 +674,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               4
             ]
@@ -689,7 +689,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               4
             ]
@@ -708,7 +708,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               4
             ]
@@ -725,7 +725,7 @@
             4
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               4
             ]
@@ -737,12 +737,12 @@
           "cp": 1,
           "when": "Your Movement phase, when a friendly WARP TALONS unit ends a move.",
           "target": "That WARP TALONS unit.",
-          "effect": "Select one visible enemy unit (excluding MONSTER/VEHICLE units) within 9\" of your unit. That enemy unit makes a battle-shock roll, with ‑1 to that battle-shock roll.",
+          "effect": "Select one visible enemy unit (excluding MONSTER/VEHICLE units) within 9\" of your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
           "sourcePages": [
             4
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               4
             ]
@@ -753,7 +753,7 @@
         4
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           4
         ]
@@ -769,7 +769,7 @@
           5
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             5
           ]
@@ -785,7 +785,7 @@
             5
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               5
             ]
@@ -800,7 +800,7 @@
             5
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               5
             ]
@@ -815,7 +815,7 @@
             5
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               5
             ]
@@ -830,7 +830,7 @@
             5
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               5
             ]
@@ -850,7 +850,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -867,7 +867,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -885,7 +885,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -902,7 +902,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -919,7 +919,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -936,7 +936,7 @@
             6
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               6
             ]
@@ -948,7 +948,7 @@
         6
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           5,
           6
@@ -965,7 +965,7 @@
           7
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             7
           ]
@@ -981,7 +981,7 @@
             7
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               7
             ]
@@ -996,7 +996,7 @@
             7
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               7
             ]
@@ -1011,7 +1011,7 @@
             7
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               7
             ]
@@ -1026,7 +1026,7 @@
             7
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               7
             ]
@@ -1045,7 +1045,7 @@
             8
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               8
             ]
@@ -1062,7 +1062,7 @@
             8
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               8
             ]
@@ -1079,7 +1079,7 @@
             8
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               8
             ]
@@ -1096,7 +1096,7 @@
             8
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               8
             ]
@@ -1113,7 +1113,7 @@
             8
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               8
             ]
@@ -1130,7 +1130,7 @@
             8
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               8
             ]
@@ -1142,7 +1142,7 @@
         8
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           7,
           8
@@ -1159,7 +1159,7 @@
           9
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             9
           ]
@@ -1175,7 +1175,7 @@
             9
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               9
             ]
@@ -1190,7 +1190,7 @@
             9
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               9
             ]
@@ -1205,7 +1205,7 @@
             9
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               9
             ]
@@ -1220,7 +1220,7 @@
             9
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               9
             ]
@@ -1239,7 +1239,7 @@
             10
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               10
             ]
@@ -1256,7 +1256,7 @@
             10
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               10
             ]
@@ -1273,7 +1273,7 @@
             10
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               10
             ]
@@ -1290,7 +1290,7 @@
             10
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               10
             ]
@@ -1307,7 +1307,7 @@
             10
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               10
             ]
@@ -1324,7 +1324,7 @@
             10
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               10
             ]
@@ -1336,7 +1336,7 @@
         10
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           9,
           10
@@ -1353,7 +1353,7 @@
           11
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             11
           ]
@@ -1369,7 +1369,7 @@
             11
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               11
             ]
@@ -1384,7 +1384,7 @@
             11
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               11
             ]
@@ -1399,7 +1399,7 @@
             11
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               11
             ]
@@ -1409,12 +1409,12 @@
           "id": "sorrowscent-vulture",
           "title": "Sorrowscent Vulture",
           "points": 35,
-          "text": "This champion demands to be in the vanguard of the hunt, their eagerness to inflict suffering manifesting in a daring lunge towards enemy lines. Chaos Lord Jump Pack model only. Models in the bearer’s unit have the Scouts 6\" ability. In the Declare Battle Formations step, the bearer can be attached to a Warp Talons unit.",
+          "text": "This champion demands to be in the vanguard of the hunt, their eagerness to inflict suffering manifesting in a daring lunge towards enemy lines. Chaos Lord Jump Pack model only. Models in the bearer’s unit have the Scouts 6\" ability.",
           "sourcePages": [
             11
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               11
             ]
@@ -1433,7 +1433,7 @@
             12
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               12
             ]
@@ -1450,7 +1450,7 @@
             12
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               12
             ]
@@ -1467,7 +1467,7 @@
             12
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               12
             ]
@@ -1484,7 +1484,7 @@
             12
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               12
             ]
@@ -1501,7 +1501,7 @@
             12
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               12
             ]
@@ -1518,7 +1518,7 @@
             12
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               12
             ]
@@ -1530,7 +1530,7 @@
         12
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           11,
           12
@@ -1547,7 +1547,7 @@
           13
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             13
           ]
@@ -1563,7 +1563,7 @@
             13
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               13
             ]
@@ -1578,7 +1578,7 @@
             13
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               13
             ]
@@ -1593,7 +1593,7 @@
             13
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               13
             ]
@@ -1608,7 +1608,7 @@
             13
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               13
             ]
@@ -1627,7 +1627,7 @@
             14
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               14
             ]
@@ -1644,7 +1644,7 @@
             14
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               14
             ]
@@ -1661,7 +1661,7 @@
             14
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               14
             ]
@@ -1678,7 +1678,7 @@
             14
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               14
             ]
@@ -1695,7 +1695,7 @@
             14
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               14
             ]
@@ -1712,7 +1712,7 @@
             14
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               14
             ]
@@ -1724,7 +1724,7 @@
         14
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           13,
           14
@@ -1741,7 +1741,7 @@
           15
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             15
           ]
@@ -1757,7 +1757,7 @@
             15
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               15
             ]
@@ -1772,7 +1772,7 @@
             15
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               15
             ]
@@ -1787,7 +1787,7 @@
             15
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               15
             ]
@@ -1802,7 +1802,7 @@
             15
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               15
             ]
@@ -1821,7 +1821,7 @@
             16
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               16
             ]
@@ -1838,7 +1838,7 @@
             16
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               16
             ]
@@ -1855,7 +1855,7 @@
             16
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               16
             ]
@@ -1872,7 +1872,7 @@
             16
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               16
             ]
@@ -1889,7 +1889,7 @@
             16
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               16
             ]
@@ -1906,7 +1906,7 @@
             16
           ],
           "provenance": {
-            "sourceId": "chaos-space-marines-faction-pack-v1.0",
+            "sourceId": "chaos-space-marines-faction-pack-v1.1",
             "sourcePages": [
               16
             ]
@@ -1918,7 +1918,7 @@
         16
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           15,
           16
@@ -1927,8 +1927,8 @@
     }
   ],
   "detachmentAudit": {
-    "source": "Munitorum Field Manual v1.0",
-    "checkedAt": "2026-07-28",
+    "source": "Munitorum Field Manual v1.2",
+    "checkedAt": "2026-08-11",
     "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
     "expected": 17,
     "count": 17,
@@ -1969,12 +1969,12 @@
       "id": "rules-updates-37-left",
       "section": "Rules Updates",
       "subject": "Page 37 · left column",
-      "change": "UPDATES\nCHAOS CULT DETACHMENT\nChaos Cult Detachment, Keywords Section\nChange to:\n‘TRAITOR GUARDSMEN SQUAD units from your army gain the\nBATTLELINE keyword.’\nWarped Foresight Enhancement\nChange to:\n‘DARK APOSTLE or DAMNED model only. While the bearer is leading a\nunit with the Scouts 6” ability, every model in the bearer’s unit has the\nScouts 6” ability.\nDECEPTORS DETACHMENT\nRelentless Pursuit Stratagem, Target Section\nChange 9\" to 8\".\nFalsehood Enhancement, third sentence\nChange to:\n‘If you do, in one of your Movement phases, you can select one model\nin a friendly LEGIONARIES or CHOSEN unit that has two or more models\nremaining and is on the battlefield (excluding Attached units).’\nDREAD TALONS DETACHMENT\nScreaming Descent Stratagem, Effect section\nChange to:\n'Set your unit up anywhere on the battlefield that is more than 6\"\nhorizontally away from all enemy units, but until the end of the turn,\nit is not eligible to declare a charge. Then select one enemy INFANTRY\nor MOUNTED unit within 9\" of and visible to your unit: that unit makes a\nbattle‑shock roll.’\nPACTBOUND ZEALOTS DETACHMENT\nMarks of Chaos Detachment Rule, Restrictions Section\nAdd an additional bullet point:\n‘• A unit can only embark within (or start the battle embarked within)\naTRANSPORT if both of those units share the same keyword from the\nlist above.’\nRestrictions Section\nChange to:\n‘A CHARACTER/EPIC HERO unit can only be attached to a unit if both units\nshare the same keyword from the list above.'\nRENEGADE RAIDERS DETACHMENT\nUnfailingly Obdurate Stratagem, Effect Section\nChange to:\n‘Until the attacking unit has finished making its attacks, each time an\nattack targets your unit, worsen the Armour Penetration characteristic\nof that attack by 1.’",
+      "change": "UPDATES\nCHAOS CULT DETACHMENT\nChaos Cult Detachment, Keywords Section\nChange to:\n‘TRAITOR GUARDSMEN SQUAD units from your army gain the\nBATTLELINE keyword.’\nWarped Foresight Enhancement\nChange to:\n‘DARK APOSTLE or DAMNED model only. While the bearer is leading a\nunit with the Scouts 6” ability, every model in the bearer’s unit has the\nScouts 6” ability.\nDECEPTORS DETACHMENT\nRelentless Pursuit Stratagem, Target Section\nChange 9\" to 8\".\nFalsehood Enhancement, third sentence\nChange to:\n‘If you do, in one of your Movement phases, you can select one model\nin a friendly LEGIONARIES or CHOSEN unit that has two or more models\nremaining and is on the battlefield (excluding Attached units).’\nDREAD TALONS DETACHMENT\nScreaming Descent Stratagem, Effect section\nChange to:\n'Set your unit up anywhere on the battlefield that is more than 6\"\nhorizontally away from all enemy units, but until the end of the turn,\nit is not eligible to declare a charge. Then select one enemy INFANTRY\nor MOUNTED unit within 9\" of and visible to your unit: that unit makes a\nbattle-shock roll.’\nPACTBOUND ZEALOTS DETACHMENT\nMarks of Chaos Detachment Rule, Restrictions Section\nAdd an additional bullet point:\n‘• A unit can only embark within (or start the battle embarked within)\naTRANSPORT if both of those units share the same keyword from the\nlist above.’\nRestrictions Section\nChange to:\n‘A CHARACTER/EPIC HERO unit can only be attached to a unit if both units\nshare the same keyword from the list above.'\nRENEGADE RAIDERS DETACHMENT\nUnfailingly Obdurate Stratagem, Effect Section\nChange to:\n‘Until the attacking unit has finished making its attacks, each time an\nattack targets your unit, worsen the Armour Penetration characteristic\nof that attack by 1.’",
       "sourcePages": [
         37
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           37
         ]
@@ -1984,12 +1984,12 @@
       "id": "rules-updates-37-right",
       "section": "Rules Updates",
       "subject": "Page 37 · right column",
-      "change": "SOULFORGED WARPACK DETACHMENT\nFeeding Frenzy Stratagem, Target Section\nChange to: ‘One HERETIC ASTARTES DAEMON VEHICLE or VASHTORR THE\nARKIFANE unit from your army that is within Engagement Range of that\nenemy unit.’\nUnstoppable Rampage Stratagem, Target Section\nChange to: ‘One HERETIC ASTARTES DAEMON VEHICLE or VASHTORR THE\nARKIFANE unit from your army that has not been selected to move or\ncharge this phase.’\nPredatory Pursuit Stratagem, Target Section\nChange to: ‘One HERETIC ASTARTES DAEMON VEHICLE or VASHTORR THE\nARKIFANE unit from your army that is within 8” of that enemy unit and\nnot within Engagement Range of one or more enemy units.’\nVETERANS OF THE LONG WAR DETACHMENT\nEager For Vengeance Enhancement\nChange to:\n‘HERETIC ASTARTES model only (excluding DAMNED models). The bearer’s\nunit is eligible to shoot and declare a charge in a turn in which it Fell\nBack. Each time a model in the bearer’s unit makes an attack that\ntargets your focus of hatred, if the bearer’s unit Fell Back this turn, add 1\nto the Hit roll, and each time you select your focus of hatred as a target\nof that unit’s charge, add 1 to the Charge roll.’\nBringers of Despair Stratagem\n▪ CP Cost: change to '1CP'.\n▪ When section: change to 'Fight phase.'\nMillennia of Experience Stratagem, Target Section\nChange 9\" to 8\".\nContemptuous Disregard Stratagem, Effect Section\nChange to:\n‘Until the attacking unit has finished making its attacks, each time an\nattack targets your unit, worsen the Armour Penetration characteristic\nof that attack by 1.’\nDATASHEETS\nMaster of Executions, Core Abilities Section\nRemove 'Leader', add 'Support'.\nChaos Land Raider, Chaos Predator Annihilator, Chaos Predator\nDestructor, Chaos Rhino, Chaos Vindicator, Khorne Lord of Skulls,\nNoctilith Crown – Keywords Section\nAdd 'FRAME'.\nHeldrake\n▪ Profile: Change M to 12\" and OC to '‑'.\n▪ Keywords: Remove 'AIRCRAFT'.",
+      "change": "SOULFORGED WARPACK DETACHMENT\nFeeding Frenzy Stratagem, Target Section\nChange to: ‘One HERETIC ASTARTES DAEMON VEHICLE or VASHTORR THE\nARKIFANE unit from your army that is within Engagement Range of that\nenemy unit.’\nUnstoppable Rampage Stratagem, Target Section\nChange to: ‘One HERETIC ASTARTES DAEMON VEHICLE or VASHTORR THE\nARKIFANE unit from your army that has not been selected to move or\ncharge this phase.’\nPredatory Pursuit Stratagem, Target Section\nChange to: ‘One HERETIC ASTARTES DAEMON VEHICLE or VASHTORR THE\nARKIFANE unit from your army that is within 8” of that enemy unit and\nnot within Engagement Range of one or more enemy units.’\nVETERANS OF THE LONG WAR DETACHMENT\nEager For Vengeance Enhancement\nChange to:\n‘HERETIC ASTARTES model only (excluding DAMNED models). The bearer’s\nunit is eligible to shoot and declare a charge in a turn in which it Fell\nBack. Each time a model in the bearer’s unit makes an attack that\ntargets your focus of hatred, if the bearer’s unit Fell Back this turn, add 1\nto the Hit roll, and each time you select your focus of hatred as a target\nof that unit’s charge, add 1 to the Charge roll.’\nBringers of Despair Stratagem\n▪ CP Cost: change to '1CP'.\n▪ When section: change to 'Fight phase.'\nMillennia of Experience Stratagem, Target Section\nChange 9\" to 8\".\nContemptuous Disregard Stratagem, Effect Section\nChange to:\n‘Until the attacking unit has finished making its attacks, each time an\nattack targets your unit, worsen the Armour Penetration characteristic\nof that attack by 1.’\nDATASHEETS\nMaster of Executions, Core Abilities Section\nRemove 'Leader', add 'Support'.\nChaos Land Raider, Chaos Predator Annihilator, Chaos Predator\nDestructor, Chaos Rhino, Chaos Vindicator, Khorne Lord of Skulls,\nNoctilith Crown – Keywords Section\nAdd 'FRAME'.\nHeldrake\n▪ Profile: Change M to 12\" and OC to '-'.\n▪ Keywords: Remove 'AIRCRAFT'.",
       "sourcePages": [
         37
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           37
         ]
@@ -1999,12 +1999,12 @@
       "id": "rules-updates-38-left",
       "section": "Datasheets",
       "subject": "Page 38 · left column",
-      "change": "Abaddon the Despoiler, Dark Destiny Ability\nChange to:\n‘Each time this model’s unit makes a Dark Pact and does not fail the\nresulting leadership roll, if the result of that roll was 7+, you gain 1CP.’\nAccursed Cultists, Howling Horde Ability\nChange to:\n'In your opponent's Shooting phase, when an enemy unit has shot, if\na model from this unit was destroyed as a result of those attacks, this\nunit can make a surge move of up to D6\".'\nCypher, Agent of Discord Ability\nChange to:\n'Agent of Discord: Once per turn, when your opponent targets a unit\nfrom their army within 12” of this model with a stratagem, you can use\nthis ability. If you do increase the CP cost of that use of that stratagem\nby 1CP.'\nFabius Bile, Chirurgeon Ability\nChange to:\n‘The first time this unit’s FABIUS BILE model is destroyed, at the end\nof the phase, roll one D6: on a 2+, set it back up on the battlefield, as\nclose as possible to where it was destroyed and not within Engagement\nRange of any enemy models, with its full wounds remaining.'\nChaos Lord in Terminator Armour, Keywords Section\nAdd ‘CHAOS LORD’.\nChaos Rhino, Wargear Options\nChange the second bullet point to:\n‘• This model can be equipped with 1 havoc launcher or can replace 1\ncombi‑bolter with 1 havoc launcher.’\nChaos Predator Annihilator, Annihilator Ability\nChange to:\n‘Each time a ranged attack made by this model is allocated to a MONSTER\nor VEHICLE model, you can re‑roll the Damage roll.’\nChaos Predator Destructor, Melee Weapons, Armoured Tracks\nChange WS to ‘4+’.\nHeretic Astartes Daemon Prince, Abilities Section\nAdd the following:\n‘Lord of Chaos: While this model is within 3\" of a friendly HERETIC\nASTARTES INFANTRY unit, this model has Lone Operative.’\nLord Discordant on Helstalker• Move characteristic: Change to 14\".\n▪ Invulnerable save: Change to 4+.\n▪ Corrupt Machine Spirits ability: Change to ‘At the start of your\nShooting phase, select one visible enemy VEHICLE unit within 12\"\nof this model and roll one D6: on a 2‑3, that enemy unit suffers D3\nmortal wounds; on a 4‑5, that enemy unit suffers 3 mortal wounds;\non a 6, that enemy unit suffers D3+3 mortal wounds.’\n▪ Spirit Thief ability: Change to ‘At the start of your Shooting phase,\nselect one visible enemy VEHICLE unit. Until the end of the phase,\neach time a friendly HERETIC ASTARTES model makes an attack that\ntargets that unit, re‑roll a Wound roll of 1.’\n▪ Impaler chainglaive weapon profile: change to:\nImpaler Chainglaive [LANCE]\nRANGE A WS S AP D\nMelee 5 2+ 8 ‑3 3",
+      "change": "Abaddon the Despoiler, Dark Destiny Ability\nChange to:\n‘Each time this model’s unit makes a Dark Pact and does not fail the\nresulting leadership roll, if the result of that roll was 7+, you gain 1CP.’\nAccursed Cultists, Howling Horde Ability\nChange to:\n'In your opponent's Shooting phase, when an enemy unit has shot, if\na model from this unit was destroyed as a result of those attacks, this\nunit can make a surge move of up to D6\".'\nCypher, Agent of Discord Ability\nChange to:\n'Agent of Discord: Once per turn, when your opponent targets a unit\nfrom their army within 12” of this model with a stratagem, you can use\nthis ability. If you do increase the CP cost of that use of that stratagem\nby 1CP.'\nFabius Bile, Chirurgeon Ability\nChange to:\n‘The first time this unit’s FABIUS BILE model is destroyed, at the end\nof the phase, roll one D6: on a 2+, set it back up on the battlefield, as\nclose as possible to where it was destroyed and not within Engagement\nRange of any enemy models, with its full wounds remaining.'\nChaos Lord in Terminator Armour, Keywords Section\nAdd ‘CHAOS LORD’.\nChaos Rhino, Wargear Options\nChange the second bullet point to:\n‘• This model can be equipped with 1 havoc launcher or can replace 1\ncombi-bolter with 1 havoc launcher.’\nChaos Predator Annihilator, Annihilator Ability\nChange to:\n‘Each time a ranged attack made by this model is allocated to a MONSTER\nor VEHICLE model, you can re-roll the Damage roll.’\nChaos Predator Destructor, Melee Weapons, Armoured Tracks\nChange WS to ‘4+’.\nHeretic Astartes Daemon Prince, Abilities Section\nAdd the following:\n‘Lord of Chaos: While this model is within 3\" of a friendly HERETIC\nASTARTES INFANTRY unit, this model has Lone Operative.’\nLord Discordant on Helstalker• Move characteristic: Change to 14\".\n▪ Invulnerable save: Change to 4+.\n▪ Corrupt Machine Spirits ability: Change to ‘At the start of your\nShooting phase, select one visible enemy VEHICLE unit within 12\"\nof this model and roll one D6: on a 2-3, that enemy unit suffers D3\nmortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds;\non a 6, that enemy unit suffers D3+3 mortal wounds.’\n▪ Spirit Thief ability: Change to ‘At the start of your Shooting phase,\nselect one visible enemy VEHICLE unit. Until the end of the phase,\neach time a friendly HERETIC ASTARTES model makes an attack that\ntargets that unit, re-roll a Wound roll of 1.’\n▪ Impaler chainglaive weapon profile: change to:\nImpaler Chainglaive [LANCE]\nRANGE A WS S AP D\nMelee 5 2+ 8 -3 3",
       "sourcePages": [
         38
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           38
         ]
@@ -2014,12 +2014,12 @@
       "id": "rules-updates-38-right",
       "section": "Datasheets",
       "subject": "Page 38 · right column",
-      "change": "Obliterators, Warp Rift Firepower Ability\nChange to:\n‘Warp Rift Firepower (Once per battle, per unit): In your Shooting\nphase, when this unit is selected to shoot, you can use this ability. If you\ndo, this unit's ranged attacks have [INDIRECT FIRE].'\nVashtorr the Arkifane\n▪ Abilities section: add ‘Indentured Daemon Engines: While this\nmodel is within 3\" of one or more friendly DAEMON VEHICLE units, this\nmodel has the Lone Operative ability.’\n▪ Reorder Reality ability: change to 'Each time an enemy unit within\n18\" of this model targets this model, subtract 1 from the Hit roll and,\nuntil the end of the phase, that enemy unit’s ranged weapons have\nthe [HAZARDOUS] ability.’\n▪ Unholy Mechanisms ability: change to 'While a friendly DAEMON\nVEHICLE unit is within 6\" of this model, add 2 to the Strength\ncharacteristic of weapons equipped by models in that unit.’\n▪ Vashtorr’s hammer weapon profile: change to:\nVashtorr's Hammer - Strike\n[ANTI-VEHICLE 4+, DEVASTATING WOUNDS]\nRANGE A WS S AP D\nMelee 6 2+ 14 ‑3 3\nVashtorr's Hammer - Sweep\n[ANTI-VEHICLE 4+, DEVASTATING WOUNDS]\nRANGE A WS S AP D\nMelee 12 2+ 8 ‑1 2\nWarp Talons, Warp Strike Ability\nChange to:\n‘At the end of the Fight phase, if this unit destroyed one or more enemy\nunits this phase and is not within Engagement Range of one or more\nenemy units, you can remove this unit from the battlefield and place it\ninto Strategic Reserves.’\nChaos Rhino, Transport Section\nChange to:\n‘This model has a transport capacity of 12 HERETIC ASTARTES INFANTRY\nmodels. It cannot transport TERMINATOR, JUMP PACK, MUTILATORS,\nOBLITERATORS or POSSESSED models.’\nChaos Land Raider, Transport Section\nChange to:\n‘This model has a transport capacity of 12 HERETIC ASTARTES INFANTRY\nmodels (excluding OBLITERATOR and JUMP PACK models). Each\nPOSSESSED, MUTILATORS and TERMINATOR model takes up the space of\n2 models.’\nTraitor Guardsmen Squad,Twisted Defence Force Ability\nChange to:\n'While this unit is within range of an objective, this unit has +1 Sv\nagainst ranged attacks.'",
+      "change": "Obliterators, Warp Rift Firepower Ability\nChange to:\n‘Warp Rift Firepower (Once per battle, per unit): In your Shooting\nphase, when this unit is selected to shoot, you can use this ability. If you\ndo, this unit's ranged attacks have [INDIRECT FIRE].'\nVashtorr the Arkifane\n▪ Abilities section: add ‘Indentured Daemon Engines: While this\nmodel is within 3\" of one or more friendly DAEMON VEHICLE units, this\nmodel has the Lone Operative ability.’\n▪ Reorder Reality ability: change to 'Each time an enemy unit within\n18\" of this model targets this model, subtract 1 from the Hit roll and,\nuntil the end of the phase, that enemy unit’s ranged weapons have\nthe [HAZARDOUS] ability.’\n▪ Unholy Mechanisms ability: change to 'While a friendly DAEMON\nVEHICLE unit is within 6\" of this model, add 2 to the Strength\ncharacteristic of weapons equipped by models in that unit.’\n▪ Vashtorr’s hammer weapon profile: change to:\nVashtorr's Hammer - Strike\n[ANTI-VEHICLE 4+, DEVASTATING WOUNDS]\nRANGE A WS S AP D\nMelee 6 2+ 14 -3 3\nVashtorr's Hammer - Sweep\n[ANTI-VEHICLE 4+, DEVASTATING WOUNDS]\nRANGE A WS S AP D\nMelee 12 2+ 8 -1 2\nWarp Talons, Warp Strike Ability\nChange to:\n‘At the end of the Fight phase, if this unit destroyed one or more enemy\nunits this phase and is not within Engagement Range of one or more\nenemy units, you can remove this unit from the battlefield and place it\ninto Strategic Reserves.’\nChaos Rhino, Transport Section\nChange to:\n‘This model has a transport capacity of 12 HERETIC ASTARTES INFANTRY\nmodels. It cannot transport TERMINATOR, JUMP PACK, MUTILATORS,\nOBLITERATORS or POSSESSED models.’\nChaos Land Raider, Transport Section\nChange to:\n‘This model has a transport capacity of 12 HERETIC ASTARTES INFANTRY\nmodels (excluding OBLITERATOR and JUMP PACK models). Each\nPOSSESSED, MUTILATORS and TERMINATOR model takes up the space of\n2 models.’\nTraitor Guardsmen Squad,Twisted Defence Force Ability\nChange to:\n'While this unit is within range of an objective, this unit has +1 Sv\nagainst ranged attacks.'",
       "sourcePages": [
         38
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           38
         ]
@@ -2035,7 +2035,7 @@
         39
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           39
         ]
@@ -2049,7 +2049,7 @@
         39
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           39
         ]
@@ -2063,7 +2063,7 @@
         39
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           39
         ]
@@ -2077,7 +2077,7 @@
         39
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           39
         ]
@@ -2091,7 +2091,7 @@
         39
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           39
         ]
@@ -2105,7 +2105,7 @@
         39
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           39
         ]
@@ -2119,7 +2119,7 @@
         39
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           39
         ]
@@ -2133,7 +2133,7 @@
         39
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           39
         ]
@@ -2147,7 +2147,7 @@
         39
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           39
         ]
@@ -2161,7 +2161,7 @@
         39
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           39
         ]
@@ -2175,7 +2175,7 @@
         39
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           39
         ]
@@ -2189,7 +2189,7 @@
         39
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           39
         ]
@@ -2203,7 +2203,7 @@
         39
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           39
         ]
@@ -2217,7 +2217,7 @@
         39
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           39
         ]
@@ -2231,7 +2231,7 @@
         39
       ],
       "provenance": {
-        "sourceId": "chaos-space-marines-faction-pack-v1.0",
+        "sourceId": "chaos-space-marines-faction-pack-v1.1",
         "sourcePages": [
           39
         ]
@@ -2248,7 +2248,7 @@
           18
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             17,
             18
@@ -2263,7 +2263,7 @@
           20
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             19,
             20
@@ -2278,7 +2278,7 @@
           22
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             21,
             22
@@ -2293,7 +2293,7 @@
           24
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             23,
             24
@@ -2308,7 +2308,7 @@
           26
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             25,
             26
@@ -2323,7 +2323,7 @@
           28
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             27,
             28
@@ -2338,7 +2338,7 @@
           30
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             29,
             30
@@ -2353,7 +2353,7 @@
           32
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             31,
             32
@@ -2368,7 +2368,7 @@
           34
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             33,
             34
@@ -2383,7 +2383,7 @@
           36
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             35,
             36
@@ -2400,7 +2400,7 @@
           41
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             40,
             41
@@ -2415,7 +2415,7 @@
           43
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             42,
             43
@@ -2430,7 +2430,7 @@
           45
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             44,
             45
@@ -2445,7 +2445,7 @@
           47
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             46,
             47
@@ -2460,7 +2460,7 @@
           49
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             48,
             49
@@ -2475,7 +2475,7 @@
           51
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             50,
             51
@@ -2490,7 +2490,7 @@
           53
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             52,
             53
@@ -2505,7 +2505,7 @@
           55
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             54,
             55
@@ -2520,7 +2520,7 @@
           57
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             56,
             57
@@ -2535,7 +2535,7 @@
           59
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             58,
             59
@@ -2550,7 +2550,7 @@
           61
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             60,
             61
@@ -2565,7 +2565,7 @@
           63
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             62,
             63
@@ -2580,7 +2580,7 @@
           65
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             64,
             65
@@ -2595,7 +2595,7 @@
           67
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             66,
             67
@@ -2610,7 +2610,7 @@
           69
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             68,
             69
@@ -2625,7 +2625,7 @@
           71
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             70,
             71
@@ -2640,7 +2640,7 @@
           73
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             72,
             73
@@ -2655,7 +2655,7 @@
           75
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             74,
             75
@@ -2670,7 +2670,7 @@
           77
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             76,
             77
@@ -2685,7 +2685,7 @@
           79
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             78,
             79
@@ -2700,7 +2700,7 @@
           81
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             80,
             81
@@ -2715,7 +2715,7 @@
           83
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             82,
             83
@@ -2730,7 +2730,7 @@
           85
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             84,
             85
@@ -2745,7 +2745,7 @@
           87
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             86,
             87
@@ -2760,7 +2760,7 @@
           89
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             88,
             89
@@ -2775,7 +2775,7 @@
           91
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             90,
             91
@@ -2790,7 +2790,7 @@
           93
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             92,
             93
@@ -2805,7 +2805,7 @@
           95
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             94,
             95
@@ -2820,7 +2820,7 @@
           97
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             96,
             97
@@ -2835,7 +2835,7 @@
           99
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             98,
             99
@@ -2850,7 +2850,7 @@
           101
         ],
         "provenance": {
-          "sourceId": "chaos-space-marines-faction-pack-v1.0",
+          "sourceId": "chaos-space-marines-faction-pack-v1.1",
           "sourcePages": [
             100,
             101

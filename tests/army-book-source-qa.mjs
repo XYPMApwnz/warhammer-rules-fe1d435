@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 const root=path.resolve(import.meta.dirname,'..');
 const books={
   'tau-empire':{pages:61,detachments:3,updates:25,faqs:2,datasheets:39,imperialArmour:0,legends:0,units:39,enhancements:23,flagship:'Commander Farsight'},
-  'chaos-space-marines':{pages:102,detachments:9,updates:4,faqs:15,datasheets:58,imperialArmour:0,legends:53,units:111,enhancements:0,flagship:'Abaddon the Despoiler'},
+  'chaos-space-marines':{pages:102,detachments:9,updates:4,faqs:15,datasheets:54,imperialArmour:0,legends:53,units:107,enhancements:62,flagship:'Abaddon the Despoiler'},
   orks:{pages:85,detachments:6,updates:36,faqs:5,datasheets:57,imperialArmour:1,legends:30,units:88,enhancements:42,flagship:'Ghazghkull Thraka'},
   'emperors-children':{pages:10,detachments:4,updates:17,faqs:3,datasheets:23,imperialArmour:0,legends:0,units:23,enhancements:34,flagship:'Fulgrim'},
   'space-marines':{pages:217,detachments:15,updates:5,faqs:14,datasheets:101,imperialArmour:0,legends:0,units:101,enhancements:87,flagship:'Intercessor Squad'},
@@ -38,6 +38,20 @@ for(const [id,expected] of Object.entries(books)){
   expect(Boolean(codexLayer?.commit),`${label} missing pinned Codex snapshot commit`);
   expect(codexLayer?.commit===points.source?.commit,`${label} points and Codex snapshot commits differ`);
 }
+
+const csmPack=read('books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json');
+const csmCodex=read('books/chaos-space-marines/content/chaos-space-marines-codex-datasheets.en.json');
+const csmPoints=read('books/chaos-space-marines/content/chaos-space-marines-points.en.json');
+const csmRelated=read('books/chaos-space-marines/content/chaos-space-marines-related-rules.en.json');
+const csmMfm=read('books/chaos-space-marines/sources/official-mfm-v1.2.json');
+expect(csmPack.meta?.version==='1.1'&&csmPack.meta?.sha256==='407DD6F175A7C27E0CB20BC95F68675AB0F9250883F08660CD2F16EF6D9F4998','chaos-space-marines: current official Faction Pack v1.1 provenance mismatch');
+expect(csmMfm.version==='v1.2'&&csmMfm.verifiedUnits?.length===54&&csmMfm.detachments?.length===17&&csmMfm.enhancements?.length===62,'chaos-space-marines: official MFM v1.2 capture inventory mismatch');
+expect(new Set(csmPoints.enhancements.map(item=>`${item.detachment}|${item.title}`)).size===62,'chaos-space-marines: detachment-qualified Enhancement identity collision');
+for(const title of ['Khorne Berzerkers','Noise Marines','Plague Marines','Rubric Marines','Cerberus','Fellblade','Leviathan Dreadnought','Mastodon'])expect(!csmCodex.datasheets.some(item=>item.title===title),`chaos-space-marines: ${title} must not appear in the current Datasheets inventory`);
+const csmCurrentIds=new Set(csmCodex.datasheets.map(item=>item.id));
+const csmRelatedIds=[];
+(function collectUnitIds(value){if(Array.isArray(value))value.forEach(collectUnitIds);else if(value&&typeof value==='object')for(const [key,item] of Object.entries(value))key==='unitIds'&&Array.isArray(item)?csmRelatedIds.push(...item):collectUnitIds(item);})(csmRelated);
+expect(csmRelatedIds.every(id=>csmCurrentIds.has(id)),'chaos-space-marines: Compatible Rules reference a non-current Datasheet');
 
 const daConfig=read('books/dark-angels/book.config.json');
 const daPack=read(`books/dark-angels/${daConfig.sources.factionPack}`);

@@ -1,15 +1,19 @@
 {
   "schema": 1,
-  "verifiedAt": "2026-07-28",
+  "verifiedAt": "2026-08-11",
   "layers": [
     {
-      "id": "faction-pack-v1.0",
+      "id": "faction-pack-v1.1",
       "authority": "official",
       "role": "11e-overlay",
-      "title": "Chaos Space Marines Faction Pack v1.0",
-      "legalFrom": "2026-06-20",
-      "url": "https://assets.warhammer-community.com/eng_10-06_warhammer40000_faction_pack_chaos_space_marines-h16lkqvvnq-bcejav0qap.pdf",
-      "localFile": "chaos-space-marines-faction-pack-v1.0.pdf"
+      "title": "Chaos Space Marines Faction Pack v1.1",
+      "legalFrom": "2026-07-22",
+      "retrievedAt": "2026-08-11",
+      "frozenAt": "2026-08-11",
+      "pageCount": 102,
+      "sha256": "407DD6F175A7C27E0CB20BC95F68675AB0F9250883F08660CD2F16EF6D9F4998",
+      "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_chaos_space_marines-att4ehoaum-8mmiunajyf.pdf",
+      "localFile": "chaos-space-marines-faction-pack-v1.1.pdf"
     },
     {
       "id": "codex-transcription",
@@ -25,14 +29,19 @@
       "id": "mfm",
       "authority": "official",
       "role": "points-and-roster-contract",
-      "title": "Munitorum Field Manual",
+      "title": "Munitorum Field Manual v1.2 dated capture",
+      "version": "v1.2",
       "updated": "2026-07-22",
+      "retrievedAt": "2026-08-11",
+      "frozenAt": "2026-08-11",
+      "captureSha256": "3013698C05E8BD2F95B0F94946AEA380B77E009512CFFB6A58032DDB4B65BED3",
       "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-      "status": "snapshot-required"
+      "localFile": "official-mfm-v1.2.json",
+      "status": "dated-live-capture"
     }
   ],
   "gates": {
     "publishAsComplete": false,
-    "reason": "Faction Pack v1.0 supplements the Codex. Codex text and the current MFM snapshot must be verified before this book can be labelled complete."
+    "reason": "Faction Pack v1.1 and a dated MFM v1.2 capture supplement the Codex. Codex text must still be verified before this book can be labelled complete."
   }
 }

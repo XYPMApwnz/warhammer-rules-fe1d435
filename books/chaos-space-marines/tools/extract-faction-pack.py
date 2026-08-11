@@ -11,10 +11,14 @@ import pdfplumber
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PDF = ROOT / "sources" / "chaos-space-marines-faction-pack-v1.0.pdf"
+PDF = ROOT / "sources" / "chaos-space-marines-faction-pack-v1.1.pdf"
 OUTPUT = ROOT / "content" / "chaos-space-marines-faction-pack.en.json"
 RELATED_OUTPUT = ROOT / "content" / "chaos-space-marines-related-rules.en.json"
-SOURCE_ID = "chaos-space-marines-faction-pack-v1.0"
+RELATED_BASE = ROOT / "sources" / "related-rules-base.en.json"
+CURRENT_DATASHEETS = ROOT / "content" / "chaos-space-marines-codex-datasheets.en.json"
+SOURCE_ID = "chaos-space-marines-faction-pack-v1.1"
+EXPECTED_SHA256 = "407DD6F175A7C27E0CB20BC95F68675AB0F9250883F08660CD2F16EF6D9F4998"
+EXPECTED_PAGE_COUNT = 102
 
 
 def e(title: str, points: int) -> dict:
@@ -284,17 +288,21 @@ def legends_title(page_text: str) -> str:
 
 def extract_source() -> tuple[dict, list, dict[str, dict]]:
     digest = hashlib.sha256(PDF.read_bytes()).hexdigest().upper()
+    if digest != EXPECTED_SHA256:
+        raise ValueError(f"unexpected Faction Pack SHA-256: {digest}")
     page_objects = []
     page_data: dict[str, dict] = {}
     with pdfplumber.open(PDF) as document:
+        if len(document.pages) != EXPECTED_PAGE_COUNT:
+            raise ValueError(f"unexpected Faction Pack page count: {len(document.pages)}")
         for number, page in enumerate(document.pages, 1):
             text = clean_text(page.extract_text(x_tolerance=2, y_tolerance=3) or "")
             page_objects.append(page)
             page_data[str(number)] = {"sha256": hashlib.sha256(text.encode("utf-8")).hexdigest().upper(), "text": text}
         meta = {
-            "title": "Chaos Space Marines Faction Pack", "version": "1.0",
-            "legalFrom": "2026-06-20", "pageCount": len(document.pages),
-            "sha256": digest, "file": "sources/chaos-space-marines-faction-pack-v1.0.pdf",
+            "title": "Chaos Space Marines Faction Pack", "version": "1.1",
+            "legalFrom": "2026-07-22", "pageCount": len(document.pages),
+            "sha256": digest, "file": "sources/chaos-space-marines-faction-pack-v1.1.pdf",
         }
         detachments = extract_detachments(page_objects)
         faqs = parse_faqs(
@@ -323,7 +331,7 @@ def build() -> dict:
         "pages": pages,
         "detachments": detachments,
         "detachmentAudit": {
-            "source": "Munitorum Field Manual v1.0", "checkedAt": "2026-07-28",
+            "source": "Munitorum Field Manual v1.2", "checkedAt": "2026-08-11",
             "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
             "expected": 17, "count": len(MFM_DETACHMENTS), "current": MFM_DETACHMENTS,
             "factionPackCount": len(DETACHMENTS), "factionPack": [item["title"] for item in DETACHMENTS],
@@ -368,6 +376,23 @@ def validate(data: dict) -> list[str]:
     return errors
 
 
+def filter_current_unit_ids(value, current_ids: set[str]):
+    if isinstance(value, list):
+        return [filter_current_unit_ids(item, current_ids) for item in value]
+    if not isinstance(value, dict):
+        return value
+    output = {}
+    for key, item in value.items():
+        if key == "unitIds" and isinstance(item, list):
+            filtered = [unit_id for unit_id in item if unit_id in current_ids]
+            if item and not filtered:
+                raise ValueError("Related Rules selector lost every current unit")
+            output[key] = filtered
+        else:
+            output[key] = filter_current_unit_ids(item, current_ids)
+    return output
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--check", action="store_true")
@@ -375,7 +400,12 @@ def main() -> int:
     data = build()
     errors = validate(data)
     content = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
-    related = json.dumps({"schema": 1, "faction": "Chaos Space Marines", "stratagems": RELATED_RULES}, ensure_ascii=False, indent=2) + "\n"
+    related_base = json.loads(RELATED_BASE.read_text(encoding="utf-8"))
+    if len(related_base.get("enhancements", {})) != 30 or not related_base.get("keywordGrants"):
+        errors.append("Related Rules base inventory mismatch")
+    current_ids = {item["id"] for item in json.loads(CURRENT_DATASHEETS.read_text(encoding="utf-8")).get("datasheets", [])}
+    related_data = filter_current_unit_ids({"schema": 1, "faction": "Chaos Space Marines", "keywordGrants": related_base["keywordGrants"], "stratagems": RELATED_RULES, "enhancements": related_base["enhancements"]}, current_ids)
+    related = json.dumps(related_data, ensure_ascii=False, indent=2) + "\n"
     if args.check:
         if not OUTPUT.exists() or OUTPUT.read_text(encoding="utf-8") != content:
             errors.append("Faction Pack output is stale")

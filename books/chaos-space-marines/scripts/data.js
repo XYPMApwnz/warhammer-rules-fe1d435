@@ -2,8 +2,8 @@ window.DG_TERMS={
   "chaos-space-marines-detachment-rule-empyric-wellspring": {
     "id": "chaos-space-marines-detachment-rule-empyric-wellspring",
     "title": "Empyric Wellspring",
-    "summary": "The sorcerous powers wielded by a cabal inevitably draw the attention of the Dark Gods, flooding the battlefield with immaterial energies that empower their dark magicks and their daemonically gifted comrades alike. ▪ In your Shooting phase, when a friendly HERETIC ASTARTES PSYKER unit (excluding DAEMON units) is selected to shoot, if that unit makes a Dark Pact, that unit’s ranged attacks have +1 S. ▪ In the Fight phase, when a friendly HERETIC ASTARTES DAEMON PRINCE unit (excluding KHORNE units) is selected to fight, if that unit makes a Dark Pact, that unit’s melee attacks have: ▫ +2 S. ▫ +1 AP.",
-    "full": "The sorcerous powers wielded by a cabal inevitably draw the attention of the Dark Gods, flooding the battlefield with immaterial energies that empower their dark magicks and their daemonically gifted comrades alike. ▪ In your Shooting phase, when a friendly HERETIC ASTARTES PSYKER unit (excluding DAEMON units) is selected to shoot, if that unit makes a Dark Pact, that unit’s ranged attacks have +1 S. ▪ In the Fight phase, when a friendly HERETIC ASTARTES DAEMON PRINCE unit (excluding KHORNE units) is selected to fight, if that unit makes a Dark Pact, that unit’s melee attacks have: ▫ +2 S. ▫ +1 AP.",
+    "summary": "The sorcerous powers wielded by a cabal inevitably draw the attention of the Dark Gods, flooding the battlefield with immaterial energies that empower their dark magicks and their daemonically gifted comrades alike. ▪ In your Shooting phase, when a friendly HERETIC ASTARTES PSYKER unit (excluding DAEMON units) is selected to shoot, if that unit makes a Dark Pact, that unit’s ranged attacks have +1 S. ▪ In the Fight phase, when a friendly HERETIC ASTARTES DAEMON PRINCE/DAEMON PRINCE WITH WINGS unit (excluding KHORNE units) is selected to fight, if that unit makes a Dark Pact, that unit’s melee attacks have: ▫ +2 S. ▫ +1 AP.",
+    "full": "The sorcerous powers wielded by a cabal inevitably draw the attention of the Dark Gods, flooding the battlefield with immaterial energies that empower their dark magicks and their daemonically gifted comrades alike. ▪ In your Shooting phase, when a friendly HERETIC ASTARTES PSYKER unit (excluding DAEMON units) is selected to shoot, if that unit makes a Dark Pact, that unit’s ranged attacks have +1 S. ▪ In the Fight phase, when a friendly HERETIC ASTARTES DAEMON PRINCE/DAEMON PRINCE WITH WINGS unit (excluding KHORNE units) is selected to fight, if that unit makes a Dark Pact, that unit’s melee attacks have: ▫ +2 S. ▫ +1 AP.",
     "glossary": "glossary-chaos-space-marines-detachment-rule-empyric-wellspring",
     "rule": "detachment-cabal-of-chaos"
   },
@@ -34,8 +34,8 @@ window.DG_TERMS={
   "chaos-space-marines-stratagem-fleshy-curse": {
     "id": "chaos-space-marines-stratagem-fleshy-curse",
     "title": "Fleshy Curse",
-    "summary": "Start of your Shooting phase. One friendly HERETIC ASTARTES PSYKER unit. Select one visible enemy unit within 12\" of your unit. Roll one D6: ▪ On a 1, that enemy unit suffers 1 mortal wound. ▪ On a 2‑4, that enemy unit suffers D3 mortal wounds. ▪ On a 5‑6, that enemy unit suffers 2D3 mortal wounds. These mortal wounds are inflicted by a psychic attack.",
-    "full": "Start of your Shooting phase. One friendly HERETIC ASTARTES PSYKER unit. Select one visible enemy unit within 12\" of your unit. Roll one D6: ▪ On a 1, that enemy unit suffers 1 mortal wound. ▪ On a 2‑4, that enemy unit suffers D3 mortal wounds. ▪ On a 5‑6, that enemy unit suffers 2D3 mortal wounds. These mortal wounds are inflicted by a psychic attack.",
+    "summary": "Start of your Shooting phase. One friendly HERETIC ASTARTES PSYKER unit. Select one visible enemy unit within 12\" of your unit. Roll one D6: ▪ On a 1, that enemy unit suffers 1 mortal wound. ▪ On a 2-4, that enemy unit suffers D3 mortal wounds. ▪ On a 5-6, that enemy unit suffers 2D3 mortal wounds. These mortal wounds are inflicted by a psychic attack.",
+    "full": "Start of your Shooting phase. One friendly HERETIC ASTARTES PSYKER unit. Select one visible enemy unit within 12\" of your unit. Roll one D6: ▪ On a 1, that enemy unit suffers 1 mortal wound. ▪ On a 2-4, that enemy unit suffers D3 mortal wounds. ▪ On a 5-6, that enemy unit suffers 2D3 mortal wounds. These mortal wounds are inflicted by a psychic attack.",
     "glossary": "glossary-chaos-space-marines-stratagem-fleshy-curse",
     "rule": "detachment-cabal-of-chaos"
   },
@@ -58,8 +58,8 @@ window.DG_TERMS={
   "chaos-space-marines-enhancement-pact-of-destruction": {
     "id": "chaos-space-marines-enhancement-pact-of-destruction",
     "title": "Pact of Destruction",
-    "summary": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re‑roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
-    "full": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re‑roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
+    "summary": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re-roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
+    "full": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re-roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
     "glossary": "glossary-chaos-space-marines-enhancement-pact-of-destruction",
     "rule": "detachment-devotees-of-destruction"
   },
@@ -90,16 +90,16 @@ window.DG_TERMS={
   "chaos-space-marines-stratagem-undying-hatred": {
     "id": "chaos-space-marines-stratagem-undying-hatred",
     "title": "Undying Hatred",
-    "summary": "Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit. That HAVOCS/OBLITERATORS unit. Attacks that target your unit with a S greater than your unit’s T have ‑1 to wound rolls.",
-    "full": "Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit. That HAVOCS/OBLITERATORS unit. Attacks that target your unit with a S greater than your unit’s T have ‑1 to wound rolls.",
+    "summary": "Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit. That HAVOCS/OBLITERATORS unit. Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.",
+    "full": "Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit. That HAVOCS/OBLITERATORS unit. Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.",
     "glossary": "glossary-chaos-space-marines-stratagem-undying-hatred",
     "rule": "detachment-devotees-of-destruction"
   },
   "chaos-space-marines-detachment-rule-prey-on-the-weak": {
     "id": "chaos-space-marines-detachment-rule-prey-on-the-weak",
     "title": "Prey on the Weak",
-    "summary": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re‑roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have ‑1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
-    "full": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re‑roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have ‑1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
+    "summary": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re-roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have -1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
+    "full": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re-roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have -1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
     "glossary": "glossary-chaos-space-marines-detachment-rule-prey-on-the-weak",
     "rule": "detachment-murdertalon-raiders"
   },
@@ -138,8 +138,8 @@ window.DG_TERMS={
   "chaos-space-marines-stratagem-warp-twisted-terrors": {
     "id": "chaos-space-marines-stratagem-warp-twisted-terrors",
     "title": "Warp-twisted Terrors",
-    "summary": "Your Movement phase, when a friendly WARP TALONS unit ends a move. That WARP TALONS unit. Select one visible enemy unit (excluding MONSTER/VEHICLE units) within 9\" of your unit. That enemy unit makes a battle-shock roll, with ‑1 to that battle-shock roll.",
-    "full": "Your Movement phase, when a friendly WARP TALONS unit ends a move. That WARP TALONS unit. Select one visible enemy unit (excluding MONSTER/VEHICLE units) within 9\" of your unit. That enemy unit makes a battle-shock roll, with ‑1 to that battle-shock roll.",
+    "summary": "Your Movement phase, when a friendly WARP TALONS unit ends a move. That WARP TALONS unit. Select one visible enemy unit (excluding MONSTER/VEHICLE units) within 9\" of your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
+    "full": "Your Movement phase, when a friendly WARP TALONS unit ends a move. That WARP TALONS unit. Select one visible enemy unit (excluding MONSTER/VEHICLE units) within 9\" of your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
     "glossary": "glossary-chaos-space-marines-stratagem-warp-twisted-terrors",
     "rule": "detachment-murdertalon-raiders"
   },
@@ -442,8 +442,8 @@ window.DG_TERMS={
   "chaos-space-marines-enhancement-sorrowscent-vulture": {
     "id": "chaos-space-marines-enhancement-sorrowscent-vulture",
     "title": "Sorrowscent Vulture",
-    "summary": "This champion demands to be in the vanguard of the hunt, their eagerness to inflict suffering manifesting in a daring lunge towards enemy lines. Chaos Lord Jump Pack model only. Models in the bearer’s unit have the Scouts 6\" ability. In the Declare Battle Formations step, the bearer can be attached to a Warp Talons unit.",
-    "full": "This champion demands to be in the vanguard of the hunt, their eagerness to inflict suffering manifesting in a daring lunge towards enemy lines. Chaos Lord Jump Pack model only. Models in the bearer’s unit have the Scouts 6\" ability. In the Declare Battle Formations step, the bearer can be attached to a Warp Talons unit.",
+    "summary": "This champion demands to be in the vanguard of the hunt, their eagerness to inflict suffering manifesting in a daring lunge towards enemy lines. Chaos Lord Jump Pack model only. Models in the bearer’s unit have the Scouts 6\" ability.",
+    "full": "This champion demands to be in the vanguard of the hunt, their eagerness to inflict suffering manifesting in a daring lunge towards enemy lines. Chaos Lord Jump Pack model only. Models in the bearer’s unit have the Scouts 6\" ability.",
     "glossary": "glossary-chaos-space-marines-enhancement-sorrowscent-vulture",
     "rule": "detachment-nightmare-hunt"
   },
@@ -679,8 +679,7 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-ability-for-the-dark-gods",
     "rule": "unit-cultist-mob",
     "units": [
-      "unit-cultist-mob",
-      "unit-cultist-mob-with-firearms"
+      "unit-cultist-mob"
     ],
     "datasheet": "unit-cultist-mob",
     "statline": "cultist-mob-profile"
@@ -881,20 +880,7 @@ window.DG_TERMS={
       "unit-heldrake",
       "unit-maulerfiend",
       "unit-noctilith-crown",
-      "unit-venomcrawler",
-      "unit-chaos-deimos-predator",
-      "unit-chaos-lord-on-bike",
-      "unit-cultist-mob-with-firearms",
-      "unit-exalted-champion",
-      "unit-hell-blade",
-      "unit-hell-talon",
-      "unit-negavolt-cultists",
-      "unit-renegade-enforcer",
-      "unit-renegade-heavy-weapons-squad",
-      "unit-renegade-ogryn-beast-handler",
-      "unit-renegade-ogryn-brutes",
-      "unit-rogue-psyker",
-      "unit-sorcerer-on-bike"
+      "unit-venomcrawler"
     ],
     "datasheet": "unit-cultist-mob",
     "statline": "cultist-mob-profile"
@@ -951,20 +937,7 @@ window.DG_TERMS={
       "unit-heldrake",
       "unit-maulerfiend",
       "unit-noctilith-crown",
-      "unit-venomcrawler",
-      "unit-chaos-deimos-predator",
-      "unit-chaos-lord-on-bike",
-      "unit-cultist-mob-with-firearms",
-      "unit-exalted-champion",
-      "unit-hell-blade",
-      "unit-hell-talon",
-      "unit-negavolt-cultists",
-      "unit-renegade-enforcer",
-      "unit-renegade-heavy-weapons-squad",
-      "unit-renegade-ogryn-beast-handler",
-      "unit-renegade-ogryn-brutes",
-      "unit-rogue-psyker",
-      "unit-sorcerer-on-bike"
+      "unit-venomcrawler"
     ],
     "datasheet": "unit-cultist-mob",
     "statline": "cultist-mob-profile"
@@ -1021,20 +994,7 @@ window.DG_TERMS={
       "unit-heldrake",
       "unit-maulerfiend",
       "unit-noctilith-crown",
-      "unit-venomcrawler",
-      "unit-chaos-deimos-predator",
-      "unit-chaos-lord-on-bike",
-      "unit-cultist-mob-with-firearms",
-      "unit-exalted-champion",
-      "unit-hell-blade",
-      "unit-hell-talon",
-      "unit-negavolt-cultists",
-      "unit-renegade-enforcer",
-      "unit-renegade-heavy-weapons-squad",
-      "unit-renegade-ogryn-beast-handler",
-      "unit-renegade-ogryn-brutes",
-      "unit-rogue-psyker",
-      "unit-sorcerer-on-bike"
+      "unit-venomcrawler"
     ],
     "datasheet": "unit-cultist-mob",
     "statline": "cultist-mob-profile"
@@ -1091,110 +1051,7 @@ window.DG_TERMS={
       "unit-heldrake",
       "unit-maulerfiend",
       "unit-noctilith-crown",
-      "unit-venomcrawler",
-      "unit-chaos-deimos-predator",
-      "unit-chaos-lord-on-bike",
-      "unit-cultist-mob-with-firearms",
-      "unit-exalted-champion",
-      "unit-hell-blade",
-      "unit-hell-talon",
-      "unit-negavolt-cultists",
-      "unit-renegade-enforcer",
-      "unit-renegade-heavy-weapons-squad",
-      "unit-renegade-ogryn-beast-handler",
-      "unit-renegade-ogryn-brutes",
-      "unit-rogue-psyker",
-      "unit-sorcerer-on-bike"
-    ],
-    "datasheet": "unit-cultist-mob",
-    "statline": "cultist-mob-profile"
-  },
-  "chaos-space-marines-ability-pistol": {
-    "id": "chaos-space-marines-ability-pistol",
-    "title": "Pistol",
-    "summary": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: - One or more of its [CLOSE-QUARTERS] weapons. - One or more of its other ranged weapons.",
-    "full": "[PISTOL] and [CLOSE-QUARTERS] are identical for all rules purposes. Units containing one or more models with a [CLOSE-QUARTERS] weapon can shoot using close-quarters shooting (10.06). When using another shooting type, for each model in that unit (excluding MONSTER/VEHICLE models), you can only select one of the following to make attacks with: - One or more of its [CLOSE-QUARTERS] weapons. - One or more of its other ranged weapons.",
-    "glossary": "glossary-chaos-space-marines-ability-pistol",
-    "rule": "unit-cultist-mob",
-    "units": [
-      "unit-cultist-mob",
-      "unit-khorne-berzerkers",
-      "unit-legionaries",
-      "unit-plague-marines",
-      "unit-rubric-marines",
-      "unit-chaos-lord",
-      "unit-chaos-lord-with-jump-pack",
-      "unit-dark-apostle",
-      "unit-dark-commune",
-      "unit-lord-discordant-on-helstalker",
-      "unit-master-of-executions",
-      "unit-master-of-possession",
-      "unit-red-corsairs-reave-captain",
-      "unit-sorcerer",
-      "unit-traitor-enforcer",
-      "unit-warpsmith",
-      "unit-cypher",
-      "unit-fabius-bile",
-      "unit-huron-blackheart",
-      "unit-masters-of-the-maelstrom",
-      "unit-chosen",
-      "unit-fellgor-beastmen",
-      "unit-havocs",
-      "unit-nemesis-claw",
-      "unit-noise-marines",
-      "unit-raptors",
-      "unit-red-corsairs-raiders",
-      "unit-traitor-guardsmen-squad",
-      "unit-chaos-bikers",
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-cultist-mob-with-firearms",
-      "unit-exalted-champion",
-      "unit-renegade-enforcer",
-      "unit-rogue-psyker",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-cultist-mob",
-    "statline": "cultist-mob-profile"
-  },
-  "chaos-space-marines-ability-lance": {
-    "id": "chaos-space-marines-ability-lance",
-    "title": "Lance",
-    "summary": "Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.",
-    "full": "Each time an attack is made with a [LANCE] weapon, if the attacking model’s unit made a charge move this turn, add 1 to the wound roll.",
-    "glossary": "glossary-chaos-space-marines-ability-lance",
-    "rule": "unit-cultist-mob",
-    "units": [
-      "unit-cultist-mob",
-      "unit-lord-discordant-on-helstalker",
-      "unit-haarken-worldclaimer",
-      "unit-chaos-terminator-squad",
-      "unit-chosen",
-      "unit-chaos-bikers",
-      "unit-chaos-lord-on-juggernaut"
-    ],
-    "datasheet": "unit-cultist-mob",
-    "statline": "cultist-mob-profile"
-  },
-  "chaos-space-marines-ability-stealth": {
-    "id": "chaos-space-marines-ability-stealth",
-    "title": "Stealth",
-    "summary": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
-    "full": "If every model in a unit has this ability, each time a ranged attack targets that unit, that unit has the benefit of cover against that attack (13.08).",
-    "glossary": "glossary-chaos-space-marines-ability-stealth",
-    "rule": "unit-cultist-mob",
-    "units": [
-      "unit-cultist-mob",
-      "unit-chaos-terminator-squad",
-      "unit-chosen",
-      "unit-nemesis-claw",
-      "unit-chaos-bikers"
+      "unit-venomcrawler"
     ],
     "datasheet": "unit-cultist-mob",
     "statline": "cultist-mob-profile"
@@ -1260,30 +1117,7 @@ window.DG_TERMS={
       "unit-khorne-lord-of-skulls",
       "unit-maulerfiend",
       "unit-noctilith-crown",
-      "unit-venomcrawler",
-      "unit-chaos-deimos-predator",
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-cultist-mob-with-firearms",
-      "unit-exalted-champion",
-      "unit-gellerpox-infected",
-      "unit-hell-blade",
-      "unit-hell-talon",
-      "unit-mutoid-vermin",
-      "unit-negavolt-cultists",
-      "unit-renegade-enforcer",
-      "unit-renegade-heavy-weapons-squad",
-      "unit-renegade-ogryn-beast-handler",
-      "unit-renegade-ogryn-brutes",
-      "unit-renegade-plague-ogryns",
-      "unit-rogue-psyker",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
+      "unit-venomcrawler"
     ],
     "datasheet": "unit-cultist-mob",
     "statline": "cultist-mob-profile"
@@ -1296,8 +1130,7 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-weapon-brutal-assault-weapon",
     "rule": "unit-cultist-mob",
     "units": [
-      "unit-cultist-mob",
-      "unit-cultist-mob-with-firearms"
+      "unit-cultist-mob"
     ],
     "datasheet": "unit-cultist-mob",
     "statline": "cultist-mob-profile"
@@ -1311,8 +1144,7 @@ window.DG_TERMS={
     "rule": "unit-cultist-mob",
     "units": [
       "unit-cultist-mob",
-      "unit-fellgor-beastmen",
-      "unit-cultist-mob-with-firearms"
+      "unit-fellgor-beastmen"
     ],
     "datasheet": "unit-cultist-mob",
     "statline": "cultist-mob-profile"
@@ -1327,173 +1159,10 @@ window.DG_TERMS={
     "units": [
       "unit-cultist-mob",
       "unit-dark-commune",
-      "unit-fellgor-beastmen",
-      "unit-cultist-mob-with-firearms"
+      "unit-fellgor-beastmen"
     ],
     "datasheet": "unit-cultist-mob",
     "statline": "cultist-mob-profile"
-  },
-  "chaos-space-marines-ability-blood-surge": {
-    "id": "chaos-space-marines-ability-blood-surge",
-    "title": "Blood Surge",
-    "summary": "In your opponent's Shooting phase, each time an enemy unit has shot, if any models from this unit were destroyed as a result of those attacks, this unit can make a Blood Surge move. To do so, roll one D6 and add 2 to the roll: models in this unit move a number of inches up to this result, but this unit must finish that move as close as possible to the closest enemy unit (excluding Aircraft). When doing so, those models can be moved within Engagement Range of that enemy unit. This unit cannot make a Blood Surge move while it is Battle-shocked or within Engagement Range of one or more enemy units, and can only make one Blood Surge move per phase.",
-    "full": "In your opponent's Shooting phase, each time an enemy unit has shot, if any models from this unit were destroyed as a result of those attacks, this unit can make a Blood Surge move. To do so, roll one D6 and add 2 to the roll: models in this unit move a number of inches up to this result, but this unit must finish that move as close as possible to the closest enemy unit (excluding Aircraft). When doing so, those models can be moved within Engagement Range of that enemy unit. This unit cannot make a Blood Surge move while it is Battle-shocked or within Engagement Range of one or more enemy units, and can only make one Blood Surge move per phase.",
-    "glossary": "glossary-chaos-space-marines-ability-blood-surge",
-    "rule": "unit-khorne-berzerkers",
-    "units": [
-      "unit-khorne-berzerkers"
-    ],
-    "datasheet": "unit-khorne-berzerkers",
-    "statline": "khorne-berzerkers-profile"
-  },
-  "chaos-space-marines-ability-icon-of-khorne": {
-    "id": "chaos-space-marines-ability-icon-of-khorne",
-    "title": "Icon of Khorne",
-    "summary": "Each time the bearer's unit destroys an enemy unit, you gain one Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
-    "full": "Each time the bearer's unit destroys an enemy unit, you gain one Bloodshed point. Each time you make a Blessings of Khorne roll, roll one additional D6 for each Bloodshed point you have, after which, all your Bloodshed points are lost.",
-    "glossary": "glossary-chaos-space-marines-ability-icon-of-khorne",
-    "rule": "unit-khorne-berzerkers",
-    "units": [
-      "unit-khorne-berzerkers"
-    ],
-    "datasheet": "unit-khorne-berzerkers",
-    "statline": "khorne-berzerkers-profile"
-  },
-  "chaos-space-marines-ability-hazardous": {
-    "id": "chaos-space-marines-ability-hazardous",
-    "title": "Hazardous",
-    "summary": "Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.",
-    "full": "Each time a unit is selected to shoot or selected to fight, after that unit has resolved all of its attacks, make a number of hazard rolls (06.03) for that unit equal to the number of [HAZARDOUS] weapons you selected in the Select Weapons step.",
-    "glossary": "glossary-chaos-space-marines-ability-hazardous",
-    "rule": "unit-khorne-berzerkers",
-    "units": [
-      "unit-khorne-berzerkers",
-      "unit-legionaries",
-      "unit-plague-marines",
-      "unit-chaos-lord",
-      "unit-chaos-lord-with-jump-pack",
-      "unit-dark-commune",
-      "unit-master-of-possession",
-      "unit-red-corsairs-reave-captain",
-      "unit-sorcerer",
-      "unit-sorcerer-in-terminator-armour",
-      "unit-warpsmith",
-      "unit-chosen",
-      "unit-fellgor-beastmen",
-      "unit-havocs",
-      "unit-nemesis-claw",
-      "unit-raptors",
-      "unit-traitor-guardsmen-squad",
-      "unit-chaos-bikers",
-      "unit-helbrute",
-      "unit-chaos-deimos-predator",
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-decimator",
-      "unit-deredeo-dreadnought",
-      "unit-relic-contemptor-dreadnought",
-      "unit-rogue-psyker",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-khorne-berzerkers",
-    "statline": "khorne-berzerkers-profile"
-  },
-  "chaos-space-marines-weapon-plasma-pistol-standard": {
-    "id": "chaos-space-marines-weapon-plasma-pistol-standard",
-    "title": "➤ Plasma pistol - standard",
-    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol",
-    "full": "Ranged · 12\" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol",
-    "glossary": "glossary-chaos-space-marines-weapon-plasma-pistol-standard",
-    "rule": "unit-khorne-berzerkers",
-    "units": [
-      "unit-khorne-berzerkers",
-      "unit-legionaries",
-      "unit-plague-marines",
-      "unit-chosen",
-      "unit-havocs",
-      "unit-nemesis-claw",
-      "unit-raptors",
-      "unit-chaos-bikers"
-    ],
-    "datasheet": "unit-khorne-berzerkers",
-    "statline": "khorne-berzerkers-profile"
-  },
-  "chaos-space-marines-weapon-plasma-pistol-supercharge": {
-    "id": "chaos-space-marines-weapon-plasma-pistol-supercharge",
-    "title": "➤ Plasma pistol - supercharge",
-    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol",
-    "full": "Ranged · 12\" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol",
-    "glossary": "glossary-chaos-space-marines-weapon-plasma-pistol-supercharge",
-    "rule": "unit-khorne-berzerkers",
-    "units": [
-      "unit-khorne-berzerkers",
-      "unit-legionaries",
-      "unit-plague-marines",
-      "unit-chosen",
-      "unit-havocs",
-      "unit-nemesis-claw",
-      "unit-raptors",
-      "unit-chaos-bikers"
-    ],
-    "datasheet": "unit-khorne-berzerkers",
-    "statline": "khorne-berzerkers-profile"
-  },
-  "chaos-space-marines-weapon-bolt-pistol-2": {
-    "id": "chaos-space-marines-weapon-bolt-pistol-2",
-    "title": "Bolt pistol",
-    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Pistol",
-    "full": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Pistol",
-    "glossary": "glossary-chaos-space-marines-weapon-bolt-pistol-2",
-    "rule": "unit-khorne-berzerkers",
-    "units": [
-      "unit-khorne-berzerkers",
-      "unit-legionaries",
-      "unit-dark-apostle",
-      "unit-master-of-executions",
-      "unit-master-of-possession",
-      "unit-sorcerer",
-      "unit-traitor-enforcer",
-      "unit-chosen",
-      "unit-nemesis-claw",
-      "unit-raptors",
-      "unit-red-corsairs-raiders",
-      "unit-chaos-bikers",
-      "unit-exalted-champion"
-    ],
-    "datasheet": "unit-khorne-berzerkers",
-    "statline": "khorne-berzerkers-profile"
-  },
-  "chaos-space-marines-weapon-chainblade": {
-    "id": "chaos-space-marines-weapon-chainblade",
-    "title": "Chainblade",
-    "summary": "Melee · Melee · A 4 · WS 3+ · S 4 · AP -1 · D 1",
-    "full": "Melee · Melee · A 4 · WS 3+ · S 4 · AP -1 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-chainblade",
-    "rule": "unit-khorne-berzerkers",
-    "units": [
-      "unit-khorne-berzerkers"
-    ],
-    "datasheet": "unit-khorne-berzerkers",
-    "statline": "khorne-berzerkers-profile"
-  },
-  "chaos-space-marines-weapon-khornate-eviscerator": {
-    "id": "chaos-space-marines-weapon-khornate-eviscerator",
-    "title": "Khornate eviscerator",
-    "summary": "Melee · Melee · A 3 · WS 3+ · S 8 · AP -2 · D 2",
-    "full": "Melee · Melee · A 3 · WS 3+ · S 8 · AP -2 · D 2",
-    "glossary": "glossary-chaos-space-marines-weapon-khornate-eviscerator",
-    "rule": "unit-khorne-berzerkers",
-    "units": [
-      "unit-khorne-berzerkers"
-    ],
-    "datasheet": "unit-khorne-berzerkers",
-    "statline": "khorne-berzerkers-profile"
   },
   "chaos-space-marines-ability-veterans-of-the-long-war": {
     "id": "chaos-space-marines-ability-veterans-of-the-long-war",
@@ -1521,347 +1190,6 @@ window.DG_TERMS={
       "unit-chosen",
       "unit-possessed",
       "unit-chaos-bikers"
-    ],
-    "datasheet": "unit-legionaries",
-    "statline": "legionaries-profile"
-  },
-  "chaos-space-marines-ability-psychic": {
-    "id": "chaos-space-marines-ability-psychic",
-    "title": "Psychic",
-    "summary": "Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).",
-    "full": "Each time an attack is made with a [PSYCHIC] weapon, you can ignore any or all modifiers to that attack’s BS or WS characteristic and any or all modifiers to the hit roll. Attacks made with [PSYCHIC] weapons are known as psychic attacks (this can be important for the triggering of other rules).",
-    "glossary": "glossary-chaos-space-marines-ability-psychic",
-    "rule": "unit-legionaries",
-    "units": [
-      "unit-legionaries",
-      "unit-rubric-marines",
-      "unit-dark-commune",
-      "unit-master-of-possession",
-      "unit-sorcerer",
-      "unit-sorcerer-in-terminator-armour",
-      "unit-masters-of-the-maelstrom",
-      "unit-fellgor-beastmen",
-      "unit-rogue-psyker",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-legionaries",
-    "statline": "legionaries-profile"
-  },
-  "chaos-space-marines-ability-ignores-cover": {
-    "id": "chaos-space-marines-ability-ignores-cover",
-    "title": "Ignores Cover",
-    "summary": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).",
-    "full": "Each time an attack is made with an [IGNORES COVER] weapon, the target cannot have the benefit of cover against that attack (13.08), including from rules that give a model or unit the benefit of cover (e.g. Stealth).",
-    "glossary": "glossary-chaos-space-marines-ability-ignores-cover",
-    "rule": "unit-legionaries",
-    "units": [
-      "unit-legionaries",
-      "unit-plague-marines",
-      "unit-rubric-marines",
-      "unit-cultist-firebrand",
-      "unit-lord-discordant-on-helstalker",
-      "unit-warpsmith",
-      "unit-huron-blackheart",
-      "unit-kravek-morne",
-      "unit-chaos-terminator-squad",
-      "unit-havocs",
-      "unit-nemesis-claw",
-      "unit-noise-marines",
-      "unit-raptors",
-      "unit-red-corsairs-raiders",
-      "unit-traitor-guardsmen-squad",
-      "unit-chaos-bikers",
-      "unit-defiler",
-      "unit-helbrute",
-      "unit-heldrake",
-      "unit-cerberus",
-      "unit-chaos-deimos-predator",
-      "unit-cultist-mob-with-firearms",
-      "unit-decimator",
-      "unit-deredeo-dreadnought",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-gellerpox-infected",
-      "unit-greater-brass-scorpion",
-      "unit-kratos",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-leviathan-dreadnought",
-      "unit-mastodon",
-      "unit-relic-contemptor-dreadnought",
-      "unit-spartan",
-      "unit-terrax-pattern-termite",
-      "unit-typhon"
-    ],
-    "datasheet": "unit-legionaries",
-    "statline": "legionaries-profile"
-  },
-  "chaos-space-marines-ability-torrent": {
-    "id": "chaos-space-marines-ability-torrent",
-    "title": "Torrent",
-    "summary": "Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.",
-    "full": "Each time an attack is made with a [TORRENT] weapon, that attack automatically hits the target.",
-    "glossary": "glossary-chaos-space-marines-ability-torrent",
-    "rule": "unit-legionaries",
-    "units": [
-      "unit-legionaries",
-      "unit-plague-marines",
-      "unit-rubric-marines",
-      "unit-cultist-firebrand",
-      "unit-lord-discordant-on-helstalker",
-      "unit-warpsmith",
-      "unit-huron-blackheart",
-      "unit-kravek-morne",
-      "unit-vashtorr-the-arkifane",
-      "unit-chaos-terminator-squad",
-      "unit-havocs",
-      "unit-nemesis-claw",
-      "unit-raptors",
-      "unit-red-corsairs-raiders",
-      "unit-traitor-guardsmen-squad",
-      "unit-chaos-bikers",
-      "unit-defiler",
-      "unit-helbrute",
-      "unit-heldrake",
-      "unit-cerberus",
-      "unit-chaos-deimos-predator",
-      "unit-cultist-mob-with-firearms",
-      "unit-decimator",
-      "unit-deredeo-dreadnought",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-gellerpox-infected",
-      "unit-greater-brass-scorpion",
-      "unit-kratos",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-leviathan-dreadnought",
-      "unit-mastodon",
-      "unit-relic-contemptor-dreadnought",
-      "unit-spartan",
-      "unit-terrax-pattern-termite",
-      "unit-typhon"
-    ],
-    "datasheet": "unit-legionaries",
-    "statline": "legionaries-profile"
-  },
-  "chaos-space-marines-ability-heavy": {
-    "id": "chaos-space-marines-ability-heavy",
-    "title": "Heavy",
-    "summary": "In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit: - That unit is unengaged. - That unit was not set up on the battlefield this turn. - No model in that unit has moved more than 3\" this turn.",
-    "full": "In your Shooting phase, each time an attack is made with a [HEAVY] weapon, add 1 to the hit roll if all of the following apply to the attacking unit: - That unit is unengaged. - That unit was not set up on the battlefield this turn. - No model in that unit has moved more than 3\" this turn.",
-    "glossary": "glossary-chaos-space-marines-ability-heavy",
-    "rule": "unit-legionaries",
-    "units": [
-      "unit-legionaries",
-      "unit-nemesis-claw",
-      "unit-traitor-guardsmen-squad",
-      "unit-cultist-mob-with-firearms",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-kratos",
-      "unit-rapier-carrier",
-      "unit-renegade-heavy-weapons-squad",
-      "unit-sicaran-venator",
-      "unit-spartan"
-    ],
-    "datasheet": "unit-legionaries",
-    "statline": "legionaries-profile"
-  },
-  "chaos-space-marines-ability-sustained-hits": {
-    "id": "chaos-space-marines-ability-sustained-hits",
-    "title": "Sustained Hits",
-    "summary": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X. *Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).",
-    "full": "This ability always takes the form [SUSTAINED HITS X]. Each time an attack made with a [SUSTAINED HITS] weapon results in a critical hit, that attack results in a number of additional hits on the target as denoted by X. *Example: An attack made with a [SUSTAINED HITS 2] weapon results in a critical hit. That attack therefore hits the target three times (once from the critical hit, and twice more from the [SUSTAINED HITS 2] ability).",
-    "glossary": "glossary-chaos-space-marines-ability-sustained-hits",
-    "rule": "unit-legionaries",
-    "units": [
-      "unit-legionaries",
-      "unit-dark-commune",
-      "unit-red-corsairs-reave-captain",
-      "unit-abaddon-the-despoiler",
-      "unit-cypher",
-      "unit-haarken-worldclaimer",
-      "unit-chaos-terminator-squad",
-      "unit-havocs",
-      "unit-nemesis-claw",
-      "unit-obliterators",
-      "unit-chaos-land-raider",
-      "unit-chaos-predator-annihilator",
-      "unit-chaos-predator-destructor",
-      "unit-defiler",
-      "unit-helbrute",
-      "unit-khorne-lord-of-skulls",
-      "unit-cerberus",
-      "unit-chaos-deimos-predator",
-      "unit-chaos-thunderhawk",
-      "unit-decimator",
-      "unit-deredeo-dreadnought",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-fire-raptor-gunship",
-      "unit-greater-brass-scorpion",
-      "unit-kratos",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-mastodon",
-      "unit-negavolt-cultists",
-      "unit-rapier-carrier",
-      "unit-relic-contemptor-dreadnought",
-      "unit-renegade-heavy-weapons-squad",
-      "unit-sicaran-battle-tank",
-      "unit-sicaran-punisher",
-      "unit-sicaran-venator",
-      "unit-sokar-pattern-stormbird",
-      "unit-spartan",
-      "unit-storm-eagle-gunship",
-      "unit-typhon"
-    ],
-    "datasheet": "unit-legionaries",
-    "statline": "legionaries-profile"
-  },
-  "chaos-space-marines-ability-blast": {
-    "id": "chaos-space-marines-ability-blast",
-    "title": "Blast",
-    "summary": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. *Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*",
-    "full": "Each time you gather attack dice for a [BLAST] weapon, add one additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down). If this ability takes the form [BLAST X], each time you gather attack dice for such a weapon, add X additional attack dice for every five models that were in the target unit in the Select Targets step (rounding down) instead. *Example: If a [BLAST 2] weapon with an A characteristic of 3 targets a unit containing 12 models, you would gather four additional attack dice for that weapon (for a total of seven for that weapon).*",
-    "glossary": "glossary-chaos-space-marines-ability-blast",
-    "rule": "unit-legionaries",
-    "units": [
-      "unit-legionaries",
-      "unit-plague-marines",
-      "unit-chaos-rhino",
-      "unit-havocs",
-      "unit-nemesis-claw",
-      "unit-obliterators",
-      "unit-traitor-guardsmen-squad",
-      "unit-chaos-land-raider",
-      "unit-chaos-predator-annihilator",
-      "unit-chaos-predator-destructor",
-      "unit-chaos-vindicator",
-      "unit-defiler",
-      "unit-forgefiend",
-      "unit-helbrute",
-      "unit-khorne-lord-of-skulls",
-      "unit-chaos-deimos-predator",
-      "unit-chaos-thunderhawk",
-      "unit-cultist-mob-with-firearms",
-      "unit-deredeo-dreadnought",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-greater-brass-scorpion",
-      "unit-hell-talon",
-      "unit-kharybdis-assault-claw",
-      "unit-kratos",
-      "unit-land-raider-achilles",
-      "unit-leviathan-dreadnought",
-      "unit-rapier-carrier",
-      "unit-relic-contemptor-dreadnought",
-      "unit-renegade-heavy-weapons-squad",
-      "unit-rogue-psyker",
-      "unit-storm-eagle-gunship",
-      "unit-typhon",
-      "unit-whirlwind-scorpius"
-    ],
-    "datasheet": "unit-legionaries",
-    "statline": "legionaries-profile"
-  },
-  "chaos-space-marines-ability-rapid-fire": {
-    "id": "chaos-space-marines-ability-rapid-fire",
-    "title": "Rapid Fire",
-    "summary": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. *Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range, you would gather one additional attack dice for that weapon (for a total of two for that weapon).*",
-    "full": "This ability always takes the form [RAPID FIRE X]. Each time you gather attack dice for a [RAPID FIRE] weapon, add X additional attack dice if the target unit was within half range of that weapon in the Select Targets step. *Example: If a [RAPID FIRE 1] weapon with an A characteristic of 1 targets a unit that is within half range, you would gather one additional attack dice for that weapon (for a total of two for that weapon).*",
-    "glossary": "glossary-chaos-space-marines-ability-rapid-fire",
-    "rule": "unit-legionaries",
-    "units": [
-      "unit-legionaries",
-      "unit-plague-marines",
-      "unit-chaos-lord-in-terminator-armour",
-      "unit-sorcerer-in-terminator-armour",
-      "unit-chaos-rhino",
-      "unit-kravek-morne",
-      "unit-chaos-terminator-squad",
-      "unit-chosen",
-      "unit-havocs",
-      "unit-nemesis-claw",
-      "unit-raptors",
-      "unit-traitor-guardsmen-squad",
-      "unit-chaos-bikers",
-      "unit-chaos-land-raider",
-      "unit-chaos-predator-annihilator",
-      "unit-chaos-predator-destructor",
-      "unit-chaos-vindicator",
-      "unit-helbrute",
-      "unit-cerberus",
-      "unit-chaos-deimos-predator",
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-cultist-mob-with-firearms",
-      "unit-exalted-champion",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-kratos",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-relic-contemptor-dreadnought",
-      "unit-renegade-enforcer",
-      "unit-renegade-heavy-weapons-squad",
-      "unit-sicaran-battle-tank",
-      "unit-sicaran-punisher",
-      "unit-sicaran-venator",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh",
-      "unit-spartan",
-      "unit-terrax-pattern-termite",
-      "unit-typhon",
-      "unit-whirlwind-scorpius"
-    ],
-    "datasheet": "unit-legionaries",
-    "statline": "legionaries-profile"
-  },
-  "chaos-space-marines-ability-melta": {
-    "id": "chaos-space-marines-ability-melta",
-    "title": "Melta",
-    "summary": "This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic. *Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.",
-    "full": "This ability always takes the form [MELTA X]. Each time a model makes an attack with a [MELTA] weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add X to that weapon’s D characteristic. *Example: A model targets a unit that is within half range of a [MELTA 2] weapon with a D characteristic of D6. While resolving those attacks, that weapon has a D characteristic of D6+2.",
-    "glossary": "glossary-chaos-space-marines-ability-melta",
-    "rule": "unit-legionaries",
-    "units": [
-      "unit-legionaries",
-      "unit-plague-marines",
-      "unit-lord-discordant-on-helstalker",
-      "unit-warpsmith",
-      "unit-havocs",
-      "unit-nemesis-claw",
-      "unit-obliterators",
-      "unit-raptors",
-      "unit-red-corsairs-raiders",
-      "unit-traitor-guardsmen-squad",
-      "unit-chaos-bikers",
-      "unit-defiler",
-      "unit-helbrute",
-      "unit-cerberus",
-      "unit-chaos-deimos-predator",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-kratos",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-leviathan-dreadnought",
-      "unit-mastodon",
-      "unit-relic-contemptor-dreadnought",
-      "unit-spartan",
-      "unit-storm-eagle-gunship",
-      "unit-terrax-pattern-termite",
-      "unit-typhon"
     ],
     "datasheet": "unit-legionaries",
     "statline": "legionaries-profile"
@@ -1916,6 +1244,65 @@ window.DG_TERMS={
     "datasheet": "unit-legionaries",
     "statline": "legionaries-profile"
   },
+  "chaos-space-marines-weapon-bolt-pistol-2": {
+    "id": "chaos-space-marines-weapon-bolt-pistol-2",
+    "title": "Bolt pistol",
+    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Pistol",
+    "full": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Pistol",
+    "glossary": "glossary-chaos-space-marines-weapon-bolt-pistol-2",
+    "rule": "unit-legionaries",
+    "units": [
+      "unit-legionaries",
+      "unit-dark-apostle",
+      "unit-master-of-executions",
+      "unit-master-of-possession",
+      "unit-sorcerer",
+      "unit-traitor-enforcer",
+      "unit-chosen",
+      "unit-nemesis-claw",
+      "unit-raptors",
+      "unit-red-corsairs-raiders",
+      "unit-chaos-bikers"
+    ],
+    "datasheet": "unit-legionaries",
+    "statline": "legionaries-profile"
+  },
+  "chaos-space-marines-weapon-plasma-pistol-standard": {
+    "id": "chaos-space-marines-weapon-plasma-pistol-standard",
+    "title": "➤ Plasma pistol - standard",
+    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol",
+    "full": "Ranged · 12\" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol",
+    "glossary": "glossary-chaos-space-marines-weapon-plasma-pistol-standard",
+    "rule": "unit-legionaries",
+    "units": [
+      "unit-legionaries",
+      "unit-chosen",
+      "unit-havocs",
+      "unit-nemesis-claw",
+      "unit-raptors",
+      "unit-chaos-bikers"
+    ],
+    "datasheet": "unit-legionaries",
+    "statline": "legionaries-profile"
+  },
+  "chaos-space-marines-weapon-plasma-pistol-supercharge": {
+    "id": "chaos-space-marines-weapon-plasma-pistol-supercharge",
+    "title": "➤ Plasma pistol - supercharge",
+    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol",
+    "full": "Ranged · 12\" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol",
+    "glossary": "glossary-chaos-space-marines-weapon-plasma-pistol-supercharge",
+    "rule": "unit-legionaries",
+    "units": [
+      "unit-legionaries",
+      "unit-chosen",
+      "unit-havocs",
+      "unit-nemesis-claw",
+      "unit-raptors",
+      "unit-chaos-bikers"
+    ],
+    "datasheet": "unit-legionaries",
+    "statline": "legionaries-profile"
+  },
   "chaos-space-marines-weapon-boltgun": {
     "id": "chaos-space-marines-weapon-boltgun",
     "title": "Boltgun",
@@ -1928,8 +1315,7 @@ window.DG_TERMS={
       "unit-chosen",
       "unit-havocs",
       "unit-nemesis-claw",
-      "unit-red-corsairs-raiders",
-      "unit-rapier-carrier"
+      "unit-red-corsairs-raiders"
     ],
     "datasheet": "unit-legionaries",
     "statline": "legionaries-profile"
@@ -1945,7 +1331,6 @@ window.DG_TERMS={
       "unit-legionaries",
       "unit-havocs",
       "unit-nemesis-claw",
-      "unit-noise-marines",
       "unit-raptors",
       "unit-chaos-bikers"
     ],
@@ -1978,8 +1363,7 @@ window.DG_TERMS={
       "unit-nemesis-claw",
       "unit-raptors",
       "unit-traitor-guardsmen-squad",
-      "unit-chaos-bikers",
-      "unit-cultist-mob-with-firearms"
+      "unit-chaos-bikers"
     ],
     "datasheet": "unit-legionaries",
     "statline": "legionaries-profile"
@@ -2061,7 +1445,6 @@ window.DG_TERMS={
     "rule": "unit-legionaries",
     "units": [
       "unit-legionaries",
-      "unit-plague-marines",
       "unit-havocs",
       "unit-nemesis-claw",
       "unit-raptors",
@@ -2079,7 +1462,6 @@ window.DG_TERMS={
     "rule": "unit-legionaries",
     "units": [
       "unit-legionaries",
-      "unit-plague-marines",
       "unit-havocs",
       "unit-nemesis-claw",
       "unit-raptors",
@@ -2110,433 +1492,14 @@ window.DG_TERMS={
     "rule": "unit-legionaries",
     "units": [
       "unit-legionaries",
-      "unit-plague-marines",
       "unit-havocs",
       "unit-nemesis-claw",
       "unit-raptors",
       "unit-red-corsairs-raiders",
-      "unit-chaos-bikers",
-      "unit-leviathan-dreadnought"
+      "unit-chaos-bikers"
     ],
     "datasheet": "unit-legionaries",
     "statline": "legionaries-profile"
-  },
-  "chaos-space-marines-ability-infused-with-the-blessings-of-nurgle": {
-    "id": "chaos-space-marines-ability-infused-with-the-blessings-of-nurgle",
-    "title": "Infused with the Blessings of Nurgle",
-    "summary": "In your Shooting phase, each time this unit is selected to shoot, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that unit is Afflicted.",
-    "full": "In your Shooting phase, each time this unit is selected to shoot, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next turn, that unit is Afflicted.",
-    "glossary": "glossary-chaos-space-marines-ability-infused-with-the-blessings-of-nurgle",
-    "rule": "unit-plague-marines",
-    "units": [
-      "unit-plague-marines"
-    ],
-    "datasheet": "unit-plague-marines",
-    "statline": "plague-marines-profile"
-  },
-  "chaos-space-marines-ability-icon-of-despair": {
-    "id": "chaos-space-marines-ability-icon-of-despair",
-    "title": "Icon of Despair",
-    "summary": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1.",
-    "full": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1.",
-    "glossary": "glossary-chaos-space-marines-ability-icon-of-despair",
-    "rule": "unit-plague-marines",
-    "units": [
-      "unit-plague-marines"
-    ],
-    "datasheet": "unit-plague-marines",
-    "statline": "plague-marines-profile"
-  },
-  "chaos-space-marines-ability-lethal-hits": {
-    "id": "chaos-space-marines-ability-lethal-hits",
-    "title": "Lethal Hits",
-    "summary": "Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target. *Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].*",
-    "full": "Each time an attack made with a [LETHAL HITS] weapon results in a critical hit, you can choose for that attack to automatically wound the target. *Designer’s Note: Choosing to automatically wound the target means that no wound roll is made for that attack. You may decide against this, as it means that attack cannot result in a critical wound and so cannot trigger other abilities such as [DEVASTATING WOUNDS].*",
-    "glossary": "glossary-chaos-space-marines-ability-lethal-hits",
-    "rule": "unit-plague-marines",
-    "units": [
-      "unit-plague-marines",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-greater-blight-drone",
-      "unit-mutoid-vermin",
-      "unit-renegade-plague-ogryns",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-plague-marines",
-    "statline": "plague-marines-profile"
-  },
-  "chaos-space-marines-ability-anti": {
-    "id": "chaos-space-marines-ability-anti",
-    "title": "Anti",
-    "summary": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*",
-    "full": "This ability always takes the form [ANTI-X Y+]. Each time an attack is made with an [ANTI] weapon, if the target unit has the keyword denoted by X, an unmodified wound roll of Y+ is a critical wound. *Example: An attack made with an [ANTI-VEHICLE 4+] weapon against a Vehicle unit will result in a critical wound on an unmodified wound roll of 4+, while an attack made with an [ANTI-PSYKER 2+] weapon against a Psyker unit will result in a critical wound on an unmodified wound roll of 2+.*",
-    "glossary": "glossary-chaos-space-marines-ability-anti",
-    "rule": "unit-plague-marines",
-    "units": [
-      "unit-plague-marines",
-      "unit-rubric-marines",
-      "unit-chaos-lord-in-terminator-armour",
-      "unit-lord-discordant-on-helstalker",
-      "unit-master-of-possession",
-      "unit-sorcerer-in-terminator-armour",
-      "unit-warpsmith",
-      "unit-chaos-rhino",
-      "unit-fabius-bile",
-      "unit-kravek-morne",
-      "unit-masters-of-the-maelstrom",
-      "unit-vashtorr-the-arkifane",
-      "unit-chaos-terminator-squad",
-      "unit-chosen",
-      "unit-chaos-bikers",
-      "unit-chaos-land-raider",
-      "unit-chaos-predator-annihilator",
-      "unit-chaos-predator-destructor",
-      "unit-chaos-vindicator",
-      "unit-heldrake",
-      "unit-blood-slaughterer",
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-chaos-thunderhawk",
-      "unit-decimator",
-      "unit-deredeo-dreadnought",
-      "unit-exalted-champion",
-      "unit-fellblade",
-      "unit-kratos",
-      "unit-leviathan-dreadnought",
-      "unit-mastodon",
-      "unit-rapier-carrier",
-      "unit-relic-contemptor-dreadnought",
-      "unit-sokar-pattern-stormbird",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh",
-      "unit-terrax-pattern-termite",
-      "unit-xiphon-interceptor"
-    ],
-    "datasheet": "unit-plague-marines",
-    "statline": "plague-marines-profile"
-  },
-  "chaos-space-marines-weapon-power-fist": {
-    "id": "chaos-space-marines-weapon-power-fist",
-    "title": "Power fist",
-    "summary": "Melee · Melee · A 3 · WS 3+ · S 8 · AP -2 · D 2 · Lethal Hits",
-    "full": "Melee · Melee · A 3 · WS 3+ · S 8 · AP -2 · D 2 · Lethal Hits",
-    "glossary": "glossary-chaos-space-marines-weapon-power-fist",
-    "rule": "unit-plague-marines",
-    "units": [
-      "unit-plague-marines"
-    ],
-    "datasheet": "unit-plague-marines",
-    "statline": "plague-marines-profile"
-  },
-  "chaos-space-marines-weapon-plague-knives": {
-    "id": "chaos-space-marines-weapon-plague-knives",
-    "title": "Plague knives",
-    "summary": "Melee · Melee · A 3 · WS 3+ · S 4 · AP 0 · D 1 · Lethal Hits",
-    "full": "Melee · Melee · A 3 · WS 3+ · S 4 · AP 0 · D 1 · Lethal Hits",
-    "glossary": "glossary-chaos-space-marines-weapon-plague-knives",
-    "rule": "unit-plague-marines",
-    "units": [
-      "unit-plague-marines"
-    ],
-    "datasheet": "unit-plague-marines",
-    "statline": "plague-marines-profile"
-  },
-  "chaos-space-marines-weapon-bubotic-weapons": {
-    "id": "chaos-space-marines-weapon-bubotic-weapons",
-    "title": "Bubotic weapons",
-    "summary": "Melee · Melee · A 4 · WS 3+ · S 5 · AP -2 · D 1 · Lethal Hits",
-    "full": "Melee · Melee · A 4 · WS 3+ · S 5 · AP -2 · D 1 · Lethal Hits",
-    "glossary": "glossary-chaos-space-marines-weapon-bubotic-weapons",
-    "rule": "unit-plague-marines",
-    "units": [
-      "unit-plague-marines"
-    ],
-    "datasheet": "unit-plague-marines",
-    "statline": "plague-marines-profile"
-  },
-  "chaos-space-marines-weapon-plague-bolt-pistol": {
-    "id": "chaos-space-marines-weapon-plague-bolt-pistol",
-    "title": "Plague bolt pistol",
-    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Lethal Hits",
-    "full": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Lethal Hits",
-    "glossary": "glossary-chaos-space-marines-weapon-plague-bolt-pistol",
-    "rule": "unit-plague-marines",
-    "units": [
-      "unit-plague-marines"
-    ],
-    "datasheet": "unit-plague-marines",
-    "statline": "plague-marines-profile"
-  },
-  "chaos-space-marines-weapon-boltgun-2": {
-    "id": "chaos-space-marines-weapon-boltgun-2",
-    "title": "Boltgun",
-    "summary": "Ranged · 24\" · A 2 · BS 3+ · S 4 · AP 0 · D 1 · Lethal Hits",
-    "full": "Ranged · 24\" · A 2 · BS 3+ · S 4 · AP 0 · D 1 · Lethal Hits",
-    "glossary": "glossary-chaos-space-marines-weapon-boltgun-2",
-    "rule": "unit-plague-marines",
-    "units": [
-      "unit-plague-marines"
-    ],
-    "datasheet": "unit-plague-marines",
-    "statline": "plague-marines-profile"
-  },
-  "chaos-space-marines-weapon-heavy-plague-weapon": {
-    "id": "chaos-space-marines-weapon-heavy-plague-weapon",
-    "title": "Heavy plague weapon",
-    "summary": "Melee · Melee · A 3 · WS 4+ · S 8 · AP -2 · D 2 · Lethal Hits",
-    "full": "Melee · Melee · A 3 · WS 4+ · S 8 · AP -2 · D 2 · Lethal Hits",
-    "glossary": "glossary-chaos-space-marines-weapon-heavy-plague-weapon",
-    "rule": "unit-plague-marines",
-    "units": [
-      "unit-plague-marines"
-    ],
-    "datasheet": "unit-plague-marines",
-    "statline": "plague-marines-profile"
-  },
-  "chaos-space-marines-weapon-blight-launcher": {
-    "id": "chaos-space-marines-weapon-blight-launcher",
-    "title": "Blight launcher",
-    "summary": "Ranged · 24\" · A D3 · BS 3+ · S 6 · AP -1 · D 2 · Blast, Lethal Hits",
-    "full": "Ranged · 24\" · A D3 · BS 3+ · S 6 · AP -1 · D 2 · Blast, Lethal Hits",
-    "glossary": "glossary-chaos-space-marines-weapon-blight-launcher",
-    "rule": "unit-plague-marines",
-    "units": [
-      "unit-plague-marines"
-    ],
-    "datasheet": "unit-plague-marines",
-    "statline": "plague-marines-profile"
-  },
-  "chaos-space-marines-weapon-plague-spewer": {
-    "id": "chaos-space-marines-weapon-plague-spewer",
-    "title": "Plague spewer",
-    "summary": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP -1 · D 1 · Anti-INFANTRY 2+, Ignores Cover, Torrent",
-    "full": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP -1 · D 1 · Anti-INFANTRY 2+, Ignores Cover, Torrent",
-    "glossary": "glossary-chaos-space-marines-weapon-plague-spewer",
-    "rule": "unit-plague-marines",
-    "units": [
-      "unit-plague-marines"
-    ],
-    "datasheet": "unit-plague-marines",
-    "statline": "plague-marines-profile"
-  },
-  "chaos-space-marines-weapon-plague-belcher": {
-    "id": "chaos-space-marines-weapon-plague-belcher",
-    "title": "Plague belcher",
-    "summary": "Ranged · 12\" · A D6 · BS N/A · S 4 · AP 0 · D 1 · Anti-INFANTRY 4+, Ignores Cover, Torrent",
-    "full": "Ranged · 12\" · A D6 · BS N/A · S 4 · AP 0 · D 1 · Anti-INFANTRY 4+, Ignores Cover, Torrent",
-    "glossary": "glossary-chaos-space-marines-weapon-plague-belcher",
-    "rule": "unit-plague-marines",
-    "units": [
-      "unit-plague-marines"
-    ],
-    "datasheet": "unit-plague-marines",
-    "statline": "plague-marines-profile"
-  },
-  "chaos-space-marines-ability-bringers-of-change": {
-    "id": "chaos-space-marines-ability-bringers-of-change",
-    "title": "Bringers of Change",
-    "summary": "Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the target of that attack is within range of an objective marker you do not control, you can re-roll the Wound roll instead.",
-    "full": "Each time a model in this unit makes a ranged attack, re-roll a Wound roll of 1. If the target of that attack is within range of an objective marker you do not control, you can re-roll the Wound roll instead.",
-    "glossary": "glossary-chaos-space-marines-ability-bringers-of-change",
-    "rule": "unit-rubric-marines",
-    "units": [
-      "unit-rubric-marines"
-    ],
-    "datasheet": "unit-rubric-marines",
-    "statline": "rubric-marines-profile"
-  },
-  "chaos-space-marines-ability-icon-of-flame": {
-    "id": "chaos-space-marines-ability-icon-of-flame",
-    "title": "Icon of Flame",
-    "summary": "Ranged weapons equipped by models in this unit (excluding Characters) have the [Ignores Cover] ability.",
-    "full": "Ranged weapons equipped by models in this unit (excluding Characters) have the [Ignores Cover] ability.",
-    "glossary": "glossary-chaos-space-marines-ability-icon-of-flame",
-    "rule": "unit-rubric-marines",
-    "units": [
-      "unit-rubric-marines"
-    ],
-    "datasheet": "unit-rubric-marines",
-    "statline": "rubric-marines-profile"
-  },
-  "chaos-space-marines-ability-devastating-wounds": {
-    "id": "chaos-space-marines-ability-devastating-wounds",
-    "title": "Devastating Wounds",
-    "summary": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*",
-    "full": "Each time an attack made with a [DEVASTATING WOUNDS] weapon results in a critical wound, the attack sequence for that attack ends and the target unit suffers a number of mortal wounds equal to the D characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. Mortal wounds inflicted by [DEVASTATING WOUNDS] weapons can damage a maximum of one model for each critical wound; any remaining mortal wounds inflicted by that attack are lost. Example: An attack made with a [DEVASTATING WOUNDS] weapon with a D characteristic of 3 results in a critical wound against an Intercessor Squad, so inflicts 3 mortal wounds. The first 2 mortal wounds are sufficient to destroy 1 Intercessor model, so the remaining mortal wound is lost.*",
-    "glossary": "glossary-chaos-space-marines-ability-devastating-wounds",
-    "rule": "unit-rubric-marines",
-    "units": [
-      "unit-rubric-marines",
-      "unit-chaos-lord",
-      "unit-chaos-lord-in-terminator-armour",
-      "unit-dark-commune",
-      "unit-master-of-executions",
-      "unit-sorcerer",
-      "unit-sorcerer-in-terminator-armour",
-      "unit-chaos-rhino",
-      "unit-abaddon-the-despoiler",
-      "unit-kravek-morne",
-      "unit-vashtorr-the-arkifane",
-      "unit-chaos-terminator-squad",
-      "unit-chosen",
-      "unit-fellgor-beastmen",
-      "unit-chaos-bikers",
-      "unit-chaos-land-raider",
-      "unit-chaos-predator-annihilator",
-      "unit-chaos-predator-destructor",
-      "unit-chaos-vindicator",
-      "unit-defiler",
-      "unit-heldrake",
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-decimator",
-      "unit-deredeo-dreadnought",
-      "unit-exalted-champion",
-      "unit-fellblade",
-      "unit-kratos",
-      "unit-land-raider-achilles",
-      "unit-leviathan-dreadnought",
-      "unit-mastodon",
-      "unit-relic-contemptor-dreadnought",
-      "unit-rogue-psyker",
-      "unit-sicaran-punisher",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh",
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-rubric-marines",
-    "statline": "rubric-marines-profile"
-  },
-  "chaos-space-marines-weapon-force-weapon": {
-    "id": "chaos-space-marines-weapon-force-weapon",
-    "title": "Force weapon",
-    "summary": "Melee · Melee · A 3 · WS 3+ · S 6 · AP -1 · D D3 · Psychic",
-    "full": "Melee · Melee · A 3 · WS 3+ · S 6 · AP -1 · D D3 · Psychic",
-    "glossary": "glossary-chaos-space-marines-weapon-force-weapon",
-    "rule": "unit-rubric-marines",
-    "units": [
-      "unit-rubric-marines"
-    ],
-    "datasheet": "unit-rubric-marines",
-    "statline": "rubric-marines-profile"
-  },
-  "chaos-space-marines-weapon-malefic-curse": {
-    "id": "chaos-space-marines-weapon-malefic-curse",
-    "title": "Malefic Curse",
-    "summary": "Ranged · 24\" · A 3 · BS 3+ · S 4 · AP -3 · D 1 · Anti-INFANTRY 4+, Devastating Wounds, Psychic",
-    "full": "Ranged · 24\" · A 3 · BS 3+ · S 4 · AP -3 · D 1 · Anti-INFANTRY 4+, Devastating Wounds, Psychic",
-    "glossary": "glossary-chaos-space-marines-weapon-malefic-curse",
-    "rule": "unit-rubric-marines",
-    "units": [
-      "unit-rubric-marines"
-    ],
-    "datasheet": "unit-rubric-marines",
-    "statline": "rubric-marines-profile"
-  },
-  "chaos-space-marines-weapon-inferno-bolt-pistol": {
-    "id": "chaos-space-marines-weapon-inferno-bolt-pistol",
-    "title": "Inferno bolt pistol",
-    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP -1 · D 1 · Pistol",
-    "full": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP -1 · D 1 · Pistol",
-    "glossary": "glossary-chaos-space-marines-weapon-inferno-bolt-pistol",
-    "rule": "unit-rubric-marines",
-    "units": [
-      "unit-rubric-marines"
-    ],
-    "datasheet": "unit-rubric-marines",
-    "statline": "rubric-marines-profile"
-  },
-  "chaos-space-marines-weapon-warpflame-pistol": {
-    "id": "chaos-space-marines-weapon-warpflame-pistol",
-    "title": "Warpflame pistol",
-    "summary": "Ranged · 12\" · A D6 · BS N/A · S 3 · AP -1 · D 1 · Ignores Cover, Pistol, Torrent",
-    "full": "Ranged · 12\" · A D6 · BS N/A · S 3 · AP -1 · D 1 · Ignores Cover, Pistol, Torrent",
-    "glossary": "glossary-chaos-space-marines-weapon-warpflame-pistol",
-    "rule": "unit-rubric-marines",
-    "units": [
-      "unit-rubric-marines"
-    ],
-    "datasheet": "unit-rubric-marines",
-    "statline": "rubric-marines-profile"
-  },
-  "chaos-space-marines-weapon-inferno-boltgun": {
-    "id": "chaos-space-marines-weapon-inferno-boltgun",
-    "title": "Inferno boltgun",
-    "summary": "Ranged · 24\" · A 2 · BS 3+ · S 4 · AP -2 · D 1",
-    "full": "Ranged · 24\" · A 2 · BS 3+ · S 4 · AP -2 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-inferno-boltgun",
-    "rule": "unit-rubric-marines",
-    "units": [
-      "unit-rubric-marines"
-    ],
-    "datasheet": "unit-rubric-marines",
-    "statline": "rubric-marines-profile"
-  },
-  "chaos-space-marines-weapon-close-combat-weapon-2": {
-    "id": "chaos-space-marines-weapon-close-combat-weapon-2",
-    "title": "Close combat weapon",
-    "summary": "Melee · Melee · A 2 · WS 3+ · S 4 · AP 0 · D 1",
-    "full": "Melee · Melee · A 2 · WS 3+ · S 4 · AP 0 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-close-combat-weapon-2",
-    "rule": "unit-rubric-marines",
-    "units": [
-      "unit-rubric-marines",
-      "unit-rapier-carrier"
-    ],
-    "datasheet": "unit-rubric-marines",
-    "statline": "rubric-marines-profile"
-  },
-  "chaos-space-marines-weapon-warpflamer": {
-    "id": "chaos-space-marines-weapon-warpflamer",
-    "title": "Warpflamer",
-    "summary": "Ranged · 12\" · A D6 · BS N/A · S 4 · AP -1 · D 1 · Ignores Cover, Torrent",
-    "full": "Ranged · 12\" · A D6 · BS N/A · S 4 · AP -1 · D 1 · Ignores Cover, Torrent",
-    "glossary": "glossary-chaos-space-marines-weapon-warpflamer",
-    "rule": "unit-rubric-marines",
-    "units": [
-      "unit-rubric-marines"
-    ],
-    "datasheet": "unit-rubric-marines",
-    "statline": "rubric-marines-profile"
-  },
-  "chaos-space-marines-weapon-soulreaper-cannon": {
-    "id": "chaos-space-marines-weapon-soulreaper-cannon",
-    "title": "Soulreaper cannon",
-    "summary": "Ranged · 24\" · A 6 · BS 3+ · S 6 · AP -2 · D 1 · Devastating Wounds",
-    "full": "Ranged · 24\" · A 6 · BS 3+ · S 6 · AP -2 · D 1 · Devastating Wounds",
-    "glossary": "glossary-chaos-space-marines-weapon-soulreaper-cannon",
-    "rule": "unit-rubric-marines",
-    "units": [
-      "unit-rubric-marines"
-    ],
-    "datasheet": "unit-rubric-marines",
-    "statline": "rubric-marines-profile"
-  },
-  "chaos-space-marines-ability-leader": {
-    "id": "chaos-space-marines-ability-leader",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: ■ CHOSEN ■ LEGIONARIES",
-    "full": "This model can be attached to the following units: ■ CHOSEN ■ LEGIONARIES",
-    "glossary": "glossary-chaos-space-marines-ability-leader",
-    "rule": "unit-chaos-lord",
-    "units": [
-      "unit-chaos-lord",
-      "unit-sorcerer"
-    ],
-    "datasheet": "unit-chaos-lord",
-    "statline": "chaos-lord-profile"
   },
   "chaos-space-marines-ability-chance-for-glory": {
     "id": "chaos-space-marines-ability-chance-for-glory",
@@ -2561,52 +1524,7 @@ window.DG_TERMS={
     "units": [
       "unit-chaos-lord",
       "unit-chaos-lord-in-terminator-armour",
-      "unit-chaos-lord-with-jump-pack",
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-chaos-lord",
-    "statline": "chaos-lord-profile"
-  },
-  "chaos-space-marines-ability-leader-2": {
-    "id": "chaos-space-marines-ability-leader-2",
-    "title": "Leader",
-    "summary": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit. Each time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-    "full": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit. Each time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. Each time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
-    "glossary": "glossary-chaos-space-marines-ability-leader-2",
-    "rule": "unit-chaos-lord",
-    "units": [
-      "unit-chaos-lord",
-      "unit-chaos-lord-in-terminator-armour",
-      "unit-chaos-lord-with-jump-pack",
-      "unit-cultist-firebrand",
-      "unit-dark-apostle",
-      "unit-dark-commune",
-      "unit-master-of-possession",
-      "unit-red-corsairs-reave-captain",
-      "unit-sorcerer",
-      "unit-sorcerer-in-terminator-armour",
-      "unit-traitor-enforcer",
-      "unit-warpsmith",
-      "unit-abaddon-the-despoiler",
-      "unit-fabius-bile",
-      "unit-haarken-worldclaimer",
-      "unit-huron-blackheart",
-      "unit-kravek-morne",
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-renegade-enforcer",
-      "unit-rogue-psyker",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
+      "unit-chaos-lord-with-jump-pack"
     ],
     "datasheet": "unit-chaos-lord",
     "statline": "chaos-lord-profile"
@@ -2633,16 +1551,7 @@ window.DG_TERMS={
     "rule": "unit-chaos-lord",
     "units": [
       "unit-chaos-lord",
-      "unit-chaos-lord-with-jump-pack",
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
+      "unit-chaos-lord-with-jump-pack"
     ],
     "datasheet": "unit-chaos-lord",
     "statline": "chaos-lord-profile"
@@ -2660,26 +1569,17 @@ window.DG_TERMS={
     "datasheet": "unit-chaos-lord",
     "statline": "chaos-lord-profile"
   },
-  "chaos-space-marines-weapon-power-fist-2": {
-    "id": "chaos-space-marines-weapon-power-fist-2",
+  "chaos-space-marines-weapon-power-fist": {
+    "id": "chaos-space-marines-weapon-power-fist",
     "title": "Power fist",
     "summary": "Melee · Melee · A 5 · WS 2+ · S 8 · AP -2 · D 2",
     "full": "Melee · Melee · A 5 · WS 2+ · S 8 · AP -2 · D 2",
-    "glossary": "glossary-chaos-space-marines-weapon-power-fist-2",
+    "glossary": "glossary-chaos-space-marines-weapon-power-fist",
     "rule": "unit-chaos-lord",
     "units": [
       "unit-chaos-lord",
       "unit-chaos-lord-in-terminator-armour",
-      "unit-chaos-lord-with-jump-pack",
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
+      "unit-chaos-lord-with-jump-pack"
     ],
     "datasheet": "unit-chaos-lord",
     "statline": "chaos-lord-profile"
@@ -2695,16 +1595,7 @@ window.DG_TERMS={
       "unit-chaos-lord",
       "unit-chaos-lord-with-jump-pack",
       "unit-red-corsairs-reave-captain",
-      "unit-warpsmith",
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
+      "unit-warpsmith"
     ],
     "datasheet": "unit-chaos-lord",
     "statline": "chaos-lord-profile"
@@ -2720,33 +1611,10 @@ window.DG_TERMS={
       "unit-chaos-lord",
       "unit-chaos-lord-with-jump-pack",
       "unit-red-corsairs-reave-captain",
-      "unit-warpsmith",
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
+      "unit-warpsmith"
     ],
     "datasheet": "unit-chaos-lord",
     "statline": "chaos-lord-profile"
-  },
-  "chaos-space-marines-ability-leader-3": {
-    "id": "chaos-space-marines-ability-leader-3",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: ■ CHAOS TERMINATOR SQUAD",
-    "full": "This model can be attached to the following units: ■ CHAOS TERMINATOR SQUAD",
-    "glossary": "glossary-chaos-space-marines-ability-leader-3",
-    "rule": "unit-chaos-lord-in-terminator-armour",
-    "units": [
-      "unit-chaos-lord-in-terminator-armour",
-      "unit-sorcerer-in-terminator-armour"
-    ],
-    "datasheet": "unit-chaos-lord-in-terminator-armour",
-    "statline": "chaos-lord-in-terminator-armour-profile"
   },
   "chaos-space-marines-ability-formidably-resilient": {
     "id": "chaos-space-marines-ability-formidably-resilient",
@@ -2761,83 +1629,6 @@ window.DG_TERMS={
     "datasheet": "unit-chaos-lord-in-terminator-armour",
     "statline": "chaos-lord-in-terminator-armour-profile"
   },
-  "chaos-space-marines-ability-twin-linked": {
-    "id": "chaos-space-marines-ability-twin-linked",
-    "title": "Twin-linked",
-    "summary": "Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.",
-    "full": "Each time an attack is made with a [TWIN-LINKED] weapon, you can re-roll the wound roll.",
-    "glossary": "glossary-chaos-space-marines-ability-twin-linked",
-    "rule": "unit-chaos-lord-in-terminator-armour",
-    "units": [
-      "unit-chaos-lord-in-terminator-armour",
-      "unit-chaos-lord-with-jump-pack",
-      "unit-chaos-terminator-squad",
-      "unit-chosen",
-      "unit-nemesis-claw",
-      "unit-warp-talons",
-      "unit-chaos-land-raider",
-      "unit-chaos-predator-annihilator",
-      "unit-helbrute",
-      "unit-blood-slaughterer",
-      "unit-cerberus",
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-chaos-thunderhawk",
-      "unit-decimator",
-      "unit-deredeo-dreadnought",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-fire-raptor-gunship",
-      "unit-hell-blade",
-      "unit-hell-talon",
-      "unit-kratos",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-leviathan-dreadnought",
-      "unit-rapier-carrier",
-      "unit-relic-contemptor-dreadnought",
-      "unit-sokar-pattern-stormbird",
-      "unit-spartan",
-      "unit-storm-eagle-gunship",
-      "unit-terrax-pattern-termite",
-      "unit-xiphon-interceptor"
-    ],
-    "datasheet": "unit-chaos-lord-in-terminator-armour",
-    "statline": "chaos-lord-in-terminator-armour-profile"
-  },
-  "chaos-space-marines-ability-deep-strike": {
-    "id": "chaos-space-marines-ability-deep-strike",
-    "title": "Deep Strike",
-    "summary": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
-    "full": "Each time this unit makes an ingress move (20.04), if every model in this unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from all enemy units, even if that is within your opponent’s deployment zone.",
-    "glossary": "glossary-chaos-space-marines-ability-deep-strike",
-    "rule": "unit-chaos-lord-in-terminator-armour",
-    "units": [
-      "unit-chaos-lord-in-terminator-armour",
-      "unit-chaos-lord-with-jump-pack",
-      "unit-heretic-astartes-daemon-prince-with-wings",
-      "unit-sorcerer-in-terminator-armour",
-      "unit-abaddon-the-despoiler",
-      "unit-haarken-worldclaimer",
-      "unit-huron-blackheart",
-      "unit-kravek-morne",
-      "unit-vashtorr-the-arkifane",
-      "unit-chaos-terminator-squad",
-      "unit-mutilators",
-      "unit-obliterators",
-      "unit-raptors",
-      "unit-warp-talons",
-      "unit-dreadclaw-drop-pod",
-      "unit-greater-blight-drone",
-      "unit-kharybdis-assault-claw",
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-chaos-lord-in-terminator-armour",
-    "statline": "chaos-lord-in-terminator-armour-profile"
-  },
   "chaos-space-marines-weapon-combi-bolter": {
     "id": "chaos-space-marines-weapon-combi-bolter",
     "title": "Combi-bolter",
@@ -2847,16 +1638,7 @@ window.DG_TERMS={
     "rule": "unit-chaos-lord-in-terminator-armour",
     "units": [
       "unit-chaos-lord-in-terminator-armour",
-      "unit-kravek-morne",
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
+      "unit-kravek-morne"
     ],
     "datasheet": "unit-chaos-lord-in-terminator-armour",
     "statline": "chaos-lord-in-terminator-armour-profile"
@@ -2913,20 +1695,6 @@ window.DG_TERMS={
     "datasheet": "unit-chaos-lord-in-terminator-armour",
     "statline": "chaos-lord-in-terminator-armour-profile"
   },
-  "chaos-space-marines-ability-leader-4": {
-    "id": "chaos-space-marines-ability-leader-4",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: ■ RAPTORS",
-    "full": "This model can be attached to the following units: ■ RAPTORS",
-    "glossary": "glossary-chaos-space-marines-ability-leader-4",
-    "rule": "unit-chaos-lord-with-jump-pack",
-    "units": [
-      "unit-chaos-lord-with-jump-pack",
-      "unit-haarken-worldclaimer"
-    ],
-    "datasheet": "unit-chaos-lord-with-jump-pack",
-    "statline": "chaos-lord-with-jump-pack-profile"
-  },
   "chaos-space-marines-ability-cruel-hunter": {
     "id": "chaos-space-marines-ability-cruel-hunter",
     "title": "Cruel Hunter",
@@ -2963,16 +1731,7 @@ window.DG_TERMS={
     "units": [
       "unit-chaos-lord-with-jump-pack",
       "unit-lord-discordant-on-helstalker",
-      "unit-red-corsairs-reave-captain",
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
+      "unit-red-corsairs-reave-captain"
     ],
     "datasheet": "unit-chaos-lord-with-jump-pack",
     "statline": "chaos-lord-with-jump-pack-profile"
@@ -3003,20 +1762,6 @@ window.DG_TERMS={
     "datasheet": "unit-cultist-firebrand",
     "statline": "cultist-firebrand-profile"
   },
-  "chaos-space-marines-ability-leader-5": {
-    "id": "chaos-space-marines-ability-leader-5",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: ■ ACCURSED CULTISTS ■ CULTIST MOB",
-    "full": "This model can be attached to the following units: ■ ACCURSED CULTISTS ■ CULTIST MOB",
-    "glossary": "glossary-chaos-space-marines-ability-leader-5",
-    "rule": "unit-cultist-firebrand",
-    "units": [
-      "unit-cultist-firebrand",
-      "unit-dark-commune"
-    ],
-    "datasheet": "unit-cultist-firebrand",
-    "statline": "cultist-firebrand-profile"
-  },
   "chaos-space-marines-weapon-balefire-pike": {
     "id": "chaos-space-marines-weapon-balefire-pike",
     "title": "Balefire pike",
@@ -3030,32 +1775,18 @@ window.DG_TERMS={
     "datasheet": "unit-cultist-firebrand",
     "statline": "cultist-firebrand-profile"
   },
-  "chaos-space-marines-weapon-close-combat-weapon-3": {
-    "id": "chaos-space-marines-weapon-close-combat-weapon-3",
+  "chaos-space-marines-weapon-close-combat-weapon-2": {
+    "id": "chaos-space-marines-weapon-close-combat-weapon-2",
     "title": "Close combat weapon",
     "summary": "Melee · Melee · A 4 · WS 4+ · S 4 · AP 0 · D 1",
     "full": "Melee · Melee · A 4 · WS 4+ · S 4 · AP 0 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-close-combat-weapon-3",
+    "glossary": "glossary-chaos-space-marines-weapon-close-combat-weapon-2",
     "rule": "unit-cultist-firebrand",
     "units": [
       "unit-cultist-firebrand"
     ],
     "datasheet": "unit-cultist-firebrand",
     "statline": "cultist-firebrand-profile"
-  },
-  "chaos-space-marines-ability-leader-6": {
-    "id": "chaos-space-marines-ability-leader-6",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: ■ ACCURSED CULTISTS ■ CHOSEN ■ CULTIST MOB ■ LEGIONARIES",
-    "full": "This model can be attached to the following units: ■ ACCURSED CULTISTS ■ CHOSEN ■ CULTIST MOB ■ LEGIONARIES",
-    "glossary": "glossary-chaos-space-marines-ability-leader-6",
-    "rule": "unit-dark-apostle",
-    "units": [
-      "unit-dark-apostle",
-      "unit-fabius-bile"
-    ],
-    "datasheet": "unit-dark-apostle",
-    "statline": "dark-apostle-profile"
   },
   "chaos-space-marines-ability-dark-zealotry": {
     "id": "chaos-space-marines-ability-dark-zealotry",
@@ -3109,18 +1840,17 @@ window.DG_TERMS={
     "datasheet": "unit-dark-apostle",
     "statline": "dark-apostle-profile"
   },
-  "chaos-space-marines-weapon-close-combat-weapon-4": {
-    "id": "chaos-space-marines-weapon-close-combat-weapon-4",
+  "chaos-space-marines-weapon-close-combat-weapon-3": {
+    "id": "chaos-space-marines-weapon-close-combat-weapon-3",
     "title": "Close combat weapon",
     "summary": "Melee · Melee · A 1 · WS 4+ · S 3 · AP 0 · D 1",
     "full": "Melee · Melee · A 1 · WS 4+ · S 3 · AP 0 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-close-combat-weapon-4",
+    "glossary": "glossary-chaos-space-marines-weapon-close-combat-weapon-3",
     "rule": "unit-dark-apostle",
     "units": [
       "unit-dark-apostle",
       "unit-dark-commune",
-      "unit-traitor-guardsmen-squad",
-      "unit-cultist-mob-with-firearms"
+      "unit-traitor-guardsmen-squad"
     ],
     "datasheet": "unit-dark-apostle",
     "statline": "dark-apostle-profile"
@@ -3242,42 +1972,6 @@ window.DG_TERMS={
     "datasheet": "unit-heretic-astartes-daemon-prince",
     "statline": "heretic-astartes-daemon-prince-profile"
   },
-  "chaos-space-marines-ability-deadly-demise-d3": {
-    "id": "chaos-space-marines-ability-deadly-demise-d3",
-    "title": "Deadly Demise D3",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-chaos-space-marines-ability-deadly-demise-d3",
-    "rule": "unit-heretic-astartes-daemon-prince",
-    "units": [
-      "unit-heretic-astartes-daemon-prince",
-      "unit-heretic-astartes-daemon-prince-with-wings",
-      "unit-chaos-rhino",
-      "unit-vashtorr-the-arkifane",
-      "unit-chaos-predator-annihilator",
-      "unit-chaos-predator-destructor",
-      "unit-chaos-vindicator",
-      "unit-forgefiend",
-      "unit-heldrake",
-      "unit-maulerfiend",
-      "unit-venomcrawler",
-      "unit-blood-slaughterer",
-      "unit-chaos-deimos-predator",
-      "unit-decimator",
-      "unit-deredeo-dreadnought",
-      "unit-hell-blade",
-      "unit-hell-talon",
-      "unit-leviathan-dreadnought",
-      "unit-sicaran-battle-tank",
-      "unit-sicaran-punisher",
-      "unit-sicaran-venator",
-      "unit-terrax-pattern-termite",
-      "unit-whirlwind-scorpius",
-      "unit-xiphon-interceptor"
-    ],
-    "datasheet": "unit-heretic-astartes-daemon-prince",
-    "statline": "heretic-astartes-daemon-prince-profile"
-  },
   "chaos-space-marines-weapon-hellforged-weapons-strike": {
     "id": "chaos-space-marines-weapon-hellforged-weapons-strike",
     "title": "➤ Hellforged weapons - strike",
@@ -3372,30 +2066,6 @@ window.DG_TERMS={
     "datasheet": "unit-lord-discordant-on-helstalker",
     "statline": "lord-discordant-on-helstalker-profile"
   },
-  "chaos-space-marines-ability-extra-attacks": {
-    "id": "chaos-space-marines-ability-extra-attacks",
-    "title": "Extra Attacks",
-    "summary": "Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select: - All of that model’s [EXTRA ATTACKS] weapons. - One of that model’s other melee weapons, if possible.",
-    "full": "Each time a unit containing one or more models with an [EXTRA ATTACKS] weapon fights, those models will make attacks with those weapons in addition to any others. In the Select Weapons step (04.01), for each of those models, you must select: - All of that model’s [EXTRA ATTACKS] weapons. - One of that model’s other melee weapons, if possible.",
-    "glossary": "glossary-chaos-space-marines-ability-extra-attacks",
-    "rule": "unit-lord-discordant-on-helstalker",
-    "units": [
-      "unit-lord-discordant-on-helstalker",
-      "unit-cypher",
-      "unit-fabius-bile",
-      "unit-haarken-worldclaimer",
-      "unit-kravek-morne",
-      "unit-defiler",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-kharybdis-assault-claw",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-lord-discordant-on-helstalker",
-    "statline": "lord-discordant-on-helstalker-profile"
-  },
   "chaos-space-marines-weapon-bladed-limbs": {
     "id": "chaos-space-marines-weapon-bladed-limbs",
     "title": "Bladed limbs",
@@ -3477,19 +2147,6 @@ window.DG_TERMS={
     "datasheet": "unit-lord-discordant-on-helstalker",
     "statline": "lord-discordant-on-helstalker-profile"
   },
-  "chaos-space-marines-ability-support": {
-    "id": "chaos-space-marines-ability-support",
-    "title": "Support",
-    "summary": "This model can be attached to the following units: ■ CHOSEN ■ LEGIONARIES You can attach this model to one of the above units even if one other CHARACTER model has already been attached to it (a unit cannot have two MASTERS OF EXECUTIONS attached to it). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
-    "full": "This model can be attached to the following units: ■ CHOSEN ■ LEGIONARIES You can attach this model to one of the above units even if one other CHARACTER model has already been attached to it (a unit cannot have two MASTERS OF EXECUTIONS attached to it). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
-    "glossary": "glossary-chaos-space-marines-ability-support",
-    "rule": "unit-master-of-executions",
-    "units": [
-      "unit-master-of-executions"
-    ],
-    "datasheet": "unit-master-of-executions",
-    "statline": "master-of-executions-profile"
-  },
   "chaos-space-marines-ability-warp-sighted-butcher": {
     "id": "chaos-space-marines-ability-warp-sighted-butcher",
     "title": "Warp-sighted Butcher",
@@ -3516,37 +2173,6 @@ window.DG_TERMS={
     "datasheet": "unit-master-of-executions",
     "statline": "master-of-executions-profile"
   },
-  "chaos-space-marines-ability-precision": {
-    "id": "chaos-space-marines-ability-precision",
-    "title": "Precision",
-    "summary": "While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.",
-    "full": "While resolving attacks made with one or more [PRECISION] weapons, at the start of the Allocation Order step (05.03), if the target unit contains one or more CHARACTER models visible to one or more of the attacking models, the active player can select one allocation group that contains one of those visible CHARACTER models. If they do, until those attacks are resolved, or until that CHARACTER group is destroyed (whichever happens first), that CHARACTER group is the current allocation group.",
-    "glossary": "glossary-chaos-space-marines-ability-precision",
-    "rule": "unit-master-of-executions",
-    "units": [
-      "unit-master-of-executions",
-      "unit-master-of-possession",
-      "unit-haarken-worldclaimer",
-      "unit-masters-of-the-maelstrom",
-      "unit-traitor-guardsmen-squad",
-      "unit-defiler"
-    ],
-    "datasheet": "unit-master-of-executions",
-    "statline": "master-of-executions-profile"
-  },
-  "chaos-space-marines-ability-support-2": {
-    "id": "chaos-space-marines-ability-support-2",
-    "title": "Support",
-    "summary": "Support appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-ability-support-2",
-    "rule": "unit-master-of-executions",
-    "units": [
-      "unit-master-of-executions"
-    ],
-    "datasheet": "unit-master-of-executions",
-    "statline": "master-of-executions-profile"
-  },
   "chaos-space-marines-weapon-axe-of-dismemberment": {
     "id": "chaos-space-marines-weapon-axe-of-dismemberment",
     "title": "Axe of dismemberment",
@@ -3559,19 +2185,6 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-master-of-executions",
     "statline": "master-of-executions-profile"
-  },
-  "chaos-space-marines-ability-leader-7": {
-    "id": "chaos-space-marines-ability-leader-7",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: ■ CHOSEN ■ LEGIONARIES ■ POSSESSED",
-    "full": "This model can be attached to the following units: ■ CHOSEN ■ LEGIONARIES ■ POSSESSED",
-    "glossary": "glossary-chaos-space-marines-ability-leader-7",
-    "rule": "unit-master-of-possession",
-    "units": [
-      "unit-master-of-possession"
-    ],
-    "datasheet": "unit-master-of-possession",
-    "statline": "master-of-possession-profile"
   },
   "chaos-space-marines-ability-daemonkin-psychic": {
     "id": "chaos-space-marines-ability-daemonkin-psychic",
@@ -3664,33 +2277,6 @@ window.DG_TERMS={
     "datasheet": "unit-red-corsairs-reave-captain",
     "statline": "red-corsairs-reave-captain-profile"
   },
-  "chaos-space-marines-ability-leader-8": {
-    "id": "chaos-space-marines-ability-leader-8",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: Chosen, Legionaries, Red Corsairs Raiders",
-    "full": "This model can be attached to the following units: Chosen, Legionaries, Red Corsairs Raiders",
-    "glossary": "glossary-chaos-space-marines-ability-leader-8",
-    "rule": "unit-red-corsairs-reave-captain",
-    "units": [
-      "unit-red-corsairs-reave-captain"
-    ],
-    "datasheet": "unit-red-corsairs-reave-captain",
-    "statline": "red-corsairs-reave-captain-profile"
-  },
-  "chaos-space-marines-ability-infiltrators": {
-    "id": "chaos-space-marines-ability-infiltrators",
-    "title": "Infiltrators",
-    "summary": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
-    "full": "During deployment, if every model in a unit has this ability, it can be set up anywhere on the battlefield that is more than 8\" horizontally from your opponent’s deployment zone and all enemy units.",
-    "glossary": "glossary-chaos-space-marines-ability-infiltrators",
-    "rule": "unit-red-corsairs-reave-captain",
-    "units": [
-      "unit-red-corsairs-reave-captain",
-      "unit-red-corsairs-raiders"
-    ],
-    "datasheet": "unit-red-corsairs-reave-captain",
-    "statline": "red-corsairs-reave-captain-profile"
-  },
   "chaos-space-marines-weapon-power-sword": {
     "id": "chaos-space-marines-weapon-power-sword",
     "title": "Power sword",
@@ -3725,8 +2311,7 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-ability-prescience-psychic",
     "rule": "unit-sorcerer",
     "units": [
-      "unit-sorcerer",
-      "unit-sorcerer-on-bike"
+      "unit-sorcerer"
     ],
     "datasheet": "unit-sorcerer",
     "statline": "sorcerer-profile"
@@ -3753,11 +2338,7 @@ window.DG_TERMS={
     "rule": "unit-sorcerer",
     "units": [
       "unit-sorcerer",
-      "unit-sorcerer-in-terminator-armour",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
+      "unit-sorcerer-in-terminator-armour"
     ],
     "datasheet": "unit-sorcerer",
     "statline": "sorcerer-profile"
@@ -3771,29 +2352,21 @@ window.DG_TERMS={
     "rule": "unit-sorcerer",
     "units": [
       "unit-sorcerer",
-      "unit-sorcerer-in-terminator-armour",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
+      "unit-sorcerer-in-terminator-armour"
     ],
     "datasheet": "unit-sorcerer",
     "statline": "sorcerer-profile"
   },
-  "chaos-space-marines-weapon-force-weapon-2": {
-    "id": "chaos-space-marines-weapon-force-weapon-2",
+  "chaos-space-marines-weapon-force-weapon": {
+    "id": "chaos-space-marines-weapon-force-weapon",
     "title": "Force weapon",
     "summary": "Melee · Melee · A 4 · WS 3+ · S 6 · AP -1 · D D3 · Psychic",
     "full": "Melee · Melee · A 4 · WS 3+ · S 6 · AP -1 · D D3 · Psychic",
-    "glossary": "glossary-chaos-space-marines-weapon-force-weapon-2",
+    "glossary": "glossary-chaos-space-marines-weapon-force-weapon",
     "rule": "unit-sorcerer",
     "units": [
       "unit-sorcerer",
-      "unit-sorcerer-in-terminator-armour",
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
+      "unit-sorcerer-in-terminator-armour"
     ],
     "datasheet": "unit-sorcerer",
     "statline": "sorcerer-profile"
@@ -3853,9 +2426,7 @@ window.DG_TERMS={
       "unit-chaos-predator-annihilator",
       "unit-chaos-predator-destructor",
       "unit-chaos-vindicator",
-      "unit-helbrute",
-      "unit-chaos-deimos-predator",
-      "unit-relic-contemptor-dreadnought"
+      "unit-helbrute"
     ],
     "datasheet": "unit-sorcerer-in-terminator-armour",
     "statline": "sorcerer-in-terminator-armour-profile"
@@ -3876,30 +2447,10 @@ window.DG_TERMS={
       "unit-chaos-land-raider",
       "unit-chaos-predator-annihilator",
       "unit-chaos-predator-destructor",
-      "unit-chaos-vindicator",
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-exalted-champion",
-      "unit-sorcerer-on-palanquin-of-nurgle"
+      "unit-chaos-vindicator"
     ],
     "datasheet": "unit-sorcerer-in-terminator-armour",
     "statline": "sorcerer-in-terminator-armour-profile"
-  },
-  "chaos-space-marines-ability-leader-9": {
-    "id": "chaos-space-marines-ability-leader-9",
-    "title": "Leader",
-    "summary": "This unit can be attached to the following unit: ■ TRAITOR GUARDSMAN SQUAD",
-    "full": "This unit can be attached to the following unit: ■ TRAITOR GUARDSMAN SQUAD",
-    "glossary": "glossary-chaos-space-marines-ability-leader-9",
-    "rule": "unit-traitor-enforcer",
-    "units": [
-      "unit-traitor-enforcer"
-    ],
-    "datasheet": "unit-traitor-enforcer",
-    "statline": "traitor-enforcer-profile"
   },
   "chaos-space-marines-ability-brutal-example": {
     "id": "chaos-space-marines-ability-brutal-example",
@@ -3927,16 +2478,15 @@ window.DG_TERMS={
     "datasheet": "unit-traitor-enforcer",
     "statline": "traitor-enforcer-profile"
   },
-  "chaos-space-marines-weapon-power-fist-3": {
-    "id": "chaos-space-marines-weapon-power-fist-3",
+  "chaos-space-marines-weapon-power-fist-2": {
+    "id": "chaos-space-marines-weapon-power-fist-2",
     "title": "Power fist",
     "summary": "Melee · Melee · A 3 · WS 3+ · S 6 · AP -2 · D 2",
     "full": "Melee · Melee · A 3 · WS 3+ · S 6 · AP -2 · D 2",
-    "glossary": "glossary-chaos-space-marines-weapon-power-fist-3",
+    "glossary": "glossary-chaos-space-marines-weapon-power-fist-2",
     "rule": "unit-traitor-enforcer",
     "units": [
-      "unit-traitor-enforcer",
-      "unit-renegade-enforcer"
+      "unit-traitor-enforcer"
     ],
     "datasheet": "unit-traitor-enforcer",
     "statline": "traitor-enforcer-profile"
@@ -3986,19 +2536,6 @@ window.DG_TERMS={
     "summary": "At the end of your Movement phase, select one enemy Vehicle unit within 12\" of this model. That unit must take a Battle-shock test.",
     "full": "At the end of your Movement phase, select one enemy Vehicle unit within 12\" of this model. That unit must take a Battle-shock test.",
     "glossary": "glossary-chaos-space-marines-ability-enrage-machine-spirits",
-    "rule": "unit-warpsmith",
-    "units": [
-      "unit-warpsmith"
-    ],
-    "datasheet": "unit-warpsmith",
-    "statline": "warpsmith-profile"
-  },
-  "chaos-space-marines-ability-leader-10": {
-    "id": "chaos-space-marines-ability-leader-10",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: Chosen, Havocs, Legionaires",
-    "full": "This model can be attached to the following units: Chosen, Havocs, Legionaires",
-    "glossary": "glossary-chaos-space-marines-ability-leader-10",
     "rule": "unit-warpsmith",
     "units": [
       "unit-warpsmith"
@@ -4058,19 +2595,6 @@ window.DG_TERMS={
     "datasheet": "unit-chaos-rhino",
     "statline": "chaos-rhino-profile"
   },
-  "chaos-space-marines-ability-firing-deck-2": {
-    "id": "chaos-space-marines-ability-firing-deck-2",
-    "title": "Firing Deck 2",
-    "summary": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "full": "This ability always takes the form Firing Deck X. In your Shooting phase, each time this TRANSPORT is selected to shoot, if one or more units are embarked within it, resolve the following sequence: 1. Select up to X models embarked within this TRANSPORT (excluding models whose units have already been selected to shoot this phase). 2. For each selected model, select one of its ranged weapons (excluding [ONE SHOT] weapons). 3. Until this TRANSPORT has resolved all of its attacks, it has all of those selected weapons in addition to its other weapons. 4. Until the end of the turn, units embarked within this TRANSPORT are not eligible to shoot.",
-    "glossary": "glossary-chaos-space-marines-ability-firing-deck-2",
-    "rule": "unit-chaos-rhino",
-    "units": [
-      "unit-chaos-rhino"
-    ],
-    "datasheet": "unit-chaos-rhino",
-    "statline": "chaos-rhino-profile"
-  },
   "chaos-space-marines-weapon-armoured-tracks": {
     "id": "chaos-space-marines-weapon-armoured-tracks",
     "title": "Armoured tracks",
@@ -4082,9 +2606,7 @@ window.DG_TERMS={
       "unit-chaos-rhino",
       "unit-chaos-predator-annihilator",
       "unit-chaos-predator-destructor",
-      "unit-chaos-vindicator",
-      "unit-chaos-deimos-predator",
-      "unit-whirlwind-scorpius"
+      "unit-chaos-vindicator"
     ],
     "datasheet": "unit-chaos-rhino",
     "statline": "chaos-rhino-profile"
@@ -4101,10 +2623,7 @@ window.DG_TERMS={
       "unit-chaos-land-raider",
       "unit-chaos-predator-annihilator",
       "unit-chaos-predator-destructor",
-      "unit-chaos-vindicator",
-      "unit-fellblade",
-      "unit-hell-talon",
-      "unit-kratos"
+      "unit-chaos-vindicator"
     ],
     "datasheet": "unit-chaos-rhino",
     "statline": "chaos-rhino-profile"
@@ -4128,19 +2647,6 @@ window.DG_TERMS={
     "summary": "Each time this model makes a Dark Pact and does not fail the resulting leadership roll, if the result of that roll was 7+, you gain 1CP.",
     "full": "Each time this model makes a Dark Pact and does not fail the resulting leadership roll, if the result of that roll was 7+, you gain 1CP.",
     "glossary": "glossary-chaos-space-marines-ability-dark-destiny",
-    "rule": "unit-abaddon-the-despoiler",
-    "units": [
-      "unit-abaddon-the-despoiler"
-    ],
-    "datasheet": "unit-abaddon-the-despoiler",
-    "statline": "abaddon-the-despoiler-profile"
-  },
-  "chaos-space-marines-ability-leader-11": {
-    "id": "chaos-space-marines-ability-leader-11",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: ■ CHAOS TERMINATOR SQUAD ■ CHOSEN",
-    "full": "This model can be attached to the following units: ■ CHAOS TERMINATOR SQUAD ■ CHOSEN",
-    "glossary": "glossary-chaos-space-marines-ability-leader-11",
     "rule": "unit-abaddon-the-despoiler",
     "units": [
       "unit-abaddon-the-despoiler"
@@ -4206,35 +2712,6 @@ window.DG_TERMS={
     "summary": "Once per turn, in your opponent's Shooting phase, when an enemy unit makes a ranged attacks that targets a friendly HERETIC ASTARTES unit within 3\" of this model, after that enemy unit has shot, this model can shoot as if it were your Shooting phase, but it must target only that enemy unit when doing so and can only do so if that enemy unit is an eligible target.",
     "full": "Once per turn, in your opponent's Shooting phase, when an enemy unit makes a ranged attacks that targets a friendly HERETIC ASTARTES unit within 3\" of this model, after that enemy unit has shot, this model can shoot as if it were your Shooting phase, but it must target only that enemy unit when doing so and can only do so if that enemy unit is an eligible target.",
     "glossary": "glossary-chaos-space-marines-ability-guns-blazing",
-    "rule": "unit-cypher",
-    "units": [
-      "unit-cypher"
-    ],
-    "datasheet": "unit-cypher",
-    "statline": "cypher-profile"
-  },
-  "chaos-space-marines-ability-assault": {
-    "id": "chaos-space-marines-ability-assault",
-    "title": "Assault",
-    "summary": "Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).",
-    "full": "Units containing one or more models with an [ASSAULT] weapon can shoot using assault shooting (10.05).",
-    "glossary": "glossary-chaos-space-marines-ability-assault",
-    "rule": "unit-cypher",
-    "units": [
-      "unit-cypher",
-      "unit-haarken-worldclaimer",
-      "unit-masters-of-the-maelstrom",
-      "unit-renegade-enforcer"
-    ],
-    "datasheet": "unit-cypher",
-    "statline": "cypher-profile"
-  },
-  "chaos-space-marines-ability-lone-operative": {
-    "id": "chaos-space-marines-ability-lone-operative",
-    "title": "Lone Operative",
-    "summary": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
-    "full": "Unless part of an attached unit, this unit is not visible to enemy models unless they are within 12\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within 12\" of this unit. If this ability takes the form Lone Operative X\", unless part of an attached unit, this unit is not visible to enemy models unless they are within X\" of this unit, and it cannot be targeted by [INDIRECT FIRE] weapons unless the attacking model is within X\" of this unit.",
-    "glossary": "glossary-chaos-space-marines-ability-lone-operative",
     "rule": "unit-cypher",
     "units": [
       "unit-cypher"
@@ -4329,23 +2806,6 @@ window.DG_TERMS={
     "rule": "unit-fabius-bile",
     "units": [
       "unit-fabius-bile"
-    ],
-    "datasheet": "unit-fabius-bile",
-    "statline": "fabius-bile-profile"
-  },
-  "chaos-space-marines-ability-feel-no-pain-5": {
-    "id": "chaos-space-marines-ability-feel-no-pain-5",
-    "title": "Feel No Pain 5+",
-    "summary": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
-    "full": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
-    "glossary": "glossary-chaos-space-marines-ability-feel-no-pain-5",
-    "rule": "unit-fabius-bile",
-    "units": [
-      "unit-fabius-bile",
-      "unit-huron-blackheart",
-      "unit-chaos-spawn",
-      "unit-gellerpox-infected",
-      "unit-negavolt-cultists"
     ],
     "datasheet": "unit-fabius-bile",
     "statline": "fabius-bile-profile"
@@ -4467,19 +2927,6 @@ window.DG_TERMS={
     "datasheet": "unit-haarken-worldclaimer",
     "statline": "haarken-worldclaimer-profile"
   },
-  "chaos-space-marines-ability-leader-12": {
-    "id": "chaos-space-marines-ability-leader-12",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: - Chosen - Chaos Terminator Squad - Legionaries - Masters of the Maelstrom - Red Corsairs Raiders",
-    "full": "This model can be attached to the following units: - Chosen - Chaos Terminator Squad - Legionaries - Masters of the Maelstrom - Red Corsairs Raiders",
-    "glossary": "glossary-chaos-space-marines-ability-leader-12",
-    "rule": "unit-huron-blackheart",
-    "units": [
-      "unit-huron-blackheart"
-    ],
-    "datasheet": "unit-huron-blackheart",
-    "statline": "huron-blackheart-profile"
-  },
   "chaos-space-marines-ability-lord-of-badab-aura": {
     "id": "chaos-space-marines-ability-lord-of-badab-aura",
     "title": "Lord of Badab (Aura)",
@@ -4551,19 +2998,6 @@ window.DG_TERMS={
     "summary": "At the start of the battle, select one unit in your opponent’s army to be this model’s hated foe. Each time this model makes an attack that targets its hated foe, you can re-roll the Wound roll. Each time this model’s hated foe is destroyed, you can select a new unit from your opponent’s army to be its hated foe.",
     "full": "At the start of the battle, select one unit in your opponent’s army to be this model’s hated foe. Each time this model makes an attack that targets its hated foe, you can re-roll the Wound roll. Each time this model’s hated foe is destroyed, you can select a new unit from your opponent’s army to be its hated foe.",
     "glossary": "glossary-chaos-space-marines-ability-architect-of-ruin",
-    "rule": "unit-kravek-morne",
-    "units": [
-      "unit-kravek-morne"
-    ],
-    "datasheet": "unit-kravek-morne",
-    "statline": "kravek-morne-profile"
-  },
-  "chaos-space-marines-ability-leader-13": {
-    "id": "chaos-space-marines-ability-leader-13",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: Chaos Terminator Squad, Mutilators, Obliterators.",
-    "full": "This model can be attached to the following units: Chaos Terminator Squad, Mutilators, Obliterators.",
-    "glossary": "glossary-chaos-space-marines-ability-leader-13",
     "rule": "unit-kravek-morne",
     "units": [
       "unit-kravek-morne"
@@ -4832,13 +3266,7 @@ window.DG_TERMS={
       "unit-chaos-vindicator",
       "unit-forgefiend",
       "unit-heldrake",
-      "unit-maulerfiend",
-      "unit-chaos-deimos-predator",
-      "unit-decimator",
-      "unit-deredeo-dreadnought",
-      "unit-leviathan-dreadnought",
-      "unit-whirlwind-scorpius",
-      "unit-xiphon-interceptor"
+      "unit-maulerfiend"
     ],
     "datasheet": "unit-vashtorr-the-arkifane",
     "statline": "vashtorr-the-arkifane-profile"
@@ -4895,34 +3323,6 @@ window.DG_TERMS={
     "datasheet": "unit-accursed-cultists",
     "statline": "accursed-cultists-profile"
   },
-  "chaos-space-marines-ability-feel-no-pain-6": {
-    "id": "chaos-space-marines-ability-feel-no-pain-6",
-    "title": "Feel No Pain 6+",
-    "summary": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
-    "full": "This ability always takes the form Feel No Pain X+. Each time a model with this ability would lose a wound, roll one D6: on an X+, that wound is not lost.",
-    "glossary": "glossary-chaos-space-marines-ability-feel-no-pain-6",
-    "rule": "unit-accursed-cultists",
-    "units": [
-      "unit-accursed-cultists",
-      "unit-mutoid-vermin",
-      "unit-renegade-plague-ogryns"
-    ],
-    "datasheet": "unit-accursed-cultists",
-    "statline": "accursed-cultists-profile"
-  },
-  "chaos-space-marines-ability-scouts-6": {
-    "id": "chaos-space-marines-ability-scouts-6",
-    "title": "Scouts 6\"",
-    "summary": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
-    "full": "This ability always takes the form Scouts X\". In the Resolve Pre-battle Abilities step, if every model in a unit has this ability, you can do one of the following: - If that unit is in strategic reserves, you can set up that unit anywhere that is wholly within your deployment zone. - If that unit is wholly within your deployment zone, it can make a scout move. - If that unit is embarked within a DEDICATED TRANSPORT that is wholly within your deployment zone, and if every model embarked within that DEDICATED TRANSPORT has the Scouts ability, that DEDICATED TRANSPORT can make a scout move.",
-    "glossary": "glossary-chaos-space-marines-ability-scouts-6",
-    "rule": "unit-accursed-cultists",
-    "units": [
-      "unit-accursed-cultists"
-    ],
-    "datasheet": "unit-accursed-cultists",
-    "statline": "accursed-cultists-profile"
-  },
   "chaos-space-marines-weapon-hideous-mutations": {
     "id": "chaos-space-marines-weapon-hideous-mutations",
     "title": "Hideous mutations",
@@ -4963,12 +3363,12 @@ window.DG_TERMS={
     "datasheet": "unit-chaos-terminator-squad",
     "statline": "chaos-terminator-squad-profile"
   },
-  "chaos-space-marines-weapon-power-fist-4": {
-    "id": "chaos-space-marines-weapon-power-fist-4",
+  "chaos-space-marines-weapon-power-fist-3": {
+    "id": "chaos-space-marines-weapon-power-fist-3",
     "title": "Power fist",
     "summary": "Melee · Melee · A 3 · WS 3+ · S 8 · AP -2 · D 2",
     "full": "Melee · Melee · A 3 · WS 3+ · S 8 · AP -2 · D 2",
-    "glossary": "glossary-chaos-space-marines-weapon-power-fist-4",
+    "glossary": "glossary-chaos-space-marines-weapon-power-fist-3",
     "rule": "unit-chaos-terminator-squad",
     "units": [
       "unit-chaos-terminator-squad",
@@ -5002,18 +3402,7 @@ window.DG_TERMS={
     "rule": "unit-chaos-terminator-squad",
     "units": [
       "unit-chaos-terminator-squad",
-      "unit-helbrute",
-      "unit-cerberus",
-      "unit-chaos-deimos-predator",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-kratos",
-      "unit-leviathan-dreadnought",
-      "unit-mastodon",
-      "unit-relic-contemptor-dreadnought",
-      "unit-spartan",
-      "unit-terrax-pattern-termite",
-      "unit-typhon"
+      "unit-helbrute"
     ],
     "datasheet": "unit-chaos-terminator-squad",
     "statline": "chaos-terminator-squad-profile"
@@ -5059,12 +3448,12 @@ window.DG_TERMS={
     "datasheet": "unit-chosen",
     "statline": "chosen-profile"
   },
-  "chaos-space-marines-weapon-power-fist-5": {
-    "id": "chaos-space-marines-weapon-power-fist-5",
+  "chaos-space-marines-weapon-power-fist-4": {
+    "id": "chaos-space-marines-weapon-power-fist-4",
     "title": "Power fist",
     "summary": "Melee · Melee · A 4 · WS 3+ · S 8 · AP -2 · D 2",
     "full": "Melee · Melee · A 4 · WS 3+ · S 8 · AP -2 · D 2",
-    "glossary": "glossary-chaos-space-marines-weapon-power-fist-5",
+    "glossary": "glossary-chaos-space-marines-weapon-power-fist-4",
     "rule": "unit-chosen",
     "units": [
       "unit-chosen"
@@ -5124,12 +3513,12 @@ window.DG_TERMS={
     "datasheet": "unit-fellgor-beastmen",
     "statline": "fellgor-beastmen-profile"
   },
-  "chaos-space-marines-weapon-close-combat-weapon-5": {
-    "id": "chaos-space-marines-weapon-close-combat-weapon-5",
+  "chaos-space-marines-weapon-close-combat-weapon-4": {
+    "id": "chaos-space-marines-weapon-close-combat-weapon-4",
     "title": "Close combat weapon",
     "summary": "Melee · Melee · A 2 · WS 4+ · S 4 · AP 0 · D 1",
     "full": "Melee · Melee · A 2 · WS 4+ · S 4 · AP 0 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-close-combat-weapon-5",
+    "glossary": "glossary-chaos-space-marines-weapon-close-combat-weapon-4",
     "rule": "unit-fellgor-beastmen",
     "units": [
       "unit-fellgor-beastmen"
@@ -5332,19 +3721,6 @@ window.DG_TERMS={
     "datasheet": "unit-nemesis-claw",
     "statline": "nemesis-claw-profile"
   },
-  "chaos-space-marines-ability-attached-unit": {
-    "id": "chaos-space-marines-ability-attached-unit",
-    "title": "Attached Unit",
-    "summary": "If a CHARACTER UNIT unit from your army with the Leader ability (excluding EPIC HEROES) can be attached to a LEGIONARIES unit, it can be attached to this unit instead.",
-    "full": "If a CHARACTER UNIT unit from your army with the Leader ability (excluding EPIC HEROES) can be attached to a LEGIONARIES unit, it can be attached to this unit instead.",
-    "glossary": "glossary-chaos-space-marines-ability-attached-unit",
-    "rule": "unit-nemesis-claw",
-    "units": [
-      "unit-nemesis-claw"
-    ],
-    "datasheet": "unit-nemesis-claw",
-    "statline": "nemesis-claw-profile"
-  },
   "chaos-space-marines-ability-voice-eater": {
     "id": "chaos-space-marines-ability-voice-eater",
     "title": "Voice eater",
@@ -5383,84 +3759,6 @@ window.DG_TERMS={
     ],
     "datasheet": "unit-nemesis-claw",
     "statline": "nemesis-claw-profile"
-  },
-  "chaos-space-marines-ability-terrifying-crescendo": {
-    "id": "chaos-space-marines-ability-terrifying-crescendo",
-    "title": "Terrifying Crescendo",
-    "summary": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next Shooting phase, each time a Battle-shock or Leadership test is taken for that enemy unit, subtract 1 from that test.",
-    "full": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the start of your next Shooting phase, each time a Battle-shock or Leadership test is taken for that enemy unit, subtract 1 from that test.",
-    "glossary": "glossary-chaos-space-marines-ability-terrifying-crescendo",
-    "rule": "unit-noise-marines",
-    "units": [
-      "unit-noise-marines"
-    ],
-    "datasheet": "unit-noise-marines",
-    "statline": "noise-marines-profile"
-  },
-  "chaos-space-marines-weapon-power-sword-2": {
-    "id": "chaos-space-marines-weapon-power-sword-2",
-    "title": "Power sword",
-    "summary": "Melee · Melee · A 4 · WS 3+ · S 5 · AP -2 · D 1",
-    "full": "Melee · Melee · A 4 · WS 3+ · S 5 · AP -2 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-power-sword-2",
-    "rule": "unit-noise-marines",
-    "units": [
-      "unit-noise-marines"
-    ],
-    "datasheet": "unit-noise-marines",
-    "statline": "noise-marines-profile"
-  },
-  "chaos-space-marines-weapon-screamer-pistol": {
-    "id": "chaos-space-marines-weapon-screamer-pistol",
-    "title": "Screamer pistol",
-    "summary": "Ranged · 12\" · A 3 · BS 3+ · S 5 · AP -1 · D 2 · Ignores Cover, Pistol",
-    "full": "Ranged · 12\" · A 3 · BS 3+ · S 5 · AP -1 · D 2 · Ignores Cover, Pistol",
-    "glossary": "glossary-chaos-space-marines-weapon-screamer-pistol",
-    "rule": "unit-noise-marines",
-    "units": [
-      "unit-noise-marines"
-    ],
-    "datasheet": "unit-noise-marines",
-    "statline": "noise-marines-profile"
-  },
-  "chaos-space-marines-weapon-sonic-blaster": {
-    "id": "chaos-space-marines-weapon-sonic-blaster",
-    "title": "Sonic blaster",
-    "summary": "Ranged · 18\" · A 3 · BS 3+ · S 5 · AP -1 · D 2 · Ignores Cover",
-    "full": "Ranged · 18\" · A 3 · BS 3+ · S 5 · AP -1 · D 2 · Ignores Cover",
-    "glossary": "glossary-chaos-space-marines-weapon-sonic-blaster",
-    "rule": "unit-noise-marines",
-    "units": [
-      "unit-noise-marines"
-    ],
-    "datasheet": "unit-noise-marines",
-    "statline": "noise-marines-profile"
-  },
-  "chaos-space-marines-weapon-blastmaster-varied-frequency": {
-    "id": "chaos-space-marines-weapon-blastmaster-varied-frequency",
-    "title": "➤ Blastmaster - varied frequency",
-    "summary": "Ranged · 18\" · A 6 · BS 3+ · S 6 · AP -2 · D 1 · Ignores Cover",
-    "full": "Ranged · 18\" · A 6 · BS 3+ · S 6 · AP -2 · D 1 · Ignores Cover",
-    "glossary": "glossary-chaos-space-marines-weapon-blastmaster-varied-frequency",
-    "rule": "unit-noise-marines",
-    "units": [
-      "unit-noise-marines"
-    ],
-    "datasheet": "unit-noise-marines",
-    "statline": "noise-marines-profile"
-  },
-  "chaos-space-marines-weapon-blastmaster-single-frequency": {
-    "id": "chaos-space-marines-weapon-blastmaster-single-frequency",
-    "title": "➤ Blastmaster - single frequency",
-    "summary": "Ranged · 18\" · A 3 · BS 3+ · S 10 · AP -2 · D 3 · Ignores Cover",
-    "full": "Ranged · 18\" · A 3 · BS 3+ · S 10 · AP -2 · D 3 · Ignores Cover",
-    "glossary": "glossary-chaos-space-marines-weapon-blastmaster-single-frequency",
-    "rule": "unit-noise-marines",
-    "units": [
-      "unit-noise-marines"
-    ],
-    "datasheet": "unit-noise-marines",
-    "statline": "noise-marines-profile"
   },
   "chaos-space-marines-ability-warp-rift-firepower": {
     "id": "chaos-space-marines-ability-warp-rift-firepower",
@@ -5561,8 +3859,7 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-ability-fearsome-aura",
     "rule": "unit-raptors",
     "units": [
-      "unit-raptors",
-      "unit-gellerpox-infected"
+      "unit-raptors"
     ],
     "datasheet": "unit-raptors",
     "statline": "raptors-profile"
@@ -5599,19 +3896,6 @@ window.DG_TERMS={
     "summary": "The first time this unit destroys an enemy unit, until the end of the battle, while this unit is not Battle-shocked, add 1 to the Objective Control characteristic of models in this unit.",
     "full": "The first time this unit destroys an enemy unit, until the end of the battle, while this unit is not Battle-shocked, add 1 to the Objective Control characteristic of models in this unit.",
     "glossary": "glossary-chaos-space-marines-ability-trophy-takers",
-    "rule": "unit-red-corsairs-raiders",
-    "units": [
-      "unit-red-corsairs-raiders"
-    ],
-    "datasheet": "unit-red-corsairs-raiders",
-    "statline": "red-corsairs-raiders-profile"
-  },
-  "chaos-space-marines-ability-attached-unit-2": {
-    "id": "chaos-space-marines-ability-attached-unit-2",
-    "title": "Attached Unit",
-    "summary": "If a Character unit from your army with the Leader ability can be attached to a Legionaries unit, it can be attached to this unit instead.",
-    "full": "If a Character unit from your army with the Leader ability can be attached to a Legionaries unit, it can be attached to this unit instead.",
-    "glossary": "glossary-chaos-space-marines-ability-attached-unit-2",
     "rule": "unit-red-corsairs-raiders",
     "units": [
       "unit-red-corsairs-raiders"
@@ -5697,12 +3981,12 @@ window.DG_TERMS={
     "datasheet": "unit-traitor-guardsmen-squad",
     "statline": "traitor-guardsmen-squad-profile"
   },
-  "chaos-space-marines-weapon-boltgun-3": {
-    "id": "chaos-space-marines-weapon-boltgun-3",
+  "chaos-space-marines-weapon-boltgun-2": {
+    "id": "chaos-space-marines-weapon-boltgun-2",
     "title": "Boltgun",
     "summary": "Ranged · 24\" · A 1 · BS 4+ · S 4 · AP 0 · D 1 · Rapid Fire 1",
     "full": "Ranged · 24\" · A 1 · BS 4+ · S 4 · AP 0 · D 1 · Rapid Fire 1",
-    "glossary": "glossary-chaos-space-marines-weapon-boltgun-3",
+    "glossary": "glossary-chaos-space-marines-weapon-boltgun-2",
     "rule": "unit-traitor-guardsmen-squad",
     "units": [
       "unit-traitor-guardsmen-squad"
@@ -5783,8 +4067,7 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-weapon-cultist-grenade-launcher-frag",
     "rule": "unit-traitor-guardsmen-squad",
     "units": [
-      "unit-traitor-guardsmen-squad",
-      "unit-cultist-mob-with-firearms"
+      "unit-traitor-guardsmen-squad"
     ],
     "datasheet": "unit-traitor-guardsmen-squad",
     "statline": "traitor-guardsmen-squad-profile"
@@ -5797,8 +4080,7 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-weapon-cultist-grenade-launcher-krak",
     "rule": "unit-traitor-guardsmen-squad",
     "units": [
-      "unit-traitor-guardsmen-squad",
-      "unit-cultist-mob-with-firearms"
+      "unit-traitor-guardsmen-squad"
     ],
     "datasheet": "unit-traitor-guardsmen-squad",
     "statline": "traitor-guardsmen-squad-profile"
@@ -5850,10 +4132,7 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-ability-assault-ramp",
     "rule": "unit-chaos-land-raider",
     "units": [
-      "unit-chaos-land-raider",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-spartan"
+      "unit-chaos-land-raider"
     ],
     "datasheet": "unit-chaos-land-raider",
     "statline": "chaos-land-raider-profile"
@@ -5866,38 +4145,7 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-ability-damaged-1-5-wounds-remaining",
     "rule": "unit-chaos-land-raider",
     "units": [
-      "unit-chaos-land-raider",
-      "unit-hell-talon",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-sicaran-battle-tank",
-      "unit-sicaran-punisher",
-      "unit-sicaran-venator",
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-chaos-land-raider",
-    "statline": "chaos-land-raider-profile"
-  },
-  "chaos-space-marines-ability-deadly-demise-d6": {
-    "id": "chaos-space-marines-ability-deadly-demise-d6",
-    "title": "Deadly Demise D6",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-chaos-space-marines-ability-deadly-demise-d6",
-    "rule": "unit-chaos-land-raider",
-    "units": [
-      "unit-chaos-land-raider",
-      "unit-defiler",
-      "unit-noctilith-crown",
-      "unit-cerberus",
-      "unit-chaos-thunderhawk",
-      "unit-fire-raptor-gunship",
-      "unit-kratos",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-spartan",
-      "unit-storm-eagle-gunship",
-      "unit-typhon"
+      "unit-chaos-land-raider"
     ],
     "datasheet": "unit-chaos-land-raider",
     "statline": "chaos-land-raider-profile"
@@ -5910,19 +4158,7 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-weapon-armoured-tracks-2",
     "rule": "unit-chaos-land-raider",
     "units": [
-      "unit-chaos-land-raider",
-      "unit-cerberus",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-kratos",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-mastodon",
-      "unit-sicaran-battle-tank",
-      "unit-sicaran-punisher",
-      "unit-sicaran-venator",
-      "unit-spartan",
-      "unit-typhon"
+      "unit-chaos-land-raider"
     ],
     "datasheet": "unit-chaos-land-raider",
     "statline": "chaos-land-raider-profile"
@@ -5949,17 +4185,7 @@ window.DG_TERMS={
     "rule": "unit-chaos-land-raider",
     "units": [
       "unit-chaos-land-raider",
-      "unit-helbrute",
-      "unit-chaos-thunderhawk",
-      "unit-deredeo-dreadnought",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-relic-contemptor-dreadnought",
-      "unit-sokar-pattern-stormbird",
-      "unit-spartan",
-      "unit-storm-eagle-gunship"
+      "unit-helbrute"
     ],
     "datasheet": "unit-chaos-land-raider",
     "statline": "chaos-land-raider-profile"
@@ -5999,20 +4225,7 @@ window.DG_TERMS={
     "rule": "unit-chaos-predator-annihilator",
     "units": [
       "unit-chaos-predator-annihilator",
-      "unit-chaos-predator-destructor",
-      "unit-cerberus",
-      "unit-chaos-deimos-predator",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-kratos",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-mastodon",
-      "unit-sicaran-battle-tank",
-      "unit-sicaran-punisher",
-      "unit-sicaran-venator",
-      "unit-spartan",
-      "unit-typhon"
+      "unit-chaos-predator-destructor"
     ],
     "datasheet": "unit-chaos-predator-annihilator",
     "statline": "chaos-predator-annihilator-profile"
@@ -6026,16 +4239,7 @@ window.DG_TERMS={
     "rule": "unit-chaos-predator-annihilator",
     "units": [
       "unit-chaos-predator-annihilator",
-      "unit-chaos-predator-destructor",
-      "unit-cerberus",
-      "unit-chaos-deimos-predator",
-      "unit-chaos-thunderhawk",
-      "unit-kratos",
-      "unit-mastodon",
-      "unit-sicaran-battle-tank",
-      "unit-sicaran-punisher",
-      "unit-sicaran-venator",
-      "unit-typhon"
+      "unit-chaos-predator-destructor"
     ],
     "datasheet": "unit-chaos-predator-annihilator",
     "statline": "chaos-predator-annihilator-profile"
@@ -6100,9 +4304,7 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-weapon-demolisher-cannon",
     "rule": "unit-chaos-vindicator",
     "units": [
-      "unit-chaos-vindicator",
-      "unit-fellblade",
-      "unit-greater-brass-scorpion"
+      "unit-chaos-vindicator"
     ],
     "datasheet": "unit-chaos-vindicator",
     "statline": "chaos-vindicator-profile"
@@ -6141,13 +4343,7 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-ability-damaged-1-6-wounds-remaining",
     "rule": "unit-defiler",
     "units": [
-      "unit-defiler",
-      "unit-cerberus",
-      "unit-fire-raptor-gunship",
-      "unit-kratos",
-      "unit-spartan",
-      "unit-storm-eagle-gunship",
-      "unit-typhon"
+      "unit-defiler"
     ],
     "datasheet": "unit-defiler",
     "statline": "defiler-profile"
@@ -6401,28 +4597,12 @@ window.DG_TERMS={
     "datasheet": "unit-helbrute",
     "statline": "helbrute-profile"
   },
-  "chaos-space-marines-ability-deadly-demise-1": {
-    "id": "chaos-space-marines-ability-deadly-demise-1",
-    "title": "Deadly Demise 1",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-chaos-space-marines-ability-deadly-demise-1",
-    "rule": "unit-helbrute",
-    "units": [
-      "unit-helbrute",
-      "unit-dreadclaw-drop-pod",
-      "unit-greater-blight-drone",
-      "unit-relic-contemptor-dreadnought"
-    ],
-    "datasheet": "unit-helbrute",
-    "statline": "helbrute-profile"
-  },
-  "chaos-space-marines-weapon-close-combat-weapon-6": {
-    "id": "chaos-space-marines-weapon-close-combat-weapon-6",
+  "chaos-space-marines-weapon-close-combat-weapon-5": {
+    "id": "chaos-space-marines-weapon-close-combat-weapon-5",
     "title": "Close combat weapon",
     "summary": "Melee · Melee · A 5 · WS 3+ · S 6 · AP 0 · D 1",
     "full": "Melee · Melee · A 5 · WS 3+ · S 6 · AP 0 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-close-combat-weapon-6",
+    "glossary": "glossary-chaos-space-marines-weapon-close-combat-weapon-5",
     "rule": "unit-helbrute",
     "units": [
       "unit-helbrute"
@@ -6503,16 +4683,7 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-weapon-multi-melta",
     "rule": "unit-helbrute",
     "units": [
-      "unit-helbrute",
-      "unit-cerberus",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-kratos",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-relic-contemptor-dreadnought",
-      "unit-spartan",
-      "unit-typhon"
+      "unit-helbrute"
     ],
     "datasheet": "unit-helbrute",
     "statline": "helbrute-profile"
@@ -6525,9 +4696,7 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-weapon-twin-autocannon",
     "rule": "unit-helbrute",
     "units": [
-      "unit-helbrute",
-      "unit-fire-raptor-gunship",
-      "unit-relic-contemptor-dreadnought"
+      "unit-helbrute"
     ],
     "datasheet": "unit-helbrute",
     "statline": "helbrute-profile"
@@ -6553,15 +4722,7 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-weapon-twin-lascannon",
     "rule": "unit-helbrute",
     "units": [
-      "unit-helbrute",
-      "unit-fire-raptor-gunship",
-      "unit-hell-blade",
-      "unit-hell-talon",
-      "unit-land-raider-proteus",
-      "unit-relic-contemptor-dreadnought",
-      "unit-sokar-pattern-stormbird",
-      "unit-storm-eagle-gunship",
-      "unit-xiphon-interceptor"
+      "unit-helbrute"
     ],
     "datasheet": "unit-helbrute",
     "statline": "helbrute-profile"
@@ -6575,22 +4736,6 @@ window.DG_TERMS={
     "rule": "unit-heldrake",
     "units": [
       "unit-heldrake"
-    ],
-    "datasheet": "unit-heldrake",
-    "statline": "heldrake-profile"
-  },
-  "chaos-space-marines-ability-hover": {
-    "id": "chaos-space-marines-ability-hover",
-    "title": "Hover",
-    "summary": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance.",
-    "full": "Each time this unit takes to the skies (21.03), do not subtract 2\" from the maximum distance.",
-    "glossary": "glossary-chaos-space-marines-ability-hover",
-    "rule": "unit-heldrake",
-    "units": [
-      "unit-heldrake",
-      "unit-chaos-thunderhawk",
-      "unit-fire-raptor-gunship",
-      "unit-storm-eagle-gunship"
     ],
     "datasheet": "unit-heldrake",
     "statline": "heldrake-profile"
@@ -6629,9 +4774,7 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-ability-damaged-1-8-wounds-remaining",
     "rule": "unit-khorne-lord-of-skulls",
     "units": [
-      "unit-khorne-lord-of-skulls",
-      "unit-falchion",
-      "unit-fellblade"
+      "unit-khorne-lord-of-skulls"
     ],
     "datasheet": "unit-khorne-lord-of-skulls",
     "statline": "khorne-lord-of-skulls-profile"
@@ -6644,12 +4787,7 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-ability-deadly-demise-d6-2",
     "rule": "unit-khorne-lord-of-skulls",
     "units": [
-      "unit-khorne-lord-of-skulls",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-greater-brass-scorpion",
-      "unit-kharybdis-assault-claw",
-      "unit-kytan-ravager"
+      "unit-khorne-lord-of-skulls"
     ],
     "datasheet": "unit-khorne-lord-of-skulls",
     "statline": "khorne-lord-of-skulls-profile"
@@ -6862,3050 +5000,260 @@ window.DG_TERMS={
     "datasheet": "unit-venomcrawler",
     "statline": "venomcrawler-profile"
   },
-  "chaos-space-marines-ability-scuttling-gait": {
-    "id": "chaos-space-marines-ability-scuttling-gait",
-    "title": "Scuttling Gait",
-    "summary": "Each time this unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in this unit.",
-    "full": "Each time this unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in this unit.",
-    "glossary": "glossary-chaos-space-marines-ability-scuttling-gait",
-    "rule": "unit-blood-slaughterer",
-    "units": [
-      "unit-blood-slaughterer"
-    ],
-    "datasheet": "unit-blood-slaughterer",
-    "statline": "blood-slaughterer-profile"
-  },
-  "chaos-space-marines-weapon-impaler-harpoon": {
-    "id": "chaos-space-marines-weapon-impaler-harpoon",
-    "title": "Impaler harpoon",
-    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 12 · AP -2 · D 3 · Anti-MONSTER 2+, Anti-VEHICLE 2+, Impaled",
-    "full": "Ranged · 12\" · A 1 · BS 3+ · S 12 · AP -2 · D 3 · Anti-MONSTER 2+, Anti-VEHICLE 2+, Impaled",
-    "glossary": "glossary-chaos-space-marines-weapon-impaler-harpoon",
-    "rule": "unit-blood-slaughterer",
-    "units": [
-      "unit-blood-slaughterer"
-    ],
-    "datasheet": "unit-blood-slaughterer",
-    "statline": "blood-slaughterer-profile"
-  },
-  "chaos-space-marines-weapon-slaughter-blade": {
-    "id": "chaos-space-marines-weapon-slaughter-blade",
-    "title": "Slaughter blade",
-    "summary": "Melee · Melee · A 5 · WS 3+ · S 12 · AP -3 · D 3",
-    "full": "Melee · Melee · A 5 · WS 3+ · S 12 · AP -3 · D 3",
-    "glossary": "glossary-chaos-space-marines-weapon-slaughter-blade",
-    "rule": "unit-blood-slaughterer",
-    "units": [
-      "unit-blood-slaughterer"
-    ],
-    "datasheet": "unit-blood-slaughterer",
-    "statline": "blood-slaughterer-profile"
-  },
-  "chaos-space-marines-weapon-twin-slaughter-blade": {
-    "id": "chaos-space-marines-weapon-twin-slaughter-blade",
-    "title": "Twin slaughter blade",
-    "summary": "Melee · Melee · A 5 · WS 3+ · S 12 · AP -3 · D 3 · Twin-linked",
-    "full": "Melee · Melee · A 5 · WS 3+ · S 12 · AP -3 · D 3 · Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-twin-slaughter-blade",
-    "rule": "unit-blood-slaughterer",
-    "units": [
-      "unit-blood-slaughterer"
-    ],
-    "datasheet": "unit-blood-slaughterer",
-    "statline": "blood-slaughterer-profile"
-  },
-  "chaos-space-marines-ability-atomantic-arc-reactor": {
-    "id": "chaos-space-marines-ability-atomantic-arc-reactor",
-    "title": "Atomantic Arc-reactor",
-    "summary": "Each time this unit shoots its Cerberus neutron pulse array in your Shooting phase, provided it Remained Stationary this turn, that weapon has the [LETHAL HITS] ability.",
-    "full": "Each time this unit shoots its Cerberus neutron pulse array in your Shooting phase, provided it Remained Stationary this turn, that weapon has the [LETHAL HITS] ability.",
-    "glossary": "glossary-chaos-space-marines-ability-atomantic-arc-reactor",
-    "rule": "unit-cerberus",
-    "units": [
-      "unit-cerberus"
-    ],
-    "datasheet": "unit-cerberus",
-    "statline": "cerberus-profile"
-  },
-  "chaos-space-marines-ability-oath-of-moment": {
-    "id": "chaos-space-marines-ability-oath-of-moment",
-    "title": "Oath of Moment",
-    "summary": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ■ You can reroll the Hit roll ■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
-    "full": "If your Army Faction is Adeptus Astartes, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ■ You can reroll the Hit roll ■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the Blood Angels, Dark Angels, Deathwatch or Space Wolves keywords, add 1 to the Wound roll as well.",
-    "glossary": "glossary-chaos-space-marines-ability-oath-of-moment",
-    "rule": "unit-cerberus",
-    "units": [
-      "unit-cerberus",
-      "unit-deredeo-dreadnought",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-fire-raptor-gunship",
-      "unit-kratos",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-leviathan-dreadnought",
-      "unit-mastodon",
-      "unit-rapier-carrier",
-      "unit-relic-contemptor-dreadnought",
-      "unit-sicaran-battle-tank",
-      "unit-sicaran-punisher",
-      "unit-sicaran-venator",
-      "unit-sokar-pattern-stormbird",
-      "unit-spartan",
-      "unit-storm-eagle-gunship",
-      "unit-terrax-pattern-termite",
-      "unit-typhon",
-      "unit-whirlwind-scorpius",
-      "unit-xiphon-interceptor"
-    ],
-    "datasheet": "unit-cerberus",
-    "statline": "cerberus-profile"
-  },
-  "chaos-space-marines-ability-templar-vows": {
-    "id": "chaos-space-marines-ability-templar-vows",
-    "title": "Templar Vows",
-    "summary": "If your Army Faction is Adeptus Astartes, at the start of the first battle round, select one of the following Vows to be active for Adeptus Astartes units from your army. While a Vow is active for your army, that unit has the associated ability below. Abhor the Witch, Destroy the Witch ■ Each time this unit declares a charge, if one or more targets of that charge have the Psyker keyword, you can re-roll the Charge roll. Melee weapons equipped by models in this unit have the [PRECISION] ability while targeting Psyker units. Accept Any Challenge, No Matter the Odds ■ Each time a model in this unit makes a melee attack, if the Strength characteristic of that attack is less than or equal to the Toughness characteristic of the target, add 1 to the wound roll Suffer Not the Unclean to Live ■ This unit is eligible to declare a charge in a turn in which it Fell Back, and each time a model in this unit makes a Pile-in or Consolidation move, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the nearest enemy unit. Uphold the Honour of the Emperor If this unit has the Infantry keyword: ■ At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of control over that objective marker is greater than yours at the end of the phase. ■ If the mission you are playing features Actions, this unit is eligible to start to perform an Action in a turn in which it Advanced.",
-    "full": "If your Army Faction is Adeptus Astartes, at the start of the first battle round, select one of the following Vows to be active for Adeptus Astartes units from your army. While a Vow is active for your army, that unit has the associated ability below. Abhor the Witch, Destroy the Witch ■ Each time this unit declares a charge, if one or more targets of that charge have the Psyker keyword, you can re-roll the Charge roll. Melee weapons equipped by models in this unit have the [PRECISION] ability while targeting Psyker units. Accept Any Challenge, No Matter the Odds ■ Each time a model in this unit makes a melee attack, if the Strength characteristic of that attack is less than or equal to the Toughness characteristic of the target, add 1 to the wound roll Suffer Not the Unclean to Live ■ This unit is eligible to declare a charge in a turn in which it Fell Back, and each time a model in this unit makes a Pile-in or Consolidation move, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the nearest enemy unit. Uphold the Honour of the Emperor If this unit has the Infantry keyword: ■ At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent's level of control over that objective marker is greater than yours at the end of the phase. ■ If the mission you are playing features Actions, this unit is eligible to start to perform an Action in a turn in which it Advanced.",
-    "glossary": "glossary-chaos-space-marines-ability-templar-vows",
-    "rule": "unit-cerberus",
-    "units": [
-      "unit-cerberus",
-      "unit-deredeo-dreadnought",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-fire-raptor-gunship",
-      "unit-kratos",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-leviathan-dreadnought",
-      "unit-mastodon",
-      "unit-rapier-carrier",
-      "unit-relic-contemptor-dreadnought",
-      "unit-sicaran-battle-tank",
-      "unit-sicaran-punisher",
-      "unit-sicaran-venator",
-      "unit-sokar-pattern-stormbird",
-      "unit-spartan",
-      "unit-storm-eagle-gunship",
-      "unit-terrax-pattern-termite",
-      "unit-typhon",
-      "unit-whirlwind-scorpius",
-      "unit-xiphon-interceptor"
-    ],
-    "datasheet": "unit-cerberus",
-    "statline": "cerberus-profile"
-  },
-  "chaos-space-marines-weapon-cerberus-neutron-pulse-array": {
-    "id": "chaos-space-marines-weapon-cerberus-neutron-pulse-array",
-    "title": "Cerberus neutron pulse array",
-    "summary": "Ranged · 48\" · A 3 · BS 3+ · S 16 · AP -4 · D D6+3 · Twin-linked",
-    "full": "Ranged · 48\" · A 3 · BS 3+ · S 16 · AP -4 · D D6+3 · Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-cerberus-neutron-pulse-array",
-    "rule": "unit-cerberus",
-    "units": [
-      "unit-cerberus"
-    ],
-    "datasheet": "unit-cerberus",
-    "statline": "cerberus-profile"
-  },
-  "chaos-space-marines-weapon-storm-bolter": {
-    "id": "chaos-space-marines-weapon-storm-bolter",
-    "title": "Storm bolter",
-    "summary": "Ranged · 24\" · A 2 · BS 3+ · S 4 · AP 0 · D 1 · Rapid Fire 2",
-    "full": "Ranged · 24\" · A 2 · BS 3+ · S 4 · AP 0 · D 1 · Rapid Fire 2",
-    "glossary": "glossary-chaos-space-marines-weapon-storm-bolter",
-    "rule": "unit-cerberus",
-    "units": [
-      "unit-cerberus",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-sicaran-battle-tank",
-      "unit-sicaran-punisher",
-      "unit-sicaran-venator",
-      "unit-spartan",
-      "unit-terrax-pattern-termite",
-      "unit-typhon",
-      "unit-whirlwind-scorpius"
-    ],
-    "datasheet": "unit-cerberus",
-    "statline": "cerberus-profile"
-  },
-  "chaos-space-marines-ability-armoured-spearhead": {
-    "id": "chaos-space-marines-ability-armoured-spearhead",
-    "title": "Armoured Spearhead",
-    "summary": "Each time this model makes an attack that targets an enemy unit, re-roll a Hit roll of 1 and, if that unit is within range of an objective marker you do not control, you can re-roll the Hit roll instead.",
-    "full": "Each time this model makes an attack that targets an enemy unit, re-roll a Hit roll of 1 and, if that unit is within range of an objective marker you do not control, you can re-roll the Hit roll instead.",
-    "glossary": "glossary-chaos-space-marines-ability-armoured-spearhead",
-    "rule": "unit-chaos-deimos-predator",
-    "units": [
-      "unit-chaos-deimos-predator",
-      "unit-sicaran-battle-tank"
-    ],
-    "datasheet": "unit-chaos-deimos-predator",
-    "statline": "chaos-deimos-predator-profile"
-  },
-  "chaos-space-marines-ability-one-shot": {
-    "id": "chaos-space-marines-ability-one-shot",
-    "title": "One Shot",
-    "summary": "Each weapon with this ability can only be selected to make attacks with once per battle. If a destroyed model is returned to a unit, all of its [ONE SHOT] weapons that have already been selected to make attacks with during the battle cannot be selected to make attacks with again. If a new unit is added to an army, all [ONE SHOT] weapons in that unit can be selected to make attacks with once per battle.",
-    "full": "Each weapon with this ability can only be selected to make attacks with once per battle. If a destroyed model is returned to a unit, all of its [ONE SHOT] weapons that have already been selected to make attacks with during the battle cannot be selected to make attacks with again. If a new unit is added to an army, all [ONE SHOT] weapons in that unit can be selected to make attacks with once per battle.",
-    "glossary": "glossary-chaos-space-marines-ability-one-shot",
-    "rule": "unit-chaos-deimos-predator",
-    "units": [
-      "unit-chaos-deimos-predator",
-      "unit-kratos",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-leviathan-dreadnought",
-      "unit-sicaran-battle-tank",
-      "unit-sicaran-punisher",
-      "unit-sicaran-venator",
-      "unit-whirlwind-scorpius"
-    ],
-    "datasheet": "unit-chaos-deimos-predator",
-    "statline": "chaos-deimos-predator-profile"
-  },
-  "chaos-space-marines-weapon-plasma-destroyer-standard": {
-    "id": "chaos-space-marines-weapon-plasma-destroyer-standard",
-    "title": "➤ Plasma destroyer - standard",
-    "summary": "Ranged · 36\" · A D3 · BS 3+ · S 8 · AP -2 · D 2 · Blast",
-    "full": "Ranged · 36\" · A D3 · BS 3+ · S 8 · AP -2 · D 2 · Blast",
-    "glossary": "glossary-chaos-space-marines-weapon-plasma-destroyer-standard",
-    "rule": "unit-chaos-deimos-predator",
-    "units": [
-      "unit-chaos-deimos-predator"
-    ],
-    "datasheet": "unit-chaos-deimos-predator",
-    "statline": "chaos-deimos-predator-profile"
-  },
-  "chaos-space-marines-weapon-plasma-destroyer-supercharge": {
-    "id": "chaos-space-marines-weapon-plasma-destroyer-supercharge",
-    "title": "➤ Plasma destroyer - supercharge",
-    "summary": "Ranged · 36\" · A D3 · BS 3+ · S 9 · AP -3 · D 3 · Blast, Hazardous",
-    "full": "Ranged · 36\" · A D3 · BS 3+ · S 9 · AP -3 · D 3 · Blast, Hazardous",
-    "glossary": "glossary-chaos-space-marines-weapon-plasma-destroyer-supercharge",
-    "rule": "unit-chaos-deimos-predator",
-    "units": [
-      "unit-chaos-deimos-predator"
-    ],
-    "datasheet": "unit-chaos-deimos-predator",
-    "statline": "chaos-deimos-predator-profile"
-  },
-  "chaos-space-marines-weapon-conversion-beam-cannon": {
-    "id": "chaos-space-marines-weapon-conversion-beam-cannon",
-    "title": "Conversion beam cannon",
-    "summary": "Ranged · 24\" · A 1 · BS 3+ · S 7 · AP -1 · D 3 · Conversion, Sustained Hits D3",
-    "full": "Ranged · 24\" · A 1 · BS 3+ · S 7 · AP -1 · D 3 · Conversion, Sustained Hits D3",
-    "glossary": "glossary-chaos-space-marines-weapon-conversion-beam-cannon",
-    "rule": "unit-chaos-deimos-predator",
-    "units": [
-      "unit-chaos-deimos-predator",
-      "unit-relic-contemptor-dreadnought"
-    ],
-    "datasheet": "unit-chaos-deimos-predator",
-    "statline": "chaos-deimos-predator-profile"
-  },
-  "chaos-space-marines-weapon-magna-melta-cannon": {
-    "id": "chaos-space-marines-weapon-magna-melta-cannon",
-    "title": "Magna-melta cannon",
-    "summary": "Ranged · 18\" · A 2 · BS 3+ · S 12 · AP -4 · D D6 · Melta 4",
-    "full": "Ranged · 18\" · A 2 · BS 3+ · S 12 · AP -4 · D D6 · Melta 4",
-    "glossary": "glossary-chaos-space-marines-weapon-magna-melta-cannon",
-    "rule": "unit-chaos-deimos-predator",
-    "units": [
-      "unit-chaos-deimos-predator"
-    ],
-    "datasheet": "unit-chaos-deimos-predator",
-    "statline": "chaos-deimos-predator-profile"
-  },
-  "chaos-space-marines-weapon-infernus-cannon": {
-    "id": "chaos-space-marines-weapon-infernus-cannon",
-    "title": "Infernus cannon",
-    "summary": "Ranged · 12\" · A 2D6 · BS N/A · S 6 · AP -1 · D 1 · Ignores Cover, Torrent",
-    "full": "Ranged · 12\" · A 2D6 · BS N/A · S 6 · AP -1 · D 1 · Ignores Cover, Torrent",
-    "glossary": "glossary-chaos-space-marines-weapon-infernus-cannon",
-    "rule": "unit-chaos-deimos-predator",
-    "units": [
-      "unit-chaos-deimos-predator"
-    ],
-    "datasheet": "unit-chaos-deimos-predator",
-    "statline": "chaos-deimos-predator-profile"
-  },
-  "chaos-space-marines-weapon-hunter-killer-missile": {
-    "id": "chaos-space-marines-weapon-hunter-killer-missile",
-    "title": "Hunter-killer missile",
-    "summary": "Ranged · 48\" · A 1 · BS 2+ · S 14 · AP -3 · D D6 · One Shot",
-    "full": "Ranged · 48\" · A 1 · BS 2+ · S 14 · AP -3 · D D6 · One Shot",
-    "glossary": "glossary-chaos-space-marines-weapon-hunter-killer-missile",
-    "rule": "unit-chaos-deimos-predator",
-    "units": [
-      "unit-chaos-deimos-predator",
-      "unit-kratos",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-leviathan-dreadnought",
-      "unit-sicaran-battle-tank",
-      "unit-sicaran-punisher",
-      "unit-sicaran-venator",
-      "unit-whirlwind-scorpius"
-    ],
-    "datasheet": "unit-chaos-deimos-predator",
-    "statline": "chaos-deimos-predator-profile"
-  },
-  "chaos-space-marines-ability-leader-14": {
-    "id": "chaos-space-marines-ability-leader-14",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: ■ CHAOS BIKERS",
-    "full": "This model can be attached to the following unit: ■ CHAOS BIKERS",
-    "glossary": "glossary-chaos-space-marines-ability-leader-14",
-    "rule": "unit-chaos-lord-on-bike",
-    "units": [
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-chaos-lord-on-bike",
-    "statline": "chaos-lord-on-bike-profile"
-  },
-  "chaos-space-marines-ability-swift-assault": {
-    "id": "chaos-space-marines-ability-swift-assault",
-    "title": "Swift Assault",
-    "summary": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
-    "full": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
-    "glossary": "glossary-chaos-space-marines-ability-swift-assault",
-    "rule": "unit-chaos-lord-on-bike",
-    "units": [
-      "unit-chaos-lord-on-bike"
-    ],
-    "datasheet": "unit-chaos-lord-on-bike",
-    "statline": "chaos-lord-on-bike-profile"
-  },
-  "chaos-space-marines-weapon-close-combat-weapon-7": {
-    "id": "chaos-space-marines-weapon-close-combat-weapon-7",
-    "title": "Close combat weapon",
-    "summary": "Melee · Melee · A 6 · WS 2+ · S 4 · AP 0 · D 1",
-    "full": "Melee · Melee · A 6 · WS 2+ · S 4 · AP 0 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-close-combat-weapon-7",
-    "rule": "unit-chaos-lord-on-bike",
-    "units": [
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-chaos-lord-on-bike",
-    "statline": "chaos-lord-on-bike-profile"
-  },
-  "chaos-space-marines-weapon-astartes-chainsword-2": {
-    "id": "chaos-space-marines-weapon-astartes-chainsword-2",
-    "title": "Astartes chainsword",
-    "summary": "Melee · Melee · A 7 · WS 2+ · S 4 · AP -1 · D 1",
-    "full": "Melee · Melee · A 7 · WS 2+ · S 4 · AP -1 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-astartes-chainsword-2",
-    "rule": "unit-chaos-lord-on-bike",
-    "units": [
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-chaos-lord-on-bike",
-    "statline": "chaos-lord-on-bike-profile"
-  },
-  "chaos-space-marines-weapon-paired-accursed-weapons-3": {
-    "id": "chaos-space-marines-weapon-paired-accursed-weapons-3",
-    "title": "Paired accursed weapons",
-    "summary": "Melee · Melee · A 7 · WS 2+ · S 4 · AP -1 · D 1 · Twin-linked",
-    "full": "Melee · Melee · A 7 · WS 2+ · S 4 · AP -1 · D 1 · Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-paired-accursed-weapons-3",
-    "rule": "unit-chaos-lord-on-bike",
-    "units": [
-      "unit-chaos-lord-on-bike",
-      "unit-chaos-lord-on-disc-of-tzeentch",
-      "unit-chaos-lord-on-juggernaut",
-      "unit-chaos-lord-on-palanquin-of-nurgle",
-      "unit-chaos-lord-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-chaos-lord-on-bike",
-    "statline": "chaos-lord-on-bike-profile"
-  },
-  "chaos-space-marines-ability-leader-15": {
-    "id": "chaos-space-marines-ability-leader-15",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: ■ CHOSEN ■ LEGIONARIES ■ RUBRIC MARINES",
-    "full": "This model can be attached to the following unit: ■ CHOSEN ■ LEGIONARIES ■ RUBRIC MARINES",
-    "glossary": "glossary-chaos-space-marines-ability-leader-15",
-    "rule": "unit-chaos-lord-on-disc-of-tzeentch",
-    "units": [
-      "unit-chaos-lord-on-disc-of-tzeentch"
-    ],
-    "datasheet": "unit-chaos-lord-on-disc-of-tzeentch",
-    "statline": "chaos-lord-on-disc-of-tzeentch-profile"
-  },
-  "chaos-space-marines-ability-lord-of-fate": {
-    "id": "chaos-space-marines-ability-lord-of-fate",
-    "title": "Lord of Fate",
-    "summary": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability against mortal wounds.",
-    "full": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability against mortal wounds.",
-    "glossary": "glossary-chaos-space-marines-ability-lord-of-fate",
-    "rule": "unit-chaos-lord-on-disc-of-tzeentch",
-    "units": [
-      "unit-chaos-lord-on-disc-of-tzeentch"
-    ],
-    "datasheet": "unit-chaos-lord-on-disc-of-tzeentch",
-    "statline": "chaos-lord-on-disc-of-tzeentch-profile"
-  },
-  "chaos-space-marines-ability-leader-16": {
-    "id": "chaos-space-marines-ability-leader-16",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: ■ CHAOS BIKERS ■ KHORNE BERZERKERS",
-    "full": "This model can be attached to the following unit: ■ CHAOS BIKERS ■ KHORNE BERZERKERS",
-    "glossary": "glossary-chaos-space-marines-ability-leader-16",
-    "rule": "unit-chaos-lord-on-juggernaut",
-    "units": [
-      "unit-chaos-lord-on-juggernaut"
-    ],
-    "datasheet": "unit-chaos-lord-on-juggernaut",
-    "statline": "chaos-lord-on-juggernaut-profile"
-  },
-  "chaos-space-marines-ability-bloody-stampede": {
-    "id": "chaos-space-marines-ability-bloody-stampede",
-    "title": "Bloody Stampede",
-    "summary": "Each time this model’s unit ends a Charge move, select one enemy unit within Engagement Range of this model and roll one D6: on a 2-3, that enemy unit suffers 1 mortal wound; on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
-    "full": "Each time this model’s unit ends a Charge move, select one enemy unit within Engagement Range of this model and roll one D6: on a 2-3, that enemy unit suffers 1 mortal wound; on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
-    "glossary": "glossary-chaos-space-marines-ability-bloody-stampede",
-    "rule": "unit-chaos-lord-on-juggernaut",
-    "units": [
-      "unit-chaos-lord-on-juggernaut"
-    ],
-    "datasheet": "unit-chaos-lord-on-juggernaut",
-    "statline": "chaos-lord-on-juggernaut-profile"
-  },
-  "chaos-space-marines-weapon-bladed-horn": {
-    "id": "chaos-space-marines-weapon-bladed-horn",
-    "title": "Bladed horn",
-    "summary": "Melee · Melee · A 4 · WS 4+ · S 6 · AP -1 · D 1 · Extra Attacks, Lance",
-    "full": "Melee · Melee · A 4 · WS 4+ · S 6 · AP -1 · D 1 · Extra Attacks, Lance",
-    "glossary": "glossary-chaos-space-marines-weapon-bladed-horn",
-    "rule": "unit-chaos-lord-on-juggernaut",
-    "units": [
-      "unit-chaos-lord-on-juggernaut"
-    ],
-    "datasheet": "unit-chaos-lord-on-juggernaut",
-    "statline": "chaos-lord-on-juggernaut-profile"
-  },
-  "chaos-space-marines-ability-leader-17": {
-    "id": "chaos-space-marines-ability-leader-17",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: ■ CHOSEN ■ LEGIONARIES ■ PLAGUE MARINES",
-    "full": "This model can be attached to the following unit: ■ CHOSEN ■ LEGIONARIES ■ PLAGUE MARINES",
-    "glossary": "glossary-chaos-space-marines-ability-leader-17",
-    "rule": "unit-chaos-lord-on-palanquin-of-nurgle",
-    "units": [
-      "unit-chaos-lord-on-palanquin-of-nurgle"
-    ],
-    "datasheet": "unit-chaos-lord-on-palanquin-of-nurgle",
-    "statline": "chaos-lord-on-palanquin-of-nurgle-profile"
-  },
-  "chaos-space-marines-ability-revolting-regeneration": {
-    "id": "chaos-space-marines-ability-revolting-regeneration",
-    "title": "Revolting Regeneration",
-    "summary": "At the start of your Command phase, this model regains up to D3 lost wounds.",
-    "full": "At the start of your Command phase, this model regains up to D3 lost wounds.",
-    "glossary": "glossary-chaos-space-marines-ability-revolting-regeneration",
-    "rule": "unit-chaos-lord-on-palanquin-of-nurgle",
-    "units": [
-      "unit-chaos-lord-on-palanquin-of-nurgle"
-    ],
-    "datasheet": "unit-chaos-lord-on-palanquin-of-nurgle",
-    "statline": "chaos-lord-on-palanquin-of-nurgle-profile"
-  },
-  "chaos-space-marines-weapon-nurglings-claws-and-teeth": {
-    "id": "chaos-space-marines-weapon-nurglings-claws-and-teeth",
-    "title": "Nurgling's claws and teeth",
-    "summary": "Melee · Melee · A 4 · WS 5+ · S 2 · AP 0 · D 1 · Extra Attacks",
-    "full": "Melee · Melee · A 4 · WS 5+ · S 2 · AP 0 · D 1 · Extra Attacks",
-    "glossary": "glossary-chaos-space-marines-weapon-nurglings-claws-and-teeth",
-    "rule": "unit-chaos-lord-on-palanquin-of-nurgle",
-    "units": [
-      "unit-chaos-lord-on-palanquin-of-nurgle"
-    ],
-    "datasheet": "unit-chaos-lord-on-palanquin-of-nurgle",
-    "statline": "chaos-lord-on-palanquin-of-nurgle-profile"
-  },
-  "chaos-space-marines-ability-cut-off-their-escape": {
-    "id": "chaos-space-marines-ability-cut-off-their-escape",
-    "title": "Cut Off Their Escape",
-    "summary": "Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of this model’s unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests as if their unit was Battle-shocked. When doing so, if that enemy unit is also Battle-shocked by other means, subtract 1 from each of those Desperate Escape tests.",
-    "full": "Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of this model’s unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests as if their unit was Battle-shocked. When doing so, if that enemy unit is also Battle-shocked by other means, subtract 1 from each of those Desperate Escape tests.",
-    "glossary": "glossary-chaos-space-marines-ability-cut-off-their-escape",
-    "rule": "unit-chaos-lord-on-steed-of-slaanesh",
-    "units": [
-      "unit-chaos-lord-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-chaos-lord-on-steed-of-slaanesh",
-    "statline": "chaos-lord-on-steed-of-slaanesh-profile"
-  },
-  "chaos-space-marines-weapon-lashing-tongue": {
-    "id": "chaos-space-marines-weapon-lashing-tongue",
-    "title": "Lashing tongue",
-    "summary": "Melee · Melee · A 3 · WS 4+ · S 4 · AP 0 · D 1 · Extra Attacks, Lethal Hits",
-    "full": "Melee · Melee · A 3 · WS 4+ · S 4 · AP 0 · D 1 · Extra Attacks, Lethal Hits",
-    "glossary": "glossary-chaos-space-marines-weapon-lashing-tongue",
-    "rule": "unit-chaos-lord-on-steed-of-slaanesh",
-    "units": [
-      "unit-chaos-lord-on-steed-of-slaanesh",
-      "unit-sorcerer-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-chaos-lord-on-steed-of-slaanesh",
-    "statline": "chaos-lord-on-steed-of-slaanesh-profile"
-  },
-  "chaos-space-marines-ability-damaged-1-10-wounds-remaining": {
-    "id": "chaos-space-marines-ability-damaged-1-10-wounds-remaining",
-    "title": "Damaged: 1-10 wounds remaining",
-    "summary": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-chaos-space-marines-ability-damaged-1-10-wounds-remaining",
-    "rule": "unit-chaos-thunderhawk",
-    "units": [
-      "unit-chaos-thunderhawk"
-    ],
-    "datasheet": "unit-chaos-thunderhawk",
-    "statline": "chaos-thunderhawk-profile"
-  },
-  "chaos-space-marines-ability-aerial-assault": {
-    "id": "chaos-space-marines-ability-aerial-assault",
-    "title": "Aerial Assault",
-    "summary": "Each time a unit with the Deep Strike ability disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
-    "full": "Each time a unit with the Deep Strike ability disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
-    "glossary": "glossary-chaos-space-marines-ability-aerial-assault",
-    "rule": "unit-chaos-thunderhawk",
-    "units": [
-      "unit-chaos-thunderhawk",
-      "unit-sokar-pattern-stormbird"
-    ],
-    "datasheet": "unit-chaos-thunderhawk",
-    "statline": "chaos-thunderhawk-profile"
-  },
-  "chaos-space-marines-ability-thunderhawk-cluster-bombs": {
-    "id": "chaos-space-marines-ability-thunderhawk-cluster-bombs",
-    "title": "Thunderhawk cluster bombs",
-    "summary": "Each time the bearer ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound.",
-    "full": "Each time the bearer ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound.",
-    "glossary": "glossary-chaos-space-marines-ability-thunderhawk-cluster-bombs",
-    "rule": "unit-chaos-thunderhawk",
-    "units": [
-      "unit-chaos-thunderhawk"
-    ],
-    "datasheet": "unit-chaos-thunderhawk",
-    "statline": "chaos-thunderhawk-profile"
-  },
-  "chaos-space-marines-weapon-hellstrike-missile-array": {
-    "id": "chaos-space-marines-weapon-hellstrike-missile-array",
-    "title": "Hellstrike missile array",
-    "summary": "Ranged · 72\" · A 4 · BS 3+ · S 8 · AP -2 · D 3 · Anti-Fly 3+",
-    "full": "Ranged · 72\" · A 4 · BS 3+ · S 8 · AP -2 · D 3 · Anti-Fly 3+",
-    "glossary": "glossary-chaos-space-marines-weapon-hellstrike-missile-array",
-    "rule": "unit-chaos-thunderhawk",
-    "units": [
-      "unit-chaos-thunderhawk"
-    ],
-    "datasheet": "unit-chaos-thunderhawk",
-    "statline": "chaos-thunderhawk-profile"
-  },
-  "chaos-space-marines-weapon-thunderhawk-heavy-cannon": {
-    "id": "chaos-space-marines-weapon-thunderhawk-heavy-cannon",
-    "title": "Thunderhawk heavy cannon",
-    "summary": "Ranged · 48\" · A D6+6 · BS 3+ · S 10 · AP -2 · D 3 · Blast",
-    "full": "Ranged · 48\" · A D6+6 · BS 3+ · S 10 · AP -2 · D 3 · Blast",
-    "glossary": "glossary-chaos-space-marines-weapon-thunderhawk-heavy-cannon",
-    "rule": "unit-chaos-thunderhawk",
-    "units": [
-      "unit-chaos-thunderhawk"
-    ],
-    "datasheet": "unit-chaos-thunderhawk",
-    "statline": "chaos-thunderhawk-profile"
-  },
-  "chaos-space-marines-weapon-turbo-laser-destructor": {
-    "id": "chaos-space-marines-weapon-turbo-laser-destructor",
-    "title": "Turbo-laser destructor",
-    "summary": "Ranged · 96\" · A D3+1 · BS 3+ · S 20 · AP -4 · D D6+6 · Blast",
-    "full": "Ranged · 96\" · A D3+1 · BS 3+ · S 20 · AP -4 · D D6+6 · Blast",
-    "glossary": "glossary-chaos-space-marines-weapon-turbo-laser-destructor",
-    "rule": "unit-chaos-thunderhawk",
-    "units": [
-      "unit-chaos-thunderhawk"
-    ],
-    "datasheet": "unit-chaos-thunderhawk",
-    "statline": "chaos-thunderhawk-profile"
-  },
-  "chaos-space-marines-weapon-armoured-hull": {
-    "id": "chaos-space-marines-weapon-armoured-hull",
-    "title": "Armoured hull",
-    "summary": "Melee · Melee · A 6 · WS 4+ · S 8 · AP 0 · D 1",
-    "full": "Melee · Melee · A 6 · WS 4+ · S 8 · AP 0 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-armoured-hull",
-    "rule": "unit-chaos-thunderhawk",
-    "units": [
-      "unit-chaos-thunderhawk",
-      "unit-fire-raptor-gunship",
-      "unit-storm-eagle-gunship"
-    ],
-    "datasheet": "unit-chaos-thunderhawk",
-    "statline": "chaos-thunderhawk-profile"
-  },
-  "chaos-space-marines-weapon-autogun": {
-    "id": "chaos-space-marines-weapon-autogun",
-    "title": "Autogun",
-    "summary": "Ranged · 24\" · A 1 · BS 4+ · S 3 · AP 0 · D 1 · Rapid Fire 1",
-    "full": "Ranged · 24\" · A 1 · BS 4+ · S 3 · AP 0 · D 1 · Rapid Fire 1",
-    "glossary": "glossary-chaos-space-marines-weapon-autogun",
-    "rule": "unit-cultist-mob-with-firearms",
-    "units": [
-      "unit-cultist-mob-with-firearms"
-    ],
-    "datasheet": "unit-cultist-mob-with-firearms",
-    "statline": "cultist-mob-with-firearms-profile"
-  },
-  "chaos-space-marines-weapon-heavy-stubber": {
-    "id": "chaos-space-marines-weapon-heavy-stubber",
-    "title": "Heavy stubber",
-    "summary": "Ranged · 36\" · A 4 · BS 5+ · S 4 · AP 0 · D 1 · Heavy, Rapid Fire 3",
-    "full": "Ranged · 36\" · A 4 · BS 5+ · S 4 · AP 0 · D 1 · Heavy, Rapid Fire 3",
-    "glossary": "glossary-chaos-space-marines-weapon-heavy-stubber",
-    "rule": "unit-cultist-mob-with-firearms",
-    "units": [
-      "unit-cultist-mob-with-firearms",
-      "unit-renegade-heavy-weapons-squad"
-    ],
-    "datasheet": "unit-cultist-mob-with-firearms",
-    "statline": "cultist-mob-with-firearms-profile"
-  },
-  "chaos-space-marines-ability-infernal-regeneration": {
-    "id": "chaos-space-marines-ability-infernal-regeneration",
-    "title": "Infernal Regeneration",
-    "summary": "The first time this model is destroyed, remove it from play without resolving its Deadly Demise ability. Then, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with D6 wounds remaining.",
-    "full": "The first time this model is destroyed, remove it from play without resolving its Deadly Demise ability. Then, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with D6 wounds remaining.",
-    "glossary": "glossary-chaos-space-marines-ability-infernal-regeneration",
-    "rule": "unit-decimator",
-    "units": [
-      "unit-decimator"
-    ],
-    "datasheet": "unit-decimator",
-    "statline": "decimator-profile"
-  },
-  "chaos-space-marines-ability-conversion": {
-    "id": "chaos-space-marines-ability-conversion",
-    "title": "Conversion",
-    "summary": "Each time an attack made with this weapon targets a unit more than 12\" from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.",
-    "full": "Each time an attack made with this weapon targets a unit more than 12\" from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.",
-    "glossary": "glossary-chaos-space-marines-ability-conversion",
-    "rule": "unit-decimator",
-    "units": [
-      "unit-decimator",
-      "unit-relic-contemptor-dreadnought"
-    ],
-    "datasheet": "unit-decimator",
-    "statline": "decimator-profile"
-  },
-  "chaos-space-marines-weapon-decimator-butcher-cannon": {
-    "id": "chaos-space-marines-weapon-decimator-butcher-cannon",
-    "title": "Decimator butcher cannon",
-    "summary": "Ranged · 36\" · A 4 · BS 3+ · S 9 · AP -1 · D 2",
-    "full": "Ranged · 36\" · A 4 · BS 3+ · S 9 · AP -1 · D 2",
-    "glossary": "glossary-chaos-space-marines-weapon-decimator-butcher-cannon",
-    "rule": "unit-decimator",
-    "units": [
-      "unit-decimator"
-    ],
-    "datasheet": "unit-decimator",
-    "statline": "decimator-profile"
-  },
-  "chaos-space-marines-weapon-decimator-conversion-beamer": {
-    "id": "chaos-space-marines-weapon-decimator-conversion-beamer",
-    "title": "Decimator conversion beamer",
-    "summary": "Ranged · 24\" · A 1 · BS 3+ · S 7 · AP -1 · D 3 · Conversion, Sustained Hits D3",
-    "full": "Ranged · 24\" · A 1 · BS 3+ · S 7 · AP -1 · D 3 · Conversion, Sustained Hits D3",
-    "glossary": "glossary-chaos-space-marines-weapon-decimator-conversion-beamer",
-    "rule": "unit-decimator",
-    "units": [
-      "unit-decimator"
-    ],
-    "datasheet": "unit-decimator",
-    "statline": "decimator-profile"
-  },
-  "chaos-space-marines-weapon-soulburner-petard": {
-    "id": "chaos-space-marines-weapon-soulburner-petard",
-    "title": "Soulburner petard",
-    "summary": "Ranged · 24\" · A 4 · BS 3+ · S 2 · AP 0 · D 1 · Anti-INFANTRY 3+, Devastating Wounds, Hazardous",
-    "full": "Ranged · 24\" · A 4 · BS 3+ · S 2 · AP 0 · D 1 · Anti-INFANTRY 3+, Devastating Wounds, Hazardous",
-    "glossary": "glossary-chaos-space-marines-weapon-soulburner-petard",
-    "rule": "unit-decimator",
-    "units": [
-      "unit-decimator"
-    ],
-    "datasheet": "unit-decimator",
-    "statline": "decimator-profile"
-  },
-  "chaos-space-marines-weapon-storm-laser": {
-    "id": "chaos-space-marines-weapon-storm-laser",
-    "title": "Storm laser",
-    "summary": "Ranged · 36\" · A 8 · BS 3+ · S 6 · AP -1 · D 1 · Sustained Hits 1",
-    "full": "Ranged · 36\" · A 8 · BS 3+ · S 6 · AP -1 · D 1 · Sustained Hits 1",
-    "glossary": "glossary-chaos-space-marines-weapon-storm-laser",
-    "rule": "unit-decimator",
-    "units": [
-      "unit-decimator"
-    ],
-    "datasheet": "unit-decimator",
-    "statline": "decimator-profile"
-  },
-  "chaos-space-marines-weapon-decimator-claw": {
-    "id": "chaos-space-marines-weapon-decimator-claw",
-    "title": "Decimator claw",
-    "summary": "Melee · Melee · A 5 · WS 3+ · S 14 · AP -3 · D 3",
-    "full": "Melee · Melee · A 5 · WS 3+ · S 14 · AP -3 · D 3",
-    "glossary": "glossary-chaos-space-marines-weapon-decimator-claw",
-    "rule": "unit-decimator",
-    "units": [
-      "unit-decimator"
-    ],
-    "datasheet": "unit-decimator",
-    "statline": "decimator-profile"
-  },
-  "chaos-space-marines-weapon-hellflamer": {
-    "id": "chaos-space-marines-weapon-hellflamer",
-    "title": "Hellflamer",
-    "summary": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP -1 · D 1 · Anti-INFANTRY 4+, Ignores Cover, Torrent",
-    "full": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP -1 · D 1 · Anti-INFANTRY 4+, Ignores Cover, Torrent",
-    "glossary": "glossary-chaos-space-marines-weapon-hellflamer",
-    "rule": "unit-decimator",
-    "units": [
-      "unit-decimator"
-    ],
-    "datasheet": "unit-decimator",
-    "statline": "decimator-profile"
-  },
-  "chaos-space-marines-weapon-twin-decimator-claw": {
-    "id": "chaos-space-marines-weapon-twin-decimator-claw",
-    "title": "Twin decimator claw",
-    "summary": "Melee · Melee · A 5 · WS 3+ · S 14 · AP -3 · D 3 · Twin-linked",
-    "full": "Melee · Melee · A 5 · WS 3+ · S 14 · AP -3 · D 3 · Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-twin-decimator-claw",
-    "rule": "unit-decimator",
-    "units": [
-      "unit-decimator"
-    ],
-    "datasheet": "unit-decimator",
-    "statline": "decimator-profile"
-  },
-  "chaos-space-marines-ability-deredeo-strike": {
-    "id": "chaos-space-marines-ability-deredeo-strike",
-    "title": "Deredeo Strike",
-    "summary": "Each time this model makes a ranged attack that targets a unit that is not Below Half-strength, you can re-roll the Hit roll.",
-    "full": "Each time this model makes a ranged attack that targets a unit that is not Below Half-strength, you can re-roll the Hit roll.",
-    "glossary": "glossary-chaos-space-marines-ability-deredeo-strike",
-    "rule": "unit-deredeo-dreadnought",
-    "units": [
-      "unit-deredeo-dreadnought"
-    ],
-    "datasheet": "unit-deredeo-dreadnought",
-    "statline": "deredeo-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-aiolos-missile-launcher": {
-    "id": "chaos-space-marines-weapon-aiolos-missile-launcher",
-    "title": "Aiolos missile launcher",
-    "summary": "Ranged · 48\" · A D6+3 · BS 3+ · S 5 · AP 0 · D 1 · Blast",
-    "full": "Ranged · 48\" · A D6+3 · BS 3+ · S 5 · AP 0 · D 1 · Blast",
-    "glossary": "glossary-chaos-space-marines-weapon-aiolos-missile-launcher",
-    "rule": "unit-deredeo-dreadnought",
-    "units": [
-      "unit-deredeo-dreadnought"
-    ],
-    "datasheet": "unit-deredeo-dreadnought",
-    "statline": "deredeo-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-boreas-air-defence-missiles": {
-    "id": "chaos-space-marines-weapon-boreas-air-defence-missiles",
-    "title": "Boreas air defence missiles",
-    "summary": "Ranged · 48\" · A 1 · BS 3+ · S 12 · AP -3 · D D6+1 · Anti-FLY 2+",
-    "full": "Ranged · 48\" · A 1 · BS 3+ · S 12 · AP -3 · D D6+1 · Anti-FLY 2+",
-    "glossary": "glossary-chaos-space-marines-weapon-boreas-air-defence-missiles",
-    "rule": "unit-deredeo-dreadnought",
-    "units": [
-      "unit-deredeo-dreadnought"
-    ],
-    "datasheet": "unit-deredeo-dreadnought",
-    "statline": "deredeo-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-twin-heavy-flamer": {
-    "id": "chaos-space-marines-weapon-twin-heavy-flamer",
-    "title": "Twin heavy flamer",
-    "summary": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP -1 · D 1 · Ignores Cover, Torrent, Twin-linked",
-    "full": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP -1 · D 1 · Ignores Cover, Torrent, Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-twin-heavy-flamer",
-    "rule": "unit-deredeo-dreadnought",
-    "units": [
-      "unit-deredeo-dreadnought",
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-land-raider-achilles",
-      "unit-land-raider-proteus",
-      "unit-spartan"
-    ],
-    "datasheet": "unit-deredeo-dreadnought",
-    "statline": "deredeo-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-anvilus-autocannon-battery": {
-    "id": "chaos-space-marines-weapon-anvilus-autocannon-battery",
-    "title": "Anvilus autocannon battery",
-    "summary": "Ranged · 48\" · A 4 · BS 3+ · S 9 · AP -1 · D 3 · Twin-linked",
-    "full": "Ranged · 48\" · A 4 · BS 3+ · S 9 · AP -1 · D 3 · Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-anvilus-autocannon-battery",
-    "rule": "unit-deredeo-dreadnought",
-    "units": [
-      "unit-deredeo-dreadnought"
-    ],
-    "datasheet": "unit-deredeo-dreadnought",
-    "statline": "deredeo-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-arachnus-heavy-lascannon-battery": {
-    "id": "chaos-space-marines-weapon-arachnus-heavy-lascannon-battery",
-    "title": "Arachnus heavy lascannon battery",
-    "summary": "Ranged · 48\" · A 2 · BS 3+ · S 12 · AP -3 · D D6+1",
-    "full": "Ranged · 48\" · A 2 · BS 3+ · S 12 · AP -3 · D D6+1",
-    "glossary": "glossary-chaos-space-marines-weapon-arachnus-heavy-lascannon-battery",
-    "rule": "unit-deredeo-dreadnought",
-    "units": [
-      "unit-deredeo-dreadnought"
-    ],
-    "datasheet": "unit-deredeo-dreadnought",
-    "statline": "deredeo-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-volkite-falconet-battery": {
-    "id": "chaos-space-marines-weapon-volkite-falconet-battery",
-    "title": "Volkite falconet battery",
-    "summary": "Ranged · 30\" · A 6 · BS 3+ · S 9 · AP 0 · D 2 · Devastating Wounds",
-    "full": "Ranged · 30\" · A 6 · BS 3+ · S 9 · AP 0 · D 2 · Devastating Wounds",
-    "glossary": "glossary-chaos-space-marines-weapon-volkite-falconet-battery",
-    "rule": "unit-deredeo-dreadnought",
-    "units": [
-      "unit-deredeo-dreadnought"
-    ],
-    "datasheet": "unit-deredeo-dreadnought",
-    "statline": "deredeo-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-hellfire-plasma-carronade-standard": {
-    "id": "chaos-space-marines-weapon-hellfire-plasma-carronade-standard",
-    "title": "➤ Hellfire plasma carronade - standard",
-    "summary": "Ranged · 36\" · A 6 · BS 3+ · S 7 · AP -2 · D 2",
-    "full": "Ranged · 36\" · A 6 · BS 3+ · S 7 · AP -2 · D 2",
-    "glossary": "glossary-chaos-space-marines-weapon-hellfire-plasma-carronade-standard",
-    "rule": "unit-deredeo-dreadnought",
-    "units": [
-      "unit-deredeo-dreadnought"
-    ],
-    "datasheet": "unit-deredeo-dreadnought",
-    "statline": "deredeo-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-hellfire-plasma-carronade-supercharge": {
-    "id": "chaos-space-marines-weapon-hellfire-plasma-carronade-supercharge",
-    "title": "➤ Hellfire plasma carronade - supercharge",
-    "summary": "Ranged · 36\" · A 6 · BS 3+ · S 8 · AP -3 · D 3 · Hazardous",
-    "full": "Ranged · 36\" · A 6 · BS 3+ · S 8 · AP -3 · D 3 · Hazardous",
-    "glossary": "glossary-chaos-space-marines-weapon-hellfire-plasma-carronade-supercharge",
-    "rule": "unit-deredeo-dreadnought",
-    "units": [
-      "unit-deredeo-dreadnought"
-    ],
-    "datasheet": "unit-deredeo-dreadnought",
-    "statline": "deredeo-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-armoured-feet": {
-    "id": "chaos-space-marines-weapon-armoured-feet",
-    "title": "Armoured feet",
-    "summary": "Melee · Melee · A 6 · WS 3+ · S 6 · AP 0 · D 1",
-    "full": "Melee · Melee · A 6 · WS 3+ · S 6 · AP 0 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-armoured-feet",
-    "rule": "unit-deredeo-dreadnought",
-    "units": [
-      "unit-deredeo-dreadnought",
-      "unit-leviathan-dreadnought",
-      "unit-relic-contemptor-dreadnought"
-    ],
-    "datasheet": "unit-deredeo-dreadnought",
-    "statline": "deredeo-dreadnought-profile"
-  },
-  "chaos-space-marines-ability-dreadclaw-assault": {
-    "id": "chaos-space-marines-ability-dreadclaw-assault",
-    "title": "Dreadclaw Assault",
-    "summary": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model can disembark after it has been set up on the battlefield, and if they do they must be set up more than 9\" away from all enemy models.",
-    "full": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model can disembark after it has been set up on the battlefield, and if they do they must be set up more than 9\" away from all enemy models.",
-    "glossary": "glossary-chaos-space-marines-ability-dreadclaw-assault",
-    "rule": "unit-dreadclaw-drop-pod",
-    "units": [
-      "unit-dreadclaw-drop-pod"
-    ],
-    "datasheet": "unit-dreadclaw-drop-pod",
-    "statline": "dreadclaw-drop-pod-profile"
-  },
-  "chaos-space-marines-weapon-blade-struts": {
-    "id": "chaos-space-marines-weapon-blade-struts",
-    "title": "Blade struts",
-    "summary": "Melee · Melee · A 8 · WS 4+ · S 6 · AP -2 · D 1",
-    "full": "Melee · Melee · A 8 · WS 4+ · S 6 · AP -2 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-blade-struts",
-    "rule": "unit-dreadclaw-drop-pod",
-    "units": [
-      "unit-dreadclaw-drop-pod"
-    ],
-    "datasheet": "unit-dreadclaw-drop-pod",
-    "statline": "dreadclaw-drop-pod-profile"
-  },
-  "chaos-space-marines-ability-support-3": {
-    "id": "chaos-space-marines-ability-support-3",
-    "title": "Support",
-    "summary": "This model can be attached to the following units: ■ CHOSEN ■ LEGIONARIES You can attach this model to one of the above units even if one other CHARACTER model has already been attached to it (a unit cannot have two EXALTED CHAMPIONS attached to it). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
-    "full": "This model can be attached to the following units: ■ CHOSEN ■ LEGIONARIES You can attach this model to one of the above units even if one other CHARACTER model has already been attached to it (a unit cannot have two EXALTED CHAMPIONS attached to it). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
-    "glossary": "glossary-chaos-space-marines-ability-support-3",
-    "rule": "unit-exalted-champion",
-    "units": [
-      "unit-exalted-champion"
-    ],
-    "datasheet": "unit-exalted-champion",
-    "statline": "exalted-champion-profile"
-  },
-  "chaos-space-marines-ability-dark-champion": {
-    "id": "chaos-space-marines-ability-dark-champion",
-    "title": "Dark Champion",
-    "summary": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.",
-    "full": "While this model is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll.",
-    "glossary": "glossary-chaos-space-marines-ability-dark-champion",
-    "rule": "unit-exalted-champion",
-    "units": [
-      "unit-exalted-champion"
-    ],
-    "datasheet": "unit-exalted-champion",
-    "statline": "exalted-champion-profile"
-  },
-  "chaos-space-marines-ability-aspire-to-glory": {
-    "id": "chaos-space-marines-ability-aspire-to-glory",
-    "title": "Aspire to Glory",
-    "summary": "Each time this model’s unit makes a Dark Pact, until the end of the phase, add D3 to the Strength characteristic of weapons equipped by this model.",
-    "full": "Each time this model’s unit makes a Dark Pact, until the end of the phase, add D3 to the Strength characteristic of weapons equipped by this model.",
-    "glossary": "glossary-chaos-space-marines-ability-aspire-to-glory",
-    "rule": "unit-exalted-champion",
-    "units": [
-      "unit-exalted-champion"
-    ],
-    "datasheet": "unit-exalted-champion",
-    "statline": "exalted-champion-profile"
-  },
-  "chaos-space-marines-ability-support-4": {
-    "id": "chaos-space-marines-ability-support-4",
-    "title": "Support",
-    "summary": "Support appears in the Chaos Space Marines reference.",
+  "chaos-space-marines-enhancement-amulet-of-tainted-vigour": {
+    "id": "chaos-space-marines-enhancement-amulet-of-tainted-vigour",
+    "title": "Amulet of Tainted Vigour",
+    "summary": "Amulet of Tainted Vigour appears in the Chaos Space Marines reference.",
     "full": "",
-    "glossary": "glossary-chaos-space-marines-ability-support-4",
-    "rule": "unit-exalted-champion",
-    "units": [
-      "unit-exalted-champion"
-    ],
-    "datasheet": "unit-exalted-champion",
-    "statline": "exalted-champion-profile"
-  },
-  "chaos-space-marines-weapon-exalted-weapon-2": {
-    "id": "chaos-space-marines-weapon-exalted-weapon-2",
-    "title": "Exalted weapon",
-    "summary": "Melee · Melee · A 5 · WS 2+ · S 5 · AP -2 · D 2",
-    "full": "Melee · Melee · A 5 · WS 2+ · S 5 · AP -2 · D 2",
-    "glossary": "glossary-chaos-space-marines-weapon-exalted-weapon-2",
-    "rule": "unit-exalted-champion",
-    "units": [
-      "unit-exalted-champion"
-    ],
-    "datasheet": "unit-exalted-champion",
-    "statline": "exalted-champion-profile"
-  },
-  "chaos-space-marines-ability-titan-killer": {
-    "id": "chaos-space-marines-ability-titan-killer",
-    "title": "Titan-killer",
-    "summary": "Each time this model makes a ranged attack with its twin Falchion volcano cannon that targets a MONSTER or VEHICLE unit, that attack has the [DEVASTATING WOUNDS] ability.",
-    "full": "Each time this model makes a ranged attack with its twin Falchion volcano cannon that targets a MONSTER or VEHICLE unit, that attack has the [DEVASTATING WOUNDS] ability.",
-    "glossary": "glossary-chaos-space-marines-ability-titan-killer",
-    "rule": "unit-falchion",
-    "units": [
-      "unit-falchion"
-    ],
-    "datasheet": "unit-falchion",
-    "statline": "falchion-profile"
-  },
-  "chaos-space-marines-weapon-twin-falchion-volcano-cannon": {
-    "id": "chaos-space-marines-weapon-twin-falchion-volcano-cannon",
-    "title": "Twin Falchion volcano cannon",
-    "summary": "Ranged · 120\" · A D3+1 · BS 3+ · S 24 · AP -5 · D 12 · Blast, Twin-linked",
-    "full": "Ranged · 120\" · A D3+1 · BS 3+ · S 24 · AP -5 · D 12 · Blast, Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-twin-falchion-volcano-cannon",
-    "rule": "unit-falchion",
-    "units": [
-      "unit-falchion"
-    ],
-    "datasheet": "unit-falchion",
-    "statline": "falchion-profile"
-  },
-  "chaos-space-marines-weapon-quad-lascannon": {
-    "id": "chaos-space-marines-weapon-quad-lascannon",
-    "title": "Quad lascannon",
-    "summary": "Ranged · 48\" · A 4 · BS 3+ · S 12 · AP -3 · D D6+1",
-    "full": "Ranged · 48\" · A 4 · BS 3+ · S 12 · AP -3 · D D6+1",
-    "glossary": "glossary-chaos-space-marines-weapon-quad-lascannon",
-    "rule": "unit-falchion",
-    "units": [
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-spartan"
-    ],
-    "datasheet": "unit-falchion",
-    "statline": "falchion-profile"
-  },
-  "chaos-space-marines-weapon-laser-destroyer": {
-    "id": "chaos-space-marines-weapon-laser-destroyer",
-    "title": "Laser destroyer",
-    "summary": "Ranged · 36\" · A 3 · BS 3+ · S 14 · AP -4 · D D6+1 · Heavy",
-    "full": "Ranged · 36\" · A 3 · BS 3+ · S 14 · AP -4 · D D6+1 · Heavy",
-    "glossary": "glossary-chaos-space-marines-weapon-laser-destroyer",
-    "rule": "unit-falchion",
-    "units": [
-      "unit-falchion",
-      "unit-fellblade",
-      "unit-rapier-carrier",
-      "unit-spartan"
-    ],
-    "datasheet": "unit-falchion",
-    "statline": "falchion-profile"
-  },
-  "chaos-space-marines-ability-rolling-fortress": {
-    "id": "chaos-space-marines-ability-rolling-fortress",
-    "title": "Rolling Fortress",
-    "summary": "Each time a ranged attack is allocated to a model from your army, if that model is not fully visible to every model in the attacking unit because of this Fellblade model, that model has the Benefit of Cover against that attack.",
-    "full": "Each time a ranged attack is allocated to a model from your army, if that model is not fully visible to every model in the attacking unit because of this Fellblade model, that model has the Benefit of Cover against that attack.",
-    "glossary": "glossary-chaos-space-marines-ability-rolling-fortress",
-    "rule": "unit-fellblade",
-    "units": [
-      "unit-fellblade"
-    ],
-    "datasheet": "unit-fellblade",
-    "statline": "fellblade-profile"
-  },
-  "chaos-space-marines-weapon-fellblade-accelerator-cannon-ap-shells": {
-    "id": "chaos-space-marines-weapon-fellblade-accelerator-cannon-ap-shells",
-    "title": "➤ Fellblade accelerator cannon - AP shells",
-    "summary": "Ranged · 72\" · A 2 · BS 3+ · S 14 · AP -3 · D 6",
-    "full": "Ranged · 72\" · A 2 · BS 3+ · S 14 · AP -3 · D 6",
-    "glossary": "glossary-chaos-space-marines-weapon-fellblade-accelerator-cannon-ap-shells",
-    "rule": "unit-fellblade",
-    "units": [
-      "unit-fellblade"
-    ],
-    "datasheet": "unit-fellblade",
-    "statline": "fellblade-profile"
-  },
-  "chaos-space-marines-weapon-fellblade-accelerator-cannon-he-shells": {
-    "id": "chaos-space-marines-weapon-fellblade-accelerator-cannon-he-shells",
-    "title": "➤ Fellblade accelerator cannon - HE shells",
-    "summary": "Ranged · 72\" · A 2D6 · BS 3+ · S 8 · AP -1 · D 2 · Blast",
-    "full": "Ranged · 72\" · A 2D6 · BS 3+ · S 8 · AP -1 · D 2 · Blast",
-    "glossary": "glossary-chaos-space-marines-weapon-fellblade-accelerator-cannon-he-shells",
-    "rule": "unit-fellblade",
-    "units": [
-      "unit-fellblade"
-    ],
-    "datasheet": "unit-fellblade",
-    "statline": "fellblade-profile"
-  },
-  "chaos-space-marines-weapon-combi-weapon-3": {
-    "id": "chaos-space-marines-weapon-combi-weapon-3",
-    "title": "Combi-weapon",
-    "summary": "Ranged · 24\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Anti-INFANTRY 3+, Devastating Wounds, Rapid Fire 1",
-    "full": "Ranged · 24\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Anti-INFANTRY 3+, Devastating Wounds, Rapid Fire 1",
-    "glossary": "glossary-chaos-space-marines-weapon-combi-weapon-3",
-    "rule": "unit-fellblade",
-    "units": [
-      "unit-fellblade",
-      "unit-kratos"
-    ],
-    "datasheet": "unit-fellblade",
-    "statline": "fellblade-profile"
-  },
-  "chaos-space-marines-weapon-quad-heavy-bolter": {
-    "id": "chaos-space-marines-weapon-quad-heavy-bolter",
-    "title": "Quad heavy bolter",
-    "summary": "Ranged · 36\" · A 6 · BS 3+ · S 5 · AP -1 · D 2 · Sustained Hits 1, Twin-linked",
-    "full": "Ranged · 36\" · A 6 · BS 3+ · S 5 · AP -1 · D 2 · Sustained Hits 1, Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-quad-heavy-bolter",
-    "rule": "unit-fellblade",
-    "units": [
-      "unit-fellblade"
-    ],
-    "datasheet": "unit-fellblade",
-    "statline": "fellblade-profile"
-  },
-  "chaos-space-marines-ability-strafing-run": {
-    "id": "chaos-space-marines-ability-strafing-run",
-    "title": "Strafing Run",
-    "summary": "Each time this model makes a ranged attack that targets a unit that cannot FLY, add 1 to the Hit roll.",
-    "full": "Each time this model makes a ranged attack that targets a unit that cannot FLY, add 1 to the Hit roll.",
-    "glossary": "glossary-chaos-space-marines-ability-strafing-run",
-    "rule": "unit-fire-raptor-gunship",
-    "units": [
-      "unit-fire-raptor-gunship"
-    ],
-    "datasheet": "unit-fire-raptor-gunship",
-    "statline": "fire-raptor-gunship-profile"
-  },
-  "chaos-space-marines-weapon-twin-avenger-bolt-cannon": {
-    "id": "chaos-space-marines-weapon-twin-avenger-bolt-cannon",
-    "title": "Twin avenger bolt cannon",
-    "summary": "Ranged · 36\" · A 10 · BS 3+ · S 6 · AP -1 · D 2 · Twin-linked",
-    "full": "Ranged · 36\" · A 10 · BS 3+ · S 6 · AP -1 · D 2 · Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-twin-avenger-bolt-cannon",
-    "rule": "unit-fire-raptor-gunship",
-    "units": [
-      "unit-fire-raptor-gunship"
-    ],
-    "datasheet": "unit-fire-raptor-gunship",
-    "statline": "fire-raptor-gunship-profile"
-  },
-  "chaos-space-marines-weapon-quad-heavy-bolter-2": {
-    "id": "chaos-space-marines-weapon-quad-heavy-bolter-2",
-    "title": "Quad heavy bolter",
-    "summary": "Ranged · 36\" · A 6 · BS 3+ · S 5 · AP -1 · D 2 · Twin-linked, Sustained Hits 1",
-    "full": "Ranged · 36\" · A 6 · BS 3+ · S 5 · AP -1 · D 2 · Twin-linked, Sustained Hits 1",
-    "glossary": "glossary-chaos-space-marines-weapon-quad-heavy-bolter-2",
-    "rule": "unit-fire-raptor-gunship",
-    "units": [
-      "unit-fire-raptor-gunship"
-    ],
-    "datasheet": "unit-fire-raptor-gunship",
-    "statline": "fire-raptor-gunship-profile"
-  },
-  "chaos-space-marines-weapon-twin-hellstrike-launcher": {
-    "id": "chaos-space-marines-weapon-twin-hellstrike-launcher",
-    "title": "Twin hellstrike launcher",
-    "summary": "Ranged · 72\" · A 2 · BS 3+ · S 10 · AP -3 · D D6 · Anti-Fly 2+, Twin-linked",
-    "full": "Ranged · 72\" · A 2 · BS 3+ · S 10 · AP -3 · D D6 · Anti-Fly 2+, Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-twin-hellstrike-launcher",
-    "rule": "unit-fire-raptor-gunship",
-    "units": [
-      "unit-fire-raptor-gunship",
-      "unit-storm-eagle-gunship"
-    ],
-    "datasheet": "unit-fire-raptor-gunship",
-    "statline": "fire-raptor-gunship-profile"
-  },
-  "chaos-space-marines-weapon-brutal-weapons": {
-    "id": "chaos-space-marines-weapon-brutal-weapons",
-    "title": "Brutal weapons",
-    "summary": "Melee · Melee · A 2 · WS 4+ · S 4 · AP 0 · D 1",
-    "full": "Melee · Melee · A 2 · WS 4+ · S 4 · AP 0 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-brutal-weapons",
-    "rule": "unit-gellerpox-infected",
-    "units": [
-      "unit-gellerpox-infected"
-    ],
-    "datasheet": "unit-gellerpox-infected",
-    "statline": "gellerpox-infected-profile"
-  },
-  "chaos-space-marines-weapon-hideous-mutations-3": {
-    "id": "chaos-space-marines-weapon-hideous-mutations-3",
-    "title": "Hideous mutations",
-    "summary": "Melee · Melee · A 4 · WS 4+ · S 6 · AP -1 · D 2",
-    "full": "Melee · Melee · A 4 · WS 4+ · S 6 · AP -1 · D 2",
-    "glossary": "glossary-chaos-space-marines-weapon-hideous-mutations-3",
-    "rule": "unit-gellerpox-infected",
-    "units": [
-      "unit-gellerpox-infected"
-    ],
-    "datasheet": "unit-gellerpox-infected",
-    "statline": "gellerpox-infected-profile"
-  },
-  "chaos-space-marines-weapon-belly-flamer": {
-    "id": "chaos-space-marines-weapon-belly-flamer",
-    "title": "Belly flamer",
-    "summary": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP 0 · D 1 · Ignores Cover, Torrent",
-    "full": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP 0 · D 1 · Ignores Cover, Torrent",
-    "glossary": "glossary-chaos-space-marines-weapon-belly-flamer",
-    "rule": "unit-gellerpox-infected",
-    "units": [
-      "unit-gellerpox-infected"
-    ],
-    "datasheet": "unit-gellerpox-infected",
-    "statline": "gellerpox-infected-profile"
-  },
-  "chaos-space-marines-ability-hovering-death": {
-    "id": "chaos-space-marines-ability-hovering-death",
-    "title": "Hovering Death",
-    "summary": "This model is eligible to shoot and declare a charge in a turn in which it Fell Back.",
-    "full": "This model is eligible to shoot and declare a charge in a turn in which it Fell Back.",
-    "glossary": "glossary-chaos-space-marines-ability-hovering-death",
-    "rule": "unit-greater-blight-drone",
-    "units": [
-      "unit-greater-blight-drone"
-    ],
-    "datasheet": "unit-greater-blight-drone",
-    "statline": "greater-blight-drone-profile"
-  },
-  "chaos-space-marines-weapon-bile-maw": {
-    "id": "chaos-space-marines-weapon-bile-maw",
-    "title": "Bile maw",
-    "summary": "Ranged · 12\" · A 3 · BS 3+ · S 5 · AP 0 · D 1 · Lethal Hits",
-    "full": "Ranged · 12\" · A 3 · BS 3+ · S 5 · AP 0 · D 1 · Lethal Hits",
-    "glossary": "glossary-chaos-space-marines-weapon-bile-maw",
-    "rule": "unit-greater-blight-drone",
-    "units": [
-      "unit-greater-blight-drone"
-    ],
-    "datasheet": "unit-greater-blight-drone",
-    "statline": "greater-blight-drone-profile"
-  },
-  "chaos-space-marines-weapon-blightreaper-cannon": {
-    "id": "chaos-space-marines-weapon-blightreaper-cannon",
-    "title": "Blightreaper cannon",
-    "summary": "Ranged · 36\" · A 6 · BS 3+ · S 8 · AP -2 · D 2 · Lethal Hits",
-    "full": "Ranged · 36\" · A 6 · BS 3+ · S 8 · AP -2 · D 2 · Lethal Hits",
-    "glossary": "glossary-chaos-space-marines-weapon-blightreaper-cannon",
-    "rule": "unit-greater-blight-drone",
-    "units": [
-      "unit-greater-blight-drone"
-    ],
-    "datasheet": "unit-greater-blight-drone",
-    "statline": "greater-blight-drone-profile"
-  },
-  "chaos-space-marines-weapon-greater-plague-probe": {
-    "id": "chaos-space-marines-weapon-greater-plague-probe",
-    "title": "Greater plague probe",
-    "summary": "Ranged · Melee · A 4 · BS 3+ · S 6 · AP -1 · D 1 · Lethal Hits",
-    "full": "Ranged · Melee · A 4 · BS 3+ · S 6 · AP -1 · D 1 · Lethal Hits",
-    "glossary": "glossary-chaos-space-marines-weapon-greater-plague-probe",
-    "rule": "unit-greater-blight-drone",
-    "units": [
-      "unit-greater-blight-drone"
-    ],
-    "datasheet": "unit-greater-blight-drone",
-    "statline": "greater-blight-drone-profile"
-  },
-  "chaos-space-marines-ability-runes-of-the-blood-god": {
-    "id": "chaos-space-marines-ability-runes-of-the-blood-god",
-    "title": "Runes of the Blood God",
-    "summary": "This model has the Feel No Pain 4+ ability against mortal wounds and Psychic Attacks.",
-    "full": "This model has the Feel No Pain 4+ ability against mortal wounds and Psychic Attacks.",
-    "glossary": "glossary-chaos-space-marines-ability-runes-of-the-blood-god",
-    "rule": "unit-greater-brass-scorpion",
-    "units": [
-      "unit-greater-brass-scorpion"
-    ],
-    "datasheet": "unit-greater-brass-scorpion",
-    "statline": "greater-brass-scorpion-profile"
-  },
-  "chaos-space-marines-ability-damaged-1-9-wounds-remaining": {
-    "id": "chaos-space-marines-ability-damaged-1-9-wounds-remaining",
-    "title": "Damaged: 1-9 wounds remaining",
-    "summary": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-chaos-space-marines-ability-damaged-1-9-wounds-remaining",
-    "rule": "unit-greater-brass-scorpion",
-    "units": [
-      "unit-greater-brass-scorpion"
-    ],
-    "datasheet": "unit-greater-brass-scorpion",
-    "statline": "greater-brass-scorpion-profile"
-  },
-  "chaos-space-marines-ability-super-heavy-walker": {
-    "id": "chaos-space-marines-ability-super-heavy-walker",
-    "title": "Super-Heavy Walker",
-    "summary": "Each time a unit with this ability makes a normal, advance or fall-back move: - Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height. - Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked. *Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).*",
-    "full": "Each time a unit with this ability makes a normal, advance or fall-back move: - Models in that unit can move through models (including MONSTER/VEHICLE models, but excluding TITANIC models) and can move horizontally through sections of terrain features that are 4\" or less in height. - Before moving that unit, you can select for all models in that unit to have the MOBILE keyword until that move ends. If you do, when that move ends, roll one D6: on a 1, that unit is battle-shocked. *Designer’s Note: Gaining the MOBILE keyword for the duration of a move will enable models in that unit to move horizontally through dense terrain features (13.06).*",
-    "glossary": "glossary-chaos-space-marines-ability-super-heavy-walker",
-    "rule": "unit-greater-brass-scorpion",
-    "units": [
-      "unit-greater-brass-scorpion",
-      "unit-kytan-ravager"
-    ],
-    "datasheet": "unit-greater-brass-scorpion",
-    "statline": "greater-brass-scorpion-profile"
-  },
-  "chaos-space-marines-weapon-hellcrusher-claws-strike": {
-    "id": "chaos-space-marines-weapon-hellcrusher-claws-strike",
-    "title": "➤ Hellcrusher claws - strike",
-    "summary": "Melee · Melee · A 6 · WS 3+ · S 14 · AP -3 · D 6",
-    "full": "Melee · Melee · A 6 · WS 3+ · S 14 · AP -3 · D 6",
-    "glossary": "glossary-chaos-space-marines-weapon-hellcrusher-claws-strike",
-    "rule": "unit-greater-brass-scorpion",
-    "units": [
-      "unit-greater-brass-scorpion"
-    ],
-    "datasheet": "unit-greater-brass-scorpion",
-    "statline": "greater-brass-scorpion-profile"
-  },
-  "chaos-space-marines-weapon-hellcrusher-claws-sweep": {
-    "id": "chaos-space-marines-weapon-hellcrusher-claws-sweep",
-    "title": "➤ Hellcrusher claws - sweep",
-    "summary": "Melee · Melee · A 18 · WS 3+ · S 8 · AP -2 · D 2",
-    "full": "Melee · Melee · A 18 · WS 3+ · S 8 · AP -2 · D 2",
-    "glossary": "glossary-chaos-space-marines-weapon-hellcrusher-claws-sweep",
-    "rule": "unit-greater-brass-scorpion",
-    "units": [
-      "unit-greater-brass-scorpion"
-    ],
-    "datasheet": "unit-greater-brass-scorpion",
-    "statline": "greater-brass-scorpion-profile"
-  },
-  "chaos-space-marines-weapon-hellmaw-flame-cannons": {
-    "id": "chaos-space-marines-weapon-hellmaw-flame-cannons",
-    "title": "Hellmaw flame cannons",
-    "summary": "Ranged · 12\" · A 2D6 · BS N/A · S 8 · AP -1 · D 1 · Ignores Cover, Torrent",
-    "full": "Ranged · 12\" · A 2D6 · BS N/A · S 8 · AP -1 · D 1 · Ignores Cover, Torrent",
-    "glossary": "glossary-chaos-space-marines-weapon-hellmaw-flame-cannons",
-    "rule": "unit-greater-brass-scorpion",
-    "units": [
-      "unit-greater-brass-scorpion"
-    ],
-    "datasheet": "unit-greater-brass-scorpion",
-    "statline": "greater-brass-scorpion-profile"
-  },
-  "chaos-space-marines-weapon-scorpion-cannon": {
-    "id": "chaos-space-marines-weapon-scorpion-cannon",
-    "title": "Scorpion cannon",
-    "summary": "Ranged · 36\" · A 15 · BS 3+ · S 5 · AP -1 · D 2 · Sustained Hits 1",
-    "full": "Ranged · 36\" · A 15 · BS 3+ · S 5 · AP -1 · D 2 · Sustained Hits 1",
-    "glossary": "glossary-chaos-space-marines-weapon-scorpion-cannon",
-    "rule": "unit-greater-brass-scorpion",
-    "units": [
-      "unit-greater-brass-scorpion"
-    ],
-    "datasheet": "unit-greater-brass-scorpion",
-    "statline": "greater-brass-scorpion-profile"
-  },
-  "chaos-space-marines-ability-interceptor": {
-    "id": "chaos-space-marines-ability-interceptor",
-    "title": "Interceptor",
-    "summary": "Each time this model makes a ranged attack that targets a unit that can FLY, add 1 to the Hit roll.",
-    "full": "Each time this model makes a ranged attack that targets a unit that can FLY, add 1 to the Hit roll.",
-    "glossary": "glossary-chaos-space-marines-ability-interceptor",
-    "rule": "unit-hell-blade",
-    "units": [
-      "unit-hell-blade",
-      "unit-xiphon-interceptor"
-    ],
-    "datasheet": "unit-hell-blade",
-    "statline": "hell-blade-profile"
-  },
-  "chaos-space-marines-weapon-armoured-hull-2": {
-    "id": "chaos-space-marines-weapon-armoured-hull-2",
-    "title": "Armoured hull",
-    "summary": "Melee · Melee · A 3 · WS 4+ · S 6 · AP 0 · D 1",
-    "full": "Melee · Melee · A 3 · WS 4+ · S 6 · AP 0 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-armoured-hull-2",
-    "rule": "unit-hell-blade",
-    "units": [
-      "unit-hell-blade",
-      "unit-xiphon-interceptor"
-    ],
-    "datasheet": "unit-hell-blade",
-    "statline": "hell-blade-profile"
-  },
-  "chaos-space-marines-weapon-twin-autocannon-2": {
-    "id": "chaos-space-marines-weapon-twin-autocannon-2",
-    "title": "Twin autocannon",
-    "summary": "Ranged · 48\" · A 2 · BS 3+ · S 9 · AP -3 · D 3 · Twin-linked",
-    "full": "Ranged · 48\" · A 2 · BS 3+ · S 9 · AP -3 · D 3 · Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-twin-autocannon-2",
-    "rule": "unit-hell-blade",
-    "units": [
-      "unit-hell-blade"
-    ],
-    "datasheet": "unit-hell-blade",
-    "statline": "hell-blade-profile"
-  },
-  "chaos-space-marines-ability-bomb-rack": {
-    "id": "chaos-space-marines-ability-bomb-rack",
-    "title": "Bomb Rack",
-    "summary": "Each time this model ends a Normal move, you can select one enemy unit it moved across during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound.",
-    "full": "Each time this model ends a Normal move, you can select one enemy unit it moved across during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound.",
-    "glossary": "glossary-chaos-space-marines-ability-bomb-rack",
-    "rule": "unit-hell-talon",
-    "units": [
-      "unit-hell-talon"
-    ],
-    "datasheet": "unit-hell-talon",
-    "statline": "hell-talon-profile"
-  },
-  "chaos-space-marines-weapon-armoured-hull-3": {
-    "id": "chaos-space-marines-weapon-armoured-hull-3",
-    "title": "Armoured hull",
-    "summary": "Melee · Melee · A 6 · WS 4+ · S 6 · AP 0 · D 1",
-    "full": "Melee · Melee · A 6 · WS 4+ · S 6 · AP 0 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-armoured-hull-3",
-    "rule": "unit-hell-talon",
-    "units": [
-      "unit-hell-talon"
-    ],
-    "datasheet": "unit-hell-talon",
-    "statline": "hell-talon-profile"
-  },
-  "chaos-space-marines-weapon-autocannon": {
-    "id": "chaos-space-marines-weapon-autocannon",
-    "title": "Autocannon",
-    "summary": "Ranged · 48\" · A 2 · BS 3+ · S 9 · AP -1 · D 3",
-    "full": "Ranged · 48\" · A 2 · BS 3+ · S 9 · AP -1 · D 3",
-    "glossary": "glossary-chaos-space-marines-weapon-autocannon",
-    "rule": "unit-hell-talon",
-    "units": [
-      "unit-hell-talon",
-      "unit-kratos"
-    ],
-    "datasheet": "unit-hell-talon",
-    "statline": "hell-talon-profile"
-  },
-  "chaos-space-marines-ability-kharybdis-assault": {
-    "id": "chaos-space-marines-ability-kharybdis-assault",
-    "title": "Kharybdis Assault",
-    "summary": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model can disembark after it has been set up on the battlefield, and if they do they must be set up more than 9\" away from all enemy models.",
-    "full": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model can disembark after it has been set up on the battlefield, and if they do they must be set up more than 9\" away from all enemy models.",
-    "glossary": "glossary-chaos-space-marines-ability-kharybdis-assault",
-    "rule": "unit-kharybdis-assault-claw",
-    "units": [
-      "unit-kharybdis-assault-claw"
-    ],
-    "datasheet": "unit-kharybdis-assault-claw",
-    "statline": "kharybdis-assault-claw-profile"
-  },
-  "chaos-space-marines-ability-damaged-1-7-wounds-remaining": {
-    "id": "chaos-space-marines-ability-damaged-1-7-wounds-remaining",
-    "title": "Damaged: 1-7 wounds remaining",
-    "summary": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-chaos-space-marines-ability-damaged-1-7-wounds-remaining",
-    "rule": "unit-kharybdis-assault-claw",
-    "units": [
-      "unit-kharybdis-assault-claw"
-    ],
-    "datasheet": "unit-kharybdis-assault-claw",
-    "statline": "kharybdis-assault-claw-profile"
-  },
-  "chaos-space-marines-weapon-blade-struts-2": {
-    "id": "chaos-space-marines-weapon-blade-struts-2",
-    "title": "Blade struts",
-    "summary": "Melee · Melee · A 12 · WS 4+ · S 8 · AP -2 · D 1",
-    "full": "Melee · Melee · A 12 · WS 4+ · S 8 · AP -2 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-blade-struts-2",
-    "rule": "unit-kharybdis-assault-claw",
-    "units": [
-      "unit-kharybdis-assault-claw"
-    ],
-    "datasheet": "unit-kharybdis-assault-claw",
-    "statline": "kharybdis-assault-claw-profile"
-  },
-  "chaos-space-marines-weapon-kharybdis-storm-launcher-frag": {
-    "id": "chaos-space-marines-weapon-kharybdis-storm-launcher-frag",
-    "title": "➤ Kharybdis storm launcher - frag",
-    "summary": "Ranged · 36\" · A 2D6 · BS 3+ · S 4 · AP 0 · D 1 · Blast",
-    "full": "Ranged · 36\" · A 2D6 · BS 3+ · S 4 · AP 0 · D 1 · Blast",
-    "glossary": "glossary-chaos-space-marines-weapon-kharybdis-storm-launcher-frag",
-    "rule": "unit-kharybdis-assault-claw",
-    "units": [
-      "unit-kharybdis-assault-claw"
-    ],
-    "datasheet": "unit-kharybdis-assault-claw",
-    "statline": "kharybdis-assault-claw-profile"
-  },
-  "chaos-space-marines-weapon-kharybdis-storm-launcher-krak": {
-    "id": "chaos-space-marines-weapon-kharybdis-storm-launcher-krak",
-    "title": "➤ Kharybdis storm launcher - krak",
-    "summary": "Ranged · 36\" · A 2 · BS 3+ · S 9 · AP -2 · D D6",
-    "full": "Ranged · 36\" · A 2 · BS 3+ · S 9 · AP -2 · D D6",
-    "glossary": "glossary-chaos-space-marines-weapon-kharybdis-storm-launcher-krak",
-    "rule": "unit-kharybdis-assault-claw",
-    "units": [
-      "unit-kharybdis-assault-claw"
-    ],
-    "datasheet": "unit-kharybdis-assault-claw",
-    "statline": "kharybdis-assault-claw-profile"
-  },
-  "chaos-space-marines-weapon-melta-array": {
-    "id": "chaos-space-marines-weapon-melta-array",
-    "title": "Melta array",
-    "summary": "Melee · Melee · A 1 · WS 4+ · S 12 · AP -4 · D D6+2 · Extra Attacks",
-    "full": "Melee · Melee · A 1 · WS 4+ · S 12 · AP -4 · D D6+2 · Extra Attacks",
-    "glossary": "glossary-chaos-space-marines-weapon-melta-array",
-    "rule": "unit-kharybdis-assault-claw",
-    "units": [
-      "unit-kharybdis-assault-claw"
-    ],
-    "datasheet": "unit-kharybdis-assault-claw",
-    "statline": "kharybdis-assault-claw-profile"
-  },
-  "chaos-space-marines-ability-line-breaker": {
-    "id": "chaos-space-marines-ability-line-breaker",
-    "title": "Line-breaker",
-    "summary": "When making ranged attacks, this model can target enemy units within Engagement Range of it with Blast weapons (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units.",
-    "full": "When making ranged attacks, this model can target enemy units within Engagement Range of it with Blast weapons (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units.",
-    "glossary": "glossary-chaos-space-marines-ability-line-breaker",
-    "rule": "unit-kratos",
-    "units": [
-      "unit-kratos"
-    ],
-    "datasheet": "unit-kratos",
-    "statline": "kratos-profile"
-  },
-  "chaos-space-marines-weapon-volkite-caliver": {
-    "id": "chaos-space-marines-weapon-volkite-caliver",
-    "title": "Volkite caliver",
-    "summary": "Ranged · 24\" · A 2 · BS 3+ · S 5 · AP 0 · D 2 · Devastating Wounds",
-    "full": "Ranged · 24\" · A 2 · BS 3+ · S 5 · AP 0 · D 2 · Devastating Wounds",
-    "glossary": "glossary-chaos-space-marines-weapon-volkite-caliver",
-    "rule": "unit-kratos",
-    "units": [
-      "unit-kratos"
-    ],
-    "datasheet": "unit-kratos",
-    "statline": "kratos-profile"
-  },
-  "chaos-space-marines-weapon-kratos-battlecannon-ap": {
-    "id": "chaos-space-marines-weapon-kratos-battlecannon-ap",
-    "title": "➤ Kratos battlecannon - AP",
-    "summary": "Ranged · 36\" · A 1 · BS 3+ · S 18 · AP -4 · D D6+3 · Heavy",
-    "full": "Ranged · 36\" · A 1 · BS 3+ · S 18 · AP -4 · D D6+3 · Heavy",
-    "glossary": "glossary-chaos-space-marines-weapon-kratos-battlecannon-ap",
-    "rule": "unit-kratos",
-    "units": [
-      "unit-kratos"
-    ],
-    "datasheet": "unit-kratos",
-    "statline": "kratos-profile"
-  },
-  "chaos-space-marines-weapon-kratos-battlecannon-he": {
-    "id": "chaos-space-marines-weapon-kratos-battlecannon-he",
-    "title": "➤ Kratos battlecannon - HE",
-    "summary": "Ranged · 36\" · A D6+3 · BS 3+ · S 10 · AP -1 · D 3 · Blast",
-    "full": "Ranged · 36\" · A D6+3 · BS 3+ · S 10 · AP -1 · D 3 · Blast",
-    "glossary": "glossary-chaos-space-marines-weapon-kratos-battlecannon-he",
-    "rule": "unit-kratos",
-    "units": [
-      "unit-kratos"
-    ],
-    "datasheet": "unit-kratos",
-    "statline": "kratos-profile"
-  },
-  "chaos-space-marines-weapon-melta-blast-gun": {
-    "id": "chaos-space-marines-weapon-melta-blast-gun",
-    "title": "Melta blast-gun",
-    "summary": "Ranged · 24\" · A 4 · BS 3+ · S 12 · AP -4 · D D6 · Melta 2",
-    "full": "Ranged · 24\" · A 4 · BS 3+ · S 12 · AP -4 · D D6 · Melta 2",
-    "glossary": "glossary-chaos-space-marines-weapon-melta-blast-gun",
-    "rule": "unit-kratos",
-    "units": [
-      "unit-kratos"
-    ],
-    "datasheet": "unit-kratos",
-    "statline": "kratos-profile"
-  },
-  "chaos-space-marines-weapon-volkite-cardanelle": {
-    "id": "chaos-space-marines-weapon-volkite-cardanelle",
-    "title": "Volkite cardanelle",
-    "summary": "Ranged · 36\" · A 9 · BS 3+ · S 9 · AP 0 · D 3 · Devastating Wounds",
-    "full": "Ranged · 36\" · A 9 · BS 3+ · S 9 · AP 0 · D 3 · Devastating Wounds",
-    "glossary": "glossary-chaos-space-marines-weapon-volkite-cardanelle",
-    "rule": "unit-kratos",
-    "units": [
-      "unit-kratos"
-    ],
-    "datasheet": "unit-kratos",
-    "statline": "kratos-profile"
-  },
-  "chaos-space-marines-weapon-twin-boltgun": {
-    "id": "chaos-space-marines-weapon-twin-boltgun",
-    "title": "Twin boltgun",
-    "summary": "Ranged · 24\" · A 2 · BS 3+ · S 4 · AP 0 · D 1 · Twin-linked",
-    "full": "Ranged · 24\" · A 2 · BS 3+ · S 4 · AP 0 · D 1 · Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-twin-boltgun",
-    "rule": "unit-kratos",
-    "units": [
-      "unit-kratos"
-    ],
-    "datasheet": "unit-kratos",
-    "statline": "kratos-profile"
-  },
-  "chaos-space-marines-weapon-volkite-culverin": {
-    "id": "chaos-space-marines-weapon-volkite-culverin",
-    "title": "Volkite culverin",
-    "summary": "Ranged · 36\" · A 4 · BS 3+ · S 6 · AP 0 · D 2 · Devastating Wounds",
-    "full": "Ranged · 36\" · A 4 · BS 3+ · S 6 · AP 0 · D 2 · Devastating Wounds",
-    "glossary": "glossary-chaos-space-marines-weapon-volkite-culverin",
-    "rule": "unit-kratos",
-    "units": [
-      "unit-kratos",
-      "unit-mastodon"
-    ],
-    "datasheet": "unit-kratos",
-    "statline": "kratos-profile"
-  },
-  "chaos-space-marines-ability-damaged-1-8-wounds-remaining-2": {
-    "id": "chaos-space-marines-ability-damaged-1-8-wounds-remaining-2",
-    "title": "Damaged: 1-8 wounds remaining",
-    "summary": "While this model has 1-8 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-8 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-chaos-space-marines-ability-damaged-1-8-wounds-remaining-2",
-    "rule": "unit-kytan-ravager",
-    "units": [
-      "unit-kytan-ravager"
-    ],
-    "datasheet": "unit-kytan-ravager",
-    "statline": "kytan-ravager-profile"
-  },
-  "chaos-space-marines-ability-bloodlust": {
-    "id": "chaos-space-marines-ability-bloodlust",
-    "title": "Bloodlust",
-    "summary": "Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [SUSTAINED HITS 1] ability. In addition, once per battle, this model is eligible to declare a charge in a turn in which it Advanced.",
-    "full": "Each time this model makes a Charge move, until the end of the turn, its melee weapons have the [SUSTAINED HITS 1] ability. In addition, once per battle, this model is eligible to declare a charge in a turn in which it Advanced.",
-    "glossary": "glossary-chaos-space-marines-ability-bloodlust",
-    "rule": "unit-kytan-ravager",
-    "units": [
-      "unit-kytan-ravager"
-    ],
-    "datasheet": "unit-kytan-ravager",
-    "statline": "kytan-ravager-profile"
-  },
-  "chaos-space-marines-weapon-kytan-cleaver-strike": {
-    "id": "chaos-space-marines-weapon-kytan-cleaver-strike",
-    "title": "➤ Kytan cleaver - strike",
-    "summary": "Melee · Melee · A 4 · WS 3+ · S 14 · AP -4 · D 6",
-    "full": "Melee · Melee · A 4 · WS 3+ · S 14 · AP -4 · D 6",
-    "glossary": "glossary-chaos-space-marines-weapon-kytan-cleaver-strike",
-    "rule": "unit-kytan-ravager",
-    "units": [
-      "unit-kytan-ravager"
-    ],
-    "datasheet": "unit-kytan-ravager",
-    "statline": "kytan-ravager-profile"
-  },
-  "chaos-space-marines-weapon-kytan-cleaver-sweep": {
-    "id": "chaos-space-marines-weapon-kytan-cleaver-sweep",
-    "title": "➤ Kytan cleaver - sweep",
-    "summary": "Melee · Melee · A 12 · WS 3+ · S 9 · AP -3 · D 2",
-    "full": "Melee · Melee · A 12 · WS 3+ · S 9 · AP -3 · D 2",
-    "glossary": "glossary-chaos-space-marines-weapon-kytan-cleaver-sweep",
-    "rule": "unit-kytan-ravager",
-    "units": [
-      "unit-kytan-ravager"
-    ],
-    "datasheet": "unit-kytan-ravager",
-    "statline": "kytan-ravager-profile"
-  },
-  "chaos-space-marines-weapon-kytan-gatling-cannon": {
-    "id": "chaos-space-marines-weapon-kytan-gatling-cannon",
-    "title": "Kytan gatling cannon",
-    "summary": "Ranged · 36\" · A 18 · BS 3+ · S 6 · AP -2 · D 2",
-    "full": "Ranged · 36\" · A 18 · BS 3+ · S 6 · AP -2 · D 2",
-    "glossary": "glossary-chaos-space-marines-weapon-kytan-gatling-cannon",
-    "rule": "unit-kytan-ravager",
-    "units": [
-      "unit-kytan-ravager"
-    ],
-    "datasheet": "unit-kytan-ravager",
-    "statline": "kytan-ravager-profile"
-  },
-  "chaos-space-marines-ability-indirect-fire": {
-    "id": "chaos-space-marines-ability-indirect-fire",
-    "title": "Indirect Fire",
-    "summary": "Units containing one or more models with an [INDIRECT FIRE] weapon can shoot using indirect shooting (10.07).",
-    "full": "Units containing one or more models with an [INDIRECT FIRE] weapon can shoot using indirect shooting (10.07).",
-    "glossary": "glossary-chaos-space-marines-ability-indirect-fire",
-    "rule": "unit-land-raider-achilles",
-    "units": [
-      "unit-land-raider-achilles",
-      "unit-rapier-carrier",
-      "unit-renegade-heavy-weapons-squad",
-      "unit-whirlwind-scorpius"
-    ],
-    "datasheet": "unit-land-raider-achilles",
-    "statline": "land-raider-achilles-profile"
-  },
-  "chaos-space-marines-weapon-quad-launcher-shatter-shells": {
-    "id": "chaos-space-marines-weapon-quad-launcher-shatter-shells",
-    "title": "➤ Quad launcher - shatter shells",
-    "summary": "Ranged · 24\" · A 4 · BS 3+ · S 9 · AP -2 · D 3",
-    "full": "Ranged · 24\" · A 4 · BS 3+ · S 9 · AP -2 · D 3",
-    "glossary": "glossary-chaos-space-marines-weapon-quad-launcher-shatter-shells",
-    "rule": "unit-land-raider-achilles",
-    "units": [
-      "unit-land-raider-achilles"
-    ],
-    "datasheet": "unit-land-raider-achilles",
-    "statline": "land-raider-achilles-profile"
-  },
-  "chaos-space-marines-weapon-quad-launcher-thunderfire-shells": {
-    "id": "chaos-space-marines-weapon-quad-launcher-thunderfire-shells",
-    "title": "➤ Quad launcher - thunderfire shells",
-    "summary": "Ranged · 60\" · A D6+4 · BS 3+ · S 5 · AP 0 · D 1 · Blast, Indirect Fire",
-    "full": "Ranged · 60\" · A D6+4 · BS 3+ · S 5 · AP 0 · D 1 · Blast, Indirect Fire",
-    "glossary": "glossary-chaos-space-marines-weapon-quad-launcher-thunderfire-shells",
-    "rule": "unit-land-raider-achilles",
-    "units": [
-      "unit-land-raider-achilles"
-    ],
-    "datasheet": "unit-land-raider-achilles",
-    "statline": "land-raider-achilles-profile"
-  },
-  "chaos-space-marines-weapon-twin-volkite-culverin": {
-    "id": "chaos-space-marines-weapon-twin-volkite-culverin",
-    "title": "Twin volkite culverin",
-    "summary": "Ranged · 36\" · A 4 · BS 3+ · S 6 · AP 0 · D 2 · Devastating Wounds, Twin-linked",
-    "full": "Ranged · 36\" · A 4 · BS 3+ · S 6 · AP 0 · D 2 · Devastating Wounds, Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-twin-volkite-culverin",
-    "rule": "unit-land-raider-achilles",
-    "units": [
-      "unit-land-raider-achilles",
-      "unit-relic-contemptor-dreadnought"
-    ],
-    "datasheet": "unit-land-raider-achilles",
-    "statline": "land-raider-achilles-profile"
-  },
-  "chaos-space-marines-weapon-twin-multi-melta": {
-    "id": "chaos-space-marines-weapon-twin-multi-melta",
-    "title": "Twin multi-melta",
-    "summary": "Ranged · 18\" · A 2 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2, Twin-linked",
-    "full": "Ranged · 18\" · A 2 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2, Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-twin-multi-melta",
-    "rule": "unit-land-raider-achilles",
-    "units": [
-      "unit-land-raider-achilles",
-      "unit-storm-eagle-gunship"
-    ],
-    "datasheet": "unit-land-raider-achilles",
-    "statline": "land-raider-achilles-profile"
-  },
-  "chaos-space-marines-ability-explorator-augury-web": {
-    "id": "chaos-space-marines-ability-explorator-augury-web",
-    "title": "Explorator Augury Web",
-    "summary": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of the bearer, but the bearer must halve its Transport Capacity.",
-    "full": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of the bearer, but the bearer must halve its Transport Capacity.",
-    "glossary": "glossary-chaos-space-marines-ability-explorator-augury-web",
-    "rule": "unit-land-raider-proteus",
-    "units": [
-      "unit-land-raider-proteus"
-    ],
-    "datasheet": "unit-land-raider-proteus",
-    "statline": "land-raider-proteus-profile"
-  },
-  "chaos-space-marines-ability-duty-eternal": {
-    "id": "chaos-space-marines-ability-duty-eternal",
-    "title": "Duty Eternal",
-    "summary": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
-    "full": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
-    "glossary": "glossary-chaos-space-marines-ability-duty-eternal",
-    "rule": "unit-leviathan-dreadnought",
-    "units": [
-      "unit-leviathan-dreadnought"
-    ],
-    "datasheet": "unit-leviathan-dreadnought",
-    "statline": "leviathan-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-grav-flux-bombard": {
-    "id": "chaos-space-marines-weapon-grav-flux-bombard",
-    "title": "Grav-flux bombard",
-    "summary": "Ranged · 24\" · A 2D3 · BS 3+ · S 8 · AP -1 · D 2 · Anti-Vehicle 2+, Blast",
-    "full": "Ranged · 24\" · A 2D3 · BS 3+ · S 8 · AP -1 · D 2 · Anti-Vehicle 2+, Blast",
-    "glossary": "glossary-chaos-space-marines-weapon-grav-flux-bombard",
-    "rule": "unit-leviathan-dreadnought",
-    "units": [
-      "unit-leviathan-dreadnought"
-    ],
-    "datasheet": "unit-leviathan-dreadnought",
-    "statline": "leviathan-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-cyclonic-melta-lance": {
-    "id": "chaos-space-marines-weapon-cyclonic-melta-lance",
-    "title": "Cyclonic melta-lance",
-    "summary": "Ranged · 18\" · A D6 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2",
-    "full": "Ranged · 18\" · A D6 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2",
-    "glossary": "glossary-chaos-space-marines-weapon-cyclonic-melta-lance",
-    "rule": "unit-leviathan-dreadnought",
-    "units": [
-      "unit-leviathan-dreadnought"
-    ],
-    "datasheet": "unit-leviathan-dreadnought",
-    "statline": "leviathan-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-storm-cannon": {
-    "id": "chaos-space-marines-weapon-storm-cannon",
-    "title": "Storm cannon",
-    "summary": "Ranged · 36\" · A 4 · BS 3+ · S 9 · AP -1 · D 3 · Twin-linked",
-    "full": "Ranged · 36\" · A 4 · BS 3+ · S 9 · AP -1 · D 3 · Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-storm-cannon",
-    "rule": "unit-leviathan-dreadnought",
-    "units": [
-      "unit-leviathan-dreadnought"
-    ],
-    "datasheet": "unit-leviathan-dreadnought",
-    "statline": "leviathan-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-leviathan-siege-claw": {
-    "id": "chaos-space-marines-weapon-leviathan-siege-claw",
-    "title": "Leviathan siege claw",
-    "summary": "Melee · Melee · A 5 · WS 3+ · S 12 · AP -2 · D 3",
-    "full": "Melee · Melee · A 5 · WS 3+ · S 12 · AP -2 · D 3",
-    "glossary": "glossary-chaos-space-marines-weapon-leviathan-siege-claw",
-    "rule": "unit-leviathan-dreadnought",
-    "units": [
-      "unit-leviathan-dreadnought"
-    ],
-    "datasheet": "unit-leviathan-dreadnought",
-    "statline": "leviathan-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-leviathan-siege-drill": {
-    "id": "chaos-space-marines-weapon-leviathan-siege-drill",
-    "title": "Leviathan siege drill",
-    "summary": "Melee · Melee · A 4 · WS 3+ · S 12 · AP -2 · D 3 · Anti-VEHICLE 3+",
-    "full": "Melee · Melee · A 4 · WS 3+ · S 12 · AP -2 · D 3 · Anti-VEHICLE 3+",
-    "glossary": "glossary-chaos-space-marines-weapon-leviathan-siege-drill",
-    "rule": "unit-leviathan-dreadnought",
-    "units": [
-      "unit-leviathan-dreadnought"
-    ],
-    "datasheet": "unit-leviathan-dreadnought",
-    "statline": "leviathan-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-twin-volkite-caliver": {
-    "id": "chaos-space-marines-weapon-twin-volkite-caliver",
-    "title": "Twin volkite caliver",
-    "summary": "Ranged · 24\" · A 2 · BS 3+ · S 5 · AP 0 · D 2 · Devastating Wounds, Twin-linked",
-    "full": "Ranged · 24\" · A 2 · BS 3+ · S 5 · AP 0 · D 2 · Devastating Wounds, Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-twin-volkite-caliver",
-    "rule": "unit-leviathan-dreadnought",
-    "units": [
-      "unit-leviathan-dreadnought"
-    ],
-    "datasheet": "unit-leviathan-dreadnought",
-    "statline": "leviathan-dreadnought-profile"
-  },
-  "chaos-space-marines-ability-damaged-1-10-wounds-remaining-2": {
-    "id": "chaos-space-marines-ability-damaged-1-10-wounds-remaining-2",
-    "title": "Damaged: 1-10 wounds remaining",
-    "summary": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-chaos-space-marines-ability-damaged-1-10-wounds-remaining-2",
-    "rule": "unit-mastodon",
-    "units": [
-      "unit-mastodon"
-    ],
-    "datasheet": "unit-mastodon",
-    "statline": "mastodon-profile"
-  },
-  "chaos-space-marines-ability-inviolable-transport": {
-    "id": "chaos-space-marines-ability-inviolable-transport",
-    "title": "Inviolable Transport",
-    "summary": "Once per battle round, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0.",
-    "full": "Once per battle round, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0.",
-    "glossary": "glossary-chaos-space-marines-ability-inviolable-transport",
-    "rule": "unit-mastodon",
-    "units": [
-      "unit-mastodon"
-    ],
-    "datasheet": "unit-mastodon",
-    "statline": "mastodon-profile"
-  },
-  "chaos-space-marines-ability-deadly-demise-2d6": {
-    "id": "chaos-space-marines-ability-deadly-demise-2d6",
-    "title": "Deadly Demise 2D6",
-    "summary": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "full": "This ability always takes the form Deadly Demise X. Each time a model in this unit is destroyed, after the units embarked within it (if any) have made their emergency disembark moves, roll one D6. On a 6, that model suffers a deadly demise; each unit within 6\" of that model suffers a number of mortal wounds denoted by X (if this is a random number, roll separately for each unit within 6\"). *Example: An Impulsor with a unit of Intercessors embarked within it is destroyed by ranged attacks. First, any unresolved attacks made by the attacking unit are resolved. Then the Intercessors make an emergency disembark move. Then the roll is made for the Deadly Demise ability, and on a 6, that ability is resolved. Finally, the Impulsor is removed from the battlefield.*",
-    "glossary": "glossary-chaos-space-marines-ability-deadly-demise-2d6",
-    "rule": "unit-mastodon",
-    "units": [
-      "unit-mastodon",
-      "unit-sokar-pattern-stormbird"
-    ],
-    "datasheet": "unit-mastodon",
-    "statline": "mastodon-profile"
-  },
-  "chaos-space-marines-weapon-siege-melta-array": {
-    "id": "chaos-space-marines-weapon-siege-melta-array",
-    "title": "Siege melta array",
-    "summary": "Ranged · 24\" · A 6 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2",
-    "full": "Ranged · 24\" · A 6 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2",
-    "glossary": "glossary-chaos-space-marines-weapon-siege-melta-array",
-    "rule": "unit-mastodon",
-    "units": [
-      "unit-mastodon"
-    ],
-    "datasheet": "unit-mastodon",
-    "statline": "mastodon-profile"
-  },
-  "chaos-space-marines-weapon-skyreaper-battery": {
-    "id": "chaos-space-marines-weapon-skyreaper-battery",
-    "title": "Skyreaper battery",
-    "summary": "Ranged · 48\" · A 8 · BS 3+ · S 7 · AP -1 · D 2 · Anti-FLY 4+",
-    "full": "Ranged · 48\" · A 8 · BS 3+ · S 7 · AP -1 · D 2 · Anti-FLY 4+",
-    "glossary": "glossary-chaos-space-marines-weapon-skyreaper-battery",
-    "rule": "unit-mastodon",
-    "units": [
-      "unit-mastodon"
-    ],
-    "datasheet": "unit-mastodon",
-    "statline": "mastodon-profile"
-  },
-  "chaos-space-marines-ability-mischief-makers-aura": {
-    "id": "chaos-space-marines-ability-mischief-makers-aura",
-    "title": "Mischief Makers (Aura)",
-    "summary": "While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of this unit, each time a model in that unit makes a melee attack, subtract 1 from the Hit roll.",
-    "full": "While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of this unit, each time a model in that unit makes a melee attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-chaos-space-marines-ability-mischief-makers-aura",
-    "rule": "unit-mutoid-vermin",
-    "units": [
-      "unit-mutoid-vermin"
-    ],
-    "datasheet": "unit-mutoid-vermin",
-    "statline": "mutoid-vermin-profile"
-  },
-  "chaos-space-marines-weapon-diseased-claws-and-fangs": {
-    "id": "chaos-space-marines-weapon-diseased-claws-and-fangs",
-    "title": "Diseased claws and fangs",
-    "summary": "Melee · Melee · A 2 · WS 4+ · S 2 · AP 0 · D 1 · Lethal Hits",
-    "full": "Melee · Melee · A 2 · WS 4+ · S 2 · AP 0 · D 1 · Lethal Hits",
-    "glossary": "glossary-chaos-space-marines-weapon-diseased-claws-and-fangs",
-    "rule": "unit-mutoid-vermin",
-    "units": [
-      "unit-mutoid-vermin"
-    ],
-    "datasheet": "unit-mutoid-vermin",
-    "statline": "mutoid-vermin-profile"
-  },
-  "chaos-space-marines-ability-voltagheist-field": {
-    "id": "chaos-space-marines-ability-voltagheist-field",
-    "title": "Voltagheist Field",
-    "summary": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers 1 mortal wound.",
-    "full": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers 1 mortal wound.",
-    "glossary": "glossary-chaos-space-marines-ability-voltagheist-field",
-    "rule": "unit-negavolt-cultists",
-    "units": [
-      "unit-negavolt-cultists"
-    ],
-    "datasheet": "unit-negavolt-cultists",
-    "statline": "negavolt-cultists-profile"
-  },
-  "chaos-space-marines-ability-servants-of-the-abyss": {
-    "id": "chaos-space-marines-ability-servants-of-the-abyss",
-    "title": "Servants of the Abyss",
-    "summary": "If a unit from your army with the Leader ability can be attached to a CULTIST MOB, it can be attached to this unit instead.",
-    "full": "If a unit from your army with the Leader ability can be attached to a CULTIST MOB, it can be attached to this unit instead.",
-    "glossary": "glossary-chaos-space-marines-ability-servants-of-the-abyss",
-    "rule": "unit-negavolt-cultists",
-    "units": [
-      "unit-negavolt-cultists"
-    ],
-    "datasheet": "unit-negavolt-cultists",
-    "statline": "negavolt-cultists-profile"
-  },
-  "chaos-space-marines-weapon-electro-goads": {
-    "id": "chaos-space-marines-weapon-electro-goads",
-    "title": "Electro-goads",
-    "summary": "Melee · Melee · A 3 · WS 3+ · S 4 · AP 0 · D 1 · Sustained Hits 2",
-    "full": "Melee · Melee · A 3 · WS 3+ · S 4 · AP 0 · D 1 · Sustained Hits 2",
-    "glossary": "glossary-chaos-space-marines-weapon-electro-goads",
-    "rule": "unit-negavolt-cultists",
-    "units": [
-      "unit-negavolt-cultists"
-    ],
-    "datasheet": "unit-negavolt-cultists",
-    "statline": "negavolt-cultists-profile"
-  },
-  "chaos-space-marines-ability-powerful-volley": {
-    "id": "chaos-space-marines-ability-powerful-volley",
-    "title": "Powerful Volley",
-    "summary": "Each time this model shoots in your Shooting phase, provided it Remained Stationary this turn, all [HEAVY] weapons equipped by models in this unit have the [LETHAL HITS] ability.",
-    "full": "Each time this model shoots in your Shooting phase, provided it Remained Stationary this turn, all [HEAVY] weapons equipped by models in this unit have the [LETHAL HITS] ability.",
-    "glossary": "glossary-chaos-space-marines-ability-powerful-volley",
-    "rule": "unit-rapier-carrier",
-    "units": [
-      "unit-rapier-carrier"
-    ],
-    "datasheet": "unit-rapier-carrier",
-    "statline": "rapier-carrier-profile"
-  },
-  "chaos-space-marines-weapon-graviton-cannon": {
-    "id": "chaos-space-marines-weapon-graviton-cannon",
-    "title": "Graviton cannon",
-    "summary": "Ranged · 36\" · A D6 · BS 3+ · S 6 · AP -2 · D 2 · Anti-Vehicle 2+, Blast, Heavy",
-    "full": "Ranged · 36\" · A D6 · BS 3+ · S 6 · AP -2 · D 2 · Anti-Vehicle 2+, Blast, Heavy",
-    "glossary": "glossary-chaos-space-marines-weapon-graviton-cannon",
-    "rule": "unit-rapier-carrier",
-    "units": [
-      "unit-rapier-carrier"
-    ],
-    "datasheet": "unit-rapier-carrier",
-    "statline": "rapier-carrier-profile"
-  },
-  "chaos-space-marines-weapon-quad-heavy-bolter-3": {
-    "id": "chaos-space-marines-weapon-quad-heavy-bolter-3",
-    "title": "Quad heavy bolter",
-    "summary": "Ranged · 36\" · A 6 · BS 3+ · S 5 · AP -1 · D 2 · Heavy, Twin-linked, Sustained Hits 1",
-    "full": "Ranged · 36\" · A 6 · BS 3+ · S 5 · AP -1 · D 2 · Heavy, Twin-linked, Sustained Hits 1",
-    "glossary": "glossary-chaos-space-marines-weapon-quad-heavy-bolter-3",
-    "rule": "unit-rapier-carrier",
-    "units": [
-      "unit-rapier-carrier"
-    ],
-    "datasheet": "unit-rapier-carrier",
-    "statline": "rapier-carrier-profile"
-  },
-  "chaos-space-marines-weapon-quad-launcher-shatter-shells-2": {
-    "id": "chaos-space-marines-weapon-quad-launcher-shatter-shells-2",
-    "title": "➤ Quad launcher - shatter shells",
-    "summary": "Ranged · 24\" · A 4 · BS 3+ · S 9 · AP -2 · D 3 · Heavy",
-    "full": "Ranged · 24\" · A 4 · BS 3+ · S 9 · AP -2 · D 3 · Heavy",
-    "glossary": "glossary-chaos-space-marines-weapon-quad-launcher-shatter-shells-2",
-    "rule": "unit-rapier-carrier",
-    "units": [
-      "unit-rapier-carrier"
-    ],
-    "datasheet": "unit-rapier-carrier",
-    "statline": "rapier-carrier-profile"
-  },
-  "chaos-space-marines-weapon-quad-launcher-thunderfire-shells-2": {
-    "id": "chaos-space-marines-weapon-quad-launcher-thunderfire-shells-2",
-    "title": "➤ Quad launcher - thunderfire shells",
-    "summary": "Ranged · 60\" · A D6+4 · BS 3+ · S 5 · AP 0 · D 1 · Blast, Heavy, Indirect Fire",
-    "full": "Ranged · 60\" · A D6+4 · BS 3+ · S 5 · AP 0 · D 1 · Blast, Heavy, Indirect Fire",
-    "glossary": "glossary-chaos-space-marines-weapon-quad-launcher-thunderfire-shells-2",
-    "rule": "unit-rapier-carrier",
-    "units": [
-      "unit-rapier-carrier"
-    ],
-    "datasheet": "unit-rapier-carrier",
-    "statline": "rapier-carrier-profile"
-  },
-  "chaos-space-marines-ability-even-in-death-i-serve": {
-    "id": "chaos-space-marines-ability-even-in-death-i-serve",
-    "title": "Even In Death I Serve",
-    "summary": "The first time this model is destroyed, remove it from play without resolving its Deadly Demise ability. Then, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with D6 wounds remaining.",
-    "full": "The first time this model is destroyed, remove it from play without resolving its Deadly Demise ability. Then, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with D6 wounds remaining.",
-    "glossary": "glossary-chaos-space-marines-ability-even-in-death-i-serve",
-    "rule": "unit-relic-contemptor-dreadnought",
-    "units": [
-      "unit-relic-contemptor-dreadnought"
-    ],
-    "datasheet": "unit-relic-contemptor-dreadnought",
-    "statline": "relic-contemptor-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-cyclone-missile-launcher-frag": {
-    "id": "chaos-space-marines-weapon-cyclone-missile-launcher-frag",
-    "title": "➤ Cyclone missile launcher - frag",
-    "summary": "Ranged · 36\" · A 2D6 · BS 3+ · S 4 · AP 0 · D 1 · Blast",
-    "full": "Ranged · 36\" · A 2D6 · BS 3+ · S 4 · AP 0 · D 1 · Blast",
-    "glossary": "glossary-chaos-space-marines-weapon-cyclone-missile-launcher-frag",
-    "rule": "unit-relic-contemptor-dreadnought",
-    "units": [
-      "unit-relic-contemptor-dreadnought"
-    ],
-    "datasheet": "unit-relic-contemptor-dreadnought",
-    "statline": "relic-contemptor-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-cyclone-missile-launcher-krak": {
-    "id": "chaos-space-marines-weapon-cyclone-missile-launcher-krak",
-    "title": "➤ Cyclone missile launcher - krak",
-    "summary": "Ranged · 36\" · A 2 · BS 3+ · S 9 · AP -2 · D D6",
-    "full": "Ranged · 36\" · A 2 · BS 3+ · S 9 · AP -2 · D D6",
-    "glossary": "glossary-chaos-space-marines-weapon-cyclone-missile-launcher-krak",
-    "rule": "unit-relic-contemptor-dreadnought",
-    "units": [
-      "unit-relic-contemptor-dreadnought"
-    ],
-    "datasheet": "unit-relic-contemptor-dreadnought",
-    "statline": "relic-contemptor-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-heavy-plasma-cannon-standard": {
-    "id": "chaos-space-marines-weapon-heavy-plasma-cannon-standard",
-    "title": "➤ Heavy plasma cannon - standard",
-    "summary": "Ranged · 36\" · A D3 · BS 3+ · S 7 · AP -2 · D 2 · Blast",
-    "full": "Ranged · 36\" · A D3 · BS 3+ · S 7 · AP -2 · D 2 · Blast",
-    "glossary": "glossary-chaos-space-marines-weapon-heavy-plasma-cannon-standard",
-    "rule": "unit-relic-contemptor-dreadnought",
-    "units": [
-      "unit-relic-contemptor-dreadnought"
-    ],
-    "datasheet": "unit-relic-contemptor-dreadnought",
-    "statline": "relic-contemptor-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-heavy-plasma-cannon-supercharge": {
-    "id": "chaos-space-marines-weapon-heavy-plasma-cannon-supercharge",
-    "title": "➤ Heavy plasma cannon - supercharge",
-    "summary": "Ranged · 36\" · A D3 · BS 3+ · S 8 · AP -3 · D 3 · Blast, Hazardous",
-    "full": "Ranged · 36\" · A D3 · BS 3+ · S 8 · AP -3 · D 3 · Blast, Hazardous",
-    "glossary": "glossary-chaos-space-marines-weapon-heavy-plasma-cannon-supercharge",
-    "rule": "unit-relic-contemptor-dreadnought",
-    "units": [
-      "unit-relic-contemptor-dreadnought"
-    ],
-    "datasheet": "unit-relic-contemptor-dreadnought",
-    "statline": "relic-contemptor-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-kheres-assault-cannon": {
-    "id": "chaos-space-marines-weapon-kheres-assault-cannon",
-    "title": "Kheres assault cannon",
-    "summary": "Ranged · 24\" · A 6 · BS 3+ · S 7 · AP -1 · D 1 · Devastating Wounds",
-    "full": "Ranged · 24\" · A 6 · BS 3+ · S 7 · AP -1 · D 1 · Devastating Wounds",
-    "glossary": "glossary-chaos-space-marines-weapon-kheres-assault-cannon",
-    "rule": "unit-relic-contemptor-dreadnought",
-    "units": [
-      "unit-relic-contemptor-dreadnought"
-    ],
-    "datasheet": "unit-relic-contemptor-dreadnought",
-    "statline": "relic-contemptor-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-dreadnought-chainfist": {
-    "id": "chaos-space-marines-weapon-dreadnought-chainfist",
-    "title": "Dreadnought chainfist",
-    "summary": "Melee · Melee · A 4 · WS 3+ · S 12 · AP -2 · D 3 · Anti-VEHICLE 3+",
-    "full": "Melee · Melee · A 4 · WS 3+ · S 12 · AP -2 · D 3 · Anti-VEHICLE 3+",
-    "glossary": "glossary-chaos-space-marines-weapon-dreadnought-chainfist",
-    "rule": "unit-relic-contemptor-dreadnought",
-    "units": [
-      "unit-relic-contemptor-dreadnought"
-    ],
-    "datasheet": "unit-relic-contemptor-dreadnought",
-    "statline": "relic-contemptor-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-dreadnought-combat-weapon": {
-    "id": "chaos-space-marines-weapon-dreadnought-combat-weapon",
-    "title": "Dreadnought combat weapon",
-    "summary": "Melee · Melee · A 5 · WS 3+ · S 12 · AP -2 · D 3",
-    "full": "Melee · Melee · A 5 · WS 3+ · S 12 · AP -2 · D 3",
-    "glossary": "glossary-chaos-space-marines-weapon-dreadnought-combat-weapon",
-    "rule": "unit-relic-contemptor-dreadnought",
-    "units": [
-      "unit-relic-contemptor-dreadnought"
-    ],
-    "datasheet": "unit-relic-contemptor-dreadnought",
-    "statline": "relic-contemptor-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-plasma-blaster-standard": {
-    "id": "chaos-space-marines-weapon-plasma-blaster-standard",
-    "title": "➤ Plasma blaster - standard",
-    "summary": "Ranged · 18\" · A 2 · BS 3+ · S 7 · AP -2 · D 1",
-    "full": "Ranged · 18\" · A 2 · BS 3+ · S 7 · AP -2 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-plasma-blaster-standard",
-    "rule": "unit-relic-contemptor-dreadnought",
-    "units": [
-      "unit-relic-contemptor-dreadnought"
-    ],
-    "datasheet": "unit-relic-contemptor-dreadnought",
-    "statline": "relic-contemptor-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-plasma-blaster-supercharge": {
-    "id": "chaos-space-marines-weapon-plasma-blaster-supercharge",
-    "title": "➤ Plasma blaster - supercharge",
-    "summary": "Ranged · 18\" · A 2 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous",
-    "full": "Ranged · 18\" · A 2 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous",
-    "glossary": "glossary-chaos-space-marines-weapon-plasma-blaster-supercharge",
-    "rule": "unit-relic-contemptor-dreadnought",
-    "units": [
-      "unit-relic-contemptor-dreadnought"
-    ],
-    "datasheet": "unit-relic-contemptor-dreadnought",
-    "statline": "relic-contemptor-dreadnought-profile"
-  },
-  "chaos-space-marines-weapon-graviton-blaster": {
-    "id": "chaos-space-marines-weapon-graviton-blaster",
-    "title": "Graviton blaster",
-    "summary": "Ranged · 18\" · A 2 · BS 3+ · S 5 · AP -1 · D 1 · Anti-Vehicle 2+",
-    "full": "Ranged · 18\" · A 2 · BS 3+ · S 5 · AP -1 · D 1 · Anti-Vehicle 2+",
-    "glossary": "glossary-chaos-space-marines-weapon-graviton-blaster",
-    "rule": "unit-relic-contemptor-dreadnought",
-    "units": [
-      "unit-relic-contemptor-dreadnought"
-    ],
-    "datasheet": "unit-relic-contemptor-dreadnought",
-    "statline": "relic-contemptor-dreadnought-profile"
-  },
-  "chaos-space-marines-ability-brutal-example-2": {
-    "id": "chaos-space-marines-ability-brutal-example-2",
-    "title": "Brutal Example",
-    "summary": "While this model is leading a unit, you can target that unit with the Insane Bravery Stratagem for 0CP, and can do so even if another unit from your army has already been targeted with that Stratagem this phase. Each time you use this ability, one Bodyguard model in that unit is destroyed.",
-    "full": "While this model is leading a unit, you can target that unit with the Insane Bravery Stratagem for 0CP, and can do so even if another unit from your army has already been targeted with that Stratagem this phase. Each time you use this ability, one Bodyguard model in that unit is destroyed.",
-    "glossary": "glossary-chaos-space-marines-ability-brutal-example-2",
-    "rule": "unit-renegade-enforcer",
-    "units": [
-      "unit-renegade-enforcer"
-    ],
-    "datasheet": "unit-renegade-enforcer",
-    "statline": "renegade-enforcer-profile"
-  },
-  "chaos-space-marines-ability-enforcer": {
-    "id": "chaos-space-marines-ability-enforcer",
-    "title": "Enforcer",
-    "summary": "This model's unit is eligible to declare a charge in a turn in which it Fell Back.",
-    "full": "This model's unit is eligible to declare a charge in a turn in which it Fell Back.",
-    "glossary": "glossary-chaos-space-marines-ability-enforcer",
-    "rule": "unit-renegade-enforcer",
-    "units": [
-      "unit-renegade-enforcer"
-    ],
-    "datasheet": "unit-renegade-enforcer",
-    "statline": "renegade-enforcer-profile"
-  },
-  "chaos-space-marines-ability-leader-18": {
-    "id": "chaos-space-marines-ability-leader-18",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: ■ TRAITOR GUARDSMEN SQUAD ■ RENEGADE HEAVY WEAPONS SQUAD",
-    "full": "This model can be attached to the following units: ■ TRAITOR GUARDSMEN SQUAD ■ RENEGADE HEAVY WEAPONS SQUAD",
-    "glossary": "glossary-chaos-space-marines-ability-leader-18",
-    "rule": "unit-renegade-enforcer",
-    "units": [
-      "unit-renegade-enforcer"
-    ],
-    "datasheet": "unit-renegade-enforcer",
-    "statline": "renegade-enforcer-profile"
-  },
-  "chaos-space-marines-weapon-enforcer-melee-weapon": {
-    "id": "chaos-space-marines-weapon-enforcer-melee-weapon",
-    "title": "Enforcer melee weapon",
-    "summary": "Melee · Melee · A 4 · WS 3+ · S 4 · AP 0 · D 1",
-    "full": "Melee · Melee · A 4 · WS 3+ · S 4 · AP 0 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-enforcer-melee-weapon",
-    "rule": "unit-renegade-enforcer",
-    "units": [
-      "unit-renegade-enforcer"
-    ],
-    "datasheet": "unit-renegade-enforcer",
-    "statline": "renegade-enforcer-profile"
-  },
-  "chaos-space-marines-weapon-power-weapon-2": {
-    "id": "chaos-space-marines-weapon-power-weapon-2",
-    "title": "Power weapon",
-    "summary": "Melee · Melee · A 3 · WS 3+ · S 4 · AP -2 · D 1",
-    "full": "Melee · Melee · A 3 · WS 3+ · S 4 · AP -2 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-power-weapon-2",
-    "rule": "unit-renegade-enforcer",
-    "units": [
-      "unit-renegade-enforcer"
-    ],
-    "datasheet": "unit-renegade-enforcer",
-    "statline": "renegade-enforcer-profile"
-  },
-  "chaos-space-marines-weapon-enforcer-pistol": {
-    "id": "chaos-space-marines-weapon-enforcer-pistol",
-    "title": "Enforcer pistol",
-    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Pistol",
-    "full": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Pistol",
-    "glossary": "glossary-chaos-space-marines-weapon-enforcer-pistol",
-    "rule": "unit-renegade-enforcer",
-    "units": [
-      "unit-renegade-enforcer"
-    ],
-    "datasheet": "unit-renegade-enforcer",
-    "statline": "renegade-enforcer-profile"
-  },
-  "chaos-space-marines-weapon-autogun-2": {
-    "id": "chaos-space-marines-weapon-autogun-2",
-    "title": "Autogun",
-    "summary": "Ranged · 24\" · A 1 · BS 3+ · S 3 · AP 0 · D 1 · Rapid Fire 1",
-    "full": "Ranged · 24\" · A 1 · BS 3+ · S 3 · AP 0 · D 1 · Rapid Fire 1",
-    "glossary": "glossary-chaos-space-marines-weapon-autogun-2",
-    "rule": "unit-renegade-enforcer",
-    "units": [
-      "unit-renegade-enforcer"
-    ],
-    "datasheet": "unit-renegade-enforcer",
-    "statline": "renegade-enforcer-profile"
-  },
-  "chaos-space-marines-weapon-lasgun-2": {
-    "id": "chaos-space-marines-weapon-lasgun-2",
-    "title": "Lasgun",
-    "summary": "Ranged · 24\" · A 1 · BS 3+ · S 3 · AP 0 · D 1 · Rapid Fire 1",
-    "full": "Ranged · 24\" · A 1 · BS 3+ · S 3 · AP 0 · D 1 · Rapid Fire 1",
-    "glossary": "glossary-chaos-space-marines-weapon-lasgun-2",
-    "rule": "unit-renegade-enforcer",
-    "units": [
-      "unit-renegade-enforcer"
-    ],
-    "datasheet": "unit-renegade-enforcer",
-    "statline": "renegade-enforcer-profile"
-  },
-  "chaos-space-marines-weapon-shotgun": {
-    "id": "chaos-space-marines-weapon-shotgun",
-    "title": "Shotgun",
-    "summary": "Ranged · 18\" · A 2 · BS 3+ · S 4 · AP 0 · D 1 · Assault",
-    "full": "Ranged · 18\" · A 2 · BS 3+ · S 4 · AP 0 · D 1 · Assault",
-    "glossary": "glossary-chaos-space-marines-weapon-shotgun",
-    "rule": "unit-renegade-enforcer",
-    "units": [
-      "unit-renegade-enforcer"
-    ],
-    "datasheet": "unit-renegade-enforcer",
-    "statline": "renegade-enforcer-profile"
-  },
-  "chaos-space-marines-ability-covering-fire": {
-    "id": "chaos-space-marines-ability-covering-fire",
-    "title": "Covering Fire",
-    "summary": "Each time you target this unit with the Fire Overwatch Stratagem, while resolving that Stratagem, hits are scored on unmodified Hit rolls of 5+.",
-    "full": "Each time you target this unit with the Fire Overwatch Stratagem, while resolving that Stratagem, hits are scored on unmodified Hit rolls of 5+.",
-    "glossary": "glossary-chaos-space-marines-ability-covering-fire",
-    "rule": "unit-renegade-heavy-weapons-squad",
-    "units": [
-      "unit-renegade-heavy-weapons-squad"
-    ],
-    "datasheet": "unit-renegade-heavy-weapons-squad",
-    "statline": "renegade-heavy-weapons-squad-profile"
-  },
-  "chaos-space-marines-weapon-renegade-firearm": {
-    "id": "chaos-space-marines-weapon-renegade-firearm",
-    "title": "Renegade firearm",
-    "summary": "Ranged · 24\" · A 1 · BS 4+ · S 3 · AP 0 · D 1 · Rapid Fire 1",
-    "full": "Ranged · 24\" · A 1 · BS 4+ · S 3 · AP 0 · D 1 · Rapid Fire 1",
-    "glossary": "glossary-chaos-space-marines-weapon-renegade-firearm",
-    "rule": "unit-renegade-heavy-weapons-squad",
-    "units": [
-      "unit-renegade-heavy-weapons-squad"
-    ],
-    "datasheet": "unit-renegade-heavy-weapons-squad",
-    "statline": "renegade-heavy-weapons-squad-profile"
-  },
-  "chaos-space-marines-weapon-close-combat-weapons": {
-    "id": "chaos-space-marines-weapon-close-combat-weapons",
-    "title": "Close combat weapons",
-    "summary": "Melee · Melee · A 2 · WS 4+ · S 3 · AP 0 · D 1",
-    "full": "Melee · Melee · A 2 · WS 4+ · S 3 · AP 0 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-close-combat-weapons",
-    "rule": "unit-renegade-heavy-weapons-squad",
-    "units": [
-      "unit-renegade-heavy-weapons-squad"
-    ],
-    "datasheet": "unit-renegade-heavy-weapons-squad",
-    "statline": "renegade-heavy-weapons-squad-profile"
-  },
-  "chaos-space-marines-weapon-heavy-bolter-3": {
-    "id": "chaos-space-marines-weapon-heavy-bolter-3",
-    "title": "Heavy bolter",
-    "summary": "Ranged · 36\" · A 3 · BS 5+ · S 5 · AP -1 · D 2 · Heavy, Sustained Hits 1",
-    "full": "Ranged · 36\" · A 3 · BS 5+ · S 5 · AP -1 · D 2 · Heavy, Sustained Hits 1",
-    "glossary": "glossary-chaos-space-marines-weapon-heavy-bolter-3",
-    "rule": "unit-renegade-heavy-weapons-squad",
-    "units": [
-      "unit-renegade-heavy-weapons-squad"
-    ],
-    "datasheet": "unit-renegade-heavy-weapons-squad",
-    "statline": "renegade-heavy-weapons-squad-profile"
-  },
-  "chaos-space-marines-weapon-autocannon-2": {
-    "id": "chaos-space-marines-weapon-autocannon-2",
-    "title": "Autocannon",
-    "summary": "Ranged · 48\" · A 2 · BS 5+ · S 9 · AP -1 · D 3 · Heavy",
-    "full": "Ranged · 48\" · A 2 · BS 5+ · S 9 · AP -1 · D 3 · Heavy",
-    "glossary": "glossary-chaos-space-marines-weapon-autocannon-2",
-    "rule": "unit-renegade-heavy-weapons-squad",
-    "units": [
-      "unit-renegade-heavy-weapons-squad"
-    ],
-    "datasheet": "unit-renegade-heavy-weapons-squad",
-    "statline": "renegade-heavy-weapons-squad-profile"
-  },
-  "chaos-space-marines-weapon-lascannon-3": {
-    "id": "chaos-space-marines-weapon-lascannon-3",
-    "title": "Lascannon",
-    "summary": "Ranged · 48\" · A 1 · BS 5+ · S 12 · AP -3 · D D6+1 · Heavy",
-    "full": "Ranged · 48\" · A 1 · BS 5+ · S 12 · AP -3 · D D6+1 · Heavy",
-    "glossary": "glossary-chaos-space-marines-weapon-lascannon-3",
-    "rule": "unit-renegade-heavy-weapons-squad",
-    "units": [
-      "unit-renegade-heavy-weapons-squad"
-    ],
-    "datasheet": "unit-renegade-heavy-weapons-squad",
-    "statline": "renegade-heavy-weapons-squad-profile"
-  },
-  "chaos-space-marines-weapon-missile-launcher-frag-3": {
-    "id": "chaos-space-marines-weapon-missile-launcher-frag-3",
-    "title": "➤ Missile launcher - frag",
-    "summary": "Ranged · 48\" · A D6 · BS 5+ · S 4 · AP 0 · D 1 · Blast, Heavy",
-    "full": "Ranged · 48\" · A D6 · BS 5+ · S 4 · AP 0 · D 1 · Blast, Heavy",
-    "glossary": "glossary-chaos-space-marines-weapon-missile-launcher-frag-3",
-    "rule": "unit-renegade-heavy-weapons-squad",
-    "units": [
-      "unit-renegade-heavy-weapons-squad"
-    ],
-    "datasheet": "unit-renegade-heavy-weapons-squad",
-    "statline": "renegade-heavy-weapons-squad-profile"
-  },
-  "chaos-space-marines-weapon-missile-launcher-krak-3": {
-    "id": "chaos-space-marines-weapon-missile-launcher-krak-3",
-    "title": "➤ Missile launcher - krak",
-    "summary": "Ranged · 48\" · A 1 · BS 5+ · S 9 · AP -2 · D D6 · Blast",
-    "full": "Ranged · 48\" · A 1 · BS 5+ · S 9 · AP -2 · D D6 · Blast",
-    "glossary": "glossary-chaos-space-marines-weapon-missile-launcher-krak-3",
-    "rule": "unit-renegade-heavy-weapons-squad",
-    "units": [
-      "unit-renegade-heavy-weapons-squad"
-    ],
-    "datasheet": "unit-renegade-heavy-weapons-squad",
-    "statline": "renegade-heavy-weapons-squad-profile"
-  },
-  "chaos-space-marines-weapon-mortar": {
-    "id": "chaos-space-marines-weapon-mortar",
-    "title": "Mortar",
-    "summary": "Ranged · 48\" · A D6 · BS 5+ · S 5 · AP 0 · D 1 · Blast, Heavy, Indirect Fire",
-    "full": "Ranged · 48\" · A D6 · BS 5+ · S 5 · AP 0 · D 1 · Blast, Heavy, Indirect Fire",
-    "glossary": "glossary-chaos-space-marines-weapon-mortar",
-    "rule": "unit-renegade-heavy-weapons-squad",
-    "units": [
-      "unit-renegade-heavy-weapons-squad"
-    ],
-    "datasheet": "unit-renegade-heavy-weapons-squad",
-    "statline": "renegade-heavy-weapons-squad-profile"
-  },
-  "chaos-space-marines-ability-beastmaster": {
-    "id": "chaos-space-marines-ability-beastmaster",
-    "title": "Beastmaster",
-    "summary": "While this unit contains an Ogryn Pack Master model, you can re-roll Charge rolls made for this unit, and each time a Chaos Mauler Hound model in this unit makes an attack, re-roll a Hit roll of 1.",
-    "full": "While this unit contains an Ogryn Pack Master model, you can re-roll Charge rolls made for this unit, and each time a Chaos Mauler Hound model in this unit makes an attack, re-roll a Hit roll of 1.",
-    "glossary": "glossary-chaos-space-marines-ability-beastmaster",
-    "rule": "unit-renegade-ogryn-beast-handler",
-    "units": [
-      "unit-renegade-ogryn-beast-handler"
-    ],
-    "datasheet": "unit-renegade-ogryn-beast-handler",
-    "statline": "renegade-ogryn-beast-handler-profile"
-  },
-  "chaos-space-marines-weapon-mauler-goad-and-ripper-claw": {
-    "id": "chaos-space-marines-weapon-mauler-goad-and-ripper-claw",
-    "title": "Mauler goad and ripper claw",
-    "summary": "Melee · Melee · A 4 · WS 3+ · S 6 · AP -1 · D 2",
-    "full": "Melee · Melee · A 4 · WS 3+ · S 6 · AP -1 · D 2",
-    "glossary": "glossary-chaos-space-marines-weapon-mauler-goad-and-ripper-claw",
-    "rule": "unit-renegade-ogryn-beast-handler",
-    "units": [
-      "unit-renegade-ogryn-beast-handler"
-    ],
-    "datasheet": "unit-renegade-ogryn-beast-handler",
-    "statline": "renegade-ogryn-beast-handler-profile"
-  },
-  "chaos-space-marines-weapon-befouled-fangs-and-claws": {
-    "id": "chaos-space-marines-weapon-befouled-fangs-and-claws",
-    "title": "Befouled fangs and claws",
-    "summary": "Melee · Melee · A 2 · WS 3+ · S 5 · AP 0 · D 1",
-    "full": "Melee · Melee · A 2 · WS 3+ · S 5 · AP 0 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-befouled-fangs-and-claws",
-    "rule": "unit-renegade-ogryn-beast-handler",
-    "units": [
-      "unit-renegade-ogryn-beast-handler"
-    ],
-    "datasheet": "unit-renegade-ogryn-beast-handler",
-    "statline": "renegade-ogryn-beast-handler-profile"
-  },
-  "chaos-space-marines-ability-ogryn-combat-stimms": {
-    "id": "chaos-space-marines-ability-ogryn-combat-stimms",
-    "title": "Ogryn Combat Stimms",
-    "summary": "Each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
-    "full": "Each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
-    "glossary": "glossary-chaos-space-marines-ability-ogryn-combat-stimms",
-    "rule": "unit-renegade-ogryn-brutes",
-    "units": [
-      "unit-renegade-ogryn-brutes"
-    ],
-    "datasheet": "unit-renegade-ogryn-brutes",
-    "statline": "renegade-ogryn-brutes-profile"
-  },
-  "chaos-space-marines-weapon-ogryn-weapon": {
-    "id": "chaos-space-marines-weapon-ogryn-weapon",
-    "title": "Ogryn weapon",
-    "summary": "Melee · Melee · A 3 · WS 3+ · S 6 · AP -1 · D 2",
-    "full": "Melee · Melee · A 3 · WS 3+ · S 6 · AP -1 · D 2",
-    "glossary": "glossary-chaos-space-marines-weapon-ogryn-weapon",
-    "rule": "unit-renegade-ogryn-brutes",
-    "units": [
-      "unit-renegade-ogryn-brutes"
-    ],
-    "datasheet": "unit-renegade-ogryn-brutes",
-    "statline": "renegade-ogryn-brutes-profile"
-  },
-  "chaos-space-marines-weapon-ogryn-power-drill": {
-    "id": "chaos-space-marines-weapon-ogryn-power-drill",
-    "title": "Ogryn power drill",
-    "summary": "Melee · Melee · A 3 · WS 3+ · S 10 · AP -2 · D 2",
-    "full": "Melee · Melee · A 3 · WS 3+ · S 10 · AP -2 · D 2",
-    "glossary": "glossary-chaos-space-marines-weapon-ogryn-power-drill",
-    "rule": "unit-renegade-ogryn-brutes",
-    "units": [
-      "unit-renegade-ogryn-brutes"
-    ],
-    "datasheet": "unit-renegade-ogryn-brutes",
-    "statline": "renegade-ogryn-brutes-profile"
-  },
-  "chaos-space-marines-ability-wall-of-muscle": {
-    "id": "chaos-space-marines-ability-wall-of-muscle",
-    "title": "Wall of Muscle",
-    "summary": "Each time an attack is allocated to a model in this unit, subtract 1 from the Damage characteristic of that attack.",
-    "full": "Each time an attack is allocated to a model in this unit, subtract 1 from the Damage characteristic of that attack.",
-    "glossary": "glossary-chaos-space-marines-ability-wall-of-muscle",
-    "rule": "unit-renegade-plague-ogryns",
-    "units": [
-      "unit-renegade-plague-ogryns"
-    ],
-    "datasheet": "unit-renegade-plague-ogryns",
-    "statline": "renegade-plague-ogryns-profile"
-  },
-  "chaos-space-marines-weapon-ogryn-plague-claws": {
-    "id": "chaos-space-marines-weapon-ogryn-plague-claws",
-    "title": "Ogryn plague claws",
-    "summary": "Melee · Melee · A 3 · WS 3+ · S 6 · AP -1 · D 2 · Lethal Hits",
-    "full": "Melee · Melee · A 3 · WS 3+ · S 6 · AP -1 · D 2 · Lethal Hits",
-    "glossary": "glossary-chaos-space-marines-weapon-ogryn-plague-claws",
-    "rule": "unit-renegade-plague-ogryns",
-    "units": [
-      "unit-renegade-plague-ogryns"
-    ],
-    "datasheet": "unit-renegade-plague-ogryns",
-    "statline": "renegade-plague-ogryns-profile"
-  },
-  "chaos-space-marines-ability-leader-19": {
-    "id": "chaos-space-marines-ability-leader-19",
-    "title": "Leader",
-    "summary": "This model can be attached to the following units: ■ ACCURSED CULTISTS ■ CULTIST MOB ■ NEGAVOLT CULTISTS",
-    "full": "This model can be attached to the following units: ■ ACCURSED CULTISTS ■ CULTIST MOB ■ NEGAVOLT CULTISTS",
-    "glossary": "glossary-chaos-space-marines-ability-leader-19",
-    "rule": "unit-rogue-psyker",
-    "units": [
-      "unit-rogue-psyker"
-    ],
-    "datasheet": "unit-rogue-psyker",
-    "statline": "rogue-psyker-profile"
-  },
-  "chaos-space-marines-ability-cursed-wardings-psychic": {
-    "id": "chaos-space-marines-ability-cursed-wardings-psychic",
-    "title": "Cursed Wardings (Psychic)",
-    "summary": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
-    "full": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
-    "glossary": "glossary-chaos-space-marines-ability-cursed-wardings-psychic",
-    "rule": "unit-rogue-psyker",
-    "units": [
-      "unit-rogue-psyker"
-    ],
-    "datasheet": "unit-rogue-psyker",
-    "statline": "rogue-psyker-profile"
-  },
-  "chaos-space-marines-ability-psychic-barrier-psychic": {
-    "id": "chaos-space-marines-ability-psychic-barrier-psychic",
-    "title": "Psychic Barrier (Psychic)",
-    "summary": "At the start of your opponent’s Shooting phase, you can roll one D6: on a 1, this PSYKER’s unit suffers D3 mortal wounds; on a 2+, until the end of the phase, models in this PSYKER’s unit have a 4+ invulnerable save.",
-    "full": "At the start of your opponent’s Shooting phase, you can roll one D6: on a 1, this PSYKER’s unit suffers D3 mortal wounds; on a 2+, until the end of the phase, models in this PSYKER’s unit have a 4+ invulnerable save.",
-    "glossary": "glossary-chaos-space-marines-ability-psychic-barrier-psychic",
-    "rule": "unit-rogue-psyker",
-    "units": [
-      "unit-rogue-psyker"
-    ],
-    "datasheet": "unit-rogue-psyker",
-    "statline": "rogue-psyker-profile"
-  },
-  "chaos-space-marines-weapon-chaos-stave": {
-    "id": "chaos-space-marines-weapon-chaos-stave",
-    "title": "Chaos stave",
-    "summary": "Melee · Melee · A 1 · WS 4+ · S 6 · AP -1 · D D3 · Psychic",
-    "full": "Melee · Melee · A 1 · WS 4+ · S 6 · AP -1 · D D3 · Psychic",
-    "glossary": "glossary-chaos-space-marines-weapon-chaos-stave",
-    "rule": "unit-rogue-psyker",
-    "units": [
-      "unit-rogue-psyker"
-    ],
-    "datasheet": "unit-rogue-psyker",
-    "statline": "rogue-psyker-profile"
-  },
-  "chaos-space-marines-weapon-laspistol-2": {
-    "id": "chaos-space-marines-weapon-laspistol-2",
-    "title": "Laspistol",
-    "summary": "Ranged · 12\" · A 1 · BS 4+ · S 3 · AP 0 · D 1 · Pistol",
-    "full": "Ranged · 12\" · A 1 · BS 4+ · S 3 · AP 0 · D 1 · Pistol",
-    "glossary": "glossary-chaos-space-marines-weapon-laspistol-2",
-    "rule": "unit-rogue-psyker",
-    "units": [
-      "unit-rogue-psyker"
-    ],
-    "datasheet": "unit-rogue-psyker",
-    "statline": "rogue-psyker-profile"
-  },
-  "chaos-space-marines-weapon-psychic-strike-focused-witchfire": {
-    "id": "chaos-space-marines-weapon-psychic-strike-focused-witchfire",
-    "title": "➤ Psychic Strike - focused witchfire",
-    "summary": "Ranged · 12\" · A D6+3 · BS 3+ · S 6 · AP -2 · D 2 · Blast, Devastating Wounds, Hazardous, Psychic",
-    "full": "Ranged · 12\" · A D6+3 · BS 3+ · S 6 · AP -2 · D 2 · Blast, Devastating Wounds, Hazardous, Psychic",
-    "glossary": "glossary-chaos-space-marines-weapon-psychic-strike-focused-witchfire",
-    "rule": "unit-rogue-psyker",
-    "units": [
-      "unit-rogue-psyker"
-    ],
-    "datasheet": "unit-rogue-psyker",
-    "statline": "rogue-psyker-profile"
-  },
-  "chaos-space-marines-weapon-psychic-strike-witchfire": {
-    "id": "chaos-space-marines-weapon-psychic-strike-witchfire",
-    "title": "➤ Psychic Strike - witchfire",
-    "summary": "Ranged · 12\" · A D6 · BS 3+ · S 6 · AP -2 · D 1 · Blast, Devastating Wounds, Psychic",
-    "full": "Ranged · 12\" · A D6 · BS 3+ · S 6 · AP -2 · D 1 · Blast, Devastating Wounds, Psychic",
-    "glossary": "glossary-chaos-space-marines-weapon-psychic-strike-witchfire",
-    "rule": "unit-rogue-psyker",
-    "units": [
-      "unit-rogue-psyker"
-    ],
-    "datasheet": "unit-rogue-psyker",
-    "statline": "rogue-psyker-profile"
-  },
-  "chaos-space-marines-weapon-herakles-pattern-autocannon": {
-    "id": "chaos-space-marines-weapon-herakles-pattern-autocannon",
-    "title": "Herakles-pattern autocannon",
-    "summary": "Ranged · 48\" · A 6 · BS 3+ · S 9 · AP -1 · D 3 · Rapid Fire 2",
-    "full": "Ranged · 48\" · A 6 · BS 3+ · S 9 · AP -1 · D 3 · Rapid Fire 2",
-    "glossary": "glossary-chaos-space-marines-weapon-herakles-pattern-autocannon",
-    "rule": "unit-sicaran-battle-tank",
-    "units": [
-      "unit-sicaran-battle-tank"
-    ],
-    "datasheet": "unit-sicaran-battle-tank",
-    "statline": "sicaran-battle-tank-profile"
-  },
-  "chaos-space-marines-ability-rotating-death": {
-    "id": "chaos-space-marines-ability-rotating-death",
-    "title": "Rotating Death",
-    "summary": "This model’s Punisher rotary cannon has the [SUSTAINED HITS 1] ability when targeting INFANTRY units.",
-    "full": "This model’s Punisher rotary cannon has the [SUSTAINED HITS 1] ability when targeting INFANTRY units.",
-    "glossary": "glossary-chaos-space-marines-ability-rotating-death",
-    "rule": "unit-sicaran-punisher",
-    "units": [
-      "unit-sicaran-punisher"
-    ],
-    "datasheet": "unit-sicaran-punisher",
-    "statline": "sicaran-punisher-profile"
-  },
-  "chaos-space-marines-weapon-punisher-rotary-cannon": {
-    "id": "chaos-space-marines-weapon-punisher-rotary-cannon",
-    "title": "Punisher rotary cannon",
-    "summary": "Ranged · 36\" · A 18 · BS 4+ · S 6 · AP 0 · D 1 · Devastating Wounds",
-    "full": "Ranged · 36\" · A 18 · BS 4+ · S 6 · AP 0 · D 1 · Devastating Wounds",
-    "glossary": "glossary-chaos-space-marines-weapon-punisher-rotary-cannon",
-    "rule": "unit-sicaran-punisher",
-    "units": [
-      "unit-sicaran-punisher"
-    ],
-    "datasheet": "unit-sicaran-punisher",
-    "statline": "sicaran-punisher-profile"
-  },
-  "chaos-space-marines-ability-ferocious-assault": {
-    "id": "chaos-space-marines-ability-ferocious-assault",
-    "title": "Ferocious Assault",
-    "summary": "Each time this model makes a ranged attack that targets the closest eligible MONSTER or VEHICLE unit, add 1 to the Hit roll.",
-    "full": "Each time this model makes a ranged attack that targets the closest eligible MONSTER or VEHICLE unit, add 1 to the Hit roll.",
-    "glossary": "glossary-chaos-space-marines-ability-ferocious-assault",
-    "rule": "unit-sicaran-venator",
-    "units": [
-      "unit-sicaran-venator"
-    ],
-    "datasheet": "unit-sicaran-venator",
-    "statline": "sicaran-venator-profile"
-  },
-  "chaos-space-marines-weapon-venator-neutron-laser": {
-    "id": "chaos-space-marines-weapon-venator-neutron-laser",
-    "title": "Venator neutron laser",
-    "summary": "Ranged · 48\" · A 3 · BS 3+ · S 16 · AP -4 · D D3+3 · Heavy",
-    "full": "Ranged · 48\" · A 3 · BS 3+ · S 16 · AP -4 · D D3+3 · Heavy",
-    "glossary": "glossary-chaos-space-marines-weapon-venator-neutron-laser",
-    "rule": "unit-sicaran-venator",
-    "units": [
-      "unit-sicaran-venator"
-    ],
-    "datasheet": "unit-sicaran-venator",
-    "statline": "sicaran-venator-profile"
-  },
-  "chaos-space-marines-ability-damaged-1-13-wounds-remaining": {
-    "id": "chaos-space-marines-ability-damaged-1-13-wounds-remaining",
-    "title": "Damaged: 1-13 wounds remaining",
-    "summary": "While this model has 1-13 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "full": "While this model has 1-13 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-    "glossary": "glossary-chaos-space-marines-ability-damaged-1-13-wounds-remaining",
-    "rule": "unit-sokar-pattern-stormbird",
-    "units": [
-      "unit-sokar-pattern-stormbird"
-    ],
-    "datasheet": "unit-sokar-pattern-stormbird",
-    "statline": "sokar-pattern-stormbird-profile"
-  },
-  "chaos-space-marines-weapon-armoured-hull-4": {
-    "id": "chaos-space-marines-weapon-armoured-hull-4",
-    "title": "Armoured hull",
-    "summary": "Melee · Melee · A 9 · WS 4+ · S 9 · AP 0 · D 1",
-    "full": "Melee · Melee · A 9 · WS 4+ · S 9 · AP 0 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-armoured-hull-4",
-    "rule": "unit-sokar-pattern-stormbird",
-    "units": [
-      "unit-sokar-pattern-stormbird"
-    ],
-    "datasheet": "unit-sokar-pattern-stormbird",
-    "statline": "sokar-pattern-stormbird-profile"
-  },
-  "chaos-space-marines-weapon-hellstrike-missile-battery": {
-    "id": "chaos-space-marines-weapon-hellstrike-missile-battery",
-    "title": "Hellstrike missile battery",
-    "summary": "Ranged · 48\" · A 4 · BS 3+ · S 10 · AP -3 · D D6 · Anti-Fly 3+",
-    "full": "Ranged · 48\" · A 4 · BS 3+ · S 10 · AP -3 · D D6 · Anti-Fly 3+",
-    "glossary": "glossary-chaos-space-marines-weapon-hellstrike-missile-battery",
-    "rule": "unit-sokar-pattern-stormbird",
-    "units": [
-      "unit-sokar-pattern-stormbird"
-    ],
-    "datasheet": "unit-sokar-pattern-stormbird",
-    "statline": "sokar-pattern-stormbird-profile"
-  },
-  "chaos-space-marines-ability-leader-20": {
-    "id": "chaos-space-marines-ability-leader-20",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - CHAOS BIKERS",
-    "full": "This model can be attached to the following unit: - CHAOS BIKERS",
-    "glossary": "glossary-chaos-space-marines-ability-leader-20",
-    "rule": "unit-sorcerer-on-bike",
-    "units": [
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-sorcerer-on-bike",
-    "statline": "sorcerer-on-bike-profile"
-  },
-  "chaos-space-marines-ability-unholy-power": {
-    "id": "chaos-space-marines-ability-unholy-power",
-    "title": "Unholy Power",
-    "summary": "Each time this model's unit makes a Dark Pact, until the end of the phase, each time this model makes a Psychic Attack, add 1 to the Wound roll.",
-    "full": "Each time this model's unit makes a Dark Pact, until the end of the phase, each time this model makes a Psychic Attack, add 1 to the Wound roll.",
-    "glossary": "glossary-chaos-space-marines-ability-unholy-power",
-    "rule": "unit-sorcerer-on-bike",
-    "units": [
-      "unit-sorcerer-on-bike"
-    ],
-    "datasheet": "unit-sorcerer-on-bike",
-    "statline": "sorcerer-on-bike-profile"
-  },
-  "chaos-space-marines-weapon-combi-weapon-4": {
-    "id": "chaos-space-marines-weapon-combi-weapon-4",
-    "title": "Combi-weapon",
-    "summary": "Ranged · 24\" · A 1 · BS 2+ · S 4 · AP 0 · D 1 · Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1",
-    "full": "Ranged · 24\" · A 1 · BS 2+ · S 4 · AP 0 · D 1 · Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1",
-    "glossary": "glossary-chaos-space-marines-weapon-combi-weapon-4",
-    "rule": "unit-sorcerer-on-bike",
-    "units": [
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-sorcerer-on-bike",
-    "statline": "sorcerer-on-bike-profile"
-  },
-  "chaos-space-marines-weapon-astartes-chainsword-3": {
-    "id": "chaos-space-marines-weapon-astartes-chainsword-3",
-    "title": "Astartes chainsword",
-    "summary": "Melee · Melee · A 5 · WS 3+ · S 4 · AP -1 · D 1",
-    "full": "Melee · Melee · A 5 · WS 3+ · S 4 · AP -1 · D 1",
-    "glossary": "glossary-chaos-space-marines-weapon-astartes-chainsword-3",
-    "rule": "unit-sorcerer-on-bike",
-    "units": [
-      "unit-sorcerer-on-bike",
-      "unit-sorcerer-on-disc-of-tzeentch",
-      "unit-sorcerer-on-palanquin-of-nurgle",
-      "unit-sorcerer-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-sorcerer-on-bike",
-    "statline": "sorcerer-on-bike-profile"
-  },
-  "chaos-space-marines-ability-leader-21": {
-    "id": "chaos-space-marines-ability-leader-21",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: - RUBRIC MARINES",
-    "full": "This model can be attached to the following unit: - RUBRIC MARINES",
-    "glossary": "glossary-chaos-space-marines-ability-leader-21",
-    "rule": "unit-sorcerer-on-disc-of-tzeentch",
-    "units": [
-      "unit-sorcerer-on-disc-of-tzeentch"
-    ],
-    "datasheet": "unit-sorcerer-on-disc-of-tzeentch",
-    "statline": "sorcerer-on-disc-of-tzeentch-profile"
-  },
-  "chaos-space-marines-ability-flames-of-change-psychic": {
-    "id": "chaos-space-marines-ability-flames-of-change-psychic",
-    "title": "Flames of Change (Psychic)",
-    "summary": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
-    "full": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
-    "glossary": "glossary-chaos-space-marines-ability-flames-of-change-psychic",
-    "rule": "unit-sorcerer-on-disc-of-tzeentch",
-    "units": [
-      "unit-sorcerer-on-disc-of-tzeentch"
-    ],
-    "datasheet": "unit-sorcerer-on-disc-of-tzeentch",
-    "statline": "sorcerer-on-disc-of-tzeentch-profile"
-  },
-  "chaos-space-marines-ability-altered-reality-psychic": {
-    "id": "chaos-space-marines-ability-altered-reality-psychic",
-    "title": "Altered Reality (Psychic)",
-    "summary": "Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the result of that roll to a 6.",
-    "full": "Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the result of that roll to a 6.",
-    "glossary": "glossary-chaos-space-marines-ability-altered-reality-psychic",
-    "rule": "unit-sorcerer-on-disc-of-tzeentch",
-    "units": [
-      "unit-sorcerer-on-disc-of-tzeentch"
-    ],
-    "datasheet": "unit-sorcerer-on-disc-of-tzeentch",
-    "statline": "sorcerer-on-disc-of-tzeentch-profile"
-  },
-  "chaos-space-marines-ability-leader-22": {
-    "id": "chaos-space-marines-ability-leader-22",
-    "title": "Leader",
-    "summary": "This model can be attached to the following unit: ■ PLAGUE MARINES",
-    "full": "This model can be attached to the following unit: ■ PLAGUE MARINES",
-    "glossary": "glossary-chaos-space-marines-ability-leader-22",
-    "rule": "unit-sorcerer-on-palanquin-of-nurgle",
-    "units": [
-      "unit-sorcerer-on-palanquin-of-nurgle"
-    ],
-    "datasheet": "unit-sorcerer-on-palanquin-of-nurgle",
-    "statline": "sorcerer-on-palanquin-of-nurgle-profile"
-  },
-  "chaos-space-marines-ability-gift-of-poxes-psychic": {
-    "id": "chaos-space-marines-ability-gift-of-poxes-psychic",
-    "title": "Gift of Poxes (Psychic)",
-    "summary": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
-    "full": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
-    "glossary": "glossary-chaos-space-marines-ability-gift-of-poxes-psychic",
-    "rule": "unit-sorcerer-on-palanquin-of-nurgle",
-    "units": [
-      "unit-sorcerer-on-palanquin-of-nurgle"
-    ],
-    "datasheet": "unit-sorcerer-on-palanquin-of-nurgle",
-    "statline": "sorcerer-on-palanquin-of-nurgle-profile"
-  },
-  "chaos-space-marines-ability-feculent-despair-aura-psychic": {
-    "id": "chaos-space-marines-ability-feculent-despair-aura-psychic",
-    "title": "Feculent Despair (Aura, Psychic)",
-    "summary": "While an enemy unit is within 6\" of this model, each time that unit takes a Battle-shock test, subtract 1 from that test.",
-    "full": "While an enemy unit is within 6\" of this model, each time that unit takes a Battle-shock test, subtract 1 from that test.",
-    "glossary": "glossary-chaos-space-marines-ability-feculent-despair-aura-psychic",
-    "rule": "unit-sorcerer-on-palanquin-of-nurgle",
-    "units": [
-      "unit-sorcerer-on-palanquin-of-nurgle"
-    ],
-    "datasheet": "unit-sorcerer-on-palanquin-of-nurgle",
-    "statline": "sorcerer-on-palanquin-of-nurgle-profile"
-  },
-  "chaos-space-marines-weapon-nurglings-claws-and-teeth-2": {
-    "id": "chaos-space-marines-weapon-nurglings-claws-and-teeth-2",
-    "title": "Nurgling's claws and teeth",
-    "summary": "Melee · Melee · A 4 · WS 5+ · S 2 · AP 0 · D 1 · Extra Attacks, Lethal Hits",
-    "full": "Melee · Melee · A 4 · WS 5+ · S 2 · AP 0 · D 1 · Extra Attacks, Lethal Hits",
-    "glossary": "glossary-chaos-space-marines-weapon-nurglings-claws-and-teeth-2",
-    "rule": "unit-sorcerer-on-palanquin-of-nurgle",
-    "units": [
-      "unit-sorcerer-on-palanquin-of-nurgle"
-    ],
-    "datasheet": "unit-sorcerer-on-palanquin-of-nurgle",
-    "statline": "sorcerer-on-palanquin-of-nurgle-profile"
-  },
-  "chaos-space-marines-ability-infernal-speed": {
-    "id": "chaos-space-marines-ability-infernal-speed",
-    "title": "Infernal Speed",
-    "summary": "While this model is leading a unit, change the Move characteristic of models in that unit to 14\".",
-    "full": "While this model is leading a unit, change the Move characteristic of models in that unit to 14\".",
-    "glossary": "glossary-chaos-space-marines-ability-infernal-speed",
-    "rule": "unit-sorcerer-on-steed-of-slaanesh",
-    "units": [
-      "unit-sorcerer-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-sorcerer-on-steed-of-slaanesh",
-    "statline": "sorcerer-on-steed-of-slaanesh-profile"
-  },
-  "chaos-space-marines-ability-dark-favour-psychic": {
-    "id": "chaos-space-marines-ability-dark-favour-psychic",
-    "title": "Dark Favour (Psychic)",
-    "summary": "While this model is leading a unit, models in that unit have a 4+ invulnerable save.",
-    "full": "While this model is leading a unit, models in that unit have a 4+ invulnerable save.",
-    "glossary": "glossary-chaos-space-marines-ability-dark-favour-psychic",
-    "rule": "unit-sorcerer-on-steed-of-slaanesh",
-    "units": [
-      "unit-sorcerer-on-steed-of-slaanesh"
-    ],
-    "datasheet": "unit-sorcerer-on-steed-of-slaanesh",
-    "statline": "sorcerer-on-steed-of-slaanesh-profile"
-  },
-  "chaos-space-marines-ability-armoured-resilience": {
-    "id": "chaos-space-marines-ability-armoured-resilience",
-    "title": "Armoured Resilience",
-    "summary": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
-    "full": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
-    "glossary": "glossary-chaos-space-marines-ability-armoured-resilience",
-    "rule": "unit-storm-eagle-gunship",
-    "units": [
-      "unit-storm-eagle-gunship"
-    ],
-    "datasheet": "unit-storm-eagle-gunship",
-    "statline": "storm-eagle-gunship-profile"
-  },
-  "chaos-space-marines-weapon-vengeance-launcher": {
-    "id": "chaos-space-marines-weapon-vengeance-launcher",
-    "title": "Vengeance launcher",
-    "summary": "Ranged · 48\" · A 2D6 · BS 3+ · S 6 · AP 0 · D 1 · Blast",
-    "full": "Ranged · 48\" · A 2D6 · BS 3+ · S 6 · AP 0 · D 1 · Blast",
-    "glossary": "glossary-chaos-space-marines-weapon-vengeance-launcher",
-    "rule": "unit-storm-eagle-gunship",
-    "units": [
-      "unit-storm-eagle-gunship"
-    ],
-    "datasheet": "unit-storm-eagle-gunship",
-    "statline": "storm-eagle-gunship-profile"
-  },
-  "chaos-space-marines-weapon-typhoon-missile-launcher-frag": {
-    "id": "chaos-space-marines-weapon-typhoon-missile-launcher-frag",
-    "title": "➤ Typhoon missile launcher - frag",
-    "summary": "Ranged · 48\" · A 2D6 · BS 3+ · S 4 · AP 0 · D 1 · Blast",
-    "full": "Ranged · 48\" · A 2D6 · BS 3+ · S 4 · AP 0 · D 1 · Blast",
-    "glossary": "glossary-chaos-space-marines-weapon-typhoon-missile-launcher-frag",
-    "rule": "unit-storm-eagle-gunship",
-    "units": [
-      "unit-storm-eagle-gunship"
-    ],
-    "datasheet": "unit-storm-eagle-gunship",
-    "statline": "storm-eagle-gunship-profile"
-  },
-  "chaos-space-marines-weapon-typhoon-missile-launcher-krak": {
-    "id": "chaos-space-marines-weapon-typhoon-missile-launcher-krak",
-    "title": "➤ Typhoon missile launcher - krak",
-    "summary": "Ranged · 48\" · A 2 · BS 3+ · S 9 · AP -2 · D D6",
-    "full": "Ranged · 48\" · A 2 · BS 3+ · S 9 · AP -2 · D D6",
-    "glossary": "glossary-chaos-space-marines-weapon-typhoon-missile-launcher-krak",
-    "rule": "unit-storm-eagle-gunship",
-    "units": [
-      "unit-storm-eagle-gunship"
-    ],
-    "datasheet": "unit-storm-eagle-gunship",
-    "statline": "storm-eagle-gunship-profile"
-  },
-  "chaos-space-marines-ability-termite-assault": {
-    "id": "chaos-space-marines-ability-termite-assault",
-    "title": "Termite Assault",
-    "summary": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model can disembark after it has been set up on the battlefield, and if they do they must be set up more than 9\" away from all enemy models.",
-    "full": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model can disembark after it has been set up on the battlefield, and if they do they must be set up more than 9\" away from all enemy models.",
-    "glossary": "glossary-chaos-space-marines-ability-termite-assault",
-    "rule": "unit-terrax-pattern-termite",
-    "units": [
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-terrax-pattern-termite",
-    "statline": "terrax-pattern-termite-profile"
-  },
-  "chaos-space-marines-weapon-termite-drill": {
-    "id": "chaos-space-marines-weapon-termite-drill",
-    "title": "Termite drill",
-    "summary": "Melee · Melee · A 6 · WS 4+ · S 14 · AP -2 · D D3+3 · Anti-VEHICLE 3+",
-    "full": "Melee · Melee · A 6 · WS 4+ · S 14 · AP -2 · D D3+3 · Anti-VEHICLE 3+",
-    "glossary": "glossary-chaos-space-marines-weapon-termite-drill",
-    "rule": "unit-terrax-pattern-termite",
-    "units": [
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-terrax-pattern-termite",
-    "statline": "terrax-pattern-termite-profile"
-  },
-  "chaos-space-marines-weapon-terrax-melta-cutter": {
-    "id": "chaos-space-marines-weapon-terrax-melta-cutter",
-    "title": "Terrax melta cutter",
-    "summary": "Ranged · 12\" · A 5 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2",
-    "full": "Ranged · 12\" · A 5 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2",
-    "glossary": "glossary-chaos-space-marines-weapon-terrax-melta-cutter",
-    "rule": "unit-terrax-pattern-termite",
-    "units": [
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-terrax-pattern-termite",
-    "statline": "terrax-pattern-termite-profile"
-  },
-  "chaos-space-marines-weapon-twin-volkite-charger": {
-    "id": "chaos-space-marines-weapon-twin-volkite-charger",
-    "title": "Twin volkite charger",
-    "summary": "Ranged · 18\" · A 2 · BS 3+ · S 5 · AP 0 · D 2 · Devastating Wounds, Twin-linked",
-    "full": "Ranged · 18\" · A 2 · BS 3+ · S 5 · AP 0 · D 2 · Devastating Wounds, Twin-linked",
-    "glossary": "glossary-chaos-space-marines-weapon-twin-volkite-charger",
-    "rule": "unit-terrax-pattern-termite",
-    "units": [
-      "unit-terrax-pattern-termite"
-    ],
-    "datasheet": "unit-terrax-pattern-termite",
-    "statline": "terrax-pattern-termite-profile"
-  },
-  "chaos-space-marines-ability-sunderer-of-fortresses": {
-    "id": "chaos-space-marines-ability-sunderer-of-fortresses",
-    "title": "Sunderer of Fortresses",
-    "summary": "Each time this model makes an attack that targets a VEHICLE, improve the Strength and Damage characteristic of that attack by 1 (if that attack targets a FORTIFICATION unit, improve the Strength and Damage characteristics of that attack by 2 instead).",
-    "full": "Each time this model makes an attack that targets a VEHICLE, improve the Strength and Damage characteristic of that attack by 1 (if that attack targets a FORTIFICATION unit, improve the Strength and Damage characteristics of that attack by 2 instead).",
-    "glossary": "glossary-chaos-space-marines-ability-sunderer-of-fortresses",
-    "rule": "unit-typhon",
-    "units": [
-      "unit-typhon"
-    ],
-    "datasheet": "unit-typhon",
-    "statline": "typhon-profile"
-  },
-  "chaos-space-marines-weapon-dreadhammer-siege-cannon": {
-    "id": "chaos-space-marines-weapon-dreadhammer-siege-cannon",
-    "title": "Dreadhammer siege cannon",
-    "summary": "Ranged · 24\" · A D6+6 · BS 3+ · S 14 · AP -3 · D D6 · Blast",
-    "full": "Ranged · 24\" · A D6+6 · BS 3+ · S 14 · AP -3 · D D6 · Blast",
-    "glossary": "glossary-chaos-space-marines-weapon-dreadhammer-siege-cannon",
-    "rule": "unit-typhon",
-    "units": [
-      "unit-typhon"
-    ],
-    "datasheet": "unit-typhon",
-    "statline": "typhon-profile"
-  },
-  "chaos-space-marines-ability-pinning-bombardment": {
-    "id": "chaos-space-marines-ability-pinning-bombardment",
-    "title": "Pinning Bombardment",
-    "summary": "In your Shooting phase, after this model has shot, if one or more of those attacks made with its Scorpius multi-launcher scored a hit against an enemy INFANTRY unit, that unit must take a Battle-shock test.",
-    "full": "In your Shooting phase, after this model has shot, if one or more of those attacks made with its Scorpius multi-launcher scored a hit against an enemy INFANTRY unit, that unit must take a Battle-shock test.",
-    "glossary": "glossary-chaos-space-marines-ability-pinning-bombardment",
-    "rule": "unit-whirlwind-scorpius",
-    "units": [
-      "unit-whirlwind-scorpius"
-    ],
-    "datasheet": "unit-whirlwind-scorpius",
-    "statline": "whirlwind-scorpius-profile"
-  },
-  "chaos-space-marines-weapon-scorpius-multi-launcher": {
-    "id": "chaos-space-marines-weapon-scorpius-multi-launcher",
-    "title": "Scorpius multi-launcher",
-    "summary": "Ranged · 48\" · A 2D3+3 · BS 3+ · S 6 · AP -1 · D 2 · Blast, Indirect Fire",
-    "full": "Ranged · 48\" · A 2D3+3 · BS 3+ · S 6 · AP -1 · D 2 · Blast, Indirect Fire",
-    "glossary": "glossary-chaos-space-marines-weapon-scorpius-multi-launcher",
-    "rule": "unit-whirlwind-scorpius",
-    "units": [
-      "unit-whirlwind-scorpius"
-    ],
-    "datasheet": "unit-whirlwind-scorpius",
-    "statline": "whirlwind-scorpius-profile"
-  },
-  "chaos-space-marines-weapon-xiphon-missile-battery": {
-    "id": "chaos-space-marines-weapon-xiphon-missile-battery",
-    "title": "Xiphon missile battery",
-    "summary": "Ranged · 60\" · A 3 · BS 3+ · S 7 · AP -1 · D 3 · Anti-FLY 2+",
-    "full": "Ranged · 60\" · A 3 · BS 3+ · S 7 · AP -1 · D 3 · Anti-FLY 2+",
-    "glossary": "glossary-chaos-space-marines-weapon-xiphon-missile-battery",
-    "rule": "unit-xiphon-interceptor",
-    "units": [
-      "unit-xiphon-interceptor"
-    ],
-    "datasheet": "unit-xiphon-interceptor",
-    "statline": "xiphon-interceptor-profile"
+    "glossary": "glossary-chaos-space-marines-enhancement-amulet-of-tainted-vigour",
+    "rule": "detachment-chaos-cult"
+  },
+  "chaos-space-marines-enhancement-cultists-brand": {
+    "id": "chaos-space-marines-enhancement-cultists-brand",
+    "title": "Cultist’s Brand",
+    "summary": "Cultist’s Brand appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-cultists-brand",
+    "rule": "detachment-chaos-cult"
+  },
+  "chaos-space-marines-enhancement-incendiary-goad": {
+    "id": "chaos-space-marines-enhancement-incendiary-goad",
+    "title": "Incendiary Goad",
+    "summary": "Incendiary Goad appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-incendiary-goad",
+    "rule": "detachment-chaos-cult"
+  },
+  "chaos-space-marines-enhancement-warped-foresight": {
+    "id": "chaos-space-marines-enhancement-warped-foresight",
+    "title": "Warped Foresight",
+    "summary": "Warped Foresight appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-warped-foresight",
+    "rule": "detachment-chaos-cult"
+  },
+  "chaos-space-marines-enhancement-cursed-fang": {
+    "id": "chaos-space-marines-enhancement-cursed-fang",
+    "title": "Cursed Fang",
+    "summary": "Cursed Fang appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-cursed-fang",
+    "rule": "detachment-deceptors"
+  },
+  "chaos-space-marines-enhancement-falsehood": {
+    "id": "chaos-space-marines-enhancement-falsehood",
+    "title": "Falsehood",
+    "summary": "Falsehood appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-falsehood",
+    "rule": "detachment-deceptors"
+  },
+  "chaos-space-marines-enhancement-shroud-of-obfuscation": {
+    "id": "chaos-space-marines-enhancement-shroud-of-obfuscation",
+    "title": "Shroud of Obfuscation",
+    "summary": "Shroud of Obfuscation appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-shroud-of-obfuscation",
+    "rule": "detachment-deceptors"
+  },
+  "chaos-space-marines-enhancement-soul-link": {
+    "id": "chaos-space-marines-enhancement-soul-link",
+    "title": "Soul Link",
+    "summary": "Soul Link appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-soul-link",
+    "rule": "detachment-deceptors"
+  },
+  "chaos-space-marines-enhancement-eater-of-dread": {
+    "id": "chaos-space-marines-enhancement-eater-of-dread",
+    "title": "Eater of Dread",
+    "summary": "Eater of Dread appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-eater-of-dread",
+    "rule": "detachment-dread-talons"
+  },
+  "chaos-space-marines-enhancement-nights-shroud": {
+    "id": "chaos-space-marines-enhancement-nights-shroud",
+    "title": "Night’s Shroud",
+    "summary": "Night’s Shroud appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-nights-shroud",
+    "rule": "detachment-dread-talons"
+  },
+  "chaos-space-marines-enhancement-warp-fuelled-thrusters-2": {
+    "id": "chaos-space-marines-enhancement-warp-fuelled-thrusters-2",
+    "title": "Warp-Fuelled Thrusters",
+    "summary": "Warp-Fuelled Thrusters appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-warp-fuelled-thrusters-2",
+    "rule": "detachment-dread-talons"
+  },
+  "chaos-space-marines-enhancement-willbreaker": {
+    "id": "chaos-space-marines-enhancement-willbreaker",
+    "title": "Willbreaker",
+    "summary": "Willbreaker appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-willbreaker",
+    "rule": "detachment-dread-talons"
+  },
+  "chaos-space-marines-enhancement-bastion-plate": {
+    "id": "chaos-space-marines-enhancement-bastion-plate",
+    "title": "Bastion Plate",
+    "summary": "Bastion Plate appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-bastion-plate",
+    "rule": "detachment-fellhammer-siege-host"
+  },
+  "chaos-space-marines-enhancement-iron-artifice": {
+    "id": "chaos-space-marines-enhancement-iron-artifice",
+    "title": "Iron Artifice",
+    "summary": "Iron Artifice appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-iron-artifice",
+    "rule": "detachment-fellhammer-siege-host"
+  },
+  "chaos-space-marines-enhancement-ironbound-enmity": {
+    "id": "chaos-space-marines-enhancement-ironbound-enmity",
+    "title": "Ironbound Enmity",
+    "summary": "Ironbound Enmity appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-ironbound-enmity",
+    "rule": "detachment-fellhammer-siege-host"
+  },
+  "chaos-space-marines-enhancement-warp-tracer": {
+    "id": "chaos-space-marines-enhancement-warp-tracer",
+    "title": "Warp Tracer",
+    "summary": "Warp Tracer appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-warp-tracer",
+    "rule": "detachment-fellhammer-siege-host"
+  },
+  "chaos-space-marines-enhancement-eye-of-tzeentch": {
+    "id": "chaos-space-marines-enhancement-eye-of-tzeentch",
+    "title": "Eye of Tzeentch",
+    "summary": "Eye of Tzeentch appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-eye-of-tzeentch",
+    "rule": "detachment-pactbound-zealots"
+  },
+  "chaos-space-marines-enhancement-intoxicating-elixir": {
+    "id": "chaos-space-marines-enhancement-intoxicating-elixir",
+    "title": "Intoxicating Elixir",
+    "summary": "Intoxicating Elixir appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-intoxicating-elixir",
+    "rule": "detachment-pactbound-zealots"
+  },
+  "chaos-space-marines-enhancement-orbs-of-unlife": {
+    "id": "chaos-space-marines-enhancement-orbs-of-unlife",
+    "title": "Orbs of Unlife",
+    "summary": "Orbs of Unlife appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-orbs-of-unlife",
+    "rule": "detachment-pactbound-zealots"
+  },
+  "chaos-space-marines-enhancement-talisman-of-burning-blood": {
+    "id": "chaos-space-marines-enhancement-talisman-of-burning-blood",
+    "title": "Talisman of Burning Blood",
+    "summary": "Talisman of Burning Blood appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-talisman-of-burning-blood",
+    "rule": "detachment-pactbound-zealots"
+  },
+  "chaos-space-marines-enhancement-despots-claim": {
+    "id": "chaos-space-marines-enhancement-despots-claim",
+    "title": "Despot’s Claim",
+    "summary": "Despot’s Claim appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-despots-claim",
+    "rule": "detachment-renegade-raiders"
+  },
+  "chaos-space-marines-enhancement-dread-reaver": {
+    "id": "chaos-space-marines-enhancement-dread-reaver",
+    "title": "Dread Reaver",
+    "summary": "Dread Reaver appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-dread-reaver",
+    "rule": "detachment-renegade-raiders"
+  },
+  "chaos-space-marines-enhancement-mark-of-the-hound": {
+    "id": "chaos-space-marines-enhancement-mark-of-the-hound",
+    "title": "Mark of the Hound",
+    "summary": "Mark of the Hound appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-mark-of-the-hound",
+    "rule": "detachment-renegade-raiders"
+  },
+  "chaos-space-marines-enhancement-tyrants-lash": {
+    "id": "chaos-space-marines-enhancement-tyrants-lash",
+    "title": "Tyrant’s Lash",
+    "summary": "Tyrant’s Lash appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-tyrants-lash",
+    "rule": "detachment-renegade-raiders"
+  },
+  "chaos-space-marines-enhancement-forges-blessing": {
+    "id": "chaos-space-marines-enhancement-forges-blessing",
+    "title": "Forge’s Blessing",
+    "summary": "Forge’s Blessing appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-forges-blessing",
+    "rule": "detachment-soulforged-warpack"
+  },
+  "chaos-space-marines-enhancement-invigorated-mechatendrils": {
+    "id": "chaos-space-marines-enhancement-invigorated-mechatendrils",
+    "title": "Invigorated Mechatendrils",
+    "summary": "Invigorated Mechatendrils appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-invigorated-mechatendrils",
+    "rule": "detachment-soulforged-warpack"
+  },
+  "chaos-space-marines-enhancement-soul-harvester": {
+    "id": "chaos-space-marines-enhancement-soul-harvester",
+    "title": "Soul Harvester",
+    "summary": "Soul Harvester appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-soul-harvester",
+    "rule": "detachment-soulforged-warpack"
+  },
+  "chaos-space-marines-enhancement-tempting-addendum": {
+    "id": "chaos-space-marines-enhancement-tempting-addendum",
+    "title": "Tempting Addendum",
+    "summary": "Tempting Addendum appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-tempting-addendum",
+    "rule": "detachment-soulforged-warpack"
+  },
+  "chaos-space-marines-enhancement-eager-for-vengeance": {
+    "id": "chaos-space-marines-enhancement-eager-for-vengeance",
+    "title": "Eager for Vengeance",
+    "summary": "Eager for Vengeance appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-eager-for-vengeance",
+    "rule": "detachment-veterans-of-the-long-war"
+  },
+  "chaos-space-marines-enhancement-eye-of-abaddon": {
+    "id": "chaos-space-marines-enhancement-eye-of-abaddon",
+    "title": "Eye of Abaddon",
+    "summary": "Eye of Abaddon appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-eye-of-abaddon",
+    "rule": "detachment-veterans-of-the-long-war"
+  },
+  "chaos-space-marines-enhancement-mark-of-legend": {
+    "id": "chaos-space-marines-enhancement-mark-of-legend",
+    "title": "Mark of Legend",
+    "summary": "Mark of Legend appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-mark-of-legend",
+    "rule": "detachment-veterans-of-the-long-war"
+  },
+  "chaos-space-marines-enhancement-warmasters-gift": {
+    "id": "chaos-space-marines-enhancement-warmasters-gift",
+    "title": "Warmaster’s Gift",
+    "summary": "Warmaster’s Gift appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-enhancement-warmasters-gift",
+    "rule": "detachment-veterans-of-the-long-war"
   }
 };

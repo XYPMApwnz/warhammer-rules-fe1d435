@@ -37,6 +37,7 @@
   ],
   "outputs": {
     "snapshot": "bsdata-chaos-space-marines-11e.json",
+    "officialPoints": "official-mfm-v1.2.json",
     "datasheets": "../content/chaos-space-marines-codex-datasheets.en.json",
     "points": "../content/chaos-space-marines-points.en.json"
   },
@@ -44,7 +45,11 @@
     "excludeNames": [
       "Detachment",
       "Show/Hide Options",
-      "Order of Battle"
+      "Order of Battle",
+      "Khorne Berzerkers",
+      "Noise Marines",
+      "Plague Marines",
+      "Rubric Marines"
     ],
     "excludeNamePatterns": [
       "\\[Crucible\\]$"
@@ -69,6 +74,7 @@
     "imperialArmourNames": []
   },
   "enhancements": {
+    "identity": "detachment-title",
     "detachments": [
       "Cabal of Chaos",
       "Chaos Cult",

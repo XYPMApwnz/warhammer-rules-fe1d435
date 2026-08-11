@@ -6,7 +6,12 @@
     "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
     "revision": "5",
     "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Chaos%20-%20Chaos%20Space%20Marines.json",
-    "snapshotSha256": "7ED57C88B5C2C62BCC2D6588E2E9921132A46E171BA2550811A8475B5E3AC4EB"
+    "snapshotSha256": "7ED57C88B5C2C62BCC2D6588E2E9921132A46E171BA2550811A8475B5E3AC4EB",
+    "officialMfm": {
+      "version": "v1.2",
+      "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+      "verifiedAt": "2026-08-11"
+    }
   },
   "units": [
     {
@@ -17,10 +22,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 295
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-accursed-cultists",
@@ -29,23 +41,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "8 models",
-          "value": 90
-        },
-        {
-          "label": "3+ unit: 8 models",
+          "label": "3rd + unit · 8 models",
+          "maxModels": 8,
+          "minCopies": 3,
+          "minModels": 8,
           "value": 110
         },
         {
-          "label": "9 models",
-          "value": 195
-        },
-        {
-          "label": "3+ unit: 9 models",
+          "label": "3rd + unit · 16 models",
+          "maxModels": 16,
+          "minCopies": 3,
+          "minModels": 16,
           "value": 215
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-blood-slaughterer",
@@ -55,7 +70,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 160
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -68,7 +85,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 270
+          "value": 270,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -81,14 +100,23 @@
       "points": [
         {
           "label": "3 models",
+          "maxModels": 3,
+          "minModels": 3,
           "value": 70
         },
         {
-          "label": "4 models",
+          "label": "6 models",
+          "maxModels": 6,
+          "minModels": 6,
           "value": 130
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-chaos-deimos-predator",
@@ -98,7 +126,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 115
+          "value": 115,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -110,15 +140,19 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
-          "value": 220
-        },
-        {
-          "label": "3+ unit: 1 models",
+          "label": "3rd + unit · 1 model",
+          "maxModels": 1,
+          "minCopies": 3,
+          "minModels": 1,
           "value": 240
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-chaos-lord",
@@ -128,10 +162,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 90
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-chaos-lord-in-terminator-armour",
@@ -141,10 +182,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 85
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-chaos-lord-on-bike",
@@ -154,7 +202,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 95
+          "value": 95,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -167,7 +217,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 100
+          "value": 100,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -180,7 +232,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 115
+          "value": 115,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -193,7 +247,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 90
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -206,7 +262,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 100
+          "value": 100,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -219,10 +277,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 80
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-chaos-predator-annihilator",
@@ -231,15 +296,19 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
-          "value": 145
-        },
-        {
-          "label": "3+ unit: 1 models",
+          "label": "3rd + unit · 1 model",
+          "maxModels": 1,
+          "minCopies": 3,
+          "minModels": 1,
           "value": 155
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-chaos-predator-destructor",
@@ -248,15 +317,19 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
-          "value": 150
-        },
-        {
-          "label": "3+ unit: 1 models",
+          "label": "3rd + unit · 1 model",
+          "maxModels": 1,
+          "minCopies": 3,
+          "minModels": 1,
           "value": 160
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-chaos-rhino",
@@ -265,15 +338,19 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
-          "value": 65
-        },
-        {
-          "label": "4+ unit: 1 models",
+          "label": "4th + unit · 1 model",
+          "maxModels": 1,
+          "minCopies": 4,
+          "minModels": 1,
           "value": 75
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-chaos-spawn",
@@ -283,10 +360,17 @@
       "points": [
         {
           "label": "2 models",
+          "maxModels": 2,
+          "minModels": 2,
           "value": 60
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-chaos-terminator-squad",
@@ -296,14 +380,23 @@
       "points": [
         {
           "label": "5 models",
+          "maxModels": 5,
+          "minModels": 5,
           "value": 175
         },
         {
-          "label": "6 models",
+          "label": "10 models",
+          "maxModels": 10,
+          "minModels": 10,
           "value": 350
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-chaos-thunderhawk",
@@ -313,7 +406,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 840
+          "value": 840,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -325,15 +420,19 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
-          "value": 185
-        },
-        {
-          "label": "3+ unit: 1 models",
+          "label": "3rd + unit · 1 model",
+          "maxModels": 1,
+          "minCopies": 3,
+          "minModels": 1,
           "value": 195
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-chosen",
@@ -342,23 +441,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
-          "value": 135
-        },
-        {
-          "label": "3+ unit: 5 models",
+          "label": "3rd + unit · 5 models",
+          "maxModels": 5,
+          "minCopies": 3,
+          "minModels": 5,
           "value": 145
         },
         {
-          "label": "6 models",
-          "value": 270
-        },
-        {
-          "label": "3+ unit: 6 models",
+          "label": "3rd + unit · 10 models",
+          "maxModels": 10,
+          "minCopies": 3,
+          "minModels": 10,
           "value": 280
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-cultist-firebrand",
@@ -367,15 +469,19 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
-          "value": 45
-        },
-        {
-          "label": "3+ unit: 1 models",
+          "label": "3rd + unit · 1 model",
+          "maxModels": 1,
+          "minCopies": 3,
+          "minModels": 1,
           "value": 50
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-cultist-mob",
@@ -385,14 +491,23 @@
       "points": [
         {
           "label": "10 models",
+          "maxModels": 10,
+          "minModels": 10,
           "value": 50
         },
         {
-          "label": "11 models",
+          "label": "20 models",
+          "maxModels": 20,
+          "minModels": 20,
           "value": 90
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-cultist-mob-with-firearms",
@@ -402,11 +517,15 @@
       "points": [
         {
           "label": "10 models",
-          "value": 50
+          "value": 50,
+          "minModels": 10,
+          "maxModels": 10
         },
         {
-          "label": "11 models",
-          "value": 100
+          "label": "11-20 models",
+          "value": 100,
+          "minModels": 11,
+          "maxModels": 20
         }
       ],
       "paidWargear": []
@@ -419,10 +538,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 90
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-dark-apostle",
@@ -432,10 +558,17 @@
       "points": [
         {
           "label": "3 models",
+          "maxModels": 3,
+          "minModels": 3,
           "value": 65
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-dark-commune",
@@ -444,15 +577,19 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
-          "value": 90
-        },
-        {
-          "label": "3+ unit: 5 models",
+          "label": "3rd + unit · 5 models",
+          "maxModels": 5,
+          "minCopies": 3,
+          "minModels": 5,
           "value": 100
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-decimator",
@@ -462,7 +599,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 165
+          "value": 165,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -474,26 +613,38 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st unit · 1 model",
+          "maxCopies": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "minModels": 1,
           "value": 300
         },
         {
-          "label": "2+ unit: 1 models",
+          "label": "2nd + unit · 1 model",
+          "maxModels": 1,
+          "minCopies": 2,
+          "minModels": 1,
           "value": 340
         }
       ],
       "paidWargear": [
         {
-          "name": "Hades lascannon",
-          "value": 15,
-          "modifiers": []
+          "modifiers": [],
+          "name": "Heavy reaper autocannon",
+          "value": 15
         },
         {
-          "name": "Heavy reaper autocannon",
-          "value": 15,
-          "modifiers": []
+          "modifiers": [],
+          "name": "Hades lascannon",
+          "value": 15
         }
-      ]
+      ],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-deredeo-dreadnought",
@@ -503,7 +654,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 160
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -516,7 +669,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 115
+          "value": 115,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -529,7 +684,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 70
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -542,10 +699,17 @@
       "points": [
         {
           "label": "2 models",
+          "maxModels": 2,
+          "minModels": 2,
           "value": 100
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-falchion",
@@ -555,7 +719,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 420
+          "value": 420,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -568,7 +734,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 480
+          "value": 480,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -581,10 +749,17 @@
       "points": [
         {
           "label": "10 models",
+          "maxModels": 10,
+          "minModels": 10,
           "value": 60
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-fire-raptor-gunship",
@@ -594,7 +769,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 290
+          "value": 290,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -606,21 +783,25 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
-          "value": 160
-        },
-        {
-          "label": "3+ unit: 1 models",
+          "label": "3rd + unit · 1 model",
+          "maxModels": 1,
+          "minCopies": 3,
+          "minModels": 1,
           "value": 170
         }
       ],
       "paidWargear": [
         {
+          "modifiers": [],
           "name": "Ectoplasma cannon",
-          "value": 5,
-          "modifiers": []
+          "value": 5
         }
-      ]
+      ],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-gellerpox-infected",
@@ -630,7 +811,9 @@
       "points": [
         {
           "label": "7 models",
-          "value": 125
+          "value": 125,
+          "minModels": 7,
+          "maxModels": 7
         }
       ],
       "paidWargear": []
@@ -643,7 +826,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 150
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -656,7 +841,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 500
+          "value": 500,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -669,10 +856,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 90
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-havocs",
@@ -681,15 +875,19 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
-          "value": 125
-        },
-        {
-          "label": "3+ unit: 5 models",
+          "label": "3rd + unit · 5 models",
+          "maxModels": 5,
+          "minCopies": 3,
+          "minModels": 5,
           "value": 135
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-helbrute",
@@ -699,10 +897,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 130
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-heldrake",
@@ -712,10 +917,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 175
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-hell-blade",
@@ -725,7 +937,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 115
+          "value": 115,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -738,7 +952,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 140
+          "value": 140,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -751,10 +967,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 165
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-heretic-astartes-daemon-prince-with-wings",
@@ -764,10 +987,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 180
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-huron-blackheart",
@@ -777,10 +1007,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 130
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-kharybdis-assault-claw",
@@ -790,24 +1027,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 300
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-khorne-berzerkers",
-      "title": "Khorne Berzerkers",
-      "status": "Current",
-      "sourceLayer": "codex",
-      "points": [
-        {
-          "label": "10 models",
-          "value": 170
-        },
-        {
-          "label": "20 models",
-          "value": 330
+          "value": 300,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -819,15 +1041,27 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
+          "label": "1st unit · 1 model",
+          "maxCopies": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "minModels": 1,
           "value": 450
         },
         {
-          "label": "2+ unit: 1 models",
+          "label": "2nd + unit · 1 model",
+          "maxModels": 1,
+          "minCopies": 2,
+          "minModels": 1,
           "value": 475
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-kratos",
@@ -837,7 +1071,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 240
+          "value": 240,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -850,10 +1086,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 120
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-kytan-ravager",
@@ -863,7 +1106,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 400
+          "value": 400,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -876,7 +1121,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 230
+          "value": 230,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -889,7 +1136,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 220
+          "value": 220,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -902,14 +1151,23 @@
       "points": [
         {
           "label": "5 models",
+          "maxModels": 5,
+          "minModels": 5,
           "value": 90
         },
         {
-          "label": "6 models",
+          "label": "10 models",
+          "maxModels": 10,
+          "minModels": 10,
           "value": 170
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-leviathan-dreadnought",
@@ -919,7 +1177,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 160
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -932,10 +1192,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 160
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-master-of-executions",
@@ -945,10 +1212,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 70
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-master-of-possession",
@@ -958,10 +1232,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 60
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-masters-of-the-maelstrom",
@@ -971,10 +1252,17 @@
       "points": [
         {
           "label": "5 models",
+          "maxModels": 5,
+          "minModels": 5,
           "value": 145
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-mastodon",
@@ -984,7 +1272,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 540
+          "value": 540,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -997,10 +1287,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 130
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-mutilators",
@@ -1009,15 +1306,19 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3 models",
-          "value": 165
-        },
-        {
-          "label": "3+ unit: 3 models",
+          "label": "3rd + unit · 3 models",
+          "maxModels": 3,
+          "minCopies": 3,
+          "minModels": 3,
           "value": 175
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-mutoid-vermin",
@@ -1027,7 +1328,9 @@
       "points": [
         {
           "label": "16 models",
-          "value": 85
+          "value": 85,
+          "minModels": 16,
+          "maxModels": 16
         }
       ],
       "paidWargear": []
@@ -1040,7 +1343,9 @@
       "points": [
         {
           "label": "4 models",
-          "value": 55
+          "value": 55,
+          "minModels": 4,
+          "maxModels": 4
         }
       ],
       "paidWargear": []
@@ -1053,14 +1358,23 @@
       "points": [
         {
           "label": "5 models",
+          "maxModels": 5,
+          "minModels": 5,
           "value": 100
         },
         {
-          "label": "6 models",
+          "label": "10 models",
+          "maxModels": 10,
+          "minModels": 10,
           "value": 180
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-noctilith-crown",
@@ -1070,27 +1384,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 125
         }
       ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-noise-marines",
-      "title": "Noise Marines",
-      "status": "Current",
-      "sourceLayer": "codex",
-      "points": [
-        {
-          "label": "6 models",
-          "value": 145
-        },
-        {
-          "label": "3+ unit: 6 models",
-          "value": 160
-        }
-      ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-obliterators",
@@ -1099,48 +1403,19 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "2 models",
-          "value": 160
-        },
-        {
-          "label": "3+ unit: 2 models",
+          "label": "3rd + unit · 2 models",
+          "maxModels": 2,
+          "minCopies": 3,
+          "minModels": 2,
           "value": 170
-        },
-        {
-          "label": "3 models",
-          "value": 360
-        },
-        {
-          "label": "3+ unit: 3 models",
-          "value": 370
         }
       ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-plague-marines",
-      "title": "Plague Marines",
-      "status": "Current",
-      "sourceLayer": "codex",
-      "points": [
-        {
-          "label": "5 models",
-          "value": 90
-        },
-        {
-          "label": "6 models",
-          "value": 125
-        },
-        {
-          "label": "7 models",
-          "value": 125
-        },
-        {
-          "label": "8 models",
-          "value": 180
-        }
-      ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-possessed",
@@ -1149,23 +1424,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
-          "value": 120
-        },
-        {
-          "label": "3+ unit: 5 models",
+          "label": "3rd + unit · 5 models",
+          "maxModels": 5,
+          "minCopies": 3,
+          "minModels": 5,
           "value": 130
         },
         {
-          "label": "6 models",
-          "value": 250
-        },
-        {
-          "label": "3+ unit: 6 models",
+          "label": "3rd + unit · 10 models",
+          "maxModels": 10,
+          "minCopies": 3,
+          "minModels": 10,
           "value": 260
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-rapier-carrier",
@@ -1175,7 +1453,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 90
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1187,23 +1467,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
-          "value": 110
-        },
-        {
-          "label": "3+ unit: 5 models",
+          "label": "3rd + unit · 5 models",
+          "maxModels": 5,
+          "minCopies": 3,
+          "minModels": 5,
           "value": 120
         },
         {
-          "label": "6 models",
-          "value": 210
-        },
-        {
-          "label": "3+ unit: 6 models",
+          "label": "3rd + unit · 10 models",
+          "maxModels": 10,
+          "minCopies": 3,
+          "minModels": 10,
           "value": 220
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-red-corsairs-raiders",
@@ -1212,23 +1495,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
-          "value": 110
-        },
-        {
-          "label": "3+ unit: 5 models",
+          "label": "3rd + unit · 5 models",
+          "maxModels": 5,
+          "minCopies": 3,
+          "minModels": 5,
           "value": 120
         },
         {
-          "label": "6 models",
-          "value": 210
-        },
-        {
-          "label": "3+ unit: 6 models",
+          "label": "3rd + unit · 10 models",
+          "maxModels": 10,
+          "minCopies": 3,
+          "minModels": 10,
           "value": 220
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-red-corsairs-reave-captain",
@@ -1238,10 +1524,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 60
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-relic-contemptor-dreadnought",
@@ -1251,7 +1544,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 140
+          "value": 140,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1264,7 +1559,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 65
+          "value": 65,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1277,7 +1574,9 @@
       "points": [
         {
           "label": "3 models",
-          "value": 75
+          "value": 75,
+          "minModels": 3,
+          "maxModels": 3
         }
       ],
       "paidWargear": []
@@ -1290,11 +1589,15 @@
       "points": [
         {
           "label": "4 models",
-          "value": 40
+          "value": 40,
+          "minModels": 4,
+          "maxModels": 4
         },
         {
-          "label": "8 models",
-          "value": 70
+          "label": "5-7 models",
+          "value": 70,
+          "minModels": 5,
+          "maxModels": 7
         }
       ],
       "paidWargear": []
@@ -1307,7 +1610,9 @@
       "points": [
         {
           "label": "3 models",
-          "value": 95
+          "value": 95,
+          "minModels": 3,
+          "maxModels": 3
         }
       ],
       "paidWargear": []
@@ -1320,7 +1625,9 @@
       "points": [
         {
           "label": "3 models",
-          "value": 95
+          "value": 95,
+          "minModels": 3,
+          "maxModels": 3
         }
       ],
       "paidWargear": []
@@ -1333,32 +1640,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 60
-        }
-      ],
-      "paidWargear": []
-    },
-    {
-      "id": "unit-rubric-marines",
-      "title": "Rubric Marines",
-      "status": "Current",
-      "sourceLayer": "codex",
-      "points": [
-        {
-          "label": "5 models",
-          "value": 100
-        },
-        {
-          "label": "4+ unit: 5 models",
-          "value": 110
-        },
-        {
-          "label": "10 models",
-          "value": 190
-        },
-        {
-          "label": "4+ unit: 10 models",
-          "value": 200
+          "value": 60,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1371,7 +1655,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 160
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1384,7 +1670,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 160
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1397,7 +1685,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 180
+          "value": 180,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1410,7 +1700,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 900
+          "value": 900,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1423,10 +1715,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 60
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-sorcerer-in-terminator-armour",
@@ -1436,10 +1735,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 80
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-sorcerer-on-bike",
@@ -1449,7 +1755,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 75
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1462,7 +1770,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 80
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1475,7 +1785,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 80
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1488,7 +1800,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 85
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1501,7 +1815,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 300
+          "value": 300,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1514,7 +1830,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 250
+          "value": 250,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1527,7 +1845,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 200
+          "value": 200,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1540,10 +1860,17 @@
       "points": [
         {
           "label": "2 models",
+          "maxModels": 2,
+          "minModels": 2,
           "value": 70
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-traitor-guardsmen-squad",
@@ -1553,10 +1880,17 @@
       "points": [
         {
           "label": "10 models",
+          "maxModels": 10,
+          "minModels": 10,
           "value": 70
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-typhon",
@@ -1566,7 +1900,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 320
+          "value": 320,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1579,10 +1915,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 220
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-venomcrawler",
@@ -1591,15 +1934,19 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "1 model",
-          "value": 120
-        },
-        {
-          "label": "3+ unit: 1 models",
+          "label": "3rd + unit · 1 model",
+          "maxModels": 1,
+          "minCopies": 3,
+          "minModels": 1,
           "value": 130
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-warp-talons",
@@ -1608,23 +1955,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
-          "value": 125
-        },
-        {
-          "label": "3+ unit: 5 models",
+          "label": "3rd + unit · 5 models",
+          "maxModels": 5,
+          "minCopies": 3,
+          "minModels": 5,
           "value": 135
         },
         {
-          "label": "6 models",
-          "value": 280
-        },
-        {
-          "label": "3+ unit: 6 models",
+          "label": "3rd + unit · 10 models",
+          "maxModels": 10,
+          "minCopies": 3,
+          "minModels": 10,
           "value": 290
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-warpsmith",
@@ -1634,10 +1984,17 @@
       "points": [
         {
           "label": "1 model",
+          "maxModels": 1,
+          "minModels": 1,
           "value": 60
         }
       ],
-      "paidWargear": []
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
     },
     {
       "id": "unit-whirlwind-scorpius",
@@ -1647,7 +2004,9 @@
       "points": [
         {
           "label": "1 model",
-          "value": 115
+          "value": 115,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
@@ -1660,15 +2019,911 @@
       "points": [
         {
           "label": "1 model",
-          "value": 115
+          "value": 115,
+          "minModels": 1,
+          "maxModels": 1
         }
       ],
       "paidWargear": []
     }
   ],
-  "enhancements": [],
+  "enhancements": [
+    {
+      "id": "enhancement-conduit-of-chaos",
+      "title": "Conduit of Chaos",
+      "detachment": "CABAL OF CHAOS",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-touched-by-the-warp",
+      "title": "Touched by the Warp",
+      "detachment": "CABAL OF CHAOS",
+      "value": 10,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-amulet-of-tainted-vigour",
+      "title": "Amulet of Tainted Vigour",
+      "detachment": "CHAOS CULT",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-cultists-brand",
+      "title": "Cultist’s Brand",
+      "detachment": "CHAOS CULT",
+      "value": 30,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-incendiary-goad",
+      "title": "Incendiary Goad",
+      "detachment": "CHAOS CULT",
+      "value": 25,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-warped-foresight",
+      "title": "Warped Foresight",
+      "detachment": "CHAOS CULT",
+      "value": 10,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-helm-of-all-seeing",
+      "title": "Helm of All-Seeing",
+      "detachment": "CREATIONS OF BILE",
+      "value": 25,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-living-carapace",
+      "title": "Living Carapace",
+      "detachment": "CREATIONS OF BILE",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-prime-test-subject",
+      "title": "Prime Test Subject",
+      "detachment": "CREATIONS OF BILE",
+      "value": 35,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-surgical-precision",
+      "title": "Surgical Precision",
+      "detachment": "CREATIONS OF BILE",
+      "value": 10,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-crown-of-worms",
+      "title": "Crown of Worms",
+      "detachment": "CULT OF THE ARKIFANE",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-cybinfernal-font",
+      "title": "Cybinfernal Font",
+      "detachment": "CULT OF THE ARKIFANE",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-mark-of-the-soul-forges",
+      "title": "Mark of the Soul Forges",
+      "detachment": "CULT OF THE ARKIFANE",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-wyredjinn",
+      "title": "Wyredjinn",
+      "detachment": "CULT OF THE ARKIFANE",
+      "value": 25,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-cursed-fang",
+      "title": "Cursed Fang",
+      "detachment": "DECEPTORS",
+      "value": 10,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-falsehood",
+      "title": "Falsehood",
+      "detachment": "DECEPTORS",
+      "value": 10,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-shroud-of-obfuscation",
+      "title": "Shroud of Obfuscation",
+      "detachment": "DECEPTORS",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-soul-link",
+      "title": "Soul Link",
+      "detachment": "DECEPTORS",
+      "value": 5,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-eye-of-oblivion",
+      "title": "Eye of Oblivion",
+      "detachment": "DEVOTEES OF DESTRUCTION",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-pact-of-destruction",
+      "title": "Pact of Destruction",
+      "detachment": "DEVOTEES OF DESTRUCTION",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-eater-of-dread",
+      "title": "Eater of Dread",
+      "detachment": "DREAD TALONS",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-nights-shroud",
+      "title": "Night’s Shroud",
+      "detachment": "DREAD TALONS",
+      "value": 10,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-dread-talons-warp-fuelled-thrusters",
+      "title": "Warp-Fuelled Thrusters",
+      "detachment": "DREAD TALONS",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-willbreaker",
+      "title": "Willbreaker",
+      "detachment": "DREAD TALONS",
+      "value": 10,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-bastion-plate",
+      "title": "Bastion Plate",
+      "detachment": "FELLHAMMER SIEGE-HOST",
+      "value": 10,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-iron-artifice",
+      "title": "Iron Artifice",
+      "detachment": "FELLHAMMER SIEGE-HOST",
+      "value": 10,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-ironbound-enmity",
+      "title": "Ironbound Enmity",
+      "detachment": "FELLHAMMER SIEGE-HOST",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-warp-tracer",
+      "title": "Warp Tracer",
+      "detachment": "FELLHAMMER SIEGE-HOST",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-dread-reputation",
+      "title": "Dread Reputation",
+      "detachment": "HURON’S MARAUDERS",
+      "value": 25,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-eager-for-bloodshed",
+      "title": "Eager for Bloodshed",
+      "detachment": "HURON’S MARAUDERS",
+      "value": 30,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-raid-leader",
+      "title": "Raid Leader",
+      "detachment": "HURON’S MARAUDERS",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-voice-of-the-tyrant",
+      "title": "Voice of the Tyrant",
+      "detachment": "HURON’S MARAUDERS",
+      "value": 25,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-pact-of-cursed-pinions",
+      "title": "Pact of Cursed Pinions",
+      "detachment": "MURDERTALON RAIDERS",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-shadowcowl-talisman",
+      "title": "Shadowcowl Talisman",
+      "detachment": "MURDERTALON RAIDERS",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-greyveil-hex",
+      "title": "Greyveil Hex",
+      "detachment": "NIGHTMARE HUNT",
+      "value": 25,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-sorrowscent-vulture",
+      "title": "Sorrowscent Vulture",
+      "detachment": "NIGHTMARE HUNT",
+      "value": 35,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-terrorglut-parasite",
+      "title": "Terrorglut Parasite",
+      "detachment": "NIGHTMARE HUNT",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-nightmare-hunt-warp-fuelled-thrusters",
+      "title": "Warp-Fuelled Thrusters",
+      "detachment": "NIGHTMARE HUNT",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-eye-of-tzeentch",
+      "title": "Eye of Tzeentch",
+      "detachment": "PACTBOUND ZEALOTS",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-intoxicating-elixir",
+      "title": "Intoxicating Elixir",
+      "detachment": "PACTBOUND ZEALOTS",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-orbs-of-unlife",
+      "title": "Orbs of Unlife",
+      "detachment": "PACTBOUND ZEALOTS",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-talisman-of-burning-blood",
+      "title": "Talisman of Burning Blood",
+      "detachment": "PACTBOUND ZEALOTS",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-despots-claim",
+      "title": "Despot’s Claim",
+      "detachment": "RENEGADE RAIDERS",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-dread-reaver",
+      "title": "Dread Reaver",
+      "detachment": "RENEGADE RAIDERS",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-mark-of-the-hound",
+      "title": "Mark of the Hound",
+      "detachment": "RENEGADE RAIDERS",
+      "value": 25,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-tyrants-lash",
+      "title": "Tyrant’s Lash",
+      "detachment": "RENEGADE RAIDERS",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-empyric-symbiote",
+      "title": "Empyric Symbiote",
+      "detachment": "RENEGADE WARBAND",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-eyes-of-the-hunter",
+      "title": "Eyes of the Hunter",
+      "detachment": "RENEGADE WARBAND",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-fratricidal-trophies",
+      "title": "Fratricidal Trophies",
+      "detachment": "RENEGADE WARBAND",
+      "value": 5,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-weaponised-hatred",
+      "title": "Weaponised Hatred",
+      "detachment": "RENEGADE WARBAND",
+      "value": 35,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-forges-blessing",
+      "title": "Forge’s Blessing",
+      "detachment": "SOULFORGED WARPACK",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-invigorated-mechatendrils",
+      "title": "Invigorated Mechatendrils",
+      "detachment": "SOULFORGED WARPACK",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-soul-harvester",
+      "title": "Soul Harvester",
+      "detachment": "SOULFORGED WARPACK",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-tempting-addendum",
+      "title": "Tempting Addendum",
+      "detachment": "SOULFORGED WARPACK",
+      "value": 40,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-eager-for-vengeance",
+      "title": "Eager for Vengeance",
+      "detachment": "VETERANS OF THE LONG WAR",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-eye-of-abaddon",
+      "title": "Eye of Abaddon",
+      "detachment": "VETERANS OF THE LONG WAR",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-mark-of-legend",
+      "title": "Mark of Legend",
+      "detachment": "VETERANS OF THE LONG WAR",
+      "value": 10,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-warmasters-gift",
+      "title": "Warmaster’s Gift",
+      "detachment": "VETERANS OF THE LONG WAR",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-akshurs-binding-runes",
+      "title": "Akshur’s Binding Runes",
+      "detachment": "WARPSTRIKE CHAMPIONS",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-eye-of-the-warp",
+      "title": "Eye of the Warp",
+      "detachment": "WARPSTRIKE CHAMPIONS",
+      "value": 15,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-infernal-fulgurite",
+      "title": "Infernal Fulgurite",
+      "detachment": "WARPSTRIKE CHAMPIONS",
+      "value": 20,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "enhancement-tzagulla",
+      "title": "Tzagulla",
+      "detachment": "WARPSTRIKE CHAMPIONS",
+      "value": 25,
+      "text": "",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
+        "verifiedAt": "2026-08-11"
+      }
+    }
+  ],
   "audit": {
-    "units": 111,
-    "enhancements": 0
-  }
+    "units": 107,
+    "enhancements": 62
+  },
+  "detachments": [
+    {
+      "detachmentPoints": 1,
+      "forceDisposition": "DISRUPTION",
+      "title": "Cabal of Chaos"
+    },
+    {
+      "detachmentPoints": 2,
+      "forceDisposition": "PRIORITY ASSETS",
+      "title": "Chaos Cult"
+    },
+    {
+      "detachmentPoints": 3,
+      "forceDisposition": "PURGE THE FOE",
+      "title": "Creations of Bile"
+    },
+    {
+      "detachmentPoints": 2,
+      "forceDisposition": "PRIORITY ASSETS",
+      "title": "Cult of the Arkifane"
+    },
+    {
+      "detachmentPoints": 2,
+      "forceDisposition": "DISRUPTION",
+      "title": "Deceptors"
+    },
+    {
+      "detachmentPoints": 1,
+      "forceDisposition": "PRIORITY ASSETS",
+      "title": "Devotees of Destruction"
+    },
+    {
+      "detachmentPoints": 2,
+      "forceDisposition": "DISRUPTION",
+      "title": "Dread Talons"
+    },
+    {
+      "detachmentPoints": 2,
+      "forceDisposition": "TAKE AND HOLD",
+      "title": "Fellhammer Siege-host"
+    },
+    {
+      "detachmentPoints": 3,
+      "forceDisposition": "DISRUPTION",
+      "title": "HURON’S MARAUDERS"
+    },
+    {
+      "detachmentPoints": 1,
+      "forceDisposition": "RECONNAISSANCE",
+      "title": "Murdertalon Raiders"
+    },
+    {
+      "detachmentPoints": 2,
+      "forceDisposition": "DISRUPTION",
+      "title": "Nightmare Hunt"
+    },
+    {
+      "detachmentPoints": 3,
+      "forceDisposition": "PRIORITY ASSETS",
+      "title": "Pactbound Zealots"
+    },
+    {
+      "detachmentPoints": 3,
+      "forceDisposition": "RECONNAISSANCE",
+      "title": "Renegade Raiders"
+    },
+    {
+      "detachmentPoints": 2,
+      "forceDisposition": "PRIORITY ASSETS",
+      "title": "Renegade Warband"
+    },
+    {
+      "detachmentPoints": 2,
+      "forceDisposition": "TAKE AND HOLD",
+      "title": "Soulforged Warpack"
+    },
+    {
+      "detachmentPoints": 2,
+      "forceDisposition": "TAKE AND HOLD",
+      "title": "Veterans of the Long War"
+    },
+    {
+      "detachmentPoints": 2,
+      "forceDisposition": "DISRUPTION",
+      "title": "Warpstrike Champions"
+    }
+  ]
 }

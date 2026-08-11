@@ -286,9 +286,9 @@ html.related-rules-open{overflow:hidden}
 .full-related-content .related-detachment+.related-detachment{margin-top:28px;padding-top:28px;border-top:1px solid var(--line)}
 .full-related-content .detachment-part{margin:0}
 .full-related-content .detachment-part-title{margin-top:0}
-.full-related-content .detachment-content{grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr))}
-.full-related-content .related-detachment>[data-related-kind="stratagems"]{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:18px}
-.full-related-content .related-detachment>[data-related-kind="stratagems"]>section{grid-column:1/-1}
+.full-related-content .detachment-content,.full-related-content .detachment-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.full-related-content .related-detachment>:is([data-related-kind="stratagems"],[data-related-kind="enhancements"]){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.full-related-content .related-detachment>:is([data-related-kind="stratagems"],[data-related-kind="enhancements"])>section{grid-column:1/-1}
 .full-related-content .stratagem{max-width:none;margin:0}
 .compatibility-status{grid-column:1/-1;display:grid;gap:3px;margin:0;padding:10px 14px;border-bottom:1px solid color-mix(in srgb,var(--strat-color) 45%,var(--line));background:color-mix(in srgb,var(--strat-color) 12%,var(--panel));color:var(--ink)}
 .stratagem>.compatibility-status{grid-column:2}
@@ -296,7 +296,7 @@ html.related-rules-open{overflow:hidden}
 .compatibility-status span{color:var(--muted);font-size:12px}
 .full-related-empty{margin:28px 0 0;padding:18px;border:1px solid var(--line);border-left:3px solid var(--green);color:var(--muted);background:var(--glass)}
 .roster-composition ul{margin:12px 0 0;padding-left:20px}.roster-composition li+li{margin-top:7px}
-@media(max-width:900px){.full-related-controls{grid-template-columns:1fr}.full-related-content .detachment-content,.full-related-content .related-detachment>[data-related-kind="stratagems"]{grid-template-columns:1fr}.related-rules-layer{padding:8px}.related-rules-dialog>header,.related-rules-body{padding:16px}}
+@media(max-width:900px){.full-related-controls{grid-template-columns:1fr}.full-related-content .detachment-content,.full-related-content .detachment-grid,.full-related-content .related-detachment>:is([data-related-kind="stratagems"],[data-related-kind="enhancements"]){grid-template-columns:1fr}.related-rules-layer{padding:8px}.related-rules-dialog>header,.related-rules-body{padding:16px}}
 .statline {
   display: grid;
   grid-template-columns: repeat(7,minmax(0,1fr));

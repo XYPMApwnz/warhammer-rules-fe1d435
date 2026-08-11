@@ -149,7 +149,7 @@ function page(route) {
   <link rel="stylesheet" href="../styles/tokens.css?v=11">
   <link rel="stylesheet" href="../styles/layout.css?v=11">
   <link rel="stylesheet" href="../styles/navigation.css?v=12">
-  <link rel="stylesheet" href="../styles/content.css?v=40">
+  <link rel="stylesheet" href="../styles/content.css?v=41">
   <link rel="stylesheet" href="../styles/popups.css?v=18">
   <link rel="stylesheet" href="../../shared/datasheet-system.css?v=8">
   <link rel="stylesheet" href="./mobile.css?v=11">

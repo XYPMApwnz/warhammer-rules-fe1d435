@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "verifiedAt": "2026-08-09",
+  "verifiedAt": "2026-08-11",
   "layers": [
     {
       "id": "faction-pack-v1.0",
@@ -17,12 +17,14 @@
       "role": "current-11e-overlay",
       "title": "Space Marines Faction Pack v1.1",
       "version": "1.1",
-      "retrievedAt": "2026-08-09",
-      "frozenAt": "2026-08-09",
-      "url": "https://assets.warhammer-community.com/eng_22-10_warhammer40000_faction_pack_space_marines-erhpiaprwa-ouizg2mmn9.pdf",
+      "retrievedAt": "2026-08-11",
+      "frozenAt": "2026-08-11",
+      "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_space_marines-631fzvmfjm-2qfrbosgdj.pdf",
       "localFile": "space-marines-faction-pack-v1.1.pdf",
-      "sha256": "0047AB9448EC438B07E1B04F81FE96546FB81C69732F5B6CA10F4CC29C2164DC",
-      "coverage": "6 Detachments, 7 current Space Marines datasheets, 2 Imperial Armour datasheets, updates and FAQ"
+      "sha256": "A9F2AB0A28AA1E4ED649667ADDE34C4B2C185A4493C070CEF9768C61FC9B93A6",
+      "coverage": "16 Detachments, 14 matched-play Space Marines datasheets, 2 Imperial Armour datasheets, 76 Legends datasheets, rules updates and FAQs",
+      "legalFrom": "2026-07-22",
+      "pageCount": 219
     },
     {
       "id": "codex-transcription",
@@ -51,12 +53,12 @@
       "title": "Munitorum Field Manual v1.2",
       "url": "https://mfm.warhammer-community.com/en/space-marines",
       "version": "1.2",
-      "verifiedAt": "2026-08-09",
-      "retrievedAt": "2026-08-09",
-      "frozenAt": "2026-08-09",
+      "verifiedAt": "2026-08-11",
+      "retrievedAt": "2026-08-11",
+      "frozenAt": "2026-08-11",
       "localFile": "official-mfm-v1.2.json",
       "localPath": "books/space-marines/sources/official-mfm-v1.2.json",
-      "sha256": "B4028D4AACE8E0E326A2D7676AF1D8F5262DF9221D4F6E0F958246D4C2B57E7E",
+      "sha256": "25BA7057F1B97766560F87F3F6389B556950195F0E27442CE8132429C989CC14",
       "coverage": {
         "publishedUnits": 103,
         "localUnits": 101,
@@ -84,23 +86,10 @@
       "knownGaps": [
         "This is secondary parity evidence and does not replace an authoritative official Codex source."
       ]
-    },
-    {
-      "id": "vengeful-hosts-current",
-      "authority": "mixed",
-      "role": "current-detachment-overlay",
-      "title": "Vengeful Hosts current rules",
-      "retrievedAt": "2026-08-09",
-      "localFile": "../content/space-marines-current-overlay.en.json",
-      "officialUrl": "https://www.warhammer-community.com/en-gb/articles/qbmycfzj/the-siege-of-death-mire-ends-who-won/",
-      "secondaryDetailUrl": "https://wahapedia.ru/wh40k11ed/factions/space-marines/",
-      "knownGaps": [
-        "The official article confirms Imperator Unleashed; exact Enhancement and Stratagem wording remains secondary parity evidence."
-      ]
     }
   ],
   "gates": {
     "publishAsComplete": false,
-    "reason": "Current Faction Pack and MFM evidence are frozen. Codex rule-bearing text and some Vengeful Hosts detail remain pinned community/secondary transcriptions."
+    "reason": "Current Faction Pack and dated MFM capture are frozen; Codex rule-bearing text remains secondary parity evidence."
   }
 }

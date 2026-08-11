@@ -51,7 +51,7 @@
   },
   "expected": {
     "matchedDetachments": 23,
-    "factionPackDetachments": 15,
+    "factionPackDetachments": 16,
     "codexDatasheets": 101,
     "imperialArmourDatasheets": 0,
     "legendsDatasheets": 0

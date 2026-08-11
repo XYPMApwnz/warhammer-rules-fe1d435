@@ -28,8 +28,10 @@ SUPPLEMENTAL_CATALOGUES = (
 )
 IMPERIAL_ARMOUR = {"astraeus", "thunderhawk gunship"}
 CURRENT_FACTION_PACK = {
-    "caanok var", "suboden khan", "vulkan he stan", "lieutenant titus",
-    "aethon shaan", "darnath lysander", "drop pod",
+    "eradicator squad with heavy bolters", "land speeder", "terminator assault squad",
+    "marneus calgar in armour of antilochus", "cato sicarius", "victrix honour guard",
+    "captain titus", "wardens of ultramar", "caanok var", "suboden khan",
+    "vulkan he stan", "aethon shaan", "darnath lysander", "drop pod",
 }
 
 

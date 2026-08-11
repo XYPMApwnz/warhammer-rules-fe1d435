@@ -1,4 +1,52 @@
 window.DG_TERMS={
+  "space-marines-detachment-rule-imperator-unleashed": {
+    "id": "space-marines-detachment-rule-imperator-unleashed",
+    "title": "Imperator Unleashed",
+    "summary": "In a turn a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress/charge move, that unit’s attacks can re-roll hit rolls of 1.",
+    "full": "In a turn a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress/charge move, that unit’s attacks can re-roll hit rolls of 1.",
+    "glossary": "glossary-space-marines-detachment-rule-imperator-unleashed",
+    "rule": "detachment-vengeful-hosts"
+  },
+  "space-marines-enhancement-avenging-angel": {
+    "id": "space-marines-enhancement-avenging-angel",
+    "title": "Avenging Angel",
+    "summary": "ADEPTUS ASTARTES FLY INFANTRY model only. When this unit ends an ingress move, select up to one enemy unit within 9\" of this unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
+    "full": "ADEPTUS ASTARTES FLY INFANTRY model only. When this unit ends an ingress move, select up to one enemy unit within 9\" of this unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
+    "glossary": "glossary-space-marines-enhancement-avenging-angel",
+    "rule": "detachment-vengeful-hosts"
+  },
+  "space-marines-enhancement-orksbane": {
+    "id": "space-marines-enhancement-orksbane",
+    "title": "Orksbane",
+    "summary": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Orksbane [CLEAVE 2] RANGE A WS S AP D Melee 4 2+ 8 -2",
+    "full": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Orksbane [CLEAVE 2] RANGE A WS S AP D Melee 4 2+ 8 -2",
+    "glossary": "glossary-space-marines-enhancement-orksbane",
+    "rule": "detachment-vengeful-hosts"
+  },
+  "space-marines-stratagem-meteoric-onslaught": {
+    "id": "space-marines-stratagem-meteoric-onslaught",
+    "title": "METEORIC ONSLAUGHT",
+    "summary": "Fight phase, when a friendly ADEPTUS ASTARTES FLY INFANTRY unit that made a charge move this turn is selected to attack. That friendly ADEPTUS ASTARTES FLY INFANTRY unit. Your unit’s melee attacks have +1 S.",
+    "full": "Fight phase, when a friendly ADEPTUS ASTARTES FLY INFANTRY unit that made a charge move this turn is selected to attack. That friendly ADEPTUS ASTARTES FLY INFANTRY unit. Your unit’s melee attacks have +1 S.",
+    "glossary": "glossary-space-marines-stratagem-meteoric-onslaught",
+    "rule": "detachment-vengeful-hosts"
+  },
+  "space-marines-stratagem-purge-by-sectors": {
+    "id": "space-marines-stratagem-purge-by-sectors",
+    "title": "PURGE BY SECTORS",
+    "summary": "End of the Fight phase. One friendly unengaged ADEPTUS ASTARTES FLY INFANTRY unit that was eligible to fight this phase. Your unit can make a normal move of up to D3+3\".",
+    "full": "End of the Fight phase. One friendly unengaged ADEPTUS ASTARTES FLY INFANTRY unit that was eligible to fight this phase. Your unit can make a normal move of up to D3+3\".",
+    "glossary": "glossary-space-marines-stratagem-purge-by-sectors",
+    "rule": "detachment-vengeful-hosts"
+  },
+  "space-marines-stratagem-know-no-fear": {
+    "id": "space-marines-stratagem-know-no-fear",
+    "title": "KNOW NO FEAR",
+    "summary": "Your Command phase. One friendly battle-shocked ADEPTUS ASTARTES unit. You can target that unit with this stratagem even though it is battle-shocked. Your unit is no longer battle-shocked.",
+    "full": "Your Command phase. One friendly battle-shocked ADEPTUS ASTARTES unit. You can target that unit with this stratagem even though it is battle-shocked. Your unit is no longer battle-shocked.",
+    "glossary": "glossary-space-marines-stratagem-know-no-fear",
+    "rule": "detachment-vengeful-hosts"
+  },
   "space-marines-detachment-rule-skystrike": {
     "id": "space-marines-detachment-rule-skystrike",
     "title": "Skystrike",
@@ -7,20 +55,20 @@ window.DG_TERMS={
     "glossary": "glossary-space-marines-detachment-rule-skystrike",
     "rule": "detachment-fulguris-task-force"
   },
-  "space-marines-enhancement-bellicose-weapon-spirits": {
-    "id": "space-marines-enhancement-bellicose-weapon-spirits",
-    "title": "Bellicose Weapon Spirits",
+  "space-marines-enhancement-bellicose-weapon-spirits-upgrade": {
+    "id": "space-marines-enhancement-bellicose-weapon-spirits-upgrade",
+    "title": "Bellicose Weapon Spirits (Upgrade)",
     "summary": "SPEEDER unit only. This unit can re-roll: ▪ Damage rolls. ▪ Rolls to determine the A of a weapon.",
     "full": "SPEEDER unit only. This unit can re-roll: ▪ Damage rolls. ▪ Rolls to determine the A of a weapon.",
-    "glossary": "glossary-space-marines-enhancement-bellicose-weapon-spirits",
+    "glossary": "glossary-space-marines-enhancement-bellicose-weapon-spirits-upgrade",
     "rule": "detachment-fulguris-task-force"
   },
-  "space-marines-enhancement-raptorial-cogitator-core": {
-    "id": "space-marines-enhancement-raptorial-cogitator-core",
-    "title": "Raptorial Cogitator Core",
+  "space-marines-enhancement-raptorial-cogitator-core-upgrade": {
+    "id": "space-marines-enhancement-raptorial-cogitator-core-upgrade",
+    "title": "Raptorial Cogitator Core (Upgrade)",
     "summary": "SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER].",
     "full": "SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER].",
-    "glossary": "glossary-space-marines-enhancement-raptorial-cogitator-core",
+    "glossary": "glossary-space-marines-enhancement-raptorial-cogitator-core-upgrade",
     "rule": "detachment-fulguris-task-force"
   },
   "space-marines-stratagem-data-link-augury": {
@@ -58,16 +106,16 @@ window.DG_TERMS={
   "space-marines-enhancement-celerity": {
     "id": "space-marines-enhancement-celerity",
     "title": "Celerity",
-    "summary": "ADEPTUS ASTARTES PSYKER model only. ▪ When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge. ▪ When this unit is selected to make a fall‑back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge.",
-    "full": "ADEPTUS ASTARTES PSYKER model only. ▪ When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge. ▪ When this unit is selected to make a fall‑back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge.",
+    "summary": "ADEPTUS ASTARTES PSYKER model only. ▪ When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge. ▪ When this unit is selected to make a fall-back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge.",
+    "full": "ADEPTUS ASTARTES PSYKER model only. ▪ When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge. ▪ When this unit is selected to make a fall-back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge.",
     "glossary": "glossary-space-marines-enhancement-celerity",
     "rule": "detachment-librarius-conclave"
   },
   "space-marines-enhancement-fusillade": {
     "id": "space-marines-enhancement-fusillade",
     "title": "Fusillade",
-    "summary": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have: ▪ [ANTI-MONSTER/VEHICLE 5+]. ▪ If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1].",
-    "full": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have: ▪ [ANTI-MONSTER/VEHICLE 5+]. ▪ If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1].",
+    "summary": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have: ▪ [LETHAL HITS] ▪ If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1].",
+    "full": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have: ▪ [LETHAL HITS] ▪ If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1].",
     "glossary": "glossary-space-marines-enhancement-fusillade",
     "rule": "detachment-librarius-conclave"
   },
@@ -90,8 +138,8 @@ window.DG_TERMS={
   "space-marines-enhancement-temporal-corridor": {
     "id": "space-marines-enhancement-temporal-corridor",
     "title": "Temporal Corridor",
-    "summary": "ADEPTUS ASTARTES PSYKER model only. ▪ At the end of your opponent’s Fight phase, you can place this unit into strategic reserves. ▪ If this unit has the Telekinesis Discipline ability, this unit has Deep Strike.",
-    "full": "ADEPTUS ASTARTES PSYKER model only. ▪ At the end of your opponent’s Fight phase, you can place this unit into strategic reserves. ▪ If this unit has the Telekinesis Discipline ability, this unit has Deep Strike.",
+    "summary": "ADEPTUS ASTARTES PSYKER model only. ▪ If this unit has the Telekinesis Discipline ability, this unit has Deep Strike. ▪ At the end of your opponent’s Fight phase, if this unit is unengaged, you can use this ability. If you do: ▫ Place this unit in strategic reserves. ▫ This unit can make an ingress move in your next Movement phase (including in your first turn).",
+    "full": "ADEPTUS ASTARTES PSYKER model only. ▪ If this unit has the Telekinesis Discipline ability, this unit has Deep Strike. ▪ At the end of your opponent’s Fight phase, if this unit is unengaged, you can use this ability. If you do: ▫ Place this unit in strategic reserves. ▫ This unit can make an ingress move in your next Movement phase (including in your first turn).",
     "glossary": "glossary-space-marines-enhancement-temporal-corridor",
     "rule": "detachment-librarius-conclave"
   },
@@ -103,12 +151,12 @@ window.DG_TERMS={
     "glossary": "glossary-space-marines-detachment-rule-new-rule",
     "rule": "detachment-subversion-assets"
   },
-  "space-marines-enhancement-death-in-the-dark": {
-    "id": "space-marines-enhancement-death-in-the-dark",
-    "title": "Death in the Dark",
+  "space-marines-enhancement-death-in-the-dark-upgrade": {
+    "id": "space-marines-enhancement-death-in-the-dark-upgrade",
+    "title": "Death in the Dark (Upgrade)",
     "summary": "INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls.",
     "full": "INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls.",
-    "glossary": "glossary-space-marines-enhancement-death-in-the-dark",
+    "glossary": "glossary-space-marines-enhancement-death-in-the-dark-upgrade",
     "rule": "detachment-subversion-assets"
   },
   "space-marines-enhancement-shroud-field": {
@@ -239,12 +287,12 @@ window.DG_TERMS={
     "glossary": "glossary-space-marines-detachment-rule-target-sighted",
     "rule": "detachment-headhunter-task-force"
   },
-  "space-marines-enhancement-astartes-tank-ace-aura": {
-    "id": "space-marines-enhancement-astartes-tank-ace-aura",
-    "title": "Astartes Tank Ace (Aura)",
+  "space-marines-enhancement-astartes-tank-ace": {
+    "id": "space-marines-enhancement-astartes-tank-ace",
+    "title": "Astartes Tank Ace",
     "summary": "Adeptus Astartes Vehicle model only. In your Shooting phase, while a friendly Adeptus Astartes Vehicle unit is within 6\" of the bearer, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
     "full": "Adeptus Astartes Vehicle model only. In your Shooting phase, while a friendly Adeptus Astartes Vehicle unit is within 6\" of the bearer, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
-    "glossary": "glossary-space-marines-enhancement-astartes-tank-ace-aura",
+    "glossary": "glossary-space-marines-enhancement-astartes-tank-ace",
     "rule": "detachment-headhunter-task-force"
   },
   "space-marines-enhancement-firestorm-coordinators": {
@@ -343,12 +391,12 @@ window.DG_TERMS={
     "glossary": "glossary-space-marines-enhancement-honour-indefatigable",
     "rule": "detachment-ceramite-sentinels"
   },
-  "space-marines-enhancement-spy-skull-datalink": {
-    "id": "space-marines-enhancement-spy-skull-datalink",
-    "title": "Spy-skull Datalink",
+  "space-marines-enhancement-spy-skull-data-link": {
+    "id": "space-marines-enhancement-spy-skull-data-link",
+    "title": "Spy-skull Data Link",
     "summary": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
     "full": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
-    "glossary": "glossary-space-marines-enhancement-spy-skull-datalink",
+    "glossary": "glossary-space-marines-enhancement-spy-skull-data-link",
     "rule": "detachment-ceramite-sentinels"
   },
   "space-marines-stratagem-unyielding-might": {
@@ -487,12 +535,12 @@ window.DG_TERMS={
     "glossary": "glossary-space-marines-enhancement-iron-laurel",
     "rule": "detachment-hammer-of-avernii"
   },
-  "space-marines-enhancement-medusan-roar-aura": {
-    "id": "space-marines-enhancement-medusan-roar-aura",
-    "title": "Medusan Roar [Aura]",
+  "space-marines-enhancement-medusan-roar": {
+    "id": "space-marines-enhancement-medusan-roar",
+    "title": "Medusan Roar",
     "summary": "Adeptus Astartes model only. While an enemy unit (excluding Monsters and Vehicles ) is within 6\" of the bearer, each time that unit fails a Battle‑shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle‑shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
     "full": "Adeptus Astartes model only. While an enemy unit (excluding Monsters and Vehicles ) is within 6\" of the bearer, each time that unit fails a Battle‑shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle‑shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
-    "glossary": "glossary-space-marines-enhancement-medusan-roar-aura",
+    "glossary": "glossary-space-marines-enhancement-medusan-roar",
     "rule": "detachment-hammer-of-avernii"
   },
   "space-marines-enhancement-spiritus-ferrum": {
@@ -569,7 +617,7 @@ window.DG_TERMS={
   },
   "space-marines-enhancement-hunters-eye": {
     "id": "space-marines-enhancement-hunters-eye",
-    "title": "Hunter's Eye",
+    "title": "Hunter’s Eye",
     "summary": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities.",
     "full": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities.",
     "glossary": "glossary-space-marines-enhancement-hunters-eye",
@@ -585,7 +633,7 @@ window.DG_TERMS={
   },
   "space-marines-enhancement-stormseers-wisdom": {
     "id": "space-marines-enhancement-stormseers-wisdom",
-    "title": "Stormseers’ Wisdom",
+    "title": "Stormseers' Wisdom",
     "summary": "Adeptus Astartes model only. While the bearer is leading a unit, you can re‑roll Advance rolls made for that unit.",
     "full": "Adeptus Astartes model only. While the bearer is leading a unit, you can re‑roll Advance rolls made for that unit.",
     "glossary": "glossary-space-marines-enhancement-stormseers-wisdom",
@@ -618,8 +666,8 @@ window.DG_TERMS={
   "space-marines-stratagem-evasive-manoeuvres": {
     "id": "space-marines-stratagem-evasive-manoeuvres",
     "title": "EVASIVE MANOEUVRES",
-    "summary": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Adeptus Astartes Mounted or Adeptus Astartes Fly Vehicle unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll and subtract 1 from the Wound roll.",
-    "full": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Adeptus Astartes Mounted or Adeptus Astartes Fly Vehicle unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll and subtract 1 from the Wound roll.",
+    "summary": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Adeptus Astartes Mounted or Adeptus Astartes Fly Vehicle unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time an attack targets your unit, subtract 1 from the Wound roll.",
+    "full": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Adeptus Astartes Mounted or Adeptus Astartes Fly Vehicle unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time an attack targets your unit, subtract 1 from the Wound roll.",
     "glossary": "glossary-space-marines-stratagem-evasive-manoeuvres",
     "rule": "detachment-spearpoint-task-force"
   },
@@ -1047,12 +1095,12 @@ window.DG_TERMS={
     "glossary": "glossary-space-marines-detachment-rule-oath-of-reclamation",
     "rule": "detachment-reclamation-force"
   },
-  "space-marines-enhancement-avenging-avatar-aura": {
-    "id": "space-marines-enhancement-avenging-avatar-aura",
-    "title": "Avenging Avatar (Aura)",
+  "space-marines-enhancement-avenging-avatar": {
+    "id": "space-marines-enhancement-avenging-avatar",
+    "title": "Avenging Avatar",
     "summary": "Adeptus Astartes model only. In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 9\" of the bearer, that enemy unit must take a Battle‑shock test.",
     "full": "Adeptus Astartes model only. In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 9\" of the bearer, that enemy unit must take a Battle‑shock test.",
-    "glossary": "glossary-space-marines-enhancement-avenging-avatar-aura",
+    "glossary": "glossary-space-marines-enhancement-avenging-avatar",
     "rule": "detachment-reclamation-force"
   },
   "space-marines-enhancement-liberatum": {
@@ -7928,59 +7976,11 @@ window.DG_TERMS={
     "glossary": "glossary-space-marines-detachment-rule-shadow-masters",
     "rule": "detachment-vanguard-spearhead"
   },
-  "space-marines-enhancement-avenging-angel": {
-    "id": "space-marines-enhancement-avenging-angel",
-    "title": "Avenging Angel",
-    "summary": "ADEPTUS ASTARTES FLY INFANTRY model only. Each time the bearer’s unit ends an ingress move, select one enemy unit within 9\" of it; that enemy unit must take a Battle-shock test, subtracting 1 from that test.",
-    "full": "ADEPTUS ASTARTES FLY INFANTRY model only. Each time the bearer’s unit ends an ingress move, select one enemy unit within 9\" of it; that enemy unit must take a Battle-shock test, subtracting 1 from that test.",
-    "glossary": "glossary-space-marines-enhancement-avenging-angel",
-    "rule": "detachment-vengeful-hosts"
-  },
-  "space-marines-enhancement-orksbane": {
-    "id": "space-marines-enhancement-orksbane",
-    "title": "Orksbane",
-    "summary": "ADEPTUS ASTARTES FLY INFANTRY model only. The bearer is equipped with Orksbane.",
-    "full": "ADEPTUS ASTARTES FLY INFANTRY model only. The bearer is equipped with Orksbane.",
-    "glossary": "glossary-space-marines-enhancement-orksbane",
-    "rule": "detachment-vengeful-hosts"
-  },
-  "space-marines-stratagem-meteoric-onslaught": {
-    "id": "space-marines-stratagem-meteoric-onslaught",
-    "title": "METEORIC ONSLAUGHT",
-    "summary": "Fight phase. One friendly ADEPTUS ASTARTES FLY INFANTRY unit that charged this turn and has not been selected to fight this phase. Until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in your unit.",
-    "full": "Fight phase. One friendly ADEPTUS ASTARTES FLY INFANTRY unit that charged this turn and has not been selected to fight this phase. Until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in your unit.",
-    "glossary": "glossary-space-marines-stratagem-meteoric-onslaught",
-    "rule": "detachment-vengeful-hosts"
-  },
-  "space-marines-stratagem-purge-by-sectors": {
-    "id": "space-marines-stratagem-purge-by-sectors",
-    "title": "PURGE BY SECTORS",
-    "summary": "End of the Fight phase. One friendly ADEPTUS ASTARTES FLY INFANTRY unit that is not within Engagement Range of one or more enemy units and is eligible to fight. Your unit can make a Normal move of up to D3+3\".",
-    "full": "End of the Fight phase. One friendly ADEPTUS ASTARTES FLY INFANTRY unit that is not within Engagement Range of one or more enemy units and is eligible to fight. Your unit can make a Normal move of up to D3+3\".",
-    "glossary": "glossary-space-marines-stratagem-purge-by-sectors",
-    "rule": "detachment-vengeful-hosts"
-  },
-  "space-marines-stratagem-know-no-fear": {
-    "id": "space-marines-stratagem-know-no-fear",
-    "title": "KNOW NO FEAR",
-    "summary": "Your Command phase. One friendly Battle-shocked ADEPTUS ASTARTES unit. Your unit is no longer Battle-shocked.",
-    "full": "Your Command phase. One friendly Battle-shocked ADEPTUS ASTARTES unit. Your unit is no longer Battle-shocked.",
-    "glossary": "glossary-space-marines-stratagem-know-no-fear",
-    "rule": "detachment-vengeful-hosts"
-  },
-  "space-marines-detachment-rule-imperator-unleashed": {
-    "id": "space-marines-detachment-rule-imperator-unleashed",
-    "title": "Imperator Unleashed",
-    "summary": "In a turn in which a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress move or a Charge move, each time a model in that unit makes an attack, you can re-roll a Hit roll of 1.",
-    "full": "In a turn in which a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress move or a Charge move, each time a model in that unit makes an attack, you can re-roll a Hit roll of 1.",
-    "glossary": "glossary-space-marines-detachment-rule-imperator-unleashed",
-    "rule": "detachment-vengeful-hosts"
-  },
   "space-marines-army-rule-oath-of-moment": {
     "id": "space-marines-army-rule-oath-of-moment",
     "title": "Oath of Moment",
-    "summary": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ▪ You can re-roll the Hit roll. ▪ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, add 1 to the Wound roll as well.’",
-    "full": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ▪ You can re-roll the Hit roll. ▪ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, add 1 to the Wound roll as well.’",
+    "summary": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ▪ You can re-roll the Hit roll. ▪ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, or one or more units from those factions’ Munitorum Field Manual sections, add 1 to the Wound roll as well.’",
+    "full": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: ▪ You can re-roll the Hit roll. ▪ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, or one or more units from those factions’ Munitorum Field Manual sections, add 1 to the Wound roll as well.’",
     "glossary": "glossary-space-marines-army-rule-oath-of-moment",
     "rule": "army-rule-oath-of-moment"
   }

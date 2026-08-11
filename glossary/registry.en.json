@@ -45926,7 +45926,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "unit-terminator-squad"
       },
       "fullRulePath": "books/space-marines/reader.html#unit-terminator-squad",
@@ -49948,7 +49948,7 @@
         "en": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target.…"
       },
       "definition": {
-        "en": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: • You can re-roll the Hit roll. • If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, add 1 to the Wound roll as well.’"
+        "en": "‘If your Army Faction is ADEPTUS ASTARTES, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target: • You can re-roll the Hit roll. • If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the BLOOD ANGELS, DARK ANGELS, DEATHWATCH or SPACE WOLVES keywords, or one or more units from those factions’ Munitorum Field Manual sections, add 1 to the Wound roll as well.’"
       },
       "structured": {},
       "presentation": "article",
@@ -49987,7 +49987,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-ceramite-sentinels"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-ceramite-sentinels",
@@ -50049,7 +50049,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-hammer-of-avernii"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-hammer-of-avernii",
@@ -50162,22 +50162,22 @@
         "en": "Imperator Unleashed"
       },
       "summary": {
-        "en": "In a turn in which a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress move or a Charge move, each time a model in that unit makes an attack, you can re-roll a Hit roll of 1."
+        "en": "In a turn a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress/charge move, that unit’s attacks can re-roll hit rolls of 1."
       },
       "definition": {
-        "en": "In a turn in which a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress move or a Charge move, each time a model in that unit makes an attack, you can re-roll a Hit roll of 1."
+        "en": "In a turn a friendly ADEPTUS ASTARTES FLY INFANTRY unit made an ingress/charge move, that unit’s attacks can re-roll hit rolls of 1."
       },
       "structured": {},
       "presentation": "atomic",
       "aliases": [],
       "related": [],
       "canonicalSource": {
-        "documentId": "space-marines-codex-transcription",
-        "revision": "pinned BSData",
+        "documentId": "space-marines-faction-pack",
+        "revision": "1.1",
         "locator": "detachment-vengeful-hosts"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-vengeful-hosts",
-      "status": "provisional",
+      "status": "verified",
       "sourceRefs": [
         "space-marines"
       ],
@@ -50204,7 +50204,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-bastion-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-bastion-task-force",
@@ -50266,7 +50266,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-blade-of-ultramar"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-blade-of-ultramar",
@@ -50297,7 +50297,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-shadowmark-talon"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-shadowmark-talon",
@@ -50328,7 +50328,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-subversion-assets"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-subversion-assets",
@@ -50359,7 +50359,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-reclamation-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-reclamation-force",
@@ -50390,7 +50390,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-librarius-conclave"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-librarius-conclave",
@@ -50421,7 +50421,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-armoured-speartip"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-armoured-speartip",
@@ -50452,7 +50452,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-orbital-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-orbital-assault-force",
@@ -50545,7 +50545,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-fulguris-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-fulguris-task-force",
@@ -50576,7 +50576,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-spearpoint-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-spearpoint-task-force",
@@ -50607,7 +50607,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-headhunter-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-headhunter-task-force",
@@ -50638,7 +50638,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-forgefather-s-seekers"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-forgefather-s-seekers",
@@ -50669,7 +50669,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-emperor-s-shield"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-emperor-s-shield",
@@ -50700,7 +50700,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-forgefather-s-seekers"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-forgefather-s-seekers",
@@ -50731,7 +50731,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-firestorm-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-firestorm-assault-force",
@@ -50855,7 +50855,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-blade-of-ultramar"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-blade-of-ultramar",
@@ -50886,7 +50886,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-armoured-speartip"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-armoured-speartip",
@@ -50927,14 +50927,14 @@
       ],
       "mentions": []
     },
-    "space-marines-enhancement-astartes-tank-ace-aura": {
-      "id": "space-marines-enhancement-astartes-tank-ace-aura",
+    "space-marines-enhancement-astartes-tank-ace": {
+      "id": "space-marines-enhancement-astartes-tank-ace",
       "kind": "enhancement",
       "scope": "space-marines",
       "edition": "11e",
       "language": "en",
       "title": {
-        "en": "Astartes Tank Ace (Aura)"
+        "en": "Astartes Tank Ace"
       },
       "summary": {
         "en": "Adeptus Astartes Vehicle model only. In your Shooting phase, while a friendly Adeptus Astartes Vehicle unit is within 6\" of the bearer, ranged weapons equipped by models in that unit have the [ASSAULT] ability."
@@ -50948,7 +50948,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-headhunter-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-headhunter-task-force",
@@ -50968,35 +50968,35 @@
         "en": "Avenging Angel"
       },
       "summary": {
-        "en": "ADEPTUS ASTARTES FLY INFANTRY model only. Each time the bearer’s unit ends an ingress move, select one enemy unit within 9\" of it; that enemy unit must take a Battle-shock test, subtracting 1 from that test."
+        "en": "ADEPTUS ASTARTES FLY INFANTRY model only. When this unit ends an ingress move, select up to one enemy unit within 9\" of this unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll."
       },
       "definition": {
-        "en": "ADEPTUS ASTARTES FLY INFANTRY model only. Each time the bearer’s unit ends an ingress move, select one enemy unit within 9\" of it; that enemy unit must take a Battle-shock test, subtracting 1 from that test."
+        "en": "ADEPTUS ASTARTES FLY INFANTRY model only. When this unit ends an ingress move, select up to one enemy unit within 9\" of this unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll."
       },
       "structured": {},
       "presentation": "atomic",
       "aliases": [],
       "related": [],
       "canonicalSource": {
-        "documentId": "space-marines-codex-transcription",
-        "revision": "pinned BSData",
+        "documentId": "space-marines-faction-pack",
+        "revision": "1.1",
         "locator": "detachment-vengeful-hosts"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-vengeful-hosts",
-      "status": "provisional",
+      "status": "verified",
       "sourceRefs": [
         "space-marines"
       ],
       "mentions": []
     },
-    "space-marines-enhancement-avenging-avatar-aura": {
-      "id": "space-marines-enhancement-avenging-avatar-aura",
+    "space-marines-enhancement-avenging-avatar": {
+      "id": "space-marines-enhancement-avenging-avatar",
       "kind": "enhancement",
       "scope": "space-marines",
       "edition": "11e",
       "language": "en",
       "title": {
-        "en": "Avenging Avatar (Aura)"
+        "en": "Avenging Avatar"
       },
       "summary": {
         "en": "Adeptus Astartes model only. In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 9\" of the bearer, that enemy unit must take a Battle‑shock test."
@@ -51010,7 +51010,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-reclamation-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-reclamation-force",
@@ -51020,14 +51020,14 @@
       ],
       "mentions": []
     },
-    "space-marines-enhancement-bellicose-weapon-spirits": {
-      "id": "space-marines-enhancement-bellicose-weapon-spirits",
+    "space-marines-enhancement-bellicose-weapon-spirits-upgrade": {
+      "id": "space-marines-enhancement-bellicose-weapon-spirits-upgrade",
       "kind": "enhancement",
       "scope": "space-marines",
       "edition": "11e",
       "language": "en",
       "title": {
-        "en": "Bellicose Weapon Spirits"
+        "en": "Bellicose Weapon Spirits (Upgrade)"
       },
       "summary": {
         "en": "SPEEDER unit only. This unit can re-roll: • Damage rolls. • Rolls to determine the A of a weapon."
@@ -51041,7 +51041,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-fulguris-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-fulguris-task-force",
@@ -51072,7 +51072,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-shadowmark-talon"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-shadowmark-talon",
@@ -51103,7 +51103,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-bastion-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-bastion-task-force",
@@ -51134,7 +51134,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-bastion-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-bastion-task-force",
@@ -51165,7 +51165,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-ceramite-sentinels"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-ceramite-sentinels",
@@ -51188,7 +51188,7 @@
         "en": "ADEPTUS ASTARTES PSYKER model only. • When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge.…"
       },
       "definition": {
-        "en": "ADEPTUS ASTARTES PSYKER model only. • When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge. • When this unit is selected to make a fall‑back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge."
+        "en": "ADEPTUS ASTARTES PSYKER model only. • When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge. • When this unit is selected to make a fall-back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge."
       },
       "structured": {},
       "presentation": "article",
@@ -51196,7 +51196,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-librarius-conclave"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-librarius-conclave",
@@ -51258,7 +51258,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-emperor-s-shield"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-emperor-s-shield",
@@ -51289,7 +51289,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-spearpoint-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-spearpoint-task-force",
@@ -51320,7 +51320,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-shadowmark-talon"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-shadowmark-talon",
@@ -51330,14 +51330,14 @@
       ],
       "mentions": []
     },
-    "space-marines-enhancement-death-in-the-dark": {
-      "id": "space-marines-enhancement-death-in-the-dark",
+    "space-marines-enhancement-death-in-the-dark-upgrade": {
+      "id": "space-marines-enhancement-death-in-the-dark-upgrade",
       "kind": "enhancement",
       "scope": "space-marines",
       "edition": "11e",
       "language": "en",
       "title": {
-        "en": "Death in the Dark"
+        "en": "Death in the Dark (Upgrade)"
       },
       "summary": {
         "en": "INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls."
@@ -51351,7 +51351,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-subversion-assets"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-subversion-assets",
@@ -51382,7 +51382,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-orbital-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-orbital-assault-force",
@@ -51413,7 +51413,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-ceramite-sentinels"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-ceramite-sentinels",
@@ -51444,7 +51444,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-emperor-s-shield"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-emperor-s-shield",
@@ -51506,7 +51506,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-bastion-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-bastion-task-force",
@@ -51630,7 +51630,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-headhunter-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-headhunter-task-force",
@@ -51692,7 +51692,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-forgefather-s-seekers"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-forgefather-s-seekers",
@@ -51723,7 +51723,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-firestorm-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-firestorm-assault-force",
@@ -51774,10 +51774,10 @@
         "en": "Fusillade"
       },
       "summary": {
-        "en": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have: • [ANTI-MONSTER/VEHICLE 5+]. • If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1]."
+        "en": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have: • [LETHAL HITS] • If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1]."
       },
       "definition": {
-        "en": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have: • [ANTI-MONSTER/VEHICLE 5+]. • If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1]."
+        "en": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have: • [LETHAL HITS] • If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1]."
       },
       "structured": {},
       "presentation": "atomic",
@@ -51785,7 +51785,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-librarius-conclave"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-librarius-conclave",
@@ -51847,7 +51847,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-headhunter-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-headhunter-task-force",
@@ -51878,7 +51878,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-bastion-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-bastion-task-force",
@@ -51909,7 +51909,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-ceramite-sentinels"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-ceramite-sentinels",
@@ -51926,7 +51926,7 @@
       "edition": "11e",
       "language": "en",
       "title": {
-        "en": "Hunter's Eye"
+        "en": "Hunter’s Eye"
       },
       "summary": {
         "en": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities."
@@ -51940,7 +51940,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-spearpoint-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-spearpoint-task-force",
@@ -51971,7 +51971,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-shadowmark-talon"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-shadowmark-talon",
@@ -52002,7 +52002,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-stormlance-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-stormlance-task-force",
@@ -52033,7 +52033,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-forgefather-s-seekers"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-forgefather-s-seekers",
@@ -52064,7 +52064,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-emperor-s-shield"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-emperor-s-shield",
@@ -52126,7 +52126,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-hammer-of-avernii"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-hammer-of-avernii",
@@ -52188,7 +52188,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-orbital-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-orbital-assault-force",
@@ -52219,7 +52219,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-armoured-speartip"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-armoured-speartip",
@@ -52250,7 +52250,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-reclamation-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-reclamation-force",
@@ -52281,7 +52281,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-emperor-s-shield"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-emperor-s-shield",
@@ -52322,14 +52322,14 @@
       ],
       "mentions": []
     },
-    "space-marines-enhancement-medusan-roar-aura": {
-      "id": "space-marines-enhancement-medusan-roar-aura",
+    "space-marines-enhancement-medusan-roar": {
+      "id": "space-marines-enhancement-medusan-roar",
       "kind": "enhancement",
       "scope": "space-marines",
       "edition": "11e",
       "language": "en",
       "title": {
-        "en": "Medusan Roar [Aura]"
+        "en": "Medusan Roar"
       },
       "summary": {
         "en": "Adeptus Astartes model only. While an enemy unit (excluding Monsters and Vehicles ) is within 6\" of the bearer, each time that unit fails a Battle‑shock test, one model in that unit is destroyed (chosen by its controlling player).…"
@@ -52343,7 +52343,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-hammer-of-avernii"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-hammer-of-avernii",
@@ -52374,7 +52374,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-blade-of-ultramar"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-blade-of-ultramar",
@@ -52405,7 +52405,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-librarius-conclave"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-librarius-conclave",
@@ -52436,7 +52436,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-orbital-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-orbital-assault-force",
@@ -52456,22 +52456,22 @@
         "en": "Orksbane"
       },
       "summary": {
-        "en": "ADEPTUS ASTARTES FLY INFANTRY model only. The bearer is equipped with Orksbane."
+        "en": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Orksbane [CLEAVE 2] RANGE A WS S AP D Melee 4 2+ 8 -2"
       },
       "definition": {
-        "en": "ADEPTUS ASTARTES FLY INFANTRY model only. The bearer is equipped with Orksbane."
+        "en": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Orksbane [CLEAVE 2] RANGE A WS S AP D Melee 4 2+ 8 -2"
       },
       "structured": {},
       "presentation": "atomic",
       "aliases": [],
       "related": [],
       "canonicalSource": {
-        "documentId": "space-marines-codex-transcription",
-        "revision": "pinned BSData",
+        "documentId": "space-marines-faction-pack",
+        "revision": "1.1",
         "locator": "detachment-vengeful-hosts"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-vengeful-hosts",
-      "status": "provisional",
+      "status": "verified",
       "sourceRefs": [
         "space-marines"
       ],
@@ -52529,7 +52529,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-librarius-conclave"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-librarius-conclave",
@@ -52539,14 +52539,14 @@
       ],
       "mentions": []
     },
-    "space-marines-enhancement-raptorial-cogitator-core": {
-      "id": "space-marines-enhancement-raptorial-cogitator-core",
+    "space-marines-enhancement-raptorial-cogitator-core-upgrade": {
+      "id": "space-marines-enhancement-raptorial-cogitator-core-upgrade",
       "kind": "enhancement",
       "scope": "space-marines",
       "edition": "11e",
       "language": "en",
       "title": {
-        "en": "Raptorial Cogitator Core"
+        "en": "Raptorial Cogitator Core (Upgrade)"
       },
       "summary": {
         "en": "SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER]."
@@ -52560,7 +52560,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-fulguris-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-fulguris-task-force",
@@ -52591,7 +52591,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-headhunter-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-headhunter-task-force",
@@ -52653,7 +52653,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-reclamation-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-reclamation-force",
@@ -52684,7 +52684,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-reclamation-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-reclamation-force",
@@ -52746,7 +52746,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-armoured-speartip"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-armoured-speartip",
@@ -52777,7 +52777,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-subversion-assets"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-subversion-assets",
@@ -52808,7 +52808,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-spearpoint-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-spearpoint-task-force",
@@ -52839,7 +52839,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-hammer-of-avernii"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-hammer-of-avernii",
@@ -52849,14 +52849,14 @@
       ],
       "mentions": []
     },
-    "space-marines-enhancement-spy-skull-datalink": {
-      "id": "space-marines-enhancement-spy-skull-datalink",
+    "space-marines-enhancement-spy-skull-data-link": {
+      "id": "space-marines-enhancement-spy-skull-data-link",
       "kind": "enhancement",
       "scope": "space-marines",
       "edition": "11e",
       "language": "en",
       "title": {
-        "en": "Spy-skull Datalink"
+        "en": "Spy-skull Data Link"
       },
       "summary": {
         "en": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
@@ -52870,7 +52870,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-ceramite-sentinels"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-ceramite-sentinels",
@@ -52901,7 +52901,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-hammer-of-avernii"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-hammer-of-avernii",
@@ -52949,7 +52949,7 @@
       "edition": "11e",
       "language": "en",
       "title": {
-        "en": "Stormseers’ Wisdom"
+        "en": "Stormseers' Wisdom"
       },
       "summary": {
         "en": "Adeptus Astartes model only. While the bearer is leading a unit, you can re‑roll Advance rolls made for that unit."
@@ -52963,7 +52963,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-spearpoint-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-spearpoint-task-force",
@@ -52994,7 +52994,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-blade-of-ultramar"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-blade-of-ultramar",
@@ -53045,18 +53045,18 @@
         "en": "Temporal Corridor"
       },
       "summary": {
-        "en": "ADEPTUS ASTARTES PSYKER model only. • At the end of your opponent’s Fight phase, you can place this unit into strategic reserves. • If this unit has the Telekinesis Discipline ability, this unit has Deep Strike."
+        "en": "ADEPTUS ASTARTES PSYKER model only. • If this unit has the Telekinesis Discipline ability, this unit has Deep Strike. • At the end of your opponent’s Fight phase, if this unit is unengaged, you can use this ability. If you do: ▫ Place this unit in strategic reserves.…"
       },
       "definition": {
-        "en": "ADEPTUS ASTARTES PSYKER model only. • At the end of your opponent’s Fight phase, you can place this unit into strategic reserves. • If this unit has the Telekinesis Discipline ability, this unit has Deep Strike."
+        "en": "ADEPTUS ASTARTES PSYKER model only. • If this unit has the Telekinesis Discipline ability, this unit has Deep Strike. • At the end of your opponent’s Fight phase, if this unit is unengaged, you can use this ability. If you do: ▫ Place this unit in strategic reserves. ▫ This unit can make an ingress move in your next Movement phase (including in your first turn)."
       },
       "structured": {},
-      "presentation": "atomic",
+      "presentation": "article",
       "aliases": [],
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-librarius-conclave"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-librarius-conclave",
@@ -53211,7 +53211,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-armoured-speartip"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-armoured-speartip",
@@ -53242,7 +53242,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-shadowmark-talon"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-shadowmark-talon",
@@ -53273,7 +53273,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-blade-of-ultramar"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-blade-of-ultramar",
@@ -53304,7 +53304,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-orbital-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-orbital-assault-force",
@@ -53335,7 +53335,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-forgefather-s-seekers"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-forgefather-s-seekers",
@@ -53366,7 +53366,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-firestorm-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-firestorm-assault-force",
@@ -53428,7 +53428,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-subversion-assets"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-subversion-assets",
@@ -53490,7 +53490,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-armoured-speartip"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-armoured-speartip",
@@ -53552,7 +53552,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-bastion-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-bastion-task-force",
@@ -53583,7 +53583,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-fulguris-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-fulguris-task-force",
@@ -53614,7 +53614,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-armoured-speartip"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-armoured-speartip",
@@ -53645,7 +53645,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-1st-company-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-1st-company-task-force",
@@ -53676,7 +53676,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-ceramite-sentinels"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-ceramite-sentinels",
@@ -53707,7 +53707,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-hammer-of-avernii"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-hammer-of-avernii",
@@ -53738,7 +53738,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-orbital-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-orbital-assault-force",
@@ -53800,7 +53800,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-forgefather-s-seekers"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-forgefather-s-seekers",
@@ -53831,7 +53831,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-orbital-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-orbital-assault-force",
@@ -53893,7 +53893,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-forgefather-s-seekers"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-forgefather-s-seekers",
@@ -53924,7 +53924,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-firestorm-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-firestorm-assault-force",
@@ -53986,7 +53986,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-armoured-speartip"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-armoured-speartip",
@@ -54017,7 +54017,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-subversion-assets"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-subversion-assets",
@@ -54048,7 +54048,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-bastion-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-bastion-task-force",
@@ -54079,7 +54079,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-hammer-of-avernii"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-hammer-of-avernii",
@@ -54110,7 +54110,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-blade-of-ultramar"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-blade-of-ultramar",
@@ -54141,7 +54141,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-forgefather-s-seekers"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-forgefather-s-seekers",
@@ -54172,7 +54172,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-firestorm-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-firestorm-assault-force",
@@ -54203,7 +54203,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-reclamation-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-reclamation-force",
@@ -54234,7 +54234,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-fulguris-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-fulguris-task-force",
@@ -54265,7 +54265,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-emperor-s-shield"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-emperor-s-shield",
@@ -54296,7 +54296,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-hammer-of-avernii"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-hammer-of-avernii",
@@ -54327,7 +54327,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-hammer-of-avernii"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-hammer-of-avernii",
@@ -54381,7 +54381,7 @@
         "en": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Adeptus Astartes Mounted or Adeptus Astartes Fly Vehicle unit from your army that was selected as the target of one or more of the attacking unit’s attacks.…"
       },
       "definition": {
-        "en": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Adeptus Astartes Mounted or Adeptus Astartes Fly Vehicle unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll and subtract 1 from the Wound roll."
+        "en": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Adeptus Astartes Mounted or Adeptus Astartes Fly Vehicle unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time an attack targets your unit, subtract 1 from the Wound roll."
       },
       "structured": {},
       "presentation": "article",
@@ -54389,7 +54389,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-spearpoint-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-spearpoint-task-force",
@@ -54420,7 +54420,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-ceramite-sentinels"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-ceramite-sentinels",
@@ -54451,7 +54451,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-blade-of-ultramar"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-blade-of-ultramar",
@@ -54482,7 +54482,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-shadowmark-talon"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-shadowmark-talon",
@@ -54513,7 +54513,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-reclamation-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-reclamation-force",
@@ -54575,7 +54575,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-reclamation-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-reclamation-force",
@@ -54606,7 +54606,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-emperor-s-shield"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-emperor-s-shield",
@@ -54668,7 +54668,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-bastion-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-bastion-task-force",
@@ -54730,7 +54730,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-bastion-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-bastion-task-force",
@@ -54823,7 +54823,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-spearpoint-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-spearpoint-task-force",
@@ -54854,7 +54854,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-forgefather-s-seekers"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-forgefather-s-seekers",
@@ -54885,7 +54885,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-firestorm-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-firestorm-assault-force",
@@ -54916,7 +54916,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-shadowmark-talon"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-shadowmark-talon",
@@ -54947,7 +54947,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-headhunter-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-headhunter-task-force",
@@ -54967,22 +54967,22 @@
         "en": "KNOW NO FEAR"
       },
       "summary": {
-        "en": "Your Command phase. One friendly Battle-shocked ADEPTUS ASTARTES unit. Your unit is no longer Battle-shocked."
+        "en": "Your Command phase. One friendly battle-shocked ADEPTUS ASTARTES unit. You can target that unit with this stratagem even though it is battle-shocked. Your unit is no longer battle-shocked."
       },
       "definition": {
-        "en": "Your Command phase. One friendly Battle-shocked ADEPTUS ASTARTES unit. Your unit is no longer Battle-shocked."
+        "en": "Your Command phase. One friendly battle-shocked ADEPTUS ASTARTES unit. You can target that unit with this stratagem even though it is battle-shocked. Your unit is no longer battle-shocked."
       },
       "structured": {},
       "presentation": "atomic",
       "aliases": [],
       "related": [],
       "canonicalSource": {
-        "documentId": "space-marines-codex-transcription",
-        "revision": "pinned BSData",
+        "documentId": "space-marines-faction-pack",
+        "revision": "1.1",
         "locator": "detachment-vengeful-hosts"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-vengeful-hosts",
-      "status": "provisional",
+      "status": "verified",
       "sourceRefs": [
         "space-marines"
       ],
@@ -55009,7 +55009,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-shadowmark-talon"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-shadowmark-talon",
@@ -55071,7 +55071,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-bastion-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-bastion-task-force",
@@ -55102,7 +55102,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-headhunter-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-headhunter-task-force",
@@ -55133,7 +55133,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-armoured-speartip"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-armoured-speartip",
@@ -55164,7 +55164,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-reclamation-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-reclamation-force",
@@ -55215,22 +55215,22 @@
         "en": "METEORIC ONSLAUGHT"
       },
       "summary": {
-        "en": "Fight phase. One friendly ADEPTUS ASTARTES FLY INFANTRY unit that charged this turn and has not been selected to fight this phase. Until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in your unit."
+        "en": "Fight phase, when a friendly ADEPTUS ASTARTES FLY INFANTRY unit that made a charge move this turn is selected to attack. That friendly ADEPTUS ASTARTES FLY INFANTRY unit. Your unit’s melee attacks have +1 S."
       },
       "definition": {
-        "en": "Fight phase. One friendly ADEPTUS ASTARTES FLY INFANTRY unit that charged this turn and has not been selected to fight this phase. Until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in your unit."
+        "en": "Fight phase, when a friendly ADEPTUS ASTARTES FLY INFANTRY unit that made a charge move this turn is selected to attack. That friendly ADEPTUS ASTARTES FLY INFANTRY unit. Your unit’s melee attacks have +1 S."
       },
       "structured": {},
       "presentation": "atomic",
       "aliases": [],
       "related": [],
       "canonicalSource": {
-        "documentId": "space-marines-codex-transcription",
-        "revision": "pinned BSData",
+        "documentId": "space-marines-faction-pack",
+        "revision": "1.1",
         "locator": "detachment-vengeful-hosts"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-vengeful-hosts",
-      "status": "provisional",
+      "status": "verified",
       "sourceRefs": [
         "space-marines"
       ],
@@ -55257,7 +55257,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-spearpoint-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-spearpoint-task-force",
@@ -55350,7 +55350,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-emperor-s-shield"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-emperor-s-shield",
@@ -55443,7 +55443,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-orbital-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-orbital-assault-force",
@@ -55536,7 +55536,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-blade-of-ultramar"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-blade-of-ultramar",
@@ -55567,7 +55567,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-ceramite-sentinels"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-ceramite-sentinels",
@@ -55598,7 +55598,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-armoured-speartip"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-armoured-speartip",
@@ -55618,22 +55618,22 @@
         "en": "PURGE BY SECTORS"
       },
       "summary": {
-        "en": "End of the Fight phase. One friendly ADEPTUS ASTARTES FLY INFANTRY unit that is not within Engagement Range of one or more enemy units and is eligible to fight. Your unit can make a Normal move of up to D3+3\"."
+        "en": "End of the Fight phase. One friendly unengaged ADEPTUS ASTARTES FLY INFANTRY unit that was eligible to fight this phase. Your unit can make a normal move of up to D3+3\"."
       },
       "definition": {
-        "en": "End of the Fight phase. One friendly ADEPTUS ASTARTES FLY INFANTRY unit that is not within Engagement Range of one or more enemy units and is eligible to fight. Your unit can make a Normal move of up to D3+3\"."
+        "en": "End of the Fight phase. One friendly unengaged ADEPTUS ASTARTES FLY INFANTRY unit that was eligible to fight this phase. Your unit can make a normal move of up to D3+3\"."
       },
       "structured": {},
       "presentation": "atomic",
       "aliases": [],
       "related": [],
       "canonicalSource": {
-        "documentId": "space-marines-codex-transcription",
-        "revision": "pinned BSData",
+        "documentId": "space-marines-faction-pack",
+        "revision": "1.1",
         "locator": "detachment-vengeful-hosts"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-vengeful-hosts",
-      "status": "provisional",
+      "status": "verified",
       "sourceRefs": [
         "space-marines"
       ],
@@ -55660,7 +55660,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-armoured-speartip"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-armoured-speartip",
@@ -55691,7 +55691,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-firestorm-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-firestorm-assault-force",
@@ -55722,7 +55722,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-headhunter-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-headhunter-task-force",
@@ -55753,7 +55753,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-shadowmark-talon"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-shadowmark-talon",
@@ -55784,7 +55784,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-fulguris-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-fulguris-task-force",
@@ -55815,7 +55815,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-headhunter-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-headhunter-task-force",
@@ -55908,7 +55908,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-hammer-of-avernii"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-hammer-of-avernii",
@@ -55939,7 +55939,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-reclamation-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-reclamation-force",
@@ -56001,7 +56001,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-bastion-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-bastion-task-force",
@@ -56032,7 +56032,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-orbital-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-orbital-assault-force",
@@ -56063,7 +56063,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-spearpoint-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-spearpoint-task-force",
@@ -56125,7 +56125,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-ceramite-sentinels"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-ceramite-sentinels",
@@ -56187,7 +56187,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-subversion-assets"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-subversion-assets",
@@ -56218,7 +56218,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-vanguard-spearhead"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-vanguard-spearhead",
@@ -56249,7 +56249,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-shadowmark-talon"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-shadowmark-talon",
@@ -56280,7 +56280,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-orbital-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-orbital-assault-force",
@@ -56342,7 +56342,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-orbital-assault-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-orbital-assault-force",
@@ -56373,7 +56373,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-blade-of-ultramar"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-blade-of-ultramar",
@@ -56404,7 +56404,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-headhunter-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-headhunter-task-force",
@@ -56466,7 +56466,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-blade-of-ultramar"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-blade-of-ultramar",
@@ -56497,7 +56497,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-reclamation-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-reclamation-force",
@@ -56559,7 +56559,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-ceramite-sentinels"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-ceramite-sentinels",
@@ -56652,7 +56652,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-spearpoint-task-force"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-spearpoint-task-force",
@@ -56683,7 +56683,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-emperor-s-shield"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-emperor-s-shield",
@@ -56714,7 +56714,7 @@
       "related": [],
       "canonicalSource": {
         "documentId": "space-marines-faction-pack",
-        "revision": "1.0",
+        "revision": "1.1",
         "locator": "detachment-forgefather-s-seekers"
       },
       "fullRulePath": "books/space-marines/reader.html#detachment-forgefather-s-seekers",

@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "faction": "Space Marines",
-  "sourceId": "space-marines-current-sources",
+  "sourceId": "space-marines-faction-pack-v1.1",
   "stratagems": {
     "fulguris-task-force-data-link-augury": {
       "v": 1,
@@ -1792,9 +1792,7 @@
           }
         }
       ],
-      "conditions": [
-        "unit-charged-this-turn"
-      ]
+      "conditions": []
     },
     "vengeful-hosts-purge-by-sectors": {
       "v": 1,
@@ -1813,10 +1811,7 @@
           }
         }
       ],
-      "conditions": [
-        "unit-unengaged",
-        "unit-eligible-to-fight"
-      ]
+      "conditions": []
     },
     "vengeful-hosts-know-no-fear": {
       "v": 1,
@@ -1833,9 +1828,7 @@
           }
         }
       ],
-      "conditions": [
-        "unit-is-battle-shocked"
-      ]
+      "conditions": []
     },
     "1st-company-task-force-armour-of-contempt": {
       "v": 1,

@@ -12,14 +12,14 @@ from pypdf import PdfReader
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PDF = ROOT / "sources" / "space-marines-faction-pack-v1.0.pdf"
+PDF = ROOT / "sources" / "space-marines-faction-pack-v1.1.pdf"
 OUTPUT = ROOT / "content" / "space-marines-faction-pack.en.json"
 RELATED = ROOT / "content" / "space-marines-related-rules.en.json"
 POINTS = ROOT / "content" / "space-marines-points.en.json"
 CODEX = ROOT / "content" / "space-marines-codex-datasheets.en.json"
 BSDATA = ROOT.parents[1] / "tmp" / "bsdata-wh40k-11e" / "Imperium - Space Marines.json"
 BSDATA_LIBRARY = ROOT.parents[1] / "tmp" / "bsdata-wh40k-11e" / "Library - Astartes Heresy Legends.json"
-SOURCE_ID = "space-marines-faction-pack-v1.0"
+SOURCE_ID = "space-marines-faction-pack-v1.1"
 
 DETACHMENTS = [
     ("Fulguris Task Force", 2, 2),
@@ -96,6 +96,16 @@ LEGENDS = [
     ("Sokar-pattern Stormbird", 212), ("Tarantula Sentry Battery", 214),
 ]
 
+# The 22 July 2026 v1.1 revision adds Vengeful Hosts ahead of the v1.0
+# Detachment section, compacts the matched-play Datasheet section by one page,
+# and adds Ferren Areios ahead of the existing Legends inventory.
+DETACHMENTS = [("Vengeful Hosts", 2, 2)] + [
+    (title, rule_page + 1, stratagem_page + 1 if stratagem_page else None)
+    for title, rule_page, stratagem_page in DETACHMENTS
+]
+MATCHED = [(title, [page - 1 for page in pages]) for title, pages in MATCHED]
+LEGENDS = [("Ferren Areios", 65)] + [(title, page + 2) for title, page in LEGENDS]
+
 
 def slug(value: str) -> str:
     value = re.sub(r"[\u2010-\u2015\u2212]", "-", value)
@@ -137,11 +147,11 @@ def pdf_source() -> tuple[dict, dict[str, dict], list[str]]:
             }
         meta = {
             "title": "Space Marines Faction Pack",
-            "version": "1.0",
-            "legalFrom": "2026-06-20",
+            "version": "1.1",
+            "legalFrom": "2026-07-22",
             "pageCount": len(document.pages),
             "sha256": digest,
-            "file": "sources/space-marines-faction-pack-v1.0.pdf",
+            "file": "sources/space-marines-faction-pack-v1.1.pdf",
         }
     return meta, pages, texts
 
@@ -181,8 +191,9 @@ def bsdata_rules() -> dict[str, dict]:
 def parse_stratagems(text: str, detachment: str, page: int) -> list[dict]:
     text = text.replace("\ufffd", ".").replace("\u00ad", "")
     taglines = {
-        2: "ANTI-GRAV SPEEDERS HIT THE FOE WITH THUNDEROUS FIREPOWER AT DEADLY VELOCITIES",
-        4: "STEALTHY BATTLE-BROTHERS AND NEOPHYTES ELIMINATE THE FOE'S LURKING THREATS",
+        2: "VETERANS OF ARMAGEDDON\u2019S WARS, THESE ANGELS OF DEATH BRING VENGEANCE FROM ON HIGH",
+        3: "ANTI-GRAV SPEEDERS HIT THE FOE WITH THUNDEROUS FIREPOWER AT DEADLY VELOCITIES",
+        5: "STEALTHY BATTLE-BROTHERS AND NEOPHYTES ELIMINATE THE FOE'S LURKING THREATS",
     }
     if page in taglines:
         text = text.split(taglines[page], 1)[0]
@@ -219,6 +230,7 @@ def parse_stratagems(text: str, detachment: str, page: int) -> list[dict]:
 
 
 RULE_STARTS = {
+    "Vengeful Hosts": "In a turn a friendly ADEPTUS ASTARTES FLY INFANTRY",
     "Fulguris Task Force": "Friendly LAND SPEEDER",
     "Librarius Conclave": "At the start of the battle round",
     "Subversion Assets": "Friendly PHOBOS/SCOUT SQUAD",
@@ -250,7 +262,7 @@ def exact_rule_text(page_text: str, detachment: str) -> str:
 
 
 def enhancement_key(value: str) -> str:
-    return slug(value).replace("-data-link", "-datalink").replace("stormseer-s-wisdom", "stormseers-wisdom")
+    return slug(value).removesuffix("-upgrade").removesuffix("-aura").replace("-data-link", "-datalink").replace("stormseer-s-wisdom", "stormseers-wisdom")
 
 
 def exact_enhancements(page_text: str, titles: list[str]) -> dict[str, str]:
@@ -287,6 +299,21 @@ def exact_enhancements(page_text: str, titles: list[str]) -> dict[str, str]:
     return result
 
 
+def enhancement_kind(page_text: str, title: str) -> str:
+    for line in page_text.splitlines():
+        if enhancement_key(re.sub(r"\s+UPGRADE\s*$", "", line, flags=re.I)) == enhancement_key(title):
+            return "Upgrade" if re.search(r"\bUPGRADE\s*$", line, re.I) else "Enhancement"
+    raise ValueError(f"Could not classify enhancement {title}")
+
+
+def enhancement_source_id(page_text: str, title: str) -> str:
+    for line in page_text.splitlines():
+        heading = re.sub(r"\s+UPGRADE\s*$", "", line, flags=re.I)
+        if enhancement_key(heading) == enhancement_key(title):
+            return slug(heading)
+    raise ValueError(f"Could not derive enhancement ID for {title}")
+
+
 def chapter_condition(detachment: str) -> list[str]:
     chapters = {
         "Blade of Ultramar": "ultramarines",
@@ -305,6 +332,7 @@ def role(selector: dict, role_id: str = "friendly-target", count: int = 1, subje
 
 
 ASTARTES = {"allKeywords": ["ADEPTUS ASTARTES"]}
+FLY_INFANTRY = {"allKeywords": ["ADEPTUS ASTARTES", "FLY", "INFANTRY"]}
 INFANTRY = {"allKeywords": ["ADEPTUS ASTARTES", "INFANTRY"]}
 INFANTRY_OR_MOUNTED = {"alternatives": [
     {"allKeywords": ["ADEPTUS ASTARTES", "INFANTRY"]},
@@ -332,7 +360,9 @@ def eligibility(detachment: str, title: str) -> dict:
     title = slug(title)
     conditions = chapter_condition(detachment)
     roles = [role(ASTARTES)]
-    if detachment == "Fulguris Task Force":
+    if detachment == "Vengeful Hosts":
+        roles = [role(ASTARTES if title == "know-no-fear" else FLY_INFANTRY)]
+    elif detachment == "Fulguris Task Force":
         roles = [role(SPEEDERS)]
     elif detachment == "Subversion Assets":
         roles = [role(PHOBOS_OR_SCOUT)]
@@ -417,14 +447,15 @@ def build() -> tuple[dict, dict]:
     points = json.loads(POINTS.read_text(encoding="utf-8"))
     enhancements = {}
     for item in points["enhancements"]:
-        enhancements.setdefault(item["detachment"], []).append(item)
+        enhancements.setdefault(slug(item["detachment"]), []).append(item)
     detachments = []
     related = {"schema": 1, "faction": "Space Marines", "sourceId": SOURCE_ID, "stratagems": {}}
     for title, rule_page, stratagem_page in DETACHMENTS:
         page_text = pypdf_texts[rule_page - 1].replace("\ufffd", ".")
         restriction = re.search(r"RESTRICTIONS\s+(.*?)\nENHANCEMENTS", page_text, re.S)
         det_id = slug(title)
-        exact_enhancement_text = exact_enhancements(page_text, [entry["title"] for entry in enhancements.get(title, [])])
+        detachment_enhancements = enhancements.get(slug(title), [])
+        exact_enhancement_text = exact_enhancements(page_text, [entry["title"] for entry in detachment_enhancements])
         rule = {
             "id": f"{det_id}-{slug(rules[title]['title'])}",
             "title": rules[title]["title"],
@@ -443,12 +474,12 @@ def build() -> tuple[dict, dict]:
         }
         if restriction:
             item["restrictions"] = clean(restriction.group(1))
-        for enhancement in sorted(enhancements.get(title, []), key=lambda value: value["title"]):
+        for enhancement in sorted(detachment_enhancements, key=lambda value: value["title"]):
             official_title = {"Stormseer's Wisdom": "Stormseers’ Wisdom"}.get(enhancement["title"], enhancement["title"])
             item["enhancements"].append({
-                "id": slug(official_title),
+                "id": enhancement["id"] if title == "Vengeful Hosts" else enhancement_source_id(page_text, enhancement["title"]),
                 "title": official_title,
-                "kind": "Upgrade" if "UPGRADE" in source_texts[rule_page - 1].upper() and len(enhancements.get(title, [])) == 2 else "Enhancement",
+                "kind": enhancement_kind(page_text, enhancement["title"]),
                 "points": enhancement.get("value"),
                 "text": exact_enhancement_text[enhancement["title"]],
                 "sourcePages": [rule_page],
@@ -461,25 +492,27 @@ def build() -> tuple[dict, dict]:
         detachments.append(item)
 
     faqs = []
-    faq_text = pypdf_texts[61].replace("\ufffd", ".")
-    faq_part = faq_text.split("FAQS", 1)[1]
-    for index, match in enumerate(re.finditer(r"Q:\s*(.*?)\nA:\s*(.*?)(?=\nQ:|\Z)", faq_part, re.S), 1):
-        question, answer = clean(match.group(1)), clean(match.group(2))
-        answer = re.sub(r"\s+62$", "", answer)
-        faqs.append({
-            "id": f"faq-{index:02d}-{slug(question)[:48]}",
-            "question": question,
-            "answer": answer,
-            "sourcePages": [62],
-            "provenance": provenance([62]),
-        })
+    for page in (63, 64):
+        faq_text = pypdf_texts[page - 1].replace("\ufffd", ".")
+        faq_part = faq_text.split("FAQS", 1)[1] if page == 63 else faq_text
+        for match in re.finditer(r"Q:\s*(.*?)\nA:\s*(.*?)(?=\nQ:|\Z)", faq_part, re.S):
+            question, answer = clean(match.group(1)), clean(match.group(2))
+            answer = re.sub(rf"\s+{page}$", "", answer)
+            index = len(faqs) + 1
+            faqs.append({
+                "id": f"faq-{index:02d}-{slug(question)[:48]}",
+                "question": question,
+                "answer": answer,
+                "sourcePages": [page],
+                "provenance": provenance([page]),
+            })
 
     updates = []
-    for page in range(59, 63):
+    for page in range(60, 64):
         text = pypdf_texts[page - 1].replace("\ufffd", ".")
-        if page == 62:
+        if page == 63:
             text = text.split("FAQS", 1)[0]
-        text = re.sub(r"^.*?UPDATES\s*", "", text, count=1, flags=re.S) if page == 59 else text
+        text = re.sub(r"^.*?UPDATES\s*", "", text, count=1, flags=re.S) if page == 60 else text
         updates.append({
             "id": f"rules-updates-page-{page}",
             "section": "Rules Updates",
@@ -489,16 +522,16 @@ def build() -> tuple[dict, dict]:
             "provenance": provenance([page]),
         })
 
-    oath_match = re.search(r"Oath of Moment\s*Change to:\s*(.*?)\s*Space Marine Chapters", pypdf_texts[58], re.S)
+    oath_match = re.search(r"Oath of Moment\s*Change to:\s*(.*?)\s*Space Marine Chapters", pypdf_texts[59], re.S)
     if not oath_match:
-        raise ValueError("Could not extract Oath of Moment from official Faction Pack page 59")
+        raise ValueError("Could not extract Oath of Moment from official Faction Pack page 60")
     updates.insert(0, {
         "id": "oath-of-moment",
         "section": "Army Rules",
         "subject": "Oath of Moment",
         "change": clean(oath_match.group(1)),
-        "sourcePages": [59],
-        "provenance": provenance([59]),
+        "sourcePages": [60],
+        "provenance": provenance([60]),
     })
 
     data = {
@@ -517,15 +550,15 @@ def build() -> tuple[dict, dict]:
                 title: [rule_page] + ([stratagem_page] if stratagem_page and stratagem_page != rule_page else [])
                 for title, rule_page, stratagem_page in DETACHMENTS
             },
-            "rulesUpdates": [59, 60, 61, 62],
-            "faqs": [62],
-            "legendsArmoury": [157, 216],
-            "renegadesAndTraitors": [217],
+            "rulesUpdates": [60, 61, 62, 63],
+            "faqs": [63, 64],
+            "legendsArmoury": [159, 218],
+            "renegadesAndTraitors": [219],
         },
         "detachments": detachments,
         "datasheets": {
             "matched": [indexed(title, pages_) for title, pages_ in MATCHED],
-            "imperialArmour": [indexed("Thunderhawk Gunship", [57, 58])],
+            "imperialArmour": [indexed("Astraeus", [56, 57]), indexed("Thunderhawk Gunship", [58, 59])],
             "legends": [indexed(title, [page, page + 1]) for title, page in LEGENDS],
         },
         "updates": updates,
@@ -547,13 +580,13 @@ def appears(value: str, page_text: str) -> bool:
 
 def validate(data: dict, related: dict) -> list[str]:
     errors = []
-    if data["meta"]["pageCount"] != 217:
-        errors.append("expected 217 PDF pages")
-    if len(data["detachments"]) != 15:
-        errors.append("expected 15 Faction Pack detachments")
+    if data["meta"]["pageCount"] != 219:
+        errors.append("expected 219 PDF pages")
+    if len(data["detachments"]) != 16:
+        errors.append("expected 16 Faction Pack detachments")
     stratagems = [item for detachment in data["detachments"] for item in detachment["stratagems"]]
-    if len(stratagems) != 78:
-        errors.append(f"expected 78 Faction Pack stratagems, found {len(stratagems)}")
+    if len(stratagems) != 81:
+        errors.append(f"expected 81 Faction Pack stratagems, found {len(stratagems)}")
     if set(related["stratagems"]) != {item["id"] for item in stratagems}:
         errors.append("related-rules coverage does not exactly match Faction Pack stratagems")
     for detachment in data["detachments"]:
@@ -590,14 +623,14 @@ def validate(data: dict, related: dict) -> list[str]:
                     errors.append(f"{stratagem_id}/{entry['id']}: unknown unitIds {sorted(unknown)}")
     if len(data["datasheets"]["matched"]) != 14:
         errors.append("expected 14 matched-play Faction Pack datasheets")
-    if len(data["datasheets"]["imperialArmour"]) != 1:
-        errors.append("expected 1 Imperial Armour datasheet")
-    if len(data["datasheets"]["legends"]) != 75:
-        errors.append("expected 75 Legends datasheets")
+    if len(data["datasheets"]["imperialArmour"]) != 2:
+        errors.append("expected 2 Imperial Armour datasheets")
+    if len(data["datasheets"]["legends"]) != 76:
+        errors.append("expected 76 Legends datasheets")
     if len(data["faqs"]) != 14:
         errors.append(f"expected 14 FAQs, found {len(data['faqs'])}")
     for faq in data["faqs"]:
-        source = data["pages"]["62"]["text"]
+        source = "\n".join(data["pages"][str(page)]["text"] for page in faq["sourcePages"])
         if not appears(faq["question"], source) or not appears(faq["answer"], source):
             errors.append(f"{faq['id']}: FAQ does not match PDF")
     for update in data["updates"]:
@@ -618,7 +651,7 @@ def main() -> int:
     data, related = build()
     errors = validate(data, related)
     existing_related = json.loads(RELATED.read_text(encoding="utf-8")) if RELATED.exists() else {"schema": 1, "faction": "Space Marines", "stratagems": {}}
-    combined_related = existing_related | {"schema": 1, "faction": "Space Marines", "sourceId": existing_related.get("sourceId", SOURCE_ID), "stratagems": existing_related.get("stratagems", {}) | related["stratagems"]}
+    combined_related = existing_related | {"schema": 1, "faction": "Space Marines", "sourceId": SOURCE_ID, "stratagems": existing_related.get("stratagems", {}) | related["stratagems"]}
     if args.check:
         if not OUTPUT.exists() or json.loads(OUTPUT.read_text(encoding="utf-8")) != data:
             errors.append("Faction Pack snapshot is stale")

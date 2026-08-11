@@ -2,6 +2,48 @@
   "schema": 1,
   "bookId": "space-marines",
   "terms": {
+    "space-marines-detachment-rule-imperator-unleashed": {
+      "termId": "space-marines-detachment-rule-imperator-unleashed",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-imperator-unleashed",
+        "rule": "detachment-vengeful-hosts"
+      }
+    },
+    "space-marines-enhancement-avenging-angel": {
+      "termId": "space-marines-enhancement-avenging-angel",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-avenging-angel",
+        "rule": "detachment-vengeful-hosts"
+      }
+    },
+    "space-marines-enhancement-orksbane": {
+      "termId": "space-marines-enhancement-orksbane",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-orksbane",
+        "rule": "detachment-vengeful-hosts"
+      }
+    },
+    "space-marines-stratagem-meteoric-onslaught": {
+      "termId": "space-marines-stratagem-meteoric-onslaught",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-meteoric-onslaught",
+        "rule": "detachment-vengeful-hosts"
+      }
+    },
+    "space-marines-stratagem-purge-by-sectors": {
+      "termId": "space-marines-stratagem-purge-by-sectors",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-purge-by-sectors",
+        "rule": "detachment-vengeful-hosts"
+      }
+    },
+    "space-marines-stratagem-know-no-fear": {
+      "termId": "space-marines-stratagem-know-no-fear",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-know-no-fear",
+        "rule": "detachment-vengeful-hosts"
+      }
+    },
     "space-marines-detachment-rule-skystrike": {
       "termId": "space-marines-detachment-rule-skystrike",
       "navigation": {
@@ -9,17 +51,17 @@
         "rule": "detachment-fulguris-task-force"
       }
     },
-    "space-marines-enhancement-bellicose-weapon-spirits": {
-      "termId": "space-marines-enhancement-bellicose-weapon-spirits",
+    "space-marines-enhancement-bellicose-weapon-spirits-upgrade": {
+      "termId": "space-marines-enhancement-bellicose-weapon-spirits-upgrade",
       "navigation": {
-        "glossary": "glossary-space-marines-enhancement-bellicose-weapon-spirits",
+        "glossary": "glossary-space-marines-enhancement-bellicose-weapon-spirits-upgrade",
         "rule": "detachment-fulguris-task-force"
       }
     },
-    "space-marines-enhancement-raptorial-cogitator-core": {
-      "termId": "space-marines-enhancement-raptorial-cogitator-core",
+    "space-marines-enhancement-raptorial-cogitator-core-upgrade": {
+      "termId": "space-marines-enhancement-raptorial-cogitator-core-upgrade",
       "navigation": {
-        "glossary": "glossary-space-marines-enhancement-raptorial-cogitator-core",
+        "glossary": "glossary-space-marines-enhancement-raptorial-cogitator-core-upgrade",
         "rule": "detachment-fulguris-task-force"
       }
     },
@@ -93,10 +135,10 @@
         "rule": "detachment-subversion-assets"
       }
     },
-    "space-marines-enhancement-death-in-the-dark": {
-      "termId": "space-marines-enhancement-death-in-the-dark",
+    "space-marines-enhancement-death-in-the-dark-upgrade": {
+      "termId": "space-marines-enhancement-death-in-the-dark-upgrade",
       "navigation": {
-        "glossary": "glossary-space-marines-enhancement-death-in-the-dark",
+        "glossary": "glossary-space-marines-enhancement-death-in-the-dark-upgrade",
         "rule": "detachment-subversion-assets"
       }
     },
@@ -212,10 +254,10 @@
         "rule": "detachment-headhunter-task-force"
       }
     },
-    "space-marines-enhancement-astartes-tank-ace-aura": {
-      "termId": "space-marines-enhancement-astartes-tank-ace-aura",
+    "space-marines-enhancement-astartes-tank-ace": {
+      "termId": "space-marines-enhancement-astartes-tank-ace",
       "navigation": {
-        "glossary": "glossary-space-marines-enhancement-astartes-tank-ace-aura",
+        "glossary": "glossary-space-marines-enhancement-astartes-tank-ace",
         "rule": "detachment-headhunter-task-force"
       }
     },
@@ -303,10 +345,10 @@
         "rule": "detachment-ceramite-sentinels"
       }
     },
-    "space-marines-enhancement-spy-skull-datalink": {
-      "termId": "space-marines-enhancement-spy-skull-datalink",
+    "space-marines-enhancement-spy-skull-data-link": {
+      "termId": "space-marines-enhancement-spy-skull-data-link",
       "navigation": {
-        "glossary": "glossary-space-marines-enhancement-spy-skull-datalink",
+        "glossary": "glossary-space-marines-enhancement-spy-skull-data-link",
         "rule": "detachment-ceramite-sentinels"
       }
     },
@@ -429,10 +471,10 @@
         "rule": "detachment-hammer-of-avernii"
       }
     },
-    "space-marines-enhancement-medusan-roar-aura": {
-      "termId": "space-marines-enhancement-medusan-roar-aura",
+    "space-marines-enhancement-medusan-roar": {
+      "termId": "space-marines-enhancement-medusan-roar",
       "navigation": {
-        "glossary": "glossary-space-marines-enhancement-medusan-roar-aura",
+        "glossary": "glossary-space-marines-enhancement-medusan-roar",
         "rule": "detachment-hammer-of-avernii"
       }
     },
@@ -919,10 +961,10 @@
         "rule": "detachment-reclamation-force"
       }
     },
-    "space-marines-enhancement-avenging-avatar-aura": {
-      "termId": "space-marines-enhancement-avenging-avatar-aura",
+    "space-marines-enhancement-avenging-avatar": {
+      "termId": "space-marines-enhancement-avenging-avatar",
       "navigation": {
-        "glossary": "glossary-space-marines-enhancement-avenging-avatar-aura",
+        "glossary": "glossary-space-marines-enhancement-avenging-avatar",
         "rule": "detachment-reclamation-force"
       }
     },
@@ -7269,48 +7311,6 @@
       "navigation": {
         "glossary": "glossary-space-marines-detachment-rule-shadow-masters",
         "rule": "detachment-vanguard-spearhead"
-      }
-    },
-    "space-marines-enhancement-avenging-angel": {
-      "termId": "space-marines-enhancement-avenging-angel",
-      "navigation": {
-        "glossary": "glossary-space-marines-enhancement-avenging-angel",
-        "rule": "detachment-vengeful-hosts"
-      }
-    },
-    "space-marines-enhancement-orksbane": {
-      "termId": "space-marines-enhancement-orksbane",
-      "navigation": {
-        "glossary": "glossary-space-marines-enhancement-orksbane",
-        "rule": "detachment-vengeful-hosts"
-      }
-    },
-    "space-marines-stratagem-meteoric-onslaught": {
-      "termId": "space-marines-stratagem-meteoric-onslaught",
-      "navigation": {
-        "glossary": "glossary-space-marines-stratagem-meteoric-onslaught",
-        "rule": "detachment-vengeful-hosts"
-      }
-    },
-    "space-marines-stratagem-purge-by-sectors": {
-      "termId": "space-marines-stratagem-purge-by-sectors",
-      "navigation": {
-        "glossary": "glossary-space-marines-stratagem-purge-by-sectors",
-        "rule": "detachment-vengeful-hosts"
-      }
-    },
-    "space-marines-stratagem-know-no-fear": {
-      "termId": "space-marines-stratagem-know-no-fear",
-      "navigation": {
-        "glossary": "glossary-space-marines-stratagem-know-no-fear",
-        "rule": "detachment-vengeful-hosts"
-      }
-    },
-    "space-marines-detachment-rule-imperator-unleashed": {
-      "termId": "space-marines-detachment-rule-imperator-unleashed",
-      "navigation": {
-        "glossary": "glossary-space-marines-detachment-rule-imperator-unleashed",
-        "rule": "detachment-vengeful-hosts"
       }
     },
     "space-marines-army-rule-oath-of-moment": {

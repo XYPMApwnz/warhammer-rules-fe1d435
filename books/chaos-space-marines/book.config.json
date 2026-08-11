@@ -6,6 +6,11 @@
   "edition": "11E",
   "factionKeyword": "HERETIC ASTARTES",
   "currentDatasheetsOnly": true,
+  "generatedMobile": true,
+  "assetVersions": {
+    "book": 2,
+    "app": 3
+  },
   "armyRules": ["Dark Pacts"],
   "renderTransportRelations": true,
   "expected": {

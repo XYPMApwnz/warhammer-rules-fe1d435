@@ -1,0 +1,85 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+
+const root=path.dirname(fileURLToPath(import.meta.url)),bookRoot=path.resolve(root,'..');
+const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8');
+const config=JSON.parse(fs.readFileSync(path.join(bookRoot,'book.config.json'),'utf8'));
+const manifest=JSON.parse(fs.readFileSync(path.join(bookRoot,'sources/source-manifest.json'),'utf8'));
+const source=JSON.parse(fs.readFileSync(path.join(bookRoot,'content/chaos-space-marines-codex-datasheets.en.json'),'utf8'));
+const extractConfig=JSON.parse(fs.readFileSync(path.join(bookRoot,'sources/bsdata-extract.config.json'),'utf8'));
+
+function extract(tag,id,html=reader){
+  const opener=new RegExp(`<${tag}\\b[^>]*\\bid="${id}"[^>]*>`,'i').exec(html);
+  assert.ok(opener,`Missing ${tag}#${id}`);
+  const tags=new RegExp(`<\\/?${tag}\\b[^>]*>`,'gi');tags.lastIndex=opener.index;
+  let depth=0;
+  for(let match;(match=tags.exec(html));){depth+=match[0][1]==='/'?-1:1;if(depth===0)return html.slice(opener.index,tags.lastIndex);}
+  assert.fail(`Unclosed ${tag}#${id}`);
+}
+
+const detachmentIds=[...reader.matchAll(/<section class="content-group detachment" id="(detachment-[^"]+)"/g)].map(match=>match[1]);
+const categories=[...reader.matchAll(/<section class="content-group" id="(datasheets-[^"]+)"[^>]*>\s*<h3 class="category-title">([^<]+)<\/h3>/g)].map(([,id,title])=>{
+  const section=extract('section',id);
+  const unitIds=[...section.matchAll(/<article\b[^>]*\bclass="[^"]*\bunit-card\b[^"]*"[^>]*\bid="(unit-[^"]+)"/g)].map(match=>match[1]);
+  return{id,title,unitIds};
+});
+const unitIds=categories.flatMap(category=>category.unitIds);
+const routeIds=[...detachmentIds,...unitIds];
+const routes=['index.html','army-rules.html','updates.html',...routeIds.map(id=>id.replace(/^(?:detachment|unit)-/,'')+'.html')];
+const htmlFiles=fs.readdirSync(root).filter(file=>file.endsWith('.html')).sort();
+
+assert.equal(detachmentIds.length,17);
+assert.equal(unitIds.length,54);
+assert.equal(new Set(routeIds).size,71);
+assert.equal(routes.length,74);
+assert.deepEqual(htmlFiles,routes.slice().sort(),'Phone routes contain missing or orphan HTML');
+assert.deepEqual(Object.fromEntries(categories.map(category=>[category.title,category.unitIds.length])),{'Epic Heroes':8,'Characters':16,'Battleline':2,'Dedicated Transports':1,'Infantry':13,'Mounted':1,'Vehicle':11,'Beast':1,'Fortification':1});
+
+for(const route of routes){
+  const html=fs.readFileSync(path.join(root,route),'utf8');
+  assert.match(html,/\.\/mobile\.js\?v=1/);
+  assert.match(html,/\.\/phone-popup-controller\.js\?v=1/);
+  assert.doesNotMatch(html,/reader\.html\?view=mobile/);
+  assert.match(html,/data-view-switch/);
+  assert.match(html,new RegExp(`href="\\./${route.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}" aria-current="page"`));
+}
+
+const start=fs.readFileSync(path.join(root,'index.html'),'utf8');
+const armyRules=fs.readFileSync(path.join(root,'army-rules.html'),'utf8');
+const abaddon=fs.readFileSync(path.join(root,'abaddon-the-despoiler.html'),'utf8');
+const defiler=fs.readFileSync(path.join(root,'defiler.html'),'utf8');
+const rhino=fs.readFileSync(path.join(root,'chaos-rhino.html'),'utf8');
+const desktopApp=fs.readFileSync(path.join(bookRoot,'scripts/app.js'),'utf8');
+
+assert.match(reader,/\.\/scripts\/app\.js\?v=3/,'CSM Desktop app version was not bumped for semantic Phone routing');
+assert.match(desktopApp,/hashId\.startsWith\('unit-'\)/);
+assert.match(desktopApp,/hashId\.startsWith\('detachment-'\)/);
+assert.match(desktopApp,/active==='army-rules'/);
+assert.match(desktopApp,/active==='updates'/);
+assert.doesNotMatch(desktopApp,/abaddon/i,'Desktop to Phone mapping must not special-case Abaddon');
+assert.match(start,/id="start"/);
+assert.match(armyRules,/Dark Pacts/);
+assert.match(armyRules,/data-source-term="chaos-space-marines-army-rule-dark-pacts"/);
+assert.match(abaddon,/id="unit-abaddon-the-despoiler"/);
+assert.match(abaddon,/href="\.\/chaos-terminator-squad\.html"/);
+assert.match(abaddon,/href="\.\/chosen\.html"/);
+assert.equal((defiler.match(/\+15 pts/g)||[]).length,2,'Defiler paid options are missing');
+assert.match(rhino,/id="chaos-rhino-transport"/);
+assert.match(rhino,/Transport/);
+
+const limited=['chaos-cult.html','deceptors.html','dread-talons.html','fellhammer-siege-host.html','pactbound-zealots.html','renegade-raiders.html','soulforged-warpack.html','veterans-of-the-long-war.html'];
+assert.equal(limited.filter(file=>fs.readFileSync(path.join(root,file),'utf8').includes('Codex source required')).length,8);
+
+assert.equal(source.datasheets.length,54);
+assert.equal(source.legends.length,53);
+for(const item of source.legends){const file=(item.id||'').replace(/^unit-/,'')+'.html';assert.ok(file!=='.html'&&!htmlFiles.includes(file),`Legends route leaked: ${file}`);}
+const foreign=[['Khorne Berzerkers','khorne-berzerkers.html'],['Noise Marines','noise-marines.html'],['Plague Marines','plague-marines.html'],['Rubric Marines','rubric-marines.html']];
+for(const [title,file] of foreign){assert.ok(extractConfig.filters.excludeNames.includes(title),`Missing source exclusion for ${title}`);assert.ok(!htmlFiles.includes(file),`Other-faction route leaked: ${file}`);}
+
+assert.equal(config.generatedMobile,true);
+assert.equal(config.assetVersions.app,3);
+assert.equal(manifest.gates.publishAsComplete,false);
+assert.doesNotMatch(fs.readFileSync(path.join(root,'mobile.js'),'utf8'),/roster/i);
+console.log('Chaos Space Marines Phone QA: 74 routes, 17 Detachments, 54 current Datasheets, 53 Legends and 4 other-faction units excluded.');

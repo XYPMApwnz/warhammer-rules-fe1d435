@@ -1,0 +1,898 @@
+{
+  "schema": 1,
+  "source": {
+    "label": "Current 11e BSData + Wahapedia Wargear consensus",
+    "checkedAt": "2026-08-12",
+    "bsdata": {
+      "repository": "https://github.com/BSData/wh40k-11e",
+      "repositoryHead": "c714a01a5c7a7275495c4d3c32688a4292d4efd8",
+      "catalogueCommit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+      "catalogueRevision": 6,
+      "catalogueSha256": "A76D5ADAD2055572F6186996FD622B08CAB5AF95FAA38F82E80609E179F3EE35"
+    },
+    "wahapedia": {
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/",
+      "checkedAt": "2026-08-12"
+    },
+    "official": {
+      "title": "Chaos Space Marines Faction Pack",
+      "version": "1.1",
+      "sha256": "407DD6F175A7C27E0CB20BC95F68675AB0F9250883F08660CD2F16EF6D9F4998"
+    }
+  },
+  "units": [
+    {
+      "title": "Chaos Bikers",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Chaos-Bikers",
+      "wargear": [
+        "The Biker Champion’s bolt pistol can be replaced with one of the following:\n1 plasma pistol\n1 accursed weapon\n1 Astartes chainsword\n1 power fist",
+        "Any number of Chaos Bikers can each have their bolt pistol replaced with 1 Astartes chainsword.",
+        "Up to 2 Chaos Bikers can each have their combi-bolter replaced with 1 combi-weapon, or can be equipped with one of the following:\n1 flamer\n1 meltagun\n1 plasma gun",
+        "1 model can be equipped with 1 Chaos icon."
+      ]
+    },
+    {
+      "title": "Chaos Land Raider",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Chaos-Land-Raider",
+      "wargear": [
+        "This model can be equipped with one of the following:\n1 combi-bolter\n1 combi-weapon",
+        "This model can be equipped with 1 havoc launcher."
+      ]
+    },
+    {
+      "title": "Chaos Lord",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Chaos-Lord",
+      "wargear": [
+        "This model’s daemon hammer can be replaced with one of the following:\n1 accursed weapon\n1 Astartes chainsword",
+        "This model’s plasma pistol can be replaced with 1 power fist."
+      ]
+    },
+    {
+      "title": "Chaos Lord in Terminator Armour",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Chaos-Lord-In-Terminator-Armour",
+      "wargear": [
+        "This model’s combi-bolter can be replaced with 1 combi-weapon.",
+        "This model’s exalted weapon can be replaced with one of the following:\n1 chainfist\n1 power fist",
+        "This model’s combi-bolter and exalted weapon can be replaced with 1 paired accursed weapons."
+      ]
+    },
+    {
+      "title": "Chaos Lord with Jump Pack",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Chaos-Lord-with-Jump-Pack",
+      "wargear": [
+        "This model's bolt pistol can be replaced with 1 plasma pistol.",
+        "This model’s accursed weapon can be replaced with 1 power fist.",
+        "This model's bolt pistol and accursed weapon can be replaced with 1 twin lightning claws."
+      ]
+    },
+    {
+      "title": "Chaos Predator Annihilator",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Chaos-Predator-Annihilator",
+      "wargear": [
+        "This model can be equipped with one of the following:\n2 heavy bolters\n2 lascannons",
+        "This model can be equipped with one of the following:\n1 combi-bolter\n1 combi-weapon",
+        "This model can be equipped with 1 Havoc launcher."
+      ]
+    },
+    {
+      "title": "Chaos Predator Destructor",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Chaos-Predator-Destructor",
+      "wargear": [
+        "This model can be equipped with one of the following:\n2 heavy bolters\n2 lascannons",
+        "This model can be equipped with one of the following:\n1 combi-bolter\n1 combi-weapon",
+        "This model can be equipped with 1 Havoc launcher."
+      ]
+    },
+    {
+      "title": "Chaos Rhino",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Chaos-Rhino",
+      "wargear": [
+        "This model can be equipped with one of the following:\n1 combi-bolter\n1 combi-weapon"
+      ]
+    },
+    {
+      "title": "Chaos Terminator Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Chaos-Terminator-Squad",
+      "wargear": [
+        "For every 5 models in this unit, 1 Terminator’s combi-bolter can be replaced with one of the following:\n1 heavy flamer\n1 reaper autocannon",
+        "Any number of models can each have their combi-bolter replaced with 1 combi-weapon.",
+        "For every 5 models in this unit, 1 model’s combi-bolter and accursed weapon can be replaced with 1 paired accursed weapons.",
+        "For every 5 models in this unit, up to 3 models can each have their accursed weapon replaced with 1 power fist.",
+        "For every 5 models in this unit, 1 model’s accursed weapon can be replaced with 1 chainfist."
+      ]
+    },
+    {
+      "title": "Chaos Vindicator",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Chaos-Vindicator",
+      "wargear": [
+        "This model can be equipped with one of the following:\n1 combi-bolter\n1 combi-weapon",
+        "This model can be equipped with 1 Havoc launcher."
+      ]
+    },
+    {
+      "title": "Chosen",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Chosen",
+      "wargear": [
+        "For every 5 models in this unit, up to 2 models can each have their bolt pistol replaced with 1 plasma pistol.",
+        "For every 5 models in this unit, up to 2 models can each have their boltgun replaced with 1 combi-weapon.",
+        "For every 5 models in this unit, 1 model’s boltgun and accursed weapon can be replaced with 1 paired accursed weapons.",
+        "For every 5 models in this unit, 1 model equipped with a boltgun can have its accursed weapon replaced with 1 power fist. That model’s boltgun cannot be replaced.",
+        "1 model can be equipped with 1 Chaos icon."
+      ]
+    },
+    {
+      "title": "Cultist Mob",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Cultist-Mob",
+      "wargear": [
+        "The Cultist Champion’s autopistol can be replaced with 1 bolt pistol."
+      ]
+    },
+    {
+      "title": "Defiler",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Defiler",
+      "wargear": [
+        "This model’s Hades battle cannon can be replaced with 1 ectoplasma destructor.",
+        "This model’s excruciator cannons can be replaced with 2 magma cutters.",
+        "This model’s heavy baleflamer can be replaced with one of the following:\n1 Hades lascannon\n1 heavy reaper autocannon\n1 electroscourge (a model cannot be equipped with more than one electroscourge)",
+        "This model’s heavy missile launcher can be replaced with one of the following:\n1 Hades lascannon\n1 heavy reaper autocannon\n1 electroscourge (a model cannot be equipped with more than one electroscourge)"
+      ]
+    },
+    {
+      "title": "Fellgor Beastmen",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Fellgor-Beastmen",
+      "wargear": [
+        "The Fellgor Champion’s bolt pistol can be replaced with 1 plasma pistol.",
+        "1 Fellgor Beastman’s close combat weapon can be replaced with 1 great weapon.",
+        "1 Fellgor Beastman’s close combat weapon can be replaced with 1 corrupted stave."
+      ]
+    },
+    {
+      "title": "Forgefiend",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Forgefiend",
+      "wargear": [
+        "This model’s 2 Hades autocannons can be replaced with 2 ectoplasma cannons.",
+        "This model’s Forgefiend jaws can be replaced with 1 ectoplasma cannon and 1 armoured limbs."
+      ]
+    },
+    {
+      "title": "Havocs",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Havocs",
+      "wargear": [
+        "Any number of Havocs can each have their Havoc autocannon or Havoc lascannon replaced with one of the following:\n1 Havoc autocannon\n1 Havoc heavy bolter\n1 Havoc lascannon\n1 Havoc missile launcher\n1 Havoc reaper chaincannon"
+      ]
+    },
+    {
+      "title": "Heldrake",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Heldrake",
+      "wargear": [
+        "This model’s Hades autocannon can be replaced with 1 baleflamer."
+      ]
+    },
+    {
+      "title": "Khorne Lord of Skulls",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Khorne-Lord-Of-Skulls",
+      "wargear": [
+        "This model’s gorestorm cannon can be replaced with one of the following:\n1 daemongore cannon\n1 ichor cannon",
+        "This model’s Hades gatling cannon can be replaced with 1 skullhurler."
+      ]
+    },
+    {
+      "title": "Legionaries",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Legionaries",
+      "wargear": [
+        "The Aspiring Champion’s boltgun can be replaced with one of the following:\n1 plasma pistol*\n1 accursed weapon\n1 Astartes chainsword\n1 heavy melee weapon",
+        "The Aspiring Champion’s bolt pistol can be replaced with one of the following:\n1 plasma pistol*\n1 accursed weapon\n1 Astartes chainsword\n1 heavy melee weapon",
+        "1 model can be equipped with 1 Chaos icon.",
+        "Any number of Legionaries can each have their boltgun replaced with 1 Astartes chainsword.",
+        "One Legionary’s boltgun can be replaced with 1 heavy melee weapon.",
+        "One Legionary’s boltgun can be replaced with 1 balefire tome.",
+        "For every 5 models in this unit, 1 Legionary’s boltgun can be replaced with one of the following (duplicates are not allowed):\n1 plasma pistol and 1 Astartes chainsword\n1 flamer\n1 havoc autocannon\n1 heavy bolter\n1 lascannon\n1 meltagun\n1 missile launcher\n1 plasma gun\n1 reaper chaincannon",
+        "* Maximum 1 per model."
+      ]
+    },
+    {
+      "title": "Lord Discordant on Helstalker",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Lord-Discordant-On-Helstalker",
+      "wargear": [
+        "This model’s Helstalker autocannon can be replaced with 1 baleflamer.",
+        "This model’s techno-virus injector can be replaced with 1 magma cutter."
+      ]
+    },
+    {
+      "title": "Maulerfiend",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Maulerfiend",
+      "wargear": [
+        "This model’s lasher tendrils can be replaced with 2 magma cutters."
+      ]
+    },
+    {
+      "title": "Nemesis Claw",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Nemesis-Claw",
+      "wargear": [
+        "The Visionary’s bolt pistol can be replaced with 1 plasma pistol.",
+        "The Visionary’s Nostraman chainblade can be replaced with one of the following:\n1 accursed weapon\n1 power fist",
+        "Any number of Legionaries can each have their boltgun replaced with 1 Astartes chainsword.",
+        "If this unit contains 10 models, one Legionary’s boltgun can be replaced with one of the following:\n1 heavy bolter\n1 missile launcher",
+        "One Legionary’s boltgun can be replaced with one of the following:\n1 flamer\n1 meltagun\n1 plasma gun",
+        "Up to four Legionaries can each have their boltgun replaced with one of the following (duplicates are not allowed):\n1 accursed weapon\n1 Nostraman chainglaive\n1 paired accursed weapons\n1 voice eater and 1 Astartes chainsword"
+      ]
+    },
+    {
+      "title": "Possessed",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Possessed",
+      "wargear": [
+        "1 model can be equipped with 1 Chaos icon."
+      ]
+    },
+    {
+      "title": "Raptors",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Raptors",
+      "wargear": [
+        "The Raptor Champion’s bolt pistol can be replaced with 1 plasma pistol.",
+        "The Raptor Champion’s Astartes chainsword can be replaced with one of the following:\n1 accursed weapon\n1 heavy melee weapon",
+        "For every 5 models in this unit, up to 2 Raptors can each have their bolt pistol replaced with 1 plasma pistol (these models’ Astartes chainswords cannot be replaced).",
+        "For every 5 models in this unit, up to 2 Raptors can each have their Astartes chainsword replaced with 1 heavy melee weapon.",
+        "For every 5 models in this unit, 1 Raptor can replace their Astartes chainsword with 1 mutations.",
+        "Up to 2 Raptors can each have their Astartes chainsword replaced with one of the following options (you cannot select the same option more than once):\n1 flamer and 1 close combat weapon\n1 meltagun and 1 close combat weapon\n1 plasma gun and 1 close combat weapon",
+        "If this unit contains 10 models, up to 2 additional Raptors can each have their Astartes chainsword replaced with one of the following options (you cannot select the same option more than once):\n1 flamer and 1 close combat weapon\n1 meltagun and 1 close combat weapon\n1 plasma gun and 1 close combat weapon"
+      ]
+    },
+    {
+      "title": "Red Corsairs Raiders",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Red-Corsairs-Raiders",
+      "wargear": [
+        "The Red Corsairs Raider Champion’s bolt pistol can be replaced with 1 hand flamer.",
+        "For every 5 models in this unit:\n1 Red Corsairs Raider’s boltgun can be replaced with 1 meltagun\n1 Red Corsairs Raider’s reaver’s blade can be replaced with 1 power fist"
+      ]
+    },
+    {
+      "title": "Red Corsairs Reave-captain",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Red-Corsairs-Reave-Captain",
+      "wargear": [
+        "This model’s power sword can be replaced with 1 power maul.",
+        "This model can be equipped with 1 plasma pistol."
+      ]
+    },
+    {
+      "title": "Sorcerer in Terminator Armour",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Sorcerer-In-Terminator-Armour",
+      "wargear": [
+        "This model’s combi-bolter can be replaced with 1 combi-weapon.",
+        "This model can be equipped with 1 Chaos familiar."
+      ]
+    },
+    {
+      "title": "Traitor Guardsmen Squad",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Traitor-Guardsmen-Squad",
+      "wargear": [
+        "Up to 3 Traitor Guardsmen can each have their lasgun replaced with one of the following (duplicates are not allowed):\n1 Cultist grenade launcher\n1 flamer\n1 meltagun\n1 plasma gun\n1 Cultist sniper rifle",
+        "The Traitor Sergeant’s close combat weapon can be replaced with one of the following:\n1 chainsword\n1 power weapon",
+        "The Traitor Sergeant’s corrupted pistol can be replaced with 1 boltgun."
+      ]
+    }
+  ],
+  "audit": {
+    "summary": {
+      "checkedUnits": 54,
+      "positiveCandidates": 29,
+      "explicitNone": 6,
+      "noSection": 19,
+      "importedUnits": 28,
+      "importedContracts": 81,
+      "conflictUnits": 3,
+      "unresolvedContracts": 6,
+      "guessed": 0
+    },
+    "units": [
+      {
+        "unitId": "unit-cultist-mob",
+        "title": "Cultist Mob",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-legionaries",
+        "title": "Legionaries",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-chaos-lord",
+        "title": "Chaos Lord",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-chaos-lord-in-terminator-armour",
+        "title": "Chaos Lord in Terminator Armour",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-chaos-lord-with-jump-pack",
+        "title": "Chaos Lord with Jump Pack",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-cultist-firebrand",
+        "title": "Cultist Firebrand",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-dark-apostle",
+        "title": "Dark Apostle",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-dark-commune",
+        "title": "Dark Commune",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-heretic-astartes-daemon-prince",
+        "title": "Heretic Astartes Daemon Prince",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-heretic-astartes-daemon-prince-with-wings",
+        "title": "Heretic Astartes Daemon Prince with wings",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-lord-discordant-on-helstalker",
+        "title": "Lord Discordant on Helstalker",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-master-of-executions",
+        "title": "Master of Executions",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-master-of-possession",
+        "title": "Master of Possession",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-red-corsairs-reave-captain",
+        "title": "Red Corsairs Reave-captain",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "CURRENT OFFICIAL EVIDENCE",
+        "officialSourcePages": [
+          30
+        ],
+        "consensusStatus": "OFFICIAL CURRENT",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-sorcerer",
+        "title": "Sorcerer",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-sorcerer-in-terminator-armour",
+        "title": "Sorcerer in Terminator Armour",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-traitor-enforcer",
+        "title": "Traitor Enforcer",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "EXPLICIT NONE",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-warpsmith",
+        "title": "Warpsmith",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-chaos-rhino",
+        "title": "Chaos Rhino",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "PARTIAL SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "1 clauses imported; 1 conflicting clauses withheld.",
+        "unresolvedOptions": [
+          {
+            "identity": "unit-chaos-rhino-unresolved-1",
+            "text": "This model can be equipped with 1 havoc launcher or can replace 1 combi-bolter with 1 havoc launcher.",
+            "status": "SECONDARY CONFLICT",
+            "reason": "BSData requires the base combi-bolter and models the havoc launcher only as an independent addition; Wahapedia also permits replacing one combi-bolter."
+          }
+        ]
+      },
+      {
+        "unitId": "unit-abaddon-the-despoiler",
+        "title": "Abaddon the Despoiler",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-cypher",
+        "title": "Cypher",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-fabius-bile",
+        "title": "Fabius Bile",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-haarken-worldclaimer",
+        "title": "Haarken Worldclaimer",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-huron-blackheart",
+        "title": "Huron Blackheart",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "EXPLICIT NONE",
+        "officialStatus": "CURRENT OFFICIAL EVIDENCE",
+        "officialSourcePages": [
+          24
+        ],
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-kravek-morne",
+        "title": "Kravek Morne",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "EXPLICIT NONE",
+        "officialStatus": "CURRENT OFFICIAL EVIDENCE",
+        "officialSourcePages": [
+          18
+        ],
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-masters-of-the-maelstrom",
+        "title": "Masters of the Maelstrom",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-vashtorr-the-arkifane",
+        "title": "Vashtorr the Arkifane",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-accursed-cultists",
+        "title": "Accursed Cultists",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-chaos-terminator-squad",
+        "title": "Chaos Terminator Squad",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-chosen",
+        "title": "Chosen",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-fellgor-beastmen",
+        "title": "Fellgor Beastmen",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-havocs",
+        "title": "Havocs",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "PARTIAL SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "1 clauses imported; 2 conflicting clauses withheld.",
+        "unresolvedOptions": [
+          {
+            "identity": "unit-havocs-unresolved-1",
+            "text": "The Havoc Champion’s Astartes chainsword can be replaced with one of the following:\n1 accursed weapon\n1 power fist",
+            "status": "SECONDARY CONFLICT",
+            "reason": "Current BSData disables the Champion accursed-weapon and power-fist selections that Wahapedia presents as replacements."
+          },
+          {
+            "identity": "unit-havocs-unresolved-2",
+            "text": "The Havoc Champion’s flamer can be replaced with one of the following:\n1 boltgun\n1 meltagun\n1 plasma gun\n1 plasma pistol\n1 accursed weapon\n1 power fist",
+            "status": "SECONDARY CONFLICT",
+            "reason": "Current BSData disables the Champion accursed-weapon and power-fist selections that Wahapedia presents as replacements."
+          }
+        ]
+      },
+      {
+        "unitId": "unit-mutilators",
+        "title": "Mutilators",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "EXPLICIT NONE",
+        "officialStatus": "CURRENT OFFICIAL EVIDENCE",
+        "officialSourcePages": [
+          20
+        ],
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-nemesis-claw",
+        "title": "Nemesis Claw",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "CURRENT OFFICIAL EVIDENCE",
+        "officialSourcePages": [
+          32
+        ],
+        "consensusStatus": "OFFICIAL CURRENT",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-obliterators",
+        "title": "Obliterators",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-possessed",
+        "title": "Possessed",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-raptors",
+        "title": "Raptors",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "CURRENT OFFICIAL EVIDENCE",
+        "officialSourcePages": [
+          34
+        ],
+        "consensusStatus": "OFFICIAL CURRENT",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-red-corsairs-raiders",
+        "title": "Red Corsairs Raiders",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "CURRENT OFFICIAL EVIDENCE",
+        "officialSourcePages": [
+          28
+        ],
+        "consensusStatus": "OFFICIAL CURRENT",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-traitor-guardsmen-squad",
+        "title": "Traitor Guardsmen Squad",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-warp-talons",
+        "title": "Warp Talons",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "EXPLICIT NONE",
+        "officialStatus": "CURRENT OFFICIAL EVIDENCE",
+        "officialSourcePages": [
+          36
+        ],
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-chaos-bikers",
+        "title": "Chaos Bikers",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-chaos-land-raider",
+        "title": "Chaos Land Raider",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-chaos-predator-annihilator",
+        "title": "Chaos Predator Annihilator",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-chaos-predator-destructor",
+        "title": "Chaos Predator Destructor",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-chaos-spawn",
+        "title": "Chaos Spawn",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "EXPLICIT NONE",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-chaos-vindicator",
+        "title": "Chaos Vindicator",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-defiler",
+        "title": "Defiler",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "CURRENT OFFICIAL EVIDENCE",
+        "officialSourcePages": [
+          22
+        ],
+        "consensusStatus": "OFFICIAL CURRENT",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-forgefiend",
+        "title": "Forgefiend",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-helbrute",
+        "title": "Helbrute",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONFLICT",
+        "imported": false,
+        "reason": "0 clauses imported; 3 conflicting clauses withheld.",
+        "unresolvedOptions": [
+          {
+            "identity": "unit-helbrute-unresolved-1",
+            "text": "This model’s multi-melta can be replaced with one of the following:\n1 Helbrute plasma cannon\n1 twin autocannon\n1 twin heavy bolter\n1 twin lascannon\n1 Helbrute fist",
+            "status": "SECONDARY CONFLICT",
+            "reason": "BSData requires a combi-bolter or heavy flamer on every selected Helbrute fist; Wahapedia makes that secondary weapon optional."
+          },
+          {
+            "identity": "unit-helbrute-unresolved-2",
+            "text": "This model’s missile launcher can be replaced with one of the following:\n1 Helbrute fist\n1 Helbrute hammer\n1 power scourge",
+            "status": "SECONDARY CONFLICT",
+            "reason": "BSData requires a combi-bolter or heavy flamer on every selected Helbrute fist; Wahapedia makes that secondary weapon optional."
+          },
+          {
+            "identity": "unit-helbrute-unresolved-3",
+            "text": "For each Helbrute fist this model is equipped with, it can be equipped with one of the following:\n1 combi-bolter\n1 heavy flamer",
+            "status": "SECONDARY CONFLICT",
+            "reason": "BSData requires a combi-bolter or heavy flamer on every selected Helbrute fist; Wahapedia makes that secondary weapon optional."
+          }
+        ]
+      },
+      {
+        "unitId": "unit-heldrake",
+        "title": "Heldrake",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-khorne-lord-of-skulls",
+        "title": "Khorne Lord of Skulls",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-maulerfiend",
+        "title": "Maulerfiend",
+        "nrStatus": "OPTIONS",
+        "wahapediaStatus": "OPTIONS",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "Current BSData and Wahapedia semantics agree."
+      },
+      {
+        "unitId": "unit-noctilith-crown",
+        "title": "Noctilith Crown",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      },
+      {
+        "unitId": "unit-venomcrawler",
+        "title": "Venomcrawler",
+        "nrStatus": "NO SELECTABLE OPTIONS",
+        "wahapediaStatus": "NO OPTIONS SECTION",
+        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
+        "consensusStatus": "CONFIRMED NO OPTIONS",
+        "imported": false,
+        "reason": "No selectable option contract is present in current BSData or Wahapedia."
+      }
+    ]
+  }
+}

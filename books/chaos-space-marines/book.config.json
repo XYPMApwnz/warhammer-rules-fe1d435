@@ -35,6 +35,7 @@
   "sources": {
     "factionPack": "content/chaos-space-marines-faction-pack.en.json",
     "codexDatasheets": "content/chaos-space-marines-codex-datasheets.en.json",
+    "codexWargear": "content/chaos-space-marines-codex-wargear.en.json",
     "relatedRules": "content/chaos-space-marines-related-rules.en.json",
     "manifest": "sources/source-manifest.json"
   }

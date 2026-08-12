@@ -16,55 +16,60 @@ def transparent_product_image(source, config):
     image = Image.open(source).convert("RGBA")
     if crop := config["processing"].get("crop"):
         image = image.crop(tuple(crop))
+    source_alpha = image.getchannel("A") if config["processing"].get("sourceAlpha") else None
     width, height = image.size
-    rgb = image.convert("RGB")
-    pixels = list(rgb.getdata())
-    min_luma = config["processing"]["minLuma"]
-    max_chroma = config["processing"]["maxChroma"]
-    candidate = bytearray(
-        1 if (max(pixel) - min(pixel) <= max_chroma and sum(pixel) / 3 >= min_luma) else 0
-        for pixel in pixels
-    )
-    background = bytearray(width * height)
-    queue = deque()
-    for x in range(width):
-        queue.extend((x, (height - 1) * width + x))
-    for y in range(height):
-        queue.extend((y * width, y * width + width - 1))
-    for x, y in config["processing"].get("backgroundSeeds", []):
-        queue.append(y * width + x)
-    while queue:
-        index = queue.popleft()
-        if background[index] or not candidate[index]:
-            continue
-        background[index] = 1
-        x, y = index % width, index // width
-        if x:
-            queue.append(index - 1)
-        if x + 1 < width:
-            queue.append(index + 1)
-        if y:
-            queue.append(index - width)
-        if y + 1 < height:
-            queue.append(index + width)
-    if config["processing"].get("rowBackdropCleanup", True):
-        edge = max(8, width // 32)
-        max_distance = config["processing"]["backgroundDistance"]
+    if source_alpha is not None:
+        alpha = source_alpha
+    else:
+        rgb = image.convert("RGB")
+        pixels = list(rgb.getdata())
+        min_luma = config["processing"]["minLuma"]
+        max_chroma = config["processing"]["maxChroma"]
+        candidate = bytearray(
+            1 if (max(pixel) - min(pixel) <= max_chroma and sum(pixel) / 3 >= min_luma) else 0
+            for pixel in pixels
+        )
+        background = bytearray(width * height)
+        queue = deque()
+        for x in range(width):
+            queue.extend((x, (height - 1) * width + x))
         for y in range(height):
-            row = pixels[y * width:(y + 1) * width]
-            samples = row[:edge] + row[-edge:]
-            backdrop = tuple(median(pixel[channel] for pixel in samples) for channel in range(3))
-            for x, pixel in enumerate(row):
-                index = y * width + x
-                if candidate[index] and max(abs(pixel[channel] - backdrop[channel]) for channel in range(3)) <= max_distance:
-                    background[index] = 1
-    alpha = Image.new("L", image.size)
-    alpha.putdata([0 if value else 255 for value in background])
+            queue.extend((y * width, y * width + width - 1))
+        for x, y in config["processing"].get("backgroundSeeds", []):
+            queue.append(y * width + x)
+        while queue:
+            index = queue.popleft()
+            if background[index] or not candidate[index]:
+                continue
+            background[index] = 1
+            x, y = index % width, index // width
+            if x:
+                queue.append(index - 1)
+            if x + 1 < width:
+                queue.append(index + 1)
+            if y:
+                queue.append(index - width)
+            if y + 1 < height:
+                queue.append(index + width)
+        if config["processing"].get("rowBackdropCleanup", True):
+            edge = max(8, width // 32)
+            max_distance = config["processing"]["backgroundDistance"]
+            for y in range(height):
+                row = pixels[y * width:(y + 1) * width]
+                samples = row[:edge] + row[-edge:]
+                backdrop = tuple(median(pixel[channel] for pixel in samples) for channel in range(3))
+                for x, pixel in enumerate(row):
+                    index = y * width + x
+                    if candidate[index] and max(abs(pixel[channel] - backdrop[channel]) for channel in range(3)) <= max_distance:
+                        background[index] = 1
+        alpha = Image.new("L", image.size)
+        alpha.putdata([0 if value else 255 for value in background])
     if clear_polygons := config["processing"].get("clearPolygons"):
         draw = ImageDraw.Draw(alpha)
         for polygon in clear_polygons:
             draw.polygon([tuple(point) for point in polygon], fill=0)
-    alpha = alpha.filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(0.45))
+    if source_alpha is None:
+        alpha = alpha.filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(0.45))
     image.putalpha(alpha)
     image = image.convert("RGBa").resize(
         (config["width"], config["height"]), Image.Resampling.LANCZOS

@@ -432,6 +432,358 @@
         "desktop": { "scale": 1.3, "x": "-4%", "y": "1%", "opacity": 0.22 },
         "phone": { "scale": 1.15, "x": "-3%", "y": "1%", "opacity": 0.18 }
       }
+    },
+    "unit-tech-priest-dominus": {
+      "unitName": "Tech-Priest Dominus",
+      "asset": "assets/unit-images/tech-priest-dominus.webp",
+      "original": "sources/unit-images/tech-priest-dominus-prepared.png",
+      "width": 480,
+      "height": 802,
+      "source": {
+        "productUrl": "User-provided official GW product image",
+        "imageUrl": "attachment:6.jpg",
+        "originalFilename": "user-provided-official-product-photo-tech-priest-dominus.jpg"
+      },
+      "processing": {
+        "sourceAlpha": true
+      },
+      "presentation": {
+        "mode": "background",
+        "desktop": {
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
+        },
+        "phone": {
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
+        }
+      },
+      "provenance": {
+        "source": "User-provided official GW product image",
+        "originalPath": "sources/unit-images/user-provided-official-product-photo-tech-priest-dominus.jpg",
+        "preparedPath": "sources/unit-images/tech-priest-dominus-prepared.png"
+      }
+    },
+    "unit-tech-priest-enginseer": {
+      "unitName": "Tech-Priest Enginseer",
+      "asset": "assets/unit-images/tech-priest-enginseer.webp",
+      "original": "sources/unit-images/tech-priest-enginseer-prepared.png",
+      "width": 599,
+      "height": 806,
+      "source": {
+        "productUrl": "User-provided official GW product image",
+        "imageUrl": "attachment:7.jpg",
+        "originalFilename": "user-provided-official-product-photo-tech-priest-enginseer.jpg"
+      },
+      "processing": {
+        "sourceAlpha": true
+      },
+      "presentation": {
+        "mode": "background",
+        "desktop": {
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
+        },
+        "phone": {
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
+        }
+      },
+      "provenance": {
+        "source": "User-provided official GW product image",
+        "originalPath": "sources/unit-images/user-provided-official-product-photo-tech-priest-enginseer.jpg",
+        "preparedPath": "sources/unit-images/tech-priest-enginseer-prepared.png"
+      }
+    },
+    "unit-corpuscarii-electro-priests": {
+      "unitName": "Corpuscarii Electro-Priests",
+      "asset": "assets/unit-images/corpuscarii-electro-priests.webp",
+      "original": "sources/unit-images/corpuscarii-electro-priests-prepared.png",
+      "width": 707,
+      "height": 781,
+      "source": {
+        "productUrl": "User-provided official GW product image",
+        "imageUrl": "attachment:4.jpg",
+        "originalFilename": "user-provided-official-product-photo-corpuscarii.jpg"
+      },
+      "processing": {
+        "sourceAlpha": true
+      },
+      "presentation": {
+        "mode": "background",
+        "desktop": {
+          "scale": 1.35,
+          "x": "-12%",
+          "y": "0%",
+          "opacity": 0.22
+        },
+        "phone": {
+          "scale": 1.18,
+          "x": "-10%",
+          "y": "0%",
+          "opacity": 0.18
+        }
+      },
+      "provenance": {
+        "source": "User-provided official GW product image",
+        "originalPath": "sources/unit-images/user-provided-official-product-photo-corpuscarii.jpg",
+        "preparedPath": "sources/unit-images/corpuscarii-electro-priests-prepared.png"
+      }
+    },
+    "unit-hastarii-exterminators": {
+      "unitName": "Hastarii Exterminators",
+      "asset": "assets/unit-images/hastarii-exterminators.webp",
+      "original": "sources/unit-images/hastarii-exterminators-prepared.png",
+      "width": 934,
+      "height": 769,
+      "source": {
+        "productUrl": "https://www.warhammer.com/shop/adeptus-mechanicus-hastarii-2026",
+        "imageUrl": "https://assets.warhammer-community.com/sundaypreview-mar29-40k_10-hastarii-oteppql8yi.jpg",
+        "originalFilename": "warcom-hastarii-fusiliers-2026.jpg"
+      },
+      "processing": {
+        "sourceAlpha": true
+      },
+      "presentation": {
+        "mode": "background",
+        "desktop": {
+          "scale": 1.2,
+          "x": "-6%",
+          "y": "0%",
+          "opacity": 0.21
+        },
+        "phone": {
+          "scale": 1.08,
+          "x": "-5%",
+          "y": "0%",
+          "opacity": 0.18
+        }
+      },
+      "provenance": {
+        "productUrl": "https://www.warhammer-community.com/en-gb/articles/hd2ygsuz/defend-the-cadian-gate-with-the-archmagos-terminus-and-new-skitarii-heavies/",
+        "sourceImageUrl": "https://assets.warhammer-community.com/16-02_carousel1-pkftcqo1sx.png",
+        "originalPath": "sources/unit-images/hastarii-exterminators-official.png",
+        "preparedPath": "sources/unit-images/hastarii-exterminators-prepared.png"
+      }
+    },
+    "unit-kastelan-robots": {
+      "unitName": "Kastelan Robots",
+      "asset": "assets/unit-images/kastelan-robots.webp",
+      "original": "sources/unit-images/kastelan-robots-prepared.png",
+      "width": 550,
+      "height": 673,
+      "source": {
+        "productUrl": "User-provided official GW product image",
+        "imageUrl": "attachment:2.jpg",
+        "originalFilename": "user-provided-official-product-photo-kastelan.jpg"
+      },
+      "processing": {
+        "sourceAlpha": true
+      },
+      "presentation": {
+        "mode": "background",
+        "desktop": {
+          "scale": 1.35,
+          "x": "-10%",
+          "y": "3%",
+          "opacity": 0.23
+        },
+        "phone": {
+          "scale": 1.18,
+          "x": "-8%",
+          "y": "4%",
+          "opacity": 0.2
+        }
+      },
+      "provenance": {
+        "source": "User-provided official GW product image",
+        "originalPath": "sources/unit-images/user-provided-official-product-photo-kastelan.jpg",
+        "preparedPath": "sources/unit-images/kastelan-robots-prepared.png"
+      }
+    },
+    "unit-sydonian-dragoons-with-radium-jezzails": {
+      "unitName": "Sydonian Dragoons with Radium Jezzails",
+      "asset": "assets/unit-images/sydonian-dragoons-with-radium-jezzails.webp",
+      "original": "sources/unit-images/sydonian-dragoons-with-radium-jezzails-prepared.png",
+      "width": 606,
+      "height": 877,
+      "source": {
+        "productUrl": "https://www.warhammer.com/shop/Adeptus-Mechanicus-Sydonian-Dragoon-2017",
+        "imageUrl": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120116001_SydonianDragoon01.jpg",
+        "originalFilename": "99120116001_SydonianDragoon01.jpg"
+      },
+      "processing": {
+        "sourceAlpha": true
+      },
+      "presentation": {
+        "mode": "background",
+        "desktop": {
+          "scale": 1.3,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.22
+        },
+        "phone": {
+          "scale": 1.15,
+          "x": "-3%",
+          "y": "1%",
+          "opacity": 0.18
+        }
+      },
+      "provenance": {
+        "productUrl": "https://www.warhammer.com/",
+        "sourceImageUrl": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120116001_SydonianDragoon02.jpg",
+        "originalPath": "sources/unit-images/sydonian-dragoon-radium-jezzail-official.jpg",
+        "preparedPath": "sources/unit-images/sydonian-dragoons-with-radium-jezzails-prepared.png"
+      }
+    },
+    "unit-cybernetica-datasmith": {
+      "unitName": "Cybernetica Datasmith",
+      "asset": "assets/unit-images/cybernetica-datasmith.webp",
+      "original": "sources/unit-images/cybernetica-datasmith-prepared.png",
+      "width": 579,
+      "height": 697,
+      "source": {
+        "productUrl": "User-provided official GW product image",
+        "imageUrl": "attachment:1.jpg",
+        "originalFilename": "user-provided-official-product-photo-cybernetica-datasmith.jpg"
+      },
+      "processing": {
+        "sourceAlpha": true
+      },
+      "presentation": {
+        "mode": "background",
+        "desktop": {
+          "scale": 1.35,
+          "x": "-10%",
+          "y": "3%",
+          "opacity": 0.23
+        },
+        "phone": {
+          "scale": 1.18,
+          "x": "-8%",
+          "y": "4%",
+          "opacity": 0.2
+        }
+      },
+      "provenance": {
+        "source": "User-provided official GW product image",
+        "originalPath": "sources/unit-images/user-provided-official-product-photo-cybernetica-datasmith.jpg",
+        "preparedPath": "sources/unit-images/cybernetica-datasmith-prepared.png"
+      }
+    },
+    "unit-fulgurite-electro-priests": {
+      "unitName": "Fulgurite Electro-Priests",
+      "asset": "assets/unit-images/fulgurite-electro-priests.webp",
+      "original": "sources/unit-images/fulgurite-electro-priests-prepared.png",
+      "width": 716,
+      "height": 742,
+      "source": {
+        "productUrl": "User-provided official GW product image",
+        "imageUrl": "attachment:5.jpg",
+        "originalFilename": "user-provided-official-product-photo-fulgurite-electro-priests.jpg"
+      },
+      "processing": {
+        "sourceAlpha": true
+      },
+      "presentation": {
+        "mode": "background",
+        "desktop": {
+          "scale": 1.35,
+          "x": "-10%",
+          "y": "3%",
+          "opacity": 0.23
+        },
+        "phone": {
+          "scale": 1.18,
+          "x": "-8%",
+          "y": "4%",
+          "opacity": 0.2
+        }
+      },
+      "provenance": {
+        "source": "User-provided official GW product image",
+        "originalPath": "sources/unit-images/user-provided-official-product-photo-fulgurite-electro-priests.jpg",
+        "preparedPath": "sources/unit-images/fulgurite-electro-priests-prepared.png"
+      }
+    },
+    "unit-kataphron-breachers": {
+      "unitName": "Kataphron Breachers",
+      "asset": "assets/unit-images/kataphron-breachers.webp",
+      "original": "sources/unit-images/kataphron-breachers-prepared.png",
+      "width": 489,
+      "height": 443,
+      "source": {
+        "productUrl": "User-provided official GW product image",
+        "imageUrl": "attachment:3.jpg",
+        "originalFilename": "user-provided-official-product-photo-kataphron-breachers.jpg"
+      },
+      "processing": {
+        "sourceAlpha": true
+      },
+      "presentation": {
+        "mode": "background",
+        "desktop": {
+          "scale": 1.35,
+          "x": "-10%",
+          "y": "3%",
+          "opacity": 0.23
+        },
+        "phone": {
+          "scale": 1.18,
+          "x": "-8%",
+          "y": "4%",
+          "opacity": 0.2
+        }
+      },
+      "provenance": {
+        "source": "User-provided official GW product image",
+        "originalPath": "sources/unit-images/user-provided-official-product-photo-kataphron-breachers.jpg",
+        "preparedPath": "sources/unit-images/kataphron-breachers-prepared.png"
+      }
+    },
+    "unit-kataphron-destroyers": {
+      "unitName": "Kataphron Destroyers",
+      "asset": "assets/unit-images/kataphron-destroyers.webp",
+      "original": "sources/unit-images/kataphron-destroyers-prepared.png",
+      "width": 723,
+      "height": 360,
+      "source": {
+        "productUrl": "User-provided official GW product image",
+        "imageUrl": "attachment:10.jpg",
+        "originalFilename": "user-provided-official-product-photo-kataphron-destroyers.jpg"
+      },
+      "processing": {
+        "sourceAlpha": true
+      },
+      "presentation": {
+        "mode": "background",
+        "desktop": {
+          "scale": 1.35,
+          "x": "-10%",
+          "y": "3%",
+          "opacity": 0.23
+        },
+        "phone": {
+          "scale": 1.18,
+          "x": "-8%",
+          "y": "4%",
+          "opacity": 0.2
+        }
+      },
+      "provenance": {
+        "source": "User-provided official GW product image",
+        "originalPath": "sources/unit-images/user-provided-official-product-photo-kataphron-destroyers.jpg",
+        "preparedPath": "sources/unit-images/kataphron-destroyers-prepared.png"
+      }
     }
   }
 }

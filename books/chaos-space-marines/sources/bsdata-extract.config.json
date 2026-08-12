@@ -3,6 +3,16 @@
   "faction": {
     "id": "chaos-space-marines",
     "title": "Chaos Space Marines",
+    "classifyAbilities": true,
+    "factionAbilities": [
+      "Dark Pacts"
+    ],
+    "nonWargearAbilityBranches": [
+      "Mark of Chaos",
+      "Chaos Boons",
+      "Crusade",
+      "Battle Honours"
+    ],
     "leaderRelationOverrides": [
       "Traitor Enforcer",
       "Masters of the Maelstrom"

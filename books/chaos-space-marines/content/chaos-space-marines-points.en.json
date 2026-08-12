@@ -10,7 +10,7 @@
     "officialMfm": {
       "version": "v1.2",
       "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-      "verifiedAt": "2026-08-11"
+      "verifiedAt": "2026-08-12"
     }
   },
   "units": [
@@ -22,16 +22,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 295,
           "minModels": 1,
-          "value": 295
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -41,37 +41,41 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "8 models",
-          "maxModels": 8,
+          "label": "1st-2nd unit · 8 models",
+          "value": 90,
           "minModels": 8,
-          "value": 90
-        },
-        {
-          "label": "16 models",
-          "maxModels": 16,
-          "minModels": 16,
-          "value": 195
-        },
-        {
-          "label": "3+ unit: 8 models",
           "maxModels": 8,
-          "minCopies": 3,
-          "minModels": 8,
-          "value": 110
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 16 models",
-          "maxModels": 16,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 16 models",
+          "value": 195,
           "minModels": 16,
-          "value": 215
+          "maxModels": 16,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 8 models",
+          "value": 110,
+          "minModels": 8,
+          "maxModels": 8,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 16 models",
+          "value": 215,
+          "minModels": 16,
+          "maxModels": 16,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -112,22 +116,22 @@
       "points": [
         {
           "label": "3 models",
-          "maxModels": 3,
+          "value": 70,
           "minModels": 3,
-          "value": 70
+          "maxModels": 3
         },
         {
           "label": "6 models",
-          "maxModels": 6,
+          "value": 130,
           "minModels": 6,
-          "value": 130
+          "maxModels": 6
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -152,18 +156,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3rd + unit · 1 model",
-          "maxModels": 1,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 1 model",
+          "value": 220,
           "minModels": 1,
-          "value": 240
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 240,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -174,16 +186,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 90,
           "minModels": 1,
-          "value": 90
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -194,16 +206,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 85,
           "minModels": 1,
-          "value": 85
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -289,16 +301,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 80,
           "minModels": 1,
-          "value": 80
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -308,18 +320,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3rd + unit · 1 model",
-          "maxModels": 1,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 1 model",
+          "value": 145,
           "minModels": 1,
-          "value": 155
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 155,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -329,18 +349,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3rd + unit · 1 model",
-          "maxModels": 1,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 1 model",
+          "value": 150,
           "minModels": 1,
-          "value": 160
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -350,18 +378,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "4th + unit · 1 model",
-          "maxModels": 1,
-          "minCopies": 4,
+          "label": "1st-3rd unit · 1 model",
+          "value": 65,
           "minModels": 1,
-          "value": 75
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 3
+        },
+        {
+          "label": "4th + unit · 1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 4
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -372,16 +408,16 @@
       "points": [
         {
           "label": "2 models",
-          "maxModels": 2,
+          "value": 60,
           "minModels": 2,
-          "value": 60
+          "maxModels": 2
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -392,22 +428,22 @@
       "points": [
         {
           "label": "5 models",
-          "maxModels": 5,
+          "value": 175,
           "minModels": 5,
-          "value": 175
+          "maxModels": 5
         },
         {
           "label": "10 models",
-          "maxModels": 10,
+          "value": 350,
           "minModels": 10,
-          "value": 350
+          "maxModels": 10
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -432,18 +468,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3rd + unit · 1 model",
-          "maxModels": 1,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 1 model",
+          "value": 185,
           "minModels": 1,
-          "value": 195
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 195,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -453,37 +497,41 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
-          "maxModels": 5,
+          "label": "1st-2nd unit · 5 models",
+          "value": 135,
           "minModels": 5,
-          "value": 135
-        },
-        {
-          "label": "10 models",
-          "maxModels": 10,
-          "minModels": 10,
-          "value": 270
-        },
-        {
-          "label": "3+ unit: 5 models",
           "maxModels": 5,
-          "minCopies": 3,
-          "minModels": 5,
-          "value": 145
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 10 models",
-          "maxModels": 10,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 10 models",
+          "value": 270,
           "minModels": 10,
-          "value": 280
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 145,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 280,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -493,18 +541,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3rd + unit · 1 model",
-          "maxModels": 1,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 1 model",
+          "value": 45,
           "minModels": 1,
-          "value": 50
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 50,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -515,22 +571,22 @@
       "points": [
         {
           "label": "10 models",
-          "maxModels": 10,
+          "value": 50,
           "minModels": 10,
-          "value": 50
+          "maxModels": 10
         },
         {
           "label": "20 models",
-          "maxModels": 20,
+          "value": 90,
           "minModels": 20,
-          "value": 90
+          "maxModels": 20
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -562,16 +618,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 90,
           "minModels": 1,
-          "value": 90
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -582,16 +638,16 @@
       "points": [
         {
           "label": "3 models",
-          "maxModels": 3,
+          "value": 65,
           "minModels": 3,
-          "value": 65
+          "maxModels": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -601,18 +657,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3rd + unit · 5 models",
-          "maxModels": 5,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 5 models",
+          "value": 90,
           "minModels": 5,
-          "value": 100
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 100,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -638,36 +702,36 @@
       "points": [
         {
           "label": "1st unit · 1 model",
-          "maxCopies": 1,
+          "value": 300,
+          "minModels": 1,
           "maxModels": 1,
           "minCopies": 1,
-          "minModels": 1,
-          "value": 300
+          "maxCopies": 1
         },
         {
           "label": "2nd + unit · 1 model",
-          "maxModels": 1,
-          "minCopies": 2,
+          "value": 340,
           "minModels": 1,
-          "value": 340
+          "maxModels": 1,
+          "minCopies": 2
         }
       ],
       "paidWargear": [
         {
-          "modifiers": [],
           "name": "Heavy reaper autocannon",
-          "value": 15
+          "value": 15,
+          "modifiers": []
         },
         {
-          "modifiers": [],
           "name": "Hades lascannon",
-          "value": 15
+          "value": 15,
+          "modifiers": []
         }
       ],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -723,16 +787,16 @@
       "points": [
         {
           "label": "2 models",
-          "maxModels": 2,
+          "value": 100,
           "minModels": 2,
-          "value": 100
+          "maxModels": 2
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -773,16 +837,16 @@
       "points": [
         {
           "label": "10 models",
-          "maxModels": 10,
+          "value": 60,
           "minModels": 10,
-          "value": 60
+          "maxModels": 10
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -807,24 +871,32 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3rd + unit · 1 model",
-          "maxModels": 1,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 1 model",
+          "value": 160,
           "minModels": 1,
-          "value": 170
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 170,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
       "paidWargear": [
         {
-          "modifiers": [],
           "name": "Ectoplasma cannon",
-          "value": 5
+          "value": 5,
+          "modifiers": []
         }
       ],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -880,16 +952,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 90,
           "minModels": 1,
-          "value": 90
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -899,18 +971,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3rd + unit · 5 models",
-          "maxModels": 5,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 5 models",
+          "value": 125,
           "minModels": 5,
-          "value": 135
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 135,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -921,16 +1001,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 130,
           "minModels": 1,
-          "value": 130
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -941,16 +1021,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 175,
           "minModels": 1,
-          "value": 175
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -991,16 +1071,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 165,
           "minModels": 1,
-          "value": 165
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1011,16 +1091,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 180,
           "minModels": 1,
-          "value": 180
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1031,16 +1111,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 130,
           "minModels": 1,
-          "value": 130
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1066,25 +1146,25 @@
       "points": [
         {
           "label": "1st unit · 1 model",
-          "maxCopies": 1,
+          "value": 450,
+          "minModels": 1,
           "maxModels": 1,
           "minCopies": 1,
-          "minModels": 1,
-          "value": 450
+          "maxCopies": 1
         },
         {
           "label": "2nd + unit · 1 model",
-          "maxModels": 1,
-          "minCopies": 2,
+          "value": 475,
           "minModels": 1,
-          "value": 475
+          "maxModels": 1,
+          "minCopies": 2
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1110,16 +1190,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 120,
           "minModels": 1,
-          "value": 120
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1175,22 +1255,22 @@
       "points": [
         {
           "label": "5 models",
-          "maxModels": 5,
+          "value": 90,
           "minModels": 5,
-          "value": 90
+          "maxModels": 5
         },
         {
           "label": "10 models",
-          "maxModels": 10,
+          "value": 170,
           "minModels": 10,
-          "value": 170
+          "maxModels": 10
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1216,16 +1296,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 160,
           "minModels": 1,
-          "value": 160
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1236,16 +1316,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 70,
           "minModels": 1,
-          "value": 70
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1256,16 +1336,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 60,
           "minModels": 1,
-          "value": 60
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1276,16 +1356,16 @@
       "points": [
         {
           "label": "5 models",
-          "maxModels": 5,
+          "value": 145,
           "minModels": 5,
-          "value": 145
+          "maxModels": 5
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1311,16 +1391,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 130,
           "minModels": 1,
-          "value": 130
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1330,18 +1410,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3rd + unit · 3 models",
-          "maxModels": 3,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 3 models",
+          "value": 165,
           "minModels": 3,
-          "value": 175
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 3 models",
+          "value": 175,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1382,22 +1470,22 @@
       "points": [
         {
           "label": "5 models",
-          "maxModels": 5,
+          "value": 100,
           "minModels": 5,
-          "value": 100
+          "maxModels": 5
         },
         {
           "label": "10 models",
-          "maxModels": 10,
+          "value": 180,
           "minModels": 10,
-          "value": 180
+          "maxModels": 10
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1408,16 +1496,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 125,
           "minModels": 1,
-          "value": 125
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1427,24 +1515,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "2 models",
-          "maxModels": 2,
+          "label": "1st-2nd unit · 2 models",
+          "value": 160,
           "minModels": 2,
-          "value": 160
+          "maxModels": 2,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 2 models",
-          "maxModels": 2,
-          "minCopies": 3,
+          "label": "3rd + unit · 2 models",
+          "value": 170,
           "minModels": 2,
-          "value": 170
+          "maxModels": 2,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1454,37 +1544,41 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
-          "maxModels": 5,
+          "label": "1st-2nd unit · 5 models",
+          "value": 120,
           "minModels": 5,
-          "value": 120
-        },
-        {
-          "label": "10 models",
-          "maxModels": 10,
-          "minModels": 10,
-          "value": 250
-        },
-        {
-          "label": "3+ unit: 5 models",
           "maxModels": 5,
-          "minCopies": 3,
-          "minModels": 5,
-          "value": 130
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 10 models",
-          "maxModels": 10,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 10 models",
+          "value": 250,
           "minModels": 10,
-          "value": 260
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 130,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 260,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1509,37 +1603,41 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
-          "maxModels": 5,
+          "label": "1st-2nd unit · 5 models",
+          "value": 110,
           "minModels": 5,
-          "value": 110
-        },
-        {
-          "label": "10 models",
-          "maxModels": 10,
-          "minModels": 10,
-          "value": 210
-        },
-        {
-          "label": "3+ unit: 5 models",
           "maxModels": 5,
-          "minCopies": 3,
-          "minModels": 5,
-          "value": 120
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 10 models",
-          "maxModels": 10,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 10 models",
+          "value": 210,
           "minModels": 10,
-          "value": 220
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 120,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 220,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1549,37 +1647,41 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
-          "maxModels": 5,
+          "label": "1st-2nd unit · 5 models",
+          "value": 110,
           "minModels": 5,
-          "value": 110
-        },
-        {
-          "label": "10 models",
-          "maxModels": 10,
-          "minModels": 10,
-          "value": 210
-        },
-        {
-          "label": "3+ unit: 5 models",
           "maxModels": 5,
-          "minCopies": 3,
-          "minModels": 5,
-          "value": 120
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 10 models",
-          "maxModels": 10,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 10 models",
+          "value": 210,
           "minModels": 10,
-          "value": 220
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 120,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 220,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1590,16 +1692,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 60,
           "minModels": 1,
-          "value": 60
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1781,16 +1883,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 60,
           "minModels": 1,
-          "value": 60
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1801,16 +1903,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 80,
           "minModels": 1,
-          "value": 80
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1926,16 +2028,16 @@
       "points": [
         {
           "label": "2 models",
-          "maxModels": 2,
+          "value": 70,
           "minModels": 2,
-          "value": 70
+          "maxModels": 2
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1946,16 +2048,16 @@
       "points": [
         {
           "label": "10 models",
-          "maxModels": 10,
+          "value": 70,
           "minModels": 10,
-          "value": 70
+          "maxModels": 10
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -1981,16 +2083,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 220,
           "minModels": 1,
-          "value": 220
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2000,18 +2102,26 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "3rd + unit · 1 model",
-          "maxModels": 1,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 1 model",
+          "value": 120,
           "minModels": 1,
-          "value": 130
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 1 model",
+          "value": 130,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2021,37 +2131,41 @@
       "sourceLayer": "codex",
       "points": [
         {
-          "label": "5 models",
-          "maxModels": 5,
+          "label": "1st-2nd unit · 5 models",
+          "value": 125,
           "minModels": 5,
-          "value": 125
-        },
-        {
-          "label": "10 models",
-          "maxModels": 10,
-          "minModels": 10,
-          "value": 280
-        },
-        {
-          "label": "3+ unit: 5 models",
           "maxModels": 5,
-          "minCopies": 3,
-          "minModels": 5,
-          "value": 135
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 10 models",
-          "maxModels": 10,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 10 models",
+          "value": 280,
           "minModels": 10,
-          "value": 290
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 135,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 290,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2062,16 +2176,16 @@
       "points": [
         {
           "label": "1 model",
-          "maxModels": 1,
+          "value": 60,
           "minModels": 1,
-          "value": 60
+          "maxModels": 1
         }
       ],
       "paidWargear": [],
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2116,7 +2230,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2129,7 +2243,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2142,7 +2256,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2155,7 +2269,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2168,7 +2282,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2181,7 +2295,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2194,7 +2308,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2207,7 +2321,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2220,7 +2334,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2233,7 +2347,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2246,7 +2360,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2259,7 +2373,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2272,7 +2386,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2285,7 +2399,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2298,7 +2412,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2311,7 +2425,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2324,7 +2438,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2337,7 +2451,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2350,7 +2464,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2363,7 +2477,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2376,7 +2490,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2389,7 +2503,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2402,7 +2516,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2415,7 +2529,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2428,7 +2542,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2441,7 +2555,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2454,7 +2568,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2467,7 +2581,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2480,7 +2594,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2493,7 +2607,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2506,7 +2620,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2519,7 +2633,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2532,7 +2646,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2545,7 +2659,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2558,7 +2672,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2571,7 +2685,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2584,7 +2698,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2597,7 +2711,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2610,7 +2724,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2623,7 +2737,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2636,7 +2750,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2649,7 +2763,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2662,7 +2776,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2675,7 +2789,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2688,7 +2802,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2701,7 +2815,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2714,7 +2828,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2727,7 +2841,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2740,7 +2854,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2753,7 +2867,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2766,7 +2880,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2779,7 +2893,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2792,7 +2906,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2805,7 +2919,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2818,7 +2932,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2831,7 +2945,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2844,7 +2958,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2857,7 +2971,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2870,7 +2984,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2883,7 +2997,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2896,7 +3010,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     },
     {
@@ -2909,7 +3023,7 @@
       "pointsSource": {
         "label": "Official MFM v1.2",
         "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",
-        "verifiedAt": "2026-08-11"
+        "verifiedAt": "2026-08-12"
       }
     }
   ],
@@ -2919,89 +3033,89 @@
   },
   "detachments": [
     {
-      "detachmentPoints": 1,
+      "title": "Cabal of Chaos",
       "forceDisposition": "DISRUPTION",
-      "title": "Cabal of Chaos"
+      "detachmentPoints": 1
     },
     {
-      "detachmentPoints": 2,
+      "title": "Chaos Cult",
       "forceDisposition": "PRIORITY ASSETS",
-      "title": "Chaos Cult"
+      "detachmentPoints": 2
     },
     {
-      "detachmentPoints": 3,
+      "title": "Creations of Bile",
       "forceDisposition": "PURGE THE FOE",
-      "title": "Creations of Bile"
+      "detachmentPoints": 3
     },
     {
-      "detachmentPoints": 2,
+      "title": "Cult of the Arkifane",
       "forceDisposition": "PRIORITY ASSETS",
-      "title": "Cult of the Arkifane"
+      "detachmentPoints": 2
     },
     {
-      "detachmentPoints": 2,
+      "title": "Deceptors",
       "forceDisposition": "DISRUPTION",
-      "title": "Deceptors"
+      "detachmentPoints": 2
     },
     {
-      "detachmentPoints": 1,
+      "title": "Devotees of Destruction",
       "forceDisposition": "PRIORITY ASSETS",
-      "title": "Devotees of Destruction"
+      "detachmentPoints": 1
     },
     {
-      "detachmentPoints": 2,
+      "title": "Dread Talons",
       "forceDisposition": "DISRUPTION",
-      "title": "Dread Talons"
+      "detachmentPoints": 2
     },
     {
-      "detachmentPoints": 2,
+      "title": "Fellhammer Siege-host",
       "forceDisposition": "TAKE AND HOLD",
-      "title": "Fellhammer Siege-host"
+      "detachmentPoints": 2
     },
     {
-      "detachmentPoints": 3,
+      "title": "HURON’S MARAUDERS",
       "forceDisposition": "DISRUPTION",
-      "title": "HURON’S MARAUDERS"
+      "detachmentPoints": 3
     },
     {
-      "detachmentPoints": 1,
+      "title": "Murdertalon Raiders",
       "forceDisposition": "RECONNAISSANCE",
-      "title": "Murdertalon Raiders"
+      "detachmentPoints": 1
     },
     {
-      "detachmentPoints": 2,
+      "title": "Nightmare Hunt",
       "forceDisposition": "DISRUPTION",
-      "title": "Nightmare Hunt"
+      "detachmentPoints": 2
     },
     {
-      "detachmentPoints": 3,
+      "title": "Pactbound Zealots",
       "forceDisposition": "PRIORITY ASSETS",
-      "title": "Pactbound Zealots"
+      "detachmentPoints": 3
     },
     {
-      "detachmentPoints": 3,
+      "title": "Renegade Raiders",
       "forceDisposition": "RECONNAISSANCE",
-      "title": "Renegade Raiders"
+      "detachmentPoints": 3
     },
     {
-      "detachmentPoints": 2,
+      "title": "Renegade Warband",
       "forceDisposition": "PRIORITY ASSETS",
-      "title": "Renegade Warband"
+      "detachmentPoints": 2
     },
     {
-      "detachmentPoints": 2,
+      "title": "Soulforged Warpack",
       "forceDisposition": "TAKE AND HOLD",
-      "title": "Soulforged Warpack"
+      "detachmentPoints": 2
     },
     {
-      "detachmentPoints": 2,
+      "title": "Veterans of the Long War",
       "forceDisposition": "TAKE AND HOLD",
-      "title": "Veterans of the Long War"
+      "detachmentPoints": 2
     },
     {
-      "detachmentPoints": 2,
+      "title": "Warpstrike Champions",
       "forceDisposition": "DISRUPTION",
-      "title": "Warpstrike Champions"
+      "detachmentPoints": 2
     }
   ]
 }

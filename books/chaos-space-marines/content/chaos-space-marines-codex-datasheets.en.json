@@ -3905,30 +3905,34 @@
       "category": "Infantry",
       "points": [
         {
-          "label": "8 models",
-          "maxModels": 8,
+          "label": "1st-2nd unit · 8 models",
+          "value": 90,
           "minModels": 8,
-          "value": 90
-        },
-        {
-          "label": "16 models",
-          "maxModels": 16,
-          "minModels": 16,
-          "value": 195
-        },
-        {
-          "label": "3+ unit: 8 models",
           "maxModels": 8,
-          "minCopies": 3,
-          "minModels": 8,
-          "value": 110
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 16 models",
-          "maxModels": 16,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 16 models",
+          "value": 195,
           "minModels": 16,
-          "value": 215
+          "maxModels": 16,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 8 models",
+          "value": 110,
+          "minModels": 8,
+          "maxModels": 8,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 16 models",
+          "value": 215,
+          "minModels": 16,
+          "maxModels": 16,
+          "minCopies": 3
         }
       ],
       "profiles": [
@@ -4239,30 +4243,34 @@
       "category": "Infantry",
       "points": [
         {
-          "label": "5 models",
-          "maxModels": 5,
+          "label": "1st-2nd unit · 5 models",
+          "value": 135,
           "minModels": 5,
-          "value": 135
-        },
-        {
-          "label": "10 models",
-          "maxModels": 10,
-          "minModels": 10,
-          "value": 270
-        },
-        {
-          "label": "3+ unit: 5 models",
           "maxModels": 5,
-          "minCopies": 3,
-          "minModels": 5,
-          "value": 145
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 10 models",
-          "maxModels": 10,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 10 models",
+          "value": 270,
           "minModels": 10,
-          "value": 280
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 145,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 280,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
       "profiles": [
@@ -5315,17 +5323,19 @@
       "category": "Infantry",
       "points": [
         {
-          "label": "2 models",
-          "maxModels": 2,
+          "label": "1st-2nd unit · 2 models",
+          "value": 160,
           "minModels": 2,
-          "value": 160
+          "maxModels": 2,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 2 models",
-          "maxModels": 2,
-          "minCopies": 3,
+          "label": "3rd + unit · 2 models",
+          "value": 170,
           "minModels": 2,
-          "value": 170
+          "maxModels": 2,
+          "minCopies": 3
         }
       ],
       "profiles": [
@@ -5439,30 +5449,34 @@
       "category": "Infantry",
       "points": [
         {
-          "label": "5 models",
-          "maxModels": 5,
+          "label": "1st-2nd unit · 5 models",
+          "value": 120,
           "minModels": 5,
-          "value": 120
-        },
-        {
-          "label": "10 models",
-          "maxModels": 10,
-          "minModels": 10,
-          "value": 250
-        },
-        {
-          "label": "3+ unit: 5 models",
           "maxModels": 5,
-          "minCopies": 3,
-          "minModels": 5,
-          "value": 130
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 10 models",
-          "maxModels": 10,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 10 models",
+          "value": 250,
           "minModels": 10,
-          "value": 260
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 130,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 260,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
       "profiles": [
@@ -5543,30 +5557,34 @@
       "category": "Infantry",
       "points": [
         {
-          "label": "5 models",
-          "maxModels": 5,
+          "label": "1st-2nd unit · 5 models",
+          "value": 110,
           "minModels": 5,
-          "value": 110
-        },
-        {
-          "label": "10 models",
-          "maxModels": 10,
-          "minModels": 10,
-          "value": 210
-        },
-        {
-          "label": "3+ unit: 5 models",
           "maxModels": 5,
-          "minCopies": 3,
-          "minModels": 5,
-          "value": 120
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 10 models",
-          "maxModels": 10,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 10 models",
+          "value": 210,
           "minModels": 10,
-          "value": 220
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 120,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 220,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
       "profiles": [
@@ -5798,30 +5816,34 @@
       "category": "Infantry",
       "points": [
         {
-          "label": "5 models",
-          "maxModels": 5,
+          "label": "1st-2nd unit · 5 models",
+          "value": 110,
           "minModels": 5,
-          "value": 110
-        },
-        {
-          "label": "10 models",
-          "maxModels": 10,
-          "minModels": 10,
-          "value": 210
-        },
-        {
-          "label": "3+ unit: 5 models",
           "maxModels": 5,
-          "minCopies": 3,
-          "minModels": 5,
-          "value": 120
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 10 models",
-          "maxModels": 10,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 10 models",
+          "value": 210,
           "minModels": 10,
-          "value": 220
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 120,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 220,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
       "profiles": [
@@ -6200,30 +6222,34 @@
       "category": "Infantry",
       "points": [
         {
-          "label": "5 models",
-          "maxModels": 5,
+          "label": "1st-2nd unit · 5 models",
+          "value": 125,
           "minModels": 5,
-          "value": 125
-        },
-        {
-          "label": "10 models",
-          "maxModels": 10,
-          "minModels": 10,
-          "value": 280
-        },
-        {
-          "label": "3+ unit: 5 models",
           "maxModels": 5,
-          "minCopies": 3,
-          "minModels": 5,
-          "value": 135
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 10 models",
-          "maxModels": 10,
-          "minCopies": 3,
+          "label": "1st-2nd unit · 10 models",
+          "value": 280,
           "minModels": 10,
-          "value": 290
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + unit · 5 models",
+          "value": 135,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + unit · 10 models",
+          "value": 290,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
       "profiles": [

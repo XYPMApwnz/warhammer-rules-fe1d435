@@ -46,7 +46,31 @@ const csmRelated=read('books/chaos-space-marines/content/chaos-space-marines-rel
 const csmMfm=read('books/chaos-space-marines/sources/official-mfm-v1.2.json');
 const csmReader=fs.readFileSync(path.join(root,'books/chaos-space-marines/reader.html'),'utf8');
 expect(csmPack.meta?.version==='1.1'&&csmPack.meta?.sha256==='407DD6F175A7C27E0CB20BC95F68675AB0F9250883F08660CD2F16EF6D9F4998','chaos-space-marines: current official Faction Pack v1.1 provenance mismatch');
-expect(csmMfm.version==='v1.2'&&csmMfm.verifiedUnits?.length===54&&csmMfm.detachments?.length===17&&csmMfm.enhancements?.length===62,'chaos-space-marines: official MFM v1.2 capture inventory mismatch');
+const normalizeHashPayload=value=>Array.isArray(value)?value.map(normalizeHashPayload):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(key=>[key,normalizeHashPayload(value[key])])):value;
+const csmMfmPayload=Object.fromEntries(csmMfm.hashModel.fields.map(field=>[field,csmMfm[field]]));
+const csmMfmDigest=crypto.createHash('sha256').update(JSON.stringify(normalizeHashPayload(csmMfmPayload)),'utf8').digest('hex').toUpperCase();
+expect(csmMfm.version==='v1.2'&&csmMfm.counts?.units===54&&csmMfm.counts?.unitPointSchedules===91&&csmMfm.counts?.pricedOptions===3&&csmMfm.counts?.detachments===17&&csmMfm.counts?.enhancements===62,'chaos-space-marines: official MFM v1.2 capture inventory mismatch');
+expect(csmMfm.captureSha256===csmMfmDigest&&csmMfm.hashModel?.scope==='normalizedPayload','chaos-space-marines: MFM normalized payload hash mismatch');
+expect(csmMfm.unitOverrides.length===54&&csmMfm.unitOverrides.every(item=>item.points.length),'chaos-space-marines: current unit schedules are not fully represented');
+expect(csmMfm.unitOverrides.reduce((sum,item)=>sum+item.points.length,0)===91,'chaos-space-marines: expected all 91 current MFM unit schedule rows');
+expect(csmMfm.unitOverrides.reduce((sum,item)=>sum+(item.paidWargear?.length||0),0)===3,'chaos-space-marines: expected all three current MFM priced options');
+const csmTypes=new Map([
+  ['Warpstrike Champions|Empyric Dislocation','battle-tactic'],['Warpstrike Champions|Warp-tainted','strategic-ploy'],['Warpstrike Champions|Armour of Corruption','strategic-ploy'],['Warpstrike Champions|Siegebreaker Strike','strategic-ploy'],['Warpstrike Champions|Warp Flicker','strategic-ploy'],['Warpstrike Champions|Portal of Spite','battle-tactic'],
+  ['Cult of the Arkifane|Touch of the Arkifane','battle-tactic'],['Cult of the Arkifane|Biomechanoid Regeneration','epic-deed'],['Cult of the Arkifane|Balefire Boon','battle-tactic'],['Cult of the Arkifane|Forge-fire Surge','strategic-ploy'],['Cult of the Arkifane|Soul-tally Offering','battle-tactic'],['Cult of the Arkifane|Unholy Fortitude','strategic-ploy'],
+  ['Creations of Bile|Monstrous Visages','strategic-ploy'],['Creations of Bile|Delayed Mutations','strategic-ploy'],['Creations of Bile|Masters Are Watching','strategic-ploy'],['Creations of Bile|Diabolic Regeneration','strategic-ploy'],['Creations of Bile|Specimens for the Spider','strategic-ploy'],['Creations of Bile|Autostimulants','strategic-ploy'],
+  ['Huron’s Marauders|Hardened Killers','battle-tactic'],['Huron’s Marauders|Reavers’ Flurry','battle-tactic'],['Huron’s Marauders|At the Tyrant’s Command','strategic-ploy'],['Huron’s Marauders|To the Favoured the Spoils','strategic-ploy'],['Huron’s Marauders|Seize the Prize','battle-tactic'],['Huron’s Marauders|Encircling Surge','strategic-ploy'],
+  ['Renegade Warband|Never Outgunned','epic-deed'],['Renegade Warband|Renegade Claim','strategic-ploy'],['Renegade Warband|Vengeful Destruction','battle-tactic'],['Renegade Warband|Corrupted Munitions','battle-tactic'],['Renegade Warband|Undying Hatred','strategic-ploy'],['Renegade Warband|Reavers’ Reaction','strategic-ploy']
+]);
+const csmStratagems=csmPack.detachments.flatMap(detachment=>detachment.stratagems.map(item=>({detachment,item})));
+expect(csmTypes.size===30&&csmStratagems.filter(({detachment,item})=>item.typeStatus==='confirmed'&&csmTypes.get(`${detachment.title}|${item.title}`)===item.canonicalType).length===30,'chaos-space-marines: source-confirmed canonical Stratagem types mismatch');
+expect(csmStratagems.filter(({item})=>item.typeStatus==='source-untyped'&&item.canonicalType===null&&item.sourceLabel==='Type unverified').length===15,'chaos-space-marines: source-untyped Stratagems received invented types');
+for(const {detachment,item} of csmStratagems){
+  const phone=fs.readFileSync(path.join(root,'books/chaos-space-marines/mobile',`${detachment.id}.html`),'utf8');
+  const expected=item.typeStatus==='confirmed'?`data-stratagem-type="${item.canonicalType}"`:'data-stratagem-type="source-untyped"';
+  const cardPattern=new RegExp(`<article class="stratagem surface" data-rule-id="${item.id}"[^>]*${expected}`);
+  expect(cardPattern.test(csmReader),`chaos-space-marines: Desktop type presentation missing ${detachment.title} / ${item.title}`);
+  expect(cardPattern.test(phone),`chaos-space-marines: Phone type presentation missing ${detachment.title} / ${item.title}`);
+}
 expect(new Set(csmPoints.enhancements.map(item=>`${item.detachment}|${item.title}`)).size===62,'chaos-space-marines: detachment-qualified Enhancement identity collision');
 for(const title of ['Khorne Berzerkers','Noise Marines','Plague Marines','Rubric Marines','Cerberus','Fellblade','Leviathan Dreadnought','Mastodon'])expect(!csmCodex.datasheets.some(item=>item.title===title),`chaos-space-marines: ${title} must not appear in the current Datasheets inventory`);
 const csmCurrentIds=new Set(csmCodex.datasheets.map(item=>item.id));
@@ -56,10 +80,10 @@ expect(csmRelatedIds.every(id=>csmCurrentIds.has(id)),'chaos-space-marines: Comp
 const csmByTitle=new Map(csmCodex.datasheets.map(item=>[item.title,item]));
 expect(csmCodex.datasheets.some(unit=>unit.abilities?.some(item=>item.title==='Dark Pacts'&&item.text.includes('make a Dark Pact'))),'chaos-space-marines: frozen Datasheet evidence is missing Dark Pacts');
 expect(csmReader.includes('<section class="content-group" id="army-rule-dark-pacts"'),'chaos-space-marines: Dark Pacts is absent from the rendered Army Rules section');
-for(const [leader,targets] of [['Traitor Enforcer',['TRAITOR GUARDSMEN SQUAD']],['Masters of the Maelstrom',['CHOSEN','LEGIONARIES','RED CORSAIRS RAIDERS']]]){
+for(const [leader,role,targets] of [['Traitor Enforcer','leader',['TRAITOR GUARDSMEN SQUAD']],['Masters of the Maelstrom','support',['CHOSEN','LEGIONARIES','RED CORSAIRS RAIDERS']]]){
   const unit=csmByTitle.get(leader);
   for(const target of targets){
-    expect(unit?.relations?.leader?.includes(target),`chaos-space-marines: ${leader} missing frozen Leader destination ${target}`);
+    expect(unit?.relations?.[role]?.includes(target),`chaos-space-marines: ${leader} missing frozen ${role} destination ${target}`);
     const targetId=[...csmByTitle.values()].find(item=>item.title.toUpperCase()===target)?.id;
     expect(targetId&&csmReader.includes(`data-journey-target="${targetId}"`),`chaos-space-marines: ${leader} Leader destination ${target} is not clickable`);
   }

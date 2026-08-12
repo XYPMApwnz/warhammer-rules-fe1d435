@@ -227,6 +227,14 @@ def stratagem_fields(body: str) -> dict:
     return fields
 
 
+def stratagem_type(body: str) -> dict:
+    match = re.search(r"\b(BATTLE TACTIC|STRATEGIC PLOY|EPIC DEED|WARGEAR) STRATAGEM\b", body, re.I)
+    if not match:
+        return {"canonicalType": None, "typeStatus": "source-untyped", "sourceLabel": "Type unverified"}
+    label = match.group(1).title()
+    return {"canonicalType": slug(label), "typeStatus": "confirmed", "sourceLabel": f"{label} Stratagem"}
+
+
 def detachment_columns(page_number: int, pages) -> tuple[str, str, list[str]]:
     page = pages[page_number - 1]
     if page_number <= 4:
@@ -261,7 +269,7 @@ def extract_detachments(pages) -> list[dict]:
                 raise ValueError(f"Incomplete Stratagem fields: {spec['title']} / {item['title']}")
             base_id = slug(item["title"])
             stratagem_id = f"{slug(spec['title'])}-{base_id}" if STRATAGEM_NAME_COUNTS[base_id] > 1 else base_id
-            stratagems.append(sourced({"id": stratagem_id, "title": item["title"], "cp": item["cp"], **fields}, [strat_page]))
+            stratagems.append(sourced({"id": stratagem_id, "title": item["title"], "cp": item["cp"], **stratagem_type(strat_blocks[item["title"]]), **fields}, [strat_page]))
         output.append(sourced({
             "id": slug(spec["title"]), "title": spec["title"],
             "rule": sourced({"title": spec["rule"], "text": left_blocks[spec["rule"]]}, [spec["page"]]),
@@ -362,6 +370,10 @@ def validate(data: dict) -> list[str]:
     stratagems = [stratagem for detachment in data.get("detachments", []) for stratagem in detachment.get("stratagems", [])]
     if len(stratagems) != 45:
         errors.append("expected 45 Faction Pack Stratagems")
+    if len([item for item in stratagems if item.get("typeStatus") == "confirmed"]) != 30:
+        errors.append("expected 30 source-confirmed Stratagem types")
+    if len([item for item in stratagems if item.get("typeStatus") == "source-untyped" and item.get("canonicalType") is None]) != 15:
+        errors.append("expected 15 source-untyped Stratagems")
     for stratagem in stratagems:
         for field in ("when", "target", "effect"):
             if not stratagem.get(field):

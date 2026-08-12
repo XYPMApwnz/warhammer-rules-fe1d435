@@ -87,7 +87,8 @@
       "title": "Chaos Rhino",
       "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Chaos-Rhino",
       "wargear": [
-        "This model can be equipped with one of the following:\n1 combi-bolter\n1 combi-weapon"
+        "This model can be equipped with one of the following:\n1 combi-bolter\n1 combi-weapon",
+        "This model can be equipped with 1 havoc launcher or can replace 1 combi-bolter with 1 havoc launcher."
       ]
     },
     {
@@ -158,7 +159,17 @@
       "title": "Havocs",
       "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Havocs",
       "wargear": [
+        "The Havoc Champion’s Astartes chainsword can be replaced with one of the following:\n1 accursed weapon\n1 power fist",
+        "The Havoc Champion’s flamer can be replaced with one of the following:\n1 boltgun\n1 meltagun\n1 plasma gun\n1 plasma pistol\n1 accursed weapon\n1 power fist",
         "Any number of Havocs can each have their Havoc autocannon or Havoc lascannon replaced with one of the following:\n1 Havoc autocannon\n1 Havoc heavy bolter\n1 Havoc lascannon\n1 Havoc missile launcher\n1 Havoc reaper chaincannon"
+      ]
+    },
+    {
+      "title": "Helbrute",
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Helbrute",
+      "wargear": [
+        "This model’s multi-melta can be replaced with one of the following:\n1 Helbrute plasma cannon\n1 twin autocannon\n1 twin heavy bolter\n1 twin lascannon\n1 Helbrute fist",
+        "This model’s missile launcher can be replaced with one of the following:\n1 Helbrute fist\n1 Helbrute hammer\n1 power scourge"
       ]
     },
     {
@@ -277,10 +288,10 @@
       "positiveCandidates": 29,
       "explicitNone": 6,
       "noSection": 19,
-      "importedUnits": 28,
-      "importedContracts": 81,
-      "conflictUnits": 3,
-      "unresolvedContracts": 6,
+      "importedUnits": 29,
+      "importedContracts": 86,
+      "conflictUnits": 1,
+      "unresolvedContracts": 1,
       "guessed": 0
     },
     "units": [
@@ -472,18 +483,10 @@
         "title": "Chaos Rhino",
         "nrStatus": "OPTIONS",
         "wahapediaStatus": "OPTIONS",
-        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
-        "consensusStatus": "PARTIAL SECONDARY CONSENSUS",
+        "officialStatus": "CURRENT OFFICIAL EVIDENCE",
+        "consensusStatus": "OFFICIAL RESOLUTION",
         "imported": true,
-        "reason": "1 clauses imported; 1 conflicting clauses withheld.",
-        "unresolvedOptions": [
-          {
-            "identity": "unit-chaos-rhino-unresolved-1",
-            "text": "This model can be equipped with 1 havoc launcher or can replace 1 combi-bolter with 1 havoc launcher.",
-            "status": "SECONDARY CONFLICT",
-            "reason": "BSData requires the base combi-bolter and models the havoc launcher only as an independent addition; Wahapedia also permits replacing one combi-bolter."
-          }
-        ]
+        "reason": "Current official Faction Pack v1.1 page 38 confirms both adding a havoc launcher and replacing one combi-bolter with it; current BSData is under-inclusive."
       },
       {
         "unitId": "unit-abaddon-the-despoiler",
@@ -616,24 +619,10 @@
         "title": "Havocs",
         "nrStatus": "OPTIONS",
         "wahapediaStatus": "OPTIONS",
-        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
-        "consensusStatus": "PARTIAL SECONDARY CONSENSUS",
+        "officialStatus": "OFFICIAL BASELINE EVIDENCE",
+        "consensusStatus": "SECONDARY CONSENSUS",
         "imported": true,
-        "reason": "1 clauses imported; 2 conflicting clauses withheld.",
-        "unresolvedOptions": [
-          {
-            "identity": "unit-havocs-unresolved-1",
-            "text": "The Havoc Champion’s Astartes chainsword can be replaced with one of the following:\n1 accursed weapon\n1 power fist",
-            "status": "SECONDARY CONFLICT",
-            "reason": "Current BSData disables the Champion accursed-weapon and power-fist selections that Wahapedia presents as replacements."
-          },
-          {
-            "identity": "unit-havocs-unresolved-2",
-            "text": "The Havoc Champion’s flamer can be replaced with one of the following:\n1 boltgun\n1 meltagun\n1 plasma gun\n1 plasma pistol\n1 accursed weapon\n1 power fist",
-            "status": "SECONDARY CONFLICT",
-            "reason": "Current BSData disables the Champion accursed-weapon and power-fist selections that Wahapedia presents as replacements."
-          }
-        ]
+        "reason": "Current BSData models independent exactly-one melee and ranged Champion choices matching Wahapedia; official GW baseline wording agrees."
       },
       {
         "unitId": "unit-mutilators",
@@ -818,25 +807,13 @@
         "title": "Helbrute",
         "nrStatus": "OPTIONS",
         "wahapediaStatus": "OPTIONS",
-        "officialStatus": "NO DIRECT FROZEN OFFICIAL DATASHEET",
-        "consensusStatus": "SECONDARY CONFLICT",
-        "imported": false,
-        "reason": "0 clauses imported; 3 conflicting clauses withheld.",
+        "officialStatus": "OFFICIAL BASELINE EVIDENCE",
+        "consensusStatus": "PARTIAL SECONDARY CONSENSUS",
+        "imported": true,
+        "reason": "2 replacement clauses imported; 1 optional-versus-mandatory secondary-weapon clause withheld.",
         "unresolvedOptions": [
           {
             "identity": "unit-helbrute-unresolved-1",
-            "text": "This model’s multi-melta can be replaced with one of the following:\n1 Helbrute plasma cannon\n1 twin autocannon\n1 twin heavy bolter\n1 twin lascannon\n1 Helbrute fist",
-            "status": "SECONDARY CONFLICT",
-            "reason": "BSData requires a combi-bolter or heavy flamer on every selected Helbrute fist; Wahapedia makes that secondary weapon optional."
-          },
-          {
-            "identity": "unit-helbrute-unresolved-2",
-            "text": "This model’s missile launcher can be replaced with one of the following:\n1 Helbrute fist\n1 Helbrute hammer\n1 power scourge",
-            "status": "SECONDARY CONFLICT",
-            "reason": "BSData requires a combi-bolter or heavy flamer on every selected Helbrute fist; Wahapedia makes that secondary weapon optional."
-          },
-          {
-            "identity": "unit-helbrute-unresolved-3",
             "text": "For each Helbrute fist this model is equipped with, it can be equipped with one of the following:\n1 combi-bolter\n1 heavy flamer",
             "status": "SECONDARY CONFLICT",
             "reason": "BSData requires a combi-bolter or heavy flamer on every selected Helbrute fist; Wahapedia makes that secondary weapon optional."

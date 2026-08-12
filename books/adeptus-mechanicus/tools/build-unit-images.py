@@ -5,7 +5,7 @@ from collections import deque
 from pathlib import Path
 from statistics import median
 
-from PIL import Image, ImageFilter
+from PIL import Image, ImageDraw, ImageFilter
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -47,18 +47,23 @@ def transparent_product_image(source, config):
             queue.append(index - width)
         if y + 1 < height:
             queue.append(index + width)
-    edge = max(8, width // 32)
-    max_distance = config["processing"]["backgroundDistance"]
-    for y in range(height):
-        row = pixels[y * width:(y + 1) * width]
-        samples = row[:edge] + row[-edge:]
-        backdrop = tuple(median(pixel[channel] for pixel in samples) for channel in range(3))
-        for x, pixel in enumerate(row):
-            index = y * width + x
-            if candidate[index] and max(abs(pixel[channel] - backdrop[channel]) for channel in range(3)) <= max_distance:
-                background[index] = 1
+    if config["processing"].get("rowBackdropCleanup", True):
+        edge = max(8, width // 32)
+        max_distance = config["processing"]["backgroundDistance"]
+        for y in range(height):
+            row = pixels[y * width:(y + 1) * width]
+            samples = row[:edge] + row[-edge:]
+            backdrop = tuple(median(pixel[channel] for pixel in samples) for channel in range(3))
+            for x, pixel in enumerate(row):
+                index = y * width + x
+                if candidate[index] and max(abs(pixel[channel] - backdrop[channel]) for channel in range(3)) <= max_distance:
+                    background[index] = 1
     alpha = Image.new("L", image.size)
     alpha.putdata([0 if value else 255 for value in background])
+    if clear_polygons := config["processing"].get("clearPolygons"):
+        draw = ImageDraw.Draw(alpha)
+        for polygon in clear_polygons:
+            draw.polygon([tuple(point) for point in polygon], fill=0)
     alpha = alpha.filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(0.45))
     image.putalpha(alpha)
     image = image.convert("RGBa").resize(

@@ -72,6 +72,258 @@
         "desktop": { "scale": 1.2, "x": "8%", "y": "0%", "opacity": 0.24 },
         "phone": { "scale": 1.08, "x": "8%", "y": "0%", "opacity": 0.2 }
       }
+    },
+    "unit-archaeopter-fusilave": {
+      "unitName": "Archaeopter Fusilave",
+      "asset": "assets/unit-images/archaeopter-fusilave.webp",
+      "original": "sources/unit-images/archaeopter-fusilave-official.jpg",
+      "width": 1000,
+      "height": 550,
+      "source": {
+        "productUrl": "https://www.warhammer.com/shop/Adeptus-Mechanicus-Archaeopter-Fusilave-2020",
+        "imageUrl": "https://assets.warhammer-community.com/gallery/all/bn4w5ek0x4ycm9rt.jpg",
+        "originalFilename": "archaeopter-fusilave-official.jpg"
+      },
+      "processing": { "crop": [0, 80, 1000, 630], "minLuma": 238, "maxChroma": 28, "backgroundDistance": 20 },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.18, "x": "-5%", "y": "1%", "opacity": 0.22 },
+        "phone": { "scale": 1.08, "x": "-4%", "y": "1%", "opacity": 0.18 }
+      }
+    },
+    "unit-archaeopter-stratoraptor": {
+      "unitName": "Archaeopter Stratoraptor",
+      "asset": "assets/unit-images/archaeopter-stratoraptor.webp",
+      "original": "sources/unit-images/archaeopter-stratoraptor-official.jpg",
+      "width": 1000,
+      "height": 560,
+      "source": {
+        "productUrl": "https://www.warhammer.com/shop/Adeptus-Mechanicus-Archaeopter-Stratoraptor-2020",
+        "imageUrl": "https://assets.warhammer-community.com/gallery/all/e9v5lsn0p3vu9eh9.jpg",
+        "originalFilename": "archaeopter-stratoraptor-official.jpg"
+      },
+      "processing": { "crop": [0, 80, 1000, 640], "minLuma": 230, "maxChroma": 30, "backgroundDistance": 30 },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.2, "x": "-5%", "y": "1%", "opacity": 0.22 },
+        "phone": { "scale": 1.08, "x": "-4%", "y": "1%", "opacity": 0.18 }
+      }
+    },
+    "unit-archaeopter-transvector": {
+      "unitName": "Archaeopter Transvector",
+      "asset": "assets/unit-images/archaeopter-transvector.webp",
+      "original": "sources/unit-images/archaeopter-transvector-official.jpg",
+      "width": 960,
+      "height": 500,
+      "source": {
+        "productUrl": "https://www.warhammer.com/shop/Adeptus-Mechanicus-Archaeopter-2020",
+        "imageUrl": "https://assets.warhammer-community.com/articles/d1158ef6-abd8-42a2-b2ae-7d2e6531e99a/4kc1dw7yz9edx2zw.jpg",
+        "originalFilename": "archaeopter-transvector-official.jpg"
+      },
+      "processing": { "crop": [0, 70, 960, 570], "minLuma": 130, "maxChroma": 30, "backgroundDistance": 20, "rowBackdropCleanup": false },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.15, "x": "-4%", "y": "0%", "opacity": 0.22 },
+        "phone": { "scale": 1.05, "x": "-3%", "y": "0%", "opacity": 0.18 }
+      }
+    },
+    "unit-skitarii-marshal": {
+      "unitName": "Skitarii Marshal",
+      "asset": "assets/unit-images/skitarii-marshal.webp",
+      "original": "sources/unit-images/official-skitarii-marshal-jx24pfflsm7lhujs.jpg",
+      "width": 680,
+      "height": 880,
+      "source": {
+        "productUrl": "https://www.warhammer.com/en-GB/shop/Adeptus-Mechanicus-Skitarii-Marshal-2021",
+        "imageUrl": "https://assets.warhammer-community.com/articles/2d9828b7-8430-4590-8505-a7b4f2fdf0b1/jx24pfflsm7lhujs.jpg",
+        "originalFilename": "official-skitarii-marshal-jx24pfflsm7lhujs.jpg"
+      },
+      "processing": { "crop": [150, 70, 830, 950], "minLuma": 235, "maxChroma": 30, "backgroundDistance": 25 },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.28, "x": "-5%", "y": "1%", "opacity": 0.22 },
+        "phone": { "scale": 1.14, "x": "-4%", "y": "1%", "opacity": 0.18 }
+      }
+    },
+    "unit-skorpius-dunerider": {
+      "unitName": "Skorpius Dunerider",
+      "asset": "assets/unit-images/skorpius-dunerider.webp",
+      "original": "sources/unit-images/official-skorpius-dunerider-tankrulespreview-jun21-skduneriderm72x.jpg",
+      "width": 1000,
+      "height": 740,
+      "source": {
+        "productUrl": "https://www.warhammer.com/en-GB/shop/Adeptus-Mechanicus-Skorpius-Dunerider-2019",
+        "imageUrl": "https://assets.warhammer-community.com/articles/d1158ef6-abd8-42a2-b2ae-7d2e6531e99a/tankrulespreview-jun21-skduneriderm72x.jpg",
+        "originalFilename": "official-skorpius-dunerider-tankrulespreview-jun21-skduneriderm72x.jpg"
+      },
+      "processing": { "crop": [0, 60, 1000, 800], "minLuma": 130, "maxChroma": 45, "backgroundDistance": 20, "rowBackdropCleanup": false },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.2, "x": "-6%", "y": "2%", "opacity": 0.22 },
+        "phone": { "scale": 1.08, "x": "-5%", "y": "2%", "opacity": 0.18 }
+      }
+    },
+    "unit-sydonian-skatros": {
+      "unitName": "Sydonian Skatros",
+      "asset": "assets/unit-images/sydonian-skatros.webp",
+      "original": "sources/unit-images/official-sydonian-skatros-kpctadp8rxi7xco2.jpg",
+      "width": 500,
+      "height": 1030,
+      "source": {
+        "productUrl": "https://www.warhammer.com/en-GB/shop/adeptus-mechanicus-sydonian-skatros-2023",
+        "imageUrl": "https://assets.warhammer-community.com/articles/605462b8-0df2-4c8d-bf7b-3b3322ae4203/kpctadp8rxi7xco2.jpg",
+        "originalFilename": "official-sydonian-skatros-kpctadp8rxi7xco2.jpg"
+      },
+      "processing": { "crop": [80, 30, 580, 1060], "minLuma": 232, "maxChroma": 30, "backgroundDistance": 30 },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.34, "x": "-4%", "y": "1%", "opacity": 0.22 },
+        "phone": { "scale": 1.18, "x": "-3%", "y": "1%", "opacity": 0.18 }
+      }
+    },
+    "unit-tech-priest-manipulus": {
+      "unitName": "Tech-Priest Manipulus",
+      "asset": "assets/unit-images/tech-priest-manipulus.webp",
+      "original": "sources/unit-images/official-tech-priest-manipulus-1aogx3vn7bz5t1xw.jpg",
+      "width": 760,
+      "height": 910,
+      "source": {
+        "productUrl": "https://www.warhammer.com/en-GB/shop/Adeptus-Mechanicus-Tech-priest-Manipulus-2020",
+        "imageUrl": "https://assets.warhammer-community.com/articles/d1158ef6-abd8-42a2-b2ae-7d2e6531e99a/1aogx3vn7bz5t1xw.jpg",
+        "originalFilename": "official-tech-priest-manipulus-1aogx3vn7bz5t1xw.jpg"
+      },
+      "processing": { "crop": [120, 90, 880, 1000], "minLuma": 130, "maxChroma": 45, "backgroundDistance": 20, "rowBackdropCleanup": false },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.28, "x": "-5%", "y": "1%", "opacity": 0.22 },
+        "phone": { "scale": 1.14, "x": "-4%", "y": "1%", "opacity": 0.18 }
+      }
+    },
+    "unit-technoarcheologist": {
+      "unitName": "Technoarcheologist",
+      "asset": "assets/unit-images/technoarcheologist.webp",
+      "original": "sources/unit-images/official-technoarcheologist-xbsn9rldxe7jf9co.jpg",
+      "width": 660,
+      "height": 790,
+      "source": {
+        "productUrl": "https://www.warhammer.com/en-GB/shop/Adeptus-Mechanicus-Technoarcheologist-2022",
+        "imageUrl": "https://assets.warhammer-community.com/articles/aeb2397e-d6f7-443c-8802-7ef72d01c377/xbsn9rldxe7jf9co.jpg",
+        "originalFilename": "official-technoarcheologist-xbsn9rldxe7jf9co.jpg"
+      },
+      "processing": { "crop": [160, 70, 820, 860], "minLuma": 232, "maxChroma": 30, "backgroundDistance": 30 },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.28, "x": "-5%", "y": "1%", "opacity": 0.22 },
+        "phone": { "scale": 1.14, "x": "-4%", "y": "1%", "opacity": 0.18 }
+      }
+    },
+    "unit-serberys-raiders": {
+      "unitName": "Serberys Raiders",
+      "asset": "assets/unit-images/serberys-raiders.webp",
+      "original": "sources/unit-images/serberys-raiders-official.jpg",
+      "width": 760,
+      "height": 920,
+      "source": {
+        "productUrl": "https://www.warhammer.com/shop/Adeptus-Mechanicus-Serberys-Raiders-2020",
+        "imageUrl": "https://assets.warhammer-community.com/gallery/all/4-yh9ai-_q2v_n5b.jpg",
+        "originalFilename": "serberys-raiders-official.jpg"
+      },
+      "processing": { "crop": [100, 60, 860, 980], "minLuma": 230, "maxChroma": 30, "backgroundDistance": 32 },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.25, "x": "-5%", "y": "1%", "opacity": 0.22 },
+        "phone": { "scale": 1.12, "x": "-4%", "y": "1%", "opacity": 0.18 }
+      }
+    },
+    "unit-serberys-sulphurhounds": {
+      "unitName": "Serberys Sulphurhounds",
+      "asset": "assets/unit-images/serberys-sulphurhounds.webp",
+      "original": "sources/unit-images/serberys-sulphurhounds-official.jpg",
+      "width": 780,
+      "height": 940,
+      "source": {
+        "productUrl": "https://www.warhammer.com/shop/Adeptus-Mechanicus-Serberys-Sulphurhounds-2020",
+        "imageUrl": "https://assets.warhammer-community.com/gallery/all/_7cm1f~o~g0rh4y~.jpg",
+        "originalFilename": "serberys-sulphurhounds-official.jpg"
+      },
+      "processing": { "crop": [80, 60, 860, 1000], "minLuma": 230, "maxChroma": 30, "backgroundDistance": 32 },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.25, "x": "-5%", "y": "1%", "opacity": 0.22 },
+        "phone": { "scale": 1.12, "x": "-4%", "y": "1%", "opacity": 0.18 }
+      }
+    },
+    "unit-skorpius-disintegrator": {
+      "unitName": "Skorpius Disintegrator",
+      "asset": "assets/unit-images/skorpius-disintegrator.webp",
+      "original": "sources/unit-images/skorpius-disintegrator-official.jpg",
+      "width": 1000,
+      "height": 590,
+      "source": {
+        "productUrl": "https://www.warhammer.com/shop/Adeptus-Mechanicus-Skorpius-Disintegrator-2019",
+        "imageUrl": "https://assets.warhammer-community.com/articles/d1158ef6-abd8-42a2-b2ae-7d2e6531e99a/fest2019-sat12-disintegrator1jc.jpg",
+        "originalFilename": "skorpius-disintegrator-official.jpg"
+      },
+      "processing": { "crop": [0, 60, 1000, 650], "minLuma": 130, "maxChroma": 45, "backgroundDistance": 20, "rowBackdropCleanup": false },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.2, "x": "-5%", "y": "2%", "opacity": 0.22 },
+        "phone": { "scale": 1.08, "x": "-4%", "y": "2%", "opacity": 0.18 }
+      }
+    },
+    "unit-pteraxii-skystalkers": {
+      "unitName": "Pteraxii Skystalkers",
+      "asset": "assets/unit-images/pteraxii-skystalkers.webp",
+      "original": "sources/unit-images/warcom-pteraxii-skystalkers-2021.jpg",
+      "width": 1000,
+      "height": 500,
+      "source": {
+        "productUrl": "https://www.warhammer.com/shop/Adeptus-Mechanicus-Pteraxii-2020",
+        "imageUrl": "https://assets.warhammer-community.com/articles/d1158ef6-abd8-42a2-b2ae-7d2e6531e99a/3r~dz1-x7-hg~o1o.jpg",
+        "originalFilename": "warcom-pteraxii-skystalkers-2021.jpg"
+      },
+      "processing": { "crop": [0, 60, 1000, 560], "minLuma": 130, "maxChroma": 30, "backgroundDistance": 20, "rowBackdropCleanup": false },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.18, "x": "-4%", "y": "0%", "opacity": 0.22 },
+        "phone": { "scale": 1.08, "x": "-3%", "y": "0%", "opacity": 0.18 }
+      }
+    },
+    "unit-pteraxii-sterylizors": {
+      "unitName": "Pteraxii Sterylizors",
+      "asset": "assets/unit-images/pteraxii-sterylizors.webp",
+      "original": "sources/unit-images/warcom-pteraxii-sterylizors-2021.jpg",
+      "width": 1000,
+      "height": 500,
+      "source": {
+        "productUrl": "https://www.warhammer.com/shop/Adeptus-Mechanicus-Pteraxii-Sterylizors-2020",
+        "imageUrl": "https://assets.warhammer-community.com/articles/d1158ef6-abd8-42a2-b2ae-7d2e6531e99a/o8-yq4~wjr3-bw_7.jpg",
+        "originalFilename": "warcom-pteraxii-sterylizors-2021.jpg"
+      },
+      "processing": { "crop": [0, 60, 1000, 560], "minLuma": 130, "maxChroma": 30, "backgroundDistance": 20, "rowBackdropCleanup": false },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.18, "x": "-4%", "y": "0%", "opacity": 0.22 },
+        "phone": { "scale": 1.08, "x": "-3%", "y": "0%", "opacity": 0.18 }
+      }
+    },
+    "unit-servitor-battleclade": {
+      "unitName": "Servitor Battleclade",
+      "asset": "assets/unit-images/servitor-battleclade.webp",
+      "original": "sources/unit-images/warcom-servitor-battleclade-2025.jpg",
+      "width": 1000,
+      "height": 970,
+      "source": {
+        "productUrl": "https://www.warhammer.com/shop/kill-team-battleclade-2025",
+        "imageUrl": "https://assets.warhammer-community.com/sundaypreview-aug24-kt_05-battleclade-m5xotfz4qi.jpg",
+        "originalFilename": "warcom-servitor-battleclade-2025.jpg"
+      },
+      "processing": { "crop": [0, 60, 1000, 1030], "minLuma": 230, "maxChroma": 30, "backgroundDistance": 30 },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.1, "x": "-4%", "y": "0%", "opacity": 0.2 },
+        "phone": { "scale": 1.02, "x": "-3%", "y": "0%", "opacity": 0.17 }
+      }
     }
   }
 }

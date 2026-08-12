@@ -372,6 +372,11 @@ for(const unit of parsed){
     if(!ability)throw new Error(`${unit.title}: ability correction target not found: ${title}`);
     Object.assign(ability,replacement);
   }
+  for(const [name,replacement] of Object.entries(correction.profileStats||{})){
+    const profile=unit.profiles.find(item=>key(item.name)===key(name));
+    if(!profile)throw new Error(`${unit.title}: profile correction target not found: ${name}`);
+    Object.assign(profile.stats,replacement);
+  }
   for(const ability of correction.addAbilities||[]){
     if(!unit.abilities.some(item=>key(item.title)===key(ability.title)))unit.abilities.push(ability);
   }
@@ -474,17 +479,26 @@ if(config.outputs.officialPoints){
     if(override){
       unit.points=override.points;
       if(override.paidWargear)unit.paidWargear=override.paidWargear;
-      if(override.leader?.length){
-        const datasheet=parsed.find(item=>item.id===unit.id),text=`This model can be attached to the following units: ${override.leader.join(', ')}.`;
+      const supportRelation=override.support?.length&&(config.faction?.supportRelationOverrides||[]).some(title=>key(title)===key(unit.title));
+      const relationRole=supportRelation?'support':override.leader?.length?'leader':null;
+      if(relationRole){
+        const targets=override[relationRole],datasheet=parsed.find(item=>item.id===unit.id),text=`This model can be attached to the following units: ${targets.join(', ')}.`;
         const separateLeaderRelation=config.faction?.classifyAbilities===true||config.faction?.separateLeaderRelations===true||(config.faction?.leaderRelationOverrides||[]).some(title=>key(title)===key(unit.title));
         if(separateLeaderRelation&&datasheet){
-          datasheet.relations.leader=override.leader;
+          if(relationRole==='support')datasheet.relations.leader=[];
+          datasheet.relations[relationRole]=targets;
           datasheet.abilities=datasheet.abilities.filter(item=>key(item.title)!=='leader'||relationTargets(item.text).length===0);
+          const support=datasheet.abilities.find(item=>relationRole==='support'&&key(item.title)==='support');
+          if(support)support.text=text;
         }else{
           const ability=datasheet?.abilities.find(item=>key(item.title)==='leader');
           if(ability)ability.text=text;
           else datasheet?.abilities.push({title:'Leader',text});
         }
+      }
+      if(override.replaceDatasheetPoints){
+        const datasheet=parsed.find(item=>item.id===unit.id);
+        if(datasheet)datasheet.points=override.points;
       }
     }
     if(verifiedUnits.has(key(unit.title)))unit.pointsSource={label:`Official MFM ${official.version}`,url:official.url,verifiedAt:official.verifiedAt};

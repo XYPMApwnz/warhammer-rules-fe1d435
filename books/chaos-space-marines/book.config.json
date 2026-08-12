@@ -26,6 +26,7 @@
   },
   "armyRules": ["Dark Pacts"],
   "renderTransportRelations": true,
+  "renderSupportRelations": true,
   "expected": {
     "matchedDetachments": 17,
     "factionPackDetachments": 9,

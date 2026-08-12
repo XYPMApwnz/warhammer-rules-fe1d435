@@ -420,21 +420,34 @@
     {
       "points": [
         {
-          "label": "3rd + unit · 8 models",
+          "label": "8 models",
+          "maxModels": 8,
+          "minModels": 8,
+          "value": 90
+        },
+        {
+          "label": "16 models",
+          "maxModels": 16,
+          "minModels": 16,
+          "value": 195
+        },
+        {
+          "label": "3+ unit: 8 models",
           "maxModels": 8,
           "minCopies": 3,
           "minModels": 8,
           "value": 110
         },
         {
-          "label": "3rd + unit · 16 models",
+          "label": "3+ unit: 16 models",
           "maxModels": 16,
           "minCopies": 3,
           "minModels": 16,
           "value": 215
         }
       ],
-      "title": "ACCURSED CULTISTS"
+      "title": "ACCURSED CULTISTS",
+      "replaceDatasheetPoints": true
     },
     {
       "points": [
@@ -589,21 +602,34 @@
     {
       "points": [
         {
-          "label": "3rd + unit · 5 models",
+          "label": "5 models",
+          "maxModels": 5,
+          "minModels": 5,
+          "value": 135
+        },
+        {
+          "label": "10 models",
+          "maxModels": 10,
+          "minModels": 10,
+          "value": 270
+        },
+        {
+          "label": "3+ unit: 5 models",
           "maxModels": 5,
           "minCopies": 3,
           "minModels": 5,
           "value": 145
         },
         {
-          "label": "3rd + unit · 10 models",
+          "label": "3+ unit: 10 models",
           "maxModels": 10,
           "minCopies": 3,
           "minModels": 10,
           "value": 280
         }
       ],
-      "title": "CHOSEN"
+      "title": "CHOSEN",
+      "replaceDatasheetPoints": true
     },
     {
       "leader": [
@@ -917,12 +943,6 @@
       "title": "LORD DISCORDANT ON HELSTALKER"
     },
     {
-      "leader": [
-        "CHOSEN",
-        "LEGIONARIES",
-        "NEMESIS CLAW",
-        "RED CORSAIRS RAIDERS"
-      ],
       "points": [
         {
           "label": "1 model",
@@ -931,7 +951,13 @@
           "value": 70
         }
       ],
-      "title": "MASTER OF EXECUTIONS"
+      "title": "MASTER OF EXECUTIONS",
+      "support": [
+        "CHOSEN",
+        "LEGIONARIES",
+        "NEMESIS CLAW",
+        "RED CORSAIRS RAIDERS"
+      ]
     },
     {
       "leader": [
@@ -952,11 +978,6 @@
       "title": "MASTER OF POSSESSION"
     },
     {
-      "leader": [
-        "CHOSEN",
-        "LEGIONARIES",
-        "RED CORSAIRS RAIDERS"
-      ],
       "points": [
         {
           "label": "5 models",
@@ -965,7 +986,12 @@
           "value": 145
         }
       ],
-      "title": "MASTERS OF THE MAELSTROM"
+      "title": "MASTERS OF THE MAELSTROM",
+      "support": [
+        "CHOSEN",
+        "LEGIONARIES",
+        "RED CORSAIRS RAIDERS"
+      ]
     },
     {
       "points": [
@@ -1021,71 +1047,117 @@
     {
       "points": [
         {
-          "label": "3rd + unit · 2 models",
+          "label": "2 models",
+          "maxModels": 2,
+          "minModels": 2,
+          "value": 160
+        },
+        {
+          "label": "3+ unit: 2 models",
           "maxModels": 2,
           "minCopies": 3,
           "minModels": 2,
           "value": 170
         }
       ],
-      "title": "OBLITERATORS"
+      "title": "OBLITERATORS",
+      "replaceDatasheetPoints": true
     },
     {
       "points": [
         {
-          "label": "3rd + unit · 5 models",
+          "label": "5 models",
+          "maxModels": 5,
+          "minModels": 5,
+          "value": 120
+        },
+        {
+          "label": "10 models",
+          "maxModels": 10,
+          "minModels": 10,
+          "value": 250
+        },
+        {
+          "label": "3+ unit: 5 models",
           "maxModels": 5,
           "minCopies": 3,
           "minModels": 5,
           "value": 130
         },
         {
-          "label": "3rd + unit · 10 models",
+          "label": "3+ unit: 10 models",
           "maxModels": 10,
           "minCopies": 3,
           "minModels": 10,
           "value": 260
         }
       ],
-      "title": "POSSESSED"
+      "title": "POSSESSED",
+      "replaceDatasheetPoints": true
     },
     {
       "points": [
         {
-          "label": "3rd + unit · 5 models",
+          "label": "5 models",
+          "maxModels": 5,
+          "minModels": 5,
+          "value": 110
+        },
+        {
+          "label": "10 models",
+          "maxModels": 10,
+          "minModels": 10,
+          "value": 210
+        },
+        {
+          "label": "3+ unit: 5 models",
           "maxModels": 5,
           "minCopies": 3,
           "minModels": 5,
           "value": 120
         },
         {
-          "label": "3rd + unit · 10 models",
+          "label": "3+ unit: 10 models",
           "maxModels": 10,
           "minCopies": 3,
           "minModels": 10,
           "value": 220
         }
       ],
-      "title": "RAPTORS"
+      "title": "RAPTORS",
+      "replaceDatasheetPoints": true
     },
     {
       "points": [
         {
-          "label": "3rd + unit · 5 models",
+          "label": "5 models",
+          "maxModels": 5,
+          "minModels": 5,
+          "value": 110
+        },
+        {
+          "label": "10 models",
+          "maxModels": 10,
+          "minModels": 10,
+          "value": 210
+        },
+        {
+          "label": "3+ unit: 5 models",
           "maxModels": 5,
           "minCopies": 3,
           "minModels": 5,
           "value": 120
         },
         {
-          "label": "3rd + unit · 10 models",
+          "label": "3+ unit: 10 models",
           "maxModels": 10,
           "minCopies": 3,
           "minModels": 10,
           "value": 220
         }
       ],
-      "title": "RED CORSAIRS RAIDERS"
+      "title": "RED CORSAIRS RAIDERS",
+      "replaceDatasheetPoints": true
     },
     {
       "leader": [
@@ -1204,21 +1276,34 @@
     {
       "points": [
         {
-          "label": "3rd + unit · 5 models",
+          "label": "5 models",
+          "maxModels": 5,
+          "minModels": 5,
+          "value": 125
+        },
+        {
+          "label": "10 models",
+          "maxModels": 10,
+          "minModels": 10,
+          "value": 280
+        },
+        {
+          "label": "3+ unit: 5 models",
           "maxModels": 5,
           "minCopies": 3,
           "minModels": 5,
           "value": 135
         },
         {
-          "label": "3rd + unit · 10 models",
+          "label": "3+ unit: 10 models",
           "maxModels": 10,
           "minCopies": 3,
           "minModels": 10,
           "value": 290
         }
       ],
-      "title": "WARP TALONS"
+      "title": "WARP TALONS",
+      "replaceDatasheetPoints": true
     }
   ],
   "url": "https://mfm.warhammer-community.com/en/chaos-space-marines",

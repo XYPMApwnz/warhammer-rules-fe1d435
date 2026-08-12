@@ -1811,14 +1811,12 @@
       ],
       "paidWargear": [],
       "relations": {
-        "leader": [
+        "leader": [],
+        "support": [
           "CHOSEN",
           "LEGIONARIES",
           "NEMESIS CLAW",
           "RED CORSAIRS RAIDERS"
-        ],
-        "support": [
-          "CHOSEN"
         ],
         "attachedUnit": [],
         "transport": []
@@ -3314,7 +3312,7 @@
         },
         {
           "title": "Hamadrya’s Knowledge (Psychic)",
-          "text": "Once per battle round, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this model’s unit, if this model’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D3+3\".",
+          "text": "Once per battle round, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this model’s unit, if this model’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D3+3\".",
           "abilityClass": "datasheet"
         },
         {
@@ -3760,12 +3758,12 @@
       ],
       "paidWargear": [],
       "relations": {
-        "leader": [
+        "leader": [],
+        "support": [
           "CHOSEN",
           "LEGIONARIES",
           "RED CORSAIRS RAIDERS"
         ],
-        "support": [],
         "attachedUnit": [],
         "transport": []
       }
@@ -3908,22 +3906,28 @@
       "points": [
         {
           "label": "8 models",
-          "value": 90,
+          "maxModels": 8,
           "minModels": 8,
-          "maxModels": 8
+          "value": 90
+        },
+        {
+          "label": "16 models",
+          "maxModels": 16,
+          "minModels": 16,
+          "value": 195
         },
         {
           "label": "3+ unit: 8 models",
+          "maxModels": 8,
+          "minCopies": 3,
+          "minModels": 8,
           "value": 110
         },
         {
-          "label": "9 models",
-          "value": 195,
-          "minModels": 9,
-          "maxModels": 9
-        },
-        {
-          "label": "3+ unit: 9 models",
+          "label": "3+ unit: 16 models",
+          "maxModels": 16,
+          "minCopies": 3,
+          "minModels": 16,
           "value": 215
         }
       ],
@@ -4236,22 +4240,28 @@
       "points": [
         {
           "label": "5 models",
-          "value": 135,
+          "maxModels": 5,
           "minModels": 5,
-          "maxModels": 5
+          "value": 135
+        },
+        {
+          "label": "10 models",
+          "maxModels": 10,
+          "minModels": 10,
+          "value": 270
         },
         {
           "label": "3+ unit: 5 models",
+          "maxModels": 5,
+          "minCopies": 3,
+          "minModels": 5,
           "value": 145
         },
         {
-          "label": "6 models",
-          "value": 270,
-          "minModels": 6,
-          "maxModels": 6
-        },
-        {
-          "label": "3+ unit: 6 models",
+          "label": "3+ unit: 10 models",
+          "maxModels": 10,
+          "minCopies": 3,
+          "minModels": 10,
           "value": 280
         }
       ],
@@ -5306,23 +5316,16 @@
       "points": [
         {
           "label": "2 models",
-          "value": 160,
+          "maxModels": 2,
           "minModels": 2,
-          "maxModels": 2
+          "value": 160
         },
         {
           "label": "3+ unit: 2 models",
+          "maxModels": 2,
+          "minCopies": 3,
+          "minModels": 2,
           "value": 170
-        },
-        {
-          "label": "3 models",
-          "value": 360,
-          "minModels": 3,
-          "maxModels": 3
-        },
-        {
-          "label": "3+ unit: 3 models",
-          "value": 370
         }
       ],
       "profiles": [
@@ -5437,22 +5440,28 @@
       "points": [
         {
           "label": "5 models",
-          "value": 120,
+          "maxModels": 5,
           "minModels": 5,
-          "maxModels": 5
+          "value": 120
+        },
+        {
+          "label": "10 models",
+          "maxModels": 10,
+          "minModels": 10,
+          "value": 250
         },
         {
           "label": "3+ unit: 5 models",
+          "maxModels": 5,
+          "minCopies": 3,
+          "minModels": 5,
           "value": 130
         },
         {
-          "label": "6 models",
-          "value": 250,
-          "minModels": 6,
-          "maxModels": 6
-        },
-        {
-          "label": "3+ unit: 6 models",
+          "label": "3+ unit: 10 models",
+          "maxModels": 10,
+          "minCopies": 3,
+          "minModels": 10,
           "value": 260
         }
       ],
@@ -5535,22 +5544,28 @@
       "points": [
         {
           "label": "5 models",
-          "value": 110,
+          "maxModels": 5,
           "minModels": 5,
-          "maxModels": 5
+          "value": 110
+        },
+        {
+          "label": "10 models",
+          "maxModels": 10,
+          "minModels": 10,
+          "value": 210
         },
         {
           "label": "3+ unit: 5 models",
+          "maxModels": 5,
+          "minCopies": 3,
+          "minModels": 5,
           "value": 120
         },
         {
-          "label": "6 models",
-          "value": 210,
-          "minModels": 6,
-          "maxModels": 6
-        },
-        {
-          "label": "3+ unit: 6 models",
+          "label": "3+ unit: 10 models",
+          "maxModels": 10,
+          "minCopies": 3,
+          "minModels": 10,
           "value": 220
         }
       ],
@@ -5784,22 +5799,28 @@
       "points": [
         {
           "label": "5 models",
-          "value": 110,
+          "maxModels": 5,
           "minModels": 5,
-          "maxModels": 5
+          "value": 110
+        },
+        {
+          "label": "10 models",
+          "maxModels": 10,
+          "minModels": 10,
+          "value": 210
         },
         {
           "label": "3+ unit: 5 models",
+          "maxModels": 5,
+          "minCopies": 3,
+          "minModels": 5,
           "value": 120
         },
         {
-          "label": "6 models",
-          "value": 210,
-          "minModels": 6,
-          "maxModels": 6
-        },
-        {
-          "label": "3+ unit: 6 models",
+          "label": "3+ unit: 10 models",
+          "maxModels": 10,
+          "minCopies": 3,
+          "minModels": 10,
           "value": 220
         }
       ],
@@ -6180,22 +6201,28 @@
       "points": [
         {
           "label": "5 models",
-          "value": 125,
+          "maxModels": 5,
           "minModels": 5,
-          "maxModels": 5
+          "value": 125
+        },
+        {
+          "label": "10 models",
+          "maxModels": 10,
+          "minModels": 10,
+          "value": 280
         },
         {
           "label": "3+ unit: 5 models",
+          "maxModels": 5,
+          "minCopies": 3,
+          "minModels": 5,
           "value": 135
         },
         {
-          "label": "6 models",
-          "value": 280,
-          "minModels": 6,
-          "maxModels": 6
-        },
-        {
-          "label": "3+ unit: 6 models",
+          "label": "3+ unit: 10 models",
+          "maxModels": 10,
+          "minCopies": 3,
+          "minModels": 10,
           "value": 290
         }
       ],
@@ -7824,7 +7851,7 @@
         {
           "name": "Heldrake",
           "stats": {
-            "M": "12+",
+            "M": "12\"",
             "T": "9",
             "Sv": "3+",
             "W": "12",

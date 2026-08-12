@@ -16,6 +16,10 @@
     "leaderRelationOverrides": [
       "Traitor Enforcer",
       "Masters of the Maelstrom"
+    ],
+    "supportRelationOverrides": [
+      "Master of Executions",
+      "Masters of the Maelstrom"
     ]
   },
   "source": {
@@ -86,6 +90,22 @@
       "\\[Crucible\\]"
     ],
     "imperialArmourNames": []
+  },
+  "unitCorrections": {
+    "Huron Blackheart": {
+      "abilities": {
+        "Hamadrya’s Knowledge (Psychic)": {
+          "text": "Once per battle round, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this model’s unit, if this model’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D3+3\"."
+        }
+      }
+    },
+    "Heldrake": {
+      "profileStats": {
+        "Heldrake": {
+          "M": "12\""
+        }
+      }
+    }
   },
   "enhancements": {
     "identity": "detachment-title",

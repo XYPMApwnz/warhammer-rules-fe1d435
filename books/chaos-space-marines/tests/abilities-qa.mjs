@@ -5,6 +5,7 @@ import {fileURLToPath} from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const source=JSON.parse(fs.readFileSync(path.join(root,'content/chaos-space-marines-codex-datasheets.en.json'),'utf8'));
+const points=JSON.parse(fs.readFileSync(path.join(root,'content/chaos-space-marines-points.en.json'),'utf8'));
 const reader=fs.readFileSync(path.join(root,'reader.html'),'utf8');
 const glossary=JSON.parse(fs.readFileSync(path.resolve(root,'../../glossary/registry.en.json'),'utf8')).terms;
 const localContext=JSON.parse(fs.readFileSync(path.resolve(root,'../../glossary/contexts/chaos-space-marines.json'),'utf8')).terms;
@@ -75,4 +76,43 @@ assert.match(accursed,/data-ability-class="faction">[\s\S]*?>Dark Pacts<\/button
 assert.match(accursed,/>Howling Horde<\/button>[\s\S]*?<p data-source-field="text">/);
 assert.deepEqual(source.datasheets.filter(unit=>unit.wargearAbilities?.length).map(unit=>unit.title),['Legionaries','Dark Commune','Sorcerer in Terminator Armour','Chosen','Nemesis Claw','Possessed','Chaos Bikers']);
 assert.equal(wargearCount,7,'CSM source-backed Wargear Abilities changed');
+
+const unit=title=>source.datasheets.find(item=>item.title===title);
+const pointUnit=title=>points.units.find(item=>item.title===title);
+const huron=unit('Huron Blackheart'),heldrake=unit('Heldrake');
+assert.match(huron.abilities.find(item=>item.title==='Hamadrya’s Knowledge (Psychic)').text,/within 8"/);
+assert.doesNotMatch(huron.abilities.find(item=>item.title==='Hamadrya’s Knowledge (Psychic)').text,/within 9"/);
+assert.equal(heldrake.profiles.find(item=>item.name==='Heldrake').stats.M,'12"');
+assert.match(extract('article',huron.id),/within 8&amp;quot;|within 8&quot;/);
+assert.match(fs.readFileSync(path.join(root,'mobile','huron-blackheart.html'),'utf8'),/within 8&amp;quot;|within 8&quot;/);
+assert.match(extract('article',heldrake.id),/>12&amp;quot;<|>12&quot;</);
+assert.match(fs.readFileSync(path.join(root,'mobile','heldrake.html'),'utf8'),/>12&amp;quot;<|>12&quot;</);
+
+const expectedUpperSizes=new Map([
+  ['Accursed Cultists',16],['Chosen',10],['Possessed',10],['Raptors',10],['Red Corsairs Raiders',10],['Warp Talons',10]
+]);
+for(const [title,size] of expectedUpperSizes){
+  const rows=pointUnit(title).points;
+  const sourceRows=unit(title).points;
+  assert.ok(rows.some(row=>row.minModels===size&&row.maxModels===size),`${title}: missing ${size}-model schedule`);
+  assert.ok(rows.filter(row=>row.minModels===size).every(row=>row.label.includes(String(size))),`${title}: stale upper-size label`);
+  assert.deepEqual(sourceRows,rows,`${title}: structured Datasheet points differ from official MFM rows`);
+}
+const obliteratorRows=pointUnit('Obliterators').points;
+assert.deepEqual([...new Set(obliteratorRows.map(row=>row.minModels))],[2]);
+assert.equal(obliteratorRows.length,2,'Obliterators must expose only current 2-model schedules');
+assert.deepEqual(unit('Obliterators').points,obliteratorRows,'Obliterators structured Datasheet points differ from official MFM rows');
+
+const master=unit('Master of Executions'),maelstrom=unit('Masters of the Maelstrom');
+assert.deepEqual(master.relations.leader,[]);
+assert.deepEqual(master.relations.support,['CHOSEN','LEGIONARIES','NEMESIS CLAW','RED CORSAIRS RAIDERS']);
+assert.deepEqual(maelstrom.relations.leader,[]);
+assert.deepEqual(maelstrom.relations.support,['CHOSEN','LEGIONARIES','RED CORSAIRS RAIDERS']);
+for(const subject of [master,maelstrom]){
+  const desktop=extract('section',`${subject.id.replace(/^unit-/,'')}-support`,extract('article',subject.id));
+  const phone=extract('section',`${subject.id.replace(/^unit-/,'')}-support`,fs.readFileSync(path.join(root,'mobile',`${subject.id.replace(/^unit-/,'')}.html`),'utf8'));
+  assert.match(desktop,/<h4>Support<\/h4>/);
+  const hydratedPhone=phone.replace(/<a class="term-button"([^>]*?) href="[^"]+">/g,'<button class="term-button"$1>').replaceAll('</a>','</button>');
+  assert.equal(hydratedPhone,desktop);
+}
 console.log(`CSM ability QA: 54 current Datasheets; Core/Faction compact; unique text, Wargear handling and glossary targets verified.`);

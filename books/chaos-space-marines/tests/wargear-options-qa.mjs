@@ -64,8 +64,8 @@ assert.equal(hash(source.datasheets.map(unit=>[unit.id,unit.points])),'FF62E7F5A
 const paidOptions=title=>source.datasheets.find(unit=>unit.title===title).paidWargear.map(({name,value})=>({name,value}));
 assert.deepEqual(paidOptions('Defiler'),[{name:'Hades lascannon',value:15},{name:'Heavy reaper autocannon',value:15}]);
 assert.deepEqual(paidOptions('Forgefiend'),[{name:'Ectoplasma cannon',value:5}]);
-assert.equal(Object.values(compatible.units).reduce((sum,rows)=>sum+rows.length,0),2333);
-assert.equal(hash(compatible),'611CC2FA56BCDAEF6F5700A9E8071CB0C6781AB76739348D5295B3BD4DD6B068');
+assert.equal(Object.values(compatible.units).reduce((sum,rows)=>sum+rows.length,0),3837);
+assert.equal(hash(compatible),'005AA06B238B9527F43FC776B6458D75DF10CDADB539FEFF474498234EA0AF9A');
 assert.equal(fs.readdirSync(path.join(root,'mobile')).filter(file=>file.endsWith('.html')).length,74);
 assert.equal(manifest.gates.publishAsComplete,false);
 console.log('CSM Wargear Options QA: 54/54 audited; 29 candidates; 29 rendered units; 86 imported and 1 unresolved contract; gameplay invariants preserved.');

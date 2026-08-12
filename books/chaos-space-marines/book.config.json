@@ -24,7 +24,10 @@
     "rosterFilter": 1,
     "rosterData": 1
   },
-  "armyRules": ["Dark Pacts"],
+  "armyRules": [
+    "Dark Pacts",
+    "Cults of the Dark Gods"
+  ],
   "renderTransportRelations": true,
   "renderSupportRelations": true,
   "expected": {
@@ -37,6 +40,7 @@
     "codexDatasheets": "content/chaos-space-marines-codex-datasheets.en.json",
     "codexWargear": "content/chaos-space-marines-codex-wargear.en.json",
     "relatedRules": "content/chaos-space-marines-related-rules.en.json",
-    "manifest": "sources/source-manifest.json"
+    "manifest": "sources/source-manifest.json",
+    "codexParity": "content/chaos-space-marines-codex-parity.en.json"
   }
 }

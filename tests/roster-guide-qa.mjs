@@ -119,7 +119,7 @@ for(const bookId of supported){
     assert(codex.legends.length===53,'chaos-space-marines: Legends inventory changed');
     codex.datasheets.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`chaos-space-marines: unit ${unit.title} is absent from Roster Guide`));
     for(const title of ['Khorne Berzerkers','Noise Marines','Plague Marines','Rubric Marines'])assert(!unitTitles.has(entities.normalize(title)),`chaos-space-marines: borrowed unit ${title} entered the current surface`);
-    assert((related.match(/class="stratagem surface"/g)||[]).length===55,'chaos-space-marines: 45 faction and 10 Core Stratagems are required');
+    assert((related.match(/class="stratagem surface"/g)||[]).length===103,'chaos-space-marines: 93 faction and 10 Core Stratagems are required');
     assert((related.match(/class="enhancement\b/g)||[]).length===62,'chaos-space-marines: all 30 FP and 32 secondary-consensus Enhancements are required');
     assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&/\.\/scripts\/app\.js\?v=\d+/.test(reader),'chaos-space-marines: roster or matrix controller is absent');
     assert(fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs'))&&fs.existsSync(path.join(bookRoot,'scripts','roster-data.js')),'chaos-space-marines: matrix or roster data is absent');

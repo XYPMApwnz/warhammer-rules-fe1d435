@@ -952,6 +952,1020 @@
       "conditions": [
         "hit-by-last-enemy-shooting"
       ]
+    },
+    "stratagem-chaos-cult-chosen-for-glory": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "DAMNED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-chaos-cult-selfless-demise": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "DAMNED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-chaos-cult-infernal-sacrifice": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "DAMNED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-chaos-cult-crazed-focus": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "DAMNED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-chaos-cult-reckless-haste": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "DAMNED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-chaos-cult-mortal-thralls": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-deceptors-detonator": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-deceptors-from-all-sides": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-deceptors-pick-them-off": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-deceptors-coils-of-deception": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-deceptors-relentless-pursuit": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "anyKeywords": [
+              "INFANTRY",
+              "MOUNTED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-deceptors-scrambled-coordinates": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-dread-talons-depthless-cruelty": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES",
+              "INFANTRY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-dread-talons-bloody-example": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-dread-talons-pitiless-hunters": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES",
+              "INFANTRY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-dread-talons-relentless-terror": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES",
+              "INFANTRY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-dread-talons-screaming-descent": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES",
+              "JUMP PACK"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-dread-talons-merciless-pursuit": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES",
+              "INFANTRY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-fellhammer-siege-host-persistent-assailants": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-fellhammer-siege-host-brutal-attrition": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES",
+              "INFANTRY"
+            ],
+            "noneKeywords": [
+              "DAMNED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-fellhammer-siege-host-pitiless-cannonade": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-fellhammer-siege-host-point-blank-destruction": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-fellhammer-siege-host-steadfast-determination": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "DAMNED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-fellhammer-siege-host-siegecraft": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-pactbound-zealots-eye-of-the-gods": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-pactbound-zealots-eternal-hate": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-pactbound-zealots-profane-zeal": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES",
+              "CHAOS UNDIVIDED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-pactbound-zealots-skinshift": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-pactbound-zealots-torpefying-refrain": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-pactbound-zealots-festering-miasma": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-renegade-raiders-unfailingly-obdurate": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "DAMNED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-renegade-raiders-scour-and-seize": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-renegade-raiders-opportunistic-raiders": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-renegade-raiders-warpcharged-engines": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "anyKeywords": [
+              "TRANSPORT",
+              "MOUNTED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-renegade-raiders-ruinous-raid": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES",
+              "TRANSPORT"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-renegade-raiders-reavers-haste": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "anyKeywords": [
+              "INFANTRY",
+              "MOUNTED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-soulforged-warpack-desperate-pledge": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES",
+              "VEHICLE",
+              "DAEMON"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-soulforged-warpack-glut-of-souls": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES",
+              "VEHICLE",
+              "DAEMON"
+            ],
+            "noneKeywords": [
+              "TITANIC"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-soulforged-warpack-daemonic-possession": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES",
+              "VEHICLE"
+            ],
+            "noneKeywords": [
+              "DAEMON"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-soulforged-warpack-unstoppable-rampage": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "alternatives": [
+              {
+                "allKeywords": [
+                  "HERETIC ASTARTES",
+                  "DAEMON",
+                  "VEHICLE"
+                ]
+              },
+              {
+                "unitIds": [
+                  "unit-vashtorr-the-arkifane"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-soulforged-warpack-predatory-pursuit": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "alternatives": [
+              {
+                "allKeywords": [
+                  "HERETIC ASTARTES",
+                  "DAEMON",
+                  "VEHICLE"
+                ]
+              },
+              {
+                "unitIds": [
+                  "unit-vashtorr-the-arkifane"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-soulforged-warpack-feeding-frenzy": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "alternatives": [
+              {
+                "allKeywords": [
+                  "HERETIC ASTARTES",
+                  "DAEMON",
+                  "VEHICLE"
+                ]
+              },
+              {
+                "unitIds": [
+                  "unit-vashtorr-the-arkifane"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-veterans-of-the-long-war-endless-ire": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "DAMNED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-veterans-of-the-long-war-contemptuous-disregard": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "DAMNED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-veterans-of-the-long-war-bringers-of-despair": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "DAMNED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-veterans-of-the-long-war-black-crusade": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "anyKeywords": [
+              "INFANTRY",
+              "MOUNTED"
+            ],
+            "noneKeywords": [
+              "DAMNED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-veterans-of-the-long-war-let-the-galaxy-burn": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "noneKeywords": [
+              "TZEENTCH"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-veterans-of-the-long-war-millennia-of-experience": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "HERETIC ASTARTES"
+            ],
+            "anyKeywords": [
+              "INFANTRY",
+              "MOUNTED"
+            ],
+            "noneKeywords": [
+              "DAMNED"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
     }
   },
   "enhancements": {

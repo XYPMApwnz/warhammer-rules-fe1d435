@@ -62,6 +62,8 @@ assert.doesNotMatch(desktopApp,/abaddon/i,'Desktop to Phone mapping must not spe
 assert.match(start,/id="start"/);
 assert.match(armyRules,/Dark Pacts/);
 assert.match(armyRules,/data-source-term="chaos-space-marines-army-rule-dark-pacts"/);
+assert.match(armyRules,/Cults of the Dark Gods/);
+assert.match(armyRules,/data-source-term="chaos-space-marines-army-rule-cults-of-the-dark-gods"/);
 assert.match(abaddon,/id="unit-abaddon-the-despoiler"/);
 assert.match(abaddon,/href="\.\/chaos-terminator-squad\.html"/);
 assert.match(abaddon,/href="\.\/chosen\.html"/);
@@ -70,9 +72,9 @@ assert.match(rhino,/id="chaos-rhino-transport"/);
 assert.match(rhino,/Transport/);
 
 const limited=['chaos-cult.html','deceptors.html','dread-talons.html','fellhammer-siege-host.html','pactbound-zealots.html','renegade-raiders.html','soulforged-warpack.html','veterans-of-the-long-war.html'];
-const unresolved=['chaos-cult.html','soulforged-warpack.html'];
+const unresolved=[];
 assert.deepEqual(limited.filter(file=>fs.readFileSync(path.join(root,file),'utf8').includes('Codex source required')),unresolved);
-for(const file of limited){const html=fs.readFileSync(path.join(root,file),'utf8');assert.equal((html.match(/class="enhancement surface"/g)||[]).length,4,`${file} must expose four full-text Enhancements`);}
+for(const file of limited){const html=fs.readFileSync(path.join(root,file),'utf8');assert.equal((html.match(/class="enhancement surface"/g)||[]).length,4,`${file} must expose four full-text Enhancements`);assert.equal((html.match(/class="stratagem surface"/g)||[]).length,6,`${file} must expose six full-text Stratagems`);}
 
 assert.equal(source.datasheets.length,54);
 assert.equal(source.legends.length,53);

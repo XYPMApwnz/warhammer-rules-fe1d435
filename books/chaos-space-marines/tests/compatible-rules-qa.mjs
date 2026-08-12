@@ -18,7 +18,7 @@ assert.equal(Object.keys(matrix.units).length,54);
 assert.deepEqual(new Set(Object.keys(matrix.units)),new Set(codex.datasheets.map(unit=>unit.id)));
 for(const title of ['Khorne Berzerkers','Noise Marines','Plague Marines','Rubric Marines'])assert.ok(!codex.datasheets.some(unit=>unit.title===title),`${title} leaked into current CSM inventory`);
 assert.equal(pack.detachments.length,17);
-assert.equal(pack.detachments.reduce((sum,item)=>sum+item.stratagems.length,0),45);
+assert.equal(pack.detachments.reduce((sum,item)=>sum+item.stratagems.length,0),93);
 assert.equal(pack.detachments.reduce((sum,item)=>sum+item.enhancements.length,0),62);
 assert.deepEqual(rules('stratagem'),new Set(pack.detachments.flatMap(item=>item.stratagems.map(rule=>rule.id))));
 assert.deepEqual(rules('enhancement'),new Set(pack.detachments.flatMap(detachment=>detachment.enhancements.map(item=>pointId(detachment.title,item.title)))));
@@ -29,4 +29,4 @@ const nightmare=pointId('NIGHTMARE HUNT','Warp-Fuelled Thrusters'),dread=pointId
 assert.ok(rows.some(row=>row.ruleId===nightmare),'Nightmare Hunt Warp-Fuelled Thrusters identity is absent');
 assert.ok(rows.some(row=>row.ruleId===dread),'Dread Talons Warp-Fuelled Thrusters consensus contract is absent');
 for(const row of rows.filter(item=>item.scope!=='core'))assert.ok(pack.detachments.some(detachment=>detachment.id===row.detachmentId),`source-limited Detachment row ${row.detachmentId}`);
-console.log(`CSM Compatible Rules QA passed: ${Object.keys(matrix.units).length} units, ${rows.length} rows, 45 Stratagems, 62 Enhancements and 10 Core Stratagems.`);
+console.log(`CSM Compatible Rules QA passed: ${Object.keys(matrix.units).length} units, ${rows.length} rows, 93 Stratagems, 62 Enhancements and 10 Core Stratagems.`);

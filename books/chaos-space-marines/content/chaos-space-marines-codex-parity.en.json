@@ -1,0 +1,48 @@
+{
+  "schema": "chaos-space-marines-codex-parity/v1",
+  "faction": "Chaos Space Marines",
+  "source": {
+    "id": "csm-codex-secondary-consensus",
+    "authority": "secondary",
+    "checkedAt": "2026-08-12",
+    "ledger": "sources/codex-secondary-consensus.en.json"
+  },
+  "armyRules": [
+    {
+      "id": "army-rule-cults-of-the-dark-gods",
+      "name": "Cults of the Dark Gods",
+      "title": "Cults of the Dark Gods",
+      "text": "If your Army Faction is HERETIC ASTARTES, you can include any of the following units in your army, and when you do so their Faction keywords are replaced with HERETIC ASTARTES:\n\nKHORNE BERZERKERS (see World Eaters)\nRUBRIC MARINES (see Thousand Sons)\nPLAGUE MARINES (see Death Guard)\nNOISE MARINES (see Emperor’s Children)\n\nThe combined points value of such units you can include in your army depends on the battle size, as follows:\n\nIncursion: Up to 250 pts\nStrike Force: Up to 500 pts\nOnslaught: Up to 750 pts",
+      "provenance": {
+        "authority": "secondary",
+        "status": "SECONDARY CONSENSUS",
+        "sources": [
+          {
+            "name": "New Recruit / BSData",
+            "identity": "Chaos Space Marines catalogue revision 6 > Cults of the Dark Gods category limits and borrowed-unit links",
+            "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+            "catalogueRevision": 6
+          },
+          {
+            "name": "40k.app",
+            "identity": "https://www.40k.app/factions/chaos-space-marines/army-rules",
+            "checkedAt": "2026-08-12"
+          },
+          {
+            "name": "Wahapedia",
+            "identity": "Chaos Space Marines > Army Rules > Cults of the Dark Gods",
+            "checkedAt": "2026-08-12"
+          },
+          {
+            "name": "Games Workshop",
+            "identity": "Chaos Space Marines Faction Pack v1.1 > FAQ reference to Cults of the Dark Gods",
+            "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_chaos_space_marines-att4ehoaum-8mmiunajyf.pdf",
+            "page": 39
+          }
+        ],
+        "checkedAt": "2026-08-12"
+      }
+    }
+  ],
+  "detachments": []
+}

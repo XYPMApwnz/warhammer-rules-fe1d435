@@ -2071,7 +2071,28 @@
       "id": "chaos-cult",
       "title": "Chaos Cult",
       "sourceLayer": "codex-secondary-consensus",
-      "rule": null,
+      "rule": {
+        "id": "detachment-rule-chaos-cult-desperate-devotion",
+        "title": "Desperate Devotion",
+        "text": "Each time a DAMNED unit from your army makes a Dark Pact, if that unit was selected to make a Normal move, Advance or declare a charge, it can make a Desperate Pact. If it does, until the end of the phase, add 2\" to the Move characteristic of models in that unit and add 2 to Charge rolls made for that unit.\n\nDesperate Pacts\n\nEach time a unit makes a Desperate Pact, it must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds before any effects of that Desperate Pact are resolved.\n\nKEYWORDS\n\nTRAITOR GUARDSMEN SQUAD units from your army gain the BATTLELINE keyword.",
+        "provenance": {
+          "authority": "secondary",
+          "status": "SECONDARY CONSENSUS",
+          "sources": [
+            {
+              "name": "40k.app",
+              "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/chaos-cult",
+              "checkedAt": "2026-08-12"
+            },
+            {
+              "name": "Wahapedia",
+              "identity": "Chaos Space Marines > Chaos Cult > Detachment Rule > Desperate Devotion",
+              "checkedAt": "2026-08-12"
+            }
+          ],
+          "checkedAt": "2026-08-12"
+        }
+      },
       "enhancements": [
         {
           "id": "enhancement-chaos-cult-amulet-of-tainted-vigour",
@@ -2190,7 +2211,182 @@
           }
         }
       ],
-      "stratagems": [],
+      "stratagems": [
+        {
+          "id": "stratagem-chaos-cult-chosen-for-glory",
+          "title": "Chosen for Glory",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Your Shooting phase or the Fight phase.",
+          "target": "One DAMNED unit from your army that has not been selected to shoot or fight this phase.",
+          "effect": "Your unit can make a Desperate Pact. If it does, until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, you can re-roll the Wound roll as well.",
+          "sourceLabel": "Chaos Cult · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/chaos-cult",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Chaos Cult > Stratagem > Chosen for Glory",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-chaos-cult-selfless-demise",
+          "title": "Selfless Demise",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One DAMNED unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effect": "Until the attacking unit has resolved all of its attacks, each time a model in your unit is destroyed, roll one D6: on a 6, the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.",
+          "sourceLabel": "Chaos Cult · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/chaos-cult",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Chaos Cult > Stratagem > Selfless Demise",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-chaos-cult-infernal-sacrifice",
+          "title": "Infernal Sacrifice",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Fight phase.",
+          "target": "One DAMNED unit from your army that has not been selected to fight this phase.",
+          "effect": "Your unit can make a Desperate Pact. If it does, your unit suffers D3 mortal wounds (in addition to any suffered for failing the resulting Leadership test), and until the end of the phase, add 1 to the Attacks characteristic of the melee weapons equipped by models in your unit, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, until the end of the phase, improve the Strength characteristic of those weapons by 1 as well.",
+          "sourceLabel": "Chaos Cult · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/chaos-cult",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Chaos Cult > Stratagem > Infernal Sacrifice",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-chaos-cult-crazed-focus",
+          "title": "Crazed Focus",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Your Shooting phase.",
+          "target": "One DAMNED unit from your army that has not been selected to shoot this phase.",
+          "effect": "Your unit can make a Desperate Pact. If it does, until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, improve the Strength characteristic of that attack by 1 as well.",
+          "sourceLabel": "Chaos Cult · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/chaos-cult",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Chaos Cult > Stratagem > Crazed Focus",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-chaos-cult-reckless-haste",
+          "title": "Reckless Haste",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Your Charge phase.",
+          "target": "One DAMNED unit from your army.",
+          "effect": "Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.",
+          "sourceLabel": "Chaos Cult · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/chaos-cult",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Chaos Cult > Stratagem > Reckless Haste",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-chaos-cult-mortal-thralls",
+          "title": "Mortal Thralls",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+          "target": "One HERETIC ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks, and one friendly DAMNED unit within 3\" of your unit and visible to both your unit and the attacking unit.",
+          "effect": "Until the end of the phase, while your DAMNED unit is on the battlefield, each time your opponent would make a Wound roll for an attack that targets your HERETIC ASTARTES unit, if your DAMNED unit is visible to the attacking model and is an eligible target for that attack, no roll is made; instead, your DAMNED unit suffers a number of mortal wounds equal to the Damage characteristic of that attack.",
+          "sourceLabel": "Chaos Cult · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/chaos-cult",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Chaos Cult > Stratagem > Mortal Thralls",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        }
+      ],
       "provenance": {
         "authority": "secondary",
         "sourceId": "csm-codex-secondary-consensus",
@@ -2344,7 +2540,188 @@
           }
         }
       ],
-      "stratagems": [],
+      "stratagems": [
+        {
+          "id": "stratagem-deceptors-detonator",
+          "title": "Detonator",
+          "cp": 1,
+          "category": "Wargear",
+          "canonicalType": "wargear",
+          "typeStatus": "confirmed",
+          "when": "Any phase, just after an enemy model with the Deadly Demise ability (excluding TITANIC models) is destroyed.",
+          "target": "One HERETIC ASTARTES CHARACTER unit from your army that was within 18\" of that enemy model when it was destroyed.",
+          "effect": "Your opponent does not roll to determine whether mortal wounds are inflicted by their model’s Deadly Demise ability. Instead, mortal wounds are automatically inflicted (if that ability inflicts a random number of mortal wounds, your opponent rolls to determine that number as normal).",
+          "sourceLabel": "Deceptors · Wargear Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/deceptors",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Deceptors > Stratagem > Detonator",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-deceptors-from-all-sides",
+          "title": "From All Sides",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Start of your Charge phase.",
+          "target": "One HERETIC ASTARTES unit from your army.",
+          "effect": "Until the end of the phase, add 1 to Charge rolls made for your unit for each other HERETIC ASTARTES unit from your army that made a Charge move this phase (to a maximum of +3).",
+          "sourceLabel": "Deceptors · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/deceptors",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Deceptors > Stratagem > From All Sides",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-deceptors-pick-them-off",
+          "title": "Pick Them Off",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Your Shooting phase.",
+          "target": "One HERETIC ASTARTES unit from your army that has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is below its Starting Strength, you can re-roll the Hit roll. If the target is Below Half-strength, you can re-roll the Wound roll as well.",
+          "sourceLabel": "Deceptors · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/deceptors",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Deceptors > Stratagem > Pick Them Off",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-deceptors-coils-of-deception",
+          "title": "Coils of Deception",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Your Movement phase, just after a HERETIC ASTARTES unit from your army Falls Back.",
+          "target": "That HERETIC ASTARTES unit.",
+          "effect": "Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back.",
+          "sourceLabel": "Deceptors · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/deceptors",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Deceptors > Stratagem > Coils of Deception",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-deceptors-relentless-pursuit",
+          "title": "Relentless Pursuit",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
+          "target": "One HERETIC ASTARTES INFANTRY or HERETIC ASTARTES MOUNTED unit from your army that is within 8\" of that enemy unit and not within Engagement Range of one or more enemy units.",
+          "effect": "Your unit can make a Normal move of up to 6\".",
+          "sourceLabel": "Deceptors · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "Games Workshop",
+                "identity": "Chaos Space Marines Faction Pack v1.1 > Rules Updates",
+                "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_chaos_space_marines-att4ehoaum-8mmiunajyf.pdf",
+                "page": 37
+              },
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/deceptors",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Deceptors > Stratagem > Relentless Pursuit",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-deceptors-scrambled-coordinates",
+          "title": "Scrambled Coordinates",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Start of the Reinforcements step of your opponent’s Movement phase.",
+          "target": "One HERETIC ASTARTES unit from your army.",
+          "effect": "Until the end of the phase, enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" horizontally of your unit.",
+          "sourceLabel": "Deceptors · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/deceptors",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Deceptors > Stratagem > Scrambled Coordinates",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        }
+      ],
       "provenance": {
         "authority": "secondary",
         "sourceId": "csm-codex-secondary-consensus",
@@ -2499,7 +2876,188 @@
           }
         }
       ],
-      "stratagems": [],
+      "stratagems": [
+        {
+          "id": "stratagem-dread-talons-depthless-cruelty",
+          "title": "Depthless Cruelty",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Fight phase.",
+          "target": "One HERETIC ASTARTES INFANTRY unit from your army that has not been selected to fight this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Battle-shocked and/or Below Half-strength, improve the Armour Penetration characteristic of that attack by 1.",
+          "sourceLabel": "Dread Talons · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/dread-talons",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Dread Talons > Stratagem > Depthless Cruelty",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-dread-talons-bloody-example",
+          "title": "Bloody Example",
+          "cp": 1,
+          "category": "Epic Deed",
+          "canonicalType": "epic-deed",
+          "typeStatus": "confirmed",
+          "when": "Fight phase, just after a HERETIC ASTARTES unit from your army destroys a CHARACTER unit.",
+          "target": "That HERETIC ASTARTES unit.",
+          "effect": "Each enemy unit within 12\" of and visible to your unit must take a Battle-shock test.",
+          "sourceLabel": "Dread Talons · Epic Deed Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/dread-talons",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Dread Talons > Stratagem > Bloody Example",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-dread-talons-pitiless-hunters",
+          "title": "Pitiless Hunters",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Your Shooting phase.",
+          "target": "One HERETIC ASTARTES INFANTRY unit from your army that has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Battle-shocked and/or Below Half-strength, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+          "sourceLabel": "Dread Talons · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/dread-talons",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Dread Talons > Stratagem > Pitiless Hunters",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-dread-talons-relentless-terror",
+          "title": "Relentless Terror",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Your Movement phase, just after a HERETIC ASTARTES INFANTRY unit from your army Falls Back.",
+          "target": "That HERETIC ASTARTES INFANTRY unit.",
+          "effect": "Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Fell Back.",
+          "sourceLabel": "Dread Talons · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/dread-talons",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Dread Talons > Stratagem > Relentless Terror",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-dread-talons-screaming-descent",
+          "title": "Screaming Descent",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Reinforcements step of your Movement phase, from the second battle round onwards.",
+          "target": "One HERETIC ASTARTES JUMP PACK unit from your army that is in Reserves.",
+          "effect": "Set your unit up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, but until the end of the turn, it is not eligible to declare a charge. Then select one enemy INFANTRY or MOUNTED unit within 9\" of and visible to your unit: that unit makes a battle-shock roll.",
+          "sourceLabel": "Dread Talons · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "Games Workshop",
+                "identity": "Chaos Space Marines Faction Pack v1.1 > Rules Updates",
+                "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_chaos_space_marines-att4ehoaum-8mmiunajyf.pdf",
+                "page": 37
+              },
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/dread-talons",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Dread Talons > Stratagem > Screaming Descent",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-dread-talons-merciless-pursuit",
+          "title": "Merciless Pursuit",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "End of your opponent’s Movement phase.",
+          "target": "One HERETIC ASTARTES INFANTRY unit from your army that is not within Engagement Range of one or more enemy units.",
+          "effect": "Select one enemy unit that Fell Back this turn and is within 6\" of your unit. Your unit can declare a charge as if it were your Charge phase. When doing so, you can only select that enemy unit as the target of that charge (and only if it is an eligible target). Note that even if this charge is successful, your unit does not receive any Charge bonus this turn.",
+          "sourceLabel": "Dread Talons · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/dread-talons",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Dread Talons > Stratagem > Merciless Pursuit",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        }
+      ],
       "provenance": {
         "authority": "secondary",
         "sourceId": "csm-codex-secondary-consensus",
@@ -2654,7 +3212,182 @@
           }
         }
       ],
-      "stratagems": [],
+      "stratagems": [
+        {
+          "id": "stratagem-fellhammer-siege-host-persistent-assailants",
+          "title": "Persistent Assailants",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Fight phase.",
+          "target": "One HERETIC ASTARTES unit from your army that was selected as the target of one or more attacks this phase and has not been selected to fight this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll, and if your unit is Below Half-strength you can re-roll the Wound roll as well.",
+          "sourceLabel": "Fellhammer Siege-host · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/fellhammer-siege-host",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Fellhammer Siege-host > Stratagem > Persistent Assailants",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-fellhammer-siege-host-brutal-attrition",
+          "title": "Brutal Attrition",
+          "cp": 1,
+          "category": "Epic Deed",
+          "canonicalType": "epic-deed",
+          "typeStatus": "confirmed",
+          "when": "Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One HERETIC ASTARTES INFANTRY unit from your army (excluding DAMNED units) that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effect": "Until the end of the phase, each time a melee attack is allocated to your unit, after the attacking unit has finished making its attacks, roll one D6 (to a maximum of six D6 per attacking unit): for each 4+, the attacking unit suffers 1 mortal wound.",
+          "sourceLabel": "Fellhammer Siege-host · Epic Deed Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/fellhammer-siege-host",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Fellhammer Siege-host > Stratagem > Brutal Attrition",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-fellhammer-siege-host-pitiless-cannonade",
+          "title": "Pitiless Cannonade",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Your Shooting phase.",
+          "target": "One HERETIC ASTARTES unit from your army that has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Below Half-strength, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
+          "sourceLabel": "Fellhammer Siege-host · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/fellhammer-siege-host",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Fellhammer Siege-host > Stratagem > Pitiless Cannonade",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-fellhammer-siege-host-point-blank-destruction",
+          "title": "Point-blank Destruction",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Your Shooting phase.",
+          "target": "One HERETIC ASTARTES unit from your army that is within Engagement Range of one or more enemy units and has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, your unit’s ranged weapons (excluding Blast weapons) have the [PISTOL] ability.",
+          "sourceLabel": "Fellhammer Siege-host · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/fellhammer-siege-host",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Fellhammer Siege-host > Stratagem > Point-blank Destruction",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-fellhammer-siege-host-steadfast-determination",
+          "title": "Steadfast Determination",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+          "target": "One HERETIC ASTARTES unit from your army (excluding DAMNED units) that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effect": "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability.",
+          "sourceLabel": "Fellhammer Siege-host · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/fellhammer-siege-host",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Fellhammer Siege-host > Stratagem > Steadfast Determination",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-fellhammer-siege-host-siegecraft",
+          "title": "Siegecraft",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Start of your opponent’s Charge phase.",
+          "target": "One HERETIC ASTARTES unit from your army.",
+          "effect": "Until the end of the phase, each time an enemy unit selects your unit as a target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll).",
+          "sourceLabel": "Fellhammer Siege-host · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/fellhammer-siege-host",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Fellhammer Siege-host > Stratagem > Siegecraft",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        }
+      ],
       "provenance": {
         "authority": "secondary",
         "sourceId": "csm-codex-secondary-consensus",
@@ -2813,7 +3546,182 @@
           }
         }
       ],
-      "stratagems": [],
+      "stratagems": [
+        {
+          "id": "stratagem-pactbound-zealots-eye-of-the-gods",
+          "title": "Eye of the Gods",
+          "cp": 1,
+          "category": "Epic Deed",
+          "canonicalType": "epic-deed",
+          "typeStatus": "confirmed",
+          "when": "Fight phase, just after a HERETIC ASTARTES CHARACTER unit from your army (excluding DAMNED, DAEMON AND EPIC HERO units) destroys an enemy unit.",
+          "target": "One HERETIC ASTARTES CHARACTER model in that unit.",
+          "effect": "Until the end of the battle, add 1 to the Move, Toughness and Wounds characteristics of that Character model, and add 1 to the Attacks, Strength and Damage characteristics of that CHARACTER models melee weapons.",
+          "sourceLabel": "Pactbound Zealots · Epic Deed Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/pactbound-zealots",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Pactbound Zealots > Stratagem > Eye of the Gods",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-pactbound-zealots-eternal-hate",
+          "title": "Eternal Hate",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One HERETIC ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if it is a KHORNE unit: on a 4+, do not remove it from play. That destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+          "sourceLabel": "Pactbound Zealots · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/pactbound-zealots",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Pactbound Zealots > Stratagem > Eternal Hate",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-pactbound-zealots-profane-zeal",
+          "title": "Profane Zeal",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Your Shooting phase or the Fight phase.",
+          "target": "One HERETIC ASTARTES CHAOS UNDIVIDED unit from your army that has not been selected to shoot or fight this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Wound roll.",
+          "sourceLabel": "Pactbound Zealots · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/pactbound-zealots",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Pactbound Zealots > Stratagem > Profane Zeal",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-pactbound-zealots-skinshift",
+          "title": "Skinshift",
+          "cp": 1,
+          "category": "Epic Deed",
+          "canonicalType": "epic-deed",
+          "typeStatus": "confirmed",
+          "when": "Your Command phase.",
+          "target": "One HERETIC ASTARTES unit from your army.",
+          "effect": "One model in your unit regains up to 3 lost wounds. In addition, if your unit is a TZEENTCH unit below its Starting Strength, one destroyed model (excluding CHARACTER models) is returned to your unit with its full wounds remaining.",
+          "sourceLabel": "Pactbound Zealots · Epic Deed Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/pactbound-zealots",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Pactbound Zealots > Stratagem > Skinshift",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-pactbound-zealots-torpefying-refrain",
+          "title": "Torpefying Refrain",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Your Movement phase.",
+          "target": "One HERETIC ASTARTES unit from your army.",
+          "effect": "Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Fell Back. If your unit is a SLAANESH unit, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back.",
+          "sourceLabel": "Pactbound Zealots · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/pactbound-zealots",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Pactbound Zealots > Stratagem > Torpefying Refrain",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-pactbound-zealots-festering-miasma",
+          "title": "Festering Miasma",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+          "target": "One HERETIC ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effect": "Until the end of the phase, your unit has the Stealth ability. In addition, if your unit is a NURGLE unit, it can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+          "sourceLabel": "Pactbound Zealots · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/pactbound-zealots",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Pactbound Zealots > Stratagem > Festering Miasma",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        }
+      ],
       "provenance": {
         "authority": "secondary",
         "sourceId": "csm-codex-secondary-consensus",
@@ -2967,7 +3875,188 @@
           }
         }
       ],
-      "stratagems": [],
+      "stratagems": [
+        {
+          "id": "stratagem-renegade-raiders-unfailingly-obdurate",
+          "title": "Unfailingly Obdurate",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One HERETIC ASTARTES unit from your army (excluding DAMNED units) that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "sourceLabel": "Renegade Raiders · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "Games Workshop",
+                "identity": "Chaos Space Marines Faction Pack v1.1 > Rules Updates",
+                "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_chaos_space_marines-att4ehoaum-8mmiunajyf.pdf",
+                "page": 37
+              },
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/renegade-raiders",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Renegade Raiders > Stratagem > Unfailingly Obdurate",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-renegade-raiders-scour-and-seize",
+          "title": "Scour and Seize",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Fight phase.",
+          "target": "One HERETIC ASTARTES unit from your army that has not been selected to fight this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets a unit within range of an objective marker, that attack has the [PRECISION] ability.",
+          "sourceLabel": "Renegade Raiders · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/renegade-raiders",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Renegade Raiders > Stratagem > Scour and Seize",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-renegade-raiders-opportunistic-raiders",
+          "title": "Opportunistic Raiders",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "End of the Fight phase.",
+          "target": "One HERETIC ASTARTES unit from your army that was eligible to fight this phase.",
+          "effect": "If your unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\" or up to 12\" if it is a MOUNTED unit. Otherwise, your unit can make a Fall Back move. It cannot embark within a TRANSPORT at the end of this move if it disembarked from a TRANSPORT this turn.",
+          "sourceLabel": "Renegade Raiders · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/renegade-raiders",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Renegade Raiders > Stratagem > Opportunistic Raiders",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-renegade-raiders-warpcharged-engines",
+          "title": "Warpcharged Engines",
+          "cp": 1,
+          "category": "Wargear",
+          "canonicalType": "wargear",
+          "typeStatus": "confirmed",
+          "when": "Your Movement phase.",
+          "target": "One HERETIC ASTARTES TRANSPORT or HERETIC ASTARTES MOUNTED unit from your army that has not been selected to move this phase.",
+          "effect": "Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit.",
+          "sourceLabel": "Renegade Raiders · Wargear Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/renegade-raiders",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Renegade Raiders > Stratagem > Warpcharged Engines",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-renegade-raiders-ruinous-raid",
+          "title": "Ruinous Raid",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Your Shooting phase or your Fight phase.",
+          "target": "One HERETIC ASTARTES unit from your army that disembarked from a TRANSPORT this turn and has not been selected to shoot or fight this phase.",
+          "effect": "Until the end of the phase, each time a model in your unit makes an attack, if the target of that attack is within range of an objective marker, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+          "sourceLabel": "Renegade Raiders · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/renegade-raiders",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Renegade Raiders > Stratagem > Ruinous Raid",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-renegade-raiders-reavers-haste",
+          "title": "Reaver’s Haste",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Your Charge phase.",
+          "target": "One HERETIC ASTARTES INFANTRY or HERETIC ASTARTES MOUNTED unit from your army.",
+          "effect": "Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced. If you select one or more units within range of an objective marker as a target of that charge, add 1 to the Charge roll.",
+          "sourceLabel": "Renegade Raiders · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/renegade-raiders",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Renegade Raiders > Stratagem > Reavers' Haste",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        }
+      ],
       "provenance": {
         "authority": "secondary",
         "sourceId": "csm-codex-secondary-consensus",
@@ -2978,7 +4067,28 @@
       "id": "soulforged-warpack",
       "title": "Soulforged Warpack",
       "sourceLayer": "codex-secondary-consensus",
-      "rule": null,
+      "rule": {
+        "id": "detachment-rule-soulforged-warpack-debt-to-the-soul-forge",
+        "title": "Debt to the Soul Forge",
+        "text": "Each time a HERETIC ASTARTES DAEMON VEHICLE unit from your army makes a Dark Pact, it can invoke its contract. If it does, subtract 1 from the resulting Leadership test when making that Dark Pact, and until the end of the phase:\n\nEach time a model in that unit makes a ranged attack, add 1 to the Wound roll.\nAdd 2 to the Attacks characteristic of melee weapons equipped by models in that unit.",
+        "provenance": {
+          "authority": "secondary",
+          "status": "SECONDARY CONSENSUS",
+          "sources": [
+            {
+              "name": "40k.app",
+              "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/soulforged-warpack",
+              "checkedAt": "2026-08-12"
+            },
+            {
+              "name": "Wahapedia",
+              "identity": "Chaos Space Marines > Soulforged Warpack > Detachment Rule > Debt to the Soul Forge",
+              "checkedAt": "2026-08-12"
+            }
+          ],
+          "checkedAt": "2026-08-12"
+        }
+      },
       "enhancements": [
         {
           "id": "enhancement-soulforged-warpack-forges-blessing",
@@ -3097,7 +4207,200 @@
           }
         }
       ],
-      "stratagems": [],
+      "stratagems": [
+        {
+          "id": "stratagem-soulforged-warpack-desperate-pledge",
+          "title": "Desperate Pledge",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Your Shooting phase or the Fight phase.",
+          "target": "One HERETIC ASTARTES DAEMON VEHICLE unit from your army that has not been selected to shoot or fight this phase.",
+          "effect": "Until the end of the phase, if your unit invokes its contract, each time it makes an attack, improve the Armour Penetration characteristic of that attack by 1.",
+          "sourceLabel": "Soulforged Warpack · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/soulforged-warpack",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Soulforged Warpack > Stratagem > Desperate Pledge",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-soulforged-warpack-glut-of-souls",
+          "title": "Glut of Souls",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Fight phase.",
+          "target": "One HERETIC ASTARTES DAEMON VEHICLE unit from your army (excluding TITANIC units) that has not been selected to fight this phase.",
+          "effect": "Until the end of the phase, if your unit invokes its contract, each time it makes an attack that destroys an enemy model, roll one D6: on a 5+, your unit regains 1 lost wound after all of its attacks have been resolved (to a maximum of 6 wounds).",
+          "sourceLabel": "Soulforged Warpack · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/soulforged-warpack",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Soulforged Warpack > Stratagem > Glut of Souls",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-soulforged-warpack-daemonic-possession",
+          "title": "Daemonic Possession",
+          "cp": 1,
+          "category": "Epic Deed",
+          "canonicalType": "epic-deed",
+          "typeStatus": "confirmed",
+          "when": "Your Command phase.",
+          "target": "One HERETIC ASTARTES VEHICLE unit from your army (excluding DAEMON units).",
+          "effect": "Until the end of the battle, your unit has the DAEMON keyword.",
+          "sourceLabel": "Soulforged Warpack · Epic Deed Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/soulforged-warpack",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Soulforged Warpack > Stratagem > Daemonic Possession",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-soulforged-warpack-unstoppable-rampage",
+          "title": "Unstoppable Rampage",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Your Movement phase or your Charge phase.",
+          "target": "One HERETIC ASTARTES DAEMON VEHICLE or VASHTORR THE ARKIFANE unit from your army that has not been selected to move or charge this phase.",
+          "effect": "Until the end of the phase, each time your unit makes a Normal, Advance or Charge move, it can move horizontally through terrain features as if they were not there.",
+          "sourceLabel": "Soulforged Warpack · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "Games Workshop",
+                "identity": "Chaos Space Marines Faction Pack v1.1 > Rules Updates",
+                "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_chaos_space_marines-att4ehoaum-8mmiunajyf.pdf",
+                "page": 37
+              },
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/soulforged-warpack",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Soulforged Warpack > Stratagem > Unstoppable Rampage",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-soulforged-warpack-predatory-pursuit",
+          "title": "Predatory Pursuit",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
+          "target": "One HERETIC ASTARTES DAEMON VEHICLE or VASHTORR THE ARKIFANE unit from your army that is within 8\" of that enemy unit and not within Engagement Range of one or more enemy units.",
+          "effect": "Your unit can make a Normal move of up to 6\", but must end that move as close as possible to that enemy unit.",
+          "sourceLabel": "Soulforged Warpack · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "Games Workshop",
+                "identity": "Chaos Space Marines Faction Pack v1.1 > Rules Updates",
+                "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_chaos_space_marines-att4ehoaum-8mmiunajyf.pdf",
+                "page": 37
+              },
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/soulforged-warpack",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Soulforged Warpack > Stratagem > Predatory Pursuit",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-soulforged-warpack-feeding-frenzy",
+          "title": "Feeding Frenzy",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Your opponent’s Movement phase, when an enemy unit (excluding MONSTERS and VEHICLES) is selected to Fall Back.",
+          "target": "One HERETIC ASTARTES DAEMON VEHICLE or VASHTORR THE ARKIFANE unit from your army that is within Engagement Range of that enemy unit.",
+          "effect": "Until the end of the phase, each time an enemy unit (excluding MONSTERS and VEHICLES) that is within Engagement Range of your unit Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if that enemy unit is Battle-shocked, subtract 1 from each of those tests.",
+          "sourceLabel": "Soulforged Warpack · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "Games Workshop",
+                "identity": "Chaos Space Marines Faction Pack v1.1 > Rules Updates",
+                "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_chaos_space_marines-att4ehoaum-8mmiunajyf.pdf",
+                "page": 37
+              },
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/soulforged-warpack",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Soulforged Warpack > Stratagem > Feeding Frenzy",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        }
+      ],
       "provenance": {
         "authority": "secondary",
         "sourceId": "csm-codex-secondary-consensus",
@@ -3257,7 +4560,200 @@
           }
         }
       ],
-      "stratagems": [],
+      "stratagems": [
+        {
+          "id": "stratagem-veterans-of-the-long-war-endless-ire",
+          "title": "Endless Ire",
+          "cp": 2,
+          "category": "Epic Deed",
+          "canonicalType": "epic-deed",
+          "typeStatus": "confirmed",
+          "when": "Any phase, just after your focus of hatred is destroyed.",
+          "target": "One HERETIC ASTARTES CHARACTER unit from your army (excluding Damned units).",
+          "effect": "Select one enemy unit within 12\" of and visible to your unit. Until the start of your next Command phase, that enemy unit is considered to be your focus of hatred.",
+          "sourceLabel": "Veterans of the Long War · Epic Deed Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/veterans-of-the-long-war",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Veterans of the Long War > Stratagem > Endless Ire",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-veterans-of-the-long-war-contemptuous-disregard",
+          "title": "Contemptuous Disregard",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One HERETIC ASTARTES unit from your army (excluding DAMNED units) that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "sourceLabel": "Veterans of the Long War · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "Games Workshop",
+                "identity": "Chaos Space Marines Faction Pack v1.1 > Rules Updates",
+                "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_chaos_space_marines-att4ehoaum-8mmiunajyf.pdf",
+                "page": 37
+              },
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/veterans-of-the-long-war",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Veterans of the Long War > Stratagem > Contemptuous Disregard",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-veterans-of-the-long-war-bringers-of-despair",
+          "title": "Bringers of Despair",
+          "cp": 1,
+          "category": "Epic Deed",
+          "canonicalType": "epic-deed",
+          "typeStatus": "confirmed",
+          "when": "Fight phase.",
+          "target": "One HERETIC ASTARTES unit from your army (excluding DAMNED units) that is within Engagement Range of your focus of hatred.",
+          "effect": "Until the end of the phase, your unit has the Fights First ability.",
+          "sourceLabel": "Veterans of the Long War · Epic Deed Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "Games Workshop",
+                "identity": "Chaos Space Marines Faction Pack v1.1 > Rules Updates",
+                "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_chaos_space_marines-att4ehoaum-8mmiunajyf.pdf",
+                "page": 37
+              },
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/veterans-of-the-long-war",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Veterans of the Long War > Stratagem > Bringers of Despair",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-veterans-of-the-long-war-black-crusade",
+          "title": "Black Crusade",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Your Movement phase.",
+          "target": "One HERETIC ASTARTES INFANTRY unit or HERETIC ASTARTES MOUNTED unit from your army (excluding DAMNED units).",
+          "effect": "Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced or Fell Back, and bolt pistols, boltguns and combi-bolters equipped by models in your unit have the [DEVASTATING WOUNDS] ability while your unit has not already inflicted 6 wounds this turn using that ability.",
+          "sourceLabel": "Veterans of the Long War · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/veterans-of-the-long-war",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Veterans of the Long War > Stratagem > Black Crusade",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-veterans-of-the-long-war-let-the-galaxy-burn",
+          "title": "Let the Galaxy Burn",
+          "cp": 1,
+          "category": "Battle Tactic",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "when": "Your Shooting phase.",
+          "target": "One HERETIC ASTARTES unit from your army (excluding TZEENTCH units) that has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability, and change the Attacks characteristic of Torrent weapons equipped by models in your unit to 6.",
+          "sourceLabel": "Veterans of the Long War · Battle Tactic Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/veterans-of-the-long-war",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Veterans of the Long War > Stratagem > Let the Galaxy Burn",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "stratagem-veterans-of-the-long-war-millennia-of-experience",
+          "title": "Millennia of Experience",
+          "cp": 1,
+          "category": "Strategic Ploy",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "when": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
+          "target": "One HERETIC ASTARTES INFANTRY or HERETIC ASTARTES MOUNTED unit from your army (excluding DAMNED units) that is within 8\" of that enemy unit and not within Engagement Range of one or more enemy units.",
+          "effect": "Your unit can make a Normal move of up to 6\".",
+          "sourceLabel": "Veterans of the Long War · Strategic Ploy Stratagem",
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "Games Workshop",
+                "identity": "Chaos Space Marines Faction Pack v1.1 > Rules Updates",
+                "url": "https://assets.warhammer-community.com/eng_22-07_warhammer_40,000_faction_pack_chaos_space_marines-att4ehoaum-8mmiunajyf.pdf",
+                "page": 37
+              },
+              {
+                "name": "40k.app",
+                "identity": "https://www.40k.app/factions/chaos-space-marines/detachments/veterans-of-the-long-war",
+                "checkedAt": "2026-08-12"
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Veterans of the Long War > Stratagem > Millennia of Experience",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        }
+      ],
       "provenance": {
         "authority": "secondary",
         "sourceId": "csm-codex-secondary-consensus",

@@ -70,7 +70,9 @@ assert.match(rhino,/id="chaos-rhino-transport"/);
 assert.match(rhino,/Transport/);
 
 const limited=['chaos-cult.html','deceptors.html','dread-talons.html','fellhammer-siege-host.html','pactbound-zealots.html','renegade-raiders.html','soulforged-warpack.html','veterans-of-the-long-war.html'];
-assert.equal(limited.filter(file=>fs.readFileSync(path.join(root,file),'utf8').includes('Codex source required')).length,8);
+const unresolved=['chaos-cult.html','soulforged-warpack.html'];
+assert.deepEqual(limited.filter(file=>fs.readFileSync(path.join(root,file),'utf8').includes('Codex source required')),unresolved);
+for(const file of limited){const html=fs.readFileSync(path.join(root,file),'utf8');assert.equal((html.match(/class="enhancement surface"/g)||[]).length,4,`${file} must expose four full-text Enhancements`);}
 
 assert.equal(source.datasheets.length,54);
 assert.equal(source.legends.length,53);

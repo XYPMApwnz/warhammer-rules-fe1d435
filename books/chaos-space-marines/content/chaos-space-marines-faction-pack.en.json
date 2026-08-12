@@ -13,7 +13,14 @@
     "documentType": "faction-pack",
     "edition": "Warhammer 40,000 11th Edition",
     "pageNumbering": "physical PDF pages",
-    "note": "This pack supplements Codex: Chaos Space Marines; it is not a complete codex source."
+    "note": "This pack supplements Codex: Chaos Space Marines; it is not a complete codex source.",
+    "secondaryConsensus": {
+      "authority": "secondary",
+      "sourceId": "csm-codex-secondary-consensus",
+      "checkedAt": "2026-08-12",
+      "evaluated": 89,
+      "imported": 38
+    }
   },
   "pages": {
     "1": {
@@ -2058,6 +2065,1203 @@
           15,
           16
         ]
+      }
+    },
+    {
+      "id": "chaos-cult",
+      "title": "Chaos Cult",
+      "sourceLayer": "codex-secondary-consensus",
+      "rule": null,
+      "enhancements": [
+        {
+          "id": "enhancement-chaos-cult-amulet-of-tainted-vigour",
+          "title": "Amulet of Tainted Vigour",
+          "text": "DARK APOSTLE model only. In your Command phase, you can return up to D3 destroyed DAMNED models (excluding CHARACTER models) to the bearer's unit.",
+          "restrictions": [
+            "DARK APOSTLE model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "2c8-9d0d-72d7-7375",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[24]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Chaos Cult > Enhancement > Amulet of Tainted Vigour",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-chaos-cult-cultists-brand",
+          "title": "Cultist's Brand",
+          "text": "DARK APOSTLE or DAMNED model only. If every other model in the bearer's unit (excluding Dark Disciples) is DAMNED, you can re-roll Advance and Charge rolls made for the bearer's unit.",
+          "restrictions": [
+            "DARK APOSTLE or DAMNED model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "42ab-1d5e-7a31-2de7",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[26]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Chaos Cult > Enhancement > Cultist's Brand",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-chaos-cult-incendiary-goad",
+          "title": "Incendiary Goad",
+          "text": "DARK APOSTLE or DAMNED model only. While the bearer's unit is below its Starting Strength, add 1 to the Strength characteristic of melee weapons equipped by DAMNED models in that unit, and while that unit is Below Half-strength, add 1 to the Attacks characteristic of those weapons as well.",
+          "restrictions": [
+            "DARK APOSTLE or DAMNED model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "c791-aaac-2c1f-1d9a",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[25]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Chaos Cult > Enhancement > Incendiary Goad",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-chaos-cult-warped-foresight",
+          "title": "Warped Foresight",
+          "text": "DARK APOSTLE or DAMNED model only. While the bearer is leading a unit with the Scouts 6\" ability, every model in the bearer's unit has the Scouts 6\" ability.",
+          "restrictions": [
+            "DARK APOSTLE or DAMNED model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "a660-3c2c-2f05-a6a1",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[27]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Chaos Cult > Enhancement > Warped Foresight",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        }
+      ],
+      "stratagems": [],
+      "provenance": {
+        "authority": "secondary",
+        "sourceId": "csm-codex-secondary-consensus",
+        "checkedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "deceptors",
+      "title": "Deceptors",
+      "sourceLayer": "codex-secondary-consensus",
+      "rule": {
+        "title": "Masters of Misdirection",
+        "text": "",
+        "provenance": {
+          "authority": "secondary",
+          "status": "SECONDARY CONSENSUS",
+          "sources": [
+            {
+              "name": "New Recruit / BSData",
+              "identity": {
+                "id": "ea79-5d28-1dc3-b123",
+                "jsonPath": "$.catalogue.sharedSelectionEntries[0].selectionEntryGroups[0].selectionEntries[2].rules[0]"
+              },
+              "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+              "catalogueRevision": 6
+            },
+            {
+              "name": "Wahapedia",
+              "identity": "Chaos Space Marines > Deceptors > Detachment Rule > Masters of Misdirection",
+              "checkedAt": "2026-08-12"
+            }
+          ],
+          "checkedAt": "2026-08-12"
+        }
+      },
+      "enhancements": [
+        {
+          "id": "enhancement-deceptors-cursed-fang",
+          "title": "Cursed Fang",
+          "text": "HERETIC ASTARTES INFANTRY model only. Improve the Armour Penetration characteristic of the bearer's melee weapons by 1, and the bearer's melee weapons have the [PRECISION] ability.",
+          "restrictions": [
+            "HERETIC ASTARTES INFANTRY model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "6ee9-ec28-2608-c8c6",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[9]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Deceptors > Enhancement > Cursed Fang",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-deceptors-falsehood",
+          "title": "Falsehood",
+          "text": "CHAOS LORD model only (excluding TERMINATOR and JUMP PACK models). In the Declare Battle Formations step, you can set the bearer up in Reserves instead of setting it up on the battlefield. If you do, in one of your Movement phases, you can select one model in a friendly LEGIONARIES or CHOSEN unit that has two or more models remaining and is on the battlefield (excluding Attached units). The selected model is destroyed (ignoring any rules that are triggered when a model is destroyed) and the bearer is set up as close as possible to where that model was destroyed and only within Engagement Range of any enemy units if the destroyed model was within Engagement Range of those units. The bearer now attaches to that unit as its Leader.",
+          "restrictions": [
+            "CHAOS LORD model only (excluding TERMINATOR and JUMP PACK models)."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "361e-2839-f32e-1873",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[8]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Deceptors > Enhancement > Falsehood",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-deceptors-shroud-of-obfuscation",
+          "title": "Shroud of Obfuscation",
+          "text": "HERETIC ASTARTES INFANTRY model only. The bearer has the Stealth and Lone Operative abilities.",
+          "restrictions": [
+            "HERETIC ASTARTES INFANTRY model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "a469-ca0-3e09-ae0a",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[10]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Deceptors > Enhancement > Shroud of Obfuscation",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-deceptors-soul-link",
+          "title": "Soul Link",
+          "text": "HERETIC ASTARTES INFANTRY model only. At the start of your Command phase, you can select one other HERETIC ASTARTES INFANTRY CHARACTER model from your army (excluding EPIC HEROES). Until the start of your next Command phase, the bearer gains the PSYKER keyword, and replace the bearer's datasheet abilities with the datasheet abilities of the CHARACTER you selected.",
+          "restrictions": [
+            "HERETIC ASTARTES INFANTRY model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "56cd-b0f6-199-92c7",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[11]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Deceptors > Enhancement > Soul Link",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        }
+      ],
+      "stratagems": [],
+      "provenance": {
+        "authority": "secondary",
+        "sourceId": "csm-codex-secondary-consensus",
+        "checkedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "dread-talons",
+      "title": "Dread Talons",
+      "sourceLayer": "codex-secondary-consensus",
+      "rule": {
+        "title": "Terror Descends (Aura)",
+        "text": "In the Battle-shock step of your opponent's Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more HERETIC ASTARTES units from your army, that enemy unit must take a Battle-shock test. Each time an enemy unit within 12\" of one or more HERETIC ASTARTES units from your army takes a Battle-shock test, subtract 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle-shock tests in the same phase.",
+        "provenance": {
+          "authority": "secondary",
+          "status": "SECONDARY CONSENSUS",
+          "sources": [
+            {
+              "name": "New Recruit / BSData",
+              "identity": {
+                "id": "2731-f494-9e83-4c7c",
+                "jsonPath": "$.catalogue.sharedSelectionEntries[0].selectionEntryGroups[0].selectionEntries[4].rules[0]"
+              },
+              "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+              "catalogueRevision": 6
+            },
+            {
+              "name": "Wahapedia",
+              "identity": "Chaos Space Marines > Dread Talons > Detachment Rule > Terror Descends (Aura)",
+              "checkedAt": "2026-08-12"
+            }
+          ],
+          "checkedAt": "2026-08-12"
+        }
+      },
+      "enhancements": [
+        {
+          "id": "enhancement-dread-talons-eater-of-dread",
+          "title": "Eater of Dread",
+          "text": "HERETIC ASTARTES model only. At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result for each Battle-shocked enemy unit that is on the battlefield: on a 5+, you gain 1CP.",
+          "restrictions": [
+            "HERETIC ASTARTES model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "f208-950f-f62d-943a",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[19]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Dread Talons > Enhancement > Eater of Dread",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-dread-talons-nights-shroud",
+          "title": "Night's Shroud",
+          "text": "CHAOS LORD model only. TERMINATOR models are excluded. Models in the bearer's unit have the Stealth ability.",
+          "restrictions": [
+            "CHAOS LORD model only.",
+            "TERMINATOR models are excluded."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "8a4b-3777-e4ec-fb5e",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[17]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Dread Talons > Enhancement > Night's Shroud",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-dread-talons-warp-fuelled-thrusters",
+          "title": "Warp-fuelled Thrusters",
+          "text": "JUMP PACK CHAOS LORD model only. At the end of your opponent's turn, if the bearer's unit is not within Engagement Range of one or more enemy units, you can remove the bearer's unit from the battlefield and place it into Strategic Reserves.",
+          "restrictions": [
+            "JUMP PACK CHAOS LORD model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "1b4d-d584-df1c-c158",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[28]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Dread Talons > Enhancement > Warp-fuelled Thrusters",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-dread-talons-willbreaker",
+          "title": "Willbreaker",
+          "text": "HERETIC ASTARTES model only. In the Fight phase, after the bearer has made its attacks, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test.",
+          "restrictions": [
+            "HERETIC ASTARTES model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "d3d-1a0c-87b8-3401",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[16]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Dread Talons > Enhancement > Willbreaker",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        }
+      ],
+      "stratagems": [],
+      "provenance": {
+        "authority": "secondary",
+        "sourceId": "csm-codex-secondary-consensus",
+        "checkedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "fellhammer-siege-host",
+      "title": "Fellhammer Siege-host",
+      "sourceLayer": "codex-secondary-consensus",
+      "rule": {
+        "title": "Iron Fortitude",
+        "text": "Each time a ranged attack targets a HERETIC ASTARTES unit from your army (excluding DAMNED units), if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+        "provenance": {
+          "authority": "secondary",
+          "status": "SECONDARY CONSENSUS",
+          "sources": [
+            {
+              "name": "New Recruit / BSData",
+              "identity": {
+                "id": "eb25-bc78-6c52-aaad",
+                "jsonPath": "$.catalogue.sharedSelectionEntries[0].selectionEntryGroups[0].selectionEntries[5].rules[0]"
+              },
+              "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+              "catalogueRevision": 6
+            },
+            {
+              "name": "Wahapedia",
+              "identity": "Chaos Space Marines > Fellhammer Siege-host > Detachment Rule > Iron Fortitude",
+              "checkedAt": "2026-08-12"
+            }
+          ],
+          "checkedAt": "2026-08-12"
+        }
+      },
+      "enhancements": [
+        {
+          "id": "enhancement-fellhammer-siege-host-bastion-plate",
+          "title": "Bastion Plate",
+          "text": "CHAOS LORD model only. JUMP PACK models are excluded. Once per battle round, when a saving throw is failed for the bearer's unit, you can change the Damage characteristic of that attack to 0.",
+          "restrictions": [
+            "CHAOS LORD model only.",
+            "JUMP PACK models are excluded."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "5a26-9010-9370-8043",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[20]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Fellhammer Siege-host > Enhancement > Bastion Plate",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-fellhammer-siege-host-iron-artifice",
+          "title": "Iron Artifice",
+          "text": "HERETIC ASTARTES INFANTRY model only. The bearer's weapons have the [ANTI-VEHICLE 4+] and [ANTI-FORTIFICATION 4+] abilities.",
+          "restrictions": [
+            "HERETIC ASTARTES INFANTRY model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "5723-e257-6177-ac5",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[23]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Fellhammer Siege-host > Enhancement > Iron Artifice",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-fellhammer-siege-host-ironbound-enmity",
+          "title": "Ironbound Enmity",
+          "text": "HERETIC ASTARTES model only. Each time the bearer makes an attack while within range of an objective marker, add 1 to the Wound roll.",
+          "restrictions": [
+            "HERETIC ASTARTES model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "281c-52a2-198-1047",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[21]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Fellhammer Siege-host > Enhancement > Ironbound Enmity",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-fellhammer-siege-host-warp-tracer",
+          "title": "Warp Tracer",
+          "text": "HERETIC ASTARTES model only. In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover.",
+          "restrictions": [
+            "HERETIC ASTARTES model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "786c-288a-5ed6-676e",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[22]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Fellhammer Siege-host > Enhancement > Warp Tracer",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        }
+      ],
+      "stratagems": [],
+      "provenance": {
+        "authority": "secondary",
+        "sourceId": "csm-codex-secondary-consensus",
+        "checkedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "pactbound-zealots",
+      "title": "Pactbound Zealots",
+      "sourceLayer": "codex-secondary-consensus",
+      "rule": {
+        "title": "Marks of Chaos",
+        "text": "When mustering your army, when you select a HERETIC ASTARTES unit to include in your army, if that unit is not an EPIC HERO and does not already have one of the following keywords, you must select one for that unit and note it on your Army Roster: KHORNE, TZEENTCH, NURGLE, SLAANESH, CHAOS UNDIVIDED. Each time a unit with one of these keywords gains a weapon ability as the result of a Dark Pact and does not fail the resulting Leadership test, until the end of the phase, that unit gains the associated ability below. UNITS THAT GAINED [LETHAL HITS]: KHORNE: Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit. TZEENTCH: Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit. CHAOS UNDIVIDED: Each time a model in this unit makes an attack, re-roll a Hit roll of 1. UNITS THAT GAINED [SUSTAINED HITS 1]: NURGLE: Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit. SLAANESH: Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit. CHAOS UNDIVIDED: Each time a model in this unit makes an attack, re-roll a Hit roll of 1. You cannot select the KHORNE keyword for a PSYKER unit. A CHARACTER unit can only be attached to a unit if both units share the same keyword from the list above. A unit can only embark within (or start the battle embarked within) a TRANSPORT if both of those units share the same keyword from the list above.",
+        "restrictions": [
+          "You cannot select the KHORNE keyword for a PSYKER unit.",
+          "A CHARACTER unit can only be attached to a unit if both units share the same keyword from the list above.",
+          "A unit can only embark within (or start the battle embarked within) a TRANSPORT if both of those units share the same keyword from the list above."
+        ],
+        "provenance": {
+          "authority": "secondary",
+          "status": "SECONDARY CONSENSUS",
+          "sources": [
+            {
+              "name": "New Recruit / BSData",
+              "identity": {
+                "id": "009d-9d09-08c7-82e5",
+                "jsonPath": "$.catalogue.sharedSelectionEntries[0].selectionEntryGroups[0].selectionEntries[0].rules[0]"
+              },
+              "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+              "catalogueRevision": 6
+            },
+            {
+              "name": "Wahapedia",
+              "identity": "Chaos Space Marines > Pactbound Zealots > Detachment Rule > Marks of Chaos",
+              "checkedAt": "2026-08-12"
+            }
+          ],
+          "checkedAt": "2026-08-12"
+        }
+      },
+      "enhancements": [
+        {
+          "id": "enhancement-pactbound-zealots-eye-of-tzeentch",
+          "title": "Eye of Tzeentch",
+          "text": "HERETIC ASTARTES TZEENTCH model only. Each time the bearer's unit makes a Dark Pact and does not fail the resulting Leadership test, if the result of that test was 8 or more, you gain 1CP.",
+          "restrictions": [
+            "HERETIC ASTARTES TZEENTCH model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "6ba0-8b1e-9e0d-20fd",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[1]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Pactbound Zealots > Enhancement > Eye of Tzeentch",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-pactbound-zealots-intoxicating-elixir",
+          "title": "Intoxicating Elixir",
+          "text": "HERETIC ASTARTES SLAANESH model only. The bearer has the Feel No Pain 5+ ability. Each time the bearer shoots or fights, if the bearer's unit made a Dark Pact this phase and did not fail the resulting Leadership test, after the bearer has resolved those attacks, select one enemy unit that was hit by one or more of those attacks; that enemy unit must take a Battle-shock test.",
+          "restrictions": [
+            "HERETIC ASTARTES SLAANESH model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "8d30-bc8b-6d57-ef08",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[3]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Pactbound Zealots > Enhancement > Intoxicating Elixir",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-pactbound-zealots-orbs-of-unlife",
+          "title": "Orbs of Unlife",
+          "text": "HERETIC ASTARTES NURGLE model only. At the end of the Fight phase, roll one D6 for every enemy unit within 3\" of the bearer, adding 1 to the result if the bearer's unit made a Dark Pact that phase and did not fail the resulting Leadership test: on a 4+, that enemy unit suffers D3 mortal wounds.",
+          "restrictions": [
+            "HERETIC ASTARTES NURGLE model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "f2ce-c4b6-6976-e1d5",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[2]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Pactbound Zealots > Enhancement > Orbs of Unlife",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-pactbound-zealots-talisman-of-burning-blood",
+          "title": "Talisman of Burning Blood",
+          "text": "HERETIC ASTARTES KHORNE model only. Add 1 to the Attacks and Strength characteristics of the bearer's melee weapons. Each time the bearer's unit makes a Dark Pact and does not fail the resulting Leadership test, roll one D3: until the end of the phase, add the result to the Attacks and Strength characteristics of the bearer's melee weapons instead.",
+          "restrictions": [
+            "HERETIC ASTARTES KHORNE model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "e357-6558-923e-61e2",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[0]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Pactbound Zealots > Enhancement > Talisman of Burning Blood",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        }
+      ],
+      "stratagems": [],
+      "provenance": {
+        "authority": "secondary",
+        "sourceId": "csm-codex-secondary-consensus",
+        "checkedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "renegade-raiders",
+      "title": "Renegade Raiders",
+      "sourceLayer": "codex-secondary-consensus",
+      "rule": {
+        "title": "Raiders and Reavers",
+        "text": "Ranged weapons equipped by HERETIC ASTARTES models from your army have the [ASSAULT] ability, and each time a HERETIC ASTARTES model from your army makes an attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1.",
+        "provenance": {
+          "authority": "secondary",
+          "status": "SECONDARY CONSENSUS",
+          "sources": [
+            {
+              "name": "New Recruit / BSData",
+              "identity": {
+                "id": "4fef-0ab4-2b60-48c4",
+                "jsonPath": "$.catalogue.sharedSelectionEntries[0].selectionEntryGroups[0].selectionEntries[3].rules[0]"
+              },
+              "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+              "catalogueRevision": 6
+            },
+            {
+              "name": "Wahapedia",
+              "identity": "Chaos Space Marines > Renegade Raiders > Detachment Rule > Raiders and Reavers",
+              "checkedAt": "2026-08-12"
+            }
+          ],
+          "checkedAt": "2026-08-12"
+        }
+      },
+      "enhancements": [
+        {
+          "id": "enhancement-renegade-raiders-despots-claim",
+          "title": "Despot's Claim",
+          "text": "HERETIC ASTARTES model only. At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is wholly within 12\" of your opponent's deployment zone: on a 5+, you gain 1CP.",
+          "restrictions": [
+            "HERETIC ASTARTES model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "18c9-6770-6371-582b",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[12]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Renegade Raiders > Enhancement > Despot's Claim",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-renegade-raiders-dread-reaver",
+          "title": "Dread Reaver",
+          "text": "HERETIC ASTARTES model only. Each time the bearer makes a melee attack, if the bearer is wholly within 12\" of your opponent's deployment zone, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+          "restrictions": [
+            "HERETIC ASTARTES model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "a3f6-e18b-d9e6-b841",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[13]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Renegade Raiders > Enhancement > Dread Reaver",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-renegade-raiders-mark-of-the-hound",
+          "title": "Mark of the Hound",
+          "text": "HERETIC ASTARTES model only. Models in the bearer's unit have the Scouts 6\" ability.",
+          "restrictions": [
+            "HERETIC ASTARTES model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "b5e6-8586-a9a9-b6b",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[14]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Renegade Raiders > Enhancement > Mark of the Hound",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-renegade-raiders-tyrants-lash",
+          "title": "Tyrant's Lash",
+          "text": "HERETIC ASTARTES model only. You can re-roll Advance rolls made for the bearer's unit, and the bearer's unit is eligible to shoot in a turn in which it Fell Back.",
+          "restrictions": [
+            "HERETIC ASTARTES model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "8ee0-de8d-3895-b1ac",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[15]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Renegade Raiders > Enhancement > Tyrant's Lash",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        }
+      ],
+      "stratagems": [],
+      "provenance": {
+        "authority": "secondary",
+        "sourceId": "csm-codex-secondary-consensus",
+        "checkedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "soulforged-warpack",
+      "title": "Soulforged Warpack",
+      "sourceLayer": "codex-secondary-consensus",
+      "rule": null,
+      "enhancements": [
+        {
+          "id": "enhancement-soulforged-warpack-forges-blessing",
+          "title": "Forge's Blessing",
+          "text": "HERETIC ASTARTES model only. In your Command phase, select one friendly HERETIC ASTARTES VEHICLE unit within 12\" of the bearer. Until the start of your next Command phase, that unit has the Feel No Pain 6+ ability.",
+          "restrictions": [
+            "HERETIC ASTARTES model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "5bd4-e482-a053-1184",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[18]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Soulforged Warpack > Enhancement > Forge's Blessing",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-soulforged-warpack-invigorated-mechatendrils",
+          "title": "Invigorated Mechatendrils",
+          "text": "WARPSMITH model only. Add 4\" to the bearer's Move characteristic.",
+          "restrictions": [
+            "WARPSMITH model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "3bc1-957b-473-faa0",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[29]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Soulforged Warpack > Enhancement > Invigorated Mechatendrils",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-soulforged-warpack-tempting-addendum",
+          "title": "Tempting Addendum",
+          "text": "HERETIC ASTARTES model only. Each time a HERETIC ASTARTES DAEMON VEHICLE unit from your army invokes its contract while within 3\" of the bearer: if it suffers one or more mortal wounds as a result of that Dark Pact, add 1 to the number of mortal wounds it suffers; until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll.",
+          "restrictions": [
+            "HERETIC ASTARTES model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "a82c-bf6-f3dd-81ac",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[31]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Soulforged Warpack > Enhancement > Tempting Addendum",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-soulforged-warpack-soul-harvester",
+          "title": "Soul Harvester",
+          "text": "HERETIC ASTARTES model only. While the bearer is on the battlefield, each time an enemy unit within 12\" of the bearer is destroyed, roll one D6: on a 5+, you gain 1CP.",
+          "restrictions": [
+            "HERETIC ASTARTES model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "da72-b2d6-58a6-b821",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[30]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Soulforged Warpack > Enhancement > Soul Harvester",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        }
+      ],
+      "stratagems": [],
+      "provenance": {
+        "authority": "secondary",
+        "sourceId": "csm-codex-secondary-consensus",
+        "checkedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "veterans-of-the-long-war",
+      "title": "Veterans of the Long War",
+      "sourceLayer": "codex-secondary-consensus",
+      "rule": {
+        "title": "Focus of Hatred",
+        "text": "At the start of your Command phase, select one unit from your opponent's army to be your focus of hatred. Until the start of your next Command phase, each time a HERETIC ASTARTES model from your army (excluding DAMNED models) makes an attack that targets your focus of hatred, you can re-roll the Hit roll.",
+        "restrictions": [
+          "DAMNED models do not receive the attack benefit."
+        ],
+        "provenance": {
+          "authority": "secondary",
+          "status": "SECONDARY CONSENSUS",
+          "sources": [
+            {
+              "name": "New Recruit / BSData",
+              "identity": {
+                "id": "6f2f-8cf6-20e7-4c4c",
+                "jsonPath": "$.catalogue.sharedSelectionEntries[0].selectionEntryGroups[0].selectionEntries[1].rules[0]"
+              },
+              "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+              "catalogueRevision": 6
+            },
+            {
+              "name": "Wahapedia",
+              "identity": "Chaos Space Marines > Veterans of the Long War > Detachment Rule > Focus of Hatred",
+              "checkedAt": "2026-08-12"
+            }
+          ],
+          "checkedAt": "2026-08-12"
+        }
+      },
+      "enhancements": [
+        {
+          "id": "enhancement-veterans-of-the-long-war-eager-for-vengeance",
+          "title": "Eager for Vengeance",
+          "text": "HERETIC ASTARTES model only. Excludes DAMNED models. The bearer's unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Each time a model in the bearer's unit makes an attack that targets your focus of hatred, if the bearer's unit Fell Back this turn, add 1 to the Hit roll, and each time you select your focus of hatred as a target of that unit's charge, add 1 to the Charge roll.",
+          "restrictions": [
+            "HERETIC ASTARTES model only.",
+            "Excludes DAMNED models."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "bb91-cc38-e79d-7ce0",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[5]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Veterans of the Long War > Enhancement > Eager for Vengeance",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-veterans-of-the-long-war-eye-of-abaddon",
+          "title": "Eye of Abaddon",
+          "text": "HERETIC ASTARTES model only. Excludes DAMNED models. While the bearer is on the battlefield, each time your focus of hatred is destroyed, roll one D6: on a 4+, you gain 1CP.",
+          "restrictions": [
+            "HERETIC ASTARTES model only.",
+            "Excludes DAMNED models."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "b06a-cbc9-6820-6a93",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[6]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Veterans of the Long War > Enhancement > Eye of Abaddon",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-veterans-of-the-long-war-mark-of-legend",
+          "title": "Mark of Legend",
+          "text": "HERETIC ASTARTES model only. Excludes DAMNED models. Once per turn, you can re-roll one Hit roll, one Wound roll or one saving throw made for the bearer.",
+          "restrictions": [
+            "HERETIC ASTARTES model only.",
+            "Excludes DAMNED models."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "aaa6-f20e-362a-f55d",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[7]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Veterans of the Long War > Enhancement > Mark of Legend",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        },
+        {
+          "id": "enhancement-veterans-of-the-long-war-warmasters-gift",
+          "title": "Warmaster's Gift",
+          "text": "CHAOS LORD model only. Each time the bearer makes an attack that targets your focus of hatred, an unmodified successful Wound roll of 5+ scores a Critical Wound.",
+          "restrictions": [
+            "CHAOS LORD model only."
+          ],
+          "provenance": {
+            "authority": "secondary",
+            "status": "SECONDARY CONSENSUS",
+            "sources": [
+              {
+                "name": "New Recruit / BSData",
+                "identity": {
+                  "id": "9a33-6b21-25e3-b5ac",
+                  "jsonPath": "$.catalogue.sharedSelectionEntryGroups[0].selectionEntries[4]"
+                },
+                "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+                "catalogueRevision": 6
+              },
+              {
+                "name": "Wahapedia",
+                "identity": "Chaos Space Marines > Veterans of the Long War > Enhancement > Warmaster's Gift",
+                "checkedAt": "2026-08-12"
+              }
+            ],
+            "checkedAt": "2026-08-12"
+          }
+        }
+      ],
+      "stratagems": [],
+      "provenance": {
+        "authority": "secondary",
+        "sourceId": "csm-codex-secondary-consensus",
+        "checkedAt": "2026-08-12"
       }
     }
   ],

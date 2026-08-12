@@ -16,6 +16,7 @@ OUTPUT = ROOT / "content" / "chaos-space-marines-faction-pack.en.json"
 RELATED_OUTPUT = ROOT / "content" / "chaos-space-marines-related-rules.en.json"
 RELATED_BASE = ROOT / "sources" / "related-rules-base.en.json"
 CURRENT_DATASHEETS = ROOT / "content" / "chaos-space-marines-codex-datasheets.en.json"
+SECONDARY_CONSENSUS = ROOT / "sources" / "codex-secondary-consensus.en.json"
 SOURCE_ID = "chaos-space-marines-faction-pack-v1.1"
 EXPECTED_SHA256 = "407DD6F175A7C27E0CB20BC95F68675AB0F9250883F08660CD2F16EF6D9F4998"
 EXPECTED_PAGE_COUNT = 102
@@ -411,12 +412,22 @@ def main() -> int:
     args = parser.parse_args()
     data = build()
     errors = validate(data)
+    consensus = json.loads(SECONDARY_CONSENSUS.read_text(encoding="utf-8"))
+    data["detachments"].extend(consensus["imports"]["detachments"])
+    data.setdefault("provenance", {})["secondaryConsensus"] = {
+        "authority": "secondary",
+        "sourceId": "csm-codex-secondary-consensus",
+        "checkedAt": consensus["checkedAt"],
+        "evaluated": consensus["summary"]["evaluated"],
+        "imported": consensus["summary"]["imported"],
+    }
     content = json.dumps(data, ensure_ascii=False, indent=2) + "\n"
     related_base = json.loads(RELATED_BASE.read_text(encoding="utf-8"))
-    if len(related_base.get("enhancements", {})) != 30 or not related_base.get("keywordGrants"):
+    secondary_enhancements = consensus["imports"]["enhancementContracts"]
+    if len(related_base.get("enhancements", {})) != 30 or len(secondary_enhancements) != 32 or not related_base.get("keywordGrants"):
         errors.append("Related Rules base inventory mismatch")
     current_ids = {item["id"] for item in json.loads(CURRENT_DATASHEETS.read_text(encoding="utf-8")).get("datasheets", [])}
-    related_data = filter_current_unit_ids({"schema": 1, "faction": "Chaos Space Marines", "keywordGrants": related_base["keywordGrants"], "stratagems": RELATED_RULES, "enhancements": related_base["enhancements"]}, current_ids)
+    related_data = filter_current_unit_ids({"schema": 1, "faction": "Chaos Space Marines", "keywordGrants": related_base["keywordGrants"], "stratagems": RELATED_RULES, "enhancements": {**related_base["enhancements"], **secondary_enhancements}}, current_ids)
     related = json.dumps(related_data, ensure_ascii=False, indent=2) + "\n"
     if args.check:
         if not OUTPUT.exists() or OUTPUT.read_text(encoding="utf-8") != content:

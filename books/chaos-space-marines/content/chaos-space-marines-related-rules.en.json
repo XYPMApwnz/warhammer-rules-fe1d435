@@ -1812,6 +1812,688 @@
         }
       ],
       "conditions": []
+    },
+    "enhancement-chaos-cult-amulet-of-tainted-vigour": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "unitIds": [
+              "unit-dark-apostle"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-chaos-cult-cultists-brand": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "alternatives": [
+              {
+                "unitIds": [
+                  "unit-dark-apostle"
+                ]
+              },
+              {
+                "allKeywords": [
+                  "CHARACTER",
+                  "DAMNED"
+                ],
+                "noneKeywords": [
+                  "EPIC HERO"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-chaos-cult-incendiary-goad": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "alternatives": [
+              {
+                "unitIds": [
+                  "unit-dark-apostle"
+                ]
+              },
+              {
+                "allKeywords": [
+                  "CHARACTER",
+                  "DAMNED"
+                ],
+                "noneKeywords": [
+                  "EPIC HERO"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-chaos-cult-warped-foresight": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "alternatives": [
+              {
+                "unitIds": [
+                  "unit-dark-apostle"
+                ]
+              },
+              {
+                "allKeywords": [
+                  "CHARACTER",
+                  "DAMNED"
+                ],
+                "noneKeywords": [
+                  "EPIC HERO"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-deceptors-cursed-fang": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER",
+              "INFANTRY"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-deceptors-falsehood": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER",
+              "CHAOS LORD"
+            ],
+            "noneKeywords": [
+              "EPIC HERO",
+              "TERMINATOR",
+              "JUMP PACK"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-deceptors-shroud-of-obfuscation": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER",
+              "INFANTRY"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-deceptors-soul-link": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER",
+              "INFANTRY"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-dread-talons-eater-of-dread": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-dread-talons-nights-shroud": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER",
+              "CHAOS LORD"
+            ],
+            "noneKeywords": [
+              "EPIC HERO",
+              "TERMINATOR"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-dread-talons-warp-fuelled-thrusters": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER",
+              "CHAOS LORD",
+              "JUMP PACK"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-dread-talons-willbreaker": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-fellhammer-siege-host-bastion-plate": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER",
+              "CHAOS LORD"
+            ],
+            "noneKeywords": [
+              "EPIC HERO",
+              "JUMP PACK"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-fellhammer-siege-host-iron-artifice": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER",
+              "INFANTRY"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-fellhammer-siege-host-ironbound-enmity": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-fellhammer-siege-host-warp-tracer": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-pactbound-zealots-eye-of-tzeentch": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-pactbound-zealots-intoxicating-elixir": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-pactbound-zealots-orbs-of-unlife": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-pactbound-zealots-talisman-of-burning-blood": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO",
+              "PSYKER"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-renegade-raiders-despots-claim": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-renegade-raiders-dread-reaver": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-renegade-raiders-mark-of-the-hound": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-renegade-raiders-tyrants-lash": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-soulforged-warpack-forges-blessing": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-soulforged-warpack-invigorated-mechatendrils": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "unitIds": [
+              "unit-warpsmith"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-soulforged-warpack-tempting-addendum": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-soulforged-warpack-soul-harvester": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-veterans-of-the-long-war-eager-for-vengeance": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO",
+              "DAMNED"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-veterans-of-the-long-war-eye-of-abaddon": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO",
+              "DAMNED"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-veterans-of-the-long-war-mark-of-legend": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO",
+              "DAMNED"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-veterans-of-the-long-war-warmasters-gift": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "CHARACTER",
+              "CHAOS LORD"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
     }
   }
 }

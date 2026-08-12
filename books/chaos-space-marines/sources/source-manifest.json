@@ -20,8 +20,8 @@
       "authority": "community",
       "role": "codex-structure",
       "title": "BSData Warhammer 40,000 11th Edition - Chaos Space Marines",
-      "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
-      "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Chaos%20-%20Chaos%20Space%20Marines.json",
+      "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+      "url": "https://github.com/BSData/wh40k-11e/blob/b6d17952f74814528b4c70ef5016c86b922d5257/Chaos%20-%20Chaos%20Space%20Marines.json",
       "localFile": "bsdata-chaos-space-marines-11e.json",
       "status": "requires-codex-verification"
     },
@@ -45,5 +45,24 @@
     "publishAsComplete": false,
     "reviewLabel": "Verification build",
     "reason": "Official Faction Pack v1.1 is frozen; official live MFM v1.2 is preserved as a dated repository capture verified 12 August 2026. Codex text must still be verified before this book can be labelled complete."
+  },
+  "secondaryConsensus": {
+    "authority": "secondary",
+    "status": "partial-consensus",
+    "checkedAt": "2026-08-12",
+    "bsdata": {
+      "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+      "catalogueRevision": 6
+    },
+    "wahapedia": {
+      "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/",
+      "checkedAt": "2026-08-12"
+    },
+    "evaluated": 89,
+    "imported": 38,
+    "sourceMissing": 50,
+    "conflicts": 1,
+    "guessed": 0,
+    "sourceFile": "codex-secondary-consensus.en.json"
   }
 }

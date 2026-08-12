@@ -1357,6 +1357,72 @@
         ]
       },
       {
+        "ruleId": "enhancement-cursed-fang",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-falsehood",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-shroud-of-obfuscation",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-link",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eater-of-dread",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-nights-shroud",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-willbreaker",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-bastion-plate",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-iron-artifice",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-ironbound-enmity",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warp-tracer",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-dread-reputation",
         "kind": "enhancement",
         "detachmentId": "huron-s-marauders",
@@ -1495,6 +1561,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-eye-of-tzeentch",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-intoxicating-elixir",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-orbs-of-unlife",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-talisman-of-burning-blood",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-despots-claim",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-reaver",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-the-hound",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tyrants-lash",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-empyric-symbiote",
         "kind": "enhancement",
         "detachmentId": "renegade-warband",
@@ -1571,6 +1685,48 @@
         "conditions": [
           "battle-state-unknown"
         ]
+      },
+      {
+        "ruleId": "enhancement-forges-blessing",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-harvester",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tempting-addendum",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eager-for-vengeance",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eye-of-abaddon",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-legend",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warmasters-gift",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
       },
       {
         "ruleId": "enhancement-infernal-fulgurite",
@@ -1803,6 +1959,60 @@
         ]
       },
       {
+        "ruleId": "enhancement-cursed-fang",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-shroud-of-obfuscation",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-link",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eater-of-dread",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-willbreaker",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-bastion-plate",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-iron-artifice",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-ironbound-enmity",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warp-tracer",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-dread-reputation",
         "kind": "enhancement",
         "detachmentId": "huron-s-marauders",
@@ -1941,6 +2151,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-eye-of-tzeentch",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-intoxicating-elixir",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-orbs-of-unlife",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-talisman-of-burning-blood",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-despots-claim",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-reaver",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-the-hound",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tyrants-lash",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-empyric-symbiote",
         "kind": "enhancement",
         "detachmentId": "renegade-warband",
@@ -2023,6 +2281,48 @@
         "conditions": [
           "battle-state-unknown"
         ]
+      },
+      {
+        "ruleId": "enhancement-forges-blessing",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-harvester",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tempting-addendum",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eager-for-vengeance",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eye-of-abaddon",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-legend",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warmasters-gift",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
       },
       {
         "ruleId": "enhancement-akshurs-binding-runes",
@@ -2309,6 +2609,66 @@
         ]
       },
       {
+        "ruleId": "enhancement-cursed-fang",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-shroud-of-obfuscation",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-link",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-talons-warp-fuelled-thrusters",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eater-of-dread",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-nights-shroud",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-willbreaker",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-iron-artifice",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-ironbound-enmity",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warp-tracer",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-dread-reputation",
         "kind": "enhancement",
         "detachmentId": "huron-s-marauders",
@@ -2491,6 +2851,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-eye-of-tzeentch",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-intoxicating-elixir",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-orbs-of-unlife",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-talisman-of-burning-blood",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-despots-claim",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-reaver",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-the-hound",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tyrants-lash",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-empyric-symbiote",
         "kind": "enhancement",
         "detachmentId": "renegade-warband",
@@ -2567,6 +2975,48 @@
         "conditions": [
           "battle-state-unknown"
         ]
+      },
+      {
+        "ruleId": "enhancement-forges-blessing",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-harvester",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tempting-addendum",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eager-for-vengeance",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eye-of-abaddon",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-legend",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warmasters-gift",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
       },
       {
         "ruleId": "enhancement-akshurs-binding-runes",
@@ -4579,6 +5029,24 @@
         "state": "match"
       },
       {
+        "ruleId": "enhancement-cultists-brand",
+        "kind": "enhancement",
+        "detachmentId": "chaos-cult",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-incendiary-goad",
+        "kind": "enhancement",
+        "detachmentId": "chaos-cult",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warped-foresight",
+        "kind": "enhancement",
+        "detachmentId": "chaos-cult",
+        "state": "match"
+      },
+      {
         "ruleId": "core-stratagem-command-re-roll",
         "kind": "stratagem",
         "scope": "core",
@@ -4703,6 +5171,54 @@
         "conditions": [
           "battle-state-unknown"
         ]
+      },
+      {
+        "ruleId": "enhancement-cursed-fang",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-shroud-of-obfuscation",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-link",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eater-of-dread",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-willbreaker",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-iron-artifice",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-ironbound-enmity",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warp-tracer",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
       },
       {
         "ruleId": "enhancement-eager-for-bloodshed",
@@ -4831,6 +5347,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-eye-of-tzeentch",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-intoxicating-elixir",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-orbs-of-unlife",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-talisman-of-burning-blood",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-despots-claim",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-reaver",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-the-hound",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tyrants-lash",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-empyric-symbiote",
         "kind": "enhancement",
         "detachmentId": "renegade-warband",
@@ -4897,6 +5461,24 @@
         "conditions": [
           "battle-state-unknown"
         ]
+      },
+      {
+        "ruleId": "enhancement-forges-blessing",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-harvester",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tempting-addendum",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
       },
       {
         "ruleId": "portal-of-spite",
@@ -5561,6 +6143,30 @@
         "state": "match"
       },
       {
+        "ruleId": "enhancement-amulet-of-tainted-vigour",
+        "kind": "enhancement",
+        "detachmentId": "chaos-cult",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-cultists-brand",
+        "kind": "enhancement",
+        "detachmentId": "chaos-cult",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-incendiary-goad",
+        "kind": "enhancement",
+        "detachmentId": "chaos-cult",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warped-foresight",
+        "kind": "enhancement",
+        "detachmentId": "chaos-cult",
+        "state": "match"
+      },
+      {
         "ruleId": "core-stratagem-command-re-roll",
         "kind": "stratagem",
         "scope": "core",
@@ -5751,6 +6357,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-cursed-fang",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-shroud-of-obfuscation",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-link",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eater-of-dread",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-willbreaker",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-iron-artifice",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-ironbound-enmity",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warp-tracer",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-dread-reputation",
         "kind": "enhancement",
         "detachmentId": "huron-s-marauders",
@@ -5889,6 +6543,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-eye-of-tzeentch",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-intoxicating-elixir",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-orbs-of-unlife",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-talisman-of-burning-blood",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-despots-claim",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-reaver",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-the-hound",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tyrants-lash",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-empyric-symbiote",
         "kind": "enhancement",
         "detachmentId": "renegade-warband",
@@ -5967,6 +6669,42 @@
         ]
       },
       {
+        "ruleId": "enhancement-forges-blessing",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-harvester",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tempting-addendum",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eager-for-vengeance",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eye-of-abaddon",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-legend",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-infernal-fulgurite",
         "kind": "enhancement",
         "detachmentId": "warpstrike-champions",
@@ -6008,6 +6746,24 @@
         "ruleId": "enhancement-touched-by-the-warp",
         "kind": "enhancement",
         "detachmentId": "cabal-of-chaos",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-cultists-brand",
+        "kind": "enhancement",
+        "detachmentId": "chaos-cult",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-incendiary-goad",
+        "kind": "enhancement",
+        "detachmentId": "chaos-cult",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warped-foresight",
+        "kind": "enhancement",
+        "detachmentId": "chaos-cult",
         "state": "match"
       },
       {
@@ -6137,6 +6893,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-cursed-fang",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-shroud-of-obfuscation",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-link",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eater-of-dread",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-willbreaker",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-iron-artifice",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-ironbound-enmity",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warp-tracer",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-eager-for-bloodshed",
         "kind": "enhancement",
         "detachmentId": "huron-s-marauders",
@@ -6263,6 +7067,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-eye-of-tzeentch",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-intoxicating-elixir",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-orbs-of-unlife",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-talisman-of-burning-blood",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-despots-claim",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-reaver",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-the-hound",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tyrants-lash",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-empyric-symbiote",
         "kind": "enhancement",
         "detachmentId": "renegade-warband",
@@ -6329,6 +7181,24 @@
         "conditions": [
           "battle-state-unknown"
         ]
+      },
+      {
+        "ruleId": "enhancement-forges-blessing",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-harvester",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tempting-addendum",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
       },
       {
         "ruleId": "portal-of-spite",
@@ -8575,6 +9445,30 @@
         ]
       },
       {
+        "ruleId": "enhancement-eater-of-dread",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-willbreaker",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-ironbound-enmity",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warp-tracer",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-dread-reputation",
         "kind": "enhancement",
         "detachmentId": "huron-s-marauders",
@@ -8651,6 +9545,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-eye-of-tzeentch",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-intoxicating-elixir",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-orbs-of-unlife",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-talisman-of-burning-blood",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-despots-claim",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-reaver",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-the-hound",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tyrants-lash",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-empyric-symbiote",
         "kind": "enhancement",
         "detachmentId": "renegade-warband",
@@ -8707,6 +9649,42 @@
         "conditions": [
           "battle-state-unknown"
         ]
+      },
+      {
+        "ruleId": "enhancement-forges-blessing",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-harvester",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tempting-addendum",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eager-for-vengeance",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eye-of-abaddon",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-legend",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
       },
       {
         "ruleId": "enhancement-infernal-fulgurite",
@@ -8895,6 +9873,30 @@
         ]
       },
       {
+        "ruleId": "enhancement-eater-of-dread",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-willbreaker",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-ironbound-enmity",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warp-tracer",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-dread-reputation",
         "kind": "enhancement",
         "detachmentId": "huron-s-marauders",
@@ -8971,6 +9973,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-eye-of-tzeentch",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-intoxicating-elixir",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-orbs-of-unlife",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-talisman-of-burning-blood",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-despots-claim",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-reaver",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-the-hound",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tyrants-lash",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-empyric-symbiote",
         "kind": "enhancement",
         "detachmentId": "renegade-warband",
@@ -9027,6 +10077,42 @@
         "conditions": [
           "battle-state-unknown"
         ]
+      },
+      {
+        "ruleId": "enhancement-forges-blessing",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-harvester",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tempting-addendum",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eager-for-vengeance",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eye-of-abaddon",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-legend",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
       },
       {
         "ruleId": "enhancement-akshurs-binding-runes",
@@ -10543,6 +11629,30 @@
         ]
       },
       {
+        "ruleId": "enhancement-eater-of-dread",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-willbreaker",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-ironbound-enmity",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warp-tracer",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-dread-reputation",
         "kind": "enhancement",
         "detachmentId": "huron-s-marauders",
@@ -10645,6 +11755,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-eye-of-tzeentch",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-intoxicating-elixir",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-orbs-of-unlife",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-talisman-of-burning-blood",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-despots-claim",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-reaver",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-the-hound",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tyrants-lash",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-empyric-symbiote",
         "kind": "enhancement",
         "detachmentId": "renegade-warband",
@@ -10721,6 +11879,42 @@
         "conditions": [
           "battle-state-unknown"
         ]
+      },
+      {
+        "ruleId": "enhancement-forges-blessing",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-harvester",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tempting-addendum",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eager-for-vengeance",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eye-of-abaddon",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-legend",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
       },
       {
         "ruleId": "enhancement-infernal-fulgurite",
@@ -10957,6 +12151,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-cursed-fang",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-shroud-of-obfuscation",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-link",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eater-of-dread",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-willbreaker",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-iron-artifice",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-ironbound-enmity",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warp-tracer",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-dread-reputation",
         "kind": "enhancement",
         "detachmentId": "huron-s-marauders",
@@ -11095,6 +12337,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-eye-of-tzeentch",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-intoxicating-elixir",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-orbs-of-unlife",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-talisman-of-burning-blood",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-despots-claim",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-reaver",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-the-hound",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tyrants-lash",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-empyric-symbiote",
         "kind": "enhancement",
         "detachmentId": "renegade-warband",
@@ -11171,6 +12461,42 @@
         "conditions": [
           "battle-state-unknown"
         ]
+      },
+      {
+        "ruleId": "enhancement-forges-blessing",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-harvester",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tempting-addendum",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eager-for-vengeance",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eye-of-abaddon",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-legend",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
       },
       {
         "ruleId": "enhancement-infernal-fulgurite",
@@ -11419,6 +12745,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-cursed-fang",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-shroud-of-obfuscation",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-link",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eater-of-dread",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-willbreaker",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-iron-artifice",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-ironbound-enmity",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warp-tracer",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-dread-reputation",
         "kind": "enhancement",
         "detachmentId": "huron-s-marauders",
@@ -11557,6 +12931,48 @@
         ]
       },
       {
+        "ruleId": "enhancement-eye-of-tzeentch",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-intoxicating-elixir",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-orbs-of-unlife",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-despots-claim",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-reaver",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-the-hound",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tyrants-lash",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-empyric-symbiote",
         "kind": "enhancement",
         "detachmentId": "renegade-warband",
@@ -11633,6 +13049,42 @@
         "conditions": [
           "battle-state-unknown"
         ]
+      },
+      {
+        "ruleId": "enhancement-forges-blessing",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-harvester",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tempting-addendum",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eager-for-vengeance",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eye-of-abaddon",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-legend",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
       },
       {
         "ruleId": "enhancement-infernal-fulgurite",
@@ -14901,6 +16353,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-cursed-fang",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-shroud-of-obfuscation",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-link",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eater-of-dread",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-willbreaker",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-iron-artifice",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-ironbound-enmity",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warp-tracer",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-dread-reputation",
         "kind": "enhancement",
         "detachmentId": "huron-s-marauders",
@@ -15039,6 +16539,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-eye-of-tzeentch",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-intoxicating-elixir",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-orbs-of-unlife",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-talisman-of-burning-blood",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-despots-claim",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-reaver",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-the-hound",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tyrants-lash",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-empyric-symbiote",
         "kind": "enhancement",
         "detachmentId": "renegade-warband",
@@ -15115,6 +16663,42 @@
         "conditions": [
           "battle-state-unknown"
         ]
+      },
+      {
+        "ruleId": "enhancement-forges-blessing",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-harvester",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tempting-addendum",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eager-for-vengeance",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eye-of-abaddon",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-legend",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
       },
       {
         "ruleId": "enhancement-infernal-fulgurite",
@@ -15373,6 +16957,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-cursed-fang",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-shroud-of-obfuscation",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-link",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eater-of-dread",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-willbreaker",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-iron-artifice",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-ironbound-enmity",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warp-tracer",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-dread-reputation",
         "kind": "enhancement",
         "detachmentId": "huron-s-marauders",
@@ -15511,6 +17143,48 @@
         ]
       },
       {
+        "ruleId": "enhancement-eye-of-tzeentch",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-intoxicating-elixir",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-orbs-of-unlife",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-despots-claim",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-reaver",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-the-hound",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tyrants-lash",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-empyric-symbiote",
         "kind": "enhancement",
         "detachmentId": "renegade-warband",
@@ -15587,6 +17261,42 @@
         "conditions": [
           "battle-state-unknown"
         ]
+      },
+      {
+        "ruleId": "enhancement-forges-blessing",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-harvester",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tempting-addendum",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eager-for-vengeance",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eye-of-abaddon",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-legend",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
       },
       {
         "ruleId": "enhancement-infernal-fulgurite",
@@ -15835,6 +17545,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-cursed-fang",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-shroud-of-obfuscation",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-link",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eater-of-dread",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-willbreaker",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-iron-artifice",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-ironbound-enmity",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warp-tracer",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-dread-reputation",
         "kind": "enhancement",
         "detachmentId": "huron-s-marauders",
@@ -15973,6 +17731,48 @@
         ]
       },
       {
+        "ruleId": "enhancement-eye-of-tzeentch",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-intoxicating-elixir",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-orbs-of-unlife",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-despots-claim",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-reaver",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-the-hound",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tyrants-lash",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-empyric-symbiote",
         "kind": "enhancement",
         "detachmentId": "renegade-warband",
@@ -16057,6 +17857,42 @@
         ]
       },
       {
+        "ruleId": "enhancement-forges-blessing",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-harvester",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tempting-addendum",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eager-for-vengeance",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eye-of-abaddon",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-legend",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-akshurs-binding-runes",
         "kind": "enhancement",
         "detachmentId": "warpstrike-champions",
@@ -16139,6 +17975,24 @@
     ],
     "unit-traitor-enforcer": [
       {
+        "ruleId": "enhancement-cultists-brand",
+        "kind": "enhancement",
+        "detachmentId": "chaos-cult",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-incendiary-goad",
+        "kind": "enhancement",
+        "detachmentId": "chaos-cult",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warped-foresight",
+        "kind": "enhancement",
+        "detachmentId": "chaos-cult",
+        "state": "match"
+      },
+      {
         "ruleId": "core-stratagem-command-re-roll",
         "kind": "stratagem",
         "scope": "core",
@@ -16209,9 +18063,99 @@
         ]
       },
       {
+        "ruleId": "enhancement-eater-of-dread",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-willbreaker",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-ironbound-enmity",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warp-tracer",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
         "ruleId": "hardened-killers",
         "kind": "stratagem",
         "detachmentId": "huron-s-marauders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eye-of-tzeentch",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-intoxicating-elixir",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-orbs-of-unlife",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-talisman-of-burning-blood",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-despots-claim",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-reaver",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-the-hound",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tyrants-lash",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-forges-blessing",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-harvester",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tempting-addendum",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
         "state": "match"
       }
     ],
@@ -17601,6 +19545,24 @@
         ]
       },
       {
+        "ruleId": "enhancement-cursed-fang",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-shroud-of-obfuscation",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-link",
+        "kind": "enhancement",
+        "detachmentId": "deceptors",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-eye-of-oblivion",
         "kind": "enhancement",
         "detachmentId": "devotees-of-destruction",
@@ -17610,6 +19572,36 @@
         "ruleId": "enhancement-pact-of-destruction",
         "kind": "enhancement",
         "detachmentId": "devotees-of-destruction",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eater-of-dread",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-willbreaker",
+        "kind": "enhancement",
+        "detachmentId": "dread-talons",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-iron-artifice",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-ironbound-enmity",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-warp-tracer",
+        "kind": "enhancement",
+        "detachmentId": "fellhammer-siege-host",
         "state": "match"
       },
       {
@@ -17751,6 +19743,54 @@
         ]
       },
       {
+        "ruleId": "enhancement-eye-of-tzeentch",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-intoxicating-elixir",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-orbs-of-unlife",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-talisman-of-burning-blood",
+        "kind": "enhancement",
+        "detachmentId": "pactbound-zealots",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-despots-claim",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-dread-reaver",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-the-hound",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tyrants-lash",
+        "kind": "enhancement",
+        "detachmentId": "renegade-raiders",
+        "state": "match"
+      },
+      {
         "ruleId": "enhancement-empyric-symbiote",
         "kind": "enhancement",
         "detachmentId": "renegade-warband",
@@ -17827,6 +19867,48 @@
         "conditions": [
           "battle-state-unknown"
         ]
+      },
+      {
+        "ruleId": "enhancement-forges-blessing",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-invigorated-mechatendrils",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-soul-harvester",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-tempting-addendum",
+        "kind": "enhancement",
+        "detachmentId": "soulforged-warpack",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eager-for-vengeance",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-eye-of-abaddon",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
+      },
+      {
+        "ruleId": "enhancement-mark-of-legend",
+        "kind": "enhancement",
+        "detachmentId": "veterans-of-the-long-war",
+        "state": "match"
       },
       {
         "ruleId": "enhancement-infernal-fulgurite",

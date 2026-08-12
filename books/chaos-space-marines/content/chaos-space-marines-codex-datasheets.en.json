@@ -3,10 +3,10 @@
   "source": {
     "title": "BSData Warhammer 40,000 11th Edition · Chaos Space Marines",
     "repository": "https://github.com/BSData/wh40k-11e",
-    "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66",
-    "revision": "5",
-    "url": "https://github.com/BSData/wh40k-11e/blob/fa30730fca11fbfe87be90684d481d50e0efaf66/Chaos%20-%20Chaos%20Space%20Marines.json",
-    "snapshotSha256": "7ED57C88B5C2C62BCC2D6588E2E9921132A46E171BA2550811A8475B5E3AC4EB"
+    "commit": "b6d17952f74814528b4c70ef5016c86b922d5257",
+    "revision": "6",
+    "url": "https://github.com/BSData/wh40k-11e/blob/b6d17952f74814528b4c70ef5016c86b922d5257/Chaos%20-%20Chaos%20Space%20Marines.json",
+    "snapshotSha256": "3A8EB9177A7F58154319B85346EFD5B01066F9E793CC2AF4578531D77B5289DE"
   },
   "datasheets": [
     {

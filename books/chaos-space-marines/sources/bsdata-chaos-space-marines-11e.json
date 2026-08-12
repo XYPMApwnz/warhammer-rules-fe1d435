@@ -2,13 +2,13 @@
   "schema": 1,
   "source": {
     "repository": "https://github.com/BSData/wh40k-11e",
-    "commit": "fa30730fca11fbfe87be90684d481d50e0efaf66"
+    "commit": "b6d17952f74814528b4c70ef5016c86b922d5257"
   },
   "documents": [
     {
       "role": "faction",
       "file": "Chaos - Chaos Space Marines.json",
-      "sha256": "C4B12000A109C2D3E58E4DCEC1FB861627F59743FCF1C7697C076E4A3674E69C",
+      "sha256": "A76D5ADAD2055572F6186996FD622B08CAB5AF95FAA38F82E80609E179F3EE35",
       "data": {
         "catalogue": {
           "profileTypes": [
@@ -12722,9 +12722,9 @@
                 {
                   "characteristics": [
                     {
-                      "$text": "Once per battle round, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this model’s unit, if this model’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D3+3\".",
                       "name": "Description",
-                      "typeId": "9b8f-694b-e5e-b573"
+                      "typeId": "9b8f-694b-e5e-b573",
+                      "$text": "Once per battle round, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this model’s unit, if this model’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D3+3\"."
                     }
                   ],
                   "id": "b66a-e8bd-9361-1c41",
@@ -111932,6 +111932,74 @@
                       "value": "7561-4a21-64f6-a3dc",
                       "field": "category",
                       "scope": "parent"
+                    },
+                    {
+                      "type": "set",
+                      "value": "5+",
+                      "field": "55a7-5b54-c60d-11dc",
+                      "affects": "group.recursive.7561-4a21-64f6-a3dc.profiles.Unit",
+                      "scope": "parent",
+                      "conditionGroups": [
+                        {
+                          "type": "and",
+                          "conditions": [
+                            {
+                              "type": "notInstanceOf",
+                              "value": 1,
+                              "field": "selections",
+                              "scope": "ancestor",
+                              "childId": "544c-7152-ce3a-a85c",
+                              "shared": true,
+                              "childName": "Chaos Lord"
+                            },
+                            {
+                              "type": "notInstanceOf",
+                              "value": 1,
+                              "field": "selections",
+                              "scope": "ancestor",
+                              "childId": "63ac-6730-c741-856d",
+                              "shared": true,
+                              "childName": "Lord Discordant"
+                            },
+                            {
+                              "type": "notInstanceOf",
+                              "value": 1,
+                              "field": "selections",
+                              "scope": "ancestor",
+                              "childId": "740a-892c-8958-defa",
+                              "shared": true,
+                              "childName": "Terminator"
+                            },
+                            {
+                              "type": "notInstanceOf",
+                              "value": 1,
+                              "field": "selections",
+                              "scope": "ancestor",
+                              "childId": "afa8-767e-2c48-81ca",
+                              "shared": true,
+                              "childName": "Master of Possession"
+                            },
+                            {
+                              "type": "notInstanceOf",
+                              "value": 1,
+                              "field": "selections",
+                              "scope": "ancestor",
+                              "childId": "bad7-e136-b36d-721d",
+                              "shared": true,
+                              "childName": "Dark Apostle"
+                            },
+                            {
+                              "type": "notInstanceOf",
+                              "value": 1,
+                              "field": "selections",
+                              "scope": "ancestor",
+                              "childId": "4f09-0141-6c70-6c5a",
+                              "shared": true,
+                              "childName": "Daemon Prince"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ],
                   "profiles": [
@@ -124785,7 +124853,7 @@
           "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
           "id": "c8da-e875-58f7-f6d6",
           "name": "Chaos - Chaos Space Marines",
-          "revision": 5,
+          "revision": 6,
           "battleScribeVersion": 2.03,
           "library": false,
           "gameSystemId": "sys-352e-adc2-7639-d610",
@@ -124797,7 +124865,7 @@
     {
       "role": "chaos-knights-library",
       "file": "Chaos - Chaos Knights Library.json",
-      "sha256": "AB6B26C2F3E62018C608A090B2EEEB6922E298AFF93C2D465EF986C1242D8CBB",
+      "sha256": "924A682F60081854B4662C17290C5B7100EAE2F8D1DBA974849F0A44461D0372",
       "data": {
         "catalogue": {
           "categoryEntries": [
@@ -157354,7 +157422,7 @@
     {
       "role": "chaos-daemons-library",
       "file": "Chaos - Chaos Daemons Library.json",
-      "sha256": "13655F0048CAF72AC6A36F5FBC66C70117C6EB441B4BF227868465EB81B080E4",
+      "sha256": "1BA23CFC678C4F144A7A9C4E67E72D03D88C4E0C28174C065D25378804F045AC",
       "data": {
         "catalogue": {
           "publications": [
@@ -218233,7 +218301,7 @@
                           "typeId": "9b8f-694b-e5e-b573"
                         }
                       ],
-                      "name": "Slaugterthirst (Aura)",
+                      "name": "Slaughterthirst (Aura)",
                       "typeId": "9cc3-6d83-4dd3-9b64",
                       "typeName": "Abilities",
                       "hidden": false,
@@ -218343,7 +218411,7 @@
                   "comment": "Blood Legion",
                   "type": "upgrade",
                   "import": true,
-                  "name": "Slaugterthirst (Aura)",
+                  "name": "Slaughterthirst (Aura)",
                   "hidden": false,
                   "id": "8d0b-296c-5515-4267",
                   "sortIndex": 4
@@ -227681,7 +227749,7 @@
           "xmlns": "http://www.battlescribe.net/schema/catalogueSchema",
           "id": "b45c-af22-788a-dfd6",
           "name": "Chaos - Daemons Library",
-          "revision": 9,
+          "revision": 10,
           "battleScribeVersion": 2.03,
           "library": true,
           "gameSystemId": "sys-352e-adc2-7639-d610",
@@ -227693,7 +227761,7 @@
     {
       "role": "heresy-legends-library",
       "file": "Library - Astartes Heresy Legends.json",
-      "sha256": "769F016162FF88A271A1C4C777275F234238A1EEEBBC9790157C111D695C5A3B",
+      "sha256": "D8DDC858E4461344E795AE6E3D419457C4422FA72895C5387A3E710965BC8329",
       "data": {
         "catalogue": {
           "categoryEntries": [
@@ -254467,7 +254535,7 @@
     {
       "role": "titans-library",
       "file": "Library - Titans.json",
-      "sha256": "B5F7ADAB3B53E6E32BACE0E8B55B94838389ABAB98B9124963C44F5DCBC24DC1",
+      "sha256": "4DF1A2EC875A82E921BE943ECC78CA8BF5A0386FE9D304DB5A9FD8B67C36568B",
       "data": {
         "catalogue": {
           "sharedSelectionEntries": [
@@ -260339,7 +260407,7 @@
     {
       "role": "game-system",
       "file": "Warhammer 40,000.json",
-      "sha256": "018F2A4D70A3E6B3620901201106BEB5408A8CAA6500CB6AE282FFFDEE73195E",
+      "sha256": "07C57C5350538828E8E36C75154ABAB69653DCEA254AA618ABCC093E532BD994",
       "data": {
         "gameSystem": {
           "publications": [
@@ -266580,7 +266648,7 @@
               "hidden": false
             },
             {
-              "description": "While a Bodyguard unit contains a Leader, it is known as an Attached unit and, with the exception of rules that are triggered when units are destroyed (pg 12), it is treated as a single unit for all rules purposes. Each time an attack targets an Attached unit, until the attacking unit has resolved all of its attacks, you must use the Toughness characteristic of the Bodyguard models in that unit, even if a Leader in that unit has a different Toughness characteristic. Each time an attack successfully wounds an Attached unit, that attack cannot be allocated to a Character model in that unit, even if that Character model has lost one or more wounds or has already had attacks allocated to it this phase. As soon as the last Bodyguard model in an Attached unit has been destroyed, any attacks made against that unit that have yet to be allocated can then be allocated to Character models in that unit.\n\nEach time the last model in a Bodyguard unit is destroyed, each CHARACTER unit that is part of that Attached unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time the last model in a CHARACTER unit that is attached to a Bodyguard unit is destroyed and there is not another CHARACTER unit attached, that Attached unit’s Bodyguard unit becomes a separate unit, with its original Starting Strength. If this happens as the result of an attack, they become separate units after the attacking unit has resolved all of its attacks. \n\nEach time a unit that is part of an Attached unit is destroyed, it does not have the keywords of any other units that make up that Attached unit (unless it has those keywords on its own datasheet) for the purposes of any rules that would be triggered when that unit is destroyed.",
+              "description": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it.",
               "id": "b4dd-3e1f-41cb-218f",
               "name": "Leader",
               "publicationId": "48fc-15aa-b307-9443",
@@ -266588,7 +266656,7 @@
               "hidden": false
             },
             {
-              "description": "Each time an attack made with a **[DEVASTATING WOUNDS]** weapon results in a **critical wound**, the attack sequence for that attack ends and the target unit suffers a number of **mortal wounds** equal to the **D** characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. \n**Mortal wounds** inflicted by **[DEVASTATING WOUNDS]** weapons can damage a maximum of one model for each **critical wound**; any remaining **mortal wounds** inflicted by that attack are lost. \n**Example: An attack made with a **[DEVASTATING WOUNDS]** weapon with a **D** characteristic of 3 results in a **critical wound** against an Intercessor Squad, so inflicts 3 **mortal wounds**. The first 2 **mortal wounds** are sufficient to **destroy** 1 Intercessor model, so the remaining **mortal wound** is lost.*",
+              "description": "Each time an attack made with a **[DEVASTATING WOUNDS]** weapon results in a **critical wound**, the attack sequence for that attack ends and the target unit suffers a number of **mortal wounds** equal to the **D** characteristic of that weapon. These are inflicted after resolving any normal damage inflicted by those attacks. \n**Mortal wounds** inflicted by **[DEVASTATING WOUNDS]** weapons can damage a maximum of one model for each **critical wound**; any remaining **mortal wounds** inflicted by that attack are lost. \n***Example:** An attack made with a **[DEVASTATING WOUNDS]** weapon with a **D** characteristic of 3 results in a **critical wound** against an Intercessor Squad, so inflicts 3 **mortal wounds**. The first 2 **mortal wounds** are sufficient to **destroy** 1 Intercessor model, so the remaining **mortal wound** is lost.*",
               "alias": [
                 "DEVASTATING WOUNDS"
               ],
@@ -266643,7 +266711,7 @@
               "hidden": false
             },
             {
-              "description": "This ability always takes the form **[SUSTAINED HITS X]**. Each time an attack made with a **[SUSTAINED HITS]** weapon results in a **critical hit**, that attack results in a number of additional hits on the target as denoted by **X**.\n***Example: An attack made with a **[SUSTAINED HITS 2]** weapon results in a **critical hit**. That attack therefore hits the target three times (once from the **critical hit**, and twice more from the **[SUSTAINED HITS 2]** ability).",
+              "description": "This ability always takes the form **[SUSTAINED HITS X]**. Each time an attack made with a **[SUSTAINED HITS]** weapon results in a **critical hit**, that attack results in a number of additional hits on the target as denoted by **X**.\n***Example:** An attack made with a **[SUSTAINED HITS 2]** weapon results in a **critical hit**. That attack therefore hits the target three times (once from the **critical hit**, and twice more from the **[SUSTAINED HITS 2]** ability).*",
               "alias": [
                 "SUSTAINED HITS"
               ],
@@ -266665,7 +266733,7 @@
               "hidden": false
             },
             {
-              "description": "This ability always takes the form **[MELTA X]**. Each time a model makes an attack with a **[MELTA]** weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add **X** to that weapon’s **D** characteristic. \n***Example:** A model targets a unit that is within half range of a **[MELTA 2]** weapon with a **D** characteristic of D6. While resolving those attacks, that weapon has a **D** characteristic of **D6+2**.",
+              "description": "This ability always takes the form **[MELTA X]**. Each time a model makes an attack with a **[MELTA]** weapon, if the target unit was within half range of that weapon in the Select Targets step, until the attacking unit’s attacks have been resolved, add **X** to that weapon’s **D** characteristic. \n***Example:** A model targets a unit that is within half range of a **[MELTA 2]** weapon with a **D** characteristic of D6. While resolving those attacks, that weapon has a **D** characteristic of **D6+2**.*",
               "alias": [
                 "MELTA"
               ],
@@ -266907,7 +266975,8 @@
             {
               "name": "Support",
               "id": "3342-2180-9c5d-925f",
-              "hidden": false
+              "hidden": false,
+              "description": "Before the battle, in the Muster Armies step, for each **leader** and **support** unit in your army, you can select one friendly **bodyguard** unit that unit can lead. That unit will then lead that **bodyguard** unit for the battle and form an **attached** unit with it. \nUnless otherwise stated, each **bodyguard** unit can only have one **leader** unit and one **support** unit attached to it."
             }
           ],
           "sharedProfiles": [
@@ -293352,7 +293421,7 @@
           "xmlns": "http://www.battlescribe.net/schema/gameSystemSchema",
           "id": "sys-352e-adc2-7639-d610",
           "name": "Warhammer 40,000 11th Edition",
-          "revision": 7,
+          "revision": 8,
           "battleScribeVersion": 2.03,
           "type": "gameSystem",
           "readme": ""

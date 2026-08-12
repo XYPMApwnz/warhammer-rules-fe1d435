@@ -153,7 +153,7 @@ function addTerm(title,summary,sectionId,kind='faction-term',unitId='',termScope
   return id;
 }
 for(const det of pack.detachments){
-  addTerm(det.rule.title,det.rule.text,`detachment-${det.id}`,'detachment-rule');
+  if(det.rule)addTerm(det.rule.title,det.rule.text,`detachment-${det.id}`,'detachment-rule');
   for(const item of det.enhancements)addTerm(item.title,item.text,`detachment-${det.id}`,'enhancement');
   for(const item of det.stratagems)addTerm(item.title,[item.when,item.target,item.effect,item.restrictions].filter(Boolean).join(' '),`detachment-${det.id}`,'stratagem');
 }
@@ -358,7 +358,7 @@ const outputs=new Map([
 ]);
 const errors=[];
 if(detachments.length!==config.expected.matchedDetachments)errors.push(`expected ${config.expected.matchedDetachments} detachments, got ${detachments.length}`);
-if(pack.detachments.length!==config.expected.factionPackDetachments)errors.push('Faction Pack detachment count mismatch');
+if(pack.detachments.filter(item=>item.sourceLayer!=='codex-secondary-consensus').length!==config.expected.factionPackDetachments)errors.push('Faction Pack detachment count mismatch');
 if((codex.legends||[]).length!==config.expected.legendsDatasheets)errors.push('Legends count mismatch');
 if(new Set(units.map(unit=>unit.id)).size!==units.length)errors.push('duplicate unit IDs');
 if([...outputs.values()].some(value=>/\uFFFD|вЂ|вњ|в†|В·/.test(value)))errors.push('mojibake in generated output');

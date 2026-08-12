@@ -671,6 +671,310 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-stratagem-reavers-reaction",
     "rule": "detachment-renegade-warband"
   },
+  "chaos-space-marines-enhancement-amulet-of-tainted-vigour": {
+    "id": "chaos-space-marines-enhancement-amulet-of-tainted-vigour",
+    "title": "Amulet of Tainted Vigour",
+    "summary": "DARK APOSTLE model only. In your Command phase, you can return up to D3 destroyed DAMNED models (excluding CHARACTER models) to the bearer's unit.",
+    "full": "DARK APOSTLE model only. In your Command phase, you can return up to D3 destroyed DAMNED models (excluding CHARACTER models) to the bearer's unit.",
+    "glossary": "glossary-chaos-space-marines-enhancement-amulet-of-tainted-vigour",
+    "rule": "detachment-chaos-cult"
+  },
+  "chaos-space-marines-enhancement-cultists-brand": {
+    "id": "chaos-space-marines-enhancement-cultists-brand",
+    "title": "Cultist's Brand",
+    "summary": "DARK APOSTLE or DAMNED model only. If every other model in the bearer's unit (excluding Dark Disciples) is DAMNED, you can re-roll Advance and Charge rolls made for the bearer's unit.",
+    "full": "DARK APOSTLE or DAMNED model only. If every other model in the bearer's unit (excluding Dark Disciples) is DAMNED, you can re-roll Advance and Charge rolls made for the bearer's unit.",
+    "glossary": "glossary-chaos-space-marines-enhancement-cultists-brand",
+    "rule": "detachment-chaos-cult"
+  },
+  "chaos-space-marines-enhancement-incendiary-goad": {
+    "id": "chaos-space-marines-enhancement-incendiary-goad",
+    "title": "Incendiary Goad",
+    "summary": "DARK APOSTLE or DAMNED model only. While the bearer's unit is below its Starting Strength, add 1 to the Strength characteristic of melee weapons equipped by DAMNED models in that unit, and while that unit is Below Half-strength, add 1 to the Attacks characteristic of those weapons as well.",
+    "full": "DARK APOSTLE or DAMNED model only. While the bearer's unit is below its Starting Strength, add 1 to the Strength characteristic of melee weapons equipped by DAMNED models in that unit, and while that unit is Below Half-strength, add 1 to the Attacks characteristic of those weapons as well.",
+    "glossary": "glossary-chaos-space-marines-enhancement-incendiary-goad",
+    "rule": "detachment-chaos-cult"
+  },
+  "chaos-space-marines-enhancement-warped-foresight": {
+    "id": "chaos-space-marines-enhancement-warped-foresight",
+    "title": "Warped Foresight",
+    "summary": "DARK APOSTLE or DAMNED model only. While the bearer is leading a unit with the Scouts 6\" ability, every model in the bearer's unit has the Scouts 6\" ability.",
+    "full": "DARK APOSTLE or DAMNED model only. While the bearer is leading a unit with the Scouts 6\" ability, every model in the bearer's unit has the Scouts 6\" ability.",
+    "glossary": "glossary-chaos-space-marines-enhancement-warped-foresight",
+    "rule": "detachment-chaos-cult"
+  },
+  "chaos-space-marines-detachment-rule-masters-of-misdirection": {
+    "id": "chaos-space-marines-detachment-rule-masters-of-misdirection",
+    "title": "Masters of Misdirection",
+    "summary": "Masters of Misdirection appears in the Chaos Space Marines reference.",
+    "full": "",
+    "glossary": "glossary-chaos-space-marines-detachment-rule-masters-of-misdirection",
+    "rule": "detachment-deceptors"
+  },
+  "chaos-space-marines-enhancement-cursed-fang": {
+    "id": "chaos-space-marines-enhancement-cursed-fang",
+    "title": "Cursed Fang",
+    "summary": "HERETIC ASTARTES INFANTRY model only. Improve the Armour Penetration characteristic of the bearer's melee weapons by 1, and the bearer's melee weapons have the [PRECISION] ability.",
+    "full": "HERETIC ASTARTES INFANTRY model only. Improve the Armour Penetration characteristic of the bearer's melee weapons by 1, and the bearer's melee weapons have the [PRECISION] ability.",
+    "glossary": "glossary-chaos-space-marines-enhancement-cursed-fang",
+    "rule": "detachment-deceptors"
+  },
+  "chaos-space-marines-enhancement-falsehood": {
+    "id": "chaos-space-marines-enhancement-falsehood",
+    "title": "Falsehood",
+    "summary": "CHAOS LORD model only (excluding TERMINATOR and JUMP PACK models). In the Declare Battle Formations step, you can set the bearer up in Reserves instead of setting it up on the battlefield. If you do, in one of your Movement phases, you can select one model in a friendly LEGIONARIES or CHOSEN unit that has two or more models remaining and is on the battlefield (excluding Attached units). The selected model is destroyed (ignoring any rules that are triggered when a model is destroyed) and the bearer is set up as close as possible to where that model was destroyed and only within Engagement Range of any enemy units if the destroyed model was within Engagement Range of those units. The bearer now attaches to that unit as its Leader.",
+    "full": "CHAOS LORD model only (excluding TERMINATOR and JUMP PACK models). In the Declare Battle Formations step, you can set the bearer up in Reserves instead of setting it up on the battlefield. If you do, in one of your Movement phases, you can select one model in a friendly LEGIONARIES or CHOSEN unit that has two or more models remaining and is on the battlefield (excluding Attached units). The selected model is destroyed (ignoring any rules that are triggered when a model is destroyed) and the bearer is set up as close as possible to where that model was destroyed and only within Engagement Range of any enemy units if the destroyed model was within Engagement Range of those units. The bearer now attaches to that unit as its Leader.",
+    "glossary": "glossary-chaos-space-marines-enhancement-falsehood",
+    "rule": "detachment-deceptors"
+  },
+  "chaos-space-marines-enhancement-shroud-of-obfuscation": {
+    "id": "chaos-space-marines-enhancement-shroud-of-obfuscation",
+    "title": "Shroud of Obfuscation",
+    "summary": "HERETIC ASTARTES INFANTRY model only. The bearer has the Stealth and Lone Operative abilities.",
+    "full": "HERETIC ASTARTES INFANTRY model only. The bearer has the Stealth and Lone Operative abilities.",
+    "glossary": "glossary-chaos-space-marines-enhancement-shroud-of-obfuscation",
+    "rule": "detachment-deceptors"
+  },
+  "chaos-space-marines-enhancement-soul-link": {
+    "id": "chaos-space-marines-enhancement-soul-link",
+    "title": "Soul Link",
+    "summary": "HERETIC ASTARTES INFANTRY model only. At the start of your Command phase, you can select one other HERETIC ASTARTES INFANTRY CHARACTER model from your army (excluding EPIC HEROES). Until the start of your next Command phase, the bearer gains the PSYKER keyword, and replace the bearer's datasheet abilities with the datasheet abilities of the CHARACTER you selected.",
+    "full": "HERETIC ASTARTES INFANTRY model only. At the start of your Command phase, you can select one other HERETIC ASTARTES INFANTRY CHARACTER model from your army (excluding EPIC HEROES). Until the start of your next Command phase, the bearer gains the PSYKER keyword, and replace the bearer's datasheet abilities with the datasheet abilities of the CHARACTER you selected.",
+    "glossary": "glossary-chaos-space-marines-enhancement-soul-link",
+    "rule": "detachment-deceptors"
+  },
+  "chaos-space-marines-detachment-rule-terror-descends-aura": {
+    "id": "chaos-space-marines-detachment-rule-terror-descends-aura",
+    "title": "Terror Descends (Aura)",
+    "summary": "In the Battle-shock step of your opponent's Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more HERETIC ASTARTES units from your army, that enemy unit must take a Battle-shock test. Each time an enemy unit within 12\" of one or more HERETIC ASTARTES units from your army takes a Battle-shock test, subtract 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle-shock tests in the same phase.",
+    "full": "In the Battle-shock step of your opponent's Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more HERETIC ASTARTES units from your army, that enemy unit must take a Battle-shock test. Each time an enemy unit within 12\" of one or more HERETIC ASTARTES units from your army takes a Battle-shock test, subtract 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle-shock tests in the same phase.",
+    "glossary": "glossary-chaos-space-marines-detachment-rule-terror-descends-aura",
+    "rule": "detachment-dread-talons"
+  },
+  "chaos-space-marines-enhancement-eater-of-dread": {
+    "id": "chaos-space-marines-enhancement-eater-of-dread",
+    "title": "Eater of Dread",
+    "summary": "HERETIC ASTARTES model only. At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result for each Battle-shocked enemy unit that is on the battlefield: on a 5+, you gain 1CP.",
+    "full": "HERETIC ASTARTES model only. At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result for each Battle-shocked enemy unit that is on the battlefield: on a 5+, you gain 1CP.",
+    "glossary": "glossary-chaos-space-marines-enhancement-eater-of-dread",
+    "rule": "detachment-dread-talons"
+  },
+  "chaos-space-marines-enhancement-nights-shroud": {
+    "id": "chaos-space-marines-enhancement-nights-shroud",
+    "title": "Night's Shroud",
+    "summary": "CHAOS LORD model only. TERMINATOR models are excluded. Models in the bearer's unit have the Stealth ability.",
+    "full": "CHAOS LORD model only. TERMINATOR models are excluded. Models in the bearer's unit have the Stealth ability.",
+    "glossary": "glossary-chaos-space-marines-enhancement-nights-shroud",
+    "rule": "detachment-dread-talons"
+  },
+  "chaos-space-marines-enhancement-warp-fuelled-thrusters-2": {
+    "id": "chaos-space-marines-enhancement-warp-fuelled-thrusters-2",
+    "title": "Warp-fuelled Thrusters",
+    "summary": "JUMP PACK CHAOS LORD model only. At the end of your opponent's turn, if the bearer's unit is not within Engagement Range of one or more enemy units, you can remove the bearer's unit from the battlefield and place it into Strategic Reserves.",
+    "full": "JUMP PACK CHAOS LORD model only. At the end of your opponent's turn, if the bearer's unit is not within Engagement Range of one or more enemy units, you can remove the bearer's unit from the battlefield and place it into Strategic Reserves.",
+    "glossary": "glossary-chaos-space-marines-enhancement-warp-fuelled-thrusters-2",
+    "rule": "detachment-dread-talons"
+  },
+  "chaos-space-marines-enhancement-willbreaker": {
+    "id": "chaos-space-marines-enhancement-willbreaker",
+    "title": "Willbreaker",
+    "summary": "HERETIC ASTARTES model only. In the Fight phase, after the bearer has made its attacks, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test.",
+    "full": "HERETIC ASTARTES model only. In the Fight phase, after the bearer has made its attacks, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test.",
+    "glossary": "glossary-chaos-space-marines-enhancement-willbreaker",
+    "rule": "detachment-dread-talons"
+  },
+  "chaos-space-marines-detachment-rule-iron-fortitude": {
+    "id": "chaos-space-marines-detachment-rule-iron-fortitude",
+    "title": "Iron Fortitude",
+    "summary": "Each time a ranged attack targets a HERETIC ASTARTES unit from your army (excluding DAMNED units), if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+    "full": "Each time a ranged attack targets a HERETIC ASTARTES unit from your army (excluding DAMNED units), if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+    "glossary": "glossary-chaos-space-marines-detachment-rule-iron-fortitude",
+    "rule": "detachment-fellhammer-siege-host"
+  },
+  "chaos-space-marines-enhancement-bastion-plate": {
+    "id": "chaos-space-marines-enhancement-bastion-plate",
+    "title": "Bastion Plate",
+    "summary": "CHAOS LORD model only. JUMP PACK models are excluded. Once per battle round, when a saving throw is failed for the bearer's unit, you can change the Damage characteristic of that attack to 0.",
+    "full": "CHAOS LORD model only. JUMP PACK models are excluded. Once per battle round, when a saving throw is failed for the bearer's unit, you can change the Damage characteristic of that attack to 0.",
+    "glossary": "glossary-chaos-space-marines-enhancement-bastion-plate",
+    "rule": "detachment-fellhammer-siege-host"
+  },
+  "chaos-space-marines-enhancement-iron-artifice": {
+    "id": "chaos-space-marines-enhancement-iron-artifice",
+    "title": "Iron Artifice",
+    "summary": "HERETIC ASTARTES INFANTRY model only. The bearer's weapons have the [ANTI-VEHICLE 4+] and [ANTI-FORTIFICATION 4+] abilities.",
+    "full": "HERETIC ASTARTES INFANTRY model only. The bearer's weapons have the [ANTI-VEHICLE 4+] and [ANTI-FORTIFICATION 4+] abilities.",
+    "glossary": "glossary-chaos-space-marines-enhancement-iron-artifice",
+    "rule": "detachment-fellhammer-siege-host"
+  },
+  "chaos-space-marines-enhancement-ironbound-enmity": {
+    "id": "chaos-space-marines-enhancement-ironbound-enmity",
+    "title": "Ironbound Enmity",
+    "summary": "HERETIC ASTARTES model only. Each time the bearer makes an attack while within range of an objective marker, add 1 to the Wound roll.",
+    "full": "HERETIC ASTARTES model only. Each time the bearer makes an attack while within range of an objective marker, add 1 to the Wound roll.",
+    "glossary": "glossary-chaos-space-marines-enhancement-ironbound-enmity",
+    "rule": "detachment-fellhammer-siege-host"
+  },
+  "chaos-space-marines-enhancement-warp-tracer": {
+    "id": "chaos-space-marines-enhancement-warp-tracer",
+    "title": "Warp Tracer",
+    "summary": "HERETIC ASTARTES model only. In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover.",
+    "full": "HERETIC ASTARTES model only. In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover.",
+    "glossary": "glossary-chaos-space-marines-enhancement-warp-tracer",
+    "rule": "detachment-fellhammer-siege-host"
+  },
+  "chaos-space-marines-detachment-rule-marks-of-chaos": {
+    "id": "chaos-space-marines-detachment-rule-marks-of-chaos",
+    "title": "Marks of Chaos",
+    "summary": "When mustering your army, when you select a HERETIC ASTARTES unit to include in your army, if that unit is not an EPIC HERO and does not already have one of the following keywords, you must select one for that unit and note it on your Army Roster: KHORNE, TZEENTCH, NURGLE, SLAANESH, CHAOS UNDIVIDED. Each time a unit with one of these keywords gains a weapon ability as the result of a Dark Pact and does not fail the resulting Leadership test, until the end of the phase, that unit gains the associated ability below. UNITS THAT GAINED [LETHAL HITS]: KHORNE: Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit. TZEENTCH: Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit. CHAOS UNDIVIDED: Each time a model in this unit makes an attack, re-roll a Hit roll of 1. UNITS THAT GAINED [SUSTAINED HITS 1]: NURGLE: Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit. SLAANESH: Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit. CHAOS UNDIVIDED: Each time a model in this unit makes an attack, re-roll a Hit roll of 1. You cannot select the KHORNE keyword for a PSYKER unit. A CHARACTER unit can only be attached to a unit if both units share the same keyword from the list above. A unit can only embark within (or start the battle embarked within) a TRANSPORT if both of those units share the same keyword from the list above.",
+    "full": "When mustering your army, when you select a HERETIC ASTARTES unit to include in your army, if that unit is not an EPIC HERO and does not already have one of the following keywords, you must select one for that unit and note it on your Army Roster: KHORNE, TZEENTCH, NURGLE, SLAANESH, CHAOS UNDIVIDED. Each time a unit with one of these keywords gains a weapon ability as the result of a Dark Pact and does not fail the resulting Leadership test, until the end of the phase, that unit gains the associated ability below. UNITS THAT GAINED [LETHAL HITS]: KHORNE: Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit. TZEENTCH: Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit. CHAOS UNDIVIDED: Each time a model in this unit makes an attack, re-roll a Hit roll of 1. UNITS THAT GAINED [SUSTAINED HITS 1]: NURGLE: Each time a model in this unit makes a ranged attack, an unmodified Hit roll of 5+ scores a Critical Hit. SLAANESH: Each time a model in this unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit. CHAOS UNDIVIDED: Each time a model in this unit makes an attack, re-roll a Hit roll of 1. You cannot select the KHORNE keyword for a PSYKER unit. A CHARACTER unit can only be attached to a unit if both units share the same keyword from the list above. A unit can only embark within (or start the battle embarked within) a TRANSPORT if both of those units share the same keyword from the list above.",
+    "glossary": "glossary-chaos-space-marines-detachment-rule-marks-of-chaos",
+    "rule": "detachment-pactbound-zealots"
+  },
+  "chaos-space-marines-enhancement-eye-of-tzeentch": {
+    "id": "chaos-space-marines-enhancement-eye-of-tzeentch",
+    "title": "Eye of Tzeentch",
+    "summary": "HERETIC ASTARTES TZEENTCH model only. Each time the bearer's unit makes a Dark Pact and does not fail the resulting Leadership test, if the result of that test was 8 or more, you gain 1CP.",
+    "full": "HERETIC ASTARTES TZEENTCH model only. Each time the bearer's unit makes a Dark Pact and does not fail the resulting Leadership test, if the result of that test was 8 or more, you gain 1CP.",
+    "glossary": "glossary-chaos-space-marines-enhancement-eye-of-tzeentch",
+    "rule": "detachment-pactbound-zealots"
+  },
+  "chaos-space-marines-enhancement-intoxicating-elixir": {
+    "id": "chaos-space-marines-enhancement-intoxicating-elixir",
+    "title": "Intoxicating Elixir",
+    "summary": "HERETIC ASTARTES SLAANESH model only. The bearer has the Feel No Pain 5+ ability. Each time the bearer shoots or fights, if the bearer's unit made a Dark Pact this phase and did not fail the resulting Leadership test, after the bearer has resolved those attacks, select one enemy unit that was hit by one or more of those attacks; that enemy unit must take a Battle-shock test.",
+    "full": "HERETIC ASTARTES SLAANESH model only. The bearer has the Feel No Pain 5+ ability. Each time the bearer shoots or fights, if the bearer's unit made a Dark Pact this phase and did not fail the resulting Leadership test, after the bearer has resolved those attacks, select one enemy unit that was hit by one or more of those attacks; that enemy unit must take a Battle-shock test.",
+    "glossary": "glossary-chaos-space-marines-enhancement-intoxicating-elixir",
+    "rule": "detachment-pactbound-zealots"
+  },
+  "chaos-space-marines-enhancement-orbs-of-unlife": {
+    "id": "chaos-space-marines-enhancement-orbs-of-unlife",
+    "title": "Orbs of Unlife",
+    "summary": "HERETIC ASTARTES NURGLE model only. At the end of the Fight phase, roll one D6 for every enemy unit within 3\" of the bearer, adding 1 to the result if the bearer's unit made a Dark Pact that phase and did not fail the resulting Leadership test: on a 4+, that enemy unit suffers D3 mortal wounds.",
+    "full": "HERETIC ASTARTES NURGLE model only. At the end of the Fight phase, roll one D6 for every enemy unit within 3\" of the bearer, adding 1 to the result if the bearer's unit made a Dark Pact that phase and did not fail the resulting Leadership test: on a 4+, that enemy unit suffers D3 mortal wounds.",
+    "glossary": "glossary-chaos-space-marines-enhancement-orbs-of-unlife",
+    "rule": "detachment-pactbound-zealots"
+  },
+  "chaos-space-marines-enhancement-talisman-of-burning-blood": {
+    "id": "chaos-space-marines-enhancement-talisman-of-burning-blood",
+    "title": "Talisman of Burning Blood",
+    "summary": "HERETIC ASTARTES KHORNE model only. Add 1 to the Attacks and Strength characteristics of the bearer's melee weapons. Each time the bearer's unit makes a Dark Pact and does not fail the resulting Leadership test, roll one D3: until the end of the phase, add the result to the Attacks and Strength characteristics of the bearer's melee weapons instead.",
+    "full": "HERETIC ASTARTES KHORNE model only. Add 1 to the Attacks and Strength characteristics of the bearer's melee weapons. Each time the bearer's unit makes a Dark Pact and does not fail the resulting Leadership test, roll one D3: until the end of the phase, add the result to the Attacks and Strength characteristics of the bearer's melee weapons instead.",
+    "glossary": "glossary-chaos-space-marines-enhancement-talisman-of-burning-blood",
+    "rule": "detachment-pactbound-zealots"
+  },
+  "chaos-space-marines-detachment-rule-raiders-and-reavers": {
+    "id": "chaos-space-marines-detachment-rule-raiders-and-reavers",
+    "title": "Raiders and Reavers",
+    "summary": "Ranged weapons equipped by HERETIC ASTARTES models from your army have the [ASSAULT] ability, and each time a HERETIC ASTARTES model from your army makes an attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1.",
+    "full": "Ranged weapons equipped by HERETIC ASTARTES models from your army have the [ASSAULT] ability, and each time a HERETIC ASTARTES model from your army makes an attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1.",
+    "glossary": "glossary-chaos-space-marines-detachment-rule-raiders-and-reavers",
+    "rule": "detachment-renegade-raiders"
+  },
+  "chaos-space-marines-enhancement-despots-claim": {
+    "id": "chaos-space-marines-enhancement-despots-claim",
+    "title": "Despot's Claim",
+    "summary": "HERETIC ASTARTES model only. At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is wholly within 12\" of your opponent's deployment zone: on a 5+, you gain 1CP.",
+    "full": "HERETIC ASTARTES model only. At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is wholly within 12\" of your opponent's deployment zone: on a 5+, you gain 1CP.",
+    "glossary": "glossary-chaos-space-marines-enhancement-despots-claim",
+    "rule": "detachment-renegade-raiders"
+  },
+  "chaos-space-marines-enhancement-dread-reaver": {
+    "id": "chaos-space-marines-enhancement-dread-reaver",
+    "title": "Dread Reaver",
+    "summary": "HERETIC ASTARTES model only. Each time the bearer makes a melee attack, if the bearer is wholly within 12\" of your opponent's deployment zone, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+    "full": "HERETIC ASTARTES model only. Each time the bearer makes a melee attack, if the bearer is wholly within 12\" of your opponent's deployment zone, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+    "glossary": "glossary-chaos-space-marines-enhancement-dread-reaver",
+    "rule": "detachment-renegade-raiders"
+  },
+  "chaos-space-marines-enhancement-mark-of-the-hound": {
+    "id": "chaos-space-marines-enhancement-mark-of-the-hound",
+    "title": "Mark of the Hound",
+    "summary": "HERETIC ASTARTES model only. Models in the bearer's unit have the Scouts 6\" ability.",
+    "full": "HERETIC ASTARTES model only. Models in the bearer's unit have the Scouts 6\" ability.",
+    "glossary": "glossary-chaos-space-marines-enhancement-mark-of-the-hound",
+    "rule": "detachment-renegade-raiders"
+  },
+  "chaos-space-marines-enhancement-tyrants-lash": {
+    "id": "chaos-space-marines-enhancement-tyrants-lash",
+    "title": "Tyrant's Lash",
+    "summary": "HERETIC ASTARTES model only. You can re-roll Advance rolls made for the bearer's unit, and the bearer's unit is eligible to shoot in a turn in which it Fell Back.",
+    "full": "HERETIC ASTARTES model only. You can re-roll Advance rolls made for the bearer's unit, and the bearer's unit is eligible to shoot in a turn in which it Fell Back.",
+    "glossary": "glossary-chaos-space-marines-enhancement-tyrants-lash",
+    "rule": "detachment-renegade-raiders"
+  },
+  "chaos-space-marines-enhancement-forges-blessing": {
+    "id": "chaos-space-marines-enhancement-forges-blessing",
+    "title": "Forge's Blessing",
+    "summary": "HERETIC ASTARTES model only. In your Command phase, select one friendly HERETIC ASTARTES VEHICLE unit within 12\" of the bearer. Until the start of your next Command phase, that unit has the Feel No Pain 6+ ability.",
+    "full": "HERETIC ASTARTES model only. In your Command phase, select one friendly HERETIC ASTARTES VEHICLE unit within 12\" of the bearer. Until the start of your next Command phase, that unit has the Feel No Pain 6+ ability.",
+    "glossary": "glossary-chaos-space-marines-enhancement-forges-blessing",
+    "rule": "detachment-soulforged-warpack"
+  },
+  "chaos-space-marines-enhancement-invigorated-mechatendrils": {
+    "id": "chaos-space-marines-enhancement-invigorated-mechatendrils",
+    "title": "Invigorated Mechatendrils",
+    "summary": "WARPSMITH model only. Add 4\" to the bearer's Move characteristic.",
+    "full": "WARPSMITH model only. Add 4\" to the bearer's Move characteristic.",
+    "glossary": "glossary-chaos-space-marines-enhancement-invigorated-mechatendrils",
+    "rule": "detachment-soulforged-warpack"
+  },
+  "chaos-space-marines-enhancement-tempting-addendum": {
+    "id": "chaos-space-marines-enhancement-tempting-addendum",
+    "title": "Tempting Addendum",
+    "summary": "HERETIC ASTARTES model only. Each time a HERETIC ASTARTES DAEMON VEHICLE unit from your army invokes its contract while within 3\" of the bearer: if it suffers one or more mortal wounds as a result of that Dark Pact, add 1 to the number of mortal wounds it suffers; until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll.",
+    "full": "HERETIC ASTARTES model only. Each time a HERETIC ASTARTES DAEMON VEHICLE unit from your army invokes its contract while within 3\" of the bearer: if it suffers one or more mortal wounds as a result of that Dark Pact, add 1 to the number of mortal wounds it suffers; until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll.",
+    "glossary": "glossary-chaos-space-marines-enhancement-tempting-addendum",
+    "rule": "detachment-soulforged-warpack"
+  },
+  "chaos-space-marines-enhancement-soul-harvester": {
+    "id": "chaos-space-marines-enhancement-soul-harvester",
+    "title": "Soul Harvester",
+    "summary": "HERETIC ASTARTES model only. While the bearer is on the battlefield, each time an enemy unit within 12\" of the bearer is destroyed, roll one D6: on a 5+, you gain 1CP.",
+    "full": "HERETIC ASTARTES model only. While the bearer is on the battlefield, each time an enemy unit within 12\" of the bearer is destroyed, roll one D6: on a 5+, you gain 1CP.",
+    "glossary": "glossary-chaos-space-marines-enhancement-soul-harvester",
+    "rule": "detachment-soulforged-warpack"
+  },
+  "chaos-space-marines-detachment-rule-focus-of-hatred": {
+    "id": "chaos-space-marines-detachment-rule-focus-of-hatred",
+    "title": "Focus of Hatred",
+    "summary": "At the start of your Command phase, select one unit from your opponent's army to be your focus of hatred. Until the start of your next Command phase, each time a HERETIC ASTARTES model from your army (excluding DAMNED models) makes an attack that targets your focus of hatred, you can re-roll the Hit roll.",
+    "full": "At the start of your Command phase, select one unit from your opponent's army to be your focus of hatred. Until the start of your next Command phase, each time a HERETIC ASTARTES model from your army (excluding DAMNED models) makes an attack that targets your focus of hatred, you can re-roll the Hit roll.",
+    "glossary": "glossary-chaos-space-marines-detachment-rule-focus-of-hatred",
+    "rule": "detachment-veterans-of-the-long-war"
+  },
+  "chaos-space-marines-enhancement-eager-for-vengeance": {
+    "id": "chaos-space-marines-enhancement-eager-for-vengeance",
+    "title": "Eager for Vengeance",
+    "summary": "HERETIC ASTARTES model only. Excludes DAMNED models. The bearer's unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Each time a model in the bearer's unit makes an attack that targets your focus of hatred, if the bearer's unit Fell Back this turn, add 1 to the Hit roll, and each time you select your focus of hatred as a target of that unit's charge, add 1 to the Charge roll.",
+    "full": "HERETIC ASTARTES model only. Excludes DAMNED models. The bearer's unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Each time a model in the bearer's unit makes an attack that targets your focus of hatred, if the bearer's unit Fell Back this turn, add 1 to the Hit roll, and each time you select your focus of hatred as a target of that unit's charge, add 1 to the Charge roll.",
+    "glossary": "glossary-chaos-space-marines-enhancement-eager-for-vengeance",
+    "rule": "detachment-veterans-of-the-long-war"
+  },
+  "chaos-space-marines-enhancement-eye-of-abaddon": {
+    "id": "chaos-space-marines-enhancement-eye-of-abaddon",
+    "title": "Eye of Abaddon",
+    "summary": "HERETIC ASTARTES model only. Excludes DAMNED models. While the bearer is on the battlefield, each time your focus of hatred is destroyed, roll one D6: on a 4+, you gain 1CP.",
+    "full": "HERETIC ASTARTES model only. Excludes DAMNED models. While the bearer is on the battlefield, each time your focus of hatred is destroyed, roll one D6: on a 4+, you gain 1CP.",
+    "glossary": "glossary-chaos-space-marines-enhancement-eye-of-abaddon",
+    "rule": "detachment-veterans-of-the-long-war"
+  },
+  "chaos-space-marines-enhancement-mark-of-legend": {
+    "id": "chaos-space-marines-enhancement-mark-of-legend",
+    "title": "Mark of Legend",
+    "summary": "HERETIC ASTARTES model only. Excludes DAMNED models. Once per turn, you can re-roll one Hit roll, one Wound roll or one saving throw made for the bearer.",
+    "full": "HERETIC ASTARTES model only. Excludes DAMNED models. Once per turn, you can re-roll one Hit roll, one Wound roll or one saving throw made for the bearer.",
+    "glossary": "glossary-chaos-space-marines-enhancement-mark-of-legend",
+    "rule": "detachment-veterans-of-the-long-war"
+  },
+  "chaos-space-marines-enhancement-warmasters-gift": {
+    "id": "chaos-space-marines-enhancement-warmasters-gift",
+    "title": "Warmaster's Gift",
+    "summary": "CHAOS LORD model only. Each time the bearer makes an attack that targets your focus of hatred, an unmodified successful Wound roll of 5+ scores a Critical Wound.",
+    "full": "CHAOS LORD model only. Each time the bearer makes an attack that targets your focus of hatred, an unmodified successful Wound roll of 5+ scores a Critical Wound.",
+    "glossary": "glossary-chaos-space-marines-enhancement-warmasters-gift",
+    "rule": "detachment-veterans-of-the-long-war"
+  },
   "chaos-space-marines-ability-for-the-dark-gods": {
     "id": "chaos-space-marines-ability-for-the-dark-gods",
     "title": "For the Dark Gods",
@@ -4615,261 +4919,13 @@ window.DG_TERMS={
     "datasheet": "unit-venomcrawler",
     "statline": "venomcrawler-profile"
   },
-  "chaos-space-marines-enhancement-amulet-of-tainted-vigour": {
-    "id": "chaos-space-marines-enhancement-amulet-of-tainted-vigour",
-    "title": "Amulet of Tainted Vigour",
-    "summary": "Amulet of Tainted Vigour appears in the Chaos Space Marines reference.",
+  "chaos-space-marines-detachment-rule-masters-of-misdirection-2": {
+    "id": "chaos-space-marines-detachment-rule-masters-of-misdirection-2",
+    "title": "Masters of Misdirection",
+    "summary": "Masters of Misdirection appears in the Chaos Space Marines reference.",
     "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-amulet-of-tainted-vigour",
-    "rule": "detachment-chaos-cult"
-  },
-  "chaos-space-marines-enhancement-cultists-brand": {
-    "id": "chaos-space-marines-enhancement-cultists-brand",
-    "title": "Cultist’s Brand",
-    "summary": "Cultist’s Brand appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-cultists-brand",
-    "rule": "detachment-chaos-cult"
-  },
-  "chaos-space-marines-enhancement-incendiary-goad": {
-    "id": "chaos-space-marines-enhancement-incendiary-goad",
-    "title": "Incendiary Goad",
-    "summary": "Incendiary Goad appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-incendiary-goad",
-    "rule": "detachment-chaos-cult"
-  },
-  "chaos-space-marines-enhancement-warped-foresight": {
-    "id": "chaos-space-marines-enhancement-warped-foresight",
-    "title": "Warped Foresight",
-    "summary": "Warped Foresight appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-warped-foresight",
-    "rule": "detachment-chaos-cult"
-  },
-  "chaos-space-marines-enhancement-cursed-fang": {
-    "id": "chaos-space-marines-enhancement-cursed-fang",
-    "title": "Cursed Fang",
-    "summary": "Cursed Fang appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-cursed-fang",
+    "glossary": "glossary-chaos-space-marines-detachment-rule-masters-of-misdirection-2",
     "rule": "detachment-deceptors"
-  },
-  "chaos-space-marines-enhancement-falsehood": {
-    "id": "chaos-space-marines-enhancement-falsehood",
-    "title": "Falsehood",
-    "summary": "Falsehood appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-falsehood",
-    "rule": "detachment-deceptors"
-  },
-  "chaos-space-marines-enhancement-shroud-of-obfuscation": {
-    "id": "chaos-space-marines-enhancement-shroud-of-obfuscation",
-    "title": "Shroud of Obfuscation",
-    "summary": "Shroud of Obfuscation appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-shroud-of-obfuscation",
-    "rule": "detachment-deceptors"
-  },
-  "chaos-space-marines-enhancement-soul-link": {
-    "id": "chaos-space-marines-enhancement-soul-link",
-    "title": "Soul Link",
-    "summary": "Soul Link appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-soul-link",
-    "rule": "detachment-deceptors"
-  },
-  "chaos-space-marines-enhancement-eater-of-dread": {
-    "id": "chaos-space-marines-enhancement-eater-of-dread",
-    "title": "Eater of Dread",
-    "summary": "Eater of Dread appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-eater-of-dread",
-    "rule": "detachment-dread-talons"
-  },
-  "chaos-space-marines-enhancement-nights-shroud": {
-    "id": "chaos-space-marines-enhancement-nights-shroud",
-    "title": "Night’s Shroud",
-    "summary": "Night’s Shroud appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-nights-shroud",
-    "rule": "detachment-dread-talons"
-  },
-  "chaos-space-marines-enhancement-warp-fuelled-thrusters-2": {
-    "id": "chaos-space-marines-enhancement-warp-fuelled-thrusters-2",
-    "title": "Warp-Fuelled Thrusters",
-    "summary": "Warp-Fuelled Thrusters appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-warp-fuelled-thrusters-2",
-    "rule": "detachment-dread-talons"
-  },
-  "chaos-space-marines-enhancement-willbreaker": {
-    "id": "chaos-space-marines-enhancement-willbreaker",
-    "title": "Willbreaker",
-    "summary": "Willbreaker appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-willbreaker",
-    "rule": "detachment-dread-talons"
-  },
-  "chaos-space-marines-enhancement-bastion-plate": {
-    "id": "chaos-space-marines-enhancement-bastion-plate",
-    "title": "Bastion Plate",
-    "summary": "Bastion Plate appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-bastion-plate",
-    "rule": "detachment-fellhammer-siege-host"
-  },
-  "chaos-space-marines-enhancement-iron-artifice": {
-    "id": "chaos-space-marines-enhancement-iron-artifice",
-    "title": "Iron Artifice",
-    "summary": "Iron Artifice appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-iron-artifice",
-    "rule": "detachment-fellhammer-siege-host"
-  },
-  "chaos-space-marines-enhancement-ironbound-enmity": {
-    "id": "chaos-space-marines-enhancement-ironbound-enmity",
-    "title": "Ironbound Enmity",
-    "summary": "Ironbound Enmity appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-ironbound-enmity",
-    "rule": "detachment-fellhammer-siege-host"
-  },
-  "chaos-space-marines-enhancement-warp-tracer": {
-    "id": "chaos-space-marines-enhancement-warp-tracer",
-    "title": "Warp Tracer",
-    "summary": "Warp Tracer appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-warp-tracer",
-    "rule": "detachment-fellhammer-siege-host"
-  },
-  "chaos-space-marines-enhancement-eye-of-tzeentch": {
-    "id": "chaos-space-marines-enhancement-eye-of-tzeentch",
-    "title": "Eye of Tzeentch",
-    "summary": "Eye of Tzeentch appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-eye-of-tzeentch",
-    "rule": "detachment-pactbound-zealots"
-  },
-  "chaos-space-marines-enhancement-intoxicating-elixir": {
-    "id": "chaos-space-marines-enhancement-intoxicating-elixir",
-    "title": "Intoxicating Elixir",
-    "summary": "Intoxicating Elixir appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-intoxicating-elixir",
-    "rule": "detachment-pactbound-zealots"
-  },
-  "chaos-space-marines-enhancement-orbs-of-unlife": {
-    "id": "chaos-space-marines-enhancement-orbs-of-unlife",
-    "title": "Orbs of Unlife",
-    "summary": "Orbs of Unlife appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-orbs-of-unlife",
-    "rule": "detachment-pactbound-zealots"
-  },
-  "chaos-space-marines-enhancement-talisman-of-burning-blood": {
-    "id": "chaos-space-marines-enhancement-talisman-of-burning-blood",
-    "title": "Talisman of Burning Blood",
-    "summary": "Talisman of Burning Blood appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-talisman-of-burning-blood",
-    "rule": "detachment-pactbound-zealots"
-  },
-  "chaos-space-marines-enhancement-despots-claim": {
-    "id": "chaos-space-marines-enhancement-despots-claim",
-    "title": "Despot’s Claim",
-    "summary": "Despot’s Claim appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-despots-claim",
-    "rule": "detachment-renegade-raiders"
-  },
-  "chaos-space-marines-enhancement-dread-reaver": {
-    "id": "chaos-space-marines-enhancement-dread-reaver",
-    "title": "Dread Reaver",
-    "summary": "Dread Reaver appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-dread-reaver",
-    "rule": "detachment-renegade-raiders"
-  },
-  "chaos-space-marines-enhancement-mark-of-the-hound": {
-    "id": "chaos-space-marines-enhancement-mark-of-the-hound",
-    "title": "Mark of the Hound",
-    "summary": "Mark of the Hound appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-mark-of-the-hound",
-    "rule": "detachment-renegade-raiders"
-  },
-  "chaos-space-marines-enhancement-tyrants-lash": {
-    "id": "chaos-space-marines-enhancement-tyrants-lash",
-    "title": "Tyrant’s Lash",
-    "summary": "Tyrant’s Lash appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-tyrants-lash",
-    "rule": "detachment-renegade-raiders"
-  },
-  "chaos-space-marines-enhancement-forges-blessing": {
-    "id": "chaos-space-marines-enhancement-forges-blessing",
-    "title": "Forge’s Blessing",
-    "summary": "Forge’s Blessing appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-forges-blessing",
-    "rule": "detachment-soulforged-warpack"
-  },
-  "chaos-space-marines-enhancement-invigorated-mechatendrils": {
-    "id": "chaos-space-marines-enhancement-invigorated-mechatendrils",
-    "title": "Invigorated Mechatendrils",
-    "summary": "Invigorated Mechatendrils appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-invigorated-mechatendrils",
-    "rule": "detachment-soulforged-warpack"
-  },
-  "chaos-space-marines-enhancement-soul-harvester": {
-    "id": "chaos-space-marines-enhancement-soul-harvester",
-    "title": "Soul Harvester",
-    "summary": "Soul Harvester appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-soul-harvester",
-    "rule": "detachment-soulforged-warpack"
-  },
-  "chaos-space-marines-enhancement-tempting-addendum": {
-    "id": "chaos-space-marines-enhancement-tempting-addendum",
-    "title": "Tempting Addendum",
-    "summary": "Tempting Addendum appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-tempting-addendum",
-    "rule": "detachment-soulforged-warpack"
-  },
-  "chaos-space-marines-enhancement-eager-for-vengeance": {
-    "id": "chaos-space-marines-enhancement-eager-for-vengeance",
-    "title": "Eager for Vengeance",
-    "summary": "Eager for Vengeance appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-eager-for-vengeance",
-    "rule": "detachment-veterans-of-the-long-war"
-  },
-  "chaos-space-marines-enhancement-eye-of-abaddon": {
-    "id": "chaos-space-marines-enhancement-eye-of-abaddon",
-    "title": "Eye of Abaddon",
-    "summary": "Eye of Abaddon appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-eye-of-abaddon",
-    "rule": "detachment-veterans-of-the-long-war"
-  },
-  "chaos-space-marines-enhancement-mark-of-legend": {
-    "id": "chaos-space-marines-enhancement-mark-of-legend",
-    "title": "Mark of Legend",
-    "summary": "Mark of Legend appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-mark-of-legend",
-    "rule": "detachment-veterans-of-the-long-war"
-  },
-  "chaos-space-marines-enhancement-warmasters-gift": {
-    "id": "chaos-space-marines-enhancement-warmasters-gift",
-    "title": "Warmaster’s Gift",
-    "summary": "Warmaster’s Gift appears in the Chaos Space Marines reference.",
-    "full": "",
-    "glossary": "glossary-chaos-space-marines-enhancement-warmasters-gift",
-    "rule": "detachment-veterans-of-the-long-war"
   },
   "chaos-space-marines-army-rule-dark-pacts": {
     "id": "chaos-space-marines-army-rule-dark-pacts",

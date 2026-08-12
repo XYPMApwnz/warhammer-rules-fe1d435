@@ -19,7 +19,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "amulet of tainted vigour": {
     "title": "Amulet of Tainted Vigour",
-    "text": "",
+    "text": "DARK APOSTLE model only. In your Command phase, you can return up to D3 destroyed DAMNED models (excluding CHARACTER models) to the bearer's unit.",
     "value": 20,
     "detachment": "Chaos Cult",
     "tags": [],
@@ -27,8 +27,8 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
     "assignment": null
   },
   "cultist s brand": {
-    "title": "Cultist’s Brand",
-    "text": "",
+    "title": "Cultist's Brand",
+    "text": "DARK APOSTLE or DAMNED model only. If every other model in the bearer's unit (excluding Dark Disciples) is DAMNED, you can re-roll Advance and Charge rolls made for the bearer's unit.",
     "value": 30,
     "detachment": "Chaos Cult",
     "tags": [],
@@ -37,7 +37,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "incendiary goad": {
     "title": "Incendiary Goad",
-    "text": "",
+    "text": "DARK APOSTLE or DAMNED model only. While the bearer's unit is below its Starting Strength, add 1 to the Strength characteristic of melee weapons equipped by DAMNED models in that unit, and while that unit is Below Half-strength, add 1 to the Attacks characteristic of those weapons as well.",
     "value": 25,
     "detachment": "Chaos Cult",
     "tags": [],
@@ -46,7 +46,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "warped foresight": {
     "title": "Warped Foresight",
-    "text": "",
+    "text": "DARK APOSTLE or DAMNED model only. While the bearer is leading a unit with the Scouts 6\" ability, every model in the bearer's unit has the Scouts 6\" ability.",
     "value": 10,
     "detachment": "Chaos Cult",
     "tags": [],
@@ -127,7 +127,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "cursed fang": {
     "title": "Cursed Fang",
-    "text": "",
+    "text": "HERETIC ASTARTES INFANTRY model only. Improve the Armour Penetration characteristic of the bearer's melee weapons by 1, and the bearer's melee weapons have the [PRECISION] ability.",
     "value": 10,
     "detachment": "Deceptors",
     "tags": [],
@@ -136,7 +136,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "falsehood": {
     "title": "Falsehood",
-    "text": "",
+    "text": "CHAOS LORD model only (excluding TERMINATOR and JUMP PACK models). In the Declare Battle Formations step, you can set the bearer up in Reserves instead of setting it up on the battlefield. If you do, in one of your Movement phases, you can select one model in a friendly LEGIONARIES or CHOSEN unit that has two or more models remaining and is on the battlefield (excluding Attached units). The selected model is destroyed (ignoring any rules that are triggered when a model is destroyed) and the bearer is set up as close as possible to where that model was destroyed and only within Engagement Range of any enemy units if the destroyed model was within Engagement Range of those units. The bearer now attaches to that unit as its Leader.",
     "value": 10,
     "detachment": "Deceptors",
     "tags": [],
@@ -145,7 +145,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "shroud of obfuscation": {
     "title": "Shroud of Obfuscation",
-    "text": "",
+    "text": "HERETIC ASTARTES INFANTRY model only. The bearer has the Stealth and Lone Operative abilities.",
     "value": 15,
     "detachment": "Deceptors",
     "tags": [],
@@ -154,7 +154,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "soul link": {
     "title": "Soul Link",
-    "text": "",
+    "text": "HERETIC ASTARTES INFANTRY model only. At the start of your Command phase, you can select one other HERETIC ASTARTES INFANTRY CHARACTER model from your army (excluding EPIC HEROES). Until the start of your next Command phase, the bearer gains the PSYKER keyword, and replace the bearer's datasheet abilities with the datasheet abilities of the CHARACTER you selected.",
     "value": 5,
     "detachment": "Deceptors",
     "tags": [],
@@ -181,7 +181,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "eater of dread": {
     "title": "Eater of Dread",
-    "text": "",
+    "text": "HERETIC ASTARTES model only. At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result for each Battle-shocked enemy unit that is on the battlefield: on a 5+, you gain 1CP.",
     "value": 15,
     "detachment": "Dread Talons",
     "tags": [],
@@ -189,8 +189,8 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
     "assignment": null
   },
   "night s shroud": {
-    "title": "Night’s Shroud",
-    "text": "",
+    "title": "Night's Shroud",
+    "text": "CHAOS LORD model only. TERMINATOR models are excluded. Models in the bearer's unit have the Stealth ability.",
     "value": 10,
     "detachment": "Dread Talons",
     "tags": [],
@@ -208,7 +208,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "willbreaker": {
     "title": "Willbreaker",
-    "text": "",
+    "text": "HERETIC ASTARTES model only. In the Fight phase, after the bearer has made its attacks, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test.",
     "value": 10,
     "detachment": "Dread Talons",
     "tags": [],
@@ -217,7 +217,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "bastion plate": {
     "title": "Bastion Plate",
-    "text": "",
+    "text": "CHAOS LORD model only. JUMP PACK models are excluded. Once per battle round, when a saving throw is failed for the bearer's unit, you can change the Damage characteristic of that attack to 0.",
     "value": 10,
     "detachment": "Fellhammer Siege-host",
     "tags": [],
@@ -226,7 +226,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "iron artifice": {
     "title": "Iron Artifice",
-    "text": "",
+    "text": "HERETIC ASTARTES INFANTRY model only. The bearer's weapons have the [ANTI-VEHICLE 4+] and [ANTI-FORTIFICATION 4+] abilities.",
     "value": 10,
     "detachment": "Fellhammer Siege-host",
     "tags": [],
@@ -235,7 +235,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "ironbound enmity": {
     "title": "Ironbound Enmity",
-    "text": "",
+    "text": "HERETIC ASTARTES model only. Each time the bearer makes an attack while within range of an objective marker, add 1 to the Wound roll.",
     "value": 15,
     "detachment": "Fellhammer Siege-host",
     "tags": [],
@@ -244,7 +244,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "warp tracer": {
     "title": "Warp Tracer",
-    "text": "",
+    "text": "HERETIC ASTARTES model only. In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover.",
     "value": 20,
     "detachment": "Fellhammer Siege-host",
     "tags": [],
@@ -334,7 +334,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "eye of tzeentch": {
     "title": "Eye of Tzeentch",
-    "text": "",
+    "text": "HERETIC ASTARTES TZEENTCH model only. Each time the bearer's unit makes a Dark Pact and does not fail the resulting Leadership test, if the result of that test was 8 or more, you gain 1CP.",
     "value": 15,
     "detachment": "Pactbound Zealots",
     "tags": [],
@@ -343,7 +343,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "intoxicating elixir": {
     "title": "Intoxicating Elixir",
-    "text": "",
+    "text": "HERETIC ASTARTES SLAANESH model only. The bearer has the Feel No Pain 5+ ability. Each time the bearer shoots or fights, if the bearer's unit made a Dark Pact this phase and did not fail the resulting Leadership test, after the bearer has resolved those attacks, select one enemy unit that was hit by one or more of those attacks; that enemy unit must take a Battle-shock test.",
     "value": 15,
     "detachment": "Pactbound Zealots",
     "tags": [],
@@ -352,7 +352,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "orbs of unlife": {
     "title": "Orbs of Unlife",
-    "text": "",
+    "text": "HERETIC ASTARTES NURGLE model only. At the end of the Fight phase, roll one D6 for every enemy unit within 3\" of the bearer, adding 1 to the result if the bearer's unit made a Dark Pact that phase and did not fail the resulting Leadership test: on a 4+, that enemy unit suffers D3 mortal wounds.",
     "value": 15,
     "detachment": "Pactbound Zealots",
     "tags": [],
@@ -361,7 +361,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "talisman of burning blood": {
     "title": "Talisman of Burning Blood",
-    "text": "",
+    "text": "HERETIC ASTARTES KHORNE model only. Add 1 to the Attacks and Strength characteristics of the bearer's melee weapons. Each time the bearer's unit makes a Dark Pact and does not fail the resulting Leadership test, roll one D3: until the end of the phase, add the result to the Attacks and Strength characteristics of the bearer's melee weapons instead.",
     "value": 15,
     "detachment": "Pactbound Zealots",
     "tags": [],
@@ -369,8 +369,8 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
     "assignment": null
   },
   "despot s claim": {
-    "title": "Despot’s Claim",
-    "text": "",
+    "title": "Despot's Claim",
+    "text": "HERETIC ASTARTES model only. At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is wholly within 12\" of your opponent's deployment zone: on a 5+, you gain 1CP.",
     "value": 15,
     "detachment": "Renegade Raiders",
     "tags": [],
@@ -379,7 +379,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "dread reaver": {
     "title": "Dread Reaver",
-    "text": "",
+    "text": "HERETIC ASTARTES model only. Each time the bearer makes a melee attack, if the bearer is wholly within 12\" of your opponent's deployment zone, you can re-roll the Hit roll and you can re-roll the Wound roll.",
     "value": 15,
     "detachment": "Renegade Raiders",
     "tags": [],
@@ -388,7 +388,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "mark of the hound": {
     "title": "Mark of the Hound",
-    "text": "",
+    "text": "HERETIC ASTARTES model only. Models in the bearer's unit have the Scouts 6\" ability.",
     "value": 25,
     "detachment": "Renegade Raiders",
     "tags": [],
@@ -396,8 +396,8 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
     "assignment": null
   },
   "tyrant s lash": {
-    "title": "Tyrant’s Lash",
-    "text": "",
+    "title": "Tyrant's Lash",
+    "text": "HERETIC ASTARTES model only. You can re-roll Advance rolls made for the bearer's unit, and the bearer's unit is eligible to shoot in a turn in which it Fell Back.",
     "value": 20,
     "detachment": "Renegade Raiders",
     "tags": [],
@@ -441,8 +441,8 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
     "assignment": null
   },
   "forge s blessing": {
-    "title": "Forge’s Blessing",
-    "text": "",
+    "title": "Forge's Blessing",
+    "text": "HERETIC ASTARTES model only. In your Command phase, select one friendly HERETIC ASTARTES VEHICLE unit within 12\" of the bearer. Until the start of your next Command phase, that unit has the Feel No Pain 6+ ability.",
     "value": 20,
     "detachment": "Soulforged Warpack",
     "tags": [],
@@ -451,16 +451,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "invigorated mechatendrils": {
     "title": "Invigorated Mechatendrils",
-    "text": "",
-    "value": 15,
-    "detachment": "Soulforged Warpack",
-    "tags": [],
-    "owner": null,
-    "assignment": null
-  },
-  "soul harvester": {
-    "title": "Soul Harvester",
-    "text": "",
+    "text": "WARPSMITH model only. Add 4\" to the bearer's Move characteristic.",
     "value": 15,
     "detachment": "Soulforged Warpack",
     "tags": [],
@@ -469,8 +460,17 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "tempting addendum": {
     "title": "Tempting Addendum",
-    "text": "",
+    "text": "HERETIC ASTARTES model only. Each time a HERETIC ASTARTES DAEMON VEHICLE unit from your army invokes its contract while within 3\" of the bearer: if it suffers one or more mortal wounds as a result of that Dark Pact, add 1 to the number of mortal wounds it suffers; until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll.",
     "value": 40,
+    "detachment": "Soulforged Warpack",
+    "tags": [],
+    "owner": null,
+    "assignment": null
+  },
+  "soul harvester": {
+    "title": "Soul Harvester",
+    "text": "HERETIC ASTARTES model only. While the bearer is on the battlefield, each time an enemy unit within 12\" of the bearer is destroyed, roll one D6: on a 5+, you gain 1CP.",
+    "value": 15,
     "detachment": "Soulforged Warpack",
     "tags": [],
     "owner": null,
@@ -478,7 +478,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "eager for vengeance": {
     "title": "Eager for Vengeance",
-    "text": "",
+    "text": "HERETIC ASTARTES model only. Excludes DAMNED models. The bearer's unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Each time a model in the bearer's unit makes an attack that targets your focus of hatred, if the bearer's unit Fell Back this turn, add 1 to the Hit roll, and each time you select your focus of hatred as a target of that unit's charge, add 1 to the Charge roll.",
     "value": 20,
     "detachment": "Veterans of the Long War",
     "tags": [],
@@ -487,7 +487,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "eye of abaddon": {
     "title": "Eye of Abaddon",
-    "text": "",
+    "text": "HERETIC ASTARTES model only. Excludes DAMNED models. While the bearer is on the battlefield, each time your focus of hatred is destroyed, roll one D6: on a 4+, you gain 1CP.",
     "value": 15,
     "detachment": "Veterans of the Long War",
     "tags": [],
@@ -496,7 +496,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "mark of legend": {
     "title": "Mark of Legend",
-    "text": "",
+    "text": "HERETIC ASTARTES model only. Excludes DAMNED models. Once per turn, you can re-roll one Hit roll, one Wound roll or one saving throw made for the bearer.",
     "value": 10,
     "detachment": "Veterans of the Long War",
     "tags": [],
@@ -504,8 +504,8 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
     "assignment": null
   },
   "warmaster s gift": {
-    "title": "Warmaster’s Gift",
-    "text": "",
+    "title": "Warmaster's Gift",
+    "text": "CHAOS LORD model only. Each time the bearer makes an attack that targets your focus of hatred, an unmodified successful Wound roll of 5+ scores a Critical Wound.",
     "value": 15,
     "detachment": "Veterans of the Long War",
     "tags": [],

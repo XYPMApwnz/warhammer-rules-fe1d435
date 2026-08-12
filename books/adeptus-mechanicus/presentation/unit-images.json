@@ -324,6 +324,114 @@
         "desktop": { "scale": 1.1, "x": "-4%", "y": "0%", "opacity": 0.2 },
         "phone": { "scale": 1.02, "x": "-3%", "y": "0%", "opacity": 0.17 }
       }
+    },
+    "unit-skitarii-vanguard": {
+      "unitName": "Skitarii Vanguard",
+      "asset": "assets/unit-images/skitarii-vanguard.webp",
+      "original": "sources/unit-images/99120116002_SkitariiVanguard01.jpg",
+      "width": 920,
+      "height": 950,
+      "source": {
+        "productUrl": "https://www.warhammer.com/en-GB/shop/Skitarii-Vanguard-2017",
+        "imageUrl": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120116002_SkitariiVanguard01.jpg",
+        "originalFilename": "99120116002_SkitariiVanguard01.jpg"
+      },
+      "processing": { "minLuma": 205, "maxChroma": 24, "backgroundDistance": 28 },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.35, "x": "-12%", "y": "0%", "opacity": 0.22 },
+        "phone": { "scale": 1.18, "x": "-10%", "y": "0%", "opacity": 0.18 }
+      }
+    },
+    "unit-sicarian-infiltrators": {
+      "unitName": "Sicarian Infiltrators",
+      "asset": "assets/unit-images/sicarian-infiltrators.webp",
+      "original": "sources/unit-images/99120116003_SicarianInfiltrators01.jpg",
+      "width": 920,
+      "height": 950,
+      "source": {
+        "productUrl": "https://www.warhammer.com/en-GB/shop/Sicarian-Infiltrators-2017",
+        "imageUrl": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120116003_SicarianInfiltrators01.jpg",
+        "originalFilename": "99120116003_SicarianInfiltrators01.jpg"
+      },
+      "processing": { "minLuma": 220, "maxChroma": 24, "backgroundDistance": 24 },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.24, "x": "-6%", "y": "0%", "opacity": 0.22 },
+        "phone": { "scale": 1.1, "x": "-5%", "y": "0%", "opacity": 0.18 }
+      }
+    },
+    "unit-sicarian-ruststalkers": {
+      "unitName": "Sicarian Ruststalkers",
+      "asset": "assets/unit-images/sicarian-ruststalkers.webp",
+      "original": "sources/unit-images/99120116003_SicarianRuststalkers01.jpg",
+      "width": 920,
+      "height": 950,
+      "source": {
+        "productUrl": "https://www.warhammer.com/en-GB/shop/Sicarian-Ruststalkers-2017",
+        "imageUrl": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120116003_SicarianRuststalkers01.jpg",
+        "originalFilename": "99120116003_SicarianRuststalkers01.jpg"
+      },
+      "processing": { "minLuma": 220, "maxChroma": 24, "backgroundDistance": 24 },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.24, "x": "-6%", "y": "0%", "opacity": 0.22 },
+        "phone": { "scale": 1.1, "x": "-5%", "y": "0%", "opacity": 0.18 }
+      }
+    },
+    "unit-hastarii-fusiliers": {
+      "unitName": "Hastarii Fusiliers",
+      "asset": "assets/unit-images/hastarii-fusiliers.webp",
+      "original": "sources/unit-images/warcom-hastarii-fusiliers-2026.jpg",
+      "width": 1000,
+      "height": 1000,
+      "source": {
+        "productUrl": "https://www.warhammer.com/shop/adeptus-mechanicus-hastarii-2026",
+        "imageUrl": "https://assets.warhammer-community.com/sundaypreview-mar29-40k_10-hastarii-oteppql8yi.jpg",
+        "originalFilename": "warcom-hastarii-fusiliers-2026.jpg"
+      },
+      "processing": { "minLuma": 245, "maxChroma": 18, "backgroundDistance": 14, "clearPolygons": [[[700, 0], [1000, 0], [1000, 78], [700, 78]]] },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.2, "x": "-6%", "y": "0%", "opacity": 0.21 },
+        "phone": { "scale": 1.08, "x": "-5%", "y": "0%", "opacity": 0.18 }
+      }
+    },
+    "unit-ironstrider-ballistarii": {
+      "unitName": "Ironstrider Ballistarii",
+      "asset": "assets/unit-images/ironstrider-ballistarii.webp",
+      "original": "sources/unit-images/99120116001_SydonianDragoon03.jpg",
+      "width": 920,
+      "height": 950,
+      "source": {
+        "productUrl": "https://www.warhammer.com/shop/Adeptus-Mechanicus-Ironstrider-Ballistarius-2017",
+        "imageUrl": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120116001_SydonianDragoon03.jpg",
+        "originalFilename": "99120116001_SydonianDragoon03.jpg"
+      },
+      "processing": { "minLuma": 215, "maxChroma": 24, "backgroundDistance": 28 },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.3, "x": "-4%", "y": "1%", "opacity": 0.22 },
+        "phone": { "scale": 1.15, "x": "-3%", "y": "1%", "opacity": 0.18 }
+      }
+    },
+    "unit-sydonian-dragoons-with-taser-lances": {
+      "unitName": "Sydonian Dragoons with Taser Lances",
+      "asset": "assets/unit-images/sydonian-dragoons-with-taser-lances.webp",
+      "original": "sources/unit-images/99120116001_SydonianDragoon01.jpg",
+      "width": 920,
+      "height": 950,
+      "source": {
+        "productUrl": "https://www.warhammer.com/shop/Adeptus-Mechanicus-Sydonian-Dragoon-2017",
+        "imageUrl": "https://www.warhammer.com/app/resources/catalog/product/920x950/99120116001_SydonianDragoon01.jpg",
+        "originalFilename": "99120116001_SydonianDragoon01.jpg"
+      },
+      "processing": { "minLuma": 215, "maxChroma": 24, "backgroundDistance": 28 },
+      "presentation": {
+        "mode": "background",
+        "desktop": { "scale": 1.3, "x": "-4%", "y": "1%", "opacity": 0.22 },
+        "phone": { "scale": 1.15, "x": "-3%", "y": "1%", "opacity": 0.18 }
+      }
     }
   }
 }

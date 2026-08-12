@@ -169,7 +169,8 @@
       "url": "https://wahapedia.ru/wh40k11ed/factions/chaos-space-marines/Helbrute",
       "wargear": [
         "This model’s multi-melta can be replaced with one of the following:\n1 Helbrute plasma cannon\n1 twin autocannon\n1 twin heavy bolter\n1 twin lascannon\n1 Helbrute fist",
-        "This model’s missile launcher can be replaced with one of the following:\n1 Helbrute fist\n1 Helbrute hammer\n1 power scourge"
+        "This model’s missile launcher can be replaced with one of the following:\n1 Helbrute fist\n1 Helbrute hammer\n1 power scourge",
+        "For each Helbrute fist this model is equipped with, it can be equipped with one of the following:\n1 combi-bolter\n1 heavy flamer"
       ]
     },
     {
@@ -289,9 +290,9 @@
       "explicitNone": 6,
       "noSection": 19,
       "importedUnits": 29,
-      "importedContracts": 86,
-      "conflictUnits": 1,
-      "unresolvedContracts": 1,
+      "importedContracts": 87,
+      "conflictUnits": 0,
+      "unresolvedContracts": 0,
       "guessed": 0
     },
     "units": [
@@ -808,17 +809,10 @@
         "nrStatus": "OPTIONS",
         "wahapediaStatus": "OPTIONS",
         "officialStatus": "OFFICIAL BASELINE EVIDENCE",
-        "consensusStatus": "PARTIAL SECONDARY CONSENSUS",
+        "consensusStatus": "SECONDARY CONSENSUS",
         "imported": true,
-        "reason": "2 replacement clauses imported; 1 optional-versus-mandatory secondary-weapon clause withheld.",
-        "unresolvedOptions": [
-          {
-            "identity": "unit-helbrute-unresolved-1",
-            "text": "For each Helbrute fist this model is equipped with, it can be equipped with one of the following:\n1 combi-bolter\n1 heavy flamer",
-            "status": "SECONDARY CONFLICT",
-            "reason": "BSData requires a combi-bolter or heavy flamer on every selected Helbrute fist; Wahapedia makes that secondary weapon optional."
-          }
-        ]
+        "reason": "3 clauses imported; the fist-mounted secondary weapon is optional under the current rule text.",
+        "unresolvedOptions": []
       },
       {
         "unitId": "unit-heldrake",

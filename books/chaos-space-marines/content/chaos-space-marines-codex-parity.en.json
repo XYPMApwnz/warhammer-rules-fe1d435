@@ -5,7 +5,9 @@
     "id": "csm-codex-secondary-consensus",
     "authority": "secondary",
     "checkedAt": "2026-08-12",
-    "ledger": "sources/codex-secondary-consensus.en.json"
+    "ledger": "sources/codex-secondary-consensus.en.json",
+    "title": "Codex secondary consensus ledger",
+    "url": "./sources/codex-secondary-consensus.en.json"
   },
   "armyRules": [
     {

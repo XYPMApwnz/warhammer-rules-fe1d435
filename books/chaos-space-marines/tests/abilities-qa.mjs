@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
@@ -76,6 +77,18 @@ assert.match(accursed,/data-ability-class="faction">[\s\S]*?>Dark Pacts<\/button
 assert.match(accursed,/>Howling Horde<\/button>[\s\S]*?<p data-source-field="text">/);
 assert.deepEqual(source.datasheets.filter(unit=>unit.wargearAbilities?.length).map(unit=>unit.title),['Legionaries','Dark Commune','Sorcerer in Terminator Armour','Chosen','Nemesis Claw','Possessed','Chaos Bikers']);
 assert.equal(wargearCount,7,'CSM source-backed Wargear Abilities changed');
+
+const baseRows=source.datasheets.flatMap(unit=>(unit.profiles||[]).map(profile=>[unit.id,profile.name,profile.stats.Base])).sort((a,b)=>JSON.stringify(a).localeCompare(JSON.stringify(b)));
+assert.equal(baseRows.length,74,'CSM Base guide profile count');
+assert.equal(source.datasheets.filter(unit=>(unit.profiles||[]).every(profile=>profile.stats.Base)).length,54,'Every current CSM Datasheet profile has a confirmed Base');
+assert.equal(baseRows.filter(([, ,base])=>base==='Use model').length,7,'CSM hull/use-model Base count');
+assert.equal(createHash('sha256').update(JSON.stringify(baseRows)).digest('hex').toUpperCase(),'5F5993D58A66465620E18F3DDF9505965D6CD4BD549CFD7BB04D95B3B65597B5','CSM Base guide mapping changed');
+for(const current of source.datasheets){
+  const article=extract('article',current.id);
+  const phone=fs.readFileSync(path.join(root,'mobile',`${current.id.replace(/^unit-/,'')}.html`),'utf8');
+  assert.match(article,/data-source-field="stats\.Base"/,`${current.title}: Desktop Base missing`);
+  assert.match(phone,/data-source-field="stats\.Base"/,`${current.title}: Phone Base missing`);
+}
 
 const unit=title=>source.datasheets.find(item=>item.title===title);
 const pointUnit=title=>points.units.find(item=>item.title===title);

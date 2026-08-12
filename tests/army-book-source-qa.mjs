@@ -5,7 +5,7 @@ import crypto from 'node:crypto';
 const root=path.resolve(import.meta.dirname,'..');
 const books={
   'tau-empire':{pages:61,detachments:3,updates:25,faqs:2,datasheets:39,imperialArmour:0,legends:0,units:39,enhancements:23,flagship:'Commander Farsight'},
-  'chaos-space-marines':{pages:102,detachments:9,updates:4,faqs:15,datasheets:54,imperialArmour:0,legends:53,units:107,enhancements:62,flagship:'Abaddon the Despoiler'},
+  'chaos-space-marines':{pages:102,detachments:17,updates:4,faqs:15,datasheets:54,imperialArmour:0,legends:53,units:107,enhancements:62,flagship:'Abaddon the Despoiler'},
   orks:{pages:87,detachments:7,updates:42,faqs:5,datasheets:57,imperialArmour:1,legends:30,units:88,enhancements:44,flagship:'Ghazghkull Thraka'},
   'emperors-children':{pages:10,detachments:4,updates:17,faqs:3,datasheets:23,imperialArmour:0,legends:0,units:23,enhancements:34,flagship:'Fulgrim'},
   'space-marines':{pages:219,detachments:16,updates:5,faqs:14,datasheets:101,imperialArmour:0,legends:0,units:101,enhancements:87,flagship:'Intercessor Squad'},

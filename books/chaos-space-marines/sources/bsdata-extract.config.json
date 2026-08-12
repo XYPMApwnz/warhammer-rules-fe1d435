@@ -97,12 +97,442 @@
         "Hamadrya’s Knowledge (Psychic)": {
           "text": "Once per battle round, when an enemy unit ends a Normal, Advance or Fall Back move within 8\" of this model’s unit, if this model’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D3+3\"."
         }
+      },
+      "profileStats": {
+        "Huron Blackheart": {
+          "Base": "50mm"
+        }
       }
     },
     "Heldrake": {
       "profileStats": {
         "Heldrake": {
-          "M": "12\""
+          "M": "12\"",
+          "Base": "120x92mm Oval Base"
+        }
+      }
+    },
+    "Cultist Mob": {
+      "profileStats": {
+        "Cultist Mob": {
+          "Base": "25mm"
+        },
+        "Cultist Champion": {
+          "Base": "25mm"
+        }
+      }
+    },
+    "Legionaries": {
+      "profileStats": {
+        "Aspiring Champion": {
+          "Base": "32mm"
+        },
+        "Legionaries": {
+          "Base": "32mm"
+        }
+      }
+    },
+    "Chaos Lord": {
+      "profileStats": {
+        "Chaos Lord": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Chaos Lord in Terminator Armour": {
+      "profileStats": {
+        "Chaos Lord in Terminator Armour": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Chaos Lord with Jump Pack": {
+      "profileStats": {
+        "Chaos Lord with Jump Pack": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Cultist Firebrand": {
+      "profileStats": {
+        "Cultist Firebrand": {
+          "Base": "32mm"
+        }
+      }
+    },
+    "Dark Apostle": {
+      "profileStats": {
+        "Dark Apostle": {
+          "Base": "40mm"
+        },
+        "Dark Disciple": {
+          "Base": "25mm"
+        }
+      }
+    },
+    "Dark Commune": {
+      "profileStats": {
+        "Blessed Blade": {
+          "Base": "28.5mm"
+        },
+        "Iconarch": {
+          "Base": "32mm"
+        },
+        "Mindwitch": {
+          "Base": "32mm"
+        },
+        "Cult Demagogue": {
+          "Base": "32mm"
+        }
+      }
+    },
+    "Heretic Astartes Daemon Prince": {
+      "profileStats": {
+        "Heretic Astartes Daemon Prince": {
+          "Base": "60mm"
+        }
+      }
+    },
+    "Heretic Astartes Daemon Prince with wings": {
+      "profileStats": {
+        "Heretic Astartes Daemon Prince": {
+          "Base": "60mm"
+        }
+      }
+    },
+    "Lord Discordant on Helstalker": {
+      "profileStats": {
+        "Lord Discordant on Helstalker": {
+          "Base": "120x92mm Oval Base"
+        }
+      }
+    },
+    "Master of Executions": {
+      "profileStats": {
+        "Master of Executions": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Master of Possession": {
+      "profileStats": {
+        "Master of Possession": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Red Corsairs Reave-captain": {
+      "profileStats": {
+        "Red Corsairs Reave-Captain": {
+          "Base": "32mm"
+        }
+      }
+    },
+    "Sorcerer": {
+      "profileStats": {
+        "Sorcerer": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Sorcerer in Terminator Armour": {
+      "profileStats": {
+        "Sorcerer in Terminator Armour": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Traitor Enforcer": {
+      "profileStats": {
+        "Traitor Enforcer": {
+          "Base": "32mm"
+        },
+        "Traitor Ogryn": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Warpsmith": {
+      "profileStats": {
+        "Warpsmith": {
+          "Base": "60x35.5mm Oval Base"
+        }
+      }
+    },
+    "Chaos Rhino": {
+      "profileStats": {
+        "Chaos Rhino": {
+          "Base": "Use model"
+        }
+      }
+    },
+    "Abaddon the Despoiler": {
+      "profileStats": {
+        "Abaddon the Despoiler": {
+          "Base": "60mm"
+        }
+      }
+    },
+    "Cypher": {
+      "profileStats": {
+        "Cypher": {
+          "Base": "32mm"
+        }
+      }
+    },
+    "Fabius Bile": {
+      "profileStats": {
+        "Fabius Bile": {
+          "Base": "40mm"
+        },
+        "Surgeon Acolyte": {
+          "Base": "32mm"
+        }
+      }
+    },
+    "Haarken Worldclaimer": {
+      "profileStats": {
+        "Haarken Worldclaimer": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Kravek Morne": {
+      "profileStats": {
+        "Kravek Morne": {
+          "Base": "50mm"
+        }
+      }
+    },
+    "Masters of the Maelstrom": {
+      "profileStats": {
+        "Garreon the Corpsemaster": {
+          "Base": "40mm"
+        },
+        "Garlon Souleater": {
+          "Base": "40mm"
+        },
+        "Katar Garrix": {
+          "Base": "40mm"
+        },
+        "Captain Sargotta": {
+          "Base": "40mm"
+        },
+        "The Enforcer": {
+          "Base": "32mm"
+        }
+      }
+    },
+    "Vashtorr the Arkifane": {
+      "profileStats": {
+        "Vashtorr the Arkifane": {
+          "Base": "80mm"
+        }
+      }
+    },
+    "Accursed Cultists": {
+      "profileStats": {
+        "Torment": {
+          "Base": "40mm"
+        },
+        "Mutant": {
+          "Base": "25mm"
+        }
+      }
+    },
+    "Chaos Terminator Squad": {
+      "profileStats": {
+        "Chaos Terminator": {
+          "Base": "40mm"
+        },
+        "Terminator Champion": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Chosen": {
+      "profileStats": {
+        "Chosen": {
+          "Base": "32mm"
+        },
+        "Chosen Champion": {
+          "Base": "32mm"
+        }
+      }
+    },
+    "Fellgor Beastmen": {
+      "profileStats": {
+        "Fellgor Beastmen": {
+          "Base": "32mm"
+        }
+      }
+    },
+    "Havocs": {
+      "profileStats": {
+        "Havoc Champion": {
+          "Base": "40mm"
+        },
+        "Havocs": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Mutilators": {
+      "profileStats": {
+        "Mutilator": {
+          "Base": "50mm"
+        }
+      }
+    },
+    "Nemesis Claw": {
+      "profileStats": {
+        "Nemesis Claw": {
+          "Base": "32mm"
+        }
+      }
+    },
+    "Obliterators": {
+      "profileStats": {
+        "Obliterators": {
+          "Base": "50mm"
+        }
+      }
+    },
+    "Possessed": {
+      "profileStats": {
+        "Possessed": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Raptors": {
+      "profileStats": {
+        "Raptors": {
+          "Base": "32mm"
+        },
+        "Raptor Champion": {
+          "Base": "32mm"
+        }
+      }
+    },
+    "Red Corsairs Raiders": {
+      "profileStats": {
+        "Red Corsairs Raider Champion": {
+          "Base": "40mm"
+        },
+        "Red Corsairs Raider": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Traitor Guardsmen Squad": {
+      "profileStats": {
+        "Traitor Guardsmen Squad": {
+          "Base": "25mm"
+        }
+      }
+    },
+    "Warp Talons": {
+      "profileStats": {
+        "Warp Talon Champion": {
+          "Base": "32mm"
+        },
+        "Warp Talons": {
+          "Base": "32mm"
+        }
+      }
+    },
+    "Chaos Bikers": {
+      "profileStats": {
+        "Chaos Bikers": {
+          "Base": "75x42mm Oval Base"
+        },
+        "Biker Champion": {
+          "Base": "75x42mm Oval Base"
+        }
+      }
+    },
+    "Chaos Land Raider": {
+      "profileStats": {
+        "Chaos Land Raider": {
+          "Base": "Use model"
+        }
+      }
+    },
+    "Chaos Predator Annihilator": {
+      "profileStats": {
+        "Chaos Predator Annihilator": {
+          "Base": "Use model"
+        }
+      }
+    },
+    "Chaos Predator Destructor": {
+      "profileStats": {
+        "Chaos Predator Destructor": {
+          "Base": "Use model"
+        }
+      }
+    },
+    "Chaos Spawn": {
+      "profileStats": {
+        "Chaos Spawn": {
+          "Base": "50mm"
+        }
+      }
+    },
+    "Chaos Vindicator": {
+      "profileStats": {
+        "Chaos Vindicator": {
+          "Base": "Use model"
+        }
+      }
+    },
+    "Defiler": {
+      "profileStats": {
+        "Defiler": {
+          "Base": "160mm"
+        }
+      }
+    },
+    "Forgefiend": {
+      "profileStats": {
+        "Forgefiend": {
+          "Base": "120x92mm Oval Base"
+        }
+      }
+    },
+    "Helbrute": {
+      "profileStats": {
+        "Helbrute": {
+          "Base": "60mm"
+        }
+      }
+    },
+    "Khorne Lord of Skulls": {
+      "profileStats": {
+        "Khorne Lord of Skulls": {
+          "Base": "Use model"
+        }
+      }
+    },
+    "Maulerfiend": {
+      "profileStats": {
+        "Maulerfiend": {
+          "Base": "120x92mm Oval Base"
+        }
+      }
+    },
+    "Noctilith Crown": {
+      "profileStats": {
+        "Noctilith Crown": {
+          "Base": "Use model"
+        }
+      }
+    },
+    "Venomcrawler": {
+      "profileStats": {
+        "Venomcrawler": {
+          "Base": "100mm"
         }
       }
     }

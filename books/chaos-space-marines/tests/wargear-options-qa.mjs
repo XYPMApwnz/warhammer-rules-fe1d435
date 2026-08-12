@@ -28,20 +28,20 @@ assert.equal(wargear.source.bsdata.catalogueCommit,'b6d17952f74814528b4c70ef5016
 assert.equal(wargear.source.bsdata.catalogueRevision,6);
 assert.equal(wargear.source.bsdata.catalogueSha256,'A76D5ADAD2055572F6186996FD622B08CAB5AF95FAA38F82E80609E179F3EE35');
 assert.equal(wargear.source.wahapedia.checkedAt,'2026-08-12');
-assert.deepEqual(wargear.audit.summary,{checkedUnits:54,positiveCandidates:29,explicitNone:6,noSection:19,importedUnits:29,importedContracts:86,conflictUnits:1,unresolvedContracts:1,guessed:0});
+assert.deepEqual(wargear.audit.summary,{checkedUnits:54,positiveCandidates:29,explicitNone:6,noSection:19,importedUnits:29,importedContracts:87,conflictUnits:0,unresolvedContracts:0,guessed:0});
 assert.equal(wargear.audit.units.length,54);
 assert.deepEqual(new Set(wargear.audit.units.map(item=>item.unitId)),new Set(source.datasheets.map(item=>item.id)));
 assert.equal(wargear.units.length,29);
-assert.equal(wargear.units.reduce((sum,item)=>sum+item.wargear.length,0),86);
+assert.equal(wargear.units.reduce((sum,item)=>sum+item.wargear.length,0),87);
 
 const conflicts=Object.fromEntries(wargear.audit.units.filter(item=>item.unresolvedOptions?.length).map(item=>[item.title,item.unresolvedOptions]));
-assert.deepEqual(Object.keys(conflicts),['Helbrute']);
-assert.equal(conflicts.Helbrute.length,1);
+assert.deepEqual(conflicts,{});
 
 const imported=new Map(wargear.units.map(item=>[item.title,item]));
 assert.equal(imported.get('Chaos Rhino').wargear.length,2);
 assert.equal(imported.get('Havocs').wargear.length,3);
-assert.equal(imported.get('Helbrute').wargear.length,2);
+assert.equal(imported.get('Helbrute').wargear.length,3);
+assert.match(imported.get('Helbrute').wargear[2],/For each Helbrute fist[\s\S]*?can be equipped[\s\S]*?combi-bolter[\s\S]*?heavy flamer/);
 for(const unit of source.datasheets){
   const record=imported.get(unit.title),article=extract('article',unit.id),phone=fs.readFileSync(path.join(root,'mobile',`${unit.id.replace(/^unit-/,'')}.html`),'utf8');
   if(record){
@@ -68,4 +68,4 @@ assert.equal(Object.values(compatible.units).reduce((sum,rows)=>sum+rows.length,
 assert.equal(hash(compatible),'005AA06B238B9527F43FC776B6458D75DF10CDADB539FEFF474498234EA0AF9A');
 assert.equal(fs.readdirSync(path.join(root,'mobile')).filter(file=>file.endsWith('.html')).length,74);
 assert.equal(manifest.gates.publishAsComplete,false);
-console.log('CSM Wargear Options QA: 54/54 audited; 29 candidates; 29 rendered units; 86 imported and 1 unresolved contract; gameplay invariants preserved.');
+console.log('CSM Wargear Options QA: 54/54 audited; 29 candidates; 29 rendered units; 87 imported and 0 unresolved contracts; gameplay invariants preserved.');

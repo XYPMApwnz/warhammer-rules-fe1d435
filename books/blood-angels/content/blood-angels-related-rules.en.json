@@ -1,0 +1,2695 @@
+{
+  "schema": 1,
+  "stratagems": {
+    "stratagem-legacy-of-grace-martial-paragon": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "martial-paragon": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-legacy-of-grace-soul-darkened-fury": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "soul-darkened-fury": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-legacy-of-grace-aura-of-the-angel-s-grace": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "aura-of-the-angel-s-grace": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-encarmine-speartip-judgement-of-the-golden-host": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "SANGUINARY GUARD"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "judgement-of-the-golden-host": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "SANGUINARY GUARD"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-encarmine-speartip-inexorable-valour": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "SANGUINARY GUARD"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "inexorable-valour": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "SANGUINARY GUARD"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-encarmine-speartip-blinding-blurs-of-vengeance": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "SANGUINARY GUARD"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "blinding-blurs-of-vengeance": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "SANGUINARY GUARD"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-wrath-of-the-doomed-death-begets-vengeance": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "death-begets-vengeance": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-wrath-of-the-doomed-no-barrier-to-retribution": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "no-barrier-to-retribution": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-wrath-of-the-doomed-rage-fuelled-response": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "rage-fuelled-response": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-angelic-inheritors-angelic-inheritors-armour-of-contempt": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "angelic-inheritors-armour-of-contempt": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-angelic-inheritors-focused-fury": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "focused-fury": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-angelic-inheritors-instant-of-grace": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "INFANTRY",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "instant-of-grace": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "INFANTRY",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-angelic-inheritors-strike-now-for-glory": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "strike-now-for-glory": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-angelic-inheritors-in-the-shadow-of-great-wings": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "in-the-shadow-of-great-wings": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-angelic-inheritors-unto-the-burning-skies": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "unto-the-burning-skies": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-rage-cursed-onslaught-a-grim-warning": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "a-grim-warning": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-rage-cursed-onslaught-rage-cursed-onslaught-armour-of-contempt": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "rage-cursed-onslaught-armour-of-contempt": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-rage-cursed-onslaught-insensate-rampage": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "insensate-rampage": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-rage-cursed-onslaught-limb-from-limb": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "limb-from-limb": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-rage-cursed-onslaught-deathless-duty": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "deathless-duty": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-rage-cursed-onslaught-red-wrath": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "red-wrath": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-liberator-assault-group-angelic-grace": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "angelic-grace": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-liberator-assault-group-liberator-assault-group-armour-of-contempt": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "liberator-assault-group-armour-of-contempt": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-liberator-assault-group-savage-echoes": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "savage-echoes": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-liberator-assault-group-red-rampage": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "red-rampage": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-liberator-assault-group-aggressive-onslaught": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "aggressive-onslaught": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-liberator-assault-group-relentless-assault": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "relentless-assault": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-the-lost-brethren-glorious-sacrifice": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "glorious-sacrifice": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-the-lost-brethren-the-lost-brethren-armour-of-contempt": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "the-lost-brethren-armour-of-contempt": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-the-lost-brethren-final-retribution": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "final-retribution": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-the-lost-brethren-furious-onslaught": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "furious-onslaught": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-the-lost-brethren-lost-to-rage": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "lost-to-rage": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-the-lost-brethren-wrathful-rampage": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "wrathful-rampage": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-the-angelic-host-unbridled-ardour": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "SANGUINARY GUARD"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "unbridled-ardour": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "SANGUINARY GUARD"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-the-angelic-host-the-angelic-host-armour-of-contempt": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "the-angelic-host-armour-of-contempt": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-the-angelic-host-angels-sacrifice": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "angels-sacrifice": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-the-angelic-host-martial-exemplars": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "martial-exemplars": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-the-angelic-host-descent-of-angels": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "descent-of-angels": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "stratagem-the-angelic-host-death-from-the-skies": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    },
+    "death-from-the-skies": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK"
+            ]
+          }
+        }
+      ],
+      "conditions": [
+        "battle-state-unknown"
+      ]
+    }
+  },
+  "enhancements": {
+    "enhancement-legacy-of-grace-blood-boil": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "blood-boil": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-legacy-of-grace-aureole-of-the-angel": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "aureole-of-the-angel": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-encarmine-speartip-angelic-executioner": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "angelic-executioner": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-encarmine-speartip-shadow-of-abomination": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "shadow-of-abomination": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-wrath-of-the-doomed-instinctive-interception": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "instinctive-interception": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-wrath-of-the-doomed-on-the-archtraitor-s-bridge": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "on-the-archtraitor-s-bridge": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-angelic-inheritors-prescient-flash": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "prescient-flash": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-angelic-inheritors-troubling-visions": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "troubling-visions": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-angelic-inheritors-blazing-icon": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "INFANTRY",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "blazing-icon": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "INFANTRY",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-angelic-inheritors-ordained-sacrifice": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "ordained-sacrifice": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-rage-cursed-onslaught-carmine-reliquary": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "carmine-reliquary": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-rage-cursed-onslaught-master-of-the-red-thirst": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "master-of-the-red-thirst": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-rage-cursed-onslaught-sanguinary-tear-aura": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "sanguinary-tear-aura": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-rage-cursed-onslaught-angel-s-fang": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "angel-s-fang": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-liberator-assault-group-gift-of-foresight": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "gift-of-foresight": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-liberator-assault-group-icon-of-the-angel": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "icon-of-the-angel": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-liberator-assault-group-rage-fuelled-warrior": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "rage-fuelled-warrior": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-liberator-assault-group-speed-of-the-primarch": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "speed-of-the-primarch": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-the-lost-brethren-blood-shard": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "blood-shard": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-the-lost-brethren-sanguinius-grace": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "sanguinius-grace": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-the-lost-brethren-to-slay-the-warmaster": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "to-slay-the-warmaster": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-the-lost-brethren-vengeful-onslaught": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "vengeful-onslaught": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "DEATH COMPANY",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-the-angelic-host-archangels-shard": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "archangels-shard": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-the-angelic-host-artisan-of-war": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "artisan-of-war": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-the-angelic-host-gleaming-pinions": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "gleaming-pinions": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "enhancement-the-angelic-host-visage-of-death": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    },
+    "visage-of-death": {
+      "v": 1,
+      "roles": [
+        {
+          "id": "friendly-target",
+          "side": "friendly",
+          "subject": "unit",
+          "count": 1,
+          "selector": {
+            "allKeywords": [
+              "ADEPTUS ASTARTES",
+              "JUMP PACK",
+              "CHARACTER"
+            ],
+            "noneKeywords": [
+              "EPIC HERO"
+            ]
+          }
+        }
+      ],
+      "conditions": []
+    }
+  },
+  "keywordGrants": {
+    "the-lost-brethren": [
+      {
+        "keyword": "BATTLELINE",
+        "selector": {
+          "unitIds": [
+            "unit-death-company-marines"
+          ]
+        }
+      },
+      {
+        "keyword": "BATTLELINE",
+        "selector": {
+          "unitIds": [
+            "unit-death-company-marines-with-bolt-rifles"
+          ]
+        }
+      }
+    ]
+  }
+}

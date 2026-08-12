@@ -126,6 +126,19 @@ for(const bookId of supported){
     console.log('PASS  chaos-space-marines: 54 current units, 17 Detachments, desktop/iPad + Phone routes');
     continue;
   }
+  if(bookId==='blood-angels'){
+    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8');
+    const codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','blood-angels-codex-datasheets.en.json'),'utf8'));
+    const unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),localTitles=new Set(codex.datasheets.map(unit=>entities.normalize(unit.title)));
+    assert(codex.datasheets.length===15,'blood-angels: local Datasheet catalog is incomplete');
+    assert(unitTitles.size===97,'blood-angels: expected 15 local + 82 shared Datasheets');
+    codex.datasheets.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`blood-angels: local unit ${unit.title} is absent from Roster Guide`));
+    assert([...unitTitles].filter(title=>!localTitles.has(title)).length===82,'blood-angels: shared Space Marines roster inventory changed');
+    assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&/\.\/scripts\/app\.js\?v=\d+/.test(reader),'blood-angels: roster or matrix controller is absent');
+    assert(fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs'))&&related.includes('core-stratagem-'),'blood-angels: Compatible Rules or Core Stratagems are absent');
+    console.log('PASS  blood-angels: 15 local + 82 shared units, desktop/iPad + Phone routes');
+    continue;
+  }
   const dataPath=path.join(bookRoot,'content',`${bookId}-rules.en.json`);
   const readerPath=path.join(bookRoot,'reader.html');
   const relatedPath=path.join(bookRoot,'mobile','related-rules.inc');
@@ -194,7 +207,7 @@ const datasmith=matcherContext(['INFANTRY','CHARACTER','TECH-PRIEST'],{candidate
 assert(sharedMatcher.matches({targets:[{side:'friendly',all:['ADEPTUS MECHANICUS','VEHICLE']}]},datasmith),'Datasmith and Kastelan Attached Unit loses VEHICLE relevance');
 assert(!sharedMatcher.matches({targets:[{side:'friendly',all:['ADEPTUS MECHANICUS','INFANTRY']}]},datasmith),'Datasmith and Kastelan Attached Unit incorrectly keeps INFANTRY');
 
-const rosterCompatibleBooks=['death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','chaos-space-marines'];
+const rosterCompatibleBooks=['death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','chaos-space-marines','blood-angels'];
 for(const bookId of rosterCompatibleBooks){
   const desktop=fs.readFileSync(path.join(root,`books/${bookId}/scripts/app.js`),'utf8');
   const phone=fs.readFileSync(path.join(root,`books/${bookId}/mobile/mobile.js`),'utf8');

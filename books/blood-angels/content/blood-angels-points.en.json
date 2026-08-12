@@ -1,0 +1,1004 @@
+{
+  "schema": 1,
+  "source": {
+    "title": "BSData Warhammer 40,000 11th Edition · Blood Angels",
+    "repository": "https://github.com/BSData/wh40k-11e",
+    "commit": "e120e146c960a171f7c0599ec8e055e75d597c56",
+    "revision": "1",
+    "url": "https://github.com/BSData/wh40k-11e/blob/e120e146c960a171f7c0599ec8e055e75d597c56/Imperium%20-%20Blood%20Angels.json",
+    "snapshotSha256": "38830F22198BD34AD3207492EE59EA5B898D375ED290673A4C17B2C90DC85360",
+    "officialMfm": {
+      "version": "v1.2",
+      "url": "https://mfm.warhammer-community.com/en/blood-angels",
+      "verifiedAt": "2026-08-12"
+    }
+  },
+  "units": [
+    {
+      "id": "unit-astorath",
+      "title": "Astorath",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "unit-baal-predator",
+      "title": "Baal Predator",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1st to 2nd · 1 model",
+          "value": 125,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 1 model",
+          "value": 135,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "unit-blood-angels-captain",
+      "title": "Blood Angels Captain",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "unit-brother-corbulo",
+      "title": "Brother Corbulo",
+      "status": "Warhammer Legends",
+      "sourceLayer": "legends",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "id": "unit-captain-tycho",
+      "title": "Captain Tycho",
+      "status": "Warhammer Legends",
+      "sourceLayer": "legends",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "id": "unit-chief-librarian-mephiston",
+      "title": "Chief Librarian Mephiston",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 110,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "unit-commander-dante",
+      "title": "Commander Dante",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 125,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "unit-death-company-captain",
+      "title": "Death Company Captain",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "unit-death-company-captain-with-jump-pack",
+      "title": "Death Company Captain with Jump Pack",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "unit-death-company-dreadnought",
+      "title": "Death Company Dreadnought",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1st to 2nd · 1 model",
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 1 model",
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "unit-death-company-dreadnought-with-magna-grapple",
+      "title": "Death Company Dreadnought with Magna-Grapple",
+      "status": "Warhammer Legends",
+      "sourceLayer": "legends",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 145,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "id": "unit-death-company-marines",
+      "title": "Death Company Marines",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1st to 2nd · 5 models",
+          "value": 85,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd · 10 models",
+          "value": 160,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 5 models",
+          "value": 95,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 10 models",
+          "value": 170,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "unit-death-company-marines-with-bolt-rifles",
+      "title": "Death Company Marines with Bolt Rifles",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1st to 2nd · 5 models",
+          "value": 80,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd · 10 models",
+          "value": 155,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 5 models",
+          "value": 90,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 10 models",
+          "value": 165,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "unit-death-company-marines-with-boltguns",
+      "title": "Death Company Marines with Boltguns",
+      "status": "Warhammer Legends",
+      "sourceLayer": "legends",
+      "points": [
+        {
+          "label": "5 models",
+          "value": 125,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "6-10 models",
+          "value": 250,
+          "minModels": 6,
+          "maxModels": 10
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "id": "unit-death-company-marines-with-boltguns-and-jump-packs",
+      "title": "Death Company Marines with Boltguns and Jump Packs",
+      "status": "Warhammer Legends",
+      "sourceLayer": "legends",
+      "points": [
+        {
+          "label": "5 models",
+          "value": 140,
+          "minModels": 5,
+          "maxModels": 5
+        },
+        {
+          "label": "6-10 models",
+          "value": 280,
+          "minModels": 6,
+          "maxModels": 10
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "id": "unit-death-company-marines-with-jump-packs",
+      "title": "Death Company Marines with Jump Packs",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1st to 2nd · 5 models",
+          "value": 120,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd · 10 models",
+          "value": 230,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 5 models",
+          "value": 135,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 10 models",
+          "value": 245,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "unit-furioso-dreadnought",
+      "title": "Furioso Dreadnought",
+      "status": "Warhammer Legends",
+      "sourceLayer": "legends",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "id": "unit-gabriel-seth",
+      "title": "Gabriel Seth",
+      "status": "Warhammer Legends",
+      "sourceLayer": "legends",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "id": "unit-lemartes",
+      "title": "Lemartes",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 100,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "unit-librarian-dreadnought",
+      "title": "Librarian Dreadnought",
+      "status": "Warhammer Legends",
+      "sourceLayer": "legends",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 170,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "id": "unit-sanguinary-guard",
+      "title": "Sanguinary Guard",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1st to 2nd · 3 models",
+          "value": 125,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd · 6 models",
+          "value": 260,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 3 models",
+          "value": 145,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 6 models",
+          "value": 280,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "unit-sanguinary-priest",
+      "title": "Sanguinary Priest",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "1st to 2nd · 1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 1 model",
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "unit-sanguinary-priest-on-bike",
+      "title": "Sanguinary Priest on Bike",
+      "status": "Warhammer Legends",
+      "sourceLayer": "legends",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 135,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "id": "unit-sanguinary-priest-with-jump-pack",
+      "title": "Sanguinary Priest with Jump Pack",
+      "status": "Warhammer Legends",
+      "sourceLayer": "legends",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 100,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": []
+    },
+    {
+      "id": "unit-the-sanguinor",
+      "title": "The Sanguinor",
+      "status": "Current",
+      "sourceLayer": "codex",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 130,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": [],
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "unit-tycho-the-lost",
+      "title": "Tycho the Lost",
+      "status": "Warhammer Legends",
+      "sourceLayer": "legends",
+      "points": [
+        {
+          "label": "1 model",
+          "value": 90,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ],
+      "paidWargear": []
+    }
+  ],
+  "enhancements": [
+    {
+      "id": "enhancement-blazing-icon",
+      "title": "Blazing Icon",
+      "detachment": "Angelic Inheritors",
+      "value": 20,
+      "text": "Adeptus Astartes Infantry model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-ordained-sacrifice",
+      "title": "Ordained Sacrifice",
+      "detachment": "Angelic Inheritors",
+      "value": 25,
+      "text": "Adeptus Astartes model only. The first time the bearer is destroyed, roll one D6 at the end of the phase: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-prescient-flash",
+      "title": "Prescient Flash",
+      "detachment": "Angelic Inheritors",
+      "value": 20,
+      "text": "Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-troubling-visions",
+      "title": "Troubling Visions",
+      "detachment": "Angelic Inheritors",
+      "value": 15,
+      "text": "Adeptus Astartes model only. Once per battle, in your Command phase, the bearer can use this\nEnhancement. When it does, until the start of your next Command phase, all Angelic Legacy abilities\n(see left) are active for the bearer’s unit, instead of only two of them.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-angelic-executioner",
+      "title": "Angelic Executioner",
+      "detachment": "Encarmine Speartip",
+      "value": 25,
+      "text": "ADEPTUS ASTARTES JUMP PACK model only. When this unit is selected to fight, this unit’s melee attacks have:\n\n\n▪ [LETHAL HITS].\n▪ Or: [SUSTAINED HITS 1].",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-shadow-of-abomination",
+      "title": "Shadow of Abomination",
+      "detachment": "Encarmine Speartip",
+      "value": 25,
+      "text": "ADEPTUS ASTARTES JUMP PACK model only. (Once per battle, per army) When this unit is selected to fight you can use this ability. If you do, this model’s melee attacks have +1 D.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-aureole-of-the-angel",
+      "title": "Aureole of the Angel",
+      "detachment": "Legacy of Grace",
+      "value": 20,
+      "text": "ADEPTUS ASTARTES model only. This unit has -3\" detection range",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-blood-boil",
+      "title": "Blood Boil",
+      "detachment": "Legacy of Grace",
+      "value": 10,
+      "text": "ADEPTUS ASTARTES PSYKER model only. This model’s [PSYCHIC] attacks:\n\n\n▪ Have [ANTI: non-MONSTER/VEHICLE 5+].\n▪ Can re-roll damage rolls.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-gift-of-foresight",
+      "title": "Gift of Foresight",
+      "detachment": "Liberator Assault Group",
+      "value": 15,
+      "text": "Adeptus Astartes model only. Once per battle round, just after making a Hit roll, a Wound roll or a saving throw for the bearer, you can treat the result as a unmodified 6 instead.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-icon-of-the-angel",
+      "title": "Icon of the Angel",
+      "detachment": "Liberator Assault Group",
+      "value": 20,
+      "text": "Adeptus Astartes model only. Each time an enemy unit (excluding Monsters and Vehicles) within Engagement Range of the bearer’s unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests as if their unit was Battle-shocked. When doing so, if that enemy unit is also Battle-shocked by other means, subtract 1 from each of those Desperate Escape tests.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-rage-fuelled-warrior",
+      "title": "Rage-fuelled Warrior",
+      "detachment": "Liberator Assault Group",
+      "value": 35,
+      "text": "Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer's melee weapons have the [SUSTAINED HITS 3] ability.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-speed-of-the-primarch",
+      "title": "Speed of the Primarch",
+      "detachment": "Liberator Assault Group",
+      "value": 25,
+      "text": "Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Fights First ability",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-angels-fang",
+      "title": "Angel's Fang",
+      "detachment": "Rage-Cursed Onslaught",
+      "value": 25,
+      "text": "Adeptus Astartes model only. Each time the bearer makes a melee attack that targets a Character,\nMonster or Vehicle unit, that attack has the [SUSTAINED HITS 2] ability.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-carmine-reliquary",
+      "title": "Carmine Reliquary",
+      "detachment": "Rage-Cursed Onslaught",
+      "value": 30,
+      "text": "Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a\nBattle-shock test for an Adeptus Astartes unit within 6\" of the bearer, you can re-roll the result",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-master-of-the-red-thirst",
+      "title": "Master of the Red Thirst",
+      "detachment": "Rage-Cursed Onslaught",
+      "value": 25,
+      "text": "Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use\nthis Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights\nFirst ability.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-sanguinary-tear-aura",
+      "title": "Sanguinary Tear",
+      "detachment": "Rage-Cursed Onslaught",
+      "value": 35,
+      "text": "Adeptus Astartes model only. While a friendly Death Company unit is within 6\" of the bearer, add 1 to\nthe Strength characteristic of weapons equipped by models in that unit.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-archangels-shard",
+      "title": "Archangel's Shard",
+      "detachment": "The Angelic Host",
+      "value": 15,
+      "text": "Adeptus Astartes model only. The bearer’s melee weapons have the [ANTI-CHAOS 5+] and [LANCE] abilities.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-artisan-of-war",
+      "title": "Artisan of War",
+      "detachment": "The Angelic Host",
+      "value": 20,
+      "text": "Adeptus Astartes Jump Pack model only. Improve the Armour Penetration characteristic of the bearer’s weapons by 1, and the bearer has a Save characteristic of 2+.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-gleaming-pinions",
+      "title": "Gleaming Pinions",
+      "detachment": "The Angelic Host",
+      "value": 25,
+      "text": "ADEPTUS ASTARTES JUMP PACK model only. In your opponent's Movement phase, if an enemy unit ends a move within 8” of this unit, if this unit is not within Engagement Range of one or more enemy units, this unit can make a Normal move of up to 6\"",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-visage-of-death",
+      "title": "Visage of Death",
+      "detachment": "The Angelic Host",
+      "value": 15,
+      "text": "Adeptus Astartes Jump Pack model only. In the Battle-shock step of your opponent's Command phase, each enemy unit (excluding Monsters and Vehicles) within Engagement Range of the bearer must take a Battle-shock test.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-blood-shard",
+      "title": "Blood Shard",
+      "detachment": "The Lost Brethren",
+      "value": 25,
+      "text": "Death Company model only. The first time the bearer is destroyed, at the end of the phase, roll one D6: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-sanguinius-grace",
+      "title": "Sanguinius' Grace",
+      "detachment": "The Lost Brethren",
+      "value": 20,
+      "text": "Death Company model only. Once per battle at the end of the Fight phase, if the bearer is within Engagement Range of three or more enemy models. the bearer can fight one additional time.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-to-slay-the-warmaster",
+      "title": "To Slay The Warmaster",
+      "detachment": "The Lost Brethren",
+      "value": 15,
+      "text": "Death Company Model only. Once per battle, at the start of the Fight Phase, if the bearer is within Engagement Range of one or more enemy Character units, you can select one of those Character units and roll six D6: for each 4+, one Character model in that unit suffers 1 mortal wound.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-vengeful-onslaught",
+      "title": "Vengeful Onslaught",
+      "detachment": "The Lost Brethren",
+      "value": 10,
+      "text": "Death Company model only. If the bearer is destroyed, until the end of your next turn, each time a friendly Death Company model make an attack, add 1 to the Hit roll.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-instinctive-interception",
+      "title": "Instinctive Interception",
+      "detachment": "Wrath of the Doomed",
+      "value": 10,
+      "text": "DEATH COMPANY model only. When you target this unit with the Heroic Intervention stratagem, that use is -1 CP.",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "enhancement-on-the-archtraitors-bridge",
+      "title": "On the Archtraitor's Bridge",
+      "detachment": "Wrath of the Doomed",
+      "value": 20,
+      "text": "DEATH COMPANY model only. This model’s melee attacks have +2 A",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/blood-angels",
+        "verifiedAt": "2026-08-12"
+      }
+    }
+  ],
+  "audit": {
+    "units": 26,
+    "enhancements": 26
+  },
+  "detachments": [
+    {
+      "title": "Angelic Inheritors",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "Encarmine Speartip",
+      "forceDisposition": "DISRUPTION",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "Legacy of Grace",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "Liberator Assault Group",
+      "forceDisposition": "TAKE AND HOLD",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "Rage-cursed Onslaught",
+      "forceDisposition": "PURGE THE FOE",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "The Angelic Host",
+      "forceDisposition": "DISRUPTION",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "The Lost Brethren",
+      "forceDisposition": "PURGE THE FOE",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Wrath of the Doomed",
+      "forceDisposition": "PURGE THE FOE",
+      "detachmentPoints": 1
+    }
+  ]
+}

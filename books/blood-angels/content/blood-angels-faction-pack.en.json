@@ -1,0 +1,1175 @@
+{
+  "meta": {
+    "title": "Blood Angels Faction Pack",
+    "version": "1.1",
+    "legalFrom": "2026-07-22",
+    "pageCount": 30,
+    "sha256": "75AAD2A44B40DB3DBC6C0FA7786D1A7C76F878F34F15AA7E69B9B80D66CAEED1",
+    "file": "sources/blood-angels-faction-pack-v1.1.pdf"
+  },
+  "provenance": {
+    "sourceId": "blood-angels-faction-pack-v1.1",
+    "authority": "Games Workshop",
+    "documentType": "faction-pack",
+    "edition": "Warhammer 40,000 11th Edition",
+    "pageNumbering": "physical PDF pages",
+    "note": "Supplement layer. Blood Angels armies also depend on the Space Marines base rules and datasheets."
+  },
+  "dependency": {
+    "type": "codex-supplement",
+    "book": "space-marines",
+    "required": true,
+    "duplicatedHere": false
+  },
+  "pages": {
+    "1": {
+      "sha256": "BA97F284AB7CF219582300A44D7B49A01637E4E27D12E900157210E80A219882",
+      "text": "BLOOD ANGELS\nFACTION PACK: VERSION 1.1\nLegal for matched play from 22nd July 2026\nOn the following pages you will find additional rules and clarifications that supplement your Codex, from extra detachments and\ndatasheets to rules updates and FAQs. All of these changes are also updated in the Warhammer 40,000 app, along with points values\nfor your units and detachments.\nWHAT’S NEW?\n ▪ Changes to Rules Updates\n ▪  Angelic Inheritors Detachment, Ordained Sacrifice Enhancement\nChange to:\n‘ADEPTUS ASTARTES model only. (Once per battle, per army) When this\nmodel is destroyed, at the end of the phase, roll one D6:\n ▫  On a 2+, set up this model on the battlefield, unengaged and as\nclose as possible to where it was destroyed. This model is not\npart of an attached unit and its unit has a starting strength of 1.\nThis model has 3 wounds remaining.’\nCONTENTS\nDetachments .................................................................................2\nLegacy of Grace ...........................................................................................2\nEncarmine Speartip ....................................................................................3\nWrath of the Doomed ..................................................................................4\nAngelic Inheritors ........................................................................................5\nRage-cursed Onslaught .............................................................................7\nRules Updates ...............................................................................9\nLegends Datasheets ...................................................................11"
+    },
+    "2": {
+      "sha256": "E7D78357538FAA8B171D9C5D9065DA10814D696FA24BAA37E22F42AAAA47E083",
+      "text": "LEGACY OF GRACE\nDETACHMENT RULES\nLEGACY OF THE ANGEL\nNever do the Blood Angels stand taller or strive harder than when\nfaced with seemingly impossible odds and led by their champions\nof noble bearing. At such times, the Sons of Sanguinius delve deep\ninto their souls for preternatural reserves of determination, fury\nand focus.\nFriendly BLOOD ANGELS INFANTRY CHARACTER units (excluding\nCOMMANDER DANTE units) have +1 to advance rolls and charge rolls.\nThis detachment has the GRACE tag and cannot be taken with\nanother GRACE detachment.\nRestrictions: Your army can include BLOOD ANGELS units, but it\ncannot include any ADEPTUS ASTARTES units drawn from any\nother Chapter.\nENHANCEMENTS\nBLOOD BOIL\nThis psyker bears some of the most esoteric gifts granted by the\nblood of his Primarch, and his empyric powers surge with a vital\npotency capable of boiling the foe’s essence in their veins.\nADEPTUS ASTARTES PSYKER model only. This model’s\n[PSYCHIC] attacks:\n ▪  Have [ANTI: non‑MONSTER/VEHICLE 5+].\n ▪  Can re‑roll damage rolls.\nAUREOLE OF THE ANGEL\nAn echo of Sanguinius’ magnificence, this gilded halo casts an aura\nof shimmering and distorted energy spectra that thwarts attempts\nto pinpoint the bearer’s position.\nADEPTUS ASTARTES model only. This unit has ‑3\" detection range.\nMARTIAL PARAGON 1CP\nLEGACY OF GRACE STRATAGEM\nLed by the exquisite example of their lord, Blood Angels\nwarriors adapt their deadly fighting tactics to efficiently\ncarve their foe apart.\nWHEN: Your Shooting phase or the Fight phase, when a friendly\nADEPTUS ASTARTES CHARACTER unit is selected to attack.\nTARGET: That ADEPTUS ASTARTES CHARACTER unit.\nEFFECT: Your unit’s attacks have:\n ▪ [LETHAL HITS].\n ▪ OR: [SUSTAINED HITS 1].\nSOUL‑DARKENED FURY 1CP\nLEGACY OF GRACE STRATAGEM\nNobility’s mirror is a darkness that the greatest Blood Angels\nrisk only momentarily to savagely exploit the foe’s attempt\nto escape.\nWHEN: Your opponent’s Movement phase, when an enemy unit is\nselected to make a fall‑back move, if that unit is engaged with a\nfriendly ADEPTUS ASTARTES CHARACTER unit.\nTARGET: That ADEPTUS ASTARTES CHARACTER unit.\nEFFECT: When an enemy unit engaged with your unit is selected\nto make a fall‑back move, that enemy unit must use the desperate\nescape mode, with ‑1 to those hazard rolls if that enemy unit\nis battle‑shocked.\nAURA OF THE ANGEL’S GRACE 1CP\nLEGACY OF GRACE STRATAGEM\nThe indomitable inspiration of their Commander fills the Sons\nof Sanguinius with the resolve to endure, no matter the foe’s\nhateful power.\nWHEN: Your opponent’s Shooting phase, when an enemy unit\ntargets a friendly ADEPTUS ASTARTES CHARACTER unit.\nTARGET: That CHARACTER unit.\nEFFECT: Your unit has 5+ InSv.\nTHE LORDS OF THE BLOOD ANGELS BLAZE BRIGHT WITH NOBILITY DURING THE DARKEST OF BATTLES\nUNIQUE: GRACE"
+    },
+    "3": {
+      "sha256": "595B93FF4F9DC7233391D0CEEEA13E057A2EF2048D5D0C5C24E5C7FCDDDFCE37",
+      "text": "ENCARMINE SPEARTIP\nDETACHMENT RULES\nWRATH OF ANGELS\nFew living warriors embody the ideal of the Emperor’s wrathful\nangels more than the Sanguinary Guard, for they appear without\nwarning to wreak death and destruction before surging on to the\nnext foe with shocking speed.\nWhen a friendly SANGUINARY GUARD unit is selected to make a\nfall‑back move, that move does not prevent that unit from being\neligible to shoot/eligible to declare a charge.\nRestrictions: Your army can include BLOOD ANGELS units, but it\ncannot include any ADEPTUS ASTARTES units drawn from any\nother Chapter.\nENHANCEMENTS\nANGELIC EXECUTIONER\nThis deadly duellist leads his battle‑brothers in masterful strikes\ncapable of carving through their armoured or swarming foes with\nbreathtaking fluidity.\nADEPTUS ASTARTES JUMP PACK model only. When this unit is\nselected to fight, this unit’s melee attacks have:\n ▪  [LETHAL HITS].\n ▪  Or: [SUSTAINED HITS 1].\nSHADOW OF ABOMINATION\nGranted a glimmer of foresight by his genetic inheritance, this Son\nof Sanguinius has identified a foe whose future is drenched in the\nblood of the Imperium. Such an enemy cannot be allowed to live.\nADEPTUS ASTARTES JUMP PACK model only. (Once per battle, per\narmy) When this unit is selected to fight you can use this ability. If\nyou do, this model’s melee attacks have +1 D.\nJUDGEMENT OF THE GOLDEN HOST 1CP\nENCARMINE SPEARTIP STRATAGEM\nThe meteoric impact of the Sanguinary Guard is an unavoidable\njudgement on those who have incurred the Chapter’s wrath.\nWHEN: Your Charge phase, when a friendly SANGUINARY GUARD unit\nfrom your army ends a charge move.\nTARGET: That SANGUINARY GUARD unit.\nEFFECT: Select one enemy unit engaged with your unit. Roll one D6\nfor each model in your unit engaged with that enemy unit:\n ▪ For each 3+, that enemy unit suffers 1 mortal wound.\nINEXORABLE VALOUR 1CP\nENCARMINE SPEARTIP STRATAGEM\nEver reaching for the heights of exemplary valour instilled\nin their forebears by Sanguinius, the golden host seize every\nopportunity to claim positions from which to strike anew.\nWHEN: Your opponent’s Movement phase, when an enemy unit that\nwas engaged with a friendly SANGUINARY GUARD unit ends a fall‑back\nmove, if that SANGUINARY GUARD unit is unengaged.\nTARGET: That SANGUINARY GUARD unit.\nEFFECT: Your unit can make a normal move of up to D3+3\".\nBLINDING BLURS OF VENGEANCE 1CP\nENCARMINE SPEARTIP STRATAGEM\nWhen they power forward in rapid leaps, the glare emitted by\ntheir jump packs’ nacelles reflecting from the mirrored gleam of\ntheir armour, the Sanguinary Guard seem to glow with a blinding\nradiance few can look upon.\nWHEN: Your opponent’s Shooting phase, when an enemy unit\ntargets a friendly SANGUINARY GUARD unit.\nTARGET: That SANGUINARY GUARD unit.\nEFFECT: Your unit has Stealth.\nTHE CHAPTER’S GOLDEN‑ARMOURED ELITE PLUNGE INTO FOE LIKE A SPEAR CAST FROM THE HEAVENS"
+    },
+    "4": {
+      "sha256": "94D85941AC2EB82DC32B2B3B8474D94DD21606421CCB18234D75E8B6C2EC0F82",
+      "text": "WRATH OF THE DOOMED\nDETACHMENT RULES\nFANATICAL CELERITY\nThe madness of the Black Rage burns through the mind of the\nLost Brethren with a speed and ferocity matched by the warriors\nin battle. Swept up in visions of the Primarch’s darkest days of\nwing‑swift fury, they push their bodies past their limits in efforts to\nemulate his rapid wrath.\nWhen a friendly DEATH COMPANY unit is selected to make an\nadvance move, you can use this ability. If you do:\n ▪ That unit suffers D3+1 mortal wounds.\n ▪  That move does not prevent that unit from being eligible to\ndeclare a charge.\nThis detachment has the DOOMED tag and cannot be taken with\nanother DOOMED detachment.\nRestrictions: Your army can include BLOOD ANGELS units, but it\ncannot include any ADEPTUS ASTARTES units drawn from any\nother Chapter.\nENHANCEMENTS\nINSTINCTIVE INTERCEPTION\nProudly is Sanguinius remembered for his rapid intercession in the\nprotection of his gene‑sons. Driven on by deathly visions, this lost\nwarrior is a tragic monument to such glory.\nDEATH COMPANY model only. When you target this unit with the\nHeroic Intervention stratagem, that use is ‑1 CP.\nON THE ARCHTRAITOR'S BRIDGE\nLost to a memory shard of the Primarch, in this warrior’s mind, he\nhas entered the Archtraitor’s sanctum, and all that stands between\nhim and Horus is a host of massing traitors.\nDEATH COMPANY model only. This model’s melee attacks have +2 A.\nDEATH BEGETS VENGEANCE 1CP\nWRATH OF THE DOOMED STRATAGEM\nWith their perceptions twisted, the battle‑brothers of the Death\nCompany transmute loss into the worst of ancient betrayals and\nseek only to sever such treachery from existence.\nWHEN: Any phase, when a friendly DEATH COMPANY unit is destroyed\nby an enemy unit.\nTARGET: That enemy unit.\nEFFECT: That enemy unit is hated until the end of the battle:\n ▪  While a unit is hated, friendly DEATH COMPANY units’ attacks that\ntarget that unit have +1 to wound rolls.\nNO BARRIER TO RETRIBUTION 1CP\nWRATH OF THE DOOMED STRATAGEM\nKnowing in what remains of his mind that his is a sorrow‑filled\nmission of galactic consequence, this ancient interred warrior\npermits nothing to stand in his way.\nWHEN: Your Movement or your Charge phase, when a friendly DEATH\nCOMPANY DREADNOUGHT unit is selected to make a normal/advance/\ncharge move.\nTARGET: That DEATH COMPANY DREADNOUGHT unit.\nEFFECT: Your unit has MOBILE.\nRAGE‑FUELLED RESPONSE 1CP\nWRATH OF THE DOOMED STRATAGEM\nThey may no longer recognise the foe before them, but the Lost\nBrethren are sane enough to identify an attack and capable of\nresponding with a violent surge and a howl of wrath.\nWHEN: Your opponent’s Shooting phase, when an enemy unit that\ntargeted a friendly unengaged DEATH COMPANY unit has shot.\nTARGET: That DEATH COMPANY unit.\nEFFECT: Your unit can make a surge move of up to D6\".\nTHE DEATH COMPANY BRING THEIR FOES A DOOM THAT IS BLOODY AND SUPERNATURALLY SWIFT\nUNIQUE: DOOMED"
+    },
+    "5": {
+      "sha256": "459FDC9712E3637CA9FF25404781EC4BF740AF5B136DDB6FFF4DDD0916346BA8",
+      "text": "ANGELIC INHERITORS\nThe Blood Angels have inherited much from their Primarch. Their grace, nobility and psychic\nprowess all trace back to Sanguinius, as does the spiritual curse that has afflicted them since\nhis death. More esoteric, perhaps, but no less a bequest of their gene‑sire is the Blood Angels’\npropensity to blaze brightest during the darkest moments of despair. Just as Sanguinius himself\nis said to have brought hope to the hopeless at the point of his gilded spear, so too do the Blood\nAngels rise in the face of adversity as though in fulfilment of some ancient prophecy. At such\ntimes, the angelic and monstrous natures ever at war within Sanguinius’ gene‑sons find an\nequilibrium. Icy calm in their ferocity, furious in their clarity, the warrior angels of Baal strike with\nunerring and unstoppable wrath to snatch victory from the bloodied jaws of defeat. \nDETACHMENT RULE\nLEGACY OF THE ANGEL\nNever do the Blood Angels stand taller\nor strive harder than when faced with\nseemingly impossible odds. At such times,\nthe Sons of Sanguinius delve deep into\ntheir souls for preternatural reserves of\ndetermination, fury and focus. Sometimes,\nthey even touch upon the uncertain gift\nof prophecy that was said to be their\ngene‑sire’s boon and his curse. \nAt the start of the first battle round, select\ntwo of the Angelic Legacy abilities listed\nbelow. Until the end of the battle, those\nAngelic Legacy abilities are active and\ntheir effects apply to all Adeptus Astartes\nCharacter  units from your army.\nSanguinary Grace: This unit is eligible\nto shoot and declare a charge in a turn in\nwhich it Fell Back.\nCarmine Wrath: Each time a model in\nthis unit makes an attack, re‑roll a Hit roll\nof 1 and re‑roll a Wound roll of 1.\nTheir Appointed Hour:  You can re‑roll\nAdvance and Charge rolls made for\nthis unit.\nRESTRICTIONS\nYour army can include Blood Angels\nunits, but it cannot include Adeptus\nAstartes  units drawn from any\nother Chapter.\nENHANCEMENTS\nPRESCIENT FLASH\nA flash of foresight and clarity sings through this\nwarrior’s blood and guides his steps into battle.\nAdeptus Astartes model only. Models in the bearer’s\nunit have the Scouts 6\" ability.\nTROUBLING VISIONS\nIn the long run, these strange and intrusive visions of\nbloodshed bode terribly ill for this champion of the\nBlood Angels. In this instance, though, they bring him\ncloser than ever to the glory of his gene‑sire.\nAdeptus Astartes model only. Once per battle,\nin your Command phase, the bearer can use this\nEnhancement. When it does, until the start of your\nnext Command phase, all Angelic Legacy abilities\n(see left) are active for the bearer’s unit, instead of\nonly two of them.\nBLAZING ICON\nWhat was before merely a decorative blood drop\npendant now shines with a seemingly miraculous light\nas bright as any star. The foe are forced to avert their\ngaze from its wrathful magnificence.\nAdeptus Astartes Infantry model only. Enemy units\ncannot use the Fire Overwatch Stratagem to shoot at\nthe bearer’s unit.\nORDAINED SACRIFICE\nKnowing only too well the desperate and vital nature\nof the battle before him, this scion of Sanguinius echoes\nhis Primarch’s resolute determination to fight on even\nbeyond what seems the doors of certain death.  \nAdeptus Astartes  model only. (Once per battle, per\narmy) When this model is destroyed, at the end of\nthe phase, roll one D6:\n ■  On a 2+, set up this model on the battlefield,\nunengaged and as close as possible to where it was\ndestroyed. This model is not part of an attached\nunit and its unit has a starting strength of 1. This\nmodel has 3 wounds remaining.\n5"
+    },
+    "6": {
+      "sha256": "0086A6A109D061C5244859A61D68EF95AE1438F4B236FF320D7F1309462A8D50",
+      "text": "ARMOUR OF CONTEMPT\nANGELIC INHERITORS – BATTLE TACTIC STRATAGEM\nThe belligerence of the Adeptus Astartes, combined\nwith their transhuman physiology, makes them\nunyielding foes to face.\nWHEN: Your opponent’s Shooting phase or the\nFight phase, just after an enemy unit has selected\nits targets.\nTARGET: One Adeptus Astartes  unit from your army\nthat was selected as the target of one or more of the\nattacking unit’s attacks.\nEFFECT: Until the attacking unit has finished making\nits attacks, each time an attack targets your unit,\nworsen the Armour Penetration characteristic of that\nattack by 1.\nFOCUSED FURY\nANGELIC INHERITORS – BATTLE TACTIC STRATAGEM\nKeeping the beast within under tight control, the\nBlood Angels nonetheless tap into that inner rage\nand shackle it to their precisely aimed blows.\nWHEN: Fight phase.\nTARGET: One Adeptus Astartes unit from your army\nthat has not been selected to fight this phase.\nEFFECT: Until the end of the phase, melee weapons\nequipped by models in your unit have the\n[LETHAL HITS] ability. If your unit is a Character\nunit, until the end of the phase, those weapons have\nthe [LANCE] ability as well.\nINSTANT OF GRACE\nANGELIC INHERITORS – EPIC DEED STRATAGEM\nIn this most desperate moment of need, a lone\nbattle‑brother rises to the challenge as a true\ninheritor of the Angel’s legacy.\nWHEN: Your Command phase.\nTARGET: One Adeptus Astartes Infantry  unit from\nyour army.\nEFFECT: Select one non-Character  model in your\nunit. Until the start of your next Command phase,\nyour model has the Character  keyword.\nDesigner’s Note: While in effect, your model’s unit\nis therefore a Character  unit, meaning it can\ninteract with the Legacy of the Angel Detachment\nrule, in addition to other rules that interact with\nCharacter  units.\nSTRIKE NOW FOR GLORY\nANGELIC INHERITORS – STRATEGIC PLOY STRATAGEM\nKnowing instinctively that the pivotal moment has\narrived, these battle‑brothers aim and hammer their\nfoes with unrelenting volleys. \nWHEN: Your Shooting phase.\nTARGET: One Adeptus Astartes unit from your army\nthat has not been selected to shoot this phase.\nEFFECT: Until the end of the phase, ranged\nweapons equipped by models in your unit have the\n[SUSTAINED HITS 1] ability.\nIN THE SHADOW OF GREAT WINGS\nANGELIC INHERITORS – BATTLE TACTIC STRATAGEM\nThe enemy is engulfed in a soul‑deep shadow\nfor just a moment, as though mighty wings have\nspread above them and marred their vision with\noccluding darkness. \nWHEN: Your opponent’s Shooting phase, just after an\nenemy unit has selected its targets.\nTARGET: One Adeptus Astartes Character  unit\nfrom your army that was selected as the target of\none or more of the attacking unit’s attacks.\nEFFECT: Until the end of the phase, your unit can\nonly be selected as the target of a ranged attack if\nthe attacking model is within 18\".\nUNTO THE BURNING SKIES\nANGELIC INHERITORS – STRATEGIC PLOY STRATAGEM\nIn the face of encroaching doom, as the world seems\nto burn around them, these scions of Sanguinius\nleap high into the tormented heavens, ready to\nstrike down with vengeful fury upon the enemy\nteeming below.\nWHEN: End of your opponent’s Fight phase.\nTARGET: One Adeptus Astartes Jump Pack  unit from\nyour army. You cannot target a unit that is within\nEngagement Range of one or more enemy units,\nunless it is The Sanguinor .\nEFFECT: Remove your unit from the battlefield and\nplace it into Strategic Reserves.\n1CP\n1CP\n1CP\n1CP\n1CP\n1CP\n6"
+    },
+    "7": {
+      "sha256": "4795D89C66D087B9326D884F38C2B26638374679F7F3636788DB926105C8A795",
+      "text": "RAGE-CURSED\nONSLAUGHT\nThe Red Thirst and the Black Rage will forever be the twin spiritual curses that the Blood Angels\nmust hide from their allies for fear of censure. However, they can prove potent weapons of last\nresort when unleashed upon a determined foe. No Blood Angel takes such a decision lightly: to\nthe sons of Sanguinius, a victory won through giving in to their Red Thirst is tainted at best, while\nto succumb to the Black Rage is no better than a living death. All this is little comfort to enemies\nfacing the Blood Angels’ onslaught in such moments, however.\nDETACHMENT RULE\nMADDENED FEROCITY\nWith every passing moment, every\nsavage wounding and crunching blow,\nthe Red Thirst takes a firmer grip upon\nthe Blood Angels. As their control slips, so\nnear‑animalistic rage takes its place. The\nfoe will not live long enough to regret their\nerror in goading the beast which lurks\nwithin every gene‑son of Sanguinius.\nEach time an Adeptus Astartes  model\nfrom your army makes a melee attack,\nre‑roll a Wound roll of 1.\nEach time an Adeptus Astartes  unit from\nyour army is selected to fight, if that unit\nmade a Charge move this turn, until the\nend of the phase, add 1 to the Attacks\ncharacteristic of melee weapons equipped\nby models in that unit. If your unit is\nBattle‑shocked, add 2 to the Attacks\ncharacteristic of melee weapons equipped\nby models in that unit instead.\nRESTRICTIONS\nYour army can include Blood Angels\nunits, but it cannot include Adeptus\nAstartes  units drawn from any\nother Chapter.\nENHANCEMENTS\nCARMINE RELIQUARY\nThis armoured casket contains the skull of a beloved\nBlood Angels Captain lost to the Black Rage. It is a\npotent talisman of unfaltering aggression.\nChaplain model only. Models in the bearer’s unit\nhave the Scouts 6\" ability. Each time you take a\nBattle‑shock test for an Adeptus Astartes  unit within\n6\" of the bearer, you can re‑roll the result..\nMASTER OF THE RED THIRST\nLong practice has allowed this champion to gain a\nmodicum of focus and control over their Red Thirst –\nwisdom they pass on in the heat of battle.\nAdeptus Astartes model only. Once per battle,\nat the start of the Fight phase, the bearer can use\nthis Enhancement. If it does, until the end of the\nphase, models in the bearer’s unit have the Fights\nFirst ability.\nSANGUINARY TEAR (AURA)\nLegend has it that the blood‑red stone set into this\nrelic houses a teardrop shed by the Primarch himself.\nThose lost to the Black Rage seem to fight all the more\nfuriously in its presence.\nAdeptus Astartes model only. While a friendly Death\nCompany unit is within 6\" of the bearer, add 1 to\nthe Strength characteristic of weapons equipped by\nmodels in that unit.\nANGEL ’S FANG\nThis artificer ‑crafted weapon has a dark reputation\namongst the Chapter. Yet none can deny its lethality,\nor its machine‑spirit’s desire to drink the blood of the\nmightiest foes.\nAdeptus Astartes model only. Each time the bearer\nmakes a melee attack that targets a Character ,\nMonster  or Vehicle  unit, that attack has the\n[SUSTAINED HITS 2] ability.\n7"
+    },
+    "8": {
+      "sha256": "61AF27171D04C0DD2781EC85D6AEB066266E24B5A24D74E31AA26B23246A1372",
+      "text": "A GRIM WARNING\nRAGE‑CURSED ONSLAUGHT – STRATAGEM\nSo savagely butchered are the corpses left strewn by\nthe Blood Angels that the mere sight of them gives\nthe enemy pause. \nWHEN: Any phase.\nTARGET: One Blood Angel s unit from your army that\nwas just destroyed while it was within range of one\nor more objective markers you controlled at the end\nof the previous phase. You can use this Stratagem on\nthat unit even though it was just destroyed.\nEFFECT: Select one of those objective markers. That\nobjective marker remains under your control until\nyour opponent’s Level of Control over that objective\nmarker is greater than yours at the end of a phase.\nARMOUR OF CONTEMPT\nRAGE‑CURSED ONSLAUGHT – STRATAGEM\nThe belligerence of the Adeptus Astartes, combined\nwith their enhanced physiology, makes them\nunyielding foes to face.\nWHEN: Your opponent’s Shooting phase or the\nFight phase, just after an enemy unit has selected\nits targets.\nTARGET: One Adeptus Astartes  unit from your army\nthat was selected as the target of one or more of the\nattacking unit’s attacks.\nEFFECT: Until the attacking unit has finished making\nits attacks, each time an attack targets your unit,\nworsen the Armour Penetration characteristic of that\nattack by 1.\nINSENSATE RAMPAGE\nRAGE‑CURSED ONSLAUGHT – STRATAGEM\nThe agony of even the most catastrophic wounds\nmeans nothing to the warriors of the Death\nCompany, pain finding no purchase on their\nmaddened minds.\nWHEN: Your opponent’s Shooting phase or the\nFight phase, just after an enemy unit has selected\nits targets.\nTARGET: One Death Company unit from your army\nthat was selected as the target of one or more of the\nattacking unit’s attacks.\nEFFECT: Until the end of the phase, models in your\nunit have the Feel No Pain 5+ ability.\nLIMB FROM LIMB\nRAGE‑CURSED ONSLAUGHT – STRATAGEM\nWhile the Blood Angels display skill and discipline\nat close quarters, it is tinged with a blood‑drenched\nbrutality that only increases with their building rage.\nWHEN: Fight phase.\nTARGET: One Adeptus Astartes  unit from your army\nthat made a Charge move this turn.\nEFFECT: Select either the Strength or Armour\nPenetration characteristic of melee weapons\nequipped by models in your unit. Until the end of\nthe phase, add 1 to the selected characteristic. You\ncan instead choose for your unit to give in to the\nRed Thirst; if it does, it becomes Battle-shocked\n(but the effects of this Stratagem still apply to it),\nand until the end of the phase, add 1 to the Strength\nand Armour Penetration characteristics of melee\nweapons equipped by models in your unit.\nDEATHLESS DUTY\nRAGE‑CURSED ONSLAUGHT – STRATAGEM\nEven as death at last smothers the inferno of\nfury consuming the minds of these lost brethren,\nthey keep killing, until not even the faintest\nspark remains.\nWHEN: Fight phase, just after an enemy unit has\nselected its targets.\nTARGET: One Death Company unit from your army\nthat was selected as the target of one or more of the\nattacking unit’s attacks.\nEFFECT: Until the end of the phase, each time a\nmodel in your unit is destroyed, if that model has not\nfought this phase, do not remove it from play. The\ndestroyed model can fight after the attacking unit\nhas finished making its attacks, and is then removed\nfrom play.\nRED WRATH\nRAGE‑CURSED ONSLAUGHT – STRATAGEM\nAlready swift and aggressive even by Space Marine\nstandards, the Blood Angels can enhance their might\nyet further by surrendering temporarily to the Red\nThirst, albeit at the cost of higher strategic thought.\nWHEN: Your Movement phase, just after an Adeptus\nAstartes  unit from your army Advances.\nTARGET: That Adeptus Astartes  unit.\nEFFECT: Until the end of the turn, your unit is eligible\nto either shoot or declare a charge in a turn in which\nit Advanced. You can instead choose for your unit\nto give in to the Red Thirst; if it does, it becomes\nBattle-shocked (but the effects of this Stratagem still\napply to it), and until the end of the turn, your unit\nis eligible to shoot and declare a charge in a turn in\nwhich it Advanced.\n1CP\n1CP\n1CP\n1CP\n2CP\n1CP\n8"
+    },
+    "9": {
+      "sha256": "6D014FE242570090DE7EE33C8456424147AC2D375FF455DEC6A21ADF9C95DE57",
+      "text": "BLOOD ANGELS\nRULES UPDATES\nThis section presents updates and clarifications to your faction’s rules, designed to improve the gaming experience for all players.\nChanges applied after the first iteration of this Faction Pack will be highlighted in red.\nUPDATES\nDETACHMENTS (VARIOUS)\nThe Angelic Host, The Lost Brethren, Liberator Assault Group\nDetachments – Restrictions\nAdd the following restriction:\n‘Your army can include BLOOD ANGELS units, but it cannot include any\nADEPTUS ASTARTES units drawn from any other Chapter.’\nThe Angelic Host, The Lost Brethren, Liberator Assault Group\nDetachments – Armour of Contempt Stratagem, Effect Section\nChange to:\n‘Until the attacking unit has finished making its attacks, each time an\nattack targets your unit, worsen the Armour Penetration characteristic\nof that attack by 1.’\nTHE ANGELIC HOST DETACHMENT\nUpon Wings of Fire Detachment Rule, Final Paragraph\nC hange to:\n ▪ Place those units in strategic reserves.\n ▪  Those units must make an ingress move in your next Movement\nphase (including in your first turn).\nGleaming Pinions Enhancement\nChange to:\n'ADEPTUS ASTARTES JUMP PACK model only. In your opponent's\nMovement phase, if an enemy unit ends a move within 8” of this unit, if\nthis unit is not within Engagement Range of one or more enemy units,\nthis unit can make a Normal move of up to 6”.'\n Death from the Skies Stratagem\nChange to:\n‘WHEN: Your Movement phase, just after an ADEPTUS ASTARTES JUMP\nPACK unit from your army Advances or Falls Back.'\nTARGET: That ADEPTUS ASTARTES JUMP PACK unit.\nEFFECT: Until the end of the turn, your unit is eligible to shoot and\ndeclare a charge in a turn in which it Advanced or Fell Back.’\n Descent of Angels Stratagem, Effect section\nChange 3\" to 6\".\nDATASHEETS\nDeath Company Captain, Death Company Captain with Jump\nPack, Death Company Marines, Death Company Marines with Bolt\nRifles, Death Company Marines with Jump Packs, Death Company\nDreadnought – Black Rage ability\nChange to:\n'Each time a model in this unit makes a melee attack, you can re‑roll the\nHit roll. While this unit is not within 6\" of one or more friendly BLOOD\nANGELS CHARACTER models, or not within 12\" of one or more friendly\nCHAPLAIN models, it cannot be selected to Fall Back and its Objective\nControl characteristic is 0.’\nBaal Predator – Keywords section\nAdd 'FRAME'.\nDeath Company Dreadnought, Driven By Fury ability\nChange to:\n'In your opponent’s Shooting phase, when an enemy unit has shot, if\nthis model lost a wound as a result of those attacks, this unit can make a\nsurge move of up to D6+2\".'\nDeath Company Marines with Bolt Rifles, Visions of Heresy ability\nChange to:\n ▪ This unit can re‑roll charge rolls.\n ▪  When you target this unit with the Fire Overwatch/Heroic\nIntervention stratagem, that use is ‑1 CP.\nSanguinary Guard\n ▪ Melee Weapons: Change profiles to:\nEncarmine Blade\nRANGE A WS S AP D\nMelee 4 2+ 6 ‑3 2\nEncarmine Spear [LANCE]\nRANGE A WS S AP D\nMelee 4 2+ 6 ‑2 2\n ▪  Wargear Options section: Change first and second bullets to:\n‘• Any number of models can each have their encarmine blade\nreplaced with 1 encarmine spear.\n ▪  For every 3 models in this unit, 1 model’s Angelus boltgun can be\nreplaced with 1 inferno pistol.’\nSanguinary Priest – Core Abilities section\nRemove 'Leader', add 'Support'."
+    },
+    "10": {
+      "sha256": "32AA3C4F217A6406A6020F3C9A5DD569B195FBD3FDCE52CC9973FF7EC0050280",
+      "text": "The Sanguinor, Miraculous Saviour Ability\nChange to:\n'(Once per battle, per army) At the end of your opponent's Charge phase\n(excluding the first battle round), you can select one enemy unit that\nmade a charge move this phase. This unit can make an ingress move\nand must be set up engaged with that enemy unit. That move does not\nprevent this unit from being eligible to move.'\nFAQS\nQ: Can I use the Sanguinor’s Miraculous Saviour ability to set it up\nengaged with two or more enemy units, provided at least one of those\nenemy units made a charge move this phase?\nA: Yes."
+    },
+    "11": {
+      "sha256": "337565451D2E87FC2CA1E71EC97DFF71BA2302C0C82CC8A2647ACBDDD6B3147C",
+      "text": "W ARHAMMER  LEGENDS\nBROTHER CORBULO\nKEYWORDS:   Infantry, Character, Epic Hero, Grenades, Imperium,\nSanguinary Priest, Brother Corbulo\nRANGED WEAPONS RANGE A BS S AP D\nBolt pistol [PISTOL] 12\" 1 2+ 4 0 1\nMELEE WEAPONS RANGE A WS S AP D\nHeaven’s Teeth [SUSTAINED HITS 1] Melee 6 2+ 5 -1 1\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels\nABILITIES\nCORE: Leader\nFACTION: Oath of Moment\nSanguinary Priest: While this model is leading a unit, models\nin that unit have the Feel No Pain 5+ ability.\nThe Red Grail: While this model is leading a unit, add 1 to the\nAttacks characteristic of melee weapons equipped by models\nin that unit.\nM T SV W LD OC\n6\" 4 3+ 4 6+ 1"
+    },
+    "12": {
+      "sha256": "F871752D684E68A85FECD60440B590E14958FDD7C1549EA826BB3DF8932E9C61",
+      "text": "W ARHAMMER  LEGENDS\nWARGEAR OPTIONS\n ■   None\nUNIT COMPOSITION\n ■ 1 Brother Corbulo – Epic Hero\nThis model is equipped with: bolt pistol; Heaven’s Teeth.\nLEADER\nThis model can be attached to the following units:\n ■ Assault Intercessor Squad\n ■ Assault Squad\n ■ Desolation Squad\n ■ Hellblaster Squad\n ■ Infernus squad\n ■ Intercessor Squad\n ■ Devastator Squad\n ■ Sternguard Veteran Squad\n ■ Tactical Squad\n ■ Vanguard Veteran Squad\nBROTHER CORBULO\nThe Sanguinary High Priest, Brother Corbulo, is held in high regard for\nhis commitment to the Chapter, his nobility and his gift of foresight –\nan ability many believe Sanguinius shared. On the battlefield he races\nto wounded brothers, hacking down any foes in his path with powerful\nsweeps of Heaven’s Teeth.\nKEYWORDS:   Infantry, Character, Epic Hero, Grenades, Imperium,\nSanguinary Priest, Brother Corbulo\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels"
+    },
+    "13": {
+      "sha256": "B5DBC4ED06836D9E4093B66568597B010E97BCEC847EE28532CF9BA47455EEC8",
+      "text": "W ARHAMMER  LEGENDS\nCAPTAIN TYCHO\nKEYWORDS:   Infantry, Character, Epic Hero, Grenades, Imperium, Captain,\nTycho\nRANGED WEAPONS RANGE A BS S AP D\nBlood Song\n[ANTI‑INFANTRY 4+, DEVASTATING WOUNDS, MELTA 2] 24\" 2 2+ 4 -1 2\nBolt pistol [PISTOL] 12\" 1 2+ 4 0 1\nMELEE WEAPONS RANGE A WS S AP D\nDead Man’s Hand Melee 6 2+ 4 -1 2\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels\nABILITIES\nCORE: Leader\nFACTION: Oath of Moment\nGifted Commander: While this model is leading a unit, each\ntime that unit is selected to shoot, select one of the following\nabilities to apply to ranged weapons equipped by models in\nthat unit until the end of the phase:\n ■ [ASSAULT]\n ■ [HEAVY]\n ■ [RAPID FIRE 1]\nEmbittered: The first time an attack is allocated to this model,\nafter the attacking unit has finished making its attacks, until\nthe end of the battle, change the Attacks characteristic of this\nmodel’s Dead Man’s Hand to 12.\nINVULNERABLE SAVE 4+\nM T SV W LD OC\n6\" 4 2+ 5 6+ 1"
+    },
+    "14": {
+      "sha256": "1CC7678961AC53520DA822FBEE0552F647EF76FBEEED764B788E08A1DC83E671",
+      "text": "W ARHAMMER  LEGENDS\nWARGEAR OPTIONS\n ■   None\nTYCHO\nYour Army cannot contain both Captain Tycho  and Tycho the Lost .\nUNIT COMPOSITION\n ■ 1 Captain Tycho – Epic Hero\nThis model is equipped with: Blood Song; bolt pistol;\nDead Man’s Hand.\nLEADER\nThis model can be attached to the following units:\n ■ Assault Intercessor Squad\n ■ Assault Squad\n ■ Bladeguard Veteran Squad\n ■ Command Squad\n ■ Company Heroes\n ■ Hellblaster Squad\n ■ Infernus Squad\n ■ Intercessor Squad\n ■ Sternguard Veteran Squad\n ■ Tactical Squad\n ■ Vanguard Veteran Squad\nCAPTAIN TYCHO\nCaptain Tycho was once one of the Blood Angels’ most gifted\ncommanders, a paragon of every ideal his Chapter held to. It was while\nfighting countless battles against the Orks on Armageddon that he\nearned fame and renown, and there that he suffered the wound that\nchanged his life forever.\nKEYWORDS:   Infantry, Character, Epic Hero, Grenades, Imperium, Captain,\nTycho\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels"
+    },
+    "15": {
+      "sha256": "86814C6F87D7CDC60A923E637BFB0EF3D31FFCFE9AAE6ADEFA01D0731FA3E6E6",
+      "text": "W ARHAMMER  LEGENDS\nDEATH COMPANY DREADNOUGHT WITH MAGNA‑GRAPPLE\nKEYWORDS:   Vehicle, Walker, Imperium, Dreadnought,\nDeath Company Dreadnought\nRANGED WEAPONS RANGE A BS S AP D\nHeavy flamer [IGNORES COVER, TORRENT] 12\" D6 N/A 5 -1 1\nMeltagun [MELTA 2] 12\" 1 3+ 9 -4 D6\nStorm bolter [RAPID FIRE 2] 24\" 2 3+ 4 0 1\nMELEE WEAPONS RANGE A WS S AP D\nBlood talons [TWIN‑LINKED] Melee 7 3+ 8 -2 3\nTwin Furioso fists [TWIN‑LINKED] Melee 5 3+ 12 -3 3\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels\nABILITIES\nCORE: Deadly Demise 1, Feel No Pain 6+\nFACTION: Oath of Moment\nBlack Rage: Each time this model makes an attack, you can\nre-roll the Hit roll. While this model is not within 12\" of one or\nmore friendly Chaplain  models, it cannot be selected to Fall\nBack and its Objective Control characteristic is 0.\nFrenzied Reprisal: Once per turn, in the Fight phase, when\nan enemy unit targets this unit, after that unit has resolved\nits attacks, this unit is eligible to fight (even if it has already\nfought this phase) and must be selected to fight next.\nMagna‑grapple: Add 2 to Charge rolls made for this model\nif one or more of the targets of that charge is a Monster  or\nVehicle  unit.\nWARGEAR ABILITIES\nSmoke Launchers: The bearer loses the Magna-grapple ability\nand gains the Smoke keyword.\nM T SV W LD OC\n8\" 9 2+ 8 6+ 3"
+    },
+    "16": {
+      "sha256": "F18096CBBB319E8B07C6CFD1237475334269C49465EB199CA8F6145AF5F51430",
+      "text": "W ARHAMMER  LEGENDS\nWARGEAR OPTIONS\n ■ This model’s storm bolter can be replaced with 1 heavy flamer.\n ■ This model’s meltagun can be replaced with 1 heavy flamer.\n ■  This model’s Furioso fists can be replaced with 1 blood talons.\n ■ This model can be equipped with 1 smoke launchers.\nUNIT COMPOSITION\n ■ 1 Death Company Dreadnought\nThis model is equipped with: meltagun; storm bolter; twin\nFurioso fists.\nDEATH COMPANY DREADNOUGHT WITH MAGNA‑GRAPPLE\nEven being interred in a Dreadnought’s sarcophagus is insufficient to\nkeep the Black Rage at bay. Death Company Dreadnoughts are like\nfurious battering rams, desperate to smash into the enemy and tear\nthem apart. They are potent terror weapons, unleashed to inflict as\nmuch damage as possible.\nKEYWORDS:   Vehicle, Walker, Imperium, Dreadnought,\nDeath Company Dreadnought\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels"
+    },
+    "17": {
+      "sha256": "995550B499E970138783FABF4A335E20C86A7A2282485D284F0509534F919250",
+      "text": "W ARHAMMER  LEGENDS\nDEATH COMPANY MARINES WITH BOLTGUNS\nKEYWORDS:   Infantry, Grenades, Imperium, Death Company,\nDeath Compamy Marines with Boltguns\nRANGED WEAPONS RANGE A BS S AP D\nBolt pistol [PISTOL] 12\" 1 3+ 4 0 1\nBoltgun 24\" 2 3+ 4 0 1\nHand flamer [IGNORES COVER, PISTOL, TORRENT] 12\" D6 N/A 3 0 1\nInferno pistol [MELTA 2, PISTOL] 6\" 1 3+ 8 -4 D3\nPlasma pistol – standard [PISTOL] 12\" 1 3+ 7 -2 1\nPlasma pistol – supercharge [HAZARDOUS, PISTOL] 12\" 1 3+ 8 -3 2\nMELEE WEAPONS RANGE A WS S AP D\nAstartes chainsword Melee 4 3+ 4 -1 1\nClose combat weapon Melee 3 3+ 4 0 1\nPower fist Melee 3 3+ 8 -2 2\nPower weapon Melee 4 3+ 5 -2 1\nThunder hammer [DEVASTATING WOUNDS] Melee 3 4+ 8 -2 2\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels\nABILITIES\nCORE: Feel No Pain 6+\nFACTION: Oath of Moment\nBlack Rage: Each time a model in this unit makes an attack,\nyou can re-roll the Hit roll. While this unit is not within 12\" of\none or more friendly Chaplain  models, it cannot be selected\nto Fall Back and the Objective Control characteristic of models\nin this unit is 0.\nAn Honourable Death in Combat: Each time a model\nin this unit makes an attack, that attack has the\n[SUSTAINED HITS 1] ability if this unit is below its Starting\nStrength, or the [SUSTAINED HITS 2] ability if this unit is\nBelow Half-strength.\nM T SV W LD OC\n6\" 4 3+ 2 6+ 1\n Before selecting targets for this weapon, select one of its profiles to make attacks with."
+    },
+    "18": {
+      "sha256": "2ECDC7F7870E54EB1F8B213A03C25D3BD506FAF56C23D04C139571DFC8B77329",
+      "text": "W ARHAMMER  LEGENDS\nWARGEAR OPTIONS\n ■   Any number of models can each have their boltgun and close combat weapon replaced with one of\nthe following:\n ◦ 1 Astartes chainsword and 1 bolt pistol\n ◦ 1 thunder hammer\n ■  Any number of models can each have their bolt pistol replaced with one of the following:\n ◦ 1 hand flamer\n ◦ 1 inferno pistol\n ◦ 1 plasma pistol\n ■  Any number of models can each have their Astartes chainsword replaced with one of the following:\n ◦ 1 power fist\n ◦ 1 power weapon\nUNIT COMPOSITION\n ■ 5‑10 Death Company Marines\nEvery model is equipped with: boltgun; close combat weapon.\nDEATH COMPANY\nIf a Chaplain  model from your army with the Leader ability\ncan be attached to a Tactical Squad , it can be attached to\nthis unit instead.\nIf a Character  unit from your army with the Leader ability\ncan be attached to a Death Company Marines  unit, it can be\nattached to this unit instead.\nDEATH COMPANY MARINES WITH BOLTGUNS\nMembers of the Death Company are possessed of a berserk fury,\ndriven insane by terrible visions and hallucinations. They seek\nnothing but death in battle, and such is their ferocity that they barely\nflinch at even the most grievous of injuries, thinking of nothing but\nthe destruction of their enemies.\nKEYWORDS:   Infantry, Grenades, Imperium, Death Company,\nDeath Compamy Marines with Boltguns\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels"
+    },
+    "19": {
+      "sha256": "543EB836FA73CE4764CDFCB173DDFE92843D38202268238189E9C213C627E079",
+      "text": "W ARHAMMER  LEGENDS\nDEATH COMPANY MARINES WITH BOLTGUNS AND JUMP PACKS\nKEYWORDS:   Infantry, Fly, Jump Pack, Grenades, Imperium, Death Company,\nDeath Company Marines with boltguns and Jump Packs\nRANGED WEAPONS RANGE A BS S AP D\nBolt pistol [PISTOL] 12\" 1 3+ 4 0 1\nBoltgun 24\" 2 3+ 4 0 1\nHand flamer [IGNORES COVER, PISTOL, TORRENT] 12\" D6 N/A 3 0 1\nInferno pistol [MELTA 2, PISTOL] 6\" 1 3+ 8 -4 D3\nPlasma pistol – standard [PISTOL] 12\" 1 3+ 7 -2 1\nPlasma pistol – supercharge [HAZARDOUS, PISTOL] 12\" 1 3+ 8 -3 2\nMELEE WEAPONS RANGE A WS S AP D\nAstartes chainsword Melee 4 3+ 4 -1 1\nPower fist Melee 3 3+ 8 -2 2\nPower weapon Melee 4 3+ 5 -2 1\nThunder hammer [DEVASTATING WOUNDS] Melee 3 4+ 8 -2 2\nClose combat weapon Melee 3 3+ 4 0 1\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels\nABILITIES\nCORE: Deep Strike, Feel No Pain 6+\nFACTION: Oath of Moment\nBlack Rage: Each time a model in this unit makes an attack,\nyou can re-roll the Hit roll. While this unit is not within 12\" of\none or more friendly Chaplain  models, it cannot be selected\nto Fall Back and the Objective Control characteristic of models\nin this unit is 0.\nBerserk Fury: You can re-roll Charge rolls made for this unit.\nM T SV W LD OC\n12\" 4 3+ 2 6+ 1\n Before selecting targets for this weapon, select one of its profiles to make attacks with."
+    },
+    "20": {
+      "sha256": "E7F9E4D0DBE077CBC4C051A3A8E2B9585E8107246777A98DF78FCDED124D8208",
+      "text": "W ARHAMMER  LEGENDS\nWARGEAR OPTIONS\n ■  Any number of models can each have their boltgun and close combat weapon replaced with one of\nthe following:\n ◦ 1 Astartes chainsword and 1 bolt pistol\n ◦ 1 thunder hammer\n ■  Any number of models can each have their bolt pistol replaced with one of the following:\n ◦ 1 hand flamer\n ◦ 1 inferno pistol\n ◦ 1 plasma pistol\n ■ Any number of models can each have their Astartes chainsword replaced with one of the following:\n ◦ 1 power fist\n ◦ 1 power weapon\nUNIT COMPOSITION\n ■ 5‑10 Death Company Marines with Jump Packs\nEvery model is equipped with: boltgun; close combat weapon.\nDEATH COMPANY\nIf a Chaplain  model from your army with the Leader ability\ncan be attached to Assault Intercessors with Jump Packs\nor an Assault Squad with Jump Packs , it can be attached to\nthis unit instead.\nIf a Character  unit from your army with the Leader ability\ncan be attached to a Death Company Marines with Jump\nPacks unit, it can be attached to this unit instead.\nDEATH COMPANY MARINES WITH BOLTGUNS AND JUMP PACKS\nPossessed of a near peerless ferocity and berserk fury created by horrific hallucinations,\nDeath Company warriors are living weapons. When equipped with jump packs they are more\nlethal still, capable of bringing their terrible wrath upon the enemy that much more quickly.\nKEYWORDS:   Infantry, Fly, Jump Pack, Grenades, Imperium, Death Company,\nDeath Company Marines with boltguns and Jump Packs\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels"
+    },
+    "21": {
+      "sha256": "392EAADE6A474EEC7CF2E97B4C577DAAC51F2738248B4DB0F534F57D96F78975",
+      "text": "W ARHAMMER  LEGENDS\nFURIOSO DREADNOUGHT\nKEYWORDS:  Vehicle, Walker, Imperium, Dreadnought, Furioso Dreadnought\nRANGED WEAPONS RANGE A BS S AP D\nHeavy flamer [IGNORES COVER, TORRENT] 12\" D6 N/A 5 -1 1\nHeavy frag cannon [BLAST, RAPID FIRE D6] 18\" D6 3+ 7 -1 2\nMeltagun [MELTA 2] 12\" 1 3+ 9 -4 D6\nStorm bolter [RAPID FIRE 2] 24\" 2 3+ 4 0 1\nMELEE WEAPONS RANGE A WS S AP D\nBlood talons [TWIN‑LINKED] Melee 7 3+ 8 -2 3\nFurioso fist Melee 5 3+ 12 -3 3\nTwin Furioso fists [TWIN‑LINKED] Melee 5 3+ 12 -3 3\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels\nABILITIES\nCORE: Deadly Demise 1\nFACTION: Oath of Moment\nWrathful Rampage: Each time this model is selected to fight,\nyou can select one enemy unit within Engagement Range\nof it and roll one D6, adding 2 to the result if this model\nmade a Charge move this turn: on a 4-5, that enemy unit\nsuffers D3 mortal wounds; on a 6+, that enemy unit suffers 3\nmortal wounds.\nWARGEAR ABILITIES\nMagna‑grapple: The bearer loses the Smoke keyword, but\nadd 2 to Charge rolls made for the bearer if one or more of the\ntargets of that charge is a Monster  or Vehicle  unit.\nM T SV W LD OC\n8\" 9 2+ 8 6+ 3"
+    },
+    "22": {
+      "sha256": "138DE32477B2E71DEF94ED4A1F6D8580D5A6930651692E9BE00BC99C03F4894A",
+      "text": "W ARHAMMER  LEGENDS\nWARGEAR OPTIONS\n ■  This model’s heavy frag cannon and Furioso fist can be replaced with one of the following:\n ◦ 1 Blood Talons and 1 meltagun\n ◦ 1 twin Furioso fist and 1 meltagun\n ■ This model’s storm bolter can be replaced with 1 heavy flamer.\n ■ This model’s meltagun can be replaced with 1 heavy flamer.\n ■ This model can be equipped with 1 magna-grapple.\nUNIT COMPOSITION\n ■ 1 Furioso Dreadnought\nThis model is equipped with: heavy frag cannon; Furioso fist;\nstorm bolter.\nFURIOSO DREADNOUGHT\nUnique to the Chapter, Furiosos are frequently fitted with armaments\nonly the Blood Angels have, from the infantry-shredding heavy frag\ncannon to the magna-grapple. The latter weapon’s bolts, attached to\nadamantine chains, pierce armour, enabling Furiosos to drag enemies\ninto their reach.\nKEYWORDS:  Vehicle, Walker, Imperium, Dreadnought, Furioso Dreadnought FACTION KEYWORDS:\nAdeptus Astartes, Blood Angels"
+    },
+    "23": {
+      "sha256": "E0357A8CDB855CBC76CAA1BFAF1D15230E92A70FDBA04E4335D7B0A679147279",
+      "text": "W ARHAMMER  LEGENDS\nGABRIEL SETH\nKEYWORDS:   Infantry, Character, Epic Hero, Grenades, Imperium,\nChapter Master, Gabriel Seth\nRANGED WEAPONS RANGE A BS S AP D\nBolt pistol [PISTOL] 12\" 1 2+ 4 0 1\nMELEE WEAPONS RANGE A WS S AP D\nBlood Reaver [SUSTAINED HITS 1] Melee 6 2+ 8 -2 3\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels\nABILITIES\nCORE: Leader\nFACTION: Oath of Moment\nLord of Slaughter: While this model is leading a unit, that unit\nis eligible to declare a charge in a turn in which it Advanced.\nWhirlwind of Gore: Each time this model fights, until that\nfight is resolved, add 1 to the Attacks characteristic of this\nmodel’s Blood Reaver for every 5 enemy models within 6\" of\nthis model.\nINVULNERABLE SAVE 4+\nM T SV W LD OC\n6\" 4 3+ 6 6+ 1"
+    },
+    "24": {
+      "sha256": "9AA9215850870B7E9FE566233F45676FDDD8E5A946647887A440353D43CFAD95",
+      "text": "W ARHAMMER  LEGENDS\nWARGEAR OPTIONS\n ■ None\nFLESH TEARERS\nThis model is from the Flesh Tearers Chapter, a successor of the Blood Angels. For all rules purposes,\nit is treated as a Blood Angels  model, but cannot be included in an army that includes any other\nBlood Angels Epic Hero  models.\nUNIT COMPOSITION\n ■ 1 Gabriel Seth – Epic Hero\nThis model is equipped with: bolt pistol; Blood Reaver.\nLEADER\nThis model can be attached to the following units:\n ■ Assault Intercessor Squad\n ■ Assault Squad\n ■ Bladeguard Veteran Squad\n ■ Command Squad\n ■ Company Heroes\n ■ Hellblaster Squad\n ■ Infernus Squad\n ■ Intercessor Squad\n ■ Sternguard Veteran Squad\n ■ Tactical Squad\n ■ Vanguard Veteran Squad\nGABRIEL SETH\nGabriel Seth is a terrifyingly violent warrior, fearlessly charging\nheadlong into the fray in a whirlwind of fury and savagery. He wields\nBlood Reaver, an enormous two-handed chainsword, with which he is\ncapable of hacking apart even the most monstrous foes.\nKEYWORDS:   Infantry, Character, Epic Hero, Grenades, Imperium,\nChapter Master, Gabriel Seth\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels"
+    },
+    "25": {
+      "sha256": "28E8D59F7720B367FCEFB32B5F04BAA7C4426A2F2C1812D0A7DF2CB206919FB0",
+      "text": "W ARHAMMER  LEGENDS\nLIBRARIAN DREADNOUGHT\nKEYWORDS:   Vehicle, Walker, Smoke, Psyker, Imperium, Dreadnought,\nLibrarian Dreadnought\nRANGED WEAPONS RANGE A BS S AP D\nBlood Lance – witchfire [PSYCHIC, SUSTAINED HITS D3] 18\" 1 3+ 10 -3 D6\nBlood Lance – focused witchfire\n[HAZARDOUS, PSYCHIC, SUSTAINED HITS D3] 18\" 1 3+ 12 -3 D6+3\nHeavy flamer [IGNORES COVER, TORRENT] 12\" D6 N/A 5 -1 1\nMeltagun [MELTA 2] 12\" 1 3+ 9 -4 D6\nStorm bolter [RAPID FIRE 2] 24\" 2 3+ 4 0 1\nMELEE WEAPONS RANGE A WS S AP D\nFurioso fist Melee 5 3+ 12 -3 3\nFurioso force halberd [EXTRA ATTACKS, PSYCHIC] Melee 1 2+ 9 -3 D6+3\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels\nABILITIES\nCORE: Deadly Demise 1\nFACTION: Oath of Moment\nShield of Sanguinius (Aura, Psychic): While a friendly\nAdeptus Astartes  unit is within 6\" of this model, models\nin that unit have the Feel No Pain 5+ ability against mortal\nwounds and Psychic Attacks.\nWings of Sanguinius (Psychic): Once per turn, at the end of\nyour Movement phase, one Psyker  from your army with this\nability can use it. If it does, roll one D6: on a 1, that Psyker\nsuffers D3 mortal wounds; on a 2+, select one friendly\nAdeptus Astartes Infantry  unit within 12\" of that Psyker\nand remove the selected unit from the battlefield, then set\nit up again anywhere on the battlefield that is more than 8\"\nhorizontally away from all enemy models.\nM T SV W LD OC\n8\" 9 2+ 8 6+ 3\n Before selecting targets for this weapon, select one of its profiles to make attacks with."
+    },
+    "26": {
+      "sha256": "8B591D404F72253BDA0A607DF32AC5E8A28809FAB97C11F8CA0D7C43930CE69C",
+      "text": "W ARHAMMER  LEGENDS\nWARGEAR OPTIONS\n ■ This model’s storm bolter can be replaced with one of the following:\n ◦ 1 heavy flamer\n ◦ 1 meltagun\nUNIT COMPOSITION\n ■ 1 Librarian Dreadnought\nThis model is equipped with: Blood Lance; storm bolter;\nFurioso fist, Furioso force halberd.\nLIBRARIAN DREADNOUGHT\nSuch is the Blood Angels’ connection to the warp that those Librarians\ninterred in Dreadnoughts retain their link to it. They are dangerous\nenemies to face, with all the adamantine strength of a Dreadnought as\nwell as the ability to boil an enemy’s blood in their veins, or blast foes\napart with beams of energy.\nKEYWORDS:   Vehicle, Walker, Smoke, Psyker, Imperium, Dreadnought,\nLibrarian Dreadnought\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels"
+    },
+    "27": {
+      "sha256": "49E1E7E7933518595A5A8DE43B90C9B356FAA772C0524400F302DCA36ED64E2E",
+      "text": "W ARHAMMER  LEGENDS\nTYCHO THE LOST\nKEYWORDS:   Infantry, Character, Epic Hero, Grenades, Imperium, Captain,\nTycho the Lost\nRANGED WEAPONS RANGE A BS S AP D\nBlood Song\n[ANTI‑INFANTRY 4+, DEVASTATING WOUNDS, MELTA 2] 24\" 2 2+ 4 -1 2\nBolt pistol [PISTOL] 12\" 1 2+ 4 0 1\nMELEE WEAPONS RANGE A WS S AP D\nDead Man’s Hand Melee 6 2+ 4 -1 2\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels\nABILITIES\nCORE: Leader, Feel No Pain 6+\nFACTION: Oath of Moment\nForlorn Hero: While this model is leading a unit, that unit is\neligible to declare a charge in a turn in which it Advanced.\nBlack Rage: Each time this model makes an attack, you can\nre-roll the Hit roll. While this model is not within 12\" of one or\nmore friendly Chaplain  models, it cannot be selected to Fall\nBack and its Objective Control characteristic is 0.\nDeath Vision of Sanguinius: If this model is destroyed by a\nmelee attack, after the attacking unit has finished making\nits attacks, you can roll one D6, adding 2 to the result if the\nattacking unit contains the enemy Warlord : on a 2-3, that\nenemy unit suffers 3 mortal wounds; on a 4-5, that enemy\nunit suffers D3+3 mortal wounds; on a 6+, that enemy unit\nsuffers D6+3 mortal wounds.\nINVULNERABLE SAVE 4+\nM T SV W LD OC\n6\" 4 2+ 4 6+ 1"
+    },
+    "28": {
+      "sha256": "BB4652837AB5F57591F022C52695991B13618293B487D38DEB6C43248E38A833",
+      "text": "W ARHAMMER  LEGENDS\nWARGEAR OPTIONS\n ■   None\nUNIT COMPOSITION\n ■ 1 Tycho the Lost –  Epic Hero\nThis model is equipped with: Blood Song; bolt pistol;\nDead Man’s Hand.\nLEADER\nThis model can be attached to the following unit:\n ■ Death Company Marines\n ■ Death Company Marines with Bolt Rifles\n ■ Death Company Marines with Boltguns\nTYCHO\nYour army cannot contain both Captain Tycho  and Tycho\nthe Lost .\nTYCHO THE LOST\nIt was in the Third War for Armageddon that rage finally consumed\nCaptain Tycho, as it will consume all sons of Sanguinius, and he took\nhis place in the Death Company. He cut down Orks with volleys from\nBlood Song and blasts from the digital weapons built into his left\ngauntlet, known as Dead Man’s Hand.\nKEYWORDS:   Infantry, Character, Epic Hero, Grenades, Imperium, Captain,\nTycho the Lost\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels"
+    },
+    "29": {
+      "sha256": "F497B724A1FEF63B818F98E7D0FB329F4C5251DAEDABAEAF41EB1FA8C0E9B58D",
+      "text": "W ARHAMMER  LEGENDS\nSANGUINARY PRIEST WITH JUMP PACK\nKEYWORDS:   Infantry, Character, Grenades, Imperium, Fly, Jump Pack,\nSanguinary Priest\nRANGED WEAPONS RANGE A BS S AP D\nBolt pistol [PISTOL] 12\" 1 2+ 4 0 1\nMELEE WEAPONS RANGE A WS S AP D\nAstartes chainsword Melee 5 2+ 4 -1 1\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels\nABILITIES\nCORE: Deep Strike, Support\nFACTION: Oath of Moment\nSanguinary Priest: While this model is leading a unit, models\nin that unit have the Feel No Pain 5+ ability.\nBlood Chalice: While this model is leading a unit, improve\nthe Armour Penetration characteristic of melee weapons\nequipped by models in that unit by 1.\nM T SV W LD OC\n12\" 4 3+ 4 6+ 1"
+    },
+    "30": {
+      "sha256": "56E4DC107A75AEDE6C6787866583F145791B33E90522FBA8D83C47DB7EA39964",
+      "text": "W ARHAMMER  LEGENDS\nWARGEAR OPTIONS\n ■ None\nUNIT COMPOSITION\n ■ 1 Sanguinary Priest\nThis model is equipped with: bolt pistol; Astartes chainsword.\nLEADER\nThis model can be attached to the following units:\n ■ Assault Intercessors with Jump Packs\n ■ Assault Squad with Jump Packs\n ■ Vanguard Veteran Squad with Jump Packs\nSANGUINARY PRIEST WITH JUMP PACK\nThe Sanguinary Priests are the Blood Angels’ Apothecaries, and hold\nresponsibility for the Chapter’s soul as well as its body. Through their\nministrations and ceremonies do they call upon the Blood Angels\nto embrace the Red Thirst, control it and unleash their rage upon\nthe enemy.\nKEYWORDS:   Infantry, Character, Grenades, Imperium, Fly, Jump Pack,\nSanguinary Priest\nFACTION KEYWORDS:\nAdeptus Astartes, Blood Angels"
+    }
+  },
+  "detachments": [
+    {
+      "id": "legacy-of-grace",
+      "title": "Legacy of Grace",
+      "rule": {
+        "title": "Legacy of the Angel",
+        "text": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds and led by their champions of noble bearing. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Friendly BLOOD ANGELS INFANTRY CHARACTER units (excluding COMMANDER DANTE units) have +1 to advance rolls and charge rolls. This detachment has the GRACE tag and cannot be taken with another GRACE detachment. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+        "sourcePages": [
+          2
+        ],
+        "provenance": {
+          "sourceId": "blood-angels-faction-pack-v1.1",
+          "sourcePages": [
+            2
+          ]
+        }
+      },
+      "enhancements": [
+        {
+          "id": "blood-boil",
+          "title": "Blood Boil",
+          "points": 10,
+          "text": "This psyker bears some of the most esoteric gifts granted by the blood of his Primarch, and his empyric powers surge with a vital potency capable of boiling the foe’s essence in their veins. ADEPTUS ASTARTES PSYKER model only. This model’s [PSYCHIC] attacks: ▪ Have [ANTI: non‑MONSTER/VEHICLE 5+]. ▪ Can re‑roll damage rolls.",
+          "sourcePages": [
+            2
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "aureole-of-the-angel",
+          "title": "Aureole of the Angel",
+          "points": 20,
+          "text": "An echo of Sanguinius’ magnificence, this gilded halo casts an aura of shimmering and distorted energy spectra that thwarts attempts to pinpoint the bearer’s position. ADEPTUS ASTARTES model only. This unit has ‑3\" detection range.",
+          "sourcePages": [
+            2
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              2
+            ]
+          }
+        }
+      ],
+      "stratagems": [
+        {
+          "id": "martial-paragon",
+          "title": "Martial Paragon",
+          "cp": 1,
+          "when": "Your Shooting phase or the Fight phase, when a friendly ADEPTUS ASTARTES CHARACTER unit is selected to attack.",
+          "target": "That ADEPTUS ASTARTES CHARACTER unit.",
+          "effect": "Your unit’s attacks have: ▪ [LETHAL HITS]. ▪ OR: [SUSTAINED HITS 1].",
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Legacy of Grace Stratagem",
+          "sourcePages": [
+            2
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "soul-darkened-fury",
+          "title": "Soul-darkened Fury",
+          "cp": 1,
+          "when": "Your opponent’s Movement phase, when an enemy unit is selected to make a fall‑back move, if that unit is engaged with a friendly ADEPTUS ASTARTES CHARACTER unit.",
+          "target": "That ADEPTUS ASTARTES CHARACTER unit.",
+          "effect": "When an enemy unit engaged with your unit is selected to make a fall‑back move, that enemy unit must use the desperate escape mode, with ‑1 to those hazard rolls if that enemy unit is battle‑shocked.",
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Legacy of Grace Stratagem",
+          "sourcePages": [
+            2
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              2
+            ]
+          }
+        },
+        {
+          "id": "aura-of-the-angel-s-grace",
+          "title": "Aura of the Angel's Grace",
+          "cp": 1,
+          "when": "Your opponent’s Shooting phase, when an enemy unit targets a friendly ADEPTUS ASTARTES CHARACTER unit.",
+          "target": "That CHARACTER unit.",
+          "effect": "Your unit has 5+ InSv.",
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Legacy of Grace Stratagem",
+          "sourcePages": [
+            2
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              2
+            ]
+          }
+        }
+      ],
+      "sourcePages": [
+        2
+      ],
+      "provenance": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "sourcePages": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "encarmine-speartip",
+      "title": "Encarmine Speartip",
+      "rule": {
+        "title": "Wrath of Angels",
+        "text": "Few living warriors embody the ideal of the Emperor’s wrathful angels more than the Sanguinary Guard, for they appear without warning to wreak death and destruction before surging on to the next foe with shocking speed. When a friendly SANGUINARY GUARD unit is selected to make a fall‑back move, that move does not prevent that unit from being eligible to shoot/eligible to declare a charge. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+        "sourcePages": [
+          3
+        ],
+        "provenance": {
+          "sourceId": "blood-angels-faction-pack-v1.1",
+          "sourcePages": [
+            3
+          ]
+        }
+      },
+      "enhancements": [
+        {
+          "id": "angelic-executioner",
+          "title": "Angelic Executioner",
+          "points": 25,
+          "text": "This deadly duellist leads his battle‑brothers in masterful strikes capable of carving through their armoured or swarming foes with breathtaking fluidity. ADEPTUS ASTARTES JUMP PACK model only. When this unit is selected to fight, this unit’s melee attacks have: ▪ [LETHAL HITS]. ▪ Or: [SUSTAINED HITS 1].",
+          "sourcePages": [
+            3
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "shadow-of-abomination",
+          "title": "Shadow of Abomination",
+          "points": 25,
+          "text": "Granted a glimmer of foresight by his genetic inheritance, this Son of Sanguinius has identified a foe whose future is drenched in the blood of the Imperium. Such an enemy cannot be allowed to live. ADEPTUS ASTARTES JUMP PACK model only. (Once per battle, per army) When this unit is selected to fight you can use this ability. If you do, this model’s melee attacks have +1 D.",
+          "sourcePages": [
+            3
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              3
+            ]
+          }
+        }
+      ],
+      "stratagems": [
+        {
+          "id": "judgement-of-the-golden-host",
+          "title": "Judgement of the Golden Host",
+          "cp": 1,
+          "when": "Your Charge phase, when a friendly SANGUINARY GUARD unit from your army ends a charge move.",
+          "target": "That SANGUINARY GUARD unit.",
+          "effect": "Select one enemy unit engaged with your unit. Roll one D6 for each model in your unit engaged with that enemy unit: ▪ For each 3+, that enemy unit suffers 1 mortal wound.",
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Encarmine Speartip Stratagem",
+          "sourcePages": [
+            3
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "inexorable-valour",
+          "title": "Inexorable Valour",
+          "cp": 1,
+          "when": "Your opponent’s Movement phase, when an enemy unit that was engaged with a friendly SANGUINARY GUARD unit ends a fall‑back move, if that SANGUINARY GUARD unit is unengaged.",
+          "target": "That SANGUINARY GUARD unit.",
+          "effect": "Your unit can make a normal move of up to D3+3\".",
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Encarmine Speartip Stratagem",
+          "sourcePages": [
+            3
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              3
+            ]
+          }
+        },
+        {
+          "id": "blinding-blurs-of-vengeance",
+          "title": "Blinding Blurs of Vengeance",
+          "cp": 1,
+          "when": "Your opponent’s Shooting phase, when an enemy unit targets a friendly SANGUINARY GUARD unit.",
+          "target": "That SANGUINARY GUARD unit.",
+          "effect": "Your unit has Stealth.",
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Encarmine Speartip Stratagem",
+          "sourcePages": [
+            3
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              3
+            ]
+          }
+        }
+      ],
+      "sourcePages": [
+        3
+      ],
+      "provenance": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "sourcePages": [
+          3
+        ]
+      }
+    },
+    {
+      "id": "wrath-of-the-doomed",
+      "title": "Wrath of the Doomed",
+      "rule": {
+        "title": "Fanatical Celerity",
+        "text": "The madness of the Black Rage burns through the mind of the Lost Brethren with a speed and ferocity matched by the warriors in battle. Swept up in visions of the Primarch’s darkest days of wing‑swift fury, they push their bodies past their limits in efforts to emulate his rapid wrath. When a friendly DEATH COMPANY unit is selected to make an advance move, you can use this ability. If you do: ▪ That unit suffers D3+1 mortal wounds. ▪ That move does not prevent that unit from being eligible to declare a charge. This detachment has the DOOMED tag and cannot be taken with another DOOMED detachment. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+        "sourcePages": [
+          4
+        ],
+        "provenance": {
+          "sourceId": "blood-angels-faction-pack-v1.1",
+          "sourcePages": [
+            4
+          ]
+        }
+      },
+      "enhancements": [
+        {
+          "id": "instinctive-interception",
+          "title": "Instinctive Interception",
+          "points": 10,
+          "text": "Proudly is Sanguinius remembered for his rapid intercession in the protection of his gene‑sons. Driven on by deathly visions, this lost warrior is a tragic monument to such glory. DEATH COMPANY model only. When you target this unit with the Heroic Intervention stratagem, that use is ‑1 CP.",
+          "sourcePages": [
+            4
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "on-the-archtraitor-s-bridge",
+          "title": "On the Archtraitor's Bridge",
+          "points": 20,
+          "text": "Lost to a memory shard of the Primarch, in this warrior’s mind, he has entered the Archtraitor’s sanctum, and all that stands between him and Horus is a host of massing traitors. DEATH COMPANY model only. This model’s melee attacks have +2 A.",
+          "sourcePages": [
+            4
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              4
+            ]
+          }
+        }
+      ],
+      "stratagems": [
+        {
+          "id": "death-begets-vengeance",
+          "title": "Death Begets Vengeance",
+          "cp": 1,
+          "when": "Any phase, when a friendly DEATH COMPANY unit is destroyed by an enemy unit.",
+          "target": "That enemy unit.",
+          "effect": "That enemy unit is hated until the end of the battle: ▪ While a unit is hated, friendly DEATH COMPANY units’ attacks that target that unit have +1 to wound rolls.",
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Wrath of the Doomed Stratagem",
+          "sourcePages": [
+            4
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "no-barrier-to-retribution",
+          "title": "No Barrier to Retribution",
+          "cp": 1,
+          "when": "Your Movement or your Charge phase, when a friendly DEATH COMPANY DREADNOUGHT unit is selected to make a normal/advance/ charge move.",
+          "target": "That DEATH COMPANY DREADNOUGHT unit.",
+          "effect": "Your unit has MOBILE.",
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Wrath of the Doomed Stratagem",
+          "sourcePages": [
+            4
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              4
+            ]
+          }
+        },
+        {
+          "id": "rage-fuelled-response",
+          "title": "Rage-fuelled Response",
+          "cp": 1,
+          "when": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly unengaged DEATH COMPANY unit has shot.",
+          "target": "That DEATH COMPANY unit.",
+          "effect": "Your unit can make a surge move of up to D6\".",
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Wrath of the Doomed Stratagem",
+          "sourcePages": [
+            4
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              4
+            ]
+          }
+        }
+      ],
+      "sourcePages": [
+        4
+      ],
+      "provenance": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "sourcePages": [
+          4
+        ]
+      }
+    },
+    {
+      "id": "angelic-inheritors",
+      "title": "Angelic Inheritors",
+      "rule": {
+        "title": "Legacy of the Angel",
+        "text": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Sometimes, they even touch upon the uncertain gift of prophecy that was said to be their gene‑sire’s boon and his curse. At the start of the first battle round, select two of the Angelic Legacy abilities listed below. Until the end of the battle, those Angelic Legacy abilities are active and their effects apply to all Adeptus Astartes Character units from your army. Sanguinary Grace: This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Carmine Wrath: Each time a model in this unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1. Their Appointed Hour: You can re‑roll Advance and Charge rolls made for this unit. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter.",
+        "sourcePages": [
+          5
+        ],
+        "provenance": {
+          "sourceId": "blood-angels-faction-pack-v1.1",
+          "sourcePages": [
+            5
+          ]
+        }
+      },
+      "enhancements": [
+        {
+          "id": "prescient-flash",
+          "title": "Prescient Flash",
+          "points": 20,
+          "text": "A flash of foresight and clarity sings through this warrior’s blood and guides his steps into battle. Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability.",
+          "sourcePages": [
+            5
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "troubling-visions",
+          "title": "Troubling Visions",
+          "points": 15,
+          "text": "In the long run, these strange and intrusive visions of bloodshed bode terribly ill for this champion of the Blood Angels. In this instance, though, they bring him closer than ever to the glory of his gene‑sire. Adeptus Astartes model only. Once per battle, in your Command phase, the bearer can use this Enhancement. When it does, until the start of your next Command phase, all Angelic Legacy abilities (see left) are active for the bearer’s unit, instead of only two of them.",
+          "sourcePages": [
+            5
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "blazing-icon",
+          "title": "Blazing Icon",
+          "points": 20,
+          "text": "What was before merely a decorative blood drop pendant now shines with a seemingly miraculous light as bright as any star. The foe are forced to avert their gaze from its wrathful magnificence. Adeptus Astartes Infantry model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
+          "sourcePages": [
+            5
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              5
+            ]
+          }
+        },
+        {
+          "id": "ordained-sacrifice",
+          "title": "Ordained Sacrifice",
+          "points": 25,
+          "text": "Knowing only too well the desperate and vital nature of the battle before him, this scion of Sanguinius echoes his Primarch’s resolute determination to fight on even beyond what seems the doors of certain death. Adeptus Astartes model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6: ■ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining.",
+          "sourcePages": [
+            5
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              5
+            ]
+          }
+        }
+      ],
+      "stratagems": [
+        {
+          "id": "angelic-inheritors-armour-of-contempt",
+          "title": "Armour of Contempt",
+          "cp": 1,
+          "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One Adeptus Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "sourceLabel": "Angelic Inheritors · Battle Tactic Stratagem",
+          "sourcePages": [
+            6
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "focused-fury",
+          "title": "Focused Fury",
+          "cp": 1,
+          "when": "Fight phase.",
+          "target": "One Adeptus Astartes unit from your army that has not been selected to fight this phase.",
+          "effect": "Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability. If your unit is a Character unit, until the end of the phase, those weapons have the [LANCE] ability as well.",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "sourceLabel": "Angelic Inheritors · Battle Tactic Stratagem",
+          "sourcePages": [
+            6
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "instant-of-grace",
+          "title": "Instant of Grace",
+          "cp": 1,
+          "when": "Your Command phase.",
+          "target": "One Adeptus Astartes Infantry unit from your army.",
+          "effect": "Select one non-Character model in your unit. Until the start of your next Command phase, your model has the Character keyword. Designer’s Note: While in effect, your model’s unit is therefore a Character unit, meaning it can interact with the Legacy of the Angel Detachment rule, in addition to other rules that interact with Character units.",
+          "canonicalType": "epic-deed",
+          "typeStatus": "confirmed",
+          "sourceLabel": "Angelic Inheritors · Epic Deed Stratagem",
+          "sourcePages": [
+            6
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "strike-now-for-glory",
+          "title": "Strike Now for Glory",
+          "cp": 1,
+          "when": "Your Shooting phase.",
+          "target": "One Adeptus Astartes unit from your army that has not been selected to shoot this phase.",
+          "effect": "Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability.",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "sourceLabel": "Angelic Inheritors · Strategic Ploy Stratagem",
+          "sourcePages": [
+            6
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "in-the-shadow-of-great-wings",
+          "title": "In the Shadow of Great Wings",
+          "cp": 1,
+          "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+          "target": "One Adeptus Astartes Character unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effect": "Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+          "canonicalType": "battle-tactic",
+          "typeStatus": "confirmed",
+          "sourceLabel": "Angelic Inheritors · Battle Tactic Stratagem",
+          "sourcePages": [
+            6
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              6
+            ]
+          }
+        },
+        {
+          "id": "unto-the-burning-skies",
+          "title": "Unto the Burning Skies",
+          "cp": 1,
+          "when": "End of your opponent’s Fight phase.",
+          "target": "One Adeptus Astartes Jump Pack unit from your army. You cannot target a unit that is within Engagement Range of one or more enemy units, unless it is The Sanguinor.",
+          "effect": "Remove your unit from the battlefield and place it into Strategic Reserves.",
+          "canonicalType": "strategic-ploy",
+          "typeStatus": "confirmed",
+          "sourceLabel": "Angelic Inheritors · Strategic Ploy Stratagem",
+          "sourcePages": [
+            6
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              6
+            ]
+          }
+        }
+      ],
+      "sourcePages": [
+        5,
+        6
+      ],
+      "provenance": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "sourcePages": [
+          5,
+          6
+        ]
+      }
+    },
+    {
+      "id": "rage-cursed-onslaught",
+      "title": "Rage-cursed Onslaught",
+      "rule": {
+        "title": "Maddened Ferocity",
+        "text": "With every passing moment, every savage wounding and crunching blow, the Red Thirst takes a firmer grip upon the Blood Angels. As their control slips, so near‑animalistic rage takes its place. The foe will not live long enough to regret their error in goading the beast which lurks within every gene‑son of Sanguinius. Each time an Adeptus Astartes model from your army makes a melee attack, re‑roll a Wound roll of 1. Each time an Adeptus Astartes unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. If your unit is Battle‑shocked, add 2 to the Attacks characteristic of melee weapons equipped by models in that unit instead. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter.",
+        "sourcePages": [
+          7
+        ],
+        "provenance": {
+          "sourceId": "blood-angels-faction-pack-v1.1",
+          "sourcePages": [
+            7
+          ]
+        }
+      },
+      "enhancements": [
+        {
+          "id": "carmine-reliquary",
+          "title": "Carmine Reliquary",
+          "points": 30,
+          "text": "This armoured casket contains the skull of a beloved Blood Angels Captain lost to the Black Rage. It is a potent talisman of unfaltering aggression. Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a Battle‑shock test for an Adeptus Astartes unit within 6\" of the bearer, you can re‑roll the result..",
+          "sourcePages": [
+            7
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              7
+            ]
+          }
+        },
+        {
+          "id": "master-of-the-red-thirst",
+          "title": "Master of the Red Thirst",
+          "points": 25,
+          "text": "Long practice has allowed this champion to gain a modicum of focus and control over their Red Thirst – wisdom they pass on in the heat of battle. Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability.",
+          "sourcePages": [
+            7
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              7
+            ]
+          }
+        },
+        {
+          "id": "sanguinary-tear-aura",
+          "title": "Sanguinary Tear (Aura)",
+          "points": 35,
+          "text": "Legend has it that the blood‑red stone set into this relic houses a teardrop shed by the Primarch himself. Those lost to the Black Rage seem to fight all the more furiously in its presence. Adeptus Astartes model only. While a friendly Death Company unit is within 6\" of the bearer, add 1 to the Strength characteristic of weapons equipped by models in that unit.",
+          "sourcePages": [
+            7
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              7
+            ]
+          }
+        },
+        {
+          "id": "angel-s-fang",
+          "title": "Angel's Fang",
+          "points": 25,
+          "text": "This artificer ‑crafted weapon has a dark reputation amongst the Chapter. Yet none can deny its lethality, or its machine‑spirit’s desire to drink the blood of the mightiest foes. Adeptus Astartes model only. Each time the bearer makes a melee attack that targets a Character, Monster or Vehicle unit, that attack has the [SUSTAINED HITS 2] ability.",
+          "sourcePages": [
+            7
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              7
+            ]
+          }
+        }
+      ],
+      "stratagems": [
+        {
+          "id": "a-grim-warning",
+          "title": "A Grim Warning",
+          "cp": 1,
+          "when": "Any phase.",
+          "target": "One Blood Angel s unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.",
+          "effect": "Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Rage-cursed Onslaught Stratagem",
+          "sourcePages": [
+            8
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              8
+            ]
+          }
+        },
+        {
+          "id": "rage-cursed-onslaught-armour-of-contempt",
+          "title": "Armour of Contempt",
+          "cp": 1,
+          "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One Adeptus Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Rage-cursed Onslaught Stratagem",
+          "sourcePages": [
+            8
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              8
+            ]
+          }
+        },
+        {
+          "id": "insensate-rampage",
+          "title": "Insensate Rampage",
+          "cp": 1,
+          "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effect": "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability.",
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Rage-cursed Onslaught Stratagem",
+          "sourcePages": [
+            8
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              8
+            ]
+          }
+        },
+        {
+          "id": "limb-from-limb",
+          "title": "Limb from Limb",
+          "cp": 1,
+          "when": "Fight phase.",
+          "target": "One Adeptus Astartes unit from your army that made a Charge move this turn.",
+          "effect": "Select either the Strength or Armour Penetration characteristic of melee weapons equipped by models in your unit. Until the end of the phase, add 1 to the selected characteristic. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the phase, add 1 to the Strength and Armour Penetration characteristics of melee weapons equipped by models in your unit.",
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Rage-cursed Onslaught Stratagem",
+          "sourcePages": [
+            8
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              8
+            ]
+          }
+        },
+        {
+          "id": "deathless-duty",
+          "title": "Deathless Duty",
+          "cp": 2,
+          "when": "Fight phase, just after an enemy unit has selected its targets.",
+          "target": "One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+          "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Rage-cursed Onslaught Stratagem",
+          "sourcePages": [
+            8
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              8
+            ]
+          }
+        },
+        {
+          "id": "red-wrath",
+          "title": "Red Wrath",
+          "cp": 1,
+          "when": "Your Movement phase, just after an Adeptus Astartes unit from your army Advances.",
+          "target": "That Adeptus Astartes unit.",
+          "effect": "Until the end of the turn, your unit is eligible to either shoot or declare a charge in a turn in which it Advanced. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
+          "canonicalType": null,
+          "typeStatus": "source-untyped",
+          "sourceLabel": "Rage-cursed Onslaught Stratagem",
+          "sourcePages": [
+            8
+          ],
+          "provenance": {
+            "sourceId": "blood-angels-faction-pack-v1.1",
+            "sourcePages": [
+              8
+            ]
+          }
+        }
+      ],
+      "sourcePages": [
+        7,
+        8
+      ],
+      "provenance": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "sourcePages": [
+          7,
+          8
+        ]
+      }
+    }
+  ],
+  "detachmentAudit": {
+    "source": "Munitorum Field Manual v1.2 dated capture",
+    "url": "https://mfm.warhammer-community.com/en/blood-angels",
+    "checkedAt": "2026-08-12",
+    "expected": 8,
+    "count": 8,
+    "current": [
+      "Angelic Inheritors",
+      "Encarmine Speartip",
+      "Legacy of Grace",
+      "Liberator Assault Group",
+      "Rage-cursed Onslaught",
+      "The Angelic Host",
+      "The Lost Brethren",
+      "Wrath of the Doomed"
+    ],
+    "factionPackCount": 5,
+    "factionPack": [
+      "Legacy of Grace",
+      "Encarmine Speartip",
+      "Wrath of the Doomed",
+      "Angelic Inheritors",
+      "Rage-cursed Onslaught"
+    ]
+  },
+  "updates": [
+    {
+      "id": "rules-updates-9",
+      "section": "Rules Updates",
+      "subject": "Page 9 · updates",
+      "change": "DETACHMENTS (VARIOUS)\nThe Angelic Host, The Lost Brethren, Liberator Assault Group\nDetachments – Restrictions\nAdd the following restriction:\n‘Your army can include BLOOD ANGELS units, but it cannot include any\nADEPTUS ASTARTES units drawn from any other Chapter.’\nThe Angelic Host, The Lost Brethren, Liberator Assault Group\nDetachments – Armour of Contempt Stratagem, Effect Section\nChange to:\n‘Until the attacking unit has finished making its attacks, each time an\nattack targets your unit, worsen the Armour Penetration characteristic\nof that attack by 1.’\nTHE ANGELIC HOST DETACHMENT\nUpon Wings of Fire Detachment Rule, Final Paragraph\nC hange to:\n ▪ Place those units in strategic reserves.\n ▪  Those units must make an ingress move in your next Movement\nphase (including in your first turn).\nGleaming Pinions Enhancement\nChange to:\n'ADEPTUS ASTARTES JUMP PACK model only. In your opponent's\nMovement phase, if an enemy unit ends a move within 8” of this unit, if\nthis unit is not within Engagement Range of one or more enemy units,\nthis unit can make a Normal move of up to 6”.'\n Death from the Skies Stratagem\nChange to:\n‘WHEN: Your Movement phase, just after an ADEPTUS ASTARTES JUMP\nPACK unit from your army Advances or Falls Back.'\nTARGET: That ADEPTUS ASTARTES JUMP PACK unit.\nEFFECT: Until the end of the turn, your unit is eligible to shoot and\ndeclare a charge in a turn in which it Advanced or Fell Back.’\n Descent of Angels Stratagem, Effect section\nChange 3\" to 6\".",
+      "sourcePages": [
+        9
+      ],
+      "provenance": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "sourcePages": [
+          9
+        ]
+      }
+    },
+    {
+      "id": "datasheets-updates-9",
+      "section": "Datasheets",
+      "subject": "Page 9 · datasheets",
+      "change": "Death Company Captain, Death Company Captain with Jump\nPack, Death Company Marines, Death Company Marines with Bolt\nRifles, Death Company Marines with Jump Packs, Death Company\nDreadnought – Black Rage ability\nChange to:\n'Each time a model in this unit makes a melee attack, you can re‑roll the\nHit roll. While this unit is not within 6\" of one or more friendly BLOOD\nANGELS CHARACTER models, or not within 12\" of one or more friendly\nCHAPLAIN models, it cannot be selected to Fall Back and its Objective\nControl characteristic is 0.’\nBaal Predator – Keywords section\nAdd 'FRAME'.\nDeath Company Dreadnought, Driven By Fury ability\nChange to:\n'In your opponent’s Shooting phase, when an enemy unit has shot, if\nthis model lost a wound as a result of those attacks, this unit can make a\nsurge move of up to D6+2\".'\nDeath Company Marines with Bolt Rifles, Visions of Heresy ability\nChange to:\n ▪ This unit can re‑roll charge rolls.\n ▪  When you target this unit with the Fire Overwatch/Heroic\nIntervention stratagem, that use is ‑1 CP.\nSanguinary Guard\n ▪ Melee Weapons: Change profiles to:\nEncarmine Blade\nRANGE A WS S AP D\nMelee 4 2+ 6 ‑3 2\nEncarmine Spear [LANCE]\nRANGE A WS S AP D\nMelee 4 2+ 6 ‑2 2\n ▪  Wargear Options section: Change first and second bullets to:\n‘• Any number of models can each have their encarmine blade\nreplaced with 1 encarmine spear.\n ▪  For every 3 models in this unit, 1 model’s Angelus boltgun can be\nreplaced with 1 inferno pistol.’\nSanguinary Priest – Core Abilities section\nRemove 'Leader', add 'Support'.",
+      "sourcePages": [
+        9
+      ],
+      "provenance": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "sourcePages": [
+          9
+        ]
+      }
+    },
+    {
+      "id": "datasheets-updates-10",
+      "section": "Datasheets",
+      "subject": "Page 10 · datasheets",
+      "change": "The Sanguinor, Miraculous Saviour Ability\nChange to:\n'(Once per battle, per army) At the end of your opponent's Charge phase\n(excluding the first battle round), you can select one enemy unit that\nmade a charge move this phase. This unit can make an ingress move\nand must be set up engaged with that enemy unit. That move does not\nprevent this unit from being eligible to move.'",
+      "sourcePages": [
+        10
+      ],
+      "provenance": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "sourcePages": [
+          10
+        ]
+      }
+    }
+  ],
+  "faqs": [
+    {
+      "id": "can-i-use-the-sanguinor-s-miraculous-saviour-ability-to-set-it-up-engaged-with-two-or-more-enemy-units-provided-at-least-one-of-those-enemy-units-made-a-charge-move-this-phase",
+      "question": "Can I use the Sanguinor’s Miraculous Saviour ability to set it up engaged with two or more enemy units, provided at least one of those enemy units made a charge move this phase?",
+      "answer": "Yes.",
+      "sourcePages": [
+        10
+      ],
+      "provenance": {
+        "sourceId": "blood-angels-faction-pack-v1.1",
+        "sourcePages": [
+          10
+        ]
+      }
+    }
+  ],
+  "datasheets": {
+    "matched": [],
+    "legends": [
+      {
+        "id": "brother-corbulo",
+        "title": "Brother Corbulo",
+        "sourcePages": [
+          11,
+          12
+        ],
+        "provenance": {
+          "sourceId": "blood-angels-faction-pack-v1.1",
+          "sourcePages": [
+            11,
+            12
+          ]
+        }
+      },
+      {
+        "id": "captain-tycho",
+        "title": "Captain Tycho",
+        "sourcePages": [
+          13,
+          14
+        ],
+        "provenance": {
+          "sourceId": "blood-angels-faction-pack-v1.1",
+          "sourcePages": [
+            13,
+            14
+          ]
+        }
+      },
+      {
+        "id": "death-company-dreadnought-with-magna-grapple",
+        "title": "Death Company Dreadnought With Magna‑Grapple",
+        "sourcePages": [
+          15,
+          16
+        ],
+        "provenance": {
+          "sourceId": "blood-angels-faction-pack-v1.1",
+          "sourcePages": [
+            15,
+            16
+          ]
+        }
+      },
+      {
+        "id": "death-company-marines-with-boltguns",
+        "title": "Death Company Marines With Boltguns",
+        "sourcePages": [
+          17,
+          18
+        ],
+        "provenance": {
+          "sourceId": "blood-angels-faction-pack-v1.1",
+          "sourcePages": [
+            17,
+            18
+          ]
+        }
+      },
+      {
+        "id": "death-company-marines-with-boltguns-and-jump-packs",
+        "title": "Death Company Marines With Boltguns And Jump Packs",
+        "sourcePages": [
+          19,
+          20
+        ],
+        "provenance": {
+          "sourceId": "blood-angels-faction-pack-v1.1",
+          "sourcePages": [
+            19,
+            20
+          ]
+        }
+      },
+      {
+        "id": "furioso-dreadnought",
+        "title": "Furioso Dreadnought",
+        "sourcePages": [
+          21,
+          22
+        ],
+        "provenance": {
+          "sourceId": "blood-angels-faction-pack-v1.1",
+          "sourcePages": [
+            21,
+            22
+          ]
+        }
+      },
+      {
+        "id": "gabriel-seth",
+        "title": "Gabriel Seth",
+        "sourcePages": [
+          23,
+          24
+        ],
+        "provenance": {
+          "sourceId": "blood-angels-faction-pack-v1.1",
+          "sourcePages": [
+            23,
+            24
+          ]
+        }
+      },
+      {
+        "id": "librarian-dreadnought",
+        "title": "Librarian Dreadnought",
+        "sourcePages": [
+          25,
+          26
+        ],
+        "provenance": {
+          "sourceId": "blood-angels-faction-pack-v1.1",
+          "sourcePages": [
+            25,
+            26
+          ]
+        }
+      },
+      {
+        "id": "tycho-the-lost",
+        "title": "Tycho The Lost",
+        "sourcePages": [
+          27,
+          28
+        ],
+        "provenance": {
+          "sourceId": "blood-angels-faction-pack-v1.1",
+          "sourcePages": [
+            27,
+            28
+          ]
+        }
+      },
+      {
+        "id": "sanguinary-priest-with-jump-pack",
+        "title": "Sanguinary Priest With Jump Pack",
+        "sourcePages": [
+          29,
+          30
+        ],
+        "provenance": {
+          "sourceId": "blood-angels-faction-pack-v1.1",
+          "sourcePages": [
+            29,
+            30
+          ]
+        }
+      }
+    ]
+  }
+}

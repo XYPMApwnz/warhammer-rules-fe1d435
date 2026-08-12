@@ -84,7 +84,7 @@ const allGenericArmyBooks=fs.readdirSync(path.join(root,'books'),{withFileTypes:
     if(!config.sources?.relatedRules||!fs.existsSync(packFile))return[];
     return [{id:config.id,title:config.title,root:bookRoot,config,runtime:loadWindow(runtimeFile).DG_TERMS,pack:readJson(packFile)}];
   });
-const genericArmyBooks=allGenericArmyBooks.filter(book=>['tyranids','tau-empire','emperors-children','space-marines'].includes(book.id));
+const genericArmyBooks=allGenericArmyBooks.filter(book=>['tyranids','tau-empire','emperors-children','space-marines','blood-angels'].includes(book.id)).sort((a,b)=>(a.id==='blood-angels')-(b.id==='blood-angels'));
 const coreData=loadWindow(path.join(root,'books','core-rules','content','core-rules.en.js')).CORE_RULES;
 const coreCurated=coreData.terms;
 const coreSource=loadWindow(path.join(root,'books','core-rules','content','core-rules.source.en.js')).CORE_PDF_SOURCE;
@@ -425,6 +425,13 @@ for(const book of genericArmyBooks){
     ...(detachment.stratagems||[]).map(item=>item.title)
   ]).filter(Boolean).map(normalTitle));
   for(const [localId,entry] of Object.entries(book.runtime)){
+    if(book.id==='blood-angels'&&localId.startsWith('space-marines-')){
+      const canonicalId=confirmedCanonicalAliases[localId]||localId;
+      if(!registry.has(canonicalId))throw new Error(`Blood Angels shared glossary target is absent: ${localId}`);
+      if(canonicalId!==localId)aliases[localId]=canonicalId;
+      addContext(book.id,localId,canonicalId,entry);
+      continue;
+    }
     const official=officialTitles.has(normalTitle(entry.title));
     const prefix=`${book.id}-`,isWeapon=localId.startsWith(`${prefix}weapon-`);
     const profile=isWeapon?weaponProfile(entry.summary):null;

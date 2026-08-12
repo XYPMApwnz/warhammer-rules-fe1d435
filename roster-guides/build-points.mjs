@@ -20,7 +20,7 @@ const readerProfiles=book=>{
   }
   return result;
 };
-const dgProfiles=readerProfiles('death-guard'),mechanicusProfiles=readerProfiles('adeptus-mechanicus'),tyranidsProfiles=readerProfiles('tyranids'),tauProfiles=readerProfiles('tau-empire'),csmProfiles=readerProfiles('chaos-space-marines');
+const dgProfiles=readerProfiles('death-guard'),mechanicusProfiles=readerProfiles('adeptus-mechanicus'),tyranidsProfiles=readerProfiles('tyranids'),tauProfiles=readerProfiles('tau-empire'),csmProfiles=readerProfiles('chaos-space-marines'),bloodAngelsProfiles=readerProfiles('blood-angels');
 
 const deathGuard=read('books/death-guard/content/death-guard-rules.en.json');
 const dgUnits={};
@@ -119,12 +119,31 @@ for(const enhancement of csm.enhancements){
 }
 const csmEnhancements=Object.fromEntries([...csmEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
 
+const bloodAngels=read('books/blood-angels/content/blood-angels-points.en.json');
+const spaceMarines=read('books/space-marines/content/space-marines-points.en.json');
+const bloodAngelsContracts=read('books/blood-angels/content/blood-angels-related-rules.en.json').enhancements;
+const bloodAngelsProfile=unit=>bloodAngelsProfiles[unit.id]||bloodAngelsProfiles[normalize(unit.title)];
+const bloodAngelsRecord=unit=>({...unit,wargear:unit.paidWargear||[],...bloodAngelsProfile(unit)});
+const bloodAngelsLocal=bloodAngels.units.filter(unit=>unit.status==='Current'&&bloodAngelsProfile(unit));
+const bloodAngelsLocalTitles=new Set(bloodAngelsLocal.map(unit=>normalize(unit.title)));
+const bloodAngelsShared=spaceMarines.units.filter(unit=>unit.status==='Current'&&!bloodAngelsLocalTitles.has(normalize(unit.title))&&bloodAngelsProfile(unit));
+if(bloodAngelsLocal.length!==15||bloodAngelsShared.length!==82)throw new Error(`Blood Angels roster inventory: expected 15 local + 82 shared, got ${bloodAngelsLocal.length} + ${bloodAngelsShared.length}`);
+const bloodAngelsUnits=Object.fromEntries([...bloodAngelsLocal,...bloodAngelsShared].map(unit=>[normalize(unit.title),bloodAngelsRecord(unit)]));
+const bloodAngelsEnhancementGroups=new Map();
+for(const enhancement of bloodAngels.enhancements){
+  const contract=bloodAngelsContracts[enhancement.id],role=contract?.roles?.find(item=>item.side==='friendly'&&item.subject==='unit');
+  const record={...enhancement,...(role?{owner:{subject:'unit',selector:role.selector}}:{sourceLimited:true})};
+  const key=normalize(enhancement.title),group=bloodAngelsEnhancementGroups.get(key)||[];group.push(record);bloodAngelsEnhancementGroups.set(key,group);
+}
+const bloodAngelsEnhancements=Object.fromEntries([...bloodAngelsEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
+
 const catalog={
   'death guard':{units:dgUnits,enhancements:dgEnhancements},
   'adeptus mechanicus':{units:mechanicusUnits,enhancements:mechanicusEnhancements},
   'tyranids':{units:tyranidsUnits,enhancements:tyranidsEnhancements},
   't au empire':{units:tauUnits,enhancements:tauEnhancements},
-  'chaos space marines':{units:csmUnits,enhancements:csmEnhancements}
+  'chaos space marines':{units:csmUnits,enhancements:csmEnhancements},
+  'blood angels':{units:bloodAngelsUnits,enhancements:bloodAngelsEnhancements}
 };
 fs.writeFileSync(path.join(root,'roster-guides','points-data.js'),`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`);
-console.log(`Points catalog: ${Object.keys(dgUnits).length} Death Guard, ${Object.keys(mechanicusUnits).length} Adeptus Mechanicus, ${Object.keys(tyranidsUnits).length} Tyranids, ${Object.keys(tauUnits).length} T'au Empire and ${Object.keys(csmUnits).length} Chaos Space Marines units.`);
+console.log(`Points catalog: ${Object.keys(dgUnits).length} Death Guard, ${Object.keys(mechanicusUnits).length} Adeptus Mechanicus, ${Object.keys(tyranidsUnits).length} Tyranids, ${Object.keys(tauUnits).length} T'au Empire, ${Object.keys(csmUnits).length} Chaos Space Marines and ${Object.keys(bloodAngelsUnits).length} Blood Angels units.`);

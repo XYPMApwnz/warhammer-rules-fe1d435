@@ -1,0 +1,74 @@
+{
+  "schema":"blood-angels-codex-parity/v1",
+  "faction":"Blood Angels",
+  "source":{
+    "id":"blood-angels-codex-secondary-consensus",
+    "authority":"secondary",
+    "checkedAt":"2026-08-12",
+    "title":"Current BSData, New Recruit and public rendered-reference consensus",
+    "url":"https://www.40k.app/factions/blood-angels/army-rules"
+  },
+  "armyRules":[{
+    "id":"army-rule-the-sons-of-sanguinius",
+    "name":"The Sons of Sanguinius",
+    "title":"The Sons of Sanguinius",
+    "text":"If an ADEPTUS ASTARTES unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that unit's Chapter. You cannot include units from more than one Chapter in your army. The rules in this book can also represent a Blood Angels successor Chapter, but BLOOD ANGELS EPIC HEROES represent the First Founding Chapter itself.",
+    "provenance":{"authority":"secondary-consensus","checkedAt":"2026-08-12","sources":["New Recruit / BSData revision 1","40k.app","Wahapedia"]}
+  }],
+  "detachments":[
+    {
+      "id":"liberator-assault-group","title":"Liberator Assault Group","detachmentPoints":3,"forceDisposition":"TAKE AND HOLD",
+      "rule":{"title":"Red Thirst","text":"Each time an ADEPTUS ASTARTES unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic and add 2 to the Strength characteristic of melee weapons equipped by models in that unit."},
+      "enhancements":[
+        {"id":"gift-of-foresight","title":"Gift of Foresight","text":"ADEPTUS ASTARTES model only. Once per battle round, just after making a Hit roll, a Wound roll or a saving throw for the bearer, you can treat the result as an unmodified roll of 6 instead."},
+        {"id":"icon-of-the-angel","title":"Icon of the Angel","text":"ADEPTUS ASTARTES model only. Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of the bearer's unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests as if their unit was Battle-shocked. If that enemy unit is also Battle-shocked, subtract 1 from each of those tests."},
+        {"id":"rage-fuelled-warrior","title":"Rage-fuelled Warrior","text":"ADEPTUS ASTARTES model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer's melee weapons have the [SUSTAINED HITS 3] ability."},
+        {"id":"speed-of-the-primarch","title":"Speed of the Primarch","text":"ADEPTUS ASTARTES model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Fights First ability."}
+      ],
+      "stratagems":[
+        {"id":"angelic-grace","title":"Angelic Grace","cp":1,"canonicalType":"Strategic Ploy","when":"Any phase, just after an ADEPTUS ASTARTES unit from your army has a mortal wound allocated to it.","target":"That ADEPTUS ASTARTES unit.","effect":"Until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds."},
+        {"id":"liberator-assault-group-armour-of-contempt","title":"Armour of Contempt","cp":1,"canonicalType":"Battle Tactic","when":"Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.","target":"One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.","effect":"Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."},
+        {"id":"savage-echoes","title":"Savage Echoes","cp":1,"canonicalType":"Battle Tactic","when":"Your opponent's Charge phase.","target":"One ADEPTUS ASTARTES unit from your army that was just charged by an enemy unit.","effect":"Select either Strength or Attacks for melee weapons equipped by models in your unit; add 1 to the selected characteristic until the end of the turn. Alternatively, your unit becomes Battle-shocked and add 1 to both characteristics."},
+        {"id":"red-rampage","title":"Red Rampage","cp":1,"canonicalType":"Battle Tactic","when":"Fight phase.","target":"One ADEPTUS ASTARTES unit from your army that has not been selected to fight this phase.","effect":"Select [LANCE] or [LETHAL HITS]; melee weapons equipped by models in your unit have that ability until the end of the phase. Alternatively, your unit becomes Battle-shocked and gains both."},
+        {"id":"aggressive-onslaught","title":"Aggressive Onslaught","cp":1,"canonicalType":"Strategic Ploy","when":"Your Movement phase, just after an ADEPTUS ASTARTES unit from your army has Advanced.","target":"That ADEPTUS ASTARTES unit.","effect":"Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Advanced. Alternatively, it becomes Battle-shocked and is eligible to do both."},
+        {"id":"relentless-assault","title":"Relentless Assault","cp":1,"canonicalType":"Strategic Ploy","when":"Your Movement phase, just after an ADEPTUS ASTARTES unit from your army Falls Back.","target":"That ADEPTUS ASTARTES unit.","effect":"Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Fell Back. Alternatively, it becomes Battle-shocked and is eligible to do both."}
+      ]
+    },
+    {
+      "id":"the-lost-brethren","title":"The Lost Brethren","detachmentPoints":2,"forceDisposition":"PURGE THE FOE","tags":["DOOMED"],
+      "rule":{"title":"A Noble Death in Combat","text":"Each time a DEATH COMPANY model from your army makes a melee attack, re-roll a Wound roll of 1 if that model's unit is below its Starting Strength; if that model's unit is Below Half-strength, you can re-roll the Wound roll instead."},
+      "enhancements":[
+        {"id":"blood-shard","title":"Blood Shard","text":"DEATH COMPANY model only. The first time the bearer is destroyed, at the end of the phase, roll one D6: on a 2+, set the bearer back up as close as possible to where it was destroyed and not within Engagement Range of enemy units, with 3 wounds remaining."},
+        {"id":"sanguinius-grace","title":"Sanguinius' Grace","text":"DEATH COMPANY model only. Once per battle, at the end of the Fight phase, if the bearer is within Engagement Range of three or more enemy models, the bearer can fight one additional time."},
+        {"id":"to-slay-the-warmaster","title":"To Slay The Warmaster","text":"DEATH COMPANY model only. Once per battle, at the start of the Fight phase, if the bearer is within Engagement Range of an enemy CHARACTER unit, select one and roll six D6: for each 4+, one CHARACTER model in that unit suffers 1 mortal wound."},
+        {"id":"vengeful-onslaught","title":"Vengeful Onslaught","text":"DEATH COMPANY model only. If the bearer is destroyed, until the end of your next turn, each time a friendly DEATH COMPANY model makes an attack, add 1 to the Hit roll."}
+      ],
+      "stratagems":[
+        {"id":"glorious-sacrifice","title":"Glorious Sacrifice","cp":1,"canonicalType":"Epic Deed","when":"Any phase.","target":"One DEATH COMPANY unit from your army that was just destroyed while within range of an objective marker you controlled.","effect":"That objective marker remains under your control until your opponent's Level of Control over it is greater than yours at the end of a phase."},
+        {"id":"the-lost-brethren-armour-of-contempt","title":"Armour of Contempt","cp":1,"canonicalType":"Battle Tactic","when":"Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.","target":"One ADEPTUS ASTARTES unit from your army that was selected as a target.","effect":"Until the attacking unit has finished making its attacks, worsen the Armour Penetration characteristic of attacks targeting your unit by 1."},
+        {"id":"final-retribution","title":"Final Retribution","cp":1,"canonicalType":"Epic Deed","when":"Fight phase, just after an enemy unit has selected its targets.","target":"One DEATH COMPANY unit from your army selected as a target.","effect":"Until the end of the phase, each time a model in your unit is destroyed before it has fought, roll one D6, adding 1 if within 12\\\" of a friendly CHAPLAIN; on a 4+, it can fight after the attacking unit has finished, then is removed."},
+        {"id":"furious-onslaught","title":"Furious Onslaught","cp":1,"canonicalType":"Battle Tactic","when":"Fight phase.","target":"One DEATH COMPANY unit from your army, just before it Piles-in.","effect":"Until the end of the phase, Pile-in moves can be D3+3\\\"; if within 12\\\" of a friendly CHAPLAIN or below Starting Strength, they can be 6\\\" instead, subject to coherency and Engagement Range."},
+        {"id":"lost-to-rage","title":"Lost to Rage","cp":1,"canonicalType":"Battle Tactic","when":"Fight phase.","target":"One DEATH COMPANY unit below Starting Strength that has not fought.","effect":"Until the end of the phase, improve Attacks, Strength and Armour Penetration of melee weapons by 1; unless within 12\\\" of a friendly CHAPLAIN, those weapons also have [HAZARDOUS]."},
+        {"id":"wrathful-rampage","title":"Wrathful Rampage","cp":1,"canonicalType":"Strategic Ploy","when":"Your Movement phase, just after a DEATH COMPANY unit Advances.","target":"That DEATH COMPANY unit.","effect":"Until the end of the turn, your unit can declare a charge after Advancing. If within 12\\\" of a friendly CHAPLAIN or below Starting Strength, it can also shoot."}
+      ]
+    },
+    {
+      "id":"the-angelic-host","title":"The Angelic Host","detachmentPoints":2,"forceDisposition":"DISRUPTION",
+      "rule":{"title":"Upon Wings of Fire","text":"At the end of your opponent's turn, select up to 1, 2 or 3 ADEPTUS ASTARTES JUMP PACK units in Incursion, Strike Force or Onslaught battles respectively (excluding engaged units). Place them in Strategic Reserves; they must make an ingress move in your next Movement phase, including in your first turn."},
+      "enhancements":[
+        {"id":"archangels-shard","title":"Archangel's Shard","text":"ADEPTUS ASTARTES JUMP PACK model only. The bearer's melee weapons have [ANTI-CHAOS 5+] and [LANCE]."},
+        {"id":"artisan-of-war","title":"Artisan of War","text":"ADEPTUS ASTARTES JUMP PACK model only. Improve the Armour Penetration characteristic of the bearer's weapons by 1, and the bearer has a Save characteristic of 2+."},
+        {"id":"gleaming-pinions","title":"Gleaming Pinions","text":"ADEPTUS ASTARTES JUMP PACK model only. In your opponent's Movement phase, if an enemy unit ends a move within 8\\\" of this unit and this unit is unengaged, this unit can make a Normal move of up to 6\\\"."},
+        {"id":"visage-of-death","title":"Visage of Death","text":"ADEPTUS ASTARTES JUMP PACK model only. In the Battle-shock step of your opponent's Command phase, each enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of the bearer must take a Battle-shock test."}
+      ],
+      "stratagems":[
+        {"id":"unbridled-ardour","title":"Unbridled Ardour","cp":1,"canonicalType":"Epic Deed","when":"Any phase.","target":"One ADEPTUS ASTARTES unit from your army that was just destroyed.","effect":"Until the end of the battle, each time a friendly SANGUINARY GUARD unit attacks the enemy unit that destroyed your unit, re-roll the Hit and Wound rolls."},
+        {"id":"the-angelic-host-armour-of-contempt","title":"Armour of Contempt","cp":1,"canonicalType":"Battle Tactic","when":"Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets.","target":"One ADEPTUS ASTARTES unit from your army selected as a target.","effect":"Until the attacking unit has finished, worsen the Armour Penetration characteristic of attacks targeting your unit by 1."},
+        {"id":"angels-sacrifice","title":"Angel's Sacrifice","cp":1,"canonicalType":"Battle Tactic","when":"Start of the Fight phase.","target":"One ADEPTUS ASTARTES JUMP PACK unit from your army.","effect":"Until the end of the phase, each enemy model within Engagement Range of your unit must target your unit with all of its attacks."},
+        {"id":"martial-exemplars","title":"Martial Exemplars","cp":1,"canonicalType":"Battle Tactic","when":"Fight phase.","target":"One ADEPTUS ASTARTES JUMP PACK unit from your army that has not fought.","effect":"Until the end of the phase, melee weapons equipped by models in your unit have [LETHAL HITS] and [PRECISION]."},
+        {"id":"descent-of-angels","title":"Descent of Angels","cp":1,"canonicalType":"Epic Deed","when":"Your Movement phase.","target":"One ADEPTUS ASTARTES JUMP PACK unit arriving using Deep Strike.","effect":"Your unit can be set up more than 6\\\" horizontally away from all enemy models.","restrictions":"That unit is not eligible to declare a charge in the same turn."},
+        {"id":"death-from-the-skies","title":"Death From The Skies","cp":1,"canonicalType":"Epic Deed","when":"Your Movement phase, just after an ADEPTUS ASTARTES JUMP PACK unit Advances or Falls Back.","target":"That ADEPTUS ASTARTES JUMP PACK unit.","effect":"Until the end of the turn, your unit can shoot and declare a charge after Advancing or Falling Back."}
+      ]
+    }
+  ]
+}

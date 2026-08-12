@@ -1,0 +1,21 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {buildCompatibleRules,inputs} from '../tools/build-compatible-rules.mjs';
+
+const read=file=>JSON.parse(fs.readFileSync(new URL(file,import.meta.url),'utf8'));
+const generated=read('../generated/compatible-rules.json'),source=inputs(),rebuilt=buildCompatibleRules(source);
+const excluded=new Set(source.config.dependencyDatasheets.excludeAnyKeywords.map(value=>value.toUpperCase()));
+const shared=source.spaceMarines.datasheets.filter(unit=>!(unit.keywords||[]).some(item=>excluded.has(String(item).toUpperCase()))),expectedIds=new Set([...source.codex.datasheets,...shared].map(unit=>unit.id));
+const detachments=[...(source.pack.detachments||[]),...(source.parity.detachments||[])],detachmentIds=new Set(detachments.map(item=>item.id)),rows=Object.values(generated.units).flat();
+const titleKey=value=>String(value||'').replace(/\s*\(Aura\)$/i,'').toLowerCase(),factionRules=new Set(detachments.flatMap(item=>[...(item.stratagems||[]).map(rule=>rule.id),...(item.enhancements||[]).map(rule=>source.points.enhancements.find(point=>titleKey(point.detachment)===titleKey(item.title)&&titleKey(point.title)===titleKey(rule.title))?.id).filter(Boolean)]));
+
+assert.deepEqual(generated,rebuilt,'Blood Angels Compatible Rules matrix is stale');
+assert.equal(generated.schema,'blood-angels-compatible-rules/v1');
+assert.equal(Object.keys(generated.units).length,97);
+assert.deepEqual(new Set(Object.keys(generated.units)),expectedIds);
+assert.equal(detachments.length,8);
+assert.ok(rows.length,'Compatible Rules matrix is empty');
+assert.deepEqual(new Set(rows.filter(row=>row.scope!=='core').map(row=>row.ruleId)),factionRules);
+assert.equal(new Set(rows.filter(row=>row.scope==='core').map(row=>row.ruleId)).size,10);
+for(const row of rows.filter(item=>item.scope!=='core'))assert.ok(detachmentIds.has(row.detachmentId),`Unknown Detachment ${row.detachmentId}`);
+console.log(`Blood Angels Compatible Rules QA passed: 97 Datasheets, ${rows.length} deterministic rows and 8 Detachments.`);

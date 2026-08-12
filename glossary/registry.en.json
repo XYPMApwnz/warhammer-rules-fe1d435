@@ -11243,6 +11243,5186 @@
       ],
       "mentions": []
     },
+    "blood-angels-ability-an-honourable-death-in-combat": {
+      "id": "blood-angels-ability-an-honourable-death-in-combat",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "An Honourable Death in Combat"
+      },
+      "summary": {
+        "en": "Each time a model in this unit makes an attack, that attack has the [SUSTAINED HITS 1] ability if this unit is below its Starting Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength."
+      },
+      "definition": {
+        "en": "Each time a model in this unit makes an attack, that attack has the [SUSTAINED HITS 1] ability if this unit is below its Starting Strength, or the [SUSTAINED HITS 2] ability if this unit is Below Half-strength."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-marines"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-marines",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-angelic-visage": {
+      "id": "blood-angels-ability-angelic-visage",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Angelic Visage"
+      },
+      "summary": {
+        "en": "Each time a melee attack targets this unit, subtract 1 from the Hit roll"
+      },
+      "definition": {
+        "en": "Each time a melee attack targets this unit, subtract 1 from the Hit roll"
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-sanguinary-guard"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-sanguinary-guard",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-aura-of-fervour-aura": {
+      "id": "blood-angels-ability-aura-of-fervour-aura",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Aura of Fervour (Aura)"
+      },
+      "summary": {
+        "en": "While a friendly Adeptus Astartes unit is within 6\" of this model, you can re-roll Battle-shock and Leadership tests taken for that unit"
+      },
+      "definition": {
+        "en": "While a friendly Adeptus Astartes unit is within 6\" of this model, you can re-roll Battle-shock and Leadership tests taken for that unit"
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-the-sanguinor"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-the-sanguinor",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-black-rage": {
+      "id": "blood-angels-ability-black-rage",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Black Rage"
+      },
+      "summary": {
+        "en": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its…"
+      },
+      "definition": {
+        "en": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-captain"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-captain",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-blood-chalice": {
+      "id": "blood-angels-ability-blood-chalice",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Blood Chalice"
+      },
+      "summary": {
+        "en": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
+      },
+      "definition": {
+        "en": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-sanguinary-priest"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-sanguinary-priest",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-damaged-1-4-wounds-remaining": {
+      "id": "blood-angels-ability-damaged-1-4-wounds-remaining",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Damaged: 1-4 Wounds Remaining"
+      },
+      "summary": {
+        "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+      },
+      "definition": {
+        "en": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-baal-predator"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-baal-predator",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-death-mask-of-sanguinius": {
+      "id": "blood-angels-ability-death-mask-of-sanguinius",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Death Mask of Sanguinius"
+      },
+      "summary": {
+        "en": "At the start of the Fight phase, each enemy unit within 6\" of this model must take a Battle-shock test, subtracting 1 from that test when they do"
+      },
+      "definition": {
+        "en": "At the start of the Fight phase, each enemy unit within 6\" of this model must take a Battle-shock test, subtracting 1 from that test when they do"
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-commander-dante"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-commander-dante",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-death-vision-of-sanguinius": {
+      "id": "blood-angels-ability-death-vision-of-sanguinius",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Death Vision of Sanguinius"
+      },
+      "summary": {
+        "en": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 to the result if the attacking unit contains the enemy Warlord. On a 2-3, that enemy unit suffers D3 mortal wounds;…"
+      },
+      "definition": {
+        "en": "If this model is destroyed by a melee attack, after the attacking unit has finished making its attacks, you can roll one D6, adding 2 to the result if the attacking unit contains the enemy Warlord. On a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6+ that enemy unit suffers D3+3 mortal wounds."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-captain"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-captain",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-driven-by-fury": {
+      "id": "blood-angels-ability-driven-by-fury",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Driven by Fury"
+      },
+      "summary": {
+        "en": "Each time an enemy unit targets this unit, after that unit has finished making its attacks, if this unit lost one or more wounds as a result of those attacks, this unit can make a Normal move of up to 3\\\"."
+      },
+      "definition": {
+        "en": "Each time an enemy unit targets this unit, after that unit has finished making its attacks, if this unit lost one or more wounds as a result of those attacks, this unit can make a Normal move of up to 3\\\"."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-dreadnought"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-dreadnought",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-finest-hour": {
+      "id": "blood-angels-ability-finest-hour",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Finest Hour"
+      },
+      "summary": {
+        "en": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability."
+      },
+      "definition": {
+        "en": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-blood-angels-captain"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-blood-angels-captain",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-forlorn-hero": {
+      "id": "blood-angels-ability-forlorn-hero",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Forlorn Hero"
+      },
+      "summary": {
+        "en": "While this model is leading a unit, unless that unit starts the battle embarked within a Transport, models in that unit have the Scouts 6\" ability"
+      },
+      "definition": {
+        "en": "While this model is leading a unit, unless that unit starts the battle embarked within a Transport, models in that unit have the Scouts 6\" ability"
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-captain"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-captain",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-fury-unbound": {
+      "id": "blood-angels-ability-fury-unbound",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Fury Unbound"
+      },
+      "summary": {
+        "en": "While this model is leading a unit, melee weapons equipped by models in that unit have the [LETHAL HITS] ability."
+      },
+      "definition": {
+        "en": "While this model is leading a unit, melee weapons equipped by models in that unit have the [LETHAL HITS] ability."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-lemartes"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-lemartes",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-guardian-of-the-lost": {
+      "id": "blood-angels-ability-guardian-of-the-lost",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Guardian of the Lost"
+      },
+      "summary": {
+        "en": "While this model is leading a unit, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack."
+      },
+      "definition": {
+        "en": "While this model is leading a unit, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-lemartes"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-lemartes",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-heirs-of-azkaellon": {
+      "id": "blood-angels-ability-heirs-of-azkaellon",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Heirs of Azkaellon"
+      },
+      "summary": {
+        "en": "While a Character model is leading this unit, each time a melee attack targets this unit, subtract 1 from the Wound roll."
+      },
+      "definition": {
+        "en": "While a Character model is leading this unit, each time a melee attack targets this unit, subtract 1 from the Wound roll."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-sanguinary-guard"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-sanguinary-guard",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-lord-regent-of-the-imperium-nihilus": {
+      "id": "blood-angels-ability-lord-regent-of-the-imperium-nihilus",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Lord Regent of the Imperium Nihilus"
+      },
+      "summary": {
+        "en": "While this model is leading a unit, add 1 to Advance and Charge rolls made for that unit and each time a model in that unit makes an attack, add 1 to the Hit roll."
+      },
+      "definition": {
+        "en": "While this model is leading a unit, add 1 to Advance and Charge rolls made for that unit and each time a model in that unit makes an attack, add 1 to the Hit roll."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-commander-dante"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-commander-dante",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-lost-to-fury": {
+      "id": "blood-angels-ability-lost-to-fury",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Lost to Fury"
+      },
+      "summary": {
+        "en": "When this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability"
+      },
+      "definition": {
+        "en": "When this model is leading a unit, melee weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability"
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-captain-with-jump-pack"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-captain-with-jump-pack",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-mass-of-doom": {
+      "id": "blood-angels-ability-mass-of-doom",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Mass of Doom"
+      },
+      "summary": {
+        "en": "Each time this model’s unit makes a Charge move, until the end of the turn, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability."
+      },
+      "definition": {
+        "en": "Each time this model’s unit makes a Charge move, until the end of the turn, melee weapons equipped by models in that unit have the [DEVASTATING WOUNDS] ability."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-astorath"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-astorath",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-miraculous-saviour": {
+      "id": "blood-angels-ability-miraculous-saviour",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Miraculous Saviour"
+      },
+      "summary": {
+        "en": "Once per battle, in your opponent's Charge phase, after an enemy unit has finished a Charge move, if this model is still in Reserves, it can use this ability.…"
+      },
+      "definition": {
+        "en": "Once per battle, in your opponent's Charge phase, after an enemy unit has finished a Charge move, if this model is still in Reserves, it can use this ability. If it does, set this model up on the battlefield within Engagement Range of that enemy unit and more than 3\\\" horizontally away from all other enemy units."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-the-sanguinor"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-the-sanguinor",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-overcharged-engines": {
+      "id": "blood-angels-ability-overcharged-engines",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Overcharged Engines"
+      },
+      "summary": {
+        "en": "You can re-roll Advance rolls made for this model."
+      },
+      "definition": {
+        "en": "You can re-roll Advance rolls made for this model."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-baal-predator"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-baal-predator",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-redeemer-of-the-lost": {
+      "id": "blood-angels-ability-redeemer-of-the-lost",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Redeemer of the Lost"
+      },
+      "summary": {
+        "en": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play;…"
+      },
+      "definition": {
+        "en": "While this model is leading a unit, each time a model in that unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-astorath"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-astorath",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-rites-of-battle": {
+      "id": "blood-angels-ability-rites-of-battle",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Rites of Battle"
+      },
+      "summary": {
+        "en": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+      },
+      "definition": {
+        "en": "Once per battle round, one unit from your army with this ability can use it when its unit is targeted with a Stratagem. If it does, reduce the CP cost of that use of that Stratagem by 1CP."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-blood-angels-captain"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-blood-angels-captain",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-sanguinary-banner": {
+      "id": "blood-angels-ability-sanguinary-banner",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Sanguinary Banner"
+      },
+      "summary": {
+        "en": "Add 1 to the Objective Control characteristic of models in the bearer’s unit."
+      },
+      "definition": {
+        "en": "Add 1 to the Objective Control characteristic of models in the bearer’s unit."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-sanguinary-guard"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-sanguinary-guard",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-sanguinary-priest": {
+      "id": "blood-angels-ability-sanguinary-priest",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Sanguinary Priest"
+      },
+      "summary": {
+        "en": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability"
+      },
+      "definition": {
+        "en": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability"
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-sanguinary-priest"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-sanguinary-priest",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-savage-fury": {
+      "id": "blood-angels-ability-savage-fury",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Savage Fury"
+      },
+      "summary": {
+        "en": "You can re-roll Charge rolls made for this unit."
+      },
+      "definition": {
+        "en": "You can re-roll Charge rolls made for this unit."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-marines-with-jump-packs"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-marines-with-jump-packs",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-the-quickening-psychic": {
+      "id": "blood-angels-ability-the-quickening-psychic",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "The Quickening [Psychic]"
+      },
+      "summary": {
+        "en": "This model is eligible to declare a charge in a turn which it Advanced."
+      },
+      "definition": {
+        "en": "This model is eligible to declare a charge in a turn which it Advanced."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-chief-librarian-mephiston"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-chief-librarian-mephiston",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-transfixing-gaze-aura-psychic": {
+      "id": "blood-angels-ability-transfixing-gaze-aura-psychic",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Transfixing Gaze [Aura, Psychic]"
+      },
+      "summary": {
+        "en": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead."
+      },
+      "definition": {
+        "en": "While an enemy unit is within 6\" of this model, each time that unit is selected to Fall Back, it must take a Leadership test. If that test is failed, that unit must Remain Stationary this phase instead."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-chief-librarian-mephiston"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-chief-librarian-mephiston",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-ability-visions-of-heresy": {
+      "id": "blood-angels-ability-visions-of-heresy",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Visions of Heresy"
+      },
+      "summary": {
+        "en": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\\\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\\\"."
+      },
+      "definition": {
+        "en": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\\\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\\\"."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-marines-with-bolt-rifles"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-marines-with-bolt-rifles",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-army-rule-the-sons-of-sanguinius": {
+      "id": "blood-angels-army-rule-the-sons-of-sanguinius",
+      "kind": "datasheet-ability",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "The Sons of Sanguinius"
+      },
+      "summary": {
+        "en": "If an ADEPTUS ASTARTES unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that unit's Chapter. You cannot include units from more than one Chapter in your army.…"
+      },
+      "definition": {
+        "en": "If an ADEPTUS ASTARTES unit has a second Faction keyword on its datasheet, that Faction keyword is the name of that unit's Chapter. You cannot include units from more than one Chapter in your army. The rules in this book can also represent a Blood Angels successor Chapter, but BLOOD ANGELS EPIC HEROES represent the First Founding Chapter itself."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "army-rule-the-sons-of-sanguinius"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#army-rule-the-sons-of-sanguinius",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-detachment-rule-a-noble-death-in-combat": {
+      "id": "blood-angels-detachment-rule-a-noble-death-in-combat",
+      "kind": "detachment-rule",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "A Noble Death in Combat"
+      },
+      "summary": {
+        "en": "Each time a DEATH COMPANY model from your army makes a melee attack, re-roll a Wound roll of 1 if that model's unit is below its Starting Strength; if that model's unit is Below Half-strength, you can re-roll the Wound roll instead."
+      },
+      "definition": {
+        "en": "Each time a DEATH COMPANY model from your army makes a melee attack, re-roll a Wound roll of 1 if that model's unit is below its Starting Strength; if that model's unit is Below Half-strength, you can re-roll the Wound roll instead."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-lost-brethren"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-lost-brethren",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-detachment-rule-fanatical-celerity": {
+      "id": "blood-angels-detachment-rule-fanatical-celerity",
+      "kind": "detachment-rule",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Fanatical Celerity"
+      },
+      "summary": {
+        "en": "The madness of the Black Rage burns through the mind of the Lost Brethren with a speed and ferocity matched by the warriors in battle.…"
+      },
+      "definition": {
+        "en": "The madness of the Black Rage burns through the mind of the Lost Brethren with a speed and ferocity matched by the warriors in battle. Swept up in visions of the Primarch’s darkest days of wing‑swift fury, they push their bodies past their limits in efforts to emulate his rapid wrath. When a friendly DEATH COMPANY unit is selected to make an advance move, you can use this ability. If you do: • That unit suffers D3+1 mortal wounds. • That move does not prevent that unit from being eligible to declare a charge. This detachment has the DOOMED tag and cannot be taken with another DOOMED detachment. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-wrath-of-the-doomed"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-wrath-of-the-doomed",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-detachment-rule-legacy-of-the-angel": {
+      "id": "blood-angels-detachment-rule-legacy-of-the-angel",
+      "kind": "detachment-rule",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Legacy of the Angel"
+      },
+      "summary": {
+        "en": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds and led by their champions of noble bearing. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus.…"
+      },
+      "definition": {
+        "en": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds and led by their champions of noble bearing. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Friendly BLOOD ANGELS INFANTRY CHARACTER units (excluding COMMANDER DANTE units) have +1 to advance rolls and charge rolls. This detachment has the GRACE tag and cannot be taken with another GRACE detachment. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-legacy-of-grace"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-legacy-of-grace",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-detachment-rule-legacy-of-the-angel-2": {
+      "id": "blood-angels-detachment-rule-legacy-of-the-angel-2",
+      "kind": "detachment-rule",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Legacy of the Angel"
+      },
+      "summary": {
+        "en": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus.…"
+      },
+      "definition": {
+        "en": "Never do the Blood Angels stand taller or strive harder than when faced with seemingly impossible odds. At such times, the Sons of Sanguinius delve deep into their souls for preternatural reserves of determination, fury and focus. Sometimes, they even touch upon the uncertain gift of prophecy that was said to be their gene‑sire’s boon and his curse. At the start of the first battle round, select two of the Angelic Legacy abilities listed below. Until the end of the battle, those Angelic Legacy abilities are active and their effects apply to all Adeptus Astartes Character units from your army. Sanguinary Grace: This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Carmine Wrath: Each time a model in this unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1. Their Appointed Hour: You can re‑roll Advance and Charge rolls made for this unit. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-angelic-inheritors"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-angelic-inheritors",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-detachment-rule-maddened-ferocity": {
+      "id": "blood-angels-detachment-rule-maddened-ferocity",
+      "kind": "detachment-rule",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Maddened Ferocity"
+      },
+      "summary": {
+        "en": "With every passing moment, every savage wounding and crunching blow, the Red Thirst takes a firmer grip upon the Blood Angels. As their control slips, so near‑animalistic rage takes its place.…"
+      },
+      "definition": {
+        "en": "With every passing moment, every savage wounding and crunching blow, the Red Thirst takes a firmer grip upon the Blood Angels. As their control slips, so near‑animalistic rage takes its place. The foe will not live long enough to regret their error in goading the beast which lurks within every gene‑son of Sanguinius. Each time an Adeptus Astartes model from your army makes a melee attack, re‑roll a Wound roll of 1. Each time an Adeptus Astartes unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. If your unit is Battle‑shocked, add 2 to the Attacks characteristic of melee weapons equipped by models in that unit instead. RESTRICTIONS Your army can include Blood Angels units, but it cannot include Adeptus Astartes units drawn from any other Chapter."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-rage-cursed-onslaught"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-rage-cursed-onslaught",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-detachment-rule-red-thirst": {
+      "id": "blood-angels-detachment-rule-red-thirst",
+      "kind": "detachment-rule",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Red Thirst"
+      },
+      "summary": {
+        "en": "Each time an ADEPTUS ASTARTES unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic and add 2 to the Strength characteristic of melee weapons equipped by models in that unit."
+      },
+      "definition": {
+        "en": "Each time an ADEPTUS ASTARTES unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic and add 2 to the Strength characteristic of melee weapons equipped by models in that unit."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-liberator-assault-group"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-liberator-assault-group",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-detachment-rule-upon-wings-of-fire": {
+      "id": "blood-angels-detachment-rule-upon-wings-of-fire",
+      "kind": "detachment-rule",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Upon Wings of Fire"
+      },
+      "summary": {
+        "en": "At the end of your opponent's turn, select up to 1, 2 or 3 ADEPTUS ASTARTES JUMP PACK units in Incursion, Strike Force or Onslaught battles respectively (excluding engaged units). Place them in Strategic Reserves;…"
+      },
+      "definition": {
+        "en": "At the end of your opponent's turn, select up to 1, 2 or 3 ADEPTUS ASTARTES JUMP PACK units in Incursion, Strike Force or Onslaught battles respectively (excluding engaged units). Place them in Strategic Reserves; they must make an ingress move in your next Movement phase, including in your first turn."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-angelic-host"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-angelic-host",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-detachment-rule-wrath-of-angels": {
+      "id": "blood-angels-detachment-rule-wrath-of-angels",
+      "kind": "detachment-rule",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Wrath of Angels"
+      },
+      "summary": {
+        "en": "Few living warriors embody the ideal of the Emperor’s wrathful angels more than the Sanguinary Guard, for they appear without warning to wreak death and destruction before surging on to the next foe with shocking speed.…"
+      },
+      "definition": {
+        "en": "Few living warriors embody the ideal of the Emperor’s wrathful angels more than the Sanguinary Guard, for they appear without warning to wreak death and destruction before surging on to the next foe with shocking speed. When a friendly SANGUINARY GUARD unit is selected to make a fall‑back move, that move does not prevent that unit from being eligible to shoot/eligible to declare a charge. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-encarmine-speartip"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-encarmine-speartip",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-angelic-executioner": {
+      "id": "blood-angels-enhancement-angelic-executioner",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Angelic Executioner"
+      },
+      "summary": {
+        "en": "This deadly duellist leads his battle‑brothers in masterful strikes capable of carving through their armoured or swarming foes with breathtaking fluidity. ADEPTUS ASTARTES JUMP PACK model only. When this unit is selected to fight, this unit’s melee attacks have:…"
+      },
+      "definition": {
+        "en": "This deadly duellist leads his battle‑brothers in masterful strikes capable of carving through their armoured or swarming foes with breathtaking fluidity. ADEPTUS ASTARTES JUMP PACK model only. When this unit is selected to fight, this unit’s melee attacks have: • [LETHAL HITS]. • Or: [SUSTAINED HITS 1]."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-encarmine-speartip"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-encarmine-speartip",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-angels-fang": {
+      "id": "blood-angels-enhancement-angels-fang",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Angel's Fang"
+      },
+      "summary": {
+        "en": "This artificer ‑crafted weapon has a dark reputation amongst the Chapter. Yet none can deny its lethality, or its machine‑spirit’s desire to drink the blood of the mightiest foes. Adeptus Astartes model only.…"
+      },
+      "definition": {
+        "en": "This artificer ‑crafted weapon has a dark reputation amongst the Chapter. Yet none can deny its lethality, or its machine‑spirit’s desire to drink the blood of the mightiest foes. Adeptus Astartes model only. Each time the bearer makes a melee attack that targets a Character, Monster or Vehicle unit, that attack has the [SUSTAINED HITS 2] ability."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-rage-cursed-onslaught"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-rage-cursed-onslaught",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-archangels-shard": {
+      "id": "blood-angels-enhancement-archangels-shard",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Archangel's Shard"
+      },
+      "summary": {
+        "en": "ADEPTUS ASTARTES JUMP PACK model only. The bearer's melee weapons have [ANTI-CHAOS 5+] and [LANCE]."
+      },
+      "definition": {
+        "en": "ADEPTUS ASTARTES JUMP PACK model only. The bearer's melee weapons have [ANTI-CHAOS 5+] and [LANCE]."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-angelic-host"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-angelic-host",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-artisan-of-war": {
+      "id": "blood-angels-enhancement-artisan-of-war",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Artisan of War"
+      },
+      "summary": {
+        "en": "ADEPTUS ASTARTES JUMP PACK model only. Improve the Armour Penetration characteristic of the bearer's weapons by 1, and the bearer has a Save characteristic of 2+."
+      },
+      "definition": {
+        "en": "ADEPTUS ASTARTES JUMP PACK model only. Improve the Armour Penetration characteristic of the bearer's weapons by 1, and the bearer has a Save characteristic of 2+."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-angelic-host"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-angelic-host",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-aureole-of-the-angel": {
+      "id": "blood-angels-enhancement-aureole-of-the-angel",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Aureole of the Angel"
+      },
+      "summary": {
+        "en": "An echo of Sanguinius’ magnificence, this gilded halo casts an aura of shimmering and distorted energy spectra that thwarts attempts to pinpoint the bearer’s position. ADEPTUS ASTARTES model only. This unit has ‑3\" detection range."
+      },
+      "definition": {
+        "en": "An echo of Sanguinius’ magnificence, this gilded halo casts an aura of shimmering and distorted energy spectra that thwarts attempts to pinpoint the bearer’s position. ADEPTUS ASTARTES model only. This unit has ‑3\" detection range."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-legacy-of-grace"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-legacy-of-grace",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-blazing-icon": {
+      "id": "blood-angels-enhancement-blazing-icon",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Blazing Icon"
+      },
+      "summary": {
+        "en": "What was before merely a decorative blood drop pendant now shines with a seemingly miraculous light as bright as any star. The foe are forced to avert their gaze from its wrathful magnificence. Adeptus Astartes Infantry model only.…"
+      },
+      "definition": {
+        "en": "What was before merely a decorative blood drop pendant now shines with a seemingly miraculous light as bright as any star. The foe are forced to avert their gaze from its wrathful magnificence. Adeptus Astartes Infantry model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-angelic-inheritors"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-angelic-inheritors",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-blood-boil": {
+      "id": "blood-angels-enhancement-blood-boil",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Blood Boil"
+      },
+      "summary": {
+        "en": "This psyker bears some of the most esoteric gifts granted by the blood of his Primarch, and his empyric powers surge with a vital potency capable of boiling the foe’s essence in their veins. ADEPTUS ASTARTES PSYKER model only. This model’s [PSYCHIC] attacks: • Have [ANTI:…"
+      },
+      "definition": {
+        "en": "This psyker bears some of the most esoteric gifts granted by the blood of his Primarch, and his empyric powers surge with a vital potency capable of boiling the foe’s essence in their veins. ADEPTUS ASTARTES PSYKER model only. This model’s [PSYCHIC] attacks: • Have [ANTI: non‑MONSTER/VEHICLE 5+]. • Can re‑roll damage rolls."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-legacy-of-grace"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-legacy-of-grace",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-blood-shard": {
+      "id": "blood-angels-enhancement-blood-shard",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Blood Shard"
+      },
+      "summary": {
+        "en": "DEATH COMPANY model only. The first time the bearer is destroyed, at the end of the phase, roll one D6: on a 2+, set the bearer back up as close as possible to where it was destroyed and not within Engagement Range of enemy units, with 3 wounds remaining."
+      },
+      "definition": {
+        "en": "DEATH COMPANY model only. The first time the bearer is destroyed, at the end of the phase, roll one D6: on a 2+, set the bearer back up as close as possible to where it was destroyed and not within Engagement Range of enemy units, with 3 wounds remaining."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-lost-brethren"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-lost-brethren",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-carmine-reliquary": {
+      "id": "blood-angels-enhancement-carmine-reliquary",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Carmine Reliquary"
+      },
+      "summary": {
+        "en": "This armoured casket contains the skull of a beloved Blood Angels Captain lost to the Black Rage. It is a potent talisman of unfaltering aggression. Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability.…"
+      },
+      "definition": {
+        "en": "This armoured casket contains the skull of a beloved Blood Angels Captain lost to the Black Rage. It is a potent talisman of unfaltering aggression. Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a Battle‑shock test for an Adeptus Astartes unit within 6\" of the bearer, you can re‑roll the result.."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-rage-cursed-onslaught"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-rage-cursed-onslaught",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-gift-of-foresight": {
+      "id": "blood-angels-enhancement-gift-of-foresight",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Gift of Foresight"
+      },
+      "summary": {
+        "en": "ADEPTUS ASTARTES model only. Once per battle round, just after making a Hit roll, a Wound roll or a saving throw for the bearer, you can treat the result as an unmodified roll of 6 instead."
+      },
+      "definition": {
+        "en": "ADEPTUS ASTARTES model only. Once per battle round, just after making a Hit roll, a Wound roll or a saving throw for the bearer, you can treat the result as an unmodified roll of 6 instead."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-liberator-assault-group"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-liberator-assault-group",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-gleaming-pinions": {
+      "id": "blood-angels-enhancement-gleaming-pinions",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Gleaming Pinions"
+      },
+      "summary": {
+        "en": "ADEPTUS ASTARTES JUMP PACK model only. In your opponent's Movement phase, if an enemy unit ends a move within 8\\\" of this unit and this unit is unengaged, this unit can make a Normal move of up to 6\\\"."
+      },
+      "definition": {
+        "en": "ADEPTUS ASTARTES JUMP PACK model only. In your opponent's Movement phase, if an enemy unit ends a move within 8\\\" of this unit and this unit is unengaged, this unit can make a Normal move of up to 6\\\"."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-angelic-host"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-angelic-host",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-icon-of-the-angel": {
+      "id": "blood-angels-enhancement-icon-of-the-angel",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Icon of the Angel"
+      },
+      "summary": {
+        "en": "ADEPTUS ASTARTES model only. Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of the bearer's unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests as if their unit was Battle-shocked.…"
+      },
+      "definition": {
+        "en": "ADEPTUS ASTARTES model only. Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of the bearer's unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests as if their unit was Battle-shocked. If that enemy unit is also Battle-shocked, subtract 1 from each of those tests."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-liberator-assault-group"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-liberator-assault-group",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-instinctive-interception": {
+      "id": "blood-angels-enhancement-instinctive-interception",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Instinctive Interception"
+      },
+      "summary": {
+        "en": "Proudly is Sanguinius remembered for his rapid intercession in the protection of his gene‑sons. Driven on by deathly visions, this lost warrior is a tragic monument to such glory. DEATH COMPANY model only.…"
+      },
+      "definition": {
+        "en": "Proudly is Sanguinius remembered for his rapid intercession in the protection of his gene‑sons. Driven on by deathly visions, this lost warrior is a tragic monument to such glory. DEATH COMPANY model only. When you target this unit with the Heroic Intervention stratagem, that use is ‑1 CP."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-wrath-of-the-doomed"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-wrath-of-the-doomed",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-master-of-the-red-thirst": {
+      "id": "blood-angels-enhancement-master-of-the-red-thirst",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Master of the Red Thirst"
+      },
+      "summary": {
+        "en": "Long practice has allowed this champion to gain a modicum of focus and control over their Red Thirst – wisdom they pass on in the heat of battle. Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement.…"
+      },
+      "definition": {
+        "en": "Long practice has allowed this champion to gain a modicum of focus and control over their Red Thirst – wisdom they pass on in the heat of battle. Adeptus Astartes model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-rage-cursed-onslaught"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-rage-cursed-onslaught",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-on-the-archtraitors-bridge": {
+      "id": "blood-angels-enhancement-on-the-archtraitors-bridge",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "On the Archtraitor's Bridge"
+      },
+      "summary": {
+        "en": "Lost to a memory shard of the Primarch, in this warrior’s mind, he has entered the Archtraitor’s sanctum, and all that stands between him and Horus is a host of massing traitors. DEATH COMPANY model only. This model’s melee attacks have +2 A."
+      },
+      "definition": {
+        "en": "Lost to a memory shard of the Primarch, in this warrior’s mind, he has entered the Archtraitor’s sanctum, and all that stands between him and Horus is a host of massing traitors. DEATH COMPANY model only. This model’s melee attacks have +2 A."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-wrath-of-the-doomed"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-wrath-of-the-doomed",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-ordained-sacrifice": {
+      "id": "blood-angels-enhancement-ordained-sacrifice",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Ordained Sacrifice"
+      },
+      "summary": {
+        "en": "Knowing only too well the desperate and vital nature of the battle before him, this scion of Sanguinius echoes his Primarch’s resolute determination to fight on even beyond what seems the doors of certain death. Adeptus Astartes model only.…"
+      },
+      "definition": {
+        "en": "Knowing only too well the desperate and vital nature of the battle before him, this scion of Sanguinius echoes his Primarch’s resolute determination to fight on even beyond what seems the doors of certain death. Adeptus Astartes model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6: ■ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-angelic-inheritors"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-angelic-inheritors",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-prescient-flash": {
+      "id": "blood-angels-enhancement-prescient-flash",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Prescient Flash"
+      },
+      "summary": {
+        "en": "A flash of foresight and clarity sings through this warrior’s blood and guides his steps into battle. Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability."
+      },
+      "definition": {
+        "en": "A flash of foresight and clarity sings through this warrior’s blood and guides his steps into battle. Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-angelic-inheritors"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-angelic-inheritors",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-rage-fuelled-warrior": {
+      "id": "blood-angels-enhancement-rage-fuelled-warrior",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Rage-fuelled Warrior"
+      },
+      "summary": {
+        "en": "ADEPTUS ASTARTES model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer's melee weapons have the [SUSTAINED HITS 3] ability."
+      },
+      "definition": {
+        "en": "ADEPTUS ASTARTES model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, the bearer's melee weapons have the [SUSTAINED HITS 3] ability."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-liberator-assault-group"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-liberator-assault-group",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-sanguinary-tear-aura": {
+      "id": "blood-angels-enhancement-sanguinary-tear-aura",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Sanguinary Tear (Aura)"
+      },
+      "summary": {
+        "en": "Legend has it that the blood‑red stone set into this relic houses a teardrop shed by the Primarch himself. Those lost to the Black Rage seem to fight all the more furiously in its presence. Adeptus Astartes model only.…"
+      },
+      "definition": {
+        "en": "Legend has it that the blood‑red stone set into this relic houses a teardrop shed by the Primarch himself. Those lost to the Black Rage seem to fight all the more furiously in its presence. Adeptus Astartes model only. While a friendly Death Company unit is within 6\" of the bearer, add 1 to the Strength characteristic of weapons equipped by models in that unit."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-rage-cursed-onslaught"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-rage-cursed-onslaught",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-sanguinius-grace": {
+      "id": "blood-angels-enhancement-sanguinius-grace",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Sanguinius' Grace"
+      },
+      "summary": {
+        "en": "DEATH COMPANY model only. Once per battle, at the end of the Fight phase, if the bearer is within Engagement Range of three or more enemy models, the bearer can fight one additional time."
+      },
+      "definition": {
+        "en": "DEATH COMPANY model only. Once per battle, at the end of the Fight phase, if the bearer is within Engagement Range of three or more enemy models, the bearer can fight one additional time."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-lost-brethren"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-lost-brethren",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-shadow-of-abomination": {
+      "id": "blood-angels-enhancement-shadow-of-abomination",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Shadow of Abomination"
+      },
+      "summary": {
+        "en": "Granted a glimmer of foresight by his genetic inheritance, this Son of Sanguinius has identified a foe whose future is drenched in the blood of the Imperium. Such an enemy cannot be allowed to live. ADEPTUS ASTARTES JUMP PACK model only.…"
+      },
+      "definition": {
+        "en": "Granted a glimmer of foresight by his genetic inheritance, this Son of Sanguinius has identified a foe whose future is drenched in the blood of the Imperium. Such an enemy cannot be allowed to live. ADEPTUS ASTARTES JUMP PACK model only. (Once per battle, per army) When this unit is selected to fight you can use this ability. If you do, this model’s melee attacks have +1 D."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-encarmine-speartip"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-encarmine-speartip",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-speed-of-the-primarch": {
+      "id": "blood-angels-enhancement-speed-of-the-primarch",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Speed of the Primarch"
+      },
+      "summary": {
+        "en": "ADEPTUS ASTARTES model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Fights First ability."
+      },
+      "definition": {
+        "en": "ADEPTUS ASTARTES model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer's unit have the Fights First ability."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-liberator-assault-group"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-liberator-assault-group",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-to-slay-the-warmaster": {
+      "id": "blood-angels-enhancement-to-slay-the-warmaster",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "To Slay The Warmaster"
+      },
+      "summary": {
+        "en": "DEATH COMPANY model only. Once per battle, at the start of the Fight phase, if the bearer is within Engagement Range of an enemy CHARACTER unit, select one and roll six D6: for each 4+, one CHARACTER model in that unit suffers 1 mortal wound."
+      },
+      "definition": {
+        "en": "DEATH COMPANY model only. Once per battle, at the start of the Fight phase, if the bearer is within Engagement Range of an enemy CHARACTER unit, select one and roll six D6: for each 4+, one CHARACTER model in that unit suffers 1 mortal wound."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-lost-brethren"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-lost-brethren",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-troubling-visions": {
+      "id": "blood-angels-enhancement-troubling-visions",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Troubling Visions"
+      },
+      "summary": {
+        "en": "In the long run, these strange and intrusive visions of bloodshed bode terribly ill for this champion of the Blood Angels. In this instance, though, they bring him closer than ever to the glory of his gene‑sire. Adeptus Astartes model only.…"
+      },
+      "definition": {
+        "en": "In the long run, these strange and intrusive visions of bloodshed bode terribly ill for this champion of the Blood Angels. In this instance, though, they bring him closer than ever to the glory of his gene‑sire. Adeptus Astartes model only. Once per battle, in your Command phase, the bearer can use this Enhancement. When it does, until the start of your next Command phase, all Angelic Legacy abilities (see left) are active for the bearer’s unit, instead of only two of them."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-angelic-inheritors"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-angelic-inheritors",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-vengeful-onslaught": {
+      "id": "blood-angels-enhancement-vengeful-onslaught",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Vengeful Onslaught"
+      },
+      "summary": {
+        "en": "DEATH COMPANY model only. If the bearer is destroyed, until the end of your next turn, each time a friendly DEATH COMPANY model makes an attack, add 1 to the Hit roll."
+      },
+      "definition": {
+        "en": "DEATH COMPANY model only. If the bearer is destroyed, until the end of your next turn, each time a friendly DEATH COMPANY model makes an attack, add 1 to the Hit roll."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-lost-brethren"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-lost-brethren",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-enhancement-visage-of-death": {
+      "id": "blood-angels-enhancement-visage-of-death",
+      "kind": "enhancement",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Visage of Death"
+      },
+      "summary": {
+        "en": "ADEPTUS ASTARTES JUMP PACK model only. In the Battle-shock step of your opponent's Command phase, each enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of the bearer must take a Battle-shock test."
+      },
+      "definition": {
+        "en": "ADEPTUS ASTARTES JUMP PACK model only. In the Battle-shock step of your opponent's Command phase, each enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of the bearer must take a Battle-shock test."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-angelic-host"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-angelic-host",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-a-grim-warning": {
+      "id": "blood-angels-stratagem-a-grim-warning",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "A Grim Warning"
+      },
+      "summary": {
+        "en": "Any phase. One Blood Angel s unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.…"
+      },
+      "definition": {
+        "en": "Any phase. One Blood Angel s unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed. Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-rage-cursed-onslaught"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-rage-cursed-onslaught",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-aggressive-onslaught": {
+      "id": "blood-angels-stratagem-aggressive-onslaught",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Aggressive Onslaught"
+      },
+      "summary": {
+        "en": "Your Movement phase, just after an ADEPTUS ASTARTES unit from your army has Advanced. That ADEPTUS ASTARTES unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Advanced.…"
+      },
+      "definition": {
+        "en": "Your Movement phase, just after an ADEPTUS ASTARTES unit from your army has Advanced. That ADEPTUS ASTARTES unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Advanced. Alternatively, it becomes Battle-shocked and is eligible to do both."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-liberator-assault-group"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-liberator-assault-group",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-angelic-grace": {
+      "id": "blood-angels-stratagem-angelic-grace",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Angelic Grace"
+      },
+      "summary": {
+        "en": "Any phase, just after an ADEPTUS ASTARTES unit from your army has a mortal wound allocated to it. That ADEPTUS ASTARTES unit. Until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds."
+      },
+      "definition": {
+        "en": "Any phase, just after an ADEPTUS ASTARTES unit from your army has a mortal wound allocated to it. That ADEPTUS ASTARTES unit. Until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-liberator-assault-group"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-liberator-assault-group",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-angels-sacrifice": {
+      "id": "blood-angels-stratagem-angels-sacrifice",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Angel's Sacrifice"
+      },
+      "summary": {
+        "en": "Start of the Fight phase. One ADEPTUS ASTARTES JUMP PACK unit from your army. Until the end of the phase, each enemy model within Engagement Range of your unit must target your unit with all of its attacks."
+      },
+      "definition": {
+        "en": "Start of the Fight phase. One ADEPTUS ASTARTES JUMP PACK unit from your army. Until the end of the phase, each enemy model within Engagement Range of your unit must target your unit with all of its attacks."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-angelic-host"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-angelic-host",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-armour-of-contempt": {
+      "id": "blood-angels-stratagem-armour-of-contempt",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Armour of Contempt"
+      },
+      "summary": {
+        "en": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Adeptus Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks.…"
+      },
+      "definition": {
+        "en": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Adeptus Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-angelic-inheritors"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-angelic-inheritors",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-armour-of-contempt-2": {
+      "id": "blood-angels-stratagem-armour-of-contempt-2",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Armour of Contempt"
+      },
+      "summary": {
+        "en": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks.…"
+      },
+      "definition": {
+        "en": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit's attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-liberator-assault-group"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-liberator-assault-group",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-armour-of-contempt-3": {
+      "id": "blood-angels-stratagem-armour-of-contempt-3",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Armour of Contempt"
+      },
+      "summary": {
+        "en": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army selected as a target.…"
+      },
+      "definition": {
+        "en": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army selected as a target. Until the attacking unit has finished, worsen the Armour Penetration characteristic of attacks targeting your unit by 1."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-the-angelic-host"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-angelic-host",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-armour-of-contempt-4": {
+      "id": "blood-angels-stratagem-armour-of-contempt-4",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Armour of Contempt"
+      },
+      "summary": {
+        "en": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army that was selected as a target.…"
+      },
+      "definition": {
+        "en": "Your opponent's Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One ADEPTUS ASTARTES unit from your army that was selected as a target. Until the attacking unit has finished making its attacks, worsen the Armour Penetration characteristic of attacks targeting your unit by 1."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-the-lost-brethren"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-lost-brethren",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-aura-of-the-angels-grace": {
+      "id": "blood-angels-stratagem-aura-of-the-angels-grace",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Aura of the Angel's Grace"
+      },
+      "summary": {
+        "en": "Your opponent’s Shooting phase, when an enemy unit targets a friendly ADEPTUS ASTARTES CHARACTER unit. That CHARACTER unit. Your unit has 5+ InSv."
+      },
+      "definition": {
+        "en": "Your opponent’s Shooting phase, when an enemy unit targets a friendly ADEPTUS ASTARTES CHARACTER unit. That CHARACTER unit. Your unit has 5+ InSv."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-legacy-of-grace"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-legacy-of-grace",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-blinding-blurs-of-vengeance": {
+      "id": "blood-angels-stratagem-blinding-blurs-of-vengeance",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Blinding Blurs of Vengeance"
+      },
+      "summary": {
+        "en": "Your opponent’s Shooting phase, when an enemy unit targets a friendly SANGUINARY GUARD unit. That SANGUINARY GUARD unit. Your unit has Stealth."
+      },
+      "definition": {
+        "en": "Your opponent’s Shooting phase, when an enemy unit targets a friendly SANGUINARY GUARD unit. That SANGUINARY GUARD unit. Your unit has Stealth."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-encarmine-speartip"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-encarmine-speartip",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-death-begets-vengeance": {
+      "id": "blood-angels-stratagem-death-begets-vengeance",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Death Begets Vengeance"
+      },
+      "summary": {
+        "en": "Any phase, when a friendly DEATH COMPANY unit is destroyed by an enemy unit. That enemy unit. That enemy unit is hated until the end of the battle: • While a unit is hated, friendly DEATH COMPANY units’ attacks that target that unit have +1 to wound rolls."
+      },
+      "definition": {
+        "en": "Any phase, when a friendly DEATH COMPANY unit is destroyed by an enemy unit. That enemy unit. That enemy unit is hated until the end of the battle: • While a unit is hated, friendly DEATH COMPANY units’ attacks that target that unit have +1 to wound rolls."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-wrath-of-the-doomed"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-wrath-of-the-doomed",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-death-from-the-skies": {
+      "id": "blood-angels-stratagem-death-from-the-skies",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Death From The Skies"
+      },
+      "summary": {
+        "en": "Your Movement phase, just after an ADEPTUS ASTARTES JUMP PACK unit Advances or Falls Back. That ADEPTUS ASTARTES JUMP PACK unit. Until the end of the turn, your unit can shoot and declare a charge after Advancing or Falling Back."
+      },
+      "definition": {
+        "en": "Your Movement phase, just after an ADEPTUS ASTARTES JUMP PACK unit Advances or Falls Back. That ADEPTUS ASTARTES JUMP PACK unit. Until the end of the turn, your unit can shoot and declare a charge after Advancing or Falling Back."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-angelic-host"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-angelic-host",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-deathless-duty": {
+      "id": "blood-angels-stratagem-deathless-duty",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Deathless Duty"
+      },
+      "summary": {
+        "en": "Fight phase, just after an enemy unit has selected its targets. One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks.…"
+      },
+      "definition": {
+        "en": "Fight phase, just after an enemy unit has selected its targets. One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-rage-cursed-onslaught"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-rage-cursed-onslaught",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-descent-of-angels": {
+      "id": "blood-angels-stratagem-descent-of-angels",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Descent of Angels"
+      },
+      "summary": {
+        "en": "Your Movement phase. One ADEPTUS ASTARTES JUMP PACK unit arriving using Deep Strike. Your unit can be set up more than 6\\\" horizontally away from all enemy models. That unit is not eligible to declare a charge in the same turn."
+      },
+      "definition": {
+        "en": "Your Movement phase. One ADEPTUS ASTARTES JUMP PACK unit arriving using Deep Strike. Your unit can be set up more than 6\\\" horizontally away from all enemy models. That unit is not eligible to declare a charge in the same turn."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-angelic-host"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-angelic-host",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-final-retribution": {
+      "id": "blood-angels-stratagem-final-retribution",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Final Retribution"
+      },
+      "summary": {
+        "en": "Fight phase, just after an enemy unit has selected its targets. One DEATH COMPANY unit from your army selected as a target. Until the end of the phase, each time a model in your unit is destroyed before it has fought, roll one D6, adding 1 if within 12\\\" of a friendly CHAPLAIN;…"
+      },
+      "definition": {
+        "en": "Fight phase, just after an enemy unit has selected its targets. One DEATH COMPANY unit from your army selected as a target. Until the end of the phase, each time a model in your unit is destroyed before it has fought, roll one D6, adding 1 if within 12\\\" of a friendly CHAPLAIN; on a 4+, it can fight after the attacking unit has finished, then is removed."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-lost-brethren"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-lost-brethren",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-focused-fury": {
+      "id": "blood-angels-stratagem-focused-fury",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Focused Fury"
+      },
+      "summary": {
+        "en": "Fight phase. One Adeptus Astartes unit from your army that has not been selected to fight this phase. Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability.…"
+      },
+      "definition": {
+        "en": "Fight phase. One Adeptus Astartes unit from your army that has not been selected to fight this phase. Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability. If your unit is a Character unit, until the end of the phase, those weapons have the [LANCE] ability as well."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-angelic-inheritors"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-angelic-inheritors",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-furious-onslaught": {
+      "id": "blood-angels-stratagem-furious-onslaught",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Furious Onslaught"
+      },
+      "summary": {
+        "en": "Fight phase. One DEATH COMPANY unit from your army, just before it Piles-in. Until the end of the phase, Pile-in moves can be D3+3\\\"; if within 12\\\" of a friendly CHAPLAIN or below Starting Strength, they can be 6\\\" instead, subject to coherency and Engagement Range."
+      },
+      "definition": {
+        "en": "Fight phase. One DEATH COMPANY unit from your army, just before it Piles-in. Until the end of the phase, Pile-in moves can be D3+3\\\"; if within 12\\\" of a friendly CHAPLAIN or below Starting Strength, they can be 6\\\" instead, subject to coherency and Engagement Range."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-lost-brethren"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-lost-brethren",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-glorious-sacrifice": {
+      "id": "blood-angels-stratagem-glorious-sacrifice",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Glorious Sacrifice"
+      },
+      "summary": {
+        "en": "Any phase. One DEATH COMPANY unit from your army that was just destroyed while within range of an objective marker you controlled. That objective marker remains under your control until your opponent's Level of Control over it is greater than yours at the end of a phase."
+      },
+      "definition": {
+        "en": "Any phase. One DEATH COMPANY unit from your army that was just destroyed while within range of an objective marker you controlled. That objective marker remains under your control until your opponent's Level of Control over it is greater than yours at the end of a phase."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-lost-brethren"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-lost-brethren",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-in-the-shadow-of-great-wings": {
+      "id": "blood-angels-stratagem-in-the-shadow-of-great-wings",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "In the Shadow of Great Wings"
+      },
+      "summary": {
+        "en": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Adeptus Astartes Character unit from your army that was selected as the target of one or more of the attacking unit’s attacks.…"
+      },
+      "definition": {
+        "en": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Adeptus Astartes Character unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\"."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-angelic-inheritors"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-angelic-inheritors",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-inexorable-valour": {
+      "id": "blood-angels-stratagem-inexorable-valour",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Inexorable Valour"
+      },
+      "summary": {
+        "en": "Your opponent’s Movement phase, when an enemy unit that was engaged with a friendly SANGUINARY GUARD unit ends a fall‑back move, if that SANGUINARY GUARD unit is unengaged. That SANGUINARY GUARD unit. Your unit can make a normal move of up to D3+3\"."
+      },
+      "definition": {
+        "en": "Your opponent’s Movement phase, when an enemy unit that was engaged with a friendly SANGUINARY GUARD unit ends a fall‑back move, if that SANGUINARY GUARD unit is unengaged. That SANGUINARY GUARD unit. Your unit can make a normal move of up to D3+3\"."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-encarmine-speartip"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-encarmine-speartip",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-insensate-rampage": {
+      "id": "blood-angels-stratagem-insensate-rampage",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Insensate Rampage"
+      },
+      "summary": {
+        "en": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks.…"
+      },
+      "definition": {
+        "en": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Death Company unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, models in your unit have the Feel No Pain 5+ ability."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-rage-cursed-onslaught"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-rage-cursed-onslaught",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-instant-of-grace": {
+      "id": "blood-angels-stratagem-instant-of-grace",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Instant of Grace"
+      },
+      "summary": {
+        "en": "Your Command phase. One Adeptus Astartes Infantry unit from your army. Select one non-Character model in your unit. Until the start of your next Command phase, your model has the Character keyword. Designer’s Note:…"
+      },
+      "definition": {
+        "en": "Your Command phase. One Adeptus Astartes Infantry unit from your army. Select one non-Character model in your unit. Until the start of your next Command phase, your model has the Character keyword. Designer’s Note: While in effect, your model’s unit is therefore a Character unit, meaning it can interact with the Legacy of the Angel Detachment rule, in addition to other rules that interact with Character units."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-angelic-inheritors"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-angelic-inheritors",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-judgement-of-the-golden-host": {
+      "id": "blood-angels-stratagem-judgement-of-the-golden-host",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Judgement of the Golden Host"
+      },
+      "summary": {
+        "en": "Your Charge phase, when a friendly SANGUINARY GUARD unit from your army ends a charge move. That SANGUINARY GUARD unit. Select one enemy unit engaged with your unit. Roll one D6 for each model in your unit engaged with that enemy unit:…"
+      },
+      "definition": {
+        "en": "Your Charge phase, when a friendly SANGUINARY GUARD unit from your army ends a charge move. That SANGUINARY GUARD unit. Select one enemy unit engaged with your unit. Roll one D6 for each model in your unit engaged with that enemy unit: • For each 3+, that enemy unit suffers 1 mortal wound."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-encarmine-speartip"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-encarmine-speartip",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-limb-from-limb": {
+      "id": "blood-angels-stratagem-limb-from-limb",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Limb from Limb"
+      },
+      "summary": {
+        "en": "Fight phase. One Adeptus Astartes unit from your army that made a Charge move this turn. Select either the Strength or Armour Penetration characteristic of melee weapons equipped by models in your unit. Until the end of the phase, add 1 to the selected characteristic.…"
+      },
+      "definition": {
+        "en": "Fight phase. One Adeptus Astartes unit from your army that made a Charge move this turn. Select either the Strength or Armour Penetration characteristic of melee weapons equipped by models in your unit. Until the end of the phase, add 1 to the selected characteristic. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the phase, add 1 to the Strength and Armour Penetration characteristics of melee weapons equipped by models in your unit."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-rage-cursed-onslaught"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-rage-cursed-onslaught",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-lost-to-rage": {
+      "id": "blood-angels-stratagem-lost-to-rage",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Lost to Rage"
+      },
+      "summary": {
+        "en": "Fight phase. One DEATH COMPANY unit below Starting Strength that has not fought. Until the end of the phase, improve Attacks, Strength and Armour Penetration of melee weapons by 1; unless within 12\\\" of a friendly CHAPLAIN, those weapons also have [HAZARDOUS]."
+      },
+      "definition": {
+        "en": "Fight phase. One DEATH COMPANY unit below Starting Strength that has not fought. Until the end of the phase, improve Attacks, Strength and Armour Penetration of melee weapons by 1; unless within 12\\\" of a friendly CHAPLAIN, those weapons also have [HAZARDOUS]."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-lost-brethren"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-lost-brethren",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-martial-exemplars": {
+      "id": "blood-angels-stratagem-martial-exemplars",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Martial Exemplars"
+      },
+      "summary": {
+        "en": "Fight phase. One ADEPTUS ASTARTES JUMP PACK unit from your army that has not fought. Until the end of the phase, melee weapons equipped by models in your unit have [LETHAL HITS] and [PRECISION]."
+      },
+      "definition": {
+        "en": "Fight phase. One ADEPTUS ASTARTES JUMP PACK unit from your army that has not fought. Until the end of the phase, melee weapons equipped by models in your unit have [LETHAL HITS] and [PRECISION]."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-angelic-host"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-angelic-host",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-martial-paragon": {
+      "id": "blood-angels-stratagem-martial-paragon",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Martial Paragon"
+      },
+      "summary": {
+        "en": "Your Shooting phase or the Fight phase, when a friendly ADEPTUS ASTARTES CHARACTER unit is selected to attack. That ADEPTUS ASTARTES CHARACTER unit. Your unit’s attacks have: • [LETHAL HITS]. • OR: [SUSTAINED HITS 1]."
+      },
+      "definition": {
+        "en": "Your Shooting phase or the Fight phase, when a friendly ADEPTUS ASTARTES CHARACTER unit is selected to attack. That ADEPTUS ASTARTES CHARACTER unit. Your unit’s attacks have: • [LETHAL HITS]. • OR: [SUSTAINED HITS 1]."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-legacy-of-grace"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-legacy-of-grace",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-no-barrier-to-retribution": {
+      "id": "blood-angels-stratagem-no-barrier-to-retribution",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "No Barrier to Retribution"
+      },
+      "summary": {
+        "en": "Your Movement or your Charge phase, when a friendly DEATH COMPANY DREADNOUGHT unit is selected to make a normal/advance/ charge move. That DEATH COMPANY DREADNOUGHT unit. Your unit has MOBILE."
+      },
+      "definition": {
+        "en": "Your Movement or your Charge phase, when a friendly DEATH COMPANY DREADNOUGHT unit is selected to make a normal/advance/ charge move. That DEATH COMPANY DREADNOUGHT unit. Your unit has MOBILE."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-wrath-of-the-doomed"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-wrath-of-the-doomed",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-rage-fuelled-response": {
+      "id": "blood-angels-stratagem-rage-fuelled-response",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Rage-fuelled Response"
+      },
+      "summary": {
+        "en": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly unengaged DEATH COMPANY unit has shot. That DEATH COMPANY unit. Your unit can make a surge move of up to D6\"."
+      },
+      "definition": {
+        "en": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly unengaged DEATH COMPANY unit has shot. That DEATH COMPANY unit. Your unit can make a surge move of up to D6\"."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-wrath-of-the-doomed"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-wrath-of-the-doomed",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-red-rampage": {
+      "id": "blood-angels-stratagem-red-rampage",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Red Rampage"
+      },
+      "summary": {
+        "en": "Fight phase. One ADEPTUS ASTARTES unit from your army that has not been selected to fight this phase. Select [LANCE] or [LETHAL HITS]; melee weapons equipped by models in your unit have that ability until the end of the phase.…"
+      },
+      "definition": {
+        "en": "Fight phase. One ADEPTUS ASTARTES unit from your army that has not been selected to fight this phase. Select [LANCE] or [LETHAL HITS]; melee weapons equipped by models in your unit have that ability until the end of the phase. Alternatively, your unit becomes Battle-shocked and gains both."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-liberator-assault-group"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-liberator-assault-group",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-red-wrath": {
+      "id": "blood-angels-stratagem-red-wrath",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Red Wrath"
+      },
+      "summary": {
+        "en": "Your Movement phase, just after an Adeptus Astartes unit from your army Advances. That Adeptus Astartes unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge in a turn in which it Advanced.…"
+      },
+      "definition": {
+        "en": "Your Movement phase, just after an Adeptus Astartes unit from your army Advances. That Adeptus Astartes unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge in a turn in which it Advanced. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-rage-cursed-onslaught"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-rage-cursed-onslaught",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-relentless-assault": {
+      "id": "blood-angels-stratagem-relentless-assault",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Relentless Assault"
+      },
+      "summary": {
+        "en": "Your Movement phase, just after an ADEPTUS ASTARTES unit from your army Falls Back. That ADEPTUS ASTARTES unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Fell Back.…"
+      },
+      "definition": {
+        "en": "Your Movement phase, just after an ADEPTUS ASTARTES unit from your army Falls Back. That ADEPTUS ASTARTES unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Fell Back. Alternatively, it becomes Battle-shocked and is eligible to do both."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-liberator-assault-group"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-liberator-assault-group",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-savage-echoes": {
+      "id": "blood-angels-stratagem-savage-echoes",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Savage Echoes"
+      },
+      "summary": {
+        "en": "Your opponent's Charge phase. One ADEPTUS ASTARTES unit from your army that was just charged by an enemy unit. Select either Strength or Attacks for melee weapons equipped by models in your unit; add 1 to the selected characteristic until the end of the turn.…"
+      },
+      "definition": {
+        "en": "Your opponent's Charge phase. One ADEPTUS ASTARTES unit from your army that was just charged by an enemy unit. Select either Strength or Attacks for melee weapons equipped by models in your unit; add 1 to the selected characteristic until the end of the turn. Alternatively, your unit becomes Battle-shocked and add 1 to both characteristics."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-liberator-assault-group"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-liberator-assault-group",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-soul-darkened-fury": {
+      "id": "blood-angels-stratagem-soul-darkened-fury",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Soul-darkened Fury"
+      },
+      "summary": {
+        "en": "Your opponent’s Movement phase, when an enemy unit is selected to make a fall‑back move, if that unit is engaged with a friendly ADEPTUS ASTARTES CHARACTER unit. That ADEPTUS ASTARTES CHARACTER unit.…"
+      },
+      "definition": {
+        "en": "Your opponent’s Movement phase, when an enemy unit is selected to make a fall‑back move, if that unit is engaged with a friendly ADEPTUS ASTARTES CHARACTER unit. That ADEPTUS ASTARTES CHARACTER unit. When an enemy unit engaged with your unit is selected to make a fall‑back move, that enemy unit must use the desperate escape mode, with ‑1 to those hazard rolls if that enemy unit is battle‑shocked."
+      },
+      "structured": {},
+      "presentation": "article",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-legacy-of-grace"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-legacy-of-grace",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-strike-now-for-glory": {
+      "id": "blood-angels-stratagem-strike-now-for-glory",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Strike Now for Glory"
+      },
+      "summary": {
+        "en": "Your Shooting phase. One Adeptus Astartes unit from your army that has not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability."
+      },
+      "definition": {
+        "en": "Your Shooting phase. One Adeptus Astartes unit from your army that has not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-angelic-inheritors"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-angelic-inheritors",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-unbridled-ardour": {
+      "id": "blood-angels-stratagem-unbridled-ardour",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Unbridled Ardour"
+      },
+      "summary": {
+        "en": "Any phase. One ADEPTUS ASTARTES unit from your army that was just destroyed. Until the end of the battle, each time a friendly SANGUINARY GUARD unit attacks the enemy unit that destroyed your unit, re-roll the Hit and Wound rolls."
+      },
+      "definition": {
+        "en": "Any phase. One ADEPTUS ASTARTES unit from your army that was just destroyed. Until the end of the battle, each time a friendly SANGUINARY GUARD unit attacks the enemy unit that destroyed your unit, re-roll the Hit and Wound rolls."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-angelic-host"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-angelic-host",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-unto-the-burning-skies": {
+      "id": "blood-angels-stratagem-unto-the-burning-skies",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Unto the Burning Skies"
+      },
+      "summary": {
+        "en": "End of your opponent’s Fight phase. One Adeptus Astartes Jump Pack unit from your army. You cannot target a unit that is within Engagement Range of one or more enemy units, unless it is The Sanguinor. Remove your unit from the battlefield and place it into Strategic Reserves."
+      },
+      "definition": {
+        "en": "End of your opponent’s Fight phase. One Adeptus Astartes Jump Pack unit from your army. You cannot target a unit that is within Engagement Range of one or more enemy units, unless it is The Sanguinor. Remove your unit from the battlefield and place it into Strategic Reserves."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-faction-pack",
+        "revision": "1.1",
+        "locator": "detachment-angelic-inheritors"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-angelic-inheritors",
+      "status": "verified",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-stratagem-wrathful-rampage": {
+      "id": "blood-angels-stratagem-wrathful-rampage",
+      "kind": "stratagem",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Wrathful Rampage"
+      },
+      "summary": {
+        "en": "Your Movement phase, just after a DEATH COMPANY unit Advances. That DEATH COMPANY unit. Until the end of the turn, your unit can declare a charge after Advancing. If within 12\\\" of a friendly CHAPLAIN or below Starting Strength, it can also shoot."
+      },
+      "definition": {
+        "en": "Your Movement phase, just after a DEATH COMPANY unit Advances. That DEATH COMPANY unit. Until the end of the turn, your unit can declare a charge after Advancing. If within 12\\\" of a friendly CHAPLAIN or below Starting Strength, it can also shoot."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "detachment-the-lost-brethren"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#detachment-the-lost-brethren",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-absolvor-bolt-pistol": {
+      "id": "blood-angels-weapon-absolvor-bolt-pistol",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Absolvor bolt pistol"
+      },
+      "summary": {
+        "en": "Ranged · 18\" · A 1 · BS 3+ · S 5 · AP -1 · D 2 · Pistol"
+      },
+      "definition": {
+        "en": "Ranged · 18\" · A 1 · BS 3+ · S 5 · AP -1 · D 2 · Pistol"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "18\"",
+          "A": "1",
+          "BS": "3+",
+          "S": "5",
+          "AP": "-1",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-sanguinary-priest"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-sanguinary-priest",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-absolvor-bolt-pistol-2": {
+      "id": "blood-angels-weapon-absolvor-bolt-pistol-2",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Absolvor Bolt Pistol"
+      },
+      "summary": {
+        "en": "Ranged · 18\" · A 1 · BS 2+ · S 5 · AP -1 · D 2 · Pistol"
+      },
+      "definition": {
+        "en": "Ranged · 18\" · A 1 · BS 2+ · S 5 · AP -1 · D 2 · Pistol"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "18\"",
+          "A": "1",
+          "BS": "2+",
+          "S": "5",
+          "AP": "-1",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-lemartes"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-lemartes",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-angelus-boltgun": {
+      "id": "blood-angels-weapon-angelus-boltgun",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Angelus Boltgun"
+      },
+      "summary": {
+        "en": "Ranged · 12\" · A 2 · BS 3+ · S 4 · AP 0 · D 1 · Pistol"
+      },
+      "definition": {
+        "en": "Ranged · 12\" · A 2 · BS 3+ · S 4 · AP 0 · D 1 · Pistol"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "12\"",
+          "A": "2",
+          "BS": "3+",
+          "S": "4",
+          "AP": "0",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-sanguinary-guard"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-sanguinary-guard",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-armoured-tracks": {
+      "id": "blood-angels-weapon-armoured-tracks",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Armoured Tracks"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 3 · WS 4+ · S 6 · AP 0 · D 1"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 3 · WS 4+ · S 6 · AP 0 · D 1"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "3",
+          "WS": "4+",
+          "S": "6",
+          "AP": "0",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-baal-predator"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-baal-predator",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-astartes-chainsword": {
+      "id": "blood-angels-weapon-astartes-chainsword",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Astartes Chainsword"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 7 · WS 2+ · S 4 · AP -1 · D 1"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 7 · WS 2+ · S 4 · AP -1 · D 1"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "7",
+          "WS": "2+",
+          "S": "4",
+          "AP": "-1",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-captain-with-jump-pack"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-captain-with-jump-pack",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-astartes-chainsword-2": {
+      "id": "blood-angels-weapon-astartes-chainsword-2",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Astartes Chainsword"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 5 · WS 3+ · S 4 · AP -1 · D 1"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 5 · WS 3+ · S 4 · AP -1 · D 1"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "5",
+          "WS": "3+",
+          "S": "4",
+          "AP": "-1",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-sanguinary-priest"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-sanguinary-priest",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-astartes-chainsword-3": {
+      "id": "blood-angels-weapon-astartes-chainsword-3",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Astartes Chainsword"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 4 · WS 3+ · S 4 · AP -1 · D 1"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 4 · WS 3+ · S 4 · AP -1 · D 1"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "4",
+          "WS": "3+",
+          "S": "4",
+          "AP": "-1",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-marines"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-marines",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-astartes-grenade-launcher-frag": {
+      "id": "blood-angels-weapon-astartes-grenade-launcher-frag",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Astartes Grenade Launcher - Frag"
+      },
+      "summary": {
+        "en": "Ranged · 24\" · A D3 · BS 3+ · S 4 · AP 0 · D 1 · Blast"
+      },
+      "definition": {
+        "en": "Ranged · 24\" · A D3 · BS 3+ · S 4 · AP 0 · D 1 · Blast"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "24\"",
+          "A": "D3",
+          "BS": "3+",
+          "S": "4",
+          "AP": "0",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-marines-with-bolt-rifles"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-marines-with-bolt-rifles",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-astartes-grenade-launcher-krak": {
+      "id": "blood-angels-weapon-astartes-grenade-launcher-krak",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Astartes Grenade Launcher - Krak"
+      },
+      "summary": {
+        "en": "Ranged · 24\" · A 1 · BS 3+ · S 9 · AP -2 · D D3"
+      },
+      "definition": {
+        "en": "Ranged · 24\" · A 1 · BS 3+ · S 9 · AP -2 · D D3"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "24\"",
+          "A": "1",
+          "BS": "3+",
+          "S": "9",
+          "AP": "-2",
+          "D": "D3"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-marines-with-bolt-rifles"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-marines-with-bolt-rifles",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-baal-flamestorm-cannon": {
+      "id": "blood-angels-weapon-baal-flamestorm-cannon",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Baal Flamestorm Cannon"
+      },
+      "summary": {
+        "en": "Ranged · 18\" · A D6+3 · BS N/A · S 6 · AP -2 · D 2 · Assault, Ignores Cover, Torrent"
+      },
+      "definition": {
+        "en": "Ranged · 18\" · A D6+3 · BS N/A · S 6 · AP -2 · D 2 · Assault, Ignores Cover, Torrent"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "18\"",
+          "A": "D6+3",
+          "BS": "N/A",
+          "S": "6",
+          "AP": "-2",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-baal-predator"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-baal-predator",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-blood-fist-bolt-rifles": {
+      "id": "blood-angels-weapon-blood-fist-bolt-rifles",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Blood Fist Bolt Rifles"
+      },
+      "summary": {
+        "en": "Ranged · 24\" · A 4 · BS 3+ · S 4 · AP -1 · D 1 · Twin-linked"
+      },
+      "definition": {
+        "en": "Ranged · 24\" · A 4 · BS 3+ · S 4 · AP -1 · D 1 · Twin-linked"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "24\"",
+          "A": "4",
+          "BS": "3+",
+          "S": "4",
+          "AP": "-1",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-dreadnought"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-dreadnought",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-blood-fists": {
+      "id": "blood-angels-weapon-blood-fists",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Blood Fists"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 6 · WS 3+ · S 12 · AP -2 · D 3 · Twin-linked"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 6 · WS 3+ · S 12 · AP -2 · D 3 · Twin-linked"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "6",
+          "WS": "3+",
+          "S": "12",
+          "AP": "-2",
+          "D": "3"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-dreadnought"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-dreadnought",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-blood-talons-strike": {
+      "id": "blood-angels-weapon-blood-talons-strike",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Blood Talons - Strike"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 6 · WS 3+ · S 12 · AP -2 · D 3 · Twin-linked"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 6 · WS 3+ · S 12 · AP -2 · D 3 · Twin-linked"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "6",
+          "WS": "3+",
+          "S": "12",
+          "AP": "-2",
+          "D": "3"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-dreadnought"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-dreadnought",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-blood-talons-sweep": {
+      "id": "blood-angels-weapon-blood-talons-sweep",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Blood Talons - Sweep"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 10 · WS 3+ · S 7 · AP -2 · D 1 · Twin-linked"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 10 · WS 3+ · S 7 · AP -2 · D 1 · Twin-linked"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "10",
+          "WS": "3+",
+          "S": "7",
+          "AP": "-2",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-dreadnought"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-dreadnought",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-bolt-pistol": {
+      "id": "blood-angels-weapon-bolt-pistol",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Bolt pistol"
+      },
+      "summary": {
+        "en": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Close-Quarters"
+      },
+      "definition": {
+        "en": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Close-Quarters"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "12\"",
+          "A": "1",
+          "BS": "3+",
+          "S": "4",
+          "AP": "0",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-marines-with-bolt-rifles"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-marines-with-bolt-rifles",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-bolt-rifle": {
+      "id": "blood-angels-weapon-bolt-rifle",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Bolt Rifle"
+      },
+      "summary": {
+        "en": "Ranged · 24\" · A 2 · BS 3+ · S 4 · AP -1 · D 1 · Assault, Heavy"
+      },
+      "definition": {
+        "en": "Ranged · 24\" · A 2 · BS 3+ · S 4 · AP -1 · D 1 · Assault, Heavy"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "24\"",
+          "A": "2",
+          "BS": "3+",
+          "S": "4",
+          "AP": "-1",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-marines-with-bolt-rifles"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-marines-with-bolt-rifles",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-close-combat-weapon": {
+      "id": "blood-angels-weapon-close-combat-weapon",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Close combat weapon"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 3 · WS 3+ · S 4 · AP 0 · D 1"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 3 · WS 3+ · S 4 · AP 0 · D 1"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "3",
+          "WS": "3+",
+          "S": "4",
+          "AP": "0",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-marines-with-bolt-rifles"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-marines-with-bolt-rifles",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-encarmine-blade": {
+      "id": "blood-angels-weapon-encarmine-blade",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Encarmine Blade"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 4 · WS 2+ · S 6 · AP -3 · D 2"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 4 · WS 2+ · S 6 · AP -3 · D 2"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "4",
+          "WS": "2+",
+          "S": "6",
+          "AP": "-3",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-sanguinary-guard"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-sanguinary-guard",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-encarmine-broadsword": {
+      "id": "blood-angels-weapon-encarmine-broadsword",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Encarmine Broadsword"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 8 · WS 2+ · S 6 · AP -3 · D 2 · Devastating Wounds"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 8 · WS 2+ · S 6 · AP -3 · D 2 · Devastating Wounds"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "8",
+          "WS": "2+",
+          "S": "6",
+          "AP": "-3",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-the-sanguinor"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-the-sanguinor",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-encarmine-spear": {
+      "id": "blood-angels-weapon-encarmine-spear",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Encarmine Spear"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 4 · WS 2+ · S 6 · AP -2 · D 2 · Lance"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 4 · WS 2+ · S 6 · AP -2 · D 2 · Lance"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "4",
+          "WS": "2+",
+          "S": "6",
+          "AP": "-2",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-sanguinary-guard"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-sanguinary-guard",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-eviscerator": {
+      "id": "blood-angels-weapon-eviscerator",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Eviscerator"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 3 · WS 4+ · S 7 · AP -2 · D 2 · Sustained Hits 1"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 3 · WS 4+ · S 7 · AP -2 · D 2 · Sustained Hits 1"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "3",
+          "WS": "4+",
+          "S": "7",
+          "AP": "-2",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-marines"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-marines",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-fury-of-the-ancients-focused-witchfire": {
+      "id": "blood-angels-weapon-fury-of-the-ancients-focused-witchfire",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Fury of the Ancients - Focused Witchfire"
+      },
+      "summary": {
+        "en": "Ranged · 18\" · A 3 · BS 2+ · S 5 · AP -2 · D D3 · Hazardous, Pistol, Psychic, Sustained Hits 3"
+      },
+      "definition": {
+        "en": "Ranged · 18\" · A 3 · BS 2+ · S 5 · AP -2 · D D3 · Hazardous, Pistol, Psychic, Sustained Hits 3"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "18\"",
+          "A": "3",
+          "BS": "2+",
+          "S": "5",
+          "AP": "-2",
+          "D": "D3"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-chief-librarian-mephiston"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-chief-librarian-mephiston",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-fury-of-the-ancients-witchfire": {
+      "id": "blood-angels-weapon-fury-of-the-ancients-witchfire",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Fury of the Ancients - Witchfire"
+      },
+      "summary": {
+        "en": "Ranged · 18\" · A 3 · BS 2+ · S 4 · AP -1 · D D3 · Pistol, Psychic, Sustained Hits 1"
+      },
+      "definition": {
+        "en": "Ranged · 18\" · A 3 · BS 2+ · S 4 · AP -1 · D D3 · Pistol, Psychic, Sustained Hits 1"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "18\"",
+          "A": "3",
+          "BS": "2+",
+          "S": "4",
+          "AP": "-1",
+          "D": "D3"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-chief-librarian-mephiston"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-chief-librarian-mephiston",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-hand-flamer": {
+      "id": "blood-angels-weapon-hand-flamer",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Hand flamer"
+      },
+      "summary": {
+        "en": "Ranged · 12\" · A D6 · BS N/A · S 3 · AP 0 · D 1 · Ignores Cover, Pistol, Torrent"
+      },
+      "definition": {
+        "en": "Ranged · 12\" · A D6 · BS N/A · S 3 · AP 0 · D 1 · Ignores Cover, Pistol, Torrent"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "12\"",
+          "A": "D6",
+          "BS": "N/A",
+          "S": "3",
+          "AP": "0",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-captain-with-jump-pack"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-captain-with-jump-pack",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-heavy-bolt-pistol": {
+      "id": "blood-angels-weapon-heavy-bolt-pistol",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Heavy Bolt Pistol"
+      },
+      "summary": {
+        "en": "Ranged · 18\" · A 1 · BS 2+ · S 4 · AP -1 · D 1 · Pistol"
+      },
+      "definition": {
+        "en": "Ranged · 18\" · A 1 · BS 2+ · S 4 · AP -1 · D 1 · Pistol"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "18\"",
+          "A": "1",
+          "BS": "2+",
+          "S": "4",
+          "AP": "-1",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-blood-angels-captain"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-blood-angels-captain",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-heavy-bolt-pistol-2": {
+      "id": "blood-angels-weapon-heavy-bolt-pistol-2",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Heavy Bolt Pistol"
+      },
+      "summary": {
+        "en": "Ranged · 18\" · A 1 · BS 2+ · S 4 · AP -1 · D 1"
+      },
+      "definition": {
+        "en": "Ranged · 18\" · A 1 · BS 2+ · S 4 · AP -1 · D 1"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "18\"",
+          "A": "1",
+          "BS": "2+",
+          "S": "4",
+          "AP": "-1",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-captain"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-captain",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-heavy-bolt-pistol-3": {
+      "id": "blood-angels-weapon-heavy-bolt-pistol-3",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Heavy Bolt Pistol"
+      },
+      "summary": {
+        "en": "Ranged · 18\" · A 1 · BS 3+ · S 4 · AP -1 · D 1 · Pistol"
+      },
+      "definition": {
+        "en": "Ranged · 18\" · A 1 · BS 3+ · S 4 · AP -1 · D 1 · Pistol"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "18\"",
+          "A": "1",
+          "BS": "3+",
+          "S": "4",
+          "AP": "-1",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-marines"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-marines",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-heavy-bolter": {
+      "id": "blood-angels-weapon-heavy-bolter",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Heavy Bolter"
+      },
+      "summary": {
+        "en": "Ranged · 36\" · A 3 · BS 3+ · S 5 · AP -1 · D 2 · Assault, Sustained Hits 1"
+      },
+      "definition": {
+        "en": "Ranged · 36\" · A 3 · BS 3+ · S 5 · AP -1 · D 2 · Assault, Sustained Hits 1"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "36\"",
+          "A": "3",
+          "BS": "3+",
+          "S": "5",
+          "AP": "-1",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-baal-predator"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-baal-predator",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-heavy-flamer": {
+      "id": "blood-angels-weapon-heavy-flamer",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Heavy Flamer"
+      },
+      "summary": {
+        "en": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP -1 · D 1 · Assault, Ignores Cover, Torrent"
+      },
+      "definition": {
+        "en": "Ranged · 12\" · A D6 · BS N/A · S 5 · AP -1 · D 1 · Assault, Ignores Cover, Torrent"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "12\"",
+          "A": "D6",
+          "BS": "N/A",
+          "S": "5",
+          "AP": "-1",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-baal-predator"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-baal-predator",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-hunter-killer-missile": {
+      "id": "blood-angels-weapon-hunter-killer-missile",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Hunter-killer missile"
+      },
+      "summary": {
+        "en": "Ranged · 48\" · A 1 · BS 2+ · S 14 · AP -3 · D D6 · One Shot"
+      },
+      "definition": {
+        "en": "Ranged · 48\" · A 1 · BS 2+ · S 14 · AP -3 · D D6 · One Shot"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "48\"",
+          "A": "1",
+          "BS": "2+",
+          "S": "14",
+          "AP": "-3",
+          "D": "D6"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-baal-predator"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-baal-predator",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-inferno-pistol": {
+      "id": "blood-angels-weapon-inferno-pistol",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Inferno pistol"
+      },
+      "summary": {
+        "en": "Ranged · 6\" · A 1 · BS 2+ · S 8 · AP -4 · D D3 · Melta 2, Pistol"
+      },
+      "definition": {
+        "en": "Ranged · 6\" · A 1 · BS 2+ · S 8 · AP -4 · D D3 · Melta 2, Pistol"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "6\"",
+          "A": "1",
+          "BS": "2+",
+          "S": "8",
+          "AP": "-4",
+          "D": "D3"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-blood-angels-captain"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-blood-angels-captain",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-inferno-pistol-2": {
+      "id": "blood-angels-weapon-inferno-pistol-2",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Inferno Pistol"
+      },
+      "summary": {
+        "en": "Ranged · 6\" · A 1 · BS 3+ · S 8 · AP -4 · D D3 · Melta 2, Pistol"
+      },
+      "definition": {
+        "en": "Ranged · 6\" · A 1 · BS 3+ · S 8 · AP -4 · D D3 · Melta 2, Pistol"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "6\"",
+          "A": "1",
+          "BS": "3+",
+          "S": "8",
+          "AP": "-4",
+          "D": "D3"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-marines"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-marines",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-master-crafted-chainsword": {
+      "id": "blood-angels-weapon-master-crafted-chainsword",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Master-crafted Chainsword"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 7 · WS 2+ · S 4 · AP -1 · D 2"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 7 · WS 2+ · S 4 · AP -1 · D 2"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "7",
+          "WS": "2+",
+          "S": "4",
+          "AP": "-1",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-blood-angels-captain"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-blood-angels-captain",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-perdition": {
+      "id": "blood-angels-weapon-perdition",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Perdition"
+      },
+      "summary": {
+        "en": "Ranged · 6\" · A 1 · BS 2+ · S 9 · AP -4 · D D6 · Melta 2, Pistol, Sustained Hits D3"
+      },
+      "definition": {
+        "en": "Ranged · 6\" · A 1 · BS 2+ · S 9 · AP -4 · D D6 · Melta 2, Pistol, Sustained Hits D3"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "6\"",
+          "A": "1",
+          "BS": "2+",
+          "S": "9",
+          "AP": "-4",
+          "D": "D6"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-commander-dante"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-commander-dante",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-plasma-pistol-standard": {
+      "id": "blood-angels-weapon-plasma-pistol-standard",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Plasma pistol - standard"
+      },
+      "summary": {
+        "en": "Ranged · 12\" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol"
+      },
+      "definition": {
+        "en": "Ranged · 12\" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "12\"",
+          "A": "1",
+          "BS": "3+",
+          "S": "7",
+          "AP": "-2",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-captain-with-jump-pack"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-captain-with-jump-pack",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-plasma-pistol-standard-2": {
+      "id": "blood-angels-weapon-plasma-pistol-standard-2",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Plasma pistol - standard"
+      },
+      "summary": {
+        "en": "Ranged · 12\" · A 1 · BS 2+ · S 7 · AP -2 · D 1 · Pistol"
+      },
+      "definition": {
+        "en": "Ranged · 12\" · A 1 · BS 2+ · S 7 · AP -2 · D 1 · Pistol"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "12\"",
+          "A": "1",
+          "BS": "2+",
+          "S": "7",
+          "AP": "-2",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-chief-librarian-mephiston"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-chief-librarian-mephiston",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-plasma-pistol-supercharge": {
+      "id": "blood-angels-weapon-plasma-pistol-supercharge",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Plasma pistol - supercharge"
+      },
+      "summary": {
+        "en": "Ranged · 12\" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol"
+      },
+      "definition": {
+        "en": "Ranged · 12\" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "12\"",
+          "A": "1",
+          "BS": "3+",
+          "S": "8",
+          "AP": "-3",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-captain-with-jump-pack"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-captain-with-jump-pack",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-plasma-pistol-supercharge-2": {
+      "id": "blood-angels-weapon-plasma-pistol-supercharge-2",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "➤ Plasma pistol - supercharge"
+      },
+      "summary": {
+        "en": "Ranged · 12\" · A 1 · BS 2+ · S 8 · AP -3 · D 2 · Hazardous, Pistol"
+      },
+      "definition": {
+        "en": "Ranged · 12\" · A 1 · BS 2+ · S 8 · AP -3 · D 2 · Hazardous, Pistol"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "12\"",
+          "A": "1",
+          "BS": "2+",
+          "S": "8",
+          "AP": "-3",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-chief-librarian-mephiston"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-chief-librarian-mephiston",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-power-fist": {
+      "id": "blood-angels-weapon-power-fist",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Power fist"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 5 · WS 2+ · S 8 · AP -2 · D 2"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 5 · WS 2+ · S 8 · AP -2 · D 2"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "5",
+          "WS": "2+",
+          "S": "8",
+          "AP": "-2",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-blood-angels-captain"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-blood-angels-captain",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-power-fist-2": {
+      "id": "blood-angels-weapon-power-fist-2",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Power fist"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 3 · WS 3+ · S 8 · AP -2 · D 2"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 3 · WS 3+ · S 8 · AP -2 · D 2"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "3",
+          "WS": "3+",
+          "S": "8",
+          "AP": "-2",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-marines"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-marines",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-power-weapon": {
+      "id": "blood-angels-weapon-power-weapon",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Power weapon"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 4 · WS 3+ · S 5 · AP -2 · D 1"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 4 · WS 3+ · S 5 · AP -2 · D 1"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "4",
+          "WS": "3+",
+          "S": "5",
+          "AP": "-2",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-marines"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-marines",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-relic-weapon": {
+      "id": "blood-angels-weapon-relic-weapon",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Relic Weapon"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 6 · WS 2+ · S 5 · AP -2 · D 2"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 6 · WS 2+ · S 5 · AP -2 · D 2"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "6",
+          "WS": "2+",
+          "S": "5",
+          "AP": "-2",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-blood-angels-captain"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-blood-angels-captain",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-storm-bolter": {
+      "id": "blood-angels-weapon-storm-bolter",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Storm bolter"
+      },
+      "summary": {
+        "en": "Ranged · 24\" · A 2 · BS 3+ · S 4 · AP 0 · D 1 · Rapid Fire 2"
+      },
+      "definition": {
+        "en": "Ranged · 24\" · A 2 · BS 3+ · S 4 · AP 0 · D 1 · Rapid Fire 2"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "24\"",
+          "A": "2",
+          "BS": "3+",
+          "S": "4",
+          "AP": "0",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-baal-predator"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-baal-predator",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-the-axe-mortalis": {
+      "id": "blood-angels-weapon-the-axe-mortalis",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "The Axe Mortalis"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 8 · WS 2+ · S 8 · AP -3 · D 2 · Lethal Hits"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 8 · WS 2+ · S 8 · AP -3 · D 2 · Lethal Hits"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "8",
+          "WS": "2+",
+          "S": "8",
+          "AP": "-3",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-commander-dante"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-commander-dante",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-the-blood-crozius": {
+      "id": "blood-angels-weapon-the-blood-crozius",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "The Blood Crozius"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 5 · WS 2+ · S 6 · AP -2 · D 2 · Lethal Hits"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 5 · WS 2+ · S 6 · AP -2 · D 2 · Lethal Hits"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "5",
+          "WS": "2+",
+          "S": "6",
+          "AP": "-2",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-lemartes"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-lemartes",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-the-executioners-axe": {
+      "id": "blood-angels-weapon-the-executioners-axe",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "The Executioner's Axe"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 6 · WS 2+ · S 7 · AP -3 · D 2 · Devastating Wounds, Precision"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 6 · WS 2+ · S 7 · AP -3 · D 2 · Devastating Wounds, Precision"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "6",
+          "WS": "2+",
+          "S": "7",
+          "AP": "-3",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-astorath"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-astorath",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-thunder-hammer": {
+      "id": "blood-angels-weapon-thunder-hammer",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Thunder Hammer"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 3 · WS 4+ · S 8 · AP -2 · D 2 · Devastating Wounds"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 3 · WS 4+ · S 8 · AP -2 · D 2 · Devastating Wounds"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "3",
+          "WS": "4+",
+          "S": "8",
+          "AP": "-2",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-marines"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-marines",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-twin-assault-cannon": {
+      "id": "blood-angels-weapon-twin-assault-cannon",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Twin Assault Cannon"
+      },
+      "summary": {
+        "en": "Ranged · 24\" · A 6 · BS 3+ · S 6 · AP 0 · D 1 · Assault, Devastating wounds, Twin-linked"
+      },
+      "definition": {
+        "en": "Ranged · 24\" · A 6 · BS 3+ · S 6 · AP 0 · D 1 · Assault, Devastating wounds, Twin-linked"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "24\"",
+          "A": "6",
+          "BS": "3+",
+          "S": "6",
+          "AP": "0",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-baal-predator"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-baal-predator",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-twin-heavy-bolter": {
+      "id": "blood-angels-weapon-twin-heavy-bolter",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Twin heavy bolter"
+      },
+      "summary": {
+        "en": "Ranged · 36\" · A 3 · BS 3+ · S 5 · AP -1 · D 2 · Sustained Hits 1, Twin-linked"
+      },
+      "definition": {
+        "en": "Ranged · 36\" · A 3 · BS 3+ · S 5 · AP -1 · D 2 · Sustained Hits 1, Twin-linked"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "36\"",
+          "A": "3",
+          "BS": "3+",
+          "S": "5",
+          "AP": "-1",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-dreadnought"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-dreadnought",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-twin-icarus-ironhail-heavy-stubber": {
+      "id": "blood-angels-weapon-twin-icarus-ironhail-heavy-stubber",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Twin Icarus ironhail heavy stubber"
+      },
+      "summary": {
+        "en": "Ranged · 36\" · A 3 · BS 3+ · S 4 · AP 0 · D 1 · Anti-FLY 4+, Rapid Fire 3, Twin-linked"
+      },
+      "definition": {
+        "en": "Ranged · 36\" · A 3 · BS 3+ · S 4 · AP 0 · D 1 · Anti-FLY 4+, Rapid Fire 3, Twin-linked"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "36\"",
+          "A": "3",
+          "BS": "3+",
+          "S": "4",
+          "AP": "0",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-dreadnought"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-dreadnought",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-twin-multi-melta": {
+      "id": "blood-angels-weapon-twin-multi-melta",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Twin multi-melta"
+      },
+      "summary": {
+        "en": "Ranged · 18\" · A 2 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2, Twin-linked"
+      },
+      "definition": {
+        "en": "Ranged · 18\" · A 2 · BS 3+ · S 9 · AP -4 · D D6 · Melta 2, Twin-linked"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "18\"",
+          "A": "2",
+          "BS": "3+",
+          "S": "9",
+          "AP": "-4",
+          "D": "D6"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-death-company-dreadnought"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-death-company-dreadnought",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
+    "blood-angels-weapon-vitarus": {
+      "id": "blood-angels-weapon-vitarus",
+      "kind": "weapon",
+      "scope": "blood-angels",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Vitarus"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 6 · WS 2+ · S 9 · AP -3 · D D3 · Lethal Hits, Psychic"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 6 · WS 2+ · S 9 · AP -3 · D D3 · Lethal Hits, Psychic"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "6",
+          "WS": "2+",
+          "S": "9",
+          "AP": "-3",
+          "D": "D3"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "blood-angels-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-chief-librarian-mephiston"
+      },
+      "fullRulePath": "books/blood-angels/reader.html#unit-chief-librarian-mephiston",
+      "status": "provisional",
+      "sourceRefs": [
+        "blood-angels"
+      ],
+      "mentions": []
+    },
     "core-abilities": {
       "id": "core-abilities",
       "kind": "core-ability",

@@ -39,6 +39,15 @@ for(const [id,expected] of Object.entries(books)){
   expect(codexLayer?.commit===points.source?.commit,`${label} points and Codex snapshot commits differ`);
 }
 
+const bloodAngelsConfig=read('books/blood-angels/book.config.json');
+const bloodAngelsCodex=read(`books/blood-angels/${bloodAngelsConfig.sources.codexDatasheets}`);
+const bloodAngelsManifest=read(`books/blood-angels/${bloodAngelsConfig.sources.manifest}`);
+const bloodAngelsMfm=read('books/blood-angels/sources/official-mfm-v1.2.json');
+expect(bloodAngelsConfig.dependencies?.includes('space-marines'),'blood-angels: Space Marines dependency is absent');
+expect(bloodAngelsConfig.expected?.codexDatasheets===15&&bloodAngelsCodex.datasheets?.length===15,'blood-angels: expected 15 local Datasheets');
+expect(bloodAngelsConfig.dependencyDatasheets?.currentOnly===true,'blood-angels: shared Datasheets must use the current Space Marines inventory');
+expect(bloodAngelsManifest.gates?.publishAsComplete===false,'blood-angels: verification source gate must remain active');
+
 const csmPack=read('books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json');
 const csmCodex=read('books/chaos-space-marines/content/chaos-space-marines-codex-datasheets.en.json');
 const csmPoints=read('books/chaos-space-marines/content/chaos-space-marines-points.en.json');
@@ -47,6 +56,11 @@ const csmMfm=read('books/chaos-space-marines/sources/official-mfm-v1.2.json');
 const csmReader=fs.readFileSync(path.join(root,'books/chaos-space-marines/reader.html'),'utf8');
 expect(csmPack.meta?.version==='1.1'&&csmPack.meta?.sha256==='407DD6F175A7C27E0CB20BC95F68675AB0F9250883F08660CD2F16EF6D9F4998','chaos-space-marines: current official Faction Pack v1.1 provenance mismatch');
 const normalizeHashPayload=value=>Array.isArray(value)?value.map(normalizeHashPayload):value&&typeof value==='object'?Object.fromEntries(Object.keys(value).sort().map(key=>[key,normalizeHashPayload(value[key])])):value;
+const bloodAngelsMfmPayload=Object.fromEntries(bloodAngelsMfm.hashModel.fields.map(field=>[field,bloodAngelsMfm[field]]));
+const bloodAngelsMfmDigest=crypto.createHash('sha256').update(JSON.stringify(normalizeHashPayload(bloodAngelsMfmPayload)),'utf8').digest('hex').toUpperCase();
+expect(bloodAngelsMfm.version==='v1.2'&&bloodAngelsMfm.counts?.nativeUnits===15&&bloodAngelsMfm.counts?.canonicalSharedUnits===82&&bloodAngelsMfm.counts?.specialScopeUnits===2&&bloodAngelsMfm.counts?.localDetachments===8&&bloodAngelsMfm.counts?.localEnhancements===26,'blood-angels: official MFM v1.2 capture inventory mismatch');
+expect(bloodAngelsMfm.captureSha256===bloodAngelsMfmDigest&&bloodAngelsMfm.hashModel?.scope==='normalizedPayload','blood-angels: MFM normalized payload hash mismatch');
+expect(!JSON.stringify(bloodAngelsMfm).includes(' ? '),'blood-angels: MFM capture contains a damaged separator');
 const csmMfmPayload=Object.fromEntries(csmMfm.hashModel.fields.map(field=>[field,csmMfm[field]]));
 const csmMfmDigest=crypto.createHash('sha256').update(JSON.stringify(normalizeHashPayload(csmMfmPayload)),'utf8').digest('hex').toUpperCase();
 expect(csmMfm.version==='v1.2'&&csmMfm.counts?.units===54&&csmMfm.counts?.unitPointSchedules===91&&csmMfm.counts?.pricedOptions===3&&csmMfm.counts?.detachments===17&&csmMfm.counts?.enhancements===62,'chaos-space-marines: official MFM v1.2 capture inventory mismatch');

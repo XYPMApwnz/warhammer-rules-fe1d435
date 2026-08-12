@@ -1,0 +1,708 @@
+{
+  "schema": 1,
+  "title": "Blood Angels Munitorum Field Manual dated capture",
+  "version": "v1.2",
+  "sourceUpdatedAt": "2026-07-22",
+  "verifiedAt": "2026-08-12",
+  "capturedAt": "2026-08-12",
+  "url": "https://mfm.warhammer-community.com/en/blood-angels",
+  "counts": {
+    "nativeUnits": 15,
+    "canonicalSharedUnits": 82,
+    "specialScopeUnits": 2,
+    "routeUnits": 99,
+    "localDetachments": 8,
+    "localEnhancements": 26,
+    "legends": 0,
+    "unresolved": 0
+  },
+  "verifiedUnits": [
+    "Astorath",
+    "Baal Predator",
+    "Blood Angels Captain",
+    "Chief Librarian Mephiston",
+    "Commander Dante",
+    "Death Company Captain",
+    "Death Company Captain with Jump Pack",
+    "Death Company Dreadnought",
+    "Death Company Marines",
+    "Death Company Marines with Bolt Rifles",
+    "Death Company Marines with Jump Packs",
+    "Lemartes",
+    "Sanguinary Guard",
+    "Sanguinary Priest",
+    "The Sanguinor"
+  ],
+  "unitOverrides": [
+    {
+      "title": "Astorath",
+      "leader": [
+        "Death Company Marines with Jump Packs"
+      ],
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Baal Predator",
+      "points": [
+        {
+          "label": "1st to 2nd · 1 model",
+          "value": 125,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 1 model",
+          "value": 135,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "Blood Angels Captain",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 80,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Chief Librarian Mephiston",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 110,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Commander Dante",
+      "leader": [
+        "Assault Intercessors with Jump Packs",
+        "Sanguinary Guard",
+        "Vanguard Veteran Squad with Jump Packs"
+      ],
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 125,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Death Company Captain",
+      "leader": [
+        "Death Company Marines",
+        "Death Company Marines with Bolt Rifles"
+      ],
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 70,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Death Company Captain with Jump Pack",
+      "leader": [
+        "Death Company Marines with Jump Packs"
+      ],
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Death Company Dreadnought",
+      "points": [
+        {
+          "label": "1st to 2nd · 1 model",
+          "value": 150,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 1 model",
+          "value": 160,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "Death Company Marines",
+      "points": [
+        {
+          "label": "1st to 2nd · 5 models",
+          "value": 85,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd · 10 models",
+          "value": 160,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 5 models",
+          "value": 95,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 10 models",
+          "value": 170,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "Death Company Marines with Bolt Rifles",
+      "points": [
+        {
+          "label": "1st to 2nd · 5 models",
+          "value": 80,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd · 10 models",
+          "value": 155,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 5 models",
+          "value": 90,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 10 models",
+          "value": 165,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "Death Company Marines with Jump Packs",
+      "points": [
+        {
+          "label": "1st to 2nd · 5 models",
+          "value": 120,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd · 10 models",
+          "value": 230,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 5 models",
+          "value": 135,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 10 models",
+          "value": 245,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "Lemartes",
+      "leader": [
+        "Death Company Marines with Jump Packs"
+      ],
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 100,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    },
+    {
+      "title": "Sanguinary Guard",
+      "points": [
+        {
+          "label": "1st to 2nd · 3 models",
+          "value": 125,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "1st to 2nd · 6 models",
+          "value": 260,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 3 models",
+          "value": 145,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 6 models",
+          "value": 280,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "Sanguinary Priest",
+      "support": [
+        "Assault Intercessor Squad",
+        "Bladeguard Veteran Squad",
+        "Desolation Squad",
+        "Devastator Squad",
+        "Hellblaster Squad",
+        "Infernus Squad",
+        "Intercessor Squad",
+        "Sternguard Veteran Squad",
+        "Tactical Squad"
+      ],
+      "points": [
+        {
+          "label": "1st to 2nd · 1 model",
+          "value": 75,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 1,
+          "maxCopies": 2
+        },
+        {
+          "label": "3rd + · 1 model",
+          "value": 85,
+          "minModels": 1,
+          "maxModels": 1,
+          "minCopies": 3
+        }
+      ]
+    },
+    {
+      "title": "The Sanguinor",
+      "points": [
+        {
+          "label": "unit · 1 model",
+          "value": 130,
+          "minModels": 1,
+          "maxModels": 1
+        }
+      ]
+    }
+  ],
+  "detachments": [
+    {
+      "title": "Angelic Inheritors",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "Encarmine Speartip",
+      "forceDisposition": "DISRUPTION",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "Legacy of Grace",
+      "forceDisposition": "PRIORITY ASSETS",
+      "detachmentPoints": 1
+    },
+    {
+      "title": "Liberator Assault Group",
+      "forceDisposition": "TAKE AND HOLD",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "Rage-cursed Onslaught",
+      "forceDisposition": "PURGE THE FOE",
+      "detachmentPoints": 3
+    },
+    {
+      "title": "The Angelic Host",
+      "forceDisposition": "DISRUPTION",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "The Lost Brethren",
+      "forceDisposition": "PURGE THE FOE",
+      "detachmentPoints": 2
+    },
+    {
+      "title": "Wrath of the Doomed",
+      "forceDisposition": "PURGE THE FOE",
+      "detachmentPoints": 1
+    }
+  ],
+  "enhancements": [
+    {
+      "title": "Blazing Icon",
+      "detachment": "Angelic Inheritors",
+      "value": 20
+    },
+    {
+      "title": "Ordained Sacrifice",
+      "detachment": "Angelic Inheritors",
+      "value": 25
+    },
+    {
+      "title": "Prescient Flash",
+      "detachment": "Angelic Inheritors",
+      "value": 20
+    },
+    {
+      "title": "Troubling Visions",
+      "detachment": "Angelic Inheritors",
+      "value": 15
+    },
+    {
+      "title": "Angelic Executioner",
+      "detachment": "Encarmine Speartip",
+      "value": 25
+    },
+    {
+      "title": "Shadow of Abomination",
+      "detachment": "Encarmine Speartip",
+      "value": 25
+    },
+    {
+      "title": "Aureole of the Angel",
+      "detachment": "Legacy of Grace",
+      "value": 20
+    },
+    {
+      "title": "Blood Boil",
+      "detachment": "Legacy of Grace",
+      "value": 10
+    },
+    {
+      "title": "Gift of Foresight",
+      "detachment": "Liberator Assault Group",
+      "value": 15
+    },
+    {
+      "title": "Icon of the Angel",
+      "detachment": "Liberator Assault Group",
+      "value": 20
+    },
+    {
+      "title": "Rage-fuelled Warrior",
+      "detachment": "Liberator Assault Group",
+      "value": 35
+    },
+    {
+      "title": "Speed of the Primarch",
+      "detachment": "Liberator Assault Group",
+      "value": 25
+    },
+    {
+      "title": "Angel's Fang",
+      "detachment": "Rage-cursed Onslaught",
+      "value": 25
+    },
+    {
+      "title": "Carmine Reliquary",
+      "detachment": "Rage-cursed Onslaught",
+      "value": 30
+    },
+    {
+      "title": "Master of the Red Thirst",
+      "detachment": "Rage-cursed Onslaught",
+      "value": 25
+    },
+    {
+      "title": "Sanguinary Tear",
+      "detachment": "Rage-cursed Onslaught",
+      "value": 35
+    },
+    {
+      "title": "Archangel's Shard",
+      "detachment": "The Angelic Host",
+      "value": 15
+    },
+    {
+      "title": "Artisan of War",
+      "detachment": "The Angelic Host",
+      "value": 20
+    },
+    {
+      "title": "Gleaming Pinions",
+      "detachment": "The Angelic Host",
+      "value": 25
+    },
+    {
+      "title": "Visage of Death",
+      "detachment": "The Angelic Host",
+      "value": 15
+    },
+    {
+      "title": "Blood Shard",
+      "detachment": "The Lost Brethren",
+      "value": 25
+    },
+    {
+      "title": "Sanguinius' Grace",
+      "detachment": "The Lost Brethren",
+      "value": 20
+    },
+    {
+      "title": "To Slay The Warmaster",
+      "detachment": "The Lost Brethren",
+      "value": 15
+    },
+    {
+      "title": "Vengeful Onslaught",
+      "detachment": "The Lost Brethren",
+      "value": 10
+    },
+    {
+      "title": "Instinctive Interception",
+      "detachment": "Wrath of the Doomed",
+      "value": 10
+    },
+    {
+      "title": "On the Archtraitor's Bridge",
+      "detachment": "Wrath of the Doomed",
+      "value": 20
+    }
+  ],
+  "dependencyInventory": {
+    "sourceDatasheets": 101,
+    "foreignChapterExcluded": 19,
+    "eligibleCanonicalShared": 82,
+    "mfmSharedRecords": 84,
+    "chapterKeywordEvidence": [
+      "IMPERIAL FISTS",
+      "IRON HANDS",
+      "RAVEN GUARD",
+      "SALAMANDERS",
+      "ULTRAMARINES",
+      "WHITE SCARS"
+    ],
+    "canonicalSharedTitles": [
+      "Aggressor Squad",
+      "Ancient",
+      "Ancient in Terminator Armor",
+      "Apothecary",
+      "Apothecary Biologis",
+      "Assault Intercessor Squad",
+      "Assault Intercessors with Jump Packs",
+      "Ballistus Dreadnought",
+      "Bladeguard Ancient",
+      "Bladeguard Veteran Squad",
+      "Brutalis Dreadnought",
+      "Captain",
+      "Captain in Gravis Armour",
+      "Captain in Phobos Armour",
+      "Captain in Terminator Armour",
+      "Captain with Jump Pack",
+      "Centurion Assault Squad",
+      "Centurion Devastator Squad",
+      "Chaplain",
+      "Chaplain in Terminator Armour",
+      "Chaplain on Bike",
+      "Chaplain with Jump Pack",
+      "Company Heroes",
+      "Desolation Squad",
+      "Devastator Squad",
+      "Dreadnought",
+      "Drop Pod",
+      "Eliminator Squad",
+      "Eradicator Squad",
+      "Eradicator Squad with Heavy Bolters",
+      "Firestrike Servo-Turrets",
+      "Gladiator Lancer",
+      "Gladiator Reaper",
+      "Gladiator Valiant",
+      "Hammerfall Bunker",
+      "Heavy Intercessor Squad",
+      "Hellblaster Squad",
+      "Impulsor",
+      "Inceptor Squad",
+      "Incursor Squad",
+      "Infernus Squad",
+      "Infiltrator Squad",
+      "Intercessor Squad",
+      "Invader ATV",
+      "Invictor Tactical Warsuit",
+      "Judiciar",
+      "Land Raider",
+      "Land Raider Crusader",
+      "Land Raider Redeemer",
+      "Land Speeder",
+      "Librarian",
+      "Librarian in Phobos Armour",
+      "Librarian in Terminator Armour",
+      "Lieutenant",
+      "Lieutenant in Phobos Armour",
+      "Lieutenant in Reiver Armour",
+      "Lieutenant with Combi-weapon",
+      "Outrider Squad",
+      "Predator Annihilator",
+      "Predator Destructor",
+      "Razorback",
+      "Redemptor Dreadnought",
+      "Reiver Squad",
+      "Repulsor",
+      "Repulsor Executioner",
+      "Rhino",
+      "Scout Squad",
+      "Sternguard Veteran Squad",
+      "Storm Speeder Hailstrike",
+      "Storm Speeder Hammerstrike",
+      "Storm Speeder Thunderstrike",
+      "Stormhawk Interceptor",
+      "Stormraven Gunship",
+      "Stormtalon Gunship",
+      "Suppressor Squad",
+      "Tactical Squad",
+      "Techmarine",
+      "Terminator Assault Squad",
+      "Terminator Squad",
+      "Vanguard Veteran Squad with Jump Packs",
+      "Vindicator",
+      "Whirlwind"
+    ],
+    "foreignChapterTitles": [
+      "Adrax Agatone",
+      "Aethon Shaan",
+      "Caanok Var",
+      "Cato Sicarius",
+      "Chief Librarian Tigurius",
+      "Darnath Lysander",
+      "Iron Father Feirros",
+      "Kayvaan Shrike",
+      "Kor'sarro Khan",
+      "Lieutenant Titus",
+      "Marneus Calgar in Armour of Antilochus",
+      "Pedro Kantor",
+      "Roboute Guilliman",
+      "Suboden Khan",
+      "Tor Garadon",
+      "Uriel Ventris",
+      "Victrix Honour Guard",
+      "Vulkan He'stan",
+      "Wardens of Ultramar"
+    ],
+    "specialScope": [
+      {
+        "title": "Astraeus",
+        "points": [
+          {
+            "label": "1st · 1 model",
+            "value": 525,
+            "minModels": 1,
+            "maxModels": 1,
+            "minCopies": 1,
+            "maxCopies": 1
+          },
+          {
+            "label": "2nd + · 1 model",
+            "value": 575,
+            "minModels": 1,
+            "maxModels": 1,
+            "minCopies": 2
+          }
+        ],
+        "scope": "special-imperial-armour",
+        "includedInCurrentDatasheets": false,
+        "reason": "Priced by live MFM, but absent from the current canonical 11th Edition Space Marines Faction Pack datasheet source."
+      },
+      {
+        "title": "Thunderhawk Gunship",
+        "points": [
+          {
+            "label": "unit · 1 model",
+            "value": 840,
+            "minModels": 1,
+            "maxModels": 1
+          }
+        ],
+        "scope": "special-imperial-armour",
+        "includedInCurrentDatasheets": false,
+        "reason": "Priced by live MFM, but absent from the current canonical 11th Edition Space Marines Faction Pack datasheet source."
+      }
+    ],
+    "spellingAliases": {
+      "ANCIENT IN TERMINATOR ARMOUR": "Ancient in Terminator Armor"
+    },
+    "unresolved": []
+  },
+  "legends": [],
+  "hashModel": {
+    "algorithm": "SHA-256",
+    "scope": "normalizedPayload",
+    "serialization": "UTF-8 JSON with recursively sorted object keys and preserved array order",
+    "fields": [
+      "version",
+      "url",
+      "sourceUpdatedAt",
+      "verifiedUnits",
+      "unitOverrides",
+      "detachments",
+      "enhancements",
+      "dependencyInventory"
+    ]
+  },
+  "captureSha256": "FE1FF0A0F41C2F6D6E2FDABB4EFF2E6B59CD8245A4EC36EC4A1BC23F960FAE4C"
+}

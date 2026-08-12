@@ -1,0 +1,93 @@
+{
+  "schema": 1,
+  "id": "blood-angels",
+  "title": "Blood Angels",
+  "shortTitle": "Blood Angels Rules",
+  "edition": "11E",
+  "mark": "BA",
+  "reviewEntry": true,
+  "currentDatasheetsOnly": true,
+  "generatedMobile": true,
+  "mobileRelatedRulesSource": true,
+  "includeCoreStratagems": true,
+  "rosterSupport": true,
+  "compatibleRulesMatrix": true,
+  "customApp": true,
+  "legacyRelatedRuleAttributes": false,
+  "detachmentQualifiedEnhancementPoints": true,
+  "factionKeyword": "BLOOD ANGELS",
+  "dependencies": ["space-marines"],
+  "dependencyDatasheets": {
+    "render": true,
+    "groupByBook": false,
+    "currentOnly": true,
+    "excludeAnyKeywords": [
+      "IMPERIAL FISTS",
+      "IRON HANDS",
+      "RAVEN GUARD",
+      "SALAMANDERS",
+      "ULTRAMARINES",
+      "WHITE SCARS"
+    ]
+  },
+  "datasheetCategoryLabels": {
+    "Epic Hero": "Epic Heroes",
+    "Character": "Characters",
+    "Dedicated Transport": "Dedicated Transports"
+  },
+  "armyRules": ["Oath of Moment", "The Sons of Sanguinius"],
+  "armyRuleTermIds": {
+    "Oath of Moment": "space-marines-army-rule-oath-of-moment"
+  },
+  "compactSharedAbilities": [
+    "Oath of Moment",
+    "Anti",
+    "Assault",
+    "Blast",
+    "Deadly Demise",
+    "Deep Strike",
+    "Devastating Wounds",
+    "Extra Attacks",
+    "Feel No Pain",
+    "Fights First",
+    "Firing Deck",
+    "Hazardous",
+    "Heavy",
+    "Hover",
+    "Ignores Cover",
+    "Infiltrators",
+    "Leader",
+    "Lethal Hits",
+    "Lone Operative",
+    "Melta",
+    "Pistol",
+    "Precision",
+    "Rapid Fire",
+    "Scouts",
+    "Stealth",
+    "Sustained Hits",
+    "Torrent",
+    "Twin-linked"
+  ],
+  "assetVersions": {
+    "book": 1,
+    "app": 2,
+    "rosterFilter": 1,
+    "rosterData": 1
+  },
+  "expected": {
+    "matchedDetachments": 8,
+    "factionPackDetachments": 5,
+    "codexDatasheets": 15,
+    "legendsDatasheets": 11
+  },
+  "sources": {
+    "factionPack": "content/blood-angels-faction-pack.en.json",
+    "codexDatasheets": "content/blood-angels-codex-datasheets.en.json",
+    "points": "content/blood-angels-points.en.json",
+    "codexParity": "content/blood-angels-codex-parity.en.json",
+    "codexWargear": "content/blood-angels-codex-wargear.en.json",
+    "relatedRules": "content/blood-angels-related-rules.en.json",
+    "manifest": "sources/source-manifest.json"
+  }
+}

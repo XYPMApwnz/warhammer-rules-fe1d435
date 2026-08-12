@@ -1,13 +1,13 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 2432,
+    "terms": 2584,
     "aliases": 662,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
     "semanticWarnings": 8,
-    "aliasCandidates": 152,
-    "duplicateCandidates": 27,
+    "aliasCandidates": 165,
+    "duplicateCandidates": 49,
     "keywordCandidates": 16
   },
   "definitionCandidates": [
@@ -1017,7 +1017,8 @@
         "tau-empire-weapon-close-combat-weapon",
         "tau-empire-weapon-close-combat-weapon-2",
         "tau-empire-weapon-close-combat-weapon-3",
-        "tau-empire-weapon-close-combat-weapon-4"
+        "tau-empire-weapon-close-combat-weapon-4",
+        "blood-angels-weapon-close-combat-weapon"
       ],
       "status": "review-required"
     },
@@ -1051,7 +1052,8 @@
       "termIds": [
         "death-guard-weapon-twin-heavy-bolter-chaos-land-raider-helbrute",
         "emperors-children-weapon-twin-heavy-bolter",
-        "space-marines-weapon-twin-heavy-bolter"
+        "space-marines-weapon-twin-heavy-bolter",
+        "blood-angels-weapon-twin-heavy-bolter"
       ],
       "status": "review-required"
     },
@@ -1063,7 +1065,8 @@
         "emperors-children-weapon-armoured-tracks",
         "emperors-children-weapon-armoured-tracks-2",
         "space-marines-weapon-armoured-tracks",
-        "space-marines-weapon-armoured-tracks-2"
+        "space-marines-weapon-armoured-tracks-2",
+        "blood-angels-weapon-armoured-tracks"
       ],
       "status": "review-required"
     },
@@ -1075,7 +1078,8 @@
         "space-marines-weapon-heavy-bolter",
         "space-marines-weapon-heavy-bolter-2",
         "space-marines-weapon-heavy-bolter-3",
-        "space-marines-weapon-heavy-bolter-4"
+        "space-marines-weapon-heavy-bolter-4",
+        "blood-angels-weapon-heavy-bolter"
       ],
       "status": "review-required"
     },
@@ -1272,7 +1276,8 @@
       "termIds": [
         "death-guard-weapon-heavy-flamer-helbrute",
         "emperors-children-weapon-heavy-flamer",
-        "space-marines-weapon-heavy-flamer"
+        "space-marines-weapon-heavy-flamer",
+        "blood-angels-weapon-heavy-flamer"
       ],
       "status": "review-required"
     },
@@ -1326,7 +1331,9 @@
         "death-guard-weapon-plasma-pistol-standard-lord-of-poxes",
         "death-guard-weapon-plasma-pistol-standard-noxious-blightbringer-plague-marines-tallyman",
         "emperors-children-weapon-plasma-pistol-standard",
-        "space-marines-weapon-plasma-pistol-standard"
+        "space-marines-weapon-plasma-pistol-standard",
+        "blood-angels-weapon-plasma-pistol-standard",
+        "blood-angels-weapon-plasma-pistol-standard-2"
       ],
       "status": "review-required"
     },
@@ -1337,7 +1344,9 @@
         "death-guard-weapon-plasma-pistol-supercharge-noxious-blightbringer",
         "death-guard-weapon-plasma-pistol-supercharge-plague-marines-tallyman",
         "emperors-children-weapon-plasma-pistol-supercharge",
-        "space-marines-weapon-plasma-pistol-supercharge"
+        "space-marines-weapon-plasma-pistol-supercharge",
+        "blood-angels-weapon-plasma-pistol-supercharge",
+        "blood-angels-weapon-plasma-pistol-supercharge-2"
       ],
       "status": "review-required"
     },
@@ -1352,7 +1361,9 @@
         "space-marines-weapon-power-fist-2",
         "space-marines-weapon-power-fist-3",
         "space-marines-weapon-power-fist-4",
-        "space-marines-weapon-power-fist-5"
+        "space-marines-weapon-power-fist-5",
+        "blood-angels-weapon-power-fist",
+        "blood-angels-weapon-power-fist-2"
       ],
       "status": "review-required"
     },
@@ -1362,7 +1373,8 @@
         "death-guard-weapon-bolt-pistol-malignant-plaguecaster-plague-marines-plague-surgeon",
         "emperors-children-weapon-bolt-pistol",
         "space-marines-weapon-bolt-pistol",
-        "space-marines-weapon-bolt-pistol-2"
+        "space-marines-weapon-bolt-pistol-2",
+        "blood-angels-weapon-bolt-pistol"
       ],
       "status": "review-required"
     },
@@ -1498,7 +1510,8 @@
         "space-marines-weapon-power-weapon-2",
         "space-marines-weapon-power-weapon-3",
         "space-marines-weapon-power-weapon-4",
-        "space-marines-weapon-power-weapon-5"
+        "space-marines-weapon-power-weapon-5",
+        "blood-angels-weapon-power-weapon"
       ],
       "status": "review-required"
     },
@@ -1556,7 +1569,8 @@
         "adeptus-mechanicus-datasheet-damaged-1-4-wounds-remaining",
         "space-marines-ability-damaged-1-4-wounds-remaining",
         "tau-empire-ability-damaged-1-4-wounds-remaining",
-        "tyranids-ability-damaged-1-4-wounds-remaining"
+        "tyranids-ability-damaged-1-4-wounds-remaining",
+        "blood-angels-ability-damaged-1-4-wounds-remaining"
       ],
       "status": "review-required"
     },
@@ -1681,7 +1695,11 @@
       "normalizedTitle": "armour-of-contempt",
       "termIds": [
         "space-marines-stratagem-armour-of-contempt",
-        "space-marines-stratagem-armour-of-contempt-2"
+        "space-marines-stratagem-armour-of-contempt-2",
+        "blood-angels-stratagem-armour-of-contempt",
+        "blood-angels-stratagem-armour-of-contempt-2",
+        "blood-angels-stratagem-armour-of-contempt-3",
+        "blood-angels-stratagem-armour-of-contempt-4"
       ],
       "status": "review-required"
     },
@@ -1775,10 +1793,21 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "hand-flamer",
+      "termIds": [
+        "space-marines-weapon-hand-flamer",
+        "blood-angels-weapon-hand-flamer"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "heavy-bolt-pistol",
       "termIds": [
         "space-marines-weapon-heavy-bolt-pistol",
-        "space-marines-weapon-heavy-bolt-pistol-2"
+        "space-marines-weapon-heavy-bolt-pistol-2",
+        "blood-angels-weapon-heavy-bolt-pistol",
+        "blood-angels-weapon-heavy-bolt-pistol-2",
+        "blood-angels-weapon-heavy-bolt-pistol-3"
       ],
       "status": "review-required"
     },
@@ -1789,7 +1818,10 @@
         "space-marines-weapon-astartes-chainsword-2",
         "space-marines-weapon-astartes-chainsword-3",
         "space-marines-weapon-astartes-chainsword-4",
-        "space-marines-weapon-astartes-chainsword-5"
+        "space-marines-weapon-astartes-chainsword-5",
+        "blood-angels-weapon-astartes-chainsword",
+        "blood-angels-weapon-astartes-chainsword-2",
+        "blood-angels-weapon-astartes-chainsword-3"
       ],
       "status": "review-required"
     },
@@ -1800,7 +1832,8 @@
         "space-marines-weapon-thunder-hammer-2",
         "space-marines-weapon-thunder-hammer-3",
         "space-marines-weapon-thunder-hammer-4",
-        "space-marines-weapon-thunder-hammer-5"
+        "space-marines-weapon-thunder-hammer-5",
+        "blood-angels-weapon-thunder-hammer"
       ],
       "status": "review-required"
     },
@@ -1808,7 +1841,24 @@
       "normalizedTitle": "bolt-rifle",
       "termIds": [
         "space-marines-weapon-bolt-rifle",
-        "space-marines-weapon-bolt-rifle-2"
+        "space-marines-weapon-bolt-rifle-2",
+        "blood-angels-weapon-bolt-rifle"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "astartes-grenade-launcher-krak",
+      "termIds": [
+        "space-marines-weapon-astartes-grenade-launcher-krak",
+        "blood-angels-weapon-astartes-grenade-launcher-krak"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "astartes-grenade-launcher-frag",
+      "termIds": [
+        "space-marines-weapon-astartes-grenade-launcher-frag",
+        "blood-angels-weapon-astartes-grenade-launcher-frag"
       ],
       "status": "review-required"
     },
@@ -1824,7 +1874,8 @@
       "normalizedTitle": "storm-bolter",
       "termIds": [
         "space-marines-weapon-storm-bolter",
-        "space-marines-weapon-storm-bolter-2"
+        "space-marines-weapon-storm-bolter-2",
+        "blood-angels-weapon-storm-bolter"
       ],
       "status": "review-required"
     },
@@ -1842,6 +1893,31 @@
       "termIds": [
         "space-marines-weapon-grav-cannon",
         "space-marines-weapon-grav-cannon-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "absolvor-bolt-pistol",
+      "termIds": [
+        "space-marines-weapon-absolvor-bolt-pistol",
+        "blood-angels-weapon-absolvor-bolt-pistol",
+        "blood-angels-weapon-absolvor-bolt-pistol-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "finest-hour",
+      "termIds": [
+        "space-marines-ability-finest-hour",
+        "blood-angels-ability-finest-hour"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "rites-of-battle",
+      "termIds": [
+        "space-marines-ability-rites-of-battle",
+        "blood-angels-ability-rites-of-battle"
       ],
       "status": "review-required"
     },
@@ -1899,6 +1975,23 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "relic-weapon",
+      "termIds": [
+        "space-marines-weapon-relic-weapon",
+        "blood-angels-weapon-relic-weapon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "inferno-pistol",
+      "termIds": [
+        "space-marines-weapon-inferno-pistol",
+        "blood-angels-weapon-inferno-pistol",
+        "blood-angels-weapon-inferno-pistol-2"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "storm-shield",
       "termIds": [
         "space-marines-ability-storm-shield",
@@ -1913,6 +2006,14 @@
         "space-marines-weapon-paired-combat-blades",
         "space-marines-weapon-paired-combat-blades-2",
         "space-marines-weapon-paired-combat-blades-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "hunter-killer-missile",
+      "termIds": [
+        "space-marines-weapon-hunter-killer-missile",
+        "blood-angels-weapon-hunter-killer-missile"
       ],
       "status": "review-required"
     },
@@ -1957,6 +2058,30 @@
       "termIds": [
         "space-marines-ability-guerrilla-tactics",
         "space-marines-stratagem-guerrilla-tactics"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "twin-multi-melta",
+      "termIds": [
+        "space-marines-weapon-twin-multi-melta",
+        "blood-angels-weapon-twin-multi-melta"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "twin-icarus-ironhail-heavy-stubber",
+      "termIds": [
+        "space-marines-weapon-twin-icarus-ironhail-heavy-stubber",
+        "blood-angels-weapon-twin-icarus-ironhail-heavy-stubber"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "twin-assault-cannon",
+      "termIds": [
+        "space-marines-weapon-twin-assault-cannon",
+        "blood-angels-weapon-twin-assault-cannon"
       ],
       "status": "review-required"
     },
@@ -2256,6 +2381,14 @@
         "tyranids-ability-floating-death-2"
       ],
       "status": "review-required"
+    },
+    {
+      "normalizedTitle": "legacy-of-the-angel",
+      "termIds": [
+        "blood-angels-detachment-rule-legacy-of-the-angel",
+        "blood-angels-detachment-rule-legacy-of-the-angel-2"
+      ],
+      "status": "review-required"
     }
   ],
   "duplicateCandidates": [
@@ -2316,21 +2449,24 @@
         "adeptus-mechanicus-datasheet-damaged-1-4-wounds-remaining",
         "space-marines-ability-damaged-1-4-wounds-remaining",
         "tau-empire-ability-damaged-1-4-wounds-remaining",
-        "tyranids-ability-damaged-1-4-wounds-remaining"
+        "tyranids-ability-damaged-1-4-wounds-remaining",
+        "blood-angels-ability-damaged-1-4-wounds-remaining"
       ],
       "status": "review-required"
     },
     {
       "termIds": [
         "emperors-children-weapon-plasma-pistol-standard",
-        "space-marines-weapon-plasma-pistol-standard"
+        "space-marines-weapon-plasma-pistol-standard",
+        "blood-angels-weapon-plasma-pistol-standard"
       ],
       "status": "review-required"
     },
     {
       "termIds": [
         "emperors-children-weapon-plasma-pistol-supercharge",
-        "space-marines-weapon-plasma-pistol-supercharge"
+        "space-marines-weapon-plasma-pistol-supercharge",
+        "blood-angels-weapon-plasma-pistol-supercharge"
       ],
       "status": "review-required"
     },
@@ -2338,7 +2474,8 @@
       "termIds": [
         "emperors-children-weapon-close-combat-weapon",
         "space-marines-weapon-close-combat-weapon",
-        "tau-empire-weapon-close-combat-weapon-3"
+        "tau-empire-weapon-close-combat-weapon-3",
+        "blood-angels-weapon-close-combat-weapon"
       ],
       "status": "review-required"
     },
@@ -2352,14 +2489,16 @@
     {
       "termIds": [
         "emperors-children-weapon-power-fist",
-        "space-marines-weapon-power-fist"
+        "space-marines-weapon-power-fist",
+        "blood-angels-weapon-power-fist-2"
       ],
       "status": "review-required"
     },
     {
       "termIds": [
         "emperors-children-weapon-armoured-tracks",
-        "space-marines-weapon-armoured-tracks"
+        "space-marines-weapon-armoured-tracks",
+        "blood-angels-weapon-armoured-tracks"
       ],
       "status": "review-required"
     },
@@ -2403,14 +2542,16 @@
     {
       "termIds": [
         "emperors-children-weapon-twin-heavy-bolter",
-        "space-marines-weapon-twin-heavy-bolter"
+        "space-marines-weapon-twin-heavy-bolter",
+        "blood-angels-weapon-twin-heavy-bolter"
       ],
       "status": "review-required"
     },
     {
       "termIds": [
         "space-marines-stratagem-armour-of-contempt",
-        "space-marines-stratagem-armour-of-contempt-2"
+        "space-marines-stratagem-armour-of-contempt-2",
+        "blood-angels-stratagem-armour-of-contempt"
       ],
       "status": "review-required"
     },
@@ -2444,8 +2585,162 @@
     },
     {
       "termIds": [
+        "space-marines-weapon-hand-flamer",
+        "blood-angels-weapon-hand-flamer"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-heavy-bolt-pistol",
+        "blood-angels-weapon-heavy-bolt-pistol-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-astartes-chainsword",
+        "blood-angels-weapon-astartes-chainsword-3"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-power-weapon",
+        "blood-angels-weapon-power-weapon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-thunder-hammer",
+        "blood-angels-weapon-thunder-hammer"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-bolt-pistol",
+        "blood-angels-weapon-bolt-pistol"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-bolt-rifle",
+        "blood-angels-weapon-bolt-rifle"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-astartes-grenade-launcher-krak",
+        "blood-angels-weapon-astartes-grenade-launcher-krak"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-astartes-grenade-launcher-frag",
+        "blood-angels-weapon-astartes-grenade-launcher-frag"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-astartes-chainsword-2",
+        "blood-angels-weapon-astartes-chainsword-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
         "space-marines-weapon-close-combat-weapon-2",
         "tau-empire-weapon-close-combat-weapon-4"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-storm-bolter",
+        "blood-angels-weapon-storm-bolter"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-absolvor-bolt-pistol",
+        "blood-angels-weapon-absolvor-bolt-pistol"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-ability-finest-hour",
+        "blood-angels-ability-finest-hour"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-ability-rites-of-battle",
+        "blood-angels-ability-rites-of-battle"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-power-fist-4",
+        "blood-angels-weapon-power-fist"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-heavy-bolt-pistol-2",
+        "blood-angels-weapon-heavy-bolt-pistol"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-relic-weapon",
+        "blood-angels-weapon-relic-weapon"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-astartes-chainsword-3",
+        "blood-angels-weapon-astartes-chainsword"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-inferno-pistol",
+        "blood-angels-weapon-inferno-pistol-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-hunter-killer-missile",
+        "blood-angels-weapon-hunter-killer-missile"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-twin-multi-melta",
+        "blood-angels-weapon-twin-multi-melta"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
+        "space-marines-weapon-twin-icarus-ironhail-heavy-stubber",
+        "blood-angels-weapon-twin-icarus-ironhail-heavy-stubber"
       ],
       "status": "review-required"
     },

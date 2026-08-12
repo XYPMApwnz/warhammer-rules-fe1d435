@@ -5,7 +5,7 @@ import vm from 'node:vm';
 const read=path=>fs.readFileSync(new URL(`../${path}`,import.meta.url),'utf8');
 const registry=JSON.parse(read('glossary/registry.en.json')).terms;
 const aliases=JSON.parse(read('glossary/aliases.en.json')).aliases;
-const contexts=Object.fromEntries(['death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','space-marines'].map(book=>[
+const contexts=Object.fromEntries(['death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','space-marines','blood-angels'].map(book=>[
   book,
   JSON.parse(read(`glossary/contexts/${book}.json`)).terms
 ]));
@@ -13,7 +13,7 @@ const sandbox={window:{}};
 vm.runInNewContext(read('glossary/generated/glossary.en.js'),sandbox);
 const api=sandbox.window.WH40K_GLOSSARY;
 
-assert.equal(Object.keys(registry).length,2432,'confirmed canonicalization must remove exactly three redundant entries');
+assert.equal(Object.keys(registry).length,2584,'Blood Angels glossary integration changed the canonical term inventory unexpectedly');
 assert.equal(Object.keys(aliases).length,662,'the three old canonical IDs must remain aliases');
 
 const resolutions={
@@ -40,6 +40,7 @@ for(const [id,singular,plural] of rollLabels){
 }
 
 const grav=registry['space-marines-weapon-grav-cannon-2'];
+assert.ok(grav,'the canonical BS 3+ Grav-cannon must remain in the registry');
 assert.deepEqual(grav.structured.weapon,{Range:'24"',A:'3',BS:'3+',S:'6',AP:'-1',D:'3'});
 assert.match(grav.definition.en,/Anti-vehicle 2\+$/i);
 assert.ok(registry['space-marines-weapon-grav-cannon'],'the distinct BS 4+ Grav-cannon must remain canonical');

@@ -56,6 +56,7 @@ const books=[
   {name:'Chaos Space Marines',unit:'unit-abaddon-the-despoiler',desktop:'/books/chaos-space-marines/reader.html#unit-abaddon-the-despoiler',phone:'/books/chaos-space-marines/mobile/abaddon-the-despoiler.html'},
   {name:'Space Marines',unit:'unit-intercessor-squad',desktop:'/books/space-marines/reader.html#unit-intercessor-squad',phone:'/books/space-marines/mobile/intercessor-squad.html'},
   {name:'Dark Angels',unit:'unit-belial',desktop:'/books/dark-angels/reader.html#unit-belial',phone:'/books/dark-angels/mobile/belial.html',offline:'/books/dark-angels/mobile/hellblaster-squad.html',offlineUnit:'unit-hellblaster-squad',related:false}
+  ,{name:'Blood Angels',unit:'unit-commander-dante',desktop:'/books/blood-angels/reader.html#unit-commander-dante',phone:'/books/blood-angels/mobile/commander-dante.html'}
 ];
 
 async function openPhonePopup(page,name,singleReader=false){

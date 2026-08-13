@@ -5,6 +5,8 @@
   "shortTitle": "Blood Angels Rules",
   "edition": "11E",
   "mark": "BA",
+  "coverImage": "assets/blood-angels-cover-800.webp",
+  "entryCoverImage": "assets/blood-angels-cover-480.webp",
   "reviewEntry": true,
   "currentDatasheetsOnly": true,
   "generatedMobile": true,
@@ -72,7 +74,7 @@
     "Twin-linked"
   ],
   "assetVersions": {
-    "book": 1,
+    "book": 2,
     "app": 2,
     "rosterFilter": 1,
     "rosterData": 1

@@ -16,6 +16,9 @@ const TAU_EMPIRE_MOBILE_FALLBACK = "./books/tau-empire/mobile/index.html";
 const CHAOS_SPACE_MARINES_ENTRY_FALLBACK = "./books/chaos-space-marines/index.html";
 const CHAOS_SPACE_MARINES_DESKTOP_FALLBACK = "./books/chaos-space-marines/reader.html";
 const CHAOS_SPACE_MARINES_MOBILE_FALLBACK = "./books/chaos-space-marines/mobile/index.html";
+const BLOOD_ANGELS_ENTRY_FALLBACK = "./books/blood-angels/index.html";
+const BLOOD_ANGELS_DESKTOP_FALLBACK = "./books/blood-angels/reader.html";
+const BLOOD_ANGELS_MOBILE_FALLBACK = "./books/blood-angels/mobile/index.html";
 const ORKS_FALLBACK = LIBRARY_FALLBACK;
 const EMPERORS_CHILDREN_FALLBACK = "./books/emperors-children/index.html";
 const SPACE_MARINES_FALLBACK = LIBRARY_FALLBACK;
@@ -250,6 +253,24 @@ const APP_SHELL = [
   ,"./books/chaos-space-marines/mobile/mobile.js?v=2"
   ,"./books/chaos-space-marines/mobile/phone-popup-controller.js?v=1"
   ,"./books/chaos-space-marines/mobile/related-rules.inc?v=1"
+  ,"./books/blood-angels/"
+  ,BLOOD_ANGELS_ENTRY_FALLBACK
+  ,BLOOD_ANGELS_DESKTOP_FALLBACK
+  ,BLOOD_ANGELS_MOBILE_FALLBACK
+  ,"./books/blood-angels/styles/tokens.css?v=2"
+  ,"./books/blood-angels/styles/book.css?v=2"
+  ,"./books/blood-angels/assets/blood-angels-cover-480.webp"
+  ,"./books/blood-angels/assets/blood-angels-cover-800.webp"
+  ,"./books/blood-angels/scripts/data.js?v=2"
+  ,"./books/blood-angels/scripts/app.js?v=2"
+  ,"./books/blood-angels/scripts/roster-filter.js?v=1"
+  ,"./books/blood-angels/scripts/compatible-rules-runtime.mjs?v=1"
+  ,"./books/blood-angels/generated/compatible-rules.json"
+  ,"./books/blood-angels/scripts/roster-data.js?v=1"
+  ,"./books/blood-angels/mobile/mobile.css?v=1"
+  ,"./books/blood-angels/mobile/mobile.js?v=2"
+  ,"./books/blood-angels/mobile/phone-popup-controller.js?v=1"
+  ,"./books/blood-angels/mobile/related-rules.inc?v=1"
   ,"./books/orks/"
   ,ORKS_FALLBACK
   ,"./books/orks/mobile/index.html"
@@ -323,6 +344,9 @@ function navigationFallback(url) {
   if (path.includes("/books/chaos-space-marines/mobile/")) return CHAOS_SPACE_MARINES_MOBILE_FALLBACK;
   if (path.endsWith("/books/chaos-space-marines/reader.html")) return CHAOS_SPACE_MARINES_DESKTOP_FALLBACK;
   if (path.endsWith("/books/chaos-space-marines/") || path.endsWith("/books/chaos-space-marines/index.html")) return CHAOS_SPACE_MARINES_ENTRY_FALLBACK;
+  if (path.includes("/books/blood-angels/mobile/")) return BLOOD_ANGELS_MOBILE_FALLBACK;
+  if (path.endsWith("/books/blood-angels/reader.html")) return BLOOD_ANGELS_DESKTOP_FALLBACK;
+  if (path.endsWith("/books/blood-angels/") || path.endsWith("/books/blood-angels/index.html")) return BLOOD_ANGELS_ENTRY_FALLBACK;
   if (path.includes("/books/orks/")) return ORKS_FALLBACK;
   if (path.includes("/books/emperors-children/")) return EMPERORS_CHILDREN_FALLBACK;
   if (path.includes("/books/space-marines/")) return SPACE_MARINES_FALLBACK;

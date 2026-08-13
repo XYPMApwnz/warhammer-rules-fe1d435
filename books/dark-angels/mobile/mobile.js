@@ -2,11 +2,29 @@
   'use strict';
   const navButton=document.getElementById('navButton'),scrim=document.getElementById('navScrim'),nav=document.getElementById('mobileNav');
   const dialog=document.getElementById('termDialog'),popupLayer=document.getElementById('termPopupStack'),viewSwitch=document.querySelector('[data-view-switch]');
-  const drawerMedia=matchMedia('(max-width: 800px)'),terms=Object.freeze({...window.WH40K_GLOSSARY.forBook('dark-angels')});
+  const drawerMedia=matchMedia('(max-width: 800px)'),unit=document.querySelector('.unit-card'),params=new URLSearchParams(location.search),rosterMode=params.has('roster');
+  const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/\s*\(aura\)\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim(),faction=value=>normalize(value).replace(/^(?:chaos|imperium|xenos)\s+/,''),slug=value=>normalize(value).replace(/\s+/g,'-');
+  function rosterContext(){
+    if(!rosterMode)return null;
+    let record;try{record=(JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[]).find(item=>item?.id===params.get('roster'));}catch{}
+    const roster=record?.roster;if(!record||faction(roster?.faction)!=='dark angels'||!roster?.units?.length)return null;
+    const selected=new Set(roster.units.map(item=>normalize(item.name)));
+    const detachments=[...new Set((roster.detachments?.length?roster.detachments.map(item=>item.label):[roster.detachment]).flatMap(value=>String(value||'').split(/\s*,\s*(?![^()]*\))/)).map(value=>slug(value.replace(/\s*\([^)]*\)\s*$/,''))).filter(Boolean))];
+    if(!detachments.length||unit&&!selected.has(normalize(unit.dataset.unitTitle)))return null;
+    return{selected,detachments};
+  }
+  const roster=rosterContext();if(rosterMode&&!roster){location.replace('../../../roster-guides/index.html');return;}
+  const terms=Object.freeze({...window.WH40K_GLOSSARY.forBook('dark-angels')});
   window.WHGlossaryAutolink?.configure('dark-angels');
   const popups=new window.DAPhonePopups({dialog,layer:popupLayer,terms,safeFallback:()=>navButton});
 
-  if(viewSwitch){const destination=new URL(viewSwitch.href);destination.search=location.search;viewSwitch.href=destination.href;}
+  if(viewSwitch){const destination=new URL(viewSwitch.href);destination.search=params.toString();viewSwitch.href=destination.href;}
+  if(rosterMode){
+    for(const link of nav.querySelectorAll('a[href$=".html"]')){const destination=new URL(link.href);destination.searchParams.set('roster',params.get('roster'));link.href=destination.href;if(link.closest('.mobile-unit-groups')&&!roster.selected.has(normalize(link.textContent)))link.remove();}
+    for(const link of nav.querySelectorAll('.phone-tree > details:first-of-type .mobile-nav-branch > a'))if(!roster.detachments.includes(slug(link.textContent.replace(/\s+\d+\s*DP$/i,''))))link.remove();
+    for(const group of nav.querySelectorAll('.mobile-unit-groups > details'))if(!group.querySelector('a'))group.remove();
+    document.documentElement.dataset.rosterActive='true';
+  }
   function drawer(open){document.body.classList.toggle('nav-drawer-open',open);navButton.setAttribute('aria-expanded',String(open));nav.setAttribute('aria-hidden',String(!open));scrim.hidden=!open;}
   function syncDrawerMode(){const returnFocus=nav.contains(document.activeElement);if(drawerMedia.matches)drawer(false);else{document.body.classList.remove('nav-drawer-open');nav.setAttribute('aria-hidden','false');scrim.hidden=true;}if(returnFocus&&nav.getAttribute('aria-hidden')==='true')navButton.focus({preventScroll:true});}
   const showTerm=trigger=>popups.open(trigger.dataset.term,trigger);

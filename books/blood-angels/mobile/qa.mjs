@@ -95,7 +95,8 @@ for(const category of categories){
 assert.doesNotMatch(start,/<summary>Blood Angels <span>15<\/span>|<summary>Space Marines <span>82<\/span>/,'Phone navigation must not add ownership branches');
 assert.match(runtime,/new URLSearchParams\(location\.search\)/,'Phone runtime must consume roster query state');
 assert.match(runtime,/data-roster-guides-link/,'Phone runtime must preserve roster-guide navigation');
-assert.match(runtime,/normalize\(roster\?\.faction\)!=='blood angels'/,'Phone roster mode must accept Blood Angels rosters');
+assert.match(runtime,/faction\(roster\?\.faction\)!=='blood angels'/,'Phone roster mode must accept prefixed Blood Angels rosters');
+assert.match(runtime,/link\.remove\(\)/,'Phone roster mode must remove non-roster navigation routes');
 assert.doesNotMatch(runtime,/chaos space marines/i,'Phone roster runtime must not retain a Chaos Space Marines faction guard');
 assert.match(runtime,/relatedDetachment/,'Phone runtime must support deterministic Compatible Rules');
 assert.match(runtime,/BAPhonePopups/,'Phone runtime must use the book-local popup controller');

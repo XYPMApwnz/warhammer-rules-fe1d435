@@ -4,7 +4,7 @@
   let record;try{record=(JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[]).find(item=>item?.id===rosterId);}catch{}
   if(!record){location.replace('../../roster-guides/index.html?missing='+encodeURIComponent(rosterId));return;}
   let roster=record.roster;if(record.sourceText&&window.WHRosterParser){const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)roster=parsed;}
-  const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/\s*\(aura\)\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim(),faction=value=>normalize(String(value||'').replace(/^Chaos\s*[-–—]\s*/i,'')),slug=value=>normalize(value).replace(/\s+/g,'-');
+  const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/\s*\(aura\)\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim(),faction=value=>normalize(value).replace(/^(?:chaos|imperium|xenos)\s+/,''),slug=value=>normalize(value).replace(/\s+/g,'-');
   if(faction(roster?.faction)!=='blood angels'||!roster?.units?.length){location.replace('../../roster-guides/index.html');return;}
   const cards=new Map([...document.querySelectorAll('.unit-card[data-unit-title]')].map(card=>[normalize(card.dataset.unitTitle),card])),selected=new Map();
   for(const unit of roster.units){const card=cards.get(normalize(unit.name));if(!card)continue;const entry=selected.get(card.id)||{card,units:[],points:0,loadout:[]};entry.units.push(unit);entry.points+=Number(unit.points)||0;entry.loadout.push(...[unit.wargear,...(unit.models||[]).flatMap(model=>[model.wargear,...(model.loadouts||[]).map(item=>item.wargear)])].filter(Boolean));selected.set(card.id,entry);}

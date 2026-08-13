@@ -36,7 +36,7 @@
 
   if (rosterMode) {
     try {
-      if (!unit || !relatedDetachment || !window.WHRosterParser || !window.WHRosterEnhancements) throw new Error('Roster runtime unavailable');
+      if (!window.WHRosterParser) throw new Error('Roster runtime unavailable');
       const records = JSON.parse(localStorage.getItem('wh40k-rosters-v1')) || [];
       const record = records.find(item => item?.id === params.get('roster'));
       if (!record) throw new Error('Roster not found');
@@ -44,17 +44,23 @@
       if (!parsed || !Array.isArray(parsed.units)) throw new Error('Roster data unavailable');
       const faction=String(parsed.faction||'').replace(/^Chaos\s*[-–—]\s*/i,'').trim().toLowerCase();
       if(faction!=='death guard')throw new Error('Roster faction unavailable');
+      const selected=new Set(parsed.units.map(item=>slug(item.name)));
       const normalizedDetachmentIds = (parsed.detachments?.length ? parsed.detachments.map(item => item.name || item.label) : [parsed.detachment]).map(slug).filter(Boolean);
-      rosterDetachmentIds = resolveRosterDetachmentIds(normalizedDetachmentIds,[...relatedDetachment.options].map(option=>option.value));
+      const detachmentLinks=[...nav.querySelectorAll('.phone-tree > details:first-of-type .mobile-nav-branch > a')];
+      rosterDetachmentIds = resolveRosterDetachmentIds(normalizedDetachmentIds,detachmentLinks.map(link=>slug(link.textContent.replace(/\s+\d+\s*DP$/i,''))));
       if (!rosterDetachmentIds) throw new Error('Roster Detachment unavailable');
-      relatedDetachment.value = 'all';
-      relatedDetachment.closest('label')?.remove();
+      if(relatedDetachment){relatedDetachment.value = 'all';relatedDetachment.closest('label')?.remove();}
       window.DG_ROSTER_GUIDE=Object.freeze({detachmentIds:rosterDetachmentIds});
-      const unitSlug = unit.id.replace(/^unit-/, '');
-      const matching = parsed.units.filter(item => slug(item.name) === unitSlug);
+      const unitSlug = unit?.id.replace(/^unit-/, '');
+      const matching = unit ? parsed.units.filter(item => slug(item.name) === unitSlug) : [];
+      if(unit&&!matching.length)throw new Error('Roster unit unavailable');
       const ownerIds=new Set(matching.map(item=>item.id));
       assignedEnhancementIds=new Set((parsed.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&ownerIds.has(item.ownerUnitId)).map(item=>`enhancement-${slug(item.name)}`));
-      if (matching.length) window.WHRosterEnhancements.decorate(unit, parsed, matching);
+      if (matching.length) window.WHRosterEnhancements?.decorate(unit, parsed, matching);
+      for(const link of nav.querySelectorAll('a[href$=".html"]')){const destination=new URL(link.href);destination.searchParams.set('roster',params.get('roster'));link.href=destination.href;if(link.closest('.mobile-unit-groups')&&!selected.has(slug(link.textContent)))link.remove();}
+      for(const link of detachmentLinks)if(!rosterDetachmentIds.includes(slug(link.textContent.replace(/\s+\d+\s*DP$/i,''))))link.remove();
+      for(const group of nav.querySelectorAll('.mobile-unit-groups > details'))if(!group.querySelector('a'))group.remove();
+      document.documentElement.dataset.rosterActive='true';
   } catch {
     location.replace('../../../roster-guides/index.html');
     return;

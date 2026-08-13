@@ -88,4 +88,5 @@ assert.equal(manifest.gates.publishAsComplete,false);
 const mobileRuntime=fs.readFileSync(path.join(root,'mobile.js'),'utf8');
 assert.match(mobileRuntime,/rosterMode\?['"]all['"]:/,'Phone roster mode must use the all-Detachment union');
 assert.match(mobileRuntime,/new URLSearchParams\(location\.search\)/,'Phone routes must preserve the roster query');
+assert.match(mobileRuntime,/link\.remove\(\)/,'Phone roster mode must remove non-roster navigation routes');
 console.log('Chaos Space Marines Phone QA: 74 routes, 17 Detachments, 54 current Datasheets, 53 Legends and 4 other-faction units excluded.');

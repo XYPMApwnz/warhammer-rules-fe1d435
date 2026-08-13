@@ -8,14 +8,14 @@
   const viewSwitch=document.querySelector('[data-view-switch]'),relatedRules=document.getElementById('relatedRules');
   const relatedContent=document.getElementById('relatedRulesContent'),relatedDetachment=document.getElementById('relatedDetachment');
   const drawerMedia=matchMedia('(max-width: 800px)'),unit=document.querySelector('.unit-card'),params=new URLSearchParams(location.search),rosterMode=params.has('roster');
-  const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/\s*\(aura\)\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim(),slug=value=>normalize(value).replace(/\s+/g,'-');
+  const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/\s*\(aura\)\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim(),faction=value=>normalize(value).replace(/^(?:chaos|imperium|xenos)\s+/,''),slug=value=>normalize(value).replace(/\s+/g,'-');
   function rosterContext(){
     if(!rosterMode)return null;
     let record;try{record=(JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[]).find(item=>item?.id===params.get('roster'));}catch{}
     if(!record)return null;
     let roster=record.roster;
     if(record.sourceText&&window.WHRosterParser){const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)roster=parsed;}
-    if(normalize(roster?.faction)!=='blood angels'||!roster?.units?.length)return null;
+    if(faction(roster?.faction)!=='blood angels'||!roster?.units?.length)return null;
     const selected=new Map();
     for(const item of roster.units){const key=normalize(item.name),entry=selected.get(key)||{units:[],loadout:[]};entry.units.push(item);entry.loadout.push(...[item.wargear,...(item.models||[]).flatMap(model=>[model.wargear,...(model.loadouts||[]).map(loadout=>loadout.wargear)])].filter(Boolean));selected.set(key,entry);}
     const detachments=[...new Set((roster.detachments?.length?roster.detachments.map(item=>item.label):[roster.detachment]).flatMap(value=>String(value||'').split(/\s*,\s*(?![^()]*\))/)).map(value=>slug(value.replace(/\s*\([^)]*\)\s*$/,''))).filter(Boolean))];
@@ -36,9 +36,9 @@ if(rosterMode&&relatedDetachment){relatedDetachment.value='all';relatedDetachmen
 
   if(viewSwitch){const destination=new URL(viewSwitch.href);destination.search=params.toString();if(location.hash)destination.hash=location.hash;viewSwitch.href=destination.href;}
   if(rosterMode){
-    for(const link of nav.querySelectorAll('a[href$=".html"]')){const destination=new URL(link.href);destination.searchParams.set('roster',params.get('roster'));link.href=destination.href;if(link.closest('.mobile-unit-groups'))link.hidden=!roster.selected.has(normalize(link.textContent));}
-    for(const link of nav.querySelectorAll('.phone-tree > details:first-of-type .mobile-nav-branch > a'))link.hidden=!roster.detachments.includes(slug(link.textContent));
-    for(const group of nav.querySelectorAll('.mobile-unit-groups > details'))group.hidden=![...group.querySelectorAll('a')].some(link=>!link.hidden);
+    for(const link of nav.querySelectorAll('a[href$=".html"]')){const destination=new URL(link.href);destination.searchParams.set('roster',params.get('roster'));link.href=destination.href;if(link.closest('.mobile-unit-groups')&&!roster.selected.has(normalize(link.textContent)))link.remove();}
+    for(const link of nav.querySelectorAll('.phone-tree > details:first-of-type .mobile-nav-branch > a'))if(!roster.detachments.includes(slug(link.textContent.replace(/\s+\d+\s*DP$/i,''))))link.remove();
+    for(const group of nav.querySelectorAll('.mobile-unit-groups > details'))if(!group.querySelector('a'))group.remove();
     if(unit){const composition=unit.querySelector('[id$="-composition"]');if(composition){const heading=composition.querySelector('h4'),block=document.createElement('div');block.className='content-block roster-composition';const label=document.createElement('strong');label.textContent='Roster loadout';const list=document.createElement('ul');for(const item of roster.entry.units){const row=document.createElement('li');row.textContent=`${item.quantity||1}× ${item.name}${item.wargear?` — ${item.wargear}`:''}`;list.append(row);}block.append(label,list);composition.replaceChildren(heading,block);}if(roster.entry.loadout.length&&window.WHRosterEntities)unit.querySelectorAll('.weapon-row:not(.weapon-head)').forEach(row=>{const label=row.querySelector('.weapon-button')?.textContent||row.firstElementChild?.textContent;if(label&&!window.WHRosterEntities.loadoutIncludesProfile(roster.entry.loadout,label))row.remove();});}
     document.documentElement.dataset.rosterActive='true';document.querySelector('[data-roster-guides-link]')?.removeAttribute('hidden');
   }

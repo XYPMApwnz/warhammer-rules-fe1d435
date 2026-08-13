@@ -95,7 +95,7 @@
     {
       "code": "01.02.03",
       "title": "Revived and Adding Models to a Unit",
-      "text": "When a rule revives, resurrects, returns or adds models to a unit, the specified number of models are added to the unit.\n• If a rule revives, resurrects or returns models to a unit, it does so through destroyed models from that unit.\n• This cannot expand a unit beyond its starting strength.\n• Unless otherwise stated, such models are added with all wargear and enhancements they started the battle with, and with their full W remaining.\nModels returned to a unit on the battlefield must be set up as follows:\n• They must be set up in coherency with models in that unit that started that phase on the battlefield.\n• They can be set up engaged with one or more enemy units, but only if those enemy units were already engaged with the unit that model is being returned to.\nIf a leader or support model in an attached unit is destroyed and subsequently revived, they are still part of that attached unit and they must be returned to it if possible.\nWhen a model revives, resurrects, returns or is added to an embarked unit, if that TRANSPORT has sufficient remaining transport capacity for that model, that model is returned to that unit and is embarked. Otherwise, that model is destroyed, but it does not trigger rules that apply when a model is destroyed.",
+      "text": "When a rule revives, resurrects, returns or adds models to a unit, the specified number of models are added to the unit.\n• If a rule revives, resurrects or returns models to a unit, it does so through destroyed models from that unit.\n• This cannot expand a unit beyond its starting strength.\n• Unless otherwise stated, such models are added with all wargear and enhancements they started the battle with, and with their full W remaining.\nModels returned to a unit on the battlefield must be set up as follows:\n• They must be set up in coherency with models in that unit that started that phase on the battlefield.\n• They can be set up engaged with one or more enemy units, but only if those enemy units were already engaged with the unit that model is being returned to.\nIf a leader or support model in an attached unit is destroyed and subsequently revived, it returns on its own as a unit of one, rather than returning as part of its attached unit.\nWhen a model revives, resurrects, returns or is added to an embarked unit, if that TRANSPORT has sufficient remaining transport capacity for that model, that model is returned to that unit and is embarked. Otherwise, that model is destroyed, but it does not trigger rules that apply when a model is destroyed.",
       "kind": "digital-clarification"
     },
     {
@@ -869,7 +869,7 @@
     {
       "code": "08.02.01",
       "title": "Command Points",
-      "text": "Command Points are a valuable resource you can spend to use stratagems (15). The Gain Core CP step ensures that both players gain 1CP each turn. While these are termed Core CP here, they are Command Points like any other. Other rules sometimes mention ‘Core CP’ when referring to these Command Points.",
+      "text": "Command Points are a valuable resource you can spend to use stratagems (15). The Gain Core CP step ensures that both players gain 1CP each turn. While these are termed Core CP here, they are Command Points like any other. Other rules sometimes mention ‘Core CP’ when referring to these Command Points.\nYou can only generate a single extra CP per battle round.",
       "kind": "digital-clarification"
     },
     {

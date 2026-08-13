@@ -34,6 +34,13 @@ assert.equal(digital.meta.edition,'11E','reader must use the 11E digital referen
 assert.equal(digital.records.length,271,'unexpected Wahapedia 11E record count');
 assert.equal(new Set(digital.records.map(record=>record.code)).size,digital.records.length,'digital rule codes must be unique');
 const recordsByCode=new Map(digital.records.map(record=>[record.code,record]));
+const julyContracts=new Map([
+  ['01.02.03','returns on its own as a unit of one'],
+  ['08.02.01','only generate a single extra CP per battle round'],
+  ['09.05.01','cannot make more than one Normal Move in a phase']
+]);
+for(const [code,wording] of julyContracts)assert(recordText(recordsByCode.get(code)).includes(wording),`${code} is missing its confirmed July 2026 Core update`);
+assert(!recordText(recordsByCode.get('01.02.03')).includes('still part of that attached unit'),'revived Leader/Support must not rejoin its attached unit');
 const structuredTypes=new Set(['comparison-table','matrix','procedure','named-stages','heading']);
 for(const code of ['01.02.01','05.02','05.03','19.04','03.03','16.01','09.04','10.04','12.05']){
   const record=recordsByCode.get(code);
@@ -131,6 +138,10 @@ assert(!generatedReader.includes('class="rule-code"'),'rule codes must not be vi
 assert(!generatedReader.includes('<h3><button class="term'),'rule titles must not open definitions of themselves');
 assert(!generatedReader.includes('Introduction 2')&&!generatedReader.includes('Introduction 7'),'introduction prose must not become fake numbered rules');
 const visibleReader=generatedReader.replace(/<script[\s\S]*?<\/script>/g,' ').replace(/<style[\s\S]*?<\/style>/g,' ').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ');
+for(const [code,wording] of julyContracts){
+  assert(visibleReader.includes(wording),`${code} July 2026 update is missing from the routed reader`);
+  assert(Object.values(glossary).some(term=>term.canonicalSource?.locator===code&&term.definition?.en?.includes(wording)),`${code} July 2026 update is missing from Mega Glossary`);
+}
 for(const record of digital.records){
   const start=generatedReader.indexOf(`data-rule-code="${record.code}"`);
   assert(start>=0,`${record.code} has no rendered source label`);

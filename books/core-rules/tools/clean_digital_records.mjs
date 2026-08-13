@@ -25,6 +25,11 @@ const removeSection=(code,start,end='')=>{
 addChild('03.04.01','What Is Engagement','While opposing models are within each other\u2019s engagement range, they are able to fight in vicious melee, so unless they are seeking to make melee attacks, models should keep out of their foes\u2019 reach.');
 addChild('19.04.01','Only In Death Does Duty End','Leader and support units often have abilities that make the models they are leading more powerful. In the same way, some bodyguard units\u2019 abilities can enhance the power of those leading them. The rules in Abilities in Attached Units mean that once the models conferring such effects are destroyed, that attached unit does not continue to benefit from them. Should those models later be revived, however, those abilities will once more apply to their attached unit.');
 
+const revived=byCode.get('01.02.03');
+if(revived)revived.text=revived.text.replace('If a leader or support model in an attached unit is destroyed and subsequently revived, they are still part of that attached unit and they must be returned to it if possible.','If a leader or support model in an attached unit is destroyed and subsequently revived, it returns on its own as a unit of one, rather than returning as part of its attached unit.');
+const commandPoints=byCode.get('08.02.01');
+if(commandPoints&&!commandPoints.text.includes('single extra CP per battle round'))commandPoints.text+='\nYou can only generate a single extra CP per battle round.';
+
 const modifiers=byCode.get('02.02.01');
 if(modifiers){
   modifiers.title='Modifiers';

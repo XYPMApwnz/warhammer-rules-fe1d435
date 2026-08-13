@@ -5,6 +5,7 @@
   const tauBook=()=>root.document?.documentElement?.dataset.bookId==='tau-empire'||/\/books\/tau-empire\//.test(root.location?.pathname||'');
   const ecBook=()=>root.document?.documentElement?.dataset.bookId==='emperors-children'||/\/books\/emperors-children\//.test(root.location?.pathname||'');
   const tyranidsBook=()=>root.document?.documentElement?.dataset.bookId==='tyranids'||/\/books\/tyranids\//.test(root.location?.pathname||'');
+  const csmBook=()=>root.document?.documentElement?.dataset.bookId==='chaos-space-marines'||/\/books\/chaos-space-marines\//.test(root.location?.pathname||'');
   const unsafeWeaponTargets=new Set(['thermoneutronic projector','plasma accelerator rifle','supernova launcher']);
   const tauEffects=new Map([
     ['negation emitters upgrade','detection-range-minus-3'],
@@ -296,10 +297,38 @@
     }
     renderTauUnresolved(list,ownership.unresolved);return ownership.cardEnhancements;
   }
+  function csmDetachmentIds(roster){
+    const labels=roster?.detachments?.length?roster.detachments.map(item=>item.label):[roster?.detachment];
+    return new Set(labels.flatMap(value=>String(value||'').split(/\s*,\s*(?![^()]*\))/)).map(value=>normalize(value.replace(/\s*\([^)]*\)\s*$/,''))).filter(Boolean).map(value=>value.replace(/\s+/g,'-')));
+  }
+  function resolveCsmItem(entry,roster){
+    const detachments=csmDetachmentIds(roster),candidates=Object.values(catalog()).filter(item=>normalize(item.title)===normalize(entry.name)&&detachments.has(item.detachmentId));
+    return{status:candidates.length===1?'resolved':candidates.length?'ambiguous':'missing',item:candidates.length===1?candidates[0]:null,candidates};
+  }
+  function csmArticle(entry,resolution,message=''){
+    const item=resolution.item,article=item?enhancementArticle(entry,item):root.document.createElement('article');
+    if(!item){article.className='ability roster-enhancement roster-enhancement-unresolved';article.dataset.rosterEnhancement=normalize(entry.name);const title=root.document.createElement('h5');title.textContent=entry.name;const cost=root.document.createElement('small');cost.className='roster-enhancement-cost';cost.hidden=entry.exportedCost==null;cost.textContent=entry.exportedCost==null?'':`${entry.exportedCost} pts in export`;const text=root.document.createElement('p');text.textContent=resolution.status==='ambiguous'?`This title exists in multiple selected Detachments: ${resolution.candidates.map(candidate=>candidate.detachment).join(' / ')}.`:'No matching Enhancement record was found in the selected Detachment.';article.append(title,cost,text);}
+    if(item)article.dataset.rosterEnhancementRuleId=item.ruleId;if(message)warning(article,message);return article;
+  }
+  function renderCsmInstances(card,ownership,roster){
+    const host=card.querySelector('[id$="-abilities"]')||card,list=card.querySelector('[id$="-abilities"] .ability-list');if(!list)return;
+    const block=root.document.createElement('section');block.className='content-block roster-instances';const heading=root.document.createElement('h4');heading.textContent='Roster instances';const rows=root.document.createElement('ul');block.append(heading,rows);
+    for(const instance of ownership.instances){const assignments=instance.enhancements.map(entry=>({entry,resolution:resolveCsmItem(entry,roster)})),row=root.document.createElement('li');row.textContent=`${instance.label} / ${instance.points} pts / ${assignments.length?assignments.map(({entry,resolution})=>resolution.item?`${resolution.item.title} (${resolution.item.detachment})`:entry.name).join(', '):'No Enhancement assigned'}`;rows.append(row);for(const {entry,resolution} of assignments){const article=csmArticle(entry,resolution,`Assigned to ${instance.label}. This shared Datasheet card represents multiple roster units; presentation is instance-specific and no Datasheet mutation was applied.`);article.classList.add('roster-enhancement-instance');article.dataset.rosterInstance=instance.unit.id;list.append(article);}}
+    if(ownership.unresolved.length)warning(block,'One or more roster Enhancements have an unresolved owner and were not assigned to an instance.');host.append(block);
+  }
+  function csmAssignments(roster,units){const unitIds=new Set((units||[]).map(unit=>unit.id));return(roster?.enhancements||[]).filter(entry=>entry.ownerStatus==='resolved'&&unitIds.has(entry.ownerUnitId)).map(entry=>({entry,...resolveCsmItem(entry,roster)}));}
+  function decorateCsm(card,roster,units){
+    const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];const ownership=resolveTauOwnership(roster,units);
+    if(ownership.instances.length>1){renderCsmInstances(card,ownership,roster);return ownership.instances.flatMap(instance=>instance.enhancements);}
+    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster),article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
+    for(const entry of ownership.unresolved){const article=csmArticle(entry,resolveCsmItem(entry,roster),'This Enhancement was not assigned because its owner could not be resolved to an exact roster unit.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
+    return ownership.cardEnhancements;
+  }
   function decorate(card,roster,units){
     if(tauBook())return decorateTau(card,roster,units);
     if(ecBook())return decorateEc(card,roster,units);
     if(tyranidsBook())return decorateTyranids(card,roster,units);
+    if(csmBook())return decorateCsm(card,roster,units);
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];
     const unitIds=new Set((units||[]).map(unit=>unit.id));
     const owned=(roster?.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&unitIds.has(item.ownerUnitId));
@@ -315,5 +344,5 @@
     }
     return owned;
   }
-  root.WHBookRosterEnhancements=Object.freeze({decorate});
+  root.WHBookRosterEnhancements=Object.freeze({decorate,assignedRuleIds(roster,units){return csmBook()?[...new Set(csmAssignments(roster,units).filter(item=>item.status==='resolved').map(item=>item.item.ruleId))]:[];}});
 }(typeof window==='undefined'?globalThis:window));

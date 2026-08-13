@@ -21,8 +21,8 @@
   "assetVersions": {
     "book": 3,
     "app": 4,
-    "rosterFilter": 1,
-    "rosterData": 1
+    "rosterFilter": 2,
+    "rosterData": 2
   },
   "armyRules": [
     "Dark Pacts",

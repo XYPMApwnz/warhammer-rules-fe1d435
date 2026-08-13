@@ -1,551 +1,684 @@
 window.WH_BOOK_ROSTER_ENHANCEMENTS={
-  "touched by the warp": {
+  "enhancement-touched-by-the-warp": {
     "title": "Touched by the Warp",
     "text": "Saturated with empyric energies, this dark champion has spontaneously manifested the mutant powers of a true psyker. HERETIC ASTARTES model only (excluding KHORNE models). ▪ This model has PSYKER. ▪ This model’s weapons have [PSYCHIC].",
     "value": 10,
     "detachment": "Cabal of Chaos",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-touched-by-the-warp",
+    "detachmentId": "cabal-of-chaos"
   },
-  "conduit of chaos": {
+  "enhancement-conduit-of-chaos": {
     "title": "Conduit of Chaos",
     "text": "Like a lightning rod, this blessed fiend attracts the arcane energies of the Warp, unleashing them in a crackling storm of mutating horror as it plunges into the foe. HERETIC ASTARTES DAEMON model only (excluding KHORNE models). This model’s melee attacks have [LANCE].",
     "value": 20,
     "detachment": "Cabal of Chaos",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-conduit-of-chaos",
+    "detachmentId": "cabal-of-chaos"
   },
-  "amulet of tainted vigour": {
+  "enhancement-amulet-of-tainted-vigour": {
     "title": "Amulet of Tainted Vigour",
     "text": "DARK APOSTLE model only. In your Command phase, you can return up to D3 destroyed DAMNED models (excluding CHARACTER models) to the bearer's unit.",
     "value": 20,
     "detachment": "Chaos Cult",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-amulet-of-tainted-vigour",
+    "detachmentId": "chaos-cult"
   },
-  "cultist s brand": {
+  "enhancement-cultists-brand": {
     "title": "Cultist's Brand",
     "text": "DARK APOSTLE or DAMNED model only. If every other model in the bearer's unit (excluding Dark Disciples) is DAMNED, you can re-roll Advance and Charge rolls made for the bearer's unit.",
     "value": 30,
     "detachment": "Chaos Cult",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-cultists-brand",
+    "detachmentId": "chaos-cult"
   },
-  "incendiary goad": {
+  "enhancement-incendiary-goad": {
     "title": "Incendiary Goad",
     "text": "DARK APOSTLE or DAMNED model only. While the bearer's unit is below its Starting Strength, add 1 to the Strength characteristic of melee weapons equipped by DAMNED models in that unit, and while that unit is Below Half-strength, add 1 to the Attacks characteristic of those weapons as well.",
     "value": 25,
     "detachment": "Chaos Cult",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-incendiary-goad",
+    "detachmentId": "chaos-cult"
   },
-  "warped foresight": {
+  "enhancement-warped-foresight": {
     "title": "Warped Foresight",
     "text": "DARK APOSTLE or DAMNED model only. While the bearer is leading a unit with the Scouts 6\" ability, every model in the bearer's unit has the Scouts 6\" ability.",
     "value": 10,
     "detachment": "Chaos Cult",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-warped-foresight",
+    "detachmentId": "chaos-cult"
   },
-  "surgical precision": {
+  "enhancement-surgical-precision": {
     "title": "Surgical Precision",
     "text": "A student of Fabius Bile’s dread craft, this champion of Chaos wields their weapons with the same precision a master chirurgeon would wield a scalpel. Heretic Astartes model (excluding Damned models) only. The bearer’s melee weapons have the [PRECISION] ability.",
     "value": 10,
     "detachment": "Creations of Bile",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-surgical-precision",
+    "detachmentId": "creations-of-bile"
   },
-  "living carapace": {
+  "enhancement-living-carapace": {
     "title": "Living Carapace",
     "text": "With a thought, the wearer can compel this bioarmour to thicken, further increasing their formidable resistance. Chaos Lord model only. Add 1 to the bearer’s Wounds characteristic and the bearer has the Feel No Pain 5+ ability.",
     "value": 15,
     "detachment": "Creations of Bile",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-living-carapace",
+    "detachmentId": "creations-of-bile"
   },
-  "helm of all seeing": {
+  "enhancement-helm-of-all-seeing": {
     "title": "Helm of All-seeing",
     "text": "This baroque helm sports numerous additional sensors, requiring various disfiguring organ augmentations to process the information. Heretic Astartes Infantry model (excluding Damned models) only. Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of the bearer.",
     "value": 25,
     "detachment": "Creations of Bile",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-helm-of-all-seeing",
+    "detachmentId": "creations-of-bile"
   },
-  "prime test subject": {
+  "enhancement-prime-test-subject": {
     "title": "Prime Test Subject",
     "text": "Only the strongest will survive the rampant cell transformations associated with Bile’s mysterious bioalchemy. Heretic Astartes Infantry model (excluding Damned models) only. Add 1 to the Damage characteristic of melee weapons equipped by the bearer. Each time the bearer makes a melee attack, you can re‑roll the Hit roll.",
     "value": 35,
     "detachment": "Creations of Bile",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-prime-test-subject",
+    "detachmentId": "creations-of-bile"
   },
-  "wyredjinn": {
+  "enhancement-wyredjinn": {
     "title": "Wyredjinn",
     "text": "A repulsive daemon imp of Vashtorr, this incorporeal data‑familiar flits through vox‑channels and sensor suites, stealing data for its master. Heretic Astartes model only (excluding Damned models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.",
     "value": 25,
     "detachment": "Cult of the Arkifane",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-wyredjinn",
+    "detachmentId": "cult-of-the-arkifane"
   },
-  "cybinfernal font": {
+  "enhancement-cybinfernal-font": {
     "title": "Cybinfernal Font",
     "text": "This warp‑forged augmetic channels daemonic energies through its bearer and into those they lead, spawning biomechanoid mutation and supernatural resilience. Heretic Astartes model only (excluding Damned models). Models in the bearer’s unit have the Soul Forge keyword.",
     "value": 20,
     "detachment": "Cult of the Arkifane",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-cybinfernal-font",
+    "detachmentId": "cult-of-the-arkifane"
   },
-  "mark of the soul forges": {
+  "enhancement-mark-of-the-soul-forges": {
     "title": "Mark of the Soul Forges",
     "text": "This burning rune attests to the – perhaps unwise – pact its bearer has struck with the Arkifane in return for enhanced martial might and lethality. Heretic Astartes model only (excluding Damned models). Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
     "value": 20,
     "detachment": "Cult of the Arkifane",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-mark-of-the-soul-forges",
+    "detachmentId": "cult-of-the-arkifane"
   },
-  "crown of worms": {
+  "enhancement-crown-of-worms": {
     "title": "Crown of Worms",
     "text": "This parasitic helm bestows the ability to conjure daemonic nematodes akin to those manifested by the Arkifane himself. These burrowing entities can reknit faltering war machines or gnaw upon such vehicles’ sanity at the wearer’s command. Warpsmith model only. Add 3” to the range of the bearer’s Warpsmith, Master of Mechanisms and Enrage Machine Spirits abilities.",
     "value": 15,
     "detachment": "Cult of the Arkifane",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-crown-of-worms",
+    "detachmentId": "cult-of-the-arkifane"
   },
-  "cursed fang": {
+  "enhancement-cursed-fang": {
     "title": "Cursed Fang",
     "text": "HERETIC ASTARTES INFANTRY model only. Improve the Armour Penetration characteristic of the bearer's melee weapons by 1, and the bearer's melee weapons have the [PRECISION] ability.",
     "value": 10,
     "detachment": "Deceptors",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-cursed-fang",
+    "detachmentId": "deceptors"
   },
-  "falsehood": {
+  "enhancement-falsehood": {
     "title": "Falsehood",
     "text": "CHAOS LORD model only (excluding TERMINATOR and JUMP PACK models). In the Declare Battle Formations step, you can set the bearer up in Reserves instead of setting it up on the battlefield. If you do, in one of your Movement phases, you can select one model in a friendly LEGIONARIES or CHOSEN unit that has two or more models remaining and is on the battlefield (excluding Attached units). The selected model is destroyed (ignoring any rules that are triggered when a model is destroyed) and the bearer is set up as close as possible to where that model was destroyed and only within Engagement Range of any enemy units if the destroyed model was within Engagement Range of those units. The bearer now attaches to that unit as its Leader.",
     "value": 10,
     "detachment": "Deceptors",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-falsehood",
+    "detachmentId": "deceptors"
   },
-  "shroud of obfuscation": {
+  "enhancement-shroud-of-obfuscation": {
     "title": "Shroud of Obfuscation",
     "text": "HERETIC ASTARTES INFANTRY model only. The bearer has the Stealth and Lone Operative abilities.",
     "value": 15,
     "detachment": "Deceptors",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-shroud-of-obfuscation",
+    "detachmentId": "deceptors"
   },
-  "soul link": {
+  "enhancement-soul-link": {
     "title": "Soul Link",
     "text": "HERETIC ASTARTES INFANTRY model only. At the start of your Command phase, you can select one other HERETIC ASTARTES INFANTRY CHARACTER model from your army (excluding EPIC HEROES). Until the start of your next Command phase, the bearer gains the PSYKER keyword, and replace the bearer's datasheet abilities with the datasheet abilities of the CHARACTER you selected.",
     "value": 5,
     "detachment": "Deceptors",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-soul-link",
+    "detachmentId": "deceptors"
   },
-  "pact of destruction": {
+  "enhancement-pact-of-destruction": {
     "title": "Pact of Destruction",
     "text": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re-roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
     "value": 15,
     "detachment": "Devotees of Destruction",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-pact-of-destruction",
+    "detachmentId": "devotees-of-destruction"
   },
-  "eye of oblivion": {
+  "enhancement-eye-of-oblivion": {
     "title": "Eye of Oblivion",
     "text": "This vile technodaemonic parasite nests within the emptied eye socket of its host, driving filament tendrils deep into their brain and feeding on their animus in exchange for revealing the secrets of its supernatural vision. WARPSMITH model only. When this unit is selected to shoot, select one enemy unit within 24\" of this unit. That enemy unit has +6\" detection range until this unit has shot.",
     "value": 20,
     "detachment": "Devotees of Destruction",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-eye-of-oblivion",
+    "detachmentId": "devotees-of-destruction"
   },
-  "eater of dread": {
+  "enhancement-eater-of-dread": {
     "title": "Eater of Dread",
     "text": "HERETIC ASTARTES model only. At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result for each Battle-shocked enemy unit that is on the battlefield: on a 5+, you gain 1CP.",
     "value": 15,
     "detachment": "Dread Talons",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-eater-of-dread",
+    "detachmentId": "dread-talons"
   },
-  "night s shroud": {
+  "enhancement-nights-shroud": {
     "title": "Night's Shroud",
     "text": "CHAOS LORD model only. TERMINATOR models are excluded. Models in the bearer's unit have the Stealth ability.",
     "value": 10,
     "detachment": "Dread Talons",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-nights-shroud",
+    "detachmentId": "dread-talons"
   },
-  "warp fuelled thrusters": {
+  "enhancement-dread-talons-warp-fuelled-thrusters": {
     "title": "Warp-fuelled Thrusters",
-    "text": "Bathed in warp energies, this Lord’s jump pack tears rifts in reality, allowing them to withdraw at a moment’s notice. Chaos Lord Jump Pack model only. At the end of your opponent’s Fight phase, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
+    "text": "JUMP PACK CHAOS LORD model only. At the end of your opponent's turn, if the bearer's unit is not within Engagement Range of one or more enemy units, you can remove the bearer's unit from the battlefield and place it into Strategic Reserves.",
     "value": 20,
-    "detachment": "Nightmare Hunt",
+    "detachment": "Dread Talons",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-dread-talons-warp-fuelled-thrusters",
+    "detachmentId": "dread-talons"
   },
-  "willbreaker": {
+  "enhancement-willbreaker": {
     "title": "Willbreaker",
     "text": "HERETIC ASTARTES model only. In the Fight phase, after the bearer has made its attacks, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test.",
     "value": 10,
     "detachment": "Dread Talons",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-willbreaker",
+    "detachmentId": "dread-talons"
   },
-  "bastion plate": {
+  "enhancement-bastion-plate": {
     "title": "Bastion Plate",
     "text": "CHAOS LORD model only. JUMP PACK models are excluded. Once per battle round, when a saving throw is failed for the bearer's unit, you can change the Damage characteristic of that attack to 0.",
     "value": 10,
     "detachment": "Fellhammer Siege-host",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-bastion-plate",
+    "detachmentId": "fellhammer-siege-host"
   },
-  "iron artifice": {
+  "enhancement-iron-artifice": {
     "title": "Iron Artifice",
     "text": "HERETIC ASTARTES INFANTRY model only. The bearer's weapons have the [ANTI-VEHICLE 4+] and [ANTI-FORTIFICATION 4+] abilities.",
     "value": 10,
     "detachment": "Fellhammer Siege-host",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-iron-artifice",
+    "detachmentId": "fellhammer-siege-host"
   },
-  "ironbound enmity": {
+  "enhancement-ironbound-enmity": {
     "title": "Ironbound Enmity",
     "text": "HERETIC ASTARTES model only. Each time the bearer makes an attack while within range of an objective marker, add 1 to the Wound roll.",
     "value": 15,
     "detachment": "Fellhammer Siege-host",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-ironbound-enmity",
+    "detachmentId": "fellhammer-siege-host"
   },
-  "warp tracer": {
+  "enhancement-warp-tracer": {
     "title": "Warp Tracer",
     "text": "HERETIC ASTARTES model only. In your Shooting phase, after the bearer has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, that enemy unit cannot have the Benefit of Cover.",
     "value": 20,
     "detachment": "Fellhammer Siege-host",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-warp-tracer",
+    "detachmentId": "fellhammer-siege-host"
   },
-  "voice of the tyrant": {
+  "enhancement-voice-of-the-tyrant": {
     "title": "Voice of the Tyrant",
     "text": "This champion is a valued commander, and speaks with the authority of Huron himself. Heretic Astartes model only (excluding Damned models). The bearer’s unit has both abilities from the Tyrannical Motivation Detachment rule.",
     "value": 25,
     "detachment": "HURON’S MARAUDERS",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-voice-of-the-tyrant",
+    "detachmentId": "huron-s-marauders"
   },
-  "raid leader": {
+  "enhancement-raid-leader": {
     "title": "Raid Leader",
     "text": "Rapid mechanised assaults are a preferred tactic of the Red Corsairs, and this champion excels at them. Heretic Astartes model only (excluding Damned models). Each time the bearer’s unit is set up after disembarking from a Transport that has made a Normal move this turn, the bearer’s unit is still eligible to declare a charge.",
     "value": 20,
     "detachment": "HURON’S MARAUDERS",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-raid-leader",
+    "detachmentId": "huron-s-marauders"
   },
-  "dread reputation": {
+  "enhancement-dread-reputation": {
     "title": "Dread Reputation",
     "text": "Such is this warrior’s infamy that their mere presence on the field of battle can overwhelm the foe with tyrannical intimidation. Heretic Astartes model only (excluding Damned models). Each time the bearer’s unit is set up on the battlefield, each enemy unit within 6” of the bearer’s unit (or within 12” if the bearer’s unit was set up using the Deep Strike ability) takes a Battle‑shock test.",
     "value": 25,
     "detachment": "HURON’S MARAUDERS",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-dread-reputation",
+    "detachmentId": "huron-s-marauders"
   },
-  "eager for bloodshed": {
+  "enhancement-eager-for-bloodshed": {
     "title": "Eager for Bloodshed",
     "text": "Desperate to lock weapons with the foe, this warrior is always at the fore, fighting in the vanguard of Huron Blackheart’s forces. Heretic Astartes model only. The bearer has the Infiltrators ability.",
     "value": 30,
     "detachment": "HURON’S MARAUDERS",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-eager-for-bloodshed",
+    "detachmentId": "huron-s-marauders"
   },
-  "shadowcowl talisman": {
+  "enhancement-shadowcowl-talisman": {
     "title": "Shadowcowl Talisman",
     "text": "Worked with diabolical incantations of occlusion, wound about with subtle enchantments, this onyx disc draws a penumbral aura about the bearer that hides him from the eyes of his prey. CHAOS LORD WITH JUMP PACK model only. This unit has 5+ InSv.",
     "value": 20,
     "detachment": "Murdertalon Raiders",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-shadowcowl-talisman",
+    "detachmentId": "murdertalon-raiders"
   },
-  "pact of cursed pinions": {
+  "enhancement-pact-of-cursed-pinions": {
     "title": "Pact of Cursed Pinions",
     "text": "Sharing their mortal frame with a predatory possessor daemon lends this dark champion additional might and swiftness, though it may yet damn them for eternity. CHAOS LORD WITH JUMP PACK model only. ▪ This model has DAEMON. ▪ This model’s melee attacks have +1 A.",
     "value": 20,
     "detachment": "Murdertalon Raiders",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-pact-of-cursed-pinions",
+    "detachmentId": "murdertalon-raiders"
   },
-  "greyveil hex": {
+  "enhancement-greyveil-hex": {
     "title": "Greyveil Hex",
     "text": "Incised into this warrior’s battleplate is a runic curse which dims his form in the minds of his prey, until all they perceive is a mass of talons and shadow. Chaos Lord model only. Models in the bearer’s unit have the Stealth ability. While the bearer’s unit is within range of one or more objective markers you control, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
     "value": 25,
     "detachment": "Nightmare Hunt",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-greyveil-hex",
+    "detachmentId": "nightmare-hunt"
   },
-  "terrorglut parasite": {
+  "enhancement-nightmare-hunt-warp-fuelled-thrusters": {
+    "title": "Warp-fuelled Thrusters",
+    "text": "Bathed in warp energies, this Lord’s jump pack tears rifts in reality, allowing them to withdraw at a moment’s notice. Chaos Lord Jump Pack model only. At the end of your opponent’s Fight phase, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
+    "value": 20,
+    "detachment": "Nightmare Hunt",
+    "tags": [],
+    "owner": null,
+    "assignment": null,
+    "ruleId": "enhancement-nightmare-hunt-warp-fuelled-thrusters",
+    "detachmentId": "nightmare-hunt"
+  },
+  "enhancement-terrorglut-parasite": {
     "title": "Terrorglut Parasite",
     "text": "A daemonic pact sealed in fear and dread allowed this entity to squirm into reality. Coiled tightly and invisibly about a warrior’s soul, the being wears away at the sanity of those he faces and feasts on their terror. Heretic Astartes model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle‑shock test, subtracting 1 from the result.",
     "value": 20,
     "detachment": "Nightmare Hunt",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-terrorglut-parasite",
+    "detachmentId": "nightmare-hunt"
   },
-  "sorrowscent vulture": {
+  "enhancement-sorrowscent-vulture": {
     "title": "Sorrowscent Vulture",
     "text": "This champion demands to be in the vanguard of the hunt, their eagerness to inflict suffering manifesting in a daring lunge towards enemy lines. Chaos Lord Jump Pack model only. Models in the bearer’s unit have the Scouts 6\" ability.",
     "value": 35,
     "detachment": "Nightmare Hunt",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-sorrowscent-vulture",
+    "detachmentId": "nightmare-hunt"
   },
-  "eye of tzeentch": {
+  "enhancement-eye-of-tzeentch": {
     "title": "Eye of Tzeentch",
     "text": "HERETIC ASTARTES TZEENTCH model only. Each time the bearer's unit makes a Dark Pact and does not fail the resulting Leadership test, if the result of that test was 8 or more, you gain 1CP.",
     "value": 15,
     "detachment": "Pactbound Zealots",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-eye-of-tzeentch",
+    "detachmentId": "pactbound-zealots"
   },
-  "intoxicating elixir": {
+  "enhancement-intoxicating-elixir": {
     "title": "Intoxicating Elixir",
     "text": "HERETIC ASTARTES SLAANESH model only. The bearer has the Feel No Pain 5+ ability. Each time the bearer shoots or fights, if the bearer's unit made a Dark Pact this phase and did not fail the resulting Leadership test, after the bearer has resolved those attacks, select one enemy unit that was hit by one or more of those attacks; that enemy unit must take a Battle-shock test.",
     "value": 15,
     "detachment": "Pactbound Zealots",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-intoxicating-elixir",
+    "detachmentId": "pactbound-zealots"
   },
-  "orbs of unlife": {
+  "enhancement-orbs-of-unlife": {
     "title": "Orbs of Unlife",
     "text": "HERETIC ASTARTES NURGLE model only. At the end of the Fight phase, roll one D6 for every enemy unit within 3\" of the bearer, adding 1 to the result if the bearer's unit made a Dark Pact that phase and did not fail the resulting Leadership test: on a 4+, that enemy unit suffers D3 mortal wounds.",
     "value": 15,
     "detachment": "Pactbound Zealots",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-orbs-of-unlife",
+    "detachmentId": "pactbound-zealots"
   },
-  "talisman of burning blood": {
+  "enhancement-talisman-of-burning-blood": {
     "title": "Talisman of Burning Blood",
     "text": "HERETIC ASTARTES KHORNE model only. Add 1 to the Attacks and Strength characteristics of the bearer's melee weapons. Each time the bearer's unit makes a Dark Pact and does not fail the resulting Leadership test, roll one D3: until the end of the phase, add the result to the Attacks and Strength characteristics of the bearer's melee weapons instead.",
     "value": 15,
     "detachment": "Pactbound Zealots",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-talisman-of-burning-blood",
+    "detachmentId": "pactbound-zealots"
   },
-  "despot s claim": {
+  "enhancement-despots-claim": {
     "title": "Despot's Claim",
     "text": "HERETIC ASTARTES model only. At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is wholly within 12\" of your opponent's deployment zone: on a 5+, you gain 1CP.",
     "value": 15,
     "detachment": "Renegade Raiders",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-despots-claim",
+    "detachmentId": "renegade-raiders"
   },
-  "dread reaver": {
+  "enhancement-dread-reaver": {
     "title": "Dread Reaver",
     "text": "HERETIC ASTARTES model only. Each time the bearer makes a melee attack, if the bearer is wholly within 12\" of your opponent's deployment zone, you can re-roll the Hit roll and you can re-roll the Wound roll.",
     "value": 15,
     "detachment": "Renegade Raiders",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-dread-reaver",
+    "detachmentId": "renegade-raiders"
   },
-  "mark of the hound": {
+  "enhancement-mark-of-the-hound": {
     "title": "Mark of the Hound",
     "text": "HERETIC ASTARTES model only. Models in the bearer's unit have the Scouts 6\" ability.",
     "value": 25,
     "detachment": "Renegade Raiders",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-mark-of-the-hound",
+    "detachmentId": "renegade-raiders"
   },
-  "tyrant s lash": {
+  "enhancement-tyrants-lash": {
     "title": "Tyrant's Lash",
     "text": "HERETIC ASTARTES model only. You can re-roll Advance rolls made for the bearer's unit, and the bearer's unit is eligible to shoot in a turn in which it Fell Back.",
     "value": 20,
     "detachment": "Renegade Raiders",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-tyrants-lash",
+    "detachmentId": "renegade-raiders"
   },
-  "weaponised hatred": {
+  "enhancement-weaponised-hatred": {
     "title": "Weaponised Hatred",
     "text": "This champion’s bitterness has been tempered like a blade, and is wielded with the brutal efficacy to match. Heretic Astartes model only. Once per battle round, after your Vendetta target is destroyed, if the bearer is on the battlefield, you can select one enemy unit visible to the bearer. That enemy unit becomes your Vendetta target until you select a new one.",
     "value": 35,
     "detachment": "Renegade Warband",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-weaponised-hatred",
+    "detachmentId": "renegade-warband"
   },
-  "eyes of the hunter": {
+  "enhancement-eyes-of-the-hunter": {
     "title": "Eyes of the Hunter",
     "text": "Immersion within the mutagenic energies of the Warp has wrought changes upon this warrior’s eyes. Slit pupils and warp sight enable them to pick out their targets with unerring accuracy. Heretic Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
     "value": 15,
     "detachment": "Renegade Warband",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-eyes-of-the-hunter",
+    "detachmentId": "renegade-warband"
   },
-  "fratricidal trophies": {
+  "enhancement-fratricidal-trophies": {
     "title": "Fratricidal Trophies",
     "text": "The trophy racks of this warrior’s Terminator armour bear the skulls of former battle‑brothers slain by his own hand. The warriors that fight at his side strive their hardest to avoid sharing the fate of their former comrades. Heretic Astartes Terminator model only. In a turn in which the bearer’s unit chose to Default to Doctrine, until the end of the turn, each time a model in this unit makes an attack, you can re‑roll the Hit roll.",
     "value": 5,
     "detachment": "Renegade Warband",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-fratricidal-trophies",
+    "detachmentId": "renegade-warband"
   },
-  "empyric symbiote": {
+  "enhancement-empyric-symbiote": {
     "title": "Empyric Symbiote",
     "text": "This champion of ruin has been bonded with a warp‑spawned symbiote. This malefic companion’s predatory senses sense the quickest route to the enemy. Heretic Astartes model only. Add 1 to Advance and Charge rolls made for the bearer’s unit.",
     "value": 15,
     "detachment": "Renegade Warband",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-empyric-symbiote",
+    "detachmentId": "renegade-warband"
   },
-  "forge s blessing": {
+  "enhancement-forges-blessing": {
     "title": "Forge's Blessing",
     "text": "HERETIC ASTARTES model only. In your Command phase, select one friendly HERETIC ASTARTES VEHICLE unit within 12\" of the bearer. Until the start of your next Command phase, that unit has the Feel No Pain 6+ ability.",
     "value": 20,
     "detachment": "Soulforged Warpack",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-forges-blessing",
+    "detachmentId": "soulforged-warpack"
   },
-  "invigorated mechatendrils": {
+  "enhancement-invigorated-mechatendrils": {
     "title": "Invigorated Mechatendrils",
     "text": "WARPSMITH model only. Add 4\" to the bearer's Move characteristic.",
     "value": 15,
     "detachment": "Soulforged Warpack",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-invigorated-mechatendrils",
+    "detachmentId": "soulforged-warpack"
   },
-  "tempting addendum": {
+  "enhancement-tempting-addendum": {
     "title": "Tempting Addendum",
     "text": "HERETIC ASTARTES model only. Each time a HERETIC ASTARTES DAEMON VEHICLE unit from your army invokes its contract while within 3\" of the bearer: if it suffers one or more mortal wounds as a result of that Dark Pact, add 1 to the number of mortal wounds it suffers; until the end of the phase, each time a model in that unit makes an attack, you can re-roll the Hit roll.",
     "value": 40,
     "detachment": "Soulforged Warpack",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-tempting-addendum",
+    "detachmentId": "soulforged-warpack"
   },
-  "soul harvester": {
+  "enhancement-soul-harvester": {
     "title": "Soul Harvester",
     "text": "HERETIC ASTARTES model only. While the bearer is on the battlefield, each time an enemy unit within 12\" of the bearer is destroyed, roll one D6: on a 5+, you gain 1CP.",
     "value": 15,
     "detachment": "Soulforged Warpack",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-soul-harvester",
+    "detachmentId": "soulforged-warpack"
   },
-  "eager for vengeance": {
+  "enhancement-eager-for-vengeance": {
     "title": "Eager for Vengeance",
     "text": "HERETIC ASTARTES model only. Excludes DAMNED models. The bearer's unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Each time a model in the bearer's unit makes an attack that targets your focus of hatred, if the bearer's unit Fell Back this turn, add 1 to the Hit roll, and each time you select your focus of hatred as a target of that unit's charge, add 1 to the Charge roll.",
     "value": 20,
     "detachment": "Veterans of the Long War",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-eager-for-vengeance",
+    "detachmentId": "veterans-of-the-long-war"
   },
-  "eye of abaddon": {
+  "enhancement-eye-of-abaddon": {
     "title": "Eye of Abaddon",
     "text": "HERETIC ASTARTES model only. Excludes DAMNED models. While the bearer is on the battlefield, each time your focus of hatred is destroyed, roll one D6: on a 4+, you gain 1CP.",
     "value": 15,
     "detachment": "Veterans of the Long War",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-eye-of-abaddon",
+    "detachmentId": "veterans-of-the-long-war"
   },
-  "mark of legend": {
+  "enhancement-mark-of-legend": {
     "title": "Mark of Legend",
     "text": "HERETIC ASTARTES model only. Excludes DAMNED models. Once per turn, you can re-roll one Hit roll, one Wound roll or one saving throw made for the bearer.",
     "value": 10,
     "detachment": "Veterans of the Long War",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-mark-of-legend",
+    "detachmentId": "veterans-of-the-long-war"
   },
-  "warmaster s gift": {
+  "enhancement-warmasters-gift": {
     "title": "Warmaster's Gift",
     "text": "CHAOS LORD model only. Each time the bearer makes an attack that targets your focus of hatred, an unmodified successful Wound roll of 5+ scores a Critical Wound.",
     "value": 15,
     "detachment": "Veterans of the Long War",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-warmasters-gift",
+    "detachmentId": "veterans-of-the-long-war"
   },
-  "infernal fulgurite": {
+  "enhancement-infernal-fulgurite": {
     "title": "Infernal Fulgurite",
     "text": "This strange artefact was recovered from the storm‑lashed daemon world of Utrexismia. A shard of warp lightning frozen forever in reality, it serves as a potent focus for teleportation. Heretic Astartes model only (excluding Damned models). Once per battle, you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
     "value": 20,
     "detachment": "Warpstrike Champions",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-infernal-fulgurite",
+    "detachmentId": "warpstrike-champions"
   },
-  "eye of the warp": {
+  "enhancement-eye-of-the-warp": {
     "title": "Eye of the Warp",
     "text": "This burning gem allows its bearer to see through the veil between realspace and the Warp, and so to react instantly upon piercing that veil. Heretic Astartes model with the Deep Strike ability only. Each time the bearer’s unit is set up on the battlefield, until the end of the turn, you can re‑roll Charge rolls made for that unit.",
     "value": 15,
     "detachment": "Warpstrike Champions",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-eye-of-the-warp",
+    "detachmentId": "warpstrike-champions"
   },
-  "akshur s binding runes": {
+  "enhancement-akshurs-binding-runes": {
     "title": "Akshur’s Binding Runes",
     "text": "Living runes that crawl from an ancient tome onto living skin, these sigils anchor their host to realspace even when they are immersed in the Empyrean. Heretic Astartes model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
     "value": 20,
     "detachment": "Warpstrike Champions",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-akshurs-binding-runes",
+    "detachmentId": "warpstrike-champions"
   },
-  "tzagulla": {
+  "enhancement-tzagulla": {
     "title": "Tzagulla",
     "text": "This shape‑shifting daemon weapon feeds upon the presence of warp energy to empower both itself and its wielder. Heretic Astartes model with the Deep Strike ability only. Improve the Attacks, Strength and Armour Penetration characteristics of the bearer’s weapons by 1. In addition, each time the bearer’s unit is set up on the battlefield from Reserves, until the end of the turn, improve the Damage characteristic of the bearer’s weapons by 1.",
     "value": 25,
     "detachment": "Warpstrike Champions",
     "tags": [],
     "owner": null,
-    "assignment": null
+    "assignment": null,
+    "ruleId": "enhancement-tzagulla",
+    "detachmentId": "warpstrike-champions"
   }
 };

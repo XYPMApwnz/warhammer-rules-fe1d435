@@ -25,7 +25,7 @@
     return{record,roster,selected,entry,detachments,enhancements};
   }
   const roster=rosterContext();if(rosterMode&&!roster){location.replace('../../../roster-guides/index.html');return;}
-if(rosterMode){relatedDetachment.value='all';relatedDetachment.closest('label')?.remove();}
+if(rosterMode&&relatedDetachment){relatedDetachment.value='all';relatedDetachment.closest('label')?.remove();}
   const relatedRulesEnabled=Boolean(compatibleRuntime&&relatedRules)&&(!rosterMode||!!roster);
   const terms=Object.freeze({...window.WH40K_GLOSSARY.forBook('emperors-children')});
   window.WHGlossaryAutolink?.configure('emperors-children');
@@ -37,7 +37,7 @@ if(rosterMode){relatedDetachment.value='all';relatedDetachment.closest('label')?
   if(viewSwitch){const destination=new URL(viewSwitch.href);destination.search=params.toString();if(location.hash)destination.hash=location.hash;viewSwitch.href=destination.href;}
   if(rosterMode){
     for(const link of nav.querySelectorAll('a[href$=".html"]')){const destination=new URL(link.href);destination.searchParams.set('roster',params.get('roster'));link.href=destination.href;if(link.closest('.mobile-unit-groups'))link.hidden=!roster.selected.has(normalize(link.textContent));}
-    for(const link of nav.querySelectorAll('.phone-tree > details:first-of-type .mobile-nav-branch > a'))link.hidden=!roster.detachments.includes(slug(link.textContent));
+    for(const link of nav.querySelectorAll('.phone-tree > details:first-of-type .mobile-nav-branch > a'))link.hidden=!roster.detachments.includes(slug(link.textContent.replace(/\s+\d+DP$/i,'')));
     for(const group of nav.querySelectorAll('.mobile-unit-groups > details'))group.hidden=![...group.querySelectorAll('a')].some(link=>!link.hidden);
     if(unit){window.WHBookRosterEnhancements?.decorate(unit,roster.roster,roster.entry.units);const composition=unit.querySelector('[id$="-composition"]');if(composition){const heading=composition.querySelector('h4'),block=document.createElement('div');block.className='content-block roster-composition';const label=document.createElement('strong');label.textContent='Roster loadout';const list=document.createElement('ul');for(const item of roster.entry.units){const row=document.createElement('li');row.textContent=`${item.quantity||1}× ${item.name}${item.wargear?` — ${item.wargear}`:''}`;list.append(row);}block.append(label,list);composition.replaceChildren(heading,block);}if(roster.entry.loadout.length&&window.WHRosterEntities)unit.querySelectorAll('.weapon-row:not(.weapon-head)').forEach(row=>{const label=row.querySelector('.weapon-button')?.textContent||row.firstElementChild?.textContent;if(label&&!window.WHRosterEntities.loadoutIncludesProfile(roster.entry.loadout,label))row.remove();});}
     document.documentElement.dataset.rosterActive='true';document.querySelector('[data-roster-guides-link]')?.removeAttribute('hidden');

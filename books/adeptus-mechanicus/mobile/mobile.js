@@ -74,7 +74,7 @@ if(typeof document!=='undefined')(async function(){
       if(rosterGuides)rosterGuides.href=window.AMPhoneRoster.withRosterQuery(rosterGuides.href,rosterId,rosterGuides.hash);
       rosterDetachments=[...rosterContext.detachmentIds];
       window.AM_ROSTER_GUIDE=Object.freeze({detachmentIds:rosterDetachments});
-      relatedDetachment.value='all';relatedDetachment.closest('label')?.remove();
+      if(relatedDetachment){relatedDetachment.value='all';relatedDetachment.closest('label')?.remove();}
       if(unit){
         const currentCard=window.AMPhoneRoster.cardContext(rosterContext,unit.id);
         if(!currentCard.instances.length)throw new Error('Current datasheet is outside roster');

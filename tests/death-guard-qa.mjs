@@ -102,9 +102,9 @@ const termContext={window:{},Object};
 vm.runInNewContext(dataSource,termContext,{filename:'scripts/data.js'});
 const termKeys=Object.keys(termContext.window.DG_TERMS||{});
 check('official Stratagem wording reaches desktop, Phone Mode, popup and Mega Glossary',
-  html.includes('roll one D6:\n<br>• On a 1')&&
-  read('mobile/contagion-engines.html').includes('roll one D6:\n<br>• On a 1')&&
-  read('mobile/flyblown-host.html').includes('Your unit’s ranged attacks:\n<br>• Can re-roll hit rolls of 1.')&&
+  /roll one D6:\r?\n<br>• On a 1/.test(html)&&
+  /roll one D6:\r?\n<br>• On a 1/.test(read('mobile/contagion-engines.html'))&&
+  /Your unit’s ranged attacks:\r?\n<br>• Can re-roll hit rolls of 1\./.test(read('mobile/flyblown-host.html'))&&
   termContext.window.DG_TERMS['soulrot-flux'].summary.includes('make a fall-back move')&&
   termContext.window.DG_TERMS['droning-horror'].summary.includes('ranged attacks: Can re-roll')&&
   glossaryRegistry.terms['death-guard-stratagem-soulrot-flux'].definition.en.includes('• On a 6, that enemy unit suffers 3 mortal wounds.')&&
@@ -269,7 +269,7 @@ check('shared datasheet statlines keep every characteristic on one row',/\.unit-
 check('mobile weapon characteristics use one six-column row',datasheetCss.includes('grid-template-columns: repeat(6, minmax(0, 1fr))')&&(markup.match(/data-label="(?:Range|A|BS|WS|S|AP|D)"/g)||[]).length===146*6);
 check('heading destination highlight uses text glow without outline',/\.destination-highlight:is\(h1,h2,h3,h4,h5,h6\)\s*\{[^}]*animation-name:\s*destination-heading-highlight/.test(contentCss)&&contentCss.includes('@keyframes destination-heading-highlight')&&!contentCss.match(/@keyframes destination-heading-highlight[^}]*outline/));
 check('detachment navigation targets render in separate rows',/\.detachment-content\s*\{[^}]*grid-template-columns:\s*1fr/.test(contentCss));
-check('Stratagem grids preserve intrinsic readable card width',/\.stratagem-grid\s*\{[^}]*grid-template-columns:repeat\(auto-fit,minmax\(min\(100%,360px\),1fr\)\)/.test(contentCss)&&/\.full-related-content \.detachment-content\s*\{[^}]*grid-template-columns:repeat\(auto-fit,minmax\(min\(100%,360px\),1fr\)\)/.test(contentCss)&&/\.full-related-content \.related-detachment>\[data-related-kind="stratagems"\]\s*\{[^}]*grid-template-columns:repeat\(auto-fit,minmax\(min\(100%,360px\),1fr\)\)/.test(contentCss));
+check('Stratagem grids preserve intrinsic readable card width',/\.stratagem-grid\s*\{[^}]*grid-template-columns:repeat\(auto-fit,minmax\(min\(100%,360px\),1fr\)\)/.test(contentCss)&&/\.full-related-content \.detachment-content[^}]*grid-template-columns:repeat\(2,minmax\(min\(100%,360px\),1fr\)\)/.test(contentCss)&&/\.full-related-content \.related-detachment>[^}]*grid-template-columns:repeat\(2,minmax\(min\(100%,360px\),1fr\)\)/.test(contentCss));
 check('all ten Core Stratagems are present in the shared book source',(markup.match(/id="core-stratagem-[^"]+"/g)||[]).length===10);
 const decode=value=>String(value).replace(/<br\s*\/?\s*>/gi,'\n').replace(/<[^>]*>/g,'').replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&lt;','<').replaceAll('&gt;','>').replace(/\r/g,'').trim();
 const coreRecords=coreData.records.filter(record=>/^15\.(?:0[2-8]|1[0-2])$/.test(record.code)&&record.code!=='15.09');

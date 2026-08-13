@@ -103,9 +103,15 @@ function renderRoster(roster,record){
       :matches
         ?`<div class="status">✓ The ${currentPointsLabel} matches the exported total.</div>`
         :`<div class="status warn">! Points warning: the export declares ${roster.declared} pts, but the ${currentPointsLabel} is ${check.total} pts (${check.difference>0?'+':''}${check.difference}). The roster was still saved.</div>`;
-  const enhancementStatus=check?.enhancementWarnings?.length
+  let enhancementStatus=check?.enhancementWarnings?.length
     ?`<div class="status warn">! Enhancement legality warnings. The roster was still saved.<br>${check.enhancementWarnings.map(escapeHtml).join('<br>')}</div>`
     :check?`<div class="status">✓ Enhancement owners checked · ${check.enhancementChoices} choices · ${check.enhancementAssignments} assignments.</div>`:'';
+  const detachmentStatus=check?.detachmentWarnings?.length
+    ?`<div class="status warn">! Detachment Points legality warning. The roster was still saved.<br>${check.detachmentWarnings.map(escapeHtml).join('<br>')}</div>`
+    :Number.isFinite(check?.detachmentPointLimit)
+      ?`<div class="status">✓ Detachment Points checked · ${check.detachmentPoints}/${check.detachmentPointLimit} DP.</div>`
+      :check?'<div class="status warn">! Detachment Points were not checked because Battle Size is unavailable.</div>':'';
+  enhancementStatus=detachmentStatus+enhancementStatus;
   const hasReader=Boolean(FACTION_READERS[knownFaction(roster.faction)]);
   document.querySelector('#roster-result').innerHTML=`<p class="eyebrow">Preview // ${roster.units.length} units</p><h2>${escapeHtml(roster.faction)}</h2><p class="help">${escapeHtml((roster.detachments||[{label:roster.detachment}]).map(item=>item.label).join(' + '))} · ${escapeHtml(roster.disposition)}</p><div class="summary"><div class="stat"><small>Declared in export</small><strong>${roster.declared||'—'} pts</strong></div><div class="stat"><small>${currentPointsLabel}</small><strong>${check?.total??'—'} pts</strong></div></div>${exportStatus}${pointsStatus}${enhancementStatus}<p class="help">Unit limits and wargear legality are not checked.</p><ul class="units">${roster.units.map(unit=>{const owned=(check?.enhancements||[]).filter(item=>item.ownerUnitId===unit.id);return `<li><strong>${escapeHtml(unit.name)}${owned.map(item=>{const exported=Number(item.exportedCost),current=Number(item.currentCost),price=Number.isFinite(exported)&&Number.isFinite(current)&&exported!==current?`${exported} pts in export · ${current} pts current`:`included +${item.exportedCost??item.currentCost} pts`;return `<small class="unit-enhancement">${escapeHtml(item.name)} · ${price}${item.ownerEligibility!=='valid'?` · ${escapeHtml(item.ownerMessage)}`:''}</small>`;}).join('')}</strong><span>${unit.points} pts in export</span></li>`}).join('')}</ul><div class="actions">${hasReader?'<button class="action primary" id="open-guide" type="button">Open personal guide</button>':'<p class="help">Saved. A personal reader is not available for this faction yet.</p>'}</div>`;
   if(!hasReader)return;

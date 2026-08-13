@@ -115,6 +115,9 @@
       rawEnhancements.push({ ...enhancementParts(item), source:'header', ownerUnitId:'' });
     }
     const enhancements = reconcileEnhancements(rawEnhancements, units, warnings);
+    const battleSize = value('BATTLE SIZE');
+    const pointsLimitMatch = battleSize.match(/([\d,]+)\s*Point limit/i);
+    const pointsLimit = Number(pointsLimitMatch?.[1].replaceAll(',', '') || (/incursion/i.test(battleSize) ? 1000 : /strike force/i.test(battleSize) ? 2000 : 0)) || null;
     const declared = Number(value('TOTAL ARMY POINTS').match(/\d+/)?.[0] || 0);
     const unitLineTotal = units.reduce((total, unit) => total + unit.points, 0);
     const dispositions = splitList(values('FORCE DISPOSITION'));
@@ -132,6 +135,8 @@
       enhancements,
       enhancement:enhancements[0]?.name || '—',
       declared,
+      battleSize,
+      pointsLimit,
       calculated:unitLineTotal,
       unitLineTotal,
       exportMatches:declared > 0 && declared === unitLineTotal,

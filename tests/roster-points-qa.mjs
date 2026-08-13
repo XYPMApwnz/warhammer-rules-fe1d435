@@ -6,18 +6,16 @@ const context={window:{}};
 vm.createContext(context);
 for(const file of ['books/shared/roster-parser.js','books/shared/rule-facts.js','roster-guides/points-data.js','roster-guides/points-validator.js'])vm.runInContext(fs.readFileSync(file,'utf8'),context,{filename:file});
 const {WHRosterParser,WH_POINTS_CATALOG,WHRosterPoints}=context.window;
-assert.equal(Object.keys(WH_POINTS_CATALOG['death guard'].units).length,41);
+assert.equal(Object.keys(WH_POINTS_CATALOG['death guard'].units).length,36);
+for(const title of ['death guard chaos lord','death guard chaos lord in terminator armour','death guard cultists','death guard possessed','death guard sorcerer in terminator armour'])assert.equal(WH_POINTS_CATALOG['death guard'].units[title],undefined,`${title} [Legends] must not enter the current Death Guard roster catalogue`);
 assert.equal(new Set(Object.values(WH_POINTS_CATALOG['death guard'].enhancements).map(item=>item.id)).size,30);
-assert.equal(Object.keys(WH_POINTS_CATALOG['adeptus mechanicus'].units).length,38);
+assert.equal(Object.keys(WH_POINTS_CATALOG['adeptus mechanicus'].units).length,34);
 assert.equal(new Set(Object.values(WH_POINTS_CATALOG['adeptus mechanicus'].enhancements).map(item=>item.title)).size,34);
-assert.equal(Object.keys(WH_POINTS_CATALOG['t au empire'].units).length,63);
+assert.equal(Object.keys(WH_POINTS_CATALOG['t au empire'].units).length,39);
 assert.equal(new Set(Object.values(WH_POINTS_CATALOG['t au empire'].enhancements).map(item=>item.title)).size,23);
-assert.equal(WH_POINTS_CATALOG['death guard'].units['death guard possessed'].points[0].value,155);
-assert.equal(WH_POINTS_CATALOG['death guard'].units['death guard chaos lord'].points[0].value,65);
-assert.equal(WH_POINTS_CATALOG['death guard'].units['death guard chaos lord in terminator armour'].points[0].value,85);
-assert.equal(WH_POINTS_CATALOG['death guard'].units['death guard cultists'].points[1].value,100);
-assert.equal(WH_POINTS_CATALOG['death guard'].units['death guard sorcerer in terminator armour'].points[0].value,70);
-
+assert.equal(Object.keys(WH_POINTS_CATALOG['emperors children'].units).length,23);
+assert.equal(Object.keys(WH_POINTS_CATALOG['emperors children'].detachments).length,10);
+assert.equal(new Set(Object.values(WH_POINTS_CATALOG['emperors children'].enhancements).map(item=>item.title)).size,34);
 const common=(declared,header,lordPoints)=>`+++++++++++++++++++++++++++++++++++++++++++++++
 + FACTION KEYWORD: Chaos - Death Guard
 + DETACHMENT: Virulent Vectorium (Worldblight)
@@ -117,10 +115,26 @@ for(const [name,cost] of Object.entries(deathGuardMfmEnhancements)){
 const mechanicus=WHRosterPoints.check({units:[{quantity:10,name:'Skitarii Rangers',models:[]}],declared:85,unitLineTotal:85,enhancements:[]},'adeptus mechanicus');
 assert.equal(mechanicus.total,85);
 assert.equal(mechanicus.difference,0);
-const mechanicusLegends=WHRosterPoints.check({units:[{quantity:5,name:'Secutarii Hoplites [Legends]',models:[]}],declared:65,unitLineTotal:65,enhancements:[]},'adeptus mechanicus');
-assert.equal(mechanicusLegends.total,65);
-assert.deepEqual([...mechanicusLegends.unresolved],[],'New Recruit Legends suffix must not break current point matching');
-
+const emperorChildrenRoster=WHRosterParser.parse(`FACTION KEYWORD: Chaos - Emperor's Children
+BATTLE SIZE: 3. Strike Force (2000 Point limit)
+DETACHMENT: Coterie of the Conceited, Carnival of Excess
+TOTAL ARMY POINTS: 330pts
+1x Defiler (330 pts): Heavy reaper autocannon, Hades lascannon`);
+const emperorChildrenCheck=WHRosterPoints.check(emperorChildrenRoster,'emperors children');
+assert.equal(emperorChildrenRoster.pointsLimit,2000);
+assert.equal(emperorChildrenCheck.total,330,"Emperor's Children roster points must include both current Defiler options");
+assert.equal(emperorChildrenCheck.unresolved.length,0);
+assert.equal(emperorChildrenCheck.detachmentPoints,5);
+assert.equal(emperorChildrenCheck.detachmentPointLimit,3);
+assert.match(emperorChildrenCheck.detachmentWarnings[0],/5\/3 DP/,'Strike Force must reject more than 3 Detachment Points');
+const legalIncursion=WHRosterParser.parse(`FACTION KEYWORD: Chaos - Emperor's Children
+BATTLE SIZE: 2. Incursion (1000 Point limit)
+DETACHMENT: Elegant Brutes, Frenzied Host
+TOTAL ARMY POINTS: 0pts`);
+const legalIncursionCheck=WHRosterPoints.check(legalIncursion,'emperors children');
+assert.equal(legalIncursionCheck.detachmentPoints,2);
+assert.equal(legalIncursionCheck.detachmentPointLimit,2);
+assert.deepEqual([...legalIncursionCheck.detachmentWarnings],[],'Incursion must allow up to 2 Detachment Points');
 const rosterUnit=(id,name,quantity=1)=>({id,name,quantity,models:[]});
 const ownedEnhancement=(name,ownerUnitId)=>({name,ownerUnitId,ownerStatus:'resolved'});
 const upgradeRoster=count=>{
@@ -225,5 +239,5 @@ assert.equal(nightmareWarp.enhancements[0].id,'enhancement-nightmare-hunt-warp-f
 assert.equal(nightmareWarp.enhancements[0].ownerEligibility,'valid');
 const dreadWarp=WHRosterPoints.check(csmRoster('Dread Talons'),'chaos space marines');
 assert.equal(dreadWarp.enhancements[0].id,'enhancement-dread-talons-warp-fuelled-thrusters');
-assert.equal(dreadWarp.enhancements[0].ownerEligibility,'unverified');
+assert.equal(dreadWarp.enhancements[0].ownerEligibility,'valid');
 console.log('Roster parser and points QA passed.');

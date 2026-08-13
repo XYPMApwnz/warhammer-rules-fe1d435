@@ -8,9 +8,9 @@
   const copyMatches=(label,index)=>{
     const text=String(label||'').toLowerCase();
     if(!text.includes('unit'))return true;
-    const range=text.match(/(\d+)(?:st|nd|rd|th)?\s*[-–—]\s*(\d+)(?:st|nd|rd|th)?\s+unit/);
+    const range=text.match(/(\d+)(?:st|nd|rd|th)?\s*(?:-|–|—|to)\s*(\d+)(?:st|nd|rd|th)?\s+unit/);
     if(range)return index>=Number(range[1])&&index<=Number(range[2]);
-    const plus=text.match(/(\d+)(?:st|nd|rd|th)?\+\s+unit/);
+    const plus=text.match(/(\d+)(?:st|nd|rd|th)?\s*\+\s+unit/);
     if(plus)return index>=Number(plus[1]);
     const exact=text.match(/(\d+)(?:st|nd|rd|th)?\s+unit/);
     return !exact||index===Number(exact[1]);
@@ -36,17 +36,26 @@
   };
 
   function check(roster,faction){
-    const catalog=root.WH_POINTS_CATALOG?.[faction],unresolved=[],enhancementWarnings=[],occurrences=new Map(),enhancements=[];let total=0;
-    if(!catalog)return{total:null,unresolved:['Army Book point data is unavailable.'],enhancementWarnings};
+    const catalog=root.WH_POINTS_CATALOG?.[faction],unresolved=[],enhancementWarnings=[],detachmentWarnings=[],occurrences=new Map(),enhancements=[];let total=0;
+    if(!catalog)return{total:null,unresolved:['Army Book point data is unavailable.'],enhancementWarnings,detachmentWarnings};
     for(const unit of roster.units){
       const key=normalize(unit.name),definition=catalog.units[key],index=(occurrences.get(key)||0)+1;occurrences.set(key,index);
       if(!definition){unresolved.push(`Unit: ${unit.name}`);continue;}
       const prices=definition.points.filter(row=>copyMatches(row.label,index)&&modelMatches(row.label,unit.quantity));
       if(prices.length!==1){unresolved.push(`Unit size or repeat: ${unit.quantity}x ${unit.name}`);continue;}
       total+=Number(prices[0].value);
-      for(const item of definition.wargear||[])total+=gearCount(unit,String(item.label).replace(/^per\s+/i,''))*Number(item.value);
+      for(const item of definition.wargear||[])total+=gearCount(unit,String(item.label||item.name).replace(/^per\s+/i,''))*Number(item.value);
     }
-    const selectedDetachments=new Set((roster.detachments||[{name:roster.detachment,label:roster.detachment}]).flatMap(item=>[item.name,item.label]).map(normalize).filter(Boolean));
+    const selectedDetachmentNames=[...new Set((roster.detachments||[{name:roster.detachment,label:roster.detachment}]).map(item=>normalize(item.name||item.label)).filter(Boolean))];
+    const selectedDetachments=new Set(selectedDetachmentNames);
+    const detachmentPointLimit=Number(roster.pointsLimit)===1000?2:Number(roster.pointsLimit)===2000?3:null;
+    let detachmentPoints=0;
+    for(const name of selectedDetachmentNames){
+      const detachment=catalog.detachments?.[name];
+      if(!detachment){detachmentWarnings.push(`Detachment Points unavailable: ${name}.`);continue;}
+      detachmentPoints+=Number(detachment.detachmentPoints);
+    }
+    if(detachmentPointLimit!==null&&detachmentPoints>detachmentPointLimit)detachmentWarnings.push(`Detachment Points limit exceeded (${detachmentPoints}/${detachmentPointLimit} DP).`);
     for(const raw of roster.enhancements||[]){
       const name=enhancementName(raw);if(!name)continue;
       const entry=catalog.enhancements[normalize(name)],candidates=(Array.isArray(entry)?entry:[entry]).filter(Boolean),selected=candidates.filter(item=>!item.detachment||selectedDetachments.has(normalize(item.detachment)));
@@ -73,7 +82,7 @@
     }
     const enhancementChoices=[...new Set(enhancements.map(item=>item.id))].reduce((sum,id)=>sum+Number(enhancements.find(item=>item.id===id)?.assignment?.enhancementChoices||1),0);
     if(enhancementChoices>3)enhancementWarnings.push(`Enhancement choice limit exceeded (${enhancementChoices}/3).`);
-    return{total,unresolved,enhancements,enhancementWarnings,enhancementChoices,enhancementAssignments:enhancements.length,difference:total-Number(roster.declared||0),unitLineTotal:Number(roster.unitLineTotal??roster.calculated??0),exportMatches:Number(roster.declared||0)===Number(roster.unitLineTotal??roster.calculated??0)};
+    return{total,unresolved,enhancements,enhancementWarnings,enhancementChoices,enhancementAssignments:enhancements.length,detachmentPoints,detachmentPointLimit,detachmentWarnings,difference:total-Number(roster.declared||0),unitLineTotal:Number(roster.unitLineTotal??roster.calculated??0),exportMatches:Number(roster.declared||0)===Number(roster.unitLineTotal??roster.calculated??0)};
   }
   root.WHRosterPoints=Object.freeze({check,normalize});
 }(typeof window==='undefined'?globalThis:window));

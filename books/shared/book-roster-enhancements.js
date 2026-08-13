@@ -4,6 +4,7 @@
   const catalog=()=>root.WH_BOOK_ROSTER_ENHANCEMENTS||{};
   const tauBook=()=>root.document?.documentElement?.dataset.bookId==='tau-empire'||/\/books\/tau-empire\//.test(root.location?.pathname||'');
   const ecBook=()=>root.document?.documentElement?.dataset.bookId==='emperors-children'||/\/books\/emperors-children\//.test(root.location?.pathname||'');
+  const tyranidsBook=()=>root.document?.documentElement?.dataset.bookId==='tyranids'||/\/books\/tyranids\//.test(root.location?.pathname||'');
   const unsafeWeaponTargets=new Set(['thermoneutronic projector','plasma accelerator rifle','supernova launcher']);
   const tauEffects=new Map([
     ['negation emitters upgrade','detection-range-minus-3'],
@@ -24,6 +25,20 @@
     ['slayer of champions','precision-vs-character'],
     ['eager patrons','move-plus-2'],
     ['beguiling grotesquerie','snap-shooting-protection']
+  ]);
+  const tyranidsEffects=new Map([
+    ['cryptophotaic camouflage','detection-range-minus-3'],
+    ['destabilising predation','ranged-anti-character-2'],
+    ['synaptoprescience','invulnerable-save-4'],
+    ['elevated might','melee-reroll-wounds-ap-plus-1'],
+    ['ocular adaptation','melee-hit-plus-1'],
+    ['trygon prime','synapse-melee-strength-ws-plus-1'],
+    ['adaptive biology','feel-no-pain'],
+    ['ominous presence','oc-plus-3'],
+    ['relentless hunger','move-plus-2-unit'],
+    ['parasitic biomorphology','melee-strength-plus-1-conditional-attacks'],
+    ['chameleonic','stealth'],
+    ['power of the hive mind','psychic-strength-ap-plus-1']
   ]);
 
   function enhancementArticle(entry,item){
@@ -210,9 +225,81 @@
     }
     renderTauUnresolved(list,ownership.unresolved);return ownership.cardEnhancements;
   }
+  function adjustTyranidsRows(rows,changes,effect){
+    const updates=[];if(!rows.length)return false;
+    for(const row of rows)for(const [field,amount] of Object.entries(changes)){
+      const cell=row.querySelector(`[data-label="${field}"]`);if(!cell)return false;
+      const base=cell.dataset.rosterBaseValue||cell.textContent.trim();let next='';
+      if(field==='WS'){
+        const match=base.match(/^(\d+)\+$/);if(match)next=`${Math.max(2,Number(match[1])-amount)}+`;
+      }else next=increased(base,amount);
+      if(!next)return false;updates.push({cell,base,next});
+    }
+    for(const {cell,base,next} of updates){cell.dataset.rosterBaseValue=base;cell.dataset.rosterDerivedEffect=effect;cell.classList.add('roster-modified');cell.textContent=next;}
+    return true;
+  }
+  function applyTyranidsEffect(card,article,item){
+    const effect=tyranidsEffects.get(normalize(item.title));
+    if(effect==='detection-range-minus-3'){derivedNote(article,effect,'Derived rule: this unit has -3" detection range.');return;}
+    if(effect==='ranged-anti-character-2'){
+      if(tagWeapons(card,'ranged','ANTI-CHARACTER 2+',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived profiles: Anti-Character 2+ applied to this unit\'s ranged attacks.');}
+      else warning(article,'Effect could not be applied automatically because no ranged weapon profiles were found.');return;
+    }
+    if(effect==='invulnerable-save-4'){
+      if(addSharedAbility(card,'Invulnerable Save 4+','core-characteristic-invulnerable-save',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived ability: Invulnerable Save 4+ applied.');}
+      else warning(article,'Effect could not be applied automatically because the Abilities block was not found.');return;
+    }
+    if(effect==='melee-reroll-wounds-ap-plus-1'){
+      if(adjustTyranidsRows(weaponRows(card,'melee'),{AP:-1},effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived profiles: melee Armour Penetration improved by 1. The bearer\'s melee attacks can also re-roll Wound rolls.');}
+      else warning(article,'Effect could not be applied automatically because one or more melee weapon characteristics were not found.');return;
+    }
+    if(effect==='melee-hit-plus-1'){derivedNote(article,effect,'Derived rule: add 1 to Hit rolls for this unit\'s melee attacks. Weapon Skill is not rewritten because this is a roll modifier.');return;}
+    if(effect==='synapse-melee-strength-ws-plus-1'){
+      const keyword=addKeyword(card,'SYNAPSE',effect),weapons=adjustTyranidsRows(weaponRows(card,'melee'),{S:1,WS:1},effect);
+      if(keyword&&weapons){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived profiles: Synapse keyword applied; melee Strength and Weapon Skill improved by 1.');}
+      else warning(article,'Effect could not be applied automatically because the Keywords block or melee weapon characteristics were not found.');return;
+    }
+    if(effect==='feel-no-pain'){
+      if(addSharedAbility(card,'Feel No Pain 5+','core-feel-no-pain',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived ability: Feel No Pain 5+ applied. Feel No Pain 4+ remains conditional on the bearer having fewer than its starting wounds at the start of a turn.');}
+      else warning(article,'Effect could not be applied automatically because the Abilities block was not found.');return;
+    }
+    if(effect==='oc-plus-3'){
+      if(adjustStat(card,'OC',3,effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived profile: +3 Objective Control applied.');}
+      else warning(article,'Effect could not be applied automatically because Objective Control was not found.');return;
+    }
+    if(effect==='move-plus-2-unit'){
+      if(adjustStat(card,'M',2,effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived profile: +2" Move applied to this bearer Datasheet. If the bearer leads a unit, no Bodyguard Datasheet is mutated without attachment evidence.');}
+      else warning(article,'Effect could not be applied automatically because the Move characteristic was not found.');return;
+    }
+    if(effect==='melee-strength-plus-1-conditional-attacks'){
+      if(adjustTyranidsRows(weaponRows(card,'melee'),{S:1},effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived profiles: +1 Strength applied to this bearer Datasheet\'s melee weapons. The +1 Attacks effect remains conditional on destroying an enemy unit near a friendly Harvester; no Bodyguard Datasheet is mutated without attachment evidence.');}
+      else warning(article,'Effect could not be applied automatically because one or more melee weapon characteristics were not found.');return;
+    }
+    if(effect==='stealth'){
+      if(addSharedAbility(card,'Stealth','core-stealth',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived ability: Stealth applied.');}
+      else warning(article,'Effect could not be applied automatically because the Abilities block was not found.');return;
+    }
+    if(effect==='psychic-strength-ap-plus-1'){
+      const rows=weaponRows(card).filter(row=>normalize(row.querySelector('.weapon-tags')?.textContent).includes('psychic'));
+      if(adjustTyranidsRows(rows,{S:1,AP:-1},effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived profiles: Strength and Armour Penetration improved by 1 for the bearer\'s psychic weapons.');}
+      else warning(article,'Effect could not be applied automatically because one or more psychic weapon characteristics were not found.');return;
+    }
+    warning(article,'No permanent Datasheet mutation was applied because this Enhancement does not have a safe deterministic projection.');
+  }
+  function decorateTyranids(card,roster,units){
+    const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];
+    const ownership=resolveTauOwnership(roster,units);
+    if(ownership.instances.length>1){renderTauInstances(card,ownership);return ownership.instances.flatMap(instance=>instance.enhancements);}
+    for(const entry of ownership.cardEnhancements){
+      const item=catalog()[normalize(entry.name)];if(!item||list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(item.title))}"]`))continue;
+      const article=enhancementArticle(entry,item);applyTyranidsEffect(card,article,item);list.prepend(article);
+    }
+    renderTauUnresolved(list,ownership.unresolved);return ownership.cardEnhancements;
+  }
   function decorate(card,roster,units){
     if(tauBook())return decorateTau(card,roster,units);
     if(ecBook())return decorateEc(card,roster,units);
+    if(tyranidsBook())return decorateTyranids(card,roster,units);
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];
     const unitIds=new Set((units||[]).map(unit=>unit.id));
     const owned=(roster?.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&unitIds.has(item.ownerUnitId));

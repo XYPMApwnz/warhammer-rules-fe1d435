@@ -46,6 +46,7 @@ const bloodAngelsMfm=read('books/blood-angels/sources/official-mfm-v1.2.json');
 expect(bloodAngelsConfig.dependencies?.includes('space-marines'),'blood-angels: Space Marines dependency is absent');
 expect(bloodAngelsConfig.expected?.codexDatasheets===15&&bloodAngelsCodex.datasheets?.length===15,'blood-angels: expected 15 local Datasheets');
 expect(bloodAngelsConfig.dependencyDatasheets?.currentOnly===true,'blood-angels: shared Datasheets must use the current Space Marines inventory');
+expect(bloodAngelsConfig.dependencyDetachments?.expected===16,'blood-angels: shared Space Marines Detachment dependency is absent');
 expect(bloodAngelsManifest.gates?.publishAsComplete===false,'blood-angels: verification source gate must remain active');
 
 const csmPack=read('books/chaos-space-marines/content/chaos-space-marines-faction-pack.en.json');
@@ -121,6 +122,7 @@ const daManifest=read('books/dark-angels/sources/source-manifest.json');
 const daReader=fs.readFileSync(path.join(root,'books/dark-angels/reader.html'),'utf8');
 const daPdf=fs.readFileSync(path.join(root,'books/dark-angels/sources/dark-angels-faction-pack-v1.1.pdf'));
 const daDigest=crypto.createHash('sha256').update(daPdf).digest('hex').toUpperCase();
+expect(daConfig.dependencyDetachments?.expected===16,'dark-angels: shared Space Marines Detachment dependency is absent');
 expect(daDigest==='A29FB27970A47E174E4014C7D39DC99FEECB5940684E1DBA04EA218E7BC4106F','dark-angels: official PDF SHA-256 changed');
 expect(daPack.meta?.sha256===daDigest,'dark-angels: generated provenance must use the committed PDF hash');
 const daSerialized=JSON.stringify(daPack);

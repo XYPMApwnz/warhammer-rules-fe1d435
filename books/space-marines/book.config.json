@@ -12,6 +12,15 @@
   "compatibleRulesMatrix": true,
   "includeCoreStratagems": true,
   "legacyRelatedRuleAttributes": false,
+  "detachmentChapterRestrictions": {
+    "Blade of Ultramar": "ULTRAMARINES",
+    "Reclamation Force": "ULTRAMARINES",
+    "Hammer of Avernii": "IRON HANDS",
+    "Spearpoint Task Force": "WHITE SCARS",
+    "Forgefather's Seekers": "SALAMANDERS",
+    "Emperor's Shield": "IMPERIAL FISTS",
+    "Shadowmark Talon": "RAVEN GUARD"
+  },
   "armyRules": [
     "Oath of Moment"
   ],

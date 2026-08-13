@@ -7,10 +7,10 @@ const root=path.dirname(fileURLToPath(import.meta.url)),bookRoot=path.resolve(ro
 const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),config=JSON.parse(fs.readFileSync(path.join(bookRoot,'book.config.json'),'utf8')),manifest=JSON.parse(fs.readFileSync(path.join(bookRoot,'sources/source-manifest.json'),'utf8'));
 const routeIds=[...reader.matchAll(/<(?:section|article)[^>]+id="((?:detachment|unit)-[^"]+)"/g)].map(match=>match[1]);
 const routes=['index.html','army-rules.html','updates.html',...routeIds.map(id=>id.replace(/^(?:detachment|unit)-/,'')+'.html')],htmlFiles=fs.readdirSync(root).filter(file=>file.endsWith('.html')).sort();
-assert.equal(routeIds.filter(id=>id.startsWith('detachment-')).length,8);
+assert.equal(routeIds.filter(id=>id.startsWith('detachment-')).length,24);
 assert.equal(routeIds.filter(id=>id.startsWith('unit-')).length,98);
-assert.equal(new Set(routeIds).size,106);
-assert.equal(routes.length,109);
+assert.equal(new Set(routeIds).size,122);
+assert.equal(routes.length,125);
 assert.deepEqual(htmlFiles,routes.slice().sort(),'Phone routes contain missing or orphan HTML');
 for(const route of routes){const html=fs.readFileSync(path.join(root,route),'utf8');assert.match(html,/\.\/mobile\.js\?v=1/);assert.match(html,/\.\/phone-popup-controller\.js\?v=1/);assert.doesNotMatch(html,/reader\.html\?view=mobile/);assert.match(html,/data-view-switch/);}
 const start=fs.readFileSync(path.join(root,'index.html'),'utf8'),belial=fs.readFileSync(path.join(root,'belial.html'),'utf8'),knights=fs.readFileSync(path.join(root,'deathwing-knights.html'),'utf8'),desktopApp=fs.readFileSync(path.join(root,'../scripts/app.js'),'utf8');
@@ -27,4 +27,4 @@ for(const [leader,target,file] of [['belial','unit-terminator-squad','terminator
 assert.match(knights,/Watcher in the Dark/);assert.match(knights,/These abilities apply only while the corresponding wargear is equipped\./);
 assert.match(fs.readFileSync(path.join(root,'hellblaster-squad.html'),'utf8'),/data-term="space-marines-/);assert.doesNotMatch(fs.readFileSync(path.join(root,'hellblaster-squad.html'),'utf8'),/data-term="dark-angels-weapon-/);
 assert.equal(config.generatedMobile,true);assert.equal(manifest.gates.publishAsComplete,false);assert.doesNotMatch(fs.readFileSync(path.join(root,'mobile.js'),'utf8'),/roster|compatible/i);
-console.log('Dark Angels Phone QA: 109 routes, 8 Detachments, 16 local and 82 shared Datasheets.');
+console.log('Dark Angels Phone QA: 125 routes, 24 Detachments, 16 local and 82 shared Datasheets.');

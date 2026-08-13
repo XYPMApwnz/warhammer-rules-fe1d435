@@ -6,132 +6,6 @@
       "termId": "blood-angels-detachment-rule-legacy-of-the-angel",
       "navigation": {
         "glossary": "glossary-blood-angels-detachment-rule-legacy-of-the-angel",
-        "rule": "detachment-legacy-of-grace"
-      }
-    },
-    "blood-angels-enhancement-blood-boil": {
-      "termId": "blood-angels-enhancement-blood-boil",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-blood-boil",
-        "rule": "detachment-legacy-of-grace"
-      }
-    },
-    "blood-angels-enhancement-aureole-of-the-angel": {
-      "termId": "blood-angels-enhancement-aureole-of-the-angel",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-aureole-of-the-angel",
-        "rule": "detachment-legacy-of-grace"
-      }
-    },
-    "blood-angels-stratagem-martial-paragon": {
-      "termId": "blood-angels-stratagem-martial-paragon",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-martial-paragon",
-        "rule": "detachment-legacy-of-grace"
-      }
-    },
-    "blood-angels-stratagem-soul-darkened-fury": {
-      "termId": "blood-angels-stratagem-soul-darkened-fury",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-soul-darkened-fury",
-        "rule": "detachment-legacy-of-grace"
-      }
-    },
-    "blood-angels-stratagem-aura-of-the-angels-grace": {
-      "termId": "blood-angels-stratagem-aura-of-the-angels-grace",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-aura-of-the-angels-grace",
-        "rule": "detachment-legacy-of-grace"
-      }
-    },
-    "blood-angels-detachment-rule-wrath-of-angels": {
-      "termId": "blood-angels-detachment-rule-wrath-of-angels",
-      "navigation": {
-        "glossary": "glossary-blood-angels-detachment-rule-wrath-of-angels",
-        "rule": "detachment-encarmine-speartip"
-      }
-    },
-    "blood-angels-enhancement-angelic-executioner": {
-      "termId": "blood-angels-enhancement-angelic-executioner",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-angelic-executioner",
-        "rule": "detachment-encarmine-speartip"
-      }
-    },
-    "blood-angels-enhancement-shadow-of-abomination": {
-      "termId": "blood-angels-enhancement-shadow-of-abomination",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-shadow-of-abomination",
-        "rule": "detachment-encarmine-speartip"
-      }
-    },
-    "blood-angels-stratagem-judgement-of-the-golden-host": {
-      "termId": "blood-angels-stratagem-judgement-of-the-golden-host",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-judgement-of-the-golden-host",
-        "rule": "detachment-encarmine-speartip"
-      }
-    },
-    "blood-angels-stratagem-inexorable-valour": {
-      "termId": "blood-angels-stratagem-inexorable-valour",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-inexorable-valour",
-        "rule": "detachment-encarmine-speartip"
-      }
-    },
-    "blood-angels-stratagem-blinding-blurs-of-vengeance": {
-      "termId": "blood-angels-stratagem-blinding-blurs-of-vengeance",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-blinding-blurs-of-vengeance",
-        "rule": "detachment-encarmine-speartip"
-      }
-    },
-    "blood-angels-detachment-rule-fanatical-celerity": {
-      "termId": "blood-angels-detachment-rule-fanatical-celerity",
-      "navigation": {
-        "glossary": "glossary-blood-angels-detachment-rule-fanatical-celerity",
-        "rule": "detachment-wrath-of-the-doomed"
-      }
-    },
-    "blood-angels-enhancement-instinctive-interception": {
-      "termId": "blood-angels-enhancement-instinctive-interception",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-instinctive-interception",
-        "rule": "detachment-wrath-of-the-doomed"
-      }
-    },
-    "blood-angels-enhancement-on-the-archtraitors-bridge": {
-      "termId": "blood-angels-enhancement-on-the-archtraitors-bridge",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-on-the-archtraitors-bridge",
-        "rule": "detachment-wrath-of-the-doomed"
-      }
-    },
-    "blood-angels-stratagem-death-begets-vengeance": {
-      "termId": "blood-angels-stratagem-death-begets-vengeance",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-death-begets-vengeance",
-        "rule": "detachment-wrath-of-the-doomed"
-      }
-    },
-    "blood-angels-stratagem-no-barrier-to-retribution": {
-      "termId": "blood-angels-stratagem-no-barrier-to-retribution",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-no-barrier-to-retribution",
-        "rule": "detachment-wrath-of-the-doomed"
-      }
-    },
-    "blood-angels-stratagem-rage-fuelled-response": {
-      "termId": "blood-angels-stratagem-rage-fuelled-response",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-rage-fuelled-response",
-        "rule": "detachment-wrath-of-the-doomed"
-      }
-    },
-    "blood-angels-detachment-rule-legacy-of-the-angel-2": {
-      "termId": "blood-angels-detachment-rule-legacy-of-the-angel-2",
-      "navigation": {
-        "glossary": "glossary-blood-angels-detachment-rule-legacy-of-the-angel-2",
         "rule": "detachment-angelic-inheritors"
       }
     },
@@ -205,6 +79,167 @@
         "rule": "detachment-angelic-inheritors"
       }
     },
+    "blood-angels-detachment-rule-wrath-of-angels": {
+      "termId": "blood-angels-detachment-rule-wrath-of-angels",
+      "navigation": {
+        "glossary": "glossary-blood-angels-detachment-rule-wrath-of-angels",
+        "rule": "detachment-encarmine-speartip"
+      }
+    },
+    "blood-angels-enhancement-angelic-executioner": {
+      "termId": "blood-angels-enhancement-angelic-executioner",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-angelic-executioner",
+        "rule": "detachment-encarmine-speartip"
+      }
+    },
+    "blood-angels-enhancement-shadow-of-abomination": {
+      "termId": "blood-angels-enhancement-shadow-of-abomination",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-shadow-of-abomination",
+        "rule": "detachment-encarmine-speartip"
+      }
+    },
+    "blood-angels-stratagem-judgement-of-the-golden-host": {
+      "termId": "blood-angels-stratagem-judgement-of-the-golden-host",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-judgement-of-the-golden-host",
+        "rule": "detachment-encarmine-speartip"
+      }
+    },
+    "blood-angels-stratagem-inexorable-valour": {
+      "termId": "blood-angels-stratagem-inexorable-valour",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-inexorable-valour",
+        "rule": "detachment-encarmine-speartip"
+      }
+    },
+    "blood-angels-stratagem-blinding-blurs-of-vengeance": {
+      "termId": "blood-angels-stratagem-blinding-blurs-of-vengeance",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-blinding-blurs-of-vengeance",
+        "rule": "detachment-encarmine-speartip"
+      }
+    },
+    "blood-angels-detachment-rule-legacy-of-the-angel-2": {
+      "termId": "blood-angels-detachment-rule-legacy-of-the-angel-2",
+      "navigation": {
+        "glossary": "glossary-blood-angels-detachment-rule-legacy-of-the-angel-2",
+        "rule": "detachment-legacy-of-grace"
+      }
+    },
+    "blood-angels-enhancement-blood-boil": {
+      "termId": "blood-angels-enhancement-blood-boil",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-blood-boil",
+        "rule": "detachment-legacy-of-grace"
+      }
+    },
+    "blood-angels-enhancement-aureole-of-the-angel": {
+      "termId": "blood-angels-enhancement-aureole-of-the-angel",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-aureole-of-the-angel",
+        "rule": "detachment-legacy-of-grace"
+      }
+    },
+    "blood-angels-stratagem-martial-paragon": {
+      "termId": "blood-angels-stratagem-martial-paragon",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-martial-paragon",
+        "rule": "detachment-legacy-of-grace"
+      }
+    },
+    "blood-angels-stratagem-soul-darkened-fury": {
+      "termId": "blood-angels-stratagem-soul-darkened-fury",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-soul-darkened-fury",
+        "rule": "detachment-legacy-of-grace"
+      }
+    },
+    "blood-angels-stratagem-aura-of-the-angels-grace": {
+      "termId": "blood-angels-stratagem-aura-of-the-angels-grace",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-aura-of-the-angels-grace",
+        "rule": "detachment-legacy-of-grace"
+      }
+    },
+    "blood-angels-detachment-rule-red-thirst": {
+      "termId": "blood-angels-detachment-rule-red-thirst",
+      "navigation": {
+        "glossary": "glossary-blood-angels-detachment-rule-red-thirst",
+        "rule": "detachment-liberator-assault-group"
+      }
+    },
+    "blood-angels-enhancement-gift-of-foresight": {
+      "termId": "blood-angels-enhancement-gift-of-foresight",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-gift-of-foresight",
+        "rule": "detachment-liberator-assault-group"
+      }
+    },
+    "blood-angels-enhancement-icon-of-the-angel": {
+      "termId": "blood-angels-enhancement-icon-of-the-angel",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-icon-of-the-angel",
+        "rule": "detachment-liberator-assault-group"
+      }
+    },
+    "blood-angels-enhancement-rage-fuelled-warrior": {
+      "termId": "blood-angels-enhancement-rage-fuelled-warrior",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-rage-fuelled-warrior",
+        "rule": "detachment-liberator-assault-group"
+      }
+    },
+    "blood-angels-enhancement-speed-of-the-primarch": {
+      "termId": "blood-angels-enhancement-speed-of-the-primarch",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-speed-of-the-primarch",
+        "rule": "detachment-liberator-assault-group"
+      }
+    },
+    "blood-angels-stratagem-angelic-grace": {
+      "termId": "blood-angels-stratagem-angelic-grace",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-angelic-grace",
+        "rule": "detachment-liberator-assault-group"
+      }
+    },
+    "blood-angels-stratagem-armour-of-contempt-2": {
+      "termId": "blood-angels-stratagem-armour-of-contempt-2",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-armour-of-contempt-2",
+        "rule": "detachment-liberator-assault-group"
+      }
+    },
+    "blood-angels-stratagem-savage-echoes": {
+      "termId": "blood-angels-stratagem-savage-echoes",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-savage-echoes",
+        "rule": "detachment-liberator-assault-group"
+      }
+    },
+    "blood-angels-stratagem-red-rampage": {
+      "termId": "blood-angels-stratagem-red-rampage",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-red-rampage",
+        "rule": "detachment-liberator-assault-group"
+      }
+    },
+    "blood-angels-stratagem-aggressive-onslaught": {
+      "termId": "blood-angels-stratagem-aggressive-onslaught",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-aggressive-onslaught",
+        "rule": "detachment-liberator-assault-group"
+      }
+    },
+    "blood-angels-stratagem-relentless-assault": {
+      "termId": "blood-angels-stratagem-relentless-assault",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-relentless-assault",
+        "rule": "detachment-liberator-assault-group"
+      }
+    },
     "blood-angels-detachment-rule-maddened-ferocity": {
       "termId": "blood-angels-detachment-rule-maddened-ferocity",
       "navigation": {
@@ -273,6 +308,1238 @@
       "navigation": {
         "glossary": "glossary-blood-angels-stratagem-red-wrath",
         "rule": "detachment-rage-cursed-onslaught"
+      }
+    },
+    "blood-angels-detachment-rule-upon-wings-of-fire": {
+      "termId": "blood-angels-detachment-rule-upon-wings-of-fire",
+      "navigation": {
+        "glossary": "glossary-blood-angels-detachment-rule-upon-wings-of-fire",
+        "rule": "detachment-the-angelic-host"
+      }
+    },
+    "blood-angels-enhancement-archangels-shard": {
+      "termId": "blood-angels-enhancement-archangels-shard",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-archangels-shard",
+        "rule": "detachment-the-angelic-host"
+      }
+    },
+    "blood-angels-enhancement-artisan-of-war": {
+      "termId": "blood-angels-enhancement-artisan-of-war",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-artisan-of-war",
+        "rule": "detachment-the-angelic-host"
+      }
+    },
+    "blood-angels-enhancement-gleaming-pinions": {
+      "termId": "blood-angels-enhancement-gleaming-pinions",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-gleaming-pinions",
+        "rule": "detachment-the-angelic-host"
+      }
+    },
+    "blood-angels-enhancement-visage-of-death": {
+      "termId": "blood-angels-enhancement-visage-of-death",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-visage-of-death",
+        "rule": "detachment-the-angelic-host"
+      }
+    },
+    "blood-angels-stratagem-unbridled-ardour": {
+      "termId": "blood-angels-stratagem-unbridled-ardour",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-unbridled-ardour",
+        "rule": "detachment-the-angelic-host"
+      }
+    },
+    "blood-angels-stratagem-armour-of-contempt-3": {
+      "termId": "blood-angels-stratagem-armour-of-contempt-3",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-armour-of-contempt-3",
+        "rule": "detachment-the-angelic-host"
+      }
+    },
+    "blood-angels-stratagem-angels-sacrifice": {
+      "termId": "blood-angels-stratagem-angels-sacrifice",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-angels-sacrifice",
+        "rule": "detachment-the-angelic-host"
+      }
+    },
+    "blood-angels-stratagem-martial-exemplars": {
+      "termId": "blood-angels-stratagem-martial-exemplars",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-martial-exemplars",
+        "rule": "detachment-the-angelic-host"
+      }
+    },
+    "blood-angels-stratagem-descent-of-angels": {
+      "termId": "blood-angels-stratagem-descent-of-angels",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-descent-of-angels",
+        "rule": "detachment-the-angelic-host"
+      }
+    },
+    "blood-angels-stratagem-death-from-the-skies": {
+      "termId": "blood-angels-stratagem-death-from-the-skies",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-death-from-the-skies",
+        "rule": "detachment-the-angelic-host"
+      }
+    },
+    "blood-angels-detachment-rule-a-noble-death-in-combat": {
+      "termId": "blood-angels-detachment-rule-a-noble-death-in-combat",
+      "navigation": {
+        "glossary": "glossary-blood-angels-detachment-rule-a-noble-death-in-combat",
+        "rule": "detachment-the-lost-brethren"
+      }
+    },
+    "blood-angels-enhancement-blood-shard": {
+      "termId": "blood-angels-enhancement-blood-shard",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-blood-shard",
+        "rule": "detachment-the-lost-brethren"
+      }
+    },
+    "blood-angels-enhancement-sanguinius-grace": {
+      "termId": "blood-angels-enhancement-sanguinius-grace",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-sanguinius-grace",
+        "rule": "detachment-the-lost-brethren"
+      }
+    },
+    "blood-angels-enhancement-to-slay-the-warmaster": {
+      "termId": "blood-angels-enhancement-to-slay-the-warmaster",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-to-slay-the-warmaster",
+        "rule": "detachment-the-lost-brethren"
+      }
+    },
+    "blood-angels-enhancement-vengeful-onslaught": {
+      "termId": "blood-angels-enhancement-vengeful-onslaught",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-vengeful-onslaught",
+        "rule": "detachment-the-lost-brethren"
+      }
+    },
+    "blood-angels-stratagem-glorious-sacrifice": {
+      "termId": "blood-angels-stratagem-glorious-sacrifice",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-glorious-sacrifice",
+        "rule": "detachment-the-lost-brethren"
+      }
+    },
+    "blood-angels-stratagem-armour-of-contempt-4": {
+      "termId": "blood-angels-stratagem-armour-of-contempt-4",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-armour-of-contempt-4",
+        "rule": "detachment-the-lost-brethren"
+      }
+    },
+    "blood-angels-stratagem-final-retribution": {
+      "termId": "blood-angels-stratagem-final-retribution",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-final-retribution",
+        "rule": "detachment-the-lost-brethren"
+      }
+    },
+    "blood-angels-stratagem-furious-onslaught": {
+      "termId": "blood-angels-stratagem-furious-onslaught",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-furious-onslaught",
+        "rule": "detachment-the-lost-brethren"
+      }
+    },
+    "blood-angels-stratagem-lost-to-rage": {
+      "termId": "blood-angels-stratagem-lost-to-rage",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-lost-to-rage",
+        "rule": "detachment-the-lost-brethren"
+      }
+    },
+    "blood-angels-stratagem-wrathful-rampage": {
+      "termId": "blood-angels-stratagem-wrathful-rampage",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-wrathful-rampage",
+        "rule": "detachment-the-lost-brethren"
+      }
+    },
+    "blood-angels-detachment-rule-fanatical-celerity": {
+      "termId": "blood-angels-detachment-rule-fanatical-celerity",
+      "navigation": {
+        "glossary": "glossary-blood-angels-detachment-rule-fanatical-celerity",
+        "rule": "detachment-wrath-of-the-doomed"
+      }
+    },
+    "blood-angels-enhancement-instinctive-interception": {
+      "termId": "blood-angels-enhancement-instinctive-interception",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-instinctive-interception",
+        "rule": "detachment-wrath-of-the-doomed"
+      }
+    },
+    "blood-angels-enhancement-on-the-archtraitors-bridge": {
+      "termId": "blood-angels-enhancement-on-the-archtraitors-bridge",
+      "navigation": {
+        "glossary": "glossary-blood-angels-enhancement-on-the-archtraitors-bridge",
+        "rule": "detachment-wrath-of-the-doomed"
+      }
+    },
+    "blood-angels-stratagem-death-begets-vengeance": {
+      "termId": "blood-angels-stratagem-death-begets-vengeance",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-death-begets-vengeance",
+        "rule": "detachment-wrath-of-the-doomed"
+      }
+    },
+    "blood-angels-stratagem-no-barrier-to-retribution": {
+      "termId": "blood-angels-stratagem-no-barrier-to-retribution",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-no-barrier-to-retribution",
+        "rule": "detachment-wrath-of-the-doomed"
+      }
+    },
+    "blood-angels-stratagem-rage-fuelled-response": {
+      "termId": "blood-angels-stratagem-rage-fuelled-response",
+      "navigation": {
+        "glossary": "glossary-blood-angels-stratagem-rage-fuelled-response",
+        "rule": "detachment-wrath-of-the-doomed"
+      }
+    },
+    "space-marines-detachment-rule-imperator-unleashed": {
+      "termId": "space-marines-detachment-rule-imperator-unleashed",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-imperator-unleashed",
+        "rule": "detachment-vengeful-hosts"
+      }
+    },
+    "space-marines-enhancement-avenging-angel": {
+      "termId": "space-marines-enhancement-avenging-angel",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-avenging-angel",
+        "rule": "detachment-vengeful-hosts"
+      }
+    },
+    "space-marines-enhancement-orksbane": {
+      "termId": "space-marines-enhancement-orksbane",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-orksbane",
+        "rule": "detachment-vengeful-hosts"
+      }
+    },
+    "space-marines-stratagem-meteoric-onslaught": {
+      "termId": "space-marines-stratagem-meteoric-onslaught",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-meteoric-onslaught",
+        "rule": "detachment-vengeful-hosts"
+      }
+    },
+    "space-marines-stratagem-purge-by-sectors": {
+      "termId": "space-marines-stratagem-purge-by-sectors",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-purge-by-sectors",
+        "rule": "detachment-vengeful-hosts"
+      }
+    },
+    "space-marines-stratagem-know-no-fear": {
+      "termId": "space-marines-stratagem-know-no-fear",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-know-no-fear",
+        "rule": "detachment-vengeful-hosts"
+      }
+    },
+    "space-marines-detachment-rule-skystrike": {
+      "termId": "space-marines-detachment-rule-skystrike",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-skystrike",
+        "rule": "detachment-fulguris-task-force"
+      }
+    },
+    "space-marines-enhancement-bellicose-weapon-spirits-upgrade": {
+      "termId": "space-marines-enhancement-bellicose-weapon-spirits-upgrade",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-bellicose-weapon-spirits-upgrade",
+        "rule": "detachment-fulguris-task-force"
+      }
+    },
+    "space-marines-enhancement-raptorial-cogitator-core-upgrade": {
+      "termId": "space-marines-enhancement-raptorial-cogitator-core-upgrade",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-raptorial-cogitator-core-upgrade",
+        "rule": "detachment-fulguris-task-force"
+      }
+    },
+    "space-marines-stratagem-data-link-augury": {
+      "termId": "space-marines-stratagem-data-link-augury",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-data-link-augury",
+        "rule": "detachment-fulguris-task-force"
+      }
+    },
+    "space-marines-stratagem-reactive-evasion": {
+      "termId": "space-marines-stratagem-reactive-evasion",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-reactive-evasion",
+        "rule": "detachment-fulguris-task-force"
+      }
+    },
+    "space-marines-stratagem-anti-grav-surge": {
+      "termId": "space-marines-stratagem-anti-grav-surge",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-anti-grav-surge",
+        "rule": "detachment-fulguris-task-force"
+      }
+    },
+    "space-marines-detachment-rule-psychic-disciplines": {
+      "termId": "space-marines-detachment-rule-psychic-disciplines",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-psychic-disciplines",
+        "rule": "detachment-librarius-conclave"
+      }
+    },
+    "space-marines-enhancement-celerity": {
+      "termId": "space-marines-enhancement-celerity",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-celerity",
+        "rule": "detachment-librarius-conclave"
+      }
+    },
+    "space-marines-enhancement-fusillade": {
+      "termId": "space-marines-enhancement-fusillade",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-fusillade",
+        "rule": "detachment-librarius-conclave"
+      }
+    },
+    "space-marines-enhancement-obfuscation": {
+      "termId": "space-marines-enhancement-obfuscation",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-obfuscation",
+        "rule": "detachment-librarius-conclave"
+      }
+    },
+    "space-marines-enhancement-prescience": {
+      "termId": "space-marines-enhancement-prescience",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-prescience",
+        "rule": "detachment-librarius-conclave"
+      }
+    },
+    "space-marines-enhancement-temporal-corridor": {
+      "termId": "space-marines-enhancement-temporal-corridor",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-temporal-corridor",
+        "rule": "detachment-librarius-conclave"
+      }
+    },
+    "space-marines-detachment-rule-new-rule": {
+      "termId": "space-marines-detachment-rule-new-rule",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-new-rule",
+        "rule": "detachment-subversion-assets"
+      }
+    },
+    "space-marines-enhancement-death-in-the-dark-upgrade": {
+      "termId": "space-marines-enhancement-death-in-the-dark-upgrade",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-death-in-the-dark-upgrade",
+        "rule": "detachment-subversion-assets"
+      }
+    },
+    "space-marines-enhancement-shroud-field": {
+      "termId": "space-marines-enhancement-shroud-field",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-shroud-field",
+        "rule": "detachment-subversion-assets"
+      }
+    },
+    "space-marines-stratagem-adaptive-operations": {
+      "termId": "space-marines-stratagem-adaptive-operations",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-adaptive-operations",
+        "rule": "detachment-subversion-assets"
+      }
+    },
+    "space-marines-stratagem-strike-from-the-shadows": {
+      "termId": "space-marines-stratagem-strike-from-the-shadows",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-strike-from-the-shadows",
+        "rule": "detachment-subversion-assets"
+      }
+    },
+    "space-marines-stratagem-cloaked-position": {
+      "termId": "space-marines-stratagem-cloaked-position",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-cloaked-position",
+        "rule": "detachment-subversion-assets"
+      }
+    },
+    "space-marines-detachment-rule-rapid-deployment": {
+      "termId": "space-marines-detachment-rule-rapid-deployment",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-rapid-deployment",
+        "rule": "detachment-armoured-speartip"
+      }
+    },
+    "space-marines-enhancement-armoured-commander": {
+      "termId": "space-marines-enhancement-armoured-commander",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-armoured-commander",
+        "rule": "detachment-armoured-speartip"
+      }
+    },
+    "space-marines-enhancement-liberator": {
+      "termId": "space-marines-enhancement-liberator",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-liberator",
+        "rule": "detachment-armoured-speartip"
+      }
+    },
+    "space-marines-enhancement-shock-deployment": {
+      "termId": "space-marines-enhancement-shock-deployment",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-shock-deployment",
+        "rule": "detachment-armoured-speartip"
+      }
+    },
+    "space-marines-enhancement-tip-of-the-spear": {
+      "termId": "space-marines-enhancement-tip-of-the-spear",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-tip-of-the-spear",
+        "rule": "detachment-armoured-speartip"
+      }
+    },
+    "space-marines-stratagem-machine-wrath": {
+      "termId": "space-marines-stratagem-machine-wrath",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-machine-wrath",
+        "rule": "detachment-armoured-speartip"
+      }
+    },
+    "space-marines-stratagem-armour-of-contempt": {
+      "termId": "space-marines-stratagem-armour-of-contempt",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-armour-of-contempt",
+        "rule": "detachment-armoured-speartip"
+      }
+    },
+    "space-marines-stratagem-rapid-embarkation": {
+      "termId": "space-marines-stratagem-rapid-embarkation",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-rapid-embarkation",
+        "rule": "detachment-armoured-speartip"
+      }
+    },
+    "space-marines-stratagem-ceramite-sledgehammer": {
+      "termId": "space-marines-stratagem-ceramite-sledgehammer",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-ceramite-sledgehammer",
+        "rule": "detachment-armoured-speartip"
+      }
+    },
+    "space-marines-stratagem-advanced-deployment": {
+      "termId": "space-marines-stratagem-advanced-deployment",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-advanced-deployment",
+        "rule": "detachment-armoured-speartip"
+      }
+    },
+    "space-marines-stratagem-purgation-doctrine": {
+      "termId": "space-marines-stratagem-purgation-doctrine",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-purgation-doctrine",
+        "rule": "detachment-armoured-speartip"
+      }
+    },
+    "space-marines-detachment-rule-target-sighted": {
+      "termId": "space-marines-detachment-rule-target-sighted",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-target-sighted",
+        "rule": "detachment-headhunter-task-force"
+      }
+    },
+    "space-marines-enhancement-astartes-tank-ace": {
+      "termId": "space-marines-enhancement-astartes-tank-ace",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-astartes-tank-ace",
+        "rule": "detachment-headhunter-task-force"
+      }
+    },
+    "space-marines-enhancement-firestorm-coordinators": {
+      "termId": "space-marines-enhancement-firestorm-coordinators",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-firestorm-coordinators",
+        "rule": "detachment-headhunter-task-force"
+      }
+    },
+    "space-marines-enhancement-gunnery-honours": {
+      "termId": "space-marines-enhancement-gunnery-honours",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-gunnery-honours",
+        "rule": "detachment-headhunter-task-force"
+      }
+    },
+    "space-marines-enhancement-redoubtable-machine-spirit": {
+      "termId": "space-marines-enhancement-redoubtable-machine-spirit",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-redoubtable-machine-spirit",
+        "rule": "detachment-headhunter-task-force"
+      }
+    },
+    "space-marines-stratagem-target-weak-point": {
+      "termId": "space-marines-stratagem-target-weak-point",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-target-weak-point",
+        "rule": "detachment-headhunter-task-force"
+      }
+    },
+    "space-marines-stratagem-kill-shot": {
+      "termId": "space-marines-stratagem-kill-shot",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-kill-shot",
+        "rule": "detachment-headhunter-task-force"
+      }
+    },
+    "space-marines-stratagem-rapid-gunnery": {
+      "termId": "space-marines-stratagem-rapid-gunnery",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-rapid-gunnery",
+        "rule": "detachment-headhunter-task-force"
+      }
+    },
+    "space-marines-stratagem-reactive-repositioning": {
+      "termId": "space-marines-stratagem-reactive-repositioning",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-reactive-repositioning",
+        "rule": "detachment-headhunter-task-force"
+      }
+    },
+    "space-marines-stratagem-machine-vengeance": {
+      "termId": "space-marines-stratagem-machine-vengeance",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-machine-vengeance",
+        "rule": "detachment-headhunter-task-force"
+      }
+    },
+    "space-marines-detachment-rule-adaptive-defence": {
+      "termId": "space-marines-detachment-rule-adaptive-defence",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-adaptive-defence",
+        "rule": "detachment-ceramite-sentinels"
+      }
+    },
+    "space-marines-enhancement-castellum-omnivox": {
+      "termId": "space-marines-enhancement-castellum-omnivox",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-castellum-omnivox",
+        "rule": "detachment-ceramite-sentinels"
+      }
+    },
+    "space-marines-enhancement-defensive-mastery": {
+      "termId": "space-marines-enhancement-defensive-mastery",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-defensive-mastery",
+        "rule": "detachment-ceramite-sentinels"
+      }
+    },
+    "space-marines-enhancement-honour-indefatigable": {
+      "termId": "space-marines-enhancement-honour-indefatigable",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-honour-indefatigable",
+        "rule": "detachment-ceramite-sentinels"
+      }
+    },
+    "space-marines-enhancement-spy-skull-data-link": {
+      "termId": "space-marines-enhancement-spy-skull-data-link",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-spy-skull-data-link",
+        "rule": "detachment-ceramite-sentinels"
+      }
+    },
+    "space-marines-stratagem-unyielding-might": {
+      "termId": "space-marines-stratagem-unyielding-might",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-unyielding-might",
+        "rule": "detachment-ceramite-sentinels"
+      }
+    },
+    "space-marines-stratagem-priority-strike": {
+      "termId": "space-marines-stratagem-priority-strike",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-priority-strike",
+        "rule": "detachment-ceramite-sentinels"
+      }
+    },
+    "space-marines-stratagem-stand-to-the-end": {
+      "termId": "space-marines-stratagem-stand-to-the-end",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-stand-to-the-end",
+        "rule": "detachment-ceramite-sentinels"
+      }
+    },
+    "space-marines-stratagem-augmented-targeting": {
+      "termId": "space-marines-stratagem-augmented-targeting",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-augmented-targeting",
+        "rule": "detachment-ceramite-sentinels"
+      }
+    },
+    "space-marines-stratagem-evasive-repositioning": {
+      "termId": "space-marines-stratagem-evasive-repositioning",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-evasive-repositioning",
+        "rule": "detachment-ceramite-sentinels"
+      }
+    },
+    "space-marines-detachment-rule-interlocking-tactics": {
+      "termId": "space-marines-detachment-rule-interlocking-tactics",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-interlocking-tactics",
+        "rule": "detachment-bastion-task-force"
+      }
+    },
+    "space-marines-enhancement-blades-of-valour": {
+      "termId": "space-marines-enhancement-blades-of-valour",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-blades-of-valour",
+        "rule": "detachment-bastion-task-force"
+      }
+    },
+    "space-marines-enhancement-bombast-omnivox": {
+      "termId": "space-marines-enhancement-bombast-omnivox",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-bombast-omnivox",
+        "rule": "detachment-bastion-task-force"
+      }
+    },
+    "space-marines-enhancement-eye-of-the-primarch": {
+      "termId": "space-marines-enhancement-eye-of-the-primarch",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-eye-of-the-primarch",
+        "rule": "detachment-bastion-task-force"
+      }
+    },
+    "space-marines-enhancement-hero-of-the-chapter": {
+      "termId": "space-marines-enhancement-hero-of-the-chapter",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-hero-of-the-chapter",
+        "rule": "detachment-bastion-task-force"
+      }
+    },
+    "space-marines-stratagem-codex-discipline": {
+      "termId": "space-marines-stratagem-codex-discipline",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-codex-discipline",
+        "rule": "detachment-bastion-task-force"
+      }
+    },
+    "space-marines-stratagem-guided-disruption": {
+      "termId": "space-marines-stratagem-guided-disruption",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-guided-disruption",
+        "rule": "detachment-bastion-task-force"
+      }
+    },
+    "space-marines-stratagem-light-of-vengeance": {
+      "termId": "space-marines-stratagem-light-of-vengeance",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-light-of-vengeance",
+        "rule": "detachment-bastion-task-force"
+      }
+    },
+    "space-marines-stratagem-shock-bombardment": {
+      "termId": "space-marines-stratagem-shock-bombardment",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-shock-bombardment",
+        "rule": "detachment-bastion-task-force"
+      }
+    },
+    "space-marines-stratagem-angels-defiant": {
+      "termId": "space-marines-stratagem-angels-defiant",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-angels-defiant",
+        "rule": "detachment-bastion-task-force"
+      }
+    },
+    "space-marines-stratagem-heresy-undone": {
+      "termId": "space-marines-stratagem-heresy-undone",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-heresy-undone",
+        "rule": "detachment-bastion-task-force"
+      }
+    },
+    "space-marines-detachment-rule-rapid-drop-deployment": {
+      "termId": "space-marines-detachment-rule-rapid-drop-deployment",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-rapid-drop-deployment",
+        "rule": "detachment-orbital-assault-force"
+      }
+    },
+    "space-marines-enhancement-dedicated-gunship": {
+      "termId": "space-marines-enhancement-dedicated-gunship",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-dedicated-gunship",
+        "rule": "detachment-orbital-assault-force"
+      }
+    },
+    "space-marines-enhancement-laurels-of-thunder": {
+      "termId": "space-marines-enhancement-laurels-of-thunder",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-laurels-of-thunder",
+        "rule": "detachment-orbital-assault-force"
+      }
+    },
+    "space-marines-enhancement-orbital-uplink-reliquary": {
+      "termId": "space-marines-enhancement-orbital-uplink-reliquary",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-orbital-uplink-reliquary",
+        "rule": "detachment-orbital-assault-force"
+      }
+    },
+    "space-marines-enhancement-veteran-of-the-vanguard": {
+      "termId": "space-marines-enhancement-veteran-of-the-vanguard",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-veteran-of-the-vanguard",
+        "rule": "detachment-orbital-assault-force"
+      }
+    },
+    "space-marines-stratagem-suppression-strafing": {
+      "termId": "space-marines-stratagem-suppression-strafing",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-suppression-strafing",
+        "rule": "detachment-orbital-assault-force"
+      }
+    },
+    "space-marines-stratagem-tactical-decapitation": {
+      "termId": "space-marines-stratagem-tactical-decapitation",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-tactical-decapitation",
+        "rule": "detachment-orbital-assault-force"
+      }
+    },
+    "space-marines-stratagem-shock-onslaught": {
+      "termId": "space-marines-stratagem-shock-onslaught",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-shock-onslaught",
+        "rule": "detachment-orbital-assault-force"
+      }
+    },
+    "space-marines-stratagem-auto-sense-coordination": {
+      "termId": "space-marines-stratagem-auto-sense-coordination",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-auto-sense-coordination",
+        "rule": "detachment-orbital-assault-force"
+      }
+    },
+    "space-marines-stratagem-blind-screen": {
+      "termId": "space-marines-stratagem-blind-screen",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-blind-screen",
+        "rule": "detachment-orbital-assault-force"
+      }
+    },
+    "space-marines-stratagem-onward-for-the-emperor": {
+      "termId": "space-marines-stratagem-onward-for-the-emperor",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-onward-for-the-emperor",
+        "rule": "detachment-orbital-assault-force"
+      }
+    },
+    "space-marines-detachment-rule-extremis-level-threat": {
+      "termId": "space-marines-detachment-rule-extremis-level-threat",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-extremis-level-threat",
+        "rule": "detachment-1st-company-task-force"
+      }
+    },
+    "space-marines-enhancement-the-imperiums-sword": {
+      "termId": "space-marines-enhancement-the-imperiums-sword",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-the-imperiums-sword",
+        "rule": "detachment-1st-company-task-force"
+      }
+    },
+    "space-marines-enhancement-fear-made-manifest-aura": {
+      "termId": "space-marines-enhancement-fear-made-manifest-aura",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-fear-made-manifest-aura",
+        "rule": "detachment-1st-company-task-force"
+      }
+    },
+    "space-marines-enhancement-rites-of-war": {
+      "termId": "space-marines-enhancement-rites-of-war",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-rites-of-war",
+        "rule": "detachment-1st-company-task-force"
+      }
+    },
+    "space-marines-enhancement-iron-resolve": {
+      "termId": "space-marines-enhancement-iron-resolve",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-iron-resolve",
+        "rule": "detachment-1st-company-task-force"
+      }
+    },
+    "space-marines-stratagem-armour-of-contempt-2": {
+      "termId": "space-marines-stratagem-armour-of-contempt-2",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-armour-of-contempt-2",
+        "rule": "detachment-1st-company-task-force"
+      }
+    },
+    "space-marines-stratagem-heroes-of-the-chapter": {
+      "termId": "space-marines-stratagem-heroes-of-the-chapter",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-heroes-of-the-chapter",
+        "rule": "detachment-1st-company-task-force"
+      }
+    },
+    "space-marines-stratagem-terrifying-proficiency": {
+      "termId": "space-marines-stratagem-terrifying-proficiency",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-terrifying-proficiency",
+        "rule": "detachment-1st-company-task-force"
+      }
+    },
+    "space-marines-stratagem-duty-and-honour": {
+      "termId": "space-marines-stratagem-duty-and-honour",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-duty-and-honour",
+        "rule": "detachment-1st-company-task-force"
+      }
+    },
+    "space-marines-stratagem-orbital-teleportarium": {
+      "termId": "space-marines-stratagem-orbital-teleportarium",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-orbital-teleportarium",
+        "rule": "detachment-1st-company-task-force"
+      }
+    },
+    "space-marines-stratagem-legendary-fortitude": {
+      "termId": "space-marines-stratagem-legendary-fortitude",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-legendary-fortitude",
+        "rule": "detachment-1st-company-task-force"
+      }
+    },
+    "space-marines-detachment-rule-shield-of-the-imperium": {
+      "termId": "space-marines-detachment-rule-shield-of-the-imperium",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-shield-of-the-imperium",
+        "rule": "detachment-anvil-siege-force"
+      }
+    },
+    "space-marines-enhancement-indomitable-fury": {
+      "termId": "space-marines-enhancement-indomitable-fury",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-indomitable-fury",
+        "rule": "detachment-anvil-siege-force"
+      }
+    },
+    "space-marines-enhancement-fleet-commander": {
+      "termId": "space-marines-enhancement-fleet-commander",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-fleet-commander",
+        "rule": "detachment-anvil-siege-force"
+      }
+    },
+    "space-marines-enhancement-stoic-defender": {
+      "termId": "space-marines-enhancement-stoic-defender",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-stoic-defender",
+        "rule": "detachment-anvil-siege-force"
+      }
+    },
+    "space-marines-enhancement-architect-of-war": {
+      "termId": "space-marines-enhancement-architect-of-war",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-architect-of-war",
+        "rule": "detachment-anvil-siege-force"
+      }
+    },
+    "space-marines-stratagem-rigid-discipline": {
+      "termId": "space-marines-stratagem-rigid-discipline",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-rigid-discipline",
+        "rule": "detachment-anvil-siege-force"
+      }
+    },
+    "space-marines-stratagem-not-one-backwards-step": {
+      "termId": "space-marines-stratagem-not-one-backwards-step",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-not-one-backwards-step",
+        "rule": "detachment-anvil-siege-force"
+      }
+    },
+    "space-marines-stratagem-no-threat-too-great": {
+      "termId": "space-marines-stratagem-no-threat-too-great",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-no-threat-too-great",
+        "rule": "detachment-anvil-siege-force"
+      }
+    },
+    "space-marines-stratagem-battle-drill-recall": {
+      "termId": "space-marines-stratagem-battle-drill-recall",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-battle-drill-recall",
+        "rule": "detachment-anvil-siege-force"
+      }
+    },
+    "space-marines-stratagem-hail-of-vengeance": {
+      "termId": "space-marines-stratagem-hail-of-vengeance",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-hail-of-vengeance",
+        "rule": "detachment-anvil-siege-force"
+      }
+    },
+    "space-marines-detachment-rule-close-range-eradication": {
+      "termId": "space-marines-detachment-rule-close-range-eradication",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-close-range-eradication",
+        "rule": "detachment-firestorm-assault-force"
+      }
+    },
+    "space-marines-enhancement-champion-of-humanity": {
+      "termId": "space-marines-enhancement-champion-of-humanity",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-champion-of-humanity",
+        "rule": "detachment-firestorm-assault-force"
+      }
+    },
+    "space-marines-enhancement-war-tempered-artifice": {
+      "termId": "space-marines-enhancement-war-tempered-artifice",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-war-tempered-artifice",
+        "rule": "detachment-firestorm-assault-force"
+      }
+    },
+    "space-marines-enhancement-forged-in-battle": {
+      "termId": "space-marines-enhancement-forged-in-battle",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-forged-in-battle",
+        "rule": "detachment-firestorm-assault-force"
+      }
+    },
+    "space-marines-enhancement-adamantine-mantle": {
+      "termId": "space-marines-enhancement-adamantine-mantle",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-adamantine-mantle",
+        "rule": "detachment-firestorm-assault-force"
+      }
+    },
+    "space-marines-stratagem-crucible-of-battle": {
+      "termId": "space-marines-stratagem-crucible-of-battle",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-crucible-of-battle",
+        "rule": "detachment-firestorm-assault-force"
+      }
+    },
+    "space-marines-stratagem-rapid-embarkation-2": {
+      "termId": "space-marines-stratagem-rapid-embarkation-2",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-rapid-embarkation-2",
+        "rule": "detachment-firestorm-assault-force"
+      }
+    },
+    "space-marines-stratagem-immolation-protocols": {
+      "termId": "space-marines-stratagem-immolation-protocols",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-immolation-protocols",
+        "rule": "detachment-firestorm-assault-force"
+      }
+    },
+    "space-marines-stratagem-onslaught-of-fire": {
+      "termId": "space-marines-stratagem-onslaught-of-fire",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-onslaught-of-fire",
+        "rule": "detachment-firestorm-assault-force"
+      }
+    },
+    "space-marines-stratagem-burning-vengeance": {
+      "termId": "space-marines-stratagem-burning-vengeance",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-burning-vengeance",
+        "rule": "detachment-firestorm-assault-force"
+      }
+    },
+    "space-marines-detachment-rule-combat-doctrines": {
+      "termId": "space-marines-detachment-rule-combat-doctrines",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-combat-doctrines",
+        "rule": "detachment-gladius-task-force"
+      }
+    },
+    "space-marines-enhancement-artificer-armour": {
+      "termId": "space-marines-enhancement-artificer-armour",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-artificer-armour",
+        "rule": "detachment-gladius-task-force"
+      }
+    },
+    "space-marines-enhancement-the-honour-vehement": {
+      "termId": "space-marines-enhancement-the-honour-vehement",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-the-honour-vehement",
+        "rule": "detachment-gladius-task-force"
+      }
+    },
+    "space-marines-enhancement-adept-of-the-codex": {
+      "termId": "space-marines-enhancement-adept-of-the-codex",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-adept-of-the-codex",
+        "rule": "detachment-gladius-task-force"
+      }
+    },
+    "space-marines-enhancement-fire-discipline": {
+      "termId": "space-marines-enhancement-fire-discipline",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-fire-discipline",
+        "rule": "detachment-gladius-task-force"
+      }
+    },
+    "space-marines-stratagem-only-in-death-does-duty-end": {
+      "termId": "space-marines-stratagem-only-in-death-does-duty-end",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-only-in-death-does-duty-end",
+        "rule": "detachment-gladius-task-force"
+      }
+    },
+    "space-marines-stratagem-honour-the-chapter": {
+      "termId": "space-marines-stratagem-honour-the-chapter",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-honour-the-chapter",
+        "rule": "detachment-gladius-task-force"
+      }
+    },
+    "space-marines-stratagem-adaptive-strategy": {
+      "termId": "space-marines-stratagem-adaptive-strategy",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-adaptive-strategy",
+        "rule": "detachment-gladius-task-force"
+      }
+    },
+    "space-marines-stratagem-storm-of-fire": {
+      "termId": "space-marines-stratagem-storm-of-fire",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-storm-of-fire",
+        "rule": "detachment-gladius-task-force"
+      }
+    },
+    "space-marines-stratagem-squad-tactics": {
+      "termId": "space-marines-stratagem-squad-tactics",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-squad-tactics",
+        "rule": "detachment-gladius-task-force"
+      }
+    },
+    "space-marines-detachment-rule-armoured-wrath": {
+      "termId": "space-marines-detachment-rule-armoured-wrath",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-armoured-wrath",
+        "rule": "detachment-ironstorm-spearhead"
+      }
+    },
+    "space-marines-enhancement-target-augury-web": {
+      "termId": "space-marines-enhancement-target-augury-web",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-target-augury-web",
+        "rule": "detachment-ironstorm-spearhead"
+      }
+    },
+    "space-marines-enhancement-the-flesh-is-weak": {
+      "termId": "space-marines-enhancement-the-flesh-is-weak",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-the-flesh-is-weak",
+        "rule": "detachment-ironstorm-spearhead"
+      }
+    },
+    "space-marines-enhancement-adept-of-the-omnissiah": {
+      "termId": "space-marines-enhancement-adept-of-the-omnissiah",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-adept-of-the-omnissiah",
+        "rule": "detachment-ironstorm-spearhead"
+      }
+    },
+    "space-marines-enhancement-master-of-machine-war": {
+      "termId": "space-marines-enhancement-master-of-machine-war",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-master-of-machine-war",
+        "rule": "detachment-ironstorm-spearhead"
+      }
+    },
+    "space-marines-stratagem-unbowed-conviction": {
+      "termId": "space-marines-stratagem-unbowed-conviction",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-unbowed-conviction",
+        "rule": "detachment-ironstorm-spearhead"
+      }
+    },
+    "space-marines-stratagem-mercy-is-weakness": {
+      "termId": "space-marines-stratagem-mercy-is-weakness",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-mercy-is-weakness",
+        "rule": "detachment-ironstorm-spearhead"
+      }
+    },
+    "space-marines-stratagem-vengeful-animus": {
+      "termId": "space-marines-stratagem-vengeful-animus",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-vengeful-animus",
+        "rule": "detachment-ironstorm-spearhead"
+      }
+    },
+    "space-marines-stratagem-ancient-fury": {
+      "termId": "space-marines-stratagem-ancient-fury",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-ancient-fury",
+        "rule": "detachment-ironstorm-spearhead"
+      }
+    },
+    "space-marines-stratagem-power-of-the-machine-spirit": {
+      "termId": "space-marines-stratagem-power-of-the-machine-spirit",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-power-of-the-machine-spirit",
+        "rule": "detachment-ironstorm-spearhead"
+      }
+    },
+    "space-marines-detachment-rule-lightning-assault": {
+      "termId": "space-marines-detachment-rule-lightning-assault",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-lightning-assault",
+        "rule": "detachment-stormlance-task-force"
+      }
+    },
+    "space-marines-enhancement-fury-of-the-storm": {
+      "termId": "space-marines-enhancement-fury-of-the-storm",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-fury-of-the-storm",
+        "rule": "detachment-stormlance-task-force"
+      }
+    },
+    "space-marines-enhancement-portents-of-wisdom": {
+      "termId": "space-marines-enhancement-portents-of-wisdom",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-portents-of-wisdom",
+        "rule": "detachment-stormlance-task-force"
+      }
+    },
+    "space-marines-enhancement-feinting-withdrawal": {
+      "termId": "space-marines-enhancement-feinting-withdrawal",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-feinting-withdrawal",
+        "rule": "detachment-stormlance-task-force"
+      }
+    },
+    "space-marines-enhancement-hunters-instincts": {
+      "termId": "space-marines-enhancement-hunters-instincts",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-hunters-instincts",
+        "rule": "detachment-stormlance-task-force"
+      }
+    },
+    "space-marines-stratagem-blitzing-fusillade": {
+      "termId": "space-marines-stratagem-blitzing-fusillade",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-blitzing-fusillade",
+        "rule": "detachment-stormlance-task-force"
+      }
+    },
+    "space-marines-stratagem-full-throttle": {
+      "termId": "space-marines-stratagem-full-throttle",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-full-throttle",
+        "rule": "detachment-stormlance-task-force"
+      }
+    },
+    "space-marines-stratagem-shock-assault": {
+      "termId": "space-marines-stratagem-shock-assault",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-shock-assault",
+        "rule": "detachment-stormlance-task-force"
+      }
+    },
+    "space-marines-stratagem-ride-hard-ride-fast": {
+      "termId": "space-marines-stratagem-ride-hard-ride-fast",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-ride-hard-ride-fast",
+        "rule": "detachment-stormlance-task-force"
+      }
+    },
+    "space-marines-stratagem-wind-swift-evasion": {
+      "termId": "space-marines-stratagem-wind-swift-evasion",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-wind-swift-evasion",
+        "rule": "detachment-stormlance-task-force"
+      }
+    },
+    "space-marines-detachment-rule-shadow-masters": {
+      "termId": "space-marines-detachment-rule-shadow-masters",
+      "navigation": {
+        "glossary": "glossary-space-marines-detachment-rule-shadow-masters",
+        "rule": "detachment-vanguard-spearhead"
+      }
+    },
+    "space-marines-enhancement-the-blade-driven-deep": {
+      "termId": "space-marines-enhancement-the-blade-driven-deep",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-the-blade-driven-deep",
+        "rule": "detachment-vanguard-spearhead"
+      }
+    },
+    "space-marines-enhancement-ghostweave-cloak": {
+      "termId": "space-marines-enhancement-ghostweave-cloak",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-ghostweave-cloak",
+        "rule": "detachment-vanguard-spearhead"
+      }
+    },
+    "space-marines-enhancement-execute-and-redeploy": {
+      "termId": "space-marines-enhancement-execute-and-redeploy",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-execute-and-redeploy",
+        "rule": "detachment-vanguard-spearhead"
+      }
+    },
+    "space-marines-enhancement-shadow-war-veteran": {
+      "termId": "space-marines-enhancement-shadow-war-veteran",
+      "navigation": {
+        "glossary": "glossary-space-marines-enhancement-shadow-war-veteran",
+        "rule": "detachment-vanguard-spearhead"
+      }
+    },
+    "space-marines-stratagem-a-deadly-prize": {
+      "termId": "space-marines-stratagem-a-deadly-prize",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-a-deadly-prize",
+        "rule": "detachment-vanguard-spearhead"
+      }
+    },
+    "space-marines-stratagem-surgical-strikes": {
+      "termId": "space-marines-stratagem-surgical-strikes",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-surgical-strikes",
+        "rule": "detachment-vanguard-spearhead"
+      }
+    },
+    "space-marines-stratagem-strike-from-the-shadows-2": {
+      "termId": "space-marines-stratagem-strike-from-the-shadows-2",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-strike-from-the-shadows-2",
+        "rule": "detachment-vanguard-spearhead"
+      }
+    },
+    "space-marines-stratagem-calculated-feint": {
+      "termId": "space-marines-stratagem-calculated-feint",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-calculated-feint",
+        "rule": "detachment-vanguard-spearhead"
+      }
+    },
+    "space-marines-stratagem-guerrilla-tactics": {
+      "termId": "space-marines-stratagem-guerrilla-tactics",
+      "navigation": {
+        "glossary": "glossary-space-marines-stratagem-guerrilla-tactics",
+        "rule": "detachment-vanguard-spearhead"
       }
     },
     "space-marines-ability-shock-assault": {
@@ -5836,237 +7103,6 @@
         "units": [
           "unit-death-company-dreadnought"
         ]
-      }
-    },
-    "blood-angels-enhancement-gift-of-foresight": {
-      "termId": "blood-angels-enhancement-gift-of-foresight",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-gift-of-foresight",
-        "rule": "detachment-liberator-assault-group"
-      }
-    },
-    "blood-angels-enhancement-icon-of-the-angel": {
-      "termId": "blood-angels-enhancement-icon-of-the-angel",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-icon-of-the-angel",
-        "rule": "detachment-liberator-assault-group"
-      }
-    },
-    "blood-angels-enhancement-rage-fuelled-warrior": {
-      "termId": "blood-angels-enhancement-rage-fuelled-warrior",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-rage-fuelled-warrior",
-        "rule": "detachment-liberator-assault-group"
-      }
-    },
-    "blood-angels-enhancement-speed-of-the-primarch": {
-      "termId": "blood-angels-enhancement-speed-of-the-primarch",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-speed-of-the-primarch",
-        "rule": "detachment-liberator-assault-group"
-      }
-    },
-    "blood-angels-stratagem-angelic-grace": {
-      "termId": "blood-angels-stratagem-angelic-grace",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-angelic-grace",
-        "rule": "detachment-liberator-assault-group"
-      }
-    },
-    "blood-angels-stratagem-armour-of-contempt-2": {
-      "termId": "blood-angels-stratagem-armour-of-contempt-2",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-armour-of-contempt-2",
-        "rule": "detachment-liberator-assault-group"
-      }
-    },
-    "blood-angels-stratagem-savage-echoes": {
-      "termId": "blood-angels-stratagem-savage-echoes",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-savage-echoes",
-        "rule": "detachment-liberator-assault-group"
-      }
-    },
-    "blood-angels-stratagem-red-rampage": {
-      "termId": "blood-angels-stratagem-red-rampage",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-red-rampage",
-        "rule": "detachment-liberator-assault-group"
-      }
-    },
-    "blood-angels-stratagem-aggressive-onslaught": {
-      "termId": "blood-angels-stratagem-aggressive-onslaught",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-aggressive-onslaught",
-        "rule": "detachment-liberator-assault-group"
-      }
-    },
-    "blood-angels-stratagem-relentless-assault": {
-      "termId": "blood-angels-stratagem-relentless-assault",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-relentless-assault",
-        "rule": "detachment-liberator-assault-group"
-      }
-    },
-    "blood-angels-detachment-rule-red-thirst": {
-      "termId": "blood-angels-detachment-rule-red-thirst",
-      "navigation": {
-        "glossary": "glossary-blood-angels-detachment-rule-red-thirst",
-        "rule": "detachment-liberator-assault-group"
-      }
-    },
-    "blood-angels-enhancement-archangels-shard": {
-      "termId": "blood-angels-enhancement-archangels-shard",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-archangels-shard",
-        "rule": "detachment-the-angelic-host"
-      }
-    },
-    "blood-angels-enhancement-artisan-of-war": {
-      "termId": "blood-angels-enhancement-artisan-of-war",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-artisan-of-war",
-        "rule": "detachment-the-angelic-host"
-      }
-    },
-    "blood-angels-enhancement-gleaming-pinions": {
-      "termId": "blood-angels-enhancement-gleaming-pinions",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-gleaming-pinions",
-        "rule": "detachment-the-angelic-host"
-      }
-    },
-    "blood-angels-enhancement-visage-of-death": {
-      "termId": "blood-angels-enhancement-visage-of-death",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-visage-of-death",
-        "rule": "detachment-the-angelic-host"
-      }
-    },
-    "blood-angels-stratagem-unbridled-ardour": {
-      "termId": "blood-angels-stratagem-unbridled-ardour",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-unbridled-ardour",
-        "rule": "detachment-the-angelic-host"
-      }
-    },
-    "blood-angels-stratagem-armour-of-contempt-3": {
-      "termId": "blood-angels-stratagem-armour-of-contempt-3",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-armour-of-contempt-3",
-        "rule": "detachment-the-angelic-host"
-      }
-    },
-    "blood-angels-stratagem-angels-sacrifice": {
-      "termId": "blood-angels-stratagem-angels-sacrifice",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-angels-sacrifice",
-        "rule": "detachment-the-angelic-host"
-      }
-    },
-    "blood-angels-stratagem-martial-exemplars": {
-      "termId": "blood-angels-stratagem-martial-exemplars",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-martial-exemplars",
-        "rule": "detachment-the-angelic-host"
-      }
-    },
-    "blood-angels-stratagem-descent-of-angels": {
-      "termId": "blood-angels-stratagem-descent-of-angels",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-descent-of-angels",
-        "rule": "detachment-the-angelic-host"
-      }
-    },
-    "blood-angels-stratagem-death-from-the-skies": {
-      "termId": "blood-angels-stratagem-death-from-the-skies",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-death-from-the-skies",
-        "rule": "detachment-the-angelic-host"
-      }
-    },
-    "blood-angels-detachment-rule-upon-wings-of-fire": {
-      "termId": "blood-angels-detachment-rule-upon-wings-of-fire",
-      "navigation": {
-        "glossary": "glossary-blood-angels-detachment-rule-upon-wings-of-fire",
-        "rule": "detachment-the-angelic-host"
-      }
-    },
-    "blood-angels-enhancement-blood-shard": {
-      "termId": "blood-angels-enhancement-blood-shard",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-blood-shard",
-        "rule": "detachment-the-lost-brethren"
-      }
-    },
-    "blood-angels-enhancement-sanguinius-grace": {
-      "termId": "blood-angels-enhancement-sanguinius-grace",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-sanguinius-grace",
-        "rule": "detachment-the-lost-brethren"
-      }
-    },
-    "blood-angels-enhancement-to-slay-the-warmaster": {
-      "termId": "blood-angels-enhancement-to-slay-the-warmaster",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-to-slay-the-warmaster",
-        "rule": "detachment-the-lost-brethren"
-      }
-    },
-    "blood-angels-enhancement-vengeful-onslaught": {
-      "termId": "blood-angels-enhancement-vengeful-onslaught",
-      "navigation": {
-        "glossary": "glossary-blood-angels-enhancement-vengeful-onslaught",
-        "rule": "detachment-the-lost-brethren"
-      }
-    },
-    "blood-angels-stratagem-glorious-sacrifice": {
-      "termId": "blood-angels-stratagem-glorious-sacrifice",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-glorious-sacrifice",
-        "rule": "detachment-the-lost-brethren"
-      }
-    },
-    "blood-angels-stratagem-armour-of-contempt-4": {
-      "termId": "blood-angels-stratagem-armour-of-contempt-4",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-armour-of-contempt-4",
-        "rule": "detachment-the-lost-brethren"
-      }
-    },
-    "blood-angels-stratagem-final-retribution": {
-      "termId": "blood-angels-stratagem-final-retribution",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-final-retribution",
-        "rule": "detachment-the-lost-brethren"
-      }
-    },
-    "blood-angels-stratagem-furious-onslaught": {
-      "termId": "blood-angels-stratagem-furious-onslaught",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-furious-onslaught",
-        "rule": "detachment-the-lost-brethren"
-      }
-    },
-    "blood-angels-stratagem-lost-to-rage": {
-      "termId": "blood-angels-stratagem-lost-to-rage",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-lost-to-rage",
-        "rule": "detachment-the-lost-brethren"
-      }
-    },
-    "blood-angels-stratagem-wrathful-rampage": {
-      "termId": "blood-angels-stratagem-wrathful-rampage",
-      "navigation": {
-        "glossary": "glossary-blood-angels-stratagem-wrathful-rampage",
-        "rule": "detachment-the-lost-brethren"
-      }
-    },
-    "blood-angels-detachment-rule-a-noble-death-in-combat": {
-      "termId": "blood-angels-detachment-rule-a-noble-death-in-combat",
-      "navigation": {
-        "glossary": "glossary-blood-angels-detachment-rule-a-noble-death-in-combat",
-        "rule": "detachment-the-lost-brethren"
       }
     },
     "blood-angels-army-rule-the-sons-of-sanguinius": {

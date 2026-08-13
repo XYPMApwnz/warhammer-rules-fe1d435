@@ -139,6 +139,12 @@ for(const bookId of supported){
     console.log('PASS  blood-angels: 15 local + 82 shared units, desktop/iPad + Phone routes');
     continue;
   }
+  if(bookId==='dark-angels'){
+    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8'),codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','dark-angels-codex-datasheets.en.json'),'utf8'));
+    const unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),localTitles=new Set(codex.datasheets.map(unit=>entities.normalize(unit.title)));
+    assert(codex.datasheets.length===16,'dark-angels: local Datasheet catalog is incomplete');assert(unitTitles.size===98,'dark-angels: expected 16 local + 82 shared Datasheets');assert([...unitTitles].filter(title=>!localTitles.has(title)).length===82,'dark-angels: shared Space Marines roster inventory changed');assert((reader.match(/<section class="content-group detachment"/g)||[]).length===24,'dark-angels: roster must expose 8 local + 16 shared Detachments');assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&related.includes('1st-company-task-force-armour-of-contempt'),'dark-angels: roster or shared Compatible Rules inventory is absent');
+    console.log('PASS  dark-angels: 16 local + 82 shared units, 8 local + 16 shared Detachments');continue;
+  }
   const dataPath=path.join(bookRoot,'content',`${bookId}-rules.en.json`);
   const readerPath=path.join(bookRoot,'reader.html');
   const relatedPath=path.join(bookRoot,'mobile','related-rules.inc');

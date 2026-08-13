@@ -37,7 +37,7 @@ const categories=[...source.matchAll(/<section class="content-group" id="(datash
 const units=categories.flatMap(category=>category.units);
 const localUnits=units.filter(unit=>unit.owner==='blood-angels');
 const sharedUnits=units.filter(unit=>unit.owner==='space-marines');
-if(detachments.length!==8||localUnits.length!==15||sharedUnits.length!==82)throw new Error(`Expected 8 Detachments, 15 Blood Angels Datasheets and 82 shared Space Marines Datasheets; found ${detachments.length}, ${localUnits.length} and ${sharedUnits.length}`);
+if(detachments.length!==24||localUnits.length!==15||sharedUnits.length!==82)throw new Error(`Expected 24 Detachments, 15 Blood Angels Datasheets and 82 shared Space Marines Datasheets; found ${detachments.length}, ${localUnits.length} and ${sharedUnits.length}`);
 
 const staticRoutes=[
   {file:'index.html',id:'start',title:'Start',type:'start'},

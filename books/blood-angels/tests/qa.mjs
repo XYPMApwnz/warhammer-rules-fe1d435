@@ -12,7 +12,8 @@ assert.deepEqual(config.dependencies,['space-marines']);
 assert.equal(config.dependencyDatasheets.groupByBook,false);
 assert.equal(config.rosterSupport,true);
 assert.equal(config.compatibleRulesMatrix,true);
-assert.equal(config.expected.matchedDetachments,8);
+assert.equal(config.expected.matchedDetachments,24);
+assert.equal(config.dependencyDetachments.expected,16);
 assert.equal(config.expected.codexDatasheets,15);
 assert.equal(codex.datasheets.length,15);
 assert.equal(shared.length,82);
@@ -23,6 +24,7 @@ assert.equal(Boolean(config.coverImage&&config.entryCoverImage),true,'Blood Ange
 assert.equal(codex.datasheets.some(unit=>Boolean(unit.image||unit.imagePath||unit.headerArt||unit.headerArtMode)),false,'Blood Angels datasheet images must remain absent');
 
 const reader=text('../reader.html');
+assert.equal([...reader.matchAll(/<section class="content-group detachment"/g)].length,24);
 const units=new Map(codex.datasheets.map(unit=>[unit.title,unit]));
 const ability=(unit,title)=>units.get(unit).abilities.find(item=>item.title===title)?.text||'';
 assert.equal((reader.match(/<article class="unit-card/g)||[]).length,97);
@@ -53,4 +55,4 @@ assert.equal((priestReader.match(/data-source-field="abilities\.support"/g)||[])
 assert.match(reader,/1 hand flamer and 1 Astartes chainsword[\s\S]*1 plasma pistol and 1 power weapon/);
 assert.match(reader,/SECONDARY CODEX/);
 assert.doesNotMatch(reader,/Carmine Reliquary[\s\S]{0,900}result\.\./);
-console.log('Blood Angels QA passed: 15 local + 82 shared Datasheets, 8 Detachments, unified navigation, roster and Compatible Rules enabled.');
+console.log('Blood Angels QA passed: 15 local + 82 shared Datasheets, 8 local + 16 shared Detachments, unified navigation, roster and Compatible Rules enabled.');

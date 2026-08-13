@@ -8,6 +8,8 @@
   "entryCoverImage": "assets/dark-angels-cover-480.webp",
   "reviewEntry": true,
   "generatedMobile": true,
+  "mobileRelatedRulesSource": true,
+  "rosterSupport": true,
   "assetVersions": {
     "book": 3,
     "app": 4
@@ -27,6 +29,11 @@
       "ULTRAMARINES",
       "WHITE SCARS"
     ]
+  },
+  "dependencyDetachments": {
+    "render": true,
+    "chapterKeyword": "DARK ANGELS",
+    "expected": 16
   },
   "datasheetCategoryLabels": {
     "Epic Hero": "Epic Heroes",
@@ -59,7 +66,7 @@
   ],
   "detachmentQualifiedEnhancementPoints": true,
   "expected": {
-    "matchedDetachments": 8,
+    "matchedDetachments": 24,
     "factionPackDetachments": 5,
     "codexDatasheets": 16,
     "legendsDatasheets": 3

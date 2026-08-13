@@ -39,13 +39,13 @@ const expectedFiles=new Set(['index.html','army-rules.html','updates.html',...de
 assert.equal(config.generatedMobile,true,'Blood Angels must opt into generated Phone output');
 assert.equal(manifest.gates?.publishAsComplete,false,'Blood Angels source authority gate must remain open');
 assert.equal(config.dependencyDatasheets?.groupByBook,false,'shared Space Marines datasheets must remain in unified categories');
-assert.equal(detachments.length,8,'expected 8 Detachments');
+assert.equal(detachments.length,24,'expected 24 Detachments');
 assert.equal(localIds.length,15,'expected 15 Blood Angels-local datasheets');
 assert.equal(sharedIds.length,82,'expected 82 shared Space Marines datasheets');
 assert.equal(unitIds.length,97,'expected 97 current datasheets');
 assert.equal(new Set(unitIds).size,97,'datasheet route ids must be unique');
-assert.equal(new Set(expectedRouteIds).size,108,'semantic route ids must be collision-free');
-assert.equal(expectedFiles.size,108,'expected exactly 108 generated Phone routes');
+assert.equal(new Set(expectedRouteIds).size,124,'semantic route ids must be collision-free');
+assert.equal(expectedFiles.size,124,'expected exactly 124 generated Phone routes');
 assert.ok(categories.length>0,'unified battlefield categories are required');
 assert.equal(categories.reduce((sum,category)=>sum+category.units.length,0),97,'category totals must equal current inventory');
 

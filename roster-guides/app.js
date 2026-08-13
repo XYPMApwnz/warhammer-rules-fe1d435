@@ -1,16 +1,16 @@
 const STORAGE_KEY='wh40k-rosters-v1';
 const CORRUPT_BACKUP_KEY='wh40k-rosters-v1-corrupt-backup';
-const KNOWN_FACTIONS=new Set(['death guard','adeptus mechanicus','tyranids','t au empire','emperor s children','chaos space marines','blood angels']);
+const KNOWN_FACTIONS=new Set(['death guard','adeptus mechanicus','tyranids','t au empire','emperor s children','chaos space marines','blood angels','dark angels']);
 const FACTION_ALIASES=Object.freeze({'tau empire':'t au empire'});
-const FACTION_PARENTS=Object.freeze({'death guard':'chaos','adeptus mechanicus':'imperium','tyranids':'xenos','t au empire':'xenos','emperor s children':'chaos','chaos space marines':'chaos','blood angels':'imperium'});
-const FACTION_LABELS=Object.freeze({'death guard':'Death Guard','adeptus mechanicus':'Adeptus Mechanicus','tyranids':'Tyranids','t au empire':"T'au Empire",'emperor s children':"Emperor's Children",'chaos space marines':'Chaos Space Marines','blood angels':'Blood Angels'});
-const FACTION_READERS=Object.freeze({'death guard':'../books/death-guard/reader.html','adeptus mechanicus':'../books/adeptus-mechanicus/index.html','tyranids':'../books/tyranids/index.html','t au empire':'../books/tau-empire/index.html','emperor s children':'../books/emperors-children/index.html','chaos space marines':'../books/chaos-space-marines/index.html','blood angels':'../books/blood-angels/index.html'});
+const FACTION_PARENTS=Object.freeze({'death guard':'chaos','adeptus mechanicus':'imperium','tyranids':'xenos','t au empire':'xenos','emperor s children':'chaos','chaos space marines':'chaos','blood angels':'imperium','dark angels':'imperium'});
+const FACTION_LABELS=Object.freeze({'death guard':'Death Guard','adeptus mechanicus':'Adeptus Mechanicus','tyranids':'Tyranids','t au empire':"T'au Empire",'emperor s children':"Emperor's Children",'chaos space marines':'Chaos Space Marines','blood angels':'Blood Angels','dark angels':'Dark Angels'});
+const FACTION_READERS=Object.freeze({'death guard':'../books/death-guard/reader.html','adeptus mechanicus':'../books/adeptus-mechanicus/index.html','tyranids':'../books/tyranids/index.html','t au empire':'../books/tau-empire/index.html','emperor s children':'../books/emperors-children/index.html','chaos space marines':'../books/chaos-space-marines/index.html','blood angels':'../books/blood-angels/index.html','dark angels':'../books/dark-angels/index.html'});
 const savedHost=document.querySelector('#saved-roster-list');
 
 function factionParts(value){const match=String(value||'').trim().match(/^(?:(Chaos|Imperium|Xenos)\s*[-–—]\s*)?(.*)$/i),key=match[2].replace(/[^a-z0-9]+/gi,' ').trim().toLowerCase();return{parent:(match[1]||'').toLowerCase(),key:FACTION_ALIASES[key]||key};}
 function normalizeFaction(value){return factionParts(value).key;}
 function knownFaction(value){const{parent,key}=factionParts(value);return KNOWN_FACTIONS.has(key)&&(!parent||FACTION_PARENTS[key]===parent)?key:'';}
-function pointsLabel(value){return ['adeptus mechanicus','tyranids','t au empire','chaos space marines','blood angels'].includes(knownFaction(value))?'Official MFM total':'Army Book total';}
+function pointsLabel(value){return ['adeptus mechanicus','tyranids','t au empire','chaos space marines','blood angels','dark angels'].includes(knownFaction(value))?'Official MFM total':'Army Book total';}
 function getSavedRosters(){
   try{const records=JSON.parse(localStorage.getItem(STORAGE_KEY));return Array.isArray(records)?records:[];}
   catch{return [];}

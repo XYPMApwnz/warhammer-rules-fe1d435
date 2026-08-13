@@ -20,7 +20,7 @@ const readerProfiles=book=>{
   }
   return result;
 };
-const dgProfiles=readerProfiles('death-guard'),mechanicusProfiles=readerProfiles('adeptus-mechanicus'),tyranidsProfiles=readerProfiles('tyranids'),tauProfiles=readerProfiles('tau-empire'),csmProfiles=readerProfiles('chaos-space-marines'),bloodAngelsProfiles=readerProfiles('blood-angels');
+const dgProfiles=readerProfiles('death-guard'),mechanicusProfiles=readerProfiles('adeptus-mechanicus'),tyranidsProfiles=readerProfiles('tyranids'),tauProfiles=readerProfiles('tau-empire'),csmProfiles=readerProfiles('chaos-space-marines'),bloodAngelsProfiles=readerProfiles('blood-angels'),darkAngelsProfiles=readerProfiles('dark-angels');
 
 const deathGuard=read('books/death-guard/content/death-guard-rules.en.json');
 const dgUnits={};
@@ -120,8 +120,18 @@ for(const enhancement of csm.enhancements){
 const csmEnhancements=Object.fromEntries([...csmEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
 
 const bloodAngels=read('books/blood-angels/content/blood-angels-points.en.json');
+const bloodAngelsConfig=read('books/blood-angels/book.config.json');
+const darkAngels=read('books/dark-angels/content/dark-angels-points.en.json');
+const darkAngelsConfig=read('books/dark-angels/book.config.json');
 const spaceMarines=read('books/space-marines/content/space-marines-points.en.json');
+const spaceMarinesConfig=read('books/space-marines/book.config.json');
+const spaceMarinesPack=read('books/space-marines/content/space-marines-faction-pack.en.json');
+const spaceMarinesParity=read('books/space-marines/content/space-marines-current-overlay.en.json');
+const spaceMarinesContracts=read('books/space-marines/content/space-marines-related-rules.en.json').enhancements;
 const bloodAngelsContracts=read('books/blood-angels/content/blood-angels-related-rules.en.json').enhancements;
+const darkAngelsContracts=read('books/dark-angels/content/dark-angels-related-rules.en.json').enhancements||{};
+const sharedDetachmentTitles=config=>{const chapter=normalize(config.dependencyDetachments.chapterKeyword),current=new Set(spaceMarines.detachments.map(item=>normalize(item.title)));return new Set([...spaceMarinesPack.detachments,...spaceMarinesParity.detachments].filter(item=>{const restriction=item.restriction||spaceMarinesConfig.detachmentChapterRestrictions?.[item.title];return current.has(normalize(item.title))&&(!restriction||normalize(restriction)===chapter);}).map(item=>normalize(item.title)));};
+const bloodAngelsSharedDetachmentTitles=sharedDetachmentTitles(bloodAngelsConfig),darkAngelsSharedDetachmentTitles=sharedDetachmentTitles(darkAngelsConfig);
 const bloodAngelsProfile=unit=>bloodAngelsProfiles[unit.id]||bloodAngelsProfiles[normalize(unit.title)];
 const bloodAngelsRecord=unit=>({...unit,wargear:unit.paidWargear||[],...bloodAngelsProfile(unit)});
 const bloodAngelsLocal=bloodAngels.units.filter(unit=>unit.status==='Current'&&bloodAngelsProfile(unit));
@@ -130,12 +140,18 @@ const bloodAngelsShared=spaceMarines.units.filter(unit=>unit.status==='Current'&
 if(bloodAngelsLocal.length!==15||bloodAngelsShared.length!==82)throw new Error(`Blood Angels roster inventory: expected 15 local + 82 shared, got ${bloodAngelsLocal.length} + ${bloodAngelsShared.length}`);
 const bloodAngelsUnits=Object.fromEntries([...bloodAngelsLocal,...bloodAngelsShared].map(unit=>[normalize(unit.title),bloodAngelsRecord(unit)]));
 const bloodAngelsEnhancementGroups=new Map();
-for(const enhancement of bloodAngels.enhancements){
-  const contract=bloodAngelsContracts[enhancement.id],role=contract?.roles?.find(item=>item.side==='friendly'&&item.subject==='unit');
+for(const enhancement of [...bloodAngels.enhancements,...spaceMarines.enhancements.filter(item=>bloodAngelsSharedDetachmentTitles.has(normalize(item.detachment)))]){
+  const contract=(bloodAngelsSharedDetachmentTitles.has(normalize(enhancement.detachment))?spaceMarinesContracts:bloodAngelsContracts)[enhancement.id],role=contract?.roles?.find(item=>item.side==='friendly'&&item.subject==='unit');
   const record={...enhancement,...(role?{owner:{subject:'unit',selector:role.selector}}:{sourceLimited:true})};
   const key=normalize(enhancement.title),group=bloodAngelsEnhancementGroups.get(key)||[];group.push(record);bloodAngelsEnhancementGroups.set(key,group);
 }
 const bloodAngelsEnhancements=Object.fromEntries([...bloodAngelsEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
+const darkAngelsProfile=unit=>darkAngelsProfiles[unit.id]||darkAngelsProfiles[normalize(unit.title)],darkAngelsRecord=unit=>({...unit,wargear:unit.paidWargear||[],...darkAngelsProfile(unit)});
+const darkAngelsLocal=darkAngels.units.filter(unit=>unit.status==='Current'&&darkAngelsProfile(unit)),darkAngelsLocalTitles=new Set(darkAngelsLocal.map(unit=>normalize(unit.title))),darkAngelsShared=spaceMarines.units.filter(unit=>unit.status==='Current'&&!darkAngelsLocalTitles.has(normalize(unit.title))&&darkAngelsProfile(unit));
+if(darkAngelsLocal.length!==16||darkAngelsShared.length!==82)throw new Error(`Dark Angels roster inventory: expected 16 local + 82 shared, got ${darkAngelsLocal.length} + ${darkAngelsShared.length}`);
+const darkAngelsUnits=Object.fromEntries([...darkAngelsLocal,...darkAngelsShared].map(unit=>[normalize(unit.title),darkAngelsRecord(unit)])),darkAngelsEnhancementGroups=new Map();
+for(const enhancement of [...darkAngels.enhancements,...spaceMarines.enhancements.filter(item=>darkAngelsSharedDetachmentTitles.has(normalize(item.detachment)))]){const contract=(darkAngelsSharedDetachmentTitles.has(normalize(enhancement.detachment))?spaceMarinesContracts:darkAngelsContracts)[enhancement.id],role=contract?.roles?.find(item=>item.side==='friendly'&&item.subject==='unit'),record={...enhancement,...(role?{owner:{subject:'unit',selector:role.selector}}:{sourceLimited:true})},key=normalize(enhancement.title),group=darkAngelsEnhancementGroups.get(key)||[];group.push(record);darkAngelsEnhancementGroups.set(key,group);}
+const darkAngelsEnhancements=Object.fromEntries([...darkAngelsEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
 
 const catalog={
   'death guard':{units:dgUnits,enhancements:dgEnhancements},
@@ -143,7 +159,8 @@ const catalog={
   'tyranids':{units:tyranidsUnits,enhancements:tyranidsEnhancements},
   't au empire':{units:tauUnits,enhancements:tauEnhancements},
   'chaos space marines':{units:csmUnits,enhancements:csmEnhancements},
-  'blood angels':{units:bloodAngelsUnits,enhancements:bloodAngelsEnhancements}
+  'blood angels':{units:bloodAngelsUnits,enhancements:bloodAngelsEnhancements},
+  'dark angels':{units:darkAngelsUnits,enhancements:darkAngelsEnhancements}
 };
 fs.writeFileSync(path.join(root,'roster-guides','points-data.js'),`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`);
-console.log(`Points catalog: ${Object.keys(dgUnits).length} Death Guard, ${Object.keys(mechanicusUnits).length} Adeptus Mechanicus, ${Object.keys(tyranidsUnits).length} Tyranids, ${Object.keys(tauUnits).length} T'au Empire, ${Object.keys(csmUnits).length} Chaos Space Marines and ${Object.keys(bloodAngelsUnits).length} Blood Angels units.`);
+console.log(`Points catalog: ${Object.keys(dgUnits).length} Death Guard, ${Object.keys(mechanicusUnits).length} Adeptus Mechanicus, ${Object.keys(tyranidsUnits).length} Tyranids, ${Object.keys(tauUnits).length} T'au Empire, ${Object.keys(csmUnits).length} Chaos Space Marines, ${Object.keys(bloodAngelsUnits).length} Blood Angels and ${Object.keys(darkAngelsUnits).length} Dark Angels units.`);

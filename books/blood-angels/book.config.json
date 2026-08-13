@@ -34,6 +34,16 @@
       "WHITE SCARS"
     ]
   },
+  "dependencyDetachments": {
+    "render": true,
+    "chapterKeyword": "BLOOD ANGELS",
+    "expected": 16,
+    "pointOverrides": {
+      "Stormlance Task Force": {
+        "detachmentPoints": 2
+      }
+    }
+  },
   "datasheetCategoryLabels": {
     "Epic Hero": "Epic Heroes",
     "Character": "Characters",
@@ -80,7 +90,7 @@
     "rosterData": 1
   },
   "expected": {
-    "matchedDetachments": 8,
+    "matchedDetachments": 24,
     "factionPackDetachments": 5,
     "codexDatasheets": 15,
     "legendsDatasheets": 11

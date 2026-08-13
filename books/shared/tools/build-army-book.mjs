@@ -33,9 +33,12 @@ const dependencyCodices=(config.dependencies||[]).map(id=>{
   const dependencyCodex=JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.codexDatasheets),'utf8'));
   const dependencyPack=JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.factionPack),'utf8'));
   const dependencyPoints=JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.points||`content/${id}-points.en.json`),'utf8'));
+  const dependencyParity=dependencyConfig.sources.codexParity?JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.codexParity),'utf8')):null;
+  const dependencyRelatedRules=dependencyConfig.sources.relatedRules?JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.relatedRules),'utf8')):{stratagems:{},enhancements:{},keywordGrants:{}};
   const dependencyWargear=dependencyConfig.sources.codexWargear?JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.codexWargear),'utf8')):null;
-  return {id,config:dependencyConfig,codex:dependencyCodex,pack:dependencyPack,pointsByTitle:new Map(dependencyPoints.units.map(item=>[titleKey(item.title),item])),wargearByTitle:new Map((dependencyWargear?.units||[]).map(item=>[titleKey(item.title),item])),wargearSource:dependencyWargear?.source,officialByTitle:new Map(Object.values(dependencyPack.datasheets||{}).flat().map(item=>[titleKey(item.title),item]))};
+  return {id,config:dependencyConfig,codex:dependencyCodex,pack:dependencyPack,parity:dependencyParity,points:dependencyPoints,relatedRules:dependencyRelatedRules,pointsByTitle:new Map(dependencyPoints.units.map(item=>[titleKey(item.title),item])),wargearByTitle:new Map((dependencyWargear?.units||[]).map(item=>[titleKey(item.title),item])),wargearSource:dependencyWargear?.source,officialByTitle:new Map(Object.values(dependencyPack.datasheets||{}).flat().map(item=>[titleKey(item.title),item]))};
 });
+const dependencyById=new Map(dependencyCodices.map(item=>[item.id,item]));
 const dependencyScope=config.dependencyDatasheets||{};
 const excludedDependencyKeywords=new Set((dependencyScope.excludeAnyKeywords||[]).map(value=>clean(value).toUpperCase()));
 const dependencyUnits=dependencyCodices.flatMap(dependency=>(dependencyScope.currentOnly?dependency.codex.datasheets||[]:unitInventory(dependency.codex))
@@ -70,11 +73,27 @@ const enhancementPointsByDetachment=new Map(points.enhancements.map(item=>[`${ti
 const detachmentMetaByTitle=new Map((points.detachments||[]).map(item=>[titleKey(item.title),item]));
 const enrichEnhancement=(item,detachment)=>{const qualified=Boolean(config.detachmentQualifiedEnhancementPoints),current=qualified?enhancementPointsByDetachment.get(`${titleKey(detachment)}\0${pointTitleKey(item.title)}`):enhancementPointsByTitle.get(pointTitleKey(item.title));return current?{...item,...(qualified&&current.id?{id:current.id,sourceId:item.id}:{}),value:current.value,pointsSource:current.pointsSource}:item;};
 const enrichDetachment=detachment=>({...detachment,...detachmentMetaByTitle.get(titleKey(detachment.title)),enhancements:(detachment.enhancements||[]).map(item=>enrichEnhancement(item,detachment.title))});
-const detachments=codexDetachmentNames.map(title=>enrichDetachment(packByTitle.get(titleKey(title))||parityByTitle.get(titleKey(title))||{
+const localDetachments=codexDetachmentNames.map(title=>enrichDetachment(packByTitle.get(titleKey(title))||parityByTitle.get(titleKey(title))||{
   id:slug(title),title,sourceLayer:'codex-transcription',rule:null,
   enhancements:points.enhancements.filter(item=>titleKey(item.detachment)===titleKey(title)),stratagems:[]
 }));
-for(const item of pack.detachments)if(!detachments.some(other=>titleKey(other.title)===titleKey(item.title)))detachments.push(enrichDetachment(item));
+for(const item of pack.detachments)if(!localDetachments.some(other=>titleKey(other.title)===titleKey(item.title)))localDetachments.push(enrichDetachment(item));
+const dependencyDetachmentScope=config.dependencyDetachments;
+const dependencyDetachments=!dependencyDetachmentScope||dependencyDetachmentScope.render===false?[]:dependencyCodices.flatMap(dependency=>{
+  const currentTitles=new Set((dependency.points.detachments||[]).map(item=>titleKey(item.title)));
+  const pointMeta=new Map((dependency.points.detachments||[]).map(item=>[titleKey(item.title),item]));
+  const pointEnhancements=new Map((dependency.points.enhancements||[]).map(item=>[`${titleKey(item.detachment)}\0${pointTitleKey(item.title)}`,item]));
+  const source=unique([...(dependency.pack.detachments||[]),...(dependency.parity?.detachments||[])],item=>titleKey(item.title));
+  const chapterKey=titleKey(dependencyDetachmentScope.chapterKeyword||config.factionKeyword);
+  const selected=source.filter(item=>{const restriction=item.restriction||dependency.config.detachmentChapterRestrictions?.[item.title];return currentTitles.has(titleKey(item.title))&&(!restriction||titleKey(restriction)===chapterKey);}).map(item=>{
+    const meta=pointMeta.get(titleKey(item.title))||{},override=dependencyDetachmentScope.pointOverrides?.[item.title]||{};
+    const mark=record=>({...record,dependencyBook:dependency.id});
+    return {...item,...meta,...override,rule:item.rule?mark(item.rule):item.rule,enhancements:(item.enhancements||[]).map(enhancement=>{const current=pointEnhancements.get(`${titleKey(item.title)}\0${pointTitleKey(enhancement.title)}`)||{};return mark({...enhancement,...current,text:enhancement.text});}),stratagems:(item.stratagems||[]).map(mark),dependencyBook:dependency.id,dependencyTitle:dependency.config.title,dependencySourceFile:path.basename(dependency.pack.meta.file),dependencySourceVersion:dependency.pack.meta.version,dependencyCodexSourceLabel:dependency.config.codexSourceLabel||'SECONDARY CODEX'};
+  });
+  if(dependencyDetachmentScope.expected!=null&&selected.length!==dependencyDetachmentScope.expected)throw new Error(`${config.id}: expected ${dependencyDetachmentScope.expected} compatible ${dependency.config.title} Detachments, got ${selected.length}`);
+  return selected;
+});
+const detachments=unique([...localDetachments,...dependencyDetachments],item=>titleKey(item.title));
 
 const allKeywords=new Set(units.flatMap(unit=>unit.keywords||[]).map(value=>clean(value).toUpperCase()));
 const namedGroups=[
@@ -88,7 +107,9 @@ const namedGroups=[
   ['MAWLOC',units.filter(unit=>titleKey(unit.title)==='mawloc').map(unit=>unit.id)],
   ['TRYGON',units.filter(unit=>titleKey(unit.title)==='trygon').map(unit=>unit.id)]
 ];
-const enhancementEligibility=item=>relatedRules.enhancements?.[item.id]||relatedRules.enhancements?.[String(item.id||'').replace(/^enhancement-/,'')]||relatedRules.enhancements?.[item.sourceId]||null;
+const relatedRulesFor=item=>item.dependencyBook?dependencyById.get(item.dependencyBook)?.relatedRules||relatedRules:relatedRules;
+const contractById=(records,...ids)=>{for(const id of ids){if(records?.[id])return records[id];const compact=String(id||'').replace(/^enhancement-/,'').replace(/[^a-z0-9]/gi,'').toLowerCase(),match=Object.entries(records||{}).find(([key])=>key.replace(/[^a-z0-9]/gi,'').toLowerCase()===compact);if(match)return match[1];}return null;};
+const enhancementEligibility=item=>contractById(relatedRulesFor(item).enhancements,item.id,item.sourceId);
 const enhancementOwnerRecords=Object.entries(enhancementOwners?.enhancements||{}).map(([id,record])=>({id,...record}));
 const enhancementRuleId=item=>enhancementOwnerRecords.find(record=>titleKey(record.title)===titleKey(item.title))?.id||item.id||`enhancement-${slug(item.title)}`;
 const enhancementOwnerRecord=item=>enhancementOwnerRecords.find(record=>record.id===enhancementRuleId(item))||null;
@@ -115,13 +136,13 @@ const enhancementContract=item=>{
 };
 const supportedSubjects=new Set(['unit','model','objective']);
 const stratagemEligibility=item=>{
-  const explicit=relatedRules.stratagems?.[item.id]||relatedRules.stratagems?.[String(item.id||'').replace(/^stratagem-/,'')];
+  const source=relatedRulesFor(item),explicit=source.stratagems?.[item.id]||source.stratagems?.[String(item.id||'').replace(/^stratagem-/,'')];
   if(!explicit&&config.legacyRelatedRuleAttributes===false)return null;
   if(!explicit)throw new Error(`${config.id}: missing audited Stratagem eligibility for ${item.id} (${item.title})`);
   const roles=explicit.roles||explicit.targets||[];
   if(!roles.some(role=>role.side==='friendly'||role.side==='either'))throw new Error(`${config.id}: Stratagem ${item.id} has no friendly target role`);
   const inspect=selector=>{
-    for(const unitId of selector?.unitIds||selector?.units||[])if(!unitById.has(unitId))throw new Error(`${config.id}: Stratagem ${item.id} references unknown unit ${unitId}`);
+    for(const unitId of selector?.unitIds||selector?.units||[])if(!unitById.has(unitId)&&!item.dependencyBook)throw new Error(`${config.id}: Stratagem ${item.id} references unknown unit ${unitId}`);
     for(const alternative of selector?.alternatives||[])inspect(alternative);
   };
   for(const role of roles){
@@ -152,10 +173,11 @@ function addTerm(title,summary,sectionId,kind='faction-term',unitId='',termScope
   else if(unitId&&!terms.get(id).units.includes(unitId))terms.get(id).units.push(unitId);
   return id;
 }
-for(const det of pack.detachments){
-  if(det.rule)addTerm(det.rule.title,det.rule.text,`detachment-${det.id}`,'detachment-rule');
-  for(const item of det.enhancements)addTerm(item.title,item.text,`detachment-${det.id}`,'enhancement');
-  for(const item of det.stratagems)addTerm(item.title,[item.when,item.target,item.effect,item.restrictions].filter(Boolean).join(' '),`detachment-${det.id}`,'stratagem');
+for(const det of detachments){
+  const scope=det.dependencyBook||config.id;
+  if(det.rule)addTerm(det.rule.title,det.rule.text,`detachment-${det.id}`,'detachment-rule','',scope);
+  for(const item of det.enhancements)addTerm(item.title,item.text,`detachment-${det.id}`,'enhancement','',scope);
+  for(const item of det.stratagems)addTerm(item.title,[item.when,item.target,item.effect,item.restrictions].filter(Boolean).join(' '),`detachment-${det.id}`,'stratagem','',scope);
 }
 const scopedAbilityTerms=new Map();
 for(const unit of units){
@@ -204,17 +226,20 @@ const enhancementCard=(item,det,{related=false}={})=>{
   if(enhancementOwnerRecord(item)&&!explicit)return'';
   if(related&&!explicit)return'';
   const termText=isUpgrade?`UPGRADE. ${item.text}`:item.text;
-  return`<article class="enhancement surface" data-rule-id="${esc(enhancementRuleId(item))}" data-enhancement-tags="${esc(tags.join('|'))}" data-owner-subject="${esc(explicit?.owner?.subject||'')}"${config.compatibleRulesMatrix?` data-enhancement-title="${esc(item.title.replace(/\s*\(Aura\)$/i,''))}"`:''}${explicit&&config.legacyRelatedRuleAttributes!==false?` data-eligibility="${esc(JSON.stringify(explicit))}"`:''}><div class="eyebrow">Enhancement${isUpgrade?' · UPGRADE':''}${item.value?` · ${item.value} pts`:''}</div><h4><button class="term-button" data-term="${addTerm(item.title,termText,`detachment-${det.id}`,'enhancement')}">${esc(item.title)}</button></h4><p data-source-field="text">${esc(item.text)}</p></article>`;
+  return`<article class="enhancement surface" data-rule-id="${esc(enhancementRuleId(item))}" data-enhancement-tags="${esc(tags.join('|'))}" data-owner-subject="${esc(explicit?.owner?.subject||'')}"${config.compatibleRulesMatrix?` data-enhancement-title="${esc(item.title.replace(/\s*\(Aura\)$/i,''))}"`:''}${explicit&&config.legacyRelatedRuleAttributes!==false?` data-eligibility="${esc(JSON.stringify(explicit))}"`:''}><div class="eyebrow">Enhancement${isUpgrade?' · UPGRADE':''}${item.value?` · ${item.value} pts`:''}</div><h4><button class="term-button" data-term="${addTerm(item.title,termText,`detachment-${det.id}`,'enhancement','',det.dependencyBook||config.id)}">${esc(item.title)}</button></h4><p data-source-field="text">${esc(item.text)}</p></article>`;
 };
-const stratagemCard=(item,det)=>{const eligibility=config.legacyRelatedRuleAttributes!==false?stratagemEligibility(item):null,type=item.canonicalType||item.typeStatus||'',typeAttrs=item.typeStatus?` data-stratagem-type="${esc(type)}" data-source-label="${esc(item.sourceLabel||'')}"`:'',typeLabel=item.typeStatus&&item.sourceLabel?`<span class="stratagem-type">${esc(item.sourceLabel)}</span>`:'';return`<article class="stratagem surface" data-rule-id="${esc(item.id)}"${typeAttrs}${config.legacyRelatedRuleAttributes!==false?` data-eligibility="${esc(JSON.stringify(eligibility))}"`:''}><div class="stratagem-head"><div><h3><button class="term-button" data-term="${addTerm(item.title,[item.when,item.target,item.effect,item.restrictions].filter(Boolean).join(' '),`detachment-${det.id}`,'stratagem')}">${esc(item.title)}</button></h3>${typeLabel}</div><div class="cp">${esc(item.cp)}CP</div></div><p class="field" data-source-field="when"><b>When</b><br>${esc(item.when)}</p><p class="field" data-source-field="target"><b>Target</b><br>${esc(item.target)}</p><p class="field" data-source-field="effect"><b>Effect</b><br>${esc(item.effect)}</p>${item.restrictions?`<p class="field" data-source-field="restrictions"><b>Restrictions</b><br>${esc(item.restrictions)}</p>`:''}</article>`;};
+const stratagemCard=(item,det)=>{const eligibility=config.legacyRelatedRuleAttributes!==false?stratagemEligibility(item):null,type=item.canonicalType||item.typeStatus||'',typeAttrs=item.typeStatus?` data-stratagem-type="${esc(type)}" data-source-label="${esc(item.sourceLabel||'')}"`:'',typeLabel=item.typeStatus&&item.sourceLabel?`<span class="stratagem-type">${esc(item.sourceLabel)}</span>`:'';return`<article class="stratagem surface" data-rule-id="${esc(item.id)}"${typeAttrs}${config.legacyRelatedRuleAttributes!==false?` data-eligibility="${esc(JSON.stringify(eligibility))}"`:''}><div class="stratagem-head"><div><h3><button class="term-button" data-term="${addTerm(item.title,[item.when,item.target,item.effect,item.restrictions].filter(Boolean).join(' '),`detachment-${det.id}`,'stratagem','',det.dependencyBook||config.id)}">${esc(item.title)}</button></h3>${typeLabel}</div><div class="cp">${esc(item.cp)}CP</div></div><p class="field" data-source-field="when"><b>When</b><br>${esc(item.when)}</p><p class="field" data-source-field="target"><b>Target</b><br>${esc(item.target)}</p><p class="field" data-source-field="effect"><b>Effect</b><br>${esc(item.effect)}</p>${item.restrictions?`<p class="field" data-source-field="restrictions"><b>Restrictions</b><br>${esc(item.restrictions)}</p>`:''}</article>`;};
+const dependencyDetachmentSourceLink=det=>`<a class="source-link" href="../${esc(det.dependencyBook)}/sources/${esc(det.dependencySourceFile)}#page=${det.sourcePages[0]}">${esc(det.dependencyTitle)} Faction Pack v${esc(det.dependencySourceVersion)} · p. ${det.sourcePages.join('–')}</a>`;
 const detachmentHtml=detachments.map(det=>{
   const official=Boolean(det.sourcePages),enhancements=(det.enhancements||[]).map(item=>enhancementCard(item,det)).join(''),stratagems=(det.stratagems||[]).map(item=>stratagemCard(item,det)).join('');
-  const rule=det.rule?`<article class="rule-card surface"><h4><button class="term-button" data-term="${addTerm(det.rule.title,det.rule.text,`detachment-${det.id}`,'detachment-rule')}">${esc(det.rule.title)}</button></h4><p data-source-field="text">${esc(det.rule.text).replace(/\n/g,'<br>')}</p></article>`:`<article class="rule-card surface source-warning"><h4>Codex source required</h4><p>This Detachment is current, but its complete rule and Stratagem text is not present in Faction Pack v${esc(pack.meta.version)}. It is not reproduced here until the Codex layer is verified.</p></article>`;
+  const rule=det.rule?`<article class="rule-card surface"><h4><button class="term-button" data-term="${addTerm(det.rule.title,det.rule.text,`detachment-${det.id}`,'detachment-rule','',det.dependencyBook||config.id)}">${esc(det.rule.title)}</button></h4><p data-source-field="text">${esc(det.rule.text).replace(/\n/g,'<br>')}</p></article>`:`<article class="rule-card surface source-warning"><h4>Codex source required</h4><p>This Detachment is current, but its complete rule and Stratagem text is not present in Faction Pack v${esc(pack.meta.version)}. It is not reproduced here until the Codex layer is verified.</p></article>`;
   const ruleSection=`<section class="detachment-part" id="${esc(det.id)}-rule" data-track="${esc(det.id)}-rule"><h4 class="subheading">Detachment Rule</h4>${rule}</section>`;
   const enhancementSection=enhancements?`<section class="detachment-part" id="${esc(det.id)}-enhancements" data-track="${esc(det.id)}-enhancements"><h4 class="subheading">Enhancements</h4><div class="detachment-grid">${enhancements}</div></section>`:'';
   const stratagemSection=stratagems?`<section class="detachment-part" id="${esc(det.id)}-stratagems" data-track="${esc(det.id)}-stratagems"><h4 class="subheading">Stratagems</h4><div class="detachment-grid stratagem-grid">${stratagems}</div></section>`:'';
   const dp=det.detachmentPoints==null?'':`<span class="detachment-dp">${esc(det.detachmentPoints)}DP</span>`;
-  return tracked(`detachment-${det.id}`,det.title,`<div class="detachment-meta"><span>${official?'OFFICIAL FACTION PACK':esc(config.codexSourceLabel||'CODEX INDEX')}</span>${det.forceDisposition?`<span>${esc(det.forceDisposition)}</span>`:''}</div>${ruleSection}${enhancementSection}${stratagemSection}${official?`<p class="source">${sourceLink(det.sourcePages)}</p>`:''}`,'content-group detachment',dp);
+  const sourceLabel=det.dependencyBook?`${det.dependencyTitle.toUpperCase()} SHARED · ${official?'OFFICIAL FACTION PACK':esc(det.dependencyCodexSourceLabel)}`:official?'OFFICIAL FACTION PACK':esc(config.codexSourceLabel||'CODEX INDEX');
+  const sourceFooter=official?`<p class="source">${det.dependencyBook?dependencyDetachmentSourceLink(det):sourceLink(det.sourcePages)}</p>`:'';
+  return tracked(`detachment-${det.id}`,det.title,`<div class="detachment-meta"><span>${sourceLabel}</span>${det.forceDisposition?`<span>${esc(det.forceDisposition)}</span>`:''}</div>${ruleSection}${enhancementSection}${stratagemSection}${sourceFooter}`,'content-group detachment',dp);
 }).join('');
 const statline=unit=>(unit.profiles||[]).map(profile=>`<div class="model-profile" data-profile="${esc(slug(profile.name))}">${unit.profiles.length>1?`<h5>${esc(profile.name)}</h5>`:''}<div class="statline">${Object.entries(profile.stats).filter(([,value])=>value).map(([name,value])=>`<div class="stat" data-source-field="stats.${esc(name)}"><b>${esc(name)}</b><span>${esc(value)}</span></div>`).join('')}</div></div>`).join('');
 const weaponTables=unit=>['ranged','melee'].map(mode=>{const rows=(unit.weapons||[]).filter(item=>item.mode===mode);if(!rows.length)return'';const skill=mode==='ranged'?'BS':'WS';return`<div class="weapon-group"><h5>${mode==='ranged'?'Ranged':'Melee'} weapons</h5><div class="weapon-table" role="table"><div class="weapon-row weapon-head"><div>Weapon</div><div>Range</div><div>A</div><div>${skill}</div><div>S</div><div>AP</div><div>D</div></div>${rows.map(item=>`<div class="weapon-row" data-source-field="weapons.${esc(slug(item.name))}" data-mode="${mode}"><div data-source-field="name"><button class="weapon-button" data-term="${item.termId}">${esc(item.name)}</button>${item.abilities?weaponAbilityTokens(item.abilities,unit.dependencyBook||config.id):''}</div><div data-label="Range" data-source-field="range">${esc(item.range)}</div><div data-label="A" data-source-field="a">${esc(item.a)}</div><div data-label="${skill}" data-source-field="skill">${esc(item.skill)}</div><div data-label="S" data-source-field="s">${esc(item.s)}</div><div data-label="AP" data-source-field="ap">${esc(item.ap)}</div><div data-label="D" data-source-field="d">${esc(item.d)}</div></div>`).join('')}</div></div>`;}).join('');
@@ -298,8 +323,8 @@ if(config.compatibleRulesMatrix){
     .replace(/<script src="\.\.\/shared\/related-rules-matcher\.js\?v=6"><\/script>/,'')
     .replace(/<script src="\.\.\/shared\/army-related-rules\.js(?:\?v=\d+)?"><\/script>/,'');
   if(!config.sharedArmyBookApp)finalHtml=finalHtml.replace(/<script src="\.\.\/shared\/army-book-app\.js\?v=9"><\/script>/,'');
-  if(config.rosterSupport)finalHtml=finalHtml.replace('<script src="./scripts/app.js',`<script src="./scripts/roster-filter.js?v=${config.assetVersions?.rosterFilter||1}"></script><script src="./scripts/app.js`);
 }
+if(config.rosterSupport)finalHtml=finalHtml.replace('<script src="./scripts/app.js',`<script src="./scripts/roster-filter.js?v=${config.assetVersions?.rosterFilter||1}"></script><script src="./scripts/app.js`);
 const dataJs=`window.DG_TERMS=${JSON.stringify(Object.fromEntries([...terms].map(([id,item])=>[id,{id,title:item.title,summary:item.summary,full:item.full,glossary:item.glossary,...(item.rule?{rule:item.rule}:{}),...(item.units.length?{units:item.units,datasheet:item.units[0],statline:item.units[0].replace(/^unit-/,'')+'-profile'}:{})}])),null,2)};\n`;
 const rosterEnhancements=Object.fromEntries(detachments.flatMap(det=>(det.enhancements||[]).filter(item=>!enhancementOwnerRecord(item)||enhancementContract(item)).map(item=>{const contract=enhancementContract(item),ownerRecord=enhancementOwnerRecord(item);return[titleKey(item.title),{title:item.title,text:item.text,value:ownerRecord?ownerRecord.points:item.value,detachment:det.title,tags:contract?.tags||item.tags||[],owner:contract?.owner||null,assignment:contract?.assignment||null}]})));
 const rosterDataJs=`window.WH_BOOK_ROSTER_ENHANCEMENTS=${JSON.stringify(rosterEnhancements,null,2)};\n`;

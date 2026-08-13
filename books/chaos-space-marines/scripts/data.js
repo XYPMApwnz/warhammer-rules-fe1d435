@@ -47,277 +47,93 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-stratagem-wreathed-in-warpflame",
     "rule": "detachment-cabal-of-chaos"
   },
-  "chaos-space-marines-detachment-rule-rain-of-ruin": {
-    "id": "chaos-space-marines-detachment-rule-rain-of-ruin",
-    "title": "Rain of Ruin",
-    "summary": "It is not enough for these heretical reavers merely to defeat their foes. Instead, they must pound all before them to smouldering oblivion with overwhelming salvoes of fire. Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].",
-    "full": "It is not enough for these heretical reavers merely to defeat their foes. Instead, they must pound all before them to smouldering oblivion with overwhelming salvoes of fire. Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].",
-    "glossary": "glossary-chaos-space-marines-detachment-rule-rain-of-ruin",
-    "rule": "detachment-devotees-of-destruction"
+  "chaos-space-marines-detachment-rule-desperate-devotion": {
+    "id": "chaos-space-marines-detachment-rule-desperate-devotion",
+    "title": "Desperate Devotion",
+    "summary": "Each time a DAMNED unit from your army makes a Dark Pact, if that unit was selected to make a Normal move, Advance or declare a charge, it can make a Desperate Pact. If it does, until the end of the phase, add 2\" to the Move characteristic of models in that unit and add 2 to Charge rolls made for that unit. Desperate Pacts Each time a unit makes a Desperate Pact, it must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds before any effects of that Desperate Pact are resolved. KEYWORDS TRAITOR GUARDSMEN SQUAD units from your army gain the BATTLELINE keyword.",
+    "full": "Each time a DAMNED unit from your army makes a Dark Pact, if that unit was selected to make a Normal move, Advance or declare a charge, it can make a Desperate Pact. If it does, until the end of the phase, add 2\" to the Move characteristic of models in that unit and add 2 to Charge rolls made for that unit. Desperate Pacts Each time a unit makes a Desperate Pact, it must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds before any effects of that Desperate Pact are resolved. KEYWORDS TRAITOR GUARDSMEN SQUAD units from your army gain the BATTLELINE keyword.",
+    "glossary": "glossary-chaos-space-marines-detachment-rule-desperate-devotion",
+    "rule": "detachment-chaos-cult"
   },
-  "chaos-space-marines-enhancement-pact-of-destruction": {
-    "id": "chaos-space-marines-enhancement-pact-of-destruction",
-    "title": "Pact of Destruction",
-    "summary": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re-roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
-    "full": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re-roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
-    "glossary": "glossary-chaos-space-marines-enhancement-pact-of-destruction",
-    "rule": "detachment-devotees-of-destruction"
+  "chaos-space-marines-enhancement-amulet-of-tainted-vigour": {
+    "id": "chaos-space-marines-enhancement-amulet-of-tainted-vigour",
+    "title": "Amulet of Tainted Vigour",
+    "summary": "DARK APOSTLE model only. In your Command phase, you can return up to D3 destroyed DAMNED models (excluding CHARACTER models) to the bearer's unit.",
+    "full": "DARK APOSTLE model only. In your Command phase, you can return up to D3 destroyed DAMNED models (excluding CHARACTER models) to the bearer's unit.",
+    "glossary": "glossary-chaos-space-marines-enhancement-amulet-of-tainted-vigour",
+    "rule": "detachment-chaos-cult"
   },
-  "chaos-space-marines-enhancement-eye-of-oblivion": {
-    "id": "chaos-space-marines-enhancement-eye-of-oblivion",
-    "title": "Eye of Oblivion",
-    "summary": "This vile technodaemonic parasite nests within the emptied eye socket of its host, driving filament tendrils deep into their brain and feeding on their animus in exchange for revealing the secrets of its supernatural vision. WARPSMITH model only. When this unit is selected to shoot, select one enemy unit within 24\" of this unit. That enemy unit has +6\" detection range until this unit has shot.",
-    "full": "This vile technodaemonic parasite nests within the emptied eye socket of its host, driving filament tendrils deep into their brain and feeding on their animus in exchange for revealing the secrets of its supernatural vision. WARPSMITH model only. When this unit is selected to shoot, select one enemy unit within 24\" of this unit. That enemy unit has +6\" detection range until this unit has shot.",
-    "glossary": "glossary-chaos-space-marines-enhancement-eye-of-oblivion",
-    "rule": "detachment-devotees-of-destruction"
+  "chaos-space-marines-enhancement-cultists-brand": {
+    "id": "chaos-space-marines-enhancement-cultists-brand",
+    "title": "Cultist's Brand",
+    "summary": "DARK APOSTLE or DAMNED model only. If every other model in the bearer's unit (excluding Dark Disciples) is DAMNED, you can re-roll Advance and Charge rolls made for the bearer's unit.",
+    "full": "DARK APOSTLE or DAMNED model only. If every other model in the bearer's unit (excluding Dark Disciples) is DAMNED, you can re-roll Advance and Charge rolls made for the bearer's unit.",
+    "glossary": "glossary-chaos-space-marines-enhancement-cultists-brand",
+    "rule": "detachment-chaos-cult"
   },
-  "chaos-space-marines-stratagem-ruinations-bounty": {
-    "id": "chaos-space-marines-stratagem-ruinations-bounty",
-    "title": "Ruination’s Bounty",
-    "summary": "Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot. That HAVOCS/OBLITERATORS unit. When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: ▪ [LETHAL HITS]. ▪ [SUSTAINED HITS 1].",
-    "full": "Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot. That HAVOCS/OBLITERATORS unit. When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: ▪ [LETHAL HITS]. ▪ [SUSTAINED HITS 1].",
-    "glossary": "glossary-chaos-space-marines-stratagem-ruinations-bounty",
-    "rule": "detachment-devotees-of-destruction"
+  "chaos-space-marines-enhancement-incendiary-goad": {
+    "id": "chaos-space-marines-enhancement-incendiary-goad",
+    "title": "Incendiary Goad",
+    "summary": "DARK APOSTLE or DAMNED model only. While the bearer's unit is below its Starting Strength, add 1 to the Strength characteristic of melee weapons equipped by DAMNED models in that unit, and while that unit is Below Half-strength, add 1 to the Attacks characteristic of those weapons as well.",
+    "full": "DARK APOSTLE or DAMNED model only. While the bearer's unit is below its Starting Strength, add 1 to the Strength characteristic of melee weapons equipped by DAMNED models in that unit, and while that unit is Below Half-strength, add 1 to the Attacks characteristic of those weapons as well.",
+    "glossary": "glossary-chaos-space-marines-enhancement-incendiary-goad",
+    "rule": "detachment-chaos-cult"
   },
-  "chaos-space-marines-stratagem-snare-of-fire": {
-    "id": "chaos-space-marines-stratagem-snare-of-fire",
-    "title": "Snare of Fire",
-    "summary": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged HAVOCS unit. That HAVOCS unit. Your unit can make a normal move of up to D3+3\".",
-    "full": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged HAVOCS unit. That HAVOCS unit. Your unit can make a normal move of up to D3+3\".",
-    "glossary": "glossary-chaos-space-marines-stratagem-snare-of-fire",
-    "rule": "detachment-devotees-of-destruction"
+  "chaos-space-marines-enhancement-warped-foresight": {
+    "id": "chaos-space-marines-enhancement-warped-foresight",
+    "title": "Warped Foresight",
+    "summary": "DARK APOSTLE or DAMNED model only. While the bearer is leading a unit with the Scouts 6\" ability, every model in the bearer's unit has the Scouts 6\" ability.",
+    "full": "DARK APOSTLE or DAMNED model only. While the bearer is leading a unit with the Scouts 6\" ability, every model in the bearer's unit has the Scouts 6\" ability.",
+    "glossary": "glossary-chaos-space-marines-enhancement-warped-foresight",
+    "rule": "detachment-chaos-cult"
   },
-  "chaos-space-marines-stratagem-undying-hatred": {
-    "id": "chaos-space-marines-stratagem-undying-hatred",
-    "title": "Undying Hatred",
-    "summary": "Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit. That HAVOCS/OBLITERATORS unit. Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.",
-    "full": "Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit. That HAVOCS/OBLITERATORS unit. Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.",
-    "glossary": "glossary-chaos-space-marines-stratagem-undying-hatred",
-    "rule": "detachment-devotees-of-destruction"
+  "chaos-space-marines-stratagem-chosen-for-glory": {
+    "id": "chaos-space-marines-stratagem-chosen-for-glory",
+    "title": "Chosen for Glory",
+    "summary": "Your Shooting phase or the Fight phase. One DAMNED unit from your army that has not been selected to shoot or fight this phase. Your unit can make a Desperate Pact. If it does, until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, you can re-roll the Wound roll as well.",
+    "full": "Your Shooting phase or the Fight phase. One DAMNED unit from your army that has not been selected to shoot or fight this phase. Your unit can make a Desperate Pact. If it does, until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, you can re-roll the Wound roll as well.",
+    "glossary": "glossary-chaos-space-marines-stratagem-chosen-for-glory",
+    "rule": "detachment-chaos-cult"
   },
-  "chaos-space-marines-detachment-rule-prey-on-the-weak": {
-    "id": "chaos-space-marines-detachment-rule-prey-on-the-weak",
-    "title": "Prey on the Weak",
-    "summary": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re-roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have -1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
-    "full": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re-roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have -1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
-    "glossary": "glossary-chaos-space-marines-detachment-rule-prey-on-the-weak",
-    "rule": "detachment-murdertalon-raiders"
+  "chaos-space-marines-stratagem-selfless-demise": {
+    "id": "chaos-space-marines-stratagem-selfless-demise",
+    "title": "Selfless Demise",
+    "summary": "Fight phase, just after an enemy unit has selected its targets. One DAMNED unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has resolved all of its attacks, each time a model in your unit is destroyed, roll one D6: on a 6, the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.",
+    "full": "Fight phase, just after an enemy unit has selected its targets. One DAMNED unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has resolved all of its attacks, each time a model in your unit is destroyed, roll one D6: on a 6, the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.",
+    "glossary": "glossary-chaos-space-marines-stratagem-selfless-demise",
+    "rule": "detachment-chaos-cult"
   },
-  "chaos-space-marines-enhancement-shadowcowl-talisman": {
-    "id": "chaos-space-marines-enhancement-shadowcowl-talisman",
-    "title": "Shadowcowl Talisman",
-    "summary": "Worked with diabolical incantations of occlusion, wound about with subtle enchantments, this onyx disc draws a penumbral aura about the bearer that hides him from the eyes of his prey. CHAOS LORD WITH JUMP PACK model only. This unit has 5+ InSv.",
-    "full": "Worked with diabolical incantations of occlusion, wound about with subtle enchantments, this onyx disc draws a penumbral aura about the bearer that hides him from the eyes of his prey. CHAOS LORD WITH JUMP PACK model only. This unit has 5+ InSv.",
-    "glossary": "glossary-chaos-space-marines-enhancement-shadowcowl-talisman",
-    "rule": "detachment-murdertalon-raiders"
+  "chaos-space-marines-stratagem-infernal-sacrifice": {
+    "id": "chaos-space-marines-stratagem-infernal-sacrifice",
+    "title": "Infernal Sacrifice",
+    "summary": "Fight phase. One DAMNED unit from your army that has not been selected to fight this phase. Your unit can make a Desperate Pact. If it does, your unit suffers D3 mortal wounds (in addition to any suffered for failing the resulting Leadership test), and until the end of the phase, add 1 to the Attacks characteristic of the melee weapons equipped by models in your unit, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, until the end of the phase, improve the Strength characteristic of those weapons by 1 as well.",
+    "full": "Fight phase. One DAMNED unit from your army that has not been selected to fight this phase. Your unit can make a Desperate Pact. If it does, your unit suffers D3 mortal wounds (in addition to any suffered for failing the resulting Leadership test), and until the end of the phase, add 1 to the Attacks characteristic of the melee weapons equipped by models in your unit, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, until the end of the phase, improve the Strength characteristic of those weapons by 1 as well.",
+    "glossary": "glossary-chaos-space-marines-stratagem-infernal-sacrifice",
+    "rule": "detachment-chaos-cult"
   },
-  "chaos-space-marines-enhancement-pact-of-cursed-pinions": {
-    "id": "chaos-space-marines-enhancement-pact-of-cursed-pinions",
-    "title": "Pact of Cursed Pinions",
-    "summary": "Sharing their mortal frame with a predatory possessor daemon lends this dark champion additional might and swiftness, though it may yet damn them for eternity. CHAOS LORD WITH JUMP PACK model only. ▪ This model has DAEMON. ▪ This model’s melee attacks have +1 A.",
-    "full": "Sharing their mortal frame with a predatory possessor daemon lends this dark champion additional might and swiftness, though it may yet damn them for eternity. CHAOS LORD WITH JUMP PACK model only. ▪ This model has DAEMON. ▪ This model’s melee attacks have +1 A.",
-    "glossary": "glossary-chaos-space-marines-enhancement-pact-of-cursed-pinions",
-    "rule": "detachment-murdertalon-raiders"
+  "chaos-space-marines-stratagem-crazed-focus": {
+    "id": "chaos-space-marines-stratagem-crazed-focus",
+    "title": "Crazed Focus",
+    "summary": "Your Shooting phase. One DAMNED unit from your army that has not been selected to shoot this phase. Your unit can make a Desperate Pact. If it does, until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, improve the Strength characteristic of that attack by 1 as well.",
+    "full": "Your Shooting phase. One DAMNED unit from your army that has not been selected to shoot this phase. Your unit can make a Desperate Pact. If it does, until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, improve the Strength characteristic of that attack by 1 as well.",
+    "glossary": "glossary-chaos-space-marines-stratagem-crazed-focus",
+    "rule": "detachment-chaos-cult"
   },
-  "chaos-space-marines-stratagem-plunging-talons": {
-    "id": "chaos-space-marines-stratagem-plunging-talons",
-    "title": "Plunging Talons",
-    "summary": "Fight phase, when a friendly HERETIC ASTARTES INFANTRY FLY unit that made a charge move this turn is selected to fight. That HERETIC ASTARTES INFANTRY FLY unit. Your unit’s melee attacks have [LANCE].",
-    "full": "Fight phase, when a friendly HERETIC ASTARTES INFANTRY FLY unit that made a charge move this turn is selected to fight. That HERETIC ASTARTES INFANTRY FLY unit. Your unit’s melee attacks have [LANCE].",
-    "glossary": "glossary-chaos-space-marines-stratagem-plunging-talons",
-    "rule": "detachment-murdertalon-raiders"
+  "chaos-space-marines-stratagem-reckless-haste": {
+    "id": "chaos-space-marines-stratagem-reckless-haste",
+    "title": "Reckless Haste",
+    "summary": "Your Charge phase. One DAMNED unit from your army. Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.",
+    "full": "Your Charge phase. One DAMNED unit from your army. Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.",
+    "glossary": "glossary-chaos-space-marines-stratagem-reckless-haste",
+    "rule": "detachment-chaos-cult"
   },
-  "chaos-space-marines-stratagem-raking-pass": {
-    "id": "chaos-space-marines-stratagem-raking-pass",
-    "title": "Raking Pass",
-    "summary": "Your Movement phase, when a friendly HERETIC ASTARTES INFANTRY FLY unit is selected to make a fall-back move. That HERETIC ASTARTES INFANTRY FLY unit. That move does not prevent your unit from being eligible to declare a charge.",
-    "full": "Your Movement phase, when a friendly HERETIC ASTARTES INFANTRY FLY unit is selected to make a fall-back move. That HERETIC ASTARTES INFANTRY FLY unit. That move does not prevent your unit from being eligible to declare a charge.",
-    "glossary": "glossary-chaos-space-marines-stratagem-raking-pass",
-    "rule": "detachment-murdertalon-raiders"
-  },
-  "chaos-space-marines-stratagem-warp-twisted-terrors": {
-    "id": "chaos-space-marines-stratagem-warp-twisted-terrors",
-    "title": "Warp-twisted Terrors",
-    "summary": "Your Movement phase, when a friendly WARP TALONS unit ends a move. That WARP TALONS unit. Select one visible enemy unit (excluding MONSTER/VEHICLE units) within 9\" of your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
-    "full": "Your Movement phase, when a friendly WARP TALONS unit ends a move. That WARP TALONS unit. Select one visible enemy unit (excluding MONSTER/VEHICLE units) within 9\" of your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
-    "glossary": "glossary-chaos-space-marines-stratagem-warp-twisted-terrors",
-    "rule": "detachment-murdertalon-raiders"
-  },
-  "chaos-space-marines-detachment-rule-warp-portals": {
-    "id": "chaos-space-marines-detachment-rule-warp-portals",
-    "title": "Warp Portals",
-    "summary": "Conjured warp portals flicker across the battlefield, tearing through the fabric of reality according to arcane designs. They are a means, however perilous and unnatural, for the warband’s most elite warriors to traverse the battlefield in a matter of strides and strike again at new locations. At the end of your opponent’s turn, you can select a number of Heretic Astartes Terminator, Obliterators and Mutilators units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows: BATTLE SIZE NUMBER OF UNITS Incursion Up to 1 unit Strike Force Up to 2 units Onslaught Up to 3 units Once you have made your selections, remove those units from the battlefield and place them into Strategic Reserves.",
-    "full": "Conjured warp portals flicker across the battlefield, tearing through the fabric of reality according to arcane designs. They are a means, however perilous and unnatural, for the warband’s most elite warriors to traverse the battlefield in a matter of strides and strike again at new locations. At the end of your opponent’s turn, you can select a number of Heretic Astartes Terminator, Obliterators and Mutilators units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows: BATTLE SIZE NUMBER OF UNITS Incursion Up to 1 unit Strike Force Up to 2 units Onslaught Up to 3 units Once you have made your selections, remove those units from the battlefield and place them into Strategic Reserves.",
-    "glossary": "glossary-chaos-space-marines-detachment-rule-warp-portals",
-    "rule": "detachment-warpstrike-champions"
-  },
-  "chaos-space-marines-enhancement-infernal-fulgurite": {
-    "id": "chaos-space-marines-enhancement-infernal-fulgurite",
-    "title": "Infernal Fulgurite",
-    "summary": "This strange artefact was recovered from the storm‑lashed daemon world of Utrexismia. A shard of warp lightning frozen forever in reality, it serves as a potent focus for teleportation. Heretic Astartes model only (excluding Damned models). Once per battle, you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
-    "full": "This strange artefact was recovered from the storm‑lashed daemon world of Utrexismia. A shard of warp lightning frozen forever in reality, it serves as a potent focus for teleportation. Heretic Astartes model only (excluding Damned models). Once per battle, you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
-    "glossary": "glossary-chaos-space-marines-enhancement-infernal-fulgurite",
-    "rule": "detachment-warpstrike-champions"
-  },
-  "chaos-space-marines-enhancement-eye-of-the-warp": {
-    "id": "chaos-space-marines-enhancement-eye-of-the-warp",
-    "title": "Eye of the Warp",
-    "summary": "This burning gem allows its bearer to see through the veil between realspace and the Warp, and so to react instantly upon piercing that veil. Heretic Astartes model with the Deep Strike ability only. Each time the bearer’s unit is set up on the battlefield, until the end of the turn, you can re‑roll Charge rolls made for that unit.",
-    "full": "This burning gem allows its bearer to see through the veil between realspace and the Warp, and so to react instantly upon piercing that veil. Heretic Astartes model with the Deep Strike ability only. Each time the bearer’s unit is set up on the battlefield, until the end of the turn, you can re‑roll Charge rolls made for that unit.",
-    "glossary": "glossary-chaos-space-marines-enhancement-eye-of-the-warp",
-    "rule": "detachment-warpstrike-champions"
-  },
-  "chaos-space-marines-enhancement-akshurs-binding-runes": {
-    "id": "chaos-space-marines-enhancement-akshurs-binding-runes",
-    "title": "Akshur’s Binding Runes",
-    "summary": "Living runes that crawl from an ancient tome onto living skin, these sigils anchor their host to realspace even when they are immersed in the Empyrean. Heretic Astartes model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
-    "full": "Living runes that crawl from an ancient tome onto living skin, these sigils anchor their host to realspace even when they are immersed in the Empyrean. Heretic Astartes model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
-    "glossary": "glossary-chaos-space-marines-enhancement-akshurs-binding-runes",
-    "rule": "detachment-warpstrike-champions"
-  },
-  "chaos-space-marines-enhancement-tzagulla": {
-    "id": "chaos-space-marines-enhancement-tzagulla",
-    "title": "Tzagulla",
-    "summary": "This shape‑shifting daemon weapon feeds upon the presence of warp energy to empower both itself and its wielder. Heretic Astartes model with the Deep Strike ability only. Improve the Attacks, Strength and Armour Penetration characteristics of the bearer’s weapons by 1. In addition, each time the bearer’s unit is set up on the battlefield from Reserves, until the end of the turn, improve the Damage characteristic of the bearer’s weapons by 1.",
-    "full": "This shape‑shifting daemon weapon feeds upon the presence of warp energy to empower both itself and its wielder. Heretic Astartes model with the Deep Strike ability only. Improve the Attacks, Strength and Armour Penetration characteristics of the bearer’s weapons by 1. In addition, each time the bearer’s unit is set up on the battlefield from Reserves, until the end of the turn, improve the Damage characteristic of the bearer’s weapons by 1.",
-    "glossary": "glossary-chaos-space-marines-enhancement-tzagulla",
-    "rule": "detachment-warpstrike-champions"
-  },
-  "chaos-space-marines-stratagem-empyric-dislocation": {
-    "id": "chaos-space-marines-stratagem-empyric-dislocation",
-    "title": "Empyric Dislocation",
-    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes unit from your army (excluding Damned units) that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1. You cannot target the same unit with the Empyric Dislocation and Armour of Corruption Stratagems in the same phase.",
-    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes unit from your army (excluding Damned units) that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1. You cannot target the same unit with the Empyric Dislocation and Armour of Corruption Stratagems in the same phase.",
-    "glossary": "glossary-chaos-space-marines-stratagem-empyric-dislocation",
-    "rule": "detachment-warpstrike-champions"
-  },
-  "chaos-space-marines-stratagem-warp-tainted": {
-    "id": "chaos-space-marines-stratagem-warp-tainted",
-    "title": "Warp-tainted",
-    "summary": "Your Movement phase. One Heretic Astartes Terminator, Obliterators or Mutilators unit from your army, within range of an objective marker you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
-    "full": "Your Movement phase. One Heretic Astartes Terminator, Obliterators or Mutilators unit from your army, within range of an objective marker you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
-    "glossary": "glossary-chaos-space-marines-stratagem-warp-tainted",
-    "rule": "detachment-warpstrike-champions"
-  },
-  "chaos-space-marines-stratagem-armour-of-corruption": {
-    "id": "chaos-space-marines-stratagem-armour-of-corruption",
-    "title": "Armour of Corruption",
-    "summary": "Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes Terminator, Obliterators or Mutilators unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the turn, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack. You cannot target the same unit with the Armour of Corruption and Empyric Dislocation Stratagems in the same phase.",
-    "full": "Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes Terminator, Obliterators or Mutilators unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the turn, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack. You cannot target the same unit with the Armour of Corruption and Empyric Dislocation Stratagems in the same phase.",
-    "glossary": "glossary-chaos-space-marines-stratagem-armour-of-corruption",
-    "rule": "detachment-warpstrike-champions"
-  },
-  "chaos-space-marines-stratagem-siegebreaker-strike": {
-    "id": "chaos-space-marines-stratagem-siegebreaker-strike",
-    "title": "Siegebreaker Strike",
-    "summary": "Your Shooting phase. Up to two Heretic Astartes units from your army that were set up using the Deep Strike ability this turn and have not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your units have the [IGNORES COVER] ability.",
-    "full": "Your Shooting phase. Up to two Heretic Astartes units from your army that were set up using the Deep Strike ability this turn and have not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your units have the [IGNORES COVER] ability.",
-    "glossary": "glossary-chaos-space-marines-stratagem-siegebreaker-strike",
-    "rule": "detachment-warpstrike-champions"
-  },
-  "chaos-space-marines-stratagem-warp-flicker": {
-    "id": "chaos-space-marines-stratagem-warp-flicker",
-    "title": "Warp Flicker",
-    "summary": "Your Movement phase. One Heretic Astartes Terminator, Obliterators or Mutilators unit from your army. Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
-    "full": "Your Movement phase. One Heretic Astartes Terminator, Obliterators or Mutilators unit from your army. Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
-    "glossary": "glossary-chaos-space-marines-stratagem-warp-flicker",
-    "rule": "detachment-warpstrike-champions"
-  },
-  "chaos-space-marines-stratagem-portal-of-spite": {
-    "id": "chaos-space-marines-stratagem-portal-of-spite",
-    "title": "Portal of Spite",
-    "summary": "Your Charge phase. One Heretic Astartes unit from your army that was set up using the Deep Strike ability this turn and has not declared a charge this phase. Your unit has +2 to charge rolls.",
-    "full": "Your Charge phase. One Heretic Astartes unit from your army that was set up using the Deep Strike ability this turn and has not declared a charge this phase. Your unit has +2 to charge rolls.",
-    "glossary": "glossary-chaos-space-marines-stratagem-portal-of-spite",
-    "rule": "detachment-warpstrike-champions"
-  },
-  "chaos-space-marines-detachment-rule-soul-forge-boons": {
-    "id": "chaos-space-marines-detachment-rule-soul-forge-boons",
-    "title": "Soul Forge Boons",
-    "summary": "The cybersorcerous power of Vashtorr’s boons is much in evidence amongst his worshippers. Nowhere is this more true than in the war engines that his cults take into battle, and which exhibit a nightmarish variety of biomechanoid mutations and daemon‑spawned powers. Whether wreathed in balefire, shimmeringly insubstantial or constantly regrowing battle‑damaged hull plating, these accursed war machines are incredibly hard to destroy. Heretic Astartes Vehicle units from your army gain the Daemon keyword. Heretic Astartes Vehicle, Lord Discordant and Vashtorr the Arkifane units from your army gain the Soul Forge keyword. Soul Forge units from your army have a 5+ invulnerable save.",
-    "full": "The cybersorcerous power of Vashtorr’s boons is much in evidence amongst his worshippers. Nowhere is this more true than in the war engines that his cults take into battle, and which exhibit a nightmarish variety of biomechanoid mutations and daemon‑spawned powers. Whether wreathed in balefire, shimmeringly insubstantial or constantly regrowing battle‑damaged hull plating, these accursed war machines are incredibly hard to destroy. Heretic Astartes Vehicle units from your army gain the Daemon keyword. Heretic Astartes Vehicle, Lord Discordant and Vashtorr the Arkifane units from your army gain the Soul Forge keyword. Soul Forge units from your army have a 5+ invulnerable save.",
-    "glossary": "glossary-chaos-space-marines-detachment-rule-soul-forge-boons",
-    "rule": "detachment-cult-of-the-arkifane"
-  },
-  "chaos-space-marines-enhancement-wyredjinn": {
-    "id": "chaos-space-marines-enhancement-wyredjinn",
-    "title": "Wyredjinn",
-    "summary": "A repulsive daemon imp of Vashtorr, this incorporeal data‑familiar flits through vox‑channels and sensor suites, stealing data for its master. Heretic Astartes model only (excluding Damned models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.",
-    "full": "A repulsive daemon imp of Vashtorr, this incorporeal data‑familiar flits through vox‑channels and sensor suites, stealing data for its master. Heretic Astartes model only (excluding Damned models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.",
-    "glossary": "glossary-chaos-space-marines-enhancement-wyredjinn",
-    "rule": "detachment-cult-of-the-arkifane"
-  },
-  "chaos-space-marines-enhancement-cybinfernal-font": {
-    "id": "chaos-space-marines-enhancement-cybinfernal-font",
-    "title": "Cybinfernal Font",
-    "summary": "This warp‑forged augmetic channels daemonic energies through its bearer and into those they lead, spawning biomechanoid mutation and supernatural resilience. Heretic Astartes model only (excluding Damned models). Models in the bearer’s unit have the Soul Forge keyword.",
-    "full": "This warp‑forged augmetic channels daemonic energies through its bearer and into those they lead, spawning biomechanoid mutation and supernatural resilience. Heretic Astartes model only (excluding Damned models). Models in the bearer’s unit have the Soul Forge keyword.",
-    "glossary": "glossary-chaos-space-marines-enhancement-cybinfernal-font",
-    "rule": "detachment-cult-of-the-arkifane"
-  },
-  "chaos-space-marines-enhancement-mark-of-the-soul-forges": {
-    "id": "chaos-space-marines-enhancement-mark-of-the-soul-forges",
-    "title": "Mark of the Soul Forges",
-    "summary": "This burning rune attests to the – perhaps unwise – pact its bearer has struck with the Arkifane in return for enhanced martial might and lethality. Heretic Astartes model only (excluding Damned models). Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
-    "full": "This burning rune attests to the – perhaps unwise – pact its bearer has struck with the Arkifane in return for enhanced martial might and lethality. Heretic Astartes model only (excluding Damned models). Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
-    "glossary": "glossary-chaos-space-marines-enhancement-mark-of-the-soul-forges",
-    "rule": "detachment-cult-of-the-arkifane"
-  },
-  "chaos-space-marines-enhancement-crown-of-worms": {
-    "id": "chaos-space-marines-enhancement-crown-of-worms",
-    "title": "Crown of Worms",
-    "summary": "This parasitic helm bestows the ability to conjure daemonic nematodes akin to those manifested by the Arkifane himself. These burrowing entities can reknit faltering war machines or gnaw upon such vehicles’ sanity at the wearer’s command. Warpsmith model only. Add 3” to the range of the bearer’s Warpsmith, Master of Mechanisms and Enrage Machine Spirits abilities.",
-    "full": "This parasitic helm bestows the ability to conjure daemonic nematodes akin to those manifested by the Arkifane himself. These burrowing entities can reknit faltering war machines or gnaw upon such vehicles’ sanity at the wearer’s command. Warpsmith model only. Add 3” to the range of the bearer’s Warpsmith, Master of Mechanisms and Enrage Machine Spirits abilities.",
-    "glossary": "glossary-chaos-space-marines-enhancement-crown-of-worms",
-    "rule": "detachment-cult-of-the-arkifane"
-  },
-  "chaos-space-marines-stratagem-touch-of-the-arkifane": {
-    "id": "chaos-space-marines-stratagem-touch-of-the-arkifane",
-    "title": "Touch of the Arkifane",
-    "summary": "Any phase. One Heretic Astartes unit from your army (excluding Damned units) that has not been selected to shoot or fight this phase. Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.",
-    "full": "Any phase. One Heretic Astartes unit from your army (excluding Damned units) that has not been selected to shoot or fight this phase. Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.",
-    "glossary": "glossary-chaos-space-marines-stratagem-touch-of-the-arkifane",
-    "rule": "detachment-cult-of-the-arkifane"
-  },
-  "chaos-space-marines-stratagem-biomechanoid-regeneration": {
-    "id": "chaos-space-marines-stratagem-biomechanoid-regeneration",
-    "title": "Biomechanoid Regeneration",
-    "summary": "Your Command phase. One Heretic Astartes unit from your army (excluding Damned units). One model in your unit regains up to D3 lost wounds. If your unit has the Soul Forge keyword, one model in your unit regains up to 3 lost wounds instead.",
-    "full": "Your Command phase. One Heretic Astartes unit from your army (excluding Damned units). One model in your unit regains up to D3 lost wounds. If your unit has the Soul Forge keyword, one model in your unit regains up to 3 lost wounds instead.",
-    "glossary": "glossary-chaos-space-marines-stratagem-biomechanoid-regeneration",
-    "rule": "detachment-cult-of-the-arkifane"
-  },
-  "chaos-space-marines-stratagem-balefire-boon": {
-    "id": "chaos-space-marines-stratagem-balefire-boon",
-    "title": "Balefire Boon",
-    "summary": "Your Shooting phase or the Fight phase. One Soul Forge unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.",
-    "full": "Your Shooting phase or the Fight phase. One Soul Forge unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.",
-    "glossary": "glossary-chaos-space-marines-stratagem-balefire-boon",
-    "rule": "detachment-cult-of-the-arkifane"
-  },
-  "chaos-space-marines-stratagem-forge-fire-surge": {
-    "id": "chaos-space-marines-stratagem-forge-fire-surge",
-    "title": "Forge-fire Surge",
-    "summary": "Your Movement phase, just after a Heretic Astartes unit from your army Advances. That Heretic Astartes unit. Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the Soul Forge keyword, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced instead.",
-    "full": "Your Movement phase, just after a Heretic Astartes unit from your army Advances. That Heretic Astartes unit. Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the Soul Forge keyword, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced instead.",
-    "glossary": "glossary-chaos-space-marines-stratagem-forge-fire-surge",
-    "rule": "detachment-cult-of-the-arkifane"
-  },
-  "chaos-space-marines-stratagem-soul-tally-offering": {
-    "id": "chaos-space-marines-stratagem-soul-tally-offering",
-    "title": "Soul-tally Offering",
-    "summary": "Your Shooting phase or the Fight phase. One Soul Forge unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a Character, Monster or Vehicle unit, you can re-roll the Wound roll.",
-    "full": "Your Shooting phase or the Fight phase. One Soul Forge unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a Character, Monster or Vehicle unit, you can re-roll the Wound roll.",
-    "glossary": "glossary-chaos-space-marines-stratagem-soul-tally-offering",
-    "rule": "detachment-cult-of-the-arkifane"
-  },
-  "chaos-space-marines-stratagem-unholy-fortitude": {
-    "id": "chaos-space-marines-stratagem-unholy-fortitude",
-    "title": "Unholy Fortitude",
-    "summary": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Soul Forge unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, add 1 to the Toughenss characteristic of models in your unit.",
-    "full": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Soul Forge unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, add 1 to the Toughenss characteristic of models in your unit.",
-    "glossary": "glossary-chaos-space-marines-stratagem-unholy-fortitude",
-    "rule": "detachment-cult-of-the-arkifane"
+  "chaos-space-marines-stratagem-mortal-thralls": {
+    "id": "chaos-space-marines-stratagem-mortal-thralls",
+    "title": "Mortal Thralls",
+    "summary": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One HERETIC ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks, and one friendly DAMNED unit within 3\" of your unit and visible to both your unit and the attacking unit. Until the end of the phase, while your DAMNED unit is on the battlefield, each time your opponent would make a Wound roll for an attack that targets your HERETIC ASTARTES unit, if your DAMNED unit is visible to the attacking model and is an eligible target for that attack, no roll is made; instead, your DAMNED unit suffers a number of mortal wounds equal to the Damage characteristic of that attack.",
+    "full": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One HERETIC ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks, and one friendly DAMNED unit within 3\" of your unit and visible to both your unit and the attacking unit. Until the end of the phase, while your DAMNED unit is on the battlefield, each time your opponent would make a Wound roll for an attack that targets your HERETIC ASTARTES unit, if your DAMNED unit is visible to the attacking model and is an eligible target for that attack, no roll is made; instead, your DAMNED unit suffers a number of mortal wounds equal to the Damage characteristic of that attack.",
+    "glossary": "glossary-chaos-space-marines-stratagem-mortal-thralls",
+    "rule": "detachment-chaos-cult"
   },
   "chaos-space-marines-detachment-rule-experimental-augmentations": {
     "id": "chaos-space-marines-detachment-rule-experimental-augmentations",
@@ -407,357 +223,93 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-stratagem-autostimulants",
     "rule": "detachment-creations-of-bile"
   },
-  "chaos-space-marines-detachment-rule-terror-made-manifest": {
-    "id": "chaos-space-marines-detachment-rule-terror-made-manifest",
-    "title": "Terror Made Manifest",
-    "summary": "With vox‑augmented screams or bedecked in grisly trophies, these nightmarish raiders possess a terrifying presence. Even the most stoic of opponents can be shaken by their sadistic cruelty. Once fear has its hooks into them, they become easier prey. In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more Heretic Astartes units from your army, that enemy unit must take a Battle‑shock test, subtracting 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle‑shock tests in the same phase. Each time a Heretic astartes model from your army makes an attack that targets a unit that is Below Half‑strength, add 1 to the Hit roll. Each time an attack targets a Heretic astartes unit from your army, if the attacking model is Battle‐shocked, subtract 1 from the Hit roll. Each time a Heretic astartes model from your army makes an attack that targets a Battle‐shocked unit, add 1 to the Wound roll.",
-    "full": "With vox‑augmented screams or bedecked in grisly trophies, these nightmarish raiders possess a terrifying presence. Even the most stoic of opponents can be shaken by their sadistic cruelty. Once fear has its hooks into them, they become easier prey. In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more Heretic Astartes units from your army, that enemy unit must take a Battle‑shock test, subtracting 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle‑shock tests in the same phase. Each time a Heretic astartes model from your army makes an attack that targets a unit that is Below Half‑strength, add 1 to the Hit roll. Each time an attack targets a Heretic astartes unit from your army, if the attacking model is Battle‐shocked, subtract 1 from the Hit roll. Each time a Heretic astartes model from your army makes an attack that targets a Battle‐shocked unit, add 1 to the Wound roll.",
-    "glossary": "glossary-chaos-space-marines-detachment-rule-terror-made-manifest",
-    "rule": "detachment-nightmare-hunt"
+  "chaos-space-marines-detachment-rule-soul-forge-boons": {
+    "id": "chaos-space-marines-detachment-rule-soul-forge-boons",
+    "title": "Soul Forge Boons",
+    "summary": "The cybersorcerous power of Vashtorr’s boons is much in evidence amongst his worshippers. Nowhere is this more true than in the war engines that his cults take into battle, and which exhibit a nightmarish variety of biomechanoid mutations and daemon‑spawned powers. Whether wreathed in balefire, shimmeringly insubstantial or constantly regrowing battle‑damaged hull plating, these accursed war machines are incredibly hard to destroy. Heretic Astartes Vehicle units from your army gain the Daemon keyword. Heretic Astartes Vehicle, Lord Discordant and Vashtorr the Arkifane units from your army gain the Soul Forge keyword. Soul Forge units from your army have a 5+ invulnerable save.",
+    "full": "The cybersorcerous power of Vashtorr’s boons is much in evidence amongst his worshippers. Nowhere is this more true than in the war engines that his cults take into battle, and which exhibit a nightmarish variety of biomechanoid mutations and daemon‑spawned powers. Whether wreathed in balefire, shimmeringly insubstantial or constantly regrowing battle‑damaged hull plating, these accursed war machines are incredibly hard to destroy. Heretic Astartes Vehicle units from your army gain the Daemon keyword. Heretic Astartes Vehicle, Lord Discordant and Vashtorr the Arkifane units from your army gain the Soul Forge keyword. Soul Forge units from your army have a 5+ invulnerable save.",
+    "glossary": "glossary-chaos-space-marines-detachment-rule-soul-forge-boons",
+    "rule": "detachment-cult-of-the-arkifane"
   },
-  "chaos-space-marines-enhancement-greyveil-hex": {
-    "id": "chaos-space-marines-enhancement-greyveil-hex",
-    "title": "Greyveil Hex",
-    "summary": "Incised into this warrior’s battleplate is a runic curse which dims his form in the minds of his prey, until all they perceive is a mass of talons and shadow. Chaos Lord model only. Models in the bearer’s unit have the Stealth ability. While the bearer’s unit is within range of one or more objective markers you control, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
-    "full": "Incised into this warrior’s battleplate is a runic curse which dims his form in the minds of his prey, until all they perceive is a mass of talons and shadow. Chaos Lord model only. Models in the bearer’s unit have the Stealth ability. While the bearer’s unit is within range of one or more objective markers you control, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
-    "glossary": "glossary-chaos-space-marines-enhancement-greyveil-hex",
-    "rule": "detachment-nightmare-hunt"
+  "chaos-space-marines-enhancement-wyredjinn": {
+    "id": "chaos-space-marines-enhancement-wyredjinn",
+    "title": "Wyredjinn",
+    "summary": "A repulsive daemon imp of Vashtorr, this incorporeal data‑familiar flits through vox‑channels and sensor suites, stealing data for its master. Heretic Astartes model only (excluding Damned models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.",
+    "full": "A repulsive daemon imp of Vashtorr, this incorporeal data‑familiar flits through vox‑channels and sensor suites, stealing data for its master. Heretic Astartes model only (excluding Damned models). At the start of your Command phase, if the bearer is on the battlefield, roll one D6, adding 1 to the result if the bearer is within range of an objective marker you control: on a 4+, you gain 1CP.",
+    "glossary": "glossary-chaos-space-marines-enhancement-wyredjinn",
+    "rule": "detachment-cult-of-the-arkifane"
   },
-  "chaos-space-marines-enhancement-warp-fuelled-thrusters": {
-    "id": "chaos-space-marines-enhancement-warp-fuelled-thrusters",
-    "title": "Warp-fuelled Thrusters",
-    "summary": "Bathed in warp energies, this Lord’s jump pack tears rifts in reality, allowing them to withdraw at a moment’s notice. Chaos Lord Jump Pack model only. At the end of your opponent’s Fight phase, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
-    "full": "Bathed in warp energies, this Lord’s jump pack tears rifts in reality, allowing them to withdraw at a moment’s notice. Chaos Lord Jump Pack model only. At the end of your opponent’s Fight phase, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
-    "glossary": "glossary-chaos-space-marines-enhancement-warp-fuelled-thrusters",
-    "rule": "detachment-nightmare-hunt"
+  "chaos-space-marines-enhancement-cybinfernal-font": {
+    "id": "chaos-space-marines-enhancement-cybinfernal-font",
+    "title": "Cybinfernal Font",
+    "summary": "This warp‑forged augmetic channels daemonic energies through its bearer and into those they lead, spawning biomechanoid mutation and supernatural resilience. Heretic Astartes model only (excluding Damned models). Models in the bearer’s unit have the Soul Forge keyword.",
+    "full": "This warp‑forged augmetic channels daemonic energies through its bearer and into those they lead, spawning biomechanoid mutation and supernatural resilience. Heretic Astartes model only (excluding Damned models). Models in the bearer’s unit have the Soul Forge keyword.",
+    "glossary": "glossary-chaos-space-marines-enhancement-cybinfernal-font",
+    "rule": "detachment-cult-of-the-arkifane"
   },
-  "chaos-space-marines-enhancement-terrorglut-parasite": {
-    "id": "chaos-space-marines-enhancement-terrorglut-parasite",
-    "title": "Terrorglut Parasite",
-    "summary": "A daemonic pact sealed in fear and dread allowed this entity to squirm into reality. Coiled tightly and invisibly about a warrior’s soul, the being wears away at the sanity of those he faces and feasts on their terror. Heretic Astartes model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle‑shock test, subtracting 1 from the result.",
-    "full": "A daemonic pact sealed in fear and dread allowed this entity to squirm into reality. Coiled tightly and invisibly about a warrior’s soul, the being wears away at the sanity of those he faces and feasts on their terror. Heretic Astartes model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle‑shock test, subtracting 1 from the result.",
-    "glossary": "glossary-chaos-space-marines-enhancement-terrorglut-parasite",
-    "rule": "detachment-nightmare-hunt"
+  "chaos-space-marines-enhancement-mark-of-the-soul-forges": {
+    "id": "chaos-space-marines-enhancement-mark-of-the-soul-forges",
+    "title": "Mark of the Soul Forges",
+    "summary": "This burning rune attests to the – perhaps unwise – pact its bearer has struck with the Arkifane in return for enhanced martial might and lethality. Heretic Astartes model only (excluding Damned models). Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
+    "full": "This burning rune attests to the – perhaps unwise – pact its bearer has struck with the Arkifane in return for enhanced martial might and lethality. Heretic Astartes model only (excluding Damned models). Each time the bearer makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
+    "glossary": "glossary-chaos-space-marines-enhancement-mark-of-the-soul-forges",
+    "rule": "detachment-cult-of-the-arkifane"
   },
-  "chaos-space-marines-enhancement-sorrowscent-vulture": {
-    "id": "chaos-space-marines-enhancement-sorrowscent-vulture",
-    "title": "Sorrowscent Vulture",
-    "summary": "This champion demands to be in the vanguard of the hunt, their eagerness to inflict suffering manifesting in a daring lunge towards enemy lines. Chaos Lord Jump Pack model only. Models in the bearer’s unit have the Scouts 6\" ability.",
-    "full": "This champion demands to be in the vanguard of the hunt, their eagerness to inflict suffering manifesting in a daring lunge towards enemy lines. Chaos Lord Jump Pack model only. Models in the bearer’s unit have the Scouts 6\" ability.",
-    "glossary": "glossary-chaos-space-marines-enhancement-sorrowscent-vulture",
-    "rule": "detachment-nightmare-hunt"
+  "chaos-space-marines-enhancement-crown-of-worms": {
+    "id": "chaos-space-marines-enhancement-crown-of-worms",
+    "title": "Crown of Worms",
+    "summary": "This parasitic helm bestows the ability to conjure daemonic nematodes akin to those manifested by the Arkifane himself. These burrowing entities can reknit faltering war machines or gnaw upon such vehicles’ sanity at the wearer’s command. Warpsmith model only. Add 3” to the range of the bearer’s Warpsmith, Master of Mechanisms and Enrage Machine Spirits abilities.",
+    "full": "This parasitic helm bestows the ability to conjure daemonic nematodes akin to those manifested by the Arkifane himself. These burrowing entities can reknit faltering war machines or gnaw upon such vehicles’ sanity at the wearer’s command. Warpsmith model only. Add 3” to the range of the bearer’s Warpsmith, Master of Mechanisms and Enrage Machine Spirits abilities.",
+    "glossary": "glossary-chaos-space-marines-enhancement-crown-of-worms",
+    "rule": "detachment-cult-of-the-arkifane"
   },
-  "chaos-space-marines-stratagem-talons-sunk-deep": {
-    "id": "chaos-space-marines-stratagem-talons-sunk-deep",
-    "title": "Talons Sunk Deep",
-    "summary": "Your Shooting phase or the Fight phase. One Heretic Astartes Infantry unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Battle-shocked and/or Below Half-strength, improve the Armour Penetration characteristic of that attack by 1.",
-    "full": "Your Shooting phase or the Fight phase. One Heretic Astartes Infantry unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Battle-shocked and/or Below Half-strength, improve the Armour Penetration characteristic of that attack by 1.",
-    "glossary": "glossary-chaos-space-marines-stratagem-talons-sunk-deep",
-    "rule": "detachment-nightmare-hunt"
+  "chaos-space-marines-stratagem-touch-of-the-arkifane": {
+    "id": "chaos-space-marines-stratagem-touch-of-the-arkifane",
+    "title": "Touch of the Arkifane",
+    "summary": "Any phase. One Heretic Astartes unit from your army (excluding Damned units) that has not been selected to shoot or fight this phase. Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.",
+    "full": "Any phase. One Heretic Astartes unit from your army (excluding Damned units) that has not been selected to shoot or fight this phase. Until the end of the phase, if your unit is selected to make a Dark Pact, you can select both abilities for that unit’s weapons to gain.",
+    "glossary": "glossary-chaos-space-marines-stratagem-touch-of-the-arkifane",
+    "rule": "detachment-cult-of-the-arkifane"
   },
-  "chaos-space-marines-stratagem-malicious-surge": {
-    "id": "chaos-space-marines-stratagem-malicious-surge",
-    "title": "Malicious Surge",
-    "summary": "Your Charge phase. One Heretic Astartes Infantry unit from your army. Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.",
-    "full": "Your Charge phase. One Heretic Astartes Infantry unit from your army. Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.",
-    "glossary": "glossary-chaos-space-marines-stratagem-malicious-surge",
-    "rule": "detachment-nightmare-hunt"
+  "chaos-space-marines-stratagem-biomechanoid-regeneration": {
+    "id": "chaos-space-marines-stratagem-biomechanoid-regeneration",
+    "title": "Biomechanoid Regeneration",
+    "summary": "Your Command phase. One Heretic Astartes unit from your army (excluding Damned units). One model in your unit regains up to D3 lost wounds. If your unit has the Soul Forge keyword, one model in your unit regains up to 3 lost wounds instead.",
+    "full": "Your Command phase. One Heretic Astartes unit from your army (excluding Damned units). One model in your unit regains up to D3 lost wounds. If your unit has the Soul Forge keyword, one model in your unit regains up to 3 lost wounds instead.",
+    "glossary": "glossary-chaos-space-marines-stratagem-biomechanoid-regeneration",
+    "rule": "detachment-cult-of-the-arkifane"
   },
-  "chaos-space-marines-stratagem-prey-on-the-weak": {
-    "id": "chaos-space-marines-stratagem-prey-on-the-weak",
-    "title": "Prey on the Weak",
-    "summary": "Your Shooting phase or the Fight phase. One Heretic Astartes Infantry unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Battle-shocked and/or Below Half-strength, you can re-roll the Hit roll.",
-    "full": "Your Shooting phase or the Fight phase. One Heretic Astartes Infantry unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Battle-shocked and/or Below Half-strength, you can re-roll the Hit roll.",
-    "glossary": "glossary-chaos-space-marines-stratagem-prey-on-the-weak",
-    "rule": "detachment-nightmare-hunt"
+  "chaos-space-marines-stratagem-balefire-boon": {
+    "id": "chaos-space-marines-stratagem-balefire-boon",
+    "title": "Balefire Boon",
+    "summary": "Your Shooting phase or the Fight phase. One Soul Forge unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.",
+    "full": "Your Shooting phase or the Fight phase. One Soul Forge unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.",
+    "glossary": "glossary-chaos-space-marines-stratagem-balefire-boon",
+    "rule": "detachment-cult-of-the-arkifane"
   },
-  "chaos-space-marines-stratagem-relentless-terror": {
-    "id": "chaos-space-marines-stratagem-relentless-terror",
-    "title": "Relentless Terror",
-    "summary": "Your Movement phase, just after a Heretic Astartes Infantry unit from your army Falls Back. That Heretic Astartes unit. Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
-    "full": "Your Movement phase, just after a Heretic Astartes Infantry unit from your army Falls Back. That Heretic Astartes unit. Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
-    "glossary": "glossary-chaos-space-marines-stratagem-relentless-terror",
-    "rule": "detachment-nightmare-hunt"
+  "chaos-space-marines-stratagem-forge-fire-surge": {
+    "id": "chaos-space-marines-stratagem-forge-fire-surge",
+    "title": "Forge-fire Surge",
+    "summary": "Your Movement phase, just after a Heretic Astartes unit from your army Advances. That Heretic Astartes unit. Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the Soul Forge keyword, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced instead.",
+    "full": "Your Movement phase, just after a Heretic Astartes unit from your army Advances. That Heretic Astartes unit. Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If your unit has the Soul Forge keyword, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced instead.",
+    "glossary": "glossary-chaos-space-marines-stratagem-forge-fire-surge",
+    "rule": "detachment-cult-of-the-arkifane"
   },
-  "chaos-space-marines-stratagem-sadistic-display": {
-    "id": "chaos-space-marines-stratagem-sadistic-display",
-    "title": "Sadistic Display",
-    "summary": "Fight phase, just after a Heretic Astartes unit from your army destroys an enemy unit. That Heretic Astartes unit. Each enemy unit within 6\" of and visible to your unit (excluding Monster and Vehicle units) must take a Battle-shock test.",
-    "full": "Fight phase, just after a Heretic Astartes unit from your army destroys an enemy unit. That Heretic Astartes unit. Each enemy unit within 6\" of and visible to your unit (excluding Monster and Vehicle units) must take a Battle-shock test.",
-    "glossary": "glossary-chaos-space-marines-stratagem-sadistic-display",
-    "rule": "detachment-nightmare-hunt"
+  "chaos-space-marines-stratagem-soul-tally-offering": {
+    "id": "chaos-space-marines-stratagem-soul-tally-offering",
+    "title": "Soul-tally Offering",
+    "summary": "Your Shooting phase or the Fight phase. One Soul Forge unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a Character, Monster or Vehicle unit, you can re-roll the Wound roll.",
+    "full": "Your Shooting phase or the Fight phase. One Soul Forge unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a Character, Monster or Vehicle unit, you can re-roll the Wound roll.",
+    "glossary": "glossary-chaos-space-marines-stratagem-soul-tally-offering",
+    "rule": "detachment-cult-of-the-arkifane"
   },
-  "chaos-space-marines-stratagem-horrific-incursion": {
-    "id": "chaos-space-marines-stratagem-horrific-incursion",
-    "title": "Horrific Incursion",
-    "summary": "Your Movement phase. One Heretic Astartes unit from your army that arrived from Reserves this turn. Select one enemy unit (excluding Monster and Vehicle units) within 12\" of and visible to your unit: that unit must take a Battle-shock test, subtracting 1 from the result.",
-    "full": "Your Movement phase. One Heretic Astartes unit from your army that arrived from Reserves this turn. Select one enemy unit (excluding Monster and Vehicle units) within 12\" of and visible to your unit: that unit must take a Battle-shock test, subtracting 1 from the result.",
-    "glossary": "glossary-chaos-space-marines-stratagem-horrific-incursion",
-    "rule": "detachment-nightmare-hunt"
-  },
-  "chaos-space-marines-detachment-rule-tyrannical-motivation": {
-    "id": "chaos-space-marines-detachment-rule-tyrannical-motivation",
-    "title": "Tyrannical Motivation",
-    "summary": "Murderers and renegades all, the Red Corsairs strive to meet their master’s standards, fighting hardest of all when his gaze is upon them. In your Command phase, select one of the following abilities. Until the start of your next Command phase, each Heretic Astartes Infantry unit from your army has that ability. At the start of each phase, if such a unit is visible to a friendly Huron Blackheart model, until the end of the phase, it has both of the following abilities. Huron’s Elite Hand‑picked by Huron Blackheart himself, these warriors strive to retain his favour with feats of arms. Each time a model in this unit makes an attack, add 1 to the Hit roll. Mobile Marauders The Red Corsairs utilise a highly mobile form of warfare and, under Huron’s watch, are relentless in their aggression. This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Designer’s Note: If a unit is gaining eligibility to shoot and declare a charge in a turn in which it Fell Back as a result of being visible to Huron Blackheart, but after making a Fall Back move it is no longer visible to Huron Blackheart, that unit will not be eligible to shoot in your Shooting phase or to declare a charge in your Charge phase unless it is visible again at the start of the respective phase.",
-    "full": "Murderers and renegades all, the Red Corsairs strive to meet their master’s standards, fighting hardest of all when his gaze is upon them. In your Command phase, select one of the following abilities. Until the start of your next Command phase, each Heretic Astartes Infantry unit from your army has that ability. At the start of each phase, if such a unit is visible to a friendly Huron Blackheart model, until the end of the phase, it has both of the following abilities. Huron’s Elite Hand‑picked by Huron Blackheart himself, these warriors strive to retain his favour with feats of arms. Each time a model in this unit makes an attack, add 1 to the Hit roll. Mobile Marauders The Red Corsairs utilise a highly mobile form of warfare and, under Huron’s watch, are relentless in their aggression. This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Designer’s Note: If a unit is gaining eligibility to shoot and declare a charge in a turn in which it Fell Back as a result of being visible to Huron Blackheart, but after making a Fall Back move it is no longer visible to Huron Blackheart, that unit will not be eligible to shoot in your Shooting phase or to declare a charge in your Charge phase unless it is visible again at the start of the respective phase.",
-    "glossary": "glossary-chaos-space-marines-detachment-rule-tyrannical-motivation",
-    "rule": "detachment-huron-s-marauders"
-  },
-  "chaos-space-marines-enhancement-voice-of-the-tyrant": {
-    "id": "chaos-space-marines-enhancement-voice-of-the-tyrant",
-    "title": "Voice of the Tyrant",
-    "summary": "This champion is a valued commander, and speaks with the authority of Huron himself. Heretic Astartes model only (excluding Damned models). The bearer’s unit has both abilities from the Tyrannical Motivation Detachment rule.",
-    "full": "This champion is a valued commander, and speaks with the authority of Huron himself. Heretic Astartes model only (excluding Damned models). The bearer’s unit has both abilities from the Tyrannical Motivation Detachment rule.",
-    "glossary": "glossary-chaos-space-marines-enhancement-voice-of-the-tyrant",
-    "rule": "detachment-huron-s-marauders"
-  },
-  "chaos-space-marines-enhancement-raid-leader": {
-    "id": "chaos-space-marines-enhancement-raid-leader",
-    "title": "Raid Leader",
-    "summary": "Rapid mechanised assaults are a preferred tactic of the Red Corsairs, and this champion excels at them. Heretic Astartes model only (excluding Damned models). Each time the bearer’s unit is set up after disembarking from a Transport that has made a Normal move this turn, the bearer’s unit is still eligible to declare a charge.",
-    "full": "Rapid mechanised assaults are a preferred tactic of the Red Corsairs, and this champion excels at them. Heretic Astartes model only (excluding Damned models). Each time the bearer’s unit is set up after disembarking from a Transport that has made a Normal move this turn, the bearer’s unit is still eligible to declare a charge.",
-    "glossary": "glossary-chaos-space-marines-enhancement-raid-leader",
-    "rule": "detachment-huron-s-marauders"
-  },
-  "chaos-space-marines-enhancement-dread-reputation": {
-    "id": "chaos-space-marines-enhancement-dread-reputation",
-    "title": "Dread Reputation",
-    "summary": "Such is this warrior’s infamy that their mere presence on the field of battle can overwhelm the foe with tyrannical intimidation. Heretic Astartes model only (excluding Damned models). Each time the bearer’s unit is set up on the battlefield, each enemy unit within 6” of the bearer’s unit (or within 12” if the bearer’s unit was set up using the Deep Strike ability) takes a Battle‑shock test.",
-    "full": "Such is this warrior’s infamy that their mere presence on the field of battle can overwhelm the foe with tyrannical intimidation. Heretic Astartes model only (excluding Damned models). Each time the bearer’s unit is set up on the battlefield, each enemy unit within 6” of the bearer’s unit (or within 12” if the bearer’s unit was set up using the Deep Strike ability) takes a Battle‑shock test.",
-    "glossary": "glossary-chaos-space-marines-enhancement-dread-reputation",
-    "rule": "detachment-huron-s-marauders"
-  },
-  "chaos-space-marines-enhancement-eager-for-bloodshed": {
-    "id": "chaos-space-marines-enhancement-eager-for-bloodshed",
-    "title": "Eager for Bloodshed",
-    "summary": "Desperate to lock weapons with the foe, this warrior is always at the fore, fighting in the vanguard of Huron Blackheart’s forces. Heretic Astartes model only. The bearer has the Infiltrators ability.",
-    "full": "Desperate to lock weapons with the foe, this warrior is always at the fore, fighting in the vanguard of Huron Blackheart’s forces. Heretic Astartes model only. The bearer has the Infiltrators ability.",
-    "glossary": "glossary-chaos-space-marines-enhancement-eager-for-bloodshed",
-    "rule": "detachment-huron-s-marauders"
-  },
-  "chaos-space-marines-stratagem-hardened-killers": {
-    "id": "chaos-space-marines-stratagem-hardened-killers",
-    "title": "Hardened Killers",
-    "summary": "Your Command phase. One Damned unit from your army. Select one of the following effects: • Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. • Improve the Attacks characteristic of Rapid Fire weapons equipped by models in this unit by 1. • Improve the Save characteristic of models in this unit by 1. Until the start of your next turn, your unit has the benefit of that effect.",
-    "full": "Your Command phase. One Damned unit from your army. Select one of the following effects: • Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. • Improve the Attacks characteristic of Rapid Fire weapons equipped by models in this unit by 1. • Improve the Save characteristic of models in this unit by 1. Until the start of your next turn, your unit has the benefit of that effect.",
-    "glossary": "glossary-chaos-space-marines-stratagem-hardened-killers",
-    "rule": "detachment-huron-s-marauders"
-  },
-  "chaos-space-marines-stratagem-reavers-flurry": {
-    "id": "chaos-space-marines-stratagem-reavers-flurry",
-    "title": "Reavers’ Flurry",
-    "summary": "Your Fight phase. One Heretic Astartes unit from your army that made a Charge move this turn. Until the end of the phase, add 1 to the Attacks characteristics of melee weapons equipped by models in your unit.",
-    "full": "Your Fight phase. One Heretic Astartes unit from your army that made a Charge move this turn. Until the end of the phase, add 1 to the Attacks characteristics of melee weapons equipped by models in your unit.",
-    "glossary": "glossary-chaos-space-marines-stratagem-reavers-flurry",
-    "rule": "detachment-huron-s-marauders"
-  },
-  "chaos-space-marines-stratagem-at-the-tyrants-command": {
-    "id": "chaos-space-marines-stratagem-at-the-tyrants-command",
-    "title": "At the Tyrant’s Command",
-    "summary": "Your Movement phase. One Heretic Astartes unit (excluding Monsters and Vehicles) from your army. Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
-    "full": "Your Movement phase. One Heretic Astartes unit (excluding Monsters and Vehicles) from your army. Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
-    "glossary": "glossary-chaos-space-marines-stratagem-at-the-tyrants-command",
-    "rule": "detachment-huron-s-marauders"
-  },
-  "chaos-space-marines-stratagem-to-the-favoured-the-spoils": {
-    "id": "chaos-space-marines-stratagem-to-the-favoured-the-spoils",
-    "title": "To the Favoured the Spoils",
-    "summary": "Your opponent’s Shooting phase, just after an enemy unit has shot. One Heretic Astartes unit from your army that lost one or more wounds as a result of those attacks. Your unit can make a surge move of up to D6\".",
-    "full": "Your opponent’s Shooting phase, just after an enemy unit has shot. One Heretic Astartes unit from your army that lost one or more wounds as a result of those attacks. Your unit can make a surge move of up to D6\".",
-    "glossary": "glossary-chaos-space-marines-stratagem-to-the-favoured-the-spoils",
-    "rule": "detachment-huron-s-marauders"
-  },
-  "chaos-space-marines-stratagem-seize-the-prize": {
-    "id": "chaos-space-marines-stratagem-seize-the-prize",
-    "title": "Seize the Prize",
-    "summary": "Your Movement phase, just after a Heretic Astartes unit (excluding Monsters and Vehicles) from your army has been selected to Advance. That Heretic Astartes unit. Do not make an Advance roll for your unit. Instead, until the end of the phase add 6\" to the Move characteristic of models in your unit.",
-    "full": "Your Movement phase, just after a Heretic Astartes unit (excluding Monsters and Vehicles) from your army has been selected to Advance. That Heretic Astartes unit. Do not make an Advance roll for your unit. Instead, until the end of the phase add 6\" to the Move characteristic of models in your unit.",
-    "glossary": "glossary-chaos-space-marines-stratagem-seize-the-prize",
-    "rule": "detachment-huron-s-marauders"
-  },
-  "chaos-space-marines-stratagem-encircling-surge": {
-    "id": "chaos-space-marines-stratagem-encircling-surge",
-    "title": "Encircling Surge",
-    "summary": "End of your opponent’s Fight phase. One Heretic Astartes unit (excluding Monsters and Vehicles) from your army that is within 6\" of one or more battlefield edges and not within Engagement Range of one or more enemy units. Remove your unit from the battlefield and place it into Strategic Reserves.",
-    "full": "End of your opponent’s Fight phase. One Heretic Astartes unit (excluding Monsters and Vehicles) from your army that is within 6\" of one or more battlefield edges and not within Engagement Range of one or more enemy units. Remove your unit from the battlefield and place it into Strategic Reserves.",
-    "glossary": "glossary-chaos-space-marines-stratagem-encircling-surge",
-    "rule": "detachment-huron-s-marauders"
-  },
-  "chaos-space-marines-detachment-rule-slaves-to-none": {
-    "id": "chaos-space-marines-detachment-rule-slaves-to-none",
-    "title": "Slaves to None",
-    "summary": "Many Renegades eschew the gifts of Dark Gods, relying only upon their own prowess. Heretic Astartes models from your army lose the Dark Pacts ability. Ranged weapons equipped by Heretic Astartes models from your army have the [ASSAULT] ability. When mustering your army, you cannot use the Cults of the Dark Gods rule. VENDETTA Bitter minds hold on to lasting grudges. At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Vendetta target. Each time a Heretic Astartes model from your army (excluding Damned models) makes an attack that targets your Vendetta target, you can re‑roll the Hit roll. TWISTED DOCTRINE These Renegades ally their knowledge of the Codex Astartes with their own unrestrained savagery to horrific effect. In your Movement phase, each time you set up or select a Heretic Astartes unit (excluding Battle‑shocked units) from your army to move, it can choose to Default to Doctrine. If it does, it must first take a Battle‑shock test. Then, select one of the following: ■ Until the end of the turn, this unit is eligible to shoot and declare a charge in a turn in which it Fell Back. ■ Until the end of the turn, this unit is eligible to declare a charge in a turn in which it Advanced.",
-    "full": "Many Renegades eschew the gifts of Dark Gods, relying only upon their own prowess. Heretic Astartes models from your army lose the Dark Pacts ability. Ranged weapons equipped by Heretic Astartes models from your army have the [ASSAULT] ability. When mustering your army, you cannot use the Cults of the Dark Gods rule. VENDETTA Bitter minds hold on to lasting grudges. At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Vendetta target. Each time a Heretic Astartes model from your army (excluding Damned models) makes an attack that targets your Vendetta target, you can re‑roll the Hit roll. TWISTED DOCTRINE These Renegades ally their knowledge of the Codex Astartes with their own unrestrained savagery to horrific effect. In your Movement phase, each time you set up or select a Heretic Astartes unit (excluding Battle‑shocked units) from your army to move, it can choose to Default to Doctrine. If it does, it must first take a Battle‑shock test. Then, select one of the following: ■ Until the end of the turn, this unit is eligible to shoot and declare a charge in a turn in which it Fell Back. ■ Until the end of the turn, this unit is eligible to declare a charge in a turn in which it Advanced.",
-    "glossary": "glossary-chaos-space-marines-detachment-rule-slaves-to-none",
-    "rule": "detachment-renegade-warband"
-  },
-  "chaos-space-marines-enhancement-weaponised-hatred": {
-    "id": "chaos-space-marines-enhancement-weaponised-hatred",
-    "title": "Weaponised Hatred",
-    "summary": "This champion’s bitterness has been tempered like a blade, and is wielded with the brutal efficacy to match. Heretic Astartes model only. Once per battle round, after your Vendetta target is destroyed, if the bearer is on the battlefield, you can select one enemy unit visible to the bearer. That enemy unit becomes your Vendetta target until you select a new one.",
-    "full": "This champion’s bitterness has been tempered like a blade, and is wielded with the brutal efficacy to match. Heretic Astartes model only. Once per battle round, after your Vendetta target is destroyed, if the bearer is on the battlefield, you can select one enemy unit visible to the bearer. That enemy unit becomes your Vendetta target until you select a new one.",
-    "glossary": "glossary-chaos-space-marines-enhancement-weaponised-hatred",
-    "rule": "detachment-renegade-warband"
-  },
-  "chaos-space-marines-enhancement-eyes-of-the-hunter": {
-    "id": "chaos-space-marines-enhancement-eyes-of-the-hunter",
-    "title": "Eyes of the Hunter",
-    "summary": "Immersion within the mutagenic energies of the Warp has wrought changes upon this warrior’s eyes. Slit pupils and warp sight enable them to pick out their targets with unerring accuracy. Heretic Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
-    "full": "Immersion within the mutagenic energies of the Warp has wrought changes upon this warrior’s eyes. Slit pupils and warp sight enable them to pick out their targets with unerring accuracy. Heretic Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
-    "glossary": "glossary-chaos-space-marines-enhancement-eyes-of-the-hunter",
-    "rule": "detachment-renegade-warband"
-  },
-  "chaos-space-marines-enhancement-fratricidal-trophies": {
-    "id": "chaos-space-marines-enhancement-fratricidal-trophies",
-    "title": "Fratricidal Trophies",
-    "summary": "The trophy racks of this warrior’s Terminator armour bear the skulls of former battle‑brothers slain by his own hand. The warriors that fight at his side strive their hardest to avoid sharing the fate of their former comrades. Heretic Astartes Terminator model only. In a turn in which the bearer’s unit chose to Default to Doctrine, until the end of the turn, each time a model in this unit makes an attack, you can re‑roll the Hit roll.",
-    "full": "The trophy racks of this warrior’s Terminator armour bear the skulls of former battle‑brothers slain by his own hand. The warriors that fight at his side strive their hardest to avoid sharing the fate of their former comrades. Heretic Astartes Terminator model only. In a turn in which the bearer’s unit chose to Default to Doctrine, until the end of the turn, each time a model in this unit makes an attack, you can re‑roll the Hit roll.",
-    "glossary": "glossary-chaos-space-marines-enhancement-fratricidal-trophies",
-    "rule": "detachment-renegade-warband"
-  },
-  "chaos-space-marines-enhancement-empyric-symbiote": {
-    "id": "chaos-space-marines-enhancement-empyric-symbiote",
-    "title": "Empyric Symbiote",
-    "summary": "This champion of ruin has been bonded with a warp‑spawned symbiote. This malefic companion’s predatory senses sense the quickest route to the enemy. Heretic Astartes model only. Add 1 to Advance and Charge rolls made for the bearer’s unit.",
-    "full": "This champion of ruin has been bonded with a warp‑spawned symbiote. This malefic companion’s predatory senses sense the quickest route to the enemy. Heretic Astartes model only. Add 1 to Advance and Charge rolls made for the bearer’s unit.",
-    "glossary": "glossary-chaos-space-marines-enhancement-empyric-symbiote",
-    "rule": "detachment-renegade-warband"
-  },
-  "chaos-space-marines-stratagem-never-outgunned": {
-    "id": "chaos-space-marines-stratagem-never-outgunned",
-    "title": "Never Outgunned",
-    "summary": "Your Shooting phase or the Fight phase. One Heretic Astartes unit from your army that has just been selected to shoot or fight. Select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in your unit have the selected ability.",
-    "full": "Your Shooting phase or the Fight phase. One Heretic Astartes unit from your army that has just been selected to shoot or fight. Select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in your unit have the selected ability.",
-    "glossary": "glossary-chaos-space-marines-stratagem-never-outgunned",
-    "rule": "detachment-renegade-warband"
-  },
-  "chaos-space-marines-stratagem-renegade-claim": {
-    "id": "chaos-space-marines-stratagem-renegade-claim",
-    "title": "Renegade Claim",
-    "summary": "Your Movement phase One Heretic Astartes unit from your army within range of an objective marker you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
-    "full": "Your Movement phase One Heretic Astartes unit from your army within range of an objective marker you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
-    "glossary": "glossary-chaos-space-marines-stratagem-renegade-claim",
-    "rule": "detachment-renegade-warband"
-  },
-  "chaos-space-marines-stratagem-vengeful-destruction": {
-    "id": "chaos-space-marines-stratagem-vengeful-destruction",
-    "title": "Vengeful Destruction",
-    "summary": "Your Shooting phase or the Fight phase. One Heretic Astartes Infantry (excluding Damned units) or Heretic Astartes Mounted unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time your unit makes an attack that targets your Vendetta target, add 1 to the Wound roll.",
-    "full": "Your Shooting phase or the Fight phase. One Heretic Astartes Infantry (excluding Damned units) or Heretic Astartes Mounted unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time your unit makes an attack that targets your Vendetta target, add 1 to the Wound roll.",
-    "glossary": "glossary-chaos-space-marines-stratagem-vengeful-destruction",
-    "rule": "detachment-renegade-warband"
-  },
-  "chaos-space-marines-stratagem-corrupted-munitions": {
-    "id": "chaos-space-marines-stratagem-corrupted-munitions",
-    "title": "Corrupted Munitions",
-    "summary": "Your Shooting phase One Heretic Astartes unit in your army that has just been selected to shoot. Until the end of the phase, each time a model in this unit makes a ranged attack, improve the Armour Penetration of that attack by 1.",
-    "full": "Your Shooting phase One Heretic Astartes unit in your army that has just been selected to shoot. Until the end of the phase, each time a model in this unit makes a ranged attack, improve the Armour Penetration of that attack by 1.",
-    "glossary": "glossary-chaos-space-marines-stratagem-corrupted-munitions",
-    "rule": "detachment-renegade-warband"
-  },
-  "chaos-space-marines-stratagem-undying-hatred-2": {
-    "id": "chaos-space-marines-stratagem-undying-hatred-2",
-    "title": "Undying Hatred",
-    "summary": "Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.",
-    "full": "Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.",
-    "glossary": "glossary-chaos-space-marines-stratagem-undying-hatred-2",
-    "rule": "detachment-renegade-warband"
-  },
-  "chaos-space-marines-stratagem-reavers-reaction": {
-    "id": "chaos-space-marines-stratagem-reavers-reaction",
-    "title": "Reavers’ Reaction",
-    "summary": "Your opponent’s Shooting phase, just after an enemy unit has shot. One Heretic Astartes unit (excluding Monsters and Vehicles) from your army that was hit by one or more of those attacks. Your unit can make a Normal move of up to D6\".",
-    "full": "Your opponent’s Shooting phase, just after an enemy unit has shot. One Heretic Astartes unit (excluding Monsters and Vehicles) from your army that was hit by one or more of those attacks. Your unit can make a Normal move of up to D6\".",
-    "glossary": "glossary-chaos-space-marines-stratagem-reavers-reaction",
-    "rule": "detachment-renegade-warband"
-  },
-  "chaos-space-marines-detachment-rule-desperate-devotion": {
-    "id": "chaos-space-marines-detachment-rule-desperate-devotion",
-    "title": "Desperate Devotion",
-    "summary": "Each time a DAMNED unit from your army makes a Dark Pact, if that unit was selected to make a Normal move, Advance or declare a charge, it can make a Desperate Pact. If it does, until the end of the phase, add 2\" to the Move characteristic of models in that unit and add 2 to Charge rolls made for that unit. Desperate Pacts Each time a unit makes a Desperate Pact, it must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds before any effects of that Desperate Pact are resolved. KEYWORDS TRAITOR GUARDSMEN SQUAD units from your army gain the BATTLELINE keyword.",
-    "full": "Each time a DAMNED unit from your army makes a Dark Pact, if that unit was selected to make a Normal move, Advance or declare a charge, it can make a Desperate Pact. If it does, until the end of the phase, add 2\" to the Move characteristic of models in that unit and add 2 to Charge rolls made for that unit. Desperate Pacts Each time a unit makes a Desperate Pact, it must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds before any effects of that Desperate Pact are resolved. KEYWORDS TRAITOR GUARDSMEN SQUAD units from your army gain the BATTLELINE keyword.",
-    "glossary": "glossary-chaos-space-marines-detachment-rule-desperate-devotion",
-    "rule": "detachment-chaos-cult"
-  },
-  "chaos-space-marines-enhancement-amulet-of-tainted-vigour": {
-    "id": "chaos-space-marines-enhancement-amulet-of-tainted-vigour",
-    "title": "Amulet of Tainted Vigour",
-    "summary": "DARK APOSTLE model only. In your Command phase, you can return up to D3 destroyed DAMNED models (excluding CHARACTER models) to the bearer's unit.",
-    "full": "DARK APOSTLE model only. In your Command phase, you can return up to D3 destroyed DAMNED models (excluding CHARACTER models) to the bearer's unit.",
-    "glossary": "glossary-chaos-space-marines-enhancement-amulet-of-tainted-vigour",
-    "rule": "detachment-chaos-cult"
-  },
-  "chaos-space-marines-enhancement-cultists-brand": {
-    "id": "chaos-space-marines-enhancement-cultists-brand",
-    "title": "Cultist's Brand",
-    "summary": "DARK APOSTLE or DAMNED model only. If every other model in the bearer's unit (excluding Dark Disciples) is DAMNED, you can re-roll Advance and Charge rolls made for the bearer's unit.",
-    "full": "DARK APOSTLE or DAMNED model only. If every other model in the bearer's unit (excluding Dark Disciples) is DAMNED, you can re-roll Advance and Charge rolls made for the bearer's unit.",
-    "glossary": "glossary-chaos-space-marines-enhancement-cultists-brand",
-    "rule": "detachment-chaos-cult"
-  },
-  "chaos-space-marines-enhancement-incendiary-goad": {
-    "id": "chaos-space-marines-enhancement-incendiary-goad",
-    "title": "Incendiary Goad",
-    "summary": "DARK APOSTLE or DAMNED model only. While the bearer's unit is below its Starting Strength, add 1 to the Strength characteristic of melee weapons equipped by DAMNED models in that unit, and while that unit is Below Half-strength, add 1 to the Attacks characteristic of those weapons as well.",
-    "full": "DARK APOSTLE or DAMNED model only. While the bearer's unit is below its Starting Strength, add 1 to the Strength characteristic of melee weapons equipped by DAMNED models in that unit, and while that unit is Below Half-strength, add 1 to the Attacks characteristic of those weapons as well.",
-    "glossary": "glossary-chaos-space-marines-enhancement-incendiary-goad",
-    "rule": "detachment-chaos-cult"
-  },
-  "chaos-space-marines-enhancement-warped-foresight": {
-    "id": "chaos-space-marines-enhancement-warped-foresight",
-    "title": "Warped Foresight",
-    "summary": "DARK APOSTLE or DAMNED model only. While the bearer is leading a unit with the Scouts 6\" ability, every model in the bearer's unit has the Scouts 6\" ability.",
-    "full": "DARK APOSTLE or DAMNED model only. While the bearer is leading a unit with the Scouts 6\" ability, every model in the bearer's unit has the Scouts 6\" ability.",
-    "glossary": "glossary-chaos-space-marines-enhancement-warped-foresight",
-    "rule": "detachment-chaos-cult"
-  },
-  "chaos-space-marines-stratagem-chosen-for-glory": {
-    "id": "chaos-space-marines-stratagem-chosen-for-glory",
-    "title": "Chosen for Glory",
-    "summary": "Your Shooting phase or the Fight phase. One DAMNED unit from your army that has not been selected to shoot or fight this phase. Your unit can make a Desperate Pact. If it does, until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, you can re-roll the Wound roll as well.",
-    "full": "Your Shooting phase or the Fight phase. One DAMNED unit from your army that has not been selected to shoot or fight this phase. Your unit can make a Desperate Pact. If it does, until the end of the phase, each time a model in your unit makes an attack, you can re-roll the Hit roll, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, you can re-roll the Wound roll as well.",
-    "glossary": "glossary-chaos-space-marines-stratagem-chosen-for-glory",
-    "rule": "detachment-chaos-cult"
-  },
-  "chaos-space-marines-stratagem-selfless-demise": {
-    "id": "chaos-space-marines-stratagem-selfless-demise",
-    "title": "Selfless Demise",
-    "summary": "Fight phase, just after an enemy unit has selected its targets. One DAMNED unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has resolved all of its attacks, each time a model in your unit is destroyed, roll one D6: on a 6, the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.",
-    "full": "Fight phase, just after an enemy unit has selected its targets. One DAMNED unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has resolved all of its attacks, each time a model in your unit is destroyed, roll one D6: on a 6, the attacking unit suffers 1 mortal wound after all of its attacks have been resolved.",
-    "glossary": "glossary-chaos-space-marines-stratagem-selfless-demise",
-    "rule": "detachment-chaos-cult"
-  },
-  "chaos-space-marines-stratagem-infernal-sacrifice": {
-    "id": "chaos-space-marines-stratagem-infernal-sacrifice",
-    "title": "Infernal Sacrifice",
-    "summary": "Fight phase. One DAMNED unit from your army that has not been selected to fight this phase. Your unit can make a Desperate Pact. If it does, your unit suffers D3 mortal wounds (in addition to any suffered for failing the resulting Leadership test), and until the end of the phase, add 1 to the Attacks characteristic of the melee weapons equipped by models in your unit, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, until the end of the phase, improve the Strength characteristic of those weapons by 1 as well.",
-    "full": "Fight phase. One DAMNED unit from your army that has not been selected to fight this phase. Your unit can make a Desperate Pact. If it does, your unit suffers D3 mortal wounds (in addition to any suffered for failing the resulting Leadership test), and until the end of the phase, add 1 to the Attacks characteristic of the melee weapons equipped by models in your unit, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, until the end of the phase, improve the Strength characteristic of those weapons by 1 as well.",
-    "glossary": "glossary-chaos-space-marines-stratagem-infernal-sacrifice",
-    "rule": "detachment-chaos-cult"
-  },
-  "chaos-space-marines-stratagem-crazed-focus": {
-    "id": "chaos-space-marines-stratagem-crazed-focus",
-    "title": "Crazed Focus",
-    "summary": "Your Shooting phase. One DAMNED unit from your army that has not been selected to shoot this phase. Your unit can make a Desperate Pact. If it does, until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, improve the Strength characteristic of that attack by 1 as well.",
-    "full": "Your Shooting phase. One DAMNED unit from your army that has not been selected to shoot this phase. Your unit can make a Desperate Pact. If it does, until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1, and if your unit did not fail the resulting Leadership test when making that Desperate Pact, improve the Strength characteristic of that attack by 1 as well.",
-    "glossary": "glossary-chaos-space-marines-stratagem-crazed-focus",
-    "rule": "detachment-chaos-cult"
-  },
-  "chaos-space-marines-stratagem-reckless-haste": {
-    "id": "chaos-space-marines-stratagem-reckless-haste",
-    "title": "Reckless Haste",
-    "summary": "Your Charge phase. One DAMNED unit from your army. Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.",
-    "full": "Your Charge phase. One DAMNED unit from your army. Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.",
-    "glossary": "glossary-chaos-space-marines-stratagem-reckless-haste",
-    "rule": "detachment-chaos-cult"
-  },
-  "chaos-space-marines-stratagem-mortal-thralls": {
-    "id": "chaos-space-marines-stratagem-mortal-thralls",
-    "title": "Mortal Thralls",
-    "summary": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One HERETIC ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks, and one friendly DAMNED unit within 3\" of your unit and visible to both your unit and the attacking unit. Until the end of the phase, while your DAMNED unit is on the battlefield, each time your opponent would make a Wound roll for an attack that targets your HERETIC ASTARTES unit, if your DAMNED unit is visible to the attacking model and is an eligible target for that attack, no roll is made; instead, your DAMNED unit suffers a number of mortal wounds equal to the Damage characteristic of that attack.",
-    "full": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One HERETIC ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks, and one friendly DAMNED unit within 3\" of your unit and visible to both your unit and the attacking unit. Until the end of the phase, while your DAMNED unit is on the battlefield, each time your opponent would make a Wound roll for an attack that targets your HERETIC ASTARTES unit, if your DAMNED unit is visible to the attacking model and is an eligible target for that attack, no roll is made; instead, your DAMNED unit suffers a number of mortal wounds equal to the Damage characteristic of that attack.",
-    "glossary": "glossary-chaos-space-marines-stratagem-mortal-thralls",
-    "rule": "detachment-chaos-cult"
+  "chaos-space-marines-stratagem-unholy-fortitude": {
+    "id": "chaos-space-marines-stratagem-unholy-fortitude",
+    "title": "Unholy Fortitude",
+    "summary": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Soul Forge unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, add 1 to the Toughenss characteristic of models in your unit.",
+    "full": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets. One Soul Forge unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, add 1 to the Toughenss characteristic of models in your unit.",
+    "glossary": "glossary-chaos-space-marines-stratagem-unholy-fortitude",
+    "rule": "detachment-cult-of-the-arkifane"
   },
   "chaos-space-marines-detachment-rule-masters-of-misdirection": {
     "id": "chaos-space-marines-detachment-rule-masters-of-misdirection",
@@ -847,6 +399,54 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-stratagem-scrambled-coordinates",
     "rule": "detachment-deceptors"
   },
+  "chaos-space-marines-detachment-rule-rain-of-ruin": {
+    "id": "chaos-space-marines-detachment-rule-rain-of-ruin",
+    "title": "Rain of Ruin",
+    "summary": "It is not enough for these heretical reavers merely to defeat their foes. Instead, they must pound all before them to smouldering oblivion with overwhelming salvoes of fire. Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].",
+    "full": "It is not enough for these heretical reavers merely to defeat their foes. Instead, they must pound all before them to smouldering oblivion with overwhelming salvoes of fire. Friendly HAVOCS/OBLITERATORS units’ ranged attacks have [HEAVY].",
+    "glossary": "glossary-chaos-space-marines-detachment-rule-rain-of-ruin",
+    "rule": "detachment-devotees-of-destruction"
+  },
+  "chaos-space-marines-enhancement-pact-of-destruction": {
+    "id": "chaos-space-marines-enhancement-pact-of-destruction",
+    "title": "Pact of Destruction",
+    "summary": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re-roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
+    "full": "There are those daemonic entities within the Warp that are willing to offer their boons to any who will wreak wholesale devastation in their name, at least for as long as the carnage holds their capricious attention. WARPSMITH model only. ▪ When this unit uses its Dark Pacts ability, this unit can re-roll Leadership rolls. ▪ In your Shooting phase, when this unit has shot, if this unit used its Dark Pacts ability and if those attacks destroyed an enemy model, this unit heals 3 wounds.",
+    "glossary": "glossary-chaos-space-marines-enhancement-pact-of-destruction",
+    "rule": "detachment-devotees-of-destruction"
+  },
+  "chaos-space-marines-enhancement-eye-of-oblivion": {
+    "id": "chaos-space-marines-enhancement-eye-of-oblivion",
+    "title": "Eye of Oblivion",
+    "summary": "This vile technodaemonic parasite nests within the emptied eye socket of its host, driving filament tendrils deep into their brain and feeding on their animus in exchange for revealing the secrets of its supernatural vision. WARPSMITH model only. When this unit is selected to shoot, select one enemy unit within 24\" of this unit. That enemy unit has +6\" detection range until this unit has shot.",
+    "full": "This vile technodaemonic parasite nests within the emptied eye socket of its host, driving filament tendrils deep into their brain and feeding on their animus in exchange for revealing the secrets of its supernatural vision. WARPSMITH model only. When this unit is selected to shoot, select one enemy unit within 24\" of this unit. That enemy unit has +6\" detection range until this unit has shot.",
+    "glossary": "glossary-chaos-space-marines-enhancement-eye-of-oblivion",
+    "rule": "detachment-devotees-of-destruction"
+  },
+  "chaos-space-marines-stratagem-ruinations-bounty": {
+    "id": "chaos-space-marines-stratagem-ruinations-bounty",
+    "title": "Ruination’s Bounty",
+    "summary": "Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot. That HAVOCS/OBLITERATORS unit. When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: ▪ [LETHAL HITS]. ▪ [SUSTAINED HITS 1].",
+    "full": "Your Shooting phase, when a friendly HAVOCS/OBLITERATORS unit is selected to shoot. That HAVOCS/OBLITERATORS unit. When your unit uses the Dark Pacts ability, your unit’s ranged attacks have: ▪ [LETHAL HITS]. ▪ [SUSTAINED HITS 1].",
+    "glossary": "glossary-chaos-space-marines-stratagem-ruinations-bounty",
+    "rule": "detachment-devotees-of-destruction"
+  },
+  "chaos-space-marines-stratagem-snare-of-fire": {
+    "id": "chaos-space-marines-stratagem-snare-of-fire",
+    "title": "Snare of Fire",
+    "summary": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged HAVOCS unit. That HAVOCS unit. Your unit can make a normal move of up to D3+3\".",
+    "full": "Your opponent’s Movement phase, when an enemy unit ends a move within 8\" of a friendly unengaged HAVOCS unit. That HAVOCS unit. Your unit can make a normal move of up to D3+3\".",
+    "glossary": "glossary-chaos-space-marines-stratagem-snare-of-fire",
+    "rule": "detachment-devotees-of-destruction"
+  },
+  "chaos-space-marines-stratagem-undying-hatred": {
+    "id": "chaos-space-marines-stratagem-undying-hatred",
+    "title": "Undying Hatred",
+    "summary": "Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit. That HAVOCS/OBLITERATORS unit. Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.",
+    "full": "Your opponent’s Shooting phase, when an enemy unit targets a friendly HAVOCS/OBLITERATORS unit. That HAVOCS/OBLITERATORS unit. Attacks that target your unit with a S greater than your unit’s T have -1 to wound rolls.",
+    "glossary": "glossary-chaos-space-marines-stratagem-undying-hatred",
+    "rule": "detachment-devotees-of-destruction"
+  },
   "chaos-space-marines-detachment-rule-terror-descends-aura": {
     "id": "chaos-space-marines-detachment-rule-terror-descends-aura",
     "title": "Terror Descends (Aura)",
@@ -871,12 +471,12 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-enhancement-nights-shroud",
     "rule": "detachment-dread-talons"
   },
-  "chaos-space-marines-enhancement-warp-fuelled-thrusters-2": {
-    "id": "chaos-space-marines-enhancement-warp-fuelled-thrusters-2",
+  "chaos-space-marines-enhancement-warp-fuelled-thrusters": {
+    "id": "chaos-space-marines-enhancement-warp-fuelled-thrusters",
     "title": "Warp-fuelled Thrusters",
     "summary": "JUMP PACK CHAOS LORD model only. At the end of your opponent's turn, if the bearer's unit is not within Engagement Range of one or more enemy units, you can remove the bearer's unit from the battlefield and place it into Strategic Reserves.",
     "full": "JUMP PACK CHAOS LORD model only. At the end of your opponent's turn, if the bearer's unit is not within Engagement Range of one or more enemy units, you can remove the bearer's unit from the battlefield and place it into Strategic Reserves.",
-    "glossary": "glossary-chaos-space-marines-enhancement-warp-fuelled-thrusters-2",
+    "glossary": "glossary-chaos-space-marines-enhancement-warp-fuelled-thrusters",
     "rule": "detachment-dread-talons"
   },
   "chaos-space-marines-enhancement-willbreaker": {
@@ -911,12 +511,12 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-stratagem-pitiless-hunters",
     "rule": "detachment-dread-talons"
   },
-  "chaos-space-marines-stratagem-relentless-terror-2": {
-    "id": "chaos-space-marines-stratagem-relentless-terror-2",
+  "chaos-space-marines-stratagem-relentless-terror": {
+    "id": "chaos-space-marines-stratagem-relentless-terror",
     "title": "Relentless Terror",
     "summary": "Your Movement phase, just after a HERETIC ASTARTES INFANTRY unit from your army Falls Back. That HERETIC ASTARTES INFANTRY unit. Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Fell Back.",
     "full": "Your Movement phase, just after a HERETIC ASTARTES INFANTRY unit from your army Falls Back. That HERETIC ASTARTES INFANTRY unit. Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Fell Back.",
-    "glossary": "glossary-chaos-space-marines-stratagem-relentless-terror-2",
+    "glossary": "glossary-chaos-space-marines-stratagem-relentless-terror",
     "rule": "detachment-dread-talons"
   },
   "chaos-space-marines-stratagem-screaming-descent": {
@@ -1022,6 +622,230 @@ window.DG_TERMS={
     "full": "Start of your opponent’s Charge phase. One HERETIC ASTARTES unit from your army. Until the end of the phase, each time an enemy unit selects your unit as a target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other negative modifiers to that Charge roll).",
     "glossary": "glossary-chaos-space-marines-stratagem-siegecraft",
     "rule": "detachment-fellhammer-siege-host"
+  },
+  "chaos-space-marines-detachment-rule-tyrannical-motivation": {
+    "id": "chaos-space-marines-detachment-rule-tyrannical-motivation",
+    "title": "Tyrannical Motivation",
+    "summary": "Murderers and renegades all, the Red Corsairs strive to meet their master’s standards, fighting hardest of all when his gaze is upon them. In your Command phase, select one of the following abilities. Until the start of your next Command phase, each Heretic Astartes Infantry unit from your army has that ability. At the start of each phase, if such a unit is visible to a friendly Huron Blackheart model, until the end of the phase, it has both of the following abilities. Huron’s Elite Hand‑picked by Huron Blackheart himself, these warriors strive to retain his favour with feats of arms. Each time a model in this unit makes an attack, add 1 to the Hit roll. Mobile Marauders The Red Corsairs utilise a highly mobile form of warfare and, under Huron’s watch, are relentless in their aggression. This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Designer’s Note: If a unit is gaining eligibility to shoot and declare a charge in a turn in which it Fell Back as a result of being visible to Huron Blackheart, but after making a Fall Back move it is no longer visible to Huron Blackheart, that unit will not be eligible to shoot in your Shooting phase or to declare a charge in your Charge phase unless it is visible again at the start of the respective phase.",
+    "full": "Murderers and renegades all, the Red Corsairs strive to meet their master’s standards, fighting hardest of all when his gaze is upon them. In your Command phase, select one of the following abilities. Until the start of your next Command phase, each Heretic Astartes Infantry unit from your army has that ability. At the start of each phase, if such a unit is visible to a friendly Huron Blackheart model, until the end of the phase, it has both of the following abilities. Huron’s Elite Hand‑picked by Huron Blackheart himself, these warriors strive to retain his favour with feats of arms. Each time a model in this unit makes an attack, add 1 to the Hit roll. Mobile Marauders The Red Corsairs utilise a highly mobile form of warfare and, under Huron’s watch, are relentless in their aggression. This unit is eligible to shoot and declare a charge in a turn in which it Fell Back. Designer’s Note: If a unit is gaining eligibility to shoot and declare a charge in a turn in which it Fell Back as a result of being visible to Huron Blackheart, but after making a Fall Back move it is no longer visible to Huron Blackheart, that unit will not be eligible to shoot in your Shooting phase or to declare a charge in your Charge phase unless it is visible again at the start of the respective phase.",
+    "glossary": "glossary-chaos-space-marines-detachment-rule-tyrannical-motivation",
+    "rule": "detachment-huron-s-marauders"
+  },
+  "chaos-space-marines-enhancement-voice-of-the-tyrant": {
+    "id": "chaos-space-marines-enhancement-voice-of-the-tyrant",
+    "title": "Voice of the Tyrant",
+    "summary": "This champion is a valued commander, and speaks with the authority of Huron himself. Heretic Astartes model only (excluding Damned models). The bearer’s unit has both abilities from the Tyrannical Motivation Detachment rule.",
+    "full": "This champion is a valued commander, and speaks with the authority of Huron himself. Heretic Astartes model only (excluding Damned models). The bearer’s unit has both abilities from the Tyrannical Motivation Detachment rule.",
+    "glossary": "glossary-chaos-space-marines-enhancement-voice-of-the-tyrant",
+    "rule": "detachment-huron-s-marauders"
+  },
+  "chaos-space-marines-enhancement-raid-leader": {
+    "id": "chaos-space-marines-enhancement-raid-leader",
+    "title": "Raid Leader",
+    "summary": "Rapid mechanised assaults are a preferred tactic of the Red Corsairs, and this champion excels at them. Heretic Astartes model only (excluding Damned models). Each time the bearer’s unit is set up after disembarking from a Transport that has made a Normal move this turn, the bearer’s unit is still eligible to declare a charge.",
+    "full": "Rapid mechanised assaults are a preferred tactic of the Red Corsairs, and this champion excels at them. Heretic Astartes model only (excluding Damned models). Each time the bearer’s unit is set up after disembarking from a Transport that has made a Normal move this turn, the bearer’s unit is still eligible to declare a charge.",
+    "glossary": "glossary-chaos-space-marines-enhancement-raid-leader",
+    "rule": "detachment-huron-s-marauders"
+  },
+  "chaos-space-marines-enhancement-dread-reputation": {
+    "id": "chaos-space-marines-enhancement-dread-reputation",
+    "title": "Dread Reputation",
+    "summary": "Such is this warrior’s infamy that their mere presence on the field of battle can overwhelm the foe with tyrannical intimidation. Heretic Astartes model only (excluding Damned models). Each time the bearer’s unit is set up on the battlefield, each enemy unit within 6” of the bearer’s unit (or within 12” if the bearer’s unit was set up using the Deep Strike ability) takes a Battle‑shock test.",
+    "full": "Such is this warrior’s infamy that their mere presence on the field of battle can overwhelm the foe with tyrannical intimidation. Heretic Astartes model only (excluding Damned models). Each time the bearer’s unit is set up on the battlefield, each enemy unit within 6” of the bearer’s unit (or within 12” if the bearer’s unit was set up using the Deep Strike ability) takes a Battle‑shock test.",
+    "glossary": "glossary-chaos-space-marines-enhancement-dread-reputation",
+    "rule": "detachment-huron-s-marauders"
+  },
+  "chaos-space-marines-enhancement-eager-for-bloodshed": {
+    "id": "chaos-space-marines-enhancement-eager-for-bloodshed",
+    "title": "Eager for Bloodshed",
+    "summary": "Desperate to lock weapons with the foe, this warrior is always at the fore, fighting in the vanguard of Huron Blackheart’s forces. Heretic Astartes model only. The bearer has the Infiltrators ability.",
+    "full": "Desperate to lock weapons with the foe, this warrior is always at the fore, fighting in the vanguard of Huron Blackheart’s forces. Heretic Astartes model only. The bearer has the Infiltrators ability.",
+    "glossary": "glossary-chaos-space-marines-enhancement-eager-for-bloodshed",
+    "rule": "detachment-huron-s-marauders"
+  },
+  "chaos-space-marines-stratagem-hardened-killers": {
+    "id": "chaos-space-marines-stratagem-hardened-killers",
+    "title": "Hardened Killers",
+    "summary": "Your Command phase. One Damned unit from your army. Select one of the following effects: • Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. • Improve the Attacks characteristic of Rapid Fire weapons equipped by models in this unit by 1. • Improve the Save characteristic of models in this unit by 1. Until the start of your next turn, your unit has the benefit of that effect.",
+    "full": "Your Command phase. One Damned unit from your army. Select one of the following effects: • Improve the Ballistic Skill characteristic of ranged weapons equipped by models in this unit by 1. • Improve the Attacks characteristic of Rapid Fire weapons equipped by models in this unit by 1. • Improve the Save characteristic of models in this unit by 1. Until the start of your next turn, your unit has the benefit of that effect.",
+    "glossary": "glossary-chaos-space-marines-stratagem-hardened-killers",
+    "rule": "detachment-huron-s-marauders"
+  },
+  "chaos-space-marines-stratagem-reavers-flurry": {
+    "id": "chaos-space-marines-stratagem-reavers-flurry",
+    "title": "Reavers’ Flurry",
+    "summary": "Your Fight phase. One Heretic Astartes unit from your army that made a Charge move this turn. Until the end of the phase, add 1 to the Attacks characteristics of melee weapons equipped by models in your unit.",
+    "full": "Your Fight phase. One Heretic Astartes unit from your army that made a Charge move this turn. Until the end of the phase, add 1 to the Attacks characteristics of melee weapons equipped by models in your unit.",
+    "glossary": "glossary-chaos-space-marines-stratagem-reavers-flurry",
+    "rule": "detachment-huron-s-marauders"
+  },
+  "chaos-space-marines-stratagem-at-the-tyrants-command": {
+    "id": "chaos-space-marines-stratagem-at-the-tyrants-command",
+    "title": "At the Tyrant’s Command",
+    "summary": "Your Movement phase. One Heretic Astartes unit (excluding Monsters and Vehicles) from your army. Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
+    "full": "Your Movement phase. One Heretic Astartes unit (excluding Monsters and Vehicles) from your army. Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
+    "glossary": "glossary-chaos-space-marines-stratagem-at-the-tyrants-command",
+    "rule": "detachment-huron-s-marauders"
+  },
+  "chaos-space-marines-stratagem-to-the-favoured-the-spoils": {
+    "id": "chaos-space-marines-stratagem-to-the-favoured-the-spoils",
+    "title": "To the Favoured the Spoils",
+    "summary": "Your opponent’s Shooting phase, just after an enemy unit has shot. One Heretic Astartes unit from your army that lost one or more wounds as a result of those attacks. Your unit can make a surge move of up to D6\".",
+    "full": "Your opponent’s Shooting phase, just after an enemy unit has shot. One Heretic Astartes unit from your army that lost one or more wounds as a result of those attacks. Your unit can make a surge move of up to D6\".",
+    "glossary": "glossary-chaos-space-marines-stratagem-to-the-favoured-the-spoils",
+    "rule": "detachment-huron-s-marauders"
+  },
+  "chaos-space-marines-stratagem-seize-the-prize": {
+    "id": "chaos-space-marines-stratagem-seize-the-prize",
+    "title": "Seize the Prize",
+    "summary": "Your Movement phase, just after a Heretic Astartes unit (excluding Monsters and Vehicles) from your army has been selected to Advance. That Heretic Astartes unit. Do not make an Advance roll for your unit. Instead, until the end of the phase add 6\" to the Move characteristic of models in your unit.",
+    "full": "Your Movement phase, just after a Heretic Astartes unit (excluding Monsters and Vehicles) from your army has been selected to Advance. That Heretic Astartes unit. Do not make an Advance roll for your unit. Instead, until the end of the phase add 6\" to the Move characteristic of models in your unit.",
+    "glossary": "glossary-chaos-space-marines-stratagem-seize-the-prize",
+    "rule": "detachment-huron-s-marauders"
+  },
+  "chaos-space-marines-stratagem-encircling-surge": {
+    "id": "chaos-space-marines-stratagem-encircling-surge",
+    "title": "Encircling Surge",
+    "summary": "End of your opponent’s Fight phase. One Heretic Astartes unit (excluding Monsters and Vehicles) from your army that is within 6\" of one or more battlefield edges and not within Engagement Range of one or more enemy units. Remove your unit from the battlefield and place it into Strategic Reserves.",
+    "full": "End of your opponent’s Fight phase. One Heretic Astartes unit (excluding Monsters and Vehicles) from your army that is within 6\" of one or more battlefield edges and not within Engagement Range of one or more enemy units. Remove your unit from the battlefield and place it into Strategic Reserves.",
+    "glossary": "glossary-chaos-space-marines-stratagem-encircling-surge",
+    "rule": "detachment-huron-s-marauders"
+  },
+  "chaos-space-marines-detachment-rule-prey-on-the-weak": {
+    "id": "chaos-space-marines-detachment-rule-prey-on-the-weak",
+    "title": "Prey on the Weak",
+    "summary": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re-roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have -1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
+    "full": "The more bloodied, scattered and thinned are the ranks of the enemy, the more frenzied and brutal the attacks of these sadistic Chaos Space Marines become. ▪ Friendly HERETIC ASTARTES INFANTRY FLY units’ attacks that target a battle-shocked unit or a unit at or below half-strength can re-roll hit rolls of 1. ▪ When an enemy unit’s attacks target a friendly HERETIC ASTARTES INFANTRY FLY unit, if that enemy unit is battle-shocked or at or below half-strength, those attacks have -1 to hit rolls. This detachment has the NIGHTMARE tag and cannot be taken with another NIGHTMARE detachment.",
+    "glossary": "glossary-chaos-space-marines-detachment-rule-prey-on-the-weak",
+    "rule": "detachment-murdertalon-raiders"
+  },
+  "chaos-space-marines-enhancement-shadowcowl-talisman": {
+    "id": "chaos-space-marines-enhancement-shadowcowl-talisman",
+    "title": "Shadowcowl Talisman",
+    "summary": "Worked with diabolical incantations of occlusion, wound about with subtle enchantments, this onyx disc draws a penumbral aura about the bearer that hides him from the eyes of his prey. CHAOS LORD WITH JUMP PACK model only. This unit has 5+ InSv.",
+    "full": "Worked with diabolical incantations of occlusion, wound about with subtle enchantments, this onyx disc draws a penumbral aura about the bearer that hides him from the eyes of his prey. CHAOS LORD WITH JUMP PACK model only. This unit has 5+ InSv.",
+    "glossary": "glossary-chaos-space-marines-enhancement-shadowcowl-talisman",
+    "rule": "detachment-murdertalon-raiders"
+  },
+  "chaos-space-marines-enhancement-pact-of-cursed-pinions": {
+    "id": "chaos-space-marines-enhancement-pact-of-cursed-pinions",
+    "title": "Pact of Cursed Pinions",
+    "summary": "Sharing their mortal frame with a predatory possessor daemon lends this dark champion additional might and swiftness, though it may yet damn them for eternity. CHAOS LORD WITH JUMP PACK model only. ▪ This model has DAEMON. ▪ This model’s melee attacks have +1 A.",
+    "full": "Sharing their mortal frame with a predatory possessor daemon lends this dark champion additional might and swiftness, though it may yet damn them for eternity. CHAOS LORD WITH JUMP PACK model only. ▪ This model has DAEMON. ▪ This model’s melee attacks have +1 A.",
+    "glossary": "glossary-chaos-space-marines-enhancement-pact-of-cursed-pinions",
+    "rule": "detachment-murdertalon-raiders"
+  },
+  "chaos-space-marines-stratagem-plunging-talons": {
+    "id": "chaos-space-marines-stratagem-plunging-talons",
+    "title": "Plunging Talons",
+    "summary": "Fight phase, when a friendly HERETIC ASTARTES INFANTRY FLY unit that made a charge move this turn is selected to fight. That HERETIC ASTARTES INFANTRY FLY unit. Your unit’s melee attacks have [LANCE].",
+    "full": "Fight phase, when a friendly HERETIC ASTARTES INFANTRY FLY unit that made a charge move this turn is selected to fight. That HERETIC ASTARTES INFANTRY FLY unit. Your unit’s melee attacks have [LANCE].",
+    "glossary": "glossary-chaos-space-marines-stratagem-plunging-talons",
+    "rule": "detachment-murdertalon-raiders"
+  },
+  "chaos-space-marines-stratagem-raking-pass": {
+    "id": "chaos-space-marines-stratagem-raking-pass",
+    "title": "Raking Pass",
+    "summary": "Your Movement phase, when a friendly HERETIC ASTARTES INFANTRY FLY unit is selected to make a fall-back move. That HERETIC ASTARTES INFANTRY FLY unit. That move does not prevent your unit from being eligible to declare a charge.",
+    "full": "Your Movement phase, when a friendly HERETIC ASTARTES INFANTRY FLY unit is selected to make a fall-back move. That HERETIC ASTARTES INFANTRY FLY unit. That move does not prevent your unit from being eligible to declare a charge.",
+    "glossary": "glossary-chaos-space-marines-stratagem-raking-pass",
+    "rule": "detachment-murdertalon-raiders"
+  },
+  "chaos-space-marines-stratagem-warp-twisted-terrors": {
+    "id": "chaos-space-marines-stratagem-warp-twisted-terrors",
+    "title": "Warp-twisted Terrors",
+    "summary": "Your Movement phase, when a friendly WARP TALONS unit ends a move. That WARP TALONS unit. Select one visible enemy unit (excluding MONSTER/VEHICLE units) within 9\" of your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
+    "full": "Your Movement phase, when a friendly WARP TALONS unit ends a move. That WARP TALONS unit. Select one visible enemy unit (excluding MONSTER/VEHICLE units) within 9\" of your unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
+    "glossary": "glossary-chaos-space-marines-stratagem-warp-twisted-terrors",
+    "rule": "detachment-murdertalon-raiders"
+  },
+  "chaos-space-marines-detachment-rule-terror-made-manifest": {
+    "id": "chaos-space-marines-detachment-rule-terror-made-manifest",
+    "title": "Terror Made Manifest",
+    "summary": "With vox‑augmented screams or bedecked in grisly trophies, these nightmarish raiders possess a terrifying presence. Even the most stoic of opponents can be shaken by their sadistic cruelty. Once fear has its hooks into them, they become easier prey. In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more Heretic Astartes units from your army, that enemy unit must take a Battle‑shock test, subtracting 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle‑shock tests in the same phase. Each time a Heretic astartes model from your army makes an attack that targets a unit that is Below Half‑strength, add 1 to the Hit roll. Each time an attack targets a Heretic astartes unit from your army, if the attacking model is Battle‐shocked, subtract 1 from the Hit roll. Each time a Heretic astartes model from your army makes an attack that targets a Battle‐shocked unit, add 1 to the Wound roll.",
+    "full": "With vox‑augmented screams or bedecked in grisly trophies, these nightmarish raiders possess a terrifying presence. Even the most stoic of opponents can be shaken by their sadistic cruelty. Once fear has its hooks into them, they become easier prey. In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more Heretic Astartes units from your army, that enemy unit must take a Battle‑shock test, subtracting 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle‑shock tests in the same phase. Each time a Heretic astartes model from your army makes an attack that targets a unit that is Below Half‑strength, add 1 to the Hit roll. Each time an attack targets a Heretic astartes unit from your army, if the attacking model is Battle‐shocked, subtract 1 from the Hit roll. Each time a Heretic astartes model from your army makes an attack that targets a Battle‐shocked unit, add 1 to the Wound roll.",
+    "glossary": "glossary-chaos-space-marines-detachment-rule-terror-made-manifest",
+    "rule": "detachment-nightmare-hunt"
+  },
+  "chaos-space-marines-enhancement-greyveil-hex": {
+    "id": "chaos-space-marines-enhancement-greyveil-hex",
+    "title": "Greyveil Hex",
+    "summary": "Incised into this warrior’s battleplate is a runic curse which dims his form in the minds of his prey, until all they perceive is a mass of talons and shadow. Chaos Lord model only. Models in the bearer’s unit have the Stealth ability. While the bearer’s unit is within range of one or more objective markers you control, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+    "full": "Incised into this warrior’s battleplate is a runic curse which dims his form in the minds of his prey, until all they perceive is a mass of talons and shadow. Chaos Lord model only. Models in the bearer’s unit have the Stealth ability. While the bearer’s unit is within range of one or more objective markers you control, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+    "glossary": "glossary-chaos-space-marines-enhancement-greyveil-hex",
+    "rule": "detachment-nightmare-hunt"
+  },
+  "chaos-space-marines-enhancement-warp-fuelled-thrusters-2": {
+    "id": "chaos-space-marines-enhancement-warp-fuelled-thrusters-2",
+    "title": "Warp-fuelled Thrusters",
+    "summary": "Bathed in warp energies, this Lord’s jump pack tears rifts in reality, allowing them to withdraw at a moment’s notice. Chaos Lord Jump Pack model only. At the end of your opponent’s Fight phase, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
+    "full": "Bathed in warp energies, this Lord’s jump pack tears rifts in reality, allowing them to withdraw at a moment’s notice. Chaos Lord Jump Pack model only. At the end of your opponent’s Fight phase, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
+    "glossary": "glossary-chaos-space-marines-enhancement-warp-fuelled-thrusters-2",
+    "rule": "detachment-nightmare-hunt"
+  },
+  "chaos-space-marines-enhancement-terrorglut-parasite": {
+    "id": "chaos-space-marines-enhancement-terrorglut-parasite",
+    "title": "Terrorglut Parasite",
+    "summary": "A daemonic pact sealed in fear and dread allowed this entity to squirm into reality. Coiled tightly and invisibly about a warrior’s soul, the being wears away at the sanity of those he faces and feasts on their terror. Heretic Astartes model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle‑shock test, subtracting 1 from the result.",
+    "full": "A daemonic pact sealed in fear and dread allowed this entity to squirm into reality. Coiled tightly and invisibly about a warrior’s soul, the being wears away at the sanity of those he faces and feasts on their terror. Heretic Astartes model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle‑shock test, subtracting 1 from the result.",
+    "glossary": "glossary-chaos-space-marines-enhancement-terrorglut-parasite",
+    "rule": "detachment-nightmare-hunt"
+  },
+  "chaos-space-marines-enhancement-sorrowscent-vulture": {
+    "id": "chaos-space-marines-enhancement-sorrowscent-vulture",
+    "title": "Sorrowscent Vulture",
+    "summary": "This champion demands to be in the vanguard of the hunt, their eagerness to inflict suffering manifesting in a daring lunge towards enemy lines. Chaos Lord Jump Pack model only. Models in the bearer’s unit have the Scouts 6\" ability.",
+    "full": "This champion demands to be in the vanguard of the hunt, their eagerness to inflict suffering manifesting in a daring lunge towards enemy lines. Chaos Lord Jump Pack model only. Models in the bearer’s unit have the Scouts 6\" ability.",
+    "glossary": "glossary-chaos-space-marines-enhancement-sorrowscent-vulture",
+    "rule": "detachment-nightmare-hunt"
+  },
+  "chaos-space-marines-stratagem-talons-sunk-deep": {
+    "id": "chaos-space-marines-stratagem-talons-sunk-deep",
+    "title": "Talons Sunk Deep",
+    "summary": "Your Shooting phase or the Fight phase. One Heretic Astartes Infantry unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Battle-shocked and/or Below Half-strength, improve the Armour Penetration characteristic of that attack by 1.",
+    "full": "Your Shooting phase or the Fight phase. One Heretic Astartes Infantry unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Battle-shocked and/or Below Half-strength, improve the Armour Penetration characteristic of that attack by 1.",
+    "glossary": "glossary-chaos-space-marines-stratagem-talons-sunk-deep",
+    "rule": "detachment-nightmare-hunt"
+  },
+  "chaos-space-marines-stratagem-malicious-surge": {
+    "id": "chaos-space-marines-stratagem-malicious-surge",
+    "title": "Malicious Surge",
+    "summary": "Your Charge phase. One Heretic Astartes Infantry unit from your army. Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.",
+    "full": "Your Charge phase. One Heretic Astartes Infantry unit from your army. Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.",
+    "glossary": "glossary-chaos-space-marines-stratagem-malicious-surge",
+    "rule": "detachment-nightmare-hunt"
+  },
+  "chaos-space-marines-stratagem-prey-on-the-weak": {
+    "id": "chaos-space-marines-stratagem-prey-on-the-weak",
+    "title": "Prey on the Weak",
+    "summary": "Your Shooting phase or the Fight phase. One Heretic Astartes Infantry unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Battle-shocked and/or Below Half-strength, you can re-roll the Hit roll.",
+    "full": "Your Shooting phase or the Fight phase. One Heretic Astartes Infantry unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Battle-shocked and/or Below Half-strength, you can re-roll the Hit roll.",
+    "glossary": "glossary-chaos-space-marines-stratagem-prey-on-the-weak",
+    "rule": "detachment-nightmare-hunt"
+  },
+  "chaos-space-marines-stratagem-relentless-terror-2": {
+    "id": "chaos-space-marines-stratagem-relentless-terror-2",
+    "title": "Relentless Terror",
+    "summary": "Your Movement phase, just after a Heretic Astartes Infantry unit from your army Falls Back. That Heretic Astartes unit. Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+    "full": "Your Movement phase, just after a Heretic Astartes Infantry unit from your army Falls Back. That Heretic Astartes unit. Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+    "glossary": "glossary-chaos-space-marines-stratagem-relentless-terror-2",
+    "rule": "detachment-nightmare-hunt"
+  },
+  "chaos-space-marines-stratagem-sadistic-display": {
+    "id": "chaos-space-marines-stratagem-sadistic-display",
+    "title": "Sadistic Display",
+    "summary": "Fight phase, just after a Heretic Astartes unit from your army destroys an enemy unit. That Heretic Astartes unit. Each enemy unit within 6\" of and visible to your unit (excluding Monster and Vehicle units) must take a Battle-shock test.",
+    "full": "Fight phase, just after a Heretic Astartes unit from your army destroys an enemy unit. That Heretic Astartes unit. Each enemy unit within 6\" of and visible to your unit (excluding Monster and Vehicle units) must take a Battle-shock test.",
+    "glossary": "glossary-chaos-space-marines-stratagem-sadistic-display",
+    "rule": "detachment-nightmare-hunt"
+  },
+  "chaos-space-marines-stratagem-horrific-incursion": {
+    "id": "chaos-space-marines-stratagem-horrific-incursion",
+    "title": "Horrific Incursion",
+    "summary": "Your Movement phase. One Heretic Astartes unit from your army that arrived from Reserves this turn. Select one enemy unit (excluding Monster and Vehicle units) within 12\" of and visible to your unit: that unit must take a Battle-shock test, subtracting 1 from the result.",
+    "full": "Your Movement phase. One Heretic Astartes unit from your army that arrived from Reserves this turn. Select one enemy unit (excluding Monster and Vehicle units) within 12\" of and visible to your unit: that unit must take a Battle-shock test, subtracting 1 from the result.",
+    "glossary": "glossary-chaos-space-marines-stratagem-horrific-incursion",
+    "rule": "detachment-nightmare-hunt"
   },
   "chaos-space-marines-detachment-rule-marks-of-chaos": {
     "id": "chaos-space-marines-detachment-rule-marks-of-chaos",
@@ -1199,6 +1023,94 @@ window.DG_TERMS={
     "glossary": "glossary-chaos-space-marines-stratagem-reavers-haste",
     "rule": "detachment-renegade-raiders"
   },
+  "chaos-space-marines-detachment-rule-slaves-to-none": {
+    "id": "chaos-space-marines-detachment-rule-slaves-to-none",
+    "title": "Slaves to None",
+    "summary": "Many Renegades eschew the gifts of Dark Gods, relying only upon their own prowess. Heretic Astartes models from your army lose the Dark Pacts ability. Ranged weapons equipped by Heretic Astartes models from your army have the [ASSAULT] ability. When mustering your army, you cannot use the Cults of the Dark Gods rule. VENDETTA Bitter minds hold on to lasting grudges. At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Vendetta target. Each time a Heretic Astartes model from your army (excluding Damned models) makes an attack that targets your Vendetta target, you can re‑roll the Hit roll. TWISTED DOCTRINE These Renegades ally their knowledge of the Codex Astartes with their own unrestrained savagery to horrific effect. In your Movement phase, each time you set up or select a Heretic Astartes unit (excluding Battle‑shocked units) from your army to move, it can choose to Default to Doctrine. If it does, it must first take a Battle‑shock test. Then, select one of the following: ■ Until the end of the turn, this unit is eligible to shoot and declare a charge in a turn in which it Fell Back. ■ Until the end of the turn, this unit is eligible to declare a charge in a turn in which it Advanced.",
+    "full": "Many Renegades eschew the gifts of Dark Gods, relying only upon their own prowess. Heretic Astartes models from your army lose the Dark Pacts ability. Ranged weapons equipped by Heretic Astartes models from your army have the [ASSAULT] ability. When mustering your army, you cannot use the Cults of the Dark Gods rule. VENDETTA Bitter minds hold on to lasting grudges. At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Vendetta target. Each time a Heretic Astartes model from your army (excluding Damned models) makes an attack that targets your Vendetta target, you can re‑roll the Hit roll. TWISTED DOCTRINE These Renegades ally their knowledge of the Codex Astartes with their own unrestrained savagery to horrific effect. In your Movement phase, each time you set up or select a Heretic Astartes unit (excluding Battle‑shocked units) from your army to move, it can choose to Default to Doctrine. If it does, it must first take a Battle‑shock test. Then, select one of the following: ■ Until the end of the turn, this unit is eligible to shoot and declare a charge in a turn in which it Fell Back. ■ Until the end of the turn, this unit is eligible to declare a charge in a turn in which it Advanced.",
+    "glossary": "glossary-chaos-space-marines-detachment-rule-slaves-to-none",
+    "rule": "detachment-renegade-warband"
+  },
+  "chaos-space-marines-enhancement-weaponised-hatred": {
+    "id": "chaos-space-marines-enhancement-weaponised-hatred",
+    "title": "Weaponised Hatred",
+    "summary": "This champion’s bitterness has been tempered like a blade, and is wielded with the brutal efficacy to match. Heretic Astartes model only. Once per battle round, after your Vendetta target is destroyed, if the bearer is on the battlefield, you can select one enemy unit visible to the bearer. That enemy unit becomes your Vendetta target until you select a new one.",
+    "full": "This champion’s bitterness has been tempered like a blade, and is wielded with the brutal efficacy to match. Heretic Astartes model only. Once per battle round, after your Vendetta target is destroyed, if the bearer is on the battlefield, you can select one enemy unit visible to the bearer. That enemy unit becomes your Vendetta target until you select a new one.",
+    "glossary": "glossary-chaos-space-marines-enhancement-weaponised-hatred",
+    "rule": "detachment-renegade-warband"
+  },
+  "chaos-space-marines-enhancement-eyes-of-the-hunter": {
+    "id": "chaos-space-marines-enhancement-eyes-of-the-hunter",
+    "title": "Eyes of the Hunter",
+    "summary": "Immersion within the mutagenic energies of the Warp has wrought changes upon this warrior’s eyes. Slit pupils and warp sight enable them to pick out their targets with unerring accuracy. Heretic Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
+    "full": "Immersion within the mutagenic energies of the Warp has wrought changes upon this warrior’s eyes. Slit pupils and warp sight enable them to pick out their targets with unerring accuracy. Heretic Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
+    "glossary": "glossary-chaos-space-marines-enhancement-eyes-of-the-hunter",
+    "rule": "detachment-renegade-warband"
+  },
+  "chaos-space-marines-enhancement-fratricidal-trophies": {
+    "id": "chaos-space-marines-enhancement-fratricidal-trophies",
+    "title": "Fratricidal Trophies",
+    "summary": "The trophy racks of this warrior’s Terminator armour bear the skulls of former battle‑brothers slain by his own hand. The warriors that fight at his side strive their hardest to avoid sharing the fate of their former comrades. Heretic Astartes Terminator model only. In a turn in which the bearer’s unit chose to Default to Doctrine, until the end of the turn, each time a model in this unit makes an attack, you can re‑roll the Hit roll.",
+    "full": "The trophy racks of this warrior’s Terminator armour bear the skulls of former battle‑brothers slain by his own hand. The warriors that fight at his side strive their hardest to avoid sharing the fate of their former comrades. Heretic Astartes Terminator model only. In a turn in which the bearer’s unit chose to Default to Doctrine, until the end of the turn, each time a model in this unit makes an attack, you can re‑roll the Hit roll.",
+    "glossary": "glossary-chaos-space-marines-enhancement-fratricidal-trophies",
+    "rule": "detachment-renegade-warband"
+  },
+  "chaos-space-marines-enhancement-empyric-symbiote": {
+    "id": "chaos-space-marines-enhancement-empyric-symbiote",
+    "title": "Empyric Symbiote",
+    "summary": "This champion of ruin has been bonded with a warp‑spawned symbiote. This malefic companion’s predatory senses sense the quickest route to the enemy. Heretic Astartes model only. Add 1 to Advance and Charge rolls made for the bearer’s unit.",
+    "full": "This champion of ruin has been bonded with a warp‑spawned symbiote. This malefic companion’s predatory senses sense the quickest route to the enemy. Heretic Astartes model only. Add 1 to Advance and Charge rolls made for the bearer’s unit.",
+    "glossary": "glossary-chaos-space-marines-enhancement-empyric-symbiote",
+    "rule": "detachment-renegade-warband"
+  },
+  "chaos-space-marines-stratagem-never-outgunned": {
+    "id": "chaos-space-marines-stratagem-never-outgunned",
+    "title": "Never Outgunned",
+    "summary": "Your Shooting phase or the Fight phase. One Heretic Astartes unit from your army that has just been selected to shoot or fight. Select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in your unit have the selected ability.",
+    "full": "Your Shooting phase or the Fight phase. One Heretic Astartes unit from your army that has just been selected to shoot or fight. Select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in your unit have the selected ability.",
+    "glossary": "glossary-chaos-space-marines-stratagem-never-outgunned",
+    "rule": "detachment-renegade-warband"
+  },
+  "chaos-space-marines-stratagem-renegade-claim": {
+    "id": "chaos-space-marines-stratagem-renegade-claim",
+    "title": "Renegade Claim",
+    "summary": "Your Movement phase One Heretic Astartes unit from your army within range of an objective marker you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+    "full": "Your Movement phase One Heretic Astartes unit from your army within range of an objective marker you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+    "glossary": "glossary-chaos-space-marines-stratagem-renegade-claim",
+    "rule": "detachment-renegade-warband"
+  },
+  "chaos-space-marines-stratagem-vengeful-destruction": {
+    "id": "chaos-space-marines-stratagem-vengeful-destruction",
+    "title": "Vengeful Destruction",
+    "summary": "Your Shooting phase or the Fight phase. One Heretic Astartes Infantry (excluding Damned units) or Heretic Astartes Mounted unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time your unit makes an attack that targets your Vendetta target, add 1 to the Wound roll.",
+    "full": "Your Shooting phase or the Fight phase. One Heretic Astartes Infantry (excluding Damned units) or Heretic Astartes Mounted unit from your army that has not been selected to shoot or fight this phase. Until the end of the phase, each time your unit makes an attack that targets your Vendetta target, add 1 to the Wound roll.",
+    "glossary": "glossary-chaos-space-marines-stratagem-vengeful-destruction",
+    "rule": "detachment-renegade-warband"
+  },
+  "chaos-space-marines-stratagem-corrupted-munitions": {
+    "id": "chaos-space-marines-stratagem-corrupted-munitions",
+    "title": "Corrupted Munitions",
+    "summary": "Your Shooting phase One Heretic Astartes unit in your army that has just been selected to shoot. Until the end of the phase, each time a model in this unit makes a ranged attack, improve the Armour Penetration of that attack by 1.",
+    "full": "Your Shooting phase One Heretic Astartes unit in your army that has just been selected to shoot. Until the end of the phase, each time a model in this unit makes a ranged attack, improve the Armour Penetration of that attack by 1.",
+    "glossary": "glossary-chaos-space-marines-stratagem-corrupted-munitions",
+    "rule": "detachment-renegade-warband"
+  },
+  "chaos-space-marines-stratagem-undying-hatred-2": {
+    "id": "chaos-space-marines-stratagem-undying-hatred-2",
+    "title": "Undying Hatred",
+    "summary": "Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+    "full": "Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove the destroyed model from play; it can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+    "glossary": "glossary-chaos-space-marines-stratagem-undying-hatred-2",
+    "rule": "detachment-renegade-warband"
+  },
+  "chaos-space-marines-stratagem-reavers-reaction": {
+    "id": "chaos-space-marines-stratagem-reavers-reaction",
+    "title": "Reavers’ Reaction",
+    "summary": "Your opponent’s Shooting phase, just after an enemy unit has shot. One Heretic Astartes unit (excluding Monsters and Vehicles) from your army that was hit by one or more of those attacks. Your unit can make a Normal move of up to D6\".",
+    "full": "Your opponent’s Shooting phase, just after an enemy unit has shot. One Heretic Astartes unit (excluding Monsters and Vehicles) from your army that was hit by one or more of those attacks. Your unit can make a Normal move of up to D6\".",
+    "glossary": "glossary-chaos-space-marines-stratagem-reavers-reaction",
+    "rule": "detachment-renegade-warband"
+  },
   "chaos-space-marines-detachment-rule-debt-to-the-soul-forge": {
     "id": "chaos-space-marines-detachment-rule-debt-to-the-soul-forge",
     "title": "Debt to the Soul Forge",
@@ -1374,6 +1286,94 @@ window.DG_TERMS={
     "full": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move. One HERETIC ASTARTES INFANTRY or HERETIC ASTARTES MOUNTED unit from your army (excluding DAMNED units) that is within 8\" of that enemy unit and not within Engagement Range of one or more enemy units. Your unit can make a Normal move of up to 6\".",
     "glossary": "glossary-chaos-space-marines-stratagem-millennia-of-experience",
     "rule": "detachment-veterans-of-the-long-war"
+  },
+  "chaos-space-marines-detachment-rule-warp-portals": {
+    "id": "chaos-space-marines-detachment-rule-warp-portals",
+    "title": "Warp Portals",
+    "summary": "Conjured warp portals flicker across the battlefield, tearing through the fabric of reality according to arcane designs. They are a means, however perilous and unnatural, for the warband’s most elite warriors to traverse the battlefield in a matter of strides and strike again at new locations. At the end of your opponent’s turn, you can select a number of Heretic Astartes Terminator, Obliterators and Mutilators units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows: BATTLE SIZE NUMBER OF UNITS Incursion Up to 1 unit Strike Force Up to 2 units Onslaught Up to 3 units Once you have made your selections, remove those units from the battlefield and place them into Strategic Reserves.",
+    "full": "Conjured warp portals flicker across the battlefield, tearing through the fabric of reality according to arcane designs. They are a means, however perilous and unnatural, for the warband’s most elite warriors to traverse the battlefield in a matter of strides and strike again at new locations. At the end of your opponent’s turn, you can select a number of Heretic Astartes Terminator, Obliterators and Mutilators units from your army (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows: BATTLE SIZE NUMBER OF UNITS Incursion Up to 1 unit Strike Force Up to 2 units Onslaught Up to 3 units Once you have made your selections, remove those units from the battlefield and place them into Strategic Reserves.",
+    "glossary": "glossary-chaos-space-marines-detachment-rule-warp-portals",
+    "rule": "detachment-warpstrike-champions"
+  },
+  "chaos-space-marines-enhancement-infernal-fulgurite": {
+    "id": "chaos-space-marines-enhancement-infernal-fulgurite",
+    "title": "Infernal Fulgurite",
+    "summary": "This strange artefact was recovered from the storm‑lashed daemon world of Utrexismia. A shard of warp lightning frozen forever in reality, it serves as a potent focus for teleportation. Heretic Astartes model only (excluding Damned models). Once per battle, you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
+    "full": "This strange artefact was recovered from the storm‑lashed daemon world of Utrexismia. A shard of warp lightning frozen forever in reality, it serves as a potent focus for teleportation. Heretic Astartes model only (excluding Damned models). Once per battle, you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
+    "glossary": "glossary-chaos-space-marines-enhancement-infernal-fulgurite",
+    "rule": "detachment-warpstrike-champions"
+  },
+  "chaos-space-marines-enhancement-eye-of-the-warp": {
+    "id": "chaos-space-marines-enhancement-eye-of-the-warp",
+    "title": "Eye of the Warp",
+    "summary": "This burning gem allows its bearer to see through the veil between realspace and the Warp, and so to react instantly upon piercing that veil. Heretic Astartes model with the Deep Strike ability only. Each time the bearer’s unit is set up on the battlefield, until the end of the turn, you can re‑roll Charge rolls made for that unit.",
+    "full": "This burning gem allows its bearer to see through the veil between realspace and the Warp, and so to react instantly upon piercing that veil. Heretic Astartes model with the Deep Strike ability only. Each time the bearer’s unit is set up on the battlefield, until the end of the turn, you can re‑roll Charge rolls made for that unit.",
+    "glossary": "glossary-chaos-space-marines-enhancement-eye-of-the-warp",
+    "rule": "detachment-warpstrike-champions"
+  },
+  "chaos-space-marines-enhancement-akshurs-binding-runes": {
+    "id": "chaos-space-marines-enhancement-akshurs-binding-runes",
+    "title": "Akshur’s Binding Runes",
+    "summary": "Living runes that crawl from an ancient tome onto living skin, these sigils anchor their host to realspace even when they are immersed in the Empyrean. Heretic Astartes model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
+    "full": "Living runes that crawl from an ancient tome onto living skin, these sigils anchor their host to realspace even when they are immersed in the Empyrean. Heretic Astartes model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
+    "glossary": "glossary-chaos-space-marines-enhancement-akshurs-binding-runes",
+    "rule": "detachment-warpstrike-champions"
+  },
+  "chaos-space-marines-enhancement-tzagulla": {
+    "id": "chaos-space-marines-enhancement-tzagulla",
+    "title": "Tzagulla",
+    "summary": "This shape‑shifting daemon weapon feeds upon the presence of warp energy to empower both itself and its wielder. Heretic Astartes model with the Deep Strike ability only. Improve the Attacks, Strength and Armour Penetration characteristics of the bearer’s weapons by 1. In addition, each time the bearer’s unit is set up on the battlefield from Reserves, until the end of the turn, improve the Damage characteristic of the bearer’s weapons by 1.",
+    "full": "This shape‑shifting daemon weapon feeds upon the presence of warp energy to empower both itself and its wielder. Heretic Astartes model with the Deep Strike ability only. Improve the Attacks, Strength and Armour Penetration characteristics of the bearer’s weapons by 1. In addition, each time the bearer’s unit is set up on the battlefield from Reserves, until the end of the turn, improve the Damage characteristic of the bearer’s weapons by 1.",
+    "glossary": "glossary-chaos-space-marines-enhancement-tzagulla",
+    "rule": "detachment-warpstrike-champions"
+  },
+  "chaos-space-marines-stratagem-empyric-dislocation": {
+    "id": "chaos-space-marines-stratagem-empyric-dislocation",
+    "title": "Empyric Dislocation",
+    "summary": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes unit from your army (excluding Damned units) that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1. You cannot target the same unit with the Empyric Dislocation and Armour of Corruption Stratagems in the same phase.",
+    "full": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes unit from your army (excluding Damned units) that was selected as the target of one or more of the attacking unit’s attacks. Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1. You cannot target the same unit with the Empyric Dislocation and Armour of Corruption Stratagems in the same phase.",
+    "glossary": "glossary-chaos-space-marines-stratagem-empyric-dislocation",
+    "rule": "detachment-warpstrike-champions"
+  },
+  "chaos-space-marines-stratagem-warp-tainted": {
+    "id": "chaos-space-marines-stratagem-warp-tainted",
+    "title": "Warp-tainted",
+    "summary": "Your Movement phase. One Heretic Astartes Terminator, Obliterators or Mutilators unit from your army, within range of an objective marker you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+    "full": "Your Movement phase. One Heretic Astartes Terminator, Obliterators or Mutilators unit from your army, within range of an objective marker you control. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+    "glossary": "glossary-chaos-space-marines-stratagem-warp-tainted",
+    "rule": "detachment-warpstrike-champions"
+  },
+  "chaos-space-marines-stratagem-armour-of-corruption": {
+    "id": "chaos-space-marines-stratagem-armour-of-corruption",
+    "title": "Armour of Corruption",
+    "summary": "Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes Terminator, Obliterators or Mutilators unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the turn, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack. You cannot target the same unit with the Armour of Corruption and Empyric Dislocation Stratagems in the same phase.",
+    "full": "Fight phase, just after an enemy unit has selected its targets. One Heretic Astartes Terminator, Obliterators or Mutilators unit from your army that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the turn, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack. You cannot target the same unit with the Armour of Corruption and Empyric Dislocation Stratagems in the same phase.",
+    "glossary": "glossary-chaos-space-marines-stratagem-armour-of-corruption",
+    "rule": "detachment-warpstrike-champions"
+  },
+  "chaos-space-marines-stratagem-siegebreaker-strike": {
+    "id": "chaos-space-marines-stratagem-siegebreaker-strike",
+    "title": "Siegebreaker Strike",
+    "summary": "Your Shooting phase. Up to two Heretic Astartes units from your army that were set up using the Deep Strike ability this turn and have not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your units have the [IGNORES COVER] ability.",
+    "full": "Your Shooting phase. Up to two Heretic Astartes units from your army that were set up using the Deep Strike ability this turn and have not been selected to shoot this phase. Until the end of the phase, ranged weapons equipped by models in your units have the [IGNORES COVER] ability.",
+    "glossary": "glossary-chaos-space-marines-stratagem-siegebreaker-strike",
+    "rule": "detachment-warpstrike-champions"
+  },
+  "chaos-space-marines-stratagem-warp-flicker": {
+    "id": "chaos-space-marines-stratagem-warp-flicker",
+    "title": "Warp Flicker",
+    "summary": "Your Movement phase. One Heretic Astartes Terminator, Obliterators or Mutilators unit from your army. Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
+    "full": "Your Movement phase. One Heretic Astartes Terminator, Obliterators or Mutilators unit from your army. Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
+    "glossary": "glossary-chaos-space-marines-stratagem-warp-flicker",
+    "rule": "detachment-warpstrike-champions"
+  },
+  "chaos-space-marines-stratagem-portal-of-spite": {
+    "id": "chaos-space-marines-stratagem-portal-of-spite",
+    "title": "Portal of Spite",
+    "summary": "Your Charge phase. One Heretic Astartes unit from your army that was set up using the Deep Strike ability this turn and has not declared a charge this phase. Your unit has +2 to charge rolls.",
+    "full": "Your Charge phase. One Heretic Astartes unit from your army that was set up using the Deep Strike ability this turn and has not declared a charge this phase. Your unit has +2 to charge rolls.",
+    "glossary": "glossary-chaos-space-marines-stratagem-portal-of-spite",
+    "rule": "detachment-warpstrike-champions"
   },
   "chaos-space-marines-ability-for-the-dark-gods": {
     "id": "chaos-space-marines-ability-for-the-dark-gods",

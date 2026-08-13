@@ -176,7 +176,7 @@ const catalog={
   'adeptus mechanicus':{units:mechanicusUnits,enhancements:mechanicusEnhancements,detachments:mechanicusDetachments},
   'tyranids':{units:tyranidsUnits,enhancements:tyranidsEnhancements,detachments:detachmentRecords(tyranids.detachments)},
   't au empire':{units:tauUnits,enhancements:tauEnhancements,detachments:detachmentRecords(tau.detachments)},
-  'emperors children':{units:emperorChildrenUnits,enhancements:emperorChildrenEnhancements,detachments:detachmentRecords(emperorChildren.detachments)},
+  'emperor s children':{units:emperorChildrenUnits,enhancements:emperorChildrenEnhancements,detachments:detachmentRecords(emperorChildren.detachments)},
   'chaos space marines':{units:csmUnits,enhancements:csmEnhancements,detachments:detachmentRecords(csm.detachments)},
   'space marines':{units:spaceMarinesUnits,enhancements:spaceMarinesEnhancements,detachments:detachmentRecords(spaceMarines.detachments)},
   'blood angels':{units:bloodAngelsUnits,enhancements:bloodAngelsEnhancements,detachments:detachmentRecords([...bloodAngels.detachments,...spaceMarines.detachments.filter(item=>bloodAngelsSharedDetachmentTitles.has(normalize(item.title)))])},

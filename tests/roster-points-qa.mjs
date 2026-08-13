@@ -14,9 +14,9 @@ assert.equal(Object.keys(WH_POINTS_CATALOG['adeptus mechanicus'].units).length,3
 assert.equal(new Set(Object.values(WH_POINTS_CATALOG['adeptus mechanicus'].enhancements).map(item=>item.title)).size,34);
 assert.equal(Object.keys(WH_POINTS_CATALOG['t au empire'].units).length,39);
 assert.equal(new Set(Object.values(WH_POINTS_CATALOG['t au empire'].enhancements).map(item=>item.title)).size,23);
-assert.equal(Object.keys(WH_POINTS_CATALOG['emperors children'].units).length,23);
-assert.equal(Object.keys(WH_POINTS_CATALOG['emperors children'].detachments).length,10);
-assert.equal(new Set(Object.values(WH_POINTS_CATALOG['emperors children'].enhancements).map(item=>item.title)).size,34);
+assert.equal(Object.keys(WH_POINTS_CATALOG['emperor s children'].units).length,23);
+assert.equal(Object.keys(WH_POINTS_CATALOG['emperor s children'].detachments).length,10);
+assert.equal(new Set(Object.values(WH_POINTS_CATALOG['emperor s children'].enhancements).map(item=>item.title)).size,34);
 assert.equal(Object.keys(WH_POINTS_CATALOG['space marines'].units).length,101);
 assert.equal(Object.keys(WH_POINTS_CATALOG['space marines'].detachments).length,23);
 const common=(declared,header,lordPoints)=>`+++++++++++++++++++++++++++++++++++++++++++++++
@@ -123,7 +123,7 @@ BATTLE SIZE: 3. Strike Force (2000 Point limit)
 DETACHMENT: Coterie of the Conceited, Carnival of Excess
 TOTAL ARMY POINTS: 330pts
 1x Defiler (330 pts): Heavy reaper autocannon, Hades lascannon`);
-const emperorChildrenCheck=WHRosterPoints.check(emperorChildrenRoster,'emperors children');
+const emperorChildrenCheck=WHRosterPoints.check(emperorChildrenRoster,'emperor s children');
 assert.equal(emperorChildrenRoster.pointsLimit,2000);
 assert.equal(emperorChildrenCheck.total,330,"Emperor's Children roster points must include both current Defiler options");
 assert.equal(emperorChildrenCheck.unresolved.length,0);
@@ -134,7 +134,7 @@ const legalIncursion=WHRosterParser.parse(`FACTION KEYWORD: Chaos - Emperor's Ch
 BATTLE SIZE: 2. Incursion (1000 Point limit)
 DETACHMENT: Elegant Brutes, Frenzied Host
 TOTAL ARMY POINTS: 0pts`);
-const legalIncursionCheck=WHRosterPoints.check(legalIncursion,'emperors children');
+const legalIncursionCheck=WHRosterPoints.check(legalIncursion,'emperor s children');
 assert.equal(legalIncursionCheck.detachmentPoints,2);
 assert.equal(legalIncursionCheck.detachmentPointLimit,2);
 assert.deepEqual([...legalIncursionCheck.detachmentWarnings],[],'Incursion must allow up to 2 Detachment Points');

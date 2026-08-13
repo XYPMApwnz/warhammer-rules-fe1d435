@@ -41,6 +41,20 @@
     ['chameleonic','stealth'],
     ['power of the hive mind','psychic-strength-ap-plus-1']
   ]);
+  const csmEffects=new Map([
+    ['touched by the warp','psyker-psychic-weapons'],
+    ['conduit of chaos','melee-lance'],
+    ['crown of worms','ability-range-plus-3'],
+    ['surgical precision','melee-precision'],
+    ['living carapace','wounds-plus-1-feel-no-pain-5'],
+    ['cursed fang','melee-ap-plus-1-precision'],
+    ['shroud of obfuscation','stealth-lone-operative'],
+    ['iron artifice','anti-vehicle-fortification-4'],
+    ['invigorated mechatendrils','move-plus-4'],
+    ['shadowcowl talisman','unit-invulnerable-save-5'],
+    ['pact of cursed pinions','daemon-melee-attacks-plus-1'],
+    ['tzagulla','weapons-attacks-strength-ap-plus-1']
+  ]);
 
   function enhancementArticle(entry,item){
     const article=root.document.createElement('article');article.className='ability roster-enhancement';article.dataset.rosterEnhancement=normalize(item.title);
@@ -310,6 +324,59 @@
     if(!item){article.className='ability roster-enhancement roster-enhancement-unresolved';article.dataset.rosterEnhancement=normalize(entry.name);const title=root.document.createElement('h5');title.textContent=entry.name;const cost=root.document.createElement('small');cost.className='roster-enhancement-cost';cost.hidden=entry.exportedCost==null;cost.textContent=entry.exportedCost==null?'':`${entry.exportedCost} pts in export`;const text=root.document.createElement('p');text.textContent=resolution.status==='ambiguous'?`This title exists in multiple selected Detachments: ${resolution.candidates.map(candidate=>candidate.detachment).join(' / ')}.`:'No matching Enhancement record was found in the selected Detachment.';article.append(title,cost,text);}
     if(item)article.dataset.rosterEnhancementRuleId=item.ruleId;if(message)warning(article,message);return article;
   }
+  function applyCsmEffect(card,article,item){
+    const effect=csmEffects.get(normalize(item.title));
+    if(effect==='psyker-psychic-weapons'){
+      const keyword=addKeyword(card,'PSYKER',effect),weapons=tagWeapons(card,'','PSYCHIC',effect);
+      if(keyword&&weapons){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived Datasheet: Psyker keyword and Psychic applied to the bearer\'s weapons.');}
+      else warning(article,'Effect could not be applied automatically because the Keywords block or weapon profiles were not found.');return;
+    }
+    if(effect==='melee-lance'||effect==='melee-precision'){
+      const label=effect==='melee-lance'?'LANCE':'PRECISION';
+      if(tagWeapons(card,'melee',label,effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,`Derived profiles: ${label} applied to the bearer's melee weapons.`);}
+      else warning(article,'Effect could not be applied automatically because no melee weapon profiles were found.');return;
+    }
+    if(effect==='ability-range-plus-3'){
+      derivedNote(article,effect,'Derived ability ranges: +3" to Warpsmith, Master of Mechanisms and Enrage Machine Spirits.');return;
+    }
+    if(effect==='wounds-plus-1-feel-no-pain-5'){
+      const wounds=adjustStat(card,'W',1,effect),ability=addSharedAbility(card,'Feel No Pain 5+','core-feel-no-pain',effect);
+      if(wounds&&ability){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived Datasheet: +1 Wound and Feel No Pain 5+ applied to the bearer.');}
+      else warning(article,'Effect could not be applied automatically because the Wounds characteristic or Abilities block was not found.');return;
+    }
+    if(effect==='melee-ap-plus-1-precision'){
+      const profiles=adjustWeapons(card,'melee',{AP:-1},effect),precision=tagWeapons(card,'melee','PRECISION',effect);
+      if(profiles&&precision){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived profiles: melee Armour Penetration improved by 1 and Precision applied.');}
+      else warning(article,'Effect could not be applied automatically because one or more melee weapon characteristics were not found.');return;
+    }
+    if(effect==='stealth-lone-operative'){
+      const stealth=addSharedAbility(card,'Stealth','core-stealth',effect),lone=addSharedAbility(card,'Lone Operative','core-lone-operative',effect);
+      if(stealth&&lone){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived abilities: Stealth and Lone Operative applied to the bearer. No Bodyguard Datasheet is mutated without attachment evidence.');}
+      else warning(article,'Effect could not be applied automatically because the Abilities block was not found.');return;
+    }
+    if(effect==='anti-vehicle-fortification-4'){
+      const rows=weaponRows(card),applied=rows.length&&rows.every(row=>addWeaponTag(row,'ANTI-VEHICLE 4+',effect)&&addWeaponTag(row,'ANTI-FORTIFICATION 4+',effect));
+      if(applied){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived profiles: Anti-Vehicle 4+ and Anti-Fortification 4+ applied to the bearer\'s weapons.');}
+      else warning(article,'Effect could not be applied automatically because no weapon profiles were found.');return;
+    }
+    if(effect==='move-plus-4'){
+      if(adjustStat(card,'M',4,effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived Datasheet: +4" Move applied to the bearer.');}
+      else warning(article,'Effect could not be applied automatically because the Move characteristic was not found.');return;
+    }
+    if(effect==='unit-invulnerable-save-5'){
+      derivedNote(article,effect,'Attachment-dependent rule: the bearer\'s unit has a 5+ invulnerable save. No Bodyguard or shared Datasheet is mutated without attachment evidence.');return;
+    }
+    if(effect==='daemon-melee-attacks-plus-1'){
+      const keyword=addKeyword(card,'DAEMON',effect),profiles=adjustWeapons(card,'melee',{A:1},effect);
+      if(keyword&&profiles){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived Datasheet: Daemon keyword and +1 Attacks applied to the bearer\'s melee weapons.');}
+      else warning(article,'Effect could not be applied automatically because the Keywords block or melee weapon characteristics were not found.');return;
+    }
+    if(effect==='weapons-attacks-strength-ap-plus-1'){
+      if(adjustWeapons(card,'',{A:1,S:1,AP:-1},effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived profiles: Attacks, Strength and Armour Penetration improved by 1. The Damage improvement remains conditional on the bearer\'s unit being set up from Reserves and is not applied permanently.');}
+      else warning(article,'Effect could not be applied automatically because one or more weapon characteristics were not found.');return;
+    }
+    warning(article,'No permanent Datasheet mutation was applied because this Enhancement does not have a safe deterministic projection.');
+  }
   function renderCsmInstances(card,ownership,roster){
     const host=card.querySelector('[id$="-abilities"]')||card,list=card.querySelector('[id$="-abilities"] .ability-list');if(!list)return;
     const block=root.document.createElement('section');block.className='content-block roster-instances';const heading=root.document.createElement('h4');heading.textContent='Roster instances';const rows=root.document.createElement('ul');block.append(heading,rows);
@@ -320,7 +387,7 @@
   function decorateCsm(card,roster,units){
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];const ownership=resolveTauOwnership(roster,units);
     if(ownership.instances.length>1){renderCsmInstances(card,ownership,roster);return ownership.instances.flatMap(instance=>instance.enhancements);}
-    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster),article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
+    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item)applyCsmEffect(card,article,resolution.item);list.prepend(article);}
     for(const entry of ownership.unresolved){const article=csmArticle(entry,resolveCsmItem(entry,roster),'This Enhancement was not assigned because its owner could not be resolved to an exact roster unit.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
     return ownership.cardEnhancements;
   }

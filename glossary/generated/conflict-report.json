@@ -1676,22 +1676,6 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "strike-from-the-shadows",
-      "termIds": [
-        "space-marines-stratagem-strike-from-the-shadows",
-        "space-marines-stratagem-strike-from-the-shadows-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "rapid-deployment",
-      "termIds": [
-        "space-marines-detachment-rule-rapid-deployment",
-        "tau-empire-ability-rapid-deployment"
-      ],
-      "status": "review-required"
-    },
-    {
       "normalizedTitle": "armour-of-contempt",
       "termIds": [
         "space-marines-stratagem-armour-of-contempt",
@@ -1704,6 +1688,14 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "rapid-deployment",
+      "termIds": [
+        "space-marines-detachment-rule-rapid-deployment",
+        "tau-empire-ability-rapid-deployment"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "rapid-embarkation",
       "termIds": [
         "space-marines-stratagem-rapid-embarkation",
@@ -1712,19 +1704,18 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "hunters-instincts",
+      "normalizedTitle": "fury-of-the-first",
       "termIds": [
-        "space-marines-stratagem-hunters-instincts",
-        "space-marines-enhancement-hunters-instincts",
-        "space-marines-enhancement-hunters-instincts-2"
+        "space-marines-stratagem-fury-of-the-first",
+        "space-marines-ability-fury-of-the-first"
       ],
       "status": "review-required"
     },
     {
-      "normalizedTitle": "adamantine-mantle",
+      "normalizedTitle": "war-tempered-artifice",
       "termIds": [
-        "space-marines-enhancement-adamantine-mantle",
-        "space-marines-enhancement-adamantine-mantle-2"
+        "space-marines-enhancement-war-tempered-artifice",
+        "space-marines-enhancement-war-tempered-artifice-2"
       ],
       "status": "review-required"
     },
@@ -1737,10 +1728,10 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "war-tempered-artifice",
+      "normalizedTitle": "adamantine-mantle",
       "termIds": [
-        "space-marines-enhancement-war-tempered-artifice",
-        "space-marines-enhancement-war-tempered-artifice-2"
+        "space-marines-enhancement-adamantine-mantle",
+        "space-marines-enhancement-adamantine-mantle-2"
       ],
       "status": "review-required"
     },
@@ -1769,18 +1760,35 @@
       "status": "review-required"
     },
     {
-      "normalizedTitle": "fury-of-the-first",
+      "normalizedTitle": "hunters-instincts",
       "termIds": [
-        "space-marines-stratagem-fury-of-the-first",
-        "space-marines-ability-fury-of-the-first"
+        "space-marines-stratagem-hunters-instincts",
+        "space-marines-enhancement-hunters-instincts",
+        "space-marines-enhancement-hunters-instincts-2"
       ],
       "status": "review-required"
     },
     {
       "normalizedTitle": "shock-assault",
       "termIds": [
-        "space-marines-ability-shock-assault",
-        "space-marines-stratagem-shock-assault"
+        "space-marines-stratagem-shock-assault",
+        "space-marines-ability-shock-assault"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "strike-from-the-shadows",
+      "termIds": [
+        "space-marines-stratagem-strike-from-the-shadows",
+        "space-marines-stratagem-strike-from-the-shadows-2"
+      ],
+      "status": "review-required"
+    },
+    {
+      "normalizedTitle": "guerrilla-tactics",
+      "termIds": [
+        "space-marines-stratagem-guerrilla-tactics",
+        "space-marines-ability-guerrilla-tactics"
       ],
       "status": "review-required"
     },
@@ -2049,14 +2057,6 @@
       "termIds": [
         "space-marines-weapon-onslaught-gatling-cannon",
         "space-marines-weapon-onslaught-gatling-cannon-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "guerrilla-tactics",
-      "termIds": [
-        "space-marines-ability-guerrilla-tactics",
-        "space-marines-stratagem-guerrilla-tactics"
       ],
       "status": "review-required"
     },
@@ -2563,8 +2563,8 @@
     },
     {
       "termIds": [
-        "space-marines-enhancement-adamantine-mantle",
-        "space-marines-enhancement-adamantine-mantle-2"
+        "space-marines-enhancement-war-tempered-artifice",
+        "space-marines-enhancement-war-tempered-artifice-2"
       ],
       "status": "review-required"
     },
@@ -2577,8 +2577,8 @@
     },
     {
       "termIds": [
-        "space-marines-enhancement-war-tempered-artifice",
-        "space-marines-enhancement-war-tempered-artifice-2"
+        "space-marines-enhancement-adamantine-mantle",
+        "space-marines-enhancement-adamantine-mantle-2"
       ],
       "status": "review-required"
     },

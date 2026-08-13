@@ -21,7 +21,7 @@ const readerProfiles=book=>{
   }
   return result;
 };
-const dgProfiles=readerProfiles('death-guard'),mechanicusProfiles=readerProfiles('adeptus-mechanicus'),tyranidsProfiles=readerProfiles('tyranids'),tauProfiles=readerProfiles('tau-empire'),emperorChildrenProfiles=readerProfiles('emperors-children'),csmProfiles=readerProfiles('chaos-space-marines'),bloodAngelsProfiles=readerProfiles('blood-angels'),darkAngelsProfiles=readerProfiles('dark-angels');
+const dgProfiles=readerProfiles('death-guard'),mechanicusProfiles=readerProfiles('adeptus-mechanicus'),tyranidsProfiles=readerProfiles('tyranids'),tauProfiles=readerProfiles('tau-empire'),emperorChildrenProfiles=readerProfiles('emperors-children'),csmProfiles=readerProfiles('chaos-space-marines'),spaceMarinesProfiles=readerProfiles('space-marines'),bloodAngelsProfiles=readerProfiles('blood-angels'),darkAngelsProfiles=readerProfiles('dark-angels');
 
 const deathGuard=read('books/death-guard/content/death-guard-rules.en.json');
 const deathGuardMfm=read('books/death-guard/sources/official-mfm-v1.2.json');
@@ -143,6 +143,11 @@ const spaceMarinesParity=read('books/space-marines/content/space-marines-current
 const spaceMarinesContracts=read('books/space-marines/content/space-marines-related-rules.en.json').enhancements;
 const bloodAngelsContracts=read('books/blood-angels/content/blood-angels-related-rules.en.json').enhancements;
 const darkAngelsContracts=read('books/dark-angels/content/dark-angels-related-rules.en.json').enhancements||{};
+const spaceMarinesRecord=unit=>({...unit,wargear:unit.paidWargear||[],...(spaceMarinesProfiles[unit.id]||spaceMarinesProfiles[normalize(unit.title)])});
+const spaceMarinesUnits=Object.fromEntries(spaceMarines.units.filter(unit=>unit.status==='Current').map(unit=>[normalize(unit.title),spaceMarinesRecord(unit)]));
+const spaceMarinesEnhancementGroups=new Map();
+for(const enhancement of spaceMarines.enhancements){const contract=spaceMarinesContracts[enhancement.id],role=contract?.roles?.find(item=>item.side==='friendly'&&item.subject==='unit'),record={...enhancement,...(role?{owner:{subject:'unit',selector:role.selector}}:{sourceLimited:true})},key=normalize(enhancement.title),group=spaceMarinesEnhancementGroups.get(key)||[];group.push(record);spaceMarinesEnhancementGroups.set(key,group);}
+const spaceMarinesEnhancements=Object.fromEntries([...spaceMarinesEnhancementGroups].map(([key,items])=>[key,items.length===1?items[0]:items]));
 const sharedDetachmentTitles=config=>{const chapter=normalize(config.dependencyDetachments.chapterKeyword),current=new Set(spaceMarines.detachments.map(item=>normalize(item.title)));return new Set([...spaceMarinesPack.detachments,...spaceMarinesParity.detachments].filter(item=>{const restriction=item.restriction||spaceMarinesConfig.detachmentChapterRestrictions?.[item.title];return current.has(normalize(item.title))&&(!restriction||normalize(restriction)===chapter);}).map(item=>normalize(item.title)));};
 const bloodAngelsSharedDetachmentTitles=sharedDetachmentTitles(bloodAngelsConfig),darkAngelsSharedDetachmentTitles=sharedDetachmentTitles(darkAngelsConfig);
 const bloodAngelsProfile=unit=>bloodAngelsProfiles[unit.id]||bloodAngelsProfiles[normalize(unit.title)];
@@ -173,8 +178,9 @@ const catalog={
   't au empire':{units:tauUnits,enhancements:tauEnhancements,detachments:detachmentRecords(tau.detachments)},
   'emperors children':{units:emperorChildrenUnits,enhancements:emperorChildrenEnhancements,detachments:detachmentRecords(emperorChildren.detachments)},
   'chaos space marines':{units:csmUnits,enhancements:csmEnhancements,detachments:detachmentRecords(csm.detachments)},
+  'space marines':{units:spaceMarinesUnits,enhancements:spaceMarinesEnhancements,detachments:detachmentRecords(spaceMarines.detachments)},
   'blood angels':{units:bloodAngelsUnits,enhancements:bloodAngelsEnhancements,detachments:detachmentRecords([...bloodAngels.detachments,...spaceMarines.detachments.filter(item=>bloodAngelsSharedDetachmentTitles.has(normalize(item.title)))])},
   'dark angels':{units:darkAngelsUnits,enhancements:darkAngelsEnhancements,detachments:detachmentRecords([...darkAngels.detachments,...spaceMarines.detachments.filter(item=>darkAngelsSharedDetachmentTitles.has(normalize(item.title)))])}
 };
 fs.writeFileSync(path.join(root,'roster-guides','points-data.js'),`window.WH_POINTS_CATALOG=Object.freeze(${JSON.stringify(catalog)});\n`);
-console.log(`Points catalog: ${Object.keys(dgUnits).length} Death Guard, ${Object.keys(mechanicusUnits).length} Adeptus Mechanicus, ${Object.keys(tyranidsUnits).length} Tyranids, ${Object.keys(tauUnits).length} T'au Empire, ${Object.keys(emperorChildrenUnits).length} Emperor's Children, ${Object.keys(csmUnits).length} Chaos Space Marines, ${Object.keys(bloodAngelsUnits).length} Blood Angels and ${Object.keys(darkAngelsUnits).length} Dark Angels units.`);
+console.log(`Points catalog: ${Object.keys(dgUnits).length} Death Guard, ${Object.keys(mechanicusUnits).length} Adeptus Mechanicus, ${Object.keys(tyranidsUnits).length} Tyranids, ${Object.keys(tauUnits).length} T'au Empire, ${Object.keys(emperorChildrenUnits).length} Emperor's Children, ${Object.keys(csmUnits).length} Chaos Space Marines, ${Object.keys(spaceMarinesUnits).length} Space Marines, ${Object.keys(bloodAngelsUnits).length} Blood Angels and ${Object.keys(darkAngelsUnits).length} Dark Angels units.`);

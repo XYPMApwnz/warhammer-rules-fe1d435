@@ -126,6 +126,16 @@ for(const bookId of supported){
     console.log('PASS  chaos-space-marines: 54 current units, 17 Detachments, desktop/iPad + Phone routes');
     continue;
   }
+  if(bookId==='space-marines'){
+    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),mobile=fs.readFileSync(path.join(bookRoot,'mobile','index.html'),'utf8'),points=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','space-marines-points.en.json'),'utf8'));
+    const unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
+    assert(points.units.filter(unit=>unit.status==='Current').length===101,'space-marines: current Datasheet catalog is incomplete');
+    assert(unitTitles.size===101,'space-marines: roster must expose the existing 101 current Datasheets');
+    assert((reader.match(/<section class="content-group detachment"/g)||[]).length===23,'space-marines: roster must expose the existing 23 Detachments');
+    assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader),'space-marines: Desktop roster filter is absent');
+    assert(mobile.includes('./roster-filter.js?v=2'),'space-marines: Phone roster filter is absent');
+    console.log('PASS  space-marines: 101 current units, 23 Detachments, desktop/iPad + Phone routes');continue;
+  }
   if(bookId==='blood-angels'){
     const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8');
     const codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','blood-angels-codex-datasheets.en.json'),'utf8'));
@@ -184,7 +194,7 @@ for(const bookId of supported){
   console.log(`PASS  ${bookId}: ${inventory.units.length} units, ${inventory.weapons.length} weapon profiles, ${inventory.abilities.length} abilities, ${inventory.detachments.length} detachments, ${inventory.enhancements.length} enhancements, ${inventory.stratagems.length} faction + ${inventory.coreStratagems.length} core stratagems`);
 }
 
-assert(supported.length>0,'No books declare Roster Guide support');
+assert(supported.length===9,`Expected 9 Roster Guide books, found ${supported.length}`);
 assert(entities.weaponFamily('Plasma gun – supercharge')==='plasma gun','Plasma gun profile family is not canonical');
 assert(entities.loadoutIncludesProfile(['Plasma gun'],'Plasma gun – standard'),'Plasma gun standard profile is lost');
 assert(entities.loadoutIncludesProfile(['Plasma gun'],'Plasma gun – supercharge'),'Plasma gun supercharge profile is lost');

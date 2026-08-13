@@ -8,6 +8,7 @@
   "coverImage": "assets/space-marines-cover-800.webp",
   "entryCoverImage": "assets/space-marines-cover-480.webp",
   "dedicatedMobile": true,
+  "rosterSupport": true,
   "sharedArmyBookApp": true,
   "compatibleRulesMatrix": true,
   "includeCoreStratagems": true,
@@ -56,6 +57,7 @@
   "assetVersions": {
     "app": 5,
     "book": 3,
+    "rosterFilter": 2,
     "tokens": 3
   },
   "expected": {

@@ -6,6 +6,7 @@ const context={window:{}};
 vm.createContext(context);
 for(const file of ['books/shared/roster-parser.js','books/shared/rule-facts.js','roster-guides/points-data.js','roster-guides/points-validator.js'])vm.runInContext(fs.readFileSync(file,'utf8'),context,{filename:file});
 const {WHRosterParser,WH_POINTS_CATALOG,WHRosterPoints}=context.window;
+assert.equal(Object.keys(WH_POINTS_CATALOG).length,9);
 assert.equal(Object.keys(WH_POINTS_CATALOG['death guard'].units).length,36);
 for(const title of ['death guard chaos lord','death guard chaos lord in terminator armour','death guard cultists','death guard possessed','death guard sorcerer in terminator armour'])assert.equal(WH_POINTS_CATALOG['death guard'].units[title],undefined,`${title} [Legends] must not enter the current Death Guard roster catalogue`);
 assert.equal(new Set(Object.values(WH_POINTS_CATALOG['death guard'].enhancements).map(item=>item.id)).size,30);
@@ -16,6 +17,8 @@ assert.equal(new Set(Object.values(WH_POINTS_CATALOG['t au empire'].enhancements
 assert.equal(Object.keys(WH_POINTS_CATALOG['emperors children'].units).length,23);
 assert.equal(Object.keys(WH_POINTS_CATALOG['emperors children'].detachments).length,10);
 assert.equal(new Set(Object.values(WH_POINTS_CATALOG['emperors children'].enhancements).map(item=>item.title)).size,34);
+assert.equal(Object.keys(WH_POINTS_CATALOG['space marines'].units).length,101);
+assert.equal(Object.keys(WH_POINTS_CATALOG['space marines'].detachments).length,23);
 const common=(declared,header,lordPoints)=>`+++++++++++++++++++++++++++++++++++++++++++++++
 + FACTION KEYWORD: Chaos - Death Guard
 + DETACHMENT: Virulent Vectorium (Worldblight)

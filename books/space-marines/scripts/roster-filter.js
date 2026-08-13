@@ -1,0 +1,21 @@
+(function(){
+  const rosterId=new URLSearchParams(location.search).get('roster');
+  if(!rosterId)return;
+  const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
+  const records=(()=>{try{const value=JSON.parse(localStorage.getItem('wh40k-rosters-v1'));return Array.isArray(value)?value:[];}catch{return[];}})();
+  const record=records.find(item=>item?.id===rosterId);
+  const roster=record?.sourceText&&window.WHRosterParser?window.WHRosterParser.parse(record.sourceText):record?.roster;
+  const faction=normalize(roster?.faction).replace(/^imperium /,'');
+  if(!roster?.units?.length||faction!=='space marines')return;
+  const unitTitles=new Set(roster.units.map(unit=>normalize(unit.name)));
+  const detachmentTitles=new Set((roster.detachments||[{label:roster.detachment}]).map(item=>normalize(item?.label||item?.name)).filter(Boolean));
+  const unitIds=[],detachmentIds=[];
+  document.querySelectorAll('.unit-card[data-unit-title]').forEach(card=>{if(unitTitles.has(normalize(card.dataset.unitTitle)))unitIds.push(card.id);else card.remove();});
+  document.querySelectorAll('section.content-group.detachment').forEach(section=>{const title=section.querySelector('.category-title')?.childNodes[0]?.textContent;if(detachmentTitles.has(normalize(title))){detachmentIds.push(section.id.replace(/^detachment-/,''));return;}section.remove();});
+  document.querySelectorAll('section.content-group[id^="datasheets-"]').forEach(section=>{if(!section.querySelector('.unit-card'))section.remove();});
+  document.querySelectorAll('[data-nav-id^="unit-"]').forEach(item=>{if(!unitIds.includes(item.dataset.navId))item.remove();});
+  document.querySelectorAll('[data-nav-id^="detachment-"]').forEach(item=>{if(!detachmentIds.includes(item.dataset.navId.replace(/^detachment-/,'')))item.remove();});
+  [...document.querySelectorAll('.toc-panel details')].reverse().forEach(group=>{if(!group.querySelector('a[href]'))group.remove();});
+  window.SM_ROSTER_GUIDE=window.WH_ARMY_ROSTER_GUIDE={rosterId,unitIds,unitTitles,detachmentIds};
+  document.documentElement.dataset.rosterGuide='space-marines';
+})();

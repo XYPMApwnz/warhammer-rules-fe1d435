@@ -358,8 +358,12 @@ try{
     }
     assert.equal(await page.evaluate(async()=>Boolean(await caches.match(new URL('/books/chaos-space-marines/assets/chaos-space-marines-cover-800.webp',location.origin).href))),true,'Chaos Space Marines artwork is absent from the offline cache');
     assert.equal(await page.evaluate(async()=>Boolean(await caches.match(new URL('/books/dark-angels/assets/dark-angels-cover-800.webp',location.origin).href))),true,'Dark Angels artwork is absent from the offline cache');
+    assert.equal(await page.evaluate(async()=>Boolean(await caches.match(new URL('/books/space-marines/reader.html',location.origin).href))),true,'Space Marines Desktop reader is absent from the install cache');
     errors.length=0;
     await offlineContext.setOffline(true);
+    await page.goto(`${origin}/books/space-marines/reader.html#unit-intercessor-squad`,{waitUntil:'domcontentloaded'});
+    await page.locator('#unit-intercessor-squad').waitFor({state:'visible'});
+    assert.ok((await page.locator('#unit-intercessor-squad').textContent()).trim().length>100,'Space Marines Desktop is unusable on cold first offline use');
     for(const book of books){
       await page.goto(origin+(book.offline||book.phone),{waitUntil:'domcontentloaded'});
       await page.reload({waitUntil:'domcontentloaded'});

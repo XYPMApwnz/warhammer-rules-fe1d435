@@ -22,6 +22,7 @@ const BLOOD_ANGELS_MOBILE_FALLBACK = "./books/blood-angels/mobile/index.html";
 const ORKS_FALLBACK = LIBRARY_FALLBACK;
 const EMPERORS_CHILDREN_FALLBACK = "./books/emperors-children/index.html";
 const SPACE_MARINES_FALLBACK = LIBRARY_FALLBACK;
+const SPACE_MARINES_DESKTOP_FALLBACK = "./books/space-marines/reader.html";
 const DARK_ANGELS_ENTRY_FALLBACK = "./books/dark-angels/index.html";
 const DARK_ANGELS_DESKTOP_FALLBACK = "./books/dark-angels/reader.html";
 const DARK_ANGELS_MOBILE_FALLBACK = "./books/dark-angels/mobile/index.html";
@@ -298,6 +299,7 @@ const APP_SHELL = [
   ,"./books/emperors-children/mobile/mobile.js?v=3"
   ,"./books/space-marines/"
   ,SPACE_MARINES_FALLBACK
+  ,SPACE_MARINES_DESKTOP_FALLBACK
   ,"./books/space-marines/mobile/index.html"
   ,"./books/space-marines/styles/tokens.css?v=3"
   ,"./books/space-marines/styles/book.css?v=3"
@@ -349,6 +351,7 @@ function navigationFallback(url) {
   if (path.endsWith("/books/blood-angels/") || path.endsWith("/books/blood-angels/index.html")) return BLOOD_ANGELS_ENTRY_FALLBACK;
   if (path.includes("/books/orks/")) return ORKS_FALLBACK;
   if (path.includes("/books/emperors-children/")) return EMPERORS_CHILDREN_FALLBACK;
+  if (path.endsWith("/books/space-marines/reader.html")) return SPACE_MARINES_DESKTOP_FALLBACK;
   if (path.includes("/books/space-marines/")) return SPACE_MARINES_FALLBACK;
   if (path.includes("/books/dark-angels/mobile/")) return DARK_ANGELS_MOBILE_FALLBACK;
   if (path.endsWith("/books/dark-angels/reader.html")) return DARK_ANGELS_DESKTOP_FALLBACK;

@@ -9,10 +9,12 @@
   "reviewEntry": true,
   "generatedMobile": true,
   "mobileRelatedRulesSource": true,
+  "customApp": true,
   "rosterSupport": true,
   "assetVersions": {
     "book": 3,
-    "app": 4
+    "app": 5,
+    "relatedRules": 11
   },
   "factionKeyword": "DARK ANGELS",
   "dependencies": ["space-marines"],

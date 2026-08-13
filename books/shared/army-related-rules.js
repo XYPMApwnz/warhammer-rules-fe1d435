@@ -41,7 +41,7 @@
     layer.innerHTML='<section class="related-rules-dialog" role="dialog" aria-modal="true" aria-labelledby="relatedRulesTitle"><header><div><span>Datasheet tools</span><h2 id="relatedRulesTitle">Compatible Stratagems &amp; Enhancements</h2></div><button type="button" class="related-rules-close" aria-label="Close">&times;</button></header><div class="related-rules-body"><p>Loading rules&hellip;</p></div></section>';
     document.body.append(layer);
     const body=layer.querySelector('.related-rules-body'),title=layer.querySelector('h2');
-    let unit=null,kind='stratagems',detachment='all',filterMenu,tabs,content,empty,sections=[];
+    let unit=null,kind='stratagems',detachment='all',filterMenu,tabs,content,empty,sections=[],rosterMode=false;
     let modal;
     const filter=()=>{
       if(!content||!unit)return;
@@ -81,11 +81,11 @@
           const fragment=(await getTemplate()).content.cloneNode(true);
           fragment.querySelectorAll('[id]').forEach(node=>{if(!node.dataset.ruleId)node.dataset.ruleId=node.id;node.removeAttribute('id');});
           sections=[...fragment.querySelectorAll('.related-detachment')];
-          const rosterDetachments=new Set(options.rosterGuide?.detachmentIds||[]),rosterMode=rosterDetachments.size>0;
+          const rosterDetachments=new Set(options.rosterGuide?.detachmentIds||[]);rosterMode=rosterDetachments.size>0;
           if(rosterMode){sections.forEach(section=>{if(section.dataset.detachment!=='core'&&!rosterDetachments.has(section.dataset.detachment))section.remove();});sections=sections.filter(section=>section.dataset.detachment==='core'||rosterDetachments.has(section.dataset.detachment));}
           const detachmentSections=sections.filter(section=>section.dataset.detachment!=='core');
           const choices=[...(rosterMode&&detachmentSections.length===1?[]:[['all',rosterMode?'All roster detachments':'All detachments']]),...detachmentSections.map(section=>[section.dataset.detachment,section.querySelector('h2').textContent])];
-          detachment=rosterMode?'all':(choices.length===1?choices[0][0]:'all');
+          detachment=choices.length===1?choices[0][0]:'all';
           if(!rosterMode)try{const saved=localStorage.getItem(options.storageKey);if(choices.some(([value])=>value===saved))detachment=saved;}catch{}
           filterMenu=document.createElement('details');filterMenu.className='full-related-filter';filterMenu.classList.toggle('is-static',choices.length===1);
           filterMenu.innerHTML='<summary><span>'+choices.find(([value])=>value===detachment)[1]+'</span></summary><div>'+choices.map(([value,label])=>'<button type="button" data-detachment="'+value+'" aria-pressed="'+(value===detachment)+'">'+label+'</button>').join('')+'</div>';

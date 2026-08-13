@@ -318,16 +318,16 @@ const APP_SHELL = [
   ,"./books/dark-angels/reader.html"
   ,DARK_ANGELS_MOBILE_FALLBACK
   ,"./books/dark-angels/mobile/mobile.css?v=1"
-  ,"./books/dark-angels/mobile/mobile.js?v=1"
+  ,"./books/dark-angels/mobile/mobile.js?v=2"
   ,"./books/dark-angels/mobile/phone-popup-controller.js?v=1"
   ,"./books/dark-angels/styles/tokens.css?v=2"
   ,"./books/dark-angels/styles/book.css?v=3"
   ,"./books/dark-angels/assets/dark-angels-cover-480.webp"
   ,"./books/dark-angels/assets/dark-angels-cover-800.webp"
   ,"./books/dark-angels/scripts/data.js?v=2"
-  ,"./books/dark-angels/scripts/app.js?v=2"
+  ,"./books/dark-angels/scripts/app.js?v=5"
   ,"./books/shared/modal-focus.js?v=1"
-  ,"./books/shared/army-related-rules.js?v=9"
+  ,"./books/shared/army-related-rules.js?v=11"
   ,"./books/shared/army-book-app.js?v=9"
 ];
 

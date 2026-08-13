@@ -36,14 +36,14 @@ const rowInventory=rows=>rows.map(row=>JSON.stringify(row.map(item=>typeof item=
 const desktopWeaponRows=extractWeaponRows(reader),phoneWeaponRows=extractWeaponRows(mobileDatasheetMarkup),desktopWeaponTokens=desktopWeaponRows.flat(),phoneWeaponTokens=phoneWeaponRows.flat(),canonicalWeaponLabels=canonicalWeaponRows.flat();
 const unknownWeaponLabels=[...new Set(canonicalWeaponLabels.filter(label=>!expectedWeaponTerm(label)))].sort();
 
-assert.deepEqual([allUnits.length,canonicalWeaponRows.length,canonicalWeaponLabels.length],[49,70,110]);
+assert.deepEqual([allUnits.length,canonicalWeaponRows.length,canonicalWeaponLabels.length],[50,73,119]);
 assert.deepEqual(rowInventory(desktopWeaponRows),rowInventory(canonicalWeaponRows),'desktop weapon token inventory/order differs');
 assert.deepEqual(rowInventory(phoneWeaponRows),rowInventory(canonicalWeaponRows),'Phone weapon token inventory/order differs');
 for(const tokens of [desktopWeaponTokens,phoneWeaponTokens])for(const token of tokens){const expected=expectedWeaponTerm(token.label);assert.equal(token.element,expected?'button':'span',`${token.label}: wrong token kind`);assert.equal(token.term,expected,`${token.label}: wrong glossary target`);}
 assert.deepEqual(unknownWeaponLabels,['HARPOONED']);
 assert.doesNotMatch(reader+mobileDatasheetMarkup,/<button class="weapon-button"[^>]*>[^<]*<\/button><small>/i);
 assert.doesNotMatch(reader+mobileDatasheetMarkup,/<(?:button|span)[^>]*class="[^"]*\btag\b[^"]*"[^>]*>[^<]*<button/i);
-assert.equal(fs.readdirSync(path.join(root,'mobile')).filter(file=>file.endsWith('.html')).length,62);
+assert.equal(fs.readdirSync(path.join(root,'mobile')).filter(file=>file.endsWith('.html')).length,63);
 for(const output of [reader,mobileDatasheetMarkup]){assert.match(output,/death-guard\/styles\/content\.css\?v=\d+/);assert.match(output,/death-guard\/styles\/popups\.css\?v=\d+/);assert.match(output,/shared\/datasheet-system\.css\?v=\d+/);}
 
 assert.equal(pack.meta.pageCount,31);
@@ -53,15 +53,15 @@ assert.equal(pack.updates.length,32);
 assert.equal(pack.meta.version,'1.1');
 assert.equal(pack.meta.sha256,'BBB2B1F9167C8421D13CFB87FC46DF778D59B7E9803D5D8F812060424FA9C79A');
 assert.equal(pack.faqs.length,12);
-assert.equal(codex.audit.datasheets,49);
+assert.equal(codex.audit.datasheets,50);
 assert.equal(codex.audit.imperialArmour,0);
 assert.equal(points.audit.enhancements,34);
-assert.equal(points.units.length,49);
+assert.equal(points.units.length,50);
 assert.equal(codexParity.detachments.length,6);
 assert.equal(codexParity.detachments.flatMap(item=>item.stratagems).length,36);
-assert.equal(codexWargear.units.length,49);
+assert.equal(codexWargear.units.length,50);
 assert.equal(Object.keys(relatedRules.stratagems).length,51);
-assert.equal(new Set(points.units.map(item=>item.id)).size,49);
+assert.equal(new Set(points.units.map(item=>item.id)).size,50);
 for(const unit of [...codex.datasheets,...codex.imperialArmour,...codex.legends]){
   assert.ok(unit.profiles.length,`${unit.title}: missing profile`);
   assert.ok(unit.keywords.includes('Tyranids'),`${unit.title}: missing faction keyword`);
@@ -73,6 +73,11 @@ assert.ok(allUnits.every(unit=>(unit.wargearAbilities||[]).length===0),'linked w
 assert.doesNotMatch(reader+mobileDatasheetMarkup,/>Wargear Abilities</,'empty Wargear Abilities sections must not render');
 const currentUnits=[...codex.datasheets,...codex.imperialArmour].filter(unit=>unit.status==='Current');
 const unit=title=>currentUnits.find(item=>item.title===title);
+const hyperadaptedRaveners=unit('Hyperadapted Raveners');
+assert.equal(hyperadaptedRaveners.sourceLayer,'faction-pack');
+assert.deepEqual(hyperadaptedRaveners.profiles.map(item=>[item.name,item.stats.M,item.stats.W]),[['Ravener Prime','10"','6'],['Ravener','10"','3']]);
+for(const title of ['Alpha Invader','Hypersensory Array','Deep Strike','Leader','Shadow in the Warp','Synapse'])assert.ok(hyperadaptedRaveners.abilities.some(item=>item.title===title),`Hyperadapted Raveners: ${title} missing`);
+assert.deepEqual(points.units.find(item=>item.title==='Hyperadapted Raveners').points.map(item=>[item.label,item.value]),[['1st to 2nd unit · 5 models',165],['3rd + unit · 5 models',175]]);
 assert.deepEqual(points.detachments.map(item=>[item.title,item.forceDisposition,item.detachmentPoints]),[
   ['Ambush Predators','Disruption',1],['Assimilation Swarm','Priority Assets',2],['Crusher Stampede','Purge the Foe',2],['Invasion Fleet','Take and Hold',3],['Subterranean Assault','Disruption',3],['Synaptic Nexus','Disruption',2],['Talons of the Norn Queen','Take and Hold',1],['Unending Swarm','Take and Hold',2],['Vanguard Onslaught','Reconnaissance',2],['Warrior Bioform Onslaught','Take and Hold',1]
 ]);
@@ -179,4 +184,4 @@ for(const stratagem of allStratagems){
 }
 
 console.log(`Tyranids weapon tokens: ${canonicalWeaponLabels.length} labels, ${desktopWeaponTokens.length} desktop, ${phoneWeaponTokens.length} Phone, ${desktopWeaponTokens.filter(token=>token.term).length} interactive, ${desktopWeaponTokens.filter(token=>!token.term).length} unknown (${unknownWeaponLabels.join(', ')}).`);
-console.log('Tyranids QA passed: 49 datasheets, 10 detachments, 51 Stratagems, exact wargear, glossary and Related Rules contracts.');
+console.log('Tyranids QA passed: 50 datasheets, 10 detachments, 51 Stratagems, exact wargear, glossary and Related Rules contracts.');

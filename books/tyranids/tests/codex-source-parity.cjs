@@ -43,4 +43,4 @@ for(const detachment of parity.detachments){
   }
 }
 
-console.log('Tyranids source parity passed: 49 wargear/composition records, 6 Codex rules, 24 Enhancements, 36 Stratagems.');
+console.log('Tyranids source parity passed: 50 wargear/composition records, 6 Codex rules, 24 Enhancements, 36 Stratagems.');

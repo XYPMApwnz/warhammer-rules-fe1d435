@@ -1,7 +1,7 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 2583,
+    "terms": 2588,
     "aliases": 662,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
@@ -2234,6 +2234,14 @@
       "status": "review-required"
     },
     {
+      "normalizedTitle": "surprise-assault",
+      "termIds": [
+        "tyranids-detachment-rule-surprise-assault",
+        "tyranids-stratagem-surprise-assault"
+      ],
+      "status": "review-required"
+    },
+    {
       "normalizedTitle": "destabilising-predation",
       "termIds": [
         "tyranids-enhancement-destabilising-predation",
@@ -2246,14 +2254,6 @@
       "termIds": [
         "tyranids-enhancement-synaptoprescience",
         "tyranids-enhancement-synaptoprescience-2"
-      ],
-      "status": "review-required"
-    },
-    {
-      "normalizedTitle": "surprise-assault",
-      "termIds": [
-        "tyranids-detachment-rule-surprise-assault",
-        "tyranids-stratagem-surprise-assault"
       ],
       "status": "review-required"
     },

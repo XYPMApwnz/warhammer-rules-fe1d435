@@ -2395,6 +2395,158 @@
         "state": "match"
       }
     ],
+    "unit-hyperadapted-raveners": [
+      {
+        "ruleId": "core-stratagem-command-re-roll",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-counteroffensive",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-epic-challenge",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-fire-overwatch",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-heroic-intervention",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-insane-bravery",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "core-stratagem-rapid-ingress",
+        "scope": "core",
+        "state": "match"
+      },
+      {
+        "ruleId": "enfilading-emergence",
+        "detachmentId": "subterranean-assault",
+        "state": "match"
+      },
+      {
+        "ruleId": "replenishing-swarms",
+        "detachmentId": "subterranean-assault",
+        "state": "match"
+      },
+      {
+        "ruleId": "retreat-below",
+        "detachmentId": "subterranean-assault",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-adrenal-surge",
+        "detachmentId": "invasion-fleet",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-assassin-beasts",
+        "detachmentId": "vanguard-onslaught",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-death-frenzy",
+        "detachmentId": "invasion-fleet",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-hypersensory-scillia",
+        "detachmentId": "vanguard-onslaught",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-imperative-dominance",
+        "detachmentId": "synaptic-nexus",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-invisible-hunter",
+        "detachmentId": "vanguard-onslaught",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-irresistible-will",
+        "detachmentId": "synaptic-nexus",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-override-instincts",
+        "detachmentId": "synaptic-nexus",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-overrun",
+        "detachmentId": "invasion-fleet",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-predatory-imperative",
+        "detachmentId": "invasion-fleet",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-rapacious-hunger",
+        "detachmentId": "assimilation-swarm",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-rapid-regeneration",
+        "detachmentId": "invasion-fleet",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-reinforced-hive-node",
+        "detachmentId": "synaptic-nexus",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-secure-biomass",
+        "detachmentId": "assimilation-swarm",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-seeded-broods",
+        "detachmentId": "vanguard-onslaught",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-surprise-assault",
+        "detachmentId": "vanguard-onslaught",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-synaptic-channelling",
+        "detachmentId": "synaptic-nexus",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-the-smothering-shadow",
+        "detachmentId": "synaptic-nexus",
+        "state": "match"
+      },
+      {
+        "ruleId": "stratagem-unseen-lurkers",
+        "detachmentId": "vanguard-onslaught",
+        "state": "match"
+      },
+      {
+        "ruleId": "tunnel-network",
+        "detachmentId": "subterranean-assault",
+        "state": "match"
+      }
+    ],
     "unit-lictor": [
       {
         "ruleId": "core-stratagem-command-re-roll",

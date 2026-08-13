@@ -82296,6 +82296,37 @@
       ],
       "mentions": []
     },
+    "tyranids-ability-alpha-invader": {
+      "id": "tyranids-ability-alpha-invader",
+      "kind": "datasheet-ability",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Alpha Invader"
+      },
+      "summary": {
+        "en": "Weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability."
+      },
+      "definition": {
+        "en": "Weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-hyperadapted-raveners"
+      },
+      "fullRulePath": "books/tyranids/reader.html#unit-hyperadapted-raveners",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
     "tyranids-ability-alpha-leader": {
       "id": "tyranids-ability-alpha-leader",
       "kind": "datasheet-ability",
@@ -83313,6 +83344,37 @@
         "locator": "unit-deathleaper"
       },
       "fullRulePath": "books/tyranids/reader.html#unit-deathleaper",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
+    "tyranids-ability-hypersensory-array": {
+      "id": "tyranids-ability-hypersensory-array",
+      "kind": "datasheet-ability",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Hypersensory Array"
+      },
+      "summary": {
+        "en": "Once per battle round, you can target this unit with the Rapid Ingress/Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: - That use is -1 CP. - That use does not prevent any uses of that stratagem on other units this phase."
+      },
+      "definition": {
+        "en": "Once per battle round, you can target this unit with the Rapid Ingress/Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do: - That use is -1 CP. - That use does not prevent any uses of that stratagem on other units this phase."
+      },
+      "structured": {},
+      "presentation": "atomic",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-hyperadapted-raveners"
+      },
+      "fullRulePath": "books/tyranids/reader.html#unit-hyperadapted-raveners",
       "status": "provisional",
       "sourceRefs": [
         "tyranids"
@@ -90064,6 +90126,46 @@
       ],
       "mentions": []
     },
+    "tyranids-weapon-prime-claws-and-talons": {
+      "id": "tyranids-weapon-prime-claws-and-talons",
+      "kind": "weapon",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Prime claws and talons"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 6 · WS 3+ · S 5 · AP -2 · D 2 · Anti-Monster 5+, Anti-Vehicle 5+, Twin-linked"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 6 · WS 3+ · S 5 · AP -2 · D 2 · Anti-Monster 5+, Anti-Vehicle 5+, Twin-linked"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "6",
+          "WS": "3+",
+          "S": "5",
+          "AP": "-2",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-hyperadapted-raveners"
+      },
+      "fullRulePath": "books/tyranids/reader.html#unit-hyperadapted-raveners",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
     "tyranids-weapon-prime-talons": {
       "id": "tyranids-weapon-prime-talons",
       "kind": "weapon",
@@ -90378,6 +90480,46 @@
         "locator": "unit-raveners"
       },
       "fullRulePath": "books/tyranids/reader.html#unit-raveners",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
+    "tyranids-weapon-ravener-heavy-claws-and-talons": {
+      "id": "tyranids-weapon-ravener-heavy-claws-and-talons",
+      "kind": "weapon",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Ravener heavy claws and talons"
+      },
+      "summary": {
+        "en": "Melee · Melee · A 3 · WS 3+ · S 5 · AP -2 · D 2 · Anti-Monster 5+, Anti-Vehicle 5+, Twin-linked"
+      },
+      "definition": {
+        "en": "Melee · Melee · A 3 · WS 3+ · S 5 · AP -2 · D 2 · Anti-Monster 5+, Anti-Vehicle 5+, Twin-linked"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "Melee",
+          "A": "3",
+          "WS": "3+",
+          "S": "5",
+          "AP": "-2",
+          "D": "2"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-hyperadapted-raveners"
+      },
+      "fullRulePath": "books/tyranids/reader.html#unit-hyperadapted-raveners",
       "status": "provisional",
       "sourceRefs": [
         "tyranids"
@@ -91858,6 +92000,46 @@
         "locator": "unit-winged-hive-tyrant"
       },
       "fullRulePath": "books/tyranids/reader.html#unit-winged-hive-tyrant",
+      "status": "provisional",
+      "sourceRefs": [
+        "tyranids"
+      ],
+      "mentions": []
+    },
+    "tyranids-weapon-venom-bolt": {
+      "id": "tyranids-weapon-venom-bolt",
+      "kind": "weapon",
+      "scope": "tyranids",
+      "edition": "11e",
+      "language": "en",
+      "title": {
+        "en": "Venom bolt"
+      },
+      "summary": {
+        "en": "Ranged · 12\" · A D6+3 · BS N/A · S 6 · AP -1 · D 1 · Assault, Ignores Cover, Torrent"
+      },
+      "definition": {
+        "en": "Ranged · 12\" · A D6+3 · BS N/A · S 6 · AP -1 · D 1 · Assault, Ignores Cover, Torrent"
+      },
+      "structured": {
+        "weapon": {
+          "Range": "12\"",
+          "A": "D6+3",
+          "BS": "N/A",
+          "S": "6",
+          "AP": "-1",
+          "D": "1"
+        }
+      },
+      "presentation": "profile",
+      "aliases": [],
+      "related": [],
+      "canonicalSource": {
+        "documentId": "tyranids-codex-transcription",
+        "revision": "pinned BSData",
+        "locator": "unit-hyperadapted-raveners"
+      },
+      "fullRulePath": "books/tyranids/reader.html#unit-hyperadapted-raveners",
       "status": "provisional",
       "sourceRefs": [
         "tyranids"

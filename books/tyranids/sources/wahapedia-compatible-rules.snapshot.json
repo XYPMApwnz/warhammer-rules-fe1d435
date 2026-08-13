@@ -119,6 +119,15 @@
       "core-stratagem-insane-bravery",
       "core-stratagem-rapid-ingress"
     ],
+    "unit-hyperadapted-raveners": [
+      "core-stratagem-command-re-roll",
+      "core-stratagem-counteroffensive",
+      "core-stratagem-epic-challenge",
+      "core-stratagem-fire-overwatch",
+      "core-stratagem-heroic-intervention",
+      "core-stratagem-insane-bravery",
+      "core-stratagem-rapid-ingress"
+    ],
     "unit-lictor": [
       "core-stratagem-command-re-roll",
       "core-stratagem-counteroffensive",
@@ -427,7 +436,7 @@
       "core-stratagem-rapid-ingress"
     ]
   },
-  "retrievedAt": "2026-08-09",
+  "retrievedAt": "2026-08-13",
   "schema": "wahapedia-compatible-rules-snapshot/v1",
   "source": {
     "edition": "11",
@@ -765,6 +774,31 @@
       "stratagem-synaptic-goading",
       "stratagem-teeming-masses",
       "stratagem-unending-waves",
+      "tunnel-network"
+    ],
+    "unit-hyperadapted-raveners": [
+      "enfilading-emergence",
+      "replenishing-swarms",
+      "retreat-below",
+      "stratagem-adrenal-surge",
+      "stratagem-assassin-beasts",
+      "stratagem-death-frenzy",
+      "stratagem-hypersensory-scillia",
+      "stratagem-imperative-dominance",
+      "stratagem-invisible-hunter",
+      "stratagem-irresistible-will",
+      "stratagem-override-instincts",
+      "stratagem-overrun",
+      "stratagem-predatory-imperative",
+      "stratagem-rapacious-hunger",
+      "stratagem-rapid-regeneration",
+      "stratagem-reinforced-hive-node",
+      "stratagem-secure-biomass",
+      "stratagem-seeded-broods",
+      "stratagem-surprise-assault",
+      "stratagem-synaptic-channelling",
+      "stratagem-the-smothering-shadow",
+      "stratagem-unseen-lurkers",
       "tunnel-network"
     ],
     "unit-lictor": [

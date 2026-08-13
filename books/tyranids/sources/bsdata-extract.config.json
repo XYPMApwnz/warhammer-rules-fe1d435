@@ -146,6 +146,9 @@
         }
       }
     },
+    "Hyperadapted Raveners": {
+      "sourceLayer": "faction-pack"
+    },
     "Neurogaunts": {
       "abilities": {
         "Neurocytes": {
@@ -239,8 +242,7 @@
       "Hierophant",
       "Malanthrope",
       "Scythed Hierodule",
-      "Sky-slasher Swarms",
-      "Hyperadapted Raveners"
+      "Sky-slasher Swarms"
     ],
     "excludeNamePatterns": [
       "\\[Crucible\\]$",

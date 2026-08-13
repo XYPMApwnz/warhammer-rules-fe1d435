@@ -9,13 +9,14 @@
   if(!roster?.units?.length||faction!=='space marines')return;
   const unitTitles=new Set(roster.units.map(unit=>normalize(unit.name)));
   const detachmentTitles=new Set((roster.detachments||[{label:roster.detachment}]).map(item=>normalize(item?.label||item?.name)).filter(Boolean));
-  const unitIds=[],detachmentIds=[];
-  document.querySelectorAll('.unit-card[data-unit-title]').forEach(card=>{if(unitTitles.has(normalize(card.dataset.unitTitle)))unitIds.push(card.id);else card.remove();});
+  const unitIds=[],detachmentIds=[],selected=new Map();
+  document.querySelectorAll('.unit-card[data-unit-title]').forEach(card=>{const units=roster.units.filter(unit=>normalize(unit.name)===normalize(card.dataset.unitTitle));if(units.length){unitIds.push(card.id);selected.set(card.id,units);window.WHBookRosterEnhancements?.decorate(card,roster,units);}else card.remove();});
   document.querySelectorAll('section.content-group.detachment').forEach(section=>{const title=section.querySelector('.category-title')?.childNodes[0]?.textContent;if(detachmentTitles.has(normalize(title))){detachmentIds.push(section.id.replace(/^detachment-/,''));return;}section.remove();});
   document.querySelectorAll('section.content-group[id^="datasheets-"]').forEach(section=>{if(!section.querySelector('.unit-card'))section.remove();});
   document.querySelectorAll('[data-nav-id^="unit-"]').forEach(item=>{if(!unitIds.includes(item.dataset.navId))item.remove();});
   document.querySelectorAll('[data-nav-id^="detachment-"]').forEach(item=>{if(!detachmentIds.includes(item.dataset.navId.replace(/^detachment-/,'')))item.remove();});
   [...document.querySelectorAll('.toc-panel details')].reverse().forEach(group=>{if(!group.querySelector('a[href]'))group.remove();});
-  window.SM_ROSTER_GUIDE=window.WH_ARMY_ROSTER_GUIDE={rosterId,unitIds,unitTitles,detachmentIds};
+  const enhancementRuleIdsByUnitId=Object.fromEntries([...selected].map(([cardId,units])=>[cardId,window.WHBookRosterEnhancements?.assignedRuleIds(roster,units)||[]]));
+  window.SM_ROSTER_GUIDE=window.WH_ARMY_ROSTER_GUIDE={rosterId,unitIds,unitTitles,detachmentIds,enhancementRuleIdsByUnitId};
   document.documentElement.dataset.rosterGuide='space-marines';
 })();

@@ -6,6 +6,7 @@
   const ecBook=()=>root.document?.documentElement?.dataset.bookId==='emperors-children'||/\/books\/emperors-children\//.test(root.location?.pathname||'');
   const tyranidsBook=()=>root.document?.documentElement?.dataset.bookId==='tyranids'||/\/books\/tyranids\//.test(root.location?.pathname||'');
   const csmBook=()=>root.document?.documentElement?.dataset.bookId==='chaos-space-marines'||/\/books\/chaos-space-marines\//.test(root.location?.pathname||'');
+  const smBook=()=>root.document?.documentElement?.dataset.bookId==='space-marines'||/\/books\/space-marines\//.test(root.location?.pathname||'');
   const unsafeWeaponTargets=new Set(['thermoneutronic projector','plasma accelerator rifle','supernova launcher']);
   const tauEffects=new Map([
     ['negation emitters upgrade','detection-range-minus-3'],
@@ -391,11 +392,19 @@
     for(const entry of ownership.unresolved){const article=csmArticle(entry,resolveCsmItem(entry,roster),'This Enhancement was not assigned because its owner could not be resolved to an exact roster unit.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
     return ownership.cardEnhancements;
   }
+  function decorateSm(card,roster,units){
+    const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];const ownership=resolveTauOwnership(roster,units);
+    if(ownership.instances.length>1){renderCsmInstances(card,ownership,roster);return ownership.instances.flatMap(instance=>instance.enhancements);}
+    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;list.prepend(csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.'));}
+    for(const entry of ownership.unresolved){const article=csmArticle(entry,resolveCsmItem(entry,roster),'This Enhancement was not assigned because its owner could not be resolved to an exact roster unit.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
+    return ownership.cardEnhancements;
+  }
   function decorate(card,roster,units){
     if(tauBook())return decorateTau(card,roster,units);
     if(ecBook())return decorateEc(card,roster,units);
     if(tyranidsBook())return decorateTyranids(card,roster,units);
     if(csmBook())return decorateCsm(card,roster,units);
+    if(smBook())return decorateSm(card,roster,units);
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];
     const unitIds=new Set((units||[]).map(unit=>unit.id));
     const owned=(roster?.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&unitIds.has(item.ownerUnitId));
@@ -411,5 +420,5 @@
     }
     return owned;
   }
-  root.WHBookRosterEnhancements=Object.freeze({decorate,assignedRuleIds(roster,units){return csmBook()?[...new Set(csmAssignments(roster,units).filter(item=>item.status==='resolved').map(item=>item.item.ruleId))]:[];}});
+  root.WHBookRosterEnhancements=Object.freeze({decorate,assignedRuleIds(roster,units){return csmBook()||smBook()?[...new Set(csmAssignments(roster,units).filter(item=>item.status==='resolved').map(item=>item.item.ruleId))]:[];}});
 }(typeof window==='undefined'?globalThis:window));

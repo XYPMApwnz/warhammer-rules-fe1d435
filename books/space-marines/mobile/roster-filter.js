@@ -11,9 +11,11 @@
   const unitTitles=new Set(roster.units.map(unit=>normalize(unit.name)));
   const detachmentTitles=new Set((roster.detachments||[{label:roster.detachment}]).map(item=>normalize(item?.label||item?.name)).filter(Boolean));
   const detachmentSlugs=new Set([...detachmentTitles].map(slug));
+  const unit=document.querySelector('.unit-card'),entryUnits=unit?roster.units.filter(item=>normalize(item.name)===normalize(unit.dataset.unitTitle)):[],enhancementRuleIds=window.WHBookRosterEnhancements?.assignedRuleIds(roster,entryUnits)||[];
   document.querySelectorAll('#mobileNav a[href]').forEach(link=>{const target=new URL(link.href,location.href),file=target.pathname.split('/').pop()?.replace(/\.html$/,''),title=normalize(link.childNodes[0]?.textContent);if(target.pathname.includes('/books/space-marines/mobile/')&&!['index','army-rules','updates'].includes(file)&&!unitTitles.has(title)&&!detachmentTitles.has(title))link.remove();});
   [...document.querySelectorAll('#mobileNav details')].reverse().forEach(group=>{if(!group.querySelector('a[href]'))group.remove();});
   document.querySelectorAll('a[href]').forEach(link=>{const target=new URL(link.href,location.href);if(target.pathname.includes('/books/space-marines/')&&target.pathname.endsWith('.html')){target.search=location.search;link.href=target.href;}});
-  window.SM_ROSTER_GUIDE=window.WH_ARMY_ROSTER_GUIDE={rosterId,unitTitles,detachmentIds:[...detachmentSlugs]};
+  if(unit&&entryUnits.length)window.WHBookRosterEnhancements?.decorate(unit,roster,entryUnits);
+  window.SM_ROSTER_GUIDE=window.WH_ARMY_ROSTER_GUIDE={rosterId,unitTitles,detachmentIds:[...detachmentSlugs],entryUnits,enhancementRuleIds};
   document.documentElement.dataset.rosterGuide='space-marines';
 })();

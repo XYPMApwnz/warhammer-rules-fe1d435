@@ -101,5 +101,13 @@ assert.match(runtime,/relatedDetachment/,'Phone runtime must support determinist
 assert.match(runtime,/BAPhonePopups/,'Phone runtime must use the book-local popup controller');
 assert.match(popupRuntime,/BAPhonePopups/,'popup controller must expose the matching book-local API');
 assert.match(popupRuntime,/termPopupStack|PhonePopupController/,'popup controller must support glossary popup stacks');
+const dreadnought=read(path.join(here,'death-company-dreadnought.html'));
+const boltRifles=read(path.join(here,'death-company-marines-with-bolt-rifles.html'));
+const priest=read(path.join(here,'sanguinary-priest.html'));
+const lost=read(path.join(here,'the-lost-brethren.html'));
+assert.match(dreadnought,/surge move of up to D6\+2&quot;/,'official Driven by Fury update must reach Phone');
+assert.match(boltRifles,/re-roll Charge rolls[\s\S]*Heroic Intervention stratagem[\s\S]*‑1 CP/,'official Visions of Heresy update must reach Phone');
+assert.match(priest,/id="sanguinary-priest-support"[\s\S]*<h4>Support<\/h4>/,'Sanguinary Priest Support relation must reach Phone');
+assert.match(lost,/BATTLELINE[\s\S]*DOOMED[\s\S]*cannot include any ADEPTUS ASTARTES units drawn from any other Chapter/,'Lost Brethren rule-bearing metadata must reach Phone');
 
 console.log(`Blood Angels Phone QA passed: ${expectedFiles.size} routes, ${detachments.length} Detachments, ${localIds.length} local and ${sharedIds.length} shared datasheets.`);

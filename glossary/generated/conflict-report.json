@@ -1,7 +1,7 @@
 {
   "schema": 2,
   "counts": {
-    "terms": 2584,
+    "terms": 2583,
     "aliases": 662,
     "definitionCandidates": 60,
     "summaryCandidates": 62,
@@ -1806,8 +1806,7 @@
         "space-marines-weapon-heavy-bolt-pistol",
         "space-marines-weapon-heavy-bolt-pistol-2",
         "blood-angels-weapon-heavy-bolt-pistol",
-        "blood-angels-weapon-heavy-bolt-pistol-2",
-        "blood-angels-weapon-heavy-bolt-pistol-3"
+        "blood-angels-weapon-heavy-bolt-pistol-2"
       ],
       "status": "review-required"
     },
@@ -2456,9 +2455,16 @@
     },
     {
       "termIds": [
+        "emperors-children-weapon-bolt-pistol",
+        "blood-angels-weapon-bolt-pistol"
+      ],
+      "status": "review-required"
+    },
+    {
+      "termIds": [
         "emperors-children-weapon-plasma-pistol-standard",
         "space-marines-weapon-plasma-pistol-standard",
-        "blood-angels-weapon-plasma-pistol-standard"
+        "blood-angels-weapon-plasma-pistol-standard-2"
       ],
       "status": "review-required"
     },
@@ -2466,7 +2472,7 @@
       "termIds": [
         "emperors-children-weapon-plasma-pistol-supercharge",
         "space-marines-weapon-plasma-pistol-supercharge",
-        "blood-angels-weapon-plasma-pistol-supercharge"
+        "blood-angels-weapon-plasma-pistol-supercharge-2"
       ],
       "status": "review-required"
     },
@@ -2593,7 +2599,7 @@
     {
       "termIds": [
         "space-marines-weapon-heavy-bolt-pistol",
-        "blood-angels-weapon-heavy-bolt-pistol-3"
+        "blood-angels-weapon-heavy-bolt-pistol-2"
       ],
       "status": "review-required"
     },
@@ -2615,13 +2621,6 @@
       "termIds": [
         "space-marines-weapon-thunder-hammer",
         "blood-angels-weapon-thunder-hammer"
-      ],
-      "status": "review-required"
-    },
-    {
-      "termIds": [
-        "space-marines-weapon-bolt-pistol",
-        "blood-angels-weapon-bolt-pistol"
       ],
       "status": "review-required"
     },

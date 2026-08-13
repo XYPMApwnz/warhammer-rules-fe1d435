@@ -50,12 +50,13 @@ MFM_DETACHMENTS = [
 
 def clean(value: str) -> str:
     value = value.replace("\ufffd", ".").replace("\u00ad", "").replace("\r\n", "\n")
-    value = value.replace("Y our", "Your").replace("Y ou", "You").replace("T arget", "Target")
+    value = value.replace("Y our", "Your").replace("Y ou", "You").replace("T arget", "Target").replace("C hange", "Change")
     return re.sub(r"\n{3,}", "\n\n", re.sub(r"[ \t]+\n", "\n", value)).strip()
 
 
 def flat(value: str) -> str:
-    return re.sub(r"\s+([.,;:])", r"\1", re.sub(r"\s+", " ", clean(value).replace("\n", " "))).strip()
+    value = re.sub(r"\s+([.,;:])", r"\1", re.sub(r"\s+", " ", clean(value).replace("\n", " "))).strip()
+    return re.sub(r"\.{2}$", ".", value)
 
 
 def comparable(value: str) -> str:

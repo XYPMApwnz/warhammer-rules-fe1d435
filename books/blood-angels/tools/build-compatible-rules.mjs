@@ -57,7 +57,7 @@ export function inputs(){
 
 export function buildCompatibleRules({config,pack,parity,codex,points,contracts,spaceMarines}){
   const excluded=new Set(config.dependencyDatasheets.excludeAnyKeywords.map(keyword));
-  const local=codex.datasheets,shared=spaceMarines.datasheets.filter(unit=>!(unit.keywords||[]).some(item=>excluded.has(keyword(item))));
+  const local=codex.datasheets,shared=spaceMarines.datasheets.filter(unit=>!(unit.keywords||[]).some(item=>excluded.has(keyword(item)))).map(unit=>({...unit,keywords:[...new Set([...(unit.keywords||[]),'ADEPTUS ASTARTES'])]}));
   const localIds=new Set(local.map(unit=>unit.id)),collisions=shared.filter(unit=>localIds.has(unit.id));
   if(local.length!==15||shared.length!==82||collisions.length)throw new Error(`Expected 15 local and 82 shared Datasheets with no collisions; found ${local.length}, ${shared.length} and ${collisions.length}`);
   const units=[...local,...shared],rows=new Map(units.map(unit=>[unit.id,new Map()]));

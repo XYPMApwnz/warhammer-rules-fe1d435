@@ -388,6 +388,7 @@ for(const unit of parsed){
     const name=correction.weaponNames?.[weapon.name];
     if(name)weapon.name=name;
   }
+  unit.weapons=unique(unit.weapons,weapon=>[weapon.name,weapon.mode,weapon.range,weapon.a,weapon.skill,weapon.s,weapon.ap,weapon.d,weapon.abilities].map(key).join('|'));
 }
 const duplicates=parsed.filter((item,index)=>parsed.findIndex(other=>other.id===item.id)!==index);
 if(duplicates.length)throw new Error(`Duplicate datasheet ids: ${duplicates.map(item=>item.id).join(', ')}`);
@@ -487,9 +488,7 @@ if(config.outputs.officialPoints){
         if(separateLeaderRelation&&datasheet){
           if(relationRole==='support')datasheet.relations.leader=[];
           datasheet.relations[relationRole]=targets;
-          datasheet.abilities=datasheet.abilities.filter(item=>key(item.title)!=='leader'||relationTargets(item.text).length===0);
-          const support=datasheet.abilities.find(item=>relationRole==='support'&&key(item.title)==='support');
-          if(support)support.text=text;
+          datasheet.abilities=datasheet.abilities.filter(item=>!['leader','support'].includes(key(item.title))||!/^this (?:model|unit) can be attached to/i.test(item.text));
         }else{
           const ability=datasheet?.abilities.find(item=>key(item.title)==='leader');
           if(ability)ability.text=text;

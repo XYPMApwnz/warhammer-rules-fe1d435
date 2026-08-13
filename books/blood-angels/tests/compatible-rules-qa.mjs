@@ -17,5 +17,7 @@ assert.equal(detachments.length,8);
 assert.ok(rows.length,'Compatible Rules matrix is empty');
 assert.deepEqual(new Set(rows.filter(row=>row.scope!=='core').map(row=>row.ruleId)),factionRules);
 assert.equal(new Set(rows.filter(row=>row.scope==='core').map(row=>row.ruleId)).size,10);
+for(const id of ['liberator-assault-group-armour-of-contempt','savage-echoes','the-lost-brethren-armour-of-contempt','the-angelic-host-armour-of-contempt','unbridled-ardour'])assert.ok(rows.filter(row=>row.ruleId===id).length>32,`${id} must not be restricted to a Character or effect-recipient keyword`);
+assert.ok(generated.units['unit-drop-pod'].some(row=>row.ruleId==='angelic-grace'),'Drop Pod must retain Blood Angels ADEPTUS ASTARTES applicability');
 for(const row of rows.filter(item=>item.scope!=='core'))assert.ok(detachmentIds.has(row.detachmentId),`Unknown Detachment ${row.detachmentId}`);
 console.log(`Blood Angels Compatible Rules QA passed: 97 Datasheets, ${rows.length} deterministic rows and 8 Detachments.`);

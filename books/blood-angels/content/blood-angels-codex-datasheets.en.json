@@ -3,10 +3,10 @@
   "source": {
     "title": "BSData Warhammer 40,000 11th Edition · Blood Angels",
     "repository": "https://github.com/BSData/wh40k-11e",
-    "commit": "e120e146c960a171f7c0599ec8e055e75d597c56",
+    "commit": "d5af57cf1e79b0b038133e84e58de334fea852d0",
     "revision": "1",
-    "url": "https://github.com/BSData/wh40k-11e/blob/e120e146c960a171f7c0599ec8e055e75d597c56/Imperium%20-%20Blood%20Angels.json",
-    "snapshotSha256": "38830F22198BD34AD3207492EE59EA5B898D375ED290673A4C17B2C90DC85360"
+    "url": "https://github.com/BSData/wh40k-11e/blob/d5af57cf1e79b0b038133e84e58de334fea852d0/Imperium%20-%20Blood%20Angels.json",
+    "snapshotSha256": "EE1134C6C261527195B42F38A38AB1665743483DA140B4C42DDB6D193F9E11D0"
   },
   "datasheets": [
     {
@@ -217,7 +217,7 @@
           "s": "4",
           "ap": "-1",
           "d": "1",
-          "abilities": ""
+          "abilities": "Pistol"
         },
         {
           "name": "Inferno pistol",
@@ -242,7 +242,7 @@
         },
         {
           "title": "Black Rage",
-          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
         },
         {
           "title": "Feel No Pain 6+",
@@ -354,7 +354,7 @@
           "s": "4",
           "ap": "-1",
           "d": "1",
-          "abilities": ""
+          "abilities": "Pistol"
         },
         {
           "name": "Hand flamer",
@@ -372,7 +372,7 @@
           "mode": "ranged",
           "range": "12\"",
           "a": "1",
-          "skill": "3+",
+          "skill": "2+",
           "s": "8",
           "ap": "-3",
           "d": "2",
@@ -383,7 +383,7 @@
           "mode": "ranged",
           "range": "12\"",
           "a": "1",
-          "skill": "3+",
+          "skill": "2+",
           "s": "7",
           "ap": "-2",
           "d": "1",
@@ -401,7 +401,7 @@
         },
         {
           "title": "Black Rage",
-          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
         },
         {
           "title": "Feel No Pain 6+",
@@ -514,10 +514,6 @@
         },
         {
           "title": "Support",
-          "text": "This model can be attached to the following units: Assault Intercessor Squad, Bladeguard Veteran Squad, Desolation Squad, Devastator Squad, Hellblaster Squad, Infernus Squad, Intercessor Squad, Sternguard Veteran Squad, Tactical Squad."
-        },
-        {
-          "title": "Support",
           "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. \nUnless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it."
         }
       ],
@@ -613,10 +609,6 @@
         },
         {
           "title": "Leader",
-          "text": "This model can be attached to the following unit:\n\n■ Death Company Marines with Jump Packs"
-        },
-        {
-          "title": "Leader",
           "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it."
         },
         {
@@ -636,7 +628,8 @@
         "Chaplain",
         "Adeptus Astartes",
         "Blood Angels",
-        "Astorath"
+        "Astorath",
+        "Tacticus"
       ],
       "composition": [
         {
@@ -776,7 +769,8 @@
         "Psyker",
         "Adeptus Astartes",
         "Blood Angels",
-        "Chief Librarian Mephiston"
+        "Chief Librarian Mephiston",
+        "Imperium"
       ],
       "composition": [
         {
@@ -968,10 +962,6 @@
         },
         {
           "title": "Leader",
-          "text": "This model can be attached to the following unit:\n\n■ Death Company Marines with Jump Packs"
-        },
-        {
-          "title": "Leader",
           "text": "Before the battle, in the Muster Armies step, for each leader and support unit in your army, you can select one friendly bodyguard unit that unit can lead. That unit will then lead that bodyguard unit for the battle and form an attached unit with it. Unless otherwise stated, each bodyguard unit can only have one leader unit and one support unit attached to it."
         },
         {
@@ -995,7 +985,8 @@
         "Lemartes",
         "Adeptus Astartes",
         "Blood Angels",
-        "Jump Pack"
+        "Jump Pack",
+        "Tacticus"
       ],
       "composition": [
         {
@@ -1066,7 +1057,7 @@
         },
         {
           "title": "Miraculous Saviour",
-          "text": "Once per battle, in your opponent's Charge phase, after an enemy unit has finished a Charge move, if this model is still in Reserves, it can use this ability. If it does, set this model up on the battlefield within Engagement Range of that enemy unit and more than 3\\\" horizontally away from all other enemy units."
+          "text": "(Once per battle, per army) At the end of your opponent's Charge phase (excluding the first battle round), you can select one enemy unit that made a charge move this phase. This unit can make an ingress move and must be set up engaged with that enemy unit. That move does not prevent this unit from being eligible to move."
         },
         {
           "title": "Lone Operative",
@@ -1091,7 +1082,8 @@
         "Jump Pack",
         "The Sanguinor",
         "Adeptus Astartes",
-        "Blood Angels"
+        "Blood Angels",
+        "Tacticus"
       ],
       "composition": [
         {
@@ -1119,24 +1111,34 @@
       "category": "Infantry",
       "points": [
         {
-          "label": "5 models",
+          "label": "1st to 2nd · 5 models",
           "value": 85,
           "minModels": 5,
-          "maxModels": 5
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 5 models",
-          "value": 95
-        },
-        {
-          "label": "6 models",
+          "label": "1st to 2nd · 10 models",
           "value": 160,
-          "minModels": 6,
-          "maxModels": 6
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 6 models",
-          "value": 170
+          "label": "3rd + · 5 models",
+          "value": 95,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 10 models",
+          "value": 170,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
       "profiles": [
@@ -1277,7 +1279,7 @@
         },
         {
           "title": "Black Rage",
-          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
         },
         {
           "title": "Feel No Pain 6+",
@@ -1323,24 +1325,34 @@
       "category": "Infantry",
       "points": [
         {
-          "label": "5 models",
+          "label": "1st to 2nd · 5 models",
           "value": 80,
           "minModels": 5,
-          "maxModels": 5
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 5 models",
-          "value": 90
-        },
-        {
-          "label": "6 models",
+          "label": "1st to 2nd · 10 models",
           "value": 155,
-          "minModels": 6,
-          "maxModels": 6
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 6 models",
-          "value": 165
+          "label": "3rd + · 5 models",
+          "value": 90,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 10 models",
+          "value": 165,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
       "profiles": [
@@ -1401,7 +1413,7 @@
           "s": "4",
           "ap": "0",
           "d": "1",
-          "abilities": "Close-Quarters"
+          "abilities": "Pistol"
         },
         {
           "name": "Close combat weapon",
@@ -1424,17 +1436,6 @@
           "ap": "-2",
           "d": "2",
           "abilities": "Sustained Hits 1"
-        },
-        {
-          "name": "Close Combat Weapon",
-          "mode": "melee",
-          "range": "Melee",
-          "a": "3",
-          "skill": "3+",
-          "s": "4",
-          "ap": "0",
-          "d": "1",
-          "abilities": ""
         },
         {
           "name": "Power Fist",
@@ -1532,11 +1533,11 @@
         },
         {
           "title": "Visions of Heresy",
-          "text": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\\\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\\\"."
+          "text": "This unit can re-roll Charge rolls. When you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is ‑1 CP."
         },
         {
           "title": "Black Rage",
-          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
         },
         {
           "title": "Feel No Pain 6+",
@@ -1582,24 +1583,34 @@
       "category": "Infantry",
       "points": [
         {
-          "label": "5 models",
+          "label": "1st to 2nd · 5 models",
           "value": 120,
           "minModels": 5,
-          "maxModels": 5
+          "maxModels": 5,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 5 models",
-          "value": 135
-        },
-        {
-          "label": "6 models",
+          "label": "1st to 2nd · 10 models",
           "value": 230,
-          "minModels": 6,
-          "maxModels": 6
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 6 models",
-          "value": 245
+          "label": "3rd + · 5 models",
+          "value": 135,
+          "minModels": 5,
+          "maxModels": 5,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 10 models",
+          "value": 245,
+          "minModels": 10,
+          "maxModels": 10,
+          "minCopies": 3
         }
       ],
       "profiles": [
@@ -1729,7 +1740,7 @@
         },
         {
           "title": "Black Rage",
-          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
         },
         {
           "title": "Feel No Pain 6+",
@@ -1780,24 +1791,34 @@
       "category": "Infantry",
       "points": [
         {
-          "label": "3 models",
+          "label": "1st to 2nd · 3 models",
           "value": 125,
           "minModels": 3,
-          "maxModels": 3
+          "maxModels": 3,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 3 models",
-          "value": 145
-        },
-        {
-          "label": "4 models",
+          "label": "1st to 2nd · 6 models",
           "value": 260,
-          "minModels": 4,
-          "maxModels": 4
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 1,
+          "maxCopies": 2
         },
         {
-          "label": "3+ unit: 4 models",
-          "value": 280
+          "label": "3rd + · 3 models",
+          "value": 145,
+          "minModels": 3,
+          "maxModels": 3,
+          "minCopies": 3
+        },
+        {
+          "label": "3rd + · 6 models",
+          "value": 280,
+          "minModels": 6,
+          "maxModels": 6,
+          "minCopies": 3
         }
       ],
       "profiles": [
@@ -1893,7 +1914,8 @@
         "Adeptus Astartes",
         "Blood Angels",
         "Sanguinary Guard",
-        "Jump Pack"
+        "Jump Pack",
+        "Tacticus"
       ],
       "composition": [
         {
@@ -1942,7 +1964,7 @@
             "Ld": "6+",
             "OC": "3",
             "Invulnerable": "",
-            "Base": "Use model"
+            "Base": "Hull"
           }
         }
       ],
@@ -2182,7 +2204,7 @@
       "abilities": [
         {
           "title": "Driven by Fury",
-          "text": "Each time an enemy unit targets this unit, after that unit has finished making its attacks, if this unit lost one or more wounds as a result of those attacks, this unit can make a Normal move of up to 3\\\"."
+          "text": "In your opponent's Shooting phase, when an enemy unit has shot, if this model lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\"."
         },
         {
           "title": "Damaged: 1-4 Wounds Remaining",
@@ -2190,7 +2212,7 @@
         },
         {
           "title": "Black Rage",
-          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’"
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
         },
         {
           "title": "Deadly Demise D3",

@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "verifiedAt": "2026-08-12",
+  "verifiedAt": "2026-08-13",
   "layers": [
     {
       "id": "faction-pack-v1.1",
@@ -26,7 +26,7 @@
       "capturedAt": "2026-08-12",
       "url": "https://mfm.warhammer-community.com/en/blood-angels",
       "localFile": "official-mfm-v1.2.json",
-      "captureSha256": "FE1FF0A0F41C2F6D6E2FDABB4EFF2E6B59CD8245A4EC36EC4A1BC23F960FAE4C",
+      "captureSha256": "7C71D30BB696EC9D2ADF243B7C1311A2A30A426A05E5C713A074FAF744269EA4",
       "status": "dated-capture"
     }
   ],

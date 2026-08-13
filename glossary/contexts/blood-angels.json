@@ -4938,7 +4938,9 @@
         "datasheet": "unit-blood-angels-captain",
         "statline": "blood-angels-captain-profile",
         "units": [
-          "unit-blood-angels-captain"
+          "unit-blood-angels-captain",
+          "unit-death-company-captain",
+          "unit-death-company-captain-with-jump-pack"
         ]
       }
     },
@@ -4997,19 +4999,6 @@
         ]
       }
     },
-    "blood-angels-weapon-heavy-bolt-pistol-2": {
-      "termId": "blood-angels-weapon-heavy-bolt-pistol-2",
-      "navigation": {
-        "glossary": "glossary-blood-angels-weapon-heavy-bolt-pistol-2",
-        "rule": "unit-death-company-captain",
-        "datasheet": "unit-death-company-captain",
-        "statline": "death-company-captain-profile",
-        "units": [
-          "unit-death-company-captain",
-          "unit-death-company-captain-with-jump-pack"
-        ]
-      }
-    },
     "blood-angels-ability-lost-to-fury": {
       "termId": "blood-angels-ability-lost-to-fury",
       "navigation": {
@@ -5058,9 +5047,7 @@
         "statline": "death-company-captain-with-jump-pack-profile",
         "units": [
           "unit-death-company-captain-with-jump-pack",
-          "unit-death-company-marines",
-          "unit-death-company-marines-with-bolt-rifles",
-          "unit-death-company-marines-with-jump-packs"
+          "unit-chief-librarian-mephiston"
         ]
       }
     },
@@ -5073,9 +5060,7 @@
         "statline": "death-company-captain-with-jump-pack-profile",
         "units": [
           "unit-death-company-captain-with-jump-pack",
-          "unit-death-company-marines",
-          "unit-death-company-marines-with-bolt-rifles",
-          "unit-death-company-marines-with-jump-packs"
+          "unit-chief-librarian-mephiston"
         ]
       }
     },
@@ -5215,30 +5200,6 @@
       "termId": "blood-angels-weapon-vitarus",
       "navigation": {
         "glossary": "glossary-blood-angels-weapon-vitarus",
-        "rule": "unit-chief-librarian-mephiston",
-        "datasheet": "unit-chief-librarian-mephiston",
-        "statline": "chief-librarian-mephiston-profile",
-        "units": [
-          "unit-chief-librarian-mephiston"
-        ]
-      }
-    },
-    "blood-angels-weapon-plasma-pistol-supercharge-2": {
-      "termId": "blood-angels-weapon-plasma-pistol-supercharge-2",
-      "navigation": {
-        "glossary": "glossary-blood-angels-weapon-plasma-pistol-supercharge-2",
-        "rule": "unit-chief-librarian-mephiston",
-        "datasheet": "unit-chief-librarian-mephiston",
-        "statline": "chief-librarian-mephiston-profile",
-        "units": [
-          "unit-chief-librarian-mephiston"
-        ]
-      }
-    },
-    "blood-angels-weapon-plasma-pistol-standard-2": {
-      "termId": "blood-angels-weapon-plasma-pistol-standard-2",
-      "navigation": {
-        "glossary": "glossary-blood-angels-weapon-plasma-pistol-standard-2",
         "rule": "unit-chief-librarian-mephiston",
         "datasheet": "unit-chief-librarian-mephiston",
         "statline": "chief-librarian-mephiston-profile",
@@ -5405,10 +5366,10 @@
         ]
       }
     },
-    "blood-angels-weapon-heavy-bolt-pistol-3": {
-      "termId": "blood-angels-weapon-heavy-bolt-pistol-3",
+    "blood-angels-weapon-heavy-bolt-pistol-2": {
+      "termId": "blood-angels-weapon-heavy-bolt-pistol-2",
       "navigation": {
-        "glossary": "glossary-blood-angels-weapon-heavy-bolt-pistol-3",
+        "glossary": "glossary-blood-angels-weapon-heavy-bolt-pistol-2",
         "rule": "unit-death-company-marines",
         "datasheet": "unit-death-company-marines",
         "statline": "death-company-marines-profile",
@@ -5430,6 +5391,34 @@
           "unit-death-company-marines-with-bolt-rifles",
           "unit-death-company-marines-with-jump-packs",
           "unit-sanguinary-guard"
+        ]
+      }
+    },
+    "blood-angels-weapon-plasma-pistol-supercharge-2": {
+      "termId": "blood-angels-weapon-plasma-pistol-supercharge-2",
+      "navigation": {
+        "glossary": "glossary-blood-angels-weapon-plasma-pistol-supercharge-2",
+        "rule": "unit-death-company-marines",
+        "datasheet": "unit-death-company-marines",
+        "statline": "death-company-marines-profile",
+        "units": [
+          "unit-death-company-marines",
+          "unit-death-company-marines-with-bolt-rifles",
+          "unit-death-company-marines-with-jump-packs"
+        ]
+      }
+    },
+    "blood-angels-weapon-plasma-pistol-standard-2": {
+      "termId": "blood-angels-weapon-plasma-pistol-standard-2",
+      "navigation": {
+        "glossary": "glossary-blood-angels-weapon-plasma-pistol-standard-2",
+        "rule": "unit-death-company-marines",
+        "datasheet": "unit-death-company-marines",
+        "statline": "death-company-marines-profile",
+        "units": [
+          "unit-death-company-marines",
+          "unit-death-company-marines-with-bolt-rifles",
+          "unit-death-company-marines-with-jump-packs"
         ]
       }
     },

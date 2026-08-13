@@ -109,7 +109,7 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
   },
   "carmine reliquary": {
     "title": "Carmine Reliquary",
-    "text": "This armoured casket contains the skull of a beloved Blood Angels Captain lost to the Black Rage. It is a potent talisman of unfaltering aggression. Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a Battle‑shock test for an Adeptus Astartes unit within 6\" of the bearer, you can re‑roll the result..",
+    "text": "This armoured casket contains the skull of a beloved Blood Angels Captain lost to the Black Rage. It is a potent talisman of unfaltering aggression. Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a Battle‑shock test for an Adeptus Astartes unit within 6\" of the bearer, you can re‑roll the result.",
     "value": 30,
     "detachment": "Rage-cursed Onslaught",
     "tags": [],

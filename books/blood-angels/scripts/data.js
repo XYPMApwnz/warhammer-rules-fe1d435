@@ -242,8 +242,8 @@ window.DG_TERMS={
   "blood-angels-enhancement-carmine-reliquary": {
     "id": "blood-angels-enhancement-carmine-reliquary",
     "title": "Carmine Reliquary",
-    "summary": "This armoured casket contains the skull of a beloved Blood Angels Captain lost to the Black Rage. It is a potent talisman of unfaltering aggression. Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a Battle‑shock test for an Adeptus Astartes unit within 6\" of the bearer, you can re‑roll the result..",
-    "full": "This armoured casket contains the skull of a beloved Blood Angels Captain lost to the Black Rage. It is a potent talisman of unfaltering aggression. Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a Battle‑shock test for an Adeptus Astartes unit within 6\" of the bearer, you can re‑roll the result..",
+    "summary": "This armoured casket contains the skull of a beloved Blood Angels Captain lost to the Black Rage. It is a potent talisman of unfaltering aggression. Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a Battle‑shock test for an Adeptus Astartes unit within 6\" of the bearer, you can re‑roll the result.",
+    "full": "This armoured casket contains the skull of a beloved Blood Angels Captain lost to the Black Rage. It is a potent talisman of unfaltering aggression. Chaplain model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a Battle‑shock test for an Adeptus Astartes unit within 6\" of the bearer, you can re‑roll the result.",
     "glossary": "glossary-blood-angels-enhancement-carmine-reliquary",
     "rule": "detachment-rage-cursed-onslaught"
   },
@@ -5331,7 +5331,9 @@ window.DG_TERMS={
     "glossary": "glossary-blood-angels-weapon-heavy-bolt-pistol",
     "rule": "unit-blood-angels-captain",
     "units": [
-      "unit-blood-angels-captain"
+      "unit-blood-angels-captain",
+      "unit-death-company-captain",
+      "unit-death-company-captain-with-jump-pack"
     ],
     "datasheet": "unit-blood-angels-captain",
     "statline": "blood-angels-captain-profile"
@@ -5380,8 +5382,8 @@ window.DG_TERMS={
   "blood-angels-ability-black-rage": {
     "id": "blood-angels-ability-black-rage",
     "title": "Black Rage",
-    "summary": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’",
-    "full": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.’",
+    "summary": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
+    "full": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0.",
     "glossary": "glossary-blood-angels-ability-black-rage",
     "rule": "unit-death-company-captain",
     "units": [
@@ -5391,20 +5393,6 @@ window.DG_TERMS={
       "unit-death-company-marines-with-bolt-rifles",
       "unit-death-company-marines-with-jump-packs",
       "unit-death-company-dreadnought"
-    ],
-    "datasheet": "unit-death-company-captain",
-    "statline": "death-company-captain-profile"
-  },
-  "blood-angels-weapon-heavy-bolt-pistol-2": {
-    "id": "blood-angels-weapon-heavy-bolt-pistol-2",
-    "title": "Heavy Bolt Pistol",
-    "summary": "Ranged · 18\" · A 1 · BS 2+ · S 4 · AP -1 · D 1",
-    "full": "Ranged · 18\" · A 1 · BS 2+ · S 4 · AP -1 · D 1",
-    "glossary": "glossary-blood-angels-weapon-heavy-bolt-pistol-2",
-    "rule": "unit-death-company-captain",
-    "units": [
-      "unit-death-company-captain",
-      "unit-death-company-captain-with-jump-pack"
     ],
     "datasheet": "unit-death-company-captain",
     "statline": "death-company-captain-profile"
@@ -5454,15 +5442,13 @@ window.DG_TERMS={
   "blood-angels-weapon-plasma-pistol-supercharge": {
     "id": "blood-angels-weapon-plasma-pistol-supercharge",
     "title": "➤ Plasma pistol - supercharge",
-    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol",
-    "full": "Ranged · 12\" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol",
+    "summary": "Ranged · 12\" · A 1 · BS 2+ · S 8 · AP -3 · D 2 · Hazardous, Pistol",
+    "full": "Ranged · 12\" · A 1 · BS 2+ · S 8 · AP -3 · D 2 · Hazardous, Pistol",
     "glossary": "glossary-blood-angels-weapon-plasma-pistol-supercharge",
     "rule": "unit-death-company-captain-with-jump-pack",
     "units": [
       "unit-death-company-captain-with-jump-pack",
-      "unit-death-company-marines",
-      "unit-death-company-marines-with-bolt-rifles",
-      "unit-death-company-marines-with-jump-packs"
+      "unit-chief-librarian-mephiston"
     ],
     "datasheet": "unit-death-company-captain-with-jump-pack",
     "statline": "death-company-captain-with-jump-pack-profile"
@@ -5470,15 +5456,13 @@ window.DG_TERMS={
   "blood-angels-weapon-plasma-pistol-standard": {
     "id": "blood-angels-weapon-plasma-pistol-standard",
     "title": "➤ Plasma pistol - standard",
-    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol",
-    "full": "Ranged · 12\" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol",
+    "summary": "Ranged · 12\" · A 1 · BS 2+ · S 7 · AP -2 · D 1 · Pistol",
+    "full": "Ranged · 12\" · A 1 · BS 2+ · S 7 · AP -2 · D 1 · Pistol",
     "glossary": "glossary-blood-angels-weapon-plasma-pistol-standard",
     "rule": "unit-death-company-captain-with-jump-pack",
     "units": [
       "unit-death-company-captain-with-jump-pack",
-      "unit-death-company-marines",
-      "unit-death-company-marines-with-bolt-rifles",
-      "unit-death-company-marines-with-jump-packs"
+      "unit-chief-librarian-mephiston"
     ],
     "datasheet": "unit-death-company-captain-with-jump-pack",
     "statline": "death-company-captain-with-jump-pack-profile"
@@ -5639,32 +5623,6 @@ window.DG_TERMS={
     "datasheet": "unit-chief-librarian-mephiston",
     "statline": "chief-librarian-mephiston-profile"
   },
-  "blood-angels-weapon-plasma-pistol-supercharge-2": {
-    "id": "blood-angels-weapon-plasma-pistol-supercharge-2",
-    "title": "➤ Plasma pistol - supercharge",
-    "summary": "Ranged · 12\" · A 1 · BS 2+ · S 8 · AP -3 · D 2 · Hazardous, Pistol",
-    "full": "Ranged · 12\" · A 1 · BS 2+ · S 8 · AP -3 · D 2 · Hazardous, Pistol",
-    "glossary": "glossary-blood-angels-weapon-plasma-pistol-supercharge-2",
-    "rule": "unit-chief-librarian-mephiston",
-    "units": [
-      "unit-chief-librarian-mephiston"
-    ],
-    "datasheet": "unit-chief-librarian-mephiston",
-    "statline": "chief-librarian-mephiston-profile"
-  },
-  "blood-angels-weapon-plasma-pistol-standard-2": {
-    "id": "blood-angels-weapon-plasma-pistol-standard-2",
-    "title": "➤ Plasma pistol - standard",
-    "summary": "Ranged · 12\" · A 1 · BS 2+ · S 7 · AP -2 · D 1 · Pistol",
-    "full": "Ranged · 12\" · A 1 · BS 2+ · S 7 · AP -2 · D 1 · Pistol",
-    "glossary": "glossary-blood-angels-weapon-plasma-pistol-standard-2",
-    "rule": "unit-chief-librarian-mephiston",
-    "units": [
-      "unit-chief-librarian-mephiston"
-    ],
-    "datasheet": "unit-chief-librarian-mephiston",
-    "statline": "chief-librarian-mephiston-profile"
-  },
   "blood-angels-ability-death-mask-of-sanguinius": {
     "id": "blood-angels-ability-death-mask-of-sanguinius",
     "title": "Death Mask of Sanguinius",
@@ -5785,8 +5743,8 @@ window.DG_TERMS={
   "blood-angels-ability-miraculous-saviour": {
     "id": "blood-angels-ability-miraculous-saviour",
     "title": "Miraculous Saviour",
-    "summary": "Once per battle, in your opponent's Charge phase, after an enemy unit has finished a Charge move, if this model is still in Reserves, it can use this ability. If it does, set this model up on the battlefield within Engagement Range of that enemy unit and more than 3\\\" horizontally away from all other enemy units.",
-    "full": "Once per battle, in your opponent's Charge phase, after an enemy unit has finished a Charge move, if this model is still in Reserves, it can use this ability. If it does, set this model up on the battlefield within Engagement Range of that enemy unit and more than 3\\\" horizontally away from all other enemy units.",
+    "summary": "(Once per battle, per army) At the end of your opponent's Charge phase (excluding the first battle round), you can select one enemy unit that made a charge move this phase. This unit can make an ingress move and must be set up engaged with that enemy unit. That move does not prevent this unit from being eligible to move.",
+    "full": "(Once per battle, per army) At the end of your opponent's Charge phase (excluding the first battle round), you can select one enemy unit that made a charge move this phase. This unit can make an ingress move and must be set up engaged with that enemy unit. That move does not prevent this unit from being eligible to move.",
     "glossary": "glossary-blood-angels-ability-miraculous-saviour",
     "rule": "unit-the-sanguinor",
     "units": [
@@ -5836,12 +5794,12 @@ window.DG_TERMS={
     "datasheet": "unit-death-company-marines",
     "statline": "death-company-marines-profile"
   },
-  "blood-angels-weapon-heavy-bolt-pistol-3": {
-    "id": "blood-angels-weapon-heavy-bolt-pistol-3",
+  "blood-angels-weapon-heavy-bolt-pistol-2": {
+    "id": "blood-angels-weapon-heavy-bolt-pistol-2",
     "title": "Heavy Bolt Pistol",
     "summary": "Ranged · 18\" · A 1 · BS 3+ · S 4 · AP -1 · D 1 · Pistol",
     "full": "Ranged · 18\" · A 1 · BS 3+ · S 4 · AP -1 · D 1 · Pistol",
-    "glossary": "glossary-blood-angels-weapon-heavy-bolt-pistol-3",
+    "glossary": "glossary-blood-angels-weapon-heavy-bolt-pistol-2",
     "rule": "unit-death-company-marines",
     "units": [
       "unit-death-company-marines",
@@ -5862,6 +5820,36 @@ window.DG_TERMS={
       "unit-death-company-marines-with-bolt-rifles",
       "unit-death-company-marines-with-jump-packs",
       "unit-sanguinary-guard"
+    ],
+    "datasheet": "unit-death-company-marines",
+    "statline": "death-company-marines-profile"
+  },
+  "blood-angels-weapon-plasma-pistol-supercharge-2": {
+    "id": "blood-angels-weapon-plasma-pistol-supercharge-2",
+    "title": "➤ Plasma pistol - supercharge",
+    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol",
+    "full": "Ranged · 12\" · A 1 · BS 3+ · S 8 · AP -3 · D 2 · Hazardous, Pistol",
+    "glossary": "glossary-blood-angels-weapon-plasma-pistol-supercharge-2",
+    "rule": "unit-death-company-marines",
+    "units": [
+      "unit-death-company-marines",
+      "unit-death-company-marines-with-bolt-rifles",
+      "unit-death-company-marines-with-jump-packs"
+    ],
+    "datasheet": "unit-death-company-marines",
+    "statline": "death-company-marines-profile"
+  },
+  "blood-angels-weapon-plasma-pistol-standard-2": {
+    "id": "blood-angels-weapon-plasma-pistol-standard-2",
+    "title": "➤ Plasma pistol - standard",
+    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol",
+    "full": "Ranged · 12\" · A 1 · BS 3+ · S 7 · AP -2 · D 1 · Pistol",
+    "glossary": "glossary-blood-angels-weapon-plasma-pistol-standard-2",
+    "rule": "unit-death-company-marines",
+    "units": [
+      "unit-death-company-marines",
+      "unit-death-company-marines-with-bolt-rifles",
+      "unit-death-company-marines-with-jump-packs"
     ],
     "datasheet": "unit-death-company-marines",
     "statline": "death-company-marines-profile"
@@ -5928,8 +5916,8 @@ window.DG_TERMS={
   "blood-angels-ability-visions-of-heresy": {
     "id": "blood-angels-ability-visions-of-heresy",
     "title": "Visions of Heresy",
-    "summary": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\\\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\\\".",
-    "full": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\\\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\\\".",
+    "summary": "This unit can re-roll Charge rolls. When you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is ‑1 CP.",
+    "full": "This unit can re-roll Charge rolls. When you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is ‑1 CP.",
     "glossary": "glossary-blood-angels-ability-visions-of-heresy",
     "rule": "unit-death-company-marines-with-bolt-rifles",
     "units": [
@@ -5980,8 +5968,8 @@ window.DG_TERMS={
   "blood-angels-weapon-bolt-pistol": {
     "id": "blood-angels-weapon-bolt-pistol",
     "title": "Bolt pistol",
-    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Close-Quarters",
-    "full": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Close-Quarters",
+    "summary": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Pistol",
+    "full": "Ranged · 12\" · A 1 · BS 3+ · S 4 · AP 0 · D 1 · Pistol",
     "glossary": "glossary-blood-angels-weapon-bolt-pistol",
     "rule": "unit-death-company-marines-with-bolt-rifles",
     "units": [
@@ -6215,8 +6203,8 @@ window.DG_TERMS={
   "blood-angels-ability-driven-by-fury": {
     "id": "blood-angels-ability-driven-by-fury",
     "title": "Driven by Fury",
-    "summary": "Each time an enemy unit targets this unit, after that unit has finished making its attacks, if this unit lost one or more wounds as a result of those attacks, this unit can make a Normal move of up to 3\\\".",
-    "full": "Each time an enemy unit targets this unit, after that unit has finished making its attacks, if this unit lost one or more wounds as a result of those attacks, this unit can make a Normal move of up to 3\\\".",
+    "summary": "In your opponent's Shooting phase, when an enemy unit has shot, if this model lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\".",
+    "full": "In your opponent's Shooting phase, when an enemy unit has shot, if this model lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\".",
     "glossary": "glossary-blood-angels-ability-driven-by-fury",
     "rule": "unit-death-company-dreadnought",
     "units": [
@@ -6367,40 +6355,40 @@ window.DG_TERMS={
   "blood-angels-stratagem-savage-echoes": {
     "id": "blood-angels-stratagem-savage-echoes",
     "title": "Savage Echoes",
-    "summary": "Your opponent's Charge phase. One ADEPTUS ASTARTES unit from your army that was just charged by an enemy unit. Select either Strength or Attacks for melee weapons equipped by models in your unit; add 1 to the selected characteristic until the end of the turn. Alternatively, your unit becomes Battle-shocked and add 1 to both characteristics.",
-    "full": "Your opponent's Charge phase. One ADEPTUS ASTARTES unit from your army that was just charged by an enemy unit. Select either Strength or Attacks for melee weapons equipped by models in your unit; add 1 to the selected characteristic until the end of the turn. Alternatively, your unit becomes Battle-shocked and add 1 to both characteristics.",
+    "summary": "Your opponent's Charge phase. One ADEPTUS ASTARTES unit from your army that was just charged by an enemy unit. Select either the Strength or Attacks characteristic of melee weapons equipped by models in your unit. Until the end of the turn, add 1 to the selected characteristic. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in your unit.",
+    "full": "Your opponent's Charge phase. One ADEPTUS ASTARTES unit from your army that was just charged by an enemy unit. Select either the Strength or Attacks characteristic of melee weapons equipped by models in your unit. Until the end of the turn, add 1 to the selected characteristic. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, add 1 to the Strength and Attacks characteristics of melee weapons equipped by models in your unit.",
     "glossary": "glossary-blood-angels-stratagem-savage-echoes",
     "rule": "detachment-liberator-assault-group"
   },
   "blood-angels-stratagem-red-rampage": {
     "id": "blood-angels-stratagem-red-rampage",
     "title": "Red Rampage",
-    "summary": "Fight phase. One ADEPTUS ASTARTES unit from your army that has not been selected to fight this phase. Select [LANCE] or [LETHAL HITS]; melee weapons equipped by models in your unit have that ability until the end of the phase. Alternatively, your unit becomes Battle-shocked and gains both.",
-    "full": "Fight phase. One ADEPTUS ASTARTES unit from your army that has not been selected to fight this phase. Select [LANCE] or [LETHAL HITS]; melee weapons equipped by models in your unit have that ability until the end of the phase. Alternatively, your unit becomes Battle-shocked and gains both.",
+    "summary": "Fight phase. One ADEPTUS ASTARTES unit from your army that has not been selected to fight this phase. Select either the [LANCE] or [LETHAL HITS] abilities. Until the end of the phase, melee weapons equipped by models in your unit have the selected ability. You can instead choose for your unit to give in to the Red Thirst; if it does, then it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the phase, melee weapons equipped by models in your unit have the [LANCE] and [LETHAL HITS] abilities.",
+    "full": "Fight phase. One ADEPTUS ASTARTES unit from your army that has not been selected to fight this phase. Select either the [LANCE] or [LETHAL HITS] abilities. Until the end of the phase, melee weapons equipped by models in your unit have the selected ability. You can instead choose for your unit to give in to the Red Thirst; if it does, then it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the phase, melee weapons equipped by models in your unit have the [LANCE] and [LETHAL HITS] abilities.",
     "glossary": "glossary-blood-angels-stratagem-red-rampage",
     "rule": "detachment-liberator-assault-group"
   },
   "blood-angels-stratagem-aggressive-onslaught": {
     "id": "blood-angels-stratagem-aggressive-onslaught",
     "title": "Aggressive Onslaught",
-    "summary": "Your Movement phase, just after an ADEPTUS ASTARTES unit from your army has Advanced. That ADEPTUS ASTARTES unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Advanced. Alternatively, it becomes Battle-shocked and is eligible to do both.",
-    "full": "Your Movement phase, just after an ADEPTUS ASTARTES unit from your army has Advanced. That ADEPTUS ASTARTES unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Advanced. Alternatively, it becomes Battle-shocked and is eligible to do both.",
+    "summary": "Your Movement phase, just after an ADEPTUS ASTARTES unit from your army has Advanced. That ADEPTUS ASTARTES unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge, even though it Advanced. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, your unit is eligible to both shoot and declare a charge, even though it Advanced.",
+    "full": "Your Movement phase, just after an ADEPTUS ASTARTES unit from your army has Advanced. That ADEPTUS ASTARTES unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge, even though it Advanced. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, your unit is eligible to both shoot and declare a charge, even though it Advanced.",
     "glossary": "glossary-blood-angels-stratagem-aggressive-onslaught",
     "rule": "detachment-liberator-assault-group"
   },
   "blood-angels-stratagem-relentless-assault": {
     "id": "blood-angels-stratagem-relentless-assault",
     "title": "Relentless Assault",
-    "summary": "Your Movement phase, just after an ADEPTUS ASTARTES unit from your army Falls Back. That ADEPTUS ASTARTES unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Fell Back. Alternatively, it becomes Battle-shocked and is eligible to do both.",
-    "full": "Your Movement phase, just after an ADEPTUS ASTARTES unit from your army Falls Back. That ADEPTUS ASTARTES unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Fell Back. Alternatively, it becomes Battle-shocked and is eligible to do both.",
+    "summary": "Your Movement phase, just after an ADEPTUS ASTARTES unit from your army Falls Back. That ADEPTUS ASTARTES unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Fell Back. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, your unit is eligible to both shoot and declare a charge, even though it Fell Back.",
+    "full": "Your Movement phase, just after an ADEPTUS ASTARTES unit from your army Falls Back. That ADEPTUS ASTARTES unit. Until the end of the turn, your unit is eligible to either shoot or declare a charge even though it Fell Back. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it) and until the end of the turn, your unit is eligible to both shoot and declare a charge, even though it Fell Back.",
     "glossary": "glossary-blood-angels-stratagem-relentless-assault",
     "rule": "detachment-liberator-assault-group"
   },
   "blood-angels-detachment-rule-red-thirst": {
     "id": "blood-angels-detachment-rule-red-thirst",
     "title": "Red Thirst",
-    "summary": "Each time an ADEPTUS ASTARTES unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic and add 2 to the Strength characteristic of melee weapons equipped by models in that unit.",
-    "full": "Each time an ADEPTUS ASTARTES unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic and add 2 to the Strength characteristic of melee weapons equipped by models in that unit.",
+    "summary": "Each time an ADEPTUS ASTARTES unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic and add 2 to the Strength characteristic of melee weapons equipped by models in that unit. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+    "full": "Each time an ADEPTUS ASTARTES unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic and add 2 to the Strength characteristic of melee weapons equipped by models in that unit. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
     "glossary": "glossary-blood-angels-detachment-rule-red-thirst",
     "rule": "detachment-liberator-assault-group"
   },
@@ -6439,8 +6427,8 @@ window.DG_TERMS={
   "blood-angels-stratagem-unbridled-ardour": {
     "id": "blood-angels-stratagem-unbridled-ardour",
     "title": "Unbridled Ardour",
-    "summary": "Any phase. One ADEPTUS ASTARTES unit from your army that was just destroyed. Until the end of the battle, each time a friendly SANGUINARY GUARD unit attacks the enemy unit that destroyed your unit, re-roll the Hit and Wound rolls.",
-    "full": "Any phase. One ADEPTUS ASTARTES unit from your army that was just destroyed. Until the end of the battle, each time a friendly SANGUINARY GUARD unit attacks the enemy unit that destroyed your unit, re-roll the Hit and Wound rolls.",
+    "summary": "Any phase. One ADEPTUS ASTARTES unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Until the end of the battle, each time a friendly SANGUINARY GUARD unit attacks the enemy unit that destroyed your unit, re-roll the Hit and Wound rolls.",
+    "full": "Any phase. One ADEPTUS ASTARTES unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed. Until the end of the battle, each time a friendly SANGUINARY GUARD unit attacks the enemy unit that destroyed your unit, re-roll the Hit and Wound rolls.",
     "glossary": "glossary-blood-angels-stratagem-unbridled-ardour",
     "rule": "detachment-the-angelic-host"
   },
@@ -6487,8 +6475,8 @@ window.DG_TERMS={
   "blood-angels-detachment-rule-upon-wings-of-fire": {
     "id": "blood-angels-detachment-rule-upon-wings-of-fire",
     "title": "Upon Wings of Fire",
-    "summary": "At the end of your opponent's turn, select up to 1, 2 or 3 ADEPTUS ASTARTES JUMP PACK units in Incursion, Strike Force or Onslaught battles respectively (excluding engaged units). Place them in Strategic Reserves; they must make an ingress move in your next Movement phase, including in your first turn.",
-    "full": "At the end of your opponent's turn, select up to 1, 2 or 3 ADEPTUS ASTARTES JUMP PACK units in Incursion, Strike Force or Onslaught battles respectively (excluding engaged units). Place them in Strategic Reserves; they must make an ingress move in your next Movement phase, including in your first turn.",
+    "summary": "At the end of your opponent's turn, select up to 1, 2 or 3 ADEPTUS ASTARTES JUMP PACK units in Incursion, Strike Force or Onslaught battles respectively (excluding engaged units). Place them in Strategic Reserves; they must make an ingress move in your next Movement phase, including in your first turn. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+    "full": "At the end of your opponent's turn, select up to 1, 2 or 3 ADEPTUS ASTARTES JUMP PACK units in Incursion, Strike Force or Onslaught battles respectively (excluding engaged units). Place them in Strategic Reserves; they must make an ingress move in your next Movement phase, including in your first turn. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
     "glossary": "glossary-blood-angels-detachment-rule-upon-wings-of-fire",
     "rule": "detachment-the-angelic-host"
   },
@@ -6527,8 +6515,8 @@ window.DG_TERMS={
   "blood-angels-stratagem-glorious-sacrifice": {
     "id": "blood-angels-stratagem-glorious-sacrifice",
     "title": "Glorious Sacrifice",
-    "summary": "Any phase. One DEATH COMPANY unit from your army that was just destroyed while within range of an objective marker you controlled. That objective marker remains under your control until your opponent's Level of Control over it is greater than yours at the end of a phase.",
-    "full": "Any phase. One DEATH COMPANY unit from your army that was just destroyed while within range of an objective marker you controlled. That objective marker remains under your control until your opponent's Level of Control over it is greater than yours at the end of a phase.",
+    "summary": "Any phase. One DEATH COMPANY unit from your army that was just destroyed while it was within range of an objective marker you controlled. You can use this Stratagem on that unit even though it was just destroyed. That objective marker remains under your control until your opponent's Level of Control over it is greater than yours at the end of a phase.",
+    "full": "Any phase. One DEATH COMPANY unit from your army that was just destroyed while it was within range of an objective marker you controlled. You can use this Stratagem on that unit even though it was just destroyed. That objective marker remains under your control until your opponent's Level of Control over it is greater than yours at the end of a phase.",
     "glossary": "glossary-blood-angels-stratagem-glorious-sacrifice",
     "rule": "detachment-the-lost-brethren"
   },
@@ -6543,8 +6531,8 @@ window.DG_TERMS={
   "blood-angels-stratagem-final-retribution": {
     "id": "blood-angels-stratagem-final-retribution",
     "title": "Final Retribution",
-    "summary": "Fight phase, just after an enemy unit has selected its targets. One DEATH COMPANY unit from your army selected as a target. Until the end of the phase, each time a model in your unit is destroyed before it has fought, roll one D6, adding 1 if within 12\\\" of a friendly CHAPLAIN; on a 4+, it can fight after the attacking unit has finished, then is removed.",
-    "full": "Fight phase, just after an enemy unit has selected its targets. One DEATH COMPANY unit from your army selected as a target. Until the end of the phase, each time a model in your unit is destroyed before it has fought, roll one D6, adding 1 if within 12\\\" of a friendly CHAPLAIN; on a 4+, it can fight after the attacking unit has finished, then is removed.",
+    "summary": "Fight phase, just after an enemy unit has selected its targets. One DEATH COMPANY unit from your army selected as a target. Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if your unit is within 12\\\" of one or more friendly CHAPLAIN models; on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+    "full": "Fight phase, just after an enemy unit has selected its targets. One DEATH COMPANY unit from your army selected as a target. Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if your unit is within 12\\\" of one or more friendly CHAPLAIN models; on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
     "glossary": "glossary-blood-angels-stratagem-final-retribution",
     "rule": "detachment-the-lost-brethren"
   },
@@ -6575,8 +6563,8 @@ window.DG_TERMS={
   "blood-angels-detachment-rule-a-noble-death-in-combat": {
     "id": "blood-angels-detachment-rule-a-noble-death-in-combat",
     "title": "A Noble Death in Combat",
-    "summary": "Each time a DEATH COMPANY model from your army makes a melee attack, re-roll a Wound roll of 1 if that model's unit is below its Starting Strength; if that model's unit is Below Half-strength, you can re-roll the Wound roll instead.",
-    "full": "Each time a DEATH COMPANY model from your army makes a melee attack, re-roll a Wound roll of 1 if that model's unit is below its Starting Strength; if that model's unit is Below Half-strength, you can re-roll the Wound roll instead.",
+    "summary": "Each time a DEATH COMPANY model from your army makes a melee attack, re-roll a Wound roll of 1 if that model's unit is below its Starting Strength; if that model's unit is Below Half-strength, you can re-roll the Wound roll instead. If you select this Detachment, DEATH COMPANY MARINES and DEATH COMPANY MARINES WITH BOLT RIFLES units from your army have the BATTLELINE keyword. This Detachment has the DOOMED tag. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
+    "full": "Each time a DEATH COMPANY model from your army makes a melee attack, re-roll a Wound roll of 1 if that model's unit is below its Starting Strength; if that model's unit is Below Half-strength, you can re-roll the Wound roll instead. If you select this Detachment, DEATH COMPANY MARINES and DEATH COMPANY MARINES WITH BOLT RIFLES units from your army have the BATTLELINE keyword. This Detachment has the DOOMED tag. Restrictions: Your army can include BLOOD ANGELS units, but it cannot include any ADEPTUS ASTARTES units drawn from any other Chapter.",
     "glossary": "glossary-blood-angels-detachment-rule-a-noble-death-in-combat",
     "rule": "detachment-the-lost-brethren"
   },

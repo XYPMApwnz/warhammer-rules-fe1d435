@@ -6,55 +6,269 @@
     "separateWargearAbilities": true,
     "separateLeaderRelations": true,
     "preserveExternalRelations": true,
-    "leaderRelationOverrides": ["Astorath", "Commander Dante", "Death Company Captain", "Death Company Captain with Jump Pack", "Lemartes"],
-    "supportRelationOverrides": ["Sanguinary Priest"],
+    "leaderRelationOverrides": [
+      "Astorath",
+      "Commander Dante",
+      "Death Company Captain",
+      "Death Company Captain with Jump Pack",
+      "Lemartes"
+    ],
+    "supportRelationOverrides": [
+      "Sanguinary Priest"
+    ],
     "qualifyDuplicateEnhancementIds": true
   },
   "source": {
     "repository": "https://github.com/BSData/wh40k-11e",
-    "commit": "e120e146c960a171f7c0599ec8e055e75d597c56",
+    "commit": "d5af57cf1e79b0b038133e84e58de334fea852d0",
     "revision": "1",
-    "url": "https://github.com/BSData/wh40k-11e/blob/e120e146c960a171f7c0599ec8e055e75d597c56/Imperium%20-%20Blood%20Angels.json"
+    "url": "https://github.com/BSData/wh40k-11e/blob/d5af57cf1e79b0b038133e84e58de334fea852d0/Imperium%20-%20Blood%20Angels.json"
   },
   "inputs": [
-    {"role":"faction","path":"bsdata-current-blood-angels.json"},
-    {"role":"space-marines-supplement-base","path":"../../../tmp/bsdata-wh40k-11e/Imperium - Space Marines.json"},
-    {"role":"imperial-knights-library","path":"../../../tmp/bsdata-wh40k-11e/Imperium - Imperial Knights - Library.json"},
-    {"role":"agents-of-the-imperium","path":"../../../tmp/bsdata-wh40k-11e/Imperium - Agents of the Imperium.json"},
-    {"role":"game-system","path":"../../../tmp/bsdata-wh40k-11e/Warhammer 40,000.json"}
+    {
+      "role": "faction",
+      "path": "bsdata-current-blood-angels.json"
+    },
+    {
+      "role": "space-marines-supplement-base",
+      "path": "../../../tmp/bsdata-wh40k-11e/Imperium - Space Marines.json"
+    },
+    {
+      "role": "imperial-knights-library",
+      "path": "../../../tmp/bsdata-wh40k-11e/Imperium - Imperial Knights - Library.json"
+    },
+    {
+      "role": "agents-of-the-imperium",
+      "path": "../../../tmp/bsdata-wh40k-11e/Imperium - Agents of the Imperium.json"
+    },
+    {
+      "role": "game-system",
+      "path": "../../../tmp/bsdata-wh40k-11e/Warhammer 40,000.json"
+    }
   ],
   "outputs": {
-    "snapshot":"bsdata-blood-angels-11e.json",
-    "datasheets":"../content/blood-angels-codex-datasheets.en.json",
-    "points":"../content/blood-angels-points.en.json",
-    "officialPoints":"official-mfm-v1.2.json"
+    "snapshot": "bsdata-blood-angels-11e.json",
+    "datasheets": "../content/blood-angels-codex-datasheets.en.json",
+    "points": "../content/blood-angels-points.en.json",
+    "officialPoints": "official-mfm-v1.2.json"
   },
   "filters": {
-    "excludeNames":["Detachment","Show/Hide Options","Order of Battle","Death Company Intercessors"],
-    "excludeNamePatterns":["\\[Crucible\\]$"],
-    "excludePrimaryCategories":["Configuration","Order of Battle","Reference"],
-    "blockedBranches":["^Crusade$","Enhancements$","^Detachment$","^Order of Battle$","^Show/Hide Options$","^Specialisms$","^Weapon Modifications$","^Battle Honours$","^Relic Upgrades$","\\[Crucible\\]"],
-    "imperialArmourNames":[]
+    "excludeNames": [
+      "Detachment",
+      "Show/Hide Options",
+      "Order of Battle",
+      "Death Company Intercessors"
+    ],
+    "excludeNamePatterns": [
+      "\\[Crucible\\]$"
+    ],
+    "excludePrimaryCategories": [
+      "Configuration",
+      "Order of Battle",
+      "Reference"
+    ],
+    "blockedBranches": [
+      "^Crusade$",
+      "Enhancements$",
+      "^Detachment$",
+      "^Order of Battle$",
+      "^Show/Hide Options$",
+      "^Specialisms$",
+      "^Weapon Modifications$",
+      "^Battle Honours$",
+      "^Relic Upgrades$",
+      "\\[Crucible\\]"
+    ],
+    "imperialArmourNames": []
   },
   "enhancements": {
-    "identity":"detachment-title",
-    "detachments":["Angelic Inheritors","Encarmine Speartip","Legacy of Grace","Liberator Assault Group","Rage-cursed Onslaught","The Angelic Host","The Lost Brethren","Wrath of the Doomed"]
+    "identity": "detachment-title",
+    "detachments": [
+      "Angelic Inheritors",
+      "Encarmine Speartip",
+      "Legacy of Grace",
+      "Liberator Assault Group",
+      "Rage-cursed Onslaught",
+      "The Angelic Host",
+      "The Lost Brethren",
+      "Wrath of the Doomed"
+    ]
   },
   "unitCorrections": {
-    "Astorath":{"profileStats":{"Astorath":{"Base":"40mm"}}},
-    "Baal Predator":{"profileStats":{"Baal Predator":{"Base":"Use model"}}},
-    "Blood Angels Captain":{"profileStats":{"Blood Angels Captain":{"Base":"40mm"}}},
-    "Chief Librarian Mephiston":{"profileStats":{"Chief Librarian Mephiston":{"Base":"40mm"}}},
-    "Commander Dante":{"profileStats":{"Commander Dante":{"Base":"50mm"}}},
-    "Death Company Captain":{"profileStats":{"Death Company Captain":{"Base":"40mm"}}},
-    "Death Company Captain with Jump Pack":{"profileStats":{"Death Company Captain with Jump Pack":{"Base":"40mm"}}},
-    "Death Company Dreadnought":{"abilities":{"Driven by Fury":{"text":"Each time an enemy unit targets this unit, after that unit has finished making its attacks, if this unit lost one or more wounds as a result of those attacks, this unit can make a Normal move of up to 3\\\"."}},"profileStats":{"Death Company Dreadnought":{"Base":"90mm"}}},
-    "Death Company Marines":{"profileStats":{"Death Company Marines":{"Base":"32mm"}}},
-    "Death Company Marines with Bolt Rifles":{"abilities":{"Visions of Heresy":{"text":"Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\\\" of this unit, if this unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\\\"."}},"profileStats":{"Death Company Marines with Bolt Rifles":{"Base":"32mm"}}},
-    "Death Company Marines with Jump Packs":{"profileStats":{"Death Company Marine with Jump Pack":{"Base":"32mm"}}},
-    "Lemartes":{"profileStats":{"Lemartes":{"Base":"40mm"}}},
-    "Sanguinary Guard":{"profileStats":{"Sanguinary Guard":{"Base":"40mm"}}},
-    "Sanguinary Priest":{"profileStats":{"Sanguinary Priest":{"Base":"40mm"}}},
-    "The Sanguinor":{"abilities":{"Miraculous Savior":{"title":"Miraculous Saviour","text":"Once per battle, in your opponent's Charge phase, after an enemy unit has finished a Charge move, if this model is still in Reserves, it can use this ability. If it does, set this model up on the battlefield within Engagement Range of that enemy unit and more than 3\\\" horizontally away from all other enemy units."}},"profileStats":{"The Sanguinor":{"Base":"40mm"}}}
+    "Astorath": {
+      "addKeywords": [
+        "Tacticus"
+      ],
+      "profileStats": {
+        "Astorath": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Baal Predator": {
+      "profileStats": {
+        "Baal Predator": {
+          "Base": "Hull"
+        }
+      }
+    },
+    "Blood Angels Captain": {
+      "profileStats": {
+        "Blood Angels Captain": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Chief Librarian Mephiston": {
+      "addKeywords": [
+        "Imperium"
+      ],
+      "profileStats": {
+        "Chief Librarian Mephiston": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Commander Dante": {
+      "profileStats": {
+        "Commander Dante": {
+          "Base": "50mm"
+        }
+      }
+    },
+    "Death Company Captain": {
+      "weaponAbilities": {
+        "Heavy Bolt Pistol": "Pistol"
+      },
+      "profileStats": {
+        "Death Company Captain": {
+          "Base": "40mm"
+        }
+      },
+      "abilities": {
+        "Black Rage": {
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
+        }
+      }
+    },
+    "Death Company Captain with Jump Pack": {
+      "weaponAbilities": {
+        "Heavy Bolt Pistol": "Pistol"
+      },
+      "weaponSkills": {
+        "➤ Plasma pistol - standard": "2+",
+        "➤ Plasma pistol - supercharge": "2+"
+      },
+      "profileStats": {
+        "Death Company Captain with Jump Pack": {
+          "Base": "40mm"
+        }
+      },
+      "abilities": {
+        "Black Rage": {
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
+        }
+      }
+    },
+    "Death Company Dreadnought": {
+      "abilities": {
+        "Driven by Fury": {
+          "text": "In your opponent's Shooting phase, when an enemy unit has shot, if this model lost a wound as a result of those attacks, this unit can make a surge move of up to D6+2\"."
+        },
+        "Black Rage": {
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
+        }
+      },
+      "profileStats": {
+        "Death Company Dreadnought": {
+          "Base": "90mm"
+        }
+      }
+    },
+    "Death Company Marines": {
+      "abilities": {
+        "Black Rage": {
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
+        }
+      },
+      "profileStats": {
+        "Death Company Marines": {
+          "Base": "32mm"
+        }
+      }
+    },
+    "Death Company Marines with Bolt Rifles": {
+      "abilities": {
+        "Visions of Heresy": {
+          "text": "This unit can re-roll Charge rolls. When you target this unit with the Fire Overwatch/Heroic Intervention stratagem, that use is ‑1 CP."
+        },
+        "Black Rage": {
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
+        }
+      },
+      "weaponAbilities": {
+        "Bolt pistol": "Pistol"
+      },
+      "profileStats": {
+        "Death Company Marines with Bolt Rifles": {
+          "Base": "32mm"
+        }
+      }
+    },
+    "Death Company Marines with Jump Packs": {
+      "profileStats": {
+        "Death Company Marine with Jump Pack": {
+          "Base": "32mm"
+        }
+      },
+      "abilities": {
+        "Black Rage": {
+          "text": "Each time a model in this unit makes a melee attack, you can re-roll the Hit roll. While this unit is not within 6\" of one or more friendly BLOOD ANGELS CHARACTER models, or not within 12\" of one or more friendly CHAPLAIN models, it cannot be selected to Fall Back and its Objective Control characteristic is 0."
+        }
+      }
+    },
+    "Lemartes": {
+      "addKeywords": [
+        "Tacticus"
+      ],
+      "profileStats": {
+        "Lemartes": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Sanguinary Guard": {
+      "addKeywords": [
+        "Tacticus"
+      ],
+      "profileStats": {
+        "Sanguinary Guard": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "Sanguinary Priest": {
+      "profileStats": {
+        "Sanguinary Priest": {
+          "Base": "40mm"
+        }
+      }
+    },
+    "The Sanguinor": {
+      "addKeywords": [
+        "Tacticus"
+      ],
+      "abilities": {
+        "Miraculous Savior": {
+          "title": "Miraculous Saviour",
+          "text": "(Once per battle, per army) At the end of your opponent's Charge phase (excluding the first battle round), you can select one enemy unit that made a charge move this phase. This unit can make an ingress move and must be set up engaged with that enemy unit. That move does not prevent this unit from being eligible to move."
+        }
+      },
+      "profileStats": {
+        "The Sanguinor": {
+          "Base": "40mm"
+        }
+      }
+    }
   }
 }

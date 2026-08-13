@@ -18,7 +18,7 @@ const result={schema:1,stratagems:{},enhancements:{},keywordGrants:{}};
 for(const det of [...pack.detachments,...parity.detachments]){
   for(const item of det.stratagems||[]){
     const id=item.id.startsWith('stratagem-')?item.id:'stratagem-'+det.id+'-'+item.id;
-    result.stratagems[id]=contract(selectorFromText((item.target||'')+' '+(item.effect||''),'stratagem'),['battle-state-unknown']);
+    result.stratagems[id]=contract(selectorFromText(item.target,'stratagem'),['battle-state-unknown']);
     result.stratagems[item.id]=result.stratagems[id];
   }
   for(const item of det.enhancements||[]){

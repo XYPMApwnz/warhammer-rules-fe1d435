@@ -157,6 +157,7 @@
     },
     {
       "title": "Death Company Marines",
+      "replaceDatasheetPoints": true,
       "points": [
         {
           "label": "1st to 2nd · 5 models",
@@ -192,6 +193,7 @@
     },
     {
       "title": "Death Company Marines with Bolt Rifles",
+      "replaceDatasheetPoints": true,
       "points": [
         {
           "label": "1st to 2nd · 5 models",
@@ -227,6 +229,7 @@
     },
     {
       "title": "Death Company Marines with Jump Packs",
+      "replaceDatasheetPoints": true,
       "points": [
         {
           "label": "1st to 2nd · 5 models",
@@ -276,6 +279,7 @@
     },
     {
       "title": "Sanguinary Guard",
+      "replaceDatasheetPoints": true,
       "points": [
         {
           "label": "1st to 2nd · 3 models",
@@ -704,5 +708,5 @@
       "dependencyInventory"
     ]
   },
-  "captureSha256": "FE1FF0A0F41C2F6D6E2FDABB4EFF2E6B59CD8245A4EC36EC4A1BC23F960FAE4C"
+  "captureSha256": "7C71D30BB696EC9D2ADF243B7C1311A2A30A426A05E5C713A074FAF744269EA4"
 }

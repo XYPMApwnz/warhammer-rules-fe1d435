@@ -86,7 +86,7 @@
           if(!rosterMode)try{const saved=localStorage.getItem('death-guard-detachment-filter');if(choices.some(([value])=>value===saved))detachment=saved;}catch{}
           filterMenu=document.createElement('details');filterMenu.className='full-related-filter';
           filterMenu.classList.toggle('is-static',choices.length===1);
-          filterMenu.innerHTML='<summary><span>'+choices.find(([value])=>value===detachment)[1]+'</span></summary><div>'+choices.map(([value,label])=>'<button type="button" data-detachment="'+value+'" aria-pressed="'+(value===detachment)+'">'+label+'</button>').join('')+'</div>';
+          filterMenu.innerHTML='<summary><span>'+(choices.find(([value])=>value===detachment)?.[1]||'All Detachments')+'</span></summary><div>'+choices.map(([value,label])=>'<button type="button" data-detachment="'+value+'" aria-pressed="'+(value===detachment)+'">'+label+'</button>').join('')+'</div>';
           tabs=document.createElement('div');tabs.className='full-related-tabs';tabs.innerHTML='<button type="button" data-kind="stratagems" aria-pressed="true">Stratagems</button><button type="button" data-kind="enhancements" aria-pressed="false">Enhancements</button>';
           const controls=document.createElement('div');controls.className='full-related-controls';if(!rosterMode)controls.append(filterMenu);controls.append(tabs);
           content=document.createElement('div');content.className='full-related-content';content.append(fragment);

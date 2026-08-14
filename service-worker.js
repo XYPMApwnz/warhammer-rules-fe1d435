@@ -85,7 +85,7 @@ const APP_SHELL = [
 
   "./books/death-guard/mobile/index.html",
   "./books/death-guard/mobile/mobile.css?v=11",
-  "./books/death-guard/mobile/mobile.js?v=31",
+  "./books/death-guard/mobile/mobile.js?v=32",
   "./books/death-guard/mobile/phone-popup-controller.js?v=1",
   "./books/death-guard/mobile/related-rules.inc?v=4",
   "./books/shared/navigation-targets.js?v=1",
@@ -106,7 +106,7 @@ const APP_SHELL = [
   "./books/death-guard/styles/content.css?v=41",
   "./books/death-guard/styles/popups.css?v=18",
   "./books/death-guard/scripts/navigation-controller.js?v=16",
-  "./books/death-guard/scripts/roster-filter.js?v=20",
+  "./books/death-guard/scripts/roster-filter.js?v=21",
   "./books/death-guard/scripts/popup-controller.js?v=25",
   "./books/death-guard/scripts/full-entry-controller.js?v=9",
   "./books/death-guard/scripts/journey-controller.js?v=13",

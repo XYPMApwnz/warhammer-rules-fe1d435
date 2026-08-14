@@ -52,79 +52,9 @@ function freshRoster(record){
   return roster;
 }
 
-function deathGuardUnitDefinition(unit){
-  return window.WH_POINTS_CATALOG?.['death guard']?.units?.[window.WHRosterPoints.normalize(unit?.name)]||null;
-}
-function deathGuardAttachmentContract(bodyguard,character){
-  const bodyguardDefinition=deathGuardUnitDefinition(bodyguard),characterDefinition=deathGuardUnitDefinition(character);
-  if(!bodyguardDefinition||!characterDefinition||!characterDefinition.keywords?.includes('CHARACTER'))return null;
-  const forward=[...(characterDefinition.relations?.canLead||[]),...(characterDefinition.relations?.canSupport||[])].find(item=>item.unitId===bodyguardDefinition.unitId);
-  const reverse=[...(bodyguardDefinition.relations?.canBeLedBy||[]),...(bodyguardDefinition.relations?.canBeSupportedBy||[])].find(item=>item.unitId===characterDefinition.unitId);
-  return forward&&reverse?{bodyguardUnitId:bodyguardDefinition.unitId,characterUnitId:characterDefinition.unitId,maxCharacters:Math.max(1,Number(forward.maxCharacters||reverse.maxCharacters||1))}:null;
-}
-function sanitizeDeathGuardAttachments(roster,raw){
-  if(knownFaction(roster?.faction)!=='death guard'||!raw||typeof raw!=='object'||Array.isArray(raw))return{};
-  const units=new Map(roster.units.map(unit=>[unit.id,unit])),usedCharacters=new Set(),result={};
-  for(const [bodyguardId,characterIds] of Object.entries(raw)){
-    const bodyguard=units.get(bodyguardId);if(!bodyguard||!Array.isArray(characterIds))continue;
-    const selectedTypes=new Set(),accepted=[];
-    for(const characterId of characterIds){
-      const character=units.get(characterId),contract=deathGuardAttachmentContract(bodyguard,character);
-      if(!contract||usedCharacters.has(characterId)||selectedTypes.has(contract.characterUnitId)||accepted.length>=contract.maxCharacters)continue;
-      accepted.push(characterId);usedCharacters.add(characterId);selectedTypes.add(contract.characterUnitId);
-    }
-    if(accepted.length)result[bodyguardId]=accepted;
-  }
-  return result;
-}
-function deathGuardInstanceLabels(roster){
-  const totals=new Map(),seen=new Map(),labels=new Map();
-  roster.units.forEach(unit=>{const key=window.WHRosterPoints.normalize(unit.name);totals.set(key,(totals.get(key)||0)+1);});
-  roster.units.forEach(unit=>{const key=window.WHRosterPoints.normalize(unit.name),index=(seen.get(key)||0)+1;seen.set(key,index);labels.set(unit.id,totals.get(key)>1?`${unit.name} #${index}`:unit.name);});
-  return labels;
-}
-function persistDeathGuardAttachments(record,roster,attachments){
-  const records=getSavedRosters(),stored=records.find(item=>item?.id===record.id);if(!stored)return;
-  stored.attachments=sanitizeDeathGuardAttachments(roster,attachments);stored.updatedAt=new Date().toISOString();
-  putSavedRosters(records);renderSavedRosters();renderRoster(roster,stored);
-}
-function mountDeathGuardAttachments(roster,record){
-  if(knownFaction(roster.faction)!=='death guard')return;
-  const attachments=sanitizeDeathGuardAttachments(roster,record.attachments),labels=deathGuardInstanceLabels(roster),assignedGlobally=new Set(Object.values(attachments).flat());
-  for(const bodyguard of roster.units){
-    const compatible=roster.units.filter(character=>character.id!==bodyguard.id&&deathGuardAttachmentContract(bodyguard,character));
-    if(!compatible.length)continue;
-    const row=document.querySelector(`[data-roster-unit-id="${CSS.escape(bodyguard.id)}"]`);if(!row)continue;
-    const assigned=attachments[bodyguard.id]||[],assignedTypes=new Set(assigned.map(id=>deathGuardUnitDefinition(roster.units.find(unit=>unit.id===id))?.unitId).filter(Boolean));
-    const limit=Math.max(...compatible.map(character=>deathGuardAttachmentContract(bodyguard,character)?.maxCharacters||1));
-    const available=compatible.filter(character=>!assignedGlobally.has(character.id)&&!assignedTypes.has(deathGuardUnitDefinition(character)?.unitId));
-    const panel=document.createElement('div');panel.className='attachment-editor';panel.dataset.bodyguardUnitId=bodyguard.id;
-    const heading=document.createElement('strong');heading.textContent=`Attached Characters · ${labels.get(bodyguard.id)}`;panel.append(heading);
-    if(assigned.length){
-      const list=document.createElement('ul');list.className='attachment-list';
-      assigned.forEach(characterId=>{const item=document.createElement('li'),name=document.createElement('span'),remove=document.createElement('button');name.textContent=labels.get(characterId)||characterId;remove.type='button';remove.className='action';remove.dataset.detachCharacter=characterId;remove.textContent='Remove';item.append(name,remove);list.append(item);});
-      panel.append(list);
-    }
-    if(assigned.length<limit&&available.length){
-      const controls=document.createElement('div');controls.className='attachment-controls';
-      const select=document.createElement('select');select.setAttribute('aria-label',`Character for ${labels.get(bodyguard.id)}`);select.dataset.attachmentChoice='';
-      available.forEach(character=>{const option=document.createElement('option');option.value=character.id;option.textContent=labels.get(character.id);select.append(option);});
-      const add=document.createElement('button');add.type='button';add.className='action';add.dataset.attachCharacter='';add.textContent='+ Add Character';controls.append(select,add);panel.append(controls);
-    }else if(!available.length&&assigned.length<limit){const empty=document.createElement('small');empty.className='help';empty.textContent='No compatible unassigned Characters available.';panel.append(empty);}
-    panel.addEventListener('click',event=>{
-      const button=event.target.closest('button');if(!button)return;
-      const next=structuredClone(attachments);
-      if(button.hasAttribute('data-attach-character')){const characterId=panel.querySelector('[data-attachment-choice]')?.value;if(!characterId)return;(next[bodyguard.id]||=[]).push(characterId);}
-      if(button.dataset.detachCharacter){next[bodyguard.id]=(next[bodyguard.id]||[]).filter(id=>id!==button.dataset.detachCharacter);if(!next[bodyguard.id].length)delete next[bodyguard.id];}
-      persistDeathGuardAttachments(record,roster,next);
-    });
-    row.append(panel);
-  }
-}
-
 function saveRoster(roster,sourceText){
   const records=getSavedRosters(),id=rosterId(sourceText),previous=records.find(record=>record?.id===id);
-  const record={id,name:`${roster.faction} · ${roster.declared||roster.calculated} pts`,createdAt:previous?.createdAt||new Date().toISOString(),updatedAt:new Date().toISOString(),sourceText,roster,attachments:sanitizeDeathGuardAttachments(roster,previous?.attachments)};
+  const record={id,name:`${roster.faction} · ${roster.declared||roster.calculated} pts`,createdAt:previous?.createdAt||new Date().toISOString(),updatedAt:new Date().toISOString(),sourceText,roster};
   putSavedRosters([record,...records.filter(item=>item?.id!==id)]);
   navigator.storage?.persist?.();
   renderSavedRosters();
@@ -183,8 +113,7 @@ function renderRoster(roster,record){
       :check?'<div class="status warn">! Detachment Points were not checked because Battle Size is unavailable.</div>':'';
   enhancementStatus=detachmentStatus+enhancementStatus;
   const hasReader=Boolean(FACTION_READERS[knownFaction(roster.faction)]);
-  document.querySelector('#roster-result').innerHTML=`<p class="eyebrow">Preview // ${roster.units.length} units</p><h2>${escapeHtml(roster.faction)}</h2><p class="help">${escapeHtml((roster.detachments||[{label:roster.detachment}]).map(item=>item.label).join(' + '))} · ${escapeHtml(roster.disposition)}</p><div class="summary"><div class="stat"><small>Declared in export</small><strong>${roster.declared||'—'} pts</strong></div><div class="stat"><small>${currentPointsLabel}</small><strong>${check?.total??'—'} pts</strong></div></div>${exportStatus}${pointsStatus}${enhancementStatus}<p class="help">Unit limits and wargear legality are not checked.</p><ul class="units">${roster.units.map(unit=>{const owned=(check?.enhancements||[]).filter(item=>item.ownerUnitId===unit.id);return `<li data-roster-unit-id="${escapeHtml(unit.id)}"><strong>${escapeHtml(unit.name)}${owned.map(item=>{const exported=Number(item.exportedCost),current=Number(item.currentCost),price=Number.isFinite(exported)&&Number.isFinite(current)&&exported!==current?`${exported} pts in export · ${current} pts current`:`included +${item.exportedCost??item.currentCost} pts`;return `<small class="unit-enhancement">${escapeHtml(item.name)} · ${price}${item.ownerEligibility!=='valid'?` · ${escapeHtml(item.ownerMessage)}`:''}</small>`;}).join('')}</strong><span>${unit.points} pts in export</span></li>`}).join('')}</ul><div class="actions">${hasReader?'<button class="action primary" id="open-guide" type="button">Open personal guide</button>':'<p class="help">Saved. A personal reader is not available for this faction yet.</p>'}</div>`;
-  mountDeathGuardAttachments(roster,record);
+  document.querySelector('#roster-result').innerHTML=`<p class="eyebrow">Preview // ${roster.units.length} units</p><h2>${escapeHtml(roster.faction)}</h2><p class="help">${escapeHtml((roster.detachments||[{label:roster.detachment}]).map(item=>item.label).join(' + '))} · ${escapeHtml(roster.disposition)}</p><div class="summary"><div class="stat"><small>Declared in export</small><strong>${roster.declared||'—'} pts</strong></div><div class="stat"><small>${currentPointsLabel}</small><strong>${check?.total??'—'} pts</strong></div></div>${exportStatus}${pointsStatus}${enhancementStatus}<p class="help">Unit limits and wargear legality are not checked.</p><ul class="units">${roster.units.map(unit=>{const owned=(check?.enhancements||[]).filter(item=>item.ownerUnitId===unit.id);return `<li><strong>${escapeHtml(unit.name)}${owned.map(item=>{const exported=Number(item.exportedCost),current=Number(item.currentCost),price=Number.isFinite(exported)&&Number.isFinite(current)&&exported!==current?`${exported} pts in export · ${current} pts current`:`included +${item.exportedCost??item.currentCost} pts`;return `<small class="unit-enhancement">${escapeHtml(item.name)} · ${price}${item.ownerEligibility!=='valid'?` · ${escapeHtml(item.ownerMessage)}`:''}</small>`;}).join('')}</strong><span>${unit.points} pts in export</span></li>`}).join('')}</ul><div class="actions">${hasReader?'<button class="action primary" id="open-guide" type="button">Open personal guide</button>':'<p class="help">Saved. A personal reader is not available for this faction yet.</p>'}</div>`;
   if(!hasReader)return;
   document.querySelector('#open-guide').addEventListener('click',()=>openSavedRoster(record.id));
 }
@@ -201,7 +130,7 @@ document.querySelector('#roster-form').addEventListener('submit',event=>{
 document.querySelector('#roster-clear').addEventListener('click',()=>{document.querySelector('#roster-form').reset();document.querySelector('#roster-result').innerHTML='<p class="eyebrow">Preview</p><h2>No roster loaded</h2><p class="help">The faction, Detachment, export total check and recognised units will appear here.</p>';document.querySelector('#roster-input').focus();});
 savedHost.addEventListener('click',event=>{const button=event.target.closest('button');if(!button)return;if(button.dataset.openRoster)openSavedRoster(button.dataset.openRoster);if(button.dataset.exportRoster)exportRoster(button.dataset.exportRoster);if(button.dataset.deleteRoster&&confirm('Delete this roster from this device?')){putSavedRosters(getSavedRosters().filter(record=>record?.id!==button.dataset.deleteRoster));renderSavedRosters();}});
 document.querySelector('#import-roster').addEventListener('click',()=>document.querySelector('#import-roster-file').click());
-document.querySelector('#import-roster-file').addEventListener('change',async event=>{const file=event.target.files[0];if(!file)return;try{const record=JSON.parse(await file.text());if(!isImportableRecord(record))throw new Error();const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)record.roster=parsed;const faction=knownFaction(record.roster.faction),records=getSavedRosters();if(!faction)throw new Error();record.roster.faction=FACTION_LABELS[faction];record.roster.pointsCheck=window.WHRosterPoints.check(record.roster,faction);record.attachments=sanitizeDeathGuardAttachments(record.roster,record.attachments);putSavedRosters([{...record,updatedAt:new Date().toISOString()},...records.filter(item=>item?.id!==record.id)]);renderSavedRosters();if(!FACTION_READERS[faction])alert(`${FACTION_LABELS[faction]} was imported, but a personal reader is not available yet.`);}catch{alert('Could not import the roster backup.');}event.target.value='';});
+document.querySelector('#import-roster-file').addEventListener('change',async event=>{const file=event.target.files[0];if(!file)return;try{const record=JSON.parse(await file.text());if(!isImportableRecord(record))throw new Error();const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)record.roster=parsed;const faction=knownFaction(record.roster.faction),records=getSavedRosters();if(!faction)throw new Error();record.roster.faction=FACTION_LABELS[faction];record.roster.pointsCheck=window.WHRosterPoints.check(record.roster,faction);putSavedRosters([{...record,updatedAt:new Date().toISOString()},...records.filter(item=>item?.id!==record.id)]);renderSavedRosters();if(!FACTION_READERS[faction])alert(`${FACTION_LABELS[faction]} was imported, but a personal reader is not available yet.`);}catch{alert('Could not import the roster backup.');}event.target.value='';});
 
 renderSavedRosters();
 const requestedRoster=new URLSearchParams(location.search).get('roster');

@@ -26,7 +26,7 @@
     "blood-angels:compatible:check": "node books/blood-angels/tools/build-compatible-rules.mjs --check",
     "blood-angels:mobile": "node books/blood-angels/mobile/build.mjs",
     "blood-angels:mobile:check": "node books/blood-angels/mobile/build.mjs --check",
-    "blood-angels:qa": "node books/blood-angels/tests/qa.mjs && node books/blood-angels/mobile/qa.mjs && node books/blood-angels/tests/enhancement-presentation-qa.mjs",
+    "blood-angels:qa": "node books/blood-angels/tests/qa.mjs && node books/blood-angels/mobile/qa.mjs && node books/blood-angels/tests/enhancement-presentation-qa.mjs && node books/blood-angels/tests/enhancement-effects-qa.mjs",
     "blood-angels:build": "node books/shared/tools/build-army-book.mjs books/blood-angels/book.config.json && npm run blood-angels:compatible && node roster-guides/build-points.mjs && node glossary/tools/build-glossary.mjs && npm run blood-angels:mobile && node glossary/tools/build-glossary.mjs",
     "blood-angels:check": "node books/shared/tools/build-army-book.mjs books/blood-angels/book.config.json --check && npm run blood-angels:compatible:check && npm run blood-angels:mobile:check && npm run blood-angels:qa",
     "points:build": "node roster-guides/build-points.mjs",

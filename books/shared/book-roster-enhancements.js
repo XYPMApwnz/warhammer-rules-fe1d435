@@ -71,6 +71,21 @@
     ['shroud field','stealth-lone-operative'],
     ['orksbane','new-weapon-profile']
   ]);
+  const baEffects=new Map([
+    ['legacy-of-grace|enhancement-blood-boil','psychic-anti-reroll-damage'],
+    ['legacy-of-grace|enhancement-aureole-of-the-angel','detection-range-minus-3'],
+    ['wrath-of-the-doomed|enhancement-on-the-archtraitors-bridge','melee-attacks-plus-2'],
+    ['the-angelic-host|enhancement-archangels-shard','melee-anti-chaos-lance'],
+    ['the-angelic-host|enhancement-artisan-of-war','save-2-weapons-ap-plus-1'],
+    ['angelic-inheritors|enhancement-prescient-flash','unit-scouts-6'],
+    ['rage-cursed-onslaught|enhancement-carmine-reliquary','unit-scouts-6-battleshock-aura']
+  ]);
+  const inheritedBaSmEffects=new Set([
+    'vengeful-hosts|enhancement-orksbane',
+    'subversion-assets|enhancement-shroud-field',
+    'headhunter-task-force|enhancement-firestorm-coordinators',
+    'firestorm-assault-force|enhancement-war-tempered-artifice'
+  ]);
   const inheritedDaSmEffects=new Set([
     'vengeful-hosts|enhancement-orksbane',
     'fulguris-task-force|bellicose-weapon-spirits',
@@ -492,10 +507,30 @@
     for(const entry of ownership.unresolved){const article=csmArticle(entry,resolveCsmItem(entry,roster),'This Enhancement was not assigned because its owner could not be resolved to an exact roster unit.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
     return ownership.cardEnhancements;
   }
+  function applyBaEffect(card,article,item){
+    const effect=baEffects.get(`${item.detachmentId}|${item.ruleId}`);if(!effect)return;
+    if(effect==='psychic-anti-reroll-damage'){
+      const rows=weaponRows(card).filter(row=>[...row.querySelectorAll('.weapon-tags > *')].some(tag=>normalize(tag.textContent)==='psychic'));
+      if(rows.length&&rows.every(row=>addWeaponTag(row,'ANTI-NON-MONSTER/VEHICLE 5+',effect)))derivedNote(article,effect,"Derived profiles: Anti-Non-Monster/Vehicle 5+ applied to the bearer's Psychic attacks; those attacks can also re-roll Damage rolls.");else warning(article,'Effect could not be applied automatically because no structured Psychic weapon profiles were found.');return;
+    }
+    if(effect==='detection-range-minus-3'){derivedNote(article,effect,'Derived permanent ability: this unit has -3" detection range.');return;}
+    if(effect==='melee-attacks-plus-2'){
+      if(adjustWeapons(card,'melee',{A:2},effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,"Derived profiles: +2 Attacks applied to the bearer's melee weapons.");}else warning(article,'Effect could not be applied automatically because no melee weapon profiles were found.');return;
+    }
+    if(effect==='melee-anti-chaos-lance'){
+      if(tagWeapons(card,'melee','ANTI-CHAOS 5+',effect)&&tagWeapons(card,'melee','LANCE',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,"Derived profiles: Anti-Chaos 5+ and Lance applied to the bearer's melee weapons.");}else warning(article,'Effect could not be applied automatically because no melee weapon profiles were found.');return;
+    }
+    if(effect==='save-2-weapons-ap-plus-1'){
+      const save=setSmStat(card,'Sv','2+',effect),weapons=adjustWeapons(card,'',{AP:-1},effect);if(save&&weapons){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,"Derived Datasheet: Save 2+ and improved Armour Penetration applied to the bearer's weapons.");}else warning(article,'Effect could not be applied automatically because the Save characteristic or weapon profiles were not found.');return;
+    }
+    if(effect==='unit-scouts-6'||effect==='unit-scouts-6-battleshock-aura'){
+      if(addSharedAbility(card,'Scouts 6"','core-scouts',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,effect==='unit-scouts-6'?'Derived ability: Scouts 6" applied to the bearer Datasheet only. No Bodyguard Datasheet is mutated without attachment evidence.':'Derived ability: Scouts 6" applied to the bearer Datasheet only. The Battle-shock re-roll aura remains conditional and no Bodyguard Datasheet is mutated without attachment evidence.');}else warning(article,'Effect could not be applied automatically because the Abilities block was not found.');
+    }
+  }
   function decorateBa(card,roster,units){
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];const ownership=resolveTauOwnership(roster,units);
     if(ownership.instances.length>1){renderCsmInstances(card,ownership,roster);return ownership.instances.flatMap(instance=>instance.enhancements);}
-    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;list.prepend(csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.'));}
+    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item){const identity=`${resolution.item.detachmentId}|${resolution.item.ruleId}`;if(inheritedBaSmEffects.has(identity))applySmEffect(card,article,resolution.item);else applyBaEffect(card,article,resolution.item);}list.prepend(article);}
     for(const entry of ownership.unresolved){const article=csmArticle(entry,resolveCsmItem(entry,roster),'This Enhancement was not assigned because its owner could not be resolved to an exact roster unit.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
     return ownership.cardEnhancements;
   }

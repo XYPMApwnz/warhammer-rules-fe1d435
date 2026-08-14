@@ -466,7 +466,8 @@
       else warning(article,'Effect could not be applied automatically because the Move characteristic was not found.');return;
     }
     if(effect==='unit-invulnerable-save-5'){
-      derivedNote(article,effect,'Attachment-dependent rule: the bearer\'s unit has a 5+ invulnerable save. No Bodyguard or shared Datasheet is mutated without attachment evidence.');return;
+      if(addSharedAbility(card,'Invulnerable Save 5+','core-characteristic-invulnerable-save',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived ability: Invulnerable Save 5+ applied to the bearer Datasheet only. No Bodyguard Datasheet is mutated without attachment evidence.');}
+      else warning(article,'Effect could not be applied automatically because the Abilities block was not found.');return;
     }
     if(effect==='daemon-melee-attacks-plus-1'){
       const keyword=addKeyword(card,'DAEMON',effect),profiles=adjustWeapons(card,'melee',{A:1},effect);
@@ -561,6 +562,10 @@
   }
   function applyDaEffect(card,article,item){
     const effect=daEffects.get(`${item.detachmentId}|${item.ruleId}`),note=daNotes.get(effect);
+    if(effect==='unit-scouts-9'){
+      if(addSharedAbility(card,'Scouts 9"','core-scouts',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived ability: Scouts 9" applied to the bearer Datasheet only. No Bodyguard Datasheet is mutated without attachment evidence.');}
+      else warning(article,'Effect could not be applied automatically because the Abilities block was not found.');return;
+    }
     if(note){derivedNote(article,effect,note);return;}
     if(effect==='melee-precision'){
       if(tagWeapons(card,'melee','PRECISION',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,"Derived profiles: Precision applied to the bearer's melee weapons.");}else warning(article,'Effect could not be applied automatically because no melee weapon profiles were found.');return;

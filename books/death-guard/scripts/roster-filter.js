@@ -22,6 +22,71 @@
 
   const slug = (value) => String(value || "").toLowerCase().replace(/[’']/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   const normalize = (value) => String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const canonicalUnitDefinition=unit=>window.WH_POINTS_CATALOG?.['death guard']?.units?.[normalize(unit?.name)]||null;
+  const canonicalUnitKeywords=unit=>canonicalUnitDefinition(unit)?.keywords||[];
+  const hasCanonicalRule=(unit,ruleId)=>window.WH_POINTS_CATALOG?.['death guard']?.units?.[normalize(unit?.name)]?.termIds?.includes(ruleId);
+  const attachmentContract=(bodyguard,character)=>{
+    const bodyguardDefinition=canonicalUnitDefinition(bodyguard),characterDefinition=canonicalUnitDefinition(character);
+    if(!bodyguardDefinition||!characterDefinition||!characterDefinition.keywords?.includes('CHARACTER'))return null;
+    const forward=[...(characterDefinition.relations?.canLead||[]),...(characterDefinition.relations?.canSupport||[])].find(item=>item.unitId===bodyguardDefinition.unitId);
+    const reverse=[...(bodyguardDefinition.relations?.canBeLedBy||[]),...(bodyguardDefinition.relations?.canBeSupportedBy||[])].find(item=>item.unitId===characterDefinition.unitId);
+    return forward&&reverse?{characterUnitId:characterDefinition.unitId,maxCharacters:Math.max(1,Number(forward.maxCharacters||reverse.maxCharacters||1))}:null;
+  };
+  const validPersistedAttachments=(units,raw)=>{
+    const uses=new Map(),attachments={};
+    for(const characterIds of Object.values(raw||{}))if(Array.isArray(characterIds))for(const characterId of characterIds)uses.set(characterId,(uses.get(characterId)||0)+1);
+    for(const [bodyguardId,characterIds] of Object.entries(raw||{})){
+      const bodyguard=units.get(bodyguardId);if(!bodyguard||!Array.isArray(characterIds)||!characterIds.length)continue;
+      const selectedTypes=new Set(),contracts=[];let valid=true;
+      for(const characterId of characterIds){
+        const contract=attachmentContract(bodyguard,units.get(characterId));
+        if(!contract||uses.get(characterId)!==1||selectedTypes.has(contract.characterUnitId)){valid=false;break;}
+        selectedTypes.add(contract.characterUnitId);contracts.push(contract);
+      }
+      const limit=contracts.length?Math.max(...contracts.map(contract=>contract.maxCharacters)):0;
+      if(valid&&characterIds.length<=limit)attachments[bodyguardId]=[...characterIds];
+    }
+    return attachments;
+  };
+  const rosterUnitsById=new Map(roster.units.map(unit=>[unit.id,unit])),attachments=validPersistedAttachments(rosterUnitsById,record?.attachments);
+  const rosterInstanceLabels=(()=>{const totals=new Map(),seen=new Map(),labels=new Map();roster.units.forEach(unit=>{const key=normalize(unit.name);totals.set(key,(totals.get(key)||0)+1);});roster.units.forEach(unit=>{const key=normalize(unit.name),index=(seen.get(key)||0)+1;seen.set(key,index);labels.set(unit.id,totals.get(key)>1?`${unit.name} #${index}`:unit.name);});return labels;})();
+  const addLethalHits=row=>{const tags=row.querySelector('.weapon-tags');if(!tags||[...tags.children].some(tag=>normalize(tag.textContent)==='lethal hits'))return;const tag=document.createElement('button');tag.type='button';tag.className='tag';tag.dataset.term='core-lethal-hits';tag.textContent='LETHAL HITS';tags.append(tag);};
+  const addEyeOfAffliction=row=>{const tags=row.querySelector('.weapon-tags');if(!tags||tags.querySelector('.roster-eye-of-affliction'))return;const tag=document.createElement('span');tag.className='tag roster-eye-of-affliction';tag.textContent='IGNORES COVER vs AFFLICTED';tags.append(tag);};
+  const addWeaponAbility=(row,title,term)=>{const tags=row.querySelector('.weapon-tags');if(!tags||[...tags.children].some(tag=>normalize(tag.textContent)===normalize(title)))return;const tag=document.createElement('button');tag.type='button';tag.className='tag';tag.dataset.term=term;tag.textContent=title;tags.append(tag);};
+  const attachmentGroups=Object.entries(attachments).map(([bodyguardId,characterIds])=>{const bodyguard=rosterUnitsById.get(bodyguardId),characters=characterIds.map(id=>rosterUnitsById.get(id)).filter(Boolean),members=[bodyguard,...characters].filter(Boolean),aggregateUnitKeywords=[...new Set(members.flatMap(canonicalUnitKeywords))].sort();return{bodyguard,characters,ids:new Set([bodyguardId,...characterIds]),aggregateUnitKeywords};}).filter(group=>group.bodyguard&&group.characters.length);
+  const renderAttachedUnits=(card,units)=>{
+    const root=card.querySelector('[id$="-abilities"] .ability-list');if(!root)return;
+    const allEnhancements=window.WHRosterEnhancements?.enriched(roster)||[];
+    const eyeOwners=allEnhancements.filter(item=>item.ownerStatus==='resolved'&&normalize(item.name)==='eye of affliction'),revoltingOwners=allEnhancements.filter(item=>item.ownerStatus==='resolved'&&normalize(item.name)==='revolting regeneration'),archOwners=allEnhancements.filter(item=>item.ownerStatus==='resolved'&&normalize(item.name)==='arch contaminator');
+    units.forEach(instance=>{
+      const group=attachmentGroups.find(item=>item.ids.has(instance.id));
+      const biologus=group?.characters.find(unit=>normalize(unit.name)==='biologus putrifier')||null,tallyman=group?.characters.find(unit=>normalize(unit.name)==='tallyman')||null;
+      const eyeOfAffliction=eyeOwners.some(item=>item.ownerUnitId===instance.id||group?.ids.has(item.ownerUnitId));
+      const revoltingRegeneration=revoltingOwners.some(item=>item.ownerUnitId===instance.id);
+      const isBodyguard=group?.bodyguard.id===instance.id,vectorSource=group?.characters.find(unit=>hasCanonicalRule(unit,'ability-vector-of-disease-2498580'))||null,giftSource=group?.characters.find(unit=>hasCanonicalRule(unit,'ability-gift-of-contagion-psychic-4fea300'))||null,blindingSource=group?.characters.find(unit=>hasCanonicalRule(unit,'ability-blinding-spray-7d189f5'))||null;
+      const silentBodyguard=Boolean(group&&!isBodyguard&&hasCanonicalRule(group.bodyguard,'ability-silent-bodyguard-03a0a1b')&&canonicalUnitKeywords(instance).includes('CHARACTER')),archContaminator=Boolean(isBodyguard&&archOwners.some(item=>group?.ids.has(item.ownerUnitId)));
+      if(!group&&!eyeOfAffliction&&!revoltingRegeneration)return;
+      const article=document.createElement('article');article.className='ability roster-attached-unit';article.dataset.rosterInstanceId=instance.id;
+      if(group)article.dataset.aggregateUnitKeywords=group.aggregateUnitKeywords.join('|');
+      const heading=document.createElement('h5');heading.textContent=`${rosterInstanceLabels.get(instance.id)} · ${group?'Attached Unit':'Enhancement projection'}`;article.append(heading);
+      if(group){const members=document.createElement('p');members.textContent=`Attached Unit: ${[group.bodyguard,...group.characters].map(unit=>rosterInstanceLabels.get(unit.id)||unit.name).join(', ')}`;article.append(members);}
+      let projection=null;
+      const ensureProjection=()=>{if(projection)return projection;projection=document.createElement('div');projection.className='roster-attached-weapons';[...card.querySelectorAll('.weapon-group')].filter(weaponGroup=>!weaponGroup.closest('.roster-attached-unit')).forEach(weaponGroup=>{const clone=weaponGroup.cloneNode(true);clone.querySelectorAll('[id]').forEach(node=>node.removeAttribute('id'));projection.append(clone);});article.append(projection);return projection;};
+      if(biologus){
+        const note=document.createElement('p');note.className='roster-derived-note roster-foul-infusion';note.textContent='Foul Infusion: these weapon profiles have LETHAL HITS; unmodified Hit rolls of 5+ score a Critical Hit.';article.append(note);
+        ensureProjection().querySelectorAll('.weapon-row:not(.weapon-head)').forEach(addLethalHits);
+      }
+      if(tallyman){const note=document.createElement('p');note.className='roster-derived-note roster-malicious-calculations';note.textContent='Malicious Calculations: when a model in this Attached Unit attacks, you can ignore modifiers to its BS or WS and/or modifiers to the Hit roll.';article.append(note);}
+      if(vectorSource){[...ensureProjection().querySelectorAll('.weapon-group')].filter(weaponGroup=>normalize(weaponGroup.querySelector('h5')?.textContent).includes('melee weapons')).forEach(weaponGroup=>weaponGroup.querySelectorAll('.weapon-row:not(.weapon-head)').forEach(row=>{addWeaponAbility(row,'SUSTAINED HITS 1','core-sustained-hits');addWeaponAbility(row,'LANCE','core-lance');}));}
+      if(silentBodyguard){const note=document.createElement('p');note.className='roster-derived-note roster-silent-bodyguard';note.textContent='Silent Bodyguard: this CHARACTER model has Feel No Pain 4+ while leading Deathshroud Terminators.';article.append(note);}
+      if(isBodyguard&&giftSource){const note=document.createElement('p');note.className='roster-derived-note roster-gift-of-contagion';note.textContent='Gift of Contagion: while this Attached Unit targets an AFFLICTED unit, those attacks have SUSTAINED HITS 1.';article.append(note);}
+      if(archContaminator){const note=document.createElement('p');note.className='roster-derived-note roster-arch-contaminator';note.textContent='Arch Contaminator: while this Attached Unit is within range of an objective marker you control, models in it can re-roll the Wound roll.';article.append(note);}
+      if(isBodyguard&&blindingSource){const note=document.createElement('p');note.className='roster-derived-note roster-blinding-spray';note.textContent='Blinding Spray (activation): in the Fight phase, Foul Blightspawn can give this Attached Unit Fights First until the end of the phase; once per battle.';article.append(note);}
+      if(eyeOfAffliction){const note=document.createElement('p');note.className='roster-derived-note roster-eye-of-affliction-note';note.textContent='Eye of Affliction: ranged weapons have IGNORES COVER while targeting an AFFLICTED enemy unit.';article.append(note);[...ensureProjection().querySelectorAll('.weapon-group')].filter(weaponGroup=>normalize(weaponGroup.querySelector('h5')?.textContent).includes('ranged weapons')).forEach(weaponGroup=>weaponGroup.querySelectorAll('.weapon-row:not(.weapon-head)').forEach(addEyeOfAffliction));}
+      if(revoltingRegeneration){const note=document.createElement('p');note.className='roster-derived-note roster-revolting-regeneration';note.textContent='Revolting Regeneration: this bearer has Feel No Pain 5+.';article.append(note);}
+      root.append(article);
+    });
+  };
   const resolveRosterDetachmentIds=(normalizedIds,availableIds)=>{const ids=[...new Set(normalizedIds.filter(Boolean))];return ids.length&&ids.every(id=>availableIds.filter(candidate=>candidate===id).length===1)?ids:null;};
   const detachmentKeywordGrants = [
     {detachment:'shamblerot-vectorium',units:['poxwalkers'],id:'keyword-battleline',title:'BATTLELINE'},
@@ -138,7 +203,7 @@
     if(!owner)continue;
     (enhancementRuleIdsByUnitId[`unit-${slug(owner.name)}`]||=[]).push(`enhancement-${slug(enhancement.name)}`);
   }
-  window.DG_ROSTER_GUIDE=Object.freeze({detachmentIds:[...detachmentIds].map(id=>id.replace(/^detachment-/,'')),enhancementRuleIdsByUnitId});
+  window.DG_ROSTER_GUIDE=Object.freeze({detachmentIds:[...detachmentIds].map(id=>id.replace(/^detachment-/,'')),enhancementRuleIdsByUnitId,attachments});
 
   document.title = `${roster.faction} Roster Guide`;
   document.querySelector(".app-brand strong").textContent = `${roster.faction} Roster Guide`;
@@ -204,6 +269,7 @@
     card.querySelectorAll(".weapon-group").forEach((group) => {
       if (!group.querySelector(".weapon-row:not(.weapon-head)")) group.remove();
     });
+    renderAttachedUnits(card,entry.units);
   });
 
   document.querySelectorAll('[data-nav-id^="unit-"]').forEach((item) => {

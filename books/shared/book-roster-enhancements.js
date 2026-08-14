@@ -70,6 +70,64 @@
     ['shroud field','stealth-lone-operative'],
     ['orksbane','new-weapon-profile']
   ]);
+  const inheritedDaSmEffects=new Set([
+    'vengeful-hosts|enhancement-orksbane',
+    'fulguris-task-force|bellicose-weapon-spirits',
+    'fulguris-task-force|raptorial-cogitator-core',
+    'subversion-assets|shroud-field',
+    'headhunter-task-force|firestorm-coordinators',
+    'firestorm-assault-force|firestorm-assault-force-war-tempered-artifice',
+    'gladius-task-force|gladius-task-force-artificer-armour',
+    'ironstorm-spearhead|ironstorm-spearhead-the-flesh-is-weak',
+    'vanguard-spearhead|vanguard-spearhead-ghostweave-cloak'
+  ]);
+  const daEffects=new Map([
+    ['company-of-hunters|enhancement-master-of-manoeuvre','strategic-reserves-setup'],
+    ['company-of-hunters|enhancement-master-crafted-weapon','melee-precision'],
+    ['company-of-hunters|enhancement-mounted-strategist','unit-advance-charge-rerolls'],
+    ['company-of-hunters|enhancement-recon-hunter','unit-scouts-9'],
+    ['dark-age-arsenal|petition-of-stability','plasma-range-plus-6'],
+    ['dark-age-arsenal|entreaty-of-perpetual-ardour','snap-shooting-hit-5'],
+    ['darkflight-pursuit|thundercowl-turbines','first-turn-ingress'],
+    ['darkflight-pursuit|nightforged-battery','reroll-attacks-hazard'],
+    ['inner-circle-task-force|enhancement-champion-of-the-deathwing','melee-lethal-hits-vowed-critical'],
+    ['inner-circle-task-force|enhancement-inner-circle-task-force-deathwing-assault','early-deep-strike'],
+    ['inner-circle-task-force|enhancement-eye-of-the-unseen','conditional-cp-roll'],
+    ['inner-circle-task-force|enhancement-singular-will','unit-pile-in-consolidate-plus-3'],
+    ['interrogation-conclave|limitless-zeal','unit-charge-plus-1'],
+    ['interrogation-conclave|inescapable-interrogation','ranged-ignores-cover'],
+    ['lion-s-blade-task-force|calibanite-armaments','melee-damage-plus-1'],
+    ['lion-s-blade-task-force|lord-of-the-hunt','unit-fall-back-actions'],
+    ['lion-s-blade-task-force|stalwart-champion','conditional-unit-oc-plus-1'],
+    ['lion-s-blade-task-force|fulgus-magna','once-per-battle-reserves'],
+    ['unforgiven-task-force|enhancement-pennant-of-remembrance','attached-unit-feel-no-pain'],
+    ['unforgiven-task-force|enhancement-shroud-of-heroes','once-per-battle-return'],
+    ['unforgiven-task-force|enhancement-stubborn-tenacity','attached-unit-conditional-rolls'],
+    ['unforgiven-task-force|enhancement-weapons-of-the-first-legion','melee-attacks-strength-damage-plus-1'],
+    ['wrath-of-the-rock|tempered-in-battle-aura','leadership-reroll-aura'],
+    ['wrath-of-the-rock|ancient-weapons','melee-strength-ap-damage'],
+    ['wrath-of-the-rock|deathwing-assault','early-deep-strike'],
+    ['wrath-of-the-rock|lord-of-the-ravenwing','unit-advance-charge-rerolls']
+  ]);
+  const daNotes=new Map([
+    ['strategic-reserves-setup','Setup rule: if the bearer\'s unit starts the battle in Strategic Reserves, it does not count towards the army\'s Strategic Reserves points limit and treats the current battle round as one higher when it is set up.'],
+    ['unit-advance-charge-rerolls','Attachment-dependent rule: the bearer\'s unit can re-roll Advance and Charge rolls. No Bodyguard Datasheet is mutated without attachment evidence.'],
+    ['unit-scouts-9','Attachment-dependent setup rule: models in the bearer\'s unit have Scouts 9". No Bodyguard Datasheet is mutated without attachment evidence.'],
+    ['snap-shooting-hit-5','Derived rule: this unit\'s snap shooting attacks hit on unmodified Hit rolls of 5+.'],
+    ['first-turn-ingress','Setup rule: in your first Movement phase, this unit can make an ingress move.'],
+    ['reroll-attacks-hazard','Derived rule: this unit can re-roll rolls to determine a weapon\'s Attacks characteristic and Hazard rolls.'],
+    ['early-deep-strike','Setup rule: the bearer\'s unit can use Deep Strike in the Reinforcements step of your first, second or third Movement phase, regardless of mission rules.'],
+    ['conditional-cp-roll','Conditional rule: when the bearer\'s unit is targeted with a Stratagem, roll one D6, adding 1 while the bearer is within range of the Vowed objective marker; on a 5+ you gain 1CP.'],
+    ['unit-pile-in-consolidate-plus-3','Attachment-dependent rule: when the bearer\'s unit Piles In or Consolidates, models in it can move an additional 3". No Bodyguard Datasheet is mutated without attachment evidence.'],
+    ['unit-charge-plus-1','Attachment-dependent rule: this unit has +1 to Charge rolls. No Bodyguard Datasheet is mutated without attachment evidence.'],
+    ['unit-fall-back-actions','Attachment-dependent rule: the bearer\'s unit can shoot and declare a charge after Falling Back and can re-roll Desperate Escape tests. No Bodyguard Datasheet is mutated without attachment evidence.'],
+    ['conditional-unit-oc-plus-1','Attachment-dependent conditional rule: while the bearer\'s unit is not Battle-shocked, models in it have +1 Objective Control. No permanent profile or Bodyguard Datasheet mutation was applied.'],
+    ['once-per-battle-reserves','Once-per-battle rule: at the end of your opponent\'s turn, if the bearer\'s unit is not within Engagement Range, it can be placed into Strategic Reserves.'],
+    ['attached-unit-feel-no-pain','Attachment-dependent conditional rule: while the bearer is leading a unit, models in it have Feel No Pain 6+, or Feel No Pain 4+ while that unit is Battle-shocked. No Datasheet mutation was applied.'],
+    ['once-per-battle-return','Once-per-battle rule: when this model is destroyed, its source-backed return roll and setup instructions apply at the end of the phase.'],
+    ['attached-unit-conditional-rolls','Attachment-dependent conditional rule: while the bearer is leading a unit, its below-Starting-Strength and Battle-shocked attack-roll modifiers apply. No weapon profile or Bodyguard Datasheet mutation was applied.'],
+    ['leadership-reroll-aura','Derived aura: friendly Adeptus Astartes units within 6" can re-roll Battle-shock and Leadership tests. No other Datasheet card is mutated.']
+  ]);
 
   function enhancementArticle(entry,item){
     const article=root.document.createElement('article');article.className='ability roster-enhancement';article.dataset.rosterEnhancement=normalize(item.title);
@@ -429,7 +487,7 @@
   function decorateDa(card,roster,units){
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];const ownership=resolveTauOwnership(roster,units);
     if(ownership.instances.length>1){renderCsmInstances(card,ownership,roster);return ownership.instances.flatMap(instance=>instance.enhancements);}
-    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;list.prepend(csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.'));}
+    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item){const identity=`${resolution.item.detachmentId}|${resolution.item.ruleId}`;if(inheritedDaSmEffects.has(identity))applySmEffect(card,article,resolution.item);else if(daEffects.has(identity))applyDaEffect(card,article,resolution.item);}list.prepend(article);}
     for(const entry of ownership.unresolved){const article=csmArticle(entry,resolveCsmItem(entry,roster),'This Enhancement was not assigned because its owner could not be resolved to an exact roster unit.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
     return ownership.cardEnhancements;
   }
@@ -457,6 +515,27 @@
       if(addSmWeaponProfile(card,item.profile,effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived profile: the complete source-backed Orksbane melee weapon was added to this roster instance.');}else warning(article,'The Orksbane weapon profile could not be added because its complete structured profile or melee weapon table was unavailable.');return;
     }
     warning(article,'No permanent Datasheet mutation was applied because this Enhancement does not have a safe deterministic projection.');
+  }
+  function applyDaEffect(card,article,item){
+    const effect=daEffects.get(`${item.detachmentId}|${item.ruleId}`),note=daNotes.get(effect);
+    if(note){derivedNote(article,effect,note);return;}
+    if(effect==='melee-precision'){
+      if(tagWeapons(card,'melee','PRECISION',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,"Derived profiles: Precision applied to the bearer's melee weapons.");}else warning(article,'Effect could not be applied automatically because no melee weapon profiles were found.');return;
+    }
+    if(effect==='plasma-range-plus-6'){
+      const rows=weaponRows(card,'ranged').filter(row=>normalize(row.dataset.sourceField).includes('plasma'));
+      if(adjustTyranidsRows(rows,{Range:6},effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived profiles: +6" Range applied only to plasma ranged weapons on this roster instance.');}else warning(article,'Effect could not be applied automatically because no structured plasma ranged weapon profiles were found.');return;
+    }
+    if(effect==='melee-lethal-hits-vowed-critical'){
+      if(tagWeapons(card,'melee','LETHAL HITS',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,"Derived profiles: Lethal Hits applied to the bearer's melee weapons. Critical Hits on unmodified Hit rolls of 5+ remain conditional on the bearer being within range of the Vowed objective marker.");}else warning(article,'Effect could not be applied automatically because no melee weapon profiles were found.');return;
+    }
+    if(effect==='ranged-ignores-cover'){
+      if(tagWeapons(card,'ranged','IGNORES COVER',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,"Derived profiles: Ignores Cover applied to this exact owner's ranged weapons. No Bodyguard Datasheet is mutated without attachment evidence.");}else warning(article,'Effect could not be applied automatically because no ranged weapon profiles were found.');return;
+    }
+    if(effect==='melee-damage-plus-1'||effect==='melee-attacks-strength-damage-plus-1'||effect==='melee-strength-ap-damage'){
+      const changes=effect==='melee-damage-plus-1'?{D:1}:effect==='melee-attacks-strength-damage-plus-1'?{A:1,S:1,D:1}:{S:2,AP:-1,D:1};
+      if(adjustWeapons(card,'melee',changes,effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,effect==='melee-damage-plus-1'?"Derived profiles: +1 Damage applied to the bearer's melee weapons.":effect==='melee-strength-ap-damage'?"Derived profiles: +2 Strength, improved Armour Penetration and +1 Damage applied to the bearer's melee weapons.":"Derived profiles: +1 Attacks, Strength and Damage applied to the bearer's melee weapons. The +2 values remain conditional on the bearer being Battle-shocked and are not applied permanently.");}else warning(article,'Effect could not be applied automatically because one or more melee weapon characteristics were not found.');return;
+    }
   }
   function decorate(card,roster,units){
     if(tauBook())return decorateTau(card,roster,units);

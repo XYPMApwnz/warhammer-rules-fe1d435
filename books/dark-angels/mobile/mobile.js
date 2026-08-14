@@ -5,6 +5,7 @@
   const relatedRules=document.getElementById('relatedRules'),relatedContent=document.getElementById('relatedRulesContent'),relatedDetachment=document.getElementById('relatedDetachment');
   const drawerMedia=matchMedia('(max-width: 800px)'),unit=document.querySelector('.unit-card'),params=new URLSearchParams(location.search),rosterMode=params.has('roster');
   const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/\s*\(aura\)\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim(),faction=value=>normalize(value).replace(/^(?:chaos|imperium|xenos)\s+/,''),slug=value=>normalize(value).replace(/\s+/g,'-');
+  const appendAssignedEnhancements=(sections,records)=>{for(const record of records||[]){const section=sections.find(item=>item.dataset.detachment===record.detachmentId),group=section?.querySelector('[data-related-kind="enhancements"]');if(!group||group.querySelector(`[data-rule-id="${CSS.escape(record.ruleId)}"]`))continue;const card=document.createElement('article');card.className='enhancement surface';card.dataset.ruleId=record.ruleId;card.dataset.rosterAssignedOnly='true';const cost=document.createElement('div');cost.className='eyebrow';cost.textContent=`Enhancement · ${record.value} pts`;const title=document.createElement('h4');title.textContent=record.title;const text=document.createElement('p');text.dataset.sourceField='text';text.textContent=record.text;card.append(cost,title,text);group.append(card);}};
   function rosterContext(){
     if(!rosterMode)return null;
     let record;try{record=(JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[]).find(item=>item?.id===params.get('roster'));}catch{}
@@ -12,7 +13,7 @@
     const selected=new Set(roster.units.map(item=>normalize(item.name)));
     const detachments=[...new Set((roster.detachments?.length?roster.detachments.map(item=>item.label):[roster.detachment]).flatMap(value=>String(value||'').split(/\s*,\s*(?![^()]*\))/)).map(value=>slug(value.replace(/\s*\([^)]*\)\s*$/,''))).filter(Boolean))];
     if(!detachments.length||unit&&!selected.has(normalize(unit.dataset.unitTitle)))return null;
-    return{selected,detachments};
+    return{roster,selected,detachments,units:unit?roster.units.filter(item=>normalize(item.name)===normalize(unit.dataset.unitTitle)):[]};
   }
   const roster=rosterContext();if(rosterMode&&!roster){location.replace('../../../roster-guides/index.html');return;}
   const terms=Object.freeze({...window.WH40K_GLOSSARY.forBook('dark-angels'),...(window.DG_TERMS||{})});
@@ -24,7 +25,7 @@
     for(const link of nav.querySelectorAll('a[href$=".html"]')){const destination=new URL(link.href);destination.searchParams.set('roster',params.get('roster'));link.href=destination.href;if(link.closest('.mobile-unit-groups')&&!roster.selected.has(normalize(link.textContent)))link.remove();}
     for(const link of nav.querySelectorAll('.phone-tree > details:first-of-type .mobile-nav-branch > a'))if(!roster.detachments.includes(slug(link.textContent.replace(/\s+\d+\s*DP$/i,''))))link.remove();
     for(const group of nav.querySelectorAll('.mobile-unit-groups > details'))if(!group.querySelector('a'))group.remove();
-    document.documentElement.dataset.rosterActive='true';
+    document.documentElement.dataset.rosterActive='true';if(unit&&window.WHBookRosterEnhancements){window.WHBookRosterEnhancements.decorate(unit,roster.roster,roster.units);roster.assignedEnhancements=new Set(window.WHBookRosterEnhancements.assignedRuleIds(roster.roster,roster.units));roster.assignedEnhancementRecords=window.WHBookRosterEnhancements.assignedRecords(roster.roster,roster.units);}
   }
   if(relatedRules&&unit){
     const loadRelated=async()=>{
@@ -32,10 +33,10 @@
         const response=await fetch('./related-rules.inc?v=4');if(!response.ok)throw new Error(`HTTP ${response.status}`);
         const template=document.createElement('template');template.innerHTML=await response.text();const fragment=template.content;
         fragment.querySelectorAll('[id]').forEach(node=>{if(!node.dataset.ruleId)node.dataset.ruleId=node.id;node.removeAttribute('id');});
-        let sections=[...fragment.querySelectorAll('.related-detachment')];
+        let sections=[...fragment.querySelectorAll('.related-detachment')];if(rosterMode)appendAssignedEnhancements(sections,roster.assignedEnhancementRecords);
         if(rosterMode){const allowed=new Set(roster.detachments);sections.forEach(section=>{if(section.dataset.detachment!=='core'&&!allowed.has(section.dataset.detachment))section.remove();});sections=sections.filter(section=>section.dataset.detachment==='core'||allowed.has(section.dataset.detachment));relatedDetachment.querySelectorAll('option').forEach(option=>{if(option.value!=='all'&&!allowed.has(option.value))option.remove();});}
         const tabs=[...relatedRules.querySelectorAll('[data-related-tab]')],profile=window.WHArmyRelatedRules.profile(unit);let kind='stratagems';
-        const filter=()=>{const visibleRules=[];relatedContent.querySelectorAll('.stratagem,.enhancement').forEach(card=>{const result=window.WHArmyRelatedRules.match(card,profile),visible=result.state!=='no-match';card.hidden=!visible;card.dataset.matchState=result.state;if(visible)visibleRules.push(card);});const hasEnhancements=visibleRules.some(card=>card.classList.contains('enhancement'));if(kind==='enhancements'&&!hasEnhancements)kind='stratagems';tabs.find(tab=>tab.dataset.relatedTab==='enhancements').hidden=!hasEnhancements;relatedContent.querySelectorAll('[data-related-kind]').forEach(group=>group.hidden=group.dataset.relatedKind!==kind||![...group.querySelectorAll('.stratagem,.enhancement')].some(card=>!card.hidden));sections.forEach(section=>section.hidden=!(section.dataset.detachment==='core'||relatedDetachment.value==='all'||section.dataset.detachment===relatedDetachment.value)||![...section.querySelectorAll('[data-related-kind]')].some(group=>!group.hidden));tabs.forEach(tab=>tab.setAttribute('aria-pressed',String(tab.dataset.relatedTab===kind)));};
+        const filter=()=>{const visibleRules=[];relatedContent.querySelectorAll('.stratagem,.enhancement').forEach(card=>{const result=window.WHArmyRelatedRules.match(card,profile),assigned=!rosterMode||!card.classList.contains('enhancement')||roster.assignedEnhancements?.has(card.dataset.ruleId),visible=assigned&&(card.dataset.rosterAssignedOnly==='true'||result.state!=='no-match');card.hidden=!visible;card.dataset.matchState=visible?(card.dataset.rosterAssignedOnly==='true'?'match':result.state):'no-match';if(visible)visibleRules.push(card);});const hasEnhancements=visibleRules.some(card=>card.classList.contains('enhancement'));if(kind==='enhancements'&&!hasEnhancements)kind='stratagems';tabs.find(tab=>tab.dataset.relatedTab==='enhancements').hidden=!hasEnhancements;relatedContent.querySelectorAll('[data-related-kind]').forEach(group=>group.hidden=group.dataset.relatedKind!==kind||![...group.querySelectorAll('.stratagem,.enhancement')].some(card=>!card.hidden));sections.forEach(section=>section.hidden=!(section.dataset.detachment==='core'||relatedDetachment.value==='all'||section.dataset.detachment===relatedDetachment.value)||![...section.querySelectorAll('[data-related-kind]')].some(group=>!group.hidden));tabs.forEach(tab=>tab.setAttribute('aria-pressed',String(tab.dataset.relatedTab===kind)));};
         relatedContent.replaceChildren(fragment);relatedDetachment.addEventListener('change',filter);tabs.forEach(tab=>tab.addEventListener('click',()=>{kind=tab.dataset.relatedTab;filter();}));filter();
       }catch(error){console.error(error);relatedContent.textContent='Could not load compatible rules.';}
     };

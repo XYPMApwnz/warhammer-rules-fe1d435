@@ -47,7 +47,8 @@
       if(!content||!unit)return;
       const unitProfile=profile(unit);
       content.querySelectorAll('.stratagem,.enhancement').forEach(card=>{
-        const result=match(card,unitProfile);
+        const assignedEnhancements=options.rosterGuide?.bookId==='dark-angels'?new Set(options.rosterGuide.enhancementRuleIdsByUnitId?.[unitProfile.id]||[]):null;
+        const assigned=assignedEnhancements?.has(card.dataset.ruleId),result=assignedEnhancements&&card.classList.contains('enhancement')?!assigned?{state:'no-match',matchedRoleIds:[],reasons:[]}:card.dataset.rosterAssignedOnly==='true'?{state:'match',matchedRoleIds:[],reasons:[]}:match(card,unitProfile):match(card,unitProfile);
         card.hidden=result.state==='no-match';
         renderMatchState(card,result);
       });
@@ -81,6 +82,7 @@
           const fragment=(await getTemplate()).content.cloneNode(true);
           fragment.querySelectorAll('[id]').forEach(node=>{if(!node.dataset.ruleId)node.dataset.ruleId=node.id;node.removeAttribute('id');});
           sections=[...fragment.querySelectorAll('.related-detachment')];
+          if(options.rosterGuide?.bookId==='dark-angels')for(const record of Object.values(options.rosterGuide.enhancementRecordsByUnitId||{}).flat()){const section=sections.find(item=>item.dataset.detachment===record.detachmentId),group=section?.querySelector('[data-related-kind="enhancements"]');if(!group||group.querySelector(`[data-rule-id="${CSS.escape(record.ruleId)}"]`))continue;const card=document.createElement('article');card.className='enhancement surface';card.dataset.ruleId=record.ruleId;card.dataset.rosterAssignedOnly='true';const cost=document.createElement('div');cost.className='eyebrow';cost.textContent=`Enhancement · ${record.value} pts`;const title=document.createElement('h4');title.textContent=record.title;const text=document.createElement('p');text.dataset.sourceField='text';text.textContent=record.text;card.append(cost,title,text);group.append(card);}
           const rosterDetachments=new Set(options.rosterGuide?.detachmentIds||[]);rosterMode=rosterDetachments.size>0;
           if(rosterMode){sections.forEach(section=>{if(section.dataset.detachment!=='core'&&!rosterDetachments.has(section.dataset.detachment))section.remove();});sections=sections.filter(section=>section.dataset.detachment==='core'||rosterDetachments.has(section.dataset.detachment));}
           const detachmentSections=sections.filter(section=>section.dataset.detachment!=='core');

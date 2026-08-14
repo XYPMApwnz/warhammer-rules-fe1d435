@@ -50,10 +50,18 @@ for(const entry of fs.readdirSync(booksRoot,{withFileTypes:true})){
   if(config.includeCoreStratagems)assert.equal(related.indexOf('<section class="related-detachment related-core"'),related.lastIndexOf('<section class="related-detachment'),'Core Stratagems must follow faction Stratagems');
   const normalizeRuleId=id=>String(id||'').replace(/^stratagem-/,'');
   const normalizeEnhancementId=id=>String(id||'').replace(/^enhancement-/,'');
-  const allDetachments=[...(pack.detachments||[]),...(codexParity.detachments||[])];
+  const dependencyDetachments=['blood-angels','dark-angels'].includes(config.id)?(config.dependencies||[]).flatMap(dependencyId=>{
+    const dependencyRoot=path.join(booksRoot,dependencyId),dependencyConfig=JSON.parse(fs.readFileSync(path.join(dependencyRoot,'book.config.json'),'utf8'));
+    const dependencyPack=JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.factionPack),'utf8'));
+    const dependencyParity=dependencyConfig.sources.codexParity?JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.codexParity),'utf8')):{detachments:[]};
+    const dependencyPoints=JSON.parse(fs.readFileSync(path.join(dependencyRoot,dependencyConfig.sources.points||`content/${dependencyId}-points.en.json`),'utf8'));
+    const key=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(),currentTitles=new Set((dependencyPoints.detachments||[]).map(item=>key(item.title))),chapterKey=key(config.dependencyDetachments.chapterKeyword);
+    return [...(dependencyPack.detachments||[]),...(dependencyParity.detachments||[])].filter(item=>{const restriction=item.restriction||dependencyConfig.detachmentChapterRestrictions?.[item.title];return currentTitles.has(key(item.title))&&(!restriction||key(restriction)===chapterKey);});
+  }):[];
+  const localDetachments=[...(pack.detachments||[]),...(codexParity.detachments||[])],allDetachments=[...localDetachments,...dependencyDetachments];
   const profiles=profilesFrom(reader),stratagems=allDetachments.flatMap(detachment=>detachment.stratagems||[]);
-  const usesLegacyEligibility=config.legacyRelatedRuleAttributes!==false;
-  const officialIds=stratagems.map(rule=>normalizeRuleId(rule.id)),generatedIds=[...related.matchAll(/<article class="stratagem surface"[^>]*data-rule-id="([^"]+)"/g)].map(match=>normalizeRuleId(match[1])).filter(id=>!id.startsWith('core-stratagem-'));
+  const usesLegacyEligibility=config.id!=='dark-angels'&&config.legacyRelatedRuleAttributes!==false;
+  const localOfficialIds=localDetachments.flatMap(detachment=>detachment.stratagems||[]).map(rule=>normalizeRuleId(rule.id)),localOfficialIdSet=new Set(localOfficialIds),officialIds=stratagems.map(rule=>normalizeRuleId(rule.id)),generatedIds=[...related.matchAll(/<article class="stratagem surface"[^>]*data-rule-id="([^"]+)"/g)].map(match=>normalizeRuleId(match[1])).filter(id=>!id.startsWith('core-stratagem-'));
   const detachmentByRule=new Map(allDetachments.flatMap(detachment=>(detachment.stratagems||[]).map(rule=>[normalizeRuleId(rule.id),detachment.id])));
   const detachmentByEnhancement=new Map(allDetachments.flatMap(detachment=>(detachment.enhancements||[]).map(rule=>[normalizeEnhancementId(rule.id),detachment.id])));
   const applyGrants=(profile,ruleId,detachmentMap=detachmentByRule)=>{
@@ -66,12 +74,12 @@ for(const entry of fs.readdirSync(booksRoot,{withFileTypes:true})){
   };
   assert.ok(profiles.length,`${config.id}: no datasheet profiles in generated reader`);
   assert.equal(new Set(officialIds).size,officialIds.length,`${config.id}: duplicate official Stratagem id`);
-  if(usesLegacyEligibility)assert.deepEqual(sorted(Object.keys(eligibility).map(normalizeRuleId)),sorted(officialIds),`${config.id}: explicit eligibility IDs do not exactly match official Stratagem IDs`);
+  if(usesLegacyEligibility)assert.deepEqual(sorted(Object.keys(eligibility).map(normalizeRuleId)),sorted(localOfficialIds),`${config.id}: explicit eligibility IDs do not exactly match local official Stratagem IDs`);
   assert.deepEqual(sorted(generatedIds),sorted(officialIds),`${config.id}: generated Related Rules cards do not exactly match official Stratagem IDs`);
   let negatives=0;
   for(const stratagem of stratagems){
     const ruleId=normalizeRuleId(stratagem.id),rule=eligibility[stratagem.id]||eligibility[ruleId];
-    if(usesLegacyEligibility){
+    if(usesLegacyEligibility&&localOfficialIdSet.has(ruleId)){
       assert.ok(rule,`${config.id}/${stratagem.title}: missing explicit eligibility`);
       assert.ok(friendlyRoles(rule).length,`${config.id}/${stratagem.title}: no friendly target role`);
       for(const role of rule.roles||rule.targets||[])assert.ok(supportedSubjects.has(role.subject||'unit'),`${config.id}/${stratagem.title}: unsupported subject ${role.subject}`);

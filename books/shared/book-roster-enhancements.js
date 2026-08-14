@@ -56,6 +56,19 @@
     ['pact of cursed pinions','daemon-melee-attacks-plus-1'],
     ['tzagulla','weapons-attacks-strength-ap-plus-1']
   ]);
+  const smEffects=new Map([
+    ['firestorm coordinators','ranged-sustained-hits-1'],
+    ['armour of antoninus','save-2-feel-no-pain-5'],
+    ['war tempered artifice','melee-strength-plus-3'],
+    ['umbral raptor','stealth-lone-operative'],
+    ['artificer armour','save-2-feel-no-pain-5'],
+    ['the flesh is weak','feel-no-pain-4'],
+    ['ghostweave cloak','stealth-lone-operative'],
+    ['bellicose weapon spirits upgrade','reroll-damage-attacks'],
+    ['raptorial cogitator core upgrade','ranged-ignores-cover'],
+    ['shroud field','stealth-lone-operative'],
+    ['orksbane','new-weapon-profile']
+  ]);
 
   function enhancementArticle(entry,item){
     const article=root.document.createElement('article');article.className='ability roster-enhancement';article.dataset.rosterEnhancement=normalize(item.title);
@@ -119,6 +132,19 @@
     return true;
   }
   function tagWeapons(card,mode,label,effect){const rows=weaponRows(card,mode);return rows.length>0&&rows.every(row=>addWeaponTag(row,label,effect));}
+  function setSmStat(card,field,value,effect){
+    const target=card.querySelector(`.stat[data-source-field="stats.${field}"] span`);if(!target)return false;
+    target.dataset.rosterBaseValue=target.dataset.rosterBaseValue||target.textContent.trim();target.dataset.rosterDerivedEffect=effect;target.classList.add('roster-modified');target.textContent=value;return true;
+  }
+  function addSmWeaponProfile(card,profile,effect){
+    const mode=String(profile?.type||'').toLowerCase().startsWith('melee')?'melee':'ranged',group=[...card.querySelectorAll('.weapon-group')].find(node=>node.querySelector('h5')?.textContent.trim().toLowerCase().startsWith(mode));if(!group)return false;
+    const table=group.querySelector('.weapon-table'),values=profile.characteristics||{};if(!table||!profile.name)return false;
+    const row=root.document.createElement('div');row.className='weapon-row roster-derived-weapon';row.dataset.rosterDerivedEffect=effect;row.dataset.mode=mode;
+    const name=root.document.createElement('div');name.textContent=profile.name;row.append(name);
+    for(const field of mode==='melee'?['Range','A','WS','S','AP','D']:['Range','A','BS','S','AP','D']){const cell=root.document.createElement('div');cell.dataset.label=field;cell.textContent=values[field]??'';row.append(cell);}
+    for(const keyword of String(values.Keywords||'').split(',').map(value=>value.trim()).filter(Boolean))addWeaponTag(row,keyword,effect);
+    table.append(row);return true;
+  }
   function applyTauEffect(card,article,item){
     const key=normalize(item.title),effect=tauEffects.get(key);
     if(effect==='detection-range-minus-3'){
@@ -395,9 +421,34 @@
   function decorateSm(card,roster,units){
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];const ownership=resolveTauOwnership(roster,units);
     if(ownership.instances.length>1){renderCsmInstances(card,ownership,roster);return ownership.instances.flatMap(instance=>instance.enhancements);}
-    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;list.prepend(csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.'));}
+    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item)applySmEffect(card,article,resolution.item);list.prepend(article);}
     for(const entry of ownership.unresolved){const article=csmArticle(entry,resolveCsmItem(entry,roster),'This Enhancement was not assigned because its owner could not be resolved to an exact roster unit.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
     return ownership.cardEnhancements;
+  }
+  function applySmEffect(card,article,item){
+    const effect=smEffects.get(normalize(item.title));
+    if(effect==='ranged-sustained-hits-1'||effect==='ranged-ignores-cover'){
+      const label=effect==='ranged-sustained-hits-1'?'SUSTAINED HITS 1':'IGNORES COVER';if(tagWeapons(card,'ranged',label,effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,`Derived profiles: ${label} applied to the bearer's ranged weapons.`);}else warning(article,'Effect could not be applied automatically because no ranged weapon profiles were found.');return;
+    }
+    if(effect==='save-2-feel-no-pain-5'){
+      const save=setSmStat(card,'Sv','2+',effect),ability=addSharedAbility(card,'Feel No Pain 5+','core-feel-no-pain',effect);if(save&&ability){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived Datasheet: Save 2+ and Feel No Pain 5+ applied to the bearer.');}else warning(article,'Effect could not be applied automatically because the Save characteristic or Abilities block was not found.');return;
+    }
+    if(effect==='melee-strength-plus-3'){
+      if(adjustWeapons(card,'melee',{S:3},effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,"Derived profiles: +3 Strength applied to the bearer's melee weapons.");}else warning(article,'Effect could not be applied automatically because no melee weapon profiles were found.');return;
+    }
+    if(effect==='stealth-lone-operative'){
+      const stealth=addSharedAbility(card,'Stealth','core-stealth',effect),lone=addSharedAbility(card,'Lone Operative','core-lone-operative',effect);if(stealth&&lone){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived abilities: Stealth and Lone Operative applied to the bearer.');}else warning(article,'Effect could not be applied automatically because the Abilities block was not found.');return;
+    }
+    if(effect==='feel-no-pain-4'){
+      if(addSharedAbility(card,'Feel No Pain 4+','core-feel-no-pain',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived ability: Feel No Pain 4+ applied to the bearer.');}else warning(article,'Effect could not be applied automatically because the Abilities block was not found.');return;
+    }
+    if(effect==='reroll-damage-attacks'){
+      article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived permanent ability: this unit can re-roll Damage rolls and rolls to determine a weapon’s Attacks characteristic.');return;
+    }
+    if(effect==='new-weapon-profile'){
+      if(addSmWeaponProfile(card,item.profile,effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived profile: the complete source-backed Orksbane melee weapon was added to this roster instance.');}else warning(article,'The Orksbane weapon profile could not be added because its complete structured profile or melee weapon table was unavailable.');return;
+    }
+    warning(article,'No permanent Datasheet mutation was applied because this Enhancement does not have a safe deterministic projection.');
   }
   function decorate(card,roster,units){
     if(tauBook())return decorateTau(card,roster,units);

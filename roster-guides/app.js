@@ -70,26 +70,34 @@ function attachmentRelation(bodyguard,character){
     ||[...(body.relations?.canBeLedBy||[]),...(body.relations?.canBeSupportedBy||[])].find(item=>item.unitId===leader.unitId)
     ||null;
 }
+function attachmentSupport(bodyguard,character){
+  const units=window.WH_POINTS_CATALOG?.['death guard']?.units||{},body=units[unitKey(bodyguard?.name)],leader=units[unitKey(character?.name)];
+  return Boolean(body&&leader&&((leader.relations?.canSupport||[]).some(item=>item.unitId===body.unitId)||(body.relations?.canBeSupportedBy||[]).some(item=>item.unitId===leader.unitId)));
+}
 function instanceLabel(roster,unit){const copies=roster.units.filter(item=>unitKey(item.name)===unitKey(unit.name));return copies.length>1?`${unit.name} #${copies.indexOf(unit)+1}`:unit.name;}
 function attachmentEditor(roster,record,bodyguard){
   if(normalizeFaction(roster.faction)!=='death guard')return '';
-  const attachments=record.attachments||{},currentId=attachments[bodyguard.id]?.[0],current=roster.units.find(unit=>unit.id===currentId);
+  const attachments=record.attachments||{},current=(attachments[bodyguard.id]||[]).map(id=>roster.units.find(unit=>unit.id===id)).filter(Boolean),currentIds=new Set(current.map(unit=>unit.id));
   const used=new Set(Object.entries(attachments).filter(([id])=>id!==bodyguard.id).flatMap(([,ids])=>ids||[]));
-  const candidates=roster.units.filter(unit=>unit.id===currentId||(!used.has(unit.id)&&attachmentRelation(bodyguard,unit)));
-  if(!current&&!candidates.length)return '';
-  const options=candidates.map(unit=>`<option value="${escapeHtml(unit.id)}"${unit.id===currentId?' selected':''}>${escapeHtml(instanceLabel(roster,unit))}</option>`).join('');
-  const summary=current?`<small class="attachment-summary">${escapeHtml(instanceLabel(roster,bodyguard))} ← ${escapeHtml(instanceLabel(roster,current))}</small>`:'';
-  return `<label class="unit-attachment"><small>Attached Character</small><select data-roster-id="${escapeHtml(record.id)}" data-attachment-bodyguard="${escapeHtml(bodyguard.id)}"><option value="">${current?'Detach Character':'+ Add Character'}</option>${options}</select>${summary}</label>`;
+  const relations=current.map(unit=>attachmentRelation(bodyguard,unit)).filter(Boolean),limit=relations.length?Math.min(...relations.map(item=>Number(item.maxCharacters)||1)):Math.max(1,...roster.units.map(unit=>Number(attachmentRelation(bodyguard,unit)?.maxCharacters)||0));
+  const candidates=roster.units.filter(unit=>!currentIds.has(unit.id)&&!used.has(unit.id)&&attachmentRelation(bodyguard,unit)&&current.length<limit&&!current.some(item=>unitKey(item.name)===unitKey(unit.name))&&(!current.length||attachmentSupport(bodyguard,unit)||current.some(item=>attachmentSupport(bodyguard,item))));
+  if(!current.length&&!candidates.length)return '';
+  const assigned=current.map(unit=>`<label class="unit-attachment"><small>Attached</small><select data-roster-id="${escapeHtml(record.id)}" data-attachment-bodyguard="${escapeHtml(bodyguard.id)}"><option value="${escapeHtml(unit.id)}" selected>${escapeHtml(instanceLabel(roster,unit))}</option><option value="remove:${escapeHtml(unit.id)}">Detach Character</option></select><small class="attachment-summary">${escapeHtml(instanceLabel(roster,bodyguard))} ← ${escapeHtml(instanceLabel(roster,unit))}</small></label>`).join('');
+  const options=candidates.map(unit=>`<option value="${escapeHtml(unit.id)}">${escapeHtml(instanceLabel(roster,unit))}</option>`).join('');
+  const add=options?`<label class="unit-attachment"><small>Attached Character</small><select data-roster-id="${escapeHtml(record.id)}" data-attachment-bodyguard="${escapeHtml(bodyguard.id)}"><option value="">+ Add Character</option>${options}</select></label>`:'';
+  return assigned+add;
 }
-function updateAttachment(recordId,bodyguardId,characterId){
+function updateAttachment(recordId,bodyguardId,action){
   const records=getSavedRosters(),record=records.find(item=>item?.id===recordId),roster=freshRoster(record);
   if(!record||!roster)return;
-  const bodyguard=roster.units.find(unit=>unit.id===bodyguardId),character=roster.units.find(unit=>unit.id===characterId),attachments={...(record.attachments||{})};
-  if(!characterId)delete attachments[bodyguardId];
+  const bodyguard=roster.units.find(unit=>unit.id===bodyguardId),attachments={...(record.attachments||{})},current=(attachments[bodyguardId]||[]).filter(id=>roster.units.some(unit=>unit.id===id));
+  if(action.startsWith('remove:')){const next=current.filter(id=>id!==action.slice(7));if(next.length)attachments[bodyguardId]=next;else delete attachments[bodyguardId];}
   else{
+    const characterId=action,character=roster.units.find(unit=>unit.id===characterId),members=[...current.map(id=>roster.units.find(unit=>unit.id===id)).filter(Boolean),character].filter(Boolean);
     const relation=attachmentRelation(bodyguard,character),used=Object.entries(attachments).some(([id,ids])=>id!==bodyguardId&&(ids||[]).includes(characterId));
-    if(!bodyguard||!character||!relation||used||(Number(relation.maxCharacters)||1)<1)return;
-    attachments[bodyguardId]=[characterId];
+    const limit=members.length?Math.min(...members.map(unit=>Number(attachmentRelation(bodyguard,unit)?.maxCharacters)||1)):1;
+    if(!bodyguard||!character||!relation||used||current.includes(characterId)||members.length>limit||members.some((unit,index)=>members.some((other,otherIndex)=>index!==otherIndex&&unitKey(unit.name)===unitKey(other.name)))||(members.length>1&&!members.some(unit=>attachmentSupport(bodyguard,unit))))return;
+    attachments[bodyguardId]=[...current,characterId];
   }
   const updated={...record,attachments,updatedAt:new Date().toISOString()};
   putSavedRosters(records.map(item=>item?.id===recordId?updated:item));renderSavedRosters();renderRoster(roster,updated);

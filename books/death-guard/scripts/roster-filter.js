@@ -184,7 +184,8 @@
   const requestedInstanceId = params.get('instance');
   const selected = new Map([...grouped].map(([id, groups]) => [id, groups.find((group) => group.units.some((unit) => unit.id === requestedInstanceId)) || groups[0]]));
   const requestedUnit=rosterById.get(requestedInstanceId),viewSwitch=document.querySelector('[data-view-switch]');
-  if(requestedUnit&&viewSwitch){const destination=new URL(`./mobile/${slug(requestedUnit.name)}.html`,location.href);destination.search=params.toString();destination.hash='';viewSwitch.href=destination.href;viewSwitch.addEventListener('click',event=>{event.preventDefault();location.href=destination.href;},{capture:true});}
+  const setViewSwitch=unit=>{if(!unit||!viewSwitch)return;const destination=new URL(`./mobile/${slug(unit.name)}.html`,location.href);destination.search=location.search;destination.hash='';viewSwitch.href=destination.href;viewSwitch.dataset.rosterDestination=destination.href;};
+  if(viewSwitch){setViewSwitch(requestedUnit);viewSwitch.addEventListener('click',event=>{if(!viewSwitch.dataset.rosterDestination)return;event.preventDefault();location.href=viewSwitch.dataset.rosterDestination;},{capture:true});}
   const VECTOR_RULE='ability-vector-of-disease-2498580',SILENT_RULE='ability-silent-bodyguard-03a0a1b';
   const hasAttached=(bodyguard,characterSlug)=>(attachments[bodyguard.id]||[]).some(id=>slug(rosterById.get(id)?.name)===characterSlug);
   const leads=(character,bodyguardSlug)=>Object.entries(attachments).some(([id,ids])=>ids.includes(character.id)&&slug(rosterById.get(id)?.name)===bodyguardSlug);
@@ -317,6 +318,7 @@
     });
     card.dataset.rosterCanonicalId=canonicalId;
     card.dataset.rosterStateGroup=entry.units.map(unit=>unit.id).join(' ');
+    card.dataset.track=card.id;
     return card.id;
   };
   const renderedGroups=new Map();
@@ -367,7 +369,7 @@
     const branch = [...unitsRoot.children].find((child) => child.matches("ul"));
     const unitItems = [...unitsRoot.querySelectorAll('[data-nav-id^="unit-"]')].flatMap((item) => {
       const id=item.dataset.navId,records=renderedGroups.get(id)||[],base=item.querySelector('.toc-label')?.textContent.trim()||'';
-      if(records.length<2){const record=records[0];item.dataset.navDepth='2';if(record?.entry.copies>1)item.querySelector('.toc-label').textContent=`${base} ×${record.entry.copies}`;return [item];}
+      if(records.length<2){const record=records[0];item.dataset.navDepth='2';if(record?.entry.copies>1)item.querySelector('.toc-label').textContent=`${base} ×${record.entry.copies}`;item.querySelector('[data-nav-target]')?.addEventListener('click',()=>{const destination=new URL(location.href);destination.searchParams.set('instance',record.entry.units[0].id);destination.hash=record.cardId;history.replaceState(history.state,'',destination.href);setViewSwitch(record.entry.units[0]);});return [item];}
       return records.map(({entry:group,cardId}) => {
         const clone=item.cloneNode(true),control=clone.querySelector('.toc-label');
         clone.dataset.navDepth='2';
@@ -377,7 +379,7 @@
         button.type='button';button.className=control.className;button.replaceChildren(...control.childNodes);
         button.dataset.navTarget=cardId;
         destination.searchParams.set('instance',group.units[0].id);destination.hash=cardId;
-        button.addEventListener('click',event=>{event.preventDefault();event.stopPropagation();location.assign(destination.href);});control.replaceWith(button);
+        button.addEventListener('click',()=>{history.replaceState(history.state,'',destination.href);setViewSwitch(group.units[0]);});control.replaceWith(button);
         return clone;
       });
     });

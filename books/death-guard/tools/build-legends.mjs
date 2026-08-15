@@ -203,7 +203,7 @@ let reader=fs.readFileSync(readerFile,'utf8');
 reader=reader.replace(/rule-facts\.js\?v=\d+/,'rule-facts.js?v=4');
 reader=reader.replace(/points-validator\.js\?v=\d+/,'points-validator.js?v=4');
 reader=reader.replace(/scripts\/app\.js\?v=\d+/,'scripts/app.js?v=44');
-reader=reader.replace(/scripts\/roster-filter\.js\?v=\d+/,'scripts/roster-filter.js?v=19');
+reader=reader.replace(/scripts\/roster-filter\.js\?v=\d+/,'scripts/roster-filter.js?v=22');
 reader=reader.replace(/\sdata-eligibility="[^"]*"/g,'');
 reader=replaceOrInsert(reader,'li',legends.group.id,'pact-of-decay-datasheets',nav);
 reader=replaceOrInsert(reader,'section',legends.group.id,'pact-of-decay-datasheets',content);

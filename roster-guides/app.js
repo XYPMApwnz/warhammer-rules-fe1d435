@@ -5,6 +5,7 @@ const FACTION_ALIASES=Object.freeze({'tau empire':'t au empire'});
 const FACTION_PARENTS=Object.freeze({'death guard':'chaos','adeptus mechanicus':'imperium','tyranids':'xenos','t au empire':'xenos','emperor s children':'chaos','chaos space marines':'chaos','space marines':'imperium','blood angels':'imperium','dark angels':'imperium'});
 const FACTION_LABELS=Object.freeze({'death guard':'Death Guard','adeptus mechanicus':'Adeptus Mechanicus','tyranids':'Tyranids','t au empire':"T'au Empire",'emperor s children':"Emperor's Children",'chaos space marines':'Chaos Space Marines','space marines':'Space Marines','blood angels':'Blood Angels','dark angels':'Dark Angels'});
 const FACTION_READERS=Object.freeze({'death guard':'../books/death-guard/index.html','adeptus mechanicus':'../books/adeptus-mechanicus/index.html','tyranids':'../books/tyranids/index.html','t au empire':'../books/tau-empire/index.html','emperor s children':"../books/emperors-children/index.html",'chaos space marines':'../books/chaos-space-marines/index.html','space marines':'../books/space-marines/index.html','blood angels':'../books/blood-angels/index.html','dark angels':'../books/dark-angels/index.html'});
+const ATTACHMENT_FACTIONS=new Set(['death guard','adeptus mechanicus']);
 const savedHost=document.querySelector('#saved-roster-list');
 
 function factionParts(value){const match=String(value||'').trim().match(/^(?:(Chaos|Imperium|Xenos)\s*[-–—]\s*)?(.*)$/i),key=match[2].replace(/[^a-z0-9]+/gi,' ').trim().toLowerCase();return{parent:(match[1]||'').toLowerCase(),key:FACTION_ALIASES[key]||key};}
@@ -42,7 +43,7 @@ function rosterId(text){let hash=2166136261;for(const char of text)hash=Math.imu
 function recordDetachments(record){const items=Array.isArray(record.roster.detachments)?record.roster.detachments:[{label:record.roster.detachment}];return items.map(item=>item?.label).filter(Boolean).join(' + ');}
 function updatedLabel(value){const date=new Date(value);return Number.isFinite(date.getTime())?new Intl.DateTimeFormat('en-GB').format(date):'date unknown';}
 function readerAction(record){const id=escapeHtml(record.id),faction=knownFaction(record?.roster?.faction);return faction&&FACTION_READERS[faction]?`<button class="action primary" type="button" data-open-roster="${id}">Open</button>`:'<button class="action" type="button" disabled>Reader unavailable</button>';}
-function attachmentAction(record){return knownFaction(record?.roster?.faction)==='death guard'?`<button class="action" type="button" data-edit-attachments="${escapeHtml(record.id)}">Attachments</button>`:'';}
+function attachmentAction(record){return ATTACHMENT_FACTIONS.has(knownFaction(record?.roster?.faction))?`<button class="action" type="button" data-edit-attachments="${escapeHtml(record.id)}">Attachments</button>`:'';}
 function freshRoster(record){
   const parsed=record?.sourceText?window.WHRosterParser.parse(record.sourceText):null;
   const roster=parsed?.units?.length?parsed:record?.roster;
@@ -63,24 +64,24 @@ function saveRoster(roster,sourceText){
 }
 
 function unitKey(value){return String(value||'').replace(/[^a-z0-9]+/gi,' ').trim().toLowerCase();}
-function attachmentRelation(bodyguard,character){
-  const units=window.WH_POINTS_CATALOG?.['death guard']?.units||{},body=units[unitKey(bodyguard?.name)],leader=units[unitKey(character?.name)];
+function attachmentRelation(roster,bodyguard,character){
+  const units=window.WH_POINTS_CATALOG?.[knownFaction(roster?.faction)]?.units||{},body=units[unitKey(bodyguard?.name)],leader=units[unitKey(character?.name)];
   if(!body||!leader||!leader.keywords?.includes('CHARACTER'))return null;
   return [...(leader.relations?.canLead||[]),...(leader.relations?.canSupport||[])].find(item=>item.unitId===body.unitId)
     ||[...(body.relations?.canBeLedBy||[]),...(body.relations?.canBeSupportedBy||[])].find(item=>item.unitId===leader.unitId)
     ||null;
 }
-function attachmentSupport(bodyguard,character){
-  const units=window.WH_POINTS_CATALOG?.['death guard']?.units||{},body=units[unitKey(bodyguard?.name)],leader=units[unitKey(character?.name)];
+function attachmentSupport(roster,bodyguard,character){
+  const units=window.WH_POINTS_CATALOG?.[knownFaction(roster?.faction)]?.units||{},body=units[unitKey(bodyguard?.name)],leader=units[unitKey(character?.name)];
   return Boolean(body&&leader&&((leader.relations?.canSupport||[]).some(item=>item.unitId===body.unitId)||(body.relations?.canBeSupportedBy||[]).some(item=>item.unitId===leader.unitId)));
 }
 function instanceLabel(roster,unit){const copies=roster.units.filter(item=>unitKey(item.name)===unitKey(unit.name));return copies.length>1?`${unit.name} #${copies.indexOf(unit)+1}`:unit.name;}
 function attachmentEditor(roster,record,bodyguard){
-  if(normalizeFaction(roster.faction)!=='death guard')return '';
+  if(!ATTACHMENT_FACTIONS.has(knownFaction(roster.faction)))return '';
   const attachments=record.attachments||{},current=(attachments[bodyguard.id]||[]).map(id=>roster.units.find(unit=>unit.id===id)).filter(Boolean),currentIds=new Set(current.map(unit=>unit.id));
   const used=new Set(Object.entries(attachments).filter(([id])=>id!==bodyguard.id).flatMap(([,ids])=>ids||[]));
-  const relations=current.map(unit=>attachmentRelation(bodyguard,unit)).filter(Boolean),limit=relations.length?Math.min(...relations.map(item=>Number(item.maxCharacters)||1)):Math.max(1,...roster.units.map(unit=>Number(attachmentRelation(bodyguard,unit)?.maxCharacters)||0));
-  const candidates=roster.units.filter(unit=>!currentIds.has(unit.id)&&!used.has(unit.id)&&attachmentRelation(bodyguard,unit)&&current.length<limit&&!current.some(item=>unitKey(item.name)===unitKey(unit.name))&&(!current.length||attachmentSupport(bodyguard,unit)||current.some(item=>attachmentSupport(bodyguard,item))));
+  const relations=current.map(unit=>attachmentRelation(roster,bodyguard,unit)).filter(Boolean),limit=relations.length?Math.min(...relations.map(item=>Number(item.maxCharacters)||1)):Math.max(1,...roster.units.map(unit=>Number(attachmentRelation(roster,bodyguard,unit)?.maxCharacters)||0));
+  const candidates=roster.units.filter(unit=>!currentIds.has(unit.id)&&!used.has(unit.id)&&attachmentRelation(roster,bodyguard,unit)&&current.length<limit&&!current.some(item=>unitKey(item.name)===unitKey(unit.name))&&(!current.length||attachmentSupport(roster,bodyguard,unit)||current.some(item=>attachmentSupport(roster,bodyguard,item))));
   if(!current.length&&!candidates.length)return '';
   const assigned=current.map(unit=>`<label class="unit-attachment"><small>Attached</small><select data-roster-id="${escapeHtml(record.id)}" data-attachment-bodyguard="${escapeHtml(bodyguard.id)}"><option value="${escapeHtml(unit.id)}" selected>${escapeHtml(instanceLabel(roster,unit))}</option><option value="remove:${escapeHtml(unit.id)}">Detach Character</option></select><small class="attachment-summary">${escapeHtml(instanceLabel(roster,bodyguard))} ← ${escapeHtml(instanceLabel(roster,unit))}</small></label>`).join('');
   const options=candidates.map(unit=>`<option value="${escapeHtml(unit.id)}">${escapeHtml(instanceLabel(roster,unit))}</option>`).join('');
@@ -94,9 +95,9 @@ function updateAttachment(recordId,bodyguardId,action){
   if(action.startsWith('remove:')){const next=current.filter(id=>id!==action.slice(7));if(next.length)attachments[bodyguardId]=next;else delete attachments[bodyguardId];}
   else{
     const characterId=action,character=roster.units.find(unit=>unit.id===characterId),members=[...current.map(id=>roster.units.find(unit=>unit.id===id)).filter(Boolean),character].filter(Boolean);
-    const relation=attachmentRelation(bodyguard,character),used=Object.entries(attachments).some(([id,ids])=>id!==bodyguardId&&(ids||[]).includes(characterId));
-    const limit=members.length?Math.min(...members.map(unit=>Number(attachmentRelation(bodyguard,unit)?.maxCharacters)||1)):1;
-    if(!bodyguard||!character||!relation||used||current.includes(characterId)||members.length>limit||members.some((unit,index)=>members.some((other,otherIndex)=>index!==otherIndex&&unitKey(unit.name)===unitKey(other.name)))||(members.length>1&&!members.some(unit=>attachmentSupport(bodyguard,unit))))return;
+    const relation=attachmentRelation(roster,bodyguard,character),used=Object.entries(attachments).some(([id,ids])=>id!==bodyguardId&&(ids||[]).includes(characterId));
+    const limit=members.length?Math.min(...members.map(unit=>Number(attachmentRelation(roster,bodyguard,unit)?.maxCharacters)||1)):1;
+    if(!bodyguard||!character||!relation||used||current.includes(characterId)||members.length>limit||members.some((unit,index)=>members.some((other,otherIndex)=>index!==otherIndex&&unitKey(unit.name)===unitKey(other.name)))||(members.length>1&&!members.some(unit=>attachmentSupport(roster,bodyguard,unit))))return;
     attachments[bodyguardId]=[...current,characterId];
   }
   const updated={...record,attachments,updatedAt:new Date().toISOString()};

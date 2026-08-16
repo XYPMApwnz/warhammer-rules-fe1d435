@@ -20,10 +20,24 @@
     return{detachmentIds:navigation.detachmentIds.filter(id=>context.detachmentIds.includes(id)),categories:navigation.categories.map(category=>({...category,unitIds:category.unitIds.filter(id=>units.has(id))})).filter(category=>category.unitIds.length)};
   };
   const routeAllowed=(type,id,context)=>!context||type==='unit'?context?.unitIds.includes(id)!==false:type==='detachment'?context.detachmentIds.includes(id):true;
-  const cardContext=(context,unitId)=>{const instances=context?.instancesByUnitId?.[unitId]||[];return{instances,points:instances.reduce((sum,item)=>sum+(Number(item.points)||0),0),loadout:instances.flatMap(item=>[item.wargear,...(item.models||[]).flatMap(model=>[model.wargear,...(model.loadouts||[]).map(loadout=>loadout.wargear)])].filter(Boolean))};};
-  const withRosterQuery=(href,rosterId,hash='')=>{const destination=new URL(href);destination.search='';destination.searchParams.set('roster',rosterId);if(hash)destination.hash=hash;return destination.href;};
+  const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim();
+  const unitRows=unit=>unit.models?.length?unit.models.flatMap(model=>model.loadouts?.length?model.loadouts.map(loadout=>[Number(loadout.quantity)||1,normalize(model.name),normalize(loadout.wargear)]):[[Number(model.quantity)||1,normalize(model.name),normalize(model.wargear)]]):[[Number(unit.quantity)||1,normalize(unit.name),normalize(unit.wargear)]];
+  const unitLoadout=unit=>[unit.wargear,...(unit.models||[]).flatMap(model=>[model.wargear,...(model.loadouts||[]).map(loadout=>loadout.wargear)])].filter(Boolean);
+  const groupContext=(context,attachments={})=>{
+    const parsed=context.parsed,enhancementsByOwner=new Map(),unitById=new Map(parsed.units.map(unit=>[unit.id,unit])),attachedTo=new Map();
+    for(const item of parsed.enhancements||[])if(item.ownerStatus==='resolved'&&item.ownerUnitId)(enhancementsByOwner.get(item.ownerUnitId)||enhancementsByOwner.set(item.ownerUnitId,[]).get(item.ownerUnitId)).push(item);
+    for(const [bodyguardId,characterIds] of Object.entries(attachments))for(const characterId of characterIds||[])attachedTo.set(characterId,bodyguardId);
+    const enhancementKey=unit=>(enhancementsByOwner.get(unit.id)||[]).map(item=>[item.ruleId||item.id||normalize(item.name),item.exportedCost??item.points??'',item.detachmentId||'']).sort().map(item=>item.join(':')).join('|');
+    const baseState=unit=>JSON.stringify({points:Number(unit.points)||0,warlord:Boolean(unit.warlord),rows:unitRows(unit).sort(),loadout:unitLoadout(unit).map(normalize).sort(),enhancements:enhancementKey(unit)});
+    const stateKey=unit=>`${baseState(unit)}\0${JSON.stringify({members:(attachments[unit.id]||[]).map(id=>unitById.get(id)).filter(Boolean).map(member=>[normalize(member.name),baseState(member)]).sort(),bodyguard:unitById.get(attachedTo.get(unit.id))?[normalize(unitById.get(attachedTo.get(unit.id)).name),baseState(unitById.get(attachedTo.get(unit.id)))]:null})}`;
+    context.groupsByUnitId={};
+    for(const [unitId,instances] of Object.entries(context.instancesByUnitId)){const groups=new Map();for(const instance of instances){const key=stateKey(instance),group=groups.get(key)||{units:[],ordinal:instances.indexOf(instance)+1};group.units.push(instance);groups.set(key,group);}context.groupsByUnitId[unitId]=[...groups.values()];}
+    return context;
+  };
+  const cardContext=(context,unitId,instanceId)=>{const groups=context?.groupsByUnitId?.[unitId]||[],group=groups.find(item=>item.units.some(unit=>unit.id===instanceId))||groups[0]||{units:context?.instancesByUnitId?.[unitId]||[]},instances=group.units;return{group,groups,instances,points:instances.reduce((sum,item)=>sum+(Number(item.points)||0),0),loadout:unitLoadout(instances[0]||{})};};
+  const withRosterQuery=(href,rosterId,hash='',instanceId='')=>{const destination=new URL(href);destination.search='';destination.searchParams.set('roster',rosterId);if(instanceId)destination.searchParams.set('instance',instanceId);if(hash)destination.hash=hash;return destination.href;};
   const viewSwitchHref=(href,search,hash='')=>{const destination=new URL(href);destination.search=search;if(hash)destination.hash=hash;return destination.href;};
-  root.AMPhoneRoster=Object.freeze({slug,resolveContext,filterNavigation,routeAllowed,cardContext,withRosterQuery,viewSwitchHref});
+  root.AMPhoneRoster=Object.freeze({slug,resolveContext,filterNavigation,routeAllowed,groupContext,cardContext,withRosterQuery,viewSwitchHref});
 }(window));
 
 if(typeof document!=='undefined')(async function(){
@@ -63,7 +77,7 @@ if(typeof document!=='undefined')(async function(){
       const categoryGroups=[...nav.querySelectorAll('[data-unit-category]')];
       const unitLinks=[...nav.querySelectorAll('[data-route-type="unit"][data-unit-id]')];
       const navigation={detachmentIds:detachmentLinks.map(link=>link.dataset.detachmentId),categories:categoryGroups.map(group=>({id:group.dataset.unitCategory,unitIds:[...group.querySelectorAll('[data-unit-id]')].map(link=>link.dataset.unitId)}))};
-      rosterContext=window.AMPhoneRoster.resolveContext(parsed,navigation.detachmentIds,unitLinks.map(link=>link.dataset.unitId),window.AMRosterEnhancements.resolveDetachment);
+      rosterContext=window.AMPhoneRoster.groupContext(window.AMPhoneRoster.resolveContext(parsed,navigation.detachmentIds,unitLinks.map(link=>link.dataset.unitId),window.AMRosterEnhancements.resolveDetachment),record.attachments||{});
       const current=nav.querySelector('[data-route-type][aria-current="page"]');
       if(current&&!window.AMPhoneRoster.routeAllowed(current.dataset.routeType,current.dataset.unitId||current.dataset.detachmentId||'',rosterContext))throw new Error('Current route is outside roster');
       const filtered=window.AMPhoneRoster.filterNavigation(navigation,rosterContext),allowedDetachments=new Set(filtered.detachmentIds),allowedUnits=new Set(filtered.categories.flatMap(category=>category.unitIds)),allowedCategories=new Set(filtered.categories.map(category=>category.id));
@@ -71,18 +85,23 @@ if(typeof document!=='undefined')(async function(){
       unitLinks.forEach(link=>{if(!allowedUnits.has(link.dataset.unitId))link.remove();});
       categoryGroups.forEach(group=>{if(!allowedCategories.has(group.dataset.unitCategory))group.remove();});
       nav.querySelectorAll('[data-route-type]').forEach(link=>{link.href=window.AMPhoneRoster.withRosterQuery(link.href,rosterId,link.hash);});
+      for(const link of [...nav.querySelectorAll('[data-route-type="unit"][data-unit-id]')]){
+        const groups=rosterContext.groupsByUnitId[link.dataset.unitId]||[];if(!groups.length)continue;
+        let previous=link;
+        groups.forEach((group,index)=>{const currentLink=index?link.cloneNode(true):link;if(index)previous.after(currentLink);previous=currentLink;const title=link.textContent.replace(/\s*[×#].*$/,'').trim();currentLink.textContent=groups.length>1&&group.units.length===1?`${title} #${group.ordinal}`:group.units.length>1?`${title} ×${group.units.length}`:title;currentLink.href=window.AMPhoneRoster.withRosterQuery(link.href,rosterId,link.hash,group.units[0].id);if(currentLink.dataset.unitId===current?.dataset.unitId)currentLink.setAttribute('aria-current',group.units.some(item=>item.id===params.get('instance'))||(!params.get('instance')&&!index)?'page':'false');});
+      }
       if(rosterGuides)rosterGuides.href=window.AMPhoneRoster.withRosterQuery(rosterGuides.href,rosterId,rosterGuides.hash);
       rosterDetachments=[...rosterContext.detachmentIds];
       window.AM_ROSTER_GUIDE=Object.freeze({detachmentIds:rosterDetachments});
       if(relatedDetachment){relatedDetachment.value='all';relatedDetachment.closest('label')?.remove();}
       if(unit){
-        const currentCard=window.AMPhoneRoster.cardContext(rosterContext,unit.id);
+        const currentCard=window.AMPhoneRoster.cardContext(rosterContext,unit.id,params.get('instance'));
         if(!currentCard.instances.length)throw new Error('Current datasheet is outside roster');
         const ownership=window.AMRosterEnhancements.resolveOwnership(parsed,currentCard.instances);
         assignedEnhancementNames=new Set(ownership.cardEnhancements.map(item=>window.AMPhoneRoster.slug(item.name)));
-        const status=unit.querySelector('.unit-status');if(status)status.textContent=`${currentCard.instances.length>1?`${currentCard.instances.length} UNITS · `:''}${currentCard.points} PTS`;
+        const status=unit.querySelector('.unit-status');if(status)status.textContent=currentCard.instances.length>1?`${currentCard.instances.length} UNITS · ${Number(currentCard.instances[0].points)||0} PTS EACH`:`${currentCard.points} PTS`;
         const composition=unit.querySelector('[id$="-composition"]');
-        if(composition){const rows=new Map(),add=(quantity,name,wargear)=>{const id=`${name}\0${wargear||''}`,current=rows.get(id);rows.set(id,{quantity:(current?.quantity||0)+(Number(quantity)||1),name,wargear});};currentCard.instances.forEach(item=>item.models?.length?item.models.forEach(model=>model.loadouts?.length?model.loadouts.forEach(loadout=>add(loadout.quantity,model.name,loadout.wargear)):add(model.quantity,model.name,model.wargear)):add(item.quantity,item.name,item.wargear));const block=document.createElement('div');block.className='content-block roster-composition';block.innerHTML='<strong>Roster loadout</strong>';const list=document.createElement('ul');for(const row of rows.values()){const item=document.createElement('li');item.textContent=`${row.quantity}× ${row.name}${row.wargear?` — ${row.wargear}`:''}`;list.append(item);}block.append(list);composition.replaceChildren(composition.querySelector('h4'),block);}
+        if(composition){const representative=currentCard.instances[0],rows=representative.models?.length?representative.models.flatMap(model=>model.loadouts?.length?model.loadouts.map(loadout=>({quantity:loadout.quantity,name:model.name,wargear:loadout.wargear})):[{quantity:model.quantity,name:model.name,wargear:model.wargear}]):[{quantity:representative.quantity,name:representative.name,wargear:representative.wargear}],block=document.createElement('div');block.className='content-block roster-composition';block.innerHTML='<strong>Roster loadout</strong>';const list=document.createElement('ul');for(const row of rows){const item=document.createElement('li');item.textContent=`${Number(row.quantity)||1}× ${row.name}${row.wargear?` — ${row.wargear}`:''}`;list.append(item);}block.append(list);composition.replaceChildren(composition.querySelector('h4'),block);}
         window.AMRosterEnhancements.decorate(unit,parsed,currentCard.instances);
         if(currentCard.loadout.length&&window.WHRosterEntities)unit.querySelectorAll('.weapon-row:not(.weapon-head)').forEach(row=>{const label=row.querySelector('.weapon-button')?.textContent||row.firstElementChild?.textContent;if(label&&!window.WHRosterEntities.loadoutIncludesProfile(currentCard.loadout,label))row.remove();});
         unit.querySelectorAll('.weapon-group').forEach(group=>{if(!group.querySelector('.weapon-row:not(.weapon-head)'))group.remove();});

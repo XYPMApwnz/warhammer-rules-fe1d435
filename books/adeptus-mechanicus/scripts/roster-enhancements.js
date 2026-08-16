@@ -16,7 +16,9 @@
       points:Number(unit.points)||0,
       enhancements:enhancements.filter(entry=>entry.ownerStatus==='resolved'&&entry.ownerUnitId===unit.id)
     }));
-    return{instances,cardEnhancements:instances.length===1?instances[0].enhancements:[],unresolved:enhancements.filter(entry=>entry.ownerStatus!=='resolved')};
+    const signature=instance=>instance.enhancements.map(entry=>`${entry.ruleId||entry.id||normalize(entry.name)}:${entry.exportedCost??entry.points??''}`).sort().join('|');
+    const equivalent=instances.every(instance=>signature(instance)===signature(instances[0]||{enhancements:[]}));
+    return{instances,equivalent,cardEnhancements:equivalent?(instances[0]?.enhancements||[]):[],unresolved:enhancements.filter(entry=>entry.ownerStatus!=='resolved')};
   };
   const filterCompatibleRules=(rules,rosterMode,assignedRuleIds)=>rosterMode?(rules||[]).filter(rule=>rule.kind!=='enhancement'||assignedRuleIds?.has(rule.ruleId)):(rules||[]);
   const numberCell=(row,label,delta)=>{
@@ -91,7 +93,7 @@
   }
   function decorate(card,roster,units){
     const ownership=resolveOwnership(roster,units);
-    if(ownership.instances.length>1){renderInstances(card,ownership);return;}
+    if(ownership.instances.length>1&&!ownership.equivalent){renderInstances(card,ownership);return;}
     const list=card.querySelector('[id$="-abilities"] .ability-list');if(!list)return;
     for(const entry of ownership.cardEnhancements){
       const item=catalog()[normalize(entry.name)];if(!item)continue;

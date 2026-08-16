@@ -314,7 +314,7 @@ check('navigation is loaded from the Death Guard runtime contract',html.includes
 check('entry router preserves the DG desktop/phone contract',entry.includes('../death-guard/scripts/view-router.js')&&entry.includes('./reader.html?view=full')&&entry.includes('./mobile/index.html?view=mobile'));
 check('header exposes the shared Mega Glossary',markup.includes('href="../../glossary/index.html"')&&markup.includes('Mega Glossary'));
 check('mobile weapon labels stay dynamic',html.includes('data-label="Range"')&&/content:\s*attr\(data-label\)/.test(sharedDatasheetCss));
-check('desktop to Phone mode preserves the active route',read('scripts/app.js').includes("destination=new URL('./mobile/'+route")&&read('scripts/app.js').includes('destination.search=params.toString()'));
+check('desktop to Phone mode preserves the active roster-state route',read('scripts/app.js').includes("destination=new URL('./mobile/'+route")&&read('scripts/app.js').includes('destination.search=new URLSearchParams(location.search).toString()')&&read('scripts/app.js').includes('dataset.rosterCanonicalId'));
 check('nested Full Entry stays above Related Rules',read('styles/mechanicus.css').includes('.related-rules-open .full-entry-layer{z-index:170}'));
 check('Related Rules uses an opaque book background',/\.related-rules-dialog\{[^}]*background:var\(--panel\)/.test(read('styles/mechanicus.css'))&&!/\.related-rules-dialog\{[^}]*background:var\(--void\)/.test(read('styles/mechanicus.css')));
 check('conditional attached-unit Enhancements are never guessed',read('scripts/roster-enhancements.js').includes('The roster export does not prove that the bearer is leading a unit.'));

@@ -33,7 +33,7 @@ const APP_SHELL = [
   ROSTER_GUIDES_FALLBACK,
   "./roster-guides/points-data.js?v=9",
   "./roster-guides/points-validator.js?v=5",
-  "./roster-guides/app.js?v=17",
+  "./roster-guides/app.js?v=18",
   "./manifest.webmanifest",
   "./assets/apple-touch-icon.png",
   "./assets/icon-192.png",
@@ -150,7 +150,7 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/reader.html",
   "./books/adeptus-mechanicus/mobile/index.html",
   "./books/adeptus-mechanicus/mobile/mobile.css?v=4",
-  "./books/adeptus-mechanicus/mobile/mobile.js?v=17",
+  "./books/adeptus-mechanicus/mobile/mobile.js?v=18",
   "./books/adeptus-mechanicus/mobile/phone-popup-controller.js?v=1",
   "./books/adeptus-mechanicus/assets/mechanicus-logo.png",
   "./books/adeptus-mechanicus/assets/mechanicus-cover-800.webp",
@@ -193,11 +193,11 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/scripts/data.js?v=1",
   "./books/adeptus-mechanicus/scripts/faction-ui.js?v=1",
   "./books/adeptus-mechanicus/mobile/related-rules.inc?v=4",
-  "./books/adeptus-mechanicus/scripts/roster-enhancements.js?v=2",
-  "./books/adeptus-mechanicus/scripts/roster-filter.js?v=5",
+  "./books/adeptus-mechanicus/scripts/roster-enhancements.js?v=3",
+  "./books/adeptus-mechanicus/scripts/roster-filter.js?v=6",
   "./books/adeptus-mechanicus/scripts/compatible-rules-runtime.mjs?v=3",
   "./books/adeptus-mechanicus/generated/compatible-rules.json",
-  "./books/adeptus-mechanicus/scripts/app.js?v=35"
+  "./books/adeptus-mechanicus/scripts/app.js?v=39"
   ,"./books/tyranids/"
   ,TYRANIDS_ENTRY_FALLBACK
   ,TYRANIDS_DESKTOP_FALLBACK

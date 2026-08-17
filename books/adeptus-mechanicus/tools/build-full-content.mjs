@@ -263,7 +263,7 @@ const detachments=allDetachments.map(det=>{
   return `<section class="content-group detachment" id="${det.id}" data-track="${det.id}" data-detachment="${slug}"><h3 class="category-title detachment-title">${esc(det.title)} <span class="detachment-dp">${esc(det.dp)}DP</span></h3>${body}</section>`;
 }).join('');
 
-const stats=unit=>(unit.profiles?.length?unit.profiles:[{name:unit.title,stats:unit.stats}]).map(profile=>`<div class="model-profile" data-profile="${esc(slugKey(profile.name))}">${unit.profiles?.length>1?`<h5>${esc(profile.name)}</h5>`:''}<div class="statline">${Object.entries(profile.stats).map(([key,value])=>`<div class="stat" data-source-field="stats.${esc(key)}"><b>${key}</b><span>${esc(value)}</span></div>`).join('')}${unit.invulnerable?`<div class="stat invulnerable" data-source-field="invulnerable"><b>InSv</b><span>${esc(unit.invulnerable)}</span></div>`:''}</div></div>`).join('');
+const stats=unit=>(unit.profiles?.length?unit.profiles:[{name:unit.title,stats:unit.stats}]).map(profile=>`<div class="model-profile" data-profile="${esc(slugKey(profile.name))}">${unit.profiles?.length>1?`<h5>${esc(profile.name)}</h5>`:''}<div class="statline">${Object.entries(profile.stats).map(([key,value])=>`<div class="stat" data-source-field="stats.${esc(key)}"><b>${key}</b><span>${esc(value)}</span></div>`).join('')}${unit.invulnerable?`<div class="stat invulnerable" data-source-field="invulnerable"><b>INV</b><span>${esc(unit.invulnerable)}</span></div>`:''}</div></div>`).join('');
 const weapons=unit=>['ranged','melee'].map(mode=>{
   const rows=unit.weapons.filter(x=>x.mode===mode);
   if(!rows.length)return '';

@@ -35,7 +35,8 @@
   };
   const DG_ENH = {
     regeneration:'enhancement-revolting-regeneration', pipes:'enhancement-witherbone-pipes', sorrowsyphon:'enhancement-sorrowsyphon',
-    talisman:'enhancement-talisman-of-burgeoning', vigour:'enhancement-vile-vigour', helm:'enhancement-helm-of-the-fly-king', plagueveil:'enhancement-plagueveil'
+    talisman:'enhancement-talisman-of-burgeoning', vigour:'enhancement-vile-vigour', helm:'enhancement-helm-of-the-fly-king', plagueveil:'enhancement-plagueveil',
+    bilemaw:'enhancement-bilemaw-blight'
   };
   const KEYWORD_GRANTS = [
     {detachment:'shamblerot-vectorium', units:['poxwalkers'], id:'keyword-battleline', title:'BATTLELINE'},
@@ -89,7 +90,6 @@
     ].join('\0');
 
     const decorate = (card, units, detachmentIds = []) => {
-      root.WHRosterEnhancements?.decorate(card, roster, units);
       const cardId = (card.dataset.rosterCanonicalId || card.id).replace(/--roster-.+$/, '');
       const normalizedDetachments = detachmentIds.map((id) => String(id).replace(/^detachment-/, ''));
       let facts = {};
@@ -100,6 +100,17 @@
       const weaponRows = (type) => [...card.querySelectorAll('.weapon-group')]
         .filter((group) => !type || normalize(group.querySelector('h5')?.textContent).startsWith(`${type} weapons`))
         .flatMap((group) => [...group.querySelectorAll('.weapon-row:not(.weapon-head)')]);
+      root.WHRosterEnhancements?.decorate(card, roster, units);
+      if (units.some((unit) => ownsEnhancement(unit, DG_ENH.bilemaw))) {
+        for (const row of weaponRows('ranged').filter((item) => root.WHRosterEntities.weaponFamily(item.querySelector('.weapon-button')?.textContent) === 'plague wind')) {
+          const cell = row.querySelector('[data-label="Range"]');
+          if (!cell?.dataset.rosterBase) continue;
+          cell.textContent = cell.dataset.rosterBase;
+          delete cell.dataset.rosterBase;
+          cell.classList.remove('roster-modified-value');
+        }
+        card.querySelector('.roster-plague-wind-range')?.remove();
+      }
       const markEffect = (node, effect) => {
         const effects = new Set((node.dataset.rosterDerivedEffects || '').split(' ').filter(Boolean));
         if (effects.has(effect)) return false;

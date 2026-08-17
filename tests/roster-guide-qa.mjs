@@ -202,13 +202,14 @@ const plasmaProfiles=entities.weaponGroups(glossaryContext.WH40K_GLOSSARY.forBoo
 assert(plasmaProfiles.length===2,'Plasma gun does not expose both standard and supercharge profiles');
 
 const dgRosterFilter=fs.readFileSync(path.join(root,'books/death-guard/scripts/roster-filter.js'),'utf8');
+const dgRosterSemantics=fs.readFileSync(path.join(root,'books/death-guard/scripts/roster-semantics.js'),'utf8');
 const rosterGuideApp=fs.readFileSync(path.join(root,'roster-guides/app.js'),'utf8');
 const dgPhone=fs.readFileSync(path.join(root,'books/death-guard/mobile/mobile.js'),'utf8');
 assert(rosterGuideApp.includes("'death guard':'../books/death-guard/index.html'"),'Death Guard personal guides bypass the responsive book entry');
 assert(dgPhone.includes("destination.searchParams.set('roster'")&&dgPhone.includes('link.remove()'),'Death Guard Phone roster navigation is not filtered or query-preserving');
-assert(dgRosterFilter.includes("{detachment:'shamblerot-vectorium',units:['poxwalkers'],id:'keyword-battleline',title:'BATTLELINE'}"),'Shamblerot Vectorium grant is absent from the roster filter');
-assert(dgRosterFilter.includes("'foetid-bloat-drone-with-heavy-blight-launcher','helbrute','myphitic-blight-hauler'"),'Contagion Engines grant owners are incomplete');
-assert(dgRosterFilter.includes("const grants=grantedKeywords(card.id.replace(/^unit-/,''),window.DG_ROSTER_GUIDE.detachmentIds)"),'Roster keyword rendering does not use its local grant resolver');
+assert(dgRosterSemantics.includes("{detachment:'shamblerot-vectorium', units:['poxwalkers'], id:'keyword-battleline', title:'BATTLELINE'}"),'Shamblerot Vectorium grant is absent from the Death Guard semantic runtime');
+assert(dgRosterSemantics.includes("'foetid-bloat-drone-with-heavy-blight-launcher','helbrute','myphitic-blight-hauler'"),'Contagion Engines grant owners are incomplete');
+assert(dgRosterSemantics.includes('addKeywords(KEYWORD_GRANTS.filter')&&dgRosterFilter.includes('semantic.decorate(')&&dgPhone.includes('semantic.decorate('),'Roster keyword rendering does not use the shared Death Guard semantic resolver');
 
 const amPhone=fs.readFileSync(path.join(root,'books/adeptus-mechanicus/mobile/mobile.js'),'utf8');
 assert(amPhone.includes("rosterGuideHref=()=>new URL('../../../roster-guides/index.html',location.href).href")&&!amPhone.includes("rosterGuideHref=()=>window.AMPhoneRoster.withRosterQuery"),'Mechanicus invalid roster handoff still carries an auto-open roster parameter');

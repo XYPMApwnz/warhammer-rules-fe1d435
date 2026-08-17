@@ -16,7 +16,7 @@ const glossaryAutolink=readProject('books/shared/glossary-autolink.js');
 const glossaryRegistry=JSON.parse(readProject('glossary/registry.en.json'));
 const bookData=JSON.parse(read('content/death-guard-rules.en.json'));
 const coreData=JSON.parse(readProject('books/core-rules/content/core-rules.digital-11e.json'));
-const files=['scripts/roster-filter.js','scripts/navigation-controller.js','scripts/popup-controller.js','scripts/full-entry-controller.js','scripts/journey-controller.js','scripts/ui-controllers.js','scripts/app.js'];
+const files=['scripts/roster-semantics.js','scripts/roster-filter.js','scripts/navigation-controller.js','scripts/popup-controller.js','scripts/full-entry-controller.js','scripts/journey-controller.js','scripts/ui-controllers.js','scripts/app.js'];
 const results=[];
 const check=(name,ok,detail='')=>results.push({name,ok,detail});
 
@@ -296,6 +296,7 @@ const mobileRuntime=read('mobile/mobile.js');
 const phonePopupRuntime=read('mobile/phone-popup-controller.js');
 const mobileTyphus=read('mobile/typhus.html');
 const rosterFilterRuntime=read('scripts/roster-filter.js');
+const rosterSemanticRuntime=read('scripts/roster-semantics.js');
 const extractDetachmentResolver=(source)=>{const expression=source.match(/const resolveRosterDetachmentIds=(.+);/)?.[1];return expression?Function(`"use strict";return (${expression});`)():null;};
 let desktopDetachmentResolver,phoneDetachmentResolver;
 try{desktopDetachmentResolver=extractDetachmentResolver(rosterFilterRuntime);phoneDetachmentResolver=extractDetachmentResolver(mobileRuntime);}catch(error){check('Detachment resolver extraction',false,error.message);}
@@ -307,7 +308,9 @@ check('behavior: two known Death Guard Detachments remain active for Phone relat
 check('behavior: zero and unknown Death Guard Detachments fail closed',desktopDetachmentResolver?.([],desktopDetachmentIds)===null&&desktopDetachmentResolver?.(['detachment-unknown'],desktopDetachmentIds)===null&&phoneDetachmentResolver?.([],phoneDetachmentIds)===null&&phoneDetachmentResolver?.(['unknown'],phoneDetachmentIds)===null);
 check('behavior: duplicate matching Detachment options fail closed as ambiguous',desktopDetachmentResolver?.([desktopDetachmentIds[0]],[desktopDetachmentIds[0],desktopDetachmentIds[0]])===null&&phoneDetachmentResolver?.([phoneDetachmentIds[0]],[phoneDetachmentIds[0],phoneDetachmentIds[0]])===null);
 check('roster paths retain every resolved Detachment and suppress the selector',rosterFilterRuntime.includes('const detachmentIds = new Set(resolvedDetachmentIds)')&&mobileRuntime.includes("relatedDetachment.value = 'all'")&&mobileRuntime.includes("relatedDetachment.closest('label')?.remove()"));
-check('exact Enhancement ownerUnitId filtering is unchanged',rosterFilterRuntime.includes('unit.id===enhancement.ownerUnitId')&&mobileRuntime.includes("item.ownerStatus==='resolved'&&ownerIds.has(item.ownerUnitId)"));
+check('exact Enhancement ownerUnitId filtering is unchanged',rosterSemanticRuntime.includes('item.ownerUnitId === unit.id')&&mobileRuntime.includes("item.ownerStatus==='resolved'&&ownerIds.has(item.ownerUnitId)"));
+check('Desktop and Phone load one book-local Death Guard semantic runtime',html.includes('scripts/roster-semantics.js?v=1')&&mobileBuild.includes('../scripts/roster-semantics.js?v=1'));
+check('Desktop and Phone delegate gameplay projection without local rule registries',rosterFilterRuntime.includes('semantic.decorate(')&&mobileRuntime.includes('semantic.decorate(')&&!rosterFilterRuntime.includes('const DG_RULE=')&&!mobileRuntime.includes('const DG_RULE='));
 const phoneRosterRedirect=mobileRuntime.indexOf("location.replace('../../../roster-guides/index.html')");
 const phoneRosterContinuation=mobileRuntime.indexOf('if (rosterGuides)');
 check('Phone invalid roster replaces the route and terminates before roster UI initialization',phoneRosterRedirect>=0&&phoneRosterContinuation>phoneRosterRedirect&&mobileRuntime.slice(phoneRosterRedirect,phoneRosterContinuation).includes('return;')&&!mobileRuntime.slice(phoneRosterRedirect,phoneRosterContinuation).includes('relatedRules?.remove()'));

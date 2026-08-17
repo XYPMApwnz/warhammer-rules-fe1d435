@@ -294,7 +294,7 @@ const normalizedHtml=html
   .replace('<script src="../../glossary/generated/glossary.en.js">','<script src="../../glossary-return.js?v=3"></script><script src="../../glossary/generated/glossary.en.js">')
   .replace('../shared/navigation-targets.js"','../shared/navigation-targets.js?v=1"')
   .replace('../shared/popup-rule-actions.js"','../shared/popup-rule-actions.js?v=1"')
-  .replace('../shared/datasheet-layout.js"','../shared/datasheet-layout.js?v=5"')
+  .replace('../shared/datasheet-layout.js"','../shared/datasheet-layout.js?v=6"')
   .replace('../shared/popup-content.js"','../shared/popup-content.js?v=3"')
   .replace('../shared/glossary-autolink.js"','../shared/glossary-autolink.js?v=8"')
   .replace('<script src="../shared/related-rules-matcher.js">','<script src="../shared/rule-facts.js?v=4"></script><script src="../shared/related-rules-matcher.js">')

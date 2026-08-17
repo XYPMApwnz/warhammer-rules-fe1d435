@@ -144,7 +144,6 @@
     const damaged=parts.find(part=>part.id.endsWith('-damaged'))||null;
     const keywords=parts.find(part=>part.id.endsWith('-keywords'))||null;
     const pointsPanel=profile&&direct(profile,'.points-panel');
-    buildIdentity(head,keywords);
     buildCost(head,pointsPanel);
     moveProfiles(card,profile,localNav);
     buildColumns(card,profile,abilities);

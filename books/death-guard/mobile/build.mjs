@@ -172,7 +172,7 @@ function page(route) {
     <div class="phone-tree">${navigation(route)}</div>
   </nav>
   <main class="main mobile-main"><article class="document">${hydrateTerms(content(route))}${relatedSection}</article></main>
-  <script src="../../shared/datasheet-layout.js?v=3"></script>
+  <script src="../../shared/datasheet-layout.js?v=4"></script>
   <script src="../../shared/rule-facts.js?v=4"></script>
   <dialog class="mobile-dialog" id="termDialog" aria-label="Term reference"><div class="mobile-popup-stack" id="termPopupStack"></div></dialog>
   <script src="../../../glossary/generated/glossary.en.js?v=tyranids-1"></script>

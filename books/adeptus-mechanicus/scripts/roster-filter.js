@@ -72,7 +72,7 @@
     if(status)status.textContent=group.units.length>1?`${group.units.length} UNITS · ${Number(representative.points)||0} PTS EACH`:`${Number(representative.points)||0} PTS`;
     const composition=card.querySelector('[id$="-composition"]');
     if(composition){const block=document.createElement('div');block.className='content-block roster-composition';block.innerHTML='<strong>Roster loadout</strong>';const list=document.createElement('ul');for(const row of unitRows(representative)){const item=document.createElement('li');item.textContent=`${row.quantity}× ${row.name}${row.wargear?` — ${row.wargear}`:''}`;list.append(item);}block.append(list);composition.replaceChildren(composition.querySelector('h4'),block);}
-    window.AMRosterEnhancements?.decorate(card,roster,group.units);
+    window.AMRosterEnhancements?.decorate(card,roster,group.units,{attachments,unitById,detachmentIds});
     const loadout=unitLoadout(representative);
     if(loadout.length)card.querySelectorAll('.weapon-row:not(.weapon-head)').forEach(row=>{const label=row.querySelector('.weapon-button')?.textContent||row.firstElementChild?.textContent;if(label&&!window.WHRosterEntities.loadoutIncludesProfile(loadout,label))row.remove();});
     card.querySelectorAll('.weapon-group').forEach(section=>{if(!section.querySelector('.weapon-row:not(.weapon-head)'))section.remove();});

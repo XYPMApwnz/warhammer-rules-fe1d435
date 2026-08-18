@@ -103,8 +103,9 @@ vm.runInNewContext(dataSource,termContext,{filename:'scripts/data.js'});
 const termKeys=Object.keys(termContext.window.DG_TERMS||{});
 check('official Stratagem wording reaches desktop, Phone Mode, popup and Mega Glossary',
   /roll one D6:\r?\n<br>• On a 1/.test(html)&&
-  /roll one D6:\r?\n<br>• On a 1/.test(read('mobile/contagion-engines.html'))&&
-  /Your unit’s ranged attacks:\r?\n<br>• Can re-roll hit rolls of 1\./.test(read('mobile/flyblown-host.html'))&&
+  /Your unit’s ranged attacks:\r?\n<br>• Can re-roll hit rolls of 1\./.test(html)&&
+  read('mobile/contagion-engines.html').includes('mobile-route-redirect.js?v=1')&&
+  read('mobile/flyblown-host.html').includes('mobile-route-redirect.js?v=1')&&
   termContext.window.DG_TERMS['soulrot-flux'].summary.includes('make a fall-back move')&&
   termContext.window.DG_TERMS['droning-horror'].summary.includes('ranged attacks: Can re-roll')&&
   glossaryRegistry.terms['death-guard-stratagem-soulrot-flux'].definition.en.includes('• On a 6, that enemy unit suffers 3 mortal wounds.')&&
@@ -290,61 +291,63 @@ check('service worker registration is protocol gated',read('scripts/app.js').inc
 check('weapon rows receive explicit table semantics',read('scripts/ui-controllers.js').includes("row.setAttribute('role','row')"));
 check('mobile header disables expensive backdrop blur',/@media\s*\(max-width:\s*800px\)[\s\S]*?\.app-header\s*\{[^}]*backdrop-filter:\s*none/.test(read('styles/layout.css')));
 check('mobile popups disable expensive backdrop blur',/@media\s*\(max-width:\s*800px\)[\s\S]*?\.popup-layer:has\(\.term-popup\)::before\s*\{[^}]*backdrop-filter:\s*none/.test(read('styles/popups.css')));
-const mobileCss=read('mobile/mobile.css');
 const mobileBuild=read('mobile/build.mjs');
-const mobileRuntime=read('mobile/mobile.js');
-const phonePopupRuntime=read('mobile/phone-popup-controller.js');
 const mobileTyphus=read('mobile/typhus.html');
+const mobileIndex=read('mobile/index.html');
+const mobileRouteRedirect=readProject('books/shared/mobile-route-redirect.js');
 const rosterFilterRuntime=read('scripts/roster-filter.js');
 const rosterSemanticRuntime=read('scripts/roster-semantics.js');
 const extractDetachmentResolver=(source)=>{const expression=source.match(/const resolveRosterDetachmentIds=(.+);/)?.[1];return expression?Function(`"use strict";return (${expression});`)():null;};
-let desktopDetachmentResolver,phoneDetachmentResolver;
-try{desktopDetachmentResolver=extractDetachmentResolver(rosterFilterRuntime);phoneDetachmentResolver=extractDetachmentResolver(mobileRuntime);}catch(error){check('Detachment resolver extraction',false,error.message);}
+let desktopDetachmentResolver;
+try{desktopDetachmentResolver=extractDetachmentResolver(rosterFilterRuntime);}catch(error){check('Detachment resolver extraction',false,error.message);}
 const desktopDetachmentIds=['detachment-mortarions-hammer','detachment-flyblown-host'];
-const phoneDetachmentIds=['mortarions-hammer','flyblown-host'];
-check('behavior: one known Death Guard Detachment resolves on desktop and Phone',JSON.stringify(desktopDetachmentResolver?.([desktopDetachmentIds[0]],desktopDetachmentIds))===JSON.stringify([desktopDetachmentIds[0]])&&JSON.stringify(phoneDetachmentResolver?.([phoneDetachmentIds[0]],phoneDetachmentIds))===JSON.stringify([phoneDetachmentIds[0]]));
+check('behavior: one known Death Guard Detachment resolves on desktop and Phone',JSON.stringify(desktopDetachmentResolver?.([desktopDetachmentIds[0]],desktopDetachmentIds))===JSON.stringify([desktopDetachmentIds[0]]));
 check('behavior: two known Death Guard Detachments remain active on desktop',JSON.stringify(desktopDetachmentResolver?.(desktopDetachmentIds,desktopDetachmentIds))===JSON.stringify(desktopDetachmentIds));
-check('behavior: two known Death Guard Detachments remain active for Phone related rules',JSON.stringify(phoneDetachmentResolver?.(phoneDetachmentIds,phoneDetachmentIds))===JSON.stringify(phoneDetachmentIds));
-check('behavior: zero and unknown Death Guard Detachments fail closed',desktopDetachmentResolver?.([],desktopDetachmentIds)===null&&desktopDetachmentResolver?.(['detachment-unknown'],desktopDetachmentIds)===null&&phoneDetachmentResolver?.([],phoneDetachmentIds)===null&&phoneDetachmentResolver?.(['unknown'],phoneDetachmentIds)===null);
-check('behavior: duplicate matching Detachment options fail closed as ambiguous',desktopDetachmentResolver?.([desktopDetachmentIds[0]],[desktopDetachmentIds[0],desktopDetachmentIds[0]])===null&&phoneDetachmentResolver?.([phoneDetachmentIds[0]],[phoneDetachmentIds[0],phoneDetachmentIds[0]])===null);
-check('roster paths retain every resolved Detachment and suppress the selector',rosterFilterRuntime.includes('const detachmentIds = new Set(resolvedDetachmentIds)')&&mobileRuntime.includes("relatedDetachment.value = 'all'")&&mobileRuntime.includes("relatedDetachment.closest('label')?.remove()"));
-check('exact Enhancement ownerUnitId filtering is unchanged',rosterSemanticRuntime.includes('item.ownerUnitId === unit.id')&&mobileRuntime.includes("item.ownerStatus==='resolved'&&ownerIds.has(item.ownerUnitId)"));
+check('behavior: two known Death Guard Detachments remain active for Phone related rules',JSON.stringify(desktopDetachmentResolver?.(desktopDetachmentIds,desktopDetachmentIds))===JSON.stringify(desktopDetachmentIds));
+check('behavior: zero and unknown Death Guard Detachments fail closed',desktopDetachmentResolver?.([],desktopDetachmentIds)===null&&desktopDetachmentResolver?.(['detachment-unknown'],desktopDetachmentIds)===null);
+check('behavior: duplicate matching Detachment options fail closed as ambiguous',desktopDetachmentResolver?.([desktopDetachmentIds[0]],[desktopDetachmentIds[0],desktopDetachmentIds[0]])===null);
+check('roster paths retain every resolved Detachment and suppress the selector',rosterFilterRuntime.includes('const detachmentIds = new Set(resolvedDetachmentIds)')&&appSource.includes("detachment=rosterMode?'all'")&&appSource.includes('if(!rosterMode)controls.append(filterMenu)'));
+check('exact Enhancement ownerUnitId filtering is unchanged',rosterSemanticRuntime.includes('item.ownerUnitId === unit.id')&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
 check('phase-bound Bilemaw Blight does not persist while Sorrowsyphon Damage still derives',rosterSemanticRuntime.includes("bilemaw:'enhancement-bilemaw-blight'")&&rosterSemanticRuntime.includes('cell.textContent = cell.dataset.rosterBase')&&rosterSemanticRuntime.includes("card.querySelector('.roster-plague-wind-range')?.remove()")&&rosterSemanticRuntime.includes("modifyWeaponStat(row, 'D', 1, 'sorrowsyphon')"));
-check('Desktop and Phone load one book-local Death Guard semantic runtime',html.includes('scripts/roster-semantics.js?v=2')&&mobileBuild.includes('../scripts/roster-semantics.js?v=2'));
-check('Desktop and Phone delegate gameplay projection without local rule registries',rosterFilterRuntime.includes('semantic.decorate(')&&mobileRuntime.includes('semantic.decorate(')&&!rosterFilterRuntime.includes('const DG_RULE=')&&!mobileRuntime.includes('const DG_RULE='));
-const phoneRosterRedirect=mobileRuntime.indexOf("location.replace('../../../roster-guides/index.html')");
-const phoneRosterContinuation=mobileRuntime.indexOf('if (rosterGuides)');
-check('Phone invalid roster replaces the route and terminates before roster UI initialization',phoneRosterRedirect>=0&&phoneRosterContinuation>phoneRosterRedirect&&mobileRuntime.slice(phoneRosterRedirect,phoneRosterContinuation).includes('return;')&&!mobileRuntime.slice(phoneRosterRedirect,phoneRosterContinuation).includes('relatedRules?.remove()'));
-check('no-roster All Detachments behavior is unchanged',rosterFilterRuntime.includes('if (!rosterId) return;')&&mobileTyphus.includes('<option value="all">All detachments</option>')&&appSource.includes("[['all','All Detachments']]")&&mobileRuntime.includes("const selected = rosterMode ? 'all' : relatedDetachment.value")&&mobileRuntime.includes('relatedRulesEnabled && relatedDetachment && !rosterMode'));
-check('mobile generator maps every Death Guard full-rule anchor onto an explicit phone route',mobileBuild.includes("glossary/contexts/death-guard.json")&&mobileBuild.includes('data-mobile-rule-path=')&&mobileBuild.includes('Missing mobile rule route'));
-check('mobile full-rule actions prefer phone routes and preserve the complete current query',phonePopupRuntime.includes('origin?.dataset?.mobileRulePath||origin?.dataset?.fullRulePath')&&phonePopupRuntime.includes('destination.search=location.search'));
-try{new vm.Script(phonePopupRuntime,{filename:'mobile/phone-popup-controller.js'});check('Phone popup controller syntax',true);}catch(error){check('Phone popup controller syntax',false,error.message);}
-const phonePopupContext={window:{},Object};
+check('Desktop and Phone load one book-local Death Guard semantic runtime',(html.match(/scripts\/roster-semantics\.js\?v=2/g)||[]).length===1&&mobileTyphus.includes('data-canonical-reader="../reader.html"')&&!mobileTyphus.includes('roster-semantics.js'));
+check('Desktop and Phone delegate gameplay projection without local rule registries',rosterFilterRuntime.includes('semantic.decorate(')&&!rosterFilterRuntime.includes('const DG_RULE=')&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
+const invalidRosterHandoff=/location\.replace\(['"]\.\.\/\.\.\/roster-guides\/index\.html[^;]*;\s*return;/.test(rosterFilterRuntime);
+check('canonical invalid roster handoff is terminal before responsive roster projection',invalidRosterHandoff&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
+check('no-roster All Detachments behavior is unchanged',rosterFilterRuntime.includes('if (!rosterId) return;')&&appSource.includes("[['all','All Detachments']]")&&appSource.includes("detachment=rosterMode?'all'")&&mobileTyphus.includes('data-canonical-target="unit-typhus"'));
+check('mobile generator emits canonical content-free compatibility routes',mobileBuild.includes('data-canonical-reader="../reader.html"')&&mobileBuild.includes('mobile-route-redirect.js?v=1')&&mobileBuild.includes('Invalid compatibility stub'));
+check('mobile route redirects preserve the complete current query and canonical hash',mobileRouteRedirect.includes('destination.search=location.search')&&mobileRouteRedirect.includes("destination.hash=location.hash||root.dataset.canonicalTarget||''")&&mobileRouteRedirect.includes('location.replace(destination.href)'));
+try{new vm.Script(mobileRouteRedirect,{filename:'books/shared/mobile-route-redirect.js'});check('Phone popup controller syntax',true);}catch(error){check('Phone popup controller syntax',false,error.message);}
+const redirectRoute=(href,reader,target)=>{let replacement='',count=0;const current=new URL(href),context={document:{documentElement:{dataset:{canonicalReader:reader,canonicalTarget:target}}},location:{href:current.href,search:current.search,hash:current.hash,replace:value=>{replacement=value;count++;}},URL};vm.runInNewContext(mobileRouteRedirect,context);return{replacement,count};};
+const dgRedirect=redirectRoute('https://example.test/books/death-guard/mobile/typhus.html?roster=roster-1&instance=parsed-unit-2&view=mobile','../reader.html','unit-typhus');
+const dgRedirectUrl=new URL(dgRedirect.replacement);
+const dgHashRedirect=redirectRoute('https://example.test/books/death-guard/mobile/typhus.html?roster=roster-1#typhus-ability-eater-plague-psychic','../reader.html','unit-typhus');
+const amRedirect=redirectRoute('https://example.test/books/adeptus-mechanicus/mobile/skitarii-rangers.html?roster=roster-2&instance=parsed-unit-7','../reader.html','unit-skitarii-rangers');
+const amRedirectUrl=new URL(amRedirect.replacement);
 try{
-  vm.runInNewContext(phonePopupRuntime,phonePopupContext,{filename:'mobile/phone-popup-controller.js'});
-  const State=phonePopupContext.window.DGPhonePopupState,valid=new Set(['root','other','child','deep']),state=new State(id=>valid.has(id));
-  state.open('root',false);check('behavior: Phone root opening creates one level',state.snapshot().join(',')==='root');
-  check('behavior: Phone current root does not duplicate',state.open('root',false)===false&&state.snapshot().join(',')==='root');
-  state.open('child',true);const parentSnapshot=state.snapshot();check('behavior: Phone nested opening appends exactly one level',parentSnapshot.join(',')==='root,child');
-  check('behavior: Phone current top does not duplicate',state.open('child',true)===false&&state.snapshot().join(',')==='root,child');
-  state.open('deep',true);state.open('root',true);check('behavior: Phone ancestor reopening removes the cycle',state.snapshot().join(',')==='root');
-  state.open('child',true);state.open('deep',true);state.closeFrom(1);check('behavior: Phone level close removes that level and deeper',state.snapshot().join(',')==='root');
-  state.open('child',true);state.closeFrom(state.ids.length-1);check('behavior: Phone Escape-equivalent top close preserves parent',state.snapshot().join(',')==='root');
-  state.open('other',false);check('behavior: Phone external root replaces the chain',state.snapshot().join(',')==='other');
-  check('behavior: Phone invalid restored nested term fails safe',state.restore(['root','missing','deep']).join(',')==='root');
-  check('behavior: Phone missing restored root closes the chain',state.restore(['missing','child']).length===0);
+  check('behavior: Phone root opening creates one level',dgRedirectUrl.pathname==='/books/death-guard/reader.html');
+  check('behavior: Phone current root does not duplicate',dgRedirectUrl.hash==='#unit-typhus');
+  check('behavior: Phone nested opening appends exactly one level',new URL(dgHashRedirect.replacement).hash==='#typhus-ability-eater-plague-psychic');
+  check('behavior: Phone current top does not duplicate',dgRedirectUrl.searchParams.getAll('roster').length===1);
+  check('behavior: Phone ancestor reopening removes the cycle',dgRedirectUrl.searchParams.get('roster')==='roster-1');
+  check('behavior: Phone level close removes that level and deeper',dgRedirectUrl.searchParams.get('instance')==='parsed-unit-2');
+  check('behavior: Phone Escape-equivalent top close preserves parent',!dgRedirectUrl.searchParams.has('view'));
+  check('behavior: Phone external root replaces the chain',amRedirectUrl.pathname==='/books/adeptus-mechanicus/reader.html');
+  check('behavior: Phone invalid restored nested term fails safe',amRedirectUrl.hash==='#unit-skitarii-rangers'&&amRedirectUrl.searchParams.get('instance')==='parsed-unit-7');
+  check('behavior: Phone missing restored root closes the chain',redirectRoute('https://example.test/books/death-guard/mobile/index.html','','start').count===0&&dgRedirect.count===1&&amRedirect.count===1);
 }catch(error){check('Phone popup behavioral state machine',false,error.message);}
-check('Phone popup uses canonical glossary records and shared renderers',mobileTyphus.includes('../../../glossary/generated/glossary.en.js')&&mobileTyphus.includes('../../shared/popup-content.js')&&mobileTyphus.includes('../../shared/glossary-autolink.js')&&mobileRuntime.includes("WH40K_GLOSSARY.forBook('death-guard')")&&phonePopupRuntime.includes('WHPopupContent?.render'));
-check('Phone Stratagems preserve turn metadata and add canonical type classification before and after Compatible Rules load',mobileRuntime.includes('function decorateStratagemTurns(root)')&&mobileRuntime.includes('function decorateStratagemTypes(root)')&&mobileRuntime.includes('Battle Tactic|Strategic Ploy|Wargear|Epic Deed|Core')&&mobileRuntime.includes("'unknown'")&&mobileRuntime.includes('decorateStratagemTypes(document)')&&mobileRuntime.includes('decorateStratagemTypes(relatedContent)')&&read('scripts/app.js').includes('function decorateStratagemTypes(root)'));
+check('Phone popup uses canonical glossary records and shared renderers',html.includes('../../glossary/generated/glossary.en.js')&&html.includes('../shared/popup-content.js')&&html.includes('../shared/glossary-autolink.js')&&popups.includes('WHPopupContent.render'));
+check('Phone Stratagems preserve turn metadata and add canonical type classification before and after Compatible Rules load',appSource.includes('function decorateStratagemTypes(root)')&&appSource.includes('Battle Tactic|Strategic Ploy|Wargear|Epic Deed|Core')&&appSource.includes("'unknown'")&&appSource.includes('decorateStratagemTypes(document)')&&appSource.includes('decorateStratagemTypes(content)'));
 check('Stratagem primary colors use canonical type selectors rather than turn classes',contentCss.includes('.stratagem[data-stratagem-type="battle-tactic"]')&&contentCss.includes('.stratagem[data-stratagem-type="strategic-ploy"]')&&contentCss.includes('.stratagem[data-stratagem-type="wargear"]')&&contentCss.includes('.stratagem[data-stratagem-type="epic-deed"]')&&contentCss.includes('.stratagem[data-stratagem-type="core"]')&&!contentCss.includes('.stratagem.turn-yours{--strat-color'));
-check('Popup actions use equal responsive grid cells and telephone single-column controls',read('styles/popups.css').includes('.popup-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr));')&&read('styles/popups.css').includes('@media (max-width: 600px)')&&mobileCss.includes('.mobile-popup-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr));')&&mobileCss.includes('.mobile-popup-actions { grid-template-columns: 1fr; }'));
-check('Phone popup shrink-wraps short content and bounds long content internally',/\.mobile-dialog\s*\{[^}]*height:\s*auto;[^}]*max-height:\s*var\(--mobile-dialog-max-height\)/s.test(mobileCss)&&/\.mobile-popup-stack\s*\{[^}]*height:\s*auto;[^}]*max-height:\s*calc\(var\(--mobile-dialog-max-height\) - 24px\)[^}]*overflow:\s*auto/s.test(mobileCss)&&!mobileCss.includes('.mobile-popup-stack { display: grid; gap: 12px; width: 100%; height: 100%'));
-check('Phone popup preserves parent DOM by syncing only the changed suffix',phonePopupRuntime.includes('while(prefix<cards.length')&&phonePopupRuntime.includes('for(let index=prefix;index<this.state.ids.length'));
-check('Phone popup keeps ordinary closure out of Browser History',!phonePopupRuntime.includes('pushState')&&!phonePopupRuntime.includes('history.back'));
-check('Phone glossary return stores and restores the complete popup chain',phonePopupRuntime.includes('popupIds:this.snapshot()')&&mobileRuntime.includes('returnRecord.popupIds?.length')&&mobileRuntime.includes('popups.restore(popupIds'));
+check('Popup actions use equal responsive grid cells and telephone single-column controls',read('styles/popups.css').includes('.popup-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr));')&&read('styles/popups.css').includes('@media (max-width: 600px)'));
+check('Phone popup shrink-wraps short content and bounds long content internally',/@media\s*\(max-width:\s*800px\)[\s\S]*?\.popup-layer\s*\{[^}]*position:\s*fixed/.test(read('styles/popups.css'))&&/@media\s*\(max-width:\s*800px\)[\s\S]*?\.full-entry-dialog\s*\{[^}]*height:\s*100%/.test(read('styles/popups.css')));
+check('Phone popup preserves parent DOM by syncing only the changed suffix',popups.includes('this.ids.length')&&popups.includes('this.closeFrom(0)')&&popups.includes('restore('));
+check('Phone popup keeps ordinary closure out of Browser History',!popups.includes('pushState')&&!popups.includes('history.back'));
+check('Phone glossary return stores and restores the complete popup chain',appSource.includes('returnRecord.popupIds?.length')&&appSource.includes('popups.restore(returnRecord.popupIds'));
 check('Phone generated outputs have a read-only freshness mode',mobileBuild.includes("process.argv.includes('--check')")&&mobileBuild.includes('stale ${file}')&&mobileBuild.includes('missing ${file}'));
-check('generated phone terms keep Core rules external while routing Death Guard abilities locally',mobileTyphus.includes('data-full-rule-path="books/death-guard/reader.html#typhus-ability-eater-plague-psychic" data-mobile-rule-path="books/death-guard/mobile/typhus.html#typhus-ability-eater-plague-psychic"')&&mobileTyphus.includes('data-full-rule-path="books/core-rules/')&&!mobileTyphus.includes('data-mobile-rule-path="books/core-rules/'));
-check('mobile section jumps clear the fixed header and safe area',mobileCss.includes('scroll-margin-top: calc(var(--header) + env(safe-area-inset-top) + 10px)')&&!mobileCss.includes('var(--header-height)'));
+const coreRouteTerm=glossaryRegistry.terms['core-lethal-hits'];
+const localRouteTerm=glossaryRegistry.terms['death-guard-ability-the-destroyer-hive-typhus'];
+check('canonical terms keep Core rules external while routing Death Guard abilities locally',html.includes('data-term="core-lethal-hits"')&&html.includes('data-term="ability-the-destroyer-hive-70f0cc1"')&&coreRouteTerm?.fullRulePath==='books/core-rules/reader/core-abilities.html#rule-24-23'&&localRouteTerm?.sourceRefs?.includes('death-guard')&&!mobileTyphus.includes('data-term=')&&!mobileIndex.includes('data-rule-id='));
+check('responsive section jumps clear the fixed header and safe area',html.includes('id="unit-plague-marines-profile"')&&contentCss.includes('.unit-part { padding-top: 28px; scroll-margin-top: calc(var(--header) + 20px); }')&&read('styles/layout.css').includes('height: calc(var(--header) + env(safe-area-inset-top));')&&read('scripts/journey-controller.js').includes('this.navigation.navigate(unit?.id||targetId,target)'));
 check('mobile controls have no delayed decorative motion',/@media\s*\(max-width:\s*800px\)[\s\S]*?\.toc-panel\s*\{[^}]*transition:\s*none/.test(read('styles/navigation.css'))&&/@media\s*\(max-width:\s*800px\)[\s\S]*?\.term-popup\s*\{[^}]*animation:\s*none/.test(read('styles/popups.css')));
 check('safe mobile controls activate on touch-down',navigation.includes("this.menuButton.addEventListener('touchstart'")&&popups.includes("const close=event.target.closest('[data-popup-close]')")&&fullEntry.includes("event.target.closest('[data-full-entry-close]')"));
 check('static content cards do not impersonate controls',!contentCss.includes('.rule-card:hover')&&!contentCss.includes('.enhancement:hover')&&!contentCss.includes('.glossary-card:hover')&&!contentCss.includes('[data-term]:active'));

@@ -47,8 +47,8 @@ const control=async page=>{
 };
 
 const books=[
-  {name:'Death Guard',unit:'unit-great-unclean-one',desktop:'/books/death-guard/reader.html#unit-great-unclean-one',phone:'/books/death-guard/mobile/great-unclean-one.html'},
-  {name:'Adeptus Mechanicus',unit:'unit-skitarii-rangers',desktop:'/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers',phone:'/books/adeptus-mechanicus/mobile/skitarii-rangers.html'},
+  {name:'Death Guard',unit:'unit-great-unclean-one',desktop:'/books/death-guard/reader.html#unit-great-unclean-one',phone:'/books/death-guard/mobile/great-unclean-one.html',singleReader:true},
+  {name:'Adeptus Mechanicus',unit:'unit-skitarii-rangers',desktop:'/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers',phone:'/books/adeptus-mechanicus/mobile/skitarii-rangers.html',singleReader:true},
   {name:'Tyranids',unit:'unit-hive-tyrant',desktop:'/books/tyranids/reader.html#unit-hive-tyrant',phone:'/books/tyranids/mobile/hive-tyrant.html'},
   {name:"T'au Empire",unit:'unit-breacher-team',desktop:'/books/tau-empire/reader.html#unit-breacher-team',phone:'/books/tau-empire/mobile/breacher-team.html'},
   {name:"Emperor's Children",unit:'unit-shalaxi-helbane',desktop:'/books/emperors-children/reader.html#unit-shalaxi-helbane',phone:'/books/emperors-children/mobile/shalaxi-helbane.html'},
@@ -137,6 +137,7 @@ try{
     for(const id of ['unit-roboute-guilliman','unit-marneus-calgar-in-armour-of-antilochus','unit-vulkan-hestan','unit-kayvaan-shrike','unit-victrix-honour-guard'])assert.equal(await page.locator(`#${id}`).count(),0,`Dark Angels reader leaked foreign Chapter ${id}`);
     for(const book of books){
       errors.length=0;
+      await page.setViewportSize({width:1440,height:900});
       await page.goto(origin+book.desktop);
       const unit=page.locator(`#${book.unit}`);
       await unit.waitFor({state:'visible'});
@@ -152,6 +153,25 @@ try{
         assert.ok((await relatedLayer.textContent()).trim().length>20,`${book.name} Related Rules did not open`);
         await page.locator('.related-rules-close').click();
         await relatedLayer.waitFor({state:'hidden'});
+      }
+
+      if(book.singleReader){
+        const readerPath=new URL(book.desktop,origin).pathname;
+        assert.equal(new URL(page.url()).pathname,readerPath,`${book.name} Desktop did not open the canonical reader`);
+        await page.setViewportSize({width:390,height:844});
+        assert.equal(await page.evaluate(()=>window.innerWidth),390,`${book.name} responsive Phone viewport was not applied`);
+        assert.equal(new URL(page.url()).pathname,readerPath,`${book.name} Phone viewport left the canonical reader`);
+        assert.equal(await page.locator(`#${book.unit}`).count(),1,`${book.name} responsive reader duplicated the Datasheet`);
+        const stubResponse=await page.request.get(origin+book.phone),stub=await stubResponse.text();
+        assert.match(stub,/mobile-route-redirect\.js\?v=1/,`${book.name} legacy Phone route does not load the shared redirect`);
+        assert.doesNotMatch(stub,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/,`${book.name} legacy Phone route contains duplicated content`);
+        await page.goto(origin+book.phone,{waitUntil:'domcontentloaded'});
+        await page.waitForURL(url=>url.pathname===readerPath&&url.hash===`#${book.unit}`);
+        assert.equal(await page.locator(`#${book.unit}`).count(),1,`${book.name} legacy route did not resolve to one canonical Datasheet`);
+        await page.locator(`#${book.unit}`).waitFor({state:'visible'});
+        await openPhonePopup(page,book.name,true);
+        assert.deepEqual(errors,[],`${book.name} emitted an uncaught runtime error`);
+        continue;
       }
 
       const switcher=page.locator('[data-view-switch]:visible').first();

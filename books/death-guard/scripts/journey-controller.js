@@ -42,7 +42,9 @@
         }:null,
         type
       });
-      history.pushState({...history.state,whJourney:token},'',location.href);
+      const destination=new URL(location.href),state={...history.state,whJourney:token};
+      if(type==='datasheet'){destination.hash=targetId;state.whJourneyTarget=targetId;}
+      history.pushState(state,'',destination.href);
       this.backButton.hidden=false;
       if(overlay)this.overlay.close();
       this.popups.restore([],{focus:false});
@@ -64,7 +66,9 @@
     }
     onPopState(event){
       const record=this.history[this.history.length-1];
-      if(record&&event.state?.whJourney!==record.token)this.restoreLast();
+    if(event.state?.whJourneyTarget){this.navigation.scheduleHashRestore();return;}
+    const token=event.state?.whJourney,index=token?this.history.findIndex(item=>item.token===token):-1;
+    if(record&&token!==record.token&&(!token||index>=0))this.restoreLast();
     }
     back(){
       const record=this.history[this.history.length-1];if(!record)return;

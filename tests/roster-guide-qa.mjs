@@ -43,16 +43,18 @@ for(const bookId of supported){
     points.enhancements.forEach(item=>assert(enhancementTitles.has(entities.normalize(item.title)),`adeptus-mechanicus: Enhancement ${item.title} is absent from related rules`));
     const compatibleRuntimePath=path.join(bookRoot,'scripts','compatible-rules-runtime.mjs');
     const desktopApp=fs.readFileSync(path.join(bookRoot,'scripts','app.js'),'utf8');
-    const phoneApp=fs.readFileSync(path.join(bookRoot,'mobile','mobile.js'),'utf8');
+    const semanticRuntimePath=path.join(bookRoot,'scripts','roster-enhancements.js');
     assert(
       /\.\/scripts\/app\.js\?v=\d+/.test(reader)
+      &&/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)
+      &&/\.\/scripts\/roster-enhancements\.js\?v=\d+/.test(reader)
       &&fs.existsSync(compatibleRuntimePath)
+      &&fs.existsSync(semanticRuntimePath)
       &&/\.\/compatible-rules-runtime\.mjs\?v=\d+/.test(desktopApp)
-      &&/\.\.\/scripts\/compatible-rules-runtime\.mjs\?v=\d+/.test(phoneApp)
       &&desktopApp.includes('related-rules-trigger')
       &&desktopApp.includes('related-rules-layer')
-      &&phoneApp.includes('relatedRulesContent')
-      &&!/(WHRelatedRules|AMRelatedRules)/.test(`${desktopApp}\n${phoneApp}`),
+      &&!fs.existsSync(path.join(bookRoot,'mobile','mobile.js'))
+      &&!/(WHRelatedRules|AMRelatedRules)/.test(desktopApp),
       'adeptus-mechanicus: canonical matrix-backed Compatible Rules runtime or UI is absent'
     );
     assert(fs.existsSync(path.join(bookRoot,'mobile','related-rules.inc')),'adeptus-mechanicus: Phone Mode related rules are absent');
@@ -203,16 +205,18 @@ assert(plasmaProfiles.length===2,'Plasma gun does not expose both standard and s
 
 const dgRosterFilter=fs.readFileSync(path.join(root,'books/death-guard/scripts/roster-filter.js'),'utf8');
 const dgRosterSemantics=fs.readFileSync(path.join(root,'books/death-guard/scripts/roster-semantics.js'),'utf8');
+const amRosterFilter=fs.readFileSync(path.join(root,'books/adeptus-mechanicus/scripts/roster-filter.js'),'utf8');
 const rosterGuideApp=fs.readFileSync(path.join(root,'roster-guides/app.js'),'utf8');
-const dgPhone=fs.readFileSync(path.join(root,'books/death-guard/mobile/mobile.js'),'utf8');
+const mobileRouteRedirect=fs.readFileSync(path.join(root,'books/shared/mobile-route-redirect.js'),'utf8');
+const dgPhoneStub=fs.readFileSync(path.join(root,'books/death-guard/mobile/typhus.html'),'utf8');
+const amPhoneStub=fs.readFileSync(path.join(root,'books/adeptus-mechanicus/mobile/skitarii-rangers.html'),'utf8');
 assert(rosterGuideApp.includes("'death guard':'../books/death-guard/index.html'"),'Death Guard personal guides bypass the responsive book entry');
-assert(dgPhone.includes("destination.searchParams.set('roster'")&&dgPhone.includes('link.remove()'),'Death Guard Phone roster navigation is not filtered or query-preserving');
+assert(/\.searchParams\.set\(['"]instance['"]/.test(dgRosterFilter)&&dgRosterFilter.includes('history.replaceState')&&mobileRouteRedirect.includes('destination.search=location.search'),'Death Guard responsive roster navigation is not filtered or query-preserving');
 assert(dgRosterSemantics.includes("{detachment:'shamblerot-vectorium', units:['poxwalkers'], id:'keyword-battleline', title:'BATTLELINE'}"),'Shamblerot Vectorium grant is absent from the Death Guard semantic runtime');
 assert(dgRosterSemantics.includes("'foetid-bloat-drone-with-heavy-blight-launcher','helbrute','myphitic-blight-hauler'"),'Contagion Engines grant owners are incomplete');
-assert(dgRosterSemantics.includes('addKeywords(KEYWORD_GRANTS.filter')&&dgRosterFilter.includes('semantic.decorate(')&&dgPhone.includes('semantic.decorate('),'Roster keyword rendering does not use the shared Death Guard semantic resolver');
+assert(dgRosterSemantics.includes('addKeywords(KEYWORD_GRANTS.filter')&&dgRosterFilter.includes('semantic.decorate(')&&!fs.existsSync(path.join(root,'books/death-guard/mobile/mobile.js'))&&dgPhoneStub.includes('mobile-route-redirect.js?v=1'),'Roster keyword rendering does not use the shared Death Guard semantic resolver');
 
-const amPhone=fs.readFileSync(path.join(root,'books/adeptus-mechanicus/mobile/mobile.js'),'utf8');
-assert(amPhone.includes("rosterGuideHref=()=>new URL('../../../roster-guides/index.html',location.href).href")&&!amPhone.includes("rosterGuideHref=()=>window.AMPhoneRoster.withRosterQuery"),'Mechanicus invalid roster handoff still carries an auto-open roster parameter');
+assert(amRosterFilter.includes("location.replace('../../roster-guides/index.html")&&!fs.existsSync(path.join(root,'books/adeptus-mechanicus/mobile/mobile.js'))&&amPhoneStub.includes('data-canonical-reader="../reader.html"')&&!amPhoneStub.includes('unit-card'),'Mechanicus invalid roster handoff or single-reader contract regressed');
 
 const sharedMatcherContext={window:{WHRuleFacts:ruleFacts}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'books/shared/related-rules-matcher.js'),'utf8'),sharedMatcherContext,{filename:'related-rules-matcher.js'});
@@ -229,8 +233,19 @@ assert(sharedMatcher.matches({targets:[{side:'friendly',all:['ADEPTUS MECHANICUS
 assert(!sharedMatcher.matches({targets:[{side:'friendly',all:['ADEPTUS MECHANICUS','INFANTRY']}]},datasmith),'Datasmith and Kastelan Attached Unit incorrectly keeps INFANTRY');
 
 const rosterCompatibleBooks=['death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','chaos-space-marines','blood-angels'];
+const singleReaderBooks=new Set(['death-guard','adeptus-mechanicus']);
 for(const bookId of rosterCompatibleBooks){
   const desktop=fs.readFileSync(path.join(root,`books/${bookId}/scripts/app.js`),'utf8');
+  if(singleReaderBooks.has(bookId)){
+    const reader=fs.readFileSync(path.join(root,`books/${bookId}/reader.html`),'utf8');
+    const stub=fs.readFileSync(path.join(root,`books/${bookId}/mobile/index.html`),'utf8');
+    assert(/detachment\s*=\s*rosterMode\s*\?\s*['"]all['"]/.test(desktop),`${bookId}: responsive roster mode does not use the all-detachment union`);
+    assert(/if\s*\(!rosterMode\)\s*controls\.append\(filterMenu\)/.test(desktop),`${bookId}: responsive roster mode still mounts the Detachment selector`);
+    assert(/\.\/scripts\/app\.js\?v=\d+/.test(reader)&&/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader),`${bookId}: canonical reader does not load the roster presentation and filter`);
+    assert(!fs.existsSync(path.join(root,`books/${bookId}/mobile/mobile.js`)),`${bookId}: obsolete Phone roster runtime still exists`);
+    assert(stub.includes('mobile-route-redirect.js?v=1')&&stub.includes('data-canonical-reader="../reader.html"')&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(stub),`${bookId}: legacy Phone route is not a content-free canonical-reader stub`);
+    continue;
+  }
   const phone=fs.readFileSync(path.join(root,`books/${bookId}/mobile/mobile.js`),'utf8');
   assert(/detachment\s*=\s*rosterMode\s*\?\s*['"]all['"]/.test(desktop),`${bookId}: Desktop roster mode does not use the all-detachment union`);
   assert(/if\s*\(!rosterMode\)\s*controls\.append\(filterMenu\)/.test(desktop),`${bookId}: Desktop roster mode still mounts the Detachment selector`);

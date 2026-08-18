@@ -27,8 +27,8 @@ for(const asset of sharedAssets)check(`shared asset exists: ${asset}`,exists(ass
 
 const library=read('index.html');
 const books=[
-  {id:'death-guard',phone:'chaos-land-raider.html',matrix:null},
-  {id:'adeptus-mechanicus',phone:'skitarii-rangers.html',matrix:'books/adeptus-mechanicus/generated/compatible-rules.json'},
+  {id:'death-guard',phone:'chaos-land-raider.html',matrix:null,singleReader:true,semantic:'books/death-guard/scripts/roster-semantics.js'},
+  {id:'adeptus-mechanicus',phone:'skitarii-rangers.html',matrix:'books/adeptus-mechanicus/generated/compatible-rules.json',singleReader:true,semantic:'books/adeptus-mechanicus/scripts/roster-enhancements.js'},
   {id:'tyranids',phone:'hive-tyrant.html',matrix:'books/tyranids/generated/compatible-rules.json'},
   {id:'tau-empire',phone:'breacher-team.html',matrix:'books/tau-empire/generated/compatible-rules.json'},
   {id:'emperors-children',phone:'lord-exultant.html',matrix:'books/emperors-children/generated/compatible-rules.json'},
@@ -48,8 +48,9 @@ for(const book of books){
   const entryHtml=read(entry);
   const readerHtml=read(reader);
   const phoneHtml=read(phone);
-  const phoneRuntime=book.singleReader?phoneHtml.includes('new URL("../reader.html"')&&phoneHtml.includes('searchParams.set("view","mobile")'):/mobile\.js\?v=\d+/.test(phoneHtml);
-  check(`${book.id} exposes required production paths`,(book.roster===false||/scripts\/roster-filter\.js\?v=\d+/.test(readerHtml))&&phoneRuntime);
+  const phoneRuntime=book.singleReader?phoneHtml.includes('data-canonical-reader="../reader.html"')&&phoneHtml.includes('../../shared/mobile-route-redirect.js?v=1')&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(phoneHtml):/mobile\.js\?v=\d+/.test(phoneHtml);
+  const semanticRuntime=!book.semantic||exists(book.semantic)&&readerHtml.includes(`./scripts/${path.basename(book.semantic)}?v=`);
+  check(`${book.id} exposes required production paths`,(book.roster===false||/scripts\/roster-filter\.js\?v=\d+/.test(readerHtml))&&phoneRuntime&&semanticRuntime);
   if(book.matrix)check(`${book.id} Compatible Rules matrix exists`,exists(book.matrix));
   if(book.id==='chaos-space-marines'){
     check('chaos-space-marines entry exposes verification status and artwork',entryHtml.includes('Verification build')&&entryHtml.includes('chaos-space-marines-cover-480.webp')&&!entryHtml.includes('class="entry-mark"'));

@@ -18,7 +18,7 @@
       this.mobile=window.innerWidth<=this.breakpoint;
       this.viewportWidth=window.innerWidth;
       this.state={owner:'reader',active:'',drawer:false,collapsed:false,transition:0};
-      this.frames={reader:0,geometry:0};
+      this.frames={reader:0,geometry:0,hash:0};
       this.geometry={headerBottom:0,ranges:[]};
       this.activeButtons=new Set();
       this.supportsInert='inert'in HTMLElement.prototype;
@@ -46,6 +46,9 @@
         this.layoutObserver.observe(this.header);
         this.layoutObserver.observe(this.main);
       }
+      const restoreHash=()=>this.scheduleHashRestore();
+      if(document.readyState==='complete')restoreHash();else window.addEventListener('load',restoreHash,{once:true});
+      document.fonts?.ready.then(restoreHash);
     }
 
     get active(){return this.state.active||'start';}
@@ -257,6 +260,14 @@
       else if(item&&!this.pathIsOpen(item.node))this.revealPath(item.node,{includeSelf:true});
     }
 
+    scheduleHashRestore(){
+      if(this.frames.hash)return;
+      this.frames.hash=requestAnimationFrame(()=>{this.frames.hash=0;this.navigateHash();});
+    }
+    navigateHash(){
+      const target=document.getElementById(location.hash.slice(1));if(!target)return false;
+      this.refreshGeometry();const unit=target.closest('.unit-card');this.navigate(unit?.id||target.id,target);return true;
+    }
     go(id){const item=this.byId.get(id);if(!item)return;this.setDrawer(false);this.navigate(id,item.section);}
     navigate(id,element,settled){
       const targets=window.WHNavigationTargets.resolve(element);

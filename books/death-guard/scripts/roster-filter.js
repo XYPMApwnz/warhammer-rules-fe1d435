@@ -125,9 +125,6 @@
   }
   const requestedInstanceId = params.get('instance');
   const selected = new Map([...grouped].map(([id, groups]) => [id, groups.find((group) => group.units.some((unit) => unit.id === requestedInstanceId)) || groups[0]]));
-  const requestedUnit=rosterById.get(requestedInstanceId),viewSwitch=document.querySelector('[data-view-switch]');
-  const setViewSwitch=unit=>{if(!unit||!viewSwitch)return;const destination=new URL(`./mobile/${slug(unit.name)}.html`,location.href);destination.search=location.search;destination.hash='';viewSwitch.href=destination.href;viewSwitch.dataset.rosterDestination=destination.href;};
-  if(viewSwitch){setViewSwitch(requestedUnit);viewSwitch.addEventListener('click',event=>{if(!viewSwitch.dataset.rosterDestination)return;event.preventDefault();location.href=viewSwitch.dataset.rosterDestination;},{capture:true});}
   const enhancementRuleIdsByUnitId={};
   for(const [id,entry] of selected){
     const ruleIds=enhancements.filter(enhancement=>enhancement?.ownerStatus==='resolved'&&entry.units.some(unit=>unit.id===enhancement.ownerUnitId)).map(enhancement=>`enhancement-${slug(enhancement.name)}`);
@@ -258,7 +255,7 @@
     const branch = [...unitsRoot.children].find((child) => child.matches("ul"));
     const unitItems = [...unitsRoot.querySelectorAll('[data-nav-id^="unit-"]')].flatMap((item) => {
       const id=item.dataset.navId,records=renderedGroups.get(id)||[],base=item.querySelector('.toc-label')?.textContent.trim()||'';
-      if(records.length<2){const record=records[0];item.dataset.navDepth='2';if(record?.entry.copies>1)item.querySelector('.toc-label').textContent=`${base} ×${record.entry.copies}`;item.querySelector('[data-nav-target]')?.addEventListener('click',()=>{const destination=new URL(location.href);destination.searchParams.set('instance',record.entry.units[0].id);destination.hash=record.cardId;history.replaceState(history.state,'',destination.href);setViewSwitch(record.entry.units[0]);});return [item];}
+      if(records.length<2){const record=records[0];item.dataset.navDepth='2';if(record?.entry.copies>1)item.querySelector('.toc-label').textContent=`${base} ×${record.entry.copies}`;item.querySelector('[data-nav-target]')?.addEventListener('click',()=>{const destination=new URL(location.href);destination.searchParams.set('instance',record.entry.units[0].id);destination.hash=record.cardId;history.replaceState(history.state,'',destination.href);});return [item];}
       return records.map(({entry:group,cardId}) => {
         const clone=item.cloneNode(true),control=clone.querySelector('.toc-label');
         clone.dataset.navDepth='2';
@@ -268,13 +265,13 @@
         button.type='button';button.className=control.className;button.replaceChildren(...control.childNodes);
         button.dataset.navTarget=cardId;
         destination.searchParams.set('instance',group.units[0].id);destination.hash=cardId;
-        button.addEventListener('click',()=>{history.replaceState(history.state,'',destination.href);setViewSwitch(group.units[0]);});control.replaceWith(button);
+        button.addEventListener('click',()=>{history.replaceState(history.state,'',destination.href);});control.replaceWith(button);
         return clone;
       });
     });
     branch?.replaceChildren(...unitItems);
   }
-  if(requestedInstanceId){const record=[...renderedGroups.values()].flat().find(item=>item.entry.units.some(unit=>unit.id===requestedInstanceId));if(record){if(location.hash!==`#${record.cardId}`){const destination=new URL(location.href);destination.hash=record.cardId;history.replaceState(history.state,'',destination.href);}const scroll=()=>requestAnimationFrame(()=>document.getElementById(record.cardId)?.scrollIntoView());if(document.readyState==='complete')scroll();else addEventListener('load',scroll,{once:true});}}
+  if(requestedInstanceId){const record=[...renderedGroups.values()].flat().find(item=>item.entry.units.some(unit=>unit.id===requestedInstanceId));if(record){const card=document.getElementById(record.cardId),hashTarget=document.getElementById(location.hash.slice(1)),target=hashTarget&&card?.contains(hashTarget)?hashTarget:card;if(target===card&&location.hash!==`#${record.cardId}`){const destination=new URL(location.href);destination.hash=record.cardId;history.replaceState(history.state,'',destination.href);}const scroll=()=>requestAnimationFrame(()=>target?.scrollIntoView());if(document.readyState==='complete')scroll();else addEventListener('load',scroll,{once:true});}}
   const datasheetTitle = document.querySelector("#datasheets > .section-title");
   if (datasheetTitle) datasheetTitle.textContent = "Units";
 

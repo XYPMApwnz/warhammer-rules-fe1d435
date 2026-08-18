@@ -16,6 +16,18 @@ const card=(html,id)=>{
   return html.slice(start,end+10);
 };
 const cardCount=(html,id)=>(html.match(new RegExp(`<article\\b[^>]*(?:data-rule-id|id)="${id}"`,'g'))||[]).length;
+const migratedBooks=new Map([['death-guard',48],['adeptus-mechanicus',47]]);
+const migratedStubs=new Map([...migratedBooks].map(([bookId,expected])=>{
+  const directory=path.join(root,'books',bookId,'mobile');
+  const stubs=fs.readdirSync(directory).filter(file=>file.endsWith('.html')).map(file=>[file,read(path.join('books',bookId,'mobile',file))]);
+  assert.equal(stubs.length,expected,`${bookId}: legacy compatibility route inventory changed`);
+  for(const [file,html] of stubs){
+    assert.match(html,/data-canonical-reader="\.\.\/reader\.html"/,`${bookId}/${file}: canonical reader target is absent`);
+    assert.match(html,/mobile-route-redirect\.js\?v=1/,`${bookId}/${file}: shared redirect runtime is absent`);
+    assert.doesNotMatch(html,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/,`${bookId}/${file}: compatibility stub contains duplicated rule content`);
+  }
+  return[bookId,stubs];
+}));
 
 const registry=Object.values(json('glossary/registry.en.json').terms);
 const sources=[
@@ -32,10 +44,15 @@ for(const [bookId,sourceFile,readerFile,relatedFile] of sources){
       assert.equal(count(rendered,'data-source-field="restrictions"'),1,`${bookId}/${rule.id}: ${surface} must render RESTRICTIONS exactly once`);
       assert.ok(clean(rendered).includes(clean(rule.restrictions)),`${bookId}/${rule.id}: ${surface} changed RESTRICTIONS`);
     }
-    const mobileFiles=fs.readdirSync(path.join(root,'books',bookId,'mobile')).filter(file=>file.endsWith('.html'));
-    const mobile=mobileFiles.map(file=>read(path.join('books',bookId,'mobile',file))).find(html=>html.includes(`data-rule-id="${rule.id}"`));
-    assert.ok(mobile,`${bookId}/${rule.id}: dedicated Phone Mode card is absent`);
-    assert.equal(count(card(mobile,rule.id),'data-source-field="restrictions"'),1,`${bookId}/${rule.id}: Phone Mode must render RESTRICTIONS exactly once`);
+    if(bookId==='adeptus-mechanicus'){
+      assert.equal(cardCount(reader,rule.id),1,`${bookId}/${rule.id}: responsive reader must expose one canonical Phone Mode card`);
+      assert.equal(count(card(reader,rule.id),'data-source-field="restrictions"'),1,`${bookId}/${rule.id}: responsive Phone Mode must render RESTRICTIONS exactly once`);
+    }else{
+      const mobileFiles=fs.readdirSync(path.join(root,'books',bookId,'mobile')).filter(file=>file.endsWith('.html'));
+      const mobile=mobileFiles.map(file=>read(path.join('books',bookId,'mobile',file))).find(html=>html.includes(`data-rule-id="${rule.id}"`));
+      assert.ok(mobile,`${bookId}/${rule.id}: dedicated Phone Mode card is absent`);
+      assert.equal(count(card(mobile,rule.id),'data-source-field="restrictions"'),1,`${bookId}/${rule.id}: Phone Mode must render RESTRICTIONS exactly once`);
+    }
     const term=registry.find(item=>item.scope===bookId&&item.title?.en.toLowerCase()===rule.title.toLowerCase());
     assert.ok(term,`${bookId}/${rule.id}: glossary term is absent`);
     assert.equal(count(clean(term.definition.en),clean(rule.restrictions)),1,`${bookId}/${rule.id}: glossary must contain RESTRICTIONS exactly once`);
@@ -44,8 +61,6 @@ for(const [bookId,sourceFile,readerFile,relatedFile] of sources){
 
 const dgSource=json('books/death-guard/content/death-guard-rules.en.json');
 const dgReader=read('books/death-guard/reader.html'),dgRelated=read('books/death-guard/mobile/related-rules.inc');
-const dgMobileFiles=fs.readdirSync(path.join(root,'books/death-guard/mobile')).filter(file=>file.endsWith('.html'));
-const dgMobilePages=dgMobileFiles.map(file=>[file,read(path.join('books/death-guard/mobile',file))]);
 const dgDetachments=dgSource.sections.filter(section=>section.id.startsWith('detachment-'));
 const dgStratagems=dgDetachments.flatMap(detachment=>
   (detachment.subsections||[]).flatMap(subsection=>subsection.blocks||[])
@@ -67,10 +82,9 @@ for(const rule of dgStratagems){
     assert.equal(count(rendered,'data-source-field="restrictions"'),expectedCount,`death-guard/${rule.id}: ${surface} RESTRICTIONS cardinality`);
     if(restriction)assert.equal(count(clean(rendered),clean(restriction)),1,`death-guard/${rule.id}: ${surface} changed or duplicated RESTRICTIONS`);
   }
-  const mobileMatches=dgMobilePages.filter(([,html])=>cardCount(html,rule.id));
-  assert.equal(mobileMatches.length,1,`death-guard/${rule.id}: Phone Mode must contain the card on exactly one page`);
-  assert.equal(cardCount(mobileMatches[0][1],rule.id),1,`death-guard/${rule.id}: Phone Mode duplicated the card`);
-  const mobileCard=card(mobileMatches[0][1],rule.id);
+  assert.equal(cardCount(dgReader,rule.id),1,`death-guard/${rule.id}: responsive Phone Mode must use the one canonical reader card`);
+  assert.equal(migratedStubs.get('death-guard').filter(([,html])=>cardCount(html,rule.id)).length,0,`death-guard/${rule.id}: compatibility stubs duplicated the card`);
+  const mobileCard=card(dgReader,rule.id);
   assert.equal(count(mobileCard,'data-source-field="restrictions"'),expectedCount,`death-guard/${rule.id}: Phone Mode RESTRICTIONS cardinality`);
   if(restriction)assert.equal(count(clean(mobileCard),clean(restriction)),1,`death-guard/${rule.id}: Phone Mode changed or duplicated RESTRICTIONS`);
 
@@ -98,7 +112,6 @@ for(const id of ['core-stratagem-insane-bravery','core-stratagem-rapid-ingress']
 for(const file of [
   'books/shared/army-related-rules.js',
   'books/adeptus-mechanicus/scripts/app.js',
-  'books/adeptus-mechanicus/mobile/mobile.js',
   'books/tyranids/mobile/mobile.js',
   'books/tau-empire/mobile/mobile.js'
 ]){
@@ -108,7 +121,7 @@ for(const file of [
   assert.doesNotMatch(source,/Check WHEN and TARGET/);
   assert.doesNotMatch(source,/result\.reasons/);
 }
-for(const file of ['books/death-guard/scripts/app.js','books/death-guard/mobile/mobile.js']){
+for(const file of ['books/death-guard/scripts/app.js']){
   const source=read(file);
   assert.match(source,/Conditionally compatible/);
   assert.match(source,/compatibleRuntime\.conditionLabels/);
@@ -149,17 +162,21 @@ assert.match(css,new RegExp(`\\.stratagem-grid\\s*\\{[^}]*${readableStratagemGri
 assert.match(css,/full-related-content[\s\S]*grid-template-columns:\s*repeat\(2,\s*minmax\(min\(100%,\s*360px\),\s*1fr\)\)/,'Compatible Stratagem grids must preserve two columns and the readable minimum card width');
 assert.match(css,/:is\(\[data-related-kind="stratagems"\],\[data-related-kind="enhancements"\]\)>section\s*\{[^}]*grid-column:\s*1\/-1/,'nested Related Rules sections must span the outer grid instead of shrinking cards to one quarter');
 assert.match(css,/@media\s*\(max-width:\s*900px\)[^{]*\{[\s\S]*grid-template-columns:\s*1fr/);
-for(const bookId of ['death-guard','adeptus-mechanicus','tyranids','tau-empire']){
+for(const bookId of ['tyranids','tau-empire']){
   const mobileCss=read(`books/${bookId}/mobile/mobile.css`);
   assert.match(mobileCss,/grid-template-columns:\s*1fr/,`${bookId}: Phone Mode must use one Stratagem column`);
   assert.match(mobileCss,/@media\s*\(min-width:\s*1000px\)\s*and\s*\(orientation:\s*landscape\)[\s\S]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/,`${bookId}: landscape tablet must use two Stratagem columns`);
+}
+for(const bookId of migratedBooks.keys()){
+  const reader=read(`books/${bookId}/reader.html`);
+  const responsiveContentCss=bookId==='death-guard'?/\.\/styles\/content\.css\?v=\d+/:/\.\.\/death-guard\/styles\/content\.css\?v=\d+/;
+  assert.match(reader,responsiveContentCss,`${bookId}: responsive reader does not load the canonical Stratagem layout`);
+  assert.doesNotMatch(reader,/mobile\/mobile\.css|mobile\/mobile\.js|mobile\/phone-popup-controller\.js/,`${bookId}: canonical reader still loads the obsolete Phone content runtime`);
 }
 
 assert.match(read('books/shared/popup-content.js'),/term\.kind==='stratagem'\?term\.definition:term\.summary/);
 assert.match(read('glossary/tools/build-glossary.mjs'),/kind:term\.kind/);
 for(const buildFile of [
-  'books/death-guard/mobile/build.mjs',
-  'books/adeptus-mechanicus/mobile/build.mjs',
   'books/tyranids/mobile/build.mjs',
   'books/tau-empire/mobile/build.mjs'
 ])assert.match(read(buildFile),/term\.kind\s*===?\s*'stratagem'[\s\S]{0,100}term\.definition/);

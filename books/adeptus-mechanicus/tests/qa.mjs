@@ -237,7 +237,7 @@ check('responsive reader has no obsolete view switch',!html.includes('data-view-
 check('responsive no-roster keeps All Detachments',appSource.includes("[['all','All Detachments']]"));
 check('local official transcripts are embedded',(markup.match(/class="source-transcript"/g)||[]).length===rules.updates.length+rules.detachments.length+factionRules.datasheets.filter(unit=>unit.status!=='Warhammer Legends').length+2);
 check('Codex transcription status is explicit',markup.includes('Codex transcription layer')&&markup.includes('34 indexed datasheets'));
-check('official MFM verification is visible',markup.includes('Munitorum Field Manual v1.2')&&markup.includes('All 34 current Enhancement costs'));
+check('official MFM verification is visible',markup.includes('Munitorum Field Manual v1.2')&&/Dated repository capture verified \d{4}-\d{2}-\d{2}; all 34 current Enhancement costs and all non-Legends unit point rows match the official live source\./.test(markup)&&markup.includes('>Open official MFM</a>'));
 check('generated reader identifies the current 27-page Faction Pack',markup.includes('Faction Pack v1.1')&&markup.includes('27 pages')&&!markup.includes('Faction Pack v1.0'));
 check('generated hero contains no technical placeholders',!read('tools/build-full-content.mjs').includes('Technical placeholder')&&!html.includes('Technical placeholder')&&markup.includes('11th Edition Army Book')&&markup.includes('Adeptus Mechanicus emblem'));
 check('Stratagem restrictions render as a separate field',markup.includes('<b>Restrictions</b>')&&markup.includes('Programmed Withdrawal'));
@@ -267,7 +267,12 @@ const context={window:{},Object};vm.runInNewContext(read('scripts/data.js'),cont
 const terms=context.window.DG_TERMS||{};
 check('term registry expands the canonical glossary',Object.keys(terms).length>=rules.glossary.length+150,`${Object.keys(terms).length} terms`);
 check('term rule and unit destinations resolve',Object.values(terms).every(term=>(!term.rule||idSet.has(term.rule))&&(!term.units||term.units.every(id=>idSet.has(id)))));
-check('datasheet abilities and weapons are interactive',(markup.match(/class="ability"/g)||[]).length>100&&(markup.match(/class="weapon-button" data-term=/g)||[]).length===rules.datasheets.reduce((sum,unit)=>sum+unit.weapons.length,0));
+const abilityCards=(markup.match(/<article class="ability"[^>]*>/g)||[]).length;
+const interactiveAbilityCards=(markup.match(/<article class="ability"[^>]*><h5[^>]*><button class="term-button" data-term="[^"]+"/g)||[]).length;
+const compactAbilityButtons=(markup.match(/<button class="term-button" data-term="[^"]+" data-source-field="abilities\./g)||[]).length;
+const interactiveWeaponNames=(markup.match(/class="weapon-button" data-term=/g)||[]).length;
+const expectedWeaponNames=rules.datasheets.reduce((sum,unit)=>sum+unit.weapons.length,0);
+check('datasheet abilities and weapons are interactive',abilityCards>0&&interactiveAbilityCards===abilityCards&&compactAbilityButtons>0&&interactiveWeaponNames===expectedWeaponNames,`${interactiveAbilityCards}/${abilityCards} ability cards; ${compactAbilityButtons} compact abilities; ${interactiveWeaponNames}/${expectedWeaponNames} weapons`);
 check('Core abilities use canonical destinations',!markup.includes('data-term="datasheet-deep-strike"')&&!markup.includes('data-term="datasheet-deadly-demise')&&markup.includes('data-term="core-deep-strike"')&&markup.includes('data-term="core-deadly-demise"')&&terms['core-deep-strike']?.fullRulePath==='books/core-rules/reader/core-abilities.html#rule-24-09');
 check('official and Codex datasheets show provenance',(markup.match(/class="unit-card surface/g)||[]).length===(markup.match(/<div class="source"><a class="source-link"/g)||[]).length-rules.updates.length-allDetachments.length-1);
 

@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import ruleFacts from '../books/shared/rule-facts.js';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -182,5 +183,10 @@ assert.match(read('books/tau-empire/mobile/build.mjs'),/data-canonical-reader="\
 assert.match(dgReader,/data-term="core-rule-15-04-insane-bravery"/);
 assert.match(read('books/adeptus-mechanicus/reader.html'),/data-term="stratagem-priority-reclamation"/);
 assert.match(read('books/shared/army-related-rules.js'),/Compatible Stratagems & Enhancements/);
+assert.equal(ruleFacts.staticCompatible({state:'match'}),true);
+assert.equal(ruleFacts.staticCompatible({state:'conditional',condition:'battle-state-unknown'}),true);
+for(const condition of ['attachment-unknown','second-character-unknown','second-unit-unknown','warlord-unknown','detachment-not-selected'])assert.equal(ruleFacts.staticCompatible({state:'conditional',condition}),false,condition);
+assert.equal(ruleFacts.staticCompatible({state:'conditional',matchedRoleIds:['target'],reasons:['in-range']}),true);
+assert.equal(ruleFacts.staticCompatible({state:'conditional',matchedRoleIds:[],reasons:[]}),false);
 
 console.log('Stratagem contract QA passed: restrictions, tri-state presentation and responsive two-column grids.');

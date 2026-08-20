@@ -45,7 +45,8 @@
   "compatibleRulesMatrix": true,
   "legacyRelatedRuleAttributes": false,
   "assetVersions": {
-    "app": 11,
+    "app": 12,
+    "ruleFacts": 5,
     "book": 5,
     "mobile": 2,
     "rosterFilter": 4,

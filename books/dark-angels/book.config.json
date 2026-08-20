@@ -14,7 +14,8 @@
   "assetVersions": {
     "book": 3,
     "app": 5,
-    "relatedRules": 11
+    "relatedRules": 12,
+    "ruleFacts": 5
   },
   "factionKeyword": "DARK ANGELS",
   "dependencies": ["space-marines"],

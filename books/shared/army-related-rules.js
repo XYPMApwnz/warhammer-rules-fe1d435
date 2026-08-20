@@ -49,7 +49,7 @@
       content.querySelectorAll('.stratagem,.enhancement').forEach(card=>{
         const assignedEnhancements=options.rosterGuide?.bookId==='dark-angels'?new Set(options.rosterGuide.enhancementRuleIdsByUnitId?.[unitProfile.id]||[]):null;
         const assigned=assignedEnhancements?.has(card.dataset.ruleId),result=assignedEnhancements&&card.classList.contains('enhancement')?!assigned?{state:'no-match',matchedRoleIds:[],reasons:[]}:card.dataset.rosterAssignedOnly==='true'?{state:'match',matchedRoleIds:[],reasons:[]}:match(card,unitProfile):match(card,unitProfile);
-        card.hidden=result.state==='no-match';
+        card.hidden=rosterMode?result.state==='no-match':!root.WHRuleFacts.staticCompatible(result);
         renderMatchState(card,result);
       });
       const hasEnhancements=[...content.querySelectorAll('.enhancement')].some(card=>!card.hidden);

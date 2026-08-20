@@ -47,8 +47,9 @@
     const filter=()=>{
       if(!content||!unit)return;
       const compatible=compatibleRuntime.getCompatibleRules(compatibleRulesMatrix,unit.dataset.rosterCanonicalId||unit.id,{detachmentId:detachment});
+      const presented=rosterMode?compatible:window.WHRuleFacts.filterStaticCompatible(compatible);
       const assigned=new Set(rosterGuide?.enhancementRuleIdsByUnitId?.[unit.id]||[]);
-      const rules=window.AMRosterEnhancements.filterCompatibleRules(compatible,rosterMode,assigned);
+      const rules=window.AMRosterEnhancements.filterCompatibleRules(presented,rosterMode,assigned);
       const byId=new Map(rules.map(rule=>[rule.ruleId,rule])),hasEnhancements=rules.some(rule=>rule.kind==='enhancement');
       if(kind==='enhancements'&&!hasEnhancements)kind='stratagems';
       tabs.querySelector('[data-kind="enhancements"]').hidden=!hasEnhancements;

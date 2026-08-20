@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import ruleFacts from '../../shared/rule-facts.js';
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -38,6 +39,11 @@ for(const row of rows.filter(row=>row.state==='conditional')){
   assert(conditions.has(row.condition),`Unknown primary condition: ${row.ruleId}`);
   assert((row.conditions||[row.condition]).every(condition=>conditions.has(condition)),`Unknown condition metadata: ${row.ruleId}`);
 }
+const staticRows=Object.fromEntries(Object.entries(generated.units).map(([unitId,unitRows])=>[unitId,ruleFacts.filterStaticCompatible(unitRows)]));
+const hiddenStaticRows=rows.length-Object.values(staticRows).flat().length;
+assert.equal(hiddenStaticRows,134,'AM static filter must hide every roster-dependent relation');
+assert(!staticRows['unit-tech-priest-manipulus'].some(row=>row.ruleId==='stratagem-aggressor-imperative'),'static Manipulus must not show Aggressor Imperative');
+for(const unitId of ['unit-skitarii-rangers','unit-skitarii-vanguard'])assert(staticRows[unitId].some(row=>row.ruleId==='stratagem-aggressor-imperative'&&row.state==='match'),`${unitId} must retain Aggressor Imperative`);
 const builder=fs.readFileSync(path.join(root,'tools','build-compatible-rules.mjs'),'utf8');
 assert(!/related-rules-matcher|WHRelatedRules/.test(builder),'matrix builder must not call the legacy matcher');
 console.log('PASS Mechanicus compatible-rules matrix: 935 faction + 236 Core + 142 Enhancement rows; 1179 match + 134 conditional.');

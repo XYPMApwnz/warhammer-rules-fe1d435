@@ -310,6 +310,7 @@ const normalizedHtml=html
   .replace('../../glossary/generated/glossary.en.js','../../glossary/generated/glossary.en.js?v=tyranids-1')
   .replace('./scripts/data.js','./scripts/data.js?v=2')
   .replace('<script src="../shared/army-related-rules.js"></script>','<script src="../shared/modal-focus.js?v=1"></script><script src="../shared/army-related-rules.js"></script>')
+  .replace('../shared/rule-facts.js?v=4',`../shared/rule-facts.js?v=${config.assetVersions?.ruleFacts||4}`)
   .replace('../shared/army-related-rules.js',`../shared/army-related-rules.js?v=${config.assetVersions?.relatedRules||10}`)
   .replace('../shared/army-book-app.js','../shared/army-book-app.js?v=9')
   .replace('./scripts/app.js',`./scripts/app.js?v=${config.assetVersions?.app||(config.dedicatedMobile?'3':'2')}`);

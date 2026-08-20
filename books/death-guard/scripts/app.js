@@ -32,7 +32,7 @@
     let modal;
     const filter=()=>{
       if(!content||!unit)return;
-      const compatible=compatibleRuntime.getCompatibleStratagems(compatibleRulesMatrix,unit.id,{detachmentId:detachment,warlord:unit.dataset.rosterWarlord==='true'}),assigned=new Set(rosterGuide?.enhancementRuleIdsByUnitId?.[unit.id]||[]),rules=rosterMode?compatible.filter(rule=>rule.kind!=='enhancement'||assigned.has(rule.ruleId)):compatible,byId=new Map(rules.map(rule=>[rule.ruleId,rule]));
+      const compatible=compatibleRuntime.getCompatibleStratagems(compatibleRulesMatrix,unit.id,{detachmentId:detachment,warlord:unit.dataset.rosterWarlord==='true'}),presented=rosterMode?compatible:window.WHRuleFacts.filterStaticCompatible(compatible),assigned=new Set(rosterGuide?.enhancementRuleIdsByUnitId?.[unit.id]||[]),rules=rosterMode?presented.filter(rule=>rule.kind!=='enhancement'||assigned.has(rule.ruleId)):presented,byId=new Map(rules.map(rule=>[rule.ruleId,rule]));
       const hasEnhancements=rules.some(rule=>rule.kind==='enhancement');
       if(kind==='enhancements'&&!hasEnhancements)kind='stratagems';
       tabs.querySelector('[data-kind="enhancements"]').hidden=!hasEnhancements;

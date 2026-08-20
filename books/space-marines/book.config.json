@@ -56,7 +56,8 @@
     "Twin-linked"
   ],
   "assetVersions": {
-    "app": 5,
+    "app": 6,
+    "ruleFacts": 5,
     "book": 3,
     "rosterFilter": 2,
     "tokens": 3

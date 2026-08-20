@@ -5,6 +5,7 @@
   const dashes=/[\u2010\u2011\u2012\u2013\u2014\u2212\ufe58\ufe63\uff0d]/g;
   const list=value=>value instanceof Set?[...value]:Array.isArray(value)?[...value]:null;
   const relationKeys=['canLead','canSupport','canBeLedBy','canBeSupportedBy'];
+  const staticRosterConditions=new Set(['attachment-unknown','second-character-unknown','second-unit-unknown','warlord-unknown','detachment-not-selected']);
 
   function normalizeKeyword(value){
     if(typeof value!=='string')throw new TypeError(`Keyword must be a string, received ${value===null?'null':typeof value}`);
@@ -137,7 +138,17 @@
     };
   }
 
-  const api=Object.freeze({normalizeKeyword,textFromDomLike,parseDatasetJson,profileFromRecord,recordFromDataset,profileFromDataset,serializeRuleProfile});
+  const compatibilityConditions=result=>[...new Set(result?.conditions?.length?result.conditions:result?.condition?[result.condition]:result?.reasons||[])];
+  function staticCompatible(result){
+    if(result?.state==='match')return true;
+    if(result?.state!=='conditional')return false;
+    const conditions=compatibilityConditions(result);
+    if(conditions.some(condition=>staticRosterConditions.has(condition)))return false;
+    return conditions.length>0||Boolean(result.matchedRoleIds?.length);
+  }
+  const filterStaticCompatible=rules=>(rules||[]).filter(staticCompatible);
+
+  const api=Object.freeze({normalizeKeyword,textFromDomLike,parseDatasetJson,profileFromRecord,recordFromDataset,profileFromDataset,serializeRuleProfile,staticCompatible,filterStaticCompatible});
   root.WHRuleFacts=api;
   if(typeof module!=='undefined'&&module.exports)module.exports=api;
 }(typeof window==='undefined'?globalThis:window));

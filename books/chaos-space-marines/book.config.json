@@ -20,7 +20,8 @@
   "detachmentQualifiedEnhancementPoints": true,
   "assetVersions": {
     "book": 3,
-    "app": 4,
+    "app": 5,
+    "ruleFacts": 5,
     "rosterFilter": 2,
     "rosterData": 2
   },

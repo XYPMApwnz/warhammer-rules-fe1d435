@@ -51,11 +51,9 @@ async function candidate(test){
   await page.locator(`[data-nav-target="${test.cardId}"]`).evaluate(node=>node.click());await page.waitForFunction(cardId=>window.DG_APP?.navigation?.active===cardId,test.cardId);
   test.assert(await effectState(page,test.cardId,test.effect));
   assert.deepEqual(windowIds(await page.evaluate(cardId=>window.TAU_ROSTER_GUIDE.enhancementRuleIdsByUnitId[cardId]||[],test.cardId)),windowIds(test.ruleIds));
-  await page.locator('[data-view-switch]').click();await page.waitForURL(url=>url.pathname.endsWith(`/mobile/${test.route}.html`)&&url.searchParams.get('roster')===rosterId);
-  await page.setViewportSize({width:390,height:844});
-  await page.waitForFunction(()=>document.documentElement.dataset.rosterActive==='true');await page.locator(`#${test.cardId}`).waitFor();test.assert(await effectState(page,test.cardId,test.effect));
-  await page.locator('#navButton').click();await page.locator('#mobileNav[aria-hidden="false"]').waitFor();
-  await page.locator('[data-view-switch]').click();await page.waitForURL(url=>url.pathname.endsWith('/reader.html')&&url.searchParams.get('roster')===rosterId);
+  await page.setViewportSize({width:390,height:844});await page.reload();
+  await page.locator(`#${test.cardId}[data-roster-selected="true"]`).waitFor();test.assert(await effectState(page,test.cardId,test.effect));
+  await page.setViewportSize({width:1280,height:900});await page.reload();await page.locator(`#${test.cardId}[data-roster-selected="true"]`).waitFor();
   assert.equal(errors.length,0,`${test.enhancement}: console errors: ${errors.join(' | ')}`);await context.close();
 }
 const windowIds=values=>[...values].sort();
@@ -69,8 +67,9 @@ try{
 
   const duplicate=await browser.newContext({serviceWorkers:'block'}),duplicatePage=await duplicate.newPage();
   let id=await savedRoster(duplicatePage,rosterSource({detachment:'Kauyon',unit:'Cadre Fireblade',points:50,enhancement:'Precision of the Patient Hunter',cost:15,second:true}));
-  for(const target of [`${base}/books/tau-empire/reader.html?roster=${id}#unit-cadre-fireblade`,`${base}/books/tau-empire/mobile/cadre-fireblade.html?roster=${id}`]){
-    await duplicatePage.goto(target);await duplicatePage.locator('#unit-cadre-fireblade').waitFor();if(target.includes('/mobile/'))await duplicatePage.waitForFunction(()=>document.documentElement.dataset.rosterActive==='true');else await duplicatePage.locator('#unit-cadre-fireblade[data-roster-selected="true"]').waitFor();
+  for(const [target,viewport] of [[`${base}/books/tau-empire/reader.html?roster=${id}#unit-cadre-fireblade`,{width:1280,height:900}],[`${base}/books/tau-empire/mobile/cadre-fireblade.html?roster=${id}`,{width:390,height:844}]]){
+    await duplicatePage.setViewportSize(viewport);
+    await duplicatePage.goto(target);await duplicatePage.locator('#unit-cadre-fireblade[data-roster-selected="true"]').waitFor();
     assert.equal(await duplicatePage.locator('#unit-cadre-fireblade .roster-instances li').count(),2);assert.equal(await duplicatePage.locator('#unit-cadre-fireblade [data-roster-derived-effect]').count(),0);assert.match(await duplicatePage.locator('#unit-cadre-fireblade').innerText(),/Precision of the Patient Hunter[\s\S]*multiple roster units/i);
   }
   await duplicate.close();
@@ -80,7 +79,7 @@ try{
   await safetyPage.goto(`${base}/books/tau-empire/reader.html?roster=${id}#unit-cadre-fireblade`);await safetyPage.locator('#unit-cadre-fireblade[data-roster-selected="true"]').waitFor();
   assert.equal(await safetyPage.locator('#unit-cadre-fireblade [data-roster-derived-effect]').count(),0);assert.match(await safetyPage.locator('#unit-cadre-fireblade .roster-enhancement-unresolved').innerText(),/owner could not be resolved/i);
   id=await savedRoster(safetyPage,rosterSource({detachment:'Experimental Prototype Cadre',unit:'Commander in Coldstar Battlesuit',points:95,enhancement:'Thermoneutronic Projector',cost:15}));
-  await safetyPage.goto(`${base}/books/tau-empire/mobile/commander-in-coldstar-battlesuit.html?roster=${id}`);await safetyPage.waitForFunction(()=>document.documentElement.dataset.rosterActive==='true');await safetyPage.locator('#unit-commander-in-coldstar-battlesuit').waitFor();
+  await safetyPage.setViewportSize({width:390,height:844});await safetyPage.goto(`${base}/books/tau-empire/mobile/commander-in-coldstar-battlesuit.html?roster=${id}`);await safetyPage.locator('#unit-commander-in-coldstar-battlesuit[data-roster-selected="true"]').waitFor();
   assert.equal(await safetyPage.locator('#unit-commander-in-coldstar-battlesuit [data-roster-derived-effect]').count(),0);assert.match(await safetyPage.locator('#unit-commander-in-coldstar-battlesuit .roster-warning').innerText(),/does not identify the weapon selected/i);
   await safety.close();
   console.log("T'au Enhancement runtime QA passed: 5 deterministic effects, duplicate-instance, unresolved-owner and weapon-target safety.");

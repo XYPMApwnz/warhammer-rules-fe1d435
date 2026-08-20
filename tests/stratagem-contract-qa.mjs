@@ -16,7 +16,7 @@ const card=(html,id)=>{
   return html.slice(start,end+10);
 };
 const cardCount=(html,id)=>(html.match(new RegExp(`<article\\b[^>]*(?:data-rule-id|id)="${id}"`,'g'))||[]).length;
-const migratedBooks=new Map([['death-guard',48],['adeptus-mechanicus',47]]);
+const migratedBooks=new Map([['death-guard',48],['adeptus-mechanicus',47],['tau-empire',49]]);
 const migratedStubs=new Map([...migratedBooks].map(([bookId,expected])=>{
   const directory=path.join(root,'books',bookId,'mobile');
   const stubs=fs.readdirSync(directory).filter(file=>file.endsWith('.html')).map(file=>[file,read(path.join('books',bookId,'mobile',file))]);
@@ -44,7 +44,7 @@ for(const [bookId,sourceFile,readerFile,relatedFile] of sources){
       assert.equal(count(rendered,'data-source-field="restrictions"'),1,`${bookId}/${rule.id}: ${surface} must render RESTRICTIONS exactly once`);
       assert.ok(clean(rendered).includes(clean(rule.restrictions)),`${bookId}/${rule.id}: ${surface} changed RESTRICTIONS`);
     }
-    if(bookId==='adeptus-mechanicus'){
+    if(migratedBooks.has(bookId)){
       assert.equal(cardCount(reader,rule.id),1,`${bookId}/${rule.id}: responsive reader must expose one canonical Phone Mode card`);
       assert.equal(count(card(reader,rule.id),'data-source-field="restrictions"'),1,`${bookId}/${rule.id}: responsive Phone Mode must render RESTRICTIONS exactly once`);
     }else{
@@ -113,7 +113,7 @@ for(const file of [
   'books/shared/army-related-rules.js',
   'books/adeptus-mechanicus/scripts/app.js',
   'books/tyranids/mobile/mobile.js',
-  'books/tau-empire/mobile/mobile.js'
+  'books/tau-empire/scripts/app.js'
 ]){
   const source=read(file);
   assert.match(source,/Conditionally compatible/);
@@ -133,8 +133,7 @@ for(const label of ['Requires an Attached Unit','Requires a second Character','R
 for(const file of [
   'books/tyranids/scripts/app.js',
   'books/tyranids/mobile/mobile.js',
-  'books/tau-empire/scripts/app.js',
-  'books/tau-empire/mobile/mobile.js'
+  'books/tau-empire/scripts/app.js'
 ]){
   const source=read(file);
   for(const label of ['Battle Tactic Stratagem','Strategic Ploy Stratagem','Wargear Stratagem','Epic Deed Stratagem','Core Stratagem','Type unverified'])assert.ok(source.includes(label),`${file}: canonical visible type label ${label} is absent`);
@@ -162,7 +161,7 @@ assert.match(css,new RegExp(`\\.stratagem-grid\\s*\\{[^}]*${readableStratagemGri
 assert.match(css,/full-related-content[\s\S]*grid-template-columns:\s*repeat\(2,\s*minmax\(min\(100%,\s*360px\),\s*1fr\)\)/,'Compatible Stratagem grids must preserve two columns and the readable minimum card width');
 assert.match(css,/:is\(\[data-related-kind="stratagems"\],\[data-related-kind="enhancements"\]\)>section\s*\{[^}]*grid-column:\s*1\/-1/,'nested Related Rules sections must span the outer grid instead of shrinking cards to one quarter');
 assert.match(css,/@media\s*\(max-width:\s*900px\)[^{]*\{[\s\S]*grid-template-columns:\s*1fr/);
-for(const bookId of ['tyranids','tau-empire']){
+for(const bookId of ['tyranids']){
   const mobileCss=read(`books/${bookId}/mobile/mobile.css`);
   assert.match(mobileCss,/grid-template-columns:\s*1fr/,`${bookId}: Phone Mode must use one Stratagem column`);
   assert.match(mobileCss,/@media\s*\(min-width:\s*1000px\)\s*and\s*\(orientation:\s*landscape\)[\s\S]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/,`${bookId}: landscape tablet must use two Stratagem columns`);
@@ -177,9 +176,9 @@ for(const bookId of migratedBooks.keys()){
 assert.match(read('books/shared/popup-content.js'),/term\.kind==='stratagem'\?term\.definition:term\.summary/);
 assert.match(read('glossary/tools/build-glossary.mjs'),/kind:term\.kind/);
 for(const buildFile of [
-  'books/tyranids/mobile/build.mjs',
-  'books/tau-empire/mobile/build.mjs'
+  'books/tyranids/mobile/build.mjs'
 ])assert.match(read(buildFile),/term\.kind\s*===?\s*'stratagem'[\s\S]{0,100}term\.definition/);
+assert.match(read('books/tau-empire/mobile/build.mjs'),/data-canonical-reader="\.\.\/reader\.html"/);
 assert.match(dgReader,/data-term="core-rule-15-04-insane-bravery"/);
 assert.match(read('books/adeptus-mechanicus/reader.html'),/data-term="stratagem-priority-reclamation"/);
 assert.match(read('books/shared/army-related-rules.js'),/Compatible Stratagems & Enhancements/);

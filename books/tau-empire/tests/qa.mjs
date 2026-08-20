@@ -29,7 +29,8 @@ assert.equal(codexParitySource?.title,'Wahapedia Warhammer 40,000 11th Edition �
 const mobileStart=fs.readFileSync(path.join(root,'mobile','index.html'),'utf8');
 const related=fs.readFileSync(path.join(root,'mobile','related-rules.inc'),'utf8');
 const allUnits=[...codex.datasheets,...codex.imperialArmour,...codex.legends];
-const mobileDatasheetMarkup=allUnits.map(unit=>fs.readFileSync(path.join(root,'mobile',`${unit.id.replace(/^unit-/,'')}.html`),'utf8')).join('\n');
+const mobileRouteFiles=fs.readdirSync(path.join(root,'mobile')).filter(file=>file.endsWith('.html'));
+const mobileRoutes=mobileRouteFiles.map(file=>fs.readFileSync(path.join(root,'mobile',file),'utf8'));
 const currentUnits=[...codex.datasheets,...codex.imperialArmour].filter(unit=>unit.status==='Current');
 const key=value=>String(value).replace(/\s*\([^)]*\)\s*$/,'').trim().toLowerCase();
 const decode=value=>value.replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&lt;','<').replaceAll('&gt;','>');
@@ -44,29 +45,27 @@ const splitWeaponAbilities=value=>String(value||'').split(',').map(label=>label.
 const canonicalWeaponRows=allUnits.flatMap(unit=>unit.weapons.filter(weapon=>weapon.abilities).map(weapon=>splitWeaponAbilities(weapon.abilities)));
 const extractWeaponRows=markup=>[...markup.matchAll(/<div class="weapon-tags">([\s\S]*?)<\/div>/g)].map(([,body])=>[...body.matchAll(/<(button|span)\b([^>]*)>([^<]+)<\/\1>/g)].filter(([, ,attrs])=>/\bclass="[^"]*\btag\b/.test(attrs)).map(([,element,attrs,label])=>({element,label:label.trim(),term:attrs.match(/\bdata-term="([^"]+)"/)?.[1]||''})));
 const rowInventory=rows=>rows.map(row=>JSON.stringify(row.map(item=>typeof item==='string'?item:item.label))).sort();
-const desktopWeaponRows=extractWeaponRows(reader),phoneWeaponRows=extractWeaponRows(mobileDatasheetMarkup),desktopWeaponTokens=desktopWeaponRows.flat(),phoneWeaponTokens=phoneWeaponRows.flat(),canonicalWeaponLabels=canonicalWeaponRows.flat();
+const responsiveWeaponRows=extractWeaponRows(reader),responsiveWeaponTokens=responsiveWeaponRows.flat(),canonicalWeaponLabels=canonicalWeaponRows.flat();
 const unknownWeaponLabels=[...new Set(canonicalWeaponLabels.filter(label=>!expectedWeaponTerm(label)))].sort();
 
 assert.deepEqual([allUnits.length,canonicalWeaponRows.length,canonicalWeaponLabels.length],[39,124,187]);
-assert.deepEqual(rowInventory(desktopWeaponRows),rowInventory(canonicalWeaponRows),'desktop weapon token inventory/order differs');
-assert.deepEqual(rowInventory(phoneWeaponRows),rowInventory(canonicalWeaponRows),'Phone weapon token inventory/order differs');
-for(const tokens of [desktopWeaponTokens,phoneWeaponTokens])for(const token of tokens){const expected=expectedWeaponTerm(token.label);assert.equal(token.element,expected?'button':'span',`${token.label}: wrong token kind`);assert.equal(token.term,expected,`${token.label}: wrong glossary target`);}
+assert.deepEqual(rowInventory(responsiveWeaponRows),rowInventory(canonicalWeaponRows),'responsive reader weapon token inventory/order differs');
+for(const token of responsiveWeaponTokens){const expected=expectedWeaponTerm(token.label);assert.equal(token.element,expected?'button':'span',`${token.label}: wrong token kind`);assert.equal(token.term,expected,`${token.label}: wrong glossary target`);}
 assert.deepEqual(unknownWeaponLabels,[]);
-assert.doesNotMatch(reader+mobileDatasheetMarkup,/<button class="weapon-button"[^>]*>[^<]*<\/button><small>/i);
-assert.doesNotMatch(reader+mobileDatasheetMarkup,/<(?:button|span)[^>]*class="[^"]*\btag\b[^"]*"[^>]*>[^<]*<button/i);
-assert.equal(fs.readdirSync(path.join(root,'mobile')).filter(file=>file.endsWith('.html')).length,49);
-for(const output of [reader,mobileDatasheetMarkup]){assert.match(output,/death-guard\/styles\/content\.css\?v=\d+/);assert.match(output,/death-guard\/styles\/popups\.css\?v=\d+/);assert.match(output,/shared\/datasheet-system\.css\?v=\d+/);}
+assert.doesNotMatch(reader,/<button class="weapon-button"[^>]*>[^<]*<\/button><small>/i);
+assert.doesNotMatch(reader,/<(?:button|span)[^>]*class="[^"]*\btag\b[^"]*"[^>]*>[^<]*<button/i);
+assert.equal(mobileRouteFiles.length,49);
+for(const output of mobileRoutes){assert.match(output,/data-canonical-reader="\.\.\/reader\.html"/);assert.match(output,/mobile-route-redirect\.js\?v=1/);assert.doesNotMatch(output,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/);}
+assert.match(reader,/death-guard\/styles\/content\.css\?v=\d+/);assert.match(reader,/death-guard\/styles\/popups\.css\?v=\d+/);assert.match(reader,/shared\/datasheet-system\.css\?v=\d+/);
 const sourceWargearAbilities=allUnits.flatMap(unit=>(unit.wargearAbilities||[]).map(ability=>({unit,ability})));
 assert.deepEqual([sourceWargearAbilities.length,new Set(sourceWargearAbilities.map(item=>item.ability.title)).size,new Set(sourceWargearAbilities.map(item=>item.unit.id)).size],[52,14,16]);
 for(const unit of allUnits){
   const abilities=unit.wargearAbilities||[],id=`${unit.id.slice(5)}-wargear-abilities`;
   assert.equal(unit.abilities.some(ability=>abilities.some(wargearAbility=>key(ability.title)===key(wargearAbility.title))),false,`${unit.title}: Wargear Ability duplicated in ordinary Abilities`);
   if(!abilities.length){assert.ok(!unitMarkup(reader,unit.id).includes(`id="${id}"`),`${unit.title}: empty desktop Wargear Abilities section`);continue;}
-  const desktop=sectionMarkup(unitMarkup(reader,unit.id),id),phone=sectionMarkup(fs.readFileSync(path.join(root,'mobile',`${unit.id.slice(5)}.html`),'utf8'),id);
-  for(const output of [desktop,phone]){
-    assert.ok(output.includes('These abilities apply only while the corresponding wargear is equipped.'));
-    for(const ability of abilities)assert.match(output,new RegExp(`<button class="term-button" data-term="[^"]+"[^>]*>${ability.title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}<\\/button>`));
-  }
+    const responsive=sectionMarkup(unitMarkup(reader,unit.id),id);
+    assert.ok(responsive.includes('These abilities apply only while the corresponding wargear is equipped.'));
+    for(const ability of abilities)assert.match(responsive,new RegExp(`<button class="term-button" data-term="[^"]+"[^>]*>${ability.title.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}<\\/button>`));
 }
 
 assert.deepEqual([pack.meta.version,pack.meta.pageCount,pack.meta.sha256],['1.1',61,'32B985646BAA02A3B505FF3404E91D374A5F53C1D3B8000D7166CA94D1B52675']);
@@ -89,7 +88,7 @@ assert.ok(reader.includes('class="hero section surface faction-hero faction-hero
 assert.ok(!reader.includes(`src="./${config.coverImage}"`));
 const bookCss=fs.readFileSync(path.join(root,'styles','book.css'),'utf8');
 assert.ok(bookCss.includes(`url("../${config.coverImage}") center 23% / cover no-repeat`));
-assert.ok(mobileStart.includes('class="hero section surface faction-hero faction-hero-cover"'));
+assert.ok(mobileStart.includes('data-canonical-reader="../reader.html"')&&mobileStart.includes('data-canonical-target="start"'));
 assert.ok(fs.readFileSync(path.join(repo,'index.html'),'utf8').includes(`src="books/tau-empire/${config.coverImage}"`));
 assert.ok(fs.readFileSync(path.join(repo,'service-worker.js'),'utf8').includes(`./books/tau-empire/${config.coverImage}`));
 
@@ -103,9 +102,6 @@ for(const record of wargear.units){
   const expected=record.wargear.map(lines);
   const desktop=[...unitMarkup(reader,unit.id).matchAll(/<li class="wargear-option">([\s\S]*?)<\/li>/g)].map(match=>lines(match[1]));
   assert.deepEqual(desktop,expected,`${record.title}: desktop Wargear differs`);
-  const phone=fs.readFileSync(path.join(root,'mobile',`${unit.id.slice(5)}.html`),'utf8');
-  const mobile=[...phone.matchAll(/<li class="wargear-option">([\s\S]*?)<\/li>/g)].map(match=>lines(match[1]));
-  assert.deepEqual(mobile,expected,`${record.title}: Phone Wargear differs`);
 }
 
 const byTitle=title=>currentUnits.find(unit=>unit.title===title);
@@ -156,10 +152,8 @@ for(const title of ['Commander Farsight','Commander in Coldstar Battlesuit','Com
   assert.deepEqual(unit.relations.leader,crisisRelations,`${title}: Crisis Leader graph differs`);
   assert.equal(unit.abilities.filter(item=>item.title==='Leader').length,1,`${title}: individual Leader list leaked into abilities`);
   const desktop=unitMarkup(reader,unit.id);
-  const phone=fs.readFileSync(path.join(root,'mobile',`${unit.id.slice(5)}.html`),'utf8');
   for(const target of crisisRelations){
     assert.ok(desktop.includes(target),`${title}: desktop relation missing ${target}`);
-    assert.ok(phone.includes(target),`${title}: Phone relation missing ${target}`);
   }
   const facts=JSON.parse(decode(desktop.match(/data-rule-facts="([^"]+)"/)?.[1]||'{}'));
   assert.deepEqual(facts.relations.canLead.map(item=>item.unitId),crisisRelations.map(target=>allUnits.find(unit=>unit.title===target)?.id).sort(),`${title}: compiled Leader graph differs`);
@@ -204,7 +198,7 @@ for(const id of ['unit-tidewall-droneport','unit-tidewall-gunrig','unit-tidewall
   assert.equal(sandbox.window.WHRelatedRules.match(coordinate,profiles.find(item=>item.unitId===id)).state,'no-match',`${id}: Fortification cannot be an Observer`);
 }
 assert.equal(new Set([...related.matchAll(/data-rule-id="([^"]+)"/g)].map(match=>match[1])).size,54,'Related Rules inventory differs from 31 Stratagems + 23 Enhancements');
-console.log(`T'au weapon tokens: ${canonicalWeaponLabels.length} labels, ${desktopWeaponTokens.length} desktop, ${phoneWeaponTokens.length} Phone, ${desktopWeaponTokens.filter(token=>token.term).length} interactive, ${desktopWeaponTokens.filter(token=>!token.term).length} unknown (${unknownWeaponLabels.join(', ')}).`);
+console.log(`T'au weapon tokens: ${canonicalWeaponLabels.length} labels, ${responsiveWeaponTokens.length} responsive, ${responsiveWeaponTokens.filter(token=>token.term).length} interactive, ${responsiveWeaponTokens.filter(token=>!token.term).length} unknown (${unknownWeaponLabels.join(', ')}).`);
 const {stratagemTypes}=await import(new URL('../scripts/stratagem-types.mjs',import.meta.url));
 assert.equal(stratagemTypes.size,31,'T’au Stratagem map must cover all rendered faction Stratagems');
 assert.equal([...stratagemTypes.values()].filter(type=>type==='unknown').length,7,'T’au must preserve seven source-untyped Stratagems as unknown');

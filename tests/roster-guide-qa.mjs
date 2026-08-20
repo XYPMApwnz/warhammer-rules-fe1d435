@@ -96,8 +96,8 @@ for(const bookId of supported){
     assert(/\.\.\/shared\/book-roster-enhancements\.js\?v=\d+/.test(reader)&&/\.\/scripts\/roster-data\.js\?v=\d+/.test(reader),'tau-empire: desktop Enhancement owner runtime is absent');
     const tauApp=fs.readFileSync(path.join(bookRoot,'scripts','app.js'),'utf8')+fs.readFileSync(path.join(bookRoot,'scripts','roster-filter.js'),'utf8');
     assert(tauApp.includes("params.has('roster')")&&tauApp.includes('WHBookRosterEnhancements?.decorate')&&tauApp.includes('WHRosterEntities.loadoutIncludesProfile')&&tauApp.includes(".content-group.detachment"),'tau-empire: desktop roster filtering, loadout or owned Enhancement decoration is incomplete');
-    const tauMobile=fs.readFileSync(path.join(bookRoot,'mobile','mobile.js'),'utf8');
-    assert(tauMobile.includes('WHRosterParser.parse')&&tauMobile.includes('WHBookRosterEnhancements?.decorate'),'tau-empire: Phone Mode does not parse current roster source and decorate the Enhancement owner');
+    const tauStub=fs.readFileSync(path.join(bookRoot,'mobile','index.html'),'utf8');
+    assert(!fs.existsSync(path.join(bookRoot,'mobile','mobile.js'))&&tauStub.includes('data-canonical-reader="../reader.html"')&&tauStub.includes('mobile-route-redirect.js?v=1')&&!tauStub.includes('unit-card'),'tau-empire: responsive reader or content-free compatibility route is incomplete');
     assert(fs.existsSync(path.join(bookRoot,'mobile','related-rules.inc')),'tau-empire: Phone Mode related rules are absent');
     console.log(`PASS  tau-empire: ${points.units.length} units, ${points.enhancements.length} Enhancements, desktop/iPad + Phone Mode`);
     continue;
@@ -233,7 +233,7 @@ assert(sharedMatcher.matches({targets:[{side:'friendly',all:['ADEPTUS MECHANICUS
 assert(!sharedMatcher.matches({targets:[{side:'friendly',all:['ADEPTUS MECHANICUS','INFANTRY']}]},datasmith),'Datasmith and Kastelan Attached Unit incorrectly keeps INFANTRY');
 
 const rosterCompatibleBooks=['death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','chaos-space-marines','blood-angels'];
-const singleReaderBooks=new Set(['death-guard','adeptus-mechanicus']);
+const singleReaderBooks=new Set(['death-guard','adeptus-mechanicus','tau-empire']);
 for(const bookId of rosterCompatibleBooks){
   const desktop=fs.readFileSync(path.join(root,`books/${bookId}/scripts/app.js`),'utf8');
   if(singleReaderBooks.has(bookId)){

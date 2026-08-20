@@ -41,10 +41,11 @@
   "dedicatedMobile": true,
   "mobileRelatedRulesSource": false,
   "rosterSupport": true,
+  "responsiveSingleTarget": true,
   "compatibleRulesMatrix": true,
   "legacyRelatedRuleAttributes": false,
   "assetVersions": {
-    "app": 10,
+    "app": 11,
     "book": 5,
     "mobile": 2,
     "rosterFilter": 4,

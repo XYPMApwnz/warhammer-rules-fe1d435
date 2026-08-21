@@ -255,9 +255,6 @@ const APP_SHELL = [
   ,"./books/blood-angels/scripts/compatible-rules-runtime.mjs?v=1"
   ,"./books/blood-angels/generated/compatible-rules.json"
   ,"./books/blood-angels/scripts/roster-data.js?v=1"
-  ,"./books/blood-angels/mobile/mobile.css?v=1"
-  ,"./books/blood-angels/mobile/mobile.js?v=2"
-  ,"./books/blood-angels/mobile/phone-popup-controller.js?v=1"
   ,"./books/blood-angels/mobile/related-rules.inc?v=1"
   ,"./books/orks/"
   ,ORKS_FALLBACK
@@ -293,17 +290,11 @@ const APP_SHELL = [
   ,"./books/space-marines/scripts/app.js?v=5"
   ,"./books/space-marines/scripts/compatible-rules-runtime.mjs?v=1"
   ,"./books/space-marines/generated/compatible-rules.json"
-  ,"./books/space-marines/mobile/mobile.css?v=1"
-  ,"./books/space-marines/mobile/mobile.js?v=2"
-  ,"./books/space-marines/mobile/phone-popup-controller.js?v=1"
   ,"./books/space-marines/mobile/related-rules.inc?v=4"
   ,"./books/dark-angels/"
   ,DARK_ANGELS_ENTRY_FALLBACK
   ,"./books/dark-angels/reader.html"
   ,DARK_ANGELS_MOBILE_FALLBACK
-  ,"./books/dark-angels/mobile/mobile.css?v=1"
-  ,"./books/dark-angels/mobile/mobile.js?v=2"
-  ,"./books/dark-angels/mobile/phone-popup-controller.js?v=1"
   ,"./books/dark-angels/styles/tokens.css?v=2"
   ,"./books/dark-angels/styles/book.css?v=3"
   ,"./books/dark-angels/assets/dark-angels-cover-480.webp"

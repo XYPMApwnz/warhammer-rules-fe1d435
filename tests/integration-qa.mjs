@@ -33,9 +33,9 @@ const books=[
   {id:'tau-empire',phone:'breacher-team.html',matrix:'books/tau-empire/generated/compatible-rules.json',singleReader:true,semantic:'books/shared/book-roster-enhancements.js',semanticUrl:'../shared/book-roster-enhancements.js'},
   {id:'emperors-children',phone:'lord-exultant.html',matrix:'books/emperors-children/generated/compatible-rules.json',singleReader:true,semantic:'books/shared/book-roster-enhancements.js',semanticUrl:'../shared/book-roster-enhancements.js'},
   {id:'chaos-space-marines',phone:'abaddon-the-despoiler.html',matrix:'books/chaos-space-marines/generated/compatible-rules.json',singleReader:true,semantic:'books/shared/book-roster-enhancements.js',semanticUrl:'../shared/book-roster-enhancements.js'},
-  {id:'space-marines',phone:'intercessor-squad.html',matrix:'books/space-marines/generated/compatible-rules.json',roster:false},
-  {id:'dark-angels',phone:'belial.html',matrix:null},
-  {id:'blood-angels',phone:'commander-dante.html',matrix:'books/blood-angels/generated/compatible-rules.json'}
+  {id:'space-marines',phone:'intercessor-squad.html',matrix:'books/space-marines/generated/compatible-rules.json',singleReader:true,semantic:'books/shared/book-roster-enhancements.js',semanticUrl:'../shared/book-roster-enhancements.js'},
+  {id:'dark-angels',phone:'belial.html',matrix:null,singleReader:true,semantic:'books/shared/book-roster-enhancements.js',semanticUrl:'../shared/book-roster-enhancements.js'},
+  {id:'blood-angels',phone:'commander-dante.html',matrix:'books/blood-angels/generated/compatible-rules.json',singleReader:true,semantic:'books/shared/book-roster-enhancements.js',semanticUrl:'../shared/book-roster-enhancements.js'}
 ];
 
 for(const book of books){
@@ -62,13 +62,13 @@ for(const book of books){
     check('blood-angels entry exposes source-limited status and artwork',entryHtml.includes('Source-limited preview')&&entryHtml.includes('blood-angels-cover-480.webp')&&!entryHtml.includes('class="entry-mark"'));
     check('blood-angels reader exposes cover artwork',readerHtml.includes('faction-hero-cover')&&fs.readFileSync(path.join(root,'books/blood-angels/styles/book.css'),'utf8').includes('blood-angels-cover-800.webp'));
     const phoneRoutes=fs.readdirSync(path.join(root,'books/blood-angels/mobile')).filter(file=>file.endsWith('.html'));
-    check('blood-angels exposes 124 generated Phone routes',phoneRoutes.length===124&&phoneHtml.includes('id="unit-commander-dante"')&&!phoneHtml.includes('reader.html?view=mobile'));
+    check('blood-angels exposes 124 content-free compatibility routes',phoneRoutes.length===124&&phoneHtml.includes('data-canonical-target="unit-commander-dante"')&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(phoneHtml));
   }
   if(book.id==='dark-angels'){
     check('dark-angels entry exposes source-limited review status and artwork',entryHtml.includes('Source-limited preview')&&entryHtml.includes('dark-angels-cover-480.webp')&&!entryHtml.includes('class="entry-mark"'));
     check('dark-angels reader exposes one categorized inventory while preserving ownership and source gaps',(readerHtml.match(/<article class="unit-card/g)||[]).length===98&&(readerHtml.match(/Space Marines shared datasheet/g)||[]).length===82&&!readerHtml.includes('data-nav-id="datasheets-dark-angels"')&&!readerHtml.includes('data-nav-id="datasheets-space-marines"')&&readerHtml.includes('data-nav-id="datasheets-epic-heroes"')&&readerHtml.includes('data-nav-id="datasheets-vehicle"')&&(readerHtml.match(/Codex source required/g)||[]).length===3);
     const phoneRoutes=fs.readdirSync(path.join(root,'books/dark-angels/mobile')).filter(file=>file.endsWith('.html'));
-    check('dark-angels exposes deterministic generated Phone routes',phoneRoutes.length===125&&phoneHtml.includes('id="unit-belial"')&&!phoneHtml.includes('reader.html?view=mobile'));
+    check('dark-angels exposes 125 content-free compatibility routes',phoneRoutes.length===125&&phoneHtml.includes('data-canonical-target="unit-belial"')&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(phoneHtml));
   }
 }
 

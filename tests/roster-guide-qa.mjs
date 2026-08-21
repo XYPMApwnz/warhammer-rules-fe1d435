@@ -136,7 +136,7 @@ for(const bookId of supported){
     assert(unitTitles.size===101,'space-marines: roster must expose the existing 101 current Datasheets');
     assert((reader.match(/<section class="content-group detachment"/g)||[]).length===23,'space-marines: roster must expose the existing 23 Detachments');
     assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader),'space-marines: Desktop roster filter is absent');
-    assert(mobile.includes('./roster-filter.js?v=2'),'space-marines: Phone roster filter is absent');
+    assert(mobile.includes('mobile-route-redirect.js?v=1')&&mobile.includes('data-canonical-reader="../reader.html"'),'space-marines: legacy Phone route does not hand roster state to the canonical reader');
     console.log('PASS  space-marines: 101 current units, 23 Detachments, desktop/iPad + Phone routes');continue;
   }
   if(bookId==='blood-angels'){
@@ -233,16 +233,16 @@ const datasmith=matcherContext(['INFANTRY','CHARACTER','TECH-PRIEST'],{candidate
 assert(sharedMatcher.matches({targets:[{side:'friendly',all:['ADEPTUS MECHANICUS','VEHICLE']}]},datasmith),'Datasmith and Kastelan Attached Unit loses VEHICLE relevance');
 assert(!sharedMatcher.matches({targets:[{side:'friendly',all:['ADEPTUS MECHANICUS','INFANTRY']}]},datasmith),'Datasmith and Kastelan Attached Unit incorrectly keeps INFANTRY');
 
-const rosterCompatibleBooks=['death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','chaos-space-marines','blood-angels'];
-const singleReaderBooks=new Set(['death-guard','adeptus-mechanicus','tau-empire','tyranids','emperors-children','chaos-space-marines']);
+const rosterCompatibleBooks=['death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','chaos-space-marines','space-marines','dark-angels','blood-angels'];
+const singleReaderBooks=new Set(['death-guard','adeptus-mechanicus','tau-empire','tyranids','emperors-children','chaos-space-marines','space-marines','dark-angels','blood-angels']);
 for(const bookId of rosterCompatibleBooks){
   const desktop=fs.readFileSync(path.join(root,`books/${bookId}/scripts/app.js`),'utf8');
   if(singleReaderBooks.has(bookId)){
     const reader=fs.readFileSync(path.join(root,`books/${bookId}/reader.html`),'utf8');
     const stub=fs.readFileSync(path.join(root,`books/${bookId}/mobile/index.html`),'utf8');
-    assert(/detachment\s*=\s*rosterMode\s*\?\s*['"]all['"]/.test(desktop),`${bookId}: responsive roster mode does not use the all-detachment union`);
-    assert(/if\s*\(!rosterMode\)\s*controls\.append\(filterMenu\)/.test(desktop),`${bookId}: responsive roster mode still mounts the Detachment selector`);
     assert(/\.\/scripts\/app\.js\?v=\d+/.test(reader)&&/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader),`${bookId}: canonical reader does not load the roster presentation and filter`);
+    const semanticEngine=bookId==='death-guard'?/\.\/scripts\/roster-semantics\.js\?v=\d+/:bookId==='adeptus-mechanicus'?/\.\/scripts\/roster-enhancements\.js\?v=\d+/:/\.\.\/shared\/book-roster-enhancements\.js\?v=\d+/;
+    assert(semanticEngine.test(reader),`${bookId}: canonical reader does not load its roster semantic engine`);
     assert(!fs.existsSync(path.join(root,`books/${bookId}/mobile/mobile.js`)),`${bookId}: obsolete Phone roster runtime still exists`);
     assert(stub.includes('mobile-route-redirect.js?v=1')&&stub.includes('data-canonical-reader="../reader.html"')&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(stub),`${bookId}: legacy Phone route is not a content-free canonical-reader stub`);
     continue;

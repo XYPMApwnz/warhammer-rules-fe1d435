@@ -41,7 +41,6 @@
   "dedicatedMobile": true,
   "mobileRelatedRulesSource": false,
   "rosterSupport": true,
-  "responsiveSingleTarget": true,
   "compatibleRulesMatrix": true,
   "legacyRelatedRuleAttributes": false,
   "assetVersions": {

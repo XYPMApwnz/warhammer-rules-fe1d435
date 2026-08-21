@@ -73,6 +73,11 @@ for(const book of ['tau-empire','emperors-children','tyranids','chaos-space-mari
   assert.equal(config.sharedArmyBookApp,true);
   assert(!fs.existsSync(path.join(root,`books/${book}/scripts/compatible-rules-runtime.mjs`)));
 }
+const adeptusMechanicus=read('books/adeptus-mechanicus/scripts/app.js');
+assert.match(adeptusMechanicus,/window\.WHArmyBook\.install/);
+assert.match(adeptusMechanicus,/shared\/compatible-rules-matrix\.mjs/);
+assert.match(adeptusMechanicus,/shared\/stratagem-presentation\.mjs/);
+assert(!fs.existsSync(path.join(root,'books/adeptus-mechanicus/scripts/compatible-rules-runtime.mjs')));
 assert.doesNotMatch(armyBook,/bookId\s*===/);
 
 const presentationCases=[

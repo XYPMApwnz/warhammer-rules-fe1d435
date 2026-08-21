@@ -359,10 +359,10 @@ const releaseHtml=html
   .replace('<script src="../shared/navigation-targets.js', '<script src="../../glossary-return.js?v=3"></script><script src="../shared/navigation-targets.js')
   .replace('../shared/glossary-autolink.js?v=7','../shared/glossary-autolink.js?v=8')
   .replace('points-validator.js?v=3','points-validator.js?v=4')
-  .replace('<script src="./scripts/faction-ui.js?v=1"></script>','<script src="./scripts/faction-ui.js?v=1"></script><script src="../shared/rule-facts.js?v=5"></script><script src="../shared/modal-focus.js?v=1"></script>')
+  .replace('<script src="./scripts/faction-ui.js?v=1"></script>','<script src="./scripts/faction-ui.js?v=1"></script><script src="../shared/rule-facts.js?v=5"></script><script src="../shared/modal-focus.js?v=1"></script><script src="../shared/army-related-rules.js?v=14"></script><script src="../shared/army-book-app.js?v=11"></script>')
   .replace('popup-controller.js?v=18','popup-controller.js?v=21')
   .replace('ui-controllers.js?v=13','ui-controllers.js?v=14')
-  .replace('app.js?v=20','app.js?v=22');
+  .replace('app.js?v=41','app.js?v=42');
 const entryHtml=`<!doctype html>
 <html lang="en" data-canonical-reader="./reader.html" data-canonical-target="start"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Adeptus Mechanicus Rules</title><script src="../shared/mobile-route-redirect.js?v=1"></script></head><body><noscript><a href="./reader.html#start">Open Adeptus Mechanicus Rules</a></noscript></body></html>\n`;
 const outputs=new Map([['index.html',entryHtml],['reader.html',releaseHtml],['scripts/data.js',dataJs]]);

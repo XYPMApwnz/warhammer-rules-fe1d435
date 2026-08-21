@@ -193,9 +193,8 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/mobile/related-rules.inc?v=4",
   "./books/adeptus-mechanicus/scripts/roster-enhancements.js?v=4",
   "./books/adeptus-mechanicus/scripts/roster-filter.js?v=7",
-  "./books/adeptus-mechanicus/scripts/compatible-rules-runtime.mjs?v=3",
   "./books/adeptus-mechanicus/generated/compatible-rules.json",
-  "./books/adeptus-mechanicus/scripts/app.js?v=39"
+  "./books/adeptus-mechanicus/scripts/app.js?v=42"
   ,"./books/tyranids/"
   ,TYRANIDS_ENTRY_FALLBACK
   ,TYRANIDS_DESKTOP_FALLBACK

@@ -41,18 +41,17 @@ for(const bookId of supported){
     const enhancementTitles=new Set([...reader.matchAll(/data-enhancement-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
     codex.datasheets.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`adeptus-mechanicus: unit ${unit.title} is absent from Roster Guide`));
     points.enhancements.forEach(item=>assert(enhancementTitles.has(entities.normalize(item.title)),`adeptus-mechanicus: Enhancement ${item.title} is absent from related rules`));
-    const compatibleRuntimePath=path.join(bookRoot,'scripts','compatible-rules-runtime.mjs');
     const desktopApp=fs.readFileSync(path.join(bookRoot,'scripts','app.js'),'utf8');
     const semanticRuntimePath=path.join(bookRoot,'scripts','roster-enhancements.js');
     assert(
       /\.\/scripts\/app\.js\?v=\d+/.test(reader)
       &&/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)
       &&/\.\/scripts\/roster-enhancements\.js\?v=\d+/.test(reader)
-      &&fs.existsSync(compatibleRuntimePath)
       &&fs.existsSync(semanticRuntimePath)
-      &&/\.\/compatible-rules-runtime\.mjs\?v=\d+/.test(desktopApp)
-      &&desktopApp.includes('related-rules-trigger')
-      &&desktopApp.includes('related-rules-layer')
+      &&/createCompatibleRulesLoader/.test(desktopApp)
+      &&/WHArmyBook\.install/.test(desktopApp)
+      &&!fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs'))
+      &&reader.includes('../shared/army-related-rules.js?v=')
       &&!fs.existsSync(path.join(bookRoot,'mobile','mobile.js'))
       &&!/(WHRelatedRules|AMRelatedRules)/.test(desktopApp),
       'adeptus-mechanicus: canonical matrix-backed Compatible Rules runtime or UI is absent'

@@ -19,7 +19,7 @@ const trygon=generated.units['unit-trygon'].filter(row=>row.kind==='enhancement'
 assert.ok(getCompatibleRules(generated,'unit-hive-tyrant',{detachmentId:'all'}).some(row=>row.detachmentId==='invasion-fleet'),'All detachments must retain faction rules');
 const selectedTrygon=getCompatibleRules(generated,'unit-trygon',{detachmentId:'subterranean-assault'});assert.equal(selectedTrygon.find(row=>row.ruleId==='trygon-prime')?.state,'match');assert.ok(selectedTrygon.every(row=>row.scope==='core'||row.detachmentId==='subterranean-assault'));
 const reader=fs.readFileSync(path.join(root,'reader.html'),'utf8'),phone=fs.readFileSync(path.join(root,'mobile','trygon.html'),'utf8');
-for(const html of [reader,phone])assert.doesNotMatch(html,/related-rules-matcher|army-related-rules/);
-assert.match(reader,/scripts\/app\.js\?v=\d+/);assert.match(phone,/mobile\.js\?v=\d+/);
+assert.doesNotMatch(reader,/related-rules-matcher|army-related-rules/);
+assert.match(reader,/scripts\/app\.js\?v=\d+/);assert.match(phone,/data-canonical-reader="\.\.\/reader\.html"/);assert.match(phone,/data-canonical-target="unit-trygon"/);assert.match(phone,/mobile-route-redirect\.js\?v=1/);assert.doesNotMatch(phone,/<(?:article|section)\b|data-rule-id=/);
 assert.doesNotMatch(fs.readFileSync(path.join(root,'mobile','related-rules.inc'),'utf8'),/data-eligibility|data-keyword-grants/);
 console.log('Tyranids Compatible Rules QA passed: 1724 matrix rows, 90 conditional, legacy matcher absent.');

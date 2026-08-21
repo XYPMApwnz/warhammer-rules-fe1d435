@@ -51,10 +51,7 @@ async function candidate(test){
   await page.locator(`[data-nav-target="${test.cardId}"]`).evaluate(node=>node.click());await page.waitForFunction(cardId=>window.DG_APP?.navigation?.active===cardId,test.cardId);
   test.assert(await state(page,test.cardId,test.effect));
   assert.equal(await page.evaluate(cardId=>(window.EC_ROSTER_GUIDE.enhancementRuleIdsByUnitId[cardId]||[]).length,test.cardId),1,`${test.enhancement}: only the assigned Enhancement should reach Compatible Rules`);
-  await page.locator('[data-view-switch]').click();await page.waitForURL(url=>url.pathname.endsWith(`/mobile/${test.route}.html`)&&url.searchParams.get('roster')===id);
-  await page.setViewportSize({width:390,height:844});await page.waitForFunction(()=>document.documentElement.dataset.rosterActive==='true');await page.locator(`#${test.cardId}`).waitFor();test.assert(await state(page,test.cardId,test.effect));
-  await page.locator('#navButton').click();await page.locator('#mobileNav[aria-hidden="false"]').waitFor();await page.locator('[data-view-switch]').click();
-  await page.waitForURL(url=>url.pathname.endsWith('/reader.html')&&url.searchParams.get('roster')===id);
+  await page.setViewportSize({width:390,height:844});await page.goto(`${base}/books/emperors-children/mobile/${test.route}.html?roster=${id}`);await page.waitForURL(url=>url.pathname.endsWith('/reader.html')&&url.searchParams.get('roster')===id&&url.hash===`#${test.cardId}`);await page.locator(`#${test.cardId}[data-roster-selected="true"]`).waitFor();test.assert(await state(page,test.cardId,test.effect));
   assert.equal(errors.length,0,`${test.enhancement}: console errors: ${errors.join(' | ')}`);await context.close();
 }
 const cases=[
@@ -73,7 +70,7 @@ const cases=[
 try{
   for(const test of cases)await candidate(test);
   const duplicate=await browser.newContext({serviceWorkers:'block'}),page=await duplicate.newPage();let id=await save(page,{detachment:'Court of the Phoenician',unit:'Lord Exultant',enhancement:'Exalted Patron',second:true});
-  for(const target of [`${base}/books/emperors-children/reader.html?roster=${id}#unit-lord-exultant`,`${base}/books/emperors-children/mobile/lord-exultant.html?roster=${id}`]){await page.goto(target);await page.locator('#unit-lord-exultant').waitFor();if(target.includes('/mobile/'))await page.waitForFunction(()=>document.documentElement.dataset.rosterActive==='true');else await page.locator('#unit-lord-exultant[data-roster-selected="true"]').waitFor();assert.equal(await page.locator('#unit-lord-exultant .roster-instances li').count(),2);assert.equal(await page.locator('#unit-lord-exultant [data-roster-derived-effect]').count(),0);}
+  for(const target of [`${base}/books/emperors-children/reader.html?roster=${id}#unit-lord-exultant`,`${base}/books/emperors-children/mobile/lord-exultant.html?roster=${id}`]){await page.goto(target);await page.locator('#unit-lord-exultant[data-roster-selected="true"]').waitFor();assert.equal(await page.locator('#unit-lord-exultant .roster-instances li').count(),2);assert.equal(await page.locator('#unit-lord-exultant [data-roster-derived-effect]').count(),0);}
   await duplicate.close();
   const unresolved=await browser.newContext({serviceWorkers:'block'}),unresolvedPage=await unresolved.newPage();id=await save(unresolvedPage,{detachment:'Court of the Phoenician',unit:'Lord Exultant',enhancement:'Exalted Patron',unresolved:true});
   await unresolvedPage.goto(`${base}/books/emperors-children/reader.html?roster=${id}#unit-lord-exultant`);await unresolvedPage.locator('#unit-lord-exultant[data-roster-selected="true"]').waitFor();assert.equal(await unresolvedPage.locator('#unit-lord-exultant [data-roster-derived-effect]').count(),0);assert.match(await unresolvedPage.locator('#unit-lord-exultant .roster-enhancement-unresolved').innerText(),/owner could not be resolved/i);await unresolved.close();

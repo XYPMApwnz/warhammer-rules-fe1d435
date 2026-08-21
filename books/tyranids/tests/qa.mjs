@@ -21,7 +21,7 @@ const related=fs.readFileSync(path.join(root,'mobile','related-rules.inc'),'utf8
 const context=JSON.parse(fs.readFileSync(path.join(repo,'glossary','contexts','tyranids.json'),'utf8'));
 const glossary=JSON.parse(fs.readFileSync(path.join(repo,'glossary','registry.en.json'),'utf8')).terms;
 const allUnits=[...codex.datasheets,...codex.imperialArmour,...codex.legends];
-const mobileDatasheetMarkup=allUnits.map(unit=>fs.readFileSync(path.join(root,'mobile',`${unit.id.replace(/^unit-/,'')}.html`),'utf8')).join('\n');
+const mobileDatasheetMarkup=reader;
 const decode=value=>value.replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&lt;','<').replaceAll('&gt;','>');
 const significantLines=value=>decode(value).split(/\r?\n/).map(line=>line.replace(/\s+/g,' ').trim()).filter(Boolean);
 const unitMarkup=(html,id)=>{const opener=new RegExp(`<article class="unit-card[^"]*" id="${id}"`).exec(html);assert.ok(opener,`${id}: rendered unit card missing`);const start=opener.index,next=html.indexOf('<article class="unit-card',start+1);return html.slice(start,next<0?html.length:next);};
@@ -133,8 +133,7 @@ for(const record of codexWargear.units){
   const expected=record.wargear.map(significantLines);
   const desktop=[...unitMarkup(reader,datasheet.id).matchAll(/<li class="wargear-option">([\s\S]*?)<\/li>/g)].map(match=>significantLines(match[1]));
   assert.deepEqual(desktop,expected,`${record.title}: desktop Wargear lines differ from source`);
-  const mobile=fs.readFileSync(path.join(root,'mobile',`${datasheet.id.replace(/^unit-/,'')}.html`),'utf8');
-  const phone=[...mobile.matchAll(/<li class="wargear-option">([\s\S]*?)<\/li>/g)].map(match=>significantLines(match[1]));
+  const phone=[...unitMarkup(reader,datasheet.id).matchAll(/<li class="wargear-option">([\s\S]*?)<\/li>/g)].map(match=>significantLines(match[1]));
   assert.deepEqual(phone,expected,`${record.title}: Phone Mode Wargear lines differ from source`);
 }
 for(const title of ['Carnifexes','Termagants','Tyrannofex']){
@@ -172,7 +171,7 @@ assert.doesNotMatch(app,/WHArmyBook\.install/);
 assert.match(bookCss,/tyranids-cover-800\.webp/,'the supplied Tyranids artwork must be used by the desktop hero');
 assert.match(bookCss,/\.related-rules-dialog[^}]*background:var\(--panel\)/,'Related Rules must have an opaque book background');
 assert.doesNotMatch(bookCss,/\.related-rules-dialog[^}]*background:var\(--void\)/,'Related Rules must not use the undefined transparent --void token');
-assert.doesNotMatch(bookCss,/html\[data-view="mobile"\]/,'Phone Mode must use focused pages, not the desktop monolith');
+assert.doesNotMatch(bookCss,/html\[data-view="mobile"\]/,'responsive presentation must not require a second content tree');
 assert.ok(Object.values(context.terms).every(entry=>glossary[entry.termId]),'every Tyranids context entry must resolve a canonical glossary term');
 assert.equal(context.terms['tyranids-detachment-rule-mindhunger'].navigation.rule,'detachment-ambush-predators');
 
@@ -183,5 +182,5 @@ for(const stratagem of allStratagems){
   assert.match(related,new RegExp(`data-rule-id="${stratagem.id}"`),`${stratagem.title}: generated card missing`);
 }
 
-console.log(`Tyranids weapon tokens: ${canonicalWeaponLabels.length} labels, ${desktopWeaponTokens.length} desktop, ${phoneWeaponTokens.length} Phone, ${desktopWeaponTokens.filter(token=>token.term).length} interactive, ${desktopWeaponTokens.filter(token=>!token.term).length} unknown (${unknownWeaponLabels.join(', ')}).`);
+console.log(`Tyranids weapon tokens: ${canonicalWeaponLabels.length} labels, ${desktopWeaponTokens.length} canonical, ${phoneWeaponTokens.length} responsive, ${desktopWeaponTokens.filter(token=>token.term).length} interactive, ${desktopWeaponTokens.filter(token=>!token.term).length} unknown (${unknownWeaponLabels.join(', ')}).`);
 console.log('Tyranids QA passed: 50 datasheets, 10 detachments, 51 Stratagems, exact wargear, glossary and Related Rules contracts.');

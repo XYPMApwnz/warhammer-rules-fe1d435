@@ -29,9 +29,9 @@ const library=read('index.html');
 const books=[
   {id:'death-guard',phone:'chaos-land-raider.html',matrix:null,singleReader:true,semantic:'books/death-guard/scripts/roster-semantics.js'},
   {id:'adeptus-mechanicus',phone:'skitarii-rangers.html',matrix:'books/adeptus-mechanicus/generated/compatible-rules.json',singleReader:true,semantic:'books/adeptus-mechanicus/scripts/roster-enhancements.js'},
-  {id:'tyranids',phone:'hive-tyrant.html',matrix:'books/tyranids/generated/compatible-rules.json'},
+  {id:'tyranids',phone:'hive-tyrant.html',matrix:'books/tyranids/generated/compatible-rules.json',singleReader:true,semantic:'books/shared/book-roster-enhancements.js',semanticUrl:'../shared/book-roster-enhancements.js'},
   {id:'tau-empire',phone:'breacher-team.html',matrix:'books/tau-empire/generated/compatible-rules.json',singleReader:true,semantic:'books/shared/book-roster-enhancements.js',semanticUrl:'../shared/book-roster-enhancements.js'},
-  {id:'emperors-children',phone:'lord-exultant.html',matrix:'books/emperors-children/generated/compatible-rules.json'},
+  {id:'emperors-children',phone:'lord-exultant.html',matrix:'books/emperors-children/generated/compatible-rules.json',singleReader:true,semantic:'books/shared/book-roster-enhancements.js',semanticUrl:'../shared/book-roster-enhancements.js'},
   {id:'chaos-space-marines',phone:'abaddon-the-despoiler.html',matrix:'books/chaos-space-marines/generated/compatible-rules.json'},
   {id:'space-marines',phone:'intercessor-squad.html',matrix:'books/space-marines/generated/compatible-rules.json',roster:false},
   {id:'dark-angels',phone:'belial.html',matrix:null},

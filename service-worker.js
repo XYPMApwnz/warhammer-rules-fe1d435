@@ -208,9 +208,6 @@ const APP_SHELL = [
   ,"./books/tyranids/scripts/stratagem-types.mjs?v=1"
   ,"./books/tyranids/generated/compatible-rules.json"
   ,"./books/tyranids/scripts/app.js?v=9"
-  ,"./books/tyranids/mobile/mobile.css?v=2"
-  ,"./books/tyranids/mobile/mobile.js?v=11"
-  ,"./books/tyranids/mobile/phone-popup-controller.js?v=1"
   ,"./books/tyranids/mobile/related-rules.inc?v=4"
   ,"./glossary/generated/glossary.en.js?v=tyranids-1"
   ,"./books/tau-empire/"
@@ -275,8 +272,6 @@ const APP_SHELL = [
   ,EMPERORS_CHILDREN_FALLBACK
   ,"./books/emperors-children/reader.html"
   ,"./books/emperors-children/mobile/index.html"
-  ,"./books/emperors-children/mobile/mobile.css?v=1"
-  ,"./books/emperors-children/mobile/phone-popup-controller.js?v=1"
   ,"./books/emperors-children/styles/tokens.css?v=2"
   ,"./books/emperors-children/styles/book.css?v=3"
   ,"./books/emperors-children/assets/emperors-children-cover-480.webp"
@@ -289,7 +284,6 @@ const APP_SHELL = [
   ,"./books/emperors-children/generated/compatible-rules.json"
   ,"./books/emperors-children/mobile/related-rules.inc?v=2"
   ,"./books/emperors-children/scripts/app.js?v=6"
-  ,"./books/emperors-children/mobile/mobile.js?v=3"
   ,"./books/space-marines/"
   ,SPACE_MARINES_FALLBACK
   ,SPACE_MARINES_DESKTOP_FALLBACK

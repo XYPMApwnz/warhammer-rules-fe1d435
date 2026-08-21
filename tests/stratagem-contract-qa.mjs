@@ -17,7 +17,7 @@ const card=(html,id)=>{
   return html.slice(start,end+10);
 };
 const cardCount=(html,id)=>(html.match(new RegExp(`<article\\b[^>]*(?:data-rule-id|id)="${id}"`,'g'))||[]).length;
-const migratedBooks=new Map([['death-guard',48],['adeptus-mechanicus',47],['tau-empire',49]]);
+const migratedBooks=new Map([['death-guard',48],['adeptus-mechanicus',47],['tau-empire',49],['tyranids',63],['emperors-children',36]]);
 const migratedStubs=new Map([...migratedBooks].map(([bookId,expected])=>{
   const directory=path.join(root,'books',bookId,'mobile');
   const stubs=fs.readdirSync(directory).filter(file=>file.endsWith('.html')).map(file=>[file,read(path.join('books',bookId,'mobile',file))]);
@@ -113,7 +113,7 @@ for(const id of ['core-stratagem-insane-bravery','core-stratagem-rapid-ingress']
 for(const file of [
   'books/shared/army-related-rules.js',
   'books/adeptus-mechanicus/scripts/app.js',
-  'books/tyranids/mobile/mobile.js',
+  'books/tyranids/scripts/app.js',
   'books/tau-empire/scripts/app.js'
 ]){
   const source=read(file);
@@ -133,7 +133,6 @@ for(const label of ['Requires an Attached Unit','Requires a second Character','R
 
 for(const file of [
   'books/tyranids/scripts/app.js',
-  'books/tyranids/mobile/mobile.js',
   'books/tau-empire/scripts/app.js'
 ]){
   const source=read(file);
@@ -162,11 +161,6 @@ assert.match(css,new RegExp(`\\.stratagem-grid\\s*\\{[^}]*${readableStratagemGri
 assert.match(css,/full-related-content[\s\S]*grid-template-columns:\s*repeat\(2,\s*minmax\(min\(100%,\s*360px\),\s*1fr\)\)/,'Compatible Stratagem grids must preserve two columns and the readable minimum card width');
 assert.match(css,/:is\(\[data-related-kind="stratagems"\],\[data-related-kind="enhancements"\]\)>section\s*\{[^}]*grid-column:\s*1\/-1/,'nested Related Rules sections must span the outer grid instead of shrinking cards to one quarter');
 assert.match(css,/@media\s*\(max-width:\s*900px\)[^{]*\{[\s\S]*grid-template-columns:\s*1fr/);
-for(const bookId of ['tyranids']){
-  const mobileCss=read(`books/${bookId}/mobile/mobile.css`);
-  assert.match(mobileCss,/grid-template-columns:\s*1fr/,`${bookId}: Phone Mode must use one Stratagem column`);
-  assert.match(mobileCss,/@media\s*\(min-width:\s*1000px\)\s*and\s*\(orientation:\s*landscape\)[\s\S]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/,`${bookId}: landscape tablet must use two Stratagem columns`);
-}
 for(const bookId of migratedBooks.keys()){
   const reader=read(`books/${bookId}/reader.html`);
   const responsiveContentCss=bookId==='death-guard'?/\.\/styles\/content\.css\?v=\d+/:/\.\.\/death-guard\/styles\/content\.css\?v=\d+/;
@@ -176,10 +170,7 @@ for(const bookId of migratedBooks.keys()){
 
 assert.match(read('books/shared/popup-content.js'),/term\.kind==='stratagem'\?term\.definition:term\.summary/);
 assert.match(read('glossary/tools/build-glossary.mjs'),/kind:term\.kind/);
-for(const buildFile of [
-  'books/tyranids/mobile/build.mjs'
-])assert.match(read(buildFile),/term\.kind\s*===?\s*'stratagem'[\s\S]{0,100}term\.definition/);
-assert.match(read('books/tau-empire/mobile/build.mjs'),/data-canonical-reader="\.\.\/reader\.html"/);
+for(const buildFile of ['books/tyranids/mobile/build.mjs','books/emperors-children/mobile/build.mjs','books/tau-empire/mobile/build.mjs'])assert.match(read(buildFile),/data-canonical-reader="\.\.\/reader\.html"/);
 assert.match(dgReader,/data-term="core-rule-15-04-insane-bravery"/);
 assert.match(read('books/adeptus-mechanicus/reader.html'),/data-term="stratagem-priority-reclamation"/);
 assert.match(read('books/shared/army-related-rules.js'),/Compatible Stratagems & Enhancements/);

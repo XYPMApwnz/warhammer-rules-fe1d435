@@ -52,11 +52,7 @@ async function candidate(test){
   await page.locator(`[data-nav-target="${test.cardId}"]`).evaluate(node=>node.click());await page.waitForFunction(cardId=>window.DG_APP?.navigation?.active===cardId,test.cardId);
   test.assert(await state(page,test.cardId,test.effect));
   const assigned=await page.evaluate(cardId=>window.TYRANIDS_ROSTER_GUIDE.enhancementRuleIdsByUnitId[cardId]||[],test.cardId);assert.equal(assigned.length,1,`${test.enhancement}: assigned-only Compatible Rules`);
-  await page.locator('[data-view-switch]').click();await page.waitForURL(url=>url.pathname.endsWith(`/mobile/${test.route}.html`)&&url.searchParams.get('roster')===id);
-  await page.setViewportSize({width:390,height:844});await page.waitForFunction(()=>document.documentElement.dataset.rosterActive==='true');await page.locator(`#${test.cardId}`).waitFor();test.assert(await state(page,test.cardId,test.effect));
-  await page.locator('#navButton').click();await page.locator('#mobileNav[aria-hidden="false"]').waitFor();
-  assert.equal(await page.locator('.phone-tree > details:first-of-type .mobile-nav-branch > a:not([hidden])').count(),1,`${test.enhancement}: selected Detachment remains visible`);
-  await page.locator('[data-view-switch]').click();await page.waitForURL(url=>url.pathname.endsWith('/reader.html')&&url.searchParams.get('roster')===id);
+  await page.setViewportSize({width:390,height:844});await page.goto(`${base}/books/tyranids/mobile/${test.route}.html?roster=${id}`);await page.waitForURL(url=>url.pathname.endsWith('/reader.html')&&url.searchParams.get('roster')===id&&url.hash===`#${test.cardId}`);await page.locator(`#${test.cardId}[data-roster-selected="true"]`).waitFor();test.assert(await state(page,test.cardId,test.effect));
   assert.equal(errors.length,0,`${test.enhancement}: console errors: ${errors.join(' | ')}`);await context.close();
 }
 const changed=(state,label,amount)=>state.modified.some(item=>item.label===label&&Number.parseInt(item.value)===Number.parseInt(item.base)+amount);
@@ -77,9 +73,9 @@ const cases=[
 try{
   for(const test of cases)await candidate(test);
   const duplicate=await browser.newContext({serviceWorkers:'block'}),page=await duplicate.newPage();let id=await save(page,{detachment:'Ambush Predators',unit:"Von Ryan's Leapers",enhancement:'Cryptophotaic Camouflage',second:true});
-  for(const target of [`${base}/books/tyranids/reader.html?roster=${id}#unit-von-ryans-leapers`,`${base}/books/tyranids/mobile/von-ryans-leapers.html?roster=${id}`]){await page.goto(target);await page.locator('#unit-von-ryans-leapers').waitFor();if(target.includes('/mobile/'))await page.waitForFunction(()=>document.documentElement.dataset.rosterActive==='true');else await page.locator('#unit-von-ryans-leapers[data-roster-selected="true"]').waitFor();assert.equal(await page.locator('#unit-von-ryans-leapers .roster-instances li').count(),2);assert.equal(await page.locator('#unit-von-ryans-leapers [data-roster-derived-effect]').count(),0);}
+  for(const target of [`${base}/books/tyranids/reader.html?roster=${id}#unit-von-ryans-leapers`,`${base}/books/tyranids/mobile/von-ryans-leapers.html?roster=${id}`]){await page.goto(target);await page.locator('#unit-von-ryans-leapers[data-roster-selected="true"]').waitFor();assert.equal(await page.locator('#unit-von-ryans-leapers .roster-instances li').count(),2);assert.equal(await page.locator('#unit-von-ryans-leapers [data-roster-derived-effect]').count(),0);}
   await duplicate.close();
   const unresolved=await browser.newContext({serviceWorkers:'block'}),unresolvedPage=await unresolved.newPage();id=await save(unresolvedPage,{detachment:'Invasion Fleet',unit:'Hive Tyrant',enhancement:'Adaptive Biology',unresolved:true});
-  await unresolvedPage.goto(`${base}/books/tyranids/mobile/hive-tyrant.html?roster=${id}`);await unresolvedPage.waitForFunction(()=>document.documentElement.dataset.rosterActive==='true');await unresolvedPage.locator('#unit-hive-tyrant').waitFor();assert.equal(await unresolvedPage.locator('#unit-hive-tyrant [data-roster-derived-effect]').count(),0);assert.match(await unresolvedPage.locator('#unit-hive-tyrant .roster-enhancement-unresolved').innerText(),/owner could not be resolved/i);await unresolved.close();
+  await unresolvedPage.goto(`${base}/books/tyranids/mobile/hive-tyrant.html?roster=${id}`);await unresolvedPage.locator('#unit-hive-tyrant[data-roster-selected="true"]').waitFor();assert.equal(await unresolvedPage.locator('#unit-hive-tyrant [data-roster-derived-effect]').count(),0);assert.match(await unresolvedPage.locator('#unit-hive-tyrant .roster-enhancement-unresolved').innerText(),/owner could not be resolved/i);await unresolved.close();
   console.log('Tyranids Enhancement runtime QA passed: 12 classified effects, Desktop/Phone parity, duplicate-instance and unresolved-owner safety.');
 }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}

@@ -7,7 +7,10 @@ import {buildRelationGraphs} from '../../shared/tools/build-relation-graph.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..','..','..');
 const bookRoot=path.join(root,'books','death-guard');
 const readJson=file=>JSON.parse(fs.readFileSync(file,'utf8'));
-const writeJson=(file,value)=>fs.writeFileSync(file,`${JSON.stringify(value,null,2)}\n`);
+const checkOnly=process.argv.includes('--check'),staleOutputs=[];
+const writeText=(file,value)=>{if(checkOnly){if(!fs.existsSync(file)||fs.readFileSync(file,'utf8')!==value)staleOutputs.push(path.relative(root,file).replaceAll('\\','/'));}else fs.writeFileSync(file,value,'utf8');};
+const writeJson=(file,value)=>writeText(file,`${JSON.stringify(value,null,2)}\n`);
+const runtimeVersions=readJson(path.join(root,'books','shared','runtime-asset-versions.json'));
 const escapeHtml=value=>String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const slug=value=>String(value).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const legends=readJson(path.join(bookRoot,'content','death-guard-legends.en.json'));
@@ -173,6 +176,7 @@ function elementRange(html,tag,id){
 }
 function replaceOrInsert(html,tag,id,beforeId,replacement){
   const range=elementRange(html,tag,id);if(range)return html.slice(0,range[0])+replacement+html.slice(range[1]);
+  if(!replacement)return html;
   const before=elementRange(html,tag,beforeId);if(!before)throw new Error(`Missing insertion target ${beforeId}`);
   return html.slice(0,before[0])+replacement+'\n'+html.slice(before[0]);
 }
@@ -200,10 +204,11 @@ const relationEdges=attachments.flatMap(([sourceId,targetId])=>[
 ]);
 const relationGraphs=buildRelationGraphs(unitSections.map(unit=>({...unit,keywords:unitKeywords.get(unit.id)})),relationEdges);
 let reader=fs.readFileSync(readerFile,'utf8');
-reader=reader.replace(/rule-facts\.js\?v=\d+/,'rule-facts.js?v=5');
-reader=reader.replace(/points-validator\.js\?v=\d+/,'points-validator.js?v=4');
+reader=reader.replace(/rule-facts\.js\?v=\d+/,`rule-facts.js?v=${runtimeVersions.shared.ruleFacts}`);
+reader=reader.replace(/points-data\.js\?v=\d+/,`points-data.js?v=${runtimeVersions.points.data}`);
+reader=reader.replace(/points-validator\.js\?v=\d+/,`points-validator.js?v=${runtimeVersions.points.validator}`);
 reader=reader.replace(/scripts\/app\.js\?v=\d+/,'scripts/app.js?v=47');
-reader=reader.replace(/scripts\/roster-filter\.js\?v=\d+/,'scripts/roster-filter.js?v=24');
+reader=reader.replace(/scripts\/roster-filter\.js\?v=\d+/,'scripts/roster-filter.js?v=27');
 reader=reader.replace(/\sdata-eligibility="[^"]*"/g,'');
 reader=replaceOrInsert(reader,'li',legends.group.id,'pact-of-decay-datasheets',nav);
 reader=replaceOrInsert(reader,'section',legends.group.id,'pact-of-decay-datasheets',content);
@@ -243,7 +248,7 @@ for(const unit of unitSections){
   };
   reader=reader.replace(opener,(match,start,end)=>`${start.replace(/\sdata-(?:keywords|related-candidates|rule-facts)="[^"]*"/g,'')} data-rule-facts="${escapeHtml(JSON.stringify(ruleFacts))}"${end}`);
 }
-fs.writeFileSync(readerFile,reader);
+writeText(readerFile,reader);
 
 const runtime={...existingRuntime};
 for(const id of Object.keys(runtime))if(id.startsWith('term-death-guard-')||id.startsWith('ability-legends-')||id.startsWith('weapon-legends-'))delete runtime[id];
@@ -257,5 +262,6 @@ for(const entry of legendGlossary){
   runtime[entry.id]={title:entry.title,summary,glossary:`glossary-${entry.id}`,
     ...(entry.sectionId?{rule:entry.sectionId}:{}),...(owner?{datasheet:owner,statline:`${owner}-profile`}:{} )};
 }
-fs.writeFileSync(runtimeFile,`window.DG_TERMS=Object.freeze(${JSON.stringify(runtime)});\n`);
-console.log(`Death Guard Legends built: ${legends.units.length} datasheets, ${legendGlossary.length} glossary records, ${book.audit.datasheets} total datasheets.`);
+writeText(runtimeFile,`window.DG_TERMS=Object.freeze(${JSON.stringify(runtime)});\n`);
+if(checkOnly&&staleOutputs.length){console.error(`Generated artifacts are stale: ${[...new Set(staleOutputs)].join(', ')}`);process.exit(1);}
+console.log(`Death Guard Legends ${checkOnly?'check':'build'}: ${legends.units.length} datasheets, ${legendGlossary.length} glossary records, ${book.audit.datasheets} total datasheets.`);

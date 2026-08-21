@@ -198,7 +198,6 @@ const APP_SHELL = [
   ,TYRANIDS_ENTRY_FALLBACK
   ,TYRANIDS_DESKTOP_FALLBACK
   ,TYRANIDS_MOBILE_FALLBACK
-  ,"./books/tyranids/mobile/index.html"
   ,"./books/tyranids/styles/tokens.css?v=3"
   ,"./books/tyranids/styles/book.css?v=4"
   ,"./books/tyranids/scripts/data.js?v=2"
@@ -234,7 +233,7 @@ const APP_SHELL = [
   ,"./books/chaos-space-marines/assets/chaos-space-marines-cover-800.webp"
   ,"./books/chaos-space-marines/scripts/data.js?v=2"
   ,"./books/chaos-space-marines/scripts/app.js?v=6"
-  ,"./books/chaos-space-marines/scripts/roster-filter.js?v=1"
+  ,"./books/chaos-space-marines/scripts/roster-filter.js?v=2"
   ,"./books/chaos-space-marines/generated/compatible-rules.json"
   ,"./books/chaos-space-marines/scripts/roster-data.js?v=1"
   ,"./books/chaos-space-marines/mobile/related-rules.inc?v=1"
@@ -253,7 +252,6 @@ const APP_SHELL = [
   ,"./books/blood-angels/scripts/roster-data.js?v=1"
   ,"./books/blood-angels/mobile/related-rules.inc?v=1"
   ,"./books/orks/"
-  ,ORKS_FALLBACK
   ,"./books/orks/mobile/index.html"
   ,"./books/orks/styles/tokens.css?v=2"
   ,"./books/orks/styles/book.css?v=2"
@@ -274,7 +272,6 @@ const APP_SHELL = [
   ,"./books/emperors-children/mobile/related-rules.inc?v=2"
   ,"./books/emperors-children/scripts/app.js?v=8"
   ,"./books/space-marines/"
-  ,SPACE_MARINES_FALLBACK
   ,SPACE_MARINES_DESKTOP_FALLBACK
   ,"./books/space-marines/mobile/index.html"
   ,"./books/space-marines/styles/tokens.css?v=3"

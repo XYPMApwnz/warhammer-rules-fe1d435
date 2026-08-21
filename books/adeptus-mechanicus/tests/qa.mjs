@@ -36,6 +36,7 @@ const serviceWorker=read('../../service-worker.js');
 const glossaryRegistryText=fs.readFileSync(path.resolve(root,'..','..','glossary','registry.en.json'),'utf8');
 const glossaryRegistry=JSON.parse(glossaryRegistryText);
 const glossaryBuildSource=fs.readFileSync(path.resolve(root,'..','..','glossary','tools','build-glossary.mjs'),'utf8');
+const cacheRevisionSource=fs.readFileSync(path.resolve(root,'..','..','tools','cache-revision.mjs'),'utf8');
 const factionRules=json('content/adeptus-mechanicus-rules.en.json');
 const source=json('content/adeptus-mechanicus-source.en.json');
 const codex=json('content/adeptus-mechanicus-codex-detachments.en.json');
@@ -301,7 +302,7 @@ check('responsive reader weapon abilities preserve canonical token text and orde
 check('known weapon ability tokens resolve canonical base glossary rules',desktopTokens.every(token=>token.element==='button'&&token.term===weaponAbilityTermIds.get(weaponAbilityBase(token.label)))&&canonicalLabels.every(label=>weaponAbilityTermIds.has(weaponAbilityBase(label))),`${desktopTokens.filter(token=>token.term).length} interactive; ${canonicalLabels.filter(label=>!weaponAbilityTermIds.has(weaponAbilityBase(label))).length} unknown`);
 check('weapon ability markup has no raw comma list or partial nested glossary links',!/<button class="weapon-button"[^>]*>[^<]*<\/button><small>/i.test(html)&&!/<(?:button|span)[^>]*class="[^"]*\btag\b[^"]*"[^>]*>[^<]*<button/i.test(html)&&!/>ANTI<\/button>-[^<]+/i.test(html)&&mobileRoutePages.every(page=>!page.includes('weapon-button')));
 check('Mechanicus weapon ability tokens reuse the Death Guard production DOM contract',deathGuardRead('reader.html').includes('<div class="weapon-tags">')&&deathGuardRead('reader.html').includes('<button class="tag" data-term=')&&html.includes('<div class="weapon-tags"><button class="tag" data-term='));
-check('cache revision tracks canonical Mechanicus content while legacy routes stay content-free',glossaryBuildSource.includes("'books/adeptus-mechanicus/reader.html'")&&mobileRoutePages.every(page=>!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(page)));
+check('cache revision tracks the authoritative APP_SHELL while legacy routes stay content-free',glossaryBuildSource.includes('writeCacheRevision({root})')&&cacheRevisionSource.includes('readAppShell')&&cacheRevisionSource.includes('CACHE_REVISION_RELATIVE_PATH')&&serviceWorker.includes('importScripts("./glossary/generated/cache-revision.js")')&&mobileRoutePages.every(page=>!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(page)));
 
 const navSource=deathGuardRead('scripts/navigation-controller.js');
 const popupSource=deathGuardRead('scripts/popup-controller.js');

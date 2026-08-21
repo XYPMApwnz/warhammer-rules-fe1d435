@@ -4,6 +4,7 @@ import vm from 'node:vm';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {recordText} from '../../books/core-rules/content/record-content.mjs';
+import {writeCacheRevision} from '../../tools/cache-revision.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..','..');
 const glossaryRoot=path.join(root,'glossary');
@@ -726,30 +727,5 @@ const runtimePayload={schema:1,language:'en',contentHash:hash(JSON.stringify({re
 const runtime=`(function(){'use strict';\nconst data=${JSON.stringify(runtimePayload)};\nfunction resolve(id){return data.aliases[id]||id;}\nfunction view(term,nav){return Object.freeze({id:term.id,kind:term.kind,title:term.title.en,summary:(term.summary&&term.summary.en)||term.definition.en,definition:term.definition.en,presentation:term.presentation,structured:term.structured||{},related:term.related||[],mentions:term.mentions||[],source:term.canonicalSource,status:term.status,fullRulePath:nav?.fullRulePath||term.fullRulePath||'',...(nav||{})});}\nfunction forBook(bookId){const result={};const local=data.contexts[bookId]||{};for(const [id,term] of Object.entries(data.terms))result[id]=view(term,local[id]&&local[id].navigation);for(const [localId,context] of Object.entries(local)){const id=resolve(context.termId);if(data.terms[id])result[localId]=view(data.terms[id],{...(context.navigation||{}),parameters:context.parameters||{}});}return Object.freeze(result);}\nfunction linkables(bookId){const local=data.contexts[bookId]||{},result=[],seenLocal=new Set(),seenCanonical=new Set();for(const [localId,context] of Object.entries(local)){const id=resolve(context.termId),term=data.terms[id];if(!term||seenLocal.has(localId))continue;const owners=[...(context.owners||[]),...(context.navigation?.units||[])];result.push({id:localId,termId:id,title:term.title.en,aliases:term.aliases||[],matchLabels:term.matchLabels||[],owners:[...new Set(owners)]});seenLocal.add(localId);seenCanonical.add(id);}for(const [id,term] of Object.entries(data.terms)){if(seenCanonical.has(id)||(term.scope!=='global'&&term.scope!==bookId))continue;result.push({id,termId:id,title:term.title.en,aliases:term.aliases||[],matchLabels:term.matchLabels||[],owners:[]});seenCanonical.add(id);}return Object.freeze(result.map(entry=>Object.freeze({...entry,owners:Object.freeze(entry.owners),matchLabels:Object.freeze(entry.matchLabels)})));}\nwindow.WH40K_GLOSSARY=Object.freeze({schema:data.schema,language:data.language,contentHash:data.contentHash,resolve,get(id){return data.terms[resolve(id)]||null;},forBook,linkables,counts:Object.freeze({terms:Object.keys(data.terms).length,aliases:Object.keys(data.aliases).length})});\n}());\n`;
 const runtimePreferences=`window.WH40K_GLOSSARY_MATCHES=Object.freeze(${JSON.stringify(preferredMatches)});\n`;
 fs.writeFileSync(path.join(glossaryRoot,'generated','glossary.en.js'),runtime+runtimePreferences);
-const coreReaderFiles=fs.readdirSync(path.join(root,'books','core-rules','reader'))
-  .filter(file=>file.endsWith('.html')||file==='styles.css'||file==='app.js'||file==='search-index.json')
-  .map(file=>`books/core-rules/reader/${file}`);
-const mechanicusGeneratedCacheInputs=[
-  'books/adeptus-mechanicus/reader.html',
-  ...fs.readdirSync(path.join(root,'books','adeptus-mechanicus','mobile')).filter(file=>file.endsWith('.html')).map(file=>`books/adeptus-mechanicus/mobile/${file}`)
-];
-const genericArmyCacheInputs=allGenericArmyBooks.flatMap(book=>[
-  `books/${book.id}/index.html`,`books/${book.id}/reader.html`,`books/${book.id}/styles/tokens.css`,`books/${book.id}/styles/book.css`,
-  `books/${book.id}/scripts/data.js`,`books/${book.id}/scripts/app.js`,`books/${book.id}/mobile/index.html`,`books/${book.id}/mobile/related-rules.inc`,
-  ...fs.readdirSync(path.join(root,'books',book.id,'mobile')).filter(file=>file.endsWith('.html')).map(file=>`books/${book.id}/mobile/${file}`)
-]);
-const cacheInputs=[
-  'index.html','manifest.webmanifest','service-worker.js','glossary-return.js','roster-guides/index.html','roster-guides/app.js','roster-guides/points-data.js','roster-guides/points-validator.js',
-  'books/death-guard/index.html','books/core-rules/index.html','books/adeptus-mechanicus/index.html',...genericArmyCacheInputs,'books/shared/modal-focus.js','books/shared/army-related-rules.js','books/shared/roster-context.js','books/shared/army-book-app.js',
-  ...['death-guard','adeptus-mechanicus'].flatMap(book=>['tokens.css','layout.css','navigation.css','content.css','popups.css'].map(file=>`books/${book}/styles/${file}`)),
-  'books/shared/navigation-targets.js','books/shared/datasheet-layout.js','books/shared/datasheet-system.css','books/shared/popup-content.js','books/shared/glossary-autolink.js','books/shared/rule-facts.js','books/shared/roster-parser.js','books/shared/roster-enhancements.js','books/shared/book-roster-enhancements.js',
-  ...['death-guard','adeptus-mechanicus'].flatMap(book=>['data.js','navigation-controller.js','popup-controller.js','journey-controller.js','ui-controllers.js','app.js'].map(file=>`books/${book}/scripts/${file}`)),
-  ...['related-rules.js','roster-enhancements.js','roster-filter.js'].map(file=>`books/adeptus-mechanicus/scripts/${file}`),
-  ...['death-guard','adeptus-mechanicus'].flatMap(book=>['mobile.css','mobile.js','phone-popup-controller.js','related-rules.inc'].map(file=>`books/${book}/mobile/${file}`)),
-  'books/death-guard/scripts/view-router.js','books/death-guard/scripts/roster-filter.js','books/death-guard/scripts/related-rules.js','books/death-guard/scripts/full-entry-controller.js','books/death-guard/scripts/compatible-stratagems-runtime.mjs','books/death-guard/generated/compatible-rules.json',
-  ...coreReaderFiles,...mechanicusGeneratedCacheInputs,
-  'glossary/viewer.css','glossary/viewer-profiles.css','glossary/viewer-progressive.css','glossary/viewer.js'
-].filter(file=>fs.existsSync(path.join(root,file)));
-const cacheRevision=hash(JSON.stringify({glossary:runtimePayload.contentHash,files:cacheInputs.map(file=>[file,hash(fs.readFileSync(path.join(root,file)))])})).slice(0,16);
-fs.writeFileSync(path.join(glossaryRoot,'generated','cache-revision.js'),`self.WH40K_CACHE_REVISION='${cacheRevision}';\n`);
+const cacheRevision=writeCacheRevision({root});
 console.log(`Mega Glossary: ${registry.size} terms, ${Object.keys(aliases).length} aliases, ${definitionCandidates.length} definition candidates, ${aliasCandidates.length} title collisions.`);

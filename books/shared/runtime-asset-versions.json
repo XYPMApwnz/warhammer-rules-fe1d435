@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "shared": {
+    "armyBook": 12,
+    "relatedRules": 14,
+    "rosterContext": 1,
+    "ruleFacts": 5
+  },
+  "points": {
+    "data": 9,
+    "validator": 5
+  }
+}

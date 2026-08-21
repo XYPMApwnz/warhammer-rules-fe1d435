@@ -32,6 +32,8 @@
     "points:build": "node roster-guides/build-points.mjs",
     "glossary:build": "node glossary/tools/build-glossary.mjs",
     "glossary:check": "node glossary/tools/check-glossary.mjs",
+    "cache:check": "node tools/cache-revision.mjs --check",
+    "wiring:check": "node tests/repository-wiring-consistency-qa.mjs",
     "test:cold-offline": "node tests/browser/cold-offline.mjs",
     "test:browser": "npm run test:cold-offline",
     "test:release": "npm run test:full",

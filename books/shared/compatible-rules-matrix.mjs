@@ -29,17 +29,25 @@ export function validateCompatibleRulesMatrix(matrix,options={}){
   return matrix;
 }
 
-export function getCompatibleRules(matrix,unitId,{detachmentId}={}){
+export function getCompatibleRules(matrix,unitId,{detachmentId,resolveDetachmentSelection=false}={}){
   const selected=detachmentId&&detachmentId!=='all'?String(detachmentId).replace(/^detachment-/,''):'';
-  return (matrix.units?.[unitId]||[]).filter(row=>row.scope==='core'||!selected||row.detachmentId===selected);
+  return (matrix.units?.[unitId]||[])
+    .filter(row=>row.scope==='core'||!selected||row.detachmentId===selected)
+    .map(row=>{
+      if(!resolveDetachmentSelection||!selected||row.state!=='conditional')return row;
+      const conditions=conditionsFor(row).filter(condition=>condition!=='detachment-not-selected');
+      if(conditions.length===conditionsFor(row).length)return row;
+      return conditions.length?{...row,condition:conditions[0],conditions}:{...row,state:'match',condition:null,conditions:[]};
+    });
 }
 
 export function createCompatibleRulesSource(matrix,options={}){
   validateCompatibleRulesMatrix(matrix,options);
   return Object.freeze({
     schema:matrix.schema,
+    conditionLabels:Object.freeze({...options.conditionLabels}),
     hasUnit:unitId=>Boolean(matrix.units[unitId]?.length),
-    rowsForUnit:(unitId,context)=>getCompatibleRules(matrix,unitId,context),
+    rowsForUnit:(unitId,context)=>getCompatibleRules(matrix,unitId,{...context,resolveDetachmentSelection:options.resolveDetachmentSelection}),
     conditionsFor
   });
 }
@@ -50,4 +58,17 @@ export async function loadCompatibleRulesSource(url,options={}){
   const response=await request(url);
   if(!response.ok)throw new Error(`Could not load Compatible Rules: HTTP ${response.status}`);
   return createCompatibleRulesSource(await response.json(),options);
+}
+
+export function createCompatibleRulesLoader(url,options={}){
+  let source=null,pending=null;
+  const load=()=>source?Promise.resolve(source):pending||(pending=loadCompatibleRulesSource(url,options).then(result=>(source=result)).catch(error=>{pending=null;throw error;}));
+  return Object.freeze({
+    schema:options.schema||'',
+    conditionLabels:Object.freeze({...options.conditionLabels}),
+    load,
+    hasUnit:unitId=>source?source.hasUnit(unitId):true,
+    rowsForUnit:(unitId,context)=>source?source.rowsForUnit(unitId,context):[],
+    conditionsFor
+  });
 }

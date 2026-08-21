@@ -94,7 +94,8 @@ const APP_SHELL = [
   "./books/shared/glossary-autolink.js?v=8",
   "./books/shared/rule-facts.js?v=5",
   "./books/shared/related-rules-matcher.js?v=6",
-  "./books/shared/compatible-rules-matrix.mjs?v=1",
+  "./books/shared/compatible-rules-matrix.mjs?v=2",
+  "./books/shared/stratagem-presentation.mjs?v=1",
   "./books/shared/roster-entities.js?v=1",
   "./books/shared/roster-parser.js?v=2",
   "./books/shared/roster-enhancements.js?v=3",
@@ -205,10 +206,9 @@ const APP_SHELL = [
   ,"./books/tyranids/scripts/data.js?v=2"
   ,"./books/tyranids/scripts/roster-data.js?v=1"
   ,"./books/tyranids/scripts/roster-filter.js?v=3"
-  ,"./books/tyranids/scripts/compatible-rules-runtime.mjs?v=2"
   ,"./books/tyranids/scripts/stratagem-types.mjs?v=1"
   ,"./books/tyranids/generated/compatible-rules.json"
-  ,"./books/tyranids/scripts/app.js?v=9"
+  ,"./books/tyranids/scripts/app.js?v=11"
   ,"./books/tyranids/mobile/related-rules.inc?v=4"
   ,"./glossary/generated/glossary.en.js?v=tyranids-1"
   ,"./books/tau-empire/"
@@ -219,10 +219,9 @@ const APP_SHELL = [
   ,"./books/tau-empire/styles/book.css?v=5"
   ,"./books/tau-empire/assets/tau-empire-cover-800.webp"
   ,"./books/tau-empire/scripts/data.js?v=2"
-  ,"./books/tau-empire/scripts/app.js?v=11"
+  ,"./books/tau-empire/scripts/app.js?v=13"
   ,"./books/tau-empire/scripts/stratagem-types.mjs?v=1"
   ,"./books/tau-empire/scripts/roster-filter.js?v=4"
-  ,"./books/tau-empire/scripts/compatible-rules-runtime.mjs?v=1"
   ,"./books/tau-empire/generated/compatible-rules.json"
   ,"./books/tau-empire/scripts/roster-data.js?v=1"
   ,"./books/tau-empire/mobile/related-rules.inc?v=2"
@@ -274,11 +273,10 @@ const APP_SHELL = [
   ,"./books/emperors-children/scripts/data.js?v=2"
   ,"./books/emperors-children/scripts/roster-data.js?v=1"
   ,"./books/emperors-children/scripts/roster-filter.js?v=1"
-  ,"./books/emperors-children/scripts/compatible-rules-runtime.mjs?v=1"
   ,"./books/emperors-children/scripts/stratagem-types.mjs?v=2"
   ,"./books/emperors-children/generated/compatible-rules.json"
   ,"./books/emperors-children/mobile/related-rules.inc?v=2"
-  ,"./books/emperors-children/scripts/app.js?v=6"
+  ,"./books/emperors-children/scripts/app.js?v=8"
   ,"./books/space-marines/"
   ,SPACE_MARINES_FALLBACK
   ,SPACE_MARINES_DESKTOP_FALLBACK
@@ -290,7 +288,7 @@ const APP_SHELL = [
   ,"./books/space-marines/scripts/data.js?v=2"
   ,"./books/space-marines/scripts/roster-data.js?v=1"
   ,"./books/space-marines/scripts/roster-filter.js?v=2"
-  ,"./books/space-marines/scripts/app.js?v=7"
+  ,"./books/space-marines/scripts/app.js?v=8"
   ,"./books/space-marines/generated/compatible-rules.json"
   ,"./books/space-marines/mobile/related-rules.inc?v=4"
   ,"./books/dark-angels/"
@@ -307,8 +305,8 @@ const APP_SHELL = [
   ,"./books/dark-angels/scripts/roster-filter.js?v=1"
   ,"./books/dark-angels/scripts/app.js?v=6"
   ,"./books/shared/modal-focus.js?v=1"
-  ,"./books/shared/army-related-rules.js?v=13"
-  ,"./books/shared/army-book-app.js?v=10"
+  ,"./books/shared/army-related-rules.js?v=14"
+  ,"./books/shared/army-book-app.js?v=11"
 ];
 
 function navigationFallback(url) {

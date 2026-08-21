@@ -2,6 +2,15 @@
   'use strict';
   const templatePromises=new Map();
   const normalize=root.WHRuleFacts.normalizeKeyword;
+  const normalizeDetachment=value=>normalize(String(value||'').replace(/^detachment-/i,'').replace(/\s*\([^)]*\)\s*$/,'')).toLowerCase().replace(/\s+/g,'-');
+  const resolveRosterDetachmentIds=(guide,sections=[])=>{
+    const explicit=[...new Set((guide?.detachmentIds||[]).map(normalizeDetachment).filter(Boolean))];
+    if(explicit.length)return explicit;
+    const records=guide?.detachments?.length?guide.detachments:guide?.detachment?[guide.detachment]:[],values=records.map(item=>item?.id||item?.label||item);
+    if(values.length!==1)return[];
+    const wanted=normalizeDetachment(values[0]),matches=sections.filter(section=>section.dataset.detachment&&section.dataset.detachment!=='core'&&[section.dataset.detachment,section.querySelector('h2')?.textContent].some(value=>normalizeDetachment(value)===wanted));
+    return matches.length===1?[matches[0].dataset.detachment]:[];
+  };
   const profile=card=>root.WHRuleFacts.profileFromDataset(card.dataset,{id:card.id});
   const withKeywordGrants=(rule,unit)=>{
     let grants=[];
@@ -18,13 +27,15 @@
     catch{return {state:'no-match',matchedRoleIds:[],reasons:[]};}
   };
   const matches=(rule,unit)=>match(rule,unit).state!=='no-match';
-  const renderMatchState=(card,result)=>{
+  const renderMatchState=(card,result,labels={})=>{
     card.dataset.matchState=result.state;
     card.querySelector(':scope > .compatibility-status')?.remove();
     if(result.state!=='conditional')return;
     const status=document.createElement('p');
     status.className='compatibility-status';
-    status.innerHTML='<strong>Conditionally compatible</strong><span>Check the full card conditions</span>';
+    status.innerHTML='<strong>Conditionally compatible</strong>';
+    const conditions=[...new Set(result.conditions?.length?result.conditions:result.condition?[result.condition]:[])];
+    for(const condition of conditions.length?conditions:['']){const line=document.createElement('span');line.textContent=labels[condition]||'Check the full card conditions';status.append(line);}
     card.prepend(status);
   };
   const getTemplate=url=>{
@@ -35,7 +46,7 @@
     return templatePromises.get(url);
   };
   function install(options={}){
-    const source=options.source||null;
+    const source=options.source||null,conditionLabels=options.conditionLabels||source?.conditionLabels||{};
     if(!source&&options.enabled!==true&&root.WHRelatedRules?.enabled!==true)return null;
     const layer=document.createElement('div');
     layer.className='related-rules-layer';layer.hidden=true;
@@ -51,13 +62,14 @@
         const assignedEnhancements=!source&&options.rosterGuide?.bookId==='dark-angels'?new Set(options.rosterGuide.enhancementRuleIdsByUnitId?.[unitProfile.id]||[]):null;
         const isAssigned=assignedEnhancements?.has(card.dataset.ruleId),result=source?sourceById.get(card.dataset.ruleId):assignedEnhancements&&card.classList.contains('enhancement')?!isAssigned?{state:'no-match',matchedRoleIds:[],reasons:[]}:card.dataset.rosterAssignedOnly==='true'?{state:'match',matchedRoleIds:[],reasons:[]}:match(card,unitProfile):match(card,unitProfile);
         card.hidden=source?!result:rosterMode?result.state==='no-match':!root.WHRuleFacts.staticCompatible(result);
-        if(result)renderMatchState(card,result);else card.querySelector(':scope > .compatibility-status')?.remove();
+        if(source&&!result)card.dataset.matchState='no-match';
+        if(result)renderMatchState(card,result,conditionLabels);else card.querySelector(':scope > .compatibility-status')?.remove();
       });
       const hasEnhancements=[...content.querySelectorAll('.enhancement')].some(card=>!card.hidden);
       const enhancementTab=tabs.querySelector('[data-kind="enhancements"]');
       enhancementTab.hidden=!hasEnhancements;
       if(kind==='enhancements'&&!hasEnhancements)kind='stratagems';
-      if(source)title.textContent=`${unit.dataset.unitTitle||unit.querySelector('.unit-name')?.textContent.trim()||'Datasheet'} · ${hasEnhancements?'Compatible Stratagems & Enhancements':'Compatible Stratagems'}`;
+      if(source){const label=hasEnhancements?'Compatible Stratagems & Enhancements':'Compatible Stratagems';title.textContent=`${unit.dataset.unitTitle||unit.querySelector('.unit-name')?.textContent.trim()||unit.querySelector('h3')?.textContent.trim()||'Datasheet'} · ${label}`;if(options.updateTriggerLabel)unit.querySelector('.related-rules-trigger').textContent=label;}
       content.querySelectorAll('[data-related-kind]').forEach(group=>{
         group.hidden=group.dataset.relatedKind!==kind||![...group.querySelectorAll('.stratagem,.enhancement')].some(card=>!card.hidden);
       });
@@ -67,7 +79,7 @@
       });
       tabs.querySelectorAll('button').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.kind===kind)));
       empty.hidden=sections.some(section=>!section.hidden);
-      empty.textContent=`No matching ${kind} for this datasheet in the selected Detachments.`;
+      empty.textContent=typeof options.emptyMessage==='function'?options.emptyMessage({kind,detachment,unit}):`No matching ${kind} for this datasheet in the selected Detachments.`;
     };
     const close=()=>{if(layer.hidden)return;layer.hidden=true;document.documentElement.classList.remove('related-rules-open');modal.deactivate();};
     modal=root.WHModalFocus.create(layer,close);
@@ -77,19 +89,21 @@
     });
     async function open(current,state={}){
       if(!current)return null;
-      unit=current;layer.dataset.unitId=current.id;kind=state.kind||'stratagems';title.textContent=`${current.dataset.unitTitle||'Datasheet'} · Compatible Stratagems & Enhancements`;
+      unit=current;layer.dataset.unitId=current.id;kind=options.restoreKind===false?'stratagems':state.kind||'stratagems';title.textContent=`${current.dataset.unitTitle||current.querySelector('.unit-name')?.textContent.trim()||current.querySelector('h3')?.textContent.trim()||'Datasheet'} · Compatible Stratagems & Enhancements`;
       layer.hidden=false;document.documentElement.classList.add('related-rules-open');modal.activate(current.querySelector('.related-rules-trigger'));
       if(!content){
         try{
+          await source?.load?.();
           const fragment=(await getTemplate(templateUrl)).content.cloneNode(true);
           fragment.querySelectorAll('[id]').forEach(node=>{if(!node.dataset.ruleId)node.dataset.ruleId=node.id;node.removeAttribute('id');});
+          options.decorateContent?.(fragment);
           sections=[...fragment.querySelectorAll('.related-detachment')];
           if(options.rosterGuide?.bookId==='dark-angels')for(const record of Object.values(options.rosterGuide.enhancementRecordsByUnitId||{}).flat()){const section=sections.find(item=>item.dataset.detachment===record.detachmentId),group=section?.querySelector('[data-related-kind="enhancements"]');if(!group||group.querySelector(`[data-rule-id="${CSS.escape(record.ruleId)}"]`))continue;const card=document.createElement('article');card.className='enhancement surface';card.dataset.ruleId=record.ruleId;card.dataset.rosterAssignedOnly='true';const cost=document.createElement('div');cost.className='eyebrow';cost.textContent=`Enhancement · ${record.value} pts`;const title=document.createElement('h4');title.textContent=record.title;const text=document.createElement('p');text.dataset.sourceField='text';text.textContent=record.text;card.append(cost,title,text);group.append(card);}
-          const rosterDetachments=new Set(options.rosterGuide?.detachmentIds||[]);rosterMode=source?Boolean(options.rosterGuide):rosterDetachments.size>0;
-          if(!source&&rosterMode){sections.forEach(section=>{if(section.dataset.detachment!=='core'&&!rosterDetachments.has(section.dataset.detachment))section.remove();});sections=sections.filter(section=>section.dataset.detachment==='core'||rosterDetachments.has(section.dataset.detachment));}
+          const rosterDetachments=new Set(resolveRosterDetachmentIds(options.rosterGuide,sections));rosterMode=source?Boolean(options.rosterGuide):rosterDetachments.size>0;
+          if(rosterMode&&(!source||options.restrictToRosterDetachments)){sections.forEach(section=>{if(section.dataset.detachment!=='core'&&!rosterDetachments.has(section.dataset.detachment))section.remove();});sections=sections.filter(section=>section.dataset.detachment==='core'||rosterDetachments.has(section.dataset.detachment));}
           const detachmentSections=sections.filter(section=>section.dataset.detachment!=='core');
-          const choices=[...(rosterMode&&detachmentSections.length===1?[]:[['all',rosterMode?'All roster detachments':'All detachments']]),...detachmentSections.map(section=>[section.dataset.detachment,section.querySelector('h2').textContent])];
-          detachment=choices.length===1?choices[0][0]:'all';
+          const choices=[...(rosterMode&&detachmentSections.length===1&&options.rosterDetachment!=='all'?[]:[['all',rosterMode?'All roster detachments':'All detachments']]),...detachmentSections.map(section=>[section.dataset.detachment,section.querySelector('h2').textContent])];
+          detachment=rosterMode&&options.rosterDetachment==='all'?'all':choices.length===1?choices[0][0]:'all';
           if(!rosterMode&&options.persistDetachment!==false&&options.storageKey)try{const saved=localStorage.getItem(options.storageKey);if(choices.some(([value])=>value===saved))detachment=saved;}catch{}
           filterMenu=document.createElement('details');filterMenu.className='full-related-filter';filterMenu.classList.toggle('is-static',choices.length===1);
           filterMenu.innerHTML='<summary><span>'+choices.find(([value])=>value===detachment)[1]+'</span></summary><div>'+choices.map(([value,label])=>'<button type="button" data-detachment="'+value+'" aria-pressed="'+(value===detachment)+'">'+label+'</button>').join('')+'</div>';
@@ -112,6 +126,7 @@
       }
       if(!rosterMode&&state.detachment&&sections.some(section=>section.dataset.detachment===state.detachment))detachment=state.detachment;
       filter();
+      if(options.closeFilterOnOpen&&filterMenu)filterMenu.open=false;
       if(filterMenu){
         const selected=filterMenu.querySelector(`[data-detachment="${CSS.escape(detachment)}"]`);
         if(selected)filterMenu.querySelector('summary span').textContent=selected.textContent;
@@ -130,5 +145,5 @@
     document.addEventListener('click',event=>{const button=event.target.closest('.related-rules-trigger');if(button)open(button.closest('.unit-card'));});
     return{layer,close,open,snapshot(origin){if(layer.hidden||!layer.contains(origin))return null;const card=origin.closest('[data-rule-id]'),termId=origin.dataset.term||'',found=card&&termId?[...card.querySelectorAll(`[data-term="${CSS.escape(termId)}"]`)]:[];return{type:'related-rules',unitId:unit?.id||'',detachment,kind,scrollTop:body.scrollTop,ruleId:card?.dataset.ruleId||'',termId,occurrence:Math.max(0,found.indexOf(origin))};},async restore(state){const restoredUnit=document.getElementById(state?.unitId);if(!restoredUnit)return null;await open(restoredUnit,state);const card=layer.querySelector(`[data-rule-id="${CSS.escape(state.ruleId||'')}"]`),found=card&&state.termId?[...card.querySelectorAll(`[data-term="${CSS.escape(state.termId)}"]`)]:[];return found[state.occurrence]||found[0]||(source?restoredUnit.querySelector('.related-rules-trigger'):null);}};
   }
-  root.WHArmyRelatedRules=Object.freeze({install,profile,match,matches});
+  root.WHArmyRelatedRules=Object.freeze({install,profile,match,matches,resolveRosterDetachmentIds});
 }(window));

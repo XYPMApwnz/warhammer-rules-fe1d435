@@ -17,14 +17,15 @@
     const navigation=new root.DGNavigation({breakpoint:phoneMode?Number.MAX_SAFE_INTEGER:800});
     const fullEntry=new root.DGFullEntry(root.WH40K_GLOSSARY);
     const popups=new root.DGPopups(terms,fullEntry);
-    const relatedConfig=config.relatedRules||{};
-    const relatedInstaller=relatedConfig.installer||root.WHArmyRelatedRules;
-    const rosterGuide=typeof relatedConfig.rosterGuide==='function'?relatedConfig.rosterGuide(runtimeContext):relatedConfig.rosterGuide||root.WH_ARMY_ROSTER_GUIDE;
-    const relatedRules=relatedInstaller?.install({
+    const relatedConfig=config.relatedRules===false?null:config.relatedRules||{};
+    const relatedInstaller=relatedConfig&&(relatedConfig.installer||root.WHArmyRelatedRules);
+    const rosterGuide=relatedConfig&&(typeof relatedConfig.rosterGuide==='function'?relatedConfig.rosterGuide(runtimeContext):relatedConfig.rosterGuide||root.WH_ARMY_ROSTER_GUIDE);
+    const relatedRules=relatedConfig&&!(relatedConfig.requireRosterGuide&&params.has('roster')&&!rosterGuide)?relatedInstaller?.install({
       storageKey:relatedConfig.storageKey===undefined?`${config.bookId}-detachment-filter`:relatedConfig.storageKey,
       ...relatedConfig,
-      rosterGuide
-    });
+      rosterGuide,
+      rosterRequested:params.has('roster')
+    }):null;
     const journey=new root.DGJourney(navigation,popups,null,relatedRules);
     new root.DGTableAccessibility();
 
@@ -38,10 +39,18 @@
       const updateViewDestination=()=>{
         const active=navigation.active||decodeURIComponent(location.hash.slice(1))||'start';
         if(config.dedicatedMobile&&!phoneMode){
-          const file=active.startsWith('unit-')?active.slice(5):active.startsWith('detachment-')?active.slice(11):active.startsWith('update-')?'updates':active==='army-rules'?'army-rules':'index';
+          let file='index',anchor='start';
+          for(let node=navigation.byId?.get(active)?.node;node;node=node.parentElement?.closest('[data-nav-id]')){
+            const id=node.dataset.navId;
+            if(id==='start'){anchor=active;break;}
+            if(id==='updates'){file='updates';anchor=active;break;}
+            if(id==='army-rules'){file='army-rules';anchor=active;break;}
+            if(id.startsWith('detachment-')){file=id.slice(11);anchor=active;break;}
+            if(id.startsWith('unit-')){file=id.slice(5);anchor=active;break;}
+          }
           const destination=new URL(`./mobile/${file}.html`,location.href);
           destination.search=location.search;
-          destination.hash=active;
+          destination.hash=anchor;
           viewSwitch.href=destination.href;
           return;
         }

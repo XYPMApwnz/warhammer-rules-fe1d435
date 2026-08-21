@@ -39,12 +39,15 @@
   ],
   "includeCoreStratagems": true,
   "dedicatedMobile": true,
+  "sharedArmyBookApp": true,
   "mobileRelatedRulesSource": false,
   "rosterSupport": true,
   "compatibleRulesMatrix": true,
   "legacyRelatedRuleAttributes": false,
   "assetVersions": {
-    "app": 10,
+    "app": 11,
+    "armyBook": 11,
+    "relatedRules": 14,
     "ruleFacts": 5,
     "rosterFilter": 3
   },

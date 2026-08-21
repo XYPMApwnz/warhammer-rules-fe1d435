@@ -17,7 +17,8 @@ for(const file of files){
 const related=await readFile(new URL('related-rules.inc',root),'utf8');
 assert.equal([...related.matchAll(/<section class="related-detachment(?: [^"]*)?" data-detachment=/g)].length,8,'Related Rules must contain Core plus 7 T’au detachments');
 assert.doesNotMatch(related,/data-eligibility|data-keyword-grants/);
-assert.match(app,/\.\/compatible-rules-runtime\.mjs\?v=\d+/,'canonical reader runtime must expose matrix-backed Compatible Rules');
+assert.match(app,/shared\/compatible-rules-matrix\.mjs\?v=\d+/,'canonical reader runtime must use the shared matrix-backed Compatible Rules source');
+assert.match(app,/WHArmyBook\.install/,'canonical reader runtime must use the shared Army Book contract');
 assert.ok(!files.includes('rvarna-battlesuit.html')&&!files.includes('manta.html'),'Legends and Imperial Armour routes must be absent');
 assert.doesNotMatch(related,/data-term-title="[^"]*"[^>]*data-term-title=/,'Related Rules hydration must be idempotent');
 for(const obsolete of ['mobile.js','mobile.css','phone-popup-controller.js'])await assert.rejects(stat(new URL(obsolete,root)),`${obsolete} must not exist`);

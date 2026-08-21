@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {buildCompatibleRules,inputs} from '../tools/build-compatible-rules.mjs';
-import {getCompatibleRules} from '../scripts/compatible-rules-runtime.mjs';
+import {getCompatibleRules} from '../../shared/compatible-rules-matrix.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
@@ -53,12 +53,13 @@ assert(reader.includes('./scripts/compatible-rules-runtime.mjs')===false,'runtim
 assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader));
 assert(/\.\/scripts\/app\.js\?v=\d+/.test(reader));
 assert(!reader.includes('related-rules-matcher.js'));
-assert(!reader.includes('army-related-rules.js'));
-assert(!reader.includes('army-book-app.js'));
+assert(reader.includes('army-related-rules.js'));
+assert(reader.includes('army-book-app.js'));
 assert(!reader.includes('data-eligibility'));
 assert(!template.includes('data-eligibility'));
 assert(!template.includes('data-keyword-grants'));
-assert(/import\(new URL\('\.\/compatible-rules-runtime\.mjs\?v=\d+'/.test(app));
+assert(/shared\/compatible-rules-matrix\.mjs\?v=\d+/.test(app));
+assert(/WHArmyBook\.install/.test(app));
 assert(!app.includes('data-eligibility'));
 assert(!app.includes('allKeywords'));
 assert(template.includes('Faultless Opportunist'));

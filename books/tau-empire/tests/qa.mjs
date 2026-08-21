@@ -175,8 +175,9 @@ for(const detachment of [...pack.detachments,...parity.detachments]){
   for(const suffix of ['rule','enhancements','stratagems'])assert.match(reader,new RegExp(`data-nav-id="${detachment.id}-${suffix}" data-nav-depth="3"`),`${detachment.title}: ${suffix} third-level route missing`);
 }
 assert.ok(related.lastIndexOf('data-detachment="core"')>related.indexOf('data-detachment="advanced-acquisition-cadre"'),'Core Stratagems must follow faction Stratagems');
-assert.doesNotMatch(reader,/army-book-app\.js/,'T’au must use the same focused runtime architecture as mature books');
-assert.doesNotMatch(reader,/related-rules-matcher|army-related-rules/,'T\'au must not load the legacy Compatible Rules matcher');
+assert.match(reader,/army-book-app\.js/,'T’au must use the shared Army Book runtime contract');
+assert.match(reader,/army-related-rules/,'T\'au must load the shared Compatible Rules runtime');
+assert.doesNotMatch(reader,/related-rules-matcher/,'T\'au must not load the legacy Compatible Rules matcher');
 assert.match(reader,/scripts\/roster-filter\.js\?v=\d+/);
 assert.match(reader,/scripts\/app\.js\?v=\d+/);
 assert.doesNotMatch(related,/data-eligibility|data-keyword-grants/,'matrix template must not retain legacy matcher inputs');
@@ -203,5 +204,5 @@ const {stratagemTypes}=await import(new URL('../scripts/stratagem-types.mjs',imp
 assert.equal(stratagemTypes.size,31,'T’au Stratagem map must cover all rendered faction Stratagems');
 assert.equal([...stratagemTypes.values()].filter(type=>type==='unknown').length,7,'T’au must preserve seven source-untyped Stratagems as unknown');
 assert.equal([...stratagemTypes.values()].filter(type=>type!=='unknown').length,24,'T’au must preserve 24 source-typed Stratagems');
-assert.match(fs.readFileSync(new URL('../scripts/app.js',import.meta.url),'utf8'),/decorateStratagemTypes\(document\)/);
+assert.match(fs.readFileSync(new URL('../scripts/app.js',import.meta.url),'utf8'),/presentation\.decorate\(document\)/);
 console.log("T'au Empire QA passed: official v1.1 pack and v1.2 MFM, 39 Codex datasheets, 7 detachments, exact Wargear, Glossary and Related Rules contracts.");

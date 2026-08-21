@@ -43,15 +43,15 @@ assert.equal(imported.get('Havocs').wargear.length,3);
 assert.equal(imported.get('Helbrute').wargear.length,3);
 assert.match(imported.get('Helbrute').wargear[2],/For each Helbrute fist[\s\S]*?can be equipped[\s\S]*?combi-bolter[\s\S]*?heavy flamer/);
 for(const unit of source.datasheets){
-  const record=imported.get(unit.title),article=extract('article',unit.id),phone=fs.readFileSync(path.join(root,'mobile',`${unit.id.replace(/^unit-/,'')}.html`),'utf8');
+  const record=imported.get(unit.title),article=extract('article',unit.id),stub=fs.readFileSync(path.join(root,'mobile',`${unit.id.replace(/^unit-/,'')}.html`),'utf8');
+  assert.match(stub,new RegExp(`data-canonical-target="${unit.id}"`),`${unit.title}: legacy route target differs`);
+  assert.doesNotMatch(stub,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/,`${unit.title}: legacy route contains copied content`);
+  assert.equal((reader.match(new RegExp(`\\sid="${unit.id}"`,'g'))||[]).length,1,`${unit.title}: canonical Datasheet is duplicated`);
   if(record){
     assert.match(article,/<h5>Wargear Options<\/h5>/,`${unit.title}: Desktop options missing`);
-    assert.match(phone,/<h5>Wargear Options<\/h5>/,`${unit.title}: Phone options missing`);
     assert.deepEqual(options(article),record.wargear,`${unit.title}: Desktop option semantics differ`);
-    assert.deepEqual(options(phone),record.wargear,`${unit.title}: Phone option semantics differ`);
   }else{
     assert.doesNotMatch(article,/<h5>Wargear Options<\/h5>/,`${unit.title}: unresolved/no-option block rendered`);
-    assert.doesNotMatch(phone,/<h5>Wargear Options<\/h5>/,`${unit.title}: unresolved/no-option Phone block rendered`);
   }
 }
 

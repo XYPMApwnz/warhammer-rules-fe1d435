@@ -71,12 +71,10 @@ async function identity(candidate,other){
   assert.deepEqual(await assignedCompatibleIds(page),[candidate.ruleId]);
   assert.equal(await page.locator(`.related-rules-layer [data-rule-id="${other.ruleId}"]:visible`).count(),0);
   await page.locator('.related-rules-layer .related-rules-close').click();
-  await page.locator('[data-view-switch]').click();await page.waitForURL(url=>url.pathname.endsWith(`/mobile/${route}.html`)&&url.searchParams.get('roster')===id);
-  await page.setViewportSize({width:390,height:844});await page.waitForFunction(()=>document.documentElement.dataset.rosterActive==='true');await page.locator(`#${cardId}`).waitFor();
+  await page.locator('[data-view-switch]').click();await page.waitForURL(url=>url.pathname.endsWith('/reader.html')&&url.searchParams.get('roster')===id&&url.hash===`#${cardId}`);
+  await page.setViewportSize({width:390,height:844});await page.locator(`#${cardId}[data-roster-selected="true"]`).waitFor();
   assert.equal(await article(page).getAttribute('data-roster-enhancement-rule-id'),candidate.ruleId);assert.match(await article(page).innerText(),candidate.text);
   assert.equal(await page.locator(`#${cardId} [data-roster-derived-effect]`).count(),0);
-  await page.locator('#navButton').click();await page.locator('#mobileNav[aria-hidden="false"]').waitFor();
-  await page.locator('[data-view-switch]').click();await page.waitForURL(url=>url.pathname.endsWith('/reader.html')&&url.searchParams.get('roster')===id);
   assert.equal(errors.length,0,`${candidate.detachment} console errors: ${errors.join(' | ')}`);await context.close();
 }
 const slug=value=>value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
@@ -101,8 +99,8 @@ async function effectSmoke(candidate){
   const context=await browser.newContext({serviceWorkers:'block',viewport:{width:1280,height:900}}),page=await context.newPage(),errors=[];page.on('pageerror',error=>errors.push(String(error)));page.on('console',message=>{if(message.type()==='error')errors.push(message.text());});
   const source=`+ FACTION KEYWORD: Chaos - Chaos Space Marines\n+ DETACHMENT: ${candidate.detachment}\n+ TOTAL ARMY POINTS: ${candidate.points+20}pts\nChar1: 1x ${candidate.unit} (${candidate.points} pts)\nEnhancement: ${candidate.title} (+20 pts)\n`,id=await savedRoster(page,source),card=`unit-${slug(candidate.unit)}`,route=slug(candidate.unit);
   await page.goto(`${base}/books/chaos-space-marines/reader.html?roster=${id}#${card}`);await page.locator(`#${card}[data-roster-selected="true"]`).waitFor();await page.locator(`[data-nav-target="${card}"]`).evaluate(node=>node.click());await verifyMutation(page,candidate,card);
-  const switchLink=page.locator('[data-view-switch]');await switchLink.click();await page.waitForURL(url=>url.pathname.endsWith(`/mobile/${route}.html`)&&url.searchParams.get('roster')===id);await page.setViewportSize({width:390,height:844});await page.waitForFunction(()=>document.documentElement.dataset.rosterActive==='true');await verifyMutation(page,candidate,card);
-  await page.locator('#navButton').click();await page.locator('#mobileNav[aria-hidden="false"]').waitFor();await page.locator('[data-view-switch]').click();await page.waitForURL(url=>url.pathname.endsWith('/reader.html')&&url.searchParams.get('roster')===id);assert.equal(errors.length,0,`${candidate.title} console errors: ${errors.join(' | ')}`);await context.close();
+  const switchLink=page.locator('[data-view-switch]');await switchLink.click();await page.waitForURL(url=>url.pathname.endsWith('/reader.html')&&url.searchParams.get('roster')===id&&url.hash===`#${card}`);await page.setViewportSize({width:390,height:844});await page.locator(`#${card}[data-roster-selected="true"]`).waitFor();await verifyMutation(page,candidate,card);
+  assert.equal(errors.length,0,`${candidate.title} console errors: ${errors.join(' | ')}`);await context.close();
 }
 
 try{
@@ -112,7 +110,7 @@ try{
   const duplicate=await browser.newContext({serviceWorkers:'block'}),duplicatePage=await duplicate.newPage();
   let id=await savedRoster(duplicatePage,rosterSource({second:true}));
   for(const target of [`${base}/books/chaos-space-marines/reader.html?roster=${id}#${cardId}`,`${base}/books/chaos-space-marines/mobile/${route}.html?roster=${id}`]){
-    await duplicatePage.goto(target);await duplicatePage.locator(`#${cardId}`).waitFor();if(target.includes('/mobile/'))await duplicatePage.waitForFunction(()=>document.documentElement.dataset.rosterActive==='true');else await duplicatePage.locator(`#${cardId}[data-roster-selected="true"]`).waitFor();
+    await duplicatePage.goto(target);await duplicatePage.locator(`#${cardId}[data-roster-selected="true"]`).waitFor();if(target.includes('/mobile/'))assert.match(duplicatePage.url(),/\/reader\.html\?roster=/);
     assert.equal(await duplicatePage.locator(`#${cardId} .roster-instances li`).count(),2);assert.equal(await duplicatePage.locator(`#${cardId} [data-roster-derived-effect]`).count(),0);
     assert.match(await duplicatePage.locator(`#${cardId}`).innerText(),/Warp-fuelled Thrusters[\s\S]*instance-specific/i);
   }

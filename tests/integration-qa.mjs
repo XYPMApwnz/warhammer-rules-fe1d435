@@ -32,7 +32,7 @@ const books=[
   {id:'tyranids',phone:'hive-tyrant.html',matrix:'books/tyranids/generated/compatible-rules.json',singleReader:true,semantic:'books/shared/book-roster-enhancements.js',semanticUrl:'../shared/book-roster-enhancements.js'},
   {id:'tau-empire',phone:'breacher-team.html',matrix:'books/tau-empire/generated/compatible-rules.json',singleReader:true,semantic:'books/shared/book-roster-enhancements.js',semanticUrl:'../shared/book-roster-enhancements.js'},
   {id:'emperors-children',phone:'lord-exultant.html',matrix:'books/emperors-children/generated/compatible-rules.json',singleReader:true,semantic:'books/shared/book-roster-enhancements.js',semanticUrl:'../shared/book-roster-enhancements.js'},
-  {id:'chaos-space-marines',phone:'abaddon-the-despoiler.html',matrix:'books/chaos-space-marines/generated/compatible-rules.json'},
+  {id:'chaos-space-marines',phone:'abaddon-the-despoiler.html',matrix:'books/chaos-space-marines/generated/compatible-rules.json',singleReader:true,semantic:'books/shared/book-roster-enhancements.js',semanticUrl:'../shared/book-roster-enhancements.js'},
   {id:'space-marines',phone:'intercessor-squad.html',matrix:'books/space-marines/generated/compatible-rules.json',roster:false},
   {id:'dark-angels',phone:'belial.html',matrix:null},
   {id:'blood-angels',phone:'commander-dante.html',matrix:'books/blood-angels/generated/compatible-rules.json'}
@@ -56,7 +56,7 @@ for(const book of books){
     check('chaos-space-marines entry exposes verification status and artwork',entryHtml.includes('Verification build')&&entryHtml.includes('chaos-space-marines-cover-480.webp')&&!entryHtml.includes('class="entry-mark"'));
     check('chaos-space-marines reader preserves current publication inventory',(readerHtml.match(/<article class="unit-card/g)||[]).length===54&&(readerHtml.match(/data-nav-id="detachment-[^"]+"/g)||[]).length===17&&readerHtml.includes('faction-hero-cover'));
     const phoneRoutes=fs.readdirSync(path.join(root,'books/chaos-space-marines/mobile')).filter(file=>file.endsWith('.html'));
-    check('chaos-space-marines exposes 74 generated Phone routes',phoneRoutes.length===74&&phoneHtml.includes('id="unit-abaddon-the-despoiler"')&&!phoneHtml.includes('reader.html?view=mobile'));
+    check('chaos-space-marines exposes 74 content-free compatibility routes',phoneRoutes.length===74&&phoneHtml.includes('data-canonical-target="unit-abaddon-the-despoiler"')&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(phoneHtml));
   }
   if(book.id==='blood-angels'){
     check('blood-angels entry exposes source-limited status and artwork',entryHtml.includes('Source-limited preview')&&entryHtml.includes('blood-angels-cover-480.webp')&&!entryHtml.includes('class="entry-mark"'));

@@ -17,7 +17,7 @@ const card=(html,id)=>{
   return html.slice(start,end+10);
 };
 const cardCount=(html,id)=>(html.match(new RegExp(`<article\\b[^>]*(?:data-rule-id|id)="${id}"`,'g'))||[]).length;
-const migratedBooks=new Map([['death-guard',48],['adeptus-mechanicus',47],['tau-empire',49],['tyranids',63],['emperors-children',36]]);
+const migratedBooks=new Map([['death-guard',48],['adeptus-mechanicus',47],['tau-empire',49],['tyranids',63],['emperors-children',36],['chaos-space-marines',74]]);
 const migratedStubs=new Map([...migratedBooks].map(([bookId,expected])=>{
   const directory=path.join(root,'books',bookId,'mobile');
   const stubs=fs.readdirSync(directory).filter(file=>file.endsWith('.html')).map(file=>[file,read(path.join('books',bookId,'mobile',file))]);

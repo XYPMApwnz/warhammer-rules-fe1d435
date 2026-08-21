@@ -39,18 +39,19 @@ assert.deepEqual(Object.fromEntries(categories.map(category=>[category.title,cat
 
 for(const route of routes){
   const html=fs.readFileSync(path.join(root,route),'utf8');
-  assert.match(html,/\.\/mobile\.js\?v=2/);
-  assert.match(html,/\.\/phone-popup-controller\.js\?v=1/);
-  assert.doesNotMatch(html,/reader\.html\?view=mobile/);
-  assert.match(html,/data-view-switch/);
-  assert.match(html,new RegExp(`href="\\./${route.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}" aria-current="page"`));
+  const expectedTarget=route==='index.html'?'start':route==='army-rules.html'?'army-rules':route==='updates.html'?'updates':detachmentIds.includes(`detachment-${route.slice(0,-5)}`)?`detachment-${route.slice(0,-5)}`:`unit-${route.slice(0,-5)}`;
+  assert.match(html,/data-canonical-reader="\.\.\/reader\.html"/);
+  assert.match(html,new RegExp(`data-canonical-target="${expectedTarget}"`));
+  assert.match(html,/\.\.\/\.\.\/shared\/mobile-route-redirect\.js\?v=1/);
+  assert.doesNotMatch(html,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/);
+  assert.doesNotMatch(html,/mobile\.(?:js|css)|phone-popup-controller/);
 }
 
-const start=fs.readFileSync(path.join(root,'index.html'),'utf8');
-const armyRules=fs.readFileSync(path.join(root,'army-rules.html'),'utf8');
-const abaddon=fs.readFileSync(path.join(root,'abaddon-the-despoiler.html'),'utf8');
-const defiler=fs.readFileSync(path.join(root,'defiler.html'),'utf8');
-const rhino=fs.readFileSync(path.join(root,'chaos-rhino.html'),'utf8');
+const start=extract('section','start');
+const armyRules=extract('section','army-rules');
+const abaddon=extract('article','unit-abaddon-the-despoiler');
+const defiler=extract('article','unit-defiler');
+const rhino=extract('article','unit-chaos-rhino');
 const desktopApp=fs.readFileSync(path.join(bookRoot,'scripts/app.js'),'utf8');
 
 assert.match(reader,/\.\/scripts\/app\.js\?v=4/,'CSM Desktop app version was not bumped for roster and Compatible Rules wiring');
@@ -65,16 +66,16 @@ assert.match(armyRules,/data-source-term="chaos-space-marines-army-rule-dark-pac
 assert.match(armyRules,/Cults of the Dark Gods/);
 assert.match(armyRules,/data-source-term="chaos-space-marines-army-rule-cults-of-the-dark-gods"/);
 assert.match(abaddon,/id="unit-abaddon-the-despoiler"/);
-assert.match(abaddon,/href="\.\/chaos-terminator-squad\.html"/);
-assert.match(abaddon,/href="\.\/chosen\.html"/);
+assert.match(abaddon,/data-journey-target="unit-chaos-terminator-squad"/);
+assert.match(abaddon,/data-journey-target="unit-chosen"/);
 assert.equal((defiler.match(/\+15 pts/g)||[]).length,2,'Defiler paid options are missing');
 assert.match(rhino,/id="chaos-rhino-transport"/);
 assert.match(rhino,/Transport/);
 
 const limited=['chaos-cult.html','deceptors.html','dread-talons.html','fellhammer-siege-host.html','pactbound-zealots.html','renegade-raiders.html','soulforged-warpack.html','veterans-of-the-long-war.html'];
 const unresolved=[];
-assert.deepEqual(limited.filter(file=>fs.readFileSync(path.join(root,file),'utf8').includes('Codex source required')),unresolved);
-for(const file of limited){const html=fs.readFileSync(path.join(root,file),'utf8');assert.equal((html.match(/class="enhancement surface"/g)||[]).length,4,`${file} must expose four full-text Enhancements`);assert.equal((html.match(/class="stratagem surface"/g)||[]).length,6,`${file} must expose six full-text Stratagems`);}
+assert.deepEqual(limited.filter(file=>extract('section',`detachment-${file.slice(0,-5)}`).includes('Codex source required')),unresolved);
+for(const file of limited){const html=extract('section',`detachment-${file.slice(0,-5)}`);assert.equal((html.match(/class="enhancement surface"/g)||[]).length,4,`${file} must expose four full-text Enhancements`);assert.equal((html.match(/class="stratagem surface"/g)||[]).length,6,`${file} must expose six full-text Stratagems`);}
 
 assert.equal(source.datasheets.length,54);
 assert.equal(source.legends.length,53);
@@ -85,8 +86,7 @@ for(const [title,file] of foreign){assert.ok(extractConfig.filters.excludeNames.
 assert.equal(config.generatedMobile,true);
 assert.equal(config.assetVersions.app,4);
 assert.equal(manifest.gates.publishAsComplete,false);
-const mobileRuntime=fs.readFileSync(path.join(root,'mobile.js'),'utf8');
-assert.match(mobileRuntime,/rosterMode\?['"]all['"]:/,'Phone roster mode must use the all-Detachment union');
-assert.match(mobileRuntime,/new URLSearchParams\(location\.search\)/,'Phone routes must preserve the roster query');
-assert.match(mobileRuntime,/link\.remove\(\)/,'Phone roster mode must remove non-roster navigation routes');
-console.log('Chaos Space Marines Phone QA: 74 routes, 17 Detachments, 54 current Datasheets, 53 Legends and 4 other-faction units excluded.');
+assert.match(reader,/\.\.\/shared\/book-roster-enhancements\.js\?v=\d+/);
+assert.match(reader,/\.\/scripts\/roster-filter\.js\?v=\d+/);
+assert.ok(!fs.existsSync(path.join(root,'mobile.js'))&&!fs.existsSync(path.join(root,'mobile.css'))&&!fs.existsSync(path.join(root,'phone-popup-controller.js')));
+console.log('Chaos Space Marines responsive QA: 74 content-free routes, 17 Detachments, 54 current Datasheets, 53 Legends and 4 other-faction units excluded.');

@@ -240,9 +240,6 @@ const APP_SHELL = [
   ,"./books/chaos-space-marines/scripts/compatible-rules-runtime.mjs?v=1"
   ,"./books/chaos-space-marines/generated/compatible-rules.json"
   ,"./books/chaos-space-marines/scripts/roster-data.js?v=1"
-  ,"./books/chaos-space-marines/mobile/mobile.css?v=1"
-  ,"./books/chaos-space-marines/mobile/mobile.js?v=2"
-  ,"./books/chaos-space-marines/mobile/phone-popup-controller.js?v=1"
   ,"./books/chaos-space-marines/mobile/related-rules.inc?v=1"
   ,"./books/blood-angels/"
   ,BLOOD_ANGELS_ENTRY_FALLBACK

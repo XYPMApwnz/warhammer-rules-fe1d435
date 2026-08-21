@@ -234,7 +234,7 @@ assert(sharedMatcher.matches({targets:[{side:'friendly',all:['ADEPTUS MECHANICUS
 assert(!sharedMatcher.matches({targets:[{side:'friendly',all:['ADEPTUS MECHANICUS','INFANTRY']}]},datasmith),'Datasmith and Kastelan Attached Unit incorrectly keeps INFANTRY');
 
 const rosterCompatibleBooks=['death-guard','adeptus-mechanicus','tyranids','tau-empire','emperors-children','chaos-space-marines','blood-angels'];
-const singleReaderBooks=new Set(['death-guard','adeptus-mechanicus','tau-empire','tyranids','emperors-children']);
+const singleReaderBooks=new Set(['death-guard','adeptus-mechanicus','tau-empire','tyranids','emperors-children','chaos-space-marines']);
 for(const bookId of rosterCompatibleBooks){
   const desktop=fs.readFileSync(path.join(root,`books/${bookId}/scripts/app.js`),'utf8');
   if(singleReaderBooks.has(bookId)){

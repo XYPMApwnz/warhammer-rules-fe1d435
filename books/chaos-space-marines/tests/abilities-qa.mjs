@@ -36,8 +36,10 @@ let wargearCount=0;
 for(const unit of source.datasheets){
   const abilitiesId=`${unit.id.replace(/^unit-/,'')}-abilities`;
   const article=extract('article',unit.id),abilities=extract('section',abilitiesId,article);
-  const phone=fs.readFileSync(path.join(root,'mobile',`${unit.id.replace(/^unit-/,'')}.html`),'utf8');
-  const phoneAbilities=extract('section',abilitiesId,phone);
+  const stub=fs.readFileSync(path.join(root,'mobile',`${unit.id.replace(/^unit-/,'')}.html`),'utf8');
+  assert.match(stub,new RegExp(`data-canonical-target="${unit.id}"`),`${unit.title}: legacy route target differs`);
+  assert.doesNotMatch(stub,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/,`${unit.title}: legacy route contains copied content`);
+  assert.equal((reader.match(new RegExp(`id="${abilitiesId}"`,'g'))||[]).length,1,`${unit.title}: responsive reader must expose one canonical Abilities section`);
   assert.equal(unit.abilities.filter(item=>item.abilityClass==='faction'&&item.title==='Dark Pacts').length,1,`${unit.title}: Dark Pacts classification`);
   for(const item of unit.abilities){
     assert.ok(['core','faction','datasheet'].includes(item.abilityClass),`${unit.title}: invalid class for ${item.title}`);
@@ -51,18 +53,11 @@ for(const unit of source.datasheets){
     }
   }
   assert.match(abilities,/data-ability-class="faction">[\s\S]*?<h5>FACTION<\/h5>[\s\S]*?>Dark Pacts<\/button>/,`${unit.title}: missing FACTION block`);
-  const hydratedPhone=phoneAbilities
-    .replaceAll('data-source-term=','data-term=')
-    .replaceAll(' disabled','')
-    .replace(/ data-term-(?:title|summary|full-rule-path)="[^"]*"/g,'')
-    .replace(/ data-full-rule-path="[^"]*"/g,'');
-  assert.equal(hydratedPhone,abilities,`${unit.title}: Desktop and Phone ability semantics differ`);
   for(const item of unit.wargearAbilities||[]){
     wargearCount++;
     assert.match(article,new RegExp(`data-source-field="wargearAbilities.${slug(item.title)}"`),`${unit.title}: source-backed Wargear Ability missing`);
   }
   for(const id of [...abilities.matchAll(/data-term="([^"]+)"/g)].map(match=>match[1]))assert.ok(resolves(id),`${unit.title}: unresolved term ${id}`);
-  for(const id of [...phoneAbilities.matchAll(/data-source-term="([^"]+)"/g)].map(match=>match[1]))assert.ok(resolves(id),`${unit.title}: unresolved Phone term ${id}`);
 }
 
 for(const [title,ability] of representatives){
@@ -85,9 +80,8 @@ assert.equal(baseRows.filter(([, ,base])=>base==='Use model').length,7,'CSM hull
 assert.equal(createHash('sha256').update(JSON.stringify(baseRows)).digest('hex').toUpperCase(),'5F5993D58A66465620E18F3DDF9505965D6CD4BD549CFD7BB04D95B3B65597B5','CSM Base guide mapping changed');
 for(const current of source.datasheets){
   const article=extract('article',current.id);
-  const phone=fs.readFileSync(path.join(root,'mobile',`${current.id.replace(/^unit-/,'')}.html`),'utf8');
   assert.match(article,/data-source-field="stats\.Base"/,`${current.title}: Desktop Base missing`);
-  assert.match(phone,/data-source-field="stats\.Base"/,`${current.title}: Phone Base missing`);
+  assert.equal((reader.match(new RegExp(`\\sid="${current.id}"`,'g'))||[]).length,1,`${current.title}: canonical Datasheet is duplicated`);
 }
 
 const unit=title=>source.datasheets.find(item=>item.title===title);
@@ -97,9 +91,7 @@ assert.match(huron.abilities.find(item=>item.title==='Hamadrya’s Knowledge (Ps
 assert.doesNotMatch(huron.abilities.find(item=>item.title==='Hamadrya’s Knowledge (Psychic)').text,/within 9"/);
 assert.equal(heldrake.profiles.find(item=>item.name==='Heldrake').stats.M,'12"');
 assert.match(extract('article',huron.id),/within 8&amp;quot;|within 8&quot;/);
-assert.match(fs.readFileSync(path.join(root,'mobile','huron-blackheart.html'),'utf8'),/within 8&amp;quot;|within 8&quot;/);
 assert.match(extract('article',heldrake.id),/>12&amp;quot;<|>12&quot;</);
-assert.match(fs.readFileSync(path.join(root,'mobile','heldrake.html'),'utf8'),/>12&amp;quot;<|>12&quot;</);
 
 const expectedUpperSizes=new Map([
   ['Accursed Cultists',16],['Chosen',10],['Possessed',10],['Raptors',10],['Red Corsairs Raiders',10],['Warp Talons',10]
@@ -123,9 +115,7 @@ assert.deepEqual(maelstrom.relations.leader,[]);
 assert.deepEqual(maelstrom.relations.support,['CHOSEN','LEGIONARIES','RED CORSAIRS RAIDERS']);
 for(const subject of [master,maelstrom]){
   const desktop=extract('section',`${subject.id.replace(/^unit-/,'')}-support`,extract('article',subject.id));
-  const phone=extract('section',`${subject.id.replace(/^unit-/,'')}-support`,fs.readFileSync(path.join(root,'mobile',`${subject.id.replace(/^unit-/,'')}.html`),'utf8'));
   assert.match(desktop,/<h4>Support<\/h4>/);
-  const hydratedPhone=phone.replace(/<a class="term-button"([^>]*?) href="[^"]+">/g,'<button class="term-button"$1>').replaceAll('</a>','</button>');
-  assert.equal(hydratedPhone,desktop);
+  assert.equal((reader.match(new RegExp(`id="${subject.id.replace(/^unit-/,'')}-support"`,'g'))||[]).length,1,`${subject.title}: responsive reader must expose one canonical Support section`);
 }
 console.log(`CSM ability QA: 54 current Datasheets; Core/Faction compact; unique text, Wargear handling and glossary targets verified.`);

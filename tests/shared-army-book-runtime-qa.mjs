@@ -78,6 +78,14 @@ assert.match(adeptusMechanicus,/window\.WHArmyBook\.install/);
 assert.match(adeptusMechanicus,/shared\/compatible-rules-matrix\.mjs/);
 assert.match(adeptusMechanicus,/shared\/stratagem-presentation\.mjs/);
 assert(!fs.existsSync(path.join(root,'books/adeptus-mechanicus/scripts/compatible-rules-runtime.mjs')));
+const deathGuard=read('books/death-guard/scripts/app.js'),deathGuardReader=read('books/death-guard/reader.html');
+assert.match(deathGuard,/window\.WHArmyBook\.install/);
+assert.match(deathGuard,/createCompatibleRulesLoader/);
+assert.match(deathGuard,/shared\/compatible-rules-matrix\.mjs/);
+assert.match(deathGuard,/shared\/stratagem-presentation\.mjs/);
+assert.match(deathGuardReader,/shared\/army-related-rules\.js/);
+assert.match(deathGuardReader,/shared\/army-book-app\.js/);
+assert(!fs.existsSync(path.join(root,'books/death-guard/scripts/compatible-stratagems-runtime.mjs')));
 assert.doesNotMatch(armyBook,/bookId\s*===/);
 
 const presentationCases=[

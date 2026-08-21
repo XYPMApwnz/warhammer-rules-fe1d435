@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {buildCompatibleRules,detachmentByRuleId,stableStringify} from '../books/death-guard/tools/build-compatible-rules.mjs';
-import {compatibleStratagemsReviewEnabled,getCompatibleStratagems} from '../books/death-guard/scripts/compatible-stratagems-runtime.mjs';
+import {createCompatibleRulesLoader} from '../books/shared/compatible-rules-matrix.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const json=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
@@ -45,15 +45,23 @@ for(const [unitId,rules] of Object.entries(matrix.units))for(const rule of rules
   assert.notEqual(ledgerByPair.get(`${unitId}|${rule.ruleId}`)?.decision,'reject',`reject leaked: ${unitId}/${rule.ruleId}`);
   assert(rule.state==='match'||conditions.has(rule.condition),`invalid condition: ${rule.ruleId}`);
 }
-assert.equal(compatibleStratagemsReviewEnabled,true,'new path must be enabled on the review branch');
 const builder=fs.readFileSync(path.join(root,'books/death-guard/tools/build-compatible-rules.mjs'),'utf8');
 assert(!/related-rules-matcher|TARGET|keywords/i.test(builder),'builder must not infer eligibility');
+const runtimeMatrix={...matrix,units:Object.fromEntries(Object.entries(matrix.units).map(([unitId,rules])=>[unitId,rules.map(rule=>rule.detachmentId?.startsWith('detachment-')?{...rule,detachmentId:rule.detachmentId.replace(/^detachment-/,'')}:rule)]))};
+let runtimeFetches=0;
+const runtime=createCompatibleRulesLoader('memory:death-guard-compatible-rules',{
+  schema:'death-guard-compatible-rules/v1',
+  resolveDetachmentSelection:true,
+  fetch:async()=>{runtimeFetches++;return{ok:true,json:async()=>runtimeMatrix};}
+});
+await runtime.load();
 const warlord=Object.entries(matrix.units).flatMap(([unitId,rules])=>rules.filter(rule=>rule.condition==='warlord-unknown').map(rule=>[unitId,rule]))[0];
 assert(warlord,'matrix must contain a Warlord condition');
-assert.equal(getCompatibleStratagems(matrix,warlord[0],{detachmentId:warlord[1].detachmentId,warlord:true}).find(rule=>rule.ruleId===warlord[1].ruleId).state,'match');
+assert.equal((await runtime.rowsForUnit(warlord[0],{detachmentId:warlord[1].detachmentId})).find(rule=>rule.ruleId===warlord[1].ruleId).condition,'warlord-unknown');
 const detachment=Object.entries(matrix.units).flatMap(([unitId,rules])=>rules.filter(rule=>rule.condition==='detachment-not-selected').map(rule=>[unitId,rule]))[0];
-assert.equal(getCompatibleStratagems(matrix,detachment[0],{detachmentId:detachment[1].detachmentId}).find(rule=>rule.ruleId===detachment[1].ruleId).state,'match');
-assert.equal(getCompatibleStratagems(matrix,detachment[0],{detachmentId:detachment[1].detachmentId.replace(/^detachment-/,'')}).find(rule=>rule.ruleId===detachment[1].ruleId).state,'match');
-assert.deepEqual(getCompatibleStratagems(matrix,detachment[0],{detachmentId:'all'}),matrix.units[detachment[0]],'All Detachments must preserve every compatible matrix row');
-assert(getCompatibleStratagems(matrix,warlord[0],{detachmentId:'other'}).every(rule=>rule.scope==='core'));
+assert.equal((await runtime.rowsForUnit(detachment[0],{detachmentId:detachment[1].detachmentId})).find(rule=>rule.ruleId===detachment[1].ruleId).state,'match');
+assert.equal((await runtime.rowsForUnit(detachment[0],{detachmentId:detachment[1].detachmentId.replace(/^detachment-/,'')})).find(rule=>rule.ruleId===detachment[1].ruleId).state,'match');
+assert.deepEqual(await runtime.rowsForUnit(detachment[0],{detachmentId:'all'}),runtimeMatrix.units[detachment[0]],'All Detachments must preserve every compatible matrix row');
+assert((await runtime.rowsForUnit(warlord[0],{detachmentId:'other'})).every(rule=>rule.scope==='core'));
+assert.equal(runtimeFetches,1,'shared lazy source must fetch the matrix exactly once');
 console.log('Death Guard compatible rules matrix QA passed.');

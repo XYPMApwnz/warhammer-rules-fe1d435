@@ -13,6 +13,10 @@ const datasheetLayout=readProject('books/shared/datasheet-layout.js');
 const datasheetCss=readProject('books/shared/datasheet-system.css');
 const popupContent=readProject('books/shared/popup-content.js');
 const glossaryAutolink=readProject('books/shared/glossary-autolink.js');
+const sharedArmyBook=readProject('books/shared/army-book-app.js');
+const sharedRelatedRules=readProject('books/shared/army-related-rules.js');
+const sharedCompatibleMatrix=readProject('books/shared/compatible-rules-matrix.mjs');
+const sharedStratagemPresentation=readProject('books/shared/stratagem-presentation.mjs');
 const glossaryRegistry=JSON.parse(readProject('glossary/registry.en.json'));
 const bookData=JSON.parse(read('content/death-guard-rules.en.json'));
 const coreData=JSON.parse(readProject('books/core-rules/content/core-rules.digital-11e.json'));
@@ -209,7 +213,7 @@ check('mobile popup layer is fixed',/@media\s*\(max-width:\s*800px\)[\s\S]*?\.po
 check('popup cards expose dialog semantics',popups.includes("setAttribute('role','dialog')")&&popups.includes("setAttribute('aria-modal','false')"));
 check('outside click closes popups but preserves them behind full entry',popups.includes("this.ids.length&&!event.target.closest('.term-popup,.full-entry-layer')")&&popups.includes('this.closeFrom(0)'));
 check('datasheet actions appear only inside Related Rules',!popups.includes('Datasheet & Wargear')&&!popups.includes("label:'Statline'")&&popups.includes("label:'Open datasheet'")&&popups.includes("closest?.('.related-rules-layer')"));
-check('Mega Glossary transitions use the shared return helper',/\.\.\/\.\.\/glossary-return\.js\?v=\d+/.test(html)&&read('scripts/full-entry-controller.js').includes('WHGlossaryReturn')&&read('scripts/app.js').includes('WHGlossaryReturn'));
+check('Mega Glossary transitions use the shared return helper',/\.\.\/\.\.\/glossary-return\.js\?v=\d+/.test(html)&&read('scripts/full-entry-controller.js').includes('WHGlossaryReturn')&&sharedArmyBook.includes('WHGlossaryReturn'));
 check('popups use the shared semantic profile renderer',popups.includes('WHPopupContent.render')&&popupContent.includes("document.createElement('table')")&&popupContent.includes("document.createElement('dl')"));
 check('unit popup grid has a mobile no-overflow layout',/\.popup-stats\s*\{[^}]*grid-template-columns:\s*repeat\(auto-fit, minmax\(54px, 1fr\)\)/.test(read('styles/popups.css'))&&/@media\s*\(max-width:\s*480px\)[\s\S]*?\.popup-stats\s*\{[^}]*grid-template-columns:\s*repeat\(4, minmax\(0, 1fr\)\)/.test(read('styles/popups.css')));
 
@@ -285,9 +289,9 @@ check('detachment Stratagems use the shared explicit grid',!contentCss.includes(
 check('full entry becomes a full-screen mobile dialog',/@media\s*\(max-width:\s*800px\)[\s\S]*?\.full-entry-dialog\s*\{[^}]*height:\s*100%/.test(read('styles/popups.css')));
 check('each detachment has a visible Stratagems destination',(markup.match(/class="detachment-part"[^>]*data-track="[^"]+">\s*<h4 class="detachment-part-title">Stratagems<\/h4>/g)||[]).length===bookData.audit.detachments);
 check('no inline style or inline script',!/<style|<script(?![^>]*src=)/i.test(html));
-check('only related rules are fetched at runtime',files.every(file=>file==='scripts/app.js'?((read(file).match(/\bfetch\s*\(/g)||[]).length===1&&/fetch\('\.\/mobile\/related-rules\.inc\?v=\d+'\)/.test(read(file))):!/\bfetch\s*\(/.test(read(file))));
-check('Roster Guide passes its detachments and assigned Enhancement owners to Related Rules',read('scripts/roster-filter.js').includes('enhancementRuleIdsByUnitId')&&read('scripts/app.js').includes('rosterGuide?.detachmentIds')&&read('scripts/app.js').includes('assigned.has(rule.ruleId)')&&read('scripts/app.js').includes('rosterDetachments.has(section.dataset.detachment)'));
-check('service worker registration is protocol gated',read('scripts/app.js').includes("location.protocol==='http:'||location.protocol==='https:'"));
+check('Compatible Rules use the shared lazy matrix and template loaders',appSource.includes('createCompatibleRulesLoader')&&appSource.includes("schema:'death-guard-compatible-rules/v1'")&&sharedCompatibleMatrix.includes('let source=null,pending=null')&&sharedRelatedRules.includes('getTemplate(templateUrl)')&&sharedRelatedRules.includes('fetch(url)'));
+check('Roster Guide passes its detachments and assigned Enhancement owners to shared Related Rules',read('scripts/roster-filter.js').includes('enhancementRuleIdsByUnitId')&&appSource.includes('rosterGuide:()=>window.DG_ROSTER_GUIDE')&&appSource.includes("rosterEnhancements:'assigned-only'")&&sharedRelatedRules.includes('enhancementRuleIdsByUnitId'));
+check('service worker registration is protocol gated',sharedArmyBook.includes("location.protocol==='http:'||location.protocol==='https:'"));
 check('weapon rows receive explicit table semantics',read('scripts/ui-controllers.js').includes("row.setAttribute('role','row')"));
 check('mobile header disables expensive backdrop blur',/@media\s*\(max-width:\s*800px\)[\s\S]*?\.app-header\s*\{[^}]*backdrop-filter:\s*none/.test(read('styles/layout.css')));
 check('mobile popups disable expensive backdrop blur',/@media\s*\(max-width:\s*800px\)[\s\S]*?\.popup-layer:has\(\.term-popup\)::before\s*\{[^}]*backdrop-filter:\s*none/.test(read('styles/popups.css')));
@@ -306,14 +310,14 @@ check('behavior: two known Death Guard Detachments remain active on desktop',JSO
 check('behavior: two known Death Guard Detachments remain active for Phone related rules',JSON.stringify(desktopDetachmentResolver?.(desktopDetachmentIds,desktopDetachmentIds))===JSON.stringify(desktopDetachmentIds));
 check('behavior: zero and unknown Death Guard Detachments fail closed',desktopDetachmentResolver?.([],desktopDetachmentIds)===null&&desktopDetachmentResolver?.(['detachment-unknown'],desktopDetachmentIds)===null);
 check('behavior: duplicate matching Detachment options fail closed as ambiguous',desktopDetachmentResolver?.([desktopDetachmentIds[0]],[desktopDetachmentIds[0],desktopDetachmentIds[0]])===null);
-check('roster paths retain every resolved Detachment and suppress the selector',rosterFilterRuntime.includes('const detachmentIds = new Set(resolvedDetachmentIds)')&&appSource.includes("detachment=rosterMode?'all'")&&appSource.includes('if(!rosterMode)controls.append(filterMenu)'));
+check('roster paths retain every resolved Detachment and suppress the selector',rosterFilterRuntime.includes('const detachmentIds = new Set(resolvedDetachmentIds)')&&appSource.includes("rosterDetachment:'all'")&&appSource.includes('restrictToRosterDetachments:true')&&sharedRelatedRules.includes("if(!rosterMode)controls.append(filterMenu)"));
 check('exact Enhancement ownerUnitId filtering is unchanged',rosterSemanticRuntime.includes('item.ownerUnitId === unit.id')&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
 check('phase-bound Bilemaw Blight does not persist while Sorrowsyphon Damage still derives',rosterSemanticRuntime.includes("bilemaw:'enhancement-bilemaw-blight'")&&rosterSemanticRuntime.includes('cell.textContent = cell.dataset.rosterBase')&&rosterSemanticRuntime.includes("card.querySelector('.roster-plague-wind-range')?.remove()")&&rosterSemanticRuntime.includes("modifyWeaponStat(row, 'D', 1, 'sorrowsyphon')"));
 check('Desktop and Phone load one book-local Death Guard semantic runtime',(html.match(/scripts\/roster-semantics\.js\?v=2/g)||[]).length===1&&mobileTyphus.includes('data-canonical-reader="../reader.html"')&&!mobileTyphus.includes('roster-semantics.js'));
 check('Desktop and Phone delegate gameplay projection without local rule registries',rosterFilterRuntime.includes('semantic.decorate(')&&!rosterFilterRuntime.includes('const DG_RULE=')&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
 const invalidRosterHandoff=/location\.replace\(['"]\.\.\/\.\.\/roster-guides\/index\.html[^;]*;\s*return;/.test(rosterFilterRuntime);
 check('canonical invalid roster handoff is terminal before responsive roster projection',invalidRosterHandoff&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
-check('no-roster All Detachments behavior is unchanged',rosterFilterRuntime.includes('if (!rosterId) return;')&&appSource.includes("[['all','All Detachments']]")&&appSource.includes("detachment=rosterMode?'all'")&&mobileTyphus.includes('data-canonical-target="unit-typhus"'));
+check('no-roster All Detachments behavior is preserved by the shared runtime',rosterFilterRuntime.includes('if (!rosterId) return;')&&appSource.includes("rosterDetachment:'all'")&&sharedRelatedRules.includes("['all',rosterMode?'All roster detachments':'All detachments']")&&mobileTyphus.includes('data-canonical-target="unit-typhus"'));
 check('mobile generator emits canonical content-free compatibility routes',mobileBuild.includes('data-canonical-reader="../reader.html"')&&mobileBuild.includes('mobile-route-redirect.js?v=1')&&mobileBuild.includes('Invalid compatibility stub'));
 check('mobile route redirects preserve the complete current query and canonical hash',mobileRouteRedirect.includes('destination.search=location.search')&&mobileRouteRedirect.includes("destination.hash=location.hash||root.dataset.canonicalTarget||''")&&mobileRouteRedirect.includes('location.replace(destination.href)'));
 try{new vm.Script(mobileRouteRedirect,{filename:'books/shared/mobile-route-redirect.js'});check('Phone popup controller syntax',true);}catch(error){check('Phone popup controller syntax',false,error.message);}
@@ -336,13 +340,13 @@ try{
   check('behavior: Phone missing restored root closes the chain',redirectRoute('https://example.test/books/death-guard/mobile/index.html','','start').count===0&&dgRedirect.count===1&&amRedirect.count===1);
 }catch(error){check('Phone popup behavioral state machine',false,error.message);}
 check('Phone popup uses canonical glossary records and shared renderers',html.includes('../../glossary/generated/glossary.en.js')&&html.includes('../shared/popup-content.js')&&html.includes('../shared/glossary-autolink.js')&&popups.includes('WHPopupContent.render'));
-check('Phone Stratagems preserve turn metadata and add canonical type classification before and after Compatible Rules load',appSource.includes('function decorateStratagemTypes(root)')&&appSource.includes('Battle Tactic|Strategic Ploy|Wargear|Epic Deed|Core')&&appSource.includes("'unknown'")&&appSource.includes('decorateStratagemTypes(document)')&&appSource.includes('decorateStratagemTypes(content)'));
+check('Phone Stratagems preserve turn metadata and add canonical type classification before and after Compatible Rules load',appSource.includes('createStratagemPresentation')&&appSource.includes('presentation.decorate(document)')&&appSource.includes('decorateContent:presentation.decorate')&&sharedStratagemPresentation.includes('Battle Tactic|Strategic Ploy|Wargear|Epic Deed|Core')&&sharedStratagemPresentation.includes("'unknown'"));
 check('Stratagem primary colors use canonical type selectors rather than turn classes',contentCss.includes('.stratagem[data-stratagem-type="battle-tactic"]')&&contentCss.includes('.stratagem[data-stratagem-type="strategic-ploy"]')&&contentCss.includes('.stratagem[data-stratagem-type="wargear"]')&&contentCss.includes('.stratagem[data-stratagem-type="epic-deed"]')&&contentCss.includes('.stratagem[data-stratagem-type="core"]')&&!contentCss.includes('.stratagem.turn-yours{--strat-color'));
 check('Popup actions use equal responsive grid cells and telephone single-column controls',read('styles/popups.css').includes('.popup-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr));')&&read('styles/popups.css').includes('@media (max-width: 600px)'));
 check('Phone popup shrink-wraps short content and bounds long content internally',/@media\s*\(max-width:\s*800px\)[\s\S]*?\.popup-layer\s*\{[^}]*position:\s*fixed/.test(read('styles/popups.css'))&&/@media\s*\(max-width:\s*800px\)[\s\S]*?\.full-entry-dialog\s*\{[^}]*height:\s*100%/.test(read('styles/popups.css')));
 check('Phone popup preserves parent DOM by syncing only the changed suffix',popups.includes('this.ids.length')&&popups.includes('this.closeFrom(0)')&&popups.includes('restore('));
 check('Phone popup keeps ordinary closure out of Browser History',!popups.includes('pushState')&&!popups.includes('history.back'));
-check('Phone glossary return stores and restores the complete popup chain',appSource.includes('returnRecord.popupIds?.length')&&appSource.includes('popups.restore(returnRecord.popupIds'));
+check('Phone glossary return stores and restores the complete popup chain',sharedArmyBook.includes('record.popupIds?.length')&&sharedArmyBook.includes('popups.restore(record.popupIds'));
 check('Phone generated outputs have a read-only freshness mode',mobileBuild.includes("process.argv.includes('--check')")&&mobileBuild.includes('stale ${file}')&&mobileBuild.includes('missing ${file}'));
 const coreRouteTerm=glossaryRegistry.terms['core-lethal-hits'];
 const localRouteTerm=glossaryRegistry.terms['death-guard-ability-the-destroyer-hive-typhus'];
@@ -359,14 +363,14 @@ check('book uses the unified root manifest',html.includes('href="../../manifest.
 check('release service worker owns its cache family',readProject('service-worker.js').includes('key.startsWith(CACHE_PREFIX)')&&readProject('service-worker.js').includes('warhammer-rules-fe1d435-'));
 check('release PWA cache revision is content-derived',readProject('service-worker.js').includes('self.WH40K_CACHE_REVISION'));
 check('Detachment picker stays above Stratagem card badges',contentCss.includes('.full-related-controls{position:relative;z-index:4;'));
-check('Detachment picker closes before another datasheet dialog opens',read('scripts/app.js').includes('if(filterMenu)filterMenu.open=false'));
+check('Detachment picker closes before another datasheet dialog opens',appSource.includes('closeFilterOnOpen:true')&&sharedRelatedRules.includes('if(options.closeFilterOnOpen&&filterMenu)filterMenu.open=false'));
 check('book loads the shared navigation target resolver',html.includes('src="../shared/navigation-targets.js?v='));
 check('book loads the shared datasheet design',html.includes('href="../shared/datasheet-system.css?v='));
 check('book loads the shared datasheet layout',html.includes('src="../shared/datasheet-layout.js?v='));
 check('long datasheet abilities use an original-node continuation',datasheetLayout.includes("layout.continuation.className='ability-list ds-abilities-continuation'")&&datasheetLayout.includes('layout.cards.slice(split).forEach(node=>layout.continuation.append(node))'));
 check('long datasheet continuation recalculates from available card width',datasheetLayout.includes("'ResizeObserver' in window")&&datasheetLayout.includes('entry.contentRect.width')&&datasheetLayout.includes('restoreAbilities(layout)'));
 check('long datasheet continuation spans the datasheet width',datasheetCss.includes('.unit-card.ds-layout .ds-abilities-continuation')&&datasheetCss.includes('grid-template-columns: 1fr'));
-check('glossary autolinking precedes navigation geometry',read('scripts/app.js').indexOf('WHGlossaryAutolink?.apply')<read('scripts/app.js').indexOf('new window.DGNavigation'));
+check('glossary autolinking precedes navigation geometry',sharedArmyBook.indexOf('WHGlossaryAutolink?.apply')<sharedArmyBook.indexOf('new root.DGNavigation'));
 check('v4 icon is used without legacy v3 PNG references',html.includes('assets/icon-v4.svg')&&!html.includes('icon-180.png'));
 check('navigation and popup specifications are present',['docs/SPEC_NAVIGATION.md','docs/SPEC_POPUPS.md'].every(file=>fs.existsSync(path.join(root,file))));
 const navigationSpec=read('docs/SPEC_NAVIGATION.md');

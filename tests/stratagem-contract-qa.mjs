@@ -119,20 +119,14 @@ for(const file of [
   assert.doesNotMatch(source,/Check WHEN and TARGET/);
   assert.doesNotMatch(source,/result\.reasons/);
 }
-for(const file of ['books/tyranids/scripts/app.js','books/tau-empire/scripts/app.js','books/emperors-children/scripts/app.js','books/chaos-space-marines/scripts/app.js','books/adeptus-mechanicus/scripts/app.js']){
+for(const file of ['books/death-guard/scripts/app.js','books/tyranids/scripts/app.js','books/tau-empire/scripts/app.js','books/emperors-children/scripts/app.js','books/chaos-space-marines/scripts/app.js','books/adeptus-mechanicus/scripts/app.js']){
   const source=read(file);
   assert.match(source,/conditionLabels/);
   assert.match(source,/shared\/compatible-rules-matrix\.mjs/);
   assert.doesNotMatch(source,/Check WHEN and TARGET|result\.reasons/);
 }
-for(const file of ['books/death-guard/scripts/app.js']){
-  const source=read(file);
-  assert.match(source,/Conditionally compatible/);
-  assert.match(source,/compatibleRuntime\.conditionLabels/);
-  assert.doesNotMatch(source,/result\.reasons/);
-}
-const dgReviewRuntime=read('books/death-guard/scripts/compatible-stratagems-runtime.mjs');
-for(const label of ['Requires an Attached Unit','Requires a second Character','Requires Warlord selection','Requires Detachment selection'])assert.ok(dgReviewRuntime.includes(label));
+const dgRuntime=read('books/death-guard/scripts/app.js');
+for(const label of ['Requires an Attached Unit','Requires a second Character','Requires Warlord selection','Requires Detachment selection'])assert.ok(dgRuntime.includes(label));
 
 const sharedPresentation=read('books/shared/stratagem-presentation.mjs');
 for(const label of ['Battle Tactic Stratagem','Strategic Ploy Stratagem','Wargear Stratagem','Epic Deed Stratagem','Core Stratagem','Type unverified'])assert.ok(sharedPresentation.includes(label),`shared presentation: canonical visible type label ${label} is absent`);
@@ -140,7 +134,7 @@ assert.match(sharedPresentation,/typeNodes=\[\.\.\.card\.querySelectorAll\('\.st
 assert.match(sharedPresentation,/typeNodes\.forEach\(node=>node\.remove\(\)\)/,'shared decorator must remove duplicate labels');
 assert.match(sharedPresentation,/host\?\.append\(label\)/,'shared decorator must place the label in the card header');
 assert.doesNotMatch(sharedPresentation,/dataset\.stratagemType\|\|''\)\)return/,'valid metadata must not skip visible-label decoration');
-for(const file of ['books/tyranids/scripts/app.js','books/tau-empire/scripts/app.js','books/emperors-children/scripts/app.js','books/chaos-space-marines/scripts/app.js','books/adeptus-mechanicus/scripts/app.js'])assert.match(read(file),/shared\/stratagem-presentation\.mjs/,`${file}: shared Stratagem presentation is absent`);
+for(const file of ['books/death-guard/scripts/app.js','books/tyranids/scripts/app.js','books/tau-empire/scripts/app.js','books/emperors-children/scripts/app.js','books/chaos-space-marines/scripts/app.js','books/adeptus-mechanicus/scripts/app.js'])assert.match(read(file),/shared\/stratagem-presentation\.mjs/,`${file}: shared Stratagem presentation is absent`);
 
 const css=read('books/death-guard/styles/content.css');
 const ecPackStratagems=json('books/emperors-children/content/emperors-children-faction-pack.en.json').detachments.flatMap(detachment=>detachment.stratagems);

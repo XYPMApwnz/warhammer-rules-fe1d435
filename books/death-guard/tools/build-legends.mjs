@@ -202,7 +202,7 @@ const relationGraphs=buildRelationGraphs(unitSections.map(unit=>({...unit,keywor
 let reader=fs.readFileSync(readerFile,'utf8');
 reader=reader.replace(/rule-facts\.js\?v=\d+/,'rule-facts.js?v=5');
 reader=reader.replace(/points-validator\.js\?v=\d+/,'points-validator.js?v=4');
-reader=reader.replace(/scripts\/app\.js\?v=\d+/,'scripts/app.js?v=46');
+reader=reader.replace(/scripts\/app\.js\?v=\d+/,'scripts/app.js?v=47');
 reader=reader.replace(/scripts\/roster-filter\.js\?v=\d+/,'scripts/roster-filter.js?v=24');
 reader=reader.replace(/\sdata-eligibility="[^"]*"/g,'');
 reader=replaceOrInsert(reader,'li',legends.group.id,'pact-of-decay-datasheets',nav);

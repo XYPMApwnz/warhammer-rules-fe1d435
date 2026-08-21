@@ -125,7 +125,8 @@ for(const bookId of supported){
     assert((related.match(/class="stratagem surface"/g)||[]).length===103,'chaos-space-marines: 93 faction and 10 Core Stratagems are required');
     assert((related.match(/class="enhancement\b/g)||[]).length===62,'chaos-space-marines: all 30 FP and 32 secondary-consensus Enhancements are required');
     assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&/\.\/scripts\/app\.js\?v=\d+/.test(reader),'chaos-space-marines: roster or matrix controller is absent');
-    assert(fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs'))&&fs.existsSync(path.join(bookRoot,'scripts','roster-data.js')),'chaos-space-marines: matrix or roster data is absent');
+    const app=fs.readFileSync(path.join(bookRoot,'scripts','app.js'),'utf8');
+    assert(/createCompatibleRulesLoader/.test(app)&&/WHArmyBook\.install/.test(app)&&!fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs'))&&fs.existsSync(path.join(bookRoot,'scripts','roster-data.js')),'chaos-space-marines: shared matrix runtime or roster data is absent');
     console.log('PASS  chaos-space-marines: 54 current units, 17 Detachments, desktop/iPad + Phone routes');
     continue;
   }

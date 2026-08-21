@@ -65,7 +65,7 @@ assert.match(bloodAngels,/shared\/stratagem-presentation\.mjs/);
 assert.match(bloodAngels,/window\.WHArmyBook\.install/);
 assert.equal(JSON.parse(read('books/blood-angels/book.config.json')).sharedArmyBookApp,true);
 assert(!fs.existsSync(path.join(root,'books/blood-angels/scripts/compatible-rules-runtime.mjs')));
-for(const book of ['tau-empire','emperors-children','tyranids']){
+for(const book of ['tau-empire','emperors-children','tyranids','chaos-space-marines']){
   const app=read(`books/${book}/scripts/app.js`),config=JSON.parse(read(`books/${book}/book.config.json`));
   assert.match(app,/window\.WHArmyBook\.install/);
   assert.match(app,/shared\/compatible-rules-matrix\.mjs/);

@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 
 const read=file=>JSON.parse(fs.readFileSync(new URL(file,import.meta.url),'utf8'));
+const text=file=>fs.readFileSync(new URL(file,import.meta.url),'utf8');
+const config=read('../book.config.json');
 const matrix=read('../generated/compatible-rules.json');
 const codex=read('../content/chaos-space-marines-codex-datasheets.en.json');
 const pack=read('../content/chaos-space-marines-faction-pack.en.json');
@@ -12,6 +14,12 @@ const titleKey=value=>value.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const pointId=(detachment,title)=>points.enhancements.find(item=>titleKey(item.detachment)===titleKey(detachment)&&titleKey(item.title)===titleKey(title))?.id;
 
 assert.equal(matrix.schema,'chaos-space-marines-compatible-rules/v1');
+assert.equal(config.sharedArmyBookApp,true);
+const app=text('../scripts/app.js');
+assert.match(app,/createCompatibleRulesLoader/,'Compatible Rules must use the shared lazy loader');
+assert.match(app,/window\.WHArmyBook\.install/,'CSM must use the shared Army Book runtime');
+assert.match(app,/shared\/stratagem-presentation\.mjs/,'CSM must use shared Stratagem presentation');
+assert.equal(fs.existsSync(new URL('../scripts/compatible-rules-runtime.mjs',import.meta.url)),false,'local Compatible Rules adapter must be removed');
 assert.equal(codex.datasheets.length,54);
 assert.equal(codex.legends.length,53);
 assert.equal(Object.keys(matrix.units).length,54);

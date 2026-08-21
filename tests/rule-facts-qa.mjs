@@ -84,7 +84,7 @@ assert.throws(()=>ruleFacts.normalizeKeyword(null),TypeError);
 assert.equal(ruleFacts.textFromDomLike({textContent:'Death Guard'}),'Death Guard');
 assert.throws(()=>ruleFacts.textFromDomLike({value:'Death Guard'}),TypeError);
 
-const desktopProfiles=new Map();let profiles=0,mobileProfiles=0;
+const desktopProfiles=new Map();let profiles=0,compatibilityRoutes=0;
 for(const book of Object.keys(sources)){
   const html=fs.readFileSync(path.join(root,'books',book,'reader.html'),'utf8');
   assert.match(html,/shared\/rule-facts\.js\?v=\d+/,`${book}: shared facts runtime is absent`);
@@ -111,11 +111,11 @@ for(const book of Object.keys(sources)){
   const mobileDir=path.join(root,'books',book,'mobile');
   for(const [unitId,source] of expected){
     const file=path.join(mobileDir,`${source.slug}.html`),mobile=fs.readFileSync(file,'utf8');
-    const tag=(mobile.match(/<article class="unit-card\b[^>]*>/)||[])[0];
-    assert.ok(tag,`${book}/${unitId}: Phone Mode unit card is absent`);
-    const actual=ruleFacts.serializeRuleProfile(ruleFacts.profileFromDataset({ruleFacts:decode(attr(tag,'data-rule-facts'))},{id:unitId}));
-    assert.deepEqual(actual,desktopProfiles.get(`${book}/${unitId}`),`${book}/${unitId}: Phone Mode profile parity`);
-    mobileProfiles+=1;
+    assert.match(mobile,/data-canonical-reader="\.\.\/reader\.html"/,`${book}/${unitId}: compatibility route lacks canonical reader handoff`);
+    assert.match(mobile,new RegExp(`data-canonical-target="${unitId}"`),`${book}/${unitId}: compatibility route lacks exact canonical target`);
+    assert.match(mobile,/mobile-route-redirect\.js\?v=1/,`${book}/${unitId}: compatibility route lacks redirect runtime`);
+    assert.doesNotMatch(mobile,/<(?:article|section)\b|\bunit-card\b|\bdata-rule-facts\b/i,`${book}/${unitId}: compatibility route contains copied book content`);
+    compatibilityRoutes+=1;
   }
 }
 
@@ -190,4 +190,4 @@ assert.equal(matcher.match(unitRole({allKeywords:['ADEPTUS MECHANICUS','INFANTRY
 const mandatoryReverse=ruleFacts.profileFromRecord({unitId:'unit-kastelan',keywords:['ADEPTUS MECHANICUS','VEHICLE','WALKER'],formationRequired:true,relations:{canBeSupportedBy:[{unitId:'unit-datasmith',keywords:['ADEPTUS MECHANICUS','INFANTRY','CHARACTER','TECH-PRIEST'],removeKeywords:['INFANTRY'],mandatory:true,characterCount:1,maxCharacters:1}]}});
 for(const keyword of ['VEHICLE','WALKER','TECH-PRIEST'])assert.equal(matcher.match(unitRole({allKeywords:[keyword]}),mandatoryReverse).state,'match',`Kastelan perspective loses ${keyword}`);
 assert.equal(matcher.match(unitRole({allKeywords:['INFANTRY']}),mandatoryReverse).state,'no-match','Kastelan perspective restores removed INFANTRY');
-console.log(`PASS source facts parity: ${profiles} desktop + ${mobileProfiles} Phone Mode datasheets`);
+console.log(`PASS source facts parity: ${profiles} canonical datasheets + ${compatibilityRoutes} content-free compatibility routes`);

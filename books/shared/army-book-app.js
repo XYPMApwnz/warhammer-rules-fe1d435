@@ -2,10 +2,12 @@
   'use strict';
 
   function install(config){
+    if(!config||typeof config.bookId!=='string'||!config.bookId)throw new TypeError('WHArmyBook requires a bookId.');
     const params=new URLSearchParams(location.search);
     const phoneMode=params.get('view')==='mobile';
     if(phoneMode)document.documentElement.dataset.view='mobile';
     else document.documentElement.removeAttribute('data-view');
+    const runtimeContext=Object.freeze({root,config,params,phoneMode});
 
     const terms={...(root.WH40K_GLOSSARY?.forBook(config.bookId)||{}),...(root.DG_TERMS||{})};
     const documentRoot=document.querySelector('.document');
@@ -15,9 +17,13 @@
     const navigation=new root.DGNavigation({breakpoint:phoneMode?Number.MAX_SAFE_INTEGER:800});
     const fullEntry=new root.DGFullEntry(root.WH40K_GLOSSARY);
     const popups=new root.DGPopups(terms,fullEntry);
-    const relatedRules=root.WHArmyRelatedRules?.install({
-      storageKey:`${config.bookId}-detachment-filter`,
-      rosterGuide:root.WH_ARMY_ROSTER_GUIDE
+    const relatedConfig=config.relatedRules||{};
+    const relatedInstaller=relatedConfig.installer||root.WHArmyRelatedRules;
+    const rosterGuide=typeof relatedConfig.rosterGuide==='function'?relatedConfig.rosterGuide(runtimeContext):relatedConfig.rosterGuide||root.WH_ARMY_ROSTER_GUIDE;
+    const relatedRules=relatedInstaller?.install({
+      storageKey:relatedConfig.storageKey===undefined?`${config.bookId}-detachment-filter`:relatedConfig.storageKey,
+      ...relatedConfig,
+      rosterGuide
     });
     const journey=new root.DGJourney(navigation,popups,null,relatedRules);
     new root.DGTableAccessibility();
@@ -72,6 +78,12 @@
     if((location.protocol==='http:'||location.protocol==='https:')&&'serviceWorker'in navigator){
       root.addEventListener('load',()=>navigator.serviceWorker.register('../../service-worker.js'));
     }
+    const extensions=config.extensions==null?[]:Array.isArray(config.extensions)?config.extensions:[config.extensions];
+    extensions.forEach(extension=>{
+      if(typeof extension!=='function')throw new TypeError('WHArmyBook extensions must be functions.');
+      extension(Object.freeze({...runtimeContext,app}));
+    });
+    return app;
   }
 
   root.WHArmyBook=Object.freeze({install});

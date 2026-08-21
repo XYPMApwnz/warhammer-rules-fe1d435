@@ -56,7 +56,9 @@
     "Twin-linked"
   ],
   "assetVersions": {
-    "app": 6,
+    "app": 7,
+    "armyBook": 10,
+    "relatedRules": 13,
     "ruleFacts": 5,
     "book": 3,
     "rosterFilter": 2,

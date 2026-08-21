@@ -311,19 +311,21 @@ const normalizedHtml=html
   .replace('<script src="../shared/army-related-rules.js"></script>','<script src="../shared/modal-focus.js?v=1"></script><script src="../shared/army-related-rules.js"></script>')
   .replace('../shared/rule-facts.js?v=4',`../shared/rule-facts.js?v=${config.assetVersions?.ruleFacts||4}`)
   .replace('../shared/army-related-rules.js',`../shared/army-related-rules.js?v=${config.assetVersions?.relatedRules||10}`)
-  .replace('../shared/army-book-app.js','../shared/army-book-app.js?v=9')
+  .replace('../shared/army-book-app.js',`../shared/army-book-app.js?v=${config.assetVersions?.armyBook||9}`)
   .replace('./scripts/app.js',`./scripts/app.js?v=${config.assetVersions?.app||(config.dedicatedMobile?'3':'2')}`);
 const coveredHtml=config.coverImage?normalizedHtml.replace('class="hero section surface faction-hero"','class="hero section surface faction-hero faction-hero-cover"'):normalizedHtml;
 let finalHtml=config.dedicatedMobile?coveredHtml
   .replace('./styles/tokens.css?v=2','./styles/tokens.css?v=3')
   .replace('./styles/book.css?v=2',`./styles/book.css?v=${config.assetVersions?.book||4}`)
   .replace('./scripts/app.js?v=3',`./scripts/app.js?v=${config.assetVersions?.app||4}`):coveredHtml;
-if(config.dedicatedMobile&&!config.sharedArmyBookApp)finalHtml=finalHtml.replace(/<script src="\.\.\/shared\/army-book-app\.js\?v=9"><\/script>/,'');
+if(config.dedicatedMobile&&!config.sharedArmyBookApp)finalHtml=finalHtml.replace(/<script src="\.\.\/shared\/army-book-app\.js\?v=\d+"><\/script>/,'');
 if(config.compatibleRulesMatrix){
   finalHtml=finalHtml
-    .replace(/<script src="\.\.\/shared\/related-rules-matcher\.js\?v=6"><\/script>/,'')
-    .replace(/<script src="\.\.\/shared\/army-related-rules\.js(?:\?v=\d+)?"><\/script>/,'');
-  if(!config.sharedArmyBookApp)finalHtml=finalHtml.replace(/<script src="\.\.\/shared\/army-book-app\.js\?v=9"><\/script>/,'');
+    .replace(/<script src="\.\.\/shared\/related-rules-matcher\.js\?v=6"><\/script>/,'');
+  if(!config.sharedArmyBookApp){
+    finalHtml=finalHtml.replace(/<script src="\.\.\/shared\/army-related-rules\.js(?:\?v=\d+)?"><\/script>/,'');
+    finalHtml=finalHtml.replace(/<script src="\.\.\/shared\/army-book-app\.js\?v=\d+"><\/script>/,'');
+  }
 }
 if(config.rosterSupport)finalHtml=finalHtml.replace('<script src="./scripts/app.js',`<script src="./scripts/roster-filter.js?v=${config.assetVersions?.rosterFilter||1}"></script><script src="./scripts/app.js`);
 const dataJs=`window.DG_TERMS=${JSON.stringify(Object.fromEntries([...terms].map(([id,item])=>[id,{id,title:item.title,summary:item.summary,full:item.full,glossary:item.glossary,...(item.rule?{rule:item.rule}:{}),...(item.units.length?{units:item.units,datasheet:item.units[0],statline:item.units[0].replace(/^unit-/,'')+'-profile'}:{})}])),null,2)};\n`;

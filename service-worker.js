@@ -88,12 +88,13 @@ const APP_SHELL = [
   "./books/shared/mobile-route-redirect.js?v=1",
   "./books/shared/navigation-targets.js?v=1",
   "./books/shared/popup-rule-actions.js?v=1",
-  "./books/shared/datasheet-layout.js?v=4",
+  "./books/shared/datasheet-layout.js?v=6",
   "./books/shared/datasheet-system.css?v=8",
   "./books/shared/popup-content.js?v=3",
   "./books/shared/glossary-autolink.js?v=8",
-  "./books/shared/rule-facts.js?v=4",
+  "./books/shared/rule-facts.js?v=5",
   "./books/shared/related-rules-matcher.js?v=6",
+  "./books/shared/compatible-rules-matrix.mjs?v=1",
   "./books/shared/roster-entities.js?v=1",
   "./books/shared/roster-parser.js?v=2",
   "./books/shared/roster-enhancements.js?v=3",
@@ -287,23 +288,27 @@ const APP_SHELL = [
   ,"./books/space-marines/assets/space-marines-cover-480.webp"
   ,"./books/space-marines/assets/space-marines-cover-800.webp"
   ,"./books/space-marines/scripts/data.js?v=2"
-  ,"./books/space-marines/scripts/app.js?v=5"
-  ,"./books/space-marines/scripts/compatible-rules-runtime.mjs?v=1"
+  ,"./books/space-marines/scripts/roster-data.js?v=1"
+  ,"./books/space-marines/scripts/roster-filter.js?v=2"
+  ,"./books/space-marines/scripts/app.js?v=7"
   ,"./books/space-marines/generated/compatible-rules.json"
   ,"./books/space-marines/mobile/related-rules.inc?v=4"
   ,"./books/dark-angels/"
   ,DARK_ANGELS_ENTRY_FALLBACK
   ,"./books/dark-angels/reader.html"
   ,DARK_ANGELS_MOBILE_FALLBACK
+  ,"./books/dark-angels/mobile/related-rules.inc?v=3"
   ,"./books/dark-angels/styles/tokens.css?v=2"
   ,"./books/dark-angels/styles/book.css?v=3"
   ,"./books/dark-angels/assets/dark-angels-cover-480.webp"
   ,"./books/dark-angels/assets/dark-angels-cover-800.webp"
   ,"./books/dark-angels/scripts/data.js?v=2"
-  ,"./books/dark-angels/scripts/app.js?v=5"
+  ,"./books/dark-angels/scripts/roster-data.js?v=1"
+  ,"./books/dark-angels/scripts/roster-filter.js?v=1"
+  ,"./books/dark-angels/scripts/app.js?v=6"
   ,"./books/shared/modal-focus.js?v=1"
-  ,"./books/shared/army-related-rules.js?v=11"
-  ,"./books/shared/army-book-app.js?v=9"
+  ,"./books/shared/army-related-rules.js?v=13"
+  ,"./books/shared/army-book-app.js?v=10"
 ];
 
 function navigationFallback(url) {

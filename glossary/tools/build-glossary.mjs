@@ -740,7 +740,7 @@ const genericArmyCacheInputs=allGenericArmyBooks.flatMap(book=>[
 ]);
 const cacheInputs=[
   'index.html','manifest.webmanifest','service-worker.js','glossary-return.js','roster-guides/index.html','roster-guides/app.js','roster-guides/points-data.js','roster-guides/points-validator.js',
-  'books/death-guard/index.html','books/core-rules/index.html','books/adeptus-mechanicus/index.html',...genericArmyCacheInputs,'books/shared/modal-focus.js','books/shared/army-related-rules.js','books/shared/army-book-app.js',
+  'books/death-guard/index.html','books/core-rules/index.html','books/adeptus-mechanicus/index.html',...genericArmyCacheInputs,'books/shared/modal-focus.js','books/shared/army-related-rules.js','books/shared/roster-context.js','books/shared/army-book-app.js',
   ...['death-guard','adeptus-mechanicus'].flatMap(book=>['tokens.css','layout.css','navigation.css','content.css','popups.css'].map(file=>`books/${book}/styles/${file}`)),
   'books/shared/navigation-targets.js','books/shared/datasheet-layout.js','books/shared/datasheet-system.css','books/shared/popup-content.js','books/shared/glossary-autolink.js','books/shared/rule-facts.js','books/shared/roster-parser.js','books/shared/roster-enhancements.js','books/shared/book-roster-enhancements.js',
   ...['death-guard','adeptus-mechanicus'].flatMap(book=>['data.js','navigation-controller.js','popup-controller.js','journey-controller.js','ui-controllers.js','app.js'].map(file=>`books/${book}/scripts/${file}`)),

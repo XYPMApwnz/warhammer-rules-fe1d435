@@ -8,6 +8,7 @@
   const source=createCompatibleRulesLoader(new URL('../generated/compatible-rules.json',scriptUrl),{schema:'blood-angels-compatible-rules/v1',conditionLabels});
   window.WHArmyBook.install({
     bookId:'blood-angels',readerPath:'./reader.html',dedicatedMobile:true,
+    rosterContext:{parentBookId:'space-marines'},
     relatedRules:{
       source,
       templateUrl:'./mobile/related-rules.inc?v=2',

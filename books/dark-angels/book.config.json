@@ -13,8 +13,9 @@
   "rosterSupport": true,
   "assetVersions": {
     "book": 3,
-    "app": 6,
-    "armyBook": 11,
+    "app": 7,
+    "armyBook": 12,
+    "rosterContext": 1,
     "relatedRules": 14,
     "ruleFacts": 5
   },

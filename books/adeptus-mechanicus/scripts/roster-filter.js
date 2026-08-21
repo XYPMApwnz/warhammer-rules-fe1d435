@@ -89,7 +89,8 @@
   const enhancementIds=new Map([...document.querySelectorAll('.enhancement[data-enhancement-title][data-rule-id]')].map(card=>[normalize(card.dataset.enhancementTitle),card.dataset.ruleId]));
   const enhancementRuleIdsByUnitId={};
   for(const groups of renderedGroups.values())for(const {card,group} of groups){const ownership=window.AMRosterEnhancements.resolveOwnership(roster,group.units);enhancementRuleIdsByUnitId[card.id]=[...new Set(ownership.cardEnhancements.map(item=>enhancementIds.get(normalize(item.name))).filter(Boolean))];}
-  window.AM_ROSTER_GUIDE=Object.freeze({detachmentIds:[...detachmentIds],enhancementRuleIdsByUnitId});
+  const rosterContextAttachments=Object.freeze({state:'known',entries:Object.freeze(Object.entries(attachments).map(([bodyguardInstanceId,characterInstanceIds])=>Object.freeze({anchorInstanceId:bodyguardInstanceId,memberInstanceIds:Object.freeze([...(characterInstanceIds||[])]),state:'known',certainty:'current',provenance:'existing-book-semantics'})))});
+  window.AM_ROSTER_GUIDE=Object.freeze({detachmentIds:[...detachmentIds],enhancementRuleIdsByUnitId,rosterContext:Object.freeze({attachments:rosterContextAttachments})});
   const requested=params.get('instance');
   for(const [canonicalId,groups] of renderedGroups){
     const item=document.querySelector(`[data-nav-id="${CSS.escape(canonicalId)}"]`);if(!item)continue;

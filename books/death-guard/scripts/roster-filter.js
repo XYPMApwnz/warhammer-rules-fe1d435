@@ -130,7 +130,8 @@
     const ruleIds=enhancements.filter(enhancement=>enhancement?.ownerStatus==='resolved'&&entry.units.some(unit=>unit.id===enhancement.ownerUnitId)).map(enhancement=>`enhancement-${slug(enhancement.name)}`);
     if(ruleIds.length)enhancementRuleIdsByUnitId[id]=[...new Set(ruleIds)];
   }
-  window.DG_ROSTER_GUIDE=Object.freeze({detachmentIds:[...detachmentIds].map(id=>id.replace(/^detachment-/,'')),enhancementRuleIdsByUnitId});
+  const rosterContextAttachments=Object.freeze({state:'known',entries:Object.freeze(Object.entries(attachments).map(([bodyguardInstanceId,characterInstanceIds])=>Object.freeze({anchorInstanceId:bodyguardInstanceId,memberInstanceIds:Object.freeze([...characterInstanceIds]),state:'known',certainty:'current',provenance:'validated-existing-book-semantics'})))});
+  window.DG_ROSTER_GUIDE=Object.freeze({detachmentIds:[...detachmentIds].map(id=>id.replace(/^detachment-/,'')),enhancementRuleIdsByUnitId,rosterContext:Object.freeze({attachments:rosterContextAttachments})});
 
   document.title = `${roster.faction} Roster Guide`;
   document.querySelector(".app-brand strong").textContent = `${roster.faction} Roster Guide`;

@@ -107,7 +107,7 @@ const APP_SHELL = [
   "./books/death-guard/styles/popups.css?v=18",
   "./books/death-guard/scripts/navigation-controller.js?v=16",
   "./books/death-guard/scripts/roster-semantics.js?v=2",
-  "./books/death-guard/scripts/roster-filter.js?v=25",
+  "./books/death-guard/scripts/roster-filter.js?v=27",
   "./books/death-guard/scripts/popup-controller.js?v=25",
   "./books/death-guard/scripts/full-entry-controller.js?v=9",
   "./books/death-guard/scripts/journey-controller.js?v=13",
@@ -191,7 +191,7 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/scripts/faction-ui.js?v=1",
   "./books/adeptus-mechanicus/mobile/related-rules.inc?v=4",
   "./books/adeptus-mechanicus/scripts/roster-enhancements.js?v=4",
-  "./books/adeptus-mechanicus/scripts/roster-filter.js?v=7",
+  "./books/adeptus-mechanicus/scripts/roster-filter.js?v=8",
   "./books/adeptus-mechanicus/generated/compatible-rules.json",
   "./books/adeptus-mechanicus/scripts/app.js?v=42"
   ,"./books/tyranids/"
@@ -247,7 +247,7 @@ const APP_SHELL = [
   ,"./books/blood-angels/assets/blood-angels-cover-480.webp"
   ,"./books/blood-angels/assets/blood-angels-cover-800.webp"
   ,"./books/blood-angels/scripts/data.js?v=2"
-  ,"./books/blood-angels/scripts/app.js?v=4"
+  ,"./books/blood-angels/scripts/app.js?v=5"
   ,"./books/blood-angels/scripts/roster-filter.js?v=1"
   ,"./books/blood-angels/generated/compatible-rules.json"
   ,"./books/blood-angels/scripts/roster-data.js?v=1"
@@ -299,10 +299,11 @@ const APP_SHELL = [
   ,"./books/dark-angels/scripts/data.js?v=2"
   ,"./books/dark-angels/scripts/roster-data.js?v=1"
   ,"./books/dark-angels/scripts/roster-filter.js?v=1"
-  ,"./books/dark-angels/scripts/app.js?v=6"
+  ,"./books/dark-angels/scripts/app.js?v=7"
   ,"./books/shared/modal-focus.js?v=1"
   ,"./books/shared/army-related-rules.js?v=14"
-  ,"./books/shared/army-book-app.js?v=11"
+  ,"./books/shared/roster-context.js?v=1"
+  ,"./books/shared/army-book-app.js?v=12"
 ];
 
 function navigationFallback(url) {

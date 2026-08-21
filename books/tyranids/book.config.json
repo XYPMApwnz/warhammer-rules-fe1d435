@@ -46,7 +46,8 @@
   "legacyRelatedRuleAttributes": false,
   "assetVersions": {
     "app": 11,
-    "armyBook": 11,
+    "armyBook": 12,
+    "rosterContext": 1,
     "relatedRules": 14,
     "ruleFacts": 5,
     "rosterFilter": 3

@@ -86,8 +86,9 @@
   ],
   "assetVersions": {
     "book": 2,
-    "app": 4,
-    "armyBook": 11,
+    "app": 5,
+    "armyBook": 12,
+    "rosterContext": 1,
     "relatedRules": 14,
     "ruleFacts": 5,
     "rosterFilter": 1,

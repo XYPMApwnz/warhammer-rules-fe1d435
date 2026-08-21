@@ -22,6 +22,6 @@ assert.ok(redirect.includes("destination.searchParams.delete('view')"),'Redirect
 assert.ok(redirect.includes('location.hash||root.dataset.canonicalTarget'),'Redirect does not preserve a deep target');
 assert.ok(redirect.includes('location.replace(destination.href)'),'Redirect can create a Back loop');
 assert.equal((reader.match(/<article\b[^>]*\bid="unit-skitarii-rangers"/g)||[]).length,1,'Canonical Datasheet exists more than once');
-assert.ok(reader.includes('./scripts/roster-enhancements.js?v=4')&&reader.includes('./scripts/roster-filter.js?v=7'),'Responsive reader does not load the common roster path');
+assert.ok(reader.includes('./scripts/roster-enhancements.js?v=4')&&reader.includes('./scripts/roster-filter.js?v=8'),'Responsive reader does not load the common roster path');
 
 console.log('Adeptus Mechanicus responsive runtime QA passed: 13/13.');

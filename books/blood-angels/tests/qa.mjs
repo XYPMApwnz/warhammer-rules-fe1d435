@@ -37,7 +37,7 @@ assert.match(app,/generated\/compatible-rules\.json/);
 assert.match(app,/createCompatibleRulesLoader/,'Compatible Rules matrix must use the shared lazy loader');
 assert.match(app,/window\.WHArmyBook\.install/,'Blood Angels must use the shared Army Book runtime');
 assert.match(reader,/shared\/army-related-rules\.js\?v=14/);
-assert.match(reader,/shared\/army-book-app\.js\?v=11/);
+assert.match(reader,/shared\/army-book-app\.js\?v=12/);
 assert.doesNotMatch(app,/related-rules-layer/,'Blood Angels must not retain cloned Related Rules orchestration');
 for(const unit of spaceMarines.datasheets.filter(item=>!shared.includes(item)))assert.ok(!reader.includes(`id="${unit.id}"`),`${unit.title} leaked into Blood Angels`);
 assert.match(ability('Death Company Dreadnought','Driven by Fury'),/surge move of up to D6\+2"/);

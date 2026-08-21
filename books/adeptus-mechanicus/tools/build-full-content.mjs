@@ -359,7 +359,8 @@ const releaseHtml=html
   .replace('<script src="../shared/navigation-targets.js', '<script src="../../glossary-return.js?v=3"></script><script src="../shared/navigation-targets.js')
   .replace('../shared/glossary-autolink.js?v=7','../shared/glossary-autolink.js?v=8')
   .replace('points-validator.js?v=3','points-validator.js?v=4')
-  .replace('<script src="./scripts/faction-ui.js?v=1"></script>','<script src="./scripts/faction-ui.js?v=1"></script><script src="../shared/rule-facts.js?v=5"></script><script src="../shared/modal-focus.js?v=1"></script><script src="../shared/army-related-rules.js?v=14"></script><script src="../shared/army-book-app.js?v=11"></script>')
+  .replace('<script src="./scripts/faction-ui.js?v=1"></script>','<script src="./scripts/faction-ui.js?v=1"></script><script src="../shared/rule-facts.js?v=5"></script><script src="../shared/modal-focus.js?v=1"></script><script src="../shared/army-related-rules.js?v=14"></script><script src="../shared/roster-context.js?v=1"></script><script src="../shared/army-book-app.js?v=12"></script>')
+  .replace('./scripts/roster-filter.js?v=7','./scripts/roster-filter.js?v=8')
   .replace('popup-controller.js?v=18','popup-controller.js?v=21')
   .replace('ui-controllers.js?v=13','ui-controllers.js?v=14')
   .replace('app.js?v=41','app.js?v=42');

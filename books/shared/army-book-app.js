@@ -20,6 +20,10 @@
     const relatedConfig=config.relatedRules===false?null:config.relatedRules||{};
     const relatedInstaller=relatedConfig&&(relatedConfig.installer||root.WHArmyRelatedRules);
     const rosterGuide=relatedConfig&&(typeof relatedConfig.rosterGuide==='function'?relatedConfig.rosterGuide(runtimeContext):relatedConfig.rosterGuide||root.WH_ARMY_ROSTER_GUIDE);
+    const rosterContextSettings=config.rosterContext===false?null:(config.rosterContext||{});
+    const rosterContextAdapter=rosterContextSettings&&typeof rosterContextSettings.provider==='function'?rosterContextSettings.provider(Object.freeze({...runtimeContext,rosterGuide})):rosterGuide?.rosterContext;
+    const rosterContext=rosterContextSettings&&root.WHArmyRosterContext?.fromRuntime({...runtimeContext,rosterGuide,adapter:rosterContextAdapter})||null;
+    root.WH_ARMY_ROSTER_CONTEXT=rosterContext;
     const relatedRules=relatedConfig&&!(relatedConfig.requireRosterGuide&&params.has('roster')&&!rosterGuide)?relatedInstaller?.install({
       storageKey:relatedConfig.storageKey===undefined?`${config.bookId}-detachment-filter`:relatedConfig.storageKey,
       ...relatedConfig,
@@ -65,7 +69,7 @@
       viewSwitch.addEventListener('click',updateViewDestination);
     }
 
-    const app=Object.freeze({navigation,popups,fullEntry,journey,relatedRules});
+    const app=Object.freeze({navigation,popups,fullEntry,journey,relatedRules,rosterContext});
     root.WH_ARMY_BOOK_APP=app;
     root.DG_APP=app;
     root.WHPageState?.installArmyBook(app);

@@ -148,7 +148,8 @@ for(const bookId of supported){
     codex.datasheets.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`blood-angels: local unit ${unit.title} is absent from Roster Guide`));
     assert([...unitTitles].filter(title=>!localTitles.has(title)).length===82,'blood-angels: shared Space Marines roster inventory changed');
     assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&/\.\/scripts\/app\.js\?v=\d+/.test(reader),'blood-angels: roster or matrix controller is absent');
-    assert(fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs'))&&related.includes('core-stratagem-'),'blood-angels: Compatible Rules or Core Stratagems are absent');
+    const app=fs.readFileSync(path.join(bookRoot,'scripts','app.js'),'utf8');
+    assert(/createCompatibleRulesLoader/.test(app)&&/WHArmyBook\.install/.test(app)&&!fs.existsSync(path.join(bookRoot,'scripts','compatible-rules-runtime.mjs'))&&related.includes('core-stratagem-'),'blood-angels: shared Compatible Rules runtime or Core Stratagems are absent');
     console.log('PASS  blood-angels: 15 local + 82 shared units, desktop/iPad + Phone routes');
     continue;
   }

@@ -1,8 +1,8 @@
 (async function(){
   'use strict';
   const scriptUrl=document.currentScript.src;
-  const {loadCompatibleRulesSource}=await import(new URL('../../shared/compatible-rules-matrix.mjs?v=2',scriptUrl));
-  const source=await loadCompatibleRulesSource(new URL('../generated/compatible-rules.json',scriptUrl),{schema:'space-marines-compatible-rules/v1'});
+  const {createCompatibleRulesLoader}=await import(new URL('../../shared/compatible-rules-matrix.mjs?v=2',scriptUrl));
+  const source=createCompatibleRulesLoader(new URL('../generated/compatible-rules.json',scriptUrl),{schema:'space-marines-compatible-rules/v1'});
   window.WHArmyBook.install({
     bookId:'space-marines',readerPath:'./reader.html',dedicatedMobile:true,
     relatedRules:{

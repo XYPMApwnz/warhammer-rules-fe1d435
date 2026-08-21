@@ -5,6 +5,7 @@ import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import ruleFacts from '../books/shared/rule-facts.js';
 import {conditionsFor,createCompatibleRulesLoader,createCompatibleRulesSource,loadCompatibleRulesSource,validateCompatibleRulesMatrix} from '../books/shared/compatible-rules-matrix.mjs';
+import {createStratagemPresentation} from '../books/shared/stratagem-presentation.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=file=>fs.readFileSync(path.join(root,file),'utf8');
@@ -36,10 +37,12 @@ assert.deepEqual(lazy.rowsForUnit(unitId),[]);
 await lazy.load();
 assert.equal(lazyRequests,1);
 assert.equal(lazy.rowsForUnit(unitId).length,source.rowsForUnit(unitId).length);
+await lazy.load();
+assert.equal(lazyRequests,1,'lazy Compatible Rules source must be cached after its first use');
 assert.throws(()=>validateCompatibleRulesMatrix(matrix,{schema:'wrong-schema'}),/Unsupported Compatible Rules schema/);
 assert.throws(()=>validateCompatibleRulesMatrix({schema:'test/v1',units:{unit:[{ruleId:'rule',state:'match',conditions:[1]}]}},{schema:'test/v1'}),/conditions must be strings/);
 
-const armyBook=read('books/shared/army-book-app.js'),relatedRules=read('books/shared/army-related-rules.js'),spaceMarines=read('books/space-marines/scripts/app.js'),darkAngels=read('books/dark-angels/scripts/app.js');
+const armyBook=read('books/shared/army-book-app.js'),relatedRules=read('books/shared/army-related-rules.js'),spaceMarines=read('books/space-marines/scripts/app.js'),darkAngels=read('books/dark-angels/scripts/app.js'),bloodAngels=read('books/blood-angels/scripts/app.js');
 const relatedSandbox={window:{WHRuleFacts:{normalizeKeyword:value=>String(value||'').trim().toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}}};
 vm.runInNewContext(relatedRules,relatedSandbox);
 const resolveDetachments=relatedSandbox.window.WHArmyRelatedRules.resolveRosterDetachmentIds,section=(id,title)=>({dataset:{detachment:id},querySelector:()=>({textContent:title})}),detachmentSections=[section('explicit','Explicit'),section('single-detachment','Single Detachment'),section('second-detachment','Second Detachment')];
@@ -52,10 +55,16 @@ assert.match(armyBook,/extensions\.forEach/);
 assert.match(armyBook,/return app/);
 assert.match(relatedRules,/rowsForUnit/);
 assert.match(spaceMarines,/shared\/compatible-rules-matrix\.mjs/);
+assert.match(spaceMarines,/createCompatibleRulesLoader/);
 assert.match(spaceMarines,/window\.WHArmyBook\.install/);
 assert(!fs.existsSync(path.join(root,'books/space-marines/scripts/compatible-rules-runtime.mjs')));
 assert.match(darkAngels,/relatedRules:\{enabled:true\}/);
 assert.match(darkAngels,/extensions:/);
+assert.match(bloodAngels,/createCompatibleRulesLoader/);
+assert.match(bloodAngels,/shared\/stratagem-presentation\.mjs/);
+assert.match(bloodAngels,/window\.WHArmyBook\.install/);
+assert.equal(JSON.parse(read('books/blood-angels/book.config.json')).sharedArmyBookApp,true);
+assert(!fs.existsSync(path.join(root,'books/blood-angels/scripts/compatible-rules-runtime.mjs')));
 for(const book of ['tau-empire','emperors-children','tyranids']){
   const app=read(`books/${book}/scripts/app.js`),config=JSON.parse(read(`books/${book}/book.config.json`));
   assert.match(app,/window\.WHArmyBook\.install/);
@@ -65,5 +74,14 @@ for(const book of ['tau-empire','emperors-children','tyranids']){
   assert(!fs.existsSync(path.join(root,`books/${book}/scripts/compatible-rules-runtime.mjs`)));
 }
 assert.doesNotMatch(armyBook,/bookId\s*===/);
+
+const presentationCases=[
+  ['confirmed',{canonicalType:'battle-tactic',typeStatus:'confirmed',sourceLabel:'Battle Tactic Stratagem'},'Decorative label','battle-tactic','Battle Tactic Stratagem'],
+  ['source-untyped',{canonicalType:null,typeStatus:'source-untyped',sourceLabel:'Exact Source Stratagem'},'Battle Tactic Stratagem','source-untyped','Exact Source Stratagem'],
+  ['unknown',{canonicalType:null,typeStatus:'unknown'},'Wargear Stratagem','unknown','Type unverified']
+];
+const cards=presentationCases.map(([id,,label])=>{const typeNode={textContent:label,classList:{add(){}},remove(){}},host={append(node){this.node=node;}};return{dataset:{ruleId:id},querySelectorAll:selector=>selector==='.stratagem-type'?[typeNode]:[],querySelector:selector=>selector==='.stratagem-head'?{querySelector:()=>host}:null,typeNode};});
+createStratagemPresentation({types:new Map(presentationCases.map(([id,metadata])=>[id,metadata])),labelMode:'exact'}).decorateTypes({querySelectorAll:()=>cards});
+presentationCases.forEach(([id,,,type,label],index)=>{assert.equal(cards[index].dataset.stratagemType,type,`${id}: provenance status`);assert.equal(cards[index].typeNode.textContent,label,`${id}: source label`);});
 
 console.log('Shared Army Book runtime QA passed.');

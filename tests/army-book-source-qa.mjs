@@ -80,11 +80,9 @@ const csmStratagems=csmPack.detachments.flatMap(detachment=>detachment.stratagem
 expect(csmTypes.size===30&&csmStratagems.filter(({detachment,item})=>item.typeStatus==='confirmed'&&csmTypes.get(`${detachment.title}|${item.title}`)===item.canonicalType).length===30,'chaos-space-marines: source-confirmed canonical Stratagem types mismatch');
 expect(csmStratagems.filter(({item})=>item.typeStatus==='source-untyped'&&item.canonicalType===null&&item.sourceLabel==='Type unverified').length===15,'chaos-space-marines: source-untyped Stratagems received invented types');
 for(const {detachment,item} of csmStratagems){
-  const phone=fs.readFileSync(path.join(root,'books/chaos-space-marines/mobile',`${detachment.id}.html`),'utf8');
   const expected=item.typeStatus==='confirmed'?`data-stratagem-type="${item.canonicalType}"`:'data-stratagem-type="source-untyped"';
   const cardPattern=new RegExp(`<article class="stratagem surface" data-rule-id="${item.id}"[^>]*${expected}`);
-  expect(cardPattern.test(csmReader),`chaos-space-marines: Desktop type presentation missing ${detachment.title} / ${item.title}`);
-  expect(cardPattern.test(phone),`chaos-space-marines: Phone type presentation missing ${detachment.title} / ${item.title}`);
+  expect(cardPattern.test(csmReader),`chaos-space-marines: canonical type presentation missing ${detachment.title} / ${item.title}`);
 }
 expect(new Set(csmPoints.enhancements.map(item=>`${item.detachment}|${item.title}`)).size===62,'chaos-space-marines: detachment-qualified Enhancement identity collision');
 for(const title of ['Khorne Berzerkers','Noise Marines','Plague Marines','Rubric Marines','Cerberus','Fellblade','Leviathan Dreadnought','Mastodon'])expect(!csmCodex.datasheets.some(item=>item.title===title),`chaos-space-marines: ${title} must not appear in the current Datasheets inventory`);
@@ -223,13 +221,32 @@ for(const [id,sourceIds] of ownershipSources){
   expect(fixture.datasheetIds.length===new Set(fixture.datasheetIds).size,`${id}: audited ownership fixture contains duplicate Datasheet IDs`);
   const readerHtml=fs.readFileSync(path.join(root,'books',id,'reader.html'),'utf8');
   const desktopIds=sortedIds([...readerHtml.matchAll(/<article class="unit-card[^"]*" id="(unit-[^"]+)"/g)].map(match=>match[1]));
-  const phoneDir=path.join(root,'books',id,'mobile');
-  const phoneIds=sortedIds(fs.readdirSync(phoneDir).filter(file=>file.endsWith('.html')).flatMap(file=>[...fs.readFileSync(path.join(phoneDir,file),'utf8').matchAll(/<article class="unit-card[^"]*" id="(unit-[^"]+)"/g)].map(match=>match[1])));
   compareOwnershipLayer(id,'extracted local inventory',fixture.datasheetIds,sourceIds);
-  compareOwnershipLayer(id,'Desktop output',fixture.datasheetIds,desktopIds);
-  compareOwnershipLayer(id,'Phone output',fixture.datasheetIds,phoneIds);
+  compareOwnershipLayer(id,'canonical reader output',fixture.datasheetIds,desktopIds);
 }
 expect(Object.keys(ownershipFixture.books).length===ownershipSources.length,'audited ownership fixture book count does not match working Army Books');
+const canonicalBookIds=['death-guard','adeptus-mechanicus','tau-empire','emperors-children','tyranids','chaos-space-marines','space-marines','dark-angels','blood-angels'];
+const redirectRuntime=fs.readFileSync(path.join(root,'books/shared/mobile-route-redirect.js'),'utf8');
+expect(/destination\.search=location\.search/.test(redirectRuntime),'Mobile redirect no longer preserves query parameters');
+expect(/destination\.searchParams\.delete\('view'\)/.test(redirectRuntime),'Mobile redirect no longer removes the obsolete view selector');
+expect(/destination\.hash=location\.hash\|\|root\.dataset\.canonicalTarget\|\|''/.test(redirectRuntime),'Mobile redirect no longer preserves an explicit hash or falls back to its canonical target');
+expect(/location\.replace\(destination\.href\)/.test(redirectRuntime),'Mobile redirect no longer replaces the compatibility route');
+for(const id of canonicalBookIds){
+  const readerHtml=fs.readFileSync(path.join(root,'books',id,'reader.html'),'utf8');
+  const mobileDir=path.join(root,'books',id,'mobile');
+  const routes=fs.readdirSync(mobileDir).filter(file=>file.endsWith('.html'));
+  expect(routes.length>0,`${id}: no Mobile compatibility routes found`);
+  expect(/<article\b[^>]*\bclass="[^"]*\bunit-card\b/.test(readerHtml),`${id}: canonical reader has no Datasheet content`);
+  for(const route of routes){
+    const html=fs.readFileSync(path.join(mobileDir,route),'utf8');
+    const target=html.match(/data-canonical-target="([^"]+)"/)?.[1];
+    expect(/data-canonical-reader="\.\.\/reader\.html"/.test(html),`${id}/${route}: compatibility route does not name the canonical reader`);
+    expect(Boolean(target),`${id}/${route}: compatibility route has no canonical target`);
+    expect(target&&readerHtml.includes(`id="${target}"`),`${id}/${route}: canonical target ${target||'(missing)'} is absent from reader.html`);
+    expect(/\.\.\/\.\.\/shared\/mobile-route-redirect\.js\?v=1/.test(html),`${id}/${route}: shared redirect runtime is absent`);
+    expect(!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(html),`${id}/${route}: compatibility route contains duplicated Army Book content`);
+  }
+}
 const dgOwned=read('books/death-guard/content/death-guard-rules.en.json').sections;
 for(const id of ["unit-beasts-of-nurgle","unit-great-unclean-one","unit-nurglings","unit-plague-drones","unit-plaguebearers","unit-rotigus"])expect(dgOwned.some(item=>item.id===id&&item.kind==='unit'&&item.local!==false),`death-guard: source-owned ${id} was pruned as a dependency`);
 const ecRaw=read('books/emperors-children/sources/bsdata-emperors-children-11e.json');
@@ -237,10 +254,17 @@ const ecFaction=ecRaw.documents?.find(item=>item.role==='faction')?.data?.catalo
 const ecRootLinks=Array.isArray(ecFaction?.entryLinks)?ecFaction.entryLinks:(ecFaction?.entryLinks?.entryLink||[]);
 for(const title of ["Shalaxi Helbane","Keeper of Secrets","Daemonettes","Fiends","Seekers"])expect(ecRootLinks.some(item=>item.name===title),`emperors-children: faction catalogue root is missing ${title}`);
 const tyrPackOwnership=read('books/tyranids/content/tyranids-faction-pack.en.json').datasheets;
-expect(tyrPackOwnership.imperialArmour.some(item=>item.id==='hyperadapted-raveners'),'tyranids: Hyperadapted Raveners must retain Imperial Armour source evidence');
-expect(!ownershipSources.find(([id])=>id==='tyranids')[1].includes('unit-hyperadapted-raveners'),'tyranids: Imperial Armour Hyperadapted Raveners leaked into local Datasheets');
+const tyrCodex=read('books/tyranids/content/tyranids-codex-datasheets.en.json');
+const hyperadaptedRaveners=tyrCodex.datasheets.find(item=>item.id==='unit-hyperadapted-raveners');
+const hyperadaptedProvenance=tyrPackOwnership.imperialArmour.find(item=>item.id==='hyperadapted-raveners');
+expect(tyrCodex.datasheets.length===50,'tyranids: current canonical Datasheet inventory must contain 50 units');
+expect(hyperadaptedRaveners?.status==='Current','tyranids: Hyperadapted Raveners must remain current');
+expect(hyperadaptedRaveners?.sourceLayer==='faction-pack','tyranids: Hyperadapted Raveners must retain faction-pack ownership');
+expect(!tyrCodex.imperialArmour.some(item=>item.id==='unit-hyperadapted-raveners'),'tyranids: Hyperadapted Raveners must not enter canonical Imperial Armour output');
+expect(!tyrCodex.legends.some(item=>item.id==='unit-hyperadapted-raveners'),'tyranids: Hyperadapted Raveners must not be classified as Legends');
+expect(hyperadaptedProvenance?.provenance?.sourceId==='tyranids-faction-pack-v1.1'&&hyperadaptedProvenance.sourcePages.join('|')==='13|14','tyranids: Hyperadapted Raveners lost official Faction Pack pages 13-14 provenance');
+expect(ownershipFixture.books.tyranids.datasheetIds.includes('unit-hyperadapted-raveners'),'tyranids: current Hyperadapted Raveners ownership is absent from the audited fixture');
 expect(ownershipFixture.books.tyranids.datasheetIds.includes('unit-raveners'),'tyranids: ordinary Raveners are absent from audited local ownership');
-expect(!ownershipFixture.books.tyranids.datasheetIds.includes('unit-hyperadapted-raveners'),'tyranids: Hyperadapted Raveners leaked into audited local ownership');
 for(const id of ['unit-kroot-carnivores','unit-vespid-stingwings'])expect(ownershipFixture.books['tau-empire'].datasheetIds.includes(id),`tau-empire: source-owned ${id} is absent from audited local ownership`);
 for(const id of ['unit-shalaxi-helbane','unit-keeper-of-secrets','unit-daemonettes','unit-fiends','unit-seekers'])expect(ownershipFixture.books['emperors-children'].datasheetIds.includes(id),`emperors-children: source-owned ${id} is absent from audited local ownership`);
 for(const id of ['unit-marneus-calgar-in-armour-of-antilochus','unit-intercessor-squad'])expect(ownershipFixture.books['space-marines'].datasheetIds.includes(id),`space-marines: source-owned ${id} is absent from audited local ownership`);

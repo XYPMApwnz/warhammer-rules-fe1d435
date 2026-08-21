@@ -13,8 +13,20 @@ const sandbox={window:{}};
 vm.runInNewContext(read('glossary/generated/glossary.en.js'),sandbox);
 const api=sandbox.window.WH40K_GLOSSARY;
 
-assert.equal(Object.keys(registry).length,2584,'Blood Angels glossary integration changed the canonical term inventory unexpectedly');
+const registryIds=Object.keys(registry),aliasIds=Object.keys(aliases);
+assert.equal(new Set(registryIds).size,registryIds.length,'canonical glossary IDs must be unique');
+for(const id of registryIds)assert.equal(registry[id].id,id,`${id}: registry key and entry identity differ`);
+assert.equal(api.counts.terms,registryIds.length,'generated glossary term count differs from the canonical registry');
+assert.equal(api.counts.aliases,aliasIds.length,'generated glossary alias count differs from the canonical aliases');
+assert.match(api.contentHash,/^[a-f0-9]{64}$/,'generated glossary content hash is not deterministic');
+assert.equal(registryIds.length,2588,'current canonical glossary inventory changed unexpectedly');
 assert.equal(Object.keys(aliases).length,662,'the three old canonical IDs must remain aliases');
+for(const id of ['tyranids-ability-alpha-invader','tyranids-ability-hypersensory-array','tyranids-weapon-prime-claws-and-talons','tyranids-weapon-ravener-heavy-claws-and-talons','tyranids-weapon-venom-bolt']){
+  assert.equal(registry[id]?.canonicalSource?.locator,'unit-hyperadapted-raveners',`${id}: current Hyperadapted Raveners glossary identity is missing`);
+  assert.equal(api.get(id).id,id,`${id}: generated glossary cannot resolve the canonical identity`);
+}
+assert.ok(registry['blood-angels-weapon-heavy-bolt-pistol-2'],'canonical Blood Angels Heavy Bolt Pistol identity is missing');
+assert.ok(!registry['blood-angels-weapon-heavy-bolt-pistol-3'],'removed duplicate Blood Angels Heavy Bolt Pistol identity reappeared');
 
 const resolutions={
   'saving-throw':'core-rule-05-03-01-saving-throw',
@@ -49,7 +61,7 @@ assert.equal(api.forBook('space-marines')['space-marines-weapon-grav-cannon-3'].
 
 const localCases=[
   ['tau-empire','tau-empire-ability-for-the-greater-good','tau-empire-army-rule-for-the-greater-good',26,'unit-breacher-team'],
-  ['tyranids','tyranids-ability-shadow-in-the-warp','tyranids-army-rule-shadow-in-the-warp',16,'unit-broodlord']
+  ['tyranids','tyranids-ability-shadow-in-the-warp','tyranids-army-rule-shadow-in-the-warp',17,'unit-broodlord']
 ];
 for(const [book,localId,target,ownerCount,rule] of localCases){
   const context=contexts[book][localId],view=api.forBook(book)[localId];

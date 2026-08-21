@@ -54,17 +54,17 @@ const defiler=extract('article','unit-defiler');
 const rhino=extract('article','unit-chaos-rhino');
 const desktopApp=fs.readFileSync(path.join(bookRoot,'scripts/app.js'),'utf8');
 
-assert.match(reader,/\.\/scripts\/app\.js\?v=4/,'CSM Desktop app version was not bumped for roster and Compatible Rules wiring');
-assert.match(desktopApp,/id\.startsWith\('unit-'\)/);
-assert.match(desktopApp,/id\.startsWith\('detachment-'\)/);
-assert.match(desktopApp,/id==='army-rules'/);
-assert.match(desktopApp,/id==='updates'/);
+assert.match(reader,new RegExp(`\\.\\/scripts\\/app\\.js\\?v=${config.assetVersions.app}`),'CSM reader app wiring differs from the authoritative book config');
+assert.match(desktopApp,/window\.WHArmyBook\.install\(/,'CSM must use the shared Army Book runtime');
+assert.match(desktopApp,/bookId:'chaos-space-marines'/,'CSM shared runtime identity is missing');
+assert.match(desktopApp,/createCompatibleRulesLoader/,'CSM shared Compatible Rules loader is missing');
+assert.match(desktopApp,/rosterGuide:\(\)=>window\.CSM_ROSTER_GUIDE/,'CSM shared roster provider is missing');
 assert.doesNotMatch(desktopApp,/abaddon/i,'Desktop to Phone mapping must not special-case Abaddon');
 assert.match(start,/id="start"/);
 assert.match(armyRules,/Dark Pacts/);
-assert.match(armyRules,/data-source-term="chaos-space-marines-army-rule-dark-pacts"/);
+assert.match(armyRules,/data-term="chaos-space-marines-army-rule-dark-pacts"/);
 assert.match(armyRules,/Cults of the Dark Gods/);
-assert.match(armyRules,/data-source-term="chaos-space-marines-army-rule-cults-of-the-dark-gods"/);
+assert.match(armyRules,/data-term="chaos-space-marines-army-rule-cults-of-the-dark-gods"/);
 assert.match(abaddon,/id="unit-abaddon-the-despoiler"/);
 assert.match(abaddon,/data-journey-target="unit-chaos-terminator-squad"/);
 assert.match(abaddon,/data-journey-target="unit-chosen"/);
@@ -84,7 +84,7 @@ const foreign=[['Khorne Berzerkers','khorne-berzerkers.html'],['Noise Marines','
 for(const [title,file] of foreign){assert.ok(extractConfig.filters.excludeNames.includes(title),`Missing source exclusion for ${title}`);assert.ok(!htmlFiles.includes(file),`Other-faction route leaked: ${file}`);}
 
 assert.equal(config.generatedMobile,true);
-assert.equal(config.assetVersions.app,4);
+assert.equal(config.assetVersions.app,6);
 assert.equal(manifest.gates.publishAsComplete,false);
 assert.match(reader,/\.\.\/shared\/book-roster-enhancements\.js\?v=\d+/);
 assert.match(reader,/\.\/scripts\/roster-filter\.js\?v=\d+/);

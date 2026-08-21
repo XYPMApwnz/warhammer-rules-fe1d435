@@ -47,8 +47,8 @@ const control=async page=>{
 };
 
 const books=[
-  {name:'Death Guard',unit:'unit-great-unclean-one',desktop:'/books/death-guard/reader.html#unit-great-unclean-one',phone:'/books/death-guard/mobile/great-unclean-one.html',singleReader:true},
-  {name:'Adeptus Mechanicus',unit:'unit-skitarii-rangers',desktop:'/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers',phone:'/books/adeptus-mechanicus/mobile/skitarii-rangers.html',singleReader:true},
+  {name:'Death Guard',unit:'unit-great-unclean-one',desktop:'/books/death-guard/reader.html#unit-great-unclean-one',phone:'/books/death-guard/mobile/great-unclean-one.html'},
+  {name:'Adeptus Mechanicus',unit:'unit-skitarii-rangers',desktop:'/books/adeptus-mechanicus/reader.html#unit-skitarii-rangers',phone:'/books/adeptus-mechanicus/mobile/skitarii-rangers.html'},
   {name:'Tyranids',unit:'unit-hive-tyrant',desktop:'/books/tyranids/reader.html#unit-hive-tyrant',phone:'/books/tyranids/mobile/hive-tyrant.html'},
   {name:"T'au Empire",unit:'unit-breacher-team',desktop:'/books/tau-empire/reader.html#unit-breacher-team',phone:'/books/tau-empire/mobile/breacher-team.html'},
   {name:"Emperor's Children",unit:'unit-shalaxi-helbane',desktop:'/books/emperors-children/reader.html#unit-shalaxi-helbane',phone:'/books/emperors-children/mobile/shalaxi-helbane.html'},
@@ -59,26 +59,15 @@ const books=[
   ,{name:'Blood Angels',unit:'unit-commander-dante',desktop:'/books/blood-angels/reader.html#unit-commander-dante',phone:'/books/blood-angels/mobile/commander-dante.html'}
 ];
 
-async function openPhonePopup(page,name,singleReader=false){
+async function openPhonePopup(page,name){
   const trigger=page.locator('main button[data-term]:visible').first();
   await trigger.waitFor({state:'visible'});
   await trigger.click();
-  if(singleReader){
-    const card=page.locator('#popupLayer .term-popup').last();
-    await card.waitFor({state:'visible'});
-    assert.ok((await card.textContent()).trim().length>10,`${name} popup lost its rule content`);
-    await card.locator('[data-popup-close]').click();
-    await card.waitFor({state:'hidden'});
-    assert.equal(await trigger.evaluate(node=>node===document.activeElement),true,`${name} popup must restore focus`);
-    return;
-  }
-  const dialog=page.locator('#termDialog');
-  const card=page.locator('#termPopupStack .mobile-popup-card').first();
-  await dialog.waitFor({state:'visible'});
+  const card=page.locator('#popupLayer .term-popup').last();
   await card.waitFor({state:'visible'});
   assert.ok((await card.textContent()).trim().length>10,`${name} popup lost its rule content`);
-  await page.locator('[data-popup-close="0"]').click();
-  await dialog.waitFor({state:'hidden'});
+  await card.locator('[data-popup-close]').click();
+  await card.waitFor({state:'hidden'});
   assert.equal(await trigger.evaluate(node=>node===document.activeElement),true,`${name} popup must restore focus`);
 }
 
@@ -87,22 +76,28 @@ async function assertDarkAngelsLeaderJourney(page,leaderId,targetId){
   const link=page.locator(`#${leaderId} [data-journey-target="${targetId}"]`);
   await link.waitFor({state:'visible'});
   await link.click();
-  await page.locator(`#tocTree [data-nav-target="${targetId}"].is-current`).waitFor({state:'visible'});
+  const currentTarget=page.locator(`#tocTree [data-nav-target="${targetId}"].is-current`);
+  assert.equal(await currentTarget.count(),1,'Shared Leader destination is not the unique current navigation target');
+  assert.equal(await currentTarget.getAttribute('aria-current'),'location','Shared Leader destination lost canonical current-target semantics');
   assert.equal(new URL(page.url()).pathname,'/books/dark-angels/reader.html','Shared Leader destination must retain Dark Angels reading context');
   assert.match(await page.locator(`#${targetId}`).textContent(),/Space Marines shared datasheet/,'Shared Leader destination lost ownership presentation');
   await page.locator('#backButton').click();
-  await page.locator(`#tocTree [data-nav-target="${leaderId}"].is-current`).waitFor({state:'visible'});
+  await page.waitForFunction(id=>document.querySelector(`#tocTree [data-nav-target="${id}"]`)?.classList.contains('is-current'),leaderId);
+  const restoredTarget=page.locator(`#tocTree [data-nav-target="${leaderId}"].is-current`);
+  assert.equal(await restoredTarget.count(),1,'Back did not restore the originating current navigation target');
+  assert.equal(await restoredTarget.getAttribute('aria-current'),'location','Back restored the target without canonical current-target semantics');
 }
 
-async function assertDarkAngelsPhoneLeaderJourney(page,leaderFile,leaderId,targetFile,targetId){
+async function assertDarkAngelsLegacyLeaderJourney(page,leaderFile,leaderId,targetId){
   await page.goto(`${origin}/books/dark-angels/mobile/${leaderFile}`);
+  await page.waitForURL(url=>url.pathname==='/books/dark-angels/reader.html'&&url.hash===`#${leaderId}`);
   const link=page.locator(`#${leaderId} [data-journey-target="${targetId}"]`);
   await link.waitFor({state:'visible'});
-  await Promise.all([page.waitForURL(url=>url.pathname===`/books/dark-angels/mobile/${targetFile}`),link.click()]);
-  assert.match(await page.locator(`#${targetId}`).textContent(),/Space Marines shared datasheet/,'Phone Leader destination lost ownership presentation');
+  await Promise.all([page.waitForURL(url=>url.pathname==='/books/dark-angels/reader.html'&&url.hash===`#${targetId}`),link.click()]);
+  assert.match(await page.locator(`#${targetId}`).textContent(),/Space Marines shared datasheet/,'Responsive Leader destination lost ownership presentation');
   await page.goBack();
   await page.locator(`#${leaderId}`).waitFor({state:'visible'});
-  assert.equal(new URL(page.url()).pathname,`/books/dark-angels/mobile/${leaderFile}`,'Phone Back lost the originating Dark Angels Leader route');
+  assert.equal(new URL(page.url()).hash,`#${leaderId}`,'Browser Back lost the originating Dark Angels Leader target');
 }
 
 try{
@@ -131,8 +126,9 @@ try{
     ]);
     assert.match(await page.locator('#start').evaluate(node=>getComputedStyle(node).backgroundImage),/dark-angels-cover-800\.webp/,'Dark Angels Desktop Start lost its artwork');
     assert.equal(await page.locator('.unit-card').count(),98,'Dark Angels reader must expose 16 local and 82 shared datasheets');
-    assert.equal(await page.locator('#tocTree [data-nav-id="datasheets-dark-angels"]').count(),1,'Dark Angels local ownership branch is missing');
-    assert.equal(await page.locator('#tocTree [data-nav-id="datasheets-space-marines"]').count(),1,'Space Marines shared ownership branch is missing');
+    assert.equal(await page.locator('#tocTree [data-nav-id="datasheets-dark-angels"], #tocTree [data-nav-id="datasheets-space-marines"]').count(),0,'Dark Angels reader restored obsolete ownership branches');
+    assert.equal(await page.locator('#tocTree [data-nav-target="unit-belial"]').count(),1,'Dark Angels unified navigation lost a local Datasheet');
+    assert.equal(await page.locator('#tocTree [data-nav-target="unit-hellblaster-squad"]').count(),1,'Dark Angels unified navigation lost a shared Datasheet');
     for(const id of ['unit-hellblaster-squad','unit-intercessor-squad','unit-bladeguard-veteran-squad','unit-terminator-squad','unit-terminator-assault-squad','unit-outrider-squad','unit-land-raider','unit-redemptor-dreadnought'])assert.equal(await page.locator(`#${id}`).count(),1,`Dark Angels reader lost shared ${id}`);
     for(const id of ['unit-roboute-guilliman','unit-marneus-calgar-in-armour-of-antilochus','unit-vulkan-hestan','unit-kayvaan-shrike','unit-victrix-honour-guard'])assert.equal(await page.locator(`#${id}`).count(),0,`Dark Angels reader leaked foreign Chapter ${id}`);
     for(const book of books){
@@ -155,62 +151,56 @@ try{
         await relatedLayer.waitFor({state:'hidden'});
       }
 
-      if(book.singleReader){
-        const readerPath=new URL(book.desktop,origin).pathname;
-        assert.equal(new URL(page.url()).pathname,readerPath,`${book.name} Desktop did not open the canonical reader`);
-        await page.setViewportSize({width:390,height:844});
-        assert.equal(await page.evaluate(()=>window.innerWidth),390,`${book.name} responsive Phone viewport was not applied`);
-        assert.equal(new URL(page.url()).pathname,readerPath,`${book.name} Phone viewport left the canonical reader`);
-        assert.equal(await page.locator(`#${book.unit}`).count(),1,`${book.name} responsive reader duplicated the Datasheet`);
-        const stubResponse=await page.request.get(origin+book.phone),stub=await stubResponse.text();
-        assert.match(stub,/mobile-route-redirect\.js\?v=1/,`${book.name} legacy Phone route does not load the shared redirect`);
-        assert.doesNotMatch(stub,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/,`${book.name} legacy Phone route contains duplicated content`);
-        await page.goto(origin+book.phone,{waitUntil:'domcontentloaded'});
-        await page.waitForURL(url=>url.pathname===readerPath&&url.hash===`#${book.unit}`);
-        assert.equal(await page.locator(`#${book.unit}`).count(),1,`${book.name} legacy route did not resolve to one canonical Datasheet`);
-        await page.locator(`#${book.unit}`).waitFor({state:'visible'});
-        await openPhonePopup(page,book.name,true);
-        assert.deepEqual(errors,[],`${book.name} emitted an uncaught runtime error`);
-        continue;
-      }
-
-      const switcher=page.locator('[data-view-switch]:visible').first();
-      const phoneTarget=new URL(book.phone,origin);
-      await Promise.all([
-        page.waitForURL(url=>url.pathname===phoneTarget.pathname&&(!phoneTarget.search||url.search===phoneTarget.search)&&(!phoneTarget.hash||url.hash===phoneTarget.hash)),
-        switcher.click()
-      ]);
-      const phoneUnit=page.locator(`#${book.unit}, main .unit-card`).first();
+      const readerPath=new URL(book.desktop,origin).pathname;
+      assert.equal(new URL(page.url()).pathname,readerPath,`${book.name} Desktop did not open the canonical reader`);
+      await page.setViewportSize({width:390,height:844});
+      assert.equal(await page.evaluate(()=>window.innerWidth),390,`${book.name} responsive Phone viewport was not applied`);
+      assert.equal(new URL(page.url()).pathname,readerPath,`${book.name} Phone viewport left the canonical reader`);
+      assert.equal(await page.locator(`#${book.unit}`).count(),1,`${book.name} responsive reader duplicated the Datasheet`);
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,`${book.name} responsive reader overflows horizontally`);
+      const stubResponse=await page.request.get(origin+book.phone),stub=await stubResponse.text();
+      assert.equal(stubResponse.ok(),true,`${book.name} legacy Phone route is unavailable`);
+      assert.match(stub,/mobile-route-redirect\.js\?v=1/,`${book.name} legacy Phone route does not load the shared redirect`);
+      assert.doesNotMatch(stub,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/,`${book.name} legacy Phone route contains duplicated content`);
+      await page.goto(origin+book.phone,{waitUntil:'domcontentloaded'});
+      await page.waitForURL(url=>url.pathname===readerPath&&url.hash===`#${book.unit}`);
+      const phoneUnit=page.locator(`#${book.unit}`);
       await phoneUnit.waitFor({state:'visible'});
-      assert.ok((await phoneUnit.textContent()).trim().length>100,`${book.name} Phone content is missing`);
-      if(book.name==='Space Marines'){assert.ok(await page.locator('#relatedRules').count(),'Space Marines Phone Datasheet Tools are missing');assert.match(await phoneUnit.textContent(),/Wargear Options/);}
-      await openPhonePopup(page,book.name,book.singleReader);
+      assert.ok((await phoneUnit.textContent()).trim().length>100,`${book.name} responsive content is missing`);
+      if(book.name==='Space Marines')assert.match(await phoneUnit.textContent(),/Wargear Options/);
+      await openPhonePopup(page,book.name);
       assert.deepEqual(errors,[],`${book.name} emitted an uncaught runtime error`);
     }
     await assertDarkAngelsLeaderJourney(page,'unit-belial','unit-terminator-squad');
     await assertDarkAngelsLeaderJourney(page,'unit-azrael','unit-hellblaster-squad');
     await assertDarkAngelsLeaderJourney(page,'unit-sammael','unit-outrider-squad');
-    await assertDarkAngelsPhoneLeaderJourney(page,'belial.html','unit-belial','terminator-squad.html','unit-terminator-squad');
-    await assertDarkAngelsPhoneLeaderJourney(page,'azrael.html','unit-azrael','hellblaster-squad.html','unit-hellblaster-squad');
-    await assertDarkAngelsPhoneLeaderJourney(page,'sammael.html','unit-sammael','outrider-squad.html','unit-outrider-squad');
+    await assertDarkAngelsLegacyLeaderJourney(page,'belial.html','unit-belial','unit-terminator-squad');
+    await assertDarkAngelsLegacyLeaderJourney(page,'azrael.html','unit-azrael','unit-hellblaster-squad');
+    await assertDarkAngelsLegacyLeaderJourney(page,'sammael.html','unit-sammael','unit-outrider-squad');
     await page.goto(`${origin}/books/dark-angels/mobile/deathwing-knights.html`);
+    await page.waitForURL(url=>url.pathname==='/books/dark-angels/reader.html'&&url.hash==='#unit-deathwing-knights');
     const deathwingWargear=await page.locator('#deathwing-knights-wargear-abilities').textContent();
     assert.match(deathwingWargear,/Watcher in the Dark/,'Dark Angels Phone Wargear ability regressed');
     assert.match(deathwingWargear,/These abilities apply only while the corresponding wargear is equipped\./,'Dark Angels Phone Wargear note regressed');
     const glossaryTrigger=page.locator('#unit-deathwing-knights button[data-term]').first();
     await glossaryTrigger.click();
-    const glossaryLink=page.locator('#termPopupStack a[data-mega-glossary]').first();
+    const glossaryLink=page.locator('#popupLayer .term-popup .popup-actions a[href*="/glossary/index.html#"]').last();
+    await glossaryLink.waitFor({state:'visible'});
+    assert.equal(new URL(await glossaryLink.getAttribute('href'),page.url()).pathname,'/glossary/index.html','Popup glossary action lost its canonical destination');
     await Promise.all([page.waitForURL(url=>url.pathname==='/glossary/index.html'),glossaryLink.click()]);
     await page.goBack();
-    await page.locator('#termDialog').waitFor({state:'visible'});
-    await page.locator('[data-popup-close="0"]').click();
+    const restoredPopup=page.locator('#popupLayer .term-popup').last();
+    await restoredPopup.waitFor({state:'visible'});
+    await restoredPopup.locator('[data-popup-close]').click();
     await page.goto(`${origin}/books/dark-angels/mobile/army-rules.html`);
     assert.match(await page.locator('main').textContent(),/Oath of Moment/);
     await page.goto(`${origin}/books/dark-angels/mobile/dark-age-arsenal.html`);
     assert.match(await page.locator('main').textContent(),/Searing Bursts/);
     await page.goto(`${origin}/books/dark-angels/mobile/company-of-hunters.html`);
-    assert.match(await page.locator('main').textContent(),/Codex source required/);
-    console.log('PASS published Army Books open desktop content, supported Related Rules, Phone routes and glossary popups');
+    const companyOfHunters=page.locator('#detachment-company-of-hunters');
+    await companyOfHunters.waitFor({state:'visible'});
+    assert.match(await companyOfHunters.textContent(),/Company of Hunters/);
+    console.log('PASS published Army Books open canonical responsive content, Compatible Rules, legacy redirects and glossary popups');
   }finally{
     await bookContext.close();
   }
@@ -219,28 +209,28 @@ try{
   try{
     const {page,errors}=await observedPage(previewContext);
     await page.goto(`${origin}/index.html`);
-    await Promise.all([page.waitForURL(url=>url.pathname==='/books/dark-angels/mobile/index.html'),page.locator('a.book.da').click()]);
-    assert.match(await page.locator('#start').evaluate(node=>getComputedStyle(node).backgroundImage),/dark-angels-cover-800\.webp/,'Dark Angels Phone Start lost its artwork');
-    await page.locator('#navButton').click();
-    await page.locator('.phone-tree > details').nth(1).locator(':scope > summary').click();
-    await page.locator('[data-datasheet-owner="space-marines"] > summary').click();
-    await page.locator('[data-category-id="datasheets-space-marines-infantry"] > summary').click();
-    await Promise.all([page.waitForURL(url=>url.pathname==='/books/dark-angels/mobile/hellblaster-squad.html'),page.locator('a[href="./hellblaster-squad.html"]').click()]);
-    assert.equal(await page.locator('a[href="./hellblaster-squad.html"][aria-current="page"]').count(),1,'Dark Angels Phone current route is not marked');
-    assert.match(await page.locator('#unit-hellblaster-squad').textContent(),/Space Marines shared datasheet/,'Dark Angels Phone shared datasheet lost ownership context');
+    await Promise.all([page.waitForURL(url=>url.pathname==='/books/dark-angels/reader.html'),page.locator('a.book.da').click()]);
+    assert.match(await page.locator('#start').evaluate(node=>getComputedStyle(node).backgroundImage),/dark-angels-cover-800\.webp/,'Dark Angels responsive Start lost its artwork');
+    await page.locator('#navMenu').click();
+    await page.locator('#tocTree [data-nav-id="datasheets"] > .toc-row [data-nav-toggle]').click();
+    await page.locator('#tocTree [data-nav-id="datasheets-infantry"] > .toc-row [data-nav-toggle]').click();
+    await page.locator('#tocTree [data-nav-target="unit-hellblaster-squad"]').click();
+    await page.waitForFunction(()=>document.querySelector('#tocTree [data-nav-target="unit-hellblaster-squad"]')?.classList.contains('is-current'));
+    assert.equal(await page.locator('#tocTree [data-nav-target="unit-hellblaster-squad"].is-current').count(),1,'Dark Angels responsive current target is not marked');
+    assert.match(await page.locator('#unit-hellblaster-squad').textContent(),/Space Marines shared datasheet/,'Dark Angels responsive shared datasheet lost ownership context');
     for(const viewport of [{width:390,height:844},{width:430,height:932}]){
       await page.setViewportSize(viewport);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,`Dark Angels overflows at ${viewport.width}px`);
     }
     await page.reload();
     await page.locator('#unit-hellblaster-squad').waitFor({state:'visible'});
-    for(const [desktopTarget,phonePath] of [['start','/books/dark-angels/mobile/index.html'],['army-rules','/books/dark-angels/mobile/army-rules.html'],['unit-belial','/books/dark-angels/mobile/belial.html'],['unit-terminator-squad','/books/dark-angels/mobile/terminator-squad.html'],['unit-hellblaster-squad','/books/dark-angels/mobile/hellblaster-squad.html'],['detachment-wrath-of-the-rock','/books/dark-angels/mobile/wrath-of-the-rock.html'],['updates','/books/dark-angels/mobile/updates.html']]){
-      await page.goto(`${origin}/books/dark-angels/reader.html#${desktopTarget}`);
-      await Promise.all([page.waitForURL(url=>url.pathname===phonePath&&!url.hash),page.locator('[data-view-switch]').click()]);
+    for(const [target,legacyPath] of [['start','/books/dark-angels/mobile/index.html'],['army-rules','/books/dark-angels/mobile/army-rules.html'],['unit-belial','/books/dark-angels/mobile/belial.html'],['unit-terminator-squad','/books/dark-angels/mobile/terminator-squad.html'],['unit-hellblaster-squad','/books/dark-angels/mobile/hellblaster-squad.html'],['detachment-wrath-of-the-rock','/books/dark-angels/mobile/wrath-of-the-rock.html'],['updates','/books/dark-angels/mobile/updates.html']]){
+      await page.goto(origin+legacyPath);
+      await page.waitForURL(url=>url.pathname==='/books/dark-angels/reader.html'&&url.hash===`#${target}`);
+      assert.equal(await page.locator(`#${target}`).count(),1,`Dark Angels legacy route lost canonical target ${target}`);
     }
     await page.goto(`${origin}/books/dark-angels/mobile/belial.html`);
-    await page.locator('#navButton').click();
-    await Promise.all([page.waitForURL(url=>url.pathname==='/books/dark-angels/reader.html'&&url.hash==='#unit-belial',{waitUntil:'commit'}),page.locator('[data-view-switch]').click()]);
+    await page.waitForURL(url=>url.pathname==='/books/dark-angels/reader.html'&&url.hash==='#unit-belial');
     await page.locator('#unit-belial').waitFor({state:'visible'});
     assert.deepEqual(errors,[],'Dark Angels responsive preview emitted an uncaught runtime error');
   }finally{
@@ -267,9 +257,10 @@ try{
     assert.equal(await page.locator('a[href="./mobile/index.html?view=mobile"]').count(),1,'Dark Angels no-JS Phone link is missing');
     assert.equal(await page.locator('a[href="../../index.html"]').count(),1,'Dark Angels no-JS Library return is missing');
     await page.goto(`${origin}/books/dark-angels/mobile/belial.html`);
-    assert.ok((await page.locator('#unit-belial').textContent()).trim().length>100,'Dark Angels no-JS Phone Datasheet is not meaningful');
-    assert.equal(await page.locator('a[href="../../../index.html"]').count(),1,'Dark Angels no-JS Phone Library link is missing');
-    assert.equal(await page.locator('[data-view-switch]').count(),1,'Dark Angels no-JS Phone Desktop link is missing');
+    assert.equal(await page.locator('html').getAttribute('data-canonical-reader'),'../reader.html','Dark Angels no-JS compatibility route lost canonical reader metadata');
+    assert.equal(await page.locator('html').getAttribute('data-canonical-target'),'unit-belial','Dark Angels no-JS compatibility route lost canonical target metadata');
+    assert.equal(await page.locator('article, section, .unit-card, [data-rule-id]').count(),0,'Dark Angels no-JS compatibility route contains duplicated book content');
+    assert.equal(await page.locator('script[src*="mobile-route-redirect.js"]').count(),1,'Dark Angels compatibility route lost its redirect runtime');
   }finally{
     await noScriptContext.close();
   }
@@ -283,14 +274,15 @@ try{
     await page.waitForFunction(()=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')||'[]').length>0);
     const rosterId=await page.evaluate(()=>JSON.parse(localStorage.getItem('wh40k-rosters-v1')).at(-1).id);
     await page.goto(`${origin}/books/tau-empire/mobile/cadre-fireblade.html?roster=${encodeURIComponent(rosterId)}`);
-    await page.waitForFunction(()=>document.documentElement.dataset.rosterActive==='true');
-    assert.ok(await page.locator('#relatedRules').count(),'Valid roster must expose roster-aware rules');
-    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
-    await page.waitForFunction(()=>document.querySelectorAll('#relatedRulesContent .related-detachment').length>0);
-    assert.equal(await page.locator('#relatedDetachment').count(),0,'One-Detachment Phone roster still exposes a Detachment selector');
-    const oneDetachmentHeadings=await page.locator('#relatedRulesContent .related-detachment:visible > h2').allTextContents();
+    await page.waitForURL(url=>url.pathname==='/books/tau-empire/reader.html'&&url.searchParams.get('roster')===rosterId&&url.hash==='#unit-cadre-fireblade');
+    await page.waitForFunction(()=>window.WH_ARMY_ROSTER_CONTEXT?.status==='ready'&&document.querySelector('#unit-cadre-fireblade[data-roster-selected="true"]'));
+    await page.locator('#unit-cadre-fireblade .related-rules-trigger').click();
+    await page.locator('.full-related-content').waitFor({state:'visible'});
+    assert.equal(await page.locator('.full-related-filter').count(),0,'One-Detachment responsive roster still exposes a Detachment selector');
+    const oneDetachmentHeadings=await page.locator('.full-related-content .related-detachment:visible > h2').allTextContents();
     assert.ok(oneDetachmentHeadings.some(title=>title.startsWith('Kauyon')),'One-Detachment roster omitted its Detachment rules');
     assert.ok(!oneDetachmentHeadings.some(title=>title.startsWith("Mont'ka")),'One-Detachment roster included a foreign Detachment');
+    await page.locator('.related-rules-close').click();
 
     await page.goto(`${origin}/index.html?roster-smoke-control=1`);
     await page.evaluate(record=>{
@@ -317,7 +309,7 @@ try{
     await page.goto(`${origin}/books/emperors-children/reader.html#unit-lord-exultant`);
     await page.locator('#unit-lord-exultant .related-rules-trigger').click();
     await page.locator('.full-related-filter').waitFor({state:'visible'});
-    assert.match(await page.locator('.full-related-filter').textContent(),/All Detachments/,'Non-roster All Detachments selector regressed');
+    assert.match(await page.locator('.full-related-filter').textContent(),/All detachments/,'Non-roster All detachments selector regressed');
     await page.locator('.related-rules-close').click();
     await page.evaluate(record=>{localStorage.setItem('emperors-children-detachment-filter','court-of-the-phoenician');localStorage.setItem('wh40k-rosters-v1',JSON.stringify([record]));},rosterRecord);
 
@@ -333,7 +325,7 @@ try{
     await page.locator('[data-kind="enhancements"]').click();
     const enhancementHeadings=await page.locator('.full-related-content .related-detachment:visible > h2').allTextContents();
     assert.ok(enhancementHeadings.some(title=>title.startsWith('Carnival of Excess'))&&enhancementHeadings.some(title=>title.startsWith('Frenzied Host')),'Desktop roster union omitted an assigned Enhancement group');
-    const snapshot=await page.evaluate(()=>window.DG_APP.relatedRules.snapshot());
+    const snapshot=await page.evaluate(()=>{const related=window.DG_APP.relatedRules;return related.snapshot(related.layer.querySelector('[data-kind="enhancements"]'));});
     assert.equal(snapshot.detachment,'all','Roster snapshot persisted a manual Detachment');
     await page.locator('.related-rules-close').click();
     await page.evaluate(state=>window.DG_APP.relatedRules.restore(state),snapshot);
@@ -343,18 +335,19 @@ try{
 
     errors.length=0;
     await page.goto(`${origin}/books/emperors-children/mobile/lord-exultant.html?roster=${rosterRecord.id}`);
-    await page.locator('#relatedRules').scrollIntoViewIfNeeded();
-    await page.waitForFunction(()=>document.querySelectorAll('#relatedRulesContent .related-detachment').length>0);
-    assert.equal(await page.locator('#relatedDetachment').count(),0,'Phone roster mode still exposes a Detachment selector');
-    const phoneHeadings=await page.locator('#relatedRulesContent .related-detachment:visible > h2').allTextContents();
-    assert.ok(phoneHeadings.some(title=>title.startsWith('Carnival of Excess'))&&phoneHeadings.some(title=>title.startsWith('Frenzied Host')),'Phone roster union omitted a roster Detachment');
-    assert.ok(!phoneHeadings.some(title=>title.startsWith('Court of the Phoenician')),'Phone roster union included a foreign Detachment');
-    assert.equal(phoneHeadings.filter(title=>title==='Core Stratagems').length,1,'Phone roster union duplicated Core Stratagems');
-    assert.deepEqual(errors,[],'Phone roster Compatible Rules emitted an uncaught runtime error');
+    await page.waitForURL(url=>url.pathname==='/books/emperors-children/reader.html'&&url.searchParams.get('roster')===rosterRecord.id&&url.hash==='#unit-lord-exultant');
+    await page.locator('#unit-lord-exultant .related-rules-trigger').click();
+    await page.locator('.full-related-content').waitFor({state:'visible'});
+    assert.equal(await page.locator('.full-related-filter').count(),0,'Responsive roster mode still exposes a Detachment selector');
+    const phoneHeadings=await page.locator('.full-related-content .related-detachment:visible > h2').allTextContents();
+    assert.ok(phoneHeadings.some(title=>title.startsWith('Carnival of Excess'))&&phoneHeadings.some(title=>title.startsWith('Frenzied Host')),'Responsive roster union omitted a roster Detachment');
+    assert.ok(!phoneHeadings.some(title=>title.startsWith('Court of the Phoenician')),'Responsive roster union included a foreign Detachment');
+    assert.equal(phoneHeadings.filter(title=>title==='Core Stratagems').length,1,'Responsive roster union duplicated Core Stratagems');
+    assert.deepEqual(errors,[],'Responsive roster Compatible Rules emitted an uncaught runtime error');
     const csmRosterRecord={id:'csm-publication-roster',name:'CSM publication fixture',roster:{faction:'Chaos - Chaos Space Marines',detachment:'Nightmare Hunt',detachments:[{label:'Nightmare Hunt'}],units:[{id:'fixture-chaos-lord-jump-pack',name:'Chaos Lord with Jump Pack',quantity:1,points:80}],enhancements:[]}};
     await page.evaluate(record=>localStorage.setItem('wh40k-rosters-v1',JSON.stringify([record])),csmRosterRecord);
     await page.goto(`${origin}/books/chaos-space-marines/reader.html?roster=${csmRosterRecord.id}#unit-chaos-lord-with-jump-pack`);
-    await page.waitForFunction(()=>document.documentElement.dataset.rosterActive==='true');
+    await page.waitForFunction(()=>window.WH_ARMY_ROSTER_CONTEXT?.status==='ready'&&document.querySelector('#unit-chaos-lord-with-jump-pack[data-roster-selected="true"]'));
     await page.locator('#unit-chaos-lord-with-jump-pack .related-rules-trigger').click();
     await page.locator('.full-related-content').waitFor({state:'visible'});
     assert.equal(await page.locator('.full-related-filter').count(),0,'CSM roster mode still exposes a Detachment selector');

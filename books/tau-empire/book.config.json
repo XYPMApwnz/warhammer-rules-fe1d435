@@ -49,7 +49,7 @@
     "app": 13,
     "armyBook": 12,
     "rosterContext": 1,
-    "relatedRules": 14,
+    "relatedRules": 15,
     "ruleFacts": 5,
     "book": 5,
     "mobile": 2,
@@ -69,5 +69,9 @@
     "points": "content/tau-empire-points.en.json",
     "relatedRules": "content/tau-empire-related-rules.en.json",
     "manifest": "sources/source-manifest.json"
+  },
+  "relatedRulesOwnership": {
+    "mode": "authoritative-runtime-source",
+    "path": "mobile/related-rules.inc"
   }
 }

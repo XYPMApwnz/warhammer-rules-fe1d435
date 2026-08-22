@@ -6,7 +6,8 @@ import {fileURLToPath} from 'node:url';
 
 const projectRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const root=path.join(projectRoot,'books','death-guard');
-const read=name=>fs.readFileSync(path.join(root,name),'utf8');
+const sharedOwned=new Map([['styles/tokens.css','books/shared/styles/tokens.css'],['styles/layout.css','books/shared/styles/layout.css'],['styles/navigation.css','books/shared/styles/navigation.css'],['styles/content.css','books/shared/styles/content.css'],['styles/popups.css','books/shared/styles/popups.css'],['scripts/navigation-controller.js','books/shared/controllers/navigation-controller.js'],['scripts/popup-controller.js','books/shared/controllers/popup-controller.js'],['scripts/full-entry-controller.js','books/shared/controllers/full-entry-controller.js'],['scripts/journey-controller.js','books/shared/controllers/journey-controller.js'],['scripts/ui-controllers.js','books/shared/controllers/ui-controllers.js']]);
+const read=name=>fs.readFileSync(sharedOwned.has(name)?path.join(projectRoot,sharedOwned.get(name)):path.join(root,name),'utf8');
 const readProject=name=>fs.readFileSync(path.join(projectRoot,name),'utf8');
 const html=read('reader.html');
 const navigationTargets=readProject('books/shared/navigation-targets.js');
@@ -152,7 +153,7 @@ const readViewportSource=navigation.match(/readViewport\(\)\{[\s\S]*?\n    \}/)?
 check('scroll spy performs no layout measurements per frame',!readViewportSource.includes('getBoundingClientRect'));
 check('scroll spy ignores hidden navigation ranges',navigation.includes('measurable:rect.width>0||rect.height>0')&&navigation.includes('if(range.measurable===false)continue'));
 check('scroll spy assigns visual gaps to the following tracked card',navigation.includes('rect.top-leadingMargin')&&navigation.includes('getComputedStyle(item.section).marginTop'));
-check('mobile layout avoids content-visibility geometry jumps',!readProject('books/death-guard/styles/content.css').includes('content-visibility: auto'));
+check('mobile layout avoids content-visibility geometry jumps',!readProject('books/shared/styles/content.css').includes('content-visibility: auto'));
 check('user input cancels controlled scrolling',navigation.includes('cancelTransition()')&&navigation.includes("window.addEventListener('touchstart'"));
 check('navigation branches use strict sibling accordion',navigation.includes("if(peer!==node&&peer.matches('[data-nav-id]'))this.closeBranch(peer,{deep:true})")&&!navigation.includes('isOnActivePath'));
 check('manual accordion state yields back to scroll tracking',navigation.includes('pathIsOpen(node)')&&navigation.includes("else if(item&&!this.pathIsOpen(item.node))this.revealPath(item.node,{includeSelf:true})"));
@@ -266,7 +267,7 @@ check('Back has rebuilt-action fallback',journey.includes('this.findRestoredActi
 check('click navigation highlights only after controlled scroll settles',navigation.includes("()=>{this.highlighter.show(targets.highlightTarget);settled?.();}"));
 
 const cssFiles=['styles/tokens.css','styles/layout.css','styles/navigation.css','styles/content.css','styles/popups.css'];
-check('all five style layers are linked',cssFiles.every(file=>html.includes('href="./'+file+'?v=')));
+check('all five style layers are linked',cssFiles.every(file=>html.includes('href="../shared/'+file+'?v=')));
 const contentCss=read('styles/content.css');
 check('datasheet quick navigation overrides the shared desktop rail and is phone-only',contentCss.includes('body .unit-card > .local-nav { display: none; }')&&contentCss.includes('@media (max-width: 600px)')&&contentCss.includes('position: sticky;')&&contentCss.includes('overflow-x: auto;'));
 const navigationCss=read('styles/navigation.css');

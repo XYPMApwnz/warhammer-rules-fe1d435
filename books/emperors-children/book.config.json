@@ -23,7 +23,7 @@
     "app": 8,
     "armyBook": 12,
     "rosterContext": 1,
-    "relatedRules": 14,
+    "relatedRules": 15,
     "ruleFacts": 5,
     "book": 3,
     "tokens": 2,
@@ -79,5 +79,9 @@
     "Thrill Seekers",
     "Torrent",
     "Twin-linked"
-  ]
+  ],
+  "relatedRulesOwnership": {
+    "mode": "authoritative-runtime-source",
+    "path": "mobile/related-rules.inc"
+  }
 }

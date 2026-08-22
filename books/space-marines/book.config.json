@@ -59,7 +59,7 @@
     "app": 9,
     "armyBook": 12,
     "rosterContext": 1,
-    "relatedRules": 14,
+    "relatedRules": 15,
     "ruleFacts": 5,
     "book": 3,
     "rosterFilter": 2,
@@ -79,5 +79,10 @@
     "codexWargear": "content/space-marines-codex-wargear.en.json",
     "relatedRules": "content/space-marines-related-rules.en.json",
     "manifest": "sources/source-manifest.json"
-  }
+  },
+  "relatedRulesOwnership": {
+    "mode": "authoritative-runtime-source",
+    "path": "mobile/related-rules.inc"
+  },
+  "mobileRelatedRulesSource": false
 }

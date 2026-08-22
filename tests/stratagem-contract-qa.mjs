@@ -136,7 +136,7 @@ assert.match(sharedPresentation,/host\?\.append\(label\)/,'shared decorator must
 assert.doesNotMatch(sharedPresentation,/dataset\.stratagemType\|\|''\)\)return/,'valid metadata must not skip visible-label decoration');
 for(const file of ['books/death-guard/scripts/app.js','books/tyranids/scripts/app.js','books/tau-empire/scripts/app.js','books/emperors-children/scripts/app.js','books/chaos-space-marines/scripts/app.js','books/adeptus-mechanicus/scripts/app.js'])assert.match(read(file),/shared\/stratagem-presentation\.mjs/,`${file}: shared Stratagem presentation is absent`);
 
-const css=read('books/death-guard/styles/content.css');
+const css=read('books/shared/styles/content.css');
 const ecPackStratagems=json('books/emperors-children/content/emperors-children-faction-pack.en.json').detachments.flatMap(detachment=>detachment.stratagems);
 const ecCodexStratagems=json('books/emperors-children/content/emperors-children-codex-parity.en.json').detachments.flatMap(detachment=>detachment.stratagems);
 const ecReader=read('books/emperors-children/reader.html');
@@ -156,7 +156,7 @@ assert.match(css,/:is\(\[data-related-kind="stratagems"\],\[data-related-kind="e
 assert.match(css,/@media\s*\(max-width:\s*900px\)[^{]*\{[\s\S]*grid-template-columns:\s*1fr/);
 for(const bookId of migratedBooks.keys()){
   const reader=read(`books/${bookId}/reader.html`);
-  const responsiveContentCss=bookId==='death-guard'?/\.\/styles\/content\.css\?v=\d+/:/\.\.\/death-guard\/styles\/content\.css\?v=\d+/;
+  const responsiveContentCss=/\.\.\/shared\/styles\/content\.css\?v=\d+/;
   assert.match(reader,responsiveContentCss,`${bookId}: responsive reader does not load the canonical Stratagem layout`);
   assert.doesNotMatch(reader,/mobile\/mobile\.css|mobile\/mobile\.js|mobile\/phone-popup-controller\.js/,`${bookId}: canonical reader still loads the obsolete Phone content runtime`);
 }

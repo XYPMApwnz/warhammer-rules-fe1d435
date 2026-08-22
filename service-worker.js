@@ -70,8 +70,8 @@ const APP_SHELL = [
   "./books/death-guard/",
   DEATH_GUARD_FALLBACK,
   "./books/death-guard/reader.html",
-  "./books/death-guard/styles/entry.css?v=2",
-  "./books/death-guard/scripts/view-router.js?v=2",  './books/death-guard/mobile/beasts-of-nurgle.html',
+  "./books/shared/styles/entry.css?v=2",
+  "./books/shared/controllers/view-router.js?v=2",  './books/death-guard/mobile/beasts-of-nurgle.html',
   './books/death-guard/mobile/great-unclean-one.html',
   './books/death-guard/mobile/nurglings.html',
   './books/death-guard/mobile/plague-drones.html',
@@ -100,18 +100,18 @@ const APP_SHELL = [
   "./books/shared/roster-parser.js?v=2",
   "./books/shared/roster-enhancements.js?v=3",
   "./books/death-guard/assets/icon-v4.svg",
-  "./books/death-guard/styles/tokens.css?v=11",
-  "./books/death-guard/styles/layout.css?v=11",
-  "./books/death-guard/styles/navigation.css?v=12",
-  "./books/death-guard/styles/content.css?v=41",
-  "./books/death-guard/styles/popups.css?v=18",
-  "./books/death-guard/scripts/navigation-controller.js?v=16",
+  "./books/shared/styles/tokens.css?v=11",
+  "./books/shared/styles/layout.css?v=11",
+  "./books/shared/styles/navigation.css?v=12",
+  "./books/shared/styles/content.css?v=41",
+  "./books/shared/styles/popups.css?v=18",
+  "./books/shared/controllers/navigation-controller.js?v=16",
   "./books/death-guard/scripts/roster-semantics.js?v=2",
   "./books/death-guard/scripts/roster-filter.js?v=27",
-  "./books/death-guard/scripts/popup-controller.js?v=25",
-  "./books/death-guard/scripts/full-entry-controller.js?v=9",
-  "./books/death-guard/scripts/journey-controller.js?v=13",
-  "./books/death-guard/scripts/ui-controllers.js?v=12",
+  "./books/shared/controllers/popup-controller.js?v=25",
+  "./books/shared/controllers/full-entry-controller.js?v=9",
+  "./books/shared/controllers/journey-controller.js?v=13",
+  "./books/shared/controllers/ui-controllers.js?v=12",
   "./books/death-guard/scripts/app.js?v=47",
   "./books/death-guard/generated/compatible-rules.json",
   "./books/core-rules/",
@@ -222,7 +222,8 @@ const APP_SHELL = [
   ,"./books/tau-empire/generated/compatible-rules.json"
   ,"./books/tau-empire/scripts/roster-data.js?v=1"
   ,"./books/tau-empire/mobile/related-rules.inc?v=2"
-  ,"./books/shared/book-roster-enhancements.js?v=1"
+  ,"./books/shared/book-roster-enhancements.js?v=2"
+  ,"./books/extensions/book-roster-enhancement-providers.js?v=1"
   ,"./books/chaos-space-marines/"
   ,CHAOS_SPACE_MARINES_ENTRY_FALLBACK
   ,CHAOS_SPACE_MARINES_DESKTOP_FALLBACK
@@ -298,7 +299,7 @@ const APP_SHELL = [
   ,"./books/dark-angels/scripts/roster-filter.js?v=1"
   ,"./books/dark-angels/scripts/app.js?v=7"
   ,"./books/shared/modal-focus.js?v=1"
-  ,"./books/shared/army-related-rules.js?v=14"
+  ,"./books/shared/army-related-rules.js?v=15"
   ,"./books/shared/roster-context.js?v=1"
   ,"./books/shared/army-book-app.js?v=12"
 ];

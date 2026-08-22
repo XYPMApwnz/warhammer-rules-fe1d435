@@ -49,5 +49,8 @@ assert.equal(fallback.pathname,'/books/blood-angels/reader.html');assert.equal(f
 const tauConfig=JSON.parse(fs.readFileSync(path.join(root,'books/tau-empire/book.config.json'),'utf8'));
 assert.equal(tauConfig.customIndex,undefined,'T\'au customIndex escape hatch remains');
 assert.equal(tauConfig.entryRoute,'canonical-reader-redirect','T\'au declarative entry route is missing');
-assert.equal(fs.existsSync(path.join(root,'books/space-marines/mobile/related-rules.source.inc')),true,'Space Marines build-time Related Rules source is missing');
+const spaceMarinesConfig=JSON.parse(fs.readFileSync(path.join(root,'books/space-marines/book.config.json'),'utf8'));
+assert.deepEqual(spaceMarinesConfig.relatedRulesOwnership,{mode:'authoritative-runtime-source',path:'mobile/related-rules.inc'},'Space Marines Related Rules ownership is not explicit');
+assert.equal(fs.existsSync(path.join(root,'books/space-marines/mobile/related-rules.inc')),true,'Space Marines authoritative Related Rules source is missing');
+assert.equal(fs.existsSync(path.join(root,'books/space-marines/mobile/related-rules.source.inc')),false,'Space Marines still has split Related Rules ownership');
 console.log(`Mobile compatibility routing QA passed: ${Object.keys(books).length} books, ${total} content-free routes, one shared builder and preserved query/hash/instance semantics.`);

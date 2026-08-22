@@ -29,11 +29,6 @@
     "mobileRoutes": 48
   },
   "localAssetVersions": {
-    "tokens": 11,
-    "layout": 11,
-    "navigationCss": 12,
-    "content": 41,
-    "popups": 18,
     "datasheetSystem": 8,
     "glossary": "tyranids-1",
     "glossaryReturn": 3,
@@ -48,11 +43,10 @@
     "modalFocus": 1,
     "rosterSemantics": 2,
     "rosterFilter": 27,
-    "navigationController": 16,
-    "popupController": 25,
-    "fullEntryController": 9,
-    "journeyController": 13,
-    "uiControllers": 12,
     "app": 47
+  },
+  "relatedRulesOwnership": {
+    "mode": "authoritative-runtime-source",
+    "path": "mobile/related-rules.inc"
   }
 }

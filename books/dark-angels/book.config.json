@@ -16,11 +16,13 @@
     "app": 7,
     "armyBook": 12,
     "rosterContext": 1,
-    "relatedRules": 14,
+    "relatedRules": 15,
     "ruleFacts": 5
   },
   "factionKeyword": "DARK ANGELS",
-  "dependencies": ["space-marines"],
+  "dependencies": [
+    "space-marines"
+  ],
   "currentDatasheetsOnly": true,
   "dependencyDatasheets": {
     "render": true,
@@ -45,7 +47,9 @@
     "Character": "Characters",
     "Dedicated Transport": "Dedicated Transports"
   },
-  "armyRules": ["Oath of Moment"],
+  "armyRules": [
+    "Oath of Moment"
+  ],
   "armyRuleTermIds": {
     "Oath of Moment": "space-marines-army-rule-oath-of-moment"
   },

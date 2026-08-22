@@ -13,7 +13,7 @@
   "assetVersions": {
     "app": 42,
     "armyBook": 12,
-    "relatedRules": 14,
+    "relatedRules": 15,
     "rosterContext": 1,
     "ruleFacts": 5,
     "rosterFilter": 8,
@@ -51,5 +51,9 @@
     "officialMfm": "sources/official-mfm-v1.2.json",
     "unitImages": "presentation/unit-images.json",
     "globalGlossary": "../../glossary/registry.en.json"
+  },
+  "relatedRulesOwnership": {
+    "mode": "authoritative-runtime-source",
+    "path": "mobile/related-rules.inc"
   }
 }

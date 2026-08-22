@@ -6,7 +6,7 @@
     "kind": "production-contract-capture",
     "parentHead": "e49d3b3096f680aa631f54b07751e0530d88b516",
     "oracleHashes": {
-      "reader": "cb312566e50c7974923addd0f623c5609d487c6d6bb0533312d9241202f8ef95",
+      "reader": "2d357fb551af380db045ed2b56fd4ac5e58869b2b4ec0976916d6ef07b1a4bd1",
       "runtime": "d74d065af402cf81816a29b0b03168c0dbcb6a01b5fcb789ac6e3b0e6f72b385",
       "relatedRules": "ee14fa9b3adadd88113254ffc2c18f717938dc4a28af190382467f63cef1e410"
     },

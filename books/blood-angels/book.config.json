@@ -21,7 +21,9 @@
   "codexSourceLabel": "SECONDARY CODEX",
   "detachmentQualifiedEnhancementPoints": true,
   "factionKeyword": "BLOOD ANGELS",
-  "dependencies": ["space-marines"],
+  "dependencies": [
+    "space-marines"
+  ],
   "dependencyDatasheets": {
     "render": true,
     "groupByBook": false,
@@ -50,7 +52,10 @@
     "Character": "Characters",
     "Dedicated Transport": "Dedicated Transports"
   },
-  "armyRules": ["Oath of Moment", "The Sons of Sanguinius"],
+  "armyRules": [
+    "Oath of Moment",
+    "The Sons of Sanguinius"
+  ],
   "armyRuleTermIds": {
     "Oath of Moment": "space-marines-army-rule-oath-of-moment"
   },
@@ -89,7 +94,7 @@
     "app": 5,
     "armyBook": 12,
     "rosterContext": 1,
-    "relatedRules": 14,
+    "relatedRules": 15,
     "ruleFacts": 5,
     "rosterFilter": 1,
     "rosterData": 1

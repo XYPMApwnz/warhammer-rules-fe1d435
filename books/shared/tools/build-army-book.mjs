@@ -2,14 +2,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {buildRelationGraphs} from './build-relation-graph.mjs';
+import {createCanonicalBuildContext,finishCanonicalBuild,runCanonicalBuildExtension} from './canonical-build-contract.mjs';
 
-const args=process.argv.slice(2),check=args.includes('--check'),configArg=args.find(arg=>!arg.startsWith('--'));
-if(!configArg)throw new Error('Usage: node build-army-book.mjs <book.config.json> [--check]');
-const configPath=path.resolve(configArg),root=path.dirname(configPath),repo=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../../..');
-const readJson=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
-const config=JSON.parse(fs.readFileSync(configPath,'utf8'));
-const runtimeVersions=JSON.parse(fs.readFileSync(path.join(repo,'books','shared','runtime-asset-versions.json'),'utf8'));
-for(const [key,version] of Object.entries(runtimeVersions.shared))if(config.assetVersions?.[key]!==undefined&&config.assetVersions[key]!==version)throw new Error(`${config.id} assetVersions.${key} must equal shared runtime version ${version}`);
+const context=createCanonicalBuildContext();
+const {args,check,configPath,root,repo,readJson,config,runtimeVersions}=context;
+if(config.buildExtension){await runCanonicalBuildExtension(context);process.exit(0);}
 const glossaryTerms=JSON.parse(fs.readFileSync(path.join(repo,'glossary','registry.en.json'),'utf8')).terms;
 const bookMark=config.mark||config.title.split(/\s+/).map(word=>word[0]).join('').slice(0,4).toUpperCase();
 const pack=readJson(config.sources.factionPack),codex=readJson(config.sources.codexDatasheets);
@@ -396,5 +393,4 @@ if((codex.legends||[]).length!==config.expected.legendsDatasheets)errors.push('L
 if(new Set(units.map(unit=>unit.id)).size!==units.length)errors.push('duplicate unit IDs');
 if([...outputs.values()].some(value=>/\uFFFD|вЂ|вњ|в†|В·/.test(value)))errors.push('mojibake in generated output');
 if(errors.length)throw new Error(errors.join('\n'));
-for(const [relative,content] of outputs){const file=path.join(root,relative);if(check){if(!fs.existsSync(file)||normalizedEol(fs.readFileSync(file,'utf8'))!==normalizedEol(content))throw new Error(`${relative} is stale`);}else{fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,content);}}
-console.log(`${check?'Checked':'Built'} ${config.title}: ${units.length} datasheets, ${detachments.length} detachments, ${terms.size} local terms`);
+finishCanonicalBuild(context,outputs,{normalizeLineEndings:true,summary:`${check?'Checked':'Built'} ${config.title}: ${units.length} datasheets, ${detachments.length} detachments, ${terms.size} local terms`});

@@ -1,0 +1,55 @@
+{
+  "schema": 1,
+  "id": "adeptus-mechanicus",
+  "title": "Adeptus Mechanicus",
+  "shortTitle": "Adeptus Mechanicus Rules",
+  "edition": "11E",
+  "factionKeyword": "ADEPTUS MECHANICUS",
+  "buildExtension": "tools/canonical-build-extension.mjs",
+  "sharedArmyBookApp": true,
+  "compatibleRulesMatrix": true,
+  "rosterSupport": true,
+  "entryRoute": "canonical-reader-redirect",
+  "assetVersions": {
+    "app": 42,
+    "armyBook": 12,
+    "relatedRules": 14,
+    "rosterContext": 1,
+    "ruleFacts": 5,
+    "rosterFilter": 8,
+    "rosterEnhancements": 4,
+    "data": 1,
+    "tokens": 15,
+    "book": 22
+  },
+  "expected": {
+    "matchedDetachments": 10,
+    "factionPackDetachments": 5,
+    "codexDatasheets": 34,
+    "legendsDatasheets": 0
+  },
+  "detachmentOrder": [
+    "detachment-cohort-acquisitus",
+    "detachment-lords-of-the-forge",
+    "detachment-luminen-auto-choir",
+    "detachment-cohort-cybernetica",
+    "detachment-data-psalm-conclave",
+    "detachment-eradication-cohort",
+    "detachment-explorator-maniple",
+    "detachment-haloscreed-battle-clade",
+    "detachment-rad-zone-corps",
+    "detachment-skitarii-hunter-cohort"
+  ],
+  "sources": {
+    "factionRules": "content/adeptus-mechanicus-rules.en.json",
+    "sourceTranscript": "content/adeptus-mechanicus-source.en.json",
+    "codexDetachments": "content/adeptus-mechanicus-codex-detachments.en.json",
+    "codexParity": "content/adeptus-mechanicus-codex-parity.en.json",
+    "codexDatasheets": "content/adeptus-mechanicus-codex-datasheets.en.json",
+    "codexWargear": "content/adeptus-mechanicus-codex-wargear.en.json",
+    "points": "content/adeptus-mechanicus-points.en.json",
+    "officialMfm": "sources/official-mfm-v1.2.json",
+    "unitImages": "presentation/unit-images.json",
+    "globalGlossary": "../../glossary/registry.en.json"
+  }
+}

@@ -1,15 +1,7 @@
-import {readdir,readFile,unlink,writeFile} from 'node:fs/promises';
+import {runMobileStubBuilder} from '../../shared/tools/build-mobile-stubs.mjs';
 
-const check=process.argv.includes('--check');
-const source=await readFile(new URL('../reader.html',import.meta.url),'utf8');
-const spec={id:'blood-angels',title:'Blood Angels',detachments:24,units:97};
-const clean=value=>value.replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').trim();
-const attribute=value=>String(value).replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll('<','&lt;');
-function extract(tag,id,html=source){const opener=new RegExp(`<${tag}\\b[^>]*\\bid="${id}"[^>]*>`,'i').exec(html);if(!opener)throw new Error(`Missing ${tag}#${id}`);const tags=new RegExp(`<\\/?${tag}\\b[^>]*>`,'gi');tags.lastIndex=opener.index;let depth=0;for(let match;(match=tags.exec(html));){depth+=match[0][1]==='/'?-1:1;if(depth===0)return html.slice(opener.index,tags.lastIndex);}throw new Error(`Unclosed ${tag}#${id}`);}
-const detachments=[...source.matchAll(/<section class="content-group detachment" id="(detachment-[^"]+)"[^>]*>\s*<h3 class="category-title(?: detachment-title)?">([\s\S]*?)<\/h3>/g)].map(([,id,heading])=>({id,title:clean(heading.replace(/<span[\s\S]*$/,'')),file:`${id.slice(11)}.html`}));
-const categories=[...source.matchAll(/<section class="content-group" id="(datasheets-[^"]+)"[^>]*>\s*<h3 class="category-title">([^<]+)<\/h3>/g)].map(([,id,title])=>{const section=extract('section',id),units=[...section.matchAll(/<article\b[^>]*\bclass="[^"]*\bunit-card\b[^"]*"[^>]*\bid="(unit-[^"]+)"[^>]*>/g)].map(([,unitId])=>{const article=extract('article',unitId,section),unitTitle=/<h3(?: class="unit-name")?>([\s\S]*?)<\/h3>/.exec(article)?.[1];if(!unitTitle)throw new Error(`Missing title for ${unitId}`);return{id:unitId,title:clean(unitTitle),file:`${unitId.slice(5)}.html`};});return{id,title:clean(title),units};});
-const units=categories.flatMap(category=>category.units);if(detachments.length!==spec.detachments||units.length!==spec.units)throw new Error(`Expected ${spec.detachments} Detachments and ${spec.units} Datasheets; found ${detachments.length} and ${units.length}`);
-const routes=[{file:'index.html',id:'start',title:'Start'},{file:'army-rules.html',id:'army-rules',title:'Army Rules'},{file:'updates.html',id:'updates',title:'Updates'},...detachments,...units];const collisions=[...Map.groupBy(routes,route=>route.file)].filter(([,items])=>items.length>1);if(collisions.length)throw new Error(`Phone route collisions: ${collisions.map(([file,items])=>`${file}: ${items.map(item=>item.id).join(', ')}`).join('; ')}`);
-const page=route=>`<!doctype html><html lang="en" data-canonical-reader="../reader.html" data-canonical-target="${attribute(route.id)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${attribute(route.title)} — ${spec.title}</title><script src="../../shared/mobile-route-redirect.js?v=1"></script></head><body><p>Opening the canonical ${spec.title} reader...</p></body></html>\n`;
-const outputs=new Map(routes.map(route=>[route.file,page(route)])),expectedFiles=new Set(outputs.keys()),existingHtml=(await readdir(new URL('./',import.meta.url))).filter(file=>file.endsWith('.html'));
-if(check){const errors=[];for(const[file,expected]of outputs){let actual='';try{actual=await readFile(new URL(file,import.meta.url),'utf8');}catch{}if(actual!==expected)errors.push(`${file}: stale or missing`);}for(const file of existingHtml)if(!expectedFiles.has(file))errors.push(`${file}: orphan route`);if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}else console.log(`${spec.title} compatibility build check: ${routes.length} content-free routes are fresh.`);}else{for(const[file,html]of outputs)await writeFile(new URL(file,import.meta.url),html);for(const file of existingHtml)if(!expectedFiles.has(file))await unlink(new URL(file,import.meta.url));console.log(`${spec.title} compatibility routes built: ${routes.length} stubs, ${detachments.length} detachments and ${units.length} datasheets.`);}
+await runMobileStubBuilder(import.meta.url,{
+  title:'Blood Angels',
+  expected:{detachments:24,units:97},
+  template:{kind:'opening',ellipsis:'...'}
+});

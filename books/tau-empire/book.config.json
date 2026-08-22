@@ -39,7 +39,7 @@
   ],
   "includeCoreStratagems": true,
   "dedicatedMobile": true,
-  "customIndex": true,
+  "entryRoute": "canonical-reader-redirect",
   "sharedArmyBookApp": true,
   "mobileRelatedRulesSource": false,
   "rosterSupport": true,

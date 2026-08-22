@@ -163,7 +163,9 @@ for(const bookId of migratedBooks.keys()){
 
 assert.match(read('books/shared/popup-content.js'),/term\.kind==='stratagem'\?term\.definition:term\.summary/);
 assert.match(read('glossary/tools/build-glossary.mjs'),/kind:term\.kind/);
-for(const buildFile of ['books/tyranids/mobile/build.mjs','books/emperors-children/mobile/build.mjs','books/tau-empire/mobile/build.mjs'])assert.match(read(buildFile),/data-canonical-reader="\.\.\/reader\.html"/);
+const sharedMobileBuilder=read('books/shared/tools/build-mobile-stubs.mjs');
+assert.match(sharedMobileBuilder,/data-canonical-reader="\.\.\/reader\.html"/);
+for(const buildFile of ['books/tyranids/mobile/build.mjs','books/emperors-children/mobile/build.mjs','books/tau-empire/mobile/build.mjs'])assert.match(read(buildFile),/runMobileStubBuilder\(import\.meta\.url/);
 assert.match(dgReader,/data-term="core-rule-15-04-insane-bravery"/);
 assert.match(read('books/adeptus-mechanicus/reader.html'),/data-term="stratagem-priority-reclamation"/);
 assert.match(read('books/shared/army-related-rules.js'),/Compatible Stratagems & Enhancements/);

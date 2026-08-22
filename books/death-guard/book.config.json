@@ -43,7 +43,7 @@
     "modalFocus": 1,
     "rosterSemantics": 2,
     "rosterFilter": 27,
-    "app": 47
+    "app": 48
   },
   "relatedRulesOwnership": {
     "mode": "authoritative-runtime-source",

@@ -12,9 +12,9 @@
   "customApp": true,
   "rosterSupport": true,
   "assetVersions": {
-    "book": 3,
-    "app": 7,
-    "armyBook": 13,
+    "book": 4,
+    "app": 8,
+    "armyBook": 14,
     "rosterContext": 1,
     "relatedRules": 15,
     "ruleFacts": 5

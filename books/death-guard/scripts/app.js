@@ -47,11 +47,6 @@
       decorateContent:presentation.decorate,
       emptyMessage:({kind})=>`No compatible ${kind==='enhancements'?'Enhancements':'Stratagems'} for this datasheet in the selected Detachment.`
     },
-    extensions:({params})=>{
-      for(const button of document.querySelectorAll('button:not([type])'))button.type='button';
-      presentation.decorate(document);
-      const rosterGuides=document.querySelector('[data-roster-guides-link]');
-      if(rosterGuides)rosterGuides.hidden=!params.get('roster');
-    }
+    extensions:()=>presentation.decorate(document)
   });
 }()).catch(error=>{document.documentElement.dataset.bookError='true';console.error(error);});

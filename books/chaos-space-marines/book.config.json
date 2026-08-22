@@ -20,9 +20,9 @@
   "legacyRelatedRuleAttributes": false,
   "detachmentQualifiedEnhancementPoints": true,
   "assetVersions": {
-    "book": 3,
+    "book": 4,
     "app": 6,
-    "armyBook": 13,
+    "armyBook": 14,
     "rosterContext": 1,
     "relatedRules": 15,
     "ruleFacts": 5,

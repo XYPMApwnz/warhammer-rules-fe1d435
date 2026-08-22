@@ -64,11 +64,15 @@
 
   function moveProfiles(card,profile,localNav){
     if(!profile||!localNav)return;
-    const profiles=Array.from(profile.children).filter(node=>node.matches('.model-profile,.statline'));
+    const profiles=Array.from(profile.children).filter(node=>node.matches('.model-profile,.statline,.profile-base'));
     if(!profiles.length)return;
     const strip=document.createElement('div');
     strip.className='ds-profile-strip';
-    profiles.forEach(node=>strip.append(node));
+    strip.dataset.logicalOwner=profile.id;
+    profiles.forEach(node=>{
+      node.dataset.logicalOwner=profile.id;
+      strip.append(node);
+    });
     card.insertBefore(strip,localNav);
   }
 

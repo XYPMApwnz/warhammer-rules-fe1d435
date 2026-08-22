@@ -230,6 +230,11 @@ const terms={};
 for(const term of rules.glossary)terms[term.id]={title:term.title,summary:term.summary,full:term.full,glossary:`glossary-${term.id}`,...(term.sectionId?{rule:term.sectionId}:{}),...(term.fullRulePath?{fullRulePath:term.fullRulePath}:{}),...(term.unitIds?.length?{units:term.unitIds,datasheet:term.unitIds[0],statline:`${term.unitIds[0].replace('unit-','')}-profile`}:{})};
 const dataJs=`window.DG_TERMS=${JSON.stringify(terms,null,2)};\n`;
 const releaseHtml=html
+  .replace('<button class="back-button" id="backButton" type="button" hidden>','<a class="library-link view-switch" href="./reader.html?view=mobile" data-view-switch><span aria-hidden="true">↔</span><b>Phone view</b></a><button class="back-button" id="backButton" type="button" hidden>')
+  .replace('../shared/datasheet-layout.js?v=6',`../shared/datasheet-layout.js?v=${runtimeVersions.shared.datasheetLayout}`)
+  .replace(/<section class="unit-part" id="([^"]+-profile)">([\s\S]*?)<\/section>/g,(section,ownerId,body)=>`<section class="unit-part" id="${ownerId}">${body
+    .replace('<div class="model-profile"',`<div class="model-profile" data-logical-owner="${ownerId}"`)
+    .replace('<div class="statline"',`<div class="statline" data-logical-owner="${ownerId}"`)}</section>`)
   .replaceAll('Faction Pack v1.0',`Faction Pack v${rules.source.version}`)
   .replace(/26 pages([^S]+)SHA-256/,`${rules.source.pages} pages$1SHA-256`)
   .replace('../../glossary/generated/glossary.en.js"','../../glossary/generated/glossary.en.js?v=tyranids-1"')

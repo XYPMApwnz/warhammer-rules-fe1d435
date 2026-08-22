@@ -71,7 +71,7 @@ const APP_SHELL = [
   DEATH_GUARD_FALLBACK,
   "./books/death-guard/reader.html",
   "./books/shared/styles/entry.css?v=2",
-  "./books/shared/controllers/view-router.js?v=2",  './books/death-guard/mobile/beasts-of-nurgle.html',
+  "./books/shared/controllers/view-router.js?v=3",  './books/death-guard/mobile/beasts-of-nurgle.html',
   './books/death-guard/mobile/great-unclean-one.html',
   './books/death-guard/mobile/nurglings.html',
   './books/death-guard/mobile/plague-drones.html',
@@ -88,7 +88,7 @@ const APP_SHELL = [
   "./books/shared/mobile-route-redirect.js?v=1",
   "./books/shared/navigation-targets.js?v=1",
   "./books/shared/popup-rule-actions.js?v=1",
-  "./books/shared/datasheet-layout.js?v=6",
+  "./books/shared/datasheet-layout.js?v=7",
   "./books/shared/datasheet-system.css?v=8",
   "./books/shared/popup-content.js?v=3",
   "./books/shared/glossary-autolink.js?v=8",
@@ -101,7 +101,7 @@ const APP_SHELL = [
   "./books/shared/roster-enhancements.js?v=3",
   "./books/death-guard/assets/icon-v4.svg",
   "./books/shared/styles/tokens.css?v=11",
-  "./books/shared/styles/layout.css?v=12",
+  "./books/shared/styles/layout.css?v=13",
   "./books/shared/styles/navigation.css?v=13",
   "./books/shared/styles/content.css?v=42",
   "./books/shared/styles/popups.css?v=19",
@@ -112,7 +112,7 @@ const APP_SHELL = [
   "./books/shared/controllers/full-entry-controller.js?v=9",
   "./books/shared/controllers/journey-controller.js?v=14",
   "./books/shared/controllers/ui-controllers.js?v=12",
-  "./books/death-guard/scripts/app.js?v=47",
+  "./books/death-guard/scripts/app.js?v=48",
   "./books/death-guard/generated/compatible-rules.json",
   "./books/core-rules/",
   CORE_RULES_FALLBACK,
@@ -229,7 +229,7 @@ const APP_SHELL = [
   ,CHAOS_SPACE_MARINES_DESKTOP_FALLBACK
   ,CHAOS_SPACE_MARINES_MOBILE_FALLBACK
   ,"./books/chaos-space-marines/styles/tokens.css?v=2"
-  ,"./books/chaos-space-marines/styles/book.css?v=3"
+  ,"./books/chaos-space-marines/styles/book.css?v=4"
   ,"./books/chaos-space-marines/assets/chaos-space-marines-cover-480.webp"
   ,"./books/chaos-space-marines/assets/chaos-space-marines-cover-800.webp"
   ,"./books/chaos-space-marines/scripts/data.js?v=2"
@@ -243,7 +243,7 @@ const APP_SHELL = [
   ,BLOOD_ANGELS_DESKTOP_FALLBACK
   ,BLOOD_ANGELS_MOBILE_FALLBACK
   ,"./books/blood-angels/styles/tokens.css?v=2"
-  ,"./books/blood-angels/styles/book.css?v=2"
+  ,"./books/blood-angels/styles/book.css?v=3"
   ,"./books/blood-angels/assets/blood-angels-cover-480.webp"
   ,"./books/blood-angels/assets/blood-angels-cover-800.webp"
   ,"./books/blood-angels/scripts/data.js?v=2"
@@ -281,7 +281,7 @@ const APP_SHELL = [
   ,"./books/space-marines/assets/space-marines-cover-800.webp"
   ,"./books/space-marines/scripts/data.js?v=2"
   ,"./books/space-marines/scripts/roster-data.js?v=1"
-  ,"./books/space-marines/scripts/roster-filter.js?v=2"
+  ,"./books/space-marines/scripts/roster-filter.js?v=3"
   ,"./books/space-marines/scripts/app.js?v=9"
   ,"./books/space-marines/generated/compatible-rules.json"
   ,"./books/space-marines/mobile/related-rules.inc?v=4"
@@ -291,17 +291,17 @@ const APP_SHELL = [
   ,DARK_ANGELS_MOBILE_FALLBACK
   ,"./books/dark-angels/mobile/related-rules.inc?v=3"
   ,"./books/dark-angels/styles/tokens.css?v=2"
-  ,"./books/dark-angels/styles/book.css?v=3"
+  ,"./books/dark-angels/styles/book.css?v=4"
   ,"./books/dark-angels/assets/dark-angels-cover-480.webp"
   ,"./books/dark-angels/assets/dark-angels-cover-800.webp"
   ,"./books/dark-angels/scripts/data.js?v=2"
   ,"./books/dark-angels/scripts/roster-data.js?v=1"
   ,"./books/dark-angels/scripts/roster-filter.js?v=1"
-  ,"./books/dark-angels/scripts/app.js?v=7"
+  ,"./books/dark-angels/scripts/app.js?v=8"
   ,"./books/shared/modal-focus.js?v=1"
   ,"./books/shared/army-related-rules.js?v=15"
   ,"./books/shared/roster-context.js?v=1"
-  ,"./books/shared/army-book-app.js?v=13"
+  ,"./books/shared/army-book-app.js?v=14"
 ];
 
 function navigationFallback(url) {

@@ -8,7 +8,7 @@
 <link rel="manifest" href="../../manifest.webmanifest">
 <link rel="icon" href="./assets/icon-v4.svg" type="image/svg+xml">
 <link rel="stylesheet" href="../shared/styles/tokens.css?v=11">
-<link rel="stylesheet" href="../shared/styles/layout.css?v=12">
+<link rel="stylesheet" href="../shared/styles/layout.css?v=13">
 <link rel="stylesheet" href="../shared/styles/navigation.css?v=13">
 <link rel="stylesheet" href="../shared/styles/content.css?v=42">
 <link rel="stylesheet" href="../shared/styles/popups.css?v=19">
@@ -16,8 +16,8 @@
 </head>
 <body>
 <header class="app-header" id="appHeader">
-<button class="header-button nav-menu" id="navMenu" aria-label="Open navigation" aria-controls="tocPanel" aria-expanded="false">☰</button>
-<button class="header-button nav-collapse" id="navCollapse" aria-label="Collapse navigation" aria-controls="tocPanel" aria-expanded="true">◀</button>
+<button class="header-button nav-menu" id="navMenu" type="button" aria-label="Open navigation" aria-controls="tocPanel" aria-expanded="false">☰</button>
+<button class="header-button nav-collapse" id="navCollapse" type="button" aria-label="Collapse navigation" aria-controls="tocPanel" aria-expanded="true">◀</button>
 <div class="app-brand">
 <strong>Death Guard Rules</strong>
 <small>11E · Death Guard reference</small>
@@ -26,17 +26,21 @@
 <span aria-hidden="true">←</span>
 <b>Library</b>
 </a>
-<button class="back-button" id="backButton" hidden>Back</button>
+<a class="library-link view-switch" href="./reader.html?view=mobile" data-view-switch>
+<span aria-hidden="true">↔</span>
+<b>Phone view</b>
+</a>
+<button class="back-button" id="backButton" type="button" hidden>Back</button>
 <div class="header-spacer">
 </div>
 </header>
-<div class="toc-scrim" id="tocScrim" aria-hidden="true">
-</div>
+<button class="toc-scrim" id="tocScrim" type="button" aria-label="Close navigation" aria-hidden="true">
+</button>
 <nav class="toc-panel" id="tocPanel" aria-label="Rulebook navigation">
 <h2 class="toc-heading">Contents</h2>
 <div class="toc-shortcuts">
 <a class="toc-label" href="../../glossary/index.html" data-mega-glossary-link>Mega Glossary</a>
-<a class="toc-label" href="../../roster-guides/index.html" data-roster-guides-link hidden>← Roster Guides</a>
+<a class="toc-label" href="../../roster-guides/index.html" data-roster-guides hidden>← Roster Guides</a>
 </div>
 <ul class="toc-tree" id="tocTree">
 <li data-nav-id="start" data-nav-depth="1">
@@ -676,7 +680,7 @@
 </div>
 </article>
 </section>
-<section class="content-group" id="core-stratagems" data-track="core-stratagems">
+<section class="content-group" id="core-stratagems">
 <h3 class="category-title">Core Stratagems</h3>
 <p class="lead">Universal Stratagems available to every army. Datasheet tools only show the cards the selected unit can legally target.</p>
 <div class="detachment-content stratagem-grid core-stratagem-grid">
@@ -2380,7 +2384,7 @@
 <section class="content-group" id="datasheets-epic-heroes" data-track="datasheets-epic-heroes">
 <h3 class="category-title">Epic Heroes</h3>
 <article class="unit-card surface" id="unit-mortarion" data-track="unit-mortarion" data-rule-facts="{&quot;id&quot;:&quot;unit-mortarion&quot;,&quot;unitId&quot;:&quot;unit-mortarion&quot;,&quot;slug&quot;:&quot;mortarion&quot;,&quot;keywords&quot;:[&quot;MONSTER&quot;,&quot;CHARACTER&quot;,&quot;PSYKER&quot;,&quot;FLY&quot;,&quot;EPIC HERO&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;PRIMARCH&quot;,&quot;MORTARION&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;MONSTER&quot;,&quot;CHARACTER&quot;,&quot;PSYKER&quot;,&quot;FLY&quot;,&quot;EPIC HERO&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;PRIMARCH&quot;,&quot;MORTARION&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Deep Strike&quot;,&quot;Feel No Pain 5+&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Lord of the Death Guard&quot;,&quot;Host of Plagues&quot;,&quot;Supreme Commander&quot;],&quot;termIds&quot;:[&quot;keyword-monster&quot;,&quot;keyword-character&quot;,&quot;keyword-psyker&quot;,&quot;keyword-fly&quot;,&quot;keyword-epic-hero&quot;,&quot;keyword-grenades&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-daemon&quot;,&quot;keyword-primarch&quot;,&quot;keyword-mortarion&quot;,&quot;keyword-death-guard&quot;,&quot;ability-lord-of-the-death-guard-90db1c4&quot;,&quot;ability-host-of-plagues-2f9d0aa&quot;,&quot;weapon-lantern-c3a2ca6&quot;,&quot;weapon-rotwind-6399c60&quot;,&quot;weapon-silence-strike-11078ae&quot;,&quot;weapon-silence-sweep-280acf3&quot;],&quot;epic&quot;:true,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:1,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Mortarion</h3>
@@ -2405,7 +2409,7 @@
 <strong>390 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-mortarion-profile">
 <div class="stat">
 <b>M</b>
 <span>10&quot;</span>
@@ -2436,7 +2440,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀100mm).</p>
+<p class="profile-base" data-logical-owner="unit-mortarion-profile">Base: (⌀100mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -2609,7 +2613,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-typhus" data-track="unit-typhus" data-rule-facts="{&quot;id&quot;:&quot;unit-typhus&quot;,&quot;unitId&quot;:&quot;unit-typhus&quot;,&quot;slug&quot;:&quot;typhus&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;PSYKER&quot;,&quot;EPIC HERO&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;TYPHUS&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;PSYKER&quot;,&quot;EPIC HERO&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;TYPHUS&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;Deep Strike&quot;,&quot;Leader&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;The Destroyer Hive&quot;,&quot;Eater Plague (Psychic)&quot;],&quot;termIds&quot;:[&quot;keyword-infantry&quot;,&quot;keyword-character&quot;,&quot;keyword-psyker&quot;,&quot;keyword-epic-hero&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-terminator&quot;,&quot;keyword-typhus&quot;,&quot;keyword-death-guard&quot;,&quot;ability-the-destroyer-hive-70f0cc1&quot;,&quot;ability-eater-plague-psychic-2c7cc41&quot;,&quot;weapon-lakrimae-strike-99d1d4f&quot;,&quot;weapon-lakrimae-sweep-b7827b0&quot;],&quot;epic&quot;:true,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:null,&quot;attachmentKnown&quot;:false,&quot;characterCount&quot;:1,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[{&quot;unitId&quot;:&quot;unit-blightlord-terminators&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;BLIGHTLORD TERMINATORS&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:1},{&quot;unitId&quot;:&quot;unit-deathshroud-terminators&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;DEATHSHROUD TERMINATORS&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:1},{&quot;unitId&quot;:&quot;unit-poxwalkers&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;POXWALKERS&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2}],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Typhus</h3>
@@ -2634,7 +2638,7 @@
 <strong>100 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-typhus-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -2665,7 +2669,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀50mm).</p>
+<p class="profile-base" data-logical-owner="unit-typhus-profile">Base: (⌀50mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Melee weapons</h5>
@@ -2772,7 +2776,7 @@
 <section class="content-group" id="datasheets-characters" data-track="datasheets-characters">
 <h3 class="category-title">Characters</h3>
 <article class="unit-card surface" id="unit-biologus-putrifier" data-track="unit-biologus-putrifier" data-rule-facts="{&quot;id&quot;:&quot;unit-biologus-putrifier&quot;,&quot;unitId&quot;:&quot;unit-biologus-putrifier&quot;,&quot;slug&quot;:&quot;biologus-putrifier&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;BIOLOGUS PUTRIFIER&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;BIOLOGUS PUTRIFIER&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Leader&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Foul Infusion&quot;,&quot;Extraction of Fresh Disease&quot;],&quot;termIds&quot;:[&quot;keyword-infantry&quot;,&quot;keyword-character&quot;,&quot;keyword-grenades&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-biologus-putrifier&quot;,&quot;keyword-death-guard&quot;,&quot;ability-foul-infusion-490467e&quot;,&quot;ability-extraction-of-fresh-disease-b14e246&quot;,&quot;weapon-hyper-blight-grenades-0322c28&quot;,&quot;weapon-injector-pistol-25d0119&quot;,&quot;weapon-plague-knives-1a37c6a&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:null,&quot;attachmentKnown&quot;:false,&quot;characterCount&quot;:1,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[{&quot;unitId&quot;:&quot;unit-plague-marines&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE MARINES&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2}],&quot;canSupport&quot;:[{&quot;unitId&quot;:&quot;unit-plague-marines&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE MARINES&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2}],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Biologus Putrifier</h3>
@@ -2797,7 +2801,7 @@
 <strong>60 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-biologus-putrifier-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -2824,7 +2828,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀40mm).</p>
+<p class="profile-base" data-logical-owner="unit-biologus-putrifier-profile">Base: (⌀40mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -2965,7 +2969,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-daemon-prince-of-nurgle" data-track="unit-daemon-prince-of-nurgle" data-rule-facts="{&quot;id&quot;:&quot;unit-daemon-prince-of-nurgle&quot;,&quot;unitId&quot;:&quot;unit-daemon-prince-of-nurgle&quot;,&quot;slug&quot;:&quot;daemon-prince-of-nurgle&quot;,&quot;keywords&quot;:[&quot;MONSTER&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;DAEMON PRINCE&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;MONSTER&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;DAEMON PRINCE&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Death Guard Defenders&quot;,&quot;Fevered Strategist&quot;,&quot;Miasma of Pestilence (Aura)&quot;],&quot;termIds&quot;:[&quot;keyword-monster&quot;,&quot;keyword-character&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-daemon&quot;,&quot;keyword-daemon-prince&quot;,&quot;keyword-death-guard&quot;,&quot;ability-death-guard-defenders-c306937&quot;,&quot;ability-fevered-strategist-9a8ed87&quot;,&quot;ability-miasma-of-pestilence-aura-92fd75f&quot;,&quot;weapon-infernal-cannon-1e13e5b&quot;,&quot;weapon-hellforged-weapons-strike-edc19f1&quot;,&quot;weapon-hellforged-weapons-sweep-5c45030&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:1,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Daemon Prince of Nurgle</h3>
@@ -2989,7 +2993,7 @@
 <strong>195 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-daemon-prince-of-nurgle-profile">
 <div class="stat">
 <b>M</b>
 <span>8&quot;</span>
@@ -3020,7 +3024,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀60mm).</p>
+<p class="profile-base" data-logical-owner="unit-daemon-prince-of-nurgle-profile">Base: (⌀60mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -3151,7 +3155,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-daemon-prince-of-nurgle-with-wings" data-track="unit-daemon-prince-of-nurgle-with-wings" data-rule-facts="{&quot;id&quot;:&quot;unit-daemon-prince-of-nurgle-with-wings&quot;,&quot;unitId&quot;:&quot;unit-daemon-prince-of-nurgle-with-wings&quot;,&quot;slug&quot;:&quot;daemon-prince-of-nurgle-with-wings&quot;,&quot;keywords&quot;:[&quot;MONSTER&quot;,&quot;CHARACTER&quot;,&quot;FLY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;DAEMON PRINCE WITH WINGS&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;MONSTER&quot;,&quot;CHARACTER&quot;,&quot;FLY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;DAEMON PRINCE WITH WINGS&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Deep Strike&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Horrifying Visage&quot;,&quot;Enfeebling Miasma (Aura)&quot;],&quot;termIds&quot;:[&quot;keyword-monster&quot;,&quot;keyword-character&quot;,&quot;keyword-fly&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-daemon&quot;,&quot;keyword-daemon-prince-with-wings&quot;,&quot;keyword-death-guard&quot;,&quot;ability-horrifying-visage-bfdb06a&quot;,&quot;ability-enfeebling-miasma-aura-dba0eef&quot;,&quot;weapon-infernal-cannon-09a5d9c&quot;,&quot;weapon-hellforged-weapons-strike-edc19f1&quot;,&quot;weapon-hellforged-weapons-sweep-5c45030&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:1,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Daemon Prince of Nurgle with Wings</h3>
@@ -3175,7 +3179,7 @@
 <strong>170 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-daemon-prince-of-nurgle-with-wings-profile">
 <div class="stat">
 <b>M</b>
 <span>12&quot;</span>
@@ -3206,7 +3210,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀60mm).</p>
+<p class="profile-base" data-logical-owner="unit-daemon-prince-of-nurgle-with-wings-profile">Base: (⌀60mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -3332,7 +3336,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-foul-blightspawn" data-track="unit-foul-blightspawn" data-rule-facts="{&quot;id&quot;:&quot;unit-foul-blightspawn&quot;,&quot;unitId&quot;:&quot;unit-foul-blightspawn&quot;,&quot;slug&quot;:&quot;foul-blightspawn&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;FOUL BLIGHTSPAWN&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;FOUL BLIGHTSPAWN&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;Leader&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Blinding Spray&quot;,&quot;Putrefying Stink&quot;],&quot;termIds&quot;:[&quot;keyword-infantry&quot;,&quot;keyword-character&quot;,&quot;keyword-grenades&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-foul-blightspawn&quot;,&quot;keyword-death-guard&quot;,&quot;ability-blinding-spray-7d189f5&quot;,&quot;ability-putrefying-stink-4f5145b&quot;,&quot;weapon-plague-sprayer-01c1e61&quot;,&quot;weapon-close-combat-weapon-bc414e3&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:null,&quot;attachmentKnown&quot;:false,&quot;characterCount&quot;:1,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[{&quot;unitId&quot;:&quot;unit-plague-marines&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE MARINES&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2}],&quot;canSupport&quot;:[{&quot;unitId&quot;:&quot;unit-plague-marines&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE MARINES&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2}],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Foul Blightspawn</h3>
@@ -3357,7 +3361,7 @@
 <strong>65 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-foul-blightspawn-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -3384,7 +3388,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀40mm).</p>
+<p class="profile-base" data-logical-owner="unit-foul-blightspawn-profile">Base: (⌀40mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -3507,7 +3511,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-icon-bearer" data-track="unit-icon-bearer" data-rule-facts="{&quot;id&quot;:&quot;unit-icon-bearer&quot;,&quot;unitId&quot;:&quot;unit-icon-bearer&quot;,&quot;slug&quot;:&quot;icon-bearer&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;ICON BEARER&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;ICON BEARER&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;Leader&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Unclean Icon&quot;,&quot;Blessed Icon of Disease&quot;],&quot;termIds&quot;:[&quot;keyword-infantry&quot;,&quot;keyword-character&quot;,&quot;keyword-grenades&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-icon-bearer&quot;,&quot;keyword-death-guard&quot;,&quot;ability-unclean-icon-5dadb9e&quot;,&quot;ability-blessed-icon-of-disease-e331a6c&quot;,&quot;weapon-boltgun-ac624b6&quot;,&quot;weapon-plague-knife-e275d62&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:null,&quot;attachmentKnown&quot;:false,&quot;characterCount&quot;:1,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[{&quot;unitId&quot;:&quot;unit-plague-marines&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE MARINES&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2}],&quot;canSupport&quot;:[{&quot;unitId&quot;:&quot;unit-plague-marines&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE MARINES&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2}],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Icon Bearer</h3>
@@ -3532,7 +3536,7 @@
 <strong>45 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-icon-bearer-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -3559,7 +3563,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀32mm).</p>
+<p class="profile-base" data-logical-owner="unit-icon-bearer-profile">Base: (⌀32mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -3680,7 +3684,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-lord-of-contagion" data-track="unit-lord-of-contagion" data-rule-facts="{&quot;id&quot;:&quot;unit-lord-of-contagion&quot;,&quot;unitId&quot;:&quot;unit-lord-of-contagion&quot;,&quot;slug&quot;:&quot;lord-of-contagion&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;LORD OF CONTAGION&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;LORD OF CONTAGION&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;Deep Strike&quot;,&quot;Leader&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Vector of Disease&quot;,&quot;Unholy Resilience&quot;],&quot;termIds&quot;:[&quot;keyword-infantry&quot;,&quot;keyword-character&quot;,&quot;keyword-grenades&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-terminator&quot;,&quot;keyword-lord-of-contagion&quot;,&quot;keyword-death-guard&quot;,&quot;ability-vector-of-disease-2498580&quot;,&quot;ability-unholy-resilience-745069e&quot;,&quot;weapon-manreaper-strike-cbe183b&quot;,&quot;weapon-manreaper-sweep-b4c76ef&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:null,&quot;attachmentKnown&quot;:false,&quot;characterCount&quot;:1,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[{&quot;unitId&quot;:&quot;unit-blightlord-terminators&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;BLIGHTLORD TERMINATORS&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:1},{&quot;unitId&quot;:&quot;unit-deathshroud-terminators&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;DEATHSHROUD TERMINATORS&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:1}],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Lord of Contagion</h3>
@@ -3705,7 +3709,7 @@
 <strong>120 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-lord-of-contagion-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -3736,7 +3740,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀40mm).</p>
+<p class="profile-base" data-logical-owner="unit-lord-of-contagion-profile">Base: (⌀40mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Melee weapons</h5>
@@ -3840,7 +3844,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-lord-of-poxes" data-track="unit-lord-of-poxes" data-rule-facts="{&quot;id&quot;:&quot;unit-lord-of-poxes&quot;,&quot;unitId&quot;:&quot;unit-lord-of-poxes&quot;,&quot;slug&quot;:&quot;lord-of-poxes&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;LORD OF POXES&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;LORD OF POXES&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;Leader&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Gift of Poxes&quot;,&quot;Shroud of Disease&quot;],&quot;termIds&quot;:[&quot;keyword-infantry&quot;,&quot;keyword-character&quot;,&quot;keyword-grenades&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-lord-of-poxes&quot;,&quot;keyword-death-guard&quot;,&quot;ability-gift-of-poxes-29d6059&quot;,&quot;ability-shroud-of-disease-90475da&quot;,&quot;weapon-plasma-pistol-standard-95a88d7&quot;,&quot;weapon-plasma-pistol-supercharge-f0893d1&quot;,&quot;weapon-great-plague-blade-7db21af&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:null,&quot;attachmentKnown&quot;:false,&quot;characterCount&quot;:1,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[{&quot;unitId&quot;:&quot;unit-plague-marines&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE MARINES&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2}],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Lord of Poxes</h3>
@@ -3865,7 +3869,7 @@
 <strong>65 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-lord-of-poxes-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -3896,7 +3900,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀40mm).</p>
+<p class="profile-base" data-logical-owner="unit-lord-of-poxes-profile">Base: (⌀40mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -4032,7 +4036,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-lord-of-virulence" data-track="unit-lord-of-virulence" data-rule-facts="{&quot;id&quot;:&quot;unit-lord-of-virulence&quot;,&quot;unitId&quot;:&quot;unit-lord-of-virulence&quot;,&quot;slug&quot;:&quot;lord-of-virulence&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;LORD OF VIRULENCE&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;LORD OF VIRULENCE&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;Deep Strike&quot;,&quot;Leader&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Virulent Aura&quot;,&quot;Blight Bombardment&quot;],&quot;termIds&quot;:[&quot;keyword-infantry&quot;,&quot;keyword-character&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-terminator&quot;,&quot;keyword-lord-of-virulence&quot;,&quot;keyword-death-guard&quot;,&quot;ability-virulent-aura-c28aa51&quot;,&quot;ability-blight-bombardment-74bfb5b&quot;,&quot;weapon-twin-plague-spewer-4c289ca&quot;,&quot;weapon-power-fist-5e121c4&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:null,&quot;attachmentKnown&quot;:false,&quot;characterCount&quot;:1,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[{&quot;unitId&quot;:&quot;unit-blightlord-terminators&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;BLIGHTLORD TERMINATORS&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:1},{&quot;unitId&quot;:&quot;unit-deathshroud-terminators&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;DEATHSHROUD TERMINATORS&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:1}],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Lord of Virulence</h3>
@@ -4057,7 +4061,7 @@
 <strong>100 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-lord-of-virulence-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -4088,7 +4092,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀50mm).</p>
+<p class="profile-base" data-logical-owner="unit-lord-of-virulence-profile">Base: (⌀50mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -4209,7 +4213,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-malignant-plaguecaster" data-track="unit-malignant-plaguecaster" data-rule-facts="{&quot;id&quot;:&quot;unit-malignant-plaguecaster&quot;,&quot;unitId&quot;:&quot;unit-malignant-plaguecaster&quot;,&quot;slug&quot;:&quot;malignant-plaguecaster&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;PSYKER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;MALIGNANT PLAGUECASTER&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;PSYKER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;MALIGNANT PLAGUECASTER&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;Leader&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Gift of Contagion (Psychic)&quot;,&quot;Pestilent Fallout (Psychic)&quot;],&quot;termIds&quot;:[&quot;keyword-infantry&quot;,&quot;keyword-character&quot;,&quot;keyword-psyker&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-malignant-plaguecaster&quot;,&quot;keyword-death-guard&quot;,&quot;ability-gift-of-contagion-psychic-4fea300&quot;,&quot;ability-pestilent-fallout-psychic-399986c&quot;,&quot;weapon-bolt-pistol-4457cbc&quot;,&quot;weapon-plague-wind-witchfire-9c986c4&quot;,&quot;weapon-plague-wind-focused-witchfire-6ca78d4&quot;,&quot;weapon-corrupted-staff-4829d29&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:null,&quot;attachmentKnown&quot;:false,&quot;characterCount&quot;:1,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[{&quot;unitId&quot;:&quot;unit-plague-marines&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE MARINES&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-poxwalkers&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;POXWALKERS&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2}],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Malignant Plaguecaster</h3>
@@ -4234,7 +4238,7 @@
 <strong>60 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-malignant-plaguecaster-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -4261,7 +4265,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀32mm).</p>
+<p class="profile-base" data-logical-owner="unit-malignant-plaguecaster-profile">Base: (⌀32mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -4416,7 +4420,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-noxious-blightbringer" data-track="unit-noxious-blightbringer" data-rule-facts="{&quot;id&quot;:&quot;unit-noxious-blightbringer&quot;,&quot;unitId&quot;:&quot;unit-noxious-blightbringer&quot;,&quot;slug&quot;:&quot;noxious-blightbringer&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;NOXIOUS BLIGHTBRINGER&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;NOXIOUS BLIGHTBRINGER&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;Leader&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Sickening Vitality&quot;,&quot;Tocsin of Misery (Aura)&quot;],&quot;termIds&quot;:[&quot;keyword-infantry&quot;,&quot;keyword-character&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-noxious-blightbringer&quot;,&quot;keyword-death-guard&quot;,&quot;ability-sickening-vitality-89bb5ff&quot;,&quot;ability-tocsin-of-misery-aura-7f2edfb&quot;,&quot;weapon-plasma-pistol-standard-4eac6a8&quot;,&quot;weapon-plasma-pistol-supercharge-16a6bac&quot;,&quot;weapon-cursed-plague-bell-f7341e3&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:null,&quot;attachmentKnown&quot;:false,&quot;characterCount&quot;:1,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[{&quot;unitId&quot;:&quot;unit-plague-marines&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE MARINES&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-poxwalkers&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;POXWALKERS&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2}],&quot;canSupport&quot;:[{&quot;unitId&quot;:&quot;unit-plague-marines&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE MARINES&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-poxwalkers&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;POXWALKERS&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2}],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Noxious Blightbringer</h3>
@@ -4441,7 +4445,7 @@
 <strong>60 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-noxious-blightbringer-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -4468,7 +4472,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀40mm).</p>
+<p class="profile-base" data-logical-owner="unit-noxious-blightbringer-profile">Base: (⌀40mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -4607,7 +4611,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-plague-surgeon" data-track="unit-plague-surgeon" data-rule-facts="{&quot;id&quot;:&quot;unit-plague-surgeon&quot;,&quot;unitId&quot;:&quot;unit-plague-surgeon&quot;,&quot;slug&quot;:&quot;plague-surgeon&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE SURGEON&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE SURGEON&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;Leader&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Tainted Narthecium&quot;,&quot;Inflamed Infections&quot;],&quot;termIds&quot;:[&quot;keyword-infantry&quot;,&quot;keyword-character&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-plague-surgeon&quot;,&quot;keyword-death-guard&quot;,&quot;ability-tainted-narthecium-01ba1bd&quot;,&quot;ability-inflamed-infections-ca01e1a&quot;,&quot;weapon-bolt-pistol-4457cbc&quot;,&quot;weapon-balesword-682b3cf&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:null,&quot;attachmentKnown&quot;:false,&quot;characterCount&quot;:1,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[{&quot;unitId&quot;:&quot;unit-plague-marines&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE MARINES&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2}],&quot;canSupport&quot;:[{&quot;unitId&quot;:&quot;unit-plague-marines&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE MARINES&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2}],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Plague Surgeon</h3>
@@ -4632,7 +4636,7 @@
 <strong>50 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-plague-surgeon-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -4659,7 +4663,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀40mm).</p>
+<p class="profile-base" data-logical-owner="unit-plague-surgeon-profile">Base: (⌀40mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -4781,7 +4785,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-tallyman" data-track="unit-tallyman" data-rule-facts="{&quot;id&quot;:&quot;unit-tallyman&quot;,&quot;unitId&quot;:&quot;unit-tallyman&quot;,&quot;slug&quot;:&quot;tallyman&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TALLYMAN&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TALLYMAN&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;Leader&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Malicious Calculations&quot;,&quot;Sevenfold Chant&quot;],&quot;termIds&quot;:[&quot;keyword-infantry&quot;,&quot;keyword-character&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-tallyman&quot;,&quot;keyword-death-guard&quot;,&quot;ability-malicious-calculations-8505f03&quot;,&quot;ability-sevenfold-chant-15ec601&quot;,&quot;weapon-plasma-pistol-standard-4eac6a8&quot;,&quot;weapon-plasma-pistol-supercharge-950c822&quot;,&quot;weapon-close-combat-weapon-bc414e3&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:null,&quot;attachmentKnown&quot;:false,&quot;characterCount&quot;:1,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[{&quot;unitId&quot;:&quot;unit-plague-marines&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE MARINES&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2}],&quot;canSupport&quot;:[{&quot;unitId&quot;:&quot;unit-plague-marines&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE MARINES&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:0,&quot;maxCharacters&quot;:2}],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Tallyman</h3>
@@ -4806,7 +4810,7 @@
 <strong>60 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-tallyman-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -4833,7 +4837,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀40mm).</p>
+<p class="profile-base" data-logical-owner="unit-tallyman-profile">Base: (⌀40mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -4974,7 +4978,7 @@
 <section class="content-group" id="datasheets-battleline" data-track="datasheets-battleline">
 <h3 class="category-title">Battleline</h3>
 <article class="unit-card surface" id="unit-plague-marines" data-track="unit-plague-marines" data-rule-facts="{&quot;id&quot;:&quot;unit-plague-marines&quot;,&quot;unitId&quot;:&quot;unit-plague-marines&quot;,&quot;slug&quot;:&quot;plague-marines&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE MARINES&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE MARINES&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;Nurgle’s Gift (Aura)&quot;,&quot;Infused with the Blessings of Nurgle&quot;],&quot;termIds&quot;:[&quot;keyword-infantry&quot;,&quot;keyword-battleline&quot;,&quot;keyword-grenades&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-plague-marines&quot;,&quot;keyword-death-guard&quot;,&quot;ability-infused-with-the-blessings-of-nurgle-577c42e&quot;,&quot;weapon-blight-launcher-6d713e8&quot;,&quot;weapon-boltgun-ac624b6&quot;,&quot;weapon-bolt-pistol-4457cbc&quot;,&quot;weapon-meltagun-e6c3ed9&quot;,&quot;weapon-plague-belcher-2667b3d&quot;,&quot;weapon-plague-spewer-3ffad7c&quot;,&quot;weapon-plasma-gun-standard-991cca1&quot;,&quot;weapon-plasma-gun-supercharge-e705c11&quot;,&quot;weapon-plasma-pistol-standard-4eac6a8&quot;,&quot;weapon-plasma-pistol-supercharge-950c822&quot;,&quot;weapon-bubotic-weapons-479658b&quot;,&quot;weapon-heavy-plague-weapon-b16b375&quot;,&quot;weapon-plague-knives-d66e964&quot;,&quot;weapon-power-fist-d333c11&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:null,&quot;attachmentKnown&quot;:false,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[{&quot;unitId&quot;:&quot;unit-biologus-putrifier&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;BIOLOGUS PUTRIFIER&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-foul-blightspawn&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;FOUL BLIGHTSPAWN&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-icon-bearer&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;ICON BEARER&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-lord-of-poxes&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;LORD OF POXES&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-malignant-plaguecaster&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;PSYKER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;MALIGNANT PLAGUECASTER&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-noxious-blightbringer&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;NOXIOUS BLIGHTBRINGER&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-plague-surgeon&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE SURGEON&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-tallyman&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TALLYMAN&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2}],&quot;canBeSupportedBy&quot;:[{&quot;unitId&quot;:&quot;unit-biologus-putrifier&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;BIOLOGUS PUTRIFIER&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-foul-blightspawn&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;FOUL BLIGHTSPAWN&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-icon-bearer&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;ICON BEARER&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-noxious-blightbringer&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;NOXIOUS BLIGHTBRINGER&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-plague-surgeon&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PLAGUE SURGEON&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-tallyman&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TALLYMAN&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2}]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Plague Marines</h3>
@@ -5008,7 +5012,7 @@
 <strong>180 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-plague-marines-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -5035,7 +5039,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀32mm).</p>
+<p class="profile-base" data-logical-owner="unit-plague-marines-profile">Base: (⌀32mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -5375,7 +5379,7 @@
 <section class="content-group" id="datasheets-infantry" data-track="datasheets-infantry">
 <h3 class="category-title">Infantry</h3>
 <article class="unit-card surface" id="unit-blightlord-terminators" data-track="unit-blightlord-terminators" data-rule-facts="{&quot;id&quot;:&quot;unit-blightlord-terminators&quot;,&quot;unitId&quot;:&quot;unit-blightlord-terminators&quot;,&quot;slug&quot;:&quot;blightlord-terminators&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;BLIGHTLORD TERMINATORS&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;INFANTRY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;BLIGHTLORD TERMINATORS&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;Deep Strike&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Blistering Fusillade&quot;],&quot;termIds&quot;:[&quot;keyword-infantry&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-terminator&quot;,&quot;keyword-blightlord-terminators&quot;,&quot;keyword-death-guard&quot;,&quot;ability-blistering-fusillade-01dcc5c&quot;,&quot;weapon-blight-launcher-6d713e8&quot;,&quot;weapon-combi-bolter-5d7d99e&quot;,&quot;weapon-combi-weapon-b2eeb14&quot;,&quot;weapon-plague-spewer-3ffad7c&quot;,&quot;weapon-reaper-autocannon-1a3732e&quot;,&quot;weapon-bubotic-blade-4f09d5f&quot;,&quot;weapon-close-combat-weapon-55bc2e9&quot;,&quot;weapon-flail-of-corruption-f6b2430&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:null,&quot;attachmentKnown&quot;:false,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[{&quot;unitId&quot;:&quot;unit-lord-of-contagion&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;LORD OF CONTAGION&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:1},{&quot;unitId&quot;:&quot;unit-lord-of-virulence&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;LORD OF VIRULENCE&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:1},{&quot;unitId&quot;:&quot;unit-typhus&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;PSYKER&quot;,&quot;EPIC HERO&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;TYPHUS&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:1}],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Blightlord Terminators</h3>
@@ -5408,7 +5412,7 @@
 <strong>370 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-blightlord-terminators-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -5439,7 +5443,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀40mm).</p>
+<p class="profile-base" data-logical-owner="unit-blightlord-terminators-profile">Base: (⌀40mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -5669,7 +5673,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-deathshroud-terminators" data-track="unit-deathshroud-terminators" data-rule-facts="{&quot;id&quot;:&quot;unit-deathshroud-terminators&quot;,&quot;unitId&quot;:&quot;unit-deathshroud-terminators&quot;,&quot;slug&quot;:&quot;deathshroud-terminators&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;DEATHSHROUD TERMINATORS&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;INFANTRY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;DEATHSHROUD TERMINATORS&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;Deep Strike&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Silent Bodyguard&quot;,&quot;Death Approaches&quot;],&quot;termIds&quot;:[&quot;keyword-infantry&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-terminator&quot;,&quot;keyword-deathshroud-terminators&quot;,&quot;keyword-death-guard&quot;,&quot;ability-silent-bodyguard-03a0a1b&quot;,&quot;ability-death-approaches-3347016&quot;,&quot;weapon-plaguespurt-gauntlet-5d2f8e8&quot;,&quot;weapon-manreaper-strike-6cc8ecd&quot;,&quot;weapon-manreaper-sweep-22f036f&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:null,&quot;attachmentKnown&quot;:false,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[{&quot;unitId&quot;:&quot;unit-lord-of-contagion&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;GRENADES&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;LORD OF CONTAGION&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:1},{&quot;unitId&quot;:&quot;unit-lord-of-virulence&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;LORD OF VIRULENCE&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:1},{&quot;unitId&quot;:&quot;unit-typhus&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;PSYKER&quot;,&quot;EPIC HERO&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;TYPHUS&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:1}],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Deathshroud Terminators</h3>
@@ -5707,7 +5711,7 @@
 <strong>315 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-deathshroud-terminators-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -5738,7 +5742,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀40mm).</p>
+<p class="profile-base" data-logical-owner="unit-deathshroud-terminators-profile">Base: (⌀40mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -5888,7 +5892,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-poxwalkers" data-track="unit-poxwalkers" data-rule-facts="{&quot;id&quot;:&quot;unit-poxwalkers&quot;,&quot;unitId&quot;:&quot;unit-poxwalkers&quot;,&quot;slug&quot;:&quot;poxwalkers&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;POXWALKERS&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;INFANTRY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;POXWALKERS&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;Infiltrators&quot;,&quot;Feel No Pain 5+&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Curse of the Walking Pox&quot;],&quot;termIds&quot;:[&quot;keyword-infantry&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-poxwalkers&quot;,&quot;keyword-death-guard&quot;,&quot;ability-curse-of-the-walking-pox-6a9093e&quot;,&quot;weapon-improvised-weapon-46cfc5f&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:null,&quot;attachmentKnown&quot;:false,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[{&quot;unitId&quot;:&quot;unit-malignant-plaguecaster&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;PSYKER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;MALIGNANT PLAGUECASTER&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-noxious-blightbringer&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;NOXIOUS BLIGHTBRINGER&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2},{&quot;unitId&quot;:&quot;unit-typhus&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;PSYKER&quot;,&quot;EPIC HERO&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TERMINATOR&quot;,&quot;TYPHUS&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2}],&quot;canBeSupportedBy&quot;:[{&quot;unitId&quot;:&quot;unit-noxious-blightbringer&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;CHARACTER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;NOXIOUS BLIGHTBRINGER&quot;,&quot;DEATH GUARD&quot;],&quot;characterCount&quot;:1,&quot;maxCharacters&quot;:2}]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Poxwalkers</h3>
@@ -5916,7 +5920,7 @@
 <strong>130 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-poxwalkers-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -5943,7 +5947,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀25mm).</p>
+<p class="profile-base" data-logical-owner="unit-poxwalkers-profile">Base: (⌀25mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Melee weapons</h5>
@@ -6019,7 +6023,7 @@
 <section class="content-group" id="datasheets-beasts" data-track="datasheets-beasts">
 <h3 class="category-title">Beasts</h3>
 <article class="unit-card surface" id="unit-chaos-spawn" data-track="unit-chaos-spawn" data-rule-facts="{&quot;id&quot;:&quot;unit-chaos-spawn&quot;,&quot;unitId&quot;:&quot;unit-chaos-spawn&quot;,&quot;slug&quot;:&quot;chaos-spawn&quot;,&quot;keywords&quot;:[&quot;BEAST&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;CHAOS SPAWN&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;BEAST&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;CHAOS SPAWN&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Feel No Pain 5+&quot;,&quot;Scouts 6\&quot;&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Lethal Ichor&quot;],&quot;termIds&quot;:[&quot;keyword-beast&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-chaos-spawn&quot;,&quot;keyword-death-guard&quot;,&quot;ability-lethal-ichor-6824af1&quot;,&quot;weapon-hideous-mutations-5a8e226&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Chaos Spawn</h3>
@@ -6043,7 +6047,7 @@
 <strong>80 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-chaos-spawn-profile">
 <div class="stat">
 <b>M</b>
 <span>8&quot;</span>
@@ -6070,7 +6074,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀50mm).</p>
+<p class="profile-base" data-logical-owner="unit-chaos-spawn-profile">Base: (⌀50mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Melee weapons</h5>
@@ -6146,7 +6150,7 @@
 <section class="content-group" id="datasheets-vehicles" data-track="datasheets-vehicles">
 <h3 class="category-title">Vehicles</h3>
 <article class="unit-card surface" id="unit-chaos-land-raider" data-track="unit-chaos-land-raider" data-rule-facts="{&quot;id&quot;:&quot;unit-chaos-land-raider&quot;,&quot;unitId&quot;:&quot;unit-chaos-land-raider&quot;,&quot;slug&quot;:&quot;chaos-land-raider&quot;,&quot;keywords&quot;:[&quot;VEHICLE&quot;,&quot;TRANSPORT&quot;,&quot;SMOKE&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;LAND RAIDER&quot;,&quot;FRAME&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;VEHICLE&quot;,&quot;TRANSPORT&quot;,&quot;SMOKE&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;LAND RAIDER&quot;,&quot;FRAME&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Assault Ramp&quot;],&quot;termIds&quot;:[&quot;keyword-vehicle&quot;,&quot;keyword-transport&quot;,&quot;keyword-smoke&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-land-raider&quot;,&quot;keyword-frame&quot;,&quot;keyword-death-guard&quot;,&quot;ability-assault-ramp-e5223e4&quot;,&quot;weapon-combi-bolter-5d7d99e&quot;,&quot;weapon-combi-weapon-b2eeb14&quot;,&quot;weapon-havoc-launcher-cf26557&quot;,&quot;weapon-soulshatter-lascannon-e64b490&quot;,&quot;weapon-twin-heavy-bolter-b1e2633&quot;,&quot;weapon-armoured-tracks-ddf575f&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Chaos Land Raider</h3>
@@ -6177,7 +6181,7 @@
 <strong>240 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-chaos-land-raider-profile">
 <div class="stat">
 <b>M</b>
 <span>10&quot;</span>
@@ -6204,7 +6208,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀Use model).</p>
+<p class="profile-base" data-logical-owner="unit-chaos-land-raider-profile">Base: (⌀Use model).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -6403,7 +6407,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-chaos-predator-annihilator" data-track="unit-chaos-predator-annihilator" data-rule-facts="{&quot;id&quot;:&quot;unit-chaos-predator-annihilator&quot;,&quot;unitId&quot;:&quot;unit-chaos-predator-annihilator&quot;,&quot;slug&quot;:&quot;chaos-predator-annihilator&quot;,&quot;keywords&quot;:[&quot;VEHICLE&quot;,&quot;SMOKE&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PREDATOR ANNIHILATOR&quot;,&quot;FRAME&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;VEHICLE&quot;,&quot;SMOKE&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PREDATOR ANNIHILATOR&quot;,&quot;FRAME&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Metalophagic Infection&quot;],&quot;termIds&quot;:[&quot;keyword-vehicle&quot;,&quot;keyword-smoke&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-predator-annihilator&quot;,&quot;keyword-frame&quot;,&quot;keyword-death-guard&quot;,&quot;ability-metalophagic-infection-7a47e75&quot;,&quot;weapon-combi-bolter-5d7d99e&quot;,&quot;weapon-combi-weapon-b2eeb14&quot;,&quot;weapon-heavy-bolter-f39583a&quot;,&quot;weapon-havoc-launcher-cf26557&quot;,&quot;weapon-lascannon-bfd40c1&quot;,&quot;weapon-predator-twin-lascannon-92dd066&quot;,&quot;weapon-armoured-tracks-a6a4ba9&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Chaos Predator Annihilator</h3>
@@ -6433,7 +6437,7 @@
 <strong>145 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-chaos-predator-annihilator-profile">
 <div class="stat">
 <b>M</b>
 <span>10&quot;</span>
@@ -6460,7 +6464,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀Use model).</p>
+<p class="profile-base" data-logical-owner="unit-chaos-predator-annihilator-profile">Base: (⌀Use model).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -6669,7 +6673,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-chaos-predator-destructor" data-track="unit-chaos-predator-destructor" data-rule-facts="{&quot;id&quot;:&quot;unit-chaos-predator-destructor&quot;,&quot;unitId&quot;:&quot;unit-chaos-predator-destructor&quot;,&quot;slug&quot;:&quot;chaos-predator-destructor&quot;,&quot;keywords&quot;:[&quot;VEHICLE&quot;,&quot;SMOKE&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PREDATOR DESTRUCTOR&quot;,&quot;FRAME&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;VEHICLE&quot;,&quot;SMOKE&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;PREDATOR DESTRUCTOR&quot;,&quot;FRAME&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Hail of Corrosive Disease&quot;],&quot;termIds&quot;:[&quot;keyword-vehicle&quot;,&quot;keyword-smoke&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-predator-destructor&quot;,&quot;keyword-frame&quot;,&quot;keyword-death-guard&quot;,&quot;ability-hail-of-corrosive-disease-0f6451f&quot;,&quot;weapon-combi-bolter-5d7d99e&quot;,&quot;weapon-combi-weapon-b2eeb14&quot;,&quot;weapon-havoc-launcher-cf26557&quot;,&quot;weapon-heavy-bolter-f39583a&quot;,&quot;weapon-lascannon-bfd40c1&quot;,&quot;weapon-predator-autocannon-c571572&quot;,&quot;weapon-armoured-tracks-a6a4ba9&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Chaos Predator Destructor</h3>
@@ -6699,7 +6703,7 @@
 <strong>155 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-chaos-predator-destructor-profile">
 <div class="stat">
 <b>M</b>
 <span>10&quot;</span>
@@ -6726,7 +6730,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀Use model).</p>
+<p class="profile-base" data-logical-owner="unit-chaos-predator-destructor-profile">Base: (⌀Use model).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -6936,7 +6940,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-defiler" data-track="unit-defiler" data-rule-facts="{&quot;id&quot;:&quot;unit-defiler&quot;,&quot;unitId&quot;:&quot;unit-defiler&quot;,&quot;slug&quot;:&quot;defiler&quot;,&quot;keywords&quot;:[&quot;VEHICLE&quot;,&quot;WALKER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;DEFILER&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;VEHICLE&quot;,&quot;WALKER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;DEFILER&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Scuttling Walker&quot;,&quot;Barrage of Filth&quot;],&quot;termIds&quot;:[&quot;keyword-vehicle&quot;,&quot;keyword-walker&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-daemon&quot;,&quot;keyword-defiler&quot;,&quot;keyword-death-guard&quot;,&quot;ability-scuttling-walker-cb4a0c4&quot;,&quot;ability-barrage-of-filth-f33e996&quot;,&quot;weapon-ectoplasma-destructor-e0da30e&quot;,&quot;weapon-excruciator-cannon-f11eadc&quot;,&quot;weapon-hades-battle-cannon-1f93c08&quot;,&quot;weapon-hades-lascannon-19b7d63&quot;,&quot;weapon-heavy-baleflamer-2c0f38e&quot;,&quot;weapon-heavy-missile-launcher-krak-d745166&quot;,&quot;weapon-heavy-missile-launcher-frag-2d0854e&quot;,&quot;weapon-heavy-reaper-autocannon-ca7d571&quot;,&quot;weapon-magma-cutters-4ae88f3&quot;,&quot;weapon-electroscourge-e76631b&quot;,&quot;weapon-shearing-claws-strike-f6ebe2b&quot;,&quot;weapon-shearing-claws-sweep-8074872&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Defiler</h3>
@@ -6974,7 +6978,7 @@
 <strong>+15 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-defiler-profile">
 <div class="stat">
 <b>M</b>
 <span>12&quot;</span>
@@ -7005,7 +7009,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀160mm).</p>
+<p class="profile-base" data-logical-owner="unit-defiler-profile">Base: (⌀160mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -7307,7 +7311,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-foetid-bloat-drone" data-track="unit-foetid-bloat-drone" data-rule-facts="{&quot;id&quot;:&quot;unit-foetid-bloat-drone&quot;,&quot;unitId&quot;:&quot;unit-foetid-bloat-drone&quot;,&quot;slug&quot;:&quot;foetid-bloat-drone&quot;,&quot;keywords&quot;:[&quot;VEHICLE&quot;,&quot;FLY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;FOETID BLOAT-DRONE&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;VEHICLE&quot;,&quot;FLY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;FOETID BLOAT-DRONE&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Hovering Death&quot;],&quot;termIds&quot;:[&quot;keyword-vehicle&quot;,&quot;keyword-fly&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-daemon&quot;,&quot;keyword-foetid-bloat-drone&quot;,&quot;keyword-death-guard&quot;,&quot;ability-hovering-death-805d057&quot;,&quot;weapon-plaguespitter-e03b003&quot;,&quot;weapon-fleshmower-0333b70&quot;,&quot;weapon-plague-probe-994d32e&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Foetid Bloat-drone</h3>
@@ -7336,7 +7340,7 @@
 <strong>110 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-foetid-bloat-drone-profile">
 <div class="stat">
 <b>M</b>
 <span>10&quot;</span>
@@ -7367,7 +7371,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀60mm).</p>
+<p class="profile-base" data-logical-owner="unit-foetid-bloat-drone-profile">Base: (⌀60mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -7496,7 +7500,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-foetid-bloat-drone-with-heavy-blight-launcher" data-track="unit-foetid-bloat-drone-with-heavy-blight-launcher" data-rule-facts="{&quot;id&quot;:&quot;unit-foetid-bloat-drone-with-heavy-blight-launcher&quot;,&quot;unitId&quot;:&quot;unit-foetid-bloat-drone-with-heavy-blight-launcher&quot;,&quot;slug&quot;:&quot;foetid-bloat-drone-with-heavy-blight-launcher&quot;,&quot;keywords&quot;:[&quot;VEHICLE&quot;,&quot;FLY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;VEHICLE&quot;,&quot;FLY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;FOETID BLOAT-DRONE WITH HEAVY BLIGHT LAUNCHER&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Explosive Blight&quot;],&quot;termIds&quot;:[&quot;keyword-vehicle&quot;,&quot;keyword-fly&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-daemon&quot;,&quot;keyword-foetid-bloat-drone-with-heavy-blight-launcher&quot;,&quot;keyword-death-guard&quot;,&quot;ability-explosive-blight-4fe2f2d&quot;,&quot;weapon-heavy-blight-launcher-989ddb7&quot;,&quot;weapon-plague-probe-994d32e&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Foetid Bloat-drone with Heavy Blight Launcher</h3>
@@ -7524,7 +7528,7 @@
 <strong>135 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-foetid-bloat-drone-with-heavy-blight-launcher-profile">
 <div class="stat">
 <b>M</b>
 <span>10&quot;</span>
@@ -7555,7 +7559,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀60mm).</p>
+<p class="profile-base" data-logical-owner="unit-foetid-bloat-drone-with-heavy-blight-launcher-profile">Base: (⌀60mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -7659,7 +7663,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-helbrute" data-track="unit-helbrute" data-rule-facts="{&quot;id&quot;:&quot;unit-helbrute&quot;,&quot;unitId&quot;:&quot;unit-helbrute&quot;,&quot;slug&quot;:&quot;helbrute&quot;,&quot;keywords&quot;:[&quot;VEHICLE&quot;,&quot;WALKER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;HELBRUTE&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;VEHICLE&quot;,&quot;WALKER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;HELBRUTE&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Diseased Malice&quot;,&quot;Froth-spattered Frenzy&quot;],&quot;termIds&quot;:[&quot;keyword-vehicle&quot;,&quot;keyword-walker&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-helbrute&quot;,&quot;keyword-death-guard&quot;,&quot;ability-diseased-malice-caa33aa&quot;,&quot;ability-froth-spattered-frenzy-9a139e5&quot;,&quot;weapon-combi-bolter-5d7d99e&quot;,&quot;weapon-heavy-flamer-8e6845a&quot;,&quot;weapon-missile-launcher-frag-929c5f9&quot;,&quot;weapon-missile-launcher-krak-3cfbee3&quot;,&quot;weapon-multi-melta-6f250da&quot;,&quot;weapon-plasma-cannon-c68bff5&quot;,&quot;weapon-twin-autocannon-76385f7&quot;,&quot;weapon-twin-heavy-bolter-b1e2633&quot;,&quot;weapon-twin-lascannon-8f8b5f4&quot;,&quot;weapon-close-combat-weapon-f69dc30&quot;,&quot;weapon-helbrute-fist-02e7ba7&quot;,&quot;weapon-helbrute-hammer-97d2de3&quot;,&quot;weapon-power-scourge-92cea25&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Helbrute</h3>
@@ -7684,7 +7688,7 @@
 <strong>110 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-helbrute-profile">
 <div class="stat">
 <b>M</b>
 <span>7&quot;</span>
@@ -7711,7 +7715,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀60mm).</p>
+<p class="profile-base" data-logical-owner="unit-helbrute-profile">Base: (⌀60mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -8021,7 +8025,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-myphitic-blight-hauler" data-track="unit-myphitic-blight-hauler" data-rule-facts="{&quot;id&quot;:&quot;unit-myphitic-blight-hauler&quot;,&quot;unitId&quot;:&quot;unit-myphitic-blight-hauler&quot;,&quot;slug&quot;:&quot;myphitic-blight-hauler&quot;,&quot;keywords&quot;:[&quot;VEHICLE&quot;,&quot;SMOKE&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;MYPHITIC BLIGHT-HAULER&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;VEHICLE&quot;,&quot;SMOKE&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;MYPHITIC BLIGHT-HAULER&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Tank Hunters&quot;],&quot;termIds&quot;:[&quot;keyword-vehicle&quot;,&quot;keyword-smoke&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-daemon&quot;,&quot;keyword-myphitic-blight-hauler&quot;,&quot;keyword-death-guard&quot;,&quot;ability-tank-hunters-8831aae&quot;,&quot;weapon-bile-spurt-507565f&quot;,&quot;weapon-missile-launcher-frag-929c5f9&quot;,&quot;weapon-missile-launcher-krak-3cfbee3&quot;,&quot;weapon-multi-melta-6f250da&quot;,&quot;weapon-gnashing-maw-f34ed82&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Myphitic Blight-hauler</h3>
@@ -8049,7 +8053,7 @@
 <strong>200 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-myphitic-blight-hauler-profile">
 <div class="stat">
 <b>M</b>
 <span>10&quot;</span>
@@ -8080,7 +8084,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀80mm).</p>
+<p class="profile-base" data-logical-owner="unit-myphitic-blight-hauler-profile">Base: (⌀80mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -8232,7 +8236,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-plagueburst-crawler" data-track="unit-plagueburst-crawler" data-rule-facts="{&quot;id&quot;:&quot;unit-plagueburst-crawler&quot;,&quot;unitId&quot;:&quot;unit-plagueburst-crawler&quot;,&quot;slug&quot;:&quot;plagueburst-crawler&quot;,&quot;keywords&quot;:[&quot;VEHICLE&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;PLAGUEBURST CRAWLER&quot;,&quot;FRAME&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;VEHICLE&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;PLAGUEBURST CRAWLER&quot;,&quot;FRAME&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Spore-laced Shock Waves&quot;],&quot;termIds&quot;:[&quot;keyword-vehicle&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-daemon&quot;,&quot;keyword-plagueburst-crawler&quot;,&quot;keyword-frame&quot;,&quot;keyword-death-guard&quot;,&quot;ability-spore-laced-shock-waves-bc0251b&quot;,&quot;weapon-entropy-cannon-2ed707e&quot;,&quot;weapon-heavy-slugger-f2c1c85&quot;,&quot;weapon-plagueburst-mortar-fef92be&quot;,&quot;weapon-plaguespitter-e03b003&quot;,&quot;weapon-rothail-volley-gun-e8d55b7&quot;,&quot;weapon-armoured-tracks-a6a4ba9&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Plagueburst Crawler</h3>
@@ -8262,7 +8266,7 @@
 <strong>210 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-plagueburst-crawler-profile">
 <div class="stat">
 <b>M</b>
 <span>10&quot;</span>
@@ -8293,7 +8297,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀Use model).</p>
+<p class="profile-base" data-logical-owner="unit-plagueburst-crawler-profile">Base: (⌀Use model).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -8487,7 +8491,7 @@
 <section class="content-group" id="datasheets-dedicated-transports" data-track="datasheets-dedicated-transports">
 <h3 class="category-title">Dedicated Transports</h3>
 <article class="unit-card surface" id="unit-chaos-rhino" data-track="unit-chaos-rhino" data-rule-facts="{&quot;id&quot;:&quot;unit-chaos-rhino&quot;,&quot;unitId&quot;:&quot;unit-chaos-rhino&quot;,&quot;slug&quot;:&quot;chaos-rhino&quot;,&quot;keywords&quot;:[&quot;VEHICLE&quot;,&quot;SMOKE&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TRANSPORT&quot;,&quot;DEDICATED TRANSPORT&quot;,&quot;RHINO&quot;,&quot;FRAME&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;VEHICLE&quot;,&quot;SMOKE&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;TRANSPORT&quot;,&quot;DEDICATED TRANSPORT&quot;,&quot;RHINO&quot;,&quot;FRAME&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Firing Deck 2&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Fire Support&quot;],&quot;termIds&quot;:[&quot;keyword-vehicle&quot;,&quot;keyword-smoke&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-transport&quot;,&quot;keyword-dedicated-transport&quot;,&quot;keyword-rhino&quot;,&quot;keyword-frame&quot;,&quot;keyword-death-guard&quot;,&quot;ability-fire-support-b0918db&quot;,&quot;weapon-combi-bolter-5d7d99e&quot;,&quot;weapon-combi-weapon-b2eeb14&quot;,&quot;weapon-havoc-launcher-cf26557&quot;,&quot;weapon-armoured-tracks-a6a4ba9&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Chaos Rhino</h3>
@@ -8517,7 +8521,7 @@
 <strong>85 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-chaos-rhino-profile">
 <div class="stat">
 <b>M</b>
 <span>12&quot;</span>
@@ -8544,7 +8548,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀Use model).</p>
+<p class="profile-base" data-logical-owner="unit-chaos-rhino-profile">Base: (⌀Use model).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -8704,7 +8708,7 @@
 <section class="content-group" id="datasheets-fortifications" data-track="datasheets-fortifications">
 <h3 class="category-title">Fortifications</h3>
 <article class="unit-card surface" id="unit-miasmic-malignifier" data-track="unit-miasmic-malignifier" data-rule-facts="{&quot;id&quot;:&quot;unit-miasmic-malignifier&quot;,&quot;unitId&quot;:&quot;unit-miasmic-malignifier&quot;,&quot;slug&quot;:&quot;miasmic-malignifier&quot;,&quot;keywords&quot;:[&quot;FORTIFICATION&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;MIASMIC MALIGNIFIER&quot;,&quot;FRAME&quot;,&quot;DEATH GUARD&quot;],&quot;intrinsicKeywords&quot;:[&quot;FORTIFICATION&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;MIASMIC MALIGNIFIER&quot;,&quot;FRAME&quot;,&quot;DEATH GUARD&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Nurgle’s Gift (Aura)&quot;,&quot;Putrescent Fog (Aura)&quot;,&quot;Diseased Cover&quot;,&quot;Fortification&quot;,&quot;Deployment&quot;],&quot;termIds&quot;:[&quot;keyword-fortification&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-miasmic-malignifier&quot;,&quot;keyword-frame&quot;,&quot;keyword-death-guard&quot;,&quot;ability-putrescent-fog-aura-afeaa21&quot;,&quot;ability-diseased-cover-8d71e30&quot;,&quot;ability-fortification-e581151&quot;,&quot;weapon-miasmic-gouts-7cba9ce&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Miasmic Malignifier</h3>
@@ -8728,7 +8732,7 @@
 <strong>105 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-miasmic-malignifier-profile">
 <div class="stat">
 <b>M</b>
 <span>-</span>
@@ -8755,7 +8759,7 @@
 </div>
 </div>
 <div class="content-block">
-<p>Base: (⌀Use model).</p>
+<p class="profile-base" data-logical-owner="unit-miasmic-malignifier-profile">Base: (⌀Use model).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -8855,7 +8859,7 @@
 <button class="term-button" data-term="keyword-plague-legions">PLAGUE LEGIONS</button> datasheets available to a <button class="term-button" data-term="keyword-death-guard">DEATH GUARD</button> army through the Tallyband Summoners Detachment and its Pact of Decay rule. They are separated from native <button class="term-button" data-term="keyword-death-guard">Death Guard</button> datasheets.</p>
 </div>
 <article class="unit-card surface" id="unit-beasts-of-nurgle" data-track="unit-beasts-of-nurgle" data-rule-facts="{&quot;id&quot;:&quot;unit-beasts-of-nurgle&quot;,&quot;unitId&quot;:&quot;unit-beasts-of-nurgle&quot;,&quot;slug&quot;:&quot;beasts-of-nurgle&quot;,&quot;keywords&quot;:[&quot;BEAST&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;SUMMONED&quot;,&quot;BEASTS OF NURGLE&quot;,&quot;PLAGUE LEGIONS&quot;],&quot;intrinsicKeywords&quot;:[&quot;BEAST&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;SUMMONED&quot;,&quot;BEASTS OF NURGLE&quot;,&quot;PLAGUE LEGIONS&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Deep Strike&quot;,&quot;Scouts 6\&quot;&quot;,&quot;Pact of Decay&quot;,&quot;Grotesque Regeneration&quot;],&quot;termIds&quot;:[&quot;keyword-beast&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-daemon&quot;,&quot;keyword-summoned&quot;,&quot;keyword-beasts-of-nurgle&quot;,&quot;keyword-plague-legions&quot;,&quot;ability-grotesque-regeneration-60c7e2a&quot;,&quot;weapon-putrid-appendages-7640acd&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Beasts of Nurgle</h3>
@@ -8883,7 +8887,7 @@
 <strong>140 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-beasts-of-nurgle-profile">
 <div class="stat">
 <b>M</b>
 <span>6&quot;</span>
@@ -8917,7 +8921,7 @@
 <p>Pact of Decay datasheet. This is not a native <button class="term-button" data-term="keyword-death-guard">DEATH GUARD</button> datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.</p>
 </div>
 <div class="content-block">
-<p>Base: (⌀60mm).</p>
+<p class="profile-base" data-logical-owner="unit-beasts-of-nurgle-profile">Base: (⌀60mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Melee weapons</h5>
@@ -8989,7 +8993,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-great-unclean-one" data-track="unit-great-unclean-one" data-rule-facts="{&quot;id&quot;:&quot;unit-great-unclean-one&quot;,&quot;unitId&quot;:&quot;unit-great-unclean-one&quot;,&quot;slug&quot;:&quot;great-unclean-one&quot;,&quot;keywords&quot;:[&quot;MONSTER&quot;,&quot;CHARACTER&quot;,&quot;PSYKER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;SUMMONED&quot;,&quot;GREAT UNCLEAN ONE&quot;,&quot;PLAGUE LEGIONS&quot;],&quot;intrinsicKeywords&quot;:[&quot;MONSTER&quot;,&quot;CHARACTER&quot;,&quot;PSYKER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;SUMMONED&quot;,&quot;GREAT UNCLEAN ONE&quot;,&quot;PLAGUE LEGIONS&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Deep Strike&quot;,&quot;Feel No Pain 6+&quot;,&quot;Pact of Decay&quot;,&quot;Daemon Lord of Nurgle (Aura)&quot;,&quot;Nurgle’s Rot (Psychic)&quot;,&quot;Reverberating Summons&quot;],&quot;termIds&quot;:[&quot;keyword-monster&quot;,&quot;keyword-character&quot;,&quot;keyword-psyker&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-daemon&quot;,&quot;keyword-summoned&quot;,&quot;keyword-great-unclean-one&quot;,&quot;keyword-plague-legions&quot;,&quot;ability-daemon-lord-of-nurgle-aura-d613df7&quot;,&quot;ability-nurgles-rot-psychic-80d4e3f&quot;,&quot;weapon-plague-flail-719d81e&quot;,&quot;weapon-putrid-vomit-e5055fe&quot;,&quot;weapon-bileblade-3708417&quot;,&quot;weapon-bilesword-strike-de60c8c&quot;,&quot;weapon-bilesword-sweep-d4bee74&quot;,&quot;weapon-doomsday-bell-bf3de2c&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:1,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Great Unclean One</h3>
@@ -9019,7 +9023,7 @@
 <strong>280 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-great-unclean-one-profile">
 <div class="stat">
 <b>M</b>
 <span>7&quot;</span>
@@ -9053,7 +9057,7 @@
 <p>Pact of Decay datasheet. This is not a native <button class="term-button" data-term="keyword-death-guard">DEATH GUARD</button> datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.</p>
 </div>
 <div class="content-block">
-<p>Base: (⌀130mm).</p>
+<p class="profile-base" data-logical-owner="unit-great-unclean-one-profile">Base: (⌀130mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -9251,7 +9255,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-nurglings" data-track="unit-nurglings" data-rule-facts="{&quot;id&quot;:&quot;unit-nurglings&quot;,&quot;unitId&quot;:&quot;unit-nurglings&quot;,&quot;slug&quot;:&quot;nurglings&quot;,&quot;keywords&quot;:[&quot;SWARM&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;SUMMONED&quot;,&quot;NURGLINGS&quot;,&quot;PLAGUE LEGIONS&quot;],&quot;intrinsicKeywords&quot;:[&quot;SWARM&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;SUMMONED&quot;,&quot;NURGLINGS&quot;,&quot;PLAGUE LEGIONS&quot;],&quot;abilities&quot;:[&quot;Deep Strike&quot;,&quot;Infiltrators&quot;,&quot;Pact of Decay&quot;,&quot;Mischief Makers&quot;],&quot;termIds&quot;:[&quot;keyword-swarm&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-daemon&quot;,&quot;keyword-summoned&quot;,&quot;keyword-nurglings&quot;,&quot;keyword-plague-legions&quot;,&quot;ability-mischief-makers-6a686e9&quot;,&quot;weapon-diseased-claws-and-teeth-0b6d472&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Nurglings</h3>
@@ -9279,7 +9283,7 @@
 <strong>90 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-nurglings-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -9313,7 +9317,7 @@
 <p>Pact of Decay datasheet. This is not a native <button class="term-button" data-term="keyword-death-guard">DEATH GUARD</button> datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.</p>
 </div>
 <div class="content-block">
-<p>Base: (⌀40mm).</p>
+<p class="profile-base" data-logical-owner="unit-nurglings-profile">Base: (⌀40mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Melee weapons</h5>
@@ -9386,7 +9390,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-plague-drones" data-track="unit-plague-drones" data-rule-facts="{&quot;id&quot;:&quot;unit-plague-drones&quot;,&quot;unitId&quot;:&quot;unit-plague-drones&quot;,&quot;slug&quot;:&quot;plague-drones&quot;,&quot;keywords&quot;:[&quot;MOUNTED&quot;,&quot;FLY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;SUMMONED&quot;,&quot;PLAGUE DRONES&quot;,&quot;PLAGUE LEGIONS&quot;],&quot;intrinsicKeywords&quot;:[&quot;MOUNTED&quot;,&quot;FLY&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;SUMMONED&quot;,&quot;PLAGUE DRONES&quot;,&quot;PLAGUE LEGIONS&quot;],&quot;abilities&quot;:[&quot;Deep Strike&quot;,&quot;Pact of Decay&quot;,&quot;Death’s Heads&quot;,&quot;Daemonic Icon&quot;,&quot;Instrument of Chaos&quot;],&quot;termIds&quot;:[&quot;keyword-mounted&quot;,&quot;keyword-fly&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-daemon&quot;,&quot;keyword-summoned&quot;,&quot;keyword-plague-drones&quot;,&quot;keyword-plague-legions&quot;,&quot;ability-deaths-heads-546f077&quot;,&quot;weapon-deaths-heads-3415dda&quot;,&quot;weapon-foul-mouthparts-8025b79&quot;,&quot;weapon-plaguesword-ff1305d&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Plague Drones</h3>
@@ -9415,7 +9419,7 @@
 <strong>220 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-plague-drones-profile">
 <div class="stat">
 <b>M</b>
 <span>10&quot;</span>
@@ -9449,7 +9453,7 @@
 <p>Pact of Decay datasheet. This is not a native <button class="term-button" data-term="keyword-death-guard">DEATH GUARD</button> datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.</p>
 </div>
 <div class="content-block">
-<p>Base: (⌀60mm).</p>
+<p class="profile-base" data-logical-owner="unit-plague-drones-profile">Base: (⌀60mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -9589,7 +9593,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-plaguebearers" data-track="unit-plaguebearers" data-rule-facts="{&quot;id&quot;:&quot;unit-plaguebearers&quot;,&quot;unitId&quot;:&quot;unit-plaguebearers&quot;,&quot;slug&quot;:&quot;plaguebearers&quot;,&quot;keywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;SUMMONED&quot;,&quot;PLAGUEBEARERS&quot;,&quot;PLAGUE LEGIONS&quot;],&quot;intrinsicKeywords&quot;:[&quot;INFANTRY&quot;,&quot;BATTLELINE&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;SUMMONED&quot;,&quot;PLAGUEBEARERS&quot;,&quot;PLAGUE LEGIONS&quot;],&quot;abilities&quot;:[&quot;Deep Strike&quot;,&quot;Pact of Decay&quot;,&quot;Infected Outbreak&quot;,&quot;Daemonic Icon&quot;,&quot;Instrument of Chaos&quot;],&quot;termIds&quot;:[&quot;keyword-infantry&quot;,&quot;keyword-battleline&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-daemon&quot;,&quot;keyword-summoned&quot;,&quot;keyword-plaguebearers&quot;,&quot;keyword-plague-legions&quot;,&quot;ability-infected-outbreak-faaf2d1&quot;,&quot;weapon-plaguesword-ff1305d&quot;],&quot;epic&quot;:false,&quot;deadlyDemise&quot;:false,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:0,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Plaguebearers</h3>
@@ -9614,7 +9618,7 @@
 <strong>115 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-plaguebearers-profile">
 <div class="stat">
 <b>M</b>
 <span>5&quot;</span>
@@ -9648,7 +9652,7 @@
 <p>Pact of Decay datasheet. This is not a native <button class="term-button" data-term="keyword-death-guard">DEATH GUARD</button> datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.</p>
 </div>
 <div class="content-block">
-<p>Base: (⌀32mm).</p>
+<p class="profile-base" data-logical-owner="unit-plaguebearers-profile">Base: (⌀32mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Melee weapons</h5>
@@ -9740,7 +9744,7 @@
 </section>
 </article>
 <article class="unit-card surface" id="unit-rotigus" data-track="unit-rotigus" data-rule-facts="{&quot;id&quot;:&quot;unit-rotigus&quot;,&quot;unitId&quot;:&quot;unit-rotigus&quot;,&quot;slug&quot;:&quot;rotigus&quot;,&quot;keywords&quot;:[&quot;MONSTER&quot;,&quot;CHARACTER&quot;,&quot;EPIC HERO&quot;,&quot;PSYKER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;SUMMONED&quot;,&quot;ROTIGUS&quot;,&quot;PLAGUE LEGIONS&quot;],&quot;intrinsicKeywords&quot;:[&quot;MONSTER&quot;,&quot;CHARACTER&quot;,&quot;EPIC HERO&quot;,&quot;PSYKER&quot;,&quot;CHAOS&quot;,&quot;NURGLE&quot;,&quot;DAEMON&quot;,&quot;SUMMONED&quot;,&quot;ROTIGUS&quot;,&quot;PLAGUE LEGIONS&quot;],&quot;abilities&quot;:[&quot;DEADLY DEMISE&quot;,&quot;Deep Strike&quot;,&quot;Feel No Pain 6+&quot;,&quot;Pact of Decay&quot;,&quot;Virulent Blessing (Psychic)&quot;,&quot;Deluge of Nurgle (Aura)&quot;],&quot;termIds&quot;:[&quot;keyword-monster&quot;,&quot;keyword-character&quot;,&quot;keyword-epic-hero&quot;,&quot;keyword-psyker&quot;,&quot;keyword-chaos&quot;,&quot;keyword-nurgle&quot;,&quot;keyword-daemon&quot;,&quot;keyword-summoned&quot;,&quot;keyword-rotigus&quot;,&quot;keyword-plague-legions&quot;,&quot;ability-virulent-blessing-psychic-62e7cae&quot;,&quot;ability-deluge-of-nurgle-aura-49f7690&quot;,&quot;weapon-streams-of-brackish-filth-de31740&quot;,&quot;weapon-gnarlrod-strike-1acf103&quot;,&quot;weapon-gnarlrod-sweep-e6644f6&quot;],&quot;epic&quot;:true,&quot;deadlyDemise&quot;:true,&quot;attached&quot;:false,&quot;attachmentKnown&quot;:true,&quot;characterCount&quot;:1,&quot;twoCharacters&quot;:null,&quot;warlord&quot;:null,&quot;relations&quot;:{&quot;canLead&quot;:[],&quot;canSupport&quot;:[],&quot;canBeLedBy&quot;:[],&quot;canBeSupportedBy&quot;:[]}}">
-<div class="unit-head">
+<div class="unit-header">
 <div>
 <div class="eyebrow">Death Guard · Datasheet</div>
 <h3 class="unit-name">Rotigus</h3>
@@ -9765,7 +9769,7 @@
 <strong>280 pts</strong>
 </div>
 </div>
-<div class="statline">
+<div class="statline" data-logical-owner="unit-rotigus-profile">
 <div class="stat">
 <b>M</b>
 <span>7&quot;</span>
@@ -9799,7 +9803,7 @@
 <p>Pact of Decay datasheet. This is not a native <button class="term-button" data-term="keyword-death-guard">DEATH GUARD</button> datasheet; it is available to the Tallyband Summoners Detachment through its Pact of Decay rule.</p>
 </div>
 <div class="content-block">
-<p>Base: (⌀130mm).</p>
+<p class="profile-base" data-logical-owner="unit-rotigus-profile">Base: (⌀130mm).</p>
 </div>
 <div class="weapon-group">
 <h5>Ranged weapons</h5>
@@ -9984,7 +9988,7 @@
 </script>
 <script src="../shared/popup-rule-actions.js?v=1">
 </script>
-<script src="../shared/datasheet-layout.js?v=6">
+<script src="../shared/datasheet-layout.js?v=7">
 </script>
 <script src="../shared/popup-content.js?v=3">
 </script>
@@ -10020,9 +10024,9 @@
 </script>
 <script src="../shared/roster-context.js?v=1">
 </script>
-<script src="../shared/army-book-app.js?v=13">
+<script src="../shared/army-book-app.js?v=14">
 </script>
-<script src="./scripts/app.js?v=47">
+<script src="./scripts/app.js?v=48">
 </script>
 </body>
 </html>

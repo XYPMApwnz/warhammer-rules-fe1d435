@@ -90,9 +90,9 @@
     "Twin-linked"
   ],
   "assetVersions": {
-    "book": 2,
+    "book": 3,
     "app": 5,
-    "armyBook": 13,
+    "armyBook": 14,
     "rosterContext": 1,
     "relatedRules": 15,
     "ruleFacts": 5,

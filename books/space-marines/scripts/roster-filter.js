@@ -15,7 +15,6 @@
   document.querySelectorAll('section.content-group[id^="datasheets-"]').forEach(section=>{if(!section.querySelector('.unit-card'))section.remove();});
   document.querySelectorAll('[data-nav-id^="unit-"]').forEach(item=>{if(!unitIds.includes(item.dataset.navId))item.remove();});
   document.querySelectorAll('[data-nav-id^="detachment-"]').forEach(item=>{if(!detachmentIds.includes(item.dataset.navId.replace(/^detachment-/,'')))item.remove();});
-  [...document.querySelectorAll('.toc-panel details')].reverse().forEach(group=>{if(!group.querySelector('a[href]'))group.remove();});
   const enhancementRuleIdsByUnitId=Object.fromEntries([...selected].map(([cardId,units])=>[cardId,window.WHBookRosterEnhancements?.assignedRuleIds(roster,units)||[]]));
   window.SM_ROSTER_GUIDE=window.WH_ARMY_ROSTER_GUIDE={rosterId,unitIds,unitTitles,detachmentIds,enhancementRuleIdsByUnitId};
   document.documentElement.dataset.rosterGuide='space-marines';

@@ -153,6 +153,58 @@ async function desktopContract(page,name,id){
   assert.deepEqual(observed.failed,[],`${name}: Desktop failed requests`);
 }
 
+async function forcedPhoneContract(page,name,id){
+  const observed=observe(page);
+  await page.setViewportSize({width:1280,height:720});
+  await page.goto(`${origin}/books/${id}/reader.html?probe=ui-r2&view=mobile#start`);
+  await waitForApp(page);await waitForTarget(page,'start');
+  const forced=await page.evaluate(()=>( {
+    path:location.pathname,
+    probe:new URLSearchParams(location.search).get('probe'),
+    view:new URLSearchParams(location.search).get('view'),
+    hash:location.hash,
+    state:document.documentElement.dataset.view,
+    menu:getComputedStyle(document.getElementById('navMenu')).display,
+    collapse:getComputedStyle(document.getElementById('navCollapse')).display,
+    overflow:document.documentElement.scrollWidth>window.innerWidth,
+    href:document.querySelector('[data-view-switch]')?.href||''
+  }));
+  assert.equal(forced.path,`/books/${id}/reader.html`,`${name}: forced Phone view left canonical reader`);
+  assert.equal(forced.probe,'ui-r2',`${name}: forced Phone view lost query state`);
+  assert.equal(forced.view,'mobile',`${name}: forced Phone view lost view state`);
+  assert.equal(forced.hash,'#start',`${name}: forced Phone view lost hash state`);
+  assert.equal(forced.state,'mobile',`${name}: wide viewport did not apply forced Phone state`);
+  assert.notEqual(forced.menu,'none',`${name}: forced Phone menu stayed hidden`);
+  assert.equal(forced.collapse,'none',`${name}: Desktop collapse remained in forced Phone view`);
+  assert.equal(forced.overflow,false,`${name}: forced Phone view overflowed horizontally`);
+  assert.ok(forced.href.includes(`/books/${id}/reader.html`),`${name}: view switch does not retain canonical reader`);
+  assert.ok(!forced.href.includes('/mobile/'),`${name}: view switch still targets a legacy Mobile route`);
+
+  const historyBefore=await page.evaluate(()=>history.length);
+  await page.locator('[data-view-switch]').click();
+  await waitForApp(page);await waitForTarget(page,'start');
+  const restored=await page.evaluate(()=>( {
+    path:location.pathname,
+    probe:new URLSearchParams(location.search).get('probe'),
+    view:new URLSearchParams(location.search).get('view'),
+    hash:location.hash,
+    state:document.documentElement.dataset.view||null,
+    menu:getComputedStyle(document.getElementById('navMenu')).display,
+    collapse:getComputedStyle(document.getElementById('navCollapse')).display,
+    history:history.length
+  }));
+  assert.equal(restored.path,`/books/${id}/reader.html`,`${name}: full view left canonical reader`);
+  assert.equal(restored.probe,'ui-r2',`${name}: full view lost query state`);
+  assert.equal(restored.view,'full',`${name}: full view state was not restored`);
+  assert.equal(restored.hash,'#start',`${name}: full view lost hash state`);
+  assert.equal(restored.state,null,`${name}: forced Phone presentation state was not cleared`);
+  assert.equal(restored.menu,'none',`${name}: Phone menu remained visible in full view`);
+  assert.notEqual(restored.collapse,'none',`${name}: Desktop collapse did not return in full view`);
+  assert.equal(restored.history,historyBefore+1,`${name}: one view-switch click did not create exactly one transition`);
+  assert.deepEqual(observed.errors,[],`${name}: forced view console errors`);
+  assert.deepEqual(observed.failed,[],`${name}: forced view failed requests`);
+}
+
 async function journeyContract(page){
   const state=()=>page.evaluate(()=>({
     hash:location.hash,
@@ -221,7 +273,10 @@ try{
   const desktop=await browser.newContext({serviceWorkers:'block',viewport:{width:1280,height:720}});
   try{
     const page=await desktop.newPage();
-    for(const [name,id] of books)await desktopContract(page,name,id);
+    for(const [name,id] of books){
+      await desktopContract(page,name,id);
+      await forcedPhoneContract(page,name,id);
+    }
   }finally{await desktop.close();}
   console.log('Shared Army Book UI/navigation QA: PASS (9/9).');
 }finally{

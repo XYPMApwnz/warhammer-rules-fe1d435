@@ -246,7 +246,8 @@ try{
     await csmArt.evaluate(image=>image.decode());
     assert.equal(await csmArt.evaluate(image=>image.complete&&image.naturalWidth>0&&Math.abs(image.naturalWidth/image.naturalHeight-.8)<.01),true,'Chaos Space Marines no-JS entry artwork failed to load');
     assert.equal(await page.locator('a[href="./reader.html?view=full"]').count(),1,'Chaos Space Marines no-JS Desktop link is missing');
-    assert.equal(await page.locator('a[href="./mobile/index.html?view=mobile"]').count(),1,'Chaos Space Marines no-JS Phone link is missing');
+    assert.equal(await page.locator('a[href="./reader.html?view=mobile"]').count(),1,'Chaos Space Marines no-JS canonical Phone link is missing');
+    assert.equal(await page.locator('a[href="./mobile/index.html?view=mobile"]').count(),0,'Chaos Space Marines no-JS entry still depends on a legacy Mobile stub');
     assert.equal(await page.locator('a[href="../../index.html"]').count(),1,'Chaos Space Marines no-JS Library return is missing');
     await page.goto(`${origin}/books/dark-angels/index.html`);
     const art=page.locator('.entry-art img');
@@ -254,7 +255,8 @@ try{
     await art.evaluate(image=>image.decode());
     assert.equal(await art.evaluate(image=>image.complete&&image.naturalWidth>0&&Math.abs(image.naturalWidth/image.naturalHeight-.8)<.01),true,'Dark Angels no-JS entry artwork failed to load');
     assert.equal(await page.locator('a[href="./reader.html?view=full"]').count(),1,'Dark Angels no-JS Desktop link is missing');
-    assert.equal(await page.locator('a[href="./mobile/index.html?view=mobile"]').count(),1,'Dark Angels no-JS Phone link is missing');
+    assert.equal(await page.locator('a[href="./reader.html?view=mobile"]').count(),1,'Dark Angels no-JS canonical Phone link is missing');
+    assert.equal(await page.locator('a[href="./mobile/index.html?view=mobile"]').count(),0,'Dark Angels no-JS entry still depends on a legacy Mobile stub');
     assert.equal(await page.locator('a[href="../../index.html"]').count(),1,'Dark Angels no-JS Library return is missing');
     await page.goto(`${origin}/books/dark-angels/mobile/belial.html`);
     assert.equal(await page.locator('html').getAttribute('data-canonical-reader'),'../reader.html','Dark Angels no-JS compatibility route lost canonical reader metadata');

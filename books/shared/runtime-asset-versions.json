@@ -1,13 +1,14 @@
 {
   "schema": 1,
   "shared": {
-    "armyBook": 13,
+    "armyBook": 14,
     "relatedRules": 15,
     "rosterContext": 1,
     "ruleFacts": 5,
     "bookRosterEnhancements": 2,
+    "datasheetLayout": 7,
     "readerTokens": 11,
-    "readerLayout": 12,
+    "readerLayout": 13,
     "readerNavigationCss": 13,
     "readerContent": 42,
     "readerPopups": 19,
@@ -17,7 +18,7 @@
     "popupController": 25,
     "journeyController": 14,
     "uiControllers": 12,
-    "viewRouter": 2
+    "viewRouter": 3
   },
   "points": {
     "data": 9,

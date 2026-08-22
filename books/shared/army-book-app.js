@@ -41,23 +41,6 @@
       if(label)label.textContent=phoneMode?'Desktop / iPad view':'Phone view';
       viewSwitch.setAttribute('aria-label',phoneMode?'Open desktop or iPad view':'Open phone view');
       const updateViewDestination=()=>{
-        const active=navigation.active||decodeURIComponent(location.hash.slice(1))||'start';
-        if(config.dedicatedMobile&&!phoneMode){
-          let file='index',anchor='start';
-          for(let node=navigation.byId?.get(active)?.node;node;node=node.parentElement?.closest('[data-nav-id]')){
-            const id=node.dataset.navId;
-            if(id==='start'){anchor=active;break;}
-            if(id==='updates'){file='updates';anchor=active;break;}
-            if(id==='army-rules'){file='army-rules';anchor=active;break;}
-            if(id.startsWith('detachment-')){file=id.slice(11);anchor=active;break;}
-            if(id.startsWith('unit-')){file=id.slice(5);anchor=active;break;}
-          }
-          const destination=new URL(`./mobile/${file}.html`,location.href);
-          destination.search=location.search;
-          destination.hash=anchor;
-          viewSwitch.href=destination.href;
-          return;
-        }
         const destination=new URL(config.readerPath||'./reader.html',location.href);
         destination.search=location.search;
         destination.searchParams.set('view',phoneMode?'full':'mobile');

@@ -63,5 +63,14 @@ const checks=[...sharedBuildBooks.map(id=>['books/shared/tools/build-army-book.m
 for(const [script,args] of checks){const result=spawnSync(process.execPath,[script,...args],{cwd:root,encoding:'utf8',maxBuffer:16*1024*1024});assert(result.status===0,'Generated check failed: '+script+' '+args.join(' ')+'\n'+(result.stderr||result.stdout));}
 assert(status()===before,'Wiring checks changed working tree');
 if(failures.length){console.error('Repository wiring consistency: FAIL');for(const failure of failures)console.error('- '+failure);process.exit(1);}
-console.log('Repository wiring consistency: PASS');console.log('Books: '+books.length+'; APP_SHELL URLs: '+shell.urls.length+'; cache revision: '+revision.revision+'; generated checks: '+checks.length+'.');
+const resolveConsumerAsset=(consumer,asset)=>{const resolved=new URL(asset,`https://offline.local/${consumer}`);return `.${resolved.pathname}${resolved.search}`;};
+const exactScriptAsset=(consumer,pattern,label)=>{const source=fs.readFileSync(path.join(root,...consumer.split('/')),'utf8'),match=source.match(pattern);assert(match,`${label} active script URL is missing`);return resolveConsumerAsset(consumer,match[1]);};
+const glossaryRuntimeUrl=exactScriptAsset('glossary/index.html',/<script src="(\.\/generated\/glossary\.en\.js\?v=[^"]+)"/, 'Standalone Glossary');
+const ruleFactsRuntimeUrl=exactScriptAsset('roster-guides/index.html',/<script src="(\.\.\/books\/shared\/rule-facts\.js\?v=[^"]+)"/, 'Roster Guides Rule Facts');
+const coreReaderDir=path.join(root,'books','core-rules','reader'),coreDiagramUrls=new Set();
+for(const file of fs.readdirSync(coreReaderDir).filter(file=>file.endsWith('.html'))){const source=fs.readFileSync(path.join(coreReaderDir,file),'utf8');for(const match of source.matchAll(/\.\.\/assets\/diagrams\/([^"'?#]+)/g))coreDiagramUrls.add(`./books/core-rules/assets/diagrams/${match[1]}`);}
+assert(coreDiagramUrls.size===39,'Core Rules required diagram inventory changed');
+const firstInstallRequired=[glossaryRuntimeUrl,ruleFactsRuntimeUrl,...coreDiagramUrls],runtimeOnlyRequired=firstInstallRequired.filter(url=>!urls.has(url));
+assert(runtimeOnlyRequired.length===0,'Required first-install assets are absent from exact APP_SHELL URLs: '+runtimeOnlyRequired.join(', '));
+console.log('Repository wiring consistency: PASS');console.log('Books: '+books.length+'; APP_SHELL URLs: '+shell.urls.length+'; cache revision: '+revision.revision+'; generated checks: '+checks.length+'.');console.log('First-install required URLs: '+firstInstallRequired.length+'; runtime-only required: '+runtimeOnlyRequired.length+'; network-only required: 0; Core Rules diagrams: '+coreDiagramUrls.size+'.');
 console.log('Dynamic local URLs: '+dynamic.length+'; intentional network-only exclusions: '+dynamicNetworkOnly.size+'.');

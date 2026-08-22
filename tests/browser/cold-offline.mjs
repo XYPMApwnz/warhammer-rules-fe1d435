@@ -364,31 +364,46 @@ try{
   const offlineContext=await browser.newContext({serviceWorkers:'allow',viewport:{width:390,height:844}});
   try{
     const {page,errors}=await observedPage(offlineContext);
+    const failedRequired=[];
+    page.on('requestfailed',request=>{const url=new URL(request.url());if(url.origin===origin)failedRequired.push(`${request.method()} ${url.pathname}${url.search}`);});
     await page.goto(`${origin}/index.html?offline-smoke=1`);
     await control(page);
-    for(const book of books){
-      await page.goto(origin+(book.offline||book.phone));
-      await page.locator(`#${book.offlineUnit||book.unit}`).waitFor({state:'visible'});
-      await page.waitForFunction(async()=>Boolean(await caches.match(location.href)));
-    }
-    assert.equal(await page.evaluate(async()=>Boolean(await caches.match(new URL('/books/chaos-space-marines/assets/chaos-space-marines-cover-800.webp',location.origin).href))),true,'Chaos Space Marines artwork is absent from the offline cache');
-    assert.equal(await page.evaluate(async()=>Boolean(await caches.match(new URL('/books/dark-angels/assets/dark-angels-cover-800.webp',location.origin).href))),true,'Dark Angels artwork is absent from the offline cache');
-    assert.equal(await page.evaluate(async()=>Boolean(await caches.match(new URL('/books/space-marines/reader.html',location.origin).href))),true,'Space Marines Desktop reader is absent from the install cache');
+    const install=await page.evaluate(async()=>{const keys=await caches.keys(),cache=await caches.open(keys[0]),requests=await cache.keys();return{keys,urls:requests.map(request=>new URL(request.url).pathname+new URL(request.url).search)};});
+    assert.equal(install.keys.length,1,'Fresh install must create exactly one current application cache');
+    assert.ok(install.urls.includes('/glossary/generated/glossary.en.js?v=tyranids-1'),'Fresh install omitted the active standalone Glossary script');
+    assert.ok(install.urls.includes('/books/shared/rule-facts.js?v=5'),'Fresh install omitted the active Roster Guides Rule Facts script');
+    const diagramUrls=install.urls.filter(url=>url.startsWith('/books/core-rules/assets/diagrams/'));
+    assert.equal(new Set(diagramUrls).size,39,'Fresh install did not cache all required Core Rules diagrams');
     errors.length=0;
     await offlineContext.setOffline(true);
-    await page.goto(`${origin}/books/space-marines/reader.html#unit-intercessor-squad`,{waitUntil:'domcontentloaded'});
-    await page.locator('#unit-intercessor-squad').waitFor({state:'visible'});
-    assert.ok((await page.locator('#unit-intercessor-squad').textContent()).trim().length>100,'Space Marines Desktop is unusable on cold first offline use');
+    await page.goto(`${origin}/glossary/index.html`,{waitUntil:'domcontentloaded'});
+    await page.waitForFunction(()=>Number(document.getElementById('termCount')?.textContent)>100&&document.querySelectorAll('.term-button').length>0);
+    assert.ok(Number(await page.locator('#termCount').textContent())>100,'Standalone Glossary did not initialize from the install cache');
+    await page.goto(`${origin}/books/core-rules/reader/datasheets.html`,{waitUntil:'domcontentloaded'});
+    await page.locator('main').waitFor({state:'visible'});
+    assert.match(await page.locator('main').textContent(),/Datasheet/i,'Core Rules text is unavailable on first offline use');
+    const diagram=page.locator('img[src*="/assets/diagrams/"]').first();
+    await diagram.scrollIntoViewIfNeeded();
+    await diagram.evaluate(image=>image.decode());
+    assert.equal(await diagram.evaluate(image=>image.complete&&image.naturalWidth>0),true,'Core Rules diagram failed to decode on first offline use');
+    await page.goto(`${origin}/roster-guides/index.html`,{waitUntil:'domcontentloaded'});
+    await page.locator('main, form').first().waitFor({state:'visible'});
+    assert.equal(await page.evaluate(()=>Boolean(window.WHRuleFacts)) ,true,'Roster Guides Rule Facts did not initialize from the install cache');
     for(const book of books){
-      await page.goto(origin+(book.offline||book.phone),{waitUntil:'domcontentloaded'});
-      await page.reload({waitUntil:'domcontentloaded'});
-      const content=page.locator(`#${book.offlineUnit||book.unit}`);
+      await page.goto(origin+book.desktop,{waitUntil:'domcontentloaded'});
+      const content=page.locator(`#${book.unit}`);
       await content.waitFor({state:'visible'});
-      assert.ok((await content.textContent()).trim().length>100,`${book.name} is unusable after offline reload`);
+      assert.ok((await content.textContent()).trim().length>100,`${book.name} is unusable on cold first offline use`);
     }
-    await openPhonePopup(page,'Dark Angels offline');
+    await page.goto(`${origin}/books/adeptus-mechanicus/reader.html#unit-tech-priest-manipulus`,{waitUntil:'domcontentloaded'});
+    const unitImage=page.locator('#unit-tech-priest-manipulus img').first();
+    await unitImage.scrollIntoViewIfNeeded();
+    await unitImage.evaluate(image=>image.decode());
+    assert.equal(await unitImage.evaluate(image=>image.complete&&image.naturalWidth>0),true,'Army Book unit image failed to decode on first offline use');
+    await openPhonePopup(page,'Adeptus Mechanicus offline');
     assert.deepEqual(errors,[],'Offline smoke emitted an uncaught runtime error');
-    console.log('PASS published visited Army Books remain usable after offline reload');
+    assert.deepEqual(failedRequired,[],'Fresh-install offline flow emitted failed required same-origin requests');
+    console.log(`PASS full application works offline after Library-only install (${install.urls.length} cached URLs; ${diagramUrls.length} Core Rules diagrams)`);
   }finally{
     await offlineContext.close();
   }

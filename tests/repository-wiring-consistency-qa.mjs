@@ -55,11 +55,11 @@ assert(versionedDynamic,'No versioned dynamic dependency was discovered');
 if(versionedDynamic){const staleUrl=new URL(versionedDynamic.exact.slice(1),'https://local/');staleUrl.searchParams.set('v','stale');const staleExact='.'+staleUrl.pathname+staleUrl.search,fixtureUrls=new Set(urls);fixtureUrls.delete(versionedDynamic.exact);fixtureUrls.add(staleExact);assert(missingDynamicAssets([versionedDynamic],fixtureUrls,dynamicNetworkOnly).some(item=>item.exact===versionedDynamic.exact),'Dynamic exact-query sensitivity fixture did not detect a stale cached version');}
 for(const url of shell.urls)resolveAppShellUrl(root,url);
 const revision=verifyCacheRevision({root});assert(revision.assets.length===shell.urls.length,'cache coverage mismatch');
-const sharedBuildBooks=['adeptus-mechanicus','tau-empire','emperors-children','tyranids','chaos-space-marines','space-marines','dark-angels','blood-angels'];
+const sharedBuildBooks=['death-guard','adeptus-mechanicus','tau-empire','emperors-children','tyranids','chaos-space-marines','space-marines','dark-angels','blood-angels'];
 const mechanicusConfig=JSON.parse(read('books/adeptus-mechanicus/book.config.json')),mechanicusWrapper=read('books/adeptus-mechanicus/tools/build-full-content.mjs');
 assert(mechanicusConfig.buildExtension==='tools/canonical-build-extension.mjs','Adeptus Mechanicus shared build extension is not configured');
 assert(mechanicusWrapper.split(/\r?\n/).filter(Boolean).length<=8&&mechanicusWrapper.includes('runCanonicalBuildExtension'),'Adeptus Mechanicus legacy build entry is not a thin shared-contract wrapper');
-const checks=[...sharedBuildBooks.map(id=>['books/shared/tools/build-army-book.mjs',['books/'+id+'/book.config.json','--check']]),['books/death-guard/tools/build-legends.mjs',['--check']],...books.map(id=>['books/'+id+'/mobile/build.mjs',['--check']])];
+const checks=[...sharedBuildBooks.map(id=>['books/shared/tools/build-army-book.mjs',['books/'+id+'/book.config.json','--check']]),...books.map(id=>['books/'+id+'/mobile/build.mjs',['--check']])];
 for(const [script,args] of checks){const result=spawnSync(process.execPath,[script,...args],{cwd:root,encoding:'utf8',maxBuffer:16*1024*1024});assert(result.status===0,'Generated check failed: '+script+' '+args.join(' ')+'\n'+(result.stderr||result.stdout));}
 assert(status()===before,'Wiring checks changed working tree');
 if(failures.length){console.error('Repository wiring consistency: FAIL');for(const failure of failures)console.error('- '+failure);process.exit(1);}

@@ -1,0 +1,521 @@
+{
+  "schema": 1,
+  "bookId": "death-guard",
+  "terms": {
+    "core-close-quarters": [
+      "keyword-monster",
+      "keyword-vehicle"
+    ],
+    "core-firing-deck": [
+      "keyword-transport"
+    ],
+    "core-ignores-cover": [
+      "core-stealth"
+    ],
+    "core-leader": [
+      "core-attached-unit",
+      "core-support"
+    ],
+    "core-lone-operative": [
+      "core-attached-unit",
+      "core-indirect-fire"
+    ],
+    "core-pistol": [
+      "core-close-quarters"
+    ],
+    "core-precision": [
+      "keyword-character",
+      "core-attached-unit"
+    ],
+    "core-support": [
+      "core-attached-unit",
+      "core-leader"
+    ],
+    "core-attached-unit": [
+      "core-leader",
+      "core-support"
+    ],
+    "nurgles-gift": [
+      "keyword-death-guard",
+      "contagion-range",
+      "afflicted"
+    ],
+    "afflicted": [
+      "contagion-range"
+    ],
+    "virulent-vectorium": [
+      "keyword-death-guard",
+      "nurgles-gift"
+    ],
+    "detachment-rule-worldblight": [
+      "keyword-death-guard",
+      "nurgles-gift"
+    ],
+    "daemon-weapon-of-nurgle": [
+      "keyword-death-guard"
+    ],
+    "furnace-of-plagues": [
+      "keyword-death-guard",
+      "core-devastating-wounds"
+    ],
+    "arch-contaminator": [
+      "keyword-death-guard"
+    ],
+    "revolting-regeneration": [
+      "keyword-death-guard",
+      "core-feel-no-pain"
+    ],
+    "putrid-detonation": [
+      "keyword-death-guard",
+      "keyword-vehicle",
+      "keyword-monster",
+      "core-deadly-demise"
+    ],
+    "disgustingly-resilient": [
+      "keyword-death-guard"
+    ],
+    "plaguesurge": [
+      "keyword-death-guard",
+      "contagion-range"
+    ],
+    "leechspore-eruption": [
+      "keyword-death-guard"
+    ],
+    "overwhelming-generosity": [
+      "keyword-death-guard",
+      "keyword-character"
+    ],
+    "creeping-blight": [
+      "keyword-death-guard",
+      "keyword-infantry",
+      "afflicted"
+    ],
+    "mortarions-hammer": [
+      "afflicted"
+    ],
+    "detachment-rule-miasmic-bombardment": [
+      "afflicted"
+    ],
+    "eye-of-affliction": [
+      "keyword-death-guard",
+      "core-ignores-cover",
+      "afflicted"
+    ],
+    "bilemaw-blight": [
+      "term-malignant-plaguecaster"
+    ],
+    "shriekworm-familiar": [
+      "keyword-death-guard"
+    ],
+    "tendrilous-emissions": [
+      "term-lord-of-virulence",
+      "keyword-death-guard",
+      "keyword-vehicle",
+      "core-lone-operative"
+    ],
+    "blighted-land": [
+      "keyword-death-guard",
+      "keyword-vehicle",
+      "afflicted"
+    ],
+    "relentless-grind": [
+      "keyword-death-guard",
+      "keyword-vehicle"
+    ],
+    "drawn-to-despair": [
+      "keyword-death-guard"
+    ],
+    "font-of-filth": [
+      "keyword-death-guard",
+      "keyword-vehicle",
+      "core-assault"
+    ],
+    "eyestinger-storm": [
+      "keyword-death-guard",
+      "keyword-vehicle",
+      "afflicted"
+    ],
+    "stinking-mire": [
+      "keyword-death-guard",
+      "keyword-vehicle"
+    ],
+    "champions-of-contagion": [
+      "nurgles-gift"
+    ],
+    "detachment-rule-manifold-maladies": [
+      "nurgles-gift"
+    ],
+    "final-ingredient": [
+      "term-biologus-putrifier",
+      "keyword-character",
+      "afflicted"
+    ],
+    "visions-of-virulence": [
+      "term-malignant-plaguecaster",
+      "afflicted"
+    ],
+    "needle-of-nurgle": [
+      "term-plague-surgeon",
+      "ability-tainted-narthecium-01ba1bd"
+    ],
+    "cornucophagus": [
+      "term-lord-of-poxes",
+      "contagion-range"
+    ],
+    "blessings-of-filth": [
+      "keyword-death-guard",
+      "core-attached-unit"
+    ],
+    "malignance-magnified": [
+      "keyword-death-guard",
+      "core-attached-unit"
+    ],
+    "grotesque-fortitude": [
+      "keyword-death-guard",
+      "core-attached-unit"
+    ],
+    "rabid-infusion": [
+      "keyword-death-guard",
+      "keyword-character",
+      "core-fights-first"
+    ],
+    "mobile-vector": [
+      "keyword-death-guard",
+      "keyword-character",
+      "core-leader"
+    ],
+    "deaths-heads": [
+      "term-biologus-putrifier",
+      "nurgles-gift"
+    ],
+    "tallyband-summoners": [
+      "keyword-plague-legions",
+      "keyword-death-guard",
+      "nurgles-gift",
+      "contagion-range"
+    ],
+    "detachment-rule-reverberant-rancidity": [
+      "keyword-plague-legions",
+      "keyword-death-guard",
+      "nurgles-gift",
+      "contagion-range"
+    ],
+    "beckoning-blight": [
+      "keyword-death-guard",
+      "keyword-plague-legions",
+      "core-deep-strike"
+    ],
+    "fell-harvester": [
+      "keyword-death-guard"
+    ],
+    "entropic-knell": [
+      "term-great-unclean-one"
+    ],
+    "tome-of-bounteous-blessings": [
+      "term-malignant-plaguecaster",
+      "keyword-plague-legions",
+      "keyword-battleline"
+    ],
+    "persistent-pests": [
+      "term-nurglings"
+    ],
+    "clutching-corruption": [
+      "keyword-death-guard",
+      "keyword-plague-legions"
+    ],
+    "all-is-rot": [
+      "keyword-plague-legions"
+    ],
+    "fleshy-avalanche": [
+      "keyword-plague-legions",
+      "keyword-monster"
+    ],
+    "avatars-of-decay": [
+      "keyword-plague-legions",
+      "afflicted"
+    ],
+    "mireslick": [
+      "keyword-plague-legions"
+    ],
+    "shamblerot-vectorium": [
+      "term-poxwalkers",
+      "keyword-battleline"
+    ],
+    "detachment-rule-numberless-horde": [
+      "term-poxwalkers",
+      "keyword-battleline"
+    ],
+    "witherbone-pipes": [
+      "term-noxious-blightbringer",
+      "term-poxwalkers"
+    ],
+    "lord-of-the-walking-pox": [
+      "keyword-death-guard"
+    ],
+    "sorrowsyphon": [
+      "term-malignant-plaguecaster",
+      "term-poxwalkers"
+    ],
+    "talisman-of-burgeoning": [
+      "keyword-death-guard",
+      "term-poxwalkers"
+    ],
+    "grip-of-the-walking-pox": [
+      "term-poxwalkers",
+      "ability-curse-of-the-walking-pox-6a9093e"
+    ],
+    "smeared-with-filth": [
+      "term-poxwalkers",
+      "afflicted"
+    ],
+    "gnawing-hunger": [
+      "term-poxwalkers"
+    ],
+    "hidden-amongst-the-dead": [
+      "term-poxwalkers",
+      "core-attached-unit",
+      "core-deep-strike"
+    ],
+    "shock-and-horror": [
+      "keyword-death-guard"
+    ],
+    "shambling-wall": [
+      "keyword-death-guard",
+      "term-poxwalkers"
+    ],
+    "death-lords-chosen": [
+      "afflicted"
+    ],
+    "detachment-rule-deadly-vectors": [
+      "afflicted"
+    ],
+    "face-of-death": [
+      "keyword-terminator"
+    ],
+    "vile-vigour": [
+      "keyword-terminator"
+    ],
+    "warprot-talisman": [
+      "keyword-terminator"
+    ],
+    "helm-of-the-fly-king": [
+      "keyword-terminator"
+    ],
+    "blooming-pestilence": [
+      "keyword-terminator",
+      "contagion-range"
+    ],
+    "grim-reapers": [
+      "keyword-terminator"
+    ],
+    "undying-spite": [
+      "keyword-terminator"
+    ],
+    "signal-pox": [
+      "term-lord-of-virulence",
+      "afflicted"
+    ],
+    "mortarion-s-teachings": [
+      "keyword-terminator",
+      "core-assault"
+    ],
+    "sickening-impact": [
+      "keyword-terminator"
+    ],
+    "contagion-engines": [
+      "term-foetid-bloat-drone",
+      "term-foetid-bloat-drone-with-heavy-blight-launcher",
+      "term-helbrute",
+      "term-myphitic-blight-hauler"
+    ],
+    "detachment-rule-warped-and-rusted-animus": [
+      "term-foetid-bloat-drone",
+      "term-foetid-bloat-drone-with-heavy-blight-launcher",
+      "term-helbrute",
+      "term-myphitic-blight-hauler"
+    ],
+    "lancet-of-the-worldsore": [
+      "term-helbrute",
+      "term-myphitic-blight-hauler",
+      "core-mobile"
+    ],
+    "bloodrust-deluge": [
+      "afflicted"
+    ],
+    "flyblown-host": [
+      "term-plague-marines",
+      "core-infiltrators"
+    ],
+    "detachment-rule-verminous-haze": [
+      "term-plague-marines",
+      "core-infiltrators"
+    ],
+    "insectile-murmuration": [
+      "term-plague-marines",
+      "contagion-range"
+    ],
+    "plagueveil": [
+      "term-plague-marines",
+      "core-detection-range"
+    ],
+    "nauseating-paroxysms": [
+      "term-plague-marines"
+    ],
+    "droning-horror": [
+      "term-plague-marines"
+    ],
+    "eye-of-the-swarm": [
+      "term-plague-marines",
+      "core-close-quarters"
+    ],
+    "paragons-of-putrescence": [
+      "keyword-death-guard",
+      "keyword-character",
+      "contagion-range"
+    ],
+    "detachment-rule-hypervirulent-strains": [
+      "keyword-death-guard",
+      "keyword-character",
+      "contagion-range"
+    ],
+    "rejuvenating-swarm": [
+      "keyword-death-guard",
+      "keyword-infantry",
+      "keyword-terminator"
+    ],
+    "host-of-the-hybridised-pox": [
+      "keyword-death-guard",
+      "keyword-infantry",
+      "nurgles-gift",
+      "contagion-range"
+    ],
+    "territorial-infection": [
+      "keyword-death-guard",
+      "keyword-character"
+    ],
+    "aggravus-spasms": [
+      "keyword-death-guard",
+      "keyword-character",
+      "contagion-range",
+      "core-detection-range"
+    ],
+    "simultaneous-contamination": [
+      "keyword-death-guard",
+      "keyword-character"
+    ],
+    "ability-grotesque-regeneration-60c7e2a": [
+      "term-beasts-of-nurgle"
+    ],
+    "ability-foul-infusion-490467e": [
+      "core-lethal-hits"
+    ],
+    "ability-blistering-fusillade-01dcc5c": [
+      "keyword-character",
+      "afflicted"
+    ],
+    "ability-metalophagic-infection-7a47e75": [
+      "keyword-monster",
+      "keyword-vehicle",
+      "afflicted"
+    ],
+    "ability-hail-of-corrosive-disease-0f6451f": [
+      "keyword-death-guard"
+    ],
+    "ability-fire-support-b0918db": [
+      "keyword-transport"
+    ],
+    "ability-death-guard-defenders-c306937": [
+      "keyword-death-guard",
+      "keyword-infantry",
+      "core-lone-operative"
+    ],
+    "ability-fevered-strategist-9a8ed87": [
+      "keyword-death-guard"
+    ],
+    "ability-miasma-of-pestilence-aura-92fd75f": [
+      "keyword-death-guard"
+    ],
+    "ability-silent-bodyguard-03a0a1b": [
+      "keyword-character",
+      "core-feel-no-pain"
+    ],
+    "ability-death-approaches-3347016": [
+      "core-deep-strike",
+      "afflicted"
+    ],
+    "ability-explosive-blight-4fe2f2d": [
+      "afflicted"
+    ],
+    "ability-blinding-spray-7d189f5": [
+      "core-fights-first"
+    ],
+    "ability-daemon-lord-of-nurgle-aura-d613df7": [
+      "keyword-plague-legions"
+    ],
+    "ability-diseased-malice-caa33aa": [
+      "afflicted"
+    ],
+    "ability-froth-spattered-frenzy-9a139e5": [
+      "weapon-close-combat-weapon-f69dc30"
+    ],
+    "ability-blessed-icon-of-disease-e331a6c": [
+      "keyword-death-guard"
+    ],
+    "ability-vector-of-disease-2498580": [
+      "core-sustained-hits"
+    ],
+    "ability-gift-of-poxes-29d6059": [
+      "contagion-range"
+    ],
+    "ability-blight-bombardment-74bfb5b": [
+      "keyword-death-guard",
+      "core-blast"
+    ],
+    "ability-gift-of-contagion-psychic-4fea300": [
+      "afflicted",
+      "core-sustained-hits"
+    ],
+    "ability-pestilent-fallout-psychic-399986c": [
+      "keyword-infantry"
+    ],
+    "ability-diseased-cover-8d71e30": [
+      "ability-fortification-e581151"
+    ],
+    "ability-fortification-e581151": [
+      "core-pistol"
+    ],
+    "ability-host-of-plagues-2f9d0aa": [
+      "afflicted"
+    ],
+    "ability-tank-hunters-8831aae": [
+      "keyword-monster",
+      "keyword-vehicle"
+    ],
+    "ability-tocsin-of-misery-aura-7f2edfb": [
+      "keyword-psyker"
+    ],
+    "ability-deaths-heads-546f077": [
+      "keyword-plague-legions"
+    ],
+    "ability-infused-with-the-blessings-of-nurgle-577c42e": [
+      "afflicted"
+    ],
+    "ability-spore-laced-shock-waves-bc0251b": [
+      "weapon-plagueburst-mortar-fef92be",
+      "afflicted"
+    ],
+    "ability-curse-of-the-walking-pox-6a9093e": [
+      "keyword-monster",
+      "keyword-vehicle",
+      "term-typhus"
+    ],
+    "ability-virulent-blessing-psychic-62e7cae": [
+      "keyword-plague-legions"
+    ],
+    "ability-eater-plague-psychic-2c7cc41": [
+      "keyword-psyker",
+      "core-lone-operative",
+      "core-attached-unit"
+    ]
+  }
+}

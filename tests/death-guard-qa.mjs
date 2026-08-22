@@ -107,8 +107,8 @@ const termContext={window:{},Object};
 vm.runInNewContext(dataSource,termContext,{filename:'scripts/data.js'});
 const termKeys=Object.keys(termContext.window.DG_TERMS||{});
 check('official Stratagem wording reaches desktop, Phone Mode, popup and Mega Glossary',
-  /roll one D6:\r?\n<br>• On a 1/.test(html)&&
-  /Your unit’s ranged attacks:\r?\n<br>• Can re-roll hit rolls of 1\./.test(html)&&
+  /roll one D6:\s*<br>• On a 1/.test(html)&&
+  /Your unit’s ranged attacks:\s*<br>• Can re-roll hit rolls of 1\./.test(html)&&
   read('mobile/contagion-engines.html').includes('mobile-route-redirect.js?v=1')&&
   read('mobile/flyblown-host.html').includes('mobile-route-redirect.js?v=1')&&
   termContext.window.DG_TERMS['soulrot-flux'].summary.includes('make a fall-back move')&&

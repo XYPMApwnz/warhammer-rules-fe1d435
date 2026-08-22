@@ -5,7 +5,7 @@
     "playwright": "1.61.1"
   },
   "scripts": {
-    "death-guard:build": "node books/death-guard/tools/build-legends.mjs && node books/death-guard/mobile/build.mjs && node glossary/tools/build-glossary.mjs",
+    "death-guard:build": "node books/shared/tools/build-army-book.mjs books/death-guard/book.config.json && node books/death-guard/mobile/build.mjs && node glossary/tools/build-glossary.mjs",
     "core:build": "node books/core-rules/reader/build.mjs",
     "mechanicus:build": "node books/shared/tools/build-army-book.mjs books/adeptus-mechanicus/book.config.json && node books/adeptus-mechanicus/mobile/build.mjs && node glossary/tools/build-glossary.mjs",
     "tyranids:build": "node books/shared/tools/build-army-book.mjs books/tyranids/book.config.json && node books/tyranids/mobile/build.mjs && node glossary/tools/build-glossary.mjs",

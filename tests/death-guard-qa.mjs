@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import vm from 'node:vm';
+import {spawnSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 
 const projectRoot=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
@@ -299,6 +300,11 @@ const mobileBuild=read('mobile/build.mjs');
 const mobileTyphus=read('mobile/typhus.html');
 const mobileIndex=read('mobile/index.html');
 const mobileRouteRedirect=readProject('books/shared/mobile-route-redirect.js');
+const sharedMobileBuilder=readProject('books/shared/tools/build-mobile-stubs.mjs');
+const mobileHtmlFiles=fs.readdirSync(path.join(root,'mobile')).filter(file=>file.endsWith('.html')).sort();
+const mobileOutputs=mobileHtmlFiles.map(file=>({file,html:read(path.join('mobile',file))}));
+const mobileTargets=mobileOutputs.map(({html:output})=>output.match(/data-canonical-target="([^"]+)"/)?.[1]);
+const mobileFreshness=spawnSync(process.execPath,[path.join(root,'mobile','build.mjs'),'--check'],{cwd:projectRoot,encoding:'utf8'});
 const rosterFilterRuntime=read('scripts/roster-filter.js');
 const rosterSemanticRuntime=read('scripts/roster-semantics.js');
 const extractDetachmentResolver=(source)=>{const expression=source.match(/const resolveRosterDetachmentIds=(.+);/)?.[1];return expression?Function(`"use strict";return (${expression});`)():null;};
@@ -318,7 +324,12 @@ check('Desktop and Phone delegate gameplay projection without local rule registr
 const invalidRosterHandoff=/location\.replace\(['"]\.\.\/\.\.\/roster-guides\/index\.html[^;]*;\s*return;/.test(rosterFilterRuntime);
 check('canonical invalid roster handoff is terminal before responsive roster projection',invalidRosterHandoff&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
 check('no-roster All Detachments behavior is preserved by the shared runtime',rosterFilterRuntime.includes('if (!rosterId) return;')&&appSource.includes("rosterDetachment:'all'")&&sharedRelatedRules.includes("['all',rosterMode?'All roster detachments':'All detachments']")&&mobileTyphus.includes('data-canonical-target="unit-typhus"'));
-check('mobile generator emits canonical content-free compatibility routes',mobileBuild.includes('data-canonical-reader="../reader.html"')&&mobileBuild.includes('mobile-route-redirect.js?v=1')&&mobileBuild.includes('Invalid compatibility stub'));
+check('mobile generator delegates canonical content-free compatibility routes to the shared builder',
+  mobileBuild.includes("from '../../shared/tools/build-mobile-stubs.mjs'")&&
+  mobileBuild.includes('runMobileStubBuilder(import.meta.url')&&
+  mobileHtmlFiles.length===48&&new Set(mobileTargets).size===48&&
+  mobileOutputs.every(({html:output},index)=>output.includes('data-canonical-reader="../reader.html"')&&(output.match(/mobile-route-redirect\.js\?v=1/g)||[]).length===1&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(output)&&html.includes(`id="${mobileTargets[index]}"`)),
+  `${mobileHtmlFiles.length} routes; targets ${new Set(mobileTargets).size}`);
 check('mobile route redirects preserve the complete current query and canonical hash',mobileRouteRedirect.includes('destination.search=location.search')&&mobileRouteRedirect.includes("destination.hash=location.hash||root.dataset.canonicalTarget||''")&&mobileRouteRedirect.includes('location.replace(destination.href)'));
 try{new vm.Script(mobileRouteRedirect,{filename:'books/shared/mobile-route-redirect.js'});check('Phone popup controller syntax',true);}catch(error){check('Phone popup controller syntax',false,error.message);}
 const redirectRoute=(href,reader,target)=>{let replacement='',count=0;const current=new URL(href),context={document:{documentElement:{dataset:{canonicalReader:reader,canonicalTarget:target}}},location:{href:current.href,search:current.search,hash:current.hash,replace:value=>{replacement=value;count++;}},URL};vm.runInNewContext(mobileRouteRedirect,context);return{replacement,count};};
@@ -347,7 +358,13 @@ check('Phone popup shrink-wraps short content and bounds long content internally
 check('Phone popup preserves parent DOM by syncing only the changed suffix',popups.includes('this.ids.length')&&popups.includes('this.closeFrom(0)')&&popups.includes('restore('));
 check('Phone popup keeps ordinary closure out of Browser History',!popups.includes('pushState')&&!popups.includes('history.back'));
 check('Phone glossary return stores and restores the complete popup chain',sharedArmyBook.includes('record.popupIds?.length')&&sharedArmyBook.includes('popups.restore(record.popupIds'));
-check('Phone generated outputs have a read-only freshness mode',mobileBuild.includes("process.argv.includes('--check')")&&mobileBuild.includes('stale ${file}')&&mobileBuild.includes('missing ${file}'));
+check('Phone generated outputs use the shared non-mutating freshness mode',
+  mobileBuild.includes('runMobileStubBuilder(import.meta.url')&&
+  sharedMobileBuilder.includes("check=process.argv.includes('--check')")&&
+  sharedMobileBuilder.includes("if(check){let actual=''")&&
+  sharedMobileBuilder.includes('stale or missing')&&sharedMobileBuilder.includes('orphan route')&&
+  mobileFreshness.status===0&&mobileFreshness.stdout.includes('Death Guard compatibility routes verified: 48 content-free stubs.'),
+  `${mobileFreshness.status}: ${mobileFreshness.stderr||mobileFreshness.stdout}`);
 const coreRouteTerm=glossaryRegistry.terms['core-lethal-hits'];
 const localRouteTerm=glossaryRegistry.terms['death-guard-ability-the-destroyer-hive-typhus'];
 check('canonical terms keep Core rules external while routing Death Guard abilities locally',html.includes('data-term="core-lethal-hits"')&&html.includes('data-term="ability-the-destroyer-hive-70f0cc1"')&&coreRouteTerm?.fullRulePath==='books/core-rules/reader/core-abilities.html#rule-24-23'&&localRouteTerm?.sourceRefs?.includes('death-guard')&&!mobileTyphus.includes('data-term=')&&!mobileIndex.includes('data-rule-id='));

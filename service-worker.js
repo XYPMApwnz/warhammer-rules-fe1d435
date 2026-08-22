@@ -236,7 +236,7 @@ const APP_SHELL = [
   ,"./books/chaos-space-marines/scripts/roster-filter.js?v=2"
   ,"./books/chaos-space-marines/generated/compatible-rules.json"
   ,"./books/chaos-space-marines/scripts/roster-data.js?v=1"
-  ,"./books/chaos-space-marines/mobile/related-rules.inc?v=1"
+  ,"./books/chaos-space-marines/mobile/related-rules.inc?v=2"
   ,"./books/blood-angels/"
   ,BLOOD_ANGELS_ENTRY_FALLBACK
   ,BLOOD_ANGELS_DESKTOP_FALLBACK
@@ -250,7 +250,7 @@ const APP_SHELL = [
   ,"./books/blood-angels/scripts/roster-filter.js?v=1"
   ,"./books/blood-angels/generated/compatible-rules.json"
   ,"./books/blood-angels/scripts/roster-data.js?v=1"
-  ,"./books/blood-angels/mobile/related-rules.inc?v=1"
+  ,"./books/blood-angels/mobile/related-rules.inc?v=2"
   ,"./books/orks/"
   ,"./books/orks/mobile/index.html"
   ,"./books/orks/styles/tokens.css?v=2"

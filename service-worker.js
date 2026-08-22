@@ -340,7 +340,9 @@ const APP_SHELL = [
   ,"./books/shared/modal-focus.js?v=1"
   ,"./books/shared/army-related-rules.js?v=15"
   ,"./books/shared/roster-context.js?v=1"
-  ,"./books/shared/army-book-app.js?v=14"
+  ,"./books/shared/army-book-app.js?v=15"
+  ,"./books/shared/offline-status.js?v=1"
+  ,"./books/shared/styles/offline-status.css?v=1"
 ];
 
 function navigationFallback(url) {
@@ -372,11 +374,41 @@ function navigationFallback(url) {
 }
 
 async function cacheAppShell() {
+  const mode = self.registration.active ? "updating" : "preparing";
+  let completed = 0;
+  await setOfflinePackageStatus(mode, completed);
   const cache = await caches.open(CACHE_NAME);
-  for (let index = 0; index < APP_SHELL.length; index += APP_SHELL_BATCH_SIZE) {
-    await Promise.all(APP_SHELL.slice(index, index + APP_SHELL_BATCH_SIZE).map((url) => cache.add(url)));
+  try {
+    for (let index = 0; index < APP_SHELL.length; index += APP_SHELL_BATCH_SIZE) {
+      const batch = APP_SHELL.slice(index, index + APP_SHELL_BATCH_SIZE);
+      await Promise.all(batch.map((url) => cache.add(url)));
+      completed += batch.length;
+      if (completed < APP_SHELL.length) await setOfflinePackageStatus(mode, completed);
+    }
+  } catch (error) {
+    await setOfflinePackageStatus("error", completed, error);
+    throw error;
   }
+  await setOfflinePackageStatus("ready", APP_SHELL.length);
 }
+
+const OFFLINE_PACKAGE_STATUS = "WH_OFFLINE_PACKAGE_STATUS";
+const OFFLINE_PACKAGE_QUERY = "WH_OFFLINE_PACKAGE_STATUS_QUERY";
+let offlinePackageStatus = {status: "idle", completed: 0, total: APP_SHELL.length, error: null};
+function offlinePackagePayload() {return {type: OFFLINE_PACKAGE_STATUS, revision: self.WH40K_CACHE_REVISION, ...offlinePackageStatus};}
+async function broadcastOfflinePackageStatus() {const clients=await self.clients.matchAll({type:"window",includeUncontrolled:true}),payload=offlinePackagePayload();for(const client of clients)client.postMessage(payload);}
+async function setOfflinePackageStatus(status,completed,error=null){offlinePackageStatus={status,completed,total:APP_SHELL.length,error:error?String(error.message||error):null};await broadcastOfflinePackageStatus();return offlinePackagePayload();}
+async function currentOfflinePackageStatus(){
+  if(offlinePackageStatus.status!=="idle")return offlinePackagePayload();
+  const cache=await caches.open(CACHE_NAME),cached=new Set((await cache.keys()).map(request=>request.url));
+  const completed=APP_SHELL.reduce((count,url)=>count+cached.has(new URL(url,self.location.href).href),0);
+  offlinePackageStatus={status:completed===APP_SHELL.length?"ready":"error",completed,total:APP_SHELL.length,error:null};
+  return offlinePackagePayload();
+}
+self.addEventListener("message",event=>{
+  if(event.data?.type!==OFFLINE_PACKAGE_QUERY)return;
+  event.waitUntil(currentOfflinePackageStatus().then(payload=>{if(event.ports[0])event.ports[0].postMessage(payload);else if(event.source)event.source.postMessage(payload);}));
+});
 
 self.addEventListener("install", (event) => {
   event.waitUntil(cacheAppShell().then(() => self.skipWaiting()));

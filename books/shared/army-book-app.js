@@ -68,9 +68,6 @@
         });
       });
     }
-    if((location.protocol==='http:'||location.protocol==='https:')&&'serviceWorker'in navigator){
-      root.addEventListener('load',()=>navigator.serviceWorker.register('../../service-worker.js'));
-    }
     const extensions=config.extensions==null?[]:Array.isArray(config.extensions)?config.extensions:[config.extensions];
     extensions.forEach(extension=>{
       if(typeof extension!=='function')throw new TypeError('WHArmyBook extensions must be functions.');

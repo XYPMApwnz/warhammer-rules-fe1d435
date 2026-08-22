@@ -84,9 +84,6 @@
           root.WHGlossaryReturn.clear();
         });
       });
-    }else{
-      const initialTarget=decodeURIComponent(location.hash.slice(1));
-      if(initialTarget&&navigation.byId?.has(initialTarget)&&!root.WHPageState?.hasCurrent())requestAnimationFrame(()=>navigation.go(initialTarget));
     }
     if((location.protocol==='http:'||location.protocol==='https:')&&'serviceWorker'in navigator){
       root.addEventListener('load',()=>navigator.serviceWorker.register('../../service-worker.js'));

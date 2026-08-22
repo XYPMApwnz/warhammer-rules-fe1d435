@@ -23,6 +23,9 @@
       this.activeButtons=new Set();
       this.supportsInert='inert'in HTMLElement.prototype;
       this.highlighter=new window.WHNavigationTargets.Highlighter();
+      this.historyIndex=Number.isInteger(history.state?.whNavigationIndex)?history.state.whNavigationIndex:0;
+      this.locationTarget=this.hashTarget();
+      history.replaceState({...history.state,whNavigationIndex:this.historyIndex},'',location.href);
 
       this.items=[...this.tree.querySelectorAll('[data-nav-id]')].map(node=>{
         const row=this.direct(node,'toc-row');
@@ -46,9 +49,8 @@
         this.layoutObserver.observe(this.header);
         this.layoutObserver.observe(this.main);
       }
-      const restoreHash=()=>this.scheduleHashRestore();
-      if(document.readyState==='complete')restoreHash();else window.addEventListener('load',restoreHash,{once:true});
-      document.fonts?.ready.then(restoreHash);
+      const loaded=document.readyState==='complete'?Promise.resolve():new Promise(resolve=>window.addEventListener('load',resolve,{once:true}));
+      Promise.all([loaded,document.fonts?.ready||Promise.resolve()]).then(()=>this.scheduleHashRestore());
     }
 
     get active(){return this.state.active||'start';}
@@ -70,7 +72,7 @@
         const node=label.closest('[data-nav-id]');
         if(label.dataset.navTarget==='start')this.closeEveryBranch();
         else this.revealPath(node,{includeSelf:true});
-        this.go(label.dataset.navTarget);
+        this.go(label.dataset.navTarget,{historyMode:'push'});
       });
 
       this.menuButton.addEventListener('touchstart',event=>{event.preventDefault();this.menuButton.click();},{passive:false});
@@ -82,6 +84,13 @@
       window.addEventListener('wheel',event=>this.cancelTransition(event),{passive:true});
       window.addEventListener('touchstart',event=>this.cancelTransition(event),{passive:true});
       window.addEventListener('pointerdown',event=>this.cancelTransition(event),{passive:true});
+      window.addEventListener('popstate',event=>this.onPopState(event));
+      window.addEventListener('hashchange',()=>{
+        const target=this.hashTarget();
+        if(target===this.locationTarget)return;
+        this.locationTarget=target;
+        this.scheduleHashRestore();
+      });
       document.addEventListener('keydown',event=>{
         if(['PageUp','PageDown','Home','End','ArrowUp','ArrowDown',' '].includes(event.key))this.cancelTransition();
         if(event.key==='Tab'&&this.state.drawer)this.trapDrawerFocus(event);
@@ -118,9 +127,12 @@
     }
 
     setInteractive(root,interactive){
+      if(!root)return;
       if(this.supportsInert){root.inert=!interactive;return;}
       const key='data-nav-saved-tabindex';
-      for(const control of root.querySelectorAll('a,button,input,select,textarea,[tabindex]')){
+      const selector='a,button,input,select,textarea,[tabindex]';
+      const controls=[...(root.matches?.(selector)?[root]:[]),...root.querySelectorAll(selector)];
+      for(const control of controls){
         if(!interactive&&!control.hasAttribute(key)){
           control.setAttribute(key,control.getAttribute('tabindex')??'');control.setAttribute('tabindex','-1');
         }else if(interactive&&control.hasAttribute(key)){
@@ -135,6 +147,7 @@
       this.panel.setAttribute('aria-hidden',String(panelHidden));
       const documentBlocked=this.mobile&&this.state.drawer;
       this.setInteractive(this.main,!documentBlocked);
+      for(const child of this.header?.children||[])if(child!==this.menuButton)this.setInteractive(child,!documentBlocked);
       if(documentBlocked)this.main.setAttribute('aria-hidden','true');else this.main.removeAttribute('aria-hidden');
       this.scrim.setAttribute('aria-hidden',String(!this.state.drawer));
       document.body.classList.toggle('nav-drawer-open',this.state.drawer);
@@ -147,7 +160,7 @@
     }
     setDrawer(open){
       const next=this.mobile&&Boolean(open);if(next===this.state.drawer)return;
-      const returnFocus=this.state.drawer&&this.panel.contains(document.activeElement);
+      const returnFocus=this.state.drawer;
       this.state.drawer=next;this.applyViewportState();
       if(next)requestAnimationFrame(()=>this.panel.querySelector('[data-nav-target]')?.focus({preventScroll:true}));
       else if(returnFocus)this.menuButton.focus({preventScroll:true});
@@ -159,11 +172,13 @@
       if(returnFocus&&next)this.collapseButton.focus({preventScroll:true});
     }
     trapDrawerFocus(event){
-      const controls=[...this.panel.querySelectorAll('a,button,input,select,textarea,[tabindex]')].filter(control=>control.tabIndex>=0&&!control.closest('[hidden]'));
-      if(!controls.length)return;
-      const first=controls[0],last=controls[controls.length-1];
-      if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
-      else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
+      const controls=[this.menuButton,...this.panel.querySelectorAll('a,button,input,select,textarea,[tabindex]')].filter(control=>control&&control.tabIndex>=0&&!control.closest('[hidden]'));
+      if(controls.length<2)return;
+      const menu=controls[0],first=controls[1],last=controls[controls.length-1],active=document.activeElement;
+      if(event.shiftKey&&active===first){event.preventDefault();menu.focus();}
+      else if(!event.shiftKey&&active===menu){event.preventDefault();first.focus();}
+      else if(!event.shiftKey&&active===last){event.preventDefault();menu.focus();}
+      else if(event.shiftKey&&active===menu){event.preventDefault();last.focus();}
     }
     handleResize(){
       const widthChanged=Math.abs(window.innerWidth-this.viewportWidth)>1;
@@ -265,10 +280,37 @@
       this.frames.hash=requestAnimationFrame(()=>{this.frames.hash=0;this.navigateHash();});
     }
     navigateHash(){
-      const target=document.getElementById(location.hash.slice(1));if(!target)return false;
+      const target=document.getElementById(this.hashTarget());if(!target)return false;
       this.refreshGeometry();const unit=target.closest('.unit-card');this.navigate(unit?.id||target.id,target);return true;
     }
-    go(id){const item=this.byId.get(id);if(!item)return;this.setDrawer(false);this.navigate(id,item.section);}
+    hashTarget(){return decodeURIComponent(location.hash.slice(1));}
+    pushHistoryState(state,url){
+      this.historyIndex+=1;
+      const next={...state,whNavigationIndex:this.historyIndex};
+      history.pushState(next,'',url);
+      this.locationTarget=decodeURIComponent(new URL(url,location.href).hash.slice(1));
+      return next;
+    }
+    commitTarget(id){
+      if(this.hashTarget()===id)return;
+      const url=new URL(location.href);url.hash=id;
+      const state={...history.state,whNavigationTarget:id};
+      for(const key of ['whJourney','whJourneyTarget','dgFullEntry','wh40kPageState'])delete state[key];
+      this.pushHistoryState(state,url);
+      window.dispatchEvent(new CustomEvent('wh-navigation-commit',{detail:{target:id}}));
+    }
+    onPopState(event){
+      const next=Number.isInteger(event.state?.whNavigationIndex)?event.state.whNavigationIndex:this.historyIndex;
+      const direction=next<this.historyIndex?'back':next>this.historyIndex?'forward':'none';
+      this.historyIndex=next;
+      const target=this.hashTarget(),changed=target!==this.locationTarget;
+      this.locationTarget=target;
+      const detail={direction,state:event.state||{},target,restore:null};
+      window.dispatchEvent(new CustomEvent('wh-navigation-popstate',{detail}));
+      if(detail.restore)this.restore(detail.restore.id,detail.restore.scrollY);
+      else if(changed)this.scheduleHashRestore();
+    }
+    go(id,{historyMode='none'}={}){const item=this.byId.get(id);if(!item)return;this.setDrawer(false);if(historyMode==='push')this.commitTarget(id);this.navigate(id,item.section);}
     navigate(id,element,settled){
       const targets=window.WHNavigationTargets.resolve(element);
       if(!targets.scrollTarget)return;

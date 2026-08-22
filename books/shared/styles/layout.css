@@ -1,6 +1,16 @@
+:root {
+  --z-drawer-scrim: 55;
+  --z-drawer: 60;
+  --z-journey: 75;
+  --z-header: 90;
+  --z-related-rules: 140;
+  --z-popup: 160;
+  --z-full-entry: 170;
+}
+
 .app-header {
   position: fixed;
-  z-index: 90;
+  z-index: var(--z-header);
   inset: 0 0 auto;
   height: calc(var(--header) + env(safe-area-inset-top));
   padding: env(safe-area-inset-top) clamp(12px, 2.5vw, 32px) 0;
@@ -103,7 +113,7 @@ body.nav-collapsed .main { padding-left: clamp(28px, 5vw, 72px); }
   .nav-collapse { display: none; }
   .main, body.nav-collapsed .main { padding: calc(var(--header) + env(safe-area-inset-top) + 20px) 14px 82px; }
   .app-brand { font-size: 16px; }
-  .back-button { position: fixed; z-index: 75; right: 14px; bottom: calc(16px + env(safe-area-inset-bottom)); box-shadow: 0 14px 32px rgba(0,0,0,.38); }
+  .back-button { position: fixed; z-index: var(--z-journey); right: 14px; bottom: calc(16px + env(safe-area-inset-bottom)); box-shadow: 0 14px 32px rgba(0,0,0,.38); }
 }
 @media (max-width: 480px) {
   .app-header { gap: 7px; padding-left: 8px; padding-right: 8px; }

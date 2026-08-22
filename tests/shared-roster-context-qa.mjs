@@ -6,6 +6,7 @@ import {fileURLToPath} from 'node:url';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const source=fs.readFileSync(path.join(root,'books/shared/roster-context.js'),'utf8');
+const runtimeVersions=JSON.parse(fs.readFileSync(path.join(root,'books/shared/runtime-asset-versions.json'),'utf8'));
 const sandbox={window:{},URLSearchParams};
 vm.runInNewContext(source,sandbox,{filename:'roster-context.js'});
 const api=sandbox.window.WHArmyRosterContext;
@@ -59,7 +60,7 @@ assert.equal(unknown.relations.attachments.state,'unknown');
 for(const id of bookIds){
   const reader=fs.readFileSync(path.join(root,'books',id,'reader.html'),'utf8');
   const contextAt=reader.indexOf('../shared/roster-context.js?v=1');
-  const appAt=reader.indexOf('../shared/army-book-app.js?v=12');
+  const appAt=reader.indexOf(`../shared/army-book-app.js?v=${runtimeVersions.shared.armyBook}`);
   assert.ok(contextAt>=0,`${id} does not load the shared roster context`);
   assert.ok(appAt>contextAt,`${id} loads WHArmyBook before the roster context`);
   const probe=api.create({status:'not-requested',book:{id}});

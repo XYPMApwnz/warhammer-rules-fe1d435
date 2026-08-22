@@ -1,4 +1,5 @@
-.popup-layer { position: fixed; z-index: 80; inset: 0; pointer-events: none; }
+.popup-layer { position: fixed; z-index: var(--z-popup); inset: 0; pointer-events: none; }
+.popup-layer:has(.term-popup) { pointer-events: auto; }
 html:has(dialog[open]),body:has(dialog[open]),html:has(.popup-layer .term-popup),body:has(.popup-layer .term-popup) { overflow: hidden; overscroll-behavior: none; }
 .popup-layer:has(.term-popup)::before {
   content: "";
@@ -89,7 +90,7 @@ html.full-entry-open,
 body.full-entry-open { overflow: hidden; }
 .full-entry-layer {
   position: fixed;
-  z-index: 120;
+  z-index: var(--z-full-entry);
   inset: 0;
   display: grid;
   place-items: center;

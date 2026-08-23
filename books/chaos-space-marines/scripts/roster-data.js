@@ -61,6 +61,110 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           ],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-cultist-mob-model-cultist-champion",
+            "title": "Cultist Champion",
+            "aliases": [
+              "Cultist Champion"
+            ]
+          },
+          {
+            "id": "unit-cultist-mob-model-cultist-w-autopistol-and-brutal-assault-weapon-2",
+            "title": "Cultist w/ autopistol and brutal assault weapon",
+            "aliases": [
+              "Cultist w/ autopistol and brutal assault weapon"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-cultist-mob-selection-brutal-assault-weapon",
+            "title": "Brutal assault weapon",
+            "aliases": [
+              "Brutal assault weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-cultist-mob-profile-brutal-assault-weapon-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-cultist-mob-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-cultist-mob-profile-bolt-pistol-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-cultist-mob-selection-autopistol",
+            "title": "Autopistol",
+            "aliases": [
+              "Autopistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-cultist-mob-profile-autopistol-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-cultist-mob-profile-brutal-assault-weapon-melee",
+            "title": "Brutal assault weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "2",
+            "skill": "4+",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-cultist-mob-selection-brutal-assault-weapon"
+            ]
+          },
+          {
+            "id": "unit-cultist-mob-profile-bolt-pistol-ranged-2",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-cultist-mob-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-cultist-mob-profile-autopistol-ranged-3",
+            "title": "Autopistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-cultist-mob-selection-autopistol"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -153,6 +257,561 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             }
           ]
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-legionaries-model-aspiring-champion",
+            "title": "Aspiring Champion",
+            "aliases": [
+              "Aspiring Champion"
+            ]
+          },
+          {
+            "id": "unit-legionaries-model-4-9-legionaries-2",
+            "title": "4 - 9 Legionaries",
+            "aliases": [
+              "4 - 9 Legionaries"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-legionaries-selection-accursed-weapon",
+            "title": "Accursed weapon",
+            "aliases": [
+              "Accursed weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-accursed-weapon-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-astartes-chainsword",
+            "title": "Astartes chainsword",
+            "aliases": [
+              "Astartes chainsword"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-astartes-chainsword-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-heavy-melee-weapon",
+            "title": "Heavy melee weapon",
+            "aliases": [
+              "Heavy melee weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-heavy-melee-weapon-melee-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-bolt-pistol-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-plasma-pistol-standard",
+            "title": "➤ Plasma pistol - standard",
+            "aliases": [
+              "➤ Plasma pistol - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-plasma-pistol-standard-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-plasma-pistol-supercharge",
+            "title": "➤ Plasma pistol - supercharge",
+            "aliases": [
+              "➤ Plasma pistol - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-plasma-pistol-supercharge-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-boltgun",
+            "title": "Boltgun",
+            "aliases": [
+              "Boltgun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-boltgun-ranged-7"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-close-combat-weapon",
+            "title": "Close combat weapon",
+            "aliases": [
+              "Close combat weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-close-combat-weapon-melee-8"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-balefire-tome",
+            "title": "Balefire tome",
+            "aliases": [
+              "Balefire tome"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-balefire-tome-ranged-9"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-flamer",
+            "title": "Flamer",
+            "aliases": [
+              "Flamer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-flamer-ranged-10"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-havoc-autocannon",
+            "title": "Havoc autocannon",
+            "aliases": [
+              "Havoc autocannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-havoc-autocannon-ranged-11"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-heavy-bolter",
+            "title": "Heavy bolter",
+            "aliases": [
+              "Heavy bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-heavy-bolter-ranged-12"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-lascannon",
+            "title": "Lascannon",
+            "aliases": [
+              "Lascannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-lascannon-ranged-13"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-missile-launcher-frag",
+            "title": "➤ Missile launcher - frag",
+            "aliases": [
+              "➤ Missile launcher - frag"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-missile-launcher-frag-ranged-14"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-missile-launcher-krak",
+            "title": "➤ Missile launcher - krak",
+            "aliases": [
+              "➤ Missile launcher - krak"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-missile-launcher-krak-ranged-15"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-plasma-gun-standard",
+            "title": "➤ Plasma gun - standard",
+            "aliases": [
+              "➤ Plasma gun - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-plasma-gun-standard-ranged-16"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-plasma-gun-supercharge",
+            "title": "➤ Plasma gun - supercharge",
+            "aliases": [
+              "➤ Plasma gun - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-plasma-gun-supercharge-ranged-17"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-reaper-chaincannon",
+            "title": "Reaper chaincannon",
+            "aliases": [
+              "Reaper chaincannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-reaper-chaincannon-ranged-18"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-meltagun",
+            "title": "Meltagun",
+            "aliases": [
+              "Meltagun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-legionaries-profile-meltagun-ranged-19"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-legionaries-selection-chaos-icon",
+            "title": "Chaos icon",
+            "aliases": [
+              "Chaos icon"
+            ],
+            "kind": "wargear",
+            "profileIds": [],
+            "wargearAbilityIds": [],
+            "candidateWargearAbilityIds": [
+              "unit-legionaries-wargear-ability-chaos-icon"
+            ]
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-legionaries-profile-accursed-weapon-melee",
+            "title": "Accursed weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-accursed-weapon"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-astartes-chainsword-melee-2",
+            "title": "Astartes chainsword",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-astartes-chainsword"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-heavy-melee-weapon-melee-3",
+            "title": "Heavy melee weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-heavy-melee-weapon"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-bolt-pistol-ranged-4",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-plasma-pistol-standard-ranged-5",
+            "title": "➤ Plasma pistol - standard",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-plasma-pistol-standard"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-plasma-pistol-supercharge-ranged-6",
+            "title": "➤ Plasma pistol - supercharge",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Pistol",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-plasma-pistol-supercharge"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-boltgun-ranged-7",
+            "title": "Boltgun",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-boltgun"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-close-combat-weapon-melee-8",
+            "title": "Close combat weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-close-combat-weapon"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-balefire-tome-ranged-9",
+            "title": "Balefire tome",
+            "mode": "ranged",
+            "range": "18\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Psychic",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-balefire-tome"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-flamer-ranged-10",
+            "title": "Flamer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Ignores Cover, Torrent",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-flamer"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-havoc-autocannon-ranged-11",
+            "title": "Havoc autocannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "2",
+            "skill": "4+",
+            "s": "9",
+            "ap": "-1",
+            "d": "3",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-havoc-autocannon"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-heavy-bolter-ranged-12",
+            "title": "Heavy bolter",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "3",
+            "skill": "4+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Heavy, Sustained Hits 1",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-heavy-bolter"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-lascannon-ranged-13",
+            "title": "Lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "Heavy",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-lascannon"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-missile-launcher-frag-ranged-14",
+            "title": "➤ Missile launcher - frag",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Blast, Heavy",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-missile-launcher-frag"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-missile-launcher-krak-ranged-15",
+            "title": "➤ Missile launcher - krak",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "9",
+            "ap": "-2",
+            "d": "D6",
+            "abilities": "Heavy",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-missile-launcher-krak"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-plasma-gun-standard-ranged-16",
+            "title": "➤ Plasma gun - standard",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-plasma-gun-standard"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-plasma-gun-supercharge-ranged-17",
+            "title": "➤ Plasma gun - supercharge",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-plasma-gun-supercharge"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-reaper-chaincannon-ranged-18",
+            "title": "Reaper chaincannon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "8",
+            "skill": "4+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Heavy",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-reaper-chaincannon"
+            ]
+          },
+          {
+            "id": "unit-legionaries-profile-meltagun-ranged-19",
+            "title": "Meltagun",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-4",
+            "d": "D6",
+            "abilities": "Melta 2",
+            "sourceSelectionIds": [
+              "unit-legionaries-selection-meltagun"
+            ]
+          }
+        ],
+        "wargearAbilities": [
+          {
+            "id": "unit-legionaries-wargear-ability-chaos-icon",
+            "title": "Chaos icon",
+            "requiredSelectionIds": []
+          }
+        ]
       }
     },
     {
@@ -207,6 +866,184 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-chaos-lord-model-chaos-lord",
+            "title": "Chaos Lord",
+            "aliases": [
+              "Chaos Lord"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-chaos-lord-selection-daemon-hammer",
+            "title": "Daemon hammer",
+            "aliases": [
+              "Daemon hammer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-profile-daemon-hammer-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-lord-selection-accursed-weapon",
+            "title": "Accursed weapon",
+            "aliases": [
+              "Accursed weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-profile-accursed-weapon-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-lord-selection-astartes-chainblade",
+            "title": "Astartes chainblade",
+            "aliases": [
+              "Astartes chainblade"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-profile-astartes-chainblade-melee-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-lord-selection-power-fist",
+            "title": "Power fist",
+            "aliases": [
+              "Power fist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-profile-power-fist-melee-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-lord-selection-plasma-pistol-standard",
+            "title": "➤ Plasma pistol - standard",
+            "aliases": [
+              "➤ Plasma pistol - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-profile-plasma-pistol-standard-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-lord-selection-plasma-pistol-supercharge",
+            "title": "➤ Plasma pistol - supercharge",
+            "aliases": [
+              "➤ Plasma pistol - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-profile-plasma-pistol-supercharge-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-chaos-lord-profile-daemon-hammer-melee",
+            "title": "Daemon hammer",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Devastating Wounds",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-selection-daemon-hammer"
+            ]
+          },
+          {
+            "id": "unit-chaos-lord-profile-accursed-weapon-melee-2",
+            "title": "Accursed weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "2+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-selection-accursed-weapon"
+            ]
+          },
+          {
+            "id": "unit-chaos-lord-profile-astartes-chainblade-melee-3",
+            "title": "Astartes chainblade",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "7",
+            "skill": "2+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-selection-astartes-chainblade"
+            ]
+          },
+          {
+            "id": "unit-chaos-lord-profile-power-fist-melee-4",
+            "title": "Power fist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-selection-power-fist"
+            ]
+          },
+          {
+            "id": "unit-chaos-lord-profile-plasma-pistol-standard-ranged-5",
+            "title": "➤ Plasma pistol - standard",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-selection-plasma-pistol-standard"
+            ]
+          },
+          {
+            "id": "unit-chaos-lord-profile-plasma-pistol-supercharge-ranged-6",
+            "title": "➤ Plasma pistol - supercharge",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Pistol",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-selection-plasma-pistol-supercharge"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -244,6 +1081,184 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-model-chaos-lord-in-terminator-armour",
+            "title": "Chaos Lord in Terminator Armour",
+            "aliases": [
+              "Chaos Lord in Terminator Armour"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-in-terminator-armour-profile-combi-bolter-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-selection-combi-weapon",
+            "title": "Combi-weapon",
+            "aliases": [
+              "Combi-weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-in-terminator-armour-profile-combi-weapon-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-selection-exalted-weapon",
+            "title": "Exalted weapon",
+            "aliases": [
+              "Exalted weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-in-terminator-armour-profile-exalted-weapon-melee-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-selection-chainfist",
+            "title": "Chainfist",
+            "aliases": [
+              "Chainfist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-in-terminator-armour-profile-chainfist-melee-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-selection-paired-accursed-weapons",
+            "title": "Paired accursed weapons",
+            "aliases": [
+              "Paired accursed weapons"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-in-terminator-armour-profile-paired-accursed-weapons-melee-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-selection-power-fist",
+            "title": "Power fist",
+            "aliases": [
+              "Power fist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-in-terminator-armour-profile-power-fist-melee-6"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-profile-combi-bolter-ranged",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "2+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Rapid Fire 2",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-in-terminator-armour-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-profile-combi-weapon-ranged-2",
+            "title": "Combi-weapon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-in-terminator-armour-selection-combi-weapon"
+            ]
+          },
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-profile-exalted-weapon-melee-3",
+            "title": "Exalted weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "2+",
+            "s": "5",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-in-terminator-armour-selection-exalted-weapon"
+            ]
+          },
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-profile-chainfist-melee-4",
+            "title": "Chainfist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Anti-VEHICLE 3+",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-in-terminator-armour-selection-chainfist"
+            ]
+          },
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-profile-paired-accursed-weapons-melee-5",
+            "title": "Paired accursed weapons",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "7",
+            "skill": "2+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Twin-linked",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-in-terminator-armour-selection-paired-accursed-weapons"
+            ]
+          },
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-profile-power-fist-melee-6",
+            "title": "Power fist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-in-terminator-armour-selection-power-fist"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -282,6 +1297,184 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-chaos-lord-with-jump-pack-model-chaos-lord-with-jump-pack",
+            "title": "Chaos Lord with Jump Pack",
+            "aliases": [
+              "Chaos Lord with Jump Pack"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-chaos-lord-with-jump-pack-selection-accursed-weapon",
+            "title": "Accursed weapon",
+            "aliases": [
+              "Accursed weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-with-jump-pack-profile-accursed-weapon-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-lord-with-jump-pack-selection-power-fist",
+            "title": "Power fist",
+            "aliases": [
+              "Power fist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-with-jump-pack-profile-power-fist-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-lord-with-jump-pack-selection-twin-lightning-claws",
+            "title": "Twin lightning claws",
+            "aliases": [
+              "Twin lightning claws"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-with-jump-pack-profile-twin-lightning-claws-melee-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-lord-with-jump-pack-selection-plasma-pistol-standard",
+            "title": "➤ Plasma pistol - standard",
+            "aliases": [
+              "➤ Plasma pistol - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-with-jump-pack-profile-plasma-pistol-standard-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-lord-with-jump-pack-selection-plasma-pistol-supercharge",
+            "title": "➤ Plasma pistol - supercharge",
+            "aliases": [
+              "➤ Plasma pistol - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-with-jump-pack-profile-plasma-pistol-supercharge-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-lord-with-jump-pack-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-lord-with-jump-pack-profile-bolt-pistol-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-chaos-lord-with-jump-pack-profile-accursed-weapon-melee",
+            "title": "Accursed weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "2+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-with-jump-pack-selection-accursed-weapon"
+            ]
+          },
+          {
+            "id": "unit-chaos-lord-with-jump-pack-profile-power-fist-melee-2",
+            "title": "Power fist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-with-jump-pack-selection-power-fist"
+            ]
+          },
+          {
+            "id": "unit-chaos-lord-with-jump-pack-profile-twin-lightning-claws-melee-3",
+            "title": "Twin lightning claws",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "2+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Twin-linked",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-with-jump-pack-selection-twin-lightning-claws"
+            ]
+          },
+          {
+            "id": "unit-chaos-lord-with-jump-pack-profile-plasma-pistol-standard-ranged-4",
+            "title": "➤ Plasma pistol - standard",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-with-jump-pack-selection-plasma-pistol-standard"
+            ]
+          },
+          {
+            "id": "unit-chaos-lord-with-jump-pack-profile-plasma-pistol-supercharge-ranged-5",
+            "title": "➤ Plasma pistol - supercharge",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Pistol",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-with-jump-pack-selection-plasma-pistol-supercharge"
+            ]
+          },
+          {
+            "id": "unit-chaos-lord-with-jump-pack-profile-bolt-pistol-ranged-6",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-chaos-lord-with-jump-pack-selection-bolt-pistol"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -325,6 +1518,76 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-cultist-firebrand-model-cultist-firebrand",
+            "title": "Cultist Firebrand",
+            "aliases": [
+              "Cultist Firebrand"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-cultist-firebrand-selection-balefire-pike",
+            "title": "Balefire pike",
+            "aliases": [
+              "Balefire pike"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-cultist-firebrand-profile-balefire-pike-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-cultist-firebrand-selection-close-combat-weapon",
+            "title": "Close combat weapon",
+            "aliases": [
+              "Close combat weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-cultist-firebrand-profile-close-combat-weapon-melee-2"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-cultist-firebrand-profile-balefire-pike-ranged",
+            "title": "Balefire pike",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6+3",
+            "skill": "N/A",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Ignores Cover, Torrent",
+            "sourceSelectionIds": [
+              "unit-cultist-firebrand-selection-balefire-pike"
+            ]
+          },
+          {
+            "id": "unit-cultist-firebrand-profile-close-combat-weapon-melee-2",
+            "title": "Close combat weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-cultist-firebrand-selection-close-combat-weapon"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -390,6 +1653,110 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-dark-apostle-model-dark-apostle",
+            "title": "Dark Apostle",
+            "aliases": [
+              "Dark Apostle"
+            ]
+          },
+          {
+            "id": "unit-dark-apostle-model-dark-disciple-2",
+            "title": "Dark Disciple",
+            "aliases": [
+              "Dark Disciple"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-dark-apostle-selection-accursed-crozius",
+            "title": "Accursed crozius",
+            "aliases": [
+              "Accursed crozius"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-dark-apostle-profile-accursed-crozius-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-dark-apostle-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-dark-apostle-profile-bolt-pistol-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-dark-apostle-selection-close-combat-weapon",
+            "title": "Close combat weapon",
+            "aliases": [
+              "Close combat weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-dark-apostle-profile-close-combat-weapon-melee-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-dark-apostle-profile-accursed-crozius-melee",
+            "title": "Accursed crozius",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "2+",
+            "s": "6",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-dark-apostle-selection-accursed-crozius"
+            ]
+          },
+          {
+            "id": "unit-dark-apostle-profile-bolt-pistol-ranged-2",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-dark-apostle-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-dark-apostle-profile-close-combat-weapon-melee-3",
+            "title": "Close combat weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "1",
+            "skill": "4+",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-dark-apostle-selection-close-combat-weapon"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -433,6 +1800,210 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-dark-commune-model-dark-commune",
+            "title": "Dark Commune",
+            "aliases": [
+              "Dark Commune"
+            ]
+          },
+          {
+            "id": "unit-dark-commune-model-cult-demagogue-2",
+            "title": "Cult Demagogue",
+            "aliases": [
+              "Cult Demagogue"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-dark-commune-selection-commune-blade",
+            "title": "Commune blade",
+            "aliases": [
+              "Commune blade"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-dark-commune-profile-commune-blade-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-dark-commune-selection-autopistol",
+            "title": "Autopistol",
+            "aliases": [
+              "Autopistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-dark-commune-profile-autopistol-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-dark-commune-selection-close-combat-weapon",
+            "title": "Close combat weapon",
+            "aliases": [
+              "Close combat weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-dark-commune-profile-close-combat-weapon-melee-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-dark-commune-selection-warp-curse-witchfire",
+            "title": "➤ Warp Curse - witchfire",
+            "aliases": [
+              "➤ Warp Curse - witchfire"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-dark-commune-profile-warp-curse-witchfire-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-dark-commune-selection-warp-curse-focused-witchfire",
+            "title": "➤ Warp Curse - focused witchfire",
+            "aliases": [
+              "➤ Warp Curse - focused witchfire"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-dark-commune-profile-warp-curse-focused-witchfire-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-dark-commune-selection-commune-stave",
+            "title": "Commune stave",
+            "aliases": [
+              "Commune stave"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-dark-commune-profile-commune-stave-melee-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-dark-commune-selection-chaos-icon",
+            "title": "Chaos icon",
+            "aliases": [
+              "Chaos icon"
+            ],
+            "kind": "wargear",
+            "profileIds": [],
+            "wargearAbilityIds": [],
+            "candidateWargearAbilityIds": [
+              "unit-dark-commune-wargear-ability-chaos-icon"
+            ]
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-dark-commune-profile-commune-blade-melee",
+            "title": "Commune blade",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "2",
+            "skill": "4+",
+            "s": "4",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-dark-commune-selection-commune-blade"
+            ]
+          },
+          {
+            "id": "unit-dark-commune-profile-autopistol-ranged-2",
+            "title": "Autopistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-dark-commune-selection-autopistol"
+            ]
+          },
+          {
+            "id": "unit-dark-commune-profile-close-combat-weapon-melee-3",
+            "title": "Close combat weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "1",
+            "skill": "4+",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-dark-commune-selection-close-combat-weapon"
+            ]
+          },
+          {
+            "id": "unit-dark-commune-profile-warp-curse-witchfire-ranged-4",
+            "title": "➤ Warp Curse - witchfire",
+            "mode": "ranged",
+            "range": "18\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Psychic",
+            "sourceSelectionIds": [
+              "unit-dark-commune-selection-warp-curse-witchfire"
+            ]
+          },
+          {
+            "id": "unit-dark-commune-profile-warp-curse-focused-witchfire-ranged-5",
+            "title": "➤ Warp Curse - focused witchfire",
+            "mode": "ranged",
+            "range": "18\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Hazardous, Psychic, Sustained Hits 2",
+            "sourceSelectionIds": [
+              "unit-dark-commune-selection-warp-curse-focused-witchfire"
+            ]
+          },
+          {
+            "id": "unit-dark-commune-profile-commune-stave-melee-6",
+            "title": "Commune stave",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "2",
+            "skill": "4+",
+            "s": "3",
+            "ap": "0",
+            "d": "D3",
+            "abilities": "Devastating Wounds",
+            "sourceSelectionIds": [
+              "unit-dark-commune-selection-commune-stave"
+            ]
+          }
+        ],
+        "wargearAbilities": [
+          {
+            "id": "unit-dark-commune-wargear-ability-chaos-icon",
+            "title": "Chaos icon",
+            "requiredSelectionIds": []
+          }
+        ]
       }
     },
     {
@@ -461,6 +2032,103 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-heretic-astartes-daemon-prince-model-heretic-astartes-daemon-prince",
+            "title": "Heretic Astartes Daemon Prince",
+            "aliases": [
+              "Heretic Astartes Daemon Prince"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-heretic-astartes-daemon-prince-selection-hellforged-weapons-strike",
+            "title": "➤ Hellforged weapons - strike",
+            "aliases": [
+              "➤ Hellforged weapons - strike"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-heretic-astartes-daemon-prince-profile-hellforged-weapons-strike-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-heretic-astartes-daemon-prince-selection-hellforged-weapons-sweep",
+            "title": "➤ Hellforged weapons - sweep",
+            "aliases": [
+              "➤ Hellforged weapons - sweep"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-heretic-astartes-daemon-prince-profile-hellforged-weapons-sweep-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-heretic-astartes-daemon-prince-selection-infernal-cannon",
+            "title": "Infernal cannon",
+            "aliases": [
+              "Infernal cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-heretic-astartes-daemon-prince-profile-infernal-cannon-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-heretic-astartes-daemon-prince-profile-hellforged-weapons-strike-melee",
+            "title": "➤ Hellforged weapons - strike",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "3",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-heretic-astartes-daemon-prince-selection-hellforged-weapons-strike"
+            ]
+          },
+          {
+            "id": "unit-heretic-astartes-daemon-prince-profile-hellforged-weapons-sweep-melee-2",
+            "title": "➤ Hellforged weapons - sweep",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "14",
+            "skill": "2+",
+            "s": "6",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-heretic-astartes-daemon-prince-selection-hellforged-weapons-sweep"
+            ]
+          },
+          {
+            "id": "unit-heretic-astartes-daemon-prince-profile-infernal-cannon-ranged-3",
+            "title": "Infernal cannon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "3",
+            "skill": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-heretic-astartes-daemon-prince-selection-infernal-cannon"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -491,6 +2159,103 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-heretic-astartes-daemon-prince-with-wings-model-heretic-astartes-daemon-prince-with-wings",
+            "title": "Heretic Astartes Daemon Prince with wings",
+            "aliases": [
+              "Heretic Astartes Daemon Prince with wings"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-heretic-astartes-daemon-prince-with-wings-selection-hellforged-weapons-strike",
+            "title": "➤ Hellforged weapons - strike",
+            "aliases": [
+              "➤ Hellforged weapons - strike"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-heretic-astartes-daemon-prince-with-wings-profile-hellforged-weapons-strike-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-heretic-astartes-daemon-prince-with-wings-selection-hellforged-weapons-sweep",
+            "title": "➤ Hellforged weapons - sweep",
+            "aliases": [
+              "➤ Hellforged weapons - sweep"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-heretic-astartes-daemon-prince-with-wings-profile-hellforged-weapons-sweep-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-heretic-astartes-daemon-prince-with-wings-selection-infernal-cannon",
+            "title": "Infernal cannon",
+            "aliases": [
+              "Infernal cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-heretic-astartes-daemon-prince-with-wings-profile-infernal-cannon-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-heretic-astartes-daemon-prince-with-wings-profile-hellforged-weapons-strike-melee",
+            "title": "➤ Hellforged weapons - strike",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "3",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-heretic-astartes-daemon-prince-with-wings-selection-hellforged-weapons-strike"
+            ]
+          },
+          {
+            "id": "unit-heretic-astartes-daemon-prince-with-wings-profile-hellforged-weapons-sweep-melee-2",
+            "title": "➤ Hellforged weapons - sweep",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "14",
+            "skill": "2+",
+            "s": "6",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-heretic-astartes-daemon-prince-with-wings-selection-hellforged-weapons-sweep"
+            ]
+          },
+          {
+            "id": "unit-heretic-astartes-daemon-prince-with-wings-profile-infernal-cannon-ranged-3",
+            "title": "Infernal cannon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "3",
+            "skill": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-heretic-astartes-daemon-prince-with-wings-selection-infernal-cannon"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -519,6 +2284,211 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-lord-discordant-on-helstalker-model-lord-discordant-on-helstalker",
+            "title": "Lord Discordant on Helstalker",
+            "aliases": [
+              "Lord Discordant on Helstalker"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-lord-discordant-on-helstalker-selection-bladed-limbs",
+            "title": "Bladed limbs",
+            "aliases": [
+              "Bladed limbs"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-lord-discordant-on-helstalker-profile-bladed-limbs-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-lord-discordant-on-helstalker-selection-impaler-chainglaive",
+            "title": "Impaler chainglaive",
+            "aliases": [
+              "Impaler chainglaive"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-lord-discordant-on-helstalker-profile-impaler-chainglaive-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-lord-discordant-on-helstalker-selection-helstalker-autocannon",
+            "title": "Helstalker autocannon",
+            "aliases": [
+              "Helstalker autocannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-lord-discordant-on-helstalker-profile-helstalker-autocannon-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-lord-discordant-on-helstalker-selection-baleflamer",
+            "title": "Baleflamer",
+            "aliases": [
+              "Baleflamer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-lord-discordant-on-helstalker-profile-baleflamer-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-lord-discordant-on-helstalker-selection-techno-virus-injector",
+            "title": "Techno-virus injector",
+            "aliases": [
+              "Techno-virus injector"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-lord-discordant-on-helstalker-profile-techno-virus-injector-melee-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-lord-discordant-on-helstalker-selection-magma-cutter",
+            "title": "Magma cutter",
+            "aliases": [
+              "Magma cutter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-lord-discordant-on-helstalker-profile-magma-cutter-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-lord-discordant-on-helstalker-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-lord-discordant-on-helstalker-profile-bolt-pistol-ranged-7"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-lord-discordant-on-helstalker-profile-bladed-limbs-melee",
+            "title": "Bladed limbs",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Extra Attacks",
+            "sourceSelectionIds": [
+              "unit-lord-discordant-on-helstalker-selection-bladed-limbs"
+            ]
+          },
+          {
+            "id": "unit-lord-discordant-on-helstalker-profile-impaler-chainglaive-melee-2",
+            "title": "Impaler chainglaive",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "Lance",
+            "sourceSelectionIds": [
+              "unit-lord-discordant-on-helstalker-selection-impaler-chainglaive"
+            ]
+          },
+          {
+            "id": "unit-lord-discordant-on-helstalker-profile-helstalker-autocannon-ranged-3",
+            "title": "Helstalker autocannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "3",
+            "skill": "2+",
+            "s": "9",
+            "ap": "-1",
+            "d": "3",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-lord-discordant-on-helstalker-selection-helstalker-autocannon"
+            ]
+          },
+          {
+            "id": "unit-lord-discordant-on-helstalker-profile-baleflamer-ranged-4",
+            "title": "Baleflamer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6+3",
+            "skill": "N/A",
+            "s": "6",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Ignores Cover, Torrent",
+            "sourceSelectionIds": [
+              "unit-lord-discordant-on-helstalker-selection-baleflamer"
+            ]
+          },
+          {
+            "id": "unit-lord-discordant-on-helstalker-profile-techno-virus-injector-melee-5",
+            "title": "Techno-virus injector",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "1",
+            "skill": "3+",
+            "s": "3",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Anti-VEHICLE 2+, Extra Attacks",
+            "sourceSelectionIds": [
+              "unit-lord-discordant-on-helstalker-selection-techno-virus-injector"
+            ]
+          },
+          {
+            "id": "unit-lord-discordant-on-helstalker-profile-magma-cutter-ranged-6",
+            "title": "Magma cutter",
+            "mode": "ranged",
+            "range": "6\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-4",
+            "d": "D6",
+            "abilities": "Melta 2",
+            "sourceSelectionIds": [
+              "unit-lord-discordant-on-helstalker-selection-magma-cutter"
+            ]
+          },
+          {
+            "id": "unit-lord-discordant-on-helstalker-profile-bolt-pistol-ranged-7",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-lord-discordant-on-helstalker-selection-bolt-pistol"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -573,6 +2543,76 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-master-of-executions-model-master-of-executions",
+            "title": "Master of Executions",
+            "aliases": [
+              "Master of Executions"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-master-of-executions-selection-axe-of-dismemberment",
+            "title": "Axe of dismemberment",
+            "aliases": [
+              "Axe of dismemberment"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-master-of-executions-profile-axe-of-dismemberment-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-master-of-executions-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-master-of-executions-profile-bolt-pistol-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-master-of-executions-profile-axe-of-dismemberment-melee",
+            "title": "Axe of dismemberment",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "2+",
+            "s": "7",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Devastating Wounds, Precision",
+            "sourceSelectionIds": [
+              "unit-master-of-executions-selection-axe-of-dismemberment"
+            ]
+          },
+          {
+            "id": "unit-master-of-executions-profile-bolt-pistol-ranged-2",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-master-of-executions-selection-bolt-pistol"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -633,6 +2673,130 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-master-of-possession-model-master-of-possession",
+            "title": "Master of Possession",
+            "aliases": [
+              "Master of Possession"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-master-of-possession-selection-rite-of-possession-witchfire",
+            "title": "➤ Rite of Possession - witchfire",
+            "aliases": [
+              "➤ Rite of Possession - witchfire"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-master-of-possession-profile-rite-of-possession-witchfire-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-master-of-possession-selection-rite-of-possession-focused-witchfire",
+            "title": "➤ Rite of Possession - focused witchfire",
+            "aliases": [
+              "➤ Rite of Possession - focused witchfire"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-master-of-possession-profile-rite-of-possession-focused-witchfire-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-master-of-possession-selection-staff-of-possession",
+            "title": "Staff of possession",
+            "aliases": [
+              "Staff of possession"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-master-of-possession-profile-staff-of-possession-melee-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-master-of-possession-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-master-of-possession-profile-bolt-pistol-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-master-of-possession-profile-rite-of-possession-witchfire-ranged",
+            "title": "➤ Rite of Possession - witchfire",
+            "mode": "ranged",
+            "range": "18\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Anti-PSYKER 2+, Pistol, Precision, Psychic",
+            "sourceSelectionIds": [
+              "unit-master-of-possession-selection-rite-of-possession-witchfire"
+            ]
+          },
+          {
+            "id": "unit-master-of-possession-profile-rite-of-possession-focused-witchfire-ranged-2",
+            "title": "➤ Rite of Possession - focused witchfire",
+            "mode": "ranged",
+            "range": "18\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "Anti-PSYKER 2+, Hazardous, Pistol, Precision, Psychic",
+            "sourceSelectionIds": [
+              "unit-master-of-possession-selection-rite-of-possession-focused-witchfire"
+            ]
+          },
+          {
+            "id": "unit-master-of-possession-profile-staff-of-possession-melee-3",
+            "title": "Staff of possession",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-1",
+            "d": "D3",
+            "abilities": "Anti-PSYKER 2+, Psychic",
+            "sourceSelectionIds": [
+              "unit-master-of-possession-selection-staff-of-possession"
+            ]
+          },
+          {
+            "id": "unit-master-of-possession-profile-bolt-pistol-ranged-4",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-master-of-possession-selection-bolt-pistol"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -686,6 +2850,157 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-red-corsairs-reave-captain-model-red-corsairs-reave-captain",
+            "title": "Red Corsairs Reave-captain",
+            "aliases": [
+              "Red Corsairs Reave-captain"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-red-corsairs-reave-captain-selection-power-sword",
+            "title": "Power sword",
+            "aliases": [
+              "Power sword"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-red-corsairs-reave-captain-profile-power-sword-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-red-corsairs-reave-captain-selection-power-maul",
+            "title": "Power maul",
+            "aliases": [
+              "Power maul"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-red-corsairs-reave-captain-profile-power-maul-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-red-corsairs-reave-captain-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-red-corsairs-reave-captain-profile-bolt-pistol-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-red-corsairs-reave-captain-selection-plasma-pistol-standard",
+            "title": "➤ Plasma pistol - standard",
+            "aliases": [
+              "➤ Plasma pistol - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-red-corsairs-reave-captain-profile-plasma-pistol-standard-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-red-corsairs-reave-captain-selection-plasma-pistol-supercharge",
+            "title": "➤ Plasma pistol - supercharge",
+            "aliases": [
+              "➤ Plasma pistol - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-red-corsairs-reave-captain-profile-plasma-pistol-supercharge-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-red-corsairs-reave-captain-profile-power-sword-melee",
+            "title": "Power sword",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "7",
+            "skill": "2+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Sustained Hits 1",
+            "sourceSelectionIds": [
+              "unit-red-corsairs-reave-captain-selection-power-sword"
+            ]
+          },
+          {
+            "id": "unit-red-corsairs-reave-captain-profile-power-maul-melee-2",
+            "title": "Power maul",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "2+",
+            "s": "5",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-red-corsairs-reave-captain-selection-power-maul"
+            ]
+          },
+          {
+            "id": "unit-red-corsairs-reave-captain-profile-bolt-pistol-ranged-3",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-red-corsairs-reave-captain-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-red-corsairs-reave-captain-profile-plasma-pistol-standard-ranged-4",
+            "title": "➤ Plasma pistol - standard",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-red-corsairs-reave-captain-selection-plasma-pistol-standard"
+            ]
+          },
+          {
+            "id": "unit-red-corsairs-reave-captain-profile-plasma-pistol-supercharge-ranged-5",
+            "title": "➤ Plasma pistol - supercharge",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Pistol",
+            "sourceSelectionIds": [
+              "unit-red-corsairs-reave-captain-selection-plasma-pistol-supercharge"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -741,6 +3056,130 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-sorcerer-model-sorcerer",
+            "title": "Sorcerer",
+            "aliases": [
+              "Sorcerer"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-sorcerer-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-sorcerer-profile-bolt-pistol-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-sorcerer-selection-infernal-gaze-witchfire",
+            "title": "➤ Infernal Gaze - witchfire",
+            "aliases": [
+              "➤ Infernal Gaze - witchfire"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-sorcerer-profile-infernal-gaze-witchfire-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-sorcerer-selection-infernal-gaze-focused-witchfire",
+            "title": "➤ Infernal Gaze - focused witchfire",
+            "aliases": [
+              "➤ Infernal Gaze - focused witchfire"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-sorcerer-profile-infernal-gaze-focused-witchfire-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-sorcerer-selection-force-weapon",
+            "title": "Force weapon",
+            "aliases": [
+              "Force weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-sorcerer-profile-force-weapon-melee-4"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-sorcerer-profile-bolt-pistol-ranged",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-sorcerer-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-sorcerer-profile-infernal-gaze-witchfire-ranged-2",
+            "title": "➤ Infernal Gaze - witchfire",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "D3",
+            "abilities": "Psychic",
+            "sourceSelectionIds": [
+              "unit-sorcerer-selection-infernal-gaze-witchfire"
+            ]
+          },
+          {
+            "id": "unit-sorcerer-profile-infernal-gaze-focused-witchfire-ranged-3",
+            "title": "➤ Infernal Gaze - focused witchfire",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-2",
+            "d": "D3",
+            "abilities": "Devastating Wounds, Hazardous, Psychic",
+            "sourceSelectionIds": [
+              "unit-sorcerer-selection-infernal-gaze-focused-witchfire"
+            ]
+          },
+          {
+            "id": "unit-sorcerer-profile-force-weapon-melee-4",
+            "title": "Force weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-1",
+            "d": "D3",
+            "abilities": "Psychic",
+            "sourceSelectionIds": [
+              "unit-sorcerer-selection-force-weapon"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -778,6 +3217,176 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-sorcerer-in-terminator-armour-model-sorcerer-in-terminator-armour",
+            "title": "Sorcerer in Terminator Armour",
+            "aliases": [
+              "Sorcerer in Terminator Armour"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-sorcerer-in-terminator-armour-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-sorcerer-in-terminator-armour-profile-combi-bolter-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-sorcerer-in-terminator-armour-selection-combi-weapon",
+            "title": "Combi-weapon",
+            "aliases": [
+              "Combi-weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-sorcerer-in-terminator-armour-profile-combi-weapon-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-sorcerer-in-terminator-armour-selection-infernal-gaze-witchfire",
+            "title": "➤ Infernal Gaze - witchfire",
+            "aliases": [
+              "➤ Infernal Gaze - witchfire"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-sorcerer-in-terminator-armour-profile-infernal-gaze-witchfire-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-sorcerer-in-terminator-armour-selection-infernal-gaze-focused-witchfire",
+            "title": "➤ Infernal Gaze - focused witchfire",
+            "aliases": [
+              "➤ Infernal Gaze - focused witchfire"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-sorcerer-in-terminator-armour-profile-infernal-gaze-focused-witchfire-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-sorcerer-in-terminator-armour-selection-force-weapon",
+            "title": "Force weapon",
+            "aliases": [
+              "Force weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-sorcerer-in-terminator-armour-profile-force-weapon-melee-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-sorcerer-in-terminator-armour-selection-chaos-familiar",
+            "title": "Chaos Familiar",
+            "aliases": [
+              "Chaos Familiar"
+            ],
+            "kind": "wargear",
+            "profileIds": [],
+            "wargearAbilityIds": [],
+            "candidateWargearAbilityIds": [
+              "unit-sorcerer-in-terminator-armour-wargear-ability-chaos-familiar"
+            ]
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-sorcerer-in-terminator-armour-profile-combi-bolter-ranged",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Rapid Fire 2",
+            "sourceSelectionIds": [
+              "unit-sorcerer-in-terminator-armour-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "unit-sorcerer-in-terminator-armour-profile-combi-weapon-ranged-2",
+            "title": "Combi-weapon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-sorcerer-in-terminator-armour-selection-combi-weapon"
+            ]
+          },
+          {
+            "id": "unit-sorcerer-in-terminator-armour-profile-infernal-gaze-witchfire-ranged-3",
+            "title": "➤ Infernal Gaze - witchfire",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "D3",
+            "abilities": "Psychic",
+            "sourceSelectionIds": [
+              "unit-sorcerer-in-terminator-armour-selection-infernal-gaze-witchfire"
+            ]
+          },
+          {
+            "id": "unit-sorcerer-in-terminator-armour-profile-infernal-gaze-focused-witchfire-ranged-4",
+            "title": "➤ Infernal Gaze - focused witchfire",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-2",
+            "d": "D3",
+            "abilities": "Devastating Wounds, Hazardous, Psychic",
+            "sourceSelectionIds": [
+              "unit-sorcerer-in-terminator-armour-selection-infernal-gaze-focused-witchfire"
+            ]
+          },
+          {
+            "id": "unit-sorcerer-in-terminator-armour-profile-force-weapon-melee-5",
+            "title": "Force weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-1",
+            "d": "D3",
+            "abilities": "Psychic",
+            "sourceSelectionIds": [
+              "unit-sorcerer-in-terminator-armour-selection-force-weapon"
+            ]
+          }
+        ],
+        "wargearAbilities": [
+          {
+            "id": "unit-sorcerer-in-terminator-armour-wargear-ability-chaos-familiar",
+            "title": "Chaos Familiar",
+            "requiredSelectionIds": []
+          }
+        ]
       }
     },
     {
@@ -810,6 +3419,110 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-traitor-enforcer-model-traitor-enforcer",
+            "title": "Traitor Enforcer",
+            "aliases": [
+              "Traitor Enforcer"
+            ]
+          },
+          {
+            "id": "unit-traitor-enforcer-model-traitor-ogryn-2",
+            "title": "Traitor Ogryn",
+            "aliases": [
+              "Traitor Ogryn"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-traitor-enforcer-selection-power-fist",
+            "title": "Power fist",
+            "aliases": [
+              "Power fist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-traitor-enforcer-profile-power-fist-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-traitor-enforcer-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-traitor-enforcer-profile-bolt-pistol-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-traitor-enforcer-selection-ogryn-weapons",
+            "title": "Ogryn weapons",
+            "aliases": [
+              "Ogryn weapons"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-traitor-enforcer-profile-ogryn-weapons-melee-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-traitor-enforcer-profile-power-fist-melee",
+            "title": "Power fist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-traitor-enforcer-selection-power-fist"
+            ]
+          },
+          {
+            "id": "unit-traitor-enforcer-profile-bolt-pistol-ranged-2",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-traitor-enforcer-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-traitor-enforcer-profile-ogryn-weapons-melee-3",
+            "title": "Ogryn weapons",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-traitor-enforcer-selection-ogryn-weapons"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -869,6 +3582,157 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-warpsmith-model-warpsmith",
+            "title": "Warpsmith",
+            "aliases": [
+              "Warpsmith"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-warpsmith-selection-flamer-tendril",
+            "title": "Flamer tendril",
+            "aliases": [
+              "Flamer tendril"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-warpsmith-profile-flamer-tendril-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-warpsmith-selection-forge-weapon",
+            "title": "Forge weapon",
+            "aliases": [
+              "Forge weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-warpsmith-profile-forge-weapon-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-warpsmith-selection-melta-tendril",
+            "title": "Melta tendril",
+            "aliases": [
+              "Melta tendril"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-warpsmith-profile-melta-tendril-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-warpsmith-selection-plasma-pistol-standard",
+            "title": "➤ Plasma pistol - standard",
+            "aliases": [
+              "➤ Plasma pistol - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-warpsmith-profile-plasma-pistol-standard-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-warpsmith-selection-plasma-pistol-supercharge",
+            "title": "➤ Plasma pistol - supercharge",
+            "aliases": [
+              "➤ Plasma pistol - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-warpsmith-profile-plasma-pistol-supercharge-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-warpsmith-profile-flamer-tendril-ranged",
+            "title": "Flamer tendril",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Ignores Cover, Pistol, Torrent",
+            "sourceSelectionIds": [
+              "unit-warpsmith-selection-flamer-tendril"
+            ]
+          },
+          {
+            "id": "unit-warpsmith-profile-forge-weapon-melee-2",
+            "title": "Forge weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Anti-VEHICLE 4+",
+            "sourceSelectionIds": [
+              "unit-warpsmith-selection-forge-weapon"
+            ]
+          },
+          {
+            "id": "unit-warpsmith-profile-melta-tendril-ranged-3",
+            "title": "Melta tendril",
+            "mode": "ranged",
+            "range": "6\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-4",
+            "d": "D3",
+            "abilities": "Melta 1, Pistol",
+            "sourceSelectionIds": [
+              "unit-warpsmith-selection-melta-tendril"
+            ]
+          },
+          {
+            "id": "unit-warpsmith-profile-plasma-pistol-standard-ranged-4",
+            "title": "➤ Plasma pistol - standard",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-warpsmith-selection-plasma-pistol-standard"
+            ]
+          },
+          {
+            "id": "unit-warpsmith-profile-plasma-pistol-supercharge-ranged-5",
+            "title": "➤ Plasma pistol - supercharge",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Pistol",
+            "sourceSelectionIds": [
+              "unit-warpsmith-selection-plasma-pistol-supercharge"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -899,6 +3763,130 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-chaos-rhino-model-chaos-rhino",
+            "title": "Chaos Rhino",
+            "aliases": [
+              "Chaos Rhino"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-chaos-rhino-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-rhino-profile-combi-bolter-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-rhino-selection-combi-weapon",
+            "title": "Combi-weapon",
+            "aliases": [
+              "Combi-weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-rhino-profile-combi-weapon-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-rhino-selection-armoured-tracks",
+            "title": "Armoured tracks",
+            "aliases": [
+              "Armoured tracks"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-rhino-profile-armoured-tracks-melee-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-rhino-selection-havoc-launcher",
+            "title": "Havoc launcher",
+            "aliases": [
+              "Havoc launcher"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-rhino-profile-havoc-launcher-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-chaos-rhino-profile-combi-bolter-ranged",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Rapid Fire 2",
+            "sourceSelectionIds": [
+              "unit-chaos-rhino-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "unit-chaos-rhino-profile-combi-weapon-ranged-2",
+            "title": "Combi-weapon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-chaos-rhino-selection-combi-weapon"
+            ]
+          },
+          {
+            "id": "unit-chaos-rhino-profile-armoured-tracks-melee-3",
+            "title": "Armoured tracks",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "4+",
+            "s": "6",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-rhino-selection-armoured-tracks"
+            ]
+          },
+          {
+            "id": "unit-chaos-rhino-profile-havoc-launcher-ranged-4",
+            "title": "Havoc launcher",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-chaos-rhino-selection-havoc-launcher"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -943,6 +3931,92 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-abaddon-the-despoiler-model-abaddon-the-despoiler",
+            "title": "Abaddon the Despoiler",
+            "aliases": [
+              "Abaddon the Despoiler"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-abaddon-the-despoiler-selection-talon-of-horus",
+            "title": "Talon of Horus",
+            "aliases": [
+              "Talon of Horus"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-abaddon-the-despoiler-profile-talon-of-horus-ranged",
+              "unit-abaddon-the-despoiler-profile-talon-of-horus-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-abaddon-the-despoiler-selection-drachnyen",
+            "title": "Drach'nyen",
+            "aliases": [
+              "Drach'nyen"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-abaddon-the-despoiler-profile-drachnyen-melee-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-abaddon-the-despoiler-profile-talon-of-horus-ranged",
+            "title": "Talon of Horus",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "4",
+            "skill": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Sustained Hits 1",
+            "sourceSelectionIds": [
+              "unit-abaddon-the-despoiler-selection-talon-of-horus"
+            ]
+          },
+          {
+            "id": "unit-abaddon-the-despoiler-profile-talon-of-horus-melee-2",
+            "title": "Talon of Horus",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "14",
+            "skill": "2+",
+            "s": "7",
+            "ap": "-3",
+            "d": "1",
+            "abilities": "Devastating Wounds",
+            "sourceSelectionIds": [
+              "unit-abaddon-the-despoiler-selection-talon-of-horus"
+            ]
+          },
+          {
+            "id": "unit-abaddon-the-despoiler-profile-drachnyen-melee-3",
+            "title": "Drach'nyen",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "8",
+            "skill": "2+",
+            "s": "14",
+            "ap": "-4",
+            "d": "3",
+            "abilities": "Devastating Wounds",
+            "sourceSelectionIds": [
+              "unit-abaddon-the-despoiler-selection-drachnyen"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -972,6 +4046,108 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-cypher-model-cypher",
+            "title": "Cypher",
+            "aliases": [
+              "Cypher"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-cypher-selection-cyphers-bolt-pistol",
+            "title": "Cypher's bolt pistol",
+            "aliases": [
+              "Cypher's bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-cypher-profile-cyphers-bolt-pistol-ranged",
+              "unit-cypher-profile-cyphers-bolt-pistol-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-cypher-selection-cyphers-plasma-pistol",
+            "title": "Cypher's plasma pistol",
+            "aliases": [
+              "Cypher's plasma pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-cypher-profile-cyphers-plasma-pistol-ranged-3",
+              "unit-cypher-profile-cyphers-plasma-pistol-melee-4"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-cypher-profile-cyphers-bolt-pistol-ranged",
+            "title": "Cypher's bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "6",
+            "skill": "2+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Assault, Pistol, Sustained Hits 1",
+            "sourceSelectionIds": [
+              "unit-cypher-selection-cyphers-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-cypher-profile-cyphers-bolt-pistol-melee-2",
+            "title": "Cypher's bolt pistol",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "2+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Sustained Hits 1",
+            "sourceSelectionIds": [
+              "unit-cypher-selection-cyphers-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-cypher-profile-cyphers-plasma-pistol-ranged-3",
+            "title": "Cypher's plasma pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "3",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Assault, Pistol, Sustained Hits 1",
+            "sourceSelectionIds": [
+              "unit-cypher-selection-cyphers-plasma-pistol"
+            ]
+          },
+          {
+            "id": "unit-cypher-profile-cyphers-plasma-pistol-melee-4",
+            "title": "Cypher's plasma pistol",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Extra Attacks",
+            "sourceSelectionIds": [
+              "unit-cypher-selection-cyphers-plasma-pistol"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1027,6 +4203,137 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-fabius-bile-model-fabius-bile",
+            "title": "Fabius Bile",
+            "aliases": [
+              "Fabius Bile"
+            ]
+          },
+          {
+            "id": "unit-fabius-bile-model-surgeon-acolyte-2",
+            "title": "Surgeon Acolyte",
+            "aliases": [
+              "Surgeon Acolyte"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-fabius-bile-selection-xyclos-needler",
+            "title": "Xyclos needler",
+            "aliases": [
+              "Xyclos needler"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-fabius-bile-profile-xyclos-needler-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-fabius-bile-selection-the-chirurgeon",
+            "title": "The Chirurgeon",
+            "aliases": [
+              "The Chirurgeon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-fabius-bile-profile-the-chirurgeon-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-fabius-bile-selection-rod-of-torment",
+            "title": "Rod of Torment",
+            "aliases": [
+              "Rod of Torment"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-fabius-bile-profile-rod-of-torment-melee-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-fabius-bile-selection-surgeon-acolytes-tools",
+            "title": "Surgeon Acolyte's tools",
+            "aliases": [
+              "Surgeon Acolyte's tools"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-fabius-bile-profile-surgeon-acolytes-tools-melee-4"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-fabius-bile-profile-xyclos-needler-ranged",
+            "title": "Xyclos needler",
+            "mode": "ranged",
+            "range": "18\"",
+            "a": "3",
+            "skill": "2+",
+            "s": "2",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Anti-INFANTRY 2+, Pistol",
+            "sourceSelectionIds": [
+              "unit-fabius-bile-selection-xyclos-needler"
+            ]
+          },
+          {
+            "id": "unit-fabius-bile-profile-the-chirurgeon-melee-2",
+            "title": "The Chirurgeon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "2",
+            "skill": "2+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Extra Attacks",
+            "sourceSelectionIds": [
+              "unit-fabius-bile-selection-the-chirurgeon"
+            ]
+          },
+          {
+            "id": "unit-fabius-bile-profile-rod-of-torment-melee-3",
+            "title": "Rod of Torment",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "3",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-fabius-bile-selection-rod-of-torment"
+            ]
+          },
+          {
+            "id": "unit-fabius-bile-profile-surgeon-acolytes-tools-melee-4",
+            "title": "Surgeon Acolyte's tools",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "1",
+            "skill": "5+",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-fabius-bile-selection-surgeon-acolytes-tools"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1066,6 +4373,92 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-haarken-worldclaimer-model-haarken-worldclaimer",
+            "title": "Haarken Worldclaimer",
+            "aliases": [
+              "Haarken Worldclaimer"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-haarken-worldclaimer-selection-hellspear",
+            "title": "Hellspear",
+            "aliases": [
+              "Hellspear"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-haarken-worldclaimer-profile-hellspear-ranged",
+              "unit-haarken-worldclaimer-profile-hellspear-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-haarken-worldclaimer-selection-heralds-talon",
+            "title": "Herald's Talon",
+            "aliases": [
+              "Herald's Talon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-haarken-worldclaimer-profile-heralds-talon-melee-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-haarken-worldclaimer-profile-hellspear-ranged",
+            "title": "Hellspear",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "Assault, Sustained Hits D3",
+            "sourceSelectionIds": [
+              "unit-haarken-worldclaimer-selection-hellspear"
+            ]
+          },
+          {
+            "id": "unit-haarken-worldclaimer-profile-hellspear-melee-2",
+            "title": "Hellspear",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "1",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "Extra Attacks, Lance, Sustained Hits D3",
+            "sourceSelectionIds": [
+              "unit-haarken-worldclaimer-selection-hellspear"
+            ]
+          },
+          {
+            "id": "unit-haarken-worldclaimer-profile-heralds-talon-melee-3",
+            "title": "Herald's Talon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "2+",
+            "s": "5",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Precision",
+            "sourceSelectionIds": [
+              "unit-haarken-worldclaimer-selection-heralds-talon"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1127,6 +4520,76 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-huron-blackheart-model-huron-blackheart",
+            "title": "Huron Blackheart",
+            "aliases": [
+              "Huron Blackheart"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-huron-blackheart-selection-tyrants-claw-heavy-flamer",
+            "title": "Tyrant's Claw heavy flamer",
+            "aliases": [
+              "Tyrant's Claw heavy flamer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-huron-blackheart-profile-tyrants-claw-heavy-flamer-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-huron-blackheart-selection-tyrants-claw-and-exalted-power-weapon",
+            "title": "Tyrant's Claw and exalted power weapon",
+            "aliases": [
+              "Tyrant's Claw and exalted power weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-huron-blackheart-profile-tyrants-claw-and-exalted-power-weapon-melee-2"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-huron-blackheart-profile-tyrants-claw-heavy-flamer-ranged",
+            "title": "Tyrant's Claw heavy flamer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6+2",
+            "skill": "N/A",
+            "s": "6",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Ignores Cover, Pistol, Torrent",
+            "sourceSelectionIds": [
+              "unit-huron-blackheart-selection-tyrants-claw-heavy-flamer"
+            ]
+          },
+          {
+            "id": "unit-huron-blackheart-profile-tyrants-claw-and-exalted-power-weapon-melee-2",
+            "title": "Tyrant's Claw and exalted power weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-huron-blackheart-selection-tyrants-claw-and-exalted-power-weapon"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1177,6 +4640,130 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-kravek-morne-model-kravek-morne",
+            "title": "Kravek Morne",
+            "aliases": [
+              "Kravek Morne"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-kravek-morne-selection-baleflamer",
+            "title": "Baleflamer",
+            "aliases": [
+              "Baleflamer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-kravek-morne-profile-baleflamer-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-kravek-morne-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-kravek-morne-profile-combi-bolter-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-kravek-morne-selection-last-argument-and-power-fist",
+            "title": "Last Argument and power fist",
+            "aliases": [
+              "Last Argument and power fist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-kravek-morne-profile-last-argument-and-power-fist-melee-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-kravek-morne-selection-servo-harness",
+            "title": "Servo-harness",
+            "aliases": [
+              "Servo-harness"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-kravek-morne-profile-servo-harness-melee-4"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-kravek-morne-profile-baleflamer-ranged",
+            "title": "Baleflamer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6+3",
+            "skill": "N/A",
+            "s": "6",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Ignores Cover, Torrent",
+            "sourceSelectionIds": [
+              "unit-kravek-morne-selection-baleflamer"
+            ]
+          },
+          {
+            "id": "unit-kravek-morne-profile-combi-bolter-ranged-2",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "2+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Rapid Fire 2",
+            "sourceSelectionIds": [
+              "unit-kravek-morne-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "unit-kravek-morne-profile-last-argument-and-power-fist-melee-3",
+            "title": "Last Argument and power fist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "7",
+            "skill": "2+",
+            "s": "10",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Devastating Wounds",
+            "sourceSelectionIds": [
+              "unit-kravek-morne-selection-last-argument-and-power-fist"
+            ]
+          },
+          {
+            "id": "unit-kravek-morne-profile-servo-harness-melee-4",
+            "title": "Servo-harness",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "2+",
+            "s": "6",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Anti-Vehicle 2+, Extra Attacks",
+            "sourceSelectionIds": [
+              "unit-kravek-morne-selection-servo-harness"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1234,6 +4821,320 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           ],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-masters-of-the-maelstrom-model-garreon-the-corpsemaster",
+            "title": "Garreon the Corpsemaster",
+            "aliases": [
+              "Garreon the Corpsemaster"
+            ]
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-model-garlon-souleater-2",
+            "title": "Garlon Souleater",
+            "aliases": [
+              "Garlon Souleater"
+            ]
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-model-katar-garrix-3",
+            "title": "Katar Garrix",
+            "aliases": [
+              "Katar Garrix"
+            ]
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-model-captain-sargotta-4",
+            "title": "Captain Sargotta",
+            "aliases": [
+              "Captain Sargotta"
+            ]
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-model-the-enforcer-5",
+            "title": "The Enforcer",
+            "aliases": [
+              "The Enforcer"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-masters-of-the-maelstrom-selection-absolver-bolt-pistol",
+            "title": "Absolver bolt pistol",
+            "aliases": [
+              "Absolver bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-masters-of-the-maelstrom-profile-absolver-bolt-pistol-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-selection-reductor-array",
+            "title": "Reductor array",
+            "aliases": [
+              "Reductor array"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-masters-of-the-maelstrom-profile-reductor-array-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-selection-mind-wrench",
+            "title": "Mind Wrench",
+            "aliases": [
+              "Mind Wrench"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-masters-of-the-maelstrom-profile-mind-wrench-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-selection-force-stave",
+            "title": "Force stave",
+            "aliases": [
+              "Force stave"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-masters-of-the-maelstrom-profile-force-stave-melee-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-selection-axe-of-ending",
+            "title": "Axe of Ending",
+            "aliases": [
+              "Axe of Ending"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-masters-of-the-maelstrom-profile-axe-of-ending-melee-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-masters-of-the-maelstrom-profile-bolt-pistol-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-selection-power-sabre",
+            "title": "Power sabre",
+            "aliases": [
+              "Power sabre"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-masters-of-the-maelstrom-profile-power-sabre-melee-7"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-selection-laspistol",
+            "title": "Laspistol",
+            "aliases": [
+              "Laspistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-masters-of-the-maelstrom-profile-laspistol-ranged-8"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-selection-londaxi-maimer",
+            "title": "Londaxi maimer",
+            "aliases": [
+              "Londaxi maimer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-masters-of-the-maelstrom-profile-londaxi-maimer-ranged-9"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-selection-bionic-gauntlet",
+            "title": "Bionic gauntlet",
+            "aliases": [
+              "Bionic gauntlet"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-masters-of-the-maelstrom-profile-bionic-gauntlet-melee-10"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-masters-of-the-maelstrom-profile-absolver-bolt-pistol-ranged",
+            "title": "Absolver bolt pistol",
+            "mode": "ranged",
+            "range": "18\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-masters-of-the-maelstrom-selection-absolver-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-profile-reductor-array-melee-2",
+            "title": "Reductor array",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-masters-of-the-maelstrom-selection-reductor-array"
+            ]
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-profile-mind-wrench-ranged-3",
+            "title": "Mind Wrench",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "6",
+            "ap": "-2",
+            "d": "D6+1",
+            "abilities": "Precision, Psychic",
+            "sourceSelectionIds": [
+              "unit-masters-of-the-maelstrom-selection-mind-wrench"
+            ]
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-profile-force-stave-melee-4",
+            "title": "Force stave",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "2+",
+            "s": "6",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Psychic",
+            "sourceSelectionIds": [
+              "unit-masters-of-the-maelstrom-selection-force-stave"
+            ]
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-profile-axe-of-ending-melee-5",
+            "title": "Axe of Ending",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "2+",
+            "s": "6",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Anti-CHARACTER 2+, Precision",
+            "sourceSelectionIds": [
+              "unit-masters-of-the-maelstrom-selection-axe-of-ending"
+            ]
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-profile-bolt-pistol-ranged-6",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-masters-of-the-maelstrom-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-profile-power-sabre-melee-7",
+            "title": "Power sabre",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-masters-of-the-maelstrom-selection-power-sabre"
+            ]
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-profile-laspistol-ranged-8",
+            "title": "Laspistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-masters-of-the-maelstrom-selection-laspistol"
+            ]
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-profile-londaxi-maimer-ranged-9",
+            "title": "Londaxi maimer",
+            "mode": "ranged",
+            "range": "18\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Assault",
+            "sourceSelectionIds": [
+              "unit-masters-of-the-maelstrom-selection-londaxi-maimer"
+            ]
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-profile-bionic-gauntlet-melee-10",
+            "title": "Bionic gauntlet",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "1",
+            "skill": "2+",
+            "s": "6",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-masters-of-the-maelstrom-selection-bionic-gauntlet"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1264,6 +5165,103 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-vashtorr-the-arkifane-model-vashtorr-the-arkifane",
+            "title": "Vashtorr the Arkifane",
+            "aliases": [
+              "Vashtorr the Arkifane"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-vashtorr-the-arkifane-selection-vashtorrs-claw",
+            "title": "Vashtorr's claw",
+            "aliases": [
+              "Vashtorr's claw"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-vashtorr-the-arkifane-profile-vashtorrs-claw-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-vashtorr-the-arkifane-selection-vashtorrs-hammer-strike",
+            "title": "➤ Vashtorr's hammer - strike",
+            "aliases": [
+              "➤ Vashtorr's hammer - strike"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-vashtorr-the-arkifane-profile-vashtorrs-hammer-strike-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-vashtorr-the-arkifane-selection-vashtorrs-hammer-sweep",
+            "title": "➤ Vashtorr's hammer - sweep",
+            "aliases": [
+              "➤ Vashtorr's hammer - sweep"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-vashtorr-the-arkifane-profile-vashtorrs-hammer-sweep-melee-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-vashtorr-the-arkifane-profile-vashtorrs-claw-ranged",
+            "title": "Vashtorr's claw",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Anti-VEHICLE 4+, Torrent",
+            "sourceSelectionIds": [
+              "unit-vashtorr-the-arkifane-selection-vashtorrs-claw"
+            ]
+          },
+          {
+            "id": "unit-vashtorr-the-arkifane-profile-vashtorrs-hammer-strike-melee-2",
+            "title": "➤ Vashtorr's hammer - strike",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "2+",
+            "s": "14",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "Anti-VEHICLE 4+, Devastating Wounds",
+            "sourceSelectionIds": [
+              "unit-vashtorr-the-arkifane-selection-vashtorrs-hammer-strike"
+            ]
+          },
+          {
+            "id": "unit-vashtorr-the-arkifane-profile-vashtorrs-hammer-sweep-melee-3",
+            "title": "➤ Vashtorr's hammer - sweep",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "12",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Anti-VEHICLE 4+, Devastating Wounds",
+            "sourceSelectionIds": [
+              "unit-vashtorr-the-arkifane-selection-vashtorrs-hammer-sweep"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1317,6 +5315,83 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           ],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-accursed-cultists-model-torment",
+            "title": "Torment",
+            "aliases": [
+              "Torment"
+            ]
+          },
+          {
+            "id": "unit-accursed-cultists-model-mutant-2",
+            "title": "Mutant",
+            "aliases": [
+              "Mutant"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-accursed-cultists-selection-hideous-mutations",
+            "title": "Hideous mutations",
+            "aliases": [
+              "Hideous mutations"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-accursed-cultists-profile-hideous-mutations-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-accursed-cultists-selection-blasphemous-appendages",
+            "title": "Blasphemous appendages",
+            "aliases": [
+              "Blasphemous appendages"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-accursed-cultists-profile-blasphemous-appendages-melee-2"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-accursed-cultists-profile-hideous-mutations-melee",
+            "title": "Hideous mutations",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "D6+2",
+            "skill": "4+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-accursed-cultists-selection-hideous-mutations"
+            ]
+          },
+          {
+            "id": "unit-accursed-cultists-profile-blasphemous-appendages-melee-2",
+            "title": "Blasphemous appendages",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "2",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-accursed-cultists-selection-blasphemous-appendages"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1376,6 +5451,245 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           ],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-chaos-terminator-squad-model-4-9-chaos-terminators",
+            "title": "4-9 Chaos Terminators",
+            "aliases": [
+              "4-9 Chaos Terminators"
+            ]
+          },
+          {
+            "id": "unit-chaos-terminator-squad-model-terminator-champion-2",
+            "title": "Terminator Champion",
+            "aliases": [
+              "Terminator Champion"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-chaos-terminator-squad-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-terminator-squad-profile-combi-bolter-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-terminator-squad-selection-accursed-weapon",
+            "title": "Accursed weapon",
+            "aliases": [
+              "Accursed weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-terminator-squad-profile-accursed-weapon-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-terminator-squad-selection-combi-weapon",
+            "title": "Combi-weapon",
+            "aliases": [
+              "Combi-weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-terminator-squad-profile-combi-weapon-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-terminator-squad-selection-power-fist",
+            "title": "Power fist",
+            "aliases": [
+              "Power fist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-terminator-squad-profile-power-fist-melee-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-terminator-squad-selection-chainfist",
+            "title": "Chainfist",
+            "aliases": [
+              "Chainfist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-terminator-squad-profile-chainfist-melee-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-terminator-squad-selection-heavy-flamer",
+            "title": "Heavy flamer",
+            "aliases": [
+              "Heavy flamer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-terminator-squad-profile-heavy-flamer-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-terminator-squad-selection-reaper-autocannon",
+            "title": "Reaper autocannon",
+            "aliases": [
+              "Reaper autocannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-terminator-squad-profile-reaper-autocannon-ranged-7"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-terminator-squad-selection-paired-accursed-weapons",
+            "title": "Paired accursed weapons",
+            "aliases": [
+              "Paired accursed weapons"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-terminator-squad-profile-paired-accursed-weapons-melee-8"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-chaos-terminator-squad-profile-combi-bolter-ranged",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Rapid Fire 2",
+            "sourceSelectionIds": [
+              "unit-chaos-terminator-squad-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "unit-chaos-terminator-squad-profile-accursed-weapon-melee-2",
+            "title": "Accursed weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-terminator-squad-selection-accursed-weapon"
+            ]
+          },
+          {
+            "id": "unit-chaos-terminator-squad-profile-combi-weapon-ranged-3",
+            "title": "Combi-weapon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-chaos-terminator-squad-selection-combi-weapon"
+            ]
+          },
+          {
+            "id": "unit-chaos-terminator-squad-profile-power-fist-melee-4",
+            "title": "Power fist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-terminator-squad-selection-power-fist"
+            ]
+          },
+          {
+            "id": "unit-chaos-terminator-squad-profile-chainfist-melee-5",
+            "title": "Chainfist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "4+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Anti-VEHICLE 3+",
+            "sourceSelectionIds": [
+              "unit-chaos-terminator-squad-selection-chainfist"
+            ]
+          },
+          {
+            "id": "unit-chaos-terminator-squad-profile-heavy-flamer-ranged-6",
+            "title": "Heavy flamer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Ignores Cover, Torrent",
+            "sourceSelectionIds": [
+              "unit-chaos-terminator-squad-selection-heavy-flamer"
+            ]
+          },
+          {
+            "id": "unit-chaos-terminator-squad-profile-reaper-autocannon-ranged-7",
+            "title": "Reaper autocannon",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "4",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Devastating Wounds, Sustained Hits 1",
+            "sourceSelectionIds": [
+              "unit-chaos-terminator-squad-selection-reaper-autocannon"
+            ]
+          },
+          {
+            "id": "unit-chaos-terminator-squad-profile-paired-accursed-weapons-melee-8",
+            "title": "Paired accursed weapons",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Twin-linked",
+            "sourceSelectionIds": [
+              "unit-chaos-terminator-squad-selection-paired-accursed-weapons"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1473,6 +5787,264 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             }
           ]
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-chosen-model-4-9-chosen",
+            "title": "4-9 Chosen",
+            "aliases": [
+              "4-9 Chosen"
+            ]
+          },
+          {
+            "id": "unit-chosen-model-chosen-champion-2",
+            "title": "Chosen Champion",
+            "aliases": [
+              "Chosen Champion"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-chosen-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chosen-profile-bolt-pistol-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chosen-selection-boltgun",
+            "title": "Boltgun",
+            "aliases": [
+              "Boltgun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chosen-profile-boltgun-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chosen-selection-accursed-weapon",
+            "title": "Accursed weapon",
+            "aliases": [
+              "Accursed weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chosen-profile-accursed-weapon-melee-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chosen-selection-plasma-pistol-standard",
+            "title": "➤ Plasma pistol - standard",
+            "aliases": [
+              "➤ Plasma pistol - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chosen-profile-plasma-pistol-standard-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chosen-selection-plasma-pistol-supercharge",
+            "title": "➤ Plasma pistol - supercharge",
+            "aliases": [
+              "➤ Plasma pistol - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chosen-profile-plasma-pistol-supercharge-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chosen-selection-combi-weapon",
+            "title": "Combi-weapon",
+            "aliases": [
+              "Combi-weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chosen-profile-combi-weapon-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chosen-selection-paired-accursed-weapons",
+            "title": "Paired accursed weapons",
+            "aliases": [
+              "Paired accursed weapons"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chosen-profile-paired-accursed-weapons-melee-7"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chosen-selection-power-fist",
+            "title": "Power fist",
+            "aliases": [
+              "Power fist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chosen-profile-power-fist-melee-8"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chosen-selection-chaos-icon",
+            "title": "Chaos icon",
+            "aliases": [
+              "Chaos icon"
+            ],
+            "kind": "wargear",
+            "profileIds": [],
+            "wargearAbilityIds": [],
+            "candidateWargearAbilityIds": [
+              "unit-chosen-wargear-ability-chaos-icon"
+            ]
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-chosen-profile-bolt-pistol-ranged",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-chosen-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-chosen-profile-boltgun-ranged-2",
+            "title": "Boltgun",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chosen-selection-boltgun"
+            ]
+          },
+          {
+            "id": "unit-chosen-profile-accursed-weapon-melee-3",
+            "title": "Accursed weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chosen-selection-accursed-weapon"
+            ]
+          },
+          {
+            "id": "unit-chosen-profile-plasma-pistol-standard-ranged-4",
+            "title": "➤ Plasma pistol - standard",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-chosen-selection-plasma-pistol-standard"
+            ]
+          },
+          {
+            "id": "unit-chosen-profile-plasma-pistol-supercharge-ranged-5",
+            "title": "➤ Plasma pistol - supercharge",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Pistol",
+            "sourceSelectionIds": [
+              "unit-chosen-selection-plasma-pistol-supercharge"
+            ]
+          },
+          {
+            "id": "unit-chosen-profile-combi-weapon-ranged-6",
+            "title": "Combi-weapon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-chosen-selection-combi-weapon"
+            ]
+          },
+          {
+            "id": "unit-chosen-profile-paired-accursed-weapons-melee-7",
+            "title": "Paired accursed weapons",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Twin-linked",
+            "sourceSelectionIds": [
+              "unit-chosen-selection-paired-accursed-weapons"
+            ]
+          },
+          {
+            "id": "unit-chosen-profile-power-fist-melee-8",
+            "title": "Power fist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chosen-selection-power-fist"
+            ]
+          }
+        ],
+        "wargearAbilities": [
+          {
+            "id": "unit-chosen-wargear-ability-chaos-icon",
+            "title": "Chaos icon",
+            "requiredSelectionIds": []
+          }
+        ]
       }
     },
     {
@@ -1501,6 +6073,261 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-fellgor-beastmen-model-fellgor-champion",
+            "title": "Fellgor Champion",
+            "aliases": [
+              "Fellgor Champion"
+            ]
+          },
+          {
+            "id": "unit-fellgor-beastmen-model-9-beastmen-2",
+            "title": "9 Beastmen",
+            "aliases": [
+              "9 Beastmen"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-fellgor-beastmen-selection-chainsword",
+            "title": "Chainsword",
+            "aliases": [
+              "Chainsword"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-fellgor-beastmen-profile-chainsword-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-fellgor-beastmen-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-fellgor-beastmen-profile-bolt-pistol-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-fellgor-beastmen-selection-plasma-pistol-standard",
+            "title": "➤ Plasma pistol - standard",
+            "aliases": [
+              "➤ Plasma pistol - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-fellgor-beastmen-profile-plasma-pistol-standard-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-fellgor-beastmen-selection-plasma-pistol-supercharge",
+            "title": "➤ Plasma pistol- supercharge",
+            "aliases": [
+              "➤ Plasma pistol- supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-fellgor-beastmen-profile-plasma-pistol-supercharge-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-fellgor-beastmen-selection-autopistol",
+            "title": "Autopistol",
+            "aliases": [
+              "Autopistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-fellgor-beastmen-profile-autopistol-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-fellgor-beastmen-selection-close-combat-weapon",
+            "title": "Close combat weapon",
+            "aliases": [
+              "Close combat weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-fellgor-beastmen-profile-close-combat-weapon-melee-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-fellgor-beastmen-selection-great-weapon",
+            "title": "Great weapon",
+            "aliases": [
+              "Great weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-fellgor-beastmen-profile-great-weapon-melee-7"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-fellgor-beastmen-selection-corrupted-stave",
+            "title": "Corrupted stave",
+            "aliases": [
+              "Corrupted stave"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-fellgor-beastmen-profile-corrupted-stave-melee-8",
+              "unit-fellgor-beastmen-profile-corrupted-stave-ranged-9"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-fellgor-beastmen-profile-chainsword-melee",
+            "title": "Chainsword",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-fellgor-beastmen-selection-chainsword"
+            ]
+          },
+          {
+            "id": "unit-fellgor-beastmen-profile-bolt-pistol-ranged-2",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-fellgor-beastmen-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-fellgor-beastmen-profile-plasma-pistol-standard-ranged-3",
+            "title": "➤ Plasma pistol - standard",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-fellgor-beastmen-selection-plasma-pistol-standard"
+            ]
+          },
+          {
+            "id": "unit-fellgor-beastmen-profile-plasma-pistol-supercharge-ranged-4",
+            "title": "➤ Plasma pistol- supercharge",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Pistol",
+            "sourceSelectionIds": [
+              "unit-fellgor-beastmen-selection-plasma-pistol-supercharge"
+            ]
+          },
+          {
+            "id": "unit-fellgor-beastmen-profile-autopistol-ranged-5",
+            "title": "Autopistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-fellgor-beastmen-selection-autopistol"
+            ]
+          },
+          {
+            "id": "unit-fellgor-beastmen-profile-close-combat-weapon-melee-6",
+            "title": "Close combat weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "2",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-fellgor-beastmen-selection-close-combat-weapon"
+            ]
+          },
+          {
+            "id": "unit-fellgor-beastmen-profile-great-weapon-melee-7",
+            "title": "Great weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "2",
+            "skill": "5+",
+            "s": "8",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-fellgor-beastmen-selection-great-weapon"
+            ]
+          },
+          {
+            "id": "unit-fellgor-beastmen-profile-corrupted-stave-melee-8",
+            "title": "Corrupted stave",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "2",
+            "skill": "4+",
+            "s": "4",
+            "ap": "-1",
+            "d": "D3",
+            "abilities": "Devastating Wounds, Psychic",
+            "sourceSelectionIds": [
+              "unit-fellgor-beastmen-selection-corrupted-stave"
+            ]
+          },
+          {
+            "id": "unit-fellgor-beastmen-profile-corrupted-stave-ranged-9",
+            "title": "Corrupted stave",
+            "mode": "ranged",
+            "range": "18\"",
+            "a": "D3",
+            "skill": "4+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Devastating Wounds, Psychic",
+            "sourceSelectionIds": [
+              "unit-fellgor-beastmen-selection-corrupted-stave"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1535,6 +6362,488 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           ],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-havocs-model-havoc-champion",
+            "title": "Havoc Champion",
+            "aliases": [
+              "Havoc Champion"
+            ]
+          },
+          {
+            "id": "unit-havocs-model-4-havocs-2",
+            "title": "4 Havocs",
+            "aliases": [
+              "4 Havocs"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-havocs-selection-accursed-weapon",
+            "title": "Accursed weapon",
+            "aliases": [
+              "Accursed weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-accursed-weapon-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-havocs-selection-power-fist",
+            "title": "Power fist",
+            "aliases": [
+              "Power fist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-power-fist-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-havocs-selection-astartes-chainsword",
+            "title": "Astartes chainsword",
+            "aliases": [
+              "Astartes chainsword"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-astartes-chainsword-melee-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-havocs-selection-flamer",
+            "title": "Flamer",
+            "aliases": [
+              "Flamer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-flamer-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-havocs-selection-plasma-gun-standard",
+            "title": "➤ Plasma gun - standard",
+            "aliases": [
+              "➤ Plasma gun - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-plasma-gun-standard-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-havocs-selection-plasma-gun-supercharge",
+            "title": "➤ Plasma gun - supercharge",
+            "aliases": [
+              "➤ Plasma gun - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-plasma-gun-supercharge-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-havocs-selection-plasma-pistol-standard",
+            "title": "➤ Plasma pistol - standard",
+            "aliases": [
+              "➤ Plasma pistol - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-plasma-pistol-standard-ranged-7"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-havocs-selection-plasma-pistol-supercharge",
+            "title": "➤ Plasma pistol - supercharge",
+            "aliases": [
+              "➤ Plasma pistol - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-plasma-pistol-supercharge-ranged-8"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-havocs-selection-boltgun",
+            "title": "Boltgun",
+            "aliases": [
+              "Boltgun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-boltgun-ranged-9"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-havocs-selection-meltagun",
+            "title": "Meltagun",
+            "aliases": [
+              "Meltagun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-meltagun-ranged-10"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-havocs-selection-havoc-autocannon",
+            "title": "Havoc autocannon",
+            "aliases": [
+              "Havoc autocannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-havoc-autocannon-ranged-11"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-havocs-selection-close-combat-weapon",
+            "title": "Close combat weapon",
+            "aliases": [
+              "Close combat weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-close-combat-weapon-melee-12"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-havocs-selection-havoc-lascannon",
+            "title": "Havoc lascannon",
+            "aliases": [
+              "Havoc lascannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-havoc-lascannon-ranged-13"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-havocs-selection-havoc-missile-launcher-frag",
+            "title": "➤ Havoc missile launcher - frag",
+            "aliases": [
+              "➤ Havoc missile launcher - frag"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-havoc-missile-launcher-frag-ranged-14"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-havocs-selection-havoc-missile-launcher-krak",
+            "title": "➤ Havoc missile launcher - krak",
+            "aliases": [
+              "➤ Havoc missile launcher - krak"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-havoc-missile-launcher-krak-ranged-15"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-havocs-selection-havoc-reaper-chaincannon",
+            "title": "Havoc reaper chaincannon",
+            "aliases": [
+              "Havoc reaper chaincannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-havoc-reaper-chaincannon-ranged-16"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-havocs-selection-havoc-heavy-bolter",
+            "title": "Havoc heavy bolter",
+            "aliases": [
+              "Havoc heavy bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-havocs-profile-havoc-heavy-bolter-ranged-17"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-havocs-profile-accursed-weapon-melee",
+            "title": "Accursed weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-accursed-weapon"
+            ]
+          },
+          {
+            "id": "unit-havocs-profile-power-fist-melee-2",
+            "title": "Power fist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-power-fist"
+            ]
+          },
+          {
+            "id": "unit-havocs-profile-astartes-chainsword-melee-3",
+            "title": "Astartes chainsword",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-astartes-chainsword"
+            ]
+          },
+          {
+            "id": "unit-havocs-profile-flamer-ranged-4",
+            "title": "Flamer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Ignores Cover, Torrent",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-flamer"
+            ]
+          },
+          {
+            "id": "unit-havocs-profile-plasma-gun-standard-ranged-5",
+            "title": "➤ Plasma gun - standard",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-plasma-gun-standard"
+            ]
+          },
+          {
+            "id": "unit-havocs-profile-plasma-gun-supercharge-ranged-6",
+            "title": "➤ Plasma gun - supercharge",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-plasma-gun-supercharge"
+            ]
+          },
+          {
+            "id": "unit-havocs-profile-plasma-pistol-standard-ranged-7",
+            "title": "➤ Plasma pistol - standard",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-plasma-pistol-standard"
+            ]
+          },
+          {
+            "id": "unit-havocs-profile-plasma-pistol-supercharge-ranged-8",
+            "title": "➤ Plasma pistol - supercharge",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Pistol",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-plasma-pistol-supercharge"
+            ]
+          },
+          {
+            "id": "unit-havocs-profile-boltgun-ranged-9",
+            "title": "Boltgun",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-boltgun"
+            ]
+          },
+          {
+            "id": "unit-havocs-profile-meltagun-ranged-10",
+            "title": "Meltagun",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-4",
+            "d": "D6",
+            "abilities": "Melta 2",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-meltagun"
+            ]
+          },
+          {
+            "id": "unit-havocs-profile-havoc-autocannon-ranged-11",
+            "title": "Havoc autocannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-1",
+            "d": "3",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-havoc-autocannon"
+            ]
+          },
+          {
+            "id": "unit-havocs-profile-close-combat-weapon-melee-12",
+            "title": "Close combat weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-close-combat-weapon"
+            ]
+          },
+          {
+            "id": "unit-havocs-profile-havoc-lascannon-ranged-13",
+            "title": "Havoc lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-havoc-lascannon"
+            ]
+          },
+          {
+            "id": "unit-havocs-profile-havoc-missile-launcher-frag-ranged-14",
+            "title": "➤ Havoc missile launcher - frag",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-havoc-missile-launcher-frag"
+            ]
+          },
+          {
+            "id": "unit-havocs-profile-havoc-missile-launcher-krak-ranged-15",
+            "title": "➤ Havoc missile launcher - krak",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-2",
+            "d": "D6",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-havoc-missile-launcher-krak"
+            ]
+          },
+          {
+            "id": "unit-havocs-profile-havoc-reaper-chaincannon-ranged-16",
+            "title": "Havoc reaper chaincannon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "8",
+            "skill": "3+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-havoc-reaper-chaincannon"
+            ]
+          },
+          {
+            "id": "unit-havocs-profile-havoc-heavy-bolter-ranged-17",
+            "title": "Havoc heavy bolter",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Sustained Hits 1",
+            "sourceSelectionIds": [
+              "unit-havocs-selection-havoc-heavy-bolter"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1570,6 +6879,103 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           ],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-mutilators-model-mutilator",
+            "title": "Mutilator",
+            "aliases": [
+              "Mutilator"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-mutilators-selection-fleshmetal-weapons-rending-strikes",
+            "title": "➤ Fleshmetal weapons - rending strikes",
+            "aliases": [
+              "➤ Fleshmetal weapons - rending strikes"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-mutilators-profile-fleshmetal-weapons-rending-strikes-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-mutilators-selection-fleshmetal-weapons-clawed-sweeps",
+            "title": "➤ Fleshmetal weapons - clawed sweeps",
+            "aliases": [
+              "➤ Fleshmetal weapons - clawed sweeps"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-mutilators-profile-fleshmetal-weapons-clawed-sweeps-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-mutilators-selection-fleshmetal-weapons-thunderous-blows",
+            "title": "➤ Fleshmetal weapons - thunderous blows",
+            "aliases": [
+              "➤ Fleshmetal weapons - thunderous blows"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-mutilators-profile-fleshmetal-weapons-thunderous-blows-melee-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-mutilators-profile-fleshmetal-weapons-rending-strikes-melee",
+            "title": "➤ Fleshmetal weapons - rending strikes",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-mutilators-selection-fleshmetal-weapons-rending-strikes"
+            ]
+          },
+          {
+            "id": "unit-mutilators-profile-fleshmetal-weapons-clawed-sweeps-melee-2",
+            "title": "➤ Fleshmetal weapons - clawed sweeps",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-mutilators-selection-fleshmetal-weapons-clawed-sweeps"
+            ]
+          },
+          {
+            "id": "unit-mutilators-profile-fleshmetal-weapons-thunderous-blows-melee-3",
+            "title": "➤ Fleshmetal weapons - thunderous blows",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "2",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-4",
+            "d": "D6+2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-mutilators-selection-fleshmetal-weapons-thunderous-blows"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1644,6 +7050,534 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             }
           ]
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-nemesis-claw-model-visionary",
+            "title": "Visionary",
+            "aliases": [
+              "Visionary"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-model-4-9-legionaries-2",
+            "title": "4 - 9 Legionaries",
+            "aliases": [
+              "4 - 9 Legionaries"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-nemesis-claw-selection-nostraman-chainblade",
+            "title": "Nostraman chainblade",
+            "aliases": [
+              "Nostraman chainblade"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-nostraman-chainblade-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-accursed-weapon",
+            "title": "Accursed weapon",
+            "aliases": [
+              "Accursed weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-accursed-weapon-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-power-fist",
+            "title": "Power fist",
+            "aliases": [
+              "Power fist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-power-fist-melee-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-bolt-pistol-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-plasma-pistol-standard",
+            "title": "➤ Plasma pistol - standard",
+            "aliases": [
+              "➤ Plasma pistol - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-plasma-pistol-standard-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-plasma-pistol-supercharge",
+            "title": "➤ Plasma pistol - supercharge",
+            "aliases": [
+              "➤ Plasma pistol - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-plasma-pistol-supercharge-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-boltgun",
+            "title": "Boltgun",
+            "aliases": [
+              "Boltgun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-boltgun-ranged-7"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-close-combat-weapon",
+            "title": "Close combat weapon",
+            "aliases": [
+              "Close combat weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-close-combat-weapon-melee-8"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-astartes-chainsword",
+            "title": "Astartes chainsword",
+            "aliases": [
+              "Astartes chainsword"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-astartes-chainsword-melee-9"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-heavy-bolter",
+            "title": "Heavy bolter",
+            "aliases": [
+              "Heavy bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-heavy-bolter-ranged-10"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-missile-launcher-frag",
+            "title": "➤ Missile launcher - frag",
+            "aliases": [
+              "➤ Missile launcher - frag"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-missile-launcher-frag-ranged-11"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-missile-launcher-krak",
+            "title": "➤ Missile launcher - krak",
+            "aliases": [
+              "➤ Missile launcher - krak"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-missile-launcher-krak-ranged-12"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-flamer",
+            "title": "Flamer",
+            "aliases": [
+              "Flamer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-flamer-ranged-13"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-plasma-gun-standard",
+            "title": "➤ Plasma gun - standard",
+            "aliases": [
+              "➤ Plasma gun - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-plasma-gun-standard-ranged-14"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-plasma-gun-supercharge",
+            "title": "➤ Plasma gun - supercharge",
+            "aliases": [
+              "➤ Plasma gun - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-plasma-gun-supercharge-ranged-15"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-meltagun",
+            "title": "Meltagun",
+            "aliases": [
+              "Meltagun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-meltagun-ranged-16"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-nostraman-chainglaive",
+            "title": "Nostraman chainglaive",
+            "aliases": [
+              "Nostraman chainglaive"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-nostraman-chainglaive-melee-17"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-paired-accursed-weapons",
+            "title": "Paired accursed weapons",
+            "aliases": [
+              "Paired accursed weapons"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-nemesis-claw-profile-paired-accursed-weapons-melee-18"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-nemesis-claw-selection-voice-eater",
+            "title": "Voice eater",
+            "aliases": [
+              "Voice eater"
+            ],
+            "kind": "wargear",
+            "profileIds": [],
+            "wargearAbilityIds": [],
+            "candidateWargearAbilityIds": [
+              "unit-nemesis-claw-wargear-ability-voice-eater"
+            ]
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-nemesis-claw-profile-nostraman-chainblade-melee",
+            "title": "Nostraman chainblade",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Sustained Hits 1",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-nostraman-chainblade"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-accursed-weapon-melee-2",
+            "title": "Accursed weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-accursed-weapon"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-power-fist-melee-3",
+            "title": "Power fist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-power-fist"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-bolt-pistol-ranged-4",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-plasma-pistol-standard-ranged-5",
+            "title": "➤ Plasma pistol - standard",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-plasma-pistol-standard"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-plasma-pistol-supercharge-ranged-6",
+            "title": "➤ Plasma pistol - supercharge",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Pistol",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-plasma-pistol-supercharge"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-boltgun-ranged-7",
+            "title": "Boltgun",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-boltgun"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-close-combat-weapon-melee-8",
+            "title": "Close combat weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-close-combat-weapon"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-astartes-chainsword-melee-9",
+            "title": "Astartes chainsword",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-astartes-chainsword"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-heavy-bolter-ranged-10",
+            "title": "Heavy bolter",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "3",
+            "skill": "4+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Heavy, Sustained Hits 1",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-heavy-bolter"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-missile-launcher-frag-ranged-11",
+            "title": "➤ Missile launcher - frag",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Blast, Heavy",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-missile-launcher-frag"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-missile-launcher-krak-ranged-12",
+            "title": "➤ Missile launcher - krak",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "9",
+            "ap": "-2",
+            "d": "D6",
+            "abilities": "Heavy",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-missile-launcher-krak"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-flamer-ranged-13",
+            "title": "Flamer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Ignores Cover, Torrent",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-flamer"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-plasma-gun-standard-ranged-14",
+            "title": "➤ Plasma gun - standard",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-plasma-gun-standard"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-plasma-gun-supercharge-ranged-15",
+            "title": "➤ Plasma gun - supercharge",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-plasma-gun-supercharge"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-meltagun-ranged-16",
+            "title": "Meltagun",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-4",
+            "d": "D6",
+            "abilities": "Melta 2",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-meltagun"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-nostraman-chainglaive-melee-17",
+            "title": "Nostraman chainglaive",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Sustained Hits 1",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-nostraman-chainglaive"
+            ]
+          },
+          {
+            "id": "unit-nemesis-claw-profile-paired-accursed-weapons-melee-18",
+            "title": "Paired accursed weapons",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Twin-linked",
+            "sourceSelectionIds": [
+              "unit-nemesis-claw-selection-paired-accursed-weapons"
+            ]
+          }
+        ],
+        "wargearAbilities": [
+          {
+            "id": "unit-nemesis-claw-wargear-ability-voice-eater",
+            "title": "Voice eater",
+            "requiredSelectionIds": []
+          }
+        ]
       }
     },
     {
@@ -1679,6 +7613,130 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           ],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-obliterators-model-obliterator",
+            "title": "Obliterator",
+            "aliases": [
+              "Obliterator"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-obliterators-selection-crushing-fists",
+            "title": "Crushing fists",
+            "aliases": [
+              "Crushing fists"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-obliterators-profile-crushing-fists-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-obliterators-selection-fleshmetal-guns-focused-malice",
+            "title": "➤ Fleshmetal guns - focused malice",
+            "aliases": [
+              "➤ Fleshmetal guns - focused malice"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-obliterators-profile-fleshmetal-guns-focused-malice-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-obliterators-selection-fleshmetal-guns-ruinous-salvo",
+            "title": "➤ Fleshmetal guns - ruinous salvo",
+            "aliases": [
+              "➤ Fleshmetal guns - ruinous salvo"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-obliterators-profile-fleshmetal-guns-ruinous-salvo-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-obliterators-selection-fleshmetal-guns-warp-hail",
+            "title": "➤ Fleshmetal guns - warp hail",
+            "aliases": [
+              "➤ Fleshmetal guns - warp hail"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-obliterators-profile-fleshmetal-guns-warp-hail-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-obliterators-profile-crushing-fists-melee",
+            "title": "Crushing fists",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-obliterators-selection-crushing-fists"
+            ]
+          },
+          {
+            "id": "unit-obliterators-profile-fleshmetal-guns-focused-malice-ranged-2",
+            "title": "➤ Fleshmetal guns - focused malice",
+            "mode": "ranged",
+            "range": "18\"",
+            "a": "D3",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "4",
+            "abilities": "Melta 2",
+            "sourceSelectionIds": [
+              "unit-obliterators-selection-fleshmetal-guns-focused-malice"
+            ]
+          },
+          {
+            "id": "unit-obliterators-profile-fleshmetal-guns-ruinous-salvo-ranged-3",
+            "title": "➤ Fleshmetal guns - ruinous salvo",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-obliterators-selection-fleshmetal-guns-ruinous-salvo"
+            ]
+          },
+          {
+            "id": "unit-obliterators-profile-fleshmetal-guns-warp-hail-ranged-4",
+            "title": "➤ Fleshmetal guns - warp hail",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "D6+3",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Sustained Hits 1",
+            "sourceSelectionIds": [
+              "unit-obliterators-selection-fleshmetal-guns-warp-hail"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1714,6 +7772,68 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           ],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-possessed-model-5-10-possessed",
+            "title": "5 - 10 Possessed",
+            "aliases": [
+              "5 - 10 Possessed"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-possessed-selection-hideous-mutations",
+            "title": "Hideous mutations",
+            "aliases": [
+              "Hideous mutations"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-possessed-profile-hideous-mutations-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-possessed-selection-chaos-icon",
+            "title": "Chaos icon",
+            "aliases": [
+              "Chaos icon"
+            ],
+            "kind": "wargear",
+            "profileIds": [],
+            "wargearAbilityIds": [],
+            "candidateWargearAbilityIds": [
+              "unit-possessed-wargear-ability-chaos-icon"
+            ]
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-possessed-profile-hideous-mutations-melee",
+            "title": "Hideous mutations",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-possessed-selection-hideous-mutations"
+            ]
+          }
+        ],
+        "wargearAbilities": [
+          {
+            "id": "unit-possessed-wargear-ability-chaos-icon",
+            "title": "Chaos icon",
+            "requiredSelectionIds": []
+          }
+        ]
       }
     },
     {
@@ -1757,6 +7877,353 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           ],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-raptors-model-raptor-champion",
+            "title": "Raptor Champion",
+            "aliases": [
+              "Raptor Champion"
+            ]
+          },
+          {
+            "id": "unit-raptors-model-4-9-raptors-2",
+            "title": "4-9 Raptors",
+            "aliases": [
+              "4-9 Raptors"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-raptors-selection-astartes-chainsword",
+            "title": "Astartes chainsword",
+            "aliases": [
+              "Astartes chainsword"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-raptors-profile-astartes-chainsword-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-raptors-selection-accursed-weapon",
+            "title": "Accursed weapon",
+            "aliases": [
+              "Accursed weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-raptors-profile-accursed-weapon-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-raptors-selection-heavy-melee-weapon",
+            "title": "Heavy melee weapon",
+            "aliases": [
+              "Heavy melee weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-raptors-profile-heavy-melee-weapon-melee-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-raptors-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-raptors-profile-bolt-pistol-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-raptors-selection-plasma-pistol-standard",
+            "title": "➤ Plasma pistol - standard",
+            "aliases": [
+              "➤ Plasma pistol - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-raptors-profile-plasma-pistol-standard-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-raptors-selection-plasma-pistol-supercharge",
+            "title": "➤ Plasma pistol - supercharge",
+            "aliases": [
+              "➤ Plasma pistol - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-raptors-profile-plasma-pistol-supercharge-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-raptors-selection-mutations",
+            "title": "Mutations",
+            "aliases": [
+              "Mutations"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-raptors-profile-mutations-melee-7"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-raptors-selection-close-combat-weapon",
+            "title": "Close combat weapon",
+            "aliases": [
+              "Close combat weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-raptors-profile-close-combat-weapon-melee-8"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-raptors-selection-meltagun",
+            "title": "Meltagun",
+            "aliases": [
+              "Meltagun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-raptors-profile-meltagun-ranged-9"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-raptors-selection-plasma-gun-standard",
+            "title": "➤ Plasma gun - standard",
+            "aliases": [
+              "➤ Plasma gun - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-raptors-profile-plasma-gun-standard-ranged-10"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-raptors-selection-plasma-gun-supercharge",
+            "title": "➤ Plasma gun - supercharge",
+            "aliases": [
+              "➤ Plasma gun - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-raptors-profile-plasma-gun-supercharge-ranged-11"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-raptors-selection-flamer",
+            "title": "Flamer",
+            "aliases": [
+              "Flamer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-raptors-profile-flamer-ranged-12"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-raptors-profile-astartes-chainsword-melee",
+            "title": "Astartes chainsword",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-raptors-selection-astartes-chainsword"
+            ]
+          },
+          {
+            "id": "unit-raptors-profile-accursed-weapon-melee-2",
+            "title": "Accursed weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-raptors-selection-accursed-weapon"
+            ]
+          },
+          {
+            "id": "unit-raptors-profile-heavy-melee-weapon-melee-3",
+            "title": "Heavy melee weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-raptors-selection-heavy-melee-weapon"
+            ]
+          },
+          {
+            "id": "unit-raptors-profile-bolt-pistol-ranged-4",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-raptors-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-raptors-profile-plasma-pistol-standard-ranged-5",
+            "title": "➤ Plasma pistol - standard",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-raptors-selection-plasma-pistol-standard"
+            ]
+          },
+          {
+            "id": "unit-raptors-profile-plasma-pistol-supercharge-ranged-6",
+            "title": "➤ Plasma pistol - supercharge",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Pistol",
+            "sourceSelectionIds": [
+              "unit-raptors-selection-plasma-pistol-supercharge"
+            ]
+          },
+          {
+            "id": "unit-raptors-profile-mutations-melee-7",
+            "title": "Mutations",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-raptors-selection-mutations"
+            ]
+          },
+          {
+            "id": "unit-raptors-profile-close-combat-weapon-melee-8",
+            "title": "Close combat weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-raptors-selection-close-combat-weapon"
+            ]
+          },
+          {
+            "id": "unit-raptors-profile-meltagun-ranged-9",
+            "title": "Meltagun",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-4",
+            "d": "D6",
+            "abilities": "Melta 2",
+            "sourceSelectionIds": [
+              "unit-raptors-selection-meltagun"
+            ]
+          },
+          {
+            "id": "unit-raptors-profile-plasma-gun-standard-ranged-10",
+            "title": "➤ Plasma gun - standard",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-raptors-selection-plasma-gun-standard"
+            ]
+          },
+          {
+            "id": "unit-raptors-profile-plasma-gun-supercharge-ranged-11",
+            "title": "➤ Plasma gun - supercharge",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-raptors-selection-plasma-gun-supercharge"
+            ]
+          },
+          {
+            "id": "unit-raptors-profile-flamer-ranged-12",
+            "title": "Flamer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Ignores Cover, Torrent",
+            "sourceSelectionIds": [
+              "unit-raptors-selection-flamer"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1848,6 +8315,191 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             }
           ]
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-red-corsairs-raiders-model-red-corsairs-raider-champion",
+            "title": "Red Corsairs Raider Champion",
+            "aliases": [
+              "Red Corsairs Raider Champion"
+            ]
+          },
+          {
+            "id": "unit-red-corsairs-raiders-model-4-9-raiders-2",
+            "title": "4 - 9 Raiders",
+            "aliases": [
+              "4 - 9 Raiders"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-red-corsairs-raiders-selection-hand-flamer",
+            "title": "Hand flamer",
+            "aliases": [
+              "Hand flamer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-red-corsairs-raiders-profile-hand-flamer-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-red-corsairs-raiders-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-red-corsairs-raiders-profile-bolt-pistol-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-red-corsairs-raiders-selection-boltgun",
+            "title": "Boltgun",
+            "aliases": [
+              "Boltgun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-red-corsairs-raiders-profile-boltgun-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-red-corsairs-raiders-selection-reavers-blade",
+            "title": "Reaver's blade",
+            "aliases": [
+              "Reaver's blade"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-red-corsairs-raiders-profile-reavers-blade-melee-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-red-corsairs-raiders-selection-meltagun",
+            "title": "Meltagun",
+            "aliases": [
+              "Meltagun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-red-corsairs-raiders-profile-meltagun-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-red-corsairs-raiders-selection-power-fist",
+            "title": "Power fist",
+            "aliases": [
+              "Power fist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-red-corsairs-raiders-profile-power-fist-melee-6"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-red-corsairs-raiders-profile-hand-flamer-ranged",
+            "title": "Hand flamer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Ignores Cover, Pistol, Torrent",
+            "sourceSelectionIds": [
+              "unit-red-corsairs-raiders-selection-hand-flamer"
+            ]
+          },
+          {
+            "id": "unit-red-corsairs-raiders-profile-bolt-pistol-ranged-2",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-red-corsairs-raiders-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-red-corsairs-raiders-profile-boltgun-ranged-3",
+            "title": "Boltgun",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-red-corsairs-raiders-selection-boltgun"
+            ]
+          },
+          {
+            "id": "unit-red-corsairs-raiders-profile-reavers-blade-melee-4",
+            "title": "Reaver's blade",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-red-corsairs-raiders-selection-reavers-blade"
+            ]
+          },
+          {
+            "id": "unit-red-corsairs-raiders-profile-meltagun-ranged-5",
+            "title": "Meltagun",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-4",
+            "d": "D6",
+            "abilities": "Melta 2",
+            "sourceSelectionIds": [
+              "unit-red-corsairs-raiders-selection-meltagun"
+            ]
+          },
+          {
+            "id": "unit-red-corsairs-raiders-profile-power-fist-melee-6",
+            "title": "Power fist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-red-corsairs-raiders-selection-power-fist"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1884,6 +8536,380 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           ],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-traitor-guardsmen-squad-model-traitor-sergeant",
+            "title": "Traitor Sergeant",
+            "aliases": [
+              "Traitor Sergeant"
+            ]
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-model-9-traitor-guardsmen-2",
+            "title": "9 Traitor Guardsmen",
+            "aliases": [
+              "9 Traitor Guardsmen"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-traitor-guardsmen-squad-selection-chainsword",
+            "title": "Chainsword",
+            "aliases": [
+              "Chainsword"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-traitor-guardsmen-squad-profile-chainsword-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-selection-power-weapon",
+            "title": "Power weapon",
+            "aliases": [
+              "Power weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-traitor-guardsmen-squad-profile-power-weapon-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-selection-close-combat-weapon",
+            "title": "Close combat weapon",
+            "aliases": [
+              "Close combat weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-traitor-guardsmen-squad-profile-close-combat-weapon-melee-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-selection-corrupted-pistol",
+            "title": "Corrupted pistol",
+            "aliases": [
+              "Corrupted pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-traitor-guardsmen-squad-profile-corrupted-pistol-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-selection-boltgun",
+            "title": "Boltgun",
+            "aliases": [
+              "Boltgun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-traitor-guardsmen-squad-profile-boltgun-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-selection-lasgun",
+            "title": "Lasgun",
+            "aliases": [
+              "Lasgun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-traitor-guardsmen-squad-profile-lasgun-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-selection-flamer",
+            "title": "Flamer",
+            "aliases": [
+              "Flamer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-traitor-guardsmen-squad-profile-flamer-ranged-7"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-selection-plasma-gun-standard",
+            "title": "➤ Plasma gun - standard",
+            "aliases": [
+              "➤ Plasma gun - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-traitor-guardsmen-squad-profile-plasma-gun-standard-ranged-8"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-selection-plasma-gun-supercharge",
+            "title": "➤ Plasma gun - supercharge",
+            "aliases": [
+              "➤ Plasma gun - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-traitor-guardsmen-squad-profile-plasma-gun-supercharge-ranged-9"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-selection-meltagun",
+            "title": "Meltagun",
+            "aliases": [
+              "Meltagun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-traitor-guardsmen-squad-profile-meltagun-ranged-10"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-selection-cultist-sniper-rifle",
+            "title": "Cultist sniper rifle",
+            "aliases": [
+              "Cultist sniper rifle"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-traitor-guardsmen-squad-profile-cultist-sniper-rifle-ranged-11"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-selection-cultist-grenade-launcher-frag",
+            "title": "➤ Cultist grenade launcher - frag",
+            "aliases": [
+              "➤ Cultist grenade launcher - frag"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-traitor-guardsmen-squad-profile-cultist-grenade-launcher-frag-ranged-12"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-selection-cultist-grenade-launcher-krak",
+            "title": "➤ Cultist grenade launcher - krak",
+            "aliases": [
+              "➤ Cultist grenade launcher - krak"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-traitor-guardsmen-squad-profile-cultist-grenade-launcher-krak-ranged-13"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-traitor-guardsmen-squad-profile-chainsword-melee",
+            "title": "Chainsword",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "4+",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-traitor-guardsmen-squad-selection-chainsword"
+            ]
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-profile-power-weapon-melee-2",
+            "title": "Power weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "2",
+            "skill": "4+",
+            "s": "4",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-traitor-guardsmen-squad-selection-power-weapon"
+            ]
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-profile-close-combat-weapon-melee-3",
+            "title": "Close combat weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "1",
+            "skill": "4+",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-traitor-guardsmen-squad-selection-close-combat-weapon"
+            ]
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-profile-corrupted-pistol-ranged-4",
+            "title": "Corrupted pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-traitor-guardsmen-squad-selection-corrupted-pistol"
+            ]
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-profile-boltgun-ranged-5",
+            "title": "Boltgun",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-traitor-guardsmen-squad-selection-boltgun"
+            ]
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-profile-lasgun-ranged-6",
+            "title": "Lasgun",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-traitor-guardsmen-squad-selection-lasgun"
+            ]
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-profile-flamer-ranged-7",
+            "title": "Flamer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Ignores Cover, Torrent",
+            "sourceSelectionIds": [
+              "unit-traitor-guardsmen-squad-selection-flamer"
+            ]
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-profile-plasma-gun-standard-ranged-8",
+            "title": "➤ Plasma gun - standard",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-traitor-guardsmen-squad-selection-plasma-gun-standard"
+            ]
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-profile-plasma-gun-supercharge-ranged-9",
+            "title": "➤ Plasma gun - supercharge",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-traitor-guardsmen-squad-selection-plasma-gun-supercharge"
+            ]
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-profile-meltagun-ranged-10",
+            "title": "Meltagun",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "9",
+            "ap": "-4",
+            "d": "D6",
+            "abilities": "Melta 2",
+            "sourceSelectionIds": [
+              "unit-traitor-guardsmen-squad-selection-meltagun"
+            ]
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-profile-cultist-sniper-rifle-ranged-11",
+            "title": "Cultist sniper rifle",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Heavy, Precision",
+            "sourceSelectionIds": [
+              "unit-traitor-guardsmen-squad-selection-cultist-sniper-rifle"
+            ]
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-profile-cultist-grenade-launcher-frag-ranged-12",
+            "title": "➤ Cultist grenade launcher - frag",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "D3",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-traitor-guardsmen-squad-selection-cultist-grenade-launcher-frag"
+            ]
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-profile-cultist-grenade-launcher-krak-ranged-13",
+            "title": "➤ Cultist grenade launcher - krak",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "9",
+            "ap": "-2",
+            "d": "D3",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-traitor-guardsmen-squad-selection-cultist-grenade-launcher-krak"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1914,6 +8940,49 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-warp-talons-model-5-10-warp-talons",
+            "title": "5-10 Warp Talons",
+            "aliases": [
+              "5-10 Warp Talons"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-warp-talons-selection-warp-claws",
+            "title": "Warp claws",
+            "aliases": [
+              "Warp claws"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-warp-talons-profile-warp-claws-melee"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-warp-talons-profile-warp-claws-melee",
+            "title": "Warp claws",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Twin-linked",
+            "sourceSelectionIds": [
+              "unit-warp-talons-selection-warp-claws"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1941,6 +9010,399 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-chaos-bikers-model-biker-champion",
+            "title": "Biker Champion",
+            "aliases": [
+              "Biker Champion"
+            ]
+          },
+          {
+            "id": "unit-chaos-bikers-model-2-5-bikers-2",
+            "title": "2-5 Bikers",
+            "aliases": [
+              "2-5 Bikers"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-chaos-bikers-selection-accursed-weapon",
+            "title": "Accursed weapon",
+            "aliases": [
+              "Accursed weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-bikers-profile-accursed-weapon-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-bikers-selection-astartes-chainsword",
+            "title": "Astartes chainsword",
+            "aliases": [
+              "Astartes chainsword"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-bikers-profile-astartes-chainsword-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-bikers-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-bikers-profile-bolt-pistol-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-bikers-selection-plasma-pistol-standard",
+            "title": "➤ Plasma pistol - standard",
+            "aliases": [
+              "➤ Plasma pistol - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-bikers-profile-plasma-pistol-standard-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-bikers-selection-plasma-pistol-supercharge",
+            "title": "➤ Plasma pistol - supercharge",
+            "aliases": [
+              "➤ Plasma pistol - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-bikers-profile-plasma-pistol-supercharge-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-bikers-selection-power-fist",
+            "title": "Power fist",
+            "aliases": [
+              "Power fist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-bikers-profile-power-fist-melee-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-bikers-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-bikers-profile-combi-bolter-ranged-7"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-bikers-selection-close-combat-weapon",
+            "title": "Close combat weapon",
+            "aliases": [
+              "Close combat weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-bikers-profile-close-combat-weapon-melee-8"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-bikers-selection-flamer",
+            "title": "Flamer",
+            "aliases": [
+              "Flamer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-bikers-profile-flamer-ranged-9"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-bikers-selection-meltagun",
+            "title": "Meltagun",
+            "aliases": [
+              "Meltagun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-bikers-profile-meltagun-ranged-10"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-bikers-selection-plasma-gun-standard",
+            "title": "➤ Plasma gun - standard",
+            "aliases": [
+              "➤ Plasma gun - standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-bikers-profile-plasma-gun-standard-ranged-11"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-bikers-selection-plasma-gun-supercharge",
+            "title": "➤ Plasma gun - supercharge",
+            "aliases": [
+              "➤ Plasma gun - supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-bikers-profile-plasma-gun-supercharge-ranged-12"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-bikers-selection-combi-weapon",
+            "title": "Combi-weapon",
+            "aliases": [
+              "Combi-weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-bikers-profile-combi-weapon-ranged-13"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-bikers-selection-chaos-icon",
+            "title": "Chaos icon",
+            "aliases": [
+              "Chaos icon"
+            ],
+            "kind": "wargear",
+            "profileIds": [],
+            "wargearAbilityIds": [],
+            "candidateWargearAbilityIds": [
+              "unit-chaos-bikers-wargear-ability-chaos-icon"
+            ]
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-chaos-bikers-profile-accursed-weapon-melee",
+            "title": "Accursed weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-bikers-selection-accursed-weapon"
+            ]
+          },
+          {
+            "id": "unit-chaos-bikers-profile-astartes-chainsword-melee-2",
+            "title": "Astartes chainsword",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-bikers-selection-astartes-chainsword"
+            ]
+          },
+          {
+            "id": "unit-chaos-bikers-profile-bolt-pistol-ranged-3",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-chaos-bikers-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "unit-chaos-bikers-profile-plasma-pistol-standard-ranged-4",
+            "title": "➤ Plasma pistol - standard",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Pistol",
+            "sourceSelectionIds": [
+              "unit-chaos-bikers-selection-plasma-pistol-standard"
+            ]
+          },
+          {
+            "id": "unit-chaos-bikers-profile-plasma-pistol-supercharge-ranged-5",
+            "title": "➤ Plasma pistol - supercharge",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Pistol",
+            "sourceSelectionIds": [
+              "unit-chaos-bikers-selection-plasma-pistol-supercharge"
+            ]
+          },
+          {
+            "id": "unit-chaos-bikers-profile-power-fist-melee-6",
+            "title": "Power fist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-bikers-selection-power-fist"
+            ]
+          },
+          {
+            "id": "unit-chaos-bikers-profile-combi-bolter-ranged-7",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Rapid Fire 2",
+            "sourceSelectionIds": [
+              "unit-chaos-bikers-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "unit-chaos-bikers-profile-close-combat-weapon-melee-8",
+            "title": "Close combat weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-bikers-selection-close-combat-weapon"
+            ]
+          },
+          {
+            "id": "unit-chaos-bikers-profile-flamer-ranged-9",
+            "title": "Flamer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Ignores Cover, Torrent",
+            "sourceSelectionIds": [
+              "unit-chaos-bikers-selection-flamer"
+            ]
+          },
+          {
+            "id": "unit-chaos-bikers-profile-meltagun-ranged-10",
+            "title": "Meltagun",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-4",
+            "d": "D6",
+            "abilities": "Melta 2",
+            "sourceSelectionIds": [
+              "unit-chaos-bikers-selection-meltagun"
+            ]
+          },
+          {
+            "id": "unit-chaos-bikers-profile-plasma-gun-standard-ranged-11",
+            "title": "➤ Plasma gun - standard",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-chaos-bikers-selection-plasma-gun-standard"
+            ]
+          },
+          {
+            "id": "unit-chaos-bikers-profile-plasma-gun-supercharge-ranged-12",
+            "title": "➤ Plasma gun - supercharge",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "Hazardous, Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-chaos-bikers-selection-plasma-gun-supercharge"
+            ]
+          },
+          {
+            "id": "unit-chaos-bikers-profile-combi-weapon-ranged-13",
+            "title": "Combi-weapon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-chaos-bikers-selection-combi-weapon"
+            ]
+          }
+        ],
+        "wargearAbilities": [
+          {
+            "id": "unit-chaos-bikers-wargear-ability-chaos-icon",
+            "title": "Chaos icon",
+            "requiredSelectionIds": []
+          }
+        ]
       }
     },
     {
@@ -1970,6 +9432,184 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-chaos-land-raider-model-chaos-land-raider",
+            "title": "Chaos Land Raider",
+            "aliases": [
+              "Chaos Land Raider"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-chaos-land-raider-selection-armoured-tracks",
+            "title": "Armoured tracks",
+            "aliases": [
+              "Armoured tracks"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-land-raider-profile-armoured-tracks-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-land-raider-selection-soulshatter-lascannon",
+            "title": "Soulshatter lascannon",
+            "aliases": [
+              "Soulshatter lascannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-land-raider-profile-soulshatter-lascannon-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-land-raider-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-land-raider-profile-combi-bolter-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-land-raider-selection-combi-weapon",
+            "title": "Combi-weapon",
+            "aliases": [
+              "Combi-weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-land-raider-profile-combi-weapon-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-land-raider-selection-havoc-launcher",
+            "title": "Havoc launcher",
+            "aliases": [
+              "Havoc launcher"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-land-raider-profile-havoc-launcher-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-land-raider-selection-twin-heavy-bolter",
+            "title": "Twin heavy bolter",
+            "aliases": [
+              "Twin heavy bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-land-raider-profile-twin-heavy-bolter-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-chaos-land-raider-profile-armoured-tracks-melee",
+            "title": "Armoured tracks",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "4+",
+            "s": "8",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-land-raider-selection-armoured-tracks"
+            ]
+          },
+          {
+            "id": "unit-chaos-land-raider-profile-soulshatter-lascannon-ranged-2",
+            "title": "Soulshatter lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-land-raider-selection-soulshatter-lascannon"
+            ]
+          },
+          {
+            "id": "unit-chaos-land-raider-profile-combi-bolter-ranged-3",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Rapid Fire 2",
+            "sourceSelectionIds": [
+              "unit-chaos-land-raider-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "unit-chaos-land-raider-profile-combi-weapon-ranged-4",
+            "title": "Combi-weapon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-chaos-land-raider-selection-combi-weapon"
+            ]
+          },
+          {
+            "id": "unit-chaos-land-raider-profile-havoc-launcher-ranged-5",
+            "title": "Havoc launcher",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-chaos-land-raider-selection-havoc-launcher"
+            ]
+          },
+          {
+            "id": "unit-chaos-land-raider-profile-twin-heavy-bolter-ranged-6",
+            "title": "Twin heavy bolter",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Sustained Hits 1, Twin-linked",
+            "sourceSelectionIds": [
+              "unit-chaos-land-raider-selection-twin-heavy-bolter"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1998,6 +9638,211 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-chaos-predator-annihilator-model-chaos-predator-annihilator",
+            "title": "Chaos Predator Annihilator",
+            "aliases": [
+              "Chaos Predator Annihilator"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-chaos-predator-annihilator-selection-predator-twin-lascannon",
+            "title": "Predator twin lascannon",
+            "aliases": [
+              "Predator twin lascannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-predator-annihilator-profile-predator-twin-lascannon-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-predator-annihilator-profile-combi-bolter-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-selection-combi-weapon",
+            "title": "Combi-weapon",
+            "aliases": [
+              "Combi-weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-predator-annihilator-profile-combi-weapon-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-selection-heavy-bolter",
+            "title": "Heavy bolter",
+            "aliases": [
+              "Heavy bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-predator-annihilator-profile-heavy-bolter-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-selection-lascannon",
+            "title": "Lascannon",
+            "aliases": [
+              "Lascannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-predator-annihilator-profile-lascannon-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-selection-armoured-tracks",
+            "title": "Armoured tracks",
+            "aliases": [
+              "Armoured tracks"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-predator-annihilator-profile-armoured-tracks-melee-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-selection-havoc-launcher",
+            "title": "Havoc launcher",
+            "aliases": [
+              "Havoc launcher"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-predator-annihilator-profile-havoc-launcher-ranged-7"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-chaos-predator-annihilator-profile-predator-twin-lascannon-ranged",
+            "title": "Predator twin lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "14",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "Twin-linked",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-annihilator-selection-predator-twin-lascannon"
+            ]
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-profile-combi-bolter-ranged-2",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Rapid Fire 2",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-annihilator-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-profile-combi-weapon-ranged-3",
+            "title": "Combi-weapon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-annihilator-selection-combi-weapon"
+            ]
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-profile-heavy-bolter-ranged-4",
+            "title": "Heavy bolter",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Sustained Hits 1",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-annihilator-selection-heavy-bolter"
+            ]
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-profile-lascannon-ranged-5",
+            "title": "Lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-annihilator-selection-lascannon"
+            ]
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-profile-armoured-tracks-melee-6",
+            "title": "Armoured tracks",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "4+",
+            "s": "6",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-annihilator-selection-armoured-tracks"
+            ]
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-profile-havoc-launcher-ranged-7",
+            "title": "Havoc launcher",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-annihilator-selection-havoc-launcher"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2026,6 +9871,211 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-chaos-predator-destructor-model-chaos-predator-destructor",
+            "title": "Chaos Predator Destructor",
+            "aliases": [
+              "Chaos Predator Destructor"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-chaos-predator-destructor-selection-predator-autocannon",
+            "title": "Predator autocannon",
+            "aliases": [
+              "Predator autocannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-predator-destructor-profile-predator-autocannon-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-destructor-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-predator-destructor-profile-combi-bolter-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-destructor-selection-combi-weapon",
+            "title": "Combi-weapon",
+            "aliases": [
+              "Combi-weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-predator-destructor-profile-combi-weapon-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-destructor-selection-heavy-bolter",
+            "title": "Heavy bolter",
+            "aliases": [
+              "Heavy bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-predator-destructor-profile-heavy-bolter-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-destructor-selection-lascannon",
+            "title": "Lascannon",
+            "aliases": [
+              "Lascannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-predator-destructor-profile-lascannon-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-destructor-selection-armoured-tracks",
+            "title": "Armoured tracks",
+            "aliases": [
+              "Armoured tracks"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-predator-destructor-profile-armoured-tracks-melee-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-destructor-selection-havoc-launcher",
+            "title": "Havoc launcher",
+            "aliases": [
+              "Havoc launcher"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-predator-destructor-profile-havoc-launcher-ranged-7"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-chaos-predator-destructor-profile-predator-autocannon-ranged",
+            "title": "Predator autocannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "4",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-1",
+            "d": "3",
+            "abilities": "Rapid Fire 2",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-destructor-selection-predator-autocannon"
+            ]
+          },
+          {
+            "id": "unit-chaos-predator-destructor-profile-combi-bolter-ranged-2",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Rapid Fire 2",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-destructor-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "unit-chaos-predator-destructor-profile-combi-weapon-ranged-3",
+            "title": "Combi-weapon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-destructor-selection-combi-weapon"
+            ]
+          },
+          {
+            "id": "unit-chaos-predator-destructor-profile-heavy-bolter-ranged-4",
+            "title": "Heavy bolter",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Sustained Hits 1",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-destructor-selection-heavy-bolter"
+            ]
+          },
+          {
+            "id": "unit-chaos-predator-destructor-profile-lascannon-ranged-5",
+            "title": "Lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-destructor-selection-lascannon"
+            ]
+          },
+          {
+            "id": "unit-chaos-predator-destructor-profile-armoured-tracks-melee-6",
+            "title": "Armoured tracks",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "4+",
+            "s": "6",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-destructor-selection-armoured-tracks"
+            ]
+          },
+          {
+            "id": "unit-chaos-predator-destructor-profile-havoc-launcher-ranged-7",
+            "title": "Havoc launcher",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-destructor-selection-havoc-launcher"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2052,6 +10102,49 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-chaos-spawn-model-chaos-spawn",
+            "title": "Chaos Spawn",
+            "aliases": [
+              "Chaos Spawn"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-chaos-spawn-selection-hideous-mutations",
+            "title": "Hideous Mutations",
+            "aliases": [
+              "Hideous Mutations"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-spawn-profile-hideous-mutations-melee"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-chaos-spawn-profile-hideous-mutations-melee",
+            "title": "Hideous Mutations",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "D6+2",
+            "skill": "4+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-spawn-selection-hideous-mutations"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2080,6 +10173,157 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-chaos-vindicator-model-chaos-vindicator",
+            "title": "Chaos Vindicator",
+            "aliases": [
+              "Chaos Vindicator"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-chaos-vindicator-selection-demolisher-cannon",
+            "title": "Demolisher cannon",
+            "aliases": [
+              "Demolisher cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-vindicator-profile-demolisher-cannon-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-vindicator-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-vindicator-profile-combi-bolter-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-vindicator-selection-combi-weapon",
+            "title": "Combi-weapon",
+            "aliases": [
+              "Combi-weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-vindicator-profile-combi-weapon-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-vindicator-selection-armoured-tracks",
+            "title": "Armoured tracks",
+            "aliases": [
+              "Armoured tracks"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-vindicator-profile-armoured-tracks-melee-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-vindicator-selection-havoc-launcher",
+            "title": "Havoc launcher",
+            "aliases": [
+              "Havoc launcher"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-chaos-vindicator-profile-havoc-launcher-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-chaos-vindicator-profile-demolisher-cannon-ranged",
+            "title": "Demolisher cannon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "D6+3",
+            "skill": "3+",
+            "s": "14",
+            "ap": "-3",
+            "d": "D6",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-chaos-vindicator-selection-demolisher-cannon"
+            ]
+          },
+          {
+            "id": "unit-chaos-vindicator-profile-combi-bolter-ranged-2",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Rapid Fire 2",
+            "sourceSelectionIds": [
+              "unit-chaos-vindicator-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "unit-chaos-vindicator-profile-combi-weapon-ranged-3",
+            "title": "Combi-weapon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Anti-INFANTRY 4+, Devastating Wounds, Rapid Fire 1",
+            "sourceSelectionIds": [
+              "unit-chaos-vindicator-selection-combi-weapon"
+            ]
+          },
+          {
+            "id": "unit-chaos-vindicator-profile-armoured-tracks-melee-4",
+            "title": "Armoured tracks",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "4+",
+            "s": "6",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-chaos-vindicator-selection-armoured-tracks"
+            ]
+          },
+          {
+            "id": "unit-chaos-vindicator-profile-havoc-launcher-ranged-5",
+            "title": "Havoc launcher",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-chaos-vindicator-selection-havoc-launcher"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2108,6 +10352,346 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-defiler-model-defiler",
+            "title": "Defiler",
+            "aliases": [
+              "Defiler"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-defiler-selection-shearing-claws-strike",
+            "title": "Shearing claws - strike",
+            "aliases": [
+              "Shearing claws - strike"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-defiler-profile-shearing-claws-strike-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-shearing-claws-sweep",
+            "title": "Shearing claws - sweep",
+            "aliases": [
+              "Shearing claws - sweep"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-defiler-profile-shearing-claws-sweep-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-heavy-missile-launcher-frag",
+            "title": "➤ Heavy missile launcher - frag",
+            "aliases": [
+              "➤ Heavy missile launcher - frag"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-defiler-profile-heavy-missile-launcher-frag-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-heavy-missile-launcher-krak",
+            "title": "➤ Heavy missile launcher - krak",
+            "aliases": [
+              "➤ Heavy missile launcher - krak"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-defiler-profile-heavy-missile-launcher-krak-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-electroscourge",
+            "title": "Electroscourge",
+            "aliases": [
+              "Electroscourge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-defiler-profile-electroscourge-melee-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-hades-lascannon",
+            "title": "Hades lascannon",
+            "aliases": [
+              "Hades lascannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-defiler-profile-hades-lascannon-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-heavy-reaper-autocannon",
+            "title": "Heavy reaper autocannon",
+            "aliases": [
+              "Heavy reaper autocannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-defiler-profile-heavy-reaper-autocannon-ranged-7"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-hades-battle-cannon",
+            "title": "Hades battle cannon",
+            "aliases": [
+              "Hades battle cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-defiler-profile-hades-battle-cannon-ranged-8"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-ectoplasma-destructor",
+            "title": "Ectoplasma destructor",
+            "aliases": [
+              "Ectoplasma destructor"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-defiler-profile-ectoplasma-destructor-ranged-9"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-heavy-baleflamer",
+            "title": "Heavy baleflamer",
+            "aliases": [
+              "Heavy baleflamer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-defiler-profile-heavy-baleflamer-ranged-10"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-excruciator-cannon",
+            "title": "Excruciator cannon",
+            "aliases": [
+              "Excruciator cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-defiler-profile-excruciator-cannon-ranged-11"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-magma-cutter",
+            "title": "Magma cutter",
+            "aliases": [
+              "Magma cutter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-defiler-profile-magma-cutter-ranged-12"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-defiler-profile-shearing-claws-strike-melee",
+            "title": "Shearing claws - strike",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "16",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-shearing-claws-strike"
+            ]
+          },
+          {
+            "id": "unit-defiler-profile-shearing-claws-sweep-melee-2",
+            "title": "Shearing claws - sweep",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "10",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-shearing-claws-sweep"
+            ]
+          },
+          {
+            "id": "unit-defiler-profile-heavy-missile-launcher-frag-ranged-3",
+            "title": "➤ Heavy missile launcher - frag",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "2D6",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-heavy-missile-launcher-frag"
+            ]
+          },
+          {
+            "id": "unit-defiler-profile-heavy-missile-launcher-krak-ranged-4",
+            "title": "➤ Heavy missile launcher - krak",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "10",
+            "ap": "-2",
+            "d": "D6+1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-heavy-missile-launcher-krak"
+            ]
+          },
+          {
+            "id": "unit-defiler-profile-electroscourge-melee-5",
+            "title": "Electroscourge",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Extra Attacks, Sustained Hits 2",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-electroscourge"
+            ]
+          },
+          {
+            "id": "unit-defiler-profile-hades-lascannon-ranged-6",
+            "title": "Hades lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-hades-lascannon"
+            ]
+          },
+          {
+            "id": "unit-defiler-profile-heavy-reaper-autocannon-ranged-7",
+            "title": "Heavy reaper autocannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "4",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-1",
+            "d": "3",
+            "abilities": "Devastating Wounds, Sustained Hits 1",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-heavy-reaper-autocannon"
+            ]
+          },
+          {
+            "id": "unit-defiler-profile-hades-battle-cannon-ranged-8",
+            "title": "Hades battle cannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6+3",
+            "skill": "3+",
+            "s": "10",
+            "ap": "-1",
+            "d": "3",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-hades-battle-cannon"
+            ]
+          },
+          {
+            "id": "unit-defiler-profile-ectoplasma-destructor-ranged-9",
+            "title": "Ectoplasma destructor",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-ectoplasma-destructor"
+            ]
+          },
+          {
+            "id": "unit-defiler-profile-heavy-baleflamer-ranged-10",
+            "title": "Heavy baleflamer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6+3",
+            "skill": "N/A",
+            "s": "7",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Ignores Cover, Torrent",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-heavy-baleflamer"
+            ]
+          },
+          {
+            "id": "unit-defiler-profile-excruciator-cannon-ranged-11",
+            "title": "Excruciator cannon",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "6",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-excruciator-cannon"
+            ]
+          },
+          {
+            "id": "unit-defiler-profile-magma-cutter-ranged-12",
+            "title": "Magma cutter",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-4",
+            "d": "D6",
+            "abilities": "Melta 2",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-magma-cutter"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2136,6 +10720,130 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-forgefiend-model-forgefiend",
+            "title": "Forgefiend",
+            "aliases": [
+              "Forgefiend"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-forgefiend-selection-ectoplasma-cannon",
+            "title": "Ectoplasma cannon",
+            "aliases": [
+              "Ectoplasma cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-forgefiend-profile-ectoplasma-cannon-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-forgefiend-selection-hades-autocannon",
+            "title": "Hades autocannon",
+            "aliases": [
+              "Hades autocannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-forgefiend-profile-hades-autocannon-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-forgefiend-selection-armoured-limbs",
+            "title": "Armoured limbs",
+            "aliases": [
+              "Armoured limbs"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-forgefiend-profile-armoured-limbs-melee-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-forgefiend-selection-forgefiend-jaws",
+            "title": "Forgefiend jaws",
+            "aliases": [
+              "Forgefiend jaws"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-forgefiend-profile-forgefiend-jaws-melee-4"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-forgefiend-profile-ectoplasma-cannon-ranged",
+            "title": "Ectoplasma cannon",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "D3",
+            "skill": "3+",
+            "s": "10",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-forgefiend-selection-ectoplasma-cannon"
+            ]
+          },
+          {
+            "id": "unit-forgefiend-profile-hades-autocannon-ranged-2",
+            "title": "Hades autocannon",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "6",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-forgefiend-selection-hades-autocannon"
+            ]
+          },
+          {
+            "id": "unit-forgefiend-profile-armoured-limbs-melee-3",
+            "title": "Armoured limbs",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "2",
+            "skill": "3+",
+            "s": "6",
+            "ap": "0",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-forgefiend-selection-armoured-limbs"
+            ]
+          },
+          {
+            "id": "unit-forgefiend-profile-forgefiend-jaws-melee-4",
+            "title": "Forgefiend jaws",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "7",
+            "ap": "0",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-forgefiend-selection-forgefiend-jaws"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2163,6 +10871,373 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-helbrute-model-helbrute",
+            "title": "Helbrute",
+            "aliases": [
+              "Helbrute"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-helbrute-selection-close-combat-weapon",
+            "title": "Close combat weapon",
+            "aliases": [
+              "Close combat weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-helbrute-profile-close-combat-weapon-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-helbrute-fist",
+            "title": "Helbrute fist",
+            "aliases": [
+              "Helbrute fist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-helbrute-profile-helbrute-fist-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-helbrute-profile-combi-bolter-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-heavy-flamer",
+            "title": "Heavy flamer",
+            "aliases": [
+              "Heavy flamer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-helbrute-profile-heavy-flamer-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-missile-launcher-frag",
+            "title": "➤ Missile launcher - frag",
+            "aliases": [
+              "➤ Missile launcher - frag"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-helbrute-profile-missile-launcher-frag-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-missile-launcher-krak",
+            "title": "➤ Missile launcher - krak",
+            "aliases": [
+              "➤ Missile launcher - krak"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-helbrute-profile-missile-launcher-krak-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-helbrute-hammer",
+            "title": "Helbrute hammer",
+            "aliases": [
+              "Helbrute hammer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-helbrute-profile-helbrute-hammer-melee-7"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-power-scourge",
+            "title": "Power scourge",
+            "aliases": [
+              "Power scourge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-helbrute-profile-power-scourge-melee-8"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-multi-melta",
+            "title": "Multi-melta",
+            "aliases": [
+              "Multi-melta"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-helbrute-profile-multi-melta-ranged-9"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-twin-autocannon",
+            "title": "Twin autocannon",
+            "aliases": [
+              "Twin autocannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-helbrute-profile-twin-autocannon-ranged-10"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-helbrute-plasma-cannon",
+            "title": "Helbrute plasma cannon",
+            "aliases": [
+              "Helbrute plasma cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-helbrute-profile-helbrute-plasma-cannon-ranged-11"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-twin-heavy-bolter",
+            "title": "Twin heavy bolter",
+            "aliases": [
+              "Twin heavy bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-helbrute-profile-twin-heavy-bolter-ranged-12"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-twin-lascannon",
+            "title": "Twin lascannon",
+            "aliases": [
+              "Twin lascannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-helbrute-profile-twin-lascannon-ranged-13"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-helbrute-profile-close-combat-weapon-melee",
+            "title": "Close combat weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "6",
+            "ap": "0",
+            "d": "1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-close-combat-weapon"
+            ]
+          },
+          {
+            "id": "unit-helbrute-profile-helbrute-fist-melee-2",
+            "title": "Helbrute fist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-2",
+            "d": "3",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-helbrute-fist"
+            ]
+          },
+          {
+            "id": "unit-helbrute-profile-combi-bolter-ranged-3",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Rapid Fire 2",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "unit-helbrute-profile-heavy-flamer-ranged-4",
+            "title": "Heavy flamer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Ignores Cover, Torrent",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-heavy-flamer"
+            ]
+          },
+          {
+            "id": "unit-helbrute-profile-missile-launcher-frag-ranged-5",
+            "title": "➤ Missile launcher - frag",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-missile-launcher-frag"
+            ]
+          },
+          {
+            "id": "unit-helbrute-profile-missile-launcher-krak-ranged-6",
+            "title": "➤ Missile launcher - krak",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-2",
+            "d": "D6",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-missile-launcher-krak"
+            ]
+          },
+          {
+            "id": "unit-helbrute-profile-helbrute-hammer-melee-7",
+            "title": "Helbrute hammer",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "4+",
+            "s": "14",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-helbrute-hammer"
+            ]
+          },
+          {
+            "id": "unit-helbrute-profile-power-scourge-melee-8",
+            "title": "Power scourge",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "8",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-power-scourge"
+            ]
+          },
+          {
+            "id": "unit-helbrute-profile-multi-melta-ranged-9",
+            "title": "Multi-melta",
+            "mode": "ranged",
+            "range": "18\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-4",
+            "d": "D6",
+            "abilities": "Melta 2",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-multi-melta"
+            ]
+          },
+          {
+            "id": "unit-helbrute-profile-twin-autocannon-ranged-10",
+            "title": "Twin autocannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-1",
+            "d": "3",
+            "abilities": "Twin-linked",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-twin-autocannon"
+            ]
+          },
+          {
+            "id": "unit-helbrute-profile-helbrute-plasma-cannon-ranged-11",
+            "title": "Helbrute plasma cannon",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "D3",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "Blast, Hazardous",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-helbrute-plasma-cannon"
+            ]
+          },
+          {
+            "id": "unit-helbrute-profile-twin-heavy-bolter-ranged-12",
+            "title": "Twin heavy bolter",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Sustained Hits 1, Twin-linked",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-twin-heavy-bolter"
+            ]
+          },
+          {
+            "id": "unit-helbrute-profile-twin-lascannon-ranged-13",
+            "title": "Twin lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "Twin-linked",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-twin-lascannon"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2191,6 +11266,103 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-heldrake-model-heldrake",
+            "title": "Heldrake",
+            "aliases": [
+              "Heldrake"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-heldrake-selection-heldrake-claws",
+            "title": "Heldrake claws",
+            "aliases": [
+              "Heldrake claws"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-heldrake-profile-heldrake-claws-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-heldrake-selection-baleflamer",
+            "title": "Baleflamer",
+            "aliases": [
+              "Baleflamer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-heldrake-profile-baleflamer-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-heldrake-selection-hades-autocannon",
+            "title": "Hades autocannon",
+            "aliases": [
+              "Hades autocannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-heldrake-profile-hades-autocannon-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-heldrake-profile-heldrake-claws-melee",
+            "title": "Heldrake claws",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Anti-FLY 2+, Devastating Wounds",
+            "sourceSelectionIds": [
+              "unit-heldrake-selection-heldrake-claws"
+            ]
+          },
+          {
+            "id": "unit-heldrake-profile-baleflamer-ranged-2",
+            "title": "Baleflamer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6+3",
+            "skill": "N/A",
+            "s": "6",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "Ignores Cover, Torrent",
+            "sourceSelectionIds": [
+              "unit-heldrake-selection-baleflamer"
+            ]
+          },
+          {
+            "id": "unit-heldrake-profile-hades-autocannon-ranged-3",
+            "title": "Hades autocannon",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "6",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-heldrake-selection-hades-autocannon"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2222,6 +11394,211 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-khorne-lord-of-skulls-model-khorne-lord-of-skulls",
+            "title": "Khorne Lord of Skulls",
+            "aliases": [
+              "Khorne Lord of Skulls"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-khorne-lord-of-skulls-selection-great-cleaver-of-khorne-strike",
+            "title": "➤ Great cleaver of Khorne - strike",
+            "aliases": [
+              "➤ Great cleaver of Khorne - strike"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-khorne-lord-of-skulls-profile-great-cleaver-of-khorne-strike-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-khorne-lord-of-skulls-selection-great-cleaver-of-khorne-sweep",
+            "title": "➤ Great cleaver of Khorne - sweep",
+            "aliases": [
+              "➤ Great cleaver of Khorne - sweep"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-khorne-lord-of-skulls-profile-great-cleaver-of-khorne-sweep-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-khorne-lord-of-skulls-selection-hades-gatling-cannon",
+            "title": "Hades gatling cannon",
+            "aliases": [
+              "Hades gatling cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-khorne-lord-of-skulls-profile-hades-gatling-cannon-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-khorne-lord-of-skulls-selection-skullhurler",
+            "title": "Skullhurler",
+            "aliases": [
+              "Skullhurler"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-khorne-lord-of-skulls-profile-skullhurler-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-khorne-lord-of-skulls-selection-gorestorm-cannon",
+            "title": "Gorestorm cannon",
+            "aliases": [
+              "Gorestorm cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-khorne-lord-of-skulls-profile-gorestorm-cannon-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-khorne-lord-of-skulls-selection-daemongore-cannon",
+            "title": "Daemongore cannon",
+            "aliases": [
+              "Daemongore cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-khorne-lord-of-skulls-profile-daemongore-cannon-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-khorne-lord-of-skulls-selection-ichor-cannon",
+            "title": "Ichor cannon",
+            "aliases": [
+              "Ichor cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-khorne-lord-of-skulls-profile-ichor-cannon-ranged-7"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-khorne-lord-of-skulls-profile-great-cleaver-of-khorne-strike-melee",
+            "title": "➤ Great cleaver of Khorne - strike",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "16",
+            "ap": "-4",
+            "d": "8",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-khorne-lord-of-skulls-selection-great-cleaver-of-khorne-strike"
+            ]
+          },
+          {
+            "id": "unit-khorne-lord-of-skulls-profile-great-cleaver-of-khorne-sweep-melee-2",
+            "title": "➤ Great cleaver of Khorne - sweep",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "15",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-khorne-lord-of-skulls-selection-great-cleaver-of-khorne-sweep"
+            ]
+          },
+          {
+            "id": "unit-khorne-lord-of-skulls-profile-hades-gatling-cannon-ranged-3",
+            "title": "Hades gatling cannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "12",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Sustained Hits 1",
+            "sourceSelectionIds": [
+              "unit-khorne-lord-of-skulls-selection-hades-gatling-cannon"
+            ]
+          },
+          {
+            "id": "unit-khorne-lord-of-skulls-profile-skullhurler-ranged-4",
+            "title": "Skullhurler",
+            "mode": "ranged",
+            "range": "60\"",
+            "a": "2D6",
+            "skill": "3+",
+            "s": "14",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-khorne-lord-of-skulls-selection-skullhurler"
+            ]
+          },
+          {
+            "id": "unit-khorne-lord-of-skulls-profile-gorestorm-cannon-ranged-5",
+            "title": "Gorestorm cannon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "D6+3",
+            "skill": "3+",
+            "s": "10",
+            "ap": "-2",
+            "d": "3",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-khorne-lord-of-skulls-selection-gorestorm-cannon"
+            ]
+          },
+          {
+            "id": "unit-khorne-lord-of-skulls-profile-daemongore-cannon-ranged-6",
+            "title": "Daemongore cannon",
+            "mode": "ranged",
+            "range": "18\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "14",
+            "ap": "-4",
+            "d": "D6+2",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-khorne-lord-of-skulls-selection-daemongore-cannon"
+            ]
+          },
+          {
+            "id": "unit-khorne-lord-of-skulls-profile-ichor-cannon-ranged-7",
+            "title": "Ichor cannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "2D6",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "Blast",
+            "sourceSelectionIds": [
+              "unit-khorne-lord-of-skulls-selection-ichor-cannon"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2250,6 +11627,103 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-maulerfiend-model-maulerfiend",
+            "title": "Maulerfiend",
+            "aliases": [
+              "Maulerfiend"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-maulerfiend-selection-maulerfiend-fists",
+            "title": "Maulerfiend fists",
+            "aliases": [
+              "Maulerfiend fists"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-maulerfiend-profile-maulerfiend-fists-melee"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-maulerfiend-selection-magma-cutter",
+            "title": "Magma cutter",
+            "aliases": [
+              "Magma cutter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-maulerfiend-profile-magma-cutter-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-maulerfiend-selection-lasher-tendrils",
+            "title": "Lasher tendrils",
+            "aliases": [
+              "Lasher tendrils"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-maulerfiend-profile-lasher-tendrils-melee-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-maulerfiend-profile-maulerfiend-fists-melee",
+            "title": "Maulerfiend fists",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "3+",
+            "s": "14",
+            "ap": "-2",
+            "d": "D6+1",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-maulerfiend-selection-maulerfiend-fists"
+            ]
+          },
+          {
+            "id": "unit-maulerfiend-profile-magma-cutter-ranged-2",
+            "title": "Magma cutter",
+            "mode": "ranged",
+            "range": "6\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-4",
+            "d": "D6",
+            "abilities": "Melta 2",
+            "sourceSelectionIds": [
+              "unit-maulerfiend-selection-magma-cutter"
+            ]
+          },
+          {
+            "id": "unit-maulerfiend-profile-lasher-tendrils-melee-3",
+            "title": "Lasher tendrils",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "Extra Attacks",
+            "sourceSelectionIds": [
+              "unit-maulerfiend-selection-lasher-tendrils"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2277,6 +11751,49 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-noctilith-crown-model-noctilith-crown",
+            "title": "Noctilith Crown",
+            "aliases": [
+              "Noctilith Crown"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-noctilith-crown-selection-lashing-warp-energies",
+            "title": "Lashing warp energies",
+            "aliases": [
+              "Lashing warp energies"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-noctilith-crown-profile-lashing-warp-energies-ranged"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-noctilith-crown-profile-lashing-warp-energies-ranged",
+            "title": "Lashing warp energies",
+            "mode": "ranged",
+            "range": "6\"",
+            "a": "8",
+            "skill": "4+",
+            "s": "8",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-noctilith-crown-selection-lashing-warp-energies"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2305,6 +11822,76 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [
+          {
+            "id": "unit-venomcrawler-model-venomcrawler",
+            "title": "Venomcrawler",
+            "aliases": [
+              "Venomcrawler"
+            ]
+          }
+        ],
+        "selections": [
+          {
+            "id": "unit-venomcrawler-selection-excruciator-cannon",
+            "title": "Excruciator cannon",
+            "aliases": [
+              "Excruciator cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-venomcrawler-profile-excruciator-cannon-ranged"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-venomcrawler-selection-soulflayer-tendrils-and-claws",
+            "title": "Soulflayer tendrils and claws",
+            "aliases": [
+              "Soulflayer tendrils and claws"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "unit-venomcrawler-profile-soulflayer-tendrils-and-claws-melee-2"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "unit-venomcrawler-profile-excruciator-cannon-ranged",
+            "title": "Excruciator cannon",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "6",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-venomcrawler-selection-excruciator-cannon"
+            ]
+          },
+          {
+            "id": "unit-venomcrawler-profile-soulflayer-tendrils-and-claws-melee-2",
+            "title": "Soulflayer tendrils and claws",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "",
+            "sourceSelectionIds": [
+              "unit-venomcrawler-selection-soulflayer-tendrils-and-claws"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     }
   ],

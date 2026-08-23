@@ -141,13 +141,14 @@
     return '';
   }
 
-  function decorate(card, roster, units) {
+  function decorate(card, roster, units, options = {}) {
     const unitIds = new Set(units.map(unit => unit.id));
     const owned = enriched(roster).filter(item => item.ownerStatus === 'resolved' && unitIds.has(item.ownerUnitId));
     if (!owned.length) return [];
     const safeToDerive = units.length === 1;
     for (const item of owned) {
-      const failure = applyEffect(card, item, safeToDerive);
+      const projected = Array.isArray(options.effects) ? options.effects.some(effect => effect?.source?.id === (item.ruleId || item.id)) : true;
+      const failure = projected && options.applyEffects !== false ? applyEffect(card, item, safeToDerive) : '';
       appendAbility(card, item, failure);
     }
     return owned;

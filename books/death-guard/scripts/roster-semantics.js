@@ -89,7 +89,42 @@
       attachmentEnhancementStateKey(unit)
     ].join('\0');
 
-    const decorate = (card, units, detachmentIds = []) => {
+    const projectEffects = (unit, cardId, detachmentIds = [], gameUnit = null) => {
+      const output = [], detachments = new Set(detachmentIds), bodyguard = bodyguardFor(unit), group = attachedGroup(unit) || [unit];
+      const source = (kind, id, ownerInstanceId = null, rosterFact = kind) => ({source:{kind,id,ownerInstanceId},provenance:{rosterFact}});
+      const add = (id, component, targetId, operation, detail = {}, origin = {}) => output.push({id,component,targetId,operation,...detail,...origin});
+      const ability = (id, title, summary, origin) => add(id,'ability',id,'grant',{title,summary},origin);
+      const stat = (id, targetId, operation, value, origin) => add(id,'stat',targetId,operation,operation==='add'?{delta:value}:{to:value},origin);
+      const weapon = (id, scope, operation, detail, origin) => add(id,'weapon',scope,operation,detail,origin);
+      const leader = id => group.find(member => member.id !== bodyguard?.id && canonicalUnitId(member) === id);
+      const attachedOwner = id => attachedEnhancementOwner(unit,id);
+      const ownEnhancements = enrichedEnhancements.filter(item => item?.ownerStatus === 'resolved' && item.ownerUnitId === unit.id);
+      const detachmentSource = id => source('detachment',`detachment-${id}`,null,'selected-detachment');
+      const attachmentSource = (ruleId, owner) => source('explicit-attachment',ruleId,owner?.id,'explicit-attachment');
+      if (detachments.has('detachment-shamblerot-vectorium') && cardId === 'unit-poxwalkers') add('shamblerot-battleline','keyword','BATTLELINE','grant',{},detachmentSource('shamblerot-vectorium'));
+      if (detachments.has('detachment-contagion-engines') && ['unit-foetid-bloat-drone','unit-foetid-bloat-drone-with-heavy-blight-launcher','unit-helbrute','unit-myphitic-blight-hauler'].includes(cardId)) { add('contagion-engine-keyword','keyword','CONTAGION ENGINE','grant',{},detachmentSource('contagion-engines')); weapon('warped-and-rusted-animus','ranged','grant-tag',{tag:'ASSAULT',termId:'core-assault'},detachmentSource('contagion-engines')); }
+      if (detachments.has('detachment-paragons-of-putrescence') && (profileByRosterId.get(unit.id)?.keywords||[]).some(item=>normalize(item?.title||item) === 'character')) ability('hypervirulent-strains','Hypervirulent Strains','Contagion Range +3" (to a maximum of 12").',detachmentSource('paragons-of-putrescence'));
+      const typhus=leader('unit-typhus');if(typhus&&cardId!=='unit-typhus')ability('destroyer-hive','The Destroyer Hive','Melee attacks that target this Attached Unit: -1 to the Hit roll.',attachmentSource(DG_RULE.destroyer,typhus));
+      const biologus=leader('unit-biologus-putrifier');if(biologus){weapon('foul-infusion-weapons','all','grant-tag',{tag:'LETHAL HITS',termId:'core-lethal-hits'},attachmentSource(DG_RULE.foul,biologus));if(cardId!=='unit-biologus-putrifier')ability('foul-infusion','Foul Infusion','Critical Hits are scored on unmodified Hit rolls of 5+.',attachmentSource(DG_RULE.foul,biologus));}
+      const icon=leader('unit-icon-bearer');if(icon)stat('unclean-icon','OC','add',1,attachmentSource(DG_RULE.icon,icon));
+      const contagion=leader('unit-lord-of-contagion');if(contagion){weapon('vector-sustained','melee','grant-tag',{tag:'SUSTAINED HITS 1',termId:'core-sustained-hits'},attachmentSource(DG_RULE.vector,contagion));weapon('vector-lance','melee','grant-tag',{tag:'LANCE',termId:'core-lance'},attachmentSource(DG_RULE.vector,contagion));}
+      const poxes=leader('unit-lord-of-poxes');if(poxes&&cardId!=='unit-lord-of-poxes')ability('shroud-of-disease','Shroud of Disease','This Attached Unit cannot be targeted by ranged attacks unless the attacker is within 18".',attachmentSource(DG_RULE.shroud,poxes));
+      const virulence=leader('unit-lord-of-virulence');if(virulence&&cardId!=='unit-lord-of-virulence')ability('virulent-aura','Virulent Aura','Models in this Attached Unit can re-roll Wound rolls for ranged attacks.',attachmentSource(DG_RULE.virulent,virulence));
+      const blightbringer=leader('unit-noxious-blightbringer');if(blightbringer){stat('sickening-vitality-move','M','add',1,attachmentSource(DG_RULE.vitality,blightbringer));if(cardId!=='unit-noxious-blightbringer')ability('sickening-vitality','Sickening Vitality','Models in this Attached Unit can re-roll Advance and Charge rolls.',attachmentSource(DG_RULE.vitality,blightbringer));}
+      const tallyman=leader('unit-tallyman');if(tallyman&&cardId!=='unit-tallyman')ability('malicious-calculations','Malicious Calculations','Models in this Attached Unit can ignore modifiers to BS, WS and Hit rolls.',attachmentSource(DG_RULE.malicious,tallyman));
+      if(cardId!=='unit-deathshroud-terminators'&&canonicalUnitId(bodyguard)==='unit-deathshroud-terminators')ability('silent-bodyguard','Silent Bodyguard','Feel No Pain 4+.',attachmentSource(DG_RULE.silent,bodyguard));
+      if(cardId==='unit-helbrute'&&unitLoadout(unit).flatMap(splitLabels).filter(label=>normalize(label)!=='close combat weapon').length===2)weapon('froth-spattered-frenzy','selected-melee','add-stat',{stat:'A',delta:2,profileIds:gameUnit?.selection?.loadout?.selectedProfileIds||[]},source('datasheet',DG_RULE.froth,unit.id,'selected-wargear'));
+      if(['unit-plague-drones','unit-plaguebearers'].includes(cardId)&&hasWargear(unit,'Daemonic Icon'))stat('daemonic-icon','Ld','set','6+',source('selected-wargear','daemonic-icon',unit.id,'selected-wargear'));
+      if(['unit-plague-drones','unit-plaguebearers'].includes(cardId)&&hasWargear(unit,'Instrument of Chaos'))ability('instrument-of-chaos','Instrument of Chaos','Add 1 to Charge rolls made for this unit.',source('selected-wargear','instrument-of-chaos',unit.id,'selected-wargear'));
+      for(const enhancement of ownEnhancements){const id=enhancementIdentity(enhancement),origin=source('enhancement',id,unit.id,'enhancement-owner');if(id===DG_ENH.regeneration)ability('revolting-regeneration','Revolting Regeneration','Feel No Pain 5+.',origin);if(id===DG_ENH.sorrowsyphon&&canonicalUnitId(bodyguard)==='unit-poxwalkers')weapon('sorrowsyphon','family:plague-wind','add-stat',{stat:'D',delta:1},origin);if(id===DG_ENH.plagueveil)ability('plagueveil','Plagueveil','This unit has -3" Detection Range.',origin);if(id===DG_ENH.bilemaw)continue;switch(enhancement.effect){case'furnace':weapon('furnace-attacks','melee','add-stat',{stat:'A',delta:1},origin);weapon('furnace-strength','melee','add-stat',{stat:'S',delta:1},origin);weapon('furnace-devastating','melee','grant-tag',{tag:'DEVASTATING WOUNDS',termId:'core-devastating-wounds'},origin);break;case'critical-hit-5':ability('critical-hit-5','Critical Hits 5+','Critical Hits are scored on unmodified Hit rolls of 5+.',origin);break;case'melee-a-2':weapon('melee-a-2','melee','add-stat',{stat:'A',delta:2},origin);break;case'plague-wind-range-12':weapon('plague-wind-range','family:plague-wind','add-stat',{stat:'Range',delta:12},origin);break;case'narthecium-d3':ability('narthecium-d3','Narthecium','Apply the current Narthecium D3 effect.',origin);break;case'mobile':add('mobile-keyword','keyword','MOBILE','grant',{},origin);break;}}
+      const pipes=attachedOwner(DG_ENH.pipes);if(canonicalUnitId(bodyguard)==='unit-poxwalkers'&&pipes){stat('witherbone-pipes-oc','OC','add',1,attachmentSource(DG_ENH.pipes,pipes));if(pipes.id!==unit.id)ability('witherbone-pipes','Witherbone Pipes','Add 1 to Leadership and Battle-shock tests made for this Attached Unit.',attachmentSource(DG_ENH.pipes,pipes));}
+      const talisman=attachedOwner(DG_ENH.talisman);if(cardId==='unit-poxwalkers'&&talisman)stat('talisman-of-burgeoning','T','add',1,attachmentSource(DG_ENH.talisman,talisman));
+      const vigour=attachedOwner(DG_ENH.vigour);if(vigour){stat('vile-vigour-move','M','add',1,attachmentSource(DG_ENH.vigour,vigour));if(vigour.id!==unit.id)ability('vile-vigour','Vile Vigour','Models in this Attached Unit can re-roll Advance rolls.',attachmentSource(DG_ENH.vigour,vigour));}
+      const helm=attachedOwner(DG_ENH.helm);if(helm&&helm.id!==unit.id)ability('helm-of-the-fly-king','Helm of the Fly King','Models in this Attached Unit cannot be targeted by ranged attacks unless the attacker is within 18".',attachmentSource(DG_ENH.helm,helm));
+      return output;
+    };
+
+    const decorate = (card, units, detachmentIds = [], projectedEffects = null) => {
       const cardId = (card.dataset.rosterCanonicalId || card.id).replace(/--roster-.+$/, '');
       const normalizedDetachments = detachmentIds.map((id) => String(id).replace(/^detachment-/, ''));
       let facts = {};
@@ -100,7 +135,7 @@
       const weaponRows = (type) => [...card.querySelectorAll('.weapon-group')]
         .filter((group) => !type || normalize(group.querySelector('h5')?.textContent).startsWith(`${type} weapons`))
         .flatMap((group) => [...group.querySelectorAll('.weapon-row:not(.weapon-head)')]);
-      root.WHRosterEnhancements?.decorate(card, roster, units);
+      root.WHRosterEnhancements?.decorate(card, roster, units, Array.isArray(projectedEffects)?{effects:projectedEffects}:{});
       if (units.some((unit) => ownsEnhancement(unit, DG_ENH.bilemaw))) {
         for (const row of weaponRows('ranged').filter((item) => root.WHRosterEntities.weaponFamily(item.querySelector('.weapon-button')?.textContent) === 'plague wind')) {
           const cell = row.querySelector('[data-label="Range"]');
@@ -140,6 +175,10 @@
           const next = Number(dice[2] || 0) + delta;
           cell.textContent = `${dice[1]}${next ? `${next > 0 ? '+' : ''}${next}` : ''}`;
         } else if (match) cell.textContent = `${Number(match[1]) + delta}${match[2]}`;
+      };
+      const setWeaponStat = (row, label, next, effect) => {
+        const head = row.parentElement?.querySelector('.weapon-head'), columns = [...(head?.children || [])], index = columns.findIndex(item => normalize(item.textContent) === normalize(label)), cell = index >= 0 ? row.children[index] : null;
+        if (cell && markEffect(cell, `${effect}-${label}`)) cell.textContent = next;
       };
       const addWeaponTag = (row, label, term, effect) => {
         const host = row.querySelector('.weapon-tags');
@@ -181,6 +220,13 @@
         return [...(profile?.keywords || []), ...(profile?.factionKeywords || [])].some((item) => normalize(item?.title || item?.name || item?.id || item) === normalize(keyword));
       };
 
+      if (Array.isArray(projectedEffects)) {
+        const sharedEnhancementEffects=new Set(['furnace-attacks','furnace-strength','furnace-devastating','critical-hit-5','melee-a-2','plague-wind-range','narthecium-d3','mobile-keyword']);
+        const rowsFor=effect=>effect.targetId==='all'?weaponRows():effect.targetId==='ranged'?weaponRows('ranged'):effect.targetId==='melee'?weaponRows('melee'):effect.targetId==='selected-melee'?weaponRows('melee').filter(row=>effect.profileIds?.includes(row.id)):String(effect.targetId).startsWith('family:')?weaponRows().filter(row=>root.WHRosterEntities.weaponFamily(row.querySelector('.weapon-button')?.textContent||row.firstElementChild?.textContent)===String(effect.targetId).slice(7)):[];
+        for(const effect of projectedEffects){if(sharedEnhancementEffects.has(effect.id))continue;if(effect.component==='ability')addDerivedAbility(effect.id,effect.title,effect.summary,effect.source?.id);else if(effect.component==='stat'&&effect.operation==='add')modifyModelStat(effect.targetId,effect.delta,effect.id);else if(effect.component==='stat'&&effect.operation==='set')setModelStat(effect.targetId,effect.to,effect.id);else if(effect.component==='keyword'&&effect.operation==='grant')addKeywords([{id:`keyword-${slug(effect.targetId)}`,title:effect.targetId,detachment:String(effect.source?.id||'roster').replace(/^detachment-/,'')}]);else if(effect.component==='weapon')for(const row of rowsFor(effect)){if(effect.operation==='grant-tag')addWeaponTag(row,effect.tag,effect.termId,effect.id);else if(effect.operation==='add-stat')modifyWeaponStat(row,effect.stat,effect.delta,effect.id);else if(effect.operation==='set-stat')setWeaponStat(row,effect.stat,effect.to,effect.id);}}
+        return;
+      }
+
       const unitSlug = cardId.replace(/^unit-/, '');
       addKeywords(KEYWORD_GRANTS.filter((grant) => normalizedDetachments.includes(grant.detachment) && grant.units.includes(unitSlug)));
       if (terms[DG_RULE.destroyer] && from('unit-typhus') && cardId !== 'unit-typhus') addDerivedAbility('destroyer-hive', 'The Destroyer Hive', 'Melee attacks that target this Attached Unit: -1 to the Hit roll.', DG_RULE.destroyer);
@@ -206,7 +252,7 @@
       if (normalizedDetachments.includes('paragons-of-putrescence') && entryEvery((unit) => hasKeyword(unit, 'CHARACTER'))) addDerivedAbility('hypervirulent-strains', 'Hypervirulent Strains', 'Contagion Range +3" (to a maximum of 12").', DG_RULE.strains);
     };
 
-    return Object.freeze({stateKey, decorate, hasWargear});
+    return Object.freeze({stateKey, projectEffects, decorate, hasWargear});
   };
 
   root.DGRosterSemantics = Object.freeze({slug, normalize, splitLabels, unitLoadout, unitRows, unitModelCount, hasWargear, createContext});

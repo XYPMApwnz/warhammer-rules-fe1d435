@@ -107,6 +107,122 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-mortarion-selection-lantern",
+            "title": "Lantern",
+            "aliases": [
+              "Lantern"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "mortarion-weapon-lantern"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-mortarion-selection-rotwind",
+            "title": "Rotwind",
+            "aliases": [
+              "Rotwind"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "mortarion-weapon-rotwind"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-mortarion-selection-silence-strike",
+            "title": "Silence – strike",
+            "aliases": [
+              "Silence – strike"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "mortarion-weapon-silence-strike"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-mortarion-selection-silence-sweep",
+            "title": "Silence – sweep",
+            "aliases": [
+              "Silence – sweep"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "mortarion-weapon-silence-sweep"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "mortarion-weapon-lantern",
+            "title": "Lantern",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "10",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "PISTOL, SUSTAINED HITS D3",
+            "sourceSelectionIds": [
+              "unit-mortarion-selection-lantern"
+            ]
+          },
+          {
+            "id": "mortarion-weapon-rotwind",
+            "title": "Rotwind",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "D6+3",
+            "skill": "2+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "BLAST, DEVASTATING WOUNDS, LETHAL HITS, PSYCHIC",
+            "sourceSelectionIds": [
+              "unit-mortarion-selection-rotwind"
+            ]
+          },
+          {
+            "id": "mortarion-weapon-silence-strike",
+            "title": "Silence – strike",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "2+",
+            "s": "14",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "DEVASTATING WOUNDS, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-mortarion-selection-silence-strike"
+            ]
+          },
+          {
+            "id": "mortarion-weapon-silence-sweep",
+            "title": "Silence – sweep",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "15",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "LETHAL HITS, SUSTAINED HITS 1",
+            "sourceSelectionIds": [
+              "unit-mortarion-selection-silence-sweep"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -212,6 +328,68 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-typhus-selection-lakrimae-strike",
+            "title": "Lakrimae – strike",
+            "aliases": [
+              "Lakrimae – strike"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "typhus-weapon-lakrimae-strike"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-typhus-selection-lakrimae-sweep",
+            "title": "Lakrimae – sweep",
+            "aliases": [
+              "Lakrimae – sweep"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "typhus-weapon-lakrimae-sweep"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "typhus-weapon-lakrimae-strike",
+            "title": "Lakrimae – strike",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "2+",
+            "s": "9",
+            "ap": "-2",
+            "d": "3",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-typhus-selection-lakrimae-strike"
+            ]
+          },
+          {
+            "id": "typhus-weapon-lakrimae-sweep",
+            "title": "Lakrimae – sweep",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "12",
+            "skill": "2+",
+            "s": "6",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-typhus-selection-lakrimae-sweep"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -306,6 +484,95 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-biologus-putrifier-selection-hyper-blight-grenades",
+            "title": "Hyper blight grenades",
+            "aliases": [
+              "Hyper blight grenades"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "biologus-putrifier-weapon-hyper-blight-grenades"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-biologus-putrifier-selection-injector-pistol",
+            "title": "Injector pistol",
+            "aliases": [
+              "Injector pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "biologus-putrifier-weapon-injector-pistol"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-biologus-putrifier-selection-plague-knives",
+            "title": "Plague knives",
+            "aliases": [
+              "Plague knives"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "biologus-putrifier-weapon-plague-knives"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "biologus-putrifier-weapon-hyper-blight-grenades",
+            "title": "Hyper blight grenades",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "ASSAULT, BLAST, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-biologus-putrifier-selection-hyper-blight-grenades"
+            ]
+          },
+          {
+            "id": "biologus-putrifier-weapon-injector-pistol",
+            "title": "Injector pistol",
+            "mode": "ranged",
+            "range": "3\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "3",
+            "abilities": "ANTI-INFANTRY 2+, PISTOL, PRECISION",
+            "sourceSelectionIds": [
+              "unit-biologus-putrifier-selection-injector-pistol"
+            ]
+          },
+          {
+            "id": "biologus-putrifier-weapon-plague-knives",
+            "title": "Plague knives",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-biologus-putrifier-selection-plague-knives"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -385,6 +652,95 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-daemon-prince-of-nurgle-selection-infernal-cannon",
+            "title": "Infernal cannon",
+            "aliases": [
+              "Infernal cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "daemon-prince-of-nurgle-weapon-infernal-cannon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-daemon-prince-of-nurgle-selection-hellforged-weapons-strike",
+            "title": "Hellforged weapons – strike",
+            "aliases": [
+              "Hellforged weapons – strike"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "daemon-prince-of-nurgle-weapon-hellforged-weapons-strike"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-daemon-prince-of-nurgle-selection-hellforged-weapons-sweep",
+            "title": "Hellforged weapons – sweep",
+            "aliases": [
+              "Hellforged weapons – sweep"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "daemon-prince-of-nurgle-weapon-hellforged-weapons-sweep"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "daemon-prince-of-nurgle-weapon-infernal-cannon",
+            "title": "Infernal cannon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "3",
+            "skill": "2+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-daemon-prince-of-nurgle-selection-infernal-cannon"
+            ]
+          },
+          {
+            "id": "daemon-prince-of-nurgle-weapon-hellforged-weapons-strike",
+            "title": "Hellforged weapons – strike",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "7",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "3",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-daemon-prince-of-nurgle-selection-hellforged-weapons-strike"
+            ]
+          },
+          {
+            "id": "daemon-prince-of-nurgle-weapon-hellforged-weapons-sweep",
+            "title": "Hellforged weapons – sweep",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "14",
+            "skill": "2+",
+            "s": "6",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-daemon-prince-of-nurgle-selection-hellforged-weapons-sweep"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -467,6 +823,95 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-daemon-prince-of-nurgle-with-wings-selection-infernal-cannon",
+            "title": "Infernal cannon",
+            "aliases": [
+              "Infernal cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "daemon-prince-of-nurgle-with-wings-weapon-infernal-cannon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-daemon-prince-of-nurgle-with-wings-selection-hellforged-weapons-strike",
+            "title": "Hellforged weapons – strike",
+            "aliases": [
+              "Hellforged weapons – strike"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "daemon-prince-of-nurgle-with-wings-weapon-hellforged-weapons-strike"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-daemon-prince-of-nurgle-with-wings-selection-hellforged-weapons-sweep",
+            "title": "Hellforged weapons – sweep",
+            "aliases": [
+              "Hellforged weapons – sweep"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "daemon-prince-of-nurgle-with-wings-weapon-hellforged-weapons-sweep"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "daemon-prince-of-nurgle-with-wings-weapon-infernal-cannon",
+            "title": "Infernal cannon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "3",
+            "skill": "2+",
+            "s": "7",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-daemon-prince-of-nurgle-with-wings-selection-infernal-cannon"
+            ]
+          },
+          {
+            "id": "daemon-prince-of-nurgle-with-wings-weapon-hellforged-weapons-strike",
+            "title": "Hellforged weapons – strike",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "7",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "3",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-daemon-prince-of-nurgle-with-wings-selection-hellforged-weapons-strike"
+            ]
+          },
+          {
+            "id": "daemon-prince-of-nurgle-with-wings-weapon-hellforged-weapons-sweep",
+            "title": "Hellforged weapons – sweep",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "14",
+            "skill": "2+",
+            "s": "6",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-daemon-prince-of-nurgle-with-wings-selection-hellforged-weapons-sweep"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -559,6 +1004,68 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-foul-blightspawn-selection-plague-sprayer",
+            "title": "Plague sprayer",
+            "aliases": [
+              "Plague sprayer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "foul-blightspawn-weapon-plague-sprayer"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-foul-blightspawn-selection-close-combat-weapon",
+            "title": "Close combat weapon",
+            "aliases": [
+              "Close combat weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "foul-blightspawn-weapon-close-combat-weapon"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "foul-blightspawn-weapon-plague-sprayer",
+            "title": "Plague sprayer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "7",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "ANTI-INFANTRY 2+, IGNORES COVER, TORRENT",
+            "sourceSelectionIds": [
+              "unit-foul-blightspawn-selection-plague-sprayer"
+            ]
+          },
+          {
+            "id": "foul-blightspawn-weapon-close-combat-weapon",
+            "title": "Close combat weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-foul-blightspawn-selection-close-combat-weapon"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -651,6 +1158,68 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-icon-bearer-selection-boltgun",
+            "title": "Boltgun",
+            "aliases": [
+              "Boltgun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "icon-bearer-weapon-boltgun"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-icon-bearer-selection-plague-knife",
+            "title": "Plague knife",
+            "aliases": [
+              "Plague knife"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "icon-bearer-weapon-plague-knife"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "icon-bearer-weapon-boltgun",
+            "title": "Boltgun",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-icon-bearer-selection-boltgun"
+            ]
+          },
+          {
+            "id": "icon-bearer-weapon-plague-knife",
+            "title": "Plague knife",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-icon-bearer-selection-plague-knife"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -746,6 +1315,68 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-lord-of-contagion-selection-manreaper-strike",
+            "title": "Manreaper – strike",
+            "aliases": [
+              "Manreaper – strike"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "lord-of-contagion-weapon-manreaper-strike"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-lord-of-contagion-selection-manreaper-sweep",
+            "title": "Manreaper – sweep",
+            "aliases": [
+              "Manreaper – sweep"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "lord-of-contagion-weapon-manreaper-sweep"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "lord-of-contagion-weapon-manreaper-strike",
+            "title": "Manreaper – strike",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "2+",
+            "s": "9",
+            "ap": "-2",
+            "d": "3",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-lord-of-contagion-selection-manreaper-strike"
+            ]
+          },
+          {
+            "id": "lord-of-contagion-weapon-manreaper-sweep",
+            "title": "Manreaper – sweep",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "10",
+            "skill": "2+",
+            "s": "6",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-lord-of-contagion-selection-manreaper-sweep"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -831,6 +1462,95 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-lord-of-poxes-selection-plasma-pistol-standard",
+            "title": "Plasma pistol – standard",
+            "aliases": [
+              "Plasma pistol – standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "lord-of-poxes-weapon-plasma-pistol-standard"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-lord-of-poxes-selection-plasma-pistol-supercharge",
+            "title": "Plasma pistol – supercharge",
+            "aliases": [
+              "Plasma pistol – supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "lord-of-poxes-weapon-plasma-pistol-supercharge"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-lord-of-poxes-selection-great-plague-blade",
+            "title": "Great plague blade",
+            "aliases": [
+              "Great plague blade"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "lord-of-poxes-weapon-great-plague-blade"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "lord-of-poxes-weapon-plasma-pistol-standard",
+            "title": "Plasma pistol – standard",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "PISTOL",
+            "sourceSelectionIds": [
+              "unit-lord-of-poxes-selection-plasma-pistol-standard"
+            ]
+          },
+          {
+            "id": "lord-of-poxes-weapon-plasma-pistol-supercharge",
+            "title": "Plasma pistol – supercharge",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "HAZARDOUS, PISTOL",
+            "sourceSelectionIds": [
+              "unit-lord-of-poxes-selection-plasma-pistol-supercharge"
+            ]
+          },
+          {
+            "id": "lord-of-poxes-weapon-great-plague-blade",
+            "title": "Great plague blade",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "DEVASTATING WOUNDS, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-lord-of-poxes-selection-great-plague-blade"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -922,6 +1642,68 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-lord-of-virulence-selection-twin-plague-spewer",
+            "title": "Twin plague spewer",
+            "aliases": [
+              "Twin plague spewer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "lord-of-virulence-weapon-twin-plague-spewer"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-lord-of-virulence-selection-power-fist",
+            "title": "Power fist",
+            "aliases": [
+              "Power fist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "lord-of-virulence-weapon-power-fist"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "lord-of-virulence-weapon-twin-plague-spewer",
+            "title": "Twin plague spewer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "ANTI-INFANTRY 2+, IGNORES COVER, TORRENT, TWIN-LINKED",
+            "sourceSelectionIds": [
+              "unit-lord-of-virulence-selection-twin-plague-spewer"
+            ]
+          },
+          {
+            "id": "lord-of-virulence-weapon-power-fist",
+            "title": "Power fist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-lord-of-virulence-selection-power-fist"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1014,6 +1796,122 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-malignant-plaguecaster-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "malignant-plaguecaster-weapon-bolt-pistol"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-malignant-plaguecaster-selection-plague-wind-witchfire",
+            "title": "Plague Wind – witchfire",
+            "aliases": [
+              "Plague Wind – witchfire"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "malignant-plaguecaster-weapon-plague-wind-witchfire"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-malignant-plaguecaster-selection-plague-wind-focused-witchfire",
+            "title": "Plague Wind – focused witchfire",
+            "aliases": [
+              "Plague Wind – focused witchfire"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "malignant-plaguecaster-weapon-plague-wind-focused-witchfire"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-malignant-plaguecaster-selection-corrupted-staff",
+            "title": "Corrupted staff",
+            "aliases": [
+              "Corrupted staff"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "malignant-plaguecaster-weapon-corrupted-staff"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "malignant-plaguecaster-weapon-bolt-pistol",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS, PISTOL",
+            "sourceSelectionIds": [
+              "unit-malignant-plaguecaster-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "malignant-plaguecaster-weapon-plague-wind-witchfire",
+            "title": "Plague Wind – witchfire",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "4",
+            "ap": "-1",
+            "d": "D3",
+            "abilities": "PSYCHIC, TORRENT",
+            "sourceSelectionIds": [
+              "unit-malignant-plaguecaster-selection-plague-wind-witchfire"
+            ]
+          },
+          {
+            "id": "malignant-plaguecaster-weapon-plague-wind-focused-witchfire",
+            "title": "Plague Wind – focused witchfire",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6+3",
+            "skill": "N/A",
+            "s": "6",
+            "ap": "-2",
+            "d": "D3",
+            "abilities": "HAZARDOUS, PSYCHIC, TORRENT",
+            "sourceSelectionIds": [
+              "unit-malignant-plaguecaster-selection-plague-wind-focused-witchfire"
+            ]
+          },
+          {
+            "id": "malignant-plaguecaster-weapon-corrupted-staff",
+            "title": "Corrupted staff",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-1",
+            "d": "D3",
+            "abilities": "LETHAL HITS, PSYCHIC",
+            "sourceSelectionIds": [
+              "unit-malignant-plaguecaster-selection-corrupted-staff"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1115,6 +2013,95 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-noxious-blightbringer-selection-plasma-pistol-standard",
+            "title": "Plasma pistol – standard",
+            "aliases": [
+              "Plasma pistol – standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "noxious-blightbringer-weapon-plasma-pistol-standard"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-noxious-blightbringer-selection-plasma-pistol-supercharge",
+            "title": "Plasma pistol – supercharge",
+            "aliases": [
+              "Plasma pistol – supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "noxious-blightbringer-weapon-plasma-pistol-supercharge"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-noxious-blightbringer-selection-cursed-plague-bell",
+            "title": "Cursed plague bell",
+            "aliases": [
+              "Cursed plague bell"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "noxious-blightbringer-weapon-cursed-plague-bell"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "noxious-blightbringer-weapon-plasma-pistol-standard",
+            "title": "Plasma pistol – standard",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "PISTOL",
+            "sourceSelectionIds": [
+              "unit-noxious-blightbringer-selection-plasma-pistol-standard"
+            ]
+          },
+          {
+            "id": "noxious-blightbringer-weapon-plasma-pistol-supercharge",
+            "title": "Plasma pistol – supercharge",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "PISTOL, HAZARDOUS",
+            "sourceSelectionIds": [
+              "unit-noxious-blightbringer-selection-plasma-pistol-supercharge"
+            ]
+          },
+          {
+            "id": "noxious-blightbringer-weapon-cursed-plague-bell",
+            "title": "Cursed plague bell",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "2",
+            "abilities": "ANTI-PSYKER 2+, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-noxious-blightbringer-selection-cursed-plague-bell"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1203,6 +2190,68 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-plague-surgeon-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-surgeon-weapon-bolt-pistol"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-surgeon-selection-balesword",
+            "title": "Balesword",
+            "aliases": [
+              "Balesword"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-surgeon-weapon-balesword"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "plague-surgeon-weapon-bolt-pistol",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS, PISTOL",
+            "sourceSelectionIds": [
+              "unit-plague-surgeon-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "plague-surgeon-weapon-balesword",
+            "title": "Balesword",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-plague-surgeon-selection-balesword"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1292,6 +2341,95 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-tallyman-selection-plasma-pistol-standard",
+            "title": "Plasma pistol – standard",
+            "aliases": [
+              "Plasma pistol – standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "tallyman-weapon-plasma-pistol-standard"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-tallyman-selection-plasma-pistol-supercharge",
+            "title": "Plasma pistol – supercharge",
+            "aliases": [
+              "Plasma pistol – supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "tallyman-weapon-plasma-pistol-supercharge"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-tallyman-selection-close-combat-weapon",
+            "title": "Close combat weapon",
+            "aliases": [
+              "Close combat weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "tallyman-weapon-close-combat-weapon"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "tallyman-weapon-plasma-pistol-standard",
+            "title": "Plasma pistol – standard",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "PISTOL",
+            "sourceSelectionIds": [
+              "unit-tallyman-selection-plasma-pistol-standard"
+            ]
+          },
+          {
+            "id": "tallyman-weapon-plasma-pistol-supercharge",
+            "title": "Plasma pistol – supercharge",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "HAZARDOUS, PISTOL",
+            "sourceSelectionIds": [
+              "unit-tallyman-selection-plasma-pistol-supercharge"
+            ]
+          },
+          {
+            "id": "tallyman-weapon-close-combat-weapon",
+            "title": "Close combat weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-tallyman-selection-close-combat-weapon"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1465,6 +2603,411 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             }
           ]
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-plague-marines-selection-blight-launcher",
+            "title": "Blight launcher",
+            "aliases": [
+              "Blight launcher"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-marines-weapon-blight-launcher"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-marines-selection-boltgun",
+            "title": "Boltgun",
+            "aliases": [
+              "Boltgun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-marines-weapon-boltgun"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-marines-selection-bolt-pistol",
+            "title": "Bolt pistol",
+            "aliases": [
+              "Bolt pistol"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-marines-weapon-bolt-pistol"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-marines-selection-meltagun",
+            "title": "Meltagun",
+            "aliases": [
+              "Meltagun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-marines-weapon-meltagun"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-marines-selection-plague-belcher",
+            "title": "Plague belcher",
+            "aliases": [
+              "Plague belcher"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-marines-weapon-plague-belcher"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-marines-selection-plague-spewer",
+            "title": "Plague spewer",
+            "aliases": [
+              "Plague spewer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-marines-weapon-plague-spewer"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-marines-selection-plasma-gun-standard",
+            "title": "Plasma gun – standard",
+            "aliases": [
+              "Plasma gun – standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-marines-weapon-plasma-gun-standard"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-marines-selection-plasma-gun-supercharge",
+            "title": "Plasma gun – supercharge",
+            "aliases": [
+              "Plasma gun – supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-marines-weapon-plasma-gun-supercharge"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-marines-selection-plasma-pistol-standard",
+            "title": "Plasma pistol – standard",
+            "aliases": [
+              "Plasma pistol – standard"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-marines-weapon-plasma-pistol-standard"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-marines-selection-plasma-pistol-supercharge",
+            "title": "Plasma pistol – supercharge",
+            "aliases": [
+              "Plasma pistol – supercharge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-marines-weapon-plasma-pistol-supercharge"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-marines-selection-bubotic-weapons",
+            "title": "Bubotic weapons",
+            "aliases": [
+              "Bubotic weapons"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-marines-weapon-bubotic-weapons"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-marines-selection-heavy-plague-weapon",
+            "title": "Heavy plague weapon",
+            "aliases": [
+              "Heavy plague weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-marines-weapon-heavy-plague-weapon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-marines-selection-plague-knives",
+            "title": "Plague knives",
+            "aliases": [
+              "Plague knives"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-marines-weapon-plague-knives"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-marines-selection-power-fist",
+            "title": "Power fist",
+            "aliases": [
+              "Power fist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-marines-weapon-power-fist"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-marines-selection-icon-of-despair-aura",
+            "title": "Icon of Despair (Aura)",
+            "aliases": [
+              "Icon of Despair (Aura)"
+            ],
+            "kind": "wargear",
+            "profileIds": [],
+            "wargearAbilityIds": [],
+            "candidateWargearAbilityIds": [
+              "plague-marines-ability-icon-of-despair-aura"
+            ]
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "plague-marines-weapon-blight-launcher",
+            "title": "Blight launcher",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "D3",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "BLAST, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-plague-marines-selection-blight-launcher"
+            ]
+          },
+          {
+            "id": "plague-marines-weapon-boltgun",
+            "title": "Boltgun",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-plague-marines-selection-boltgun"
+            ]
+          },
+          {
+            "id": "plague-marines-weapon-bolt-pistol",
+            "title": "Bolt pistol",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS, PISTOL",
+            "sourceSelectionIds": [
+              "unit-plague-marines-selection-bolt-pistol"
+            ]
+          },
+          {
+            "id": "plague-marines-weapon-meltagun",
+            "title": "Meltagun",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-4",
+            "d": "D6",
+            "abilities": "MELTA 2",
+            "sourceSelectionIds": [
+              "unit-plague-marines-selection-meltagun"
+            ]
+          },
+          {
+            "id": "plague-marines-weapon-plague-belcher",
+            "title": "Plague belcher",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "ANTI-INFANTRY 4+, IGNORES COVER, TORRENT",
+            "sourceSelectionIds": [
+              "unit-plague-marines-selection-plague-belcher"
+            ]
+          },
+          {
+            "id": "plague-marines-weapon-plague-spewer",
+            "title": "Plague spewer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "ANTI-INFANTRY 2+, IGNORES COVER, TORRENT",
+            "sourceSelectionIds": [
+              "unit-plague-marines-selection-plague-spewer"
+            ]
+          },
+          {
+            "id": "plague-marines-weapon-plasma-gun-standard",
+            "title": "Plasma gun – standard",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "RAPID FIRE 1",
+            "sourceSelectionIds": [
+              "unit-plague-marines-selection-plasma-gun-standard"
+            ]
+          },
+          {
+            "id": "plague-marines-weapon-plasma-gun-supercharge",
+            "title": "Plasma gun – supercharge",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "HAZARDOUS, RAPID FIRE 1",
+            "sourceSelectionIds": [
+              "unit-plague-marines-selection-plasma-gun-supercharge"
+            ]
+          },
+          {
+            "id": "plague-marines-weapon-plasma-pistol-standard",
+            "title": "Plasma pistol – standard",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "PISTOL",
+            "sourceSelectionIds": [
+              "unit-plague-marines-selection-plasma-pistol-standard"
+            ]
+          },
+          {
+            "id": "plague-marines-weapon-plasma-pistol-supercharge",
+            "title": "Plasma pistol – supercharge",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "2",
+            "abilities": "HAZARDOUS, PISTOL",
+            "sourceSelectionIds": [
+              "unit-plague-marines-selection-plasma-pistol-supercharge"
+            ]
+          },
+          {
+            "id": "plague-marines-weapon-bubotic-weapons",
+            "title": "Bubotic weapons",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-plague-marines-selection-bubotic-weapons"
+            ]
+          },
+          {
+            "id": "plague-marines-weapon-heavy-plague-weapon",
+            "title": "Heavy plague weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "4+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-plague-marines-selection-heavy-plague-weapon"
+            ]
+          },
+          {
+            "id": "plague-marines-weapon-plague-knives",
+            "title": "Plague knives",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-plague-marines-selection-plague-knives"
+            ]
+          },
+          {
+            "id": "plague-marines-weapon-power-fist",
+            "title": "Power fist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-plague-marines-selection-power-fist"
+            ]
+          }
+        ],
+        "wargearAbilities": [
+          {
+            "id": "plague-marines-ability-icon-of-despair-aura",
+            "title": "Icon of Despair (Aura)",
+            "requiredSelectionIds": []
+          }
+        ]
       }
     },
     {
@@ -1561,6 +3104,230 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           ],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-blightlord-terminators-selection-blight-launcher",
+            "title": "Blight launcher",
+            "aliases": [
+              "Blight launcher"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "blightlord-terminators-weapon-blight-launcher"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-blightlord-terminators-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "blightlord-terminators-weapon-combi-bolter"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-blightlord-terminators-selection-combi-weapon",
+            "title": "Combi-weapon",
+            "aliases": [
+              "Combi-weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "blightlord-terminators-weapon-combi-weapon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-blightlord-terminators-selection-plague-spewer",
+            "title": "Plague spewer",
+            "aliases": [
+              "Plague spewer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "blightlord-terminators-weapon-plague-spewer"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-blightlord-terminators-selection-reaper-autocannon",
+            "title": "Reaper autocannon",
+            "aliases": [
+              "Reaper autocannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "blightlord-terminators-weapon-reaper-autocannon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-blightlord-terminators-selection-bubotic-blade",
+            "title": "Bubotic blade",
+            "aliases": [
+              "Bubotic blade"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "blightlord-terminators-weapon-bubotic-blade"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-blightlord-terminators-selection-close-combat-weapon",
+            "title": "Close combat weapon",
+            "aliases": [
+              "Close combat weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "blightlord-terminators-weapon-close-combat-weapon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-blightlord-terminators-selection-flail-of-corruption",
+            "title": "Flail of corruption",
+            "aliases": [
+              "Flail of corruption"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "blightlord-terminators-weapon-flail-of-corruption"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "blightlord-terminators-weapon-blight-launcher",
+            "title": "Blight launcher",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "D3",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "BLAST, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-blightlord-terminators-selection-blight-launcher"
+            ]
+          },
+          {
+            "id": "blightlord-terminators-weapon-combi-bolter",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS, RAPID FIRE 2",
+            "sourceSelectionIds": [
+              "unit-blightlord-terminators-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "blightlord-terminators-weapon-combi-weapon",
+            "title": "Combi-weapon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "ANTI-INFANTRY 4+, DEVASTATING WOUNDS, RAPID FIRE 1",
+            "sourceSelectionIds": [
+              "unit-blightlord-terminators-selection-combi-weapon"
+            ]
+          },
+          {
+            "id": "blightlord-terminators-weapon-plague-spewer",
+            "title": "Plague spewer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "ANTI-INFANTRY 2+, IGNORES COVER, TORRENT",
+            "sourceSelectionIds": [
+              "unit-blightlord-terminators-selection-plague-spewer"
+            ]
+          },
+          {
+            "id": "blightlord-terminators-weapon-reaper-autocannon",
+            "title": "Reaper autocannon",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "4",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "DEVASTATING WOUNDS, SUSTAINED HITS 1",
+            "sourceSelectionIds": [
+              "unit-blightlord-terminators-selection-reaper-autocannon"
+            ]
+          },
+          {
+            "id": "blightlord-terminators-weapon-bubotic-blade",
+            "title": "Bubotic blade",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-blightlord-terminators-selection-bubotic-blade"
+            ]
+          },
+          {
+            "id": "blightlord-terminators-weapon-close-combat-weapon",
+            "title": "Close combat weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-blightlord-terminators-selection-close-combat-weapon"
+            ]
+          },
+          {
+            "id": "blightlord-terminators-weapon-flail-of-corruption",
+            "title": "Flail of corruption",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-blightlord-terminators-selection-flail-of-corruption"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1654,6 +3421,114 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           ],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-deathshroud-terminators-selection-plaguespurt-gauntlet",
+            "title": "Plaguespurt gauntlet",
+            "aliases": [
+              "Plaguespurt gauntlet"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "deathshroud-terminators-weapon-plaguespurt-gauntlet"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-deathshroud-terminators-selection-manreaper-strike",
+            "title": "Manreaper – strike",
+            "aliases": [
+              "Manreaper – strike"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "deathshroud-terminators-weapon-manreaper-strike"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-deathshroud-terminators-selection-manreaper-sweep",
+            "title": "Manreaper – sweep",
+            "aliases": [
+              "Manreaper – sweep"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "deathshroud-terminators-weapon-manreaper-sweep"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-deathshroud-terminators-selection-icon-of-despair-aura",
+            "title": "Icon of Despair (Aura)",
+            "aliases": [
+              "Icon of Despair (Aura)"
+            ],
+            "kind": "wargear",
+            "profileIds": [],
+            "wargearAbilityIds": [],
+            "candidateWargearAbilityIds": [
+              "deathshroud-terminators-ability-icon-of-despair-aura"
+            ]
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "deathshroud-terminators-weapon-plaguespurt-gauntlet",
+            "title": "Plaguespurt gauntlet",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "abilities": "ANTI-INFANTRY 4+, IGNORES COVER, PISTOL, TORRENT",
+            "sourceSelectionIds": [
+              "unit-deathshroud-terminators-selection-plaguespurt-gauntlet"
+            ]
+          },
+          {
+            "id": "deathshroud-terminators-weapon-manreaper-strike",
+            "title": "Manreaper – strike",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-deathshroud-terminators-selection-manreaper-strike"
+            ]
+          },
+          {
+            "id": "deathshroud-terminators-weapon-manreaper-sweep",
+            "title": "Manreaper – sweep",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "8",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-deathshroud-terminators-selection-manreaper-sweep"
+            ]
+          }
+        ],
+        "wargearAbilities": [
+          {
+            "id": "deathshroud-terminators-ability-icon-of-despair-aura",
+            "title": "Icon of Despair (Aura)",
+            "requiredSelectionIds": []
+          }
+        ]
       }
     },
     {
@@ -1748,6 +3623,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             }
           ]
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-poxwalkers-selection-improvised-weapon",
+            "title": "Improvised weapon",
+            "aliases": [
+              "Improvised weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "poxwalkers-weapon-improvised-weapon"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "poxwalkers-weapon-improvised-weapon",
+            "title": "Improvised weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "2",
+            "skill": "5+",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-poxwalkers-selection-improvised-weapon"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1815,6 +3725,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-chaos-spawn-selection-hideous-mutations",
+            "title": "Hideous mutations",
+            "aliases": [
+              "Hideous mutations"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-spawn-weapon-hideous-mutations"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "chaos-spawn-weapon-hideous-mutations",
+            "title": "Hideous mutations",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "D6+2",
+            "skill": "4+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-chaos-spawn-selection-hideous-mutations"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1897,6 +3842,176 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-chaos-land-raider-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-land-raider-weapon-combi-bolter"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-land-raider-selection-combi-weapon",
+            "title": "Combi-weapon",
+            "aliases": [
+              "Combi-weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-land-raider-weapon-combi-weapon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-land-raider-selection-havoc-launcher",
+            "title": "Havoc launcher",
+            "aliases": [
+              "Havoc launcher"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-land-raider-weapon-havoc-launcher"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-land-raider-selection-soulshatter-lascannon",
+            "title": "Soulshatter lascannon",
+            "aliases": [
+              "Soulshatter lascannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-land-raider-weapon-soulshatter-lascannon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-land-raider-selection-twin-heavy-bolter",
+            "title": "Twin heavy bolter",
+            "aliases": [
+              "Twin heavy bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-land-raider-weapon-twin-heavy-bolter"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-land-raider-selection-armoured-tracks",
+            "title": "Armoured tracks",
+            "aliases": [
+              "Armoured tracks"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-land-raider-weapon-armoured-tracks"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "chaos-land-raider-weapon-combi-bolter",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS, RAPID FIRE 2",
+            "sourceSelectionIds": [
+              "unit-chaos-land-raider-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "chaos-land-raider-weapon-combi-weapon",
+            "title": "Combi-weapon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "ANTI-INFANTRY 4+, DEVASTATING WOUNDS, RAPID FIRE 1",
+            "sourceSelectionIds": [
+              "unit-chaos-land-raider-selection-combi-weapon"
+            ]
+          },
+          {
+            "id": "chaos-land-raider-weapon-havoc-launcher",
+            "title": "Havoc launcher",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "abilities": "BLAST",
+            "sourceSelectionIds": [
+              "unit-chaos-land-raider-selection-havoc-launcher"
+            ]
+          },
+          {
+            "id": "chaos-land-raider-weapon-soulshatter-lascannon",
+            "title": "Soulshatter lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-chaos-land-raider-selection-soulshatter-lascannon"
+            ]
+          },
+          {
+            "id": "chaos-land-raider-weapon-twin-heavy-bolter",
+            "title": "Twin heavy bolter",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "LETHAL HITS, SUSTAINED HITS 1, TWIN-LINKED",
+            "sourceSelectionIds": [
+              "unit-chaos-land-raider-selection-twin-heavy-bolter"
+            ]
+          },
+          {
+            "id": "chaos-land-raider-weapon-armoured-tracks",
+            "title": "Armoured tracks",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "4+",
+            "s": "8",
+            "ap": "0",
+            "d": "1",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-chaos-land-raider-selection-armoured-tracks"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -1976,6 +4091,203 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-chaos-predator-annihilator-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-predator-annihilator-weapon-combi-bolter"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-selection-combi-weapon",
+            "title": "Combi-weapon",
+            "aliases": [
+              "Combi-weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-predator-annihilator-weapon-combi-weapon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-selection-heavy-bolter",
+            "title": "Heavy bolter",
+            "aliases": [
+              "Heavy bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-predator-annihilator-weapon-heavy-bolter"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-selection-havoc-launcher",
+            "title": "Havoc launcher",
+            "aliases": [
+              "Havoc launcher"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-predator-annihilator-weapon-havoc-launcher"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-selection-lascannon",
+            "title": "Lascannon",
+            "aliases": [
+              "Lascannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-predator-annihilator-weapon-lascannon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-selection-predator-twin-lascannon",
+            "title": "Predator twin lascannon",
+            "aliases": [
+              "Predator twin lascannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-predator-annihilator-weapon-predator-twin-lascannon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-selection-armoured-tracks",
+            "title": "Armoured tracks",
+            "aliases": [
+              "Armoured tracks"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-predator-annihilator-weapon-armoured-tracks"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "chaos-predator-annihilator-weapon-combi-bolter",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS, RAPID FIRE 2",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-annihilator-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "chaos-predator-annihilator-weapon-combi-weapon",
+            "title": "Combi-weapon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "ANTI-INFANTRY 4+, DEVASTATING WOUNDS, RAPID FIRE 1",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-annihilator-selection-combi-weapon"
+            ]
+          },
+          {
+            "id": "chaos-predator-annihilator-weapon-heavy-bolter",
+            "title": "Heavy bolter",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "LETHAL HITS, SUSTAINED HITS 1",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-annihilator-selection-heavy-bolter"
+            ]
+          },
+          {
+            "id": "chaos-predator-annihilator-weapon-havoc-launcher",
+            "title": "Havoc launcher",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "abilities": "BLAST",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-annihilator-selection-havoc-launcher"
+            ]
+          },
+          {
+            "id": "chaos-predator-annihilator-weapon-lascannon",
+            "title": "Lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-annihilator-selection-lascannon"
+            ]
+          },
+          {
+            "id": "chaos-predator-annihilator-weapon-predator-twin-lascannon",
+            "title": "Predator twin lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "14",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "TWIN-LINKED",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-annihilator-selection-predator-twin-lascannon"
+            ]
+          },
+          {
+            "id": "chaos-predator-annihilator-weapon-armoured-tracks",
+            "title": "Armoured tracks",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "4+",
+            "s": "6",
+            "ap": "0",
+            "d": "1",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-annihilator-selection-armoured-tracks"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2055,6 +4367,203 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-chaos-predator-destructor-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-predator-destructor-weapon-combi-bolter"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-destructor-selection-combi-weapon",
+            "title": "Combi-weapon",
+            "aliases": [
+              "Combi-weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-predator-destructor-weapon-combi-weapon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-destructor-selection-havoc-launcher",
+            "title": "Havoc launcher",
+            "aliases": [
+              "Havoc launcher"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-predator-destructor-weapon-havoc-launcher"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-destructor-selection-heavy-bolter",
+            "title": "Heavy bolter",
+            "aliases": [
+              "Heavy bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-predator-destructor-weapon-heavy-bolter"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-destructor-selection-lascannon",
+            "title": "Lascannon",
+            "aliases": [
+              "Lascannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-predator-destructor-weapon-lascannon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-destructor-selection-predator-autocannon",
+            "title": "Predator autocannon",
+            "aliases": [
+              "Predator autocannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-predator-destructor-weapon-predator-autocannon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-predator-destructor-selection-armoured-tracks",
+            "title": "Armoured tracks",
+            "aliases": [
+              "Armoured tracks"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-predator-destructor-weapon-armoured-tracks"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "chaos-predator-destructor-weapon-combi-bolter",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS, RAPID FIRE 2",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-destructor-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "chaos-predator-destructor-weapon-combi-weapon",
+            "title": "Combi-weapon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "ANTI-INFANTRY 4+, DEVASTATING WOUNDS, RAPID FIRE 1",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-destructor-selection-combi-weapon"
+            ]
+          },
+          {
+            "id": "chaos-predator-destructor-weapon-havoc-launcher",
+            "title": "Havoc launcher",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "abilities": "BLAST",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-destructor-selection-havoc-launcher"
+            ]
+          },
+          {
+            "id": "chaos-predator-destructor-weapon-heavy-bolter",
+            "title": "Heavy bolter",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "LETHAL HITS, SUSTAINED HITS 1",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-destructor-selection-heavy-bolter"
+            ]
+          },
+          {
+            "id": "chaos-predator-destructor-weapon-lascannon",
+            "title": "Lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-destructor-selection-lascannon"
+            ]
+          },
+          {
+            "id": "chaos-predator-destructor-weapon-predator-autocannon",
+            "title": "Predator autocannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "4",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-1",
+            "d": "3",
+            "abilities": "LETHAL HITS, RAPID FIRE 2",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-destructor-selection-predator-autocannon"
+            ]
+          },
+          {
+            "id": "chaos-predator-destructor-weapon-armoured-tracks",
+            "title": "Armoured tracks",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "4+",
+            "s": "6",
+            "ap": "0",
+            "d": "1",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-chaos-predator-destructor-selection-armoured-tracks"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2141,6 +4650,338 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-defiler-selection-ectoplasma-destructor",
+            "title": "Ectoplasma destructor",
+            "aliases": [
+              "Ectoplasma destructor"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "defiler-weapon-ectoplasma-destructor"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-excruciator-cannon",
+            "title": "Excruciator cannon",
+            "aliases": [
+              "Excruciator cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "defiler-weapon-excruciator-cannon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-hades-battle-cannon",
+            "title": "Hades battle cannon",
+            "aliases": [
+              "Hades battle cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "defiler-weapon-hades-battle-cannon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-hades-lascannon",
+            "title": "Hades lascannon",
+            "aliases": [
+              "Hades lascannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "defiler-weapon-hades-lascannon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-heavy-baleflamer",
+            "title": "Heavy baleflamer",
+            "aliases": [
+              "Heavy baleflamer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "defiler-weapon-heavy-baleflamer"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-heavy-missile-launcher-krak",
+            "title": "Heavy missile launcher - krak",
+            "aliases": [
+              "Heavy missile launcher - krak"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "defiler-weapon-heavy-missile-launcher-krak"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-heavy-missile-launcher-frag",
+            "title": "Heavy missile launcher - frag",
+            "aliases": [
+              "Heavy missile launcher - frag"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "defiler-weapon-heavy-missile-launcher-frag"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-heavy-reaper-autocannon",
+            "title": "Heavy reaper autocannon",
+            "aliases": [
+              "Heavy reaper autocannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "defiler-weapon-heavy-reaper-autocannon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-magma-cutters",
+            "title": "Magma cutters",
+            "aliases": [
+              "Magma cutters"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "defiler-weapon-magma-cutters"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-electroscourge",
+            "title": "Electroscourge",
+            "aliases": [
+              "Electroscourge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "defiler-weapon-electroscourge"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-shearing-claws-strike",
+            "title": "Shearing claws - strike",
+            "aliases": [
+              "Shearing claws - strike"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "defiler-weapon-shearing-claws-strike"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-selection-shearing-claws-sweep",
+            "title": "Shearing claws - sweep",
+            "aliases": [
+              "Shearing claws - sweep"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "defiler-weapon-shearing-claws-sweep"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "defiler-weapon-ectoplasma-destructor",
+            "title": "Ectoplasma destructor",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "BLAST, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-ectoplasma-destructor"
+            ]
+          },
+          {
+            "id": "defiler-weapon-excruciator-cannon",
+            "title": "Excruciator cannon",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "6",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-excruciator-cannon"
+            ]
+          },
+          {
+            "id": "defiler-weapon-hades-battle-cannon",
+            "title": "Hades battle cannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6+3",
+            "skill": "3+",
+            "s": "10",
+            "ap": "-1",
+            "d": "3",
+            "abilities": "BLAST, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-hades-battle-cannon"
+            ]
+          },
+          {
+            "id": "defiler-weapon-hades-lascannon",
+            "title": "Hades lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-hades-lascannon"
+            ]
+          },
+          {
+            "id": "defiler-weapon-heavy-baleflamer",
+            "title": "Heavy baleflamer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6+3",
+            "skill": "N/A",
+            "s": "7",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "IGNORES COVER, TORRENT",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-heavy-baleflamer"
+            ]
+          },
+          {
+            "id": "defiler-weapon-heavy-missile-launcher-krak",
+            "title": "Heavy missile launcher - krak",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "10",
+            "ap": "-2",
+            "d": "D6+1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-heavy-missile-launcher-krak"
+            ]
+          },
+          {
+            "id": "defiler-weapon-heavy-missile-launcher-frag",
+            "title": "Heavy missile launcher - frag",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "2D6",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "BLAST, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-heavy-missile-launcher-frag"
+            ]
+          },
+          {
+            "id": "defiler-weapon-heavy-reaper-autocannon",
+            "title": "Heavy reaper autocannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "4",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-1",
+            "d": "3",
+            "abilities": "DEVASTATING WOUNDS, LETHAL HITS, SUSTAINED HITS 1",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-heavy-reaper-autocannon"
+            ]
+          },
+          {
+            "id": "defiler-weapon-magma-cutters",
+            "title": "Magma cutters",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-4",
+            "d": "D6",
+            "abilities": "LETHAL HITS, MELTA 2",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-magma-cutters"
+            ]
+          },
+          {
+            "id": "defiler-weapon-electroscourge",
+            "title": "Electroscourge",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "EXTRA ATTACKS, SUSTAINED HITS 2",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-electroscourge"
+            ]
+          },
+          {
+            "id": "defiler-weapon-shearing-claws-strike",
+            "title": "Shearing claws - strike",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "16",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-shearing-claws-strike"
+            ]
+          },
+          {
+            "id": "defiler-weapon-shearing-claws-sweep",
+            "title": "Shearing claws - sweep",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "10",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-defiler-selection-shearing-claws-sweep"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2216,6 +5057,95 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-foetid-bloat-drone-selection-plaguespitter",
+            "title": "Plaguespitter",
+            "aliases": [
+              "Plaguespitter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "foetid-bloat-drone-weapon-plaguespitter"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-foetid-bloat-drone-selection-fleshmower",
+            "title": "Fleshmower",
+            "aliases": [
+              "Fleshmower"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "foetid-bloat-drone-weapon-fleshmower"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-foetid-bloat-drone-selection-plague-probe",
+            "title": "Plague probe",
+            "aliases": [
+              "Plague probe"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "foetid-bloat-drone-weapon-plague-probe"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "foetid-bloat-drone-weapon-plaguespitter",
+            "title": "Plaguespitter",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "6",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "ANTI-INFANTRY 2+, IGNORES COVER, TORRENT",
+            "sourceSelectionIds": [
+              "unit-foetid-bloat-drone-selection-plaguespitter"
+            ]
+          },
+          {
+            "id": "foetid-bloat-drone-weapon-fleshmower",
+            "title": "Fleshmower",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "10",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-foetid-bloat-drone-selection-fleshmower"
+            ]
+          },
+          {
+            "id": "foetid-bloat-drone-weapon-plague-probe",
+            "title": "Plague probe",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-foetid-bloat-drone-selection-plague-probe"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2290,6 +5220,68 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-foetid-bloat-drone-with-heavy-blight-launcher-selection-heavy-blight-launcher",
+            "title": "Heavy blight launcher",
+            "aliases": [
+              "Heavy blight launcher"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "foetid-bloat-drone-with-heavy-blight-launcher-weapon-heavy-blight-launcher"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-foetid-bloat-drone-with-heavy-blight-launcher-selection-plague-probe",
+            "title": "Plague probe",
+            "aliases": [
+              "Plague probe"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "foetid-bloat-drone-with-heavy-blight-launcher-weapon-plague-probe"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "foetid-bloat-drone-with-heavy-blight-launcher-weapon-heavy-blight-launcher",
+            "title": "Heavy blight launcher",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "D6+2",
+            "skill": "3+",
+            "s": "10",
+            "ap": "-2",
+            "d": "3",
+            "abilities": "BLAST, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-foetid-bloat-drone-with-heavy-blight-launcher-selection-heavy-blight-launcher"
+            ]
+          },
+          {
+            "id": "foetid-bloat-drone-with-heavy-blight-launcher-weapon-plague-probe",
+            "title": "Plague probe",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-foetid-bloat-drone-with-heavy-blight-launcher-selection-plague-probe"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2373,6 +5365,365 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-helbrute-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "helbrute-weapon-combi-bolter"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-heavy-flamer",
+            "title": "Heavy flamer",
+            "aliases": [
+              "Heavy flamer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "helbrute-weapon-heavy-flamer"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-missile-launcher-frag",
+            "title": "Missile launcher – frag",
+            "aliases": [
+              "Missile launcher – frag"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "helbrute-weapon-missile-launcher-frag"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-missile-launcher-krak",
+            "title": "Missile launcher – krak",
+            "aliases": [
+              "Missile launcher – krak"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "helbrute-weapon-missile-launcher-krak"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-multi-melta",
+            "title": "Multi-melta",
+            "aliases": [
+              "Multi-melta"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "helbrute-weapon-multi-melta"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-plasma-cannon",
+            "title": "Plasma cannon",
+            "aliases": [
+              "Plasma cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "helbrute-weapon-plasma-cannon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-twin-autocannon",
+            "title": "Twin autocannon",
+            "aliases": [
+              "Twin autocannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "helbrute-weapon-twin-autocannon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-twin-heavy-bolter",
+            "title": "Twin heavy bolter",
+            "aliases": [
+              "Twin heavy bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "helbrute-weapon-twin-heavy-bolter"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-twin-lascannon",
+            "title": "Twin lascannon",
+            "aliases": [
+              "Twin lascannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "helbrute-weapon-twin-lascannon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-close-combat-weapon",
+            "title": "Close combat weapon",
+            "aliases": [
+              "Close combat weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "helbrute-weapon-close-combat-weapon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-helbrute-fist",
+            "title": "Helbrute fist",
+            "aliases": [
+              "Helbrute fist"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "helbrute-weapon-helbrute-fist"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-helbrute-hammer",
+            "title": "Helbrute hammer",
+            "aliases": [
+              "Helbrute hammer"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "helbrute-weapon-helbrute-hammer"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-selection-power-scourge",
+            "title": "Power scourge",
+            "aliases": [
+              "Power scourge"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "helbrute-weapon-power-scourge"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "helbrute-weapon-combi-bolter",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS, RAPID FIRE 2",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "helbrute-weapon-heavy-flamer",
+            "title": "Heavy flamer",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "IGNORES COVER, TORRENT",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-heavy-flamer"
+            ]
+          },
+          {
+            "id": "helbrute-weapon-missile-launcher-frag",
+            "title": "Missile launcher – frag",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "BLAST",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-missile-launcher-frag"
+            ]
+          },
+          {
+            "id": "helbrute-weapon-missile-launcher-krak",
+            "title": "Missile launcher – krak",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-2",
+            "d": "D6",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-missile-launcher-krak"
+            ]
+          },
+          {
+            "id": "helbrute-weapon-multi-melta",
+            "title": "Multi-melta",
+            "mode": "ranged",
+            "range": "18\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-4",
+            "d": "D6",
+            "abilities": "MELTA 2, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-multi-melta"
+            ]
+          },
+          {
+            "id": "helbrute-weapon-plasma-cannon",
+            "title": "Plasma cannon",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "D3",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "BLAST, HAZARDOUS, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-plasma-cannon"
+            ]
+          },
+          {
+            "id": "helbrute-weapon-twin-autocannon",
+            "title": "Twin autocannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "10",
+            "ap": "-1",
+            "d": "3",
+            "abilities": "TWIN-LINKED, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-twin-autocannon"
+            ]
+          },
+          {
+            "id": "helbrute-weapon-twin-heavy-bolter",
+            "title": "Twin heavy bolter",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "LETHAL HITS, SUSTAINED HITS 1, TWIN-LINKED",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-twin-heavy-bolter"
+            ]
+          },
+          {
+            "id": "helbrute-weapon-twin-lascannon",
+            "title": "Twin lascannon",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "TWIN-LINKED",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-twin-lascannon"
+            ]
+          },
+          {
+            "id": "helbrute-weapon-close-combat-weapon",
+            "title": "Close combat weapon",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "6",
+            "ap": "0",
+            "d": "1",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-close-combat-weapon"
+            ]
+          },
+          {
+            "id": "helbrute-weapon-helbrute-fist",
+            "title": "Helbrute fist",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "5",
+            "skill": "3+",
+            "s": "12",
+            "ap": "-2",
+            "d": "3",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-helbrute-fist"
+            ]
+          },
+          {
+            "id": "helbrute-weapon-helbrute-hammer",
+            "title": "Helbrute hammer",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "14",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-helbrute-hammer"
+            ]
+          },
+          {
+            "id": "helbrute-weapon-power-scourge",
+            "title": "Power scourge",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "8",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-helbrute-selection-power-scourge"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2450,6 +5801,149 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-myphitic-blight-hauler-selection-bile-spurt",
+            "title": "Bile spurt",
+            "aliases": [
+              "Bile spurt"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "myphitic-blight-hauler-weapon-bile-spurt"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-myphitic-blight-hauler-selection-missile-launcher-frag",
+            "title": "Missile launcher – frag",
+            "aliases": [
+              "Missile launcher – frag"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "myphitic-blight-hauler-weapon-missile-launcher-frag"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-myphitic-blight-hauler-selection-missile-launcher-krak",
+            "title": "Missile launcher – krak",
+            "aliases": [
+              "Missile launcher – krak"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "myphitic-blight-hauler-weapon-missile-launcher-krak"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-myphitic-blight-hauler-selection-multi-melta",
+            "title": "Multi-melta",
+            "aliases": [
+              "Multi-melta"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "myphitic-blight-hauler-weapon-multi-melta"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-myphitic-blight-hauler-selection-gnashing-maw",
+            "title": "Gnashing maw",
+            "aliases": [
+              "Gnashing maw"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "myphitic-blight-hauler-weapon-gnashing-maw"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "myphitic-blight-hauler-weapon-bile-spurt",
+            "title": "Bile spurt",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-myphitic-blight-hauler-selection-bile-spurt"
+            ]
+          },
+          {
+            "id": "myphitic-blight-hauler-weapon-missile-launcher-frag",
+            "title": "Missile launcher – frag",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "BLAST",
+            "sourceSelectionIds": [
+              "unit-myphitic-blight-hauler-selection-missile-launcher-frag"
+            ]
+          },
+          {
+            "id": "myphitic-blight-hauler-weapon-missile-launcher-krak",
+            "title": "Missile launcher – krak",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-2",
+            "d": "D6",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-myphitic-blight-hauler-selection-missile-launcher-krak"
+            ]
+          },
+          {
+            "id": "myphitic-blight-hauler-weapon-multi-melta",
+            "title": "Multi-melta",
+            "mode": "ranged",
+            "range": "18\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "9",
+            "ap": "-4",
+            "d": "D6",
+            "abilities": "MELTA 2, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-myphitic-blight-hauler-selection-multi-melta"
+            ]
+          },
+          {
+            "id": "myphitic-blight-hauler-weapon-gnashing-maw",
+            "title": "Gnashing maw",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "3+",
+            "s": "6",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-myphitic-blight-hauler-selection-gnashing-maw"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2528,6 +6022,176 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-plagueburst-crawler-selection-entropy-cannon",
+            "title": "Entropy cannon",
+            "aliases": [
+              "Entropy cannon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plagueburst-crawler-weapon-entropy-cannon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plagueburst-crawler-selection-heavy-slugger",
+            "title": "Heavy slugger",
+            "aliases": [
+              "Heavy slugger"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plagueburst-crawler-weapon-heavy-slugger"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plagueburst-crawler-selection-plagueburst-mortar",
+            "title": "Plagueburst mortar",
+            "aliases": [
+              "Plagueburst mortar"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plagueburst-crawler-weapon-plagueburst-mortar"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plagueburst-crawler-selection-plaguespitter",
+            "title": "Plaguespitter",
+            "aliases": [
+              "Plaguespitter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plagueburst-crawler-weapon-plaguespitter"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plagueburst-crawler-selection-rothail-volley-gun",
+            "title": "Rothail volley gun",
+            "aliases": [
+              "Rothail volley gun"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plagueburst-crawler-weapon-rothail-volley-gun"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plagueburst-crawler-selection-armoured-tracks",
+            "title": "Armoured tracks",
+            "aliases": [
+              "Armoured tracks"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plagueburst-crawler-weapon-armoured-tracks"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "plagueburst-crawler-weapon-entropy-cannon",
+            "title": "Entropy cannon",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "1",
+            "skill": "3+",
+            "s": "10",
+            "ap": "-3",
+            "d": "D6+1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-plagueburst-crawler-selection-entropy-cannon"
+            ]
+          },
+          {
+            "id": "plagueburst-crawler-weapon-heavy-slugger",
+            "title": "Heavy slugger",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "4",
+            "skill": "3+",
+            "s": "5",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-plagueburst-crawler-selection-heavy-slugger"
+            ]
+          },
+          {
+            "id": "plagueburst-crawler-weapon-plagueburst-mortar",
+            "title": "Plagueburst mortar",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6+3",
+            "skill": "3+",
+            "s": "8",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "BLAST, INDIRECT FIRE, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-plagueburst-crawler-selection-plagueburst-mortar"
+            ]
+          },
+          {
+            "id": "plagueburst-crawler-weapon-plaguespitter",
+            "title": "Plaguespitter",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6",
+            "skill": "N/A",
+            "s": "6",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "ANTI-INFANTRY 2+, IGNORES COVER, TORRENT",
+            "sourceSelectionIds": [
+              "unit-plagueburst-crawler-selection-plaguespitter"
+            ]
+          },
+          {
+            "id": "plagueburst-crawler-weapon-rothail-volley-gun",
+            "title": "Rothail volley gun",
+            "mode": "ranged",
+            "range": "36\"",
+            "a": "3",
+            "skill": "3+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS, RAPID FIRE 3",
+            "sourceSelectionIds": [
+              "unit-plagueburst-crawler-selection-rothail-volley-gun"
+            ]
+          },
+          {
+            "id": "plagueburst-crawler-weapon-armoured-tracks",
+            "title": "Armoured tracks",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "4+",
+            "s": "6",
+            "ap": "0",
+            "d": "1",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-plagueburst-crawler-selection-armoured-tracks"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2613,6 +6277,122 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-chaos-rhino-selection-combi-bolter",
+            "title": "Combi-bolter",
+            "aliases": [
+              "Combi-bolter"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-rhino-weapon-combi-bolter"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-rhino-selection-combi-weapon",
+            "title": "Combi-weapon",
+            "aliases": [
+              "Combi-weapon"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-rhino-weapon-combi-weapon"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-rhino-selection-havoc-launcher",
+            "title": "Havoc launcher",
+            "aliases": [
+              "Havoc launcher"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-rhino-weapon-havoc-launcher"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-chaos-rhino-selection-armoured-tracks",
+            "title": "Armoured tracks",
+            "aliases": [
+              "Armoured tracks"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "chaos-rhino-weapon-armoured-tracks"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "chaos-rhino-weapon-combi-bolter",
+            "title": "Combi-bolter",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS, RAPID FIRE 2",
+            "sourceSelectionIds": [
+              "unit-chaos-rhino-selection-combi-bolter"
+            ]
+          },
+          {
+            "id": "chaos-rhino-weapon-combi-weapon",
+            "title": "Combi-weapon",
+            "mode": "ranged",
+            "range": "24\"",
+            "a": "1",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "ANTI-INFANTRY 4+, DEVASTATING WOUNDS, RAPID FIRE 1",
+            "sourceSelectionIds": [
+              "unit-chaos-rhino-selection-combi-weapon"
+            ]
+          },
+          {
+            "id": "chaos-rhino-weapon-havoc-launcher",
+            "title": "Havoc launcher",
+            "mode": "ranged",
+            "range": "48\"",
+            "a": "D6",
+            "skill": "3+",
+            "s": "5",
+            "ap": "0",
+            "d": "1",
+            "abilities": "BLAST",
+            "sourceSelectionIds": [
+              "unit-chaos-rhino-selection-havoc-launcher"
+            ]
+          },
+          {
+            "id": "chaos-rhino-weapon-armoured-tracks",
+            "title": "Armoured tracks",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "4+",
+            "s": "6",
+            "ap": "0",
+            "d": "1",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-chaos-rhino-selection-armoured-tracks"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2687,6 +6467,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-miasmic-malignifier-selection-miasmic-gouts",
+            "title": "Miasmic gouts",
+            "aliases": [
+              "Miasmic gouts"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "miasmic-malignifier-weapon-miasmic-gouts"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "miasmic-malignifier-weapon-miasmic-gouts",
+            "title": "Miasmic gouts",
+            "mode": "ranged",
+            "range": "9\"",
+            "a": "2D6",
+            "skill": "N/A",
+            "s": "3",
+            "ap": "0",
+            "d": "1",
+            "abilities": "IGNORES COVER, TORRENT",
+            "sourceSelectionIds": [
+              "unit-miasmic-malignifier-selection-miasmic-gouts"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2762,6 +6577,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-beasts-of-nurgle-selection-putrid-appendages",
+            "title": "Putrid appendages",
+            "aliases": [
+              "Putrid appendages"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "beasts-of-nurgle-weapon-putrid-appendages"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "beasts-of-nurgle-weapon-putrid-appendages",
+            "title": "Putrid appendages",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "4+",
+            "s": "6",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "DEVASTATING WOUNDS",
+            "sourceSelectionIds": [
+              "unit-beasts-of-nurgle-selection-putrid-appendages"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2853,6 +6703,176 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-great-unclean-one-selection-plague-flail",
+            "title": "Plague flail",
+            "aliases": [
+              "Plague flail"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "great-unclean-one-weapon-plague-flail"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-great-unclean-one-selection-putrid-vomit",
+            "title": "Putrid vomit",
+            "aliases": [
+              "Putrid vomit"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "great-unclean-one-weapon-putrid-vomit"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-great-unclean-one-selection-bileblade",
+            "title": "Bileblade",
+            "aliases": [
+              "Bileblade"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "great-unclean-one-weapon-bileblade"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-great-unclean-one-selection-bilesword-strike",
+            "title": "Bilesword – strike",
+            "aliases": [
+              "Bilesword – strike"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "great-unclean-one-weapon-bilesword-strike"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-great-unclean-one-selection-bilesword-sweep",
+            "title": "Bilesword – sweep",
+            "aliases": [
+              "Bilesword – sweep"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "great-unclean-one-weapon-bilesword-sweep"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-great-unclean-one-selection-doomsday-bell",
+            "title": "Doomsday bell",
+            "aliases": [
+              "Doomsday bell"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "great-unclean-one-weapon-doomsday-bell"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "great-unclean-one-weapon-plague-flail",
+            "title": "Plague flail",
+            "mode": "ranged",
+            "range": "6\"",
+            "a": "D6+1",
+            "skill": "3+",
+            "s": "7",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "-",
+            "sourceSelectionIds": [
+              "unit-great-unclean-one-selection-plague-flail"
+            ]
+          },
+          {
+            "id": "great-unclean-one-weapon-putrid-vomit",
+            "title": "Putrid vomit",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D6+3",
+            "skill": "N/A",
+            "s": "5",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "IGNORES COVER, TORRENT",
+            "sourceSelectionIds": [
+              "unit-great-unclean-one-selection-putrid-vomit"
+            ]
+          },
+          {
+            "id": "great-unclean-one-weapon-bileblade",
+            "title": "Bileblade",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "3",
+            "skill": "2+",
+            "s": "6",
+            "ap": "-2",
+            "d": "2",
+            "abilities": "EXTRA ATTACKS, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-great-unclean-one-selection-bileblade"
+            ]
+          },
+          {
+            "id": "great-unclean-one-weapon-bilesword-strike",
+            "title": "Bilesword – strike",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "2+",
+            "s": "10",
+            "ap": "-2",
+            "d": "D6+1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-great-unclean-one-selection-bilesword-strike"
+            ]
+          },
+          {
+            "id": "great-unclean-one-weapon-bilesword-sweep",
+            "title": "Bilesword – sweep",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "12",
+            "skill": "2+",
+            "s": "7",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-great-unclean-one-selection-bilesword-sweep"
+            ]
+          },
+          {
+            "id": "great-unclean-one-weapon-doomsday-bell",
+            "title": "Doomsday bell",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "6",
+            "skill": "2+",
+            "s": "7",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "LETHAL HITS, REVERBERATING SUMMONS",
+            "sourceSelectionIds": [
+              "unit-great-unclean-one-selection-doomsday-bell"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -2927,6 +6947,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-nurglings-selection-diseased-claws-and-teeth",
+            "title": "Diseased claws and teeth",
+            "aliases": [
+              "Diseased claws and teeth"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "nurglings-weapon-diseased-claws-and-teeth"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "nurglings-weapon-diseased-claws-and-teeth",
+            "title": "Diseased claws and teeth",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "4",
+            "skill": "5+",
+            "s": "2",
+            "ap": "0",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-nurglings-selection-diseased-claws-and-teeth"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -3008,6 +7063,95 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-plague-drones-selection-deaths-heads",
+            "title": "Death’s heads",
+            "aliases": [
+              "Death’s heads"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-drones-weapon-deaths-heads"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-drones-selection-foul-mouthparts",
+            "title": "Foul mouthparts",
+            "aliases": [
+              "Foul mouthparts"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-drones-weapon-foul-mouthparts"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-drones-selection-plaguesword",
+            "title": "Plaguesword",
+            "aliases": [
+              "Plaguesword"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plague-drones-weapon-plaguesword"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "plague-drones-weapon-deaths-heads",
+            "title": "Death’s heads",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "D3",
+            "skill": "4+",
+            "s": "4",
+            "ap": "0",
+            "d": "1",
+            "abilities": "BLAST, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-plague-drones-selection-deaths-heads"
+            ]
+          },
+          {
+            "id": "plague-drones-weapon-foul-mouthparts",
+            "title": "Foul mouthparts",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "2",
+            "skill": "4+",
+            "s": "5",
+            "ap": "-1",
+            "d": "2",
+            "abilities": "EXTRA ATTACKS, LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-plague-drones-selection-foul-mouthparts"
+            ]
+          },
+          {
+            "id": "plague-drones-weapon-plaguesword",
+            "title": "Plaguesword",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-plague-drones-selection-plaguesword"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -3087,6 +7231,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-plaguebearers-selection-plaguesword",
+            "title": "Plaguesword",
+            "aliases": [
+              "Plaguesword"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "plaguebearers-weapon-plaguesword"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "plaguebearers-weapon-plaguesword",
+            "title": "Plaguesword",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "2",
+            "skill": "3+",
+            "s": "4",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "LETHAL HITS",
+            "sourceSelectionIds": [
+              "unit-plaguebearers-selection-plaguesword"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     },
     {
@@ -3178,6 +7357,95 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeLedBy": [],
           "canBeSupportedBy": []
         }
+      },
+      "gameSelections": {
+        "models": [],
+        "selections": [
+          {
+            "id": "unit-rotigus-selection-streams-of-brackish-filth",
+            "title": "Streams of brackish filth",
+            "aliases": [
+              "Streams of brackish filth"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "rotigus-weapon-streams-of-brackish-filth"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-rotigus-selection-gnarlrod-strike",
+            "title": "Gnarlrod – strike",
+            "aliases": [
+              "Gnarlrod – strike"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "rotigus-weapon-gnarlrod-strike"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-rotigus-selection-gnarlrod-sweep",
+            "title": "Gnarlrod – sweep",
+            "aliases": [
+              "Gnarlrod – sweep"
+            ],
+            "kind": "weapon",
+            "profileIds": [
+              "rotigus-weapon-gnarlrod-sweep"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponProfiles": [
+          {
+            "id": "rotigus-weapon-streams-of-brackish-filth",
+            "title": "Streams of brackish filth",
+            "mode": "ranged",
+            "range": "12\"",
+            "a": "2D6",
+            "skill": "N/A",
+            "s": "8",
+            "ap": "-2",
+            "d": "1",
+            "abilities": "DEVASTATING WOUNDS, IGNORES COVER, TORRENT",
+            "sourceSelectionIds": [
+              "unit-rotigus-selection-streams-of-brackish-filth"
+            ]
+          },
+          {
+            "id": "rotigus-weapon-gnarlrod-strike",
+            "title": "Gnarlrod – strike",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "7",
+            "skill": "2+",
+            "s": "10",
+            "ap": "-3",
+            "d": "3",
+            "abilities": "LETHAL HITS, PSYCHIC",
+            "sourceSelectionIds": [
+              "unit-rotigus-selection-gnarlrod-strike"
+            ]
+          },
+          {
+            "id": "rotigus-weapon-gnarlrod-sweep",
+            "title": "Gnarlrod – sweep",
+            "mode": "melee",
+            "range": "Melee",
+            "a": "14",
+            "skill": "2+",
+            "s": "8",
+            "ap": "-1",
+            "d": "1",
+            "abilities": "LETHAL HITS, PSYCHIC",
+            "sourceSelectionIds": [
+              "unit-rotigus-selection-gnarlrod-sweep"
+            ]
+          }
+        ],
+        "wargearAbilities": []
       }
     }
   ],

@@ -40,10 +40,10 @@
     "glossaryAutolink": 8,
     "rosterEntities": 1,
     "rosterParser": 2,
-    "rosterEnhancements": 3,
+    "rosterEnhancements": 4,
     "modalFocus": 1,
-    "rosterSemantics": 2,
-    "rosterFilter": 28,
+    "rosterSemantics": 3,
+    "rosterFilter": 29,
     "app": 48
   },
   "relatedRulesOwnership": {

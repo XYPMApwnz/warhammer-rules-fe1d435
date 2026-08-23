@@ -51,6 +51,15 @@ const navSnapshot=page=>page.evaluate(()=>{
     hiddenTerminalContent:[...document.querySelectorAll('.document [data-track],.document .unit-card')].filter(node=>getComputedStyle(node).display==='none').length
   };
 });
+const coverageTotals={datasheets:0,stratagemDatasheets:0,stratagemNavDatasheets:0,baseDatasheets:0};
+const structureSnapshot=page=>page.evaluate(()=>{
+  const unit=document.querySelector('.document .unit-card'),head=[...unit.children].find(node=>node.matches('.unit-head,.unit-header')),nav=[...unit.children].find(node=>node.matches('.local-nav'));
+  const profile=[...unit.querySelectorAll('.unit-part[id]')].find(part=>part.id.endsWith('-profile'))||unit.querySelector('.unit-part[id]');
+  const statlines=[...unit.querySelectorAll('.statline')],bases=[...unit.querySelectorAll('.profile-base')],weapon=unit.querySelector('.weapon-group,.weapon-table');
+  const before=(left,right)=>Boolean(left&&right&&(left.compareDocumentPosition(right)&Node.DOCUMENT_POSITION_FOLLOWING));
+  const logicalOwner=node=>node.dataset.logicalOwner||node.closest('[data-logical-owner]')?.dataset.logicalOwner||'';
+  return{headBeforeNav:before(head,nav),navBeforeStatline:statlines.every(statline=>before(nav,statline)),statlineBeforeWeapons:!weapon||statlines.every(statline=>before(statline,weapon)),profileOwned:[...statlines,...bases].every(node=>logicalOwner(node)===profile?.id),navOwnsStatline:statlines.some(statline=>nav.contains(statline)),statlines:statlines.length,bases:bases.length};
+});
 const clickSection=async(page,id)=>{
   await page.locator(`[data-journey-target="${id}"]`).click();
   await waitForHash(page,id);
@@ -61,6 +70,27 @@ const clickSection=async(page,id)=>{
   },id);
   assert.deepEqual(feedback,{section:true,heading:false,active:0},`${id}: whole-section feedback contract failed`);
 };
+const auditCoverage=page=>page.evaluate(async()=>{
+  const ids=window.WHArmyBookTargetMount.catalog.nodes.filter(node=>node.kind==='target'&&node.id.startsWith('unit-')).map(node=>node.id);
+  const result={datasheets:ids.length,missing:[],orphan:[],duplicates:[],order:[],ownership:[],stratagemDatasheets:0,stratagemNavDatasheets:0,baseDatasheets:0};
+  for(const id of ids){
+    window.WHArmyBookTargetMount.ensure(id);
+    const unit=document.getElementById(id),nav=unit?.querySelector(':scope > .local-nav');
+    await Promise.all([...unit.querySelectorAll('img')].map(image=>image.complete?Promise.resolve():new Promise(resolve=>{image.addEventListener('load',resolve,{once:true});image.addEventListener('error',resolve,{once:true});})));
+    const sections=[...unit.querySelectorAll('.unit-part[id]')],sectionIds=sections.map(section=>section.id),targets=[...nav.querySelectorAll('[data-journey-target]')].map(button=>button.dataset.journeyTarget),targetSet=new Set(targets);
+    for(const sectionId of sectionIds)if(!targetSet.has(sectionId))result.missing.push(`${id}:${sectionId}`);
+    for(const target of targets)if(!sectionIds.includes(target))result.orphan.push(`${id}:${target}`);
+    if(targetSet.size!==targets.length)result.duplicates.push(id);
+    const statlines=[...unit.querySelectorAll('.statline')],bases=[...unit.querySelectorAll('.profile-base')],profile=sections.find(section=>section.id.endsWith('-profile'))||sections[0],before=(left,right)=>Boolean(left&&right&&(left.compareDocumentPosition(right)&Node.DOCUMENT_POSITION_FOLLOWING));
+    if(!statlines.every(statline=>before(nav,statline)))result.order.push(id);
+    const logicalOwner=node=>node.dataset.logicalOwner||node.closest('[data-logical-owner]')?.dataset.logicalOwner||'';
+    if(![...statlines,...bases].every(node=>logicalOwner(node)===profile?.id))result.ownership.push(id);
+    if(bases.length)result.baseDatasheets+=1;
+    const stratagems=sections.filter(section=>/\bstratagems?\b/i.test(section.querySelector(':scope > h4,:scope > h3')?.textContent||''));
+    if(stratagems.length){result.stratagemDatasheets+=1;if(stratagems.every(section=>targetSet.has(section.id)))result.stratagemNavDatasheets+=1;}
+  }
+  return result;
+});
 
 async function phoneBook(page,name,id){
   const observed=observe(page);
@@ -81,10 +111,16 @@ async function phoneBook(page,name,id){
   assert.equal(snapshot.overflow,false,`${name}: page horizontal overflow`);
   assert.equal(snapshot.hiddenTerminalContent,0,`${name}: unrelated terminal content is hidden instead of absent`);
   assert.ok(snapshot.targets.length>=2,`${name}: no useful section navigation`);
+  const structure=await structureSnapshot(page);
+  assert.equal(structure.headBeforeNav,true,`${name}: Datasheet nav is not below the unit hero`);
+  assert.equal(structure.navBeforeStatline,true,`${name}: Datasheet nav is not above the unit statline`);
+  assert.equal(structure.statlineBeforeWeapons,true,`${name}: unit statline no longer precedes weapon content`);
+  assert.equal(structure.profileOwned,true,`${name}: Profile lost statline/Base semantic ownership`);
+  assert.equal(structure.navOwnsStatline,false,`${name}: navigation incorrectly owns the statline`);
 
   const middle=snapshot.targets[Math.floor(snapshot.targets.length/2)],last=snapshot.targets.at(-1);
   await clickSection(page,middle);
-  const sticky=await page.evaluate(()=>{const header=document.getElementById('appHeader').getBoundingClientRect(),nav=document.querySelector('.unit-card > .local-nav').getBoundingClientRect();return{delta:Math.abs(nav.top-header.bottom-6),overflow:document.documentElement.scrollWidth>window.innerWidth};});
+  const sticky=await page.evaluate(()=>{const header=document.getElementById('appHeader').getBoundingClientRect(),nav=document.querySelector('.unit-card > .local-nav').getBoundingClientRect();return{delta:Math.abs(nav.top-header.bottom),overflow:document.documentElement.scrollWidth>window.innerWidth};});
   assert.ok(sticky.delta<=2,`${name}: sticky nav is not aligned to measured header`);assert.equal(sticky.overflow,false,`${name}: sticky nav caused overflow`);
   await page.waitForTimeout(2350);
   assert.equal(await page.locator(`#${middle}.destination-highlight`).count(),0,`${name}: highlight did not clear`);
@@ -99,6 +135,14 @@ async function phoneBook(page,name,id){
   assert.equal(snapshot.navs,1,`${name}: old nav survived replacement`);
   assert.equal(await page.locator(`#${first}`).count(),0,`${name}: previous Datasheet remains in live DOM`);
   assert.equal(await page.locator('.destination-highlight').count(),0,`${name}: stale target highlight survived replacement`);
+  const coverage=await auditCoverage(page);
+  assert.deepEqual(coverage.missing,[],`${name}: real Datasheet sections missing from Phone nav`);
+  assert.deepEqual(coverage.orphan,[],`${name}: Phone nav items without real section targets`);
+  assert.deepEqual(coverage.duplicates,[],`${name}: duplicate Phone nav targets`);
+  assert.deepEqual(coverage.order,[],`${name}: Phone nav/statline order regression`);
+  assert.deepEqual(coverage.ownership,[],`${name}: Profile ownership regression`);
+  assert.equal(coverage.stratagemNavDatasheets,coverage.stratagemDatasheets,`${name}: real Stratagems sections missing from Phone nav`);
+  coverageTotals.datasheets+=coverage.datasheets;coverageTotals.stratagemDatasheets+=coverage.stratagemDatasheets;coverageTotals.stratagemNavDatasheets+=coverage.stratagemNavDatasheets;coverageTotals.baseDatasheets+=coverage.baseDatasheets;
   assert.deepEqual(observed.errors,[],`${name}: console errors`);assert.deepEqual(observed.failed,[],`${name}: failed requests`);
   return{first,second};
 }
@@ -107,14 +151,20 @@ async function amBehavior(page){
   await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?view=mobile#unit-onager-dunecrawler`);await waitForApp(page);
   const nav=await navSnapshot(page);assert.equal(nav.unitId,'unit-onager-dunecrawler','AM: Onager was not mounted');
   assert.equal(await page.locator('#unit-onager-dunecrawler .unit-art-background img, #unit-onager-dunecrawler .unit-art img').count(),1,'AM: translucent unit artwork missing');
-  await page.evaluate(()=>window.scrollTo(0,document.documentElement.scrollHeight));await page.waitForFunction(()=>Math.abs(scrollY-(document.documentElement.scrollHeight-innerHeight))<2);
-  const visible=await page.evaluate(()=>{
-    const nav=document.querySelector('.unit-card > .local-nav'),usable=nav.getBoundingClientRect().bottom;
-    return[...nav.querySelectorAll('[data-journey-target]')].map(button=>button.dataset.journeyTarget).filter(id=>{const heading=document.querySelector(`#${CSS.escape(id)} > h4`),rect=heading?.getBoundingClientRect();return rect&&rect.top>=usable&&rect.top<innerHeight;});
-  });
-  assert.ok(visible.length>=1,'AM: no real already-visible final section fixture');
-  const target=visible[0],before=await page.evaluate(()=>scrollY);await clickSection(page,target);const after=await page.evaluate(()=>scrollY);
-  assert.ok(Math.abs(after-before)<=1,'AM: already-visible target caused an unnecessary jump');
+  const onagerStructure=await structureSnapshot(page);assert.equal(onagerStructure.statlines,1,'AM: Onager must have exactly one unit statline');assert.equal(onagerStructure.navBeforeStatline,true,'AM: Onager nav is below its statline');assert.equal(onagerStructure.statlineBeforeWeapons,true,'AM: Onager nav appears to belong to weapon statistics');assert.equal(onagerStructure.profileOwned,true,'AM: Onager Profile ownership changed');
+  const target=nav.targets[Math.floor(nav.targets.length/2)];
+  await page.evaluate(id=>{const section=document.getElementById(id),scrollTarget=window.WHNavigationTargets.resolve(section).scrollTarget,top=scrollY+scrollTarget.getBoundingClientRect().top;window.scrollTo({top:Math.max(0,top-innerHeight*.68),behavior:'instant'});},target);
+  const before=await page.evaluate(id=>{const section=document.getElementById(id),scrollTarget=window.WHNavigationTargets.resolve(section).scrollTarget,rect=scrollTarget.getBoundingClientRect(),nav=document.querySelector('.unit-card > .local-nav').getBoundingClientRect(),gap=window.DG_APP.navigation.trackingGap,max=document.documentElement.scrollHeight-innerHeight;return{scrollY,top:rect.top,navBottom:nav.bottom,gap,max,viewportHeight:innerHeight,destination:scrollY+rect.top-nav.bottom-gap};},target);
+  assert.ok(before.top>before.navBottom+before.gap+10&&before.top<before.viewportHeight,'AM: no real already-visible middle-section fixture');
+  assert.ok(before.destination<before.max-2,'AM: already-visible fixture cannot physically align upward');
+  await clickSection(page,target);
+  const after=await page.evaluate(id=>{const section=document.getElementById(id),scrollTarget=window.WHNavigationTargets.resolve(section).scrollTarget,nav=document.querySelector('.unit-card > .local-nav').getBoundingClientRect();return{scrollY,top:scrollTarget.getBoundingClientRect().top,navBottom:nav.bottom,gap:window.DG_APP.navigation.trackingGap};},target);
+  assert.ok(after.scrollY>before.scrollY+1,'AM: already-visible target did not move upward');
+  assert.ok(Math.abs(after.top-after.navBottom-after.gap)<=3,'AM: already-visible target did not align to the usable viewport top');
+  await page.evaluate(()=>{const header=document.getElementById('appHeader');header.dataset.phone2aHeight=header.style.height;header.style.height=`${header.getBoundingClientRect().height+18}px`;});
+  await page.waitForFunction(()=>{const header=document.getElementById('appHeader').getBoundingClientRect(),nav=document.querySelector('.unit-card > .local-nav').getBoundingClientRect();return Math.abs(nav.top-header.bottom)<=2;});
+  await page.evaluate(()=>{const header=document.getElementById('appHeader');header.style.height=header.dataset.phone2aHeight||'';delete header.dataset.phone2aHeight;});
+  await page.waitForFunction(()=>{const header=document.getElementById('appHeader').getBoundingClientRect(),nav=document.querySelector('.unit-card > .local-nav').getBoundingClientRect();return Math.abs(nav.top-header.bottom)<=2;});
   const last=nav.targets.at(-1);await page.locator(`[data-journey-target="${last}"]`).click();await waitForHash(page,last);await page.waitForFunction(id=>document.getElementById(id)?.classList.contains('destination-highlight'),last);
   const bottom=await page.evaluate(()=>({scrollY,max:document.documentElement.scrollHeight-innerHeight}));assert.ok(Math.abs(bottom.scrollY-bottom.max)<=2,'AM: final section did not use natural bottom clamp');
 
@@ -134,9 +184,10 @@ async function desktopBook(page,name,id){
 
 try{
   const phone=await browser.newContext({serviceWorkers:'block',viewport:{width:390,height:844}});
-  try{const page=await phone.newPage();for(const [name,id] of books)await phoneBook(page,name,id);await amBehavior(page);}finally{await phone.close();}
+  try{for(const [name,id] of books){const page=await phone.newPage();try{await phoneBook(page,name,id);}finally{await page.close();}}const page=await phone.newPage();try{await amBehavior(page);}finally{await page.close();}}finally{await phone.close();}
   const desktop=await browser.newContext({serviceWorkers:'block',viewport:{width:1280,height:720}});
   try{const page=await desktop.newPage();for(const [name,id] of books)await desktopBook(page,name,id);}finally{await desktop.close();}
+  console.log(`Datasheet nav coverage: ${coverageTotals.datasheets} Datasheets; missing sections 0; orphan targets 0; real Stratagems sections ${coverageTotals.stratagemDatasheets}; Stratagems represented ${coverageTotals.stratagemNavDatasheets}; Datasheets with Base ${coverageTotals.baseDatasheets}.`);
   console.log('Shared Army Book PHONE-2 Datasheet section navigation QA: PASS (9/9).');
 }finally{
   await browser.close();await new Promise(resolve=>server.close(resolve));

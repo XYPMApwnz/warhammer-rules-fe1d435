@@ -385,7 +385,7 @@ html.related-rules-open{overflow:hidden}
   body .unit-card > .local-nav {
     position: sticky;
     z-index: 7;
-    top: calc(var(--header) + 6px);
+    top: var(--app-header-bottom, calc(var(--header) + env(safe-area-inset-top)));
     display: flex;
     gap: 6px;
     margin: 14px -8px 4px;

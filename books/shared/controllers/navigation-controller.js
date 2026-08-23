@@ -334,14 +334,8 @@
     navigateSection(id,section,{nav=null,settled}={}){
       const targets=window.WHNavigationTargets.resolve(section);if(!targets.scrollTarget)return;
       const navHeight=nav?.getBoundingClientRect().height||0;
-      const inset=this.geometry.headerBottom+6+navHeight+this.trackingGap;
-      const rect=targets.scrollTarget.getBoundingClientRect();
-      const alreadyVisible=rect.top>=inset-this.epsilon&&rect.top<window.innerHeight-this.epsilon;
+      const inset=this.geometry.headerBottom+navHeight+this.trackingGap;
       const complete=()=>{this.highlighter.show(section);settled?.();};
-      if(alreadyVisible){
-        if(this.state.owner==='controller')this.stopControlledScroll();
-        this.state.transition+=1;this.state.owner='reader';this.activate(id,{behavior:'auto'});complete();return;
-      }
       this.beginTransition(id,this.destination(targets.scrollTarget,inset),complete);
     }
     async restore(id,scrollY,settled){await this.ensureTarget(id);this.refreshGeometry();this.beginTransition(id,Math.max(0,scrollY),settled);}

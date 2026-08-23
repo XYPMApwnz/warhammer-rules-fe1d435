@@ -3,6 +3,7 @@
 
   const direct=(root,selector)=>Array.from(root.children).find(node=>node.matches?.(selector))||null;
   const directParts=card=>Array.from(card.children).filter(node=>node.matches?.('.unit-part'));
+  const phoneMode=()=>document.documentElement.dataset.view==='mobile';
   let layouts=[];
   const layoutByCard=new WeakMap();
   let layoutFrame=0;
@@ -74,7 +75,24 @@
       node.dataset.logicalOwner=profile.id;
       strip.append(node);
     });
-    card.insertBefore(strip,localNav);
+    if(phoneMode())localNav.after(strip);else card.insertBefore(strip,localNav);
+  }
+
+  function buildPhoneNavigation(localNav,parts){
+    if(!phoneMode()||!localNav)return;
+    const existing=new Map(Array.from(localNav.querySelectorAll('[data-journey-target]')).map(button=>[button.dataset.journeyTarget,button]));
+    const buttons=parts.filter(part=>part.id).map(part=>{
+      const button=existing.get(part.id)||document.createElement('button');
+      button.classList.add('local-tab');
+      button.dataset.journeyTarget=part.id;
+      button.dataset.journeyType='datasheet';
+      button.type='button';
+      button.classList.remove('is-current','is-active');
+      button.removeAttribute('aria-current');
+      if(!button.textContent.trim())button.textContent=direct(part,'h4,h3')?.textContent.trim()||part.getAttribute('aria-label')||part.id;
+      return button;
+    });
+    localNav.replaceChildren(...buttons);
   }
 
   function buildColumns(card,profile,abilities){
@@ -149,6 +167,7 @@
     const damaged=parts.find(part=>part.id.endsWith('-damaged'))||null;
     const keywords=parts.find(part=>part.id.endsWith('-keywords'))||null;
     const pointsPanel=profile&&direct(profile,'.points-panel');
+    buildPhoneNavigation(localNav,parts);
     buildCost(head,pointsPanel);
     moveProfiles(card,profile,localNav);
     buildColumns(card,profile,abilities);

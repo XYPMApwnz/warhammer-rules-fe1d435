@@ -89,7 +89,7 @@ const APP_SHELL = [
   "./books/shared/mobile-route-redirect.js?v=2",
   "./books/shared/navigation-targets.js?v=1",
   "./books/shared/popup-rule-actions.js?v=1",
-  "./books/shared/datasheet-layout.js?v=8",
+  "./books/shared/datasheet-layout.js?v=9",
   "./books/shared/target-mount.js?v=1",
   "./books/shared/datasheet-system.css?v=8",
   "./books/shared/popup-content.js?v=3",
@@ -142,11 +142,11 @@ const APP_SHELL = [
   "./books/shared/roster-enhancements.js?v=3",
   "./books/death-guard/assets/icon-v4.svg",
   "./books/shared/styles/tokens.css?v=11",
-  "./books/shared/styles/layout.css?v=14",
+  "./books/shared/styles/layout.css?v=15",
   "./books/shared/styles/navigation.css?v=13",
-  "./books/shared/styles/content.css?v=42",
+  "./books/shared/styles/content.css?v=43",
   "./books/shared/styles/popups.css?v=19",
-  "./books/shared/controllers/navigation-controller.js?v=20",
+  "./books/shared/controllers/navigation-controller.js?v=21",
   "./books/death-guard/scripts/roster-semantics.js?v=2",
   "./books/death-guard/scripts/roster-data.js?v=3",
   "./books/death-guard/scripts/target-data.js?v=1",
@@ -312,7 +312,7 @@ const APP_SHELL = [
   ,"./books/emperors-children/reader.html"
   ,"./books/emperors-children/mobile/index.html"
   ,"./books/emperors-children/styles/tokens.css?v=2"
-  ,"./books/emperors-children/styles/book.css?v=3"
+  ,"./books/emperors-children/styles/book.css?v=4"
   ,"./books/emperors-children/assets/emperors-children-cover-480.webp"
   ,"./books/emperors-children/assets/emperors-children-cover-800.webp"
   ,"./books/emperors-children/scripts/data.js?v=2"
@@ -327,7 +327,7 @@ const APP_SHELL = [
   ,SPACE_MARINES_DESKTOP_FALLBACK
   ,"./books/space-marines/mobile/index.html"
   ,"./books/space-marines/styles/tokens.css?v=3"
-  ,"./books/space-marines/styles/book.css?v=3"
+  ,"./books/space-marines/styles/book.css?v=4"
   ,"./books/space-marines/assets/space-marines-cover-480.webp"
   ,"./books/space-marines/assets/space-marines-cover-800.webp"
   ,"./books/space-marines/scripts/data.js?v=2"

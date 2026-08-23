@@ -1,0 +1,1063 @@
+{
+  "schema": 1,
+  "bookId": "death-guard",
+  "source": "DG ART PASS/2026-08-23/mapping.csv",
+  "units": {
+    "unit-beasts-of-nurgle": {
+      "unitName": "Beasts of Nurgle",
+      "asset": "assets/unit-images/beasts-of-nurgle.png",
+      "original": "assets/unit-images/beasts-of-nurgle.png",
+      "width": 682,
+      "height": 778,
+      "sha256": "34973da80b373d25fcc8fe8f59c96439f105914967ebc04e665a85375cf24c86",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "chaos-and-nurgle-batch-3",
+        "originalFilename": "Beast of Nurgle.png",
+        "preparedFilename": "Beast of Nurgle.png",
+        "note": "Nurgle Daemons ally; not a Death Guard-specific miniature"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-chaos-land-raider": {
+      "unitName": "Chaos Land Raider",
+      "asset": "assets/unit-images/chaos-land-raider.png",
+      "original": "assets/unit-images/chaos-land-raider.png",
+      "width": 791,
+      "height": 567,
+      "sha256": "ccb43bb44344df3d7f375fb785b358da04a2144d1ea8c4d1dbcb8c24f7886d8a",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "chaos-and-nurgle-batch-3",
+        "originalFilename": "Chaos Land Raider.png",
+        "preparedFilename": "Chaos Land Raider.png",
+        "note": "Generic Chaos vehicle kit; current Death Guard Datasheet exists"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-chaos-predator-annihilator": {
+      "unitName": "Chaos Predator Annihilator",
+      "asset": "assets/unit-images/chaos-predator-annihilator.png",
+      "original": "assets/unit-images/chaos-predator-annihilator.png",
+      "width": 808,
+      "height": 661,
+      "sha256": "6bb4ac4b438118741b7d773dc3c2a3d5b4c98b957f8bed0375ee01eef5be416c",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "chaos-and-nurgle-batch-3",
+        "originalFilename": "Chaos Predator.png",
+        "preparedFilename": "Chaos Predator Annihilator.png",
+        "note": "Twin lascannon turret identifies the Annihilator; generic Chaos vehicle kit"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-chaos-rhino": {
+      "unitName": "Chaos Rhino",
+      "asset": "assets/unit-images/chaos-rhino.png",
+      "original": "assets/unit-images/chaos-rhino.png",
+      "width": 887,
+      "height": 541,
+      "sha256": "e403114bf43697843c37399704c2f9983fbc5eff22261a1684a1e6fc7bbe6a06",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "chaos-and-nurgle-batch-3",
+        "originalFilename": "Chaos Rhino.png",
+        "preparedFilename": "Chaos Rhino.png",
+        "note": "Generic Chaos vehicle kit; current Death Guard Datasheet exists"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-chaos-spawn": {
+      "unitName": "Chaos Spawn",
+      "asset": "assets/unit-images/chaos-spawn.png",
+      "original": "assets/unit-images/chaos-spawn.png",
+      "width": 848,
+      "height": 860,
+      "sha256": "1e813b45ca9531abefc58cbd62ce0dd18865e40cec4f55ef1e70bb03cc404f22",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "chaos-and-nurgle-batch-3",
+        "originalFilename": "Chaos Spawn.png",
+        "preparedFilename": "Chaos Spawn.png",
+        "note": "Generic Chaos miniatures; current Death Guard Datasheet exists"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-defiler": {
+      "unitName": "Defiler",
+      "asset": "assets/unit-images/defiler.png",
+      "original": "assets/unit-images/defiler.png",
+      "width": 797,
+      "height": 725,
+      "sha256": "bce1e077a4bca7d717e87e49001e6cda8a65c2b72811410810ff13314b65d906",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "chaos-and-nurgle-batch-3",
+        "originalFilename": "Defiler.png",
+        "preparedFilename": "Defiler.png",
+        "note": "Generic Chaos vehicle kit; current Death Guard Datasheet exists"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-great-unclean-one": {
+      "unitName": "Great Unclean One",
+      "asset": "assets/unit-images/great-unclean-one.png",
+      "original": "assets/unit-images/great-unclean-one.png",
+      "width": 792,
+      "height": 813,
+      "sha256": "41daea11fc9e1413a9891f685785368f05c95e7d3d9b207701bf804f90674bc8",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "chaos-and-nurgle-batch-3",
+        "originalFilename": "Great Unclean One.png",
+        "preparedFilename": "Great Unclean One.png",
+        "note": "Nurgle Daemons ally; not a Death Guard-specific miniature"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-helbrute": {
+      "unitName": "Helbrute",
+      "asset": "assets/unit-images/helbrute.png",
+      "original": "assets/unit-images/helbrute.png",
+      "width": 753,
+      "height": 605,
+      "sha256": "d861f1c60b4da90dbe5c51a02d01e382643eaf7019e16125781879a350cfa106",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "chaos-and-nurgle-batch-3",
+        "originalFilename": "Helbrute.png",
+        "preparedFilename": "Helbrute.png",
+        "note": "Generic Chaos miniature; current Death Guard Datasheet exists"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-nurglings": {
+      "unitName": "Nurglings",
+      "asset": "assets/unit-images/nurglings.png",
+      "original": "assets/unit-images/nurglings.png",
+      "width": 741,
+      "height": 512,
+      "sha256": "4e1826d18c6bf57ffe3105df99f96c2d83bb5170cd74b20d7ca182b23d7b3e4e",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "chaos-and-nurgle-batch-3",
+        "originalFilename": "Nurglings.png",
+        "preparedFilename": "Nurglings.png",
+        "note": "Nurgle Daemons ally; not a Death Guard-specific miniature"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-plague-drones": {
+      "unitName": "Plague Drones",
+      "asset": "assets/unit-images/plague-drones.png",
+      "original": "assets/unit-images/plague-drones.png",
+      "width": 850,
+      "height": 843,
+      "sha256": "e388a49ff6fd333a584d4c9dacc45d63521f15d5adffcffd638f3f41ec40ba0f",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "chaos-and-nurgle-batch-3",
+        "originalFilename": "Plague Drones.png",
+        "preparedFilename": "Plague Drones.png",
+        "note": "Nurgle Daemons ally; not a Death Guard-specific miniature"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-plaguebearers": {
+      "unitName": "Plaguebearers",
+      "asset": "assets/unit-images/plaguebearers.png",
+      "original": "assets/unit-images/plaguebearers.png",
+      "width": 815,
+      "height": 685,
+      "sha256": "b06820c7ff1b5e51b272ca17f3bde99c9ed5420de727230c5cf1e5510489b8c8",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "chaos-and-nurgle-batch-3",
+        "originalFilename": "Plaguebearers.png",
+        "preparedFilename": "Plaguebearers.png",
+        "note": "Nurgle Daemons ally; not a Death Guard-specific miniature"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-rotigus": {
+      "unitName": "Rotigus",
+      "asset": "assets/unit-images/rotigus.png",
+      "original": "assets/unit-images/rotigus.png",
+      "width": 772,
+      "height": 849,
+      "sha256": "f28aef719f8dd4b65b0378d7833a53d3487ebec25a8abef80fdffb6c90c9ebfc",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "chaos-and-nurgle-batch-3",
+        "originalFilename": "Rotigus.png",
+        "preparedFilename": "Rotigus.png",
+        "note": "Nurgle Daemons ally; not a Death Guard-specific miniature"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-biologus-putrifier": {
+      "unitName": "Biologus Putrifier",
+      "asset": "assets/unit-images/biologus-putrifier.png",
+      "original": "assets/unit-images/biologus-putrifier.png",
+      "width": 657,
+      "height": 862,
+      "sha256": "cc785c34242fd77cf20a10b48ae3d6250582954377f686a1b87c53d09a4c7aa5",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "death-guard-batch-2",
+        "originalFilename": "Biologus Putrifier.png",
+        "preparedFilename": "Biologus Putrifier.png",
+        "note": "Death Guard"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-blightlord-terminators": {
+      "unitName": "Blightlord Terminators",
+      "asset": "assets/unit-images/blightlord-terminators.png",
+      "original": "assets/unit-images/blightlord-terminators.png",
+      "width": 850,
+      "height": 862,
+      "sha256": "dccb2960a23644ce6d3ce2e8a109b994cb5eb48ae52c63b6fec10838803c9bcd",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "death-guard-batch-2",
+        "originalFilename": "Blightlord Terminators.png",
+        "preparedFilename": "Blightlord Terminators.png",
+        "note": "Death Guard"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-deathshroud-terminators": {
+      "unitName": "Deathshroud Terminators",
+      "asset": "assets/unit-images/deathshroud-terminators.png",
+      "original": "assets/unit-images/deathshroud-terminators.png",
+      "width": 880,
+      "height": 861,
+      "sha256": "ec264c0929924a8e4aae1ab3c75400284982735a74af2dd16ffd99d624fc4d6b",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "death-guard-batch-2",
+        "originalFilename": "Deathshroud Bodyguard.png",
+        "preparedFilename": "Deathshroud Terminators.png",
+        "note": "Official current canonical unit name; source used older Deathshroud Bodyguard label"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-foetid-bloat-drone": {
+      "unitName": "Foetid Bloat-drone",
+      "asset": "assets/unit-images/foetid-bloat-drone.png",
+      "original": "assets/unit-images/foetid-bloat-drone.png",
+      "width": 610,
+      "height": 856,
+      "sha256": "d9be96ba5c2df6c52df72f750897534f0eb9e8a52f474c4c529e2bc07bbbb7d2",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "death-guard-batch-2",
+        "originalFilename": "Foetid Bloat-drone.png",
+        "preparedFilename": "Foetid Bloat-drone.png",
+        "note": "Death Guard standard model; not the Heavy Blight Launcher Datasheet"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-foul-blightspawn": {
+      "unitName": "Foul Blightspawn",
+      "asset": "assets/unit-images/foul-blightspawn.png",
+      "original": "assets/unit-images/foul-blightspawn.png",
+      "width": 649,
+      "height": 786,
+      "sha256": "88456d1b3382305aef132b07ae77d68b0212586869e1ac94ce36561cae225599",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "death-guard-batch-2",
+        "originalFilename": "Foul Blightspawn.png",
+        "preparedFilename": "Foul Blightspawn.png",
+        "note": "Death Guard"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-lord-of-virulence": {
+      "unitName": "Lord of Virulence",
+      "asset": "assets/unit-images/lord-of-virulence.png",
+      "original": "assets/unit-images/lord-of-virulence.png",
+      "width": 682,
+      "height": 837,
+      "sha256": "23f11d56523bc41a98722204e77a809fb9f6872b3eef90e1c823a476c308b6a2",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "death-guard-batch-2",
+        "originalFilename": "Lord of Virulence.png",
+        "preparedFilename": "Lord of Virulence.png",
+        "note": "Death Guard"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-malignant-plaguecaster": {
+      "unitName": "Malignant Plaguecaster",
+      "asset": "assets/unit-images/malignant-plaguecaster.png",
+      "original": "assets/unit-images/malignant-plaguecaster.png",
+      "width": 536,
+      "height": 531,
+      "sha256": "e33befff808c3d899c5a4591ec24725772fbc7c00f2cb19a4b5e898193f40e44",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "death-guard-batch-2",
+        "originalFilename": "Malignant Plaguecaster.png",
+        "preparedFilename": "Malignant Plaguecaster.png",
+        "note": "Death Guard"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-miasmic-malignifier": {
+      "unitName": "Miasmic Malignifier",
+      "asset": "assets/unit-images/miasmic-malignifier.png",
+      "original": "assets/unit-images/miasmic-malignifier.png",
+      "width": 869,
+      "height": 856,
+      "sha256": "d9b357d0cc665d2a4ea415886c94fd9fcfe8c0e3012c3f0e75a1139092713866",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "death-guard-batch-2",
+        "originalFilename": "Miasmic Malignifier.png",
+        "preparedFilename": "Miasmic Malignifier.png",
+        "note": "Death Guard"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-plague-surgeon": {
+      "unitName": "Plague Surgeon",
+      "asset": "assets/unit-images/plague-surgeon.png",
+      "original": "assets/unit-images/plague-surgeon.png",
+      "width": 591,
+      "height": 866,
+      "sha256": "dfaf424ea59bbdfd997cfc3fa5e19f59759676c6469bfd4635109121c64f0d35",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "death-guard-batch-2",
+        "originalFilename": "Nauseous Rotbone, the Plague Surgeon.png",
+        "preparedFilename": "Nauseous Rotbone, the Plague Surgeon.png",
+        "note": "Named official sculpt; maps to canonical Plague Surgeon Datasheet"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-noxious-blightbringer": {
+      "unitName": "Noxious Blightbringer",
+      "asset": "assets/unit-images/noxious-blightbringer.png",
+      "original": "assets/unit-images/noxious-blightbringer.png",
+      "width": 557,
+      "height": 712,
+      "sha256": "86e72fa85ae68908d3ba7fb37b6b1ff3ac48a8293b86de2d3687c469848a0c12",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "death-guard-batch-2",
+        "originalFilename": "Noxious Blightbringer.png",
+        "preparedFilename": "Noxious Blightbringer.png",
+        "note": "Death Guard"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-icon-bearer": {
+      "unitName": "Icon Bearer",
+      "asset": "assets/unit-images/icon-bearer.png",
+      "original": "assets/unit-images/icon-bearer.png",
+      "width": 628,
+      "height": 864,
+      "sha256": "f572816abf396a51115e6f28b7e6b4ec6c7aa614f725f91369d1f4746fa47d56",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "gw-transparent-all-32",
+        "originalFilename": "Death Guard Icon Bearer.png",
+        "preparedFilename": "Death Guard Icon Bearer.png",
+        "note": "Official product/model label; maps to canonical Icon Bearer Datasheet"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-lord-of-contagion": {
+      "unitName": "Lord of Contagion",
+      "asset": "assets/unit-images/lord-of-contagion.png",
+      "original": "assets/unit-images/lord-of-contagion.png",
+      "width": 608,
+      "height": 614,
+      "sha256": "247466c09d2fce58b0449043fdf2fb2767ec0a995454995b8c0a421374110293",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "gw-transparent-all-32",
+        "originalFilename": "Lord Felthius.png",
+        "preparedFilename": "Lord Felthius.png",
+        "note": "Named official sculpt; maps to canonical Lord of Contagion Datasheet"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-lord-of-poxes": {
+      "unitName": "Lord of Poxes",
+      "asset": "assets/unit-images/lord-of-poxes.png",
+      "original": "assets/unit-images/lord-of-poxes.png",
+      "width": 610,
+      "height": 764,
+      "sha256": "9e869ef06929c2e7c137fd561e7b5d5d8f9fd440fb04ab234e4c3755fab4b334",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "gw-transparent-all-32",
+        "originalFilename": "Lord of Poxes.png",
+        "preparedFilename": "Lord of Poxes.png",
+        "note": "Death Guard"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-mortarion": {
+      "unitName": "Mortarion",
+      "asset": "assets/unit-images/mortarion.png",
+      "original": "assets/unit-images/mortarion.png",
+      "width": 706,
+      "height": 858,
+      "sha256": "2d3b3111378cfb9c4d3f3a9e590b78a856d3dcc240767f895ea2de721e5fe537",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "gw-transparent-all-32",
+        "originalFilename": "Mortarion, Daemon Primarch of Nurgle.png",
+        "preparedFilename": "Mortarion, Daemon Primarch of Nurgle.png",
+        "note": "Official product/model label; maps to canonical Mortarion Datasheet"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-myphitic-blight-hauler": {
+      "unitName": "Myphitic Blight-hauler",
+      "asset": "assets/unit-images/myphitic-blight-hauler.png",
+      "original": "assets/unit-images/myphitic-blight-hauler.png",
+      "width": 783,
+      "height": 710,
+      "sha256": "bd64f0966b4fae07183c77524d2c597fab024d8c14188c415de79b3850f9daa3",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "gw-transparent-all-32",
+        "originalFilename": "Myphitic Blight-Hauler.png",
+        "preparedFilename": "Myphitic Blight-Hauler.png",
+        "note": "Death Guard"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-plague-marines": {
+      "unitName": "Plague Marines",
+      "asset": "assets/unit-images/plague-marines.png",
+      "original": "assets/unit-images/plague-marines.png",
+      "width": 850,
+      "height": 889,
+      "sha256": "e4ffe5e52a8c0fb9c66127648da3fe46f286bb521f74c84c90b5a6861be3fbaa",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "gw-transparent-all-32",
+        "originalFilename": "Plague Marines.png",
+        "preparedFilename": "Plague Marines.png",
+        "note": "Death Guard"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-plagueburst-crawler": {
+      "unitName": "Plagueburst Crawler",
+      "asset": "assets/unit-images/plagueburst-crawler.png",
+      "original": "assets/unit-images/plagueburst-crawler.png",
+      "width": 850,
+      "height": 622,
+      "sha256": "fc3e94ea19d33869ad2b915ee12de9204b313064c9a066b97291c2b5ebc0f7cb",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "gw-transparent-all-32",
+        "originalFilename": "Plagueburst Crawler.png",
+        "preparedFilename": "Plagueburst Crawler.png",
+        "note": "Death Guard"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-poxwalkers": {
+      "unitName": "Poxwalkers",
+      "asset": "assets/unit-images/poxwalkers.png",
+      "original": "assets/unit-images/poxwalkers.png",
+      "width": 776,
+      "height": 714,
+      "sha256": "26b3f7ae2a7f0e9970c7613eb6d150df06408144016a001b7a35b78719baf96c",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "gw-transparent-all-32",
+        "originalFilename": "Poxwalkers.png",
+        "preparedFilename": "Poxwalkers.png",
+        "note": "Death Guard"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-tallyman": {
+      "unitName": "Tallyman",
+      "asset": "assets/unit-images/tallyman.png",
+      "original": "assets/unit-images/tallyman.png",
+      "width": 599,
+      "height": 866,
+      "sha256": "6c53caab2172a28cbdf1894139504c2b3237a40803bf6d6ce8f37c5d10a64307",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "gw-transparent-all-32",
+        "originalFilename": "Scribbus Wretch, the Tallyman.png",
+        "preparedFilename": "Scribbus Wretch, the Tallyman.png",
+        "note": "Named official sculpt; maps to canonical Tallyman Datasheet"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    },
+    "unit-typhus": {
+      "unitName": "Typhus",
+      "asset": "assets/unit-images/typhus.png",
+      "original": "assets/unit-images/typhus.png",
+      "width": 599,
+      "height": 840,
+      "sha256": "c0bbb1601c8b27af431c4dac5755d9533b16c3a1d629dbbc43de404703ce6494",
+      "source": {
+        "kind": "user-provided-official-gw-miniature",
+        "set": "gw-transparent-all-32",
+        "originalFilename": "Typhus.png",
+        "preparedFilename": "Typhus.png",
+        "note": "Death Guard"
+      },
+      "processing": {
+        "sourceAlpha": true,
+        "pixelPreserved": true,
+        "pixelContentChanged": false
+      },
+      "presentation": {
+        "mode": "foreground",
+        "desktop": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        },
+        "phone": {
+          "scale": 1,
+          "x": "0px",
+          "y": "0px"
+        }
+      }
+    }
+  }
+}

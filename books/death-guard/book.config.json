@@ -12,6 +12,7 @@
     "points": "sources/official-mfm-v1.2.json",
     "presentation": "sources/canonical-presentation-contract.json",
     "runtimeRelatedTerms": "sources/runtime-related-terms.json",
+    "unitImages": "presentation/unit-images.json",
     "coreRules": "books/core-rules/content/core-rules.digital-11e.json"
   },
   "expected": {

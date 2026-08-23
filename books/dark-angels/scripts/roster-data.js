@@ -1,4 +1,8511 @@
-window.WH_BOOK_ROSTER_ENHANCEMENTS={
+window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
+  "schema": "wh40k-army-roster-catalog/v1",
+  "book": {
+    "id": "dark-angels",
+    "title": "Dark Angels",
+    "factionKeyword": "DARK ANGELS",
+    "parentBookId": null,
+    "dependencies": [
+      {
+        "title": null
+      }
+    ]
+  },
+  "units": [
+    {
+      "id": "unit-assault-intercessor-squad",
+      "title": "Assault Intercessor Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Battleline",
+        "Grenades",
+        "Adeptus Astartes",
+        "Imperium",
+        "Assault Intercessor Squad",
+        "Tacticus"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-asmodai"
+          },
+          {
+            "unitId": "unit-azrael"
+          },
+          {
+            "unitId": "unit-captain"
+          },
+          {
+            "unitId": "unit-chaplain"
+          },
+          {
+            "unitId": "unit-ezekiel"
+          },
+          {
+            "unitId": "unit-judiciar"
+          },
+          {
+            "unitId": "unit-lazarus"
+          },
+          {
+            "unitId": "unit-librarian"
+          },
+          {
+            "unitId": "unit-techmarine"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-ancient"
+          },
+          {
+            "unitId": "unit-apothecary"
+          },
+          {
+            "unitId": "unit-lieutenant"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-asmodai"
+            },
+            {
+              "unitId": "unit-azrael"
+            },
+            {
+              "unitId": "unit-captain"
+            },
+            {
+              "unitId": "unit-chaplain"
+            },
+            {
+              "unitId": "unit-ezekiel"
+            },
+            {
+              "unitId": "unit-judiciar"
+            },
+            {
+              "unitId": "unit-lazarus"
+            },
+            {
+              "unitId": "unit-librarian"
+            },
+            {
+              "unitId": "unit-techmarine"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-ancient"
+            },
+            {
+              "unitId": "unit-apothecary"
+            },
+            {
+              "unitId": "unit-lieutenant"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-heavy-intercessor-squad",
+      "title": "Heavy Intercessor Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Battleline",
+        "Grenades",
+        "Imperium",
+        "Gravis",
+        "Adeptus Astartes",
+        "Heavy Intercessor Squad"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-captain-in-gravis-armour"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-apothecary-biologis"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-captain-in-gravis-armour"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-apothecary-biologis"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-intercessor-squad",
+      "title": "Intercessor Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Battleline",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Intercessor Squad",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-asmodai"
+          },
+          {
+            "unitId": "unit-azrael"
+          },
+          {
+            "unitId": "unit-captain"
+          },
+          {
+            "unitId": "unit-chaplain"
+          },
+          {
+            "unitId": "unit-ezekiel"
+          },
+          {
+            "unitId": "unit-judiciar"
+          },
+          {
+            "unitId": "unit-lazarus"
+          },
+          {
+            "unitId": "unit-librarian"
+          },
+          {
+            "unitId": "unit-techmarine"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-ancient"
+          },
+          {
+            "unitId": "unit-apothecary"
+          },
+          {
+            "unitId": "unit-lieutenant"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-asmodai"
+            },
+            {
+              "unitId": "unit-azrael"
+            },
+            {
+              "unitId": "unit-captain"
+            },
+            {
+              "unitId": "unit-chaplain"
+            },
+            {
+              "unitId": "unit-ezekiel"
+            },
+            {
+              "unitId": "unit-judiciar"
+            },
+            {
+              "unitId": "unit-lazarus"
+            },
+            {
+              "unitId": "unit-librarian"
+            },
+            {
+              "unitId": "unit-techmarine"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-ancient"
+            },
+            {
+              "unitId": "unit-apothecary"
+            },
+            {
+              "unitId": "unit-lieutenant"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-tactical-squad",
+      "title": "Tactical Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Battleline",
+        "Grenades",
+        "Imperium",
+        "Adeptus Astartes",
+        "Tactical Squad"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-asmodai"
+          },
+          {
+            "unitId": "unit-azrael"
+          },
+          {
+            "unitId": "unit-captain"
+          },
+          {
+            "unitId": "unit-chaplain"
+          },
+          {
+            "unitId": "unit-ezekiel"
+          },
+          {
+            "unitId": "unit-judiciar"
+          },
+          {
+            "unitId": "unit-lazarus"
+          },
+          {
+            "unitId": "unit-librarian"
+          },
+          {
+            "unitId": "unit-techmarine"
+          }
+        ],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-asmodai"
+            },
+            {
+              "unitId": "unit-azrael"
+            },
+            {
+              "unitId": "unit-captain"
+            },
+            {
+              "unitId": "unit-chaplain"
+            },
+            {
+              "unitId": "unit-ezekiel"
+            },
+            {
+              "unitId": "unit-judiciar"
+            },
+            {
+              "unitId": "unit-lazarus"
+            },
+            {
+              "unitId": "unit-librarian"
+            },
+            {
+              "unitId": "unit-techmarine"
+            }
+          ],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-ancient",
+      "title": "Ancient",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Adeptus Astartes",
+        "Ancient"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [
+          {
+            "unitId": "unit-assault-intercessor-squad"
+          },
+          {
+            "unitId": "unit-desolation-squad"
+          },
+          {
+            "unitId": "unit-devastator-squad"
+          },
+          {
+            "unitId": "unit-hellblaster-squad"
+          },
+          {
+            "unitId": "unit-infernus-squad"
+          },
+          {
+            "unitId": "unit-intercessor-squad"
+          },
+          {
+            "unitId": "unit-sternguard-veteran-squad"
+          }
+        ],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [
+            {
+              "unitId": "unit-assault-intercessor-squad"
+            },
+            {
+              "unitId": "unit-desolation-squad"
+            },
+            {
+              "unitId": "unit-devastator-squad"
+            },
+            {
+              "unitId": "unit-hellblaster-squad"
+            },
+            {
+              "unitId": "unit-infernus-squad"
+            },
+            {
+              "unitId": "unit-intercessor-squad"
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad"
+            }
+          ],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-ancient-in-terminator-armor",
+      "title": "Ancient in Terminator Armor",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Imperium",
+        "Terminator",
+        "Ancient",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [
+          {
+            "unitId": "unit-terminator-assault-squad"
+          }
+        ],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [
+            {
+              "unitId": "unit-terminator-assault-squad"
+            }
+          ],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-apothecary",
+      "title": "Apothecary",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Grenades",
+        "Imperium",
+        "Adeptus Astartes",
+        "Tacticus",
+        "Infantry",
+        "Apothecary"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [
+          {
+            "unitId": "unit-assault-intercessor-squad"
+          },
+          {
+            "unitId": "unit-desolation-squad"
+          },
+          {
+            "unitId": "unit-devastator-squad"
+          },
+          {
+            "unitId": "unit-hellblaster-squad"
+          },
+          {
+            "unitId": "unit-infernus-squad"
+          },
+          {
+            "unitId": "unit-intercessor-squad"
+          },
+          {
+            "unitId": "unit-sternguard-veteran-squad"
+          }
+        ],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [
+            {
+              "unitId": "unit-assault-intercessor-squad"
+            },
+            {
+              "unitId": "unit-desolation-squad"
+            },
+            {
+              "unitId": "unit-devastator-squad"
+            },
+            {
+              "unitId": "unit-hellblaster-squad"
+            },
+            {
+              "unitId": "unit-infernus-squad"
+            },
+            {
+              "unitId": "unit-intercessor-squad"
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad"
+            }
+          ],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-apothecary-biologis",
+      "title": "Apothecary Biologis",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Imperium",
+        "Gravis",
+        "Adeptus Astartes",
+        "Apothecary",
+        "Biologis"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [
+          {
+            "unitId": "unit-aggressor-squad"
+          },
+          {
+            "unitId": "unit-eradicator-squad"
+          },
+          {
+            "unitId": "unit-heavy-intercessor-squad"
+          }
+        ],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [
+            {
+              "unitId": "unit-aggressor-squad"
+            },
+            {
+              "unitId": "unit-eradicator-squad"
+            },
+            {
+              "unitId": "unit-heavy-intercessor-squad"
+            }
+          ],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-bladeguard-ancient",
+      "title": "Bladeguard Ancient",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Imperium",
+        "Bladeguard Ancient",
+        "Adeptus Astartes",
+        "Tacticus",
+        "Ancient"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-captain",
+      "title": "Captain",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Captain",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-assault-intercessor-squad"
+          },
+          {
+            "unitId": "unit-bladeguard-veteran-squad"
+          },
+          {
+            "unitId": "unit-company-heroes"
+          },
+          {
+            "unitId": "unit-hellblaster-squad"
+          },
+          {
+            "unitId": "unit-infernus-squad"
+          },
+          {
+            "unitId": "unit-inner-circle-companions"
+          },
+          {
+            "unitId": "unit-intercessor-squad"
+          },
+          {
+            "unitId": "unit-sternguard-veteran-squad"
+          },
+          {
+            "unitId": "unit-tactical-squad"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-assault-intercessor-squad"
+            },
+            {
+              "unitId": "unit-bladeguard-veteran-squad"
+            },
+            {
+              "unitId": "unit-company-heroes"
+            },
+            {
+              "unitId": "unit-hellblaster-squad"
+            },
+            {
+              "unitId": "unit-infernus-squad"
+            },
+            {
+              "unitId": "unit-inner-circle-companions"
+            },
+            {
+              "unitId": "unit-intercessor-squad"
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad"
+            },
+            {
+              "unitId": "unit-tactical-squad"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-captain-in-gravis-armour",
+      "title": "Captain in Gravis Armour",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Captain",
+        "Grenades",
+        "Imperium",
+        "Adeptus Astartes",
+        "Gravis"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-aggressor-squad"
+          },
+          {
+            "unitId": "unit-eradicator-squad"
+          },
+          {
+            "unitId": "unit-heavy-intercessor-squad"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-aggressor-squad"
+            },
+            {
+              "unitId": "unit-eradicator-squad"
+            },
+            {
+              "unitId": "unit-heavy-intercessor-squad"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-captain-in-phobos-armour",
+      "title": "Captain in Phobos Armour",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Captain",
+        "Phobos",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-eliminator-squad"
+          },
+          {
+            "unitId": "unit-incursor-squad"
+          },
+          {
+            "unitId": "unit-infiltrator-squad"
+          },
+          {
+            "unitId": "unit-reiver-squad"
+          },
+          {
+            "unitId": "unit-scout-squad"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-eliminator-squad"
+            },
+            {
+              "unitId": "unit-incursor-squad"
+            },
+            {
+              "unitId": "unit-infiltrator-squad"
+            },
+            {
+              "unitId": "unit-reiver-squad"
+            },
+            {
+              "unitId": "unit-scout-squad"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-captain-in-terminator-armour",
+      "title": "Captain in Terminator Armour",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Captain",
+        "Adeptus Astartes",
+        "Imperium",
+        "Terminator"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-deathwing-knights"
+          },
+          {
+            "unitId": "unit-deathwing-terminator-squad"
+          },
+          {
+            "unitId": "unit-terminator-assault-squad"
+          },
+          {
+            "unitId": "unit-terminator-squad"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-deathwing-knights"
+            },
+            {
+              "unitId": "unit-deathwing-terminator-squad"
+            },
+            {
+              "unitId": "unit-terminator-assault-squad"
+            },
+            {
+              "unitId": "unit-terminator-squad"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-captain-with-jump-pack",
+      "title": "Captain with Jump Pack",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Captain",
+        "Imperium",
+        "Adeptus Astartes",
+        "Fly",
+        "Jump Pack",
+        "Tacticus"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-assault-intercessors-with-jump-packs"
+          },
+          {
+            "unitId": "unit-vanguard-veteran-squad-with-jump-packs"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-assault-intercessors-with-jump-packs"
+            },
+            {
+              "unitId": "unit-vanguard-veteran-squad-with-jump-packs"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-chaplain",
+      "title": "Chaplain",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Tacticus",
+        "Imperium",
+        "Adeptus Astartes",
+        "Chaplain"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-assault-intercessor-squad"
+          },
+          {
+            "unitId": "unit-bladeguard-veteran-squad"
+          },
+          {
+            "unitId": "unit-hellblaster-squad"
+          },
+          {
+            "unitId": "unit-infernus-squad"
+          },
+          {
+            "unitId": "unit-inner-circle-companions"
+          },
+          {
+            "unitId": "unit-intercessor-squad"
+          },
+          {
+            "unitId": "unit-sternguard-veteran-squad"
+          },
+          {
+            "unitId": "unit-tactical-squad"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-assault-intercessor-squad"
+            },
+            {
+              "unitId": "unit-bladeguard-veteran-squad"
+            },
+            {
+              "unitId": "unit-hellblaster-squad"
+            },
+            {
+              "unitId": "unit-infernus-squad"
+            },
+            {
+              "unitId": "unit-inner-circle-companions"
+            },
+            {
+              "unitId": "unit-intercessor-squad"
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad"
+            },
+            {
+              "unitId": "unit-tactical-squad"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-chaplain-in-terminator-armour",
+      "title": "Chaplain in Terminator Armour",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Terminator",
+        "Chaplain",
+        "Imperium",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-deathwing-knights"
+          },
+          {
+            "unitId": "unit-deathwing-terminator-squad"
+          },
+          {
+            "unitId": "unit-terminator-assault-squad"
+          },
+          {
+            "unitId": "unit-terminator-squad"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-deathwing-knights"
+            },
+            {
+              "unitId": "unit-deathwing-terminator-squad"
+            },
+            {
+              "unitId": "unit-terminator-assault-squad"
+            },
+            {
+              "unitId": "unit-terminator-squad"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-chaplain-on-bike",
+      "title": "Chaplain on Bike",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Mounted",
+        "Imperium",
+        "Grenades",
+        "Chaplain",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-outrider-squad"
+          },
+          {
+            "unitId": "unit-ravenwing-black-knights"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-outrider-squad"
+            },
+            {
+              "unitId": "unit-ravenwing-black-knights"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-chaplain-with-jump-pack",
+      "title": "Chaplain with Jump Pack",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Imperium",
+        "Chaplain",
+        "Adeptus Astartes",
+        "Fly",
+        "Jump Pack"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-assault-intercessors-with-jump-packs"
+          },
+          {
+            "unitId": "unit-vanguard-veteran-squad-with-jump-packs"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-assault-intercessors-with-jump-packs"
+            },
+            {
+              "unitId": "unit-vanguard-veteran-squad-with-jump-packs"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-judiciar",
+      "title": "Judiciar",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Imperium",
+        "Tacticus",
+        "Judiciar",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-assault-intercessor-squad"
+          },
+          {
+            "unitId": "unit-bladeguard-veteran-squad"
+          },
+          {
+            "unitId": "unit-infernus-squad"
+          },
+          {
+            "unitId": "unit-inner-circle-companions"
+          },
+          {
+            "unitId": "unit-intercessor-squad"
+          },
+          {
+            "unitId": "unit-sternguard-veteran-squad"
+          },
+          {
+            "unitId": "unit-tactical-squad"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-assault-intercessor-squad"
+            },
+            {
+              "unitId": "unit-bladeguard-veteran-squad"
+            },
+            {
+              "unitId": "unit-infernus-squad"
+            },
+            {
+              "unitId": "unit-inner-circle-companions"
+            },
+            {
+              "unitId": "unit-intercessor-squad"
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad"
+            },
+            {
+              "unitId": "unit-tactical-squad"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-librarian",
+      "title": "Librarian",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Psyker",
+        "Adeptus Astartes",
+        "Tacticus",
+        "Librarian"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-assault-intercessor-squad"
+          },
+          {
+            "unitId": "unit-desolation-squad"
+          },
+          {
+            "unitId": "unit-devastator-squad"
+          },
+          {
+            "unitId": "unit-hellblaster-squad"
+          },
+          {
+            "unitId": "unit-infernus-squad"
+          },
+          {
+            "unitId": "unit-inner-circle-companions"
+          },
+          {
+            "unitId": "unit-intercessor-squad"
+          },
+          {
+            "unitId": "unit-sternguard-veteran-squad"
+          },
+          {
+            "unitId": "unit-tactical-squad"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-assault-intercessor-squad"
+            },
+            {
+              "unitId": "unit-desolation-squad"
+            },
+            {
+              "unitId": "unit-devastator-squad"
+            },
+            {
+              "unitId": "unit-hellblaster-squad"
+            },
+            {
+              "unitId": "unit-infernus-squad"
+            },
+            {
+              "unitId": "unit-inner-circle-companions"
+            },
+            {
+              "unitId": "unit-intercessor-squad"
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad"
+            },
+            {
+              "unitId": "unit-tactical-squad"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-librarian-in-phobos-armour",
+      "title": "Librarian in Phobos Armour",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Grenades",
+        "Imperium",
+        "Psyker",
+        "Adeptus Astartes",
+        "Phobos",
+        "Librarian",
+        "Infantry"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-eliminator-squad"
+          },
+          {
+            "unitId": "unit-incursor-squad"
+          },
+          {
+            "unitId": "unit-infiltrator-squad"
+          },
+          {
+            "unitId": "unit-reiver-squad"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-eliminator-squad"
+            },
+            {
+              "unitId": "unit-incursor-squad"
+            },
+            {
+              "unitId": "unit-infiltrator-squad"
+            },
+            {
+              "unitId": "unit-reiver-squad"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-librarian-in-terminator-armour",
+      "title": "Librarian in Terminator Armour",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Imperium",
+        "Psyker",
+        "Terminator",
+        "Librarian",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-deathwing-knights"
+          },
+          {
+            "unitId": "unit-deathwing-terminator-squad"
+          },
+          {
+            "unitId": "unit-terminator-assault-squad"
+          },
+          {
+            "unitId": "unit-terminator-squad"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-deathwing-knights"
+            },
+            {
+              "unitId": "unit-deathwing-terminator-squad"
+            },
+            {
+              "unitId": "unit-terminator-assault-squad"
+            },
+            {
+              "unitId": "unit-terminator-squad"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-lieutenant",
+      "title": "Lieutenant",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Adeptus Astartes",
+        "Lieutenant"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [
+          {
+            "unitId": "unit-assault-intercessor-squad"
+          },
+          {
+            "unitId": "unit-bladeguard-veteran-squad"
+          },
+          {
+            "unitId": "unit-company-heroes"
+          },
+          {
+            "unitId": "unit-hellblaster-squad"
+          },
+          {
+            "unitId": "unit-infernus-squad"
+          },
+          {
+            "unitId": "unit-intercessor-squad"
+          },
+          {
+            "unitId": "unit-sternguard-veteran-squad"
+          }
+        ],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [
+            {
+              "unitId": "unit-assault-intercessor-squad"
+            },
+            {
+              "unitId": "unit-bladeguard-veteran-squad"
+            },
+            {
+              "unitId": "unit-company-heroes"
+            },
+            {
+              "unitId": "unit-hellblaster-squad"
+            },
+            {
+              "unitId": "unit-infernus-squad"
+            },
+            {
+              "unitId": "unit-intercessor-squad"
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad"
+            }
+          ],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-lieutenant-in-phobos-armour",
+      "title": "Lieutenant in Phobos Armour",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Phobos",
+        "Adeptus Astartes",
+        "Lieutenant"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [
+          {
+            "unitId": "unit-incursor-squad"
+          },
+          {
+            "unitId": "unit-infiltrator-squad"
+          },
+          {
+            "unitId": "unit-reiver-squad"
+          }
+        ],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [
+            {
+              "unitId": "unit-incursor-squad"
+            },
+            {
+              "unitId": "unit-infiltrator-squad"
+            },
+            {
+              "unitId": "unit-reiver-squad"
+            }
+          ],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-lieutenant-in-reiver-armour",
+      "title": "Lieutenant in Reiver Armour",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Smoke",
+        "Imperium",
+        "Phobos",
+        "Adeptus Astartes",
+        "Lieutenant",
+        "Lieutenant in Reiver Armour"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-lieutenant-with-combi-weapon",
+      "title": "Lieutenant with Combi-weapon",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Lieutenant with Combi-weapon",
+        "Adeptus Astartes",
+        "Phobos",
+        "Lieutenant"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-techmarine",
+      "title": "Techmarine",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Adeptus Astartes",
+        "Techmarine"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-assault-intercessor-squad"
+          },
+          {
+            "unitId": "unit-desolation-squad"
+          },
+          {
+            "unitId": "unit-devastator-squad"
+          },
+          {
+            "unitId": "unit-intercessor-squad"
+          },
+          {
+            "unitId": "unit-tactical-squad"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-assault-intercessor-squad"
+            },
+            {
+              "unitId": "unit-desolation-squad"
+            },
+            {
+              "unitId": "unit-devastator-squad"
+            },
+            {
+              "unitId": "unit-intercessor-squad"
+            },
+            {
+              "unitId": "unit-tactical-squad"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-drop-pod",
+      "title": "Drop Pod",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-faction-pack",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Imperium",
+        "Drop Pod",
+        "Transport",
+        "Dedicated Transport",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-impulsor",
+      "title": "Impulsor",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Transport",
+        "Dedicated Transport",
+        "Imperium",
+        "Adeptus Astartes",
+        "Impulsor"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-razorback",
+      "title": "Razorback",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Smoke",
+        "Imperium",
+        "Adeptus Astartes",
+        "Dedicated Transport",
+        "Transport",
+        "Razorback",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-rhino",
+      "title": "Rhino",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Imperium",
+        "Smoke",
+        "Dedicated Transport",
+        "Transport",
+        "Vehicle",
+        "Adeptus Astartes",
+        "Rhino",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-hammerfall-bunker",
+      "title": "Hammerfall Bunker",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Fortification",
+        "Imperium",
+        "Hammerfall Bunker",
+        "Adeptus Astartes",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-aggressor-squad",
+      "title": "Aggressor Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Imperium",
+        "Gravis",
+        "Aggressor Squad",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-captain-in-gravis-armour"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-apothecary-biologis"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-captain-in-gravis-armour"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-apothecary-biologis"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-assault-intercessors-with-jump-packs",
+      "title": "Assault Intercessors with Jump Packs",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Fly",
+        "Tacticus",
+        "Jump Pack",
+        "Adeptus Astartes",
+        "Assault Intercessors with Jump Packs"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-captain-with-jump-pack"
+          },
+          {
+            "unitId": "unit-chaplain-with-jump-pack"
+          }
+        ],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-captain-with-jump-pack"
+            },
+            {
+              "unitId": "unit-chaplain-with-jump-pack"
+            }
+          ],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-bladeguard-veteran-squad",
+      "title": "Bladeguard Veteran Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Bladeguard Veteran Squad",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-asmodai"
+          },
+          {
+            "unitId": "unit-azrael"
+          },
+          {
+            "unitId": "unit-captain"
+          },
+          {
+            "unitId": "unit-chaplain"
+          },
+          {
+            "unitId": "unit-ezekiel"
+          },
+          {
+            "unitId": "unit-judiciar"
+          },
+          {
+            "unitId": "unit-lazarus"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-lieutenant"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-asmodai"
+            },
+            {
+              "unitId": "unit-azrael"
+            },
+            {
+              "unitId": "unit-captain"
+            },
+            {
+              "unitId": "unit-chaplain"
+            },
+            {
+              "unitId": "unit-ezekiel"
+            },
+            {
+              "unitId": "unit-judiciar"
+            },
+            {
+              "unitId": "unit-lazarus"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-lieutenant"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-centurion-assault-squad",
+      "title": "Centurion Assault Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Imperium",
+        "Centurion Assault Squad",
+        "Adeptus Astartes",
+        "Centurion"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-centurion-devastator-squad",
+      "title": "Centurion Devastator Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Imperium",
+        "Centurion Devastator Squad",
+        "Centurion",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-company-heroes",
+      "title": "Company Heroes",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Company Heroes",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-captain"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-lieutenant"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-captain"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-lieutenant"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-desolation-squad",
+      "title": "Desolation Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Desolation Squad",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-librarian"
+          },
+          {
+            "unitId": "unit-techmarine"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-ancient"
+          },
+          {
+            "unitId": "unit-apothecary"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-librarian"
+            },
+            {
+              "unitId": "unit-techmarine"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-ancient"
+            },
+            {
+              "unitId": "unit-apothecary"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-devastator-squad",
+      "title": "Devastator Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Devastator Squad",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-librarian"
+          },
+          {
+            "unitId": "unit-techmarine"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-ancient"
+          },
+          {
+            "unitId": "unit-apothecary"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-librarian"
+            },
+            {
+              "unitId": "unit-techmarine"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-ancient"
+            },
+            {
+              "unitId": "unit-apothecary"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-eliminator-squad",
+      "title": "Eliminator Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Imperium",
+        "Grenades",
+        "Phobos",
+        "Adeptus Astartes",
+        "Eliminator Squad"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-captain-in-phobos-armour"
+          },
+          {
+            "unitId": "unit-librarian-in-phobos-armour"
+          }
+        ],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-captain-in-phobos-armour"
+            },
+            {
+              "unitId": "unit-librarian-in-phobos-armour"
+            }
+          ],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-eradicator-squad",
+      "title": "Eradicator Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Gravis",
+        "Eradicator Squad",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-captain-in-gravis-armour"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-apothecary-biologis"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-captain-in-gravis-armour"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-apothecary-biologis"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-eradicator-squad-with-heavy-bolters",
+      "title": "Eradicator Squad with Heavy Bolters",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-faction-pack",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Imperium",
+        "Gravis",
+        "Eradicator Squad",
+        "Adeptus Astartes",
+        "Eradicator Squad with Heavy Bolters"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-hellblaster-squad",
+      "title": "Hellblaster Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Adeptus Astartes",
+        "Hellblaster Squad",
+        "Tacticus"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-asmodai"
+          },
+          {
+            "unitId": "unit-azrael"
+          },
+          {
+            "unitId": "unit-captain"
+          },
+          {
+            "unitId": "unit-chaplain"
+          },
+          {
+            "unitId": "unit-ezekiel"
+          },
+          {
+            "unitId": "unit-librarian"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-ancient"
+          },
+          {
+            "unitId": "unit-apothecary"
+          },
+          {
+            "unitId": "unit-lieutenant"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-asmodai"
+            },
+            {
+              "unitId": "unit-azrael"
+            },
+            {
+              "unitId": "unit-captain"
+            },
+            {
+              "unitId": "unit-chaplain"
+            },
+            {
+              "unitId": "unit-ezekiel"
+            },
+            {
+              "unitId": "unit-librarian"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-ancient"
+            },
+            {
+              "unitId": "unit-apothecary"
+            },
+            {
+              "unitId": "unit-lieutenant"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-inceptor-squad",
+      "title": "Inceptor Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Fly",
+        "Jump Pack",
+        "Imperium",
+        "Gravis",
+        "Adeptus Astartes",
+        "Inceptor Squad"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-incursor-squad",
+      "title": "Incursor Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Smoke",
+        "Phobos",
+        "Incursor Squad",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-captain-in-phobos-armour"
+          },
+          {
+            "unitId": "unit-librarian-in-phobos-armour"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-lieutenant-in-phobos-armour"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-captain-in-phobos-armour"
+            },
+            {
+              "unitId": "unit-librarian-in-phobos-armour"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-lieutenant-in-phobos-armour"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-infernus-squad",
+      "title": "Infernus Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Adeptus Astartes",
+        "Tacticus",
+        "Infernus Squad"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-asmodai"
+          },
+          {
+            "unitId": "unit-azrael"
+          },
+          {
+            "unitId": "unit-captain"
+          },
+          {
+            "unitId": "unit-chaplain"
+          },
+          {
+            "unitId": "unit-ezekiel"
+          },
+          {
+            "unitId": "unit-judiciar"
+          },
+          {
+            "unitId": "unit-lazarus"
+          },
+          {
+            "unitId": "unit-librarian"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-ancient"
+          },
+          {
+            "unitId": "unit-apothecary"
+          },
+          {
+            "unitId": "unit-lieutenant"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-asmodai"
+            },
+            {
+              "unitId": "unit-azrael"
+            },
+            {
+              "unitId": "unit-captain"
+            },
+            {
+              "unitId": "unit-chaplain"
+            },
+            {
+              "unitId": "unit-ezekiel"
+            },
+            {
+              "unitId": "unit-judiciar"
+            },
+            {
+              "unitId": "unit-lazarus"
+            },
+            {
+              "unitId": "unit-librarian"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-ancient"
+            },
+            {
+              "unitId": "unit-apothecary"
+            },
+            {
+              "unitId": "unit-lieutenant"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-infiltrator-squad",
+      "title": "Infiltrator Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Smoke",
+        "Phobos",
+        "Adeptus Astartes",
+        "Infiltrator Squad"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-captain-in-phobos-armour"
+          },
+          {
+            "unitId": "unit-librarian-in-phobos-armour"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-lieutenant-in-phobos-armour"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-captain-in-phobos-armour"
+            },
+            {
+              "unitId": "unit-librarian-in-phobos-armour"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-lieutenant-in-phobos-armour"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-reiver-squad",
+      "title": "Reiver Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Smoke",
+        "Phobos",
+        "Reiver Squad",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-captain-in-phobos-armour"
+          },
+          {
+            "unitId": "unit-librarian-in-phobos-armour"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-lieutenant-in-phobos-armour"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-captain-in-phobos-armour"
+            },
+            {
+              "unitId": "unit-librarian-in-phobos-armour"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-lieutenant-in-phobos-armour"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-scout-squad",
+      "title": "Scout Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Smoke",
+        "Scout Squad",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-captain-in-phobos-armour"
+          }
+        ],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-captain-in-phobos-armour"
+            }
+          ],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-sternguard-veteran-squad",
+      "title": "Sternguard Veteran Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Sternguard Veteran Squad",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-asmodai"
+          },
+          {
+            "unitId": "unit-azrael"
+          },
+          {
+            "unitId": "unit-captain"
+          },
+          {
+            "unitId": "unit-chaplain"
+          },
+          {
+            "unitId": "unit-judiciar"
+          },
+          {
+            "unitId": "unit-lazarus"
+          },
+          {
+            "unitId": "unit-librarian"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-ancient"
+          },
+          {
+            "unitId": "unit-apothecary"
+          },
+          {
+            "unitId": "unit-lieutenant"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-asmodai"
+            },
+            {
+              "unitId": "unit-azrael"
+            },
+            {
+              "unitId": "unit-captain"
+            },
+            {
+              "unitId": "unit-chaplain"
+            },
+            {
+              "unitId": "unit-judiciar"
+            },
+            {
+              "unitId": "unit-lazarus"
+            },
+            {
+              "unitId": "unit-librarian"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-ancient"
+            },
+            {
+              "unitId": "unit-apothecary"
+            },
+            {
+              "unitId": "unit-lieutenant"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-suppressor-squad",
+      "title": "Suppressor Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Smoke",
+        "Fly",
+        "Jump Pack",
+        "Suppressor Squad",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-terminator-assault-squad",
+      "title": "Terminator Assault Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-faction-pack",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Imperium",
+        "Terminator Assault Squad",
+        "Terminator",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-belial"
+          },
+          {
+            "unitId": "unit-captain-in-terminator-armour"
+          },
+          {
+            "unitId": "unit-chaplain-in-terminator-armour"
+          },
+          {
+            "unitId": "unit-librarian-in-terminator-armour"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-ancient-in-terminator-armor"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-belial"
+            },
+            {
+              "unitId": "unit-captain-in-terminator-armour"
+            },
+            {
+              "unitId": "unit-chaplain-in-terminator-armour"
+            },
+            {
+              "unitId": "unit-librarian-in-terminator-armour"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-ancient-in-terminator-armor"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-terminator-squad",
+      "title": "Terminator Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Imperium",
+        "Terminator",
+        "Terminator Squad",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-belial"
+          },
+          {
+            "unitId": "unit-captain-in-terminator-armour"
+          },
+          {
+            "unitId": "unit-chaplain-in-terminator-armour"
+          },
+          {
+            "unitId": "unit-librarian-in-terminator-armour"
+          }
+        ],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-belial"
+            },
+            {
+              "unitId": "unit-captain-in-terminator-armour"
+            },
+            {
+              "unitId": "unit-chaplain-in-terminator-armour"
+            },
+            {
+              "unitId": "unit-librarian-in-terminator-armour"
+            }
+          ],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-vanguard-veteran-squad-with-jump-packs",
+      "title": "Vanguard Veteran Squad with Jump Packs",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Adeptus Astartes",
+        "Vanguard Veteran Squad with Jump Packs",
+        "Jump Pack",
+        "Fly",
+        "Vanguard Veteran Squad"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-captain-with-jump-pack"
+          },
+          {
+            "unitId": "unit-chaplain-with-jump-pack"
+          }
+        ],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-captain-with-jump-pack"
+            },
+            {
+              "unitId": "unit-chaplain-with-jump-pack"
+            }
+          ],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-invader-atv",
+      "title": "Invader ATV",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Mounted",
+        "Grenades",
+        "Imperium",
+        "Invader ATV",
+        "Adeptus Astartes",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-outrider-squad",
+      "title": "Outrider Squad",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Mounted",
+        "Grenades",
+        "Imperium",
+        "Outrider Squad",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-chaplain-on-bike"
+          },
+          {
+            "unitId": "unit-sammael"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-ravenwing-command-squad"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-chaplain-on-bike"
+            },
+            {
+              "unitId": "unit-sammael"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-ravenwing-command-squad"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-ballistus-dreadnought",
+      "title": "Ballistus Dreadnought",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Walker",
+        "Imperium",
+        "Ballistus Dreadnought",
+        "Adeptus Astartes",
+        "Dreadnought"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-brutalis-dreadnought",
+      "title": "Brutalis Dreadnought",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Walker",
+        "Brutalis Dreadnought",
+        "Imperium",
+        "Adeptus Astartes",
+        "Dreadnought"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-dreadnought",
+      "title": "Dreadnought",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Smoke",
+        "Imperium",
+        "Adeptus Astartes",
+        "Walker",
+        "Dreadnought"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-firestrike-servo-turrets",
+      "title": "Firestrike Servo-Turrets",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Artillery",
+        "Vehicle",
+        "Imperium",
+        "Adeptus Astartes",
+        "Firestrike Servo-turrets"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-gladiator-lancer",
+      "title": "Gladiator Lancer",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Imperium",
+        "Smoke",
+        "Gladiator Lancer",
+        "Adeptus Astartes",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-gladiator-reaper",
+      "title": "Gladiator Reaper",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Smoke",
+        "Imperium",
+        "Vehicle",
+        "Adeptus Astartes",
+        "Gladiator Reaper",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-gladiator-valiant",
+      "title": "Gladiator Valiant",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Smoke",
+        "Imperium",
+        "Gladiator Valiant",
+        "Adeptus Astartes",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-invictor-tactical-warsuit",
+      "title": "Invictor Tactical Warsuit",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Walker",
+        "Invictor Tactical Warsuit",
+        "Adeptus Astartes",
+        "Imperium",
+        "Phobos"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-land-raider",
+      "title": "Land Raider",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Smoke",
+        "Imperium",
+        "Adeptus Astartes",
+        "Land Raider",
+        "Transport",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-land-raider-crusader",
+      "title": "Land Raider Crusader",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Land Raider Crusader",
+        "Smoke",
+        "Adeptus Astartes",
+        "Imperium",
+        "Transport",
+        "Grenades",
+        "Land Raider",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-land-raider-redeemer",
+      "title": "Land Raider Redeemer",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Grenades",
+        "Imperium",
+        "Smoke",
+        "Land Raider Redeemer",
+        "Adeptus Astartes",
+        "Transport",
+        "Land Raider",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-land-speeder",
+      "title": "Land Speeder",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-faction-pack",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Fly",
+        "Imperium",
+        "Land Speeder",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-predator-annihilator",
+      "title": "Predator Annihilator",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Smoke",
+        "Imperium",
+        "Adeptus Astartes",
+        "Predator Annihilator"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-predator-destructor",
+      "title": "Predator Destructor",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Smoke",
+        "Imperium",
+        "Adeptus Astartes",
+        "Predator Destructor"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-redemptor-dreadnought",
+      "title": "Redemptor Dreadnought",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Walker",
+        "Imperium",
+        "Redemptor Dreadnought",
+        "Adeptus Astartes",
+        "Dreadnought"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-repulsor",
+      "title": "Repulsor",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Imperium",
+        "Smoke",
+        "Repulsor",
+        "Adeptus Astartes",
+        "Transport",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-repulsor-executioner",
+      "title": "Repulsor Executioner",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Smoke",
+        "Imperium",
+        "Transport",
+        "Repulsor Executioner",
+        "Adeptus Astartes",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-storm-speeder-hailstrike",
+      "title": "Storm Speeder Hailstrike",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Fly",
+        "Imperium",
+        "Adeptus Astartes",
+        "Storm Speeder Hailstrike",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-storm-speeder-hammerstrike",
+      "title": "Storm Speeder Hammerstrike",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Imperium",
+        "Fly",
+        "Vehicle",
+        "Storm Speeder Hammerstrike",
+        "Adeptus Astartes",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-storm-speeder-thunderstrike",
+      "title": "Storm Speeder Thunderstrike",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Fly",
+        "Imperium",
+        "Storm Speeder Thunderstrike",
+        "Adeptus Astartes",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-stormhawk-interceptor",
+      "title": "Stormhawk Interceptor",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Aircraft",
+        "Vehicle",
+        "Imperium",
+        "Fly",
+        "Smoke",
+        "Adeptus Astartes",
+        "Stormhawk Interceptor"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-stormraven-gunship",
+      "title": "Stormraven Gunship",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Imperium",
+        "Fly",
+        "Transport",
+        "Stormraven Gunship",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-stormtalon-gunship",
+      "title": "Stormtalon Gunship",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Aircraft",
+        "Vehicle",
+        "Imperium",
+        "Fly",
+        "Stormtalon Gunship",
+        "Adeptus Astartes"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-vindicator",
+      "title": "Vindicator",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Smoke",
+        "Imperium",
+        "Adeptus Astartes",
+        "Vindicator"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-whirlwind",
+      "title": "Whirlwind",
+      "sourceBookId": "space-marines",
+      "sourceLayer": "space-marines-codex",
+      "intrinsicKeywords": [
+        "Imperium",
+        "Vehicle",
+        "Smoke",
+        "Adeptus Astartes",
+        "Whirlwind"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-ravenwing-command-squad",
+      "title": "Ravenwing Command Squad",
+      "sourceBookId": "dark-angels",
+      "sourceLayer": "codex",
+      "intrinsicKeywords": [
+        "Mounted",
+        "Grenades",
+        "Imperium",
+        "Ravenwing Command Squad",
+        "Dark Angels",
+        "Adeptus Astartes",
+        "Ravenwing",
+        "Character",
+        "Support"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [
+          {
+            "unitId": "unit-outrider-squad"
+          },
+          {
+            "unitId": "unit-ravenwing-black-knights"
+          }
+        ],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [
+            {
+              "unitId": "unit-outrider-squad"
+            },
+            {
+              "unitId": "unit-ravenwing-black-knights"
+            }
+          ],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-asmodai",
+      "title": "Asmodai",
+      "sourceBookId": "dark-angels",
+      "sourceLayer": "codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Epic Hero",
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Dark Angels",
+        "Adeptus Astartes",
+        "Asmodai",
+        "Chaplain",
+        "Tacticus",
+        "Deathwing"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-assault-intercessor-squad"
+          },
+          {
+            "unitId": "unit-bladeguard-veteran-squad"
+          },
+          {
+            "unitId": "unit-hellblaster-squad"
+          },
+          {
+            "unitId": "unit-infernus-squad"
+          },
+          {
+            "unitId": "unit-inner-circle-companions"
+          },
+          {
+            "unitId": "unit-intercessor-squad"
+          },
+          {
+            "unitId": "unit-sternguard-veteran-squad"
+          },
+          {
+            "unitId": "unit-tactical-squad"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-assault-intercessor-squad"
+            },
+            {
+              "unitId": "unit-bladeguard-veteran-squad"
+            },
+            {
+              "unitId": "unit-hellblaster-squad"
+            },
+            {
+              "unitId": "unit-infernus-squad"
+            },
+            {
+              "unitId": "unit-inner-circle-companions"
+            },
+            {
+              "unitId": "unit-intercessor-squad"
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad"
+            },
+            {
+              "unitId": "unit-tactical-squad"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-azrael",
+      "title": "Azrael",
+      "sourceBookId": "dark-angels",
+      "sourceLayer": "codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Epic Hero",
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Azrael",
+        "Dark Angels",
+        "Adeptus Astartes",
+        "Chapter Master",
+        "Deathwing"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-assault-intercessor-squad"
+          },
+          {
+            "unitId": "unit-bladeguard-veteran-squad"
+          },
+          {
+            "unitId": "unit-hellblaster-squad"
+          },
+          {
+            "unitId": "unit-infernus-squad"
+          },
+          {
+            "unitId": "unit-inner-circle-companions"
+          },
+          {
+            "unitId": "unit-intercessor-squad"
+          },
+          {
+            "unitId": "unit-sternguard-veteran-squad"
+          },
+          {
+            "unitId": "unit-tactical-squad"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-assault-intercessor-squad"
+            },
+            {
+              "unitId": "unit-bladeguard-veteran-squad"
+            },
+            {
+              "unitId": "unit-hellblaster-squad"
+            },
+            {
+              "unitId": "unit-infernus-squad"
+            },
+            {
+              "unitId": "unit-inner-circle-companions"
+            },
+            {
+              "unitId": "unit-intercessor-squad"
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad"
+            },
+            {
+              "unitId": "unit-tactical-squad"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-belial",
+      "title": "Belial",
+      "sourceBookId": "dark-angels",
+      "sourceLayer": "codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Epic Hero",
+        "Infantry",
+        "Captain",
+        "Dark Angels",
+        "Adeptus Astartes",
+        "Imperium",
+        "Belial",
+        "Terminator",
+        "Deathwing"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-deathwing-knights"
+          },
+          {
+            "unitId": "unit-deathwing-terminator-squad"
+          },
+          {
+            "unitId": "unit-terminator-assault-squad"
+          },
+          {
+            "unitId": "unit-terminator-squad"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-deathwing-knights"
+            },
+            {
+              "unitId": "unit-deathwing-terminator-squad"
+            },
+            {
+              "unitId": "unit-terminator-assault-squad"
+            },
+            {
+              "unitId": "unit-terminator-squad"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-ezekiel",
+      "title": "Ezekiel",
+      "sourceBookId": "dark-angels",
+      "sourceLayer": "codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Epic Hero",
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Psyker",
+        "Ezekiel",
+        "Dark Angels",
+        "Adeptus Astartes",
+        "Librarian",
+        "Deathwing"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-assault-intercessor-squad"
+          },
+          {
+            "unitId": "unit-bladeguard-veteran-squad"
+          },
+          {
+            "unitId": "unit-hellblaster-squad"
+          },
+          {
+            "unitId": "unit-infernus-squad"
+          },
+          {
+            "unitId": "unit-inner-circle-companions"
+          },
+          {
+            "unitId": "unit-intercessor-squad"
+          },
+          {
+            "unitId": "unit-tactical-squad"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-assault-intercessor-squad"
+            },
+            {
+              "unitId": "unit-bladeguard-veteran-squad"
+            },
+            {
+              "unitId": "unit-hellblaster-squad"
+            },
+            {
+              "unitId": "unit-infernus-squad"
+            },
+            {
+              "unitId": "unit-inner-circle-companions"
+            },
+            {
+              "unitId": "unit-intercessor-squad"
+            },
+            {
+              "unitId": "unit-tactical-squad"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-lazarus",
+      "title": "Lazarus",
+      "sourceBookId": "dark-angels",
+      "sourceLayer": "codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Epic Hero",
+        "Infantry",
+        "Captain",
+        "Grenades",
+        "Imperium",
+        "Dark Angels",
+        "Adeptus Astartes",
+        "Lazarus",
+        "Tacticus",
+        "Deathwing"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-assault-intercessor-squad"
+          },
+          {
+            "unitId": "unit-bladeguard-veteran-squad"
+          },
+          {
+            "unitId": "unit-infernus-squad"
+          },
+          {
+            "unitId": "unit-inner-circle-companions"
+          },
+          {
+            "unitId": "unit-intercessor-squad"
+          },
+          {
+            "unitId": "unit-sternguard-veteran-squad"
+          },
+          {
+            "unitId": "unit-tactical-squad"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-assault-intercessor-squad"
+            },
+            {
+              "unitId": "unit-bladeguard-veteran-squad"
+            },
+            {
+              "unitId": "unit-infernus-squad"
+            },
+            {
+              "unitId": "unit-inner-circle-companions"
+            },
+            {
+              "unitId": "unit-intercessor-squad"
+            },
+            {
+              "unitId": "unit-sternguard-veteran-squad"
+            },
+            {
+              "unitId": "unit-tactical-squad"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-lion-eljonson",
+      "title": "Lion El'Jonson",
+      "sourceBookId": "dark-angels",
+      "sourceLayer": "codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Epic Hero",
+        "Monster",
+        "Imperium",
+        "Dark Angels",
+        "Adeptus Astartes",
+        "Primarch",
+        "Lion El'Jonson",
+        "Mobile"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-sammael",
+      "title": "Sammael",
+      "sourceBookId": "dark-angels",
+      "sourceLayer": "codex",
+      "intrinsicKeywords": [
+        "Character",
+        "Epic Hero",
+        "Mounted",
+        "Captain",
+        "Imperium",
+        "Fly",
+        "Grenades",
+        "Sammael",
+        "Dark Angels",
+        "Adeptus Astartes",
+        "Ravenwing",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [
+          {
+            "unitId": "unit-outrider-squad"
+          },
+          {
+            "unitId": "unit-ravenwing-black-knights"
+          }
+        ],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [
+            {
+              "unitId": "unit-outrider-squad"
+            },
+            {
+              "unitId": "unit-ravenwing-black-knights"
+            }
+          ],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-deathwing-knights",
+      "title": "Deathwing Knights",
+      "sourceBookId": "dark-angels",
+      "sourceLayer": "codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Imperium",
+        "Dark Angels",
+        "Adeptus Astartes",
+        "Deathwing Knights",
+        "Terminator",
+        "Deathwing"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-belial"
+          },
+          {
+            "unitId": "unit-captain-in-terminator-armour"
+          },
+          {
+            "unitId": "unit-chaplain-in-terminator-armour"
+          },
+          {
+            "unitId": "unit-librarian-in-terminator-armour"
+          }
+        ],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-belial"
+            },
+            {
+              "unitId": "unit-captain-in-terminator-armour"
+            },
+            {
+              "unitId": "unit-chaplain-in-terminator-armour"
+            },
+            {
+              "unitId": "unit-librarian-in-terminator-armour"
+            }
+          ],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-deathwing-terminator-squad",
+      "title": "Deathwing Terminator Squad",
+      "sourceBookId": "dark-angels",
+      "sourceLayer": "codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Imperium",
+        "Deathwing Terminator Squad",
+        "Dark Angels",
+        "Adeptus Astartes",
+        "Terminator",
+        "Deathwing"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-belial"
+          },
+          {
+            "unitId": "unit-captain-in-terminator-armour"
+          },
+          {
+            "unitId": "unit-chaplain-in-terminator-armour"
+          },
+          {
+            "unitId": "unit-librarian-in-terminator-armour"
+          }
+        ],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-belial"
+            },
+            {
+              "unitId": "unit-captain-in-terminator-armour"
+            },
+            {
+              "unitId": "unit-chaplain-in-terminator-armour"
+            },
+            {
+              "unitId": "unit-librarian-in-terminator-armour"
+            }
+          ],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-inner-circle-companions",
+      "title": "Inner Circle Companions",
+      "sourceBookId": "dark-angels",
+      "sourceLayer": "codex",
+      "intrinsicKeywords": [
+        "Infantry",
+        "Imperium",
+        "Dark Angels",
+        "Tacticus",
+        "Inner Circle Companions",
+        "Adeptus Astartes",
+        "Deathwing"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-asmodai"
+          },
+          {
+            "unitId": "unit-azrael"
+          },
+          {
+            "unitId": "unit-captain"
+          },
+          {
+            "unitId": "unit-chaplain"
+          },
+          {
+            "unitId": "unit-ezekiel"
+          },
+          {
+            "unitId": "unit-judiciar"
+          },
+          {
+            "unitId": "unit-lazarus"
+          },
+          {
+            "unitId": "unit-librarian"
+          }
+        ],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-asmodai"
+            },
+            {
+              "unitId": "unit-azrael"
+            },
+            {
+              "unitId": "unit-captain"
+            },
+            {
+              "unitId": "unit-chaplain"
+            },
+            {
+              "unitId": "unit-ezekiel"
+            },
+            {
+              "unitId": "unit-judiciar"
+            },
+            {
+              "unitId": "unit-lazarus"
+            },
+            {
+              "unitId": "unit-librarian"
+            }
+          ],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-land-speeder-vengeance",
+      "title": "Land Speeder Vengeance",
+      "sourceBookId": "dark-angels",
+      "sourceLayer": "codex",
+      "intrinsicKeywords": [
+        "Fly",
+        "Imperium",
+        "Vehicle",
+        "Land Speeder Vengeance",
+        "Adeptus Astartes",
+        "Dark Angels",
+        "Ravenwing",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-nephilim-jetfighter",
+      "title": "Nephilim Jetfighter",
+      "sourceBookId": "dark-angels",
+      "sourceLayer": "codex",
+      "intrinsicKeywords": [
+        "Vehicle",
+        "Fly",
+        "Aircraft",
+        "Imperium",
+        "Nephilim Jetfighter",
+        "Adeptus Astartes",
+        "Dark Angels",
+        "Ravenwing"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-ravenwing-black-knights",
+      "title": "Ravenwing Black Knights",
+      "sourceBookId": "dark-angels",
+      "sourceLayer": "codex",
+      "intrinsicKeywords": [
+        "Mounted",
+        "Grenades",
+        "Imperium",
+        "Dark Angels",
+        "Adeptus Astartes",
+        "Ravenwing Black Knights",
+        "Ravenwing"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [
+          {
+            "unitId": "unit-chaplain-on-bike"
+          },
+          {
+            "unitId": "unit-sammael"
+          }
+        ],
+        "canBeSupportedBy": [
+          {
+            "unitId": "unit-ravenwing-command-squad"
+          }
+        ]
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [
+            {
+              "unitId": "unit-chaplain-on-bike"
+            },
+            {
+              "unitId": "unit-sammael"
+            }
+          ],
+          "canBeSupportedBy": [
+            {
+              "unitId": "unit-ravenwing-command-squad"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "unit-ravenwing-dark-talon",
+      "title": "Ravenwing Dark Talon",
+      "sourceBookId": "dark-angels",
+      "sourceLayer": "codex",
+      "intrinsicKeywords": [
+        "Imperium",
+        "Fly",
+        "Vehicle",
+        "Aircraft",
+        "Dark Talon",
+        "Adeptus Astartes",
+        "Dark Angels",
+        "Ravenwing"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    },
+    {
+      "id": "unit-ravenwing-darkshroud",
+      "title": "Ravenwing Darkshroud",
+      "sourceBookId": "dark-angels",
+      "sourceLayer": "codex",
+      "intrinsicKeywords": [
+        "Darkshroud",
+        "Imperium",
+        "Fly",
+        "Vehicle",
+        "Dark Angels",
+        "Adeptus Astartes",
+        "Ravenwing",
+        "Frame"
+      ],
+      "relations": {
+        "canLead": [],
+        "canSupport": [],
+        "canBeLedBy": [],
+        "canBeSupportedBy": []
+      },
+      "ruleFacts": {
+        "relations": {
+          "canLead": [],
+          "canSupport": [],
+          "canBeLedBy": [],
+          "canBeSupportedBy": []
+        }
+      }
+    }
+  ],
+  "detachments": [
+    {
+      "id": "company-of-hunters",
+      "title": "Company of Hunters",
+      "sourceBookId": "dark-angels",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "dark-age-arsenal",
+      "title": "Dark Age Arsenal",
+      "sourceBookId": "dark-angels",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "darkflight-pursuit",
+      "title": "Darkflight Pursuit",
+      "sourceBookId": "dark-angels",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "inner-circle-task-force",
+      "title": "Inner Circle Task Force",
+      "sourceBookId": "dark-angels",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "interrogation-conclave",
+      "title": "Interrogation Conclave",
+      "sourceBookId": "dark-angels",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "lion-s-blade-task-force",
+      "title": "Lion's Blade Task Force",
+      "sourceBookId": "dark-angels",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "unforgiven-task-force",
+      "title": "Unforgiven Task Force",
+      "sourceBookId": "dark-angels",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "wrath-of-the-rock",
+      "title": "Wrath of the Rock",
+      "sourceBookId": "dark-angels",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "vengeful-hosts",
+      "title": "Vengeful Hosts",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "fulguris-task-force",
+      "title": "Fulguris Task Force",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "librarius-conclave",
+      "title": "Librarius Conclave",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "subversion-assets",
+      "title": "Subversion Assets",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "armoured-speartip",
+      "title": "Armoured Speartip",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "headhunter-task-force",
+      "title": "Headhunter Task Force",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "ceramite-sentinels",
+      "title": "Ceramite Sentinels",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "bastion-task-force",
+      "title": "Bastion Task Force",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "orbital-assault-force",
+      "title": "Orbital Assault Force",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "1st-company-task-force",
+      "title": "1st Company Task Force",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "anvil-siege-force",
+      "title": "Anvil Siege Force",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "firestorm-assault-force",
+      "title": "Firestorm Assault Force",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "gladius-task-force",
+      "title": "Gladius Task Force",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "ironstorm-spearhead",
+      "title": "Ironstorm Spearhead",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "stormlance-task-force",
+      "title": "Stormlance Task Force",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    },
+    {
+      "id": "vanguard-spearhead",
+      "title": "Vanguard Spearhead",
+      "sourceBookId": "space-marines",
+      "chapterRestriction": null,
+      "keywordGrants": []
+    }
+  ],
+  "enhancements": [
+    {
+      "legacyKey": "enhancement-master-of-manoeuvre",
+      "title": "Master of Manoeuvre",
+      "text": "RAVENWING model only. If the bearer's unit starts the battle in Strategic Reserves, its points value does not count towards the combined points limit for units from your army that are in Strategic Reserve, and for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
+      "value": 15,
+      "detachment": "Company of Hunters",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "enhancement-master-of-manoeuvre",
+      "detachmentId": "company-of-hunters",
+      "id": "enhancement-master-of-manoeuvre",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "enhancement-master-of-manoeuvre",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "enhancement-master-crafted-weapon",
+      "title": "Master-crafted Weapon",
+      "text": "RAVENWING model only. Melee weapons equipped by the bearer have the Precision ability.",
+      "value": 10,
+      "detachment": "Company of Hunters",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "enhancement-master-crafted-weapon",
+      "detachmentId": "company-of-hunters",
+      "id": "enhancement-master-crafted-weapon",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "enhancement-master-crafted-weapon",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "enhancement-mounted-strategist",
+      "title": "Mounted Strategist",
+      "text": "RAVENWING model only. You can re-roll Advance and Charge rolls made for the bearer’s unit.",
+      "value": 30,
+      "detachment": "Company of Hunters",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "enhancement-mounted-strategist",
+      "detachmentId": "company-of-hunters",
+      "id": "enhancement-mounted-strategist",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "enhancement-mounted-strategist",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "enhancement-recon-hunter",
+      "title": "Recon Hunter",
+      "text": "RAVENWING model only. Models in the bearer's unit have the Scouts 9\" ability.",
+      "value": 20,
+      "detachment": "Company of Hunters",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "enhancement-recon-hunter",
+      "detachmentId": "company-of-hunters",
+      "id": "enhancement-recon-hunter",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "enhancement-recon-hunter",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "petition-of-stability",
+      "title": "Petition of Stability",
+      "text": "With the correct runic activation sequence – and whispered appeals to the plasma coils’ stability matrix – the effective reach of a weapon’s killing power can be extended. ADEPTUS ASTARTES unit only. This unit’s plasma attacks have +6\" R.",
+      "value": 15,
+      "detachment": "Dark Age Arsenal",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "petition-of-stability",
+      "detachmentId": "dark-age-arsenal",
+      "id": "petition-of-stability",
+      "points": 15,
+      "sourcePages": [
+        2
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourcePages": [
+          2
+        ]
+      },
+      "sourceId": "petition-of-stability",
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "entreaty-of-perpetual-ardour",
+      "title": "Entreaty of Perpetual Ardour",
+      "text": "By stoking the spirits of their weapons, these Hellblasters keep their blazing ire in seething readiness to intercept the enemy’s every treacherous act. HELLBLASTER SQUAD only. This unit’s snap shooting attacks hit on unmodified hit rolls of 5+.",
+      "value": 15,
+      "detachment": "Dark Age Arsenal",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "entreaty-of-perpetual-ardour",
+      "detachmentId": "dark-age-arsenal",
+      "id": "entreaty-of-perpetual-ardour",
+      "points": 15,
+      "sourcePages": [
+        2
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourcePages": [
+          2
+        ]
+      },
+      "sourceId": "entreaty-of-perpetual-ardour",
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "thundercowl-turbines",
+      "title": "Thundercowl Turbines",
+      "text": "These master‑wrought engines from the Dark Age of Technology churn the gloom emanated by the Ravenwing’s reliquaries into a billowing cawl that shrouds their advance, allowing them to strike when the foe least expects. RAVENWING FLY unit only. In your first Movement phase, this unit can make an ingress move.",
+      "value": 15,
+      "detachment": "Darkflight Pursuit",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "thundercowl-turbines",
+      "detachmentId": "darkflight-pursuit",
+      "id": "thundercowl-turbines",
+      "points": 15,
+      "sourcePages": [
+        3
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourcePages": [
+          3
+        ]
+      },
+      "sourceId": "thundercowl-turbines",
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "nightforged-battery",
+      "title": "Nightforged Battery",
+      "text": "Use of these relic plasma storm batteries is granted only by dispensation of the Master of the Rock. They unleash devastating toroids of searing plasma, while their venting subsystems are known to be especially vigilant. LAND SPEEDER VENGEANCE unit only. This unit can re‑roll: ▪ Rolls to determine the A of a weapon. ▪ Hazard rolls.",
+      "value": 15,
+      "detachment": "Darkflight Pursuit",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "nightforged-battery",
+      "detachmentId": "darkflight-pursuit",
+      "id": "nightforged-battery",
+      "points": 15,
+      "sourcePages": [
+        3
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourcePages": [
+          3
+        ]
+      },
+      "sourceId": "nightforged-battery",
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "enhancement-champion-of-the-deathwing",
+      "title": "Champion of the Deathwing",
+      "text": "Deathwing model only. Melee weapons equipped by the bearer have the [LETHAL HITS] ability, and each time the bearer makes a melee attack, if it is within range of your Vowed objective marker, a Critical Hit is scored on an unmodified Hit roll of 5+.",
+      "value": 15,
+      "detachment": "Inner Circle Task Force",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "enhancement-champion-of-the-deathwing",
+      "detachmentId": "inner-circle-task-force",
+      "id": "enhancement-champion-of-the-deathwing",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "enhancement-champion-of-the-deathwing",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "enhancement-inner-circle-task-force-deathwing-assault",
+      "title": "Deathwing Assault",
+      "text": "Deathwing model with the Deep Strike ability only. The bearer's unit can set up using the Deep Strike ability in the Reinforcement step of your first, second or third Movement phase, regardless of any mission rules.",
+      "value": 30,
+      "detachment": "Inner Circle Task Force",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "enhancement-inner-circle-task-force-deathwing-assault",
+      "detachmentId": "inner-circle-task-force",
+      "id": "enhancement-inner-circle-task-force-deathwing-assault",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "enhancement-inner-circle-task-force-deathwing-assault",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "enhancement-eye-of-the-unseen",
+      "title": "Eye of the Unseen",
+      "text": "Deathwing model only. Each time you target the bearer's unit with a Stratagem, roll one D6, adding 1 if the bearer is within range of your Vowed objective marker: on a 5+ you gain 1CP.",
+      "value": 10,
+      "detachment": "Inner Circle Task Force",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "enhancement-eye-of-the-unseen",
+      "detachmentId": "inner-circle-task-force",
+      "id": "enhancement-eye-of-the-unseen",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "enhancement-eye-of-the-unseen",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "enhancement-singular-will",
+      "title": "Singular Will",
+      "text": "Deathwing model only. Each time the bearer's unit Pile In or Consolidates, models in that unit can move an additional 3\".",
+      "value": 20,
+      "detachment": "Inner Circle Task Force",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "enhancement-singular-will",
+      "detachmentId": "inner-circle-task-force",
+      "id": "enhancement-singular-will",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "enhancement-singular-will",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "limitless-zeal",
+      "title": "Limitless Zeal",
+      "text": "This Interrogator‑Chaplain is restless and dynamic, not only in his pursuit of enemies but also when eliciting their screamed confessions. CHAPLAIN model only. This unit has +1 to charge rolls.",
+      "value": 10,
+      "detachment": "Interrogation Conclave",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "limitless-zeal",
+      "detachmentId": "interrogation-conclave",
+      "id": "limitless-zeal",
+      "points": 10,
+      "sourcePages": [
+        4
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourcePages": [
+          4
+        ]
+      },
+      "sourceId": "limitless-zeal",
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "inescapable-interrogation",
+      "title": "Inescapable Interrogation",
+      "text": "Whatever physical obfuscation the enemy hides behind mirrors only the lies shrouding their souls. This experienced Chaplain is deceived by neither. CHAPLAIN model only. This unit’s ranged attacks have [IGNORES COVER].",
+      "value": 20,
+      "detachment": "Interrogation Conclave",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "inescapable-interrogation",
+      "detachmentId": "interrogation-conclave",
+      "id": "inescapable-interrogation",
+      "points": 20,
+      "sourcePages": [
+        4
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourcePages": [
+          4
+        ]
+      },
+      "sourceId": "inescapable-interrogation",
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "calibanite-armaments",
+      "title": "Calibanite Armaments",
+      "text": "The eldest relic weapons of the Dark Angels trace their lineage to ancient Caliban and are wielded only by the greatest champions of the Unforgiven. Adeptus Astartes model only. Add 1 to the Damage characteristic of the bearer’s melee weapons.",
+      "value": 15,
+      "detachment": "Lion's Blade Task Force",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "calibanite-armaments",
+      "detachmentId": "lion-s-blade-task-force",
+      "id": "calibanite-armaments",
+      "points": 15,
+      "sourcePages": [
+        5
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourcePages": [
+          5
+        ]
+      },
+      "sourceId": "calibanite-armaments",
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "lord-of-the-hunt",
+      "title": "Lord of the Hunt",
+      "text": "This veteran of the Ravenwing has spent mortal lifetimes in the saddle, leading mechanised cavalry to battle on countless worlds. Ravenwing model only. The bearer’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back and you can re‑roll Desperate Escape tests taken for models in the bearer’s unit.",
+      "value": 15,
+      "detachment": "Lion's Blade Task Force",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "lord-of-the-hunt",
+      "detachmentId": "lion-s-blade-task-force",
+      "id": "lord-of-the-hunt",
+      "points": 15,
+      "sourcePages": [
+        5
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourcePages": [
+          5
+        ]
+      },
+      "sourceId": "lord-of-the-hunt",
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "stalwart-champion",
+      "title": "Stalwart Champion",
+      "text": "Possessed of obdurate will, this warrior champion instils an indomitable resolve and absolute refusal to cede ground within his brothers. Captain, Chaplain or Lieutenant model only. While the bearer’s unit is not Battle‑shocked, add 1 to the Objective Control characteristic of models in the bearer’s unit.",
+      "value": 15,
+      "detachment": "Lion's Blade Task Force",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "stalwart-champion",
+      "detachmentId": "lion-s-blade-task-force",
+      "id": "stalwart-champion",
+      "points": 25,
+      "sourcePages": [
+        5
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourcePages": [
+          5
+        ]
+      },
+      "sourceId": "stalwart-champion",
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "fulgus-magna",
+      "title": "Fulgus Magna",
+      "text": "This ancient teleport homer projects a powerful narrow‑band signal, enabling the teleportarium chambers of orbiting vessels to lock on to the bearer even amid severe atmospheric or empyric disturbances. Deathwing model only. Once per battle, at the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
+      "value": 20,
+      "detachment": "Lion's Blade Task Force",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "fulgus-magna",
+      "detachmentId": "lion-s-blade-task-force",
+      "id": "fulgus-magna",
+      "points": 20,
+      "sourcePages": [
+        5
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourcePages": [
+          5
+        ]
+      },
+      "sourceId": "fulgus-magna",
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "enhancement-pennant-of-remembrance",
+      "title": "Pennant of Remembrance",
+      "text": "Ancient model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability. While that unit\nis Battle-shocked, models in that unit have the Feel No Pain 4+ ability instead.",
+      "value": 10,
+      "detachment": "Unforgiven Task Force",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "enhancement-pennant-of-remembrance",
+      "detachmentId": "unforgiven-task-force",
+      "id": "enhancement-pennant-of-remembrance",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "enhancement-pennant-of-remembrance",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "enhancement-shroud-of-heroes",
+      "title": "Shroud of Heroes",
+      "text": "ADEPTUS ASTARTES model only. (Once per battle, per army) When this model is destroyed, at the end of the phase, roll one D6:\n▪ On a 2+, set up this model on the battlefield, unengaged and as close as possible to where it was destroyed. This model is not part of an attached unit and its unit has a starting strength of 1. This model has 3 wounds remaining, or its full wounds remaining if this model was battle-shocked when it was destroyed",
+      "value": 25,
+      "detachment": "Unforgiven Task Force",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "enhancement-shroud-of-heroes",
+      "detachmentId": "unforgiven-task-force",
+      "id": "enhancement-shroud-of-heroes",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "enhancement-shroud-of-heroes",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "enhancement-stubborn-tenacity",
+      "title": "Stubborn Tenacity",
+      "text": "Adeptus Astartes model only. While the bearer is leading a unit, each time a model in that unit makes an attack, add 1 to the Hit roll if that unit is below its Starting Strength, and add 1 to the Wound roll as well if that unit is Battle-shocked and below its Starting Strength.",
+      "value": 15,
+      "detachment": "Unforgiven Task Force",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "enhancement-stubborn-tenacity",
+      "detachmentId": "unforgiven-task-force",
+      "id": "enhancement-stubborn-tenacity",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "enhancement-stubborn-tenacity",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "enhancement-weapons-of-the-first-legion",
+      "title": "Weapons of the First Legion",
+      "text": "Adeptus Astartes model only. Add 1 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons. While the bearer is Battle-shocked, add 2 to the Attacks, Strength and Damage characteristics of the bearer’s melee weapons instead.",
+      "value": 15,
+      "detachment": "Unforgiven Task Force",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "enhancement-weapons-of-the-first-legion",
+      "detachmentId": "unforgiven-task-force",
+      "id": "enhancement-weapons-of-the-first-legion",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "enhancement-weapons-of-the-first-legion",
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "tempered-in-battle-aura",
+      "title": "Tempered in Battle (Aura)",
+      "text": "A veteran of the Inner Circle, this warrior inspires those around them to hold the line amidst the heat and chaos of battle. Adeptus Astartes model only. While a friendly Adeptus Astartes unit is within 6\" of this model, you can re‑roll Battle‑shock and Leadership tests taken for that unit.",
+      "value": 10,
+      "detachment": "Wrath of the Rock",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "tempered-in-battle-aura",
+      "detachmentId": "wrath-of-the-rock",
+      "id": "tempered-in-battle-aura",
+      "points": 10,
+      "sourcePages": [
+        7
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourcePages": [
+          7
+        ]
+      },
+      "sourceId": "tempered-in-battle-aura",
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "ancient-weapons",
+      "title": "Ancient Weapons",
+      "text": "The vaults of the Dark Angels contain many relics from Humanity’s distant past. This soldier has been granted the honour of bearing such a weapon to battle. Adeptus Astartes model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, and improve the Armour Penetration and Damage characteristics of those weapons by 1.",
+      "value": 25,
+      "detachment": "Wrath of the Rock",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "ancient-weapons",
+      "detachmentId": "wrath-of-the-rock",
+      "id": "ancient-weapons",
+      "points": 25,
+      "sourcePages": [
+        7
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourcePages": [
+          7
+        ]
+      },
+      "sourceId": "ancient-weapons",
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "deathwing-assault",
+      "title": "Deathwing Assault",
+      "text": "A veteran inductee of the Inner Circle, this champion has served amongst the Deathwing for centuries and become an unmatched master of teleportarium insertions. Deathwing model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
+      "value": 15,
+      "detachment": "Wrath of the Rock",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "deathwing-assault",
+      "detachmentId": "wrath-of-the-rock",
+      "id": "deathwing-assault",
+      "points": 15,
+      "sourcePages": [
+        7
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourcePages": [
+          7
+        ]
+      },
+      "sourceId": "deathwing-assault",
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "lord-of-the-ravenwing",
+      "title": "Lord of the Ravenwing",
+      "text": "This commander has mastered the art of cavalry combat, instinctively noticing the opportune position to strike and navigating the chaos of battle with preternatural precision. Ravenwing model only. Y ou can re‑roll Advance and Charge rolls made for the bearer’s unit.",
+      "value": 10,
+      "detachment": "Wrath of the Rock",
+      "tags": [],
+      "owner": null,
+      "assignment": null,
+      "ruleId": "lord-of-the-ravenwing",
+      "detachmentId": "wrath-of-the-rock",
+      "id": "lord-of-the-ravenwing",
+      "points": 10,
+      "sourcePages": [
+        7
+      ],
+      "provenance": {
+        "sourceId": "dark-angels-faction-pack-v1.1",
+        "sourcePages": [
+          7
+        ]
+      },
+      "sourceId": "lord-of-the-ravenwing",
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/dark-angels",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceBookId": "dark-angels"
+    },
+    {
+      "legacyKey": "enhancement-avenging-angel",
+      "title": "Avenging Angel",
+      "text": "ADEPTUS ASTARTES FLY INFANTRY model only. When this unit ends an ingress move, select up to one enemy unit within 9\" of this unit. That enemy unit makes a battle-shock roll, with -1 to that battle-shock roll.",
+      "value": 20,
+      "detachment": "Vengeful Hosts",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-captain-with-jump-pack",
+            "unit-chaplain-with-jump-pack"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "enhancement-avenging-angel",
+      "detachmentId": "vengeful-hosts",
+      "id": "enhancement-avenging-angel",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        2
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          2
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "enhancement-avenging-angel",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "enhancement-orksbane",
+      "title": "Orksbane",
+      "text": "ADEPTUS ASTARTES FLY INFANTRY model only. This model has the following weapon: Orksbane [CLEAVE 2] RANGE A WS S AP D Melee 4 2+ 8 -2",
+      "value": 20,
+      "detachment": "Vengeful Hosts",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-captain-with-jump-pack",
+            "unit-chaplain-with-jump-pack"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "enhancement-orksbane",
+      "detachmentId": "vengeful-hosts",
+      "id": "enhancement-orksbane",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        2
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          2
+        ]
+      },
+      "profile": {
+        "name": "Orksbane",
+        "type": "Melee Weapons",
+        "characteristics": {
+          "Range": "Melee",
+          "A": "4",
+          "WS": "2+",
+          "S": "8",
+          "AP": "-2",
+          "D": "3",
+          "Keywords": "Cleave 2"
+        }
+      },
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "enhancement-orksbane",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "bellicose-weapon-spirits",
+      "title": "Bellicose Weapon Spirits (Upgrade)",
+      "text": "SPEEDER unit only. This unit can re-roll: ▪ Damage rolls. ▪ Rolls to determine the A of a weapon.",
+      "value": 15,
+      "detachment": "Fulguris Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-land-speeder",
+            "unit-storm-speeder-hailstrike",
+            "unit-storm-speeder-hammerstrike",
+            "unit-storm-speeder-thunderstrike"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "bellicose-weapon-spirits",
+      "detachmentId": "fulguris-task-force",
+      "id": "bellicose-weapon-spirits",
+      "kind": "Upgrade",
+      "points": 15,
+      "sourcePages": [
+        3
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          3
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "bellicose-weapon-spirits",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "raptorial-cogitator-core",
+      "title": "Raptorial Cogitator Core (Upgrade)",
+      "text": "SPEEDER unit only. This unit’s ranged attacks have [IGNORES COVER].",
+      "value": 15,
+      "detachment": "Fulguris Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-land-speeder",
+            "unit-storm-speeder-hailstrike",
+            "unit-storm-speeder-hammerstrike",
+            "unit-storm-speeder-thunderstrike"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "raptorial-cogitator-core",
+      "detachmentId": "fulguris-task-force",
+      "id": "raptorial-cogitator-core",
+      "kind": "Upgrade",
+      "points": 15,
+      "sourcePages": [
+        3
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          3
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "raptorial-cogitator-core",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "celerity",
+      "title": "Celerity",
+      "text": "ADEPTUS ASTARTES PSYKER model only. ▪ When this unit is selected to make an advance move, that move does not prevent this unit from being eligible to declare a charge. ▪ When this unit is selected to make a fall-back move, if this unit has the Biomancy Discipline ability, that move does not prevent this unit from being eligible to declare a charge.",
+      "value": 35,
+      "detachment": "Librarius Conclave",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "celerity",
+      "detachmentId": "librarius-conclave",
+      "id": "celerity",
+      "kind": "Enhancement",
+      "points": 35,
+      "sourcePages": [
+        4
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          4
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "celerity",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "fusillade",
+      "title": "Fusillade",
+      "text": "ADEPTUS ASTARTES PSYKER model only. This unit’s ranged attacks have: ▪ [LETHAL HITS] ▪ If this unit has the Pyromancy Discipline ability, [SUSTAINED HITS 1].",
+      "value": 25,
+      "detachment": "Librarius Conclave",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "fusillade",
+      "detachmentId": "librarius-conclave",
+      "id": "fusillade",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        4
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          4
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "fusillade",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "obfuscation",
+      "title": "Obfuscation",
+      "text": "ADEPTUS ASTARTES PSYKER model only. ▪ Enemy units cannot target this unit with snap shooting attacks. ▪ If this unit has the Telepathy Discipline ability, this unit has -3\" detection range.",
+      "value": 25,
+      "detachment": "Librarius Conclave",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "obfuscation",
+      "detachmentId": "librarius-conclave",
+      "id": "obfuscation",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        4
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          4
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "obfuscation",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "prescience",
+      "title": "Prescience",
+      "text": "ADEPTUS ASTARTES PSYKER model only (excluding TERMINATOR models). (Once per turn per unit) In your opponent’s Movement phase, when an enemy unit ends a move within 8\" of this unit, if this unit is unengaged, this unit can make a normal move of: ▪ Up to D6\". ▪ Or: If this unit has the Divination Discipline ability, up to 6\".",
+      "value": 20,
+      "detachment": "Librarius Conclave",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "prescience",
+      "detachmentId": "librarius-conclave",
+      "id": "prescience",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        4
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          4
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "prescience",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "temporal-corridor",
+      "title": "Temporal Corridor",
+      "text": "ADEPTUS ASTARTES PSYKER model only. ▪ If this unit has the Telekinesis Discipline ability, this unit has Deep Strike. ▪ At the end of your opponent’s Fight phase, if this unit is unengaged, you can use this ability. If you do: ▫ Place this unit in strategic reserves. ▫ This unit can make an ingress move in your next Movement phase (including in your first turn).",
+      "value": 25,
+      "detachment": "Librarius Conclave",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "temporal-corridor",
+      "detachmentId": "librarius-conclave",
+      "id": "temporal-corridor",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        4
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          4
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "temporal-corridor",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "death-in-the-dark",
+      "title": "Death in the Dark (Upgrade)",
+      "text": "INFANTRY PHOBOS unit only. This unit’s attacks that target a hidden unit have +1 to hit rolls.",
+      "value": 15,
+      "detachment": "Subversion Assets",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-captain-in-phobos-armour",
+            "unit-eliminator-squad",
+            "unit-incursor-squad",
+            "unit-infiltrator-squad",
+            "unit-librarian-in-phobos-armour",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-reiver-squad"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "death-in-the-dark",
+      "detachmentId": "subversion-assets",
+      "id": "death-in-the-dark",
+      "kind": "Upgrade",
+      "points": 15,
+      "sourcePages": [
+        5
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          5
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "death-in-the-dark",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "shroud-field",
+      "title": "Shroud Field",
+      "text": "PHOBOS model only. This model has: ▪ Lone Operative. ▪ Stealth.",
+      "value": 20,
+      "detachment": "Subversion Assets",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-captain-in-phobos-armour",
+            "unit-librarian-in-phobos-armour",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "shroud-field",
+      "detachmentId": "subversion-assets",
+      "id": "shroud-field",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        5
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          5
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "shroud-field",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "armoured-commander",
+      "title": "Armoured Commander",
+      "text": "Adeptus Astartes model only. Once per turn, in your Movement phase, the bearer can use this Enhancement. If it does, select one friendly Adeptus Astartes Transport that is in Strategic Reserves. Until the end of the phase, for the purposes of setting up that Transport on the battlefield, treat the current battle round number as being one higher than it actually is.",
+      "value": 25,
+      "detachment": "Armoured Speartip",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "armoured-commander",
+      "detachmentId": "armoured-speartip",
+      "id": "armoured-commander",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        6
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          6
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "armoured-commander",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "liberator",
+      "title": "Liberator",
+      "text": "Adeptus Astartes model only. If you control an objective marker at the end of your Command phase, and the bearer’s unit (or any Heavy Transport it is embarked within) is within range of that objective marker, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+      "value": 15,
+      "detachment": "Armoured Speartip",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "liberator",
+      "detachmentId": "armoured-speartip",
+      "id": "liberator",
+      "kind": "Enhancement",
+      "points": 15,
+      "sourcePages": [
+        6
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          6
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "liberator",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "shock-deployment",
+      "title": "Shock Deployment",
+      "text": "Adeptus Astartes Terminator or Gravis model only. In your Shooting phase, each time the bearer’s unit is selected to shoot, if it disembarked from a Transport this turn, until the end of the phase, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
+      "value": 20,
+      "detachment": "Armoured Speartip",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary-biologis",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-chaplain-in-terminator-armour",
+            "unit-librarian-in-terminator-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "shock-deployment",
+      "detachmentId": "armoured-speartip",
+      "id": "shock-deployment",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        6
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          6
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "shock-deployment",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "tip-of-the-spear",
+      "title": "Tip of the Spear",
+      "text": "Adeptus Astartes model only. If the bearer starts the battle embarked within a Transport , that Transport has the Scouts 6\" ability.",
+      "value": 40,
+      "detachment": "Armoured Speartip",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "tip-of-the-spear",
+      "detachmentId": "armoured-speartip",
+      "id": "tip-of-the-spear",
+      "kind": "Enhancement",
+      "points": 40,
+      "sourcePages": [
+        6
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          6
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "tip-of-the-spear",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "astartes-tank-ace-aura",
+      "title": "Astartes Tank Ace",
+      "text": "Adeptus Astartes Vehicle model only. In your Shooting phase, while a friendly Adeptus Astartes Vehicle unit is within 6\" of the bearer, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
+      "value": 40,
+      "detachment": "Headhunter Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-firestrike-servo-turrets",
+            "unit-gladiator-lancer",
+            "unit-gladiator-reaper",
+            "unit-gladiator-valiant",
+            "unit-impulsor",
+            "unit-land-raider",
+            "unit-land-raider-crusader",
+            "unit-land-raider-redeemer",
+            "unit-predator-annihilator",
+            "unit-predator-destructor",
+            "unit-razorback",
+            "unit-repulsor",
+            "unit-repulsor-executioner",
+            "unit-rhino",
+            "unit-vindicator",
+            "unit-whirlwind"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "astartes-tank-ace-aura",
+      "detachmentId": "headhunter-task-force",
+      "id": "astartes-tank-ace-aura",
+      "kind": "Enhancement",
+      "points": 40,
+      "sourcePages": [
+        8
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          8
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "astartes-tank-ace-aura",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "firestorm-coordinators",
+      "title": "Firestorm Coordinators",
+      "text": "Adeptus Astartes Vehicle model only. Ranged weapons equipped by the bearer have the [SUSTAINED HITS 1] ability.",
+      "value": 20,
+      "detachment": "Headhunter Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-firestrike-servo-turrets",
+            "unit-gladiator-lancer",
+            "unit-gladiator-reaper",
+            "unit-gladiator-valiant",
+            "unit-impulsor",
+            "unit-land-raider",
+            "unit-land-raider-crusader",
+            "unit-land-raider-redeemer",
+            "unit-predator-annihilator",
+            "unit-predator-destructor",
+            "unit-razorback",
+            "unit-repulsor",
+            "unit-repulsor-executioner",
+            "unit-rhino",
+            "unit-vindicator",
+            "unit-whirlwind"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "firestorm-coordinators",
+      "detachmentId": "headhunter-task-force",
+      "id": "firestorm-coordinators",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        8
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          8
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "firestorm-coordinators",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "gunnery-honours",
+      "title": "Gunnery Honours",
+      "text": "Adeptus Astartes Vehicle model only. Once per phase, you can re‑roll one Hit roll, one Wound roll and one Damage roll for the bearer.",
+      "value": 20,
+      "detachment": "Headhunter Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-firestrike-servo-turrets",
+            "unit-gladiator-lancer",
+            "unit-gladiator-reaper",
+            "unit-gladiator-valiant",
+            "unit-impulsor",
+            "unit-land-raider",
+            "unit-land-raider-crusader",
+            "unit-land-raider-redeemer",
+            "unit-predator-annihilator",
+            "unit-predator-destructor",
+            "unit-razorback",
+            "unit-repulsor",
+            "unit-repulsor-executioner",
+            "unit-rhino",
+            "unit-vindicator",
+            "unit-whirlwind"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "gunnery-honours",
+      "detachmentId": "headhunter-task-force",
+      "id": "gunnery-honours",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        8
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          8
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "gunnery-honours",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "redoubtable-machine-spirit",
+      "title": "Redoubtable Machine Spirit",
+      "text": "Adeptus Astartes Vehicle model only. The bearer has a 5+ invulnerable save and, at the end of your Command phase, the bearer regains 1 lost wound.",
+      "value": 25,
+      "detachment": "Headhunter Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-firestrike-servo-turrets",
+            "unit-gladiator-lancer",
+            "unit-gladiator-reaper",
+            "unit-gladiator-valiant",
+            "unit-impulsor",
+            "unit-land-raider",
+            "unit-land-raider-crusader",
+            "unit-land-raider-redeemer",
+            "unit-predator-annihilator",
+            "unit-predator-destructor",
+            "unit-razorback",
+            "unit-repulsor",
+            "unit-repulsor-executioner",
+            "unit-rhino",
+            "unit-vindicator",
+            "unit-whirlwind"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "redoubtable-machine-spirit",
+      "detachmentId": "headhunter-task-force",
+      "id": "redoubtable-machine-spirit",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        8
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          8
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "redoubtable-machine-spirit",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "castellum-omnivox",
+      "title": "Castellum Omnivox",
+      "text": "Adeptus Astartes model only. Each time the bearer’s unit makes a Fall Back move, select one of the following to apply to that unit until the end of the turn: ■ That unit is eligible to perform an Action in a turn in which it Fell Back. ■ That unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+      "value": 20,
+      "detachment": "Ceramite Sentinels",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "castellum-omnivox",
+      "detachmentId": "ceramite-sentinels",
+      "id": "castellum-omnivox",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        10
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          10
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "castellum-omnivox",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "defensive-mastery",
+      "title": "Defensive Mastery",
+      "text": "Adeptus Astartes model only. After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+      "value": 25,
+      "detachment": "Ceramite Sentinels",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "defensive-mastery",
+      "detachmentId": "ceramite-sentinels",
+      "id": "defensive-mastery",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        10
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          10
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "defensive-mastery",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "honour-indefatigable",
+      "title": "Honour Indefatigable",
+      "text": "Gravis model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+      "value": 25,
+      "detachment": "Ceramite Sentinels",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-apothecary-biologis",
+            "unit-captain-in-gravis-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "honour-indefatigable",
+      "detachmentId": "ceramite-sentinels",
+      "id": "honour-indefatigable",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        10
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          10
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "honour-indefatigable",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "spy-skull-data-link",
+      "title": "Spy-skull Data Link",
+      "text": "Adeptus Astartes model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
+      "value": 15,
+      "detachment": "CERAMITE SENTINELS",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": []
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "spy-skull-data-link",
+      "detachmentId": "ceramite-sentinels",
+      "id": "spy-skull-data-link",
+      "kind": "Enhancement",
+      "points": 15,
+      "sourcePages": [
+        10
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          10
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "spy-skull-data-link",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "blades-of-valour",
+      "title": "Blades of Valour",
+      "text": "Adeptus Astartes model only. Improve the Armour Penetration characteristic of melee weapons equipped by the bearer and Battleline models in the bearer’s unit by 1.",
+      "value": 15,
+      "detachment": "Bastion Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "blades-of-valour",
+      "detachmentId": "bastion-task-force",
+      "id": "blades-of-valour",
+      "kind": "Enhancement",
+      "points": 15,
+      "sourcePages": [
+        24
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          24
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "blades-of-valour",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "bombast-omnivox",
+      "title": "Bombast Omnivox",
+      "text": "Adeptus Astartes model only. Each time you select the bearer’s unit as the target of a Stratagem, roll one D6, adding 1 if the bearer’s unit has the Battleline keyword: on a 4+, you gain 1CP .",
+      "value": 15,
+      "detachment": "Bastion Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "bombast-omnivox",
+      "detachmentId": "bastion-task-force",
+      "id": "bombast-omnivox",
+      "kind": "Enhancement",
+      "points": 15,
+      "sourcePages": [
+        24
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          24
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "bombast-omnivox",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "eye-of-the-primarch",
+      "title": "Eye of the Primarch",
+      "text": "Adeptus Astartes model only. Ranged weapons equipped by the bearer and Battleline models in the bearer’s unit have the [PRECISION] ability.",
+      "value": 10,
+      "detachment": "Bastion Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "eye-of-the-primarch",
+      "detachmentId": "bastion-task-force",
+      "id": "eye-of-the-primarch",
+      "kind": "Enhancement",
+      "points": 10,
+      "sourcePages": [
+        24
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          24
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "eye-of-the-primarch",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "hero-of-the-chapter",
+      "title": "Hero of the Chapter",
+      "text": "Adeptus Astartes model only. While the bearer is leading a unit, the bearer has the Battleline keyword.",
+      "value": 20,
+      "detachment": "Bastion Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "hero-of-the-chapter",
+      "detachmentId": "bastion-task-force",
+      "id": "hero-of-the-chapter",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        24
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          24
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "hero-of-the-chapter",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "dedicated-gunship",
+      "title": "Dedicated Gunship",
+      "text": "Adeptus Astartes Terminator model only. Once per battle, at the end of your opponent’s Fight phase, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
+      "value": 15,
+      "detachment": "Orbital Assault Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient-in-terminator-armor",
+            "unit-captain-in-terminator-armour",
+            "unit-chaplain-in-terminator-armour",
+            "unit-librarian-in-terminator-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "dedicated-gunship",
+      "detachmentId": "orbital-assault-force",
+      "id": "dedicated-gunship",
+      "kind": "Enhancement",
+      "points": 15,
+      "sourcePages": [
+        26
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          26
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "dedicated-gunship",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "laurels-of-thunder",
+      "title": "Laurels of Thunder",
+      "text": "Adeptus Astartes model only. You can re‑roll Charge rolls made for the bearer’s unit in a turn in which it was set up on the battlefield.",
+      "value": 15,
+      "detachment": "Orbital Assault Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "laurels-of-thunder",
+      "detachmentId": "orbital-assault-force",
+      "id": "laurels-of-thunder",
+      "kind": "Enhancement",
+      "points": 15,
+      "sourcePages": [
+        26
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          26
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "laurels-of-thunder",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "orbital-uplink-reliquary",
+      "title": "Orbital Uplink Reliquary",
+      "text": "Adeptus Astartes model only. After both players have deployed their armies, select up to three Adeptus Astartes units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
+      "value": 25,
+      "detachment": "Orbital Assault Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "orbital-uplink-reliquary",
+      "detachmentId": "orbital-assault-force",
+      "id": "orbital-uplink-reliquary",
+      "kind": "Enhancement",
+      "points": 25,
+      "sourcePages": [
+        26
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          26
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "orbital-uplink-reliquary",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "veteran-of-the-vanguard",
+      "title": "Veteran of the Vanguard",
+      "text": "Adeptus Astartes model only. Models in the bearer’s unit have the Scouts 6\" ability.",
+      "value": 20,
+      "detachment": "Orbital Assault Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "veteran-of-the-vanguard",
+      "detachmentId": "orbital-assault-force",
+      "id": "veteran-of-the-vanguard",
+      "kind": "Enhancement",
+      "points": 20,
+      "sourcePages": [
+        26
+      ],
+      "provenance": {
+        "sourceId": "space-marines-faction-pack-v1.1",
+        "sourcePages": [
+          26
+        ]
+      },
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "veteran-of-the-vanguard",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "1st-company-task-force-the-imperiums-sword",
+      "title": "The Imperium’s Sword",
+      "text": "ADEPTUS ASTARTES model only. Add 1 to the Attacks characteristic of the bearers melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by all other models in the bearer’s unit as well.",
+      "value": 25,
+      "detachment": "1ST COMPANY TASK FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "1st-company-task-force-the-imperiums-sword",
+      "detachmentId": "1st-company-task-force",
+      "id": "1st-company-task-force-the-imperiums-sword",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "1st-company-task-force-the-imperiums-sword",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "1st-company-task-force-fear-made-manifest-aura",
+      "title": "FEAR MADE MANIFEST (AURA)",
+      "text": "ADEPTUS ASTARTES model only. While an enemy unit (excluding MONSTERS and VEHICLES) is within 6\" of the bearer, each time that unit fails a Battle-shock test, one model in that unit is destroyed (chosen by its controlling player). Once per battle, when such an enemy unit fails a Battle-shock test, you can choose for D3 models in that unit to be destroyed in this way instead.",
+      "value": 30,
+      "detachment": "1st Company Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "1st-company-task-force-fear-made-manifest-aura",
+      "detachmentId": "1st-company-task-force",
+      "id": "1st-company-task-force-fear-made-manifest-aura",
+      "sourceAuthority": "secondary",
+      "sourceId": "1st-company-task-force-fear-made-manifest-aura",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "1st-company-task-force-rites-of-war",
+      "title": "Rites of War",
+      "text": "ADEPTUS ASTARTES TERMINATOR model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of all other models in the bearer’s unit as well.",
+      "value": 10,
+      "detachment": "1st Company Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient-in-terminator-armor",
+            "unit-captain-in-terminator-armour",
+            "unit-chaplain-in-terminator-armour",
+            "unit-librarian-in-terminator-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "1st-company-task-force-rites-of-war",
+      "detachmentId": "1st-company-task-force",
+      "id": "1st-company-task-force-rites-of-war",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "1st-company-task-force-rites-of-war",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "1st-company-task-force-iron-resolve",
+      "title": "Iron Resolve",
+      "text": "ADEPTUS ASTARTES TERMINATOR model only. The bearer has the Feel No Pain 5+ ability. Once per battle, after the bearer’s unit is selected as the target of one or more attacks, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Feel No Pain 5+ ability.",
+      "value": 15,
+      "detachment": "1st Company Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient-in-terminator-armor",
+            "unit-captain-in-terminator-armour",
+            "unit-chaplain-in-terminator-armour",
+            "unit-librarian-in-terminator-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "1st-company-task-force-iron-resolve",
+      "detachmentId": "1st-company-task-force",
+      "id": "1st-company-task-force-iron-resolve",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "1st-company-task-force-iron-resolve",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "anvil-siege-force-indomitable-fury",
+      "title": "Indomitable Fury",
+      "text": "GRAVIS model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+      "value": 20,
+      "detachment": "Anvil Siege Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-apothecary-biologis",
+            "unit-captain-in-gravis-armour"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "anvil-siege-force-indomitable-fury",
+      "detachmentId": "anvil-siege-force",
+      "id": "anvil-siege-force-indomitable-fury",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "anvil-siege-force-indomitable-fury",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "anvil-siege-force-fleet-commander",
+      "title": "Fleet Commander",
+      "text": "CAPTAIN model only. Once per battle, at the start of your Shooting phase, you can select one point on the battlefield and place a marker on that point. At the start of your next Shooting phase, place another marker on the battlefield within 12\" of the centre of the first marker, then draw a straight line between the centre of each of these markers. Roll one D6 for each unit that line passes over or through: on a 3+, that unit suffers D3 mortal wounds. Both markers are then removed.",
+      "value": 15,
+      "detachment": "Anvil Siege Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "anvil-siege-force-fleet-commander",
+      "detachmentId": "anvil-siege-force",
+      "id": "anvil-siege-force-fleet-commander",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "anvil-siege-force-fleet-commander",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "anvil-siege-force-stoic-defender",
+      "title": "Stoic Defender",
+      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, models in that unit have the Feel No Pain 6+ ability while they are within range of an objective marker you control and, while that unit is Battle-shocked, halve the Objective Control characteristic of models in that unit instead of changing it to 0.",
+      "value": 15,
+      "detachment": "Anvil Siege Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "anvil-siege-force-stoic-defender",
+      "detachmentId": "anvil-siege-force",
+      "id": "anvil-siege-force-stoic-defender",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "anvil-siege-force-stoic-defender",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "anvil-siege-force-architect-of-war",
+      "title": "Architect of War",
+      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
+      "value": 25,
+      "detachment": "Anvil Siege Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "anvil-siege-force-architect-of-war",
+      "detachmentId": "anvil-siege-force",
+      "id": "anvil-siege-force-architect-of-war",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "anvil-siege-force-architect-of-war",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "firestorm-assault-force-champion-of-humanity",
+      "title": "Champion of Humanity",
+      "text": "TACTICUS model only. While the bearer is leading a unit, models in that unit can ignore any or all modifiers to their characteristics and/or to any roll or test made for them (excluding modifiers to saving throws).",
+      "value": 10,
+      "detachment": "Firestorm Assault Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-apothecary",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-lieutenant",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "firestorm-assault-force-champion-of-humanity",
+      "detachmentId": "firestorm-assault-force",
+      "id": "firestorm-assault-force-champion-of-humanity",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "firestorm-assault-force-champion-of-humanity",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "firestorm-assault-force-war-tempered-artifice",
+      "title": "War-tempered Artifice",
+      "text": "ADEPTUS ASTARTES INFANTRY model only. Add 3 to the Strength characteristic of the bearer’s melee weapons.",
+      "value": 25,
+      "detachment": "Firestorm Assault Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "firestorm-assault-force-war-tempered-artifice",
+      "detachmentId": "firestorm-assault-force",
+      "id": "firestorm-assault-force-war-tempered-artifice",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "firestorm-assault-force-war-tempered-artifice",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "firestorm-assault-force-forged-in-battle",
+      "title": "Forged in Battle",
+      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, once per turn, after making a Hit roll or a saving throw for a model in that unit, you can change the result of that roll to an unmodified 6.",
+      "value": 15,
+      "detachment": "Firestorm Assault Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "firestorm-assault-force-forged-in-battle",
+      "detachmentId": "firestorm-assault-force",
+      "id": "firestorm-assault-force-forged-in-battle",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "firestorm-assault-force-forged-in-battle",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "firestorm-assault-force-adamantine-mantle",
+      "title": "Adamantine Mantle",
+      "text": "ADEPTUS ASTARTES model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack. If that attack was made with a Melta or Torrent weapon, change the Damage characteristic of that attack to 1 instead.",
+      "value": 20,
+      "detachment": "Firestorm Assault Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "firestorm-assault-force-adamantine-mantle",
+      "detachmentId": "firestorm-assault-force",
+      "id": "firestorm-assault-force-adamantine-mantle",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "firestorm-assault-force-adamantine-mantle",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "gladius-task-force-artificer-armour",
+      "title": "Artificer Armour",
+      "text": "ADEPTUS ASTARTES model only. The bearer has a Save characteristic of 2+ and the Feel No Pain 5+ ability.",
+      "value": 20,
+      "detachment": "Gladius Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "gladius-task-force-artificer-armour",
+      "detachmentId": "gladius-task-force",
+      "id": "gladius-task-force-artificer-armour",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "gladius-task-force-artificer-armour",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "gladius-task-force-the-honour-vehement",
+      "title": "The Honour Vehement",
+      "text": "ADEPTUS ASTARTES model only. Add 1 to the Attacks and Strength characteristics of the bearer’s melee weapons. While the bearer is under the effects of the Assault Doctrine, add 2 to the Attacks and Strength characteristics of the bearers melee weapons instead.",
+      "value": 15,
+      "detachment": "Gladius Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "gladius-task-force-the-honour-vehement",
+      "detachmentId": "gladius-task-force",
+      "id": "gladius-task-force-the-honour-vehement",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "gladius-task-force-the-honour-vehement",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "gladius-task-force-adept-of-the-codex",
+      "title": "Adept of the Codex",
+      "text": "CAPTAIN model only. At the start of your Command phase, if the bearer is on the battlefield, instead of selecting a Combat Doctrine to be active for your army, you can select the Tactical Doctrine. If you do, until the start of your next Command phase, that Combat Doctrine is active for the bearer’s unit only, even if you have already selected that Combat Doctrine to be active for your army this battle.",
+      "value": 20,
+      "detachment": "Gladius Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "gladius-task-force-adept-of-the-codex",
+      "detachmentId": "gladius-task-force",
+      "id": "gladius-task-force-adept-of-the-codex",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "gladius-task-force-adept-of-the-codex",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "gladius-task-force-fire-discipline",
+      "title": "Fire Discipline",
+      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can reroll Advance rolls made for that unit.",
+      "value": 25,
+      "detachment": "Gladius Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "gladius-task-force-fire-discipline",
+      "detachmentId": "gladius-task-force",
+      "id": "gladius-task-force-fire-discipline",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "gladius-task-force-fire-discipline",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "ironstorm-spearhead-target-augury-web",
+      "title": "Target Augury Web",
+      "text": "TECHMARINE model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, weapons equipped by that VEHICLE model have the [LETHAL HITS] ability.",
+      "value": 30,
+      "detachment": "Ironstorm Spearhead",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "ironstorm-spearhead-target-augury-web",
+      "detachmentId": "ironstorm-spearhead",
+      "id": "ironstorm-spearhead-target-augury-web",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "ironstorm-spearhead-target-augury-web",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "ironstorm-spearhead-the-flesh-is-weak",
+      "title": "The Flesh Is Weak",
+      "text": "ADEPTUS ASTARTES model only. The bearer has the Feel No Pain 4+ ability.",
+      "value": 20,
+      "detachment": "Ironstorm Spearhead",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "ironstorm-spearhead-the-flesh-is-weak",
+      "detachmentId": "ironstorm-spearhead",
+      "id": "ironstorm-spearhead-the-flesh-is-weak",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "ironstorm-spearhead-the-flesh-is-weak",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "ironstorm-spearhead-adept-of-the-omnissiah",
+      "title": "Adept of the Omnissiah",
+      "text": "TECHMARINE model only. Once per battle round, when a saving throw is failed for a friendly ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer, you can change the Damage characteristic of that attack to 0.",
+      "value": 35,
+      "detachment": "Ironstorm Spearhead",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "ironstorm-spearhead-adept-of-the-omnissiah",
+      "detachmentId": "ironstorm-spearhead",
+      "id": "ironstorm-spearhead-adept-of-the-omnissiah",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "ironstorm-spearhead-adept-of-the-omnissiah",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "ironstorm-spearhead-master-of-machine-war",
+      "title": "Master of Machine War",
+      "text": "ADEPTUS ASTARTES model only. In your Command phase, select one ADEPTUS ASTARTES VEHICLE model within 6\" of the bearer. Until the start of your next Command phase, that VEHICLE is eligible to shoot even if it Fell Back or Advanced this turn.",
+      "value": 20,
+      "detachment": "IRONSTORM SPEARHEAD",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "ironstorm-spearhead-master-of-machine-war",
+      "detachmentId": "ironstorm-spearhead",
+      "id": "ironstorm-spearhead-master-of-machine-war",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "ironstorm-spearhead-master-of-machine-war",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "stormlance-task-force-fury-of-the-storm",
+      "title": "Fury of the Storm",
+      "text": "ADEPTUS ASTARTES MOUNTED model only. Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. Each time the bearer ends a Charge move, until the end of the turn, improve the Strength and Armour Penetration characteristics of the bearers melee weapons by 2 instead.",
+      "value": 25,
+      "detachment": "Stormlance Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-chaplain-on-bike"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "stormlance-task-force-fury-of-the-storm",
+      "detachmentId": "stormlance-task-force",
+      "id": "stormlance-task-force-fury-of-the-storm",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "stormlance-task-force-fury-of-the-storm",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "stormlance-task-force-portents-of-wisdom",
+      "title": "Portents of Wisdom",
+      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, you can re-roll Advance rolls made for that unit.",
+      "value": 15,
+      "detachment": "Stormlance Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "stormlance-task-force-portents-of-wisdom",
+      "detachmentId": "stormlance-task-force",
+      "id": "stormlance-task-force-portents-of-wisdom",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "stormlance-task-force-portents-of-wisdom",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "stormlance-task-force-feinting-withdrawal",
+      "title": "Feinting Withdrawal",
+      "text": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, that unit is eligible to shoot in a turn in which it Fell Back.",
+      "value": 10,
+      "detachment": "Stormlance Task Force",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "stormlance-task-force-feinting-withdrawal",
+      "detachmentId": "stormlance-task-force",
+      "id": "stormlance-task-force-feinting-withdrawal",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "stormlance-task-force-feinting-withdrawal",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "stormlance-task-force-hunters-instincts",
+      "title": "Hunter’s Instincts",
+      "text": "ADEPTUS ASTARTES MOUNTED model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
+      "value": 25,
+      "detachment": "STORMLANCE TASK FORCE",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-chaplain-on-bike"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "stormlance-task-force-hunters-instincts",
+      "detachmentId": "stormlance-task-force",
+      "id": "stormlance-task-force-hunters-instincts",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "stormlance-task-force-hunters-instincts",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "vanguard-spearhead-the-blade-driven-deep",
+      "title": "The Blade Driven Deep",
+      "text": "ADEPTUS ASTARTES INFANTRY model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
+      "value": 25,
+      "detachment": "Vanguard Spearhead",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "vanguard-spearhead-the-blade-driven-deep",
+      "detachmentId": "vanguard-spearhead",
+      "id": "vanguard-spearhead-the-blade-driven-deep",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "vanguard-spearhead-the-blade-driven-deep",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "vanguard-spearhead-ghostweave-cloak",
+      "title": "Ghostweave Cloak",
+      "text": "ADEPTUS ASTARTES model only. The bearer has the Stealth and Lone Operative abilities.",
+      "value": 15,
+      "detachment": "Vanguard Spearhead",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-ancient",
+            "unit-ancient-in-terminator-armor",
+            "unit-apothecary",
+            "unit-apothecary-biologis",
+            "unit-bladeguard-ancient",
+            "unit-captain",
+            "unit-captain-in-gravis-armour",
+            "unit-captain-in-phobos-armour",
+            "unit-captain-in-terminator-armour",
+            "unit-captain-with-jump-pack",
+            "unit-chaplain",
+            "unit-chaplain-in-terminator-armour",
+            "unit-chaplain-on-bike",
+            "unit-chaplain-with-jump-pack",
+            "unit-judiciar",
+            "unit-librarian",
+            "unit-librarian-in-phobos-armour",
+            "unit-librarian-in-terminator-armour",
+            "unit-lieutenant",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon",
+            "unit-techmarine"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "vanguard-spearhead-ghostweave-cloak",
+      "detachmentId": "vanguard-spearhead",
+      "id": "vanguard-spearhead-ghostweave-cloak",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "vanguard-spearhead-ghostweave-cloak",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "vanguard-spearhead-execute-and-redeploy",
+      "title": "Execute and Redeploy",
+      "text": "PHOBOS model only. In your Shooting phase, after the bearer’s unit has shot, if that unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge. This cannot allow the bearer’s unit to move more than once in your Shooting phase.",
+      "value": 20,
+      "detachment": "Vanguard Spearhead",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-captain-in-phobos-armour",
+            "unit-librarian-in-phobos-armour",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "vanguard-spearhead-execute-and-redeploy",
+      "detachmentId": "vanguard-spearhead",
+      "id": "vanguard-spearhead-execute-and-redeploy",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "vanguard-spearhead-execute-and-redeploy",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    },
+    {
+      "legacyKey": "vanguard-spearhead-shadow-war-veteran",
+      "title": "Shadow War Veteran",
+      "text": "PHOBOS model only. The bearer has the following ability: Lord of Deceit (Aura): Once per turn, when your opponent targets a unit from their army within 12\" of this model with a stratagem, you can use this ability. If you do increase the CP cost of that use of that stratagem by 1CP.",
+      "value": 30,
+      "detachment": "Vanguard Spearhead",
+      "tags": [],
+      "owner": {
+        "subject": "model",
+        "selector": {
+          "unitIds": [
+            "unit-captain-in-phobos-armour",
+            "unit-librarian-in-phobos-armour",
+            "unit-lieutenant-in-phobos-armour",
+            "unit-lieutenant-in-reiver-armour",
+            "unit-lieutenant-with-combi-weapon"
+          ]
+        }
+      },
+      "assignment": {
+        "maxOwners": 1,
+        "enhancementChoices": 1,
+        "payPointsPerOwner": true
+      },
+      "ruleId": "vanguard-spearhead-shadow-war-veteran",
+      "detachmentId": "vanguard-spearhead",
+      "id": "vanguard-spearhead-shadow-war-veteran",
+      "sourceAuthority": "secondary",
+      "profile": null,
+      "pointsSource": {
+        "label": "Official MFM v1.2",
+        "url": "https://mfm.warhammer-community.com/en/space-marines",
+        "verifiedAt": "2026-08-11"
+      },
+      "sourceId": "vanguard-spearhead-shadow-war-veteran",
+      "dependencyBook": "space-marines",
+      "sourceBookId": "space-marines"
+    }
+  ]
+});
+window.WH_BOOK_ROSTER_ENHANCEMENTS=Object.freeze({
   "enhancement-master-of-manoeuvre": {
     "title": "Master of Manoeuvre",
     "text": "RAVENWING model only. If the bearer's unit starts the battle in Strategic Reserves, its points value does not count towards the combined points limit for units from your army that are in Strategic Reserve, and for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
@@ -2325,4 +10832,4 @@ window.WH_BOOK_ROSTER_ENHANCEMENTS={
     "ruleId": "vanguard-spearhead-shadow-war-veteran",
     "detachmentId": "vanguard-spearhead"
   }
-};
+});

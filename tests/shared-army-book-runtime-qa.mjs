@@ -45,11 +45,16 @@ assert.throws(()=>validateCompatibleRulesMatrix({schema:'test/v1',units:{unit:[{
 const armyBook=read('books/shared/army-book-app.js'),relatedRules=read('books/shared/army-related-rules.js'),spaceMarines=read('books/space-marines/scripts/app.js'),darkAngels=read('books/dark-angels/scripts/app.js'),bloodAngels=read('books/blood-angels/scripts/app.js');
 const relatedSandbox={window:{WHRuleFacts:{normalizeKeyword:value=>String(value||'').trim().toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}}};
 vm.runInNewContext(relatedRules,relatedSandbox);
-const resolveDetachments=relatedSandbox.window.WHArmyRelatedRules.resolveRosterDetachmentIds,section=(id,title)=>({dataset:{detachment:id},querySelector:()=>({textContent:title})}),detachmentSections=[section('explicit','Explicit'),section('single-detachment','Single Detachment'),section('second-detachment','Second Detachment')];
+const resolveDetachments=relatedSandbox.window.WHArmyRelatedRules.resolveRosterDetachmentIds,resolveEnhancements=relatedSandbox.window.WHArmyRelatedRules.resolveRosterEnhancements,section=(id,title)=>({dataset:{detachment:id},querySelector:()=>({textContent:title})}),detachmentSections=[section('explicit','Explicit'),section('single-detachment','Single Detachment'),section('second-detachment','Second Detachment')];
 assert.deepEqual([...resolveDetachments({detachmentIds:['detachment-explicit'],detachments:[{label:'Single Detachment'}]},detachmentSections)],['explicit']);
 assert.deepEqual([...resolveDetachments({detachmentIds:[],detachments:[{label:'Single Detachment'}]},detachmentSections)],['single-detachment']);
 assert.deepEqual([...resolveDetachments({detachments:[{label:'Single Detachment'},{label:'Second Detachment'}]},detachmentSections)],[]);
 assert.deepEqual([...resolveDetachments({detachment:{label:'Unresolved Detachment'}},detachmentSections)],[]);
+const enhancementGuide={units:[{instanceId:'physical-1',datasheetId:'unit-example'},{instanceId:'physical-2',datasheetId:'unit-example'},{instanceId:'physical-generic',datasheetId:'unit-generic'}],enhancements:[{id:'enhancement-first',owner:{instanceId:'physical-1'}},{id:'enhancement-second',owner:{instanceId:'physical-2'}},{id:'enhancement-generic',owner:{instanceId:'physical-generic'}}]};
+assert.deepEqual([...resolveEnhancements(enhancementGuide,{id:'unit-example',dataset:{canonicalUnitId:'unit-example',rosterInstance:'physical-1'}}).map(item=>item.id)],['enhancement-first'],'exact physical Enhancement owner was mixed across duplicate units');
+assert.deepEqual([...resolveEnhancements(enhancementGuide,{id:'unit-example',dataset:{canonicalUnitId:'unit-example'}})],[],'ambiguous duplicate unit received an Enhancement without exact instance identity');
+assert.deepEqual([...resolveEnhancements(enhancementGuide,{id:'unit-generic',dataset:{canonicalUnitId:'unit-generic'}}).map(item=>item.id)],['enhancement-generic'],'generic single-instance Enhancement projection failed');
+assert.deepEqual([...resolveEnhancements({...enhancementGuide,enhancements:[]},{id:'unit-generic',dataset:{canonicalUnitId:'unit-generic'}})],[],'no-Enhancement roster synthesized an assignment');
 assert.match(armyBook,/relatedConfig=config\.relatedRules/);
 assert.match(armyBook,/extensions\.forEach/);
 assert.match(armyBook,/return app/);

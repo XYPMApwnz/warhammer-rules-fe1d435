@@ -1,20 +1,12 @@
-(function(){
+(function(root){
   'use strict';
-  const rosterId=new URLSearchParams(location.search).get('roster');if(!rosterId)return;
-  let record;try{record=(JSON.parse(localStorage.getItem('wh40k-rosters-v1'))||[]).find(item=>item?.id===rosterId);}catch{}
-  if(!record){location.replace('../../roster-guides/index.html?missing='+encodeURIComponent(rosterId));return;}
-  let roster=record.roster;if(record.sourceText&&window.WHRosterParser){const parsed=window.WHRosterParser.parse(record.sourceText);if(parsed.units.length)roster=parsed;}
-  const normalize=value=>String(value||'').toLowerCase().replace(/\s*\[legends\]\s*$/i,'').replace(/\s*\(aura\)\s*$/i,'').replace(/[^a-z0-9]+/g,' ').trim(),faction=value=>normalize(value).replace(/^imperium /,''),slug=value=>normalize(value).replace(/\s+/g,'-');
-  if(faction(roster?.faction)!=='dark angels'||!roster?.units?.length){location.replace('../../roster-guides/index.html');return;}
-  const cards=new Map([...document.querySelectorAll('.unit-card[data-unit-title]')].map(card=>[normalize(card.dataset.unitTitle),card])),selected=new Map();
-  for(const unit of roster.units){const card=cards.get(normalize(unit.name));if(!card)continue;const entry=selected.get(card.id)||{card,units:[],points:0,loadout:[]};entry.units.push(unit);entry.points+=Number(unit.points)||0;entry.loadout.push(...[unit.wargear,...(unit.models||[]).flatMap(model=>[model.wargear,...(model.loadouts||[]).map(item=>item.wargear)])].filter(Boolean));selected.set(card.id,entry);}
-  if(!selected.size){location.replace('../../roster-guides/index.html');return;}
-  const labels=(roster.detachments?.length?roster.detachments.map(item=>item.label):[roster.detachment]).flatMap(value=>String(value||'').split(/\s*,\s*(?![^()]*\))/)).map(value=>value.replace(/\s*\([^)]*\)\s*$/,'')).filter(Boolean),detachmentIds=[...new Set(labels.map(slug))];
-  if(!detachmentIds.length){location.replace('../../roster-guides/index.html');return;}
-  const enhancementRuleIdsByUnitId={},enhancementRecordsByUnitId={};window.WH_ARMY_ROSTER_GUIDE=Object.freeze({bookId:'dark-angels',detachmentIds,enhancementRuleIdsByUnitId,enhancementRecordsByUnitId});
-  document.title='Dark Angels Roster Guide';document.querySelector('.app-brand strong').textContent='Dark Angels Roster Guide';document.querySelector('[data-roster-guides]')?.removeAttribute('hidden');
-  const hero=document.querySelector('#start');if(hero){hero.querySelector('.eyebrow').textContent='Personal roster guide';hero.querySelector('h1').textContent=record.name||'Dark Angels';hero.querySelector('h1 + p').textContent=`${roster.units.length} units · ${labels.join(' + ')}`;}
-  document.querySelectorAll('.content-group.detachment').forEach(section=>{if(!detachmentIds.includes(section.id.replace(/^detachment-/,'')))section.remove();});document.querySelectorAll('[data-nav-id^="detachment-"]').forEach(item=>{if(item.dataset.navDepth==='2'&&!detachmentIds.includes(item.dataset.navId.replace(/^detachment-/,'')))item.remove();});
-  document.querySelectorAll('.unit-card').forEach(card=>{const entry=selected.get(card.id);if(!entry){card.remove();return;}card.dataset.rosterSelected='true';enhancementRuleIdsByUnitId[card.id]=window.WHBookRosterEnhancements?.assignedRuleIds(roster,entry.units)||[];enhancementRecordsByUnitId[card.id]=window.WHBookRosterEnhancements?.assignedRecords(roster,entry.units)||[];window.WHBookRosterEnhancements?.decorate(card,roster,entry.units);const status=card.querySelector('.unit-status');if(status)status.textContent=`${entry.units.length>1?`${entry.units.length} units · `:''}${entry.points} pts`;if(entry.loadout.length&&window.WHRosterEntities)card.querySelectorAll('.weapon-row:not(.weapon-head)').forEach(row=>{const label=row.querySelector('.weapon-button')?.textContent||row.firstElementChild?.textContent;if(label&&!window.WHRosterEntities.loadoutIncludesProfile(entry.loadout,label))row.remove();});card.querySelectorAll('.weapon-group').forEach(group=>{if(!group.querySelector('.weapon-row:not(.weapon-head)'))group.remove();});});
-  document.querySelectorAll('[data-nav-id^="unit-"]').forEach(item=>{if(!selected.has(item.dataset.navId))item.remove();});document.querySelectorAll('#datasheets > .content-group').forEach(group=>{if(!group.querySelector('.unit-card')){document.querySelector(`[data-nav-id="${CSS.escape(group.id)}"]`)?.remove();group.remove();}});
-}());
+  const run=()=>{
+    if(!root.WHArmyRosterContext)return false;
+    const provider={
+      decorate(card,projection,items){root.WHBookRosterEnhancements?.decorate?.(card,projection.roster,items.map(item=>item.raw));}
+    };
+    root.WHArmyRosterContext.install({bookId:'dark-angels',guideGlobal:'DA_ROSTER_GUIDE',provider});
+    return true;
+  };
+  if(!run())root.addEventListener('wh-roster-context-ready',run,{once:true});
+}(window));

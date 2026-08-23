@@ -7,7 +7,7 @@ import {fileURLToPath} from 'node:url';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const source=fs.readFileSync(path.join(root,'books/shared/roster-context.js'),'utf8');
 const runtimeVersions=JSON.parse(fs.readFileSync(path.join(root,'books/shared/runtime-asset-versions.json'),'utf8'));
-const sandbox={window:{},URLSearchParams};
+const sandbox={window:{},URL,URLSearchParams};
 vm.runInNewContext(source,sandbox,{filename:'roster-context.js'});
 const api=sandbox.window.WHArmyRosterContext;
 assert.equal(api.SCHEMA,'wh40k-army-roster-context/v1');
@@ -57,9 +57,29 @@ assert.equal(unknown.units[0].datasheetState,'unknown');
 assert.equal(unknown.units[0].keywords.state,'unknown');
 assert.equal(unknown.relations.attachments.state,'unknown');
 
+const catalog={schema:api.CATALOG_SCHEMA,book:{id:'fixture',title:'Fixture Book',factionKeyword:'FIXTURE FACTION',parentBookId:null,dependencies:[]},units:[{id:'unit-example',title:'Example Unit',sourceBookId:'fixture',intrinsicKeywords:['INFANTRY']}],detachments:[{id:'detachment-alpha',title:'Alpha'},{id:'detachment-beta',title:'Beta'}],enhancements:[]};
+const validRoster={faction:'Fixture Faction',units:[{id:'physical-1',name:'Example Unit'}],detachments:[{name:'Alpha'}],enhancements:[]};
+assert.equal(api.project({catalog,roster:validRoster,record:{id:'valid-roster'}}).context.status,'ready','valid complete projection did not restore the v1 ready status');
+assert.equal(api.fromRuntime({force:true,catalog,bookId:'fixture',location:{search:''},storage:{getItem:()=>"[]"}}).status,'not-requested','no-roster v1 status changed');
+assert.equal(api.fromRuntime({force:true,catalog,bookId:'fixture',location:{search:'?roster=missing'},storage:{getItem:()=>"[]"}}).status,'unavailable','invalid roster v1 status changed');
+assert.equal(api.project({catalog,roster:{units:[{id:'physical-missing',name:'Missing Unit'}]},record:{id:'incomplete'}}).context.status,'unknown','incomplete unit projection was falsely marked ready');
+assert.equal(api.project({catalog,roster:{units:[{id:'physical-1',name:'Example Unit'}],detachments:[{name:'Missing Detachment'}]},record:{id:'incomplete-detachment'}}).context.status,'unknown','incomplete Detachment projection was falsely marked ready');
+let redirected=null;sandbox.window.location={href:'https://example.test/books/fixture/reader.html?roster=wrong',search:'',replace:value=>{redirected=value;}};
+const incompatible=api.install({catalog,roster:{...validRoster,faction:'Other Faction'}});
+assert.equal(incompatible.compatibility.state,'incompatible','wrong-faction roster was not classified as incompatible');
+assert.equal(redirected,'https://example.test/roster-guides/index.html','wrong-faction roster did not fail closed to the canonical Roster Guides route');
+redirected=null;assert.equal(api.install({catalog,roster:null}),null,'no-roster install contract changed');assert.equal(redirected,null,'no-roster state incorrectly redirected');
+const incompleteInstall=api.install({catalog,roster:{faction:'Fixture Faction',units:[{id:'physical-missing',name:'Missing Unit'}]}});assert.equal(incompleteInstall.context.status,'unknown');assert.equal(redirected,null,'incomplete compatible projection incorrectly redirected');
+const otherCatalog={...catalog,book:{...catalog.book,id:'other',title:'Other Book',factionKeyword:'OTHER FACTION'}};api.install({catalog:otherCatalog,roster:validRoster});assert.equal(redirected,'https://example.test/roster-guides/index.html','reverse wrong-faction roster did not use the generic fail-closed contract');
+assert.equal(api.project({catalog,roster:{...validRoster,faction:'Xenos - Fixture Faction'}}).compatibility.state,'compatible','parent-qualified canonical faction identity was rejected');
+redirected=null;const multiRoster={...validRoster,detachments:[{name:'Alpha'},{name:'Beta'}]},multiProjection=api.install({catalog,roster:multiRoster,guideGlobal:'FIXTURE_MULTI_GUIDE'});assert.deepEqual([...multiProjection.detachmentIds],['detachment-alpha','detachment-beta']);assert.deepEqual([...sandbox.window.FIXTURE_MULTI_GUIDE.detachmentIds],['detachment-alpha','detachment-beta'],'public multi-Detachment guide IDs diverged from projection order');
+api.install({catalog,roster:validRoster,guideGlobal:'FIXTURE_SINGLE_GUIDE'});assert.deepEqual([...sandbox.window.FIXTURE_SINGLE_GUIDE.detachmentIds],['detachment-alpha'],'public single-Detachment guide IDs changed');
+delete sandbox.window.FIXTURE_NO_ROSTER_GUIDE;assert.equal(api.install({catalog,roster:null,guideGlobal:'FIXTURE_NO_ROSTER_GUIDE'}),null);assert.equal(sandbox.window.FIXTURE_NO_ROSTER_GUIDE,undefined,'no-roster install synthesized public Detachment IDs');
+api.install({catalog:otherCatalog,roster:{...validRoster,faction:'Other Faction'},guideGlobal:'FIXTURE_OTHER_GUIDE'});assert.deepEqual([...sandbox.window.FIXTURE_OTHER_GUIDE.detachmentIds],['detachment-alpha'],'second generic book did not receive shared Detachment IDs');
+
 for(const id of bookIds){
   const reader=fs.readFileSync(path.join(root,'books',id,'reader.html'),'utf8');
-  const contextAt=reader.indexOf('../shared/roster-context.js?v=1');
+  const contextAt=reader.indexOf(`../shared/roster-context.js?v=${runtimeVersions.shared.rosterContext}`);
   const appAt=reader.indexOf(`../shared/army-book-app.js?v=${runtimeVersions.shared.armyBook}`);
   assert.ok(contextAt>=0,`${id} does not load the shared roster context`);
   assert.ok(appAt>contextAt,`${id} loads WHArmyBook before the roster context`);
@@ -71,10 +91,16 @@ const appSource=fs.readFileSync(path.join(root,'books/shared/army-book-app.js'),
 assert.match(appSource,/WHArmyRosterContext\?\.fromRuntime/);
 assert.match(appSource,/rosterContextSettings\.provider/);
 assert.match(appSource,/Object\.freeze\(\{navigation,popups,fullEntry,journey,relatedRules,rosterContext\}\)/);
-for(const [id,file] of [['death-guard','books/death-guard/scripts/roster-filter.js'],['adeptus-mechanicus','books/adeptus-mechanicus/scripts/roster-filter.js']]){
+for(const [id,file,provider] of [['death-guard','books/death-guard/scripts/roster-filter.js',/providerFactory\s*\(/],['adeptus-mechanicus','books/adeptus-mechanicus/scripts/roster-filter.js',/const provider\s*=\s*\{/]]){
   const adapter=fs.readFileSync(path.join(root,file),'utf8');
-  assert.match(adapter,/rosterContext:Object\.freeze\(\{attachments:rosterContextAttachments\}\)/,`${id} thin adapter is absent`);
+  assert.equal((adapter.match(/WHArmyRosterContext\.install\s*\(/g)||[]).length,1,`${id} does not have exactly one shared install owner`);
+  assert.match(adapter,provider,`${id} thin provider is absent`);
+  assert.doesNotMatch(adapter,/rosterContext:Object\.freeze\(\{attachments:rosterContextAttachments\}\)/,`${id} retains obsolete local roster-context orchestration`);
+  assert.doesNotMatch(adapter,/querySelectorAll|data-rule-facts|DocumentFragment|display\s*:\s*none|offscreen/i,`${id} adapter reconstructs roster truth from hidden/full DOM`);
+  assert.doesNotMatch(adapter,/WHArmyRosterContext\.(?:create|project)\s*\(/,`${id} adapter duplicates shared projection orchestration`);
 }
+const projectionSource=source.slice(source.indexOf('function project('),source.indexOf('function fromRuntime('));
+assert.doesNotMatch(projectionSource,/document|querySelectorAll|data-rule-facts|DocumentFragment/i,'shared roster projection depends on full-book DOM');
 for(const id of ['dark-angels','blood-angels']){
   const app=fs.readFileSync(path.join(root,'books',id,'scripts/app.js'),'utf8');
   assert.match(app,/parentBookId["']?:["']space-marines["']/,`${id} supplement parent identity is absent`);

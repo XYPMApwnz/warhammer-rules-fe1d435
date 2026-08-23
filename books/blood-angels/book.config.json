@@ -93,10 +93,10 @@
     "book": 3,
     "app": 5,
     "armyBook": 15,
-    "rosterContext": 1,
-    "relatedRules": 15,
+    "rosterContext": 3,
+    "relatedRules": 16,
     "ruleFacts": 5,
-    "rosterFilter": 1,
+    "rosterFilter": 2,
     "rosterData": 1
   },
   "expected": {

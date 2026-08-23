@@ -4,8 +4,10 @@ import {readFile,stat} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {chromium} from 'playwright';
+import {calculateCacheRevision} from '../../tools/cache-revision.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const expectedAppShellTotal=calculateCacheRevision({root}).assets.length;
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.webmanifest':'application/manifest+json'};
 let delayMs=12,failedPath='',swVariant=1;
 const server=createServer(async(request,response)=>{
@@ -73,7 +75,7 @@ try{
     assert.ok(active.every(value=>value.completed<value.total),'Preparing state falsely reached 100%');
     const ready=await snapshot(page);
     assert.equal(ready.completed,ready.total,'Ready state was emitted before the full package completed');
-    assert.equal(ready.total,317,'Progress total diverged from the current APP_SHELL package');
+    assert.equal(ready.total,expectedAppShellTotal,'Progress total diverged from the current APP_SHELL package');
     const cache=await page.evaluate(async()=>{const keys=await caches.keys(),current=await caches.open(keys[0]);return{keys,count:(await current.keys()).length};});
     assert.equal(cache.keys.length,1,'First install created a second cache architecture');
     assert.equal(cache.count,ready.total,'Ready state disagrees with exact cache completeness');

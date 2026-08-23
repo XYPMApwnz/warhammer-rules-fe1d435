@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+const source=fs.readFileSync(new URL('../books/shared/roster-context.js',import.meta.url),'utf8');
+const context={URLSearchParams,CustomEvent:class{constructor(type,init){this.type=type;this.detail=init?.detail;}},dispatchEvent(){}};
+vm.runInNewContext(source,context,{filename:'roster-context.js'});
+const api=context.WHArmyRosterContext;
+assert.equal(api.SCHEMA,'wh40k-army-roster-context/v1');
+const fixture=(bookId,parentBookId=null)=>({schema:'wh40k-army-roster-catalog/v1',book:{id:bookId,title:bookId,parentBookId,dependencies:parentBookId?[{bookId:parentBookId}]:[]},units:[{id:'unit-alpha',title:'Alpha',sourceBookId:parentBookId||bookId,sourceLayer:'current',intrinsicKeywords:['INFANTRY','CHARACTER'],relations:{canLead:[],canSupport:[],canBeLedBy:[],canBeSupportedBy:[]}},{id:'unit-beta',title:'Beta',sourceBookId:bookId,sourceLayer:'current',intrinsicKeywords:['INFANTRY'],relations:{canLead:[],canSupport:[],canBeLedBy:[],canBeSupportedBy:[]}}],detachments:[{id:'detachment-one',title:'One',sourceBookId:bookId,chapterRestriction:null,keywordGrants:[{unitIds:['unit-beta'],add:['BATTLELINE']}]}],enhancements:[{id:'enhancement-one',title:'Relic',detachmentId:'detachment-one',sourceBookId:bookId}]});
+const roster={detachments:[{name:'One'}],units:[{id:'parsed-unit-1',name:'Alpha',points:100,models:[]},{id:'parsed-unit-2',name:'Alpha',points:100,models:[]},{id:'parsed-unit-3',name:'Beta',points:80,models:[]}],enhancements:[{name:'Relic',ownerUnitId:'parsed-unit-2',ownerStatus:'resolved'}],warnings:[]};
+for(const [bookId,parent] of [['death-guard',null],['adeptus-mechanicus',null],['tau-empire',null],['dark-angels','space-marines']]){const projection=api.project({catalog:fixture(bookId,parent),roster,record:{id:`${bookId}-roster`,attachments:{'parsed-unit-1':[{unitId:'parsed-unit-3',state:'explicit'}]}}});assert.equal(projection.context.schema,'wh40k-army-roster-context/v1');assert.equal(projection.context.units.length,3);assert.equal(projection.context.units[1].enhancements[0].title,'Relic');assert.equal(projection.context.units[2].keywordProfile.effective.includes('BATTLELINE'),true);assert.equal(projection.context.parentBookId,parent);assert.equal(projection.context.units[0].attachments.length,1);}
+assert.doesNotMatch(source,/querySelectorAll\(['"]\.unit-card/);assert.doesNotMatch(source,/data-rule-facts/);
+console.log('DOM-independent roster projection QA: 4/4 PASS');

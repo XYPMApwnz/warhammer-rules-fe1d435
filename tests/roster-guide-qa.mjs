@@ -10,6 +10,11 @@ const context={};vm.runInNewContext(shared,context,{filename:'roster-entities.js
 const entities=context.WHRosterEntities;
 const glossaryContext={};glossaryContext.window=glossaryContext;
 vm.runInNewContext(fs.readFileSync(path.join(root,'glossary/generated/glossary.en.js'),'utf8'),glossaryContext,{filename:'glossary.en.js'});
+const sharedRosterSource=fs.readFileSync(path.join(root,'books/shared/roster-context.js'),'utf8');
+const sharedRosterScope={console,URL,URLSearchParams};sharedRosterScope.window=sharedRosterScope;sharedRosterScope.globalThis=sharedRosterScope;
+vm.runInNewContext(sharedRosterSource,sharedRosterScope,{filename:'books/shared/roster-context.js'});
+const sharedRosterApi=sharedRosterScope.WHArmyRosterContext;
+const rosterCatalogFor=bookId=>{const scope={};scope.window=scope;scope.globalThis=scope;vm.runInNewContext(fs.readFileSync(path.join(root,'books',bookId,'scripts','roster-data.js'),'utf8'),scope,{filename:`${bookId}/scripts/roster-data.js`});return scope.WH_BOOK_ROSTER_CATALOG;};
 const failures=[];
 const assert=(ok,message)=>{if(!ok)failures.push(message);};
 const walk=(value,visit)=>{
@@ -66,7 +71,8 @@ for(const bookId of supported){
     assert(points.units.length===50,'tyranids: points catalog is incomplete');assert(points.enhancements.length===34,'tyranids: Enhancement catalog is incomplete');units.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`tyranids: unit ${unit.title} is absent from Roster Guide`));points.enhancements.forEach(item=>assert(enhancementTitles.has(entities.normalize(item.title)),`tyranids: Enhancement ${item.title} is absent from related rules`));
     const desktopRoster=fs.readFileSync(path.join(bookRoot,'scripts','roster-filter.js'),'utf8'),app=fs.readFileSync(path.join(bookRoot,'scripts','app.js'),'utf8'),stub=fs.readFileSync(path.join(bookRoot,'mobile','index.html'),'utf8');
     assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&/\.\/scripts\/app\.js\?v=\d+/.test(reader),'tyranids: roster or matrix controller is absent');assert(app.includes('shared/compatible-rules-matrix.mjs')&&app.includes('WHArmyBook.install'),'tyranids: shared matrix runtime is absent');
-    assert(desktopRoster.includes("match[1].toLowerCase()==='xenos'")&&!fs.existsSync(path.join(bookRoot,'mobile','mobile.js'))&&stub.includes('data-canonical-reader="../reader.html"'),'tyranids: canonical roster runtime or compatibility route is incomplete');
+    const runtimeVersions=JSON.parse(fs.readFileSync(path.join(root,'books','shared','runtime-asset-versions.json'),'utf8'));
+    assert(desktopRoster.includes('WHArmyRosterContext.install({')&&(desktopRoster.match(/WHArmyRosterContext\.install\(/g)||[]).length===1&&!desktopRoster.includes('querySelectorAll')&&!desktopRoster.includes('DocumentFragment')&&!fs.existsSync(path.join(bookRoot,'mobile','mobile.js'))&&stub.includes('data-canonical-reader="../reader.html"')&&reader.includes(`./scripts/roster-data.js?v=${runtimeVersions.shared.rosterCatalog}`),'tyranids: shared roster projection or compatibility route is incomplete');
     console.log(`PASS  tyranids: ${points.units.length} units, ${points.enhancements.length} Enhancements, desktop/iPad + Phone Mode`);continue;
   }
   if(bookId==='tau-empire'){
@@ -93,8 +99,9 @@ for(const bookId of supported){
     });
     assert(/\.\.\/shared\/roster-parser\.js\?v=\d+/.test(reader),'tau-empire: shared roster parser is absent');
     assert(/\.\.\/shared\/book-roster-enhancements\.js\?v=\d+/.test(reader)&&/\.\/scripts\/roster-data\.js\?v=\d+/.test(reader),'tau-empire: desktop Enhancement owner runtime is absent');
-    const tauApp=fs.readFileSync(path.join(bookRoot,'scripts','app.js'),'utf8')+fs.readFileSync(path.join(bookRoot,'scripts','roster-filter.js'),'utf8')+fs.readFileSync(path.join(root,'books','shared','army-book-app.js'),'utf8');
-    assert(tauApp.includes("params.has('roster')")&&tauApp.includes('WHBookRosterEnhancements?.decorate')&&tauApp.includes('WHRosterEntities.loadoutIncludesProfile')&&tauApp.includes(".content-group.detachment"),'tau-empire: desktop roster filtering, loadout or owned Enhancement decoration is incomplete');
+    const tauRoster=fs.readFileSync(path.join(bookRoot,'scripts','roster-filter.js'),'utf8'),tauApp=fs.readFileSync(path.join(bookRoot,'scripts','app.js'),'utf8')+fs.readFileSync(path.join(root,'books','shared','army-book-app.js'),'utf8');
+    const runtimeVersions=JSON.parse(fs.readFileSync(path.join(root,'books','shared','runtime-asset-versions.json'),'utf8'));
+    assert(tauRoster.includes('WHArmyRosterContext.install({')&&(tauRoster.match(/WHArmyRosterContext\.install\(/g)||[]).length===1&&!tauRoster.includes("params.has('roster')")&&!tauRoster.includes('querySelectorAll')&&!tauRoster.includes('WHRosterEntities.loadoutIncludesProfile')&&reader.includes(`./scripts/roster-data.js?v=${runtimeVersions.shared.rosterCatalog}`)&&reader.includes(`../shared/roster-context.js?v=${runtimeVersions.shared.rosterContext}`),'tau-empire: shared roster filtering or canonical Enhancement projection is incomplete');
     const tauStub=fs.readFileSync(path.join(bookRoot,'mobile','index.html'),'utf8');
     assert(!fs.existsSync(path.join(bookRoot,'mobile','mobile.js'))&&tauStub.includes('data-canonical-reader="../reader.html"')&&tauStub.includes('mobile-route-redirect.js?v=1')&&!tauStub.includes('unit-card'),'tau-empire: responsive reader or content-free compatibility route is incomplete');
     assert(fs.existsSync(path.join(bookRoot,'mobile','related-rules.inc')),'tau-empire: Phone Mode related rules are absent');
@@ -212,13 +219,16 @@ const rosterGuideApp=fs.readFileSync(path.join(root,'roster-guides/app.js'),'utf
 const mobileRouteRedirect=fs.readFileSync(path.join(root,'books/shared/mobile-route-redirect.js'),'utf8');
 const dgPhoneStub=fs.readFileSync(path.join(root,'books/death-guard/mobile/typhus.html'),'utf8');
 const amPhoneStub=fs.readFileSync(path.join(root,'books/adeptus-mechanicus/mobile/skitarii-rangers.html'),'utf8');
+const dgCatalog=rosterCatalogFor('death-guard'),amCatalog=rosterCatalogFor('adeptus-mechanicus');
+const dgFixtureUnit=dgCatalog.units.find(unit=>unit.id==='unit-poxwalkers')||dgCatalog.units[0],dgFixtureEnhancement=dgCatalog.enhancements[0];
+const dgProjection=sharedRosterApi.project({catalog:dgCatalog,roster:{detachments:[{id:'detachment-shamblerot-vectorium'}],enhancements:[{id:dgFixtureEnhancement.id,ownerUnitId:'dg-physical-1',ownerStatus:'resolved'}],units:[{id:'dg-physical-1',canonicalUnitId:dgFixtureUnit.id}]},record:{attachments:{},groups:{},formations:{}}});
 assert(rosterGuideApp.includes("'death guard':'../books/death-guard/index.html'"),'Death Guard personal guides bypass the responsive book entry');
-assert(/\.searchParams\.set\(['"]instance['"]/.test(dgRosterFilter)&&dgRosterFilter.includes('history.replaceState')&&mobileRouteRedirect.includes('destination.search=location.search'),'Death Guard responsive roster navigation is not filtered or query-preserving');
+assert(dgProjection.context.units[0].instanceId==='dg-physical-1'&&dgProjection.context.enhancements[0].owner.instanceId==='dg-physical-1'&&mobileRouteRedirect.includes('destination.search=location.search')&&!dgRosterFilter.includes('history.replaceState')&&!dgRosterFilter.includes('querySelectorAll'),'Death Guard shared roster projection does not preserve physical-instance or responsive query identity');
 assert(dgRosterSemantics.includes("{detachment:'shamblerot-vectorium', units:['poxwalkers'], id:'keyword-battleline', title:'BATTLELINE'}"),'Shamblerot Vectorium grant is absent from the Death Guard semantic runtime');
 assert(dgRosterSemantics.includes("'foetid-bloat-drone-with-heavy-blight-launcher','helbrute','myphitic-blight-hauler'"),'Contagion Engines grant owners are incomplete');
-assert(dgRosterSemantics.includes('addKeywords(KEYWORD_GRANTS.filter')&&dgRosterFilter.includes('semantic.decorate(')&&!fs.existsSync(path.join(root,'books/death-guard/mobile/mobile.js'))&&dgPhoneStub.includes('mobile-route-redirect.js?v=1'),'Roster keyword rendering does not use the shared Death Guard semantic resolver');
+assert(dgRosterSemantics.includes('addKeywords(KEYWORD_GRANTS.filter')&&dgRosterFilter.includes('keywordProfile({unit},base)')&&dgRosterFilter.includes('semantics.decorate?.(')&&!dgRosterFilter.includes('WHArmyRosterContext.project(')&&!fs.existsSync(path.join(root,'books/death-guard/mobile/mobile.js'))&&dgPhoneStub.includes('mobile-route-redirect.js?v=1'),'Roster keyword rendering does not use the thin Death Guard provider over shared projection');
 
-assert(amRosterFilter.includes("location.replace('../../roster-guides/index.html")&&!fs.existsSync(path.join(root,'books/adeptus-mechanicus/mobile/mobile.js'))&&amPhoneStub.includes('data-canonical-reader="../reader.html"')&&!amPhoneStub.includes('unit-card'),'Mechanicus invalid roster handoff or single-reader contract regressed');
+assert(sharedRosterApi.install({catalog:amCatalog,roster:null})===null&&amRosterFilter.includes('WHArmyRosterContext.install({')&&!amRosterFilter.includes('location.replace(')&&!amRosterFilter.includes('querySelectorAll')&&!fs.existsSync(path.join(root,'books/adeptus-mechanicus/mobile/mobile.js'))&&amPhoneStub.includes('data-canonical-reader="../reader.html"')&&!amPhoneStub.includes('unit-card'),'Mechanicus no-roster shared projection or single-reader contract regressed');
 
 const sharedMatcherContext={window:{WHRuleFacts:ruleFacts}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'books/shared/related-rules-matcher.js'),'utf8'),sharedMatcherContext,{filename:'related-rules-matcher.js'});

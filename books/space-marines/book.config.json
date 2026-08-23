@@ -58,11 +58,11 @@
   "assetVersions": {
     "app": 9,
     "armyBook": 15,
-    "rosterContext": 1,
-    "relatedRules": 15,
+    "rosterContext": 3,
+    "relatedRules": 16,
     "ruleFacts": 5,
     "book": 3,
-    "rosterFilter": 3,
+    "rosterFilter": 4,
     "tokens": 3
   },
   "expected": {

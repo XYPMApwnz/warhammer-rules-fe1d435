@@ -11,6 +11,19 @@
     const wanted=normalizeDetachment(values[0]),matches=sections.filter(section=>section.dataset.detachment&&section.dataset.detachment!=='core'&&[section.dataset.detachment,section.querySelector('h2')?.textContent].some(value=>normalizeDetachment(value)===wanted));
     return matches.length===1?[matches[0].dataset.detachment]:[];
   };
+  const resolveRosterEnhancements=(guide,card)=>{
+    if(!Array.isArray(guide?.units)||!Array.isArray(guide?.enhancements))return null;
+    const exactInstance=card?.dataset?.rosterInstance||'',canonicalId=card?.dataset?.canonicalUnitId||String(card?.id||'').replace(/--.*$/,''),candidates=exactInstance?guide.units.filter(unit=>unit.instanceId===exactInstance):guide.units.filter(unit=>(unit.datasheetId||unit.canonicalDatasheetId||unit.canonicalUnitId)===canonicalId);
+    if(!exactInstance&&candidates.length!==1)return[];
+    const owners=new Set(candidates.map(unit=>unit.instanceId).filter(Boolean));
+    return guide.enhancements.filter(record=>owners.has(record.owner?.instanceId||record.ownerInstanceId||record.ownerUnitId));
+  };
+  const enhancementRuleId=record=>record?.ruleId||record?.id||'';
+  const resolveRosterEnhancementPresentation=(catalog,assignment)=>{
+    const targetId=enhancementRuleId(assignment);
+    if(!targetId||!Array.isArray(catalog?.enhancements))return null;
+    return catalog.enhancements.find(record=>[record?.id,record?.ruleId,record?.sourceId,record?.legacyKey].filter(Boolean).includes(targetId))||null;
+  };
   const profile=card=>root.WHRuleFacts.profileFromDataset(card.dataset,{id:card.id});
   const withKeywordGrants=(rule,unit)=>{
     let grants=[];
@@ -57,11 +70,11 @@
     let modal;
     const filter=()=>{
       if(!content||!unit)return;
-      const unitProfile=profile(unit),sourceRows=source?.rowsForUnit(unitProfile.id,{detachmentId:detachment})||null,assigned=new Set(options.rosterGuide?.enhancementRuleIdsByUnitId?.[unitProfile.id]||[]),presented=sourceRows&&(rosterMode?sourceRows:root.WHRuleFacts.filterStaticCompatible(sourceRows)),visibleRows=presented&&(rosterMode&&options.rosterEnhancements==='assigned-only'?presented.filter(row=>row.kind!=='enhancement'||assigned.has(row.ruleId)):presented),sourceById=visibleRows&&new Map(visibleRows.map(row=>[row.ruleId,row]));
+      const unitProfile=profile(unit),assignedRecords=resolveRosterEnhancements(options.rosterGuide,unit),assigned=new Set((assignedRecords||[]).map(enhancementRuleId).filter(Boolean)),sourceRows=source?.rowsForUnit(unitProfile.id,{detachmentId:detachment})||null,presented=sourceRows&&(rosterMode?sourceRows:root.WHRuleFacts.filterStaticCompatible(sourceRows)),visibleRows=presented&&(rosterMode&&options.rosterEnhancements==='assigned-only'?presented.filter(row=>row.kind!=='enhancement'||assigned.has(row.ruleId)):presented),sourceById=visibleRows&&new Map(visibleRows.map(row=>[row.ruleId,row]));
       content.querySelectorAll('.stratagem,.enhancement').forEach(card=>{
-        const hasAssignedEnhancementRecords=Boolean(options.rosterGuide?.enhancementRecordsByUnitId&&options.rosterGuide?.enhancementRuleIdsByUnitId);
-        const assignedEnhancements=!source&&hasAssignedEnhancementRecords?new Set(options.rosterGuide.enhancementRuleIdsByUnitId?.[unitProfile.id]||[]):null;
-        const isAssigned=assignedEnhancements?.has(card.dataset.ruleId),result=source?sourceById.get(card.dataset.ruleId):assignedEnhancements&&card.classList.contains('enhancement')?!isAssigned?{state:'no-match',matchedRoleIds:[],reasons:[]}:card.dataset.rosterAssignedOnly==='true'?{state:'match',matchedRoleIds:[],reasons:[]}:match(card,unitProfile):match(card,unitProfile);
+        const assignedEnhancements=!source&&assignedRecords!==null?assigned:null;
+        const isAssigned=assignedEnhancements?.has(card.dataset.ruleId),sourceResult=sourceById?.get(card.dataset.ruleId),exactRosterAssignment=source&&card.classList.contains('enhancement')&&assigned.has(card.dataset.ruleId),assignmentResult=exactRosterAssignment?{state:'match',matchedRoleIds:[],reasons:[],provenance:'exact-roster-assignment'}:null,result=source?sourceResult||assignmentResult:assignedEnhancements&&card.classList.contains('enhancement')?!isAssigned?{state:'no-match',matchedRoleIds:[],reasons:[]}:card.dataset.rosterAssignedOnly==='true'?{state:'match',matchedRoleIds:[],reasons:[]}:match(card,unitProfile):match(card,unitProfile);
+        card.toggleAttribute('data-roster-assignment-visible',Boolean(assignmentResult&&!sourceResult));
         card.hidden=source?!result:rosterMode?result.state==='no-match':!root.WHRuleFacts.staticCompatible(result);
         if(source&&!result)card.dataset.matchState='no-match';
         if(result)renderMatchState(card,result,conditionLabels);else card.querySelector(':scope > .compatibility-status')?.remove();
@@ -99,7 +112,7 @@
           fragment.querySelectorAll('[id]').forEach(node=>{if(!node.dataset.ruleId)node.dataset.ruleId=node.id;node.removeAttribute('id');});
           options.decorateContent?.(fragment);
           sections=[...fragment.querySelectorAll('.related-detachment')];
-          if(options.rosterGuide?.enhancementRecordsByUnitId&&options.rosterGuide?.enhancementRuleIdsByUnitId)for(const record of Object.values(options.rosterGuide.enhancementRecordsByUnitId).flat()){const section=sections.find(item=>item.dataset.detachment===record.detachmentId),group=section?.querySelector('[data-related-kind="enhancements"]');if(!group||group.querySelector(`[data-rule-id="${CSS.escape(record.ruleId)}"]`))continue;const card=document.createElement('article');card.className='enhancement surface';card.dataset.ruleId=record.ruleId;card.dataset.rosterAssignedOnly='true';const cost=document.createElement('div');cost.className='eyebrow';cost.textContent=`Enhancement · ${record.value} pts`;const title=document.createElement('h4');title.textContent=record.title;const text=document.createElement('p');text.dataset.sourceField='text';text.textContent=record.text;card.append(cost,title,text);group.append(card);}
+          const assignedRecords=resolveRosterEnhancements(options.rosterGuide,unit);if(assignedRecords)for(const assignment of assignedRecords){const ruleId=enhancementRuleId(assignment),record=resolveRosterEnhancementPresentation(root.WH_BOOK_ROSTER_CATALOG,assignment),section=sections.find(item=>item.dataset.detachment===assignment.detachmentId),group=section?.querySelector('[data-related-kind="enhancements"]');if(!ruleId||!group||group.querySelector(`[data-rule-id="${CSS.escape(ruleId)}"]`)||!record?.text)continue;const card=document.createElement('article');card.className='enhancement surface';card.dataset.ruleId=ruleId;card.dataset.rosterAssignedOnly='true';const cost=document.createElement('div');cost.className='eyebrow';cost.textContent=`Enhancement · ${record.value} pts`;const title=document.createElement('h4');title.textContent=record.title;const text=document.createElement('p');text.dataset.sourceField='text';text.textContent=record.text;card.append(cost,title,text);group.append(card);}
           const rosterDetachments=new Set(resolveRosterDetachmentIds(options.rosterGuide,sections));rosterMode=source?Boolean(options.rosterGuide):rosterDetachments.size>0;
           if(rosterMode&&(!source||options.restrictToRosterDetachments)){sections.forEach(section=>{if(section.dataset.detachment!=='core'&&!rosterDetachments.has(section.dataset.detachment))section.remove();});sections=sections.filter(section=>section.dataset.detachment==='core'||rosterDetachments.has(section.dataset.detachment));}
           const detachmentSections=sections.filter(section=>section.dataset.detachment!=='core');
@@ -146,5 +159,5 @@
     document.addEventListener('click',event=>{const button=event.target.closest('.related-rules-trigger');if(button)open(button.closest('.unit-card'));});
     return{layer,close,open,snapshot(origin){if(layer.hidden||!layer.contains(origin))return null;const card=origin.closest('[data-rule-id]'),termId=origin.dataset.term||'',found=card&&termId?[...card.querySelectorAll(`[data-term="${CSS.escape(termId)}"]`)]:[];return{type:'related-rules',unitId:unit?.id||'',detachment,kind,scrollTop:body.scrollTop,ruleId:card?.dataset.ruleId||'',termId,occurrence:Math.max(0,found.indexOf(origin))};},async restore(state){const restoredUnit=document.getElementById(state?.unitId);if(!restoredUnit)return null;await open(restoredUnit,state);const card=layer.querySelector(`[data-rule-id="${CSS.escape(state.ruleId||'')}"]`),found=card&&state.termId?[...card.querySelectorAll(`[data-term="${CSS.escape(state.termId)}"]`)]:[];return found[state.occurrence]||found[0]||(source?restoredUnit.querySelector('.related-rules-trigger'):null);}};
   }
-  root.WHArmyRelatedRules=Object.freeze({install,profile,match,matches,resolveRosterDetachmentIds});
+  root.WHArmyRelatedRules=Object.freeze({install,profile,match,matches,resolveRosterDetachmentIds,resolveRosterEnhancements,resolveRosterEnhancementPresentation});
 }(window));

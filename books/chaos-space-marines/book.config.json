@@ -23,10 +23,10 @@
     "book": 4,
     "app": 6,
     "armyBook": 15,
-    "rosterContext": 1,
-    "relatedRules": 15,
+    "rosterContext": 3,
+    "relatedRules": 16,
     "ruleFacts": 5,
-    "rosterFilter": 2,
+    "rosterFilter": 3,
     "rosterData": 2
   },
   "armyRules": [

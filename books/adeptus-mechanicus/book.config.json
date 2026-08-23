@@ -13,10 +13,10 @@
   "assetVersions": {
     "app": 42,
     "armyBook": 15,
-    "relatedRules": 15,
-    "rosterContext": 1,
+    "relatedRules": 16,
+    "rosterContext": 3,
     "ruleFacts": 5,
-    "rosterFilter": 8,
+    "rosterFilter": 9,
     "rosterEnhancements": 4,
     "data": 1,
     "tokens": 15,

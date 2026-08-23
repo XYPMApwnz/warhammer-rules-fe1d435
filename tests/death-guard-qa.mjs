@@ -16,6 +16,7 @@ const datasheetCss=readProject('books/shared/datasheet-system.css');
 const popupContent=readProject('books/shared/popup-content.js');
 const glossaryAutolink=readProject('books/shared/glossary-autolink.js');
 const sharedArmyBook=readProject('books/shared/army-book-app.js');
+const sharedRosterContext=readProject('books/shared/roster-context.js');
 const sharedRelatedRules=readProject('books/shared/army-related-rules.js');
 const sharedCompatibleMatrix=readProject('books/shared/compatible-rules-matrix.mjs');
 const sharedStratagemPresentation=readProject('books/shared/stratagem-presentation.mjs');
@@ -292,7 +293,7 @@ check('full entry becomes a full-screen mobile dialog',/@media\s*\(max-width:\s*
 check('each detachment has a visible Stratagems destination',(markup.match(/class="detachment-part"[^>]*data-track="[^"]+">\s*<h4 class="detachment-part-title">Stratagems<\/h4>/g)||[]).length===bookData.audit.detachments);
 check('no inline style or inline script',!/<style|<script(?![^>]*src=)/i.test(html));
 check('Compatible Rules use the shared lazy matrix and template loaders',appSource.includes('createCompatibleRulesLoader')&&appSource.includes("schema:'death-guard-compatible-rules/v1'")&&sharedCompatibleMatrix.includes('let source=null,pending=null')&&sharedRelatedRules.includes('getTemplate(templateUrl)')&&sharedRelatedRules.includes('fetch(url)'));
-check('Roster Guide passes its detachments and assigned Enhancement owners to shared Related Rules',read('scripts/roster-filter.js').includes('enhancementRuleIdsByUnitId')&&appSource.includes('rosterGuide:()=>window.DG_ROSTER_GUIDE')&&appSource.includes("rosterEnhancements:'assigned-only'")&&sharedRelatedRules.includes('enhancementRuleIdsByUnitId'));
+check('Roster Guide consumes the shared projection with exact Enhancement owners',read('scripts/roster-filter.js').includes("guideGlobal:'DG_ROSTER_GUIDE'")&&appSource.includes('rosterGuide:()=>window.DG_ROSTER_GUIDE')&&appSource.includes("rosterEnhancements:'assigned-only'")&&sharedRelatedRules.includes('resolveRosterEnhancements')&&sharedRelatedRules.includes('guide.enhancements')&&sharedRelatedRules.includes('owner?.instanceId')&&!sharedRelatedRules.includes('enhancementRuleIdsByUnitId')&&!sharedRelatedRules.includes('enhancementRecordsByUnitId'));
 check('service worker registration is protocol gated',sharedArmyBook.includes("location.protocol==='http:'||location.protocol==='https:'"));
 check('weapon rows receive explicit table semantics',read('scripts/ui-controllers.js').includes("row.setAttribute('role','row')"));
 check('mobile header disables expensive backdrop blur',/@media\s*\(max-width:\s*800px\)[\s\S]*?\.app-header\s*\{[^}]*backdrop-filter:\s*none/.test(read('styles/layout.css')));
@@ -308,23 +309,34 @@ const mobileTargets=mobileOutputs.map(({html:output})=>output.match(/data-canoni
 const mobileFreshness=spawnSync(process.execPath,[path.join(root,'mobile','build.mjs'),'--check'],{cwd:projectRoot,encoding:'utf8'});
 const rosterFilterRuntime=read('scripts/roster-filter.js');
 const rosterSemanticRuntime=read('scripts/roster-semantics.js');
-const extractDetachmentResolver=(source)=>{const expression=source.match(/const resolveRosterDetachmentIds=(.+);/)?.[1];return expression?Function(`"use strict";return (${expression});`)():null;};
-let desktopDetachmentResolver;
-try{desktopDetachmentResolver=extractDetachmentResolver(rosterFilterRuntime);}catch(error){check('Detachment resolver extraction',false,error.message);}
-const desktopDetachmentIds=['detachment-mortarions-hammer','detachment-flyblown-host'];
-check('behavior: one known Death Guard Detachment resolves on desktop and Phone',JSON.stringify(desktopDetachmentResolver?.([desktopDetachmentIds[0]],desktopDetachmentIds))===JSON.stringify([desktopDetachmentIds[0]]));
-check('behavior: two known Death Guard Detachments remain active on desktop',JSON.stringify(desktopDetachmentResolver?.(desktopDetachmentIds,desktopDetachmentIds))===JSON.stringify(desktopDetachmentIds));
-check('behavior: two known Death Guard Detachments remain active for Phone related rules',JSON.stringify(desktopDetachmentResolver?.(desktopDetachmentIds,desktopDetachmentIds))===JSON.stringify(desktopDetachmentIds));
-check('behavior: zero and unknown Death Guard Detachments fail closed',desktopDetachmentResolver?.([],desktopDetachmentIds)===null&&desktopDetachmentResolver?.(['detachment-unknown'],desktopDetachmentIds)===null);
-check('behavior: duplicate matching Detachment options fail closed as ambiguous',desktopDetachmentResolver?.([desktopDetachmentIds[0]],[desktopDetachmentIds[0],desktopDetachmentIds[0]])===null);
-check('roster paths retain every resolved Detachment and suppress the selector',rosterFilterRuntime.includes('const detachmentIds = new Set(resolvedDetachmentIds)')&&appSource.includes("rosterDetachment:'all'")&&appSource.includes('restrictToRosterDetachments:true')&&sharedRelatedRules.includes("if(!rosterMode)controls.append(filterMenu)"));
+const rosterScope={console,URL,URLSearchParams};
+rosterScope.window=rosterScope;
+rosterScope.globalThis=rosterScope;
+vm.runInNewContext(sharedRosterContext,rosterScope,{filename:'books/shared/roster-context.js'});
+vm.runInNewContext(read('scripts/roster-data.js'),rosterScope,{filename:'scripts/roster-data.js'});
+const rosterApi=rosterScope.WHArmyRosterContext;
+const rosterCatalog=rosterScope.WH_BOOK_ROSTER_CATALOG;
+const fixtureUnit=rosterCatalog.units.find(unit=>unit.id==='unit-poxwalkers')||rosterCatalog.units[0];
+const fixtureEnhancement=rosterCatalog.enhancements[0];
+const fixtureDetachmentIds=['detachment-mortarions-hammer','detachment-flyblown-host'];
+const fixtureUnits=[{id:'physical-1',canonicalUnitId:fixtureUnit.id},{id:'physical-2',canonicalUnitId:fixtureUnit.id}];
+const projectFixture=detachments=>rosterApi.project({catalog:rosterCatalog,roster:{detachments:detachments.map(id=>({id})),enhancements:[{id:fixtureEnhancement.id,ownerUnitId:'physical-2',ownerStatus:'resolved'}],units:fixtureUnits},record:{attachments:{},groups:{},formations:{}}});
+const oneDetachmentProjection=projectFixture([fixtureDetachmentIds[0]]);
+const twoDetachmentProjection=projectFixture(fixtureDetachmentIds);
+const unknownDetachmentProjection=projectFixture(['detachment-unknown']);
+const projectSource=sharedRosterContext.slice(sharedRosterContext.indexOf('function project('),sharedRosterContext.indexOf('function fromRuntime('));
+check('shared roster context owns installation and Death Guard remains a thin provider',rosterFilterRuntime.includes('WHArmyRosterContext.install({')&&(rosterFilterRuntime.match(/WHArmyRosterContext\.install\(/g)||[]).length===1&&!rosterFilterRuntime.includes('WHArmyRosterContext.create(')&&!rosterFilterRuntime.includes('WHArmyRosterContext.project(')&&rosterFilterRuntime.includes('providerFactory(projection)')&&!rosterFilterRuntime.includes('querySelectorAll')&&!rosterFilterRuntime.includes('const DG_RULE=')&&rosterFilterRuntime.length<2200);
+check('behavior: one known Death Guard Detachment resolves through shared projection',JSON.stringify(oneDetachmentProjection.context.detachments.map(item=>item.id))===JSON.stringify([fixtureDetachmentIds[0]]));
+check('behavior: two known Death Guard Detachments remain active through shared projection',JSON.stringify(twoDetachmentProjection.context.detachments.map(item=>item.id))===JSON.stringify(fixtureDetachmentIds));
+check('behavior: unknown Death Guard Detachments fail closed through shared projection',unknownDetachmentProjection.context.detachments.length===0&&unknownDetachmentProjection.context.detachment===null);
+check('canonical Detachment identity is unique without DOM option ambiguity',new Set(rosterCatalog.detachments.map(item=>item.id)).size===rosterCatalog.detachments.length);
+check('roster projection preserves physical instances and exact Enhancement owner without full-book DOM',twoDetachmentProjection.context.units.map(unit=>unit.instanceId).join('|')==='physical-1|physical-2'&&twoDetachmentProjection.context.enhancements[0].owner.instanceId==='physical-2'&&!projectSource.includes('document')&&!projectSource.includes('querySelectorAll'));
 check('exact Enhancement ownerUnitId filtering is unchanged',rosterSemanticRuntime.includes('item.ownerUnitId === unit.id')&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
 check('phase-bound Bilemaw Blight does not persist while Sorrowsyphon Damage still derives',rosterSemanticRuntime.includes("bilemaw:'enhancement-bilemaw-blight'")&&rosterSemanticRuntime.includes('cell.textContent = cell.dataset.rosterBase')&&rosterSemanticRuntime.includes("card.querySelector('.roster-plague-wind-range')?.remove()")&&rosterSemanticRuntime.includes("modifyWeaponStat(row, 'D', 1, 'sorrowsyphon')"));
 check('Desktop and Phone load one book-local Death Guard semantic runtime',(html.match(/scripts\/roster-semantics\.js\?v=2/g)||[]).length===1&&mobileTyphus.includes('data-canonical-reader="../reader.html"')&&!mobileTyphus.includes('roster-semantics.js'));
-check('Desktop and Phone delegate gameplay projection without local rule registries',rosterFilterRuntime.includes('semantic.decorate(')&&!rosterFilterRuntime.includes('const DG_RULE=')&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
-const invalidRosterHandoff=/location\.replace\(['"]\.\.\/\.\.\/roster-guides\/index\.html[^;]*;\s*return;/.test(rosterFilterRuntime);
-check('canonical invalid roster handoff is terminal before responsive roster projection',invalidRosterHandoff&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
-check('no-roster All Detachments behavior is preserved by the shared runtime',rosterFilterRuntime.includes('if (!rosterId) return;')&&appSource.includes("rosterDetachment:'all'")&&sharedRelatedRules.includes("['all',rosterMode?'All roster detachments':'All detachments']")&&mobileTyphus.includes('data-canonical-target="unit-typhus"'));
+check('Desktop and Phone delegate gameplay decoration without local orchestration registries',rosterFilterRuntime.includes('semantics.decorate?.(')&&!rosterFilterRuntime.includes('const DG_RULE=')&&!fs.existsSync(path.join(root,'mobile','mobile.js')));
+check('invalid or absent roster input does not construct a hidden full-book source index',rosterApi.install({catalog:rosterCatalog,roster:null})===null&&!rosterFilterRuntime.includes('DocumentFragment')&&!rosterFilterRuntime.includes('display:none')&&!rosterFilterRuntime.includes('offscreen'));
+check('no-roster All Detachments behavior remains presentation-only outside roster projection',appSource.includes("rosterDetachment:'all'")&&sharedRelatedRules.includes("['all',rosterMode?'All roster detachments':'All detachments']")&&mobileTyphus.includes('data-canonical-target="unit-typhus"')&&!rosterFilterRuntime.includes('location.replace('));
 check('mobile generator delegates canonical content-free compatibility routes to the shared builder',
   mobileBuild.includes("from '../../shared/tools/build-mobile-stubs.mjs'")&&
   mobileBuild.includes('runMobileStubBuilder(import.meta.url')&&
@@ -375,7 +387,7 @@ check('safe mobile controls activate on touch-down',navigation.includes("this.me
 check('static content cards do not impersonate controls',!contentCss.includes('.rule-card:hover')&&!contentCss.includes('.enhancement:hover')&&!contentCss.includes('.glossary-card:hover')&&!contentCss.includes('[data-term]:active'));
 check('touch controls use the native fast-tap contract',read('styles/tokens.css').includes('button, a { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }'));
 check('touch terms open only after a completed tap, never during a scroll gesture',popups.includes("document.addEventListener('pointerdown'")&&popups.includes("document.addEventListener('pointermove'")&&popups.includes("document.addEventListener('pointerup'")&&popups.includes('this.touchTerm.moved')&&popups.includes('if(!this.touchTerm.moved)this.open'));
-check('roster loadouts use the shared profile-family matcher',read('scripts/roster-filter.js').includes('WHRosterEntities.loadoutIncludesProfile'));
+check('roster loadout semantics consume canonical catalog rule facts instead of DOM profiles',rosterFilterRuntime.includes('profileFor:raw=>byTitle.get(raw)?.ruleFacts||null')&&rosterCatalog.units.every(unit=>Object.hasOwn(unit,'ruleFacts'))&&!rosterFilterRuntime.includes('WHRosterEntities.loadoutIncludesProfile'));
 check('Contagion Engines uses current MFM disposition',JSON.stringify(bookData).includes('Force Disposition: Reconnaissance. Detachment Points: 1DP. Tag: ENGINES.')&&!JSON.stringify(bookData).includes('Force Disposition: Purge the Foe. Detachment Points: 1DP. Tag: ENGINES.'));
 check('book uses the unified root manifest',html.includes('href="../../manifest.webmanifest"'));
 check('release service worker owns its cache family',readProject('service-worker.js').includes('key.startsWith(CACHE_PREFIX)')&&readProject('service-worker.js').includes('warhammer-rules-fe1d435-'));

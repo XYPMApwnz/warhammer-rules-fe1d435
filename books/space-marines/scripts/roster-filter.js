@@ -1,21 +1,12 @@
-(function(){
-  const rosterId=new URLSearchParams(location.search).get('roster');
-  if(!rosterId)return;
-  const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
-  const records=(()=>{try{const value=JSON.parse(localStorage.getItem('wh40k-rosters-v1'));return Array.isArray(value)?value:[];}catch{return[];}})();
-  const record=records.find(item=>item?.id===rosterId);
-  const roster=record?.sourceText&&window.WHRosterParser?window.WHRosterParser.parse(record.sourceText):record?.roster;
-  const faction=normalize(roster?.faction).replace(/^imperium /,'');
-  if(!roster?.units?.length||faction!=='space marines')return;
-  const unitTitles=new Set(roster.units.map(unit=>normalize(unit.name)));
-  const detachmentTitles=new Set((roster.detachments||[{label:roster.detachment}]).map(item=>normalize(item?.label||item?.name)).filter(Boolean));
-  const unitIds=[],detachmentIds=[],selected=new Map();
-  document.querySelectorAll('.unit-card[data-unit-title]').forEach(card=>{const units=roster.units.filter(unit=>normalize(unit.name)===normalize(card.dataset.unitTitle));if(units.length){unitIds.push(card.id);selected.set(card.id,units);window.WHBookRosterEnhancements?.decorate(card,roster,units);}else card.remove();});
-  document.querySelectorAll('section.content-group.detachment').forEach(section=>{const title=section.querySelector('.category-title')?.childNodes[0]?.textContent;if(detachmentTitles.has(normalize(title))){detachmentIds.push(section.id.replace(/^detachment-/,''));return;}section.remove();});
-  document.querySelectorAll('section.content-group[id^="datasheets-"]').forEach(section=>{if(!section.querySelector('.unit-card'))section.remove();});
-  document.querySelectorAll('[data-nav-id^="unit-"]').forEach(item=>{if(!unitIds.includes(item.dataset.navId))item.remove();});
-  document.querySelectorAll('[data-nav-id^="detachment-"]').forEach(item=>{if(!detachmentIds.includes(item.dataset.navId.replace(/^detachment-/,'')))item.remove();});
-  const enhancementRuleIdsByUnitId=Object.fromEntries([...selected].map(([cardId,units])=>[cardId,window.WHBookRosterEnhancements?.assignedRuleIds(roster,units)||[]]));
-  window.SM_ROSTER_GUIDE=window.WH_ARMY_ROSTER_GUIDE={rosterId,unitIds,unitTitles,detachmentIds,enhancementRuleIdsByUnitId};
-  document.documentElement.dataset.rosterGuide='space-marines';
-})();
+(function(root){
+  'use strict';
+  const run=()=>{
+    if(!root.WHArmyRosterContext)return false;
+    const provider={
+      decorate(card,projection,items){root.WHBookRosterEnhancements?.decorate?.(card,projection.roster,items.map(item=>item.raw));}
+    };
+    root.WHArmyRosterContext.install({bookId:'space-marines',guideGlobal:'SM_ROSTER_GUIDE',provider});
+    return true;
+  };
+  if(!run())root.addEventListener('wh-roster-context-ready',run,{once:true});
+}(window));

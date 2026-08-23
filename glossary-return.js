@@ -42,11 +42,19 @@
 
   const pageStateKey = 'wh40kPageState';
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  const actualPagePath=()=>location.pathname+location.search+location.hash;
+  const initialPath=actualPagePath(),initialRecord=history.state?.[pageStateKey],initialHash=location.hash;
+  const initialTarget=(()=>{try{return decodeURIComponent(initialHash.slice(1));}catch{return initialHash.slice(1);}})();
+  const initialOwner=window.WH_ARMY_BOOK_TARGETS?.owners?.[initialTarget]||'';
+  let pendingInitialFragment=initialHash&&initialOwner&&initialOwner!==initialTarget&&initialRecord?.v===1&&initialRecord.path===initialPath&&Number.isFinite(initialRecord.scrollY)?{hash:initialHash,path:initialPath}:null;
+  if(pendingInitialFragment)history.replaceState(history.state,'',location.pathname+location.search);
   let pageAdapter = null;
   let pageDepartureCaptured = false;
   let restoreRun=null,restoredRecordKey='';
   let viewportWidth=innerWidth,liveAnchor=null,resizeToken=0,anchorFrame=0;
-  const pagePath = () => location.pathname + location.search + location.hash;
+  const pagePath=()=>pendingInitialFragment?.path||actualPagePath();
+  const startupHash=()=>pendingInitialFragment?.hash||location.hash;
+  function restoreInitialFragment(){const pending=pendingInitialFragment;if(!pending)return;history.replaceState(history.state,'',pending.path);pendingInitialFragment=null;}
   function readingAnchor() {
     const main=document.querySelector('main,.main,.viewer'),header=document.querySelector('.app-header,header');if(!main)return null;
     const rect=main.getBoundingClientRect(),headerBottom=header?.getBoundingClientRect().bottom||0,x=Math.max(1,Math.min(innerWidth-2,rect.left+rect.width/2)),y=Math.max(1,Math.min(innerHeight-2,headerBottom+(innerHeight-headerBottom)/2));
@@ -88,6 +96,7 @@
         settle();
       }
       await adapter.restore?.(record.ui);
+      restoreInitialFragment();
       restoredRecordKey=recordKey;
       return true;
     })();
@@ -144,5 +153,5 @@
   window.addEventListener('pagehide',()=>{if(!pageDepartureCaptured)capturePage();});
   window.addEventListener('pageshow',()=>{pageDepartureCaptured=false;restorePage();});
   requestAnimationFrame(rememberAnchor);
-  window.WHPageState=Object.freeze({install,installArmyBook,installTermDialog,capture:capturePage,restore:restorePage,hasCurrent:()=>Boolean(pageRecord())});
+  window.WHPageState=Object.freeze({install,installArmyBook,installTermDialog,capture:capturePage,restore:restorePage,hasCurrent:()=>Boolean(pageRecord()),initialHash:startupHash});
 }());

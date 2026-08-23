@@ -31,7 +31,7 @@
   }
 
   if(phone){
-    const requested=location.hash.slice(1)||catalog.defaultTargetId;
+    const requested=(root.WHPageState?.initialHash?.()||location.hash).slice(1)||catalog.defaultTargetId;
     if(!ensure(requested))ensure(catalog.defaultTargetId);
   }else host.innerHTML=catalog.html;
 

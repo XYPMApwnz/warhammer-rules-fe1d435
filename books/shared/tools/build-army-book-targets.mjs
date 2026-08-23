@@ -85,10 +85,14 @@ export function parseArmyBookTargetCatalog(source){
 export function createArmyBookTargetBuild(readerHtml,{runtimeVersions}){
   const catalog=createArmyBookTargetCatalog(readerHtml),tree=parse(readerHtml),documentNode=[tree,...descendants(tree)].find(node=>hasClass(node,'document'));
   let stripped=readerHtml.slice(0,documentNode.openEnd)+readerHtml.slice(documentNode.endStart);
-  const scripts=`<script src="../shared/controllers/view-router.js?v=${runtimeVersions.shared.viewRouter}" data-view-mode-only></script><script src="./scripts/target-data.js?v=${runtimeVersions.shared.targetCatalog}"></script><script src="../shared/target-mount.js?v=${runtimeVersions.shared.targetMount}"></script>`;
+  const scripts=`<script src="../shared/controllers/view-router.js?v=${runtimeVersions.shared.viewRouter}" data-view-mode-only></script><script src="./scripts/target-data.js?v=${runtimeVersions.shared.targetCatalog}"></script>`;
   const insertion=stripped.indexOf('<script src=');
   if(insertion<0)throw new Error('Canonical reader runtime insertion point is missing');
   stripped=stripped.slice(0,insertion)+scripts+stripped.slice(insertion);
+  const pageStateScript=/<script src="[^"]*glossary-return\.js[^"]*">\s*<\/script>/i.exec(stripped);
+  if(!pageStateScript)throw new Error('Canonical reader PageState bootstrap is missing');
+  const mountInsertion=pageStateScript.index+pageStateScript[0].length,mountScript=`<script src="../shared/target-mount.js?v=${runtimeVersions.shared.targetMount}"></script>`;
+  stripped=stripped.slice(0,mountInsertion)+mountScript+stripped.slice(mountInsertion);
   return {catalog,readerHtml:stripped,targetDataJs:serializeArmyBookTargetCatalog(catalog)};
 }
 

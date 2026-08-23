@@ -299,13 +299,13 @@
       await window.WHArmyDatasheetLayout?.ready?.();
       const target=document.getElementById(id);if(!target){settled?.();return false;}
       this.refreshGeometry();const unit=target.closest('.unit-card');
-      if(unit&&target.matches('.unit-part'))this.navigateSection(unit.id,target,{nav:unit.querySelector(':scope > .local-nav'),settled});
-      else if(Number.isFinite(scrollY))this.beginTransition(unit?.id||target.id,Math.max(0,scrollY),settled);
+      if(Number.isFinite(scrollY))this.beginTransition(unit?.id||target.id,Math.max(0,scrollY),settled);
+      else if(unit&&target.matches('.unit-part'))this.navigateSection(unit.id,target,{nav:unit.querySelector(':scope > .local-nav'),settled});
       else this.navigate(unit?.id||target.id,target,settled);
       return true;
     }
     navigateHash(){return this.restoreInitial();}
-    hashTarget(){return decodeURIComponent(location.hash.slice(1));}
+    hashTarget(){return decodeURIComponent((window.WHPageState?.initialHash?.()||location.hash).slice(1));}
     pushHistoryState(state,url){
       this.historyIndex+=1;
       const next={...state,whNavigationIndex:this.historyIndex};

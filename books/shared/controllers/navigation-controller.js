@@ -342,7 +342,8 @@
       const targets=window.WHNavigationTargets.resolve(section);if(!targets.scrollTarget)return;
       const navHeight=nav?.getBoundingClientRect().height||0;
       const inset=this.geometry.headerBottom+navHeight+this.trackingGap;
-      const complete=()=>{this.highlighter.show(section);settled?.();};
+      const highlightTarget=targets.kind==='logical-section'?targets.highlightTarget:section;
+      const complete=()=>{this.highlighter.show(highlightTarget);settled?.();};
       this.beginTransition(id,this.destination(targets.scrollTarget,inset),complete);
     }
     async restore(id,scrollY,settled){await this.ensureTarget(id);this.refreshGeometry();this.beginTransition(id,Math.max(0,scrollY),settled);}

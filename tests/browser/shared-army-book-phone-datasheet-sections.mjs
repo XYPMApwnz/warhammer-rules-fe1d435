@@ -99,13 +99,22 @@ const profileAnchorContract=async(page,name)=>{
   const last=(await navSnapshot(page)).targets.at(-1);if(last!==profile.id)await clickSection(page,last);
   await clickSection(page,profile.id);
   const aligned=await page.evaluate(id=>{
-    const section=document.getElementById(id),anchor=window.WHNavigationTargets.resolve(section).scrollTarget,nav=document.querySelector('.unit-card > .local-nav').getBoundingClientRect();
+    const section=document.getElementById(id),resolved=window.WHNavigationTargets.resolve(section),anchor=resolved.scrollTarget,nav=document.querySelector('.unit-card > .local-nav').getBoundingClientRect(),unit=section.closest('.unit-card');
+    const members=Array.isArray(resolved.highlightTarget)?resolved.highlightTarget:[resolved.highlightTarget],statlines=[...unit.querySelectorAll('.statline')],bases=[...unit.querySelectorAll('.profile-base')],highlighted=[...unit.querySelectorAll('.destination-highlight')];
     const top=anchor.getBoundingClientRect().top,gap=window.DG_APP.navigation.trackingGap;
-    return{visibleBelowNav:top>=nav.bottom-1&&top<=nav.bottom+gap+4,anchorBeforeSection:Boolean(anchor.compareDocumentPosition(section)&Node.DOCUMENT_POSITION_FOLLOWING),statlines:document.querySelectorAll('.document .unit-card .statline').length};
+    return{visibleBelowNav:top>=nav.bottom-1&&top<=nav.bottom+gap+4,anchorBeforeSection:Boolean(anchor.compareDocumentPosition(section)&Node.DOCUMENT_POSITION_FOLLOWING),statlines:statlines.length,members:members.length,membersHighlighted:members.every(member=>member.classList.contains('destination-highlight')),statlinesHighlighted:statlines.every(statline=>Boolean(statline.closest('.destination-highlight'))),basesHighlighted:bases.every(base=>Boolean(base.closest('.destination-highlight'))),sectionHighlighted:section.classList.contains('destination-highlight'),unexpectedHighlighted:highlighted.filter(node=>!members.includes(node)).length,lifecycleTargets:window.DG_APP.navigation.highlighter.current.length,lifecycleTimer:Boolean(window.DG_APP.navigation.highlighter.timer)};
   },profile.id);
   assert.equal(aligned.visibleBelowNav,true,`${name}: Profile command did not expose the unit statline below the Datasheet nav`);
   assert.equal(aligned.anchorBeforeSection,true,`${name}: Profile command still lands at Weapons`);
   assert.ok(aligned.statlines>=1,`${name}: mounted Datasheet lost its statline`);
+  assert.ok(aligned.members>=2,`${name}: logical Profile feedback does not span statline and Weapons content`);
+  assert.equal(aligned.membersHighlighted,true,`${name}: logical Profile members are not highlighted together`);
+  assert.equal(aligned.statlinesHighlighted,true,`${name}: Profile feedback excludes the unit statline`);
+  assert.equal(aligned.basesHighlighted,true,`${name}: Profile feedback excludes Base`);
+  assert.equal(aligned.sectionHighlighted,true,`${name}: Profile feedback excludes Profile/Weapons content`);
+  assert.equal(aligned.unexpectedHighlighted,0,`${name}: stale destination highlight survived Profile selection`);
+  assert.equal(aligned.lifecycleTargets,aligned.members,`${name}: Highlighter lost logical Profile members`);
+  assert.equal(aligned.lifecycleTimer,true,`${name}: logical Profile feedback has no shared clear lifecycle`);
   return profile.id;
 };
 const reloadContract=async(page,name,{unitId,sectionId='',expectedScroll=null}={})=>{

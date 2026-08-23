@@ -12,17 +12,20 @@
     return null;
   }
 
-  function logicalOwnerAnchor(element){
+  function logicalOwnerTarget(element){
     const ownerId=element?.id,card=element?.closest?.('.unit-card');
     if(!ownerId||!card)return null;
-    return [...card.querySelectorAll('[data-logical-owner]')].find(node=>node.isConnected&&node.dataset.logicalOwner===ownerId)||null;
+    const owned=[...card.querySelectorAll('[data-logical-owner]')].filter(node=>node.isConnected&&node.dataset.logicalOwner===ownerId);
+    if(!owned.length)return null;
+    const candidates=[...owned,element],members=candidates.filter(node=>!candidates.some(parent=>parent!==node&&parent.contains(node)));
+    return{anchor:owned[0],members};
   }
 
   function resolve(element){
     if(!element)return{scrollTarget:null,highlightTarget:null,kind:'missing'};
     if(element.matches?.(CARD_SELECTOR))return{scrollTarget:element,highlightTarget:element,kind:'card'};
-    const ownerAnchor=logicalOwnerAnchor(element);
-    if(ownerAnchor)return{scrollTarget:ownerAnchor,highlightTarget:element,kind:'logical-section'};
+    const logicalTarget=logicalOwnerTarget(element);
+    if(logicalTarget)return{scrollTarget:logicalTarget.anchor,highlightTarget:logicalTarget.members,kind:'logical-section'};
     const heading=directHeading(element);
     if(heading)return{scrollTarget:heading,highlightTarget:heading,kind:'section'};
     return{scrollTarget:element,highlightTarget:element,kind:'element'};
@@ -32,28 +35,29 @@
     constructor({className='destination-highlight',duration=2300}={}){
       this.className=className;
       this.duration=duration;
-      this.current=null;
+      this.current=[];
       this.timer=0;
     }
 
     clear(){
       if(this.timer)window.clearTimeout(this.timer);
       this.timer=0;
-      this.current?.classList.remove(this.className);
-      this.current=null;
+      this.current.forEach(target=>target.classList.remove(this.className));
+      this.current=[];
     }
 
     show(target){
       this.clear();
-      if(!target)return;
-      target.classList.remove(this.className);
-      void target.offsetWidth;
-      target.classList.add(this.className);
-      this.current=target;
+      const targets=(Array.isArray(target)?target:[target]).filter(item=>item?.classList);
+      if(!targets.length)return;
+      targets.forEach(item=>item.classList.remove(this.className));
+      void targets[0].offsetWidth;
+      targets.forEach(item=>item.classList.add(this.className));
+      this.current=targets;
       this.timer=window.setTimeout(()=>{
-        if(this.current!==target)return;
-        target.classList.remove(this.className);
-        this.current=null;
+        if(this.current!==targets)return;
+        targets.forEach(item=>item.classList.remove(this.className));
+        this.current=[];
         this.timer=0;
       },this.duration);
     }

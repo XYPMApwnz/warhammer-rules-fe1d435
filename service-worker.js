@@ -154,6 +154,7 @@ const APP_SHELL = [
   "./books/death-guard/scripts/app.js?v=48",
   "./books/death-guard/generated/compatible-rules.json",
   "./books/core-rules/",
+  "./books/core-rules/index.html",
   CORE_RULES_FALLBACK,
   "./books/core-rules/reader/styles.css?v=14",
   "./books/core-rules/reader/app.js?v=14",
@@ -341,7 +342,7 @@ const APP_SHELL = [
   ,"./books/shared/army-related-rules.js?v=15"
   ,"./books/shared/roster-context.js?v=1"
   ,"./books/shared/army-book-app.js?v=15"
-  ,"./books/shared/offline-status.js?v=1"
+  ,"./books/shared/offline-status.js?v=2"
   ,"./books/shared/styles/offline-status.css?v=1"
 ];
 

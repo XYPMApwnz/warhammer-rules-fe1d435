@@ -2,7 +2,7 @@
   "schema": 1,
   "shared": {
     "armyBook": 15,
-    "offlineStatus": 1,
+    "offlineStatus": 2,
     "offlineStatusCss": 1,
     "relatedRules": 15,
     "rosterContext": 1,

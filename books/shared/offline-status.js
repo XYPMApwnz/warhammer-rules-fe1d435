@@ -33,9 +33,12 @@
     hide();
   }
   function query(worker){if(!worker)return;const channel=new MessageChannel();channel.port1.onmessage=event=>apply(event.data);try{worker.postMessage({type:QUERY},[channel.port2]);}catch{}}
-  function observe(registration){const watch=worker=>{if(!worker)return;query(worker);worker.addEventListener('statechange',()=>query(worker));};watch(registration.installing||registration.waiting||registration.active);registration.addEventListener('updatefound',()=>watch(registration.installing));}
+  const registrationWorker=registration=>registration?.installing||registration?.waiting||registration?.active||navigator.serviceWorker.controller;
+  function observe(registration){const watch=worker=>{if(!worker)return;query(worker);worker.addEventListener('statechange',()=>query(worker));};watch(registrationWorker(registration));registration.addEventListener('updatefound',()=>watch(registration.installing));}
+  async function resync(){const registration=await navigator.serviceWorker.getRegistration(),worker=registrationWorker(registration);if(!worker)return false;if(registration)observe(registration);else query(worker);return true;}
   navigator.serviceWorker.addEventListener('message',event=>apply(event.data));
-  const start=()=>navigator.serviceWorker.register(swUrl).then(observe).catch(()=>{if(navigator.serviceWorker.controller)query(navigator.serviceWorker.controller);else apply({type:MESSAGE,status:'error',completed:0,total:0,revision:''});});
+  navigator.serviceWorker.addEventListener('controllerchange',()=>query(navigator.serviceWorker.controller));
+  const start=()=>navigator.serviceWorker.register(swUrl).then(observe).catch(async()=>{try{if(await resync())return;}catch{}apply({type:MESSAGE,status:'error',completed:0,total:0,revision:''});});
   if(document.readyState==='complete')start();else addEventListener('load',start,{once:true});
   root.WHOfflineStatus=Object.freeze({query:()=>navigator.serviceWorker.getRegistration().then(registration=>registration&&query(registration.installing||registration.waiting||registration.active))});
 })(window);

@@ -17944,7 +17944,7 @@
         "label": "Miasmic Malignifier"
       },
       {
-        "order": 84,
+        "order": 91,
         "nodeId": "updates",
         "parentId": null,
         "depth": 1,
@@ -17952,23 +17952,23 @@
         "label": "Updates"
       },
       {
-        "order": 85,
+        "order": 84,
         "nodeId": "pact-of-decay-datasheets",
-        "parentId": "updates",
+        "parentId": "datasheets",
         "depth": 2,
         "targetId": "pact-of-decay-datasheets",
-        "label": "Pact of Decay"
+        "label": "Tallyband"
       },
       {
-        "order": 86,
+        "order": 85,
         "nodeId": "unit-beasts-of-nurgle",
         "parentId": "pact-of-decay-datasheets",
         "depth": 3,
         "targetId": "unit-beasts-of-nurgle",
-        "label": "Beasts of Nurgle"
+        "label": "Beast of Nurgle"
       },
       {
-        "order": 87,
+        "order": 86,
         "nodeId": "unit-great-unclean-one",
         "parentId": "pact-of-decay-datasheets",
         "depth": 3,
@@ -17976,7 +17976,7 @@
         "label": "Great Unclean One"
       },
       {
-        "order": 88,
+        "order": 87,
         "nodeId": "unit-nurglings",
         "parentId": "pact-of-decay-datasheets",
         "depth": 3,
@@ -17984,7 +17984,7 @@
         "label": "Nurglings"
       },
       {
-        "order": 89,
+        "order": 88,
         "nodeId": "unit-plague-drones",
         "parentId": "pact-of-decay-datasheets",
         "depth": 3,
@@ -17992,7 +17992,7 @@
         "label": "Plague Drones"
       },
       {
-        "order": 90,
+        "order": 89,
         "nodeId": "unit-plaguebearers",
         "parentId": "pact-of-decay-datasheets",
         "depth": 3,
@@ -18000,7 +18000,7 @@
         "label": "Plaguebearers"
       },
       {
-        "order": 91,
+        "order": 90,
         "nodeId": "unit-rotigus",
         "parentId": "pact-of-decay-datasheets",
         "depth": 3,
@@ -18049,7 +18049,7 @@
       },
       {
         "id": "pact-of-decay-datasheets",
-        "parentId": "updates"
+        "parentId": "datasheets"
       }
     ],
     "unitSections": {

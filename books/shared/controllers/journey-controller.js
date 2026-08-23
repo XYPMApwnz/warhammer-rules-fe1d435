@@ -11,15 +11,29 @@
       this.restoreQueue=Promise.resolve();
       this.sequence=0;
       this.backButton=document.getElementById('backButton');
+      this.prepareDatasheetNavigation(document);
       document.addEventListener('click',event=>{
         const trigger=event.target.closest('[data-journey-target]');
         if(trigger){event.preventDefault();this.start(trigger,trigger.dataset.journeyTarget,trigger.dataset.journeyType||'link');}
       });
+      window.addEventListener('wh-army-target-mounted',event=>this.prepareDatasheetNavigation(event.detail?.root||document));
       this.backButton.addEventListener('click',()=>this.back());
       window.addEventListener('wh-navigation-popstate',event=>this.onPopState(event.detail));
       window.addEventListener('wh-navigation-commit',()=>{this.history=[];this.backButton.hidden=true;});
     }
 
+    prepareDatasheetNavigation(root){
+      const navs=[...(root.matches?.('.unit-card > .local-nav')?[root]:[]),...root.querySelectorAll('.unit-card > .local-nav')];
+      for(const nav of navs){
+        nav.setAttribute('role','navigation');
+        nav.setAttribute('aria-label','Datasheet sections');
+        for(const button of nav.querySelectorAll('[data-journey-target]')){
+          button.setAttribute('type','button');
+          button.classList.remove('is-current','is-active');
+          button.removeAttribute('aria-current');
+        }
+      }
+    }
     ensureId(element,prefix){if(!element.id)element.id=prefix+'-'+(++this.sequence);return element.id;}
     async start(trigger,targetId,type){
       if(!this.navigation.canResolveTarget(targetId))return;
@@ -56,7 +70,9 @@
       await this.navigation.ensureTarget(targetId);
       const target=document.getElementById(targetId);if(!target)return;
       const unit=target.closest('.unit-card');
-      this.navigation.navigate(unit?.id||targetId,target);
+      const datasheetNav=trigger.closest('.unit-card > .local-nav');
+      if(unit&&datasheetNav&&target.matches('.unit-part'))this.navigation.navigateSection(unit.id,target,{nav:datasheetNav});
+      else this.navigation.navigate(unit?.id||targetId,target);
     }
 
     findRestoredAction(action){

@@ -216,7 +216,8 @@ async function journeyContract(page){
     backHidden:document.querySelector('#backButton').hidden,
     scrollY:Math.round(scrollY),
     targetTop:Math.round((window.WHNavigationTargets.resolve(document.getElementById(location.hash.slice(1))).scrollTarget)?.getBoundingClientRect().top||0),
-    targetLine:Math.round(document.getElementById('appHeader').getBoundingClientRect().bottom+18)
+    targetLine:Math.round(document.querySelector('.unit-card > .local-nav').getBoundingClientRect().bottom),
+    viewportBottom:window.innerHeight
   }));
   await page.setViewportSize({width:390,height:844});
   await page.goto(`${origin}/books/death-guard/reader.html#unit-plague-marines`);
@@ -234,17 +235,18 @@ async function journeyContract(page){
   assert.equal(snapshot.stack.at(-1),snapshot.token,'Journey URL token and nested stack diverged');
   assert.equal(snapshot.current,'unit-plague-marines','Journey changed the parent Datasheet marker');
   await page.goBack();await page.waitForFunction(()=>{
-    const raw=document.getElementById('unit-plague-marines-profile'),target=window.WHNavigationTargets.resolve(raw).scrollTarget,header=document.getElementById('appHeader');
+    const raw=document.getElementById('unit-plague-marines-profile'),target=window.WHNavigationTargets.resolve(raw).scrollTarget,nav=document.querySelector('#unit-plague-marines > .local-nav');
+    const targetRect=target.getBoundingClientRect(),navRect=nav.getBoundingClientRect();
     return location.hash==='#unit-plague-marines-profile'
       &&document.querySelector('[data-nav-target].is-current')?.dataset.navTarget==='unit-plague-marines'
       &&window.DG_APP.navigation.state.owner==='reader'
-      &&Math.abs(target.getBoundingClientRect().top-header.getBoundingClientRect().bottom-18)<=3;
+      &&targetRect.top>=navRect.bottom-1&&targetRect.top<window.innerHeight;
   });
   snapshot=await state();
   assert.equal(snapshot.stack.length,1,'Journey Back left a stale nested record');
   assert.equal(snapshot.stack.at(-1),snapshot.token,'Journey Back token and stack diverged');
   assert.equal(snapshot.current,'unit-plague-marines','Journey Back changed the parent Datasheet marker');
-  assert.ok(Math.abs(snapshot.targetTop-snapshot.targetLine)<=3,'Journey Back did not restore the explicit section target');
+  assert.ok(snapshot.targetTop>=snapshot.targetLine-1&&snapshot.targetTop<snapshot.viewportBottom,'Journey Back did not restore the explicit visible section target');
   assert.equal(snapshot.backHidden,false,'Journey Back button disappeared too early');
   await page.goBack();await page.waitForFunction(()=>location.hash==='#unit-plague-marines'&&document.querySelector('[data-nav-target].is-current')?.dataset.navTarget==='unit-plague-marines'&&window.DG_APP.navigation.state.owner==='reader');
   snapshot=await state();

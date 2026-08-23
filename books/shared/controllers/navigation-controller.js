@@ -24,6 +24,7 @@
       this.activeButtons=new Set();
       this.supportsInert='inert'in HTMLElement.prototype;
       this.highlighter=new window.WHNavigationTargets.Highlighter();
+      window.addEventListener('wh-army-target-before-mount',()=>this.highlighter.clear());
       this.historyIndex=Number.isInteger(history.state?.whNavigationIndex)?history.state.whNavigationIndex:0;
       this.locationTarget=this.hashTarget();
       history.replaceState({...history.state,whNavigationIndex:this.historyIndex},'',location.href);
@@ -225,8 +226,8 @@
       else if(item.bottom>panel.bottom-gap)this.panel.scrollTo({top:this.panel.scrollTop+(item.bottom-panel.bottom+gap),behavior});
     }
 
-    destination(element){
-      return Math.max(0,window.scrollY+element.getBoundingClientRect().top-this.geometry.headerBottom-this.trackingGap);
+    destination(element,inset=this.geometry.headerBottom+this.trackingGap){
+      return Math.max(0,window.scrollY+element.getBoundingClientRect().top-inset);
     }
     scheduleGeometry(){
       if(this.frames.geometry)return;
@@ -235,6 +236,7 @@
     refreshGeometry(){
       const scrollY=window.scrollY;
       this.geometry.headerBottom=this.header.getBoundingClientRect().bottom;
+      document.documentElement.style.setProperty('--app-header-bottom',`${Math.max(0,this.geometry.headerBottom)}px`);
       this.geometry.ranges=this.items.map(item=>{
         const section=this.sectionFor(item);if(!section)return null;
         const rect=section.getBoundingClientRect(),leadingMargin=parseFloat(getComputedStyle(section).marginTop)||0;
@@ -291,7 +293,10 @@
       if(this.mobile&&this.targetKind(id)==='branch'){const item=this.byId.get(id);if(item)this.revealPath(item.node,{includeSelf:true});return false;}
       await this.ensureTarget(id);
       const target=document.getElementById(id);if(!target)return false;
-      this.refreshGeometry();const unit=target.closest('.unit-card');this.navigate(unit?.id||target.id,target);return true;
+      this.refreshGeometry();const unit=target.closest('.unit-card');
+      if(unit&&target.matches('.unit-part'))this.navigateSection(unit.id,target,{nav:unit.querySelector(':scope > .local-nav')});
+      else this.navigate(unit?.id||target.id,target);
+      return true;
     }
     hashTarget(){return decodeURIComponent(location.hash.slice(1));}
     pushHistoryState(state,url){
@@ -325,6 +330,19 @@
       const targets=window.WHNavigationTargets.resolve(element);
       if(!targets.scrollTarget)return;
       this.beginTransition(id,this.destination(targets.scrollTarget),()=>{this.highlighter.show(targets.highlightTarget);settled?.();});
+    }
+    navigateSection(id,section,{nav=null,settled}={}){
+      const targets=window.WHNavigationTargets.resolve(section);if(!targets.scrollTarget)return;
+      const navHeight=nav?.getBoundingClientRect().height||0;
+      const inset=this.geometry.headerBottom+6+navHeight+this.trackingGap;
+      const rect=targets.scrollTarget.getBoundingClientRect();
+      const alreadyVisible=rect.top>=inset-this.epsilon&&rect.top<window.innerHeight-this.epsilon;
+      const complete=()=>{this.highlighter.show(section);settled?.();};
+      if(alreadyVisible){
+        if(this.state.owner==='controller')this.stopControlledScroll();
+        this.state.transition+=1;this.state.owner='reader';this.activate(id,{behavior:'auto'});complete();return;
+      }
+      this.beginTransition(id,this.destination(targets.scrollTarget,inset),complete);
     }
     async restore(id,scrollY,settled){await this.ensureTarget(id);this.refreshGeometry();this.beginTransition(id,Math.max(0,scrollY),settled);}
     beginTransition(id,destination,settled){

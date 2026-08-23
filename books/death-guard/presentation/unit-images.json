@@ -23,16 +23,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -56,16 +58,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -89,16 +93,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -122,16 +128,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -155,16 +163,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -188,16 +198,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -221,16 +233,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -254,16 +268,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -287,16 +303,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -320,16 +338,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -353,16 +373,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -386,16 +408,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -419,16 +443,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -452,16 +478,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -485,16 +513,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -518,16 +548,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -551,16 +583,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -584,16 +618,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -617,16 +653,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -650,16 +688,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -683,16 +723,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -716,16 +758,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -749,16 +793,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -782,16 +828,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -815,16 +863,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -848,16 +898,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -881,16 +933,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -914,16 +968,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -947,16 +1003,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -980,16 +1038,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -1013,16 +1073,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     },
@@ -1046,16 +1108,18 @@
         "pixelContentChanged": false
       },
       "presentation": {
-        "mode": "foreground",
+        "mode": "background",
         "desktop": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.28,
+          "x": "-5%",
+          "y": "1%",
+          "opacity": 0.22
         },
         "phone": {
-          "scale": 1,
-          "x": "0px",
-          "y": "0px"
+          "scale": 1.14,
+          "x": "-4%",
+          "y": "1%",
+          "opacity": 0.18
         }
       }
     }

@@ -15,6 +15,7 @@ const reader=text('books/death-guard/reader.html'),targets=text('books/death-gua
 const amBuild=text('books/adeptus-mechanicus/tools/canonical-build-extension.mjs'),dgBuild=text('books/death-guard/tools/canonical-build-extension.mjs');
 const entries=Object.entries(manifest.units),ids=new Set(catalog.units.map(unit=>unit.id));
 const expectedWithoutArt=['unit-chaos-predator-destructor','unit-daemon-prince-of-nurgle','unit-daemon-prince-of-nurgle-with-wings','unit-foetid-bloat-drone-with-heavy-blight-launcher'];
+const expectedPresentation={mode:'background',desktop:{scale:1.28,x:'-5%',y:'1%',opacity:.22},phone:{scale:1.14,x:'-4%',y:'1%',opacity:.18}};
 
 assert.equal(manifest.schema,1);
 assert.equal(manifest.bookId,'death-guard');
@@ -27,6 +28,7 @@ assert.deepEqual([...catalog.units.map(unit=>unit.id).filter(id=>!manifest.units
 for(const [id,art] of entries){
   assert(ids.has(id),`${id}: canonical Datasheet missing`);
   assert.equal(art.processing.pixelContentChanged,false,`${id}: pixel freeze lost`);
+  assert.deepEqual(art.presentation,expectedPresentation,`${id}: shared background presentation contract`);
   const file=read(`books/death-guard/${art.asset}`);
   assert.equal(crypto.createHash('sha256').update(file).digest('hex'),art.sha256,`${id}: byte hash mismatch`);
   assert.equal(file.subarray(0,8).toString('hex'),'89504e470d0a1a0a',`${id}: not PNG`);
@@ -38,7 +40,8 @@ for(const [id,art] of entries){
 }
 
 assert.equal((reader.match(/class="unit-art"/g)||[]).length,0,'PHONE-1 shell contains rendered Datasheets');
-assert.equal((targets.match(/class=\\"unit-art\\"/g)||[]).length,32,'canonical target payload art count');
+assert.equal((targets.match(/class=\\"unit-art-background\\"/g)||[]).length,32,'canonical target payload background art count');
+assert.equal((targets.match(/class=\\"unit-art\\"/g)||[]).length,0,'foreground art returned');
 assert(reader.includes('../shared/unit-art.css?v=1'),'DG shared art CSS missing');
 assert(amBuild.includes("renderUnitArt({unit,unitImages,escape:esc})")&&dgBuild.includes("renderUnitArt({unit,unitImages,escape:esc})"),'shared renderer is not used by both books');
 assert(!amBuild.includes('const unitArt=')&&!dgBuild.includes('const unitArt='),'book-local art renderer returned');

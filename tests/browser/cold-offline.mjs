@@ -72,6 +72,20 @@ async function openPhonePopup(page,name){
   assert.equal(await trigger.evaluate(node=>node===document.activeElement),true,`${name} popup must restore focus`);
 }
 
+async function openOfflineStratagemsCommand(page,unitId){
+  const command=page.locator('[data-datasheet-command="stratagems"]');
+  await command.scrollIntoViewIfNeeded();
+  const before=await page.evaluate(()=>({scrollY,hash:location.hash}));
+  await command.click();
+  await page.waitForFunction(()=>{const layer=document.querySelector('.related-rules-layer');return !layer?.hidden&&layer.dataset.unitId&&layer.querySelector('[data-kind="stratagems"][aria-pressed="true"]');});
+  assert.equal(await page.locator('.related-rules-layer').getAttribute('data-unit-id'),unitId,'offline Stratagems command lost the mounted Datasheet context');
+  await page.locator('.related-rules-close').click();
+  await page.locator('.related-rules-layer').waitFor({state:'hidden'});
+  const after=await page.evaluate(()=>({scrollY,hash:location.hash}));
+  assert.equal(after.hash,before.hash,'offline Stratagems command changed the Datasheet hash');
+  assert.ok(Math.abs(after.scrollY-before.scrollY)<=1,'offline Stratagems command changed the Datasheet scroll position');
+}
+
 async function assertDarkAngelsLeaderJourney(page,leaderId,targetId){
   await page.goto(`${origin}/books/dark-angels/reader.html#${leaderId}`);
   const link=page.locator(`#${leaderId} [data-journey-target="${targetId}"]`);
@@ -169,6 +183,7 @@ try{
       await phoneUnit.waitFor({state:'visible'});
       assert.ok((await phoneUnit.textContent()).trim().length>100,`${book.name} responsive content is missing`);
       if(book.name==='Space Marines')assert.match(await phoneUnit.textContent(),/Wargear Options/);
+      if(book.name==='Adeptus Mechanicus')await openOfflineStratagemsCommand(page,book.unit);
       await openPhonePopup(page,book.name);
       assert.deepEqual(errors,[],`${book.name} emitted an uncaught runtime error`);
     }

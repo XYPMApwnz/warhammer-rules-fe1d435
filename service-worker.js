@@ -142,7 +142,7 @@ const APP_SHELL = [
   "./books/shared/roster-enhancements.js?v=3",
   "./books/death-guard/assets/icon-v4.svg",
   "./books/shared/styles/tokens.css?v=11",
-  "./books/shared/styles/layout.css?v=15",
+  "./books/shared/styles/layout.css?v=16",
   "./books/shared/styles/navigation.css?v=13",
   "./books/shared/styles/content.css?v=43",
   "./books/shared/styles/popups.css?v=19",
@@ -352,7 +352,7 @@ const APP_SHELL = [
   ,"./books/dark-angels/scripts/roster-filter.js?v=2"
   ,"./books/dark-angels/scripts/app.js?v=8"
   ,"./books/shared/modal-focus.js?v=1"
-  ,"./books/shared/army-related-rules.js?v=17"
+  ,"./books/shared/army-related-rules.js?v=18"
   ,"./books/shared/roster-context.js?v=3"
   ,"./books/shared/army-book-app.js?v=16"
   ,"./books/shared/offline-status.js?v=2"

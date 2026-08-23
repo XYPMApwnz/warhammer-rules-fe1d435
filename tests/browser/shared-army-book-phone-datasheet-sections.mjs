@@ -27,6 +27,9 @@ const server=createServer(async(request,response)=>{
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 const origin=`http://127.0.0.1:${server.address().port}`;
 const browser=await chromium.launch({channel:'chrome',headless:true});
+const relatedRulesSource=await readFile(path.join(root,'books/shared/army-related-rules.js'),'utf8');
+assert.equal((relatedRulesSource.match(/modal\.activate\(/g)||[]).length,1,'Related Rules must activate its modal exactly once per open path');
+assert.equal((relatedRulesSource.match(/document\.addEventListener\('click'/g)||[]).length,1,'Related Rules must use one delegated click listener');
 
 const waitForApp=page=>page.waitForFunction(()=>Boolean(window.DG_APP?.navigation&&window.WHArmyBookTargetMount));
 const waitForHash=(page,id)=>page.waitForFunction(target=>location.hash===`#${target}`,id);
@@ -38,7 +41,7 @@ const observe=page=>{
 };
 const unitIds=page=>page.evaluate(()=>window.WHArmyBookTargetMount.catalog.nodes.filter(node=>node.kind==='target'&&node.id.startsWith('unit-')).slice(0,2).map(node=>node.id));
 const navSnapshot=page=>page.evaluate(()=>{
-  const unit=document.querySelector('.document .unit-card'),nav=unit?.querySelector(':scope > .local-nav'),buttons=[...(nav?.querySelectorAll('[data-journey-target]')||[])];
+  const unit=document.querySelector('.document .unit-card'),nav=unit?.querySelector(':scope > .local-nav'),buttons=[...(nav?.querySelectorAll('[data-journey-target]')||[])],commands=[...(nav?.querySelectorAll('[data-datasheet-command]')||[])],navStyle=nav?getComputedStyle(nav):null,commandStyle=commands[0]?getComputedStyle(commands[0]):null;
   return{
     unitId:unit?.id||'',units:document.querySelectorAll('.document .unit-card').length,
     terminalOwners:[...document.querySelector('.document')?.children||[]].filter(node=>node.id).map(node=>node.id),
@@ -46,6 +49,8 @@ const navSnapshot=page=>page.evaluate(()=>{
     role:nav?.getAttribute('role')||'',label:nav?.getAttribute('aria-label')||'',position:nav?getComputedStyle(nav).position:'',
     targets:buttons.map(button=>button.dataset.journeyTarget),
     mapped:buttons.every(button=>{const target=document.getElementById(button.dataset.journeyTarget);return target?.matches('section.unit-part')&&target.closest('.unit-card')===unit;}),
+    commands:commands.map(button=>button.dataset.datasheetCommand),commandLast:commands.length===1&&nav.lastElementChild===commands[0],commandJourneyTargets:commands.filter(button=>button.hasAttribute('data-journey-target')).length,
+    navBackground:navStyle?.backgroundColor||'',navOpacity:navStyle?.opacity||'',commandMinHeight:commandStyle?parseFloat(commandStyle.minHeight):0,commandWeight:commandStyle?Number(commandStyle.fontWeight):0,commandBorder:commandStyle?.borderTopStyle||'',
     active:buttons.filter(button=>button.matches('.is-current,.is-active,[aria-current]')).length,
     overflow:document.documentElement.scrollWidth>window.innerWidth,
     hiddenTerminalContent:[...document.querySelectorAll('.document [data-track],.document .unit-card')].filter(node=>getComputedStyle(node).display==='none').length
@@ -72,7 +77,7 @@ const clickSection=async(page,id)=>{
 };
 const auditCoverage=page=>page.evaluate(async()=>{
   const ids=window.WHArmyBookTargetMount.catalog.nodes.filter(node=>node.kind==='target'&&node.id.startsWith('unit-')).map(node=>node.id);
-  const result={datasheets:ids.length,missing:[],orphan:[],duplicates:[],order:[],ownership:[],stratagemDatasheets:0,stratagemNavDatasheets:0,baseDatasheets:0};
+  const result={datasheets:ids.length,missing:[],orphan:[],duplicates:[],order:[],ownership:[],commands:[],stratagemDatasheets:0,stratagemNavDatasheets:0,baseDatasheets:0};
   for(const id of ids){
     window.WHArmyBookTargetMount.ensure(id);
     const unit=document.getElementById(id),nav=unit?.querySelector(':scope > .local-nav');
@@ -81,6 +86,7 @@ const auditCoverage=page=>page.evaluate(async()=>{
     for(const sectionId of sectionIds)if(!targetSet.has(sectionId))result.missing.push(`${id}:${sectionId}`);
     for(const target of targets)if(!sectionIds.includes(target))result.orphan.push(`${id}:${target}`);
     if(targetSet.size!==targets.length)result.duplicates.push(id);
+    const commands=[...nav.querySelectorAll('[data-datasheet-command="stratagems"]')];if(commands.length!==1||nav.lastElementChild!==commands[0]||commands[0].hasAttribute('data-journey-target'))result.commands.push(id);
     const statlines=[...unit.querySelectorAll('.statline')],bases=[...unit.querySelectorAll('.profile-base')],profile=sections.find(section=>section.id.endsWith('-profile'))||sections[0],before=(left,right)=>Boolean(left&&right&&(left.compareDocumentPosition(right)&Node.DOCUMENT_POSITION_FOLLOWING));
     if(!statlines.every(statline=>before(nav,statline)))result.order.push(id);
     const logicalOwner=node=>node.dataset.logicalOwner||node.closest('[data-logical-owner]')?.dataset.logicalOwner||'';
@@ -107,10 +113,26 @@ async function phoneBook(page,name,id){
   assert.equal(snapshot.label,'Datasheet sections',`${name}: nav accessible label missing`);
   assert.equal(snapshot.position,'sticky',`${name}: nav is not sticky`);
   assert.equal(snapshot.mapped,true,`${name}: orphan local-nav target`);
+  assert.deepEqual(snapshot.commands,['stratagems'],`${name}: Stratagems command missing or duplicated`);
+  assert.equal(snapshot.commandLast,true,`${name}: Stratagems command is not final`);
+  assert.equal(snapshot.commandJourneyTargets,0,`${name}: Stratagems command became a fake scroll target`);
+  assert.notEqual(snapshot.navBackground,'rgba(0, 0, 0, 0)',`${name}: sticky nav surface is transparent`);
+  assert.notEqual(snapshot.navBackground,'transparent',`${name}: sticky nav surface is transparent`);
+  assert.equal(snapshot.navOpacity,'1',`${name}: sticky nav surface is translucent`);
+  assert.ok(snapshot.commandMinHeight>=38,`${name}: Stratagems command tap affordance is too small`);
+  assert.ok(snapshot.commandWeight>=700,`${name}: sticky nav labels are too weak`);
+  assert.notEqual(snapshot.commandBorder,'none',`${name}: Stratagems command has no visible affordance`);
   assert.equal(snapshot.active,0,`${name}: persistent active state exists`);
   assert.equal(snapshot.overflow,false,`${name}: page horizontal overflow`);
   assert.equal(snapshot.hiddenTerminalContent,0,`${name}: unrelated terminal content is hidden instead of absent`);
   assert.ok(snapshot.targets.length>=2,`${name}: no useful section navigation`);
+  const command=page.locator('[data-datasheet-command="stratagems"]');await command.scrollIntoViewIfNeeded();
+  const commandBefore=await page.evaluate(()=>({scrollY,hash:location.hash,history:history.length,unitId:document.querySelector('.document .unit-card')?.id||''}));
+  await command.click();await page.waitForFunction(()=>{const layer=document.querySelector('.related-rules-layer');return !layer?.hidden&&layer.querySelector('[data-kind="stratagems"][aria-pressed="true"]');});
+  const commandOpen=await page.evaluate(()=>{const layer=document.querySelector('.related-rules-layer'),tab=layer?.querySelector('[data-kind="stratagems"]');return{scrollY,hash:location.hash,history:history.length,unitId:document.querySelector('.document .unit-card')?.id||'',dialogUnit:layer?.dataset.unitId||'',stratagemsPressed:tab?.getAttribute('aria-pressed')||'',fakeSection:document.querySelectorAll('.unit-part[data-datasheet-command],.unit-part[id$="-stratagems"]').length};});
+  assert.equal(commandOpen.hash,commandBefore.hash,`${name}: Stratagems command changed the hash`);assert.equal(commandOpen.history,commandBefore.history,`${name}: Stratagems command created history`);assert.ok(Math.abs(commandOpen.scrollY-commandBefore.scrollY)<=1,`${name}: Stratagems command scrolled the Datasheet`);assert.equal(commandOpen.unitId,first,`${name}: Stratagems command replaced the mounted Datasheet`);assert.equal(commandOpen.dialogUnit,first,`${name}: Related Rules lost the current Datasheet context`);assert.equal(commandOpen.stratagemsPressed,'true',`${name}: existing Stratagems tab was not activated`);assert.equal(commandOpen.fakeSection,0,`${name}: fake Datasheet-owned Stratagems section was created`);
+  await page.locator('.related-rules-close').click();await page.waitForFunction(()=>document.querySelector('.related-rules-layer')?.hidden===true);
+  const commandAfter=await page.evaluate(()=>({scrollY,hash:location.hash,unitId:document.querySelector('.document .unit-card')?.id||'',focusCommand:document.activeElement?.matches('[data-datasheet-command="stratagems"]')||false}));assert.equal(commandAfter.hash,commandBefore.hash,`${name}: closing Stratagems changed the hash`);assert.ok(Math.abs(commandAfter.scrollY-commandBefore.scrollY)<=1,`${name}: closing Stratagems changed Datasheet scroll`);assert.equal(commandAfter.unitId,first,`${name}: closing Stratagems changed the mounted Datasheet`);assert.equal(commandAfter.focusCommand,true,`${name}: Related Rules did not restore focus to the Stratagems command`);
   const structure=await structureSnapshot(page);
   assert.equal(structure.headBeforeNav,true,`${name}: Datasheet nav is not below the unit hero`);
   assert.equal(structure.navBeforeStatline,true,`${name}: Datasheet nav is not above the unit statline`);
@@ -141,6 +163,7 @@ async function phoneBook(page,name,id){
   assert.deepEqual(coverage.duplicates,[],`${name}: duplicate Phone nav targets`);
   assert.deepEqual(coverage.order,[],`${name}: Phone nav/statline order regression`);
   assert.deepEqual(coverage.ownership,[],`${name}: Profile ownership regression`);
+  assert.deepEqual(coverage.commands,[],`${name}: Stratagems command contract failed across canonical Datasheets`);
   assert.equal(coverage.stratagemNavDatasheets,coverage.stratagemDatasheets,`${name}: real Stratagems sections missing from Phone nav`);
   coverageTotals.datasheets+=coverage.datasheets;coverageTotals.stratagemDatasheets+=coverage.stratagemDatasheets;coverageTotals.stratagemNavDatasheets+=coverage.stratagemNavDatasheets;coverageTotals.baseDatasheets+=coverage.baseDatasheets;
   assert.deepEqual(observed.errors,[],`${name}: console errors`);assert.deepEqual(observed.failed,[],`${name}: failed requests`);

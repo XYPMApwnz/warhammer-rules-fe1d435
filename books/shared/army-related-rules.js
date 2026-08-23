@@ -101,10 +101,10 @@
       if(event.target===layer||event.target.closest('.related-rules-close'))close();
       const tab=event.target.closest('[data-kind]');if(tab){kind=tab.dataset.kind;filter();}
     });
-    async function open(current,state={}){
+    async function open(current,state={},origin=null){
       if(!current)return null;
       unit=current;layer.dataset.unitId=current.id;kind=options.restoreKind===false?'stratagems':state.kind||'stratagems';title.textContent=`${current.dataset.unitTitle||current.querySelector('.unit-name')?.textContent.trim()||current.querySelector('h3')?.textContent.trim()||'Datasheet'} · Compatible Stratagems & Enhancements`;
-      layer.hidden=false;document.documentElement.classList.add('related-rules-open');modal.activate(current.querySelector('.related-rules-trigger'));
+      layer.hidden=false;document.documentElement.classList.add('related-rules-open');modal.activate(origin||current.querySelector('.related-rules-trigger'));
       if(!content){
         try{
           await source?.load?.();
@@ -156,13 +156,19 @@
         const canonicalId=card.dataset.canonicalUnitId||String(card.id||'').replace(/--.*$/,'');
         if(source&&!source.hasUnit(canonicalId))continue;
         const keywords=[...card.querySelectorAll('.unit-part')].find(part=>part.id.endsWith('-keywords'));
-        if(!keywords||card.querySelector('.related-rules-trigger'))continue;
-        const button=document.createElement('button');button.type='button';button.className='related-rules-trigger';button.textContent=options.triggerLabel||'Stratagems & Enhancements';keywords.after(button);
+        if(!keywords)continue;
+        if(!card.querySelector('.related-rules-trigger')){
+          const button=document.createElement('button');button.type='button';button.className='related-rules-trigger';button.textContent=options.triggerLabel||'Stratagems & Enhancements';keywords.after(button);
+        }
+        const localNav=card.querySelector(':scope > .local-nav');
+        if(document.documentElement.dataset.view==='mobile'&&localNav&&!localNav.querySelector('[data-datasheet-command="stratagems"]')){
+          const command=document.createElement('button');command.type='button';command.className='local-tab datasheet-nav-command';command.dataset.datasheetCommand='stratagems';command.textContent='Stratagems';command.setAttribute('aria-haspopup','dialog');command.setAttribute('aria-label','Open compatible Stratagems for this Datasheet');localNav.append(command);
+        }
       }
       return rootNode;
     };
     enhance(document);
-    document.addEventListener('click',event=>{const button=event.target.closest('.related-rules-trigger');if(button)open(button.closest('.unit-card'));});
+    document.addEventListener('click',event=>{const command=event.target.closest('[data-datasheet-command="stratagems"]');if(command){event.preventDefault();open(command.closest('.unit-card'),{kind:'stratagems'},command);return;}const button=event.target.closest('.related-rules-trigger');if(button)open(button.closest('.unit-card'));});
     return{layer,close,open,enhance,snapshot(origin){if(layer.hidden||!layer.contains(origin))return null;const card=origin.closest('[data-rule-id]'),termId=origin.dataset.term||'',found=card&&termId?[...card.querySelectorAll(`[data-term="${CSS.escape(termId)}"]`)]:[];return{type:'related-rules',unitId:unit?.id||'',detachment,kind,scrollTop:body.scrollTop,ruleId:card?.dataset.ruleId||'',termId,occurrence:Math.max(0,found.indexOf(origin))};},async restore(state){const restoredUnit=document.getElementById(state?.unitId);if(!restoredUnit)return null;await open(restoredUnit,state);const card=layer.querySelector(`[data-rule-id="${CSS.escape(state.ruleId||'')}"]`),found=card&&state.termId?[...card.querySelectorAll(`[data-term="${CSS.escape(state.termId)}"]`)]:[];return found[state.occurrence]||found[0]||(source?restoredUnit.querySelector('.related-rules-trigger'):null);}};
   }
   root.WHArmyRelatedRules=Object.freeze({install,profile,match,matches,resolveRosterDetachmentIds,resolveRosterEnhancements,resolveRosterEnhancementPresentation});

@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import ruleFacts from '../books/shared/rule-facts.js';
+import {parseArmyBookTargetCatalog} from '../books/shared/tools/build-army-book-targets.mjs';
 await import('../books/shared/related-rules-matcher.js');
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..'),books=['death-guard','adeptus-mechanicus','tau-empire','emperors-children','tyranids','chaos-space-marines','space-marines','dark-angels','blood-angels'];
@@ -10,7 +11,7 @@ const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
 const decode=value=>value.replace(/&quot;/g,'"').replace(/&amp;/g,'&').replace(/&#39;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&#x([0-9a-f]+);/gi,(_,number)=>String.fromCodePoint(parseInt(number,16))).replace(/&#(\d+);/g,(_,number)=>String.fromCodePoint(Number(number)));
 const normalize=value=>ruleFacts.normalizeKeyword(value);
 function unitFacts(book){
-  const html=fs.readFileSync(path.join(root,'books',book,'reader.html'),'utf8'),facts=new Map();
+  const source=fs.readFileSync(path.join(root,'books',book,'scripts','target-data.js'),'utf8'),html=parseArmyBookTargetCatalog(source).html,facts=new Map();
   for(const match of html.matchAll(/data-rule-facts="([^"]+)"/g)){const value=JSON.parse(decode(match[1]));facts.set(value.id||value.unitId,value);}
   return facts;
 }

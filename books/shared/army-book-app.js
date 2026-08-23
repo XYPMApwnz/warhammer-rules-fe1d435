@@ -4,16 +4,13 @@
   function install(config){
     if(!config||typeof config.bookId!=='string'||!config.bookId)throw new TypeError('WHArmyBook requires a bookId.');
     const params=new URLSearchParams(location.search);
-    const phoneMode=params.get('view')==='mobile';
+    const phoneMode=(root.WHArmyBookView?.resolve?.()||params.get('view'))==='mobile';
     if(phoneMode)document.documentElement.dataset.view='mobile';
     else document.documentElement.removeAttribute('data-view');
     const runtimeContext=Object.freeze({root,config,params,phoneMode});
 
     const terms={...(root.WH40K_GLOSSARY?.forBook(config.bookId)||{}),...(root.DG_TERMS||{})};
     const documentRoot=document.querySelector('.document');
-    root.WHGlossaryAutolink?.apply(documentRoot,config.bookId);
-    root.WHGlossaryAutolink?.validate(documentRoot,terms);
-
     const navigation=new root.DGNavigation({breakpoint:phoneMode?Number.MAX_SAFE_INTEGER:800});
     const fullEntry=new root.DGFullEntry(root.WH40K_GLOSSARY);
     const popups=new root.DGPopups(terms,fullEntry);
@@ -31,7 +28,9 @@
       rosterRequested:params.has('roster')
     }):null;
     const journey=new root.DGJourney(navigation,popups,null,relatedRules);
-    new root.DGTableAccessibility();
+    const tableAccessibility=new root.DGTableAccessibility(null);
+    const extensions=config.extensions==null?[]:Array.isArray(config.extensions)?config.extensions:[config.extensions];
+    extensions.forEach(extension=>{if(typeof extension!=='function')throw new TypeError('WHArmyBook extensions must be functions.');});
 
     const rosterGuides=document.querySelector('[data-roster-guides]');
     const viewSwitch=document.querySelector('[data-view-switch]');
@@ -52,9 +51,25 @@
       viewSwitch.addEventListener('click',updateViewDestination);
     }
 
-    const app=Object.freeze({navigation,popups,fullEntry,journey,relatedRules,rosterContext});
+    let app=null;
+    const initializeRoot=mountRoot=>{
+      if(!mountRoot)return mountRoot;
+      root.WHArmyDatasheetLayout?.install(mountRoot);
+      root.WHGlossaryAutolink?.apply(mountRoot,config.bookId);
+      root.WHGlossaryAutolink?.validate(mountRoot,terms);
+      root.WH_ARMY_ROSTER_DECORATOR?.decorate(mountRoot);
+      relatedRules?.enhance?.(mountRoot);
+      tableAccessibility.apply(mountRoot);
+      extensions.forEach(extension=>extension(Object.freeze({...runtimeContext,app,mountRoot})));
+      navigation.scheduleGeometry();
+      return mountRoot;
+    };
+    app=Object.freeze({navigation,popups,fullEntry,journey,relatedRules,rosterContext,initializeRoot,targetMount:root.WHArmyBookTargetMount||null});
     root.WH_ARMY_BOOK_APP=app;
     root.DG_APP=app;
+    initializeRoot(documentRoot);
+    root.addEventListener('wh-army-target-before-mount',()=>{relatedRules?.close?.();popups.restore([],{focus:false});});
+    root.addEventListener('wh-army-target-mounted',event=>initializeRoot(event.detail?.root));
     root.WHPageState?.installArmyBook(app);
     const record=root.WHGlossaryReturn?.read();
     if(root.WHGlossaryReturn?.shouldRestoreAutomatically(record)&&record.popupIds?.length){
@@ -68,11 +83,6 @@
         });
       });
     }
-    const extensions=config.extensions==null?[]:Array.isArray(config.extensions)?config.extensions:[config.extensions];
-    extensions.forEach(extension=>{
-      if(typeof extension!=='function')throw new TypeError('WHArmyBook extensions must be functions.');
-      extension(Object.freeze({...runtimeContext,app}));
-    });
     return app;
   }
 

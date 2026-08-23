@@ -5,7 +5,7 @@
   if(!reader)return;
   const destination=new URL(reader,location.href);
   destination.search=location.search;
-  destination.searchParams.delete('view');
+  destination.searchParams.set('view','mobile');
   destination.hash=location.hash||root.dataset.canonicalTarget||'';
   if(destination.href!==location.href)location.replace(destination.href);
 }());

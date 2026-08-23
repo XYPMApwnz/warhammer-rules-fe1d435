@@ -45,7 +45,8 @@ const waitForTarget=(page,target)=>page.waitForFunction(id=>{
   const button=document.querySelector(`#tocTree [data-nav-target="${CSS.escape(id)}"]`);
   return location.hash===`#${id}`&&button?.classList.contains('is-current');
 },target);
-const firstContentTarget=page=>page.locator('#tocTree [data-nav-target]:not([data-nav-target="start"])').first().getAttribute('data-nav-target');
+const firstContentTarget=page=>page.evaluate(()=>window.WHArmyBookTargetMount.catalog.nodes.find(node=>node.kind==='target'&&node.id!=='start')?.id||'');
+const firstVisibleContentTarget=page=>page.locator('#tocTree [data-nav-target]:visible').evaluateAll(buttons=>buttons.find(button=>button.dataset.navTarget!=='start'&&window.WHArmyBookTargetMount.resolve(button.dataset.navTarget)?.node?.kind==='target')?.dataset.navTarget||'');
 const firstUnitTarget=page=>page.locator('#tocTree [data-nav-target^="unit-"]').first().getAttribute('data-nav-target');
 
 async function phoneContract(page,name,id){
@@ -121,7 +122,8 @@ async function desktopContract(page,name,id){
   assert.equal(await page.evaluate(()=>document.body.classList.contains('nav-collapsed')),true,`${name}: Desktop collapse failed`);
   await collapse.click();
   assert.equal(await page.evaluate(()=>document.body.classList.contains('nav-collapsed')),false,`${name}: Desktop expand failed`);
-  const target=await firstContentTarget(page);
+  await page.locator('#tocTree [data-nav-toggle]').first().click();
+  const target=await firstVisibleContentTarget(page);
   await page.locator(`#tocTree [data-nav-target="${target}"]`).click();
   await waitForTarget(page,target);
   await page.goBack();await waitForTarget(page,'start');

@@ -3,6 +3,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import ruleFacts from '../books/shared/rule-facts.js';
+import {parseArmyBookTargetCatalog} from '../books/shared/tools/build-army-book-targets.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const shared=fs.readFileSync(path.join(root,'books/shared/roster-entities.js'),'utf8');
@@ -15,6 +16,8 @@ const sharedRosterScope={console,URL,URLSearchParams};sharedRosterScope.window=s
 vm.runInNewContext(sharedRosterSource,sharedRosterScope,{filename:'books/shared/roster-context.js'});
 const sharedRosterApi=sharedRosterScope.WHArmyRosterContext;
 const rosterCatalogFor=bookId=>{const scope={};scope.window=scope;scope.globalThis=scope;vm.runInNewContext(fs.readFileSync(path.join(root,'books',bookId,'scripts','roster-data.js'),'utf8'),scope,{filename:`${bookId}/scripts/roster-data.js`});return scope.WH_BOOK_ROSTER_CATALOG;};
+const targetContentFor=bookId=>parseArmyBookTargetCatalog(fs.readFileSync(path.join(root,'books',bookId,'scripts','target-data.js'),'utf8')).html;
+const runtimeVersions=JSON.parse(fs.readFileSync(path.join(root,'books','shared','runtime-asset-versions.json'),'utf8'));
 const failures=[];
 const assert=(ok,message)=>{if(!ok)failures.push(message);};
 const walk=(value,visit)=>{
@@ -38,12 +41,13 @@ for(const bookId of supported){
   if(bookId==='adeptus-mechanicus'){
     const readerPath=path.join(bookRoot,'reader.html');
     const reader=fs.readFileSync(readerPath,'utf8');
+    const content=targetContentFor(bookId);
     const points=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','adeptus-mechanicus-points.en.json'),'utf8'));
     const codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','adeptus-mechanicus-codex-datasheets.en.json'),'utf8'));
     assert(points.units.length===34,'adeptus-mechanicus: points catalog is incomplete');
     assert(points.enhancements.length===34,'adeptus-mechanicus: Enhancement catalog is incomplete');
-    const unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
-    const enhancementTitles=new Set([...reader.matchAll(/data-enhancement-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
+    const unitTitles=new Set([...content.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
+    const enhancementTitles=new Set([...content.matchAll(/data-enhancement-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
     codex.datasheets.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`adeptus-mechanicus: unit ${unit.title} is absent from Roster Guide`));
     points.enhancements.forEach(item=>assert(enhancementTitles.has(entities.normalize(item.title)),`adeptus-mechanicus: Enhancement ${item.title} is absent from related rules`));
     const desktopApp=fs.readFileSync(path.join(bookRoot,'scripts','app.js'),'utf8');
@@ -66,8 +70,8 @@ for(const bookId of supported){
     continue;
   }
   if(bookId==='tyranids'){
-    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8'),points=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','tyranids-points.en.json'),'utf8')),codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','tyranids-codex-datasheets.en.json'),'utf8'));
-    const units=[...codex.datasheets,...codex.imperialArmour,...codex.legends],unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),enhancementTitles=new Set([...related.matchAll(/data-enhancement-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
+    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),content=targetContentFor(bookId),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8'),points=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','tyranids-points.en.json'),'utf8')),codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','tyranids-codex-datasheets.en.json'),'utf8'));
+    const units=[...codex.datasheets,...codex.imperialArmour,...codex.legends],unitTitles=new Set([...content.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),enhancementTitles=new Set([...related.matchAll(/data-enhancement-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
     assert(points.units.length===50,'tyranids: points catalog is incomplete');assert(points.enhancements.length===34,'tyranids: Enhancement catalog is incomplete');units.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`tyranids: unit ${unit.title} is absent from Roster Guide`));points.enhancements.forEach(item=>assert(enhancementTitles.has(entities.normalize(item.title)),`tyranids: Enhancement ${item.title} is absent from related rules`));
     const desktopRoster=fs.readFileSync(path.join(bookRoot,'scripts','roster-filter.js'),'utf8'),app=fs.readFileSync(path.join(bookRoot,'scripts','app.js'),'utf8'),stub=fs.readFileSync(path.join(bookRoot,'mobile','index.html'),'utf8');
     assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&/\.\/scripts\/app\.js\?v=\d+/.test(reader),'tyranids: roster or matrix controller is absent');assert(app.includes('shared/compatible-rules-matrix.mjs')&&app.includes('WHArmyBook.install'),'tyranids: shared matrix runtime is absent');
@@ -77,6 +81,7 @@ for(const bookId of supported){
   }
   if(bookId==='tau-empire'){
     const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8');
+    const content=targetContentFor(bookId);
     const related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8');
     const points=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','tau-empire-points.en.json'),'utf8'));
     const codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','tau-empire-codex-datasheets.en.json'),'utf8'));
@@ -87,7 +92,7 @@ for(const bookId of supported){
     vm.runInNewContext(fs.readFileSync(path.join(bookRoot,'scripts','roster-data.js'),'utf8'),rosterDataContext,{filename:'tau-roster-data.js'});
     const rosterCatalog=rosterDataContext.WH_BOOK_ROSTER_ENHANCEMENTS;
     const units=[...codex.datasheets,...codex.imperialArmour,...codex.legends];
-    const unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
+    const unitTitles=new Set([...content.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
     assert(points.units.length===39,'tau-empire: points catalog is incomplete');
     assert(points.enhancements.length===23,'tau-empire: Enhancement catalog is incomplete');
     units.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`tau-empire: unit ${unit.title} is absent from Roster Guide`));
@@ -103,14 +108,14 @@ for(const bookId of supported){
     const runtimeVersions=JSON.parse(fs.readFileSync(path.join(root,'books','shared','runtime-asset-versions.json'),'utf8'));
     assert(tauRoster.includes('WHArmyRosterContext.install({')&&(tauRoster.match(/WHArmyRosterContext\.install\(/g)||[]).length===1&&!tauRoster.includes("params.has('roster')")&&!tauRoster.includes('querySelectorAll')&&!tauRoster.includes('WHRosterEntities.loadoutIncludesProfile')&&reader.includes(`./scripts/roster-data.js?v=${runtimeVersions.shared.rosterCatalog}`)&&reader.includes(`../shared/roster-context.js?v=${runtimeVersions.shared.rosterContext}`),'tau-empire: shared roster filtering or canonical Enhancement projection is incomplete');
     const tauStub=fs.readFileSync(path.join(bookRoot,'mobile','index.html'),'utf8');
-    assert(!fs.existsSync(path.join(bookRoot,'mobile','mobile.js'))&&tauStub.includes('data-canonical-reader="../reader.html"')&&tauStub.includes('mobile-route-redirect.js?v=1')&&!tauStub.includes('unit-card'),'tau-empire: responsive reader or content-free compatibility route is incomplete');
+    assert(!fs.existsSync(path.join(bookRoot,'mobile','mobile.js'))&&tauStub.includes('data-canonical-reader="../reader.html"')&&tauStub.includes(`mobile-route-redirect.js?v=${runtimeVersions.shared.mobileRouteRedirect}`)&&!tauStub.includes('unit-card'),'tau-empire: responsive reader or content-free compatibility route is incomplete');
     assert(fs.existsSync(path.join(bookRoot,'mobile','related-rules.inc')),'tau-empire: Phone Mode related rules are absent');
     console.log(`PASS  tau-empire: ${points.units.length} units, ${points.enhancements.length} Enhancements, desktop/iPad + Phone Mode`);
     continue;
   }
   if(bookId==='emperors-children'){
-    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8'),codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','emperors-children-codex-datasheets.en.json'),'utf8')),owners=JSON.parse(fs.readFileSync(path.join(bookRoot,'sources','enhancement-owner-matrix.json'),'utf8'));
-    const units=[...(codex.datasheets||[])],unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),publishedOwners=Object.values(owners.enhancements).filter(item=>item.ownerGroup),enhancementIds=new Set([...related.matchAll(/data-rule-id="([^"]+)"/g)].map(match=>match[1]));
+    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),content=targetContentFor(bookId),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8'),codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','emperors-children-codex-datasheets.en.json'),'utf8')),owners=JSON.parse(fs.readFileSync(path.join(bookRoot,'sources','enhancement-owner-matrix.json'),'utf8'));
+    const units=[...(codex.datasheets||[])],unitTitles=new Set([...content.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),publishedOwners=Object.values(owners.enhancements).filter(item=>item.ownerGroup),enhancementIds=new Set([...related.matchAll(/data-rule-id="([^"]+)"/g)].map(match=>match[1]));
     assert(units.length===23,"emperors-children: datasheet catalog is incomplete");
     units.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`emperors-children: unit ${unit.title} is absent from Roster Guide`));
     publishedOwners.forEach(item=>assert(enhancementIds.has(Object.entries(owners.enhancements).find(([,value])=>value===item)[0]),`emperors-children: Enhancement ${item.title} is absent from related rules`));
@@ -122,8 +127,8 @@ for(const bookId of supported){
     continue;
   }
   if(bookId==='chaos-space-marines'){
-    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8'),codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','chaos-space-marines-codex-datasheets.en.json'),'utf8'));
-    const unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
+    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),content=targetContentFor(bookId),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8'),codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','chaos-space-marines-codex-datasheets.en.json'),'utf8'));
+    const unitTitles=new Set([...content.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
     assert(codex.datasheets.length===54,'chaos-space-marines: current Datasheet catalog is incomplete');
     assert(codex.legends.length===53,'chaos-space-marines: Legends inventory changed');
     codex.datasheets.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`chaos-space-marines: unit ${unit.title} is absent from Roster Guide`));
@@ -137,19 +142,19 @@ for(const bookId of supported){
     continue;
   }
   if(bookId==='space-marines'){
-    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),mobile=fs.readFileSync(path.join(bookRoot,'mobile','index.html'),'utf8'),points=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','space-marines-points.en.json'),'utf8'));
-    const unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
+    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),content=targetContentFor(bookId),mobile=fs.readFileSync(path.join(bookRoot,'mobile','index.html'),'utf8'),points=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','space-marines-points.en.json'),'utf8'));
+    const unitTitles=new Set([...content.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1])));
     assert(points.units.filter(unit=>unit.status==='Current').length===101,'space-marines: current Datasheet catalog is incomplete');
     assert(unitTitles.size===101,'space-marines: roster must expose the existing 101 current Datasheets');
-    assert((reader.match(/<section class="content-group detachment"/g)||[]).length===23,'space-marines: roster must expose the existing 23 Detachments');
+    assert((content.match(/<section class="content-group detachment"/g)||[]).length===23,'space-marines: roster must expose the existing 23 Detachments');
     assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader),'space-marines: Desktop roster filter is absent');
-    assert(mobile.includes('mobile-route-redirect.js?v=1')&&mobile.includes('data-canonical-reader="../reader.html"'),'space-marines: legacy Phone route does not hand roster state to the canonical reader');
+    assert(mobile.includes(`mobile-route-redirect.js?v=${runtimeVersions.shared.mobileRouteRedirect}`)&&mobile.includes('data-canonical-reader="../reader.html"'),'space-marines: legacy Phone route does not hand roster state to the canonical reader');
     console.log('PASS  space-marines: 101 current units, 23 Detachments, desktop/iPad + Phone routes');continue;
   }
   if(bookId==='blood-angels'){
-    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8');
+    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),content=targetContentFor(bookId),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8');
     const codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','blood-angels-codex-datasheets.en.json'),'utf8'));
-    const unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),localTitles=new Set(codex.datasheets.map(unit=>entities.normalize(unit.title)));
+    const unitTitles=new Set([...content.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),localTitles=new Set(codex.datasheets.map(unit=>entities.normalize(unit.title)));
     assert(codex.datasheets.length===15,'blood-angels: local Datasheet catalog is incomplete');
     assert(unitTitles.size===97,'blood-angels: expected 15 local + 82 shared Datasheets');
     codex.datasheets.forEach(unit=>assert(unitTitles.has(entities.normalize(unit.title)),`blood-angels: local unit ${unit.title} is absent from Roster Guide`));
@@ -161,9 +166,9 @@ for(const bookId of supported){
     continue;
   }
   if(bookId==='dark-angels'){
-    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8'),codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','dark-angels-codex-datasheets.en.json'),'utf8'));
-    const unitTitles=new Set([...reader.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),localTitles=new Set(codex.datasheets.map(unit=>entities.normalize(unit.title)));
-    assert(codex.datasheets.length===16,'dark-angels: local Datasheet catalog is incomplete');assert(unitTitles.size===98,'dark-angels: expected 16 local + 82 shared Datasheets');assert([...unitTitles].filter(title=>!localTitles.has(title)).length===82,'dark-angels: shared Space Marines roster inventory changed');assert((reader.match(/<section class="content-group detachment"/g)||[]).length===24,'dark-angels: roster must expose 8 local + 16 shared Detachments');assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&related.includes('1st-company-task-force-armour-of-contempt'),'dark-angels: roster or shared Compatible Rules inventory is absent');
+    const reader=fs.readFileSync(path.join(bookRoot,'reader.html'),'utf8'),content=targetContentFor(bookId),related=fs.readFileSync(path.join(bookRoot,'mobile','related-rules.inc'),'utf8'),codex=JSON.parse(fs.readFileSync(path.join(bookRoot,'content','dark-angels-codex-datasheets.en.json'),'utf8'));
+    const unitTitles=new Set([...content.matchAll(/data-unit-title="([^"]+)"/g)].map(match=>entities.normalize(match[1]))),localTitles=new Set(codex.datasheets.map(unit=>entities.normalize(unit.title)));
+    assert(codex.datasheets.length===16,'dark-angels: local Datasheet catalog is incomplete');assert(unitTitles.size===98,'dark-angels: expected 16 local + 82 shared Datasheets');assert([...unitTitles].filter(title=>!localTitles.has(title)).length===82,'dark-angels: shared Space Marines roster inventory changed');assert((content.match(/<section class="content-group detachment"/g)||[]).length===24,'dark-angels: roster must expose 8 local + 16 shared Detachments');assert(/\.\/scripts\/roster-filter\.js\?v=\d+/.test(reader)&&related.includes('1st-company-task-force-armour-of-contempt'),'dark-angels: roster or shared Compatible Rules inventory is absent');
     console.log('PASS  dark-angels: 16 local + 82 shared units, 8 local + 16 shared Detachments');continue;
   }
   const dataPath=path.join(bookRoot,'content',`${bookId}-rules.en.json`);
@@ -176,6 +181,7 @@ for(const bookId of supported){
 
   const data=JSON.parse(fs.readFileSync(dataPath,'utf8'));
   const reader=fs.readFileSync(readerPath,'utf8');
+  const content=targetContentFor(bookId);
   const related=fs.readFileSync(relatedPath,'utf8');
   const inventory={units:[],weapons:[],abilities:[],detachments:[],enhancements:[],stratagems:[],coreStratagems:[]};
   for(const section of data.sections||[]){
@@ -192,14 +198,14 @@ for(const bookId of supported){
   });
   inventory.coreStratagems=[...related.matchAll(/id="core-stratagem-[^"]+"/g)];
 
-  inventory.units.forEach(unit=>assert(reader.includes(`id="${unit.id}"`),`${bookId}: unit ${unit.id} is absent from Roster Guide`));
+  inventory.units.forEach(unit=>assert(content.includes(`id="${unit.id}"`),`${bookId}: unit ${unit.id} is absent from Roster Guide`));
   inventory.weapons.forEach(weapon=>{
-    assert(reader.includes(`data-term="${weapon.termId}"`),`${bookId}: weapon ${weapon.name} is absent from Roster Guide`);
+    assert(content.includes(`data-term="${weapon.termId}"`),`${bookId}: weapon ${weapon.name} is absent from Roster Guide`);
     const family=entities.weaponFamily(weapon.name);
     assert(entities.loadoutIncludesProfile([family],weapon.name),`${bookId}: loadout ${family} drops profile ${weapon.name}`);
   });
-  inventory.abilities.filter(ability=>ability.id).forEach(ability=>assert(reader.includes(`id="${ability.id}"`),`${bookId}: ability ${ability.id} is absent from Roster Guide`));
-  inventory.detachments.forEach(detachment=>assert(reader.includes(`id="${detachment.id}"`),`${bookId}: detachment ${detachment.id} is absent from Roster Guide`));
+  inventory.abilities.filter(ability=>ability.id).forEach(ability=>assert(content.includes(`id="${ability.id}"`),`${bookId}: ability ${ability.id} is absent from Roster Guide`));
+  inventory.detachments.forEach(detachment=>assert(content.includes(`id="${detachment.id}"`),`${bookId}: detachment ${detachment.id} is absent from Roster Guide`));
   [...inventory.enhancements,...inventory.stratagems].filter(entity=>entity.id).forEach(entity=>assert(related.includes(`id="${entity.id}"`),`${bookId}: ${entity.type} ${entity.id} is absent from related rules`));
   assert(inventory.coreStratagems.length>0,`${bookId}: Core Stratagems are absent from related rules`);
   console.log(`PASS  ${bookId}: ${inventory.units.length} units, ${inventory.weapons.length} weapon profiles, ${inventory.abilities.length} abilities, ${inventory.detachments.length} detachments, ${inventory.enhancements.length} enhancements, ${inventory.stratagems.length} faction + ${inventory.coreStratagems.length} core stratagems`);
@@ -226,7 +232,7 @@ assert(rosterGuideApp.includes("'death guard':'../books/death-guard/index.html'"
 assert(dgProjection.context.units[0].instanceId==='dg-physical-1'&&dgProjection.context.enhancements[0].owner.instanceId==='dg-physical-1'&&mobileRouteRedirect.includes('destination.search=location.search')&&!dgRosterFilter.includes('history.replaceState')&&!dgRosterFilter.includes('querySelectorAll'),'Death Guard shared roster projection does not preserve physical-instance or responsive query identity');
 assert(dgRosterSemantics.includes("{detachment:'shamblerot-vectorium', units:['poxwalkers'], id:'keyword-battleline', title:'BATTLELINE'}"),'Shamblerot Vectorium grant is absent from the Death Guard semantic runtime');
 assert(dgRosterSemantics.includes("'foetid-bloat-drone-with-heavy-blight-launcher','helbrute','myphitic-blight-hauler'"),'Contagion Engines grant owners are incomplete');
-assert(dgRosterSemantics.includes('addKeywords(KEYWORD_GRANTS.filter')&&dgRosterFilter.includes('keywordProfile({unit},base)')&&dgRosterFilter.includes('semantics.decorate?.(')&&!dgRosterFilter.includes('WHArmyRosterContext.project(')&&!fs.existsSync(path.join(root,'books/death-guard/mobile/mobile.js'))&&dgPhoneStub.includes('mobile-route-redirect.js?v=1'),'Roster keyword rendering does not use the thin Death Guard provider over shared projection');
+assert(dgRosterSemantics.includes('addKeywords(KEYWORD_GRANTS.filter')&&dgRosterFilter.includes('keywordProfile({unit},base)')&&dgRosterFilter.includes('semantics.decorate?.(')&&!dgRosterFilter.includes('WHArmyRosterContext.project(')&&!fs.existsSync(path.join(root,'books/death-guard/mobile/mobile.js'))&&dgPhoneStub.includes(`mobile-route-redirect.js?v=${runtimeVersions.shared.mobileRouteRedirect}`),'Roster keyword rendering does not use the thin Death Guard provider over shared projection');
 
 assert(sharedRosterApi.install({catalog:amCatalog,roster:null})===null&&amRosterFilter.includes('WHArmyRosterContext.install({')&&!amRosterFilter.includes('location.replace(')&&!amRosterFilter.includes('querySelectorAll')&&!fs.existsSync(path.join(root,'books/adeptus-mechanicus/mobile/mobile.js'))&&amPhoneStub.includes('data-canonical-reader="../reader.html"')&&!amPhoneStub.includes('unit-card'),'Mechanicus no-roster shared projection or single-reader contract regressed');
 
@@ -255,7 +261,7 @@ for(const bookId of rosterCompatibleBooks){
     const semanticEngine=bookId==='death-guard'?/\.\/scripts\/roster-semantics\.js\?v=\d+/:bookId==='adeptus-mechanicus'?/\.\/scripts\/roster-enhancements\.js\?v=\d+/:/\.\.\/shared\/book-roster-enhancements\.js\?v=\d+/;
     assert(semanticEngine.test(reader),`${bookId}: canonical reader does not load its roster semantic engine`);
     assert(!fs.existsSync(path.join(root,`books/${bookId}/mobile/mobile.js`)),`${bookId}: obsolete Phone roster runtime still exists`);
-    assert(stub.includes('mobile-route-redirect.js?v=1')&&stub.includes('data-canonical-reader="../reader.html"')&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(stub),`${bookId}: legacy Phone route is not a content-free canonical-reader stub`);
+    assert(stub.includes(`mobile-route-redirect.js?v=${runtimeVersions.shared.mobileRouteRedirect}`)&&stub.includes('data-canonical-reader="../reader.html"')&&!/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/.test(stub),`${bookId}: legacy Phone route is not a content-free canonical-reader stub`);
     continue;
   }
   const phone=fs.readFileSync(path.join(root,`books/${bookId}/mobile/mobile.js`),'utf8');

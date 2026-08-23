@@ -150,14 +150,20 @@
       modal.focusFirst();
       return layer;
     }
-    for(const card of document.querySelectorAll('.unit-card')){
-      if(source&&!source.hasUnit(card.id))continue;
-      const keywords=[...card.querySelectorAll('.unit-part')].find(part=>part.id.endsWith('-keywords'));
-      if(!keywords)continue;
-      const button=document.createElement('button');button.type='button';button.className='related-rules-trigger';button.textContent=options.triggerLabel||'Stratagems & Enhancements';keywords.after(button);
-    }
+    const enhance=rootNode=>{
+      const cards=[...(rootNode?.matches?.('.unit-card')?[rootNode]:[]),...rootNode?.querySelectorAll?.('.unit-card')||[]];
+      for(const card of cards){
+        const canonicalId=card.dataset.canonicalUnitId||String(card.id||'').replace(/--.*$/,'');
+        if(source&&!source.hasUnit(canonicalId))continue;
+        const keywords=[...card.querySelectorAll('.unit-part')].find(part=>part.id.endsWith('-keywords'));
+        if(!keywords||card.querySelector('.related-rules-trigger'))continue;
+        const button=document.createElement('button');button.type='button';button.className='related-rules-trigger';button.textContent=options.triggerLabel||'Stratagems & Enhancements';keywords.after(button);
+      }
+      return rootNode;
+    };
+    enhance(document);
     document.addEventListener('click',event=>{const button=event.target.closest('.related-rules-trigger');if(button)open(button.closest('.unit-card'));});
-    return{layer,close,open,snapshot(origin){if(layer.hidden||!layer.contains(origin))return null;const card=origin.closest('[data-rule-id]'),termId=origin.dataset.term||'',found=card&&termId?[...card.querySelectorAll(`[data-term="${CSS.escape(termId)}"]`)]:[];return{type:'related-rules',unitId:unit?.id||'',detachment,kind,scrollTop:body.scrollTop,ruleId:card?.dataset.ruleId||'',termId,occurrence:Math.max(0,found.indexOf(origin))};},async restore(state){const restoredUnit=document.getElementById(state?.unitId);if(!restoredUnit)return null;await open(restoredUnit,state);const card=layer.querySelector(`[data-rule-id="${CSS.escape(state.ruleId||'')}"]`),found=card&&state.termId?[...card.querySelectorAll(`[data-term="${CSS.escape(state.termId)}"]`)]:[];return found[state.occurrence]||found[0]||(source?restoredUnit.querySelector('.related-rules-trigger'):null);}};
+    return{layer,close,open,enhance,snapshot(origin){if(layer.hidden||!layer.contains(origin))return null;const card=origin.closest('[data-rule-id]'),termId=origin.dataset.term||'',found=card&&termId?[...card.querySelectorAll(`[data-term="${CSS.escape(termId)}"]`)]:[];return{type:'related-rules',unitId:unit?.id||'',detachment,kind,scrollTop:body.scrollTop,ruleId:card?.dataset.ruleId||'',termId,occurrence:Math.max(0,found.indexOf(origin))};},async restore(state){const restoredUnit=document.getElementById(state?.unitId);if(!restoredUnit)return null;await open(restoredUnit,state);const card=layer.querySelector(`[data-rule-id="${CSS.escape(state.ruleId||'')}"]`),found=card&&state.termId?[...card.querySelectorAll(`[data-term="${CSS.escape(state.termId)}"]`)]:[];return found[state.occurrence]||found[0]||(source?restoredUnit.querySelector('.related-rules-trigger'):null);}};
   }
   root.WHArmyRelatedRules=Object.freeze({install,profile,match,matches,resolveRosterDetachmentIds,resolveRosterEnhancements,resolveRosterEnhancementPresentation});
 }(window));

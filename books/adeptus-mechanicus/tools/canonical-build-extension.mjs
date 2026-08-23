@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {createAdeptusMechanicusCanonicalModel} from './canonical-source-adapter.mjs';
 import {createRosterCatalog,serializeRosterCatalog} from '../../shared/tools/build-roster-catalog.mjs';
+import {createArmyBookTargetBuild} from '../../shared/tools/build-army-book-targets.mjs';
 
 export async function buildCanonicalBook(context){
 const {root,repo,config,runtimeVersions}=context;
@@ -241,15 +242,15 @@ const releaseHtml=html
   .replace('../../glossary/generated/glossary.en.js"','../../glossary/generated/glossary.en.js?v=tyranids-1"')
   .replace('<script src="../shared/navigation-targets.js', '<script src="../../glossary-return.js?v=3"></script><script src="../shared/navigation-targets.js')
   .replace('../shared/glossary-autolink.js?v=7','../shared/glossary-autolink.js?v=8')
-  .replace('<script src="./scripts/faction-ui.js?v=1"></script>',`<script src="./scripts/faction-ui.js?v=1"></script><script src="../shared/rule-facts.js?v=${runtimeVersions.shared.ruleFacts}"></script><script src="../shared/modal-focus.js?v=1"></script><script src="../shared/army-related-rules.js?v=${runtimeVersions.shared.relatedRules}"></script><script src="../shared/roster-context.js?v=${runtimeVersions.shared.rosterContext}"></script><script src="../shared/offline-status.js?v=${runtimeVersions.shared.offlineStatus}" data-service-worker="../../service-worker.js"></script><script src="../shared/army-book-app.js?v=${runtimeVersions.shared.armyBook}"></script>`)
+  .replace('<script src="./scripts/faction-ui.js?v=1"></script>',`<script src="./scripts/faction-ui.js?v=${config.assetVersions.factionUi}"></script><script src="../shared/rule-facts.js?v=${runtimeVersions.shared.ruleFacts}"></script><script src="../shared/modal-focus.js?v=1"></script><script src="../shared/army-related-rules.js?v=${runtimeVersions.shared.relatedRules}"></script><script src="../shared/roster-context.js?v=${runtimeVersions.shared.rosterContext}"></script><script src="../shared/offline-status.js?v=${runtimeVersions.shared.offlineStatus}" data-service-worker="../../service-worker.js"></script><script src="../shared/army-book-app.js?v=${runtimeVersions.shared.armyBook}"></script>`)
   .replace('./scripts/roster-filter.js?v=7',`./scripts/roster-filter.js?v=${config.assetVersions.rosterFilter}`)
   .replace('popup-controller.js?v=18','popup-controller.js?v=21')
-  .replace('ui-controllers.js?v=13','ui-controllers.js?v=14')
   .replace('app.js?v=41',`app.js?v=${config.assetVersions.app}`);
+const targetBuild=createArmyBookTargetBuild(releaseHtml,{runtimeVersions});
 const entryHtml=`<!doctype html>
-<html lang="en" data-canonical-reader="./reader.html" data-canonical-target="start"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Adeptus Mechanicus Rules</title><script src="../shared/mobile-route-redirect.js?v=1"></script></head><body><noscript><a href="./reader.html#start">Open Adeptus Mechanicus Rules</a></noscript></body></html>\n`;
+<html lang="en" data-canonical-reader="./reader.html" data-canonical-target="start"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Adeptus Mechanicus Rules</title><script src="../shared/mobile-route-redirect.js?v=${runtimeVersions.shared.mobileRouteRedirect}"></script></head><body><noscript><a href="./reader.html#start">Open Adeptus Mechanicus Rules</a></noscript></body></html>\n`;
 const rosterDataJs=serializeRosterCatalog(createRosterCatalog({config,units:rules.datasheets,detachments:allDetachments,relationGraphs}));
-const outputs=new Map([['index.html',entryHtml],['reader.html',releaseHtml],['scripts/data.js',dataJs],['scripts/roster-data.js',rosterDataJs]]);
+const outputs=new Map([['index.html',entryHtml],['reader.html',targetBuild.readerHtml],['scripts/data.js',dataJs],['scripts/target-data.js',targetBuild.targetDataJs],['scripts/roster-data.js',rosterDataJs]]);
 
 if(/data-term="[^"]*</i.test(html))throw new Error('Generated data-term attributes must never contain markup');
 for(const match of html.matchAll(/data-term="([^"]+)"/g))if(!termIds.has(match[1]))throw new Error(`Generated page references unknown term: ${match[1]}`);

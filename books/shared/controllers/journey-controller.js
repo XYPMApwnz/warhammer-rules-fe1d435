@@ -21,8 +21,8 @@
     }
 
     ensureId(element,prefix){if(!element.id)element.id=prefix+'-'+(++this.sequence);return element.id;}
-    start(trigger,targetId,type){
-      const target=document.getElementById(targetId);if(!target)return;
+    async start(trigger,targetId,type){
+      if(!this.navigation.canResolveTarget(targetId))return;
       const triggerId=this.ensureId(trigger,'journey-trigger');
       const root=this.popups.rootElement();if(root)this.ensureId(root,'journey-popup-root');
       const overlay=this.overlay?.snapshot?.(root)||null;
@@ -53,6 +53,8 @@
       this.backButton.hidden=false;
       if(overlay)this.overlay.close();
       this.popups.restore([],{focus:false});
+      await this.navigation.ensureTarget(targetId);
+      const target=document.getElementById(targetId);if(!target)return;
       const unit=target.closest('.unit-card');
       this.navigation.navigate(unit?.id||targetId,target);
     }

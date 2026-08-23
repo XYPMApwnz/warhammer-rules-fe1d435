@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {parseArmyBookTargetCatalog} from '../books/shared/tools/build-army-book-targets.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const books = [
@@ -28,7 +29,9 @@ function matches(text, pattern) {
 }
 
 for (const [bookId, expectsBase] of books) {
-  const html = read(`books/${bookId}/reader.html`);
+  const shell = read(`books/${bookId}/reader.html`);
+  const content = parseArmyBookTargetCatalog(read(`books/${bookId}/scripts/target-data.js`)).html;
+  const html = shell + content;
   const label = `[${bookId}]`;
   const ids = matches(html, /\sid="([^"]+)"/g).map(match => match[1]);
   const viewSwitches = matches(html, /<a\b[^>]*\bdata-view-switch\b[^>]*>/g);
@@ -68,7 +71,7 @@ const sharedLayout = read('books/shared/styles/layout.css');
 const dgApp = read('books/death-guard/scripts/app.js');
 const smRoster = read('books/space-marines/scripts/roster-filter.js');
 const daApp = read('books/dark-angels/scripts/app.js');
-const dgReader = read('books/death-guard/reader.html');
+const dgReader = parseArmyBookTargetCatalog(read('books/death-guard/scripts/target-data.js')).html;
 
 assert(!armyBookApp.includes('config.dedicatedMobile'), '[shared] view switch still branches through dedicated Mobile routes');
 assert(viewRouter.includes("new URL('./reader.html'"), '[shared] view router does not retain canonical reader');

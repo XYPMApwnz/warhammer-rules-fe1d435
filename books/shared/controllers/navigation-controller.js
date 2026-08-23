@@ -2,8 +2,9 @@
   'use strict';
 
   class NavigationController{
-    constructor({breakpoint=800,trackingGap=18,epsilon=1}={}){
+    constructor({breakpoint=800,resizeCleanupBreakpoint=800,trackingGap=18,epsilon=1}={}){
       this.breakpoint=breakpoint;
+      this.resizeCleanupBreakpoint=resizeCleanupBreakpoint;
       this.trackingGap=trackingGap;
       this.epsilon=epsilon;
 
@@ -31,12 +32,11 @@
         const row=this.direct(node,'toc-row');
         const button=row?.querySelector('[data-nav-target]');
         const id=button?.dataset.navTarget||'';
-        const section=id?document.querySelector('[data-track="'+id+'"]'):null;
         return{
-          id,node,row,button,section,
+          id,node,row,button,
           depth:Number(node.dataset.navDepth)
         };
-      }).filter(item=>item.id&&item.button&&item.section);
+      }).filter(item=>item.id&&item.button);
       this.byId=new Map(this.items.map(item=>[item.id,item]));
 
       this.bind();
@@ -56,6 +56,10 @@
     get active(){return this.state.active||'start';}
 
     direct(node,className){return[...node.children].find(child=>child.classList.contains(className))||null;}
+    targetKind(id){return window.WHArmyBookTargetMount?.resolve(id)?.node?.kind||'';}
+    canResolveTarget(id){return Boolean(document.getElementById(id)||window.WHArmyBookTargetMount?.resolve(id)?.ownerId);}
+    ensureTarget(id){return Promise.resolve(window.WHArmyBookTargetMount?.ensure(id)||document.getElementById(id)||null);}
+    sectionFor(item){return item?document.getElementById(item.id):null;}
     branch(node){return this.direct(node,'toc-branch');}
     parentNode(node){const list=node.parentElement;return list?.classList.contains('toc-branch')?list.parentElement:null;}
     toggle(node){return this.direct(node,'toc-row')?.querySelector('[data-nav-toggle]')||null;}
@@ -70,6 +74,7 @@
         if(!label||!this.tree.contains(label))return;
         event.preventDefault();
         const node=label.closest('[data-nav-id]');
+        if(this.mobile&&this.targetKind(label.dataset.navTarget)==='branch'){this.toggleBranch(node);return;}
         if(label.dataset.navTarget==='start')this.closeEveryBranch();
         else this.revealPath(node,{includeSelf:true});
         this.go(label.dataset.navTarget,{historyMode:'push'});
@@ -181,12 +186,13 @@
       else if(event.shiftKey&&active===menu){event.preventDefault();last.focus();}
     }
     handleResize(){
+      const crossedCleanupBreakpoint=(this.viewportWidth<=this.resizeCleanupBreakpoint)!==(window.innerWidth<=this.resizeCleanupBreakpoint);
       const widthChanged=Math.abs(window.innerWidth-this.viewportWidth)>1;
       this.viewportWidth=window.innerWidth;
       if(widthChanged&&this.state.owner==='controller')this.cancelTransition();
       const focusWasInPanel=this.panel.contains(document.activeElement);
       const mobile=window.innerWidth<=this.breakpoint;
-      if(mobile!==this.mobile){
+      if(mobile!==this.mobile||(crossedCleanupBreakpoint&&this.state.drawer)){
         this.mobile=mobile;this.state.drawer=false;if(mobile)this.state.collapsed=false;this.applyViewportState();
       }
       if(focusWasInPanel&&this.panel.getAttribute('aria-hidden')==='true')this.menuButton.focus({preventScroll:true});
@@ -230,9 +236,10 @@
       const scrollY=window.scrollY;
       this.geometry.headerBottom=this.header.getBoundingClientRect().bottom;
       this.geometry.ranges=this.items.map(item=>{
-        const rect=item.section.getBoundingClientRect(),leadingMargin=parseFloat(getComputedStyle(item.section).marginTop)||0;
+        const section=this.sectionFor(item);if(!section)return null;
+        const rect=section.getBoundingClientRect(),leadingMargin=parseFloat(getComputedStyle(section).marginTop)||0;
         return{item,top:scrollY+rect.top-leadingMargin,bottom:scrollY+rect.bottom,measurable:rect.width>0||rect.height>0};
-      });
+      }).filter(Boolean);
       this.readViewport();
     }
     descendsFrom(item,ancestor){
@@ -279,8 +286,11 @@
       if(this.frames.hash)return;
       this.frames.hash=requestAnimationFrame(()=>{this.frames.hash=0;this.navigateHash();});
     }
-    navigateHash(){
-      const target=document.getElementById(this.hashTarget());if(!target)return false;
+    async navigateHash(){
+      const id=this.hashTarget()||'start';
+      if(this.mobile&&this.targetKind(id)==='branch'){const item=this.byId.get(id);if(item)this.revealPath(item.node,{includeSelf:true});return false;}
+      await this.ensureTarget(id);
+      const target=document.getElementById(id);if(!target)return false;
       this.refreshGeometry();const unit=target.closest('.unit-card');this.navigate(unit?.id||target.id,target);return true;
     }
     hashTarget(){return decodeURIComponent(location.hash.slice(1));}
@@ -310,13 +320,13 @@
       if(detail.restore)this.restore(detail.restore.id,detail.restore.scrollY);
       else if(changed)this.scheduleHashRestore();
     }
-    go(id,{historyMode='none'}={}){const item=this.byId.get(id);if(!item)return;this.setDrawer(false);if(historyMode==='push')this.commitTarget(id);this.navigate(id,item.section);}
+    async go(id,{historyMode='none'}={}){const item=this.byId.get(id);if(!item)return;if(this.mobile&&this.targetKind(id)==='branch'){this.toggleBranch(item.node);return;}await this.ensureTarget(id);const section=this.sectionFor(item);if(!section)return;this.setDrawer(false);if(historyMode==='push')this.commitTarget(id);this.navigate(id,section);}
     navigate(id,element,settled){
       const targets=window.WHNavigationTargets.resolve(element);
       if(!targets.scrollTarget)return;
       this.beginTransition(id,this.destination(targets.scrollTarget),()=>{this.highlighter.show(targets.highlightTarget);settled?.();});
     }
-    restore(id,scrollY,settled){this.beginTransition(id,Math.max(0,scrollY),settled);}
+    async restore(id,scrollY,settled){await this.ensureTarget(id);this.refreshGeometry();this.beginTransition(id,Math.max(0,scrollY),settled);}
     beginTransition(id,destination,settled){
       if(this.state.owner==='controller')this.stopControlledScroll();
       const token=++this.state.transition;this.state.owner='controller';this.activate(id,{behavior:'auto'});

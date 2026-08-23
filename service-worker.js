@@ -71,7 +71,8 @@ const APP_SHELL = [
   DEATH_GUARD_FALLBACK,
   "./books/death-guard/reader.html",
   "./books/shared/styles/entry.css?v=2",
-  "./books/shared/controllers/view-router.js?v=3",  './books/death-guard/mobile/beasts-of-nurgle.html',
+  "./books/shared/controllers/view-router.js?v=4",
+  './books/death-guard/mobile/beasts-of-nurgle.html',
   './books/death-guard/mobile/great-unclean-one.html',
   './books/death-guard/mobile/nurglings.html',
   './books/death-guard/mobile/plague-drones.html',
@@ -85,10 +86,11 @@ const APP_SHELL = [
 
   "./books/death-guard/mobile/index.html",
   "./books/death-guard/mobile/related-rules.inc?v=4",
-  "./books/shared/mobile-route-redirect.js?v=1",
+  "./books/shared/mobile-route-redirect.js?v=2",
   "./books/shared/navigation-targets.js?v=1",
   "./books/shared/popup-rule-actions.js?v=1",
-  "./books/shared/datasheet-layout.js?v=7",
+  "./books/shared/datasheet-layout.js?v=8",
+  "./books/shared/target-mount.js?v=1",
   "./books/shared/datasheet-system.css?v=8",
   "./books/shared/popup-content.js?v=3",
   "./books/shared/glossary-autolink.js?v=8",
@@ -144,14 +146,15 @@ const APP_SHELL = [
   "./books/shared/styles/navigation.css?v=13",
   "./books/shared/styles/content.css?v=42",
   "./books/shared/styles/popups.css?v=19",
-  "./books/shared/controllers/navigation-controller.js?v=17",
+  "./books/shared/controllers/navigation-controller.js?v=19",
   "./books/death-guard/scripts/roster-semantics.js?v=2",
   "./books/death-guard/scripts/roster-data.js?v=3",
+  "./books/death-guard/scripts/target-data.js?v=1",
   "./books/death-guard/scripts/roster-filter.js?v=28",
   "./books/shared/controllers/popup-controller.js?v=25",
   "./books/shared/controllers/full-entry-controller.js?v=9",
-  "./books/shared/controllers/journey-controller.js?v=14",
-  "./books/shared/controllers/ui-controllers.js?v=12",
+  "./books/shared/controllers/journey-controller.js?v=15",
+  "./books/shared/controllers/ui-controllers.js?v=13",
   "./books/death-guard/scripts/app.js?v=48",
   "./books/death-guard/generated/compatible-rules.json",
   "./books/core-rules/",
@@ -229,10 +232,11 @@ const APP_SHELL = [
   "./books/adeptus-mechanicus/styles/tokens.css?v=15",
   "./books/adeptus-mechanicus/styles/mechanicus.css?v=22",
   "./books/adeptus-mechanicus/scripts/data.js?v=1",
-  "./books/adeptus-mechanicus/scripts/faction-ui.js?v=1",
+  "./books/adeptus-mechanicus/scripts/faction-ui.js?v=2",
   "./books/adeptus-mechanicus/mobile/related-rules.inc?v=4",
   "./books/adeptus-mechanicus/scripts/roster-enhancements.js?v=4",
   "./books/adeptus-mechanicus/scripts/roster-data.js?v=3",
+  "./books/adeptus-mechanicus/scripts/target-data.js?v=1",
   "./books/adeptus-mechanicus/scripts/roster-filter.js?v=9",
   "./books/adeptus-mechanicus/generated/compatible-rules.json",
   "./books/adeptus-mechanicus/scripts/app.js?v=42"
@@ -244,6 +248,7 @@ const APP_SHELL = [
   ,"./books/tyranids/styles/book.css?v=4"
   ,"./books/tyranids/scripts/data.js?v=2"
   ,"./books/tyranids/scripts/roster-data.js?v=3"
+  ,"./books/tyranids/scripts/target-data.js?v=1"
   ,"./books/tyranids/scripts/roster-filter.js?v=4"
   ,"./books/tyranids/scripts/stratagem-types.mjs?v=1"
   ,"./books/tyranids/generated/compatible-rules.json"
@@ -263,6 +268,7 @@ const APP_SHELL = [
   ,"./books/tau-empire/scripts/roster-filter.js?v=5"
   ,"./books/tau-empire/generated/compatible-rules.json"
   ,"./books/tau-empire/scripts/roster-data.js?v=3"
+  ,"./books/tau-empire/scripts/target-data.js?v=1"
   ,"./books/tau-empire/mobile/related-rules.inc?v=2"
   ,"./books/shared/book-roster-enhancements.js?v=2"
   ,"./books/extensions/book-roster-enhancement-providers.js?v=1"
@@ -279,6 +285,7 @@ const APP_SHELL = [
   ,"./books/chaos-space-marines/scripts/roster-filter.js?v=3"
   ,"./books/chaos-space-marines/generated/compatible-rules.json"
   ,"./books/chaos-space-marines/scripts/roster-data.js?v=3"
+  ,"./books/chaos-space-marines/scripts/target-data.js?v=1"
   ,"./books/chaos-space-marines/mobile/related-rules.inc?v=2"
   ,"./books/blood-angels/"
   ,BLOOD_ANGELS_ENTRY_FALLBACK
@@ -293,6 +300,7 @@ const APP_SHELL = [
   ,"./books/blood-angels/scripts/roster-filter.js?v=2"
   ,"./books/blood-angels/generated/compatible-rules.json"
   ,"./books/blood-angels/scripts/roster-data.js?v=3"
+  ,"./books/blood-angels/scripts/target-data.js?v=1"
   ,"./books/blood-angels/mobile/related-rules.inc?v=2"
   ,"./books/orks/"
   ,"./books/orks/mobile/index.html"
@@ -309,6 +317,7 @@ const APP_SHELL = [
   ,"./books/emperors-children/assets/emperors-children-cover-800.webp"
   ,"./books/emperors-children/scripts/data.js?v=2"
   ,"./books/emperors-children/scripts/roster-data.js?v=3"
+  ,"./books/emperors-children/scripts/target-data.js?v=1"
   ,"./books/emperors-children/scripts/roster-filter.js?v=2"
   ,"./books/emperors-children/scripts/stratagem-types.mjs?v=2"
   ,"./books/emperors-children/generated/compatible-rules.json"
@@ -323,6 +332,7 @@ const APP_SHELL = [
   ,"./books/space-marines/assets/space-marines-cover-800.webp"
   ,"./books/space-marines/scripts/data.js?v=2"
   ,"./books/space-marines/scripts/roster-data.js?v=3"
+  ,"./books/space-marines/scripts/target-data.js?v=1"
   ,"./books/space-marines/scripts/roster-filter.js?v=4"
   ,"./books/space-marines/scripts/app.js?v=9"
   ,"./books/space-marines/generated/compatible-rules.json"
@@ -338,12 +348,13 @@ const APP_SHELL = [
   ,"./books/dark-angels/assets/dark-angels-cover-800.webp"
   ,"./books/dark-angels/scripts/data.js?v=2"
   ,"./books/dark-angels/scripts/roster-data.js?v=3"
+  ,"./books/dark-angels/scripts/target-data.js?v=1"
   ,"./books/dark-angels/scripts/roster-filter.js?v=2"
   ,"./books/dark-angels/scripts/app.js?v=8"
   ,"./books/shared/modal-focus.js?v=1"
-  ,"./books/shared/army-related-rules.js?v=16"
+  ,"./books/shared/army-related-rules.js?v=17"
   ,"./books/shared/roster-context.js?v=3"
-  ,"./books/shared/army-book-app.js?v=15"
+  ,"./books/shared/army-book-app.js?v=16"
   ,"./books/shared/offline-status.js?v=2"
   ,"./books/shared/styles/offline-status.css?v=1"
 ];

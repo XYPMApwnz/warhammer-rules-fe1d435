@@ -3,9 +3,10 @@
 
   const direct=(root,selector)=>Array.from(root.children).find(node=>node.matches?.(selector))||null;
   const directParts=card=>Array.from(card.children).filter(node=>node.matches?.('.unit-part'));
-  const layouts=[];
+  let layouts=[];
   const layoutByCard=new WeakMap();
   let layoutFrame=0;
+  let observer=null;
 
   function buildIdentity(head,keywordPart){
     const primary=head?.firstElementChild;
@@ -134,7 +135,7 @@
     if(layoutFrame)return;
     layoutFrame=requestAnimationFrame(()=>{
       layoutFrame=0;
-      layouts.forEach(balanceAbilities);
+      const connected=[];for(const layout of layouts){if(layout.card.isConnected){connected.push(layout);balanceAbilities(layout);}else observer?.unobserve(layout.card);}layouts=connected;
     });
   }
 
@@ -152,12 +153,16 @@
     moveProfiles(card,profile,localNav);
     buildColumns(card,profile,abilities);
     card.classList.add('ds-layout');
+    observer?.observe(card);
   }
 
-  document.querySelectorAll('.unit-card').forEach(enhance);
+  function install(root=document){
+    const cards=[...(root.matches?.('.unit-card')?[root]:[]),...root.querySelectorAll('.unit-card')];
+    cards.forEach(enhance);scheduleLayout();return root;
+  }
 
   if('ResizeObserver' in window){
-    const observer=new ResizeObserver(entries=>{
+    observer=new ResizeObserver(entries=>{
       let changed=false;
       entries.forEach(entry=>{
         const layout=layoutByCard.get(entry.target);
@@ -170,9 +175,10 @@
       });
       if(changed)scheduleLayout();
     });
-    layouts.forEach(layout=>observer.observe(layout.card));
   }
+  install(document);
   window.addEventListener('resize',scheduleLayout,{passive:true});
   document.fonts?.ready.then(scheduleLayout);
   scheduleLayout();
+  window.WHArmyDatasheetLayout=Object.freeze({install});
 }());

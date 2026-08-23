@@ -6,6 +6,7 @@ import {fileURLToPath} from 'node:url';
 import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const runtimeVersions=JSON.parse(await readFile(path.join(root,'books/shared/runtime-asset-versions.json'),'utf8'));
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
 const server=createServer(async(request,response)=>{
   try{
@@ -160,7 +161,7 @@ try{
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,`${book.name} responsive reader overflows horizontally`);
       const stubResponse=await page.request.get(origin+book.phone),stub=await stubResponse.text();
       assert.equal(stubResponse.ok(),true,`${book.name} legacy Phone route is unavailable`);
-      assert.match(stub,/mobile-route-redirect\.js\?v=1/,`${book.name} legacy Phone route does not load the shared redirect`);
+      assert.ok(stub.includes(`mobile-route-redirect.js?v=${runtimeVersions.shared.mobileRouteRedirect}`),`${book.name} legacy Phone route does not load the shared redirect`);
       assert.doesNotMatch(stub,/<(?:article|section)\b|class="[^"]*\bunit-card\b|data-rule-id=/,`${book.name} legacy Phone route contains duplicated content`);
       await page.goto(origin+book.phone,{waitUntil:'domcontentloaded'});
       await page.waitForURL(url=>url.pathname===readerPath&&url.hash===`#${book.unit}`);
@@ -224,7 +225,7 @@ try{
     }
     await page.reload();
     await page.locator('#unit-hellblaster-squad').waitFor({state:'visible'});
-    for(const [target,legacyPath] of [['start','/books/dark-angels/mobile/index.html'],['army-rules','/books/dark-angels/mobile/army-rules.html'],['unit-belial','/books/dark-angels/mobile/belial.html'],['unit-terminator-squad','/books/dark-angels/mobile/terminator-squad.html'],['unit-hellblaster-squad','/books/dark-angels/mobile/hellblaster-squad.html'],['detachment-wrath-of-the-rock','/books/dark-angels/mobile/wrath-of-the-rock.html'],['updates','/books/dark-angels/mobile/updates.html']]){
+    for(const [target,legacyPath] of [['start','/books/dark-angels/mobile/index.html'],['army-rule-oath-of-moment','/books/dark-angels/mobile/army-rules.html'],['unit-belial','/books/dark-angels/mobile/belial.html'],['unit-terminator-squad','/books/dark-angels/mobile/terminator-squad.html'],['unit-hellblaster-squad','/books/dark-angels/mobile/hellblaster-squad.html'],['detachment-wrath-of-the-rock','/books/dark-angels/mobile/wrath-of-the-rock.html'],['update-rules-updates-9-left','/books/dark-angels/mobile/updates.html']]){
       await page.goto(origin+legacyPath);
       await page.waitForURL(url=>url.pathname==='/books/dark-angels/reader.html'&&url.hash===`#${target}`);
       assert.equal(await page.locator(`#${target}`).count(),1,`Dark Angels legacy route lost canonical target ${target}`);
@@ -375,7 +376,7 @@ try{
     const diagramUrls=install.urls.filter(url=>url.startsWith('/books/core-rules/assets/diagrams/'));
     assert.equal(new Set(diagramUrls).size,39,'Fresh install did not cache all required Core Rules diagrams');
     errors.length=0;
-    await offlineContext.setOffline(true);
+    await new Promise((resolve,reject)=>server.close(error=>error?reject(error):resolve()));
     await page.goto(`${origin}/glossary/index.html`,{waitUntil:'domcontentloaded'});
     await page.waitForFunction(()=>Number(document.getElementById('termCount')?.textContent)>100&&document.querySelectorAll('.term-button').length>0);
     assert.ok(Number(await page.locator('#termCount').textContent())>100,'Standalone Glossary did not initialize from the install cache');
@@ -401,6 +402,10 @@ try{
     await unitImage.evaluate(image=>image.decode());
     assert.equal(await unitImage.evaluate(image=>image.complete&&image.naturalWidth>0),true,'Army Book unit image failed to decode on first offline use');
     await openPhonePopup(page,'Adeptus Mechanicus offline');
+    await page.goto(`${origin}/books/adeptus-mechanicus/reader.html#detachment-rad-zone-corps`,{waitUntil:'domcontentloaded'});
+    const detachment=page.locator('#detachment-rad-zone-corps');
+    await detachment.waitFor({state:'visible'});
+    assert.ok((await detachment.textContent()).trim().length>100,'Adeptus Mechanicus Detachment is unavailable after physical origin shutdown');
     assert.deepEqual(errors,[],'Offline smoke emitted an uncaught runtime error');
     assert.deepEqual(failedRequired,[],'Fresh-install offline flow emitted failed required same-origin requests');
     console.log(`PASS full application works offline after Library-only install (${install.urls.length} cached URLs; ${diagramUrls.length} Core Rules diagrams)`);
@@ -409,5 +414,5 @@ try{
   }
 }finally{
   await browser.close();
-  await new Promise(resolve=>server.close(resolve));
+  if(server.listening)await new Promise(resolve=>server.close(resolve));
 }

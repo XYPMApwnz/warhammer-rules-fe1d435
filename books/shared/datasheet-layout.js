@@ -7,6 +7,8 @@
   let layouts=[];
   const layoutByCard=new WeakMap();
   let layoutFrame=0;
+  let layoutReady=Promise.resolve();
+  let finishLayout=null;
   let observer=null;
 
   function buildIdentity(head,keywordPart){
@@ -150,11 +152,17 @@
   }
 
   function scheduleLayout(){
-    if(layoutFrame)return;
+    if(layoutFrame)return layoutReady;
+    layoutReady=new Promise(resolve=>{finishLayout=resolve;});
     layoutFrame=requestAnimationFrame(()=>{
       layoutFrame=0;
-      const connected=[];for(const layout of layouts){if(layout.card.isConnected){connected.push(layout);balanceAbilities(layout);}else observer?.unobserve(layout.card);}layouts=connected;
+      try{
+        const connected=[];for(const layout of layouts){if(layout.card.isConnected){connected.push(layout);balanceAbilities(layout);}else observer?.unobserve(layout.card);}layouts=connected;
+      }finally{
+        const finish=finishLayout;finishLayout=null;finish?.();
+      }
     });
+    return layoutReady;
   }
 
   function enhance(card){
@@ -199,5 +207,5 @@
   window.addEventListener('resize',scheduleLayout,{passive:true});
   document.fonts?.ready.then(scheduleLayout);
   scheduleLayout();
-  window.WHArmyDatasheetLayout=Object.freeze({install});
+  window.WHArmyDatasheetLayout=Object.freeze({install,ready:()=>layoutReady});
 }());

@@ -12,9 +12,17 @@
     return null;
   }
 
+  function logicalOwnerAnchor(element){
+    const ownerId=element?.id,card=element?.closest?.('.unit-card');
+    if(!ownerId||!card)return null;
+    return [...card.querySelectorAll('[data-logical-owner]')].find(node=>node.isConnected&&node.dataset.logicalOwner===ownerId)||null;
+  }
+
   function resolve(element){
     if(!element)return{scrollTarget:null,highlightTarget:null,kind:'missing'};
     if(element.matches?.(CARD_SELECTOR))return{scrollTarget:element,highlightTarget:element,kind:'card'};
+    const ownerAnchor=logicalOwnerAnchor(element);
+    if(ownerAnchor)return{scrollTarget:ownerAnchor,highlightTarget:element,kind:'logical-section'};
     const heading=directHeading(element);
     if(heading)return{scrollTarget:heading,highlightTarget:heading,kind:'section'};
     return{scrollTarget:element,highlightTarget:element,kind:'element'};

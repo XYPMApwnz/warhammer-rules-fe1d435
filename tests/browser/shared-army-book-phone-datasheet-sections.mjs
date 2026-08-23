@@ -33,6 +33,15 @@ assert.equal((relatedRulesSource.match(/document\.addEventListener\('click'/g)||
 
 const waitForApp=page=>page.waitForFunction(()=>Boolean(window.DG_APP?.navigation&&window.WHArmyBookTargetMount));
 const waitForHash=(page,id)=>page.waitForFunction(target=>location.hash===`#${target}`,id);
+const installScrollProbe=page=>page.addInitScript(()=>{
+  const nativeScrollTo=window.scrollTo.bind(window);
+  window.__phone2dScrollCalls=[];
+  window.scrollTo=(...args)=>{
+    const top=typeof args[0]==='object'?args[0]?.top:args[1];
+    window.__phone2dScrollCalls.push({top:Number(top)||0,stack:String(new Error().stack||'')});
+    return nativeScrollTo(...args);
+  };
+});
 const observe=page=>{
   const errors=[],failed=[];
   page.on('pageerror',error=>errors.push(error.message));
@@ -74,6 +83,54 @@ const clickSection=async(page,id)=>{
     return{section:section?.matches('section.unit-part')&&section.classList.contains('destination-highlight'),heading:heading?.classList.contains('destination-highlight')||false,active:document.querySelectorAll('.local-nav .is-current,.local-nav .is-active,.local-nav [aria-current]').length};
   },id);
   assert.deepEqual(feedback,{section:true,heading:false,active:0},`${id}: whole-section feedback contract failed`);
+};
+const profileAnchorContract=async(page,name)=>{
+  const profile=await page.evaluate(()=>{
+    const unit=document.querySelector('.document .unit-card'),sections=[...unit.querySelectorAll('.unit-part[id]')];
+    const section=sections.find(candidate=>unit.querySelector(`[data-logical-owner="${CSS.escape(candidate.id)}"]`));
+    const owner=section&&[...unit.querySelectorAll('[data-logical-owner]')].find(node=>node.dataset.logicalOwner===section.id);
+    const resolved=section&&window.WHNavigationTargets.resolve(section).scrollTarget;
+    return{id:section?.id||'',ownerIsResolved:Boolean(owner&&owner===resolved),ownerHasStatline:Boolean(owner?.querySelector('.statline')||owner?.matches('.statline')),sectionAfterOwner:Boolean(owner&&section&&(owner.compareDocumentPosition(section)&Node.DOCUMENT_POSITION_FOLLOWING))};
+  });
+  assert.ok(profile.id,`${name}: logical Profile target missing`);
+  assert.equal(profile.ownerIsResolved,true,`${name}: Profile did not resolve to its earliest visual owner`);
+  assert.equal(profile.ownerHasStatline,true,`${name}: Profile visual anchor does not contain the unit statline`);
+  assert.equal(profile.sectionAfterOwner,true,`${name}: Weapons content does not follow the Profile visual anchor`);
+  const last=(await navSnapshot(page)).targets.at(-1);if(last!==profile.id)await clickSection(page,last);
+  await clickSection(page,profile.id);
+  const aligned=await page.evaluate(id=>{
+    const section=document.getElementById(id),anchor=window.WHNavigationTargets.resolve(section).scrollTarget,nav=document.querySelector('.unit-card > .local-nav').getBoundingClientRect();
+    const top=anchor.getBoundingClientRect().top,gap=window.DG_APP.navigation.trackingGap;
+    return{visibleBelowNav:top>=nav.bottom-1&&top<=nav.bottom+gap+4,anchorBeforeSection:Boolean(anchor.compareDocumentPosition(section)&Node.DOCUMENT_POSITION_FOLLOWING),statlines:document.querySelectorAll('.document .unit-card .statline').length};
+  },profile.id);
+  assert.equal(aligned.visibleBelowNav,true,`${name}: Profile command did not expose the unit statline below the Datasheet nav`);
+  assert.equal(aligned.anchorBeforeSection,true,`${name}: Profile command still lands at Weapons`);
+  assert.ok(aligned.statlines>=1,`${name}: mounted Datasheet lost its statline`);
+  return profile.id;
+};
+const reloadContract=async(page,name,{unitId,sectionId='',expectedScroll=null}={})=>{
+  await page.evaluate(()=>{window.__phone2dScrollCalls=[];});
+  await page.reload({waitUntil:'load'});await waitForApp(page);await page.waitForFunction(id=>document.querySelector('.document .unit-card')?.id===id,unitId);
+  if(sectionId)await waitForHash(page,sectionId);
+  await page.waitForFunction(()=>window.DG_APP.navigation.state.owner==='reader');
+  await page.waitForTimeout(300);
+  const first=await page.evaluate(sectionId=>{
+    const section=sectionId?document.getElementById(sectionId):null,anchor=section?window.WHNavigationTargets.resolve(section).scrollTarget:null,nav=document.querySelector('.unit-card > .local-nav')?.getBoundingClientRect();
+    const top=anchor?.getBoundingClientRect().top,gap=window.DG_APP.navigation.trackingGap,logical=window.WHNavigationTargets.resolve(section).kind==='logical-section';
+    return{scrollY,calls:window.__phone2dScrollCalls||[],unitId:document.querySelector('.document .unit-card')?.id||'',units:document.querySelectorAll('.document .unit-card').length,owners:document.querySelector('.document')?.children.length||0,restoration:history.scrollRestoration,anchorAligned:!anchor||!nav?null:logical?top>=nav.bottom-1&&top<=nav.bottom+gap+4:Math.abs(top-nav.bottom-gap)<=3};
+  },sectionId);
+  await page.waitForTimeout(350);
+  const late=await page.evaluate(()=>scrollY);
+  assert.equal(first.unitId,unitId,`${name}: reload mounted the wrong Datasheet`);
+  assert.equal(first.units,1,`${name}: reload regressed PHONE-1 single-target mount`);
+  assert.equal(first.owners,1,`${name}: reload mounted unrelated terminal content`);
+  assert.equal(first.restoration,'manual',`${name}: native scroll restoration contract changed`);
+  assert.ok(first.calls.length<=1,`${name}: competing reload scroll owners remain`);
+  assert.equal(first.calls.some(call=>call.stack.includes('glossary-return.js')),false,`${name}: PageState still scrolls the Army Book directly`);
+  assert.ok(Math.abs(late-first.scrollY)<=2,`${name}: late reload scroll movement detected`);
+  if(sectionId)assert.equal(first.anchorAligned,true,`${name}: section reload restored the wrong visual anchor`);
+  if(Number.isFinite(expectedScroll))assert.ok(Math.abs(first.scrollY-expectedScroll)<=4,`${name}: saved plain-Datasheet scroll was not restored`);
+  return first;
 };
 const auditCoverage=page=>page.evaluate(async()=>{
   const ids=window.WHArmyBookTargetMount.catalog.nodes.filter(node=>node.kind==='target'&&node.id.startsWith('unit-')).map(node=>node.id);
@@ -129,6 +186,7 @@ async function drawerStackContract(page,name){
 
 async function phoneBook(page,name,id){
   const observed=observe(page);
+  await installScrollProbe(page);
   await page.goto(`${origin}/books/${id}/reader.html?view=mobile#start`);await waitForApp(page);
   const [first,second]=await unitIds(page);assert.ok(first&&second,`${name}: representative Datasheets missing`);
   await page.goto(`${origin}/books/${id}/reader.html?view=mobile#${first}`);await waitForApp(page);await waitForHash(page,first);
@@ -155,6 +213,7 @@ async function phoneBook(page,name,id){
   assert.equal(snapshot.overflow,false,`${name}: page horizontal overflow`);
   assert.equal(snapshot.hiddenTerminalContent,0,`${name}: unrelated terminal content is hidden instead of absent`);
   assert.ok(snapshot.targets.length>=2,`${name}: no useful section navigation`);
+  await reloadContract(page,name,{unitId:first});
   const command=page.locator('[data-datasheet-command="stratagems"]');await command.scrollIntoViewIfNeeded();
   const commandBefore=await page.evaluate(()=>({scrollY,hash:location.hash,history:history.length,unitId:document.querySelector('.document .unit-card')?.id||''}));
   await command.click();await page.waitForFunction(()=>{const layer=document.querySelector('.related-rules-layer');return !layer?.hidden&&layer.querySelector('[data-kind="stratagems"][aria-pressed="true"]');});
@@ -168,6 +227,8 @@ async function phoneBook(page,name,id){
   assert.equal(structure.statlineBeforeWeapons,true,`${name}: unit statline no longer precedes weapon content`);
   assert.equal(structure.profileOwned,true,`${name}: Profile lost statline/Base semantic ownership`);
   assert.equal(structure.navOwnsStatline,false,`${name}: navigation incorrectly owns the statline`);
+  const profileId=await profileAnchorContract(page,name);
+  await reloadContract(page,name,{unitId:first,sectionId:profileId});
 
   const middle=snapshot.targets[Math.floor(snapshot.targets.length/2)],last=snapshot.targets.at(-1);
   await clickSection(page,middle);
@@ -201,6 +262,7 @@ async function phoneBook(page,name,id){
 }
 
 async function amBehavior(page){
+  await installScrollProbe(page);
   await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?view=mobile#unit-onager-dunecrawler`);await waitForApp(page);
   const nav=await navSnapshot(page);assert.equal(nav.unitId,'unit-onager-dunecrawler','AM: Onager was not mounted');
   assert.equal(await page.locator('#unit-onager-dunecrawler .unit-art-background img, #unit-onager-dunecrawler .unit-art img').count(),1,'AM: translucent unit artwork missing');
@@ -223,6 +285,8 @@ async function amBehavior(page){
 
   const firstSection=nav.targets[0];await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?view=mobile#${firstSection}`);await waitForApp(page);await waitForHash(page,firstSection);
   assert.equal((await navSnapshot(page)).unitId,'unit-onager-dunecrawler','AM: section deep link did not mount owning Datasheet');
+  const abilities=nav.targets.find(id=>id.endsWith('-abilities'));assert.ok(abilities,'AM: Abilities section missing');await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?view=mobile#${abilities}`);await waitForApp(page);await reloadContract(page,'AM Abilities',{unitId:'unit-onager-dunecrawler',sectionId:abilities});
+  await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?view=mobile#unit-onager-dunecrawler`);await waitForApp(page);const manualY=await page.evaluate(()=>{const max=document.documentElement.scrollHeight-innerHeight,top=Math.round(max*.46);window.scrollTo({top,behavior:'instant'});return scrollY;});await reloadContract(page,'AM manual scroll',{unitId:'unit-onager-dunecrawler',expectedScroll:manualY});
   const middle=nav.targets[Math.floor(nav.targets.length/2)];await clickSection(page,middle);await clickSection(page,last);await page.goBack();await waitForHash(page,middle);await page.goForward();await waitForHash(page,last);
 
   await page.setViewportSize({width:1280,height:720});await page.goto(`${origin}/books/adeptus-mechanicus/reader.html?view=mobile#unit-onager-dunecrawler`);await waitForApp(page);
@@ -241,6 +305,7 @@ try{
   const desktop=await browser.newContext({serviceWorkers:'block',viewport:{width:1280,height:720}});
   try{const page=await desktop.newPage();for(const [name,id] of books)await desktopBook(page,name,id);}finally{await desktop.close();}
   console.log(`Datasheet nav coverage: ${coverageTotals.datasheets} Datasheets; missing sections 0; orphan targets 0; real Stratagems sections ${coverageTotals.stratagemDatasheets}; Stratagems represented ${coverageTotals.stratagemNavDatasheets}; Datasheets with Base ${coverageTotals.baseDatasheets}.`);
+  console.log('PHONE-2D Profile anchor and reload restoration QA: PASS (9/9).');
   console.log('PHONE-2C sticky Datasheet nav/drawer stacking QA: PASS (9/9).');
   console.log('Shared Army Book PHONE-2 Datasheet section navigation QA: PASS (9/9).');
 }finally{

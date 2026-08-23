@@ -44,6 +44,7 @@
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   let pageAdapter = null;
   let pageDepartureCaptured = false;
+  let restoreRun=null,restoredRecordKey='';
   let viewportWidth=innerWidth,liveAnchor=null,resizeToken=0,anchorFrame=0;
   const pagePath = () => location.pathname + location.search + location.hash;
   function readingAnchor() {
@@ -66,24 +67,41 @@
     } catch {}
   }
   async function restorePage() {
-    const record = pageRecord();if(!record)return;
-    await document.fonts?.ready;
-    await pageAdapter?.beforeRestore?.();
-    const settle=()=>{const target=findAnchor(record);if(target){target.scrollIntoView({block:'start',behavior:'instant'});scrollBy({top:target.getBoundingClientRect().top-record.anchor.top,behavior:'instant'});}else scrollTo({left:record.scrollX||0,top:record.scrollY||0,behavior:'instant'});};
-    let stable=0,lastHeight=-1;
-    for(let attempt=0;attempt<12&&stable<2;attempt++){
-      settle();
-      await new Promise(resolve=>setTimeout(resolve,100));
-      const target=findAnchor(record),height=document.documentElement.scrollHeight,aligned=!target||Math.abs(target.getBoundingClientRect().top-record.anchor.top)<=2;
-      stable=aligned&&Math.abs(height-lastHeight)<=1?stable+1:0;lastHeight=height;
-    }
-    settle();
-    await pageAdapter?.restore?.(record.ui);
+    const record = pageRecord();if(!record||!pageAdapter)return false;
+    const recordKey=JSON.stringify(record);
+    if(recordKey===restoredRecordKey)return true;
+    if(restoreRun?.key===recordKey)return restoreRun.promise;
+    const adapter=pageAdapter;
+    const promise=(async()=>{
+      await document.fonts?.ready;
+      await adapter.beforeRestore?.();
+      if(adapter.restoreScroll)await adapter.restoreScroll(record);
+      else{
+        const settle=()=>{const target=findAnchor(record);if(target){target.scrollIntoView({block:'start',behavior:'instant'});scrollBy({top:target.getBoundingClientRect().top-record.anchor.top,behavior:'instant'});}else scrollTo({left:record.scrollX||0,top:record.scrollY||0,behavior:'instant'});};
+        let stable=0,lastHeight=-1;
+        for(let attempt=0;attempt<12&&stable<2;attempt++){
+          settle();
+          await new Promise(resolve=>setTimeout(resolve,100));
+          const target=findAnchor(record),height=document.documentElement.scrollHeight,aligned=!target||Math.abs(target.getBoundingClientRect().top-record.anchor.top)<=2;
+          stable=aligned&&Math.abs(height-lastHeight)<=1?stable+1:0;lastHeight=height;
+        }
+        settle();
+      }
+      await adapter.restore?.(record.ui);
+      restoredRecordKey=recordKey;
+      return true;
+    })();
+    restoreRun={key:recordKey,promise};
+    try{return await promise;}finally{if(restoreRun?.promise===promise)restoreRun=null;}
   }
   function install(adapter) { pageAdapter=adapter||null;requestAnimationFrame(restorePage); }
   function installArmyBook(app) {
     install({
-      beforeRestore() {app.fullEntry?.close?.();app.relatedRules?.close?.();app.popups?.restore?.([],{focus:false});},
+      async beforeRestore() {app.fullEntry?.close?.();app.relatedRules?.close?.();app.popups?.restore?.([],{focus:false});await window.WHArmyDatasheetLayout?.ready?.();app.navigation.refreshGeometry();},
+      restoreScroll(record) {
+        const target=findAnchor(record),destination=target&&record.anchor?scrollY+target.getBoundingClientRect().top-record.anchor.top:record.scrollY||0;
+        return new Promise(resolve=>app.navigation.restoreInitial(destination,resolve));
+      },
       snapshot() {
         const popupIds=app.popups?.snapshot?.()||[],popupRoot=app.popups?.rootElement?.()||null,relatedLayer=app.relatedRules?.layer;
         const overlay=relatedLayer&&!relatedLayer.hidden?app.relatedRules.snapshot(popupRoot||relatedLayer.querySelector('[data-term]')):null;
@@ -122,6 +140,7 @@
     }
     if(token===resizeToken){alignAnchor(anchor);rememberAnchor();}
   },{passive:true});
+  window.addEventListener('beforeunload',()=>{if(!pageDepartureCaptured)capturePage();});
   window.addEventListener('pagehide',()=>{if(!pageDepartureCaptured)capturePage();});
   window.addEventListener('pageshow',()=>{pageDepartureCaptured=false;restorePage();});
   requestAnimationFrame(rememberAnchor);

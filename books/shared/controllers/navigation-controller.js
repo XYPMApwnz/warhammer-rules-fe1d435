@@ -51,7 +51,11 @@
         this.layoutObserver.observe(this.main);
       }
       const loaded=document.readyState==='complete'?Promise.resolve():new Promise(resolve=>window.addEventListener('load',resolve,{once:true}));
-      Promise.all([loaded,document.fonts?.ready||Promise.resolve()]).then(()=>this.scheduleHashRestore());
+      Promise.all([loaded,document.fonts?.ready||Promise.resolve()]).then(async()=>{
+        await window.WHArmyDatasheetLayout?.ready?.();
+        this.refreshGeometry();
+        if(!window.WHPageState?.hasCurrent?.())this.scheduleHashRestore();
+      });
     }
 
     get active(){return this.state.active||'start';}
@@ -288,16 +292,19 @@
       if(this.frames.hash)return;
       this.frames.hash=requestAnimationFrame(()=>{this.frames.hash=0;this.navigateHash();});
     }
-    async navigateHash(){
+    async restoreInitial(scrollY=null,settled){
       const id=this.hashTarget()||'start';
-      if(this.mobile&&this.targetKind(id)==='branch'){const item=this.byId.get(id);if(item)this.revealPath(item.node,{includeSelf:true});return false;}
+      if(this.mobile&&this.targetKind(id)==='branch'){const item=this.byId.get(id);if(item)this.revealPath(item.node,{includeSelf:true});settled?.();return false;}
       await this.ensureTarget(id);
-      const target=document.getElementById(id);if(!target)return false;
+      await window.WHArmyDatasheetLayout?.ready?.();
+      const target=document.getElementById(id);if(!target){settled?.();return false;}
       this.refreshGeometry();const unit=target.closest('.unit-card');
-      if(unit&&target.matches('.unit-part'))this.navigateSection(unit.id,target,{nav:unit.querySelector(':scope > .local-nav')});
-      else this.navigate(unit?.id||target.id,target);
+      if(unit&&target.matches('.unit-part'))this.navigateSection(unit.id,target,{nav:unit.querySelector(':scope > .local-nav'),settled});
+      else if(Number.isFinite(scrollY))this.beginTransition(unit?.id||target.id,Math.max(0,scrollY),settled);
+      else this.navigate(unit?.id||target.id,target,settled);
       return true;
     }
+    navigateHash(){return this.restoreInitial();}
     hashTarget(){return decodeURIComponent(location.hash.slice(1));}
     pushHistoryState(state,url){
       this.historyIndex+=1;
@@ -343,16 +350,19 @@
       if(this.state.owner==='controller')this.stopControlledScroll();
       const token=++this.state.transition;this.state.owner='controller';this.activate(id,{behavior:'auto'});
       const reachable=this.reachableDestination(destination);
-      const behavior=this.mobile||matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth';
-      window.scrollTo({top:reachable,behavior});
+      if(this.mobile||matchMedia('(prefers-reduced-motion:reduce)').matches)this.scrollImmediately(reachable);
+      else window.scrollTo({top:reachable,behavior:'smooth'});
       this.waitForSettle(reachable,token,settled);
     }
     reachableDestination(destination){return Math.min(Math.max(0,destination),Math.max(0,document.documentElement.scrollHeight-window.innerHeight));}
-    stopControlledScroll(){
+    scrollImmediately(top){
       const root=document.documentElement,previous=root.style.scrollBehavior;
       root.style.scrollBehavior='auto';
-      window.scrollTo({left:window.scrollX,top:window.scrollY,behavior:'auto'});
+      window.scrollTo({left:window.scrollX,top,behavior:'auto'});
       root.style.scrollBehavior=previous;
+    }
+    stopControlledScroll(){
+      this.scrollImmediately(window.scrollY);
     }
     waitForSettle(destination,token,settled){
       const started=Date.now();let previous=window.scrollY,stable=0;
@@ -365,7 +375,7 @@
         }
         if(Date.now()-started>2200){
           this.stopControlledScroll();
-          window.scrollTo({left:window.scrollX,top:this.reachableDestination(destination),behavior:'auto'});
+          this.scrollImmediately(this.reachableDestination(destination));
           requestAnimationFrame(()=>{if(token!==this.state.transition)return;this.state.owner='reader';settled?.();this.refreshGeometry();});
           return;
         }

@@ -1,4 +1,5 @@
 :root {
+  --z-content-sticky: 50;
   --z-drawer-scrim: 55;
   --z-drawer: 60;
   --z-journey: 75;
@@ -136,7 +137,7 @@ html[data-view="mobile"] .unit-card > :is(.unit-head, .unit-header) { grid-templ
 html[data-view="mobile"] .unit-card :is(.unit-name, .unit-header h3) { font-size: clamp(38px,12vw,54px); }
 html[data-view="mobile"] .unit-card :is(.points, .unit-status) { justify-self: start; min-width: 0; padding: 10px 12px; font-size: 17px; }
 html[data-view="mobile"] .unit-card.surface { overflow: clip; }
-html[data-view="mobile"] body .unit-card > .local-nav { position: sticky; z-index: calc(var(--z-header) - 1); top: var(--app-header-bottom, calc(var(--header) + env(safe-area-inset-top))); display: flex; flex-wrap: nowrap; gap: 7px; margin: 14px -8px 4px; padding: 8px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-padding-inline: 8px; touch-action: pan-x pan-y; background: var(--panel-2); border-block: 1px solid color-mix(in srgb,var(--faction-primary-bright,var(--green)) 46%,var(--line)); box-shadow: 0 10px 24px rgba(0,0,0,.42); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+html[data-view="mobile"] body .unit-card > .local-nav { position: sticky; z-index: var(--z-content-sticky); top: var(--app-header-bottom, calc(var(--header) + env(safe-area-inset-top))); display: flex; flex-wrap: nowrap; gap: 7px; margin: 14px -8px 4px; padding: 8px; overflow-x: auto; overscroll-behavior-inline: contain; scroll-padding-inline: 8px; touch-action: pan-x pan-y; background: var(--panel-2); border-block: 1px solid color-mix(in srgb,var(--faction-primary-bright,var(--green)) 46%,var(--line)); box-shadow: 0 10px 24px rgba(0,0,0,.42); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 html[data-view="mobile"] body .unit-card > .local-nav::-webkit-scrollbar { display: none; }
 html[data-view="mobile"] body .unit-card > .local-nav .local-tab { flex: 0 0 auto; min-height: 38px; padding: 8px 11px; border: 1px solid color-mix(in srgb,var(--faction-primary-bright,var(--green)) 34%,var(--line)); background: color-mix(in srgb,var(--panel) 82%,var(--underhive)); color: var(--ink); white-space: nowrap; font-size: 12px; font-weight: 800; letter-spacing: .025em; }
 html[data-view="mobile"] body .unit-card > .local-nav .datasheet-nav-command { border-color: color-mix(in srgb,var(--bronze-bright) 56%,var(--line)); color: var(--bronze-bright); }

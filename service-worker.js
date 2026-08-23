@@ -142,7 +142,7 @@ const APP_SHELL = [
   "./books/shared/roster-enhancements.js?v=3",
   "./books/death-guard/assets/icon-v4.svg",
   "./books/shared/styles/tokens.css?v=11",
-  "./books/shared/styles/layout.css?v=16",
+  "./books/shared/styles/layout.css?v=17",
   "./books/shared/styles/navigation.css?v=13",
   "./books/shared/styles/content.css?v=43",
   "./books/shared/styles/popups.css?v=19",

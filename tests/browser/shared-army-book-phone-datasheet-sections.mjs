@@ -98,6 +98,35 @@ const auditCoverage=page=>page.evaluate(async()=>{
   return result;
 });
 
+async function drawerStackContract(page,name){
+  const menu=page.locator('#navMenu'),scrim=page.locator('#tocScrim');
+  const horizontal=await page.evaluate(()=>{const nav=document.querySelector('.unit-card > .local-nav');nav.scrollLeft=Math.min(48,Math.max(0,nav.scrollWidth-nav.clientWidth));window.__phone2cNavClicks=0;if(!nav.dataset.phone2cProbe){nav.dataset.phone2cProbe='true';nav.addEventListener('click',()=>window.__phone2cNavClicks+=1,true);}return nav.scrollLeft;});
+  for(let cycle=0;cycle<3;cycle+=1){
+    await menu.click();await page.waitForFunction(()=>document.body.classList.contains('nav-drawer-open'));
+    const open=await page.evaluate(()=>{
+      const nav=document.querySelector('.unit-card > .local-nav'),panel=document.getElementById('tocPanel'),scrim=document.getElementById('tocScrim'),header=document.getElementById('appHeader'),navBox=nav.getBoundingClientRect(),panelBox=panel.getBoundingClientRect();
+      const y=Math.min(navBox.bottom-3,Math.max(navBox.top+3,panelBox.top+5)),panelX=Math.min(panelBox.right-5,Math.max(panelBox.left+5,navBox.left+5)),scrimX=Math.min(navBox.right-3,Math.max(panelBox.right+5,navBox.left+5)),panelHit=document.elementFromPoint(panelX,y),scrimHit=document.elementFromPoint(scrimX,y);
+      return{navZ:Number(getComputedStyle(nav).zIndex),scrimZ:Number(getComputedStyle(scrim).zIndex),drawerZ:Number(getComputedStyle(panel).zIndex),headerZ:Number(getComputedStyle(header).zIndex),mainInert:document.getElementById('main').inert,panelCovered:panel===panelHit||panel.contains(panelHit),scrimCovered:scrim===scrimHit,scrollLeft:nav.scrollLeft,panelX,scrimX,y};
+    });
+    assert.ok(open.navZ<open.scrimZ&&open.scrimZ<open.drawerZ&&open.drawerZ<open.headerZ,`${name}: shared sticky/drawer stack is invalid`);
+    assert.equal(open.mainInert,true,`${name}: drawer did not make the Datasheet inert`);
+    assert.equal(open.panelCovered,true,`${name}: sticky nav is visible above the drawer`);
+    assert.equal(open.scrimCovered,true,`${name}: sticky nav is visible above the scrim`);
+    assert.ok(Math.abs(open.scrollLeft-horizontal)<=1,`${name}: opening drawer reset local-nav horizontal position`);
+    if(cycle===2){await page.mouse.click(open.scrimX,open.y);}else await menu.click();
+    await page.waitForFunction(()=>!document.body.classList.contains('nav-drawer-open'));
+    const closed=await page.evaluate(()=>{const nav=document.querySelector('.unit-card > .local-nav'),header=document.getElementById('appHeader');return{mainInert:document.getElementById('main').inert,clicks:window.__phone2cNavClicks,scrollLeft:nav.scrollLeft,stickyDelta:Math.abs(nav.getBoundingClientRect().top-header.getBoundingClientRect().bottom)};});
+    assert.equal(closed.mainInert,false,`${name}: closing drawer left the Datasheet inert`);
+    assert.equal(closed.clicks,0,`${name}: pointer event reached the sticky nav through drawer/scrim`);
+    assert.ok(Math.abs(closed.scrollLeft-horizontal)<=1,`${name}: closing drawer reset local-nav horizontal position`);
+    assert.ok(closed.stickyDelta<=2,`${name}: closing drawer did not restore sticky nav geometry`);
+  }
+  if(name==='Adeptus Mechanicus'){
+    await page.locator('[data-datasheet-command="stratagems"]').click();await page.waitForFunction(()=>{const layer=document.querySelector('.related-rules-layer');return !layer?.hidden&&layer.querySelector('[data-kind="stratagems"][aria-pressed="true"]');});
+    await page.locator('.related-rules-close').click();await page.waitForFunction(()=>document.querySelector('.related-rules-layer')?.hidden===true);
+  }
+}
+
 async function phoneBook(page,name,id){
   const observed=observe(page);
   await page.goto(`${origin}/books/${id}/reader.html?view=mobile#start`);await waitForApp(page);
@@ -144,6 +173,7 @@ async function phoneBook(page,name,id){
   await clickSection(page,middle);
   const sticky=await page.evaluate(()=>{const header=document.getElementById('appHeader').getBoundingClientRect(),nav=document.querySelector('.unit-card > .local-nav').getBoundingClientRect();return{delta:Math.abs(nav.top-header.bottom),overflow:document.documentElement.scrollWidth>window.innerWidth};});
   assert.ok(sticky.delta<=2,`${name}: sticky nav is not aligned to measured header`);assert.equal(sticky.overflow,false,`${name}: sticky nav caused overflow`);
+  await drawerStackContract(page,name);
   await page.waitForTimeout(2350);
   assert.equal(await page.locator(`#${middle}.destination-highlight`).count(),0,`${name}: highlight did not clear`);
 
@@ -211,6 +241,7 @@ try{
   const desktop=await browser.newContext({serviceWorkers:'block',viewport:{width:1280,height:720}});
   try{const page=await desktop.newPage();for(const [name,id] of books)await desktopBook(page,name,id);}finally{await desktop.close();}
   console.log(`Datasheet nav coverage: ${coverageTotals.datasheets} Datasheets; missing sections 0; orphan targets 0; real Stratagems sections ${coverageTotals.stratagemDatasheets}; Stratagems represented ${coverageTotals.stratagemNavDatasheets}; Datasheets with Base ${coverageTotals.baseDatasheets}.`);
+  console.log('PHONE-2C sticky Datasheet nav/drawer stacking QA: PASS (9/9).');
   console.log('Shared Army Book PHONE-2 Datasheet section navigation QA: PASS (9/9).');
 }finally{
   await browser.close();await new Promise(resolve=>server.close(resolve));

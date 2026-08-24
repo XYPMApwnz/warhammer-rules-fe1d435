@@ -58,6 +58,7 @@
       root.WHGlossaryAutolink?.apply(mountRoot,config.bookId);
       root.WHGlossaryAutolink?.validate(mountRoot,terms);
       root.WH_ARMY_ROSTER_DECORATOR?.decorate(mountRoot);
+      root.WHArmyRosterGamePresentation?.install(mountRoot,root.WH_ARMY_ROSTER_DECORATOR?.projection||root.WH_ARMY_ROSTER_PROJECTION);
       relatedRules?.enhance?.(mountRoot);
       tableAccessibility.apply(mountRoot);
       extensions.forEach(extension=>extension(Object.freeze({...runtimeContext,app,mountRoot})));

@@ -12,7 +12,7 @@
   "entryRoute": "canonical-reader-redirect",
   "assetVersions": {
     "app": 42,
-    "armyBook": 16,
+    "armyBook": 17,
     "relatedRules": 18,
     "rosterContext": 4,
     "ruleFacts": 5,

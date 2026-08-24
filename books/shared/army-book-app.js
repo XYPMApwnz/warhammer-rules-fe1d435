@@ -11,7 +11,6 @@
 
     const terms={...(root.WH40K_GLOSSARY?.forBook(config.bookId)||{}),...(root.DG_TERMS||{})};
     const documentRoot=document.querySelector('.document');
-    const navigation=new root.DGNavigation({breakpoint:phoneMode?Number.MAX_SAFE_INTEGER:800});
     const fullEntry=new root.DGFullEntry(root.WH40K_GLOSSARY);
     const popups=new root.DGPopups(terms,fullEntry);
     const relatedConfig=config.relatedRules===false?null:config.relatedRules||{};
@@ -21,6 +20,7 @@
     const rosterContextAdapter=rosterContextSettings&&typeof rosterContextSettings.provider==='function'?rosterContextSettings.provider(Object.freeze({...runtimeContext,rosterGuide})):rosterGuide?.rosterContext;
     const rosterContext=rosterContextSettings&&root.WHArmyRosterContext?.fromRuntime({...runtimeContext,rosterGuide,adapter:rosterContextAdapter})||null;
     root.WH_ARMY_ROSTER_CONTEXT=rosterContext;
+    const navigation=new root.DGNavigation({breakpoint:phoneMode?Number.MAX_SAFE_INTEGER:800});
     const relatedRules=relatedConfig&&!(relatedConfig.requireRosterGuide&&params.has('roster')&&!rosterGuide)?relatedInstaller?.install({
       storageKey:relatedConfig.storageKey===undefined?`${config.bookId}-detachment-filter`:relatedConfig.storageKey,
       ...relatedConfig,

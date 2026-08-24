@@ -147,7 +147,7 @@ const APP_SHELL = [
   "./books/shared/styles/navigation.css?v=13",
   "./books/shared/styles/content.css?v=45",
   "./books/shared/styles/popups.css?v=19",
-  "./books/shared/controllers/navigation-controller.js?v=24",
+"./books/shared/controllers/navigation-controller.js?v=25",
   "./books/death-guard/scripts/roster-semantics.js?v=4",
   "./books/death-guard/scripts/roster-data.js?v=7",
   "./books/death-guard/scripts/target-data.js?v=4",
@@ -388,7 +388,7 @@ const APP_SHELL = [
   ,"./books/shared/army-related-rules.js?v=18"
   ,"./books/shared/roster-context.js?v=7"
   ,"./books/shared/roster-game-presentation.js?v=3"
-  ,"./books/shared/army-book-app.js?v=17"
+,"./books/shared/army-book-app.js?v=18"
   ,"./books/shared/offline-status.js?v=2"
   ,"./books/shared/styles/offline-status.css?v=1"
 ];

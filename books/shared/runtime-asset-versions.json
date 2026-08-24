@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "shared": {
-    "armyBook": 17,
+    "armyBook": 18,
     "offlineStatus": 2,
     "offlineStatusCss": 1,
     "glossaryReturn": 5,
@@ -24,7 +24,7 @@
     "readerContent": 45,
     "readerPopups": 19,
     "entryCss": 2,
-    "navigationController": 24,
+    "navigationController": 25,
     "fullEntryController": 9,
     "popupController": 25,
     "journeyController": 16,

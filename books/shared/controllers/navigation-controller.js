@@ -1,6 +1,47 @@
 (function(){
   'use strict';
 
+  const GAME_SCHEMA='wh40k-physical-unit-game-projection/v1';
+  const list=value=>Array.isArray(value)?value:[];
+  const directChild=(node,className)=>[...node.children].find(child=>child.classList.contains(className))||null;
+  const currentRelation=relation=>relation?.certainty==='current'&&relation?.provenance?.kind==='explicit-roster-attachment';
+  const keywordsFor=unit=>new Set(list(unit?.intrinsicKeywords).map(value=>String(value).trim().toUpperCase()));
+
+  function physicalRosterOrder(game,catalog){
+    const catalogOrder=new Map(list(catalog.units).map((unit,index)=>[unit.id,index])),catalogById=new Map(list(catalog.units).map(unit=>[unit.id,unit]));
+    const units=list(game.units).map((unit,physicalOrder)=>{const canonical=catalogById.get(unit.identity?.canonicalDatasheetId);if(!canonical)return null;const keywords=keywordsFor(canonical);return{unit,canonical,instanceId:unit.identity.instanceId,targetId:canonical.id,title:unit.identity.canonicalTitle||canonical.title,canonicalOrder:catalogOrder.get(canonical.id),physicalOrder,isEpic:keywords.has('EPIC HERO'),isCharacter:keywords.has('CHARACTER')};}).filter(Boolean);
+    const compare=(a,b)=>a.canonicalOrder-b.canonicalOrder||a.physicalOrder-b.physicalOrder;
+    const byInstance=new Map(units.map(unit=>[unit.instanceId,unit])),edges=new Map(),leaderIds=new Set(),bodyguardIds=new Set();
+    const connect=(left,right)=>{if(!byInstance.has(left)||!byInstance.has(right)||left===right)return;if(!edges.has(left))edges.set(left,new Set());if(!edges.has(right))edges.set(right,new Set());edges.get(left).add(right);edges.get(right).add(left);};
+    for(const bodyguard of units)for(const relation of list(bodyguard.unit.attachments?.leaders).filter(currentRelation)){leaderIds.add(relation.instanceId);bodyguardIds.add(bodyguard.instanceId);connect(bodyguard.instanceId,relation.instanceId);}
+    const visited=new Set(),components=[];
+    for(const seed of units.filter(unit=>edges.has(unit.instanceId)).sort(compare)){if(visited.has(seed.instanceId))continue;const pending=[seed.instanceId],members=[];while(pending.length){const id=pending.shift();if(visited.has(id))continue;visited.add(id);const unit=byInstance.get(id);if(unit)members.push(unit);for(const next of edges.get(id)||[])if(!visited.has(next))pending.push(next);}members.sort((a,b)=>(a.isEpic?0:leaderIds.has(a.instanceId)?1:bodyguardIds.has(a.instanceId)?2:3)-(b.isEpic?0:leaderIds.has(b.instanceId)?1:bodyguardIds.has(b.instanceId)?2:3)||compare(a,b));components.push({members,epic:members.some(unit=>unit.isEpic)});}
+    const componentOrder=component=>{const primary=component.members.filter(unit=>component.epic?unit.isEpic:leaderIds.has(unit.instanceId));return Math.min(...(primary.length?primary:component.members).map(unit=>unit.canonicalOrder));};
+    const unattached=unit=>!edges.has(unit.instanceId),result=[],emitted=new Set(),emit=unit=>{if(!unit||emitted.has(unit.instanceId))return;emitted.add(unit.instanceId);result.push(unit);},emitComponent=component=>component.members.forEach(emit);
+    units.filter(unit=>unit.isEpic&&unattached(unit)).sort(compare).forEach(emit);
+    components.filter(component=>component.epic).sort((a,b)=>componentOrder(a)-componentOrder(b)).forEach(emitComponent);
+    units.filter(unit=>unit.isCharacter&&!unit.isEpic&&unattached(unit)).sort(compare).forEach(emit);
+    components.filter(component=>!component.epic).sort((a,b)=>componentOrder(a)-componentOrder(b)).forEach(emitComponent);
+    units.sort(compare).forEach(emit);
+    const copies=new Map();for(const unit of units.sort((a,b)=>a.physicalOrder-b.physicalOrder)){if(!copies.has(unit.targetId))copies.set(unit.targetId,[]);copies.get(unit.targetId).push(unit.instanceId);}
+    return result.map(unit=>{const peers=copies.get(unit.targetId)||[],ordinal=peers.indexOf(unit.instanceId)+1;return{...unit,label:peers.length>1?`${unit.title} #${ordinal}`:unit.title};});
+  }
+
+  function projectPhysicalRosterNavigation(tree){
+    const params=new URLSearchParams(location.search),context=window.WH_ARMY_ROSTER_CONTEXT,game=window.WH_ARMY_ROSTER_GAME_PROJECTION,catalog=window.WH_BOOK_ROSTER_CATALOG;
+    if(!params.has('roster')||context?.status!=='ready'||game?.schema!==GAME_SCHEMA||!list(game.units).length||!list(catalog?.units).length)return Object.freeze({active:false,items:[]});
+    const ordered=physicalRosterOrder(game,catalog),projected=[];
+    for(const [index,item] of ordered.entries()){
+      const sourceButton=[...tree.querySelectorAll('[data-nav-target]')].find(button=>button.dataset.navTarget===item.targetId),sourceNode=sourceButton?.closest('[data-nav-id]'),sourceRow=sourceNode&&directChild(sourceNode,'toc-row');
+      if(!sourceNode||!sourceRow)return Object.freeze({active:false,items:[]});
+      const node=sourceNode.cloneNode(false),row=sourceRow.cloneNode(true);row.querySelector('[data-nav-toggle]')?.remove();const button=row.querySelector('[data-nav-target]');if(!button)return Object.freeze({active:false,items:[]});
+      node.dataset.navId=`roster-unit-${index+1}`;node.dataset.navDepth='0';button.dataset.navTarget=item.targetId;button.dataset.rosterInstance=item.instanceId;button.replaceChildren(document.createTextNode(item.label));button.removeAttribute('aria-current');button.classList.remove('is-current','is-ancestor');node.append(row);projected.push({node,...item});
+    }
+    if(projected.length!==ordered.length)return Object.freeze({active:false,items:[]});
+    tree.replaceChildren(...projected.map(item=>item.node));tree.dataset.rosterNavigation='physical';document.documentElement.dataset.rosterNavigation='physical';
+    return Object.freeze({active:true,items:projected.map(({node,...item})=>item)});
+  }
+
   class NavigationController{
     constructor({breakpoint=800,resizeCleanupBreakpoint=800,trackingGap=18,epsilon=1}={}){
       this.breakpoint=breakpoint;
@@ -15,10 +56,11 @@
       this.menuButton=document.getElementById('navMenu');
       this.collapseButton=document.getElementById('navCollapse');
       this.scrim=document.getElementById('tocScrim');
+      this.rosterNavigation=projectPhysicalRosterNavigation(this.tree);
 
       this.mobile=window.innerWidth<=this.breakpoint;
       this.viewportWidth=window.innerWidth;
-      this.state={owner:'reader',active:'',drawer:false,collapsed:false,transition:0};
+      this.state={owner:'reader',active:'',instance:'',drawer:false,collapsed:false,transition:0};
       this.frames={reader:0,geometry:0,hash:0};
       this.geometry={headerBottom:0,ranges:[]};
       this.activeButtons=new Set();
@@ -27,18 +69,20 @@
       window.addEventListener('wh-army-target-before-mount',()=>this.highlighter.clear());
       this.historyIndex=Number.isInteger(history.state?.whNavigationIndex)?history.state.whNavigationIndex:0;
       this.locationTarget=this.hashTarget();
+      this.locationInstance=this.rosterInstance();
       history.replaceState({...history.state,whNavigationIndex:this.historyIndex},'',location.href);
 
       this.items=[...this.tree.querySelectorAll('[data-nav-id]')].map(node=>{
         const row=this.direct(node,'toc-row');
         const button=row?.querySelector('[data-nav-target]');
         const id=button?.dataset.navTarget||'';
+        const instanceId=button?.dataset.rosterInstance||'';
         return{
-          id,node,row,button,
+          id,instanceId,key:instanceId||id,node,row,button,
           depth:Number(node.dataset.navDepth)
         };
       }).filter(item=>item.id&&item.button);
-      this.byId=new Map(this.items.map(item=>[item.id,item]));
+      this.byId=new Map();this.byInstance=new Map();for(const item of this.items){if(!this.byId.has(item.id))this.byId.set(item.id,item);if(item.instanceId)this.byInstance.set(item.instanceId,item);}
 
       this.bind();
       this.closeEveryBranch();
@@ -59,12 +103,17 @@
     }
 
     get active(){return this.state.active||'start';}
+    get activeInstance(){return this.state.instance||'';}
 
     direct(node,className){return[...node.children].find(child=>child.classList.contains(className))||null;}
     targetKind(id){return window.WHArmyBookTargetMount?.resolve(id)?.node?.kind||'';}
     canResolveTarget(id){return Boolean(document.getElementById(id)||window.WHArmyBookTargetMount?.resolve(id)?.ownerId);}
     ensureTarget(id){return Promise.resolve(window.WHArmyBookTargetMount?.ensure(id)||document.getElementById(id)||null);}
-    sectionFor(item){return item?document.getElementById(item.id):null;}
+    canonicalTarget(id){return window.WHArmyBookTargetMount?.resolve(id)?.ownerId||id;}
+    itemFor(id,instanceId=''){const exact=instanceId&&this.byInstance.get(instanceId);if(exact&&exact.id===this.canonicalTarget(id))return exact;return this.byId.get(this.canonicalTarget(id))||null;}
+    rosterInstance(){return new URLSearchParams(location.search).get('rosterInstance')||history.state?.whRosterInstance||'';}
+    rosterDestination(id){if(!this.rosterNavigation.active)return this.itemFor(id);const requested=this.rosterInstance(),exact=requested&&this.byInstance.get(requested),owner=this.canonicalTarget(id);if(exact&&exact.id===owner)return exact;if(!requested){const matching=this.byId.get(owner);if(matching)return matching;}return this.items[0]||null;}
+    sectionFor(item,requestedId=item?.id){if(!item)return null;if(!item.instanceId)return document.getElementById(requestedId)||document.getElementById(item.id);const card=document.querySelector(`.unit-card[data-roster-instance="${CSS.escape(item.instanceId)}"]`);if(!card)return null;if(requestedId===item.id)return card;return[...card.querySelectorAll('[id]')].find(node=>node.id===requestedId||node.id.startsWith(`${requestedId}--`))||card;}
     branch(node){return this.direct(node,'toc-branch');}
     parentNode(node){const list=node.parentElement;return list?.classList.contains('toc-branch')?list.parentElement:null;}
     toggle(node){return this.direct(node,'toc-row')?.querySelector('[data-nav-toggle]')||null;}
@@ -82,7 +131,7 @@
         if(this.mobile&&this.targetKind(label.dataset.navTarget)==='branch'){this.toggleBranch(node);return;}
         if(label.dataset.navTarget==='start')this.closeEveryBranch();
         else this.revealPath(node,{includeSelf:true});
-        this.go(label.dataset.navTarget,{historyMode:'push'});
+        this.go(label.dataset.navTarget,{historyMode:'push',instanceId:label.dataset.rosterInstance||''});
       });
 
       this.menuButton.addEventListener('touchstart',event=>{event.preventDefault();this.menuButton.click();},{passive:false});
@@ -211,15 +260,15 @@
       }
       return buttons;
     }
-    activate(id,{keepVisible=true,behavior='auto'}={}){
-      const item=this.byId.get(id);if(!item)return;
+    activate(id,{instanceId='',keepVisible=true,behavior='auto'}={}){
+      const item=this.itemFor(id,instanceId);if(!item)return;
       const next=this.buttonSet(item);
       for(const button of this.activeButtons)if(!next.has(button)){
         button.classList.remove('is-current','is-ancestor');button.removeAttribute('aria-current');
       }
       item.button.classList.remove('is-ancestor');item.button.classList.add('is-current');item.button.setAttribute('aria-current','location');
       for(const button of next)if(button!==item.button){button.classList.remove('is-current');button.classList.add('is-ancestor');button.removeAttribute('aria-current');}
-      this.activeButtons=next;this.state.active=id;
+      this.activeButtons=next;this.state.active=item.id;this.state.instance=item.instanceId;
       this.revealPath(item.node,{includeSelf:true});
       if(keepVisible)this.keepRowVisible(item.row,behavior);
     }
@@ -284,7 +333,7 @@
     readViewport(){
       if(this.state.owner!=='reader')return;
       const item=this.pickActive();
-      if(item&&item.id!==this.state.active)this.activate(item.id);
+      if(item&&(item.id!==this.state.active||item.instanceId!==this.state.instance))this.activate(item.id,{instanceId:item.instanceId});
       else if(item&&!this.pathIsOpen(item.node))this.revealPath(item.node,{includeSelf:true});
     }
 
@@ -293,15 +342,16 @@
       this.frames.hash=requestAnimationFrame(()=>{this.frames.hash=0;this.navigateHash();});
     }
     async restoreInitial(scrollY=null,settled){
-      const id=this.hashTarget()||'start';
+      let id=this.hashTarget()||'start',item=this.rosterDestination(id);
+      if(this.rosterNavigation.active){if(!item){settled?.();return false;}if(this.canonicalTarget(id)!==item.id)id=item.id;this.replaceRosterLocation(id,item.instanceId);}else item=this.itemFor(id);
       if(this.mobile&&this.targetKind(id)==='branch'){const item=this.byId.get(id);if(item)this.revealPath(item.node,{includeSelf:true});settled?.();return false;}
       await this.ensureTarget(id);
       await window.WHArmyDatasheetLayout?.ready?.();
-      const target=document.getElementById(id);if(!target){settled?.();return false;}
+      const target=this.sectionFor(item,id);if(!target){settled?.();return false;}
       this.refreshGeometry();const unit=target.closest('.unit-card');
-      if(Number.isFinite(scrollY))this.beginTransition(unit?.id||target.id,Math.max(0,scrollY),settled);
-      else if(unit&&target.matches('.unit-part'))this.navigateSection(unit.id,target,{nav:unit.querySelector(':scope > .local-nav'),settled});
-      else this.navigate(unit?.id||target.id,target,settled);
+      if(Number.isFinite(scrollY))this.beginTransition(item?.id||unit?.id||target.id,Math.max(0,scrollY),settled,item?.instanceId||'');
+      else if(unit&&target.matches('.unit-part'))this.navigateSection(item?.id||unit.id,target,{nav:unit.querySelector(':scope > .local-nav'),settled,instanceId:item?.instanceId||''});
+      else this.navigate(item?.id||unit?.id||target.id,target,settled,item?.instanceId||'');
       return true;
     }
     navigateHash(){return this.restoreInitial();}
@@ -311,45 +361,48 @@
       const next={...state,whNavigationIndex:this.historyIndex};
       history.pushState(next,'',url);
       this.locationTarget=decodeURIComponent(new URL(url,location.href).hash.slice(1));
+      this.locationInstance=new URL(url,location.href).searchParams.get('rosterInstance')||'';
       return next;
     }
-    commitTarget(id){
-      if(this.hashTarget()===id)return;
+    replaceRosterLocation(id,instanceId){const url=new URL(location.href);url.hash=id;url.searchParams.set('rosterInstance',instanceId);const state={...history.state,whNavigationTarget:id,whRosterInstance:instanceId};history.replaceState(state,'',url);this.locationTarget=id;this.locationInstance=instanceId;}
+    commitTarget(id,instanceId=''){
+      if(this.hashTarget()===id&&this.rosterInstance()===instanceId)return;
       const url=new URL(location.href);url.hash=id;
       const state={...history.state,whNavigationTarget:id};
+      if(instanceId){url.searchParams.set('rosterInstance',instanceId);state.whRosterInstance=instanceId;}else delete state.whRosterInstance;
       for(const key of ['whJourney','whJourneyTarget','dgFullEntry','wh40kPageState'])delete state[key];
       this.pushHistoryState(state,url);
-      window.dispatchEvent(new CustomEvent('wh-navigation-commit',{detail:{target:id}}));
+      window.dispatchEvent(new CustomEvent('wh-navigation-commit',{detail:{target:id,instanceId}}));
     }
     onPopState(event){
       const next=Number.isInteger(event.state?.whNavigationIndex)?event.state.whNavigationIndex:this.historyIndex;
       const direction=next<this.historyIndex?'back':next>this.historyIndex?'forward':'none';
       this.historyIndex=next;
-      const target=this.hashTarget(),changed=target!==this.locationTarget;
-      this.locationTarget=target;
-      const detail={direction,state:event.state||{},target,restore:null};
+      const target=this.hashTarget(),instanceId=this.rosterInstance(),changed=target!==this.locationTarget||instanceId!==this.locationInstance;
+      this.locationTarget=target;this.locationInstance=instanceId;
+      const detail={direction,state:event.state||{},target,instanceId,restore:null};
       window.dispatchEvent(new CustomEvent('wh-navigation-popstate',{detail}));
-      if(detail.restore)this.restore(detail.restore.id,detail.restore.scrollY);
+      if(detail.restore)this.restore(detail.restore.id,detail.restore.scrollY,null,instanceId);
       else if(changed)this.scheduleHashRestore();
     }
-    async go(id,{historyMode='none'}={}){const item=this.byId.get(id);if(!item)return;if(this.mobile&&this.targetKind(id)==='branch'){this.toggleBranch(item.node);return;}await this.ensureTarget(id);const section=this.sectionFor(item);if(!section)return;this.setDrawer(false);if(historyMode==='push')this.commitTarget(id);this.navigate(id,section);}
-    navigate(id,element,settled){
+    async go(id,{historyMode='none',instanceId=''}={}){const item=this.itemFor(id,instanceId);if(!item)return;if(this.mobile&&this.targetKind(id)==='branch'){this.toggleBranch(item.node);return;}await this.ensureTarget(id);const section=this.sectionFor(item);if(!section)return;this.setDrawer(false);if(historyMode==='push')this.commitTarget(item.id,item.instanceId);this.navigate(item.id,section,null,item.instanceId);}
+    navigate(id,element,settled,instanceId=''){
       const targets=window.WHNavigationTargets.resolve(element);
       if(!targets.scrollTarget)return;
-      this.beginTransition(id,this.destination(targets.scrollTarget),()=>{this.highlighter.show(targets.highlightTarget);settled?.();});
+      this.beginTransition(id,this.destination(targets.scrollTarget),()=>{this.highlighter.show(targets.highlightTarget);settled?.();},instanceId);
     }
-    navigateSection(id,section,{nav=null,settled}={}){
+    navigateSection(id,section,{nav=null,settled,instanceId=''}={}){
       const targets=window.WHNavigationTargets.resolve(section);if(!targets.scrollTarget)return;
       const navHeight=nav?.getBoundingClientRect().height||0;
       const inset=this.geometry.headerBottom+navHeight+this.trackingGap;
       const highlightTarget=targets.kind==='logical-section'?targets.highlightTarget:section;
       const complete=()=>{this.highlighter.show(highlightTarget);settled?.();};
-      this.beginTransition(id,this.destination(targets.scrollTarget,inset),complete);
+      this.beginTransition(id,this.destination(targets.scrollTarget,inset),complete,instanceId);
     }
-    async restore(id,scrollY,settled){await this.ensureTarget(id);this.refreshGeometry();this.beginTransition(id,Math.max(0,scrollY),settled);}
-    beginTransition(id,destination,settled){
+    async restore(id,scrollY,settled,instanceId=this.rosterInstance()){const item=this.itemFor(id,instanceId)||this.rosterDestination(id);if(!item)return;await this.ensureTarget(item.id);this.refreshGeometry();this.beginTransition(item.id,Math.max(0,scrollY),settled,item.instanceId);}
+    beginTransition(id,destination,settled,instanceId=''){
       if(this.state.owner==='controller')this.stopControlledScroll();
-      const token=++this.state.transition;this.state.owner='controller';this.activate(id,{behavior:'auto'});
+      const token=++this.state.transition;this.state.owner='controller';this.activate(id,{instanceId,behavior:'auto'});
       const reachable=this.reachableDestination(destination);
       if(this.mobile||matchMedia('(prefers-reduced-motion:reduce)').matches)this.scrollImmediately(reachable);
       else window.scrollTo({top:reachable,behavior:'smooth'});
@@ -393,4 +446,5 @@
   }
 
   window.DGNavigation=NavigationController;
+  window.WHArmyRosterNavigation=Object.freeze({schema:'wh40k-physical-roster-navigation/v1',order:physicalRosterOrder,project:projectPhysicalRosterNavigation});
 }());

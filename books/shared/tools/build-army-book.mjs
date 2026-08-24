@@ -301,7 +301,7 @@ const normalizedHtml=html
   .replace('../shared/glossary-autolink.js"','../shared/glossary-autolink.js?v=8"')
   .replace('<script src="../shared/related-rules-matcher.js">','<script src="../shared/rule-facts.js?v=4"></script><script src="../shared/related-rules-matcher.js">')
   .replace('../shared/related-rules-matcher.js"','../shared/related-rules-matcher.js?v=6"')
-  .replace('<script src="./scripts/data.js">',`${config.rosterSupport?'<script src="../shared/roster-parser.js?v=2"></script><script src="../shared/roster-entities.js?v=1"></script>':''}<script src="./scripts/data.js">`)
+  .replace('<script src="./scripts/data.js">',`${config.rosterSupport?`<script src="../shared/roster-parser.js?v=${runtimeVersions.shared.rosterParser}"></script><script src="../shared/roster-entities.js?v=1"></script>`:''}<script src="./scripts/data.js">`)
   .replace('</script><script src="../shared/controllers/navigation-controller.js">',`</script>${config.rosterSupport?`<script src="./scripts/roster-data.js?v=${runtimeVersions.shared.rosterCatalog}"></script><script src="../shared/book-roster-enhancements.js?v=2"></script><script src="../extensions/book-roster-enhancement-providers.js?v=1"></script>`:''}<script src="../shared/controllers/navigation-controller.js">`)
   .replace('../shared/controllers/navigation-controller.js"',`../shared/controllers/navigation-controller.js?v=${runtimeVersions.shared.navigationController}"`)
   .replace('../shared/controllers/full-entry-controller.js"','../shared/controllers/full-entry-controller.js?v=9"')

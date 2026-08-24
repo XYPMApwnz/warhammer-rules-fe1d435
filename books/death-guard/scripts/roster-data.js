@@ -3932,15 +3932,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           },
           {
-            "id": "unit-deathshroud-terminators-selection-icon-of-despair-aura",
-            "title": "Icon of Despair (Aura)",
+            "id": "unit-deathshroud-terminators-selection-icon-of-despair",
+            "title": "Icon of Despair",
             "aliases": [
-              "Icon of Despair (Aura)"
+              "Icon of Despair"
             ],
             "kind": "wargear",
             "profileIds": [],
-            "wargearAbilityIds": [],
-            "candidateWargearAbilityIds": [
+            "wargearAbilityIds": [
               "deathshroud-terminators-ability-icon-of-despair-aura"
             ]
           }
@@ -4012,7 +4011,9 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           {
             "id": "deathshroud-terminators-ability-icon-of-despair-aura",
             "title": "Icon of Despair (Aura)",
-            "requiredSelectionIds": []
+            "requiredSelectionIds": [
+              "unit-deathshroud-terminators-selection-icon-of-despair"
+            ]
           }
         ]
       }

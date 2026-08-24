@@ -81,9 +81,7 @@
   function filterWargearAbilities(card,gameUnit){
     const section=partEnding(card,'-wargear-abilities');if(!section)return;
     const loadout=gameUnit.selection.loadout,resolution=loadout.wargearResolution||{},selected=unique(loadout.selectedWargearAbilityIds),articles=[...section.querySelectorAll('.ability')],idFor=article=>article.dataset.rosterWargearAbilityId||article.id||'';
-    const complete=resolution.state==='resolved'&&selected.every(id=>articles.filter(article=>idFor(article)===id).length===1)&&articles.every(article=>Boolean(idFor(article)));
-    if(!complete){section.dataset.rosterGameAbilities='fallback';if(['partial','unresolved'].includes(resolution.state))section.append(element('p','roster-game-fallback','Wargear Ability linkage is unresolved; canonical abilities remain visible.'));return;}
-    const visible=new Set(selected);for(const article of articles)article.hidden=!visible.has(idFor(article));section.hidden=!articles.some(article=>!article.hidden);section.dataset.rosterGameAbilities='filtered';
+    const mapped=selected.every(id=>articles.filter(article=>idFor(article)===id).length===1),visible=new Set(mapped?selected:[]);for(const article of articles)article.hidden=!visible.has(idFor(article));section.hidden=!articles.some(article=>!article.hidden);section.dataset.rosterGameAbilities=resolution.state==='resolved'&&mapped?'filtered':resolution.state==='known-none'?'known-none':'fallback';
   }
   function transformComposition(card,gameUnit){
     const composition=gameUnit.selection.composition,models=gameUnit.selection.modelCount,section=partEnding(card,'-composition');if(!section||composition?.state!=='resolved'||models?.state!=='resolved')return;

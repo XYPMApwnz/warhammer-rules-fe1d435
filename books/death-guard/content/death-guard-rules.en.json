@@ -4799,7 +4799,16 @@
               "termId": null,
               "id": "deathshroud-terminators-ability-icon-of-despair-aura",
               "title": "Icon of Despair (Aura)",
-              "text": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1."
+              "text": "While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1.",
+              "requiredSelections": [
+                {
+                  "id": "unit-deathshroud-terminators-selection-icon-of-despair",
+                  "title": "Icon of Despair",
+                  "aliases": [
+                    "Icon of Despair"
+                  ]
+                }
+              ]
             }
           ]
         },

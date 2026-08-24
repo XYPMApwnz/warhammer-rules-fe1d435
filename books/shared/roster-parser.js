@@ -101,7 +101,8 @@
       }
       if (line.startsWith('\u2022')) {
         const model = line.match(/^\u2022\s*(\d+)x\s+([^:]+)(?::\s*(.*))?$/);
-        currentModel = model && currentUnit ? { quantity:Number(model[1]), name:model[2], wargear:model[3] || '', loadouts:[] } : null;
+        const equipment=model?.[3]||'',inlineLoadout=equipment.match(/^(\d+)\s+with\s+(.+)$/i);
+        currentModel = model && currentUnit ? { quantity:Number(model[1]), name:model[2], wargear:inlineLoadout?'':equipment, loadouts:inlineLoadout?[{quantity:Number(inlineLoadout[1]),wargear:inlineLoadout[2]}]:[] } : null;
         if (currentModel) currentUnit.models.push(currentModel);
         continue;
       }

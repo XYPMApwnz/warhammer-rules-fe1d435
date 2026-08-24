@@ -244,13 +244,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-blightlord-terminators"
+            "unitId": "unit-blightlord-terminators",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-deathshroud-terminators"
+            "unitId": "unit-deathshroud-terminators",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-poxwalkers"
+            "unitId": "unit-poxwalkers",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -315,13 +318,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-blightlord-terminators"
+              "unitId": "unit-blightlord-terminators",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-deathshroud-terminators"
+              "unitId": "unit-deathshroud-terminators",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-poxwalkers"
+              "unitId": "unit-poxwalkers",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -409,12 +415,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-plague-marines"
+            "unitId": "unit-plague-marines",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [
           {
-            "unitId": "unit-plague-marines"
+            "unitId": "unit-plague-marines",
+            "maxCharacters": 2
           }
         ],
         "canBeLedBy": [],
@@ -473,12 +481,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-plague-marines"
+              "unitId": "unit-plague-marines",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [
             {
-              "unitId": "unit-plague-marines"
+              "unitId": "unit-plague-marines",
+              "maxCharacters": 2
             }
           ],
           "canBeLedBy": [],
@@ -931,12 +941,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-plague-marines"
+            "unitId": "unit-plague-marines",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [
           {
-            "unitId": "unit-plague-marines"
+            "unitId": "unit-plague-marines",
+            "maxCharacters": 2
           }
         ],
         "canBeLedBy": [],
@@ -993,12 +1005,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-plague-marines"
+              "unitId": "unit-plague-marines",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [
             {
-              "unitId": "unit-plague-marines"
+              "unitId": "unit-plague-marines",
+              "maxCharacters": 2
             }
           ],
           "canBeLedBy": [],
@@ -1085,12 +1099,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-plague-marines"
+            "unitId": "unit-plague-marines",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [
           {
-            "unitId": "unit-plague-marines"
+            "unitId": "unit-plague-marines",
+            "maxCharacters": 2
           }
         ],
         "canBeLedBy": [],
@@ -1147,12 +1163,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-plague-marines"
+              "unitId": "unit-plague-marines",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [
             {
-              "unitId": "unit-plague-marines"
+              "unitId": "unit-plague-marines",
+              "maxCharacters": 2
             }
           ],
           "canBeLedBy": [],
@@ -1240,10 +1258,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-blightlord-terminators"
+            "unitId": "unit-blightlord-terminators",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-deathshroud-terminators"
+            "unitId": "unit-deathshroud-terminators",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -1305,10 +1325,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-blightlord-terminators"
+              "unitId": "unit-blightlord-terminators",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-deathshroud-terminators"
+              "unitId": "unit-deathshroud-terminators",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -1396,7 +1418,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-plague-marines"
+            "unitId": "unit-plague-marines",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -1455,7 +1478,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-plague-marines"
+              "unitId": "unit-plague-marines",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -1570,10 +1594,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-blightlord-terminators"
+            "unitId": "unit-blightlord-terminators",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-deathshroud-terminators"
+            "unitId": "unit-deathshroud-terminators",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -1632,10 +1658,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-blightlord-terminators"
+              "unitId": "unit-blightlord-terminators",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-deathshroud-terminators"
+              "unitId": "unit-deathshroud-terminators",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -1723,10 +1751,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-plague-marines"
+            "unitId": "unit-plague-marines",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-poxwalkers"
+            "unitId": "unit-poxwalkers",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -1786,10 +1816,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-plague-marines"
+              "unitId": "unit-plague-marines",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-poxwalkers"
+              "unitId": "unit-poxwalkers",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -1930,18 +1962,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-plague-marines"
+            "unitId": "unit-plague-marines",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-poxwalkers"
+            "unitId": "unit-poxwalkers",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [
           {
-            "unitId": "unit-plague-marines"
+            "unitId": "unit-plague-marines",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-poxwalkers"
+            "unitId": "unit-poxwalkers",
+            "maxCharacters": 2
           }
         ],
         "canBeLedBy": [],
@@ -1996,18 +2032,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-plague-marines"
+              "unitId": "unit-plague-marines",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-poxwalkers"
+              "unitId": "unit-poxwalkers",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [
             {
-              "unitId": "unit-plague-marines"
+              "unitId": "unit-plague-marines",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-poxwalkers"
+              "unitId": "unit-poxwalkers",
+              "maxCharacters": 2
             }
           ],
           "canBeLedBy": [],
@@ -2120,12 +2160,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-plague-marines"
+            "unitId": "unit-plague-marines",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [
           {
-            "unitId": "unit-plague-marines"
+            "unitId": "unit-plague-marines",
+            "maxCharacters": 2
           }
         ],
         "canBeLedBy": [],
@@ -2179,12 +2221,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-plague-marines"
+              "unitId": "unit-plague-marines",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [
             {
-              "unitId": "unit-plague-marines"
+              "unitId": "unit-plague-marines",
+              "maxCharacters": 2
             }
           ],
           "canBeLedBy": [],
@@ -2270,12 +2314,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-plague-marines"
+            "unitId": "unit-plague-marines",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [
           {
-            "unitId": "unit-plague-marines"
+            "unitId": "unit-plague-marines",
+            "maxCharacters": 2
           }
         ],
         "canBeLedBy": [],
@@ -2330,12 +2376,14 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-plague-marines"
+              "unitId": "unit-plague-marines",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [
             {
-              "unitId": "unit-plague-marines"
+              "unitId": "unit-plague-marines",
+              "maxCharacters": 2
             }
           ],
           "canBeLedBy": [],
@@ -2451,48 +2499,62 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-biologus-putrifier"
+            "unitId": "unit-biologus-putrifier",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-foul-blightspawn"
+            "unitId": "unit-foul-blightspawn",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-icon-bearer"
+            "unitId": "unit-icon-bearer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-lord-of-poxes"
+            "unitId": "unit-lord-of-poxes",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-malignant-plaguecaster"
+            "unitId": "unit-malignant-plaguecaster",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-noxious-blightbringer"
+            "unitId": "unit-noxious-blightbringer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-plague-surgeon"
+            "unitId": "unit-plague-surgeon",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tallyman"
+            "unitId": "unit-tallyman",
+            "maxCharacters": 2
           }
         ],
         "canBeSupportedBy": [
           {
-            "unitId": "unit-biologus-putrifier"
+            "unitId": "unit-biologus-putrifier",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-foul-blightspawn"
+            "unitId": "unit-foul-blightspawn",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-icon-bearer"
+            "unitId": "unit-icon-bearer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-noxious-blightbringer"
+            "unitId": "unit-noxious-blightbringer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-plague-surgeon"
+            "unitId": "unit-plague-surgeon",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tallyman"
+            "unitId": "unit-tallyman",
+            "maxCharacters": 2
           }
         ]
       },
@@ -2558,48 +2620,62 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-biologus-putrifier"
+              "unitId": "unit-biologus-putrifier",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-foul-blightspawn"
+              "unitId": "unit-foul-blightspawn",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-icon-bearer"
+              "unitId": "unit-icon-bearer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-lord-of-poxes"
+              "unitId": "unit-lord-of-poxes",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-malignant-plaguecaster"
+              "unitId": "unit-malignant-plaguecaster",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-noxious-blightbringer"
+              "unitId": "unit-noxious-blightbringer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-plague-surgeon"
+              "unitId": "unit-plague-surgeon",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tallyman"
+              "unitId": "unit-tallyman",
+              "maxCharacters": 2
             }
           ],
           "canBeSupportedBy": [
             {
-              "unitId": "unit-biologus-putrifier"
+              "unitId": "unit-biologus-putrifier",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-foul-blightspawn"
+              "unitId": "unit-foul-blightspawn",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-icon-bearer"
+              "unitId": "unit-icon-bearer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-noxious-blightbringer"
+              "unitId": "unit-noxious-blightbringer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-plague-surgeon"
+              "unitId": "unit-plague-surgeon",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tallyman"
+              "unitId": "unit-tallyman",
+              "maxCharacters": 2
             }
           ]
         }
@@ -3028,13 +3104,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-lord-of-contagion"
+            "unitId": "unit-lord-of-contagion",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-lord-of-virulence"
+            "unitId": "unit-lord-of-virulence",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-typhus"
+            "unitId": "unit-typhus",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -3093,13 +3172,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-lord-of-contagion"
+              "unitId": "unit-lord-of-contagion",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-lord-of-virulence"
+              "unitId": "unit-lord-of-virulence",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-typhus"
+              "unitId": "unit-typhus",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -3348,13 +3430,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-lord-of-contagion"
+            "unitId": "unit-lord-of-contagion",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-lord-of-virulence"
+            "unitId": "unit-lord-of-virulence",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-typhus"
+            "unitId": "unit-typhus",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -3410,13 +3495,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-lord-of-contagion"
+              "unitId": "unit-lord-of-contagion",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-lord-of-virulence"
+              "unitId": "unit-lord-of-virulence",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-typhus"
+              "unitId": "unit-typhus",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -3548,18 +3636,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-malignant-plaguecaster"
+            "unitId": "unit-malignant-plaguecaster",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-noxious-blightbringer"
+            "unitId": "unit-noxious-blightbringer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-typhus"
+            "unitId": "unit-typhus",
+            "maxCharacters": 2
           }
         ],
         "canBeSupportedBy": [
           {
-            "unitId": "unit-noxious-blightbringer"
+            "unitId": "unit-noxious-blightbringer",
+            "maxCharacters": 2
           }
         ]
       },
@@ -3608,18 +3700,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-malignant-plaguecaster"
+              "unitId": "unit-malignant-plaguecaster",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-noxious-blightbringer"
+              "unitId": "unit-noxious-blightbringer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-typhus"
+              "unitId": "unit-typhus",
+              "maxCharacters": 2
             }
           ],
           "canBeSupportedBy": [
             {
-              "unitId": "unit-noxious-blightbringer"
+              "unitId": "unit-noxious-blightbringer",
+              "maxCharacters": 2
             }
           ]
         }

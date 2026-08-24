@@ -5,7 +5,6 @@ const FACTION_ALIASES=Object.freeze({'tau empire':'t au empire'});
 const FACTION_PARENTS=Object.freeze({'death guard':'chaos','adeptus mechanicus':'imperium','tyranids':'xenos','t au empire':'xenos','emperor s children':'chaos','chaos space marines':'chaos','space marines':'imperium','blood angels':'imperium','dark angels':'imperium'});
 const FACTION_LABELS=Object.freeze({'death guard':'Death Guard','adeptus mechanicus':'Adeptus Mechanicus','tyranids':'Tyranids','t au empire':"T'au Empire",'emperor s children':"Emperor's Children",'chaos space marines':'Chaos Space Marines','space marines':'Space Marines','blood angels':'Blood Angels','dark angels':'Dark Angels'});
 const FACTION_READERS=Object.freeze({'death guard':'../books/death-guard/index.html','adeptus mechanicus':'../books/adeptus-mechanicus/index.html','tyranids':'../books/tyranids/index.html','t au empire':'../books/tau-empire/index.html','emperor s children':"../books/emperors-children/index.html",'chaos space marines':'../books/chaos-space-marines/index.html','space marines':'../books/space-marines/index.html','blood angels':'../books/blood-angels/index.html','dark angels':'../books/dark-angels/index.html'});
-const ATTACHMENT_FACTIONS=new Set(['death guard','adeptus mechanicus']);
 const savedHost=document.querySelector('#saved-roster-list');
 
 function factionParts(value){const match=String(value||'').trim().match(/^(?:(Chaos|Imperium|Xenos)\s*[-–—]\s*)?(.*)$/i),key=match[2].replace(/[^a-z0-9]+/gi,' ').trim().toLowerCase();return{parent:(match[1]||'').toLowerCase(),key:FACTION_ALIASES[key]||key};}
@@ -43,7 +42,7 @@ function rosterId(text){let hash=2166136261;for(const char of text)hash=Math.imu
 function recordDetachments(record){const items=Array.isArray(record.roster.detachments)?record.roster.detachments:[{label:record.roster.detachment}];return items.map(item=>item?.label).filter(Boolean).join(' + ');}
 function updatedLabel(value){const date=new Date(value);return Number.isFinite(date.getTime())?new Intl.DateTimeFormat('en-GB').format(date):'date unknown';}
 function readerAction(record){const id=escapeHtml(record.id),faction=knownFaction(record?.roster?.faction);return faction&&FACTION_READERS[faction]?`<button class="action primary" type="button" data-open-roster="${id}">Open</button>`:'<button class="action" type="button" disabled>Reader unavailable</button>';}
-function attachmentAction(record){return ATTACHMENT_FACTIONS.has(knownFaction(record?.roster?.faction))?`<button class="action" type="button" data-edit-attachments="${escapeHtml(record.id)}">Attachments</button>`:'';}
+function attachmentAction(record){const roster=record?.roster,model=attachmentState(roster,record);if(!model.api)return '';const current=Object.keys(model.attachments).length>0,candidates=model.units.some(unit=>model.api.candidates({units:model.units,attachments:model.attachments,bodyguardInstanceId:unit.instanceId}).length);return current||candidates?`<button class="action" type="button" data-edit-attachments="${escapeHtml(record.id)}">Attachments</button>`:'';}
 function freshRoster(record){
   const parsed=record?.sourceText?window.WHRosterParser.parse(record.sourceText):null;
   const roster=parsed?.units?.length?parsed:record?.roster;
@@ -56,7 +55,7 @@ function freshRoster(record){
 
 function saveRoster(roster,sourceText){
   const records=getSavedRosters(),id=rosterId(sourceText),previous=records.find(record=>record?.id===id);
-  const record={id,name:`${roster.faction} · ${roster.declared||roster.calculated} pts`,createdAt:previous?.createdAt||new Date().toISOString(),updatedAt:new Date().toISOString(),sourceText,roster,attachments:previous?.attachments||{}};
+  let record={id,name:`${roster.faction} · ${roster.declared||roster.calculated} pts`,createdAt:previous?.createdAt||new Date().toISOString(),updatedAt:new Date().toISOString(),sourceText,roster,attachments:previous?.attachments||{}};record=validatedAttachmentRecord(record,roster);
   putSavedRosters([record,...records.filter(item=>item?.id!==id)]);
   navigator.storage?.persist?.();
   renderSavedRosters();
@@ -64,24 +63,13 @@ function saveRoster(roster,sourceText){
 }
 
 function unitKey(value){return String(value||'').replace(/[^a-z0-9]+/gi,' ').trim().toLowerCase();}
-function attachmentRelation(roster,bodyguard,character){
-  const units=window.WH_POINTS_CATALOG?.[knownFaction(roster?.faction)]?.units||{},body=units[unitKey(bodyguard?.name)],leader=units[unitKey(character?.name)];
-  if(!body||!leader||!leader.keywords?.includes('CHARACTER'))return null;
-  return [...(leader.relations?.canLead||[]),...(leader.relations?.canSupport||[])].find(item=>item.unitId===body.unitId)
-    ||[...(body.relations?.canBeLedBy||[]),...(body.relations?.canBeSupportedBy||[])].find(item=>item.unitId===leader.unitId)
-    ||null;
-}
-function attachmentSupport(roster,bodyguard,character){
-  const units=window.WH_POINTS_CATALOG?.[knownFaction(roster?.faction)]?.units||{},body=units[unitKey(bodyguard?.name)],leader=units[unitKey(character?.name)];
-  return Boolean(body&&leader&&((leader.relations?.canSupport||[]).some(item=>item.unitId===body.unitId)||(body.relations?.canBeSupportedBy||[]).some(item=>item.unitId===leader.unitId)));
-}
+function attachmentUnits(roster){const catalog=window.WH_POINTS_CATALOG?.[knownFaction(roster?.faction)]?.units||{};return (roster?.units||[]).map(unit=>({instanceId:unit.id,canonicalUnit:catalog[unitKey(unit.name)]})).filter(item=>item.instanceId&&item.canonicalUnit);}
+function attachmentState(roster,record){const api=window.WHArmyRosterContext?.attachments,units=attachmentUnits(roster);if(!api)return{api:null,units,attachments:{},rejected:[]};return{api,units,...api.sanitize({units,attachments:record?.attachments||{}})};}
+function validatedAttachmentRecord(record,roster){const state=attachmentState(roster,record);return state.api?{...record,attachments:state.attachments}:record;}
 function instanceLabel(roster,unit){const copies=roster.units.filter(item=>unitKey(item.name)===unitKey(unit.name));return copies.length>1?`${unit.name} #${copies.indexOf(unit)+1}`:unit.name;}
-function attachmentEditor(roster,record,bodyguard){
-  if(!ATTACHMENT_FACTIONS.has(knownFaction(roster.faction)))return '';
-  const attachments=record.attachments||{},current=(attachments[bodyguard.id]||[]).map(id=>roster.units.find(unit=>unit.id===id)).filter(Boolean),currentIds=new Set(current.map(unit=>unit.id));
-  const used=new Set(Object.entries(attachments).filter(([id])=>id!==bodyguard.id).flatMap(([,ids])=>ids||[]));
-  const relations=current.map(unit=>attachmentRelation(roster,bodyguard,unit)).filter(Boolean),limit=relations.length?Math.min(...relations.map(item=>Number(item.maxCharacters)||1)):Math.max(1,...roster.units.map(unit=>Number(attachmentRelation(roster,bodyguard,unit)?.maxCharacters)||0));
-  const candidates=roster.units.filter(unit=>!currentIds.has(unit.id)&&!used.has(unit.id)&&attachmentRelation(roster,bodyguard,unit)&&current.length<limit&&!current.some(item=>unitKey(item.name)===unitKey(unit.name))&&(!current.length||attachmentSupport(roster,bodyguard,unit)||current.some(item=>attachmentSupport(roster,bodyguard,item))));
+function attachmentEditor(roster,record,bodyguard,model=attachmentState(roster,record)){
+  if(!model.api||!model.units.some(item=>item.instanceId===bodyguard.id))return '';
+  const current=(model.attachments[bodyguard.id]||[]).map(id=>roster.units.find(unit=>unit.id===id)).filter(Boolean),candidates=model.api.candidates({units:model.units,attachments:model.attachments,bodyguardInstanceId:bodyguard.id}).map(item=>roster.units.find(unit=>unit.id===item.instanceId)).filter(Boolean);
   if(!current.length&&!candidates.length)return '';
   const assigned=current.map(unit=>`<label class="unit-attachment"><small>Attached</small><select data-roster-id="${escapeHtml(record.id)}" data-attachment-bodyguard="${escapeHtml(bodyguard.id)}"><option value="${escapeHtml(unit.id)}" selected>${escapeHtml(instanceLabel(roster,unit))}</option><option value="remove:${escapeHtml(unit.id)}">Detach Character</option></select><small class="attachment-summary">${escapeHtml(instanceLabel(roster,bodyguard))} ← ${escapeHtml(instanceLabel(roster,unit))}</small></label>`).join('');
   const options=candidates.map(unit=>`<option value="${escapeHtml(unit.id)}">${escapeHtml(instanceLabel(roster,unit))}</option>`).join('');
@@ -90,17 +78,9 @@ function attachmentEditor(roster,record,bodyguard){
 }
 function updateAttachment(recordId,bodyguardId,action){
   const records=getSavedRosters(),record=records.find(item=>item?.id===recordId),roster=freshRoster(record);
-  if(!record||!roster)return;
-  const bodyguard=roster.units.find(unit=>unit.id===bodyguardId),attachments={...(record.attachments||{})},current=(attachments[bodyguardId]||[]).filter(id=>roster.units.some(unit=>unit.id===id));
-  if(action.startsWith('remove:')){const next=current.filter(id=>id!==action.slice(7));if(next.length)attachments[bodyguardId]=next;else delete attachments[bodyguardId];}
-  else{
-    const characterId=action,character=roster.units.find(unit=>unit.id===characterId),members=[...current.map(id=>roster.units.find(unit=>unit.id===id)).filter(Boolean),character].filter(Boolean);
-    const relation=attachmentRelation(roster,bodyguard,character),used=Object.entries(attachments).some(([id,ids])=>id!==bodyguardId&&(ids||[]).includes(characterId));
-    const limit=members.length?Math.min(...members.map(unit=>Number(attachmentRelation(roster,bodyguard,unit)?.maxCharacters)||1)):1;
-    if(!bodyguard||!character||!relation||used||current.includes(characterId)||members.length>limit||members.some((unit,index)=>members.some((other,otherIndex)=>index!==otherIndex&&unitKey(unit.name)===unitKey(other.name)))||(members.length>1&&!members.some(unit=>attachmentSupport(roster,bodyguard,unit))))return;
-    attachments[bodyguardId]=[...current,characterId];
-  }
-  const updated={...record,attachments,updatedAt:new Date().toISOString()};
+  if(!record||!roster||!action)return;
+  const model=attachmentState(roster,record);if(!model.api)return;const result=action.startsWith('remove:')?model.api.detach({units:model.units,attachments:model.attachments,bodyguardInstanceId:bodyguardId,leaderInstanceId:action.slice(7)}):model.api.attach({units:model.units,attachments:model.attachments,bodyguardInstanceId:bodyguardId,leaderInstanceId:action});if(!result.changed&&JSON.stringify(result.attachments)===JSON.stringify(record.attachments||{}))return;
+  const updated={...record,attachments:result.attachments,updatedAt:new Date().toISOString()};
   putSavedRosters(records.map(item=>item?.id===recordId?updated:item));renderSavedRosters();renderRoster(roster,updated);
 }
 
@@ -113,7 +93,7 @@ function openSavedRoster(id){
   if(!reader){alert(`${FACTION_LABELS[faction]} was saved, but a personal reader is not available yet.`);return;}
   location.href=`${reader}?roster=${encodeURIComponent(id)}`;
 }
-function editAttachments(id){const record=getSavedRosters().find(item=>item?.id===id),roster=freshRoster(record);if(!record||!roster)return;document.querySelector('#roster-input').value=record.sourceText;renderRoster(roster,record);document.querySelector('#roster-result').scrollIntoView({behavior:'smooth',block:'start'});}
+function editAttachments(id){const records=getSavedRosters(),source=records.find(item=>item?.id===id),roster=freshRoster(source);if(!source||!roster)return;const record=validatedAttachmentRecord(source,roster);if(JSON.stringify(record.attachments)!==JSON.stringify(source.attachments||{}))putSavedRosters(records.map(item=>item?.id===id?record:item));document.querySelector('#roster-input').value=record.sourceText;renderRoster(roster,record);document.querySelector('#roster-result').scrollIntoView({behavior:'smooth',block:'start'});}
 
 function exportRoster(id){
   const record=getSavedRosters().find(item=>item?.id===id);
@@ -133,7 +113,7 @@ function parseRoster(text){
 }
 
 function renderRoster(roster,record){
-  const check=roster.pointsCheck;
+  const check=roster.pointsCheck,attachmentModel=attachmentState(roster,record);
   const currentPointsLabel=pointsLabel(roster.faction);
   const complete=check&&check.total!==null&&!check.unresolved.length;
   const matches=complete&&check.difference===0;
@@ -157,7 +137,7 @@ function renderRoster(roster,record){
       :check?'<div class="status warn">! Detachment Points were not checked because Battle Size is unavailable.</div>':'';
   enhancementStatus=detachmentStatus+enhancementStatus;
   const hasReader=Boolean(FACTION_READERS[knownFaction(roster.faction)]);
-  document.querySelector('#roster-result').innerHTML=`<p class="eyebrow">Preview // ${roster.units.length} units</p><h2>${escapeHtml(roster.faction)}</h2><p class="help">${escapeHtml((roster.detachments||[{label:roster.detachment}]).map(item=>item.label).join(' + '))} · ${escapeHtml(roster.disposition)}</p><div class="summary"><div class="stat"><small>Declared in export</small><strong>${roster.declared||'—'} pts</strong></div><div class="stat"><small>${currentPointsLabel}</small><strong>${check?.total??'—'} pts</strong></div></div>${exportStatus}${pointsStatus}${enhancementStatus}<p class="help">Unit limits and wargear legality are not checked.</p><ul class="units">${roster.units.map(unit=>{const owned=(check?.enhancements||[]).filter(item=>item.ownerUnitId===unit.id);return `<li><div><strong>${escapeHtml(unit.name)}${owned.map(item=>{const exported=Number(item.exportedCost),current=Number(item.currentCost),price=Number.isFinite(exported)&&Number.isFinite(current)&&exported!==current?`${exported} pts in export · ${current} pts current`:`included +${item.exportedCost??item.currentCost} pts`;return `<small class="unit-enhancement">${escapeHtml(item.name)} · ${price}${item.ownerEligibility!=='valid'?` · ${escapeHtml(item.ownerMessage)}`:''}</small>`;}).join('')}</strong>${attachmentEditor(roster,record,unit)}</div><span>${unit.points} pts in export</span></li>`}).join('')}</ul><div class="actions">${hasReader?'<button class="action primary" id="open-guide" type="button">Open personal guide</button>':'<p class="help">Saved. A personal reader is not available for this faction yet.</p>'}</div>`;
+  document.querySelector('#roster-result').innerHTML=`<p class="eyebrow">Preview // ${roster.units.length} units</p><h2>${escapeHtml(roster.faction)}</h2><p class="help">${escapeHtml((roster.detachments||[{label:roster.detachment}]).map(item=>item.label).join(' + '))} · ${escapeHtml(roster.disposition)}</p><div class="summary"><div class="stat"><small>Declared in export</small><strong>${roster.declared||'—'} pts</strong></div><div class="stat"><small>${currentPointsLabel}</small><strong>${check?.total??'—'} pts</strong></div></div>${exportStatus}${pointsStatus}${enhancementStatus}<p class="help">Unit limits and wargear legality are not checked.</p><ul class="units">${roster.units.map(unit=>{const owned=(check?.enhancements||[]).filter(item=>item.ownerUnitId===unit.id);return `<li><div><strong>${escapeHtml(unit.name)}${owned.map(item=>{const exported=Number(item.exportedCost),current=Number(item.currentCost),price=Number.isFinite(exported)&&Number.isFinite(current)&&exported!==current?`${exported} pts in export · ${current} pts current`:`included +${item.exportedCost??item.currentCost} pts`;return `<small class="unit-enhancement">${escapeHtml(item.name)} · ${price}${item.ownerEligibility!=='valid'?` · ${escapeHtml(item.ownerMessage)}`:''}</small>`;}).join('')}</strong>${attachmentEditor(roster,record,unit,attachmentModel)}</div><span>${unit.points} pts in export</span></li>`}).join('')}</ul><div class="actions">${hasReader?'<button class="action primary" id="open-guide" type="button">Open personal guide</button>':'<p class="help">Saved. A personal reader is not available for this faction yet.</p>'}</div>`;
   if(!hasReader)return;
   document.querySelector('#open-guide').addEventListener('click',()=>openSavedRoster(record.id));
 }

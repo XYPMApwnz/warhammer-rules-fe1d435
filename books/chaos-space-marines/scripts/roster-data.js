@@ -27,16 +27,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-cultist-firebrand"
+            "unitId": "unit-cultist-firebrand",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-dark-apostle"
+            "unitId": "unit-dark-apostle",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-dark-commune"
+            "unitId": "unit-dark-commune",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-fabius-bile"
+            "unitId": "unit-fabius-bile",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -47,16 +51,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-cultist-firebrand"
+              "unitId": "unit-cultist-firebrand",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-dark-apostle"
+              "unitId": "unit-dark-apostle",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-dark-commune"
+              "unitId": "unit-dark-commune",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-fabius-bile"
+              "unitId": "unit-fabius-bile",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -185,36 +193,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-chaos-lord"
+            "unitId": "unit-chaos-lord",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-dark-apostle"
+            "unitId": "unit-dark-apostle",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-fabius-bile"
+            "unitId": "unit-fabius-bile",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-huron-blackheart"
+            "unitId": "unit-huron-blackheart",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-master-of-possession"
+            "unitId": "unit-master-of-possession",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-red-corsairs-reave-captain"
+            "unitId": "unit-red-corsairs-reave-captain",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-sorcerer"
+            "unitId": "unit-sorcerer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-warpsmith"
+            "unitId": "unit-warpsmith",
+            "maxCharacters": 2
           }
         ],
         "canBeSupportedBy": [
           {
-            "unitId": "unit-master-of-executions"
+            "unitId": "unit-master-of-executions",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-masters-of-the-maelstrom"
+            "unitId": "unit-masters-of-the-maelstrom",
+            "maxCharacters": 2
           }
         ]
       },
@@ -224,36 +242,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-chaos-lord"
+              "unitId": "unit-chaos-lord",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-dark-apostle"
+              "unitId": "unit-dark-apostle",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-fabius-bile"
+              "unitId": "unit-fabius-bile",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-huron-blackheart"
+              "unitId": "unit-huron-blackheart",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-master-of-possession"
+              "unitId": "unit-master-of-possession",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-red-corsairs-reave-captain"
+              "unitId": "unit-red-corsairs-reave-captain",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-sorcerer"
+              "unitId": "unit-sorcerer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-warpsmith"
+              "unitId": "unit-warpsmith",
+              "maxCharacters": 2
             }
           ],
           "canBeSupportedBy": [
             {
-              "unitId": "unit-master-of-executions"
+              "unitId": "unit-master-of-executions",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-masters-of-the-maelstrom"
+              "unitId": "unit-masters-of-the-maelstrom",
+              "maxCharacters": 2
             }
           ]
         }
@@ -830,16 +858,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-chosen"
+            "unitId": "unit-chosen",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-legionaries"
+            "unitId": "unit-legionaries",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-nemesis-claw"
+            "unitId": "unit-nemesis-claw",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-red-corsairs-raiders"
+            "unitId": "unit-red-corsairs-raiders",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -850,16 +882,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-chosen"
+              "unitId": "unit-chosen",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-legionaries"
+              "unitId": "unit-legionaries",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-nemesis-claw"
+              "unitId": "unit-nemesis-claw",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-red-corsairs-raiders"
+              "unitId": "unit-red-corsairs-raiders",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -1063,7 +1099,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-chaos-terminator-squad"
+            "unitId": "unit-chaos-terminator-squad",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -1074,7 +1111,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-chaos-terminator-squad"
+              "unitId": "unit-chaos-terminator-squad",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -1279,7 +1317,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-raptors"
+            "unitId": "unit-raptors",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -1290,7 +1329,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-raptors"
+              "unitId": "unit-raptors",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -1494,10 +1534,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-accursed-cultists"
+            "unitId": "unit-accursed-cultists",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-cultist-mob"
+            "unitId": "unit-cultist-mob",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -1508,10 +1550,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-accursed-cultists"
+              "unitId": "unit-accursed-cultists",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-cultist-mob"
+              "unitId": "unit-cultist-mob",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -1605,22 +1649,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-accursed-cultists"
+            "unitId": "unit-accursed-cultists",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-chosen"
+            "unitId": "unit-chosen",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-cultist-mob"
+            "unitId": "unit-cultist-mob",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-legionaries"
+            "unitId": "unit-legionaries",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-nemesis-claw"
+            "unitId": "unit-nemesis-claw",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-red-corsairs-raiders"
+            "unitId": "unit-red-corsairs-raiders",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -1631,22 +1681,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-accursed-cultists"
+              "unitId": "unit-accursed-cultists",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-chosen"
+              "unitId": "unit-chosen",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-cultist-mob"
+              "unitId": "unit-cultist-mob",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-legionaries"
+              "unitId": "unit-legionaries",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-nemesis-claw"
+              "unitId": "unit-nemesis-claw",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-red-corsairs-raiders"
+              "unitId": "unit-red-corsairs-raiders",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -1776,10 +1832,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-accursed-cultists"
+            "unitId": "unit-accursed-cultists",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-cultist-mob"
+            "unitId": "unit-cultist-mob",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -1790,10 +1848,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-accursed-cultists"
+              "unitId": "unit-accursed-cultists",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-cultist-mob"
+              "unitId": "unit-cultist-mob",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -2508,16 +2568,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canLead": [],
         "canSupport": [
           {
-            "unitId": "unit-chosen"
+            "unitId": "unit-chosen",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-legionaries"
+            "unitId": "unit-legionaries",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-nemesis-claw"
+            "unitId": "unit-nemesis-claw",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-red-corsairs-raiders"
+            "unitId": "unit-red-corsairs-raiders",
+            "maxCharacters": 2
           }
         ],
         "canBeLedBy": [],
@@ -2528,16 +2592,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canLead": [],
           "canSupport": [
             {
-              "unitId": "unit-chosen"
+              "unitId": "unit-chosen",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-legionaries"
+              "unitId": "unit-legionaries",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-nemesis-claw"
+              "unitId": "unit-nemesis-claw",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-red-corsairs-raiders"
+              "unitId": "unit-red-corsairs-raiders",
+              "maxCharacters": 2
             }
           ],
           "canBeLedBy": [],
@@ -2631,19 +2699,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-chosen"
+            "unitId": "unit-chosen",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-legionaries"
+            "unitId": "unit-legionaries",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-nemesis-claw"
+            "unitId": "unit-nemesis-claw",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-possessed"
+            "unitId": "unit-possessed",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-red-corsairs-raiders"
+            "unitId": "unit-red-corsairs-raiders",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -2654,19 +2727,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-chosen"
+              "unitId": "unit-chosen",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-legionaries"
+              "unitId": "unit-legionaries",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-nemesis-claw"
+              "unitId": "unit-nemesis-claw",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-possessed"
+              "unitId": "unit-possessed",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-red-corsairs-raiders"
+              "unitId": "unit-red-corsairs-raiders",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -2814,16 +2892,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-chosen"
+            "unitId": "unit-chosen",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-legionaries"
+            "unitId": "unit-legionaries",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-nemesis-claw"
+            "unitId": "unit-nemesis-claw",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-red-corsairs-raiders"
+            "unitId": "unit-red-corsairs-raiders",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -2834,16 +2916,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-chosen"
+              "unitId": "unit-chosen",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-legionaries"
+              "unitId": "unit-legionaries",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-nemesis-claw"
+              "unitId": "unit-nemesis-claw",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-red-corsairs-raiders"
+              "unitId": "unit-red-corsairs-raiders",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -3020,16 +3106,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-chosen"
+            "unitId": "unit-chosen",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-legionaries"
+            "unitId": "unit-legionaries",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-nemesis-claw"
+            "unitId": "unit-nemesis-claw",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-red-corsairs-raiders"
+            "unitId": "unit-red-corsairs-raiders",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -3040,16 +3130,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-chosen"
+              "unitId": "unit-chosen",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-legionaries"
+              "unitId": "unit-legionaries",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-nemesis-claw"
+              "unitId": "unit-nemesis-claw",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-red-corsairs-raiders"
+              "unitId": "unit-red-corsairs-raiders",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -3199,7 +3293,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-chaos-terminator-squad"
+            "unitId": "unit-chaos-terminator-squad",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -3210,7 +3305,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-chaos-terminator-squad"
+              "unitId": "unit-chaos-terminator-squad",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -3401,7 +3497,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-traitor-guardsmen-squad"
+            "unitId": "unit-traitor-guardsmen-squad",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -3412,7 +3509,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-traitor-guardsmen-squad"
+              "unitId": "unit-traitor-guardsmen-squad",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -3540,19 +3638,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-chosen"
+            "unitId": "unit-chosen",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-havocs"
+            "unitId": "unit-havocs",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-legionaries"
+            "unitId": "unit-legionaries",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-nemesis-claw"
+            "unitId": "unit-nemesis-claw",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-red-corsairs-raiders"
+            "unitId": "unit-red-corsairs-raiders",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -3563,19 +3666,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-chosen"
+              "unitId": "unit-chosen",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-havocs"
+              "unitId": "unit-havocs",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-legionaries"
+              "unitId": "unit-legionaries",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-nemesis-claw"
+              "unitId": "unit-nemesis-claw",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-red-corsairs-raiders"
+              "unitId": "unit-red-corsairs-raiders",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -3907,10 +4015,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-chaos-terminator-squad"
+            "unitId": "unit-chaos-terminator-squad",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-chosen"
+            "unitId": "unit-chosen",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -3921,10 +4031,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-chaos-terminator-squad"
+              "unitId": "unit-chaos-terminator-squad",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-chosen"
+              "unitId": "unit-chosen",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -4161,19 +4273,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-accursed-cultists"
+            "unitId": "unit-accursed-cultists",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-chosen"
+            "unitId": "unit-chosen",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-cultist-mob"
+            "unitId": "unit-cultist-mob",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-legionaries"
+            "unitId": "unit-legionaries",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-red-corsairs-raiders"
+            "unitId": "unit-red-corsairs-raiders",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -4184,19 +4301,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-accursed-cultists"
+              "unitId": "unit-accursed-cultists",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-chosen"
+              "unitId": "unit-chosen",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-cultist-mob"
+              "unitId": "unit-cultist-mob",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-legionaries"
+              "unitId": "unit-legionaries",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-red-corsairs-raiders"
+              "unitId": "unit-red-corsairs-raiders",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -4355,7 +4477,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-raptors"
+            "unitId": "unit-raptors",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -4366,7 +4489,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-raptors"
+              "unitId": "unit-raptors",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -4478,19 +4602,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-chaos-terminator-squad"
+            "unitId": "unit-chaos-terminator-squad",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-chosen"
+            "unitId": "unit-chosen",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-legionaries"
+            "unitId": "unit-legionaries",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-masters-of-the-maelstrom"
+            "unitId": "unit-masters-of-the-maelstrom",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-red-corsairs-raiders"
+            "unitId": "unit-red-corsairs-raiders",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -4501,19 +4630,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-chaos-terminator-squad"
+              "unitId": "unit-chaos-terminator-squad",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-chosen"
+              "unitId": "unit-chosen",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-legionaries"
+              "unitId": "unit-legionaries",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-masters-of-the-maelstrom"
+              "unitId": "unit-masters-of-the-maelstrom",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-red-corsairs-raiders"
+              "unitId": "unit-red-corsairs-raiders",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -4610,13 +4744,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-chaos-terminator-squad"
+            "unitId": "unit-chaos-terminator-squad",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-mutilators"
+            "unitId": "unit-mutilators",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-obliterators"
+            "unitId": "unit-obliterators",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -4627,13 +4764,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-chaos-terminator-squad"
+              "unitId": "unit-chaos-terminator-squad",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-mutilators"
+              "unitId": "unit-mutilators",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-obliterators"
+              "unitId": "unit-obliterators",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -4784,18 +4924,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canLead": [],
         "canSupport": [
           {
-            "unitId": "unit-chosen"
+            "unitId": "unit-chosen",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-legionaries"
+            "unitId": "unit-legionaries",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-red-corsairs-raiders"
+            "unitId": "unit-red-corsairs-raiders",
+            "maxCharacters": 2
           }
         ],
         "canBeLedBy": [
           {
-            "unitId": "unit-huron-blackheart"
+            "unitId": "unit-huron-blackheart",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -4805,18 +4949,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canLead": [],
           "canSupport": [
             {
-              "unitId": "unit-chosen"
+              "unitId": "unit-chosen",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-legionaries"
+              "unitId": "unit-legionaries",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-red-corsairs-raiders"
+              "unitId": "unit-red-corsairs-raiders",
+              "maxCharacters": 2
             }
           ],
           "canBeLedBy": [
             {
-              "unitId": "unit-huron-blackheart"
+              "unitId": "unit-huron-blackheart",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -5281,16 +5429,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-cultist-firebrand"
+            "unitId": "unit-cultist-firebrand",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-dark-apostle"
+            "unitId": "unit-dark-apostle",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-dark-commune"
+            "unitId": "unit-dark-commune",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-fabius-bile"
+            "unitId": "unit-fabius-bile",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -5301,16 +5453,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-cultist-firebrand"
+              "unitId": "unit-cultist-firebrand",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-dark-apostle"
+              "unitId": "unit-dark-apostle",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-dark-commune"
+              "unitId": "unit-dark-commune",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-fabius-bile"
+              "unitId": "unit-fabius-bile",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -5411,19 +5567,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-abaddon-the-despoiler"
+            "unitId": "unit-abaddon-the-despoiler",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-chaos-lord-in-terminator-armour"
+            "unitId": "unit-chaos-lord-in-terminator-armour",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-huron-blackheart"
+            "unitId": "unit-huron-blackheart",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-kravek-morne"
+            "unitId": "unit-kravek-morne",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-sorcerer-in-terminator-armour"
+            "unitId": "unit-sorcerer-in-terminator-armour",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -5434,19 +5595,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-abaddon-the-despoiler"
+              "unitId": "unit-abaddon-the-despoiler",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-chaos-lord-in-terminator-armour"
+              "unitId": "unit-chaos-lord-in-terminator-armour",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-huron-blackheart"
+              "unitId": "unit-huron-blackheart",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-kravek-morne"
+              "unitId": "unit-kravek-morne",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-sorcerer-in-terminator-armour"
+              "unitId": "unit-sorcerer-in-terminator-armour",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -5709,39 +5875,50 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-abaddon-the-despoiler"
+            "unitId": "unit-abaddon-the-despoiler",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-chaos-lord"
+            "unitId": "unit-chaos-lord",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-dark-apostle"
+            "unitId": "unit-dark-apostle",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-fabius-bile"
+            "unitId": "unit-fabius-bile",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-huron-blackheart"
+            "unitId": "unit-huron-blackheart",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-master-of-possession"
+            "unitId": "unit-master-of-possession",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-red-corsairs-reave-captain"
+            "unitId": "unit-red-corsairs-reave-captain",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-sorcerer"
+            "unitId": "unit-sorcerer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-warpsmith"
+            "unitId": "unit-warpsmith",
+            "maxCharacters": 2
           }
         ],
         "canBeSupportedBy": [
           {
-            "unitId": "unit-master-of-executions"
+            "unitId": "unit-master-of-executions",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-masters-of-the-maelstrom"
+            "unitId": "unit-masters-of-the-maelstrom",
+            "maxCharacters": 2
           }
         ]
       },
@@ -5751,39 +5928,50 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-abaddon-the-despoiler"
+              "unitId": "unit-abaddon-the-despoiler",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-chaos-lord"
+              "unitId": "unit-chaos-lord",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-dark-apostle"
+              "unitId": "unit-dark-apostle",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-fabius-bile"
+              "unitId": "unit-fabius-bile",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-huron-blackheart"
+              "unitId": "unit-huron-blackheart",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-master-of-possession"
+              "unitId": "unit-master-of-possession",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-red-corsairs-reave-captain"
+              "unitId": "unit-red-corsairs-reave-captain",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-sorcerer"
+              "unitId": "unit-sorcerer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-warpsmith"
+              "unitId": "unit-warpsmith",
+              "maxCharacters": 2
             }
           ],
           "canBeSupportedBy": [
             {
-              "unitId": "unit-master-of-executions"
+              "unitId": "unit-master-of-executions",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-masters-of-the-maelstrom"
+              "unitId": "unit-masters-of-the-maelstrom",
+              "maxCharacters": 2
             }
           ]
         }
@@ -6346,7 +6534,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-warpsmith"
+            "unitId": "unit-warpsmith",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -6357,7 +6546,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-warpsmith"
+              "unitId": "unit-warpsmith",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -6863,7 +7053,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-kravek-morne"
+            "unitId": "unit-kravek-morne",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -6874,7 +7065,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-kravek-morne"
+              "unitId": "unit-kravek-morne",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -6996,27 +7188,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-chaos-lord"
+            "unitId": "unit-chaos-lord",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-dark-apostle"
+            "unitId": "unit-dark-apostle",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-master-of-possession"
+            "unitId": "unit-master-of-possession",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-red-corsairs-reave-captain"
+            "unitId": "unit-red-corsairs-reave-captain",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-sorcerer"
+            "unitId": "unit-sorcerer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-warpsmith"
+            "unitId": "unit-warpsmith",
+            "maxCharacters": 2
           }
         ],
         "canBeSupportedBy": [
           {
-            "unitId": "unit-master-of-executions"
+            "unitId": "unit-master-of-executions",
+            "maxCharacters": 2
           }
         ]
       },
@@ -7026,27 +7225,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-chaos-lord"
+              "unitId": "unit-chaos-lord",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-dark-apostle"
+              "unitId": "unit-dark-apostle",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-master-of-possession"
+              "unitId": "unit-master-of-possession",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-red-corsairs-reave-captain"
+              "unitId": "unit-red-corsairs-reave-captain",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-sorcerer"
+              "unitId": "unit-sorcerer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-warpsmith"
+              "unitId": "unit-warpsmith",
+              "maxCharacters": 2
             }
           ],
           "canBeSupportedBy": [
             {
-              "unitId": "unit-master-of-executions"
+              "unitId": "unit-master-of-executions",
+              "maxCharacters": 2
             }
           ]
         }
@@ -7597,7 +7803,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-kravek-morne"
+            "unitId": "unit-kravek-morne",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -7608,7 +7815,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-kravek-morne"
+              "unitId": "unit-kravek-morne",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -7756,7 +7964,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-master-of-possession"
+            "unitId": "unit-master-of-possession",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -7767,7 +7976,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-master-of-possession"
+              "unitId": "unit-master-of-possession",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -7855,10 +8065,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-chaos-lord-with-jump-pack"
+            "unitId": "unit-chaos-lord-with-jump-pack",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-haarken-worldclaimer"
+            "unitId": "unit-haarken-worldclaimer",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -7869,10 +8081,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-chaos-lord-with-jump-pack"
+              "unitId": "unit-chaos-lord-with-jump-pack",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-haarken-worldclaimer"
+              "unitId": "unit-haarken-worldclaimer",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -8243,36 +8457,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-chaos-lord"
+            "unitId": "unit-chaos-lord",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-dark-apostle"
+            "unitId": "unit-dark-apostle",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-fabius-bile"
+            "unitId": "unit-fabius-bile",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-huron-blackheart"
+            "unitId": "unit-huron-blackheart",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-master-of-possession"
+            "unitId": "unit-master-of-possession",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-red-corsairs-reave-captain"
+            "unitId": "unit-red-corsairs-reave-captain",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-sorcerer"
+            "unitId": "unit-sorcerer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-warpsmith"
+            "unitId": "unit-warpsmith",
+            "maxCharacters": 2
           }
         ],
         "canBeSupportedBy": [
           {
-            "unitId": "unit-master-of-executions"
+            "unitId": "unit-master-of-executions",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-masters-of-the-maelstrom"
+            "unitId": "unit-masters-of-the-maelstrom",
+            "maxCharacters": 2
           }
         ]
       },
@@ -8282,36 +8506,46 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-chaos-lord"
+              "unitId": "unit-chaos-lord",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-dark-apostle"
+              "unitId": "unit-dark-apostle",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-fabius-bile"
+              "unitId": "unit-fabius-bile",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-huron-blackheart"
+              "unitId": "unit-huron-blackheart",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-master-of-possession"
+              "unitId": "unit-master-of-possession",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-red-corsairs-reave-captain"
+              "unitId": "unit-red-corsairs-reave-captain",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-sorcerer"
+              "unitId": "unit-sorcerer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-warpsmith"
+              "unitId": "unit-warpsmith",
+              "maxCharacters": 2
             }
           ],
           "canBeSupportedBy": [
             {
-              "unitId": "unit-master-of-executions"
+              "unitId": "unit-master-of-executions",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-masters-of-the-maelstrom"
+              "unitId": "unit-masters-of-the-maelstrom",
+              "maxCharacters": 2
             }
           ]
         }
@@ -8520,7 +8754,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-traitor-enforcer"
+            "unitId": "unit-traitor-enforcer",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -8531,7 +8766,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-traitor-enforcer"
+              "unitId": "unit-traitor-enforcer",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []

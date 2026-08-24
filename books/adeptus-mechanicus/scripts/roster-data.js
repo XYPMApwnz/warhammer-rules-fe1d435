@@ -26,21 +26,26 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-tech-priest-dominus"
+            "unitId": "unit-tech-priest-dominus",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-enginseer"
+            "unitId": "unit-tech-priest-enginseer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-manipulus"
+            "unitId": "unit-tech-priest-manipulus",
+            "maxCharacters": 2
           }
         ],
         "canBeSupportedBy": [
           {
-            "unitId": "unit-skitarii-marshal"
+            "unitId": "unit-skitarii-marshal",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-technoarcheologist"
+            "unitId": "unit-technoarcheologist",
+            "maxCharacters": 2
           }
         ]
       },
@@ -50,21 +55,26 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-tech-priest-dominus"
+              "unitId": "unit-tech-priest-dominus",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-enginseer"
+              "unitId": "unit-tech-priest-enginseer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-manipulus"
+              "unitId": "unit-tech-priest-manipulus",
+              "maxCharacters": 2
             }
           ],
           "canBeSupportedBy": [
             {
-              "unitId": "unit-skitarii-marshal"
+              "unitId": "unit-skitarii-marshal",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-technoarcheologist"
+              "unitId": "unit-technoarcheologist",
+              "maxCharacters": 2
             }
           ]
         }
@@ -349,21 +359,26 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-tech-priest-dominus"
+            "unitId": "unit-tech-priest-dominus",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-enginseer"
+            "unitId": "unit-tech-priest-enginseer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-manipulus"
+            "unitId": "unit-tech-priest-manipulus",
+            "maxCharacters": 2
           }
         ],
         "canBeSupportedBy": [
           {
-            "unitId": "unit-skitarii-marshal"
+            "unitId": "unit-skitarii-marshal",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-technoarcheologist"
+            "unitId": "unit-technoarcheologist",
+            "maxCharacters": 2
           }
         ]
       },
@@ -373,21 +388,26 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-tech-priest-dominus"
+              "unitId": "unit-tech-priest-dominus",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-enginseer"
+              "unitId": "unit-tech-priest-enginseer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-manipulus"
+              "unitId": "unit-tech-priest-manipulus",
+              "maxCharacters": 2
             }
           ],
           "canBeSupportedBy": [
             {
-              "unitId": "unit-skitarii-marshal"
+              "unitId": "unit-skitarii-marshal",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-technoarcheologist"
+              "unitId": "unit-technoarcheologist",
+              "maxCharacters": 2
             }
           ]
         }
@@ -673,6 +693,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [
           {
             "unitId": "unit-kastelan-robots",
+            "maxCharacters": 1,
             "mandatory": true,
             "removeKeywords": [
               "INFANTRY"
@@ -688,6 +709,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [
             {
               "unitId": "unit-kastelan-robots",
+              "maxCharacters": 1,
               "mandatory": true,
               "removeKeywords": [
                 "INFANTRY"
@@ -778,16 +800,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canLead": [],
         "canSupport": [
           {
-            "unitId": "unit-hastarii-exterminators"
+            "unitId": "unit-hastarii-exterminators",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-hastarii-fusiliers"
+            "unitId": "unit-hastarii-fusiliers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-skitarii-rangers"
+            "unitId": "unit-skitarii-rangers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-skitarii-vanguard"
+            "unitId": "unit-skitarii-vanguard",
+            "maxCharacters": 2
           }
         ],
         "canBeLedBy": [],
@@ -798,16 +824,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canLead": [],
           "canSupport": [
             {
-              "unitId": "unit-hastarii-exterminators"
+              "unitId": "unit-hastarii-exterminators",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-hastarii-fusiliers"
+              "unitId": "unit-hastarii-fusiliers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-skitarii-rangers"
+              "unitId": "unit-skitarii-rangers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-skitarii-vanguard"
+              "unitId": "unit-skitarii-vanguard",
+              "maxCharacters": 2
             }
           ],
           "canBeLedBy": [],
@@ -1039,31 +1069,40 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-corpuscarii-electro-priests"
+            "unitId": "unit-corpuscarii-electro-priests",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-fulgurite-electro-priests"
+            "unitId": "unit-fulgurite-electro-priests",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-hastarii-exterminators"
+            "unitId": "unit-hastarii-exterminators",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-hastarii-fusiliers"
+            "unitId": "unit-hastarii-fusiliers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-kataphron-breachers"
+            "unitId": "unit-kataphron-breachers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-kataphron-destroyers"
+            "unitId": "unit-kataphron-destroyers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-servitor-battleclade"
+            "unitId": "unit-servitor-battleclade",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-skitarii-rangers"
+            "unitId": "unit-skitarii-rangers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-skitarii-vanguard"
+            "unitId": "unit-skitarii-vanguard",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -1074,31 +1113,40 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-corpuscarii-electro-priests"
+              "unitId": "unit-corpuscarii-electro-priests",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-fulgurite-electro-priests"
+              "unitId": "unit-fulgurite-electro-priests",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-hastarii-exterminators"
+              "unitId": "unit-hastarii-exterminators",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-hastarii-fusiliers"
+              "unitId": "unit-hastarii-fusiliers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-kataphron-breachers"
+              "unitId": "unit-kataphron-breachers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-kataphron-destroyers"
+              "unitId": "unit-kataphron-destroyers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-servitor-battleclade"
+              "unitId": "unit-servitor-battleclade",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-skitarii-rangers"
+              "unitId": "unit-skitarii-rangers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-skitarii-vanguard"
+              "unitId": "unit-skitarii-vanguard",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -1294,31 +1342,40 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-corpuscarii-electro-priests"
+            "unitId": "unit-corpuscarii-electro-priests",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-fulgurite-electro-priests"
+            "unitId": "unit-fulgurite-electro-priests",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-hastarii-exterminators"
+            "unitId": "unit-hastarii-exterminators",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-hastarii-fusiliers"
+            "unitId": "unit-hastarii-fusiliers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-kataphron-breachers"
+            "unitId": "unit-kataphron-breachers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-kataphron-destroyers"
+            "unitId": "unit-kataphron-destroyers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-servitor-battleclade"
+            "unitId": "unit-servitor-battleclade",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-skitarii-rangers"
+            "unitId": "unit-skitarii-rangers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-skitarii-vanguard"
+            "unitId": "unit-skitarii-vanguard",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -1329,31 +1386,40 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-corpuscarii-electro-priests"
+              "unitId": "unit-corpuscarii-electro-priests",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-fulgurite-electro-priests"
+              "unitId": "unit-fulgurite-electro-priests",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-hastarii-exterminators"
+              "unitId": "unit-hastarii-exterminators",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-hastarii-fusiliers"
+              "unitId": "unit-hastarii-fusiliers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-kataphron-breachers"
+              "unitId": "unit-kataphron-breachers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-kataphron-destroyers"
+              "unitId": "unit-kataphron-destroyers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-servitor-battleclade"
+              "unitId": "unit-servitor-battleclade",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-skitarii-rangers"
+              "unitId": "unit-skitarii-rangers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-skitarii-vanguard"
+              "unitId": "unit-skitarii-vanguard",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -1468,31 +1534,40 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-corpuscarii-electro-priests"
+            "unitId": "unit-corpuscarii-electro-priests",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-fulgurite-electro-priests"
+            "unitId": "unit-fulgurite-electro-priests",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-hastarii-exterminators"
+            "unitId": "unit-hastarii-exterminators",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-hastarii-fusiliers"
+            "unitId": "unit-hastarii-fusiliers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-kataphron-breachers"
+            "unitId": "unit-kataphron-breachers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-kataphron-destroyers"
+            "unitId": "unit-kataphron-destroyers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-servitor-battleclade"
+            "unitId": "unit-servitor-battleclade",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-skitarii-rangers"
+            "unitId": "unit-skitarii-rangers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-skitarii-vanguard"
+            "unitId": "unit-skitarii-vanguard",
+            "maxCharacters": 2
           }
         ],
         "canSupport": [],
@@ -1503,31 +1578,40 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-corpuscarii-electro-priests"
+              "unitId": "unit-corpuscarii-electro-priests",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-fulgurite-electro-priests"
+              "unitId": "unit-fulgurite-electro-priests",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-hastarii-exterminators"
+              "unitId": "unit-hastarii-exterminators",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-hastarii-fusiliers"
+              "unitId": "unit-hastarii-fusiliers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-kataphron-breachers"
+              "unitId": "unit-kataphron-breachers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-kataphron-destroyers"
+              "unitId": "unit-kataphron-destroyers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-servitor-battleclade"
+              "unitId": "unit-servitor-battleclade",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-skitarii-rangers"
+              "unitId": "unit-skitarii-rangers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-skitarii-vanguard"
+              "unitId": "unit-skitarii-vanguard",
+              "maxCharacters": 2
             }
           ],
           "canSupport": [],
@@ -1643,31 +1727,40 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canLead": [],
         "canSupport": [
           {
-            "unitId": "unit-corpuscarii-electro-priests"
+            "unitId": "unit-corpuscarii-electro-priests",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-fulgurite-electro-priests"
+            "unitId": "unit-fulgurite-electro-priests",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-hastarii-exterminators"
+            "unitId": "unit-hastarii-exterminators",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-hastarii-fusiliers"
+            "unitId": "unit-hastarii-fusiliers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-kataphron-breachers"
+            "unitId": "unit-kataphron-breachers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-kataphron-destroyers"
+            "unitId": "unit-kataphron-destroyers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-servitor-battleclade"
+            "unitId": "unit-servitor-battleclade",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-skitarii-rangers"
+            "unitId": "unit-skitarii-rangers",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-skitarii-vanguard"
+            "unitId": "unit-skitarii-vanguard",
+            "maxCharacters": 2
           }
         ],
         "canBeLedBy": [],
@@ -1678,31 +1771,40 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canLead": [],
           "canSupport": [
             {
-              "unitId": "unit-corpuscarii-electro-priests"
+              "unitId": "unit-corpuscarii-electro-priests",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-fulgurite-electro-priests"
+              "unitId": "unit-fulgurite-electro-priests",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-hastarii-exterminators"
+              "unitId": "unit-hastarii-exterminators",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-hastarii-fusiliers"
+              "unitId": "unit-hastarii-fusiliers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-kataphron-breachers"
+              "unitId": "unit-kataphron-breachers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-kataphron-destroyers"
+              "unitId": "unit-kataphron-destroyers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-servitor-battleclade"
+              "unitId": "unit-servitor-battleclade",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-skitarii-rangers"
+              "unitId": "unit-skitarii-rangers",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-skitarii-vanguard"
+              "unitId": "unit-skitarii-vanguard",
+              "maxCharacters": 2
             }
           ],
           "canBeLedBy": [],
@@ -2177,18 +2279,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-tech-priest-dominus"
+            "unitId": "unit-tech-priest-dominus",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-enginseer"
+            "unitId": "unit-tech-priest-enginseer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-manipulus"
+            "unitId": "unit-tech-priest-manipulus",
+            "maxCharacters": 2
           }
         ],
         "canBeSupportedBy": [
           {
-            "unitId": "unit-technoarcheologist"
+            "unitId": "unit-technoarcheologist",
+            "maxCharacters": 2
           }
         ]
       },
@@ -2198,18 +2304,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-tech-priest-dominus"
+              "unitId": "unit-tech-priest-dominus",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-enginseer"
+              "unitId": "unit-tech-priest-enginseer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-manipulus"
+              "unitId": "unit-tech-priest-manipulus",
+              "maxCharacters": 2
             }
           ],
           "canBeSupportedBy": [
             {
-              "unitId": "unit-technoarcheologist"
+              "unitId": "unit-technoarcheologist",
+              "maxCharacters": 2
             }
           ]
         }
@@ -2284,18 +2394,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-tech-priest-dominus"
+            "unitId": "unit-tech-priest-dominus",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-enginseer"
+            "unitId": "unit-tech-priest-enginseer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-manipulus"
+            "unitId": "unit-tech-priest-manipulus",
+            "maxCharacters": 2
           }
         ],
         "canBeSupportedBy": [
           {
-            "unitId": "unit-technoarcheologist"
+            "unitId": "unit-technoarcheologist",
+            "maxCharacters": 2
           }
         ]
       },
@@ -2305,18 +2419,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-tech-priest-dominus"
+              "unitId": "unit-tech-priest-dominus",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-enginseer"
+              "unitId": "unit-tech-priest-enginseer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-manipulus"
+              "unitId": "unit-tech-priest-manipulus",
+              "maxCharacters": 2
             }
           ],
           "canBeSupportedBy": [
             {
-              "unitId": "unit-technoarcheologist"
+              "unitId": "unit-technoarcheologist",
+              "maxCharacters": 2
             }
           ]
         }
@@ -2375,21 +2493,26 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-tech-priest-dominus"
+            "unitId": "unit-tech-priest-dominus",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-enginseer"
+            "unitId": "unit-tech-priest-enginseer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-manipulus"
+            "unitId": "unit-tech-priest-manipulus",
+            "maxCharacters": 2
           }
         ],
         "canBeSupportedBy": [
           {
-            "unitId": "unit-skitarii-marshal"
+            "unitId": "unit-skitarii-marshal",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-technoarcheologist"
+            "unitId": "unit-technoarcheologist",
+            "maxCharacters": 2
           }
         ]
       },
@@ -2399,21 +2522,26 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-tech-priest-dominus"
+              "unitId": "unit-tech-priest-dominus",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-enginseer"
+              "unitId": "unit-tech-priest-enginseer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-manipulus"
+              "unitId": "unit-tech-priest-manipulus",
+              "maxCharacters": 2
             }
           ],
           "canBeSupportedBy": [
             {
-              "unitId": "unit-skitarii-marshal"
+              "unitId": "unit-skitarii-marshal",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-technoarcheologist"
+              "unitId": "unit-technoarcheologist",
+              "maxCharacters": 2
             }
           ]
         }
@@ -2580,21 +2708,26 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-tech-priest-dominus"
+            "unitId": "unit-tech-priest-dominus",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-enginseer"
+            "unitId": "unit-tech-priest-enginseer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-manipulus"
+            "unitId": "unit-tech-priest-manipulus",
+            "maxCharacters": 2
           }
         ],
         "canBeSupportedBy": [
           {
-            "unitId": "unit-skitarii-marshal"
+            "unitId": "unit-skitarii-marshal",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-technoarcheologist"
+            "unitId": "unit-technoarcheologist",
+            "maxCharacters": 2
           }
         ]
       },
@@ -2604,21 +2737,26 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-tech-priest-dominus"
+              "unitId": "unit-tech-priest-dominus",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-enginseer"
+              "unitId": "unit-tech-priest-enginseer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-manipulus"
+              "unitId": "unit-tech-priest-manipulus",
+              "maxCharacters": 2
             }
           ],
           "canBeSupportedBy": [
             {
-              "unitId": "unit-skitarii-marshal"
+              "unitId": "unit-skitarii-marshal",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-technoarcheologist"
+              "unitId": "unit-technoarcheologist",
+              "maxCharacters": 2
             }
           ]
         }
@@ -2758,18 +2896,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-tech-priest-dominus"
+            "unitId": "unit-tech-priest-dominus",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-enginseer"
+            "unitId": "unit-tech-priest-enginseer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-manipulus"
+            "unitId": "unit-tech-priest-manipulus",
+            "maxCharacters": 2
           }
         ],
         "canBeSupportedBy": [
           {
-            "unitId": "unit-technoarcheologist"
+            "unitId": "unit-technoarcheologist",
+            "maxCharacters": 2
           }
         ]
       },
@@ -2779,18 +2921,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-tech-priest-dominus"
+              "unitId": "unit-tech-priest-dominus",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-enginseer"
+              "unitId": "unit-tech-priest-enginseer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-manipulus"
+              "unitId": "unit-tech-priest-manipulus",
+              "maxCharacters": 2
             }
           ],
           "canBeSupportedBy": [
             {
-              "unitId": "unit-technoarcheologist"
+              "unitId": "unit-technoarcheologist",
+              "maxCharacters": 2
             }
           ]
         }
@@ -2930,18 +3076,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-tech-priest-dominus"
+            "unitId": "unit-tech-priest-dominus",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-enginseer"
+            "unitId": "unit-tech-priest-enginseer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-manipulus"
+            "unitId": "unit-tech-priest-manipulus",
+            "maxCharacters": 2
           }
         ],
         "canBeSupportedBy": [
           {
-            "unitId": "unit-technoarcheologist"
+            "unitId": "unit-technoarcheologist",
+            "maxCharacters": 2
           }
         ]
       },
@@ -2951,18 +3101,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-tech-priest-dominus"
+              "unitId": "unit-tech-priest-dominus",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-enginseer"
+              "unitId": "unit-tech-priest-enginseer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-manipulus"
+              "unitId": "unit-tech-priest-manipulus",
+              "maxCharacters": 2
             }
           ],
           "canBeSupportedBy": [
             {
-              "unitId": "unit-technoarcheologist"
+              "unitId": "unit-technoarcheologist",
+              "maxCharacters": 2
             }
           ]
         }
@@ -3449,18 +3603,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-tech-priest-dominus"
+            "unitId": "unit-tech-priest-dominus",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-enginseer"
+            "unitId": "unit-tech-priest-enginseer",
+            "maxCharacters": 2
           },
           {
-            "unitId": "unit-tech-priest-manipulus"
+            "unitId": "unit-tech-priest-manipulus",
+            "maxCharacters": 2
           }
         ],
         "canBeSupportedBy": [
           {
-            "unitId": "unit-technoarcheologist"
+            "unitId": "unit-technoarcheologist",
+            "maxCharacters": 2
           }
         ]
       },
@@ -3470,18 +3628,22 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-tech-priest-dominus"
+              "unitId": "unit-tech-priest-dominus",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-enginseer"
+              "unitId": "unit-tech-priest-enginseer",
+              "maxCharacters": 2
             },
             {
-              "unitId": "unit-tech-priest-manipulus"
+              "unitId": "unit-tech-priest-manipulus",
+              "maxCharacters": 2
             }
           ],
           "canBeSupportedBy": [
             {
-              "unitId": "unit-technoarcheologist"
+              "unitId": "unit-technoarcheologist",
+              "maxCharacters": 2
             }
           ]
         }
@@ -4880,6 +5042,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canBeSupportedBy": [
           {
             "unitId": "unit-cybernetica-datasmith",
+            "maxCharacters": 1,
             "removeKeywords": [
               "INFANTRY"
             ]
@@ -4894,6 +5057,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canBeSupportedBy": [
             {
               "unitId": "unit-cybernetica-datasmith",
+              "maxCharacters": 1,
               "removeKeywords": [
                 "INFANTRY"
               ]

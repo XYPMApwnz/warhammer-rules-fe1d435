@@ -28,7 +28,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-winged-tyranid-prime"
+            "unitId": "unit-winged-tyranid-prime",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -39,7 +40,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-winged-tyranid-prime"
+              "unitId": "unit-winged-tyranid-prime",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -134,7 +136,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-tyranid-prime-with-lash-whip"
+            "unitId": "unit-tyranid-prime-with-lash-whip",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -145,7 +148,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-tyranid-prime-with-lash-whip"
+              "unitId": "unit-tyranid-prime-with-lash-whip",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -213,7 +217,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-tyranid-prime-with-lash-whip"
+            "unitId": "unit-tyranid-prime-with-lash-whip",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -224,7 +229,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-tyranid-prime-with-lash-whip"
+              "unitId": "unit-tyranid-prime-with-lash-whip",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -454,7 +460,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-genestealers"
+            "unitId": "unit-genestealers",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -465,7 +472,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-genestealers"
+              "unitId": "unit-genestealers",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -534,7 +542,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-tyrant-guard"
+            "unitId": "unit-tyrant-guard",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -545,7 +554,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-tyrant-guard"
+              "unitId": "unit-tyrant-guard",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -696,7 +706,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-raveners"
+            "unitId": "unit-raveners",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -707,7 +718,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-raveners"
+              "unitId": "unit-raveners",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -838,13 +850,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-neurogaunts"
+            "unitId": "unit-neurogaunts",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-tyrant-guard"
+            "unitId": "unit-tyrant-guard",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-zoanthropes"
+            "unitId": "unit-zoanthropes",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -855,13 +870,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-neurogaunts"
+              "unitId": "unit-neurogaunts",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-tyrant-guard"
+              "unitId": "unit-tyrant-guard",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-zoanthropes"
+              "unitId": "unit-zoanthropes",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -1209,16 +1227,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-hormagaunts"
+            "unitId": "unit-hormagaunts",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-termagants"
+            "unitId": "unit-termagants",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-tyranid-warriors-with-melee-bio-weapons"
+            "unitId": "unit-tyranid-warriors-with-melee-bio-weapons",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-tyranid-warriors-with-ranged-bio-weapons"
+            "unitId": "unit-tyranid-warriors-with-ranged-bio-weapons",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -1229,16 +1251,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-hormagaunts"
+              "unitId": "unit-hormagaunts",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-termagants"
+              "unitId": "unit-termagants",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-tyranid-warriors-with-melee-bio-weapons"
+              "unitId": "unit-tyranid-warriors-with-melee-bio-weapons",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-tyranid-warriors-with-ranged-bio-weapons"
+              "unitId": "unit-tyranid-warriors-with-ranged-bio-weapons",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -1545,13 +1571,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-gargoyles"
+            "unitId": "unit-gargoyles",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-tyranid-warriors-with-melee-bio-weapons"
+            "unitId": "unit-tyranid-warriors-with-melee-bio-weapons",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-tyranid-warriors-with-ranged-bio-weapons"
+            "unitId": "unit-tyranid-warriors-with-ranged-bio-weapons",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -1562,13 +1591,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-gargoyles"
+              "unitId": "unit-gargoyles",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-tyranid-warriors-with-melee-bio-weapons"
+              "unitId": "unit-tyranid-warriors-with-melee-bio-weapons",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-tyranid-warriors-with-ranged-bio-weapons"
+              "unitId": "unit-tyranid-warriors-with-ranged-bio-weapons",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -1809,7 +1841,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-carnifexes"
+            "unitId": "unit-carnifexes",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -1820,7 +1853,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-carnifexes"
+              "unitId": "unit-carnifexes",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -2019,7 +2053,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-tyrant-guard"
+            "unitId": "unit-tyrant-guard",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -2030,7 +2065,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-tyrant-guard"
+              "unitId": "unit-tyrant-guard",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -2318,7 +2354,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-broodlord"
+            "unitId": "unit-broodlord",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -2329,7 +2366,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-broodlord"
+              "unitId": "unit-broodlord",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -2589,7 +2627,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-neurotyrant"
+            "unitId": "unit-neurotyrant",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -2600,7 +2639,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-neurotyrant"
+              "unitId": "unit-neurotyrant",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -2843,7 +2883,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-hyperadapted-raveners"
+            "unitId": "unit-hyperadapted-raveners",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -2854,7 +2895,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-hyperadapted-raveners"
+              "unitId": "unit-hyperadapted-raveners",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -2922,10 +2964,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-tyranid-prime-with-lash-whip"
+            "unitId": "unit-tyranid-prime-with-lash-whip",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-winged-tyranid-prime"
+            "unitId": "unit-winged-tyranid-prime",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -2936,10 +2980,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-tyranid-prime-with-lash-whip"
+              "unitId": "unit-tyranid-prime-with-lash-whip",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-winged-tyranid-prime"
+              "unitId": "unit-winged-tyranid-prime",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -3013,10 +3059,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-tyranid-prime-with-lash-whip"
+            "unitId": "unit-tyranid-prime-with-lash-whip",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-winged-tyranid-prime"
+            "unitId": "unit-winged-tyranid-prime",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -3027,10 +3075,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-tyranid-prime-with-lash-whip"
+              "unitId": "unit-tyranid-prime-with-lash-whip",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-winged-tyranid-prime"
+              "unitId": "unit-winged-tyranid-prime",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -3238,13 +3288,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-hive-tyrant"
+            "unitId": "unit-hive-tyrant",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-neurotyrant"
+            "unitId": "unit-neurotyrant",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-the-swarmlord"
+            "unitId": "unit-the-swarmlord",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -3255,13 +3308,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-hive-tyrant"
+              "unitId": "unit-hive-tyrant",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-neurotyrant"
+              "unitId": "unit-neurotyrant",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-the-swarmlord"
+              "unitId": "unit-the-swarmlord",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -3524,7 +3580,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-neurotyrant"
+            "unitId": "unit-neurotyrant",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -3535,7 +3592,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-neurotyrant"
+              "unitId": "unit-neurotyrant",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -3662,7 +3720,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-old-one-eye"
+            "unitId": "unit-old-one-eye",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -3673,7 +3732,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-old-one-eye"
+              "unitId": "unit-old-one-eye",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []

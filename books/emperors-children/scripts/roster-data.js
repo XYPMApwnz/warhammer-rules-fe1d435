@@ -144,10 +144,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-lord-exultant"
+            "unitId": "unit-lord-exultant",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-sorcerer"
+            "unitId": "unit-sorcerer",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -158,10 +160,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-lord-exultant"
+              "unitId": "unit-lord-exultant",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-sorcerer"
+              "unitId": "unit-sorcerer",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -391,10 +395,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-lord-exultant"
+            "unitId": "unit-lord-exultant",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-sorcerer"
+            "unitId": "unit-sorcerer",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -405,10 +411,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-lord-exultant"
+              "unitId": "unit-lord-exultant",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-sorcerer"
+              "unitId": "unit-sorcerer",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -1224,10 +1232,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-infractors"
+            "unitId": "unit-infractors",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-tormentors"
+            "unitId": "unit-tormentors",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -1238,10 +1248,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-infractors"
+              "unitId": "unit-infractors",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-tormentors"
+              "unitId": "unit-tormentors",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -1526,7 +1538,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-noise-marines"
+            "unitId": "unit-noise-marines",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -1537,7 +1550,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-noise-marines"
+              "unitId": "unit-noise-marines",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -1661,13 +1675,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-infractors"
+            "unitId": "unit-infractors",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-noise-marines"
+            "unitId": "unit-noise-marines",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-tormentors"
+            "unitId": "unit-tormentors",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -1678,13 +1695,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-infractors"
+              "unitId": "unit-infractors",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-noise-marines"
+              "unitId": "unit-noise-marines",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-tormentors"
+              "unitId": "unit-tormentors",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -2146,7 +2166,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-flawless-blades"
+            "unitId": "unit-flawless-blades",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -2157,7 +2178,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-flawless-blades"
+              "unitId": "unit-flawless-blades",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -2703,7 +2725,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-lucius-the-eternal"
+            "unitId": "unit-lucius-the-eternal",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -2714,7 +2737,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-lucius-the-eternal"
+              "unitId": "unit-lucius-the-eternal",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -2808,10 +2832,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-lord-kakophonist"
+            "unitId": "unit-lord-kakophonist",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-sorcerer"
+            "unitId": "unit-sorcerer",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -2822,10 +2848,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-lord-kakophonist"
+              "unitId": "unit-lord-kakophonist",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-sorcerer"
+              "unitId": "unit-sorcerer",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []

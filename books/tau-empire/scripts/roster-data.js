@@ -28,10 +28,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-cadre-fireblade"
+            "unitId": "unit-cadre-fireblade",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-ethereal"
+            "unitId": "unit-ethereal",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -42,10 +44,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-cadre-fireblade"
+              "unitId": "unit-cadre-fireblade",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-ethereal"
+              "unitId": "unit-ethereal",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -312,10 +316,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-cadre-fireblade"
+            "unitId": "unit-cadre-fireblade",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-ethereal"
+            "unitId": "unit-ethereal",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -326,10 +332,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-cadre-fireblade"
+              "unitId": "unit-cadre-fireblade",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-ethereal"
+              "unitId": "unit-ethereal",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -619,10 +627,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-breacher-team"
+            "unitId": "unit-breacher-team",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-strike-team"
+            "unitId": "unit-strike-team",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -633,10 +643,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-breacher-team"
+              "unitId": "unit-breacher-team",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-strike-team"
+              "unitId": "unit-strike-team",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -842,13 +854,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-crisis-fireknife-battlesuits"
+            "unitId": "unit-crisis-fireknife-battlesuits",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-crisis-starscythe-battlesuits"
+            "unitId": "unit-crisis-starscythe-battlesuits",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-crisis-sunforge-battlesuits"
+            "unitId": "unit-crisis-sunforge-battlesuits",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -859,13 +874,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-crisis-fireknife-battlesuits"
+              "unitId": "unit-crisis-fireknife-battlesuits",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-crisis-starscythe-battlesuits"
+              "unitId": "unit-crisis-starscythe-battlesuits",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-crisis-sunforge-battlesuits"
+              "unitId": "unit-crisis-sunforge-battlesuits",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -1330,13 +1348,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-crisis-fireknife-battlesuits"
+            "unitId": "unit-crisis-fireknife-battlesuits",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-crisis-starscythe-battlesuits"
+            "unitId": "unit-crisis-starscythe-battlesuits",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-crisis-sunforge-battlesuits"
+            "unitId": "unit-crisis-sunforge-battlesuits",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -1347,13 +1368,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-crisis-fireknife-battlesuits"
+              "unitId": "unit-crisis-fireknife-battlesuits",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-crisis-starscythe-battlesuits"
+              "unitId": "unit-crisis-starscythe-battlesuits",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-crisis-sunforge-battlesuits"
+              "unitId": "unit-crisis-sunforge-battlesuits",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -1788,10 +1812,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-breacher-team"
+            "unitId": "unit-breacher-team",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-strike-team"
+            "unitId": "unit-strike-team",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -1802,10 +1828,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-breacher-team"
+              "unitId": "unit-breacher-team",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-strike-team"
+              "unitId": "unit-strike-team",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -2125,10 +2153,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-kroot-carnivores"
+            "unitId": "unit-kroot-carnivores",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-kroot-farstalkers"
+            "unitId": "unit-kroot-farstalkers",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -2139,10 +2169,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-kroot-carnivores"
+              "unitId": "unit-kroot-carnivores",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-kroot-farstalkers"
+              "unitId": "unit-kroot-farstalkers",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -2415,10 +2447,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-kroot-carnivores"
+            "unitId": "unit-kroot-carnivores",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-kroot-farstalkers"
+            "unitId": "unit-kroot-farstalkers",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -2429,10 +2463,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-kroot-carnivores"
+              "unitId": "unit-kroot-carnivores",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-kroot-farstalkers"
+              "unitId": "unit-kroot-farstalkers",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -2527,10 +2563,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-kroot-carnivores"
+            "unitId": "unit-kroot-carnivores",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-kroot-farstalkers"
+            "unitId": "unit-kroot-farstalkers",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -2541,10 +2579,12 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-kroot-carnivores"
+              "unitId": "unit-kroot-carnivores",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-kroot-farstalkers"
+              "unitId": "unit-kroot-farstalkers",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -2877,13 +2917,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-crisis-fireknife-battlesuits"
+            "unitId": "unit-crisis-fireknife-battlesuits",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-crisis-starscythe-battlesuits"
+            "unitId": "unit-crisis-starscythe-battlesuits",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-crisis-sunforge-battlesuits"
+            "unitId": "unit-crisis-sunforge-battlesuits",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -2894,13 +2937,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-crisis-fireknife-battlesuits"
+              "unitId": "unit-crisis-fireknife-battlesuits",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-crisis-starscythe-battlesuits"
+              "unitId": "unit-crisis-starscythe-battlesuits",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-crisis-sunforge-battlesuits"
+              "unitId": "unit-crisis-sunforge-battlesuits",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -3204,7 +3250,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
       "relations": {
         "canLead": [
           {
-            "unitId": "unit-pathfinder-team"
+            "unitId": "unit-pathfinder-team",
+            "maxCharacters": 1
           }
         ],
         "canSupport": [],
@@ -3215,7 +3262,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "relations": {
           "canLead": [
             {
-              "unitId": "unit-pathfinder-team"
+              "unitId": "unit-pathfinder-team",
+              "maxCharacters": 1
             }
           ],
           "canSupport": [],
@@ -3605,13 +3653,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-kroot-flesh-shaper"
+            "unitId": "unit-kroot-flesh-shaper",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-kroot-trail-shaper"
+            "unitId": "unit-kroot-trail-shaper",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-kroot-war-shaper"
+            "unitId": "unit-kroot-war-shaper",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -3622,13 +3673,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-kroot-flesh-shaper"
+              "unitId": "unit-kroot-flesh-shaper",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-kroot-trail-shaper"
+              "unitId": "unit-kroot-trail-shaper",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-kroot-war-shaper"
+              "unitId": "unit-kroot-war-shaper",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -3810,13 +3864,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-kroot-flesh-shaper"
+            "unitId": "unit-kroot-flesh-shaper",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-kroot-trail-shaper"
+            "unitId": "unit-kroot-trail-shaper",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-kroot-war-shaper"
+            "unitId": "unit-kroot-war-shaper",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -3827,13 +3884,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-kroot-flesh-shaper"
+              "unitId": "unit-kroot-flesh-shaper",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-kroot-trail-shaper"
+              "unitId": "unit-kroot-trail-shaper",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-kroot-war-shaper"
+              "unitId": "unit-kroot-war-shaper",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -4104,7 +4164,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-darkstrider"
+            "unitId": "unit-darkstrider",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -4115,7 +4176,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-darkstrider"
+              "unitId": "unit-darkstrider",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -5403,13 +5465,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-commander-farsight"
+            "unitId": "unit-commander-farsight",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-commander-in-coldstar-battlesuit"
+            "unitId": "unit-commander-in-coldstar-battlesuit",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-commander-in-enforcer-battlesuit"
+            "unitId": "unit-commander-in-enforcer-battlesuit",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -5420,13 +5485,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-commander-farsight"
+              "unitId": "unit-commander-farsight",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-commander-in-coldstar-battlesuit"
+              "unitId": "unit-commander-in-coldstar-battlesuit",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-commander-in-enforcer-battlesuit"
+              "unitId": "unit-commander-in-enforcer-battlesuit",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -5655,13 +5723,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-commander-farsight"
+            "unitId": "unit-commander-farsight",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-commander-in-coldstar-battlesuit"
+            "unitId": "unit-commander-in-coldstar-battlesuit",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-commander-in-enforcer-battlesuit"
+            "unitId": "unit-commander-in-enforcer-battlesuit",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -5672,13 +5743,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-commander-farsight"
+              "unitId": "unit-commander-farsight",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-commander-in-coldstar-battlesuit"
+              "unitId": "unit-commander-in-coldstar-battlesuit",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-commander-in-enforcer-battlesuit"
+              "unitId": "unit-commander-in-enforcer-battlesuit",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []
@@ -5918,13 +5992,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         "canSupport": [],
         "canBeLedBy": [
           {
-            "unitId": "unit-commander-farsight"
+            "unitId": "unit-commander-farsight",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-commander-in-coldstar-battlesuit"
+            "unitId": "unit-commander-in-coldstar-battlesuit",
+            "maxCharacters": 1
           },
           {
-            "unitId": "unit-commander-in-enforcer-battlesuit"
+            "unitId": "unit-commander-in-enforcer-battlesuit",
+            "maxCharacters": 1
           }
         ],
         "canBeSupportedBy": []
@@ -5935,13 +6012,16 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           "canSupport": [],
           "canBeLedBy": [
             {
-              "unitId": "unit-commander-farsight"
+              "unitId": "unit-commander-farsight",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-commander-in-coldstar-battlesuit"
+              "unitId": "unit-commander-in-coldstar-battlesuit",
+              "maxCharacters": 1
             },
             {
-              "unitId": "unit-commander-in-enforcer-battlesuit"
+              "unitId": "unit-commander-in-enforcer-battlesuit",
+              "maxCharacters": 1
             }
           ],
           "canBeSupportedBy": []

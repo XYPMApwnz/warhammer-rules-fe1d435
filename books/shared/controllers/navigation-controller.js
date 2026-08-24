@@ -7,6 +7,25 @@
   const currentRelation=relation=>relation?.certainty==='current'&&relation?.provenance?.kind==='explicit-roster-attachment';
   const keywordsFor=unit=>new Set(list(unit?.intrinsicKeywords).map(value=>String(value).trim().toUpperCase()));
 
+  function canonicalRosterReferences(tree){
+    const nodes=list(window.WH_ARMY_BOOK_TARGETS?.nodes),armyRules=nodes.filter(node=>node?.kind==='target'&&String(node.id||'').startsWith('army-rule-'));
+    const armyParents=[...new Set(armyRules.map(node=>node.parentId).filter(Boolean))],detachments=nodes.filter(node=>node?.parentId==='detachments'&&node?.kind==='target');
+    const canonicalNode=id=>{const matches=[...tree.querySelectorAll('[data-nav-id]')].filter(node=>node.dataset.navId===id);return matches.length===1?matches[0]:null;};
+    if(!armyRules.length||armyParents.length!==1||!detachments.length)return null;
+    const armySource=canonicalNode(armyParents[0]),detachmentsSource=canonicalNode('detachments');
+    if(!armySource||!detachmentsSource)return null;
+    const army=armySource.cloneNode(true),detachmentBranch=detachmentsSource.cloneNode(true),armyIds=new Set(armyRules.map(node=>node.id)),detachmentIds=new Set(detachments.map(node=>node.id));
+    const targetIds=node=>[...node.querySelectorAll('[data-nav-target]')].map(button=>button.dataset.navTarget).filter(id=>id!==node.dataset.navId),contains=(actual,required)=>new Set(actual).size===actual.length&&[...required].every(id=>actual.includes(id));
+    if(!contains(targetIds(army),armyIds)||!contains(targetIds(detachmentBranch),detachmentIds))return null;
+    const armyRow=directChild(army,'toc-row'),armyLabel=armyRow?.querySelector('[data-nav-target]'),armyToggle=armyRow?.querySelector('[data-nav-toggle]');
+    if(!armyLabel||!armyToggle)return null;
+    armyLabel.replaceChildren(document.createTextNode('Army Rule'));
+    armyToggle.setAttribute('aria-label','Toggle Army Rule');
+    army.dataset.rosterReference='army-rule';
+    detachmentBranch.dataset.rosterReference='detachments';
+    return Object.freeze({nodes:[army,detachmentBranch],armyRuleTargetIds:[...armyIds],detachmentTargetIds:[...detachmentIds]});
+  }
+
   function physicalRosterOrder(game,catalog){
     const catalogOrder=new Map(list(catalog.units).map((unit,index)=>[unit.id,index])),catalogById=new Map(list(catalog.units).map(unit=>[unit.id,unit]));
     const units=list(game.units).map((unit,physicalOrder)=>{const canonical=catalogById.get(unit.identity?.canonicalDatasheetId);if(!canonical)return null;const keywords=keywordsFor(canonical);return{unit,canonical,instanceId:unit.identity.instanceId,targetId:canonical.id,title:unit.identity.canonicalTitle||canonical.title,canonicalOrder:catalogOrder.get(canonical.id),physicalOrder,isEpic:keywords.has('EPIC HERO'),isCharacter:keywords.has('CHARACTER')};}).filter(Boolean);
@@ -17,6 +36,8 @@
     const visited=new Set(),components=[];
     for(const seed of units.filter(unit=>edges.has(unit.instanceId)).sort(compare)){if(visited.has(seed.instanceId))continue;const pending=[seed.instanceId],members=[];while(pending.length){const id=pending.shift();if(visited.has(id))continue;visited.add(id);const unit=byInstance.get(id);if(unit)members.push(unit);for(const next of edges.get(id)||[])if(!visited.has(next))pending.push(next);}members.sort((a,b)=>(a.isEpic?0:leaderIds.has(a.instanceId)?1:bodyguardIds.has(a.instanceId)?2:3)-(b.isEpic?0:leaderIds.has(b.instanceId)?1:bodyguardIds.has(b.instanceId)?2:3)||compare(a,b));components.push({members,epic:members.some(unit=>unit.isEpic)});}
     const componentOrder=component=>{const primary=component.members.filter(unit=>component.epic?unit.isEpic:leaderIds.has(unit.instanceId));return Math.min(...(primary.length?primary:component.members).map(unit=>unit.canonicalOrder));};
+    const attachmentByInstance=new Map();
+    components.forEach((component,index)=>{const groupId=`roster-attachment-${index+1}`;component.members.forEach(unit=>attachmentByInstance.set(unit.instanceId,Object.freeze({groupId,role:bodyguardIds.has(unit.instanceId)?'bodyguard':'leader'})));});
     const unattached=unit=>!edges.has(unit.instanceId),result=[],emitted=new Set(),emit=unit=>{if(!unit||emitted.has(unit.instanceId))return;emitted.add(unit.instanceId);result.push(unit);},emitComponent=component=>component.members.forEach(emit);
     units.filter(unit=>unit.isEpic&&unattached(unit)).sort(compare).forEach(emit);
     components.filter(component=>component.epic).sort((a,b)=>componentOrder(a)-componentOrder(b)).forEach(emitComponent);
@@ -24,7 +45,7 @@
     components.filter(component=>!component.epic).sort((a,b)=>componentOrder(a)-componentOrder(b)).forEach(emitComponent);
     units.sort(compare).forEach(emit);
     const copies=new Map();for(const unit of units.sort((a,b)=>a.physicalOrder-b.physicalOrder)){if(!copies.has(unit.targetId))copies.set(unit.targetId,[]);copies.get(unit.targetId).push(unit.instanceId);}
-    return result.map(unit=>{const peers=copies.get(unit.targetId)||[],ordinal=peers.indexOf(unit.instanceId)+1;return{...unit,label:peers.length>1?`${unit.title} #${ordinal}`:unit.title};});
+    return result.map(unit=>{const peers=copies.get(unit.targetId)||[],ordinal=peers.indexOf(unit.instanceId)+1;return{...unit,label:peers.length>1?`${unit.title} #${ordinal}`:unit.title,navigationAttachment:attachmentByInstance.get(unit.instanceId)||null};});
   }
 
   function physicalNavigationInput(){
@@ -40,6 +61,8 @@
   function projectPhysicalRosterNavigation(tree){
     const input=physicalNavigationInput();
     if(!input)return Object.freeze({active:false,items:[]});
+    const references=canonicalRosterReferences(tree);
+    if(!references)return Object.freeze({active:false,items:[]});
     const {game,catalog}=input;
     const ordered=physicalRosterOrder(game,catalog),projected=[];
     for(const [index,item] of ordered.entries()){
@@ -49,8 +72,18 @@
       node.dataset.navId=`roster-unit-${index+1}`;node.dataset.navDepth='0';button.dataset.navTarget=item.targetId;button.dataset.rosterInstance=item.instanceId;button.replaceChildren(document.createTextNode(item.label));button.removeAttribute('aria-current');button.classList.remove('is-current','is-ancestor');node.append(row);projected.push({node,...item});
     }
     if(ordered.length!==list(game.units).length||projected.length!==ordered.length)return Object.freeze({active:false,items:[]});
-    tree.replaceChildren(...projected.map(item=>item.node));tree.dataset.rosterNavigation='physical';document.documentElement.dataset.rosterNavigation='physical';
-    return Object.freeze({active:true,items:projected.map(({node,...item})=>item)});
+    const physicalNodes=[],groups=new Map();
+    for(const item of projected){
+      const attachment=item.navigationAttachment;
+      if(!attachment){physicalNodes.push(item.node);continue;}
+      item.node.dataset.rosterAttachmentGroup=attachment.groupId;item.node.dataset.rosterAttachmentRole=attachment.role;
+      let group=groups.get(attachment.groupId);
+      if(!group){const wrapper=document.createElement('li'),members=document.createElement('ul');wrapper.className='roster-attachment-group';wrapper.dataset.rosterAttachmentGroup=attachment.groupId;members.className='roster-attachment-members';wrapper.append(members);group={wrapper,members};groups.set(attachment.groupId,group);physicalNodes.push(wrapper);}
+      group.members.append(item.node);
+    }
+    physicalNodes[0]?.classList.add('roster-physical-start');
+    tree.replaceChildren(...references.nodes,...physicalNodes);tree.dataset.rosterNavigation='physical';document.documentElement.dataset.rosterNavigation='physical';
+    return Object.freeze({active:true,items:projected.map(({node,...item})=>item),references:Object.freeze({armyRuleTargetIds:references.armyRuleTargetIds,detachmentTargetIds:references.detachmentTargetIds})});
   }
 
   class NavigationController{
@@ -137,7 +170,7 @@
     canonicalTarget(id){return window.WHArmyBookTargetMount?.resolve(id)?.ownerId||id;}
     itemFor(id,instanceId=''){const exact=instanceId&&this.byInstance.get(instanceId);if(exact&&exact.id===this.canonicalTarget(id))return exact;return this.byId.get(this.canonicalTarget(id))||null;}
     rosterInstance(){return new URLSearchParams(location.search).get('rosterInstance')||history.state?.whRosterInstance||'';}
-    rosterDestination(id){if(!this.rosterNavigation.active)return this.itemFor(id);const requested=this.rosterInstance(),exact=requested&&this.byInstance.get(requested),owner=this.canonicalTarget(id);if(exact&&exact.id===owner)return exact;if(!requested){const matching=this.byId.get(owner);if(matching)return matching;}return this.items[0]||null;}
+    rosterDestination(id){if(!this.rosterNavigation.active)return this.itemFor(id);const requested=this.rosterInstance(),exact=requested&&this.byInstance.get(requested),owner=this.canonicalTarget(id),matching=this.byId.get(owner);if(matching&&!matching.instanceId)return matching;if(exact&&exact.id===owner)return exact;if(!requested&&matching)return matching;const first=this.rosterNavigation.items[0];return first?this.byInstance.get(first.instanceId)||null:null;}
     sectionFor(item,requestedId=item?.id){if(!item)return null;if(!item.instanceId)return document.getElementById(requestedId)||document.getElementById(item.id);const card=document.querySelector(`.unit-card[data-roster-instance="${CSS.escape(item.instanceId)}"]`);if(!card)return null;if(requestedId===item.id)return card;return[...card.querySelectorAll('[id]')].find(node=>node.id===requestedId||node.id.startsWith(`${requestedId}--`))||card;}
     branch(node){return this.direct(node,'toc-branch');}
     parentNode(node){const list=node.parentElement;return list?.classList.contains('toc-branch')?list.parentElement:null;}
@@ -389,12 +422,12 @@
       this.locationInstance=new URL(url,location.href).searchParams.get('rosterInstance')||'';
       return next;
     }
-    replaceRosterLocation(id,instanceId){const url=new URL(location.href);url.hash=id;url.searchParams.set('rosterInstance',instanceId);const state={...history.state,whNavigationTarget:id,whRosterInstance:instanceId};history.replaceState(state,'',url);this.locationTarget=id;this.locationInstance=instanceId;}
+    replaceRosterLocation(id,instanceId){const url=new URL(location.href);url.hash=id;const state={...history.state,whNavigationTarget:id};if(instanceId){url.searchParams.set('rosterInstance',instanceId);state.whRosterInstance=instanceId;}else{url.searchParams.delete('rosterInstance');delete state.whRosterInstance;}history.replaceState(state,'',url);this.locationTarget=id;this.locationInstance=instanceId;}
     commitTarget(id,instanceId=''){
       if(this.hashTarget()===id&&this.rosterInstance()===instanceId)return;
       const url=new URL(location.href);url.hash=id;
       const state={...history.state,whNavigationTarget:id};
-      if(instanceId){url.searchParams.set('rosterInstance',instanceId);state.whRosterInstance=instanceId;}else delete state.whRosterInstance;
+      if(instanceId){url.searchParams.set('rosterInstance',instanceId);state.whRosterInstance=instanceId;}else{url.searchParams.delete('rosterInstance');delete state.whRosterInstance;}
       for(const key of ['whJourney','whJourneyTarget','dgFullEntry','wh40kPageState'])delete state[key];
       this.pushHistoryState(state,url);
       window.dispatchEvent(new CustomEvent('wh-navigation-commit',{detail:{target:id,instanceId}}));

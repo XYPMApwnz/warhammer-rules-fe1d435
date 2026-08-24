@@ -72,19 +72,11 @@
       this.locationInstance=this.rosterInstance();
       history.replaceState({...history.state,whNavigationIndex:this.historyIndex},'',location.href);
 
-      this.items=[...this.tree.querySelectorAll('[data-nav-id]')].map(node=>{
-        const row=this.direct(node,'toc-row');
-        const button=row?.querySelector('[data-nav-target]');
-        const id=button?.dataset.navTarget||'';
-        const instanceId=button?.dataset.rosterInstance||'';
-        return{
-          id,instanceId,key:instanceId||id,node,row,button,
-          depth:Number(node.dataset.navDepth)
-        };
-      }).filter(item=>item.id&&item.button);
-      this.byId=new Map();this.byInstance=new Map();for(const item of this.items){if(!this.byId.has(item.id))this.byId.set(item.id,item);if(item.instanceId)this.byInstance.set(item.instanceId,item);}
+      this.indexNavigationItems();
 
       this.bind();
+      this.handleRosterProjectionReady=()=>this.reconcileRosterNavigation();
+      window.addEventListener('wh-roster-projection-ready',this.handleRosterProjectionReady);
       this.closeEveryBranch();
       this.applyViewportState();
       this.refreshGeometry();
@@ -104,6 +96,28 @@
 
     get active(){return this.state.active||'start';}
     get activeInstance(){return this.state.instance||'';}
+
+    indexNavigationItems(){
+      this.items=[...this.tree.querySelectorAll('[data-nav-id]')].map(node=>{
+        const row=this.direct(node,'toc-row');
+        const button=row?.querySelector('[data-nav-target]');
+        const id=button?.dataset.navTarget||'';
+        const instanceId=button?.dataset.rosterInstance||'';
+        return{id,instanceId,key:instanceId||id,node,row,button,depth:Number(node.dataset.navDepth)};
+      }).filter(item=>item.id&&item.button);
+      this.byId=new Map();this.byInstance=new Map();for(const item of this.items){if(!this.byId.has(item.id))this.byId.set(item.id,item);if(item.instanceId)this.byInstance.set(item.instanceId,item);}
+    }
+    reconcileRosterNavigation(){
+      if(this.rosterNavigation.active)return false;
+      const activeElement=document.activeElement,focusedButton=this.tree.contains(activeElement)?activeElement.closest?.('[data-nav-target]'):null,focusedTarget=focusedButton?.dataset.navTarget||'',focusedInstance=focusedButton?.dataset.rosterInstance||this.rosterInstance(),currentTarget=this.state.active||this.hashTarget(),currentInstance=this.rosterInstance()||this.state.instance,next=projectPhysicalRosterNavigation(this.tree);
+      if(!next.active)return false;
+      this.rosterNavigation=next;this.indexNavigationItems();this.activeButtons=new Set();
+      const current=this.byInstance.get(currentInstance)||this.itemFor(currentTarget,currentInstance)||this.rosterDestination(currentTarget),section=this.sectionFor(current,currentTarget);
+      if(section)this.navigate(current.id,section,null,current.instanceId);else if(current)this.activate(current.id,{instanceId:current.instanceId,keepVisible:false});
+      this.closeEveryBranch();this.applyViewportState();this.refreshGeometry();
+      if(focusedButton){const focused=this.byInstance.get(focusedInstance)||this.itemFor(focusedTarget,focusedInstance);focused?.button.focus({preventScroll:true});}
+      return true;
+    }
 
     direct(node,className){return[...node.children].find(child=>child.classList.contains(className))||null;}
     targetKind(id){return window.WHArmyBookTargetMount?.resolve(id)?.node?.kind||'';}

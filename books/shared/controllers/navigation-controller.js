@@ -174,7 +174,7 @@
     direct(node,className){return[...node.children].find(child=>child.classList.contains(className))||null;}
     targetKind(id){return window.WHArmyBookTargetMount?.resolve(id)?.node?.kind||'';}
     canResolveTarget(id){return Boolean(document.getElementById(id)||window.WHArmyBookTargetMount?.resolve(id)?.ownerId);}
-    ensureTarget(id){return Promise.resolve(window.WHArmyBookTargetMount?.ensure(id)||document.getElementById(id)||null);}
+    ensureTarget(id,instanceId=''){return Promise.resolve(window.WHArmyBookTargetMount?.ensure(id,{instanceId})||document.getElementById(id)||null);}
     canonicalTarget(id){return window.WHArmyBookTargetMount?.resolve(id)?.ownerId||id;}
     itemFor(id,instanceId=''){const exact=instanceId&&this.byInstance.get(instanceId);if(exact&&exact.id===this.canonicalTarget(id))return exact;return this.byId.get(this.canonicalTarget(id))||null;}
     rosterInstance(){return new URLSearchParams(location.search).get('rosterInstance')||history.state?.whRosterInstance||'';}
@@ -411,7 +411,7 @@
       let id=this.hashTarget()||'start',item=this.rosterDestination(id);
       if(this.rosterNavigation.active){if(!item){settled?.();return false;}if(this.canonicalTarget(id)!==item.id)id=item.id;this.replaceRosterLocation(id,item.instanceId);}else item=this.itemFor(id);
       if(this.mobile&&this.targetKind(id)==='branch'){const item=this.byId.get(id);if(item)this.revealPath(item.node,{includeSelf:true});settled?.();return false;}
-      await this.ensureTarget(id);
+      await this.ensureTarget(id,item?.instanceId||'');
       await window.WHArmyDatasheetLayout?.ready?.();
       const target=this.sectionFor(item,id);if(!target){settled?.();return false;}
       this.refreshGeometry();const unit=target.closest('.unit-card');
@@ -451,7 +451,7 @@
       if(detail.restore)this.restore(detail.restore.id,detail.restore.scrollY,null,instanceId);
       else if(changed)this.scheduleHashRestore();
     }
-    async go(id,{historyMode='none',instanceId=''}={}){const item=this.itemFor(id,instanceId);if(!item)return;if(this.mobile&&this.targetKind(id)==='branch'){this.toggleBranch(item.node);return;}await this.ensureTarget(id);const section=this.sectionFor(item);if(!section)return;this.setDrawer(false);if(historyMode==='push')this.commitTarget(item.id,item.instanceId);this.navigate(item.id,section,null,item.instanceId);}
+    async go(id,{historyMode='none',instanceId=''}={}){const item=this.itemFor(id,instanceId);if(!item)return;if(this.mobile&&this.targetKind(id)==='branch'){this.toggleBranch(item.node);return;}await this.ensureTarget(id,item.instanceId);const section=this.sectionFor(item);if(!section)return;this.setDrawer(false);if(historyMode==='push')this.commitTarget(item.id,item.instanceId);this.navigate(item.id,section,null,item.instanceId);}
     navigate(id,element,settled,instanceId=''){
       const targets=window.WHNavigationTargets.resolve(element);
       if(!targets.scrollTarget)return;
@@ -465,7 +465,7 @@
       const complete=()=>{this.highlighter.show(highlightTarget);settled?.();};
       this.beginTransition(id,this.destination(targets.scrollTarget,inset),complete,instanceId);
     }
-    async restore(id,scrollY,settled,instanceId=this.rosterInstance()){const item=this.itemFor(id,instanceId)||this.rosterDestination(id);if(!item)return;await this.ensureTarget(item.id);this.refreshGeometry();this.beginTransition(item.id,Math.max(0,scrollY),settled,item.instanceId);}
+    async restore(id,scrollY,settled,instanceId=this.rosterInstance()){const item=this.itemFor(id,instanceId)||this.rosterDestination(id);if(!item)return;await this.ensureTarget(item.id,item.instanceId);this.refreshGeometry();this.beginTransition(item.id,Math.max(0,scrollY),settled,item.instanceId);}
     beginTransition(id,destination,settled,instanceId=''){
       if(this.state.owner==='controller')this.stopControlledScroll();
       const token=++this.state.transition;this.state.owner='controller';this.activate(id,{instanceId,behavior:'auto'});

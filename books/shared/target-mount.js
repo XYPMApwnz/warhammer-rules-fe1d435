@@ -12,21 +12,24 @@
   const resolve=value=>{const requestedId=canonicalId(value),node=nodesById.get(requestedId)||null,ownerId=catalog.owners[requestedId]||null;return{requestedId,node,ownerId,kind:node?.kind||(ownerId?'target':null)};};
   const liveOwners=()=>Object.keys(catalog.targets).filter(id=>document.getElementById(id)).length;
 
-  function ensure(value){
+  function ensure(value,{instanceId=''}={}){
     const resolved=resolve(value);
-    if(!phone)return document.getElementById(resolved.requestedId)||document.getElementById(resolved.ownerId)||null;
     if(!resolved.ownerId)return null;
-    if(current===resolved.ownerId)return document.getElementById(resolved.requestedId)||document.getElementById(resolved.ownerId)||null;
+    const owner=document.getElementById(resolved.ownerId);
+    if(!phone){
+      if(!instanceId)return document.getElementById(resolved.requestedId)||owner||null;
+      if(owner?.dataset.rosterInstance===instanceId&&!owner.hidden)return document.getElementById(resolved.requestedId)||owner;
+      if(owner?.dataset.rosterInstance===instanceId){root.dispatchEvent(new CustomEvent('wh-army-target-mounted',{detail:{root:host,element:owner,target:resolved.requestedId,mountOwnerId:resolved.ownerId,previous:resolved.ownerId,instanceId,reused:true}}));return document.getElementById(resolved.requestedId)||owner;}
+    }else if(current===resolved.ownerId&&(!instanceId||owner?.dataset.rosterInstance===instanceId))return document.getElementById(resolved.requestedId)||owner||null;
     const target=catalog.targets[resolved.ownerId];if(!target)throw new Error(`Canonical mount owner is missing: ${resolved.ownerId}`);
     const previous=current,fragment=catalog.html.slice(target.start,target.end),template=document.createElement('template');
-    root.dispatchEvent(new CustomEvent('wh-army-target-before-mount',{detail:{previous,target:resolved.ownerId}}));
+    root.dispatchEvent(new CustomEvent('wh-army-target-before-mount',{detail:{previous,target:resolved.ownerId,instanceId}}));
     template.innerHTML=fragment;
     if(template.content.children.length!==1)throw new Error(`Canonical target fragment must have one root: ${resolved.ownerId}`);
-    host.replaceChildren(template.content);current=resolved.ownerId;metrics.parsedTargetCount+=1;metrics.mountCount+=1;
-    document.documentElement.dataset.mountedTarget=current;
-    metrics.maxLiveTargetOwners=Math.max(metrics.maxLiveTargetOwners,liveOwners());
-    const element=document.getElementById(resolved.requestedId)||document.getElementById(current);
-    root.dispatchEvent(new CustomEvent('wh-army-target-mounted',{detail:{root:host,element,target:resolved.requestedId,mountOwnerId:current,previous}}));
+    if(phone){host.replaceChildren(template.content);current=resolved.ownerId;document.documentElement.dataset.mountedTarget=current;}else owner?.replaceWith(template.content);
+    metrics.parsedTargetCount+=1;metrics.mountCount+=1;metrics.maxLiveTargetOwners=Math.max(metrics.maxLiveTargetOwners,liveOwners());
+    const element=document.getElementById(resolved.requestedId)||document.getElementById(resolved.ownerId);
+    root.dispatchEvent(new CustomEvent('wh-army-target-mounted',{detail:{root:host,element,target:resolved.requestedId,mountOwnerId:resolved.ownerId,previous,instanceId}}));
     return element;
   }
 

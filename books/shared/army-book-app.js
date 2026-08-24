@@ -52,12 +52,12 @@
     }
 
     let app=null;
-    const initializeRoot=mountRoot=>{
+    const initializeRoot=(mountRoot,initializeOptions={})=>{
       if(!mountRoot)return mountRoot;
       root.WHArmyDatasheetLayout?.install(mountRoot);
       root.WHGlossaryAutolink?.apply(mountRoot,config.bookId);
       root.WHGlossaryAutolink?.validate(mountRoot,terms);
-      root.WH_ARMY_ROSTER_DECORATOR?.decorate(mountRoot);
+      root.WH_ARMY_ROSTER_DECORATOR?.decorate(mountRoot,initializeOptions);
       root.WHArmyRosterGamePresentation?.install(mountRoot,root.WH_ARMY_ROSTER_DECORATOR?.projection||root.WH_ARMY_ROSTER_PROJECTION);
       relatedRules?.enhance?.(mountRoot);
       tableAccessibility.apply(mountRoot);
@@ -70,7 +70,7 @@
     root.DG_APP=app;
     initializeRoot(documentRoot);
     root.addEventListener('wh-army-target-before-mount',()=>{relatedRules?.close?.();popups.restore([],{focus:false});});
-    root.addEventListener('wh-army-target-mounted',event=>initializeRoot(event.detail?.root));
+    root.addEventListener('wh-army-target-mounted',event=>initializeRoot(event.detail?.root,{instanceId:event.detail?.instanceId||''}));
     root.WHPageState?.installArmyBook(app);
     const record=root.WHGlossaryReturn?.read();
     if(root.WHGlossaryReturn?.shouldRestoreAutomatically(record)&&record.popupIds?.length){

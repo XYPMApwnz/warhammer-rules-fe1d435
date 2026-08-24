@@ -98,6 +98,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-gargoyles-profile-blinding-venom-melee",
@@ -205,6 +206,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-hormagaunts-profile-hormagaunt-talons-melee",
@@ -369,6 +371,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-termagants-profile-fleshborer-ranged",
@@ -573,6 +576,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-broodlord-profile-broodlord-claws-and-talons-melee",
@@ -722,6 +726,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-hive-tyrant-profile-monstrous-bonesword-and-lash-whip-melee",
@@ -916,6 +921,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-hyperadapted-raveners-profile-prime-claws-and-talons-melee",
@@ -1088,6 +1094,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-neurotyrant-profile-neurotyrant-claws-and-lashes-melee",
@@ -1219,6 +1226,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-parasite-of-mortrex-profile-barbed-ovipositor-melee",
@@ -1367,6 +1375,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-tervigon-profile-stinger-salvoes-ranged-4"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-tervigon-weapon-family-massive-scything-talons-selection",
+            "title": "➤ Massive scything talons",
+            "aliases": [
+              "➤ Massive scything talons"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-tervigon-weapon-family-massive-scything-talons",
+            "profileIds": [
+              "unit-tervigon-profile-massive-scything-talons-strike-melee",
+              "unit-tervigon-profile-massive-scything-talons-sweep-melee-2"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-tervigon-weapon-family-massive-scything-talons",
+            "title": "➤ Massive scything talons",
+            "aliases": [
+              "➤ Massive scything talons"
+            ],
+            "profileIds": [
+              "unit-tervigon-profile-massive-scything-talons-strike-melee",
+              "unit-tervigon-profile-massive-scything-talons-sweep-melee-2"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -1382,7 +1418,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D6",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-tervigon-selection-massive-scything-talons-strike"
+              "unit-tervigon-selection-massive-scything-talons-strike",
+              "unit-tervigon-weapon-family-massive-scything-talons-selection"
             ]
           },
           {
@@ -1397,7 +1434,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-tervigon-selection-massive-scything-talons-sweep"
+              "unit-tervigon-selection-massive-scything-talons-sweep",
+              "unit-tervigon-weapon-family-massive-scything-talons-selection"
             ]
           },
           {
@@ -1570,6 +1608,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-tyranid-prime-with-lash-whip-profile-rending-claw-melee",
@@ -1750,6 +1789,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-winged-hive-tyrant-profile-tyrant-talons-melee",
@@ -1940,6 +1980,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-winged-tyranid-prime-profile-prime-talons-melee",
@@ -2045,6 +2086,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-tyrannocyte-profile-flensing-whips-melee",
@@ -2167,6 +2209,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-deathleaper-profile-lictor-claws-and-talons-melee",
@@ -2285,6 +2328,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-old-one-eye-profile-old-one-eyes-claws-and-talons-sweep-melee-2"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-old-one-eye-weapon-family-old-one-eyes-claws-and-talons-selection",
+            "title": "➤ Old One Eye’s claws and talons",
+            "aliases": [
+              "➤ Old One Eye’s claws and talons"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-old-one-eye-weapon-family-old-one-eyes-claws-and-talons",
+            "profileIds": [
+              "unit-old-one-eye-profile-old-one-eyes-claws-and-talons-strike-melee",
+              "unit-old-one-eye-profile-old-one-eyes-claws-and-talons-sweep-melee-2"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-old-one-eye-weapon-family-old-one-eyes-claws-and-talons",
+            "title": "➤ Old One Eye’s claws and talons",
+            "aliases": [
+              "➤ Old One Eye’s claws and talons"
+            ],
+            "profileIds": [
+              "unit-old-one-eye-profile-old-one-eyes-claws-and-talons-strike-melee",
+              "unit-old-one-eye-profile-old-one-eyes-claws-and-talons-sweep-melee-2"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -2300,7 +2371,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D6+1",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-old-one-eye-selection-old-one-eyes-claws-and-talons-strike"
+              "unit-old-one-eye-selection-old-one-eyes-claws-and-talons-strike",
+              "unit-old-one-eye-weapon-family-old-one-eyes-claws-and-talons-selection"
             ]
           },
           {
@@ -2315,7 +2387,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-old-one-eye-selection-old-one-eyes-claws-and-talons-sweep"
+              "unit-old-one-eye-selection-old-one-eyes-claws-and-talons-sweep",
+              "unit-old-one-eye-weapon-family-old-one-eyes-claws-and-talons-selection"
             ]
           }
         ],
@@ -2407,6 +2480,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-the-red-terror-profile-gaping-maw-melee",
@@ -2553,6 +2627,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-the-swarmlord-profile-bone-sabres-melee",
@@ -2660,6 +2735,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-barbgaunts-profile-barblauncher-ranged",
@@ -2771,6 +2847,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-biovores-profile-spore-mine-launcher-ranged",
@@ -2881,6 +2958,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-genestealers-profile-genestealer-claws-and-talons-melee",
@@ -2985,6 +3063,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-hive-guard-profile-shockcannon-ranged",
@@ -3116,6 +3195,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-lictor-profile-lictor-claws-and-talons-melee",
@@ -3214,6 +3294,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-neurogaunts-profile-chitinous-claws-and-teeth-melee",
@@ -3320,6 +3401,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-neurolictor-profile-piercing-claws-and-talons-melee",
@@ -3417,6 +3499,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-pyrovores-profile-flamespurt-ranged",
@@ -3528,6 +3611,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-raveners-profile-ravener-claws-and-talons-melee",
@@ -3639,6 +3723,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-tyranid-warriors-with-melee-bio-weapons-profile-tyranid-warrior-claws-and-talons-melee",
@@ -3809,6 +3894,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-tyranid-warriors-with-ranged-bio-weapons-profile-deathspitter-ranged",
@@ -4014,6 +4100,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-tyrant-guard-profile-scything-talons-and-rending-claws-melee",
@@ -4129,6 +4216,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-venomthropes-profile-toxic-lashes-melee",
@@ -4222,6 +4310,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-von-ryans-leapers-profile-leapers-talons-melee",
@@ -4352,6 +4441,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-zoanthropes-profile-warp-blast-focused-witchfire-ranged-3"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-zoanthropes-weapon-family-warp-blast-selection",
+            "title": "➤ Warp blast",
+            "aliases": [
+              "➤ Warp blast"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-zoanthropes-weapon-family-warp-blast",
+            "profileIds": [
+              "unit-zoanthropes-profile-warp-blast-witchfire-ranged-2",
+              "unit-zoanthropes-profile-warp-blast-focused-witchfire-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-zoanthropes-weapon-family-warp-blast",
+            "title": "➤ Warp blast",
+            "aliases": [
+              "➤ Warp blast"
+            ],
+            "profileIds": [
+              "unit-zoanthropes-profile-warp-blast-witchfire-ranged-2",
+              "unit-zoanthropes-profile-warp-blast-focused-witchfire-ranged-3"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -4382,7 +4499,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D3",
             "abilities": "Blast, Psychic",
             "sourceSelectionIds": [
-              "unit-zoanthropes-selection-warp-blast-witchfire"
+              "unit-zoanthropes-selection-warp-blast-witchfire",
+              "unit-zoanthropes-weapon-family-warp-blast-selection"
             ]
           },
           {
@@ -4397,7 +4515,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D6+1",
             "abilities": "Lethal Hits, Psychic",
             "sourceSelectionIds": [
-              "unit-zoanthropes-selection-warp-blast-focused-witchfire"
+              "unit-zoanthropes-selection-warp-blast-focused-witchfire",
+              "unit-zoanthropes-weapon-family-warp-blast-selection"
             ]
           }
         ],
@@ -4586,6 +4705,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-carnifexes-profile-chitinous-claws-and-teeth-melee",
@@ -4821,6 +4941,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-exocrine-profile-bio-plasmic-cannon-ranged",
@@ -4963,6 +5084,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-harpy-profile-twin-stranglethorn-cannon-ranged",
@@ -5121,6 +5243,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-haruspex-profile-grasping-tongue-ranged",
@@ -5290,6 +5413,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-hive-crone-profile-drool-cannon-ranged",
@@ -5466,6 +5590,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-maleceptor-profile-psychic-overload-ranged-3"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-maleceptor-weapon-family-massive-scything-talons-selection",
+            "title": "➤ Massive scything talons",
+            "aliases": [
+              "➤ Massive scything talons"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-maleceptor-weapon-family-massive-scything-talons",
+            "profileIds": [
+              "unit-maleceptor-profile-massive-scything-talons-strike-melee",
+              "unit-maleceptor-profile-massive-scything-talons-sweep-melee-2"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-maleceptor-weapon-family-massive-scything-talons",
+            "title": "➤ Massive scything talons",
+            "aliases": [
+              "➤ Massive scything talons"
+            ],
+            "profileIds": [
+              "unit-maleceptor-profile-massive-scything-talons-strike-melee",
+              "unit-maleceptor-profile-massive-scything-talons-sweep-melee-2"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -5481,7 +5633,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D6+1",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-maleceptor-selection-massive-scything-talons-strike"
+              "unit-maleceptor-selection-massive-scything-talons-strike",
+              "unit-maleceptor-weapon-family-massive-scything-talons-selection"
             ]
           },
           {
@@ -5496,7 +5649,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-maleceptor-selection-massive-scything-talons-sweep"
+              "unit-maleceptor-selection-massive-scything-talons-sweep",
+              "unit-maleceptor-weapon-family-massive-scything-talons-selection"
             ]
           },
           {
@@ -5599,6 +5753,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-mawloc-profile-distensible-jaw-melee",
@@ -5725,6 +5880,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-norn-assimilator-profile-monstrous-scything-talons-melee",
@@ -5899,6 +6055,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-norn-emissary-profile-psychic-tendril-neuroblast-ranged-5"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-norn-emissary-weapon-family-psychic-tendril-selection",
+            "title": "➤ Psychic tendril",
+            "aliases": [
+              "➤ Psychic tendril"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-norn-emissary-weapon-family-psychic-tendril",
+            "profileIds": [
+              "unit-norn-emissary-profile-psychic-tendril-neuroparasite-ranged-3",
+              "unit-norn-emissary-profile-psychic-tendril-neurolance-ranged-4",
+              "unit-norn-emissary-profile-psychic-tendril-neuroblast-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-norn-emissary-weapon-family-psychic-tendril",
+            "title": "➤ Psychic tendril",
+            "aliases": [
+              "➤ Psychic tendril"
+            ],
+            "profileIds": [
+              "unit-norn-emissary-profile-psychic-tendril-neuroparasite-ranged-3",
+              "unit-norn-emissary-profile-psychic-tendril-neurolance-ranged-4",
+              "unit-norn-emissary-profile-psychic-tendril-neuroblast-ranged-5"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -5944,7 +6130,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D3",
             "abilities": "Precision, Psychic",
             "sourceSelectionIds": [
-              "unit-norn-emissary-selection-psychic-tendril-neuroparasite"
+              "unit-norn-emissary-selection-psychic-tendril-neuroparasite",
+              "unit-norn-emissary-weapon-family-psychic-tendril-selection"
             ]
           },
           {
@@ -5959,7 +6146,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D6",
             "abilities": "Melta 2, Psychic",
             "sourceSelectionIds": [
-              "unit-norn-emissary-selection-psychic-tendril-neurolance"
+              "unit-norn-emissary-selection-psychic-tendril-neurolance",
+              "unit-norn-emissary-weapon-family-psychic-tendril-selection"
             ]
           },
           {
@@ -5974,7 +6162,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Blast, Psychic",
             "sourceSelectionIds": [
-              "unit-norn-emissary-selection-psychic-tendril-neuroblast"
+              "unit-norn-emissary-selection-psychic-tendril-neuroblast",
+              "unit-norn-emissary-weapon-family-psychic-tendril-selection"
             ]
           }
         ],
@@ -6067,6 +6256,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-psychophage-profile-talons-and-betentacled-maw-melee",
@@ -6178,6 +6368,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-screamer-killer-profile-bio-plasmic-scream-ranged",
@@ -6293,6 +6484,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-sporocyst-profile-flensing-whips-melee",
@@ -6402,6 +6594,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-toxicrene-profile-massive-toxic-lashes-melee",
@@ -6518,6 +6711,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-trygon-profile-trygon-scything-talons-melee",
@@ -6670,6 +6864,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-tyrannofex-profile-powerful-limbs-melee",
@@ -6806,6 +7001,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           }
         ],
         "selections": [],
+        "weaponFamilies": [],
         "weaponProfiles": [],
         "wargearAbilities": []
       }
@@ -6887,6 +7083,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-ripper-swarms-profile-spinemaws-ranged",
@@ -6978,6 +7175,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
           }
         ],
         "selections": [],
+        "weaponFamilies": [],
         "weaponProfiles": [],
         "wargearAbilities": []
       }

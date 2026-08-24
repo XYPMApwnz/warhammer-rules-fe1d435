@@ -205,6 +205,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           },
           {
+            "id": "unit-skitarii-rangers-weapon-family-plasma-caliver-selection",
+            "title": "➤ Plasma caliver",
+            "aliases": [
+              "➤ Plasma caliver"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-skitarii-rangers-weapon-family-plasma-caliver",
+            "profileIds": [
+              "unit-skitarii-rangers-profile-plasma-caliver-supercharge-ranged-7",
+              "unit-skitarii-rangers-profile-plasma-caliver-standard-ranged-8"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
             "id": "unit-skitarii-rangers-selection-enhanced-data-tether",
             "title": "Enhanced data-tether",
             "aliases": [
@@ -229,6 +243,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "candidateWargearAbilityIds": [
               "unit-skitarii-rangers-wargear-ability-omnispex-2"
             ]
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-skitarii-rangers-weapon-family-plasma-caliver",
+            "title": "➤ Plasma caliver",
+            "aliases": [
+              "➤ Plasma caliver"
+            ],
+            "profileIds": [
+              "unit-skitarii-rangers-profile-plasma-caliver-supercharge-ranged-7",
+              "unit-skitarii-rangers-profile-plasma-caliver-standard-ranged-8"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -334,7 +362,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Hazardous",
             "sourceSelectionIds": [
-              "unit-skitarii-rangers-selection-plasma-caliver-supercharge"
+              "unit-skitarii-rangers-selection-plasma-caliver-supercharge",
+              "unit-skitarii-rangers-weapon-family-plasma-caliver-selection"
             ]
           },
           {
@@ -349,7 +378,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-skitarii-rangers-selection-plasma-caliver-standard"
+              "unit-skitarii-rangers-selection-plasma-caliver-standard",
+              "unit-skitarii-rangers-weapon-family-plasma-caliver-selection"
             ]
           }
         ],
@@ -560,6 +590,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           },
           {
+            "id": "unit-skitarii-vanguard-weapon-family-plasma-caliver-selection",
+            "title": "➤ Plasma caliver",
+            "aliases": [
+              "➤ Plasma caliver"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-skitarii-vanguard-weapon-family-plasma-caliver",
+            "profileIds": [
+              "unit-skitarii-vanguard-profile-plasma-caliver-supercharge-ranged-7",
+              "unit-skitarii-vanguard-profile-plasma-caliver-standard-ranged-8"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
             "id": "unit-skitarii-vanguard-selection-enhanced-data-tether",
             "title": "Enhanced data-tether",
             "aliases": [
@@ -584,6 +628,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "candidateWargearAbilityIds": [
               "unit-skitarii-vanguard-wargear-ability-omnispex-2"
             ]
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-skitarii-vanguard-weapon-family-plasma-caliver",
+            "title": "➤ Plasma caliver",
+            "aliases": [
+              "➤ Plasma caliver"
+            ],
+            "profileIds": [
+              "unit-skitarii-vanguard-profile-plasma-caliver-supercharge-ranged-7",
+              "unit-skitarii-vanguard-profile-plasma-caliver-standard-ranged-8"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -689,7 +747,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Hazardous",
             "sourceSelectionIds": [
-              "unit-skitarii-vanguard-selection-plasma-caliver-supercharge"
+              "unit-skitarii-vanguard-selection-plasma-caliver-supercharge",
+              "unit-skitarii-vanguard-weapon-family-plasma-caliver-selection"
             ]
           },
           {
@@ -704,7 +763,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-skitarii-vanguard-selection-plasma-caliver-standard"
+              "unit-skitarii-vanguard-selection-plasma-caliver-standard",
+              "unit-skitarii-vanguard-weapon-family-plasma-caliver-selection"
             ]
           }
         ],
@@ -826,6 +886,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-cybernetica-datasmith-profile-power-fist-melee",
@@ -980,6 +1041,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-skitarii-marshal-profile-control-stave-melee",
@@ -1129,6 +1191,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-sydonian-skatros-profile-sydonian-feet-melee",
@@ -1400,6 +1463,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-tech-priest-dominus-profile-volkite-blaster-ranged-6"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-tech-priest-dominus-weapon-family-eradication-ray-selection",
+            "title": "➤ Eradication ray",
+            "aliases": [
+              "➤ Eradication ray"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-tech-priest-dominus-weapon-family-eradication-ray",
+            "profileIds": [
+              "unit-tech-priest-dominus-profile-eradication-ray-dissipated-ranged-4",
+              "unit-tech-priest-dominus-profile-eradication-ray-focused-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-tech-priest-dominus-weapon-family-eradication-ray",
+            "title": "➤ Eradication ray",
+            "aliases": [
+              "➤ Eradication ray"
+            ],
+            "profileIds": [
+              "unit-tech-priest-dominus-profile-eradication-ray-dissipated-ranged-4",
+              "unit-tech-priest-dominus-profile-eradication-ray-focused-ranged-5"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -1460,7 +1551,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-tech-priest-dominus-selection-eradication-ray-dissipated"
+              "unit-tech-priest-dominus-selection-eradication-ray-dissipated",
+              "unit-tech-priest-dominus-weapon-family-eradication-ray-selection"
             ]
           },
           {
@@ -1475,7 +1567,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-tech-priest-dominus-selection-eradication-ray-focused"
+              "unit-tech-priest-dominus-selection-eradication-ray-focused",
+              "unit-tech-priest-dominus-weapon-family-eradication-ray-selection"
             ]
           },
           {
@@ -1673,6 +1766,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-tech-priest-enginseer-profile-servo-arm-melee",
@@ -1895,6 +1989,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-tech-priest-manipulus-profile-omnissian-staff-melee",
@@ -2105,6 +2200,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-technoarcheologist-profile-servo-arc-claw-melee",
@@ -2228,6 +2324,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-skorpius-dunerider-profile-armoured-hull-melee",
@@ -2379,6 +2476,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-belisarius-cawl-profile-arc-scourge-melee",
@@ -2554,6 +2652,60 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-thulia-ghuld-profile-rod-of-the-war-forge-sweep-melee-4"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-thulia-ghuld-weapon-family-jericho-class-conversion-resonator-selection",
+            "title": "Jericho-class conversion resonator",
+            "aliases": [
+              "Jericho-class conversion resonator"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-thulia-ghuld-weapon-family-jericho-class-conversion-resonator",
+            "profileIds": [
+              "unit-thulia-ghuld-profile-jericho-class-conversion-resonator-titanic-impact-ranged",
+              "unit-thulia-ghuld-profile-jericho-class-conversion-resonator-shockwave-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-thulia-ghuld-weapon-family-rod-of-the-war-forge-selection",
+            "title": "Rod of the War Forge",
+            "aliases": [
+              "Rod of the War Forge"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-thulia-ghuld-weapon-family-rod-of-the-war-forge",
+            "profileIds": [
+              "unit-thulia-ghuld-profile-rod-of-the-war-forge-strike-melee-3",
+              "unit-thulia-ghuld-profile-rod-of-the-war-forge-sweep-melee-4"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-thulia-ghuld-weapon-family-jericho-class-conversion-resonator",
+            "title": "Jericho-class conversion resonator",
+            "aliases": [
+              "Jericho-class conversion resonator"
+            ],
+            "profileIds": [
+              "unit-thulia-ghuld-profile-jericho-class-conversion-resonator-titanic-impact-ranged",
+              "unit-thulia-ghuld-profile-jericho-class-conversion-resonator-shockwave-ranged-2"
+            ],
+            "ambiguousAlias": false
+          },
+          {
+            "id": "unit-thulia-ghuld-weapon-family-rod-of-the-war-forge",
+            "title": "Rod of the War Forge",
+            "aliases": [
+              "Rod of the War Forge"
+            ],
+            "profileIds": [
+              "unit-thulia-ghuld-profile-rod-of-the-war-forge-strike-melee-3",
+              "unit-thulia-ghuld-profile-rod-of-the-war-forge-sweep-melee-4"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -2569,7 +2721,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D6+2",
             "abilities": "Devastating Wounds",
             "sourceSelectionIds": [
-              "unit-thulia-ghuld-selection-jericho-class-conversion-resonator-titanic-impact"
+              "unit-thulia-ghuld-selection-jericho-class-conversion-resonator-titanic-impact",
+              "unit-thulia-ghuld-weapon-family-jericho-class-conversion-resonator-selection"
             ]
           },
           {
@@ -2584,7 +2737,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Blast, Sustained Hits 1",
             "sourceSelectionIds": [
-              "unit-thulia-ghuld-selection-jericho-class-conversion-resonator-shockwave"
+              "unit-thulia-ghuld-selection-jericho-class-conversion-resonator-shockwave",
+              "unit-thulia-ghuld-weapon-family-jericho-class-conversion-resonator-selection"
             ]
           },
           {
@@ -2599,7 +2753,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "3",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-thulia-ghuld-selection-rod-of-the-war-forge-strike"
+              "unit-thulia-ghuld-selection-rod-of-the-war-forge-strike",
+              "unit-thulia-ghuld-weapon-family-rod-of-the-war-forge-selection"
             ]
           },
           {
@@ -2614,7 +2769,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-thulia-ghuld-selection-rod-of-the-war-forge-sweep"
+              "unit-thulia-ghuld-selection-rod-of-the-war-forge-sweep",
+              "unit-thulia-ghuld-weapon-family-rod-of-the-war-forge-selection"
             ]
           }
         ],
@@ -2723,6 +2879,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-corpuscarii-electro-priests-profile-electrostatic-gauntlets-ranged",
@@ -2859,6 +3016,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-fulgurite-electro-priests-profile-electroleech-stave-melee",
@@ -3030,6 +3188,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-hastarii-exterminators-profile-power-weapon-melee-5"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-hastarii-exterminators-weapon-family-eradication-caster-selection",
+            "title": "Eradication caster",
+            "aliases": [
+              "Eradication caster"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-hastarii-exterminators-weapon-family-eradication-caster",
+            "profileIds": [
+              "unit-hastarii-exterminators-profile-eradication-caster-dissipated-ranged-2",
+              "unit-hastarii-exterminators-profile-eradication-caster-focused-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-hastarii-exterminators-weapon-family-eradication-caster",
+            "title": "Eradication caster",
+            "aliases": [
+              "Eradication caster"
+            ],
+            "profileIds": [
+              "unit-hastarii-exterminators-profile-eradication-caster-dissipated-ranged-2",
+              "unit-hastarii-exterminators-profile-eradication-caster-focused-ranged-3"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -3060,7 +3246,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Anti-Infantry 4+",
             "sourceSelectionIds": [
-              "unit-hastarii-exterminators-selection-eradication-caster-dissipated"
+              "unit-hastarii-exterminators-selection-eradication-caster-dissipated",
+              "unit-hastarii-exterminators-weapon-family-eradication-caster-selection"
             ]
           },
           {
@@ -3075,7 +3262,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Anti-Infantry 4+",
             "sourceSelectionIds": [
-              "unit-hastarii-exterminators-selection-eradication-caster-focused"
+              "unit-hastarii-exterminators-selection-eradication-caster-focused",
+              "unit-hastarii-exterminators-weapon-family-eradication-caster-selection"
             ]
           },
           {
@@ -3253,6 +3441,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-hastarii-fusiliers-profile-neutron-fusil-ranged",
@@ -3451,6 +3640,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-kataphron-breachers-profile-arc-claw-melee",
@@ -3671,6 +3861,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-kataphron-destroyers-profile-kataphron-plasma-culverin-supercharge-ranged-6"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-kataphron-destroyers-weapon-family-kataphron-plasma-culverin-selection",
+            "title": "➤ Kataphron plasma culverin",
+            "aliases": [
+              "➤ Kataphron plasma culverin"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-kataphron-destroyers-weapon-family-kataphron-plasma-culverin",
+            "profileIds": [
+              "unit-kataphron-destroyers-profile-kataphron-plasma-culverin-standard-ranged-5",
+              "unit-kataphron-destroyers-profile-kataphron-plasma-culverin-supercharge-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-kataphron-destroyers-weapon-family-kataphron-plasma-culverin",
+            "title": "➤ Kataphron plasma culverin",
+            "aliases": [
+              "➤ Kataphron plasma culverin"
+            ],
+            "profileIds": [
+              "unit-kataphron-destroyers-profile-kataphron-plasma-culverin-standard-ranged-5",
+              "unit-kataphron-destroyers-profile-kataphron-plasma-culverin-supercharge-ranged-6"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -3746,7 +3964,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-kataphron-destroyers-selection-kataphron-plasma-culverin-standard"
+              "unit-kataphron-destroyers-selection-kataphron-plasma-culverin-standard",
+              "unit-kataphron-destroyers-weapon-family-kataphron-plasma-culverin-selection"
             ]
           },
           {
@@ -3761,7 +3980,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Hazardous",
             "sourceSelectionIds": [
-              "unit-kataphron-destroyers-selection-kataphron-plasma-culverin-supercharge"
+              "unit-kataphron-destroyers-selection-kataphron-plasma-culverin-supercharge",
+              "unit-kataphron-destroyers-weapon-family-kataphron-plasma-culverin-selection"
             ]
           }
         ],
@@ -3872,6 +4092,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-pteraxii-skystalkers-profile-flechette-blaster-ranged",
@@ -4040,6 +4261,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-pteraxii-sterylizors-profile-flechette-blaster-ranged",
@@ -4286,6 +4508,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-servitor-battleclade-profile-heavy-arc-rifle-ranged",
@@ -4516,6 +4739,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-sicarian-infiltrators-profile-power-weapon-melee",
@@ -4670,6 +4894,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-sicarian-ruststalkers-profile-transonic-razor-chordclaw-melee",
@@ -4825,6 +5050,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-serberys-raiders-profile-galvanic-carbine-ranged",
@@ -5005,6 +5231,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-serberys-sulphurhounds-profile-cavalry-arc-maul-melee",
@@ -5204,6 +5431,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-archaeopter-fusilave-profile-armoured-hull-melee",
@@ -5378,6 +5606,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-archaeopter-stratoraptor-profile-cognis-heavy-stubber-ranged",
@@ -5566,6 +5795,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-archaeopter-transvector-profile-armoured-hull-melee",
@@ -5710,6 +5940,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-ironstrider-ballistarii-profile-twin-cognis-autocannon-ranged",
@@ -5917,6 +6148,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-kastelan-robots-profile-close-combat-weapon-melee",
@@ -6185,6 +6417,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           },
           {
+            "id": "unit-onager-dunecrawler-weapon-family-eradication-beamer-selection",
+            "title": "➤ Eradication beamer",
+            "aliases": [
+              "➤ Eradication beamer"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-onager-dunecrawler-weapon-family-eradication-beamer",
+            "profileIds": [
+              "unit-onager-dunecrawler-profile-eradication-beamer-dissipated-ranged-3",
+              "unit-onager-dunecrawler-profile-eradication-beamer-focused-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
             "id": "unit-onager-dunecrawler-selection-broad-spectrum-data-tether",
             "title": "Broad spectrum data-tether",
             "aliases": [
@@ -6196,6 +6442,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "candidateWargearAbilityIds": [
               "unit-onager-dunecrawler-wargear-ability-broad-spectrum-data-tether"
             ]
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-onager-dunecrawler-weapon-family-eradication-beamer",
+            "title": "➤ Eradication beamer",
+            "aliases": [
+              "➤ Eradication beamer"
+            ],
+            "profileIds": [
+              "unit-onager-dunecrawler-profile-eradication-beamer-dissipated-ranged-3",
+              "unit-onager-dunecrawler-profile-eradication-beamer-focused-ranged-4"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -6241,7 +6501,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Blast, Sustained Hits 1",
             "sourceSelectionIds": [
-              "unit-onager-dunecrawler-selection-eradication-beamer-dissipated"
+              "unit-onager-dunecrawler-selection-eradication-beamer-dissipated",
+              "unit-onager-dunecrawler-weapon-family-eradication-beamer-selection"
             ]
           },
           {
@@ -6256,7 +6517,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "3",
             "abilities": "Blast, Sustained Hits 1",
             "sourceSelectionIds": [
-              "unit-onager-dunecrawler-selection-eradication-beamer-focused"
+              "unit-onager-dunecrawler-selection-eradication-beamer-focused",
+              "unit-onager-dunecrawler-weapon-family-eradication-beamer-selection"
             ]
           },
           {
@@ -6451,6 +6713,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-skorpius-disintegrator-profile-cognis-heavy-stubber-ranged",
@@ -6630,6 +6893,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-sydonian-dragoons-with-radium-jezzails-profile-phosphor-serpenta-ranged",
@@ -6767,6 +7031,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-sydonian-dragoons-with-taser-lances-profile-phosphor-serpenta-ranged",

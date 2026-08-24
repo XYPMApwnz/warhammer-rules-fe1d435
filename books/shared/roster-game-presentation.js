@@ -71,18 +71,18 @@
     const head=[...card.children].find(node=>node.matches?.('.unit-head,.unit-header'));(head||card.firstElementChild)?.after(summary);
   }
   function filterWeapons(card,gameUnit){
-    const loadout=gameUnit.selection.loadout,inputs=list(loadout.weapons),selected=unique(loadout.selectedProfileIds),rows=[...card.querySelectorAll('.weapon-row:not(.weapon-head)')];
-    const idFor=row=>row.dataset.rosterProfileId||row.id||'',complete=inputs.length>0&&inputs.every(item=>item.state==='resolved')&&selected.length>0&&selected.every(id=>rows.filter(row=>idFor(row)===id).length===1);
-    if(!complete){card.dataset.rosterGameWeapons='fallback';if(inputs.some(item=>item.state!=='resolved')){const profile=partEnding(card,'-profile');profile?.append(element('p','roster-game-fallback','Selected loadout is unresolved; all canonical weapon profiles remain visible.'));}return;}
+    const loadout=gameUnit.selection.loadout,resolution=loadout.weaponResolution||{},selected=unique(loadout.selectedProfileIds),rows=[...card.querySelectorAll('.weapon-row:not(.weapon-head)')];
+    const idFor=row=>row.dataset.rosterProfileId||row.id||'',complete=resolution.state==='resolved'&&selected.length>0&&selected.every(id=>rows.filter(row=>idFor(row)===id).length===1);
+    if(!complete){card.dataset.rosterGameWeapons='fallback';if(['partial','unresolved'].includes(resolution.state)){const profile=partEnding(card,'-profile');profile?.append(element('p','roster-game-fallback','Selected loadout is unresolved; all canonical weapon profiles remain visible.'));}return;}
     const visible=new Set(selected);for(const row of rows)row.hidden=!visible.has(idFor(row));
     for(const group of card.querySelectorAll('.weapon-group'))group.hidden=![...group.querySelectorAll('.weapon-row:not(.weapon-head)')].some(row=>!row.hidden);
     card.dataset.rosterGameWeapons='filtered';
   }
   function filterWargearAbilities(card,gameUnit){
     const section=partEnding(card,'-wargear-abilities');if(!section)return;
-    const loadout=gameUnit.selection.loadout,inputs=list(loadout.wargear),selected=unique(loadout.selectedWargearAbilityIds),articles=[...section.querySelectorAll('.ability')],idFor=article=>article.dataset.rosterWargearAbilityId||article.id||'';
-    const complete=inputs.length>0&&inputs.every(item=>item.state==='resolved')&&selected.every(id=>articles.filter(article=>idFor(article)===id).length===1)&&articles.every(article=>Boolean(idFor(article)));
-    if(!complete){section.dataset.rosterGameAbilities='fallback';if(inputs.some(item=>item.state!=='resolved'))section.append(element('p','roster-game-fallback','Wargear Ability linkage is unresolved; canonical abilities remain visible.'));return;}
+    const loadout=gameUnit.selection.loadout,resolution=loadout.wargearResolution||{},selected=unique(loadout.selectedWargearAbilityIds),articles=[...section.querySelectorAll('.ability')],idFor=article=>article.dataset.rosterWargearAbilityId||article.id||'';
+    const complete=resolution.state==='resolved'&&selected.every(id=>articles.filter(article=>idFor(article)===id).length===1)&&articles.every(article=>Boolean(idFor(article)));
+    if(!complete){section.dataset.rosterGameAbilities='fallback';if(['partial','unresolved'].includes(resolution.state))section.append(element('p','roster-game-fallback','Wargear Ability linkage is unresolved; canonical abilities remain visible.'));return;}
     const visible=new Set(selected);for(const article of articles)article.hidden=!visible.has(idFor(article));section.hidden=!articles.some(article=>!article.hidden);section.dataset.rosterGameAbilities='filtered';
   }
   function transformComposition(card,gameUnit){

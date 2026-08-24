@@ -200,6 +200,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-breacher-team-profile-pulse-pistol-ranged",
@@ -515,6 +516,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-strike-team-profile-pulse-carbine-ranged",
@@ -804,6 +806,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-cadre-fireblade-profile-fireblade-pulse-rifle-ranged",
@@ -1108,6 +1111,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           },
           {
+            "id": "unit-commander-in-coldstar-battlesuit-weapon-family-cyclic-ion-blaster-selection",
+            "title": "➤ Cyclic ion blaster",
+            "aliases": [
+              "➤ Cyclic ion blaster"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-commander-in-coldstar-battlesuit-weapon-family-cyclic-ion-blaster",
+            "profileIds": [
+              "unit-commander-in-coldstar-battlesuit-profile-cyclic-ion-blaster-standard-ranged-5",
+              "unit-commander-in-coldstar-battlesuit-profile-cyclic-ion-blaster-overcharge-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
             "id": "unit-commander-in-coldstar-battlesuit-selection-battlesuit-support-system",
             "title": "Battlesuit Support System",
             "aliases": [
@@ -1186,6 +1203,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [
+          {
+            "id": "unit-commander-in-coldstar-battlesuit-weapon-family-cyclic-ion-blaster",
+            "title": "➤ Cyclic ion blaster",
+            "aliases": [
+              "➤ Cyclic ion blaster"
+            ],
+            "profileIds": [
+              "unit-commander-in-coldstar-battlesuit-profile-cyclic-ion-blaster-standard-ranged-5",
+              "unit-commander-in-coldstar-battlesuit-profile-cyclic-ion-blaster-overcharge-ranged-6"
+            ],
+            "ambiguousAlias": false
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-commander-in-coldstar-battlesuit-profile-high-output-burst-cannon-ranged",
@@ -1259,7 +1290,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-commander-in-coldstar-battlesuit-selection-cyclic-ion-blaster-standard"
+              "unit-commander-in-coldstar-battlesuit-selection-cyclic-ion-blaster-standard",
+              "unit-commander-in-coldstar-battlesuit-weapon-family-cyclic-ion-blaster-selection"
             ]
           },
           {
@@ -1274,7 +1306,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Hazardous",
             "sourceSelectionIds": [
-              "unit-commander-in-coldstar-battlesuit-selection-cyclic-ion-blaster-overcharge"
+              "unit-commander-in-coldstar-battlesuit-selection-cyclic-ion-blaster-overcharge",
+              "unit-commander-in-coldstar-battlesuit-weapon-family-cyclic-ion-blaster-selection"
             ]
           },
           {
@@ -1609,6 +1642,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           },
           {
+            "id": "unit-commander-in-enforcer-battlesuit-weapon-family-cyclic-ion-blaster-selection",
+            "title": "➤ Cyclic ion blaster",
+            "aliases": [
+              "➤ Cyclic ion blaster"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-commander-in-enforcer-battlesuit-weapon-family-cyclic-ion-blaster",
+            "profileIds": [
+              "unit-commander-in-enforcer-battlesuit-profile-cyclic-ion-blaster-standard-ranged-4",
+              "unit-commander-in-enforcer-battlesuit-profile-cyclic-ion-blaster-overcharge-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
             "id": "unit-commander-in-enforcer-battlesuit-selection-battlesuit-support-system",
             "title": "Battlesuit Support System",
             "aliases": [
@@ -1687,6 +1734,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [
+          {
+            "id": "unit-commander-in-enforcer-battlesuit-weapon-family-cyclic-ion-blaster",
+            "title": "➤ Cyclic ion blaster",
+            "aliases": [
+              "➤ Cyclic ion blaster"
+            ],
+            "profileIds": [
+              "unit-commander-in-enforcer-battlesuit-profile-cyclic-ion-blaster-standard-ranged-4",
+              "unit-commander-in-enforcer-battlesuit-profile-cyclic-ion-blaster-overcharge-ranged-5"
+            ],
+            "ambiguousAlias": false
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-commander-in-enforcer-battlesuit-profile-missile-pod-ranged",
@@ -1745,7 +1806,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-commander-in-enforcer-battlesuit-selection-cyclic-ion-blaster-standard"
+              "unit-commander-in-enforcer-battlesuit-selection-cyclic-ion-blaster-standard",
+              "unit-commander-in-enforcer-battlesuit-weapon-family-cyclic-ion-blaster-selection"
             ]
           },
           {
@@ -1760,7 +1822,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Hazardous",
             "sourceSelectionIds": [
-              "unit-commander-in-enforcer-battlesuit-selection-cyclic-ion-blaster-overcharge"
+              "unit-commander-in-enforcer-battlesuit-selection-cyclic-ion-blaster-overcharge",
+              "unit-commander-in-enforcer-battlesuit-weapon-family-cyclic-ion-blaster-selection"
             ]
           },
           {
@@ -2055,6 +2118,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-ethereal-profile-honour-stave-melee",
@@ -2224,6 +2288,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-firesight-team-profile-close-combat-weapons-melee",
@@ -2394,6 +2459,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-kroot-flesh-shaper-profile-twin-ritualistic-blades-melee",
@@ -2554,6 +2620,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-kroot-lone-spear-profile-close-combat-weapon-melee",
@@ -2746,6 +2813,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-kroot-trail-shaper-profile-kroot-rifle-ranged",
@@ -2917,6 +2985,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-kroot-war-shaper-profile-bladestave-and-prey-hook-melee",
@@ -3098,6 +3167,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-devilfish-profile-twin-pulse-carbine-ranged",
@@ -3303,6 +3373,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-commander-farsight-profile-dawn-blade-sweep-melee-3"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-commander-farsight-weapon-family-dawn-blade-selection",
+            "title": "➤ Dawn Blade",
+            "aliases": [
+              "➤ Dawn Blade"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-commander-farsight-weapon-family-dawn-blade",
+            "profileIds": [
+              "unit-commander-farsight-profile-dawn-blade-strike-melee-2",
+              "unit-commander-farsight-profile-dawn-blade-sweep-melee-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-commander-farsight-weapon-family-dawn-blade",
+            "title": "➤ Dawn Blade",
+            "aliases": [
+              "➤ Dawn Blade"
+            ],
+            "profileIds": [
+              "unit-commander-farsight-profile-dawn-blade-strike-melee-2",
+              "unit-commander-farsight-profile-dawn-blade-sweep-melee-3"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -3333,7 +3431,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "3",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-commander-farsight-selection-dawn-blade-strike"
+              "unit-commander-farsight-selection-dawn-blade-strike",
+              "unit-commander-farsight-weapon-family-dawn-blade-selection"
             ]
           },
           {
@@ -3348,7 +3447,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-commander-farsight-selection-dawn-blade-sweep"
+              "unit-commander-farsight-selection-dawn-blade-sweep",
+              "unit-commander-farsight-weapon-family-dawn-blade-selection"
             ]
           }
         ],
@@ -3495,6 +3595,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-commander-shadowsun-profile-light-missile-pod-ranged",
@@ -3676,6 +3777,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-darkstrider-profile-shade-ranged",
@@ -3881,6 +3983,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           },
           {
+            "id": "unit-the-twin-lance-weapon-family-ion-scattercannon-selection",
+            "title": "➤ Ion scattercannon",
+            "aliases": [
+              "➤ Ion scattercannon"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-the-twin-lance-weapon-family-ion-scattercannon",
+            "profileIds": [
+              "unit-the-twin-lance-profile-ion-scattercannon-overcharge-ranged-7",
+              "unit-the-twin-lance-profile-ion-scattercannon-standard-ranged-9"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
             "id": "unit-the-twin-lance-selection-mv15-gun-drone",
             "title": "MV15 Gun Drone",
             "aliases": [
@@ -3892,6 +4008,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "candidateWargearAbilityIds": [
               "unit-the-twin-lance-wargear-ability-mv15-gun-drone"
             ]
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-the-twin-lance-weapon-family-ion-scattercannon",
+            "title": "➤ Ion scattercannon",
+            "aliases": [
+              "➤ Ion scattercannon"
+            ],
+            "profileIds": [
+              "unit-the-twin-lance-profile-ion-scattercannon-overcharge-ranged-7",
+              "unit-the-twin-lance-profile-ion-scattercannon-standard-ranged-9"
+            ],
+            "ambiguousAlias": true
           }
         ],
         "weaponProfiles": [
@@ -3997,7 +4127,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "3",
             "abilities": "Hazardous, Rapid Fire 2",
             "sourceSelectionIds": [
-              "unit-the-twin-lance-selection-ion-scattercannon-overcharge"
+              "unit-the-twin-lance-selection-ion-scattercannon-overcharge",
+              "unit-the-twin-lance-weapon-family-ion-scattercannon-selection"
             ]
           },
           {
@@ -4027,7 +4158,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Rapid Fire 2",
             "sourceSelectionIds": [
-              "unit-the-twin-lance-selection-ion-scattercannon-standard"
+              "unit-the-twin-lance-selection-ion-scattercannon-standard",
+              "unit-the-twin-lance-weapon-family-ion-scattercannon-selection"
             ]
           }
         ],
@@ -4194,6 +4326,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-kroot-carnivores-profile-close-combat-weapon-melee",
@@ -4463,6 +4596,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-kroot-farstalkers-profile-ripping-fangs-melee",
@@ -4799,6 +4933,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           },
           {
+            "id": "unit-pathfinder-team-weapon-family-semi-automatic-grenade-launcher-selection",
+            "title": "➤ Semi-automatic grenade launcher",
+            "aliases": [
+              "➤ Semi-automatic grenade launcher"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-pathfinder-team-weapon-family-semi-automatic-grenade-launcher",
+            "profileIds": [
+              "unit-pathfinder-team-profile-semi-automatic-grenade-launcher-emp-ranged-4",
+              "unit-pathfinder-team-profile-semi-automatic-grenade-launcher-fusion-ranged-5"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-pathfinder-team-weapon-family-ion-rifle-selection",
+            "title": "➤ Ion rifle",
+            "aliases": [
+              "➤ Ion rifle"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-pathfinder-team-weapon-family-ion-rifle",
+            "profileIds": [
+              "unit-pathfinder-team-profile-ion-rifle-standard-ranged-6",
+              "unit-pathfinder-team-profile-ion-rifle-overcharge-ranged-7"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
             "id": "unit-pathfinder-team-selection-grav-inhibitor-drone",
             "title": "Grav-inhibitor Drone",
             "aliases": [
@@ -4877,6 +5039,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [
+          {
+            "id": "unit-pathfinder-team-weapon-family-semi-automatic-grenade-launcher",
+            "title": "➤ Semi-automatic grenade launcher",
+            "aliases": [
+              "➤ Semi-automatic grenade launcher"
+            ],
+            "profileIds": [
+              "unit-pathfinder-team-profile-semi-automatic-grenade-launcher-emp-ranged-4",
+              "unit-pathfinder-team-profile-semi-automatic-grenade-launcher-fusion-ranged-5"
+            ],
+            "ambiguousAlias": false
+          },
+          {
+            "id": "unit-pathfinder-team-weapon-family-ion-rifle",
+            "title": "➤ Ion rifle",
+            "aliases": [
+              "➤ Ion rifle"
+            ],
+            "profileIds": [
+              "unit-pathfinder-team-profile-ion-rifle-standard-ranged-6",
+              "unit-pathfinder-team-profile-ion-rifle-overcharge-ranged-7"
+            ],
+            "ambiguousAlias": false
+          }
+        ],
         "weaponProfiles": [
           {
             "id": "unit-pathfinder-team-profile-pulse-carbine-ranged",
@@ -4935,7 +5123,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Anti-Vehicle 4+, Devastating Wounds",
             "sourceSelectionIds": [
-              "unit-pathfinder-team-selection-semi-automatic-grenade-launcher-emp"
+              "unit-pathfinder-team-selection-semi-automatic-grenade-launcher-emp",
+              "unit-pathfinder-team-weapon-family-semi-automatic-grenade-launcher-selection"
             ]
           },
           {
@@ -4950,7 +5139,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "3",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-pathfinder-team-selection-semi-automatic-grenade-launcher-fusion"
+              "unit-pathfinder-team-selection-semi-automatic-grenade-launcher-fusion",
+              "unit-pathfinder-team-weapon-family-semi-automatic-grenade-launcher-selection"
             ]
           },
           {
@@ -4965,7 +5155,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Heavy",
             "sourceSelectionIds": [
-              "unit-pathfinder-team-selection-ion-rifle-standard"
+              "unit-pathfinder-team-selection-ion-rifle-standard",
+              "unit-pathfinder-team-weapon-family-ion-rifle-selection"
             ]
           },
           {
@@ -4980,7 +5171,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Hazardous, Heavy",
             "sourceSelectionIds": [
-              "unit-pathfinder-team-selection-ion-rifle-overcharge"
+              "unit-pathfinder-team-selection-ion-rifle-overcharge",
+              "unit-pathfinder-team-weapon-family-ion-rifle-selection"
             ]
           },
           {
@@ -5273,6 +5465,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-stealth-battlesuits-profile-battlesuit-fists-melee",
@@ -5518,6 +5711,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-vespid-stingwings-profile-stingwing-claws-melee",
@@ -5813,6 +6007,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-broadside-battlesuits-profile-heavy-rail-rifle-ranged",
@@ -6140,6 +6335,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-crisis-fireknife-battlesuits-profile-plasma-rifle-ranged",
@@ -6428,6 +6624,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-crisis-starscythe-battlesuits-profile-burst-cannon-ranged",
@@ -6700,6 +6897,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-crisis-sunforge-battlesuits-profile-twin-pulse-carbine-ranged",
@@ -6941,6 +7139,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           },
           {
+            "id": "unit-ghostkeel-battlesuit-weapon-family-cyclic-ion-raker-selection",
+            "title": "➤ Cyclic ion raker",
+            "aliases": [
+              "➤ Cyclic ion raker"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-ghostkeel-battlesuit-weapon-family-cyclic-ion-raker",
+            "profileIds": [
+              "unit-ghostkeel-battlesuit-profile-cyclic-ion-raker-standard-ranged-6",
+              "unit-ghostkeel-battlesuit-profile-cyclic-ion-raker-overcharge-ranged-7"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
             "id": "unit-ghostkeel-battlesuit-selection-battlesuit-support-system",
             "title": "Battlesuit Support System",
             "aliases": [
@@ -6952,6 +7164,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "candidateWargearAbilityIds": [
               "unit-ghostkeel-battlesuit-wargear-ability-battlesuit-support-system"
             ]
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-ghostkeel-battlesuit-weapon-family-cyclic-ion-raker",
+            "title": "➤ Cyclic ion raker",
+            "aliases": [
+              "➤ Cyclic ion raker"
+            ],
+            "profileIds": [
+              "unit-ghostkeel-battlesuit-profile-cyclic-ion-raker-standard-ranged-6",
+              "unit-ghostkeel-battlesuit-profile-cyclic-ion-raker-overcharge-ranged-7"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -7042,7 +7268,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-ghostkeel-battlesuit-selection-cyclic-ion-raker-standard"
+              "unit-ghostkeel-battlesuit-selection-cyclic-ion-raker-standard",
+              "unit-ghostkeel-battlesuit-weapon-family-cyclic-ion-raker-selection"
             ]
           },
           {
@@ -7057,7 +7284,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "3",
             "abilities": "Hazardous",
             "sourceSelectionIds": [
-              "unit-ghostkeel-battlesuit-selection-cyclic-ion-raker-overcharge"
+              "unit-ghostkeel-battlesuit-selection-cyclic-ion-raker-overcharge",
+              "unit-ghostkeel-battlesuit-weapon-family-cyclic-ion-raker-selection"
             ]
           }
         ],
@@ -7226,6 +7454,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-hammerhead-gunship-profile-armoured-hull-melee-8"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-hammerhead-gunship-weapon-family-ion-cannon-selection",
+            "title": "➤ Ion cannon",
+            "aliases": [
+              "➤ Ion cannon"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-hammerhead-gunship-weapon-family-ion-cannon",
+            "profileIds": [
+              "unit-hammerhead-gunship-profile-ion-cannon-standard-ranged-2",
+              "unit-hammerhead-gunship-profile-ion-cannon-overcharge-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-hammerhead-gunship-weapon-family-ion-cannon",
+            "title": "➤ Ion cannon",
+            "aliases": [
+              "➤ Ion cannon"
+            ],
+            "profileIds": [
+              "unit-hammerhead-gunship-profile-ion-cannon-standard-ranged-2",
+              "unit-hammerhead-gunship-profile-ion-cannon-overcharge-ranged-3"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -7256,7 +7512,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Blast",
             "sourceSelectionIds": [
-              "unit-hammerhead-gunship-selection-ion-cannon-standard"
+              "unit-hammerhead-gunship-selection-ion-cannon-standard",
+              "unit-hammerhead-gunship-weapon-family-ion-cannon-selection"
             ]
           },
           {
@@ -7271,7 +7528,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "3",
             "abilities": "Blast, Hazardous",
             "sourceSelectionIds": [
-              "unit-hammerhead-gunship-selection-ion-cannon-overcharge"
+              "unit-hammerhead-gunship-selection-ion-cannon-overcharge",
+              "unit-hammerhead-gunship-weapon-family-ion-cannon-selection"
             ]
           },
           {
@@ -7425,6 +7683,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-kroot-hounds-profile-ripping-fangs-melee",
@@ -7534,6 +7793,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-krootox-rampagers-profile-hunting-blades-melee",
@@ -7685,6 +7945,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-krootox-riders-profile-krootox-fists-melee",
@@ -7868,6 +8129,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-piranhas-profile-piranha-burst-cannon-ranged",
@@ -8077,6 +8339,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-razorshark-strike-fighter-profile-armoured-hull-melee-6"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-razorshark-strike-fighter-weapon-family-quad-ion-turret-selection",
+            "title": "➤ Quad ion turret",
+            "aliases": [
+              "➤ Quad ion turret"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-razorshark-strike-fighter-weapon-family-quad-ion-turret",
+            "profileIds": [
+              "unit-razorshark-strike-fighter-profile-quad-ion-turret-standard-ranged",
+              "unit-razorshark-strike-fighter-profile-quad-ion-turret-overcharge-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-razorshark-strike-fighter-weapon-family-quad-ion-turret",
+            "title": "➤ Quad ion turret",
+            "aliases": [
+              "➤ Quad ion turret"
+            ],
+            "profileIds": [
+              "unit-razorshark-strike-fighter-profile-quad-ion-turret-standard-ranged",
+              "unit-razorshark-strike-fighter-profile-quad-ion-turret-overcharge-ranged-2"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -8092,7 +8382,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Twin-linked",
             "sourceSelectionIds": [
-              "unit-razorshark-strike-fighter-selection-quad-ion-turret-standard"
+              "unit-razorshark-strike-fighter-selection-quad-ion-turret-standard",
+              "unit-razorshark-strike-fighter-weapon-family-quad-ion-turret-selection"
             ]
           },
           {
@@ -8107,7 +8398,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Hazardous, Twin-linked",
             "sourceSelectionIds": [
-              "unit-razorshark-strike-fighter-selection-quad-ion-turret-overcharge"
+              "unit-razorshark-strike-fighter-selection-quad-ion-turret-overcharge",
+              "unit-razorshark-strike-fighter-weapon-family-quad-ion-turret-selection"
             ]
           },
           {
@@ -8339,6 +8631,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-riptide-battlesuit-profile-twin-plasma-rifle-ranged-8"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-riptide-battlesuit-weapon-family-ion-accelerator-selection",
+            "title": "➤ Ion accelerator",
+            "aliases": [
+              "➤ Ion accelerator"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-riptide-battlesuit-weapon-family-ion-accelerator",
+            "profileIds": [
+              "unit-riptide-battlesuit-profile-ion-accelerator-standard-ranged-3",
+              "unit-riptide-battlesuit-profile-ion-accelerator-supercharge-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-riptide-battlesuit-weapon-family-ion-accelerator",
+            "title": "➤ Ion accelerator",
+            "aliases": [
+              "➤ Ion accelerator"
+            ],
+            "profileIds": [
+              "unit-riptide-battlesuit-profile-ion-accelerator-standard-ranged-3",
+              "unit-riptide-battlesuit-profile-ion-accelerator-supercharge-ranged-4"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -8384,7 +8704,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "3",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-riptide-battlesuit-selection-ion-accelerator-standard"
+              "unit-riptide-battlesuit-selection-ion-accelerator-standard",
+              "unit-riptide-battlesuit-weapon-family-ion-accelerator-selection"
             ]
           },
           {
@@ -8399,7 +8720,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "4",
             "abilities": "Hazardous",
             "sourceSelectionIds": [
-              "unit-riptide-battlesuit-selection-ion-accelerator-supercharge"
+              "unit-riptide-battlesuit-selection-ion-accelerator-supercharge",
+              "unit-riptide-battlesuit-weapon-family-ion-accelerator-selection"
             ]
           },
           {
@@ -8589,6 +8911,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-sky-ray-gunship-profile-seeker-missile-rack-ranged",
@@ -8854,6 +9177,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-stormsurge-profile-twin-tau-flamer-ranged-10"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-stormsurge-weapon-family-pulse-blast-cannon-selection",
+            "title": "➤ Pulse blast cannon",
+            "aliases": [
+              "➤ Pulse blast cannon"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-stormsurge-weapon-family-pulse-blast-cannon",
+            "profileIds": [
+              "unit-stormsurge-profile-pulse-blast-cannon-focused-ranged-6",
+              "unit-stormsurge-profile-pulse-blast-cannon-dispersed-ranged-7"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-stormsurge-weapon-family-pulse-blast-cannon",
+            "title": "➤ Pulse blast cannon",
+            "aliases": [
+              "➤ Pulse blast cannon"
+            ],
+            "profileIds": [
+              "unit-stormsurge-profile-pulse-blast-cannon-focused-ranged-6",
+              "unit-stormsurge-profile-pulse-blast-cannon-dispersed-ranged-7"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -8944,7 +9295,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "12",
             "abilities": "Heavy",
             "sourceSelectionIds": [
-              "unit-stormsurge-selection-pulse-blast-cannon-focused"
+              "unit-stormsurge-selection-pulse-blast-cannon-focused",
+              "unit-stormsurge-weapon-family-pulse-blast-cannon-selection"
             ]
           },
           {
@@ -8959,7 +9311,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "4",
             "abilities": "Heavy",
             "sourceSelectionIds": [
-              "unit-stormsurge-selection-pulse-blast-cannon-dispersed"
+              "unit-stormsurge-selection-pulse-blast-cannon-dispersed",
+              "unit-stormsurge-weapon-family-pulse-blast-cannon-selection"
             ]
           },
           {
@@ -9140,6 +9493,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-sun-shark-bomber-profile-armoured-hull-melee-6"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-sun-shark-bomber-weapon-family-twin-ion-rifle-selection",
+            "title": "➤ Twin ion rifle",
+            "aliases": [
+              "➤ Twin ion rifle"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-sun-shark-bomber-weapon-family-twin-ion-rifle",
+            "profileIds": [
+              "unit-sun-shark-bomber-profile-twin-ion-rifle-standard-ranged",
+              "unit-sun-shark-bomber-profile-twin-ion-rifle-overcharged-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-sun-shark-bomber-weapon-family-twin-ion-rifle",
+            "title": "➤ Twin ion rifle",
+            "aliases": [
+              "➤ Twin ion rifle"
+            ],
+            "profileIds": [
+              "unit-sun-shark-bomber-profile-twin-ion-rifle-standard-ranged",
+              "unit-sun-shark-bomber-profile-twin-ion-rifle-overcharged-ranged-2"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -9155,7 +9536,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Twin-linked",
             "sourceSelectionIds": [
-              "unit-sun-shark-bomber-selection-twin-ion-rifle-standard"
+              "unit-sun-shark-bomber-selection-twin-ion-rifle-standard",
+              "unit-sun-shark-bomber-weapon-family-twin-ion-rifle-selection"
             ]
           },
           {
@@ -9170,7 +9552,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Hazardous, Twin-linked",
             "sourceSelectionIds": [
-              "unit-sun-shark-bomber-selection-twin-ion-rifle-overcharged"
+              "unit-sun-shark-bomber-selection-twin-ion-rifle-overcharged",
+              "unit-sun-shark-bomber-weapon-family-twin-ion-rifle-selection"
             ]
           },
           {
@@ -9313,6 +9696,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-tidewall-droneport-profile-drone-defenders-ranged",
@@ -9405,6 +9789,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-tidewall-gunrig-profile-supremacy-railgun-ranged",
@@ -9498,6 +9883,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [],
         "wargearAbilities": [
           {

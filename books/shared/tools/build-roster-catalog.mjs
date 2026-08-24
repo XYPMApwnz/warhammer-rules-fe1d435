@@ -1,6 +1,7 @@
 const normalize=value=>String(value||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();
 const slug=value=>String(value||'').toLowerCase().replace(/[\u2019']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 const values=value=>Array.isArray(value)?value:[];
+const weaponFamilyTitle=value=>{const match=String(value||'').match(/^(.+?)\s+[\u2013\u2014-]\s+(.+)$/);return match?match[1].trim():'';};
 export const canonicalWeaponProfileId=(unit,profile,index=0)=>profile.id||`${unit.id}-profile-${slug(profile.name)}-${profile.mode||'weapon'}${index?'-'+(index+1):''}`;
 export const canonicalWargearAbilityId=(unit,ability,index=0)=>ability.id||`${unit.id}-wargear-ability-${slug(ability.title)}${index?'-'+(index+1):''}`;
 const relationRecord=record=>({unitId:record?.unitId||record?.id||'',...(Number.isFinite(Number(record?.maxCharacters))?{maxCharacters:Number(record.maxCharacters)}:{}),...(record?.mandatory?{mandatory:true}:{}),...(values(record?.removeKeywords).length?{removeKeywords:[...record.removeKeywords]}:{})});
@@ -19,12 +20,16 @@ const gameSelectionsFor=unit=>{
   const grouped=new Map();
   for(const profile of profileRecords){const key=normalize(profile.title),group=grouped.get(key)||[];group.push(profile);grouped.set(key,group);}
   const selections=[...grouped.values()].map(group=>({id:`${unit.id}-selection-${slug(group[0].title)}`,title:group[0].title,aliases:[group[0].title],kind:'weapon',profileIds:group.map(profile=>profile.id),wargearAbilityIds:[]}));
+  const familyGroups=new Map();
+  for(const profile of profileRecords){const title=weaponFamilyTitle(profile.title);if(!title)continue;const key=normalize(title),group=familyGroups.get(key)||{title,profiles:[]};group.profiles.push(profile);familyGroups.set(key,group);}
+  const weaponFamilies=[...familyGroups.values()].filter(group=>group.profiles.length>1).map(group=>({id:`${unit.id}-weapon-family-${slug(group.title)}`,title:group.title,aliases:[group.title],profileIds:group.profiles.map(profile=>profile.id),ambiguousAlias:grouped.has(normalize(group.title))}));
+  for(const family of weaponFamilies)selections.push({id:`${family.id}-selection`,title:family.title,aliases:[...family.aliases],kind:'weapon',familyId:family.id,profileIds:[...family.profileIds],wargearAbilityIds:[]});
   const wargearAbilities=canonicalWargearAbilities.map((ability,index)=>({id:canonicalWargearAbilityId(unit,ability,index),title:ability.title||'',requiredSelectionIds:values(ability.requiredSelectionIds)}));
   for(const ability of wargearAbilities)if(!ability.requiredSelectionIds.length)selections.push({id:`${unit.id}-selection-${slug(ability.title)}`,title:ability.title,aliases:[ability.title],kind:'wargear',profileIds:[],wargearAbilityIds:[],candidateWargearAbilityIds:[ability.id]});
   const explicitAbilityLinks=new Map(wargearAbilities.flatMap(ability=>ability.requiredSelectionIds.map(id=>[id,ability.id])));
   for(const selection of selections)if(explicitAbilityLinks.has(selection.id))selection.wargearAbilityIds=[explicitAbilityLinks.get(selection.id)];
   const stats=unit.stats&&typeof unit.stats==='object'&&!Array.isArray(unit.stats)?unit.stats:{};
-  return {stats:{...stats},abilities:canonicalAbilities.map((ability,index)=>({id:ability.id||`${unit.id}-ability-${slug(ability.title)}${index?'-'+(index+1):''}`,title:ability.title||''})),models:values(unit.composition).map((model,index)=>({id:model.id||`${unit.id}-model-${slug(model.name)}${index?'-'+(index+1):''}`,title:model.name||'',aliases:[model.name||''].filter(Boolean)})),selections,weaponProfiles:profileRecords.map(profile=>({...profile,sourceSelectionIds:selections.filter(selection=>selection.profileIds.includes(profile.id)).map(selection=>selection.id)})),wargearAbilities};
+  return {stats:{...stats},abilities:canonicalAbilities.map((ability,index)=>({id:ability.id||`${unit.id}-ability-${slug(ability.title)}${index?'-'+(index+1):''}`,title:ability.title||''})),models:values(unit.composition).map((model,index)=>({id:model.id||`${unit.id}-model-${slug(model.name)}${index?'-'+(index+1):''}`,title:model.name||'',aliases:[model.name||''].filter(Boolean)})),selections,weaponFamilies,weaponProfiles:profileRecords.map(profile=>({...profile,sourceSelectionIds:selections.filter(selection=>selection.profileIds.includes(profile.id)).map(selection=>selection.id)})),wargearAbilities};
 };
 
 export function createRosterCatalog({config,units=[],detachments=[],relationGraphs=new Map(),legacyEnhancements={},keywordGrants=[]}){

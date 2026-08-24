@@ -109,6 +109,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-daemonettes-profile-slashing-claws-melee",
@@ -292,6 +293,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           },
           {
+            "id": "unit-infractors-weapon-family-plasma-pistol-selection",
+            "title": "➤ Plasma pistol",
+            "aliases": [
+              "➤ Plasma pistol"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-infractors-weapon-family-plasma-pistol",
+            "profileIds": [
+              "unit-infractors-profile-plasma-pistol-standard-ranged-2",
+              "unit-infractors-profile-plasma-pistol-supercharge-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
             "id": "unit-infractors-selection-icon-of-excess",
             "title": "Icon of Excess",
             "aliases": [
@@ -303,6 +318,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "candidateWargearAbilityIds": [
               "unit-infractors-wargear-ability-icon-of-excess"
             ]
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-infractors-weapon-family-plasma-pistol",
+            "title": "➤ Plasma pistol",
+            "aliases": [
+              "➤ Plasma pistol"
+            ],
+            "profileIds": [
+              "unit-infractors-profile-plasma-pistol-standard-ranged-2",
+              "unit-infractors-profile-plasma-pistol-supercharge-ranged-3"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -333,7 +362,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Pistol",
             "sourceSelectionIds": [
-              "unit-infractors-selection-plasma-pistol-standard"
+              "unit-infractors-selection-plasma-pistol-standard",
+              "unit-infractors-weapon-family-plasma-pistol-selection"
             ]
           },
           {
@@ -348,7 +378,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Hazardous, Pistol",
             "sourceSelectionIds": [
-              "unit-infractors-selection-plasma-pistol-supercharge"
+              "unit-infractors-selection-plasma-pistol-supercharge",
+              "unit-infractors-weapon-family-plasma-pistol-selection"
             ]
           },
           {
@@ -606,6 +637,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           },
           {
+            "id": "unit-tormentors-weapon-family-plasma-pistol-selection",
+            "title": "➤ Plasma pistol",
+            "aliases": [
+              "➤ Plasma pistol"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-tormentors-weapon-family-plasma-pistol",
+            "profileIds": [
+              "unit-tormentors-profile-plasma-pistol-standard-ranged-2",
+              "unit-tormentors-profile-plasma-pistol-supercharge-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-tormentors-weapon-family-plasma-gun-selection",
+            "title": "➤ Plasma gun",
+            "aliases": [
+              "➤ Plasma gun"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-tormentors-weapon-family-plasma-gun",
+            "profileIds": [
+              "unit-tormentors-profile-plasma-gun-standard-ranged-8",
+              "unit-tormentors-profile-plasma-gun-supercharge-ranged-9"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
             "id": "unit-tormentors-selection-icon-of-excess",
             "title": "Icon of Excess",
             "aliases": [
@@ -617,6 +676,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "candidateWargearAbilityIds": [
               "unit-tormentors-wargear-ability-icon-of-excess"
             ]
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-tormentors-weapon-family-plasma-pistol",
+            "title": "➤ Plasma pistol",
+            "aliases": [
+              "➤ Plasma pistol"
+            ],
+            "profileIds": [
+              "unit-tormentors-profile-plasma-pistol-standard-ranged-2",
+              "unit-tormentors-profile-plasma-pistol-supercharge-ranged-3"
+            ],
+            "ambiguousAlias": false
+          },
+          {
+            "id": "unit-tormentors-weapon-family-plasma-gun",
+            "title": "➤ Plasma gun",
+            "aliases": [
+              "➤ Plasma gun"
+            ],
+            "profileIds": [
+              "unit-tormentors-profile-plasma-gun-standard-ranged-8",
+              "unit-tormentors-profile-plasma-gun-supercharge-ranged-9"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -647,7 +732,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Pistol",
             "sourceSelectionIds": [
-              "unit-tormentors-selection-plasma-pistol-standard"
+              "unit-tormentors-selection-plasma-pistol-standard",
+              "unit-tormentors-weapon-family-plasma-pistol-selection"
             ]
           },
           {
@@ -662,7 +748,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Hazardous, Pistol",
             "sourceSelectionIds": [
-              "unit-tormentors-selection-plasma-pistol-supercharge"
+              "unit-tormentors-selection-plasma-pistol-supercharge",
+              "unit-tormentors-weapon-family-plasma-pistol-selection"
             ]
           },
           {
@@ -737,7 +824,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Precision, Rapid Fire 1",
             "sourceSelectionIds": [
-              "unit-tormentors-selection-plasma-gun-standard"
+              "unit-tormentors-selection-plasma-gun-standard",
+              "unit-tormentors-weapon-family-plasma-gun-selection"
             ]
           },
           {
@@ -752,7 +840,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Hazardous, Precision, Rapid Fire 1",
             "sourceSelectionIds": [
-              "unit-tormentors-selection-plasma-gun-supercharge"
+              "unit-tormentors-selection-plasma-gun-supercharge",
+              "unit-tormentors-weapon-family-plasma-gun-selection"
             ]
           },
           {
@@ -877,6 +966,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-daemon-prince-of-slaanesh-profile-infernal-cannon-ranged-3"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-daemon-prince-of-slaanesh-weapon-family-hellforged-weapons-selection",
+            "title": "➤ Hellforged weapons",
+            "aliases": [
+              "➤ Hellforged weapons"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-daemon-prince-of-slaanesh-weapon-family-hellforged-weapons",
+            "profileIds": [
+              "unit-daemon-prince-of-slaanesh-profile-hellforged-weapons-strike-melee",
+              "unit-daemon-prince-of-slaanesh-profile-hellforged-weapons-sweep-melee-2"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-daemon-prince-of-slaanesh-weapon-family-hellforged-weapons",
+            "title": "➤ Hellforged weapons",
+            "aliases": [
+              "➤ Hellforged weapons"
+            ],
+            "profileIds": [
+              "unit-daemon-prince-of-slaanesh-profile-hellforged-weapons-strike-melee",
+              "unit-daemon-prince-of-slaanesh-profile-hellforged-weapons-sweep-melee-2"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -892,7 +1009,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "3",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-daemon-prince-of-slaanesh-selection-hellforged-weapons-strike"
+              "unit-daemon-prince-of-slaanesh-selection-hellforged-weapons-strike",
+              "unit-daemon-prince-of-slaanesh-weapon-family-hellforged-weapons-selection"
             ]
           },
           {
@@ -907,7 +1025,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-daemon-prince-of-slaanesh-selection-hellforged-weapons-sweep"
+              "unit-daemon-prince-of-slaanesh-selection-hellforged-weapons-sweep",
+              "unit-daemon-prince-of-slaanesh-weapon-family-hellforged-weapons-selection"
             ]
           },
           {
@@ -1027,6 +1146,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-daemon-prince-of-slaanesh-with-wings-profile-infernal-cannon-ranged-3"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-daemon-prince-of-slaanesh-with-wings-weapon-family-hellforged-weapons-selection",
+            "title": "➤ Hellforged weapons",
+            "aliases": [
+              "➤ Hellforged weapons"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-daemon-prince-of-slaanesh-with-wings-weapon-family-hellforged-weapons",
+            "profileIds": [
+              "unit-daemon-prince-of-slaanesh-with-wings-profile-hellforged-weapons-strike-melee",
+              "unit-daemon-prince-of-slaanesh-with-wings-profile-hellforged-weapons-sweep-melee-2"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-daemon-prince-of-slaanesh-with-wings-weapon-family-hellforged-weapons",
+            "title": "➤ Hellforged weapons",
+            "aliases": [
+              "➤ Hellforged weapons"
+            ],
+            "profileIds": [
+              "unit-daemon-prince-of-slaanesh-with-wings-profile-hellforged-weapons-strike-melee",
+              "unit-daemon-prince-of-slaanesh-with-wings-profile-hellforged-weapons-sweep-melee-2"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -1042,7 +1189,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "3",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-daemon-prince-of-slaanesh-with-wings-selection-hellforged-weapons-strike"
+              "unit-daemon-prince-of-slaanesh-with-wings-selection-hellforged-weapons-strike",
+              "unit-daemon-prince-of-slaanesh-with-wings-weapon-family-hellforged-weapons-selection"
             ]
           },
           {
@@ -1057,7 +1205,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-daemon-prince-of-slaanesh-with-wings-selection-hellforged-weapons-sweep"
+              "unit-daemon-prince-of-slaanesh-with-wings-selection-hellforged-weapons-sweep",
+              "unit-daemon-prince-of-slaanesh-with-wings-weapon-family-hellforged-weapons-selection"
             ]
           },
           {
@@ -1215,6 +1364,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           },
           {
+            "id": "unit-keeper-of-secrets-weapon-family-phantasmagoria-selection",
+            "title": "➤ Phantasmagoria",
+            "aliases": [
+              "➤ Phantasmagoria"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-keeper-of-secrets-weapon-family-phantasmagoria",
+            "profileIds": [
+              "unit-keeper-of-secrets-profile-phantasmagoria-witchfire-ranged",
+              "unit-keeper-of-secrets-profile-phantasmagoria-focused-witchfire-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
             "id": "unit-keeper-of-secrets-selection-shining-aegis",
             "title": "Shining aegis",
             "aliases": [
@@ -1226,6 +1389,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "candidateWargearAbilityIds": [
               "unit-keeper-of-secrets-wargear-ability-shining-aegis"
             ]
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-keeper-of-secrets-weapon-family-phantasmagoria",
+            "title": "➤ Phantasmagoria",
+            "aliases": [
+              "➤ Phantasmagoria"
+            ],
+            "profileIds": [
+              "unit-keeper-of-secrets-profile-phantasmagoria-witchfire-ranged",
+              "unit-keeper-of-secrets-profile-phantasmagoria-focused-witchfire-ranged-2"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -1241,7 +1418,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Devastating Wounds, Psychic",
             "sourceSelectionIds": [
-              "unit-keeper-of-secrets-selection-phantasmagoria-witchfire"
+              "unit-keeper-of-secrets-selection-phantasmagoria-witchfire",
+              "unit-keeper-of-secrets-weapon-family-phantasmagoria-selection"
             ]
           },
           {
@@ -1256,7 +1434,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Devastating Wounds, Hazardous, Psychic",
             "sourceSelectionIds": [
-              "unit-keeper-of-secrets-selection-phantasmagoria-focused-witchfire"
+              "unit-keeper-of-secrets-selection-phantasmagoria-focused-witchfire",
+              "unit-keeper-of-secrets-weapon-family-phantasmagoria-selection"
             ]
           },
           {
@@ -1520,6 +1699,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-lord-exultant-profile-bolt-pistol-ranged-9"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-lord-exultant-weapon-family-plasma-pistol-selection",
+            "title": "➤ Plasma pistol",
+            "aliases": [
+              "➤ Plasma pistol"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-lord-exultant-weapon-family-plasma-pistol",
+            "profileIds": [
+              "unit-lord-exultant-profile-plasma-pistol-standard-ranged-3",
+              "unit-lord-exultant-profile-plasma-pistol-supercharge-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-lord-exultant-weapon-family-plasma-pistol",
+            "title": "➤ Plasma pistol",
+            "aliases": [
+              "➤ Plasma pistol"
+            ],
+            "profileIds": [
+              "unit-lord-exultant-profile-plasma-pistol-standard-ranged-3",
+              "unit-lord-exultant-profile-plasma-pistol-supercharge-ranged-4"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -1565,7 +1772,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Pistol",
             "sourceSelectionIds": [
-              "unit-lord-exultant-selection-plasma-pistol-standard"
+              "unit-lord-exultant-selection-plasma-pistol-standard",
+              "unit-lord-exultant-weapon-family-plasma-pistol-selection"
             ]
           },
           {
@@ -1580,7 +1788,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Hazardous, Pistol",
             "sourceSelectionIds": [
-              "unit-lord-exultant-selection-plasma-pistol-supercharge"
+              "unit-lord-exultant-selection-plasma-pistol-supercharge",
+              "unit-lord-exultant-weapon-family-plasma-pistol-selection"
             ]
           },
           {
@@ -1771,6 +1980,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-lord-kakophonist-profile-power-sword-melee",
@@ -1957,6 +2167,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-sorcerer-profile-bolt-pistol-ranged-4"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-sorcerer-weapon-family-agonising-energies-selection",
+            "title": "Agonising Energies",
+            "aliases": [
+              "Agonising Energies"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-sorcerer-weapon-family-agonising-energies",
+            "profileIds": [
+              "unit-sorcerer-profile-agonising-energies-witchfire-ranged",
+              "unit-sorcerer-profile-agonising-energies-focused-witchfire-ranged-2"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-sorcerer-weapon-family-agonising-energies",
+            "title": "Agonising Energies",
+            "aliases": [
+              "Agonising Energies"
+            ],
+            "profileIds": [
+              "unit-sorcerer-profile-agonising-energies-witchfire-ranged",
+              "unit-sorcerer-profile-agonising-energies-focused-witchfire-ranged-2"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -1972,7 +2210,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D3",
             "abilities": "Psychic",
             "sourceSelectionIds": [
-              "unit-sorcerer-selection-agonising-energies-witchfire"
+              "unit-sorcerer-selection-agonising-energies-witchfire",
+              "unit-sorcerer-weapon-family-agonising-energies-selection"
             ]
           },
           {
@@ -1987,7 +2226,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D3",
             "abilities": "Devastating Wounds, Hazardous, Psychic",
             "sourceSelectionIds": [
-              "unit-sorcerer-selection-agonising-energies-focused-witchfire"
+              "unit-sorcerer-selection-agonising-energies-focused-witchfire",
+              "unit-sorcerer-weapon-family-agonising-energies-selection"
             ]
           },
           {
@@ -2133,6 +2373,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-chaos-rhino-profile-armoured-tracks-melee",
@@ -2323,6 +2564,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-fulgrim-profile-daemonic-blades-sweep-melee-4"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-fulgrim-weapon-family-daemonic-blades-selection",
+            "title": "➤ Daemonic blades",
+            "aliases": [
+              "➤ Daemonic blades"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-fulgrim-weapon-family-daemonic-blades",
+            "profileIds": [
+              "unit-fulgrim-profile-daemonic-blades-strike-melee-3",
+              "unit-fulgrim-profile-daemonic-blades-sweep-melee-4"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-fulgrim-weapon-family-daemonic-blades",
+            "title": "➤ Daemonic blades",
+            "aliases": [
+              "➤ Daemonic blades"
+            ],
+            "profileIds": [
+              "unit-fulgrim-profile-daemonic-blades-strike-melee-3",
+              "unit-fulgrim-profile-daemonic-blades-sweep-melee-4"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -2368,7 +2637,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D6+1",
             "abilities": "Sustained Hits 1",
             "sourceSelectionIds": [
-              "unit-fulgrim-selection-daemonic-blades-strike"
+              "unit-fulgrim-selection-daemonic-blades-strike",
+              "unit-fulgrim-weapon-family-daemonic-blades-selection"
             ]
           },
           {
@@ -2383,7 +2653,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "Sustained Hits 1",
             "sourceSelectionIds": [
-              "unit-fulgrim-selection-daemonic-blades-sweep"
+              "unit-fulgrim-selection-daemonic-blades-sweep",
+              "unit-fulgrim-weapon-family-daemonic-blades-selection"
             ]
           }
         ],
@@ -2495,6 +2766,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-lucius-the-eternal-profile-blade-of-the-laer-melee",
@@ -2653,6 +2925,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-shalaxi-helbane-profile-soulpiercer-melee-5"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-shalaxi-helbane-weapon-family-pavane-of-slaanesh-selection",
+            "title": "➤ Pavane of Slaanesh",
+            "aliases": [
+              "➤ Pavane of Slaanesh"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-shalaxi-helbane-weapon-family-pavane-of-slaanesh",
+            "profileIds": [
+              "unit-shalaxi-helbane-profile-pavane-of-slaanesh-witchfire-ranged-2",
+              "unit-shalaxi-helbane-profile-pavane-of-slaanesh-focused-witchfire-ranged-3"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-shalaxi-helbane-weapon-family-pavane-of-slaanesh",
+            "title": "➤ Pavane of Slaanesh",
+            "aliases": [
+              "➤ Pavane of Slaanesh"
+            ],
+            "profileIds": [
+              "unit-shalaxi-helbane-profile-pavane-of-slaanesh-witchfire-ranged-2",
+              "unit-shalaxi-helbane-profile-pavane-of-slaanesh-focused-witchfire-ranged-3"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -2683,7 +2983,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D3",
             "abilities": "Devastating Wounds, Psychic",
             "sourceSelectionIds": [
-              "unit-shalaxi-helbane-selection-pavane-of-slaanesh-witchfire"
+              "unit-shalaxi-helbane-selection-pavane-of-slaanesh-witchfire",
+              "unit-shalaxi-helbane-weapon-family-pavane-of-slaanesh-selection"
             ]
           },
           {
@@ -2698,7 +2999,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D3",
             "abilities": "Hazardous, Devastating Wounds, Psychic, Sustained Hits 3",
             "sourceSelectionIds": [
-              "unit-shalaxi-helbane-selection-pavane-of-slaanesh-focused-witchfire"
+              "unit-shalaxi-helbane-selection-pavane-of-slaanesh-focused-witchfire",
+              "unit-shalaxi-helbane-weapon-family-pavane-of-slaanesh-selection"
             ]
           },
           {
@@ -2892,6 +3194,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-chaos-terminators-profile-combi-bolter-ranged",
@@ -3105,6 +3408,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-flawless-blades-profile-blissblade-melee",
@@ -3284,6 +3588,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-noise-marines-profile-blastmaster-single-frequency-ranged-6"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-noise-marines-weapon-family-blastmaster-selection",
+            "title": "➤ Blastmaster",
+            "aliases": [
+              "➤ Blastmaster"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-noise-marines-weapon-family-blastmaster",
+            "profileIds": [
+              "unit-noise-marines-profile-blastmaster-varied-frequency-ranged-5",
+              "unit-noise-marines-profile-blastmaster-single-frequency-ranged-6"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-noise-marines-weapon-family-blastmaster",
+            "title": "➤ Blastmaster",
+            "aliases": [
+              "➤ Blastmaster"
+            ],
+            "profileIds": [
+              "unit-noise-marines-profile-blastmaster-varied-frequency-ranged-5",
+              "unit-noise-marines-profile-blastmaster-single-frequency-ranged-6"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -3359,7 +3691,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Ignores Cover",
             "sourceSelectionIds": [
-              "unit-noise-marines-selection-blastmaster-varied-frequency"
+              "unit-noise-marines-selection-blastmaster-varied-frequency",
+              "unit-noise-marines-weapon-family-blastmaster-selection"
             ]
           },
           {
@@ -3374,7 +3707,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "3",
             "abilities": "Ignores Cover",
             "sourceSelectionIds": [
-              "unit-noise-marines-selection-blastmaster-single-frequency"
+              "unit-noise-marines-selection-blastmaster-single-frequency",
+              "unit-noise-marines-weapon-family-blastmaster-selection"
             ]
           }
         ],
@@ -3513,6 +3847,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-chaos-land-raider-profile-armoured-tracks-melee",
@@ -3673,6 +4008,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-chaos-spawn-profile-hideous-mutations-melee",
@@ -3898,6 +4234,60 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "unit-defiler-profile-magma-cutters-ranged-12"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-weapon-family-shearing-claws-selection",
+            "title": "Shearing claws",
+            "aliases": [
+              "Shearing claws"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-defiler-weapon-family-shearing-claws",
+            "profileIds": [
+              "unit-defiler-profile-shearing-claws-strike-melee",
+              "unit-defiler-profile-shearing-claws-sweep-melee-2"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-weapon-family-heavy-missile-launcher-selection",
+            "title": "➤ Heavy missile launcher",
+            "aliases": [
+              "➤ Heavy missile launcher"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-defiler-weapon-family-heavy-missile-launcher",
+            "profileIds": [
+              "unit-defiler-profile-heavy-missile-launcher-frag-ranged-3",
+              "unit-defiler-profile-heavy-missile-launcher-krak-ranged-4"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-defiler-weapon-family-shearing-claws",
+            "title": "Shearing claws",
+            "aliases": [
+              "Shearing claws"
+            ],
+            "profileIds": [
+              "unit-defiler-profile-shearing-claws-strike-melee",
+              "unit-defiler-profile-shearing-claws-sweep-melee-2"
+            ],
+            "ambiguousAlias": false
+          },
+          {
+            "id": "unit-defiler-weapon-family-heavy-missile-launcher",
+            "title": "➤ Heavy missile launcher",
+            "aliases": [
+              "➤ Heavy missile launcher"
+            ],
+            "profileIds": [
+              "unit-defiler-profile-heavy-missile-launcher-frag-ranged-3",
+              "unit-defiler-profile-heavy-missile-launcher-krak-ranged-4"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -3913,7 +4303,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D6+1",
             "abilities": "Precision",
             "sourceSelectionIds": [
-              "unit-defiler-selection-shearing-claws-strike"
+              "unit-defiler-selection-shearing-claws-strike",
+              "unit-defiler-weapon-family-shearing-claws-selection"
             ]
           },
           {
@@ -3928,7 +4319,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-defiler-selection-shearing-claws-sweep"
+              "unit-defiler-selection-shearing-claws-sweep",
+              "unit-defiler-weapon-family-shearing-claws-selection"
             ]
           },
           {
@@ -3943,7 +4335,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "Blast",
             "sourceSelectionIds": [
-              "unit-defiler-selection-heavy-missile-launcher-frag"
+              "unit-defiler-selection-heavy-missile-launcher-frag",
+              "unit-defiler-weapon-family-heavy-missile-launcher-selection"
             ]
           },
           {
@@ -3958,7 +4351,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D6+1",
             "abilities": "",
             "sourceSelectionIds": [
-              "unit-defiler-selection-heavy-missile-launcher-krak"
+              "unit-defiler-selection-heavy-missile-launcher-krak",
+              "unit-defiler-weapon-family-heavy-missile-launcher-selection"
             ]
           },
           {
@@ -4155,6 +4549,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-fiends-profile-barbed-tail-and-dissecting-claws-melee",
@@ -4270,6 +4665,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-heldrake-profile-heldrake-claws-melee",
@@ -4411,6 +4807,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-maulerfiend-profile-maulerfiend-fists-melee",
@@ -4573,6 +4970,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             ]
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "unit-seekers-profile-lashing-tongues-melee",

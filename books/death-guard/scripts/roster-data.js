@@ -160,6 +160,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "mortarion-weapon-silence-sweep"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-mortarion-weapon-family-silence-selection",
+            "title": "Silence",
+            "aliases": [
+              "Silence"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-mortarion-weapon-family-silence",
+            "profileIds": [
+              "mortarion-weapon-silence-strike",
+              "mortarion-weapon-silence-sweep"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-mortarion-weapon-family-silence",
+            "title": "Silence",
+            "aliases": [
+              "Silence"
+            ],
+            "profileIds": [
+              "mortarion-weapon-silence-strike",
+              "mortarion-weapon-silence-sweep"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -205,7 +233,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D6+1",
             "abilities": "DEVASTATING WOUNDS, LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-mortarion-selection-silence-strike"
+              "unit-mortarion-selection-silence-strike",
+              "unit-mortarion-weapon-family-silence-selection"
             ]
           },
           {
@@ -220,7 +249,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "LETHAL HITS, SUSTAINED HITS 1",
             "sourceSelectionIds": [
-              "unit-mortarion-selection-silence-sweep"
+              "unit-mortarion-selection-silence-sweep",
+              "unit-mortarion-weapon-family-silence-selection"
             ]
           }
         ],
@@ -365,6 +395,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "typhus-weapon-lakrimae-sweep"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-typhus-weapon-family-lakrimae-selection",
+            "title": "Lakrimae",
+            "aliases": [
+              "Lakrimae"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-typhus-weapon-family-lakrimae",
+            "profileIds": [
+              "typhus-weapon-lakrimae-strike",
+              "typhus-weapon-lakrimae-sweep"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-typhus-weapon-family-lakrimae",
+            "title": "Lakrimae",
+            "aliases": [
+              "Lakrimae"
+            ],
+            "profileIds": [
+              "typhus-weapon-lakrimae-strike",
+              "typhus-weapon-lakrimae-sweep"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -380,7 +438,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "3",
             "abilities": "LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-typhus-selection-lakrimae-strike"
+              "unit-typhus-selection-lakrimae-strike",
+              "unit-typhus-weapon-family-lakrimae-selection"
             ]
           },
           {
@@ -395,7 +454,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-typhus-selection-lakrimae-sweep"
+              "unit-typhus-selection-lakrimae-sweep",
+              "unit-typhus-weapon-family-lakrimae-selection"
             ]
           }
         ],
@@ -541,6 +601,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "biologus-putrifier-weapon-hyper-blight-grenades",
@@ -709,6 +770,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "daemon-prince-of-nurgle-weapon-hellforged-weapons-sweep"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-daemon-prince-of-nurgle-weapon-family-hellforged-weapons-selection",
+            "title": "Hellforged weapons",
+            "aliases": [
+              "Hellforged weapons"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-daemon-prince-of-nurgle-weapon-family-hellforged-weapons",
+            "profileIds": [
+              "daemon-prince-of-nurgle-weapon-hellforged-weapons-strike",
+              "daemon-prince-of-nurgle-weapon-hellforged-weapons-sweep"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-daemon-prince-of-nurgle-weapon-family-hellforged-weapons",
+            "title": "Hellforged weapons",
+            "aliases": [
+              "Hellforged weapons"
+            ],
+            "profileIds": [
+              "daemon-prince-of-nurgle-weapon-hellforged-weapons-strike",
+              "daemon-prince-of-nurgle-weapon-hellforged-weapons-sweep"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -739,7 +828,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "3",
             "abilities": "LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-daemon-prince-of-nurgle-selection-hellforged-weapons-strike"
+              "unit-daemon-prince-of-nurgle-selection-hellforged-weapons-strike",
+              "unit-daemon-prince-of-nurgle-weapon-family-hellforged-weapons-selection"
             ]
           },
           {
@@ -754,7 +844,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-daemon-prince-of-nurgle-selection-hellforged-weapons-sweep"
+              "unit-daemon-prince-of-nurgle-selection-hellforged-weapons-sweep",
+              "unit-daemon-prince-of-nurgle-weapon-family-hellforged-weapons-selection"
             ]
           }
         ],
@@ -882,6 +973,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "daemon-prince-of-nurgle-with-wings-weapon-hellforged-weapons-sweep"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-daemon-prince-of-nurgle-with-wings-weapon-family-hellforged-weapons-selection",
+            "title": "Hellforged weapons",
+            "aliases": [
+              "Hellforged weapons"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-daemon-prince-of-nurgle-with-wings-weapon-family-hellforged-weapons",
+            "profileIds": [
+              "daemon-prince-of-nurgle-with-wings-weapon-hellforged-weapons-strike",
+              "daemon-prince-of-nurgle-with-wings-weapon-hellforged-weapons-sweep"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-daemon-prince-of-nurgle-with-wings-weapon-family-hellforged-weapons",
+            "title": "Hellforged weapons",
+            "aliases": [
+              "Hellforged weapons"
+            ],
+            "profileIds": [
+              "daemon-prince-of-nurgle-with-wings-weapon-hellforged-weapons-strike",
+              "daemon-prince-of-nurgle-with-wings-weapon-hellforged-weapons-sweep"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -912,7 +1031,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "3",
             "abilities": "LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-daemon-prince-of-nurgle-with-wings-selection-hellforged-weapons-strike"
+              "unit-daemon-prince-of-nurgle-with-wings-selection-hellforged-weapons-strike",
+              "unit-daemon-prince-of-nurgle-with-wings-weapon-family-hellforged-weapons-selection"
             ]
           },
           {
@@ -927,7 +1047,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-daemon-prince-of-nurgle-with-wings-selection-hellforged-weapons-sweep"
+              "unit-daemon-prince-of-nurgle-with-wings-selection-hellforged-weapons-sweep",
+              "unit-daemon-prince-of-nurgle-with-wings-weapon-family-hellforged-weapons-selection"
             ]
           }
         ],
@@ -1059,6 +1180,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "foul-blightspawn-weapon-plague-sprayer",
@@ -1219,6 +1341,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "icon-bearer-weapon-boltgun",
@@ -1380,6 +1503,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "lord-of-contagion-weapon-manreaper-sweep"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-lord-of-contagion-weapon-family-manreaper-selection",
+            "title": "Manreaper",
+            "aliases": [
+              "Manreaper"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-lord-of-contagion-weapon-family-manreaper",
+            "profileIds": [
+              "lord-of-contagion-weapon-manreaper-strike",
+              "lord-of-contagion-weapon-manreaper-sweep"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-lord-of-contagion-weapon-family-manreaper",
+            "title": "Manreaper",
+            "aliases": [
+              "Manreaper"
+            ],
+            "profileIds": [
+              "lord-of-contagion-weapon-manreaper-strike",
+              "lord-of-contagion-weapon-manreaper-sweep"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -1395,7 +1546,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "3",
             "abilities": "LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-lord-of-contagion-selection-manreaper-strike"
+              "unit-lord-of-contagion-selection-manreaper-strike",
+              "unit-lord-of-contagion-weapon-family-manreaper-selection"
             ]
           },
           {
@@ -1410,7 +1562,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-lord-of-contagion-selection-manreaper-sweep"
+              "unit-lord-of-contagion-selection-manreaper-sweep",
+              "unit-lord-of-contagion-weapon-family-manreaper-selection"
             ]
           }
         ],
@@ -1543,6 +1696,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "lord-of-poxes-weapon-great-plague-blade"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-lord-of-poxes-weapon-family-plasma-pistol-selection",
+            "title": "Plasma pistol",
+            "aliases": [
+              "Plasma pistol"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-lord-of-poxes-weapon-family-plasma-pistol",
+            "profileIds": [
+              "lord-of-poxes-weapon-plasma-pistol-standard",
+              "lord-of-poxes-weapon-plasma-pistol-supercharge"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-lord-of-poxes-weapon-family-plasma-pistol",
+            "title": "Plasma pistol",
+            "aliases": [
+              "Plasma pistol"
+            ],
+            "profileIds": [
+              "lord-of-poxes-weapon-plasma-pistol-standard",
+              "lord-of-poxes-weapon-plasma-pistol-supercharge"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -1558,7 +1739,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "PISTOL",
             "sourceSelectionIds": [
-              "unit-lord-of-poxes-selection-plasma-pistol-standard"
+              "unit-lord-of-poxes-selection-plasma-pistol-standard",
+              "unit-lord-of-poxes-weapon-family-plasma-pistol-selection"
             ]
           },
           {
@@ -1573,7 +1755,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "HAZARDOUS, PISTOL",
             "sourceSelectionIds": [
-              "unit-lord-of-poxes-selection-plasma-pistol-supercharge"
+              "unit-lord-of-poxes-selection-plasma-pistol-supercharge",
+              "unit-lord-of-poxes-weapon-family-plasma-pistol-selection"
             ]
           },
           {
@@ -1719,6 +1902,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "lord-of-virulence-weapon-twin-plague-spewer",
@@ -1901,6 +2085,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "malignant-plaguecaster-weapon-corrupted-staff"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-malignant-plaguecaster-weapon-family-plague-wind-selection",
+            "title": "Plague Wind",
+            "aliases": [
+              "Plague Wind"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-malignant-plaguecaster-weapon-family-plague-wind",
+            "profileIds": [
+              "malignant-plaguecaster-weapon-plague-wind-witchfire",
+              "malignant-plaguecaster-weapon-plague-wind-focused-witchfire"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-malignant-plaguecaster-weapon-family-plague-wind",
+            "title": "Plague Wind",
+            "aliases": [
+              "Plague Wind"
+            ],
+            "profileIds": [
+              "malignant-plaguecaster-weapon-plague-wind-witchfire",
+              "malignant-plaguecaster-weapon-plague-wind-focused-witchfire"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -1931,7 +2143,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D3",
             "abilities": "PSYCHIC, TORRENT",
             "sourceSelectionIds": [
-              "unit-malignant-plaguecaster-selection-plague-wind-witchfire"
+              "unit-malignant-plaguecaster-selection-plague-wind-witchfire",
+              "unit-malignant-plaguecaster-weapon-family-plague-wind-selection"
             ]
           },
           {
@@ -1946,7 +2159,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D3",
             "abilities": "HAZARDOUS, PSYCHIC, TORRENT",
             "sourceSelectionIds": [
-              "unit-malignant-plaguecaster-selection-plague-wind-focused-witchfire"
+              "unit-malignant-plaguecaster-selection-plague-wind-focused-witchfire",
+              "unit-malignant-plaguecaster-weapon-family-plague-wind-selection"
             ]
           },
           {
@@ -2116,6 +2330,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "noxious-blightbringer-weapon-cursed-plague-bell"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-noxious-blightbringer-weapon-family-plasma-pistol-selection",
+            "title": "Plasma pistol",
+            "aliases": [
+              "Plasma pistol"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-noxious-blightbringer-weapon-family-plasma-pistol",
+            "profileIds": [
+              "noxious-blightbringer-weapon-plasma-pistol-standard",
+              "noxious-blightbringer-weapon-plasma-pistol-supercharge"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-noxious-blightbringer-weapon-family-plasma-pistol",
+            "title": "Plasma pistol",
+            "aliases": [
+              "Plasma pistol"
+            ],
+            "profileIds": [
+              "noxious-blightbringer-weapon-plasma-pistol-standard",
+              "noxious-blightbringer-weapon-plasma-pistol-supercharge"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -2131,7 +2373,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "PISTOL",
             "sourceSelectionIds": [
-              "unit-noxious-blightbringer-selection-plasma-pistol-standard"
+              "unit-noxious-blightbringer-selection-plasma-pistol-standard",
+              "unit-noxious-blightbringer-weapon-family-plasma-pistol-selection"
             ]
           },
           {
@@ -2146,7 +2389,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "PISTOL, HAZARDOUS",
             "sourceSelectionIds": [
-              "unit-noxious-blightbringer-selection-plasma-pistol-supercharge"
+              "unit-noxious-blightbringer-selection-plasma-pistol-supercharge",
+              "unit-noxious-blightbringer-weapon-family-plasma-pistol-selection"
             ]
           },
           {
@@ -2289,6 +2533,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "plague-surgeon-weapon-bolt-pistol",
@@ -2456,6 +2701,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "tallyman-weapon-close-combat-weapon"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-tallyman-weapon-family-plasma-pistol-selection",
+            "title": "Plasma pistol",
+            "aliases": [
+              "Plasma pistol"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-tallyman-weapon-family-plasma-pistol",
+            "profileIds": [
+              "tallyman-weapon-plasma-pistol-standard",
+              "tallyman-weapon-plasma-pistol-supercharge"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-tallyman-weapon-family-plasma-pistol",
+            "title": "Plasma pistol",
+            "aliases": [
+              "Plasma pistol"
+            ],
+            "profileIds": [
+              "tallyman-weapon-plasma-pistol-standard",
+              "tallyman-weapon-plasma-pistol-supercharge"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -2471,7 +2744,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "PISTOL",
             "sourceSelectionIds": [
-              "unit-tallyman-selection-plasma-pistol-standard"
+              "unit-tallyman-selection-plasma-pistol-standard",
+              "unit-tallyman-weapon-family-plasma-pistol-selection"
             ]
           },
           {
@@ -2486,7 +2760,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "HAZARDOUS, PISTOL",
             "sourceSelectionIds": [
-              "unit-tallyman-selection-plasma-pistol-supercharge"
+              "unit-tallyman-selection-plasma-pistol-supercharge",
+              "unit-tallyman-weapon-family-plasma-pistol-selection"
             ]
           },
           {
@@ -2882,6 +3157,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           },
           {
+            "id": "unit-plague-marines-weapon-family-plasma-gun-selection",
+            "title": "Plasma gun",
+            "aliases": [
+              "Plasma gun"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-plague-marines-weapon-family-plasma-gun",
+            "profileIds": [
+              "plague-marines-weapon-plasma-gun-standard",
+              "plague-marines-weapon-plasma-gun-supercharge"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-plague-marines-weapon-family-plasma-pistol-selection",
+            "title": "Plasma pistol",
+            "aliases": [
+              "Plasma pistol"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-plague-marines-weapon-family-plasma-pistol",
+            "profileIds": [
+              "plague-marines-weapon-plasma-pistol-standard",
+              "plague-marines-weapon-plasma-pistol-supercharge"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
             "id": "unit-plague-marines-selection-icon-of-despair-aura",
             "title": "Icon of Despair (Aura)",
             "aliases": [
@@ -2893,6 +3196,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "candidateWargearAbilityIds": [
               "plague-marines-ability-icon-of-despair-aura"
             ]
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-plague-marines-weapon-family-plasma-gun",
+            "title": "Plasma gun",
+            "aliases": [
+              "Plasma gun"
+            ],
+            "profileIds": [
+              "plague-marines-weapon-plasma-gun-standard",
+              "plague-marines-weapon-plasma-gun-supercharge"
+            ],
+            "ambiguousAlias": false
+          },
+          {
+            "id": "unit-plague-marines-weapon-family-plasma-pistol",
+            "title": "Plasma pistol",
+            "aliases": [
+              "Plasma pistol"
+            ],
+            "profileIds": [
+              "plague-marines-weapon-plasma-pistol-standard",
+              "plague-marines-weapon-plasma-pistol-supercharge"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -2998,7 +3327,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "RAPID FIRE 1",
             "sourceSelectionIds": [
-              "unit-plague-marines-selection-plasma-gun-standard"
+              "unit-plague-marines-selection-plasma-gun-standard",
+              "unit-plague-marines-weapon-family-plasma-gun-selection"
             ]
           },
           {
@@ -3013,7 +3343,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "HAZARDOUS, RAPID FIRE 1",
             "sourceSelectionIds": [
-              "unit-plague-marines-selection-plasma-gun-supercharge"
+              "unit-plague-marines-selection-plasma-gun-supercharge",
+              "unit-plague-marines-weapon-family-plasma-gun-selection"
             ]
           },
           {
@@ -3028,7 +3359,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "PISTOL",
             "sourceSelectionIds": [
-              "unit-plague-marines-selection-plasma-pistol-standard"
+              "unit-plague-marines-selection-plasma-pistol-standard",
+              "unit-plague-marines-weapon-family-plasma-pistol-selection"
             ]
           },
           {
@@ -3043,7 +3375,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "HAZARDOUS, PISTOL",
             "sourceSelectionIds": [
-              "unit-plague-marines-selection-plasma-pistol-supercharge"
+              "unit-plague-marines-selection-plasma-pistol-supercharge",
+              "unit-plague-marines-weapon-family-plasma-pistol-selection"
             ]
           },
           {
@@ -3319,6 +3652,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "blightlord-terminators-weapon-blight-launcher",
@@ -3584,6 +3918,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           },
           {
+            "id": "unit-deathshroud-terminators-weapon-family-manreaper-selection",
+            "title": "Manreaper",
+            "aliases": [
+              "Manreaper"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-deathshroud-terminators-weapon-family-manreaper",
+            "profileIds": [
+              "deathshroud-terminators-weapon-manreaper-strike",
+              "deathshroud-terminators-weapon-manreaper-sweep"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
             "id": "unit-deathshroud-terminators-selection-icon-of-despair-aura",
             "title": "Icon of Despair (Aura)",
             "aliases": [
@@ -3595,6 +3943,20 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "candidateWargearAbilityIds": [
               "deathshroud-terminators-ability-icon-of-despair-aura"
             ]
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-deathshroud-terminators-weapon-family-manreaper",
+            "title": "Manreaper",
+            "aliases": [
+              "Manreaper"
+            ],
+            "profileIds": [
+              "deathshroud-terminators-weapon-manreaper-strike",
+              "deathshroud-terminators-weapon-manreaper-sweep"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -3625,7 +3987,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "2",
             "abilities": "LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-deathshroud-terminators-selection-manreaper-strike"
+              "unit-deathshroud-terminators-selection-manreaper-strike",
+              "unit-deathshroud-terminators-weapon-family-manreaper-selection"
             ]
           },
           {
@@ -3640,7 +4003,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-deathshroud-terminators-selection-manreaper-sweep"
+              "unit-deathshroud-terminators-selection-manreaper-sweep",
+              "unit-deathshroud-terminators-weapon-family-manreaper-selection"
             ]
           }
         ],
@@ -3772,6 +4136,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "poxwalkers-weapon-improvised-weapon",
@@ -3876,6 +4241,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "chaos-spawn-weapon-hideous-mutations",
@@ -4055,6 +4421,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "chaos-land-raider-weapon-combi-bolter",
@@ -4318,6 +4685,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "chaos-predator-annihilator-weapon-combi-bolter",
@@ -4596,6 +4964,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "chaos-predator-destructor-weapon-combi-bolter",
@@ -4939,6 +5308,60 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "defiler-weapon-shearing-claws-sweep"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-weapon-family-heavy-missile-launcher-selection",
+            "title": "Heavy missile launcher",
+            "aliases": [
+              "Heavy missile launcher"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-defiler-weapon-family-heavy-missile-launcher",
+            "profileIds": [
+              "defiler-weapon-heavy-missile-launcher-krak",
+              "defiler-weapon-heavy-missile-launcher-frag"
+            ],
+            "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-defiler-weapon-family-shearing-claws-selection",
+            "title": "Shearing claws",
+            "aliases": [
+              "Shearing claws"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-defiler-weapon-family-shearing-claws",
+            "profileIds": [
+              "defiler-weapon-shearing-claws-strike",
+              "defiler-weapon-shearing-claws-sweep"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-defiler-weapon-family-heavy-missile-launcher",
+            "title": "Heavy missile launcher",
+            "aliases": [
+              "Heavy missile launcher"
+            ],
+            "profileIds": [
+              "defiler-weapon-heavy-missile-launcher-krak",
+              "defiler-weapon-heavy-missile-launcher-frag"
+            ],
+            "ambiguousAlias": false
+          },
+          {
+            "id": "unit-defiler-weapon-family-shearing-claws",
+            "title": "Shearing claws",
+            "aliases": [
+              "Shearing claws"
+            ],
+            "profileIds": [
+              "defiler-weapon-shearing-claws-strike",
+              "defiler-weapon-shearing-claws-sweep"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -5029,7 +5452,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D6+1",
             "abilities": "LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-defiler-selection-heavy-missile-launcher-krak"
+              "unit-defiler-selection-heavy-missile-launcher-krak",
+              "unit-defiler-weapon-family-heavy-missile-launcher-selection"
             ]
           },
           {
@@ -5044,7 +5468,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "BLAST, LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-defiler-selection-heavy-missile-launcher-frag"
+              "unit-defiler-selection-heavy-missile-launcher-frag",
+              "unit-defiler-weapon-family-heavy-missile-launcher-selection"
             ]
           },
           {
@@ -5104,7 +5529,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D6+1",
             "abilities": "LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-defiler-selection-shearing-claws-strike"
+              "unit-defiler-selection-shearing-claws-strike",
+              "unit-defiler-weapon-family-shearing-claws-selection"
             ]
           },
           {
@@ -5119,7 +5545,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-defiler-selection-shearing-claws-sweep"
+              "unit-defiler-selection-shearing-claws-sweep",
+              "unit-defiler-weapon-family-shearing-claws-selection"
             ]
           }
         ],
@@ -5242,6 +5669,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "foetid-bloat-drone-weapon-plaguespitter",
@@ -5395,6 +5823,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "foetid-bloat-drone-with-heavy-blight-launcher-weapon-heavy-blight-launcher",
@@ -5672,6 +6101,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "helbrute-weapon-power-scourge"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-helbrute-weapon-family-missile-launcher-selection",
+            "title": "Missile launcher",
+            "aliases": [
+              "Missile launcher"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-helbrute-weapon-family-missile-launcher",
+            "profileIds": [
+              "helbrute-weapon-missile-launcher-frag",
+              "helbrute-weapon-missile-launcher-krak"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-helbrute-weapon-family-missile-launcher",
+            "title": "Missile launcher",
+            "aliases": [
+              "Missile launcher"
+            ],
+            "profileIds": [
+              "helbrute-weapon-missile-launcher-frag",
+              "helbrute-weapon-missile-launcher-krak"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -5717,7 +6174,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "BLAST",
             "sourceSelectionIds": [
-              "unit-helbrute-selection-missile-launcher-frag"
+              "unit-helbrute-selection-missile-launcher-frag",
+              "unit-helbrute-weapon-family-missile-launcher-selection"
             ]
           },
           {
@@ -5732,7 +6190,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D6",
             "abilities": "-",
             "sourceSelectionIds": [
-              "unit-helbrute-selection-missile-launcher-krak"
+              "unit-helbrute-selection-missile-launcher-krak",
+              "unit-helbrute-weapon-family-missile-launcher-selection"
             ]
           },
           {
@@ -6014,6 +6473,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "myphitic-blight-hauler-weapon-gnashing-maw"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-myphitic-blight-hauler-weapon-family-missile-launcher-selection",
+            "title": "Missile launcher",
+            "aliases": [
+              "Missile launcher"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-myphitic-blight-hauler-weapon-family-missile-launcher",
+            "profileIds": [
+              "myphitic-blight-hauler-weapon-missile-launcher-frag",
+              "myphitic-blight-hauler-weapon-missile-launcher-krak"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-myphitic-blight-hauler-weapon-family-missile-launcher",
+            "title": "Missile launcher",
+            "aliases": [
+              "Missile launcher"
+            ],
+            "profileIds": [
+              "myphitic-blight-hauler-weapon-missile-launcher-frag",
+              "myphitic-blight-hauler-weapon-missile-launcher-krak"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -6044,7 +6531,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "BLAST",
             "sourceSelectionIds": [
-              "unit-myphitic-blight-hauler-selection-missile-launcher-frag"
+              "unit-myphitic-blight-hauler-selection-missile-launcher-frag",
+              "unit-myphitic-blight-hauler-weapon-family-missile-launcher-selection"
             ]
           },
           {
@@ -6059,7 +6547,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D6",
             "abilities": "-",
             "sourceSelectionIds": [
-              "unit-myphitic-blight-hauler-selection-missile-launcher-krak"
+              "unit-myphitic-blight-hauler-selection-missile-launcher-krak",
+              "unit-myphitic-blight-hauler-weapon-family-missile-launcher-selection"
             ]
           },
           {
@@ -6251,6 +6740,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "plagueburst-crawler-weapon-entropy-cannon",
@@ -6484,6 +6974,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "chaos-rhino-weapon-combi-bolter",
@@ -6640,6 +7131,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "miasmic-malignifier-weapon-miasmic-gouts",
@@ -6752,6 +7244,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "beasts-of-nurgle-weapon-putrid-appendages",
@@ -6938,6 +7431,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "great-unclean-one-weapon-doomsday-bell"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-great-unclean-one-weapon-family-bilesword-selection",
+            "title": "Bilesword",
+            "aliases": [
+              "Bilesword"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-great-unclean-one-weapon-family-bilesword",
+            "profileIds": [
+              "great-unclean-one-weapon-bilesword-strike",
+              "great-unclean-one-weapon-bilesword-sweep"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-great-unclean-one-weapon-family-bilesword",
+            "title": "Bilesword",
+            "aliases": [
+              "Bilesword"
+            ],
+            "profileIds": [
+              "great-unclean-one-weapon-bilesword-strike",
+              "great-unclean-one-weapon-bilesword-sweep"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -6998,7 +7519,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "D6+1",
             "abilities": "LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-great-unclean-one-selection-bilesword-strike"
+              "unit-great-unclean-one-selection-bilesword-strike",
+              "unit-great-unclean-one-weapon-family-bilesword-selection"
             ]
           },
           {
@@ -7013,7 +7535,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "LETHAL HITS",
             "sourceSelectionIds": [
-              "unit-great-unclean-one-selection-bilesword-sweep"
+              "unit-great-unclean-one-selection-bilesword-sweep",
+              "unit-great-unclean-one-weapon-family-bilesword-selection"
             ]
           },
           {
@@ -7126,6 +7649,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "nurglings-weapon-diseased-claws-and-teeth",
@@ -7268,6 +7792,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "plague-drones-weapon-deaths-heads",
@@ -7414,6 +7939,7 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "wargearAbilityIds": []
           }
         ],
+        "weaponFamilies": [],
         "weaponProfiles": [
           {
             "id": "plaguebearers-weapon-plaguesword",
@@ -7564,6 +8090,34 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
               "rotigus-weapon-gnarlrod-sweep"
             ],
             "wargearAbilityIds": []
+          },
+          {
+            "id": "unit-rotigus-weapon-family-gnarlrod-selection",
+            "title": "Gnarlrod",
+            "aliases": [
+              "Gnarlrod"
+            ],
+            "kind": "weapon",
+            "familyId": "unit-rotigus-weapon-family-gnarlrod",
+            "profileIds": [
+              "rotigus-weapon-gnarlrod-strike",
+              "rotigus-weapon-gnarlrod-sweep"
+            ],
+            "wargearAbilityIds": []
+          }
+        ],
+        "weaponFamilies": [
+          {
+            "id": "unit-rotigus-weapon-family-gnarlrod",
+            "title": "Gnarlrod",
+            "aliases": [
+              "Gnarlrod"
+            ],
+            "profileIds": [
+              "rotigus-weapon-gnarlrod-strike",
+              "rotigus-weapon-gnarlrod-sweep"
+            ],
+            "ambiguousAlias": false
           }
         ],
         "weaponProfiles": [
@@ -7594,7 +8148,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "3",
             "abilities": "LETHAL HITS, PSYCHIC",
             "sourceSelectionIds": [
-              "unit-rotigus-selection-gnarlrod-strike"
+              "unit-rotigus-selection-gnarlrod-strike",
+              "unit-rotigus-weapon-family-gnarlrod-selection"
             ]
           },
           {
@@ -7609,7 +8164,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
             "d": "1",
             "abilities": "LETHAL HITS, PSYCHIC",
             "sourceSelectionIds": [
-              "unit-rotigus-selection-gnarlrod-sweep"
+              "unit-rotigus-selection-gnarlrod-sweep",
+              "unit-rotigus-weapon-family-gnarlrod-selection"
             ]
           }
         ],

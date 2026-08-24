@@ -27,17 +27,28 @@
     return result.map(unit=>{const peers=copies.get(unit.targetId)||[],ordinal=peers.indexOf(unit.instanceId)+1;return{...unit,label:peers.length>1?`${unit.title} #${ordinal}`:unit.title};});
   }
 
+  function physicalNavigationInput(){
+    const params=new URLSearchParams(location.search),rosterId=params.get('roster'),projection=window.WH_ARMY_ROSTER_PROJECTION,catalog=window.WH_BOOK_ROSTER_CATALOG,game=projection?.game,rawUnits=list(projection?.roster?.units),gameUnits=list(game?.units),catalogUnits=list(catalog?.units);
+    if(!rosterId||projection?.context?.rosterId!==rosterId||game?.schema!==GAME_SCHEMA||!rawUnits.length||rawUnits.length!==gameUnits.length||!catalogUnits.length)return null;
+    const rawIds=rawUnits.map(unit=>String(unit?.id||'').trim()),gameIds=gameUnits.map(unit=>String(unit?.identity?.instanceId||'').trim()),rawSet=new Set(rawIds),gameSet=new Set(gameIds),catalogCounts=new Map();
+    for(const unit of catalogUnits)catalogCounts.set(unit.id,(catalogCounts.get(unit.id)||0)+1);
+    if(rawIds.some(id=>!id)||gameIds.some(id=>!id)||rawSet.size!==rawIds.length||gameSet.size!==gameIds.length||rawIds.some(id=>!gameSet.has(id))||gameIds.some(id=>!rawSet.has(id)))return null;
+    if(gameUnits.some(unit=>{const targetId=String(unit?.identity?.canonicalDatasheetId||'').trim();return!targetId||catalogCounts.get(targetId)!==1;}))return null;
+    return{game,catalog};
+  }
+
   function projectPhysicalRosterNavigation(tree){
-    const params=new URLSearchParams(location.search),context=window.WH_ARMY_ROSTER_CONTEXT,game=window.WH_ARMY_ROSTER_GAME_PROJECTION,catalog=window.WH_BOOK_ROSTER_CATALOG;
-    if(!params.has('roster')||context?.status!=='ready'||game?.schema!==GAME_SCHEMA||!list(game.units).length||!list(catalog?.units).length)return Object.freeze({active:false,items:[]});
+    const input=physicalNavigationInput();
+    if(!input)return Object.freeze({active:false,items:[]});
+    const {game,catalog}=input;
     const ordered=physicalRosterOrder(game,catalog),projected=[];
     for(const [index,item] of ordered.entries()){
-      const sourceButton=[...tree.querySelectorAll('[data-nav-target]')].find(button=>button.dataset.navTarget===item.targetId),sourceNode=sourceButton?.closest('[data-nav-id]'),sourceRow=sourceNode&&directChild(sourceNode,'toc-row');
+      const sourceButtons=[...tree.querySelectorAll('[data-nav-target]')].filter(button=>button.dataset.navTarget===item.targetId);if(sourceButtons.length!==1)return Object.freeze({active:false,items:[]});const sourceButton=sourceButtons[0],sourceNode=sourceButton.closest('[data-nav-id]'),sourceRow=sourceNode&&directChild(sourceNode,'toc-row');
       if(!sourceNode||!sourceRow)return Object.freeze({active:false,items:[]});
       const node=sourceNode.cloneNode(false),row=sourceRow.cloneNode(true);row.querySelector('[data-nav-toggle]')?.remove();const button=row.querySelector('[data-nav-target]');if(!button)return Object.freeze({active:false,items:[]});
       node.dataset.navId=`roster-unit-${index+1}`;node.dataset.navDepth='0';button.dataset.navTarget=item.targetId;button.dataset.rosterInstance=item.instanceId;button.replaceChildren(document.createTextNode(item.label));button.removeAttribute('aria-current');button.classList.remove('is-current','is-ancestor');node.append(row);projected.push({node,...item});
     }
-    if(projected.length!==ordered.length)return Object.freeze({active:false,items:[]});
+    if(ordered.length!==list(game.units).length||projected.length!==ordered.length)return Object.freeze({active:false,items:[]});
     tree.replaceChildren(...projected.map(item=>item.node));tree.dataset.rosterNavigation='physical';document.documentElement.dataset.rosterNavigation='physical';
     return Object.freeze({active:true,items:projected.map(({node,...item})=>item)});
   }

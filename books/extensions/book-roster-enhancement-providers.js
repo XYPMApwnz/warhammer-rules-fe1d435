@@ -220,7 +220,8 @@
     for(const keyword of String(values.Keywords||'').split(',').map(value=>value.trim()).filter(Boolean))addWeaponTag(row,keyword,effect);
     table.append(row);return true;
   }
-  function applyTauEffect(card,article,item){
+  function applyTauEffect(card,article,item,applyEffects=true){
+    if(!applyEffects)return;
     const key=normalize(item.title),effect=tauEffects.get(key);
     if(effect==='detection-range-minus-3'){
       derivedNote(article,effect,'Derived effect: this unit has -3" detection range.');return;
@@ -285,17 +286,18 @@
       warning(article,'Effect was not applied because the Enhancement owner could not be resolved to an exact roster unit.');list.prepend(article);
     }
   }
-  function decorateTau(card,roster,units){
+  function decorateTau(card,roster,units,context={}){
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];
     const ownership=resolveTauOwnership(roster,units);
     if(ownership.instances.length>1){renderTauInstances(card,ownership);return ownership.instances.flatMap(instance=>instance.enhancements);}
     for(const entry of ownership.cardEnhancements){
       const item=catalog()[normalize(entry.name)];if(!item||list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(item.title))}"]`))continue;
-      const article=enhancementArticle(entry,item);applyTauEffect(card,article,item);list.prepend(article);
+      const article=enhancementArticle(entry,item);applyTauEffect(card,article,item,!Array.isArray(context.projectedEffects));list.prepend(article);
     }
     renderTauUnresolved(list,ownership.unresolved);return ownership.cardEnhancements;
   }
-  function applyEcEffect(card,article,item){
+  function applyEcEffect(card,article,item,applyEffects=true){
+    if(!applyEffects)return;
     const effect=ecEffects.get(normalize(item.title));
     if(effect==='modifier-immunity'){
       derivedNote(article,effect,'Derived rule: models in the bearer\'s unit can ignore modifiers to melee Weapon Skill and to Hit and Wound rolls.');return;
@@ -332,13 +334,13 @@
     const mode=/while the bearer is leading a unit|bearer(?:'|\u2019)s unit/i.test(item.text||'')?'attachment-dependent':/once per battle|declare battle formations|before the first turn|after both players have deployed/i.test(item.text||'')?'setup-dependent':'conditional';
     warning(article,`No permanent Datasheet mutation was applied because this Enhancement is ${mode}.`);
   }
-  function decorateEc(card,roster,units){
+  function decorateEc(card,roster,units,context={}){
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];
     const ownership=resolveTauOwnership(roster,units);
     if(ownership.instances.length>1){renderTauInstances(card,ownership);return ownership.instances.flatMap(instance=>instance.enhancements);}
     for(const entry of ownership.cardEnhancements){
       const item=catalog()[normalize(entry.name)];if(!item||list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(item.title))}"]`))continue;
-      const article=enhancementArticle(entry,item);applyEcEffect(card,article,item);list.prepend(article);
+      const article=enhancementArticle(entry,item);applyEcEffect(card,article,item,!Array.isArray(context.projectedEffects));list.prepend(article);
     }
     renderTauUnresolved(list,ownership.unresolved);return ownership.cardEnhancements;
   }
@@ -355,7 +357,8 @@
     for(const {cell,base,next} of updates){cell.dataset.rosterBaseValue=base;cell.dataset.rosterDerivedEffect=effect;cell.classList.add('roster-modified');cell.textContent=next;}
     return true;
   }
-  function applyTyranidsEffect(card,article,item){
+  function applyTyranidsEffect(card,article,item,applyEffects=true){
+    if(!applyEffects)return;
     const effect=tyranidsEffects.get(normalize(item.title));
     if(effect==='detection-range-minus-3'){derivedNote(article,effect,'Derived rule: this unit has -3" detection range.');return;}
     if(effect==='ranged-anti-character-2'){
@@ -403,13 +406,13 @@
     }
     warning(article,'No permanent Datasheet mutation was applied because this Enhancement does not have a safe deterministic projection.');
   }
-  function decorateTyranids(card,roster,units){
+  function decorateTyranids(card,roster,units,context={}){
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];
     const ownership=resolveTauOwnership(roster,units);
     if(ownership.instances.length>1){renderTauInstances(card,ownership);return ownership.instances.flatMap(instance=>instance.enhancements);}
     for(const entry of ownership.cardEnhancements){
       const item=catalog()[normalize(entry.name)];if(!item||list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(item.title))}"]`))continue;
-      const article=enhancementArticle(entry,item);applyTyranidsEffect(card,article,item);list.prepend(article);
+      const article=enhancementArticle(entry,item);applyTyranidsEffect(card,article,item,!Array.isArray(context.projectedEffects));list.prepend(article);
     }
     renderTauUnresolved(list,ownership.unresolved);return ownership.cardEnhancements;
   }
@@ -426,7 +429,8 @@
     if(!item){article.className='ability roster-enhancement roster-enhancement-unresolved';article.dataset.rosterEnhancement=normalize(entry.name);const title=root.document.createElement('h5');title.textContent=entry.name;const cost=root.document.createElement('small');cost.className='roster-enhancement-cost';cost.hidden=entry.exportedCost==null;cost.textContent=entry.exportedCost==null?'':`${entry.exportedCost} pts in export`;const text=root.document.createElement('p');text.textContent=resolution.status==='ambiguous'?`This title exists in multiple selected Detachments: ${resolution.candidates.map(candidate=>candidate.detachment).join(' / ')}.`:'No matching Enhancement record was found in the selected Detachment.';article.append(title,cost,text);}
     if(item)article.dataset.rosterEnhancementRuleId=item.ruleId;if(message)warning(article,message);return article;
   }
-  function applyCsmEffect(card,article,item){
+  function applyCsmEffect(card,article,item,applyEffects=true){
+    if(!applyEffects)return;
     const effect=csmEffects.get(normalize(item.title));
     if(effect==='psyker-psychic-weapons'){
       const keyword=addKeyword(card,'PSYKER',effect),weapons=tagWeapons(card,'','PSYCHIC',effect);
@@ -487,28 +491,29 @@
     if(ownership.unresolved.length)warning(block,'One or more roster Enhancements have an unresolved owner and were not assigned to an instance.');host.append(block);
   }
   function csmAssignments(roster,units){const unitIds=new Set((units||[]).map(unit=>unit.id));return(roster?.enhancements||[]).filter(entry=>entry.ownerStatus==='resolved'&&unitIds.has(entry.ownerUnitId)).map(entry=>({entry,...resolveCsmItem(entry,roster)}));}
-  function decorateCsm(card,roster,units){
+  function decorateCsm(card,roster,units,context={}){
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];const ownership=resolveTauOwnership(roster,units);
     if(ownership.instances.length>1){renderCsmInstances(card,ownership,roster);return ownership.instances.flatMap(instance=>instance.enhancements);}
-    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item)applyCsmEffect(card,article,resolution.item);list.prepend(article);}
+    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item)applyCsmEffect(card,article,resolution.item,!Array.isArray(context.projectedEffects));list.prepend(article);}
     for(const entry of ownership.unresolved){const article=csmArticle(entry,resolveCsmItem(entry,roster),'This Enhancement was not assigned because its owner could not be resolved to an exact roster unit.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
     return ownership.cardEnhancements;
   }
-  function decorateSm(card,roster,units){
+  function decorateSm(card,roster,units,context={}){
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];const ownership=resolveTauOwnership(roster,units);
     if(ownership.instances.length>1){renderCsmInstances(card,ownership,roster);return ownership.instances.flatMap(instance=>instance.enhancements);}
-    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item)applySmEffect(card,article,resolution.item);list.prepend(article);}
+    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item)applySmEffect(card,article,resolution.item,!Array.isArray(context.projectedEffects));list.prepend(article);}
     for(const entry of ownership.unresolved){const article=csmArticle(entry,resolveCsmItem(entry,roster),'This Enhancement was not assigned because its owner could not be resolved to an exact roster unit.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
     return ownership.cardEnhancements;
   }
-  function decorateDa(card,roster,units){
+  function decorateDa(card,roster,units,context={}){
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];const ownership=resolveTauOwnership(roster,units);
     if(ownership.instances.length>1){renderCsmInstances(card,ownership,roster);return ownership.instances.flatMap(instance=>instance.enhancements);}
-    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item){const identity=`${resolution.item.detachmentId}|${resolution.item.ruleId}`;if(inheritedDaSmEffects.has(identity))applySmEffect(card,article,resolution.item);else if(daEffects.has(identity))applyDaEffect(card,article,resolution.item);}list.prepend(article);}
+    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item){const identity=`${resolution.item.detachmentId}|${resolution.item.ruleId}`,apply=!Array.isArray(context.projectedEffects);if(inheritedDaSmEffects.has(identity))applySmEffect(card,article,resolution.item,apply);else if(daEffects.has(identity))applyDaEffect(card,article,resolution.item,apply);}list.prepend(article);}
     for(const entry of ownership.unresolved){const article=csmArticle(entry,resolveCsmItem(entry,roster),'This Enhancement was not assigned because its owner could not be resolved to an exact roster unit.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
     return ownership.cardEnhancements;
   }
-  function applyBaEffect(card,article,item){
+  function applyBaEffect(card,article,item,applyEffects=true){
+    if(!applyEffects)return;
     const effect=baEffects.get(`${item.detachmentId}|${item.ruleId}`);if(!effect)return;
     if(effect==='psychic-anti-reroll-damage'){
       const rows=weaponRows(card).filter(row=>[...row.querySelectorAll('.weapon-tags > *')].some(tag=>normalize(tag.textContent)==='psychic'));
@@ -528,14 +533,15 @@
       if(addSharedAbility(card,'Scouts 6"','core-scouts',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,effect==='unit-scouts-6'?'Derived ability: Scouts 6" applied to the bearer Datasheet only. No Bodyguard Datasheet is mutated without attachment evidence.':'Derived ability: Scouts 6" applied to the bearer Datasheet only. The Battle-shock re-roll aura remains conditional and no Bodyguard Datasheet is mutated without attachment evidence.');}else warning(article,'Effect could not be applied automatically because the Abilities block was not found.');
     }
   }
-  function decorateBa(card,roster,units){
+  function decorateBa(card,roster,units,context={}){
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];const ownership=resolveTauOwnership(roster,units);
     if(ownership.instances.length>1){renderCsmInstances(card,ownership,roster);return ownership.instances.flatMap(instance=>instance.enhancements);}
-    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item){const identity=`${resolution.item.detachmentId}|${resolution.item.ruleId}`;if(inheritedBaSmEffects.has(identity))applySmEffect(card,article,resolution.item);else applyBaEffect(card,article,resolution.item);}list.prepend(article);}
+    for(const entry of ownership.cardEnhancements){const resolution=resolveCsmItem(entry,roster);if(list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))continue;const article=csmArticle(entry,resolution,resolution.item?'':'Exact Detachment-qualified Enhancement identity could not be resolved, so no rule was assigned.');if(resolution.item){const identity=`${resolution.item.detachmentId}|${resolution.item.ruleId}`,apply=!Array.isArray(context.projectedEffects);if(inheritedBaSmEffects.has(identity))applySmEffect(card,article,resolution.item,apply);else applyBaEffect(card,article,resolution.item,apply);}list.prepend(article);}
     for(const entry of ownership.unresolved){const article=csmArticle(entry,resolveCsmItem(entry,roster),'This Enhancement was not assigned because its owner could not be resolved to an exact roster unit.');if(!list.querySelector(`[data-roster-enhancement="${CSS.escape(normalize(entry.name))}"]`))list.prepend(article);}
     return ownership.cardEnhancements;
   }
-  function applySmEffect(card,article,item){
+  function applySmEffect(card,article,item,applyEffects=true){
+    if(!applyEffects)return;
     const effect=smEffects.get(normalize(item.title));
     if(effect==='ranged-sustained-hits-1'||effect==='ranged-ignores-cover'){
       const label=effect==='ranged-sustained-hits-1'?'SUSTAINED HITS 1':'IGNORES COVER';if(tagWeapons(card,'ranged',label,effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,`Derived profiles: ${label} applied to the bearer's ranged weapons.`);}else warning(article,'Effect could not be applied automatically because no ranged weapon profiles were found.');return;
@@ -560,7 +566,8 @@
     }
     warning(article,'No permanent Datasheet mutation was applied because this Enhancement does not have a safe deterministic projection.');
   }
-  function applyDaEffect(card,article,item){
+  function applyDaEffect(card,article,item,applyEffects=true){
+    if(!applyEffects)return;
     const effect=daEffects.get(`${item.detachmentId}|${item.ruleId}`),note=daNotes.get(effect);
     if(effect==='unit-scouts-9'){
       if(addSharedAbility(card,'Scouts 9"','core-scouts',effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,'Derived ability: Scouts 9" applied to the bearer Datasheet only. No Bodyguard Datasheet is mutated without attachment evidence.');}
@@ -585,14 +592,75 @@
       if(adjustWeapons(card,'melee',changes,effect)){article.dataset.rosterDerivedEffect=effect;derivedNote(article,effect,effect==='melee-damage-plus-1'?"Derived profiles: +1 Damage applied to the bearer's melee weapons.":effect==='melee-strength-ap-damage'?"Derived profiles: +2 Strength, improved Armour Penetration and +1 Damage applied to the bearer's melee weapons.":"Derived profiles: +1 Attacks, Strength and Damage applied to the bearer's melee weapons. The +2 values remain conditional on the bearer being Battle-shocked and are not applied permanently.");}else warning(article,'Effect could not be applied automatically because one or more melee weapon characteristics were not found.');return;
     }
   }
-  function decorate(card,roster,units){
-    if(tauBook())return decorateTau(card,roster,units);
-    if(ecBook())return decorateEc(card,roster,units);
-    if(tyranidsBook())return decorateTyranids(card,roster,units);
-    if(csmBook())return decorateCsm(card,roster,units);
-    if(smBook())return decorateSm(card,roster,units);
-    if(daBook())return decorateDa(card,roster,units);
-    if(baBook())return decorateBa(card,roster,units);
+  const conditional=kind=>({state:'conditional',certainty:'unknown',condition:{kind,state:'unknown'}});
+  function structuredRecords(code,item,source){const output=[],add=(suffix,component,targetId,operation,detail={},state={})=>output.push({id:`${source.id}:${suffix}`,component,targetId,operation,...detail,...state,source,provenance:{rosterFact:'enhancement-owner'}}),ability=(suffix,title,summary=item.text||'',state={})=>add(suffix,'ability',suffix,'grant',{title,summary},state),weapon=(suffix,targetId,operation,detail,state={})=>add(suffix,'weapon',targetId,operation,detail,state),stat=(suffix,targetId,operation,value,state={})=>add(suffix,'stat',targetId,operation,operation==='set'?{to:value}:{delta:value},state),keyword=(suffix,title,operation='grant',state={})=>add(suffix,'keyword',title,operation,{},state),reference=(suffix,title=item.title,state={})=>ability(suffix,title,item.text||'Curated roster effect reference.',state);
+    switch(code){
+      case'detection-range-minus-3':ability(code,'Detection Range -3"');break;
+      case'hit-plus-1':ability('ranged-hit-plus-1','Ranged Hit rolls +1');reference('conditional-wound-plus-1','Wound rolls +1 from battle round 3',conditional('battle-round'));break;
+      case'ignores-cover':weapon(code,'ranged','grant-tag',{tag:'IGNORES COVER'});break;
+      case'precision-devastating-wounds':weapon('precision','all','grant-tag',{tag:'PRECISION'});weapon('devastating-wounds','all','grant-tag',{tag:'DEVASTATING WOUNDS'});break;
+      case'grenades-keyword':keyword(code,'GRENADES');break;
+      case'modifier-immunity':ability(code,'Modifier immunity');break;
+      case'move-plus-1':stat(code,'M','add',1);break;case'move-plus-2':case'move-plus-2-unit':stat(code,'M','add',2);break;case'move-plus-4':stat(code,'M','add',4);break;
+      case'melee-strength-attacks-plus-1':weapon('strength','melee','add-stat',{stat:'S',delta:1});weapon('attacks','melee','add-stat',{stat:'A',delta:1});break;
+      case'deep-strike-ignores-cover':ability('deep-strike','Deep Strike');weapon('ignores-cover','ranged','grant-tag',{tag:'IGNORES COVER'});break;
+      case'sustained-hits-1':weapon(code,'all','grant-tag',{tag:'SUSTAINED HITS 1'});break;
+      case'melee-strength-plus-1':weapon(code,'melee','add-stat',{stat:'S',delta:1});break;
+      case'ranged-ap-plus-1':weapon(code,'ranged','add-stat',{stat:'AP',delta:-1});break;
+      case'melee-attacks-damage-plus-1':weapon('attacks','melee','add-stat',{stat:'A',delta:1});weapon('damage','melee','add-stat',{stat:'D',delta:1});break;
+      case'precision-vs-character':weapon('precision','melee','grant-tag',{tag:'PRECISION'});weapon('conditional-strength','melee','add-stat',{stat:'S',delta:1},conditional('target-keyword'));weapon('conditional-ap','melee','add-stat',{stat:'AP',delta:-1},conditional('target-keyword'));break;
+      case'snap-shooting-protection':ability(code,'Snap-shooting protection');break;
+      case'ranged-anti-character-2':weapon(code,'ranged','grant-tag',{tag:'ANTI-CHARACTER 2+'});break;
+      case'invulnerable-save-4':ability(code,'Invulnerable Save 4+');break;
+      case'melee-reroll-wounds-ap-plus-1':weapon('ap','melee','add-stat',{stat:'AP',delta:-1});ability('reroll-wounds','Re-roll melee Wound rolls');break;
+      case'melee-hit-plus-1':ability(code,'Melee Hit rolls +1');break;
+      case'synapse-melee-strength-ws-plus-1':keyword('synapse','SYNAPSE');weapon('strength','melee','add-stat',{stat:'S',delta:1});weapon('weapon-skill','melee','add-stat',{stat:'WS',delta:-1});break;
+      case'feel-no-pain':ability('feel-no-pain-5','Feel No Pain 5+');reference('conditional-feel-no-pain-4','Feel No Pain 4+',conditional('wounds-remaining'));break;
+      case'oc-plus-3':stat(code,'OC','add',3);break;
+      case'melee-strength-plus-1-conditional-attacks':weapon('strength','melee','add-stat',{stat:'S',delta:1});weapon('conditional-attacks','melee','add-stat',{stat:'A',delta:1},conditional('enemy-unit-destroyed'));break;
+      case'stealth':ability(code,'Stealth');break;
+      case'psychic-strength-ap-plus-1':weapon('strength','psychic','add-stat',{stat:'S',delta:1});weapon('ap','psychic','add-stat',{stat:'AP',delta:-1});break;
+      case'psyker-psychic-weapons':keyword('psyker','PSYKER');weapon('psychic','all','grant-tag',{tag:'PSYCHIC'});break;
+      case'melee-lance':weapon(code,'melee','grant-tag',{tag:'LANCE'});break;case'melee-precision':weapon(code,'melee','grant-tag',{tag:'PRECISION'});break;
+      case'ability-range-plus-3':ability(code,'Ability ranges +3"');break;
+      case'wounds-plus-1-feel-no-pain-5':stat('wounds','W','add',1);ability('feel-no-pain','Feel No Pain 5+');break;
+      case'melee-ap-plus-1-precision':weapon('ap','melee','add-stat',{stat:'AP',delta:-1});weapon('precision','melee','grant-tag',{tag:'PRECISION'});break;
+      case'stealth-lone-operative':ability('stealth','Stealth');ability('lone-operative','Lone Operative');break;
+      case'anti-vehicle-fortification-4':weapon('anti-vehicle','all','grant-tag',{tag:'ANTI-VEHICLE 4+'});weapon('anti-fortification','all','grant-tag',{tag:'ANTI-FORTIFICATION 4+'});break;
+      case'unit-invulnerable-save-5':ability(code,'Invulnerable Save 5+');break;
+      case'daemon-melee-attacks-plus-1':keyword('daemon','DAEMON');weapon('attacks','melee','add-stat',{stat:'A',delta:1});break;
+      case'weapons-attacks-strength-ap-plus-1':weapon('attacks','all','add-stat',{stat:'A',delta:1});weapon('strength','all','add-stat',{stat:'S',delta:1});weapon('ap','all','add-stat',{stat:'AP',delta:-1});weapon('conditional-damage','all','add-stat',{stat:'D',delta:1},conditional('set-up-from-reserves'));break;
+      case'ranged-sustained-hits-1':weapon(code,'ranged','grant-tag',{tag:'SUSTAINED HITS 1'});break;case'ranged-ignores-cover':weapon(code,'ranged','grant-tag',{tag:'IGNORES COVER'});break;
+      case'save-2-feel-no-pain-5':stat('save','Sv','set','2+');ability('feel-no-pain','Feel No Pain 5+');break;
+      case'melee-strength-plus-3':weapon(code,'melee','add-stat',{stat:'S',delta:3});break;
+      case'feel-no-pain-4':ability(code,'Feel No Pain 4+');break;
+      case'reroll-damage-attacks':ability(code,'Re-roll Damage and Attacks rolls');break;
+      case'new-weapon-profile':add(code,'weapon','added-profile','grant-profile',{profile:item.profile||null});break;
+      case'psychic-anti-reroll-damage':weapon('anti','psychic','grant-tag',{tag:'ANTI-NON-MONSTER/VEHICLE 5+'});ability('reroll-damage','Re-roll Psychic Damage rolls');break;
+      case'melee-attacks-plus-2':weapon(code,'melee','add-stat',{stat:'A',delta:2});break;
+      case'melee-anti-chaos-lance':weapon('anti-chaos','melee','grant-tag',{tag:'ANTI-CHAOS 5+'});weapon('lance','melee','grant-tag',{tag:'LANCE'});break;
+      case'save-2-weapons-ap-plus-1':stat('save','Sv','set','2+');weapon('ap','all','add-stat',{stat:'AP',delta:-1});break;
+      case'unit-scouts-6':ability(code,'Scouts 6"');break;case'unit-scouts-6-battleshock-aura':ability('scouts','Scouts 6"');reference('battleshock-aura','Battle-shock re-roll aura',conditional('nearby-unit'));break;
+      case'unit-scouts-9':ability(code,'Scouts 9"');break;
+      case'plasma-range-plus-6':weapon(code,'plasma','add-stat',{stat:'Range',delta:6});break;
+      case'melee-lethal-hits-vowed-critical':weapon('lethal-hits','melee','grant-tag',{tag:'LETHAL HITS'});reference('vowed-critical','Critical Hits 5+',conditional('vowed-objective-range'));break;
+      case'melee-damage-plus-1':weapon(code,'melee','add-stat',{stat:'D',delta:1});break;
+      case'melee-attacks-strength-damage-plus-1':weapon('attacks','melee','add-stat',{stat:'A',delta:1});weapon('strength','melee','add-stat',{stat:'S',delta:1});weapon('damage','melee','add-stat',{stat:'D',delta:1});reference('battleshocked-values','Improved values while Battle-shocked',conditional('battle-shocked'));break;
+      case'melee-strength-ap-damage':weapon('strength','melee','add-stat',{stat:'S',delta:2});weapon('ap','melee','add-stat',{stat:'AP',delta:-1});weapon('damage','melee','add-stat',{stat:'D',delta:1});break;
+      default:{const unknown=/conditional|once|first-turn|early|strategic-reserves|setup/.test(code),state=unknown?conditional(code):{};reference(code,item.title,state);break;}
+    }
+    return output;
+  }
+  function structuredCode(item){const identity=`${item.detachmentId}|${item.ruleId||item.id}`;if(tauBook())return tauEffects.get(normalize(item.title));if(ecBook())return ecEffects.get(normalize(item.title));if(tyranidsBook())return tyranidsEffects.get(normalize(item.title));if(csmBook())return csmEffects.get(normalize(item.title));if(smBook())return smEffects.get(normalize(item.title));if(daBook())return inheritedDaSmEffects.has(identity)?smEffects.get(normalize(item.title)):daEffects.get(identity);if(baBook())return inheritedBaSmEffects.has(identity)?smEffects.get(normalize(item.title)):baEffects.get(identity);return null;}
+  function gameEffects({item,enhancements}){const output=[];for(const resolution of enhancements||[]){const entry=resolution.input||{},canonical=resolution.catalog;if(entry.ownerStatus!=='resolved'||entry.ownerUnitId!==item.raw.id||!canonical)continue;const code=structuredCode(canonical);if(!code)continue;const source={kind:'enhancement',id:canonical.ruleId||canonical.id,ownerInstanceId:item.raw.id};output.push(...structuredRecords(code,canonical,source));}return output;}
+  function decorate(card,roster,units,context={}){
+    if(tauBook())return decorateTau(card,roster,units,context);
+    if(ecBook())return decorateEc(card,roster,units,context);
+    if(tyranidsBook())return decorateTyranids(card,roster,units,context);
+    if(csmBook())return decorateCsm(card,roster,units,context);
+    if(smBook())return decorateSm(card,roster,units,context);
+    if(daBook())return decorateDa(card,roster,units,context);
+    if(baBook())return decorateBa(card,roster,units,context);
     const list=card?.querySelector('[id$="-abilities"] .ability-list');if(!list)return[];
     const unitIds=new Set((units||[]).map(unit=>unit.id));
     const owned=(roster?.enhancements||[]).filter(item=>item.ownerStatus==='resolved'&&unitIds.has(item.ownerUnitId));
@@ -609,5 +677,5 @@
     return owned;
   }
   if(!root.WHBookRosterEnhancements?.registerProvider)throw new Error('Shared Roster Enhancement contract is unavailable');
-  root.WHBookRosterEnhancements.registerProvider(Object.freeze({decorate,assignedRuleIds(roster,units){return csmBook()||smBook()||daBook()||baBook()?[...new Set(csmAssignments(roster,units).filter(item=>item.status==='resolved').map(item=>item.item.ruleId))]:[];},assignedRecords(roster,units){return daBook()?csmAssignments(roster,units).filter(item=>item.status==='resolved').map(item=>item.item):[];}}));
+  root.WHBookRosterEnhancements.registerProvider(Object.freeze({decorate,gameEffects,assignedRuleIds(roster,units){return csmBook()||smBook()||daBook()||baBook()?[...new Set(csmAssignments(roster,units).filter(item=>item.status==='resolved').map(item=>item.item.ruleId))]:[];},assignedRecords(roster,units){return daBook()?csmAssignments(roster,units).filter(item=>item.status==='resolved').map(item=>item.item):[];}}));
 }(typeof window==='undefined'?globalThis:window));

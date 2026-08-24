@@ -80,6 +80,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "6\"",
+          "T": "3",
+          "Sv": "4+",
+          "W": "1",
+          "Ld": "7+",
+          "OC": "2"
+        },
+        "abilities": [
+          {
+            "id": "unit-skitarii-rangers-ability-objective-scouted",
+            "title": "Objective Scouted"
+          },
+          {
+            "id": "unit-skitarii-rangers-ability-scouts-6-2",
+            "title": "Scouts 6\""
+          },
+          {
+            "id": "unit-skitarii-rangers-ability-doctrina-imperatives-3",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-skitarii-rangers-ability-stealth-4",
+            "title": "Stealth"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -413,6 +439,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "6\"",
+          "T": "3",
+          "Sv": "4+",
+          "W": "1",
+          "Ld": "7+",
+          "OC": "2"
+        },
+        "abilities": [
+          {
+            "id": "unit-skitarii-vanguard-ability-rad-saturation-aura",
+            "title": "Rad-saturation (Aura)"
+          },
+          {
+            "id": "unit-skitarii-vanguard-ability-doctrina-imperatives-2",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-skitarii-vanguard-ability-stealth-3",
+            "title": "Stealth"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -721,6 +769,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "2+",
+          "W": "3",
+          "Ld": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-cybernetica-datasmith-ability-support",
+            "title": "Support"
+          },
+          {
+            "id": "unit-cybernetica-datasmith-ability-battle-protocols-2",
+            "title": "Battle Protocols"
+          },
+          {
+            "id": "unit-cybernetica-datasmith-ability-data-severed-3",
+            "title": "Data-severed"
+          },
+          {
+            "id": "unit-cybernetica-datasmith-ability-doctrina-imperatives-4",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-cybernetica-datasmith-ability-feel-no-pain-5-5",
+            "title": "Feel No Pain 5+"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -845,6 +923,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "6\"",
+          "T": "3",
+          "Sv": "4+",
+          "W": "3",
+          "Ld": "6+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-skitarii-marshal-ability-support",
+            "title": "Support"
+          },
+          {
+            "id": "unit-skitarii-marshal-ability-control-edict-2",
+            "title": "Control Edict"
+          },
+          {
+            "id": "unit-skitarii-marshal-ability-servo-skull-uplink-3",
+            "title": "Servo-skull Uplink"
+          },
+          {
+            "id": "unit-skitarii-marshal-ability-doctrina-imperatives-4",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-skitarii-marshal-ability-stealth-5",
+            "title": "Stealth"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -936,6 +1044,40 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "8\"",
+          "T": "4",
+          "Sv": "4+",
+          "W": "4",
+          "Ld": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-sydonian-skatros-ability-dread-snipers",
+            "title": "Dread Snipers"
+          },
+          {
+            "id": "unit-sydonian-skatros-ability-sydonian-sentinel-2",
+            "title": "Sydonian Sentinel"
+          },
+          {
+            "id": "unit-sydonian-skatros-ability-achillan-eye-3",
+            "title": "Achillan Eye"
+          },
+          {
+            "id": "unit-sydonian-skatros-ability-doctrina-imperatives-4",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-sydonian-skatros-ability-stealth-5",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-sydonian-skatros-ability-lone-operative-6",
+            "title": "Lone Operative"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -1155,6 +1297,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "2+",
+          "W": "4",
+          "Ld": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-tech-priest-dominus-ability-leader",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-tech-priest-dominus-ability-lord-of-the-machine-cult-2",
+            "title": "Lord of the Machine Cult"
+          },
+          {
+            "id": "unit-tech-priest-dominus-ability-data-spike-3",
+            "title": "Data-spike"
+          },
+          {
+            "id": "unit-tech-priest-dominus-ability-doctrina-imperatives-4",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-tech-priest-dominus-ability-feel-no-pain-5-5",
+            "title": "Feel No Pain 5+"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -1428,6 +1600,40 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "3",
+          "Ld": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-tech-priest-enginseer-ability-enginseer",
+            "title": "Enginseer"
+          },
+          {
+            "id": "unit-tech-priest-enginseer-ability-omnissiahs-blessing-2",
+            "title": "Omnissiah's Blessing"
+          },
+          {
+            "id": "unit-tech-priest-enginseer-ability-vengeance-for-the-omnissiah-3",
+            "title": "Vengeance for the Omnissiah"
+          },
+          {
+            "id": "unit-tech-priest-enginseer-ability-leader-4",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-tech-priest-enginseer-ability-doctrina-imperatives-5",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-tech-priest-enginseer-ability-feel-no-pain-5-6",
+            "title": "Feel No Pain 5+"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -1620,6 +1826,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "2+",
+          "W": "4",
+          "Ld": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-tech-priest-manipulus-ability-leader",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-tech-priest-manipulus-ability-galvanic-field-2",
+            "title": "Galvanic Field"
+          },
+          {
+            "id": "unit-tech-priest-manipulus-ability-defend-the-divine-work-3",
+            "title": "Defend the Divine Work"
+          },
+          {
+            "id": "unit-tech-priest-manipulus-ability-doctrina-imperatives-4",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-tech-priest-manipulus-ability-feel-no-pain-5-5",
+            "title": "Feel No Pain 5+"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -1812,6 +2048,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "Sv": "3+",
+          "W": "3",
+          "Ld": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-technoarcheologist-ability-seekers-of-divine-arcana",
+            "title": "Seekers of Divine Arcana"
+          },
+          {
+            "id": "unit-technoarcheologist-ability-cogitative-instincts-2",
+            "title": "Cogitative Instincts"
+          },
+          {
+            "id": "unit-technoarcheologist-ability-support-3",
+            "title": "Support"
+          },
+          {
+            "id": "unit-technoarcheologist-ability-doctrina-imperatives-4",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-technoarcheologist-ability-feel-no-pain-5-5",
+            "title": "Feel No Pain 5+"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -1905,6 +2171,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "12\"",
+          "T": "9",
+          "Sv": "3+",
+          "W": "11",
+          "Ld": "7+",
+          "OC": "2"
+        },
+        "abilities": [
+          {
+            "id": "unit-skorpius-dunerider-ability-broad-spectrum-data-tether",
+            "title": "Broad spectrum data-tether"
+          },
+          {
+            "id": "unit-skorpius-dunerider-ability-fire-support-2",
+            "title": "Fire Support"
+          },
+          {
+            "id": "unit-skorpius-dunerider-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-skorpius-dunerider-ability-doctrina-imperatives-4",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-skorpius-dunerider-ability-firing-deck-2-5",
+            "title": "Firing Deck 2"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -1998,6 +2294,40 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "8\"",
+          "T": "8",
+          "Sv": "2+",
+          "W": "10",
+          "Ld": "6+",
+          "OC": "3"
+        },
+        "abilities": [
+          {
+            "id": "unit-belisarius-cawl-ability-canticles-of-the-omnissiah",
+            "title": "Canticles of the Omnissiah"
+          },
+          {
+            "id": "unit-belisarius-cawl-ability-mechanicus-bodyguard-2",
+            "title": "Mechanicus Bodyguard"
+          },
+          {
+            "id": "unit-belisarius-cawl-ability-self-repair-mechanisms-3",
+            "title": "Self-repair Mechanisms"
+          },
+          {
+            "id": "unit-belisarius-cawl-ability-supreme-commander-4",
+            "title": "Supreme Commander"
+          },
+          {
+            "id": "unit-belisarius-cawl-ability-doctrina-imperatives-5",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-belisarius-cawl-ability-feel-no-pain-5-6",
+            "title": "Feel No Pain 5+"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -2145,6 +2475,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "8\"",
+          "T": "8",
+          "SV": "2+",
+          "W": "10",
+          "LD": "6+",
+          "OC": "3"
+        },
+        "abilities": [
+          {
+            "id": "unit-thulia-ghuld-ability-doctrina-imperatives",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-thulia-ghuld-ability-rod-of-the-war-forge-2",
+            "title": "Rod of the War Forge"
+          },
+          {
+            "id": "unit-thulia-ghuld-ability-mechanicus-bodyguard-3",
+            "title": "Mechanicus Bodyguard"
+          },
+          {
+            "id": "unit-thulia-ghuld-ability-secutor-of-olympus-4",
+            "title": "Secutor of Olympus"
+          },
+          {
+            "id": "unit-thulia-ghuld-ability-icon-of-war-5",
+            "title": "Icon of War"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -2325,6 +2685,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "6\"",
+          "T": "3",
+          "Sv": "7+",
+          "W": "1",
+          "Ld": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-corpuscarii-electro-priests-ability-electro-shock",
+            "title": "Electro-shock"
+          },
+          {
+            "id": "unit-corpuscarii-electro-priests-ability-feel-no-pain-5-2",
+            "title": "Feel No Pain 5+"
+          },
+          {
+            "id": "unit-corpuscarii-electro-priests-ability-doctrina-imperatives-3",
+            "title": "Doctrina Imperatives"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -2440,6 +2822,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "6\"",
+          "T": "3",
+          "Sv": "7+",
+          "W": "1",
+          "Ld": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-fulgurite-electro-priests-ability-electro-infusion",
+            "title": "Electro-Infusion"
+          },
+          {
+            "id": "unit-fulgurite-electro-priests-ability-doctrina-imperatives-2",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-fulgurite-electro-priests-ability-feel-no-pain-5-3",
+            "title": "Feel No Pain 5+"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -2547,6 +2951,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "5\"",
+          "T": "4",
+          "SV": "3+",
+          "W": "2",
+          "LD": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-hastarii-exterminators-ability-doctrina-imperatives",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-hastarii-exterminators-ability-broad-spectrum-targeting-augurs-2",
+            "title": "Broad-spectrum Targeting Augurs"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -2762,6 +3184,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "5\"",
+          "T": "4",
+          "SV": "3+",
+          "W": "2",
+          "LD": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-hastarii-fusiliers-ability-doctrina-imperatives",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-hastarii-fusiliers-ability-monocular-targeting-helms-2",
+            "title": "Monocular Targeting Helms"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -2942,6 +3382,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "5\"",
+          "T": "7",
+          "Sv": "3+",
+          "W": "3",
+          "Ld": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-kataphron-breachers-ability-breaching-command",
+            "title": "Breaching Command"
+          },
+          {
+            "id": "unit-kataphron-breachers-ability-doctrina-imperatives-2",
+            "title": "Doctrina Imperatives"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -3122,6 +3580,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "5\"",
+          "T": "6",
+          "Sv": "3+",
+          "W": "3",
+          "Ld": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-kataphron-destroyers-ability-sentinel-directive",
+            "title": "Sentinel Directive"
+          },
+          {
+            "id": "unit-kataphron-destroyers-ability-doctrina-imperatives-2",
+            "title": "Doctrina Imperatives"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -3323,6 +3799,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "12\"",
+          "T": "4",
+          "Sv": "4+",
+          "W": "2",
+          "Ld": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-pteraxii-skystalkers-ability-ride-the-thermals",
+            "title": "Ride the Thermals"
+          },
+          {
+            "id": "unit-pteraxii-skystalkers-ability-deep-strike-2",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-pteraxii-skystalkers-ability-doctrina-imperatives-3",
+            "title": "Doctrina Imperatives"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -3469,6 +3967,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "12\"",
+          "T": "4",
+          "Sv": "4+",
+          "W": "2",
+          "Ld": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-pteraxii-sterylizors-ability-searing-conflagration",
+            "title": "Searing Conflagration"
+          },
+          {
+            "id": "unit-pteraxii-sterylizors-ability-deep-strike-2",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-pteraxii-sterylizors-ability-doctrina-imperatives-3",
+            "title": "Doctrina Imperatives"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -3649,6 +4169,24 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "6\"",
+          "T": "4",
+          "SV": "4+",
+          "W": "2",
+          "LD": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-servitor-battleclade-ability-doctrina-imperatives",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-servitor-battleclade-ability-network-override-2",
+            "title": "Network Override"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -3901,6 +4439,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "8\"",
+          "T": "4",
+          "Sv": "4+",
+          "W": "2",
+          "Ld": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-sicarian-infiltrators-ability-neurostatic-interference-aura",
+            "title": "Neurostatic Interference (Aura)"
+          },
+          {
+            "id": "unit-sicarian-infiltrators-ability-infiltrators-2",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-sicarian-infiltrators-ability-stealth-3",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-sicarian-infiltrators-ability-doctrina-imperatives-4",
+            "title": "Doctrina Imperatives"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -4045,6 +4609,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "8\"",
+          "T": "4",
+          "Sv": "4+",
+          "W": "2",
+          "Ld": "7+",
+          "OC": "1"
+        },
+        "abilities": [
+          {
+            "id": "unit-sicarian-ruststalkers-ability-optimised-gait",
+            "title": "Optimised Gait"
+          },
+          {
+            "id": "unit-sicarian-ruststalkers-ability-stealth-2",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-sicarian-ruststalkers-ability-doctrina-imperatives-3",
+            "title": "Doctrina Imperatives"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -4161,6 +4747,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "12\"",
+          "T": "4",
+          "Sv": "4+",
+          "W": "2",
+          "Ld": "7+",
+          "OC": "2"
+        },
+        "abilities": [
+          {
+            "id": "unit-serberys-raiders-ability-tactica-obliqua",
+            "title": "Tactica Obliqua"
+          },
+          {
+            "id": "unit-serberys-raiders-ability-scouts-9-2",
+            "title": "Scouts 9\""
+          },
+          {
+            "id": "unit-serberys-raiders-ability-doctrina-imperatives-3",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-serberys-raiders-ability-stealth-4",
+            "title": "Stealth"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -4296,6 +4908,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "12\"",
+          "T": "4",
+          "Sv": "4+",
+          "W": "2",
+          "Ld": "7+",
+          "OC": "2"
+        },
+        "abilities": [
+          {
+            "id": "unit-serberys-sulphurhounds-ability-line-breakers",
+            "title": "Line-breakers"
+          },
+          {
+            "id": "unit-serberys-sulphurhounds-ability-doctrina-imperatives-2",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-serberys-sulphurhounds-ability-stealth-3",
+            "title": "Stealth"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -4495,6 +5129,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "-",
+          "T": "9",
+          "Sv": "3+",
+          "W": "10",
+          "Ld": "7+",
+          "OC": "-"
+        },
+        "abilities": [
+          {
+            "id": "unit-archaeopter-fusilave-ability-bomb-rack",
+            "title": "Bomb Rack"
+          },
+          {
+            "id": "unit-archaeopter-fusilave-ability-deadly-demise-d3-2",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-archaeopter-fusilave-ability-doctrina-imperatives-3",
+            "title": "Doctrina Imperatives"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -4623,6 +5279,28 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "-",
+          "T": "9",
+          "Sv": "3+",
+          "W": "10",
+          "Ld": "7+",
+          "OC": "-"
+        },
+        "abilities": [
+          {
+            "id": "unit-archaeopter-stratoraptor-ability-strafing-run",
+            "title": "Strafing Run"
+          },
+          {
+            "id": "unit-archaeopter-stratoraptor-ability-deadly-demise-d3-2",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-archaeopter-stratoraptor-ability-doctrina-imperatives-3",
+            "title": "Doctrina Imperatives"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -4805,6 +5483,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "14\"",
+          "T": "9",
+          "Sv": "3+",
+          "W": "10",
+          "Ld": "7+",
+          "OC": "0"
+        },
+        "abilities": [
+          {
+            "id": "unit-archaeopter-transvector-ability-aerial-deployment",
+            "title": "Aerial Deployment"
+          },
+          {
+            "id": "unit-archaeopter-transvector-ability-hover-2",
+            "title": "Hover"
+          },
+          {
+            "id": "unit-archaeopter-transvector-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-archaeopter-transvector-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-archaeopter-transvector-ability-doctrina-imperatives-5",
+            "title": "Doctrina Imperatives"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -4933,6 +5641,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "10\"",
+          "T": "7",
+          "Sv": "3+",
+          "W": "7",
+          "Ld": "7+",
+          "OC": "2"
+        },
+        "abilities": [
+          {
+            "id": "unit-ironstrider-ballistarii-ability-elevated-strider",
+            "title": "Elevated Strider"
+          },
+          {
+            "id": "unit-ironstrider-ballistarii-ability-broad-spectrum-data-tether-2",
+            "title": "Broad Spectrum Data-tether"
+          },
+          {
+            "id": "unit-ironstrider-ballistarii-ability-deadly-demise-1-3",
+            "title": "Deadly Demise 1"
+          },
+          {
+            "id": "unit-ironstrider-ballistarii-ability-doctrina-imperatives-4",
+            "title": "Doctrina Imperatives"
+          },
+          {
+            "id": "unit-ironstrider-ballistarii-ability-stealth-5",
+            "title": "Stealth"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -5066,6 +5804,32 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "6\"",
+          "T": "9",
+          "Sv": "2+",
+          "W": "7",
+          "Ld": "7+",
+          "OC": "2"
+        },
+        "abilities": [
+          {
+            "id": "unit-kastelan-robots-ability-robotic-bodyguard",
+            "title": "Robotic Bodyguard"
+          },
+          {
+            "id": "unit-kastelan-robots-ability-repulsor-grid-2",
+            "title": "Repulsor Grid"
+          },
+          {
+            "id": "unit-kastelan-robots-ability-deadly-demise-1-3",
+            "title": "Deadly Demise 1"
+          },
+          {
+            "id": "unit-kastelan-robots-ability-doctrina-imperatives-4",
+            "title": "Doctrina Imperatives"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -5292,6 +6056,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "8\"",
+          "T": "10",
+          "Sv": "2+",
+          "W": "11",
+          "Ld": "7+",
+          "OC": "3"
+        },
+        "abilities": [
+          {
+            "id": "unit-onager-dunecrawler-ability-emanatus-forcefield-aura",
+            "title": "Emanatus Forcefield (Aura)"
+          },
+          {
+            "id": "unit-onager-dunecrawler-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 wounds remaining"
+          },
+          {
+            "id": "unit-onager-dunecrawler-ability-scuttling-walker-3",
+            "title": "Scuttling Walker"
+          },
+          {
+            "id": "unit-onager-dunecrawler-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-onager-dunecrawler-ability-doctrina-imperatives-5",
+            "title": "Doctrina Imperatives"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -5564,6 +6358,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "10\"",
+          "T": "10",
+          "Sv": "2+",
+          "W": "12",
+          "Ld": "7+",
+          "OC": "3"
+        },
+        "abilities": [
+          {
+            "id": "unit-skorpius-disintegrator-ability-broad-spectrum-data-tether",
+            "title": "Broad spectrum data-tether"
+          },
+          {
+            "id": "unit-skorpius-disintegrator-ability-blistering-salvoes-2",
+            "title": "Blistering Salvoes"
+          },
+          {
+            "id": "unit-skorpius-disintegrator-ability-damaged-1-4-wounds-remaining-3",
+            "title": "Damaged: 1-4 wounds remaining"
+          },
+          {
+            "id": "unit-skorpius-disintegrator-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-skorpius-disintegrator-ability-doctrina-imperatives-5",
+            "title": "Doctrina Imperatives"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -5737,6 +6561,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "10\"",
+          "T": "7",
+          "Sv": "3+",
+          "W": "7",
+          "Ld": "7+",
+          "OC": "2"
+        },
+        "abilities": [
+          {
+            "id": "unit-sydonian-dragoons-with-radium-jezzails-ability-focused-hunters",
+            "title": "Focused Hunters"
+          },
+          {
+            "id": "unit-sydonian-dragoons-with-radium-jezzails-ability-broad-spectrum-data-tether-2",
+            "title": "Broad Spectrum Data-tether"
+          },
+          {
+            "id": "unit-sydonian-dragoons-with-radium-jezzails-ability-deadly-demise-1-3",
+            "title": "Deadly Demise 1"
+          },
+          {
+            "id": "unit-sydonian-dragoons-with-radium-jezzails-ability-stealth-4",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-sydonian-dragoons-with-radium-jezzails-ability-doctrina-imperatives-5",
+            "title": "Doctrina Imperatives"
+          }
+        ],
         "models": [],
         "selections": [
           {
@@ -5856,6 +6710,36 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {
+          "M": "10\"",
+          "T": "7",
+          "Sv": "3+",
+          "W": "7",
+          "Ld": "7+",
+          "OC": "2"
+        },
+        "abilities": [
+          {
+            "id": "unit-sydonian-dragoons-with-taser-lances-ability-dynamic-efficiency",
+            "title": "Dynamic Efficiency"
+          },
+          {
+            "id": "unit-sydonian-dragoons-with-taser-lances-ability-broad-spectrum-data-tether-2",
+            "title": "Broad Spectrum Data-tether"
+          },
+          {
+            "id": "unit-sydonian-dragoons-with-taser-lances-ability-deadly-demise-1-3",
+            "title": "Deadly Demise 1"
+          },
+          {
+            "id": "unit-sydonian-dragoons-with-taser-lances-ability-stealth-4",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-sydonian-dragoons-with-taser-lances-ability-doctrina-imperatives-5",
+            "title": "Doctrina Imperatives"
+          }
+        ],
         "models": [],
         "selections": [
           {

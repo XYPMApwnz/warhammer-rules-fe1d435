@@ -38,6 +38,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-daemonettes-ability-horrifying-beauty",
+            "title": "Horrifying Beauty"
+          },
+          {
+            "id": "unit-daemonettes-ability-deep-strike-2",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-daemonettes-ability-fights-first-3",
+            "title": "Fights First"
+          }
+        ],
         "models": [
           {
             "id": "unit-daemonettes-model-daemonette",
@@ -172,6 +187,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-infractors-ability-excessive-assault",
+            "title": "Excessive Assault"
+          },
+          {
+            "id": "unit-infractors-ability-thrill-seekers-2",
+            "title": "Thrill Seekers"
+          },
+          {
+            "id": "unit-infractors-ability-scouts-6-3",
+            "title": "Scouts 6\""
+          }
+        ],
         "models": [
           {
             "id": "unit-infractors-model-obsessionist",
@@ -423,6 +453,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-tormentors-ability-objective-defiled",
+            "title": "Objective Defiled"
+          },
+          {
+            "id": "unit-tormentors-ability-infiltrators-2",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-tormentors-ability-thrill-seekers-3",
+            "title": "Thrill Seekers"
+          }
+        ],
         "models": [
           {
             "id": "unit-tormentors-model-obsessionist",
@@ -764,6 +809,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-daemon-prince-of-slaanesh-ability-lord-of-excess",
+            "title": "Lord of Excess"
+          },
+          {
+            "id": "unit-daemon-prince-of-slaanesh-ability-excessive-vigour-aura-2",
+            "title": "Excessive Vigour (Aura)"
+          },
+          {
+            "id": "unit-daemon-prince-of-slaanesh-ability-ecstatic-death-3",
+            "title": "Ecstatic Death"
+          },
+          {
+            "id": "unit-daemon-prince-of-slaanesh-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-daemon-prince-of-slaanesh-ability-thrill-seekers-5",
+            "title": "Thrill Seekers"
+          }
+        ],
         "models": [
           {
             "id": "unit-daemon-prince-of-slaanesh-model-daemon-prince-of-slaanesh",
@@ -891,6 +959,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-daemon-prince-of-slaanesh-with-wings-ability-daemonic-destruction",
+            "title": "Daemonic Destruction"
+          },
+          {
+            "id": "unit-daemon-prince-of-slaanesh-with-wings-ability-stimulated-by-pain-2",
+            "title": "Stimulated by Pain"
+          },
+          {
+            "id": "unit-daemon-prince-of-slaanesh-with-wings-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-daemon-prince-of-slaanesh-with-wings-ability-thrill-seekers-4",
+            "title": "Thrill Seekers"
+          },
+          {
+            "id": "unit-daemon-prince-of-slaanesh-with-wings-ability-deep-strike-5",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-daemon-prince-of-slaanesh-with-wings-model-daemon-prince-of-slaanesh-with-wings",
@@ -1018,6 +1109,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-keeper-of-secrets-ability-daemon-lord-of-slaanesh-aura",
+            "title": "Daemon Lord of Slaanesh (Aura)"
+          },
+          {
+            "id": "unit-keeper-of-secrets-ability-mesmerising-form-2",
+            "title": "Mesmerising Form"
+          },
+          {
+            "id": "unit-keeper-of-secrets-ability-damaged-1-6-wounds-remaining-3",
+            "title": "Damaged: 1-6 wounds remaining"
+          },
+          {
+            "id": "unit-keeper-of-secrets-ability-deadly-demise-d6-4",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-keeper-of-secrets-ability-deep-strike-5",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-keeper-of-secrets-model-keeper-of-secrets",
@@ -1262,6 +1376,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-lord-exultant-ability-perfectionists",
+            "title": "Perfectionists"
+          },
+          {
+            "id": "unit-lord-exultant-ability-euphoric-strikes-2",
+            "title": "Euphoric Strikes"
+          },
+          {
+            "id": "unit-lord-exultant-ability-lord-of-the-host-3",
+            "title": "Lord of the Host"
+          },
+          {
+            "id": "unit-lord-exultant-ability-leader-4",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-lord-exultant-ability-leader-5",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-lord-exultant-ability-thrill-seekers-6",
+            "title": "Thrill Seekers"
+          }
+        ],
         "models": [
           {
             "id": "unit-lord-exultant-model-lord-exultant",
@@ -1560,6 +1701,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-lord-kakophonist-ability-leader",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-lord-kakophonist-ability-obsessive-annunciation-2",
+            "title": "Obsessive Annunciation"
+          },
+          {
+            "id": "unit-lord-kakophonist-ability-doom-siren-3",
+            "title": "Doom Siren"
+          },
+          {
+            "id": "unit-lord-kakophonist-ability-leader-4",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-lord-kakophonist-ability-thrill-seekers-5",
+            "title": "Thrill Seekers"
+          }
+        ],
         "models": [
           {
             "id": "unit-lord-kakophonist-model-lord-kakophonist",
@@ -1713,6 +1877,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-sorcerer-ability-leader",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-sorcerer-ability-warped-interference-psychic-2",
+            "title": "Warped Interference (Psychic)"
+          },
+          {
+            "id": "unit-sorcerer-ability-wracking-agonies-psychic-3",
+            "title": "Wracking Agonies (Psychic)"
+          },
+          {
+            "id": "unit-sorcerer-ability-leader-4",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-sorcerer-ability-thrill-seekers-5",
+            "title": "Thrill Seekers"
+          }
+        ],
         "models": [
           {
             "id": "unit-sorcerer-model-sorcerer",
@@ -1868,6 +2055,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaos-rhino-ability-assault-vehicle",
+            "title": "Assault Vehicle"
+          },
+          {
+            "id": "unit-chaos-rhino-ability-deadly-demise-d3-2",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-chaos-rhino-ability-thrill-seekers-3",
+            "title": "Thrill Seekers"
+          },
+          {
+            "id": "unit-chaos-rhino-ability-firing-deck-2-4",
+            "title": "Firing Deck 2"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-rhino-model-chaos-rhino",
@@ -2025,6 +2231,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-fulgrim-ability-daemonic-poisons",
+            "title": "Daemonic Poisons"
+          },
+          {
+            "id": "unit-fulgrim-ability-daemon-prince-of-slaanesh-2",
+            "title": "Daemon Prince of Slaanesh"
+          },
+          {
+            "id": "unit-fulgrim-ability-damaged-1-6-wounds-remaining-3",
+            "title": "Damaged: 1-6 Wounds Remaining"
+          },
+          {
+            "id": "unit-fulgrim-ability-supreme-commander-4",
+            "title": "Supreme Commander"
+          },
+          {
+            "id": "unit-fulgrim-ability-serpentine-5",
+            "title": "Serpentine"
+          },
+          {
+            "id": "unit-fulgrim-ability-thrill-seekers-6",
+            "title": "Thrill Seekers"
+          },
+          {
+            "id": "unit-fulgrim-ability-deep-strike-7",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-fulgrim-ability-deadly-demise-d6-8",
+            "title": "Deadly Demise D6"
+          }
+        ],
         "models": [
           {
             "id": "unit-fulgrim-model-fulgrim",
@@ -2188,6 +2429,37 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-lucius-the-eternal-ability-leader",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-lucius-the-eternal-ability-duellists-hubris-2",
+            "title": "Duellist’s Hubris"
+          },
+          {
+            "id": "unit-lucius-the-eternal-ability-a-challenge-worthy-of-skill-3",
+            "title": "A Challenge Worthy of Skill"
+          },
+          {
+            "id": "unit-lucius-the-eternal-ability-leader-4",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-lucius-the-eternal-ability-thrill-seekers-5",
+            "title": "Thrill Seekers"
+          },
+          {
+            "id": "unit-lucius-the-eternal-ability-feel-no-pain-5-6",
+            "title": "Feel No Pain 5+"
+          },
+          {
+            "id": "unit-lucius-the-eternal-ability-lone-operative-7",
+            "title": "Lone Operative"
+          }
+        ],
         "models": [
           {
             "id": "unit-lucius-the-eternal-model-lucius-the-eternal",
@@ -2289,6 +2561,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-shalaxi-helbane-ability-no-prey-can-evade",
+            "title": "No Prey Can Evade"
+          },
+          {
+            "id": "unit-shalaxi-helbane-ability-monarch-of-the-hunt-2",
+            "title": "Monarch of the Hunt"
+          },
+          {
+            "id": "unit-shalaxi-helbane-ability-damaged-1-7-wounds-remaining-3",
+            "title": "Damaged: 1-7 wounds remaining"
+          },
+          {
+            "id": "unit-shalaxi-helbane-ability-deadly-demise-d6-4",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-shalaxi-helbane-ability-deep-strike-5",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-shalaxi-helbane-model-shalaxi-helbane",
@@ -2468,6 +2763,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaos-terminators-ability-lethal-obsession",
+            "title": "Lethal Obsession"
+          },
+          {
+            "id": "unit-chaos-terminators-ability-deep-strike-2",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-chaos-terminators-ability-thrill-seekers-3",
+            "title": "Thrill Seekers"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-terminators-model-terminator-champion",
@@ -2745,6 +3055,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-flawless-blades-ability-daemonic-patrons",
+            "title": "Daemonic Patrons"
+          },
+          {
+            "id": "unit-flawless-blades-ability-thrill-seekers-2",
+            "title": "Thrill Seekers"
+          },
+          {
+            "id": "unit-flawless-blades-ability-fights-first-3",
+            "title": "Fights First"
+          }
+        ],
         "models": [
           {
             "id": "unit-flawless-blades-model-flawless-blade",
@@ -2860,6 +3185,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-noise-marines-ability-terrifying-crescendo",
+            "title": "Terrifying Crescendo"
+          },
+          {
+            "id": "unit-noise-marines-ability-thrill-seekers-2",
+            "title": "Thrill Seekers"
+          }
+        ],
         "models": [
           {
             "id": "unit-noise-marines-model-disharmonist",
@@ -3075,6 +3411,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaos-land-raider-ability-assault-ramp",
+            "title": "Assault Ramp"
+          },
+          {
+            "id": "unit-chaos-land-raider-ability-damaged-1-5-wounds-remaining-2",
+            "title": "Damaged: 1-5 wounds remaining"
+          },
+          {
+            "id": "unit-chaos-land-raider-ability-deadly-demise-d6-3",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-chaos-land-raider-ability-thrill-seekers-4",
+            "title": "Thrill Seekers"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-land-raider-model-chaos-land-raider",
@@ -3280,6 +3635,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaos-spawn-ability-scuttling-horrors",
+            "title": "Scuttling Horrors"
+          },
+          {
+            "id": "unit-chaos-spawn-ability-feel-no-pain-5-2",
+            "title": "Feel No Pain 5+"
+          },
+          {
+            "id": "unit-chaos-spawn-ability-thrill-seekers-3",
+            "title": "Thrill Seekers"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-spawn-model-chaos-spawn",
@@ -3352,6 +3722,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-defiler-ability-scuttling-walker",
+            "title": "Scuttling Walker"
+          },
+          {
+            "id": "unit-defiler-ability-revel-in-desecration-2",
+            "title": "Revel in Desecration"
+          },
+          {
+            "id": "unit-defiler-ability-deadly-demise-d6-3",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-defiler-ability-thrill-seekers-4",
+            "title": "Thrill Seekers"
+          },
+          {
+            "id": "unit-defiler-ability-damaged-1-6-wounds-remaining-5",
+            "title": "Damaged: 1-6 Wounds Remaining"
+          }
+        ],
         "models": [
           {
             "id": "unit-defiler-model-defiler",
@@ -3721,6 +4114,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-fiends-ability-soporific-musk",
+            "title": "Soporific Musk"
+          },
+          {
+            "id": "unit-fiends-ability-deep-strike-2",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-fiends-model-fiends",
@@ -3800,6 +4204,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-heldrake-ability-airborne-predator",
+            "title": "Airborne Predator"
+          },
+          {
+            "id": "unit-heldrake-ability-deadly-demise-d3-2",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-heldrake-ability-hover-3",
+            "title": "Hover"
+          },
+          {
+            "id": "unit-heldrake-ability-thrill-seekers-4",
+            "title": "Thrill Seekers"
+          }
+        ],
         "models": [
           {
             "id": "unit-heldrake-model-heldrake",
@@ -3926,6 +4349,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-maulerfiend-ability-glutton-for-punishment",
+            "title": "Glutton for Punishment"
+          },
+          {
+            "id": "unit-maulerfiend-ability-deadly-demise-d3-2",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-maulerfiend-ability-thrill-seekers-3",
+            "title": "Thrill Seekers"
+          }
+        ],
         "models": [
           {
             "id": "unit-maulerfiend-model-maulerfiend",
@@ -4052,6 +4490,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-seekers-ability-unholy-speed",
+            "title": "Unholy Speed"
+          },
+          {
+            "id": "unit-seekers-ability-deep-strike-2",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-seekers-ability-scouts-9-3",
+            "title": "Scouts 9\""
+          }
+        ],
         "models": [
           {
             "id": "unit-seekers-model-seeker",

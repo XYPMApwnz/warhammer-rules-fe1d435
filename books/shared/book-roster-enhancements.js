@@ -22,6 +22,7 @@
   const api={
     registerProvider(next){if(!next||typeof next.decorate!=='function')throw new TypeError('Roster Enhancement provider must expose decorate()');provider=next;return api;},
     decorate(...args){return (provider?.decorate||decorateGeneric)(...args);},
+    gameEffects(...args){return provider?.gameEffects?.(...args)||[];},
     assignedRuleIds(...args){return provider?.assignedRuleIds?.(...args)||[];},
     assignedRecords(...args){return provider?.assignedRecords?.(...args)||[];}
   };

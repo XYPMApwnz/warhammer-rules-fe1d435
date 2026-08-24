@@ -9,7 +9,7 @@
       },
       decorate(card,projection,items){
         const context={attachments:projection.record.attachments||{},unitById:new Map(projection.units.map(item=>[item.raw.id,item.raw])),detachmentIds:projection.detachmentIds,projectedEffects:items[0]?.game?.effects||[]};
-        root.AMRosterEnhancements?.decorate?.(card,projection.roster,items.map(item=>item.raw),context);
+        root.AMRosterEnhancements?.decorate?.(card,projection.roster,items.map(item=>item.raw),{...context,applyEffects:false});
       }
     };
     root.WHArmyRosterContext.install({bookId:'adeptus-mechanicus',guideGlobal:'AM_ROSTER_GUIDE',provider});

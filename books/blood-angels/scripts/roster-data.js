@@ -125,6 +125,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-assault-intercessor-squad-ability-shock-assault",
+            "title": "Shock Assault"
+          },
+          {
+            "id": "unit-assault-intercessor-squad-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-assault-intercessor-squad-model-assault-intercessors",
@@ -406,6 +417,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-heavy-intercessor-squad-ability-unyielding-in-the-face-of-the-foe",
+            "title": "Unyielding in the Face of the Foe"
+          },
+          {
+            "id": "unit-heavy-intercessor-squad-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-heavy-intercessor-squad-model-heavy-intercessors",
@@ -643,6 +665,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-intercessor-squad-ability-objective-secured",
+            "title": "Objective Secured"
+          },
+          {
+            "id": "unit-intercessor-squad-ability-hail-of-bolts-2",
+            "title": "Hail of Bolts"
+          },
+          {
+            "id": "unit-intercessor-squad-ability-oath-of-moment-3",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-intercessor-squad-model-intercessors",
@@ -1071,6 +1108,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-tactical-squad-ability-combat-squads",
+            "title": "Combat Squads"
+          },
+          {
+            "id": "unit-tactical-squad-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-tactical-squad-model-tactical-marines",
@@ -1876,6 +1924,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-ancient-ability-unbreakable-duty",
+            "title": "Unbreakable Duty"
+          },
+          {
+            "id": "unit-ancient-ability-support-2",
+            "title": "Support"
+          },
+          {
+            "id": "unit-ancient-ability-astartes-banner-3",
+            "title": "Astartes Banner"
+          },
+          {
+            "id": "unit-ancient-ability-support-4",
+            "title": "Support"
+          },
+          {
+            "id": "unit-ancient-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-ancient-model-ancient",
@@ -2038,6 +2109,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-ancient-in-terminator-armor-ability-keep-the-banner-high",
+            "title": "Keep the Banner High"
+          },
+          {
+            "id": "unit-ancient-in-terminator-armor-ability-support-2",
+            "title": "Support"
+          },
+          {
+            "id": "unit-ancient-in-terminator-armor-ability-astartes-banner-3",
+            "title": "Astartes Banner"
+          },
+          {
+            "id": "unit-ancient-in-terminator-armor-ability-support-4",
+            "title": "Support"
+          },
+          {
+            "id": "unit-ancient-in-terminator-armor-ability-deep-strike-5",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-ancient-in-terminator-armor-ability-oath-of-moment-6",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-ancient-in-terminator-armor-model-ancient-in-terminator-armor",
@@ -2349,6 +2447,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-apothecary-ability-narthecium",
+            "title": "Narthecium"
+          },
+          {
+            "id": "unit-apothecary-ability-gene-seed-recovery-2",
+            "title": "Gene Seed Recovery"
+          },
+          {
+            "id": "unit-apothecary-ability-support-3",
+            "title": "Support"
+          },
+          {
+            "id": "unit-apothecary-ability-support-4",
+            "title": "Support"
+          },
+          {
+            "id": "unit-apothecary-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-apothecary-model-apothecary",
@@ -2501,6 +2622,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-apothecary-biologis-ability-surgical-precision",
+            "title": "Surgical Precision"
+          },
+          {
+            "id": "unit-apothecary-biologis-ability-vivispectrum-2",
+            "title": "Vivispectrum"
+          },
+          {
+            "id": "unit-apothecary-biologis-ability-support-3",
+            "title": "Support"
+          },
+          {
+            "id": "unit-apothecary-biologis-ability-support-4",
+            "title": "Support"
+          },
+          {
+            "id": "unit-apothecary-biologis-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-apothecary-biologis-model-apothecary-biologis",
@@ -2601,6 +2745,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-bladeguard-ancient-ability-deeds-of-heroism",
+            "title": "Deeds of Heroism"
+          },
+          {
+            "id": "unit-bladeguard-ancient-ability-support-2",
+            "title": "Support"
+          },
+          {
+            "id": "unit-bladeguard-ancient-ability-astartes-banner-3",
+            "title": "Astartes Banner"
+          },
+          {
+            "id": "unit-bladeguard-ancient-ability-support-4",
+            "title": "Support"
+          },
+          {
+            "id": "unit-bladeguard-ancient-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-bladeguard-ancient-model-bladeguard-ancient",
@@ -2766,6 +2933,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-captain-ability-finest-hour",
+            "title": "Finest Hour"
+          },
+          {
+            "id": "unit-captain-ability-rites-of-battle-2",
+            "title": "Rites of Battle"
+          },
+          {
+            "id": "unit-captain-ability-leader-3",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-captain-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-captain-model-captain",
@@ -3099,6 +3285,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-captain-in-gravis-armour-ability-refuse-to-yield",
+            "title": "Refuse to Yield"
+          },
+          {
+            "id": "unit-captain-in-gravis-armour-ability-rites-of-battle-2",
+            "title": "Rites of Battle"
+          },
+          {
+            "id": "unit-captain-in-gravis-armour-ability-leader-3",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-captain-in-gravis-armour-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-captain-in-gravis-armour-model-captain-in-gravis-armour",
@@ -3375,6 +3580,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-captain-in-phobos-armour-ability-master-of-deceit",
+            "title": "Master of Deceit"
+          },
+          {
+            "id": "unit-captain-in-phobos-armour-ability-rites-of-battle-2",
+            "title": "Rites of Battle"
+          },
+          {
+            "id": "unit-captain-in-phobos-armour-ability-leader-3",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-captain-in-phobos-armour-ability-infiltrators-4",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-captain-in-phobos-armour-ability-stealth-5",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-captain-in-phobos-armour-ability-oath-of-moment-6",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-captain-in-phobos-armour-model-captain-in-phobos-armour",
@@ -3518,6 +3750,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-captain-in-terminator-armour-ability-unstoppable-valour",
+            "title": "Unstoppable Valour"
+          },
+          {
+            "id": "unit-captain-in-terminator-armour-ability-rites-of-battle-2",
+            "title": "Rites of Battle"
+          },
+          {
+            "id": "unit-captain-in-terminator-armour-ability-invulnerable-save-3",
+            "title": "Invulnerable Save"
+          },
+          {
+            "id": "unit-captain-in-terminator-armour-ability-leader-4",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-captain-in-terminator-armour-ability-deep-strike-5",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-captain-in-terminator-armour-ability-oath-of-moment-6",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-captain-in-terminator-armour-model-captain-in-terminator-armour",
@@ -3699,6 +3958,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-captain-with-jump-pack-ability-angels-wrath",
+            "title": "Angel's Wrath"
+          },
+          {
+            "id": "unit-captain-with-jump-pack-ability-rites-of-battle-2",
+            "title": "Rites of Battle"
+          },
+          {
+            "id": "unit-captain-with-jump-pack-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-captain-with-jump-pack-ability-leader-4",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-captain-with-jump-pack-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-captain-with-jump-pack-model-captain-with-jump-pack",
@@ -4053,6 +4335,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaplain-ability-litany-of-hate",
+            "title": "Litany of Hate"
+          },
+          {
+            "id": "unit-chaplain-ability-spiritual-leader-2",
+            "title": "Spiritual Leader"
+          },
+          {
+            "id": "unit-chaplain-ability-leader-3",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-chaplain-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaplain-model-chaplain",
@@ -4169,6 +4470,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaplain-in-terminator-armour-ability-recitation-of-faith",
+            "title": "Recitation of Faith"
+          },
+          {
+            "id": "unit-chaplain-in-terminator-armour-ability-litany-of-hate-2",
+            "title": "Litany of Hate"
+          },
+          {
+            "id": "unit-chaplain-in-terminator-armour-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-chaplain-in-terminator-armour-ability-leader-4",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-chaplain-in-terminator-armour-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaplain-in-terminator-armour-model-chaplain-in-terminator-armour",
@@ -4296,6 +4620,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaplain-on-bike-ability-catechism-of-fire",
+            "title": "Catechism of Fire"
+          },
+          {
+            "id": "unit-chaplain-on-bike-ability-litany-of-hate-2",
+            "title": "Litany of Hate"
+          },
+          {
+            "id": "unit-chaplain-on-bike-ability-leader-3",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-chaplain-on-bike-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaplain-on-bike-model-chaplain-on-bike",
@@ -4448,6 +4791,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaplain-with-jump-pack-ability-exhortation-of-rage",
+            "title": "Exhortation of Rage"
+          },
+          {
+            "id": "unit-chaplain-with-jump-pack-ability-litany-of-hate-2",
+            "title": "Litany of Hate"
+          },
+          {
+            "id": "unit-chaplain-with-jump-pack-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-chaplain-with-jump-pack-ability-leader-4",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-chaplain-with-jump-pack-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaplain-with-jump-pack-model-chaplain-with-jump-pack",
@@ -4866,6 +5232,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-judiciar-ability-tempormortis",
+            "title": "Tempormortis"
+          },
+          {
+            "id": "unit-judiciar-ability-silent-fury-2",
+            "title": "Silent Fury"
+          },
+          {
+            "id": "unit-judiciar-ability-invulnerable-save-3",
+            "title": "*Invulnerable Save"
+          },
+          {
+            "id": "unit-judiciar-ability-leader-4",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-judiciar-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-judiciar-model-judiciar",
@@ -5032,6 +5421,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-librarian-ability-mental-fortress-psychic",
+            "title": "Mental Fortress [Psychic]"
+          },
+          {
+            "id": "unit-librarian-ability-psychic-hood-2",
+            "title": "Psychic Hood"
+          },
+          {
+            "id": "unit-librarian-ability-leader-3",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-librarian-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-librarian-model-librarian",
@@ -5220,6 +5628,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-librarian-in-phobos-armour-ability-shrouding-psychic",
+            "title": "Shrouding [Psychic]"
+          },
+          {
+            "id": "unit-librarian-in-phobos-armour-ability-psychic-hood-2",
+            "title": "Psychic Hood"
+          },
+          {
+            "id": "unit-librarian-in-phobos-armour-ability-leader-3",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-librarian-in-phobos-armour-ability-infiltrators-4",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-librarian-in-phobos-armour-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-librarian-in-phobos-armour-model-librarian-in-phobos-armour",
@@ -5391,6 +5822,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-librarian-in-terminator-armour-ability-veil-of-time-psychic",
+            "title": "Veil of Time [Psychic]"
+          },
+          {
+            "id": "unit-librarian-in-terminator-armour-ability-psychic-hood-2",
+            "title": "Psychic Hood"
+          },
+          {
+            "id": "unit-librarian-in-terminator-armour-ability-leader-3",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-librarian-in-terminator-armour-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          },
+          {
+            "id": "unit-librarian-in-terminator-armour-ability-deep-strike-5",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-librarian-in-terminator-armour-model-librarian-in-terminator-armour",
@@ -5629,6 +6083,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-lieutenant-ability-support",
+            "title": "Support"
+          },
+          {
+            "id": "unit-lieutenant-ability-target-priority-2",
+            "title": "Target Priority"
+          },
+          {
+            "id": "unit-lieutenant-ability-tactical-precision-3",
+            "title": "Tactical Precision"
+          },
+          {
+            "id": "unit-lieutenant-ability-support-4",
+            "title": "Support"
+          },
+          {
+            "id": "unit-lieutenant-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-lieutenant-model-lieutenant",
@@ -5962,6 +6439,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-lieutenant-in-phobos-armour-ability-strategic-dispersal",
+            "title": "Strategic Dispersal"
+          },
+          {
+            "id": "unit-lieutenant-in-phobos-armour-ability-support-2",
+            "title": "Support"
+          },
+          {
+            "id": "unit-lieutenant-in-phobos-armour-ability-tactical-precision-3",
+            "title": "Tactical Precision"
+          },
+          {
+            "id": "unit-lieutenant-in-phobos-armour-ability-infiltrators-4",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-lieutenant-in-phobos-armour-ability-scouts-6-5",
+            "title": "Scouts 6\""
+          },
+          {
+            "id": "unit-lieutenant-in-phobos-armour-ability-deep-strike-6",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-lieutenant-in-phobos-armour-ability-leader-7",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-lieutenant-in-phobos-armour-ability-oath-of-moment-8",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-lieutenant-in-phobos-armour-model-lieutenant-in-phobos-armour",
@@ -6090,6 +6602,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-lieutenant-in-reiver-armour-ability-deadly-terror",
+            "title": "Deadly Terror"
+          },
+          {
+            "id": "unit-lieutenant-in-reiver-armour-ability-support-2",
+            "title": "Support"
+          },
+          {
+            "id": "unit-lieutenant-in-reiver-armour-ability-tactical-precision-3",
+            "title": "Tactical Precision"
+          },
+          {
+            "id": "unit-lieutenant-in-reiver-armour-ability-scouts-6-4",
+            "title": "Scouts 6\""
+          },
+          {
+            "id": "unit-lieutenant-in-reiver-armour-ability-support-5",
+            "title": "Support"
+          },
+          {
+            "id": "unit-lieutenant-in-reiver-armour-ability-oath-of-moment-6",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-lieutenant-in-reiver-armour-model-lieutenant-in-reiver-armour",
@@ -6190,6 +6729,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-lieutenant-with-combi-weapon-ability-priority-objective-identified",
+            "title": "Priority Objective Identified"
+          },
+          {
+            "id": "unit-lieutenant-with-combi-weapon-ability-evade-and-survive-2",
+            "title": "Evade and Survive"
+          },
+          {
+            "id": "unit-lieutenant-with-combi-weapon-ability-lone-survivor-3",
+            "title": "Lone Survivor"
+          },
+          {
+            "id": "unit-lieutenant-with-combi-weapon-ability-feel-no-pain-5-4",
+            "title": "Feel No Pain 5+"
+          },
+          {
+            "id": "unit-lieutenant-with-combi-weapon-ability-infiltrators-5",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-lieutenant-with-combi-weapon-ability-lone-operative-6",
+            "title": "Lone Operative"
+          },
+          {
+            "id": "unit-lieutenant-with-combi-weapon-ability-stealth-7",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-lieutenant-with-combi-weapon-ability-oath-of-moment-8",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-lieutenant-with-combi-weapon-model-lieutenant-with-combi-weapon",
@@ -6331,6 +6905,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-techmarine-ability-techmarine",
+            "title": "Techmarine"
+          },
+          {
+            "id": "unit-techmarine-ability-blessing-of-the-omnissiah-2",
+            "title": "Blessing of the Omnissiah"
+          },
+          {
+            "id": "unit-techmarine-ability-vengeance-of-the-omnissiah-3",
+            "title": "Vengeance of the Omnissiah"
+          },
+          {
+            "id": "unit-techmarine-ability-leader-4",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-techmarine-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-techmarine-model-techmarine",
@@ -6483,6 +7080,37 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-drop-pod-ability-drop-pod-assault",
+            "title": "Drop Pod Assault"
+          },
+          {
+            "id": "unit-drop-pod-ability-transport-2",
+            "title": "Transport"
+          },
+          {
+            "id": "unit-drop-pod-ability-combat-disembarkation-3",
+            "title": "Combat Disembarkation"
+          },
+          {
+            "id": "unit-drop-pod-ability-deployment-complete-4",
+            "title": "Deployment Complete"
+          },
+          {
+            "id": "unit-drop-pod-ability-deadly-demise-1-5",
+            "title": "Deadly Demise 1"
+          },
+          {
+            "id": "unit-drop-pod-ability-deep-strike-6",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-drop-pod-ability-oath-of-moment-7",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-drop-pod-model-drop-pod",
@@ -6525,6 +7153,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-impulsor-ability-transport",
+            "title": "Transport"
+          },
+          {
+            "id": "unit-impulsor-ability-assault-vehicle-2",
+            "title": "Assault Vehicle"
+          },
+          {
+            "id": "unit-impulsor-ability-orbital-comms-array-aura-3",
+            "title": "Orbital Comms Array [Aura]"
+          },
+          {
+            "id": "unit-impulsor-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-impulsor-ability-firing-deck-6-5",
+            "title": "Firing Deck 6"
+          },
+          {
+            "id": "unit-impulsor-ability-oath-of-moment-6",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-impulsor-model-impulsor",
@@ -6806,6 +7461,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-razorback-ability-fire-support",
+            "title": "Fire Support"
+          },
+          {
+            "id": "unit-razorback-ability-transport-2",
+            "title": "Transport"
+          },
+          {
+            "id": "unit-razorback-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-razorback-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-razorback-model-razorback",
@@ -6987,6 +7661,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-rhino-ability-self-repair",
+            "title": "Self Repair"
+          },
+          {
+            "id": "unit-rhino-ability-transport-2",
+            "title": "Transport"
+          },
+          {
+            "id": "unit-rhino-ability-firing-deck-2-3",
+            "title": "Firing Deck 2"
+          },
+          {
+            "id": "unit-rhino-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-rhino-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-rhino-model-rhino",
@@ -7111,6 +7808,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-hammerfall-bunker-ability-fortification",
+            "title": "Fortification"
+          },
+          {
+            "id": "unit-hammerfall-bunker-ability-ceramite-cover-2",
+            "title": "Ceramite Cover"
+          },
+          {
+            "id": "unit-hammerfall-bunker-ability-defensive-array-3",
+            "title": "Defensive Array"
+          },
+          {
+            "id": "unit-hammerfall-bunker-ability-damaged-1-4-wounds-remaining-4",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-hammerfall-bunker-ability-deadly-demise-d6-5",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-hammerfall-bunker-ability-oath-of-moment-6",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-hammerfall-bunker-model-hammerfall-bunker",
@@ -7282,6 +8006,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-aggressor-squad-ability-close-quarters-firepower",
+            "title": "Close-quarters Firepower"
+          },
+          {
+            "id": "unit-aggressor-squad-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-aggressor-squad-model-aggressors",
@@ -7462,6 +8197,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-assault-intercessors-with-jump-packs-ability-hammer-of-wrath",
+            "title": "Hammer of Wrath"
+          },
+          {
+            "id": "unit-assault-intercessors-with-jump-packs-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          },
+          {
+            "id": "unit-assault-intercessors-with-jump-packs-ability-deep-strike-3",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-assault-intercessors-with-jump-packs-model-assault-intercessors-with-jump-packs",
@@ -7739,6 +8489,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-bladeguard-veteran-squad-ability-bladeguard",
+            "title": "Bladeguard"
+          },
+          {
+            "id": "unit-bladeguard-veteran-squad-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-bladeguard-veteran-squad-model-bladeguard-veterans",
@@ -7917,6 +8678,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-centurion-assault-squad-ability-annihilator-protocols",
+            "title": "Annihilator Protocols"
+          },
+          {
+            "id": "unit-centurion-assault-squad-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-centurion-assault-squad-model-assault-centurions",
@@ -8087,6 +8859,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-centurion-devastator-squad-ability-decimator-protocols",
+            "title": "Decimator Protocols"
+          },
+          {
+            "id": "unit-centurion-devastator-squad-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-centurion-devastator-squad-model-devastator-centurions",
@@ -8337,6 +9120,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-company-heroes-ability-ancient-banner",
+            "title": "Ancient Banner"
+          },
+          {
+            "id": "unit-company-heroes-ability-command-squad-2",
+            "title": "Command Squad"
+          },
+          {
+            "id": "unit-company-heroes-ability-oath-of-moment-3",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-company-heroes-model-unit-composition",
@@ -8587,6 +9385,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-desolation-squad-ability-targeter-optics",
+            "title": "Targeter Optics"
+          },
+          {
+            "id": "unit-desolation-squad-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-desolation-squad-model-desolation-marines",
@@ -8836,6 +9645,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-devastator-squad-ability-signum",
+            "title": "Signum"
+          },
+          {
+            "id": "unit-devastator-squad-ability-armorium-cherub-2",
+            "title": "Armorium Cherub"
+          },
+          {
+            "id": "unit-devastator-squad-ability-oath-of-moment-3",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-devastator-squad-model-devastators",
@@ -9418,6 +10242,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-eliminator-squad-ability-reposition-under-covering-fire",
+            "title": "Reposition Under Covering Fire"
+          },
+          {
+            "id": "unit-eliminator-squad-ability-mark-the-target-2",
+            "title": "Mark the Target"
+          },
+          {
+            "id": "unit-eliminator-squad-ability-infiltrators-3",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-eliminator-squad-ability-stealth-4",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-eliminator-squad-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-eliminator-squad-model-eliminators",
@@ -9617,6 +10464,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-eradicator-squad-ability-total-obliteration",
+            "title": "Total Obliteration"
+          },
+          {
+            "id": "unit-eradicator-squad-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-eradicator-squad-model-eradicators",
@@ -9769,6 +10627,13 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-eradicator-squad-with-heavy-bolters-ability-overlapping-detonations",
+            "title": "Overlapping Detonations"
+          }
+        ],
         "models": [
           {
             "id": "unit-eradicator-squad-with-heavy-bolters-model-eradicators",
@@ -9954,6 +10819,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-hellblaster-squad-ability-for-the-chapter",
+            "title": "For the Chapter!"
+          },
+          {
+            "id": "unit-hellblaster-squad-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-hellblaster-squad-model-hellblasters",
@@ -10161,6 +11037,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-inceptor-squad-ability-meteoric-descent",
+            "title": "Meteoric Descent"
+          },
+          {
+            "id": "unit-inceptor-squad-ability-deep-strike-2",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-inceptor-squad-ability-oath-of-moment-3",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-inceptor-squad-model-inceptors",
@@ -10342,6 +11233,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-incursor-squad-ability-multi-spectrum-array",
+            "title": "Multi-spectrum Array"
+          },
+          {
+            "id": "unit-incursor-squad-ability-scouts-6-2",
+            "title": "Scouts 6\""
+          },
+          {
+            "id": "unit-incursor-squad-ability-oath-of-moment-3",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-incursor-squad-model-incursors",
@@ -10562,6 +11468,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-infernus-squad-ability-purge-the-foe",
+            "title": "Purge the Foe"
+          },
+          {
+            "id": "unit-infernus-squad-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-infernus-squad-model-infernus-marines",
@@ -10716,6 +11633,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-infiltrator-squad-ability-omni-scramblers",
+            "title": "Omni-scramblers"
+          },
+          {
+            "id": "unit-infiltrator-squad-ability-feel-no-pain-2",
+            "title": "Feel No Pain"
+          },
+          {
+            "id": "unit-infiltrator-squad-ability-infiltrators-3",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-infiltrator-squad-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-infiltrator-squad-model-infiltrators",
@@ -10907,6 +11843,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-reiver-squad-ability-fearsome-assault",
+            "title": "Fearsome Assault"
+          },
+          {
+            "id": "unit-reiver-squad-ability-terror-troops-2",
+            "title": "Terror Troops"
+          },
+          {
+            "id": "unit-reiver-squad-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-reiver-squad-ability-scouts-6-4",
+            "title": "Scouts 6\""
+          },
+          {
+            "id": "unit-reiver-squad-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-reiver-squad-model-reivers",
@@ -11106,6 +12065,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-scout-squad-ability-guerrilla-tactics",
+            "title": "Guerrilla Tactics"
+          },
+          {
+            "id": "unit-scout-squad-ability-scouts-6-2",
+            "title": "Scouts 6\""
+          },
+          {
+            "id": "unit-scout-squad-ability-infiltrators-3",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-scout-squad-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-scout-squad-model-scouts",
@@ -11496,6 +12474,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-sternguard-veteran-squad-ability-sternguard-focus",
+            "title": "Sternguard Focus"
+          },
+          {
+            "id": "unit-sternguard-veteran-squad-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-sternguard-veteran-squad-model-sternguard-veterans",
@@ -11785,6 +12774,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-suppressor-squad-ability-suppression-fire",
+            "title": "Suppression Fire"
+          },
+          {
+            "id": "unit-suppressor-squad-ability-deep-strike-2",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-suppressor-squad-ability-oath-of-moment-3",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-suppressor-squad-model-suppressors",
@@ -11945,6 +12949,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-terminator-assault-squad-ability-teleport-homer",
+            "title": "Teleport Homer"
+          },
+          {
+            "id": "unit-terminator-assault-squad-ability-terminatus-assault-2",
+            "title": "Terminatus Assault"
+          },
+          {
+            "id": "unit-terminator-assault-squad-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-terminator-assault-squad-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-terminator-assault-squad-model-assault-terminators",
@@ -12087,6 +13110,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-terminator-squad-ability-teleport-homer",
+            "title": "Teleport Homer"
+          },
+          {
+            "id": "unit-terminator-squad-ability-fury-of-the-first-2",
+            "title": "Fury of the First"
+          },
+          {
+            "id": "unit-terminator-squad-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-terminator-squad-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-terminator-squad-model-terminators",
@@ -12375,6 +13417,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-vanguard-veteran-squad-with-jump-packs-ability-vanguard-assault",
+            "title": "Vanguard Assault"
+          },
+          {
+            "id": "unit-vanguard-veteran-squad-with-jump-packs-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          },
+          {
+            "id": "unit-vanguard-veteran-squad-with-jump-packs-ability-deep-strike-3",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-vanguard-veteran-squad-with-jump-packs-model-vanguard-veterans-with-jump-packs",
@@ -12681,6 +13738,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-invader-atv-ability-outrider-escort",
+            "title": "Outrider Escort"
+          },
+          {
+            "id": "unit-invader-atv-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-invader-atv-model-invader-atv",
@@ -12869,6 +13937,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-outrider-squad-ability-thunderous-impact",
+            "title": "Thunderous Impact"
+          },
+          {
+            "id": "unit-outrider-squad-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-outrider-squad-model-invader-atv",
@@ -13109,6 +14188,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-ballistus-dreadnought-ability-ballistus-strike",
+            "title": "Ballistus Strike"
+          },
+          {
+            "id": "unit-ballistus-dreadnought-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-ballistus-dreadnought-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-ballistus-dreadnought-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-ballistus-dreadnought-model-ballistus-dreadnought",
@@ -13288,6 +14386,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-brutalis-dreadnought-ability-brutalis-charge",
+            "title": "Brutalis Charge"
+          },
+          {
+            "id": "unit-brutalis-dreadnought-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-brutalis-dreadnought-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-brutalis-dreadnought-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-brutalis-dreadnought-model-brutalis-dreadnought",
@@ -13521,6 +14638,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-dreadnought-ability-wisdom-of-the-ancients-aura",
+            "title": "Wisdom of the Ancients [Aura]"
+          },
+          {
+            "id": "unit-dreadnought-ability-deadly-demise-1-2",
+            "title": "Deadly Demise 1"
+          },
+          {
+            "id": "unit-dreadnought-ability-oath-of-moment-3",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-dreadnought-model-dreadnought",
@@ -13861,6 +14993,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-firestrike-servo-turrets-ability-sentinel-protocols",
+            "title": "Sentinel Protocols"
+          },
+          {
+            "id": "unit-firestrike-servo-turrets-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-firestrike-servo-turrets-model-firestrike-servo-turrets",
@@ -13986,6 +15129,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-gladiator-lancer-ability-aqullon-optics",
+            "title": "Aqullon Optics"
+          },
+          {
+            "id": "unit-gladiator-lancer-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-gladiator-lancer-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-gladiator-lancer-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-gladiator-lancer-model-gladiator-lancer",
@@ -14192,6 +15354,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-gladiator-reaper-ability-rotating-death",
+            "title": "Rotating Death"
+          },
+          {
+            "id": "unit-gladiator-reaper-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-gladiator-reaper-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-gladiator-reaper-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-gladiator-reaper-model-gladiator-reaper",
@@ -14371,6 +15552,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-gladiator-valiant-ability-ferocious-assault",
+            "title": "Ferocious Assault"
+          },
+          {
+            "id": "unit-gladiator-valiant-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-gladiator-valiant-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-gladiator-valiant-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-gladiator-valiant-model-gladiator-valiant",
@@ -14550,6 +15750,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-invictor-tactical-warsuit-ability-combat-support",
+            "title": "Combat Support"
+          },
+          {
+            "id": "unit-invictor-tactical-warsuit-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-invictor-tactical-warsuit-ability-scouts-8-3",
+            "title": "Scouts 8\""
+          },
+          {
+            "id": "unit-invictor-tactical-warsuit-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-invictor-tactical-warsuit-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-invictor-tactical-warsuit-model-invictor-tactical-warsuit",
@@ -14757,6 +15980,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-land-raider-ability-assault-ramp",
+            "title": "Assault Ramp"
+          },
+          {
+            "id": "unit-land-raider-ability-transport-2",
+            "title": "Transport"
+          },
+          {
+            "id": "unit-land-raider-ability-damaged-1-5-wounds-remaining-3",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-land-raider-ability-deadly-demise-d6-4",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-land-raider-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-land-raider-model-land-raider",
@@ -14966,6 +16212,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-land-raider-crusader-ability-transport",
+            "title": "Transport"
+          },
+          {
+            "id": "unit-land-raider-crusader-ability-assault-ramp-2",
+            "title": "Assault Ramp"
+          },
+          {
+            "id": "unit-land-raider-crusader-ability-damaged-1-5-wounds-remaining-3",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-land-raider-crusader-ability-deadly-demise-d6-4",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-land-raider-crusader-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-land-raider-crusader-model-land-raider-crusader",
@@ -15175,6 +16444,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-land-raider-redeemer-ability-transport",
+            "title": "Transport"
+          },
+          {
+            "id": "unit-land-raider-redeemer-ability-assault-ramp-2",
+            "title": "Assault Ramp"
+          },
+          {
+            "id": "unit-land-raider-redeemer-ability-damaged-1-5-wounds-remaining-3",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-land-raider-redeemer-ability-deadly-demise-d6-4",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-land-raider-redeemer-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-land-raider-redeemer-model-land-raider-redeemer",
@@ -15380,6 +16672,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-land-speeder-ability-purgation-run",
+            "title": "Purgation Run"
+          },
+          {
+            "id": "unit-land-speeder-ability-oath-of-moment-2",
+            "title": "Oath of Moment"
+          },
+          {
+            "id": "unit-land-speeder-ability-deep-strike-3",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-land-speeder-model-land-speeder",
@@ -15558,6 +16865,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-predator-annihilator-ability-annihilator",
+            "title": "Annihilator"
+          },
+          {
+            "id": "unit-predator-annihilator-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-predator-annihilator-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-predator-annihilator-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-predator-annihilator-model-predator-annihilator",
@@ -15763,6 +17089,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-predator-destructor-ability-destructor",
+            "title": "Destructor"
+          },
+          {
+            "id": "unit-predator-destructor-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-predator-destructor-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-predator-destructor-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-predator-destructor-model-predator-destructor",
@@ -15969,6 +17314,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-redemptor-dreadnought-ability-duty-eternal",
+            "title": "Duty Eternal"
+          },
+          {
+            "id": "unit-redemptor-dreadnought-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-redemptor-dreadnought-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-redemptor-dreadnought-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-redemptor-dreadnought-model-redemptor-dreadnought",
@@ -16257,6 +17621,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-repulsor-ability-transport",
+            "title": "Transport"
+          },
+          {
+            "id": "unit-repulsor-ability-emergency-combat-embarkation-2",
+            "title": "Emergency Combat Embarkation"
+          },
+          {
+            "id": "unit-repulsor-ability-damaged-1-5-wounds-remaining-3",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-repulsor-ability-deadly-demise-d6-4",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-repulsor-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-repulsor-model-repulsor",
@@ -16491,6 +17878,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-repulsor-executioner-ability-transport",
+            "title": "Transport"
+          },
+          {
+            "id": "unit-repulsor-executioner-ability-executioner-2",
+            "title": "Executioner"
+          },
+          {
+            "id": "unit-repulsor-executioner-ability-damaged-1-5-wounds-remaining-3",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-repulsor-executioner-ability-deadly-demise-d6-4",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-repulsor-executioner-ability-oath-of-moment-5",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-repulsor-executioner-model-repulsor-executioner",
@@ -16805,6 +18215,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-storm-speeder-hailstrike-ability-hailstrike",
+            "title": "Hailstrike"
+          },
+          {
+            "id": "unit-storm-speeder-hailstrike-ability-deep-strike-2",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-storm-speeder-hailstrike-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-storm-speeder-hailstrike-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-storm-speeder-hailstrike-model-storm-speeder-hailstrike",
@@ -16957,6 +18386,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-storm-speeder-hammerstrike-ability-hammerstrike",
+            "title": "Hammerstrike"
+          },
+          {
+            "id": "unit-storm-speeder-hammerstrike-ability-deep-strike-2",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-storm-speeder-hammerstrike-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-storm-speeder-hammerstrike-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-storm-speeder-hammerstrike-model-storm-speeder-hammerstrike",
@@ -17109,6 +18557,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-storm-speeder-thunderstrike-ability-thunderstrike",
+            "title": "Thunderstrike"
+          },
+          {
+            "id": "unit-storm-speeder-thunderstrike-ability-deadly-demise-d3-2",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-storm-speeder-thunderstrike-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-storm-speeder-thunderstrike-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-storm-speeder-thunderstrike-model-storm-speeder-thunderstrike",
@@ -17262,6 +18729,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-stormhawk-interceptor-ability-interceptor",
+            "title": "Interceptor"
+          },
+          {
+            "id": "unit-stormhawk-interceptor-ability-deadly-demise-d3-2",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-stormhawk-interceptor-ability-oath-of-moment-3",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-stormhawk-interceptor-model-stormhawk-interceptor",
@@ -17522,6 +19004,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-stormraven-gunship-ability-armoured-resilience",
+            "title": "Armoured Resilience"
+          },
+          {
+            "id": "unit-stormraven-gunship-ability-transport-2",
+            "title": "Transport"
+          },
+          {
+            "id": "unit-stormraven-gunship-ability-damaged-1-5-wounds-remaining-3",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-stormraven-gunship-ability-hover-4",
+            "title": "Hover"
+          },
+          {
+            "id": "unit-stormraven-gunship-ability-deadly-demise-d6-5",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-stormraven-gunship-ability-oath-of-moment-6",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-stormraven-gunship-model-stormraven-gunship",
@@ -17863,6 +19372,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-stormtalon-gunship-ability-strafing-run",
+            "title": "Strafing Run"
+          },
+          {
+            "id": "unit-stormtalon-gunship-ability-deadly-demise-d3-2",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-stormtalon-gunship-ability-oath-of-moment-3",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-stormtalon-gunship-model-stormtalon-gunship",
@@ -18095,6 +19619,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-vindicator-ability-siege-shield",
+            "title": "Siege Shield"
+          },
+          {
+            "id": "unit-vindicator-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-vindicator-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-vindicator-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-vindicator-model-vindicator",
@@ -18246,6 +19789,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-whirlwind-ability-pinning-bombardment",
+            "title": "Pinning Bombardment"
+          },
+          {
+            "id": "unit-whirlwind-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-whirlwind-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-whirlwind-ability-oath-of-moment-4",
+            "title": "Oath of Moment"
+          }
+        ],
         "models": [
           {
             "id": "unit-whirlwind-model-whirlwind",
@@ -18450,6 +20012,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-blood-angels-captain-ability-rites-of-battle",
+            "title": "Rites of Battle"
+          },
+          {
+            "id": "unit-blood-angels-captain-ability-finest-hour-2",
+            "title": "Finest Hour"
+          },
+          {
+            "id": "unit-blood-angels-captain-ability-leader-3",
+            "title": "Leader"
+          }
+        ],
         "models": [
           {
             "id": "unit-blood-angels-captain-model-blood-angels-captain",
@@ -18650,6 +20227,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-death-company-captain-ability-forlorn-hero",
+            "title": "Forlorn Hero"
+          },
+          {
+            "id": "unit-death-company-captain-ability-death-vision-of-sanguinius-2",
+            "title": "Death Vision of Sanguinius"
+          },
+          {
+            "id": "unit-death-company-captain-ability-black-rage-3",
+            "title": "Black Rage"
+          },
+          {
+            "id": "unit-death-company-captain-ability-feel-no-pain-6-4",
+            "title": "Feel No Pain 6+"
+          }
+        ],
         "models": [
           {
             "id": "unit-death-company-captain-model-death-company-captain",
@@ -18844,6 +20440,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-death-company-captain-with-jump-pack-ability-death-vision-of-sanguinius",
+            "title": "Death Vision of Sanguinius"
+          },
+          {
+            "id": "unit-death-company-captain-with-jump-pack-ability-lost-to-fury-2",
+            "title": "Lost to Fury"
+          },
+          {
+            "id": "unit-death-company-captain-with-jump-pack-ability-black-rage-3",
+            "title": "Black Rage"
+          },
+          {
+            "id": "unit-death-company-captain-with-jump-pack-ability-feel-no-pain-6-4",
+            "title": "Feel No Pain 6+"
+          },
+          {
+            "id": "unit-death-company-captain-with-jump-pack-ability-deep-strike-5",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-death-company-captain-with-jump-pack-model-death-company-captain-with-jump-pack",
@@ -19153,6 +20772,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-sanguinary-priest-ability-sanguinary-priest",
+            "title": "Sanguinary Priest"
+          },
+          {
+            "id": "unit-sanguinary-priest-ability-blood-chalice-2",
+            "title": "Blood Chalice"
+          },
+          {
+            "id": "unit-sanguinary-priest-ability-support-3",
+            "title": "Support"
+          }
+        ],
         "models": [
           {
             "id": "unit-sanguinary-priest-model-sanguinary-priest",
@@ -19267,6 +20901,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-astorath-ability-redeemer-of-the-lost",
+            "title": "Redeemer of the Lost"
+          },
+          {
+            "id": "unit-astorath-ability-mass-of-doom-2",
+            "title": "Mass of Doom"
+          },
+          {
+            "id": "unit-astorath-ability-leader-3",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-astorath-ability-deep-strike-4",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-astorath-model-astorath",
@@ -19342,6 +20995,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chief-librarian-mephiston-ability-the-quickening-psychic",
+            "title": "The Quickening [Psychic]"
+          },
+          {
+            "id": "unit-chief-librarian-mephiston-ability-transfixing-gaze-aura-psychic-2",
+            "title": "Transfixing Gaze [Aura, Psychic]"
+          },
+          {
+            "id": "unit-chief-librarian-mephiston-ability-lone-operative-3",
+            "title": "Lone Operative"
+          },
+          {
+            "id": "unit-chief-librarian-mephiston-ability-fights-first-4",
+            "title": "Fights First"
+          },
+          {
+            "id": "unit-chief-librarian-mephiston-ability-feel-no-pain-4-5",
+            "title": "Feel No Pain 4+"
+          }
+        ],
         "models": [
           {
             "id": "unit-chief-librarian-mephiston-model-chief-librarian-mephiston",
@@ -19553,6 +21229,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-commander-dante-ability-death-mask-of-sanguinius",
+            "title": "Death Mask of Sanguinius"
+          },
+          {
+            "id": "unit-commander-dante-ability-lord-regent-of-the-imperium-nihilus-2",
+            "title": "Lord Regent of the Imperium Nihilus"
+          },
+          {
+            "id": "unit-commander-dante-ability-leader-3",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-commander-dante-ability-deep-strike-4",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-commander-dante-model-commander-dante",
@@ -19667,6 +21362,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-lemartes-ability-guardian-of-the-lost",
+            "title": "Guardian of the Lost"
+          },
+          {
+            "id": "unit-lemartes-ability-fury-unbound-2",
+            "title": "Fury Unbound"
+          },
+          {
+            "id": "unit-lemartes-ability-leader-3",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-lemartes-ability-deep-strike-4",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-lemartes-ability-feel-no-pain-6-5",
+            "title": "Feel No Pain 6+"
+          }
+        ],
         "models": [
           {
             "id": "unit-lemartes-model-lemartes",
@@ -19769,6 +21487,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-the-sanguinor-ability-aura-of-fervour-aura",
+            "title": "Aura of Fervour (Aura)"
+          },
+          {
+            "id": "unit-the-sanguinor-ability-miraculous-saviour-2",
+            "title": "Miraculous Saviour"
+          },
+          {
+            "id": "unit-the-sanguinor-ability-lone-operative-3",
+            "title": "Lone Operative"
+          },
+          {
+            "id": "unit-the-sanguinor-ability-deep-strike-4",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-the-sanguinor-ability-fights-first-5",
+            "title": "Fights First"
+          }
+        ],
         "models": [
           {
             "id": "unit-the-sanguinor-model-the-sanguinor",
@@ -19860,6 +21601,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-death-company-marines-ability-an-honourable-death-in-combat",
+            "title": "An Honourable Death in Combat"
+          },
+          {
+            "id": "unit-death-company-marines-ability-attached-unit-2",
+            "title": "Attached Unit"
+          },
+          {
+            "id": "unit-death-company-marines-ability-black-rage-3",
+            "title": "Black Rage"
+          },
+          {
+            "id": "unit-death-company-marines-ability-feel-no-pain-6-4",
+            "title": "Feel No Pain 6+"
+          }
+        ],
         "models": [
           {
             "id": "unit-death-company-marines-model-death-company-marines",
@@ -20194,6 +21954,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-death-company-marines-with-bolt-rifles-ability-attached-unit",
+            "title": "Attached Unit"
+          },
+          {
+            "id": "unit-death-company-marines-with-bolt-rifles-ability-visions-of-heresy-2",
+            "title": "Visions of Heresy"
+          },
+          {
+            "id": "unit-death-company-marines-with-bolt-rifles-ability-black-rage-3",
+            "title": "Black Rage"
+          },
+          {
+            "id": "unit-death-company-marines-with-bolt-rifles-ability-feel-no-pain-6-4",
+            "title": "Feel No Pain 6+"
+          }
+        ],
         "models": [
           {
             "id": "unit-death-company-marines-with-bolt-rifles-model-death-company-marines",
@@ -20654,6 +22433,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-death-company-marines-with-jump-packs-ability-savage-fury",
+            "title": "Savage Fury"
+          },
+          {
+            "id": "unit-death-company-marines-with-jump-packs-ability-attached-unit-2",
+            "title": "Attached Unit"
+          },
+          {
+            "id": "unit-death-company-marines-with-jump-packs-ability-black-rage-3",
+            "title": "Black Rage"
+          },
+          {
+            "id": "unit-death-company-marines-with-jump-packs-ability-feel-no-pain-6-4",
+            "title": "Feel No Pain 6+"
+          },
+          {
+            "id": "unit-death-company-marines-with-jump-packs-ability-deep-strike-5",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-death-company-marines-with-jump-packs-model-death-company-marines",
@@ -20962,6 +22764,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-sanguinary-guard-ability-angelic-visage",
+            "title": "Angelic Visage"
+          },
+          {
+            "id": "unit-sanguinary-guard-ability-heirs-of-azkaellon-2",
+            "title": "Heirs of Azkaellon"
+          },
+          {
+            "id": "unit-sanguinary-guard-ability-attached-unit-3",
+            "title": "Attached Unit"
+          },
+          {
+            "id": "unit-sanguinary-guard-ability-deep-strike-4",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-sanguinary-guard-model-sanguinary-guard",
@@ -21134,6 +22955,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-baal-predator-ability-overcharged-engines",
+            "title": "Overcharged Engines"
+          },
+          {
+            "id": "unit-baal-predator-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-baal-predator-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          }
+        ],
         "models": [
           {
             "id": "unit-baal-predator-model-baal-predator",
@@ -21369,6 +23205,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-death-company-dreadnought-ability-driven-by-fury",
+            "title": "Driven by Fury"
+          },
+          {
+            "id": "unit-death-company-dreadnought-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-death-company-dreadnought-ability-black-rage-3",
+            "title": "Black Rage"
+          },
+          {
+            "id": "unit-death-company-dreadnought-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-death-company-dreadnought-ability-feel-no-pain-6-5",
+            "title": "Feel No Pain 6+"
+          }
+        ],
         "models": [
           {
             "id": "unit-death-company-dreadnought-model-death-company-dreadnought",

@@ -71,6 +71,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-cultist-mob-ability-for-the-dark-gods",
+            "title": "For the Dark Gods"
+          },
+          {
+            "id": "unit-cultist-mob-ability-dark-pacts-2",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-cultist-mob-model-cultist-champion",
@@ -287,6 +298,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-legionaries-ability-veterans-of-the-long-war",
+            "title": "Veterans of the Long War"
+          },
+          {
+            "id": "unit-legionaries-ability-dark-pacts-2",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-legionaries-model-aspiring-champion",
@@ -904,6 +926,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaos-lord-ability-chance-for-glory",
+            "title": "Chance for Glory"
+          },
+          {
+            "id": "unit-chaos-lord-ability-lord-of-chaos-2",
+            "title": "Lord of Chaos"
+          },
+          {
+            "id": "unit-chaos-lord-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-lord-model-chaos-lord",
@@ -1121,6 +1158,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-ability-formidably-resilient",
+            "title": "Formidably Resilient"
+          },
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-ability-lord-of-chaos-2",
+            "title": "Lord of Chaos"
+          },
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-chaos-lord-in-terminator-armour-ability-deep-strike-4",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-lord-in-terminator-armour-model-chaos-lord-in-terminator-armour",
@@ -1339,6 +1395,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaos-lord-with-jump-pack-ability-cruel-hunter",
+            "title": "Cruel Hunter"
+          },
+          {
+            "id": "unit-chaos-lord-with-jump-pack-ability-lord-of-chaos-2",
+            "title": "Lord of Chaos"
+          },
+          {
+            "id": "unit-chaos-lord-with-jump-pack-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-chaos-lord-with-jump-pack-ability-dark-pacts-4",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-lord-with-jump-pack-model-chaos-lord-with-jump-pack",
@@ -1564,6 +1639,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-cultist-firebrand-ability-fiery-faith",
+            "title": "Fiery Faith"
+          },
+          {
+            "id": "unit-cultist-firebrand-ability-cursed-flames-2",
+            "title": "Cursed Flames"
+          },
+          {
+            "id": "unit-cultist-firebrand-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-cultist-firebrand-model-cultist-firebrand",
@@ -1711,6 +1801,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-dark-apostle-ability-dark-zealotry",
+            "title": "Dark Zealotry"
+          },
+          {
+            "id": "unit-dark-apostle-ability-demagogue-2",
+            "title": "Demagogue"
+          },
+          {
+            "id": "unit-dark-apostle-ability-malign-sacrifice-3",
+            "title": "Malign Sacrifice"
+          },
+          {
+            "id": "unit-dark-apostle-ability-dark-pacts-4",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-dark-apostle-model-dark-apostle",
@@ -1862,6 +1971,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-dark-commune-ability-faithful-flock",
+            "title": "Faithful Flock"
+          },
+          {
+            "id": "unit-dark-commune-ability-dark-ritual-2",
+            "title": "Dark Ritual"
+          },
+          {
+            "id": "unit-dark-commune-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-dark-commune-model-dark-commune",
@@ -2094,6 +2218,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-heretic-astartes-daemon-prince-ability-dark-blessing-aura",
+            "title": "Dark Blessing (Aura)"
+          },
+          {
+            "id": "unit-heretic-astartes-daemon-prince-ability-ascended-daemon-2",
+            "title": "Ascended Daemon"
+          },
+          {
+            "id": "unit-heretic-astartes-daemon-prince-ability-lord-of-chaos-3",
+            "title": "Lord of Chaos"
+          },
+          {
+            "id": "unit-heretic-astartes-daemon-prince-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-heretic-astartes-daemon-prince-ability-dark-pacts-5",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-heretic-astartes-daemon-prince-model-heretic-astartes-daemon-prince",
@@ -2221,6 +2368,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-heretic-astartes-daemon-prince-with-wings-ability-flying-horror",
+            "title": "Flying Horror"
+          },
+          {
+            "id": "unit-heretic-astartes-daemon-prince-with-wings-ability-daemonic-destruction-2",
+            "title": "Daemonic Destruction"
+          },
+          {
+            "id": "unit-heretic-astartes-daemon-prince-with-wings-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-heretic-astartes-daemon-prince-with-wings-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-heretic-astartes-daemon-prince-with-wings-ability-dark-pacts-5",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-heretic-astartes-daemon-prince-with-wings-model-heretic-astartes-daemon-prince-with-wings",
@@ -2346,6 +2516,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-lord-discordant-on-helstalker-ability-corrupt-machine-spirits",
+            "title": "Corrupt Machine Spirits"
+          },
+          {
+            "id": "unit-lord-discordant-on-helstalker-ability-spirit-thief-2",
+            "title": "Spirit Thief"
+          },
+          {
+            "id": "unit-lord-discordant-on-helstalker-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-lord-discordant-on-helstalker-model-lord-discordant-on-helstalker",
@@ -2613,6 +2798,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-master-of-executions-ability-warp-sighted-butcher",
+            "title": "Warp-sighted Butcher"
+          },
+          {
+            "id": "unit-master-of-executions-ability-trophy-taker-2",
+            "title": "Trophy Taker"
+          },
+          {
+            "id": "unit-master-of-executions-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-master-of-executions-model-master-of-executions",
@@ -2753,6 +2953,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-master-of-possession-ability-daemonkin-psychic",
+            "title": "Daemonkin (Psychic)"
+          },
+          {
+            "id": "unit-master-of-possession-ability-sacrificial-dagger-2",
+            "title": "Sacrificial Dagger"
+          },
+          {
+            "id": "unit-master-of-possession-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-master-of-possession-model-master-of-possession",
@@ -2938,6 +3153,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-red-corsairs-reave-captain-ability-brutal-raider",
+            "title": "Brutal Raider"
+          },
+          {
+            "id": "unit-red-corsairs-reave-captain-ability-raiders-due-2",
+            "title": "Raider's Due"
+          },
+          {
+            "id": "unit-red-corsairs-reave-captain-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-red-corsairs-reave-captain-ability-infiltrators-4",
+            "title": "Infiltrators"
+          }
+        ],
         "models": [
           {
             "id": "unit-red-corsairs-reave-captain-model-red-corsairs-reave-captain",
@@ -3152,6 +3386,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-sorcerer-ability-prescience-psychic",
+            "title": "Prescience (Psychic)"
+          },
+          {
+            "id": "unit-sorcerer-ability-gift-of-chaos-psychic-2",
+            "title": "Gift of Chaos (Psychic)"
+          },
+          {
+            "id": "unit-sorcerer-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-sorcerer-model-sorcerer",
@@ -3315,6 +3564,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-sorcerer-in-terminator-armour-ability-warptime-psychic",
+            "title": "Warptime (Psychic)"
+          },
+          {
+            "id": "unit-sorcerer-in-terminator-armour-ability-death-hex-psychic-2",
+            "title": "Death Hex (Psychic)"
+          },
+          {
+            "id": "unit-sorcerer-in-terminator-armour-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-sorcerer-in-terminator-armour-ability-deep-strike-4",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-sorcerer-in-terminator-armour-model-sorcerer-in-terminator-armour",
@@ -3519,6 +3787,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-traitor-enforcer-ability-brutal-example",
+            "title": "Brutal Example"
+          },
+          {
+            "id": "unit-traitor-enforcer-ability-mutated-bodyguard-2",
+            "title": "Mutated Bodyguard"
+          },
+          {
+            "id": "unit-traitor-enforcer-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-traitor-enforcer-model-traitor-enforcer",
@@ -3692,6 +3975,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-warpsmith-ability-warpsmith",
+            "title": "Warpsmith"
+          },
+          {
+            "id": "unit-warpsmith-ability-master-of-mechanisms-2",
+            "title": "Master of Mechanisms"
+          },
+          {
+            "id": "unit-warpsmith-ability-enrage-machine-spirits-3",
+            "title": "Enrage Machine Spirits"
+          },
+          {
+            "id": "unit-warpsmith-ability-dark-pacts-4",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-warpsmith-model-warpsmith",
@@ -3873,6 +4175,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaos-rhino-ability-self-repair",
+            "title": "Self-repair"
+          },
+          {
+            "id": "unit-chaos-rhino-ability-deadly-demise-d3-2",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-chaos-rhino-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-chaos-rhino-ability-firing-deck-2-4",
+            "title": "Firing Deck 2"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-rhino-model-chaos-rhino",
@@ -4045,6 +4366,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-abaddon-the-despoiler-ability-the-warmaster",
+            "title": "The Warmaster"
+          },
+          {
+            "id": "unit-abaddon-the-despoiler-ability-dark-destiny-2",
+            "title": "Dark Destiny"
+          },
+          {
+            "id": "unit-abaddon-the-despoiler-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-abaddon-the-despoiler-ability-dark-pacts-4",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-abaddon-the-despoiler-model-abaddon-the-despoiler",
@@ -4160,6 +4500,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-cypher-ability-agent-of-discord-aura",
+            "title": "Agent of Discord (Aura)"
+          },
+          {
+            "id": "unit-cypher-ability-guns-blazing-2",
+            "title": "Guns Blazing"
+          },
+          {
+            "id": "unit-cypher-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-cypher-ability-lone-operative-4",
+            "title": "Lone Operative"
+          }
+        ],
         "models": [
           {
             "id": "unit-cypher-model-cypher",
@@ -4327,6 +4686,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-fabius-bile-ability-enhanced-warriors",
+            "title": "Enhanced Warriors"
+          },
+          {
+            "id": "unit-fabius-bile-ability-surgeon-acolyte-2",
+            "title": "Surgeon Acolyte"
+          },
+          {
+            "id": "unit-fabius-bile-ability-chirurgeon-3",
+            "title": "Chirurgeon"
+          },
+          {
+            "id": "unit-fabius-bile-ability-dark-pacts-4",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-fabius-bile-ability-feel-no-pain-5-5",
+            "title": "Feel No Pain 5+"
+          }
+        ],
         "models": [
           {
             "id": "unit-fabius-bile-model-fabius-bile",
@@ -4499,6 +4881,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-haarken-worldclaimer-ability-head-taker",
+            "title": "Head Taker"
+          },
+          {
+            "id": "unit-haarken-worldclaimer-ability-herald-of-the-apocalypse-aura-2",
+            "title": "Herald of the Apocalypse (Aura)"
+          },
+          {
+            "id": "unit-haarken-worldclaimer-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-haarken-worldclaimer-ability-deep-strike-4",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-haarken-worldclaimer-model-haarken-worldclaimer",
@@ -4656,6 +5057,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-huron-blackheart-ability-lord-of-badab-aura",
+            "title": "Lord of Badab (Aura)"
+          },
+          {
+            "id": "unit-huron-blackheart-ability-hamadryas-knowledge-psychic-2",
+            "title": "Hamadrya’s Knowledge (Psychic)"
+          },
+          {
+            "id": "unit-huron-blackheart-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-huron-blackheart-ability-deep-strike-4",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-huron-blackheart-ability-feel-no-pain-5-5",
+            "title": "Feel No Pain 5+"
+          }
+        ],
         "models": [
           {
             "id": "unit-huron-blackheart-model-huron-blackheart",
@@ -4782,6 +5206,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-kravek-morne-ability-headlong-destruction",
+            "title": "Headlong Destruction"
+          },
+          {
+            "id": "unit-kravek-morne-ability-architect-of-ruin-2",
+            "title": "Architect of Ruin"
+          },
+          {
+            "id": "unit-kravek-morne-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-kravek-morne-ability-deep-strike-4",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-kravek-morne-model-kravek-morne",
@@ -4971,6 +5414,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-masters-of-the-maelstrom-ability-fleet-command",
+            "title": "Fleet Command"
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-ability-plunder-2",
+            "title": "Plunder"
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-ability-masters-of-the-maelstrom-3",
+            "title": "Masters of the Maelstrom"
+          },
+          {
+            "id": "unit-masters-of-the-maelstrom-ability-dark-pacts-4",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-masters-of-the-maelstrom-model-garreon-the-corpsemaster",
@@ -5315,6 +5777,37 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-vashtorr-the-arkifane-ability-unholy-mechanisms-aura",
+            "title": "Unholy Mechanisms (Aura)"
+          },
+          {
+            "id": "unit-vashtorr-the-arkifane-ability-reorder-reality-2",
+            "title": "Reorder Reality"
+          },
+          {
+            "id": "unit-vashtorr-the-arkifane-ability-indentured-daemon-engines-3",
+            "title": "Indentured Daemon Engines"
+          },
+          {
+            "id": "unit-vashtorr-the-arkifane-ability-damaged-1-4-wounds-remaining-4",
+            "title": "Damaged: 1-4 wounds remaining"
+          },
+          {
+            "id": "unit-vashtorr-the-arkifane-ability-dark-pacts-5",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-vashtorr-the-arkifane-ability-deadly-demise-d3-6",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-vashtorr-the-arkifane-ability-deep-strike-7",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-vashtorr-the-arkifane-model-vashtorr-the-arkifane",
@@ -5473,6 +5966,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-accursed-cultists-ability-howling-horde",
+            "title": "Howling Horde"
+          },
+          {
+            "id": "unit-accursed-cultists-ability-dark-pacts-2",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-accursed-cultists-ability-feel-no-pain-6-3",
+            "title": "Feel No Pain 6+"
+          },
+          {
+            "id": "unit-accursed-cultists-ability-scouts-6-4",
+            "title": "Scouts 6\""
+          }
+        ],
         "models": [
           {
             "id": "unit-accursed-cultists-model-torment",
@@ -5619,6 +6131,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaos-terminator-squad-ability-despoilers",
+            "title": "Despoilers"
+          },
+          {
+            "id": "unit-chaos-terminator-squad-ability-dark-pacts-2",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-chaos-terminator-squad-ability-deep-strike-3",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-terminator-squad-model-4-9-chaos-terminators",
@@ -5977,6 +6504,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chosen-ability-chosen-marauders",
+            "title": "Chosen Marauders"
+          },
+          {
+            "id": "unit-chosen-ability-dark-pacts-2",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-chosen-model-4-9-chosen",
@@ -6263,6 +6801,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-fellgor-beastmen-ability-bestial-raiders",
+            "title": "Bestial Raiders"
+          },
+          {
+            "id": "unit-fellgor-beastmen-ability-dark-pacts-2",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-fellgor-beastmen-model-fellgor-champion",
@@ -6554,6 +7103,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-havocs-ability-stabilisation-talons",
+            "title": "Stabilisation Talons"
+          },
+          {
+            "id": "unit-havocs-ability-dark-pacts-2",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-havocs-model-havoc-champion",
@@ -7073,6 +7633,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-mutilators-ability-crushing-charge",
+            "title": "Crushing Charge"
+          },
+          {
+            "id": "unit-mutilators-ability-dark-pacts-2",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-mutilators-ability-deep-strike-3",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-mutilators-model-mutilator",
@@ -7258,6 +7833,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-nemesis-claw-ability-visions-of-suffering-psychic",
+            "title": "Visions of Suffering (Psychic)"
+          },
+          {
+            "id": "unit-nemesis-claw-ability-stealth-2",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-nemesis-claw-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-nemesis-claw-model-visionary",
@@ -7823,6 +8413,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-obliterators-ability-warp-rift-firepower",
+            "title": "Warp Rift Firepower"
+          },
+          {
+            "id": "unit-obliterators-ability-dark-pacts-2",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-obliterators-ability-deep-strike-3",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-obliterators-model-obliterator",
@@ -7984,6 +8589,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-possessed-ability-unholy-bloodshed",
+            "title": "Unholy Bloodshed"
+          },
+          {
+            "id": "unit-possessed-ability-dark-pacts-2",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-possessed-model-5-10-possessed",
@@ -8093,6 +8709,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-raptors-ability-fearsome-aura",
+            "title": "Fearsome (Aura)"
+          },
+          {
+            "id": "unit-raptors-ability-terrifying-assault-2",
+            "title": "Terrifying Assault"
+          },
+          {
+            "id": "unit-raptors-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-raptors-ability-deep-strike-4",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-raptors-model-raptor-champion",
@@ -8551,6 +9186,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-red-corsairs-raiders-ability-trophy-takers",
+            "title": "Trophy Takers"
+          },
+          {
+            "id": "unit-red-corsairs-raiders-ability-infiltrators-2",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-red-corsairs-raiders-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-red-corsairs-raiders-model-red-corsairs-raider-champion",
@@ -8774,6 +9424,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-traitor-guardsmen-squad-ability-twisted-defence-force",
+            "title": "Twisted Defence Force"
+          },
+          {
+            "id": "unit-traitor-guardsmen-squad-ability-dark-pacts-2",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-traitor-guardsmen-squad-model-traitor-sergeant",
@@ -9178,6 +9839,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-warp-talons-ability-warp-strike",
+            "title": "Warp Strike"
+          },
+          {
+            "id": "unit-warp-talons-ability-dark-pacts-2",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-warp-talons-ability-deep-strike-3",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-warp-talons-model-5-10-warp-talons",
@@ -9248,6 +9924,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaos-bikers-ability-rapid-assault",
+            "title": "Rapid Assault"
+          },
+          {
+            "id": "unit-chaos-bikers-ability-dark-pacts-2",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-bikers-model-biker-champion",
@@ -9670,6 +10357,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaos-land-raider-ability-assault-ramp",
+            "title": "Assault Ramp"
+          },
+          {
+            "id": "unit-chaos-land-raider-ability-damaged-1-5-wounds-remaining-2",
+            "title": "Damaged: 1-5 wounds remaining"
+          },
+          {
+            "id": "unit-chaos-land-raider-ability-deadly-demise-d6-3",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-chaos-land-raider-ability-dark-pacts-4",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-land-raider-model-chaos-land-raider",
@@ -9876,6 +10582,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaos-predator-annihilator-ability-annihilator",
+            "title": "Annihilator"
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 wounds remaining"
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-chaos-predator-annihilator-ability-dark-pacts-4",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-predator-annihilator-model-chaos-predator-annihilator",
@@ -10109,6 +10834,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaos-predator-destructor-ability-destructor",
+            "title": "Destructor"
+          },
+          {
+            "id": "unit-chaos-predator-destructor-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 wounds remaining"
+          },
+          {
+            "id": "unit-chaos-predator-destructor-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-chaos-predator-destructor-ability-dark-pacts-4",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-predator-destructor-model-chaos-predator-destructor",
@@ -10340,6 +11084,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaos-spawn-ability-mind-breaking-mutations-aura",
+            "title": "Mind-breaking Mutations (Aura)"
+          },
+          {
+            "id": "unit-chaos-spawn-ability-feel-no-pain-5-2",
+            "title": "Feel No Pain 5+"
+          },
+          {
+            "id": "unit-chaos-spawn-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-spawn-model-chaos-spawn",
@@ -10411,6 +11170,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-chaos-vindicator-ability-siege-shield",
+            "title": "Siege Shield"
+          },
+          {
+            "id": "unit-chaos-vindicator-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 wounds remaining"
+          },
+          {
+            "id": "unit-chaos-vindicator-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-chaos-vindicator-ability-dark-pacts-4",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-chaos-vindicator-model-chaos-vindicator",
@@ -10590,6 +11368,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-defiler-ability-scuttling-walker",
+            "title": "Scuttling Walker"
+          },
+          {
+            "id": "unit-defiler-ability-daemonforge-2",
+            "title": "Daemonforge"
+          },
+          {
+            "id": "unit-defiler-ability-damaged-1-6-wounds-remaining-3",
+            "title": "Damaged: 1-6 wounds remaining"
+          },
+          {
+            "id": "unit-defiler-ability-deadly-demise-d6-4",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-defiler-ability-dark-pacts-5",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-defiler-model-defiler",
@@ -10958,6 +11759,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-forgefiend-ability-daemonic-ordnance",
+            "title": "Daemonic Ordnance"
+          },
+          {
+            "id": "unit-forgefiend-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 wounds remaining"
+          },
+          {
+            "id": "unit-forgefiend-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-forgefiend-ability-dark-pacts-4",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-forgefiend-model-forgefiend",
@@ -11109,6 +11929,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-helbrute-ability-dark-ascension-aura",
+            "title": "Dark Ascension (Aura)"
+          },
+          {
+            "id": "unit-helbrute-ability-devoted-to-destruction-2",
+            "title": "Devoted to Destruction"
+          },
+          {
+            "id": "unit-helbrute-ability-dark-pacts-3",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-helbrute-ability-deadly-demise-1-4",
+            "title": "Deadly Demise 1"
+          }
+        ],
         "models": [
           {
             "id": "unit-helbrute-model-helbrute",
@@ -11504,6 +12343,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-heldrake-ability-airborne-predator",
+            "title": "Airborne Predator"
+          },
+          {
+            "id": "unit-heldrake-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 wounds remaining"
+          },
+          {
+            "id": "unit-heldrake-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-heldrake-ability-hover-4",
+            "title": "Hover"
+          },
+          {
+            "id": "unit-heldrake-ability-dark-pacts-5",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-heldrake-model-heldrake",
@@ -11632,6 +12494,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-khorne-lord-of-skulls-ability-plough-through-the-enemy",
+            "title": "Plough Through the Enemy"
+          },
+          {
+            "id": "unit-khorne-lord-of-skulls-ability-damaged-1-8-wounds-remaining-2",
+            "title": "Damaged: 1-8 wounds remaining"
+          },
+          {
+            "id": "unit-khorne-lord-of-skulls-ability-deadly-demise-d6-2-3",
+            "title": "Deadly Demise D6+2"
+          },
+          {
+            "id": "unit-khorne-lord-of-skulls-ability-dark-pacts-4",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-khorne-lord-of-skulls-model-khorne-lord-of-skulls",
@@ -11865,6 +12746,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-maulerfiend-ability-siege-crawler",
+            "title": "Siege Crawler"
+          },
+          {
+            "id": "unit-maulerfiend-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 wounds remaining"
+          },
+          {
+            "id": "unit-maulerfiend-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-maulerfiend-ability-dark-pacts-4",
+            "title": "Dark Pacts"
+          }
+        ],
         "models": [
           {
             "id": "unit-maulerfiend-model-maulerfiend",
@@ -11989,6 +12889,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-noctilith-crown-ability-malevolent-locus-aura",
+            "title": "Malevolent Locus (Aura)"
+          },
+          {
+            "id": "unit-noctilith-crown-ability-malign-cover-2",
+            "title": "Malign Cover"
+          },
+          {
+            "id": "unit-noctilith-crown-ability-fortification-3",
+            "title": "Fortification"
+          },
+          {
+            "id": "unit-noctilith-crown-ability-dark-pacts-4",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-noctilith-crown-ability-deadly-demise-d6-5",
+            "title": "Deadly Demise D6"
+          }
+        ],
         "models": [
           {
             "id": "unit-noctilith-crown-model-noctilith-crown",
@@ -12060,6 +12983,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-venomcrawler-ability-soul-eater",
+            "title": "Soul Eater"
+          },
+          {
+            "id": "unit-venomcrawler-ability-dark-pacts-2",
+            "title": "Dark Pacts"
+          },
+          {
+            "id": "unit-venomcrawler-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          }
+        ],
         "models": [
           {
             "id": "unit-venomcrawler-model-venomcrawler",

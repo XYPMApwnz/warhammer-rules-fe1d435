@@ -48,6 +48,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-gargoyles-ability-winged-swarm",
+            "title": "Winged Swarm"
+          },
+          {
+            "id": "unit-gargoyles-ability-synapse-2",
+            "title": "Synapse"
+          },
+          {
+            "id": "unit-gargoyles-ability-deep-strike-3",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-gargoyles-model-gargoyles",
@@ -156,6 +171,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-hormagaunts-ability-bounding-leap",
+            "title": "Bounding Leap"
+          },
+          {
+            "id": "unit-hormagaunts-ability-synapse-2",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-hormagaunts-model-10-20-hormagaunts",
@@ -237,6 +263,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-termagants-ability-skulking-horrors",
+            "title": "Skulking Horrors"
+          },
+          {
+            "id": "unit-termagants-ability-synapse-2",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-termagants-model-10-20-termagants",
@@ -482,6 +519,37 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-broodlord-ability-vicious-insight",
+            "title": "Vicious Insight"
+          },
+          {
+            "id": "unit-broodlord-ability-hypnotic-gaze-psychic-2",
+            "title": "Hypnotic Gaze (Psychic)"
+          },
+          {
+            "id": "unit-broodlord-ability-leader-3",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-broodlord-ability-scouts-8-4",
+            "title": "Scouts 8\""
+          },
+          {
+            "id": "unit-broodlord-ability-synapse-5",
+            "title": "Synapse"
+          },
+          {
+            "id": "unit-broodlord-ability-shadow-in-the-warp-6",
+            "title": "Shadow in the Warp"
+          },
+          {
+            "id": "unit-broodlord-ability-leader-7",
+            "title": "Leader"
+          }
+        ],
         "models": [
           {
             "id": "unit-broodlord-model-broodlord",
@@ -564,6 +632,37 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-hive-tyrant-ability-onslaught-aura-psychic",
+            "title": "Onslaught (Aura, Psychic)"
+          },
+          {
+            "id": "unit-hive-tyrant-ability-leader-2",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-hive-tyrant-ability-will-of-the-hive-mind-3",
+            "title": "Will of the Hive Mind"
+          },
+          {
+            "id": "unit-hive-tyrant-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-hive-tyrant-ability-shadow-in-the-warp-5",
+            "title": "Shadow in the Warp"
+          },
+          {
+            "id": "unit-hive-tyrant-ability-synapse-6",
+            "title": "Synapse"
+          },
+          {
+            "id": "unit-hive-tyrant-ability-leader-7",
+            "title": "Leader"
+          }
+        ],
         "models": [
           {
             "id": "unit-hive-tyrant-model-hive-tyrant",
@@ -728,6 +827,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-hyperadapted-raveners-ability-alpha-invader",
+            "title": "Alpha Invader"
+          },
+          {
+            "id": "unit-hyperadapted-raveners-ability-hypersensory-array-2",
+            "title": "Hypersensory Array"
+          },
+          {
+            "id": "unit-hyperadapted-raveners-ability-leader-3",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-hyperadapted-raveners-ability-shadow-in-the-warp-4",
+            "title": "Shadow in the Warp"
+          },
+          {
+            "id": "unit-hyperadapted-raveners-ability-deep-strike-5",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-hyperadapted-raveners-ability-synapse-6",
+            "title": "Synapse"
+          },
+          {
+            "id": "unit-hyperadapted-raveners-ability-sustained-hits-7",
+            "title": "Sustained Hits"
+          },
+          {
+            "id": "unit-hyperadapted-raveners-ability-leader-8",
+            "title": "Leader"
+          }
+        ],
         "models": [
           {
             "id": "unit-hyperadapted-raveners-model-ravener-prime",
@@ -888,6 +1022,37 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-neurotyrant-ability-node-lash-psychic",
+            "title": "Node Lash (Psychic)"
+          },
+          {
+            "id": "unit-neurotyrant-ability-psychic-terror-psychic-2",
+            "title": "Psychic Terror (Psychic)"
+          },
+          {
+            "id": "unit-neurotyrant-ability-neuroloids-3",
+            "title": "Neuroloids"
+          },
+          {
+            "id": "unit-neurotyrant-ability-leader-4",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-neurotyrant-ability-shadow-in-the-warp-5",
+            "title": "Shadow in the Warp"
+          },
+          {
+            "id": "unit-neurotyrant-ability-synapse-6",
+            "title": "Synapse"
+          },
+          {
+            "id": "unit-neurotyrant-ability-leader-7",
+            "title": "Leader"
+          }
+        ],
         "models": [
           {
             "id": "unit-neurotyrant-model-neurotyrant",
@@ -988,6 +1153,37 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-parasite-of-mortrex-ability-parasitic-infection",
+            "title": "Parasitic Infection"
+          },
+          {
+            "id": "unit-parasite-of-mortrex-ability-it-itches-2",
+            "title": "It Itches!"
+          },
+          {
+            "id": "unit-parasite-of-mortrex-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-parasite-of-mortrex-ability-lone-operative-4",
+            "title": "Lone Operative"
+          },
+          {
+            "id": "unit-parasite-of-mortrex-ability-stealth-5",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-parasite-of-mortrex-ability-synapse-6",
+            "title": "Synapse"
+          },
+          {
+            "id": "unit-parasite-of-mortrex-ability-shadow-in-the-warp-7",
+            "title": "Shadow in the Warp"
+          }
+        ],
         "models": [
           {
             "id": "unit-parasite-of-mortrex-model-parasite-of-mortrex",
@@ -1087,6 +1283,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-tervigon-ability-spawn-termagants",
+            "title": "Spawn Termagants"
+          },
+          {
+            "id": "unit-tervigon-ability-brood-progenitor-aura-psychic-2",
+            "title": "Brood Progenitor (Aura, Psychic)"
+          },
+          {
+            "id": "unit-tervigon-ability-damaged-1-5-wounds-remaining-3",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-tervigon-ability-deadly-demise-d6-4",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-tervigon-ability-shadow-in-the-warp-5",
+            "title": "Shadow in the Warp"
+          },
+          {
+            "id": "unit-tervigon-ability-synapse-6",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-tervigon-model-tervigon",
@@ -1273,6 +1496,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-tyranid-prime-with-lash-whip-ability-alpha-warrior",
+            "title": "Alpha Warrior"
+          },
+          {
+            "id": "unit-tyranid-prime-with-lash-whip-ability-aggressive-leader-beast-2",
+            "title": "Aggressive Leader-beast"
+          },
+          {
+            "id": "unit-tyranid-prime-with-lash-whip-ability-leader-3",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-tyranid-prime-with-lash-whip-ability-synapse-4",
+            "title": "Synapse"
+          },
+          {
+            "id": "unit-tyranid-prime-with-lash-whip-ability-shadow-in-the-warp-5",
+            "title": "Shadow in the Warp"
+          },
+          {
+            "id": "unit-tyranid-prime-with-lash-whip-ability-leader-6",
+            "title": "Leader"
+          }
+        ],
         "models": [
           {
             "id": "unit-tyranid-prime-with-lash-whip-model-tyranid-prime-with-lash-whip",
@@ -1402,6 +1652,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-winged-hive-tyrant-ability-paroxysm-psychic",
+            "title": "Paroxysm (Psychic)"
+          },
+          {
+            "id": "unit-winged-hive-tyrant-ability-will-of-the-hive-mind-2",
+            "title": "Will of the Hive Mind"
+          },
+          {
+            "id": "unit-winged-hive-tyrant-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-winged-hive-tyrant-ability-deep-strike-4",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-winged-hive-tyrant-ability-shadow-in-the-warp-5",
+            "title": "Shadow in the Warp"
+          },
+          {
+            "id": "unit-winged-hive-tyrant-ability-synapse-6",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-winged-hive-tyrant-model-winged-hive-tyrant",
@@ -1609,6 +1886,37 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-winged-tyranid-prime-ability-alpha-warrior",
+            "title": "Alpha Warrior"
+          },
+          {
+            "id": "unit-winged-tyranid-prime-ability-death-blow-2",
+            "title": "Death Blow"
+          },
+          {
+            "id": "unit-winged-tyranid-prime-ability-leader-3",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-winged-tyranid-prime-ability-deep-strike-4",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-winged-tyranid-prime-ability-synapse-5",
+            "title": "Synapse"
+          },
+          {
+            "id": "unit-winged-tyranid-prime-ability-shadow-in-the-warp-6",
+            "title": "Shadow in the Warp"
+          },
+          {
+            "id": "unit-winged-tyranid-prime-ability-leader-7",
+            "title": "Leader"
+          }
+        ],
         "models": [
           {
             "id": "unit-winged-tyranid-prime-model-winged-tyranid-prime",
@@ -1683,6 +1991,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-tyrannocyte-ability-aerial-seeding",
+            "title": "Aerial Seeding"
+          },
+          {
+            "id": "unit-tyrannocyte-ability-deadly-demise-d3-2",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-tyrannocyte-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-tyrannocyte-ability-synapse-4",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-tyrannocyte-model-tyrannocyte",
@@ -1782,6 +2109,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-deathleaper-ability-fear-of-the-unseen-aura",
+            "title": "Fear of the Unseen (Aura)"
+          },
+          {
+            "id": "unit-deathleaper-ability-hunter-organism-2",
+            "title": "Hunter Organism"
+          },
+          {
+            "id": "unit-deathleaper-ability-feeder-tendrils-3",
+            "title": "Feeder Tendrils"
+          },
+          {
+            "id": "unit-deathleaper-ability-fights-first-4",
+            "title": "Fights First"
+          },
+          {
+            "id": "unit-deathleaper-ability-infiltrators-5",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-deathleaper-ability-lone-operative-6",
+            "title": "Lone Operative"
+          },
+          {
+            "id": "unit-deathleaper-ability-stealth-7",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-deathleaper-ability-synapse-8",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-deathleaper-model-deathleaper",
@@ -1863,6 +2225,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-old-one-eye-ability-alpha-leader",
+            "title": "Alpha Leader"
+          },
+          {
+            "id": "unit-old-one-eye-ability-unstoppable-monster-2",
+            "title": "Unstoppable Monster"
+          },
+          {
+            "id": "unit-old-one-eye-ability-leader-3",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-old-one-eye-ability-synapse-4",
+            "title": "Synapse"
+          },
+          {
+            "id": "unit-old-one-eye-ability-feel-no-pain-5-5",
+            "title": "Feel No Pain 5+"
+          },
+          {
+            "id": "unit-old-one-eye-ability-leader-6",
+            "title": "Leader"
+          }
+        ],
         "models": [
           {
             "id": "unit-old-one-eye-model-old-one-eye",
@@ -1964,6 +2353,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-the-red-terror-ability-swallow-whole",
+            "title": "Swallow Whole"
+          },
+          {
+            "id": "unit-the-red-terror-ability-subterranean-hunter-2",
+            "title": "Subterranean Hunter"
+          },
+          {
+            "id": "unit-the-red-terror-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-the-red-terror-ability-synapse-4",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-the-red-terror-model-the-red-terror",
@@ -2075,6 +2483,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-the-swarmlord-ability-hive-commander",
+            "title": "Hive Commander"
+          },
+          {
+            "id": "unit-the-swarmlord-ability-malign-presence-aura-2",
+            "title": "Malign Presence (Aura)"
+          },
+          {
+            "id": "unit-the-swarmlord-ability-domination-of-the-hive-mind-aura-3",
+            "title": "Domination of the Hive Mind (Aura)"
+          },
+          {
+            "id": "unit-the-swarmlord-ability-leader-4",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-the-swarmlord-ability-deadly-demise-d3-5",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-the-swarmlord-ability-shadow-in-the-warp-6",
+            "title": "Shadow in the Warp"
+          },
+          {
+            "id": "unit-the-swarmlord-ability-synapse-7",
+            "title": "Synapse"
+          },
+          {
+            "id": "unit-the-swarmlord-ability-leader-8",
+            "title": "Leader"
+          }
+        ],
         "models": [
           {
             "id": "unit-the-swarmlord-model-the-swarmlord",
@@ -2171,6 +2614,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-barbgaunts-ability-disruption-bombardment",
+            "title": "Disruption Bombardment"
+          },
+          {
+            "id": "unit-barbgaunts-ability-synapse-2",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-barbgaunts-model-barbgaunt",
@@ -2267,6 +2721,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-biovores-ability-seed-spore-mines",
+            "title": "Seed Spore Mines"
+          },
+          {
+            "id": "unit-biovores-ability-deadly-demise-1-2",
+            "title": "Deadly Demise 1"
+          },
+          {
+            "id": "unit-biovores-ability-synapse-3",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-biovores-model-biovore",
@@ -2374,6 +2843,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-genestealers-ability-vanguard-predator",
+            "title": "Vanguard Predator"
+          },
+          {
+            "id": "unit-genestealers-ability-scouts-8-2",
+            "title": "Scouts 8\""
+          },
+          {
+            "id": "unit-genestealers-ability-synapse-3",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-genestealers-model-5-10-genestealers",
@@ -2443,6 +2927,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-hive-guard-ability-defensive-stance",
+            "title": "Defensive Stance"
+          },
+          {
+            "id": "unit-hive-guard-ability-synapse-2",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-hive-guard-model-3-6-hive-guard",
@@ -2567,6 +3062,37 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-lictor-ability-pheromone-trail",
+            "title": "Pheromone Trail"
+          },
+          {
+            "id": "unit-lictor-ability-feeder-tendrils-2",
+            "title": "Feeder Tendrils"
+          },
+          {
+            "id": "unit-lictor-ability-fights-first-3",
+            "title": "Fights First"
+          },
+          {
+            "id": "unit-lictor-ability-infiltrators-4",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-lictor-ability-lone-operative-5",
+            "title": "Lone Operative"
+          },
+          {
+            "id": "unit-lictor-ability-stealth-6",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-lictor-ability-synapse-7",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-lictor-model-lictor",
@@ -2647,6 +3173,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-neurogaunts-ability-neurocytes",
+            "title": "Neurocytes"
+          },
+          {
+            "id": "unit-neurogaunts-ability-synapse-2",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-neurogaunts-model-1-2-neurogaunt-nodebeasts",
@@ -2725,6 +3262,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-neurolictor-ability-feeder-tendrils",
+            "title": "Feeder Tendrils"
+          },
+          {
+            "id": "unit-neurolictor-ability-neural-disruption-2",
+            "title": "Neural Disruption"
+          },
+          {
+            "id": "unit-neurolictor-ability-psychological-saboteur-aura-3",
+            "title": "Psychological Saboteur (Aura)"
+          },
+          {
+            "id": "unit-neurolictor-ability-shadow-in-the-warp-4",
+            "title": "Shadow in the Warp"
+          },
+          {
+            "id": "unit-neurolictor-ability-lone-operative-5",
+            "title": "Lone Operative"
+          },
+          {
+            "id": "unit-neurolictor-ability-infiltrators-6",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-neurolictor-ability-stealth-7",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-neurolictor-ability-synapse-8",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-neurolictor-model-neurolictor",
@@ -2795,6 +3367,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-pyrovores-ability-burning-spray",
+            "title": "Burning Spray"
+          },
+          {
+            "id": "unit-pyrovores-ability-deadly-demise-1-2",
+            "title": "Deadly Demise 1"
+          },
+          {
+            "id": "unit-pyrovores-ability-synapse-3",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-pyrovores-model-1-3-pyrovores",
@@ -2903,6 +3490,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-raveners-ability-death-from-below",
+            "title": "Death From Below"
+          },
+          {
+            "id": "unit-raveners-ability-deep-strike-2",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-raveners-ability-synapse-3",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-raveners-model-5-raveners",
@@ -2992,6 +3594,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-tyranid-warriors-with-melee-bio-weapons-ability-adaptive-instincts-once-per-turn-per-unit",
+            "title": "Adaptive Instincts (Once per turn, per unit)"
+          },
+          {
+            "id": "unit-tyranid-warriors-with-melee-bio-weapons-ability-shadow-in-the-warp-2",
+            "title": "Shadow in the Warp"
+          },
+          {
+            "id": "unit-tyranid-warriors-with-melee-bio-weapons-ability-synapse-3",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-tyranid-warriors-with-melee-bio-weapons-model-tyranid-prime",
@@ -3087,6 +3704,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-ability-adaptable-predators",
+            "title": "Adaptable Predators"
+          },
+          {
+            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-ability-shadow-in-the-warp-2",
+            "title": "Shadow in the Warp"
+          },
+          {
+            "id": "unit-tyranid-warriors-with-ranged-bio-weapons-ability-synapse-3",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-tyranid-warriors-with-ranged-bio-weapons-model-tyranid-prime",
@@ -3324,6 +3956,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-tyrant-guard-ability-guardian-organism",
+            "title": "Guardian Organism"
+          },
+          {
+            "id": "unit-tyrant-guard-ability-synapse-2",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-tyrant-guard-model-3-6-tyrant-guard",
@@ -3448,6 +4091,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-venomthropes-ability-foul-spores-aura",
+            "title": "Foul Spores (Aura)"
+          },
+          {
+            "id": "unit-venomthropes-ability-stealth-2",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-venomthropes-ability-synapse-3",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-venomthropes-model-3-6-venomthropes",
@@ -3518,6 +4176,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-von-ryans-leapers-ability-pouncing-leap",
+            "title": "Pouncing Leap"
+          },
+          {
+            "id": "unit-von-ryans-leapers-ability-stealth-2",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-von-ryans-leapers-ability-fights-first-3",
+            "title": "Fights First"
+          },
+          {
+            "id": "unit-von-ryans-leapers-ability-infiltrators-4",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-von-ryans-leapers-ability-synapse-5",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-von-ryans-leapers-model-3-6-von-ryans-leapers",
@@ -3600,6 +4281,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-zoanthropes-ability-spirit-leech-aura-psychic",
+            "title": "Spirit Leech (Aura, Psychic)"
+          },
+          {
+            "id": "unit-zoanthropes-ability-warp-field-aura-psychic-2",
+            "title": "Warp Field (Aura, Psychic)"
+          },
+          {
+            "id": "unit-zoanthropes-ability-shadow-in-the-warp-3",
+            "title": "Shadow in the Warp"
+          },
+          {
+            "id": "unit-zoanthropes-ability-synapse-4",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-zoanthropes-model-neurothrope",
@@ -3740,6 +4440,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-carnifexes-ability-blistering-assault",
+            "title": "Blistering Assault"
+          },
+          {
+            "id": "unit-carnifexes-ability-deadly-demise-1-2",
+            "title": "Deadly Demise 1"
+          },
+          {
+            "id": "unit-carnifexes-ability-synapse-3",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-carnifexes-model-carnifex",
@@ -4052,6 +4767,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-exocrine-ability-symbiotic-targeting",
+            "title": "Symbiotic Targeting"
+          },
+          {
+            "id": "unit-exocrine-ability-damaged-1-5-wounds-remaining-2",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-exocrine-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-exocrine-ability-synapse-4",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-exocrine-model-exocrine",
@@ -4151,6 +4885,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-harpy-ability-spore-mine-cysts",
+            "title": "Spore Mine Cysts"
+          },
+          {
+            "id": "unit-harpy-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-harpy-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-harpy-ability-synapse-4",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-harpy-model-harpy",
@@ -4302,6 +5055,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-haruspex-ability-grisly-spectacle",
+            "title": "Grisly Spectacle"
+          },
+          {
+            "id": "unit-haruspex-ability-damaged-1-5-wounds-remaining-2",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-haruspex-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-haruspex-ability-synapse-4",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-haruspex-model-haruspex",
@@ -4428,6 +5200,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-hive-crone-ability-airborne-predator",
+            "title": "Airborne Predator"
+          },
+          {
+            "id": "unit-hive-crone-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-hive-crone-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-hive-crone-ability-synapse-4",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-hive-crone-model-hive-crone",
@@ -4607,6 +5398,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-maleceptor-ability-encephalic-diffusion-aura-psychic",
+            "title": "Encephalic Diffusion (Aura, Psychic)"
+          },
+          {
+            "id": "unit-maleceptor-ability-damaged-1-5-wounds-remaining-2",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-maleceptor-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-maleceptor-ability-shadow-in-the-warp-4",
+            "title": "Shadow in the Warp"
+          },
+          {
+            "id": "unit-maleceptor-ability-synapse-5",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-maleceptor-model-maleceptor",
@@ -4731,6 +5545,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-mawloc-ability-terror-from-the-deep",
+            "title": "Terror from the Deep"
+          },
+          {
+            "id": "unit-mawloc-ability-damaged-1-5-wounds-remaining-2",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-mawloc-ability-synapse-3",
+            "title": "Synapse"
+          },
+          {
+            "id": "unit-mawloc-ability-deep-strike-4",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-mawloc-model-mawloc",
@@ -4829,6 +5662,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-norn-assimilator-ability-harpoon-barbs",
+            "title": "Harpoon Barbs"
+          },
+          {
+            "id": "unit-norn-assimilator-ability-damaged-1-5-wounds-remaining-2",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-norn-assimilator-ability-singular-purpose-3",
+            "title": "Singular Purpose"
+          },
+          {
+            "id": "unit-norn-assimilator-ability-deadly-demise-d6-4",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-norn-assimilator-ability-shadow-in-the-warp-5",
+            "title": "Shadow in the Warp"
+          },
+          {
+            "id": "unit-norn-assimilator-ability-synapse-6",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-norn-assimilator-model-norn-assimilator",
@@ -4943,6 +5803,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-norn-emissary-ability-singular-purpose",
+            "title": "Singular Purpose"
+          },
+          {
+            "id": "unit-norn-emissary-ability-damaged-1-5-wounds-remaining-2",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-norn-emissary-ability-deadly-demise-d6-3",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-norn-emissary-ability-shadow-in-the-warp-4",
+            "title": "Shadow in the Warp"
+          },
+          {
+            "id": "unit-norn-emissary-ability-synapse-5",
+            "title": "Synapse"
+          },
+          {
+            "id": "unit-norn-emissary-ability-unnatural-resilience-6",
+            "title": "Unnatural Resilience"
+          }
+        ],
         "models": [
           {
             "id": "unit-norn-emissary-model-norn-emissary",
@@ -5122,6 +6009,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-psychophage-ability-bio-stimulus",
+            "title": "Bio-stimulus"
+          },
+          {
+            "id": "unit-psychophage-ability-feeding-frenzy-2",
+            "title": "Feeding Frenzy"
+          },
+          {
+            "id": "unit-psychophage-ability-deadly-demise-1-3",
+            "title": "Deadly Demise 1"
+          },
+          {
+            "id": "unit-psychophage-ability-synapse-4",
+            "title": "Synapse"
+          },
+          {
+            "id": "unit-psychophage-ability-feel-no-pain-5-5",
+            "title": "Feel No Pain 5+"
+          }
+        ],
         "models": [
           {
             "id": "unit-psychophage-model-psychophage",
@@ -5218,6 +6128,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-screamer-killer-ability-death-scream",
+            "title": "Death Scream"
+          },
+          {
+            "id": "unit-screamer-killer-ability-deadly-demise-1-2",
+            "title": "Deadly Demise 1"
+          },
+          {
+            "id": "unit-screamer-killer-ability-synapse-3",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-screamer-killer-model-screamer-killer",
@@ -5314,6 +6239,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-sporocyst-ability-seed-mucolids",
+            "title": "Seed Mucolids"
+          },
+          {
+            "id": "unit-sporocyst-ability-hive-defences-2",
+            "title": "Hive Defences"
+          },
+          {
+            "id": "unit-sporocyst-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-sporocyst-ability-synapse-4",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-sporocyst-model-sporocyst",
@@ -5411,6 +6355,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-toxicrene-ability-grasping-tendrils",
+            "title": "Grasping Tendrils"
+          },
+          {
+            "id": "unit-toxicrene-ability-hypertoxic-miasma-aura-2",
+            "title": "Hypertoxic Miasma (Aura)"
+          },
+          {
+            "id": "unit-toxicrene-ability-damaged-1-5-wounds-remaining-3",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-toxicrene-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-toxicrene-ability-synapse-5",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-toxicrene-model-toxicrene",
@@ -5497,6 +6464,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-trygon-ability-subterranean-tunnels",
+            "title": "Subterranean Tunnels"
+          },
+          {
+            "id": "unit-trygon-ability-damaged-1-5-wounds-remaining-2",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-trygon-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-trygon-ability-synapse-4",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-trygon-model-trygon",
@@ -5594,6 +6580,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-tyrannofex-ability-resilient-organism",
+            "title": "Resilient Organism"
+          },
+          {
+            "id": "unit-tyrannofex-ability-damaged-1-5-wounds-remaining-2",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-tyrannofex-ability-deadly-demise-d6-3",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-tyrannofex-ability-synapse-4",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-tyrannofex-model-tyrannofex",
@@ -5772,6 +6777,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-mucolid-spores-ability-bio-minefield",
+            "title": "Bio-minefield"
+          },
+          {
+            "id": "unit-mucolid-spores-ability-floating-death-2",
+            "title": "Floating Death"
+          },
+          {
+            "id": "unit-mucolid-spores-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-mucolid-spores-ability-synapse-4",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-mucolid-spores-model-mucolid-spore",
@@ -5813,6 +6837,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-ripper-swarms-ability-chitinous-horrors-aura",
+            "title": "Chitinous Horrors (Aura)"
+          },
+          {
+            "id": "unit-ripper-swarms-ability-deep-strike-2",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-ripper-swarms-ability-synapse-3",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-ripper-swarms-model-ripper-swarm",
@@ -5910,6 +6949,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-spore-mines-ability-bio-minefield",
+            "title": "Bio-minefield"
+          },
+          {
+            "id": "unit-spore-mines-ability-floating-death-2",
+            "title": "Floating Death"
+          },
+          {
+            "id": "unit-spore-mines-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-spore-mines-ability-synapse-4",
+            "title": "Synapse"
+          }
+        ],
         "models": [
           {
             "id": "unit-spore-mines-model-spore-mine",

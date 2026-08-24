@@ -3,7 +3,8 @@
   const run=()=>{
     if(!root.WHArmyRosterContext)return false;
     const provider={
-      decorate(card,projection,items){root.WHBookRosterEnhancements?.decorate?.(card,projection.roster,items.map(item=>item.raw));}
+      gameEffects(context){return root.WHBookRosterEnhancements?.gameEffects?.(context)||[];},
+      decorate(card,projection,items){root.WHBookRosterEnhancements?.decorate?.(card,projection.roster,items.map(item=>item.raw),{projectedEffects:items[0]?.game?.effects||[]});}
     };
     root.WHArmyRosterContext.install({bookId:'tau-empire',guideGlobal:'TAU_ROSTER_GUIDE',provider});
     return true;

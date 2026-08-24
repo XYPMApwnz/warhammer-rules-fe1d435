@@ -4,6 +4,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import ruleFacts from '../books/shared/rule-facts.js';
+import {parseArmyBookTargetCatalog} from '../books/shared/tools/build-army-book-targets.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const read=file=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'));
@@ -13,7 +14,7 @@ const matcher=sandbox.window.WHRelatedRules;
 const normalize=ruleFacts.normalizeKeyword;
 const decode=value=>String(value||'').replaceAll('&quot;','"').replaceAll('&amp;','&').replaceAll('&#39;',"'");
 const profiles=book=>{
-  const html=fs.readFileSync(path.join(root,`books/${book}/reader.html`),'utf8');
+  const html=parseArmyBookTargetCatalog(fs.readFileSync(path.join(root,`books/${book}/scripts/target-data.js`),'utf8')).html;
   return [...html.matchAll(/<article class="unit-card\b[^>]*id="([^"]+)"[^>]*data-rule-facts="([^"]+)"/g)].map(match=>ruleFacts.profileFromDataset({ruleFacts:decode(match[2])},{id:match[1]}));
 };
 const genericContracts=book=>{

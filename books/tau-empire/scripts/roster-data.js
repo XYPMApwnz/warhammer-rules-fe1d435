@@ -56,6 +56,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-breacher-team-ability-breach-and-clear",
+            "title": "Breach and Clear"
+          },
+          {
+            "id": "unit-breacher-team-ability-ds8-support-turret-2",
+            "title": "DS8 Support Turret"
+          },
+          {
+            "id": "unit-breacher-team-ability-for-the-greater-good-3",
+            "title": "For The Greater Good"
+          }
+        ],
         "models": [
           {
             "id": "unit-breacher-team-model-breacher-fire-warriors",
@@ -344,6 +359,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-strike-team-ability-suppression-volley",
+            "title": "Suppression Volley"
+          },
+          {
+            "id": "unit-strike-team-ability-ds8-support-turret-2",
+            "title": "DS8 Support Turret"
+          },
+          {
+            "id": "unit-strike-team-ability-for-the-greater-good-3",
+            "title": "For The Greater Good"
+          }
+        ],
         "models": [
           {
             "id": "unit-strike-team-model-fire-warriors",
@@ -657,6 +687,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-cadre-fireblade-ability-volley-fire",
+            "title": "Volley Fire"
+          },
+          {
+            "id": "unit-cadre-fireblade-ability-crack-shot-2",
+            "title": "Crack Shot"
+          },
+          {
+            "id": "unit-cadre-fireblade-ability-for-the-greater-good-3",
+            "title": "For The Greater Good"
+          },
+          {
+            "id": "unit-cadre-fireblade-ability-leader-4",
+            "title": "Leader"
+          }
+        ],
         "models": [
           {
             "id": "unit-cadre-fireblade-model-cadre-fireblade",
@@ -892,6 +941,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-commander-in-coldstar-battlesuit-ability-coldstar-commander",
+            "title": "Coldstar Commander"
+          },
+          {
+            "id": "unit-commander-in-coldstar-battlesuit-ability-deep-strike-2",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-commander-in-coldstar-battlesuit-ability-for-the-greater-good-3",
+            "title": "For The Greater Good"
+          },
+          {
+            "id": "unit-commander-in-coldstar-battlesuit-ability-leader-4",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-commander-in-coldstar-battlesuit-ability-assault-5",
+            "title": "Assault"
+          }
+        ],
         "models": [
           {
             "id": "unit-commander-in-coldstar-battlesuit-model-commander-in-coldstar-battlesuit",
@@ -1386,6 +1458,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-commander-in-enforcer-battlesuit-ability-enforcer-commander",
+            "title": "Enforcer Commander"
+          },
+          {
+            "id": "unit-commander-in-enforcer-battlesuit-ability-deep-strike-2",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-commander-in-enforcer-battlesuit-ability-for-the-greater-good-3",
+            "title": "For The Greater Good"
+          },
+          {
+            "id": "unit-commander-in-enforcer-battlesuit-ability-leader-4",
+            "title": "Leader"
+          }
+        ],
         "models": [
           {
             "id": "unit-commander-in-enforcer-battlesuit-model-commander-in-enforcer-battlesuit",
@@ -1842,6 +1933,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-ethereal-ability-coordinated-leadership",
+            "title": "Coordinated Leadership"
+          },
+          {
+            "id": "unit-ethereal-ability-failure-is-not-an-option-2",
+            "title": "Failure Is Not an Option"
+          },
+          {
+            "id": "unit-ethereal-ability-for-the-greater-good-3",
+            "title": "For The Greater Good"
+          },
+          {
+            "id": "unit-ethereal-ability-leader-4",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-ethereal-ability-feel-no-pain-5",
+            "title": "Feel No Pain"
+          }
+        ],
         "models": [
           {
             "id": "unit-ethereal-model-ethereal",
@@ -2040,6 +2154,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-firesight-team-ability-precise-targeting",
+            "title": "Precise Targeting"
+          },
+          {
+            "id": "unit-firesight-team-ability-infiltrators-2",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-firesight-team-ability-lone-operative-3",
+            "title": "Lone Operative"
+          },
+          {
+            "id": "unit-firesight-team-ability-stealth-4",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-firesight-team-ability-for-the-greater-good-5",
+            "title": "For The Greater Good"
+          }
+        ],
         "models": [
           {
             "id": "unit-firesight-team-model-firesight-team",
@@ -2183,6 +2320,45 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-kroot-flesh-shaper-ability-rites-of-feasting",
+            "title": "Rites of Feasting"
+          },
+          {
+            "id": "unit-kroot-flesh-shaper-ability-ritual-butchery-2",
+            "title": "Ritual Butchery"
+          },
+          {
+            "id": "unit-kroot-flesh-shaper-ability-harnessed-alien-instincts-3",
+            "title": "Harnessed Alien Instincts"
+          },
+          {
+            "id": "unit-kroot-flesh-shaper-ability-infiltrators-4",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-kroot-flesh-shaper-ability-scouts-7-5",
+            "title": "Scouts 7\""
+          },
+          {
+            "id": "unit-kroot-flesh-shaper-ability-stealth-6",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-kroot-flesh-shaper-ability-leader-7",
+            "title": "Leader"
+          },
+          {
+            "id": "unit-kroot-flesh-shaper-ability-feel-no-pain-8",
+            "title": "Feel No Pain"
+          },
+          {
+            "id": "unit-kroot-flesh-shaper-ability-sustained-hits-9",
+            "title": "Sustained Hits"
+          }
+        ],
         "models": [
           {
             "id": "unit-kroot-flesh-shaper-model-kroot-flesh-shaper",
@@ -2280,6 +2456,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-kroot-lone-spear-ability-fire-and-fade",
+            "title": "Fire and Fade"
+          },
+          {
+            "id": "unit-kroot-lone-spear-ability-advanced-scouting-2",
+            "title": "Advanced Scouting"
+          },
+          {
+            "id": "unit-kroot-lone-spear-ability-harnessed-alien-instincts-3",
+            "title": "Harnessed Alien Instincts"
+          },
+          {
+            "id": "unit-kroot-lone-spear-ability-stealth-4",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-kroot-lone-spear-ability-lone-operative-5",
+            "title": "Lone Operative"
+          },
+          {
+            "id": "unit-kroot-lone-spear-ability-scouts-7-6",
+            "title": "Scouts 7\""
+          }
+        ],
         "models": [
           {
             "id": "unit-kroot-lone-spear-model-kroot-lone-spear",
@@ -2477,6 +2680,37 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-kroot-trail-shaper-ability-kroot-ambush",
+            "title": "Kroot Ambush"
+          },
+          {
+            "id": "unit-kroot-trail-shaper-ability-trail-finding-2",
+            "title": "Trail Finding"
+          },
+          {
+            "id": "unit-kroot-trail-shaper-ability-harnessed-alien-instincts-3",
+            "title": "Harnessed Alien Instincts"
+          },
+          {
+            "id": "unit-kroot-trail-shaper-ability-infiltrators-4",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-kroot-trail-shaper-ability-scouts-7-5",
+            "title": "Scouts 7\""
+          },
+          {
+            "id": "unit-kroot-trail-shaper-ability-stealth-6",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-kroot-trail-shaper-ability-leader-7",
+            "title": "Leader"
+          }
+        ],
         "models": [
           {
             "id": "unit-kroot-trail-shaper-model-kroot-trail-shaper",
@@ -2593,6 +2827,37 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-kroot-war-shaper-ability-root-of-honour",
+            "title": "Root of Honour"
+          },
+          {
+            "id": "unit-kroot-war-shaper-ability-war-leader-2",
+            "title": "War Leader"
+          },
+          {
+            "id": "unit-kroot-war-shaper-ability-harnessed-alien-instincts-3",
+            "title": "Harnessed Alien Instincts"
+          },
+          {
+            "id": "unit-kroot-war-shaper-ability-infiltrators-4",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-kroot-war-shaper-ability-scouts-7-5",
+            "title": "Scouts 7\""
+          },
+          {
+            "id": "unit-kroot-war-shaper-ability-stealth-6",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-kroot-war-shaper-ability-leader-7",
+            "title": "Leader"
+          }
+        ],
         "models": [
           {
             "id": "unit-kroot-war-shaper-model-kroot-war-shaper",
@@ -2747,6 +3012,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-devilfish-ability-rapid-deployment",
+            "title": "Rapid Deployment"
+          },
+          {
+            "id": "unit-devilfish-ability-deadly-demise-d3-2",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-devilfish-ability-for-the-greater-good-3",
+            "title": "For The Greater Good"
+          }
+        ],
         "models": [
           {
             "id": "unit-devilfish-model-devilfish",
@@ -2955,6 +3235,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-commander-farsight-ability-way-of-the-short-blade",
+            "title": "Way of the Short Blade"
+          },
+          {
+            "id": "unit-commander-farsight-ability-puretides-teachings-2",
+            "title": "Puretide's Teachings"
+          },
+          {
+            "id": "unit-commander-farsight-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-commander-farsight-ability-for-the-greater-good-4",
+            "title": "For The Greater Good"
+          },
+          {
+            "id": "unit-commander-farsight-ability-leader-5",
+            "title": "Leader"
+          }
+        ],
         "models": [
           {
             "id": "unit-commander-farsight-model-commander-farsight",
@@ -3082,6 +3385,45 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-commander-shadowsun-ability-agile-combatant",
+            "title": "Agile Combatant"
+          },
+          {
+            "id": "unit-commander-shadowsun-ability-hero-of-the-empire-aura-2",
+            "title": "Hero of the Empire (Aura)"
+          },
+          {
+            "id": "unit-commander-shadowsun-ability-advanced-guardian-drone-3",
+            "title": "Advanced Guardian Drone"
+          },
+          {
+            "id": "unit-commander-shadowsun-ability-command-link-drone-aura-4",
+            "title": "Command-link Drone (Aura)"
+          },
+          {
+            "id": "unit-commander-shadowsun-ability-supreme-commander-5",
+            "title": "Supreme Commander"
+          },
+          {
+            "id": "unit-commander-shadowsun-ability-infiltrators-6",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-commander-shadowsun-ability-lone-operative-7",
+            "title": "Lone Operative"
+          },
+          {
+            "id": "unit-commander-shadowsun-ability-stealth-8",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-commander-shadowsun-ability-for-the-greater-good-9",
+            "title": "For The Greater Good"
+          }
+        ],
         "models": [
           {
             "id": "unit-commander-shadowsun-model-commander-shadowsun",
@@ -3272,6 +3614,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-darkstrider-ability-structural-analyser",
+            "title": "Structural Analyser"
+          },
+          {
+            "id": "unit-darkstrider-ability-jammer-array-2",
+            "title": "Jammer Array"
+          },
+          {
+            "id": "unit-darkstrider-ability-infiltrators-3",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-darkstrider-ability-scouts-7-4",
+            "title": "Scouts 7\""
+          },
+          {
+            "id": "unit-darkstrider-ability-for-the-greater-good-5",
+            "title": "For The Greater Good"
+          },
+          {
+            "id": "unit-darkstrider-ability-leader-6",
+            "title": "Leader"
+          }
+        ],
         "models": [
           {
             "id": "unit-darkstrider-model-darkstrider",
@@ -3373,6 +3742,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-the-twin-lance-ability-neocapacitor-shields",
+            "title": "Neocapacitor Shields"
+          },
+          {
+            "id": "unit-the-twin-lance-ability-exemplars-of-montka-2",
+            "title": "Exemplars of Mont’ka"
+          },
+          {
+            "id": "unit-the-twin-lance-ability-retro-thrusters-3",
+            "title": "Retro-thrusters"
+          },
+          {
+            "id": "unit-the-twin-lance-ability-sustained-hits-4",
+            "title": "Sustained Hits"
+          },
+          {
+            "id": "unit-the-twin-lance-ability-for-the-greater-good-5",
+            "title": "For The Greater Good"
+          },
+          {
+            "id": "unit-the-twin-lance-ability-scouts-8-6",
+            "title": "Scouts 8\""
+          },
+          {
+            "id": "unit-the-twin-lance-ability-ignores-cover-7",
+            "title": "Ignores Cover"
+          },
+          {
+            "id": "unit-the-twin-lance-ability-deep-strike-8",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-the-twin-lance-model-rilantar",
@@ -3689,6 +4093,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-kroot-carnivores-ability-fieldcraft",
+            "title": "Fieldcraft"
+          },
+          {
+            "id": "unit-kroot-carnivores-ability-bodyguard-2",
+            "title": "Bodyguard"
+          },
+          {
+            "id": "unit-kroot-carnivores-ability-harnessed-alien-instincts-3",
+            "title": "Harnessed Alien Instincts"
+          },
+          {
+            "id": "unit-kroot-carnivores-ability-scouts-7-4",
+            "title": "Scouts 7\""
+          },
+          {
+            "id": "unit-kroot-carnivores-ability-stealth-5",
+            "title": "Stealth"
+          }
+        ],
         "models": [
           {
             "id": "unit-kroot-carnivores-model-9-19-kroot-carnivores",
@@ -3900,6 +4327,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-kroot-farstalkers-ability-harnessed-alien-instincts",
+            "title": "Harnessed Alien Instincts"
+          },
+          {
+            "id": "unit-kroot-farstalkers-ability-infiltrators-2",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-kroot-farstalkers-ability-stealth-3",
+            "title": "Stealth"
+          }
+        ],
         "models": [
           {
             "id": "unit-kroot-farstalkers-model-kroot-hounds",
@@ -4184,6 +4626,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-pathfinder-team-ability-target-uploaded",
+            "title": "Target Uploaded"
+          },
+          {
+            "id": "unit-pathfinder-team-ability-scouts-7-2",
+            "title": "Scouts 7\""
+          },
+          {
+            "id": "unit-pathfinder-team-ability-for-the-greater-good-3",
+            "title": "For The Greater Good"
+          },
+          {
+            "id": "unit-pathfinder-team-ability-infiltrators-4",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-pathfinder-team-ability-ignores-cover-5",
+            "title": "Ignores Cover"
+          }
+        ],
         "models": [
           {
             "id": "unit-pathfinder-team-model-pathfinders",
@@ -4643,6 +5108,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-stealth-battlesuits-ability-forward-observers",
+            "title": "Forward Observers"
+          },
+          {
+            "id": "unit-stealth-battlesuits-ability-localised-stealth-projectors-aura-2",
+            "title": "Localised Stealth Projectors (Aura)"
+          },
+          {
+            "id": "unit-stealth-battlesuits-ability-infiltrators-3",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-stealth-battlesuits-ability-stealth-4",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-stealth-battlesuits-ability-for-the-greater-good-5",
+            "title": "For The Greater Good"
+          }
+        ],
         "models": [
           {
             "id": "unit-stealth-battlesuits-model-4-stealth-shasui",
@@ -4928,6 +5416,17 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-vespid-stingwings-ability-airborne-agility",
+            "title": "Airborne Agility"
+          },
+          {
+            "id": "unit-vespid-stingwings-ability-deep-strike-2",
+            "title": "Deep Strike"
+          }
+        ],
         "models": [
           {
             "id": "unit-vespid-stingwings-model-vespid-strain-leader",
@@ -5133,6 +5632,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-broadside-battlesuits-ability-advanced-armour",
+            "title": "Advanced Armour"
+          },
+          {
+            "id": "unit-broadside-battlesuits-ability-for-the-greater-good-2",
+            "title": "For The Greater Good"
+          },
+          {
+            "id": "unit-broadside-battlesuits-ability-feel-no-pain-3",
+            "title": "Feel No Pain"
+          }
+        ],
         "models": [
           {
             "id": "unit-broadside-battlesuits-model-broadside-shasui-0-2",
@@ -5501,6 +6015,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-crisis-fireknife-battlesuits-ability-fireknife",
+            "title": "Fireknife"
+          },
+          {
+            "id": "unit-crisis-fireknife-battlesuits-ability-weapon-support-system-2",
+            "title": "Weapon Support System"
+          },
+          {
+            "id": "unit-crisis-fireknife-battlesuits-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-crisis-fireknife-battlesuits-ability-for-the-greater-good-4",
+            "title": "For The Greater Good"
+          }
+        ],
         "models": [
           {
             "id": "unit-crisis-fireknife-battlesuits-model-crisis-fireknife-shasui",
@@ -5759,6 +6292,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-crisis-starscythe-battlesuits-ability-starscythe",
+            "title": "Starscythe"
+          },
+          {
+            "id": "unit-crisis-starscythe-battlesuits-ability-battlesuit-support-system-2",
+            "title": "Battlesuit Support System"
+          },
+          {
+            "id": "unit-crisis-starscythe-battlesuits-ability-deep-strike-3",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-crisis-starscythe-battlesuits-ability-for-the-greater-good-4",
+            "title": "For The Greater Good"
+          }
+        ],
         "models": [
           {
             "id": "unit-crisis-starscythe-battlesuits-model-crisis-starscythe-shasui",
@@ -6028,6 +6580,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-crisis-sunforge-battlesuits-ability-sunforge",
+            "title": "Sunforge"
+          },
+          {
+            "id": "unit-crisis-sunforge-battlesuits-ability-deep-strike-2",
+            "title": "Deep Strike"
+          },
+          {
+            "id": "unit-crisis-sunforge-battlesuits-ability-for-the-greater-good-3",
+            "title": "For The Greater Good"
+          }
+        ],
         "models": [
           {
             "id": "unit-crisis-sunforge-battlesuits-model-crisis-sunforge-shasui",
@@ -6244,6 +6811,41 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-ghostkeel-battlesuit-ability-stealth-drones",
+            "title": "Stealth Drones"
+          },
+          {
+            "id": "unit-ghostkeel-battlesuit-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-ghostkeel-battlesuit-ability-localised-stealth-projectors-aura-3",
+            "title": "Localised Stealth Projectors (Aura)"
+          },
+          {
+            "id": "unit-ghostkeel-battlesuit-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-ghostkeel-battlesuit-ability-infiltrators-5",
+            "title": "Infiltrators"
+          },
+          {
+            "id": "unit-ghostkeel-battlesuit-ability-lone-operative-6",
+            "title": "Lone Operative"
+          },
+          {
+            "id": "unit-ghostkeel-battlesuit-ability-stealth-7",
+            "title": "Stealth"
+          },
+          {
+            "id": "unit-ghostkeel-battlesuit-ability-for-the-greater-good-8",
+            "title": "For The Greater Good"
+          }
+        ],
         "models": [
           {
             "id": "unit-ghostkeel-battlesuit-model-ghostkeel-battlesuit",
@@ -6496,6 +7098,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-hammerhead-gunship-ability-armour-hunter",
+            "title": "Armour Hunter"
+          },
+          {
+            "id": "unit-hammerhead-gunship-ability-damaged-1-5-wounds-remaining-2",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-hammerhead-gunship-ability-targeting-array-3",
+            "title": "Targeting Array"
+          },
+          {
+            "id": "unit-hammerhead-gunship-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-hammerhead-gunship-ability-for-the-greater-good-5",
+            "title": "For The Greater Good"
+          }
+        ],
         "models": [
           {
             "id": "unit-hammerhead-gunship-model-hammerhead-gunship",
@@ -6754,6 +7379,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-kroot-hounds-ability-loping-pounce",
+            "title": "Loping Pounce"
+          },
+          {
+            "id": "unit-kroot-hounds-ability-hunting-hounds-2",
+            "title": "Hunting Hounds"
+          },
+          {
+            "id": "unit-kroot-hounds-ability-harnessed-alien-instincts-3",
+            "title": "Harnessed Alien Instincts"
+          },
+          {
+            "id": "unit-kroot-hounds-ability-scouts-7-4",
+            "title": "Scouts 7\""
+          },
+          {
+            "id": "unit-kroot-hounds-ability-stealth-5",
+            "title": "Stealth"
+          }
+        ],
         "models": [
           {
             "id": "unit-kroot-hounds-model-5-10-kroot-hounds",
@@ -6824,6 +7472,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-krootox-rampagers-ability-kroot-linebreakers",
+            "title": "Kroot Linebreakers"
+          },
+          {
+            "id": "unit-krootox-rampagers-ability-harnessed-alien-instincts-2",
+            "title": "Harnessed Alien Instincts"
+          },
+          {
+            "id": "unit-krootox-rampagers-ability-scouts-7-3",
+            "title": "Scouts 7\""
+          }
+        ],
         "models": [
           {
             "id": "unit-krootox-rampagers-model-krootox-rampagers",
@@ -6948,6 +7611,21 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-krootox-riders-ability-kroot-packmates",
+            "title": "Kroot Packmates"
+          },
+          {
+            "id": "unit-krootox-riders-ability-harnessed-alien-instincts-2",
+            "title": "Harnessed Alien Instincts"
+          },
+          {
+            "id": "unit-krootox-riders-ability-scouts-7-3",
+            "title": "Scouts 7\""
+          }
+        ],
         "models": [
           {
             "id": "unit-krootox-riders-model-krootox-riders",
@@ -7100,6 +7778,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-piranhas-ability-drone-harassment-tactics",
+            "title": "Drone Harassment Tactics"
+          },
+          {
+            "id": "unit-piranhas-ability-deadly-demise-1-2",
+            "title": "Deadly Demise 1"
+          },
+          {
+            "id": "unit-piranhas-ability-scouts-9-3",
+            "title": "Scouts 9\""
+          },
+          {
+            "id": "unit-piranhas-ability-for-the-greater-good-4",
+            "title": "For The Greater Good"
+          }
+        ],
         "models": [
           {
             "id": "unit-piranhas-model-piranhas",
@@ -7280,6 +7977,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-razorshark-strike-fighter-ability-ground-strike-fighter",
+            "title": "Ground Strike Fighter"
+          },
+          {
+            "id": "unit-razorshark-strike-fighter-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-razorshark-strike-fighter-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-razorshark-strike-fighter-ability-for-the-greater-good-4",
+            "title": "For The Greater Good"
+          }
+        ],
         "models": [
           {
             "id": "unit-razorshark-strike-fighter-model-razorshark-strike-fighter",
@@ -7487,6 +8203,37 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-riptide-battlesuit-ability-nova-charge",
+            "title": "Nova Charge"
+          },
+          {
+            "id": "unit-riptide-battlesuit-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-riptide-battlesuit-ability-battlesuit-support-system-3",
+            "title": "Battlesuit Support System"
+          },
+          {
+            "id": "unit-riptide-battlesuit-ability-weapon-support-system-4",
+            "title": "Weapon Support System"
+          },
+          {
+            "id": "unit-riptide-battlesuit-ability-deadly-demise-d6-5",
+            "title": "Deadly Demise D6"
+          },
+          {
+            "id": "unit-riptide-battlesuit-ability-for-the-greater-good-6",
+            "title": "For The Greater Good"
+          },
+          {
+            "id": "unit-riptide-battlesuit-ability-devastating-wounds-7",
+            "title": "Devastating Wounds"
+          }
+        ],
         "models": [
           {
             "id": "unit-riptide-battlesuit-model-riptide-battlesuit",
@@ -7748,6 +8495,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-sky-ray-gunship-ability-velocity-tracker",
+            "title": "Velocity Tracker"
+          },
+          {
+            "id": "unit-sky-ray-gunship-ability-damaged-1-5-wounds-remaining-2",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-sky-ray-gunship-ability-targeting-array-3",
+            "title": "Targeting Array"
+          },
+          {
+            "id": "unit-sky-ray-gunship-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-sky-ray-gunship-ability-for-the-greater-good-5",
+            "title": "For The Greater Good"
+          }
+        ],
         "models": [
           {
             "id": "unit-sky-ray-gunship-model-sky-ray-gunship",
@@ -7928,6 +8698,33 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-stormsurge-ability-damaged-1-5-wounds-remaining",
+            "title": "Damaged: 1-5 Wounds Remaining"
+          },
+          {
+            "id": "unit-stormsurge-ability-heavy-walker-2",
+            "title": "Heavy Walker"
+          },
+          {
+            "id": "unit-stormsurge-ability-support-system-3",
+            "title": "Support System"
+          },
+          {
+            "id": "unit-stormsurge-ability-titan-killer-4",
+            "title": "Titan-killer"
+          },
+          {
+            "id": "unit-stormsurge-ability-deadly-demise-d6-2-5",
+            "title": "Deadly Demise D6+2"
+          },
+          {
+            "id": "unit-stormsurge-ability-for-the-greater-good-6",
+            "title": "For The Greater Good"
+          }
+        ],
         "models": [
           {
             "id": "unit-stormsurge-model-stormsurge",
@@ -8243,6 +9040,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-sun-shark-bomber-ability-pulse-bombs",
+            "title": "Pulse Bombs"
+          },
+          {
+            "id": "unit-sun-shark-bomber-ability-damaged-1-4-wounds-remaining-2",
+            "title": "Damaged: 1-4 Wounds Remaining"
+          },
+          {
+            "id": "unit-sun-shark-bomber-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-sun-shark-bomber-ability-for-the-greater-good-4",
+            "title": "For The Greater Good"
+          }
+        ],
         "models": [
           {
             "id": "unit-sun-shark-bomber-model-sun-shark-bomber",
@@ -8451,6 +9267,29 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-tidewall-droneport-ability-droneport",
+            "title": "Droneport"
+          },
+          {
+            "id": "unit-tidewall-droneport-ability-fortification-2",
+            "title": "Fortification"
+          },
+          {
+            "id": "unit-tidewall-droneport-ability-tidewall-cover-3",
+            "title": "Tidewall Cover"
+          },
+          {
+            "id": "unit-tidewall-droneport-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-tidewall-droneport-ability-firing-deck-11-5",
+            "title": "Firing Deck 11"
+          }
+        ],
         "models": [
           {
             "id": "unit-tidewall-droneport-model-tidewall-droneport",
@@ -8524,6 +9363,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-tidewall-gunrig-ability-fortification",
+            "title": "Fortification"
+          },
+          {
+            "id": "unit-tidewall-gunrig-ability-tidewall-cover-2",
+            "title": "Tidewall Cover"
+          },
+          {
+            "id": "unit-tidewall-gunrig-ability-firing-deck-11-3",
+            "title": "Firing Deck 11"
+          },
+          {
+            "id": "unit-tidewall-gunrig-ability-deadly-demise-d3-4",
+            "title": "Deadly Demise D3"
+          }
+        ],
         "models": [
           {
             "id": "unit-tidewall-gunrig-model-tidewall-gunrig",
@@ -8597,6 +9455,25 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [
+          {
+            "id": "unit-tidewall-shieldline-ability-fortification",
+            "title": "Fortification"
+          },
+          {
+            "id": "unit-tidewall-shieldline-ability-tidewall-cover-2",
+            "title": "Tidewall Cover"
+          },
+          {
+            "id": "unit-tidewall-shieldline-ability-deadly-demise-d3-3",
+            "title": "Deadly Demise D3"
+          },
+          {
+            "id": "unit-tidewall-shieldline-ability-firing-deck-20-4",
+            "title": "Firing Deck 20"
+          }
+        ],
         "models": [
           {
             "id": "unit-tidewall-shieldline-model-tidewall-shieldline",

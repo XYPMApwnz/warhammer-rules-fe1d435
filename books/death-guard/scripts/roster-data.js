@@ -109,6 +109,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -336,6 +338,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -496,6 +500,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -664,6 +670,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -835,6 +843,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -1020,6 +1030,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -1178,6 +1190,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -1339,6 +1353,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -1488,6 +1504,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -1672,6 +1690,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -1830,6 +1850,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -2055,6 +2077,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -2236,6 +2260,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -2391,6 +2417,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -2681,6 +2709,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -3188,6 +3218,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -3511,6 +3543,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -3721,6 +3755,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -3823,6 +3859,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -3940,6 +3978,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -4189,6 +4229,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -4465,6 +4507,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -4748,6 +4792,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -5155,6 +5201,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -5318,6 +5366,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -5463,6 +5513,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -5899,6 +5951,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -6120,6 +6174,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -6375,6 +6431,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -6565,6 +6623,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -6675,6 +6735,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -6801,6 +6863,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -7045,6 +7109,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -7161,6 +7227,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -7329,6 +7397,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {
@@ -7455,6 +7525,8 @@ window.WH_BOOK_ROSTER_CATALOG=Object.freeze({
         }
       },
       "gameSelections": {
+        "stats": {},
+        "abilities": [],
         "models": [],
         "selections": [
           {

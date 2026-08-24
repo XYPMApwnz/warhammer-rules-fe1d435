@@ -329,6 +329,7 @@ if(config.compatibleRulesMatrix){
   }
 }
 finalHtml=finalHtml.replace(/<script src="\.\.\/shared\/army-book-app\.js\?v=\d+"><\/script>/,match=>`<script src="../shared/roster-context.js?v=${runtimeVersions.shared.rosterContext}"></script><script src="../shared/roster-game-presentation.js?v=${runtimeVersions.shared.rosterGamePresentation}"></script>${match}`);
+finalHtml=finalHtml.replace(/<script src="\.\.\/shared\/book-roster-enhancements\.js\?v=\d+"><\/script>/,`<script src="../shared/book-roster-enhancements.js?v=${runtimeVersions.shared.bookRosterEnhancements}"></script>`).replace(/<script src="\.\.\/extensions\/book-roster-enhancement-providers\.js\?v=\d+"><\/script>/,`<script src="../extensions/book-roster-enhancement-providers.js?v=${runtimeVersions.shared.rosterEffectProviders}"></script>`);
 finalHtml=finalHtml.replace(/<script src="\.\.\/shared\/army-book-app\.js\?v=\d+"><\/script>/,match=>`<script src="../shared/offline-status.js?v=${runtimeVersions.shared.offlineStatus}" data-service-worker="../../service-worker.js"></script>${match}`);
 if(config.rosterSupport)finalHtml=finalHtml.replace('<script src="./scripts/app.js',`<script src="./scripts/roster-filter.js?v=${config.assetVersions?.rosterFilter||1}"></script><script src="./scripts/app.js`);
 const targetBuild=createArmyBookTargetBuild(finalHtml,{runtimeVersions});

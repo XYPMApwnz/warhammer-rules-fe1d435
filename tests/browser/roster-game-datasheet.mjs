@@ -8,6 +8,7 @@ import {fileURLToPath} from 'node:url';
 import {chromium} from 'playwright';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
+const runtimeVersions=JSON.parse(fs.readFileSync(path.join(root,'books/shared/runtime-asset-versions.json'),'utf8'));
 const books=[['DG','death-guard'],['AM','adeptus-mechanicus'],["T'au",'tau-empire'],['EC','emperors-children'],['Tyr','tyranids'],['CSM','chaos-space-marines'],['SM','space-marines'],['DA','dark-angels'],['BA','blood-angels']];
 const types={'.css':'text/css','.html':'text/html','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.webp':'image/webp','.png':'image/png'};
 const catalogFor=book=>{const scope={window:{}};vm.runInNewContext(fs.readFileSync(path.join(root,`books/${book}/scripts/roster-data.js`),'utf8'),scope);return scope.window.WH_BOOK_ROSTER_CATALOG;};
@@ -20,7 +21,7 @@ for(const [,book] of books){
 const presenter=fs.readFileSync(path.join(root,'books/shared/roster-game-presentation.js'),'utf8'),armyBook=fs.readFileSync(path.join(root,'books/shared/army-book-app.js'),'utf8');
 assert.doesNotMatch(presenter,/bookId\s*===|death-guard|adeptus-mechanicus|tau-empire|tyranids/);
 assert.match(armyBook,/WHArmyRosterGamePresentation\?\.install/);
-for(const [,book] of books){const reader=fs.readFileSync(path.join(root,`books/${book}/reader.html`),'utf8');assert.match(reader,/shared\/roster-game-presentation\.js\?v=1/);}
+for(const [,book] of books){const reader=fs.readFileSync(path.join(root,`books/${book}/reader.html`),'utf8');assert.ok(reader.includes(`shared/roster-game-presentation.js?v=${runtimeVersions.shared.rosterGamePresentation}`));}
 
 const server=createServer(async(request,response)=>{try{const url=new URL(request.url,'http://localhost');if(url.pathname==='/favicon.ico'){response.statusCode=204;response.end();return;}let file=path.resolve(root,'.'+decodeURIComponent(url.pathname));assert.ok(file===root||file.startsWith(root+path.sep));if((await stat(file)).isDirectory())file=path.join(file,'index.html');response.setHeader('Content-Type',types[path.extname(file)]||'application/octet-stream');response.end(await readFile(file));}catch{response.statusCode=404;response.end('Not found');}});
 await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));

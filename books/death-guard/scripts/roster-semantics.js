@@ -124,7 +124,7 @@
       return output;
     };
 
-    const decorate = (card, units, detachmentIds = [], projectedEffects = null) => {
+    const decorate = (card, units, detachmentIds = [], projectedEffects = null, applyProjectedEffects = true) => {
       const cardId = (card.dataset.rosterCanonicalId || card.id).replace(/--roster-.+$/, '');
       const normalizedDetachments = detachmentIds.map((id) => String(id).replace(/^detachment-/, ''));
       let facts = {};
@@ -135,7 +135,7 @@
       const weaponRows = (type) => [...card.querySelectorAll('.weapon-group')]
         .filter((group) => !type || normalize(group.querySelector('h5')?.textContent).startsWith(`${type} weapons`))
         .flatMap((group) => [...group.querySelectorAll('.weapon-row:not(.weapon-head)')]);
-      root.WHRosterEnhancements?.decorate(card, roster, units, Array.isArray(projectedEffects)?{effects:projectedEffects}:{});
+      root.WHRosterEnhancements?.decorate(card, roster, units, Array.isArray(projectedEffects)?{effects:projectedEffects,applyEffects:applyProjectedEffects}:{});
       if (units.some((unit) => ownsEnhancement(unit, DG_ENH.bilemaw))) {
         for (const row of weaponRows('ranged').filter((item) => root.WHRosterEntities.weaponFamily(item.querySelector('.weapon-button')?.textContent) === 'plague wind')) {
           const cell = row.querySelector('[data-label="Range"]');
@@ -221,6 +221,7 @@
       };
 
       if (Array.isArray(projectedEffects)) {
+        if (!applyProjectedEffects) return;
         const sharedEnhancementEffects=new Set(['furnace-attacks','furnace-strength','furnace-devastating','critical-hit-5','melee-a-2','plague-wind-range','narthecium-d3','mobile-keyword']);
         const rowsFor=effect=>effect.targetId==='all'?weaponRows():effect.targetId==='ranged'?weaponRows('ranged'):effect.targetId==='melee'?weaponRows('melee'):effect.targetId==='selected-melee'?weaponRows('melee').filter(row=>effect.profileIds?.includes(row.id)):String(effect.targetId).startsWith('family:')?weaponRows().filter(row=>root.WHRosterEntities.weaponFamily(row.querySelector('.weapon-button')?.textContent||row.firstElementChild?.textContent)===String(effect.targetId).slice(7)):[];
         for(const effect of projectedEffects){if(sharedEnhancementEffects.has(effect.id))continue;if(effect.component==='ability')addDerivedAbility(effect.id,effect.title,effect.summary,effect.source?.id);else if(effect.component==='stat'&&effect.operation==='add')modifyModelStat(effect.targetId,effect.delta,effect.id);else if(effect.component==='stat'&&effect.operation==='set')setModelStat(effect.targetId,effect.to,effect.id);else if(effect.component==='keyword'&&effect.operation==='grant')addKeywords([{id:`keyword-${slug(effect.targetId)}`,title:effect.targetId,detachment:String(effect.source?.id||'roster').replace(/^detachment-/,'')}]);else if(effect.component==='weapon')for(const row of rowsFor(effect)){if(effect.operation==='grant-tag')addWeaponTag(row,effect.tag,effect.termId,effect.id);else if(effect.operation==='add-stat')modifyWeaponStat(row,effect.stat,effect.delta,effect.id);else if(effect.operation==='set-stat')setWeaponStat(row,effect.stat,effect.to,effect.id);}}

@@ -71,20 +71,20 @@
   letter-spacing: .16em;
 }
 .toc-tree, .toc-branch { list-style: none; margin: 0; padding: 0; }
-.toc-branch { margin-left: 11px; padding-left: 9px; border-left: 1px solid rgba(117,104,73,.52); }
+.toc-tree { --toc-tree-line: rgba(117,104,73,.52); }
+.toc-branch { margin-left: 11px; padding-left: 9px; border-left: 1px solid var(--toc-tree-line); }
 .roster-physical-start { margin-top: 11px; padding-top: 9px; border-top: 1px solid rgba(117,104,73,.42); }
 .roster-attachment-group, .roster-attachment-members { list-style: none; margin: 0; padding: 0; }
 .roster-attachment-group { position: relative; }
-.roster-attachment-group::before {
+.roster-attachment-group [data-roster-attachment-role="bodyguard"] { position: relative; padding-top: 8px; }
+.roster-attachment-group [data-roster-attachment-role="bodyguard"] .toc-row::after {
   content: "";
   position: absolute;
   z-index: 1;
-  top: 21px;
-  bottom: 21px;
+  top: -4px;
+  bottom: 50%;
   left: 10px;
-  width: 1px;
-  background: currentColor;
-  opacity: .34;
+  border-left: 1px solid var(--toc-tree-line);
   pointer-events: none;
 }
 .roster-attachment-group [data-roster-attachment-role="bodyguard"] .toc-row::before {
@@ -93,9 +93,8 @@
   z-index: 1;
   top: 50%;
   left: 10px;
-  width: 13px;
-  border-top: 1px solid currentColor;
-  opacity: .34;
+  width: 10px;
+  border-top: 1px solid var(--toc-tree-line);
   pointer-events: none;
 }
 .roster-attachment-group [data-roster-attachment-role="bodyguard"] .toc-label { padding-left: 29px; }

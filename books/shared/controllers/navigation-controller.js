@@ -7,23 +7,31 @@
   const currentRelation=relation=>relation?.certainty==='current'&&relation?.provenance?.kind==='explicit-roster-attachment';
   const keywordsFor=unit=>new Set(list(unit?.intrinsicKeywords).map(value=>String(value).trim().toUpperCase()));
 
-  function canonicalRosterReferences(tree){
+  function canonicalRosterReferences(tree,projection){
     const nodes=list(window.WH_ARMY_BOOK_TARGETS?.nodes),armyRules=nodes.filter(node=>node?.kind==='target'&&String(node.id||'').startsWith('army-rule-'));
     const armyParents=[...new Set(armyRules.map(node=>node.parentId).filter(Boolean))],detachments=nodes.filter(node=>node?.parentId==='detachments'&&node?.kind==='target');
     const canonicalNode=id=>{const matches=[...tree.querySelectorAll('[data-nav-id]')].filter(node=>node.dataset.navId===id);return matches.length===1?matches[0]:null;};
-    if(!armyRules.length||armyParents.length!==1||!detachments.length)return null;
+    const rawRoster=projection?.roster||{},rawDetachments=list(rawRoster.detachments?.length?rawRoster.detachments:[rawRoster.detachment]).filter(Boolean),resolvedDetachments=list(projection?.detachments);
+    if(!armyRules.length||armyParents.length!==1||!detachments.length||rawDetachments.length!==resolvedDetachments.length)return null;
     const armySource=canonicalNode(armyParents[0]),detachmentsSource=canonicalNode('detachments');
     if(!armySource||!detachmentsSource)return null;
-    const army=armySource.cloneNode(true),detachmentBranch=detachmentsSource.cloneNode(true),armyIds=new Set(armyRules.map(node=>node.id)),detachmentIds=new Set(detachments.map(node=>node.id));
+    const army=armySource.cloneNode(true),detachmentBranch=detachmentsSource.cloneNode(true),armyIds=new Set(armyRules.map(node=>node.id)),detachmentIds=new Set(detachments.map(node=>node.id)),selectedIds=new Set();
+    for(const item of resolvedDetachments){const id=String(item?.id||'').trim(),candidates=[item?.targetId,id,id&&'detachment-'+id].filter((value,index,all)=>value&&all.indexOf(value)===index&&detachmentIds.has(value));if(candidates.length!==1)return null;selectedIds.add(candidates[0]);}
+    if(selectedIds.size!==resolvedDetachments.length)return null;
+    const detachmentList=directChild(detachmentBranch,'toc-branch');
+    if(!detachmentList)return null;
+    const detachmentRoots=[...detachmentList.children];
+    if([...detachmentIds].some(id=>detachmentRoots.filter(node=>node.dataset.navId===id).length!==1))return null;
+    detachmentRoots.forEach(node=>{if(!selectedIds.has(node.dataset.navId))node.remove();});
     const targetIds=node=>[...node.querySelectorAll('[data-nav-target]')].map(button=>button.dataset.navTarget).filter(id=>id!==node.dataset.navId),contains=(actual,required)=>new Set(actual).size===actual.length&&[...required].every(id=>actual.includes(id));
-    if(!contains(targetIds(army),armyIds)||!contains(targetIds(detachmentBranch),detachmentIds))return null;
+    if(!contains(targetIds(army),armyIds)||!contains(targetIds(detachmentBranch),selectedIds))return null;
     const armyRow=directChild(army,'toc-row'),armyLabel=armyRow?.querySelector('[data-nav-target]'),armyToggle=armyRow?.querySelector('[data-nav-toggle]');
     if(!armyLabel||!armyToggle)return null;
     armyLabel.replaceChildren(document.createTextNode('Army Rule'));
     armyToggle.setAttribute('aria-label','Toggle Army Rule');
     army.dataset.rosterReference='army-rule';
     detachmentBranch.dataset.rosterReference='detachments';
-    return Object.freeze({nodes:[army,detachmentBranch],armyRuleTargetIds:[...armyIds],detachmentTargetIds:[...detachmentIds]});
+    return Object.freeze({nodes:[army,detachmentBranch],armyRuleTargetIds:[...armyIds],detachmentTargetIds:[...selectedIds]});
   }
 
   function physicalRosterOrder(game,catalog){
@@ -55,13 +63,13 @@
     for(const unit of catalogUnits)catalogCounts.set(unit.id,(catalogCounts.get(unit.id)||0)+1);
     if(rawIds.some(id=>!id)||gameIds.some(id=>!id)||rawSet.size!==rawIds.length||gameSet.size!==gameIds.length||rawIds.some(id=>!gameSet.has(id))||gameIds.some(id=>!rawSet.has(id)))return null;
     if(gameUnits.some(unit=>{const targetId=String(unit?.identity?.canonicalDatasheetId||'').trim();return!targetId||catalogCounts.get(targetId)!==1;}))return null;
-    return{game,catalog};
+    return{projection,game,catalog};
   }
 
   function projectPhysicalRosterNavigation(tree){
     const input=physicalNavigationInput();
     if(!input)return Object.freeze({active:false,items:[]});
-    const references=canonicalRosterReferences(tree);
+    const references=canonicalRosterReferences(tree,input.projection);
     if(!references)return Object.freeze({active:false,items:[]});
     const {game,catalog}=input;
     const ordered=physicalRosterOrder(game,catalog),projected=[];
